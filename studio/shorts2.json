@@ -1,0 +1,496 @@
+[
+ {
+  "id": "s_kangaroo",
+  "animal": "kangaroo",
+  "title": "Baby Kangaroos Are Jelly Bean Size!",
+  "thumb": "TINY JOEY",
+  "top": "KANGAROO",
+  "bg": [
+   "#ffd98f",
+   "#fff4d8"
+  ],
+  "floor": "#d4a94f",
+  "beats": [
+   {
+    "say": "You were a tiny baby once. A baby kangaroo is as small as a jelly bean! Where does it live?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's hop to the kangaroos!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A baby kangaroo is called a joey. It lives in its mom's pouch.",
+    "act": "fx"
+   },
+   {
+    "say": "It stays safe and warm in there, and grows big and strong.",
+    "act": "zoom"
+   },
+   {
+    "say": "Then one day, it's ready to hop out!",
+    "act": "hop"
+   },
+   {
+    "say": "Can you hop like a kangaroo? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_lion",
+  "animal": "lion",
+  "title": "Lions Sleep 20 Hours a Day!",
+  "thumb": "SO SLEEPY",
+  "top": "LION",
+  "bg": [
+   "#ffd98f",
+   "#fff4d8"
+  ],
+  "floor": "#d4a94f",
+  "beats": [
+   {
+    "say": "You sleep at night. A lion can sleep up to twenty hours a day! Why so long?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's tiptoe to the lions. Shh!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Lions live together in family groups called prides.",
+    "act": "bob"
+   },
+   {
+    "say": "Lots of napping helps them save their energy.",
+    "act": "zzz"
+   },
+   {
+    "say": "And when they wake up, you can hear their roar from five miles away!",
+    "act": "fx+badge:5 MILES!"
+   },
+   {
+    "say": "Can you do a tiny roar? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_octopus",
+  "animal": "octopus",
+  "title": "An Octopus Has 3 Hearts!",
+  "thumb": "3 HEARTS?!",
+  "top": "OCTOPUS",
+  "bg": [
+   "#4fc3f7",
+   "#b3e5fc"
+  ],
+  "floor": "#f2d49b",
+  "beats": [
+   {
+    "say": "You have one heart. An octopus has three! And guess what color its blood is?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's dive down to the octopus!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Its blood is blue!",
+    "act": "badge:BLUE BLOOD!"
+   },
+   {
+    "say": "An octopus can change its color to hide. Watch!",
+    "act": "color"
+   },
+   {
+    "say": "It has no bones, so it can squeeze through tiny spaces.",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you wiggle like an octopus? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_owl",
+  "animal": "owl",
+  "title": "Owls Can't Move Their Eyes!",
+  "thumb": "HEAD TURN!",
+  "top": "OWL",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You can move your eyes left and right. An owl can't! So how does it look around?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the owls! Hoo, hoo!",
+    "act": "milo_in"
+   },
+   {
+    "say": "An owl turns its whole head instead!",
+    "act": "headturn"
+   },
+   {
+    "say": "It can turn its head almost all the way around.",
+    "act": "badge:ALMOST ALL THE WAY!"
+   },
+   {
+    "say": "Owl feathers are so soft, owls fly very quietly.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you be quiet like an owl? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_panda",
+  "animal": "panda",
+  "title": "Baby Pandas Are Born Pink!",
+  "thumb": "PINK BABY",
+  "top": "PANDA",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You were a baby once. A baby panda is pink, and as small as a stick of butter! Can you believe it?",
+    "act": "hook+fx2"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's visit the giant pandas!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Pandas turn black and white as they grow up.",
+    "act": "fx2off+zoom"
+   },
+   {
+    "say": "They eat bamboo for about half of the day!",
+    "act": "bob"
+   },
+   {
+    "say": "A special bump on their wrist helps them hold the bamboo.",
+    "act": "fx"
+   },
+   {
+    "say": "Can you munch like a panda? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_sloth",
+  "animal": "sloth",
+  "title": "Why Are Some Sloths Green?",
+  "thumb": "GREEN FUR?",
+  "top": "SLOTH",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You move fast. A sloth moves so slowly, tiny green plants grow on its fur! Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's go see the sloths. Slowly!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Sloths hang upside down in the trees.",
+    "act": "bob"
+   },
+   {
+    "say": "Tiny plants called algae grow on their fur.",
+    "act": "fx"
+   },
+   {
+    "say": "The green helps them hide in the leaves!",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you move slowly like a sloth? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_zebra",
+  "animal": "zebra",
+  "title": "No Two Zebras Are the Same!",
+  "thumb": "SPOT IT?",
+  "top": "ZEBRA",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You have your own fingerprints. Every zebra has its own stripes! Can you spot the difference?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's gallop to the zebras!",
+    "act": "milo_in"
+   },
+   {
+    "say": "No two zebras have the same stripes.",
+    "act": "fx"
+   },
+   {
+    "say": "Under the fur, zebra skin is dark!",
+    "act": "fxoff+badge:DARK SKIN!"
+   },
+   {
+    "say": "A baby zebra learns its mom's stripes, so it can always find her.",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you gallop like a zebra? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_hippo",
+  "animal": "hippo",
+  "title": "Hippos Make Their Own Sunscreen!",
+  "thumb": "SUNSCREEN?!",
+  "top": "HIPPO",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You wear sunscreen at the beach. A hippo makes its own! How does it work?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's splash over to the hippos!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A hippo's skin makes a special red-orange goo.",
+    "act": "fx"
+   },
+   {
+    "say": "It helps protect the hippo from the hot sun.",
+    "act": "badge:NATURAL SUNSCREEN!"
+   },
+   {
+    "say": "And hippos can't really swim. They walk on the river bottom!",
+    "act": "fxoff+sink"
+   },
+   {
+    "say": "Can you open your mouth wide like a hippo? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_flamingo",
+  "animal": "flamingo",
+  "title": "Why Are Flamingos Pink?",
+  "thumb": "PINK FOOD",
+  "top": "FLAMINGO",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You eat food to grow. A flamingo's food makes it pink! Can you guess which food?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the flamingos!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Tiny shrimp and plants called algae!",
+    "act": "fx2"
+   },
+   {
+    "say": "Baby flamingos are gray or white at first.",
+    "act": "fx"
+   },
+   {
+    "say": "They turn pink as they grow up.",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you stand on one leg like a flamingo? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_polarbear",
+  "animal": "polarbear",
+  "title": "Polar Bears Have Black Skin!",
+  "thumb": "BLACK SKIN?",
+  "top": "POLAR BEAR",
+  "bg": [
+   "#9fdcff",
+   "#eefaff"
+  ],
+  "floor": "#eef7ff",
+  "beats": [
+   {
+    "say": "You can see your skin. A polar bear's skin is black, under all that white fur! Surprised?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Brr! Let's visit the polar bears!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Polar bear fur looks white, but the skin underneath is black.",
+    "act": "fx"
+   },
+   {
+    "say": "Thick fat keeps them warm, like a cozy blanket.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "And they are amazing swimmers in icy water.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you stomp like a polar bear? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_turtle",
+  "animal": "turtle",
+  "title": "Sea Turtles Can't Hide in Their Shells!",
+  "thumb": "NO HIDING",
+  "top": "SEA TURTLE",
+  "bg": [
+   "#4fc3f7",
+   "#b3e5fc"
+  ],
+  "floor": "#f2d49b",
+  "beats": [
+   {
+    "say": "You can hide under a blanket. A sea turtle can't hide its head in its shell! Why not?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's swim to the sea turtles!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Sea turtle heads don't fit inside their shells.",
+    "act": "badge:NO HIDING!"
+   },
+   {
+    "say": "So they use their big flippers to swim away fast.",
+    "act": "bob"
+   },
+   {
+    "say": "Baby sea turtles hatch on the beach, and crawl to the ocean.",
+    "act": "fx"
+   },
+   {
+    "say": "Can you paddle like a sea turtle? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_monkey",
+  "animal": "monkey",
+  "title": "Spider Monkeys Hang by Their Tails!",
+  "thumb": "TAIL HAND",
+  "top": "MONKEY",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You have two hands. A spider monkey has an extra one: its tail! How does it work?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's swing over to the spider monkeys!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Its tail can hold on to a branch, just like a hand.",
+    "act": "tail"
+   },
+   {
+    "say": "So it can hang and swing through the trees.",
+    "act": "swing"
+   },
+   {
+    "say": "Spider monkeys love to eat fruit.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you swing your arms like a monkey? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_koala",
+  "animal": "koala",
+  "title": "Koalas Have Fingerprints Like You!",
+  "thumb": "LIKE YOU!",
+  "top": "KOALA",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You have fingerprints on your fingers. A koala has them too! Can you find yours?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's climb up to the koalas!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Koala fingerprints look a lot like ours.",
+    "act": "badge:FINGERPRINTS!"
+   },
+   {
+    "say": "Koalas hug trees and eat eucalyptus leaves.",
+    "act": "zoom"
+   },
+   {
+    "say": "And they sleep up to twenty hours a day!",
+    "act": "zzz"
+   },
+   {
+    "say": "Can you give a tree hug like a koala? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ }
+]

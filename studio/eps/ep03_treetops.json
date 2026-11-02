@@ -1,0 +1,305 @@
+{
+ "title": "Treetop Friends!",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're flying up high to meet five amazing treetop animals.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Are you ready? Let's fly!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "monkey",
+   "lines": [
+    [
+     "Here's our first animal. Here's a clue: it swings from tree to tree! Can you guess?",
+     "q"
+    ],
+    [
+     "First, swing over with me to the spider monkeys!",
+     "enter"
+    ],
+    [
+     "Spider monkeys live high up in the rainforest trees.",
+     "bob"
+    ],
+    [
+     "Spider monkeys live together in big family groups.",
+     "bob"
+    ],
+    [
+     "Can you swing your arms like a monkey? Swing, swing!",
+     "swing"
+    ],
+    [
+     "Can you guess what a spider monkey uses as an extra hand?",
+     "q"
+    ],
+    [
+     "Its tail! A spider monkey can hang from a branch with its tail.",
+     "tail+badge:TAIL HAND!"
+    ],
+    [
+     "Let's say it together: SPIDER MONKEY!",
+     "zoom"
+    ],
+    [
+     "Spider monkeys have long arms and legs, so they look a little like spiders.",
+     "swing"
+    ],
+    [
+     "They love to eat fruit, like figs.",
+     "bob"
+    ],
+    [
+     "Bye-bye, spider monkeys!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "owl",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it says hoo, hoo! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's fly to the forest. Hoo, hoo! It's the owls!",
+     "enter"
+    ],
+    [
+     "Owls have big eyes to see in the dark.",
+     "zoom"
+    ],
+    [
+     "Most owls sleep in the day, and wake up at night.",
+     "bob"
+    ],
+    [
+     "Can you turn your head slowly, like an owl? Look left. Look right!",
+     "headturn"
+    ],
+    [
+     "Can you guess? Can an owl move its eyes?",
+     "q"
+    ],
+    [
+     "No! So an owl turns its whole head instead. It can turn almost all the way around!",
+     "headturn"
+    ],
+    [
+     "Let's say it together: OWL!",
+     "zoom"
+    ],
+    [
+     "Owl feathers are super soft, so owls fly very quietly.",
+     "bob"
+    ],
+    [
+     "Shh! Can you be as quiet as an owl?",
+     "kind"
+    ],
+    [
+     "Bye-bye, owls!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "panda",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's black and white, and it loves bamboo! Can you guess?",
+     "q"
+    ],
+    [
+     "Next, let's visit the giant pandas!",
+     "enter"
+    ],
+    [
+     "Giant pandas love to eat bamboo. They munch for about half of the day!",
+     "bob"
+    ],
+    [
+     "Pandas have a special bump on their wrist that works like a thumb, to hold the bamboo.",
+     "fx"
+    ],
+    [
+     "Pandas also like to climb trees and roll around.",
+     "zoom"
+    ],
+    [
+     "Can you pretend to munch bamboo like a panda? Munch, munch!",
+     "bob"
+    ],
+    [
+     "Can you guess how big a baby panda is when it's born?",
+     "fxoff+q"
+    ],
+    [
+     "Super tiny! About the size of a stick of butter. And it's pink!",
+     "fx2+badge:TINY AND PINK!"
+    ],
+    [
+     "Let's say it together: PANDA!",
+     "zoom"
+    ],
+    [
+     "Baby pandas grow up big and strong.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, pandas!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "koala",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's fluffy and gray, and it hugs trees all day! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's climb up to the koalas!",
+     "enter"
+    ],
+    [
+     "Koalas live in eucalyptus trees and eat their leaves.",
+     "bob"
+    ],
+    [
+     "Koalas get most of the water they need from the leaves they eat.",
+     "bob"
+    ],
+    [
+     "Can you give a big tree hug like a koala? Hug, hug!",
+     "zoom"
+    ],
+    [
+     "Can you guess how long koalas sleep?",
+     "q"
+    ],
+    [
+     "Up to twenty hours a day! That's a lot of naps.",
+     "zzz"
+    ],
+    [
+     "Let's say it together: KOALA!",
+     "zoom"
+    ],
+    [
+     "Koalas even have fingerprints, just like you!",
+     "badge:FINGERPRINTS!"
+    ],
+    [
+     "A baby koala is called a joey.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, koalas!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "sloth",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's the slowest animal in the trees! Can you guess?",
+     "q"
+    ],
+    [
+     "Our last stop is the sloths. Let's go slowly!",
+     "enter"
+    ],
+    [
+     "Sloths hang upside down in the trees.",
+     "bob"
+    ],
+    [
+     "A sloth only comes down from its tree about once a week.",
+     "bob"
+    ],
+    [
+     "Can you move super slowly, like a sloth? Slooowly!",
+     "swing"
+    ],
+    [
+     "Can you guess why some sloths look a little bit green?",
+     "q"
+    ],
+    [
+     "Because they move so slowly, tiny green plants called algae grow on their fur!",
+     "fx"
+    ],
+    [
+     "Let's say it together: SLOTH!",
+     "zoom"
+    ],
+    [
+     "The green helps sloths hide in the leaves.",
+     "zoom"
+    ],
+    [
+     "And guess what? Sloths are good swimmers too!",
+     "swing"
+    ],
+    [
+     "Bye-bye, sloths!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a treetop adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "Spider monkeys use their tails like a hand.",
+   "@monkey"
+  ],
+  [
+   "Owls turn their heads instead of their eyes.",
+   "@owl"
+  ],
+  [
+   "Baby pandas are as small as a stick of butter.",
+   "@panda"
+  ],
+  [
+   "Koalas sleep up to twenty hours a day.",
+   "@koala"
+  ],
+  [
+   "And sloths can look green!",
+   "@sloth"
+  ]
+ ],
+ "outro": [
+  [
+   "Which animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ],
+ "id": "ep03_treetops"
+}

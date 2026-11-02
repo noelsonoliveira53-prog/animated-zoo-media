@@ -1,0 +1,305 @@
+{
+ "title": "Savanna Friends!",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're visiting five amazing savanna animals. Every animal has a super surprise.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Are you ready? Let's fly!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "giraffe",
+   "lines": [
+    [
+     "Here's our first animal. Here's a clue: it has a very, very long neck! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: the giraffes!",
+     "enter"
+    ],
+    [
+     "Giraffes are the tallest animals in the whole world.",
+     "zoom"
+    ],
+    [
+     "Their long necks help them reach leaves high up in the trees.",
+     "tongue"
+    ],
+    [
+     "A baby giraffe is already about as tall as a grown-up when it's born!",
+     "bob"
+    ],
+    [
+     "Can you stretch up tall like a giraffe? Reach up high! Stretch, stretch!",
+     "zoom"
+    ],
+    [
+     "Can you guess what color a giraffe's tongue is?",
+     "q"
+    ],
+    [
+     "It's purple! And it can be up to twenty inches long.",
+     "tongue_long+badge:PURPLE TONGUE!"
+    ],
+    [
+     "Let's say it together: GIRAFFE!",
+     "zoom"
+    ],
+    [
+     "Scientists think the dark color helps protect it from the hot sun.",
+     "sun"
+    ],
+    [
+     "Bye-bye, giraffes!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "elephant",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has big ears and a long trunk! Can you guess?",
+     "q"
+    ],
+    [
+     "Next, let's stomp over to the elephants!",
+     "enter"
+    ],
+    [
+     "Elephants are the biggest animals on land.",
+     "zoom+badge:BIGGEST ON LAND!"
+    ],
+    [
+     "An elephant's trunk is its nose and its top lip, all in one!",
+     "trunk"
+    ],
+    [
+     "Elephants flap their big ears to help them cool down.",
+     "bob"
+    ],
+    [
+     "Can you swing your arm like an elephant trunk? Swing, swing!",
+     "trunk"
+    ],
+    [
+     "Can you guess? Can elephants jump?",
+     "q"
+    ],
+    [
+     "No! Their legs stand straight, like strong tree trunks, to hold up their heavy bodies.",
+     "legs"
+    ],
+    [
+     "Let's say it together: ELEPHANT!",
+     "zoom"
+    ],
+    [
+     "But elephants love water, and they are good swimmers!",
+     "swim"
+    ],
+    [
+     "Bye-bye, elephants!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "lion",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a big fluffy mane and a loud roar! Can you guess?",
+     "q"
+    ],
+    [
+     "Now, let's tiptoe to the lions. Shh!",
+     "enter"
+    ],
+    [
+     "Lions live together in a family group called a pride.",
+     "bob"
+    ],
+    [
+     "Mommy lions work together to find food for the whole family.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you do a tiny lion roar? Ready? Roar!",
+     "fx"
+    ],
+    [
+     "Can you guess how far away you can hear a lion's roar?",
+     "q"
+    ],
+    [
+     "Up to five miles away! That's really, really far.",
+     "fx+badge:5 MILES!"
+    ],
+    [
+     "Let's say it together: LION!",
+     "zoom"
+    ],
+    [
+     "Lions also love to nap. They can sleep up to twenty hours a day!",
+     "fxoff+zzz"
+    ],
+    [
+     "So at the zoo, we stay quiet and let the lions rest.",
+     "kind"
+    ],
+    [
+     "Bye-bye, lions!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "zebra",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has black and white stripes! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: the zebras!",
+     "enter"
+    ],
+    [
+     "Zebras are part of the horse family.",
+     "bob"
+    ],
+    [
+     "Every zebra has its own special stripes. No two zebras are the same, just like your fingerprints!",
+     "fx"
+    ],
+    [
+     "Zebras can sleep standing up, while their friends keep watch.",
+     "bob"
+    ],
+    [
+     "Can you gallop like a zebra? Gallop, gallop, gallop!",
+     "hop"
+    ],
+    [
+     "Can you guess what color a zebra's skin is, under its fur?",
+     "fxoff+q"
+    ],
+    [
+     "It's dark! Zebras have dark skin under their black and white stripes.",
+     "badge:DARK SKIN!"
+    ],
+    [
+     "Let's say it together: ZEBRA!",
+     "zoom"
+    ],
+    [
+     "A baby zebra learns its mom's stripes, so it can always find her.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, zebras!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "hippo",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it loves to splash in the water, and it has a giant mouth! Can you guess?",
+     "q"
+    ],
+    [
+     "Splash! Now we're at the hippo pool.",
+     "enter"
+    ],
+    [
+     "Hippos spend most of the day in the water to stay cool.",
+     "bob"
+    ],
+    [
+     "Hippos can hold their breath under the water for a few minutes.",
+     "sink"
+    ],
+    [
+     "Can you open your mouth super wide like a hippo? Ahhh!",
+     "zoom"
+    ],
+    [
+     "Can you guess? Can hippos swim?",
+     "q"
+    ],
+    [
+     "Not really! Hippos walk and bounce along the bottom of the river.",
+     "sink"
+    ],
+    [
+     "Let's say it together: HIPPO!",
+     "zoom"
+    ],
+    [
+     "Hippos even make their own sunscreen. Their skin makes a special red-orange goo.",
+     "fx+badge:NATURAL SUNSCREEN!"
+    ],
+    [
+     "Wow! Hippos are amazing.",
+     "fxoff+zoom"
+    ],
+    [
+     "Bye-bye, hippos!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, what an adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "Giraffes have purple tongues.",
+   "@giraffe"
+  ],
+  [
+   "Elephants can't jump, but they can swim.",
+   "@elephant"
+  ],
+  [
+   "You can hear a lion roar from five miles away.",
+   "@lion"
+  ],
+  [
+   "Every zebra has its own stripes.",
+   "@zebra"
+  ],
+  [
+   "And hippos make their own sunscreen!",
+   "@hippo"
+  ]
+ ],
+ "outro": [
+  [
+   "Which animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ],
+ "id": "ep01_savanna"
+}

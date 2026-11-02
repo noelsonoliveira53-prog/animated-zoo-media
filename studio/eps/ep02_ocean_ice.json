@@ -1,0 +1,305 @@
+{
+ "title": "Ocean & Ice Animals!",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird. Welcome back to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're visiting animals from the cold ice and the deep blue sea.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Are you ready? Let's fly!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "penguin",
+   "lines": [
+    [
+     "Here's our first animal. Here's a clue: it's a bird that can't fly! Can you guess?",
+     "q"
+    ],
+    [
+     "First, brr! Let's visit the penguins!",
+     "enter"
+    ],
+    [
+     "Penguins are birds, but they can't fly.",
+     "bob"
+    ],
+    [
+     "Instead, they swim super fast, using their wings like flippers.",
+     "wiggle"
+    ],
+    [
+     "Penguin moms and dads take turns keeping their egg warm.",
+     "bob"
+    ],
+    [
+     "Can you flap your arms like penguin flippers? Flap, flap!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Do penguins have knees?",
+     "q"
+    ],
+    [
+     "Yes! Their knees are hidden up inside their feathers.",
+     "xray+badge:HIDDEN KNEES!"
+    ],
+    [
+     "Let's say it together: PENGUIN!",
+     "zoom"
+    ],
+    [
+     "That's why penguins waddle, step by step. Can you waddle too?",
+     "waddle"
+    ],
+    [
+     "Bye-bye, penguins!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "octopus",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it lives in the sea and has eight arms! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's dive deep into the ocean to meet the octopus!",
+     "enter"
+    ],
+    [
+     "An octopus has eight arms, with suckers that help it grab and taste things.",
+     "wiggle"
+    ],
+    [
+     "An octopus has no bones, so it can squeeze through tiny spaces.",
+     "zoom"
+    ],
+    [
+     "Can you wiggle your arms like an octopus? Wiggle, wiggle!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many hearts an octopus has?",
+     "q"
+    ],
+    [
+     "Three! And its blood is blue.",
+     "badge:3 HEARTS!"
+    ],
+    [
+     "Let's say it together: OCTOPUS!",
+     "zoom"
+    ],
+    [
+     "An octopus can also change its color to hide. Watch!",
+     "color"
+    ],
+    [
+     "It's a master of hide and seek!",
+     "bob"
+    ],
+    [
+     "Bye-bye, octopuss!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "turtle",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries a shell on its back and swims in the sea! Can you guess?",
+     "q"
+    ],
+    [
+     "Swim with me over to the sea turtles!",
+     "enter"
+    ],
+    [
+     "Sea turtles glide through the ocean with their big flippers.",
+     "bob"
+    ],
+    [
+     "Sea turtles can live for a very, very long time.",
+     "zoom"
+    ],
+    [
+     "Can you swim like a sea turtle? Paddle, paddle!",
+     "bob"
+    ],
+    [
+     "Can you guess? Can a sea turtle hide its head inside its shell?",
+     "q"
+    ],
+    [
+     "No! Sea turtles can't pull their heads in, like some land turtles can.",
+     "badge:NO HIDING!"
+    ],
+    [
+     "Let's say it together: SEA TURTLE!",
+     "zoom"
+    ],
+    [
+     "Mommy sea turtles lay their eggs in the sand on the beach.",
+     "zoom"
+    ],
+    [
+     "When the babies hatch, they crawl all the way to the ocean.",
+     "fx"
+    ],
+    [
+     "Bye-bye, sea turtles!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "polarbear",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's big and white, and it lives in the snow! Can you guess?",
+     "q"
+    ],
+    [
+     "Brr! Let's go back to the snow to see the polar bears!",
+     "enter"
+    ],
+    [
+     "Polar bears are the biggest bears in the world.",
+     "zoom+badge:BIGGEST BEAR!"
+    ],
+    [
+     "Polar bears have thick fat under their fur, like a cozy blanket.",
+     "bob"
+    ],
+    [
+     "Can you stomp like a big polar bear? Stomp, stomp!",
+     "zoom"
+    ],
+    [
+     "Can you guess what color a polar bear's skin is?",
+     "q"
+    ],
+    [
+     "It's black! Their fur looks white, but the skin underneath is black.",
+     "fx"
+    ],
+    [
+     "Let's say it together: POLAR BEAR!",
+     "zoom"
+    ],
+    [
+     "Their big, wide paws help them walk on snow and swim in icy water.",
+     "fxoff+bob"
+    ],
+    [
+     "Polar bears are amazing swimmers!",
+     "wiggle"
+    ],
+    [
+     "Bye-bye, polar bears!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "flamingo",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's pink, and it likes to stand on one leg! Can you guess?",
+     "q"
+    ],
+    [
+     "Our last stop is the flamingo lake. Look at all that pink!",
+     "enter"
+    ],
+    [
+     "Flamingos live together in big, noisy groups.",
+     "bob"
+    ],
+    [
+     "Flamingos eat with their heads upside down! Can you tip your head down too?",
+     "wiggle"
+    ],
+    [
+     "Can you guess why flamingos are pink?",
+     "q"
+    ],
+    [
+     "Because of the food they eat! Tiny shrimp and plants called algae make their feathers pink.",
+     "fx2+badge:PINK FOOD!"
+    ],
+    [
+     "Let's say it together: FLAMINGO!",
+     "zoom"
+    ],
+    [
+     "Baby flamingos are gray or white. They turn pink as they grow up.",
+     "fx"
+    ],
+    [
+     "Flamingos often stand on one leg. Scientists think it may help them rest.",
+     "zoom"
+    ],
+    [
+     "Can you stand on one leg like a flamingo? Let's try!",
+     "wiggle"
+    ],
+    [
+     "Bye-bye, flamingos!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a splashy adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "Penguins have hidden knees.",
+   "@penguin"
+  ],
+  [
+   "An octopus has three hearts.",
+   "@octopus"
+  ],
+  [
+   "Sea turtles can't hide their heads.",
+   "@turtle"
+  ],
+  [
+   "Polar bears have black skin.",
+   "@polarbear"
+  ],
+  [
+   "And flamingos are pink because of their food!",
+   "@flamingo"
+  ]
+ ],
+ "outro": [
+  [
+   "Which animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ],
+ "id": "ep02_ocean_ice"
+}

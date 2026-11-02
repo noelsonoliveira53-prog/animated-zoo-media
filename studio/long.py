@@ -4,6 +4,7 @@ import json, os, re, shutil, subprocess, sys
 import numpy as np, soundfile as sf
 from art import MILO, SCENES
 from art2 import SCENES2
+import fx
 from build import tts as _tts, music, pop, chunks, sh, SR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -18,7 +19,7 @@ def tts(text, out):
     return _tts(text, out)
 
 def prep_scene(key, i):
-    s = ALL[key]
+    s = fx.enhance(ALL[key], key)
     s = s.replace('viewBox="0 0 1080 1100" width="1080" height="1100"', 'viewBox="-420 0 1920 1080" width="1920" height="1080"', 1)
     s = re.sub(r'id="([\w-]+)"', lambda m: f'id="s{i}-{m.group(1)}"', s)
     s = re.sub(r'url\(#([\w-]+)\)', lambda m: f'url(#s{i}-{m.group(1)})', s)
@@ -31,7 +32,8 @@ def acts_js(acts, p, t, d, key):
     for act in acts.split("+"):
         name, _, arg = act.partition(":")
         if name == "enter":
-            a(f'tl.fromTo({A},{{scale:.85,opacity:0,svgOrigin:"540 1000"}},{{scale:1,opacity:1,duration:.6,ease:"back.out(1.8)"}},{t})')
+            a(f'tl.fromTo({A},{{x:-1500,svgOrigin:"540 1000"}},{{x:0,svgOrigin:"540 1000",duration:.9,ease:"back.out(1.4)"}},{t})')
+            a(f'tl.fromTo({A},{{scaleY:.8,scaleX:1.15,svgOrigin:"540 1000"}},{{scaleY:1,scaleX:1,duration:.5,ease:"elastic.out(1,.4)"}},{t+.8})')
         elif name == "bob":
             a(f'tl.to({A},{{y:-14,duration:.5,yoyo:true,repeat:{max(1, int(d/.5)//2*2-1)},ease:"sine.inOut"}},{t})')
         elif name == "zoom":
@@ -49,6 +51,7 @@ def acts_js(acts, p, t, d, key):
             a(f'tl.to("#qmark",{{scale:0,opacity:0,duration:.25}},{t+d+.3})')
         elif name == "badge":
             a(f'tl.set("#badge span",{{textContent:{json.dumps(arg)}}},{t})')
+            a(fx.confetti_js(t + .35, n=36, spread=700, seed=int(t)))
             a(f'tl.fromTo("#badge",{{scale:0,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2)"}},{t+.3})')
             a(f'tl.to("#badge",{{opacity:0,duration:.3}},{t+d+.3})')
         elif name in ("fx", "fx2"):
@@ -181,9 +184,15 @@ def build(ep_path, norender=False):
         sc = b["scene"]
         if sc != "title" and b["act"]:
             js.append(acts_js(b["act"], f's{sidx[sc]}-', round(b["t"], 3), round(b["d"], 3), sc))
+    extra = ""
+    for s_ in segs[1:]:
+        w0 = s_["t0"] - .95
+        extra += f'tl.fromTo("#wipe",{{scale:0}},{{scale:1,duration:.4,ease:"power2.in"}},{w0:.2f});tl.to("#wipe",{{scale:0,duration:.45,ease:"power2.out"}},{w0+.5:.2f});'
+    for (sc_, st_, en_) in windows:
+        extra += f'tl.fromTo("#scene{sidx[sc_]}",{{scale:1}},{{scale:1.05,duration:{max(1,en_-st_+.5):.2f},ease:"none"}},{st_:.2f});'
     cap_html = "".join(f'<div class="cap" id="c{i}"><span>{c}</span></div>' for i, (_, _, c) in enumerate(caps))
     for i, (st, d, _) in enumerate(caps):
-        js.append(f'tl.set("#c{i}",{{opacity:1}},{st:.3f});tl.set("#c{i}",{{opacity:0}},{st+d:.3f});')
+        js.append(f'tl.set("#c{i}",{{opacity:1}},{st:.3f});tl.fromTo("#c{i} span",{{scale:.85}},{{scale:1,duration:.18,ease:"back.out(3)"}},{st:.3f});tl.set("#c{i}",{{opacity:0}},{st+d:.3f});')
 
     scenes_html = "".join(
         f'<div class="scene" id="scene{i}" style="opacity:{1 if i==0 else 0}">{prep_scene(k, i)}</div>' for i, k in enumerate(scene_keys))
@@ -194,7 +203,9 @@ def build(ep_path, norender=False):
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1920px;height:1080px;overflow:hidden;background:#8fd3ff}}
 #root{{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Baloo",sans-serif;background:linear-gradient(180deg,#8fd3ff,#e3f5ff)}}
-.scene{{position:absolute;inset:0}}
+.scene{{position:absolute;inset:0;transform-origin:50% 70%}}
+{fx.CONFETTI_CSS}
+#wipe{{position:absolute;left:50%;top:50%;width:2400px;height:2400px;margin:-1200px;border-radius:50%;background:radial-gradient(circle,#ffe066 0 18%,#2f80ed 19%);transform:scale(0)}}
 .label{{position:absolute;left:60px;top:40px;font-size:110px;line-height:1;color:#fff;-webkit-text-stroke:12px #1c5fc4;paint-order:stroke fill;opacity:0}}
 #brand{{position:absolute;right:50px;top:36px;font-size:34px;color:#1c5fc4;letter-spacing:.06em;background:rgba(255,255,255,.75);padding:6px 22px 0;border-radius:24px}}
 #milobox{{position:absolute;left:60px;top:180px;opacity:0}}
@@ -213,7 +224,7 @@ html,body{{width:1920px;height:1080px;overflow:hidden;background:#8fd3ff}}
 <div id="brand">THE ANIMATED ZOO</div>{labels}
 <div id="qmark">?</div><div id="badge"><span></span></div><div id="zzz">Z z z</div><div id="kind">💙 Be kind!</div>
 <div id="eptitle"><div>{ep["title"]}</div></div><div id="bye"><div>See you at the zoo! 💙</div></div>
-<div id="milobox">{MILO}</div>
+<div id="milobox">{fx.milo_talking(MILO)}</div>{fx.confetti_html(36)}{fx.BIRDS_HTML}<div id="wipe"></div>
 {cap_html}
 </div>
 <script>
@@ -225,6 +236,10 @@ tl.to("#milo",{{y:-10,duration:.6,yoyo:true,repeat:{int(total/.6)//2*2-1},ease:"
 tl.to('[id$="-cloud1"]',{{x:-200,duration:{total},ease:"none"}},0);
 tl.to('[id$="-bubbles"]',{{y:-120,duration:3,repeat:{int(total/3)},ease:"none"}},0);
 {chr(10).join(js)}
+{fx.ambient_js(total, "")}
+{fx.talk_js(beats)}
+{fx.birds_js(total, 1920)}
+{extra}
 tl.to({{}},{{duration:.01}},{total-.01});
 window.__timelines["main"] = tl; tl.seek(0);
 </script></body></html>"""

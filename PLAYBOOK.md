@@ -4,11 +4,13 @@ Channel: **The Animated Zoo** (@TheAnimatedZoo, UC1YuY8nqnViTtm85qxE_M1w). Host:
 Audience: kids 3–8. Channel and every video are set **made for kids**.
 
 ## Posting cadence (keep to this)
-- **Shorts:** 1 per day at **11:00 AM ET**.
-- **5-minute episodes:** Mon / Wed / Fri at **4:00 PM ET**.
-- Never more than 2 uploads go public per day. Mass-posting near-identical AI videos can be
-  flagged as "repetitious content", which is the main risk to a new kids channel.
-- Every upload is scheduled in advance in Studio, so posting doesn't need the PC to be on.
+- **4 Shorts a day** at **7:30 AM, 11:00 AM, 3:00 PM and 7:00 PM ET**.
+- **1 five-minute episode a day** at **5:00 PM ET**.
+- This is Noelson's chosen volume. Keep every video different: a new animal or a NEW fact
+  (never re-upload the same script). Near-identical mass uploads risk YouTube's
+  "repetitious content" rule, which is the main risk to the channel.
+- Every upload is scheduled ahead in Studio, so posting doesn't need the PC to be on.
+- Keep at least 2 days of videos scheduled ahead.
 
 ## Kids-safety rules (non-negotiable)
 - Facts only from zoo / science sources (San Diego Zoo, Smithsonian's National Zoo, NOAA, NASA,
@@ -18,6 +20,14 @@ Audience: kids 3–8. Channel and every video are set **made for kids**.
 - Calm pacing (TTS speed 0.85 for long-form), music ducked under voice, loudness -16 LUFS.
 - All art is original (`studio/art.py`, `studio/art2.py`). Never draw known characters.
 - Every video ends with the kindness rule: "Be kind to every animal."
+
+## Animation quality layer (`studio/fx.py`)
+Every video gets: dark sticker outline + ground shadow, eye blinks, breathing/idle sway,
+Milo's beak moving while he talks, slow camera push-in, bounce/slide-in entrances with squash,
+confetti + camera punch on reveals, twinkling sparkles, birds flying across, circle-wipe
+transitions between animals (episodes), and bouncy captions. GSAP gotcha: never combine
+`rotation` with `svgOrigin` in the same tween as `x` on `#animal`; it leaves an offset.
+Any new art must keep `<g id="animal">` and dark pupils `fill="#1a1a2e"` so blinks work.
 
 ## Formats
 - **Short** (1080x1920, ~25 s): hook question → Milo flies in → 3 facts → move-along ask → sign-off.

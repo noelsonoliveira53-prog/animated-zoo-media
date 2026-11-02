@@ -5,6 +5,7 @@ import json, os, re, shutil, subprocess, sys
 import numpy as np, soundfile as sf
 from art import MILO, SCENES
 from art2 import SCENES2
+import fx
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -162,6 +163,11 @@ def build(ep, draft=False):
         for c in cs:
             cd = b["d"] * len(c) / L
             caps.append((ct, cd, c)); ct += cd
+    extra_fx = ""
+    for bi, b in enumerate(beats):
+        if bi == 2 or "badge" in b["act"] or b["act"] in ("tongue_long", "xray", "big", "hug"):
+            extra_fx += fx.confetti_js(b["t"] + .35, seed=bi)
+            extra_fx += f'tl.to("#scene",{{scale:"+=0.05",duration:.25,yoyo:true,repeat:1,ease:"power2.out"}},{b["t"]+.3:.2f});'
     cap_html = "\n".join(
         f'<div class="cap" id="c{i}"><span>{c}</span></div>' for i, (_, _, c) in enumerate(caps))
     for i, (st, d, _) in enumerate(caps):
@@ -195,18 +201,20 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:{ep["bg"][1]}}}
   font-size:84px;line-height:1.12}}
 #zzz{{position:absolute;right:120px;top:520px;font-size:120px;color:#5c6bc0;opacity:0}}
 #kind{{position:absolute;left:0;right:0;top:1290px;margin:auto;width:max-content;padding:12px 40px 2px;border-radius:50px;background:#fff;color:#1c5fc4;font-size:60px;opacity:0}}
+{fx.CONFETTI_CSS}
+#scene{{transform-origin:50% 75%}}
 #outro{{position:absolute;left:0;right:0;top:190px;text-align:center;opacity:0}}
 #outro div{{display:inline-block;padding:20px 44px 10px;border-radius:44px;background:#fff;color:#1c5fc4;font-size:76px;
   box-shadow:0 12px 0 rgba(0,0,0,.12)}}
 </style></head><body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total}" data-width="1080" data-height="1920">
   <div id="floor"></div>
-  <div id="scene">{SCENES[ep["animal"]]}</div>
+  <div id="scene">{fx.enhance(SCENES[ep["animal"]], ep["animal"])}</div>{fx.SPARKLE_HTML}{fx.BIRDS_HTML}
   <div id="brand">THE ANIMATED ZOO</div>
   <div id="label">{ep["top"]}</div>
   <div id="qmark">?</div>
   <div id="badge"><span>{badge}</span></div><div id="zzz">Z z z</div><div id="kind">💙 Be kind!</div>
-  <div id="milobox">{MILO}</div>
+  <div id="milobox">{fx.milo_talking(MILO)}</div>{fx.confetti_html()}
   <div id="outro"><div>See you at the zoo! 💙</div></div>
   {cap_html}
 </div>
@@ -218,6 +226,13 @@ tl.to("#cloud1",{{x:-160,duration:{total},ease:"none"}},0);
 tl.to("#wing",{{rotation:-28,svgOrigin:"78 122",duration:.18,yoyo:true,repeat:{int(total/.18)},ease:"sine.inOut"}},0);
 tl.to("#milo",{{y:-10,duration:.6,yoyo:true,repeat:{int(total/.6)},ease:"sine.inOut"}},0);
 tl.fromTo("#label",{{scale:.6,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2.5)"}},0);
+tl.fromTo("#animal",{{y:-260,scaleY:1.15,scaleX:.88,svgOrigin:"540 1000"}},{{y:0,scaleY:1,scaleX:1,duration:.7,ease:"bounce.out"}},0);
+tl.fromTo("#scene",{{scale:1}},{{scale:1.07,duration:{total},ease:"none"}},0);
+{fx.ambient_js(total, "")}
+{fx.talk_js(beats)}
+{fx.birds_js(total, 1080)}
+{fx.sparkle_js(total)}
+{extra_fx}
 {chr(10).join(js)}
 tl.to({{}},{{duration:.01}},{total-.01});
 window.__timelines["main"] = tl; tl.seek(0);

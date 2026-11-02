@@ -53,8 +53,14 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
 2. In the page, fetch `https://raw.githubusercontent.com/noelsonoliveira53-prog/animated-zoo-media/main/<file>.mp4`
    into a File and intercept `HTMLInputElement.prototype.click` for file inputs (see `studio/studio-upload.js`).
 3. Click **Select files** (it's at about (400, 547) in an 800x892 view).
-4. Fill title + description, tick made-for-kids, Next ×3, expand **Schedule**, open the date
-   picker, wait for `.calendar-day` cells, click the target day, type the time, then **Schedule**.
+4. Fill title + description (execCommand insertText into `#textbox`), tick made-for-kids,
+   click `#next-button` ×3, click `#second-container-expand-button` (Schedule), and set the TIME
+   by script first (`ytcp-datetime-picker input`, insertText "7:30 AM", then dispatch input/change).
+   The DATE needs real input: click the date trigger at about (150, 489) in an 800x892 view, take a
+   screenshot to confirm the calendar is open, triple-click the date box at (150, 482), type e.g.
+   "Nov 5, 2026", press Enter. Verify `#datepicker-trigger` text and the time value by script, then
+   click `#done-button`. Confirm with a zoom on (140,220)-(660,380): "Video scheduled ... on <date> at <time>".
+   (Clicking calendar day cells is unreliable, so don't.)
 5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
 
 ## Animal library

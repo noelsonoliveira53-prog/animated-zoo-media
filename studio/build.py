@@ -12,7 +12,8 @@ from art_dino import SCENES4
 from art_wild import SCENES5
 from art_truck import SCENES6
 from art_bloop import SCENES7
-SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7)
+from art_fruity import SCENES8
+SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7); SCENES.update(SCENES8)
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -257,5 +258,5 @@ window.__timelines["main"] = tl; tl.seek(0);
     print(final, total)
 
 if __name__ == "__main__":
-    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json", "shorts_truck.json", "shorts_bloop.json") for e in json.load(open(os.path.join(HERE, f)))}
+    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json", "shorts_truck.json", "shorts_bloop.json", "shorts_fruity.json") for e in json.load(open(os.path.join(HERE, f)))}
     build(eps[sys.argv[1]], "--draft" in sys.argv)

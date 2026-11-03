@@ -11,13 +11,14 @@ from art_dino import SCENES4, DINO_TITLE, NAMES4
 from art_wild import SCENES5, WILD_TITLE, NAMES5
 from art_truck import SCENES6, TRUCK_TITLE, NAMES6
 from art_bloop import SCENES7, BLOOP_TITLE, NAMES7
+from art_fruity import SCENES8, FRUITY_TITLE, NAMES8
 from build import tts as _tts, music, pop, chunks, sh, SR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5, **SCENES6, **SCENES7}
-ALL["title"] = {"gizmo": SPACE_TITLE.replace("SPACE KIDS ACADEMY", "GIZMO EXPLAINS").replace('fill="#6c4cd6"', 'fill="#3561d9"'), "space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE, "truck": TRUCK_TITLE, "bloop": BLOOP_TITLE}.get(CHANNEL, ALL["title"])
+ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5, **SCENES6, **SCENES7, **SCENES8}
+ALL["title"] = {"gizmo": SPACE_TITLE.replace("SPACE KIDS ACADEMY", "GIZMO EXPLAINS").replace('fill="#6c4cd6"', 'fill="#3561d9"'), "space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE, "truck": TRUCK_TITLE, "bloop": BLOOP_TITLE, "fruity": FRUITY_TITLE}.get(CHANNEL, ALL["title"])
 GAP, SEG_GAP, SPEED, THINK = 0.7, 1.4, 0.85, 2.6
-NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", **NAMES4, **NAMES5, **NAMES6, **NAMES7}
+NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", **NAMES4, **NAMES5, **NAMES6, **NAMES7, **NAMES8}
 ORIGIN = {"monkey": "640 430", "owl": "540 500", "sloth": "545 350", "koala": "435 600"}
 
 def tts(text, out):

@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep02_veggies",
+ "title": "Learn Vegetables for Kids! Carrot, Broccoli, Corn and More with Pip and Kiko",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five veggie friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Healthy food and healthy habits help us grow big and strong.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "carrot",
+   "lines": [
+    [
+     "Here's a clue: it's orange and crunchy, and it grows under the ground! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Carrot!",
+     "enter"
+    ],
+    [
+     "This is Carrot! Can you say carrot?",
+     "zoom"
+    ],
+    [
+     "Carrots grow down in the dirt.",
+     "fx+bob"
+    ],
+    [
+     "The green leaves stay on top, and the carrot hides below!",
+     "bob"
+    ],
+    [
+     "Can you pull a carrot out of the ground? Pull, pull, POP!",
+     "wiggle"
+    ],
+    [
+     "Are carrots always orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "No! Some are purple, yellow or white.",
+     "fx2+badge:CARROT!"
+    ],
+    [
+     "Let's say it together: CARROT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CARROT!",
+     "zoom"
+    ],
+    [
+     "Carrots help your eyes stay healthy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Carrot!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "broccoli",
+   "lines": [
+    [
+     "Here's a clue: it looks like a tiny green tree! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Broccoli!",
+     "enter"
+    ],
+    [
+     "This is Broccoli! Can you say broccoli?",
+     "zoom"
+    ],
+    [
+     "Broccoli is a green vegetable.",
+     "fx+bob"
+    ],
+    [
+     "Each little bump is called a floret.",
+     "bob"
+    ],
+    [
+     "Can you stand tall like a broccoli tree? Arms up!",
+     "wiggle"
+    ],
+    [
+     "What does broccoli look like?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little trees! You can be a giant!",
+     "fx2+badge:BROCCOLI!"
+    ],
+    [
+     "Let's say it together: BROCCOLI!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BROCCOLI!",
+     "zoom"
+    ],
+    [
+     "Broccoli helps you grow big and strong.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Broccoli!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "peas",
+   "lines": [
+    [
+     "Here's a clue: they're little green balls that live in a pod! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Peas!",
+     "enter"
+    ],
+    [
+     "This is Peas! Can you say peas?",
+     "zoom"
+    ],
+    [
+     "Peas grow inside a pod.",
+     "fx+bob"
+    ],
+    [
+     "Open the pod, and there they are, in a row!",
+     "bob"
+    ],
+    [
+     "Can you count the peas with me? One, two, three, four!",
+     "wiggle"
+    ],
+    [
+     "Where do peas live?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Inside a pod! Like a cozy bed.",
+     "fx2+badge:PEAS!"
+    ],
+    [
+     "Let's say it together: PEAS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PEAS!",
+     "zoom"
+    ],
+    [
+     "Peas are sweet and green and fun to count.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Peas!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "corn",
+   "lines": [
+    [
+     "Here's a clue: it's yellow, and it has lots of little bumps in rows! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Corn!",
+     "enter"
+    ],
+    [
+     "This is Corn! Can you say corn?",
+     "zoom"
+    ],
+    [
+     "Corn grows on tall plants.",
+     "fx+bob"
+    ],
+    [
+     "Each yellow bump is a kernel.",
+     "bob"
+    ],
+    [
+     "Can you grow tall like a corn plant? Stretch, stretch!",
+     "wiggle"
+    ],
+    [
+     "What are the yellow bumps called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Kernels! Lots and lots of kernels.",
+     "fx2+badge:CORN!"
+    ],
+    [
+     "Let's say it together: CORN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CORN!",
+     "zoom"
+    ],
+    [
+     "Corn is sweet and sunny yellow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Corn!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "pumpkin",
+   "lines": [
+    [
+     "Here's a clue: it's big, round and orange, and it grows on a vine! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Pumpkin!",
+     "enter"
+    ],
+    [
+     "This is Pumpkin! Can you say pumpkin?",
+     "zoom"
+    ],
+    [
+     "Pumpkins grow on long, curly vines.",
+     "fx+bob"
+    ],
+    [
+     "Some pumpkins get really, really big!",
+     "bob"
+    ],
+    [
+     "Can you make yourself round like a pumpkin? Curl up!",
+     "wiggle"
+    ],
+    [
+     "What's inside a pumpkin?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Seeds and soft orange insides!",
+     "fx2+badge:PUMPKIN!"
+    ],
+    [
+     "Let's say it together: PUMPKIN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PUMPKIN!",
+     "zoom"
+    ],
+    [
+     "Pumpkin can be soup, or even bread!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pumpkin!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember.",
+   "@title"
+  ],
+  [
+   "Carrot, from under the ground.",
+   "@carrot"
+  ],
+  [
+   "Broccoli, like a little tree.",
+   "@broccoli"
+  ],
+  [
+   "Peas, in a pod.",
+   "@peas"
+  ],
+  [
+   "Corn, with yellow kernels.",
+   "@corn"
+  ],
+  [
+   "And pumpkin, big and round!",
+   "@pumpkin"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

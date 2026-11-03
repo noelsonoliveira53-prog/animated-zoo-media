@@ -113,5 +113,13 @@ def _bubble(total, even=False):
 CONFIGS["bloop"] = dict(brand="BLOOP'S COLOR LAB", host=BLOOP, voice="bf_isabella", talk="scale",
                         kind="🌈 Great job!", bye="See you in the lab! 🌈", wing=_bubble, birds_html="<i id=\"birds\"></i>",
                         root_bg="linear-gradient(180deg,#fff3fb 0%,#e9f6ff 85%)", brand_color="#3d2a7a", repo_prefix="bloop/")
+from art_fruity import PIPKIKO
+def _broc(total, even=False):
+    r = int(total / .55)
+    if even: r = r // 2 * 2 - 1
+    return f'tl.to("#wing",{{rotation:8,svgOrigin:"180 190",duration:.55,yoyo:true,repeat:{r},ease:"sine.inOut"}},0);'
+CONFIGS["fruity"] = dict(brand="FRUITY FRIENDS", host=PIPKIKO, voice="af_sky", talk="scale",
+                        kind="🍓 Great job!", bye="See you next time! 🍓🥦", wing=_broc, birds_html="<i id=\"birds\"></i>",
+                        root_bg="linear-gradient(180deg,#fff4d6 0%,#ffe9c7 85%)", brand_color="#b91c1c", repo_prefix="fruity/")
 NAME = os.environ.get("CHANNEL", "zoo")
 C = CONFIGS[NAME]

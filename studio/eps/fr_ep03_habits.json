@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep03_habits",
+ "title": "Healthy Habits for Kids! Wash Hands, Brush Teeth and More with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five healthy habits.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Healthy food and healthy habits help us grow big and strong.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "handwash",
+   "lines": [
+    [
+     "Here's a clue: we use soap and water, and we make bubbles! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Wash Hands!",
+     "enter"
+    ],
+    [
+     "This is Wash Hands! Can you say wash hands?",
+     "zoom"
+    ],
+    [
+     "Wash your hands before you eat.",
+     "fx+bob"
+    ],
+    [
+     "And after you use the potty, too!",
+     "bob"
+    ],
+    [
+     "Rub your hands together with me! Scrub, scrub, scrub!",
+     "wiggle"
+    ],
+    [
+     "How long should we scrub?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Twenty seconds! Like singing a song.",
+     "fx2+badge:WASH HANDS!"
+    ],
+    [
+     "Let's say it together: WASH HANDS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WASH HANDS!",
+     "zoom"
+    ],
+    [
+     "Clean hands keep germs away.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "toothbrush",
+   "lines": [
+    [
+     "Here's a clue: we use a toothbrush to make our smile sparkle! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Brush Teeth!",
+     "enter"
+    ],
+    [
+     "This is Brush Teeth! Can you say brush teeth?",
+     "zoom"
+    ],
+    [
+     "Brush your teeth in the morning and at night.",
+     "fx+bob"
+    ],
+    [
+     "Brush the top teeth and the bottom teeth.",
+     "bob"
+    ],
+    [
+     "Can you pretend to brush? Round and round!",
+     "wiggle"
+    ],
+    [
+     "How long should we brush?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Two minutes! Ask a grown-up to help.",
+     "fx2+badge:BRUSH TEETH!"
+    ],
+    [
+     "Let's say it together: BRUSH TEETH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BRUSH TEETH!",
+     "zoom"
+    ],
+    [
+     "Brushing keeps your smile bright.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "water",
+   "lines": [
+    [
+     "Here's a clue: it keeps us cool, and it's the best drink for our body! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Drink Water!",
+     "enter"
+    ],
+    [
+     "This is Drink Water! Can you say drink water?",
+     "zoom"
+    ],
+    [
+     "Water helps your body work.",
+     "fx+bob"
+    ],
+    [
+     "Drink water when you play and when you're thirsty.",
+     "bob"
+    ],
+    [
+     "Can you take a pretend sip? Glug, glug, glug!",
+     "wiggle"
+    ],
+    [
+     "When should we drink water?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "When we're thirsty, and when we play!",
+     "fx2+badge:DRINK WATER!"
+    ],
+    [
+     "Let's say it together: DRINK WATER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: DRINK WATER!",
+     "zoom"
+    ],
+    [
+     "Water is the best drink for kids.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "sleep",
+   "lines": [
+    [
+     "Here's a clue: we close our eyes, and we dream! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Bedtime!",
+     "enter"
+    ],
+    [
+     "This is Bedtime! Can you say bedtime?",
+     "zoom"
+    ],
+    [
+     "Sleep helps your body grow.",
+     "fx+bob"
+    ],
+    [
+     "Your body rests, so you can play tomorrow!",
+     "bob"
+    ],
+    [
+     "Can you pretend to yawn and stretch? Yaaawn!",
+     "wiggle"
+    ],
+    [
+     "What helps us sleep well?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A cozy bed, and a quiet room!",
+     "fx2+badge:BEDTIME!"
+    ],
+    [
+     "Let's say it together: BEDTIME!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BEDTIME!",
+     "zoom"
+    ],
+    [
+     "A good sleep makes a happy morning.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "share",
+   "lines": [
+    [
+     "Here's a clue: it's when we give some to a friend! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Sharing!",
+     "enter"
+    ],
+    [
+     "This is Sharing! Can you say sharing?",
+     "zoom"
+    ],
+    [
+     "Sharing makes friends happy.",
+     "fx+bob"
+    ],
+    [
+     "You can share toys, and you can share snacks!",
+     "bob"
+    ],
+    [
+     "Can you give a friend a big pretend high five?",
+     "wiggle"
+    ],
+    [
+     "What do we say when someone shares?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Thank you!",
+     "fx2+badge:SHARING!"
+    ],
+    [
+     "Let's say it together: SHARING!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SHARING!",
+     "zoom"
+    ],
+    [
+     "Sharing is caring!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember.",
+   "@title"
+  ],
+  [
+   "Wash your hands with soap.",
+   "@handwash"
+  ],
+  [
+   "Brush your teeth, morning and night.",
+   "@toothbrush"
+  ],
+  [
+   "Drink water when you play.",
+   "@water"
+  ],
+  [
+   "Get a good night's sleep.",
+   "@sleep"
+  ],
+  [
+   "And share with your friends!",
+   "@share"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

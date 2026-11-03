@@ -124,3 +124,8 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
 - Fix: phone-verify each channel at youtube.com/verify (also unlocks custom thumbnails). Until then, spread uploads ≤ ~20/day and upload the soonest slots first.
 - Render queue: `studio/queue.txt` + `studio/runq.sh` — each run pops one chunk (<2h) and logs to night_q.log.
 - Container clock is America/New_York.
+
+## Upload cap (Nov 3, 2026)
+- Hard cap: **max 15 uploads per morning run** across the 5 new kids channels (YouTube allows ~20 per rolling 24h account-wide; the Animated Zoo nightly batch needs the rest).
+- Soonest slots first; anything over the cap waits for the next day's run (plans are scheduled ahead, so nothing airs late).
+- Descriptions: first 2 lines = searchable phrase + subjects (yt-seo query test); titles ≤ 60 chars (yt-package).

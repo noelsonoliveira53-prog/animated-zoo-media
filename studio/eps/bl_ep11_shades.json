@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep11_shades",
+ "title": "Rainbow Colors for Kids! Light and Dark Shades",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're exploring light colors, dark colors, and a big bright rainbow!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_white",
+   "lines": [
+    [
+     "Here's a clue: it's the color of clouds and snow! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: White!",
+     "enter"
+    ],
+    [
+     "This is White! Can you say white?",
+     "zoom"
+    ],
+    [
+     "Clouds are white. Snowflakes and milk are white, too.",
+     "fx+bob"
+    ],
+    [
+     "White is soft and bright, like fresh snow.",
+     "bob"
+    ],
+    [
+     "Can you float your arms slowly, like a soft white cloud?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What animal has fluffy white wool?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A sheep! And an egg is white, too.",
+     "fx2+badge:WHITE!"
+    ],
+    [
+     "Let's say it together: WHITE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WHITE! Great job!",
+     "zoom"
+    ],
+    [
+     "Add white to any color, and it gets lighter.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, White! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_ld_blue",
+   "lines": [
+    [
+     "Here's a clue: blue can be light, and blue can be dark! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Blue Shades!",
+     "enter"
+    ],
+    [
+     "These are Blue Shades! Light blue, and dark blue.",
+     "zoom"
+    ],
+    [
+     "Look! Blue can go from light... all the way to dark.",
+     "fx+bob"
+    ],
+    [
+     "Light blue is soft and pale. Dark blue is deep.",
+     "bob"
+    ],
+    [
+     "Can you tiptoe softly for light, and stomp for dark?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? When is the sky light blue, and when is it dark blue?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Light blue in the daytime, and dark blue at night!",
+     "fx2+badge:BLUE!"
+    ],
+    [
+     "Let's say it together: BLUE SHADES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BLUE SHADES! Great job!",
+     "zoom"
+    ],
+    [
+     "Add white to make blue lighter. Add black to make it darker.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Blue Shades! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_ld_green",
+   "lines": [
+    [
+     "Here's a clue: green can be light, and green can be dark! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Green Shades!",
+     "enter"
+    ],
+    [
+     "These are Green Shades! Light green, and dark green.",
+     "zoom"
+    ],
+    [
+     "Look! Green goes from light, to medium, to dark.",
+     "fx+bob"
+    ],
+    [
+     "So many greens, all in one row!",
+     "bob"
+    ],
+    [
+     "Can you stretch up tall like a big green tree?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What is light green, and what is dark green?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A new little leaf is light green. A pine tree is dark green!",
+     "fx2+badge:GREEN!"
+    ],
+    [
+     "Let's say it together: GREEN SHADES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GREEN SHADES! Great job!",
+     "zoom"
+    ],
+    [
+     "Look outside, and you can spot lots of different greens.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Green Shades! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_ld_purple",
+   "lines": [
+    [
+     "Here's a clue: purple can be light, and purple can be dark! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Purple Shades!",
+     "enter"
+    ],
+    [
+     "These are Purple Shades! Light purple, and dark purple.",
+     "zoom"
+    ],
+    [
+     "Look! Purple goes from pale lavender to deep, dark purple.",
+     "fx+bob"
+    ],
+    [
+     "Light purple is gentle. Dark purple is rich and deep.",
+     "bob"
+    ],
+    [
+     "Can you pretend to smell a pretty purple flower? Sniff, sniff!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What is light purple, and what is dark purple?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Lavender flowers are light purple. Some grapes are dark purple!",
+     "fx2+badge:PURPLE!"
+    ],
+    [
+     "Let's say it together: PURPLE SHADES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PURPLE SHADES! Great job!",
+     "zoom"
+    ],
+    [
+     "Light and dark colors are called shades.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Purple Shades! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_rainbow",
+   "lines": [
+    [
+     "Here's a clue: it's a colorful arch in the sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Rainbow!",
+     "enter"
+    ],
+    [
+     "This is a Rainbow! Can you say rainbow?",
+     "zoom"
+    ],
+    [
+     "Rainbow colors go in order: red, orange, yellow, green, blue, and purple!",
+     "fx+bob"
+    ],
+    [
+     "Red is always on the top of the rainbow.",
+     "bob"
+    ],
+    [
+     "Can you draw a big rainbow in the air with your arm?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? When can we see a rainbow in the sky?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "When the sun shines while it rains!",
+     "fx2+badge:RAINBOW!"
+    ],
+    [
+     "Let's say it together: RAINBOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RAINBOW! Great job!",
+     "zoom"
+    ],
+    [
+     "Let's sing the order: red, orange, yellow, green, blue, purple!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Rainbow! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What beautiful colors! Let's remember.",
+   "@title"
+  ],
+  [
+   "White, like clouds and snow.",
+   "@bl2_white"
+  ],
+  [
+   "Light blue and dark blue.",
+   "@bl2_ld_blue"
+  ],
+  [
+   "Light green and dark green.",
+   "@bl2_ld_green"
+  ],
+  [
+   "Light purple and dark purple.",
+   "@bl2_ld_purple"
+  ],
+  [
+   "And a rainbow, from red to purple!",
+   "@bl2_rainbow"
+  ]
+ ],
+ "outro": [
+  [
+   "Next time it rains and the sun comes out, look for a rainbow.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

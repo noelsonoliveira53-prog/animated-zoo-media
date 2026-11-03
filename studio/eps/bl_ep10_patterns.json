@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep10_patterns",
+ "title": "Patterns and Sorting for Kids! Learn with Bloop",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're making patterns and sorting things into groups!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_pattern_ab",
+   "lines": [
+    [
+     "Here's a clue: red, blue, red, blue... what comes next? Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Color Pattern!",
+     "enter"
+    ],
+    [
+     "This is a Color Pattern! A pattern repeats, again and again.",
+     "zoom"
+    ],
+    [
+     "Red, blue, red, blue, red... blue! Blue comes next.",
+     "fx+bob"
+    ],
+    [
+     "Red, blue, red, blue. It goes on and on!",
+     "bob"
+    ],
+    [
+     "Can you clap a pattern? Clap, stomp, clap, stomp!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What pattern is hiding up high?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yellow, green, yellow, green! Another pattern.",
+     "fx2+badge:PATTERN!"
+    ],
+    [
+     "Let's say it together: COLOR PATTERN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: COLOR PATTERN! Great job!",
+     "zoom"
+    ],
+    [
+     "Patterns are everywhere, like the stripes on a shirt.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Color Pattern! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_pattern_shapes",
+   "lines": [
+    [
+     "Here's a clue: circle, square, circle, square... what comes next? Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Shape Pattern!",
+     "enter"
+    ],
+    [
+     "This is a Shape Pattern! The shapes take turns.",
+     "zoom"
+    ],
+    [
+     "Circle, square, circle, square, circle... square! A square comes next.",
+     "fx+bob"
+    ],
+    [
+     "Round circle, then a square with four sides. Again and again!",
+     "bob"
+    ],
+    [
+     "Can you make a pattern? Hands up, hands down, hands up, hands down!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which shapes are taking turns up high?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Star, heart, star, heart! Another shape pattern.",
+     "fx2+badge:PATTERN!"
+    ],
+    [
+     "Let's say it together: SHAPE PATTERN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SHAPE PATTERN! Great job!",
+     "zoom"
+    ],
+    [
+     "You can make patterns with blocks, beads, and even sounds.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Shape Pattern! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_sort_color",
+   "lines": [
+    [
+     "Here's a clue: red things and blue things got all mixed up! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Sort by Color!",
+     "enter"
+    ],
+    [
+     "Let's Sort by Color! Same color goes together.",
+     "zoom"
+    ],
+    [
+     "Red things go in the red basket. An apple, a heart, a ball!",
+     "fx+bob"
+    ],
+    [
+     "Red with red. Look how tidy!",
+     "bob"
+    ],
+    [
+     "Can you point to something red, and something blue, near you?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Where do the blue things go?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the blue basket! A blue ball, a star, and a fish.",
+     "fx2+badge:SORTED!"
+    ],
+    [
+     "Let's say it together: SORT BY COLOR!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SORT BY COLOR! Great job!",
+     "zoom"
+    ],
+    [
+     "Sorting helps us keep our toys neat and easy to find.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Sort by Color! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_sort_shape",
+   "lines": [
+    [
+     "Here's a clue: some things are round, and some have four corners! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Sort by Shape!",
+     "enter"
+    ],
+    [
+     "Let's Sort by Shape! Same shape goes together.",
+     "zoom"
+    ],
+    [
+     "Circles go in the circle basket. Round, round, round!",
+     "fx+bob"
+    ],
+    [
+     "Red, blue, and purple, but they're all circles.",
+     "bob"
+    ],
+    [
+     "Can you draw a circle in the air? Now draw a square!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Where do the squares go?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the square basket! Four sides and four corners each.",
+     "fx2+badge:SORTED!"
+    ],
+    [
+     "Let's say it together: SORT BY SHAPE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SORT BY SHAPE! Great job!",
+     "zoom"
+    ],
+    [
+     "We can sort by color, or by shape. You choose!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Sort by Shape! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_sizes",
+   "lines": [
+    [
+     "Here's a clue: three friends, all different sizes! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Small to Big!",
+     "enter"
+    ],
+    [
+     "Let's go from Small to Big! Small, medium, big.",
+     "zoom"
+    ],
+    [
+     "Look at their stars. A small star, a medium star, and a big star!",
+     "fx+bob"
+    ],
+    [
+     "The middle size is called medium.",
+     "bob"
+    ],
+    [
+     "Can you make yourself small, then medium, then big?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which hat fits the biggest friend?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The biggest hat! Every friend gets a hat that fits.",
+     "fx2+badge:BIG!"
+    ],
+    [
+     "Let's say it together: SMALL TO BIG!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SMALL TO BIG! Great job!",
+     "zoom"
+    ],
+    [
+     "Putting things from small to big is a kind of sorting, too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Small to Big! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What clever sorting! Let's remember.",
+   "@title"
+  ],
+  [
+   "Red, blue, red, blue makes a pattern.",
+   "@bl2_pattern_ab"
+  ],
+  [
+   "Circle, square, circle, square makes a pattern too.",
+   "@bl2_pattern_shapes"
+  ],
+  [
+   "We sorted red things and blue things.",
+   "@bl2_sort_color"
+  ],
+  [
+   "We sorted circles and squares.",
+   "@bl2_sort_shape"
+  ],
+  [
+   "And we lined up small, medium and big!",
+   "@bl2_sizes"
+  ]
+ ],
+ "outro": [
+  [
+   "Can you sort your toys by color or by shape at home? Have fun making patterns, too.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

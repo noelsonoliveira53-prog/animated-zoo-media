@@ -25,3 +25,8 @@ truck truck tt2_snowplow tt2_carcarrier tt2_racecar tt2_heli tt2_carwash tt2_rec
 truck truck tt_ep06_roadhelpers tt_ep07_delivery
 truck truck tt_ep08_aroundtown tt_ep09_funvehicles
 truck truck tt_ep10_landseasky tt_ep11_sounds
+bloop bloop bl2_orange_mix bl2_count_ducks bl2_bigsmall bl2_cube bl2_ten bl2_purple_mix bl2_sphere bl2_rainbow
+bloop bloop bl2_updown bl2_pattern bl2_cone bl2_green_hunt bl2_sort bl2_lightdark bl2_cylinder bl2_sizes
+bloop bloop bl_ep06_count10 bl_ep07_mixing
+bloop bloop bl_ep08_opposites bl_ep09_3dshapes
+bloop bloop bl_ep10_patterns bl_ep11_shades

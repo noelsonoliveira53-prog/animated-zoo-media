@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep08_opposites",
+ "title": "Opposites for Kids! Big and Small, Up and Down",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're learning opposites, things that are as different as can be!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_bigsmall",
+   "lines": [
+    [
+     "Here's a clue: one friend is huge, and one friend is tiny! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Big and Small!",
+     "enter"
+    ],
+    [
+     "These are opposites: big and small!",
+     "zoom"
+    ],
+    [
+     "This purple jelly friend is big. Look at that big, shiny star!",
+     "fx+bob"
+    ],
+    [
+     "Big, big, big! As big as can be.",
+     "bob"
+    ],
+    [
+     "Can you stretch your arms out wide and make yourself big?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which friend is small?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The little yellow friend! Small body, and a small star.",
+     "fx2+badge:SMALL!"
+    ],
+    [
+     "Let's say it together: BIG AND SMALL!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BIG AND SMALL! Great job!",
+     "zoom"
+    ],
+    [
+     "An elephant is big. A mouse is small.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Big and Small! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_updown",
+   "lines": [
+    [
+     "Here's a clue: one thing floats high, and one thing falls low! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Up and Down!",
+     "enter"
+    ],
+    [
+     "These are opposites: up and down!",
+     "zoom"
+    ],
+    [
+     "The red balloon floats up, up, up, toward the sky!",
+     "fx+bob"
+    ],
+    [
+     "Up is high. Way up high, near the clouds.",
+     "bob"
+    ],
+    [
+     "Can you reach your hands up high? Higher, higher!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Where does a ball go when you drop it?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Down! The ball falls down, down, down to the floor.",
+     "fx2+badge:DOWN!"
+    ],
+    [
+     "Let's say it together: UP AND DOWN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: UP AND DOWN! Great job!",
+     "zoom"
+    ],
+    [
+     "Birds fly up in the sky. Rain falls down to the ground.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Up and Down! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_inout",
+   "lines": [
+    [
+     "Here's a clue: the ball likes to hide inside the box! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: In and Out!",
+     "enter"
+    ],
+    [
+     "These are opposites: in and out!",
+     "zoom"
+    ],
+    [
+     "Peek! The blue ball is in the box.",
+     "fx+bob"
+    ],
+    [
+     "In, in, in. The ball is inside the box.",
+     "bob"
+    ],
+    [
+     "Can you hop into a pretend box? Ready? Hop in!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Where is the ball now?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Out! The ball rolled out of the box.",
+     "fx2+badge:OUT!"
+    ],
+    [
+     "Let's say it together: IN AND OUT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: IN AND OUT! Great job!",
+     "zoom"
+    ],
+    [
+     "Now hop out of your pretend box! In and out!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, In and Out! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_openclosed",
+   "lines": [
+    [
+     "Here's a clue: it's a box with a lid on top! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Open and Closed!",
+     "enter"
+    ],
+    [
+     "These are opposites: open and closed!",
+     "zoom"
+    ],
+    [
+     "The lid is on top. The box is closed.",
+     "fx+bob"
+    ],
+    [
+     "Closed tight! Nothing can get in or out.",
+     "bob"
+    ],
+    [
+     "Can you close your eyes? Now open them! Peekaboo!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What happens when we lift the lid?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It's open! And twinkly stars float out.",
+     "fx2+badge:OPEN!"
+    ],
+    [
+     "Let's say it together: OPEN AND CLOSED!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: OPEN AND CLOSED! Great job!",
+     "zoom"
+    ],
+    [
+     "Doors open and close. Your mouth opens and closes too!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Open and Closed! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_fullempty",
+   "lines": [
+    [
+     "Here's a clue: one jar has lots of balls, and one jar has none! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Full and Empty!",
+     "enter"
+    ],
+    [
+     "These are opposites: full and empty!",
+     "zoom"
+    ],
+    [
+     "This jar is full of colorful balls. Full to the top!",
+     "fx+bob"
+    ],
+    [
+     "Full means there's no more room inside.",
+     "bob"
+    ],
+    [
+     "Can you puff your cheeks full of air? Now blow it all out!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which jar has nothing inside?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "This one! The jar is empty.",
+     "fx2+badge:EMPTY!"
+    ],
+    [
+     "Let's say it together: FULL AND EMPTY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FULL AND EMPTY! Great job!",
+     "zoom"
+    ],
+    [
+     "A full cup has lots inside. An empty cup has nothing at all.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Full and Empty! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great opposites! Let's remember.",
+   "@title"
+  ],
+  [
+   "Big and small.",
+   "@bl2_bigsmall"
+  ],
+  [
+   "Up and down.",
+   "@bl2_updown"
+  ],
+  [
+   "In and out.",
+   "@bl2_inout"
+  ],
+  [
+   "Open and closed.",
+   "@bl2_openclosed"
+  ],
+  [
+   "And full and empty!",
+   "@bl2_fullempty"
+  ]
+ ],
+ "outro": [
+  [
+   "Can you find some opposites at home? Look for big and small things!",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep07_mixing",
+ "title": "Mixing Colors for Kids! Make Orange, Green and Purple",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're mixing colors to make brand new ones!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_mix_orange",
+   "lines": [
+    [
+     "Here's a clue: red and yellow are going to mix! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Orange!",
+     "enter"
+    ],
+    [
+     "Red plus yellow makes... Orange! Can you say orange?",
+     "zoom"
+    ],
+    [
+     "Look! A red drop, plus a yellow drop, makes an orange drop!",
+     "fx+bob"
+    ],
+    [
+     "Swirl, swirl, swirl! The two colors mix together.",
+     "bob"
+    ],
+    [
+     "Can you stir a big pretend paint pot? Round and round and round!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What other things are orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "An orange, a carrot, and a big round pumpkin!",
+     "fx2+badge:ORANGE!"
+    ],
+    [
+     "Let's say it together: ORANGE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ORANGE! Great job!",
+     "zoom"
+    ],
+    [
+     "Red and yellow make orange. What a magic mix!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Orange! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_mix_green",
+   "lines": [
+    [
+     "Here's a clue: blue and yellow are going to mix! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Green!",
+     "enter"
+    ],
+    [
+     "Blue plus yellow makes... Green! Can you say green?",
+     "zoom"
+    ],
+    [
+     "Look! A blue drop, plus a yellow drop, makes a green drop!",
+     "fx+bob"
+    ],
+    [
+     "Swirl, swirl, swirl! Blue and yellow mix together.",
+     "bob"
+    ],
+    [
+     "Can you hop like a little green frog? Hop, hop, ribbit!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What other things are green?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A leaf, a frog, and a crunchy green apple!",
+     "fx2+badge:GREEN!"
+    ],
+    [
+     "Let's say it together: GREEN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GREEN! Great job!",
+     "zoom"
+    ],
+    [
+     "Blue and yellow make green, like the grass and the trees.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Green! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_mix_purple",
+   "lines": [
+    [
+     "Here's a clue: red and blue are going to mix! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Purple!",
+     "enter"
+    ],
+    [
+     "Red plus blue makes... Purple! Can you say purple?",
+     "zoom"
+    ],
+    [
+     "Look! A red drop, plus a blue drop, makes a purple drop!",
+     "fx+bob"
+    ],
+    [
+     "Swirl, swirl, swirl! Red and blue mix together.",
+     "bob"
+    ],
+    [
+     "Can you reach up high and pick some pretend grapes?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What other things are purple?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Grapes, an eggplant, and a pretty purple flower!",
+     "fx2+badge:PURPLE!"
+    ],
+    [
+     "Let's say it together: PURPLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PURPLE! Great job!",
+     "zoom"
+    ],
+    [
+     "Red and blue make purple. Purple is so pretty!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Purple! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_mix_pink",
+   "lines": [
+    [
+     "Here's a clue: red and white are going to mix! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Pink!",
+     "enter"
+    ],
+    [
+     "Red plus white makes... Pink! Can you say pink?",
+     "zoom"
+    ],
+    [
+     "Look! A red drop, plus a white drop, makes a pink drop!",
+     "fx+bob"
+    ],
+    [
+     "Adding white makes a color lighter. Light red is pink!",
+     "bob"
+    ],
+    [
+     "Can you make a big heart shape with your hands?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What other things are pink?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A flower, a little pig, and a sweet pink heart!",
+     "fx2+badge:PINK!"
+    ],
+    [
+     "Let's say it together: PINK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PINK! Great job!",
+     "zoom"
+    ],
+    [
+     "Red and white make pink. Soft and sweet!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pink! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_mix_gray",
+   "lines": [
+    [
+     "Here's a clue: black and white are going to mix! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Gray!",
+     "enter"
+    ],
+    [
+     "Black plus white makes... Gray! Can you say gray?",
+     "zoom"
+    ],
+    [
+     "Look! A black drop, plus a white drop, makes a gray drop!",
+     "fx+bob"
+    ],
+    [
+     "Gray sits right in the middle of black and white.",
+     "bob"
+    ],
+    [
+     "Can you stomp like a big gray elephant? Stomp, stomp, stomp!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What other things are gray?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A rain cloud, an elephant, and a smooth gray stone!",
+     "fx2+badge:GRAY!"
+    ],
+    [
+     "Let's say it together: GRAY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GRAY! Great job!",
+     "zoom"
+    ],
+    [
+     "Black and white make gray, like a cloudy sky.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Gray! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What magic mixing! Let's remember.",
+   "@title"
+  ],
+  [
+   "Red and yellow make orange.",
+   "@bl2_mix_orange"
+  ],
+  [
+   "Blue and yellow make green.",
+   "@bl2_mix_green"
+  ],
+  [
+   "Red and blue make purple.",
+   "@bl2_mix_purple"
+  ],
+  [
+   "Red and white make pink.",
+   "@bl2_mix_pink"
+  ],
+  [
+   "And black and white make gray!",
+   "@bl2_mix_gray"
+  ]
+ ],
+ "outro": [
+  [
+   "Ask a grown-up to help you mix some paint, and see what colors you can make.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

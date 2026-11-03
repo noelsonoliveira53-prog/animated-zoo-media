@@ -2,11 +2,15 @@ from brand import pet, font, MILO
 T = {"ep01_savanna": ("SAVANNA", "FRIENDS!", ["giraffe","elephant","lion","zebra","hippo"], "#ffd166"),
      "ep02_ocean_ice": ("OCEAN &amp; ICE", "ANIMALS!", ["penguin","octopus","turtle","polarbear","flamingo"], "#8ecae6"),
      "ep03_treetops": ("TREETOP", "FRIENDS!", ["monkey","owl","panda","koala","sloth"], "#b5e48c"),
-     "ep04_amazing_bodies": ("AMAZING", "BODIES!", ["giraffe","elephant","kangaroo","polarbear","flamingo"], "#ffc8dd")}
-MILO_POS = {"ep04_amazing_bodies": "left:600px;top:40px"}  # keep Milo off tall animals
+     "ep04_amazing_bodies": ("AMAZING", "BODIES!", ["giraffe","elephant","kangaroo","polarbear","flamingo"], "#ffc8dd"),
+     "ep05_baby_animals": ("BABY", "ANIMALS!", ["gorilla","rhino","seal","elephant","sloth"], "#ffd6a5")}
+MILO_POS = {"ep04_amazing_bodies": "left:600px;top:40px", "ep05_baby_animals": "left:640px;top:20px"}
+POS = {"ep05_baby_animals": [(-60, 250, 470), (200, 330, 400), (470, 360, 380), (760, 320, 400), (840, 170, 400)]}
+EXTRA = {"ep05_baby_animals": '<div style="position:absolute;left:880px;top:282px;width:420px;height:16px;border-radius:8px;background:#8d5a2b"></div>'}  # keep Milo off tall animals
 for k, (a, b, an, bg) in T.items():
     pos = [(-60, 250, 470), (150, 330, 400), (340, 300, 430), (560, 330, 400), (770, 300, 430)]
-    pets = "".join(pet(x, px, py, h) for x, (px, py, h) in zip(an, pos))
+    pos = POS.get(k, pos)
+    pets = EXTRA.get(k, "") + "".join(pet(x, px, py, h) for x, (px, py, h) in zip(an, pos))
     html = f"""<html><head><style>{font}*{{margin:0}}body{{width:1280px;height:720px;overflow:hidden;position:relative;font-family:Baloo;
 background:radial-gradient(circle at 70% 30%,#fff7d6 0,{bg} 60%)}}
 .t{{position:absolute;left:40px;font-size:118px;line-height:1;color:#fff;-webkit-text-stroke:14px #1c5fc4;paint-order:stroke fill;text-shadow:0 8px 0 rgba(0,0,0,.18)}}

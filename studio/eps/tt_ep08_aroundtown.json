@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep08_aroundtown",
+ "title": "Around Town with Bolt! Car Wash, Garage and Traffic Light",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're taking a trip around town to visit five busy places and helpers.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "We'll stop at the corner, the gas station, the car wash, the garage and more!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_trafficlight",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it has three lights: red, yellow and green! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Traffic Light!",
+     "enter"
+    ],
+    [
+     "A traffic light helps cars take turns at the corner.",
+     "zoom"
+    ],
+    [
+     "Red means stop. The cars stop and wait.",
+     "fx+bob"
+    ],
+    [
+     "Yellow means slow down. Red is coming soon.",
+     "bob"
+    ],
+    [
+     "Let's play! Red light... freeze!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what green means?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Green means go! Off the cars go!",
+     "fx2+badge:GREEN MEANS GO!"
+    ],
+    [
+     "Let's say it together: TRAFFIC LIGHT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TRAFFIC LIGHT!",
+     "zoom"
+    ],
+    [
+     "When we walk across the street, we always hold a grown-up's hand.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Traffic Light!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_gasstation",
+   "lines": [
+    [
+     "Who's next? Here's a clue: cars stop here to get fuel! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Gas Station!",
+     "enter"
+    ],
+    [
+     "Cars and trucks need fuel to go, just like we need food.",
+     "zoom"
+    ],
+    [
+     "A hose from the pump fills up the car's tank.",
+     "fx+bob"
+    ],
+    [
+     "Grown-ups use the pump, and kids stay buckled in the car.",
+     "bob"
+    ],
+    [
+     "Can you make a filling-up sound? Glug, glug, glug!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what electric cars do instead?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They plug in to charge, like a tablet!",
+     "fx2+badge:PLUG IN!"
+    ],
+    [
+     "Let's say it together: GAS STATION!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GAS STATION!",
+     "zoom"
+    ],
+    [
+     "Many gas stations also have air to fill up the tires.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Gas Station!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_carwash",
+   "lines": [
+    [
+     "Who's next? Here's a clue: cars go here to get clean and shiny! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Car Wash!",
+     "enter"
+    ],
+    [
+     "A car wash gives cars a bath.",
+     "zoom"
+    ],
+    [
+     "First, soapy bubbles cover the car from top to bottom.",
+     "fx+bob"
+    ],
+    [
+     "Big soft brushes spin and scrub the dirt away.",
+     "bob"
+    ],
+    [
+     "Can you scrub like a car wash brush? Scrub, scrub!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what comes after the soap?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Water rinses the soap away! Splish, splash!",
+     "fx2+badge:SPLISH SPLASH!"
+    ],
+    [
+     "Let's say it together: CAR WASH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CAR WASH!",
+     "zoom"
+    ],
+    [
+     "Then warm air blows the car dry. So shiny!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Car Wash!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_garage",
+   "lines": [
+    [
+     "Who's next? Here's a clue: cars come here to get fixed! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Garage!",
+     "enter"
+    ],
+    [
+     "A garage is where mechanics fix cars and trucks.",
+     "zoom"
+    ],
+    [
+     "Mechanics use tools, like wrenches, to fix things.",
+     "fx+bob"
+    ],
+    [
+     "They check the tires, the lights and the engine.",
+     "bob"
+    ],
+    [
+     "Can you turn a pretend wrench? Twist, twist!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how mechanics look under a car?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A car lift raises the car way up high!",
+     "fx2+badge:CAR LIFT!"
+    ],
+    [
+     "Let's say it together: GARAGE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GARAGE!",
+     "zoom"
+    ],
+    [
+     "Tow trucks like me bring cars to the garage to be fixed.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Garage!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_recycle",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it takes away bottles, cans and paper! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Recycling Truck!",
+     "enter"
+    ],
+    [
+     "A recycling truck picks up the recycling bins.",
+     "zoom"
+    ],
+    [
+     "Bottles, cans and paper go into the back.",
+     "fx+bob"
+    ],
+    [
+     "It drives them all to the recycling center.",
+     "bob"
+    ],
+    [
+     "Can you sort with me? Paper here, cans there!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what happens to the old cans and paper?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They get made into brand-new things!",
+     "fx2+badge:NEW AGAIN!"
+    ],
+    [
+     "Let's say it together: RECYCLING TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RECYCLING TRUCK!",
+     "zoom"
+    ],
+    [
+     "Recycling helps keep our planet clean and green.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Recycling Truck!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a fun trip around town! Let's remember.",
+   "@title"
+  ],
+  [
+   "Red means stop, and green means go.",
+   "@tt2_trafficlight"
+  ],
+  [
+   "Electric cars plug in to charge.",
+   "@tt2_gasstation"
+  ],
+  [
+   "The car wash rinses with water.",
+   "@tt2_carwash"
+  ],
+  [
+   "The garage has a car lift.",
+   "@tt2_garage"
+  ],
+  [
+   "And recycling makes old things new again!",
+   "@tt2_recycle"
+  ]
+ ],
+ "outro": [
+  [
+   "Which stop was your favorite? Be kind, and wave hello to your neighbors.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

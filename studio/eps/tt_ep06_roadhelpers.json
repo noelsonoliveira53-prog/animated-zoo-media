@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep06_roadhelpers",
+ "title": "Road Helper Trucks for Kids! Rollers, Loaders and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five trucks that build roads and keep them clean.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Listen for the clues, and see if you can guess each truck first!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_loader",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it has a bucket in front and a digging arm in back! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Backhoe Loader!",
+     "enter"
+    ],
+    [
+     "A backhoe loader is like two machines in one!",
+     "zoom"
+    ],
+    [
+     "The big bucket in front scoops up dirt and loads it into trucks.",
+     "fx+bob"
+    ],
+    [
+     "The arm in the back is called a backhoe. It digs deep holes.",
+     "bob"
+    ],
+    [
+     "Can you scoop in front and dig in back? Scoop! Dig!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the driver uses the arm in the back?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The driver's seat turns all the way around to face it!",
+     "fx2+badge:SEAT TURNS AROUND!"
+    ],
+    [
+     "Let's say it together: BACKHOE LOADER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BACKHOE LOADER!",
+     "zoom"
+    ],
+    [
+     "Backhoe loaders are small enough to work on busy town streets.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Backhoe Loader!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_roller",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a giant heavy drum instead of front wheels! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Road Roller!",
+     "enter"
+    ],
+    [
+     "A road roller helps build brand-new roads.",
+     "zoom"
+    ],
+    [
+     "Its big round drum is very, very heavy.",
+     "fx2+bob"
+    ],
+    [
+     "It rolls slowly back and forth, back and forth, over the new road.",
+     "bob"
+    ],
+    [
+     "Can you roll your arms round and round like a big drum?",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the road roller is so heavy?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Its heavy drum presses the road flat and smooth!",
+     "fx+badge:FLAT AND SMOOTH!"
+    ],
+    [
+     "Let's say it together: ROAD ROLLER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ROAD ROLLER!",
+     "zoom"
+    ],
+    [
+     "Water sprays on the drum, so the warm road does not stick to it.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Road Roller!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_cherrypicker",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a bucket that lifts a worker way up high! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Cherry Picker!",
+     "enter"
+    ],
+    [
+     "A cherry picker is a truck with a long, bendy arm.",
+     "zoom"
+    ],
+    [
+     "Workers ride up in the bucket to fix tall streetlights, like this one!",
+     "fx+bob"
+    ],
+    [
+     "The arm bends and stretches to lift the bucket up, up, up.",
+     "bob"
+    ],
+    [
+     "Can you bend your arm and stretch it up high?",
+     "wiggle"
+    ],
+    [
+     "Can you guess where the funny name cherry picker comes from?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Long ago, lifts like this helped farmers pick fruit from tall trees!",
+     "fx2+badge:PICKING FRUIT!"
+    ],
+    [
+     "Let's say it together: CHERRY PICKER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CHERRY PICKER!",
+     "zoom"
+    ],
+    [
+     "Cherry pickers also help trim tall trees and hang holiday lights.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cherry Picker!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_sweeper",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has spinning brushes that clean the street! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Street Sweeper!",
+     "enter"
+    ],
+    [
+     "A street sweeper keeps our town clean and tidy.",
+     "zoom"
+    ],
+    [
+     "Round brushes spin underneath to sweep up dirt and leaves.",
+     "fx+bob"
+    ],
+    [
+     "It scoops everything into a big box inside the truck.",
+     "bob"
+    ],
+    [
+     "Can you pretend to sweep with a broom? Swish, swish!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the street sweeper sprays water?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A little water keeps the dust from flying up into the air!",
+     "fx2+badge:NO DUST!"
+    ],
+    [
+     "Let's say it together: STREET SWEEPER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: STREET SWEEPER!",
+     "zoom"
+    ],
+    [
+     "Street sweepers often clean very early in the morning.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Street Sweeper!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_snowplow",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it has a giant blade for pushing snow! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Snowplow!",
+     "enter"
+    ],
+    [
+     "A snowplow clears the roads on snowy days.",
+     "zoom"
+    ],
+    [
+     "Its big curved blade pushes the snow off to the side of the road.",
+     "fx+bob"
+    ],
+    [
+     "Bright flashing lights help everyone see it coming.",
+     "bob"
+    ],
+    [
+     "Can you push the snow with your hands? Push, push, push!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what the snowplow sprinkles from the back?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Salt and sand! They help keep the road from getting icy.",
+     "fx2+badge:SALT AND SAND!"
+    ],
+    [
+     "Let's say it together: SNOWPLOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SNOWPLOW!",
+     "zoom"
+    ],
+    [
+     "Snowplows often work all night, so the roads are ready by morning.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Snowplow!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What hard-working road helpers! Let's remember.",
+   "@title"
+  ],
+  [
+   "The backhoe loader's seat turns all the way around.",
+   "@tt2_loader"
+  ],
+  [
+   "The road roller makes the road flat and smooth.",
+   "@tt2_roller"
+  ],
+  [
+   "The cherry picker lifts workers up high.",
+   "@tt2_cherrypicker"
+  ],
+  [
+   "The street sweeper sprays water to stop the dust.",
+   "@tt2_sweeper"
+  ],
+  [
+   "And the snowplow pushes snow and spreads salt!",
+   "@tt2_snowplow"
+  ]
+ ],
+ "outro": [
+  [
+   "Which road helper was your favorite? Be kind, and wave hello to the workers you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep07_delivery",
+ "title": "Delivery Trucks for Kids! Mail Truck, Forklift and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five vehicles that carry things from place to place.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Some carry letters, some carry boxes, and one carries cars! Let's find out.",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_mail",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it brings letters and packages to your house! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Mail Truck!",
+     "enter"
+    ],
+    [
+     "A mail truck carries lots and lots of mail.",
+     "zoom"
+    ],
+    [
+     "Letters, cards and packages ride inside, all sorted and ready to go.",
+     "fx+bob"
+    ],
+    [
+     "The mail carrier stops at every house on the street.",
+     "bob"
+    ],
+    [
+     "Can you pretend to open a letter? Hooray, it's for you!",
+     "wiggle"
+    ],
+    [
+     "Can you guess which side the steering wheel is often on?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The right side, close to the mailboxes!",
+     "fx2+badge:RIGHT SIDE!"
+    ],
+    [
+     "Let's say it together: MAIL TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MAIL TRUCK!",
+     "zoom"
+    ],
+    [
+     "Mail carriers deliver in sunshine, rain and even snow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Mail Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_van",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it brings boxes right to your front door! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Delivery Van!",
+     "enter"
+    ],
+    [
+     "A delivery van brings packages to homes and shops.",
+     "zoom"
+    ],
+    [
+     "Boxes big and small are stacked neatly inside.",
+     "fx+bob"
+    ],
+    [
+     "The driver follows a map to find every address.",
+     "bob"
+    ],
+    [
+     "Can you carry a pretend box? Careful, it's heavy!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the driver gets the boxes out quickly?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A big sliding door opens wide on the side!",
+     "fx2+badge:SLIDING DOOR!"
+    ],
+    [
+     "Let's say it together: DELIVERY VAN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: DELIVERY VAN!",
+     "zoom"
+    ],
+    [
+     "Vans are smaller than big trucks, so they fit on little streets.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Delivery Van!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_forklift",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has two long forks for lifting heavy boxes! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Forklift!",
+     "enter"
+    ],
+    [
+     "A forklift works in big warehouses full of boxes.",
+     "zoom"
+    ],
+    [
+     "Its two forks slide under a wooden tray called a pallet.",
+     "fx2+bob"
+    ],
+    [
+     "The boxes sit on the pallet, all stacked up together.",
+     "bob"
+    ],
+    [
+     "Can you hold out two fingers like forks? Slide and lift!",
+     "wiggle"
+    ],
+    [
+     "Can you guess where the forklift puts the boxes?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Way up high, on tall shelves!",
+     "fx+badge:UP HIGH!"
+    ],
+    [
+     "Let's say it together: FORKLIFT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FORKLIFT!",
+     "zoom"
+    ],
+    [
+     "A heavy weight in the back keeps the forklift steady, so it won't tip.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Forklift!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_tanker",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a big round tank on its back! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Tanker Truck!",
+     "enter"
+    ],
+    [
+     "A tanker truck carries liquids, like water or milk.",
+     "zoom"
+    ],
+    [
+     "The liquid rides inside the long, round tank.",
+     "fx2+bob"
+    ],
+    [
+     "Walls inside the tank help keep the liquid from sloshing too much.",
+     "bob"
+    ],
+    [
+     "Can you make a big round tank with your arms?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the liquid gets out?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Through a hose at the back! Glug, glug, glug!",
+     "fx+badge:GLUG GLUG!"
+    ],
+    [
+     "Let's say it together: TANKER TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TANKER TRUCK!",
+     "zoom"
+    ],
+    [
+     "Milk tankers bring fresh milk from farms to the dairy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Tanker Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_carcarrier",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it carries cars on top of cars! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Car Carrier!",
+     "enter"
+    ],
+    [
+     "A car carrier is a long truck with two floors.",
+     "zoom"
+    ],
+    [
+     "Cars ride on the top floor and on the bottom floor.",
+     "fx+bob"
+    ],
+    [
+     "It brings brand-new cars from the factory to car stores.",
+     "bob"
+    ],
+    [
+     "Let's count the cars! One, two, three, four, five, six, seven!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the cars get on and off?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They drive up and down a ramp!",
+     "fx2+badge:DRIVE UP THE RAMP!"
+    ],
+    [
+     "Let's say it together: CAR CARRIER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CAR CARRIER!",
+     "zoom"
+    ],
+    [
+     "Some car carriers can carry up to ten cars at once.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Car Carrier!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, so many things to carry! Let's remember.",
+   "@title"
+  ],
+  [
+   "The mail truck brings letters to the mailbox.",
+   "@tt2_mail"
+  ],
+  [
+   "The delivery van has a big sliding door.",
+   "@tt2_van"
+  ],
+  [
+   "The forklift lifts boxes up high.",
+   "@tt2_forklift"
+  ],
+  [
+   "The tanker truck carries water or milk.",
+   "@tt2_tanker"
+  ],
+  [
+   "And the car carrier has a ramp for cars!",
+   "@tt2_carcarrier"
+  ]
+ ],
+ "outro": [
+  [
+   "Which delivery truck was your favorite? Be kind, and say thank you to the people who bring your mail.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

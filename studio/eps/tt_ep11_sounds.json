@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep11_sounds",
+ "title": "Truck Sounds for Kids! Beep, Wee-oo and Putt-Putt with Bolt",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're listening to the sounds that five trucks make.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Get ready to make the sounds with me. Beep, beep!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_towtruck",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it's red, with a yellow hook, just like me! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Tow Truck!",
+     "enter"
+    ],
+    [
+     "A tow truck helps cars get to the garage.",
+     "zoom"
+    ],
+    [
+     "Its yellow lights blink and flash. Blink, blink!",
+     "fx2+bob"
+    ],
+    [
+     "Its strong boom and hook can lift a car.",
+     "bob"
+    ],
+    [
+     "Can you make a beeping sound? Beep, beep, beep!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why trucks beep when they back up?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Beep, beep! It tells everyone, I'm backing up!",
+     "fx+badge:BEEP BEEP!"
+    ],
+    [
+     "Let's say it together: TOW TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TOW TRUCK!",
+     "zoom"
+    ],
+    [
+     "Lots of big trucks beep when they drive backward.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Tow Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "firetruck",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's red, with a long ladder and a siren! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Fire Truck!",
+     "enter"
+    ],
+    [
+     "A fire truck helps firefighters do their job.",
+     "zoom"
+    ],
+    [
+     "Its long ladder reaches way up high.",
+     "fx2+bob"
+    ],
+    [
+     "It carries hoses and lots and lots of water.",
+     "bob"
+    ],
+    [
+     "Can you make a siren sound? Wee-oo, wee-oo!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why fire trucks have sirens?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "So cars can hear it coming and move over!",
+     "badge:MOVE OVER!"
+    ],
+    [
+     "Let's say it together: FIRE TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FIRE TRUCK!",
+     "zoom"
+    ],
+    [
+     "When cars hear a siren, they pull over to the side of the road.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Fire Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "garbage",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it picks up the trash cans every week! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Garbage Truck!",
+     "enter"
+    ],
+    [
+     "A garbage truck helps keep our town clean.",
+     "zoom"
+    ],
+    [
+     "A robot arm grabs the can and lifts it up, up, up.",
+     "fx+bob"
+    ],
+    [
+     "The trash tumbles into the back. Crash, bang!",
+     "bob"
+    ],
+    [
+     "Can you lift a pretend can? Up and over!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what sound the robot arm makes?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Whirr and hiss! The arm moves with a whoosh.",
+     "fx2+badge:WHIRR HISS!"
+    ],
+    [
+     "Let's say it together: GARBAGE TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GARBAGE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Inside, a big squisher presses the trash flat to make more room.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Garbage Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tractor",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it works on a farm and has giant back wheels! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Tractor!",
+     "enter"
+    ],
+    [
+     "A tractor is a big farm helper.",
+     "zoom"
+    ],
+    [
+     "Its giant back wheels grip the muddy fields.",
+     "fx+bob"
+    ],
+    [
+     "It pulls plows, wagons and big farm machines.",
+     "bob"
+    ],
+    [
+     "Can you make a tractor sound? Putt, putt, putt!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the tires are so bumpy?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Bumpy treads help it roll through mud without slipping!",
+     "fx2+badge:MUDDY FUN!"
+    ],
+    [
+     "Let's say it together: TRACTOR!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TRACTOR!",
+     "zoom"
+    ],
+    [
+     "Farmers use tractors to plant seeds and bring in crops.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Tractor!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "dumptruck",
+   "lines": [
+    [
+     "Who's last? Here's a clue: its back tips up to pour out rocks! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Dump Truck!",
+     "enter"
+    ],
+    [
+     "A dump truck carries dirt, sand and rocks.",
+     "zoom"
+    ],
+    [
+     "Its big open box in the back is called a bed.",
+     "fx+bob"
+    ],
+    [
+     "It's a busy worker at every building site.",
+     "bob"
+    ],
+    [
+     "Can you make a rumble sound? Rumble, rumble!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what sound the rocks make when they slide out?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Crash, rumble, whoosh! The bed tips up and the rocks pour out!",
+     "fx2+badge:RUMBLE!"
+    ],
+    [
+     "Let's say it together: DUMP TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: DUMP TRUCK!",
+     "zoom"
+    ],
+    [
+     "Then the empty bed comes back down, ready for more.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Dump Truck!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a noisy, happy day! Let's remember the sounds.",
+   "@title"
+  ],
+  [
+   "The tow truck goes beep, beep when it backs up.",
+   "@tt2_towtruck"
+  ],
+  [
+   "The fire truck siren says, move over!",
+   "@firetruck"
+  ],
+  [
+   "The garbage truck arm goes whirr and hiss.",
+   "@garbage"
+  ],
+  [
+   "The tractor goes putt, putt, putt.",
+   "@tractor"
+  ],
+  [
+   "And the dump truck goes rumble, whoosh!",
+   "@dumptruck"
+  ]
+ ],
+ "outro": [
+  [
+   "Which truck sound was your favorite? Be kind, and use a soft voice inside.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

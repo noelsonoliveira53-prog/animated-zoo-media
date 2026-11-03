@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep10_landseasky",
+ "title": "Land, Sea and Sky! Helicopter, Boat and Rocket for Kids",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five vehicles that go on land, on water and in the sky.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Some fly, one floats, and some roll along! Let's find out.",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_heli",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it has long blades that spin on top! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Helicopter!",
+     "enter"
+    ],
+    [
+     "A helicopter is a flying machine.",
+     "zoom"
+    ],
+    [
+     "The blades on top are called a rotor. They spin super fast to lift it up.",
+     "fx+bob"
+    ],
+    [
+     "It can fly up, down, forward and even backward!",
+     "bob"
+    ],
+    [
+     "Can you spin your arm like a rotor? Whirr, whirr!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what the little rotor on the tail does?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It keeps the helicopter from spinning around and around!",
+     "fx2+badge:NO SPINNING!"
+    ],
+    [
+     "Let's say it together: HELICOPTER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HELICOPTER!",
+     "zoom"
+    ],
+    [
+     "Helicopters can hover, staying still in one spot in the sky.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Helicopter!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_boat",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's bright orange and it floats on the water! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Rescue Boat!",
+     "enter"
+    ],
+    [
+     "A rescue boat helps keep people safe on the water.",
+     "zoom"
+    ],
+    [
+     "It moves fast through the waves and leaves a white trail.",
+     "fx+bob"
+    ],
+    [
+     "Its crew practices every day, so they are always ready.",
+     "bob"
+    ],
+    [
+     "Can you make waves with your arms? Swoosh, swoosh!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why rescue boats are bright orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Orange is super easy to see on blue water!",
+     "fx2+badge:EASY TO SEE!"
+    ],
+    [
+     "Let's say it together: RESCUE BOAT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RESCUE BOAT!",
+     "zoom"
+    ],
+    [
+     "It carries life rings and life jackets. On a boat, we always wear a life jacket.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Rescue Boat!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_tug",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's small, but it pushes giant airplanes! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Airplane Tug!",
+     "enter"
+    ],
+    [
+     "An airplane tug works at the airport.",
+     "zoom"
+    ],
+    [
+     "A strong bar connects the tug to the airplane's front wheel.",
+     "fx2+bob"
+    ],
+    [
+     "It's low and flat, so it fits under the airplane's nose.",
+     "bob"
+    ],
+    [
+     "Can you push like a tug? Push, push!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why big airplanes need a tug?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They don't back up by themselves at the gate, so the tug pushes them back!",
+     "fx+badge:PUSH BACK!"
+    ],
+    [
+     "Let's say it together: AIRPLANE TUG!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: AIRPLANE TUG!",
+     "zoom"
+    ],
+    [
+     "Small but mighty! Tugs are super strong.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Airplane Tug!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_rocket",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries a rocket to the launch pad! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Rocket Mover!",
+     "enter"
+    ],
+    [
+     "A rocket mover carries a giant rocket.",
+     "zoom"
+    ],
+    [
+     "Some rockets lie down for the ride, then stand up tall at the launch pad.",
+     "fx2+bob"
+    ],
+    [
+     "Rockets carry astronauts and satellites into space.",
+     "bob"
+    ],
+    [
+     "Can you count down with me? Three, two, one, blast off!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how fast a giant rocket mover goes?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Very slowly! Some go slower than you can walk.",
+     "fx+badge:SLOW AND STEADY!"
+    ],
+    [
+     "Let's say it together: ROCKET MOVER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ROCKET MOVER!",
+     "zoom"
+    ],
+    [
+     "Going slowly keeps the rocket safe and steady.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Rocket Mover!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "train",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it rolls on tracks and says choo choo! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Train!",
+     "enter"
+    ],
+    [
+     "A train travels on long metal tracks.",
+     "zoom"
+    ],
+    [
+     "The engine pulls lots of cars behind it.",
+     "fx+bob"
+    ],
+    [
+     "Some trains carry people, and some carry cargo, like wood and grain.",
+     "bob"
+    ],
+    [
+     "Can you chug your arms like a train? Choo choo!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why trains blow their horns?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "To say, here I come! Toot, toot!",
+     "fx2+badge:TOOT TOOT!"
+    ],
+    [
+     "Let's say it together: TRAIN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TRAIN!",
+     "zoom"
+    ],
+    [
+     "Train wheels have special edges that keep them on the rails.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Train!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What an adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "The helicopter's tail rotor stops it from spinning.",
+   "@tt2_heli"
+  ],
+  [
+   "The rescue boat is orange, so it's easy to see.",
+   "@tt2_boat"
+  ],
+  [
+   "The tug pushes airplanes back from the gate.",
+   "@tt2_tug"
+  ],
+  [
+   "The rocket mover goes slow and steady.",
+   "@tt2_rocket"
+  ],
+  [
+   "And the train toots its horn!",
+   "@train"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one would you like to ride? Be kind, and wave hello to the vehicles you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

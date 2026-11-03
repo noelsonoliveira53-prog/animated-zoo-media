@@ -1,0 +1,674 @@
+[
+ {
+  "id": "tt2_towtruck",
+  "animal": "tt2_towtruck",
+  "title": "How Does a Tow Truck Lift a Car?",
+  "thumb": "HOOK & LIFT!",
+  "top": "TOW TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Tow Truck Association basics: how towing works",
+   "National Highway Traffic Safety Administration: vehicle safety"
+  ],
+  "beats": [
+   {
+    "say": "This is me! I'm a tow truck. Do you know how I lift a whole car?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "I have a strong arm on my back called a boom. A long cable hangs down with a yellow hook.",
+    "act": "fx+badge:HOOK AND LIFT!"
+   },
+   {
+    "say": "The hook holds the front of the car, and my boom lifts it up, up, up.",
+    "act": "zoom"
+   },
+   {
+    "say": "Then I carry the car to the garage, so it can get fixed and go vroom again! Beep, beep, here I come!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you lift your arms up like a tow truck boom? Up, up! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_sweeper",
+  "animal": "tt2_sweeper",
+  "title": "How Does a Street Sweeper Clean the Road?",
+  "thumb": "SWEEP!",
+  "top": "STREET SWEEPER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "American Public Works Association: street sweeping",
+   "U.S. EPA: keeping streets and storm drains clean"
+  ],
+  "beats": [
+   {
+    "say": "Swish, swish! Which truck has brushes that sweep the street?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A street sweeper has round brushes underneath that spin and spin to sweep up dirt and leaves. Some sweepers have a brush on the side too, to clean along the curb.",
+    "act": "fx+badge:SPINNING BRUSHES!"
+   },
+   {
+    "say": "It sprays a little water too, so the dust does not fly up into the air.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Then it scoops everything into a big box inside. A clean street for everyone!",
+    "act": "fx2off+bob"
+   },
+   {
+    "say": "Can you pretend to sweep with a broom? Swish, swish! Swish, swish, all clean! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_forklift",
+  "animal": "tt2_forklift",
+  "title": "Forklifts Lift Heavy Boxes Way Up High!",
+  "thumb": "LIFT UP!",
+  "top": "FORKLIFT",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "OSHA: powered industrial trucks (forklifts)",
+   "Industrial Truck Association: forklift basics"
+  ],
+  "beats": [
+   {
+    "say": "Who can lift a stack of heavy boxes way up high? Let's find out!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A forklift has two long flat arms called forks. They slide right under the boxes.",
+    "act": "fx2+badge:TWO FORKS!"
+   },
+   {
+    "say": "Then the forks go up, up, up, to put the boxes on a tall shelf.",
+    "act": "fx2off+fx+zoom"
+   },
+   {
+    "say": "A heavy weight on the back keeps the forklift steady, so it will not tip. Forklifts work in big warehouses, where lots and lots of boxes are stored.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "Can you hold out two fingers like forks and lift them up? Up, up! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_roller",
+  "animal": "tt2_roller",
+  "title": "Why Is the Road Roller So Heavy?",
+  "thumb": "SMOOTH!",
+  "top": "ROAD ROLLER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Federal Highway Administration: asphalt pavement construction",
+   "National Asphalt Pavement Association"
+  ],
+  "beats": [
+   {
+    "say": "This truck has no front wheels. It has a giant drum! What does it do?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A road roller is super heavy. Its big round drum presses new road flat and smooth.",
+    "act": "fx2+badge:FLAT AND SMOOTH!"
+   },
+   {
+    "say": "It rolls slowly back and forth, back and forth, until the road is ready.",
+    "act": "fx2off+fx+zoom"
+   },
+   {
+    "say": "Water sprays on the drum, so the warm, sticky road does not stick to it. Then the new road is ready for cars, bikes and buses!",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "Can you roll your hands like a big drum? Roll, roll, roll! Smooth! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_cherrypicker",
+  "animal": "tt2_cherrypicker",
+  "title": "Why Is It Called a Cherry Picker?",
+  "thumb": "UP HIGH!",
+  "top": "CHERRY PICKER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "OSHA: aerial lifts",
+   "Agricultural history: orchard ladders and lifts"
+  ],
+  "beats": [
+   {
+    "say": "This truck has a bucket that goes way up high. Can you guess its funny name?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's called a cherry picker! Long ago, lifts like this helped farmers pick fruit from tall trees.",
+    "act": "fx2+badge:CHERRY PICKER!"
+   },
+   {
+    "say": "Today, a worker rides up in the bucket to fix tall streetlights and wires.",
+    "act": "fx2off+fx+zoom"
+   },
+   {
+    "say": "The long arm bends and stretches, so the bucket can reach just the right spot. The worker wears a safety belt clipped to the bucket.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "Can you stretch up tall, like you're picking cherries? Reach, reach! Up we go! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_monster",
+  "animal": "tt2_monster",
+  "title": "Monster Truck Tires Are as Tall as a Grown-Up!",
+  "thumb": "BIG TIRES!",
+  "top": "MONSTER TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Monster truck sport technical specifications: 66-inch tires",
+   "Science museum guides: shock absorbers"
+  ],
+  "beats": [
+   {
+    "say": "Look at these giant tires! How big are monster truck tires?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Monster truck tires are huge. One tire can be as tall as a grown-up! That's bigger than me!",
+    "act": "fx+badge:SO TALL!"
+   },
+   {
+    "say": "Big bouncy springs called shocks help the truck land softly after a jump. Squish, then bounce!",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Monster trucks put on shows, with jumps and big wheelies for the crowd. The drivers wear helmets and seat belts, and the trucks are built extra strong.",
+    "act": "fx2off+bob"
+   },
+   {
+    "say": "Can you bounce like a monster truck? Boing, boing! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_icecream",
+  "animal": "tt2_icecream",
+  "title": "Why Does the Ice Cream Truck Play Music?",
+  "thumb": "YUM!",
+  "top": "ICE CREAM TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Food truck basics: refrigeration and freezers",
+   "Community history of ice cream trucks"
+  ],
+  "beats": [
+   {
+    "say": "Do you hear a happy song? Which truck plays music as it drives?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The ice cream truck! It plays a song so everyone knows it's coming down the street.",
+    "act": "fx+badge:LA LA LA!"
+   },
+   {
+    "say": "Inside, a big freezer keeps the ice cream cold and frosty, so it doesn't melt. Brrr! It's like a freezer on wheels.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "A grown-up can help you buy a treat from the little window. Wait on the sidewalk, and look both ways with your grown-up.",
+    "act": "bob"
+   },
+   {
+    "say": "What's your favorite ice cream flavor? Mine is strawberry! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_mail",
+  "animal": "tt2_mail",
+  "title": "Why Is the Mail Truck Steering Wheel on the Right?",
+  "thumb": "LETTERS!",
+  "top": "MAIL TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "U.S. Postal Service: history of delivery vehicles",
+   "Smithsonian National Postal Museum"
+  ],
+  "beats": [
+   {
+    "say": "This mail truck's steering wheel is on the other side. Do you know why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A mail truck carries letters and packages to houses all over town.",
+    "act": "fx+zoom"
+   },
+   {
+    "say": "Many mail trucks have the steering wheel on the right side, close to the mailboxes. Isn't that clever?",
+    "act": "fxoff+fx2+badge:CLOSE TO MAILBOXES!"
+   },
+   {
+    "say": "That way, the mail carrier can reach out and put the mail right in the mailbox! Mail carriers deliver letters in sunshine, rain and even snow.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you pretend to put a letter in a mailbox? Drop! Here's a letter for you! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_carcarrier",
+  "animal": "tt2_carcarrier",
+  "title": "How Many Cars Can a Car Carrier Carry?",
+  "thumb": "LOTS OF CARS!",
+  "top": "CAR CARRIER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Trucking industry guides: car haulers",
+   "Federal Motor Carrier Safety Administration"
+  ],
+  "beats": [
+   {
+    "say": "This truck carries cars on top of cars! How many can it carry?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A car carrier has two floors, one on top and one on the bottom. It's like a parking garage on wheels!",
+    "act": "fx+zoom"
+   },
+   {
+    "say": "Some car carriers can carry up to ten cars at once!",
+    "act": "badge:UP TO 10 CARS!"
+   },
+   {
+    "say": "It brings brand-new cars from the factory to the car stores. Ramps help the cars drive on and off. The top floor can tilt down, like a ramp, too.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Let's count the cars! One, two, three, four, five, six, seven! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_snowplow",
+  "animal": "tt2_snowplow",
+  "title": "How Does a Snowplow Clear the Road?",
+  "thumb": "PUSH!",
+  "top": "SNOWPLOW",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Federal Highway Administration: snow and ice control",
+   "American Public Works Association: winter maintenance"
+  ],
+  "beats": [
+   {
+    "say": "Brrr! The road is covered in snow. Which truck can clear it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A snowplow has a giant curved blade in front. It pushes snow off to the side of the road.",
+    "act": "fx+badge:PUSH THE SNOW!"
+   },
+   {
+    "say": "In the back, it spreads salt and sand, so the road is not slippery. Salt helps melt the ice.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Snowplows often work at night, so roads are ready in the morning. Bright flashing lights help everyone see the plow coming.",
+    "act": "fx2off+bob"
+   },
+   {
+    "say": "Can you push like a snowplow? Push, push, push! Whoosh! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_heli",
+  "animal": "tt2_heli",
+  "title": "Helicopters Can Fly Backward!",
+  "thumb": "HOVER!",
+  "top": "HELICOPTER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "NASA Glenn Research Center: how helicopters fly",
+   "FAA Helicopter Flying Handbook"
+  ],
+  "beats": [
+   {
+    "say": "Whirr, whirr! Which flying machine can stay still in the sky?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A helicopter has long blades on top called a rotor. They spin super fast to lift it up.",
+    "act": "fx+badge:SPINNING ROTOR!"
+   },
+   {
+    "say": "A helicopter can go straight up, hover in one spot, and even fly backward! Wow!",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "The little rotor on the tail keeps it from spinning around and around. Helicopters can land in small places, like the top of a tall building.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you spin your arm like a rotor? Whirr, whirr! Lift off! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_racecar",
+  "animal": "tt2_racecar",
+  "title": "Why Are Race Cars So Low?",
+  "thumb": "ZOOM!",
+  "top": "RACE CAR",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Motorsport engineering guides: downforce and grip",
+   "Science museum guides: aerodynamics"
+  ],
+  "beats": [
+   {
+    "say": "Zoom! Race cars sit really low, close to the road. Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Being low and wide helps a race car hold the road tight when it turns.",
+    "act": "fx+badge:LOW AND WIDE!"
+   },
+   {
+    "say": "The wing on the back pushes the car down, so the tires grip the track. Race cars use smooth tires called slicks on dry tracks.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "At a pit stop, a team can change all four tires in just a few seconds! Zip, zip, zip! Then the car zooms back onto the track.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you go zoom in place? Ready, set, go! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_recycle",
+  "animal": "tt2_recycle",
+  "title": "Where Does the Recycling Truck Go?",
+  "thumb": "RECYCLE!",
+  "top": "RECYCLING TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "U.S. EPA: recycling basics",
+   "Local public works recycling guides"
+  ],
+  "beats": [
+   {
+    "say": "Bottles, cans and paper! Which truck takes them away?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The recycling truck! It picks up bottles, cans and paper from blue bins. Some recycling trucks have a robot arm that lifts the bin and tips it in.",
+    "act": "fx+zoom"
+   },
+   {
+    "say": "It takes them to the recycling center, where they get sorted. Paper goes with paper, and cans go with cans.",
+    "act": "fxoff+fx2+badge:SORT IT!"
+   },
+   {
+    "say": "Then they are made into brand-new things, like new paper and new cans! Recycling helps keep our planet clean and green.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you sort with me? Paper here, cans there! Good job! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_carwash",
+  "animal": "tt2_carwash",
+  "title": "What Happens Inside a Car Wash?",
+  "thumb": "BUBBLES!",
+  "top": "CAR WASH",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "International Carwash Association: how car washes work",
+   "U.S. EPA: water reuse at car washes"
+  ],
+  "beats": [
+   {
+    "say": "Splish, splash! Where do cars go to get clean and shiny?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The car wash! First, soapy bubbles cover the car from top to bottom. So many bubbles! Pop, pop!",
+    "act": "fx+badge:BUBBLES!"
+   },
+   {
+    "say": "Big soft brushes spin around and scrub away the dirt. Swish, swish, around and around.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Then water rinses the soap off. Many car washes clean and reuse their water! Last, warm air blows the car dry. Shiny and clean!",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you pretend to scrub like a car wash brush? Scrub, scrub! Scrub-a-dub-dub! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_trafficlight",
+  "animal": "tt2_trafficlight",
+  "title": "What Do Traffic Light Colors Mean?",
+  "thumb": "STOP & GO!",
+  "top": "TRAFFIC LIGHT",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "U.S. Department of Transportation: Manual on Uniform Traffic Control Devices",
+   "NHTSA: pedestrian safety for kids"
+  ],
+  "beats": [
+   {
+    "say": "Red, yellow, green! What does each traffic light color mean?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Red means stop. On most traffic lights, red is at the very top. Cars stop and wait. Stop!",
+    "act": "fx+badge:RED MEANS STOP!"
+   },
+   {
+    "say": "Yellow means slow down. The light will be red very soon. Cars get ready to stop. Slow, slow, slow.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Green means go! Cars can drive when the light is green. People walking wait for the walking light before they cross.",
+    "act": "fx2+badge:GREEN MEANS GO!"
+   },
+   {
+    "say": "Let's play! Red light, stop! Green light, go! Always cross with a grown-up. Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt2_tug",
+  "animal": "tt2_tug",
+  "title": "How Does a Big Airplane Back Up?",
+  "thumb": "PUSH BACK!",
+  "top": "AIRPLANE TUG",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "FAA: airport ground operations",
+   "Airport ground support equipment guides"
+  ],
+  "beats": [
+   {
+    "say": "Big airplanes don't back up by themselves at the gate. So who helps?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A little tug! It's low and flat, so it fits right under the airplane's nose. Tugs are small, but they are super strong.",
+    "act": "zoom"
+   },
+   {
+    "say": "A strong bar connects the tug to the airplane's front wheel.",
+    "act": "fx2+badge:STRONG BAR!"
+   },
+   {
+    "say": "Then the tug pushes the giant airplane backward, away from the gate. Small but mighty! Once the plane is out, it can drive to the runway by itself.",
+    "act": "fx2off+fx+bob"
+   },
+   {
+    "say": "Can you push like a tug? Push, push! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fxoff+outro"
+   }
+  ]
+ }
+]

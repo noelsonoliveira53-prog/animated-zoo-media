@@ -20,3 +20,8 @@ moon moon mb2_s_train mb2_s_frog mb2_s_moth mb2_s_starfish mb2_s_polarbear mb2_s
 moon moon mb_ep06_forest mb_ep07_snowy
 moon moon mb_ep08_garden mb_ep09_toys
 moon moon mb_ep10_rainy mb_ep11_train
+truck truck tt2_towtruck tt2_sweeper tt2_roller tt2_forklift tt2_monster tt2_cherrypicker tt2_mail tt2_icecream
+truck truck tt2_snowplow tt2_carcarrier tt2_racecar tt2_heli tt2_carwash tt2_recycle tt2_tug tt2_trafficlight
+truck truck tt_ep06_roadhelpers tt_ep07_delivery
+truck truck tt_ep08_aroundtown tt_ep09_funvehicles
+truck truck tt_ep10_landseasky tt_ep11_sounds

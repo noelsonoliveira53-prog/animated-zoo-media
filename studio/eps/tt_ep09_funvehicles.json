@@ -1,0 +1,329 @@
+{
+ "id": "tt_ep09_funvehicles",
+ "title": "Fun Vehicles for Kids! Monster Truck, Race Car and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five super fun vehicles.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Some are big, some are fast, and one even plays music! Let's find out.",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "tt2_icecream",
+   "lines": [
+    [
+     "Here's our first stop. Here's a clue: it plays a happy song and sells cold treats! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Ice Cream Truck!",
+     "enter"
+    ],
+    [
+     "An ice cream truck is like a little shop on wheels.",
+     "zoom"
+    ],
+    [
+     "It plays a song so everyone knows it's coming.",
+     "fx+bob"
+    ],
+    [
+     "Treats are passed out of a little window on the side.",
+     "bob"
+    ],
+    [
+     "Can you hum a happy song? La la la!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the ice cream stays cold?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A big freezer inside keeps it cold and frosty!",
+     "fx2+badge:SO COLD!"
+    ],
+    [
+     "Let's say it together: ICE CREAM TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ICE CREAM TRUCK!",
+     "zoom"
+    ],
+    [
+     "We always wait on the sidewalk with a grown-up for a treat.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Ice Cream Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_monster",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has the biggest tires you've ever seen! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Monster Truck!",
+     "enter"
+    ],
+    [
+     "A monster truck is a pickup truck with giant wheels.",
+     "zoom"
+    ],
+    [
+     "One tire can be as tall as a grown-up!",
+     "fx+bob"
+    ],
+    [
+     "Monster trucks drive at shows, with big jumps for the crowd.",
+     "bob"
+    ],
+    [
+     "Can you bounce like a monster truck? Boing, boing!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how it lands so softly after a jump?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Big bouncy springs called shocks!",
+     "fx2+badge:BOUNCY SHOCKS!"
+    ],
+    [
+     "Let's say it together: MONSTER TRUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MONSTER TRUCK!",
+     "zoom"
+    ],
+    [
+     "The drivers wear helmets and seat belts at every show.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Monster Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_racecar",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's low and fast, and it zooms around a track! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Race Car!",
+     "enter"
+    ],
+    [
+     "A race car is built to go really, really fast.",
+     "zoom"
+    ],
+    [
+     "It zooms around and around the race track.",
+     "fx+bob"
+    ],
+    [
+     "It sits low and wide, so it hugs the road on the turns.",
+     "bob"
+    ],
+    [
+     "Can you zoom in place? Ready, set, go!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what the checkered flag means?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It means the race is finished! Hooray!",
+     "fx2+badge:FINISH!"
+    ],
+    [
+     "Let's say it together: RACE CAR!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RACE CAR!",
+     "zoom"
+    ],
+    [
+     "At a pit stop, a team can change all four tires in just a few seconds.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Race Car!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_camper",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's like a tiny house on wheels! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Camper Van!",
+     "enter"
+    ],
+    [
+     "A camper van takes families on fun trips.",
+     "zoom"
+    ],
+    [
+     "Some campers have a roof that pops up for more room.",
+     "fx+bob"
+    ],
+    [
+     "Inside, there can be a bed and a tiny kitchen.",
+     "bob"
+    ],
+    [
+     "Can you pretend to sleep? Shh... snore, snore!",
+     "wiggle"
+    ],
+    [
+     "Can you guess where camper vans like to stop at night?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "At campgrounds, under the moon and stars!",
+     "fx2+badge:CAMPING!"
+    ],
+    [
+     "Let's say it together: CAMPER VAN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CAMPER VAN!",
+     "zoom"
+    ],
+    [
+     "In the morning, it's time to drive to a new place.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Camper Van!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tt2_bike",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it has two wheels and two pedals! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Bicycle!",
+     "enter"
+    ],
+    [
+     "A bicycle is a vehicle you power with your legs.",
+     "zoom"
+    ],
+    [
+     "When you push the pedals, a chain turns the back wheel.",
+     "fx+bob"
+    ],
+    [
+     "The handlebars help you steer left and right.",
+     "bob"
+    ],
+    [
+     "Can you pedal your legs in the air? Round and round!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what the little bell is for?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Ring, ring! It tells people you're coming!",
+     "fx2+badge:RING RING!"
+    ],
+    [
+     "Let's say it together: BICYCLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BICYCLE!",
+     "zoom"
+    ],
+    [
+     "Always wear a helmet when you ride a bike.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Bicycle!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "That was so much fun! Let's remember.",
+   "@title"
+  ],
+  [
+   "The ice cream truck has a big freezer inside.",
+   "@tt2_icecream"
+  ],
+  [
+   "The monster truck has bouncy shocks.",
+   "@tt2_monster"
+  ],
+  [
+   "The checkered flag means the race is finished.",
+   "@tt2_racecar"
+  ],
+  [
+   "The camper van stops at campgrounds at night.",
+   "@tt2_camper"
+  ],
+  [
+   "And the bike bell goes ring, ring!",
+   "@tt2_bike"
+  ]
+ ],
+ "outro": [
+  [
+   "Which fun vehicle was your favorite? Be kind, and take turns when you play.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

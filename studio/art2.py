@@ -291,6 +291,98 @@ SLOTH = svg(forest_env() + """
   </g>
   <g id="fx" opacity="0" fill="#66bb6a">""" + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((430,480,16),(500,520,12),(560,470,18),(620,515,14),(680,490,11),(470,540,10),(590,540,12),(735,500,9))) + """</g>""")
 
+def surface_env():
+    return SKY_EXTRAS + """
+  <rect x="-500" y="640" width="2200" height="500" fill="#29b6f6"/>
+  <rect x="-500" y="820" width="2200" height="320" fill="#0288d1" opacity=".55"/>
+  <path d="M-500 650 q60 -22 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#e1f5fe" stroke-width="10" fill="none"/>
+  <g fill="#2e7d32" opacity=".8"><path d="M-120 1100 q-30 -200 20 -360 q30 180 -20 360"/><path d="M1180 1100 q-40 -230 10 -400 q40 200 -10 400"/></g>
+  <g fill="#ffffff" opacity=".35"><ellipse cx="120" cy="760" rx="60" ry="8"/><ellipse cx="960" cy="800" rx="80" ry="9"/><ellipse cx="300" cy="900" rx="70" ry="8"/></g>"""
+
+def _rings(cx, cy, rx, ry, rot):
+    return f'<ellipse cx="{cx}" cy="{cy}" rx="{rx}" ry="{ry}" fill="#e07b39" transform="rotate({rot} {cx} {cy})"/>'
+
+REDPANDA = svg(forest_env() + """
+  <g id="animal">
+    <path d="M640 900 C 820 900, 900 800, 870 640 C 860 590, 830 560, 800 560" stroke="#c1440e" stroke-width="110" fill="none" stroke-linecap="round"/>
+    <g stroke="#7a2a08" stroke-width="22" fill="none" opacity=".75">
+      <path d="M760 855 q30 50 0 95"/><path d="M845 790 q55 20 80 -20"/><path d="M880 700 q55 -5 60 -55"/><path d="M845 610 q40 -35 20 -85"/>
+    </g>
+    <ellipse cx="420" cy="965" rx="70" ry="38" fill="#3b1a0b"/><ellipse cx="660" cy="965" rx="70" ry="38" fill="#3b1a0b"/>
+    <ellipse cx="540" cy="780" rx="190" ry="185" fill="#c1440e"/>
+    <ellipse cx="540" cy="820" rx="120" ry="140" fill="#4a2511"/>
+    <path d="M420 690 Q380 800 450 900" stroke="#3b1a0b" stroke-width="62" fill="none" stroke-linecap="round"/>
+    <path d="M660 690 Q700 800 630 900" stroke="#3b1a0b" stroke-width="62" fill="none" stroke-linecap="round"/>
+    <polygon points="400,430 420,320 495,390" fill="#c1440e"/><polygon points="680,430 660,320 585,390" fill="#c1440e"/>
+    <polygon points="418,410 428,348 475,392" fill="#fff4e6"/><polygon points="662,410 652,348 605,392" fill="#fff4e6"/>
+    <ellipse cx="540" cy="500" rx="165" ry="140" fill="#c1440e"/>
+    <ellipse cx="540" cy="565" rx="80" ry="58" fill="#fff4e6"/>
+    <ellipse cx="470" cy="455" rx="30" ry="20" fill="#fff4e6"/><ellipse cx="610" cy="455" rx="30" ry="20" fill="#fff4e6"/>
+    <path d="M478 500 Q470 560 500 610" stroke="#7a2a08" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <path d="M602 500 Q610 560 580 610" stroke="#7a2a08" stroke-width="20" fill="none" stroke-linecap="round"/>
+    <circle cx="482" cy="500" r="14" fill="#1a1a2e"/><circle cx="598" cy="500" r="14" fill="#1a1a2e"/>
+    <circle cx="487" cy="494" r="5" fill="#fff"/><circle cx="603" cy="494" r="5" fill="#fff"/>
+    <ellipse cx="540" cy="545" rx="20" ry="14" fill="#2b1408"/>
+    <path d="M522 575 q18 14 36 0" stroke="#2b1408" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <ellipse cx="445" cy="560" rx="18" ry="10" fill="#ff9ab0" opacity=".6"/><ellipse cx="635" cy="560" rx="18" ry="10" fill="#ff9ab0" opacity=".6"/>
+  </g>
+  <g id="fx" opacity="0"><path d="M640 900 C 820 900, 900 800, 870 640 C 860 590, 830 560, 800 560" stroke="#ffca28" stroke-width="20" fill="none" stroke-linecap="round" stroke-dasharray="30 26"/></g>""")
+
+MEERKAT = svg(sand_env() + """
+  <ellipse cx="830" cy="985" rx="190" ry="40" fill="#c9a24a"/><ellipse cx="830" cy="975" rx="70" ry="22" fill="#6d4c2f"/>
+  <g id="animal">
+    <path d="M500 960 Q380 990 300 980" stroke="#b08850" stroke-width="30" fill="none" stroke-linecap="round"/>
+    <path d="M300 980 l-30 2" stroke="#3e2723" stroke-width="26" stroke-linecap="round"/>
+    <ellipse cx="490" cy="985" rx="60" ry="20" fill="#9c7743"/><ellipse cx="600" cy="985" rx="60" ry="20" fill="#9c7743"/>
+    <ellipse cx="510" cy="930" rx="55" ry="70" fill="#c9a26a"/><ellipse cx="580" cy="930" rx="55" ry="70" fill="#c9a26a"/>
+    <ellipse cx="545" cy="740" rx="105" ry="230" fill="#d4b07a"/>
+    <ellipse cx="555" cy="770" rx="62" ry="170" fill="#f1dcb0"/>
+    <g stroke="#a98450" stroke-width="10" fill="none" opacity=".6"><path d="M460 640 q15 10 30 0"/><path d="M455 700 q15 10 30 0"/><path d="M455 760 q15 10 30 0"/></g>
+    <path d="M480 610 Q470 680 520 690" stroke="#c9a26a" stroke-width="30" fill="none" stroke-linecap="round"/>
+    <path d="M615 610 Q630 680 580 690" stroke="#c9a26a" stroke-width="30" fill="none" stroke-linecap="round"/>
+    <circle cx="470" cy="420" r="22" fill="#3e2723"/><circle cx="630" cy="420" r="22" fill="#3e2723"/>
+    <ellipse cx="550" cy="470" rx="95" ry="85" fill="#d4b07a"/>
+    <ellipse cx="555" cy="520" rx="52" ry="48" fill="#f1dcb0"/>
+    <ellipse cx="505" cy="455" rx="30" ry="26" fill="#3e2723" transform="rotate(-15 505 455)"/>
+    <ellipse cx="600" cy="455" rx="30" ry="26" fill="#3e2723" transform="rotate(15 600 455)"/>
+    <circle cx="507" cy="455" r="14" fill="#f6e6c4"/><circle cx="598" cy="455" r="14" fill="#f6e6c4"/>
+    <circle cx="509" cy="457" r="8" fill="#1a1a2e"/><circle cx="596" cy="457" r="8" fill="#1a1a2e"/>
+    <circle cx="512" cy="453" r="3" fill="#fff"/><circle cx="599" cy="453" r="3" fill="#fff"/>
+    <ellipse cx="555" cy="512" rx="17" ry="12" fill="#2b1d16"/>
+    <path d="M540 538 q15 12 30 0" stroke="#2b1d16" stroke-width="5" fill="none" stroke-linecap="round"/>
+    <ellipse cx="490" cy="505" rx="14" ry="8" fill="#ff9ab0" opacity=".55"/><ellipse cx="620" cy="505" rx="14" ry="8" fill="#ff9ab0" opacity=".55"/>
+  </g>
+  <g id="fx" opacity="0" stroke="#ffca28" stroke-width="12" fill="none">
+    <ellipse cx="505" cy="455" rx="44" ry="40"/><ellipse cx="600" cy="455" rx="44" ry="40"/>
+  </g>""")
+
+def _otter(x, y, s=1.0, flip=False):
+    tr = f'translate({x} {y}) scale({-s if flip else s} {s})'
+    return f"""<g transform="{tr}">
+      <path d="M-230 -10 Q-300 -40 -320 -90" stroke="#5d3a1a" stroke-width="44" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-250" cy="-60" rx="34" ry="22" fill="#4e2f14" transform="rotate(-40 -250 -60)"/>
+      <ellipse cx="-200" cy="-75" rx="34" ry="22" fill="#4e2f14" transform="rotate(-20 -200 -75)"/>
+      <ellipse cx="-20" cy="0" rx="250" ry="95" fill="#6d4524"/>
+      <ellipse cx="-10" cy="-30" rx="190" ry="55" fill="#8b5e34"/>
+      <ellipse cx="250" cy="-40" rx="95" ry="88" fill="#d9c3a5"/>
+      <circle cx="225" cy="-122" r="22" fill="#6d4524"/>
+      <ellipse cx="300" cy="-20" rx="42" ry="32" fill="#efe3cf"/>
+      <ellipse cx="318" cy="-38" rx="15" ry="11" fill="#2b1d16"/>
+      <path d="M296 -2 q16 10 30 -4" stroke="#2b1d16" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="245" cy="-62" r="11" fill="#1a1a2e"/><circle cx="295" cy="-75" r="11" fill="#1a1a2e"/>
+      <circle cx="249" cy="-66" r="4" fill="#fff"/><circle cx="299" cy="-79" r="4" fill="#fff"/>
+      <ellipse cx="235" cy="-20" rx="16" ry="9" fill="#ff9ab0" opacity=".6"/>
+      <path d="M120 -40 Q90 -110 40 -100" stroke="#5d3a1a" stroke-width="34" fill="none" stroke-linecap="round"/>
+      <path d="M140 -20 Q130 -90 80 -95" stroke="#5d3a1a" stroke-width="34" fill="none" stroke-linecap="round"/>
+    </g>"""
+
+SEAOTTER = svg(surface_env() + """
+  <g id="animal">""" + _otter(370, 660, 1.0) + """
+  </g>
+  <rect x="-500" y="676" width="2200" height="30" fill="#29b6f6" opacity=".55"/>
+  <g id="fx" opacity="0">""" + _otter(965, 680, .5, flip=True) + """
+    <path d="M790 600 C 760 570, 740 540, 765 525 C 780 517, 790 530, 790 538 C 790 530, 800 517, 815 525 C 840 540, 820 570, 790 600Z" fill="#ff5c8a"/></g>""")
+
 TITLE = svg(SKY_EXTRAS + ground() + """
   <g fill="#c98d4b"><rect x="230" y="420" width="90" height="560" rx="18"/><rect x="760" y="420" width="90" height="560" rx="18"/></g>
   <rect x="190" y="300" width="700" height="150" rx="40" fill="#2f80ed"/>
@@ -300,4 +392,5 @@ TITLE = svg(SKY_EXTRAS + ground() + """
 
 SCENES2 = {"lion": LION, "zebra": ZEBRA, "hippo": HIPPO, "monkey": MONKEY, "flamingo": FLAMINGO,
            "kangaroo": KANGAROO, "octopus": OCTOPUS, "turtle": TURTLE, "polarbear": POLARBEAR,
-           "owl": OWL, "panda": PANDA, "koala": KOALA, "sloth": SLOTH, "title": TITLE}
+           "owl": OWL, "panda": PANDA, "koala": KOALA, "sloth": SLOTH, "title": TITLE,
+           "redpanda": REDPANDA, "meerkat": MEERKAT, "seaotter": SEAOTTER}

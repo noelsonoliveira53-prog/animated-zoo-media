@@ -1,7 +1,8 @@
 from brand import pet, font, MILO
 T = {"ep01_savanna": ("SAVANNA", "FRIENDS!", ["giraffe","elephant","lion","zebra","hippo"], "#ffd166"),
      "ep02_ocean_ice": ("OCEAN &amp; ICE", "ANIMALS!", ["penguin","octopus","turtle","polarbear","flamingo"], "#8ecae6"),
-     "ep03_treetops": ("TREETOP", "FRIENDS!", ["monkey","owl","panda","koala","sloth"], "#b5e48c")}
+     "ep03_treetops": ("TREETOP", "FRIENDS!", ["monkey","owl","panda","koala","sloth"], "#b5e48c"),
+     "ep04_amazing_bodies": ("AMAZING", "BODIES!", ["giraffe","elephant","kangaroo","polarbear","flamingo"], "#ffc8dd")}
 for k, (a, b, an, bg) in T.items():
     pos = [(-60, 250, 470), (150, 330, 400), (340, 300, 430), (560, 330, 400), (770, 300, 430)]
     pets = "".join(pet(x, px, py, h) for x, (px, py, h) in zip(an, pos))

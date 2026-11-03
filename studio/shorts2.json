@@ -492,5 +492,119 @@
     "act": "outro"
    }
   ]
+ },
+ {
+  "id": "s_redpanda",
+  "animal": "redpanda",
+  "title": "Red Pandas Have Fuzzy Feet!",
+  "thumb": "FUZZY FEET!",
+  "top": "RED PANDA",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#5fb043",
+  "beats": [
+   {
+    "say": "You wear socks to keep your feet cozy. A red panda has fur on its feet! What else is fluffy?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's climb up to the red pandas!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Its big, bushy tail! The tail helps it balance up in the trees.",
+    "act": "fx+badge:BUSHY TAIL!"
+   },
+   {
+    "say": "It also helps keep the red panda warm when it's cold and windy.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Red pandas eat lots and lots of bamboo.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you wiggle your toes like a red panda? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_meerkat",
+  "animal": "meerkat",
+  "title": "Meerkats Have Built-In Sunglasses!",
+  "thumb": "SUNGLASSES!",
+  "top": "MEERKAT",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#d4a94f",
+  "beats": [
+   {
+    "say": "You wear sunglasses on sunny days. A meerkat has its own! Can you guess where?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's visit the meerkats!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The dark patches around its eyes! They help block the bright sun.",
+    "act": "fx+badge:SUNGLASSES!"
+   },
+   {
+    "say": "Meerkats live together in a big family called a mob.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "One meerkat stands tall and keeps watch, while the others eat and dig.",
+    "act": "bob"
+   },
+   {
+    "say": "Can you stand up tall like a meerkat? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_seaotter",
+  "animal": "seaotter",
+  "title": "Sea Otters Hold Paws When They Nap!",
+  "thumb": "HOLD PAWS!",
+  "top": "SEA OTTER",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "floor": "#29b6f6",
+  "beats": [
+   {
+    "say": "You hold hands to stay together. Sea otters can too! Can you guess when?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's float over to the sea otters!",
+    "act": "milo_in"
+   },
+   {
+    "say": "When they nap! Sea otters hold paws, or hold on to seaweed, so they don't float away.",
+    "act": "fx+badge:HOLDING PAWS!"
+   },
+   {
+    "say": "Sea otters have super thick fur. It keeps them warm in the cold sea.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "And they have a little pocket under each arm, for snacks!",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you float on your back like a sea otter? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
  }
 ]

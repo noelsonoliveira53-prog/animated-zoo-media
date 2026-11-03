@@ -10,7 +10,7 @@ from build import tts as _tts, music, pop, chunks, sh, SR
 HERE = os.path.dirname(os.path.abspath(__file__))
 ALL = {**SCENES, **SCENES2}
 GAP, SEG_GAP, SPEED, THINK = 0.7, 1.4, 0.85, 2.6
-NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY"}
+NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER"}
 ORIGIN = {"monkey": "640 430", "owl": "540 500", "sloth": "545 350", "koala": "435 600"}
 
 def tts(text, out):

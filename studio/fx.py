@@ -3,7 +3,7 @@ Adds: outlines + ground shadows, blink, breathing/idle sway, Milo beak talk,
 confetti bursts, flying birds, sparkles, camera moves."""
 import math, re
 
-NO_SHADOW = {"monkey", "owl", "sloth", "koala", "octopus", "turtle"}
+NO_SHADOW = {"monkey", "owl", "sloth", "koala", "octopus", "turtle", "seaotter"}
 
 OUTLINE = """<defs><filter id="ol" x="-10%" y="-10%" width="120%" height="120%">
 <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="d"/>

@@ -76,8 +76,14 @@ Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing anima
 See `studio/upload_plan.json`.
 
 ## Sister channels (same engine, pick with `CHANNEL=space|dino|wild`)
-Settings live in `studio/channel.py`. Each channel keeps the same safety rules, the same cadence
-(start at 4 Shorts + 1 five-minute episode a day) and its own art, so no video is reused across channels.
+Settings live in `studio/channel.py`. Each channel keeps the same safety rules and its own art, so no
+video is reused across channels. New channels follow the network ramp in `docs/CHANNELS.md` (week 1:
+1 Short/day + an episode every 2 days; week 2: 2 Shorts + 1 episode daily; week 3: 3 + 1; week 4 on: 4 + 1).
+Never start a new channel at full speed. Keep 2 hours between uploads on one channel.
+Slot offsets so channels don't post at the same minute: Space +50 min, Dino +60, Wild +70
+(on the network's Shorts 07:30 / 11:30 / 15:30 / 18:30 and episode 13:30 ET slots).
+Handles: @SpaceKidsAcademy and @DinoWorldKids belong to other people; use the HQ versions.
+Writing voice for these three channels: `docs/voice.md`.
 
 | Channel | Host | Voice | Art | Shorts / episodes | Repo folder |
 |---|---|---|---|---|---|

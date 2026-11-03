@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep01_goodnight",
+ "title": "Goodnight Animals 🌙 Calm Bedtime Story for Kids with Luna the Owl",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to five sleepy animal friends.",
+   ""
+  ],
+  [
+   "Let's take a slow, deep breath together. In, and out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb_bunny",
+   "lines": [
+    [
+     "Here's a little clue: she has long, soft ears and a fluffy tail. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Bunny.",
+     "enter"
+    ],
+    [
+     "This is Bunny. Can you whisper bunny?",
+     "zoom"
+    ],
+    [
+     "Bunnies sleep in cozy burrows under the ground.",
+     "fx+bob"
+    ],
+    [
+     "They curl up in a soft, round ball.",
+     "bob"
+    ],
+    [
+     "Can you wiggle your nose like a bunny? Softly, softly.",
+     "bob"
+    ],
+    [
+     "What do bunnies love to nibble?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Crunchy carrots and green leaves.",
+     "fx2+badge:BUNNY"
+    ],
+    [
+     "Let's say it softly together: Bunny.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Bunny.",
+     "zoom"
+    ],
+    [
+     "Bunny is warm and snug now.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Bunny.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_bear",
+   "lines": [
+    [
+     "Here's a little clue: he's big and brown, and he loves honey. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Bear.",
+     "enter"
+    ],
+    [
+     "This is Bear. Can you whisper bear?",
+     "zoom"
+    ],
+    [
+     "Bears take a very long sleep in winter.",
+     "fx+bob"
+    ],
+    [
+     "They sleep in a cozy cave called a den.",
+     "bob"
+    ],
+    [
+     "Can you give yourself a big bear hug? Squeeze gently.",
+     "bob"
+    ],
+    [
+     "What is a bear's bed called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A den. A warm, quiet den.",
+     "fx2+badge:BEAR"
+    ],
+    [
+     "Let's say it softly together: Bear.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Bear.",
+     "zoom"
+    ],
+    [
+     "Bear is yawning a big, slow yawn.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Bear.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_kitten",
+   "lines": [
+    [
+     "Here's a little clue: she says meow, and she purrs when she's happy. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Kitten.",
+     "enter"
+    ],
+    [
+     "This is Kitten. Can you whisper kitten?",
+     "zoom"
+    ],
+    [
+     "Kittens sleep for most of the day.",
+     "fx+bob"
+    ],
+    [
+     "They curl their tail around them like a blanket.",
+     "bob"
+    ],
+    [
+     "Can you purr like a kitten? Prrr, prrr.",
+     "bob"
+    ],
+    [
+     "What does a kitten do when she's happy?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "She purrs. A soft, happy sound.",
+     "fx2+badge:KITTEN"
+    ],
+    [
+     "Let's say it softly together: Kitten.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Kitten.",
+     "zoom"
+    ],
+    [
+     "Kitten's eyes are getting heavy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Kitten.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_duck",
+   "lines": [
+    [
+     "Here's a little clue: he's small and yellow, and he says quack. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Duckling.",
+     "enter"
+    ],
+    [
+     "This is Duckling. Can you whisper duckling?",
+     "zoom"
+    ],
+    [
+     "Ducklings sleep close to their mommy.",
+     "fx+bob"
+    ],
+    [
+     "Some ducks can even sleep while they float!",
+     "bob"
+    ],
+    [
+     "Can you flap your arms slowly, like little wings?",
+     "bob"
+    ],
+    [
+     "Where do ducklings like to sleep?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Snuggled close to their family.",
+     "fx2+badge:DUCKLING"
+    ],
+    [
+     "Let's say it softly together: Duckling.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Duckling.",
+     "zoom"
+    ],
+    [
+     "Duckling tucks his head under his wing.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Duckling.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_lamb",
+   "lines": [
+    [
+     "Here's a little clue: she's white and woolly, and she says baa. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Lamb.",
+     "enter"
+    ],
+    [
+     "This is Lamb. Can you whisper lamb?",
+     "zoom"
+    ],
+    [
+     "Lambs have soft, curly wool.",
+     "fx+bob"
+    ],
+    [
+     "Their wool keeps them warm all night.",
+     "bob"
+    ],
+    [
+     "Let's count sleepy sheep. One, two, three, four.",
+     "bob"
+    ],
+    [
+     "What keeps a lamb warm?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Her soft, woolly coat.",
+     "fx2+badge:LAMB"
+    ],
+    [
+     "Let's say it softly together: Lamb.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Lamb.",
+     "zoom"
+    ],
+    [
+     "Lamb rests in the quiet meadow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Lamb.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all our friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Bunny.",
+   "@mb_bunny"
+  ],
+  [
+   "Goodnight, Bear.",
+   "@mb_bear"
+  ],
+  [
+   "Goodnight, Kitten.",
+   "@mb_kitten"
+  ],
+  [
+   "Goodnight, Duckling.",
+   "@mb_duck"
+  ],
+  [
+   "Goodnight, Lamb.",
+   "@mb_lamb"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Bunny, Bear, Kitten, Duckling, and Lamb. Now close your eyes, and dream sweet dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

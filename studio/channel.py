@@ -121,5 +121,13 @@ def _broc(total, even=False):
 CONFIGS["fruity"] = dict(brand="FRUITY FRIENDS", host=PIPKIKO, voice="af_sky", talk="scale",
                         kind="🍓 Great job!", bye="See you next time! 🍓🥦", wing=_broc, birds_html="<i id=\"birds\"></i>",
                         root_bg="linear-gradient(180deg,#fff4d6 0%,#ffe9c7 85%)", brand_color="#b91c1c", repo_prefix="fruity/")
+from art_moon import LUNA
+def _owl(total, even=False):
+    r = int(total / 1.2)
+    if even: r = r // 2 * 2 - 1
+    return f'tl.to("#wing",{{rotation:-6,svgOrigin:"60 110",duration:1.2,yoyo:true,repeat:{r},ease:"sine.inOut"}},0);'
+CONFIGS["moon"] = dict(brand="MOONBEAM BEDTIME", host=LUNA, voice="bf_emma", talk="scale", speed=0.78, bpm=66,
+                        kind="🌙 Sweet dreams", bye="Goodnight, little one 🌙", wing=_owl, birds_html="<i id=\"birds\"></i>",
+                        root_bg="linear-gradient(180deg,#1d2456 0%,#3a3f86 85%)", brand_color="#1a237e", repo_prefix="moon/")
 NAME = os.environ.get("CHANNEL", "zoo")
 C = CONFIGS[NAME]

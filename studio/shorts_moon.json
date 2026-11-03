@@ -1,0 +1,207 @@
+[
+ {
+  "id": "mb_s_bunny",
+  "animal": "mb_bunny",
+  "title": "How Do Bunnies Sleep? 🌙",
+  "thumb": "BUNNY",
+  "top": "BUNNY",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts"
+  ],
+  "beats": [
+   {
+    "say": "Shh. Can you guess who's getting ready for bed?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Bunny. Bunnies sleep in cozy burrows under the ground.",
+    "act": "zoom+badge:BUNNY"
+   },
+   {
+    "say": "What do bunnies love to nibble? Crunchy carrots and green leaves.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you wiggle your nose like a bunny? Softly, softly.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Bunny. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb_s_moon",
+  "animal": "mb_moon",
+  "title": "Why Does the Moon Change Shape? 🌙",
+  "thumb": "MOON",
+  "top": "MOON",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts"
+  ],
+  "beats": [
+   {
+    "say": "Look up! Something round and bright is glowing tonight.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Moon. The moon shines when the sun goes to sleep.",
+    "act": "zoom+badge:MOON"
+   },
+   {
+    "say": "What shapes can the moon be? A big round circle, or a thin crescent.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you make a big round moon with your arms? Slowly.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Moon. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb_s_bath",
+  "animal": "mb_bath",
+  "title": "Why Take a Bath Before Bed? 🛁",
+  "thumb": "BATH TIME",
+  "top": "BATH TIME",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts"
+  ],
+  "beats": [
+   {
+    "say": "Warm water, soft bubbles. It's almost bedtime.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Bath Time. A warm bath helps our body relax.",
+    "act": "zoom+badge:BATH TIME"
+   },
+   {
+    "say": "What helps us feel calm before bed? A warm, cozy bath.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to pop the bubbles? Pop, pop, gently.",
+    "act": "bob"
+   },
+   {
+    "say": "Bye-bye, bubbles. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb_s_whale",
+  "animal": "mb_whale",
+  "title": "Do Whales Really Sing? 🐋",
+  "thumb": "WHALE",
+  "top": "WHALE",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts"
+  ],
+  "beats": [
+   {
+    "say": "Listen. A gentle song is coming from the deep blue sea.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Whale. Whales are the biggest animals in the ocean.",
+    "act": "zoom+badge:WHALE"
+   },
+   {
+    "say": "Where do whales live? In the big, blue ocean.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you hum a soft whale song? Mmmmm.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Whale. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb_s_lamb",
+  "animal": "mb_lamb",
+  "title": "Let's Count Sleepy Sheep 🐑",
+  "thumb": "LAMB",
+  "top": "LAMB",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts"
+  ],
+  "beats": [
+   {
+    "say": "One, two, three. Let's count sleepy sheep together.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Lamb. Lambs have soft, curly wool.",
+    "act": "zoom+badge:LAMB"
+   },
+   {
+    "say": "What keeps a lamb warm? Her soft, woolly coat.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Let's count sleepy sheep. One, two, three, four.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Lamb. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ }
+]

@@ -13,7 +13,8 @@ from art_wild import SCENES5
 from art_truck import SCENES6
 from art_bloop import SCENES7
 from art_fruity import SCENES8
-SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7); SCENES.update(SCENES8)
+from art_moon import SCENES9
+SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7); SCENES.update(SCENES8); SCENES.update(SCENES9)
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -29,7 +30,7 @@ def sh(cmd, **kw):
 
 def tts(text, out):
     if not os.path.exists(out):
-        sh(f'hyperframes tts {json.dumps(text)} -v {VOICE} -o "{out}" --json')
+        sh(f'hyperframes tts {json.dumps(text)} -v {VOICE}{' -s '+str(C['speed']) if C.get('speed') else ''} -o "{out}" --json')
     a, sr = sf.read(out, dtype="float32")
     if a.ndim > 1: a = a.mean(1)
     if sr != SR:
@@ -45,7 +46,7 @@ def music(total):
     # gentle ukulele-like arpeggio, C - G - Am - F at 100 bpm
     chords = [[261.6, 329.6, 392.0, 523.3], [196.0, 293.7, 392.0, 493.9],
               [220.0, 261.6, 329.6, 440.0], [174.6, 261.6, 349.2, 440.0]]
-    step = 60 / 100 / 2
+    step = 60 / C.get("bpm", 100) / 2
     out = np.zeros(int(SR * (total + 2)), np.float32)
     i, t = 0, 0.0
     while t < total:
@@ -258,5 +259,5 @@ window.__timelines["main"] = tl; tl.seek(0);
     print(final, total)
 
 if __name__ == "__main__":
-    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json", "shorts_truck.json", "shorts_bloop.json", "shorts_fruity.json") for e in json.load(open(os.path.join(HERE, f)))}
+    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json", "shorts_truck.json", "shorts_bloop.json", "shorts_fruity.json", "shorts_moon.json") for e in json.load(open(os.path.join(HERE, f)))}
     build(eps[sys.argv[1]], "--draft" in sys.argv)

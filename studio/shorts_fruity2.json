@@ -1,0 +1,658 @@
+[
+ {
+  "id": "fr2_pineapple",
+  "animal": "fr2_pineapple",
+  "title": "Does a Pineapple Grow on a Tree?",
+  "thumb": "PINEAPPLE!",
+  "top": "PINEAPPLE",
+  "bg": [
+   "#fff6d6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Spiky, bumpy and sweet. But where does a pineapple grow? Not where you think!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Pineapple! Pineapples do not grow on trees! They grow on a spiky plant, close to the ground. Each pineapple grows for a long, long time. More than a whole year!",
+    "act": "zoom+badge:PINEAPPLE!"
+   },
+   {
+    "say": "What are the spiky leaves on top called? The crown! Like a king or queen of fruits.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you make spiky leaves on your head? Hands up, fingers out, like a pineapple crown!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Pineapple is sweet and tangy, and so sunny yellow inside. You can even grow a new pineapple plant from the crown. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_sneeze",
+  "animal": "fr2_sneeze",
+  "title": "Where Should You Sneeze?",
+  "thumb": "ELBOW!",
+  "top": "COVER YOUR SNEEZE",
+  "bg": [
+   "#f1ecff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Ah, ah, ah-choo! Quick, where should that sneeze go?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Cover Your Sneeze! When you sneeze or cough, cover it with your elbow or a tissue. That keeps germs from flying to your friends.",
+    "act": "zoom+badge:ELBOW!"
+   },
+   {
+    "say": "What do we do after we use a tissue? Throw it away, and wash your hands!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you do a pretend sneeze into your elbow? Ah, ah, ah-choo!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Covering your sneeze is a kind way to help your friends stay well. Elbow or tissue, then wash your hands. Great job! See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_kiwi",
+  "animal": "fr2_kiwi",
+  "title": "What Color Is a Kiwi Inside?",
+  "thumb": "KIWI!",
+  "top": "KIWI",
+  "bg": [
+   "#f3ffe0",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Brown, fuzzy, and a little bit like a teddy bear. What's inside?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Kiwi! A kiwi has fuzzy brown skin, a little bit like a teddy bear. But inside, it's bright green, with a ring of tiny black seeds. And yes, you can eat the seeds!",
+    "act": "zoom+badge:KIWI!"
+   },
+   {
+    "say": "What color is a kiwi on the inside? Bright green! With tiny black seeds all around.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to scoop a kiwi with a spoon? Scoop, scoop, yum!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Kiwis taste sweet and a little bit tangy, all at the same time. Kiwis grow on long, climbing vines. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_washproduce",
+  "animal": "fr2_washproduce",
+  "title": "Why Do We Wash Fruits and Veggies?",
+  "thumb": "WASH IT!",
+  "top": "WASH YOUR FOOD",
+  "bg": [
+   "#e6f6ff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Splish, splash! Why do apples and carrots take a bath?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Wash Your Food! First, wash your hands. Then a grown-up helps rinse the fruits and veggies under running water. We rub them gently with our hands. Just water, no soap!",
+    "act": "zoom+badge:WASH IT!"
+   },
+   {
+    "say": "Why do we wash fruits and veggies? To wash away dirt and germs, so they're clean and ready!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to rinse an apple? Rub, rub, rub, under the water!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Clean food and clean hands make snack time even better. Wash your hands first, then wash the food. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_tomato",
+  "animal": "fr2_tomato",
+  "title": "Is a Tomato a Fruit or a Veggie?",
+  "thumb": "TOMATO!",
+  "top": "TOMATO",
+  "bg": [
+   "#ffe9e6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Red, round and juicy. Is it a fruit or a veggie? Let's find out!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Tomato! Tomatoes grow on plants in the garden. They start out small and green. In the warm sun, they turn red. Some tomatoes turn yellow, orange or even purple!",
+    "act": "zoom+badge:TOMATO!"
+   },
+   {
+    "say": "Is a tomato a fruit or a veggie? It's a fruit, because it has seeds inside! But we often eat it like a veggie.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you grow tall like a tomato plant? Stretch your arms like leafy branches!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Tomatoes are juicy in salads, and they make yummy sauce, too. Tomatoes can be big like a ball or tiny like a marble. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_lemon",
+  "animal": "fr2_lemon",
+  "title": "Why Does a Lemon Taste So Sour?",
+  "thumb": "LEMON!",
+  "top": "LEMON",
+  "bg": [
+   "#fffbd6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Yellow, bright, and it makes your face go squish! What is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Lemon! Lemons grow on trees, and they are full of juice. Lemon juice is sour! It can make your face go squish, like this.",
+    "act": "zoom+badge:LEMON!"
+   },
+   {
+    "say": "How can we use a lemon? Squeeze a little juice into water, or on fish, or into a yummy sauce!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you make a silly sour face? Squeeze your eyes and pucker up!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Lemons are sour all by themselves, but a little squeeze adds a bright, fresh taste. Lemon juice is sour because it's full of a special sour juice called citric acid. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_trynew",
+  "animal": "fr2_trynew",
+  "title": "How Do You Try a New Food?",
+  "thumb": "TRY IT!",
+  "top": "TRY NEW FOODS",
+  "bg": [
+   "#f4eeff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "A brand new food on your plate. What do you do? Let's be brave tasters!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Try New Foods! Trying a new food is like a little adventure for your mouth. Start with a tiny taste. Is it crunchy? Soft? Sweet? Sour?",
+    "act": "zoom+badge:TRY IT!"
+   },
+   {
+    "say": "What if you don't like it the first time? That's okay! Sometimes we like a food after trying it a few times.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to take a tiny taste? Nibble, nibble! Hmm!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Every tiny taste helps you learn about a new food. Maybe next time, it will be your new favorite. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_mango",
+  "animal": "fr2_mango",
+  "title": "What's Inside a Mango?",
+  "thumb": "MANGO!",
+  "top": "MANGO",
+  "bg": [
+   "#fff1e0",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Green, yellow, orange and red, all on one fruit! What's inside?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Mango! Mangoes grow on big, tall trees where the weather is warm. Inside, a mango is soft, orange and very sweet.",
+    "act": "zoom+badge:MANGO!"
+   },
+   {
+    "say": "What's hiding in the middle of a mango? One big, flat seed! It's almost as big as your hand.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to pick a mango from a tall tree? Reach up, up, up!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Mangoes are sweet and soft, and they smell like sunshine. Mango trees can grow taller than a house. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_potato",
+  "animal": "fr2_potato",
+  "title": "Where Do Potatoes Grow?",
+  "thumb": "POTATO!",
+  "top": "POTATO",
+  "bg": [
+   "#fbf1e4",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Brown, lumpy and hiding! Where do potatoes grow?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Potato! Potatoes grow under the ground. Only the green leaves poke out on top. Potatoes can be brown, red, yellow or even purple!",
+    "act": "zoom+badge:POTATO!"
+   },
+   {
+    "say": "Do we eat potatoes raw? No! We cook them first. They can be mashed, baked or roasted.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you dig for potatoes? Dig, dig, dig, and pull one up!",
+    "act": "wiggle"
+   },
+   {
+    "say": "The little dots on a potato are called eyes. A new plant can grow from them! One potato plant can grow lots of potatoes under the ground. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_sunscreen",
+  "animal": "fr2_sunscreen",
+  "title": "Why Do We Wear Sunscreen?",
+  "thumb": "SUNSCREEN!",
+  "top": "SUNSCREEN",
+  "bg": [
+   "#fff8e1",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Sunny day, time to play! But first, what do we put on our skin?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Sunscreen! Sunscreen helps protect your skin from the strong sunshine. A grown-up helps put it on before you go outside.",
+    "act": "zoom+badge:SUNSCREEN!"
+   },
+   {
+    "say": "What else helps us in the sun? A hat, sunglasses, and playing in the shade!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to rub on sunscreen? Nose, cheeks, arms and legs!",
+    "act": "wiggle"
+   },
+   {
+    "say": "After swimming, a grown-up puts on a little more sunscreen. Hats and shade help too, on every sunny day. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_grapes",
+  "animal": "fr2_grapes",
+  "title": "How Do Grapes Grow?",
+  "thumb": "GRAPES!",
+  "top": "GRAPES",
+  "bg": [
+   "#f3ecff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Little, round, and they hang out in a big group. What are they?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Grapes! Grapes grow on long, twisty plants called vines. They hang down in big, heavy bunches. Grapes can be green, red or purple. And raisins are grapes that dried in the sun!",
+    "act": "zoom+badge:GRAPES!"
+   },
+   {
+    "say": "How do grown-ups get grapes ready for little kids? They cut them into small pieces, so they're easy to eat!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you make a bunch of grapes? Hold up your fingers and wiggle them, one, two, three!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Grapes are sweet and juicy, and they make a cool, crunchy snack. A bunch of grapes can have more than one hundred grapes! See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_mushroom",
+  "animal": "fr2_mushroom",
+  "title": "Is a Mushroom a Plant?",
+  "thumb": "MUSHROOM!",
+  "top": "MUSHROOMS",
+  "bg": [
+   "#f7efe6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "It has a cap like a tiny umbrella. But is it a plant? Nope!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Mushrooms! Mushrooms are not plants! They're a fungus. That's a fun word: fungus! Mushrooms grow in cool, shady places. They don't grow from seeds.",
+    "act": "zoom+badge:MUSHROOM!"
+   },
+   {
+    "say": "Where do we get mushrooms to eat? From the store, or from a grown-up! We never pick wild ones to eat.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you make a mushroom? Stand up tall, and hold your arms round like a cap!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Mushrooms can be white, brown, big or tiny, and grown-ups cook them in yummy meals. Mushrooms make tiny specks called spores, instead of seeds. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_breakfast",
+  "animal": "fr2_breakfast",
+  "title": "Why Do We Eat Breakfast?",
+  "thumb": "BREAKFAST!",
+  "top": "BREAKFAST",
+  "bg": [
+   "#fff6d6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Good morning, sunshine! What's the very first meal of the day?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Breakfast! We sleep all night long. In the morning, breakfast gives us energy to play and learn. Breakfast can be oatmeal with berries, toast, eggs, yogurt or fruit.",
+    "act": "zoom+badge:BREAKFAST!"
+   },
+   {
+    "say": "When do we eat breakfast? In the morning, after we wake up!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you stretch and say good morning? Arms up, big smile! Good morning!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Every family has its own favorite breakfast. What's yours? Some families eat rice, beans or soup for breakfast, too. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_bellpepper",
+  "animal": "fr2_bellpepper",
+  "title": "What Colors Can a Bell Pepper Be?",
+  "thumb": "BELL PEPPER!",
+  "top": "BELL PEPPER",
+  "bg": [
+   "#ffeaea",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Red, yellow, orange, green. One veggie, so many colors!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Bell Pepper! Bell peppers can be green, yellow, orange or red. Many peppers start out green. If they stay on the plant longer, they change color!",
+    "act": "zoom+badge:BELL PEPPER!"
+   },
+   {
+    "say": "What's inside a bell pepper? It's almost empty, with lots of tiny seeds in the middle!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you name a pepper color with me? Red! Yellow! Orange! Green!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Bell peppers are crunchy and a little bit sweet. Not spicy at all! Green peppers that stay on the plant longer can turn red, yellow or orange. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_avocado",
+  "animal": "fr2_avocado",
+  "title": "What's the Big Ball Inside an Avocado?",
+  "thumb": "AVOCADO!",
+  "top": "AVOCADO",
+  "bg": [
+   "#eefbe0",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Bumpy outside, creamy inside, and a giant ball in the middle! What is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Avocado! An avocado grows on a tree. And guess what? It's a fruit! Inside, it's soft, creamy and light green, so you can mash it with a fork.",
+    "act": "zoom+badge:AVOCADO!"
+   },
+   {
+    "say": "What's the big round ball in the middle? The seed! It's called a pit, and it's very big.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to mash an avocado? Squish, squish, squish!",
+    "act": "wiggle"
+   },
+   {
+    "say": "You can spread mashed avocado on toast, or dip veggies in it. Avocado trees can grow from that big seed. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr2_play",
+  "animal": "fr2_play",
+  "title": "Why Do We Move and Play Every Day?",
+  "thumb": "PLAY!",
+  "top": "MOVE AND PLAY",
+  "bg": [
+   "#ffeef6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing & cough/sneeze etiquette, AAP sun safety and sleep guidance, FDA produce-washing tips)"
+  ],
+  "beats": [
+   {
+    "say": "Jump, spin, dance and freeze! Why is moving so good for us?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Move and Play! Moving your body makes your heart pump and your muscles strong. You can run, jump, dance, climb, or play catch with a ball!",
+    "act": "zoom+badge:PLAY!"
+   },
+   {
+    "say": "How often should we move and play? Every day! Little kids love to move a lot.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Let's move! Jump, jump, jump! Now spin around! Now freeze!",
+    "act": "wiggle"
+   },
+   {
+    "say": "After playing, drink some water and take a rest. Find a fun way to move with your family today. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ }
+]

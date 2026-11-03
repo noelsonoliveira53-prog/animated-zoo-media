@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep06_orchard",
+ "title": "More Fruits for Kids! Grapes, Pear, Kiwi and More with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five fruity friends that grow on trees and vines.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_grapes",
+   "lines": [
+    [
+     "Here's a clue: they're small and round, and they grow together in a big bunch! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Grapes!",
+     "enter"
+    ],
+    [
+     "This is Grapes! Can you say grapes?",
+     "zoom"
+    ],
+    [
+     "Grapes grow on long, twisty plants called vines. They hang down in big, heavy bunches.",
+     "fx+bob"
+    ],
+    [
+     "Grapes can be green, red or purple. And raisins are grapes that dried in the sun!",
+     "bob"
+    ],
+    [
+     "Can you make a bunch of grapes? Hold up your fingers and wiggle them, one, two, three!",
+     "wiggle"
+    ],
+    [
+     "How do grown-ups get grapes ready for little kids?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They cut them into small pieces, so they're easy to eat!",
+     "fx2+badge:GRAPES!"
+    ],
+    [
+     "Let's say it together: GRAPES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: GRAPES!",
+     "zoom"
+    ],
+    [
+     "Grapes are sweet and juicy, and they make a cool, crunchy snack.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Grapes!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_pear",
+   "lines": [
+    [
+     "Here's a clue: it's skinny at the top, round at the bottom, and it grows on a tree! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Pear!",
+     "enter"
+    ],
+    [
+     "This is Pear! Can you say pear?",
+     "zoom"
+    ],
+    [
+     "Pears grow on trees, just like apples do. They can be green, yellow, brown or red.",
+     "fx+bob"
+    ],
+    [
+     "A pear is ready when it feels a little soft near the top, by the stem.",
+     "bob"
+    ],
+    [
+     "Can you make a pear shape? Hands up high and skinny, then make your tummy round!",
+     "wiggle"
+    ],
+    [
+     "What's hiding in the middle of a pear?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little brown seeds! A new pear tree could grow from one.",
+     "fx2+badge:PEAR!"
+    ],
+    [
+     "Let's say it together: PEAR!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PEAR!",
+     "zoom"
+    ],
+    [
+     "Pears are soft and sweet, and so juicy you might need a napkin!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pear!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_kiwi",
+   "lines": [
+    [
+     "Here's a clue: it's brown and fuzzy outside, but it's a big surprise inside! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Kiwi!",
+     "enter"
+    ],
+    [
+     "This is Kiwi! Can you say kiwi?",
+     "zoom"
+    ],
+    [
+     "A kiwi has fuzzy brown skin, a little bit like a teddy bear.",
+     "fx+bob"
+    ],
+    [
+     "But inside, it's bright green, with a ring of tiny black seeds. And yes, you can eat the seeds!",
+     "bob"
+    ],
+    [
+     "Can you pretend to scoop a kiwi with a spoon? Scoop, scoop, yum!",
+     "wiggle"
+    ],
+    [
+     "What color is a kiwi on the inside?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Bright green! With tiny black seeds all around.",
+     "fx2+badge:KIWI!"
+    ],
+    [
+     "Let's say it together: KIWI!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: KIWI!",
+     "zoom"
+    ],
+    [
+     "Kiwis taste sweet and a little bit tangy, all at the same time.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Kiwi!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_cherries",
+   "lines": [
+    [
+     "Here's a clue: they're little and red, and they often come in pairs with long stems! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Cherries!",
+     "enter"
+    ],
+    [
+     "This is Cherries! Can you say cherries?",
+     "zoom"
+    ],
+    [
+     "Cherries grow on trees. In spring, the trees are covered in pretty pink and white flowers.",
+     "fx+bob"
+    ],
+    [
+     "Later, the flowers turn into shiny red cherries, hanging by their long stems.",
+     "bob"
+    ],
+    [
+     "Can you hold up two fingers, like a pair of cherries? Wiggle, wiggle!",
+     "wiggle"
+    ],
+    [
+     "What's in the middle of a cherry?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A hard pit! A grown-up takes it out for you first.",
+     "fx2+badge:CHERRIES!"
+    ],
+    [
+     "Let's say it together: CHERRIES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CHERRIES!",
+     "zoom"
+    ],
+    [
+     "Cherries are sweet, shiny and red, like little jewels.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cherries!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_peach",
+   "lines": [
+    [
+     "Here's a clue: it's round and fuzzy, and it can be orange, yellow and pink! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Peach!",
+     "enter"
+    ],
+    [
+     "This is Peach! Can you say peach?",
+     "zoom"
+    ],
+    [
+     "Peaches grow on trees. Their skin is soft and fuzzy, like a cozy blanket.",
+     "fx+bob"
+    ],
+    [
+     "Inside, a peach is sweet and juicy, and it smells so yummy.",
+     "bob"
+    ],
+    [
+     "Can you rub your cheek gently, like soft peach fuzz? So soft!",
+     "wiggle"
+    ],
+    [
+     "What's in the middle of a peach?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A big, bumpy pit! A grown-up cuts around it for you.",
+     "fx2+badge:PEACH!"
+    ],
+    [
+     "Let's say it together: PEACH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PEACH!",
+     "zoom"
+    ],
+    [
+     "A ripe peach is so juicy, it can drip right down your chin!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Peach!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Grapes, in a big bunch.",
+   "@fr2_grapes"
+  ],
+  [
+   "Pear, skinny on top and round on the bottom.",
+   "@fr2_pear"
+  ],
+  [
+   "Kiwi, fuzzy outside and green inside.",
+   "@fr2_kiwi"
+  ],
+  [
+   "Cherries, with a pit in the middle.",
+   "@fr2_cherries"
+  ],
+  [
+   "And peach, soft and fuzzy!",
+   "@fr2_peach"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep08_garden",
+ "title": "Garden Veggies for Kids! Tomato, Lettuce and More with Kiko",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're visiting the garden to meet five green and growing friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_tomato",
+   "lines": [
+    [
+     "Here's a clue: it's round and red, and it grows on a leafy green plant! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Tomato!",
+     "enter"
+    ],
+    [
+     "This is Tomato! Can you say tomato?",
+     "zoom"
+    ],
+    [
+     "Tomatoes grow on plants in the garden. They start out small and green.",
+     "fx+bob"
+    ],
+    [
+     "In the warm sun, they turn red. Some tomatoes turn yellow, orange or even purple!",
+     "bob"
+    ],
+    [
+     "Can you grow tall like a tomato plant? Stretch your arms like leafy branches!",
+     "wiggle"
+    ],
+    [
+     "Is a tomato a fruit or a veggie?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It's a fruit, because it has seeds inside! But we often eat it like a veggie.",
+     "fx2+badge:TOMATO!"
+    ],
+    [
+     "Let's say it together: TOMATO!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TOMATO!",
+     "zoom"
+    ],
+    [
+     "Tomatoes are juicy in salads, and they make yummy sauce, too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Tomato!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_cucumber",
+   "lines": [
+    [
+     "Here's a clue: it's long and green, cool and crunchy! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Cucumber!",
+     "enter"
+    ],
+    [
+     "This is Cucumber! Can you say cucumber?",
+     "zoom"
+    ],
+    [
+     "Cucumbers grow on vines that love to climb up and up.",
+     "fx+bob"
+    ],
+    [
+     "Cucumbers are mostly water inside. That's why they feel so cool and fresh!",
+     "bob"
+    ],
+    [
+     "Can you climb like a cucumber vine? Hand over hand, up, up, up!",
+     "wiggle"
+    ],
+    [
+     "What can a cucumber turn into?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A pickle! Pickles are cucumbers soaked in a special salty juice.",
+     "fx2+badge:CUCUMBER!"
+    ],
+    [
+     "Let's say it together: CUCUMBER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CUCUMBER!",
+     "zoom"
+    ],
+    [
+     "Cucumber slices are cool and crunchy on a warm day.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cucumber!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_lettuce",
+   "lines": [
+    [
+     "Here's a clue: it's green and leafy, and it's crunchy in a salad! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Lettuce!",
+     "enter"
+    ],
+    [
+     "This is Lettuce! Can you say lettuce?",
+     "zoom"
+    ],
+    [
+     "Lettuce grows in the garden, close to the ground.",
+     "fx+bob"
+    ],
+    [
+     "Lots of leaves grow together in a round bunch called a head.",
+     "bob"
+    ],
+    [
+     "Can you crunch like lettuce? Make a big crunchy sound! Crunch, crunch!",
+     "wiggle"
+    ],
+    [
+     "What can we make with lettuce?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A salad! Or put it in a sandwich for a crunchy bite.",
+     "fx2+badge:LETTUCE!"
+    ],
+    [
+     "Let's say it together: LETTUCE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LETTUCE!",
+     "zoom"
+    ],
+    [
+     "Lettuce can be green or even red, with leaves that are curly or flat.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Lettuce!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_bellpepper",
+   "lines": [
+    [
+     "Here's a clue: it's shiny and crunchy, and it comes in lots of colors! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Bell Pepper!",
+     "enter"
+    ],
+    [
+     "This is Bell Pepper! Can you say bell pepper?",
+     "zoom"
+    ],
+    [
+     "Bell peppers can be green, yellow, orange or red.",
+     "fx+bob"
+    ],
+    [
+     "Many peppers start out green. If they stay on the plant longer, they change color!",
+     "bob"
+    ],
+    [
+     "Can you name a pepper color with me? Red! Yellow! Orange! Green!",
+     "wiggle"
+    ],
+    [
+     "What's inside a bell pepper?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It's almost empty, with lots of tiny seeds in the middle!",
+     "fx2+badge:BELL PEPPER!"
+    ],
+    [
+     "Let's say it together: BELL PEPPER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BELL PEPPER!",
+     "zoom"
+    ],
+    [
+     "Bell peppers are crunchy and a little bit sweet. Not spicy at all!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Bell Pepper!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_harvest",
+   "lines": [
+    [
+     "Here's a clue: it's when we pick food from the garden, because it's ready to eat! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Garden Harvest!",
+     "enter"
+    ],
+    [
+     "This is a garden harvest! Can you say harvest?",
+     "zoom"
+    ],
+    [
+     "Plants need sunshine, water and good soil to grow.",
+     "fx+bob"
+    ],
+    [
+     "When the food is ready, we pick it. That's called a harvest!",
+     "bob"
+    ],
+    [
+     "Can you pretend to dig, plant and water a seed? Dig, drop, sprinkle!",
+     "wiggle"
+    ],
+    [
+     "What do plants need to grow?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sunshine, water and soil! And a little bit of time.",
+     "fx2+badge:HARVEST!"
+    ],
+    [
+     "Let's say it together: HARVEST!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HARVEST!",
+     "zoom"
+    ],
+    [
+     "After gardening, we wash our hands and the food we picked.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Tomato, from green to red.",
+   "@fr2_tomato"
+  ],
+  [
+   "Cucumber, cool and crunchy.",
+   "@fr2_cucumber"
+  ],
+  [
+   "Lettuce, in a leafy head.",
+   "@fr2_lettuce"
+  ],
+  [
+   "Bell pepper, in lots of colors.",
+   "@fr2_bellpepper"
+  ],
+  [
+   "And a garden harvest!",
+   "@fr2_harvest"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

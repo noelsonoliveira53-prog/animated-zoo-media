@@ -3,7 +3,7 @@ Adds: outlines + ground shadows, blink, breathing/idle sway, Milo beak talk,
 confetti bursts, flying birds, sparkles, camera moves."""
 import math, re
 
-NO_SHADOW = {"monkey", "owl", "sloth", "koala", "octopus", "turtle", "seaotter", "venus", "jupiter", "saturn", "moon", "mercury", "mars", "sun", "pteranodon", "bee", "butterfly", "ladybug", "ant", "snail", "firetruck", "excavator", "bulldozer", "dumptruck", "mixer", "crane", "ambulance", "policecar", "garbage", "schoolbus", "train", "tractor", "red", "blue", "yellow", "green", "orange", "purple", "pink", "brown", "gray", "black", "circle", "square", "triangle", "star", "heart", "rectangle", "oval", "diamond", "crescent", "hexagon", "n1", "n2", "n3", "n4", "n5", "apple", "banana", "orangefruit", "watermelon", "blueberry", "carrot", "broccoli", "peas", "corn", "pumpkin", "handwash", "toothbrush", "water", "sleep", "share", "plate", "mb_bunny", "mb_bear", "mb_kitten", "mb_duck", "mb_lamb", "mb_moon", "mb_stars", "mb_cloud", "mb_firefly", "mb_sunset", "mb_bath", "mb_pajamas", "mb_book", "mb_teddy", "mb_nightlight", "mb_whale", "mb_seahorse", "mb_fish", "mb_turtle", "mb_jelly", "mb_cow", "mb_pig", "mb_horse", "mb_hen", "mb_puppy", "gz_rain", "gz_rainbow", "gz_lightning", "gz_snow", "gz_wind", "gz_rocket", "gz_plane", "gz_balloon", "gz_heli", "gz_kite", "gz_magnet", "gz_bulb", "gz_ice", "gz_shadow", "gz_sound", "gz_seed", "gz_roots", "gz_leaf", "gz_flower", "gz_tree"}
+NO_SHADOW = _NS2 = {"monkey", "owl", "sloth", "koala", "octopus", "turtle", "seaotter", "venus", "jupiter", "saturn", "moon", "mercury", "mars", "sun", "pteranodon", "bee", "butterfly", "ladybug", "ant", "snail", "firetruck", "excavator", "bulldozer", "dumptruck", "mixer", "crane", "ambulance", "policecar", "garbage", "schoolbus", "train", "tractor", "red", "blue", "yellow", "green", "orange", "purple", "pink", "brown", "gray", "black", "circle", "square", "triangle", "star", "heart", "rectangle", "oval", "diamond", "crescent", "hexagon", "n1", "n2", "n3", "n4", "n5", "apple", "banana", "orangefruit", "watermelon", "blueberry", "carrot", "broccoli", "peas", "corn", "pumpkin", "handwash", "toothbrush", "water", "sleep", "share", "plate", "mb_bunny", "mb_bear", "mb_kitten", "mb_duck", "mb_lamb", "mb_moon", "mb_stars", "mb_cloud", "mb_firefly", "mb_sunset", "mb_bath", "mb_pajamas", "mb_book", "mb_teddy", "mb_nightlight", "mb_whale", "mb_seahorse", "mb_fish", "mb_turtle", "mb_jelly", "mb_cow", "mb_pig", "mb_horse", "mb_hen", "mb_puppy", "gz_rain", "gz_rainbow", "gz_lightning", "gz_snow", "gz_wind", "gz_rocket", "gz_plane", "gz_balloon", "gz_heli", "gz_kite", "gz_magnet", "gz_bulb", "gz_ice", "gz_shadow", "gz_sound", "gz_seed", "gz_roots", "gz_leaf", "gz_flower", "gz_tree"}
 
 OUTLINE = """<defs><filter id="ol" x="-10%" y="-10%" width="120%" height="120%">
 <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="d"/>
@@ -101,3 +101,9 @@ SPARKLE_HTML = "".join(
 def sparkle_js(total):
     return (f'tl.fromTo(".spk",{{scale:.2,opacity:.2}},{{scale:1,opacity:.95,duration:.8,yoyo:true,repeat:{int(total/.8)//2*2+1},'
             f'stagger:{{each:.35}},ease:"sine.inOut"}},0);')
+
+import glob as _g, importlib as _i, os as _o
+for _p in _g.glob(_o.path.join(_o.path.dirname(_o.path.abspath(__file__)), "art_*2.py")):
+    _mm = _i.import_module(_o.path.basename(_p)[:-3])
+    for _a in dir(_mm):
+        if _a.startswith("SCENES_") and _a.endswith("2"): NO_SHADOW.update(getattr(_mm, _a).keys())

@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep09_surprise",
+ "title": "Veggie Surprises! Potato, Mushrooms and More with Kiko",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five veggie surprises, and some of them hide underground!",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_potato",
+   "lines": [
+    [
+     "Here's a clue: it's brown and lumpy, and it grows hiding under the ground! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Potato!",
+     "enter"
+    ],
+    [
+     "This is Potato! Can you say potato?",
+     "zoom"
+    ],
+    [
+     "Potatoes grow under the ground. Only the green leaves poke out on top.",
+     "fx+bob"
+    ],
+    [
+     "Potatoes can be brown, red, yellow or even purple!",
+     "bob"
+    ],
+    [
+     "Can you dig for potatoes? Dig, dig, dig, and pull one up!",
+     "wiggle"
+    ],
+    [
+     "Do we eat potatoes raw?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "No! We cook them first. They can be mashed, baked or roasted.",
+     "fx2+badge:POTATO!"
+    ],
+    [
+     "Let's say it together: POTATO!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: POTATO!",
+     "zoom"
+    ],
+    [
+     "The little dots on a potato are called eyes. A new plant can grow from them!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Potato!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_sweetpotato",
+   "lines": [
+    [
+     "Here's a clue: it's long and reddish outside, and bright orange inside! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Sweet Potato!",
+     "enter"
+    ],
+    [
+     "This is Sweet Potato! Can you say sweet potato?",
+     "zoom"
+    ],
+    [
+     "Sweet potatoes grow under the ground, like potatoes do.",
+     "fx+bob"
+    ],
+    [
+     "Most sweet potatoes are orange inside. Some are purple or white!",
+     "bob"
+    ],
+    [
+     "Can you stretch out long, like a sweet potato? Long, long, long!",
+     "wiggle"
+    ],
+    [
+     "Why is it called a sweet potato?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Because it tastes a little sweet when it's cooked!",
+     "fx2+badge:SWEET POTATO!"
+    ],
+    [
+     "Let's say it together: SWEET POTATO!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SWEET POTATO!",
+     "zoom"
+    ],
+    [
+     "Sweet potatoes are cooked before we eat them, soft and warm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Sweet Potato!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_mushroom",
+   "lines": [
+    [
+     "Here's a clue: it has a round cap on top, like a little umbrella! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Mushrooms!",
+     "enter"
+    ],
+    [
+     "These are mushrooms! Can you say mushroom?",
+     "zoom"
+    ],
+    [
+     "Mushrooms are not plants! They're a fungus. That's a fun word: fungus!",
+     "fx+bob"
+    ],
+    [
+     "Mushrooms grow in cool, shady places. They don't grow from seeds.",
+     "bob"
+    ],
+    [
+     "Can you make a mushroom? Stand up tall, and hold your arms round like a cap!",
+     "wiggle"
+    ],
+    [
+     "Where do we get mushrooms to eat?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "From the store, or from a grown-up! We never pick wild ones to eat.",
+     "fx2+badge:MUSHROOM!"
+    ],
+    [
+     "Let's say it together: MUSHROOM!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MUSHROOM!",
+     "zoom"
+    ],
+    [
+     "Mushrooms can be white, brown, big or tiny, and grown-ups cook them in yummy meals.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Mushrooms!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "carrot",
+   "lines": [
+    [
+     "Here's a clue: it's orange and crunchy, and it grows under the ground! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Carrot!",
+     "enter"
+    ],
+    [
+     "This is Carrot! Can you say carrot?",
+     "zoom"
+    ],
+    [
+     "Carrots grow down in the dirt. The green leaves stay on top.",
+     "fx+bob"
+    ],
+    [
+     "A carrot is a root. It pulls up water from the ground for the plant.",
+     "bob"
+    ],
+    [
+     "Can you pull a carrot out of the ground? Pull, pull, POP!",
+     "wiggle"
+    ],
+    [
+     "Are carrots always orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "No! Some carrots are purple, yellow or white.",
+     "fx2+badge:CARROT!"
+    ],
+    [
+     "Let's say it together: CARROT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CARROT!",
+     "zoom"
+    ],
+    [
+     "Carrots are crunchy raw, and soft and sweet when they're cooked.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Carrot!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "peas",
+   "lines": [
+    [
+     "Here's a clue: they're little green balls that live in a pod! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Peas!",
+     "enter"
+    ],
+    [
+     "This is Peas! Can you say peas?",
+     "zoom"
+    ],
+    [
+     "Peas grow on climbing vines, inside a long green pod.",
+     "fx+bob"
+    ],
+    [
+     "Each pea is really a seed! Plant one, and a new pea plant can grow.",
+     "bob"
+    ],
+    [
+     "Can you count peas in a pod with me? One, two, three, four, five!",
+     "wiggle"
+    ],
+    [
+     "Where do peas live?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Inside a pod! All in a row, like a cozy bed.",
+     "fx2+badge:PEAS!"
+    ],
+    [
+     "Let's say it together: PEAS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PEAS!",
+     "zoom"
+    ],
+    [
+     "Peas are sweet and green, and fun to count on your plate.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Peas!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Potato, hiding underground.",
+   "@fr2_potato"
+  ],
+  [
+   "Sweet potato, orange inside.",
+   "@fr2_sweetpotato"
+  ],
+  [
+   "Mushrooms, a fun fungus.",
+   "@fr2_mushroom"
+  ],
+  [
+   "Carrot, a crunchy root.",
+   "@carrot"
+  ],
+  [
+   "And peas, little seeds in a pod!",
+   "@peas"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

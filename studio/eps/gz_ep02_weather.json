@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep02_weather",
+ "title": "How Does Weather Work? Rain, Rainbows, Snow and More with Gizmo",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how weather works.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz_rain",
+   "lines": [
+    [
+     "Here's a clue: it falls from clouds, drip, drop! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Rain!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "The sun warms water in lakes and oceans, and it floats up into the sky.",
+     "fx+bob"
+    ],
+    [
+     "Up high, it cools down and makes clouds out of tiny drops.",
+     "bob"
+    ],
+    [
+     "Can you wiggle your fingers down like falling rain?",
+     "wiggle"
+    ],
+    [
+     "Why does rain fall?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "When cloud drops get big and heavy, they fall down!",
+     "fx2+badge:WATER CYCLE!"
+    ],
+    [
+     "Let's say it together: RAIN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RAIN!",
+     "zoom"
+    ],
+    [
+     "Then the water goes back up again. It's called the water cycle!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_rainbow",
+   "lines": [
+    [
+     "Here's a clue: it's a colorful arch in the sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Rainbow!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Sunlight looks white, but it's really made of many colors.",
+     "fx+bob"
+    ],
+    [
+     "When sunlight shines through raindrops, the colors spread out!",
+     "bob"
+    ],
+    [
+     "Can you draw a big rainbow in the air with your finger?",
+     "wiggle"
+    ],
+    [
+     "What do we need to see a rainbow?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sunshine and raindrops at the same time!",
+     "fx2+badge:RAINBOW!"
+    ],
+    [
+     "Let's say it together: RAINBOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RAINBOW!",
+     "zoom"
+    ],
+    [
+     "Red, orange, yellow, green, blue, and purple!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_lightning",
+   "lines": [
+    [
+     "Here's a clue: it's a bright flash in a stormy sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Lightning!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Lightning is a giant spark of electricity in the clouds.",
+     "fx+bob"
+    ],
+    [
+     "It's super hot, and it makes the air go BOOM. That's thunder!",
+     "bob"
+    ],
+    [
+     "Can you count with me after a flash? One, two, three!",
+     "wiggle"
+    ],
+    [
+     "What comes after lightning?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Thunder! Boom, rumble, rumble.",
+     "fx2+badge:FLASH, BOOM!"
+    ],
+    [
+     "Let's say it together: LIGHTNING!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LIGHTNING!",
+     "zoom"
+    ],
+    [
+     "When there's a storm, we stay safe inside.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_snow",
+   "lines": [
+    [
+     "Here's a clue: it's white, cold, and falls in winter! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Snow!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "When it's really cold, water in the clouds freezes into ice crystals.",
+     "fx+bob"
+    ],
+    [
+     "The crystals stick together and make snowflakes!",
+     "bob"
+    ],
+    [
+     "Can you float down slowly, like a snowflake?",
+     "wiggle"
+    ],
+    [
+     "What is snow made of?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Tiny frozen ice crystals!",
+     "fx2+badge:SNOWFLAKES!"
+    ],
+    [
+     "Let's say it together: SNOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SNOW!",
+     "zoom"
+    ],
+    [
+     "Every snowflake has six sides. So pretty!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_wind",
+   "lines": [
+    [
+     "Here's a clue: you can't see it, but you can feel it! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Wind!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Wind is air that's moving.",
+     "fx+bob"
+    ],
+    [
+     "When the sun warms the air, it moves around, whoosh!",
+     "bob"
+    ],
+    [
+     "Can you blow like the wind? Whoooosh!",
+     "wiggle"
+    ],
+    [
+     "What can wind push?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Kites, sailboats, and windmills!",
+     "fx2+badge:WHOOSH!"
+    ],
+    [
+     "Let's say it together: WIND!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WIND!",
+     "zoom"
+    ],
+    [
+     "Windmills use wind to make electricity.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Rain falls from heavy clouds.",
+   "@gz_rain"
+  ],
+  [
+   "Rainbows need sun and rain.",
+   "@gz_rainbow"
+  ],
+  [
+   "Lightning flashes, then thunder booms.",
+   "@gz_lightning"
+  ],
+  [
+   "Snow is frozen ice crystals.",
+   "@gz_snow"
+  ],
+  [
+   "And wind is moving air!",
+   "@gz_wind"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

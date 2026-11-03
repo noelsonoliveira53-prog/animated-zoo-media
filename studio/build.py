@@ -14,7 +14,8 @@ from art_truck import SCENES6
 from art_bloop import SCENES7
 from art_fruity import SCENES8
 from art_moon import SCENES9
-SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7); SCENES.update(SCENES8); SCENES.update(SCENES9)
+from art_gizmo import SCENES10
+SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7); SCENES.update(SCENES8); SCENES.update(SCENES9); SCENES.update(SCENES10)
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))

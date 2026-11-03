@@ -166,5 +166,48 @@
    "NASA Science: Moon"
   ],
   "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz_rainbow",
+  "animal": "gz_rainbow",
+  "title": "How Is a Rainbow Made? 🌈",
+  "thumb": "RAINBOW!",
+  "top": "RAINBOW",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#7cc576",
+  "sources": [
+   "NOAA SciJinks (rain, rainbows, lightning, snow, wind)",
+   "NASA Kids Club (rockets, flight)",
+   "Basic physical & life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Sunshine plus rain equals something magical. Do you know what?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A rainbow! Sunlight looks white, but it's really made of many colors.",
+    "act": "zoom+badge:RAINBOW!"
+   },
+   {
+    "say": "When sunlight shines through raindrops, the colors spread out! Sunshine and raindrops at the same time!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Red, orange, yellow, green, blue, and purple! Can you say them with me?",
+    "act": "wiggle"
+   },
+   {
+    "say": "Next time it's sunny and rainy, look for a rainbow! See you next time!",
+    "act": "fxoff+outro"
+   }
+  ]
  }
 ]

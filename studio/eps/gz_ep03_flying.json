@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep03_flying",
+ "title": "How Do Things Fly? Rockets, Airplanes, Helicopters for Kids with Gizmo",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how things fly.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz_rocket",
+   "lines": [
+    [
+     "Here's a clue: it blasts off into space! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Rocket!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A rocket burns fuel and pushes hot gas down, really hard.",
+     "fx+bob"
+    ],
+    [
+     "Pushing down makes the rocket go up, up, up!",
+     "bob"
+    ],
+    [
+     "Can you count down with me? Three, two, one, blast off!",
+     "wiggle"
+    ],
+    [
+     "Which way does the rocket push?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Down! And that sends it up!",
+     "fx2+badge:BLAST OFF!"
+    ],
+    [
+     "Let's say it together: ROCKET!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ROCKET!",
+     "zoom"
+    ],
+    [
+     "Rockets carry astronauts and satellites to space.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_plane",
+   "lines": [
+    [
+     "Here's a clue: it has big wings and flies above the clouds! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Airplane!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Airplane wings are curved on top.",
+     "fx+bob"
+    ],
+    [
+     "When the plane zooms forward, the wings push air down and lift the plane up!",
+     "bob"
+    ],
+    [
+     "Can you stretch your arms out like wings and zoom?",
+     "wiggle"
+    ],
+    [
+     "What lifts an airplane up?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Its wings, moving through the air!",
+     "fx2+badge:LIFT OFF!"
+    ],
+    [
+     "Let's say it together: AIRPLANE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: AIRPLANE!",
+     "zoom"
+    ],
+    [
+     "Engines push the plane forward fast.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_balloon",
+   "lines": [
+    [
+     "Here's a clue: it's a giant floating balloon with a basket! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Hot Air Balloon!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A burner heats the air inside the balloon.",
+     "fx+bob"
+    ],
+    [
+     "Hot air is lighter than cool air, so it floats up!",
+     "bob"
+    ],
+    [
+     "Can you float up slowly, rising on your tiptoes?",
+     "wiggle"
+    ],
+    [
+     "Why does a hot air balloon go up?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Hot air rises!",
+     "fx2+badge:UP, UP!"
+    ],
+    [
+     "Let's say it together: HOT AIR BALLOON!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HOT AIR BALLOON!",
+     "zoom"
+    ],
+    [
+     "To come down, the pilot lets the air cool.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_heli",
+   "lines": [
+    [
+     "Here's a clue: it has spinning blades on top! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Helicopter!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A helicopter's blades spin really fast.",
+     "fx+bob"
+    ],
+    [
+     "The spinning blades push air down, so the helicopter goes straight up!",
+     "bob"
+    ],
+    [
+     "Can you spin your arms like helicopter blades?",
+     "wiggle"
+    ],
+    [
+     "Can helicopters fly straight up?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! And they can hover in one place!",
+     "fx2+badge:HOVER!"
+    ],
+    [
+     "Let's say it together: HELICOPTER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HELICOPTER!",
+     "zoom"
+    ],
+    [
+     "Helicopters can land in small spaces.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_kite",
+   "lines": [
+    [
+     "Here's a clue: it flies on a string on a windy day! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Kite!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Wind pushes against the kite.",
+     "fx+bob"
+    ],
+    [
+     "The string holds it, so the kite climbs up high!",
+     "bob"
+    ],
+    [
+     "Can you pretend to hold a kite string? Hold on tight!",
+     "wiggle"
+    ],
+    [
+     "What does a kite need to fly?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Wind!",
+     "fx2+badge:WHEEE!"
+    ],
+    [
+     "Let's say it together: KITE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: KITE!",
+     "zoom"
+    ],
+    [
+     "Running helps the kite catch the wind.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Rockets push down to go up.",
+   "@gz_rocket"
+  ],
+  [
+   "Airplane wings make lift.",
+   "@gz_plane"
+  ],
+  [
+   "Hot air balloons rise with hot air.",
+   "@gz_balloon"
+  ],
+  [
+   "Helicopters spin their blades.",
+   "@gz_heli"
+  ],
+  [
+   "And kites ride the wind!",
+   "@gz_kite"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

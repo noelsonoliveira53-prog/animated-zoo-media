@@ -289,16 +289,7 @@ SLOTH = svg(forest_env() + """
     <ellipse cx="775" cy="560" rx="10" ry="7" fill="#4e342e"/>
     <path d="M758 575 q17 12 34 0" stroke="#4e342e" stroke-width="5" fill="none" stroke-linecap="round"/>
   </g>
-  <g id="fx" opacity="0" fill="#66bb6a">""" + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((430,480,16),(500,520,12),(560,470,18),(620,515,14),(680,490,11),(470,540,10),(590,540,12),(735,500,9))) + """</g>
-  <g id="fx2" opacity="0">
-    <g stroke="#bcaaa4" stroke-width="16" stroke-linecap="round" fill="none"><path d="M520 610 L500 570"/><path d="M600 612 L615 572"/></g>
-    <ellipse cx="560" cy="618" rx="72" ry="36" fill="#bcaaa4" stroke="#2b2540" stroke-width="4"/>
-    <circle cx="645" cy="625" r="32" fill="#bcaaa4" stroke="#2b2540" stroke-width="4"/>
-    <ellipse cx="650" cy="630" rx="24" ry="19" fill="#efebe9"/>
-    <path d="M633 624 q7 -6 15 1 M656 624 q7 -6 14 0" stroke="#4e342e" stroke-width="7" stroke-linecap="round" fill="none"/>
-    <circle cx="641" cy="625" r="4" fill="#1a1a2e"/><circle cx="663" cy="625" r="4" fill="#1a1a2e"/>
-    <path d="M643 641 q8 6 16 0" stroke="#4e342e" stroke-width="3" fill="none" stroke-linecap="round"/>
-  </g>""")
+  <g id="fx" opacity="0" fill="#66bb6a">""" + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((430,480,16),(500,520,12),(560,470,18),(620,515,14),(680,490,11),(470,540,10),(590,540,12),(735,500,9))) + """</g>""")
 
 def surface_env():
     return SKY_EXTRAS + """
@@ -399,111 +390,7 @@ TITLE = svg(SKY_EXTRAS + ground() + """
   <g fill="#ff5c8a"><circle cx="160" cy="300" r="40"/><circle cx="920" cy="300" r="40"/></g><g fill="#ffca28"><circle cx="110" cy="360" r="34"/><circle cx="970" cy="360" r="34"/></g>
   <g stroke="#999" stroke-width="3"><line x1="160" y1="340" x2="270" y2="430"/><line x1="920" y1="340" x2="810" y2="430"/><line x1="110" y1="394" x2="270" y2="440"/><line x1="970" y1="394" x2="810" y2="440"/></g>""")
 
-# --- Nov 2026: gorilla, rhino, harbor seal (ep05 Baby Animals) ---
-def _gorilla(x, y, s=1.0):
-    """Gorilla in local units, feet at (0,0) before translate. Used big for mom, small for the baby."""
-    return f"""<g transform="translate({x} {y}) scale({s})">
-      <ellipse cx="-120" cy="-30" rx="80" ry="40" fill="#2b2b33"/><ellipse cx="120" cy="-30" rx="80" ry="40" fill="#2b2b33"/>
-      <ellipse cx="0" cy="-260" rx="230" ry="230" fill="#3a3a44"/>
-      <ellipse cx="0" cy="-220" rx="140" ry="150" fill="#55555f"/>
-      <path d="M-200 -380 Q-300 -220 -250 -40" stroke="#1f1f26" stroke-width="122" fill="none" stroke-linecap="round"/>
-      <path d="M200 -380 Q300 -220 250 -40" stroke="#1f1f26" stroke-width="122" fill="none" stroke-linecap="round"/>
-      <path d="M-200 -380 Q-300 -220 -250 -40" stroke="#44444f" stroke-width="104" fill="none" stroke-linecap="round"/>
-      <path d="M200 -380 Q300 -220 250 -40" stroke="#44444f" stroke-width="104" fill="none" stroke-linecap="round"/>
-      <ellipse cx="-250" cy="-25" rx="70" ry="36" fill="#2b2b33"/><ellipse cx="250" cy="-25" rx="70" ry="36" fill="#2b2b33"/>
-      <circle cx="-120" cy="-590" r="42" fill="#3a3a44"/><circle cx="120" cy="-590" r="42" fill="#3a3a44"/>
-      <circle cx="-120" cy="-590" r="22" fill="#6b5a55"/><circle cx="120" cy="-590" r="22" fill="#6b5a55"/>
-      <ellipse cx="0" cy="-610" rx="140" ry="150" fill="#3a3a44"/>
-      <ellipse cx="0" cy="-700" rx="95" ry="60" fill="#3a3a44"/>
-      <path d="M-100 -620 Q-60 -560 0 -570 Q60 -560 100 -620 Q120 -500 70 -470 Q0 -440 -70 -470 Q-120 -500 -100 -620Z" fill="#8a7468"/>
-      <ellipse cx="0" cy="-660" rx="105" ry="38" fill="#8a7468"/>
-      <path d="M-95 -690 Q0 -720 95 -690" stroke="#2b2b33" stroke-width="16" fill="none" stroke-linecap="round"/>
-      <circle cx="-48" cy="-655" r="17" fill="#1a1a2e"/><circle cx="48" cy="-655" r="17" fill="#1a1a2e"/>
-      <circle cx="-42" cy="-661" r="6" fill="#fff"/><circle cx="54" cy="-661" r="6" fill="#fff"/>
-      <ellipse cx="-22" cy="-575" rx="14" ry="10" fill="#4a3b35"/><ellipse cx="22" cy="-575" rx="14" ry="10" fill="#4a3b35"/>
-      <path d="M-40 -515 q40 28 80 0" stroke="#4a3b35" stroke-width="8" fill="none" stroke-linecap="round"/>
-      <ellipse cx="-92" cy="-560" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/><ellipse cx="92" cy="-560" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/>
-    </g>"""
-
-GORILLA = svg(forest_env() + """
-  <g fill="#66bb6a"><ellipse cx="900" cy="960" rx="150" ry="50"/><ellipse cx="180" cy="965" rx="120" ry="40"/></g>
-  <g id="animal">""" + _gorilla(540, 1000, 1.0) + """
-  </g>
-  <g id="fx" opacity="0">""" + _gorilla(770, 640, .32) + """
-    <path d="M700 520 q-40 40 -20 90" stroke="#3a3a44" stroke-width="28" fill="none" stroke-linecap="round"/>
-  </g>""")
-
-RHINO = svg(sand_env() + """
-  <g id="animal">
-    <path d="M250 700 Q215 740 225 800" stroke="#8e9499" stroke-width="12" fill="none" stroke-linecap="round"/>
-    <ellipse cx="225" cy="808" rx="10" ry="18" fill="#5f666b"/>
-    <g fill="#8e9499">""" + ''.join(f'<rect x="{x}" y="790" width="82" height="205" rx="30"/>' for x in (300,390,580,670)) + """</g>
-    <g fill="#6f777c">""" + ''.join(f'<ellipse cx="{x+41}" cy="990" rx="48" ry="16"/>' for x in (300,390,580,670)) + """</g>
-    <ellipse cx="500" cy="720" rx="270" ry="160" fill="#a3a9ad"/>
-    <path d="M330 640 q40 -30 80 0 M560 610 q40 -30 80 0" stroke="#8e9499" stroke-width="10" fill="none" stroke-linecap="round"/>
-    <ellipse cx="760" cy="690" rx="150" ry="115" fill="#a3a9ad"/>
-    <ellipse cx="880" cy="740" rx="110" ry="80" fill="#b5bbbe"/>
-    <path id="horn" d="M900 680 Q950 560 925 470 Q895 560 850 670Z" fill="#e8dcc4"/>
-    <path d="M820 640 Q845 590 835 550 Q815 590 795 640Z" fill="#e8dcc4"/>
-    <polygon points="680,600 700,520 735,590" fill="#a3a9ad"/><polygon points="760,585 790,510 810,585" fill="#a3a9ad"/>
-    <polygon points="692,592 703,548 722,588" fill="#e3a3a8"/><polygon points="772,580 789,538 800,580" fill="#e3a3a8"/>
-    <circle cx="760" cy="660" r="13" fill="#1a1a2e"/><circle cx="765" cy="655" r="5" fill="#fff"/>
-    <ellipse cx="935" cy="745" rx="9" ry="13" fill="#5f666b"/>
-    <path d="M860 790 q45 22 90 0" stroke="#5f666b" stroke-width="7" fill="none" stroke-linecap="round"/>
-    <ellipse cx="790" cy="720" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/>
-  </g>
-  <g id="fx" opacity="0">
-    <path d="M900 680 Q950 560 925 470 Q895 560 850 670Z" fill="none" stroke="#ffca28" stroke-width="14" stroke-linejoin="round"/>
-    <g fill="#ffca28"><circle cx="985" cy="500" r="12"/><circle cx="870" cy="470" r="9"/><circle cx="990" cy="600" r="8"/></g>
-  </g>
-  <g id="fx2" opacity="0">
-    <g transform="translate(-110 582) scale(.42)">
-      <g fill="#a9b0b4">""" + ''.join(f'<rect x="{x}" y="790" width="82" height="205" rx="30"/>' for x in (300,390,580,670)) + """</g>
-      <ellipse cx="500" cy="720" rx="270" ry="160" fill="#b9bfc2"/><ellipse cx="760" cy="690" rx="150" ry="115" fill="#b9bfc2"/>
-      <ellipse cx="880" cy="740" rx="110" ry="80" fill="#c8cdd0"/>
-      <path d="M890 680 Q910 640 900 610 Q880 640 860 675Z" fill="#efe6d4"/>
-      <polygon points="680,600 700,520 735,590" fill="#b9bfc2"/><polygon points="760,585 790,510 810,585" fill="#b9bfc2"/>
-      <circle cx="760" cy="660" r="16" fill="#1a1a2e"/><circle cx="766" cy="654" r="6" fill="#fff"/>
-      <path d="M860 790 q45 22 90 0" stroke="#5f666b" stroke-width="8" fill="none" stroke-linecap="round"/>
-    </g>
-  </g>""")
-
-def shore_env():
-    return SKY_EXTRAS + """
-  <rect x="-500" y="700" width="2200" height="450" fill="#29b6f6"/>
-  <rect x="-500" y="860" width="2200" height="300" fill="#0288d1" opacity=".5"/>
-  <path d="M-500 710 q60 -22 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#e1f5fe" stroke-width="10" fill="none"/>
-  <path d="M120 1000 Q160 820 330 800 Q520 770 700 800 Q880 820 960 1000 Z" fill="#8d8a86"/>
-  <path d="M170 980 Q210 850 340 830 Q520 805 690 830 Q850 850 910 980 Z" fill="#a8a5a0"/>
-  <rect x="-500" y="990" width="2200" height="120" fill="#0288d1"/>
-  <g fill="#ffffff" opacity=".35"><ellipse cx="-200" cy="780" rx="60" ry="8"/><ellipse cx="1150" cy="820" rx="80" ry="9"/></g>"""
-
-def _seal(x, y, s=1.0, body="#9aa7b0", belly="#c7d0d6", spots="#6f7d87"):
-    return f"""<g transform="translate({x} {y}) scale({s})">
-      <path d="M-300 -20 Q-380 -30 -420 -90 M-300 -20 Q-390 10 -440 -10" stroke="{spots}" stroke-width="40" fill="none" stroke-linecap="round"/>
-      <ellipse cx="-60" cy="-70" rx="270" ry="85" fill="{body}"/>
-      <ellipse cx="-40" cy="-40" rx="220" ry="45" fill="{belly}"/>
-      <g fill="{spots}" opacity=".7"><circle cx="-180" cy="-110" r="12"/><circle cx="-110" cy="-125" r="9"/><circle cx="-40" cy="-115" r="11"/><circle cx="-230" cy="-80" r="8"/><circle cx="40" cy="-120" r="8"/></g>
-      <ellipse cx="200" cy="-150" rx="115" ry="105" fill="{body}"/>
-      <ellipse cx="270" cy="-120" rx="60" ry="45" fill="{belly}"/>
-      <ellipse cx="300" cy="-140" rx="15" ry="11" fill="#2b2b33"/>
-      <g stroke="#ffffff" stroke-width="4" opacity=".9"><line x1="280" y1="-112" x2="340" y2="-125"/><line x1="280" y1="-104" x2="342" y2="-100"/><line x1="240" y1="-112" x2="188" y2="-125"/><line x1="240" y1="-104" x2="186" y2="-98"/></g>
-      <path d="M265 -98 q18 12 36 0" stroke="#2b2b33" stroke-width="5" fill="none" stroke-linecap="round"/>
-      <circle cx="185" cy="-180" r="18" fill="#1a1a2e"/><circle cx="265" cy="-185" r="18" fill="#1a1a2e"/>
-      <circle cx="191" cy="-187" r="6" fill="#fff"/><circle cx="271" cy="-192" r="6" fill="#fff"/>
-      <ellipse cx="160" cy="-130" rx="18" ry="10" fill="#ff9ab0" opacity=".55"/>
-      <path d="M60 -40 Q110 0 70 30" stroke="{spots}" stroke-width="34" fill="none" stroke-linecap="round"/>
-    </g>"""
-
-SEAL = svg(shore_env() + """
-  <g id="animal">""" + _seal(560, 860, 1.0) + """
-  </g>
-  <g id="fx" opacity="0">""" + _seal(1050, 930, .42, body="#d9dfe3", belly="#f1f4f6", spots="#aab5bc") + """
-    <g fill="none" stroke="#e1f5fe" stroke-width="5"><circle cx="1190" cy="830" r="12"/><circle cx="1215" cy="790" r="8"/></g>
-  </g>""")
-
 SCENES2 = {"lion": LION, "zebra": ZEBRA, "hippo": HIPPO, "monkey": MONKEY, "flamingo": FLAMINGO,
            "kangaroo": KANGAROO, "octopus": OCTOPUS, "turtle": TURTLE, "polarbear": POLARBEAR,
            "owl": OWL, "panda": PANDA, "koala": KOALA, "sloth": SLOTH, "title": TITLE,
-           "redpanda": REDPANDA, "meerkat": MEERKAT, "seaotter": SEAOTTER,
-           "gorilla": GORILLA, "rhino": RHINO, "seal": SEAL}
+           "redpanda": REDPANDA, "meerkat": MEERKAT, "seaotter": SEAOTTER}

@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep11_space",
+ "title": "Why Is It Night? Day, Seasons and the Moon for Kids",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how the sky works.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_daynight",
+   "lines": [
+    [
+     "Here's a clue: one is bright and sunny, and one is dark and sleepy! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Day and Night!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Our Earth is always spinning, like a slow spinning top.",
+     "fx+bob"
+    ],
+    [
+     "The side facing the Sun has day, and the side facing away has night!",
+     "bob"
+    ],
+    [
+     "Can you spin around slowly, like the Earth? Day, night, day!",
+     "wiggle"
+    ],
+    [
+     "How long does one spin take?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "One whole day!",
+     "fx2+badge:DAY AND NIGHT!"
+    ],
+    [
+     "Let's say it together: DAY AND NIGHT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: DAY AND NIGHT!",
+     "zoom"
+    ],
+    [
+     "When it's day for you, it's night for kids on the other side of the world.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_seasons",
+   "lines": [
+    [
+     "Here's a clue: there are four of them: spring, summer, fall, and winter! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Seasons!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Our Earth is tilted, like it's leaning a little to one side.",
+     "fx+bob"
+    ],
+    [
+     "When your part of Earth leans toward the Sun, it gets more sunshine, and that's summer!",
+     "bob"
+    ],
+    [
+     "Can you lean to one side, like the tilted Earth?",
+     "wiggle"
+    ],
+    [
+     "What makes the seasons?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Earth's tilt as it goes around the Sun!",
+     "fx2+badge:SEASONS!"
+    ],
+    [
+     "Let's say it together: SEASONS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SEASONS!",
+     "zoom"
+    ],
+    [
+     "One trip all the way around the Sun takes one whole year.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_moonphases",
+   "lines": [
+    [
+     "Here's a clue: it can look round, or like a smile in the sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Moon Phases!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "The Moon doesn't make its own light. The Sun shines on it.",
+     "fx+bob"
+    ],
+    [
+     "As the Moon goes around Earth, we see different parts of its sunny side!",
+     "bob"
+    ],
+    [
+     "Can you make a round full moon with your arms?",
+     "wiggle"
+    ],
+    [
+     "Does the Moon really change shape?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "No! We just see more or less of its sunny side.",
+     "fx2+badge:MOON PHASES!"
+    ],
+    [
+     "Let's say it together: MOON PHASES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MOON PHASES!",
+     "zoom"
+    ],
+    [
+     "It takes about a month to go from new moon to full moon and back.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_stars",
+   "lines": [
+    [
+     "Here's a clue: they twinkle in the night sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Stars!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Stars are giant suns, very, very far away.",
+     "fx+bob"
+    ],
+    [
+     "They're so far away that they look like tiny dots of light!",
+     "bob"
+    ],
+    [
+     "Can you open and close your hands, like twinkling stars?",
+     "wiggle"
+    ],
+    [
+     "Are stars still there in the daytime?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! The Sun is just too bright to see them.",
+     "fx2+badge:TWINKLE!"
+    ],
+    [
+     "Let's say it together: STARS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: STARS!",
+     "zoom"
+    ],
+    [
+     "Our Sun is a star too, the closest star to Earth.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_sun",
+   "lines": [
+    [
+     "Here's a clue: it's big, bright, and keeps us warm! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: The Sun!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "The Sun is a giant ball of hot, glowing gas.",
+     "fx+bob"
+    ],
+    [
+     "It's so big that one hundred and nine Earths could fit across it, side by side!",
+     "bob"
+    ],
+    [
+     "Can you stretch your arms out super wide, as big as the Sun?",
+     "wiggle"
+    ],
+    [
+     "Why does the Sun look small?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Because it's very, very far away!",
+     "fx2+badge:SO BIG!"
+    ],
+    [
+     "Let's say it together: THE SUN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: THE SUN!",
+     "zoom"
+    ],
+    [
+     "Never look right at the Sun, because it's too bright for your eyes.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Earth spins to make day and night.",
+   "@gz2_daynight"
+  ],
+  [
+   "Earth's tilt makes the seasons.",
+   "@gz2_seasons"
+  ],
+  [
+   "We see the Moon's sunny side.",
+   "@gz2_moonphases"
+  ],
+  [
+   "Stars are faraway suns.",
+   "@gz2_stars"
+  ],
+  [
+   "And our Sun is super big!",
+   "@gz2_sun"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

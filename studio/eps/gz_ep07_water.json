@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep07_water",
+ "title": "How Does Water Work? Floating, Sinking and Steam",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to explore wonderful water.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_float",
+   "lines": [
+    [
+     "Here's a clue: a boat does it, and so does a rubber duck! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Floating!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "When something sits in water, the water pushes up on it from below.",
+     "fx+bob"
+    ],
+    [
+     "If the push is strong enough to hold it up, it floats! Boats are shaped to let water push up a lot.",
+     "bob"
+    ],
+    [
+     "Can you lie back and float, like a boat on the water?",
+     "wiggle"
+    ],
+    [
+     "What pushes up on a floating boat?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The water does!",
+     "fx2+badge:IT FLOATS!"
+    ],
+    [
+     "Let's say it together: FLOATING!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FLOATING!",
+     "zoom"
+    ],
+    [
+     "Big, heavy ships float too, because their wide shape spreads out on the water.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_sink",
+   "lines": [
+    [
+     "Here's a clue: a rock does it when you drop it in a pond! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Sinking!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A rock is small, but it's very heavy for its size.",
+     "fx+bob"
+    ],
+    [
+     "The water can't push up hard enough to hold it, so down, down it goes to the bottom!",
+     "bob"
+    ],
+    [
+     "Can you sink down slowly, down to the floor?",
+     "wiggle"
+    ],
+    [
+     "Does a leaf sink or float?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It floats! A leaf is very light for its size.",
+     "fx2+badge:SPLOOSH!"
+    ],
+    [
+     "Let's say it together: SINKING!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SINKING!",
+     "zoom"
+    ],
+    [
+     "Try it at bath time with a grown-up: which toys float, and which ones sink?",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_steam",
+   "lines": [
+    [
+     "Here's a clue: it can be hard, wet, or floaty! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Ice, Water and Steam!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Water can be three things: solid ice, runny water, or floaty steam.",
+     "fx+bob"
+    ],
+    [
+     "Warm up ice, and it melts into water. Heat water a lot, and it turns into steam!",
+     "bob"
+    ],
+    [
+     "Can you be stiff like ice, then wiggly like water, then float like steam?",
+     "wiggle"
+    ],
+    [
+     "What happens when water gets very hot?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It turns into steam!",
+     "fx2+badge:ICE, WATER, STEAM!"
+    ],
+    [
+     "Let's say it together: ICE, WATER AND STEAM!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ICE, WATER AND STEAM!",
+     "zoom"
+    ],
+    [
+     "Steam is very hot, so only grown-ups use the kettle. We just watch from far away.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_coldglass",
+   "lines": [
+    [
+     "Here's a clue: it's a glass of ice water that gets wet on the outside! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Cold Glass!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "The air around us has tiny bits of water in it that we can't see.",
+     "fx+bob"
+    ],
+    [
+     "When that air touches a cold glass, it cools down and turns into little drops!",
+     "bob"
+    ],
+    [
+     "Can you wiggle your fingers like tiny drops on a glass?",
+     "wiggle"
+    ],
+    [
+     "Where do the drops come from?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "From the air! Not from inside the glass.",
+     "fx2+badge:DROPS!"
+    ],
+    [
+     "Let's say it together: COLD GLASS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: COLD GLASS!",
+     "zoom"
+    ],
+    [
+     "That's why grass is wet with dew on a cool morning. It's the same trick!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_puddle",
+   "lines": [
+    [
+     "Here's a clue: it's on the ground after the rain, splash! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Puddle!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "When the sun shines on a puddle, it warms the water.",
+     "fx+bob"
+    ],
+    [
+     "The water turns into a gas we can't see, and floats up into the sky. Bye-bye, puddle!",
+     "bob"
+    ],
+    [
+     "Can you float up, up, up like water going into the sky?",
+     "wiggle"
+    ],
+    [
+     "Where does the puddle go?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Up into the air! Then it helps make clouds.",
+     "fx2+badge:BYE, PUDDLE!"
+    ],
+    [
+     "Let's say it together: PUDDLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PUDDLE!",
+     "zoom"
+    ],
+    [
+     "Wet clothes on a sunny day dry the same way. The water floats away!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Water pushes up to make things float.",
+   "@gz2_float"
+  ],
+  [
+   "Heavy rocks sink.",
+   "@gz2_sink"
+  ],
+  [
+   "Water can be ice, water, or steam.",
+   "@gz2_steam"
+  ],
+  [
+   "Cold glasses get drops from the air.",
+   "@gz2_coldglass"
+  ],
+  [
+   "And puddles float up into the sky!",
+   "@gz2_puddle"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

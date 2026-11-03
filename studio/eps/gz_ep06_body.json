@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep06_body",
+ "title": "How Does Your Body Work? Heart, Lungs and Bones",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how your amazing body works.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_heart",
+   "lines": [
+    [
+     "Here's a clue: it's in your chest, and it goes thump, thump! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Heart!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Your heart is a strong muscle, about the size of your fist.",
+     "fx+bob"
+    ],
+    [
+     "Every beat squeezes and pumps blood all around your body, from your head down to your toes!",
+     "bob"
+    ],
+    [
+     "Can you put your hand on your chest and feel the thump, thump?",
+     "wiggle"
+    ],
+    [
+     "What does your heart pump?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blood! It carries good things all through your body.",
+     "fx2+badge:PUMP, PUMP!"
+    ],
+    [
+     "Let's say it together: HEART!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HEART!",
+     "zoom"
+    ],
+    [
+     "When you run and play, your heart beats faster to keep up with you!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_lungs",
+   "lines": [
+    [
+     "Here's a clue: you have two of them, and they help you breathe! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Lungs!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "When you breathe in, air goes down a tube into your two lungs, like soft balloons.",
+     "fx+bob"
+    ],
+    [
+     "Your body takes the fresh air it needs, and then you breathe the old air back out.",
+     "bob"
+    ],
+    [
+     "Can you take a big breath in, and slowly breathe out? Ahhh!",
+     "wiggle"
+    ],
+    [
+     "What do your lungs fill up with?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Air! In and out, all day and all night.",
+     "fx2+badge:BREATHE!"
+    ],
+    [
+     "Let's say it together: LUNGS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LUNGS!",
+     "zoom"
+    ],
+    [
+     "You breathe even while you sleep, without thinking about it at all!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_bones",
+   "lines": [
+    [
+     "Here's a clue: they're hard, and they hold you up! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Bones!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Bones are hard and strong, and they give your body its shape.",
+     "fx+bob"
+    ],
+    [
+     "Grown-ups have two hundred and six bones! Without bones, you'd be floppy like a noodle.",
+     "bob"
+    ],
+    [
+     "Can you tap your knees, your elbows, and your head? Bones are inside!",
+     "wiggle"
+    ],
+    [
+     "How many bones do grown-ups have?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Two hundred and six bones!",
+     "fx2+badge:206 BONES!"
+    ],
+    [
+     "Let's say it together: BONES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BONES!",
+     "zoom"
+    ],
+    [
+     "Milk, cheese, and green veggies help your bones grow big and strong.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_muscles",
+   "lines": [
+    [
+     "Here's a clue: they help you run, jump, and smile! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Muscles!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Muscles are attached to your bones, and they move them by pulling.",
+     "fx+bob"
+    ],
+    [
+     "When a muscle gets shorter, it pulls a bone, and your arm or leg moves!",
+     "bob"
+    ],
+    [
+     "Can you bend your arm and make a strong muscle? Flex!",
+     "wiggle"
+    ],
+    [
+     "How do muscles move your bones?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They pull! Muscles can only pull, not push.",
+     "fx2+badge:FLEX!"
+    ],
+    [
+     "Let's say it together: MUSCLES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MUSCLES!",
+     "zoom"
+    ],
+    [
+     "You have more than six hundred muscles. Even smiling uses muscles in your face!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_teeth",
+   "lines": [
+    [
+     "Here's a clue: they're white, and they help you chew! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Teeth!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Your front teeth are sharp for biting, like when you bite an apple.",
+     "fx+bob"
+    ],
+    [
+     "Your back teeth are wide and bumpy for chewing and mashing your food.",
+     "bob"
+    ],
+    [
+     "Can you show me your biggest smile? Look at those teeth!",
+     "wiggle"
+    ],
+    [
+     "How many baby teeth do kids have?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Twenty! Later, grown-up teeth grow in.",
+     "fx2+badge:CHOMP!"
+    ],
+    [
+     "Let's say it together: TEETH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TEETH!",
+     "zoom"
+    ],
+    [
+     "Brush your teeth twice a day, in the morning and at night, to keep them clean!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Your heart pumps, thump, thump.",
+   "@gz2_heart"
+  ],
+  [
+   "Your lungs breathe air in and out.",
+   "@gz2_lungs"
+  ],
+  [
+   "Bones hold you up.",
+   "@gz2_bones"
+  ],
+  [
+   "Muscles pull to move you.",
+   "@gz2_muscles"
+  ],
+  [
+   "And teeth bite and chew!",
+   "@gz2_teeth"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

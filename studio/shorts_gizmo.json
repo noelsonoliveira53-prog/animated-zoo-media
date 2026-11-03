@@ -1,0 +1,170 @@
+[
+ {
+  "id": "gz_venus",
+  "animal": "venus",
+  "title": "A Day on Venus Is Longer Than a Year!",
+  "thumb": "243 DAYS?!",
+  "top": "VENUS",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "beats": [
+   {
+    "say": "If you lived on Venus, your birthday would come before tomorrow does. How?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo, your robot friend. Let's blast off to Venus!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Venus spins very, very slowly. One spin takes 243 Earth days!",
+    "act": "fx+badge:243 DAYS!"
+   },
+   {
+    "say": "But one trip around the Sun only takes 225 days.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "So a day on Venus is longer than its whole year! And Venus spins backward, too.",
+    "act": "fx+wiggle"
+   },
+   {
+    "say": "Would you like a super long day? Keep looking up, and keep learning. See you next time!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "NASA Science: Venus"
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz_jupiter",
+  "animal": "jupiter",
+  "title": "Jupiter Has a Storm Bigger Than Earth!",
+  "thumb": "GIANT STORM",
+  "top": "JUPITER",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "beats": [
+   {
+    "say": "You've seen rain storms. Jupiter has one storm bigger than the whole Earth! Where is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo, your robot friend. Let's zoom to Jupiter!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's called the Great Red Spot. Can you see it?",
+    "act": "fx"
+   },
+   {
+    "say": "This storm is so big, the whole Earth could fit inside it!",
+    "act": "fx2+badge:BIGGER THAN EARTH!"
+   },
+   {
+    "say": "Jupiter is the biggest planet, and it's made mostly of gas. There's no ground to stand on!",
+    "act": "fxoff+fx2off+zoom"
+   },
+   {
+    "say": "Can you puff up your cheeks, big like Jupiter? Keep looking up, and keep learning. See you next time!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "NASA Science: Jupiter"
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz_saturn",
+  "animal": "saturn",
+  "title": "Saturn Could Float in a Bathtub!",
+  "thumb": "IT FLOATS?!",
+  "top": "SATURN",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "beats": [
+   {
+    "say": "Your rubber duck floats in the bath. Saturn could float too, in a giant bathtub! Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo, your robot friend. Let's fly to Saturn!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Saturn is huge, but it's very light for its size. It's made mostly of gas.",
+    "act": "zoom"
+   },
+   {
+    "say": "So in a giant, giant bathtub, Saturn would float!",
+    "act": "fx+fx2+bob"
+   },
+   {
+    "say": "And its beautiful rings are made of chunks of ice and rock.",
+    "act": "fxoff+fx2off+badge:ICE RINGS!"
+   },
+   {
+    "say": "Can you draw a big ring in the air, like Saturn's rings? Keep looking up, and keep learning. See you next time!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "NASA Science: Saturn"
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz_moon",
+  "animal": "moon",
+  "title": "Moon Footprints Can Last Millions of Years!",
+  "thumb": "STILL THERE!",
+  "top": "MOON",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "beats": [
+   {
+    "say": "Your footprints in the sand wash away. On the Moon, footprints can stay for millions of years! Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo, your robot friend. Let's land on the Moon!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The Moon has no wind and no rain.",
+    "act": "bob"
+   },
+   {
+    "say": "So nothing comes along to wipe the footprints away!",
+    "act": "fx+badge:FOOTPRINTS STAY!"
+   },
+   {
+    "say": "Astronauts walked on the Moon more than fifty years ago, and their footprints are still there.",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you stomp slowly, like an astronaut on the Moon? Keep looking up, and keep learning. See you next time!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "NASA Science: Moon"
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ }
+]

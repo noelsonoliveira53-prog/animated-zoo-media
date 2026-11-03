@@ -13,7 +13,7 @@ from build import tts as _tts, music, pop, chunks, sh, SR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5}
-ALL["title"] = {"space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE}.get(CHANNEL, ALL["title"])
+ALL["title"] = {"gizmo": SPACE_TITLE.replace("SPACE KIDS ACADEMY", "GIZMO EXPLAINS").replace('fill="#6c4cd6"', 'fill="#3561d9"'), "space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE}.get(CHANNEL, ALL["title"])
 GAP, SEG_GAP, SPEED, THINK = 0.7, 1.4, 0.85, 2.6
 NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", **NAMES4, **NAMES5}
 ORIGIN = {"monkey": "640 430", "owl": "540 500", "sloth": "545 350", "koala": "435 600"}

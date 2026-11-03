@@ -255,5 +255,5 @@ window.__timelines["main"] = tl; tl.seek(0);
     print(final, total)
 
 if __name__ == "__main__":
-    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json") for e in json.load(open(os.path.join(HERE, f)))}
+    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json") for e in json.load(open(os.path.join(HERE, f)))}
     build(eps[sys.argv[1]], "--draft" in sys.argv)

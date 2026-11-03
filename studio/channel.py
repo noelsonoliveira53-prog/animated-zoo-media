@@ -55,6 +55,11 @@ PIP = """<svg id="milo" viewBox="0 0 220 200" width="260" height="236">
     <circle cx="204" cy="140" r="16" fill="#e1f5fe" stroke="#8d6e63" stroke-width="6"/></g>
 </svg>"""
 
+GIZMO = (NOVA.replace('fill="#f3f6ff" stroke="#9aa7c7"', 'fill="#d9dee8" stroke="#8792a8"')
+         .replace('<circle cx="110" cy="14" r="11" fill="#ffd23f"/><circle cx="106" cy="10" r="3.5" fill="#fff8d6"/>',
+                  '<circle cx="110" cy="14" r="11" fill="#5ff3ff"/><circle cx="106" cy="10" r="3.5" fill="#e6ffff"/>')
+         .replace('fill="#ffd23f" transform=', 'fill="#5ff3ff" transform='))
+
 def _tail(total, even=False):
     r = int(total / .3)
     if even: r = r // 2 * 2 - 1
@@ -82,6 +87,9 @@ CONFIGS = {
     "space": dict(brand="SPACE KIDS ACADEMY", host=NOVA, voice="af_nova", talk="scale",
                   kind="🚀 Great job!", bye="See you in space! 🚀", wing=_flame, birds_html=SHOOTING_STAR,
                   root_bg="radial-gradient(ellipse at 50% 42%,#28328a 0%,#141a4f 45%,#090d2b 100%)", brand_color="#a9b8ff", repo_prefix="space/"),
+    "gizmo": dict(brand="GIZMO EXPLAINS", host=GIZMO, voice="am_michael", talk="scale",
+                  kind="🤖 Great job!", bye="See you next time! 🤖", wing=_flame, birds_html=SHOOTING_STAR,
+                  root_bg="radial-gradient(ellipse at 50% 42%,#3561d9 0%,#1d3a8a 50%,#0d1b4a 100%)", brand_color="#5ff3ff", repo_prefix="gizmo/"),
     "dino": dict(brand="DINO WORLD KIDS", host=DASH, voice="af_sky", talk="scale",
                  kind="🦕 Be gentle!", bye="See you in Dino World! 🦕", wing=_tail, birds_html=None,
                  root_bg="linear-gradient(180deg,#ffcc9a 0%,#ffe9c7 55%,#fff4dc 100%)", brand_color="#8d4a1a", repo_prefix="dino/"),

@@ -1,0 +1,285 @@
+{
+ "id": "gz_ep01_planets",
+ "title": "Planets for Kids! 5 Space Surprises with Gizmo",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "Today we're blasting off to visit five amazing planets. Every planet has a super surprise.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Three, two, one, blast off!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mercury",
+   "lines": [
+    [
+     "Here's our first planet. Here's a clue: it's the smallest planet, and the closest to the Sun! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Mercury!",
+     "enter"
+    ],
+    [
+     "Mercury is the smallest planet in our solar system.",
+     "bob"
+    ],
+    [
+     "It's covered in craters, like little dents made by space rocks.",
+     "zoom"
+    ],
+    [
+     "Can you curl up small, like tiny Mercury?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how long one year is on Mercury?",
+     "q"
+    ],
+    [
+     "Only 88 days! Mercury zooms around the Sun super fast.",
+     "fx+badge:88-DAY YEAR!"
+    ],
+    [
+     "Let's say it together: MERCURY!",
+     "zoom"
+    ],
+    [
+     "Mercury is the fastest planet in our solar system.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Mercury!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "venus",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's the hottest planet, and it shines bright in the night sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Venus!",
+     "enter"
+    ],
+    [
+     "Venus is covered in thick, yellow clouds.",
+     "bob"
+    ],
+    [
+     "Venus is the hottest planet, even hotter than Mercury!",
+     "zoom+badge:HOTTEST PLANET!"
+    ],
+    [
+     "Can you fan yourself like it's super hot? Phew!",
+     "wiggle"
+    ],
+    [
+     "Can you guess which way Venus spins?",
+     "q"
+    ],
+    [
+     "Backward! On Venus, the Sun comes up in the west.",
+     "fx+badge:SPINS BACKWARD!"
+    ],
+    [
+     "Let's say it together: VENUS!",
+     "zoom"
+    ],
+    [
+     "Venus is the brightest planet we can see in the night sky.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Venus!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mars",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's red, and robots are driving on it! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Mars!",
+     "enter"
+    ],
+    [
+     "Mars is called the Red Planet.",
+     "bob"
+    ],
+    [
+     "Mars has ice caps at the top and the bottom, a little like Earth.",
+     "zoom"
+    ],
+    [
+     "Can you drive like a little robot rover? Beep, beep!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why Mars is red?",
+     "q"
+    ],
+    [
+     "Rust! The dirt on Mars has iron in it, and it turned rusty red.",
+     "fx+badge:RUSTY RED!"
+    ],
+    [
+     "Let's say it together: MARS!",
+     "zoom"
+    ],
+    [
+     "Robot rovers are exploring Mars right now, taking pictures for us.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Mars!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "jupiter",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's the biggest planet of all! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Jupiter!",
+     "enter"
+    ],
+    [
+     "Jupiter is so big, more than one thousand Earths could fit inside!",
+     "zoom+badge:1,000+ EARTHS!"
+    ],
+    [
+     "Jupiter has a giant storm called the Great Red Spot.",
+     "fx"
+    ],
+    [
+     "Can you spin around slowly, like a big storm? Spin, spin!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Can you stand on Jupiter?",
+     "fxoff+q"
+    ],
+    [
+     "No! Jupiter is made mostly of gas, so there's no ground to stand on.",
+     "badge:NO GROUND!"
+    ],
+    [
+     "Let's say it together: JUPITER!",
+     "zoom"
+    ],
+    [
+     "Jupiter has lots of moons. More than ninety!",
+     "bob"
+    ],
+    [
+     "Bye-bye, Jupiter!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "saturn",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has big, beautiful rings! Can you guess?",
+     "q"
+    ],
+    [
+     "Our last stop: Saturn!",
+     "enter"
+    ],
+    [
+     "Saturn's rings are made of ice and rock, from tiny bits to pieces as big as a house.",
+     "zoom"
+    ],
+    [
+     "Saturn is the second biggest planet.",
+     "bob"
+    ],
+    [
+     "Can you draw a big ring in the air with your finger? Round and round!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What would happen if you put Saturn in a giant bathtub?",
+     "q"
+    ],
+    [
+     "It would float! Saturn is very light for its size.",
+     "fx+fx2+badge:IT FLOATS!"
+    ],
+    [
+     "Let's say it together: SATURN!",
+     "zoom"
+    ],
+    [
+     "Saturn has more moons than any other planet!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Saturn!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a space adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "A year on Mercury is only 88 days.",
+   "@mercury"
+  ],
+  [
+   "Venus spins backward.",
+   "@venus"
+  ],
+  [
+   "Mars is red because of rust.",
+   "@mars"
+  ],
+  [
+   "Jupiter is the biggest planet.",
+   "@jupiter"
+  ],
+  [
+   "And Saturn could float in a giant bathtub!",
+   "@saturn"
+  ]
+ ],
+ "outro": [
+  [
+   "Which planet was your favorite? Keep looking up at the stars, and keep learning.",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time!",
+   ""
+  ]
+ ]
+}

@@ -68,9 +68,10 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
 
 ## Animal library
 Drawn: giraffe, penguin, elephant, lion, zebra, hippo, monkey, flamingo, kangaroo, octopus,
-sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter. Next to draw: rhino,
-tiger (gentle), gorilla, camel, peacock, seal, armadillo, toucan, chameleon, bison, ostrich.
-Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies.
+sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter, gorilla, rhino, harbor seal.
+Next to draw: tiger (gentle), camel, peacock, armadillo, toucan, chameleon, bison, ostrich.
+Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies, ep05 baby animals.
+Note: the seal pup (`#fx` in SEAL) sits partly past x 1080, so it suits episodes; reposition it before using it in a Short. SLOTH now also has a baby sloth in `#fx2`.
 
 ## Schedule so far
 See `studio/upload_plan.json`.

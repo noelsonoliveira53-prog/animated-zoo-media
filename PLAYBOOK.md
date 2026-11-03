@@ -61,12 +61,16 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
    "Nov 5, 2026", press Enter. Verify `#datepicker-trigger` text and the time value by script, then
    click `#done-button`. Confirm with a zoom on (140,220)-(660,380): "Video scheduled ... on <date> at <time>".
    (Clicking calendar day cells is unreliable, so don't.)
+   If execCommand returns false (browser pane hidden / page not focused), click the title box once with a
+   real click first, then rerun the fill script. If Studio opens on another channel, switch to
+   @TheAnimatedZoo via the account menu > Switch account. Schedule panel shows GMT-0500 = ET.
 5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
 
 ## Animal library
 Drawn: giraffe, penguin, elephant, lion, zebra, hippo, monkey, flamingo, kangaroo, octopus,
-sea turtle, polar bear, owl, panda, koala, sloth. Next to draw: rhino, tiger (gentle), red panda,
-meerkat, gorilla, camel, peacock, seal, otter, armadillo, toucan, chameleon, bison, ostrich.
+sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter. Next to draw: rhino,
+tiger (gentle), gorilla, camel, peacock, seal, armadillo, toucan, chameleon, bison, ostrich.
+Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies.
 
 ## Schedule so far
 See `studio/upload_plan.json`.

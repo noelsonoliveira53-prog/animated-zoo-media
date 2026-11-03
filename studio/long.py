@@ -5,17 +5,22 @@ import numpy as np, soundfile as sf
 from art import MILO, SCENES
 from art2 import SCENES2
 import fx
+from channel import C, NAME as CHANNEL
+from art_space import SCENES3, SPACE_TITLE
+from art_dino import SCENES4, DINO_TITLE, NAMES4
+from art_wild import SCENES5, WILD_TITLE, NAMES5
 from build import tts as _tts, music, pop, chunks, sh, SR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ALL = {**SCENES, **SCENES2}
+ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5}
+ALL["title"] = {"space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE}.get(CHANNEL, ALL["title"])
 GAP, SEG_GAP, SPEED, THINK = 0.7, 1.4, 0.85, 2.6
-NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER"}
+NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", **NAMES4, **NAMES5}
 ORIGIN = {"monkey": "640 430", "owl": "540 500", "sloth": "545 350", "koala": "435 600"}
 
 def tts(text, out):
     if not os.path.exists(out):
-        sh(f'hyperframes tts {json.dumps(text)} -v af_heart -s {SPEED} -o "{out}" --json')
+        sh(f'hyperframes tts {json.dumps(text)} -v {C["voice"]} -s {SPEED} -o "{out}" --json')
     return _tts(text, out)
 
 def prep_scene(key, i):
@@ -202,7 +207,7 @@ def build(ep_path, norender=False):
 @font-face{{font-family:"Baloo";src:url(assets/baloo.woff2) format("woff2");font-weight:800}}
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1920px;height:1080px;overflow:hidden;background:#8fd3ff}}
-#root{{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Baloo",sans-serif;background:linear-gradient(180deg,#8fd3ff,#e3f5ff)}}
+#root{{position:relative;width:1920px;height:1080px;overflow:hidden;font-family:"Baloo",sans-serif;background:{C["root_bg"]}}}
 .scene{{position:absolute;inset:0;transform-origin:50% 70%}}
 {fx.CONFETTI_CSS}
 #wipe{{position:absolute;left:50%;top:50%;width:2400px;height:2400px;margin:-1200px;border-radius:50%;background:radial-gradient(circle,#ffe066 0 18%,#2f80ed 19%);transform:scale(0)}}
@@ -216,28 +221,28 @@ html,body{{width:1920px;height:1080px;overflow:hidden;background:#8fd3ff}}
 #kind{{position:absolute;right:120px;top:380px;padding:12px 40px 2px;border-radius:50px;background:#fff;color:#1c5fc4;font-size:60px;box-shadow:0 10px 0 rgba(0,0,0,.12);opacity:0}}
 .cap{{position:absolute;left:160px;right:160px;bottom:40px;text-align:center;opacity:0}}
 .cap span{{display:inline-block;padding:8px 36px 0;border-radius:30px;background:rgba(26,26,46,.82);color:#fff;font-size:70px;line-height:1.15}}
-#eptitle,#bye{{position:absolute;left:0;right:0;top:690px;text-align:center;opacity:0}}
+#eptitle,#bye{{position:absolute;left:0;right:0;top:{"690px" if CHANNEL=="zoo" else "820px"};text-align:center;opacity:0}}
 #eptitle div,#bye div{{display:inline-block;padding:14px 50px 4px;border-radius:44px;background:#fff;color:#1c5fc4;font-size:76px;box-shadow:0 12px 0 rgba(0,0,0,.12)}}
 </style></head><body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total}" data-width="1920" data-height="1080">
 {scenes_html}
-<div id="brand">THE ANIMATED ZOO</div>{labels}
-<div id="qmark">?</div><div id="badge"><span></span></div><div id="zzz">Z z z</div><div id="kind">💙 Be kind!</div>
-<div id="eptitle"><div>{ep["title"]}</div></div><div id="bye"><div>See you at the zoo! 💙</div></div>
-<div id="milobox">{fx.milo_talking(MILO)}</div>{fx.confetti_html(36)}{fx.BIRDS_HTML}<div id="wipe"></div>
+<div id="brand">{C["brand"]}</div>{labels}
+<div id="qmark">?</div><div id="badge"><span></span></div><div id="zzz">Z z z</div><div id="kind">{C["kind"]}</div>
+<div id="eptitle"><div>{ep["title"]}</div></div><div id="bye"><div>{C["bye"]}</div></div>
+<div id="milobox">{C["host"] or fx.milo_talking(MILO)}</div>{fx.confetti_html(36)}{C["birds_html"] or fx.BIRDS_HTML}<div id="wipe"></div>
 {cap_html}
 </div>
 <script>
 window.__timelines = window.__timelines || {{}};
 const tl = gsap.timeline({{paused:true}});
 gsap.utils.toArray('[id$="-tongue"]').forEach(e=>gsap.set(e,{{scaleX:.15,svgOrigin:"745 281"}}));
-tl.to("#wing",{{rotation:-28,svgOrigin:"78 122",duration:.18,yoyo:true,repeat:{int(total/.18)//2*2-1},ease:"sine.inOut"}},0);
+{C["wing"](total, True)}
 tl.to("#milo",{{y:-10,duration:.6,yoyo:true,repeat:{int(total/.6)//2*2-1},ease:"sine.inOut"}},0);
 tl.to('[id$="-cloud1"]',{{x:-200,duration:{total},ease:"none"}},0);
 tl.to('[id$="-bubbles"]',{{y:-120,duration:3,repeat:{int(total/3)},ease:"none"}},0);
 {chr(10).join(js)}
 {fx.ambient_js(total, "")}
-{fx.talk_js(beats)}
+{fx.talk_js(beats, C["talk"])}
 {fx.birds_js(total, 1920)}
 {extra}
 tl.to({{}},{{duration:.01}},{total-.01});

@@ -70,3 +70,24 @@ meerkat, gorilla, camel, peacock, seal, otter, armadillo, toucan, chameleon, bis
 
 ## Schedule so far
 See `studio/upload_plan.json`.
+
+## Sister channels (same engine, pick with `CHANNEL=space|dino|wild`)
+Settings live in `studio/channel.py`. Each channel keeps the same safety rules, the same cadence
+(start at 4 Shorts + 1 five-minute episode a day) and its own art, so no video is reused across channels.
+
+| Channel | Host | Voice | Art | Shorts / episodes | Repo folder |
+|---|---|---|---|---|---|
+| Space Kids Academy | Nova the robot | af_nova | `art_space.py` | `shorts_space.json`, `eps/sp_*.json` | `space/` |
+| Dino World Kids | Dash the baby dino | af_sky | `art_dino.py` | `shorts_dino.json`, `eps/dn_*.json` | `dino/` |
+| WildKids Discovery | Pip the mouse explorer | bf_emma | `art_wild.py` | `shorts_wild.json`, `eps/wk_*.json` | `wild/` |
+
+Build: `CHANNEL=dino SUBDIR=dino bash night.sh dn_trex dn_ep01_dinos` (anything with `ep0` goes to long.py).
+Brand assets: `python3 brand2.py` writes `brand/<channel>/banner, avatar, thumb_<episode>` HTML (screenshot to PNG).
+Fact sources: NASA (space); Natural History Museum London and Smithsonian NMNH (dinosaurs);
+Smithsonian, NHM and USDA (bugs). Dino scripts say "scientists think" for anything still debated,
+and remind kids that birds are living dinosaurs. Bug scripts end with "Be gentle with every bug."
+
+Drawn so far. Space: Mercury, Venus, Moon, Mars, Jupiter, Saturn, Sun. Dino: T. rex, Triceratops,
+Stegosaurus, Brachiosaurus, Pteranodon. Wild: ladybug, honeybee, butterfly, ant, snail.
+Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosaurus, Velociraptor
+(feathers!), Parasaurolophus, Diplodocus, Spinosaurus. Wild: firefly, grasshopper, caterpillar, dragonfly, worm.

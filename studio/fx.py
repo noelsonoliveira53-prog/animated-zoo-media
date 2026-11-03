@@ -3,7 +3,7 @@ Adds: outlines + ground shadows, blink, breathing/idle sway, Milo beak talk,
 confetti bursts, flying birds, sparkles, camera moves."""
 import math, re
 
-NO_SHADOW = {"monkey", "owl", "sloth", "koala", "octopus", "turtle", "seaotter"}
+NO_SHADOW = {"monkey", "owl", "sloth", "koala", "octopus", "turtle", "seaotter", "venus", "jupiter", "saturn", "moon", "mercury", "mars", "sun", "pteranodon", "bee", "butterfly", "ladybug", "ant", "snail"}
 
 OUTLINE = """<defs><filter id="ol" x="-10%" y="-10%" width="120%" height="120%">
 <feMorphology in="SourceAlpha" operator="dilate" radius="4" result="d"/>
@@ -56,12 +56,15 @@ def ambient_js(total, scene_sel, origin="540 1000", seed=1):
         n += 1; t += 2.2 + 2.2 * rnd(n, seed)
     return "\n".join(J)
 
-def talk_js(beats):
+def talk_js(beats, mode="rot"):
     """Milo's lower beak flaps while each line is spoken."""
     J = []
     for b in beats:
         reps = max(1, int(b["d"] / .13)) // 2 * 2 + 1
-        J.append(f'tl.to("#beaklow",{{rotation:22,svgOrigin:"164 111",duration:.13,yoyo:true,repeat:{reps},ease:"sine.inOut"}},{b["t"]:.2f});')
+        if mode == "scale":
+            J.append(f'tl.to("#beaklow",{{scaleY:4,svgOrigin:"110 117",duration:.12,yoyo:true,repeat:{reps},ease:"sine.inOut"}},{b["t"]:.2f});')
+        else:
+            J.append(f'tl.to("#beaklow",{{rotation:22,svgOrigin:"164 111",duration:.13,yoyo:true,repeat:{reps},ease:"sine.inOut"}},{b["t"]:.2f});')
     return "\n".join(J)
 
 def confetti_html(n=28):

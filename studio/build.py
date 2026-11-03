@@ -6,13 +6,18 @@ import numpy as np, soundfile as sf
 from art import MILO, SCENES
 from art2 import SCENES2
 import fx
+from channel import C
+from art_space import SCENES3
+from art_dino import SCENES4
+from art_wild import SCENES5
+SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5)
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 SR = 24000
 GAP = 0.35
 LEAD = 0.25
-VOICE = "af_heart"
+VOICE = C["voice"]
 
 def sh(cmd, **kw):
     r = subprocess.run(cmd, shell=True, capture_output=True, text=True, **kw)
@@ -185,9 +190,9 @@ def build(ep, draft=False):
 *{{margin:0;padding:0;box-sizing:border-box}}
 html,body{{width:1080px;height:1920px;overflow:hidden;background:{ep["bg"][1]}}}
 #root{{position:relative;width:1080px;height:1920px;overflow:hidden;font-family:"Baloo",sans-serif;
-  background:linear-gradient(180deg,{ep["bg"][0]} 0%,{ep["bg"][1]} 70%)}}
-#brand{{position:absolute;top:120px;width:100%;text-align:center;font-size:44px;color:#1c5fc4;letter-spacing:.06em}}
-#label{{position:absolute;top:168px;width:100%;text-align:center;font-size:150px;line-height:1;color:#fff;
+  background:{ep.get("root_bg") or "linear-gradient(180deg,"+ep["bg"][0]+" 0%,"+ep["bg"][1]+" 70%)"}}}
+#brand{{position:absolute;top:120px;width:100%;text-align:center;font-size:44px;color:{C["brand_color"]};letter-spacing:.06em}}
+#label{{position:absolute;top:168px;width:100%;text-align:center;font-size:{min(150, int(1450/max(1,len(ep["top"]))))}px;line-height:1;color:#fff;
   -webkit-text-stroke:14px #1c5fc4;paint-order:stroke fill;text-shadow:0 10px 0 rgba(0,0,0,.12)}}
 #scene{{position:absolute;left:0;top:470px}}
 #floor{{position:absolute;left:0;right:0;top:1560px;bottom:0;background:{ep.get("floor","#5fb043")}}}
@@ -209,13 +214,13 @@ html,body{{width:1080px;height:1920px;overflow:hidden;background:{ep["bg"][1]}}}
 </style></head><body>
 <div id="root" data-composition-id="main" data-start="0" data-duration="{total}" data-width="1080" data-height="1920">
   <div id="floor"></div>
-  <div id="scene">{fx.enhance(SCENES[ep["animal"]], ep["animal"])}</div>{fx.SPARKLE_HTML}{fx.BIRDS_HTML}
-  <div id="brand">THE ANIMATED ZOO</div>
+  <div id="scene">{fx.enhance(SCENES[ep["animal"]], ep["animal"])}</div>{fx.SPARKLE_HTML}{C["birds_html"] or fx.BIRDS_HTML}
+  <div id="brand">{C["brand"]}</div>
   <div id="label">{ep["top"]}</div>
   <div id="qmark">?</div>
-  <div id="badge"><span>{badge}</span></div><div id="zzz">Z z z</div><div id="kind">💙 Be kind!</div>
-  <div id="milobox">{fx.milo_talking(MILO)}</div>{fx.confetti_html()}
-  <div id="outro"><div>See you at the zoo! 💙</div></div>
+  <div id="badge"><span>{badge}</span></div><div id="zzz">Z z z</div><div id="kind">{C["kind"]}</div>
+  <div id="milobox">{C["host"] or fx.milo_talking(MILO)}</div>{fx.confetti_html()}
+  <div id="outro"><div>{C["bye"]}</div></div>
   {cap_html}
 </div>
 <script>
@@ -223,13 +228,13 @@ window.__timelines = window.__timelines || {{}};
 const tl = gsap.timeline({{paused:true}});
 gsap.set("#tongue",{{scaleX:0.15,svgOrigin:"745 281"}});
 tl.to("#cloud1",{{x:-160,duration:{total},ease:"none"}},0);
-tl.to("#wing",{{rotation:-28,svgOrigin:"78 122",duration:.18,yoyo:true,repeat:{int(total/.18)},ease:"sine.inOut"}},0);
+{C["wing"](total)}
 tl.to("#milo",{{y:-10,duration:.6,yoyo:true,repeat:{int(total/.6)},ease:"sine.inOut"}},0);
 tl.fromTo("#label",{{scale:.6,opacity:0}},{{scale:1,opacity:1,duration:.4,ease:"back.out(2.5)"}},0);
 tl.fromTo("#animal",{{y:-260,scaleY:1.15,scaleX:.88,svgOrigin:"540 1000"}},{{y:0,scaleY:1,scaleX:1,duration:.7,ease:"bounce.out"}},0);
 tl.fromTo("#scene",{{scale:1}},{{scale:1.07,duration:{total},ease:"none"}},0);
 {fx.ambient_js(total, "")}
-{fx.talk_js(beats)}
+{fx.talk_js(beats, C["talk"])}
 {fx.birds_js(total, 1080)}
 {fx.sparkle_js(total)}
 {extra_fx}
@@ -250,5 +255,5 @@ window.__timelines["main"] = tl; tl.seek(0);
     print(final, total)
 
 if __name__ == "__main__":
-    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json") for e in json.load(open(os.path.join(HERE, f)))}
+    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json") for e in json.load(open(os.path.join(HERE, f)))}
     build(eps[sys.argv[1]], "--draft" in sys.argv)

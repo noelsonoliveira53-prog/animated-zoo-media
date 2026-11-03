@@ -1,0 +1,169 @@
+[
+ {
+  "id": "dn_trex",
+  "animal": "trex",
+  "title": "Why Did T. Rex Have Such Tiny Arms?",
+  "thumb": "TINY ARMS!",
+  "top": "T. REX",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Tyrannosaurus rex",
+   "Smithsonian National Museum of Natural History: T. rex"
+  ],
+  "beats": [
+   {
+    "say": "T. rex was a giant dinosaur. But its arms were super tiny! Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Dash, your little dino buddy. Let's stomp back in time!",
+    "act": "milo_in"
+   },
+   {
+    "say": "T. rex's arms were so short, they couldn't even reach its mouth!",
+    "act": "fx+badge:TINY ARMS!"
+   },
+   {
+    "say": "Scientists are still finding out what those little arms were for. It's a dino mystery!",
+    "act": "fxoff+wiggle"
+   },
+   {
+    "say": "But T. rex had a super nose. Scientists think it could smell things far, far away.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Can you wiggle tiny T. rex arms? Be kind to every animal. See you in Dino World!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "dn_stego",
+  "animal": "stegosaurus",
+  "title": "T. Rex Never Met Stegosaurus! Here's Why",
+  "thumb": "NEVER MET!",
+  "top": "STEGOSAURUS",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Stegosaurus",
+   "Smithsonian National Museum of Natural History: Stegosaurus"
+  ],
+  "beats": [
+   {
+    "say": "T. rex and Stegosaurus never met. Not even once! How come?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Dash, your little dino buddy. Let's stomp back in time!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Stegosaurus lived about 150 million years ago. T. rex came much, much later.",
+    "act": "badge:150 MILLION YEARS!"
+   },
+   {
+    "say": "So T. rex actually lived closer in time to us than to Stegosaurus! Wow!",
+    "act": "zoom"
+   },
+   {
+    "say": "Stegosaurus had big plates on its back, and a spiky tail called a thagomizer!",
+    "act": "fx+wiggle"
+   },
+   {
+    "say": "Can you say thagomizer? Be kind to every animal. See you in Dino World!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "dn_brachio",
+  "animal": "brachiosaurus",
+  "title": "Brachiosaurus Was Taller Than a House!",
+  "thumb": "SO TALL!",
+  "top": "BRACHIOSAURUS",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Brachiosaurus"
+  ],
+  "beats": [
+   {
+    "say": "Can you reach the top of a tree? Brachiosaurus could! How?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Dash, your little dino buddy. Let's stomp back in time!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Brachiosaurus had a super long neck, and it was taller than a house!",
+    "act": "fx+badge:TALLER THAN A HOUSE!"
+   },
+   {
+    "say": "Its front legs were longer than its back legs, like a giraffe.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "It stretched up high to munch leaves at the very top of the trees.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you stretch up tall like Brachiosaurus? Be kind to every animal. See you in Dino World!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "dn_ptera",
+  "animal": "pteranodon",
+  "title": "Pteranodon Was NOT a Dinosaur!",
+  "thumb": "NOT A DINO?!",
+  "top": "PTERANODON",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Pteranodon",
+   "Smithsonian National Museum of Natural History: Pterosaurs"
+  ],
+  "beats": [
+   {
+    "say": "It flew with giant wings in dinosaur times. But it was not a dinosaur! What was it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Dash, your little dino buddy. Let's stomp back in time!",
+    "act": "milo_in"
+   },
+   {
+    "say": "This is Pteranodon. It was a flying reptile called a pterosaur.",
+    "act": "badge:FLYING REPTILE!"
+   },
+   {
+    "say": "Its wings were wider than a car! It soared high over the sea.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Its name means toothless wing, because it had no teeth at all!",
+    "act": "fx2off+wiggle"
+   },
+   {
+    "say": "Can you flap your arms like giant wings? Be kind to every animal. See you in Dino World!",
+    "act": "outro"
+   }
+  ]
+ }
+]

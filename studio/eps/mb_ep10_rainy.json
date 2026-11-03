@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep10_rainy",
+ "title": "Rainy Night Lullaby 🌧️ Calm Bedtime Story with Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to a soft and gentle rainy night.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_raindrop",
+   "lines": [
+    [
+     "Here's a little clue: it's a tiny drop of water that falls from the clouds. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Raindrop.",
+     "enter"
+    ],
+    [
+     "This is Raindrop. Can you whisper raindrop? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Raindrops fall from clouds when the clouds get full of water.",
+     "fx+bob"
+    ],
+    [
+     "Rain gives water to the trees, the grass, and the flowers.",
+     "bob"
+    ],
+    [
+     "Can you tap your fingers softly, like rain? Pitter, patter, pitter, patter.",
+     "bob"
+    ],
+    [
+     "Who drinks up the rain?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The trees, the grass, and the flowers.",
+     "fx2+badge:RAINDROP"
+    ],
+    [
+     "Let's say it softly together: Raindrop.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Raindrop.",
+     "zoom"
+    ],
+    [
+     "Raindrop lands softly in the garden, and a flower says thank you.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Raindrop. Pitter, patter.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_window",
+   "lines": [
+    [
+     "Here's a little clue: it's where we can watch the rain, all warm and dry inside. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Rainy Window.",
+     "enter"
+    ],
+    [
+     "This is Rainy Window. Can you whisper rainy window? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Rain on the window makes a soft, tapping sound.",
+     "fx+bob"
+    ],
+    [
+     "Little drops slide down the glass, slowly, slowly.",
+     "bob"
+    ],
+    [
+     "Can you trace a raindrop sliding down, with one finger, very slowly?",
+     "bob"
+    ],
+    [
+     "What sound does rain make on the window?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Tap, tap, tap. A soft, cozy sound.",
+     "fx2+badge:RAINY WINDOW"
+    ],
+    [
+     "Let's say it softly together: Rainy Window.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Rainy Window.",
+     "zoom"
+    ],
+    [
+     "Kitty watches the drops from the windowsill, warm and dry.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Rainy Window. Tap, tap.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_umbrella",
+   "lines": [
+    [
+     "Here's a little clue: it opens up wide, and it keeps us dry in the rain. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Umbrella.",
+     "enter"
+    ],
+    [
+     "This is Umbrella. Can you whisper umbrella? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "An umbrella opens up wide over our heads.",
+     "fx+bob"
+    ],
+    [
+     "The rain rolls off the top, and we stay nice and dry underneath.",
+     "bob"
+    ],
+    [
+     "Can you make a big umbrella with your arms, high over your head?",
+     "bob"
+    ],
+    [
+     "What does an umbrella do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It keeps us dry when it rains.",
+     "fx2+badge:UMBRELLA"
+    ],
+    [
+     "Let's say it softly together: Umbrella.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Umbrella.",
+     "zoom"
+    ],
+    [
+     "Umbrella closes up, and rests by the door for tomorrow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Umbrella. All done for today.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_worm",
+   "lines": [
+    [
+     "Here's a little clue: it's long and wiggly, and it lives in the soil. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Earthworm.",
+     "enter"
+    ],
+    [
+     "This is Earthworm. Can you whisper earthworm? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Earthworms come up out of the soil on rainy nights, when the ground is wet.",
+     "fx+bob"
+    ],
+    [
+     "Worms help the soil stay soft, so plants can grow.",
+     "bob"
+    ],
+    [
+     "Can you wiggle your fingers slowly, like a little worm? Wiggle, wiggle.",
+     "bob"
+    ],
+    [
+     "How do worms help the garden?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They keep the soil soft, so plants can grow.",
+     "fx2+badge:EARTHWORM"
+    ],
+    [
+     "Let's say it softly together: Earthworm.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Earthworm.",
+     "zoom"
+    ],
+    [
+     "Earthworm wiggles back down into the soft, cool soil.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Earthworm. Wiggle softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_moonbow",
+   "lines": [
+    [
+     "Here's a little clue: it's like a rainbow, but it shines at night. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Moonbow.",
+     "enter"
+    ],
+    [
+     "This is Moonbow. Can you whisper moonbow? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Sometimes, after rain, the bright moon can make a rainbow at night.",
+     "fx+bob"
+    ],
+    [
+     "It's called a moonbow, and it looks soft and pale.",
+     "bob"
+    ],
+    [
+     "Can you draw a big, slow arch in the air with your hand?",
+     "bob"
+    ],
+    [
+     "What do we call a rainbow at night?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A moonbow. A soft, sleepy rainbow.",
+     "fx2+badge:MOONBOW"
+    ],
+    [
+     "Let's say it softly together: Moonbow.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Moonbow.",
+     "zoom"
+    ],
+    [
+     "The rain stops, and the moonbow glows softly over the hills.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Moonbow. Glow gently.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Raindrop. Pitter, patter.",
+   "@mb2_raindrop"
+  ],
+  [
+   "Goodnight, Rainy Window. Tap, tap.",
+   "@mb2_window"
+  ],
+  [
+   "Goodnight, Umbrella. All done for today.",
+   "@mb2_umbrella"
+  ],
+  [
+   "Goodnight, Earthworm. Wiggle softly.",
+   "@mb2_worm"
+  ],
+  [
+   "Goodnight, Moonbow. Glow gently.",
+   "@mb2_moonbow"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Raindrop, Window, Umbrella, Earthworm, and Moonbow. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

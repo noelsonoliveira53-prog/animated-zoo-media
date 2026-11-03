@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep06_forest",
+ "title": "Goodnight Forest 🦔 Calm Bedtime Story with Luna the Owl",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the sleepy friends of the forest.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_deer",
+   "lines": [
+    [
+     "Here's a little clue: she has long legs, big soft ears, and little white spots on her back. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Deer.",
+     "enter"
+    ],
+    [
+     "This is Deer. Can you whisper deer? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A baby deer is called a fawn, and she has soft white spots.",
+     "fx+bob"
+    ],
+    [
+     "Her spots help her rest quietly in the tall, shady grass.",
+     "bob"
+    ],
+    [
+     "Can you make big deer ears with your hands, and listen very quietly?",
+     "bob"
+    ],
+    [
+     "What do we call a baby deer?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A fawn. A sweet, spotted little fawn.",
+     "fx2+badge:DEER"
+    ],
+    [
+     "Let's say it softly together: Deer.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Deer.",
+     "zoom"
+    ],
+    [
+     "Fawn folds her long legs and lies down in the soft, cool grass.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Deer. Sleep softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_fox",
+   "lines": [
+    [
+     "Here's a little clue: he's orange, with pointy ears and a big, bushy tail. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Fox.",
+     "enter"
+    ],
+    [
+     "This is Fox. Can you whisper fox? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Foxes have big, fluffy tails, as soft as a scarf.",
+     "fx+bob"
+    ],
+    [
+     "When it's chilly, a fox curls up and wraps his tail around him like a warm blanket.",
+     "bob"
+    ],
+    [
+     "Can you wrap your arms around yourself, like a cozy fox tail? Mmm, so warm.",
+     "bob"
+    ],
+    [
+     "What does a fox use like a blanket?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "His big, bushy tail. Soft and warm.",
+     "fx2+badge:FOX"
+    ],
+    [
+     "Let's say it softly together: Fox.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Fox.",
+     "zoom"
+    ],
+    [
+     "Fox tucks his nose under his tail and lets out a slow, sleepy sigh.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Fox. Stay warm.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_hedgehog",
+   "lines": [
+    [
+     "Here's a little clue: she's small and round, and her back is covered in little spikes. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Hedgehog.",
+     "enter"
+    ],
+    [
+     "This is Hedgehog. Can you whisper hedgehog? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "The little spikes on a hedgehog's back are called spines.",
+     "fx+bob"
+    ],
+    [
+     "To feel cozy, a hedgehog can curl up into a round, spiky ball.",
+     "bob"
+    ],
+    [
+     "Can you curl up small like a hedgehog? Tuck in your chin, and breathe slowly.",
+     "bob"
+    ],
+    [
+     "What are a hedgehog's spikes called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Spines. Lots and lots of little spines.",
+     "fx2+badge:HEDGEHOG"
+    ],
+    [
+     "Let's say it softly together: Hedgehog.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Hedgehog.",
+     "zoom"
+    ],
+    [
+     "Hedgehog snuggles into her soft nest of crunchy leaves.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Hedgehog. Sleep tight.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_squirrel",
+   "lines": [
+    [
+     "Here's a little clue: he has a big curly tail, and he loves to collect nuts. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Squirrel.",
+     "enter"
+    ],
+    [
+     "This is Squirrel. Can you whisper squirrel? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Squirrels hide nuts in the ground, so they have snacks for winter.",
+     "fx+bob"
+    ],
+    [
+     "They sleep in round, leafy nests high up in the trees.",
+     "bob"
+    ],
+    [
+     "Can you pretend to hold a little acorn, and hug it gently?",
+     "bob"
+    ],
+    [
+     "Where does a squirrel sleep?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In a leafy nest, high up in a tree.",
+     "fx2+badge:SQUIRREL"
+    ],
+    [
+     "Let's say it softly together: Squirrel.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Squirrel.",
+     "zoom"
+    ],
+    [
+     "Squirrel curls his fluffy tail over his head like a cozy hat.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Squirrel. Sweet dreams.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_raccoon",
+   "lines": [
+    [
+     "Here's a little clue: she has a dark mask around her eyes and stripes on her tail. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Raccoon.",
+     "enter"
+    ],
+    [
+     "This is Raccoon. Can you whisper raccoon? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Raccoons have a mask of dark fur around their eyes.",
+     "fx+bob"
+    ],
+    [
+     "Their little front paws can feel things very, very well.",
+     "bob"
+    ],
+    [
+     "Can you wiggle your fingers softly, like little raccoon paws?",
+     "bob"
+    ],
+    [
+     "Where is the raccoon's mask?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Around her eyes. A soft, furry mask.",
+     "fx2+badge:RACCOON"
+    ],
+    [
+     "Let's say it softly together: Raccoon.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Raccoon.",
+     "zoom"
+    ],
+    [
+     "Raccoon likes the quiet night, so she waves a gentle hello to the moon.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Raccoon. Rest well.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Deer. Sleep softly.",
+   "@mb2_deer"
+  ],
+  [
+   "Goodnight, Fox. Stay warm.",
+   "@mb2_fox"
+  ],
+  [
+   "Goodnight, Hedgehog. Sleep tight.",
+   "@mb2_hedgehog"
+  ],
+  [
+   "Goodnight, Squirrel. Sweet dreams.",
+   "@mb2_squirrel"
+  ],
+  [
+   "Goodnight, Raccoon. Rest well.",
+   "@mb2_raccoon"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Deer, Fox, Hedgehog, Squirrel, and Raccoon. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

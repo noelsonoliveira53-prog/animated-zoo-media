@@ -1,0 +1,658 @@
+[
+ {
+  "id": "mb2_s_hedgehog",
+  "animal": "mb2_hedgehog",
+  "title": "Why Do Hedgehogs Curl Up? 🦔",
+  "thumb": "HEDGEHOG",
+  "top": "HEDGEHOG",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Shh. Someone small and spiky is getting ready for bed. Who could it be?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's say goodnight to a gentle forest friend. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Hedgehog. Her back is covered in little spikes called spines. To feel snug and cozy, she curls up into a round, spiky ball.",
+    "act": "zoom+badge:HEDGEHOG"
+   },
+   {
+    "say": "Where does a hedgehog sleep? In a soft nest of leaves and grass, all tucked in and warm.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you curl up small like a hedgehog? Tuck in your chin, hug your knees, and breathe in slowly, and out.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Hedgehog. Sleep tight in your leafy nest. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_penguin",
+  "animal": "mb2_penguin",
+  "title": "How Do Penguins Stay Warm? 🐧",
+  "thumb": "PENGUIN",
+  "top": "PENGUIN",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Brr. It's icy and snowy tonight. Who's waddling off to bed?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's visit a snowy friend far, far away. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Penguin. Penguins live way down south, where it's very icy and cold. Their thick feathers keep them warm and dry. They waddle slowly along on the ice.",
+    "act": "zoom+badge:PENGUIN"
+   },
+   {
+    "say": "How do penguins stay warm at night? They huddle close together, side by side, like one big cozy hug.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you give yourself a gentle penguin hug? Squeeze softly, and sway slowly, side to side.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Penguin. Snuggle close with your friends. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_countstars",
+  "animal": "mb2_countstars",
+  "title": "Let's Count the Stars Together ⭐",
+  "thumb": "STARS",
+  "top": "STARS",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Look up, little one. The sky is full of twinkling stars tonight.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Shall we count some sleepy stars together? Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "Stars are giant, glowing suns, very, very far away. They're so far, they look like tiny twinkling lights. They shine all night long, even while we sleep.",
+    "act": "zoom+badge:COUNT THE STARS"
+   },
+   {
+    "say": "Let's count them slowly. One star. Two stars. Three stars. Four stars. And five little stars.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Now twinkle your fingers softly, like the stars. Twinkle, twinkle, slower, and slower, and slower.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, stars. Thank you for shining. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_snail",
+  "animal": "mb2_snail",
+  "title": "Where Does a Snail Sleep? 🐌",
+  "thumb": "SNAIL",
+  "top": "SNAIL",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Slowly, slowly, someone is gliding through the garden. Can you guess who?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's peek into the quiet garden tonight. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Snail. A snail carries her shell everywhere she goes. It's her very own little house, right on her back.",
+    "act": "zoom+badge:SNAIL"
+   },
+   {
+    "say": "Where does a snail sleep? She tucks herself inside her shell, all cozy and snug.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you move your hand very, very slowly, like a snail? Slow, slow, slow. Now rest your hand, nice and still.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Snail. Rest in your little shell house. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_balloon",
+  "animal": "mb2_balloon",
+  "title": "Balloon Breathing Before Bed 🎈",
+  "thumb": "BREATHE",
+  "top": "BREATHE",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Let's get our bodies calm and sleepy with a gentle breathing game.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Tonight, let's breathe like a soft balloon. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "Put your hands on your tummy. Slow breathing helps our bodies feel calm and ready for sleep.",
+    "act": "zoom+badge:BALLOON BREATH"
+   },
+   {
+    "say": "Breathe in slowly through your nose, and fill your tummy up like a big round balloon. Hold it, one, two.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Now let the air out slowly, slowly, like a balloon floating gently down. Let's do it once more. In, and out.",
+    "act": "bob"
+   },
+   {
+    "say": "Your body is calm and cozy now. Goodnight, little balloon. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_snowyowl",
+  "animal": "mb2_snowyowl",
+  "title": "Why Is the Snowy Owl White? 🦉",
+  "thumb": "SNOWY OWL",
+  "top": "SNOWY OWL",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Hoo, hoo. A white, fluffy friend is perched in the snow tonight. Who is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's meet one of my owl cousins. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Snowy Owl. She has soft white feathers that match the snow all around her. She lives far up north, where it's cold. Her round yellow eyes blink slowly, slowly.",
+    "act": "zoom+badge:SNOWY OWL"
+   },
+   {
+    "say": "What does Snowy Owl have on her feet? Fluffy feathers, like warm, cozy slippers.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you wiggle your toes, like you're wearing fluffy owl slippers? Wiggle, wiggle, and then rest.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Snowy Owl. Hoo, hoo. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_fox",
+  "animal": "mb2_fox",
+  "title": "How Does a Fox Stay Cozy? 🦊",
+  "thumb": "FOX",
+  "top": "FOX",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Shh. Someone with a big, bushy tail is getting sleepy in the forest.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's tiptoe into the quiet forest. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Fox. Foxes have big, fluffy tails, as soft as a scarf. On chilly nights, a fox curls up and wraps his tail around him.",
+    "act": "zoom+badge:FOX"
+   },
+   {
+    "say": "What does a fox use like a blanket? His bushy tail. Soft, fluffy, and warm.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you wrap your arms around yourself, like a cozy fox tail? Mmm. Now take a slow, sleepy breath.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Fox. Stay warm and snug. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_rain",
+  "animal": "mb2_window",
+  "title": "A Cozy Rainy Night Lullaby 🌧️",
+  "thumb": "RAIN",
+  "top": "RAIN",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Listen. Tap, tap, tap. Can you hear the rain on the window?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's watch the rain, all warm and dry inside. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "Rain falls from clouds when they get full of tiny drops of water. The rain gives a drink to the trees, the grass, and the flowers.",
+    "act": "zoom+badge:RAINY WINDOW"
+   },
+   {
+    "say": "What sound does rain make on the window? Pitter, patter, tap, tap. A soft and cozy sound.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you tap your fingers softly, like rain? Pitter, patter, slower and slower, until it's quiet.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, rain. Goodnight, cozy window. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_frog",
+  "animal": "mb2_frog",
+  "title": "Why Do Frogs Sing at Night? 🐸",
+  "thumb": "FROG",
+  "top": "FROG",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Ribbit, ribbit. Who's singing a soft song in the garden tonight?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's listen by the little pond. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Frog. Many frogs sing at night. Their songs are how they say hello to each other in the dark. Frogs have long, sticky tongues, too.",
+    "act": "zoom+badge:FROG"
+   },
+   {
+    "say": "Where does Frog like to sit? On a big, round lily pad, floating on the quiet pond. The water is calm and still.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you sing a very quiet ribbit with me? Ribbit. Ribbit. Now even softer, like a whisper. Ribbit.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Frog. Sing softly. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_train",
+  "animal": "mb2_engine",
+  "title": "All Aboard the Sleepy Dream Train 🚂",
+  "thumb": "TRAIN",
+  "top": "TRAIN",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "All aboard, little one. The sleepy Dream Train is ready to go.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's take a gentle ride to Dreamland. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "This is the Dream Train. Trains roll along on long metal tracks. The engine at the front pulls all the cars behind it.",
+    "act": "zoom+badge:DREAM TRAIN"
+   },
+   {
+    "say": "Some real trains even have sleeping cars, with tiny beds, so people can sleep while the train rolls through the night.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you move your arms in slow circles, like train wheels? Round and round, slower, and slower.",
+    "act": "bob"
+   },
+   {
+    "say": "Next stop, Dreamland. Goodnight, Dream Train. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_starfish",
+  "animal": "mb2_starfish",
+  "title": "Starfish Stretch Before Bed ⭐",
+  "thumb": "STRETCH",
+  "top": "STRETCH",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Let's do a slow, sleepy stretch, just like a starfish on the sand.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's stretch our bodies before bed. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "This is Starfish. Most starfish have five arms, and they move very slowly on tiny tube feet. Let's be starfish together.",
+    "act": "zoom+badge:STARFISH STRETCH"
+   },
+   {
+    "say": "Lie down or stand tall, and stretch out your arms and legs, wide like a star. Hold it, and breathe in.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Now let everything go soft and floppy. Breathe out slowly. Let's stretch wide once more, and relax.",
+    "act": "bob"
+   },
+   {
+    "say": "Your body feels calm and sleepy. Goodnight, Starfish. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_moth",
+  "animal": "mb2_moth",
+  "title": "Who Flutters at Night? The Moth 🌙",
+  "thumb": "MOTH",
+  "top": "MOTH",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Flutter, flutter. Someone soft and fuzzy is flying under the moon.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's meet a gentle night flier. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Moth. Most moths flutter around at night, while we're asleep. Their wings are soft and a little bit fuzzy. In the daytime, many moths rest quietly on tree bark.",
+    "act": "zoom+badge:MOTH"
+   },
+   {
+    "say": "What helps a moth find flowers? Its feathery antennae help it smell sweet flowers in the dark.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you flutter your hands softly, like little moth wings? Flutter, flutter, then rest them on your lap.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Moth. Flutter softly. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_fort",
+  "animal": "mb2_fort",
+  "title": "A Cozy Weekend Blanket Fort 🧸",
+  "thumb": "COZY",
+  "top": "COZY",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); tidy-up and wind-down habits for preschoolers"
+  ],
+  "beats": [
+   {
+    "say": "Shh. Something soft and cozy is waiting in the living room. Let's take a peek.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. It's the weekend, and we have time to slow down. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a blanket fort. With a grown-up's help, we can drape a big blanket over chairs to make a cozy little hideaway.",
+    "act": "zoom+badge:BLANKET FORT"
+   },
+   {
+    "say": "What goes inside a blanket fort? Soft pillows, a favorite teddy, and a quiet story with someone you love.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to fluff a pillow, and snuggle in? Breathe in slowly, and breathe out. So cozy.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, cozy fort. Happy, slow weekend. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_polarbear",
+  "animal": "mb2_polarbear",
+  "title": "Where Do Polar Bear Cubs Sleep? ❄️",
+  "thumb": "POLAR BEAR",
+  "top": "POLAR BEAR",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Shh. Something fluffy and white is getting sleepy in the snow.",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's visit the snowy north tonight. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a Polar Bear Cub. Polar bears live far up north, where there's lots of snow and ice. Their thick fur keeps them warm.",
+    "act": "zoom+badge:POLAR BEAR"
+   },
+   {
+    "say": "Where are polar bear cubs born? In a cozy den, dug into the snow, snuggled close to Mama Bear.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you give yourself a big, soft polar bear hug? Squeeze gently, and take a slow, sleepy breath.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Polar Bear Cub. Sleep warm. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_toys",
+  "animal": "mb2_toybox",
+  "title": "Time for Toys to Go to Sleep 🧸",
+  "thumb": "TOYS",
+  "top": "TOYS",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); tidy-up and wind-down habits for preschoolers"
+  ],
+  "beats": [
+   {
+    "say": "Shh. The playroom is getting sleepy. Who needs to be tucked in tonight?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's help the toys get ready for bed. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's the Toy Box. When we put our toys away at night, the room feels calm, and our toys are easy to find tomorrow.",
+    "act": "zoom+badge:TOY BOX"
+   },
+   {
+    "say": "Who goes in the toy box? The ball, the blocks, and teddy too. All tucked in, safe and sound.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to put a toy away, gently? One toy, two toys, three toys. All done. What a helper.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, toys. Goodnight, Toy Box. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "mb2_s_tulip",
+  "animal": "mb2_tulip",
+  "title": "Why Do Some Flowers Close at Night? 🌷",
+  "thumb": "TULIP",
+  "top": "TULIP",
+  "bg": [
+   "#1d2456",
+   "#3a3f86"
+  ],
+  "floor": "#232a5c",
+  "sources": [
+   "Bedtime routines for young children (AAP healthy sleep habits basics); simple nature facts (National Geographic Kids, Smithsonian's National Zoo animal fact pages)"
+  ],
+  "beats": [
+   {
+    "say": "Look. A pretty pink flower is slowly folding up its petals. Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hello, little one. I'm Luna, the sleepy owl. Let's visit the garden as the moon comes up. Get cozy, and listen softly.",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's Tulip. Some flowers, like tulips, close their petals at night. In the morning, when the sun comes back, they open again.",
+    "act": "zoom+badge:TULIP"
+   },
+   {
+    "say": "What does Tulip do at night? She closes her petals, like she's going to sleep, just like you.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you close your hands slowly, like a flower closing its petals? Slowly, slowly, all the way closed.",
+    "act": "bob"
+   },
+   {
+    "say": "Goodnight, Tulip. See you in the morning. Sweet dreams, from Moonbeam Bedtime.",
+    "act": "fxoff+outro"
+   }
+  ]
+ }
+]

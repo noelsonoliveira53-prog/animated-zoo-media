@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep11_train",
+ "title": "The Sleepy Train to Dreamland 🚂 Calm Bedtime Story",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the sleepy train, all the way to Dreamland.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_engine",
+   "lines": [
+    [
+     "Here's a little clue: it has big wheels, and it chugs along the tracks. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Dream Train.",
+     "enter"
+    ],
+    [
+     "This is Dream Train. Can you whisper dream train? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Trains roll along on long metal tracks.",
+     "fx+bob"
+    ],
+    [
+     "The engine is at the front, and it pulls all the train cars behind it.",
+     "bob"
+    ],
+    [
+     "Can you move your arms in slow circles, like train wheels? Round and round.",
+     "bob"
+    ],
+    [
+     "What does the engine do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It pulls the train cars along the tracks.",
+     "fx2+badge:DREAM TRAIN"
+    ],
+    [
+     "Let's say it softly together: Dream Train.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Dream Train.",
+     "zoom"
+    ],
+    [
+     "The Dream Train chugs slowly through the starry night.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Dream Train. Chug softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_sleepcar",
+   "lines": [
+    [
+     "Here's a little clue: it's a train car with little beds inside. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Sleeping Car.",
+     "enter"
+    ],
+    [
+     "This is Sleeping Car. Can you whisper sleeping car? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Some real trains have sleeping cars with tiny beds.",
+     "fx+bob"
+    ],
+    [
+     "People can sleep in their beds while the train rolls through the night.",
+     "bob"
+    ],
+    [
+     "Can you rest your head on your hands, like a little pillow?",
+     "bob"
+    ],
+    [
+     "What is inside a sleeping car?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little beds, for sleeping on the train.",
+     "fx2+badge:SLEEPING CAR"
+    ],
+    [
+     "Let's say it softly together: Sleeping Car.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Sleeping Car.",
+     "zoom"
+    ],
+    [
+     "Bunny, Bear, and Lamb are tucked in, rocking gently with the train.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Sleeping Car. Sleep tight.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_bridge",
+   "lines": [
+    [
+     "Here's a little clue: it goes up and over the river, so the train can cross. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Bridge.",
+     "enter"
+    ],
+    [
+     "This is Bridge. Can you whisper bridge? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A bridge helps the train cross over the river.",
+     "fx+bob"
+    ],
+    [
+     "Under the bridge, the water flows slowly and shines in the moonlight.",
+     "bob"
+    ],
+    [
+     "Can you make a bridge with your arms, and hold it, nice and still?",
+     "bob"
+    ],
+    [
+     "How does the train cross the river?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Over the bridge, nice and slow.",
+     "fx2+badge:BRIDGE"
+    ],
+    [
+     "Let's say it softly together: Bridge.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Bridge.",
+     "zoom"
+    ],
+    [
+     "The train glides softly over the bridge, under the moon.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Bridge. Goodnight, river.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_caboose",
+   "lines": [
+    [
+     "Here's a little clue: it's the little car at the very end of the train. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Caboose.",
+     "enter"
+    ],
+    [
+     "This is Caboose. Can you whisper caboose? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "On many old trains, the last car was called the caboose.",
+     "fx+bob"
+    ],
+    [
+     "Railroad workers rode inside, and kept a lantern glowing at the back.",
+     "bob"
+    ],
+    [
+     "Can you wave a soft goodbye, like the caboose at the end of the train?",
+     "bob"
+    ],
+    [
+     "Which car is the caboose?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The little car at the very end.",
+     "fx2+badge:CABOOSE"
+    ],
+    [
+     "Let's say it softly together: Caboose.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Caboose.",
+     "zoom"
+    ],
+    [
+     "The caboose's little lantern glows warm and yellow in the dark.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Caboose. Glow softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_station",
+   "lines": [
+    [
+     "Here's a little clue: it's the place where the train stops, so everyone can get off. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Station.",
+     "enter"
+    ],
+    [
+     "This is Station. Can you whisper station? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A train station is where the train stops.",
+     "fx+bob"
+    ],
+    [
+     "People get on and off there, and wait on the platform.",
+     "bob"
+    ],
+    [
+     "Can you take one big, slow breath, as the train comes to a stop? Ahhh.",
+     "bob"
+    ],
+    [
+     "What happens at the station?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The train stops, and everyone can get off.",
+     "fx2+badge:STATION"
+    ],
+    [
+     "Let's say it softly together: Station.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Station.",
+     "zoom"
+    ],
+    [
+     "We've arrived at Dreamland Station. Everything is quiet and calm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Station. We're home.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Dream Train. Chug softly.",
+   "@mb2_engine"
+  ],
+  [
+   "Goodnight, Sleeping Car. Sleep tight.",
+   "@mb2_sleepcar"
+  ],
+  [
+   "Goodnight, Bridge. Goodnight, river.",
+   "@mb2_bridge"
+  ],
+  [
+   "Goodnight, Caboose. Glow softly.",
+   "@mb2_caboose"
+  ],
+  [
+   "Goodnight, Station. We're home.",
+   "@mb2_station"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Dream Train, Sleeping Car, Bridge, Caboose, and Station. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep07_snowy",
+ "title": "Snowy Dreams 🐧 Calm Bedtime Story with Polar Animals",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to snowy friends from the coldest places on Earth.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_penguin",
+   "lines": [
+    [
+     "Here's a little clue: he's black and white, and he waddles on the ice. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Penguin.",
+     "enter"
+    ],
+    [
+     "This is Penguin. Can you whisper penguin? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Penguins live far, far away in the south, where it's icy and cold.",
+     "fx+bob"
+    ],
+    [
+     "To stay warm, penguins huddle close together, side by side.",
+     "bob"
+    ],
+    [
+     "Can you waddle your shoulders slowly, side to side, like a penguin?",
+     "bob"
+    ],
+    [
+     "How do penguins stay warm?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They huddle close together, like a big cozy hug.",
+     "fx2+badge:PENGUIN"
+    ],
+    [
+     "Let's say it softly together: Penguin.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Penguin.",
+     "zoom"
+    ],
+    [
+     "Penguin snuggles in close with all his penguin friends.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Penguin. Stay snug.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_polarbear",
+   "lines": [
+    [
+     "Here's a little clue: she's big and white, and she lives where it snows. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Polar Bear.",
+     "enter"
+    ],
+    [
+     "This is Polar Bear. Can you whisper polar bear? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Polar bears live far up north, where there's lots of snow and ice.",
+     "fx+bob"
+    ],
+    [
+     "Baby polar bears are called cubs, and they're born in a cozy den of snow.",
+     "bob"
+    ],
+    [
+     "Can you give yourself a big, soft polar bear hug? Squeeze gently.",
+     "bob"
+    ],
+    [
+     "What is a baby polar bear called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A cub. A fluffy little cub.",
+     "fx2+badge:POLAR BEAR"
+    ],
+    [
+     "Let's say it softly together: Polar Bear.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Polar Bear.",
+     "zoom"
+    ],
+    [
+     "Polar Bear Cub curls up close to Mama in their quiet, snowy den.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Polar Bear. Sleep warm.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_seal",
+   "lines": [
+    [
+     "Here's a little clue: he has flippers and whiskers, and he loves to swim. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Seal.",
+     "enter"
+    ],
+    [
+     "This is Seal. Can you whisper seal? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Seals have a thick layer of fat called blubber.",
+     "fx+bob"
+    ],
+    [
+     "Blubber keeps them warm, even in the icy cold water.",
+     "bob"
+    ],
+    [
+     "Can you clap your hands softly, like little seal flippers? Clap, clap.",
+     "bob"
+    ],
+    [
+     "What keeps a seal warm?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A thick, cozy layer of blubber.",
+     "fx2+badge:SEAL"
+    ],
+    [
+     "Let's say it softly together: Seal.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Seal.",
+     "zoom"
+    ],
+    [
+     "Seal stretches out on the smooth ice and closes his eyes.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Seal. Rest easy.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_snowyowl",
+   "lines": [
+    [
+     "Here's a little clue: she's white like snow, with big yellow eyes. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Snowy Owl.",
+     "enter"
+    ],
+    [
+     "This is Snowy Owl. Can you whisper snowy owl? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Snowy owls have white feathers that match the snow.",
+     "fx+bob"
+    ],
+    [
+     "They even have fluffy feathers on their feet, like warm slippers!",
+     "bob"
+    ],
+    [
+     "Can you wiggle your toes, like you're wearing fluffy owl slippers?",
+     "bob"
+    ],
+    [
+     "What does a snowy owl have on her feet?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Fluffy feathers, like cozy slippers.",
+     "fx2+badge:SNOWY OWL"
+    ],
+    [
+     "Let's say it softly together: Snowy Owl.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Snowy Owl.",
+     "zoom"
+    ],
+    [
+     "Snowy Owl fluffs up her feathers and blinks slowly, slowly.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Snowy Owl. Hoo, hoo.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_beluga",
+   "lines": [
+    [
+     "Here's a little clue: it's a white whale, with a round head and a gentle smile. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Beluga Whale.",
+     "enter"
+    ],
+    [
+     "This is Beluga Whale. Can you whisper beluga whale? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Beluga whales are white, and they live in cold northern seas.",
+     "fx+bob"
+    ],
+    [
+     "Belugas make lots of soft sounds, like chirps, clicks, and whistles.",
+     "bob"
+    ],
+    [
+     "Can you make a soft little whistle, like a beluga? Whoo, whoo.",
+     "bob"
+    ],
+    [
+     "What color is a beluga whale?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "White. White like snow.",
+     "fx2+badge:BELUGA WHALE"
+    ],
+    [
+     "Let's say it softly together: Beluga Whale.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Beluga Whale.",
+     "zoom"
+    ],
+    [
+     "Beluga floats under the shimmering ice, calm and slow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Beluga. Float softly.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Penguin. Stay snug.",
+   "@mb2_penguin"
+  ],
+  [
+   "Goodnight, Polar Bear. Sleep warm.",
+   "@mb2_polarbear"
+  ],
+  [
+   "Goodnight, Seal. Rest easy.",
+   "@mb2_seal"
+  ],
+  [
+   "Goodnight, Snowy Owl. Hoo, hoo.",
+   "@mb2_snowyowl"
+  ],
+  [
+   "Goodnight, Beluga. Float softly.",
+   "@mb2_beluga"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Penguin, Polar Bear, Seal, Snowy Owl, and Beluga. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

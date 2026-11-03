@@ -64,6 +64,18 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
    If execCommand returns false (browser pane hidden / page not focused), click the title box once with a
    real click first, then rerun the fill script. If Studio opens on another channel, switch to
    @TheAnimatedZoo via the account menu > Switch account. Schedule panel shows GMT-0500 = ET.
+   **If the browser pane is hidden on the PC** (document.hasFocus() is false), execCommand does nothing.
+   Then set the title and description by writing `textContent` on each `#textbox` and dispatching an
+   `input` InputEvent. Set the date and time with real input only: click the date trigger (150, 489),
+   take a screenshot (the calendar must be open), triple-click the date text (120, 483), type, press Enter,
+   click empty space (680, 420) to close the calendar. Then click INTO the time box (290, 489), check by
+   script that the focused (shadow) element is the time input, press ctrl+a, type "3:00 PM", press Enter.
+   Read back `#datepicker-trigger` and the time value by script before clicking `#done-button`, because a
+   wrong value silently schedules for 12:00 AM. To fix a scheduled time later: open /video/<id>/edit, open
+   Visibility, retype the time the same way, click Done, then click `#save`.
+   Other channels: Studio only opens the channel that is active in the channel switcher. Switch with
+   youtube.com/channel_switcher (click the channel's ytd-account-item-renderer), and switch back to
+   The Animated Zoo when done, or the nightly task's Zoo URLs show "Oops".
 5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
 
 ## Animal library

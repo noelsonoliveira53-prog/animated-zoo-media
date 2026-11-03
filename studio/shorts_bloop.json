@@ -1,0 +1,207 @@
+[
+ {
+  "id": "bl_red",
+  "animal": "red",
+  "title": "Can You Find Something Red?",
+  "thumb": "RED!",
+  "top": "RED",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Apples, strawberries, and fire trucks. What color are they all?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Red! This is my friend Red.",
+    "act": "zoom+badge:RED!"
+   },
+   {
+    "say": "An apple is red. A ball can be red. A heart is red, too!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you find something red around you? Point to it!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Red, red, red! Great job. See you in the lab!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl_green",
+  "animal": "green",
+  "title": "Blue and Yellow Make Green!",
+  "thumb": "MAGIC MIX!",
+  "top": "GREEN",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "What happens when you mix blue paint and yellow paint? Let's find out!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Blue, plus yellow, makes... green!",
+    "act": "zoom+badge:GREEN!"
+   },
+   {
+    "say": "Leaves are green. Frogs are green. Trees are green!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you wiggle like a green frog? Ribbit!",
+    "act": "hop"
+   },
+   {
+    "say": "Blue and yellow make green. See you in the lab!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl_triangle",
+  "animal": "triangle",
+  "title": "How Many Sides Does a Triangle Have?",
+  "thumb": "3 SIDES!",
+  "top": "TRIANGLE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "This shape is like a slice of pizza. How many sides does it have?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a triangle! Let's count the corners. One, two, three!",
+    "act": "fx+badge:3 CORNERS!"
+   },
+   {
+    "say": "A triangle has three sides and three corners.",
+    "act": "zoom"
+   },
+   {
+    "say": "A slice of pizza can look like a triangle!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you make a triangle with your fingers? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl_star",
+  "animal": "star",
+  "title": "Let's Count the Points on a Star!",
+  "thumb": "5 POINTS!",
+  "top": "STAR",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Stars twinkle in the night sky. How many points does this star have?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Let's count! One, two, three, four, five!",
+    "act": "fx+badge:5 POINTS!"
+   },
+   {
+    "say": "This star has five points.",
+    "act": "zoom"
+   },
+   {
+    "say": "Twinkle, twinkle! Stars shine in the sky at night.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you make your hands twinkle like stars? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl_hexagon",
+  "animal": "hexagon",
+  "title": "Bees Build With Hexagons!",
+  "thumb": "6 SIDES!",
+  "top": "HEXAGON",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Bees build their honeycomb with one special shape. Which shape is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a hexagon! A hexagon has six sides.",
+    "act": "zoom+badge:6 SIDES!"
+   },
+   {
+    "say": "Let's count the corners. One, two, three, four, five, six!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Honeycomb is made of lots of little hexagons, all fitting together.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Hexagon! Can you say it? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

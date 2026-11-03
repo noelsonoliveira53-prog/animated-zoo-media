@@ -9,13 +9,15 @@ from channel import C, NAME as CHANNEL
 from art_space import SCENES3, SPACE_TITLE
 from art_dino import SCENES4, DINO_TITLE, NAMES4
 from art_wild import SCENES5, WILD_TITLE, NAMES5
+from art_truck import SCENES6, TRUCK_TITLE, NAMES6
+from art_bloop import SCENES7, BLOOP_TITLE, NAMES7
 from build import tts as _tts, music, pop, chunks, sh, SR
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5}
-ALL["title"] = {"gizmo": SPACE_TITLE.replace("SPACE KIDS ACADEMY", "GIZMO EXPLAINS").replace('fill="#6c4cd6"', 'fill="#3561d9"'), "space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE}.get(CHANNEL, ALL["title"])
+ALL = {**SCENES, **SCENES2, **SCENES3, **SCENES4, **SCENES5, **SCENES6, **SCENES7}
+ALL["title"] = {"gizmo": SPACE_TITLE.replace("SPACE KIDS ACADEMY", "GIZMO EXPLAINS").replace('fill="#6c4cd6"', 'fill="#3561d9"'), "space": SPACE_TITLE, "dino": DINO_TITLE, "wild": WILD_TITLE, "truck": TRUCK_TITLE, "bloop": BLOOP_TITLE}.get(CHANNEL, ALL["title"])
 GAP, SEG_GAP, SPEED, THINK = 0.7, 1.4, 0.85, 2.6
-NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", "seal": "HARBOR SEAL", **NAMES4, **NAMES5}
+NAMES = {"polarbear": "POLAR BEAR", "turtle": "SEA TURTLE", "monkey": "SPIDER MONKEY", "redpanda": "RED PANDA", "seaotter": "SEA OTTER", **NAMES4, **NAMES5, **NAMES6, **NAMES7}
 ORIGIN = {"monkey": "640 430", "owl": "540 500", "sloth": "545 350", "koala": "435 600"}
 
 def tts(text, out):
@@ -251,7 +253,7 @@ window.__timelines["main"] = tl; tl.seek(0);
     open(os.path.join(proj, "index.html"), "w").write(html)
     json.dump({"total": total, "segments": [{k: s[k] for k in ("scene", "t0", "t1")} for s in segs]}, open(os.path.join(out, "timing.json"), "w"), indent=1)
     if norender: return proj, total
-    sh(f'cd "{proj}" && hyperframes render -q standard --crf 24 -o "{out}/silent.mp4"', timeout=7000)
+    sh(f'cd "{proj}" && hyperframes render -f 24 -q standard --crf 24 -o "{out}/silent.mp4"', timeout=7000)
     final = os.path.join(HERE, "out", f"{eid}.mp4")
     sh(f'ffmpeg -y -i "{out}/silent.mp4" -i "{out}/mix.wav" -map 0:v -map 1:a -c:v copy -af loudnorm=I=-16:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 160k -shortest "{final}"', timeout=1200)
     print(final, total)

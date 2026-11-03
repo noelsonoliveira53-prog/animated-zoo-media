@@ -97,5 +97,21 @@ CONFIGS = {
                  kind="🐞 Be gentle!", bye="See you outside, explorers! 🌼", wing=_glass, birds_html=None,
                  root_bg="linear-gradient(180deg,#9fe3ff 0%,#e3f7ff 70%)", brand_color="#2e7d32", repo_prefix="wild/"),
 }
+from art_truck import BOLT
+def _hook(total, even=False):
+    r = int(total / .5)
+    if even: r = r // 2 * 2 - 1
+    return f'tl.to("#wing",{{rotation:10,svgOrigin:"58 96",duration:.5,yoyo:true,repeat:{r},ease:"sine.inOut"}},0);'
+CONFIGS["truck"] = dict(brand="TINY TRUCK TOWN", host=BOLT, voice="am_adam", talk="scale",
+                        kind="🚧 Great job!", bye="See you in Tiny Truck Town! 🚚", wing=_hook, birds_html=None,
+                        root_bg="linear-gradient(180deg,#7fd3ff 0%,#c9f0ff 75%)", brand_color="#173a63", repo_prefix="truck/")
+from art_bloop import BLOOP
+def _bubble(total, even=False):
+    r = int(total / .6)
+    if even: r = r // 2 * 2 - 1
+    return f'tl.to("#wing",{{y:-8,duration:.6,yoyo:true,repeat:{r},ease:"sine.inOut"}},0);'
+CONFIGS["bloop"] = dict(brand="BLOOP'S COLOR LAB", host=BLOOP, voice="bf_isabella", talk="scale",
+                        kind="🌈 Great job!", bye="See you in the lab! 🌈", wing=_bubble, birds_html="<i id=\"birds\"></i>",
+                        root_bg="linear-gradient(180deg,#fff3fb 0%,#e9f6ff 85%)", brand_color="#3d2a7a", repo_prefix="bloop/")
 NAME = os.environ.get("CHANNEL", "zoo")
 C = CONFIGS[NAME]

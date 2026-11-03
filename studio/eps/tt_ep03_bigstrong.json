@@ -1,0 +1,285 @@
+{
+ "id": "tt_ep03_bigstrong",
+ "title": "Big Strong Vehicles for Kids! Trains, Tractors and Cranes",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five big, strong machines that pull, lift and carry.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "train",
+   "lines": [
+    [
+     "Here's our first one. Here's a clue: it rolls on tracks and says choo choo! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Train!",
+     "enter"
+    ],
+    [
+     "A train has an engine at the front.",
+     "zoom"
+    ],
+    [
+     "The engine pulls all the cars along the tracks.",
+     "fx+bob"
+    ],
+    [
+     "Can you chug your arms like train wheels? Choo choo!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many cars a long train can pull?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "More than one hundred cars!",
+     "fx+badge:100+ CARS!"
+    ],
+    [
+     "Let's say it together: TRAIN!",
+     "zoom"
+    ],
+    [
+     "Train wheels roll on two strong metal rails.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Train!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tractor",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it helps farmers in the fields! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Tractor!",
+     "enter"
+    ],
+    [
+     "A tractor pulls big tools that get the soil ready for planting.",
+     "zoom"
+    ],
+    [
+     "Its back wheels are giant!",
+     "fx+bob"
+    ],
+    [
+     "Can you stomp like big tractor wheels? Stomp, stomp!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the wheels are so bumpy?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The bumps grip the ground, so the tractor doesn't slip in the mud.",
+     "fx+badge:GRIPPY WHEELS!"
+    ],
+    [
+     "Let's say it together: TRACTOR!",
+     "zoom"
+    ],
+    [
+     "Tractors help farmers grow the food we eat.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Tractor!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "crane",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a super long arm and a hook! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Crane!",
+     "enter"
+    ],
+    [
+     "A crane lifts things that are way too heavy for people.",
+     "fx+zoom"
+    ],
+    [
+     "Its long arm is called a boom.",
+     "fxoff+fx2+bob"
+    ],
+    [
+     "Can you stretch up tall like a crane boom?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Can some cranes be taller than buildings?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! Tower cranes can stand taller than the buildings they help build.",
+     "fx+badge:SUPER TALL!"
+    ],
+    [
+     "Let's say it together: CRANE!",
+     "zoom"
+    ],
+    [
+     "Cranes lift one piece at a time, slowly and carefully.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Crane!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "dumptruck",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries heavy loads and tips them out! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Dump Truck!",
+     "enter"
+    ],
+    [
+     "Big dump trucks carry heavy loads of rock and dirt.",
+     "fx+zoom"
+    ],
+    [
+     "Strong pushers lift the bed up, called hydraulics.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you lift your arms up slowly, like a dump truck bed?",
+     "wiggle"
+    ],
+    [
+     "Can you guess where the rocks go?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They slide out the back, all in one big pile!",
+     "fx+badge:BIG PILE!"
+    ],
+    [
+     "Let's say it together: DUMP TRUCK!",
+     "zoom"
+    ],
+    [
+     "Some giant dump trucks are bigger than a house!",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Dump Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "firetruck",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it has a ladder that goes way up high! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Fire Truck!",
+     "enter"
+    ],
+    [
+     "Fire trucks carry ladders and long hoses.",
+     "zoom"
+    ],
+    [
+     "They carry enough water to fill lots of bathtubs!",
+     "fx+bob"
+    ],
+    [
+     "Can you spray a pretend hose? Whoosh!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how high a fire truck ladder can reach?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Some can reach as high as a ten-story building!",
+     "fx+badge:SUPER TALL LADDER!"
+    ],
+    [
+     "Let's say it together: FIRE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Firefighters practice a lot so they can help quickly.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Fire Truck!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What big, strong machines! Let's remember.",
+   "@title"
+  ],
+  [
+   "A train can pull more than a hundred cars.",
+   "@train"
+  ],
+  [
+   "Tractors have grippy wheels.",
+   "@tractor"
+  ],
+  [
+   "Tower cranes can be taller than buildings.",
+   "@crane"
+  ],
+  [
+   "Dump trucks make a big pile.",
+   "@dumptruck"
+  ],
+  [
+   "And fire truck ladders reach super high!",
+   "@firetruck"
+  ]
+ ],
+ "outro": [
+  [
+   "Which strong machine was your favorite? Be kind, and wave hello to the trucks you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

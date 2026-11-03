@@ -1,0 +1,285 @@
+{
+ "id": "tt_ep05_carry",
+ "title": "What Do Trucks Carry? 5 Working Trucks with Bolt",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're finding out what five working trucks carry.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "dumptruck",
+   "lines": [
+    [
+     "Here's our first truck. Here's a clue: it carries rocks in its big bed! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Dump Truck!",
+     "enter"
+    ],
+    [
+     "A dump truck carries rocks, sand and dirt.",
+     "fx+zoom"
+    ],
+    [
+     "Its bed tips up to pour it all out.",
+     "fxoff+fx2+bob"
+    ],
+    [
+     "Can you carry a pretend heavy rock? Heave, ho!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what we call the back part of a dump truck?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The bed! Just like a bed, but for rocks.",
+     "fx+badge:THE BED!"
+    ],
+    [
+     "Let's say it together: DUMP TRUCK!",
+     "zoom"
+    ],
+    [
+     "Dump trucks bring rocks to build roads.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Dump Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mixer",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries something wet and gooey! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Cement Mixer!",
+     "enter"
+    ],
+    [
+     "A cement mixer carries wet concrete.",
+     "zoom"
+    ],
+    [
+     "Its drum spins all the way there.",
+     "fx+bob"
+    ],
+    [
+     "Can you stir a pretend bowl? Mix, mix!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what concrete becomes?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sidewalks and roads! It dries hard as rock.",
+     "fx+badge:SIDEWALKS!"
+    ],
+    [
+     "Let's say it together: CEMENT MIXER!",
+     "zoom"
+    ],
+    [
+     "The concrete slides out of a chute at the building spot.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Cement Mixer!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "garbage",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries trash away! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Garbage Truck!",
+     "enter"
+    ],
+    [
+     "A garbage truck carries trash to keep streets clean.",
+     "zoom"
+    ],
+    [
+     "Its robot arm can lift the bin.",
+     "fx+bob"
+    ],
+    [
+     "Can you lift your arms like a robot arm? Beep boop!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how it fits so much trash?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It squishes the trash inside, to make room for more!",
+     "fx+badge:SQUISH!"
+    ],
+    [
+     "Let's say it together: GARBAGE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Recycling trucks carry cans and paper to be made new.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Garbage Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "train",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it carries lots of things in long cars! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Train!",
+     "enter"
+    ],
+    [
+     "Trains carry all kinds of things, like grain, cars and toys.",
+     "fx+zoom"
+    ],
+    [
+     "Some trains carry people, too!",
+     "fxoff+bob"
+    ],
+    [
+     "Can you be a train with your arms? Choo choo!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Can a train carry new cars?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! Some train cars carry brand new cars to the store.",
+     "fx+badge:NEW CARS!"
+    ],
+    [
+     "Let's say it together: TRAIN!",
+     "zoom"
+    ],
+    [
+     "Trains can carry a lot, all at once.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Train!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tractor",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it pulls tools on the farm! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Tractor!",
+     "enter"
+    ],
+    [
+     "A tractor pulls tools that help plant seeds.",
+     "zoom"
+    ],
+    [
+     "It can pull a trailer full of hay, too!",
+     "fx2+bob"
+    ],
+    [
+     "Can you pull a pretend wagon? Pull, pull!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what's in the trailer?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Hay! Hay is food for farm animals like cows and horses.",
+     "fx+badge:HAY!"
+    ],
+    [
+     "Let's say it together: TRACTOR!",
+     "zoom"
+    ],
+    [
+     "Tractors are a farmer's best helper.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Tractor!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great workers! Let's remember.",
+   "@title"
+  ],
+  [
+   "Dump trucks carry rocks.",
+   "@dumptruck"
+  ],
+  [
+   "Cement mixers carry concrete.",
+   "@mixer"
+  ],
+  [
+   "Garbage trucks carry trash.",
+   "@garbage"
+  ],
+  [
+   "Trains carry all kinds of things.",
+   "@train"
+  ],
+  [
+   "And tractors pull hay for farm animals!",
+   "@tractor"
+  ]
+ ],
+ "outro": [
+  [
+   "Which working truck was your favorite? Be kind, and wave hello to the trucks you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

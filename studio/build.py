@@ -10,7 +10,9 @@ from channel import C
 from art_space import SCENES3
 from art_dino import SCENES4
 from art_wild import SCENES5
-SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5)
+from art_truck import SCENES6
+from art_bloop import SCENES7
+SCENES.update(SCENES3); SCENES.update(SCENES4); SCENES.update(SCENES5); SCENES.update(SCENES6); SCENES.update(SCENES7)
 SCENES = {**SCENES, **SCENES2}
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -248,12 +250,12 @@ window.__timelines["main"] = tl; tl.seek(0);
     if os.environ.get('NORENDER'): print(proj, total); return
     # 4. render + mux + loudness
     q = "draft" if draft else "standard"
-    sh(f'cd "{proj}" && hyperframes render -q {q} -o "{out}/silent.mp4"', timeout=1800)
+    sh(f'cd "{proj}" && hyperframes render -f 24 -q {q} -o "{out}/silent.mp4"', timeout=1800)
     final = os.path.join(HERE, "out", f'{ep["id"]}{"_draft" if draft else ""}.mp4')
     sh(f'ffmpeg -y -i "{out}/silent.mp4" -i "{out}/mix.wav" -map 0:v -map 1:a -c:v copy '
        f'-af loudnorm=I=-16:TP=-1.5:LRA=11 -ar 48000 -c:a aac -b:a 192k -shortest "{final}"')
     print(final, total)
 
 if __name__ == "__main__":
-    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json") for e in json.load(open(os.path.join(HERE, f)))}
+    eps = {e["id"]: e for f in ("episodes.json", "shorts2.json", "shorts_space.json", "shorts_dino.json", "shorts_wild.json", "shorts_gizmo.json", "shorts_zoox.json", "shorts_truck.json", "shorts_bloop.json") for e in json.load(open(os.path.join(HERE, f)))}
     build(eps[sys.argv[1]], "--draft" in sys.argv)

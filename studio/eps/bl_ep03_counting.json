@@ -1,0 +1,285 @@
+{
+ "id": "bl_ep03_counting",
+ "title": "Count to 5 for Kids! Counting Fun with Bloop",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're counting from one to five.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "n1",
+   "lines": [
+    [
+     "Here's a clue: it's the very first number! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: One!",
+     "enter"
+    ],
+    [
+     "This is the number one. Here is one apple.",
+     "zoom"
+    ],
+    [
+     "Let's count it: one!",
+     "fx+bob"
+    ],
+    [
+     "Can you hold up one finger?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many noses you have?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "One! You have one nose.",
+     "fx+badge:ONE!"
+    ],
+    [
+     "Let's say it together: ONE!",
+     "zoom"
+    ],
+    [
+     "One is where counting begins.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, One!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "n2",
+   "lines": [
+    [
+     "Here's a clue: it comes after one! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Two!",
+     "enter"
+    ],
+    [
+     "This is the number two. Here are two lemons.",
+     "zoom"
+    ],
+    [
+     "Let's count them: one, two!",
+     "fx+bob"
+    ],
+    [
+     "Can you hold up two fingers?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many eyes you have?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Two! You have two eyes.",
+     "fx+badge:TWO!"
+    ],
+    [
+     "Let's say it together: TWO!",
+     "zoom"
+    ],
+    [
+     "Two is a pair, like two shoes.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Two!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "n3",
+   "lines": [
+    [
+     "Here's a clue: it comes after two! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Three!",
+     "enter"
+    ],
+    [
+     "This is the number three. Here are three green grapes.",
+     "zoom"
+    ],
+    [
+     "Let's count them: one, two, three!",
+     "fx+bob"
+    ],
+    [
+     "Can you clap three times? Clap, clap, clap!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many sides a triangle has?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Three! A triangle has three sides.",
+     "fx+badge:THREE!"
+    ],
+    [
+     "Let's say it together: THREE!",
+     "zoom"
+    ],
+    [
+     "Three is a great number for a jump. One, two, three, jump!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Three!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "n4",
+   "lines": [
+    [
+     "Here's a clue: it comes after three! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Four!",
+     "enter"
+    ],
+    [
+     "This is the number four. Here are four blue berries.",
+     "zoom"
+    ],
+    [
+     "Let's count them: one, two, three, four!",
+     "fx+bob"
+    ],
+    [
+     "Can you stomp four times?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many legs a cat has?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Four! A cat has four legs.",
+     "fx+badge:FOUR!"
+    ],
+    [
+     "Let's say it together: FOUR!",
+     "zoom"
+    ],
+    [
+     "A square has four sides.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Four!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "n5",
+   "lines": [
+    [
+     "Here's a clue: it's how many fingers are on one hand! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Five!",
+     "enter"
+    ],
+    [
+     "This is the number five. Here are five purple plums.",
+     "zoom"
+    ],
+    [
+     "Let's count them: one, two, three, four, five!",
+     "fx+bob"
+    ],
+    [
+     "Can you wiggle all five fingers?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many fingers are on one hand?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Five! Give me a high five!",
+     "fx+badge:FIVE!"
+    ],
+    [
+     "Let's say it together: FIVE!",
+     "zoom"
+    ],
+    [
+     "Five and five make ten fingers in all.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Five!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great counting! Let's remember.",
+   "@title"
+  ],
+  [
+   "One nose.",
+   "@n1"
+  ],
+  [
+   "Two eyes.",
+   "@n2"
+  ],
+  [
+   "Three sides on a triangle.",
+   "@n3"
+  ],
+  [
+   "Four legs on a cat.",
+   "@n4"
+  ],
+  [
+   "And five fingers on one hand!",
+   "@n5"
+  ]
+ ],
+ "outro": [
+  [
+   "Can you count to five all by yourself? Keep looking for colors and shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,285 @@
+{
+ "id": "bl_ep01_colors",
+ "title": "Learn Colors for Kids! Red, Blue, Yellow and More with Bloop",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're meeting five color friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "red",
+   "lines": [
+    [
+     "Here's a clue: it's the color of apples and strawberries! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Red!",
+     "enter"
+    ],
+    [
+     "This is Red! Can you say red?",
+     "zoom"
+    ],
+    [
+     "Apples are red. Hearts are red!",
+     "fx+bob"
+    ],
+    [
+     "Can you point to something red near you?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is red?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A red ball! And a fire truck!",
+     "fx+badge:RED!"
+    ],
+    [
+     "Let's say it together: RED!",
+     "zoom"
+    ],
+    [
+     "Red is a warm, happy color.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Red!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "blue",
+   "lines": [
+    [
+     "Here's a clue: it's the color of the sky and the sea! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Blue!",
+     "enter"
+    ],
+    [
+     "This is Blue! Can you say blue?",
+     "zoom"
+    ],
+    [
+     "Raindrops look blue. A blue ball, a blue car!",
+     "fx+bob"
+    ],
+    [
+     "Can you wave your arms like blue ocean waves?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What color is the sky on a sunny day?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blue! A big blue sky.",
+     "fx+badge:BLUE!"
+    ],
+    [
+     "Let's say it together: BLUE!",
+     "zoom"
+    ],
+    [
+     "Blue is cool and calm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Blue!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "yellow",
+   "lines": [
+    [
+     "Here's a clue: it's the color of the sun! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Yellow!",
+     "enter"
+    ],
+    [
+     "This is Yellow! Can you say yellow?",
+     "zoom"
+    ],
+    [
+     "The sun is yellow. Bananas and ducks are yellow!",
+     "fx+bob"
+    ],
+    [
+     "Can you shine like the sun? Arms up!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What color is a banana?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yellow! A yummy yellow banana.",
+     "fx+badge:YELLOW!"
+    ],
+    [
+     "Let's say it together: YELLOW!",
+     "zoom"
+    ],
+    [
+     "Yellow is bright and sunny.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Yellow!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "green",
+   "lines": [
+    [
+     "Here's a clue: it's the color of grass and leaves! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Green!",
+     "enter"
+    ],
+    [
+     "This is Green! Can you say green?",
+     "zoom"
+    ],
+    [
+     "Frogs, leaves and trees are green!",
+     "fx+bob"
+    ],
+    [
+     "Can you hop like a green frog? Ribbit!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which two colors mix to make green?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blue and yellow! Mix them together, and you get green.",
+     "fx+badge:BLUE + YELLOW!"
+    ],
+    [
+     "Let's say it together: GREEN!",
+     "zoom"
+    ],
+    [
+     "Green is the color of growing plants.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Green!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "orange",
+   "lines": [
+    [
+     "Here's a clue: it's the color of a juicy orange and a carrot! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Orange!",
+     "enter"
+    ],
+    [
+     "This is Orange! Can you say orange?",
+     "zoom"
+    ],
+    [
+     "Carrots and oranges are orange!",
+     "fx+bob"
+    ],
+    [
+     "Can you peel a pretend orange?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Which two colors mix to make orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Red and yellow! Mix them, and you get orange.",
+     "fx+badge:RED + YELLOW!"
+    ],
+    [
+     "Let's say it together: ORANGE!",
+     "zoom"
+    ],
+    [
+     "Orange is warm and cheerful.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Orange!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a colorful lab! Let's remember.",
+   "@title"
+  ],
+  [
+   "Red, like an apple.",
+   "@red"
+  ],
+  [
+   "Blue, like the sky.",
+   "@blue"
+  ],
+  [
+   "Yellow, like the sun.",
+   "@yellow"
+  ],
+  [
+   "Green, like a frog.",
+   "@green"
+  ],
+  [
+   "And orange, like a carrot!",
+   "@orange"
+  ]
+ ],
+ "outro": [
+  [
+   "Which color was your favorite? Keep looking for colors and shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

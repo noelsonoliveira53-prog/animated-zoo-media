@@ -1,0 +1,285 @@
+{
+ "id": "tt_ep04_colors",
+ "title": "Truck Colors for Kids! Learn Colors with Bolt",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're learning colors with five trucks. Look for the color of each one!",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "firetruck",
+   "lines": [
+    [
+     "Here's our first truck. Here's a clue: it's red, red, red! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Fire Truck!",
+     "enter"
+    ],
+    [
+     "This fire truck is red! Can you say red?",
+     "zoom"
+    ],
+    [
+     "It has a shiny ladder and a hose reel.",
+     "fx2+bob"
+    ],
+    [
+     "Can you point to something red near you?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many wheels you can see?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Three wheels on this side! One, two, three.",
+     "fx+badge:3 WHEELS!"
+    ],
+    [
+     "Let's say it together: FIRE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Fire trucks are often red, so people notice them.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Fire Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "schoolbus",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's bright yellow, like the sun! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: School Bus!",
+     "enter"
+    ],
+    [
+     "This school bus is yellow! Can you say yellow?",
+     "zoom"
+    ],
+    [
+     "It has a black stripe down its side.",
+     "fx2+bob"
+    ],
+    [
+     "Can you point to something yellow near you?",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many windows are on its side?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Five windows! One, two, three, four, five.",
+     "fx+badge:5 WINDOWS!"
+    ],
+    [
+     "Let's say it together: SCHOOL BUS!",
+     "zoom"
+    ],
+    [
+     "Yellow is easy to see, even on cloudy days.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, School Bus!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "garbage",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's green, like grass! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Garbage Truck!",
+     "enter"
+    ],
+    [
+     "This garbage truck is green! Can you say green?",
+     "zoom"
+    ],
+    [
+     "Its bin is blue!",
+     "fx2+bob"
+    ],
+    [
+     "Can you point to something green near you?",
+     "wiggle"
+    ],
+    [
+     "Can you guess what color the bin is?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blue! A blue bin on a green truck.",
+     "fx+badge:BLUE BIN!"
+    ],
+    [
+     "Let's say it together: GARBAGE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Garbage trucks help keep our town clean.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Garbage Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "tractor",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's green too, with a yellow wheel! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Tractor!",
+     "enter"
+    ],
+    [
+     "This tractor is green, and its big wheel is yellow in the middle.",
+     "fx+zoom"
+    ],
+    [
+     "Tractors help on the farm.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you make a big circle with your arms, like a giant wheel?",
+     "wiggle"
+    ],
+    [
+     "Can you guess which wheel is bigger, front or back?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The back wheel! It's much bigger than the front one.",
+     "fx+badge:BIG BACK WHEEL!"
+    ],
+    [
+     "Let's say it together: TRACTOR!",
+     "zoom"
+    ],
+    [
+     "Big wheels help tractors roll through muddy fields.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Tractor!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "excavator",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it's yellow and it digs! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Excavator!",
+     "enter"
+    ],
+    [
+     "This excavator is yellow, with gray tracks.",
+     "zoom"
+    ],
+    [
+     "Its bucket is gray, too.",
+     "fx2+bob"
+    ],
+    [
+     "Can you scoop like a bucket? Scoop!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what color its tracks are?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Gray! Gray tracks roll over the dirt.",
+     "fx+badge:GRAY TRACKS!"
+    ],
+    [
+     "Let's say it together: EXCAVATOR!",
+     "zoom"
+    ],
+    [
+     "Lots of construction trucks are yellow, so they are easy to spot.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Excavator!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a colorful day! Let's remember.",
+   "@title"
+  ],
+  [
+   "The fire truck is red.",
+   "@firetruck"
+  ],
+  [
+   "The school bus is yellow.",
+   "@schoolbus"
+  ],
+  [
+   "The garbage truck is green, with a blue bin.",
+   "@garbage"
+  ],
+  [
+   "The tractor has a yellow wheel.",
+   "@tractor"
+  ],
+  [
+   "And the excavator has gray tracks!",
+   "@excavator"
+  ]
+ ],
+ "outro": [
+  [
+   "What's your favorite color? Be kind, and wave hello to the trucks you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

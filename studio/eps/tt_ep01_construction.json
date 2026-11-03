@@ -1,0 +1,285 @@
+{
+ "id": "tt_ep01_construction",
+ "title": "Construction Trucks for Kids! 5 Big Diggers with Bolt",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're visiting the construction site to meet five hard-working trucks.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "excavator",
+   "lines": [
+    [
+     "Here's our first truck. Here's a clue: it has a long arm with a bucket for digging! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Excavator!",
+     "enter"
+    ],
+    [
+     "An excavator digs big holes with its bucket.",
+     "zoom"
+    ],
+    [
+     "It rolls on tracks, so it won't get stuck in mud.",
+     "fx2+bob"
+    ],
+    [
+     "Can you scoop like a digger bucket? Scoop, scoop!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Can an excavator turn all the way around?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! Its cab sits on a turntable, so it can spin all the way around.",
+     "fx+badge:SPINS AROUND!"
+    ],
+    [
+     "Let's say it together: EXCAVATOR!",
+     "zoom"
+    ],
+    [
+     "Excavators help dig the start of new buildings.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Excavator!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bulldozer",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a giant flat blade in front! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Bulldozer!",
+     "enter"
+    ],
+    [
+     "A bulldozer pushes dirt with its big blade.",
+     "fx2+zoom"
+    ],
+    [
+     "Its tracks help it roll over bumpy ground.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you push with your hands like a bulldozer blade? Push!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why bulldozers push dirt around?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "To make the ground flat and smooth, so builders can build!",
+     "fx+badge:FLAT GROUND!"
+    ],
+    [
+     "Let's say it together: BULLDOZER!",
+     "zoom"
+    ],
+    [
+     "Bulldozers are super strong and steady.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Bulldozer!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "dumptruck",
+   "lines": [
+    [
+     "Who's next? Here's a clue: its back tips up to pour out dirt and rocks! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Dump Truck!",
+     "enter"
+    ],
+    [
+     "A dump truck carries dirt, sand and rocks.",
+     "fx+zoom"
+    ],
+    [
+     "It has a big open box in the back called a bed.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you tip your body like a dump truck? Whoosh!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how the rocks get out?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The bed tips up, and everything slides right out!",
+     "fx+badge:TIP AND POUR!"
+    ],
+    [
+     "Let's say it together: DUMP TRUCK!",
+     "zoom"
+    ],
+    [
+     "Dump trucks bring dirt to and from the building site.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Dump Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mixer",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a big spinning drum! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Cement Mixer!",
+     "enter"
+    ],
+    [
+     "A cement mixer carries wet concrete.",
+     "zoom"
+    ],
+    [
+     "The concrete slides out of a chute, like a slide!",
+     "fx2+bob"
+    ],
+    [
+     "Can you spin around like a mixer drum? Round and round!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the drum keeps spinning?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Spinning keeps the concrete mixed, so it doesn't get hard too soon.",
+     "fx+badge:KEEP SPINNING!"
+    ],
+    [
+     "Let's say it together: CEMENT MIXER!",
+     "zoom"
+    ],
+    [
+     "Concrete dries hard to make sidewalks and roads.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Cement Mixer!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "crane",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it lifts heavy things way up high! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Crane!",
+     "enter"
+    ],
+    [
+     "A crane has a very long arm called a boom.",
+     "fx2+zoom"
+    ],
+    [
+     "A strong cable with a hook hangs down from the end.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you stretch your arm up high like a crane?",
+     "wiggle"
+    ],
+    [
+     "Can you guess what a crane lifts?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Heavy things, like big beams for buildings!",
+     "fx+badge:LIFTS BEAMS!"
+    ],
+    [
+     "Let's say it together: CRANE!",
+     "zoom"
+    ],
+    [
+     "Cranes help build tall buildings, one piece at a time.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Crane!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a busy construction site! Let's remember.",
+   "@title"
+  ],
+  [
+   "The excavator can spin all the way around.",
+   "@excavator"
+  ],
+  [
+   "The bulldozer makes the ground flat.",
+   "@bulldozer"
+  ],
+  [
+   "The dump truck tips up to pour.",
+   "@dumptruck"
+  ],
+  [
+   "The cement mixer keeps spinning.",
+   "@mixer"
+  ],
+  [
+   "And the crane lifts heavy beams!",
+   "@crane"
+  ]
+ ],
+ "outro": [
+  [
+   "Which digger was your favorite? Be kind, and wave hello to the trucks you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

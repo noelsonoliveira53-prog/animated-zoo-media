@@ -1,0 +1,285 @@
+{
+ "id": "tt_ep02_helpers",
+ "title": "Helper Trucks for Kids! Fire Truck, Ambulance and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bolt the little tow truck, and welcome to Tiny Truck Town!",
+   ""
+  ],
+  [
+   "Today we're meeting five helper trucks that keep our town happy and safe.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Buckle up. Let's roll!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "firetruck",
+   "lines": [
+    [
+     "Here's our first truck. Here's a clue: it's red and has a tall ladder! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: Fire Truck!",
+     "enter"
+    ],
+    [
+     "A fire truck carries ladders, hoses and lots of water.",
+     "fx2+zoom"
+    ],
+    [
+     "Firefighters ride in it to help keep everyone safe.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you climb a pretend ladder? Up, up, up!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Are all fire trucks red?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Most are red, but some fire trucks are yellow, or even green!",
+     "fx+badge:SOME ARE YELLOW!"
+    ],
+    [
+     "Let's say it together: FIRE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Fire trucks have bright lights so everyone can see them coming.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Fire Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "ambulance",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it takes people to the hospital! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Ambulance!",
+     "enter"
+    ],
+    [
+     "An ambulance carries helpers called paramedics.",
+     "zoom"
+    ],
+    [
+     "It has a bed with wheels inside, called a stretcher.",
+     "bob"
+    ],
+    [
+     "Can you wave to say thank you to the helpers?",
+     "wiggle"
+    ],
+    [
+     "Can you guess why the word on the front looks backward?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "So drivers can read it the right way in their mirror!",
+     "fx+badge:READ IT IN A MIRROR!"
+    ],
+    [
+     "Let's say it together: AMBULANCE!",
+     "zoom"
+    ],
+    [
+     "When you hear a siren, cars move over to let it pass.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Ambulance!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "policecar",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has red and blue lights on top! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Police Car!",
+     "enter"
+    ],
+    [
+     "Police officers drive police cars around the neighborhood.",
+     "zoom"
+    ],
+    [
+     "They help people and keep the neighborhood safe.",
+     "fx2+bob"
+    ],
+    [
+     "Can you flash your hands like twinkly lights? Flash, flash!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what colors the lights flash?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Red and blue! The lights help other cars see it.",
+     "fx+badge:RED AND BLUE!"
+    ],
+    [
+     "Let's say it together: POLICE CAR!",
+     "zoom"
+    ],
+    [
+     "You can always wave hello to a police officer.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Police Car!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "garbage",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it picks up the trash cans every week! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Garbage Truck!",
+     "enter"
+    ],
+    [
+     "A garbage truck takes trash away to keep our streets clean.",
+     "fx2+zoom"
+    ],
+    [
+     "Inside, it squishes the trash, so it can fit lots more.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you squish like a garbage truck? Squish!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how it picks up the bin?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Some garbage trucks have a robot arm that lifts the bin up high!",
+     "fx+badge:ROBOT ARM!"
+    ],
+    [
+     "Let's say it together: GARBAGE TRUCK!",
+     "zoom"
+    ],
+    [
+     "Recycling trucks take cans and paper to be made into new things.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Garbage Truck!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "schoolbus",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it's big and yellow, and takes kids to school! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: School Bus!",
+     "enter"
+    ],
+    [
+     "A school bus has lots of seats for kids.",
+     "fx2+zoom"
+    ],
+    [
+     "It's yellow so everyone can see it easily.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you sit up tall like you're riding the bus?",
+     "wiggle"
+    ],
+    [
+     "Can you guess what swings out when the bus stops?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A little stop sign! It tells cars to wait.",
+     "fx+badge:STOP SIGN!"
+    ],
+    [
+     "Let's say it together: SCHOOL BUS!",
+     "zoom"
+    ],
+    [
+     "Then kids can get on and off safely.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, School Bus!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great helpers! Let's remember.",
+   "@title"
+  ],
+  [
+   "Some fire trucks are yellow.",
+   "@firetruck"
+  ],
+  [
+   "The ambulance word reads right in a mirror.",
+   "@ambulance"
+  ],
+  [
+   "Police car lights flash red and blue.",
+   "@policecar"
+  ],
+  [
+   "The garbage truck has a robot arm.",
+   "@garbage"
+  ],
+  [
+   "And the school bus has a stop sign!",
+   "@schoolbus"
+  ]
+ ],
+ "outro": [
+  [
+   "Which helper truck was your favorite? Be kind, and wave hello to the trucks you see.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in Tiny Truck Town!",
+   ""
+  ]
+ ]
+}

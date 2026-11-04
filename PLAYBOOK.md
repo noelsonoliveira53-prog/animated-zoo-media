@@ -147,3 +147,9 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
 - The only plan to upload from is `studio/upload_plan_episodes.json` (sorted by date). Stock runs through Nov 15.
 - Upload budget: **5 uploads per morning run** (one per channel, the soonest `to_upload` episode for each). Never more. That keeps the account far under YouTube's ~20/24h cap with room for The Animated Zoo.
 - The render queue holds episodes only (`studio/queue.txt`); Shorts generators are retired for these channels.
+
+## Strategy change 2: Blender 3D sing-alongs only (Nov 4, 2026, 10:30 AM)
+- **All 2D production is stopped.** Every unposted 2D episode is `"status": "paused_2d"`; never upload those. Render queue is empty.
+- From now on every video is a **Blender 3D**, informational **sing-along** episode built to go viral. One per channel per day once the pipeline is producing.
+- Rendering happens on Noelson's PC (RTX 4060 Ti) through the ZooBlender render worker. Jobs go into Documents\ZooBlender\jobs and finished videos land in Documents\ZooBlender\out.
+- Only upload from `studio/upload_plan_3d.json`. Until it has `to_upload` entries, the morning run uploads nothing and only checks analytics.

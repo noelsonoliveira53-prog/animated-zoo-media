@@ -46,8 +46,9 @@
   "description": "Learn Colors for Kids! Red, Blue, Yellow and More with Bloop: a 5-minute colors, shapes and counting video for toddlers and preschoolers ages 1–5. Meet the Red, Blue, Yellow, Green and Orange.\nLearn with Bloop the jelly blob: guess-what clues, move-along fun and a recap at the end.\n\nWhat we learn today:\n• Red, like an apple.\n• Blue, like the sky.\n• Yellow, like the sun.\n• Green, like a frog.\n• And orange, like a carrot!\n\nBloop's Color Lab makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 1-5. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n#ColorsForKids #ShapesForKids #KidsLearning",
   "date": "2026-11-04",
   "time": "1:50 PM",
-  "status": "to_upload",
-  "thumb": "brand/bloop/thumb_bl_ep01_colors.png"
+  "status": "scheduled",
+  "thumb": "brand/bloop/thumb_bl_ep01_colors.png",
+  "url": "https://youtu.be/1BMFZaKyIcg"
  },
  {
   "file": "bloop/bl_ep02_shapes.mp4",

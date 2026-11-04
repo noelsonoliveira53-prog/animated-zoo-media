@@ -79,13 +79,19 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
    Other channels: Studio only opens the channel that is active in the channel switcher. Switch with
    youtube.com/channel_switcher (click the channel's ytd-account-item-renderer), and switch back to
    The Animated Zoo when done, or the nightly task's Zoo URLs show "Oops".
+   Nov 4 run (hidden pane, 800x892 emulated): after the 3 Nexts, really click the Schedule header (540, 583); if the calendar
+   doesn't open, click the date box (150, 496). Then by script focus+select the calendar's date input (value contains the year),
+   type "Nov 7, 2026" + Enter; focus+select the time input by script, type + Enter; read back; real-click Schedule (731, 808).
+   Do NOT use studio-upload.js `fill()` for scheduled posts: it clicks PUBLIC and publishes immediately.
 5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
 
 ## Animal library
 Drawn: giraffe, penguin, elephant, lion, zebra, hippo, monkey, flamingo, kangaroo, octopus,
-sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter, gorilla, rhino, harbor seal.
-Next to draw: tiger (gentle), camel, peacock, armadillo, toucan, chameleon, bison, ostrich.
-Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies, ep05 baby animals.
+sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter, gorilla, rhino, harbor seal, camel, ostrich.
+Fact-highlight variants (Shorts): `gorillanose` (ring on nose), `rhinoears` (sound waves at ears).
+Next to draw: tiger (gentle), peacock, armadillo, toucan, chameleon, bison.
+Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies, ep05 baby animals, ep06 sunny desert (camel, meerkat, ostrich, kangaroo, lion).
+Shorts made: panda, kangaroo, sloth, zebra, hippo, lion, flamingo, polar bear, turtle, octopus, monkey, koala, red panda, owl, meerkat, sea otter, camel, gorilla, ostrich, rhino.
 Note: the seal pup (`#fx` in SEAL) sits partly past x 1080, so it suits episodes; reposition it before using it in a Short. SLOTH now also has a baby sloth in `#fx2`.
 
 ## Schedule so far

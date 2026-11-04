@@ -42,9 +42,13 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
     # title card for the first 3.2 s: pops in, then floats away
     ev.append(f"Dialogue: 1,{ts(0.25)},{ts(3.4)},Title,,0,0,0,,{{\\fad(150,350)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}}{title}")
     words = timing["words"]
+    starts = sorted(l["start"] for l in timing["lines"])
+    def until(ln, pad):   # a line clears the moment the next one starts (no stacked lyrics)
+        nxt = [x for x in starts if x > ln["start"] + 0.01]
+        return min(ln["end"] + pad, nxt[0] - 0.35) if nxt else ln["end"] + pad
     for ln in timing["lines"]:
         if ln.get("kind") == "speak":
-            ev.append(f"Dialogue: 0,{ts(ln['start'])},{ts(ln['end'] + 0.4)},Speak,,0,0,0,,{{\\fad(120,160)}}{ln['text']}")
+            ev.append(f"Dialogue: 0,{ts(ln['start'])},{ts(until(ln, 0.4))},Speak,,0,0,0,,{{\\fad(120,160)}}{ln['text']}")
             continue
         ws = [w for w in words if ln["start"] - 0.01 <= w["start"] < ln["end"]]
         if not ws: continue
@@ -56,7 +60,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
             d = max(0.05, w["end"] - w["start"])
             parts.append(f"{{\\kf{int(d * 100)}}}{w['w']} ")
             cur = w["start"] + d
-        ev.append(f"Dialogue: 0,{ts(t0)},{ts(ln['end'] + 0.25)},Lyric,,0,0,0,,{{\\fad(100,120)}}{''.join(parts).strip()}")
+        ev.append(f"Dialogue: 0,{ts(t0)},{ts(until(ln, 0.25))},Lyric,,0,0,0,,{{\\fad(100,120)}}{''.join(parts).strip()}")
     return head + "\n".join(ev) + "\n"
 
 def main():
@@ -71,7 +75,7 @@ def main():
     open(sub, "w").write(ass(timing, ch, meta.get("card", meta["title"].split("|")[0].strip())))
     out = os.path.join(work, jid + ".mp4")
     vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "4M", "-bufsize", "8M",
                     "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
     # thumbnail: the thumb frame + big words
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
@@ -101,7 +105,7 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
     rel = f"{folder}/{jid}.mp4" if folder != "." else f"{jid}.mp4"
     date = arg("--date")
     if not date:   # next free day for this channel, starting tomorrow
-        taken = {p["date"] for p in plan if p["file"].startswith(folder + "/") and p.get("status") != "dropped"}
+        taken = {p["date"] for p in plan if p["file"].startswith(folder + "/") and p["file"] != rel and p.get("status") != "dropped"}
         d = datetime.date.today() + datetime.timedelta(days=1)
         while d.isoformat() in taken: d += datetime.timedelta(days=1)
         date = d.isoformat()

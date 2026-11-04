@@ -46,8 +46,9 @@
   "description": "Learn 5 Fruits for Kids! Apple, Banana and More with Pip: a 5-minute fruits, vegetables and healthy habits video for toddlers and preschoolers ages 2–6. Meet the Apple, Banana, Orange, Watermelon and Blueberries.\nLearn with Pip the strawberry and Kiko the broccoli: guess-what clues, move-along fun and a recap at the end.\n\nWhat we learn today:\n• Apple, crunchy and sweet.\n• Banana, peel it down.\n• Orange, juicy slices.\n• Watermelon, pink inside.\n• And blueberries, tiny and blue!\n\nFruity Friends makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n#HealthyHabits #FruitsForKids #VegetablesForKids #KidsLearning",
   "date": "2026-11-04",
   "time": "2:20 PM",
-  "status": "to_upload",
-  "thumb": "brand/fruity/thumb_fr_ep01_fruits.png"
+  "status": "scheduled",
+  "thumb": "brand/fruity/thumb_fr_ep01_fruits.png",
+  "url": "https://youtu.be/GYAV2FLdMX8"
  },
  {
   "file": "fruity/fr_ep02_veggies.mp4",

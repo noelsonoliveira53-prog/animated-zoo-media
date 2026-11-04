@@ -1,0 +1,89 @@
+{
+ "title": "Sunny Desert Friends!",
+ "id": "ep06_desert",
+ "intro": [
+  ["Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!", ""],
+  ["Today we're visiting animals that live in hot, sunny, dry places!", ""],
+  ["Can you count five animals with me? One, two, three, four, five!", ""],
+  ["Are you ready? Let's fly!", ""]
+ ],
+ "animals": [
+  {"key": "camel", "lines": [
+   ["Here's our first animal. Here's a clue: it has a big hump on its back! Can you guess?", "q"],
+   ["Let's walk over to the camels!", "enter"],
+   ["Camels can go a long, long time without food or water.", "zoom"],
+   ["Camels can walk for miles every day, and they can run as fast as a horse!", "bob"],
+   ["Can you walk tall and slow like a camel? Step, step!", "wiggle"],
+   ["Can you guess how many humps this camel has?", "q"],
+   ["One hump! A camel with one hump is called a dromedary.", "badge:ONE HUMP!+fx"],
+   ["Let's say it together: CAMEL!", "zoom"],
+   ["Bactrian camels are different. They have two humps!", "bob+fxoff"],
+   ["And camels have a bony bump over each eye, like a built-in sun hat.", "fx2"],
+   ["Bye-bye, camels!", "bob+fx2off"]
+  ]},
+  {"key": "meerkat", "lines": [
+   ["Who's next? Here's a clue: it's small, it stands up tall, and it loves to dig! Can you guess?", "q"],
+   ["Let's scurry over to the meerkats!", "enter"],
+   ["Meerkats live together in big family groups.", "zoom"],
+   ["They dig lots of little tunnels in the ground, so they always have a place to hide.", "bob"],
+   ["Can you stand up tall like a meerkat? Up on your tiptoes!", "hop"],
+   ["Can you guess what one meerkat does while the others look for food?", "q"],
+   ["It stands guard! One meerkat climbs up high and watches out for the family.", "badge:LOOKOUT!+zoom"],
+   ["Let's say it together: MEERKAT!", "zoom"],
+   ["The lookout makes a soft little call every few seconds. That means everything is okay!", "bob"],
+   ["Meerkats take turns being the lookout. Good teamwork!", "zoom"],
+   ["Bye-bye, meerkats!", "bob"]
+  ]},
+  {"key": "ostrich", "lines": [
+   ["Who's next? Here's a clue: it's a bird with long legs and a long neck, but it can't fly! Can you guess?", "q"],
+   ["Let's run over to the ostriches!", "enter"],
+   ["Ostriches take really big steps. One step can be more than ten feet long. That is longer than a big bed!", "fx"],
+   ["Can you take one giant step like an ostrich? Big step!", "wiggle+fxoff"],
+   ["Ostriches have just two toes on each foot.", "bob"],
+   ["Can you guess? Do ostriches really hide their heads in the sand?", "q"],
+   ["No! That's just a silly story. Ostriches put their heads down to check on their eggs in the nest.", "badge:NOT TRUE!+fx2"],
+   ["Let's say it together: OSTRICH!", "zoom"],
+   ["Ostrich moms and dads take turns keeping the eggs warm.", "bob"],
+   ["What a good team!", "zoom+fx2off"],
+   ["Bye-bye, ostriches!", "bob"]
+  ]},
+  {"key": "kangaroo", "lines": [
+   ["Who's next? Here's a clue: it hops, hops, hops! Can you guess?", "q"],
+   ["Let's hop over to the kangaroos!", "enter"],
+   ["Red kangaroos live in hot, dry parts of Australia.", "zoom"],
+   ["A baby kangaroo is called a joey. It grows up in its mom's pouch.", "fx"],
+   ["Can you hop like a kangaroo? Hop, hop, hop!", "hop+fxoff"],
+   ["Can you guess what a red kangaroo does to cool off on a hot day?", "q"],
+   ["It licks its arms! When the wet fur dries, it helps the kangaroo cool down.", "badge:LICKS ITS ARMS!+zoom"],
+   ["Let's say it together: KANGAROO!", "zoom"],
+   ["You cool down a little bit like that too, when you sweat.", "bob"],
+   ["Kangaroos are smart about staying cool!", "zoom"],
+   ["Bye-bye, kangaroos!", "bob"]
+  ]},
+  {"key": "lion", "lines": [
+   ["Our last animal has a big fluffy mane! Can you guess?", "q"],
+   ["Let's tiptoe over to the lions!", "enter"],
+   ["A boy lion's mane gets thicker and darker as he grows older.", "zoom"],
+   ["Some lions that live in very hot, dry places have hardly any mane at all.", "bob"],
+   ["Can you shake your head like a lion with a big mane? Shake, shake!", "wiggle"],
+   ["Can you guess what's special about a lion's tail?", "q"],
+   ["It has a fluffy tuft at the tip! Lions are the only cats with a tail tuft.", "badge:TAIL TUFT!+zoom"],
+   ["Let's say it together: LION!", "zoom"],
+   ["Lions are also the only cats that live together in big family groups.", "bob"],
+   ["Scientists think lions may wave their tail tufts to send signals to each other.", "zoom"],
+   ["Bye-bye, lions!", "bob"]
+  ]}
+ ],
+ "recap": [
+  ["What a sunny adventure! Let's remember.", "@title"],
+  ["Some camels have one hump, and some have two.", "@camel"],
+  ["Meerkats take turns being the lookout.", "@meerkat"],
+  ["Ostriches don't hide their heads in the sand.", "@ostrich"],
+  ["Red kangaroos lick their arms to cool off.", "@kangaroo"],
+  ["And lions have a fluffy tuft on their tails!", "@lion"]
+ ],
+ "outro": [
+  ["Which desert animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.", ""],
+  ["Bye, friends! See you at the zoo!", ""]
+ ]
+}

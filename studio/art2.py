@@ -289,7 +289,16 @@ SLOTH = svg(forest_env() + """
     <ellipse cx="775" cy="560" rx="10" ry="7" fill="#4e342e"/>
     <path d="M758 575 q17 12 34 0" stroke="#4e342e" stroke-width="5" fill="none" stroke-linecap="round"/>
   </g>
-  <g id="fx" opacity="0" fill="#66bb6a">""" + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((430,480,16),(500,520,12),(560,470,18),(620,515,14),(680,490,11),(470,540,10),(590,540,12),(735,500,9))) + """</g>""")
+  <g id="fx" opacity="0" fill="#66bb6a">""" + ''.join(f'<circle cx="{x}" cy="{y}" r="{r}"/>' for x, y, r in ((430,480,16),(500,520,12),(560,470,18),(620,515,14),(680,490,11),(470,540,10),(590,540,12),(735,500,9))) + """</g>
+  <g id="fx2" opacity="0">
+    <g stroke="#bcaaa4" stroke-width="16" stroke-linecap="round" fill="none"><path d="M520 610 L500 570"/><path d="M600 612 L615 572"/></g>
+    <ellipse cx="560" cy="618" rx="72" ry="36" fill="#bcaaa4" stroke="#2b2540" stroke-width="4"/>
+    <circle cx="645" cy="625" r="32" fill="#bcaaa4" stroke="#2b2540" stroke-width="4"/>
+    <ellipse cx="650" cy="630" rx="24" ry="19" fill="#efebe9"/>
+    <path d="M633 624 q7 -6 15 1 M656 624 q7 -6 14 0" stroke="#4e342e" stroke-width="7" stroke-linecap="round" fill="none"/>
+    <circle cx="641" cy="625" r="4" fill="#1a1a2e"/><circle cx="663" cy="625" r="4" fill="#1a1a2e"/>
+    <path d="M643 641 q8 6 16 0" stroke="#4e342e" stroke-width="3" fill="none" stroke-linecap="round"/>
+  </g>""")
 
 def surface_env():
     return SKY_EXTRAS + """
@@ -390,7 +399,194 @@ TITLE = svg(SKY_EXTRAS + ground() + """
   <g fill="#ff5c8a"><circle cx="160" cy="300" r="40"/><circle cx="920" cy="300" r="40"/></g><g fill="#ffca28"><circle cx="110" cy="360" r="34"/><circle cx="970" cy="360" r="34"/></g>
   <g stroke="#999" stroke-width="3"><line x1="160" y1="340" x2="270" y2="430"/><line x1="920" y1="340" x2="810" y2="430"/><line x1="110" y1="394" x2="270" y2="440"/><line x1="970" y1="394" x2="810" y2="440"/></g>""")
 
+# --- Nov 2026: gorilla, rhino, harbor seal (ep05 Baby Animals) ---
+def _gorilla(x, y, s=1.0):
+    """Gorilla in local units, feet at (0,0) before translate. Used big for mom, small for the baby."""
+    return f"""<g transform="translate({x} {y}) scale({s})">
+      <ellipse cx="-120" cy="-30" rx="80" ry="40" fill="#2b2b33"/><ellipse cx="120" cy="-30" rx="80" ry="40" fill="#2b2b33"/>
+      <ellipse cx="0" cy="-260" rx="230" ry="230" fill="#3a3a44"/>
+      <ellipse cx="0" cy="-220" rx="140" ry="150" fill="#55555f"/>
+      <path d="M-200 -380 Q-300 -220 -250 -40" stroke="#1f1f26" stroke-width="122" fill="none" stroke-linecap="round"/>
+      <path d="M200 -380 Q300 -220 250 -40" stroke="#1f1f26" stroke-width="122" fill="none" stroke-linecap="round"/>
+      <path d="M-200 -380 Q-300 -220 -250 -40" stroke="#44444f" stroke-width="104" fill="none" stroke-linecap="round"/>
+      <path d="M200 -380 Q300 -220 250 -40" stroke="#44444f" stroke-width="104" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-250" cy="-25" rx="70" ry="36" fill="#2b2b33"/><ellipse cx="250" cy="-25" rx="70" ry="36" fill="#2b2b33"/>
+      <circle cx="-120" cy="-590" r="42" fill="#3a3a44"/><circle cx="120" cy="-590" r="42" fill="#3a3a44"/>
+      <circle cx="-120" cy="-590" r="22" fill="#6b5a55"/><circle cx="120" cy="-590" r="22" fill="#6b5a55"/>
+      <ellipse cx="0" cy="-610" rx="140" ry="150" fill="#3a3a44"/>
+      <ellipse cx="0" cy="-700" rx="95" ry="60" fill="#3a3a44"/>
+      <path d="M-100 -620 Q-60 -560 0 -570 Q60 -560 100 -620 Q120 -500 70 -470 Q0 -440 -70 -470 Q-120 -500 -100 -620Z" fill="#8a7468"/>
+      <ellipse cx="0" cy="-660" rx="105" ry="38" fill="#8a7468"/>
+      <path d="M-95 -690 Q0 -720 95 -690" stroke="#2b2b33" stroke-width="16" fill="none" stroke-linecap="round"/>
+      <circle cx="-48" cy="-655" r="17" fill="#1a1a2e"/><circle cx="48" cy="-655" r="17" fill="#1a1a2e"/>
+      <circle cx="-42" cy="-661" r="6" fill="#fff"/><circle cx="54" cy="-661" r="6" fill="#fff"/>
+      <ellipse cx="-22" cy="-575" rx="14" ry="10" fill="#4a3b35"/><ellipse cx="22" cy="-575" rx="14" ry="10" fill="#4a3b35"/>
+      <path d="M-40 -515 q40 28 80 0" stroke="#4a3b35" stroke-width="8" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-92" cy="-560" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/><ellipse cx="92" cy="-560" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/>
+    </g>"""
+
+GORILLA = svg(forest_env() + """
+  <g fill="#66bb6a"><ellipse cx="900" cy="960" rx="150" ry="50"/><ellipse cx="180" cy="965" rx="120" ry="40"/></g>
+  <g id="animal">""" + _gorilla(540, 1000, 1.0) + """
+  </g>
+  <g id="fx" opacity="0">""" + _gorilla(770, 640, .32) + """
+    <path d="M700 520 q-40 40 -20 90" stroke="#3a3a44" stroke-width="28" fill="none" stroke-linecap="round"/>
+  </g>""")
+
+RHINO = svg(sand_env() + """
+  <g id="animal">
+    <path d="M250 700 Q215 740 225 800" stroke="#8e9499" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <ellipse cx="225" cy="808" rx="10" ry="18" fill="#5f666b"/>
+    <g fill="#8e9499">""" + ''.join(f'<rect x="{x}" y="790" width="82" height="205" rx="30"/>' for x in (300,390,580,670)) + """</g>
+    <g fill="#6f777c">""" + ''.join(f'<ellipse cx="{x+41}" cy="990" rx="48" ry="16"/>' for x in (300,390,580,670)) + """</g>
+    <ellipse cx="500" cy="720" rx="270" ry="160" fill="#a3a9ad"/>
+    <path d="M330 640 q40 -30 80 0 M560 610 q40 -30 80 0" stroke="#8e9499" stroke-width="10" fill="none" stroke-linecap="round"/>
+    <ellipse cx="760" cy="690" rx="150" ry="115" fill="#a3a9ad"/>
+    <ellipse cx="880" cy="740" rx="110" ry="80" fill="#b5bbbe"/>
+    <path id="horn" d="M900 680 Q950 560 925 470 Q895 560 850 670Z" fill="#e8dcc4"/>
+    <path d="M820 640 Q845 590 835 550 Q815 590 795 640Z" fill="#e8dcc4"/>
+    <polygon points="680,600 700,520 735,590" fill="#a3a9ad"/><polygon points="760,585 790,510 810,585" fill="#a3a9ad"/>
+    <polygon points="692,592 703,548 722,588" fill="#e3a3a8"/><polygon points="772,580 789,538 800,580" fill="#e3a3a8"/>
+    <circle cx="760" cy="660" r="13" fill="#1a1a2e"/><circle cx="765" cy="655" r="5" fill="#fff"/>
+    <ellipse cx="935" cy="745" rx="9" ry="13" fill="#5f666b"/>
+    <path d="M860 790 q45 22 90 0" stroke="#5f666b" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="790" cy="720" rx="20" ry="11" fill="#ff9ab0" opacity=".55"/>
+  </g>
+  <g id="fx" opacity="0">
+    <path d="M900 680 Q950 560 925 470 Q895 560 850 670Z" fill="none" stroke="#ffca28" stroke-width="14" stroke-linejoin="round"/>
+    <g fill="#ffca28"><circle cx="985" cy="500" r="12"/><circle cx="870" cy="470" r="9"/><circle cx="990" cy="600" r="8"/></g>
+  </g>
+  <g id="fx2" opacity="0">
+    <g transform="translate(-110 582) scale(.42)">
+      <g fill="#a9b0b4">""" + ''.join(f'<rect x="{x}" y="790" width="82" height="205" rx="30"/>' for x in (300,390,580,670)) + """</g>
+      <ellipse cx="500" cy="720" rx="270" ry="160" fill="#b9bfc2"/><ellipse cx="760" cy="690" rx="150" ry="115" fill="#b9bfc2"/>
+      <ellipse cx="880" cy="740" rx="110" ry="80" fill="#c8cdd0"/>
+      <path d="M890 680 Q910 640 900 610 Q880 640 860 675Z" fill="#efe6d4"/>
+      <polygon points="680,600 700,520 735,590" fill="#b9bfc2"/><polygon points="760,585 790,510 810,585" fill="#b9bfc2"/>
+      <circle cx="760" cy="660" r="16" fill="#1a1a2e"/><circle cx="766" cy="654" r="6" fill="#fff"/>
+      <path d="M860 790 q45 22 90 0" stroke="#5f666b" stroke-width="8" fill="none" stroke-linecap="round"/>
+    </g>
+  </g>""")
+
+def shore_env():
+    return SKY_EXTRAS + """
+  <rect x="-500" y="700" width="2200" height="450" fill="#29b6f6"/>
+  <rect x="-500" y="860" width="2200" height="300" fill="#0288d1" opacity=".5"/>
+  <path d="M-500 710 q60 -22 120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0 t120 0" stroke="#e1f5fe" stroke-width="10" fill="none"/>
+  <path d="M120 1000 Q160 820 330 800 Q520 770 700 800 Q880 820 960 1000 Z" fill="#8d8a86"/>
+  <path d="M170 980 Q210 850 340 830 Q520 805 690 830 Q850 850 910 980 Z" fill="#a8a5a0"/>
+  <rect x="-500" y="990" width="2200" height="120" fill="#0288d1"/>
+  <g fill="#ffffff" opacity=".35"><ellipse cx="-200" cy="780" rx="60" ry="8"/><ellipse cx="1150" cy="820" rx="80" ry="9"/></g>"""
+
+def _seal(x, y, s=1.0, body="#9aa7b0", belly="#c7d0d6", spots="#6f7d87"):
+    return f"""<g transform="translate({x} {y}) scale({s})">
+      <path d="M-300 -20 Q-380 -30 -420 -90 M-300 -20 Q-390 10 -440 -10" stroke="{spots}" stroke-width="40" fill="none" stroke-linecap="round"/>
+      <ellipse cx="-60" cy="-70" rx="270" ry="85" fill="{body}"/>
+      <ellipse cx="-40" cy="-40" rx="220" ry="45" fill="{belly}"/>
+      <g fill="{spots}" opacity=".7"><circle cx="-180" cy="-110" r="12"/><circle cx="-110" cy="-125" r="9"/><circle cx="-40" cy="-115" r="11"/><circle cx="-230" cy="-80" r="8"/><circle cx="40" cy="-120" r="8"/></g>
+      <ellipse cx="200" cy="-150" rx="115" ry="105" fill="{body}"/>
+      <ellipse cx="270" cy="-120" rx="60" ry="45" fill="{belly}"/>
+      <ellipse cx="300" cy="-140" rx="15" ry="11" fill="#2b2b33"/>
+      <g stroke="#ffffff" stroke-width="4" opacity=".9"><line x1="280" y1="-112" x2="340" y2="-125"/><line x1="280" y1="-104" x2="342" y2="-100"/><line x1="240" y1="-112" x2="188" y2="-125"/><line x1="240" y1="-104" x2="186" y2="-98"/></g>
+      <path d="M265 -98 q18 12 36 0" stroke="#2b2b33" stroke-width="5" fill="none" stroke-linecap="round"/>
+      <circle cx="185" cy="-180" r="18" fill="#1a1a2e"/><circle cx="265" cy="-185" r="18" fill="#1a1a2e"/>
+      <circle cx="191" cy="-187" r="6" fill="#fff"/><circle cx="271" cy="-192" r="6" fill="#fff"/>
+      <ellipse cx="160" cy="-130" rx="18" ry="10" fill="#ff9ab0" opacity=".55"/>
+      <path d="M60 -40 Q110 0 70 30" stroke="{spots}" stroke-width="34" fill="none" stroke-linecap="round"/>
+    </g>"""
+
+SEAL = svg(shore_env() + """
+  <g id="animal">""" + _seal(560, 860, 1.0) + """
+  </g>
+  <g id="fx" opacity="0">""" + _seal(1050, 930, .42, body="#d9dfe3", belly="#f1f4f6", spots="#aab5bc") + """
+    <g fill="none" stroke="#e1f5fe" stroke-width="5"><circle cx="1190" cy="830" r="12"/><circle cx="1215" cy="790" r="8"/></g>
+  </g>""")
+
 SCENES2 = {"lion": LION, "zebra": ZEBRA, "hippo": HIPPO, "monkey": MONKEY, "flamingo": FLAMINGO,
            "kangaroo": KANGAROO, "octopus": OCTOPUS, "turtle": TURTLE, "polarbear": POLARBEAR,
            "owl": OWL, "panda": PANDA, "koala": KOALA, "sloth": SLOTH, "title": TITLE,
-           "redpanda": REDPANDA, "meerkat": MEERKAT, "seaotter": SEAOTTER}
+           "redpanda": REDPANDA, "meerkat": MEERKAT, "seaotter": SEAOTTER,
+           "gorilla": GORILLA, "rhino": RHINO, "seal": SEAL}
+
+# --- Nov 4 2026: camel (dromedary), ostrich, plus fact-highlight variants for gorilla and rhino ---
+def desert_env():
+    return SKY_EXTRAS + ground("#f0cf86", "#dcb468") + """
+  <path d="M-500 940 Q-300 860 -60 930 L-60 960 L-500 960Z" fill="#e6bf72"/>
+  <path d="M1080 945 Q1300 850 1600 930 L1600 960 L1080 960Z" fill="#e6bf72"/>
+  <g fill="#7cb342"><rect x="-260" y="760" width="40" height="200" rx="20"/><rect x="-300" y="810" width="30" height="80" rx="15"/><rect x="-210" y="790" width="30" height="70" rx="15"/>
+  <rect x="1260" y="780" width="36" height="180" rx="18"/><rect x="1225" y="820" width="28" height="70" rx="14"/></g>"""
+
+CAMEL = svg(desert_env() + """
+  <g id="animal">
+    <path d="M285 640 Q250 700 262 780" stroke="#b9823f" stroke-width="14" fill="none" stroke-linecap="round"/>
+    <ellipse cx="262" cy="790" rx="12" ry="22" fill="#8a5a2b"/>
+    <g fill="#c99450">""" + ''.join(f'<rect x="{x}" y="660" width="52" height="320" rx="24"/>' for x in (330, 400, 590, 660)) + """</g>
+    <g fill="#b9823f">""" + ''.join(f'<ellipse cx="{x+26}" cy="830" rx="30" ry="22"/>' for x in (330, 400, 590, 660)) + """</g>
+    <g fill="#a8733a">""" + ''.join(f'<ellipse cx="{x+26}" cy="988" rx="48" ry="16"/>' for x in (330, 400, 590, 660)) + """</g>
+    <path d="M310 650 Q330 360 500 360 Q640 365 690 640 Z" fill="#d9a35b"/>
+    <ellipse cx="500" cy="660" rx="225" ry="100" fill="#d9a35b"/>
+    <path d="M420 430 q70 -40 140 0" stroke="#e8bd7c" stroke-width="16" fill="none" stroke-linecap="round"/>
+    <path d="M640 640 Q770 660 800 470" stroke="#d9a35b" stroke-width="96" fill="none" stroke-linecap="round"/>
+    <path d="M700 650 Q770 640 790 520" stroke="#e8bd7c" stroke-width="30" fill="none" stroke-linecap="round"/>
+    <ellipse cx="790" cy="378" rx="18" ry="30" fill="#c99450" transform="rotate(-25 790 378)"/>
+    <ellipse cx="850" cy="430" rx="100" ry="62" fill="#d9a35b" transform="rotate(10 850 430)"/>
+    <ellipse cx="925" cy="458" rx="58" ry="44" fill="#e8bd7c"/>
+    <path d="M800 392 Q835 372 870 392" stroke="#b9823f" stroke-width="12" fill="none" stroke-linecap="round"/>
+    <circle cx="836" cy="412" r="13" fill="#1a1a2e"/><circle cx="841" cy="407" r="5" fill="#fff"/>
+    <g stroke="#3e2723" stroke-width="5" stroke-linecap="round"><path d="M823 402 l-8 -12"/><path d="M834 399 l-2 -14"/><path d="M846 400 l5 -13"/></g>
+    <path d="M950 440 q8 8 2 18" stroke="#6d4c2f" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M905 482 q25 14 50 0" stroke="#6d4c2f" stroke-width="7" fill="none" stroke-linecap="round"/>
+    <ellipse cx="868" cy="455" rx="17" ry="10" fill="#ff9ab0" opacity=".55"/>
+  </g>
+  <g id="fx" opacity="0">
+    <path d="M310 650 Q330 360 500 360 Q640 365 690 640" fill="none" stroke="#ffca28" stroke-width="14" stroke-linecap="round"/>
+    <g fill="#ffca28"><circle cx="330" cy="400" r="12"/><circle cx="500" cy="310" r="14"/><circle cx="680" cy="420" r="10"/><circle cx="420" cy="330" r="8"/></g>
+  </g>
+  <g id="fx2" opacity="0">
+    <circle cx="960" cy="230" r="46" fill="#ffd54f"/>
+    <g stroke="#ffd54f" stroke-width="9" stroke-linecap="round"><path d="M960 160 v-28"/><path d="M1030 230 h28"/><path d="M1010 180 l20 -20"/><path d="M910 180 l-20 -20"/></g>
+    <path d="M795 392 Q835 362 878 392" stroke="#ffca28" stroke-width="10" fill="none" stroke-linecap="round"/>
+  </g>""")
+
+OSTRICH = svg(desert_env() + """
+  <g id="animal">
+    <g stroke="#e9a28c" stroke-width="34" fill="none" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M470 640 L440 800 L470 975"/><path d="M590 640 L620 800 L590 975"/></g>
+    <g fill="#d98b75"><circle cx="440" cy="800" r="24"/><circle cx="620" cy="800" r="24"/></g>
+    <g fill="#d98b75"><ellipse cx="500" cy="988" rx="48" ry="15"/><ellipse cx="452" cy="990" rx="22" ry="12"/>
+      <ellipse cx="620" cy="988" rx="48" ry="15"/><ellipse cx="572" cy="990" rx="22" ry="12"/></g>
+    <g fill="#f5f5f5"><circle cx="300" cy="520" r="45"/><circle cx="285" cy="580" r="40"/><circle cx="320" cy="470" r="34"/></g>
+    <ellipse cx="520" cy="560" rx="215" ry="135" fill="#2b2b33"/>
+    <path d="M360 520 Q480 470 600 540 Q500 640 360 600Z" fill="#3a3a44"/>
+    <g fill="#f5f5f5"><ellipse cx="370" cy="600" rx="40" ry="26"/><ellipse cx="410" cy="625" rx="34" ry="22"/></g>
+    <path d="M660 500 Q700 330 700 200" stroke="#eab3a0" stroke-width="50" fill="none" stroke-linecap="round"/>
+    <ellipse cx="672" cy="505" rx="34" ry="22" fill="#2b2b33"/>
+    <circle cx="715" cy="170" r="62" fill="#eab3a0"/>
+    <g stroke="#8d8d96" stroke-width="7" stroke-linecap="round"><path d="M700 112 l-6 -22"/><path d="M716 110 l2 -24"/><path d="M732 113 l10 -20"/></g>
+    <path d="M760 178 Q830 170 840 192 Q820 212 760 206Z" fill="#f6c177"/>
+    <path d="M762 192 L832 192" stroke="#d9a04f" stroke-width="4"/>
+    <circle cx="728" cy="158" r="18" fill="#1a1a2e"/><circle cx="734" cy="151" r="7" fill="#fff"/>
+    <g stroke="#1a1a2e" stroke-width="5" stroke-linecap="round"><path d="M714 143 l-8 -12"/><path d="M727 139 l-1 -14"/><path d="M741 142 l7 -12"/></g>
+    <ellipse cx="712" cy="198" rx="15" ry="9" fill="#ff8a80" opacity=".55"/>
+  </g>
+  <g id="fx" opacity="0" stroke="#ffffff" stroke-width="14" stroke-linecap="round">
+    <path d="M150 520 h-110"/><path d="M170 600 h-150"/><path d="M190 680 h-120"/><path d="M220 760 h-160"/>
+  </g>
+  <g id="fx2" opacity="0">
+    <ellipse cx="870" cy="905" rx="72" ry="92" fill="#fff3d6" stroke="#e0c9a0" stroke-width="6"/>
+    <ellipse cx="845" cy="870" rx="16" ry="26" fill="#ffffff" opacity=".8"/>
+  </g>""")
+
+GORILLA_NOSE = GORILLA.replace('<g id="fx" opacity="0">', '<g id="fx_old" opacity="0">').replace('</svg>', """
+  <g id="fx" opacity="0">
+    <circle cx="540" cy="428" r="62" fill="none" stroke="#ffca28" stroke-width="12"/>
+    <g fill="#ffca28"><circle cx="625" cy="370" r="10"/><circle cx="455" cy="372" r="8"/><circle cx="620" cy="485" r="7"/></g>
+  </g></svg>""")
+
+RHINO_EARS = RHINO.replace('<g id="fx" opacity="0">', '<g id="fx_old" opacity="0">').replace('</svg>', """
+  <g id="fx" opacity="0" fill="none" stroke="#ffca28" stroke-width="10" stroke-linecap="round">
+    <path d="M660 520 q-25 30 0 60"/><path d="M630 500 q-40 50 0 100"/>
+    <path d="M830 500 q25 30 0 60"/><path d="M860 480 q40 50 0 100"/>
+  </g></svg>""")
+
+SCENES2.update({"camel": CAMEL, "ostrich": OSTRICH, "gorillanose": GORILLA_NOSE, "rhinoears": RHINO_EARS})

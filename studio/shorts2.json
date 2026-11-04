@@ -606,5 +606,157 @@
     "act": "outro"
    }
   ]
+ },
+ {
+  "id": "s_camel",
+  "animal": "camel",
+  "title": "Camel Humps Are Full of Fat, Not Water!",
+  "thumb": "NOT WATER!",
+  "top": "CAMEL",
+  "bg": [
+   "#ffd59e",
+   "#fff3dc"
+  ],
+  "floor": "#e0b46a",
+  "beats": [
+   {
+    "say": "What do you think is inside a camel's hump? Is it water? Let's find out!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the sunny desert to see the camels!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's not water! A camel's hump is full of fat. The fat gives the camel energy on long trips.",
+    "act": "fx+badge:FAT, NOT WATER!"
+   },
+   {
+    "say": "Long eyelashes help keep blowing sand out of a camel's eyes.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "And a camel can close its nose, to keep the sand out too!",
+    "act": "zoom"
+   },
+   {
+    "say": "Can you blink your eyes like a camel? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_gorilla",
+  "animal": "gorillanose",
+  "title": "Gorilla Noses Are All Different!",
+  "thumb": "NOSE PRINTS!",
+  "top": "GORILLA",
+  "bg": [
+   "#a5d6a7",
+   "#e8f5e9"
+  ],
+  "floor": "#66bb6a",
+  "beats": [
+   {
+    "say": "Look at your nose. Is it just like your friend's nose? Gorillas have special noses too!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's swing over to the gorillas!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Every gorilla has its own special nose. No two gorilla noses look the same!",
+    "act": "fx+badge:SPECIAL NOSES!"
+   },
+   {
+    "say": "Scientists look at gorilla noses in photos, to tell the gorillas apart.",
+    "act": "bob"
+   },
+   {
+    "say": "Once a gorilla is all grown up, its nose shape stays about the same.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Can you point to your nose? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_ostrich",
+  "animal": "ostrich",
+  "title": "Ostriches Are the Biggest Birds in the World!",
+  "thumb": "BIGGEST BIRD!",
+  "top": "OSTRICH",
+  "bg": [
+   "#ffe0a3",
+   "#fff6e0"
+  ],
+  "floor": "#e0b46a",
+  "beats": [
+   {
+    "say": "Which bird is the biggest bird in the whole world? Can you guess?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly over to the ostriches!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's the ostrich! A grown-up ostrich can be up to nine feet tall. That's taller than a grown-up person!",
+    "act": "zoom+badge:BIGGEST BIRD!"
+   },
+   {
+    "say": "Ostriches can't fly, but they are the fastest running birds in the world!",
+    "act": "fx"
+   },
+   {
+    "say": "And one ostrich egg is as heavy as about two dozen chicken eggs!",
+    "act": "fxoff+fx2"
+   },
+   {
+    "say": "Can you run in place super fast, like an ostrich? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "s_rhino",
+  "animal": "rhinoears",
+  "title": "Rhinos Can Turn Each Ear a Different Way!",
+  "thumb": "SUPER EARS!",
+  "top": "RHINO",
+  "bg": [
+   "#ffe7b3",
+   "#fff8e6"
+  ],
+  "floor": "#d4a94f",
+  "beats": [
+   {
+    "say": "Can you point one ear forward and one ear back? Rhinos can!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's stomp over to the rhinos!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A rhino can move each ear by itself. One ear can listen in front, and the other ear can listen behind!",
+    "act": "fx+badge:SUPER EARS!"
+   },
+   {
+    "say": "Rhinos can't see very well, but they hear very, very well.",
+    "act": "bob"
+   },
+   {
+    "say": "And a group of rhinos has a funny name. It's called a crash!",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Can you cup your hands behind your ears and listen like a rhino? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
  }
 ]

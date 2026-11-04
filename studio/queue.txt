@@ -1,6 +1,5 @@
-bloop bloop bl_ep02_shapes bl_ep03_counting
-fruity fruity fr_ep02_veggies fr_ep03_habits
 moon moon mb_ep02_nightsky mb_ep03_routine
+gizmo gizmo gz_ep04_science gz_ep05_plants
 truck truck tt_ep04_colors tt_ep05_carry
 bloop bloop bl_ep04_morecolors bl_ep05_moreshapes
 fruity fruity fr_ep04_rainbow fr_ep05_juicy

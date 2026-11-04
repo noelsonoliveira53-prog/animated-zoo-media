@@ -1,31 +1,9 @@
-moon moon mb_ep02_nightsky mb_ep03_routine
-gizmo gizmo gz_ep04_science gz_ep05_plants
-truck truck tt_ep04_colors tt_ep05_carry
-bloop bloop bl_ep04_morecolors bl_ep05_moreshapes
-fruity fruity fr_ep04_rainbow fr_ep05_juicy
-moon moon mb_ep04_ocean mb_ep05_farm
-fruity fruity fr2_pineapple fr2_sneeze fr2_washproduce fr2_kiwi fr2_lemon fr2_tomato fr2_mango fr2_trynew
-fruity fruity fr2_sunscreen fr2_potato fr2_mushroom fr2_grapes fr2_bellpepper fr2_breakfast fr2_play fr2_avocado
-fruity fruity fr_ep06_orchard fr_ep07_sunny
-fruity fruity fr_ep08_garden fr_ep09_surprise
-fruity fruity fr_ep10_mealtime fr_ep11_healthyday
-gizmo gizmo gz2_heart gz2_float gz2_fridge gz2_eyes gz2_lever gz2_guitar gz2_solar gz2_ears
-gizmo gizmo gz2_bike gz2_bee gz2_moonphases gz2_steam gz2_teeth gz2_screen gz2_turbine gz2_daynight
-gizmo gizmo gz_ep06_body gz_ep07_water
-gizmo gizmo gz_ep08_machines gz_ep09_energy
-gizmo gizmo gz_ep10_animals gz_ep11_space
-moon moon mb2_s_hedgehog mb2_s_penguin mb2_s_snail mb2_s_countstars mb2_s_snowyowl mb2_s_balloon mb2_s_rain mb2_s_fox
-moon moon mb2_s_train mb2_s_frog mb2_s_moth mb2_s_starfish mb2_s_polarbear mb2_s_fort mb2_s_tulip mb2_s_toys
 moon moon mb_ep06_forest mb_ep07_snowy
 moon moon mb_ep08_garden mb_ep09_toys
 moon moon mb_ep10_rainy mb_ep11_train
-truck truck tt2_towtruck tt2_sweeper tt2_roller tt2_forklift tt2_monster tt2_cherrypicker tt2_mail tt2_icecream
-truck truck tt2_snowplow tt2_carcarrier tt2_racecar tt2_heli tt2_carwash tt2_recycle tt2_tug tt2_trafficlight
 truck truck tt_ep06_roadhelpers tt_ep07_delivery
 truck truck tt_ep08_aroundtown tt_ep09_funvehicles
 truck truck tt_ep10_landseasky tt_ep11_sounds
-bloop bloop bl2_orange_mix bl2_count_ducks bl2_bigsmall bl2_cube bl2_ten bl2_purple_mix bl2_sphere bl2_rainbow
-bloop bloop bl2_updown bl2_pattern bl2_cone bl2_green_hunt bl2_sort bl2_lightdark bl2_cylinder bl2_sizes
 bloop bloop bl_ep06_count10 bl_ep07_mixing
 bloop bloop bl_ep08_opposites bl_ep09_3dshapes
 bloop bloop bl_ep10_patterns bl_ep11_shades

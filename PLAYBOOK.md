@@ -153,3 +153,11 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
 - From now on every video is a **Blender 3D**, informational **sing-along** episode built to go viral. One per channel per day once the pipeline is producing.
 - Rendering happens on Noelson's PC (RTX 4060 Ti) through the ZooBlender render worker. Jobs go into Documents\ZooBlender\jobs and finished videos land in Documents\ZooBlender\out.
 - Only upload from `studio/upload_plan_3d.json`. Until it has `to_upload` entries, the morning run uploads nothing and only checks analytics.
+
+## 3D pipeline location (Nov 4, 2026)
+- Code: `studio/zoo3d/` (engine.py, lib.py, chars/, sets/, songs/, jobs/, finish.py, worker.py, setup.sh) and `studio/sing/sing.py`.
+- Daily runbook: `studio/zoo3d/DAILY_3D.md`. Contract: `studio/zoo3d/API.md`. Viral rules: `docs/STRATEGY_3D.md`.
+- Episode 1 for all six channels: tt3d_ep01 (Fire Truck Song), bl3d_ep01 (Colors Song), fr3d_ep01 (Yummy Fruits Song),
+  mb3d_ep01 (Time for Bed, Sleepyhead), gz3d_ep01 (The Planets Song), zoo3d_ep01 (Savanna Animals Song).
+- PC worker: Documents\ZooBlender\START_RENDER_WORKER.bat runs zoo3d\worker.py inside Blender 5.4 (portable copy in Downloads),
+  renders EEVEE frames, and assembles the MP4 with ffmpeg. Its log is worker.log and its status is status.txt.

@@ -1,0 +1,125 @@
+"""Finish a rendered 3D sing-along: karaoke lyrics, thumbnail, repo copy, upload-plan entry.
+
+python3 finish.py <raw.mp4> <job.json> [--date YYYY-MM-DD] [--time "1:40 PM"] [--repo /home/claude/animated-zoo-media] [--nopush]
+
+Needs next to the job: <id>_timing.json and songs/<id>.json (whose "meta" holds title, description, tags).
+Writes <repo>/<channel folder>/<id>.mp4, <repo>/brand/<channel folder>/thumb_<id>.png and adds/updates the entry in
+<repo>/studio/upload_plan_3d.json (status to_upload).
+"""
+import json, os, sys, subprocess, datetime
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+FONT_DIR = os.path.join(HERE, "fonts")
+SLOT = {"truck": "1:40 PM", "bloop": "1:50 PM", "gizmo": "2:10 PM", "fruity": "2:20 PM", "moon": "7:00 PM", "zoo": "4:00 PM"}
+HILITE = {"truck": "&H0000D7FF&", "bloop": "&H00FF66CC&", "fruity": "&H0040C0FF&", "moon": "&H00FFE0A0&", "gizmo": "&H00FFD040&", "zoo": "&H0000D7FF&"}
+
+def arg(k, d=None):
+    return sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
+
+def ts(t):
+    h, r = divmod(max(0, t), 3600); m, s = divmod(r, 60)
+    return f"{int(h)}:{int(m):02d}:{s:05.2f}"
+
+def ass(timing, channel, title, W=1920, H=1080):
+    hl = HILITE.get(channel, "&H0000D7FF&")
+    soft = channel == "moon"
+    head = f"""[Script Info]
+ScriptType: v4.00+
+PlayResX: {W}
+PlayResY: {H}
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Lyric,Baloo 2 ExtraBold,{86 if not soft else 76},{hl},&H00FFFFFF&,&H00402010&,&H80000000&,-1,0,0,0,100,100,1,0,1,6,3,2,80,80,46,1
+Style: Speak,Baloo 2 ExtraBold,66,&H00FFFFFF&,&H00FFFFFF&,&H00402010&,&H80000000&,-1,0,0,0,100,100,0,0,1,5,2,2,120,120,50,1
+Style: Title,Baloo 2 ExtraBold,150,&H00FFFFFF&,&H00FFFFFF&,&H00402010&,&H64000000&,-1,0,0,0,100,100,2,0,1,9,5,8,60,60,70,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+"""
+    ev = []
+    # title card for the first 3.2 s: pops in, then floats away
+    ev.append(f"Dialogue: 1,{ts(0.25)},{ts(3.4)},Title,,0,0,0,,{{\\fad(150,350)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}}{title}")
+    words = timing["words"]
+    for ln in timing["lines"]:
+        if ln.get("kind") == "speak":
+            ev.append(f"Dialogue: 0,{ts(ln['start'])},{ts(ln['end'] + 0.4)},Speak,,0,0,0,,{{\\fad(120,160)}}{ln['text']}")
+            continue
+        ws = [w for w in words if ln["start"] - 0.01 <= w["start"] < ln["end"]]
+        if not ws: continue
+        t0 = ws[0]["start"] - 0.35
+        parts = []; cur = t0
+        for w in ws:
+            gap = max(0, w["start"] - cur)
+            if gap > 0.01: parts.append(f"{{\\k{int(gap * 100)}}}")
+            d = max(0.05, w["end"] - w["start"])
+            parts.append(f"{{\\kf{int(d * 100)}}}{w['w']} ")
+            cur = w["start"] + d
+        ev.append(f"Dialogue: 0,{ts(t0)},{ts(ln['end'] + 0.25)},Lyric,,0,0,0,,{{\\fad(100,120)}}{''.join(parts).strip()}")
+    return head + "\n".join(ev) + "\n"
+
+def main():
+    raw, jobp = sys.argv[1], sys.argv[2]
+    job = json.load(open(jobp)); jd = os.path.dirname(os.path.abspath(jobp)); jid = job["id"]
+    timing = json.load(open(os.path.join(jd, job["timing_file"])))
+    song = json.load(open(os.path.join(HERE, "songs", jid + ".json")))
+    meta = song["meta"]; ch = job["channel"]
+    repo = arg("--repo", "/home/claude/animated-zoo-media")
+    work = os.path.join(HERE, "finished"); os.makedirs(work, exist_ok=True)
+    sub = os.path.join(work, jid + ".ass")
+    open(sub, "w").write(ass(timing, ch, meta.get("card", meta["title"].split("|")[0].strip())))
+    out = os.path.join(work, jid + ".mp4")
+    vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "19",
+                    "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+    # thumbnail: the thumb frame + big words
+    tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
+    thumb = os.path.join(work, f"thumb_{jid}.png")
+    words = meta.get("thumb_text", meta["title"].split("|")[0].strip().upper())
+    tsub = os.path.join(work, jid + "_thumb.ass")
+    open(tsub, "w").write(f"""[Script Info]
+PlayResX: 1280
+PlayResY: 720
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: T,Baloo 2 ExtraBold,150,{HILITE.get(ch, '&H0000D7FF&')},&H00FFFFFF&,&H00301808&,&H96000000&,-1,0,0,0,100,100,2,-4,1,10,6,7,40,40,26,1
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
+""")
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{tf:.2f}", "-i", raw, "-frames:v", "1",
+                    "-vf", f"scale=1280:720,eq=saturation=1.15:contrast=1.05,subtitles={tsub}:fontsdir={FONT_DIR}", thumb], check=True)
+    folder = {"truck": "truck", "bloop": "bloop", "fruity": "fruity", "moon": "moon", "gizmo": "gizmo", "zoo": "."}[ch]
+    os.makedirs(os.path.join(repo, folder), exist_ok=True); os.makedirs(os.path.join(repo, "brand", folder if folder != "." else "zoo"), exist_ok=True)
+    dst = os.path.join(repo, folder, jid + ".mp4")
+    subprocess.run(["cp", out, dst], check=True)
+    tdst = os.path.join(repo, "brand", folder if folder != "." else "zoo", f"thumb_{jid}.png")
+    subprocess.run(["cp", thumb, tdst], check=True)
+    plan_p = os.path.join(repo, "studio", "upload_plan_3d.json")
+    plan = json.load(open(plan_p)) if os.path.exists(plan_p) else []
+    rel = f"{folder}/{jid}.mp4" if folder != "." else f"{jid}.mp4"
+    date = arg("--date")
+    if not date:   # next free day for this channel, starting tomorrow
+        taken = {p["date"] for p in plan if p["file"].startswith(folder + "/") and p.get("status") != "dropped"}
+        d = datetime.date.today() + datetime.timedelta(days=1)
+        while d.isoformat() in taken: d += datetime.timedelta(days=1)
+        date = d.isoformat()
+    lyrics = "\n".join(l["text"] for l in timing["lines"] if l.get("kind") == "sing")
+    seen = []; [seen.append(x) for x in lyrics.split("\n") if x not in seen]
+    desc = meta["description"].rstrip() + "\n\nLYRICS\n" + "\n".join(seen[:40])
+    entry = {"file": rel, "title": meta["title"], "description": desc, "tags": meta.get("tags", []), "date": date,
+             "time": arg("--time", SLOT.get(ch, "2:00 PM")), "thumb": os.path.relpath(tdst, repo), "made_for_kids": True,
+             "status": "to_upload", "format": "3d_singalong", "duration": round(timing["duration"], 1)}
+    plan = [p for p in plan if p["file"] != rel] + [entry]
+    plan.sort(key=lambda p: (p["date"], p["time"]))
+    json.dump(plan, open(plan_p, "w"), indent=1)
+    print("FINISHED", dst, tdst, date, entry["time"])
+    if "--nopush" not in sys.argv:
+        g = lambda *a: subprocess.run(["git", "-C", repo, *a], check=False)
+        g("add", "-A"); g("commit", "-qm", f"Add 3D sing-along {jid}\n\nCo-Authored-By: Claude Opus 5.5 <noreply@anthropic.com>\nClaude-Session: https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF")
+        for _ in range(3):
+            if g("pull", "-q", "--rebase").returncode == 0 and g("push", "-q", "origin", "main").returncode == 0: break
+
+if __name__ == "__main__":
+    main()

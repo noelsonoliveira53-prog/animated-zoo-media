@@ -1,0 +1,474 @@
+{
+ "bpm": 116,
+ "voice": "af_heart",
+ "formant": 1.12,
+ "chords": "C G Am F",
+ "style": "pop",
+ "intro_bars": 2,
+ "outro_bars": 2,
+ "parts": [
+  {
+   "section": "hook",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Hello friends, it's Milo, come with me!",
+     "notes": "E4:.5,G4:.5 G4:1 E4:.5 G4:.5,A4:1 G4:1 E4:1 C4:2"
+    },
+    {
+     "text": "Let's go to the sunny savanna, whee!",
+     "notes": "G4:1 G4:1 A4:.5 G4:.5 E4:.5,E4:.5 D4:.5,E4:.5,F4:1 G4:2"
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Big and small, let's meet them all!",
+     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
+    },
+    {
+     "text": "Savanna, savanna, sunny and warm,",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
+    },
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "verse_lion",
+   "who": "lion",
+   "voice": "am_puck",
+   "formant": 1.06,
+   "lines": [
+    {
+     "text": "I'm a lion, look at my mane!",
+     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:1 G4:2"
+    },
+    {
+     "text": "I live with my family, a pride!",
+     "notes": "F4:1 F4:1 F4:1 E4:1 D4:.5,D4:.5,E4:.5 D4:.5 C4:2"
+    },
+    {
+     "text": "Lions say roar, roar, roar!",
+     "notes": "E4:1 G4:1 A4:2 A4:2 G4:2"
+    },
+    {
+     "text": "Roar like a lion, everybody, roar!",
+     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:1 E4:.5,D4:.5,C4:.5,D4:.5 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "fact_lion",
+   "who": "lion",
+   "voice": "am_puck",
+   "speed": 0.95,
+   "speak": "Did you know? Lions live together in a big family group, called a pride!"
+  },
+  {
+   "section": "verse_elephant",
+   "who": "elephant",
+   "voice": "am_michael",
+   "formant": 1.04,
+   "lines": [
+    {
+     "text": "I'm an elephant, big and gray,",
+     "notes": "E4:1 E4:.5 G4:.5,G4:.5,A4:.5 A4:1 G4:1 E4:3"
+    },
+    {
+     "text": "My trunk can smell and drink all day!",
+     "notes": "F4:1 F4:1 F4:1 E4:1 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Elephants go toot, toot, toot!",
+     "notes": "E4:.5,G4:.5,G4:.5 A4:.5 A4:2 A4:2 G4:2"
+    },
+    {
+     "text": "Toot like an elephant, toot toot toot!",
+     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:.5,E4:.5 D4:1 D4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "fact_elephant",
+   "who": "elephant",
+   "voice": "am_michael",
+   "speed": 0.95,
+   "speak": "Elephants use their long trunks to smell, and to drink water!"
+  },
+  {
+   "section": "chorus2",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Big and small, let's meet them all!",
+     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
+    },
+    {
+     "text": "Savanna, savanna, sunny and warm,",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
+    },
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "ask_lion",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "What does the lion say?",
+     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
+    }
+   ]
+  },
+  {
+   "section": "say_lion",
+   "who": "lion",
+   "voice": "am_puck",
+   "formant": 1.06,
+   "lines": [
+    {
+     "text": "Roar! Roar! Roar!",
+     "notes": "A4:1 A4:1 G4:2"
+    }
+   ]
+  },
+  {
+   "section": "ask_elephant",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "What does the elephant say?",
+     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5,G4:.5 E4:1"
+    }
+   ]
+  },
+  {
+   "section": "say_elephant",
+   "who": "elephant",
+   "voice": "am_michael",
+   "formant": 1.04,
+   "lines": [
+    {
+     "text": "Toot! Toot! Toot!",
+     "notes": "A4:1 A4:1 G4:2"
+    }
+   ]
+  },
+  {
+   "section": "ask_giraffe",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "What does the giraffe say?",
+     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
+    }
+   ]
+  },
+  {
+   "section": "say_giraffe",
+   "who": "giraffe",
+   "voice": "af_bella",
+   "formant": 1.12,
+   "lines": [
+    {
+     "text": "Munch! Munch! Munch!",
+     "notes": "A4:1 A4:1 G4:2"
+    }
+   ]
+  },
+  {
+   "section": "ask_zebra",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "What does the zebra say?",
+     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
+    }
+   ]
+  },
+  {
+   "section": "say_zebra",
+   "who": "zebra",
+   "voice": "af_sky",
+   "formant": 1.12,
+   "lines": [
+    {
+     "text": "Hee-haw! Hee-haw!",
+     "notes": "A4:1,G4:1 A4:1,G4:1"
+    }
+   ]
+  },
+  {
+   "section": "ask_hippo",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "What does the hippo say?",
+     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
+    }
+   ]
+  },
+  {
+   "section": "say_hippo",
+   "who": "hippo",
+   "voice": "am_echo",
+   "formant": 1.06,
+   "lines": [
+    {
+     "text": "Honk! Honk! Honk!",
+     "notes": "A4:1 A4:1 G4:2"
+    }
+   ]
+  },
+  {
+   "section": "verse_giraffe",
+   "who": "giraffe",
+   "voice": "af_bella",
+   "formant": 1.12,
+   "lines": [
+    {
+     "text": "I'm a giraffe, so tall, so tall!",
+     "notes": "E4:1 E4:1 G4:.5,A4:.5 A4:1 G4:1 A4:1 G4:2"
+    },
+    {
+     "text": "The tallest animal of all!",
+     "notes": "F4:1 F4:1,E4:1 D4:.5,D4:.5,E4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Giraffes go munch, munch, munch!",
+     "notes": "E4:.5,G4:1 A4:.5 A4:2 A4:2 G4:2"
+    },
+    {
+     "text": "Stretch up high and munch, munch, munch!",
+     "notes": "G4:1 A4:1 G4:1 E4:1 D4:1 D4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "fact_giraffe",
+   "who": "giraffe",
+   "voice": "af_bella",
+   "speed": 0.95,
+   "speak": "Giraffes are the tallest animals in the whole wide world!"
+  },
+  {
+   "section": "action",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Stomp, stomp, stomp like an elephant!",
+     "notes": "C4:1 C4:1 C4:1 E4:1 E4:.5 G4:.5,G4:.5,A4:2.5"
+    },
+    {
+     "text": "Stretch up high like a tall giraffe!",
+     "notes": "G4:1 A4:1 A4:2 G4:.5 E4:.5 G4:1 E4:.5,D4:1.5"
+    },
+    {
+     "text": "Swish your tail like a zebra, swish!",
+     "notes": "E4:1 E4:1 G4:1 E4:.5 D4:.5 E4:.5,F4:.5 E4:3"
+    },
+    {
+     "text": "Now clap, clap, clap and jump, jump, jump!",
+     "notes": "G4:1 G4:.5 G4:.5 G4:.5 E4:.5 C4:1 C4:1 C4:3"
+    }
+   ]
+  },
+  {
+   "section": "verse_zebra",
+   "who": "zebra",
+   "voice": "af_sky",
+   "formant": 1.12,
+   "lines": [
+    {
+     "text": "I'm a zebra, black and white,",
+     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:3"
+    },
+    {
+     "text": "My stripes are special, just for me!",
+     "notes": "F4:1 F4:1 F4:1 E4:.5,D4:.5 E4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Zebras go hee-haw, hee-haw!",
+     "notes": "E4:.5,G4:.5 A4:1 A4:1,G4:1 A4:2,G4:2"
+    },
+    {
+     "text": "Gallop like a zebra, hee-haw, hee!",
+     "notes": "G4:.5,E4:.5 D4:1 E4:.5 F4:.5,E4:1 D4:1,D4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "fact_zebra",
+   "who": "zebra",
+   "voice": "af_sky",
+   "speed": 0.95,
+   "speak": "Every zebra has its very own stripes. No two zebras are the same!"
+  },
+  {
+   "section": "chorus3",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Big and small, let's meet them all!",
+     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
+    },
+    {
+     "text": "Savanna, savanna, sunny and warm,",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
+    },
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "verse_hippo",
+   "who": "hippo",
+   "voice": "am_echo",
+   "formant": 1.06,
+   "lines": [
+    {
+     "text": "I'm a hippo, round and wide,",
+     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:3"
+    },
+    {
+     "text": "I splash in water to stay cool!",
+     "notes": "F4:1 F4:1 F4:1 E4:.5,D4:.5 E4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Hippos go honk, honk, honk!",
+     "notes": "E4:.5,G4:.5 A4:1 A4:2 A4:2 G4:2"
+    },
+    {
+     "text": "Splash like a hippo, splash, splash, splash!",
+     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:1 D4:1 D4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "fact_hippo",
+   "who": "hippo",
+   "voice": "am_echo",
+   "speed": 0.95,
+   "speak": "Hippos spend the hot day in the water, to stay nice and cool!"
+  },
+  {
+   "section": "chorus4",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Big and small, let's meet them all!",
+     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
+    },
+    {
+     "text": "Savanna, savanna, sunny and warm,",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
+    },
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "chorus5",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Big and small, let's meet them all!",
+     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
+    },
+    {
+     "text": "Savanna, savanna, sunny and warm,",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
+    },
+    {
+     "text": "Savanna, savanna, who lives there?",
+     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Bye bye, friends, see you soon!",
+     "notes": "G4:1 E4:1 G4:2 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Sing again tomorrow with Milo!",
+     "notes": "F4:1 E4:.5,D4:.5 E4:.5,F4:.5,E4:1 D4:1 E4:.5,C4:2.5"
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "Savanna Animals Song for Kids! Meet 5 Zoo Friends with Milo",
+  "card": "Savanna Animals Song!",
+  "thumb_text": "SAVANNA SONG!",
+  "description": "Sing the Savanna Animals Song with Milo the blue bird! Meet a lion, an elephant, a giraffe, a zebra and a hippo in this 3D animal song for kids.\nKids learn savanna animal names, their sounds, and one true fact about each animal. Great for toddlers and preschoolers, ages 2-6.\n\nWhat kids learn:\n- Lions live in family groups called prides\n- Elephants use their trunks to smell and to drink\n- Giraffes are the tallest animals in the world\n- Every zebra's stripes are different\n- Hippos stay in the water to keep cool on hot days\n\nSing along, roar like a lion, stomp like an elephant and stretch like a giraffe!\n\nLyrics:\nHello friends, it's Milo, come with me!\nLet's go to the sunny savanna, whee!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nI'm a lion, look at my mane!\nI live with my family, a pride!\nLions say roar, roar, roar!\nRoar like a lion, everybody, roar!\nDid you know? Lions live together in a big family group, called a pride!\nI'm an elephant, big and gray,\nMy trunk can smell and drink all day!\nElephants go toot, toot, toot!\nToot like an elephant, toot toot toot!\nElephants use their long trunks to smell, and to drink water!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nWhat does the lion say?\nRoar! Roar! Roar!\nWhat does the elephant say?\nToot! Toot! Toot!\nWhat does the giraffe say?\nMunch! Munch! Munch!\nWhat does the zebra say?\nHee-haw! Hee-haw!\nWhat does the hippo say?\nHonk! Honk! Honk!\nI'm a giraffe, so tall, so tall!\nThe tallest animal of all!\nGiraffes go munch, munch, munch!\nStretch up high and munch, munch, munch!\nGiraffes are the tallest animals in the whole wide world!\nStomp, stomp, stomp like an elephant!\nStretch up high like a tall giraffe!\nSwish your tail like a zebra, swish!\nNow clap, clap, clap and jump, jump, jump!\nI'm a zebra, black and white,\nMy stripes are special, just for me!\nZebras go hee-haw, hee-haw!\nGallop like a zebra, hee-haw, hee!\nEvery zebra has its very own stripes. No two zebras are the same!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nI'm a hippo, round and wide,\nI splash in water to stay cool!\nHippos go honk, honk, honk!\nSplash like a hippo, splash, splash, splash!\nHippos spend the hot day in the water, to stay nice and cool!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nBye bye, friends, see you soon!\nSing again tomorrow with Milo!",
+  "tags": [
+   "savanna animals song",
+   "savanna animals for kids",
+   "animal song for kids",
+   "zoo animals song",
+   "african animals for kids",
+   "animal sounds song",
+   "lion song for kids",
+   "elephant song",
+   "giraffe song",
+   "zebra song",
+   "hippo song",
+   "kids songs",
+   "nursery rhymes",
+   "preschool learning",
+   "toddler songs",
+   "3d animation for kids",
+   "the animated zoo",
+   "milo"
+  ]
+ }
+}

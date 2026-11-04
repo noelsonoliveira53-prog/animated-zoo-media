@@ -1,0 +1,297 @@
+{
+ "title": "The Planets Song",
+ "bpm": 112,
+ "voice": "am_puck",
+ "formant": 1.06,
+ "chords": "C G Am F",
+ "style": "pop",
+ "intro_bars": 1,
+ "outro_bars": 1,
+ "parts": [
+  {
+   "section": "hook",
+   "lines": [
+    {
+     "text": "Beep boop! Hi, I'm Gizmo!",
+     "notes": "G4:1 E4:1 G4:1 A4:1 G4:1,E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Let's sing the Planets Song!",
+     "notes": "E4:1 G4:1 A4:1 G4:1,E4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "lines": [
+    {
+     "text": "Mercury, Mercury, closest to the Sun,",
+     "notes": "E4:.5,E4:.5,E4:.5 G4:.5,G4:.5,G4:.5 A4:.5,G4:.5 E4:1 D4:1 C4:2",
+     "rest": 0
+    },
+    {
+     "text": "Tiny and speedy, zoom, zoom, zoom!",
+     "notes": "D4:.5,D4:.5 E4:1 F4:.5,F4:.5 A4:1 G4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Venus, Venus, hottest one of all,",
+     "notes": "E4:.5,E4:1 G4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:1 C4:2",
+     "rest": 0
+    },
+    {
+     "text": "Thick clouds hide it, hot, hot, hot!",
+     "notes": "D4:.5 D4:.5 E4:.5 F4:.5 A4:1 G4:1 E4:2",
+     "rest": 2
+    },
+    {
+     "text": "Earth, Earth, our home sweet home,",
+     "notes": "E4:1 G4:1 A4:1 G4:1 E4:1 C4:3",
+     "rest": 0
+    },
+    {
+     "text": "Water, plants, and you and me!",
+     "notes": "D4:.5,D4:.5 E4:1 F4:1 A4:1 G4:1 E4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "group": true,
+   "lines": [
+    {
+     "text": "Eight planets spinning round the Sun,",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 C4:1 D4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Mercury, Venus, Earth and Mars,",
+     "notes": "A4:.5,G4:.5,G4:1 F4:1,E4:1 D4:1 E4:1 D4:2",
+     "rest": 0
+    },
+    {
+     "text": "Jupiter, Saturn, Uranus, Neptune,",
+     "notes": "G4:.5,E4:.5,G4:1 E4:1,C4:1 D4:.5,E4:.5,F4:1 E4:1,D4:1",
+     "rest": 0
+    },
+    {
+     "text": "Eight planets spinning round the Sun!",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 D4:1 D4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "fact",
+   "voice": "am_michael",
+   "speak": "Did you know? The Sun is a star, and all eight planets travel around it!"
+  },
+  {
+   "section": "verse2",
+   "lines": [
+    {
+     "text": "Mars, Mars, the dusty red one,",
+     "notes": "E4:1 G4:1 A4:1 G4:.5,E4:.5 D4:1 C4:3",
+     "rest": 0
+    },
+    {
+     "text": "Rusty dust makes Mars look red!",
+     "notes": "D4:.5,D4:.5 E4:1 F4:.5,F4:.5 A4:1 G4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Jupiter, Jupiter, biggest of them all,",
+     "notes": "E4:.5,E4:.5,E4:.5 G4:.5,G4:.5,G4:.5 A4:.5,G4:.5 E4:1 D4:1 C4:2",
+     "rest": 0
+    },
+    {
+     "text": "A giant storm, the Great Red Spot!",
+     "notes": "D4:.5 E4:.5,E4:.5 F4:1 F4:.5 A4:1 G4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Saturn, Saturn, with the shiny rings,",
+     "notes": "E4:.5,E4:1 G4:.5,G4:1 A4:.5 G4:.5 E4:.5,D4:.5 C4:3",
+     "rest": 0
+    },
+    {
+     "text": "Rings of ice and rock go round!",
+     "notes": "D4:1 D4:.5 E4:1 F4:.5 A4:1 G4:1 E4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "group": true,
+   "lines": [
+    {
+     "text": "Eight planets spinning round the Sun,",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 C4:1 D4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Mercury, Venus, Earth and Mars,",
+     "notes": "A4:.5,G4:.5,G4:1 F4:1,E4:1 D4:1 E4:1 D4:2",
+     "rest": 0
+    },
+    {
+     "text": "Jupiter, Saturn, Uranus, Neptune,",
+     "notes": "G4:.5,E4:.5,G4:1 E4:1,C4:1 D4:.5,E4:.5,F4:1 E4:1,D4:1",
+     "rest": 0
+    },
+    {
+     "text": "Eight planets spinning round the Sun!",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 D4:1 D4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "action",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Clap, clap! Clap your hands!",
+     "notes": "G4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 2
+    },
+    {
+     "text": "Spin, spin, like a planet!",
+     "notes": "A4:1 A4:1 G4:1 E4:1 D4:1,C4:1",
+     "rest": 2
+    },
+    {
+     "text": "Jump, jump, reach the stars!",
+     "notes": "G4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 2
+    },
+    {
+     "text": "Three, two, one, blast off!",
+     "notes": "A4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 2
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "lines": [
+    {
+     "text": "Uranus, Uranus, spinning on its side,",
+     "notes": "E4:.5,E4:.5,E4:.5 G4:.5,G4:.5,G4:.5 A4:.5,G4:.5 E4:1 D4:1 C4:2",
+     "rest": 0
+    },
+    {
+     "text": "Tipped way over, rolling like a ball!",
+     "notes": "D4:.5 D4:.5 E4:.5,E4:.5 F4:.5,F4:.5 A4:1 G4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Neptune, Neptune, farthest from the Sun,",
+     "notes": "E4:.5,E4:1 G4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:1 C4:2",
+     "rest": 0
+    },
+    {
+     "text": "Deep blue, windy, and so cold!",
+     "notes": "D4:.5 D4:.5 E4:.5,F4:.5 A4:1 G4:1 E4:2",
+     "rest": 2
+    },
+    {
+     "text": "Eight planets, now you know them all!",
+     "notes": "G4:1 G4:.5,E4:.5 G4:1 A4:.5 G4:.5 E4:1 C4:3",
+     "rest": 0
+    },
+    {
+     "text": "Let's all sing it, everyone!",
+     "notes": "G4:1 A4:1 G4:1 E4:1 D4:1,E4:1,C4:2",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "group": true,
+   "lines": [
+    {
+     "text": "Eight planets spinning round the Sun,",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 C4:1 D4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Mercury, Venus, Earth and Mars,",
+     "notes": "A4:.5,G4:.5,G4:1 F4:1,E4:1 D4:1 E4:1 D4:2",
+     "rest": 0
+    },
+    {
+     "text": "Jupiter, Saturn, Uranus, Neptune,",
+     "notes": "G4:.5,E4:.5,G4:1 E4:1,C4:1 D4:.5,E4:.5,F4:1 E4:1,D4:1",
+     "rest": 0
+    },
+    {
+     "text": "Eight planets spinning round the Sun!",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 D4:1 D4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Eight planets spinning round the Sun,",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 C4:1 D4:1 E4:3",
+     "rest": 0
+    },
+    {
+     "text": "Mercury, Venus, Earth and Mars,",
+     "notes": "A4:.5,G4:.5,G4:1 F4:1,E4:1 D4:1 E4:1 D4:2",
+     "rest": 0
+    },
+    {
+     "text": "Jupiter, Saturn, Uranus, Neptune,",
+     "notes": "G4:.5,E4:.5,G4:1 E4:1,C4:1 D4:.5,E4:.5,F4:1 E4:1,D4:1",
+     "rest": 0
+    },
+    {
+     "text": "Eight planets spinning round the Sun!",
+     "notes": "G4:1 G4:.5,E4:.5 G4:.5,E4:.5 D4:1 D4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "who": "all",
+   "lines": [
+    {
+     "text": "Bye bye! Sing it again tomorrow!",
+     "notes": "G4:1 E4:1 G4:1 A4:.5 G4:.5,E4:.5 D4:.5,D4:.5,C4:2.5",
+     "rest": 0
+    }
+   ]
+  }
+ ],
+ "meta": {
+  "title": "The Planets Song for Kids! 8 Planets with Gizmo the Robot",
+  "card": "The Planets Song!",
+  "thumb_text": "PLANETS SONG!",
+  "description": "The Planets Song for kids! Sing all 8 planets in order with Gizmo the robot: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.\nKids learn one true fact about each planet and the Sun. Ages 3-7. Blast off and sing along!",
+  "tags": [
+   "planets song",
+   "solar system song",
+   "8 planets song",
+   "planets for kids",
+   "space for kids",
+   "kids science songs",
+   "Gizmo Explains",
+   "3D kids songs",
+   "nursery rhymes"
+  ]
+ }
+}

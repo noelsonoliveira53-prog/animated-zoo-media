@@ -1,0 +1,263 @@
+{
+ "title": "Time for Bed, Sleepyhead",
+ "bpm": 80,
+ "voice": "af_bella",
+ "formant": 1.08,
+ "chords": "C Am F G",
+ "style": "lullaby",
+ "intro_bars": 1,
+ "outro_bars": 0,
+ "parts": [
+  {
+   "section": "hook",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Hello friends, the moon is high,",
+     "notes": "E4:.5,G4:.5 G4:1 E4:1 G4:1 A4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "Time for bed, let's sing goodnight!",
+     "notes": "F4:1 E4:1 F4:1 A4:1 G4:1 E4:1,D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Splash and splash in the warm bath,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Bubbles float up high, pop, pop, pop!",
+     "notes": "F4:1 A4:1 A4:1 F4:1 G4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Brush, brush, brush our little teeth clean,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 A4:1 G4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Up and down, and round and round.",
+     "notes": "A4:1 G4:1 F4:1 E4:1 D4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Time for bed, sleepyhead,",
+     "notes": "G4:2 E4:1 C4:1 E4:1,D4:1,C4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Moon is glowing, stars are bright,",
+     "notes": "A4:1 A4:1 G4:1,F4:1 G4:1 G4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Snuggle down in your cozy bed,",
+     "notes": "E4:1 G4:1 G4:1 G4:1 A4:1,G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Time for bed, sleepyhead, goodnight.",
+     "notes": "A4:1 G4:1 F4:2 E4:1,D4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "fact",
+   "who": "host",
+   "voice": "bf_emma",
+   "speed": 0.78,
+   "speak": "Did you know? Sleep helps your body grow big and strong."
+  },
+  {
+   "section": "verse2",
+   "who": "bunny",
+   "formant": 1.14,
+   "lines": [
+    {
+     "text": "One arm in, and two arms in,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Our pajamas are so soft and warm.",
+     "notes": "F4:1 A4:1 A4:1 F4:1 G4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Pick a book and sit up close,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 A4:1 G4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Turn the pages slow, one, two, three.",
+     "notes": "A4:1 G4:1 F4:1 E4:1 D4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Time for bed, sleepyhead,",
+     "notes": "G4:2 E4:1 C4:1 E4:1,D4:1,C4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Moon is glowing, stars are bright,",
+     "notes": "A4:1 A4:1 G4:1,F4:1 G4:1 G4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Snuggle down in your cozy bed,",
+     "notes": "E4:1 G4:1 G4:1 G4:1 A4:1,G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Time for bed, sleepyhead, goodnight.",
+     "notes": "A4:1 G4:1 F4:2 E4:1,D4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "wave",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Wave goodnight to the moon and stars,",
+     "notes": "G4:1.5 E4:.5,G4:1 E4:1 C4:1 E4:1 G4:1 E4:1",
+     "rest": 0
+    },
+    {
+     "text": "Yawn so big and stretch up slow.",
+     "notes": "F4:1.5 F4:.5 A4:1 G4:1 F4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Big warm hug, a squeeze so tight,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Kiss goodnight and turn down the light.",
+     "notes": "F4:1 A4:1 A4:1 F4:1 G4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Teddy is here, the night light glows,",
+     "notes": "C4:1 E4:1 G4:1 E4:1 A4:1 A4:1 G4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Close your eyes now, nice and slow.",
+     "notes": "A4:1 G4:1 F4:1 E4:1 D4:1 E4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Time for bed, sleepyhead,",
+     "notes": "G4:2 E4:1 C4:1 E4:1,D4:1,C4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Moon is glowing, stars are bright,",
+     "notes": "A4:1 A4:1 G4:1,F4:1 G4:1 G4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Snuggle down in your cozy bed,",
+     "notes": "E4:1 G4:1 G4:1 G4:1 A4:1,G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Time for bed, sleepyhead, goodnight.",
+     "notes": "A4:1 G4:1 F4:2 E4:1,D4:1 D4:1.5",
+     "rest": 0.5
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Time for bed, sleepyhead,",
+     "notes": "G4:2 E4:1 C4:1 E4:1,D4:1,C4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Moon is glowing, stars are bright,",
+     "notes": "A4:1 A4:1 G4:1,F4:1 G4:1 G4:1 D4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Snuggle down in your cozy bed,",
+     "notes": "E4:1 G4:1 G4:1 G4:1 A4:1,G4:1 E4:1.5",
+     "rest": 0.5
+    },
+    {
+     "text": "Time for bed, sleepyhead, goodnight.",
+     "notes": "A4:1 G4:1 F4:2 E4:1,D4:1 C4:2",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "who": "host",
+   "voice": "bf_emma",
+   "speed": 0.78,
+   "speak": "Sweet dreams, sleepyhead. Sing it again tomorrow night!"
+  }
+ ],
+ "meta": {
+  "title": "Time for Bed, Sleepyhead! Bedtime Song for Kids | Moonbeam",
+  "card": "Time for Bed, Sleepyhead!",
+  "thumb_text": "TIME FOR BED!",
+  "description": "Time for Bed, Sleepyhead! A calm bedtime routine song for kids, with Luna the sleepy owl and her friends.\nSing along: bath time, brushing teeth, pajamas, a story, a big hug and goodnight. Ages 2-6.\n\nA gentle 3D lullaby to help little ones wind down at night. Sing it again tomorrow night!",
+  "tags": [
+   "bedtime song",
+   "bedtime routine song",
+   "lullaby for kids",
+   "time for bed song",
+   "goodnight song",
+   "sleepy songs for toddlers",
+   "nursery rhymes",
+   "kids songs",
+   "Moonbeam Bedtime"
+  ]
+ }
+}

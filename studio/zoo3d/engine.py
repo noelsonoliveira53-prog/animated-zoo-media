@@ -26,7 +26,7 @@ job = json.load(open(JOB_PATH))
 TEST = bool(opt("test", False))
 ENGINE = str(opt("engine", job.get("engine", "EEVEE"))).upper()
 W, H = map(int, str(opt("res", "960x540" if TEST else job.get("res", "1920x1080"))).split("x"))
-SAMPLES = int(opt("samples", 16 if TEST else job.get("samples", 64)))
+SAMPLES = int(opt("samples", 16 if TEST else job.get("samples", 24 if str(opt("engine", job.get("engine", "EEVEE"))).upper() == "EEVEE" else 64)))
 OUT = os.path.abspath(opt("out", os.path.join(os.path.dirname(JOB_DIR), "out", job["id"])))
 timing = job.get("timing") or json.load(open(os.path.join(JOB_DIR, job["timing_file"])))
 FPS = timing.get("fps", 24)
@@ -189,7 +189,7 @@ if ENGINE == "EEVEE":
         try: r.engine = e; break
         except Exception: pass
     ee = S.eevee
-    for a, v in (("taa_render_samples", SAMPLES), ("use_raytracing", True), ("use_shadows", True), ("use_gtao", True), ("use_bloom", True), ("shadow_ray_count", 2), ("use_fast_gi", True)):
+    for a, v in (("taa_render_samples", SAMPLES), ("use_raytracing", True), ("use_shadows", True), ("use_gtao", True), ("use_bloom", True), ("shadow_ray_count", 1), ("shadow_step_count", 4), ("use_fast_gi", True), ("fast_gi_resolution", "4")):
         try: setattr(ee, a, v)
         except Exception: pass
 else:
@@ -218,6 +218,8 @@ t_start = time.time(); done = 0
 for f in range(NF):
     fp = os.path.join(FR, f"{f:05d}.png")
     if os.path.exists(fp) and os.path.getsize(fp) > 1000: continue
+    if os.path.exists(os.path.join(os.path.dirname(OUT), "STOP")) or os.path.exists(os.path.join(OUT, "STOP")):
+        print("STOP file found - stopping (frames so far are kept)", flush=True); sys.exit(3)
     apply(f); S.frame_set(f)
     r.filepath = fp; bpy.ops.render.render(write_still=True); done += 1
     if done % 48 == 0:

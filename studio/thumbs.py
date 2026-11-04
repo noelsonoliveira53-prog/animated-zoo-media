@@ -3,9 +3,10 @@ T = {"ep01_savanna": ("SAVANNA", "FRIENDS!", ["giraffe","elephant","lion","zebra
      "ep02_ocean_ice": ("OCEAN &amp; ICE", "ANIMALS!", ["penguin","octopus","turtle","polarbear","flamingo"], "#8ecae6"),
      "ep03_treetops": ("TREETOP", "FRIENDS!", ["monkey","owl","panda","koala","sloth"], "#b5e48c"),
      "ep04_amazing_bodies": ("AMAZING", "BODIES!", ["giraffe","elephant","kangaroo","polarbear","flamingo"], "#ffc8dd"),
-     "ep05_baby_animals": ("BABY", "ANIMALS!", ["gorilla","rhino","seal","elephant","sloth"], "#ffd6a5")}
-MILO_POS = {"ep04_amazing_bodies": "left:600px;top:40px", "ep05_baby_animals": "left:640px;top:20px"}
-POS = {"ep05_baby_animals": [(-60, 250, 470), (200, 330, 400), (470, 360, 380), (760, 320, 400), (840, 170, 400)]}
+     "ep05_baby_animals": ("BABY", "ANIMALS!", ["gorilla","rhino","seal","elephant","sloth"], "#ffd6a5"),
+     "ep06_desert": ("SUNNY DESERT", "FRIENDS!", ["camel","meerkat","ostrich","kangaroo","lion"], "#ffd59e")}
+MILO_POS = {"ep06_desert": "left:960px;top:150px", "ep04_amazing_bodies": "left:600px;top:40px", "ep05_baby_animals": "left:640px;top:20px"}
+POS = {"ep06_desert": [(-60, 300, 420), (230, 400, 330), (380, 230, 500), (600, 330, 400), (800, 330, 400)], "ep05_baby_animals": [(-60, 250, 470), (200, 330, 400), (470, 360, 380), (760, 320, 400), (840, 170, 400)]}
 EXTRA = {"ep05_baby_animals": '<div style="position:absolute;left:880px;top:282px;width:420px;height:16px;border-radius:8px;background:#8d5a2b"></div>'}  # keep Milo off tall animals
 for k, (a, b, an, bg) in T.items():
     pos = [(-60, 250, 470), (150, 330, 400), (340, 300, 430), (560, 330, 400), (770, 300, 430)]

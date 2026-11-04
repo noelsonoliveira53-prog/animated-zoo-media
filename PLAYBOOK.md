@@ -139,3 +139,11 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
 ## Duplicate guard (Nov 4, 2026)
 - Before uploading on a channel, check its Studio Shorts/Videos tabs (or the Command Center status) as well as the plan file: Nov 3 scheduled all 5 Tiny Truck Town Shorts without marking the plan, and the Nov 4 run re-uploaded tt_firetruck. The duplicate (1VDyCj71-hA) was set to Private; delete it in Studio when convenient.
 - After switching channels, the first Studio load returns 403 "Oops"; just load it again (sometimes 2-3 times).
+
+## Strategy change: episodes only (Nov 4, 2026, Noelson's call)
+- **No more Shorts** on the 5 kids channels (Tiny Truck Town, Bloop's Color Lab, Fruity Friends, Moonbeam Bedtime, Gizmo Explains).
+  The 15 Shorts already scheduled in Studio stay and air as planned; every other unposted Short is marked `"status": "dropped"` in the old plans — never upload those.
+- **One episode per channel per day** at each channel's slot: Truck 1:40 PM, Bloop 1:50 PM, Gizmo 2:10 PM, Fruity 2:20 PM, Moonbeam 7:00 PM ET.
+- The only plan to upload from is `studio/upload_plan_episodes.json` (sorted by date). Stock runs through Nov 15.
+- Upload budget: **5 uploads per morning run** (one per channel, the soonest `to_upload` episode for each). Never more. That keeps the account far under YouTube's ~20/24h cap with room for The Animated Zoo.
+- The render queue holds episodes only (`studio/queue.txt`); Shorts generators are retired for these channels.

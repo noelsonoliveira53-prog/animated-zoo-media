@@ -39,3 +39,10 @@ New characters or sets: add them as new modules under chars/ and sets/ following
 YouTube cap: at most 6 uploads/day (one per channel). PC render time grows with song length and cast size; check
 `status.txt` and the `frame N/NF ... s/frame` lines in `ZooBlender\out\<id>.log`. If the PC falls behind (more than 6 jobs
 waiting), write fewer new jobs that day.
+
+## Lessons from the Nov 5 views check (apply to every new song)
+- Open on the CHORUS: the first sung line within 2 s, and the most visual moment within 10 s. Use intro_bars 0-1 and no spoken hook first.
+- No title card (finish.py has it off by default).
+- Length 2:30-3:30 until average view duration passes 1:00.
+- Title pattern: "<Topic> Song for Kids! <number/hook> with <Host>" (60 characters or less), plus an optional theme emoji at the end.
+- Keep props out of the singer's close-up (Fruity carrot verse was blocked by cherries and the arrow).

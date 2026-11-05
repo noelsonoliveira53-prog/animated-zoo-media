@@ -40,7 +40,8 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 """
     ev = []
     # title card for the first 3.2 s: pops in, then floats away
-    ev.append(f"Dialogue: 1,{ts(0.25)},{ts(3.4)},Title,,0,0,0,,{{\\fad(150,350)\\t(0,250,\\fscx112\\fscy112)\\t(250,450,\\fscx100\\fscy100)}}{title}")
+    if os.environ.get("ZOO_TITLE_CARD"):   # views data (Nov 5): no title card - get to the song immediately
+        ev.append(f"Dialogue: 1,{ts(0.25)},{ts(3.4)},Title,,0,0,0,,{{\\fad(150,350)}}{title}")
     words = timing["words"]
     starts = sorted(l["start"] for l in timing["lines"])
     def until(ln, pad):   # a line clears the moment the next one starts (no stacked lyrics)
@@ -67,7 +68,7 @@ def main():
     raw, jobp = sys.argv[1], sys.argv[2]
     job = json.load(open(jobp)); jd = os.path.dirname(os.path.abspath(jobp)); jid = job["id"]
     timing = json.load(open(os.path.join(jd, job["timing_file"])))
-    song = json.load(open(os.path.join(HERE, "songs", jid + ".json")))
+    song = json.load(open(os.path.join(HERE, "songs", job.get("song", jid) + ".json")))
     meta = song["meta"]; ch = job["channel"]
     repo = arg("--repo", "/home/claude/animated-zoo-media")
     work = os.path.join(HERE, "finished"); os.makedirs(work, exist_ok=True)
@@ -94,15 +95,16 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
 """)
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{tf:.2f}", "-i", raw, "-frames:v", "1",
                     "-vf", f"scale=1280:720,eq=saturation=1.15:contrast=1.05,subtitles={tsub}:fontsdir={FONT_DIR}", thumb], check=True)
+    jid_pub = job.get("song", jid)   # publish under the episode name (not _v2)
     folder = {"truck": "truck", "bloop": "bloop", "fruity": "fruity", "moon": "moon", "gizmo": "gizmo", "zoo": "."}[ch]
     os.makedirs(os.path.join(repo, folder), exist_ok=True); os.makedirs(os.path.join(repo, "brand", folder if folder != "." else "zoo"), exist_ok=True)
-    dst = os.path.join(repo, folder, jid + ".mp4")
+    dst = os.path.join(repo, folder, jid_pub + ".mp4")
     subprocess.run(["cp", out, dst], check=True)
-    tdst = os.path.join(repo, "brand", folder if folder != "." else "zoo", f"thumb_{jid}.png")
+    tdst = os.path.join(repo, "brand", folder if folder != "." else "zoo", f"thumb_{jid_pub}.png")
     subprocess.run(["cp", thumb, tdst], check=True)
     plan_p = os.path.join(repo, "studio", "upload_plan_3d.json")
     plan = json.load(open(plan_p)) if os.path.exists(plan_p) else []
-    rel = f"{folder}/{jid}.mp4" if folder != "." else f"{jid}.mp4"
+    rel = f"{folder}/{jid_pub}.mp4" if folder != "." else f"{jid_pub}.mp4"
     date = arg("--date")
     if not date:   # next free day for this channel, starting tomorrow
         taken = {p["date"] for p in plan if p["file"].startswith(folder + "/") and p["file"] != rel and p.get("status") != "dropped"}

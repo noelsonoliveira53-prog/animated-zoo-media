@@ -18,9 +18,8 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep01.png",
   "made_for_kids": true,
-  "status": "hold",
+  "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 171.7,
-  "note": "old version has sync issues; fixed v2 rendering - finish.py will set to_upload"
+  "duration": 171.7
  }
 ]

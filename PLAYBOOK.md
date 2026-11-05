@@ -161,3 +161,10 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
   mb3d_ep01 (Time for Bed, Sleepyhead), gz3d_ep01 (The Planets Song), zoo3d_ep01 (Savanna Animals Song).
 - PC worker: Documents\ZooBlender\START_RENDER_WORKER.bat runs zoo3d\worker.py inside Blender 5.4 (portable copy in Downloads),
   renders EEVEE frames, and assembles the MP4 with ffmpeg. Its log is worker.log and its status is status.txt.
+
+## Views check recipe (Nov 5, 2026)
+- Per channel: switch with youtube.com/channel_switcher, then open
+  `studio.youtube.com/channel/<id>/analytics/tab-content/period-default/explore?entity_type=CHANNEL&entity_id=<id>&time_period=lifetime&explore_type=TABLE_AND_CHART&metric=VIEWS&granularity=DAY&t_metrics=VIEWS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&t_metrics=AVERAGE_WATCH_TIME&t_metrics=AVERAGE_WATCH_PERCENTAGE&t_metrics=RATINGS_LIKES&dimension=VIDEO&o_column=VIEWS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC`
+  (reload once or twice on "Oops"), and read the `yta-explore-table-row` cells. The views cell has the share glued on ("35748.3%" = 357 views, 48.3%).
+- In the hidden browser pane the channel switcher list doesn't render until a screenshot is taken; take one, then click the
+  `ytd-account-item-renderer` by script. Reset the 800x892 viewport emulation to desktop before switching, or the switcher stays blank.

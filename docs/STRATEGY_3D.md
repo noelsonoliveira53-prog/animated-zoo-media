@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v1, Nov 4, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v2, Nov 5, 2026). The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -29,7 +29,10 @@
 - Bright saturated palette, warm sunny light (Moonbeam: cozy moonlight, soft glow, slow and gentle).
 
 ## Packaging (yt-package / yt-seo)
-- Title: "<Topic> Song | <Channel> Kids Songs & Nursery Rhymes", 60 characters or less, with the song name first.
+- Title (changed Nov 5): "<Topic> Song for Kids! <number or hook> with <Host>", 60 characters or less, song name first.
+  Example: "Colors Song for Kids! 6 Colors with Bloop". The best CTRs so far are "Meet 5 Zoo Friends" (3.6%) and
+  "Goodnight 5 Sleepy Animals 🌙" (5.5%), so a number and a friendly noun belong in the title. One theme emoji at the end is allowed.
+  The old "| <Channel> Kids Songs & Nursery Rhymes" suffix is dropped: it spends characters on words nobody clicks.
 - The thumbnail is the host's face, big and happy, plus the topic object and 1-3 bold words.
 - Description: the first 2 lines give the song name, what kids learn and the ages (2-6). Then the lyrics, which help search.
 
@@ -45,4 +48,16 @@
 ## Evidence so far (Nov 4)
 - The Animated Zoo's "Savanna Animals for Kids! Meet 5 Zoo Friends with Milo" (5 min) reached 327 views in 2 days, about 5x anything else.
   Follow its pattern: "<Topic> for Kids!" + a number + the host's name; one clear theme; long-form.
-- Song length can stretch to 4-5 min by adding a verse, a fact section and a "sing it again" final chorus. Longer watch time is rewarded.
+- (Superseded Nov 5) Do not stretch songs to 4-5 min yet; see below.
+
+## Adjustments from the Nov 5 views check (all 6 channels)
+- **Hook rule (new, most important):** viewers leave after 13-42 s on every 5-minute episode (5-14% viewed). The chorus's first
+  line and the most visual moment must land inside the first 10 s. No title card, no "Hi friends" warm-up longer than 3 s.
+  Ocean & Ice, whose first animal and first fact arrive fastest, holds viewers longest (0:42) and grew 3.5x faster than Savanna today.
+- **Length:** keep every 3D song at 2:30-3:30 (target 3:00). Only add a verse once average view duration passes 1:00.
+- **Fact early:** the first spoken fact comes right after the first chorus (by about 0:30), as a "Did you know?" with a pop-in prop.
+- **Format:** long-form only. Shorts got 4-70 impressions each and almost no views, so keeping them dropped is right.
+- **Posting times:** no signal yet (too few uploads). Keep each channel's slot (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20,
+  Moonbeam 7:00 PM, Zoo 5:00 PM ET) for at least a week so timing can be compared.
+- **Watch next check:** the first 3D uploads (Bloop Colors Song, Fruity Yummy Fruits Song, both Nov 5) vs. the 2D episodes on the same
+  channels (Bloop 2D: 2.4% CTR, 0:27 average view).

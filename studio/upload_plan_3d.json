@@ -18,9 +18,11 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 171.7
+  "duration": 171.7,
+  "video_id": "ZrW2mf-oVr4",
+  "scheduled_on": "2026-11-05"
  },
  {
   "file": "fruity/fr3d_ep01.mp4",
@@ -41,9 +43,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 202.8
+  "duration": 202.8,
+  "video_id": "1NHLUvAqy-Y",
+  "scheduled_on": "2026-11-05"
  },
  {
   "file": "gizmo/gz3d_ep01.mp4",
@@ -64,8 +68,10 @@
   "time": "2:10 PM",
   "thumb": "brand/gizmo/thumb_gz3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 186.4
+  "duration": 186.4,
+  "video_id": "QitKjetUYqU",
+  "scheduled_on": "2026-11-05"
  }
 ]

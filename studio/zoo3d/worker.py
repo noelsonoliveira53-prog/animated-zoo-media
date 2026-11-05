@@ -30,6 +30,91 @@ def log(msg):
 def status(msg):
     with open(os.path.join(ROOT, "status.txt"), "w", encoding="utf-8") as f: f.write(f"{msg} {datetime.datetime.now():%Y-%m-%d %H:%M:%S}\n")
 
+# ---------------------------------------------------------------- songs (ACE-Step 1.5, local GPU, MIT license)
+import json, urllib.request
+ACE = os.path.join(ROOT, "acestep")
+SONGS = os.path.join(ROOT, "songs_out"); os.makedirs(SONGS, exist_ok=True)
+API = "http://127.0.0.1:8001"
+_ace_proc = None
+
+def find_uv():
+    la, up = os.environ.get("LOCALAPPDATA", ""), os.environ.get("USERPROFILE", "")
+    for c in [read(os.path.join(ROOT, "uv_path.txt")), os.path.join(la, "Microsoft", "WinGet", "Links", "uv.exe"),
+              os.path.join(up, ".local", "bin", "uv.exe"), os.path.join(up, ".cargo", "bin", "uv.exe"), "uv"]:
+        if not c: continue
+        try:
+            if subprocess.run([c, "--version"], capture_output=True, timeout=20).returncode == 0: return c
+        except Exception: continue
+    return None
+
+def http(path, body=None, timeout=60):
+    req = urllib.request.Request(API + path, data=json.dumps(body).encode() if body is not None else None,
+                                 headers={"Content-Type": "application/json"}, method="POST" if body is not None else "GET")
+    with urllib.request.urlopen(req, timeout=timeout) as r: return r.read()
+
+def ace_up():
+    global _ace_proc
+    try: http("/health", timeout=5); return True
+    except Exception: pass
+    uv = find_uv()
+    if not uv or not os.path.isdir(ACE): log("songs: ACE-Step not installed - run INSTALL_SONG_ENGINE.bat"); return False
+    if _ace_proc is None or _ace_proc.poll() is not None:
+        log("songs: starting ACE-Step API (first start downloads the model, can take 10+ min)")
+        _ace_proc = subprocess.Popen([uv, "run", "acestep-api"], cwd=ACE, stdout=open(os.path.join(ROOT, "acestep.log"), "a"), stderr=subprocess.STDOUT)
+    for _ in range(240):
+        time.sleep(5)
+        try: http("/health", timeout=5); log("songs: ACE-Step API ready"); return True
+        except Exception: pass
+    log("songs: ACE-Step API did not come up - see acestep.log"); return False
+
+def dig(o, key):
+    if isinstance(o, dict):
+        if key in o: return o[key]
+        for v in o.values():
+            r = dig(v, key)
+            if r is not None: return r
+    if isinstance(o, list):
+        for v in o:
+            r = dig(v, key)
+            if r is not None: return r
+    return None
+
+def make_song(sid, sp):
+    out = os.path.join(SONGS, sid); os.makedirs(out, exist_ok=True)
+    spec = json.load(open(sp, encoding="utf-8"))
+    mp3 = os.path.join(out, "song.mp3")
+    if not os.path.exists(mp3):
+        if not ace_up(): return False
+        status(f"SONG {sid}")
+        body = {"prompt": spec["style"], "lyrics": spec["lyrics"], "audio_duration": spec.get("duration", 180), "bpm": spec.get("bpm"),
+                "key_scale": spec.get("key", "C Major"), "time_signature": "4/4", "vocal_language": "en", "audio_format": "mp3",
+                "inference_steps": spec.get("steps", 8), "seed": spec.get("seed", -1), "thinking": spec.get("thinking", True), "batch_size": 1}
+        r = json.loads(http("/release_task", body))
+        tid = dig(r, "task_id") or dig(r, "id")
+        log(f"{sid}: song task {tid}")
+        for _ in range(360):
+            time.sleep(5)
+            q = json.loads(http("/query_result", {"task_id_list": [tid]}))
+            st = dig(q, "status")
+            if st == 2: log(f"{sid}: song generation failed: {str(q)[:400]}"); return False
+            if st == 1:
+                res = dig(q, "result"); res = json.loads(res) if isinstance(res, str) else res
+                f = dig(res, "file")
+                open(mp3, "wb").write(http(f if f.startswith("/") else "/v1/audio?path=" + f, timeout=300))
+                open(os.path.join(out, "meta.json"), "w").write(json.dumps(res))
+                break
+        else:
+            log(f"{sid}: song timed out"); return False
+    lyr = os.path.join(out, "lyrics.txt"); open(lyr, "w", encoding="utf-8").write(spec["lyrics"])
+    status(f"ALIGNING {sid}")
+    p = subprocess.run([find_uv(), "run", "--with", "stable-ts", "python", os.path.join(ROOT, "zoo3d", "align.py"), mp3, lyr, os.path.join(out, "words.json")],
+                       cwd=ACE, capture_output=True, text=True)
+    if p.returncode != 0: log(f"{sid}: align failed: {p.stderr[-600:]}"); return False
+    open(os.path.join(out, "SONG_DONE"), "w").write(datetime.datetime.now().isoformat())
+    log(f"{sid}: SONG DONE -> {mp3}")
+    return True
+
+
 def find_ffmpeg():
     cands = [read(os.path.join(ROOT, "ffmpeg_path.txt"))]
     la = os.environ.get("LOCALAPPDATA", "")
@@ -79,9 +164,17 @@ def main():
     fails = {}
     while True:
         busy = False
+        for sp in sorted(glob.glob(os.path.join(JOBS, "*.song.json"))):
+            sid = os.path.basename(sp)[:-len(".song.json")]
+            if os.path.exists(os.path.join(SONGS, sid, "SONG_DONE")) or fails.get("song:" + sid, 0) >= 3: continue
+            busy = True
+            try:
+                if not make_song(sid, sp): fails["song:" + sid] = fails.get("song:" + sid, 0) + 1
+            except Exception:
+                fails["song:" + sid] = fails.get("song:" + sid, 0) + 1; log(f"{sid}: song crashed: {traceback.format_exc()[-1200:]}")
         for jp in sorted(glob.glob(os.path.join(JOBS, "*.json"))):
             jid = os.path.splitext(os.path.basename(jp))[0]
-            if jid.endswith("_timing") or os.path.exists(os.path.join(OUT, jid, "DONE")): continue
+            if jid.endswith("_timing") or jid.endswith(".song") or os.path.exists(os.path.join(OUT, jid, "DONE")): continue
             if fails.get(jid, 0) >= 3: continue
             busy = True
             try:

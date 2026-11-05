@@ -44,5 +44,28 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 202.8
+ },
+ {
+  "file": "gizmo/gz3d_ep01.mp4",
+  "title": "The Planets Song for Kids! 8 Planets with Gizmo the Robot",
+  "description": "The Planets Song for kids! Sing all 8 planets in order with Gizmo the robot: Mercury, Venus, Earth, Mars, Jupiter, Saturn, Uranus and Neptune.\nKids learn one true fact about each planet and the Sun. Ages 3-7. Blast off and sing along!\n\nLYRICS\nBeep boop! Hi, I'm Gizmo!\nLet's sing the Planets Song!\nMercury, Mercury, closest to the Sun,\nTiny and speedy, zoom, zoom, zoom!\nVenus, Venus, hottest one of all,\nThick clouds hide it, hot, hot, hot!\nEarth, Earth, our home sweet home,\nWater, plants, and you and me!\nEight planets spinning round the Sun,\nMercury, Venus, Earth and Mars,\nJupiter, Saturn, Uranus, Neptune,\nEight planets spinning round the Sun!\nMars, Mars, the dusty red one,\nRusty dust makes Mars look red!\nJupiter, Jupiter, biggest of them all,\nA giant storm, the Great Red Spot!\nSaturn, Saturn, with the shiny rings,\nRings of ice and rock go round!\nClap, clap! Clap your hands!\nSpin, spin, like a planet!\nJump, jump, reach the stars!\nThree, two, one, blast off!\nUranus, Uranus, spinning on its side,\nTipped way over, rolling like a ball!\nNeptune, Neptune, farthest from the Sun,\nDeep blue, windy, and so cold!\nEight planets, now you know them all!\nLet's all sing it, everyone!\nBye bye! Sing it again tomorrow!",
+  "tags": [
+   "planets song",
+   "solar system song",
+   "8 planets song",
+   "planets for kids",
+   "space for kids",
+   "kids science songs",
+   "Gizmo Explains",
+   "3D kids songs",
+   "nursery rhymes"
+  ],
+  "date": "2026-11-06",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep01.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 186.4
  }
 ]

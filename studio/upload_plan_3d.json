@@ -271,5 +271,28 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "moon/mb3d_ep02.mp4",
+  "title": "Count the Stars \ud83c\udf19 Lullaby for Babies & Kids | Moonbeam",
+  "description": "Count the Stars, a gentle lullaby for babies and kids. Count from 1 to 5 with Luna the sleepy owl as the stars twinkle and the moon smiles.\nSoft music box and piano, slow breathing, and a calm goodnight to help little ones fall asleep. Ages 0-6.\n\nLYRICS\nCount the stars and close your eyes,\nOne by one across the skies,\nTwinkle softly, shining bright,\nCount the stars and say goodnight.\nOne little star says hello,\nTwo little stars in a sleepy glow,\nThree little stars, yawn so wide,\nSnuggle up, warm inside.\nFour little stars, sparkle and blink,\nFive little stars, softly I think,\nMoon is smiling, round and wide,\nOwls and bunnies sleep inside.\nBreathe in slow, and breathe out slow,\nRest your arms and wiggle your toes,\nStars are suns so far away,\nThey'll shine again another day.\nTeddy's sleepy, lamb is too,\nBunny's dreaming, so are you,\nHush now, hush now, close your eyes,\nStars will twinkle in the skies.\nGoodnight, little stars. Goodnight.",
+  "tags": [
+   "lullaby for babies",
+   "count the stars",
+   "bedtime song",
+   "sleep music for kids",
+   "goodnight song",
+   "lullabies",
+   "baby sleep",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ],
+  "date": "2026-11-07",
+  "time": "7:00 PM",
+  "thumb": "brand/moon/thumb_mb3d_ep02.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 170.0
  }
 ]

@@ -99,5 +99,28 @@
   "duration": 186.4,
   "video_id": "QitKjetUYqU",
   "scheduled_on": "2026-11-05"
+ },
+ {
+  "file": "gizmo/gz3d_ep02.mp4",
+  "title": "Weather Song for Kids! Sunny, Rainy, Windy with Gizmo",
+  "description": "The Weather Song for kids! Sing along with Gizmo the robot and learn sunny, rainy, windy and snowy weather.\nKids learn simple weather facts (rain helps plants grow, wind is moving air, snowflakes are made of ice) and act out each kind of weather. Ages 2-6.\n\nLYRICS\nWhat's the weather, weather today?\nLook outside and you can say!\nSunny, rainy, windy, snow,\nWhat's the weather? Here we go!\nSunny, sunny, the sun is out,\nWarm and bright, we run about!\nWear your hat and drink water too,\nThe sun gives light to me and you!\nRainy, rainy, drip, drop, drip,\nClouds are full, the raindrops slip!\nBoots and umbrella, splash, hooray,\nRain helps flowers grow each day!\nWindy, windy, whoosh, whoosh, whoosh,\nLeaves are dancing, see them go!\nWind is air that moves, you know,\nKites fly high when the wind blows!\nSnowy, snowy, cold and white,\nSnowflakes falling, soft and light!\nEvery snowflake, tiny and new,\nIs made of ice, it's really true!\nSunny, stretch your arms up high!\nRainy, wiggle fingers, drip, drop, drip!\nWindy, sway from side to side!\nSnowy, shiver, brrr, and freeze!\nSunny, rainy, windy, snow! Bye-bye, friends!\nWhat's the weather?\nWhat's the weather today?\nLook outside and you can see\nSunny rainy windy snow\nHere we go\nBye bye friends",
+  "tags": [
+   "weather song",
+   "weather for kids",
+   "sunny rainy song",
+   "learn weather",
+   "science for kids",
+   "kids songs",
+   "nursery rhymes",
+   "Gizmo Explains",
+   "3D kids songs"
+  ],
+  "date": "2026-11-07",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep02.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 165.0
  }
 ]

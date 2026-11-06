@@ -61,3 +61,15 @@
   Moonbeam 7:00 PM, Zoo 5:00 PM ET) for at least a week so timing can be compared.
 - **Watch next check:** the first 3D uploads (Bloop Colors Song, Fruity Yummy Fruits Song, both Nov 5) vs. the 2D episodes on the same
   channels (Bloop 2D: 2.4% CTR, 0:27 average view).
+
+## Adjustments from the Nov 6 views check (first 3D numbers)
+- **3D songs are working: keep going and keep them short.** Early 3D watch time is 0:47-1:08 (24-41% viewed) vs 0:13-0:45 (5-15%) for 2D.
+  The 2:31 Bloop cut kept the most (40.7%). New target length: **2:30-3:00** (hard max 3:30). Cut a verse before adding one.
+- **One theme per song.** Mixed lists lose viewers: "Amazing Animal Bodies" (mixed facts) holds 0:18 vs 0:45 for one-habitat Ocean & Ice.
+  Every song is one habitat, one vehicle, one routine, or one concept (colors, counting, weather).
+- **Zoo topic queue (proven habitats first):** Ocean Animals Song, Jungle/Treetop Animals Song, Polar Animals Song, then Farm and Baby Animals.
+  The Zoo gets 95% of network impressions, so give it the first finished render each day.
+- **Titles:** keep "<Topic> Song for Kids! <number + friendly noun> with <Host>". Prefer a number ("Count 1 to 5", "5 Ocean Friends")
+  over "Surprise Facts" (1.6-2.3% CTR vs 3.7% for "Meet 5 Zoo Friends"). Moonbeam titles end with 🌙 (5.9% CTR, best in the network).
+- **Posting times:** still no signal; keep the slots (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00 3D / 5:00 2D, Moonbeam 7:00 PM ET).
+- **Next check:** compare the six 3D songs that air Nov 5-7 once each has a day of impressions (CTR vs the 2D episodes on the same channel).

@@ -69,9 +69,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 165.0
+  "duration": 165.0,
+  "video_id": "xds8P9IZNOs",
+  "scheduled_on": "2026-11-06"
  },
  {
   "file": "bloop/bl3d_ep01_v3.mp4",
@@ -142,9 +144,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 160.0
+  "duration": 160.0,
+  "video_id": "_KlFT6GPUSc",
+  "scheduled_on": "2026-11-06"
  },
  {
   "file": "zoo3d_ep01.mp4",
@@ -166,9 +170,11 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 180.0
+  "duration": 180.0,
+  "video_id": "gPL299G_wt4",
+  "scheduled_on": "2026-11-06"
  },
  {
   "file": "moon/mb3d_ep01.mp4",
@@ -189,9 +195,11 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 170.0
+  "duration": 170.0,
+  "video_id": "cw-HaJ63Jeo",
+  "scheduled_on": "2026-11-06"
  },
  {
   "file": "gizmo/gz3d_ep02.mp4",
@@ -212,8 +220,10 @@
   "time": "2:10 PM",
   "thumb": "brand/gizmo/thumb_gz3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 165.0
+  "duration": 165.0,
+  "video_id": "cbOHkcFNEnI",
+  "scheduled_on": "2026-11-06"
  }
 ]

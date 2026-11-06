@@ -31,10 +31,21 @@ def lyric_sections(lyrics):
     return secs
 
 
-def repair(tokens, aligned, tx):
-    """tokens: lyric tokens in order. Returns [(start,end)] per token."""
-    n = len(tokens)
-    # 1) map aligned words onto tokens in order (tolerant)
+def _merge_tx(tx):
+    out = []
+    for w in tx or []:
+        if out and w["w"].startswith("-"):
+            out[-1] = {"w": out[-1]["w"] + w["w"], "start": out[-1]["start"], "end": w["end"]}
+        else:
+            out.append(dict(w))
+    return out
+
+
+def repair(line_toks, aligned, tx):
+    """line_toks: list of lines (lists of lyric tokens). Returns (times per token, n repaired, extra tx words after the lyrics)."""
+    tokens = [t for l in line_toks for t in l]; n = len(tokens)
+    tx = _merge_tx(tx)
+    # 1) forced alignment mapped onto tokens in order (tolerant)
     times = [None] * n; i = 0
     for k, t in enumerate(tokens):
         j = i
@@ -42,31 +53,65 @@ def repair(tokens, aligned, tx):
         if j >= len(aligned) or j >= i + 4: j = i
         if j < len(aligned):
             times[k] = [aligned[j]["start"], max(aligned[j]["end"], aligned[j]["start"] + 0.05)]; i = j + 1
-    # 2) transcription matches
-    txt = [None] * n
-    if tx:
-        a = [norm(t) for t in tokens]; b = [norm(w["w"]) for w in tx]
-        sm = difflib.SequenceMatcher(None, a, b, autojunk=False)
-        for blk in sm.get_matching_blocks():
-            for q in range(blk.size):
-                w = tx[blk.b + q]; txt[blk.a + q] = [w["start"], max(w["end"], w["start"] + 0.05)]
     bad = [times[k] is None for k in range(n)]
-    for k in range(n):   # suspicious forced times: stacked (3+ tokens within 0.15 s) or stretched (> 3 s)
-        if bad[k]: continue
-        if times[k][1] - times[k][0] > 3.0: bad[k] = True
-        stack = [q for q in range(max(0, k - 3), min(n, k + 4)) if times[q] and abs(times[q][0] - times[k][0]) < 0.15]
-        if len(stack) >= 3: bad[k] = True
+    def suspicious(a, b):   # forced times inside one line look broken?
+        ts = [times[k] for k in range(a, b)]
+        if any(t is None for t in ts): return True
+        if any(t[1] - t[0] > 3.0 for t in ts): return True
+        if any(ts[q + 1][0] - ts[q][1] > 2.5 for q in range(len(ts) - 1)): return True
+        if any(ts[q + 1][0] < ts[q][0] - 0.05 for q in range(len(ts) - 1)): return True
+        st = sorted(t[0] for t in ts)
+        return any(st[q + 2] - st[q] < 0.15 for q in range(len(st) - 2))
+    # 2) line-by-line anchoring on the transcription (greedy, in order)
+    bn = [norm(w["w"]) for w in tx]
+    pos, prev_end, k0 = 0, 0.0, 0
+    for toks in line_toks:
+        a, b = k0, k0 + len(toks); k0 = b
+        if not tx: continue
+        an = [norm(t) for t in toks]
+        best = None
+        for s0 in range(pos, len(tx)):
+            if tx[s0]["start"] < prev_end - 1.0: continue
+            if tx[s0]["start"] > prev_end + 45: break
+            win = bn[s0:s0 + len(toks) + 4]
+            sm = difflib.SequenceMatcher(None, an, win, autojunk=False)
+            lim = tx[s0]["start"] + max(6.0, 0.9 * len(toks))   # the matched words must sit close together in time
+            pairs = [(blk.a + q, s0 + blk.b + q) for blk in sm.get_matching_blocks() for q in range(blk.size)]
+            pairs = [pq for pq in pairs if tx[pq[1]]["start"] <= lim]
+            if not pairs: continue
+            sc = len(pairs) / max(1, len(toks))
+            if pairs and pairs[0][0] == 0: sc += 0.05   # prefer windows that start on the line's first word
+            if best is None or sc > best[0] + 1e-9: best = (sc, pairs)
+        if best and best[0] >= 0.5:
+            pairs = best[1]
+            fk, ftx = pairs[0]
+            off = abs(times[a + fk][0] - tx[ftx]["start"]) if times[a + fk] else 99
+            gap = (times[a][0] - prev_end) if times[a] else 0
+            if suspicious(a, b) or (gap > 8 and off > 3.0 and best[0] >= 0.7):
+                matched = {a + x: tx[y] for x, y in pairs}
+                for k in range(a, b):
+                    if k in matched: times[k] = [matched[k]["start"], max(matched[k]["end"], matched[k]["start"] + 0.05)]; bad[k] = False
+                    else: bad[k] = True
+            pos = pairs[-1][1] + 1
+        else:
+            if suspicious(a, b):
+                for k in range(a, b): bad[k] = True
+        good = [times[k][1] for k in range(a, b) if not bad[k] and times[k]]
+        if good: prev_end = max(good)
+    # 3) word-level clean-up: stacked / stretched / non-monotonic / big gap inside the line
+    k0 = 0
+    for toks in line_toks:
+        a, b = k0, k0 + len(toks); k0 = b
+        for k in range(a, b):
+            if bad[k]: continue
+            if times[k][1] - times[k][0] > 3.0: bad[k] = True
+            if k > a and not bad[k - 1] and times[k][0] - times[k - 1][1] > 2.5: bad[k] = True
     last = -1.0
-    for k in range(n):   # non-monotonic
+    for k in range(n):
         if bad[k]: continue
         if times[k][0] < last - 0.05: bad[k] = True; continue
         last = times[k][0]
-    for k in range(n):   # the transcription rescues suspicious words it heard (only if it keeps order)
-        if bad[k] and txt[k]:
-            prev = max([times[q][0] for q in range(k) if not bad[q]] or [-1])
-            nxt = min([times[q][0] for q in range(k + 1, n) if not bad[q]] or [1e9])
-            if prev - 0.05 <= txt[k][0] <= nxt + 0.05: times[k] = list(txt[k]); bad[k] = False
-    # 3) re-spread bad runs between good neighbours
+    # 4) re-spread bad runs right after the last good word
     k = 0
     while k < n:
         if not bad[k]: k += 1; continue
@@ -75,21 +120,23 @@ def repair(tokens, aligned, tx):
         t0 = times[k - 1][1] if k > 0 else 0.0
         t1 = times[e][0] if e < n else t0 + 0.45 * (e - k)
         span = max(0.12 * (e - k), min(t1 - t0, 0.5 * (e - k)))
-        st = t0 + 0.05   # the singer usually carries straight on after the last good word
+        st = t0 + 0.05
         step = span / (e - k)
         for q in range(k, e): times[q] = [st + (q - k) * step, st + (q - k + 1) * step]
         k = e
-    for k in range(n):   # cap word length (sustained notes) so lyrics never sit on screen for 10+ s
+    for k in range(n):   # cap word length so lyrics never sit on screen for 10+ s
         times[k][1] = min(times[k][1], times[k][0] + 2.5)
         if k + 1 < n: times[k][1] = min(times[k][1], max(times[k][0] + 0.08, times[k + 1][0]))
-    return times, sum(bad)
+    end = times[-1][1] if n else 0
+    extra = [w for w in tx if w["start"] > end + 0.5]
+    return times, sum(bad), extra
 
 
 def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
     who_map = who_map or spec.get("who_map", {})
     secs = lyric_sections(spec["lyrics"])
-    tokens = [t for s in secs for ln in s["lines"] for t in ln]
-    times, nbad = repair(tokens, aligned, tx)
+    line_toks = [ln for s in secs for ln in s["lines"]]
+    times, nbad, extra = repair(line_toks, aligned, tx)
     words, lines, sections = [], [], []; k = 0
     for s in secs:
         s_who = who_map.get(s["name"], who); s0 = None
@@ -102,6 +149,17 @@ def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
             lines.append({"text": " ".join(toks), "start": lw[0]["start"], "end": lw[-1]["end"], "who": s_who, "kind": "sing", "section": s["name"]})
             s0 = lw[0]["start"] if s0 is None else s0
         if s0 is not None: sections.append({"name": s["name"], "start": s0, "who": s_who})
+    # the singer often repeats the chorus after the written lyrics end: caption it from the transcription
+    if extra and lines:
+        grp = []
+        for w in extra + [None]:
+            if w is None or (grp and (w["start"] - grp[-1]["end"] > 0.8 or len(grp) >= 8 or (len(grp) >= 3 and w["w"].strip()[:1].isupper()))):
+                if grp:
+                    lw = [{"w": x["w"].strip(), "start": round(x["start"], 3), "end": round(min(max(x["end"], x["start"] + 0.08), x["start"] + 2.5), 3), "who": lines[-1]["who"]} for x in grp]
+                    words += lw
+                    lines.append({"text": " ".join(x["w"] for x in lw), "start": lw[0]["start"], "end": lw[-1]["end"], "who": lw[0]["who"], "kind": "sing", "section": sections[-1]["name"], "extra": True})
+                grp = []
+            if w is not None: grp.append(w)
     fps = 24
     pcm = subprocess.run([ffmpeg, "-v", "error", "-i", song, "-ac", "1", "-ar", "24000", "-f", "f32le", "-"], capture_output=True, check=True).stdout
     a = np.frombuffer(pcm, dtype=np.float32); sr = 24000; dur = len(a) / sr

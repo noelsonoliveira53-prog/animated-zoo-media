@@ -166,14 +166,29 @@ def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
     hop = sr // fps
     rms = np.array([np.sqrt(np.mean(a[q:q + hop] ** 2)) for q in range(0, len(a), hop)])
     ref = np.percentile(rms[rms > 1e-4], 95) if (rms > 1e-4).any() else 1
-    gate = np.zeros_like(rms)
+    loud = np.clip(rms / ref, 0, 1)
+    # syllable-driven mouth: one open/close pulse per syllable (vowel group) inside each sung word, so the lips
+    # articulate with the words instead of following the whole mix; loudness only scales the opening
+    m = np.zeros(len(rms) + 2)
     for w in words:
-        gate[int(max(0, w["start"] - 0.03) * fps): int(w["end"] * fps) + 1] = 1
-    m = np.clip(rms / ref * 1.15, 0, 1) * gate
+        n = max(1, len(re.findall(r"[aeiouy]+", norm(w["w"]).rstrip("e") or "a")))
+        s0, e0 = w["start"], max(w["end"], w["start"] + 0.1)
+        seg = (e0 - s0) / n
+        for q in range(n):
+            a, b = s0 + q * seg, s0 + (q + 1) * seg
+            fa, fb = int(a * fps), max(int(a * fps) + 1, int(round(b * fps)))
+            for f in range(fa, min(fb, len(m))):
+                ph = (f / fps - a) / max(1e-3, b - a)
+                if seg > 0.6:   env = 0.85 + 0.08 * np.sin(f * 0.9)            # held note: stay open, slight wobble
+                elif ph < 0.55: env = min(1.0, 0.25 + ph * 2.2)                 # open fast
+                else:           env = 1.0 - (ph - 0.55) / 0.45 * 0.92            # close before the next syllable / word
+                lv = loud[min(f, len(loud) - 1)]
+                m[f] = max(m[f], env * (0.6 + 0.4 * lv)) if env > 0.15 else max(m[f], env)
+    m = m[:len(rms)]
     out, cur = np.zeros_like(m), 0.0
     for q, x in enumerate(m):
-        cur = x if x > cur else cur * 0.55 + x * 0.45; out[q] = cur
-    mouth = [round(float(x), 3) for x in np.concatenate([out[1:], [0.0]])]
+        cur = x if x > cur else cur * 0.25 + x * 0.75; out[q] = cur
+    mouth = [round(float(x), 3) for x in np.concatenate([out[1:], [0.0]])]   # 1-frame lead
     bpm = spec.get("bpm", 116); beat = 60 / bpm
     # a long instrumental gap inside a section becomes its own "break" section (dance shots, no lyrics)
     fixed = []
@@ -191,3 +206,25 @@ def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
     sections[-1]["end"] = dur
     return {"duration": dur, "bpm": bpm, "beats": [round(q * beat, 4) for q in range(int(dur / beat) + 1)], "sections": sections,
             "lines": lines, "words": words, "mouth": mouth, "fps": fps, "repaired_words": nbad}
+
+
+def color_schedule(timing, colors, base=None):
+    """[[t, hex], ...] switching colour right as each colour/shape word is sung (sorted, deduplicated)."""
+    cw = {norm(k): v for k, v in colors.items()}
+    out = [[0.0, base]] if base else []
+    for w in timing["words"]:
+        n = norm(w["w"]); n = n[:-1] if n.endswith("s") and n[:-1] in cw else n
+        if n in cw: out.append([round(max(0.0, w["start"] - 0.05), 3), cw[n]])
+    out.sort(key=lambda e: e[0])
+    ded = []
+    for e in out:
+        if not ded or ded[-1][1] != e[1]: ded.append(e)
+    return ded
+
+
+def apply_colors(job, timing, spec):
+    if not spec.get("color_words"): return job
+    for c in job["cast"]:
+        if c["id"] == spec.get("color_char", "host"):
+            c.setdefault("opts", {})["color_schedule"] = color_schedule(timing, spec["color_words"], c["opts"].get("color"))
+    return job

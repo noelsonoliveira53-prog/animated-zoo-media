@@ -1,0 +1,51 @@
+
+  120 videos across 5 channels, outliers at 2.0x or better
+
+     7.08x  2,400,000  vs   338,950 median   ChuChu TV              The Blue Color Song - Part 2 #chuchutv #toddlersongs
+            Unclassified
+     7.08x  2,400,000  vs   338,950 median   ChuChu TV              The Blue Color Song - Part 1 #chuchutv #toddlersongs
+            Unclassified
+     6.90x  2,000,000  vs   289,750 median   Pinkfong               [NEW] Where Is My Mama? | Kids' Halloween Songs | Pi
+            Unclassified
+     5.24x    110,800  vs    21,150 median   Little Angel           Jill the Mermaid vs. Baby John the Shark! | Little A
+            The Comparison
+     5.13x  7,700,000  vs 1,500,000 median   Super Simple Songs     Fruit Is Yummy | High Contrast Kids Video | Super Si
+            Unclassified
+     4.54x     96,100  vs    21,150 median   Little Angel           Brush Your Teeth Song Healthy Habits | Little Angel 
+            Unclassified
+     4.00x  6,000,000  vs 1,500,000 median   Super Simple Songs     Everybody Celebrate | Best Celebration Song for Kids
+            Unclassified
+     3.33x  5,000,000  vs 1,500,000 median   Super Simple Songs     Top 20 Healthy Kids Routines Songs | Super Simple's 
+            Unclassified
+     3.25x  1,100,000  vs   338,950 median   ChuChu TV              Learn the Letter Y with Fun Activities & Songs | Chu
+            Unclassified
+     3.17x    918,000  vs   289,750 median   Pinkfong               Pinkfong & Ninimo Spooky Kids Songs | Scary Jungle A
+            The Stack
+     3.17x     67,000  vs    21,150 median   Little Angel           Baby John's Beach Safety Adventure! | Little Angel K
+            Unclassified
+     2.80x  4,200,000  vs 1,500,000 median   Super Simple Songs     Healthy Eating Song for Kids | I Love Eating Vegetab
+            Unclassified
+     2.72x    789,300  vs   289,750 median   Pinkfong               Boo! Hoi's Halloween Playground Compilation | Zombie
+            Unclassified
+     2.66x  1,600,000  vs   601,150 median   Cocomelon              Let's Eat Yummy Ice Cream! #cocomelon #toys
+            Unclassified
+     2.53x    858,300  vs   338,950 median   ChuChu TV              Learn Numbers 1-10 with Surprise Eggs | Counting Son
+            Unclassified
+     2.50x  1,500,000  vs   601,150 median   Cocomelon              Ten in the Bed Counting Song & Five Little Animals! 
+            Unclassified
+     2.38x     50,300  vs    21,150 median   Little Angel           Sink or Float Family Fun in the Swimming Pool | Litt
+            Unclassified
+     2.33x  3,500,000  vs 1,500,000 median   Super Simple Songs     Top 20 Counting Songs | Numbers Practice for Prescho
+            The Stack
+     2.07x  3,100,000  vs 1,500,000 median   Super Simple Songs     Counting Up To 20 | Sea Animals Kids Math Song with 
+            Unclassified
+     2.00x  1,200,000  vs   601,150 median   Cocomelon              Twinkle Star is in Trouble! Night Time Songs | CoCom
+            Unclassified
+     2.00x  1,200,000  vs   601,150 median   Cocomelon              Learn Your ABCs with JJ and Bella! | CoComelon Nurse
+            Unclassified
+
+  formulas among the outliers
+    18x  Unclassified
+     2x  The Stack
+     1x  The Comparison
+

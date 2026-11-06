@@ -73,3 +73,24 @@
   over "Surprise Facts" (1.6-2.3% CTR vs 3.7% for "Meet 5 Zoo Friends"). Moonbeam titles end with 🌙 (5.9% CTR, best in the network).
 - **Posting times:** still no signal; keep the slots (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00 3D / 5:00 2D, Moonbeam 7:00 PM ET).
 - **Next check:** compare the six 3D songs that air Nov 5-7 once each has a day of impressions (CTR vs the 2D episodes on the same channel).
+
+## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)
+Data: docs/research/collected.json + swipe.txt (Cocomelon, Super Simple, Pinkfong, Little Angel, ChuChu TV, Morphle).
+Top outliers: Morphle "Giant Robot Cops Attack!" 23x, "Animal Hypno Mixup!" 22x; Cocomelon "Yes Yes Finger Family Playground Song" 14x, "Bananaphone" 11x;
+ChuChu "The Blue Color Song - Part 1" 7x; Pinkfong "Where Is My Mama?" 7x; Super Simple "The Animals On The Farm (Remake)" 6x.
+Title formulas to use (keep <= 60 chars, end with "| Brand" when it fits):
+- Character change / twist: "Bloop Turns Into Shapes!", "Help! Milo Turned Into a Zebra!"
+- Question hook: "What Do Animals Eat?", "Where Is My Mama?"
+- Familiar song + twist: "Wheels on the Fire Truck", "Yes Yes Fruit Salad Song"
+- Topic song as a series: "Blue Color Song - Part 1"
+- Exclamation command: "Red Means Stop!", "Banana Dance!"
+Over-indexing topics: colors, counting, fruit/food, animal sounds, healthy routines (brushing teeth), silly transformations, bedtime.
+Moonbeam: 🌙 in the title had the best CTR (5.9%) — keep the moon emoji.
+Next ideas queue: Bloop "Bloop Turns Blue! Blue Color Song", "Red + Yellow = Orange?!"; Truck "Wheels on the Fire Truck", "Help! The Dump Truck Is Stuck!";
+Fruity "Yes Yes Fruit Salad Song", "Five Little Grapes Jumping on the Bed"; Zoo "Milo's Animal Sounds Song", "Where Is My Mama? Baby Animals";
+Moon "Ten Sleepy Sheep Counting Lullaby"; Gizmo "Sink or Float?", "Why Is the Sky Blue?", "Gizmo Makes a Rainbow!".
+
+## Quality (Nov 6)
+Renders are now native 1920x1080, every frame (no "on twos"), then finish.py upscales to 3840x2160 (lanczos + light sharpen),
+burns the lyrics at 4K and encodes AV1 10-bit sized under 100 MB so the raw-GitHub upload recipe still works.
+Mouth animation is now syllable-driven (one open/close per syllable, loudness scales it) for clearer lip-sync.

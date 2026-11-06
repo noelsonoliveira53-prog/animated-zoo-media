@@ -75,9 +75,17 @@ def main():
     sub = os.path.join(work, jid + ".ass")
     open(sub, "w").write(ass(timing, ch, meta.get("card", meta["title"].split("|")[0].strip())))
     out = os.path.join(work, jid + ".mp4")
-    vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "4M", "-bufsize", "8M",
-                    "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+    if "--hd" in sys.argv:   # old 1080p H.264 path
+        vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "4M", "-bufsize", "8M",
+                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+    else:   # 4K: lanczos upscale + light sharpen, lyrics burned at 4K (crisp), AV1 10-bit sized to stay under GitHub's 100 MB
+        dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", raw], capture_output=True, text=True).stdout.strip() or timing["duration"])
+        vb = int(((94 * 8 * 1e6) / dur - 192e3) * 0.96)
+        vf = f"scale=3840:2160:flags=lanczos,unsharp=5:5:0.5:5:5:0.0,subtitles={sub}:fontsdir={FONT_DIR}"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
+                        "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+        print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")
     # thumbnail: the thumb frame + big words
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
     thumb = os.path.join(work, f"thumb_{jid}.png")

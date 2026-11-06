@@ -53,6 +53,7 @@ if spec.get("job"):
     json.dump(t, open(os.path.join(J, jid + "_timing.json"), "w"))
     shutil.copyfile(song, os.path.join(J, jid + "_song.wav"))     # mp3 content; ffmpeg probes it
     job.setdefault("timing_file", jid + "_timing.json"); job.setdefault("audio", jid + "_song.wav")
-    job.setdefault("res", "1280x720"); job.setdefault("step", 2)
+    job.setdefault("res", "1920x1080"); job.setdefault("step", 1)
+    timing_lib.apply_colors(job, t, spec)
     json.dump(job, open(os.path.join(J, jid + ".json"), "w"))
     print("JOB", jid, "timing:", round(t["duration"], 1), "s,", len(t["sections"]), "sections, repaired", t["repaired_words"])

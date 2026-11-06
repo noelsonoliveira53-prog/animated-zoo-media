@@ -1,474 +1,578 @@
 {
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Lion]\nI'm a lion, look at my mane!\nI live with my family, a pride!\nLions say roar, roar, roar!\nRoar like a lion, everybody, roar!\n\n[Elephant]\nI'm an elephant, big and gray,\nMy trunk can smell and drink all day!\nElephants go toot, toot, toot!\nToot like an elephant, toot, toot, toot!\n\n[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Giraffe]\nI'm a giraffe, so very tall,\nI munch the leaves above it all!\nStretch your neck up to the sky,\nStretch up tall, way up high!\n\n[Zebra]\nI'm a zebra, black and white,\nMy stripes are such a lovely sight!\nGallop, gallop, swish my tail,\nGallop, gallop, down the trail!\n\n[Bridge]\nStomp like an elephant, stomp, stomp, stomp!\nStretch like a giraffe, up so high!\nSwish like a zebra, swish, swish, swish!\nClap for the lion and roar so loud!\n\n[Hippo]\nI'm a hippo, I love to swim,\nSplash all day, come jump right in!\nMud and water keep me cool,\nThe river is my swimming pool!\n\n[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Outro]\nBye-bye, savanna! Bye-bye, friends!",
+ "duration": 180,
  "bpm": 116,
- "voice": "af_heart",
- "formant": 1.12,
- "chords": "C G Am F",
- "style": "pop",
- "intro_bars": 2,
- "outro_bars": 2,
- "parts": [
-  {
-   "section": "hook",
-   "who": "host",
-   "lines": [
-    {
-     "text": "Hello friends, it's Milo, come with me!",
-     "notes": "E4:.5,G4:.5 G4:1 E4:.5 G4:.5,A4:1 G4:1 E4:1 C4:2"
-    },
-    {
-     "text": "Let's go to the sunny savanna, whee!",
-     "notes": "G4:1 G4:1 A4:.5 G4:.5 E4:.5,E4:.5 D4:.5,E4:.5,F4:1 G4:2"
-    }
-   ]
-  },
-  {
-   "section": "chorus1",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Big and small, let's meet them all!",
-     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
-    },
-    {
-     "text": "Savanna, savanna, sunny and warm,",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
-    },
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "verse_lion",
-   "who": "lion",
-   "voice": "am_puck",
-   "formant": 1.06,
-   "lines": [
-    {
-     "text": "I'm a lion, look at my mane!",
-     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:1 G4:2"
-    },
-    {
-     "text": "I live with my family, a pride!",
-     "notes": "F4:1 F4:1 F4:1 E4:1 D4:.5,D4:.5,E4:.5 D4:.5 C4:2"
-    },
-    {
-     "text": "Lions say roar, roar, roar!",
-     "notes": "E4:1 G4:1 A4:2 A4:2 G4:2"
-    },
-    {
-     "text": "Roar like a lion, everybody, roar!",
-     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:1 E4:.5,D4:.5,C4:.5,D4:.5 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "fact_lion",
-   "who": "lion",
-   "voice": "am_puck",
-   "speed": 0.95,
-   "speak": "Did you know? Lions live together in a big family group, called a pride!"
-  },
-  {
-   "section": "verse_elephant",
-   "who": "elephant",
-   "voice": "am_michael",
-   "formant": 1.04,
-   "lines": [
-    {
-     "text": "I'm an elephant, big and gray,",
-     "notes": "E4:1 E4:.5 G4:.5,G4:.5,A4:.5 A4:1 G4:1 E4:3"
-    },
-    {
-     "text": "My trunk can smell and drink all day!",
-     "notes": "F4:1 F4:1 F4:1 E4:1 D4:1 E4:1 D4:1 C4:1"
-    },
-    {
-     "text": "Elephants go toot, toot, toot!",
-     "notes": "E4:.5,G4:.5,G4:.5 A4:.5 A4:2 A4:2 G4:2"
-    },
-    {
-     "text": "Toot like an elephant, toot toot toot!",
-     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:.5,E4:.5 D4:1 D4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "fact_elephant",
-   "who": "elephant",
-   "voice": "am_michael",
-   "speed": 0.95,
-   "speak": "Elephants use their long trunks to smell, and to drink water!"
-  },
-  {
-   "section": "chorus2",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Big and small, let's meet them all!",
-     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
-    },
-    {
-     "text": "Savanna, savanna, sunny and warm,",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
-    },
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "ask_lion",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "What does the lion say?",
-     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
-    }
-   ]
-  },
-  {
-   "section": "say_lion",
-   "who": "lion",
-   "voice": "am_puck",
-   "formant": 1.06,
-   "lines": [
-    {
-     "text": "Roar! Roar! Roar!",
-     "notes": "A4:1 A4:1 G4:2"
-    }
-   ]
-  },
-  {
-   "section": "ask_elephant",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "What does the elephant say?",
-     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5,G4:.5 E4:1"
-    }
-   ]
-  },
-  {
-   "section": "say_elephant",
-   "who": "elephant",
-   "voice": "am_michael",
-   "formant": 1.04,
-   "lines": [
-    {
-     "text": "Toot! Toot! Toot!",
-     "notes": "A4:1 A4:1 G4:2"
-    }
-   ]
-  },
-  {
-   "section": "ask_giraffe",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "What does the giraffe say?",
-     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
-    }
-   ]
-  },
-  {
-   "section": "say_giraffe",
-   "who": "giraffe",
-   "voice": "af_bella",
-   "formant": 1.12,
-   "lines": [
-    {
-     "text": "Munch! Munch! Munch!",
-     "notes": "A4:1 A4:1 G4:2"
-    }
-   ]
-  },
-  {
-   "section": "ask_zebra",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "What does the zebra say?",
-     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
-    }
-   ]
-  },
-  {
-   "section": "say_zebra",
-   "who": "zebra",
-   "voice": "af_sky",
-   "formant": 1.12,
-   "lines": [
-    {
-     "text": "Hee-haw! Hee-haw!",
-     "notes": "A4:1,G4:1 A4:1,G4:1"
-    }
-   ]
-  },
-  {
-   "section": "ask_hippo",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "What does the hippo say?",
-     "notes": "G4:.5 G4:.5 E4:.5 G4:.5,A4:.5 G4:1.5"
-    }
-   ]
-  },
-  {
-   "section": "say_hippo",
-   "who": "hippo",
-   "voice": "am_echo",
-   "formant": 1.06,
-   "lines": [
-    {
-     "text": "Honk! Honk! Honk!",
-     "notes": "A4:1 A4:1 G4:2"
-    }
-   ]
-  },
-  {
-   "section": "verse_giraffe",
-   "who": "giraffe",
-   "voice": "af_bella",
-   "formant": 1.12,
-   "lines": [
-    {
-     "text": "I'm a giraffe, so tall, so tall!",
-     "notes": "E4:1 E4:1 G4:.5,A4:.5 A4:1 G4:1 A4:1 G4:2"
-    },
-    {
-     "text": "The tallest animal of all!",
-     "notes": "F4:1 F4:1,E4:1 D4:.5,D4:.5,E4:1 D4:1 C4:2"
-    },
-    {
-     "text": "Giraffes go munch, munch, munch!",
-     "notes": "E4:.5,G4:1 A4:.5 A4:2 A4:2 G4:2"
-    },
-    {
-     "text": "Stretch up high and munch, munch, munch!",
-     "notes": "G4:1 A4:1 G4:1 E4:1 D4:1 D4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "fact_giraffe",
-   "who": "giraffe",
-   "voice": "af_bella",
-   "speed": 0.95,
-   "speak": "Giraffes are the tallest animals in the whole wide world!"
-  },
-  {
-   "section": "action",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Stomp, stomp, stomp like an elephant!",
-     "notes": "C4:1 C4:1 C4:1 E4:1 E4:.5 G4:.5,G4:.5,A4:2.5"
-    },
-    {
-     "text": "Stretch up high like a tall giraffe!",
-     "notes": "G4:1 A4:1 A4:2 G4:.5 E4:.5 G4:1 E4:.5,D4:1.5"
-    },
-    {
-     "text": "Swish your tail like a zebra, swish!",
-     "notes": "E4:1 E4:1 G4:1 E4:.5 D4:.5 E4:.5,F4:.5 E4:3"
-    },
-    {
-     "text": "Now clap, clap, clap and jump, jump, jump!",
-     "notes": "G4:1 G4:.5 G4:.5 G4:.5 E4:.5 C4:1 C4:1 C4:3"
-    }
-   ]
-  },
-  {
-   "section": "verse_zebra",
-   "who": "zebra",
-   "voice": "af_sky",
-   "formant": 1.12,
-   "lines": [
-    {
-     "text": "I'm a zebra, black and white,",
-     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:3"
-    },
-    {
-     "text": "My stripes are special, just for me!",
-     "notes": "F4:1 F4:1 F4:1 E4:.5,D4:.5 E4:1 D4:1 C4:2"
-    },
-    {
-     "text": "Zebras go hee-haw, hee-haw!",
-     "notes": "E4:.5,G4:.5 A4:1 A4:1,G4:1 A4:2,G4:2"
-    },
-    {
-     "text": "Gallop like a zebra, hee-haw, hee!",
-     "notes": "G4:.5,E4:.5 D4:1 E4:.5 F4:.5,E4:1 D4:1,D4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "fact_zebra",
-   "who": "zebra",
-   "voice": "af_sky",
-   "speed": 0.95,
-   "speak": "Every zebra has its very own stripes. No two zebras are the same!"
-  },
-  {
-   "section": "chorus3",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Big and small, let's meet them all!",
-     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
-    },
-    {
-     "text": "Savanna, savanna, sunny and warm,",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
-    },
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "verse_hippo",
-   "who": "hippo",
-   "voice": "am_echo",
-   "formant": 1.06,
-   "lines": [
-    {
-     "text": "I'm a hippo, round and wide,",
-     "notes": "E4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:3"
-    },
-    {
-     "text": "I splash in water to stay cool!",
-     "notes": "F4:1 F4:1 F4:1 E4:.5,D4:.5 E4:1 D4:1 C4:2"
-    },
-    {
-     "text": "Hippos go honk, honk, honk!",
-     "notes": "E4:.5,G4:.5 A4:1 A4:2 A4:2 G4:2"
-    },
-    {
-     "text": "Splash like a hippo, splash, splash, splash!",
-     "notes": "G4:1 E4:1 D4:.5 E4:.5,F4:1 D4:1 D4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "fact_hippo",
-   "who": "hippo",
-   "voice": "am_echo",
-   "speed": 0.95,
-   "speak": "Hippos spend the hot day in the water, to stay nice and cool!"
-  },
-  {
-   "section": "chorus4",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Big and small, let's meet them all!",
-     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
-    },
-    {
-     "text": "Savanna, savanna, sunny and warm,",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
-    },
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "chorus5",
-   "who": "all",
-   "group": true,
-   "lines": [
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Big and small, let's meet them all!",
-     "notes": "F4:1 F4:1 A4:2 G4:1 E4:1 D4:1 D4:1"
-    },
-    {
-     "text": "Savanna, savanna, sunny and warm,",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 A4:.5,G4:.5 E4:1 D4:2"
-    },
-    {
-     "text": "Savanna, savanna, who lives there?",
-     "notes": "G4:.5,E4:.5,G4:1 G4:.5,E4:.5,G4:1 D4:1 E4:1 C4:2"
-    }
-   ]
-  },
-  {
-   "section": "outro",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Bye bye, friends, see you soon!",
-     "notes": "G4:1 E4:1 G4:2 A4:1 G4:1 E4:2"
-    },
-    {
-     "text": "Sing again tomorrow with Milo!",
-     "notes": "F4:1 E4:.5,D4:.5 E4:.5,F4:.5,E4:1 D4:1 E4:.5,C4:2.5"
-    }
-   ]
-  }
- ],
+ "key": "G Major",
+ "seed": 3,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
  "meta": {
-  "title": "Savanna Animals Song for Kids! Meet 5 Zoo Friends with Milo",
-  "card": "Savanna Animals Song!",
-  "thumb_text": "SAVANNA SONG!",
-  "description": "Sing the Savanna Animals Song with Milo the blue bird! Meet a lion, an elephant, a giraffe, a zebra and a hippo in this 3D animal song for kids.\nKids learn savanna animal names, their sounds, and one true fact about each animal. Great for toddlers and preschoolers, ages 2-6.\n\nWhat kids learn:\n- Lions live in family groups called prides\n- Elephants use their trunks to smell and to drink\n- Giraffes are the tallest animals in the world\n- Every zebra's stripes are different\n- Hippos stay in the water to keep cool on hot days\n\nSing along, roar like a lion, stomp like an elephant and stretch like a giraffe!\n\nLyrics:\nHello friends, it's Milo, come with me!\nLet's go to the sunny savanna, whee!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nI'm a lion, look at my mane!\nI live with my family, a pride!\nLions say roar, roar, roar!\nRoar like a lion, everybody, roar!\nDid you know? Lions live together in a big family group, called a pride!\nI'm an elephant, big and gray,\nMy trunk can smell and drink all day!\nElephants go toot, toot, toot!\nToot like an elephant, toot toot toot!\nElephants use their long trunks to smell, and to drink water!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nWhat does the lion say?\nRoar! Roar! Roar!\nWhat does the elephant say?\nToot! Toot! Toot!\nWhat does the giraffe say?\nMunch! Munch! Munch!\nWhat does the zebra say?\nHee-haw! Hee-haw!\nWhat does the hippo say?\nHonk! Honk! Honk!\nI'm a giraffe, so tall, so tall!\nThe tallest animal of all!\nGiraffes go munch, munch, munch!\nStretch up high and munch, munch, munch!\nGiraffes are the tallest animals in the whole wide world!\nStomp, stomp, stomp like an elephant!\nStretch up high like a tall giraffe!\nSwish your tail like a zebra, swish!\nNow clap, clap, clap and jump, jump, jump!\nI'm a zebra, black and white,\nMy stripes are special, just for me!\nZebras go hee-haw, hee-haw!\nGallop like a zebra, hee-haw, hee!\nEvery zebra has its very own stripes. No two zebras are the same!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nI'm a hippo, round and wide,\nI splash in water to stay cool!\nHippos go honk, honk, honk!\nSplash like a hippo, splash, splash, splash!\nHippos spend the hot day in the water, to stay nice and cool!\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\nBye bye, friends, see you soon!\nSing again tomorrow with Milo!",
+  "title": "Safari Animals Song for Kids! Roar and Stomp with Milo",
+  "card": "Safari Animals Song!",
+  "thumb_text": "SAFARI ANIMALS!",
+  "description": "The Safari Animals Song for kids! Sing along with Milo on the sunny savanna and meet a lion, an elephant, a giraffe, a zebra and a hippo.\nKids learn real animal facts and copy the animals: roar, stomp, stretch and swish. Ages 2-6.",
   "tags": [
-   "savanna animals song",
-   "savanna animals for kids",
    "animal song for kids",
-   "zoo animals song",
-   "african animals for kids",
-   "animal sounds song",
-   "lion song for kids",
+   "safari animals song",
+   "savanna animals",
+   "zoo animals for kids",
+   "lion song",
    "elephant song",
-   "giraffe song",
-   "zebra song",
-   "hippo song",
    "kids songs",
    "nursery rhymes",
-   "preschool learning",
-   "toddler songs",
-   "3d animation for kids",
-   "the animated zoo",
-   "milo"
+   "The Animated Zoo",
+   "Milo"
   ]
+ },
+ "job": {
+  "id": "zoo3d_ep01_v3",
+  "title": "Safari Animals Song!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.8,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "lion1",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "LION",
+       "size": 0.7
+      },
+      "at": [
+       -2.35,
+       -0.24999999999999997,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 1,
+       "color": "#ff9f1c",
+       "size": 0.7
+      },
+      "at": [
+       -3.5629999999999997,
+       -0.24999999999999997,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       -1.05,
+       -0.30000000000000004,
+       2.6
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "PRIDE",
+      "color": "#ff7a00",
+      "at": [
+       -3.6500000000000004,
+       -0.30000000000000004,
+       2.5
+      ],
+      "size": 0.45,
+      "delay": 9.5,
+      "spin": 0.15
+     }
+    ]
+   },
+   {
+    "section": "elephant1",
+    "shots": [
+     "close:elephant",
+     "wide",
+     "close:elephant",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "ELEPHANT",
+       "size": 0.7
+      },
+      "at": [
+       -4.6,
+       0.9500000000000001,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 2,
+       "color": "#5c7cfa",
+       "size": 0.7
+      },
+      "at": [
+       -6.401,
+       0.9500000000000001,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "splash",
+      "at": [
+       -3.5999999999999996,
+       0.7000000000000001,
+       0.9
+      ],
+      "spin": 0.3,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "TRUNK",
+      "color": "#4263eb",
+      "at": [
+       -5.85,
+       0.8,
+       2.55
+      ],
+      "size": 0.45,
+      "spin": 0.15,
+      "delay": 8.3
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA",
+      "color": "#ff8f00",
+      "at": "top",
+      "size": 1.0
+     }
+    ]
+   },
+   {
+    "section": "giraffe1",
+    "shots": [
+     "giraffe",
+     "wide",
+     "giraffe",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "GIRAFFE",
+       "size": 0.7
+      },
+      "at": [
+       1.1,
+       2.9499999999999997,
+       3.95
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 3,
+       "color": "#f7b500",
+       "size": 0.7
+      },
+      "at": [
+       -0.5539999999999998,
+       2.9499999999999997,
+       3.95
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "leaves",
+      "at": [
+       2.1,
+       2.5999999999999996,
+       2.85
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "TALLEST!",
+      "color": "#f08c00",
+      "at": [
+       -0.2999999999999998,
+       2.8,
+       3.3
+      ],
+      "size": 0.42,
+      "delay": 8.9,
+      "spin": 0.15
+     }
+    ]
+   },
+   {
+    "section": "zebra1",
+    "shots": [
+     "close:zebra",
+     "close:host",
+     "close:zebra",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "ZEBRA",
+       "size": 0.7
+      },
+      "at": [
+       2.6,
+       -0.14999999999999997,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 4,
+       "color": "#3d3d4e",
+       "size": 0.7
+      },
+      "at": [
+       3.96,
+       -0.14999999999999997,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#343a40",
+      "at": [
+       2.6,
+       -0.2,
+       3.0
+      ],
+      "size": 0.5,
+      "spin": 0.15,
+      "delay": 8.3
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#4263eb",
+      "at": "left",
+      "size": 0.7,
+      "dur": 4.0,
+      "word": "stomp",
+      "delay": 0
+     },
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#f08c00",
+      "at": "right",
+      "size": 0.6,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "stretch"
+     },
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#343a40",
+      "at": "top",
+      "size": 0.8,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "swish"
+     },
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#e64980",
+      "at": "front",
+      "size": 0.7,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "clap"
+     }
+    ]
+   },
+   {
+    "section": "hippo1",
+    "shots": [
+     "close:hippo",
+     "pond",
+     "close:hippo",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "HIPPO",
+       "size": 0.7
+      },
+      "at": [
+       4.9,
+       1.0499999999999998,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 5,
+       "color": "#b06ad9",
+       "size": 0.7
+      },
+      "at": [
+       6.26,
+       1.0499999999999998,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       3.7,
+       0.9999999999999999,
+       3.1
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "set_prop",
+      "name": "splash",
+      "at": [
+       6.1000000000000005,
+       0.8999999999999999,
+       0.8
+      ],
+      "delay": 9.8,
+      "spin": 0.3
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA!",
+      "color": "#ff8f00",
+      "at": "top",
+      "size": 1.1
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": "right",
+      "delay": 0.5
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE BYE!",
+      "color": "#e64980",
+      "at": "top",
+      "size": 0.9,
+      "delay": 0.3
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep01",
+  "res": "1280x720",
+  "step": 2
  }
 }

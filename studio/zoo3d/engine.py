@@ -78,6 +78,10 @@ for d in job["direct"]:
         else:
             continue
         t0 = sec["start"] + p.get("delay", 0) + k * p.get("stagger", 0)
+        if p.get("word"):   # pop in right as the word is sung (nth occurrence inside this section)
+            _wn = "".join(ch for ch in p["word"].lower() if ch.isalnum())
+            _ws = [w for w in timing["words"] if sec["start"] - 0.01 <= w["start"] < sec["end"] and "".join(ch for ch in w["w"].lower() if ch.isalnum()) == _wn]
+            if len(_ws) > p.get("nth", 0): t0 = _ws[p.get("nth", 0)]["start"] - 0.12 + p.get("delay", 0)
         t1 = DUR if p.get("hold") else (min(sec["end"], t0 + p["dur"]) if p.get("dur") else sec["end"])
         props.append((o, t0, t1, tuple(o.scale), p.get("spin", 0.4)))
         o.scale = (0, 0, 0)
@@ -216,8 +220,9 @@ if TEST:
 thumb = job.get("thumb_frame")
 t_start = time.time(); done = 0
 STEP = int(opt("step", job.get("step", 2)))   # default: on twos (12 fps animation)
-for f in range(0, NF, STEP):
-    fp = os.path.join(FR, f"{f // STEP:05d}.png")
+RANGE = job.get("frame_range") or [0, NF]          # re-render just a slice (frames named from 0 inside the slice)
+for f in range(int(RANGE[0]), min(int(RANGE[1]), NF), STEP):
+    fp = os.path.join(FR, f"{(f - int(RANGE[0])) // STEP:05d}.png")
     if os.path.exists(fp) and os.path.getsize(fp) > 1000: continue
     if os.path.exists(os.path.join(os.path.dirname(OUT), "STOP")) or os.path.exists(os.path.join(OUT, "STOP")):
         print("STOP file found - stopping (frames so far are kept)", flush=True); sys.exit(3)

@@ -1,273 +1,16 @@
 {
- "title": "Fire Truck Song",
- "channel": "truck",
- "bpm": 116,
- "voice": "af_heart",
- "formant": 1.12,
- "chords": "F C G Am",
- "style": "pop",
- "intro_bars": 1,
- "outro_bars": 1,
- "parts": [
-  {
-   "section": "hook",
-   "who": "host",
-   "lines": [
-    {
-     "text": "Wee-oo, wee-oo! Here comes the fire truck!",
-     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 E4:1 E4:1 D4:.5 G4:1.5 G4:2",
-     "rest": 0
-    },
-    {
-     "text": "Hi, I'm Bolt! Let's sing along!",
-     "notes": "A4:1 G4:1 E4:2 F4:1 F4:1 G4:.5,A4:1.5",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "verse1",
-   "who": "host",
-   "lines": [
-    {
-     "text": "Up, up, up goes the ladder,",
-     "notes": "C4:1 E4:1 G4:1 A4:.5 G4:.5 G4:1,D4:1",
-     "rest": 2
-    },
-    {
-     "text": "Up so high into the sky!",
-     "notes": "E4:1 E4:1 A4:2 G4:.5,E4:.5 F4:.5 A4:2",
-     "rest": 0.5
-    },
-    {
-     "text": "Count the steps: one, two, three, four!",
-     "notes": "C4:.5 D4:.5 E4:1 C4:1 D4:1 E4:1 G4:2",
-     "rest": 1
-    },
-    {
-     "text": "Firefighters climb up high!",
-     "notes": "A4:1,G4:1 E4:1 G4:1 A4:3",
-     "rest": 1
-    }
-   ]
-  },
-  {
-   "section": "chorus1",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Fire truck, fire truck, big and red!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 D4:1 E4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Ladder up and hoses spray!",
-     "notes": "E4:1 A4:1.5 G4:.5 A4:1 F4:3",
-     "rest": 1
-    },
-    {
-     "text": "Wee-oo, wee-oo, clear the way!",
-     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 G4:1 A4:1 G4:3",
-     "rest": 1
-    },
-    {
-     "text": "Fire truck, fire truck, saves the day!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 F4:1 E4:1 C4:2",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "fact1",
-   "who": "host",
-   "voice": "am_adam",
-   "speed": 0.95,
-   "bars": 4,
-   "speak": "Fire trucks carry long ladders, so firefighters can reach very high windows. Up, up, up!"
-  },
-  {
-   "section": "verse2",
-   "who": "host",
-   "lines": [
-    {
-     "text": "Here's the hose, it's long and strong,",
-     "notes": "C4:1 D4:1 E4:1 E4:1 G4:1 G4:1 D4:1",
-     "rest": 1
-    },
-    {
-     "text": "Water from the hydrant comes along!",
-     "notes": "A4:1 A4:.5 G4:.5 E4:1,C4:1 F4:1 F4:.5,A4:1.5",
-     "rest": 1
-    },
-    {
-     "text": "Spray, spray, spray it high and low,",
-     "notes": "C4:1 E4:1 G4:1 E4:.5 G4:1.5 E4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Whoosh! The water starts to flow!",
-     "notes": "A4:2 G4:.5 E4:1.5 F4:1 E4:.5 C4:2.5",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "chorus2",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Fire truck, fire truck, big and red!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 D4:1 E4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Ladder up and hoses spray!",
-     "notes": "E4:1 A4:1.5 G4:.5 A4:1 F4:3",
-     "rest": 1
-    },
-    {
-     "text": "Wee-oo, wee-oo, clear the way!",
-     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 G4:1 A4:1 G4:3",
-     "rest": 1
-    },
-    {
-     "text": "Fire truck, fire truck, saves the day!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 F4:1 E4:1 C4:2",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "action",
-   "who": "all",
-   "group": true,
-   "lines": [
-    {
-     "text": "Clap, clap! Clap your hands with me!",
-     "notes": "G4:1 G4:1 E4:.5 E4:.5 G4:1 D4:1 G4:2",
-     "rest": 1
-    },
-    {
-     "text": "Stomp, stomp! Stomp like a big truck!",
-     "notes": "A4:1 A4:1 E4:1 E4:.5 E4:.5 F4:1 A4:2",
-     "rest": 1
-    },
-    {
-     "text": "Jump, jump! Jump up, one, two, three!",
-     "notes": "G4:1 G4:1 E4:.5 E4:.5 C4:1 D4:1 G4:2",
-     "rest": 1
-    },
-    {
-     "text": "Honk, honk! Beep, beep! Here we go!",
-     "notes": "A4:1 A4:1 G4:1 G4:1 F4:1 E4:1 C4:2",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "fact2",
-   "who": "host",
-   "voice": "am_adam",
-   "speed": 0.95,
-   "bars": 4,
-   "speak": "Firefighters wear helmets, big boots and special coats to stay safe. Thank you, firefighters!"
-  },
-  {
-   "section": "verse3",
-   "who": "host",
-   "lines": [
-    {
-     "text": "See the lights go flash, flash, flash,",
-     "notes": "E4:1 E4:1 G4:1 G4:1 D4:1 D4:1 D4:1",
-     "rest": 1
-    },
-    {
-     "text": "Hear the siren: wee-oo, wee-oo!",
-     "notes": "A4:1 G4:.5 E4:2.5 A4:1,F4:1 A4:1,F4:1",
-     "rest": 0
-    },
-    {
-     "text": "Cars move over, make some room,",
-     "notes": "C4:1 E4:1 G4:1,E4:1 G4:1 G4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Fire truck's coming, zoom, zoom, zoom!",
-     "notes": "A4:1 G4:1 E4:1,C4:1 F4:1 G4:1 A4:2",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "chorus3",
-   "who": "host",
-   "group": true,
-   "lines": [
-    {
-     "text": "Fire truck, fire truck, big and red!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 D4:1 E4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Ladder up and hoses spray!",
-     "notes": "E4:1 A4:1.5 G4:.5 A4:1 F4:3",
-     "rest": 1
-    },
-    {
-     "text": "Wee-oo, wee-oo, clear the way!",
-     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 G4:1 A4:1 G4:3",
-     "rest": 1
-    },
-    {
-     "text": "Fire truck, fire truck, saves the day!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 F4:1 E4:1 C4:2",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "chorus4",
-   "who": "all",
-   "group": true,
-   "lines": [
-    {
-     "text": "Fire truck, fire truck, big and red!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 D4:1 E4:1 D4:2",
-     "rest": 0
-    },
-    {
-     "text": "Ladder up and hoses spray!",
-     "notes": "E4:1 A4:1.5 G4:.5 A4:1 F4:3",
-     "rest": 1
-    },
-    {
-     "text": "Wee-oo, wee-oo, clear the way!",
-     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 G4:1 A4:1 G4:3",
-     "rest": 1
-    },
-    {
-     "text": "Fire truck, fire truck, saves the day!",
-     "notes": "G4:1 E4:1 G4:1 E4:1 F4:1 E4:1 C4:4",
-     "rest": 0
-    }
-   ]
-  },
-  {
-   "section": "outro",
-   "who": "host",
-   "voice": "am_adam",
-   "speed": 0.95,
-   "bars": 3,
-   "speak": "Great singing, friends! Sing it again tomorrow! Bye-bye!"
-  }
- ],
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, siren synth, bouncy drums, major key, catchy repetitive chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Verse 1]\nUp, up, up goes the ladder,\nUp so high into the sky!\nCount the steps: one, two, three, four!\nFirefighters climb up high!\n\n[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Verse 2]\nHere's the hose, it's long and strong,\nWater from the hydrant comes along!\nSpray, spray, spray it high and low,\nWhoosh! The water starts to flow!\n\n[Bridge]\nClap, clap! Clap your hands with me!\nStomp, stomp! Stomp like a big truck!\nJump, jump! Jump up, one, two, three!\nHonk, honk! Beep, beep! Here we go!\n\n[Verse 3]\nSee the lights go flash, flash, flash,\nHear the siren: wee-oo, wee-oo!\nCars move over, make some room,\nFire truck's coming, zoom, zoom, zoom!\n\n[Verse 4]\nHelmets, boots and big strong coats,\nFirefighters stay safe and warm!\nThank you, thank you, brave and kind,\nFirefighters help all the time!\n\n[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Outro]\nWee-oo, wee-oo! Bye-bye, fire truck!",
+ "duration": 165,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 11,
+ "who_map": {},
  "meta": {
-  "title": "Fire Truck Song for Kids! Wee-oo with Bolt | Tiny Truck Town",
+  "title": "Fire Truck Song for Kids! Wee-oo with Bolt the Fire Truck",
   "card": "Fire Truck Song!",
   "thumb_text": "FIRE TRUCK SONG!",
-  "description": "The Fire Truck Song for kids! Sing along with Bolt the fire truck and his truck friends in Tiny Truck Town.\nKids learn what fire trucks do: ladders, hoses, sirens and how firefighters stay safe. Counting 1-4 and clap-stomp-jump actions. Ages 2-6.",
+  "description": "The Fire Truck Song for kids! Sing along with Bolt the fire truck and his truck friends in Tiny Truck Town.\nKids learn what fire trucks do: ladders, hoses, sirens and lights, and how firefighters stay safe. Count 1 to 4, then clap, stomp and jump along. Ages 2-6.",
   "tags": [
    "fire truck song",
    "fire truck for kids",
@@ -279,5 +22,391 @@
    "Tiny Truck Town",
    "3D kids songs"
   ]
+ },
+ "job": {
+  "id": "tt3d_ep01_v3",
+  "title": "Fire Truck Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.8,
+   "jump": 0.3
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9
+     },
+     {
+      "type": "set_prop",
+      "name": "ladder",
+      "at": "far_left",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "low",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "ladder",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.7,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 1,
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -0.9,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 2,
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.9,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 3,
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       2.7,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 4,
+       "color": "#2fb59a"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "low",
+     "close:host",
+     "wide",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9
+     },
+     {
+      "type": "set_prop",
+      "name": "hose",
+      "at": "far_left",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:host",
+     "street",
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "hose",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "set_prop",
+      "name": "hydrant",
+      "at": "right",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "water",
+      "at": "top",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "close:police",
+     "close:dump",
+     "wide"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.45,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#ff5d9e",
+      "at": "far_left",
+      "size": 1.0,
+      "delay": 0.0
+     },
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#ff9f1a",
+      "at": "far_right",
+      "size": 1.0,
+      "delay": 4.14
+     },
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#2fb59a",
+      "at": "top",
+      "size": 1.1,
+      "delay": 8.28
+     },
+     {
+      "type": "text",
+      "text": "BEEP!",
+      "color": "#3b8be0",
+      "at": "front",
+      "size": 0.8,
+      "delay": 12.41
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "street",
+     "close:host"
+    ],
+    "energy": 0.65,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "text",
+      "text": "WEE-OO!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9,
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "cone",
+      "at": "right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse4",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": "left",
+      "delay": 0.3
+     },
+     {
+      "type": "text",
+      "text": "SAFE!",
+      "color": "#2fb59a",
+      "at": "right",
+      "size": 0.9,
+      "delay": 2.5
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.5,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK SONG",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_left"
+     },
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": "far_right",
+      "delay": 4.14
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.5,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5d9e",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.3
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep01",
+  "res": "1280x720",
+  "step": 2
  }
 }

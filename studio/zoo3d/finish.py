@@ -86,7 +86,7 @@ def main():
     sub = os.path.join(work, jid + ".ass")
     open(sub, "w").write(ass(timing, ch, meta.get("card", meta["title"].split("|")[0].strip())))
     out = os.path.join(work, jid + ".mp4")
-    if "--hd" in sys.argv:   # old 1080p H.264 path
+    if "--hd" in sys.argv and os.environ.get("ZOO_ALLOW_HD"):   # legacy 1080p path, disabled unless explicitly allowed
         vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "4M", "-bufsize", "8M",
                         "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
@@ -97,6 +97,14 @@ def main():
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                         "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
         print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")
+        # quality gate: every published episode must be 3840x2160 and under 100 MB (GitHub raw upload limit)
+        wh = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", out], capture_output=True, text=True).stdout.strip()
+        if wh != "3840,2160": sys.exit(f"QUALITY GATE: output is {wh}, expected 3840,2160")
+        if os.path.getsize(out) >= 99.5e6:   # re-encode tighter once
+            vb = int(vb * 0.9)
+            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
+                            "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+            if os.path.getsize(out) >= 99.5e6: sys.exit("QUALITY GATE: 4K file still over 100 MB")
     # thumbnail: the thumb frame + big words
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
     thumb = os.path.join(work, f"thumb_{jid}.png")

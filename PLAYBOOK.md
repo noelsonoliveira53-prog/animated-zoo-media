@@ -168,3 +168,14 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
   (reload once or twice on "Oops"), and read the `yta-explore-table-row` cells. The views cell has the share glued on ("35748.3%" = 357 views, 48.3%).
 - In the hidden browser pane the channel switcher list doesn't render until a screenshot is taken; take one, then click the
   `ytd-account-item-renderer` by script. Reset the 800x892 viewport emulation to desktop before switching, or the switcher stays blank.
+
+## Video quality standard (Nov 6, 2026, Noelson: "make the upscaling standard for every video")
+EVERY episode published from now on is 4K. No exceptions, no 1080p uploads.
+1. Render: Blender EEVEE at native 1920x1080, every frame (job "res": "1920x1080", "step": 1). align.py sets these by default.
+2. Finish: `studio/zoo3d/finish.py` ALWAYS upscales to 3840x2160 (lanczos + light unsharp), burns the karaoke lyrics at 4K,
+   and encodes AV1 10-bit (SVT-AV1, tune VQ) with the bitrate sized to land under 100 MB (GitHub raw limit), AAC 192k audio.
+3. Quality gate (built into finish.py): the output must probe 3840x2160 and be under 100 MB, or finish.py exits with an error
+   and the episode must NOT be uploaded. The old 1080p --hd path is disabled.
+4. Upload: in YouTube Studio the uploader should see "4K" processing; YouTube serves 2160p/1440p/VP9-AV1 streams for 4K uploads.
+5. Thumbnails stay 1280x720 PNG (YouTube's thumbnail spec).
+Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they are unless Noelson asks to replace them.

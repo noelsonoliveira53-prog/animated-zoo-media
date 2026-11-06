@@ -18,7 +18,7 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep01.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "private",
   "format": "3d_singalong",
   "duration": 171.7,
   "video_id": "ZrW2mf-oVr4",
@@ -69,10 +69,11 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep01_v3.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 150.0,
-  "replaces": "ZrW2mf-oVr4"
+  "replaces": "ZrW2mf-oVr4",
+  "video_id": "6wAVI5JdqCg"
  },
  {
   "file": "gizmo/gz3d_ep01.mp4",

@@ -248,5 +248,28 @@
   "duration": 165.0,
   "video_id": "cbOHkcFNEnI",
   "scheduled_on": "2026-11-06"
+ },
+ {
+  "file": "fruity/fr3d_ep03.mp4",
+  "title": "Banana Dance! Peel Banana Song for Kids | Fruity Friends",
+  "description": "The Banana Dance Song for kids! Peel, wiggle and go bananas with Pipkiko and the Fruity Friends.\nA silly fruit dance song: kids learn that bananas grow in bunches on banana trees, meet apple, orange and grape, and dance along. Ages 2-6.\n\nLYRICS\nPeel banana, peel, peel, peel!\nWiggle banana, wiggle like an eel!\nGo bananas, jump up high,\nBanana dance, wave hi, hi, hi!\nBananas are yellow, long and bright,\nPeel it down and take a bite!\nBananas grow in a bunch, you see,\nHigh up on a banana tree!\nApple, apple, crunch and spin!\nOrange, orange, roll right in!\nGrape, grape, bounce so small,\nFruity friends dance, one and all!\nPeel to the left, peel, peel!\nPeel to the right, peel, peel!\nShake your arms and shake your feet,\nWiggle, wiggle to the beat!\nFruit gives energy to play,\nHave some fruit every day!\nPipkiko says, one more time,\nDance with me and feel so fine!\nGo bananas! See you tomorrow!\nPeel banana, peel peel peel\nWiggle banana, wiggle like an eel\nGo bananas, jump up high\nBanana dance, wave high high high\nBanana dance, jump up high",
+  "tags": [
+   "banana dance",
+   "banana song",
+   "dance song for kids",
+   "fruit song",
+   "action songs for kids",
+   "kids songs",
+   "nursery rhymes",
+   "Fruity Friends",
+   "3D kids songs"
+  ],
+  "date": "2026-11-07",
+  "time": "2:20 PM",
+  "thumb": "brand/fruity/thumb_fr3d_ep03.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

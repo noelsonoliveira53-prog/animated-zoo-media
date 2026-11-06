@@ -25,7 +25,7 @@ JOB_DIR = os.path.dirname(JOB_PATH)
 job = json.load(open(JOB_PATH))
 TEST = bool(opt("test", False))
 ENGINE = str(opt("engine", job.get("engine", "EEVEE"))).upper()
-W, H = map(int, str(opt("res", "960x540" if TEST else job.get("res", "1920x1080"))).split("x"))
+W, H = map(int, str(opt("res", "960x540" if TEST else job.get("res", "1280x720"))).split("x"))   # default: 720p, upscaled to 1080p when assembling
 SAMPLES = int(opt("samples", 16 if TEST else job.get("samples", 24 if str(opt("engine", job.get("engine", "EEVEE"))).upper() == "EEVEE" else 64)))
 OUT = os.path.abspath(opt("out", os.path.join(os.path.dirname(JOB_DIR), "out", job["id"])))
 timing = job.get("timing") or json.load(open(os.path.join(JOB_DIR, job["timing_file"])))
@@ -215,7 +215,7 @@ if TEST:
 
 thumb = job.get("thumb_frame")
 t_start = time.time(); done = 0
-STEP = int(opt("step", job.get("step", 1)))
+STEP = int(opt("step", job.get("step", 2)))   # default: on twos (12 fps animation)
 for f in range(0, NF, STEP):
     fp = os.path.join(FR, f"{f // STEP:05d}.png")
     if os.path.exists(fp) and os.path.getsize(fp) > 1000: continue

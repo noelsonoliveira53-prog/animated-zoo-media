@@ -143,9 +143,14 @@ def assemble(jid, ff):
     fr = os.path.join(OUT, jid, "frames", "%05d.png")
     song = os.path.join(JOBS, jid + "_song.wav")
     mp4 = os.path.join(OUT, jid, jid + "_raw.mp4")
-    cmd = [ff, "-y", "-loglevel", "error", "-framerate", "24", "-i", fr]
+    try: job = json.load(open(os.path.join(JOBS, jid + ".json")))
+    except Exception: job = {}
+    step = int(job.get("step", 1))
+    cmd = [ff, "-y", "-loglevel", "error", "-framerate", str(24 / step), "-i", fr]
     if os.path.exists(song): cmd += ["-i", song]
-    cmd += ["-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p"]
+    vf = ["fps=24"]                                   # on-twos frames are held for 2 frames each
+    if str(job.get("res", "1920x1080")) != "1920x1080": vf.append("scale=1920:1080:flags=lanczos")   # upscale 720p renders
+    cmd += ["-vf", ",".join(vf), "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p"]
     if os.path.exists(song): cmd += ["-c:a", "aac", "-b:a", "192k", "-shortest"]
     cmd += ["-movflags", "+faststart", mp4]
     log(f"{jid}: assembling MP4 with ffmpeg")

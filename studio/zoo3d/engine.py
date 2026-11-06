@@ -215,8 +215,9 @@ if TEST:
 
 thumb = job.get("thumb_frame")
 t_start = time.time(); done = 0
-for f in range(NF):
-    fp = os.path.join(FR, f"{f:05d}.png")
+STEP = int(opt("step", job.get("step", 1)))
+for f in range(0, NF, STEP):
+    fp = os.path.join(FR, f"{f // STEP:05d}.png")
     if os.path.exists(fp) and os.path.getsize(fp) > 1000: continue
     if os.path.exists(os.path.join(os.path.dirname(OUT), "STOP")) or os.path.exists(os.path.join(OUT, "STOP")):
         print("STOP file found - stopping (frames so far are kept)", flush=True); sys.exit(3)

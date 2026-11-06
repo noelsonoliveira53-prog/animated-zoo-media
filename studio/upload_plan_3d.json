@@ -22,7 +22,8 @@
   "format": "3d_singalong",
   "duration": 171.7,
   "video_id": "ZrW2mf-oVr4",
-  "scheduled_on": "2026-11-05"
+  "scheduled_on": "2026-11-05",
+  "note": "replaced by bl3d_ep01_v3 (real singing, sync fixed); set to private on 2026-11-05 at Noelson's request"
  },
  {
   "file": "fruity/fr3d_ep01.mp4",
@@ -48,6 +49,30 @@
   "duration": 202.8,
   "video_id": "1NHLUvAqy-Y",
   "scheduled_on": "2026-11-05"
+ },
+ {
+  "file": "bloop/bl3d_ep01_v3.mp4",
+  "title": "Colors Song for Kids! Learn Colors with Bloop the Jelly Blob",
+  "description": "The Colors Song for kids! Sing along with Bloop the jelly blob, who changes color with every word: red, yellow, orange, green, blue and purple.\nKids learn their colors and the rainbow, then clap, stomp, jump and spin along. Ages 2-5.\n\nLYRICS\nColors, colors, look at me!\nI can change, one, two, three!\nRed and yellow, green and blue,\nColors, colors, sing with me!\nRed, red, apple red!\nBloop is red, red, red!\nYellow, yellow, sunny sun!\nYellow banana, yum, yum, yum!\nOrange, orange, juicy treat!\nOrange carrots, good to eat!\nGreen, green, froggy green!\nGreen grass, green leaf, green bean!\nClap, clap! Clap your hands!\nStomp, stomp! Stomp your feet!\nJump, jump! Jump up high!\nSpin around and wave hi!\nBlue, blue, sky so blue!\nBlue, blue, the ocean too!\nPurple, purple, grapes for me!\nPurple flowers, one, two, three!\nBye-bye, colors! Sing again tomorrow!",
+  "tags": [
+   "colors song",
+   "learn colors",
+   "colors for kids",
+   "color song for toddlers",
+   "rainbow song",
+   "kids songs",
+   "nursery rhymes",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-06",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep01_v3.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0,
+  "replaces": "ZrW2mf-oVr4"
  },
  {
   "file": "gizmo/gz3d_ep01.mp4",

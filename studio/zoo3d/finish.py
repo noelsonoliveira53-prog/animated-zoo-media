@@ -68,6 +68,17 @@ def main():
     raw, jobp = sys.argv[1], sys.argv[2]
     job = json.load(open(jobp)); jd = os.path.dirname(os.path.abspath(jobp)); jid = job["id"]
     timing = json.load(open(os.path.join(jd, job["timing_file"])))
+    trim = float(arg("--trim", "0"))
+    if trim > 0:   # cut a long instrumental intro: trim raw video+audio and shift every time by -trim
+        tr = os.path.join(os.path.dirname(os.path.abspath(raw)), os.path.basename(raw)[:-4] + f"_trim{trim:g}.mp4")
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", f"{trim}", "-i", raw, "-c:v", "libx264", "-preset", "fast", "-crf", "16",
+                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "256k", "-af", "afade=t=in:d=0.15", tr], check=True)
+        raw = tr
+        sh = lambda x: round(max(0.0, x - trim), 3)
+        for l in timing["lines"]: l["start"], l["end"] = sh(l["start"]), sh(l["end"])
+        for w in timing["words"]: w["start"], w["end"] = sh(w["start"]), sh(w["end"])
+        timing["duration"] = max(0.0, timing["duration"] - trim)
+        job["thumb_frame"] = max(0, job.get("thumb_frame", 120) - int(trim * 24))
     song = json.load(open(os.path.join(HERE, "songs", job.get("song", jid) + ".json")))
     meta = song["meta"]; ch = job["channel"]
     repo = arg("--repo", "/home/claude/animated-zoo-media")

@@ -10,6 +10,7 @@ import { FieldGuideScene } from './scenes/FieldGuideScene';
 import { SettingsScene } from './scenes/SettingsScene';
 import { AchievementsScene } from './scenes/AchievementsScene';
 import { GAME_H, GAME_W } from './ui/theme';
+import { music } from './systems/music';
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
@@ -26,4 +27,5 @@ const game = new Phaser.Game({
 window.addEventListener('contextmenu', (e) => e.preventDefault());
 
 // Expose for automated tests / debugging.
-(window as unknown as { __game: Phaser.Game }).__game = game;
+(window as unknown as { __game: Phaser.Game; __music: typeof music }).__game = game;
+(window as unknown as { __music: typeof music }).__music = music;

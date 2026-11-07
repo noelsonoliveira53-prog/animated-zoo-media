@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { music } from '../systems/music';
 import { BUILDINGS, SHOP_ORDER, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
 import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
@@ -69,6 +70,7 @@ export class VillageScene extends Phaser.Scene {
   }
 
   create(): void {
+    music.setMood('calm');
     this.save = loadSave();
     this.v = ensureVillage(this.save);
     this.views.clear();

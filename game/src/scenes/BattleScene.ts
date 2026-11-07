@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { music } from '../systems/music';
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { combine, DAILY_MODIFIERS } from '../data/daily';
@@ -114,6 +115,7 @@ export class BattleScene extends Phaser.Scene {
   }
 
   create(): void {
+    music.setMood('battle');
     this.drawMap();
     this.rangeRing = this.add.graphics().setDepth(5);
 
@@ -895,6 +897,7 @@ export class BattleScene extends Phaser.Scene {
     this.syncViews(dt);
     this.syncHero();
     this.drawSpellHud();
+    music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
     this.drawBossBar();
     this.refreshHud();
   }

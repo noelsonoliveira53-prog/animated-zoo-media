@@ -32,8 +32,8 @@ await page.waitForTimeout(500);
 await page.mouse.click(680, 662); // Settings
 await page.waitForTimeout(500);
 await page.mouse.click(640 - 220 + 440 * 0.3, 220); // volume 30%
-await page.mouse.click(640, 320); // mute
-await page.mouse.click(640, 430); // reset (arm)
+await page.mouse.click(640 - 125, 320); // mute
+await page.mouse.click(640, 470); // reset (arm)
 await page.waitForTimeout(300);
 await page.screenshot({ path: `screenshots/${name}-settings.png` });
 const s = await page.evaluate(() => JSON.parse(localStorage.getItem('grovewatch.save.v1')).settings);

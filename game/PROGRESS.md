@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **23** (next balance pass at iteration 25)
+Iteration counter: **24** (next iteration = 25 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -203,13 +203,20 @@ Iteration counter: **23** (next balance pass at iteration 25)
   and train times on cards; Attack ticks the queue first and explains if troops are still training. Camp cards
   no longer count wall segments as buildings. Restored wall tests that an edit had dropped. 103 tests.
 
+- [x] **Iter 24** — **Procedural background music** (`systems/music.ts`). A WebAudio lookahead scheduler plays a soft pad,
+  bass and pentatonic arpeggio over a 4-chord loop, with three moods: **calm** (menu, map, village, guides; 78 bpm),
+  **battle** (112 bpm, minor, kick + hats) and **boss** (132 bpm, tense progression), switching on a bar line. Battles
+  flip to the boss mood while a boss is alive. Music has its own **Music: On/Off** toggle (`settings.music`) and follows
+  the volume slider; the Settings screen was re-laid out (Effects / Music / Fullscreen). `scripts/music-check.mjs`
+  verifies the music starts after a gesture and changes mood. 103 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Raid follow-ups: smarter raid deploy for the balance script; raid-loot vs campaign-loot economy check (iteration 25).
 2. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-3. Ambient music loop (procedural).
+3. Music polish: per-region motifs, victory/defeat stingers.
 
 ## Known Bugs
 - (none known)

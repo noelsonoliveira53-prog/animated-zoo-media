@@ -14,13 +14,13 @@ export interface SaveData {
   stats: Record<string, number>; // lifetime counters for achievements
   achievements: string[]; // unlocked achievement ids
   dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
-  settings: { volume: number; muted: boolean };
+  settings: { volume: number; muted: boolean; music: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, trainQueue: [], raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, trainQueue: [], raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false, music: true } };
 }
 
 export interface StorageLike {

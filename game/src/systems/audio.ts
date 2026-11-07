@@ -1,4 +1,5 @@
 // Tiny procedural sound engine on WebAudio. No audio files: every sound is synthesized.
+import { music } from './music';
 
 type Wave = OscillatorType;
 
@@ -25,6 +26,8 @@ class Sfx {
         this.master = this.ctx.createGain();
         this.master.gain.value = this.muted ? 0 : this.volume * 0.5;
         this.master.connect(this.ctx.destination);
+        // Music bypasses the SFX master so it has its own on/off switch.
+        music.attach(this.ctx, this.ctx.destination);
       }
       if (this.ctx.state === 'suspended') void this.ctx.resume();
     } catch {

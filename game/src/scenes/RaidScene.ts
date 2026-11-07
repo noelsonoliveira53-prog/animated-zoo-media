@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { music } from '../systems/music';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { buildingCenter, CAMP_COLS, CAMP_OX, CAMP_OY, CAMP_ROWS, CAMP_TILE, generateCamp } from '../systems/camp';
 import { RaidSim, type RaidEvent, type Troop } from '../systems/RaidSim';
@@ -28,6 +29,7 @@ export class RaidScene extends Phaser.Scene {
   }
 
   create(data: { tier: number; seed: number }): void {
+    music.setMood('battle');
     const save = loadSave();
     const camp = generateCamp(data.seed, data.tier);
     this.sim = new RaidSim(camp, save.army);

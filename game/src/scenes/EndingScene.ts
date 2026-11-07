@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { music } from '../systems/music';
 import { LEVELS, totalStars } from '../data/levels';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
@@ -12,6 +13,7 @@ export class EndingScene extends Phaser.Scene {
   }
 
   create(): void {
+    music.setMood('calm');
     const save = loadSave();
     const sky = this.add.graphics();
     const dawn = { t: 0 };

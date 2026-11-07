@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **142** (next balance pass at iteration 145)
+Iteration counter: **143** (next balance pass at iteration 145)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1002,6 +1002,13 @@ Iteration counter: **142** (next balance pass at iteration 145)
   - Test: native enemies appear only from `nativeFrom`, and the region boss comes first.
   - Checks: `scripts/endless-home-check.mjs`; screenshot `screenshots/142.png` (endless wave 5 in the Amberwood).
     196 tests.
+- **Iteration 143** (level card polish):
+  - The Endless line on a beaten level's card now also names the wave-10 home boss, e.g. "Best 17 • Today: Beaver
+    Discount • Wave 10: Rustantler", shrunk to fit.
+  - Long enemy rosters (late levels use 20+ types) no longer squeeze into a row of tiny icons. The card shows bosses
+    first, then up to 13 faces and a "+N" count.
+  - New `scripts/endless-card-check.mjs` takes desktop and phone shots. Screenshots `screenshots/143.png` and
+    `143-phone.png`. 196 tests.
 
 ## In Progress
 - (none)

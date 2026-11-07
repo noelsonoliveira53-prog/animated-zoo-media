@@ -1,6 +1,6 @@
 import Phaser from 'phaser';
-import { pf } from '../ui/touch';
-import { endlessMutatorFor } from '../systems/endless';
+import { fitWidth, pf } from '../ui/touch';
+import { endlessBosses, endlessMutatorFor } from '../systems/endless';
 import { todayString } from '../systems/daily';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
@@ -621,15 +621,22 @@ export class WorldMapScene extends Phaser.Scene {
         .text(0, -H / 2 + 86, lvl.blurb, { ...textStyle(16, TEXT.cream, false), align: 'center', wordWrap: { width: W - 60 } })
         .setOrigin(0.5),
     );
-    const enemyIds = [...new Set(lvl.waves.flatMap((w) => w.groups.map((g) => g.enemy)))];
+    // Bosses first, then everyone else in order of appearance; long rosters show 13 faces and a "+N" count.
+    const roster = [...new Set(lvl.waves.flatMap((w) => w.groups.map((g) => g.enemy)))].sort((x, y) => Number(!!ENEMIES[y].boss) - Number(!!ENEMIES[x].boss));
+    const MAX_FACES = 13;
+    const enemyIds = roster.length > MAX_FACES + 1 ? roster.slice(0, MAX_FACES) : roster;
+    const extra = roster.length - enemyIds.length;
     p.add(
       this.add
         .text(0, -14, `${lvl.waves.length} waves • ${lvl.paths.length} ${lvl.paths.length > 1 ? 'roads' : 'road'} • ${lvl.lives} lives`, textStyle(16, TEXT.dim, false))
         .setOrigin(0.5),
     );
-    const spacing = Math.min(44, (W - 60) / Math.max(1, enemyIds.length));
+    const slots = enemyIds.length + (extra > 0 ? 1 : 0);
+    const spacing = Math.min(44, (W - 60) / Math.max(1, slots));
+    const left = -((slots - 1) * spacing) / 2;
+    if (extra > 0) p.add(this.add.text(left + enemyIds.length * spacing, 36, `+${extra}`, textStyle(pf(16), TEXT.dim)).setOrigin(0.5).setName('moreFaces'));
     enemyIds.forEach((id, k) => {
-      const img = this.add.image(-((enemyIds.length - 1) * spacing) / 2 + k * spacing, 36, `enemy_${id}`);
+      const img = this.add.image(left + k * spacing, 36, `enemy_${id}`);
       img.setScale(Math.min(1, 34 / Math.max(img.width, img.height)) * (ENEMIES[id].boss ? 1.25 : 1));
       p.add(img);
     });
@@ -655,7 +662,9 @@ export class WorldMapScene extends Phaser.Scene {
         }).setName('endlessBtn'),
       );
       const mut = endlessMutatorFor(todayString());
-      p.add(this.add.text(-30, H / 2 - 82, `${top > 0 ? `Best ${top} • ` : ''}Today: ${mut.name}`, textStyle(13, TEXT.dim, false)).setOrigin(0.5));
+      const boss = ENEMIES[endlessBosses(lvl)[0]]?.name.split(',')[0] ?? '';
+      const info = `${top > 0 ? `Best ${top} • ` : ''}Today: ${mut.name}${boss ? ` • Wave 10: ${boss}` : ''}`;
+      p.add(fitWidth(this.add.text(-30, H / 2 - 82, info, textStyle(13, TEXT.dim, false)).setOrigin(0.5).setName('endlessInfo'), 340));
     }
     p.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: p, scale: 1, alpha: 1, duration: 220, ease: 'Back.easeOut' });

@@ -592,13 +592,13 @@ Iteration counter: **82** (next balance pass at iteration 85)
   Morrowcap, Saltjaw, Kaleidrax, Zephyrax, Ulmaroth and Grindmaw; each one hints at the next region. The Emberdeep keeps
   its full epilogue. Tests: every card belongs to a region finale, and every finished region after the Emberdeep has one.
   Browser check `scripts/story-check.mjs` (forced win, checks the panel offers "Story", opens the card). 162 tests.
+  Playable demo artifact refreshed with this build (45 levels).
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Region 10 (levels 46–50): a new biome, enemies and boss, following the region recipe.
-2. Refresh the playable demo artifact with the latest build.
 
 ## Known Bugs
 - (none known)

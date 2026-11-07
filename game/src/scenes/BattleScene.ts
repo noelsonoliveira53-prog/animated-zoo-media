@@ -2016,6 +2016,15 @@ export class BattleScene extends Phaser.Scene {
       }
     }
     for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.ward) continue;
+      // Glowbearer lantern-light: a warm gold disc with a soft rim that breathes
+      const pulse = 0.35 + 0.1 * Math.sin(this.sim.time * 2.5);
+      this.jamG.fillStyle(0xffd27a, 0.12);
+      this.jamG.fillCircle(e.pos.x, e.pos.y, e.def.ward.radius);
+      this.jamG.lineStyle(2, 0xffc84a, pulse);
+      this.jamG.strokeCircle(e.pos.x, e.pos.y, e.def.ward.radius);
+    }
+    for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.dim) continue;
       // Dimlantern gloom: a soft dark disc with a violet rim
       this.jamG.fillStyle(0x10081e, 0.22);

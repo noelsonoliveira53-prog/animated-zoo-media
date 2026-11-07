@@ -66,6 +66,7 @@ export interface EnemyDef {
   adapt?: { step: number; max: number }; // each hit shifts its hide toward that damage type: +step armor (physical) or MR (magic), up to +max, while the other eases back to base
   phase?: { interval: number; duration: number }; // fades to mist on a cycle: takes no damage while phased (towers still waste shots on it)
   dodge?: number; // chance (0..1) to sidestep a single-target tower shot (splash, chains and spells always land)
+  ward?: { radius: number; cut: number }; // allies within radius (not itself) take this fraction less damage of every type
   lifesteal?: number; // heals this fraction of the melee damage it deals to soldiers and heroes
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed

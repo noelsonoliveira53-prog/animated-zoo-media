@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **151** (next balance pass at iteration 155)
+Iteration counter: **152** (next balance pass at iteration 155)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1081,12 +1081,20 @@ Iteration counter: **151** (next balance pass at iteration 155)
     replay exactly); splash, chains and spells always land. Each dodge shows a "Miss!" with a whoosh, throttled.
   - Endless tier at wave 68. Field Guide tags and sound cues. Tests for both traits.
   - Checks: `scripts/mist-check.mjs`; screenshots `screenshots/151.png` and `151-map.png`. 206 tests.
+- **Iteration 152** (Mistwreath level 2): level 82 **Teahouse Switchback** (11 pads, roads of 2,480px and 1,420px)
+  and a new enemy:
+  - **Glowbearer** (a tortoise with a paper lantern on a pole): `ward` trait. Allies within 130px take 25% less
+    damage of every type: physical, magic and true. It isn't warded itself, so it is the one to kill first. This
+    differs from Barkwarden's armor aura, which only softens physical hits. `wardCut()` is applied at the top of
+    `applyDamage`.
+  - The ward shows as a warm gold disc with a breathing rim. Field Guide tag; endless tier at wave 70; test.
+  - Screenshot `screenshots/152.png` (two lantern glows). 207 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mistwreath levels 82–84 (a third new trait on 82), then the finale (85) with a boss, achievements, a story card and
+1. Mistwreath levels 83–84, then the finale (85) with a boss, achievements, a story card and
    the endless boss rotation.
 2. A breather now and then (raid or village variety).
 
@@ -1097,6 +1105,9 @@ Iteration counter: **151** (next balance pass at iteration 155)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 152**: 82 Teahouse Switchback: 100/100/0 at hpMult 1.6 (17.8 lives, too comfy), 92/100 at 1.85, 75/75 at 1.95, 75/67 at
+2.05, and **1.8 → 100/100/0** (12.3 lives; kept, second-level band).
+
 **Iteration 151**: 81 Lanternstep Rise at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/92/0.
 
 **Iteration 150** (daily twists; expert / casual, levels 6/21/36/51/66/77 unless noted):

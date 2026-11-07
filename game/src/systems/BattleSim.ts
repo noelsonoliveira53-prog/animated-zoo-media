@@ -1156,6 +1156,17 @@ export class BattleSim {
     this.events.push({ type: 'drum', enemy: e, radius: d.radius, hasted });
   }
 
+  /** Glowbearer: the strongest ward in range (from another enemy) cuts damage taken by this fraction. */
+  wardCut(e: Enemy): number {
+    let cut = 0;
+    for (const o of this.enemies) {
+      const w = o.def.ward;
+      if (!w || o === e || !o.alive) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= w.radius) cut = Math.max(cut, w.cut);
+    }
+    return cut;
+  }
+
   /** Mistfox: fades into mist (untouchable) for a moment, then solidifies again, on a cycle. */
   private tickPhase(e: Enemy, dt: number): void {
     const ph = e.def.phase!;
@@ -1799,6 +1810,7 @@ export class BattleSim {
   private applyDamage(e: Enemy, dmg: number, type?: DamageType): void {
     if (!e.alive) return;
     if (e.phased && dmg > 0) return; // Mistfox: the blow passes straight through the mist
+    if (dmg > 0) dmg *= 1 - this.wardCut(e); // Glowbearer lantern-light softens every kind of blow
     if (dmg > 0 && !e.def.ground) {
       // Copperhorn: the nearest one in range draws part of the blow onto itself.
       let gr: Enemy | null = null;

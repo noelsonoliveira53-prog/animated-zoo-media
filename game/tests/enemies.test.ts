@@ -927,3 +927,25 @@ describe('Mistwreath enemies', () => {
     expect(rate).toBeLessThan(0.5);
   });
 });
+
+describe('Glowbearer', () => {
+  it('its lantern cuts damage to nearby allies of every type, but not to itself or far allies', () => {
+    const sim = new BattleSim(lvl, null);
+    const g = sim.spawn('glowbearer', 0, 300);
+    const near = sim.spawn('mudling', 0, 360);
+    const far = sim.spawn('mudling', 0, 900);
+    const cut = g.def.ward!.cut;
+    const hit = (e: unknown, t: string) => (sim as unknown as { applyDamage: (e: unknown, d: number, t: string) => void }).applyDamage(e, 20, t);
+    const n0 = near.hp;
+    hit(near, 'magic');
+    expect(n0 - near.hp).toBeCloseTo(20 * (1 - cut));
+    hit(near, 'true');
+    expect(n0 - near.hp).toBeCloseTo(40 * (1 - cut));
+    const f0 = far.hp;
+    hit(far, 'physical');
+    expect(f0 - far.hp).toBe(20);
+    const g0 = g.hp;
+    hit(g, 'physical');
+    expect(g0 - g.hp).toBe(20);
+  });
+});

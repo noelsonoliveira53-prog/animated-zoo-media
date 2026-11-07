@@ -744,6 +744,34 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.45, cy - r * 0.8, r * 0.16, r * 0.09);
         break;
       }
+      case 'glowbearer': {
+        // tortoise: domed patterned shell, stubby legs, a bamboo pole with a glowing paper lantern
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x8a9a6a, 1);
+        for (const [lx, ly] of [[-0.55, 0.45], [0.45, 0.45], [-0.35, 0.6], [0.25, 0.6]]) g.fillCircle(cx + lx * r, cy + ly * r, r * 0.16);
+        g.fillCircle(cx - r * 0.95, cy + r * 0.15, r * 0.25);
+        g.strokeCircle(cx - r * 0.95, cy + r * 0.15, r * 0.25);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.0);
+        g.strokeEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.0);
+        g.lineStyle(1.5, 0x3a5a3a, 1);
+        for (const [hx, hy] of [[-0.35, 0], [0.05, -0.12], [0.4, 0.05], [-0.1, 0.3], [0.25, 0.32]]) g.strokeCircle(cx + hx * r, cy + hy * r, r * 0.17);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 1.05, cy + r * 0.08, r * 0.06);
+        // pole and lantern
+        g.lineStyle(2, 0x8a6a3a, 1);
+        g.lineBetween(cx + r * 0.3, cy - r * 0.3, cx + r * 0.3, cy - r * 1.1);
+        g.lineBetween(cx + r * 0.3, cy - r * 1.1, cx + r * 0.75, cy - r * 1.1);
+        g.fillStyle(0xffd27a, 0.35);
+        g.fillCircle(cx + r * 0.75, cy - r * 0.8, r * 0.42);
+        g.fillStyle(0xf0e0b0, 1);
+        g.fillRoundedRect(cx + r * 0.58, cy - r * 1.0, r * 0.34, r * 0.42, r * 0.1);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeRoundedRect(cx + r * 0.58, cy - r * 1.0, r * 0.34, r * 0.42, r * 0.1);
+        g.fillStyle(0xd84a2a, 1);
+        g.fillRect(cx + r * 0.58, cy - r * 1.02, r * 0.34, r * 0.06);
+        break;
+      }
       case 'mistfox': {
         // pale fox spirit: slim body, big pointed ears, a long wisp of a tail, glowing amber eyes
         g.lineStyle(2.5, C.ink, 1);

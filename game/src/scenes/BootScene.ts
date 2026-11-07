@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS } from '../data/towers';
+import { HEROES } from '../data/heroes';
 import { C } from '../ui/theme';
 
 // Generates every texture in code. No image files are shipped.
@@ -14,6 +15,7 @@ export class BootScene extends Phaser.Scene {
     for (const def of Object.values(TOWERS)) {
       for (let tier = 0; tier < def.tiers.length; tier++) this.makeTower(def.id, def.color, tier);
     }
+    for (const id of Object.keys(HEROES)) this.makeHero(id);
     this.makeMisc();
     this.scene.start('Menu');
   }
@@ -271,6 +273,98 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
   }
 
+  private makeHero(id: string): void {
+    const g = this.g();
+    const w = 52;
+    const h = 60;
+    const cx = w / 2;
+    const base = h - 6;
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(cx, base, 34, 10);
+    g.lineStyle(3, C.ink, 1);
+    if (id === 'fen') {
+      // heron: long legs, tall body, long beak, bow
+      g.lineStyle(3, 0xe0a040, 1);
+      g.lineBetween(cx - 4, base - 2, cx - 3, base - 18);
+      g.lineBetween(cx + 4, base - 2, cx + 3, base - 18);
+      g.lineStyle(3, C.ink, 1);
+      g.fillStyle(0xdde8f0, 1);
+      g.fillEllipse(cx, base - 26, 22, 22);
+      g.strokeEllipse(cx, base - 26, 22, 22);
+      g.fillStyle(0x7fb0d8, 1);
+      g.fillEllipse(cx + 3, base - 24, 14, 16);
+      g.fillStyle(0xdde8f0, 1);
+      g.fillRect(cx - 3, base - 46, 6, 14);
+      g.fillCircle(cx, base - 46, 7);
+      g.strokeCircle(cx, base - 46, 7);
+      g.fillStyle(0xf0b040, 1);
+      g.fillTriangle(cx + 5, base - 48, cx + 5, base - 44, cx + 20, base - 46);
+      g.fillStyle(0x334455, 1);
+      g.fillRect(cx - 7, base - 54, 10, 3);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx + 2, base - 47, 1.6);
+      // bow
+      g.lineStyle(2.5, 0x7a5232, 1);
+      g.beginPath();
+      g.arc(cx - 12, base - 28, 12, -1.2, 1.2);
+      g.strokePath();
+      g.lineStyle(1, 0xffffff, 0.9);
+      g.lineBetween(cx - 7, base - 39, cx - 7, base - 17);
+    } else if (id === 'ember') {
+      // fox: orange body, big tail, ears, flame in paw
+      g.fillStyle(0xff8a3c, 1);
+      g.fillEllipse(cx - 13, base - 14, 18, 12);
+      g.strokeEllipse(cx - 13, base - 14, 18, 12);
+      g.fillStyle(0xffffff, 1);
+      g.fillCircle(cx - 20, base - 15, 4);
+      g.fillStyle(0x8a4a9a, 1);
+      g.fillRoundedRect(cx - 9, base - 30, 18, 26, 7);
+      g.strokeRoundedRect(cx - 9, base - 30, 18, 26, 7);
+      g.fillStyle(0xff8a3c, 1);
+      g.fillCircle(cx, base - 36, 10);
+      g.strokeCircle(cx, base - 36, 10);
+      g.fillTriangle(cx - 9, base - 40, cx - 3, base - 44, cx - 8, base - 52);
+      g.fillTriangle(cx + 9, base - 40, cx + 3, base - 44, cx + 8, base - 52);
+      g.fillStyle(0xffffff, 1);
+      g.fillEllipse(cx, base - 32, 10, 6);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx - 4, base - 38, 1.8);
+      g.fillCircle(cx + 4, base - 38, 1.8);
+      g.fillCircle(cx, base - 33, 1.5);
+      g.fillStyle(0xffd23c, 0.5);
+      g.fillCircle(cx + 15, base - 26, 8);
+      g.fillStyle(0xffe680, 1);
+      g.fillCircle(cx + 15, base - 26, 4.5);
+    } else {
+      // badger knight with bark armor and a wooden sword
+      g.fillStyle(0x7a5232, 1);
+      g.fillRoundedRect(cx - 12, base - 28, 24, 24, 8);
+      g.strokeRoundedRect(cx - 12, base - 28, 24, 24, 8);
+      g.fillStyle(0x9a6a40, 1);
+      g.fillRect(cx - 10, base - 22, 20, 4);
+      g.fillStyle(0x3b3b3b, 1);
+      g.fillCircle(cx, base - 36, 12);
+      g.strokeCircle(cx, base - 36, 12);
+      g.fillStyle(0xffffff, 1);
+      g.fillRect(cx - 2.5, base - 48, 5, 18);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx - 5, base - 36, 2);
+      g.fillCircle(cx + 5, base - 36, 2);
+      g.fillStyle(0xd9d2c0, 1);
+      g.fillRect(cx + 14, base - 46, 4, 26);
+      g.fillStyle(0x7a5232, 1);
+      g.fillRect(cx + 10, base - 22, 12, 4);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeRect(cx + 14, base - 46, 4, 26);
+      g.fillStyle(C.gold, 1);
+      g.fillCircle(cx - 14, base - 18, 8);
+      g.lineStyle(2.5, C.ink, 1);
+      g.strokeCircle(cx - 14, base - 18, 8);
+    }
+    g.generateTexture(`hero_${id}`, w, h);
+    g.destroy();
+  }
+
   private makeTower(id: string, color: number, tier: number): void {
     const g = this.g();
     const w = 72;
@@ -457,6 +551,19 @@ export class BootScene extends Phaser.Scene {
     g.strokeTriangle(5, 4, 22, 10, 5, 16);
     g.generateTexture('rally', 24, 32);
     g.destroy();
+
+    // hero projectiles
+    g = this.g();
+    g.fillStyle(0xffffff, 1);
+    g.fillRect(0, 2, 14, 2);
+    g.fillStyle(0x7fb0d8, 1);
+    g.fillTriangle(0, 0, 0, 6, 5, 3);
+    g.fillStyle(0xffe680, 1);
+    g.fillTriangle(14, 0, 14, 6, 19, 3);
+    g.generateTexture('proj_hero_fen', 19, 6);
+    g.destroy();
+    proj('proj_hero_ember', 0xff9a3c, 5);
+    proj('proj_hero_bramble', 0xffffff, 3);
 
     // particle
     g = this.g();

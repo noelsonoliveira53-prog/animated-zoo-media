@@ -28,7 +28,7 @@ await page.waitForTimeout(1200);
 await page.screenshot({ path: `screenshots/${name}-menu.png` });
 
 // Enter battle 1 and set up a defense through the exposed game object.
-await page.evaluate(() => window.__game.scene.start('Battle', { levelIndex: 0 }));
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 0 }));
 await page.waitForTimeout(800);
 await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');

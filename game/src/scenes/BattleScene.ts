@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
+import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
@@ -43,6 +44,13 @@ export class BattleScene extends Phaser.Scene {
   private rangeRing!: Phaser.GameObjects.Graphics;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private ended = false;
+  private heroSprite: Phaser.GameObjects.Image | null = null;
+  private heroBar!: Phaser.GameObjects.Graphics;
+  private heroRing!: Phaser.GameObjects.Ellipse;
+  private heroSelected = false;
+  private heroHud!: Phaser.GameObjects.Graphics;
+  private heroLevelText!: Phaser.GameObjects.Text;
+  private skillText!: Phaser.GameObjects.Text;
   private bossBar!: Phaser.GameObjects.Graphics;
   private bossLabel!: Phaser.GameObjects.Text;
 
@@ -53,7 +61,9 @@ export class BattleScene extends Phaser.Scene {
   init(data: { levelIndex?: number }): void {
     this.levelIndex = data.levelIndex ?? 0;
     this.level = LEVELS[this.levelIndex];
-    this.sim = new BattleSim(this.level);
+    this.sim = new BattleSim(this.level, loadSave().hero);
+    this.heroSprite = null;
+    this.heroSelected = false;
     this.speed = 1;
     this.paused = false;
     this.ended = false;
@@ -91,16 +101,23 @@ export class BattleScene extends Phaser.Scene {
     this.particles.setDepth(2000);
 
     this.buildHud();
+    this.buildHero();
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (this.rallyMode !== null) {
         this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY });
         return;
       }
+      if (this.heroSelected && !this.menu) {
+        this.orderHeroMove({ x: p.worldX, y: p.worldY });
+        return;
+      }
       this.closeMenu();
     });
     this.input.keyboard?.on('keydown-SPACE', () => this.togglePause());
     this.input.keyboard?.on('keydown-N', () => this.callWave());
+    this.input.keyboard?.on('keydown-H', () => this.selectHero(!this.heroSelected));
+    this.input.keyboard?.on('keydown-Q', () => this.sim.useHeroSkill());
 
     this.cameras.main.fadeIn(300, 16, 38, 27);
     this.showBanner(this.level.name, 'Build outposts on the stone pads, then call the first wave!');
@@ -232,6 +249,145 @@ export class BattleScene extends Phaser.Scene {
     this.bossBar = this.add.graphics().setDepth(3001);
     this.bossLabel = this.add.text(GAME_W / 2, 92, '', textStyle(18, TEXT.heart)).setOrigin(0.5).setDepth(3002).setVisible(false);
     this.refreshHud();
+  }
+
+  // ---------- hero ----------
+
+  private buildHero(): void {
+    const h = this.sim.hero;
+    if (!h) return;
+    this.heroRing = this.add.ellipse(h.pos.x, h.pos.y, 56, 22).setStrokeStyle(3, C.gold, 1).setFillStyle(C.gold, 0.15).setVisible(false);
+    this.tweens.add({ targets: this.heroRing, scale: 1.15, yoyo: true, repeat: -1, duration: 500 });
+    this.heroSprite = this.add.image(h.pos.x, h.pos.y, `hero_${h.def.id}`).setOrigin(0.5, 0.9).setInteractive({ useHandCursor: true });
+    this.heroSprite.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+      ev.stopPropagation();
+      sfx.unlock();
+      this.closeMenu();
+      this.selectHero(!this.heroSelected);
+    });
+    this.heroBar = this.add.graphics();
+
+    // HUD: portrait (select) + skill button, bottom-left.
+    const px = 58;
+    const py = GAME_H - 58;
+    this.heroHud = this.add.graphics().setDepth(3000);
+    const portrait = this.add.image(px, py + 6, `hero_${h.def.id}`).setDepth(3001).setScale(1.05);
+    portrait.setInteractive(new Phaser.Geom.Circle(26, 30, 40), Phaser.Geom.Circle.Contains);
+    portrait.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+      ev.stopPropagation();
+      sfx.unlock();
+      sfx.click();
+      this.closeMenu();
+      this.selectHero(!this.heroSelected);
+    });
+    this.heroLevelText = this.add.text(px + 30, py + 30, '1', textStyle(18, TEXT.gold)).setOrigin(0.5).setDepth(3002);
+    const skillZone = this.add.zone(px + 104, py, 76, 76).setDepth(3002).setInteractive({ useHandCursor: true });
+    skillZone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+      ev.stopPropagation();
+      sfx.unlock();
+      if (!this.sim.useHeroSkill()) this.tweens.add({ targets: this.skillText, x: this.skillText.x + 4, duration: 40, yoyo: true, repeat: 2 });
+    });
+    this.skillText = this.add.text(px + 104, py, h.def.active.name.replace(' ', '\n'), { ...textStyle(13), align: 'center' }).setOrigin(0.5).setDepth(3002);
+  }
+
+  private selectHero(on: boolean): void {
+    if (!this.sim.hero?.alive) on = false;
+    this.heroSelected = on;
+    this.heroRing?.setVisible(on);
+    if (on) this.floatText(this.sim.hero!.pos.x, this.sim.hero!.pos.y - 70, 'Tap to move', TEXT.cream, 16);
+  }
+
+  private orderHeroMove(p: Vec2): void {
+    this.selectHero(false);
+    if (!this.sim.moveHero(p)) return;
+    sfx.click();
+    const mark = this.add.circle(p.x, p.y, 16).setStrokeStyle(3, C.gold, 1).setDepth(p.y);
+    this.tweens.add({ targets: mark, scale: 0.2, alpha: 0, duration: 450, onComplete: () => mark.destroy() });
+  }
+
+  private syncHero(): void {
+    const h = this.sim.hero;
+    if (!h || !this.heroSprite) return;
+    const moving = !!h.dest;
+    const bob = moving ? Math.abs(Math.sin(this.time.now / 90)) * 4 : 0;
+    this.heroSprite.setVisible(h.alive).setPosition(h.pos.x, h.pos.y - bob).setDepth(h.pos.y).setFlipX(h.facing < 0);
+    this.heroRing.setPosition(h.pos.x, h.pos.y).setDepth(h.pos.y - 1);
+    if (!h.alive && this.heroSelected) this.selectHero(false);
+    this.heroBar.clear();
+    if (h.alive && h.hp < h.maxHp) {
+      const w = 34;
+      this.heroBar.fillStyle(C.ink, 0.85);
+      this.heroBar.fillRect(h.pos.x - w / 2 - 1, h.pos.y - 62, w + 2, 7);
+      this.heroBar.fillStyle(0x7be35a, 1);
+      this.heroBar.fillRect(h.pos.x - w / 2, h.pos.y - 61, w * (h.hp / h.maxHp), 5);
+      this.heroBar.setDepth(h.pos.y + 0.5);
+    }
+
+    // HUD
+    const px = 58;
+    const py = GAME_H - 58;
+    const g = this.heroHud;
+    g.clear();
+    g.fillStyle(C.ink, 0.8);
+    g.fillCircle(px, py, 42);
+    g.fillStyle(h.alive ? C.panelLight : 0x553333, 1);
+    g.fillCircle(px, py, 36);
+    // xp arc
+    const next = HERO_XP[h.level] ?? HERO_XP[HERO_MAX_LEVEL - 1];
+    const prev = HERO_XP[h.level - 1];
+    const frac = h.level >= HERO_MAX_LEVEL ? 1 : (h.xp - prev) / Math.max(1, next - prev);
+    g.lineStyle(5, C.gold, 1);
+    g.beginPath();
+    g.arc(px, py, 39, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * frac);
+    g.strokePath();
+    if (this.heroSelected) {
+      g.lineStyle(3, C.cream, 1);
+      g.strokeCircle(px, py, 44);
+    }
+    g.fillStyle(C.ink, 1);
+    g.fillCircle(px + 30, py + 30, 14);
+    this.heroLevelText.setText(String(h.level));
+    // skill button with cooldown pie
+    const sx = px + 104;
+    const ready = h.alive && h.skillCd <= 0;
+    g.fillStyle(C.ink, 0.85);
+    g.fillCircle(sx, py, 38);
+    g.fillStyle(ready ? h.def.color : 0x44524a, 1);
+    g.fillCircle(sx, py, 33);
+    if (!ready && h.alive) {
+      const cdFrac = h.skillCd / h.def.active.cooldown;
+      g.fillStyle(0x000000, 0.45);
+      g.slice(sx, py, 33, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * cdFrac, false);
+      g.fillPath();
+    }
+    g.lineStyle(3, ready ? C.gold : 0x777777, 1);
+    g.strokeCircle(sx, py, 34);
+    this.skillText.setAlpha(ready ? 1 : 0.6);
+    if (!h.alive) this.heroLevelText.setText(`${Math.ceil(h.respawnTimer)}s`);
+  }
+
+  private skillEffect(kind: string, pos: Vec2, radius: number, color: number): void {
+    if (kind === 'quake') {
+      for (let i = 0; i < 3; i++) {
+        const ring = this.add.ellipse(pos.x, pos.y, radius * 2, radius * 1.1).setStrokeStyle(6, 0xc9a66b, 1).setDepth(2400).setScale(0.2);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, delay: i * 90, duration: 420, onComplete: () => ring.destroy() });
+      }
+      this.particles.setParticleTint(0xa8844e);
+      this.particles.explode(30, pos.x, pos.y);
+      this.cameras.main.shake(260, 0.01);
+      sfx.boom();
+    } else if (kind === 'ring') {
+      const ring = this.add.circle(pos.x, pos.y, radius, color, 0.25).setStrokeStyle(6, 0xffd23c, 1).setDepth(2400).setScale(0.1);
+      this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
+      this.particles.setParticleTint(0xffa040);
+      for (let i = 0; i < 12; i++) {
+        const a = (i / 12) * Math.PI * 2;
+        this.particles.explode(3, pos.x + Math.cos(a) * radius * 0.8, pos.y + Math.sin(a) * radius * 0.8);
+      }
+      sfx.shoot('glimmer');
+    } else {
+      sfx.shoot('thornbow');
+    }
   }
 
   private drawBossBar(): void {
@@ -467,6 +623,7 @@ export class BattleScene extends Phaser.Scene {
     if (!this.paused && !this.ended) this.sim.update(dt * this.speed);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
+    this.syncHero();
     this.drawBossBar();
     this.refreshHud();
   }
@@ -480,6 +637,41 @@ export class BattleScene extends Phaser.Scene {
           this.cameras.main.shake(500, 0.01);
           sfx.waveHorn();
         }
+        break;
+      case 'heroShoot': {
+        const key = `proj_${ev.projectile.kind}`;
+        const img = this.add.image(ev.projectile.pos.x, ev.projectile.pos.y, this.textures.exists(key) ? key : 'dot').setDepth(2500);
+        this.projViews.set(ev.projectile.uid, img);
+        sfx.shoot(ev.hero.def.id === 'ember' ? 'glimmer' : 'thornbow');
+        break;
+      }
+      case 'heroSkill': {
+        const sk = ev.hero.def.active;
+        this.skillEffect(sk.kind, ev.hero.pos, sk.radius, ev.hero.def.color);
+        if (sk.kind === 'volley') {
+          for (const e of ev.hits) {
+            const f = this.add.image(ev.hero.pos.x, ev.hero.pos.y - 30, 'proj_hero_fen').setDepth(2500);
+            f.setRotation(Math.atan2(e.pos.y - f.y, e.pos.x - f.x));
+            this.tweens.add({ targets: f, x: e.pos.x, y: e.pos.y, duration: 200, onComplete: () => f.destroy() });
+          }
+        }
+        this.floatText(ev.hero.pos.x, ev.hero.pos.y - 80, sk.name + '!', TEXT.gold, 22);
+        break;
+      }
+      case 'heroLevel':
+        this.floatText(ev.hero.pos.x, ev.hero.pos.y - 80, `Level ${ev.hero.level}!`, TEXT.gold, 24);
+        this.particles.setParticleTint(C.gold);
+        this.particles.explode(24, ev.hero.pos.x, ev.hero.pos.y - 30);
+        sfx.victory();
+        break;
+      case 'heroDown':
+        this.floatText(ev.hero.pos.x, ev.hero.pos.y - 60, `${ev.hero.def.name} is down!`, TEXT.heart, 20);
+        this.particles.setParticleTint(0xffffff);
+        this.particles.explode(16, ev.hero.pos.x, ev.hero.pos.y - 20);
+        sfx.leak();
+        break;
+      case 'heroBack':
+        this.floatText(ev.hero.pos.x, ev.hero.pos.y - 60, `${ev.hero.def.name} returns!`, TEXT.gold, 20);
         break;
       case 'shoot': {
         const key = `proj_${ev.tower.def.id}`;

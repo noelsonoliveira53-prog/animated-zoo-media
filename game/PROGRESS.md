@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>`
 
-Iteration counter: **3** (next balance pass at iteration 5)
+Iteration counter: **4** (next iteration = 5 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -30,25 +30,35 @@ Iteration counter: **3** (next balance pass at iteration 5)
   **Gloomfen Edge** (2 merging roads, 12 waves, boss finale). Banners moved under the HUD so they
   don't cover the battlefield; oversized map background so shake doesn't show edges.
   `scripts/showcase-enemies.mjs` visual check. 6 new tests (36 total).
+- [x] **Iter 4** — **Heroes.** 3 heroes in `data/heroes.ts`: **Bramble** the Badger Knight (melee
+  blocker; passive Thick Hide; active Earthshake = ground AoE + slow), **Fen** the Heron Ranger (ranged,
+  hits air; passive 25% crits; active Feather Storm = volley at 8 targets), **Ember** the Fox Sage
+  (magic; passive Warm Glow = nearby towers +20% fire rate; active Foxfire Ring = AoE burn + slow).
+  Tap the hero (or portrait / H) then tap the map to move; skill button (or Q) with cooldown pie.
+  XP from kills (full nearby, 35% far), levels 1–6 (+12% stats/level), death + respawn timer.
+  Hero picker on the menu (saved). Smoke scripts now start battles via the Menu scene (old way left
+  the menu running underneath and its buttons swallowed clicks). 8 new tests (44 total).
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Hero system: 1 movable hero (tap to move), melee, passive + active skill; then 3 heroes with level ups.
-2. Global spells: Starfall (meteor AoE) + Call the Rangers (temporary soldiers), cooldowns.
-3. World map scene with level nodes, star totals, unlock progression; levels 2–5.
-4. Tower top-tier specializations (2 branches per tower).
-5. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
-6. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
-7. Levels 6–15+, multi-path levels.
-8. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-9. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-10. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-11. Ambient music loop (procedural).
+1. Global spells: Starfall (meteor AoE) + Call the Rangers (temporary soldiers), cooldowns.
+2. World map scene with level nodes, star totals, unlock progression; levels 2–5.
+3. Tower top-tier specializations (2 branches per tower).
+4. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
+5. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
+6. Levels 6–15+, multi-path levels.
+7. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+8. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+9. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+10. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
+
+## Ideas parked
+- Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes
 - Level 2 (Gloomfen Edge) untuned and probably hard — boss has 2400 hp. Check in iteration 5.

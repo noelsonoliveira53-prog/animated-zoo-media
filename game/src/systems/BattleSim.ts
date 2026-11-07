@@ -1,4 +1,5 @@
-import type { EnemyDef, LevelDef, TargetMode, TowerDef, Vec2 } from '../data/types';
+import type { EnemyDef, HeroDef, LevelDef, TargetMode, TowerDef, Vec2 } from '../data/types';
+import { HEROES, HERO_MAX_LEVEL, heroLevelMult, levelForXp } from '../data/heroes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, sellValue } from '../data/towers';
 import { Path } from './path';
@@ -40,6 +41,23 @@ export interface Soldier {
   respawnTimer: number;
   targetUid: number; // enemy uid engaged, 0 if idle
   attackCd: number;
+}
+
+export interface Hero {
+  uid: number;
+  def: HeroDef;
+  pos: Vec2;
+  dest: Vec2 | null; // move order
+  hp: number;
+  maxHp: number;
+  alive: boolean;
+  respawnTimer: number;
+  level: number;
+  xp: number;
+  attackCd: number;
+  skillCd: number;
+  targetUid: number;
+  facing: number; // -1 left, 1 right
 }
 
 export interface Tower {
@@ -85,6 +103,11 @@ export type SimEvent =
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
   | { type: 'melee'; pos: Vec2 }
+  | { type: 'heroSkill'; hero: Hero; hits: Enemy[] }
+  | { type: 'heroShoot'; hero: Hero; projectile: Projectile }
+  | { type: 'heroLevel'; hero: Hero }
+  | { type: 'heroDown'; hero: Hero }
+  | { type: 'heroBack'; hero: Hero }
   | { type: 'heal'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
@@ -118,16 +141,228 @@ export class BattleSim {
   towers: (Tower | null)[];
   projectiles: Projectile[] = [];
   soldiers: Soldier[] = [];
+  hero: Hero | null = null;
   events: SimEvent[] = [];
 
   private nextUid = 1;
 
-  constructor(level: LevelDef) {
+  constructor(level: LevelDef, heroId: string | null = null) {
     this.level = level;
     this.paths = level.paths.map((p) => new Path(p));
     this.coins = level.startCoins;
     this.lives = level.lives;
     this.towers = level.slots.map(() => null);
+    if (heroId && HEROES[heroId]) {
+      const def = HEROES[heroId];
+      const spawn = this.heroSpawnPoint();
+      this.hero = {
+        uid: this.nextUid++,
+        def,
+        pos: { ...spawn },
+        dest: null,
+        hp: def.hp,
+        maxHp: def.hp,
+        alive: true,
+        respawnTimer: 0,
+        level: 1,
+        xp: 0,
+        attackCd: 0,
+        skillCd: 0,
+        targetUid: 0,
+        facing: -1,
+      };
+    }
+  }
+
+  /** Heroes start (and respawn) near the gate, on the last stretch of the first road. */
+  heroSpawnPoint(): Vec2 {
+    const p = this.paths[0];
+    return p.pointAt(p.length - 260);
+  }
+
+  // ---------- hero ----------
+
+  moveHero(to: Vec2): boolean {
+    const h = this.hero;
+    if (!h || !h.alive || !this.isActive()) return false;
+    h.dest = { x: Math.max(20, Math.min(1260, to.x)), y: Math.max(80, Math.min(700, to.y)) };
+    this.releaseHeroTarget();
+    return true;
+  }
+
+  heroStat(base: number): number {
+    return this.hero ? base * heroLevelMult(this.hero.level) : base;
+  }
+
+  /** Fire the hero's active skill. Returns false if not ready. */
+  useHeroSkill(): boolean {
+    const h = this.hero;
+    if (!h || !h.alive || h.skillCd > 0 || !this.isActive()) return false;
+    const sk = h.def.active;
+    h.skillCd = sk.cooldown;
+    const dmg = this.heroStat(sk.damage);
+    let pool = this.enemies.filter((e) => e.alive && Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= sk.radius);
+    if (sk.kind === 'quake') pool = pool.filter((e) => !e.def.flying);
+    if (sk.maxTargets) {
+      pool.sort((a, b) => b.dist - a.dist);
+      pool = pool.slice(0, sk.maxTargets);
+    }
+    for (const e of pool) {
+      if (sk.slow) {
+        e.slowFactor = Math.min(e.slowFactor, sk.slow.factor);
+        e.slowTime = Math.max(e.slowTime, sk.slow.duration);
+      }
+      this.applyDamage(e, computeDamage(dmg, sk.damageType, e.def));
+    }
+    this.events.push({ type: 'heroSkill', hero: h, hits: pool });
+    return true;
+  }
+
+  private releaseHeroTarget(): void {
+    const h = this.hero;
+    if (!h || !h.targetUid) return;
+    const e = this.enemies.find((en) => en.uid === h.targetUid);
+    if (e && e.blockedBy === h.uid) e.blockedBy = 0;
+    h.targetUid = 0;
+  }
+
+  private grantHeroXp(amount: number): void {
+    const h = this.hero;
+    if (!h || h.level >= HERO_MAX_LEVEL) return;
+    h.xp += amount;
+    const lvl = levelForXp(h.xp);
+    if (lvl > h.level) {
+      const frac = h.hp / h.maxHp;
+      h.level = lvl;
+      h.maxHp = Math.round(h.def.hp * heroLevelMult(lvl));
+      h.hp = Math.max(h.hp, Math.round(h.maxHp * Math.max(frac, 0.5)));
+      this.events.push({ type: 'heroLevel', hero: h });
+    }
+  }
+
+  private heroArmor(): number {
+    const h = this.hero!;
+    return h.def.armor + (h.def.passive.kind === 'toughness' ? h.def.passive.armor : 0);
+  }
+
+  private hurtHero(raw: number): void {
+    const h = this.hero;
+    if (!h || !h.alive) return;
+    h.hp -= computeDamage(raw, 'physical', { armor: this.heroArmor(), magicResist: 0 });
+    if (h.hp <= 0) {
+      h.hp = 0;
+      h.alive = false;
+      h.respawnTimer = h.def.respawn;
+      h.dest = null;
+      this.releaseHeroTarget();
+      for (const e of this.enemies) if (e.blockedBy === h.uid) e.blockedBy = 0;
+      this.events.push({ type: 'heroDown', hero: h });
+    }
+  }
+
+  private updateHero(dt: number): void {
+    const h = this.hero;
+    if (!h) return;
+    if (h.skillCd > 0) h.skillCd = Math.max(0, h.skillCd - dt);
+    if (!h.alive) {
+      h.respawnTimer -= dt;
+      if (h.respawnTimer <= 0) {
+        h.alive = true;
+        h.hp = h.maxHp;
+        h.pos = { ...this.heroSpawnPoint() };
+        this.events.push({ type: 'heroBack', hero: h });
+      }
+      return;
+    }
+    const regen = h.def.regen + (h.def.passive.kind === 'toughness' ? h.def.passive.regen : 0);
+    if (h.dest) {
+      const before = h.pos.x;
+      this.moveToward(h.pos, h.dest, h.def.speed * dt, 0);
+      if (h.pos.x !== before) h.facing = h.pos.x < before ? -1 : 1;
+      if (Math.hypot(h.dest.x - h.pos.x, h.dest.y - h.pos.y) < 1) h.dest = null;
+      h.hp = Math.min(h.maxHp, h.hp + regen * dt);
+      return;
+    }
+    const atk = h.def.attack;
+    h.attackCd -= dt;
+    if (h.def.melee) {
+      let target = h.targetUid ? this.enemies.find((e) => e.uid === h.targetUid && e.alive) : undefined;
+      if (target && Math.hypot(target.pos.x - h.pos.x, target.pos.y - h.pos.y) > 120) {
+        this.releaseHeroTarget();
+        target = undefined;
+      }
+      if (!target) {
+        let best: Enemy | undefined;
+        let bestD = 90;
+        for (const e of this.enemies) {
+          if (!e.alive || e.def.flying) continue;
+          const d = Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) + (e.blockedBy ? 40 : 0);
+          if (d < bestD) {
+            bestD = d;
+            best = e;
+          }
+        }
+        if (best) {
+          target = best;
+          h.targetUid = best.uid;
+          if (!best.blockedBy) best.blockedBy = h.uid;
+        }
+      }
+      if (target) {
+        const d = Math.hypot(target.pos.x - h.pos.x, target.pos.y - h.pos.y);
+        if (d > SOLDIER_REACH) {
+          const before = h.pos.x;
+          this.moveToward(h.pos, target.pos, h.def.speed * dt, SOLDIER_REACH - 2);
+          if (h.pos.x !== before) h.facing = h.pos.x < before ? -1 : 1;
+        } else if (h.attackCd <= 0) {
+          h.attackCd = 1 / atk.rate;
+          h.facing = target.pos.x < h.pos.x ? -1 : 1;
+          this.events.push({ type: 'melee', pos: { ...target.pos } });
+          this.applyDamage(target, computeDamage(this.heroHitDamage(), atk.type, target.def));
+        }
+        return;
+      }
+    } else if (h.attackCd <= 0) {
+      let best: Enemy | null = null;
+      for (const e of this.enemies) {
+        if (!e.alive || (e.def.flying && !atk.hitsAir)) continue;
+        if (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) > atk.range) continue;
+        if (!best || e.dist > best.dist) best = e;
+      }
+      if (best) {
+        h.attackCd = 1 / atk.rate;
+        h.facing = best.pos.x < h.pos.x ? -1 : 1;
+        const origin = { x: h.pos.x, y: h.pos.y - 20 };
+        const p: Projectile = {
+          uid: this.nextUid++,
+          towerUid: h.uid,
+          pos: { ...origin },
+          targetUid: best.uid,
+          lastTargetPos: { ...best.pos },
+          speed: atk.projectileSpeed,
+          damage: this.heroHitDamage(),
+          damageType: atk.type,
+          splash: 0,
+          color: h.def.color,
+          homing: true,
+          hitsAir: atk.hitsAir,
+          origin,
+          travel: 0,
+          kind: `hero_${h.def.id}`,
+        };
+        this.projectiles.push(p);
+        this.events.push({ type: 'heroShoot', hero: h, projectile: p });
+        return;
+      }
+    }
+    if (h.hp < h.maxHp) h.hp = Math.min(h.maxHp, h.hp + regen * dt);
+  }
+
+  private heroHitDamage(): number {
+    const h = this.hero!;
+    let dmg = this.heroStat(h.def.attack.damage);
+    if (h.def.passive.kind === 'crit' && Math.random() < h.def.passive.chance) dmg *= h.def.passive.mult;
+    return dmg;
   }
 
   get totalWaves(): number {
@@ -317,6 +552,7 @@ export class BattleSim {
 
     this.spawnEnemies(dt);
     this.updateSoldiers(dt);
+    this.updateHero(dt);
     this.moveEnemies(dt);
     this.fireTowers(dt);
     this.moveProjectiles(dt);
@@ -373,15 +609,18 @@ export class BattleSim {
       }
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.blockedBy) {
-        const s = this.soldiers.find((so) => so.uid === e.blockedBy);
-        if (!s || !s.alive) {
+        const isHero = !!this.hero && this.hero.uid === e.blockedBy;
+        const s = isHero ? null : this.soldiers.find((so) => so.uid === e.blockedBy);
+        const blocker = isHero ? this.hero : s;
+        if (!blocker || !blocker.alive) {
           e.blockedBy = 0;
-        } else if (Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y) <= SOLDIER_REACH + 4) {
-          // Held in place: brawl with the soldier.
+        } else if (Math.hypot(blocker.pos.x - e.pos.x, blocker.pos.y - e.pos.y) <= SOLDIER_REACH + 4) {
+          // Held in place: brawl with the blocker.
           e.attackCd -= dt;
           if (e.attackCd <= 0) {
             e.attackCd = 1 / e.def.attackRate;
-            this.hurtSoldier(s, e.def.attack);
+            if (isHero) this.hurtHero(e.def.attack);
+            else this.hurtSoldier(s!, e.def.attack);
           }
           continue;
         }
@@ -543,7 +782,7 @@ export class BattleSim {
         t.cooldown = 0;
         continue;
       }
-      t.cooldown = 1 / stats.fireRate;
+      t.cooldown = 1 / (stats.fireRate * this.towerHaste(t));
       const origin = { x: t.pos.x, y: t.pos.y - 18 };
       let aim = { ...target.pos };
       if (stats.lob) {
@@ -573,6 +812,13 @@ export class BattleSim {
       this.projectiles.push(p);
       this.events.push({ type: 'shoot', tower: t, projectile: p });
     }
+  }
+
+  /** Fire-rate multiplier from hero auras. */
+  towerHaste(t: Tower): number {
+    const h = this.hero;
+    if (!h || !h.alive || h.def.passive.kind !== 'towerHaste') return 1;
+    return Math.hypot(t.pos.x - h.pos.x, t.pos.y - h.pos.y) <= h.def.passive.radius ? 1 + h.def.passive.bonus : 1;
   }
 
   private moveProjectiles(dt: number): void {
@@ -634,6 +880,10 @@ export class BattleSim {
       e.alive = false;
       this.coins += e.def.bounty;
       this.events.push({ type: 'kill', enemy: e, bounty: e.def.bounty });
+      if (this.hero?.alive) {
+        const near = Math.hypot(e.pos.x - this.hero.pos.x, e.pos.y - this.hero.pos.y) < 260;
+        this.grantHeroXp(e.def.bounty * (near ? 1 : 0.35));
+      }
       if (e.def.splitInto) this.split(e);
       return;
     }

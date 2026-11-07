@@ -19,7 +19,7 @@ page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
 await page.goto('http://localhost:4318/');
 await page.waitForTimeout(1000);
-await page.evaluate(() => window.__game.scene.start('Battle', { levelIndex: 1 }));
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 1 }));
 await page.waitForTimeout(800);
 await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');

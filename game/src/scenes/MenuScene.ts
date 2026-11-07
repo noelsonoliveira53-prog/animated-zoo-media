@@ -1,9 +1,10 @@
 import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
-import { loadSave } from '../systems/save';
+import { loadSave, writeSave } from '../systems/save';
+import { HEROES, HERO_ORDER } from '../data/heroes';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
-import { GAME_H, GAME_W, textStyle, TEXT } from '../ui/theme';
+import { C, GAME_H, GAME_W, textStyle, TEXT } from '../ui/theme';
 
 export class MenuScene extends Phaser.Scene {
   constructor() {
@@ -58,7 +59,7 @@ export class MenuScene extends Phaser.Scene {
     // Level buttons
     LEVELS.forEach((lvl, i) => {
       const y = 400 + i * 90;
-      new Button(this, GAME_W / 2, y, lvl.name, {
+      new Button(this, 460, y, lvl.name, {
         width: 360,
         height: 68,
         fontSize: 28,
@@ -66,10 +67,46 @@ export class MenuScene extends Phaser.Scene {
       });
       const stars = save.stars[lvl.id] ?? 0;
       for (let s = 0; s < 3; s++) {
-        this.add.image(GAME_W / 2 + 210 + s * 34, y, s < stars ? 'star' : 'star_empty').setScale(0.6);
+        this.add.image(460 + 210 + s * 34, y, s < stars ? 'star' : 'star_empty').setScale(0.6);
       }
     });
 
-    this.add.text(16, GAME_H - 30, 'v0.1 — prototype', textStyle(14, TEXT.dim, false));
+    this.buildHeroPicker();
+
+    this.add.text(16, GAME_H - 30, 'v0.2 — prototype', textStyle(14, TEXT.dim, false));
+  }
+
+  private buildHeroPicker(): void {
+    const save = loadSave();
+    let index = Math.max(0, HERO_ORDER.indexOf(save.hero));
+    const x = 1040;
+    const y = 470;
+    const panel = this.add.graphics();
+    panel.fillStyle(C.ink, 0.75);
+    panel.fillRoundedRect(x - 190, y - 130, 380, 270, 22);
+    this.add.text(x, y - 108, 'Choose your Hero', textStyle(22, TEXT.gold)).setOrigin(0.5);
+    const sprite = this.add.image(x, y - 36, 'hero_bramble').setScale(1.6);
+    this.tweens.add({ targets: sprite, y: sprite.y - 6, yoyo: true, repeat: -1, duration: 800, ease: 'Sine.easeInOut' });
+    const name = this.add.text(x, y + 22, '', textStyle(24)).setOrigin(0.5);
+    const info = this.add
+      .text(x, y + 80, '', { ...textStyle(14, TEXT.cream, false), align: 'center', wordWrap: { width: 340 } })
+      .setOrigin(0.5);
+
+    const show = () => {
+      const h = HEROES[HERO_ORDER[index]];
+      sprite.setTexture(`hero_${h.id}`);
+      name.setText(`${h.name} the ${h.title}`);
+      info.setText(`${h.passive.text}\n${h.active.name}: ${h.active.text}`);
+    };
+    const pick = (dir: number) => {
+      index = (index + dir + HERO_ORDER.length) % HERO_ORDER.length;
+      const s = loadSave();
+      s.hero = HERO_ORDER[index];
+      writeSave(s);
+      show();
+    };
+    new Button(this, x - 140, y - 36, '<', { width: 56, height: 56, color: C.sky, onClick: () => pick(-1) });
+    new Button(this, x + 140, y - 36, '>', { width: 56, height: 56, color: C.sky, onClick: () => pick(1) });
+    show();
   }
 }

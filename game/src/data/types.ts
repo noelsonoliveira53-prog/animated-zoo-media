@@ -92,3 +92,37 @@ export interface LevelDef {
   waves: WaveDef[];
   theme: { grass: number; grassDark: number; road: number; roadEdge: number };
 }
+
+export type HeroPassive =
+  | { kind: 'toughness'; armor: number; regen: number; text: string }
+  | { kind: 'crit'; chance: number; mult: number; text: string }
+  | { kind: 'towerHaste'; radius: number; bonus: number; text: string };
+
+export interface HeroActive {
+  name: string;
+  text: string;
+  cooldown: number; // seconds
+  kind: 'quake' | 'volley' | 'ring';
+  damage: number;
+  damageType: DamageType;
+  radius: number;
+  maxTargets?: number;
+  slow?: { factor: number; duration: number };
+}
+
+export interface HeroDef {
+  id: string;
+  name: string;
+  title: string;
+  blurb: string;
+  color: number;
+  hp: number;
+  speed: number;
+  armor: number;
+  regen: number; // hp/s when not fighting
+  melee: boolean; // melee heroes block an enemy like soldiers do
+  attack: { damage: number; type: DamageType; range: number; rate: number; hitsAir: boolean; projectileSpeed: number };
+  respawn: number;
+  passive: HeroPassive;
+  active: HeroActive;
+}

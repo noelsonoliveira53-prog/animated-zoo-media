@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **101** (next balance pass at iteration 105)
+Iteration counter: **102** (next balance pass at iteration 105)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -704,13 +704,23 @@ Iteration counter: **101** (next balance pass at iteration 105)
   the barrow mounds. A 720px ridge track from the north joins it at the last bend (1,420px total). It has 10 pads,
   16 waves (Thunderhoof herds with Copperhorn escorts on the long road, fliers on the ridge) and hpMult 2.1.
   175 tests.
+- **Iteration 102**: Thunderhead finale, level 60 **Thunderhead Crown**: a 2,960px storm-crown road plus a 1,360px
+  north track, 12 pads, 18 waves, hpMult 2.0. The boss **Thrumhorn, the Storm Bull** (2,800 health):
+  - Lightning bolt on the nearest tower in range 220, every 7s, stunning it 1.8s.
+  - Calls in Thunderhoof herds (2 every 10s, up to 8).
+  - Phases: 75% Stormcallers; 50% a 1,400 shield plus 2 Copperhorns; 25% a 10-strong stampede and a speed-up; 10%
+    a charge.
+  - Code-drawn sprite: storm bull with sparking horns and a little thundercloud on its back.
+
+  Also: achievements `boss_thrumhorn` (Lightning Rod) and `storm_stars` (Rainmaker), story card "The Sky Clears", and
+  Thrumhorn joins the endless boss rotation. 175 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 12 finale (level 60): Thunderhead boss with phases + story card + achievements.
-2. Iter 105 balance pass.
+1. Iter 105 balance pass.
+2. Region 13, or a breather feature (hero / tower variety, a village quality-of-life pass).
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -721,6 +731,12 @@ Iteration counter: **101** (next balance pass at iteration 105)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 102**: 60 Thunderhead Crown started at hpMult 2.5 with the boss at 3,000 health, bolting every 5s and
+spawning herds of up to 12. The expert went 0/3, leaking Glareflies on the north track and wave 6–7 Echo Wisps and
+Thunderhooves. Fixes: Glareflies moved to the long road, wave 6 trimmed to 9 wisps and wave 7 to 10 hooves, the boss
+bolts every 7s with a herd limit of 8, and boss health went to 2,800. Tuning: 2.3 gave 33/8, 2.1 gave 67/17, 1.9 gave
+83/25, and **2.0 → 83/33/0** (kept; the casual player mainly loses to the boss itself).
+
 **Iteration 101**: 59 Stormwatch Barrows was **83/75/0** at hpMult 2.1 on the first try (kept, a fourth-level ramp).
 
 **Iteration 100** (full sweep, 12 seeds, expert/casual/novice):

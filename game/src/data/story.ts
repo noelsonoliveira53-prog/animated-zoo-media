@@ -87,4 +87,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x5a8aa8, 0xd8c890],
     accent: 0xd8642a,
   },
+  l60: {
+    title: 'The Sky Clears',
+    lines: [
+      'Thrumhorn sinks to its knees, and the thunder rolls away east.',
+      'For the first time in years, real rain falls soft on the steppe.',
+      'The herds scatter, calm again, and the grass turns green behind them.',
+    ],
+    sky: [0x2a3040, 0x7a8a6a],
+    accent: 0xfff07a,
+  },
 };

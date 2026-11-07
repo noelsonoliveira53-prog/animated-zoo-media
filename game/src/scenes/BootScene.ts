@@ -449,6 +449,42 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.55, cy + r * 0.02, r * 0.07);
         break;
       }
+      case 'thrumhorn': {
+        // colossal storm bull: dark shaggy hump, huge forward horns crackling with sparks, a little thundercloud on its back
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.65, -0.25, 0.3, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 1.0);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.15, cy, r * 1.75, r * 1.2);
+        g.strokeEllipse(cx + r * 0.15, cy, r * 1.75, r * 1.2);
+        g.fillStyle(0x2a2a36, 1);
+        g.fillEllipse(cx - r * 0.2, cy - r * 0.35, r * 1.0, r * 0.75);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.75, cy + r * 0.1, r * 0.48);
+        g.strokeCircle(cx - r * 0.75, cy + r * 0.1, r * 0.48);
+        g.lineStyle(5, 0xe8e0c8, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.0, cy - r * 0.15);
+        g.lineTo(cx - r * 1.35, cy - r * 0.5);
+        g.lineTo(cx - r * 1.2, cy - r * 0.85);
+        g.strokePath();
+        g.beginPath();
+        g.moveTo(cx - r * 0.5, cy - r * 0.2);
+        g.lineTo(cx - r * 0.3, cy - r * 0.6);
+        g.lineTo(cx - r * 0.5, cy - r * 0.9);
+        g.strokePath();
+        g.fillStyle(0xfff07a, 1);
+        for (const [sx, sy] of [[-1.25, -0.95], [-0.55, -1.0], [-1.45, -0.6]]) g.fillCircle(cx + sx * r, cy + sy * r, r * 0.07);
+        g.fillStyle(0xffd84a, 1);
+        g.fillCircle(cx - r * 0.9, cy + r * 0.02, r * 0.08);
+        g.fillCircle(cx - r * 0.6, cy + r * 0.02, r * 0.08);
+        g.fillStyle(0xd8dce8, 1);
+        g.fillCircle(cx + r * 0.1, cy - r * 0.95, r * 0.22);
+        g.fillCircle(cx + r * 0.38, cy - r * 1.02, r * 0.28);
+        g.fillCircle(cx + r * 0.66, cy - r * 0.93, r * 0.2);
+        g.fillStyle(0xfff07a, 1);
+        g.fillTriangle(cx + r * 0.35, cy - r * 0.8, cx + r * 0.48, cy - r * 0.8, cx + r * 0.3, cy - r * 0.55);
+        break;
+      }
       case 'mawbloom': {
         // rotten heart-tree: a split trunk with a gaping maw, a crown of withered branches with bruised fruit, root feet
         g.lineStyle(3, C.ink, 1);

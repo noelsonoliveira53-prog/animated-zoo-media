@@ -188,6 +188,7 @@ export type SimEvent =
   | { type: 'keg'; pos: Vec2; radius: number; hits: Vec2[] }
   | { type: 'anchor'; enemy: Enemy; down: boolean }
   | { type: 'drum'; enemy: Enemy; radius: number; hasted: Enemy[] }
+  | { type: 'leech'; enemy: Enemy; amount: number }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
@@ -1000,6 +1001,12 @@ export class BattleSim {
             const hit = e.def.attack * this.attackMult();
             if (isHero) this.hurtHero(hit);
             else this.hurtSoldier(s!, hit);
+            if (e.def.lifesteal && e.hp < e.maxHp) {
+              // Sapstoat: every bite feeds it.
+              const healed = Math.min(e.maxHp - e.hp, hit * e.def.lifesteal);
+              e.hp += healed;
+              this.events.push({ type: 'leech', enemy: e, amount: healed });
+            }
           }
           continue;
         }

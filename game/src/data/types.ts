@@ -64,6 +64,7 @@ export interface EnemyDef {
   keg?: { radius: number; damage: number }; // explodes on death, hurting soldiers and the hero within radius
   drum?: { interval: number; radius: number; speedMult: number; duration: number }; // beats a war-drum on a timer: allies in radius (and itself) speed up briefly
   adapt?: { step: number; max: number }; // each hit shifts its hide toward that damage type: +step armor (physical) or MR (magic), up to +max, while the other eases back to base
+  lifesteal?: number; // heals this fraction of the melee damage it deals to soldiers and heroes
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **133** (next balance pass at iteration 135)
+Iteration counter: **134** (next balance pass at iteration 135)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -937,12 +937,19 @@ Iteration counter: **133** (next balance pass at iteration 135)
   - Endless tier at wave 64. Field Guide tags and a drum sound cue. Tests for both traits.
   - Checks: `scripts/amber-check.mjs`; screenshots `screenshots/133.png` and `133-map.png`. The region picker still
     fits at 16 regions. 192 tests.
+- **Iteration 134** (Amberwood level 2): level 77 **Russet Hollow** (11 pads, roads of 2,500px and 1,420px) and a new
+  enemy:
+  - **Sapstoat** (russet stoat with amber teeth): `lifesteal` trait. It heals 120% of the melee damage it deals to
+    soldiers and heroes, so a lone blocker can't wear it down and towers have to finish it.
+  - Supporting pieces: a throttled `leech` event shows "+N" and a gulp cue, a Field Guide tag, and an endless tier at
+    wave 66.
+  - Checks: a unit test and `scripts/sapstoat-check.mjs`. Screenshot `screenshots/134.png`. 193 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Amberwood levels 77–79: a third new trait on level 77, then two more levels.
+1. Amberwood levels 78–79.
 2. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
 3. Phone QA of the region picker at 6 rows (16 regions) and the Field Guide at 70 enemies.
 
@@ -953,6 +960,9 @@ Iteration counter: **133** (next balance pass at iteration 135)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 134**: 77 Russet Hollow: 92/83/0 at hpMult 1.8, 67/33 at 2.1, 92/100 at 1.7 and 1.65, **1.6 → 100/100/17** (kept,
+second-level band).
+
 **Iteration 133**: 76 Amberwood Gate at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/100/0.
 
 **Iteration 131** (hero comparison, expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% → 77%

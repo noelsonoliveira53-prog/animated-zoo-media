@@ -702,6 +702,34 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.8, cy - r * 0.18, r * 0.07);
         break;
       }
+      case 'sapstoat': {
+        // stoat: long low russet body, cream belly, black tail tip, bared amber teeth
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.9, r * 0.32);
+        g.strokeEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.9, r * 0.32);
+        g.fillStyle(0x1a1a1a, 1);
+        g.fillCircle(cx + r * 1.25, cy + r * 0.02, r * 0.17);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.6, r * 0.75);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.6, r * 0.75);
+        g.fillStyle(0xf0e0c0, 1);
+        g.fillEllipse(cx - r * 0.1, cy + r * 0.35, r * 0.9, r * 0.28);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.8, cy - r * 0.15, r * 0.42);
+        g.strokeCircle(cx - r * 0.8, cy - r * 0.15, r * 0.42);
+        g.fillCircle(cx - r * 0.65, cy - r * 0.55, r * 0.14);
+        g.strokeCircle(cx - r * 0.65, cy - r * 0.55, r * 0.14);
+        g.fillStyle(0xf0e0c0, 1);
+        g.fillEllipse(cx - r * 1.0, cy + r * 0.05, r * 0.4, r * 0.22);
+        g.fillStyle(0xf0b040, 1);
+        g.fillTriangle(cx - r * 1.12, cy + r * 0.1, cx - r * 1.02, cy + r * 0.1, cx - r * 1.07, cy + r * 0.28);
+        g.fillTriangle(cx - r * 0.95, cy + r * 0.1, cx - r * 0.85, cy + r * 0.1, cx - r * 0.9, cy + r * 0.26);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.9, cy - r * 0.25, r * 0.08);
+        g.fillCircle(cx - r * 1.18, cy - r * 0.06, r * 0.07);
+        break;
+      }
       case 'turnleaf': {
         // gecko: slim orange body, splayed toes, a big maple-leaf tail, round gold eye
         g.lineStyle(2.5, C.ink, 1);

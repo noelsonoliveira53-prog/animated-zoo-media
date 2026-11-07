@@ -861,3 +861,22 @@ describe('Amberwood enemies', () => {
     expect(t.mr).toBeGreaterThan(mr0);
   });
 });
+
+describe('Sapstoat', () => {
+  it('heals itself from the melee damage it deals to a blocking soldier', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    const s = sim.soldiers[0];
+    const st = sim.spawn('sapstoat', 0, Math.max(0, s.pos.x - 60));
+    st.hp = st.maxHp * 0.5;
+    let healed = 0;
+    for (let i = 0; i < 60 * 4; i++) {
+      sim.update(1 / 60);
+      for (const ev of sim.drainEvents()) if (ev.type === 'leech') healed += ev.amount;
+    }
+    expect(healed).toBeGreaterThan(0);
+  });
+});

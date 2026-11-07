@@ -1586,6 +1586,15 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
         break;
       }
+      case 'leech': {
+        // throttled: a small red-gold "+" and a gulp, at most every 0.6s per stoat
+        const last = this.lastGulp.get(ev.enemy.uid) ?? -99;
+        if (this.time.now - last < 600) break;
+        this.lastGulp.set(ev.enemy.uid, this.time.now);
+        sfx.trait('leech');
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, `+${Math.round(ev.amount)}`, '#ff9a6a', 13);
+        break;
+      }
       case 'drum': {
         sfx.trait('drum');
         // the beat spreads as a warm ring; hastened critters flash

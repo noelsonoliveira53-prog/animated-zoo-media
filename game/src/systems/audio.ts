@@ -184,6 +184,9 @@ class Sfx {
         this.noise(0.1, 0.12, 1800);
         this.tone(160, 0.08, 'square', 0.05, 80);
         break;
+      case 'leech': // a quick wet gulp
+        this.tone(300, 0.08, 'sine', 0.04, 160);
+        break;
       case 'drum': // two hollow log thumps
         this.tone(90, 0.12, 'sine', 0.09, 60);
         this.tone(120, 0.1, 'triangle', 0.06, 70);

@@ -434,7 +434,7 @@ export class BattleSim {
       }
       return;
     }
-    const regen = h.def.regen + (h.def.passive.kind === 'toughness' ? h.def.passive.regen : 0);
+    const regen = (h.def.regen + (h.def.passive.kind === 'toughness' ? h.def.passive.regen : 0)) * (this.level.endless?.heroRegen ?? 1);
     if (h.dest) {
       const before = h.pos.x;
       this.moveToward(h.pos, h.dest, h.def.speed * dt, 0);
@@ -469,6 +469,7 @@ export class BattleSim {
           if (!best.blockedBy) best.blockedBy = h.uid;
         }
       }
+      if (target && h.def.bulwark) this.bulwarkHold(h, target);
       if (target) {
         const d = Math.hypot(target.pos.x - h.pos.x, target.pos.y - h.pos.y);
         if (d > SOLDIER_REACH) {
@@ -942,6 +943,27 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** How many enemies a melee hero can hold at once at their current level (Bramble's Bulwark). */
+  heroHolds(h: Hero): number {
+    let n = 1;
+    for (const b of h.def.bulwark ?? []) if (h.level >= b.level) n = Math.max(n, b.holds);
+    return n;
+  }
+
+  /** Bulwark: while brawling, also pin extra free ground enemies within reach, up to the hero's hold count. */
+  private bulwarkHold(h: Hero, target: Enemy): void {
+    const max = this.heroHolds(h);
+    if (max <= 1) return;
+    let held = this.enemies.filter((e) => e.alive && e.blockedBy === h.uid).length;
+    for (const e of this.enemies) {
+      if (held >= max) break;
+      if (e === target || !e.alive || e.blockedBy || e.underground || this.airborne(e)) continue;
+      if (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) > SOLDIER_REACH + 6) continue;
+      e.blockedBy = h.uid;
+      held++;
+    }
   }
 
   /** Bramble's Shield Toss: a ranged throw at the nearest flyer, on its own timer (works while he brawls). */

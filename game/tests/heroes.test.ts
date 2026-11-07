@@ -137,3 +137,25 @@ describe('Bramble shield toss', () => {
     expect(sim2.hero!.tossCd).toBe(0);
   });
 });
+
+describe('Bramble bulwark', () => {
+  it('holds more enemies at once as he levels up', () => {
+    const lvl4 = { id: 'k', name: 'K', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 0, lives: 20, theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },
+      paths: [[{ x: 0, y: 300 }, { x: 2000, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }] } as LevelDef;
+    const sim = new BattleSim(lvl4, 'bramble');
+    sim.status = 'running';
+    const h = sim.hero!;
+    expect(sim.heroHolds(h)).toBe(1);
+    h.level = 3;
+    expect(sim.heroHolds(h)).toBe(2);
+    h.level = 5;
+    expect(sim.heroHolds(h)).toBe(3);
+    h.pos = { x: 400, y: 300 };
+    h.dest = null;
+    const foes = [0, 1, 2, 3].map((k) => sim.spawn('shellback', 0, 396 + k * 3));
+    for (const f of foes) f.def = { ...f.def, speed: 0, attack: 0 };
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    expect(foes.filter((f) => f.blockedBy === h.uid).length).toBe(3);
+    expect(HEROES.fen.bulwark).toBeUndefined();
+  });
+});

@@ -307,7 +307,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l5',
-    hpMult: 1.95,
+    hpMult: 2.3,
     name: "Murkmaw's Den",
     blurb: 'Three roads pour out of the deep bog. End this: defeat Old Murkmaw in his own den.',
     mapPos: { x: 1090, y: 260 },

@@ -13,6 +13,7 @@ export const HEROES: Record<string, HeroDef> = {
     armor: 0.3,
     regen: 8,
     melee: true,
+    bulwark: [{ level: 3, holds: 2 }, { level: 5, holds: 3 }],
     toss: { name: 'Shield Toss', damage: 34, range: 160, interval: 2.5 },
     attack: { damage: 18, type: 'physical', range: 22, rate: 1.1, hitsAir: false, projectileSpeed: 0 },
     respawn: 14,

@@ -119,7 +119,7 @@ export interface LevelDef {
   waves: WaveDef[];
   theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean };
   finale?: boolean;
-  endless?: { hpRamp: number }; // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
+  endless?: { hpRamp: number; heroRegen?: number }; // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
   hpMult?: number; // difficulty ramp: multiplies every enemy's health on this level
   heroSpawn?: Vec2; // where the hero starts/respawns (default: near the first road's exit)
@@ -155,6 +155,7 @@ export interface HeroDef {
   armor: number;
   regen: number; // hp/s when not fighting
   melee: boolean; // melee heroes block an enemy like soldiers do
+  bulwark?: { level: number; holds: number }[]; // melee heroes: how many enemies they can hold at once, by hero level
   toss?: { name: string; damage: number; range: number; interval: number }; // ranged throw at flyers (melee heroes' answer to air)
   attack: { damage: number; type: DamageType; range: number; rate: number; hitsAir: boolean; projectileSpeed: number };
   respawn: number;

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **55** (next balance pass at iteration 60)
+Iteration counter: **56** (next balance pass at iteration 60)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -435,13 +435,19 @@ Iteration counter: **55** (next balance pass at iteration 60)
   fall"; each spell kind now gets its own instruction. `snare-check.mjs` also screenshots the armed state and asserts
   the hint. 139 tests.
 
+- [x] **Iter 56 — Bramble rework (part 2): Bulwark.** New melee-hero trait `bulwark`: Bramble holds 2 enemies at once
+  from hero level 3 and 3 from level 5 (`sim.heroHolds`; extra free ground enemies within reach get pinned while he
+  brawls). It's listed on the Field Guide hero page. Endless levels now carry `heroRegen` (0.5); halving regen, or
+  even cutting it to 20%, didn't dent Bramble's endless lead, which comes from blocking. Results: expert wins with Bramble
+  on hard levels **40% → 60%**, Icicle Crossing 1/6 → 4/6. Side effect: the novice (Bramble) got much stronger early, so
+  Murkmaw's Den hpMult goes 1.95 → 2.3 (83/67/67); a full retune at iteration 60. 140 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Bramble rework (part 2): still the weakest hero on maps where enemies split across lanes (Icicle Crossing 1/6) and
-   the strongest in endless (about 30 waves vs 16). Ideas: block two enemies at once at higher levels; lower regen in
-   endless.
+1. Endless hero balance: Bramble holds about 32 waves vs about 16 for the others (blocking dominates long runs). Ideas:
+   cap Bulwark in endless, or scale enemy attack damage with the endless wave.
 2. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
 3. Field Guide: add a Spells tab (name, icon, text, recharge).

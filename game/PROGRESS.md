@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **123** (next balance pass at iteration 125)
+Iteration counter: **124** (next balance pass at iteration 125)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -875,13 +875,16 @@ Iteration counter: **123** (next balance pass at iteration 125)
   - Level 72 **Powder Row**: two west gangways merge into a long winding supply-barge road, 11 pads, 15 waves,
     hpMult 2.85.
   - Endless adds Powdermonkey from wave 62. 189 tests.
+- **Iteration 124**: level 73 **Gunwale Gauntlet**. A 2,600px gangway weaves along a line of gun-decked ships, and a
+  1,500px north gangway joins at the third ship. It has 10 pads, 16 waves (all three Blackwake enemies, fliers on the
+  long road) and hpMult 2.0. 189 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 15 levels 73–74, finale 75 with a boss + story card + achievements.
+2. Region 15 level 74, finale 75 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -892,6 +895,8 @@ Iteration counter: **123** (next balance pass at iteration 125)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 124**: 73 Gunwale Gauntlet was **100/83/0** at hpMult 2.0 on the first try; 2.15 gave 83/67 (too steep), so 2.0 was kept.
+
 **Iteration 123**: 72 Powder Row went 100/100/92 at hpMult 1.9 (two long roads and 11 pads are generous), 100/100/75 at 2.4, 100/100/17 at 2.7, and **2.85 → 100/100/17** (kept; casual stays at 100 on this map, like Grubfield Lane).
 
 **Iteration 122**: 71 Blackwake Moorings went 100/83/0 at hpMult 2.0, 100/100/8 at 1.75, and **1.6 → 100/100/42** (kept, the opener target).

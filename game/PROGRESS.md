@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **104** (next balance pass at iteration 105)
+Iteration counter: **105** (next balance pass at iteration 110)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -731,6 +731,9 @@ Iteration counter: **104** (next balance pass at iteration 105)
     paging. Checked in-browser.
 
   179 tests.
+- **Iteration 105** (polish + balance): Thunderhead sweep (all in band) plus a new hero comparison, the expert
+  strategy run with each hero (scratch `herocmp.ts`). Sorrel was far behind, so I buffed her sling 14→17 and Second
+  Wind damage 25→40. Results in Balance Notes. 179 tests.
 
 ## In Progress
 - (none)
@@ -748,6 +751,15 @@ Iteration counter: **104** (next balance pass at iteration 105)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 105**:
+- Thunderhead, 12 seeds: 56 Rainmarch 100/100/42 · 57 Copperhorn Ford 83/83/25 · 58 Forked Lightning 92/83/0 ·
+  59 Stormwatch 83/75/0 · 60 Thunderhead Crown (boss) 83/33/0. All in band.
+- Hero comparison (expert strategy with each hero, levels 10/20/30/40/50/52/57/60, 6 seeds each, wins / average
+  lives): Bramble 63% / 7.4 · Fen 85% / 11.3 · Ember 88% / 11.2 · Wren 67% / 8.0 · **Sorrel 52% / 5.9**.
+- Sorrel tuning: sling 20 and Second Wind 50 gave 88% (on par with the best, too strong). **17 and 40 gave 77% / 9.4**
+  (kept, mid-pack for a support hero).
+- Bramble and Wren trail the ranged heroes as before. Bramble is the novice benchmark hero, so he is left alone.
+
 **Iteration 102**: 60 Thunderhead Crown started at hpMult 2.5 with the boss at 3,000 health, bolting every 5s and
 spawning herds of up to 12. The expert went 0/3, leaking Glareflies on the north track and wave 6–7 Echo Wisps and
 Thunderhooves. Fixes: Glareflies moved to the long road, wave 6 trimmed to 9 wisps and wave 7 to 10 hooves, the boss

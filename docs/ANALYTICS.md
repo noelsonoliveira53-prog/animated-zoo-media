@@ -54,6 +54,8 @@ What to do less of
 - Planets/space as a song topic for now (Gizmo: 0.8% CTR on 264 impressions).
 
 
+Second run, Nov 7 ~9:30 AM ET (views check already done in the morning run; analytics lag a day, so no new numbers): scheduled Bloop "Bloop Turns Blue!" vrCoNEVpwpc (Nov 8 1:50 PM, custom thumbnail) and Fruity "Five Little Grapes Jumping on the Bed!" 5-uXLW4_RuY (Nov 8 2:20 PM, auto thumbnail, channel unverified). Truck, Gizmo, Zoo and Moonbeam have no to_upload 3D episodes for Nov 8 yet.
+
 ## 2026-11-06 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
 | Channel | Video | Type | Published | Views | Impr. | CTR | Avg view | % viewed | Likes |
 |---|---|---|---|---|---|---|---|---|---|

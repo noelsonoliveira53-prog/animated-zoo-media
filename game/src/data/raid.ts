@@ -141,18 +141,19 @@ export interface CampBuildingDef {
   wall?: boolean; // blocks ground troops; doesn't count toward destruction
   mend?: { amount: number; interval: number; range: number }; // heals damaged camp buildings in range every `interval` s
   mire?: { radius: number; factor: number }; // ground troops within radius move at this fraction of their speed
+  blurb?: string;
   color: number;
 }
 
 export const CAMP_BUILDINGS: Record<string, CampBuildingDef> = {
-  totem: { id: 'totem', name: 'Mud Totem', hp: 1200, size: 3, hq: true, loot: { coins: 300, glowsap: 300 }, color: 0x6a5a3a },
-  spit: { id: 'spit', name: 'Spit Tower', hp: 480, size: 2, defense: { damage: 14, rate: 1.3, range: 150, hitsAir: true }, color: 0x4fae7c },
-  mortar: { id: 'mortar', name: 'Bog Mortar', hp: 620, size: 2, defense: { damage: 34, rate: 0.45, range: 175, splash: 45, hitsAir: false }, color: 0x5a6b45 },
-  pile: { id: 'pile', name: 'Loot Pile', hp: 380, size: 2, loot: { coins: 220, glowsap: 220 }, color: 0xb59a4e },
-  shaman: { id: 'shaman', name: 'Mire Shaman', hp: 420, size: 2, mend: { amount: 30, interval: 3, range: 130 }, color: 0x7a4a8a },
-  sludge: { id: 'sludge', name: 'Sludge Pit', hp: 360, size: 2, mire: { radius: 120, factor: 0.55 }, color: 0x5a4a2a },
-  hut: { id: 'hut', name: 'Mud Hut', hp: 280, size: 2, color: 0x7a5a3a },
-  wall: { id: 'wall', name: 'Stake Wall', hp: 220, size: 1, wall: true, color: 0x5a4632 },
+  totem: { id: 'totem', name: 'Mud Totem', blurb: "A heap of mud and bones the Murkhorde rally around. Topple it and the camp loses heart.", hp: 1200, size: 3, hq: true, loot: { coins: 300, glowsap: 300 }, color: 0x6a5a3a },
+  spit: { id: 'spit', name: 'Spit Tower', blurb: "A bog-frog perched on a stump, spitting gobs of muck at anything that moves, flyers included.", hp: 480, size: 2, defense: { damage: 14, rate: 1.3, range: 150, hitsAir: true }, color: 0x4fae7c },
+  mortar: { id: 'mortar', name: 'Bog Mortar', blurb: "A hollow log packed with swamp-gas that lobs mudballs in a wide splash. It cannot aim up at flyers.", hp: 620, size: 2, defense: { damage: 34, rate: 0.45, range: 175, splash: 45, hitsAir: false }, color: 0x5a6b45 },
+  pile: { id: 'pile', name: 'Loot Pile', blurb: "Stolen acorns and jars of sap, piled high. Smash it to take them home.", hp: 380, size: 2, loot: { coins: 220, glowsap: 220 }, color: 0xb59a4e },
+  shaman: { id: 'shaman', name: 'Mire Shaman', blurb: "A reed hut where an old mire-witch brews bog tonic, patching up the buildings around her.", hp: 420, size: 2, mend: { amount: 30, interval: 3, range: 130 }, color: 0x7a4a8a },
+  sludge: { id: 'sludge', name: 'Sludge Pit', blurb: "A bubbling pit of muck. Anything walking near it wades slowly, right under the Spit Towers.", hp: 360, size: 2, mire: { radius: 120, factor: 0.55 }, color: 0x5a4a2a },
+  hut: { id: 'hut', name: 'Mud Hut', blurb: "Where the critters sleep. Not much to it, but it counts toward the camp's destruction.", hp: 280, size: 2, color: 0x7a5a3a },
+  wall: { id: 'wall', name: 'Stake Wall', blurb: "Sharpened stakes lashed together. Ground troops must chew through them.", hp: 220, size: 1, wall: true, color: 0x5a4632 },
 };
 
 export const RAID_TIME = 90; // seconds

@@ -6,6 +6,7 @@ import { TOWERS, TOWER_ORDER } from '../data/towers';
 import { HEROES, HERO_ORDER } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
 import { spellFacts } from '../systems/spellInfo';
+import { CAMP_BUILDINGS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { bossPhaseLines } from '../systems/guideInfo';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
@@ -14,7 +15,7 @@ import { Button } from '../ui/Button';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
-type Tab = 'enemies' | 'towers' | 'heroes' | 'spells';
+type Tab = 'enemies' | 'towers' | 'heroes' | 'spells' | 'raids';
 
 interface Entry {
   key: string;
@@ -54,10 +55,10 @@ export class FieldGuideScene extends Phaser.Scene {
     g.lineStyle(2, 0xb59a6a, 1);
     g.lineBetween(GAME_W / 2 + 70, 120, GAME_W / 2 + 70, GAME_H - 60);
 
-    this.add.text(470, 44, "Keeper's Field Guide", textStyle(34, TEXT.gold)).setOrigin(0.5);
+    this.add.text(400, 44, "Keeper's Field Guide", textStyle(32, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
-    (['enemies', 'towers', 'heroes', 'spells'] as Tab[]).forEach((t, i) => {
-      this.tabButtons[t] = new Button(this, GAME_W - 444 + i * 124, 44, t[0].toUpperCase() + t.slice(1), {
+    (['enemies', 'towers', 'heroes', 'spells', 'raids'] as Tab[]).forEach((t, i) => {
+      this.tabButtons[t] = new Button(this, GAME_W - 568 + i * 124, 44, t[0].toUpperCase() + t.slice(1), {
         width: 116,
         height: 46,
         fontSize: 18,
@@ -168,6 +169,52 @@ export class FieldGuideScene extends Phaser.Scene {
       }
       return out;
     }
+    if (this.tab === 'raids') {
+      // Your raiding troops first, then the Murkhorde camp buildings they face.
+      const troops: Entry[] = TROOP_ORDER.map((id) => {
+        const t = TROOPS[id];
+        const traits = [
+          t.flying ? 'Flies over walls; mortars cannot hit it' : '',
+          t.prefers === 'defense' ? 'Goes for defenses first' : t.prefers === 'loot' ? 'Goes for loot first' : '',
+          t.splash ? `Hits everything within ${t.splash}px` : '',
+          t.wallMult ? `×${t.wallMult} damage to walls` : '',
+          t.wader ? 'Sludge Pits do not slow it' : '',
+          t.lootBonus ? `Buildings it destroys drop +${Math.round(t.lootBonus * 100)}% loot` : '',
+          t.heals ? `Heals troops within ${t.heals.radius}px for ${t.heals.amount} every ${t.heals.interval}s` : '',
+        ].filter(Boolean);
+        return {
+          key: `troop_${id}`,
+          texture: `troop_${id}`,
+          name: t.name,
+          locked: false,
+          blurb: t.blurb,
+          lines: [
+            `Health ${t.hp}   •   Damage ${t.damage} × ${t.rate}/s   •   Range ${t.range}`,
+            `Speed ${t.speed}   •   ${t.cost} glowsap   •   ${t.space} space   •   Lodge ${t.lodge}`,
+            traits.length ? traits.join('  •  ') : 'A plain, honest fighter',
+          ],
+        };
+      });
+      const camp: Entry[] = Object.values(CAMP_BUILDINGS).map((b) => {
+        const facts = [
+          b.hq ? 'The camp\'s heart: destroying it is worth a star' : '',
+          b.defense ? `Shoots ${b.defense.damage} × ${b.defense.rate}/s up to ${b.defense.range}px${b.defense.splash ? `, splash ${b.defense.splash}px` : ''}${b.defense.hitsAir ? ', hits flyers' : ', ground only'}` : '',
+          b.loot ? `Loot ${b.loot.coins} coins + ${b.loot.glowsap} glowsap (more in tougher camps)` : '',
+          b.mend ? `Heals buildings within ${b.mend.range}px for ${b.mend.amount} every ${b.mend.interval}s` : '',
+          b.mire ? `Ground troops within ${b.mire.radius}px move at ${Math.round(b.mire.factor * 100)}% speed` : '',
+          b.wall ? 'Blocks ground troops; does not count toward destruction' : '',
+        ].filter(Boolean);
+        return {
+          key: `camp_${b.id}`,
+          texture: `camp_${b.id}`,
+          name: b.name,
+          locked: false,
+          blurb: b.blurb ?? 'A Murkhorde camp building.',
+          lines: [`Health ${b.hp}   •   ${b.size}×${b.size} tiles`, ...(facts.length ? facts : ['Just a building to knock down'])],
+        };
+      });
+      return [...troops, ...camp];
+    }
     if (this.tab === 'spells') {
       return SPELL_ORDER.map((id, i) => {
         const sp = SPELLS[id];
@@ -230,7 +277,7 @@ export class FieldGuideScene extends Phaser.Scene {
       bg.fillRoundedRect(x - cell / 2 + 5, y - 42, cell - 10, 84, 12);
       c.add(bg);
       const img = this.add.image(x, y, e.texture);
-      img.setScale(Math.min(1, 64 / Math.max(img.width, img.height)));
+      img.setScale(Math.min(tab === 'raids' ? 2 : 1, 64 / Math.max(img.width, img.height))); // small troop sprites may grow
       if (e.locked) img.setTintFill(0x5a4a32);
       c.add(img);
       if (e.locked) c.add(this.add.text(x, y, '?', textStyle(28, TEXT.cream)).setOrigin(0.5));

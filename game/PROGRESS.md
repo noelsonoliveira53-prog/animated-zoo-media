@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **146** (next balance pass at iteration 150)
+Iteration counter: **147** (next balance pass at iteration 150)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1033,6 +1033,16 @@ Iteration counter: **146** (next balance pass at iteration 150)
     - `scripts/raid-lib.ts` now deploys otters (after the slingers) and has a "Lodge 2 + Otters" army.
   - Tests: loot targeting, sludge immunity, loot bonus. Screenshot `screenshots/146.png` (phone raid panel).
     199 tests.
+- **Iteration 147** (Field Guide Raids tab): a fifth tab, **Raids**, lists the 6 troops and the 8 Murkhorde camp
+  buildings. Each has a blurb and stats.
+  - Troops: health, damage, range, speed, cost, space and lodge level, plus traits (flies, defense- or loot-seeking,
+    splash, wall damage, wader, loot bonus, heals).
+  - Buildings: health and size, plus defense range and damage, loot, mending, mire slow and wall behaviour.
+  - Camp buildings gained a `blurb` field in `data/raid.ts`. Small troop sprites scale up to 2× in this tab's grid.
+    The title and the five tab buttons were re-spaced.
+  - `scripts/guide-spells-check.mjs` now clicks the Spells tab at its new position. New
+    `scripts/guide-raids-check.mjs` covers desktop and phone. Screenshots `screenshots/147.png` (Otter page) and
+    `147-phone-camp.png` (Sludge Pit page on a phone). 199 tests.
 
 ## In Progress
 - (none)

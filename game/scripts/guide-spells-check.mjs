@@ -17,7 +17,7 @@ await page.goto('http://localhost:4329/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('FieldGuide'));
 await page.waitForTimeout(800);
-await page.mouse.click(1280 - 444 + 3 * 124, 44);
+await page.mouse.click(1280 - 568 + 3 * 124, 44); // Spells tab (5 tabs since the Raids tab was added)
 await page.waitForTimeout(400);
 const tab = await page.evaluate(() => window.__game.scene.getScene('FieldGuide').tab);
 await page.screenshot({ path: `screenshots/${name}-1.png` });

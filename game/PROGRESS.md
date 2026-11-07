@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **25** (next balance pass at iteration 30)
+Iteration counter: **26** (next balance pass at iteration 30)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -217,12 +217,19 @@ Iteration counter: **25** (next balance pass at iteration 30)
   40/120/300 coins (was 50/200/800); total build-out 179k → 109k coins. Music drops to the calm mood when a battle
   or raid ends. Campaign re-checked (no regressions). 103 tests.
 
+- [x] **Iter 26 — Mobile touch targets.** New `ui/touch.ts` (+ pure `ui/hitpad.ts`): on coarse-pointer devices, hit
+  areas grow toward 72 game px (≈42 CSS px on a phone), capped at 12 px per side so neighbours don't steal taps.
+  Applied to every `Button`, build pads, the hero sprite, text options in the tower menu and the volume knob.
+  Desktop hit areas are unchanged. New `scripts/mobile-check.mjs` (740×360, touch emulation) taps just outside a
+  button edge and just outside a build pad, and both register. 106 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-2. Music polish: per-region motifs, victory/defeat stingers.
+1. Music polish: per-region motifs, victory/defeat stingers.
+2. Mobile follow-up: drag-to-pan in the Village on small screens; slightly larger HUD text on phones.
+3. Region 4 (5 more levels) with 2–3 new enemy types.
 
 ## Known Bugs
 - (none known)

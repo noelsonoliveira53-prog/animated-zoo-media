@@ -17,6 +17,7 @@ import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { padHit } from '../ui/touch';
 
 interface EnemyView {
   sprite: Phaser.GameObjects.Image;
@@ -120,7 +121,7 @@ export class BattleScene extends Phaser.Scene {
     this.rangeRing = this.add.graphics().setDepth(5);
 
     this.level.slots.forEach((s, i) => {
-      const img = this.add.image(s.x, s.y, 'slot').setDepth(s.y).setInteractive({ useHandCursor: true });
+      const img = padHit(this.add.image(s.x, s.y, 'slot').setDepth(s.y).setInteractive({ useHandCursor: true }));
       img.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
         sfx.unlock();
@@ -448,6 +449,7 @@ export class BattleScene extends Phaser.Scene {
     this.heroRing = this.add.ellipse(h.pos.x, h.pos.y, 56, 22).setStrokeStyle(3, C.gold, 1).setFillStyle(C.gold, 0.15).setVisible(false);
     this.tweens.add({ targets: this.heroRing, scale: 1.15, yoyo: true, repeat: -1, duration: 500 });
     this.heroSprite = this.add.image(h.pos.x, h.pos.y, `hero_${h.def.id}`).setOrigin(0.5, 0.9).setInteractive({ useHandCursor: true });
+    padHit(this.heroSprite, 84);
     this.heroSprite.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();
@@ -880,6 +882,7 @@ export class BattleScene extends Phaser.Scene {
     bg.strokeCircle(0, 0, 34);
     o.add([bg, this.add.text(0, 0, text, { ...textStyle(14), align: 'center' }).setOrigin(0.5)]);
     o.setSize(68, 68).setInteractive({ useHandCursor: true });
+    padHit(o);
     o.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.click();

@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { C, textStyle } from './theme';
 import { sfx } from '../systems/audio';
+import { padHit } from './touch';
 
 export interface ButtonOpts {
   width?: number;
@@ -30,6 +31,7 @@ export class Button extends Phaser.GameObjects.Container {
     this.draw();
     this.setSize(this.bw, this.bh);
     this.setInteractive({ useHandCursor: true });
+    padHit(this);
     this.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev?.stopPropagation();
       if (!this.enabled) return;

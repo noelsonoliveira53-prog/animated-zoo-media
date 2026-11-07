@@ -4,6 +4,7 @@ import { loadSave, resetProgress, writeSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { padHit } from '../ui/touch';
 
 export class SettingsScene extends Phaser.Scene {
   constructor() {
@@ -30,6 +31,7 @@ export class SettingsScene extends Phaser.Scene {
     const label = this.add.text(GAME_W / 2 + 250, sy, '', textStyle(22, TEXT.gold)).setOrigin(0, 0.5);
     const track = this.add.graphics();
     const knob = this.add.circle(0, sy, 18, C.gold).setStrokeStyle(4, C.ink).setInteractive({ draggable: true, useHandCursor: true });
+    padHit(knob, 60);
     const drawSlider = () => {
       track.clear();
       track.fillStyle(0x000000, 0.5);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **109** (next balance pass at iteration 110)
+Iteration counter: **110** (next balance pass at iteration 115)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -760,6 +760,9 @@ Iteration counter: **109** (next balance pass at iteration 110)
 - **Iteration 109**: level 64 **Scorpion Steps**. A 2,600px zigzag caravan road climbs the terraces. A north road
   (≈1,540px) joins it at the mid-terrace corner. It has 11 pads, 16 waves (fliers on the long road; Shimmerjacks and
   Sandpickers on the north road) and hpMult 1.52. 182 tests.
+- **Iteration 110** (polish + balance): desert ponds are now drawn as oases, with a ring of reeds and a date palm
+  leaning out over each end. The first palm drawing looked like an umbrella (flat ellipses), so it was redrawn with
+  drooping curved fronds and dates. The Sunscour sweep and the finale guard are in Balance Notes. 182 tests.
 
 ## In Progress
 - (none)
@@ -777,6 +780,11 @@ Iteration counter: **109** (next balance pass at iteration 110)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 110** (12 seeds, expert/casual/novice): 61 Mirage Flats 100/100/42 · 62 Kilnstone Wash 100/92/0 ·
+63 Last Oasis 100/75/0 · 64 Scorpion Steps 100/67/8. All in band. The expert stays at 100 while casual ramps; the
+Sunscour finale should give the expert its first real test. The finale guard passes: the expert won every one of the
+12 region finales in at least 3 of 4 seeds. No retunes.
+
 **Iteration 109**: 64 Scorpion Steps. The first draft's 1,320px north road leaked Shimmerjacks and Sandpickers by wave 6 (42/0/0). I rerouted it to join at the terrace corner, which gave 83/17 at hpMult 1.8. 1.6 gave 100/42/8, 1.45 gave 100/75/33, and **1.52 → 100/67/8** (kept). Lesson: even ground lights need a long road when they come in packs of 8–14.
 
 **Iteration 108**: 63 Last Oasis was 8/8/0 at first, with fliers leaking on the short north road (the short-road lesson once more, this time with air). Moving every flier group to the long road gave 42/17 at hpMult 2.1, with late Kilnbacks leaking. 1.8 gave 100/67 and 1.65 gave 100/75. The final pack went from 10 Kilnbacks to 8, and **1.7 → 100/75/0** (kept).

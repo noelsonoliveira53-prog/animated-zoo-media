@@ -284,6 +284,7 @@ export class BattleScene extends Phaser.Scene {
       }
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
+      if (this.level.theme.dunes) this.drawOasis(pd);
     }
     if (this.level.theme.dunes) {
       // heat shimmer: a few pale horizontal bands slowly breathing in and out
@@ -836,6 +837,44 @@ export class BattleScene extends Phaser.Scene {
     g.strokeCircle(sx, py, 34);
     this.skillText.setAlpha(ready ? 1 : 0.6);
     if (!h.alive) this.heroLevelText.setText(`${Math.ceil(h.respawnTimer)}s`);
+  }
+
+  /** Desert ponds become oases: a ring of reeds and a date palm leaning out over each end. */
+  private drawOasis(pd: { x: number; y: number; w: number; h: number }): void {
+    const g = this.add.graphics().setDepth(1);
+    g.lineStyle(2, 0x5a9a3a, 0.9);
+    for (let k = 0; k < 14; k++) {
+      const a = (k / 14) * Math.PI * 2;
+      const rx = pd.x + Math.cos(a) * (pd.w / 2 + 2);
+      const ry = pd.y + Math.sin(a) * (pd.h / 2 + 2);
+      g.lineBetween(rx, ry, rx + Math.cos(a) * 3, ry - 9);
+    }
+    for (const side of [-1, 1]) {
+      const bx = pd.x + side * (pd.w / 2 - 6);
+      const by = pd.y - 2;
+      const tx = bx + side * 14;
+      const ty = by - 44;
+      g.fillStyle(0x000000, 0.18);
+      g.fillEllipse(tx, by + 6, 34, 9);
+      g.lineStyle(6, 0x8a6a3a, 1);
+      g.beginPath();
+      g.moveTo(bx, by);
+      g.lineTo(bx + side * 8, by - 24);
+      g.lineTo(tx, ty);
+      g.strokePath();
+      // drooping fronds: thick curved strokes arching out and down from the crown
+      for (const [dx, lift, col] of [[-26, 10, 0x3f7a32], [26, 10, 0x3f7a32], [-18, -2, 0x4f9a3a], [18, -2, 0x4f9a3a], [-6, -8, 0x5aaa44], [8, -8, 0x5aaa44]] as const) {
+        g.lineStyle(5, col, 1);
+        g.beginPath();
+        g.moveTo(tx, ty);
+        g.lineTo(tx + dx * 0.5, ty - 6 + lift * 0.2);
+        g.lineTo(tx + dx, ty + lift);
+        g.strokePath();
+      }
+      g.fillStyle(0x9a5a2a, 1);
+      g.fillCircle(tx - 3, ty + 4, 3);
+      g.fillCircle(tx + 3, ty + 5, 3);
+    }
   }
 
   private skillEffect(kind: string, pos: Vec2, radius: number, color: number, fx?: number): void {

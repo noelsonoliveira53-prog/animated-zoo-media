@@ -1,4 +1,5 @@
-import type { EnemyDef, HeroDef, LevelDef, TargetMode, TowerDef, Vec2 } from '../data/types';
+import type { EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, Vec2 } from '../data/types';
+import { SPELLS } from '../data/spells';
 import { HEROES, HERO_MAX_LEVEL, heroLevelMult, levelForXp } from '../data/heroes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, sellValue } from '../data/towers';
@@ -41,6 +42,18 @@ export interface Soldier {
   respawnTimer: number;
   targetUid: number; // enemy uid engaged, 0 if idle
   attackCd: number;
+  stats: SoldierStats;
+  anchor: Vec2; // centre of the area this soldier guards
+  spawnAt: Vec2; // where it reappears after respawning
+  life: number; // seconds left for summoned soldiers; Infinity for tower squads
+  summoned: boolean;
+}
+
+export interface Strike {
+  uid: number;
+  pos: Vec2;
+  timer: number;
+  spellId: string;
 }
 
 export interface Hero {
@@ -103,6 +116,9 @@ export type SimEvent =
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
   | { type: 'melee'; pos: Vec2 }
+  | { type: 'spellCast'; spellId: string; pos: Vec2 }
+  | { type: 'strike'; spellId: string; uid: number; pos: Vec2; radius: number; hits: Enemy[] }
+  | { type: 'summonGone'; soldier: Soldier }
   | { type: 'heroSkill'; hero: Hero; hits: Enemy[] }
   | { type: 'heroShoot'; hero: Hero; projectile: Projectile }
   | { type: 'heroLevel'; hero: Hero }
@@ -147,6 +163,8 @@ export class BattleSim {
   projectiles: Projectile[] = [];
   soldiers: Soldier[] = [];
   hero: Hero | null = null;
+  strikes: Strike[] = [];
+  spellCd: Record<string, number> = {};
   events: SimEvent[] = [];
 
   private nextUid = 1;
@@ -183,6 +201,70 @@ export class BattleSim {
   heroSpawnPoint(): Vec2 {
     const p = this.paths[0];
     return p.pointAt(p.length - 260);
+  }
+
+  // ---------- spells ----------
+
+  spellReady(id: string): boolean {
+    return (this.spellCd[id] ?? 0) <= 0;
+  }
+
+  /** Cast a global spell at a point. Reinforcements must target the road. */
+  castSpell(id: string, pos: Vec2): boolean {
+    const def = SPELLS[id];
+    if (!def || !this.spellReady(id) || !this.isActive()) return false;
+    if (def.kind === 'reinforce') {
+      let best: { point: Vec2; distance: number } | null = null;
+      for (const path of this.paths) {
+        const c = path.closest(pos);
+        if (!best || c.distance < best.distance) best = c;
+      }
+      if (!best || best.distance > 60) return false;
+      const anchor = { ...best.point };
+      for (let i = 0; i < (def.count ?? 1); i++) {
+        const stats = def.soldier!;
+        const home = this.formation(anchor, i);
+        this.soldiers.push({
+          uid: this.nextUid++,
+          towerUid: 0,
+          index: i,
+          pos: { x: home.x, y: home.y },
+          home,
+          hp: stats.hp,
+          maxHp: stats.hp,
+          alive: true,
+          respawnTimer: 0,
+          targetUid: 0,
+          attackCd: 0,
+          stats,
+          anchor,
+          spawnAt: home,
+          life: def.duration ?? 10,
+          summoned: true,
+        });
+      }
+    } else {
+      this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
+    }
+    this.spellCd[id] = def.cooldown;
+    this.events.push({ type: 'spellCast', spellId: id, pos: { ...pos } });
+    return true;
+  }
+
+  private updateSpells(dt: number): void {
+    for (const id of Object.keys(this.spellCd)) this.spellCd[id] = Math.max(0, this.spellCd[id] - dt);
+    for (const st of this.strikes) {
+      st.timer -= dt;
+      if (st.timer > 0) continue;
+      const def = SPELLS[st.spellId];
+      const radius = def.radius ?? 60;
+      const hits = this.enemies.filter((e) => e.alive && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
+      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', e.def));
+      this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
+    }
+    this.strikes = this.strikes.filter((st) => st.timer > 0);
+    // Clean up expired summons.
+    this.soldiers = this.soldiers.filter((s) => !(s.summoned && !s.alive));
   }
 
   // ---------- hero ----------
@@ -469,7 +551,11 @@ export class BattleSim {
     const range = t.def.tiers[t.tier].range;
     if (Math.hypot(p.x - t.pos.x, p.y - t.pos.y) > range) return false;
     t.rally = { ...p };
-    for (const s of this.soldiers) if (s.towerUid === t.uid) s.home = this.formation(t.rally, s.index);
+    for (const s of this.soldiers) {
+      if (s.towerUid !== t.uid) continue;
+      s.home = this.formation(t.rally, s.index);
+      s.anchor = { ...t.rally };
+    }
     return true;
   }
 
@@ -502,11 +588,17 @@ export class BattleSim {
         respawnTimer: 0,
         targetUid: 0,
         attackCd: 0,
+        stats,
+        anchor: { ...t.rally },
+        spawnAt: { ...t.pos },
+        life: Infinity,
+        summoned: false,
       };
       this.soldiers.push(s);
       squad.push(s);
     }
     for (const s of squad) {
+      s.stats = stats;
       s.maxHp = stats.hp;
       if (heal && s.alive) s.hp = stats.hp;
     }
@@ -563,6 +655,7 @@ export class BattleSim {
     }
 
     this.spawnEnemies(dt);
+    this.updateSpells(dt);
     this.updateSoldiers(dt);
     this.updateHero(dt);
     this.moveEnemies(dt);
@@ -666,26 +759,34 @@ export class BattleSim {
   private updateSoldiers(dt: number): void {
     const byUid = new Map(this.enemies.map((e) => [e.uid, e]));
     for (const s of this.soldiers) {
-      const tower = this.towers.find((t) => t?.uid === s.towerUid);
-      const stats = tower?.def.tiers[tower.tier].soldiers;
-      if (!tower || !stats || !tower.rally) continue;
+      const stats = s.stats;
+      if (s.summoned) {
+        s.life -= dt;
+        if (s.life <= 0 && s.alive) {
+          s.alive = false;
+          this.releaseEnemy(s);
+          for (const e of this.enemies) if (e.blockedBy === s.uid) e.blockedBy = 0;
+          this.events.push({ type: 'summonGone', soldier: s });
+        }
+      }
       if (!s.alive) {
+        if (s.summoned) continue;
         s.respawnTimer -= dt;
         if (s.respawnTimer <= 0) {
           s.alive = true;
           s.hp = stats.hp;
-          s.pos = { x: tower.pos.x, y: tower.pos.y };
+          s.pos = { ...s.spawnAt };
         }
         continue;
       }
       // Validate current target.
       let target = s.targetUid ? byUid.get(s.targetUid) : undefined;
-      if (target && (!target.alive || Math.hypot(target.pos.x - tower.rally.x, target.pos.y - tower.rally.y) > ENGAGE_RADIUS * 1.5)) {
+      if (target && (!target.alive || Math.hypot(target.pos.x - s.anchor.x, target.pos.y - s.anchor.y) > ENGAGE_RADIUS * 1.5)) {
         this.releaseEnemy(s);
         target = undefined;
       }
       if (!target) {
-        target = this.findSoldierTarget(s, tower.rally);
+        target = this.findSoldierTarget(s, s.anchor);
         if (target) {
           s.targetUid = target.uid;
           if (!target.blockedBy) target.blockedBy = s.uid;
@@ -738,13 +839,11 @@ export class BattleSim {
   }
 
   private hurtSoldier(s: Soldier, raw: number): void {
-    const tower = this.towers.find((t) => t?.uid === s.towerUid);
-    const stats = tower?.def.tiers[tower.tier].soldiers;
-    s.hp -= computeDamage(raw, 'physical', { armor: stats?.armor ?? 0, magicResist: 0 });
+    s.hp -= computeDamage(raw, 'physical', { armor: s.stats.armor, magicResist: 0 });
     if (s.hp <= 0) {
       s.alive = false;
       s.hp = 0;
-      s.respawnTimer = stats?.respawn ?? 10;
+      s.respawnTimer = s.stats.respawn;
       this.releaseEnemy(s);
       for (const e of this.enemies) if (e.blockedBy === s.uid) e.blockedBy = 0;
       this.events.push({ type: 'soldierDown', soldier: s });

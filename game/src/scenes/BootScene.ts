@@ -541,6 +541,75 @@ export class BootScene extends Phaser.Scene {
     g.generateTexture('soldier', 30, 34);
     g.destroy();
 
+    // Ranger (summoned by Grove Call): hedgehog in a green hood
+    g = this.g();
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(14, 30, 22, 7);
+    g.lineStyle(2.5, C.ink, 1);
+    g.fillStyle(0x4f8a3a, 1);
+    g.fillRoundedRect(5, 13, 18, 16, 6);
+    g.strokeRoundedRect(5, 13, 18, 16, 6);
+    g.fillStyle(0x8a6440, 1);
+    for (let i = 0; i < 5; i++) g.fillTriangle(5 + i * 4, 8, 9 + i * 4, 8, 7 + i * 4, 1);
+    g.fillStyle(0x6fae4a, 1);
+    g.fillCircle(14, 11, 9);
+    g.strokeCircle(14, 11, 9);
+    g.fillStyle(0xe8c9a0, 1);
+    g.fillEllipse(15, 13, 10, 8);
+    g.fillStyle(0x111111, 1);
+    g.fillCircle(12, 12, 1.6);
+    g.fillCircle(18, 12, 1.6);
+    g.fillCircle(15, 15, 1.4);
+    g.fillStyle(0x7a5232, 1);
+    g.fillRect(23, 6, 3, 20);
+    g.generateTexture('ranger', 30, 34);
+    g.destroy();
+
+    // spell icons
+    g = this.g();
+    {
+      const pts: Phaser.Math.Vector2[] = [];
+      for (let i = 0; i < 10; i++) {
+        const r = i % 2 === 0 ? 20 : 9;
+        const a = -Math.PI / 2 + (i * Math.PI) / 5;
+        pts.push(new Phaser.Math.Vector2(26 + Math.cos(a) * r, 26 + Math.sin(a) * r));
+      }
+      g.fillStyle(0xfff0a8, 1);
+      g.fillPoints(pts, true);
+      g.lineStyle(3, C.ink, 1);
+      g.strokePoints(pts, true);
+      g.lineStyle(4, 0xff9f43, 0.9);
+      g.lineBetween(8, 44, 16, 36);
+      g.lineBetween(14, 48, 20, 42);
+    }
+    g.generateTexture('icon_starfall', 52, 52);
+    g.destroy();
+    g = this.g();
+    g.fillStyle(0x6fae4a, 1);
+    g.lineStyle(3, C.ink, 1);
+    g.fillEllipse(18, 28, 18, 30);
+    g.strokeEllipse(18, 28, 18, 30);
+    g.fillEllipse(34, 28, 18, 30);
+    g.strokeEllipse(34, 28, 18, 30);
+    g.fillStyle(0x8fdc5a, 1);
+    g.fillEllipse(26, 22, 18, 30);
+    g.strokeEllipse(26, 22, 18, 30);
+    g.lineStyle(2, 0x3f7a2e, 1);
+    g.lineBetween(26, 10, 26, 34);
+    g.generateTexture('icon_grovecall', 52, 52);
+    g.destroy();
+
+    // falling star
+    g = this.g();
+    g.fillStyle(0xffc93c, 0.35);
+    g.fillCircle(20, 20, 20);
+    g.fillStyle(0xfff0a8, 1);
+    g.fillCircle(20, 20, 11);
+    g.lineStyle(2, 0xff9f43, 1);
+    g.strokeCircle(20, 20, 11);
+    g.generateTexture('meteor', 40, 40);
+    g.destroy();
+
     // rally flag
     g = this.g();
     g.lineStyle(3, 0x5a3b22, 1);

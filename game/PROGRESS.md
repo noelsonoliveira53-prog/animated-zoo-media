@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
 
-Iteration counter: **5** (next balance pass at iteration 10)
+Iteration counter: **6** (next balance pass at iteration 10)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -48,25 +48,32 @@ Iteration counter: **5** (next balance pass at iteration 10)
   "Wave N of M" plus supply and early-call coins; the wave button says "Call Early" while a wave is spawning.
   Balance guard-rail tests (47 total).
 
+- [x] **Iter 6** — **Global spells** (`data/spells.ts`): **Starfall** (tap a spot; a falling star lands
+  0.9s later for 140 damage in an 85px radius, hits flyers; 40s cooldown) and **Grove Call** (tap the
+  road; 3 hedgehog Rangers hold that spot for 16s; 28s cooldown). Bottom-right spell buttons with
+  cooldown pies and a targeting reticle; keys 1/2, Esc cancels. Soldiers now carry their own stats/anchor
+  (needed for summons). The falling-star animation follows game time (stays in sync on slow devices and at
+  x3 speed). Moved the L1 bottom-right build pad out from under the spell buttons. 2 new tests (49 total).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Global spells: Starfall (meteor AoE) + Call the Rangers (temporary soldiers), cooldowns.
-2. World map scene with level nodes, star totals, unlock progression; levels 2–5.
-3. Tower top-tier specializations (2 branches per tower).
-4. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
-5. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
-6. Levels 6–15+, multi-path levels.
-7. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-8. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-9. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-10. Ambient music loop (procedural).
+1. World map scene with level nodes, star totals, unlock progression; levels 2–5.
+2. Tower top-tier specializations (2 branches per tower).
+3. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
+4. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
+5. Levels 6–15+, multi-path levels.
+6. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+7. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+8. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+9. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
 
 ## Ideas parked
+- Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 - Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes

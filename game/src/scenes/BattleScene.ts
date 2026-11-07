@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
+import { SPELLS, SPELL_ORDER } from '../data/spells';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
@@ -30,6 +31,10 @@ export class BattleScene extends Phaser.Scene {
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private rallyMode: number | null = null; // slot whose rally point is being placed
+  private spellMode: string | null = null; // spell waiting for a target tap
+  private spellHud!: Phaser.GameObjects.Graphics;
+  private strikeViews = new Map<number, { star: Phaser.GameObjects.Image; mark: Phaser.GameObjects.Arc }>();
+  private reticle!: Phaser.GameObjects.Arc;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
   private slotViews: Phaser.GameObjects.Image[] = [];
 
@@ -72,6 +77,8 @@ export class BattleScene extends Phaser.Scene {
     this.soldierViews.clear();
     this.rallyFlags.clear();
     this.rallyMode = null;
+    this.spellMode = null;
+    this.strikeViews.clear();
     this.towerViews = this.level.slots.map(() => null);
     this.slotViews = [];
     this.menu = null;
@@ -86,6 +93,10 @@ export class BattleScene extends Phaser.Scene {
       img.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
         sfx.unlock();
+        if (this.spellMode) {
+          this.castAt(this.spellMode, { x: _p.worldX, y: _p.worldY });
+          return;
+        }
         this.openSlotMenu(i);
       });
       this.slotViews.push(img);
@@ -102,10 +113,15 @@ export class BattleScene extends Phaser.Scene {
 
     this.buildHud();
     this.buildHero();
+    this.buildSpells();
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (this.rallyMode !== null) {
         this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY });
+        return;
+      }
+      if (this.spellMode !== null) {
+        this.castAt(this.spellMode, { x: p.worldX, y: p.worldY });
         return;
       }
       if (this.heroSelected && !this.menu) {
@@ -118,6 +134,12 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-N', () => this.callWave());
     this.input.keyboard?.on('keydown-H', () => this.selectHero(!this.heroSelected));
     this.input.keyboard?.on('keydown-Q', () => this.sim.useHeroSkill());
+    this.input.keyboard?.on('keydown-ONE', () => this.armSpell(SPELL_ORDER[0]));
+    this.input.keyboard?.on('keydown-TWO', () => this.armSpell(SPELL_ORDER[1]));
+    this.input.keyboard?.on('keydown-ESC', () => this.armSpell(null));
+    this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
+      if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY);
+    });
 
     this.cameras.main.fadeIn(300, 16, 38, 27);
     this.showBanner(this.level.name, 'Build outposts on the stone pads, then call the first wave!');
@@ -249,6 +271,77 @@ export class BattleScene extends Phaser.Scene {
     this.bossBar = this.add.graphics().setDepth(3001);
     this.bossLabel = this.add.text(GAME_W / 2, 92, '', textStyle(18, TEXT.heart)).setOrigin(0.5).setDepth(3002).setVisible(false);
     this.refreshHud();
+  }
+
+  // ---------- spells ----------
+
+  private spellPos(i: number): Vec2 {
+    return { x: GAME_W - 58 - (SPELL_ORDER.length - 1 - i) * 92, y: GAME_H - 58 };
+  }
+
+  private buildSpells(): void {
+    this.spellHud = this.add.graphics().setDepth(3000);
+    this.reticle = this.add.circle(0, 0, 60, 0xffffff, 0.12).setStrokeStyle(3, C.cream, 0.9).setDepth(2900).setVisible(false);
+    SPELL_ORDER.forEach((id, i) => {
+      const p = this.spellPos(i);
+      this.add.image(p.x, p.y - 4, `icon_${id}`).setDepth(3001);
+      this.add.text(p.x, p.y + 30, SPELLS[id].name, textStyle(12)).setOrigin(0.5).setDepth(3002);
+      const zone = this.add.zone(p.x, p.y, 80, 80).setDepth(3002).setInteractive({ useHandCursor: true });
+      zone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+        ev.stopPropagation();
+        sfx.unlock();
+        sfx.click();
+        this.closeMenu();
+        this.selectHero(false);
+        this.armSpell(this.spellMode === id ? null : id);
+      });
+    });
+  }
+
+  private armSpell(id: string | null): void {
+    if (id && !this.sim.spellReady(id)) {
+      this.floatText(GAME_W - 120, GAME_H - 120, 'Recharging…', TEXT.dim, 18);
+      return;
+    }
+    this.spellMode = id;
+    this.reticle.setVisible(!!id);
+    if (id) {
+      const def = SPELLS[id];
+      this.reticle.setRadius(def.radius ?? 50).setStrokeStyle(3, def.color, 0.9).setFillStyle(def.color, 0.12);
+      this.showBanner(def.name, def.kind === 'reinforce' ? 'Tap a spot on the road' : 'Tap where the star should fall');
+    } else {
+      this.children.getByName('banner')?.destroy();
+    }
+  }
+
+  private castAt(id: string, p: Vec2): void {
+    if (this.sim.castSpell(id, p)) {
+      this.armSpell(null);
+    } else {
+      this.floatText(p.x, p.y, SPELLS[id].kind === 'reinforce' ? 'Must be on the road!' : 'Not ready', TEXT.heart, 18);
+    }
+  }
+
+  private drawSpellHud(): void {
+    const g = this.spellHud;
+    g.clear();
+    SPELL_ORDER.forEach((id, i) => {
+      const p = this.spellPos(i);
+      const def = SPELLS[id];
+      const cd = this.sim.spellCd[id] ?? 0;
+      g.fillStyle(C.ink, 0.85);
+      g.fillCircle(p.x, p.y, 40);
+      g.fillStyle(cd > 0 ? 0x3a4a3e : C.panelLight, 1);
+      g.fillCircle(p.x, p.y, 35);
+      if (cd > 0) {
+        g.fillStyle(0x000000, 0.5);
+        g.slice(p.x, p.y, 35, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (cd / def.cooldown), false);
+        g.fillPath();
+      }
+      const armed = this.spellMode === id;
+      g.lineStyle(armed ? 5 : 3, armed ? C.cream : cd > 0 ? 0x777777 : def.color, 1);
+      g.strokeCircle(p.x, p.y, armed ? 41 : 36);
+    });
   }
 
   // ---------- hero ----------
@@ -626,6 +719,7 @@ export class BattleScene extends Phaser.Scene {
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
     this.syncHero();
+    this.drawSpellHud();
     this.drawBossBar();
     this.refreshHud();
   }
@@ -736,6 +830,39 @@ export class BattleScene extends Phaser.Scene {
         break;
       case 'melee':
         sfx.melee();
+        break;
+      case 'spellCast': {
+        const def = SPELLS[ev.spellId];
+        if (def.kind === 'meteor') {
+          // Visuals are created in syncStrikes() from sim.strikes so they track game time exactly.
+          sfx.waveHorn();
+        } else {
+          this.particles.setParticleTint(0x8fdc5a);
+          this.particles.explode(24, ev.pos.x, ev.pos.y);
+          this.floatText(ev.pos.x, ev.pos.y - 50, 'Rangers, to me!', TEXT.gold, 20);
+          sfx.build();
+        }
+        break;
+      }
+      case 'strike': {
+        const sv = this.strikeViews.get(ev.uid);
+        sv?.star.destroy();
+        sv?.mark.destroy();
+        this.strikeViews.delete(ev.uid);
+        const ring = this.add.circle(ev.pos.x, ev.pos.y, ev.radius, 0xfff0a8, 0.4).setStrokeStyle(8, 0xffc93c, 1).setDepth(2400).setScale(0.2);
+        this.tweens.add({ targets: ring, scale: 1.1, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        this.particles.setParticleTint(0xffc93c);
+        this.particles.explode(40, ev.pos.x, ev.pos.y);
+        this.particles.setParticleTint(0x9a8a6a);
+        this.particles.explode(20, ev.pos.x, ev.pos.y);
+        this.cameras.main.shake(350, 0.014);
+        this.cameras.main.flash(100, 255, 240, 180);
+        sfx.boom();
+        break;
+      }
+      case 'summonGone':
+        this.particles.setParticleTint(0x8fdc5a);
+        this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
       case 'heal': {
         const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0x6fe08a, 0.12).setStrokeStyle(3, 0x6fe08a, 0.8).setDepth(2400).setScale(0.2);
@@ -849,6 +976,7 @@ export class BattleScene extends Phaser.Scene {
       }
     }
     this.syncSoldiers();
+    this.syncStrikes();
     const live = new Set(this.sim.projectiles.map((p) => p.uid));
     for (const p of this.sim.projectiles) {
       const img = this.projViews.get(p.uid);
@@ -873,13 +1001,34 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
+  private syncStrikes(): void {
+    for (const st of this.sim.strikes) {
+      const def = SPELLS[st.spellId];
+      let v = this.strikeViews.get(st.uid);
+      if (!v) {
+        const mark = this.add.circle(st.pos.x, st.pos.y, def.radius ?? 60, def.color, 0.15).setStrokeStyle(3, def.color, 0.9).setDepth(2300);
+        this.tweens.add({ targets: mark, alpha: 0.4, yoyo: true, repeat: -1, duration: 150 });
+        const star = this.add.image(st.pos.x + 260, -60, 'meteor').setDepth(4500).setScale(1.6);
+        v = { star, mark };
+        this.strikeViews.set(st.uid, v);
+      }
+      const t = 1 - Math.max(0, st.timer) / (def.delay ?? 1);
+      const e = t * t; // ease-in fall
+      v.star.setPosition(st.pos.x + 260 * (1 - e), -60 + (st.pos.y + 60) * e).setRotation(t * 6);
+    }
+  }
+
   private syncSoldiers(): void {
     const seen = new Set<number>();
     for (const s of this.sim.soldiers) {
       seen.add(s.uid);
       let v = this.soldierViews.get(s.uid);
       if (!v) {
-        v = { sprite: this.add.image(s.pos.x, s.pos.y, 'soldier'), bar: this.add.graphics() };
+        v = { sprite: this.add.image(s.pos.x, s.pos.y, s.summoned ? 'ranger' : 'soldier'), bar: this.add.graphics() };
+        if (s.summoned) {
+          v.sprite.setScale(0);
+          this.tweens.add({ targets: v.sprite, scale: 1, duration: 250, ease: 'Back.easeOut' });
+        }
         this.soldierViews.set(s.uid, v);
       }
       this.drawSoldier(s, v.sprite, v.bar);
@@ -901,6 +1050,7 @@ export class BattleScene extends Phaser.Scene {
     const jiggle = fighting ? Math.sin(this.time.now / 60 + s.uid) * 2 : 0;
     if (Math.abs(sprite.x - s.pos.x) > 0.3) sprite.setFlipX(s.pos.x < sprite.x);
     sprite.setPosition(s.pos.x + jiggle, s.pos.y - 10).setDepth(s.pos.y);
+    if (s.summoned && s.life < 3) sprite.setAlpha(0.5 + 0.5 * Math.abs(Math.sin(this.time.now / 120)));
     if (s.hp < s.maxHp) {
       const w = 22;
       bar.fillStyle(C.ink, 0.85);

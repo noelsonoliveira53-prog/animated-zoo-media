@@ -34,6 +34,7 @@ export interface Enemy {
   spawned: number;
   phase: number; // index of next boss phase to trigger
   speedMult: number;
+  enraged: boolean;
 }
 
 export interface Soldier {
@@ -140,6 +141,7 @@ export type SimEvent =
   | { type: 'heal'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'chill'; source: Enemy; towers: Tower[]; radius: number }
   | { type: 'burrow'; enemy: Enemy; down: boolean }
+  | { type: 'enrage'; enemy: Enemy }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
   | { type: 'split'; parent: Enemy; children: Enemy[] }
@@ -790,6 +792,7 @@ export class BattleSim {
       spawned: 0,
       phase: 0,
       speedMult: 1,
+      enraged: false,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -807,6 +810,11 @@ export class BattleSim {
       if (e.def.chill) this.tickChill(e, dt);
       if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.def.spawner) this.tickSpawner(e, dt);
+      if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
+        e.enraged = true;
+        e.speedMult = Math.max(e.speedMult, e.def.enrage.speedMult);
+        this.events.push({ type: 'enrage', enemy: e });
+      }
       if (e.blockedBy) {
         const isHero = !!this.hero && this.hero.uid === e.blockedBy;
         const s = isHero ? null : this.soldiers.find((so) => so.uid === e.blockedBy);
@@ -993,7 +1001,7 @@ export class BattleSim {
       if (!e.alive || e.underground) continue;
       if (e.def.flying && !t.def.hitsAir) continue;
       const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
-      if (d > range) continue;
+      if (d > range || (e.def.veil && d > e.def.veil)) continue;
       let score: number;
       switch (t.target) {
         case 'first':
@@ -1029,7 +1037,8 @@ export class BattleSim {
       let bestScore = -Infinity;
       for (const e of this.enemies) {
         if (!e.alive || e.underground || taken.has(e.uid) || (e.def.flying && !t.def.hitsAir)) continue;
-        if (Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y) > range) continue;
+        const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
+        if (d > range || (e.def.veil && d > e.def.veil)) continue;
         if (e.dist > bestScore) {
           bestScore = e.dist;
           best = e;

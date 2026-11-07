@@ -1,12 +1,14 @@
-// Headless balance report: `npx vite-node scripts/balance.ts [runs]`
+// Headless balance report: `npx vite-node scripts/balance.ts [runs] [levelIndex,...]`
 import { LEVELS } from '../src/data/levels';
 import { STRATEGIES, playLevel } from '../src/systems/autoplay';
 
 const runs = Number(process.argv[2] ?? 12);
+const only = process.argv[3]?.split(',').map(Number);
 const rows: string[] = [];
 rows.push(`| Level | Strategy | Win % | Avg lives left | Avg waves reached |`);
 rows.push(`|---|---|---|---|---|`);
-for (const level of LEVELS) {
+for (const [i, level] of LEVELS.entries()) {
+  if (only && !only.includes(i)) continue;
   for (const strat of STRATEGIES) {
     let wins = 0;
     let lives = 0;

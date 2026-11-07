@@ -183,3 +183,39 @@ describe('spawners', () => {
     expect(imps).toBeLessThanOrEqual(6);
   });
 });
+
+describe('duskcap enemies', () => {
+  it('Veilstalkers are only targeted by towers once inside the veil range', () => {
+    // Tower at x=400 (60px above the road), range well beyond the veil.
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 400, y: 40 }] };
+    const sim = new BattleSim(l2);
+    const t = sim.build(0, 'glimmer')!;
+    sim.status = 'running';
+    const v = sim.spawn('veilstalker', 0, 220);
+    v.def = { ...v.def, speed: 0 };
+    const veil = ENEMIES.veilstalker.veil!;
+    expect(Math.hypot(v.pos.x - t.pos.x, v.pos.y - t.pos.y)).toBeGreaterThan(veil);
+    for (let i = 0; i < 120; i++) sim.update(1 / 60);
+    expect(v.hp).toBe(v.maxHp); // in tower range, but hidden
+    v.dist = 400;
+    v.pos = { x: 400, y: 100 };
+    for (let i = 0; i < 120; i++) sim.update(1 / 60);
+    expect(v.hp).toBeLessThan(v.maxHp);
+  });
+  it('Rootragers enrage below half health and speed up', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const r = sim.spawn('rootrager', 0, 100);
+    sim.update(1 / 60);
+    const d0 = r.dist;
+    sim.update(0.5);
+    const slow = r.dist - d0;
+    (sim as any).applyDamage(r, r.maxHp * 0.6);
+    sim.update(1 / 60);
+    expect(r.enraged).toBe(true);
+    expect(sim.events.some((e) => e.type === 'enrage') || r.speedMult === ENEMIES.rootrager.enrage!.speedMult).toBe(true);
+    const d1 = r.dist;
+    sim.update(0.5);
+    expect(r.dist - d1).toBeGreaterThan(slow * 1.8);
+  });
+});

@@ -23,7 +23,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'boss_murkmaw', name: 'Toad Toppler', text: 'Defeat Old Murkmaw.', goal: 1, progress: (s) => stat(s, 'boss_murkmaw'), reward: { glowsap: 400 } },
   { id: 'boss_grimtusk', name: 'Frost Breaker', text: 'Defeat Grimtusk the Frost Boar.', goal: 1, progress: (s) => stat(s, 'boss_grimtusk'), reward: { glowsap: 600 } },
   { id: 'boss_vulkhar', name: 'Wyrmsbane', text: 'Defeat Vulkhar the Ash Wyrm.', goal: 1, progress: (s) => stat(s, 'boss_vulkhar'), reward: { glowsap: 900 } },
-  { id: 'campaign', name: 'Keeper of the Grove', text: 'Finish the whole campaign.', goal: 1, progress: (s) => ((s.stars[LEVELS[LEVELS.length - 1].id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
+  { id: 'campaign', name: 'Keeper of the Grove', text: 'Defeat Vulkhar and finish the story.', goal: 1, progress: (s) => ((s.stars[(LEVELS.find((l) => l.finale) ?? LEVELS[LEVELS.length - 1]).id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
   { id: 'kills500', name: 'Mud on the Boots', text: 'Defeat 500 Murkhorde critters.', goal: 500, progress: (s) => stat(s, 'kills'), reward: { coins: 300 } },
   { id: 'kills5000', name: 'Horde Breaker', text: 'Defeat 5,000 Murkhorde critters.', goal: 5000, progress: (s) => stat(s, 'kills'), reward: { coins: 1500, glowsap: 1000 } },
   { id: 'specialist', name: 'Specialist', text: 'Buy 10 tower specializations.', goal: 10, progress: (s) => stat(s, 'specs'), reward: { glowsap: 400 } },

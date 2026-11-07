@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **28** (next balance pass at iteration 30)
+Iteration counter: **29** (next iteration = 30 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -237,11 +237,21 @@ Iteration counter: **28** (next balance pass at iteration 30)
   map's starting-point label sat under the first level's name on phones; moved it down. Village drag-to-pan dropped:
   FIT scaling already shows the whole grid. `mobile-check.mjs` now also captures the upgrade menu and map. 113 tests.
 
+- [x] **Iter 29 — Region 4 opens: The Duskcap Weald.** A twilight forest of giant mushrooms beyond the Emberdeep.
+  Two new enemy mechanics (20 enemies now): **Veilstalker** (`veil`: towers only target it within 105 px; splash,
+  spells and soldiers still hit it, and it is drawn as a faint shimmer until a tower spots it) and **Rootrager**
+  (`enrage`: double speed below 50% HP, red tint + "Enraged!"). Level 16 **Duskcap Verge** (2 roads, 11 pads, 15
+  waves, `DUSK` theme with glowing-mushroom scenery), a Duskcap world-map style, and a hushed whole-tone music theme.
+  The story ending is now tied to a `finale` flag on level 15 (it was "last level in the list"); the
+  "Keeper of the Grove" achievement follows it. Fix: with 4 levels still to come, the 4th "?" placeholder on the
+  world map was off-screen; placeholders now spread evenly. `balance.ts` takes an optional level filter. New
+  `scripts/dusk-check.mjs`. 115 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 4 (5 more levels) with 2–3 new enemy types.
+1. Region 4: levels 17–20 (one more new enemy, and a Duskcap boss with phases for level 20).
 2. Village: a free speed-up after a 3-star win (parked idea).
 3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
@@ -262,6 +272,9 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Duskcap Verge (iteration 29, 6 seeds, expert / casual / novice):** hpMult 1.2 → 100/100/100 with ~20 lives (far too
+easy); 2.0 → novice still 100%; **2.4 → 100% / 83% / 33%** (picked: matches the Emberdeep opener); 2.8 → novice 0%.
 
 **Economy (iteration 25, `economy.ts`):**
 - Income: campaign first clears 18.8k coins / 14.9k glowsap (+13.1k / +10.4k for all 3★); achievements 9.1k / 9.8k;

@@ -32,12 +32,13 @@ export class WorldMapScene extends Phaser.Scene {
     const reg = REGIONS[this.region];
     const inRegion = LEVELS.map((_, i) => i).filter((i) => regionOf(i) === this.region);
 
-    this.drawLand(reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
+    this.drawLand(reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
     this.drawTrail(save.stars, inRegion);
     inRegion.forEach((i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[LEVELS[i].id] ?? 0));
     // Placeholders for levels still to come in this region.
-    for (let k = inRegion.length; k < reg.count; k++) {
-      const x = 1000 + (k - inRegion.length) * 120;
+    const missing = reg.count - inRegion.length;
+    for (let k = 0; k < missing; k++) {
+      const x = missing === 1 ? 1060 : 940 + (k * 240) / (missing - 1); // spread between x=940 and x=1180
       this.add.text(x, 640, '?', textStyle(28, TEXT.dim)).setOrigin(0.5).setAlpha(0.6);
     }
     if (inRegion.length < reg.count) this.add.text(1060, 680, 'More lands coming soon…', textStyle(pf(14), TEXT.dim, false)).setOrigin(0.5);
@@ -86,19 +87,28 @@ export class WorldMapScene extends Phaser.Scene {
     this.tweens.add({ targets: t, alpha: 0, delay: 1600, duration: 400, onComplete: () => t.destroy() });
   }
 
-  private drawLand(style: 'meadow' | 'snow' | 'ember'): void {
+  private drawLand(style: 'meadow' | 'snow' | 'ember' | 'dusk'): void {
     const snow = style === 'snow';
     const ember = style === 'ember';
+    const dusk = style === 'dusk';
     const g = this.add.graphics();
-    g.fillStyle(ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes)
+    g.fillStyle(dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
     g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
     // main island
-    g.fillStyle(ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
+    g.fillStyle(dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.02, GAME_H * 0.98);
-    g.fillStyle(ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
+    g.fillStyle(dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 0.98, GAME_H * 0.92);
     // regions
-    const regions: [number, number, number, number, number][] = ember
+    const regions: [number, number, number, number, number][] = dusk
+      ? [
+          [0x56688a, 230, 560, 420, 260],
+          [0x4e5c80, 480, 420, 320, 230],
+          [0x5a4e80, 760, 300, 340, 240],
+          [0x4a4a74, 1020, 420, 320, 220],
+          [0x40406a, 1100, 200, 340, 240],
+        ]
+      : ember
       ? [
           [0x6a5a50, 230, 560, 420, 260],
           [0x5f4a42, 480, 420, 320, 230],
@@ -126,7 +136,7 @@ export class WorldMapScene extends Phaser.Scene {
       g.fillEllipse(x, y, w, h);
     }
     // lake (frozen in the highlands)
-    g.fillStyle(ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
+    g.fillStyle(dusk ? 0x7ad8c8 : ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
     g.fillEllipse(900, 520, 200, 90);
     g.fillStyle(0xffffff, 0.4);
     g.fillEllipse(870, 505, 60, 14);
@@ -138,6 +148,17 @@ export class WorldMapScene extends Phaser.Scene {
       if (LEVELS.some((l, i) => regionOf(i) === this.region && Math.hypot(l.mapPos.x - x, l.mapPos.y - y) < 70)) continue;
       if (Math.hypot((x - 900) / 110, (y - 520) / 55) < 1) continue;
       const dark = x > 960 && y < 380;
+      if (dusk) {
+        // glowing mushrooms
+        g.fillStyle(0xe8dcc8, 1);
+        g.fillRect(x - 2, y - 6, 4, 10);
+        g.fillStyle(rnd.pick([0x8a5ab8, 0xb85a8a, 0x5a8ab8]), 1);
+        g.fillEllipse(x, y - 7, rnd.between(16, 24), 10);
+        g.fillStyle(0xbff4ff, 0.9);
+        g.fillCircle(x - 3, y - 9, 1.5);
+        g.fillCircle(x + 3, y - 8, 1.5);
+        continue;
+      }
       if (ember) {
         // smoking rocks and dead trees
         g.fillStyle(0x2a201c, 1);
@@ -162,9 +183,9 @@ export class WorldMapScene extends Phaser.Scene {
     // the trail's starting point
     g.fillStyle(0x9a6a40, 1);
     g.fillRect(60, 600, 60, 40);
-    g.fillStyle(ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
+    g.fillStyle(dusk ? 0x8a5ab8 : ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
     g.fillTriangle(50, 604, 130, 604, 90, 570);
-    this.add.text(90, 692, ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
+    this.add.text(90, 692, dusk ? 'Ember Gate' : ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
   }
 
   private drawTrail(stars: Record<string, number>, indices: number[]): void {

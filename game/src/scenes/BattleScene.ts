@@ -273,7 +273,21 @@ export class BattleScene extends Phaser.Scene {
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
       if (this.level.slots.some((s) => Math.hypot(s.x - p.x, s.y - p.y) < 60)) continue;
       if ((this.level.ponds ?? []).some((pd) => Math.hypot((p.x - pd.x) / (pd.w / 2 + 20), (p.y - pd.y) / (pd.h / 2 + 20)) < 1)) continue;
-      if (rnd.frac() < 0.45) {
+      if (this.level.theme.shrooms && rnd.frac() < 0.5) {
+        // giant duskcap mushrooms with glowing spots
+        const cap = rnd.pick(this.level.theme.trees ?? [0x8a5ab8]);
+        const h = rnd.between(14, 24);
+        deco.fillStyle(0x000000, 0.2);
+        deco.fillEllipse(p.x, p.y + 4, 36, 12);
+        deco.fillStyle(0xe8dcc8, 1);
+        deco.fillRoundedRect(p.x - 5, p.y - h, 10, h + 4, 4);
+        deco.fillStyle(cap, 1);
+        deco.fillEllipse(p.x, p.y - h, 40, 24);
+        deco.lineStyle(2, C.ink, 0.6);
+        deco.strokeEllipse(p.x, p.y - h, 40, 24);
+        deco.fillStyle(0xbff4ff, 0.9);
+        for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - h - 4 + rnd.between(-2, 3), 2.5);
+      } else if (rnd.frac() < 0.45) {
         deco.fillStyle(0x000000, 0.2);
         deco.fillEllipse(p.x, p.y + 4, 40, 14);
         deco.fillStyle(0x6b4a2b, 1);
@@ -1061,6 +1075,11 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x8fdc5a);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
+      case 'enrage':
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Enraged!', TEXT.heart, 18);
+        this.particles.setParticleTint(0xff5d4a);
+        this.particles.explode(12, ev.enemy.pos.x, ev.enemy.pos.y);
+        break;
       case 'burrow':
         this.particles.setParticleTint(0x9a7a52);
         this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
@@ -1183,6 +1202,12 @@ export class BattleScene extends Phaser.Scene {
       if (e.def.flying) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
       else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
+      if (e.def.veil) {
+        // Veiled: a faint shimmer until a tower is close enough to spot it.
+        const veil = e.def.veil;
+        const spotted = this.sim.towers.some((t) => t && !t.rally && Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= veil);
+        v.sprite.setAlpha(spotted ? 1 : 0.32 + Math.sin(v.bob * 1.5) * 0.1);
+      }
       v.shadow?.setPosition(e.pos.x, e.pos.y + 4).setDepth(e.pos.y - 1);
       if (v.mound) {
         v.mound.setVisible(e.underground).setPosition(e.pos.x, e.pos.y + 2).setDepth(e.pos.y);
@@ -1388,7 +1413,7 @@ export class BattleScene extends Phaser.Scene {
       const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
       panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
-    const finale = won && this.levelIndex === LEVELS.length - 1;
+    const finale = won && !!this.level.finale;
     const hasNext = won && (this.levelIndex + 1 < LEVELS.length || finale);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,

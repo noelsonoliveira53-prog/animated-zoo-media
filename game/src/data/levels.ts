@@ -6,6 +6,7 @@ const LAKE = { grass: 0x5a9a6a, grassDark: 0x4a8a5c, road: 0xc4b28a, roadEdge: 0
 const DEN = { grass: 0x3f6b48, grassDark: 0x325a3c, road: 0x8a7a5a, roadEdge: 0x6a5a3e };
 const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0x77808a, trees: [0x2f5a4a, 0x3a6a58, 0x2a4f42], snow: true };
 const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
+const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
 const FEN = { grass: 0x4f8a52, grassDark: 0x3f7446, road: 0x9c8a62, roadEdge: 0x7d6c48 };
 
 // Shared tail for Murkmaw's Den: all three roads meet at (600, 360).
@@ -765,6 +766,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l15',
+    finale: true,
     name: 'Heart of the Emberdeep',
     blurb: 'Three magma roads meet at the burning heart. Vulkhar the Ash Wyrm rises. This is the final stand.',
     mapPos: { x: 1110, y: 210 },
@@ -813,6 +815,62 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'vulkhar', count: 1, interval: 1, delay: 10 }, { enemy: 'ashhive', count: 2, interval: 6, path: 1 }, { enemy: 'cindermole', count: 10, interval: 1, path: 2 }, { enemy: 'bogbrute', count: 3, interval: 5, path: 1, delay: 12 }] },
     ],
   },
+  {
+    id: 'l16',
+    name: 'Duskcap Verge',
+    blurb: 'Past the Emberdeep lies a twilight forest of giant mushrooms. Something in the mist is watching.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.4,
+    startCoins: 820,
+    lives: 20,
+    theme: DUSK,
+    paths: [
+      [
+        { x: -40, y: 200 },
+        { x: 260, y: 200 },
+        { x: 260, y: 520 },
+        { x: 560, y: 520 },
+        { x: 560, y: 250 },
+        { x: 860, y: 250 },
+        { x: 860, y: 560 },
+        { x: 1100, y: 560 },
+        { x: 1100, y: 360 },
+        { x: 1320, y: 360 },
+      ],
+      [{ x: 700, y: -40 }, { x: 700, y: 250 }, { x: 860, y: 250 }, { x: 860, y: 560 }, { x: 1100, y: 560 }, { x: 1100, y: 360 }, { x: 1320, y: 360 }],
+    ],
+    slots: [
+      { x: 150, y: 300 },
+      { x: 370, y: 420 },
+      { x: 410, y: 620 },
+      { x: 460, y: 360 },
+      { x: 660, y: 360 },
+      { x: 780, y: 150 },
+      { x: 960, y: 450 },
+      { x: 980, y: 250 },
+      { x: 1200, y: 460 },
+      { x: 1210, y: 250 },
+      { x: 960, y: 650 },
+    ],
+    ponds: [{ x: 410, y: 300, w: 120, h: 60 }],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.6 }, { enemy: 'skitter', count: 10, interval: 0.5, delay: 4, path: 1 }] },
+      { groups: [{ enemy: 'veilstalker', count: 4, interval: 1.6 }, { enemy: 'mudling', count: 10, interval: 0.7, delay: 2 }] },
+      { groups: [{ enemy: 'reedguard', count: 8, interval: 1.1 }, { enemy: 'gloomwing', count: 8, interval: 0.9, delay: 3, path: 1 }] },
+      { groups: [{ enemy: 'rootrager', count: 2, interval: 4 }, { enemy: 'skitter', count: 12, interval: 0.5, delay: 3, path: 1 }] },
+      { groups: [{ enemy: 'veilstalker', count: 8, interval: 1.1, path: 1 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 3 }] },
+      { groups: [{ enemy: 'splotch', count: 10, interval: 1.1 }, { enemy: 'gnat', count: 24, interval: 0.25, delay: 3, path: 1 }] },
+      { groups: [{ enemy: 'rootrager', count: 3, interval: 3.5 }, { enemy: 'wispling', count: 12, interval: 0.7, delay: 2, path: 1 }] },
+      { groups: [{ enemy: 'shellback', count: 12, interval: 0.9 }, { enemy: 'veilstalker', count: 8, interval: 1, delay: 3, path: 1 }] },
+      { groups: [{ enemy: 'thornhog', count: 14, interval: 0.7 }, { enemy: 'gloomwing', count: 14, interval: 0.6, delay: 3, path: 1 }] },
+      { groups: [{ enemy: 'rootrager', count: 4, interval: 3 }, { enemy: 'bogmender', count: 4, interval: 2.5, delay: 2 }, { enemy: 'veilstalker', count: 10, interval: 0.9, delay: 5, path: 1 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 3, path: 1 }, { enemy: 'wispling', count: 16, interval: 0.6, delay: 3 }] },
+      { groups: [{ enemy: 'veilstalker', count: 16, interval: 0.6 }, { enemy: 'rootrager', count: 3, interval: 4, delay: 3, path: 1 }, { enemy: 'gnat', count: 30, interval: 0.2, delay: 6 }] },
+      { groups: [{ enemy: 'reedguard', count: 14, interval: 0.8, path: 1 }, { enemy: 'splotch', count: 12, interval: 1 }, { enemy: 'rootrager', count: 3, interval: 4, delay: 5 }] },
+      { groups: [{ enemy: 'rootrager', count: 6, interval: 2.5 }, { enemy: 'veilstalker', count: 14, interval: 0.7, path: 1 }, { enemy: 'bogmender', count: 5, interval: 2.4, delay: 4 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 3, path: 1 }, { enemy: 'rootrager', count: 6, interval: 2 }, { enemy: 'veilstalker', count: 20, interval: 0.5, delay: 4, path: 1 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -832,12 +890,14 @@ export interface RegionDef {
   count: number; // levels planned for the region (some may not exist yet)
   snow?: boolean;
   ember?: boolean;
+  dusk?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
   { name: 'The Grovelands', first: 0, count: 5 },
   { name: 'Frostfern Highlands', first: 5, count: 5, snow: true },
   { name: 'The Emberdeep', first: 10, count: 5, ember: true },
+  { name: 'The Duskcap Weald', first: 15, count: 5, dusk: true },
 ];
 
 export function regionOf(levelIndex: number): number {

@@ -30,6 +30,8 @@ export interface EnemyDef {
   chill?: { radius: number; interval: number; duration: number }; // periodically freezes nearby towers
   burrow?: { interval: number; duration: number; speedMult: number }; // dives underground on a cycle
   spawner?: { enemy: string; count: number; interval: number; limit: number }; // releases minions while alive (limit = max total)
+  veil?: number; // stealth: towers can only target it within this many px (splash, spells, soldiers still hit)
+  enrage?: { below: number; speedMult: number }; // speeds up once hp drops under this fraction
   boss?: boolean;
 }
 
@@ -108,7 +110,8 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean };
+  finale?: boolean; // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
   hpMult?: number; // difficulty ramp: multiplies every enemy's health on this level
   heroSpawn?: Vec2; // where the hero starts/respawns (default: near the first road's exit)

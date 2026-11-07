@@ -225,6 +225,49 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'veilstalker': {
+        // lanky mist-cat: hooded head, long tail, faint aura
+        g.fillStyle(0xc8b8ff, 0.25);
+        g.fillCircle(cx, cy, r * 1.5);
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx - r * 0.8, cy + r * 0.4, cx - r * 1.5, cy - r * 0.4);
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.3, r * 1.8, r * 1.1);
+        g.strokeEllipse(cx, cy + r * 0.3, r * 1.8, r * 1.1);
+        g.fillCircle(cx + r * 0.6, cy - r * 0.35, r * 0.7);
+        g.strokeCircle(cx + r * 0.6, cy - r * 0.35, r * 0.7);
+        g.fillTriangle(cx + r * 0.15, cy - r * 0.7, cx + r * 0.5, cy - r * 0.8, cx + r * 0.2, cy - r * 1.3);
+        g.fillTriangle(cx + r * 0.75, cy - r * 0.8, cx + r * 1.1, cy - r * 0.7, cx + r * 1.0, cy - r * 1.3);
+        g.fillStyle(0xbff4ff, 1);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.4, r * 0.13);
+        g.fillCircle(cx + r * 0.85, cy - r * 0.4, r * 0.13);
+        break;
+      }
+      case 'rootrager': {
+        // angry stump: bark body, rings on top, root legs, glowing eyes
+        g.fillStyle(shade, 1);
+        for (const dx of [-0.8, -0.25, 0.3, 0.85]) g.fillTriangle(cx + dx * r - 4, cy + r * 0.6, cx + dx * r + 4, cy + r * 0.6, cx + dx * r * 1.2, cy + r * 1.15);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r, cy - r * 0.7, r * 2, r * 1.5, 6);
+        g.strokeRoundedRect(cx - r, cy - r * 0.7, r * 2, r * 1.5, 6);
+        g.fillStyle(0xd9b47a, 1);
+        g.fillEllipse(cx, cy - r * 0.7, r * 2, r * 0.6);
+        g.strokeEllipse(cx, cy - r * 0.7, r * 2, r * 0.6);
+        g.lineStyle(1.5, shade, 1);
+        g.strokeEllipse(cx, cy - r * 0.7, r * 1.2, r * 0.34);
+        g.strokeEllipse(cx, cy - r * 0.7, r * 0.5, r * 0.14);
+        g.lineStyle(2, shade, 1);
+        g.lineBetween(cx - r * 0.5, cy - r * 0.2, cx - r * 0.5, cy + r * 0.6);
+        g.lineBetween(cx + r * 0.6, cy - r * 0.1, cx + r * 0.6, cy + r * 0.5);
+        g.fillStyle(0xffb84a, 1);
+        g.fillCircle(cx - r * 0.3, cy, r * 0.15);
+        g.fillCircle(cx + r * 0.3, cy, r * 0.15);
+        g.lineStyle(2.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.5, cy - r * 0.25, cx - r * 0.12, cy - r * 0.12);
+        g.lineBetween(cx + r * 0.5, cy - r * 0.25, cx + r * 0.12, cy - r * 0.12);
+        break;
+      }
       case 'emberimp': {
         g.fillStyle(0xffc93c, 0.35);
         g.fillCircle(cx, cy, r * 1.5);

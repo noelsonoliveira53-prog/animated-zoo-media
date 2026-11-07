@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **79** (next balance pass at iteration 80)
+Iteration counter: **95** (next balance pass at iteration 95)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -571,24 +571,112 @@ Iteration counter: **79** (next balance pass at iteration 80)
   **Fix from the screenshot:** two pads at y=690 cut their towers off at the bottom edge. New test: pads stay at
   y ≤ 680. It caught six more in Cinder Tunnels, Mirrorpool Glade, Morrowcap's Throne (×2), Tidepool Terraces and
   Updraft Stair, all moved up to 680 (balance re-checked, small shifts only). Screenshot `78.png`. 159 tests.
-- [x] **Iter 79 — Brasswork level 44: Piston Row + Lodestone Golem.** New enemy mechanic (42 enemies): **Lodestone Golem**
-  (`magnet`: physical tower shots aimed at any ally within 110 px are pulled onto the golem instead, if the golem is in the
-  tower's range; magic shots, soldiers, heroes and spells are unaffected). 520 hp, 65% armor, 5% MR, slow, 2 lives: a
-  living shield that wants magic towers or Hawkeye pierce. Pulsing red/blue field arcs, a silver streak on each pulled shot,
-  a metallic ping cue, Field Guide tag, endless tier (wave 36). Level 44 **Piston Row**: a long west road for the golems and a
-  short north road (light groups and flyers only) merging into a bent 650 px tail, 12 pads, 15 waves, hpMult 2.2.
-  Tuning: every first-draft leak was a fast pack on the short north road (the iteration 62 lesson again), so Galehounds moved
-  to the long road and north groups were trimmed 25%. A 13th pad over the north entry *lowered* the novice from 33% to 0%
-  (it lured the novice's few towers away from the golem road), so it was removed. Repo: the Game Studios framework is now
-  configured for this Phaser/TS game (`project.yaml`, root `CLAUDE.md`), and Phaser ships as its own cached chunk
-  (game code 1.8 MB → 357 kB). Screenshot `79.png`.
+- [x] **Iter 79 — Brasswork level 44: Foundry Crossroads.** Three roads (west 840 px, north 920 px looping round the
+  furnace, south 640 px to the shared stretch) feed a 760 px tail. 12 pads, 16 waves, hpMult 1.39; one north-road
+  Steamrunner pack thinned. Fix from the screenshot: a pad at the top right hid its tower behind the exit gate posts
+  (moved below the exit road). Screenshot `79.png`. 159 tests.
+- [x] **Iter 80 — POLISH + BALANCE.** Region 9 curve checked (41 100/100/33 · 42 100/83/8 · 43 83/83/17 · 44 83/83/0):
+  no retunes. The expert-trails-casual gap on Foundry Crossroads is noise, not a bug: switching off smart branching,
+  forcing either branch or thinking slower moves it by at most one seed in 12 (`expert.ts` probe). New guard-rail test:
+  the expert must win every region finale in at least 2 of 3 seeds, so a change that makes a boss unbeatable fails CI
+  (adds ~7 s). Screenshot `80.png`. 160 tests.
+- [x] **Iter 81 — Brasswork finale: Heart of the Engine (level 45) + Grindmaw, the Engine Titan.** New boss (42
+  enemies) from the region's traits: a wide `jam` aura (180 px, 30% slower fire), slow `harden` (+0.3% armor per hit,
+  up to 70%), a Steamrunner `spawner`, and four phases (cogjammers → steam shield + rivetshells → every boiler at once →
+  a grind for the gate). Level 45: west + south roads (920 / 680 px) merge into a 1,240 px tail, 12 pads, 18 waves,
+  hpMult 1.58. Achievements **Engine Breaker** and **Master Tinker** (28 total); Grindmaw joins the endless boss
+  rotation. Region 9 complete: 45 levels. Screenshot `81.png`. 160 tests.
+- [x] **Iter 82 — Story cards after every region boss.** New data file `data/story.ts` and `StoryScene`: after a region
+  finale the victory panel's Next button becomes **Story**, which shows a short chapter card in the region's sky colours
+  (title, three lines, drifting motes, victory chime) and then **Onward** to the next land or **Village**. Cards for
+  Morrowcap, Saltjaw, Kaleidrax, Zephyrax, Ulmaroth and Grindmaw; each one hints at the next region. The Emberdeep keeps
+  its full epilogue. Tests: every card belongs to a region finale, and every finished region after the Emberdeep has one.
+  Browser check `scripts/story-check.mjs` (forced win, checks the panel offers "Story", opens the card). 162 tests.
+  Playable demo artifact refreshed with this build (45 levels).
+- [x] **Iter 83 — Region 10 opens: The Starwell Abyss.** A dark cavern lit by glowing pools, below the engines. Two new
+  enemy mechanics (44 enemies): **Dimlantern** (`dim`: shooting towers within 150 px lose 30% range while it lives; the
+  strongest applies; drawn as a dark gloom disc with a violet rim) and **Echo Wisp** (`echo`: on its first death it
+  re-forms on the spot at 50% health, paying no second bounty; "Echo!" ring + double ping). Level 46 **Glimmerpool
+  Descent** (west + winding south road, 1,120 / 1,000 px to the merge, 920 px tail, 11 pads, 15 waves, hpMult 1.75), an
+  `ABYSS` theme (pale stalagmites, breathing glow pools), a starry world-map style and a slow cavernous music theme.
+  Endless adds both from wave 40. Browser check `scripts/abyss-check.mjs`. 164 tests.
+- [x] **Iter 84 — Starwell level 47 + Sparkeel.** New enemy **Sparkeel** (45 enemies): a glowing cave eel with `shock`
+  (every 5 s, soldiers and the hero within 110 px are stunned for 1.5 s: no attacking, and they let go of everything they
+  held, including Bramble's Bulwark holds). Soldiers and heroes gained an optional `stun` timer. Level 47 **Lantern
+  Hollow**: bottom-left + north roads (780 / 700 px to the merge, pad row between the parallel stretches), 1,280 px tail,
+  12 pads, 15 waves, hpMult 1.8. Fixes found by the tests/screenshot: the north road first entered at x=840, under the
+  top-right buttons (now 800), and a top pad hid its tower behind the wide "Next wave" preview (moved). Endless adds
+  Sparkeel from wave 40. Screenshot `84.png`. 165 tests.
+- [x] **Iter 85 — POLISH + BALANCE (47 levels, full sweep).** All 47 levels re-run with 12 seeds after the many
+  mechanic and autoplayer changes since iteration 70: every level is in its band and every region ramps to its boss, so
+  no hpMult changed. Polish: `scripts/phone-late.mjs` now takes a region and level (`node scripts/phone-late.mjs <name>
+  <region> <level>`); the Starwell map, battle and Field Guide pages are clean at 740×360. Screenshot `85.png`.
+- [x] **Iter 86 — Starwell level 48: Moonring Lake.** One road circles three sides of a glowing lake and exits at the
+  bottom; pads ring the inner shore. 13 pads, 16 waves, hpMult 2.38. Fixes from the screenshot: the first exit came
+  out at the bottom-left beside the hero HUD (now at x=500), and ponds were drawn in the daylight sky-blue; ponds in the
+  Abyss theme now have a dark rim, a teal fill and a pulsing glow. Screenshot `86.png`. 165 tests.
+- [x] **Iter 87 — Starwell level 49: Starfall Gorge.** A west road and a north road that winds round the gorge edge
+  (1,180 / 880 px) meet at a T before a 760 px tail. 11 pads, 16 waves, hpMult 2.0. **Fix from the screenshot:** a top-
+  right pad stood its tower on the exit gate's crossbar (moved below the exit road). New test: no tower may overlap a
+  road-exit gate's posts or crossbar. It also caught the same spot in Three Winds (moved to (1100,148); balance
+  re-checked 92/58/67). Screenshot `87.png`. 166 tests.
+- [x] **Iter 88 — Starwell finale: Heart of the Abyss (level 50) + Velumbra, the Dark Below.** New boss (46 enemies):
+  a shadow manta with a huge `dim` aura (200 px, −25% range), a crackling `shock` (stuns blockers within 150 px every
+  7 s), an Echo Wisp `spawner`, and four phases (dimlanterns → shadow shield + sparkeels → a flood of wisps → a surge).
+  No `echo` on the boss: re-forming at low health would re-trigger every phase at once. Level 50: a long west road (the
+  boss) and a short north road (light groups only) merge into a 1,240 px tail around a glowing pool, 11 pads, 18 waves,
+  hpMult 2.45. Achievements **Lightbringer** and **Starwalker** (30 total); Velumbra joins the endless boss rotation;
+  story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests. Playable demo
+  artifact refreshed with this build.
+- [x] **Iter 89 — Region 11 opens: The Rotbloom Orchard.** The Keepers' own orchards, rotting from the roots. New
+  mechanics (49 enemies): **Barkwarden** (`fortify`: allies within 130 px gain +25% armor while it lives; the strongest
+  aura applies, capped at 85%; shown as a turning ring of leaf-brown dashes; `sim.res()` and projectile damage both use
+  it) and **Seedcaster**, which sows up to three **Rotseeds** (a still, 0-lives "enemy" with `grow`: after 6 s it
+  sprouts into a Skitter, paying nothing). The first draft grew Thornhogs and four seeds per caster, which overran even
+  the expert; now Skitters and three. Field Guide tags for fortify, grow and every spawner. Level 51 **Windfall Rows**
+  (west + winding north road, 1,000 / 920 px, 860 px tail, 11 pads, 15 waves, hpMult 2.1), an `ORCHARD` theme (autumn
+  fruit trees with apples, leaf heaps), an autumn world-map style and a slightly sour harvest-jig music theme. Endless
+  adds Barkwarden and Seedcaster from wave 44. Browser check `scripts/orchard-check.mjs`. 168 tests.
+- **Iteration 91**: third Rotbloom enemy, the **Gorgegrub** (new `feed` trait). When a non-boss ally dies within 120px,
+  it gains +15% max health and heals 20% (up to 4 meals), and it visibly swells with each one. It comes with "Gulp!" text,
+  crumbs and a wet-gulp sound cue, a segmented-grub sprite and a Field Guide tag. Level 52 **Grubfield Lane**: a long
+  snaking west road plus a short north road that joins for the last stretch, 11 pads, 15 waves, hpMult 1.9. Grubs ride
+  with fodder packs so they have something to eat. Endless adds Gorgegrub from wave 46. Browser check
+  `scripts/grub-check.mjs`. 169 tests.
+- **Iteration 92**: level 53 **Cider Press Crossing**. A north road and a south-west road meet at a central crossing,
+  with a shared 540px tail to an east exit. It has 11 pads, 16 waves and hpMult 1.85, and is the first level to combine
+  all three Rotbloom traits: Seedcasters' seeds die beside Gorgegrubs (food), and Barkwardens armor the swollen grubs.
+  169 tests.
+- **Iteration 93**: level 54 **Rotroot Hollow**. A 2,280px serpentine west road through the hollow, plus a 1,100px
+  ridge track from the north for fliers and light enemies. The two roads only join for the last 260px. It has 11 pads,
+  16 waves and hpMult 1.77. 169 tests.
+- **Iteration 94**: Rotbloom finale, level 55 **Heart of the Orchard** (18 waves, 12 pads, hpMult 2.43). The boss
+  **Mawbloom, the Rot Heart**:
+  - Bark-song aura (+20% armor to allies within 160px).
+  - Sows Rotseeds every 6s.
+  - Feeds on fallen allies (+3% max health, up to 8 times).
+  - Phases: 75% summons Barkwardens; 50% a 1,300 shield plus Gorgegrubs; 25% Seedcasters and a speed-up; 10% a final
+    surge.
+  - Code-drawn rotten heart-tree sprite with a toothy maw and bruised fruit.
+
+  Also: achievements `boss_mawbloom` (Heartwood) and `orchard_stars` (Harvest Keeper), story card "The Orchard Wakes",
+  and Mawbloom joins the endless boss rotation. New layout test: no road may run under the hero HUD. It caught the
+  first draft of this level, where the boss walked behind the portrait. 170 tests.
+- [x] **Iter 95 — Lodestone Golem joins from the Piston Row branch.** New enemy mechanic: **Lodestone Golem** (`magnet`:
+  physical tower shots aimed at any ally within 110 px are pulled onto the golem if it is in the tower's range; magic,
+  soldiers, heroes and spells are unaffected; 520 hp, 65% armor, 5% MR, 2 lives), with sprite, field arcs, pull streak,
+  sound cue, Field Guide tag and the wave-36 endless tier. Its own level (Piston Row) was dropped because Foundry Crossroads
+  took slot 44, so two golems replace Cogjammers in Foundry Crossroads waves 8 and 11 (re-check: 92/92/0, was 83/83/0).
+  New test: every enemy must be reachable in the campaign (waves, summons, spawners, splits, seeds), because an
+  endless-only enemy could never be discovered and would block the Naturalist achievement. Repo: Game Studios framework
+  configured for this Phaser/TS game (`project.yaml`, root `CLAUDE.md`); Phaser ships as its own cached chunk.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 9 finale (level 45) with a Brasswork boss.
-2. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+1. Iter 95 balance pass (full Rotbloom sweep + finale guard).
+2. Region 12 (theme, music, 3 new enemies, levels 56–60, boss) — or a breather feature (e.g. village decorations / raid variety).
 
 ## Known Bugs
 - (none known)
@@ -598,8 +686,23 @@ Iteration counter: **79** (next balance pass at iteration 80)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
-**Iteration 79:** 44 Piston Row 92/83/0 at hpMult 2.2 (12 seeds; 1.7 → 100/100/33, 2.0 → 100/100/0, 2.4 → 67/92/0,
-2.6 → 25/25/0). The novice's Thornbow-heavy build feeds the golems, which is the point of the level.
+**Iteration 94**: 55 Heart of the Orchard went 50/75/0 at hpMult 2.2, with gnat swarms on the short north road. I moved them to the long road, which gave 100/92/0. 2.4 gave 83/67, then I reshaped the road away from the HUD and re-tuned: 2.45 gave 67/58, 2.35 gave 83/83, 2.4 gave 83/75, and **2.43 → 75/50/0** (kept, in the boss band).
+
+**Iteration 93**: 54 Rotroot Hollow started at 50/67/0 (hpMult 1.9). 56 of the expert's leaked lives were Galehounds on the short ridge track (the short-road lesson again), so I moved them to the long road, which gave 75/75/0. 1.8 gave 75/67/0, 1.75 gave 92/92/0, and **1.77 → 83/67/0** (kept, a fourth-level ramp).
+
+**Iteration 92**: 53 Cider Press Crossing was 83/50/0 at hpMult 1.95, 100/83/8 at 1.85 (kept) and 100/83/17 at 1.8.
+
+**Iteration 91**: 52 Grubfield Lane at hpMult 2.15 was 67/58/8 (too hard for the region's second level). 1.95 gave 75/83/42 (noisy), 1.85 gave 100/100/17, and **1.9 → 83/100/17**, which I kept. The expert's main leak is Gorgegrubs on the long road, as intended.
+
+**Iteration 90** (12 seeds, expert/casual/novice, Starwell + Orchard): 46 Glimmerpool 100/100/33 · 47 Lantern Hollow
+100/100/25 · 48 Moonring Lake 100/83/0 · 49 Starfall 83/83/0 · 50 Heart of the Abyss (boss) 92/67/0 · 51 Windfall Rows
+100/92/42. All in band, so no retunes. A per-step cache of Barkwarden auras was benchmarked: no measurable gain, and it gave
+stale armor between steps. I reverted it, so `res()` stays exact.
+
+**Iteration 85** (full sweep, 12 seeds, expert/casual/novice): levels 1–30 unchanged from iteration 70 except the
+bottom-pad levels (Cinder 83/67/83, Morrowcap 83/67/0); 31–40 as in iteration 75; 41 Boilerworks 100/100/17 ·
+42 Piston 100/83/8 · 43 Gearwell 83/83/17 · 44 Foundry 83/83/0 · 45 Heart of the Engine 83/67/8 · 46 Glimmerpool
+100/100/33 · 47 Lantern Hollow 100/100/25. No retunes.
 
 **Iteration 75** (camp sweep 31–40, 12 seeds): 31 Windgap 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 ·
 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 · 36 Overgrown 100/92/33 · 37 Sunken 100/83/17 · 38 Serpent
@@ -612,6 +715,20 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 89:** 51 Windfall Rows 100/92/42 at hpMult 2.1 (1.8 → 100/100/100, 2.15 → 100/83/75, 2.4 → 100/42/17).
+**Iteration 88:** 50 Heart of the Abyss 92/67/0 at hpMult 2.45 (1.8 → 92/92/0, 2.1 → 92/92/0, 2.4 → 75/75/0,
+2.55 → 67/67/0, 2.7 → 58/33/0). Expert and casual fall together here, so casual sits a little above the boss band.
+**Iteration 87:** 49 Starfall Gorge 83/83/0 at hpMult 2.0 (1.6 → 100/100/0, 1.9 → 92/83/0, 2.1 → 58/33/0).
+Three Winds after its pad move: 92/58/67 at 1.55.
+**Iteration 86:** 48 Moonring Lake 100/83/0 at hpMult 2.38 (2.1 → 100/100/0, 2.45 → 75/75/0, 2.6 → 58/33/0).
+**Iteration 84:** 47 Lantern Hollow 100/100/25 at hpMult 1.8 (1.5 → 100/100/100, 1.9 → 100/100/0, 2.05 → 100/92/0):
+the novice falls off a cliff (Sparkeels break Bramble's holds).
+**Iteration 83:** 46 Glimmerpool Descent 100/100/33 at hpMult 1.75 (1.6 → 100/100/100, 1.85 → 100/100/25,
+2.0 → 100/100/0).
+**Iteration 81:** 45 Heart of the Engine 83/67/8 at hpMult 1.58 (1.5 → 83/83/17, 1.61 → 75/67/0, 1.65 → 50/58/0,
+1.8 → 0/33/0).
+**Iteration 79:** 44 Foundry Crossroads 83/83/0 at hpMult 1.39 (1.2 → 100/100/33, 1.36 → 83/100/0, 1.45 → 75/83/0,
+1.55 → 42/67/0). The expert trails casual here: likely its branch picks vs. Rivetshells/Cogjammers; check in iter 80.
 **Iteration 78:** 43 Gearwell Shafts 83/83/17 at hpMult 1.42 (1.3 → 100/100/42, 1.5 → 75/58/0, 1.7 → 25/0/0). After
 the bottom-pad moves: Cinder Tunnels 83/67/83, Mirrorpool 100/75/58, Morrowcap 83/67/0, Tidepool 92/83/100,
 Updraft 100/75/42.

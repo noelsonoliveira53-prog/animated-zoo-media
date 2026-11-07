@@ -175,6 +175,22 @@ class Sfx {
       case 'magnet': // metallic ping, bending down
         this.tone(1400, 0.12, 'triangle', 0.05, 700);
         break;
+      case 'echo': // ghostly double ping
+        this.tone(1200, 0.12, 'sine', 0.04);
+        this.tone(900, 0.18, 'sine', 0.03, undefined, 0.1);
+        break;
+      case 'shock': // electric crackle
+        this.noise(0.14, 0.12, 6000);
+        this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
+        break;
+      case 'feed': // wet gulp
+        this.tone(140, 0.16, 'sine', 0.08, 70);
+        this.noise(0.08, 0.05, 600);
+        break;
+      case 'grow': // creaky sprout
+        this.tone(180, 0.18, 'triangle', 0.07, 360);
+        this.noise(0.1, 0.06, 900);
+        break;
       case 'split': // wet pop
         this.tone(260, 0.08, 'sine', 0.07, 520);
         break;

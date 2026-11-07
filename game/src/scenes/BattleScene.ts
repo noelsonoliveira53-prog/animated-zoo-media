@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
+import { STORY } from '../data/story';
 import { ENDLESS } from '../data/endless';
 import { endlessMutatorFor, makeEndlessLevel, mutatorReward, wavesHeld } from '../systems/endless';
 import { LEVELS } from '../data/levels';
@@ -269,13 +270,14 @@ export class BattleScene extends Phaser.Scene {
     }
     // ponds
     const lava = !!this.level.theme.lava;
+    const abyss = !!this.level.theme.abyss;
     for (const pd of this.level.ponds ?? []) {
-      g.fillStyle(lava ? 0x5a2a1a : 0x3f8a9a, 1);
+      g.fillStyle(lava ? 0x5a2a1a : abyss ? 0x0a0c1a : 0x3f8a9a, 1);
       g.fillEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
-      g.fillStyle(lava ? 0xff6a2a : 0x6fc4dc, 1);
+      g.fillStyle(lava ? 0xff6a2a : abyss ? 0x1a8a8a : 0x6fc4dc, 1);
       g.fillEllipse(pd.x, pd.y, pd.w, pd.h);
-      if (lava) {
-        const glow = this.add.ellipse(pd.x, pd.y, pd.w * 0.7, pd.h * 0.6, 0xffc93c, 0.5).setDepth(-9);
+      if (lava || abyss) {
+        const glow = this.add.ellipse(pd.x, pd.y, pd.w * 0.7, pd.h * 0.6, abyss ? 0x5ae8d0 : 0xffc93c, 0.5).setDepth(-9);
         this.tweens.add({ targets: glow, alpha: 0.15, scale: 0.85, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
       }
       g.fillStyle(0xffffff, 0.35);
@@ -314,6 +316,49 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.orchard && rnd.frac() < 0.75) {
+        if (rnd.frac() < 0.7) {
+          // autumn fruit tree with a few red apples (and some fallen ones)
+          const leaf = rnd.pick(this.level.theme.trees ?? [0xd8642a]);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 40, 14);
+          deco.fillStyle(0x6b4a2b, 1);
+          deco.fillRect(p.x - 4, p.y - 14, 8, 18);
+          deco.fillStyle(leaf, 1);
+          deco.fillCircle(p.x, p.y - 26, 18);
+          deco.fillCircle(p.x - 12, p.y - 16, 12);
+          deco.fillCircle(p.x + 12, p.y - 16, 12);
+          deco.lineStyle(2, C.ink, 0.6);
+          deco.strokeCircle(p.x, p.y - 26, 18);
+          deco.fillStyle(0xd02a2a, 1);
+          for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - 22 + rnd.between(-6, 8), 3);
+          deco.fillCircle(p.x + rnd.between(-14, 14), p.y + 6, 2.5);
+        } else {
+          // a little heap of fallen leaves
+          for (let k = 0; k < 5; k++) {
+            deco.fillStyle(rnd.pick([0xd8642a, 0xe8a03a, 0xb8442a]), 0.9);
+            deco.fillEllipse(p.x + rnd.between(-12, 12), p.y + rnd.between(-5, 5), 10, 6);
+          }
+        }
+      } else if (this.level.theme.abyss && rnd.frac() < 0.9) {
+        if (rnd.frac() < 0.5) {
+          // a pale stalagmite cluster
+          deco.fillStyle(0x000000, 0.25);
+          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          for (const [dx, h, w] of [[-8, 18, 7], [2, 30, 9], [10, 14, 6]]) {
+            deco.fillStyle(0x5a5a80, 1);
+            deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+            deco.lineStyle(1.5, C.ink, 0.5);
+            deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+          }
+        } else {
+          // a glowing pool that breathes
+          const col = rnd.pick(this.level.theme.trees ?? [0x6ad8e8]);
+          deco.fillStyle(0x0a0c1a, 1);
+          deco.fillEllipse(p.x, p.y, 44, 20);
+          const glow = this.add.ellipse(p.x, p.y, 36, 14, col, 0.55).setDepth(1);
+          this.tweens.add({ targets: glow, alpha: 0.2, yoyo: true, repeat: -1, duration: rnd.between(1200, 2200), ease: 'Sine.easeInOut' });
         }
       } else if (this.level.theme.gears && rnd.frac() < 0.9) {
         if (rnd.frac() < 0.6) {
@@ -1273,6 +1318,39 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: streak, alpha: 0, duration: 200, onComplete: () => streak.destroy() });
         break;
       }
+      case 'shock': {
+        sfx.trait('shock');
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0x9af0ff, 0.1).setStrokeStyle(3, 0xbff8ff, 0.9).setDepth(2400).setScale(0.3);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 350, onComplete: () => ring.destroy() });
+        for (const h of ev.hits) {
+          this.particles.setParticleTint(0xbff8ff);
+          this.particles.explode(5, h.x, h.y - 14);
+        }
+        if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
+        break;
+      }
+      case 'feed': {
+        sfx.trait('feed');
+        this.particles.setParticleTint(0xc8b878);
+        this.particles.explode(6, ev.from.x, ev.from.y - 6);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Gulp!', '#e8d898', 15);
+        break;
+      }
+      case 'grow': {
+        sfx.trait('grow');
+        this.particles.setParticleTint(0x6a9a3a);
+        this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y - 6);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Sprouted!', '#c8e88a', 15);
+        break;
+      }
+      case 'echo': {
+        sfx.trait('echo');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 26, 0xd8e8ff, 0.35).setDepth(2450);
+        this.tweens.add({ targets: ring, scale: 1.8, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Echo!', '#d8e8ff', 15);
+        this.enemyViews.get(ev.enemy.uid)?.sprite.setAlpha(0.6);
+        break;
+      }
       case 'charge': {
         sfx.trait('charge');
         this.particles.setParticleTint(0xf0f4f8);
@@ -1469,6 +1547,26 @@ export class BattleScene extends Phaser.Scene {
     if (!this.jamG) this.jamG = this.add.graphics().setDepth(5);
     this.jamG.clear();
     for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.fortify) continue;
+      // Barkwarden bark-song: a ring of falling leaf-brown dashes
+      this.jamG.lineStyle(2, 0xc8864a, 0.5);
+      const t0 = -this.sim.time * 0.6;
+      for (let k = 0; k < 10; k++) {
+        const a0 = t0 + (k / 10) * Math.PI * 2;
+        this.jamG.beginPath();
+        this.jamG.arc(e.pos.x, e.pos.y, e.def.fortify.radius, a0, a0 + 0.25);
+        this.jamG.strokePath();
+      }
+    }
+    for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.dim) continue;
+      // Dimlantern gloom: a soft dark disc with a violet rim
+      this.jamG.fillStyle(0x10081e, 0.22);
+      this.jamG.fillCircle(e.pos.x, e.pos.y, e.def.dim.radius);
+      this.jamG.lineStyle(2, 0x8a6ad8, 0.4);
+      this.jamG.strokeCircle(e.pos.x, e.pos.y, e.def.dim.radius);
+    }
+    for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.jam) continue;
       const r = e.def.jam.radius;
       this.jamG.lineStyle(2, 0xd8a84a, 0.45);
@@ -1505,8 +1603,9 @@ export class BattleScene extends Phaser.Scene {
       v.air = Phaser.Math.Clamp(v.air + (airborne ? dt : -dt) * 3, 0, 1);
       const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * Math.abs(Math.sin(v.bob)) * 4;
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
-      if (airborne) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
-      else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
+      const swell = 1 + e.fed * 0.08; // fed Gorgegrubs visibly bulk up
+      if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
+      else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
       else if (e.hasteTime <= 0 && v.sprite.tintTopLeft === 0xffc0e8) v.sprite.clearTint();
@@ -1760,7 +1859,8 @@ export class BattleScene extends Phaser.Scene {
       panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
     const finale = won && !er && !!this.level.finale;
-    const hasNext = won && !er && (this.levelIndex + 1 < LEVELS.length || finale);
+    const story = won && !er && !finale && !!STORY[this.level.id];
+    const hasNext = won && !er && (this.levelIndex + 1 < LEVELS.length || finale || story);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,
       color: C.sky,
@@ -1773,10 +1873,11 @@ export class BattleScene extends Phaser.Scene {
     panel.add([retry, map]);
     if (hasNext) {
       panel.add(
-        new Button(this, 170, 120, finale ? 'Epilogue' : 'Next', {
+        new Button(this, 170, 120, finale ? 'Epilogue' : story ? 'Story' : 'Next', {
           width: 150,
           color: 0xff9f43,
-          onClick: () => (finale ? this.scene.start('Ending') : this.scene.start('WorldMap', { focus: this.levelIndex + 1 })),
+          onClick: () =>
+            finale ? this.scene.start('Ending') : story ? this.scene.start('Story', { levelId: this.level.id }) : this.scene.start('WorldMap', { focus: this.levelIndex + 1 }),
         }),
       );
     }

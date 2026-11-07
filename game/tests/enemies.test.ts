@@ -544,3 +544,103 @@ describe('Rivetshell harden', () => {
     expect(sim.res(r).armor).toBe(h.max);
   });
 });
+
+describe('Starwell enemies', () => {
+  it('Dimlantern shrinks the range of shooting towers near it while alive', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 400, y: 160 }, { x: 1600, y: 160 }] };
+    const sim = new BattleSim(l2, null);
+    const near = sim.build(0, 'thornbow')!;
+    const far = sim.build(1, 'thornbow')!;
+    const d = sim.spawn('dimlantern', 0, 420);
+    expect(sim.towerDim(near)).toBeCloseTo(1 - d.def.dim!.cut);
+    expect(sim.towerDim(far)).toBe(1);
+    (sim as any).applyDamage(d, 99999);
+    expect(sim.towerDim(near)).toBe(1);
+  });
+
+  it('Echo Wisp re-forms once at partial health and pays no second bounty', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const w = sim.spawn('echowisp', 0, 400);
+    const c0 = sim.coins;
+    (sim as any).applyDamage(w, 9999);
+    const paid = sim.coins - c0;
+    expect(paid).toBeGreaterThan(0);
+    const echo = sim.enemies.filter((e) => e.alive && e.def.id === 'echowisp');
+    expect(echo.length).toBe(1);
+    expect(echo[0].hp).toBe(Math.round(echo[0].maxHp * w.def.echo!.hpFrac));
+    const c1 = sim.coins;
+    (sim as any).applyDamage(echo[0], 9999);
+    expect(sim.coins).toBe(c1);
+    expect(sim.enemies.filter((e) => e.alive && e.def.id === 'echowisp').length).toBe(0);
+  });
+});
+
+describe('Sparkeel shock', () => {
+  it('stuns a nearby melee hero, who lets go of what it holds and stops attacking for a moment', () => {
+    const l = { ...lvl, slots: [] } as LevelDef;
+    const sim = new BattleSim(l, 'bramble');
+    sim.status = 'running';
+    const h = sim.hero!;
+    h.pos = { x: 400, y: 100 };
+    h.dest = null;
+    const eel = sim.spawn('sparkeel', 0, 396);
+    eel.def = { ...eel.def, speed: 0, attack: 0 };
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    expect(eel.blockedBy).toBe(h.uid);
+    eel.shockCd = 0.001;
+    sim.update(1 / 60);
+    expect(h.stun).toBeGreaterThan(0);
+    expect(eel.blockedBy).toBe(0);
+    const hp = eel.hp;
+    for (let i = 0; i < 30; i++) sim.update(1 / 60); // still stunned: no hits
+    expect(eel.hp).toBe(hp);
+  });
+});
+
+describe('Rotbloom enemies', () => {
+  it('Barkwarden gives nearby allies extra armor while it lives (not itself, not far allies)', () => {
+    const sim = new BattleSim(lvl, null);
+    const bw = sim.spawn('barkwarden', 0, 400);
+    const near = sim.spawn('mudling', 0, 450);
+    const far = sim.spawn('mudling', 0, 1200);
+    const bonus = bw.def.fortify!.bonus;
+    expect(sim.res(near).armor).toBeCloseTo(near.def.armor + bonus);
+    expect(sim.res(far).armor).toBe(far.def.armor);
+    expect(sim.res(bw).armor).toBe(bw.def.armor);
+    (sim as any).applyDamage(bw, 99999);
+    expect(sim.res(near).armor).toBe(near.def.armor);
+  });
+
+  it('a Rotseed left alone sprouts into its grown form and pays nothing', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const seed = sim.spawn('rotseed', 0, 400);
+    const g = seed.def.grow!;
+    const c0 = sim.coins;
+    for (let i = 0; i < Math.ceil(g.after * 60) + 2; i++) sim.update(1 / 60);
+    expect(seed.alive).toBe(false);
+    expect(sim.enemies.some((e) => e.alive && e.def.id === g.into)).toBe(true);
+    expect(sim.coins).toBe(c0);
+  });
+
+  it('a Gorgegrub feeds on allies dying nearby: grows, heals, and stops at its stack cap', () => {
+    const sim = new BattleSim(lvl, null);
+    const g = sim.spawn('gorgegrub', 0, 400);
+    const f = g.def.feed!;
+    g.hp = g.maxHp * 0.5;
+    const max0 = g.maxHp;
+    const hp0 = g.hp;
+    const far = sim.spawn('mudling', 0, 1200);
+    (sim as any).applyDamage(far, 99999);
+    expect(g.fed).toBe(0);
+    const near = sim.spawn('mudling', 0, 420);
+    (sim as any).applyDamage(near, 99999);
+    expect(g.fed).toBe(1);
+    expect(g.maxHp).toBe(max0 + Math.round(max0 * f.growth));
+    expect(g.hp).toBeGreaterThan(hp0);
+    expect(sim.drainEvents().some((e) => e.type === 'feed')).toBe(true);
+    for (let i = 0; i < f.maxStacks + 3; i++) (sim as any).applyDamage(sim.spawn('mudling', 0, 410), 99999);
+    expect(g.fed).toBe(f.maxStacks);
+  });
+});

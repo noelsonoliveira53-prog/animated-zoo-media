@@ -92,6 +92,13 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.magnet) tags.push(`Magnet: pulls arrows and rocks aimed at allies within ${e.magnet.radius}px onto itself`);
         if (e.charge) tags.push(`Bolts at ×${e.charge.speedMult} speed for ${e.charge.duration}s when hit (every ${e.charge.cooldown}s)`);
         if (e.harden) tags.push(`Hardens: +${Math.round(e.harden.perHit * 100)}% armor per hit, up to ${Math.round(e.harden.max * 100)}%`);
+        if (e.dim) tags.push(`Gloom: towers within ${e.dim.radius}px lose ${Math.round(e.dim.cut * 100)}% range`);
+        if (e.echo) tags.push(`Echoes: re-forms once at ${Math.round(e.echo.hpFrac * 100)}% health`);
+        if (e.shock) tags.push(`Shocks every ${e.shock.interval}s: soldiers and heroes within ${e.shock.radius}px are stunned ${e.shock.duration}s`);
+        if (e.fortify) tags.push(`Bark-song: allies within ${e.fortify.radius}px gain +${Math.round(e.fortify.bonus * 100)}% armor`);
+        if (e.feed) tags.push(`Feeds on allies dying within ${e.feed.radius}px: +${Math.round(e.feed.growth * 100)}% max health and heals (up to ${e.feed.maxStacks} times)`);
+        if (e.grow) tags.push(`Sprouts into a ${ENEMIES[e.grow.into]?.name ?? e.grow.into} after ${e.grow.after}s`);
+        if (e.spawner) tags.push(`Drops a ${ENEMIES[e.spawner.enemy]?.name ?? e.spawner.enemy} every ${e.spawner.interval}s`);
         if (e.windborne) tags.push('Windborne: immune to every slow');
         if (e.regen) tags.push(`Regrows ${Math.round(e.regen.perSec * 100)}% health/s after ${e.regen.delay}s unhit`);
         if (e.splashResist) tags.push(`Resists ${Math.round(e.splashResist * 100)}% of splash damage`);

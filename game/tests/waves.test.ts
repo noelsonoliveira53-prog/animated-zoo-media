@@ -29,3 +29,23 @@ describe('wave schedules', () => {
     for (const l of LEVELS) for (const w of l.waves) for (const g of w.groups) expect(ENEMIES[g.enemy], `${l.id}:${g.enemy}`).toBeDefined();
   });
 });
+
+describe('Field Guide reachability', () => {
+  it('every enemy can be met in the campaign (so the Naturalist achievement is earnable)', () => {
+    // Endless runs end around waves 10-30, so an endless-only enemy could never be discovered.
+    const met = new Set<string>();
+    for (const l of LEVELS) for (const w of l.waves) for (const g of w.groups) met.add(g.enemy);
+    let grew = true;
+    while (grew) {
+      grew = false;
+      for (const id of [...met]) {
+        const e = ENEMIES[id];
+        if (!e) continue;
+        const kids = [e.splitInto?.enemy, e.spawner?.enemy, e.grow?.into, ...(e.phases ?? []).map((p) => p.summon?.enemy)];
+        for (const k of kids) if (k && !met.has(k)) { met.add(k); grew = true; }
+      }
+    }
+    const missing = Object.keys(ENEMIES).filter((id) => !met.has(id));
+    expect(missing).toEqual([]);
+  });
+});

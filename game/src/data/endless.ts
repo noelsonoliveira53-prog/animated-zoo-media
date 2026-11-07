@@ -12,7 +12,7 @@ export const ENDLESS = {
   budgetPerWave: 70, // ... plus this much per wave
   maxGroupCount: 26,
   bossEvery: 10,
-  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw', 'kaleidrax', 'zephyrax', 'ulmaroth'],
+  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw', 'kaleidrax', 'zephyrax', 'ulmaroth', 'grindmaw', 'velumbra', 'mawbloom'],
   tiers: [
     { fromWave: 1, enemies: ['mudling', 'skitter', 'gloomwing', 'gnat'] },
     { fromWave: 4, enemies: ['shellback', 'bogmender', 'reedguard', 'wispling'] },
@@ -24,6 +24,9 @@ export const ENDLESS = {
     { fromWave: 28, enemies: ['galehound', 'cloudram', 'kitewing'] },
     { fromWave: 32, enemies: ['shiftscale', 'idolkeeper', 'bramblehide'] },
     { fromWave: 36, enemies: ['cogjammer', 'steamrunner', 'rivetshell', 'lodestone'] },
+    { fromWave: 40, enemies: ['dimlantern', 'echowisp', 'sparkeel'] },
+    { fromWave: 44, enemies: ['barkwarden', 'seedcaster'] },
+    { fromWave: 46, enemies: ['gorgegrub'] },
   ] as EndlessTier[],
   attackRamp: 0.15, // enemy melee hits grow 8% per wave so blockers can't stall forever
   heroRegen: 0.5, // long runs reward tanky regen heroes too much; halve hero healing in endless

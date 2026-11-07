@@ -42,6 +42,9 @@ export interface Enemy {
   swoopCd: number;
   blinkCd: number;
   gustCd: number;
+  growT: number; // seconds a Rotseed has been growing
+  fed: number; // times a Gorgegrub has fed
+  shockCd: number;
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
   mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
@@ -54,6 +57,7 @@ export interface Enemy {
 
 export interface Soldier {
   uid: number;
+  stun?: number; // seconds left of a Sparkeel shock (no attacking or blocking)
   towerUid: number;
   index: number; // slot within its squad (for formation offsets)
   pos: Vec2;
@@ -80,6 +84,7 @@ export interface Strike {
 
 export interface Hero {
   uid: number;
+  stun?: number; // seconds left of a Sparkeel shock
   def: HeroDef;
   pos: Vec2;
   dest: Vec2 | null; // move order
@@ -164,6 +169,10 @@ export type SimEvent =
   | { type: 'thorns'; pos: Vec2 }
   | { type: 'charge'; enemy: Enemy }
   | { type: 'magnet'; source: Enemy; from: Enemy }
+  | { type: 'echo'; enemy: Enemy }
+  | { type: 'grow'; enemy: Enemy }
+  | { type: 'feed'; enemy: Enemy; from: Vec2 }
+  | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -451,6 +460,10 @@ export class BattleSim {
         h.pos = { ...this.heroSpawnPoint() };
         this.events.push({ type: 'heroBack', hero: h });
       }
+      return;
+    }
+    if (h.stun && h.stun > 0) {
+      h.stun -= dt;
       return;
     }
     const regen = (h.def.regen + (h.def.passive.kind === 'toughness' ? h.def.passive.regen : 0)) * (this.level.endless?.heroRegen ?? 1);
@@ -852,6 +865,9 @@ export class BattleSim {
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
+      growT: 0,
+      fed: 0,
+      shockCd: def.shock ? def.shock.interval : 0,
       chargeTime: 0,
       chargeCd: 0,
       mr: def.magicResist,
@@ -888,6 +904,17 @@ export class BattleSim {
       if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.gust) this.tickGust(e, dt);
+      if (e.def.grow) {
+        e.growT += dt;
+        if (e.growT >= e.def.grow.after) {
+          // Rotseed sprouts: it is replaced where it stood, and pays nothing.
+          e.alive = false;
+          const g = this.spawn(e.def.grow.into, e.path, e.dist);
+          this.events.push({ type: 'grow', enemy: g });
+          continue;
+        }
+      }
+      if (e.def.shock) this.tickShock(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
@@ -984,6 +1011,30 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  private tickShock(e: Enemy, dt: number): void {
+    const sh = e.def.shock!;
+    e.shockCd -= dt;
+    if (e.shockCd > 0) return;
+    e.shockCd = sh.interval;
+    const hits: Vec2[] = [];
+    for (const s of this.soldiers) {
+      if (!s.alive || Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y) > sh.radius) continue;
+      s.stun = sh.duration;
+      this.releaseEnemy(s);
+      for (const o of this.enemies) if (o.blockedBy === s.uid) o.blockedBy = 0;
+      hits.push({ ...s.pos });
+    }
+    const h = this.hero;
+    if (h && h.alive && Math.hypot(h.pos.x - e.pos.x, h.pos.y - e.pos.y) <= sh.radius) {
+      h.stun = sh.duration;
+      this.releaseHeroTarget();
+      for (const o of this.enemies) if (o.blockedBy === h.uid) o.blockedBy = 0;
+      hits.push({ ...h.pos });
+    }
+    this.events.push({ type: 'shock', source: e, radius: sh.radius, hits });
   }
 
   /** Kitewing: a gust shoves nearby free walkers further along their road. Held enemies and bosses don't budge. */
@@ -1121,7 +1172,18 @@ export class BattleSim {
 
   /** Damage resistances, using the enemy's current armor. */
   res(e: Enemy): { armor: number; magicResist: number } {
-    return { armor: e.armor, magicResist: e.mr };
+    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e)), magicResist: e.mr };
+  }
+
+  /** Barkwardens toughen nearby allies' bark: the strongest aura in range adds armor (they don't stack). */
+  fortifyBonus(e: Enemy): number {
+    let b = 0;
+    for (const o of this.enemies) {
+      const f = o.def.fortify;
+      if (!f || o === e || !o.alive) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= f.radius) b = Math.max(b, f.bonus);
+    }
+    return b;
   }
 
   /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
@@ -1193,6 +1255,10 @@ export class BattleSim {
           s.hp = stats.hp;
           s.pos = { ...s.spawnAt };
         }
+        continue;
+      }
+      if (s.stun && s.stun > 0) {
+        s.stun -= dt;
         continue;
       }
       // Validate current target.
@@ -1343,7 +1409,7 @@ export class BattleSim {
       if (t.cooldown > 0) continue;
       const stats = this.stats(t);
       if (stats.soldiers || stats.fireRate <= 0) continue;
-      const targets = this.pickTargets(t, stats.range, stats.multishot ?? 1);
+      const targets = this.pickTargets(t, stats.range * this.towerDim(t), stats.multishot ?? 1);
       if (!targets.length) {
         t.cooldown = 0;
         continue;
@@ -1426,6 +1492,17 @@ export class BattleSim {
     return best;
   }
 
+  /** Dimlanterns cast gloom: the strongest one in range shrinks a shooting tower's reach (they don't stack). */
+  towerDim(t: Tower): number {
+    let f = 1;
+    for (const e of this.enemies) {
+      const d = e.def.dim;
+      if (!d || !e.alive || e.underground) continue;
+      if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= d.radius) f = Math.min(f, 1 - d.cut);
+    }
+    return f;
+  }
+
   /** Steamrunners bolt for a moment after being hit. */
   chargeMult(e: Enemy): number {
     return e.chargeTime > 0 && e.def.charge ? e.def.charge.speedMult : 1;
@@ -1491,7 +1568,7 @@ export class BattleSim {
     if (p.slow) {
       this.slow(e, p.slow.factor, p.slow.duration);
     }
-    const armor = e.armor * (1 - p.pierce);
+    const armor = this.res(e).armor * (1 - p.pierce);
     this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }));
   }
 
@@ -1554,12 +1631,34 @@ export class BattleSim {
         const near = Math.hypot(e.pos.x - this.hero.pos.x, e.pos.y - this.hero.pos.y) < 260;
         this.grantHeroXp(e.def.bounty * (near ? 1 : 0.35));
       }
+      if (!e.def.boss) this.feedOn(e);
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
       if (e.def.glare) this.glareBurst(e);
+      if (e.def.echo && !e.revived) {
+        // Echo Wisp: re-forms once where it fell, weaker, paying no second bounty.
+        const r = this.spawn(e.def.id, e.path, e.dist);
+        r.hp = Math.round(r.maxHp * e.def.echo.hpFrac);
+        r.revived = true;
+        this.events.push({ type: 'echo', enemy: r });
+      }
       return;
     }
     this.checkPhases(e);
+  }
+
+  /** Gorgegrubs feed on fallen allies nearby: each meal heals and swells them (up to maxStacks). */
+  private feedOn(dead: Enemy): void {
+    for (const g of this.enemies) {
+      const f = g.def.feed;
+      if (!f || !g.alive || g === dead || g.fed >= f.maxStacks) continue;
+      if (Math.hypot(g.pos.x - dead.pos.x, g.pos.y - dead.pos.y) > f.radius) continue;
+      g.fed++;
+      const grow = Math.round(g.maxHp * f.growth);
+      g.maxHp += grow;
+      g.hp = Math.min(g.maxHp, g.hp + grow + g.maxHp * f.heal);
+      this.events.push({ type: 'feed', enemy: g, from: { ...dead.pos } });
+    }
   }
 
   /** Glareflies flash on death: nearby shooting towers are dazzled (frozen) briefly. Shares the chill immunity window. */

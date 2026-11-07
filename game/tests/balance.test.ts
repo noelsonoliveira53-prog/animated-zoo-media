@@ -49,3 +49,15 @@ describe('autoplay determinism', () => {
     expect(b).toEqual(a);
   });
 });
+
+describe('boss levels stay beatable', () => {
+  it('the expert wins every region finale in at least 2 of 3 seeds', async () => {
+    const { REGIONS } = await import('../src/data/levels');
+    for (const r of REGIONS) {
+      const level = LEVELS[r.first + r.count - 1];
+      if (!level) continue; // region still being built
+      const wins = [1, 2, 3].filter((seed) => playLevel(level, strat('expert-mixed'), seed).won).length;
+      expect(wins, `${level.name}: expert won ${wins}/3`).toBeGreaterThanOrEqual(2);
+    }
+  }, 60_000);
+});

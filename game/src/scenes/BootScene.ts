@@ -304,6 +304,241 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'barkwarden': {
+        // walking stump: ringed top, root legs, two knot-hole eyes, a few red leaves still clinging on
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.6, -0.2, 0.2, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.55, cx + lx * r * 1.3, cy + r * 1.0);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.8, cy - r * 0.6, r * 1.6, r * 1.25, 6);
+        g.strokeRoundedRect(cx - r * 0.8, cy - r * 0.6, r * 1.6, r * 1.25, 6);
+        g.fillStyle(0xc8a878, 1);
+        g.fillEllipse(cx, cy - r * 0.6, r * 1.6, r * 0.5);
+        g.strokeEllipse(cx, cy - r * 0.6, r * 1.6, r * 0.5);
+        g.lineStyle(1.5, 0x8a6a3a, 1);
+        g.strokeEllipse(cx, cy - r * 0.6, r * 0.9, r * 0.28);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x2a1a0a, 1);
+        g.fillEllipse(cx - r * 0.3, cy - r * 0.05, r * 0.25, r * 0.32);
+        g.fillEllipse(cx + r * 0.3, cy - r * 0.05, r * 0.25, r * 0.32);
+        g.fillStyle(0xffd84a, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.05, r * 0.06);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.05, r * 0.06);
+        g.fillStyle(0xd04a2a, 1);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.85, r * 0.3, r * 0.16);
+        g.fillEllipse(cx + r * 0.45, cy - r * 0.9, r * 0.3, r * 0.16);
+        break;
+      }
+      case 'seedcaster': {
+        // rot-sprite: a hooded little figure with a bulging seed pouch and glowing eyes
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        g.strokeTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        g.fillStyle(0x1a1028, 1);
+        g.fillCircle(cx, cy - r * 0.15, r * 0.32);
+        g.fillStyle(0xc8ff6a, 1);
+        g.fillCircle(cx - r * 0.12, cy - r * 0.18, r * 0.07);
+        g.fillCircle(cx + r * 0.12, cy - r * 0.18, r * 0.07);
+        g.fillStyle(0x6a4a2a, 1);
+        g.fillCircle(cx + r * 0.6, cy + r * 0.45, r * 0.35);
+        g.strokeCircle(cx + r * 0.6, cy + r * 0.45, r * 0.35);
+        g.fillStyle(0x2a1a2a, 1);
+        for (const [dx, dy] of [[0.5, 0.35], [0.7, 0.5], [0.58, 0.6]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.07);
+        break;
+      }
+      case 'gorgegrub': {
+        // fat segmented grub: three bulging rings, stubby legs, a wide hungry mouth
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.5, 0, 0.5]) g.lineBetween(cx + lx * r, cy + r * 0.5, cx + lx * r, cy + r * 0.85);
+        g.fillStyle(color, 1);
+        for (const [dx, sz] of [[0.55, 0.62], [0, 0.8], [-0.55, 0.7]] as const) {
+          g.fillEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
+          g.strokeEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
+        }
+        g.fillStyle(0xe8d8a0, 1);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.3, r * 0.5, r * 0.2);
+        g.fillStyle(0x3a1a1a, 1);
+        g.fillEllipse(cx - r * 0.8, cy + r * 0.2, r * 0.35, r * 0.3);
+        g.fillStyle(0x1a1010, 1);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.08);
+        g.fillCircle(cx - r * 0.45, cy - r * 0.2, r * 0.08);
+        break;
+      }
+      case 'rotseed': {
+        // black seed half-buried, a pale shoot just poking out
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
+        g.fillStyle(0x5a4a5a, 1);
+        g.fillEllipse(cx - r * 0.25, cy, r * 0.4, r * 0.25);
+        g.lineStyle(2.5, 0x9ac85a, 1);
+        g.beginPath();
+        g.moveTo(cx, cy - r * 0.3);
+        g.lineTo(cx + r * 0.1, cy - r * 0.8);
+        g.lineTo(cx + r * 0.35, cy - r * 1.0);
+        g.strokePath();
+        g.fillStyle(0x9ac85a, 1);
+        g.fillEllipse(cx + r * 0.45, cy - r * 1.0, r * 0.4, r * 0.2);
+        break;
+      }
+      case 'mawbloom': {
+        // rotten heart-tree: a split trunk with a gaping maw, a crown of withered branches with bruised fruit, root feet
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.75, -0.3, 0.3, 0.75]) g.lineBetween(cx + lx * r, cy + r * 0.55, cx + lx * r * 1.35, cy + r * 1.05);
+        g.lineStyle(4, 0x4a2a2a, 1);
+        for (const [x1, y1, x2, y2] of [[-0.3, -0.6, -0.95, -1.15], [0.3, -0.6, 0.95, -1.1], [0, -0.7, 0.1, -1.3], [-0.6, -0.9, -1.25, -0.8], [0.6, -0.85, 1.25, -0.75]]) g.lineBetween(cx + x1 * r, cy + y1 * r, cx + x2 * r, cy + y2 * r);
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.85, cy - r * 0.75, r * 1.7, r * 1.4, 14);
+        g.strokeRoundedRect(cx - r * 0.85, cy - r * 0.75, r * 1.7, r * 1.4, 14);
+        g.lineStyle(2, 0x4a2430, 1);
+        for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy - r * 0.65, cx + lx * r * 0.9, cy + r * 0.5);
+        g.fillStyle(0x1a0a10, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 0.9, r * 0.55);
+        g.fillStyle(0xe8e0c8, 1);
+        for (const tx of [-0.3, -0.1, 0.1, 0.3]) g.fillTriangle(cx + tx * r - r * 0.07, cy - r * 0.08, cx + tx * r + r * 0.07, cy - r * 0.08, cx + tx * r, cy + r * 0.1);
+        g.fillStyle(0xc8ff6a, 1);
+        g.fillCircle(cx - r * 0.32, cy - r * 0.35, r * 0.11);
+        g.fillCircle(cx + r * 0.32, cy - r * 0.35, r * 0.11);
+        g.fillStyle(0x8a3a6a, 1);
+        for (const [fx, fy] of [[-0.95, -1.15], [0.95, -1.1], [0.1, -1.3], [-1.25, -0.8], [1.25, -0.75]]) g.fillCircle(cx + fx * r, cy + fy * r, r * 0.12);
+        break;
+      }
+      case 'velumbra': {
+        // shadow manta: vast dark wings, a long tail, a cluster of glowing eyes and a faint inner light
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx, cy + r * 0.5, cx + r * 0.2, cy + r * 1.35);
+        const wing = [
+          new Phaser.Math.Vector2(cx, cy - r * 0.8),
+          new Phaser.Math.Vector2(cx + r * 0.9, cy - r * 0.55),
+          new Phaser.Math.Vector2(cx + r * 1.45, cy + r * 0.05),
+          new Phaser.Math.Vector2(cx + r * 0.7, cy + r * 0.25),
+          new Phaser.Math.Vector2(cx, cy + r * 0.65),
+          new Phaser.Math.Vector2(cx - r * 0.7, cy + r * 0.25),
+          new Phaser.Math.Vector2(cx - r * 1.45, cy + r * 0.05),
+          new Phaser.Math.Vector2(cx - r * 0.9, cy - r * 0.55),
+        ];
+        g.fillStyle(color, 1);
+        g.fillPoints(wing, true);
+        g.strokePoints(wing, true);
+        g.fillStyle(0x5a4a9a, 0.6);
+        g.fillEllipse(cx, cy - r * 0.05, r * 0.9, r * 0.9);
+        g.fillStyle(0x8a6ad8, 0.35);
+        for (const sx of [-1, 1]) g.fillTriangle(cx + sx * r * 0.5, cy - r * 0.3, cx + sx * r * 1.3, cy + r * 0.02, cx + sx * r * 0.6, cy + r * 0.15);
+        for (const [dx, dy, rr] of [[0, -0.2, 0.16], [-0.3, -0.05, 0.11], [0.3, -0.05, 0.11], [-0.15, 0.18, 0.08], [0.15, 0.18, 0.08], [0, -0.48, 0.07]]) {
+          g.fillStyle(0x5ae8d0, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, rr * r);
+          g.fillStyle(0x0a0c1a, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, rr * r * 0.45);
+        }
+        break;
+      }
+      case 'sparkeel': {
+        // cave eel: a long S-curved glowing body, fin ridge, bright spots along its side, a little spark at the tail
+        g.lineStyle(r * 0.75, C.ink, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.1, cy - r * 0.1);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.lineTo(cx + r * 0.3, cy + r * 0.2);
+        g.lineTo(cx + r * 1.0, cy - r * 0.15);
+        g.strokePath();
+        g.lineStyle(r * 0.55, color, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.1, cy - r * 0.1);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.lineTo(cx + r * 0.3, cy + r * 0.2);
+        g.lineTo(cx + r * 1.0, cy - r * 0.15);
+        g.strokePath();
+        g.fillStyle(0xbff8ff, 1);
+        for (const [dx, dy] of [[-0.75, -0.25], [-0.1, -0.12], [0.6, 0.05]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.09);
+        g.fillStyle(0xffe066, 1);
+        g.fillTriangle(cx + r * 1.0, cy - r * 0.15, cx + r * 1.35, cy - r * 0.5, cx + r * 1.2, cy - r * 0.05);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.18, r * 0.12);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.18, r * 0.06);
+        break;
+      }
+      case 'dimlantern': {
+        // lantern jelly: a translucent violet bell, trailing tendrils, a dark lantern glowing faintly inside
+        g.lineStyle(2, 0x8a6ad8, 0.9);
+        for (const tx of [-0.5, -0.2, 0.15, 0.45]) {
+          g.beginPath();
+          g.moveTo(cx + tx * r, cy + r * 0.3);
+          g.lineTo(cx + tx * r - r * 0.1, cy + r * 0.7);
+          g.lineTo(cx + tx * r + r * 0.05, cy + r * 1.05);
+          g.strokePath();
+        }
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 0.9);
+        g.beginPath();
+        g.arc(cx, cy + r * 0.3, r * 0.9, Math.PI, 0, false);
+        g.closePath();
+        g.fillPath();
+        g.strokePath();
+        g.fillStyle(0xffe08a, 0.35);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.42);
+        g.fillStyle(0x2a1a3a, 1);
+        g.fillRoundedRect(cx - r * 0.2, cy - r * 0.3, r * 0.4, r * 0.5, 3);
+        g.fillStyle(0xffd84a, 1);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.1);
+        g.fillStyle(0xffffff, 0.4);
+        g.fillEllipse(cx - r * 0.45, cy - r * 0.25, r * 0.25, r * 0.4);
+        break;
+      }
+      case 'echowisp': {
+        // echo wisp: a pale flame with a ghost of itself trailing behind
+        g.fillStyle(color, 0.35);
+        g.fillCircle(cx + r * 0.55, cy + r * 0.15, r * 0.55);
+        g.fillTriangle(cx + r * 0.1, cy, cx + r * 1.0, cy, cx + r * 0.55, cy - r * 0.9);
+        g.lineStyle(2, 0x6a7aa8, 1);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.2, r * 0.6);
+        g.fillTriangle(cx - r * 0.65, cy + r * 0.05, cx + r * 0.45, cy + r * 0.05, cx - r * 0.1, cy - r * 1.05);
+        g.strokeCircle(cx - r * 0.1, cy + r * 0.2, r * 0.6);
+        g.fillStyle(0x9ad8ff, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.25, r * 0.28);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.28, cy + r * 0.1, r * 0.07);
+        g.fillCircle(cx + r * 0.08, cy + r * 0.1, r * 0.07);
+        break;
+      }
+      case 'grindmaw': {
+        // engine titan: a riveted furnace body on piston legs, a glowing grate mouth, twin smokestacks and a big flywheel
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.6, 0.6]) {
+          g.fillStyle(0x7a7a84, 1);
+          g.fillRect(cx + lx * r - r * 0.15, cy + r * 0.45, r * 0.3, r * 0.6);
+          g.strokeRect(cx + lx * r - r * 0.15, cy + r * 0.45, r * 0.3, r * 0.6);
+        }
+        for (const sx of [-0.45, 0.45]) {
+          g.fillStyle(0x5a5a64, 1);
+          g.fillRect(cx + sx * r - r * 0.12, cy - r * 1.2, r * 0.24, r * 0.5);
+          g.strokeRect(cx + sx * r - r * 0.12, cy - r * 1.2, r * 0.24, r * 0.5);
+        }
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.95, cy - r * 0.75, r * 1.9, r * 1.3, 10);
+        g.strokeRoundedRect(cx - r * 0.95, cy - r * 0.75, r * 1.9, r * 1.3, 10);
+        g.fillStyle(0x8a6a2a, 1);
+        for (let k = 0; k < 10; k++) {
+          const a0 = (k / 10) * Math.PI * 2;
+          g.fillRect(cx + r * 0.95 + Math.cos(a0) * r * 0.42 - r * 0.07, cy - r * 0.1 + Math.sin(a0) * r * 0.42 - r * 0.07, r * 0.14, r * 0.14);
+        }
+        g.fillStyle(0xe8c070, 1);
+        g.fillCircle(cx + r * 0.95, cy - r * 0.1, r * 0.36);
+        g.strokeCircle(cx + r * 0.95, cy - r * 0.1, r * 0.36);
+        g.fillStyle(0x2a2a30, 1);
+        g.fillRoundedRect(cx - r * 0.55, cy - r * 0.15, r * 1.0, r * 0.45, 4);
+        g.fillStyle(0xff8a3c, 1);
+        for (let k = 0; k < 4; k++) g.fillRect(cx - r * 0.48 + k * r * 0.24, cy - r * 0.1, r * 0.14, r * 0.35);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.48, r * 0.1);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.48, r * 0.1);
+        g.fillStyle(0x3a3a3a, 1);
+        for (const [dx, dy] of [[-0.8, -0.6], [0.6, -0.6], [-0.8, 0.4], [0.5, 0.4]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.05);
+        break;
+      }
       case 'rivetshell': {
         // clockwork armadillo: banded steel shell studded with rivets, small snout, stubby legs
         g.lineStyle(2.5, C.ink, 1);

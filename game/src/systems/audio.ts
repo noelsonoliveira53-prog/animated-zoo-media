@@ -75,7 +75,21 @@ class Sfx {
   shoot(kind: string): void {
     if (!this.throttle('shoot' + kind, 60)) return;
     if (kind === 'glimmer') this.tone(880, 0.18, 'sine', 0.12, 1400);
+    else if (kind === 'boulder') {
+      this.tone(140, 0.2, 'triangle', 0.16, 70);
+      this.noise(0.1, 0.12, 500);
+    }
     else this.tone(520, 0.06, 'triangle', 0.08, 300);
+  }
+  melee(): void {
+    if (!this.throttle('melee', 90)) return;
+    this.noise(0.04, 0.1, 3000);
+    this.tone(420 + Math.random() * 120, 0.04, 'square', 0.03);
+  }
+  boom(): void {
+    if (!this.throttle('boom', 80)) return;
+    this.noise(0.25, 0.25, 400);
+    this.tone(90, 0.25, 'sine', 0.2, 40);
   }
   hit(): void {
     if (this.throttle('hit', 50)) this.noise(0.05, 0.12, 2000);

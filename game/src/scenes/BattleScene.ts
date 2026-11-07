@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
-import { BattleSim, type Enemy, type SimEvent } from '../systems/BattleSim';
+import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
 import { loadSave, recordStars, starsForLives, writeSave } from '../systems/save';
 import { Button } from '../ui/Button';
@@ -25,6 +25,9 @@ export class BattleScene extends Phaser.Scene {
 
   private enemyViews = new Map<number, EnemyView>();
   private projViews = new Map<number, Phaser.GameObjects.Image>();
+  private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
+  private rallyMode: number | null = null; // slot whose rally point is being placed
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
   private slotViews: Phaser.GameObjects.Image[] = [];
 
@@ -53,6 +56,9 @@ export class BattleScene extends Phaser.Scene {
     this.ended = false;
     this.enemyViews.clear();
     this.projViews.clear();
+    this.soldierViews.clear();
+    this.rallyFlags.clear();
+    this.rallyMode = null;
     this.towerViews = this.level.slots.map(() => null);
     this.slotViews = [];
     this.menu = null;
@@ -83,7 +89,13 @@ export class BattleScene extends Phaser.Scene {
 
     this.buildHud();
 
-    this.input.on('pointerdown', () => this.closeMenu());
+    this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
+      if (this.rallyMode !== null) {
+        this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY });
+        return;
+      }
+      this.closeMenu();
+    });
     this.input.keyboard?.on('keydown-SPACE', () => this.togglePause());
     this.input.keyboard?.on('keydown-N', () => this.callWave());
 
@@ -297,8 +309,10 @@ export class BattleScene extends Phaser.Scene {
 
     if (!tower) {
       const offsets = [
-        { x: -62, y: -58 },
-        { x: 62, y: -58 },
+        { x: -58, y: -58 },
+        { x: 58, y: -58 },
+        { x: -58, y: 58 },
+        { x: 58, y: 58 },
       ];
       TOWER_ORDER.forEach((id, i) => {
         const def = TOWERS[id];
@@ -310,7 +324,7 @@ export class BattleScene extends Phaser.Scene {
         opt.on('pointerover', () => this.drawRange(pos, def.tiers[0].range, def.color));
         c.add(opt);
       });
-      c.add(this.add.text(0, 54, 'Build', textStyle(18)).setOrigin(0.5));
+      c.add(this.add.text(0, 0, 'Build', textStyle(18)).setOrigin(0.5));
     } else {
       const stats = tower.def.tiers[tower.tier];
       this.drawRange(pos, stats.range, tower.def.color);
@@ -331,17 +345,49 @@ export class BattleScene extends Phaser.Scene {
           this.closeMenu();
         }),
       );
-      c.add(
-        this.textOption(74, 30, `Aim:\n${tower.target}`, C.sky, () => {
-          const next = TARGET_MODES[(TARGET_MODES.indexOf(tower.target) + 1) % TARGET_MODES.length];
-          this.sim.setTargetMode(slot, next);
-          this.openSlotMenu(slot);
-        }),
-      );
+      if (tower.rally) {
+        c.add(
+          this.textOption(74, 30, 'Rally\nPoint', C.sky, () => {
+            this.closeMenu();
+            this.rallyMode = slot;
+            this.drawRange(pos, stats.range, tower.def.color);
+            this.showBanner('Rally Point', 'Tap the road inside the circle to send your Wardens there');
+          }),
+        );
+      } else {
+        c.add(
+          this.textOption(74, 30, `Aim:\n${tower.target}`, C.sky, () => {
+            const next = TARGET_MODES[(TARGET_MODES.indexOf(tower.target) + 1) % TARGET_MODES.length];
+            this.sim.setTargetMode(slot, next);
+            this.openSlotMenu(slot);
+          }),
+        );
+      }
       c.add(this.add.text(0, 92, `${tower.def.name} • Lv ${tower.tier + 1}`, textStyle(16)).setOrigin(0.5));
     }
     c.setScale(0.5);
     this.tweens.add({ targets: c, scale: 1, duration: 160, ease: 'Back.easeOut' });
+  }
+
+  private placeRally(slot: number, p: Vec2): void {
+    this.rallyMode = null;
+    this.rangeRing.clear();
+    this.children.getByName('banner')?.destroy();
+    const onRoad = this.sim.paths.some((path) => path.distanceTo(p) < 34);
+    if (onRoad && this.sim.setRally(slot, p)) {
+      const t = this.sim.towers[slot];
+      if (t) this.updateRallyFlag(t.uid, p);
+      sfx.click();
+    } else {
+      this.floatText(p.x, p.y, 'Out of reach!', TEXT.heart, 18);
+    }
+  }
+
+  private updateRallyFlag(towerUid: number, p: Vec2): void {
+    this.rallyFlags.get(towerUid)?.destroy();
+    const flag = this.add.image(p.x + 6, p.y - 10, 'rally').setDepth(p.y - 1).setAlpha(0.85);
+    this.tweens.add({ targets: flag, y: flag.y - 4, yoyo: true, repeat: -1, duration: 700, ease: 'Sine.easeInOut' });
+    this.rallyFlags.set(towerUid, flag);
   }
 
   private menuOption(x: number, y: number, tex: string, cost: string, affordable: boolean, onPick: () => void): Phaser.GameObjects.Container {
@@ -418,10 +464,15 @@ export class BattleScene extends Phaser.Scene {
         sfx.hit();
         break;
       }
-      case 'splash':
-        this.particles.setParticleTint(ev.color);
-        this.particles.explode(10, ev.pos.x, ev.pos.y);
+      case 'splash': {
+        this.particles.setParticleTint(0xb59a72);
+        this.particles.explode(14, ev.pos.x, ev.pos.y);
+        const ring = this.add.circle(ev.pos.x, ev.pos.y, ev.radius, 0xffffff, 0).setStrokeStyle(4, 0xe8d9b5, 0.9).setDepth(2400).setScale(0.3);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 280, onComplete: () => ring.destroy() });
+        this.cameras.main.shake(70, 0.002);
+        sfx.boom();
         break;
+      }
       case 'kill': {
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) this.killView(ev.enemy.uid, v);
@@ -447,9 +498,17 @@ export class BattleScene extends Phaser.Scene {
         break;
       case 'waveCleared':
         break;
+      case 'melee':
+        sfx.melee();
+        break;
+      case 'soldierDown':
+        this.particles.setParticleTint(0x9aa8b5);
+        this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
+        break;
       case 'build':
       case 'upgrade': {
         const t = ev.tower;
+        if (t.rally && ev.type === 'build') this.updateRallyFlag(t.uid, t.rally);
         this.towerViews[t.slot]?.destroy();
         const img = this.add.image(t.pos.x, t.pos.y - 26, `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
         img.setScale(0.3, 1.4);
@@ -466,6 +525,8 @@ export class BattleScene extends Phaser.Scene {
         if (v) this.tweens.add({ targets: v, scale: 0, alpha: 0, duration: 200, onComplete: () => v.destroy() });
         this.towerViews[ev.tower.slot] = null;
         this.slotViews[ev.tower.slot].setAlpha(1);
+        this.rallyFlags.get(ev.tower.uid)?.destroy();
+        this.rallyFlags.delete(ev.tower.uid);
         this.floatText(ev.tower.pos.x, ev.tower.pos.y - 40, `+${ev.refund}`, TEXT.gold, 20);
         sfx.sell();
         break;
@@ -513,18 +574,66 @@ export class BattleScene extends Phaser.Scene {
         v.bar.setDepth(e.pos.y + 0.5);
       }
     }
+    this.syncSoldiers();
     const live = new Set(this.sim.projectiles.map((p) => p.uid));
     for (const p of this.sim.projectiles) {
       const img = this.projViews.get(p.uid);
       if (!img) continue;
-      img.setRotation(Math.atan2(p.lastTargetPos.y - img.y, p.lastTargetPos.x - img.x));
-      img.setPosition(p.pos.x, p.pos.y);
+      if (p.homing) {
+        img.setRotation(Math.atan2(p.lastTargetPos.y - img.y, p.lastTargetPos.x - img.x));
+        img.setPosition(p.pos.x, p.pos.y);
+      } else {
+        // Arc: lift by a parabola over the flight progress.
+        const left = Math.hypot(p.lastTargetPos.x - p.pos.x, p.lastTargetPos.y - p.pos.y);
+        const t = p.travel > 0 ? 1 - left / p.travel : 1;
+        const lift = Math.sin(Math.PI * Math.max(0, Math.min(1, t))) * Math.min(120, 40 + p.travel * 0.35);
+        img.setPosition(p.pos.x, p.pos.y - lift);
+        img.rotation += 0.15;
+      }
     }
     for (const [uid, img] of this.projViews) {
       if (!live.has(uid)) {
         img.destroy();
         this.projViews.delete(uid);
       }
+    }
+  }
+
+  private syncSoldiers(): void {
+    const seen = new Set<number>();
+    for (const s of this.sim.soldiers) {
+      seen.add(s.uid);
+      let v = this.soldierViews.get(s.uid);
+      if (!v) {
+        v = { sprite: this.add.image(s.pos.x, s.pos.y, 'soldier'), bar: this.add.graphics() };
+        this.soldierViews.set(s.uid, v);
+      }
+      this.drawSoldier(s, v.sprite, v.bar);
+    }
+    for (const [uid, v] of this.soldierViews) {
+      if (!seen.has(uid)) {
+        v.sprite.destroy();
+        v.bar.destroy();
+        this.soldierViews.delete(uid);
+      }
+    }
+  }
+
+  private drawSoldier(s: Soldier, sprite: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics): void {
+    sprite.setVisible(s.alive);
+    bar.clear();
+    if (!s.alive) return;
+    const fighting = s.targetUid !== 0;
+    const jiggle = fighting ? Math.sin(this.time.now / 60 + s.uid) * 2 : 0;
+    if (Math.abs(sprite.x - s.pos.x) > 0.3) sprite.setFlipX(s.pos.x < sprite.x);
+    sprite.setPosition(s.pos.x + jiggle, s.pos.y - 10).setDepth(s.pos.y);
+    if (s.hp < s.maxHp) {
+      const w = 22;
+      bar.fillStyle(C.ink, 0.85);
+      bar.fillRect(s.pos.x - w / 2 - 1, s.pos.y - 34, w + 2, 6);
+      bar.fillStyle(0x7fc8ff, 1);
+      bar.fillRect(s.pos.x - w / 2, s.pos.y - 33, w * (s.hp / s.maxHp), 4);
+      bar.setDepth(s.pos.y + 0.5);
     }
   }
 

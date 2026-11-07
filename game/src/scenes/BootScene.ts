@@ -109,7 +109,48 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(0x000000, 0.25);
     g.fillEllipse(cx, base + 2, 60, 16);
     g.lineStyle(3, C.ink, 1);
-    if (id === 'glimmer') {
+    if (id === 'boulder') {
+      // log-frame catapult on a stone base
+      g.fillStyle(0x8a8578, 1);
+      g.fillRoundedRect(cx - 26, base - 18, 52, 18, 6);
+      g.strokeRoundedRect(cx - 26, base - 18, 52, 18, 6);
+      g.fillStyle(0x7a5232, 1);
+      g.fillRect(cx - 20, base - 40 - tier * 3, 8, 24 + tier * 3);
+      g.fillRect(cx + 12, base - 40 - tier * 3, 8, 24 + tier * 3);
+      g.strokeRect(cx - 20, base - 40 - tier * 3, 8, 24 + tier * 3);
+      g.strokeRect(cx + 12, base - 40 - tier * 3, 8, 24 + tier * 3);
+      // throwing arm
+      g.lineStyle(7, 0x5c3b22, 1);
+      g.lineBetween(cx - 4, base - 22, cx + 18, base - 58 - tier * 4);
+      g.lineStyle(3, C.ink, 1);
+      g.fillStyle(color, 1);
+      g.fillCircle(cx + 18, base - 60 - tier * 4, 9);
+      g.strokeCircle(cx + 18, base - 60 - tier * 4, 9);
+      g.fillStyle(0x9a958a, 1);
+      g.fillCircle(cx + 18, base - 64 - tier * 4, 6);
+      g.fillStyle(dark, 1);
+      g.fillRect(cx - 24, base - 44 - tier * 3, 48, 7);
+    } else if (id === 'burrow') {
+      // grassy mound with a round wooden door and a banner
+      g.fillStyle(0x6a9a48, 1);
+      g.fillEllipse(cx, base - 16, 64, 40 + tier * 4);
+      g.strokeEllipse(cx, base - 16, 64, 40 + tier * 4);
+      g.fillStyle(0x7fb35a, 1);
+      g.fillEllipse(cx - 8, base - 26, 30, 14);
+      g.fillStyle(0x5a3b22, 1);
+      g.fillCircle(cx, base - 10, 13);
+      g.strokeCircle(cx, base - 10, 13);
+      g.fillStyle(0x7a5232, 1);
+      g.fillCircle(cx, base - 10, 9);
+      g.fillStyle(C.gold, 1);
+      g.fillCircle(cx + 5, base - 10, 2);
+      g.lineStyle(3, 0x5a3b22, 1);
+      g.lineBetween(cx + 20, base - 26, cx + 20, base - 60 - tier * 4);
+      g.fillStyle(color, 1);
+      g.fillTriangle(cx + 21, base - 60 - tier * 4, cx + 21, base - 44 - tier * 4, cx + 38, base - 52 - tier * 4);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeTriangle(cx + 21, base - 60 - tier * 4, cx + 21, base - 44 - tier * 4, cx + 38, base - 52 - tier * 4);
+    } else if (id === 'glimmer') {
       // stone spire with glowing orb
       const height = 46 + tier * 6;
       g.fillStyle(0x8c8aa8, 1);
@@ -196,6 +237,52 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(0x8fbf4a, 1);
     g.fillTriangle(14, 0, 14, 7, 20, 3.5);
     g.generateTexture('proj_thornbow', 20, 7);
+    g.destroy();
+
+    // river rock
+    g = this.g();
+    g.fillStyle(0x8a8578, 1);
+    g.fillCircle(9, 9, 8);
+    g.lineStyle(2, C.ink, 1);
+    g.strokeCircle(9, 9, 8);
+    g.fillStyle(0xb5b0a4, 1);
+    g.fillCircle(6, 6, 3);
+    g.generateTexture('proj_boulder', 18, 18);
+    g.destroy();
+
+    // Badger Warden soldier
+    g = this.g();
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(14, 30, 22, 7);
+    g.lineStyle(2.5, C.ink, 1);
+    g.fillStyle(0x5d6d7a, 1);
+    g.fillRoundedRect(5, 13, 18, 16, 6);
+    g.strokeRoundedRect(5, 13, 18, 16, 6);
+    g.fillStyle(0x3b3b3b, 1);
+    g.fillCircle(14, 11, 9);
+    g.strokeCircle(14, 11, 9);
+    g.fillStyle(0xffffff, 1);
+    g.fillRect(12, 3, 4, 14);
+    g.fillStyle(0x111111, 1);
+    g.fillCircle(10.5, 11, 1.8);
+    g.fillCircle(17.5, 11, 1.8);
+    g.fillStyle(0xd9d2c0, 1);
+    g.fillRect(23, 8, 3, 18);
+    g.fillStyle(0x6f8fa8, 1);
+    g.fillCircle(6, 21, 6);
+    g.strokeCircle(6, 21, 6);
+    g.generateTexture('soldier', 30, 34);
+    g.destroy();
+
+    // rally flag
+    g = this.g();
+    g.lineStyle(3, 0x5a3b22, 1);
+    g.lineBetween(4, 4, 4, 30);
+    g.fillStyle(0x6f8fa8, 1);
+    g.fillTriangle(5, 4, 22, 10, 5, 16);
+    g.lineStyle(2, C.ink, 1);
+    g.strokeTriangle(5, 4, 22, 10, 5, 16);
+    g.generateTexture('rally', 24, 32);
     g.destroy();
 
     // particle

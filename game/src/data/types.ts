@@ -19,6 +19,8 @@ export interface EnemyDef {
   bounty: number; // coins on kill
   livesCost: number; // lives lost when it reaches the gate
   flying?: boolean;
+  attack: number; // melee damage per hit against blocking soldiers
+  attackRate: number; // melee hits / second
   radius: number; // render + hit size
   color: number; // primary body color
 }
@@ -31,6 +33,18 @@ export interface TowerTier {
   projectileSpeed: number; // pixels / second
   splash?: number; // splash radius in pixels
   slow?: { factor: number; duration: number }; // speed multiplier + seconds
+  lob?: boolean; // arcing shot aimed at a predicted spot instead of homing
+  soldiers?: SoldierStats; // barracks-style tower: spawns blockers instead of shooting
+}
+
+export interface SoldierStats {
+  count: number;
+  hp: number;
+  damage: number; // physical melee damage
+  attackRate: number; // hits / second
+  respawn: number; // seconds after death
+  armor: number;
+  regen: number; // hp / second while not fighting
 }
 
 export interface TowerDef {

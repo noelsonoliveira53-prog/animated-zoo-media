@@ -19,6 +19,22 @@ export interface Enemy {
   slowFactor: number;
   slowTime: number;
   alive: boolean;
+  blockedBy: number; // soldier uid holding this enemy, 0 if free
+  attackCd: number;
+}
+
+export interface Soldier {
+  uid: number;
+  towerUid: number;
+  index: number; // slot within its squad (for formation offsets)
+  pos: Vec2;
+  home: Vec2; // rally position
+  hp: number;
+  maxHp: number;
+  alive: boolean;
+  respawnTimer: number;
+  targetUid: number; // enemy uid engaged, 0 if idle
+  attackCd: number;
 }
 
 export interface Tower {
@@ -29,6 +45,7 @@ export interface Tower {
   pos: Vec2;
   cooldown: number;
   target: TargetMode;
+  rally: Vec2 | null; // for soldier towers
 }
 
 export interface Projectile {
@@ -43,6 +60,11 @@ export interface Projectile {
   splash: number;
   slow?: { factor: number; duration: number };
   color: number;
+  homing: boolean;
+  hitsAir: boolean;
+  origin: Vec2;
+  travel: number; // straight-line distance at launch (for arc rendering)
+  kind: string; // tower id, for rendering
 }
 
 export type SimEvent =
@@ -57,6 +79,8 @@ export type SimEvent =
   | { type: 'build'; tower: Tower }
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
+  | { type: 'melee'; pos: Vec2 }
+  | { type: 'soldierDown'; soldier: Soldier }
   | { type: 'victory' }
   | { type: 'defeat' };
 
@@ -65,6 +89,9 @@ export type BattleStatus = 'prep' | 'running' | 'victory' | 'defeat';
 /** Seconds of countdown before the next wave auto-starts. */
 export const WAVE_GAP = 14;
 export const FIRST_WAVE_GAP = 25;
+const SOLDIER_SPEED = 110;
+const SOLDIER_REACH = 18;
+const ENGAGE_RADIUS = 70;
 
 export class BattleSim {
   readonly level: LevelDef;
@@ -81,6 +108,7 @@ export class BattleSim {
   enemies: Enemy[] = [];
   towers: (Tower | null)[];
   projectiles: Projectile[] = [];
+  soldiers: Soldier[] = [];
   events: SimEvent[] = [];
 
   private nextUid = 1;
@@ -124,7 +152,12 @@ export class BattleSim {
     if (!this.canBuild(slot, towerId)) return null;
     const def = TOWERS[towerId];
     this.coins -= def.tiers[0].cost;
-    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos: { ...this.level.slots[slot] }, cooldown: 0, target: 'first' };
+    const pos = { ...this.level.slots[slot] };
+    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null };
+    if (def.tiers[0].soldiers) {
+      t.rally = this.rallyPointFor(pos, def.tiers[0].range);
+      this.syncSquad(t, true);
+    }
     this.towers[slot] = t;
     this.events.push({ type: 'build', tower: t });
     return t;
@@ -142,6 +175,7 @@ export class BattleSim {
     if (cost === null || this.coins < cost) return false;
     this.coins -= cost;
     t.tier++;
+    if (t.rally) this.syncSquad(t, true);
     this.events.push({ type: 'upgrade', tower: t });
     return true;
   }
@@ -152,6 +186,7 @@ export class BattleSim {
     const refund = sellValue(t.def, t.tier);
     this.coins += refund;
     this.towers[slot] = null;
+    this.removeSquad(t.uid);
     this.events.push({ type: 'sell', tower: t, refund });
     return true;
   }
@@ -159,6 +194,82 @@ export class BattleSim {
   setTargetMode(slot: number, mode: TargetMode): void {
     const t = this.towers[slot];
     if (t) t.target = mode;
+  }
+
+  /** Closest road point to a tower, used as its soldiers' rally point. */
+  rallyPointFor(pos: Vec2, range: number): Vec2 {
+    let best: { point: Vec2; distance: number } | null = null;
+    for (const path of this.paths) {
+      const c = path.closest(pos);
+      if (!best || c.distance < best.distance) best = c;
+    }
+    if (!best || best.distance > range) return { ...pos };
+    return { ...best.point };
+  }
+
+  /** Move a soldier tower's rally point (clamped to its range). */
+  setRally(slot: number, p: Vec2): boolean {
+    const t = this.towers[slot];
+    if (!t || !t.rally) return false;
+    const range = t.def.tiers[t.tier].range;
+    if (Math.hypot(p.x - t.pos.x, p.y - t.pos.y) > range) return false;
+    t.rally = { ...p };
+    for (const s of this.soldiers) if (s.towerUid === t.uid) s.home = this.formation(t.rally, s.index);
+    return true;
+  }
+
+  private formation(center: Vec2, i: number): Vec2 {
+    const offsets = [
+      { x: -14, y: -8 },
+      { x: 14, y: -8 },
+      { x: 0, y: 12 },
+    ];
+    const o = offsets[i % offsets.length];
+    return { x: center.x + o.x, y: center.y + o.y };
+  }
+
+  /** Ensure a soldier tower has the right squad size; optionally fully heal. */
+  private syncSquad(t: Tower, heal: boolean): void {
+    const stats = t.def.tiers[t.tier].soldiers;
+    if (!stats || !t.rally) return;
+    const squad = this.soldiers.filter((s) => s.towerUid === t.uid);
+    for (let i = squad.length; i < stats.count; i++) {
+      const home = this.formation(t.rally, i);
+      const s: Soldier = {
+        uid: this.nextUid++,
+        towerUid: t.uid,
+        index: i,
+        pos: { x: t.pos.x, y: t.pos.y },
+        home,
+        hp: stats.hp,
+        maxHp: stats.hp,
+        alive: true,
+        respawnTimer: 0,
+        targetUid: 0,
+        attackCd: 0,
+      };
+      this.soldiers.push(s);
+      squad.push(s);
+    }
+    for (const s of squad) {
+      s.maxHp = stats.hp;
+      if (heal && s.alive) s.hp = stats.hp;
+    }
+  }
+
+  private removeSquad(towerUid: number): void {
+    for (const s of this.soldiers) {
+      if (s.towerUid !== towerUid) continue;
+      this.releaseEnemy(s);
+    }
+    this.soldiers = this.soldiers.filter((s) => s.towerUid !== towerUid);
+  }
+
+  private releaseEnemy(s: Soldier): void {
+    if (!s.targetUid) return;
+    const e = this.enemies.find((en) => en.uid === s.targetUid);
+    if (e && e.blockedBy === s.uid) e.blockedBy = 0;
+    s.targetUid = 0;
   }
 
   isActive(): boolean {
@@ -196,6 +307,7 @@ export class BattleSim {
     }
 
     this.spawnEnemies(dt);
+    this.updateSoldiers(dt);
     this.moveEnemies(dt);
     this.fireTowers(dt);
     this.moveProjectiles(dt);
@@ -230,6 +342,8 @@ export class BattleSim {
       slowFactor: 1,
       slowTime: 0,
       alive: true,
+      blockedBy: 0,
+      attackCd: 0,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -243,6 +357,20 @@ export class BattleSim {
         e.slowTime -= dt;
         if (e.slowTime <= 0) e.slowFactor = 1;
       }
+      if (e.blockedBy) {
+        const s = this.soldiers.find((so) => so.uid === e.blockedBy);
+        if (!s || !s.alive) {
+          e.blockedBy = 0;
+        } else if (Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y) <= SOLDIER_REACH + 4) {
+          // Held in place: brawl with the soldier.
+          e.attackCd -= dt;
+          if (e.attackCd <= 0) {
+            e.attackCd = 1 / e.def.attackRate;
+            this.hurtSoldier(s, e.def.attack);
+          }
+          continue;
+        }
+      }
       e.dist += e.def.speed * e.slowFactor * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
@@ -251,6 +379,94 @@ export class BattleSim {
         this.lives = Math.max(0, this.lives - e.def.livesCost);
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
       }
+    }
+  }
+
+  private updateSoldiers(dt: number): void {
+    const byUid = new Map(this.enemies.map((e) => [e.uid, e]));
+    for (const s of this.soldiers) {
+      const tower = this.towers.find((t) => t?.uid === s.towerUid);
+      const stats = tower?.def.tiers[tower.tier].soldiers;
+      if (!tower || !stats || !tower.rally) continue;
+      if (!s.alive) {
+        s.respawnTimer -= dt;
+        if (s.respawnTimer <= 0) {
+          s.alive = true;
+          s.hp = stats.hp;
+          s.pos = { x: tower.pos.x, y: tower.pos.y };
+        }
+        continue;
+      }
+      // Validate current target.
+      let target = s.targetUid ? byUid.get(s.targetUid) : undefined;
+      if (target && (!target.alive || Math.hypot(target.pos.x - tower.rally.x, target.pos.y - tower.rally.y) > ENGAGE_RADIUS * 1.5)) {
+        this.releaseEnemy(s);
+        target = undefined;
+      }
+      if (!target) {
+        target = this.findSoldierTarget(s, tower.rally);
+        if (target) {
+          s.targetUid = target.uid;
+          if (!target.blockedBy) target.blockedBy = s.uid;
+        }
+      }
+      if (target) {
+        const d = Math.hypot(target.pos.x - s.pos.x, target.pos.y - s.pos.y);
+        if (d > SOLDIER_REACH) {
+          this.moveToward(s.pos, target.pos, SOLDIER_SPEED * dt, SOLDIER_REACH - 2);
+        } else {
+          s.attackCd -= dt;
+          if (s.attackCd <= 0) {
+            s.attackCd = 1 / stats.attackRate;
+            this.events.push({ type: 'melee', pos: { ...target.pos } });
+            this.applyDamage(target, computeDamage(stats.damage, 'physical', target.def));
+          }
+        }
+      } else {
+        this.moveToward(s.pos, s.home, SOLDIER_SPEED * dt, 0);
+        if (s.hp < s.maxHp) s.hp = Math.min(s.maxHp, s.hp + stats.regen * dt);
+      }
+    }
+  }
+
+  private findSoldierTarget(s: Soldier, rally: Vec2): Enemy | undefined {
+    let best: Enemy | undefined;
+    let bestScore = -Infinity;
+    for (const e of this.enemies) {
+      if (!e.alive || e.def.flying) continue;
+      const d = Math.hypot(e.pos.x - rally.x, e.pos.y - rally.y);
+      if (d > ENGAGE_RADIUS) continue;
+      // Prefer free enemies, then the one furthest along.
+      const score = (e.blockedBy ? 0 : 100000) + e.dist - Math.hypot(e.pos.x - s.pos.x, e.pos.y - s.pos.y) * 0.1;
+      if (score > bestScore) {
+        bestScore = score;
+        best = e;
+      }
+    }
+    return best;
+  }
+
+  private moveToward(pos: Vec2, to: Vec2, step: number, stopAt: number): void {
+    const dx = to.x - pos.x;
+    const dy = to.y - pos.y;
+    const d = Math.hypot(dx, dy);
+    if (d <= stopAt || d === 0) return;
+    const m = Math.min(step, d - stopAt);
+    pos.x += (dx / d) * m;
+    pos.y += (dy / d) * m;
+  }
+
+  private hurtSoldier(s: Soldier, raw: number): void {
+    const tower = this.towers.find((t) => t?.uid === s.towerUid);
+    const stats = tower?.def.tiers[tower.tier].soldiers;
+    s.hp -= computeDamage(raw, 'physical', { armor: stats?.armor ?? 0, magicResist: 0 });
+    if (s.hp <= 0) {
+      s.alive = false;
+      s.hp = 0;
+      s.respawnTimer = stats?.respawn ?? 10;
+      this.releaseEnemy(s);
+      for (const e of this.enemies) if (e.blockedBy === s.uid) e.blockedBy = 0;
+      this.events.push({ type: 'soldierDown', soldier: s });
     }
   }
 
@@ -291,24 +507,38 @@ export class BattleSim {
       t.cooldown -= dt;
       if (t.cooldown > 0) continue;
       const stats = t.def.tiers[t.tier];
+      if (stats.soldiers || stats.fireRate <= 0) continue;
       const target = this.pickTarget(t, stats.range);
       if (!target) {
         t.cooldown = 0;
         continue;
       }
       t.cooldown = 1 / stats.fireRate;
+      const origin = { x: t.pos.x, y: t.pos.y - 18 };
+      let aim = { ...target.pos };
+      if (stats.lob) {
+        // Lead the target: predict where it will be when the rock lands.
+        const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
+        const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor;
+        aim = this.paths[target.path].pointAt(target.dist + moving * flight);
+      }
       const p: Projectile = {
         uid: this.nextUid++,
         towerUid: t.uid,
-        pos: { x: t.pos.x, y: t.pos.y - 18 },
+        pos: { ...origin },
         targetUid: target.uid,
-        lastTargetPos: { ...target.pos },
+        lastTargetPos: aim,
         speed: stats.projectileSpeed,
         damage: stats.damage,
         damageType: t.def.damageType,
         splash: stats.splash ?? 0,
         slow: stats.slow,
         color: t.def.color,
+        homing: !stats.lob,
+        hitsAir: t.def.hitsAir,
+        origin,
+        travel: Math.hypot(aim.x - origin.x, aim.y - origin.y),
+        kind: t.def.id,
       };
       this.projectiles.push(p);
       this.events.push({ type: 'shoot', tower: t, projectile: p });
@@ -320,13 +550,13 @@ export class BattleSim {
     const keep: Projectile[] = [];
     for (const p of this.projectiles) {
       const target = byUid.get(p.targetUid);
-      if (target && target.alive) p.lastTargetPos = { ...target.pos };
+      if (p.homing && target && target.alive) p.lastTargetPos = { ...target.pos };
       const dx = p.lastTargetPos.x - p.pos.x;
       const dy = p.lastTargetPos.y - p.pos.y;
       const d = Math.hypot(dx, dy);
       const move = p.speed * dt;
       if (d <= move + 4) {
-        this.impact(p, target && target.alive ? target : null);
+        this.impact(p, p.homing && target && target.alive ? target : null);
       } else {
         p.pos.x += (dx / d) * move;
         p.pos.y += (dy / d) * move;
@@ -341,6 +571,7 @@ export class BattleSim {
       this.events.push({ type: 'splash', pos: { ...p.lastTargetPos }, radius: p.splash, color: p.color });
       for (const e of this.enemies) {
         if (!e.alive) continue;
+        if (e.def.flying && !p.hitsAir) continue;
         if (Math.hypot(e.pos.x - p.lastTargetPos.x, e.pos.y - p.lastTargetPos.y) <= p.splash + e.def.radius) {
           this.damage(e, p);
         }
@@ -351,14 +582,18 @@ export class BattleSim {
   }
 
   private damage(e: Enemy, p: Projectile): void {
-    const dmg = computeDamage(p.damage, p.damageType, e.def);
-    e.hp -= dmg;
     if (p.slow) {
       e.slowFactor = Math.min(e.slowFactor, p.slow.factor);
       e.slowTime = Math.max(e.slowTime, p.slow.duration);
     }
+    this.applyDamage(e, computeDamage(p.damage, p.damageType, e.def));
+  }
+
+  private applyDamage(e: Enemy, dmg: number): void {
+    if (!e.alive) return;
+    e.hp -= dmg;
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
-    if (e.hp <= 0 && e.alive) {
+    if (e.hp <= 0) {
       e.alive = false;
       this.coins += e.def.bounty;
       this.events.push({ type: 'kill', enemy: e, bounty: e.def.bounty });

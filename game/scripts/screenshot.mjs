@@ -34,10 +34,11 @@ await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');
   s.sim.coins = 1000;
   s.sim.build(1, 'thornbow');
-  s.sim.build(3, 'glimmer');
-  s.sim.build(4, 'thornbow');
+  s.sim.build(3, 'boulder');
+  s.sim.build(4, 'burrow');
   s.sim.upgrade(4);
   s.sim.build(6, 'glimmer');
+  s.sim.build(0, 'burrow');
   s.sim.callNextWave();
   s.sim.callNextWave();
   s.sim.callNextWave();
@@ -45,7 +46,7 @@ await page.evaluate(() => {
 await page.waitForTimeout(7000);
 await page.screenshot({ path: `screenshots/${name}-battle.png` });
 // Open a tower menu by clicking a slot.
-await page.mouse.click(760, 360);
+await page.mouse.click(Number(process.env.CLICK_X ?? 1080), Number(process.env.CLICK_Y ?? 460));
 await page.waitForTimeout(400);
 await page.screenshot({ path: `screenshots/${name}-menu-open.png` });
 

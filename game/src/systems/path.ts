@@ -30,6 +30,24 @@ export class Path {
     return { x: a.x + (b.x - a.x) * t, y: a.y + (b.y - a.y) * t };
   }
 
+  /** Closest point on the path to p, and how far along the path it lies. */
+  closest(p: Vec2): { point: Vec2; along: number; distance: number } {
+    let best = { point: this.points[0], along: 0, distance: Infinity };
+    for (let i = 1; i < this.points.length; i++) {
+      const a = this.points[i - 1];
+      const b = this.points[i];
+      const dx = b.x - a.x;
+      const dy = b.y - a.y;
+      const len2 = dx * dx + dy * dy;
+      let t = len2 === 0 ? 0 : ((p.x - a.x) * dx + (p.y - a.y) * dy) / len2;
+      t = Math.max(0, Math.min(1, t));
+      const q = { x: a.x + dx * t, y: a.y + dy * t };
+      const d = Math.hypot(p.x - q.x, p.y - q.y);
+      if (d < best.distance) best = { point: q, along: this.cumulative[i - 1] + Math.sqrt(len2) * t, distance: d };
+    }
+    return best;
+  }
+
   /** Minimum distance from a point to the path polyline. */
   distanceTo(p: Vec2): number {
     let best = Infinity;

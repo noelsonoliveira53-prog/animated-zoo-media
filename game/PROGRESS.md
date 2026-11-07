@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **89** (next balance pass at iteration 90)
+Iteration counter: **90** (next balance pass at iteration 95)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -642,8 +642,8 @@ Iteration counter: **89** (next balance pass at iteration 90)
 - (none)
 
 ## Backlog (ranked)
-1. Iter 90 balance pass.
-2. Region 11 levels 52–54 (+ a third Rotbloom enemy), then the finale (level 55) with a Rotbloom boss.
+1. Region 11 levels 52–54 (+ a third Rotbloom enemy), then the finale (level 55) with a Rotbloom boss.
+2. Iter 95 balance pass.
 
 ## Known Bugs
 - (none known)
@@ -653,6 +653,11 @@ Iteration counter: **89** (next balance pass at iteration 90)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 90** (12 seeds, expert/casual/novice, Starwell + Orchard): 46 Glimmerpool 100/100/33 · 47 Lantern Hollow
+100/100/25 · 48 Moonring Lake 100/83/0 · 49 Starfall 83/83/0 · 50 Heart of the Abyss (boss) 92/67/0 · 51 Windfall Rows
+100/92/42. All in band, so no retunes. A per-step cache of Barkwarden auras was benchmarked: no measurable gain, and it gave
+stale armor between steps. I reverted it, so `res()` stays exact.
+
 **Iteration 85** (full sweep, 12 seeds, expert/casual/novice): levels 1–30 unchanged from iteration 70 except the
 bottom-pad levels (Cinder 83/67/83, Morrowcap 83/67/0); 31–40 as in iteration 75; 41 Boilerworks 100/100/17 ·
 42 Piston 100/83/8 · 43 Gearwell 83/83/17 · 44 Foundry 83/83/0 · 45 Heart of the Engine 83/67/8 · 46 Glimmerpool

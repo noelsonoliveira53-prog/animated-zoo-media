@@ -1478,7 +1478,6 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x9a8a7a);
         this.particles.explode(12, ev.enemy.pos.x, ev.enemy.pos.y - 8);
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Molted!', '#ffb0a0', 15);
-        this.enemyViews.get(ev.enemy.uid)?.sprite.setTint(0xffa8a0);
         break;
       }
       case 'cleanse': {

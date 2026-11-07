@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **114** (next balance pass at iteration 115)
+Iteration counter: **115** (next balance pass at iteration 120)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -809,6 +809,9 @@ Iteration counter: **114** (next balance pass at iteration 115)
     pads, 15 waves, hpMult 2.0.
   - **Field Guide:** now 62 enemies; page 3 checked and the pager shows 2/3. Browser check `scripts/reef-check.mjs`.
   - 185 tests.
+- **Iteration 115** (polish + balance): full 66-level sweep in 4 parallel batches, all in band (Balance Notes). I
+  removed a redundant molt tint, since the per-frame "speed boost" tint already marks molted Shellsnaps. The
+  Coralreach browser check was re-run: no console errors. 185 tests.
 
 ## In Progress
 - (none)
@@ -826,6 +829,12 @@ Iteration counter: **114** (next balance pass at iteration 115)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 115** (full sweep, 12 seeds, 66 levels): levels 1–65 are identical to their last passes (iterations 100,
+105, 110 and 111), so the new traits (mirage, pilfer, crust, molt, cleanse) and the Sorrel/Mender changes caused no
+regressions. 66 Coral Shallows: 100/92/33. Bosses: 5 92/58/83 · 10 83/67/42 · 15 83/33/67 · 20 83/67/0 ·
+25 100/58/0 · 30 83/42/58 · 35 100/50/17 · 40 92/50/0 · 45 83/67/8 · 50 92/67/0 · 55 75/50/0 · 60 83/33/0 ·
+65 75/50/0. No retunes.
+
 **Iteration 114**: 66 Coral Shallows went 100/100/83 at hpMult 1.8, **2.0 → 100/92/33** (kept, the opener target), and 2.15 gave 83/83/17.
 
 **Iteration 111**: 65 Wyrmsand Deep was 83/67/0 at hpMult 2.0 and 75/50/0 at 2.1, but at 2.1 the finale guard failed (expert 1 of 3 test seeds). 2.05 gave 83/75 (guard ok, casual above the band). **2.08 → 75/50/0, guard passes** (kept).

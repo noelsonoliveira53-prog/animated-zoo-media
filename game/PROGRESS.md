@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **78** (next balance pass at iteration 80)
+Iteration counter: **79** (next balance pass at iteration 80)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -571,12 +571,16 @@ Iteration counter: **78** (next balance pass at iteration 80)
   **Fix from the screenshot:** two pads at y=690 cut their towers off at the bottom edge. New test: pads stay at
   y ≤ 680. It caught six more in Cinder Tunnels, Mirrorpool Glade, Morrowcap's Throne (×2), Tidepool Terraces and
   Updraft Stair, all moved up to 680 (balance re-checked, small shifts only). Screenshot `78.png`. 159 tests.
+- [x] **Iter 79 — Brasswork level 44: Foundry Crossroads.** Three roads (west 840 px, north 920 px looping round the
+  furnace, south 640 px to the shared stretch) feed a 760 px tail. 12 pads, 16 waves, hpMult 1.39; one north-road
+  Steamrunner pack thinned. Fix from the screenshot: a pad at the top right hid its tower behind the exit gate posts
+  (moved below the exit road). Screenshot `79.png`. 159 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 9 level 44.
+1. Iter 80 balance pass.
 2. Region 9 finale (level 45) with a Brasswork boss.
 3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
@@ -599,6 +603,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 79:** 44 Foundry Crossroads 83/83/0 at hpMult 1.39 (1.2 → 100/100/33, 1.36 → 83/100/0, 1.45 → 75/83/0,
+1.55 → 42/67/0). The expert trails casual here: likely its branch picks vs. Rivetshells/Cogjammers; check in iter 80.
 **Iteration 78:** 43 Gearwell Shafts 83/83/17 at hpMult 1.42 (1.3 → 100/100/42, 1.5 → 75/58/0, 1.7 → 25/0/0). After
 the bottom-pad moves: Cinder Tunnels 83/67/83, Mirrorpool 100/75/58, Morrowcap 83/67/0, Tidepool 92/83/100,
 Updraft 100/75/42.

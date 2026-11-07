@@ -517,6 +517,53 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.95, cy + r * 0.08, r * 0.06);
         break;
       }
+      case 'shellsnap': {
+        // reef crab: barnacled dome shell, two big claws, stalk eyes, little legs
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.7, -0.4, 0.4, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r * 1.3, cy + r * 0.85);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.95, cy - r * 0.05, r * 0.32);
+        g.strokeCircle(cx - r * 0.95, cy - r * 0.05, r * 0.32);
+        g.fillCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
+        g.strokeCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
+        g.fillStyle(0x9a8a7a, 1);
+        g.fillEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.1);
+        g.strokeEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.1);
+        g.fillStyle(0xe8e0d0, 1);
+        for (const [bx, by] of [[-0.3, -0.15], [0.25, -0.2], [0, 0.2], [0.4, 0.15], [-0.4, 0.2]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.09);
+        g.lineStyle(2, C.ink, 1);
+        g.lineBetween(cx - r * 0.2, cy - r * 0.45, cx - r * 0.25, cy - r * 0.75);
+        g.lineBetween(cx + r * 0.2, cy - r * 0.45, cx + r * 0.25, cy - r * 0.75);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.78, r * 0.08);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.78, r * 0.08);
+        break;
+      }
+      case 'tidecaller': {
+        // sea otter floating upright: round face with whiskers, a pale belly, a spiral conch held to its mouth
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.2, r * 1.4);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.2, r * 1.4);
+        g.fillStyle(0xd8c8a8, 1);
+        g.fillEllipse(cx, cy + r * 0.3, r * 0.7, r * 0.9);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy - r * 0.55, r * 0.45);
+        g.strokeCircle(cx, cy - r * 0.55, r * 0.45);
+        g.fillStyle(0xd8c8a8, 1);
+        g.fillEllipse(cx, cy - r * 0.42, r * 0.5, r * 0.3);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.17, cy - r * 0.65, r * 0.07);
+        g.fillCircle(cx + r * 0.17, cy - r * 0.65, r * 0.07);
+        g.lineStyle(1.2, 0xffffff, 0.8);
+        g.lineBetween(cx - r * 0.2, cy - r * 0.42, cx - r * 0.55, cy - r * 0.48);
+        g.lineBetween(cx + r * 0.2, cy - r * 0.42, cx + r * 0.55, cy - r * 0.48);
+        g.fillStyle(0xf0c8b0, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx + r * 0.2, cy - r * 0.35, cx + r * 0.95, cy - r * 0.55, cx + r * 0.85, cy - r * 0.05);
+        g.strokeTriangle(cx + r * 0.2, cy - r * 0.35, cx + r * 0.95, cy - r * 0.55, cx + r * 0.85, cy - r * 0.05);
+        break;
+      }
       case 'scourmaw': {
         // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
         g.fillStyle(0xe0c088, 1);

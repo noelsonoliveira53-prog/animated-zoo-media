@@ -286,6 +286,13 @@ export class BattleScene extends Phaser.Scene {
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
       if (this.level.theme.dunes) this.drawOasis(pd);
     }
+    if (this.level.theme.reef) {
+      // sunlight caustics: a few soft pale blobs drifting slowly across the shallows
+      for (let i = 0; i < 9; i++) {
+        const blob = this.add.ellipse(rnd.between(0, GAME_W), rnd.between(100, GAME_H), rnd.between(60, 110), rnd.between(18, 30), 0xe8ffff, 0.1).setDepth(0.6);
+        this.tweens.add({ targets: blob, x: blob.x + rnd.between(-60, 60), alpha: 0.2, duration: rnd.between(2400, 3600), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.dunes) {
       // heat shimmer: a few pale horizontal bands slowly breathing in and out
       for (let i = 0; i < 4; i++) {
@@ -334,6 +341,35 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.reef) {
+        const k = rnd.frac();
+        if (k < 0.55) {
+          // a branching coral head
+          const col = rnd.pick(this.level.theme.trees ?? [0xf07a6a]);
+          deco.fillStyle(0x000000, 0.12);
+          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.lineStyle(5, col, 1);
+          for (const [dx, h] of [[-8, 18], [0, 26], [8, 20], [-14, 10], [14, 12]]) {
+            deco.lineBetween(p.x + dx * 0.3, p.y + 2, p.x + dx, p.y - h);
+          }
+          deco.fillStyle(col, 1);
+          for (const [dx, h] of [[-8, 18], [0, 26], [8, 20], [-14, 10], [14, 12]]) deco.fillCircle(p.x + dx, p.y - h, 3.5);
+        } else if (k < 0.8) {
+          // a round brain coral
+          deco.fillStyle(rnd.pick([0xe8b07a, 0xd8a0c8, 0xb8d07a]), 1);
+          deco.fillCircle(p.x, p.y, rnd.between(9, 13));
+          deco.lineStyle(1.5, 0x8a6a5a, 0.6);
+          deco.strokeCircle(p.x, p.y, 6);
+          deco.strokeCircle(p.x, p.y, 10);
+        } else {
+          // a starfish on the sand
+          deco.fillStyle(0xf0905a, 1);
+          for (let s2 = 0; s2 < 5; s2++) {
+            const a = (s2 / 5) * Math.PI * 2 - Math.PI / 2;
+            deco.fillTriangle(p.x, p.y, p.x + Math.cos(a - 0.35) * 4, p.y + Math.sin(a - 0.35) * 4, p.x + Math.cos(a) * 11, p.y + Math.sin(a) * 11);
+            deco.fillTriangle(p.x, p.y, p.x + Math.cos(a + 0.35) * 4, p.y + Math.sin(a + 0.35) * 4, p.x + Math.cos(a) * 11, p.y + Math.sin(a) * 11);
+          }
         }
       } else if (this.level.theme.dunes) {
         if (rnd.frac() < 0.5) {
@@ -1435,6 +1471,24 @@ export class BattleScene extends Phaser.Scene {
           this.particles.explode(5, h.x, h.y - 14);
         }
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
+        break;
+      }
+      case 'molt': {
+        sfx.trait('crack');
+        this.particles.setParticleTint(0x9a8a7a);
+        this.particles.explode(12, ev.enemy.pos.x, ev.enemy.pos.y - 8);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Molted!', '#ffb0a0', 15);
+        this.enemyViews.get(ev.enemy.uid)?.sprite.setTint(0xffa8a0);
+        break;
+      }
+      case 'cleanse': {
+        sfx.trait('cleanse');
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y - 6, ev.radius, 0x7ad8f0, 0.18).setStrokeStyle(3, 0xbff0ff, 0.9).setDepth(2400).setScale(0.15);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
+        for (const o of ev.washed) {
+          this.particles.setParticleTint(0xbff0ff);
+          this.particles.explode(3, o.pos.x, o.pos.y - 10);
+        }
         break;
       }
       case 'crack': {

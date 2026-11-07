@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **113** (next balance pass at iteration 115)
+Iteration counter: **114** (next balance pass at iteration 115)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -795,13 +795,27 @@ Iteration counter: **113** (next balance pass at iteration 115)
     95→115. It now matches the 3 slingers it replaces (1.2 stars, 49% vs 47%): a real alternative, not a must-pick.
 
   183 tests.
+- **Iteration 114**: region 14 opens, **The Coralreach Shallows**.
+  - **Theme:** a `REEF` theme (shallow turquoise ground with sandbar roads; branching coral, brain coral and
+    starfish; drifting sunlight caustics), a deep-blue world map with coral heads and starfish ("Dune Shore" exit
+    label), and a lilting island "Coralreach" music theme.
+  - **New traits** (checked against the trait list):
+    - `molt`: the **Shellsnap** crab (50% armor) sheds its shell below 50% health, dropping to 5% armor and moving
+      ×1.7, with "Molted!", shell chips and a pink tint.
+    - `cleanse`: the **Tidecaller** sea otter washes slows off itself and allies within 140px every 3s, countering
+      frost and mud, with a seawater ring and a splash sound.
+  - Code-drawn sprites and Field Guide tags. Endless adds both from wave 56.
+  - **Level 66 Coral Shallows:** a 2,240px sandbar road plus a 1,640px north road joining at the middle loop, 11
+    pads, 15 waves, hpMult 2.0.
+  - **Field Guide:** now 62 enemies; page 3 checked and the pager shows 2/3. Browser check `scripts/reef-check.mjs`.
+  - 185 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 14, or a breather (village or raid variety, tower polish). Check Field Guide page 3 when enemy 61 lands.
+2. Region 14 level 67 (+ third Coralreach enemy), 68–69, finale 70 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -812,6 +826,8 @@ Iteration counter: **113** (next balance pass at iteration 115)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 114**: 66 Coral Shallows went 100/100/83 at hpMult 1.8, **2.0 → 100/92/33** (kept, the opener target), and 2.15 gave 83/83/17.
+
 **Iteration 111**: 65 Wyrmsand Deep was 83/67/0 at hpMult 2.0 and 75/50/0 at 2.1, but at 2.1 the finale guard failed (expert 1 of 3 test seeds). 2.05 gave 83/75 (guard ok, casual above the band). **2.08 → 75/50/0, guard passes** (kept).
 
 **Iteration 110** (12 seeds, expert/casual/novice): 61 Mirage Flats 100/100/42 · 62 Kilnstone Wash 100/92/0 ·

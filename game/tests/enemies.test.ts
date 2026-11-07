@@ -715,3 +715,35 @@ describe('Sunscour enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'crack')).toBe(true);
   });
 });
+
+describe('Coralreach enemies', () => {
+  it('a Shellsnap molts once below its threshold: armor drops, speed rises', () => {
+    const sim = new BattleSim(lvl, null);
+    const c = sim.spawn('shellsnap', 0, 300);
+    const m = c.def.molt!;
+    (sim as any).applyDamage(c, c.maxHp * (1 - m.at) - 5);
+    expect(c.molted).toBe(false);
+    expect(c.armor).toBe(c.def.armor);
+    (sim as any).applyDamage(c, 10);
+    expect(c.molted).toBe(true);
+    expect(c.armor).toBe(m.armor);
+    expect(c.speedMult).toBeCloseTo(m.speedMult);
+    expect(sim.drainEvents().filter((e) => e.type === 'molt').length).toBe(1);
+  });
+
+  it('a Tidecaller washes slows off allies in range on its timer (not far ones)', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const t = sim.spawn('tidecaller', 0, 400);
+    const near = sim.spawn('mudling', 0, 450);
+    const far = sim.spawn('mudling', 0, 1500);
+    for (const e of [t, near, far]) e.def = { ...e.def, speed: 0 };
+    for (const e of [near, far]) {
+      e.slowFactor = 0.4;
+      e.slowTime = 60;
+    }
+    for (let i = 0; i < Math.ceil(t.def.cleanse!.interval * 60) + 2; i++) sim.update(1 / 60);
+    expect(near.slowFactor).toBe(1);
+    expect(far.slowFactor).toBe(0.4);
+  });
+});

@@ -180,6 +180,10 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'cleanse': // splash of a wave
+        this.noise(0.35, 0.09, 1200);
+        this.tone(520, 0.2, 'sine', 0.03, 260);
+        break;
       case 'crack': // dry clay snap
         this.noise(0.06, 0.12, 2500);
         this.tone(320, 0.05, 'square', 0.04, 180);

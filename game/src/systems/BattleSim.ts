@@ -46,6 +46,8 @@ export interface Enemy {
   fed: number; // times a Gorgegrub has fed
   shockCd: number;
   boltCd: number; // Stormcaller lightning timer
+  molted: boolean; // Shellsnap has shed its shell
+  cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
@@ -176,6 +178,8 @@ export type SimEvent =
   | { type: 'mirage'; enemy: Enemy; decoys: Enemy[] }
   | { type: 'pilfer'; enemy: Enemy; coins: number }
   | { type: 'crack'; enemy: Enemy }
+  | { type: 'molt'; enemy: Enemy }
+  | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
@@ -890,6 +894,8 @@ export class BattleSim {
       fed: 0,
       shockCd: def.shock ? def.shock.interval : 0,
       boltCd: def.bolt ? def.bolt.interval * 0.6 : 0,
+      molted: false,
+      cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
       chargeTime: 0,
@@ -939,6 +945,7 @@ export class BattleSim {
       }
       if (e.def.shock) this.tickShock(e, dt);
       if (e.def.bolt) this.tickBolt(e, dt);
+      if (e.def.cleanse) this.tickCleanse(e, dt);
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -1046,6 +1053,22 @@ export class BattleSim {
   }
 
   /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  /** Tidecaller: a wash of seawater rinses slows off it and its neighbours. */
+  private tickCleanse(e: Enemy, dt: number): void {
+    const c = e.def.cleanse!;
+    e.cleanseCd -= dt;
+    if (e.cleanseCd > 0) return;
+    e.cleanseCd = c.interval;
+    const washed: Enemy[] = [];
+    for (const o of this.enemies) {
+      if (!o.alive || o.slowTime <= 0 || Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > c.radius) continue;
+      o.slowTime = 0;
+      o.slowFactor = 1;
+      washed.push(o);
+    }
+    if (washed.length) this.events.push({ type: 'cleanse', source: e, washed, radius: c.radius });
+  }
+
   /** Stormcaller: lightning stuns the nearest shooting tower in range (shares the chill immunity window). */
   private tickBolt(e: Enemy, dt: number): void {
     const b = e.def.bolt!;
@@ -1690,6 +1713,13 @@ export class BattleSim {
       const decoys: Enemy[] = [];
       for (let k = 0; k < e.def.mirage.count; k++) decoys.push(this.spawn(e.def.mirage.into, e.path, Math.max(0, e.dist - 18 - k * 16)));
       this.events.push({ type: 'mirage', enemy: e, decoys });
+    }
+    if (e.def.molt && !e.molted && e.hp > 0 && e.hp < e.maxHp * e.def.molt.at) {
+      // Shellsnap: the cracked shell falls away; soft, but quick.
+      e.molted = true;
+      e.armor = e.def.molt.armor;
+      e.speedMult = Math.max(e.speedMult, e.def.molt.speedMult);
+      this.events.push({ type: 'molt', enemy: e });
     }
     if (e.def.crust && dmg > 0 && e.armor > e.def.armor + 0.05) {
       // Kilnback: the baked shell cracks (this hit already met the thick crust).

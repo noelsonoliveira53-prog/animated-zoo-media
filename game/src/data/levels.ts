@@ -10,6 +10,7 @@ const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0
 const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
 const STORM = { grass: 0x7a8a6a, grassDark: 0x6a7a5c, road: 0xb0a488, roadEdge: 0x7a6e58, trees: [0x5a6a5a, 0x6a7a62, 0x4a5a52], storm: true };
 const DUNES = { grass: 0xe0c088, grassDark: 0xd0ac70, road: 0xc8a068, roadEdge: 0x9a7444, trees: [0x6a9a4a, 0x5a8a3a, 0x8aa85a], dunes: true };
+const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0xc8b07a, trees: [0xf07a6a, 0xf0a05a, 0xd86aa8], reef: true };
 const ORCHARD = { grass: 0xa8a050, grassDark: 0x948c44, road: 0xc8a878, roadEdge: 0x9a7a52, trees: [0xd8642a, 0xe8a03a, 0xb8442a], orchard: true };
 const ABYSS = { grass: 0x1e2440, grassDark: 0x161a32, road: 0x4a4a6a, roadEdge: 0x32324e, trees: [0x6ad8e8, 0x9a7ae8, 0x5ae8b0], abyss: true };
 const GEARS = { grass: 0x5a5a62, grassDark: 0x4a4a52, road: 0x9a8a6a, roadEdge: 0x6a5a40, trees: [0xc8963a, 0x8a6a2a, 0xa0a0aa], gears: true };
@@ -3197,6 +3198,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'scourmaw', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l66',
+    name: 'Coral Shallows',
+    blurb: 'Beyond the last dune lies the sea, warm and shallow and full of coral. The Murkhorde wades in along the sandbars, and crabs clatter in their shells.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.0,
+    startCoins: 1000,
+    lives: 20,
+    theme: REEF,
+    paths: [
+      [{ x: -40, y: 200 }, { x: 340, y: 200 }, { x: 340, y: 520 }, { x: 640, y: 520 }, { x: 640, y: 240 }, { x: 940, y: 240 }, { x: 940, y: 520 }, { x: 1320, y: 520 }],
+      [{ x: 520, y: -40 }, { x: 520, y: 380 }, { x: 640, y: 380 }, { x: 640, y: 240 }, { x: 940, y: 240 }, { x: 940, y: 520 }, { x: 1320, y: 520 }],
+    ],
+    slots: [
+      { x: 200, y: 300 },
+      { x: 440, y: 300 },
+      { x: 240, y: 420 },
+      { x: 440, y: 620 },
+      { x: 740, y: 380 },
+      { x: 780, y: 140 },
+      { x: 840, y: 420 },
+      { x: 1040, y: 420 },
+      { x: 1180, y: 420 },
+      { x: 620, y: 120 },
+      { x: 60, y: 300 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.5 }, { enemy: 'shellsnap', count: 3, interval: 1.5, delay: 4 }, { enemy: 'skitter', count: 8, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'tidecaller', count: 2, interval: 3 }, { enemy: 'mudling', count: 12, interval: 0.45, delay: 1 }, { enemy: 'gullwing', count: 6, interval: 0.8, delay: 5 }] },
+      { groups: [{ enemy: 'shellsnap', count: 5, interval: 1.2 }, { enemy: 'reedguard', count: 6, interval: 1, path: 1, delay: 2 }, { enemy: 'galehound', count: 6, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'tidecaller', count: 3, interval: 2.4 }, { enemy: 'thunderhoof', count: 8, interval: 0.6, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'shellsnap', count: 6, interval: 1.1 }, { enemy: 'tidecaller', count: 2, interval: 3, delay: 3 }, { enemy: 'glarefly', count: 6, interval: 0.9, delay: 6 }] },
+      { groups: [{ enemy: 'sandpicker', count: 6, interval: 1 }, { enemy: 'shellsnap', count: 5, interval: 1.2, path: 1, delay: 2 }, { enemy: 'kitewing', count: 4, interval: 1.5, delay: 6 }] },
+      { groups: [{ enemy: 'tidecaller', count: 4, interval: 2.2 }, { enemy: 'echowisp', count: 12, interval: 0.6, delay: 2 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'shellsnap', count: 8, interval: 1 }, { enemy: 'kilnback', count: 3, interval: 2.4, path: 1, delay: 2 }, { enemy: 'skitter', count: 14, interval: 0.3, delay: 5 }] },
+      { groups: [{ enemy: 'tidecaller', count: 4, interval: 2.2 }, { enemy: 'thunderhoof', count: 10, interval: 0.5, delay: 2 }, { enemy: 'gnat', count: 16, interval: 0.26, delay: 7 }] },
+      { groups: [{ enemy: 'shellsnap', count: 8, interval: 1 }, { enemy: 'rivetshell', count: 3, interval: 2.4, path: 1, delay: 2 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 6 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 3 }, { enemy: 'tidecaller', count: 4, interval: 2.2, delay: 3 }, { enemy: 'shimmerjack', count: 6, interval: 1, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'shellsnap', count: 10, interval: 0.9 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 3 }, { enemy: 'kitewing', count: 6, interval: 1.2, delay: 7 }] },
+      { groups: [{ enemy: 'tidecaller', count: 5, interval: 2 }, { enemy: 'shellsnap', count: 8, interval: 1, path: 1, delay: 1 }, { enemy: 'gullwing', count: 12, interval: 0.5, delay: 6 }] },
+      { groups: [{ enemy: 'shellsnap', count: 10, interval: 0.9 }, { enemy: 'tidecaller', count: 5, interval: 2, delay: 2 }, { enemy: 'thunderhoof', count: 12, interval: 0.45, path: 1, delay: 4 }, { enemy: 'cloudram', count: 3, interval: 2.4, delay: 8 }] },
+      { groups: [{ enemy: 'shellsnap', count: 12, interval: 0.8 }, { enemy: 'tidecaller', count: 6, interval: 1.8, delay: 2 }, { enemy: 'bramblehide', count: 3, interval: 2.4, path: 1, delay: 6 }, { enemy: 'glarefly', count: 10, interval: 0.6, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -3226,6 +3271,7 @@ export interface RegionDef {
   orchard?: boolean;
   storm?: boolean;
   dunes?: boolean;
+  reef?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -3242,6 +3288,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Rotbloom Orchard', first: 50, count: 5, orchard: true },
   { name: 'The Thunderhead Steppes', first: 55, count: 5, storm: true },
   { name: 'The Sunscour Dunes', first: 60, count: 5, dunes: true },
+  { name: 'The Coralreach Shallows', first: 65, count: 5, reef: true },
 ];
 
 export function regionOf(levelIndex: number): number {

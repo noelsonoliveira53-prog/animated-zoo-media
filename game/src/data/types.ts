@@ -56,6 +56,8 @@ export interface EnemyDef {
   ground?: { radius: number; share: number }; // takes `share` of the damage aimed at allies within radius onto itself
   mirage?: { into: string; count: number }; // when first hit, leaves `count` decoys (`into`) behind it
   crust?: { max: number; perSec: number }; // armor builds by perSec while unhit (up to +max); any hit cracks it back to base
+  molt?: { at: number; armor: number; speedMult: number }; // below `at` health it sheds its shell: armor drops, speed rises
+  cleanse?: { radius: number; interval: number }; // washes slows off itself and allies in radius every interval
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
@@ -138,7 +140,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

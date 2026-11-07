@@ -74,10 +74,13 @@ export const THEMES: ThemeDef[] = [
   // Sunscour Dunes: a slow, swaying caravan line with an exotic raised fourth, shimmering arp above.
   { id: 'dunes', name: 'Sunscour', transpose: 2, tempo: 0.96, arpWave: 'triangle', leadWave: 'sine',
     motif: [[12, 0, 3], [13, 3, 1], [16, 4, 4], [18, 8, 2], [19, 10, 2], [18, 12, 4], [16, 16, 2], [13, 18, 2], [12, 20, 8]] },
+  // Coralreach Shallows: a lilting island lilt, bright and bubbly, with a gentle offbeat bounce.
+  { id: 'reef', name: 'Coralreach', transpose: 5, tempo: 1.06, arpWave: 'sine', leadWave: 'triangle',
+    motif: [[12, 0, 2], [16, 2, 2], [19, 4, 3], [21, 7, 1], [19, 8, 2], [16, 10, 2], [14, 12, 4], [16, 16, 2], [12, 18, 2], [9, 20, 4], [12, 24, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes', 'reef'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

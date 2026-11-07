@@ -92,3 +92,15 @@ describe('top HUD clearance for roads', () => {
         }
   });
 });
+
+describe('top entries', () => {
+  it('roads entering from the top come down in the gap between the stats panel and the buttons', () => {
+    for (const l of LEVELS)
+      for (const pts of l.paths) {
+        const a = pts[0];
+        if (a.y >= 0) continue;
+        const inGap = a.x >= 470 && a.x <= 830;
+        expect(inGap || a.x > 1270, `${l.name}: top entry at x=${a.x}`).toBe(true);
+      }
+  });
+});

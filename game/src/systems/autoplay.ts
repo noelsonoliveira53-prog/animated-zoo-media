@@ -57,6 +57,7 @@ export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
   let fly = 0;
   let armored = 0;
   let warded = 0;
+  let splashProof = 0;
   for (const w of level.waves)
     for (const g of w.groups) {
       const e = ENEMIES[g.enemy];
@@ -65,14 +66,16 @@ export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
       if (e.flying) fly += hp;
       if (e.armor >= 0.4) armored += hp;
       if (e.magicResist >= 0.5) warded += hp;
+      if ((e.splashResist ?? 0) >= 0.5) splashProof += hp;
     }
   const f = Math.min(1, (fly / total) * (heroHitsAir ? 1 : 1.4));
   const a = armored / total;
   const m = warded / total;
+  const sp = splashProof / total; // splash-resistant share: artillery is wasted on it
   const weights: Record<string, number> = {
     thornbow: 1 + f * 3 + m * 2,
-    glimmer: 1 + a * 3 + f * 1.5,
-    boulder: Math.max(0.2, 1.2 - f * 3),
+    glimmer: 1 + a * 3 + f * 1.5 + sp * 1.5,
+    boulder: Math.max(0.2, 1.2 - f * 3 - sp * 3),
     burrow: Math.max(0.2, 0.9 - f * 2),
   };
   // Expand to a repeating order of 8 picks, highest weight first, interleaved.

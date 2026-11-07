@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **48** (next balance pass at iteration 50)
+Iteration counter: **49** (next iteration = 50 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -381,11 +381,19 @@ Iteration counter: **48** (next balance pass at iteration 50)
   16 waves mixing all three Shardglass enemies with guests from earlier regions. It followed the region recipe, so no
   layout fixes were needed. 136 tests.
 
+- [x] **Iter 49 — Shardglass level 29: Glassteeth Ladder.** One road (about 3,300 px) zigzags up and down five glass
+  columns, with pads between the columns, 16 heavy waves and a final wave trimmed so it isn't a wall. Fixes from the
+  screenshot: the road first entered from the top at x=140, behind the stats panel. New test: top entries must come
+  down in the gap between the stats panel and the buttons (x 470–830). It caught two existing maps, now fixed: Tidepool
+  Terraces' north road came down at x=1100, under Next Wave (now x=720, hpMult 1.9 → 1.4), and Shattered Crossroads'
+  at x=900, under Pause (now x=800). Autoplayer: `adaptiveMix` now builds fewer splash towers when splash-resistant
+  enemies are a big share of a level's health. 137 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 6: levels 29–30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
+1. Region 6 finale: level 30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
 2. Hero #4 and a third global spell.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
@@ -409,6 +417,12 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Glassteeth Ladder (iteration 49, 8 seeds):** first draft 0/0/0 at 3.4 (the final wave of 6 Bog Brutes + 12
+Mirrorbacks was a wall). After trimming it and the other Mirrorback waves, and the shorter entry: **2.5 → 100% / 83% / 0%**
+(kept). The casual autoplayer lags the expert most on Mirrorback-heavy maps (it specializes into splash variants
+blindly). Re-tuned after the entry moves: Tidepool Terraces **1.4 → 88% / 88% / 25%**; Shattered Crossroads
+2.8 → 100/67/0 (unchanged).
 
 **Shattered Crossroads (iteration 48):** 2.6 → 100/100/0, **2.8 → 100% / 75% / 0%** (8 seeds, kept), 3.0 → 83/33/0.
 

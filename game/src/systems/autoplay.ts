@@ -66,7 +66,7 @@ export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
       if (e.flying) fly += hp;
       if (e.armor >= 0.4) armored += hp;
       if (e.magicResist >= 0.5) warded += hp;
-      if ((e.splashResist ?? 0) >= 0.5) splashProof += hp;
+      if ((e.splashResist ?? 0) >= 0.5) splashProof += hp * (e.boss ? 3 : 1); // a splash-proof boss decides the level
     }
   const f = Math.min(1, (fly / total) * (heroHitsAir ? 1 : 1.4));
   const a = armored / total;

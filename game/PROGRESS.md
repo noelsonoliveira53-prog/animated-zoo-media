@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **50** (next balance pass at iteration 55)
+Iteration counter: **51** (next balance pass at iteration 55)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -396,12 +396,20 @@ Iteration counter: **50** (next balance pass at iteration 55)
   lands on exactly one page. New `scripts/guide-paging-check.mjs` inflates the list in-browser and flips pages with real
   clicks. 137 tests.
 
+- [x] **Iter 51 — Shardglass finale: Kaleidrax's Spire (level 30).** New boss **Kaleidrax, the Shattered Colossus**
+  (30 enemies): 50% splash resistance, blinks 60 px every 12 s, sheds Shardskippers (16 at most), and has four phases
+  (Mirrorback shards → a light-wall shield + Glareflies → a skipper storm + haste → a final lunge). Level 30: two roads
+  (a west road, and a north road that enters through the HUD gap at x=520) merging into a 1,360 px tail, 13 pads,
+  18 waves. **The Shardglass Barrens is complete: 30 levels in 6 regions.** New achievement **Shatterer** (22 total).
+  Endless adds the Shardglass enemies from wave 24 and Kaleidrax to the boss rotation. Fixes: the first-draft boss was
+  unbeatable (3,600 HP, blinking every 9 s; now 2,800 HP every 12 s), and two north pads put towers under the boss bar
+  (moved down). The autoplayer weighs a splash-proof boss's HP ×3 when choosing its tower mix. 137 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 6 finale: level 30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
-2. Hero #4 and a third global spell.
+1. Hero #4 (a ranged support or summoner) and a third global spell; check hero balance with `heroes.ts`.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
 4. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
@@ -428,6 +436,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 **Campaign (iteration 50, 6 seeds):** expert ≥ 83% on 28 of 29 levels (the outlier was Saltjaw's Grotto, now fixed).
 Region openers: 100/100/100, 100/100/50, 100/100/67, 100/83/33, 100/100/50, 100/100/33. Bosses: Murkmaw 83/83/67,
 Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 83/33/0, Saltjaw (fixed) ~83/70/0.
+
+**Kaleidrax's Spire (iteration 51, 8 seeds):** first draft 0/0/0 (the boss leaked every run). After the boss nerf and the
+autoplayer tweak, the curve was jagged: 2.15 → 88/63/100, then after moving the pads 2.15 → 100/63/63, **2.3 → 88% / 38% / 75%**
+(kept), 2.45 → 63/0/25. The novice (Bramble blocking + all single-target towers) suits this boss's splash resistance.
 
 **Glassteeth Ladder (iteration 49, 8 seeds):** first draft 0/0/0 at 3.4 (the final wave of 6 Bog Brutes + 12
 Mirrorbacks was a wall). After trimming it and the other Mirrorback waves, and the shorter entry: **2.5 → 100% / 83% / 0%**

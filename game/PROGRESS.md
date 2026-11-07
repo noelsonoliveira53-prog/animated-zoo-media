@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **134** (next balance pass at iteration 135)
+Iteration counter: **135** (next balance pass at iteration 140)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -944,6 +944,12 @@ Iteration counter: **134** (next balance pass at iteration 135)
   - Supporting pieces: a throttled `leech` event shows "+N" and a gulp cue, a Field Guide tag, and an endless tier at
     wave 66.
   - Checks: a unit test and `scripts/sapstoat-check.mjs`. Screenshot `screenshots/134.png`. 193 tests.
+- **Iteration 135** (POLISH + BALANCE):
+  - Re-swept a sample of levels from every region plus Blackwake and the Amberwood (12 seeds). The iteration 131
+    Bramble buff had lifted the novice strategy, which plays Bramble, on some region openers; two were re-tuned.
+  - Re-ran the finale guard.
+  - Polish: phone-size check of the region picker at 16 regions (6 rows). Everything fits and reads well.
+    New `scripts/region-picker-phone-check.mjs`; screenshot `screenshots/135.png`. 193 tests.
 
 ## In Progress
 - (none)
@@ -951,7 +957,7 @@ Iteration counter: **134** (next balance pass at iteration 135)
 ## Backlog (ranked)
 1. Amberwood levels 78–79.
 2. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
-3. Phone QA of the region picker at 6 rows (16 regions) and the Field Guide at 70 enemies.
+3. Phone QA of the Field Guide at 71 enemies.
 
 ## Known Bugs
 - (none known)
@@ -960,6 +966,17 @@ Iteration counter: **134** (next balance pass at iteration 135)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 135** (12 seeds; expert / casual / novice):
+- Sample: 0/1/2 all 100% · 10 Ashfall Gate 100/83/75 · 20 Wrackline Beach 100/100/100 · 30 Windgap Ledge
+  100/92/42 · 40 Boilerworks Gate 100/100/25 · 71–74 unchanged · 75 Amberwood Gate 100/100/33 · 76 Russet Hollow
+  100/100/17.
+- After the Bramble buff, the novice rose on three openers: 50 Windfall Rows 67%, 60 Mirage Flats 67%, 70 Blackwake
+  Moorings 83%.
+  - Mirage Flats: 25% at 1.9, 8% at 2.0, **1.82 → 100/100/42** (kept).
+  - Blackwake Moorings: 17% at 1.68 and at 1.75, **1.64 → 100/100/42** (kept).
+  - Windfall Rows kept at 2.1: raising it to 2.25–2.35 dropped casual to 67% before the novice settled.
+- Finale guard (4 seeds): the expert won every region finale in at least 3 of 4 seeds.
+
 **Iteration 134**: 77 Russet Hollow: 92/83/0 at hpMult 1.8, 67/33 at 2.1, 92/100 at 1.7 and 1.65, **1.6 → 100/100/17** (kept,
 second-level band).
 

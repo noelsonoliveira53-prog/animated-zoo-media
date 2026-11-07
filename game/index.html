@@ -8,10 +8,19 @@
       html, body { margin: 0; padding: 0; height: 100%; background: #10261b; overflow: hidden; touch-action: none; }
       #game { width: 100vw; height: 100vh; display: flex; align-items: center; justify-content: center; }
       canvas { display: block; }
+      #rotate { display: none; position: fixed; inset: 0; background: #10261b; color: #fff4d6; z-index: 10;
+        font: bold 22px "Trebuchet MS", system-ui, sans-serif; text-align: center; align-items: center; justify-content: center;
+        flex-direction: column; gap: 18px; padding: 24px; }
+      #rotate .phone { width: 64px; height: 104px; border: 6px solid #ffc93c; border-radius: 14px; animation: turn 1.8s ease-in-out infinite; }
+      @keyframes turn { 0%, 30% { transform: rotate(0deg); } 60%, 100% { transform: rotate(-90deg); } }
+      /* Phones held upright: the game is landscape, so ask for a rotation. */
+      @media (orientation: portrait) and (pointer: coarse) { #rotate { display: flex; } }
+      html, body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
     </style>
   </head>
   <body>
     <div id="game"></div>
+    <div id="rotate"><div class="phone"></div><div>Turn your phone sideways to play Grovewatch</div></div>
     <script type="module" src="/src/main.ts"></script>
   </body>
 </html>

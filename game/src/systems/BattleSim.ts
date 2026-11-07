@@ -490,6 +490,18 @@ export class BattleSim {
     return dmg;
   }
 
+  /**
+   * Health multiplier for enemies spawning now. The level's bonus (hpMult - 1) ramps from 60% on the
+   * first wave to 100% on the last, so late levels don't open with brutal waves before the player has
+   * an economy. Bounties use the same multiplier.
+   */
+  waveHpMult(): number {
+    const bonus = (this.level.hpMult ?? 1) - 1;
+    if (bonus <= 0) return 1 + bonus;
+    const f = this.totalWaves > 1 ? Math.max(0, this.waveIndex) / (this.totalWaves - 1) : 1;
+    return 1 + bonus * (0.6 + 0.4 * f);
+  }
+
   get totalWaves(): number {
     return this.level.waves.length;
   }
@@ -744,8 +756,8 @@ export class BattleSim {
     const e: Enemy = {
       uid: this.nextUid++,
       def,
-      hp: Math.round(def.hp * (this.level.hpMult ?? 1)),
-      maxHp: Math.round(def.hp * (this.level.hpMult ?? 1)),
+      hp: Math.round(def.hp * this.waveHpMult()),
+      maxHp: Math.round(def.hp * this.waveHpMult()),
       path: pathIndex,
       dist,
       pos: path.pointAt(dist),
@@ -1168,7 +1180,7 @@ export class BattleSim {
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.
-      const bounty = Math.round(e.def.bounty * (this.level.hpMult ?? 1));
+      const bounty = Math.round(e.def.bounty * this.waveHpMult());
       this.coins += bounty;
       this.events.push({ type: 'kill', enemy: e, bounty });
       if (this.hero?.alive) {

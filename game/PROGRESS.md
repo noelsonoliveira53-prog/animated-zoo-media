@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **19** (next iteration = 20 → POLISH + BALANCE pass)
+Iteration counter: **20** (next balance pass at iteration 25)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -174,6 +174,12 @@ Iteration counter: **19** (next iteration = 20 → POLISH + BALANCE pass)
   tower textures were clipped at the top (84px canvas too short for roofs/orbs); now 100px. 95 tests.
   (Backlog reordered: meta features before the raid training queue, since the whole META pillar was missing.)
 
+- [x] **Iter 20 — POLISH + BALANCE.** Structural: **per-wave health ramp** (`waveHpMult()`): a level's health bonus
+  now ramps from 60% on wave 1 to 100% on the last wave (bounties follow), so late levels no longer open with
+  brutal waves before the player has an economy. All level `hpMult`s rescaled (bonus × 1.3) to keep late-wave
+  difficulty. Mobile polish: **"turn your phone sideways" overlay** in portrait on touch devices, **Fullscreen**
+  button in Settings, no long-press context menu or text selection. 95 tests.
+
 ## In Progress
 - (none)
 
@@ -194,6 +200,13 @@ Iteration counter: **19** (next iteration = 20 → POLISH + BALANCE pass)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 20** (`balance.ts 10`, after the per-wave ramp + rescale; expert/casual/novice):
+L1 100/100/100 · L2 100/100/100 · L3 100/90/80 · L4 100/70/70 · L5 100/100/60 · L6 100/100/20 · L7 80/80/10 ·
+L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 · L13 100/90/40 · L14 50/40/0 · L15 90/30/0.
+- With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
+- Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
+  let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
 **Raids (iteration 18, `raid-balance.ts`, avg stars / destruction over 10 seeds, two-side deploy):**
 
 | Army | Mudling Outpost | Bogscum Warren | Murkhorde Stronghold |

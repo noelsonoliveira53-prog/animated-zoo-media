@@ -77,6 +77,24 @@ export class SettingsScene extends Phaser.Scene {
     });
     muteBtn.label.setText(save.settings.muted ? 'Sound: Off' : 'Sound: On');
 
+    // Fullscreen (great on phones)
+    const fsBtn = new Button(this, GAME_W / 2 + 200, 320, 'Fullscreen', {
+      width: 180,
+      height: 56,
+      fontSize: 20,
+      color: C.sky,
+      onClick: () => {
+        try {
+          if (this.scale.isFullscreen) this.scale.stopFullscreen();
+          else this.scale.startFullscreen();
+        } catch {
+          /* not allowed in this browser */
+        }
+      },
+    });
+    void fsBtn;
+    muteBtn.setX(GAME_W / 2 - 110);
+
     // Reset progress (two taps)
     let armed = false;
     const resetBtn = new Button(this, GAME_W / 2, 430, 'Reset progress', {

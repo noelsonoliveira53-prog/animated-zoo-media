@@ -40,6 +40,7 @@ describe('regions', () => {
     const e = sim.spawn('mudling', 0, 100);
     const before = sim.coins;
     (sim as any).applyDamage(e, 1e6);
-    expect(sim.coins - before).toBe(Math.round(5 * l.hpMult!));
+    expect(sim.coins - before).toBe(Math.round(5 * sim.waveHpMult()));
+    expect(sim.waveHpMult()).toBeGreaterThan(1);
   });
 });

@@ -21,5 +21,8 @@ const game = new Phaser.Game({
   scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, RaidScene, FieldGuideScene, SettingsScene],
 });
 
+// No long-press context menu on touch devices (it interrupts tower menus).
+window.addEventListener('contextmenu', (e) => e.preventDefault());
+
 // Expose for automated tests / debugging.
 (window as unknown as { __game: Phaser.Game }).__game = game;

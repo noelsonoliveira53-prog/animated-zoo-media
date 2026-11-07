@@ -1,0 +1,51 @@
+import { describe, expect, it } from 'vitest';
+import { LEVELS } from '../src/data/levels';
+import { STRATEGIES, playLevel } from '../src/systems/autoplay';
+
+// Balance guard rails, from the iteration-5 tuning. If a change breaks these, re-run
+// `npx vite-node scripts/balance.ts` and update the Balance Notes.
+const strat = (name: string) => STRATEGIES.find((s) => s.name === name)!;
+
+describe('balance guard rails', () => {
+  it('level 1 is winnable by a novice', () => {
+    let wins = 0;
+    for (let seed = 1; seed <= 4; seed++) if (playLevel(LEVELS[0], strat('novice'), seed).won) wins++;
+    expect(wins).toBeGreaterThanOrEqual(3);
+  });
+
+  it('level 2 is winnable by a solid mixed defense', () => {
+    for (let seed = 1; seed <= 3; seed++) expect(playLevel(LEVELS[1], strat('casual-mixed'), seed).won).toBe(true);
+  });
+
+  it('level 2 cannot be won with a single tower type', () => {
+    for (const name of ['only-thornbow', 'only-glimmer', 'only-boulder', 'only-burrow']) {
+      expect(playLevel(LEVELS[1], strat(name), 1).won, name).toBe(false);
+    }
+  });
+});
+
+describe('campaign levels 3+', () => {
+  it('each later level is winnable by the expert autoplayer', () => {
+    for (const i of [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29]) {
+      let won = false;
+      for (let seed = 1; seed <= 3 && !won; seed++) won = playLevel(LEVELS[i], strat('expert-mixed'), seed).won;
+      expect(won, LEVELS[i].name).toBe(true);
+    }
+  });
+  it('levels 4 and 5 are genuinely hard (even with spells, a novice loses some runs)', () => {
+    for (const i of [3, 4]) {
+      let losses = 0;
+      for (let seed = 1; seed <= 6; seed++) if (!playLevel(LEVELS[i], strat('novice'), seed).won) losses++;
+      expect(losses, LEVELS[i].name).toBeGreaterThanOrEqual(1);
+    }
+  });
+});
+
+describe('autoplay determinism', () => {
+  it('replays a Fen run exactly for the same seed (crit rolls are seeded)', () => {
+    const fen = STRATEGIES.find((s) => s.hero === 'fen')!;
+    const a = playLevel(LEVELS[3], fen, 5);
+    const b = playLevel(LEVELS[3], fen, 5);
+    expect(b).toEqual(a);
+  });
+});

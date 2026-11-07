@@ -10,3 +10,5 @@ production/session-state/
 .claude/agent-memory/
 .claude/worktrees/
 docs/consistency-failures.md
+node_modules/
+game/dist/

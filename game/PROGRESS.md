@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **80** (next balance pass at iteration 85)
+Iteration counter: **81** (next balance pass at iteration 85)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -580,13 +580,20 @@ Iteration counter: **80** (next balance pass at iteration 85)
   forcing either branch or thinking slower moves it by at most one seed in 12 (`expert.ts` probe). New guard-rail test:
   the expert must win every region finale in at least 2 of 3 seeds, so a change that makes a boss unbeatable fails CI
   (adds ~7 s). Screenshot `80.png`. 160 tests.
+- [x] **Iter 81 — Brasswork finale: Heart of the Engine (level 45) + Grindmaw, the Engine Titan.** New boss (42
+  enemies) from the region's traits: a wide `jam` aura (180 px, 30% slower fire), slow `harden` (+0.3% armor per hit,
+  up to 70%), a Steamrunner `spawner`, and four phases (cogjammers → steam shield + rivetshells → every boiler at once →
+  a grind for the gate). Level 45: west + south roads (920 / 680 px) merge into a 1,240 px tail, 12 pads, 18 waves,
+  hpMult 1.58. Achievements **Engine Breaker** and **Master Tinker** (28 total); Grindmaw joins the endless boss
+  rotation. Region 9 complete: 45 levels. Screenshot `81.png`. 160 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 9 finale (level 45) with a Brasswork boss.
-2. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+1. A story card after the Ruins and Brasswork bosses (short ending text like the Emberdeep one).
+2. Region 10 (levels 46–50): a new biome, enemies and boss, following the region recipe.
+3. Refresh the playable demo artifact with the latest build.
 
 ## Known Bugs
 - (none known)
@@ -607,6 +614,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 81:** 45 Heart of the Engine 83/67/8 at hpMult 1.58 (1.5 → 83/83/17, 1.61 → 75/67/0, 1.65 → 50/58/0,
+1.8 → 0/33/0).
 **Iteration 79:** 44 Foundry Crossroads 83/83/0 at hpMult 1.39 (1.2 → 100/100/33, 1.36 → 83/100/0, 1.45 → 75/83/0,
 1.55 → 42/67/0). The expert trails casual here: likely its branch picks vs. Rivetshells/Cogjammers; check in iter 80.
 **Iteration 78:** 43 Gearwell Shafts 83/83/17 at hpMult 1.42 (1.3 → 100/100/42, 1.5 → 75/58/0, 1.7 → 25/0/0). After

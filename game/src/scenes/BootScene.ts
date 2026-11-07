@@ -304,6 +304,41 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'grindmaw': {
+        // engine titan: a riveted furnace body on piston legs, a glowing grate mouth, twin smokestacks and a big flywheel
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.6, 0.6]) {
+          g.fillStyle(0x7a7a84, 1);
+          g.fillRect(cx + lx * r - r * 0.15, cy + r * 0.45, r * 0.3, r * 0.6);
+          g.strokeRect(cx + lx * r - r * 0.15, cy + r * 0.45, r * 0.3, r * 0.6);
+        }
+        for (const sx of [-0.45, 0.45]) {
+          g.fillStyle(0x5a5a64, 1);
+          g.fillRect(cx + sx * r - r * 0.12, cy - r * 1.2, r * 0.24, r * 0.5);
+          g.strokeRect(cx + sx * r - r * 0.12, cy - r * 1.2, r * 0.24, r * 0.5);
+        }
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.95, cy - r * 0.75, r * 1.9, r * 1.3, 10);
+        g.strokeRoundedRect(cx - r * 0.95, cy - r * 0.75, r * 1.9, r * 1.3, 10);
+        g.fillStyle(0x8a6a2a, 1);
+        for (let k = 0; k < 10; k++) {
+          const a0 = (k / 10) * Math.PI * 2;
+          g.fillRect(cx + r * 0.95 + Math.cos(a0) * r * 0.42 - r * 0.07, cy - r * 0.1 + Math.sin(a0) * r * 0.42 - r * 0.07, r * 0.14, r * 0.14);
+        }
+        g.fillStyle(0xe8c070, 1);
+        g.fillCircle(cx + r * 0.95, cy - r * 0.1, r * 0.36);
+        g.strokeCircle(cx + r * 0.95, cy - r * 0.1, r * 0.36);
+        g.fillStyle(0x2a2a30, 1);
+        g.fillRoundedRect(cx - r * 0.55, cy - r * 0.15, r * 1.0, r * 0.45, 4);
+        g.fillStyle(0xff8a3c, 1);
+        for (let k = 0; k < 4; k++) g.fillRect(cx - r * 0.48 + k * r * 0.24, cy - r * 0.1, r * 0.14, r * 0.35);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.48, r * 0.1);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.48, r * 0.1);
+        g.fillStyle(0x3a3a3a, 1);
+        for (const [dx, dy] of [[-0.8, -0.6], [0.6, -0.6], [-0.8, 0.4], [0.5, 0.4]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.05);
+        break;
+      }
       case 'rivetshell': {
         // clockwork armadillo: banded steel shell studded with rivets, small snout, stubby legs
         g.lineStyle(2.5, C.ink, 1);

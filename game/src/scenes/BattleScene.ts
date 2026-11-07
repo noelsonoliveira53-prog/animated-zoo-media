@@ -1398,6 +1398,13 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'crack': {
+        sfx.trait('crack');
+        this.particles.setParticleTint(0xc87a4a);
+        this.particles.explode(8, ev.enemy.pos.x, ev.enemy.pos.y - 8);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Crack!', '#f0b080', 14);
+        break;
+      }
       case 'mirage': {
         sfx.trait('mirage');
         const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 22, 0xfff4d8, 0.3).setDepth(2450);

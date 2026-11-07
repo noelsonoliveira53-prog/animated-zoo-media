@@ -55,6 +55,7 @@ export interface EnemyDef {
   bolt?: { interval: number; range: number; duration: number }; // calls lightning on the nearest tower in range, stunning it
   ground?: { radius: number; share: number }; // takes `share` of the damage aimed at allies within radius onto itself
   mirage?: { into: string; count: number }; // when first hit, leaves `count` decoys (`into`) behind it
+  crust?: { max: number; perSec: number }; // armor builds by perSec while unhit (up to +max); any hit cracks it back to base
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)

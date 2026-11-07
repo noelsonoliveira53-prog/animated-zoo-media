@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **106** (next balance pass at iteration 110)
+Iteration counter: **107** (next balance pass at iteration 110)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -747,13 +747,20 @@ Iteration counter: **106** (next balance pass at iteration 110)
   - **Level 61 Mirage Flats:** two roads of equal length (≈1,960px) merging at the south loop, 11 pads, 15 waves,
     hpMult 1.75.
   - Browser check `scripts/dunes-check.mjs`. Field Guide now 58/60 per two pages. 181 tests.
+- **Iteration 107**: third Sunscour enemy, the **Kilnback** (new `crust` trait).
+  - A desert tortoise whose glazed clay shell gains +15% armor per second while unhit (after 0.4s), up to +60%.
+    The next hit lands against the thick crust, then cracks it back to base ("Crack!", clay chips, a dry snap).
+  - Rewards steady fire; punishes waiting for a big shot.
+  - Level 62 **Kilnstone Wash**: two west roads (y=560 and y=300) merge into one long serpentine through the dry
+    wash, 11 pads, 15 waves, hpMult 2.05.
+  - Endless adds Kilnback from wave 54. 182 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 13 level 62 (+ third Sunscour enemy), 63–64, finale 65 with a boss + story card + achievements.
+2. Region 13 levels 63–64, finale 65 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -764,6 +771,8 @@ Iteration counter: **106** (next balance pass at iteration 110)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 107**: 62 Kilnstone Wash went 100/92/0 at hpMult 1.8, 100/100/0 at 1.92 and 2.0, 100/75/0 at 2.1, and **2.05 → 100/92/0** (kept; a steep curve).
+
 **Iteration 106**: 61 Mirage Flats went 100/100/0 at hpMult 2.1, 100/100/8 at 1.9, and **1.75 → 100/100/42** (kept, the opener target).
 
 **Iteration 105**:

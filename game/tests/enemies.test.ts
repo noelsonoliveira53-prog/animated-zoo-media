@@ -701,4 +701,17 @@ describe('Sunscour enemies', () => {
     for (let i = 0; i < 60; i++) sim.update(1 / 60);
     expect(sim.coins).toBe(0);
   });
+
+  it('a Kilnback bakes armor while unhit (capped) and any hit cracks it back to base', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const k = sim.spawn('kilnback', 0, 300);
+    k.def = { ...k.def, speed: 0 };
+    const c = k.def.crust!;
+    for (let i = 0; i < 60 * 20; i++) sim.update(1 / 60);
+    expect(k.armor).toBeCloseTo(k.def.armor + c.max);
+    (sim as any).applyDamage(k, 5);
+    expect(k.armor).toBe(k.def.armor);
+    expect(sim.drainEvents().some((e) => e.type === 'crack')).toBe(true);
+  });
 });

@@ -96,6 +96,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.shock) tags.push(`Shocks every ${e.shock.interval}s: soldiers and heroes within ${e.shock.radius}px are stunned ${e.shock.duration}s`);
         if (e.fortify) tags.push(`Bark-song: allies within ${e.fortify.radius}px gain +${Math.round(e.fortify.bonus * 100)}% armor`);
         if (e.bolt) tags.push(`Calls lightning every ${e.bolt.interval}s: the nearest tower within ${e.bolt.range}px is stunned ${e.bolt.duration}s`);
+        if (e.crust) tags.push(`Sunbaked shell: armor builds to +${Math.round(e.crust.max * 100)}% while unhit; any hit cracks it`);
         if (e.mirage) tags.push(`First hit: sheds ${e.mirage.count} decoy copies that are worth nothing and cost no lives`);
         if (e.pilfer) tags.push(`Thief: steals ${e.pilfer} coins (more on tougher levels) if it gets through`);
         if (e.bounty === 0 && e.livesCost === 0) tags.push('A decoy: worth nothing, harmless at the gate');

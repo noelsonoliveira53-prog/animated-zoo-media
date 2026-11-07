@@ -175,6 +175,7 @@ export type SimEvent =
   | { type: 'bolt'; source: Enemy; tower: Tower }
   | { type: 'mirage'; enemy: Enemy; decoys: Enemy[] }
   | { type: 'pilfer'; enemy: Enemy; coins: number }
+  | { type: 'crack'; enemy: Enemy }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
@@ -938,6 +939,7 @@ export class BattleSim {
       }
       if (e.def.shock) this.tickShock(e, dt);
       if (e.def.bolt) this.tickBolt(e, dt);
+      if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
@@ -1688,6 +1690,11 @@ export class BattleSim {
       const decoys: Enemy[] = [];
       for (let k = 0; k < e.def.mirage.count; k++) decoys.push(this.spawn(e.def.mirage.into, e.path, Math.max(0, e.dist - 18 - k * 16)));
       this.events.push({ type: 'mirage', enemy: e, decoys });
+    }
+    if (e.def.crust && dmg > 0 && e.armor > e.def.armor + 0.05) {
+      // Kilnback: the baked shell cracks (this hit already met the thick crust).
+      e.armor = e.def.armor;
+      this.events.push({ type: 'crack', enemy: e });
     }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     if (e.def.harden && dmg > 0) e.armor = Math.min(e.def.harden.max, e.armor + e.def.harden.perHit);

@@ -499,6 +499,24 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.62, cy - r * 0.3, r * 0.08);
         break;
       }
+      case 'kilnback': {
+        // tortoise with a tall baked-clay shell in glazed hexagons, stubby legs, a small wise head
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.55, -0.15, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 0.85);
+        g.fillStyle(0x8a7a5a, 1);
+        g.fillCircle(cx - r * 0.85, cy + r * 0.15, r * 0.3);
+        g.strokeCircle(cx - r * 0.85, cy + r * 0.15, r * 0.3);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.05, cy, r * 1.6, r * 1.3);
+        g.strokeEllipse(cx + r * 0.05, cy, r * 1.6, r * 1.3);
+        g.lineStyle(1.8, 0x7a3a1a, 1);
+        for (const [hx, hy] of [[-0.35, -0.15], [0.1, -0.3], [0.5, -0.1], [-0.1, 0.2], [0.35, 0.25]]) g.strokeCircle(cx + hx * r, cy + hy * r, r * 0.2);
+        g.fillStyle(0xffe0a0, 0.6);
+        g.fillEllipse(cx - r * 0.2, cy - r * 0.4, r * 0.4, r * 0.15);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.95, cy + r * 0.08, r * 0.06);
+        break;
+      }
       case 'thrumhorn': {
         // colossal storm bull: dark shaggy hump, huge forward horns crackling with sparks, a little thundercloud on its back
         g.lineStyle(3, C.ink, 1);

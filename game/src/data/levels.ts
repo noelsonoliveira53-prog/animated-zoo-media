@@ -7,6 +7,7 @@ const DEN = { grass: 0x3f6b48, grassDark: 0x325a3c, road: 0x8a7a5a, roadEdge: 0x
 const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0x77808a, trees: [0x2f5a4a, 0x3a6a58, 0x2a4f42], snow: true };
 const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
 const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
+const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
 const FEN = { grass: 0x4f8a52, grassDark: 0x3f7446, road: 0x9c8a62, roadEdge: 0x7d6c48 };
 
 // Shared tail for Murkmaw's Den: all three roads meet at (600, 360).
@@ -1083,6 +1084,52 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'morrowcap', count: 1, interval: 1, delay: 8 }, { enemy: 'veilstalker', count: 14, interval: 0.6, path: 1 }, { enemy: 'rootrager', count: 4, interval: 3, path: 1, delay: 10 }, { enemy: 'thornhog', count: 12, interval: 0.7 }] },
     ],
   },
+  {
+    id: 'l21',
+    name: 'Wrackline Beach',
+    blurb: 'Beyond the Weald the land runs out into sandbars and tide pools. Crabs and gulls are already on the march.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.4,
+    startCoins: 900,
+    lives: 20,
+    theme: SHOAL,
+    paths: [
+      [{ x: -40, y: 360 }, { x: 300, y: 360 }, { x: 300, y: 160 }, { x: 640, y: 160 }, { x: 640, y: 560 }, { x: 980, y: 560 }, { x: 980, y: 300 }, { x: 1320, y: 300 }],
+      [{ x: 300, y: 760 }, { x: 300, y: 560 }, { x: 640, y: 560 }, { x: 980, y: 560 }, { x: 980, y: 300 }, { x: 1320, y: 300 }],
+    ],
+    slots: [
+      { x: 200, y: 260 },
+      { x: 400, y: 260 },
+      { x: 540, y: 260 },
+      { x: 740, y: 360 },
+      { x: 540, y: 460 },
+      { x: 400, y: 460 },
+      { x: 880, y: 460 },
+      { x: 1080, y: 400 },
+      { x: 1100, y: 200 },
+      { x: 200, y: 460 },
+      { x: 740, y: 660 },
+      { x: 1200, y: 400 },
+    ],
+    ponds: [{ x: 470, y: 360, w: 100, h: 56 }],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.6 }, { enemy: 'gullwing', count: 6, interval: 1.2, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'barnaclad', count: 3, interval: 3 }, { enemy: 'skitter', count: 12, interval: 0.5, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'gullwing', count: 12, interval: 0.8 }, { enemy: 'reedguard', count: 6, interval: 1.2, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'barnaclad', count: 5, interval: 2.4, path: 1 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 3 }] },
+      { groups: [{ enemy: 'thornhog', count: 7, interval: 1 }, { enemy: 'gullwing', count: 8, interval: 0.9, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'shellback', count: 8, interval: 1.1 }, { enemy: 'barnaclad', count: 4, interval: 2.5, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'splotch', count: 10, interval: 1 }, { enemy: 'gnat', count: 20, interval: 0.3, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'barnaclad', count: 6, interval: 2 }, { enemy: 'gullwing', count: 14, interval: 0.6, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4, path: 1 }, { enemy: 'wispling', count: 14, interval: 0.6 }] },
+      { groups: [{ enemy: 'gullwing', count: 20, interval: 0.45 }, { enemy: 'puffcap', count: 8, interval: 1, path: 1, delay: 6 }] },
+      { groups: [{ enemy: 'barnaclad', count: 8, interval: 1.8, path: 1 }, { enemy: 'bogmender', count: 4, interval: 2.5, path: 1, delay: 4 }, { enemy: 'thornhog', count: 12, interval: 0.7 }] },
+      { groups: [{ enemy: 'reedguard', count: 12, interval: 0.8 }, { enemy: 'gullwing', count: 16, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 3 }, { enemy: 'barnaclad', count: 8, interval: 1.6, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'gullwing', count: 24, interval: 0.4, path: 1 }, { enemy: 'shellback', count: 12, interval: 0.8 }, { enemy: 'splotch', count: 8, interval: 1, delay: 8 }] },
+      { groups: [{ enemy: 'barnaclad', count: 10, interval: 1.5 }, { enemy: 'bogbrute', count: 4, interval: 3, path: 1 }, { enemy: 'gullwing', count: 20, interval: 0.45, path: 1, delay: 4 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -1103,6 +1150,7 @@ export interface RegionDef {
   snow?: boolean;
   ember?: boolean;
   dusk?: boolean;
+  shoal?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -1110,6 +1158,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'Frostfern Highlands', first: 5, count: 5, snow: true },
   { name: 'The Emberdeep', first: 10, count: 5, ember: true },
   { name: 'The Duskcap Weald', first: 15, count: 5, dusk: true },
+  { name: 'The Saltmarrow Shoals', first: 20, count: 5, shoal: true },
 ];
 
 export function regionOf(levelIndex: number): number {

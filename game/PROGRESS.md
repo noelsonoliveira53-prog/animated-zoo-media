@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **38** (next balance pass at iteration 40)
+Iteration counter: **39** (next iteration = 40 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -313,11 +313,19 @@ Iteration counter: **38** (next balance pass at iteration 40)
   never records stars. Retry and pause → Restart stay in endless. New achievement **Unending Vigil** (25 waves; 20 total).
   New `scripts/endless-balance.ts` and `scripts/endless-check.mjs` (real click on the card's Endless button). 127 tests.
 
+- [x] **Iter 39 — Region 5 opens: The Saltmarrow Shoals.** A sandy coast of sandbars and tide pools. Two new enemy
+  mechanics (24 enemies): **Barnaclad** (`brittle`: 75% armor that drops 5 points with every hit taken, so fast towers strip
+  it; a grey crust bar shows what's left) and **Gullwing** (`swoop`: a flyer that lands for 1.6 s every 3 s, when
+  ground-only towers and soldiers can reach it; soldiers let go when it takes off). Enemies now carry runtime `armor`,
+  and all flyer checks go through `sim.airborne(e)`. Level 21 **Wrackline Beach** (2 roads, 12 pads all about 100 px
+  from a road, 15 waves), `SHOAL` theme, a shoal world-map style (shells, pebbles, dune grass, lagoon) and a lilting
+  Saltmarrow music theme. 129 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 5 (levels 21–25) with its own enemy roster.
+1. Region 5: levels 22–25 (one more enemy, and a Shoals boss for level 25).
 2. Hero #4 and a third global spell.
 3. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
@@ -339,6 +347,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Wrackline Beach (iteration 39, 6 seeds):** at 2.4 → 100/100/0 with the novice losing 72 lives to wave 5's
+Thornhogs (the same novice spike as on earlier maps). Thinned that wave → **2.4: 100% / 100% / 33%** (kept, matches
+the Duskcap opener).
 
 **Endless (iteration 38, 3 seeds, waves held expert / casual / novice):** Mossgate 18.7 / 15.7 / 16.3; Murkmaw's Den
 11.7 / 11.7 / 25.0; Frostpeak 25.3 / 12.0 / 19.7; Duskcap Verge 21.3 / 18.3 / 30.7. Runs mostly end at waves 10–30

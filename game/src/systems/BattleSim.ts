@@ -37,6 +37,9 @@ export interface Enemy {
   enraged: boolean;
   hasteTime: number; // seconds left of a spore haste
   hasteMult: number;
+  armor: number; // current armor (brittle enemies lose some on every hit)
+  landed: boolean; // swooping flyers spend part of their cycle on the ground
+  swoopCd: number;
 }
 
 export interface Soldier {
@@ -144,6 +147,7 @@ export type SimEvent =
   | { type: 'chill'; source: Enemy; towers: Tower[]; radius: number }
   | { type: 'burrow'; enemy: Enemy; down: boolean }
   | { type: 'enrage'; enemy: Enemy }
+  | { type: 'swoop'; enemy: Enemy; landed: boolean }
   | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
@@ -310,7 +314,7 @@ export class BattleSim {
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
       const hits = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
-      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', e.def));
+      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)));
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }
     this.strikes = this.strikes.filter((st) => st.timer > 0);
@@ -340,7 +344,7 @@ export class BattleSim {
     h.skillCd = sk.cooldown;
     const dmg = this.heroStat(sk.damage);
     let pool = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= sk.radius);
-    if (sk.kind === 'quake') pool = pool.filter((e) => !e.def.flying);
+    if (sk.kind === 'quake') pool = pool.filter((e) => !this.airborne(e));
     if (sk.maxTargets) {
       pool.sort((a, b) => b.dist - a.dist);
       pool = pool.slice(0, sk.maxTargets);
@@ -350,7 +354,7 @@ export class BattleSim {
         e.slowFactor = Math.min(e.slowFactor, sk.slow.factor);
         e.slowTime = Math.max(e.slowTime, sk.slow.duration);
       }
-      this.applyDamage(e, computeDamage(dmg, sk.damageType, e.def));
+      this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)));
     }
     this.events.push({ type: 'heroSkill', hero: h, hits: pool });
     return true;
@@ -433,7 +437,7 @@ export class BattleSim {
         let best: Enemy | undefined;
         let bestD = 90;
         for (const e of this.enemies) {
-          if (!e.alive || e.def.flying || e.underground) continue;
+          if (!e.alive || this.airborne(e) || e.underground) continue;
           const d = Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) + (e.blockedBy ? 40 : 0);
           if (d < bestD) {
             bestD = d;
@@ -456,14 +460,14 @@ export class BattleSim {
           h.attackCd = 1 / atk.rate;
           h.facing = target.pos.x < h.pos.x ? -1 : 1;
           this.events.push({ type: 'melee', pos: { ...target.pos } });
-          this.applyDamage(target, computeDamage(this.heroHitDamage(), atk.type, target.def));
+          this.applyDamage(target, computeDamage(this.heroHitDamage(), atk.type, this.res(target)));
         }
         return;
       }
     } else if (h.attackCd <= 0) {
       let best: Enemy | null = null;
       for (const e of this.enemies) {
-        if (!e.alive || e.underground || (e.def.flying && !atk.hitsAir)) continue;
+        if (!e.alive || e.underground || (this.airborne(e) && !atk.hitsAir)) continue;
         if (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) > atk.range) continue;
         if (!best || e.dist > best.dist) best = e;
       }
@@ -799,6 +803,9 @@ export class BattleSim {
       enraged: false,
       hasteTime: 0,
       hasteMult: 1,
+      armor: def.armor,
+      landed: false,
+      swoopCd: def.swoop ? def.swoop.interval : 0,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -820,6 +827,7 @@ export class BattleSim {
       if (e.def.chill) this.tickChill(e, dt);
       if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.def.spawner) this.tickSpawner(e, dt);
+      if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
         e.enraged = true;
         e.speedMult = Math.max(e.speedMult, e.def.enrage.speedMult);
@@ -860,6 +868,31 @@ export class BattleSim {
     if (e.spawnCd > 0) return;
     e.spawnCd = sp.interval;
     for (let i = 0; i < sp.count && e.spawned < sp.limit; i++, e.spawned++) this.spawn(sp.enemy, e.path, Math.max(0, e.dist - 12 - i * 10));
+  }
+
+  /** Flyers with `swoop` drop to the ground for a while (ground towers and soldiers can reach them), then take off. */
+  private tickSwoop(e: Enemy, dt: number): void {
+    const sw = e.def.swoop!;
+    e.swoopCd -= dt;
+    if (e.swoopCd > 0) return;
+    e.landed = !e.landed;
+    e.swoopCd = e.landed ? sw.duration : sw.interval;
+    if (!e.landed && e.blockedBy) {
+      for (const s of this.soldiers) if (s.targetUid === e.uid) s.targetUid = 0;
+      if (this.hero && this.hero.targetUid === e.uid) this.hero.targetUid = 0;
+      e.blockedBy = 0;
+    }
+    this.events.push({ type: 'swoop', enemy: e, landed: e.landed });
+  }
+
+  /** In the air right now (flyers, except while a swooper is landed). */
+  airborne(e: Enemy): boolean {
+    return !!e.def.flying && !e.landed;
+  }
+
+  /** Damage resistances, using the enemy's current armor. */
+  private res(e: Enemy): { armor: number; magicResist: number } {
+    return { armor: e.armor, magicResist: e.def.magicResist };
   }
 
   /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
@@ -955,7 +988,7 @@ export class BattleSim {
           if (s.attackCd <= 0) {
             s.attackCd = 1 / stats.attackRate;
             this.events.push({ type: 'melee', pos: { ...target.pos } });
-            this.applyDamage(target, computeDamage(stats.damage, 'physical', target.def));
+            this.applyDamage(target, computeDamage(stats.damage, 'physical', this.res(target)));
           }
         }
       } else {
@@ -969,7 +1002,7 @@ export class BattleSim {
     let best: Enemy | undefined;
     let bestScore = -Infinity;
     for (const e of this.enemies) {
-      if (!e.alive || e.def.flying || e.underground) continue;
+      if (!e.alive || this.airborne(e) || e.underground) continue;
       const d = Math.hypot(e.pos.x - rally.x, e.pos.y - rally.y);
       if (d > ENGAGE_RADIUS) continue;
       // Prefer free enemies, then the one furthest along.
@@ -1009,7 +1042,7 @@ export class BattleSim {
     let bestScore = -Infinity;
     for (const e of this.enemies) {
       if (!e.alive || e.underground) continue;
-      if (e.def.flying && !t.def.hitsAir) continue;
+      if (this.airborne(e) && !t.def.hitsAir) continue;
       const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
       if (d > range || (e.def.veil && d > e.def.veil)) continue;
       let score: number;
@@ -1046,7 +1079,7 @@ export class BattleSim {
       let best: Enemy | null = null;
       let bestScore = -Infinity;
       for (const e of this.enemies) {
-        if (!e.alive || e.underground || taken.has(e.uid) || (e.def.flying && !t.def.hitsAir)) continue;
+        if (!e.alive || e.underground || taken.has(e.uid) || (this.airborne(e) && !t.def.hitsAir)) continue;
         const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
         if (d > range || (e.def.veil && d > e.def.veil)) continue;
         if (e.dist > bestScore) {
@@ -1151,7 +1184,7 @@ export class BattleSim {
       this.events.push({ type: 'splash', pos: { ...p.lastTargetPos }, radius: p.splash, color: p.color });
       for (const e of [...this.enemies]) {
         if (!e.alive || e.underground) continue;
-        if (e.def.flying && !p.hitsAir) continue;
+        if (this.airborne(e) && !p.hitsAir) continue;
         if (Math.hypot(e.pos.x - p.lastTargetPos.x, e.pos.y - p.lastTargetPos.y) <= p.splash + e.def.radius) {
           this.damage(e, p);
         }
@@ -1167,7 +1200,7 @@ export class BattleSim {
       e.slowFactor = Math.min(e.slowFactor, p.slow.factor);
       e.slowTime = Math.max(e.slowTime, p.slow.duration);
     }
-    const armor = e.def.armor * (1 - p.pierce);
+    const armor = e.armor * (1 - p.pierce);
     this.applyDamage(e, computeDamage(p.damage, p.damageType, { armor, magicResist: e.def.magicResist }));
   }
 
@@ -1183,7 +1216,7 @@ export class BattleSim {
       let next: Enemy | null = null;
       let bestD = c.range;
       for (const e of this.enemies) {
-        if (!e.alive || e.underground || hit.has(e.uid) || (e.def.flying && !p.hitsAir)) continue;
+        if (!e.alive || e.underground || hit.has(e.uid) || (this.airborne(e) && !p.hitsAir)) continue;
         const d = Math.hypot(e.pos.x - from.pos.x, e.pos.y - from.pos.y);
         if (d < bestD) {
           bestD = d;
@@ -1193,7 +1226,7 @@ export class BattleSim {
       if (!next) break;
       hit.add(next.uid);
       points.push({ ...next.pos });
-      this.applyDamage(next, computeDamage(dmg, p.damageType, next.def));
+      this.applyDamage(next, computeDamage(dmg, p.damageType, this.res(next)));
       from = next;
     }
     if (points.length > 1) this.events.push({ type: 'chain', points, color: p.color });
@@ -1209,6 +1242,7 @@ export class BattleSim {
       if (e.shield <= 0) this.events.push({ type: 'shieldBreak', enemy: e });
     }
     e.hp -= left;
+    if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {
       e.alive = false;

@@ -225,6 +225,55 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'barnaclad': {
+        // crab: claws, legs, a shell heaped with pale barnacles
+        g.lineStyle(2.5, C.ink, 1);
+        for (const s of [-1, 1]) for (let k = 0; k < 3; k++) g.lineBetween(cx + s * r * 0.6, cy + r * 0.2 + k * 3, cx + s * r * 1.3, cy + r * 0.55 + k * 4);
+        g.fillStyle(color, 1);
+        for (const s of [-1, 1]) {
+          g.fillCircle(cx + s * r * 1.15, cy - r * 0.45, r * 0.38);
+          g.strokeCircle(cx + s * r * 1.15, cy - r * 0.45, r * 0.38);
+          g.fillStyle(shade, 1);
+          g.fillTriangle(cx + s * r * 1.15, cy - r * 0.45, cx + s * r * 1.55, cy - r * 0.75, cx + s * r * 1.45, cy - r * 0.25);
+          g.fillStyle(color, 1);
+        }
+        g.lineStyle(3, C.ink, 1);
+        g.fillEllipse(cx, cy, r * 2, r * 1.4);
+        g.strokeEllipse(cx, cy, r * 2, r * 1.4);
+        g.fillStyle(0xeee6d6, 1);
+        g.lineStyle(1.5, C.ink, 0.8);
+        for (const [dx, dy, rr] of [[-0.45, -0.25, 0.22], [0.05, -0.4, 0.26], [0.5, -0.15, 0.2], [-0.1, 0.1, 0.18], [0.35, 0.25, 0.15]]) {
+          g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
+          g.strokeCircle(cx + dx * r, cy + dy * r, r * rr);
+        }
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.25, cy + r * 0.45, r * 0.09);
+        g.fillCircle(cx + r * 0.25, cy + r * 0.45, r * 0.09);
+        break;
+      }
+      case 'gullwing': {
+        // gull: white body, grey swept wings, yellow beak
+        g.fillStyle(0xb8c0c8, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx - r * 0.2, cy - r * 0.1, cx - r * 1.8, cy - r * 0.7, cx - r * 1.1, cy + r * 0.3);
+        g.fillTriangle(cx + r * 0.2, cy - r * 0.1, cx + r * 1.8, cy - r * 0.7, cx + r * 1.1, cy + r * 0.3);
+        g.strokeTriangle(cx - r * 0.2, cy - r * 0.1, cx - r * 1.8, cy - r * 0.7, cx - r * 1.1, cy + r * 0.3);
+        g.strokeTriangle(cx + r * 0.2, cy - r * 0.1, cx + r * 1.8, cy - r * 0.7, cx + r * 1.1, cy + r * 0.3);
+        g.fillStyle(0x3a3a3a, 1);
+        g.fillTriangle(cx - r * 1.5, cy - r * 0.6, cx - r * 1.8, cy - r * 0.7, cx - r * 1.55, cy - r * 0.35);
+        g.fillTriangle(cx + r * 1.5, cy - r * 0.6, cx + r * 1.8, cy - r * 0.7, cx + r * 1.55, cy - r * 0.35);
+        g.fillStyle(color, 1);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillEllipse(cx, cy, r * 1.3, r * 1.1);
+        g.strokeEllipse(cx, cy, r * 1.3, r * 1.1);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.45, r * 0.45);
+        g.strokeCircle(cx + r * 0.45, cy - r * 0.45, r * 0.45);
+        g.fillStyle(0xffc93c, 1);
+        g.fillTriangle(cx + r * 0.8, cy - r * 0.5, cx + r * 0.8, cy - r * 0.3, cx + r * 1.25, cy - r * 0.4);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx + r * 0.55, cy - r * 0.55, r * 0.09);
+        break;
+      }
       case 'puffcap': {
         // round spotted cap on a stubby stem with little feet; spore puffs around it
         g.fillStyle(0xffd0f0, 0.35);

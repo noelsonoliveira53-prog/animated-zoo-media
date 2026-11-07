@@ -32,7 +32,7 @@ export class WorldMapScene extends Phaser.Scene {
     const reg = REGIONS[this.region];
     const inRegion = LEVELS.map((_, i) => i).filter((i) => regionOf(i) === this.region);
 
-    this.drawLand(reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
+    this.drawLand(reg.shoal ? 'shoal' : reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
     this.drawTrail(save.stars, inRegion);
     inRegion.forEach((i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[LEVELS[i].id] ?? 0));
     // Placeholders for levels still to come in this region.
@@ -87,20 +87,29 @@ export class WorldMapScene extends Phaser.Scene {
     this.tweens.add({ targets: t, alpha: 0, delay: 1600, duration: 400, onComplete: () => t.destroy() });
   }
 
-  private drawLand(style: 'meadow' | 'snow' | 'ember' | 'dusk'): void {
+  private drawLand(style: 'meadow' | 'snow' | 'ember' | 'dusk' | 'shoal'): void {
+    const shoal = style === 'shoal';
     const snow = style === 'snow';
     const ember = style === 'ember';
     const dusk = style === 'dusk';
     const g = this.add.graphics();
-    g.fillStyle(dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
+    g.fillStyle(shoal ? 0x1f6a80 : dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
     g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
     // main island
-    g.fillStyle(dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
+    g.fillStyle(shoal ? 0xf0e2b8 : dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.02, GAME_H * 0.98);
-    g.fillStyle(dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
+    g.fillStyle(shoal ? 0xdcc898 : dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 0.98, GAME_H * 0.92);
     // regions
-    const regions: [number, number, number, number, number][] = dusk
+    const regions: [number, number, number, number, number][] = shoal
+      ? [
+          [0xe6d4a4, 230, 560, 420, 260],
+          [0xd2bf8c, 480, 420, 320, 230],
+          [0xc8b482, 760, 300, 340, 240],
+          [0x8fc8b8, 1020, 420, 320, 220],
+          [0xb8a678, 1100, 200, 340, 240],
+        ]
+      : dusk
       ? [
           [0x56688a, 230, 560, 420, 260],
           [0x4e5c80, 480, 420, 320, 230],
@@ -136,7 +145,7 @@ export class WorldMapScene extends Phaser.Scene {
       g.fillEllipse(x, y, w, h);
     }
     // lake (frozen in the highlands)
-    g.fillStyle(dusk ? 0x7ad8c8 : ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
+    g.fillStyle(shoal ? 0x4ac0d8 : dusk ? 0x7ad8c8 : ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
     g.fillEllipse(900, 520, 200, 90);
     g.fillStyle(0xffffff, 0.4);
     g.fillEllipse(870, 505, 60, 14);
@@ -148,6 +157,23 @@ export class WorldMapScene extends Phaser.Scene {
       if (LEVELS.some((l, i) => regionOf(i) === this.region && Math.hypot(l.mapPos.x - x, l.mapPos.y - y) < 70)) continue;
       if (Math.hypot((x - 900) / 110, (y - 520) / 55) < 1) continue;
       const dark = x > 960 && y < 380;
+      if (shoal) {
+        // shells, pebbles and the odd tuft of dune grass
+        const k = rnd.between(0, 2);
+        if (k === 0) {
+          g.fillStyle(0xf6e6d0, 1);
+          g.fillTriangle(x - 6, y + 4, x + 6, y + 4, x, y - 6);
+          g.fillStyle(0xe0a890, 1);
+          g.fillCircle(x, y + 2, 2);
+        } else if (k === 1) {
+          g.fillStyle(0x9a8a74, 1);
+          g.fillCircle(x, y, rnd.between(3, 6));
+        } else {
+          g.lineStyle(2, 0x6a9a5a, 1);
+          for (let q = -1; q <= 1; q++) g.lineBetween(x + q * 3, y + 6, x + q * 5, y - 8);
+        }
+        continue;
+      }
       if (dusk) {
         // glowing mushrooms
         g.fillStyle(0xe8dcc8, 1);
@@ -183,9 +209,9 @@ export class WorldMapScene extends Phaser.Scene {
     // the trail's starting point
     g.fillStyle(0x9a6a40, 1);
     g.fillRect(60, 600, 60, 40);
-    g.fillStyle(dusk ? 0x8a5ab8 : ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
+    g.fillStyle(shoal ? 0x4a8ab8 : dusk ? 0x8a5ab8 : ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
     g.fillTriangle(50, 604, 130, 604, 90, 570);
-    this.add.text(90, 692, dusk ? 'Ember Gate' : ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
+    this.add.text(90, 692, shoal ? 'Weald Edge' : dusk ? 'Ember Gate' : ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
   }
 
   private drawTrail(stars: Record<string, number>, indices: number[]): void {

@@ -17,12 +17,12 @@ page.on('pageerror', (e) => errors.push(String(e)));
 // Unlock through level 15 so region 4 is open.
 await page.addInitScript(() => {
   const stars = {};
-  for (let i = 1; i <= 15; i++) stars['l' + i] = 3;
+  for (let i = 1; i <= 20; i++) stars['l' + i] = 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars }));
 });
 await page.goto('http://localhost:4322/');
 await page.waitForTimeout(1000);
-await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('WorldMap', { region: 3 }));
+await page.evaluate((r) => window.__game.scene.getScene('Menu').scene.start('WorldMap', { region: r }), Number(process.env.REGION ?? 3));
 await page.waitForTimeout(1200);
 await page.screenshot({ path: `screenshots/${name}-map.png` });
 await page.evaluate(() => window.__game.scene.getScene('WorldMap').scene.start('Battle', { levelIndex: 15 }));

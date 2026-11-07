@@ -243,3 +243,37 @@ describe('puffcap spores', () => {
     expect(hasted).toBeGreaterThan((near.dist - d1) * 1.4);
   });
 });
+
+describe('shoal enemies', () => {
+  it('Barnaclad armor chips away with every hit, down to zero', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const b = sim.spawn('barnaclad', 0, 100);
+    expect(b.armor).toBe(ENEMIES.barnaclad.armor);
+    for (let i = 0; i < 5; i++) (sim as any).applyDamage(b, 1);
+    expect(b.armor).toBeCloseTo(ENEMIES.barnaclad.armor - 5 * ENEMIES.barnaclad.brittle!);
+    for (let i = 0; i < 40; i++) (sim as any).applyDamage(b, 1);
+    expect(b.armor).toBe(0);
+    expect(ENEMIES.mudling.brittle).toBeUndefined();
+  });
+  it('Gullwings land on a cycle, and only then can ground-only towers hit them', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 300, y: 40 }] };
+    const sim = new BattleSim(l2);
+    const t = sim.build(0, 'boulder')!; // artillery: cannot hit air
+    expect(t.def.hitsAir).toBeFalsy();
+    sim.status = 'running';
+    const g = sim.spawn('gullwing', 0, 300);
+    g.def = { ...g.def, speed: 0 };
+    expect(sim.airborne(g)).toBe(true);
+    const sw = ENEMIES.gullwing.swoop!;
+    for (let i = 0; i < 60 * (sw.interval - 0.2); i++) sim.update(1 / 60);
+    expect(g.hp).toBe(g.maxHp); // still flying: artillery ignored it
+    for (let i = 0; i < 60 * 0.4; i++) sim.update(1 / 60);
+    expect(g.landed).toBe(true);
+    expect(sim.airborne(g)).toBe(false);
+    for (let i = 0; i < 60 * (sw.duration - 0.3); i++) sim.update(1 / 60);
+    expect(g.hp).toBeLessThan(g.maxHp);
+    for (let i = 0; i < 60 * 0.6; i++) sim.update(1 / 60);
+    expect(g.landed).toBe(false);
+  });
+});

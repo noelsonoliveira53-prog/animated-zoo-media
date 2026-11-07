@@ -28,6 +28,7 @@ interface EnemyView {
   bob: number;
   shadow: Phaser.GameObjects.Ellipse | null;
   mound: Phaser.GameObjects.Image | null;
+  air: number; // 0 = on the ground, 1 = flying height (eases for swooping flyers)
 }
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
@@ -1089,6 +1090,12 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hasted.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, `Spores! ×${ev.hasted.length}`, '#ffc0e8', 16);
         break;
       }
+      case 'swoop':
+        if (ev.landed) {
+          this.particles.setParticleTint(0xe8f4ff);
+          this.particles.explode(8, ev.enemy.pos.x, ev.enemy.pos.y);
+        }
+        break;
       case 'enrage':
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Enraged!', TEXT.heart, 18);
         this.particles.setParticleTint(0xff5d4a);
@@ -1194,7 +1201,7 @@ export class BattleScene extends Phaser.Scene {
     const bar = this.add.graphics();
     const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
     const mound = e.def.burrow ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound });
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0 });
   }
 
   private killView(uid: number, v: EnemyView): void {
@@ -1211,9 +1218,11 @@ export class BattleScene extends Phaser.Scene {
       if (!v) continue;
       v.bob += dt * (6 + (e.def.speed * e.speedMult) / 20) * (e.blockedBy ? 0.5 : 1);
       const prevX = v.sprite.x;
-      const lift = e.def.flying ? 34 + Math.sin(v.bob * 0.7) * 5 : Math.abs(Math.sin(v.bob)) * 4;
+      const airborne = this.sim.airborne(e);
+      v.air = Phaser.Math.Clamp(v.air + (airborne ? dt : -dt) * 3, 0, 1);
+      const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * Math.abs(Math.sin(v.bob)) * 4;
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
-      if (e.def.flying) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
+      if (airborne) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
       else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
@@ -1234,24 +1243,31 @@ export class BattleScene extends Phaser.Scene {
         }
       }
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
-      v.sprite.setDepth(e.def.flying ? e.pos.y + 1000 : e.pos.y);
+      v.sprite.setDepth(v.air > 0.5 ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
       if (e.def.boss) continue; // boss uses the big HUD bar
       if (e.hp < e.maxHp || e.shield > 0) {
         const w = Math.max(24, e.def.radius * 2.4);
         const x = e.pos.x - w / 2;
-        const y = e.pos.y - e.def.radius - 14 - (e.def.flying ? 34 : 0);
+        const y = e.pos.y - e.def.radius - 14 - 34 * v.air;
         if (e.shield > 0) {
           v.bar.fillStyle(C.ink, 0.85);
           v.bar.fillRect(x - 1, y - 7, w + 2, 6);
           v.bar.fillStyle(0xe8d27a, 1);
           v.bar.fillRect(x, y - 6, w * (e.shield / Math.max(1, e.maxShield)), 4);
         }
+        if (e.def.brittle && e.def.armor > 0) {
+          // Brittle crust: a grey bar that wears down as hits land.
+          v.bar.fillStyle(C.ink, 0.85);
+          v.bar.fillRect(x - 1, y + 6, w + 2, 4);
+          v.bar.fillStyle(0xc8c0b4, 1);
+          v.bar.fillRect(x, y + 7, w * (e.armor / e.def.armor), 2);
+        }
         v.bar.fillStyle(C.ink, 0.85);
         v.bar.fillRect(x - 1, y - 1, w + 2, 7);
         v.bar.fillStyle(e.hp / e.maxHp > 0.4 ? 0x7be35a : 0xff5d4a, 1);
         v.bar.fillRect(x, y, w * Math.max(0, e.hp / e.maxHp), 5);
-        v.bar.setDepth(e.def.flying ? e.pos.y + 1000.5 : e.pos.y + 0.5);
+        v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
     }
     this.syncSoldiers();

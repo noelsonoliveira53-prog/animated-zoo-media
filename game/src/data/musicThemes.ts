@@ -44,6 +44,9 @@ export const THEMES: ThemeDef[] = [
   // Emberdeep: low, driving, stabbing falling figure.
   { id: 'ember', name: 'Emberdeep', transpose: -3, tempo: 1.08, arpWave: 'square', leadWave: 'sawtooth',
     motif: [[12, 0, 3], [12, 3, 1], [11, 4, 4], [8, 8, 3], [7, 11, 1], [8, 12, 4], [3, 16, 6], [7, 24, 8]] },
+  // Saltmarrow Shoals: a rolling, lilting tune with a square-wave whistle.
+  { id: 'shoal', name: 'Saltmarrow', transpose: 3, tempo: 1.04, arpWave: 'triangle', leadWave: 'square',
+    motif: [[12, 0, 3], [16, 3, 3], [19, 6, 6], [17, 12, 3], [16, 15, 3], [14, 18, 6], [12, 24, 8]] },
   // Duskcap Weald: hushed, drifting, a little uneasy (whole-tone steps).
   { id: 'dusk', name: 'Duskcap', transpose: 1, tempo: 0.94, arpWave: 'triangle', leadWave: 'sine',
     motif: [[14, 0, 4], [16, 4, 4], [18, 8, 6], [16, 14, 2], [12, 16, 4], [10, 20, 4], [12, 24, 8]] },

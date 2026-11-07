@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **10** (next balance pass at iteration 15)
+Iteration counter: **11** (next balance pass at iteration 15)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -95,17 +95,22 @@ Iteration counter: **10** (next balance pass at iteration 15)
   Polish: real **pause menu** (Resume / Restart / Sound on-off / Quit to Map; Esc toggles it).
   Guard rails updated (late levels winnable but not guaranteed). 71 tests.
 
+- [x] **Iter 11** — **More village → battle perks.** `battlePerks()` now returns tower damage (Defense
+  Workshop +5%/lvl), **starting coins** (Grove Hall +40 per level above 1) and **Ranger strength** (Ranger
+  Lodge: Grove Call Rangers +25% hp/damage per level). **Hero training**: spend Glowsap on the menu's hero
+  card (300/800/1600/3000/5000) to raise a hero's rank; rank N heroes start every battle at level N+1
+  (persisted in `heroRanks`). Battles open with a "Village bonuses" banner listing what's active; building
+  panels describe their battle bonus. 2 new tests (73 total).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. More village → battle perks: Grove Hall level = +start coins; Ranger Lodge = Grove Call gets stronger;
-   persistent hero levels bought with Glowsap.
-2. Levels 6–15+, multi-path levels.
-3. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-4. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-5. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-6. Ambient music loop (procedural).
+1. Levels 6–15+, multi-path levels.
+2. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+3. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+4. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+5. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
@@ -115,7 +120,6 @@ Iteration counter: **10** (next balance pass at iteration 15)
 - Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
 - Pause menu with "Quit to map" / "Restart" (currently only via the end panel).
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
-- Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes
 **Iteration 10** (`balance.ts 10`, autoplayer uses spells + hero skill; novice has a hero now):

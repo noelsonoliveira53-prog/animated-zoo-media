@@ -285,6 +285,9 @@ export class VillageScene extends Phaser.Scene {
     if (cur?.produces) lines.push(`Makes ${cur.produces.perHour} ${cur.produces.resource}/hour (holds ${cur.produces.capacity}). Waiting: ${pending(b, now)}`);
     if (cur?.storage) lines.push(`Stores +${cur.storage} of each resource`);
     if (b.type === 'workshop' && b.level > 0) lines.push(`Battle bonus: towers deal +${b.level * 5}% damage`);
+    if (b.type === 'townhall' && b.level > 1) lines.push(`Battle bonus: +${(b.level - 1) * 40} starting coins`);
+    if (b.type === 'townhall' && b.level === 1) lines.push('Upgrade for +40 starting coins in every battle.');
+    if (b.type === 'barracks' && b.level > 0) lines.push(`Battle bonus: Grove Call Rangers +${b.level * 25}% health and damage`);
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
     if (!lines.length) lines.push(def.blurb);
     c.add(this.add.text(-W / 2 + 140, -H / 2 + 44, lines.join('\n'), { ...textStyle(14, TEXT.cream, false), wordWrap: { width: 300 } }));

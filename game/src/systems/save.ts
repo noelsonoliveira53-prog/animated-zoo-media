@@ -6,13 +6,14 @@ export interface SaveData {
   stars: Record<string, number>; // level id -> best stars (0-3)
   hero: string; // selected hero id
   village: VillageState | null; // created on first visit
+  heroRanks: Record<string, number>; // persistent hero training (battle start level = rank + 1)
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -40,6 +41,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       stars: { ...base.stars, ...(parsed.stars ?? {}) },
       hero: typeof parsed.hero === 'string' ? parsed.hero : base.hero,
       village: parsed.village && Array.isArray(parsed.village.buildings) ? parsed.village : null,
+      heroRanks: { ...(parsed.heroRanks ?? {}) },
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {

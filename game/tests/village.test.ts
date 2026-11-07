@@ -104,16 +104,47 @@ describe('village', () => {
   });
 });
 
-import { battlePerks } from '../src/systems/village';
+import { battlePerks, trainHero, HERO_TRAIN_COSTS } from '../src/systems/village';
 import { BattleSim } from '../src/systems/BattleSim';
 
 describe('village → battle perks', () => {
-  it('the Defense Workshop boosts tower damage', () => {
+  it('village buildings grant battle perks', () => {
     const v = newVillage(T0);
-    expect(battlePerks(v).towerDamageMult).toBe(1);
+    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 });
     v.buildings.push({ uid: 99, type: 'workshop', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
-    expect(battlePerks(v).towerDamageMult).toBeCloseTo(1.1);
+    v.buildings.push({ uid: 98, type: 'barracks', level: 1, col: 4, row: 0, upgradeEnds: null, lastCollect: T0 });
+    v.buildings.find((b) => b.type === 'townhall')!.level = 3;
+    const p = battlePerks(v);
+    expect(p.towerDamageMult).toBeCloseTo(1.1);
+    expect(p.bonusCoins).toBe(80);
+    expect(p.rangerMult).toBeCloseTo(1.25);
     expect(battlePerks(null).towerDamageMult).toBe(1);
+  });
+  it('heroes can be trained with glowsap up to max rank', () => {
+    const v = newVillage(T0);
+    v.glowsap = 20000;
+    const ranks: Record<string, number> = {};
+    for (let i = 0; i < 5; i++) expect(trainHero(v, ranks, 'fen').ok).toBe(true);
+    expect(ranks.fen).toBe(5);
+    expect(trainHero(v, ranks, 'fen').ok).toBe(false);
+    expect(v.glowsap).toBe(20000 - HERO_TRAIN_COSTS.reduce((a, b) => a + b, 0));
+    const poor = newVillage(T0);
+    poor.glowsap = 10;
+    expect(trainHero(poor, {}, 'fen').ok).toBe(false);
+  });
+  it('perks and hero rank flow into the battle sim', () => {
+    const lvl = {
+      id: 'x', name: 'x', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 200, lives: 5,
+      theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },
+      paths: [[{ x: 0, y: 100 }, { x: 600, y: 100 }]], slots: [],
+      waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }],
+    };
+    const sim = new BattleSim(lvl, 'bramble', { bonusCoins: 80, rangerMult: 1.5, heroLevel: 3 });
+    expect(sim.coins).toBe(280);
+    expect(sim.hero!.level).toBe(3);
+    expect(sim.hero!.maxHp).toBeGreaterThan(260);
+    sim.castSpell('grovecall', { x: 300, y: 100 });
+    expect(sim.soldiers[0].maxHp).toBe(105);
   });
   it('the sim applies the multiplier to shots', () => {
     const lvl = {

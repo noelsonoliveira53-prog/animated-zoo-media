@@ -210,8 +210,34 @@ export function formatTime(seconds: number): string {
 }
 
 /** Battle perks granted by the village. */
-export function battlePerks(v: VillageState | null): { towerDamageMult: number } {
-  if (!v) return { towerDamageMult: 1 };
-  const ws = v.buildings.find((b) => b.type === 'workshop');
-  return { towerDamageMult: 1 + 0.05 * (ws?.level ?? 0) };
+export interface BattlePerks {
+  towerDamageMult: number; // Defense Workshop: +5% per level
+  bonusCoins: number; // Grove Hall: +40 starting coins per level above 1
+  rangerMult: number; // Ranger Lodge: Grove Call Rangers +25% hp/damage per level
+}
+
+export function battlePerks(v: VillageState | null): BattlePerks {
+  if (!v) return { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
+  const lvl = (type: BuildingId) => Math.max(0, ...v.buildings.filter((b) => b.type === type).map((b) => b.level));
+  return {
+    towerDamageMult: 1 + 0.05 * lvl('workshop'),
+    bonusCoins: 40 * Math.max(0, lvl('townhall') - 1),
+    rangerMult: 1 + 0.25 * lvl('barracks'),
+  };
+}
+
+/** Glowsap cost to train a hero from `rank` to `rank + 1` (null at max). Rank r = starts battles at level r + 1. */
+export const HERO_TRAIN_COSTS = [300, 800, 1600, 3000, 5000];
+export function heroTrainCost(rank: number): number | null {
+  return HERO_TRAIN_COSTS[rank] ?? null;
+}
+
+export function trainHero(v: VillageState, ranks: Record<string, number>, heroId: string): { ok: boolean; reason?: string } {
+  const rank = ranks[heroId] ?? 0;
+  const cost = heroTrainCost(rank);
+  if (cost === null) return { ok: false, reason: 'Fully trained' };
+  if (v.glowsap < cost) return { ok: false, reason: `Needs ${cost} glowsap` };
+  v.glowsap -= cost;
+  ranks[heroId] = rank + 1;
+  return { ok: true };
 }

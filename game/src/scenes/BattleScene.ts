@@ -7,7 +7,7 @@ import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
 import { ensureVillage, loadSave, recordStars, starsForLives, writeSave } from '../systems/save';
-import { addResources, battlePerks, battleReward } from '../systems/village';
+import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
@@ -59,6 +59,7 @@ export class BattleScene extends Phaser.Scene {
   private heroLevelText!: Phaser.GameObjects.Text;
   private skillText!: Phaser.GameObjects.Text;
   private bossBar!: Phaser.GameObjects.Graphics;
+  private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
   private bossLabel!: Phaser.GameObjects.Text;
 
   constructor() {
@@ -69,7 +70,8 @@ export class BattleScene extends Phaser.Scene {
     this.levelIndex = data.levelIndex ?? 0;
     this.level = LEVELS[this.levelIndex];
     const save = loadSave();
-    this.sim = new BattleSim(this.level, save.hero, battlePerks(save.village));
+    this.perks = battlePerks(save.village);
+    this.sim = new BattleSim(this.level, save.hero, { ...this.perks, heroLevel: 1 + (save.heroRanks[save.hero] ?? 0) });
     this.heroSprite = null;
     this.heroSelected = false;
     this.speed = 1;
@@ -145,7 +147,12 @@ export class BattleScene extends Phaser.Scene {
     });
 
     this.cameras.main.fadeIn(300, 16, 38, 27);
-    this.showBanner(this.level.name, 'Build outposts on the stone pads, then call the first wave!');
+    const bonus: string[] = [];
+    if (this.perks.bonusCoins) bonus.push(`+${this.perks.bonusCoins} coins`);
+    if (this.perks.towerDamageMult > 1) bonus.push(`+${Math.round((this.perks.towerDamageMult - 1) * 100)}% tower damage`);
+    if (this.perks.rangerMult > 1) bonus.push(`Rangers +${Math.round((this.perks.rangerMult - 1) * 100)}%`);
+    if (this.sim.hero && this.sim.hero.level > 1) bonus.push(`${this.sim.hero.def.name} starts at Lv ${this.sim.hero.level}`);
+    this.showBanner(this.level.name, bonus.length ? `Village bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
   }
 
   // ---------- map ----------

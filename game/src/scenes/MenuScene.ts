@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 import { LEVELS, totalStars } from '../data/levels';
-import { loadSave, writeSave } from '../systems/save';
+import { ensureVillage, loadSave, writeSave } from '../systems/save';
+import { heroTrainCost, trainHero } from '../systems/village';
+import { HERO_MAX_LEVEL } from '../data/heroes';
 import { HEROES, HERO_ORDER } from '../data/heroes';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
@@ -86,7 +88,7 @@ export class MenuScene extends Phaser.Scene {
     const y = 470;
     const panel = this.add.graphics();
     panel.fillStyle(C.ink, 0.75);
-    panel.fillRoundedRect(x - 190, y - 130, 380, 270, 22);
+    panel.fillRoundedRect(x - 190, y - 130, 380, 320, 22);
     this.add.text(x, y - 108, 'Choose your Hero', textStyle(22, TEXT.gold)).setOrigin(0.5);
     const sprite = this.add.image(x, y - 36, 'hero_bramble').setScale(1.6);
     this.tweens.add({ targets: sprite, y: sprite.y - 6, yoyo: true, repeat: -1, duration: 800, ease: 'Sine.easeInOut' });
@@ -95,11 +97,40 @@ export class MenuScene extends Phaser.Scene {
       .text(x, y + 80, '', { ...textStyle(14, TEXT.cream, false), align: 'center', wordWrap: { width: 340 } })
       .setOrigin(0.5);
 
+    const rankText = this.add.text(x - 170, y + 152, '', textStyle(15, TEXT.gold)).setOrigin(0, 0.5);
+    const trainBtn = new Button(this, x + 95, y + 152, 'Train', {
+      width: 170,
+      height: 46,
+      fontSize: 16,
+      color: 0x9be86a,
+      onClick: () => {
+        const s = loadSave();
+        const v = ensureVillage(s);
+        const r = trainHero(v, s.heroRanks, HERO_ORDER[index]);
+        if (r.ok) {
+          writeSave(s);
+          sfx.victory();
+        } else {
+          sfx.leak();
+          this.children.getByName('trainMsg')?.destroy();
+          const t = this.add.text(x, y + 200, r.reason ?? '', textStyle(15, TEXT.heart)).setOrigin(0.5).setName('trainMsg');
+          this.tweens.add({ targets: t, alpha: 0, delay: 1200, duration: 400, onComplete: () => t.destroy() });
+        }
+        show();
+      },
+    });
+
     const show = () => {
       const h = HEROES[HERO_ORDER[index]];
       sprite.setTexture(`hero_${h.id}`);
       name.setText(`${h.name} the ${h.title}`);
       info.setText(`${h.passive.text}\n${h.active.name}: ${h.active.text}`);
+      const s = loadSave();
+      const rank = s.heroRanks[h.id] ?? 0;
+      const cost = heroTrainCost(rank);
+      rankText.setText(`Starts at Lv ${Math.min(HERO_MAX_LEVEL, rank + 1)}  ${'●'.repeat(rank)}${'○'.repeat(Math.max(0, 5 - rank))}`);
+      trainBtn.label.setText(cost === null ? 'Max rank' : `Train: ${cost} sap`);
+      trainBtn.setEnabled(cost !== null && (s.village?.glowsap ?? 600) >= cost);
     };
     const pick = (dir: number) => {
       index = (index + dir + HERO_ORDER.length) % HERO_ORDER.length;

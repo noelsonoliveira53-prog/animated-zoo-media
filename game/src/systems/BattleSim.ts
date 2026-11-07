@@ -1,6 +1,6 @@
 import type { EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, Vec2 } from '../data/types';
 import { SPELLS } from '../data/spells';
-import { HEROES, HERO_MAX_LEVEL, heroLevelMult, levelForXp } from '../data/heroes';
+import { HEROES, HERO_MAX_LEVEL, HERO_XP, heroLevelMult, levelForXp } from '../data/heroes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, sellValue, towerStats } from '../data/towers';
 import { Path } from './path';
@@ -177,11 +177,19 @@ export class BattleSim {
   /** Multiplier on tower shot damage (from the village Defense Workshop). */
   towerDamageMult = 1;
 
-  constructor(level: LevelDef, heroId: string | null = null, opts: { towerDamageMult?: number } = {}) {
+  /** Multiplier on Grove Call Rangers' hp and damage (from the village Ranger Lodge). */
+  rangerMult = 1;
+
+  constructor(
+    level: LevelDef,
+    heroId: string | null = null,
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number } = {},
+  ) {
     this.level = level;
     this.towerDamageMult = opts.towerDamageMult ?? 1;
+    this.rangerMult = opts.rangerMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
-    this.coins = level.startCoins;
+    this.coins = level.startCoins + (opts.bonusCoins ?? 0);
     this.lives = level.lives;
     this.towers = level.slots.map(() => null);
     if (heroId && HEROES[heroId]) {
@@ -203,6 +211,13 @@ export class BattleSim {
         targetUid: 0,
         facing: -1,
       };
+      // Trained heroes start the battle at a higher level.
+      const start = Math.max(1, Math.min(HERO_MAX_LEVEL, opts.heroLevel ?? 1));
+      if (start > 1) {
+        this.hero.level = start;
+        this.hero.xp = HERO_XP[start - 1];
+        this.hero.maxHp = this.hero.hp = Math.round(def.hp * heroLevelMult(start));
+      }
     }
   }
 
@@ -231,7 +246,8 @@ export class BattleSim {
       if (!best || best.distance > 60) return false;
       const anchor = { ...best.point };
       for (let i = 0; i < (def.count ?? 1); i++) {
-        const stats = def.soldier!;
+        const base = def.soldier!;
+        const stats = { ...base, hp: Math.round(base.hp * this.rangerMult), damage: base.damage * this.rangerMult };
         const home = this.formation(anchor, i);
         this.soldiers.push({
           uid: this.nextUid++,

@@ -75,6 +75,9 @@ export class WorldMapScene extends Phaser.Scene {
       }).setDepth(101);
     }
 
+    // Jump straight to any region you've reached (15+ regions make the arrows slow going).
+    new Button(this, GAME_W - 100, 40, 'Regions', { width: 160, height: 50, fontSize: 22, color: 0xff9f43, onClick: () => this.openRegionPicker() }).setDepth(101);
+
     this.input.on('pointerdown', () => this.closePanel());
     this.cameras.main.fadeIn(250, 16, 38, 27);
 
@@ -509,6 +512,60 @@ export class WorldMapScene extends Phaser.Scene {
     });
     // Pulse the next level to play.
     if (unlocked && stars === 0) this.tweens.add({ targets: c, scale: 1.1, yoyo: true, repeat: -1, duration: 600, ease: 'Sine.easeInOut' });
+  }
+
+  /** A grid of every region: unlocked ones show their stars and jump there; locked ones say what to beat. */
+  private openRegionPicker(): void {
+    this.closePanel();
+    const save = loadSave();
+    const cols = 3;
+    const rows = Math.ceil(REGIONS.length / cols);
+    const cw = 330;
+    const ch = 70;
+    const W = cols * (cw + 14) + 26;
+    const H = rows * (ch + 10) + 80;
+    const p = this.add.container(GAME_W / 2, GAME_H / 2 + 20).setDepth(250);
+    const bg = this.add.graphics();
+    bg.fillStyle(C.ink, 0.96);
+    bg.fillRoundedRect(-W / 2, -H / 2, W, H, 22);
+    p.add(bg);
+    const block = this.add.zone(0, 0, W, H).setInteractive();
+    block.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    p.add(block);
+    p.add(this.add.text(0, -H / 2 + 28, 'Choose a region', textStyle(24, TEXT.gold)).setOrigin(0.5));
+    p.add(new Button(this, W / 2 - 34, -H / 2 + 28, 'X', { width: 46, height: 40, fontSize: 20, color: C.danger, onClick: () => this.closePanel() }));
+    REGIONS.forEach((r, i) => {
+      const x = -W / 2 + 13 + cw / 2 + (i % cols) * (cw + 14);
+      const y = -H / 2 + 62 + ch / 2 + Math.floor(i / cols) * (ch + 10);
+      const open = r.first < LEVELS.length && isLevelUnlocked(r.first, save.stars);
+      const ids = LEVELS.slice(r.first, r.first + r.count).map((l) => l.id);
+      const stars = ids.reduce((n, id) => n + (save.stars[id] ?? 0), 0);
+      const card = this.add.container(x, y);
+      const g = this.add.graphics();
+      g.fillStyle(i === this.region ? 0x3f6a3a : open ? C.panelLight : 0x333b35, 1);
+      g.fillRoundedRect(-cw / 2, -ch / 2, cw, ch, 12);
+      if (i === this.region) {
+        g.lineStyle(3, C.gold, 1);
+        g.strokeRoundedRect(-cw / 2, -ch / 2, cw, ch, 12);
+      }
+      card.add(g);
+      const name = this.add.text(-cw / 2 + 14, -14, r.name.replace(/^The /, ''), textStyle(18, open ? TEXT.cream : TEXT.dim)).setOrigin(0, 0.5);
+      if (name.width > cw - 28) name.setScale((cw - 28) / name.width);
+      card.add(name);
+      card.add(this.add.text(-cw / 2 + 14, 14, open ? `${stars} / ${ids.length * 3} stars` : 'Locked', textStyle(pf(14), open ? TEXT.gold : TEXT.dim, false)).setOrigin(0, 0.5));
+      card.setSize(cw, ch).setInteractive({ useHandCursor: open });
+      card.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+        ev.stopPropagation();
+        if (!open) {
+          this.toast(r.first < LEVELS.length ? `Beat ${LEVELS[r.first - 1].name} to reach ${r.name}` : `${r.name} is coming soon`);
+          return;
+        }
+        sfx.click();
+        this.scene.restart({ region: i });
+      });
+      p.add(card);
+    });
+    this.panel = p;
   }
 
   private closePanel(): void {

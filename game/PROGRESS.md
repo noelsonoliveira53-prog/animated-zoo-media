@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **127** (next balance pass at iteration 130)
+Iteration counter: **128** (next balance pass at iteration 130)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -895,6 +895,13 @@ Iteration counter: **127** (next balance pass at iteration 130)
 
   Also: achievements `boss_dreadmast` (Admiral of the Grove) and `flotilla_stars` (Old Salt), story card "The Black
   Sails Fall", and Dreadmast joins the endless boss rotation. 189 tests.
+- **Iteration 128** (QoL): world-map **region picker**. With 15 regions, the "<" and ">" arrows meant up to 14 taps,
+  so a new "Regions" button (top right) opens a 3-column grid of every region:
+  - Unlocked regions show their stars (x / 15) and jump straight there.
+  - The current region is highlighted with a gold outline.
+  - Locked regions say which level to beat (or "coming soon").
+
+  The arrows still work. Browser check `scripts/region-picker-check.mjs`. 189 tests.
 
 ## In Progress
 - (none)

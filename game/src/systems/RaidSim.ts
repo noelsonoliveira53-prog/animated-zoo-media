@@ -14,6 +14,7 @@ export interface Troop {
   targetUid: number;
   wallUid: number; // wall currently blocking this troop
   attackCd: number;
+  healCd: number;
 }
 
 export type RaidEvent =
@@ -24,6 +25,7 @@ export type RaidEvent =
   | { type: 'destroyed'; building: CampBuilding; loot: { coins: number; glowsap: number } }
   | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding }
   | { type: 'mend'; from: CampBuilding; healed: CampBuilding[] }
+  | { type: 'troopHeal'; troop: Troop; healed: Troop[] }
   | { type: 'end'; stars: number };
 
 export class RaidSim {
@@ -91,7 +93,7 @@ export class RaidSim {
     const def = TROOPS[id];
     this.army[id]--;
     this.deployed[id] = (this.deployed[id] ?? 0) + 1;
-    const t: Troop = { uid: this.nextUid++, def, pos: { ...p }, hp: def.hp, maxHp: def.hp, alive: true, targetUid: 0, wallUid: 0, attackCd: 0.3 };
+    const t: Troop = { uid: this.nextUid++, def, pos: { ...p }, hp: def.hp, maxHp: def.hp, alive: true, targetUid: 0, wallUid: 0, attackCd: 0.3, healCd: 0.5 };
     this.troops.push(t);
     this.events.push({ type: 'deploy', troop: t });
     return t;
@@ -115,6 +117,7 @@ export class RaidSim {
   private step(dt: number): void {
     this.time += dt;
     for (const t of this.troops) if (t.alive) this.updateTroop(t, dt);
+    for (const t of this.troops) if (t.alive && t.def.heals) this.tickHeal(t, dt);
     this.updateDefenses(dt);
     this.updateMenders(dt);
     this.checkEnd();
@@ -187,6 +190,21 @@ export class RaidSim {
     } else {
       this.hurtBuilding(target, t.def.damage, t);
     }
+  }
+
+  /** Toad Mender: every few seconds, tops up hurt troops around it (itself included). */
+  private tickHeal(t: Troop, dt: number): void {
+    const h = t.def.heals!;
+    t.healCd -= dt;
+    if (t.healCd > 0) return;
+    t.healCd = h.interval;
+    const healed: Troop[] = [];
+    for (const o of this.troops) {
+      if (!o.alive || o.hp >= o.maxHp || Math.hypot(o.pos.x - t.pos.x, o.pos.y - t.pos.y) > h.radius) continue;
+      o.hp = Math.min(o.maxHp, o.hp + h.amount);
+      healed.push(o);
+    }
+    if (healed.length) this.events.push({ type: 'troopHeal', troop: t, healed });
   }
 
   private hurtBuilding(b: CampBuilding, dmg: number, by: Troop): void {

@@ -565,25 +565,29 @@ export class VillageScene extends Phaser.Scene {
         q ? `Training ${TROOPS[q.id].name}: ${Math.ceil((q.endsAt - Date.now()) / 1000)}s${save.trainQueue.length > 1 ? `  (+${save.trainQueue.length - 1} queued)` : ''}` : 'Lodge idle',
       );
     };
+    // Cards share the panel width evenly, so the row fits however many troop types exist.
+    const step = (W - 60) / TROOP_ORDER.length;
+    const cw = step - 8;
     TROOP_ORDER.forEach((id, i) => {
       const def = TROOPS[id];
-      const x = -W / 2 + 30 + 132 + i * 270;
+      const x = -W / 2 + 30 + step / 2 + i * step;
       const y = -H / 2 + 160;
+      const l = x - cw / 2; // card's left edge
       const locked = lodge < def.lodge;
       const card = this.add.graphics();
       card.fillStyle(locked ? 0x333b35 : C.panelLight, 1);
-      card.fillRoundedRect(x - 128, y - 70, 256, 140, 14);
+      card.fillRoundedRect(l, y - 70, cw, 140, 14);
       c.add(card);
-      c.add(this.add.image(x - 90, y - 18, `troop_${id}`).setScale(1.8));
-      c.add(this.add.text(x - 55, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)));
-      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space • ${def.trainTime}s`, textStyle(pf(13), TEXT.gold, false)));
-      c.add(this.add.text(x - 118, y + 14, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(pf(12), TEXT.dim, false), wordWrap: { width: 160 } }));
-      const n = this.add.text(x + 20, y - 8, '', textStyle(22, TEXT.gold)).setOrigin(0, 0.5);
+      c.add(this.add.image(l + 30, y - 30, `troop_${id}`).setScale(1.6));
+      c.add(fitWidth(this.add.text(l + 58, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)), cw - 64));
+      c.add(fitWidth(this.add.text(l + 58, y - 34, `${def.cost} sap • ${def.space} sp • ${def.trainTime}s`, textStyle(pf(13), TEXT.gold, false)), cw - 64));
+      c.add(this.add.text(l + 10, y + 4, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(pf(11), TEXT.dim, false), wordWrap: { width: cw - 84 } }));
+      const n = this.add.text(l + 58, y - 10, '', textStyle(20, TEXT.gold)).setOrigin(0, 0.5);
       counts.push(n);
       c.add(n);
       if (!locked) {
         c.add(
-          new Button(this, x + 92, y + 34, '+1', {
+          new Button(this, l + cw - 38, y + 40, '+1', {
             width: 64,
             height: 44,
             fontSize: 18,

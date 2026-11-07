@@ -16,6 +16,7 @@ export interface TroopDef {
   splash?: number;
   wallMult?: number; // damage multiplier against walls
   flying?: boolean;
+  heals?: { amount: number; interval: number; radius: number }; // pulses healing into nearby troops (itself included)
   lodge: number; // Ranger Lodge level required
   color: number;
 }
@@ -88,9 +89,26 @@ export const TROOPS: Record<string, TroopDef> = {
     lodge: 2,
     color: 0xc9a66b,
   },
+  mender: {
+    id: 'mender',
+    name: 'Toad Mender',
+    blurb: 'A plump old toad with a gourd of swamp-tonic. Stays behind the front line and patches everyone up.',
+    hp: 120,
+    damage: 6,
+    rate: 0.8,
+    range: 90,
+    speed: 46,
+    cost: 110,
+    space: 3,
+    trainTime: 55,
+    prefers: 'any',
+    heals: { amount: 18, interval: 1.5, radius: 95 },
+    lodge: 3,
+    color: 0x6aa84a,
+  },
 };
 
-export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'owl'];
+export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'owl', 'mender'];
 
 export interface CampBuildingDef {
   id: string;

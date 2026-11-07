@@ -1619,6 +1619,17 @@ export class BootScene extends Phaser.Scene {
       g.fillRect(13, 13, 4, 4);
       g.fillStyle(0x6a3a1a, 1);
       g.fillEllipse(15, 31, 18, 6);
+    } else if (id === 'mender') {
+      // toad: wide mouth line, a tonic gourd on its hip
+      g.lineStyle(1.5, 0x2a4a1a, 1);
+      g.lineBetween(11, 14, 19, 14);
+      g.fillStyle(0xc8a050, 1);
+      g.fillCircle(25, 22, 4);
+      g.fillCircle(25, 17, 2.5);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeCircle(25, 22, 4);
+      g.fillStyle(0x9bff8a, 1);
+      g.fillCircle(25, 22, 1.6);
     } else {
       g.fillStyle(0xffe066, 1);
       g.fillTriangle(13, 12, 17, 12, 15, 16);

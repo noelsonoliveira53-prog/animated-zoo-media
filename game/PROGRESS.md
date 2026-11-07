@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **111** (next balance pass at iteration 115)
+Iteration counter: **112** (next balance pass at iteration 115)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -775,6 +775,16 @@ Iteration counter: **111** (next balance pass at iteration 115)
   Also: achievements `boss_scourmaw` (Wyrmbane) and `dunes_stars` (Sandwalker), story card "The Sands Fall Still",
   and Scourmaw joins the endless boss rotation. The Field Guide now holds exactly 60 (two full pages); the next
   enemy opens page 3. 182 tests.
+- **Iteration 112** (raid variety): fifth raid troop, the **Toad Mender** (Ranger Lodge 3).
+  - Stats: 110 sap, 3 space, 55s training, 120 health, weak 90px spit.
+  - New `heals` trait: every 1.5s it restores 18 health to each hurt troop within 95px, itself included. It shows a
+    green pulse ring and sparkles in the raid.
+  - Code-drawn toad with a tonic gourd.
+  - The Raid panel's troop cards are now laid out responsively (row width split evenly across the troop types), so
+    five fit where four fixed 270px cards did. `scripts/raid-check.mjs` was updated to click the new +1 button
+    positions.
+
+  183 tests.
 
 ## In Progress
 - (none)

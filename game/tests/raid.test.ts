@@ -182,3 +182,21 @@ describe('Mire Shaman', () => {
     expect(n(2)).toBe(2);
   });
 });
+
+describe('Toad Mender', () => {
+  it('heals hurt troops in range (not far ones, not past full) on its timer', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'hut', col: 20, row: 12, hp: 99999, maxHp: 99999 }] };
+    const sim = new RaidSim(camp, { mender: 1, brawler: 2 });
+    const m = sim.deploy('mender', { x: 100, y: 120 })!;
+    const near = sim.deploy('brawler', { x: 130, y: 120 })!;
+    const far = sim.deploy('brawler', { x: 100, y: 600 })!;
+    for (const t of [m, near, far]) t.def = { ...t.def, speed: 0 };
+    near.hp = 50;
+    far.hp = 50;
+    const h = m.def.heals!;
+    for (let i = 0; i < Math.ceil(0.6 * 30); i++) sim.update(1 / 30);
+    expect(near.hp).toBe(50 + h.amount);
+    expect(far.hp).toBe(50);
+    expect(sim.drainEvents().some((e) => e.type === 'troopHeal')).toBe(true);
+  });
+});

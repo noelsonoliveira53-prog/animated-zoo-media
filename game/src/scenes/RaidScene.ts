@@ -228,6 +228,15 @@ export class RaidScene extends Phaser.Scene {
         sfx.trait('mend');
         break;
       }
+      case 'troopHeal': {
+        const ring = this.add.circle(ev.troop.pos.x, ev.troop.pos.y, 14, 0x9bff8a, 0.3).setDepth(5400);
+        this.tweens.add({ targets: ring, scale: 6, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        for (const o of ev.healed) {
+          this.particles.setParticleTint(0x9bff8a);
+          this.particles.explode(3, o.pos.x, o.pos.y - 10);
+        }
+        break;
+      }
       case 'troopDown': {
         const v = this.troopViews.get(ev.troop.uid);
         if (v) {

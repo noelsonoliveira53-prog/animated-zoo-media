@@ -1866,7 +1866,9 @@ export class BattleScene extends Phaser.Scene {
       specs: this.tally.specs,
       wins: won ? 1 : 0,
       perfectWins: won && this.sim.lives === this.level.lives ? 1 : 0,
+      soldierHealing: Math.round(this.sim.healTotal),
     };
+    if (won && this.sim.hero) add[`wins_hero_${this.sim.hero.def.id}`] = 1;
     for (const b of this.tally.bosses) add[`boss_${b}`] = (add[`boss_${b}`] ?? 0) + 1;
     after = bumpStats(after, add, { heroMaxLevel: this.sim.hero?.level ?? 0 });
     const checked = checkAchievements(after);

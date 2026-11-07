@@ -225,6 +225,7 @@ export class BattleSim {
   hero: Hero | null = null;
   strikes: Strike[] = [];
   spellCd: Record<string, number> = {};
+  healTotal = 0; // health restored to soldiers by the hero (Sorrel), for the Field Medic achievement
   events: SimEvent[] = [];
 
   private nextUid = 1;
@@ -411,7 +412,9 @@ export class BattleSim {
       healed = [];
       for (const s of this.soldiers) {
         if (!s.alive || Math.hypot(s.pos.x - h.pos.x, s.pos.y - h.pos.y) > sk.radius) continue;
+        const before = s.hp;
         s.hp = Math.min(s.maxHp, s.hp + amt);
+        this.healTotal += s.hp - before;
         healed.push({ ...s.pos });
       }
       h.hp = Math.min(h.maxHp, h.hp + amt);
@@ -1297,7 +1300,9 @@ export class BattleSim {
       const stats = s.stats;
       // Sorrel's Field Dressing: soldiers near her heal even mid-fight.
       if (mend && s.alive && s.hp < s.maxHp && Math.hypot(s.pos.x - h!.pos.x, s.pos.y - h!.pos.y) <= mend.radius) {
+        const before = s.hp;
         s.hp = Math.min(s.maxHp, s.hp + mend.regen * dt);
+        this.healTotal += s.hp - before;
       }
       if (s.summoned) {
         s.life -= dt;

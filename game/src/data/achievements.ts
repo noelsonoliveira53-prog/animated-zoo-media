@@ -2,6 +2,7 @@
 import type { SaveData } from '../systems/save';
 import { LEVELS, totalStars } from './levels';
 import { ENEMIES } from './enemies';
+import { HERO_ORDER } from './heroes';
 
 export interface AchievementDef {
   id: string;
@@ -40,6 +41,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'orchard_stars', name: 'Harvest Keeper', text: 'Earn 3 stars on every Rotbloom Orchard level.', goal: 15, progress: (s) => ['l51', 'l52', 'l53', 'l54', 'l55'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 3400, glowsap: 3400 } },
   { id: 'boss_thrumhorn', name: 'Lightning Rod', text: 'Defeat Thrumhorn, the Storm Bull.', goal: 1, progress: (s) => stat(s, 'boss_thrumhorn'), reward: { coins: 3000, glowsap: 3000 } },
   { id: 'storm_stars', name: 'Rainmaker', text: 'Earn 3 stars on every Thunderhead Steppes level.', goal: 15, progress: (s) => ['l56', 'l57', 'l58', 'l59', 'l60'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 3600, glowsap: 3600 } },
+  { id: 'full_roster', name: 'Full Roster', text: 'Win a battle with each of the five heroes.', goal: 5, progress: (s) => HERO_ORDER.filter((h) => stat(s, `wins_hero_${h}`) > 0).length, reward: { coins: 1200, glowsap: 1200 } },
+  { id: 'field_medic', name: 'Field Medic', text: "Restore 3,000 soldier health with Sorrel's healing.", goal: 3000, progress: (s) => stat(s, 'soldierHealing'), reward: { coins: 800, glowsap: 800 } },
   { id: 'campaign', name: 'Keeper of the Grove', text: 'Defeat Vulkhar and finish the story.', goal: 1, progress: (s) => ((s.stars[(LEVELS.find((l) => l.finale) ?? LEVELS[LEVELS.length - 1]).id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
   { id: 'kills500', name: 'Mud on the Boots', text: 'Defeat 500 Murkhorde critters.', goal: 500, progress: (s) => stat(s, 'kills'), reward: { coins: 300 } },
   { id: 'kills5000', name: 'Horde Breaker', text: 'Defeat 5,000 Murkhorde critters.', goal: 5000, progress: (s) => stat(s, 'kills'), reward: { coins: 1500, glowsap: 1000 } },

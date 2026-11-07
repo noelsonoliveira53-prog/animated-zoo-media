@@ -194,5 +194,6 @@ describe('Sorrel', () => {
     expect(sim.hero!.hp).toBe(Math.min(sim.hero!.maxHp, 20 + heal));
     const ev = sim.drainEvents().find((e) => e.type === 'heroSkill') as any;
     expect(ev.healed.length).toBeGreaterThanOrEqual(2);
+    expect(sim.healTotal).toBe(Math.min(s.maxHp, 5 + heal) - 5);
   });
 });

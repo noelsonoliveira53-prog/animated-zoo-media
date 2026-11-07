@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **103** (next balance pass at iteration 105)
+Iteration counter: **104** (next balance pass at iteration 105)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -723,6 +723,14 @@ Iteration counter: **103** (next balance pass at iteration 105)
   - The menu hero card was checked; long ability text overflowed it, so the lines were shortened.
 
   Browser check `scripts/sorrel-check.mjs`. 177 tests (mend and rally).
+- **Iteration 104** (meta): two hero achievements.
+  - **Full Roster**: win a battle with each of the five heroes. A new `wins_hero_<id>` stat is bumped on each win.
+  - **Field Medic**: restore 3,000 soldier health with Sorrel. The sim's `healTotal` counts real health restored by
+    Field Dressing and Second Wind, saved as the lifetime `soldierHealing` stat.
+  - The Achievements screen now holds 36, filling two pages exactly; the next ones open page 3 through the existing
+    paging. Checked in-browser.
+
+  179 tests.
 
 ## In Progress
 - (none)

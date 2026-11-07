@@ -36,3 +36,22 @@ describe('achievements', () => {
     expect(checkAchievements(stars).unlocked.map((a) => a.id)).toContain('stars15');
   });
 });
+
+describe('hero achievements', () => {
+  const ach = (id: string) => ACHIEVEMENTS.find((a) => a.id === id)!;
+  it('Full Roster counts distinct heroes with a win', () => {
+    let s = defaultSave();
+    s = bumpStats(s, { wins_hero_bramble: 1 });
+    s = bumpStats(s, { wins_hero_bramble: 1, wins_hero_fen: 1 });
+    expect(ach('full_roster').progress(s)).toBe(2);
+    for (const h of ['ember', 'wren', 'sorrel']) s = bumpStats(s, { [`wins_hero_${h}`]: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('full_roster');
+  });
+  it('Field Medic accumulates soldier healing across battles', () => {
+    let s = defaultSave();
+    s = bumpStats(s, { soldierHealing: 1800 });
+    s = bumpStats(s, { soldierHealing: 1300 });
+    expect(ach('field_medic').progress(s)).toBe(3100);
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('field_medic');
+  });
+});

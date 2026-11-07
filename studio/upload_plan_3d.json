@@ -500,5 +500,27 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 170.0
+ },
+ {
+  "file": "bloop/bl3d_ep04.mp4",
+  "title": "Red + Yellow = Orange?! Bloop Mixes Colors | Kids Song",
+  "description": "Red + yellow = orange?! Bloop the jelly blob mixes colors and changes color every time. A color mixing song for kids.\nKids learn the secondary colors: red + yellow = orange, blue + yellow = green, red + blue = purple, then stir, shake and splash along. Ages 2-6.\n\nLYRICS\nMix, mix, mix the colors!\nSwirl them round and see!\nTwo colors make a new one,\nMix the colors with me!\nRed and yellow, swirl, swirl, swirl,\nWhat do we get? Orange, hooray!\nOrange like a pumpkin, orange like the sun,\nMixing colors is so much fun!\nBlue and yellow, swirl, swirl, swirl,\nWhat do we get? Green, hooray!\nGreen like a froggy, green like a tree,\nGreen, green, green for me!\nStir, stir, stir the paint!\nShake, shake, shake it up!\nSplash, splash, splash, hooray!\nColors everywhere today!\nRed and blue, swirl, swirl, swirl,\nWhat do we get? Purple, hooray!\nPurple like grapes, purple like a plum,\nBloop is purple, yum, yum, yum!\nOrange, green and purple! Bye-bye!\nmix, mix the colors!\nOrange,\ngreen and purple!\nbye bye!\nMix,",
+  "tags": [
+   "color mixing song",
+   "mixing colors for kids",
+   "learn colors",
+   "primary colors",
+   "red yellow orange",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-09",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep04.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

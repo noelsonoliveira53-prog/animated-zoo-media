@@ -18,7 +18,7 @@ import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
-import { padHit } from '../ui/touch';
+import { fitWidth, padHit, pf } from '../ui/touch';
 
 interface EnemyView {
   sprite: Phaser.GameObjects.Image;
@@ -380,7 +380,7 @@ export class BattleScene extends Phaser.Scene {
     SPELL_ORDER.forEach((id, i) => {
       const p = this.spellPos(i);
       this.add.image(p.x, p.y - 4, `icon_${id}`).setDepth(3001);
-      this.add.text(p.x, p.y + 30, SPELLS[id].name, textStyle(12)).setOrigin(0.5).setDepth(3002);
+      fitWidth(this.add.text(p.x, p.y + 30, SPELLS[id].name, textStyle(pf(12))).setOrigin(0.5).setDepth(3002), 84);
       const zone = this.add.zone(p.x, p.y, 80, 80).setDepth(3002).setInteractive({ useHandCursor: true });
       zone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
@@ -480,7 +480,8 @@ export class BattleScene extends Phaser.Scene {
       sfx.unlock();
       if (!this.sim.useHeroSkill()) this.tweens.add({ targets: this.skillText, x: this.skillText.x + 4, duration: 40, yoyo: true, repeat: 2 });
     });
-    this.skillText = this.add.text(px + 104, py, h.def.active.name.replace(' ', '\n'), { ...textStyle(13), align: 'center' }).setOrigin(0.5).setDepth(3002);
+    this.skillText = this.add.text(px + 104, py, h.def.active.name.replace(' ', '\n'), { ...textStyle(pf(13)), align: 'center' }).setOrigin(0.5).setDepth(3002);
+    fitWidth(this.skillText, 68);
   }
 
   private selectHero(on: boolean): void {
@@ -604,10 +605,10 @@ export class BattleScene extends Phaser.Scene {
       img.setScale(Math.min(0.8, 30 / Math.max(img.width, img.height)));
       c.add(img);
       const def = ENEMIES[id];
-      c.add(this.add.text(x + 14, 2, `${n}`, textStyle(14, def.boss ? TEXT.heart : TEXT.cream)).setOrigin(0, 0.5));
-      if (def.flying) c.add(this.add.text(x - 14, -12, '✈', textStyle(10, '#bfe8ff')).setOrigin(0.5));
+      c.add(this.add.text(x + 14, 2, `${n}`, textStyle(pf(14), def.boss ? TEXT.heart : TEXT.cream)).setOrigin(0, 0.5));
+      if (def.flying) c.add(this.add.text(x - 14, -12, '✈', textStyle(pf(10), '#bfe8ff')).setOrigin(0.5));
     });
-    c.add(this.add.text(-w / 2 - 4, 0, 'Next', textStyle(13, TEXT.dim)).setOrigin(1, 0.5));
+    c.add(this.add.text(-w / 2 - 4, 0, 'Next', textStyle(pf(13), TEXT.dim)).setOrigin(1, 0.5));
   }
 
   private drawBossBar(): void {
@@ -787,7 +788,7 @@ export class BattleScene extends Phaser.Scene {
             this.drawRange(pos, sp.stats.range, sp.color);
             this.showBanner(sp.name, `${sp.text}  (tap again to buy)`);
           });
-          opt.add(this.add.text(0, -50, sp.name, { ...textStyle(13), align: 'center', wordWrap: { width: 110 } }).setOrigin(0.5, 1));
+          opt.add(this.add.text(0, -50, sp.name, { ...textStyle(pf(13)), align: 'center', wordWrap: { width: 110 } }).setOrigin(0.5, 1));
           c.add(opt);
         });
       } else if (upCost !== null) {
@@ -882,7 +883,7 @@ export class BattleScene extends Phaser.Scene {
     bg.fillCircle(0, 0, 34);
     bg.lineStyle(3, color, 1);
     bg.strokeCircle(0, 0, 34);
-    o.add([bg, this.add.text(0, 0, text, { ...textStyle(14), align: 'center' }).setOrigin(0.5)]);
+    o.add([bg, this.add.text(0, 0, text, { ...textStyle(pf(14)), align: 'center' }).setOrigin(0.5)]);
     o.setSize(68, 68).setInteractive({ useHandCursor: true });
     padHit(o);
     o.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {

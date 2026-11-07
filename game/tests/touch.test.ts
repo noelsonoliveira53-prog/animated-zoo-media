@@ -18,3 +18,17 @@ describe('touch hit padding', () => {
     expect(paddedHit(200, 100)).toEqual({ x: -0, y: -0, w: 200, h: 100 });
   });
 });
+
+import { phoneFontSize, PHONE_MIN_FONT } from '../src/ui/hitpad';
+
+describe('phone font sizes', () => {
+  it('leaves desktop sizes alone', () => {
+    expect(phoneFontSize(12, false)).toBe(12);
+  });
+  it('bumps small labels on phones, capped at the minimum', () => {
+    expect(phoneFontSize(12, true)).toBe(16);
+    expect(phoneFontSize(14, true)).toBe(PHONE_MIN_FONT);
+    expect(phoneFontSize(16, true)).toBe(PHONE_MIN_FONT);
+    expect(phoneFontSize(24, true)).toBe(24);
+  });
+});

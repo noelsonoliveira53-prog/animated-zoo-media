@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { paddedHit, TOUCH_MIN } from './hitpad';
+import { paddedHit, phoneFontSize, TOUCH_MIN } from './hitpad';
 
 export { TOUCH_MIN, TOUCH_MAX_PAD, paddedHit } from './hitpad';
 
@@ -24,4 +24,15 @@ export function padHit<T extends Sized>(obj: T, min = TOUCH_MIN, force = false):
   obj.input.hitArea = new Phaser.Geom.Rectangle(r.x, r.y, r.w, r.h);
   obj.input.hitAreaCallback = Phaser.Geom.Rectangle.Contains;
   return obj;
+}
+
+/** Font size for small in-play labels: bumped on phones so they stay readable (see phoneFontSize). */
+export function pf(size: number): number {
+  return phoneFontSize(size, isTouch());
+}
+
+/** Shrink a text object (never grow it) so it fits within maxW game px. */
+export function fitWidth<T extends Phaser.GameObjects.Text>(t: T, maxW: number): T {
+  t.setScale(Math.min(1, maxW / Math.max(1, t.width)));
+  return t;
 }

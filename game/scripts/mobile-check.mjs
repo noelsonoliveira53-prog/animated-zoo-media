@@ -41,6 +41,27 @@ await page.touchscreen.tap(p.x, p.y);
 await page.waitForTimeout(400);
 results.slotTapOutsideEdge = await page.evaluate(() => !!window.__game.scene.getScene('Battle').menu);
 await page.screenshot({ path: `screenshots/${name}.png` });
+// Upgrade menu with specialization labels (small text that gets bumped on phones).
+await page.evaluate(() => {
+  const s = window.__game.scene.getScene('Battle');
+  s.closeMenu();
+  s.sim.coins = 5000;
+  s.sim.build(1, 'thornbow');
+  s.sim.upgrade(1);
+  s.sim.upgrade(1);
+});
+await page.waitForTimeout(600);
+const s1 = await page.evaluate(() => window.__game.scene.getScene('Battle').level.slots[1]);
+p = await toPage(s1.x, s1.y);
+await page.touchscreen.tap(p.x, p.y);
+await page.waitForTimeout(500);
+await page.screenshot({ path: `screenshots/${name}-specs.png` });
+await page.evaluate(() => {
+  window.__game.scene.getScenes(true).forEach((s) => s.scene.stop());
+  window.__game.scene.start('WorldMap');
+});
+await page.waitForTimeout(1200);
+await page.screenshot({ path: `screenshots/${name}-map.png` });
 console.log(JSON.stringify(results));
 console.log(errors.length ? 'ERRORS: ' + errors.join('\n') : 'no console errors');
 await browser.close();

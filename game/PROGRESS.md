@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **27** (next balance pass at iteration 30)
+Iteration counter: **28** (next balance pass at iteration 30)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -230,13 +230,20 @@ Iteration counter: **27** (next balance pass at iteration 30)
   old short sfx jingle still plays. `music-check.mjs` now checks the region themes and that the stinger rests the
   loop. 111 tests.
 
+- [x] **Iter 28 — Phone-readable labels.** On a phone the 1280×720 game renders at about 0.5×, so 12–14 px labels
+  shrank to 6–7 CSS px. New `pf()` (pure `phoneFontSize`): on touch devices, labels under 18 px grow by up to 4 px
+  (capped at 18). Applied to battle labels (spell names, hero skill, wave preview, spec names, tower menu) and the
+  world map. `fitWidth()` shrinks a label back to fit its circle (the "Earthshake" skill name overflowed). Fix: the
+  map's starting-point label sat under the first level's name on phones; moved it down. Village drag-to-pan dropped:
+  FIT scaling already shows the whole grid. `mobile-check.mjs` now also captures the upgrade menu and map. 113 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mobile follow-up: drag-to-pan in the Village on small screens; slightly larger HUD text on phones.
-2. Region 4 (5 more levels) with 2–3 new enemy types.
-3. Village: a free speed-up after a 3-star win (parked idea).
+1. Region 4 (5 more levels) with 2–3 new enemy types.
+2. Village: a free speed-up after a 3-star win (parked idea).
+3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
 ## Known Bugs
 - (none known)

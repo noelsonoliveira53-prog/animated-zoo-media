@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
@@ -39,7 +40,7 @@ export class WorldMapScene extends Phaser.Scene {
       const x = 1000 + (k - inRegion.length) * 120;
       this.add.text(x, 640, '?', textStyle(28, TEXT.dim)).setOrigin(0.5).setAlpha(0.6);
     }
-    if (inRegion.length < reg.count) this.add.text(1060, 680, 'More lands coming soon…', textStyle(14, TEXT.dim, false)).setOrigin(0.5);
+    if (inRegion.length < reg.count) this.add.text(1060, 680, 'More lands coming soon…', textStyle(pf(14), TEXT.dim, false)).setOrigin(0.5);
 
     // Top bar
     const bar = this.add.graphics().setDepth(100);
@@ -163,7 +164,7 @@ export class WorldMapScene extends Phaser.Scene {
     g.fillRect(60, 600, 60, 40);
     g.fillStyle(ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
     g.fillTriangle(50, 604, 130, 604, 90, 570);
-    this.add.text(90, 660, ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(14)).setOrigin(0.5);
+    this.add.text(90, 692, ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
   }
 
   private drawTrail(stars: Record<string, number>, indices: number[]): void {

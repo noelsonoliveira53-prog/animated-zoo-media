@@ -220,9 +220,12 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "video_id": "hiSeWjQdGr4",
+  "scheduled_on": "2026-11-07",
+  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
   "file": "bloop/bl3d_ep02.mp4",
@@ -243,9 +246,12 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 142.4
+  "duration": 142.4,
+  "video_id": "D2F8cq-JVlI",
+  "scheduled_on": "2026-11-07",
+  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
   "file": "gizmo/gz3d_ep02.mp4",
@@ -291,9 +297,12 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep03.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "video_id": "NTQCW3DgpJA",
+  "scheduled_on": "2026-11-07",
+  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
   "file": "zoo3d_ep02.mp4",
@@ -314,13 +323,16 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 170.0
+  "duration": 170.0,
+  "video_id": "yN64Pm3CugU",
+  "scheduled_on": "2026-11-07",
+  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
   "file": "moon/mb3d_ep02.mp4",
-  "title": "Count the Stars \ud83c\udf19 Lullaby for Babies & Kids | Moonbeam",
+  "title": "Count the Stars 🌙 Lullaby for Babies & Kids | Moonbeam",
   "description": "Count the Stars, a gentle lullaby for babies and kids. Count from 1 to 5 with Luna the sleepy owl as the stars twinkle and the moon smiles.\nSoft music box and piano, slow breathing, and a calm goodnight to help little ones fall asleep. Ages 0-6.\n\nLYRICS\nCount the stars and close your eyes,\nOne by one across the skies,\nTwinkle softly, shining bright,\nCount the stars and say goodnight.\nOne little star says hello,\nTwo little stars in a sleepy glow,\nThree little stars, yawn so wide,\nSnuggle up, warm inside.\nFour little stars, sparkle and blink,\nFive little stars, softly I think,\nMoon is smiling, round and wide,\nOwls and bunnies sleep inside.\nBreathe in slow, and breathe out slow,\nRest your arms and wiggle your toes,\nStars are suns so far away,\nThey'll shine again another day.\nTeddy's sleepy, lamb is too,\nBunny's dreaming, so are you,\nHush now, hush now, close your eyes,\nStars will twinkle in the skies.\nGoodnight, little stars. Goodnight.",
   "tags": [
    "lullaby for babies",
@@ -337,9 +349,12 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep02.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 170.0
+  "duration": 170.0,
+  "video_id": "Yci4XU24quc",
+  "scheduled_on": "2026-11-07",
+  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
   "file": "bloop/bl3d_ep03.mp4",

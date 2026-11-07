@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v2, Nov 5, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v3, Nov 7, 2026). The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -73,6 +73,27 @@
   over "Surprise Facts" (1.6-2.3% CTR vs 3.7% for "Meet 5 Zoo Friends"). Moonbeam titles end with 🌙 (5.9% CTR, best in the network).
 - **Posting times:** still no signal; keep the slots (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00 3D / 5:00 2D, Moonbeam 7:00 PM ET).
 - **Next check:** compare the six 3D songs that air Nov 5-7 once each has a day of impressions (CTR vs the 2D episodes on the same channel).
+
+## Adjustments from the Nov 7 views check (first real 3D sample: Zoo Safari Song, 494 views / 24k impressions)
+- **Reach is solved on the Zoo; clicks and the first 30 s are the job now.** The first Zoo 3D song got 23,999 impressions on day one
+  (network record) and Bloop's got 2,013. But CTR is 2.0% / 1.1% / 0.8% (Zoo / Bloop / Gizmo) and viewers leave at 0:22-0:26.
+- **Retention reality check:** on a real sample the Zoo song holds 14.7% (Gizmo 21.9%, Bloop 15.0%). The 24-41% from Nov 6 was 1-3 views.
+  Treat 20%+ viewed as the bar to beat.
+- **Thumbnails (blocking):** custom thumbnails need phone verification. Until Noelson verifies the channels, every song runs on an
+  auto-picked frame. Make sure the frame at about 1/3 and 1/2 of the video is a big, happy host close-up with the topic object
+  (YouTube's auto-picks come from there), and keep brand/thumb_*.png ready for when verification is done.
+- **Titles (change):** every 3D title carries a hook formula AND, where it fits, a number + friendly noun. Allowed patterns, best first:
+  1. "Meet 5 <Friendly Noun>! <Topic> Song for Kids" (Meet 5 Zoo Friends 3.7%, Meet 5 Zoo Babies 6.9%)
+  2. Question: "What Do Animals Eat? ..." / "Where Is My Mama? ..."
+  3. Transformation / command: "Bloop Turns Into Shapes!", "Red Means Stop!", "Banana Dance!"
+  4. Moonbeam: "<Song> 🌙 Lullaby for Babies & Kids"
+  Retire the plain "<Topic> Song for Kids! <phrase> with <Host>" pattern (0.8-2.0% CTR). Today's uploads test patterns 2-4; compare on Nov 9.
+- **Hook (tighter):** the chorus's first line, sung, over a host face close-up by 0:03. The thing the title promises (a roar, a color
+  change, the red light) happens on screen by 0:08. No establishing shots before it.
+- **Length (tighter):** target 2:15-2:45. The 2:31 Bloop and 2:46 Gizmo cuts hold better than the 3:01 Zoo cut.
+- **Topics:** Zoo next = Baby Animals song ("Meet 5 Zoo Babies", the 2D babies episode holds 1:13 / 23.7%), then Ocean Animals song, then Animal Sounds.
+  Gizmo: pause planets/space songs (0.8% CTR); do weather, body, "Why Is the Sky Blue?", "Sink or Float?".
+- **Posting times:** still no clear signal; keep the slots one more week (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
 
 ## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)
 Data: docs/research/collected.json + swipe.txt (Cocomelon, Super Simple, Pinkfong, Little Angel, ChuChu TV, Morphle).

@@ -1,5 +1,59 @@
 # Views check log (newest first)
 
+## 2026-11-07 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
+| Channel | Video | Type | Published | Views (yday) | Impr. | CTR | Avg view | % viewed | Likes |
+|---|---|---|---|---|---|---|---|---|---|
+| Animated Zoo | Amazing Animal Bodies for Kids! 5 Surprise Facts with Milo (4:58) | 2D episode | Nov 5 | 519 (204) | 14,408 | 2.4% | 0:24 | 8.2% | 0 |
+| Animated Zoo | **Safari Animals Song for Kids! Roar and Stomp with Milo (3:01)** | **3D song** | Nov 6 | **494 (new)** | **23,999** | 2.0% | 0:26 | 14.7% | 0 |
+| Animated Zoo | Savanna Animals for Kids! Meet 5 Zoo Friends with Milo (5:08) | 2D episode | Nov 2 | 444 (401) | 10,176 | **3.7%** | 0:27 | 9.1% | 0 |
+| Animated Zoo | Ocean & Ice Animals for Kids! 5 Surprise Facts with Milo (5:11) | 2D episode | Nov 3 | 270 (228) | 14,196 | 1.5% | **0:47** | **15.2%** | 1 |
+| Animated Zoo | Treetop Animals for Kids! 5 Zoo Friends with Milo (5:02) | 2D episode | Nov 4 | 192 (163) | 9,868 | 1.6% | 0:32 | 10.9% | 1 |
+| Animated Zoo | Baby Animals for Kids! Meet 5 Zoo Babies with Milo (5:11) | 2D episode | Nov 6 | 5 (Studio shows 61) | 29 | 6.9% | **1:13** | 23.7% | — |
+| Animated Zoo | Old songs "Sing, Dance, Giggle" / "Toddler Dance Craze" | old songs | Mar 2025 | 30 / 21 | 205 / 289 | 5.4% / 2.4% | 0:30 / 0:29 | 15.4% / 12.2% | 0 |
+| Animated Zoo | 32 Shorts + old ep01 "Meet 10 Amazing Animals" (6 views) (best: Giraffe Tongues 19, Flamingos 15, Polar Bears 12) | Short | Nov 1-4 | 0-19 each | 2-128 | 0-7% | 0:00-0:27 | 3-115% | 0-1 |
+| Bloop's Color Lab | Learn Colors for Kids! Red, Blue, Yellow and More with Bloop (4:34) | 2D episode | Nov 4 | 57 (36) | 2,229 | 1.9% | 0:32 | 11.9% | 0 |
+| Bloop's Color Lab | Colors Song for Kids! Learn Colors with Bloop (3D v3) (2:31) | **3D song** | Nov 6 | 32 (1) | 2,013 | **1.1%** | 0:22 | 15.0% | 0 |
+| Bloop's Color Lab | Colors Song (3D v1, private) (2:52) | 3D song | Nov 5 | 5 (3) | 6 | 0% | 0:33 | 19.3% | 0 |
+| Gizmo Explains | Planets for Kids! 5 Space Surprises with Gizmo (5:04) | 2D episode | Nov 4 | 10 (10) | 289 | 1.7% | 0:22 | 7.4% | 0 |
+| Gizmo Explains | The Planets Song for Kids! 8 Planets with Gizmo the Robot (3:07) | **3D song** | Nov 6 | 6 (2) | 264 | **0.8%** | 0:40 | **21.9%** | 0 |
+| Moonbeam Bedtime | Goodnight 5 Sleepy Animals 🌙 Calm Bedtime Story for Kids (5:07) | 2D episode | Nov 4 | 5 (5) | 54 | 5.6% | 0:13 | 4.6% | 0 |
+| Moonbeam Bedtime | Time for Bed Song for Kids! Bedtime Routine with Luna (2:51) | **3D song** | Nov 6 | 3 (new) | 2 | 0% | 0:45 | 26.5% | — |
+| Fruity Friends | Yummy Fruits Song for Kids! Eat Your Rainbow with Pipkiko (3:23) | 3D song | Nov 5 | 1 (1) | 6 | 0% | 0:49 | 24.3% | 0 |
+| Fruity Friends | Fruit Counting Song for Kids! Count 1 to 5 with Pipkiko (2:41) | 3D song | Nov 6 | 0 | 0 | — | — | — | — |
+| Tiny Truck Town | Why Are Fire Trucks So Long? / Some Trains Have More Than 100 Cars! | Short | Nov 4 | 2 / 1 | 17 / 10 | 5.9% / 10% | 0:13 / 0:05 | 47.5% / 21% | 0 |
+| Tiny Truck Town | Fire Truck Song for Kids! (3D, Nov 6) | 3D song | Nov 6 | no data yet | | | | | |
+
+Network total: about 2,220 lifetime views (+1,040 since Nov 6, nearly double), 79,600 impressions (+44,500). The Animated Zoo is 94% of views.
+Change since yesterday: Safari Animals Song (first Zoo 3D song) launched with 494 views on 23,999 impressions, the biggest day-one reach the
+network has had (1.7x Ocean & Ice's lifetime impressions in one day). Amazing Animal Bodies 204 -> 519 (+315), Savanna +43, Ocean & Ice +42,
+Treetop +29. Bloop 3D Colors Song got 2,013 impressions on day one (Bloop's 2D episode took 3 days to reach that) but only 1.1% CTR.
+Uploaded today (all scheduled, made for kids, 4K): Truck "Red Means Stop! Traffic Light Song" hiSeWjQdGr4 (Nov 7 1:40 PM), Bloop "Bloop Turns
+Into Shapes!" D2F8cq-JVlI (Nov 7 1:50 PM), Fruity "Banana Dance!" NTQCW3DgpJA (Nov 7 2:20 PM), Zoo "What Do Animals Eat?" yN64Pm3CugU
+(Nov 7 4:00 PM), Moonbeam "Count the Stars 🌙" Yci4XU24quc (Nov 7 7:00 PM). Gizmo had nothing to upload (Weather Song already airs today).
+Custom thumbnails could not be set: YouTube asks for phone verification first, so every 3D song is running on an auto-picked frame.
+
+What's winning
+- **YouTube is pushing 3D songs hard.** Zoo's 3D song got 24k impressions in a day and Bloop's got 2k; both are records for their channels.
+  Reach is no longer the bottleneck on the Zoo. Clicks and retention are.
+- **Retention on a real sample:** with 494 views the Zoo song holds 0:26 / 14.7%, the same % as the best 2D episode (Ocean & Ice 15.2%)
+  in a video 40% shorter. The early 24-41% numbers were tiny samples; real 3D retention is 15-22% so far. Viewers still leave in the first 30 s.
+- **CTR is the weak spot on 3D songs:** 2.0% (Zoo), 1.1% (Bloop), 0.8% (Gizmo) vs 3.7% for "Meet 5 Zoo Friends" with a custom thumbnail.
+  The 3D songs have no custom thumbnail (verification wall) and use the "<Topic> Song for Kids!" title pattern.
+- Best titles by CTR are still "Meet 5 Zoo Friends" (3.7%), Moonbeam 🌙 (5.6%) and Baby Animals "Meet 5 Zoo Babies" (6.9%, small sample), all with a number + friendly noun.
+- Baby Animals (2D) holds 1:13 / 23.7% in its first views, the best 2D retention so far: babies are a strong topic.
+
+What to do more of
+- Phone-verify the channels so every 3D song gets its designed thumbnail (host face + topic object + 1-3 words). This is the biggest lever on CTR.
+- Number + friendly noun in 3D song titles too ("Meet 5 Safari Friends", "Count 5 Stars"), and the new hook formulas (question, command, transformation) going out today.
+- Zoo 3D songs every day (it gets 10x everyone else's reach); Baby Animals and Ocean are the next topics.
+- The chorus line and the host's face in the first 3 s; shorter songs (2:15-2:45).
+
+What to do less of
+- Plain "<Topic> Song for Kids!" titles with no number, hook or twist (0.8-2.0% CTR).
+- Openings that spend the first 10-20 s on set-up; most viewers are gone by 0:22-0:26.
+- Planets/space as a song topic for now (Gizmo: 0.8% CTR on 264 impressions).
+
+
 ## 2026-11-06 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
 | Channel | Video | Type | Published | Views | Impr. | CTR | Avg view | % viewed | Likes |
 |---|---|---|---|---|---|---|---|---|---|

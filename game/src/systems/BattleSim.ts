@@ -302,6 +302,17 @@ export class BattleSim {
           summoned: true,
         });
       }
+    } else if (def.kind === 'snare') {
+      // Instant: bramble burst roots ground enemies in the area.
+      const radius = def.radius ?? 90;
+      const hits = this.enemies.filter((e) => e.alive && !e.underground && !this.airborne(e) && Math.hypot(e.pos.x - pos.x, e.pos.y - pos.y) <= radius + e.def.radius);
+      for (const e of hits) {
+        if (def.slow) {
+          e.slowFactor = Math.min(e.slowFactor, def.slow.factor);
+          e.slowTime = Math.max(e.slowTime, def.slow.duration);
+        }
+        this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)));
+      }
     } else {
       this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
     }

@@ -224,6 +224,20 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
       const lead = alive.reduce((a, b) => (sim.paths[b.path].length - b.dist < sim.paths[a.path].length - a.dist ? b : a));
       sim.castSpell('grovecall', sim.paths[lead.path].pointAt(lead.dist + 70));
     }
+    // Thornsnare on the densest clump of walkers (roots them inside the kill zone).
+    if (sim.spellReady('thornsnare')) {
+      const walkers = alive.filter((e) => !sim.airborne(e));
+      let best: (typeof walkers)[number] | null = null;
+      let bestN = 0;
+      for (const e of walkers) {
+        const n = walkers.filter((o) => Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) < 90).length + (e.def.boss ? 4 : 0);
+        if (n > bestN) {
+          bestN = n;
+          best = e;
+        }
+      }
+      if (best && bestN >= 5) sim.castSpell('thornsnare', best.pos);
+    }
     // Hero skill when enough enemies are in reach.
     const h = sim.hero;
     if (h && h.alive && h.skillCd <= 0) {

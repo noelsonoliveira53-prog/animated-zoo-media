@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **52** (next balance pass at iteration 55)
+Iteration counter: **53** (next balance pass at iteration 55)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -412,15 +412,24 @@ Iteration counter: **52** (next balance pass at iteration 55)
   She appears automatically in the hero picker, Field Guide and village training. Hero win rates on hard levels:
   Fen 85% / Ember 75% / **Wren 75%** / Bramble 35%. 138 tests.
 
+- [x] **Iter 53 — Third global spell: Thornsnare.** New spell kind `snare` (instant): brambles burst from the road,
+  dealing 30 damage and rooting ground enemies within 95 px (a 75% slow for 3 s); flyers are unaffected. Cooldown 55 s
+  (first tuned at 40 s / 90% slow, which made bosses too easy). It has a THREE hotkey, a vine-coil icon and a bramble-burst
+  effect. The spell bar grows to three buttons, so the HUD clearance test's spell zone widened to x ≥ 1000; it caught
+  two pads now under the third button (Mossgate Meadow, Saltjaw's Grotto; both moved). The autoplayer casts Thornsnare
+  on the densest clump of walkers. New `scripts/snare-check.mjs` (real clicks: arm the button, tap a crowd, 5 walkers
+  rooted, the flyer not). 138 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. A third global spell (e.g. a slowing or barrier spell) on the spell bar.
-2. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
+1. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
-3. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
+2. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
+3. Spell polish: show each spell's text on long-press/hover (the bar only shows names), and add a spell section to
+   the Field Guide.
 
 ## Known Bugs
 - (none known)

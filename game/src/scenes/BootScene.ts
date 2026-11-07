@@ -1375,6 +1375,24 @@ export class BootScene extends Phaser.Scene {
     g.lineBetween(26, 10, 26, 34);
     g.generateTexture('icon_grovecall', 52, 52);
     g.destroy();
+    g = this.g();
+    // Thornsnare: a coil of thorny vine
+    g.lineStyle(5, 0x3f7a2e, 1);
+    g.beginPath();
+    g.arc(26, 28, 14, Math.PI * 0.1, Math.PI * 1.9);
+    g.strokePath();
+    g.lineStyle(3, 0x6a9a3a, 1);
+    g.beginPath();
+    g.arc(26, 28, 7, Math.PI * 0.6, Math.PI * 2.3);
+    g.strokePath();
+    g.fillStyle(0xd9e8a0, 1);
+    g.lineStyle(1.5, C.ink, 1);
+    for (const [x, y] of [[12, 22], [38, 20], [40, 36], [16, 40], [26, 12]]) {
+      g.fillTriangle(x - 3, y + 2, x + 3, y + 2, x, y - 5);
+      g.strokeTriangle(x - 3, y + 2, x + 3, y + 2, x, y - 5);
+    }
+    g.generateTexture('icon_thornsnare', 52, 52);
+    g.destroy();
 
     // falling star
     g = this.g();

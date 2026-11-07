@@ -50,7 +50,7 @@ describe('HUD clearance', () => {
     const zones = [
       // Drawn extents of the HUD (portrait + skill circle, the two spell circles, the top bar).
       { name: 'hero HUD', x0: 16, y0: 620, x1: 200, y1: 712 },
-      { name: 'spells', x0: 1092, y0: 620, x1: 1262, y1: 712 },
+      { name: 'spells', x0: 1000, y0: 620, x1: 1262, y1: 712 }, // three spell circles
       { name: 'top bar', x0: 0, y0: 0, x1: 1280, y1: 66 },
     ];
     for (const l of LEVELS) {

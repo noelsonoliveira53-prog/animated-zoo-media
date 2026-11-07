@@ -204,6 +204,7 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-Q', () => this.sim.useHeroSkill());
     this.input.keyboard?.on('keydown-ONE', () => this.armSpell(SPELL_ORDER[0]));
     this.input.keyboard?.on('keydown-TWO', () => this.armSpell(SPELL_ORDER[1]));
+    this.input.keyboard?.on('keydown-THREE', () => this.armSpell(SPELL_ORDER[2]));
     this.input.keyboard?.on('keydown-ESC', () => (this.spellMode ? this.armSpell(null) : this.togglePause()));
     this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
       if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY);
@@ -1067,6 +1068,25 @@ export class BattleScene extends Phaser.Scene {
         if (def.kind === 'meteor') {
           // Visuals are created in syncStrikes() from sim.strikes so they track game time exactly.
           sfx.waveHorn();
+        } else if (def.kind === 'snare') {
+          const r = def.radius ?? 90;
+          const ring = this.add.circle(ev.pos.x, ev.pos.y, r, 0x4a7a2a, 0.3).setStrokeStyle(5, 0x8fdc5a, 1).setDepth(2400).setScale(0.3);
+          this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 600, ease: 'Back.easeOut', onComplete: () => ring.destroy() });
+          const vines = this.add.graphics().setDepth(2401);
+          for (let k = 0; k < 9; k++) {
+            const a = (k / 9) * Math.PI * 2;
+            const d = r * (0.3 + (k % 3) * 0.25);
+            const x = ev.pos.x + Math.cos(a) * d;
+            const y = ev.pos.y + Math.sin(a) * d * 0.6;
+            vines.fillStyle(0x3f7a2e, 1);
+            vines.fillTriangle(x - 5, y + 4, x + 5, y + 4, x, y - 16);
+            vines.fillStyle(0xd9e8a0, 1);
+            vines.fillTriangle(x - 1, y - 6, x + 3, y - 8, x + 1, y - 12);
+          }
+          this.tweens.add({ targets: vines, alpha: 0, delay: 2500, duration: 900, onComplete: () => vines.destroy() });
+          this.particles.setParticleTint(0x6a9a3a);
+          this.particles.explode(20, ev.pos.x, ev.pos.y);
+          sfx.build();
         } else {
           this.particles.setParticleTint(0x8fdc5a);
           this.particles.explode(24, ev.pos.x, ev.pos.y);

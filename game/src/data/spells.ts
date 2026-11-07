@@ -6,7 +6,7 @@ export interface SpellDef {
   text: string;
   cooldown: number; // seconds
   color: number;
-  kind: 'meteor' | 'reinforce';
+  kind: 'meteor' | 'reinforce' | 'snare';
   // meteor
   damage?: number;
   damageType?: DamageType;
@@ -16,9 +16,11 @@ export interface SpellDef {
   count?: number;
   duration?: number; // seconds the summoned soldiers stay
   soldier?: SoldierStats;
+  // snare
+  slow?: { factor: number; duration: number };
 }
 
-// Global powers of the Grove. Both target a point the player taps.
+// Global powers of the Grove. Each targets a point the player taps.
 export const SPELLS: Record<string, SpellDef> = {
   starfall: {
     id: 'starfall',
@@ -43,6 +45,18 @@ export const SPELLS: Record<string, SpellDef> = {
     duration: 12,
     soldier: { count: 3, hp: 70, damage: 7, attackRate: 1.2, respawn: 0, armor: 0.15, regen: 0 },
   },
+  thornsnare: {
+    id: 'thornsnare',
+    name: 'Thornsnare',
+    text: 'Brambles burst from the road and tangle every walker nearby. Flyers sail over them.',
+    cooldown: 55,
+    color: 0x6a9a3a,
+    kind: 'snare',
+    damage: 30,
+    damageType: 'physical',
+    radius: 95,
+    slow: { factor: 0.25, duration: 3 },
+  },
 };
 
-export const SPELL_ORDER = ['starfall', 'grovecall'];
+export const SPELL_ORDER = ['starfall', 'grovecall', 'thornsnare'];

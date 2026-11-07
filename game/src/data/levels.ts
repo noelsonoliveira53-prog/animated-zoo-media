@@ -97,7 +97,7 @@ export const LEVELS: LevelDef[] = [
       { x: 860, y: 160 },
       { x: 860, y: 440 },
       { x: 1080, y: 460 },
-      { x: 1050, y: 640 },
+      { x: 1200, y: 460 },
       { x: 180, y: 110 },
     ],
     waves: [
@@ -1328,7 +1328,7 @@ export const LEVELS: LevelDef[] = [
       { x: 460, y: 580 },
       { x: 660, y: 580 },
       { x: 860, y: 580 },
-      { x: 1020, y: 620 },
+      { x: 960, y: 620 },
     ],
     waves: [
       { groups: [{ enemy: 'mudling', count: 16, interval: 0.55 }, { enemy: 'gullwing', count: 6, interval: 1.1, path: 1, delay: 3 }] },

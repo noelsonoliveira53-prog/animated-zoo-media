@@ -14,14 +14,14 @@ page.on('pageerror', (e) => errors.push(String(e)));
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 await page.addInitScript(() => {
   if (!localStorage.getItem('grovewatch.save.v1'))
-    localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: ['mudling', 'skitter', 'shellback', 'gloomwing', 'bogmender', 'murkmaw', 'rimewraith'] }));
+    localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: ['mudling', 'skitter', 'shellback', 'gloomwing', 'bogmender', 'murkmaw', 'rimewraith', 'veilstalker', 'rootrager', 'vulkhar'] }));
 });
 await page.goto('http://localhost:4332/');
 await page.waitForTimeout(900);
 await page.screenshot({ path: `screenshots/${name}-menu.png` });
 await page.mouse.click(240, 662); // Field Guide
 await page.waitForTimeout(600);
-await page.mouse.click(90 + 98 * 5 + 49, 130 + 49 - 10); // 6th entry (murkmaw? order of ENEMIES)
+await page.mouse.click(90 + 98 * 5 + 49, 130 + 98 * 2 + 49 - 10); // 18th entry: Veilstalker
 await page.waitForTimeout(400);
 await page.screenshot({ path: `screenshots/${name}-guide.png` });
 await page.mouse.click(1280 - 420 + 140, 44); // Towers tab

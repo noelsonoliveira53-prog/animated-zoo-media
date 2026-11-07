@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **29** (next iteration = 30 → POLISH + BALANCE pass)
+Iteration counter: **30** (next balance pass at iteration 35)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -247,6 +247,12 @@ Iteration counter: **29** (next iteration = 30 → POLISH + BALANCE pass)
   world map was off-screen; placeholders now spread evenly. `balance.ts` takes an optional level filter. New
   `scripts/dusk-check.mjs`. 115 tests.
 
+- [x] **Iter 30 — POLISH + BALANCE (16 levels).** Full campaign re-run (6–8 seeds × expert/casual/novice). Fixed three
+  outliers: Glacier Hold hpMult 1.91 → 1.7 (expert was below casual), Obsidian Bridges 1.19 → 1.0 (expert only won
+  17%), Heart of the Emberdeep 1.13 → 1.06 (finale: expert 88%). Polish: the Field Guide lists the new traits
+  ("Veiled (towers see it within 105px)", "Enrages below 50% health"); checked that the 20-enemy grid still fits.
+  `meta-check.mjs` now opens the Veilstalker entry. 115 tests.
+
 ## In Progress
 - (none)
 
@@ -272,6 +278,29 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Campaign (iteration 30, 6 seeds unless noted; win % expert / casual / novice):**
+| # | Level | hpMult | Expert | Casual | Novice |
+|---|---|---|---|---|---|
+| 1 | Mossgate Meadow | 1.00 | 100 | 100 | 100 |
+| 2 | Gloomfen Edge | 1.32 | 100 | 100 | 100 |
+| 3 | Thornwood Hollow | 1.65 | 100 | 100 | 67 |
+| 4 | Mirelake Crossing | 1.19 | 100 | 50 | 67 |
+| 5 | Murkmaw's Den | 1.84 | 100 | 100 | 50 |
+| 6 | Frostfern Pass | 2.30 | 100 | 100 | 33 |
+| 7 | Icicle Crossing | 1.58 | 83 | 83 | 17 |
+| 8 | Glacier Hold | 1.91 → **1.7** | 50 → 83 | 67 → 83 | 50 → 50 |
+| 9 | Rimewood Hollow | 2.50 | 100 | 100 | 17 |
+| 10 | Frostpeak Summit | 1.98 | 67 | 50 | 17 |
+| 11 | Ashfall Gate | 2.04 | 100 | 83 | 33 |
+| 12 | Cinder Tunnels | 1.91 | 83 | 67 | 50 |
+| 13 | Smoulder Fields | 2.69 | 100 | 83 | 50 |
+| 14 | Obsidian Bridges | 1.19 → **1.0** | 17 → 88* | 17 → 75* | 0 → 0* |
+| 15 | Heart of the Emberdeep | 1.13 → **1.06** | 67 → 88* | 33 → 38* | 0 → 13* |
+| 16 | Duskcap Verge | 2.40 | 100 | 83 | 33 |
+(* 8 seeds.) The novice can't clear Obsidian Bridges even at hpMult 0.8 (its bridges need focused anti-air/armor
+picks), which is acceptable for the 14th level. Curve: each region opens easier than the previous region's end and
+ramps up to its boss.
 
 **Duskcap Verge (iteration 29, 6 seeds, expert / casual / novice):** hpMult 1.2 → 100/100/100 with ~20 lives (far too
 easy); 2.0 → novice still 100%; **2.4 → 100% / 83% / 33%** (picked: matches the Emberdeep opener); 2.8 → novice 0%.

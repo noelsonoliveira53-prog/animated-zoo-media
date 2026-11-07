@@ -73,6 +73,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.chill) tags.push('Freezes towers');
         if (e.burrow) tags.push('Burrows');
         if (e.spawner) tags.push('Spawns minions');
+        if (e.veil) tags.push(`Veiled (towers see it within ${e.veil}px)`);
+        if (e.enrage) tags.push(`Enrages below ${Math.round(e.enrage.below * 100)}% health`);
         return {
           key: e.id,
           texture: `enemy_${e.id}`,

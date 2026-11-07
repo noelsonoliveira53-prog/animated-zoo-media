@@ -222,6 +222,73 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'emberimp': {
+        g.fillStyle(0xffc93c, 0.35);
+        g.fillCircle(cx, cy, r * 1.5);
+        g.fillStyle(0x8a3a2a, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx - r * 0.4, cy, cx - r * 1.6, cy - r * 0.8, cx - r * 1.2, cy + r * 0.4);
+        g.fillTriangle(cx + r * 0.4, cy, cx + r * 1.6, cy - r * 0.8, cx + r * 1.2, cy + r * 0.4);
+        g.strokeTriangle(cx - r * 0.4, cy, cx - r * 1.6, cy - r * 0.8, cx - r * 1.2, cy + r * 0.4);
+        g.strokeTriangle(cx + r * 0.4, cy, cx + r * 1.6, cy - r * 0.8, cx + r * 1.2, cy + r * 0.4);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy, r);
+        g.fillTriangle(cx - r * 0.7, cy - r * 0.5, cx + r * 0.7, cy - r * 0.5, cx, cy - r * 1.6);
+        g.strokeCircle(cx, cy, r);
+        g.fillStyle(0xfff0a8, 1);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.1, r * 0.22);
+        g.fillCircle(cx + r * 0.35, cy - r * 0.1, r * 0.22);
+        break;
+      }
+      case 'ashhive': {
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
+        g.fillCircle(cx, cy - r * 0.4, r * 0.8);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
+        g.fillStyle(0x5a3f38, 1);
+        g.fillEllipse(cx - r * 0.3, cy - r * 0.2, r * 0.9, r * 0.5);
+        // glowing holes
+        for (const [hx, hy] of [[-0.6, 0.2], [0.1, 0.5], [0.6, 0.0], [-0.1, -0.5], [0.45, 0.6]]) {
+          g.fillStyle(0xff8a3c, 1);
+          g.fillCircle(cx + hx * r, cy + hy * r, r * 0.16);
+          g.fillStyle(0xffe066, 1);
+          g.fillCircle(cx + hx * r, cy + hy * r, r * 0.07);
+        }
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.55, r * 0.09);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.55, r * 0.09);
+        break;
+      }
+      case 'vulkhar': {
+        // coiled ash wyrm: body coils, horned head, glowing magma cracks
+        const shade2 = Phaser.Display.Color.IntegerToColor(color).darken(25).color;
+        g.fillStyle(shade2, 1);
+        g.fillEllipse(cx - r * 0.3, cy + r * 0.45, r * 2.1, r * 1.1);
+        g.strokeEllipse(cx - r * 0.3, cy + r * 0.45, r * 2.1, r * 1.1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.05, r * 1.9, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.05, r * 1.9, r * 1.2);
+        g.lineStyle(3, 0xffb84a, 1);
+        g.lineBetween(cx - r * 0.7, cy + r * 0.1, cx - r * 0.2, cy + r * 0.3);
+        g.lineBetween(cx - r * 0.2, cy + r * 0.3, cx + r * 0.2, cy);
+        g.lineBetween(cx - r * 0.9, cy + r * 0.6, cx - r * 0.4, cy + r * 0.75);
+        g.lineStyle(3, C.ink, 1);
+        // head
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.65, cy - r * 0.45, r * 1.1, r * 0.85);
+        g.strokeEllipse(cx + r * 0.65, cy - r * 0.45, r * 1.1, r * 0.85);
+        g.fillStyle(0x3a2a24, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx + r * 0.35, cy - r * 0.75, cx + r * 0.5, cy - r * 0.8, cx + r * 0.2, cy - r * 1.35);
+        g.fillTriangle(cx + r * 0.75, cy - r * 0.8, cx + r * 0.9, cy - r * 0.78, cx + r * 0.85, cy - r * 1.4);
+        g.strokeTriangle(cx + r * 0.35, cy - r * 0.75, cx + r * 0.5, cy - r * 0.8, cx + r * 0.2, cy - r * 1.35);
+        g.strokeTriangle(cx + r * 0.75, cy - r * 0.8, cx + r * 0.9, cy - r * 0.78, cx + r * 0.85, cy - r * 1.4);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx + r * 0.85, cy - r * 0.5, r * 0.12);
+        g.fillStyle(0xff5d4a, 1);
+        g.fillTriangle(cx + r * 1.15, cy - r * 0.3, cx + r * 1.15, cy - r * 0.2, cx + r * 1.4, cy - r * 0.25);
+        break;
+      }
       case 'grimtusk': {
         // great white boar with ice tusks and a frosty mane
         g.fillStyle(0xb8ccd8, 1);

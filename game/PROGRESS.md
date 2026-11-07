@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **15** (next balance pass at iteration 20)
+Iteration counter: **16** (next balance pass at iteration 20)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -135,15 +135,25 @@ Iteration counter: **15** (next balance pass at iteration 20)
   Hold and Cinder Tunnels (hp×1.7). Polish: **next-wave preview** in the top bar (enemy icons + counts, ✈ marks
   flyers, red count for bosses); moved a lava pool out from under the spell buttons. 78 tests.
 
+- [x] **Iter 16** — **Campaign complete: levels 13–15, final boss, ending.** New mechanic **spawner** (enemies
+  that release minions on a timer, capped by `limit`). New enemies: **Ember Imp** (fast flyer), **Ash Hive**
+  (slow tank that hatches up to 6 imps) and final boss **Vulkhar the Ash Wyrm** (3200 hp, burrows, breeds imps,
+  4 phases: moles → obsidian shield + brutes → frost wraiths + speed → fury). Levels: **13 Smoulder Fields**
+  (long serpentine plain), **14 Obsidian Bridges** (two separate lava-bridge roads, two gates), **15 Heart of
+  the Emberdeep** (three roads; Murkmaw, Grimtusk and Vulkhar return as a boss rush). New **EndingScene**
+  (night-to-dawn over the great oak, stars total); the final victory shows "Epilogue". **Bug fixes found by
+  the sim:** packs of Rime Wraiths could freeze towers forever → 3s thaw immunity; Ash Hives used to spawn
+  ~26 imps each over their slow walk → capped. The smart AI now keeps the hero at a level's designed
+  `heroSpawn`. 18 enemy types, 15 levels, 80 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Levels 13–15 to finish the Emberdeep + the final boss (and a campaign ending screen).
-2. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-3. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-4. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-5. Ambient music loop (procedural).
+1. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+2. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+4. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
@@ -155,6 +165,13 @@ Iteration counter: **15** (next balance pass at iteration 20)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 16 — Emberdeep finale** (`balance.ts 8–10`):
+13 Smoulder Fields 100/88/0 · 14 Obsidian Bridges 50/30/0 · 15 Heart of the Emberdeep 90/30/0 (expert/casual/novice).
+- First drafts were walls (0% for everyone by wave 4–5). Root causes found with per-leak logs: chained freezes
+  (fixed with thaw immunity), uncapped hive spawns (capped at 6), a too-short straight lane on Obsidian Bridges
+  (now has a dip), no pads beside Heart's top road (added 2), and an overtuned final boss (5000 → 3200 hp).
+- The level-wide `hpMult` also makes early waves harsh on late levels; a per-wave ramp might be cleaner later.
+
 **Iteration 15** (`balance.ts 10`, smart expert):
 
 | Level | expert | casual | novice |

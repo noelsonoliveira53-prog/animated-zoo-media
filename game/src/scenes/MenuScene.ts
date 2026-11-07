@@ -78,7 +78,7 @@ export class MenuScene extends Phaser.Scene {
 
     this.buildHeroPicker();
 
-    this.add.text(16, GAME_H - 30, 'v0.4 — prototype', textStyle(14, TEXT.dim, false));
+    this.add.text(16, GAME_H - 30, 'v0.5 — full campaign', textStyle(14, TEXT.dim, false));
   }
 
   private buildHeroPicker(): void {

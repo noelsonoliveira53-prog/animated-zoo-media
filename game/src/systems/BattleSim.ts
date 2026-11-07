@@ -29,6 +29,8 @@ export interface Enemy {
   chillCd: number;
   underground: boolean;
   burrowCd: number;
+  spawnCd: number;
+  spawned: number;
   phase: number; // index of next boss phase to trigger
   speedMult: number;
 }
@@ -87,6 +89,7 @@ export interface Tower {
   rally: Vec2 | null; // for soldier towers
   spec: string | null; // chosen top-tier specialization
   frozen: number; // seconds left frozen (cannot fire)
+  chillImmune: number; // seconds left before it can be frozen again (prevents perma-freeze)
 }
 
 export interface Projectile {
@@ -149,6 +152,8 @@ export type BattleStatus = 'prep' | 'running' | 'victory' | 'defeat';
 export const WAVE_GAP = 14;
 export const FIRST_WAVE_GAP = 25;
 const SOLDIER_SPEED = 110;
+/** After thawing, a tower can't be re-frozen for this long, so packs of chillers can't lock it forever. */
+const THAW_IMMUNITY = 3;
 
 /** Supply coins the sanctuary sends at the start of each wave (index 0-based). Wave 1 gets none. */
 export function waveIncome(index: number): number {
@@ -523,7 +528,7 @@ export class BattleSim {
     const def = TOWERS[towerId];
     this.coins -= def.tiers[0].cost;
     const pos = { ...this.level.slots[slot] };
-    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null, frozen: 0 };
+    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null, frozen: 0, chillImmune: 0 };
     if (def.tiers[0].soldiers) {
       t.rally = this.rallyPointFor(pos, def.tiers[0].range);
       this.syncSquad(t, true);
@@ -755,6 +760,8 @@ export class BattleSim {
       chillCd: def.chill ? def.chill.interval * 0.6 : 0,
       underground: false,
       burrowCd: def.burrow ? def.burrow.interval : 0,
+      spawnCd: def.spawner ? def.spawner.interval : 0,
+      spawned: 0,
       phase: 0,
       speedMult: 1,
     };
@@ -773,6 +780,7 @@ export class BattleSim {
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.def.chill) this.tickChill(e, dt);
       if (e.def.burrow) this.tickBurrow(e, dt);
+      if (e.def.spawner) this.tickSpawner(e, dt);
       if (e.blockedBy) {
         const isHero = !!this.hero && this.hero.uid === e.blockedBy;
         const s = isHero ? null : this.soldiers.find((so) => so.uid === e.blockedBy);
@@ -801,6 +809,15 @@ export class BattleSim {
     }
   }
 
+  /** Spawners release minions behind themselves on a timer (even while blocked). */
+  private tickSpawner(e: Enemy, dt: number): void {
+    const sp = e.def.spawner!;
+    e.spawnCd -= dt;
+    if (e.spawnCd > 0) return;
+    e.spawnCd = sp.interval;
+    for (let i = 0; i < sp.count && e.spawned < sp.limit; i++, e.spawned++) this.spawn(sp.enemy, e.path, Math.max(0, e.dist - 12 - i * 10));
+  }
+
   /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
   private tickBurrow(e: Enemy, dt: number): void {
     const b = e.def.burrow!;
@@ -826,7 +843,9 @@ export class BattleSim {
     for (const t of this.towers) {
       if (!t || t.rally) continue; // soldier dens keep working
       if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) > c.radius) continue;
-      t.frozen = Math.max(t.frozen, c.duration);
+      if (t.chillImmune > 0) continue;
+      t.frozen = c.duration;
+      t.chillImmune = c.duration + THAW_IMMUNITY;
       hit.push(t);
     }
     this.events.push({ type: 'chill', source: e, towers: hit, radius: c.radius });
@@ -1003,6 +1022,7 @@ export class BattleSim {
   private fireTowers(dt: number): void {
     for (const t of this.towers) {
       if (!t) continue;
+      if (t.chillImmune > 0) t.chillImmune = Math.max(0, t.chillImmune - dt);
       if (t.frozen > 0) {
         t.frozen = Math.max(0, t.frozen - dt);
         continue;

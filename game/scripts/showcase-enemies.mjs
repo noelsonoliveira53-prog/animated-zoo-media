@@ -24,7 +24,7 @@ await page.evaluate((lv) => window.__game.scene.getScene('Menu').scene.start('Ba
 await page.waitForTimeout(800);
 await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');
-  const ids = Object.keys(window.__enemyIds ?? {}).length ? window.__enemyIds : ['mudling', 'skitter', 'shellback', 'gloomwing', 'gnat', 'bogmender', 'reedguard', 'splotch', 'thornhog', 'wispling', 'bogbrute', 'rimewraith', 'grimtusk', 'murkmaw'];
+  const ids = Object.keys(window.__enemyIds ?? {}).length ? window.__enemyIds : ['mudling', 'skitter', 'shellback', 'gloomwing', 'gnat', 'bogmender', 'reedguard', 'splotch', 'thornhog', 'wispling', 'bogbrute', 'rimewraith', 'cindermole', 'emberimp', 'ashhive', 'vulkhar'];
   ids.forEach((id, i) => s.sim.spawn(id, i % 2, 200 + i * 75));
   s.sim.status = 'running';
   s.sim.coins = 2000;

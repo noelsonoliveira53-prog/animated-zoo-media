@@ -29,6 +29,7 @@ export interface EnemyDef {
   phases?: BossPhase[]; // triggered once each as hp drops
   chill?: { radius: number; interval: number; duration: number }; // periodically freezes nearby towers
   burrow?: { interval: number; duration: number; speedMult: number }; // dives underground on a cycle
+  spawner?: { enemy: string; count: number; interval: number; limit: number }; // releases minions while alive (limit = max total)
   boss?: boolean;
 }
 

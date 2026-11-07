@@ -179,7 +179,8 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
   let rotation = Math.floor(rnd() * mix.length);
   let think = 0;
   const dt = 1 / 30;
-  if (strat.smart && sim.hero) sim.moveHero(chokePoint(sim));
+  // A level-designed hero spot (two-gate maps) beats the generic choke point.
+  if (strat.smart && sim.hero && !level.heroSpawn) sim.moveHero(chokePoint(sim));
 
   while (sim.isActive() && sim.time < maxSeconds) {
     think -= dt;

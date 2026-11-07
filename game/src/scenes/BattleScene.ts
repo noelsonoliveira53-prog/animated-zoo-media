@@ -1315,7 +1315,8 @@ export class BattleScene extends Phaser.Scene {
       const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
       panel.add(this.add.text(0, 64, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
-    const hasNext = won && this.levelIndex + 1 < LEVELS.length;
+    const finale = won && this.levelIndex === LEVELS.length - 1;
+    const hasNext = won && (this.levelIndex + 1 < LEVELS.length || finale);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,
       color: C.sky,
@@ -1328,10 +1329,10 @@ export class BattleScene extends Phaser.Scene {
     panel.add([retry, map]);
     if (hasNext) {
       panel.add(
-        new Button(this, 170, 120, 'Next', {
+        new Button(this, 170, 120, finale ? 'Epilogue' : 'Next', {
           width: 150,
           color: 0xff9f43,
-          onClick: () => this.scene.start('WorldMap', { focus: this.levelIndex + 1 }),
+          onClick: () => (finale ? this.scene.start('Ending') : this.scene.start('WorldMap', { focus: this.levelIndex + 1 })),
         }),
       );
     }

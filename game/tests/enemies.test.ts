@@ -150,3 +150,36 @@ describe('burrowers', () => {
     expect(m.blockedBy).toBe(0);
   });
 });
+
+describe('freeze immunity', () => {
+  it('a pack of wraiths cannot keep a tower frozen forever', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 300, y: 160 }] };
+    const sim = new BattleSim(l2);
+    const t = sim.build(0, 'thornbow')!;
+    sim.status = 'running';
+    for (let i = 0; i < 4; i++) {
+      const w = sim.spawn('rimewraith', 0, 290 + i * 8);
+      w.def = { ...w.def, speed: 0 };
+      w.chillCd = 0.5 + i * 1.2; // staggered breaths
+    }
+    let thawedFrames = 0;
+    for (let i = 0; i < 60 * 12; i++) {
+      sim.update(1 / 60);
+      if (t.frozen === 0) thawedFrames++;
+    }
+    expect(thawedFrames).toBeGreaterThan(60 * 4);
+  });
+});
+
+describe('spawners', () => {
+  it('Ash Hives release imps on a timer, up to their limit', () => {
+    const sim = new BattleSim(lvl);
+    sim.status = 'running';
+    const h = sim.spawn('ashhive', 0, 100);
+    h.def = { ...h.def, speed: 0 };
+    for (let i = 0; i < 60 * 60; i++) sim.update(1 / 60);
+    const imps = sim.enemies.filter((e) => e.def.id === 'emberimp').length + 0;
+    expect(h.spawned).toBe(6);
+    expect(imps).toBeLessThanOrEqual(6);
+  });
+});

@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
-import { LEVELS, totalStars } from '../data/levels';
+import { LEVELS, isLevelUnlocked, totalStars } from '../data/levels';
+import { dailyFor, todayString } from '../systems/daily';
+import { DAILY_MODIFIERS } from '../data/daily';
 import { ensureVillage, loadSave, writeSave } from '../systems/save';
 import { heroTrainCost, trainHero } from '../systems/village';
 import { HERO_MAX_LEVEL } from '../data/heroes';
@@ -73,15 +75,35 @@ export class MenuScene extends Phaser.Scene {
       color: C.leaf,
       onClick: () => this.scene.start('Village'),
     });
-    this.add.image(380, 556, 'star').setScale(0.6);
-    this.add.text(404, 556, `${totalStars(save.stars)} / ${LEVELS.length * 3} stars earned`, textStyle(20)).setOrigin(0, 0.5);
+    this.add.image(GAME_W - 150, 30, 'star').setScale(0.55);
+    this.add.text(GAME_W - 128, 30, `${totalStars(save.stars)} / ${LEVELS.length * 3}`, textStyle(20)).setOrigin(0, 0.5);
+    this.buildDaily();
 
     this.buildHeroPicker();
-    new Button(this, 240, 640, 'Field Guide', { width: 190, height: 52, fontSize: 19, color: 0xd9c39a, onClick: () => this.scene.start('FieldGuide') });
-    new Button(this, 460, 640, 'Achievements', { width: 210, height: 52, fontSize: 19, color: C.gold, onClick: () => this.scene.start('Achievements') });
-    new Button(this, 680, 640, 'Settings', { width: 190, height: 52, fontSize: 19, color: C.sky, onClick: () => this.scene.start('Settings') });
+    new Button(this, 240, 662, 'Field Guide', { width: 190, height: 52, fontSize: 19, color: 0xd9c39a, onClick: () => this.scene.start('FieldGuide') });
+    new Button(this, 460, 662, 'Achievements', { width: 210, height: 52, fontSize: 19, color: C.gold, onClick: () => this.scene.start('Achievements') });
+    new Button(this, 680, 662, 'Settings', { width: 190, height: 52, fontSize: 19, color: C.sky, onClick: () => this.scene.start('Settings') });
 
-    this.add.text(16, GAME_H - 30, 'v0.5 — full campaign', textStyle(14, TEXT.dim, false));
+    this.add.text(GAME_W - 16, GAME_H - 24, 'v0.6', textStyle(14, TEXT.dim, false)).setOrigin(1, 0.5);
+  }
+
+  private buildDaily(): void {
+    const save = loadSave();
+    const unlocked = LEVELS.filter((_, i) => isLevelUnlocked(i, save.stars)).length;
+    const d = dailyFor(todayString(), unlocked);
+    const done = save.dailyDone === d.date;
+    const names = d.modifiers.map((id) => DAILY_MODIFIERS.find((m) => m.id === id)!.name).join(' + ');
+    const b = new Button(this, 460, 562, done ? 'Daily: done ✓ (replay)' : `Daily: ${LEVELS[d.levelIndex].name}`, {
+      width: 360,
+      height: 54,
+      fontSize: 18,
+      color: done ? 0x6a8a6a : 0xb07cff,
+      onClick: () => this.scene.start('Battle', { daily: true }),
+    });
+    void b;
+    this.add
+      .text(460, 600, done ? `Come back tomorrow for a new challenge` : `${names}  •  Win: +${d.reward.coins}c +${d.reward.glowsap}s`, textStyle(13, TEXT.cream, false))
+      .setOrigin(0.5);
   }
 
   private buildHeroPicker(): void {

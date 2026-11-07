@@ -12,13 +12,14 @@ export interface SaveData {
   seenEnemies: string[]; // enemy ids met in battle (unlocks Field Guide entries)
   stats: Record<string, number>; // lifetime counters for achievements
   achievements: string[]; // unlocked achievement ids
+  dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -52,6 +53,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       seenEnemies: Array.isArray(parsed.seenEnemies) ? parsed.seenEnemies.filter((x) => typeof x === 'string') : [],
       stats: { ...(parsed.stats ?? {}) },
       achievements: Array.isArray(parsed.achievements) ? parsed.achievements.filter((x) => typeof x === 'string') : [],
+      dailyDone: typeof parsed.dailyDone === 'string' ? parsed.dailyDone : '',
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {

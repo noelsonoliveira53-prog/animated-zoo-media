@@ -1,6 +1,9 @@
 import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
+import { combine, DAILY_MODIFIERS } from '../data/daily';
+import { dailyFor, todayString, type DailyChallenge } from '../systems/daily';
+import { isLevelUnlocked } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
@@ -72,12 +75,25 @@ export class BattleScene extends Phaser.Scene {
     super('Battle');
   }
 
-  init(data: { levelIndex?: number }): void {
+  private daily: DailyChallenge | null = null;
+
+  init(data: { levelIndex?: number; daily?: boolean }): void {
     this.levelIndex = data.levelIndex ?? 0;
+    this.daily = null;
+    if (data.daily) {
+      const st = loadSave().stars;
+      const unlocked = LEVELS.filter((_, i) => isLevelUnlocked(i, st)).length;
+      this.daily = dailyFor(todayString(), unlocked);
+      this.levelIndex = this.daily.levelIndex;
+    }
     this.level = LEVELS[this.levelIndex];
     const save = loadSave();
     this.perks = battlePerks(save.village);
-    this.sim = new BattleSim(this.level, save.hero, { ...this.perks, heroLevel: 1 + (save.heroRanks[save.hero] ?? 0) });
+    this.sim = new BattleSim(this.level, save.hero, {
+      ...this.perks,
+      heroLevel: 1 + (save.heroRanks[save.hero] ?? 0),
+      mods: this.daily ? combine(this.daily.modifiers) : undefined,
+    });
     this.heroSprite = null;
     this.heroSelected = false;
     this.seen = new Set();
@@ -187,7 +203,12 @@ export class BattleScene extends Phaser.Scene {
     if (this.perks.towerDamageMult > 1) bonus.push(`+${Math.round((this.perks.towerDamageMult - 1) * 100)}% tower damage`);
     if (this.perks.rangerMult > 1) bonus.push(`Rangers +${Math.round((this.perks.rangerMult - 1) * 100)}%`);
     if (this.sim.hero && this.sim.hero.level > 1) bonus.push(`${this.sim.hero.def.name} starts at Lv ${this.sim.hero.level}`);
-    this.showBanner(this.level.name, bonus.length ? `Village bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
+    if (this.daily) {
+      const names = this.daily.modifiers.map((id) => DAILY_MODIFIERS.find((m) => m.id === id)!.name);
+      this.showBanner(`Daily: ${this.level.name}`, `Today's twists: ${names.join(' + ')}`);
+    } else {
+      this.showBanner(this.level.name, bonus.length ? `Village bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
+    }
   }
 
   // ---------- map ----------
@@ -368,6 +389,10 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private armSpell(id: string | null): void {
+    if (id && this.sim.mods.noSpells) {
+      this.floatText(GAME_W - 120, GAME_H - 120, 'Spells are clouded today', TEXT.dim, 18);
+      return;
+    }
     if (id && !this.sim.spellReady(id)) {
       this.floatText(GAME_W - 120, GAME_H - 120, 'Recharging…', TEXT.dim, 18);
       return;
@@ -397,7 +422,7 @@ export class BattleScene extends Phaser.Scene {
     SPELL_ORDER.forEach((id, i) => {
       const p = this.spellPos(i);
       const def = SPELLS[id];
-      const cd = this.sim.spellCd[id] ?? 0;
+      const cd = this.sim.mods.noSpells ? def.cooldown : (this.sim.spellCd[id] ?? 0);
       g.fillStyle(C.ink, 0.85);
       g.fillCircle(p.x, p.y, 40);
       g.fillStyle(cd > 0 ? 0x3a4a3e : C.panelLight, 1);
@@ -650,7 +675,7 @@ export class BattleScene extends Phaser.Scene {
     const soundLabel = () => (loadSave().settings.muted ? 'Sound: Off' : 'Sound: On');
     const items: [string, number, () => void][] = [
       ['Resume', C.leaf, () => this.togglePause()],
-      ['Restart', C.sky, () => this.scene.restart({ levelIndex: this.levelIndex })],
+      ['Restart', C.sky, () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily })],
       [soundLabel(), 0xb07cff, () => {}],
       ['Quit to Map', 0xff9f43, () => this.scene.start('WorldMap', { focus: this.levelIndex })],
     ];
@@ -731,7 +756,7 @@ export class BattleScene extends Phaser.Scene {
       ];
       TOWER_ORDER.forEach((id, i) => {
         const def = TOWERS[id];
-        const cost = def.tiers[0].cost;
+        const cost = this.sim.price(def.tiers[0].cost);
         const o = offsets[i];
         const opt = this.menuOption(o.x, o.y, `tower_${id}_0`, String(cost), this.sim.coins >= cost, () => {
           if (this.sim.build(slot, id)) this.closeMenu();
@@ -747,7 +772,7 @@ export class BattleScene extends Phaser.Scene {
       if (this.sim.canSpecialize(tower)) {
         tower.def.specs.forEach((sp, k) => {
           const ox = k === 0 ? -56 : 56;
-          const opt = this.menuOption(ox, -82, `tower_${tower.def.id}_${sp.id}`, String(sp.stats.cost), this.sim.coins >= sp.stats.cost, () => {
+          const opt = this.menuOption(ox, -82, `tower_${tower.def.id}_${sp.id}`, String(this.sim.price(sp.stats.cost)), this.sim.coins >= this.sim.price(sp.stats.cost), () => {
             if (this.pendingSpec === `${slot}:${k}`) {
               if (this.sim.specialize(slot, k)) this.openSlotMenu(slot);
               return;
@@ -768,7 +793,7 @@ export class BattleScene extends Phaser.Scene {
       } else {
         c.add(this.add.text(0, -80, 'MAX', textStyle(22, TEXT.gold)).setOrigin(0.5));
       }
-      const refund = sellValue(tower.def, tower.tier, tower.spec);
+      const refund = sellValue(tower.def, tower.tier, tower.spec, this.sim.mods.costMult);
       c.add(
         this.textOption(-74, 30, `Sell\n+${refund}`, C.danger, () => {
           this.sim.sell(slot);
@@ -1295,7 +1320,7 @@ export class BattleScene extends Phaser.Scene {
     if (this.ended) return;
     this.ended = true;
     this.closeMenu();
-    const stars = won ? starsForLives(this.sim.lives, this.level.lives) : 0;
+    const stars = won ? starsForLives(this.sim.lives, this.sim.maxLives) : 0;
     let reward = { coins: 0, glowsap: 0 };
     let after = loadSave();
     if (won) {
@@ -1306,6 +1331,12 @@ export class BattleScene extends Phaser.Scene {
       sfx.victory();
     } else {
       sfx.defeat();
+    }
+    let dailyPaid: { coins: number; glowsap: number } | null = null;
+    if (won && this.daily && after.dailyDone !== this.daily.date) {
+      dailyPaid = addResources(ensureVillage(after), this.daily.reward.coins, this.daily.reward.glowsap);
+      after.dailyDone = this.daily.date;
+      after = bumpStats(after, { dailies: 1 });
     }
     // Lifetime stats + achievements (counted for losses too).
     const add: Record<string, number> = {
@@ -1337,19 +1368,22 @@ export class BattleScene extends Phaser.Scene {
     }
     panel.add(
       this.add
-        .text(0, 30, won ? `Lives kept: ${this.sim.lives}/${this.level.lives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
+        .text(0, 14, won ? `Lives kept: ${this.sim.lives}/${this.sim.maxLives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
         .setOrigin(0.5),
     );
+    if (dailyPaid) {
+      panel.add(this.add.text(0, 74, `Daily challenge bonus: +${dailyPaid.coins} coins, +${dailyPaid.glowsap} glowsap`, textStyle(16, '#9be86a', false)).setOrigin(0.5));
+    }
     if (won) {
       const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
-      panel.add(this.add.text(0, 64, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
+      panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
     const finale = won && this.levelIndex === LEVELS.length - 1;
     const hasNext = won && (this.levelIndex + 1 < LEVELS.length || finale);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,
       color: C.sky,
-      onClick: () => this.scene.restart({ levelIndex: this.levelIndex }),
+      onClick: () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily }),
     });
     const map = new Button(this, hasNext ? 0 : 120, 120, 'Map', {
       width: hasNext ? 150 : 200,

@@ -1,5 +1,6 @@
 import type { EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, Vec2 } from '../data/types';
 import { SPELLS } from '../data/spells';
+import { NO_MODS, type Modifiers } from '../data/daily';
 import { HEROES, HERO_MAX_LEVEL, HERO_XP, heroLevelMult, levelForXp } from '../data/heroes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, sellValue, towerStats } from '../data/towers';
@@ -188,20 +189,28 @@ export class BattleSim {
   /** Multiplier on tower shot damage (from the village Defense Workshop). */
   towerDamageMult = 1;
 
+  /** Daily-challenge modifiers (neutral for normal battles). */
+  readonly mods: Modifiers;
+  /** Starting lives (for star ratings). */
+  readonly maxLives: number;
+
   /** Multiplier on Grove Call Rangers' hp and damage (from the village Ranger Lodge). */
   rangerMult = 1;
 
   constructor(
     level: LevelDef,
     heroId: string | null = null,
-    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number } = {},
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number; mods?: Modifiers } = {},
   ) {
     this.level = level;
+    this.mods = opts.mods ?? NO_MODS;
+    if (this.mods.noHero) heroId = null;
     this.towerDamageMult = opts.towerDamageMult ?? 1;
     this.rangerMult = opts.rangerMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
-    this.coins = level.startCoins + (opts.bonusCoins ?? 0);
-    this.lives = level.lives;
+    this.coins = Math.round(level.startCoins * this.mods.startCoinsMult) + (opts.bonusCoins ?? 0);
+    this.lives = this.mods.lives ?? level.lives;
+    this.maxLives = this.lives;
     this.towers = level.slots.map(() => null);
     if (heroId && HEROES[heroId]) {
       const def = HEROES[heroId];
@@ -248,7 +257,7 @@ export class BattleSim {
   /** Cast a global spell at a point. Reinforcements must target the road. */
   castSpell(id: string, pos: Vec2): boolean {
     const def = SPELLS[id];
-    if (!def || !this.spellReady(id) || !this.isActive()) return false;
+    if (!def || this.mods.noSpells || !this.spellReady(id) || !this.isActive()) return false;
     if (def.kind === 'reinforce') {
       let best: { point: Vec2; distance: number } | null = null;
       for (const path of this.paths) {
@@ -525,20 +534,20 @@ export class BattleSim {
     this.coins += bonus + income;
     this.schedules.push({ events: buildSchedule(this.level.waves[this.waveIndex]), cursor: 0, t: 0 });
     this.status = 'running';
-    this.waveCountdown = WAVE_GAP;
+    this.waveCountdown = WAVE_GAP * this.mods.waveGapMult;
     this.events.push({ type: 'waveStart', index: this.waveIndex, bonus, income });
     return true;
   }
 
   canBuild(slot: number, towerId: string): boolean {
     const def = TOWERS[towerId];
-    return !!def && this.towers[slot] === null && this.coins >= def.tiers[0].cost && this.isActive();
+    return !!def && this.towers[slot] === null && this.coins >= this.price(def.tiers[0].cost) && this.isActive();
   }
 
   build(slot: number, towerId: string): Tower | null {
     if (!this.canBuild(slot, towerId)) return null;
     const def = TOWERS[towerId];
-    this.coins -= def.tiers[0].cost;
+    this.coins -= this.price(def.tiers[0].cost);
     const pos = { ...this.level.slots[slot] };
     const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null, frozen: 0, chillImmune: 0 };
     if (def.tiers[0].soldiers) {
@@ -550,10 +559,15 @@ export class BattleSim {
     return t;
   }
 
+  /** Price after daily-challenge discounts. */
+  price(cost: number): number {
+    return Math.round(cost * this.mods.costMult);
+  }
+
   upgradeCost(tower: Tower): number | null {
     if (tower.spec) return null;
     const next = tower.def.tiers[tower.tier + 1];
-    return next ? next.cost : null;
+    return next ? this.price(next.cost) : null;
   }
 
   stats(t: Tower) {
@@ -569,8 +583,8 @@ export class BattleSim {
     const t = this.towers[slot];
     if (!t || !this.isActive() || !this.canSpecialize(t)) return false;
     const sp = t.def.specs[specIndex];
-    if (!sp || this.coins < sp.stats.cost) return false;
-    this.coins -= sp.stats.cost;
+    if (!sp || this.coins < this.price(sp.stats.cost)) return false;
+    this.coins -= this.price(sp.stats.cost);
     t.spec = sp.id;
     if (t.rally) this.syncSquad(t, true);
     this.events.push({ type: 'specialize', tower: t });
@@ -592,7 +606,7 @@ export class BattleSim {
   sell(slot: number): boolean {
     const t = this.towers[slot];
     if (!t || !this.isActive()) return false;
-    const refund = sellValue(t.def, t.tier, t.spec);
+    const refund = sellValue(t.def, t.tier, t.spec, this.mods.costMult);
     this.coins += refund;
     this.towers[slot] = null;
     this.removeSquad(t.uid);
@@ -756,8 +770,8 @@ export class BattleSim {
     const e: Enemy = {
       uid: this.nextUid++,
       def,
-      hp: Math.round(def.hp * this.waveHpMult()),
-      maxHp: Math.round(def.hp * this.waveHpMult()),
+      hp: Math.round(def.hp * this.waveHpMult() * this.mods.hpMult),
+      maxHp: Math.round(def.hp * this.waveHpMult() * this.mods.hpMult),
       path: pathIndex,
       dist,
       pos: path.pointAt(dist),
@@ -810,7 +824,7 @@ export class BattleSim {
           continue;
         }
       }
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1055,7 +1069,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **21** (next balance pass at iteration 25)
+Iteration counter: **22** (next balance pass at iteration 25)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -187,15 +187,22 @@ Iteration counter: **21** (next balance pass at iteration 25)
   and village building; `checkAchievements()` unlocks and pays out. Slide-in "Achievement" toasts in battle,
   raid and village; `AchievementsScene` lists all with progress bars; menu button. 98 tests.
 
+- [x] **Iter 22** — **Daily challenge (meta, part 3).** `dailyFor(date, unlocked)` hashes the local date into one of
+  the player's unlocked levels plus 2 modifiers (always at least one hard): Swift Horde (+30% speed), Thick Hides
+  (+25% hp), Beaver Discount (−20% tower prices), Full Coffers (+50% coins), Clouded Sky (no spells), Hero on Leave,
+  Thin Hedge (5 lives), Frenzy (waves twice as fast). New `Modifiers` in `BattleSim` (prices via `sim.price()`,
+  sell refunds scaled, `maxLives` for stars). Menu card "Daily: <level>" with twists and reward; first win of the day
+  pays +300…+1140 coins & glowsap (saved as `dailyDone`), replays allowed. Battle banner lists today's twists;
+  spell buttons show as locked under Clouded Sky. Menu re-laid out (stars top-right, version bottom-right).
+  4 new tests (102 total). **META pillar complete:** Field Guide, settings, achievements, daily challenge.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Daily challenge: a date-seeded campaign level with 1–2 modifiers (e.g. "enemies +30% speed", "towers cost 20% less",
-   "no Starfall") and a daily reward.
-2. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
-3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-4. Ambient music loop (procedural).
+1. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
+2. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+3. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)

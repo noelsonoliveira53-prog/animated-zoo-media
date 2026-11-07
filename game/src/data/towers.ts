@@ -123,12 +123,12 @@ export const TOWERS: Record<string, TowerDef> = {
 export const TOWER_ORDER = ['thornbow', 'glimmer', 'boulder', 'burrow'];
 
 /** Coins returned when selling: 60% of everything invested. */
-export function sellValue(def: TowerDef, tier: number, spec: string | null = null): number {
+export function sellValue(def: TowerDef, tier: number, spec: string | null = null, costMult = 1): number {
   let spent = 0;
   for (let i = 0; i <= tier; i++) spent += def.tiers[i].cost;
   const sp = spec ? def.specs.find((x) => x.id === spec) : undefined;
   if (sp) spent += sp.stats.cost;
-  return Math.floor(spent * 0.6);
+  return Math.floor(spent * costMult * 0.6);
 }
 
 /** Current stat block for a tower (its specialization if chosen, else its tier). */

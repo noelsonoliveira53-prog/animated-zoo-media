@@ -867,8 +867,9 @@ export class BattleSim {
           e.attackCd -= dt;
           if (e.attackCd <= 0) {
             e.attackCd = 1 / e.def.attackRate;
-            if (isHero) this.hurtHero(e.def.attack);
-            else this.hurtSoldier(s!, e.def.attack);
+            const hit = e.def.attack * this.attackMult();
+            if (isHero) this.hurtHero(hit);
+            else this.hurtSoldier(s!, hit);
           }
           continue;
         }
@@ -943,6 +944,12 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** Endless: enemy melee hits ramp with the wave too (otherwise a blocker can stall forever). 1 in the campaign. */
+  attackMult(): number {
+    const en = this.level.endless;
+    return en ? 1 + (en.attackRamp ?? 0) * Math.max(0, this.waveIndex) : 1;
   }
 
   /** How many enemies a melee hero can hold at once at their current level (Bramble's Bulwark). */

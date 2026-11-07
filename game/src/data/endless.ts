@@ -22,6 +22,7 @@ export const ENDLESS = {
     { fromWave: 20, enemies: ['barnaclad', 'gullwing', 'reefwarden'] },
     { fromWave: 24, enemies: ['shardskipper', 'mirrorback', 'glarefly'] },
   ] as EndlessTier[],
+  attackRamp: 0.15, // enemy melee hits grow 8% per wave so blockers can't stall forever
   heroRegen: 0.5, // long runs reward tanky regen heroes too much; halve hero healing in endless
   rewardPerWave: { coins: 12, glowsap: 12 }, // village payout per wave held
 };

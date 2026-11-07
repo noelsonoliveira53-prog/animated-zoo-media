@@ -46,7 +46,7 @@ export function makeEndlessLevel(level: LevelDef, seed = 1): LevelDef {
   const rand = rng(seed);
   const waves: WaveDef[] = [];
   for (let w = 1; w <= ENDLESS.waves; w++) waves.push(endlessWave(w, level.paths.length, rand));
-  return { ...level, id: `${level.id}-endless`, waves, hpMult: 1, endless: { hpRamp: ENDLESS.hpRampPerWave, heroRegen: ENDLESS.heroRegen }, finale: false };
+  return { ...level, id: `${level.id}-endless`, waves, hpMult: 1, endless: { hpRamp: ENDLESS.hpRampPerWave, heroRegen: ENDLESS.heroRegen, attackRamp: ENDLESS.attackRamp }, finale: false };
 }
 
 /** Waves fully survived when a run ends during the given 0-based wave index. */

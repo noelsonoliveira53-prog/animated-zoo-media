@@ -46,3 +46,15 @@ describe('endless mode', () => {
     expect(loadSave(store).endlessBest.l3).toBe(12);
   });
 });
+
+describe('endless attack ramp', () => {
+  it('enemy melee damage ramps with the wave in endless only', () => {
+    const e = new BattleSim(makeEndlessLevel(LEVELS[0]));
+    expect(e.attackMult()).toBe(1);
+    (e as any).waveIndex = 10;
+    expect(e.attackMult()).toBeCloseTo(1 + ENDLESS.attackRamp * 10);
+    const c = new BattleSim(LEVELS[0]);
+    (c as any).waveIndex = 10;
+    expect(c.attackMult()).toBe(1);
+  });
+});

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **152** (next balance pass at iteration 155)
+Iteration counter: **153** (next balance pass at iteration 155)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1089,12 +1089,16 @@ Iteration counter: **152** (next balance pass at iteration 155)
     `applyDamage`.
   - The ward shows as a warm gold disc with a breathing rim. Field Guide tag; endless tier at wave 70; test.
   - Screenshot `screenshots/152.png` (two lantern glows). 207 tests.
+- **Iteration 153** (Mistwreath level 3): level 83 **Fogbell Terraces**. It has 11 pads and two roads of 2,520px and
+  1,710px, and the waves mix Mistfoxes, Silkcranes and Glowbearers with older enemies. Silkcrane counts were trimmed
+  in the later waves because their dodging was the casual strategy's main leak. Screenshot `screenshots/153.png`.
+  207 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mistwreath levels 83–84, then the finale (85) with a boss, achievements, a story card and
+1. Mistwreath level 84, then the finale (85) with a boss, achievements, a story card and
    the endless boss rotation.
 2. A breather now and then (raid or village variety).
 
@@ -1105,6 +1109,9 @@ Iteration counter: **152** (next balance pass at iteration 155)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 153**: 83 Fogbell Terraces: 83/50/0 at hpMult 1.8, 67/42 at 2.05, 100/58 at 1.6; the casual's leaks were mostly Silkcranes. After
+trimming crane counts: 100/75 at 1.6, and **1.7 → 92/75/0** (kept, third-level band).
+
 **Iteration 152**: 82 Teahouse Switchback: 100/100/0 at hpMult 1.6 (17.8 lives, too comfy), 92/100 at 1.85, 75/75 at 1.95, 75/67 at
 2.05, and **1.8 → 100/100/0** (12.3 lives; kept, second-level band).
 

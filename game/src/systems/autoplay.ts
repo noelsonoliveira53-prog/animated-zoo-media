@@ -118,6 +118,15 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
         sim.upgrade(best);
         continue;
       }
+      // Everything maxed: buy a specialization (alternate branches by slot).
+      if (best < 0 && free === undefined) {
+        const slot = sim.towers.findIndex((t) => t && sim.canSpecialize(t));
+        if (slot >= 0) {
+          const t = sim.towers[slot]!;
+          const pick = slot % 2;
+          if (sim.coins - strat.reserve >= t.def.specs[pick].stats.cost && sim.specialize(slot, pick)) continue;
+        }
+      }
       return;
     }
   }

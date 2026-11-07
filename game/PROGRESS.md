@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
 
-Iteration counter: **7** (next balance pass at iteration 10)
+Iteration counter: **8** (next balance pass at iteration 10)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -64,18 +64,26 @@ Iteration counter: **7** (next balance pass at iteration 10)
   exit and deduplicated; levels can have decorative ponds. Level-data tests (pads off roads, on screen)
   and guard rails for levels 3–5 (53 tests).
 
+- [x] **Iter 8** — **Tower specializations.** Every tower offers 2 branches at max tier (`specs` in
+  `data/towers.ts`): Thornbow → **Hawkeye Perch** (270 range, 70 dmg, pierces 50% armor) / **Bramble
+  Volley** (3 targets per volley); Glimmer → **Stormcall Spire** (chain lightning to 4 more) / **Frostbloom
+  Spire** (splash + heavy slow); Boulder → **Quake Mortar** (huge blast) / **Sap Catapult** (slowing splash);
+  Burrow → **Stonehide Wardens** (armored tanks) / **Thornback Raiders** (4 fast hitters). New sim mechanics:
+  multishot, chain, armor pierce. Menu shows both branches; the first tap previews (description + range),
+  the second tap buys. Crested tower art per branch, tinted shots, lightning effect + zap sound. The
+  autoplayer buys specializations once everything is maxed. Sell refunds include the spec. 8 new tests (61 total).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Tower top-tier specializations (2 branches per tower).
-2. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
-3. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
-4. Levels 6–15+, multi-path levels.
-5. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-6. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-7. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-8. Ambient music loop (procedural).
+1. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
+2. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
+3. Levels 6–15+, multi-path levels.
+4. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+5. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+6. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+7. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)

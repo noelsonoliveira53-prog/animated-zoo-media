@@ -2,7 +2,7 @@ import type { EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, V
 import { SPELLS } from '../data/spells';
 import { HEROES, HERO_MAX_LEVEL, heroLevelMult, levelForXp } from '../data/heroes';
 import { ENEMIES } from '../data/enemies';
-import { TOWERS, sellValue } from '../data/towers';
+import { TOWERS, sellValue, towerStats } from '../data/towers';
 import { Path } from './path';
 import { computeDamage } from './combat';
 import { buildSchedule, earlyCallBonus, type SpawnEvent } from './waves';
@@ -82,6 +82,7 @@ export interface Tower {
   cooldown: number;
   target: TargetMode;
   rally: Vec2 | null; // for soldier towers
+  spec: string | null; // chosen top-tier specialization
 }
 
 export interface Projectile {
@@ -101,6 +102,8 @@ export interface Projectile {
   origin: Vec2;
   travel: number; // straight-line distance at launch (for arc rendering)
   kind: string; // tower id, for rendering
+  pierce: number; // share of armor ignored
+  chain?: { count: number; falloff: number; range: number };
 }
 
 export type SimEvent =
@@ -116,6 +119,8 @@ export type SimEvent =
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
   | { type: 'melee'; pos: Vec2 }
+  | { type: 'chain'; points: Vec2[]; color: number }
+  | { type: 'specialize'; tower: Tower }
   | { type: 'spellCast'; spellId: string; pos: Vec2 }
   | { type: 'strike'; spellId: string; uid: number; pos: Vec2; radius: number; hits: Enemy[] }
   | { type: 'summonGone'; soldier: Soldier }
@@ -436,6 +441,7 @@ export class BattleSim {
           origin,
           travel: 0,
           kind: `hero_${h.def.id}`,
+          pierce: 0,
         };
         this.projectiles.push(p);
         this.events.push({ type: 'heroShoot', hero: h, projectile: p });
@@ -490,7 +496,7 @@ export class BattleSim {
     const def = TOWERS[towerId];
     this.coins -= def.tiers[0].cost;
     const pos = { ...this.level.slots[slot] };
-    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null };
+    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null };
     if (def.tiers[0].soldiers) {
       t.rally = this.rallyPointFor(pos, def.tiers[0].range);
       this.syncSquad(t, true);
@@ -501,8 +507,30 @@ export class BattleSim {
   }
 
   upgradeCost(tower: Tower): number | null {
+    if (tower.spec) return null;
     const next = tower.def.tiers[tower.tier + 1];
     return next ? next.cost : null;
+  }
+
+  stats(t: Tower) {
+    return towerStats(t.def, t.tier, t.spec);
+  }
+
+  /** Specializations are offered once a tower reaches its top tier. */
+  canSpecialize(t: Tower): boolean {
+    return !t.spec && t.tier === t.def.tiers.length - 1;
+  }
+
+  specialize(slot: number, specIndex: number): boolean {
+    const t = this.towers[slot];
+    if (!t || !this.isActive() || !this.canSpecialize(t)) return false;
+    const sp = t.def.specs[specIndex];
+    if (!sp || this.coins < sp.stats.cost) return false;
+    this.coins -= sp.stats.cost;
+    t.spec = sp.id;
+    if (t.rally) this.syncSquad(t, true);
+    this.events.push({ type: 'specialize', tower: t });
+    return true;
   }
 
   upgrade(slot: number): boolean {
@@ -520,7 +548,7 @@ export class BattleSim {
   sell(slot: number): boolean {
     const t = this.towers[slot];
     if (!t || !this.isActive()) return false;
-    const refund = sellValue(t.def, t.tier);
+    const refund = sellValue(t.def, t.tier, t.spec);
     this.coins += refund;
     this.towers[slot] = null;
     this.removeSquad(t.uid);
@@ -548,7 +576,7 @@ export class BattleSim {
   setRally(slot: number, p: Vec2): boolean {
     const t = this.towers[slot];
     if (!t || !t.rally) return false;
-    const range = t.def.tiers[t.tier].range;
+    const range = this.stats(t).range;
     if (Math.hypot(p.x - t.pos.x, p.y - t.pos.y) > range) return false;
     t.rally = { ...p };
     for (const s of this.soldiers) {
@@ -571,7 +599,7 @@ export class BattleSim {
 
   /** Ensure a soldier tower has the right squad size; optionally fully heal. */
   private syncSquad(t: Tower, heal: boolean): void {
-    const stats = t.def.tiers[t.tier].soldiers;
+    const stats = this.stats(t).soldiers;
     if (!stats || !t.rally) return;
     const squad = this.soldiers.filter((s) => s.towerUid === t.uid);
     for (let i = squad.length; i < stats.count; i++) {
@@ -881,47 +909,79 @@ export class BattleSim {
     return best;
   }
 
+  private pickTargets(t: Tower, range: number, n: number): Enemy[] {
+    if (n <= 1) {
+      const one = this.pickTarget(t, range);
+      return one ? [one] : [];
+    }
+    const picked: Enemy[] = [];
+    const taken = new Set<number>();
+    for (let k = 0; k < n; k++) {
+      let best: Enemy | null = null;
+      let bestScore = -Infinity;
+      for (const e of this.enemies) {
+        if (!e.alive || taken.has(e.uid) || (e.def.flying && !t.def.hitsAir)) continue;
+        if (Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y) > range) continue;
+        if (e.dist > bestScore) {
+          bestScore = e.dist;
+          best = e;
+        }
+      }
+      if (!best) break;
+      taken.add(best.uid);
+      picked.push(best);
+    }
+    // Keep the player's targeting mode for the primary shot.
+    const primary = this.pickTarget(t, range);
+    if (primary && !taken.has(primary.uid) && picked.length) picked[0] = primary;
+    return picked;
+  }
+
   private fireTowers(dt: number): void {
     for (const t of this.towers) {
       if (!t) continue;
       t.cooldown -= dt;
       if (t.cooldown > 0) continue;
-      const stats = t.def.tiers[t.tier];
+      const stats = this.stats(t);
       if (stats.soldiers || stats.fireRate <= 0) continue;
-      const target = this.pickTarget(t, stats.range);
-      if (!target) {
+      const targets = this.pickTargets(t, stats.range, stats.multishot ?? 1);
+      if (!targets.length) {
         t.cooldown = 0;
         continue;
       }
       t.cooldown = 1 / (stats.fireRate * this.towerHaste(t));
-      const origin = { x: t.pos.x, y: t.pos.y - 18 };
-      let aim = { ...target.pos };
-      if (stats.lob) {
-        // Lead the target: predict where it will be when the rock lands.
-        const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-        const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult;
-        aim = this.paths[target.path].pointAt(target.dist + moving * flight);
+      for (const target of targets) {
+        const origin = { x: t.pos.x, y: t.pos.y - 18 };
+        let aim = { ...target.pos };
+        if (stats.lob) {
+          // Lead the target: predict where it will be when the rock lands.
+          const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult;
+          aim = this.paths[target.path].pointAt(target.dist + moving * flight);
+        }
+        const p: Projectile = {
+          uid: this.nextUid++,
+          towerUid: t.uid,
+          pos: { ...origin },
+          targetUid: target.uid,
+          lastTargetPos: aim,
+          speed: stats.projectileSpeed,
+          damage: stats.damage,
+          damageType: t.def.damageType,
+          splash: stats.splash ?? 0,
+          slow: stats.slow,
+          color: t.spec ? t.def.specs.find((x) => x.id === t.spec)!.color : t.def.color,
+          homing: !stats.lob,
+          hitsAir: t.def.hitsAir,
+          origin,
+          travel: Math.hypot(aim.x - origin.x, aim.y - origin.y),
+          kind: t.def.id,
+          pierce: stats.armorPierce ?? 0,
+          chain: stats.chain,
+        };
+        this.projectiles.push(p);
+        this.events.push({ type: 'shoot', tower: t, projectile: p });
       }
-      const p: Projectile = {
-        uid: this.nextUid++,
-        towerUid: t.uid,
-        pos: { ...origin },
-        targetUid: target.uid,
-        lastTargetPos: aim,
-        speed: stats.projectileSpeed,
-        damage: stats.damage,
-        damageType: t.def.damageType,
-        splash: stats.splash ?? 0,
-        slow: stats.slow,
-        color: t.def.color,
-        homing: !stats.lob,
-        hitsAir: t.def.hitsAir,
-        origin,
-        travel: Math.hypot(aim.x - origin.x, aim.y - origin.y),
-        kind: t.def.id,
-      };
-      this.projectiles.push(p);
-      this.events.push({ type: 'shoot', tower: t, projectile: p });
     }
   }
 
@@ -965,6 +1025,7 @@ export class BattleSim {
       }
     } else if (target) {
       this.damage(target, p);
+      if (p.chain) this.chainFrom(target, p);
     }
   }
 
@@ -973,7 +1034,36 @@ export class BattleSim {
       e.slowFactor = Math.min(e.slowFactor, p.slow.factor);
       e.slowTime = Math.max(e.slowTime, p.slow.duration);
     }
-    this.applyDamage(e, computeDamage(p.damage, p.damageType, e.def));
+    const armor = e.def.armor * (1 - p.pierce);
+    this.applyDamage(e, computeDamage(p.damage, p.damageType, { armor, magicResist: e.def.magicResist }));
+  }
+
+  /** Lightning: jump from the first target to nearby enemies with falling damage. */
+  private chainFrom(first: Enemy, p: Projectile): void {
+    const c = p.chain!;
+    const hit = new Set<number>([first.uid]);
+    const points: Vec2[] = [{ ...first.pos }];
+    let from = first;
+    let dmg = p.damage;
+    for (let k = 0; k < c.count; k++) {
+      dmg *= c.falloff;
+      let next: Enemy | null = null;
+      let bestD = c.range;
+      for (const e of this.enemies) {
+        if (!e.alive || hit.has(e.uid) || (e.def.flying && !p.hitsAir)) continue;
+        const d = Math.hypot(e.pos.x - from.pos.x, e.pos.y - from.pos.y);
+        if (d < bestD) {
+          bestD = d;
+          next = e;
+        }
+      }
+      if (!next) break;
+      hit.add(next.uid);
+      points.push({ ...next.pos });
+      this.applyDamage(next, computeDamage(dmg, p.damageType, next.def));
+      from = next;
+    }
+    if (points.length > 1) this.events.push({ type: 'chain', points, color: p.color });
   }
 
   private applyDamage(e: Enemy, dmg: number): void {

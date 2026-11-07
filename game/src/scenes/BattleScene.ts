@@ -30,6 +30,7 @@ export class BattleScene extends Phaser.Scene {
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
+  private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
   private rallyMode: number | null = null; // slot whose rally point is being placed
   private spellMode: string | null = null; // spell waiting for a target tap
   private spellHud!: Phaser.GameObjects.Graphics;
@@ -577,6 +578,7 @@ export class BattleScene extends Phaser.Scene {
   // ---------- build / upgrade menus ----------
 
   private closeMenu(): void {
+    this.pendingSpec = null;
     this.menu?.destroy();
     this.menu = null;
     this.rangeRing.clear();
@@ -622,10 +624,25 @@ export class BattleScene extends Phaser.Scene {
       });
       c.add(this.add.text(0, 0, 'Build', textStyle(18)).setOrigin(0.5));
     } else {
-      const stats = tower.def.tiers[tower.tier];
+      const stats = this.sim.stats(tower);
       this.drawRange(pos, stats.range, tower.def.color);
       const upCost = this.sim.upgradeCost(tower);
-      if (upCost !== null) {
+      if (this.sim.canSpecialize(tower)) {
+        tower.def.specs.forEach((sp, k) => {
+          const ox = k === 0 ? -56 : 56;
+          const opt = this.menuOption(ox, -82, `tower_${tower.def.id}_${sp.id}`, String(sp.stats.cost), this.sim.coins >= sp.stats.cost, () => {
+            if (this.pendingSpec === `${slot}:${k}`) {
+              if (this.sim.specialize(slot, k)) this.openSlotMenu(slot);
+              return;
+            }
+            this.pendingSpec = `${slot}:${k}`;
+            this.drawRange(pos, sp.stats.range, sp.color);
+            this.showBanner(sp.name, `${sp.text}  (tap again to buy)`);
+          });
+          opt.add(this.add.text(0, -50, sp.name, { ...textStyle(13), align: 'center', wordWrap: { width: 110 } }).setOrigin(0.5, 1));
+          c.add(opt);
+        });
+      } else if (upCost !== null) {
         c.add(
           this.menuOption(0, -80, `tower_${tower.def.id}_${tower.tier + 1}`, String(upCost), this.sim.coins >= upCost, () => {
             if (this.sim.upgrade(slot)) this.openSlotMenu(slot);
@@ -634,7 +651,7 @@ export class BattleScene extends Phaser.Scene {
       } else {
         c.add(this.add.text(0, -80, 'MAX', textStyle(22, TEXT.gold)).setOrigin(0.5));
       }
-      const refund = sellValue(tower.def, tower.tier);
+      const refund = sellValue(tower.def, tower.tier, tower.spec);
       c.add(
         this.textOption(-74, 30, `Sell\n+${refund}`, C.danger, () => {
           this.sim.sell(slot);
@@ -659,7 +676,8 @@ export class BattleScene extends Phaser.Scene {
           }),
         );
       }
-      c.add(this.add.text(0, 92, `${tower.def.name} • Lv ${tower.tier + 1}`, textStyle(16)).setOrigin(0.5));
+      const specName = tower.spec ? tower.def.specs.find((x) => x.id === tower.spec)!.name : `${tower.def.name} • Lv ${tower.tier + 1}`;
+      c.add(this.add.text(0, 92, specName, textStyle(16)).setOrigin(0.5));
     }
     c.setScale(0.5);
     this.tweens.add({ targets: c, scale: 1, duration: 160, ease: 'Back.easeOut' });
@@ -787,6 +805,7 @@ export class BattleScene extends Phaser.Scene {
       case 'shoot': {
         const key = `proj_${ev.tower.def.id}`;
         const img = this.add.image(ev.projectile.pos.x, ev.projectile.pos.y, this.textures.exists(key) ? key : 'dot').setDepth(2500);
+        if (ev.tower.spec) img.setTint(ev.projectile.color);
         this.projViews.set(ev.projectile.uid, img);
         const tv = this.towerViews[ev.tower.slot];
         if (tv) this.tweens.add({ targets: tv, scaleY: 0.92, duration: 50, yoyo: true });
@@ -908,12 +927,29 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x9aa8b5);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
+      case 'chain': {
+        const g = this.add.graphics().setDepth(2550);
+        g.lineStyle(4, 0xffffff, 1);
+        for (let k = 1; k < ev.points.length; k++) this.zigzag(g, ev.points[k - 1], ev.points[k]);
+        g.lineStyle(8, ev.color, 0.45);
+        for (let k = 1; k < ev.points.length; k++) this.zigzag(g, ev.points[k - 1], ev.points[k]);
+        this.tweens.add({ targets: g, alpha: 0, duration: 220, onComplete: () => g.destroy() });
+        sfx.zap();
+        break;
+      }
+      case 'specialize':
+        this.floatText(ev.tower.pos.x, ev.tower.pos.y - 80, ev.tower.def.specs.find((x) => x.id === ev.tower.spec)!.name + '!', TEXT.gold, 22);
+        this.particles.setParticleTint(C.gold);
+        this.particles.explode(30, ev.tower.pos.x, ev.tower.pos.y - 30);
+        this.handleEvent({ type: 'upgrade', tower: ev.tower });
+        sfx.victory();
+        break;
       case 'build':
       case 'upgrade': {
         const t = ev.tower;
         if (t.rally && ev.type === 'build') this.updateRallyFlag(t.uid, t.rally);
         this.towerViews[t.slot]?.destroy();
-        const img = this.add.image(t.pos.x, t.pos.y - 26, `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
+        const img = this.add.image(t.pos.x, t.pos.y - 26, t.spec ? `tower_${t.def.id}_${t.spec}` : `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
         img.setScale(0.3, 1.4);
         this.tweens.add({ targets: img, scaleX: 1, scaleY: 1, duration: 300, ease: 'Back.easeOut' });
         this.towerViews[t.slot] = img;
@@ -1074,6 +1110,18 @@ export class BattleScene extends Phaser.Scene {
       bar.fillRect(s.pos.x - w / 2, s.pos.y - 33, w * (s.hp / s.maxHp), 4);
       bar.setDepth(s.pos.y + 0.5);
     }
+  }
+
+  private zigzag(g: Phaser.GameObjects.Graphics, a: Vec2, b: Vec2): void {
+    const segs = 5;
+    g.beginPath();
+    g.moveTo(a.x, a.y - 10);
+    for (let i = 1; i < segs; i++) {
+      const t = i / segs;
+      g.lineTo(a.x + (b.x - a.x) * t + Phaser.Math.Between(-8, 8), a.y + (b.y - a.y) * t - 10 + Phaser.Math.Between(-8, 8));
+    }
+    g.lineTo(b.x, b.y - 10);
+    g.strokePath();
   }
 
   private floatText(x: number, y: number, text: string, color: string, size: number): void {

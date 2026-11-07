@@ -14,6 +14,7 @@ export class BootScene extends Phaser.Scene {
     for (const def of Object.values(ENEMIES)) this.makeEnemy(def.id, def.color, def.radius, !!def.flying);
     for (const def of Object.values(TOWERS)) {
       for (let tier = 0; tier < def.tiers.length; tier++) this.makeTower(def.id, def.color, tier);
+      for (const sp of def.specs) this.makeTower(def.id, sp.color, def.tiers.length, `tower_${def.id}_${sp.id}`);
     }
     for (const id of Object.keys(HEROES)) this.makeHero(id);
     this.makeMisc();
@@ -365,7 +366,7 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
   }
 
-  private makeTower(id: string, color: number, tier: number): void {
+  private makeTower(id: string, color: number, tier: number, key?: string): void {
     const g = this.g();
     const w = 72;
     const h = 84;
@@ -465,7 +466,16 @@ export class BootScene extends Phaser.Scene {
       g.lineStyle(1.5, C.ink, 1);
       g.strokeCircle(cx - (tier - 1) * 6 + i * 12, base - 6, 4);
     }
-    g.generateTexture(`tower_${id}_${tier}`, w, h);
+    if (key) {
+      // specialization crest
+      g.fillStyle(color, 1);
+      g.fillCircle(w - 12, 14, 9);
+      g.lineStyle(2.5, C.ink, 1);
+      g.strokeCircle(w - 12, 14, 9);
+      g.fillStyle(0xffffff, 0.8);
+      g.fillCircle(w - 14, 11, 3);
+    }
+    g.generateTexture(key ?? `tower_${id}_${tier}`, w, h);
     g.destroy();
   }
 

@@ -91,6 +91,11 @@ class Sfx {
     this.noise(0.25, 0.25, 400);
     this.tone(90, 0.25, 'sine', 0.2, 40);
   }
+  zap(): void {
+    if (!this.throttle('zap', 80)) return;
+    this.noise(0.12, 0.15, 5000);
+    this.tone(1400, 0.1, 'sawtooth', 0.05, 300);
+  }
   heal(): void {
     if (!this.throttle('heal', 200)) return;
     this.tone(500, 0.25, 'sine', 0.06, 900);

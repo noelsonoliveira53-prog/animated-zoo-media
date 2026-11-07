@@ -47,6 +47,9 @@ export interface TowerTier {
   splash?: number; // splash radius in pixels
   slow?: { factor: number; duration: number }; // speed multiplier + seconds
   lob?: boolean; // arcing shot aimed at a predicted spot instead of homing
+  multishot?: number; // fires at this many different targets per volley
+  chain?: { count: number; falloff: number; range: number }; // hit jumps to nearby enemies
+  armorPierce?: number; // 0..1 share of the target's armor ignored
   soldiers?: SoldierStats; // barracks-style tower: spawns blockers instead of shooting
 }
 
@@ -60,6 +63,14 @@ export interface SoldierStats {
   regen: number; // hp / second while not fighting
 }
 
+export interface TowerSpec {
+  id: string;
+  name: string;
+  text: string;
+  color: number;
+  stats: TowerTier; // full stat block once specialized (its cost is the specialization price)
+}
+
 export interface TowerDef {
   id: string;
   name: string;
@@ -68,6 +79,7 @@ export interface TowerDef {
   hitsAir: boolean;
   color: number;
   tiers: TowerTier[];
+  specs: [TowerSpec, TowerSpec]; // two branches offered at the top tier
 }
 
 export interface SpawnGroup {

@@ -44,3 +44,23 @@ describe('regions', () => {
     expect(sim.waveHpMult()).toBeGreaterThan(1);
   });
 });
+
+describe('HUD clearance', () => {
+  it('no build pad sits under the hero HUD, the spell buttons or the top bar', () => {
+    const zones = [
+      // Drawn extents of the HUD (portrait + skill circle, the two spell circles, the top bar).
+      { name: 'hero HUD', x0: 16, y0: 620, x1: 200, y1: 712 },
+      { name: 'spells', x0: 1092, y0: 620, x1: 1262, y1: 712 },
+      { name: 'top bar', x0: 0, y0: 0, x1: 1280, y1: 66 },
+    ];
+    for (const l of LEVELS) {
+      for (const s of l.slots) {
+        for (const z of zones) {
+          // Build pads are 64×48.
+          const inside = s.x + 32 > z.x0 && s.x - 32 < z.x1 && s.y + 24 > z.y0 && s.y - 24 < z.y1;
+          expect(inside, `${l.name} pad (${s.x},${s.y}) under ${z.name}`).toBe(false);
+        }
+      }
+    }
+  });
+});

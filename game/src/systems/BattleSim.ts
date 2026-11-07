@@ -35,6 +35,8 @@ export interface Enemy {
   phase: number; // index of next boss phase to trigger
   speedMult: number;
   enraged: boolean;
+  hasteTime: number; // seconds left of a spore haste
+  hasteMult: number;
 }
 
 export interface Soldier {
@@ -142,6 +144,7 @@ export type SimEvent =
   | { type: 'chill'; source: Enemy; towers: Tower[]; radius: number }
   | { type: 'burrow'; enemy: Enemy; down: boolean }
   | { type: 'enrage'; enemy: Enemy }
+  | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
   | { type: 'split'; parent: Enemy; children: Enemy[] }
@@ -793,6 +796,8 @@ export class BattleSim {
       phase: 0,
       speedMult: 1,
       enraged: false,
+      hasteTime: 0,
+      hasteMult: 1,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -805,6 +810,10 @@ export class BattleSim {
       if (e.slowTime > 0) {
         e.slowTime -= dt;
         if (e.slowTime <= 0) e.slowFactor = 1;
+      }
+      if (e.hasteTime > 0) {
+        e.hasteTime -= dt;
+        if (e.hasteTime <= 0) e.hasteMult = 1;
       }
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.def.chill) this.tickChill(e, dt);
@@ -832,7 +841,7 @@ export class BattleSim {
           continue;
         }
       }
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * this.mods.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1078,7 +1087,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {
@@ -1211,9 +1220,24 @@ export class BattleSim {
         this.grantHeroXp(e.def.bounty * (near ? 1 : 0.35));
       }
       if (e.def.splitInto) this.split(e);
+      if (e.def.sporeBurst) this.sporeBurst(e);
       return;
     }
     this.checkPhases(e);
+  }
+
+  /** Puffcaps burst on death: nearby living allies (not bosses) move faster for a few seconds. */
+  private sporeBurst(src: Enemy): void {
+    const sb = src.def.sporeBurst!;
+    const hasted: Enemy[] = [];
+    for (const e of this.enemies) {
+      if (!e.alive || e === src || e.def.boss) continue;
+      if (Math.hypot(e.pos.x - src.pos.x, e.pos.y - src.pos.y) > sb.radius) continue;
+      e.hasteMult = Math.max(e.hasteMult, sb.speedMult);
+      e.hasteTime = Math.max(e.hasteTime, sb.duration);
+      hasted.push(e);
+    }
+    this.events.push({ type: 'spores', enemy: src, radius: sb.radius, hasted });
   }
 
   private split(parent: Enemy): void {

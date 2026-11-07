@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **30** (next balance pass at iteration 35)
+Iteration counter: **31** (next balance pass at iteration 35)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -253,11 +253,20 @@ Iteration counter: **30** (next balance pass at iteration 35)
   ("Veiled (towers see it within 105px)", "Enrages below 50% health"); checked that the 20-enemy grid still fits.
   `meta-check.mjs` now opens the Veilstalker entry. 115 tests.
 
+- [x] **Iter 31 — Duskcap level 17 + Puffcap.** New enemy **Puffcap** (21 enemies): `sporeBurst` on death hastens
+  nearby non-boss allies ×1.6 for 3 s (pink tint, spore cloud, "Spores! ×N"), so it pays to pop it away from the crowd.
+  Level 17 **Glowspore Hollow**: long switchback plus a second road climbing up from the south and merging late,
+  12 pads, 15 waves. Tuning found two spikes and fixed them: wave 6 mixed Puffcaps into fast Thornhogs (12-life leak
+  for the novice), so the Puffcaps now trail behind; wave 5 Rootragers and the wave 6 Gnats moved to the long road.
+  New test: no build pad may sit under the HUD (hero portrait/skill, spell buttons, top bar). It caught a Glowspore pad
+  under the hero skill button and a Frostfern Pass pad under the wave preview (moved both). `dusk-check.mjs` now
+  pops a Puffcap next to a Thornhog pack. 117 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 4: levels 17–20 (one more new enemy, and a Duskcap boss with phases for level 20).
+1. Region 4: levels 18–20 (a Duskcap boss with phases for level 20).
 2. Village: a free speed-up after a 3-star win (parked idea).
 3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
@@ -278,6 +287,11 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Glowspore Hollow (iteration 31, 6–8 seeds):** at hpMult 2.4 → 83/50/0; the novice always died at wave 7 (trace showed
+Puffcap-hastened Thornhogs plus Gnats on the short road). After the wave fixes: **2.2 → 88% / 100% / 0%** (8 seeds).
+The novice still can't clear it even at 2.0: it fills only half the pads, so the late Veilstalkers on the merging road
+slip past. That's acceptable for the region's second level.
 
 **Campaign (iteration 30, 6 seeds unless noted; win % expert / casual / novice):**
 | # | Level | hpMult | Expert | Casual | Novice |

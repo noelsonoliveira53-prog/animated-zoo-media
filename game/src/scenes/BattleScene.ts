@@ -1075,6 +1075,14 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x8fdc5a);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
+      case 'spores': {
+        const cloud = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, ev.radius, 0xe8a0d0, 0.28).setStrokeStyle(3, 0xffd0f0, 0.8).setDepth(2400).setScale(0.3);
+        this.tweens.add({ targets: cloud, scale: 1, alpha: 0, duration: 700, ease: 'Cubic.easeOut', onComplete: () => cloud.destroy() });
+        this.particles.setParticleTint(0xffc0e8);
+        this.particles.explode(18, ev.enemy.pos.x, ev.enemy.pos.y);
+        if (ev.hasted.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, `Spores! ×${ev.hasted.length}`, '#ffc0e8', 16);
+        break;
+      }
       case 'enrage':
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Enraged!', TEXT.heart, 18);
         this.particles.setParticleTint(0xff5d4a);
@@ -1202,6 +1210,8 @@ export class BattleScene extends Phaser.Scene {
       if (e.def.flying) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
       else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
+      else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
+      else if (e.hasteTime <= 0 && v.sprite.tintTopLeft === 0xffc0e8) v.sprite.clearTint();
       if (e.def.veil) {
         // Veiled: a faint shimmer until a tower is close enough to spot it.
         const veil = e.def.veil;

@@ -47,9 +47,25 @@ const after = await page.evaluate(() => {
   const r = s.sim.enemies.find((e) => e.def.id === 'rootrager');
   return { farHp: vs[0] && vs[0].hp === vs[0].maxHp, nearHurt: vs[1] && vs[1].hp < vs[1].maxHp, enraged: r?.enraged };
 });
+await page.screenshot({ path: `screenshots/${name}-l16.png` });
+// Level 17: pop a Puffcap next to a crowd and check the spore haste.
+await page.evaluate(() => window.__game.scene.getScene('Battle').scene.start('Battle', { levelIndex: 16 }));
+await page.waitForTimeout(2500);
+const spores = await page.evaluate(() => {
+  const s = window.__game.scene.getScene('Battle');
+  s.sim.status = 'running';
+  s.sim.coins = 2000;
+  s.sim.build(1, 'thornbow');
+  s.sim.build(3, 'glimmer');
+  const p = s.sim.spawn('puffcap', 0, 700);
+  const crowd = [0, 1, 2, 3].map((k) => s.sim.spawn('thornhog', 0, 640 + k * 30));
+  s.sim.applyDamage(p, 99999);
+  return crowd.filter((e) => e.hasteMult > 1).length;
+});
+await page.waitForTimeout(250);
 await page.screenshot({ path: `screenshots/${name}.png` });
-console.log(JSON.stringify({ ...info, ...after }));
+console.log(JSON.stringify({ ...info, ...after, hastedByPuffcap: spores }));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();
-process.exit(errors.length || !after.enraged || !after.farHp || !after.nearHurt || info.music !== 'dusk' ? 1 : 0);
+process.exit(errors.length || !after.enraged || !after.farHp || !after.nearHurt || info.music !== 'dusk' || spores < 3 ? 1 : 0);

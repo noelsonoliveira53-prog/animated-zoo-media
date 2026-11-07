@@ -225,6 +225,26 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'puffcap': {
+        // round spotted cap on a stubby stem with little feet; spore puffs around it
+        g.fillStyle(0xffd0f0, 0.35);
+        for (const [dx, dy] of [[-1.3, -0.6], [1.35, -0.4], [-1.0, -1.3], [1.0, -1.25]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.22);
+        g.fillStyle(0xf0e2cc, 1);
+        g.fillRoundedRect(cx - r * 0.55, cy - r * 0.1, r * 1.1, r * 1.05, 5);
+        g.strokeRoundedRect(cx - r * 0.55, cy - r * 0.1, r * 1.1, r * 1.05, 5);
+        g.fillStyle(0x5a4a3a, 1);
+        g.fillEllipse(cx - r * 0.35, cy + r * 0.98, r * 0.5, r * 0.25);
+        g.fillEllipse(cx + r * 0.35, cy + r * 0.98, r * 0.5, r * 0.25);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy - r * 0.25, r * 2.1, r * 1.35);
+        g.strokeEllipse(cx, cy - r * 0.25, r * 2.1, r * 1.35);
+        g.fillStyle(0xfff0f8, 1);
+        for (const [dx, dy, rr] of [[-0.55, -0.45, 0.18], [0.1, -0.7, 0.14], [0.6, -0.35, 0.16], [-0.1, -0.2, 0.1]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.2, cy + r * 0.35, r * 0.1);
+        g.fillCircle(cx + r * 0.2, cy + r * 0.35, r * 0.1);
+        break;
+      }
       case 'veilstalker': {
         // lanky mist-cat: hooded head, long tail, faint aura
         g.fillStyle(0xc8b8ff, 0.25);

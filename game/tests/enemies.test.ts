@@ -219,3 +219,27 @@ describe('duskcap enemies', () => {
     expect(r.dist - d1).toBeGreaterThan(slow * 1.8);
   });
 });
+
+describe('puffcap spores', () => {
+  it('a dying Puffcap hastens nearby allies (not bosses) for a few seconds', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const p = sim.spawn('puffcap', 0, 300);
+    const near = sim.spawn('mudling', 0, 340);
+    const far = sim.spawn('mudling', 0, 700);
+    const boss = sim.spawn('murkmaw', 0, 320);
+    (sim as any).applyDamage(p, 9999);
+    const sb = ENEMIES.puffcap.sporeBurst!;
+    expect(near.hasteMult).toBe(sb.speedMult);
+    expect(far.hasteMult).toBe(1);
+    expect(boss.hasteMult).toBe(1);
+    const d0 = near.dist;
+    sim.update(0.5);
+    const hasted = near.dist - d0;
+    for (let i = 0; i < 60 * sb.duration; i++) sim.update(1 / 60);
+    expect(near.hasteMult).toBe(1);
+    const d1 = near.dist;
+    sim.update(0.5);
+    expect(hasted).toBeGreaterThan((near.dist - d1) * 1.4);
+  });
+});

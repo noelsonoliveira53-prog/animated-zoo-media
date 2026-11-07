@@ -79,3 +79,22 @@ describe('endless daily mutator', () => {
     }
   });
 });
+
+import { endlessBosses, nativeEnemies } from '../src/systems/endless';
+
+describe('endless home turf', () => {
+  it("a map's own campaign enemies join its endless pool from nativeFrom, and its region boss comes first", () => {
+    const lvl = LEVELS[77]; // Hollow Oak Crossing (Amberwood)
+    expect(nativeEnemies(lvl)).toContain('sapstoat');
+    expect(endlessBosses(lvl)[0]).toBe('rustantler');
+    const run = makeEndlessLevel(lvl, 3);
+    const used = (from: number, to: number) => new Set(run.waves.slice(from - 1, to).flatMap((w) => w.groups.map((g) => g.enemy)));
+    const early = used(1, ENDLESS.nativeFrom - 1);
+    for (const id of ['sapstoat', 'barkdrum', 'turnleaf']) expect(early.has(id)).toBe(false);
+    const later = used(ENDLESS.nativeFrom, 30);
+    expect(['sapstoat', 'barkdrum', 'turnleaf'].some((id) => later.has(id))).toBe(true);
+    expect(run.waves[ENDLESS.bossEvery - 1].groups.some((g) => g.enemy === 'rustantler')).toBe(true);
+    // the first map keeps the classic opening boss
+    expect(endlessBosses(LEVELS[0])[0]).toBe('murkmaw');
+  });
+});

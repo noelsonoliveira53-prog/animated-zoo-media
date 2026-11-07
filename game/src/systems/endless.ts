@@ -3,6 +3,7 @@ import { ENEMIES } from '../data/enemies';
 import { DAILY_MODIFIERS, type ModifierDef } from '../data/daily';
 import { hash } from './daily';
 import type { LevelDef, SpawnGroup, WaveDef } from '../data/types';
+import { LEVELS, REGIONS, regionOf } from '../data/levels';
 
 // Endless mode: turn a campaign map into a long run of generated waves (pure + seeded, so it is testable).
 
@@ -23,13 +24,14 @@ export function endlessPool(wave: number): string[] {
 }
 
 /** One generated wave (1-based number). Every `bossEvery`-th wave brings a boss with an escort. */
-export function endlessWave(wave: number, paths: number, rand: () => number): WaveDef {
-  const pool = endlessPool(wave);
+export function endlessWave(wave: number, paths: number, rand: () => number, native: string[] = [], bosses: string[] = ENDLESS.bosses): WaveDef {
+  const base = endlessPool(wave);
+  const pool = wave >= ENDLESS.nativeFrom ? [...base, ...native.filter((id) => !base.includes(id))] : base;
   const pick = <T>(xs: T[]) => xs[Math.floor(rand() * xs.length)];
   const groups: SpawnGroup[] = [];
   const budget = ENDLESS.budgetBase + ENDLESS.budgetPerWave * wave;
   if (wave % ENDLESS.bossEvery === 0) {
-    const boss = ENDLESS.bosses[(wave / ENDLESS.bossEvery - 1) % ENDLESS.bosses.length];
+    const boss = bosses[(wave / ENDLESS.bossEvery - 1) % bosses.length];
     groups.push({ enemy: boss, count: 1, interval: 1, delay: 6, path: Math.floor(rand() * paths) });
   }
   const nGroups = wave < 5 ? 2 : 3;
@@ -43,11 +45,30 @@ export function endlessWave(wave: number, paths: number, rand: () => number): Wa
   return { groups };
 }
 
+/** A map's "home turf": the regular (non-boss) enemies its campaign waves use. */
+export function nativeEnemies(level: LevelDef): string[] {
+  const ids = new Set<string>();
+  for (const w of level.waves) for (const g of w.groups) if (ENEMIES[g.enemy] && !ENEMIES[g.enemy].boss) ids.add(g.enemy);
+  return [...ids];
+}
+
+/** Boss order for an endless run on this map: its own region's boss first, then the usual rotation. */
+export function endlessBosses(level: LevelDef): string[] {
+  const idx = LEVELS.findIndex((l) => l.id === level.id);
+  if (idx < 0) return ENDLESS.bosses;
+  const reg = REGIONS[regionOf(idx)];
+  const finale = LEVELS[reg.first + reg.count - 1];
+  const home = finale?.waves.flatMap((w) => w.groups.map((g) => g.enemy)).find((id) => ENEMIES[id]?.boss && ENDLESS.bosses.includes(id));
+  return home ? [home, ...ENDLESS.bosses.filter((b) => b !== home)] : ENDLESS.bosses;
+}
+
 /** A copy of a campaign level set up for endless play. */
 export function makeEndlessLevel(level: LevelDef, seed = 1): LevelDef {
   const rand = rng(seed);
   const waves: WaveDef[] = [];
-  for (let w = 1; w <= ENDLESS.waves; w++) waves.push(endlessWave(w, level.paths.length, rand));
+  const native = nativeEnemies(level);
+  const bosses = endlessBosses(level);
+  for (let w = 1; w <= ENDLESS.waves; w++) waves.push(endlessWave(w, level.paths.length, rand, native, bosses));
   return { ...level, id: `${level.id}-endless`, waves, hpMult: 1, endless: { hpRamp: ENDLESS.hpRampPerWave, heroRegen: ENDLESS.heroRegen, attackRamp: ENDLESS.attackRamp }, finale: false };
 }
 

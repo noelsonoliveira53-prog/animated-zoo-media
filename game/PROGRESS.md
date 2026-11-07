@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **141** (next balance pass at iteration 145)
+Iteration counter: **142** (next balance pass at iteration 145)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -992,6 +992,16 @@ Iteration counter: **141** (next balance pass at iteration 145)
     is a bubbling muck pit ringed with stakes, with a ladle.
   - Tests: the slow, flyers and destroyed pits are unaffected, and per-tier counts.
   - Checks: `scripts/sludge-check.mjs`; screenshot `screenshots/141.png`. 195 tests.
+- **Iteration 142** (endless "home turf"): endless runs usually end around wave 12–25, so the late tiers (enemies
+  from regions 5–16, from wave 20 up to 66) almost never showed up. Now each map's endless run also draws on that
+  map's own campaign enemies, from wave 5 (`ENDLESS.nativeFrom`). Its first boss (wave 10) is the map's own region
+  boss, followed by the usual rotation. An Amberwood map now plays like the Amberwood: Sapstoats, Barkdrums and
+  Turnleafs from wave 5, then Rustantler at 10.
+  - Code: `nativeEnemies(level)` and `endlessBosses(level)` in `systems/endless.ts`, and `endlessWave` takes the
+    native pool and boss order.
+  - Test: native enemies appear only from `nativeFrom`, and the region boss comes first.
+  - Checks: `scripts/endless-home-check.mjs`; screenshot `screenshots/142.png` (endless wave 5 in the Amberwood).
+    196 tests.
 
 ## In Progress
 - (none)
@@ -1006,6 +1016,12 @@ Iteration counter: **141** (next balance pass at iteration 145)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 142** (endless with home turf, `endless-balance.ts`, 3 seeds; waves held, expert / casual / novice): Mossgate 12/12/12 ·
+Murkmaw's Den 12/12/18 · Frostpeak 12/12/12 (was 16–19; Grimtusk now arrives at wave 10) · Duskcap 12/12/21 · Boilerworks
+13/13/14 · Mirage Flats 14/14/20 · Amberwood Gate 13/13/25 · Heart of the Amberwood 14/14/26. Expert and casual runs
+still end within the usual 11–22 waves. The wave-10 home boss is now the main wall, which suits a "beat your region's
+boss" goal.
+
 **Iteration 141** (raids, `raid-balance.ts`, smart deploy): Lodge 1 1.8★/67% · 0.2★/25% · 0.0★/16%; Lodge 2 3.0★/100% ·
 1.8★/70% · 0.4★/34%; Lodge 3 3.0★/100% · 3.0★/100% · 1.1★/48%; Lodge 3 + Mender 3.0★ · 2.8★ · 1.6★/52%. Compared with
 iteration 113, the Sludge Pits shave Lodge 2 vs Warren (1.9 → 1.8★) and Lodge 3 vs Stronghold (1.2 → 1.1★). Each lodge

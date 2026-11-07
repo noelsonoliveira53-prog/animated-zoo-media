@@ -12,6 +12,7 @@ export const ENDLESS = {
   budgetPerWave: 70, // ... plus this much per wave
   maxGroupCount: 26,
   bossEvery: 10,
+  nativeFrom: 5, // from this wave on, the map's own campaign enemies join the pool (its "home turf")
   bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw', 'kaleidrax', 'zephyrax', 'ulmaroth', 'grindmaw', 'velumbra', 'mawbloom', 'thrumhorn', 'scourmaw', 'brinecrown', 'dreadmast', 'rustantler'],
   tiers: [
     { fromWave: 1, enemies: ['mudling', 'skitter', 'gloomwing', 'gnat'] },

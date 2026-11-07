@@ -6,6 +6,8 @@ import type { LevelDef } from '../src/data/types';
 const lvl: LevelDef = {
   id: 's',
   name: 'Test',
+  blurb: '',
+  mapPos: { x: 0, y: 0 },
   startCoins: 0,
   lives: 20,
   theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },

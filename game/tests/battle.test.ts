@@ -5,6 +5,8 @@ import type { LevelDef } from '../src/data/types';
 const tiny: LevelDef = {
   id: 't',
   name: 'Test',
+  blurb: '',
+  mapPos: { x: 0, y: 0 },
   startCoins: 500,
   lives: 5,
   theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },

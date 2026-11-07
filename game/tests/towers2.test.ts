@@ -6,6 +6,8 @@ import type { LevelDef } from '../src/data/types';
 const straight: LevelDef = {
   id: 't2',
   name: 'Test',
+  blurb: '',
+  mapPos: { x: 0, y: 0 },
   startCoins: 1000,
   lives: 20,
   theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },

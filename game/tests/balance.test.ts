@@ -23,3 +23,16 @@ describe('balance guard rails', () => {
     }
   });
 });
+
+describe('campaign levels 3-5', () => {
+  it('each later level is winnable by the expert autoplayer', () => {
+    for (const i of [2, 3, 4]) {
+      let won = false;
+      for (let seed = 1; seed <= 3 && !won; seed++) won = playLevel(LEVELS[i], strat('expert-mixed'), seed).won;
+      expect(won, LEVELS[i].name).toBe(true);
+    }
+  });
+  it('the novice cannot coast through them', () => {
+    for (const i of [2, 3, 4]) expect(playLevel(LEVELS[i], strat('novice'), 1).won, LEVELS[i].name).toBe(false);
+  });
+});

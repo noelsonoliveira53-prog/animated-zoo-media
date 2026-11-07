@@ -181,12 +181,22 @@ export class BattleScene extends Phaser.Scene {
         g.fillCircle(px, py, rnd.between(2, 4));
       }
     }
+    // ponds
+    for (const pd of this.level.ponds ?? []) {
+      g.fillStyle(0x3f8a9a, 1);
+      g.fillEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
+      g.fillStyle(0x6fc4dc, 1);
+      g.fillEllipse(pd.x, pd.y, pd.w, pd.h);
+      g.fillStyle(0xffffff, 0.35);
+      g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
+    }
     // decorations: trees & flowers away from roads and slots
     const deco = this.add.graphics().setDepth(1);
     for (let i = 0; i < 60; i++) {
       const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(90, GAME_H - 10) };
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
       if (this.level.slots.some((s) => Math.hypot(s.x - p.x, s.y - p.y) < 60)) continue;
+      if ((this.level.ponds ?? []).some((pd) => Math.hypot((p.x - pd.x) / (pd.w / 2 + 20), (p.y - pd.y) / (pd.h / 2 + 20)) < 1)) continue;
       if (rnd.frac() < 0.45) {
         deco.fillStyle(0x000000, 0.2);
         deco.fillEllipse(p.x, p.y + 4, 40, 14);
@@ -205,21 +215,26 @@ export class BattleScene extends Phaser.Scene {
         for (let k = 0; k < 4; k++) deco.fillCircle(p.x + rnd.between(-8, 8), p.y + rnd.between(-6, 6), 3);
       }
     }
-    // gate marker at path ends
+    // gate marker at each distinct road exit (clamped on screen)
+    const gates = new Set<string>();
     for (const pts of this.level.paths) {
-      const end = pts[pts.length - 2];
-      const gate = this.add.graphics().setDepth(end.y);
-      const gx = Math.min(GAME_W - 40, end.x + 260);
+      const last = pts[pts.length - 1];
+      const gx = Math.max(60, Math.min(GAME_W - 60, last.x));
+      const gy = Math.max(80, Math.min(GAME_H - 20, last.y));
+      const key = `${Math.round(gx)},${Math.round(gy)}`;
+      if (gates.has(key)) continue;
+      gates.add(key);
+      const gate = this.add.graphics().setDepth(gy);
       gate.fillStyle(0x7a5232, 1);
-      gate.fillRect(gx - 40, end.y - 60, 12, 70);
-      gate.fillRect(gx + 28, end.y - 60, 12, 70);
+      gate.fillRect(gx - 40, gy - 60, 12, 70);
+      gate.fillRect(gx + 28, gy - 60, 12, 70);
       gate.fillStyle(0x9a6a40, 1);
-      gate.fillRect(gx - 48, end.y - 70, 96, 16);
+      gate.fillRect(gx - 48, gy - 70, 96, 16);
       gate.lineStyle(3, C.ink, 1);
-      gate.strokeRect(gx - 48, end.y - 70, 96, 16);
+      gate.strokeRect(gx - 48, gy - 70, 96, 16);
       gate.fillStyle(0x4b8f3a, 1);
-      gate.fillCircle(gx - 34, end.y - 70, 10);
-      gate.fillCircle(gx + 34, end.y - 70, 10);
+      gate.fillCircle(gx - 34, gy - 70, 10);
+      gate.fillCircle(gx + 34, gy - 70, 10);
     }
   }
 
@@ -1100,13 +1115,26 @@ export class BattleScene extends Phaser.Scene {
         .text(0, 40, won ? `Lives kept: ${this.sim.lives}/${this.level.lives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
         .setOrigin(0.5),
     );
-    const retry = new Button(this, -120, 120, 'Retry', {
-      width: 200,
-      color: 0xff9f43,
+    const hasNext = won && this.levelIndex + 1 < LEVELS.length;
+    const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
+      width: hasNext ? 150 : 200,
+      color: C.sky,
       onClick: () => this.scene.restart({ levelIndex: this.levelIndex }),
     });
-    const menu = new Button(this, 120, 120, 'Menu', { width: 200, onClick: () => this.scene.start('Menu') });
-    panel.add([retry, menu]);
+    const map = new Button(this, hasNext ? 0 : 120, 120, 'Map', {
+      width: hasNext ? 150 : 200,
+      onClick: () => this.scene.start('WorldMap', { focus: this.levelIndex }),
+    });
+    panel.add([retry, map]);
+    if (hasNext) {
+      panel.add(
+        new Button(this, 170, 120, 'Next', {
+          width: 150,
+          color: 0xff9f43,
+          onClick: () => this.scene.start('WorldMap', { focus: this.levelIndex + 1 }),
+        }),
+      );
+    }
     panel.setScale(0.5).setAlpha(0);
     this.tweens.add({ targets: panel, scale: 1, alpha: 1, duration: 350, ease: 'Back.easeOut' });
   }

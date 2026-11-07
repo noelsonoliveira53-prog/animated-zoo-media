@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
 
-Iteration counter: **6** (next balance pass at iteration 10)
+Iteration counter: **7** (next balance pass at iteration 10)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -55,28 +55,51 @@ Iteration counter: **6** (next balance pass at iteration 10)
   (needed for summons). The falling-star animation follows game time (stays in sync on slow devices and at
   x3 speed). Moved the L1 bottom-right build pad out from under the spell buttons. 2 new tests (49 total).
 
+- [x] **Iter 7** — **World map + campaign levels 3–5.** New `WorldMapScene` ("The Grovelands"): island
+  map with regions, dotted trail, level nodes with stars, locks, a pulsing next level, total stars, and a
+  level card (blurb, waves/roads/lives, enemy preview, Play). Levels unlock in order (≥1 star on the
+  previous one). Menu → Campaign; the victory screen has Retry / Map / Next. New levels: **3 Thornwood Hollow**
+  (long serpentine road), **4 Mirelake Crossing** (two separate roads and gates, 25 lives, ponds),
+  **5 Murkmaw's Den** (three roads merge, 15 waves, boss finale). Gates are now drawn at the real road
+  exit and deduplicated; levels can have decorative ponds. Level-data tests (pads off roads, on screen)
+  and guard rails for levels 3–5 (53 tests).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. World map scene with level nodes, star totals, unlock progression; levels 2–5.
-2. Tower top-tier specializations (2 branches per tower).
-3. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
-4. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
-5. Levels 6–15+, multi-path levels.
-6. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-7. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-8. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-9. Ambient music loop (procedural).
+1. Tower top-tier specializations (2 branches per tower).
+2. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
+3. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
+4. Levels 6–15+, multi-path levels.
+5. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+6. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+7. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+8. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
 
 ## Ideas parked
+- Pause menu with "Quit to map" / "Restart" (currently only via the end panel).
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 - Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes
+**Iteration 7: new levels** (`balance.ts 8–10`; the expert AI now uses Fen since Bramble can't hit flyers):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 3 Thornwood Hollow | 100% | 88% | 0% |
+| 4 Mirelake Crossing | 80% | 60% | 0% |
+| 5 Murkmaw's Den | 100% | 88% | 0% |
+
+- Mirelake was unwinnable at first (two full roads on one budget, and the hero can only guard one). Fixes: 700 start
+  coins, lighter waves, 25 lives (one pool per gate).
+- Hero choice is level-dependent: Bramble is weak on flyer-heavy maps (Den: expert with Bramble 0%, with Fen 100%).
+  Good for strategy, but players need a hint (show flyers in the level card ✔ — enemy preview icons).
+- The autoplayer still doesn't cast spells or move the hero, so humans should do better than these numbers.
+
 **Iteration 5 results** (`npx vite-node scripts/balance.ts 12`, after tuning):
 
 | Level | Strategy | Win % | Avg lives left |

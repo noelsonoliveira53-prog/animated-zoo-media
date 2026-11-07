@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { LEVELS } from '../data/levels';
+import { LEVELS, totalStars } from '../data/levels';
 import { loadSave, writeSave } from '../systems/save';
 import { HEROES, HERO_ORDER } from '../data/heroes';
 import { sfx } from '../systems/audio';
@@ -56,24 +56,20 @@ export class MenuScene extends Phaser.Scene {
       .text(GAME_W / 2, 290, 'Hold the Mossgate. Stop the Murkhorde.', textStyle(20, TEXT.cream, false))
       .setOrigin(0.5);
 
-    // Level buttons
-    LEVELS.forEach((lvl, i) => {
-      const y = 400 + i * 90;
-      new Button(this, 460, y, lvl.name, {
-        width: 360,
-        height: 68,
-        fontSize: 28,
-        onClick: () => this.scene.start('Battle', { levelIndex: i }),
-      });
-      const stars = save.stars[lvl.id] ?? 0;
-      for (let s = 0; s < 3; s++) {
-        this.add.image(460 + 210 + s * 34, y, s < stars ? 'star' : 'star_empty').setScale(0.6);
-      }
+    // Campaign entry + progress
+    new Button(this, 460, 420, 'Campaign', {
+      width: 360,
+      height: 80,
+      fontSize: 34,
+      color: 0xff9f43,
+      onClick: () => this.scene.start('WorldMap'),
     });
+    this.add.image(400, 500, 'star').setScale(0.6);
+    this.add.text(424, 500, `${totalStars(save.stars)} / ${LEVELS.length * 3} stars earned`, textStyle(20)).setOrigin(0, 0.5);
 
     this.buildHeroPicker();
 
-    this.add.text(16, GAME_H - 30, 'v0.2 — prototype', textStyle(14, TEXT.dim, false));
+    this.add.text(16, GAME_H - 30, 'v0.3 — prototype', textStyle(14, TEXT.dim, false));
   }
 
   private buildHeroPicker(): void {

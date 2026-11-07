@@ -85,12 +85,16 @@ export interface WaveDef {
 export interface LevelDef {
   id: string;
   name: string;
+  blurb: string;
+  mapPos: Vec2; // node position on the world map
+  rewardCoins?: number; // village coins for a first clear (used once the village exists)
   startCoins: number;
   lives: number;
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
   theme: { grass: number; grassDark: number; road: number; roadEdge: number };
+  ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
 }
 
 export type HeroPassive =

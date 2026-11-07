@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { BootScene } from './scenes/BootScene';
 import { MenuScene } from './scenes/MenuScene';
 import { BattleScene } from './scenes/BattleScene';
+import { WorldMapScene } from './scenes/WorldMapScene';
 import { GAME_H, GAME_W } from './ui/theme';
 
 const game = new Phaser.Game({
@@ -12,7 +13,7 @@ const game = new Phaser.Game({
   backgroundColor: '#10261b',
   scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
   input: { activePointers: 2 },
-  scene: [BootScene, MenuScene, BattleScene],
+  scene: [BootScene, MenuScene, WorldMapScene, BattleScene],
 });
 
 // Expose for automated tests / debugging.

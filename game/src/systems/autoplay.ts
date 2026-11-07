@@ -20,7 +20,7 @@ export interface Strategy {
 }
 
 export const STRATEGIES: Strategy[] = [
-  { name: 'expert-mixed', mix: ['thornbow', 'burrow', 'glimmer', 'boulder'], slotFraction: 0.75, reserve: 0, upgrades: true, hero: 'bramble', thinkEvery: 0.5 },
+  { name: 'expert-mixed', mix: ['thornbow', 'burrow', 'glimmer', 'boulder'], slotFraction: 0.75, reserve: 0, upgrades: true, hero: 'fen', thinkEvery: 0.5 },
   { name: 'casual-mixed', mix: ['thornbow', 'burrow', 'glimmer', 'boulder'], slotFraction: 0.7, reserve: 40, upgrades: true, hero: 'fen', thinkEvery: 3 },
   { name: 'novice', mix: ['thornbow', 'thornbow', 'glimmer'], slotFraction: 0.5, reserve: 60, upgrades: true, hero: null, thinkEvery: 5 },
   { name: 'only-thornbow', mix: ['thornbow'], slotFraction: 1, reserve: 0, upgrades: true, hero: null, thinkEvery: 1 },

@@ -576,18 +576,21 @@ export class VillageScene extends Phaser.Scene {
       const locked = lodge < def.lodge;
       const card = this.add.graphics();
       card.fillStyle(locked ? 0x333b35 : C.panelLight, 1);
-      card.fillRoundedRect(l, y - 70, cw, 140, 14);
+      card.fillRoundedRect(l, y - 70, cw, 170, 14);
       c.add(card);
-      c.add(this.add.image(l + 30, y - 30, `troop_${id}`).setScale(1.6));
-      c.add(fitWidth(this.add.text(l + 58, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)), cw - 64));
-      c.add(fitWidth(this.add.text(l + 58, y - 34, `${def.cost} sap • ${def.space} sp • ${def.trainTime}s`, textStyle(pf(13), TEXT.gold, false)), cw - 64));
-      c.add(this.add.text(l + 10, y + 4, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(pf(11), TEXT.dim, false), wordWrap: { width: cw - 84 } }));
-      const n = this.add.text(l + 58, y - 10, '', textStyle(20, TEXT.gold)).setOrigin(0, 0.5);
+      // Three rows so phone-size fonts never collide: header (icon, name, cost), blurb (scaled to fit), then count + button.
+      c.add(this.add.image(l + 28, y - 44, `troop_${id}`).setScale(1.4));
+      c.add(fitWidth(this.add.text(l + 54, y - 62, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)), cw - 60));
+      c.add(fitWidth(this.add.text(l + 54, y - 38, `${def.cost} sap • ${def.space} sp • ${def.trainTime}s`, textStyle(pf(13), TEXT.gold, false)), cw - 60));
+      const blurb = this.add.text(l + 10, y - 16, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(pf(11), TEXT.dim, false), wordWrap: { width: cw - 20 } });
+      blurb.setScale(Math.min(1, 66 / Math.max(1, blurb.height)));
+      c.add(blurb);
+      const n = this.add.text(l + 12, y + 76, '', textStyle(20, TEXT.gold)).setOrigin(0, 0.5);
       counts.push(n);
       c.add(n);
       if (!locked) {
         c.add(
-          new Button(this, l + cw - 38, y + 40, '+1', {
+          new Button(this, l + cw - 38, y + 74, '+1', {
             width: 64,
             height: 44,
             fontSize: 18,

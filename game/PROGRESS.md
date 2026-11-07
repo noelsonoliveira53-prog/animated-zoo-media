@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **120** (next balance pass at iteration 125)
+Iteration counter: **121** (next balance pass at iteration 125)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -842,6 +842,16 @@ Iteration counter: **120** (next balance pass at iteration 125)
   and casual losing most lives to Shellsnaps on the north road (molted crabs sprinting a 2,040px road). All six
   Shellsnap groups moved to the long road, and the level was retuned to hpMult 2.33. The Coralreach sweep is in
   Balance Notes. 186 tests.
+- **Iteration 121** (phone QA): checked the newest content at phone size (740×360 touch).
+  - The Coralreach world map and battle were clean.
+  - **Found a bug:** the five-card Raid panel overflowed on phones. Phone-enlarged blurbs ran out of the cards into
+    "Choose a camp", and troop counts overlapped the cost line.
+  - **Fix:** cards now use three rows (header; a blurb scaled to fit 66px; count and +1 button along the bottom),
+    and the cards are 30px taller to use the spare panel room. The Sapper blurb was shortened so it stays readable.
+  - New script `scripts/raid-phone-check.mjs` opens the Raid panel at phone size, and `scripts/raid-check.mjs` was
+    updated for the new +1 position.
+
+  186 tests.
 
 ## In Progress
 - (none)

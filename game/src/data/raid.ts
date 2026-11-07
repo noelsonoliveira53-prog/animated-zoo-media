@@ -57,7 +57,7 @@ export const TROOPS: Record<string, TroopDef> = {
   sapper: {
     id: 'sapper',
     name: 'Beaver Sapper',
-    blurb: 'Goes straight for defenses and gnaws them down. Hits everything nearby.',
+    blurb: 'Gnaws down defenses first, hitting everything nearby.',
     hp: 130,
     damage: 45,
     rate: 0.6,

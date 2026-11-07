@@ -328,3 +328,19 @@ describe('shardglass enemies', () => {
     expect(mLost).toBeLessThan(nLost * 0.5);
   });
 });
+
+describe('glarefly', () => {
+  it('dazzles nearby shooting towers when it dies (not soldier dens, not far towers)', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 2000, slots: [{ x: 300, y: 40 }, { x: 330, y: 160 }, { x: 900, y: 40 }] };
+    const sim = new BattleSim(l2);
+    const near = sim.build(0, 'thornbow')!;
+    const den = sim.build(1, 'burrow')!;
+    const far = sim.build(2, 'thornbow')!;
+    sim.status = 'running';
+    const g = sim.spawn('glarefly', 0, 300);
+    (sim as any).applyDamage(g, 9999);
+    expect(near.frozen).toBeGreaterThan(0);
+    expect(den.frozen ?? 0).toBe(0);
+    expect(far.frozen ?? 0).toBe(0);
+  });
+});

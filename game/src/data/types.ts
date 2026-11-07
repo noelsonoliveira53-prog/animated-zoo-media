@@ -32,6 +32,7 @@ export interface EnemyDef {
   spawner?: { enemy: string; count: number; interval: number; limit: number }; // releases minions while alive (limit = max total)
   veil?: number; // stealth: towers can only target it within this many px (splash, spells, soldiers still hit)
   enrage?: { below: number; speedMult: number }; // speeds up once hp drops under this fraction
+  glare?: { radius: number; duration: number }; // on death, dazzles (freezes) nearby shooting towers
   blink?: { interval: number; distance: number }; // jumps ahead along the road on a timer (breaks free of blockers)
   splashResist?: number; // 0..1 less damage from splash (area) tower shots
   shieldAura?: { amount: number; radius: number; interval: number }; // periodically shields nearby allies

@@ -225,6 +225,28 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'glarefly': {
+        // glass moth: four broad faceted wings and a bright core
+        g.lineStyle(1.5, 0x5a6a9a, 1);
+        for (const [s, up] of [[-1, 1], [1, 1], [-1, -1], [1, -1]] as [number, number][]) {
+          const wing = [
+            new Phaser.Math.Vector2(cx, cy),
+            new Phaser.Math.Vector2(cx + s * r * 0.9, cy - up * r * 1.3),
+            new Phaser.Math.Vector2(cx + s * r * 1.7, cy - up * r * 0.7),
+            new Phaser.Math.Vector2(cx + s * r * 1.0, cy + up * r * 0.05),
+          ];
+          g.fillStyle(up > 0 ? 0xd8f8ff : 0xf0e0ff, 1);
+          g.fillPoints(wing, true);
+          g.strokePoints(wing, true);
+          g.fillStyle(0xffffff, 0.7);
+          g.fillTriangle(cx + s * r * 0.3, cy - up * r * 0.25, cx + s * r * 0.85, cy - up * r * 1.0, cx + s * r * 1.1, cy - up * r * 0.6);
+        }
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 0.6, r * 1.3);
+        g.strokeEllipse(cx, cy, r * 0.6, r * 1.3);
+        break;
+      }
       case 'shardskipper': {
         // crystal hopper: faceted body, long legs, glowing core
         g.lineStyle(2.5, C.ink, 1);

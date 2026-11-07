@@ -1112,6 +1112,12 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'glare': {
+        const flash = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 30, ev.radius, 0xffffff, 0.5).setDepth(2600).setScale(0.2);
+        this.tweens.add({ targets: flash, scale: 1, alpha: 0, duration: 380, ease: 'Cubic.easeOut', onComplete: () => flash.destroy() });
+        if (ev.towers.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 50, 'Dazzled!', '#fff0b8', 16);
+        break;
+      }
       case 'blink': {
         this.particles.setParticleTint(0xbff4ff);
         this.particles.explode(8, ev.from.x, ev.from.y);

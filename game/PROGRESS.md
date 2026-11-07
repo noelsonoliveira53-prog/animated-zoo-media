@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **46** (next balance pass at iteration 50)
+Iteration counter: **47** (next balance pass at iteration 50)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -369,12 +369,18 @@ Iteration counter: **46** (next balance pass at iteration 50)
   from roads, 15 waves), a `GLASS` theme with crystal-spire scenery, a Shardglass world-map style and a bell-like
   music theme built on fourths. 135 tests.
 
+- [x] **Iter 47 — Shardglass level 27 + Glarefly.** New enemy **Glarefly** (29 enemies): a glass moth (flyer) that
+  flashes on death and dazzles shooting towers within 120 px for 2 s. It reuses the frozen state and the 3 s immunity
+  window, so flashes can't chain; soldier dens are unaffected. Kill it before it reaches your towers. Level 27 **Prism
+  Canyon**: a doubling-back west road plus a north road joining late, 12 pads, 15 waves. Fix found by the region rules:
+  the merged tail was only 420 px, so it now bends down to the lower right (680 px). Sprite polish: the first
+  Glarefly's wings were thin, dark triangles; they're now broad, pale four-point wings. 136 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 6: levels 27–30 (one more enemy, the 29th, and a Shardglass boss, the 30th, which fills the Field Guide grid,
-   so add Field Guide paging alongside).
+1. Region 6: levels 28–30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
 2. Hero #4 and a third global spell.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
@@ -398,6 +404,9 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Prism Canyon (iteration 47, 6–8 seeds):** easy at first: 2.0 → 100/100/100, 2.6 → 100/100/17, 3.0 → 100/100/0;
+**3.1 → 100% / 88% / 0%** (kept); 3.3 → 67/33/0, 3.6 → 17/0/0.
 
 **Glassfall Flats (iteration 46, 6 seeds):** 2.4 → 100/100/0 (the novice lost 96 lives to big Shardskipper waves
 on the short south road). Trimmed those two waves → **2.4: 100% / 100% / 33%** (kept, matches the other openers).

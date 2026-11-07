@@ -150,6 +150,7 @@ export type SimEvent =
   | { type: 'enrage'; enemy: Enemy }
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
   | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
+  | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
   | { type: 'coral'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'shieldBreak'; enemy: Enemy }
@@ -1299,9 +1300,24 @@ export class BattleSim {
       }
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
+      if (e.def.glare) this.glareBurst(e);
       return;
     }
     this.checkPhases(e);
+  }
+
+  /** Glareflies flash on death: nearby shooting towers are dazzled (frozen) briefly. Shares the chill immunity window. */
+  private glareBurst(src: Enemy): void {
+    const gl = src.def.glare!;
+    const hit: Tower[] = [];
+    for (const t of this.towers) {
+      if (!t || t.rally || t.chillImmune > 0) continue;
+      if (Math.hypot(t.pos.x - src.pos.x, t.pos.y - src.pos.y) > gl.radius) continue;
+      t.frozen = Math.max(t.frozen, gl.duration);
+      t.chillImmune = gl.duration + THAW_IMMUNITY;
+      hit.push(t);
+    }
+    this.events.push({ type: 'glare', enemy: src, towers: hit, radius: gl.radius });
   }
 
   /** Puffcaps burst on death: nearby living allies (not bosses) move faster for a few seconds. */

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **131** (next balance pass at iteration 135)
+Iteration counter: **132** (next balance pass at iteration 135)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -913,6 +913,17 @@ Iteration counter: **131** (next balance pass at iteration 135)
 - **Iteration 131** (hero parity): Bramble and Wren trailed the other heroes, so both got a buff. Bramble: health
   260 → 300, Earthshake damage 70 → 85. Wren: bolt damage 16 → 18, attack rate 1.0 → 1.15, Hush damage 30 → 36.
   Screenshot `screenshots/131.png` (Bramble's Earthshake). 189 tests.
+- **Iteration 132** (village variety): new village building, the **Moonpetal Shrine**. It is 2×2, unlocks at Grove
+  Hall 2, one per village, and has 3 levels; each level makes battle spells recharge 6% faster.
+  - Data: `shrine` in `data/buildings.ts` and `SHRINE_CD_PER_LEVEL`.
+  - Perk: `BattlePerks.spellCdMult` → `BattleSim.spellCdMult`, with `spellCooldown(id)` driving the cast cooldown and
+    the HUD ring.
+  - Visible in the battle bonus banner and the building panel. The art is a ring of standing stones (one more per
+    level), a glowing moon-petal flower and a little moth keeper.
+  - The build shop's cards now size to fit 8 entries.
+  - Fixed a stale Ranger Lodge blurb that still said "raids coming soon".
+  - Checks: `scripts/shrine-check.mjs`, plus a phone version. Screenshots `screenshots/132.png` (shop) and
+    `132-phone.png`. 190 tests.
 
 ## In Progress
 - (none)
@@ -926,7 +937,6 @@ Iteration counter: **131** (next balance pass at iteration 135)
 
 ## Ideas parked
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
-- Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
 **Iteration 131** (hero comparison, expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% → 77%

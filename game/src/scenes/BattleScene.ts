@@ -75,7 +75,7 @@ export class BattleScene extends Phaser.Scene {
   private heroLevelText!: Phaser.GameObjects.Text;
   private skillText!: Phaser.GameObjects.Text;
   private bossBar!: Phaser.GameObjects.Graphics;
-  private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
+  private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1 };
   private seen = new Set<string>();
   private tally = { kills: 0, specs: 0, bosses: [] as string[] };
   private bossLabel!: Phaser.GameObjects.Text;
@@ -222,6 +222,7 @@ export class BattleScene extends Phaser.Scene {
     if (this.perks.bonusCoins) bonus.push(`+${this.perks.bonusCoins} coins`);
     if (this.perks.towerDamageMult > 1) bonus.push(`+${Math.round((this.perks.towerDamageMult - 1) * 100)}% tower damage`);
     if (this.perks.rangerMult > 1) bonus.push(`Rangers +${Math.round((this.perks.rangerMult - 1) * 100)}%`);
+    if (this.perks.spellCdMult < 1) bonus.push(`spells recharge ${Math.round((1 - this.perks.spellCdMult) * 100)}% faster`);
     if (this.sim.hero && this.sim.hero.level > 1) bonus.push(`${this.sim.hero.def.name} starts at Lv ${this.sim.hero.level}`);
     if (this.daily) {
       const names = this.daily.modifiers.map((id) => DAILY_MODIFIERS.find((m) => m.id === id)!.name);
@@ -788,7 +789,7 @@ export class BattleScene extends Phaser.Scene {
       g.fillCircle(p.x, p.y, 35);
       if (cd > 0) {
         g.fillStyle(0x000000, 0.5);
-        g.slice(p.x, p.y, 35, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (cd / def.cooldown), false);
+        g.slice(p.x, p.y, 35, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (cd / this.sim.spellCooldown(id)), false);
         g.fillPath();
       }
       const armed = this.spellMode === id;

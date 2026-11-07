@@ -1,5 +1,5 @@
 import { TROOPS } from '../data/raid';
-import { BUILDINGS, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { BUILDINGS, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 
 // Pure village rules. All time-dependent functions take `now` (ms) so they are testable.
 
@@ -235,15 +235,17 @@ export interface BattlePerks {
   towerDamageMult: number; // Defense Workshop: +5% per level
   bonusCoins: number; // Grove Hall: +40 starting coins per level above 1
   rangerMult: number; // Ranger Lodge: Grove Call Rangers +25% hp/damage per level
+  spellCdMult: number; // Moonpetal Shrine: spell cooldowns -6% per level
 }
 
 export function battlePerks(v: VillageState | null): BattlePerks {
-  if (!v) return { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
+  if (!v) return { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1 };
   const lvl = (type: BuildingId) => Math.max(0, ...v.buildings.filter((b) => b.type === type).map((b) => b.level));
   return {
     towerDamageMult: 1 + 0.05 * lvl('workshop'),
     bonusCoins: 40 * Math.max(0, lvl('townhall') - 1),
     rangerMult: 1 + 0.25 * lvl('barracks'),
+    spellCdMult: 1 - SHRINE_CD_PER_LEVEL * lvl('shrine'),
   };
 }
 

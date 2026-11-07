@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
-import { BUILDINGS, SHOP_ORDER, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { BUILDINGS, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
 import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -379,6 +379,7 @@ export class VillageScene extends Phaser.Scene {
     if (b.type === 'townhall' && b.level > 1) lines.push(`Battle bonus: +${(b.level - 1) * 40} starting coins`);
     if (b.type === 'townhall' && b.level === 1) lines.push('Upgrade for +40 starting coins in every battle.');
     if (b.type === 'barracks' && b.level > 0) lines.push(`Battle bonus: Grove Call Rangers +${b.level * 25}% health and damage`);
+    if (b.type === 'shrine' && b.level > 0) lines.push(`Battle bonus: spell cooldowns ${Math.round(b.level * SHRINE_CD_PER_LEVEL * 100)}% shorter`);
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
     if (!lines.length) lines.push(def.blurb);
     c.add(this.add.text(-W / 2 + 140, -H / 2 + 44, lines.join('\n'), { ...textStyle(pf(14), TEXT.cream, false), wordWrap: { width: 300 } }));
@@ -469,7 +470,7 @@ export class VillageScene extends Phaser.Scene {
     block.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
     c.add(block);
     c.add(this.add.text(0, -H / 2 + 24, 'Build something new', textStyle(24, TEXT.gold)).setOrigin(0.5));
-    const cardW = 146;
+    const cardW = Math.min(146, (W - 60) / SHOP_ORDER.length - 6);
     SHOP_ORDER.forEach((id, i) => {
       const def = BUILDINGS[id];
       const x = -W / 2 + 30 + cardW / 2 + i * (cardW + 6);

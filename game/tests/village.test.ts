@@ -110,7 +110,7 @@ import { BattleSim } from '../src/systems/BattleSim';
 describe('village → battle perks', () => {
   it('village buildings grant battle perks', () => {
     const v = newVillage(T0);
-    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 });
+    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1 });
     v.buildings.push({ uid: 99, type: 'workshop', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.push({ uid: 98, type: 'barracks', level: 1, col: 4, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.find((b) => b.type === 'townhall')!.level = 3;
@@ -119,6 +119,21 @@ describe('village → battle perks', () => {
     expect(p.bonusCoins).toBe(80);
     expect(p.rangerMult).toBeCloseTo(1.25);
     expect(battlePerks(null).towerDamageMult).toBe(1);
+  });
+  it('the Moonpetal Shrine shortens battle spell cooldowns', () => {
+    const v = newVillage(T0);
+    v.buildings.push({ uid: 97, type: 'shrine', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
+    const p = battlePerks(v);
+    expect(p.spellCdMult).toBeCloseTo(0.88);
+    const lvl = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20,
+      paths: [[{ x: 0, y: 300 }, { x: 1200, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }],
+      theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 } };
+    const plain = new BattleSim(lvl, null);
+    const blessed = new BattleSim(lvl, null, { spellCdMult: p.spellCdMult });
+    expect(plain.castSpell('starfall', { x: 600, y: 300 })).toBe(true);
+    expect(blessed.castSpell('starfall', { x: 600, y: 300 })).toBe(true);
+    expect(blessed.spellCd.starfall).toBeCloseTo(plain.spellCd.starfall * 0.88);
+    expect(blessed.spellCooldown('starfall')).toBeCloseTo(blessed.spellCd.starfall);
   });
   it('heroes can be trained with glowsap up to max rank', () => {
     const v = newVillage(T0);

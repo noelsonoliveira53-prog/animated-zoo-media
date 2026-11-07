@@ -2001,6 +2001,40 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'shrine': {
+        // a soft glow pool, a ring of standing stones, and a night-blooming flower in the middle
+        g.fillStyle(def.color, 0.18 + lvl * 0.08);
+        g.fillCircle(cx, cy + 2, 30 * k);
+        const stones = 5 + lvl;
+        for (let i = 0; i < stones; i++) {
+          const a = (i / stones) * Math.PI * 2 - Math.PI / 2;
+          const sx = cx + Math.cos(a) * 30 * k;
+          const sy = cy + 4 + Math.sin(a) * 22 * k;
+          g.fillStyle(0xcfc8bc, 1);
+          g.fillRoundedRect(sx - 5, sy - 14, 10, 16, 4);
+          g.lineStyle(2, C.ink, 1);
+          g.strokeRoundedRect(sx - 5, sy - 14, 10, 16, 4);
+        }
+        // stem and moon-petals
+        g.lineStyle(3, 0x4b8f3a, 1);
+        g.lineBetween(cx, cy + 8, cx, cy - 10);
+        for (let i = 0; i < 5; i++) {
+          const a = (i / 5) * Math.PI * 2 - Math.PI / 2;
+          g.fillStyle(0xf0eaff, 1);
+          g.fillEllipse(cx + Math.cos(a) * 8, cy - 14 + Math.sin(a) * 8, 11, 11);
+        }
+        g.fillStyle(def.color, 1);
+        g.fillCircle(cx, cy - 14, 5);
+        g.fillStyle(0xffffff, 0.9);
+        g.fillCircle(cx - 1.5, cy - 15.5, 1.8);
+        // a little moth keeper
+        g.fillStyle(0xe8d8b0, 1);
+        g.fillEllipse(cx + 18, cy - 30, 9, 6);
+        g.fillEllipse(cx + 26, cy - 30, 9, 6);
+        g.fillStyle(0x6a5a3a, 1);
+        g.fillEllipse(cx + 22, cy - 29, 3, 7);
+        break;
+      }
       case 'wall': {
         g.clear();
         g.fillStyle(0x000000, 0.2);

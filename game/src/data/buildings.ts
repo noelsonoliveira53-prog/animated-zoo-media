@@ -1,6 +1,6 @@
 // Village buildings. Costs are in Coins (gold) and Glowsap (the glowing tree-sap second resource).
 
-export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'wall';
+export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'wall';
 
 export interface Cost {
   coins?: number;
@@ -99,7 +99,7 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   barracks: {
     id: 'barracks',
     name: 'Ranger Lodge',
-    blurb: 'Trains raiding parties to strike back at Murkhorde camps (raids coming soon).',
+    blurb: 'Trains raiding parties to strike back at Murkhorde camps. Higher levels unlock tougher troops.',
     size: 3,
     color: 0x6f8fa8,
     maxCount: [0, 1, 1, 2, 2],
@@ -123,6 +123,19 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
       { cost: { coins: 6500, glowsap: 5000 }, time: 1800, th: 4 },
     ],
   },
+  shrine: {
+    id: 'shrine',
+    name: 'Moonpetal Shrine',
+    blurb: 'A ring of pale stones where moth-keepers tend night-blooming petals. Each level makes your battle spells recharge faster.',
+    size: 2,
+    color: 0xc8b8ff,
+    maxCount: [0, 1, 1, 1, 1],
+    levels: [
+      { cost: { coins: 900, glowsap: 600 }, time: 90, th: 2 },
+      { cost: { coins: 2200, glowsap: 1800 }, time: 480, th: 3 },
+      { cost: { coins: 5000, glowsap: 4200 }, time: 1500, th: 4 },
+    ],
+  },
   wall: {
     id: 'wall',
     name: 'Bramble Wall',
@@ -138,7 +151,10 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   },
 };
 
-export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'wall'];
+export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'wall'];
+
+/** Moonpetal Shrine: battle spell cooldowns shrink by this fraction per level. */
+export const SHRINE_CD_PER_LEVEL = 0.06;
 
 export const VILLAGE_COLS = 22;
 export const VILLAGE_ROWS = 13;

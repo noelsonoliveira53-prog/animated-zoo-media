@@ -259,13 +259,21 @@ export class BattleSim {
   /** Multiplier on Grove Call Rangers' hp and damage (from the village Ranger Lodge). */
   rangerMult = 1;
 
+  /** Full cooldown of a spell after the village shrine's discount. */
+  spellCooldown(id: string): number {
+    return SPELLS[id].cooldown * this.spellCdMult;
+  }
+
+  /** Multiplier on spell cooldowns (from the village Moonpetal Shrine). */
+  spellCdMult = 1;
+
   /** Source of chance (crit rolls). Headless runs pass a seeded one so each seed replays exactly. */
   random: () => number = Math.random;
 
   constructor(
     level: LevelDef,
     heroId: string | null = null,
-    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; spellCdMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
   ) {
     this.level = level;
     if (opts.random) this.random = opts.random;
@@ -273,6 +281,7 @@ export class BattleSim {
     if (this.mods.noHero) heroId = null;
     this.towerDamageMult = opts.towerDamageMult ?? 1;
     this.rangerMult = opts.rangerMult ?? 1;
+    this.spellCdMult = opts.spellCdMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
     this.coins = Math.round(level.startCoins * this.mods.startCoinsMult) + (opts.bonusCoins ?? 0);
     this.lives = this.mods.lives ?? level.lives;
@@ -369,7 +378,7 @@ export class BattleSim {
     } else {
       this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
     }
-    this.spellCd[id] = def.cooldown;
+    this.spellCd[id] = this.spellCooldown(id);
     this.events.push({ type: 'spellCast', spellId: id, pos: { ...pos } });
     return true;
   }

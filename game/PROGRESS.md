@@ -494,8 +494,8 @@ Iteration counter: **64** (next balance pass at iteration 65)
 - (none)
 
 ## Backlog (ranked)
-1. Region 7 finale (level 35) with a Galecrest boss.
-4. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
+1. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
+2. Region 7 finale (level 35) with a Galecrest boss.
 
 ## Known Bugs
 - (none known)

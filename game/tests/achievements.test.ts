@@ -1,4 +1,5 @@
 import { describe, expect, it } from 'vitest';
+import { HERO_ORDER } from '../src/data/heroes';
 import { ACHIEVEMENTS } from '../src/data/achievements';
 import { checkAchievements } from '../src/systems/achievements';
 import { bumpStats, defaultSave, ensureVillage } from '../src/systems/save';
@@ -44,7 +45,7 @@ describe('hero achievements', () => {
     s = bumpStats(s, { wins_hero_bramble: 1 });
     s = bumpStats(s, { wins_hero_bramble: 1, wins_hero_fen: 1 });
     expect(ach('full_roster').progress(s)).toBe(2);
-    for (const h of ['ember', 'wren', 'sorrel']) s = bumpStats(s, { [`wins_hero_${h}`]: 1 });
+    for (const h of HERO_ORDER.slice(2)) s = bumpStats(s, { [`wins_hero_${h}`]: 1 });
     expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('full_roster');
   });
   it('Field Medic accumulates soldier healing across battles', () => {

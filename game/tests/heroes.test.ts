@@ -197,3 +197,19 @@ describe('Sorrel', () => {
     expect(sim.healTotal).toBe(Math.min(s.maxHp, 5 + heal) - 5);
   });
 });
+
+describe('Hazel', () => {
+  it("her lullaby slows enemies near her, but not windborne ones or far ones", () => {
+    const lvl2 = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20, theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },
+      paths: [[{ x: 0, y: 300 }, { x: 2000, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }] } as LevelDef;
+    const sim = new BattleSim(lvl2, 'hazel');
+    sim.hero!.pos = { x: 400, y: 300 };
+    const p = HEROES.hazel.passive as { radius: number; slow: number };
+    const near = sim.spawn('mudling', 0, 420);
+    const far = sim.spawn('mudling', 0, 1500);
+    const wind = sim.spawn('galehound', 0, 410);
+    expect(sim.drowseMult(near)).toBeCloseTo(1 - p.slow);
+    expect(sim.drowseMult(far)).toBe(1);
+    expect(sim.drowseMult(wind)).toBe(wind.def.windborne ? 1 : 1 - p.slow);
+  });
+});

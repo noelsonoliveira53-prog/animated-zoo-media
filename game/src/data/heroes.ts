@@ -131,9 +131,35 @@ export const HEROES: Record<string, HeroDef> = {
       fxColor: 0x9bff8a,
     },
   },
+  hazel: {
+    id: 'hazel',
+    name: 'Hazel',
+    title: 'Dormouse Dreamweaver',
+    blurb: 'A sleepy dormouse in a patchwork nightcap who hums lullabies under her breath. Anything that wanders too close starts to nod off on its feet.',
+    color: 0xc89a6a,
+    hp: 165,
+    speed: 115,
+    armor: 0,
+    regen: 6,
+    melee: false,
+    attack: { damage: 15, type: 'magic', range: 170, rate: 1.2, hitsAir: true, projectileSpeed: 460 },
+    respawn: 12,
+    passive: { kind: 'drowse', radius: 160, slow: 0.15, text: 'Lullaby: enemies near her move 15% slower (windborne foes shrug it off).' },
+    active: {
+      name: 'Dream Darts',
+      text: 'Flicks glowing dream-darts at up to 6 enemies in range.',
+      cooldown: 14,
+      kind: 'volley',
+      damage: 42,
+      damageType: 'magic',
+      radius: 220,
+      maxTargets: 6,
+      fxColor: 0xc8a8ff,
+    },
+  },
 };
 
-export const HERO_ORDER = ['bramble', 'fen', 'ember', 'wren', 'sorrel'];
+export const HERO_ORDER = ['bramble', 'fen', 'ember', 'wren', 'sorrel', 'hazel'];
 
 /** XP needed to reach each level (index = level - 1). */
 export const HERO_XP = [0, 40, 110, 220, 380, 600];

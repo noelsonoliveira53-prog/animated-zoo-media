@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **158** (next balance pass at iteration 160)
+Iteration counter: **159** (next balance pass at iteration 160)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1127,6 +1127,16 @@ Iteration counter: **158** (next balance pass at iteration 160)
     their bottom corners. Both panels are fully opaque now.
   - The menu's version label was stuck at v0.6; it now reads v0.9.
   - Screenshots `screenshots/158.png` (raid panel) and `158-menu.png`. 208 tests.
+- **Iteration 159** (hero 6): **Hazel the Dormouse Dreamweaver**, a ranged magic hero (165 hp, magic darts,
+  hits flyers).
+  - New passive `drowse` ("Lullaby"): enemies within 160px of her move 15% slower; windborne foes shrug it off.
+    `drowseMult()` feeds both movement and tower aim-lead.
+  - Active **Dream Darts**: a magic volley at up to 6 enemies.
+  - Her lullaby shows as a faint breathing lilac ring. Art: a golden dormouse with a patchwork nightcap; she also
+    gets a lilac dart projectile.
+  - Full Roster now needs all six heroes; its test uses `HERO_ORDER`.
+  - Checks: a test for the lullaby; `scripts/hazel-check.mjs` covers the menu card and the battle. Screenshots
+    `screenshots/159.png` and `159-menu.png`. 209 tests.
 
 ## In Progress
 - (none)
@@ -1141,6 +1151,9 @@ Iteration counter: **158** (next balance pass at iteration 160)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 159**: Hazel in the hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds): **79%** (avg 10.7 lives),
+inside the others' 79–90% range. The novice and casual strategies don't use her, so the level bands are unchanged.
+
 **Iteration 156**: 85 Shrine of a Thousand Lanterns: 100/100 at hpMult 1.7, 100/58 at 2.0, 100/42 at 2.2, 92/25 at 2.24, 83/8 at 2.27, 58/8 at 2.35.
 Very steep, so **2.22 → 100/33/0** was kept (casual in the boss band; expert slightly above). Finale guard: the expert won 4 of 4 seeds.
 

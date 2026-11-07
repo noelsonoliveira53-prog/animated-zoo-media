@@ -163,7 +163,8 @@ export type HeroPassive =
   | { kind: 'crit'; chance: number; mult: number; text: string }
   | { kind: 'towerHaste'; radius: number; bonus: number; text: string }
   | { kind: 'bounty'; radius: number; bonus: number; text: string }
-  | { kind: 'mend'; radius: number; regen: number; text: string };
+  | { kind: 'mend'; radius: number; regen: number; text: string }
+  | { kind: 'drowse'; radius: number; slow: number; text: string };
 
 export interface HeroActive {
   name: string;

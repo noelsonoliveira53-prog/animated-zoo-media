@@ -2017,6 +2017,14 @@ export class BattleScene extends Phaser.Scene {
         this.jamG.strokePath();
       }
     }
+    const hz = this.sim.hero;
+    if (hz && hz.alive && hz.def.passive.kind === 'drowse') {
+      // Hazel's lullaby: a faint lilac ring that breathes slowly
+      this.jamG.lineStyle(2, 0xc8a8ff, 0.25 + 0.1 * Math.sin(this.sim.time * 1.5));
+      this.jamG.strokeCircle(hz.pos.x, hz.pos.y, hz.def.passive.radius);
+      this.jamG.fillStyle(0xc8a8ff, 0.05);
+      this.jamG.fillCircle(hz.pos.x, hz.pos.y, hz.def.passive.radius);
+    }
     for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.ward) continue;
       // Glowbearer lantern-light: a warm gold disc with a soft rim that breathes

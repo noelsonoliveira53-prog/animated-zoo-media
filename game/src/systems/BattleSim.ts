@@ -1019,7 +1019,7 @@ export class BattleSim {
         }
       }
       if (e.anchored) continue; // Ironkeel holds fast while its anchor is down
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.mods.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1154,6 +1154,13 @@ export class BattleSim {
       hasted.push(o);
     }
     this.events.push({ type: 'drum', enemy: e, radius: d.radius, hasted });
+  }
+
+  /** Hazel's lullaby: enemies near a living drowse hero walk slower (windborne ones ignore it). */
+  drowseMult(e: Enemy): number {
+    const h = this.hero;
+    if (!h || !h.alive || h.def.passive.kind !== 'drowse' || e.def.windborne) return 1;
+    return Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= h.def.passive.radius ? 1 - h.def.passive.slow : 1;
   }
 
   /** Glowbearer: the strongest ward in range (from another enemy) cuts damage taken by this fraction. */
@@ -1653,7 +1660,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.drowseMult(target) * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {

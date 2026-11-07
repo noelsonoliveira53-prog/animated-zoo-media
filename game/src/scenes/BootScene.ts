@@ -2378,6 +2378,44 @@ export class BootScene extends Phaser.Scene {
       g.strokePath();
       g.lineStyle(1, 0xffffff, 0.9);
       g.lineBetween(cx - 7, base - 39, cx - 7, base - 17);
+    } else if (id === 'hazel') {
+      // dormouse: round golden-brown body, big round ears, black bead eyes, patchwork nightcap, fluffy tail
+      g.fillStyle(0xb88a5a, 1);
+      g.fillEllipse(cx + 14, base - 14, 12, 20);
+      g.strokeEllipse(cx + 14, base - 14, 12, 20);
+      g.fillStyle(0xd8b088, 1);
+      g.fillEllipse(cx, base - 18, 26, 28);
+      g.strokeEllipse(cx, base - 18, 26, 28);
+      g.fillStyle(0xf4e4c8, 1);
+      g.fillEllipse(cx, base - 14, 14, 16);
+      g.fillStyle(0xd8b088, 1);
+      g.fillCircle(cx - 9, base - 46, 7);
+      g.fillCircle(cx + 9, base - 46, 7);
+      g.strokeCircle(cx - 9, base - 46, 7);
+      g.strokeCircle(cx + 9, base - 46, 7);
+      g.fillStyle(0xf0b8b8, 1);
+      g.fillCircle(cx - 9, base - 46, 3.5);
+      g.fillCircle(cx + 9, base - 46, 3.5);
+      g.fillStyle(0xd8b088, 1);
+      g.fillCircle(cx, base - 37, 11);
+      g.strokeCircle(cx, base - 37, 11);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx - 4, base - 38, 2.6);
+      g.fillCircle(cx + 4, base - 38, 2.6);
+      g.fillStyle(0xffffff, 1);
+      g.fillCircle(cx - 3.3, base - 38.8, 0.9);
+      g.fillCircle(cx + 4.7, base - 38.8, 0.9);
+      g.fillStyle(0xe88a9a, 1);
+      g.fillCircle(cx, base - 34, 1.6);
+      // patchwork nightcap flopping to one side, with a pompom
+      g.fillStyle(0x8a6ad8, 1);
+      g.fillTriangle(cx - 10, base - 45, cx + 10, base - 45, cx + 16, base - 58);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeTriangle(cx - 10, base - 45, cx + 10, base - 45, cx + 16, base - 58);
+      g.fillStyle(0xf0d070, 1);
+      g.fillTriangle(cx - 2, base - 45, cx + 6, base - 45, cx + 6, base - 51);
+      g.fillStyle(0xffffff, 1);
+      g.fillCircle(cx + 16, base - 58, 3);
     } else if (id === 'sorrel') {
       // hare medic: long upright ears, cream belly, a red-cross moss satchel, sling in paw
       g.fillStyle(0xc8a888, 1);
@@ -2801,6 +2839,7 @@ export class BootScene extends Phaser.Scene {
     proj('proj_hero_ember', 0xff9a3c, 5);
     proj('proj_hero_bramble', 0xffffff, 3);
     proj('proj_hero_sorrel', 0xb8b0a0, 4); // sling pebble
+    proj('proj_hero_hazel', 0xc8a8ff, 4); // dream-dart
 
     // glowsap icon (glowing drop)
     g = this.g();

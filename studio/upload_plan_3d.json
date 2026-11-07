@@ -636,5 +636,27 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 158.0
+ },
+ {
+  "file": "bloop/bl3d_ep05.mp4",
+  "title": "Where Is Bloop? Rainbow Hide and Seek Song for Kids",
+  "description": "Where is Bloop? Play rainbow hide and seek with Bloop the jelly blob! He hides in red, orange, yellow, green, blue and purple, and changes color every time.\nA peekaboo color song for kids: cover your eyes, count to three and find Bloop. Ages 2-5.\n\nLYRICS\nWhere is Bloop? Where can he be?\nHiding in the rainbow, one, two, three!\nPeekaboo, peekaboo, look and see,\nWhere is Bloop? Find him with me!\nIs he hiding in the red? Red, red, red!\nPeekaboo, there's Bloop's red head!\nIs he hiding in the orange? Look, look, look!\nPeekaboo, by the orange book!\nIs he hiding in the yellow sun?\nPeekaboo, yellow, this is fun!\nIs he hiding in the green, green grass?\nPeekaboo, green, found him fast!\nCover your eyes, one, two, three!\nOpen them wide, what do you see?\nPeekaboo! Clap, clap, clap!\nPeekaboo! Tap, tap, tap!\nIs he hiding in the blue, blue sky?\nPeekaboo, blue, way up high!\nIs he hiding in the purple flower?\nPeekaboo, purple, rainbow power!\nPeekaboo! Bye-bye, rainbow friends!",
+  "tags": [
+   "where is bloop",
+   "hide and seek song",
+   "peekaboo song",
+   "rainbow colors song",
+   "learn colors",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-10",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep05.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

@@ -77,6 +77,10 @@ describe('HUD clearance', () => {
           expect(hidden, `${l.name} pad (${s.x},${s.y}) tower under the ${p.name}`).toBe(false);
         }
   });
+
+  it('pads near the bottom keep their tower base on screen', () => {
+    for (const l of LEVELS) for (const s of l.slots) expect(s.y, `${l.name} pad (${s.x},${s.y}) too close to the bottom edge`).toBeLessThanOrEqual(680);
+  });
 });
 
 describe('gate clearance', () => {

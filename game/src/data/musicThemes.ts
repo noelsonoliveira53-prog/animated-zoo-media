@@ -59,10 +59,13 @@ export const THEMES: ThemeDef[] = [
   // Verdant Ruins: hand-drum bounce and a pentatonic flute line, old and a little mysterious.
   { id: 'ruins', name: 'Verdant Ruins', transpose: -1, tempo: 1.06, arpWave: 'triangle', leadWave: 'sine',
     motif: [[12, 0, 3], [15, 3, 1], [17, 4, 4], [19, 8, 2], [22, 10, 2], [19, 12, 4], [17, 16, 2], [15, 18, 2], [12, 20, 8]] },
+  // Brasswork Hollows: clockwork staccato, square-wave pistons and a stepping minor figure.
+  { id: 'brass', name: 'Brasswork', transpose: -2, tempo: 1.1, arpWave: 'square', leadWave: 'square',
+    motif: [[12, 0, 1], [12, 2, 1], [15, 4, 2], [12, 6, 1], [17, 8, 2], [15, 10, 2], [14, 12, 2], [10, 14, 2], [12, 16, 4], [7, 20, 2], [10, 22, 2], [12, 24, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

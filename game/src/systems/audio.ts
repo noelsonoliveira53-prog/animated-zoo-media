@@ -169,6 +169,9 @@ class Sfx {
       case 'burrow': // dirt rumble
         this.noise(0.22, 0.12, 300);
         break;
+      case 'charge': // steam hiss
+        this.noise(0.2, 0.09, 5000);
+        break;
       case 'split': // wet pop
         this.tone(260, 0.08, 'sine', 0.07, 520);
         break;

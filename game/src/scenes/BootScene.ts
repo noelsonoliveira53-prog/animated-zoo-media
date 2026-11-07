@@ -304,6 +304,57 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'cogjammer': {
+        // brass beetle: domed shell with a big gear on its back, rivets, little legs
+        g.lineStyle(2.5, C.ink, 1);
+        for (const s2 of [-1, 1]) for (let k = 0; k < 3; k++) g.lineBetween(cx + s2 * r * 0.6, cy - r * 0.2 + k * r * 0.35, cx + s2 * r * 1.1, cy - r * 0.05 + k * r * 0.4);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.4);
+        g.strokeEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.4);
+        // gear: toothed ring
+        g.fillStyle(0x8a6a2a, 1);
+        for (let k = 0; k < 8; k++) {
+          const a0 = (k / 8) * Math.PI * 2;
+          g.fillRect(cx + Math.cos(a0) * r * 0.55 - r * 0.1, cy - r * 0.05 + Math.sin(a0) * r * 0.55 - r * 0.1, r * 0.2, r * 0.2);
+        }
+        g.fillStyle(0xe8c070, 1);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.5);
+        g.strokeCircle(cx, cy - r * 0.05, r * 0.5);
+        g.fillStyle(0x5a4a2a, 1);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.16);
+        g.fillStyle(0x3a3a3a, 1);
+        g.fillEllipse(cx, cy - r * 0.75, r * 0.7, r * 0.35);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.8, r * 0.07);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.8, r * 0.07);
+        break;
+      }
+      case 'steamrunner': {
+        // boiler on legs: riveted round tank, chimney with a puff, pressure gauge face
+        g.lineStyle(2.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.35, cy + r * 0.5, cx - r * 0.6, cy + r * 1.0);
+        g.lineBetween(cx + r * 0.35, cy + r * 0.5, cx + r * 0.6, cy + r * 1.0);
+        g.fillStyle(0x5a5a64, 1);
+        g.fillRect(cx + r * 0.25, cy - r * 1.05, r * 0.3, r * 0.55);
+        g.strokeRect(cx + r * 0.25, cy - r * 1.05, r * 0.3, r * 0.55);
+        g.fillStyle(0xffffff, 0.85);
+        g.fillCircle(cx + r * 0.45, cy - r * 1.2, r * 0.18);
+        g.fillCircle(cx + r * 0.65, cy - r * 1.3, r * 0.13);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy, r * 0.8);
+        g.strokeCircle(cx, cy, r * 0.8);
+        g.fillStyle(0xc8963a, 1);
+        g.fillRect(cx - r * 0.8, cy - r * 0.08, r * 1.6, r * 0.16);
+        g.fillStyle(0xf0ead8, 1);
+        g.fillCircle(cx - r * 0.1, cy - r * 0.25, r * 0.3);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeCircle(cx - r * 0.1, cy - r * 0.25, r * 0.3);
+        g.lineStyle(2, 0xd03a2a, 1);
+        g.lineBetween(cx - r * 0.1, cy - r * 0.25, cx + r * 0.08, cy - r * 0.4);
+        g.fillStyle(0x3a3a3a, 1);
+        for (const [dx, dy] of [[-0.55, 0.35], [0.55, 0.35], [-0.55, -0.4], [0.5, -0.45]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.06);
+        break;
+      }
       case 'ulmaroth': {
         // overgrown idol: a stone block body on stumpy legs, a carved face with glowing eyes, vines and moss draped over it
         g.lineStyle(3, C.ink, 1);

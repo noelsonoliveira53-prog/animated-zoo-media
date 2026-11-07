@@ -43,6 +43,8 @@ export interface EnemyDef {
   shift?: { interval: number; armor: number; magicResist: number }; // swaps to this armor/MR (and back) every interval s
   revive?: { interval: number; radius: number; window: number; hpFrac: number }; // raises a fallen ally (died within `window` s, in radius)
   thorns?: number; // melee attackers (soldiers, heroes) take this fraction of the damage they deal back
+  jam?: { radius: number; slow: number }; // towers within radius fire this fraction slower while it lives
+  charge?: { speedMult: number; duration: number; cooldown: number }; // bolts forward for `duration` s when hit
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;
@@ -123,7 +125,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

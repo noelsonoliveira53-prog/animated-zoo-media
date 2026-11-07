@@ -468,3 +468,34 @@ describe('Bramblehide thorns', () => {
     expect(h2.hp).toBe(h2.maxHp);
   });
 });
+
+describe('Brasswork enemies', () => {
+  it('Cogjammer slows the fire rate of towers in range only while alive; jammers do not stack', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 400, y: 160 }, { x: 1600, y: 160 }] };
+    const sim = new BattleSim(l2, null);
+    const near = sim.build(0, 'thornbow')!;
+    const far = sim.build(1, 'thornbow')!;
+    const j = sim.spawn('cogjammer', 0, 420);
+    const j2 = sim.spawn('cogjammer', 0, 430);
+    const slow = j.def.jam!.slow;
+    expect(sim.towerJam(near)).toBeCloseTo(1 - slow);
+    expect(sim.towerJam(far)).toBe(1);
+    (sim as any).applyDamage(j, 99999);
+    (sim as any).applyDamage(j2, 99999);
+    expect(sim.towerJam(near)).toBe(1);
+  });
+
+  it('Steamrunner bolts when hit, then cools down', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const r = sim.spawn('steamrunner', 0, 400);
+    const c = r.def.charge!;
+    expect(sim.chargeMult(r)).toBe(1);
+    (sim as any).applyDamage(r, 1);
+    expect(sim.chargeMult(r)).toBe(c.speedMult);
+    for (let i = 0; i < Math.ceil(c.duration * 60) + 2; i++) sim.update(1 / 60);
+    expect(sim.chargeMult(r)).toBe(1);
+    (sim as any).applyDamage(r, 1); // still cooling down: no second bolt yet
+    expect(sim.chargeMult(r)).toBe(1);
+  });
+});

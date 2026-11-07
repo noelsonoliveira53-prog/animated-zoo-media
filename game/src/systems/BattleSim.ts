@@ -42,6 +42,8 @@ export interface Enemy {
   swoopCd: number;
   blinkCd: number;
   gustCd: number;
+  chargeTime: number; // seconds left of a Steamrunner bolt
+  chargeCd: number;
   mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
   shifted: boolean; // Shiftscale is in its second (slick-skin) form
   shiftCd: number;
@@ -160,6 +162,7 @@ export type SimEvent =
   | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
   | { type: 'shift'; enemy: Enemy; scales: boolean }
   | { type: 'thorns'; pos: Vec2 }
+  | { type: 'charge'; enemy: Enemy }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -848,6 +851,8 @@ export class BattleSim {
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
+      chargeTime: 0,
+      chargeCd: 0,
       mr: def.magicResist,
       shifted: false,
       shiftCd: def.shift ? def.shift.interval : 0,
@@ -872,6 +877,8 @@ export class BattleSim {
         if (e.hasteTime <= 0) e.hasteMult = 1;
       }
       e.sinceHit += dt;
+      if (e.chargeTime > 0) e.chargeTime -= dt;
+      if (e.chargeCd > 0) e.chargeCd -= dt;
       if (this.regenerating(e)) e.hp = Math.min(e.maxHp, e.hp + e.maxHp * e.def.regen!.perSec * dt);
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.def.chill) this.tickChill(e, dt);
@@ -906,7 +913,7 @@ export class BattleSim {
           continue;
         }
       }
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.mods.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1340,14 +1347,14 @@ export class BattleSim {
         t.cooldown = 0;
         continue;
       }
-      t.cooldown = 1 / (stats.fireRate * this.towerHaste(t));
+      t.cooldown = 1 / (stats.fireRate * this.towerHaste(t) * this.towerJam(t));
       for (const target of targets) {
         const origin = { x: t.pos.x, y: t.pos.y - 18 };
         let aim = { ...target.pos };
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {
@@ -1377,6 +1384,22 @@ export class BattleSim {
   }
 
   /** Fire-rate multiplier from hero auras. */
+  /** Cogjammers rattle nearby towers: the strongest jammer in range slows the tower's fire rate (they don't stack). */
+  towerJam(t: Tower): number {
+    let f = 1;
+    for (const e of this.enemies) {
+      const j = e.def.jam;
+      if (!j || !e.alive || e.underground) continue;
+      if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= j.radius) f = Math.min(f, 1 - j.slow);
+    }
+    return f;
+  }
+
+  /** Steamrunners bolt for a moment after being hit. */
+  chargeMult(e: Enemy): number {
+    return e.chargeTime > 0 && e.def.charge ? e.def.charge.speedMult : 1;
+  }
+
   towerHaste(t: Tower): number {
     const h = this.hero;
     if (!h || !h.alive || h.def.passive.kind !== 'towerHaste') return 1;
@@ -1480,6 +1503,11 @@ export class BattleSim {
     }
     e.hp -= left;
     if (dmg > 0) e.sinceHit = 0;
+    if (e.def.charge && dmg > 0 && e.chargeCd <= 0 && e.hp > 0) {
+      e.chargeTime = e.def.charge.duration;
+      e.chargeCd = e.def.charge.cooldown;
+      this.events.push({ type: 'charge', enemy: e });
+    }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {

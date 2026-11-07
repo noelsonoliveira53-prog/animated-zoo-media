@@ -34,7 +34,7 @@ export class WorldMapScene extends Phaser.Scene {
     const reg = REGIONS[this.region];
     const inRegion = LEVELS.map((_, i) => i).filter((i) => regionOf(i) === this.region);
 
-    this.drawLand(reg.ruins ? 'ruins' : reg.gale ? 'gale' : reg.glass ? 'glass' : reg.shoal ? 'shoal' : reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
+    this.drawLand(reg.gears ? 'brass' : reg.ruins ? 'ruins' : reg.gale ? 'gale' : reg.glass ? 'glass' : reg.shoal ? 'shoal' : reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
     this.drawTrail(save.stars, inRegion);
     inRegion.forEach((i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[LEVELS[i].id] ?? 0));
     // Placeholders for levels still to come in this region.
@@ -89,7 +89,8 @@ export class WorldMapScene extends Phaser.Scene {
     this.tweens.add({ targets: t, alpha: 0, delay: 1600, duration: 400, onComplete: () => t.destroy() });
   }
 
-  private drawLand(style: 'meadow' | 'snow' | 'ember' | 'dusk' | 'shoal' | 'glass' | 'gale' | 'ruins'): void {
+  private drawLand(style: 'meadow' | 'snow' | 'ember' | 'dusk' | 'shoal' | 'glass' | 'gale' | 'ruins' | 'brass'): void {
+    const brass = style === 'brass';
     const ruins = style === 'ruins';
     const gale = style === 'gale';
     const glass = style === 'glass';
@@ -98,15 +99,23 @@ export class WorldMapScene extends Phaser.Scene {
     const ember = style === 'ember';
     const dusk = style === 'dusk';
     const g = this.add.graphics();
-    g.fillStyle(ruins ? 0x1f5a5a : gale ? 0x9ac8e8 : glass ? 0x241a3a : shoal ? 0x1f6a80 : dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
+    g.fillStyle(brass ? 0x1a1a22 : ruins ? 0x1f5a5a : gale ? 0x9ac8e8 : glass ? 0x241a3a : shoal ? 0x1f6a80 : dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
     g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
     // main island
-    g.fillStyle(ruins ? 0xc8b890 : gale ? 0xf4f8fc : glass ? 0x6a5a88 : shoal ? 0xf0e2b8 : dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
+    g.fillStyle(brass ? 0x8a6a2a : ruins ? 0xc8b890 : gale ? 0xf4f8fc : glass ? 0x6a5a88 : shoal ? 0xf0e2b8 : dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.02, GAME_H * 0.98);
-    g.fillStyle(ruins ? 0x4a8a3a : gale ? 0x9cbca0 : glass ? 0x8a7aa8 : shoal ? 0xdcc898 : dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
+    g.fillStyle(brass ? 0x5a5a62 : ruins ? 0x4a8a3a : gale ? 0x9cbca0 : glass ? 0x8a7aa8 : shoal ? 0xdcc898 : dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 0.98, GAME_H * 0.92);
     // regions
-    const regions: [number, number, number, number, number][] = ruins
+    const regions: [number, number, number, number, number][] = brass
+      ? [
+          [0x6a6a72, 230, 560, 420, 260],
+          [0x4e4e58, 480, 420, 320, 230],
+          [0x6a5a44, 760, 300, 340, 240],
+          [0x52525c, 1020, 420, 320, 220],
+          [0x44444c, 1100, 200, 340, 240],
+        ]
+      : ruins
       ? [
           [0x5a9a44, 230, 560, 420, 260],
           [0x3f7f34, 480, 420, 320, 230],
@@ -174,7 +183,7 @@ export class WorldMapScene extends Phaser.Scene {
       g.fillEllipse(x, y, w, h);
     }
     // lake (frozen in the highlands)
-    g.fillStyle(ruins ? 0x3aa8a0 : gale ? 0xe8f4ff : glass ? 0xb8e8f8 : shoal ? 0x4ac0d8 : dusk ? 0x7ad8c8 : ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
+    g.fillStyle(brass ? 0xff8a3c : ruins ? 0x3aa8a0 : gale ? 0xe8f4ff : glass ? 0xb8e8f8 : shoal ? 0x4ac0d8 : dusk ? 0x7ad8c8 : ember ? 0xff6a2a : snow ? 0xbfe3f2 : 0x5fb8d8, 1);
     g.fillEllipse(900, 520, 200, 90);
     g.fillStyle(0xffffff, 0.4);
     g.fillEllipse(870, 505, 60, 14);
@@ -186,6 +195,23 @@ export class WorldMapScene extends Phaser.Scene {
       if (LEVELS.some((l, i) => regionOf(i) === this.region && Math.hypot(l.mapPos.x - x, l.mapPos.y - y) < 70)) continue;
       if (Math.hypot((x - 900) / 110, (y - 520) / 55) < 1) continue;
       const dark = x > 960 && y < 380;
+      if (brass) {
+        // little gears and pipe stubs
+        if (rnd.frac() < 0.6) {
+          g.fillStyle(rnd.pick([0xc8963a, 0x8a6a2a, 0xa0a0aa]), 1);
+          const r0 = rnd.between(5, 9);
+          for (let k = 0; k < 6; k++) { const a0 = (k / 6) * Math.PI * 2; g.fillRect(x + Math.cos(a0) * r0 - 2, y + Math.sin(a0) * r0 - 2, 4, 4); }
+          g.fillCircle(x, y, r0);
+          g.fillStyle(0x2a2a30, 1);
+          g.fillCircle(x, y, r0 * 0.35);
+        } else {
+          g.fillStyle(0x7a7a84, 1);
+          g.fillRect(x - 3, y - 12, 6, 16);
+          g.fillStyle(0xffffff, 0.6);
+          g.fillCircle(x + 2, y - 16, 4);
+        }
+        continue;
+      }
       if (ruins) {
         // jungle canopy and the odd broken pillar
         if (rnd.frac() < 0.8) {
@@ -278,9 +304,9 @@ export class WorldMapScene extends Phaser.Scene {
     // the trail's starting point
     g.fillStyle(0x9a6a40, 1);
     g.fillRect(60, 600, 60, 40);
-    g.fillStyle(ruins ? 0x3f7f34 : gale ? 0xe8f4ff : glass ? 0x9ad8f0 : shoal ? 0x4a8ab8 : dusk ? 0x8a5ab8 : ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
+    g.fillStyle(brass ? 0xc8963a : ruins ? 0x3f7f34 : gale ? 0xe8f4ff : glass ? 0x9ad8f0 : shoal ? 0x4a8ab8 : dusk ? 0x8a5ab8 : ember ? 0x8a3a2a : snow ? 0xffffff : 0x4b8f3a, 1);
     g.fillTriangle(50, 604, 130, 604, 90, 570);
-    this.add.text(90, 692, ruins ? 'Cloud Stair' : gale ? 'Glass Pass' : glass ? 'Tideline' : shoal ? 'Weald Edge' : dusk ? 'Ember Gate' : ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
+    this.add.text(90, 692, brass ? 'Temple Stair' : ruins ? 'Cloud Stair' : gale ? 'Glass Pass' : glass ? 'Tideline' : shoal ? 'Weald Edge' : dusk ? 'Ember Gate' : ember ? 'Ash Road' : snow ? 'Mountain Gate' : 'Sanctuary', textStyle(pf(14))).setOrigin(0.5);
   }
 
   private drawTrail(stars: Record<string, number>, indices: number[]): void {

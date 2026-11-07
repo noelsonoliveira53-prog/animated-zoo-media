@@ -61,6 +61,7 @@ export class BattleScene extends Phaser.Scene {
   private pauseBtn!: Button;
 
   private menu: Phaser.GameObjects.Container | null = null;
+  private jamG: Phaser.GameObjects.Graphics | null = null;
   private rangeRing!: Phaser.GameObjects.Graphics;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private ended = false;
@@ -123,6 +124,7 @@ export class BattleScene extends Phaser.Scene {
     this.towerViews = this.level.slots.map(() => null);
     this.slotViews = [];
     this.menu = null;
+    this.jamG = null;
   }
 
   create(): void {
@@ -312,6 +314,35 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.gears && rnd.frac() < 0.9) {
+        if (rnd.frac() < 0.6) {
+          // a big brass gear half-sunk in the ground
+          const col = rnd.pick(this.level.theme.trees ?? [0xc8963a]);
+          const r0 = rnd.between(12, 20);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, r0 * 2.2, r0 * 0.7);
+          deco.fillStyle(col, 1);
+          for (let k = 0; k < 8; k++) {
+            const a0 = (k / 8) * Math.PI * 2;
+            deco.fillRect(p.x + Math.cos(a0) * r0 - 4, p.y - r0 + Math.sin(a0) * r0 - 4, 8, 8);
+          }
+          deco.fillCircle(p.x, p.y - r0, r0);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeCircle(p.x, p.y - r0, r0);
+          deco.fillStyle(0x2a2a30, 1);
+          deco.fillCircle(p.x, p.y - r0, r0 * 0.3);
+        } else {
+          // a steam pipe with a valve wheel
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillStyle(0x7a7a84, 1);
+          deco.fillRect(p.x - 6, p.y - 30, 12, 34);
+          deco.fillRect(p.x - 6, p.y - 30, 24, 10);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeRect(p.x - 6, p.y - 30, 12, 34);
+          deco.lineStyle(3, 0xd03a2a, 1);
+          deco.strokeCircle(p.x, p.y - 12, 6);
         }
       } else if (this.level.theme.ruins && rnd.frac() < 0.6) {
         if (rnd.frac() < 0.65) {
@@ -1233,6 +1264,12 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'charge': {
+        sfx.trait('charge');
+        this.particles.setParticleTint(0xf0f4f8);
+        this.particles.explode(6, ev.enemy.pos.x + 8, ev.enemy.pos.y - 12);
+        break;
+      }
       case 'thorns': {
         sfx.trait('thorns');
         // a few green thorn sparks on whoever just hit a thorny enemy
@@ -1419,6 +1456,21 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private syncViews(dt: number): void {
+    // Cogjammer range: a faint dashed brass ring that turns as it rattles.
+    if (!this.jamG) this.jamG = this.add.graphics().setDepth(5);
+    this.jamG.clear();
+    for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.jam) continue;
+      const r = e.def.jam.radius;
+      this.jamG.lineStyle(2, 0xd8a84a, 0.45);
+      const turn = this.sim.time * 0.8;
+      for (let k = 0; k < 12; k++) {
+        const a0 = turn + (k / 12) * Math.PI * 2;
+        this.jamG.beginPath();
+        this.jamG.arc(e.pos.x, e.pos.y, r, a0, a0 + 0.3);
+        this.jamG.strokePath();
+      }
+    }
     for (const e of this.sim.enemies) {
       const v = this.enemyViews.get(e.uid);
       if (!v) continue;

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **156** (next balance pass at iteration 160)
+Iteration counter: **157** (next balance pass at iteration 160)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1113,6 +1113,13 @@ Iteration counter: **156** (next balance pass at iteration 160)
     no longer fall back to the easiest boss.
   - The layout tests caught a pad under the spell buttons and a top entry at x=460; both fixed.
   - Screenshot `screenshots/156.png` (boss phase 2 with her lantern ward). 207 tests.
+- **Iteration 157** (village quality of life): a **Collect all** button (bottom left, above Raid) harvests every
+  Acorn Mine and Glowsap Tap in one tap, with a "+N" floating over each.
+  - Rules: `collectAll(v, now)` in `systems/village.ts` returns totals and per-building amounts and reuses
+    `collect()`, so a full storage still leaves the remainder in the producer.
+  - If nothing is ready, a "Nothing to collect yet" toast shows.
+  - Checks: a test, and `scripts/collect-all-check.mjs` (one real tap banked +2,000 coins and +1,500 glowsap).
+    Screenshot `screenshots/157.png`. 208 tests.
 
 ## In Progress
 - (none)

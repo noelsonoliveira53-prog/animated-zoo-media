@@ -204,6 +204,23 @@ export function collect(v: VillageState, uid: number, now: number): number {
   return added;
 }
 
+/** Harvest every producer at once. Returns the totals banked and which buildings gave how much. */
+export function collectAll(v: VillageState, now: number): { coins: number; glowsap: number; per: { uid: number; amount: number }[] } {
+  let coins = 0;
+  let glowsap = 0;
+  const per: { uid: number; amount: number }[] = [];
+  for (const b of v.buildings) {
+    const prod = b.level > 0 ? BUILDINGS[b.type].levels[b.level - 1].produces : undefined;
+    if (!prod) continue;
+    const got = collect(v, b.uid, now);
+    if (got <= 0) continue;
+    if (prod.resource === 'coins') coins += got;
+    else glowsap += got;
+    per.push({ uid: b.uid, amount: got });
+  }
+  return { coins, glowsap, per };
+}
+
 export function moveBuilding(v: VillageState, uid: number, col: number, row: number): boolean {
   const b = v.buildings.find((x) => x.uid === uid);
   if (!b || !footprintFree(v, b.type, col, row, uid)) return false;

@@ -216,3 +216,23 @@ describe('swiftbloom speed-ups', () => {
     expect(v.swiftblooms).toBe(1);
   });
 });
+
+import { collectAll } from '../src/systems/village';
+describe('collect all', () => {
+  it('harvests every producer at once and reports totals per resource', () => {
+    const v = newVillage(T0);
+    v.coins = 0;
+    v.glowsap = 0;
+    v.buildings = v.buildings.filter((b) => !BUILDINGS[b.type].levels[0].produces); // just the new producers below
+    v.buildings.push({ uid: 70, type: 'coinmine', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
+    v.buildings.push({ uid: 71, type: 'coinmine', level: 1, col: 3, row: 0, upgradeEnds: null, lastCollect: T0 });
+    v.buildings.push({ uid: 72, type: 'sapwell', level: 1, col: 6, row: 0, upgradeEnds: null, lastCollect: T0 });
+    const later = T0 + 30 * 60 * 1000; // half an hour: 200 each at 400/h
+    const got = collectAll(v, later);
+    expect(got.per.length).toBe(3);
+    expect(got.coins).toBe(400);
+    expect(got.glowsap).toBe(200);
+    expect(v.coins).toBe(400);
+    expect(collectAll(v, later).per.length).toBe(0);
+  });
+});

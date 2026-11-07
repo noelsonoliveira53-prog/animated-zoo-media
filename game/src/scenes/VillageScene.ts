@@ -29,7 +29,7 @@ import {
   type VillageState,
 } from '../systems/village';
 import { sfx } from '../systems/audio';
-import { armyCapacity, armySpace, lodgeLevel, tickTraining, totalArmySpace, trainTroop } from '../systems/village';
+import { armyCapacity, collectAll, armySpace, lodgeLevel, tickTraining, totalArmySpace, trainTroop } from '../systems/village';
 import { CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
@@ -277,6 +277,7 @@ export class VillageScene extends Phaser.Scene {
     new Button(this, 90, 40, 'Menu', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.leave('Menu') }).setDepth(902);
     new Button(this, GAME_W - 110, 40, 'Campaign', { width: 180, height: 50, fontSize: 20, color: 0xff9f43, onClick: () => this.leave('WorldMap') }).setDepth(902);
     new Button(this, GAME_W - 100, GAME_H - 44, 'Build', { width: 160, height: 60, fontSize: 26, color: C.leaf, onClick: () => this.openShop() }).setDepth(902);
+    new Button(this, 100, GAME_H - 112, 'Collect all', { width: 160, height: 46, fontSize: 18, color: 0xffc93c, onClick: () => this.collectEverything() }).setDepth(902).setName('collectAllBtn');
     new Button(this, 100, GAME_H - 44, 'Raid', { width: 160, height: 60, fontSize: 26, color: C.danger, onClick: () => this.openRaid() }).setDepth(902);
     const zoomBtn = new Button(this, GAME_W - 100, GAME_H - 112, 'Zoom in', { width: 140, height: 46, fontSize: 18, color: C.sky, onClick: () => {
       this.toggleZoom();
@@ -337,6 +338,25 @@ export class VillageScene extends Phaser.Scene {
       sfx.click();
     }
     this.openPanel(uid, true);
+  }
+
+  /** Harvest every producer in one tap, with a little "+N" over each one. */
+  private collectEverything(): void {
+    sfx.unlock();
+    const got = collectAll(this.v, Date.now());
+    if (!got.per.length) {
+      sfx.click();
+      this.toast('Nothing to collect yet');
+      return;
+    }
+    for (const { uid, amount } of got.per) {
+      const b = this.v.buildings.find((x) => x.uid === uid)!;
+      const prod = BUILDINGS[b.type].levels[b.level - 1].produces!;
+      const { x, y } = this.cellToXY(b.col, b.row);
+      this.floatText(x + (BUILDINGS[b.type].size * TILE) / 2, y, `+${amount}`, prod.resource === 'coins' ? TEXT.gold : '#c8ff8a');
+    }
+    sfx.coin();
+    this.persist();
   }
 
   private closePanel(): void {

@@ -4,13 +4,15 @@ import { themeById } from '../data/musicThemes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, TOWER_ORDER } from '../data/towers';
 import { HEROES, HERO_ORDER } from '../data/heroes';
+import { SPELLS, SPELL_ORDER } from '../data/spells';
+import { spellFacts } from '../systems/spellInfo';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
-type Tab = 'enemies' | 'towers' | 'heroes';
+type Tab = 'enemies' | 'towers' | 'heroes' | 'spells';
 
 interface Entry {
   key: string;
@@ -48,11 +50,11 @@ export class FieldGuideScene extends Phaser.Scene {
     g.lineStyle(2, 0xb59a6a, 1);
     g.lineBetween(GAME_W / 2 + 70, 120, GAME_W / 2 + 70, GAME_H - 60);
 
-    this.add.text(500, 44, "Keeper's Field Guide", textStyle(34, TEXT.gold)).setOrigin(0.5);
+    this.add.text(470, 44, "Keeper's Field Guide", textStyle(34, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
-    (['enemies', 'towers', 'heroes'] as Tab[]).forEach((t, i) => {
-      this.tabButtons[t] = new Button(this, GAME_W - 420 + i * 140, 44, t[0].toUpperCase() + t.slice(1), {
-        width: 128,
+    (['enemies', 'towers', 'heroes', 'spells'] as Tab[]).forEach((t, i) => {
+      this.tabButtons[t] = new Button(this, GAME_W - 444 + i * 124, 44, t[0].toUpperCase() + t.slice(1), {
+        width: 116,
         height: 46,
         fontSize: 18,
         color: C.leaf,
@@ -129,6 +131,12 @@ export class FieldGuideScene extends Phaser.Scene {
       }
       return out;
     }
+    if (this.tab === 'spells') {
+      return SPELL_ORDER.map((id, i) => {
+        const sp = SPELLS[id];
+        return { key: id, texture: `icon_${id}`, name: sp.name, locked: false, blurb: sp.text, lines: spellFacts(sp, i + 1) };
+      });
+    }
     return HERO_ORDER.map((id) => {
       const h = HEROES[id];
       return {
@@ -174,6 +182,9 @@ export class FieldGuideScene extends Phaser.Scene {
       c.add([prev, next, this.add.text(615, GAME_H - 58, `${this.page + 1}/${pages}`, textStyle(18, '#5a4a32', false)).setOrigin(0.5).setStroke('#e8dcb8', 0).setName('guidePage')]);
     }
     c.add(this.add.text(x0, GAME_H - 66, tab === 'enemies' ? `Discovered ${seen} / ${all.length}` : `${all.length} entries`, textStyle(16, '#5a4a32', false)).setStroke('#e8dcb8', 0));
+    if (tab === 'spells') {
+      c.add(this.add.text(x0, 260, 'How to cast: tap a spell icon at the bottom right of the battlefield (or press its number key), then tap a spot on the road. Each spell recharges on its own timer, so save them for the waves that would break through.', { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 520 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0));
+    }
     list.forEach((e, i) => {
       const x = x0 + (i % cols) * cell + cell / 2;
       const y = y0 + Math.floor(i / cols) * (tab === 'towers' ? 96 : cell) + cell / 2 - 10;

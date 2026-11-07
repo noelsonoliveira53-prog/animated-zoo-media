@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **58** (next balance pass at iteration 60)
+Iteration counter: **59** (next balance pass at iteration 60)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -453,12 +453,17 @@ Iteration counter: **58** (next balance pass at iteration 60)
   …"), in the endless start banner and on the result panel. `endlessMutatorFor` / `mutatorReward` in `systems/endless.ts`
   (reusing the daily hash). Fix: Clouded Sky said "No Starfall or Grove Call", outdated since Thornsnare; now "No global
   spells." 143 tests.
+- [x] **Iter 59 — Field Guide Spells tab.** A fourth tab lists Starfall, Grove Call and Thornsnare with their icon,
+  description and facts built from data by `spellFacts` in `systems/spellInfo.ts` (damage/radius/delay, summoned
+  soldiers' stats, snare slow, recharge, hotkey), plus a short how-to-cast note. Tab buttons narrowed to fit four.
+  Browser check `scripts/guide-spells-check.mjs` taps the real tab. 145 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Field Guide: add a Spells tab (name, icon, text, recharge).
+1. **Iter 60 balance pass:** re-check early levels the novice now wins every time since Bramble's Bulwark
+   (Thornwood Hollow, Frostfern Pass), plus a full campaign sweep.
 2. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
 
 ## Known Bugs

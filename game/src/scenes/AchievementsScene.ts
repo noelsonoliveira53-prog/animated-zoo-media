@@ -3,7 +3,9 @@ import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { ACHIEVEMENTS } from '../data/achievements';
-import { loadSave } from '../systems/save';
+import { loadSave, writeSave } from '../systems/save';
+import { checkAchievements } from '../systems/achievements';
+import { showAchievementToasts } from '../ui/toast';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
@@ -25,7 +27,13 @@ export class AchievementsScene extends Phaser.Scene {
   create(): void {
     music.setMood('calm');
     music.setTheme(themeById('home'));
-    const save = loadSave();
+    // Catch up on anything already earned but not yet awarded (e.g. achievements added since the last battle).
+    const checked = checkAchievements(loadSave());
+    if (checked.unlocked.length) {
+      writeSave(checked.save);
+      this.time.delayedCall(400, () => showAchievementToasts(this, checked.unlocked));
+    }
+    const save = checked.save;
     const g = this.add.graphics();
     g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);
     g.fillRect(0, 0, GAME_W, GAME_H);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **144** (next balance pass at iteration 145)
+Iteration counter: **145** (next balance pass at iteration 150)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1016,6 +1016,12 @@ Iteration counter: **144** (next balance pass at iteration 145)
   - Now 46 achievements, still 3 pages.
   - Checks: a unit test, and `scripts/sludge-check.mjs` now ends a raid with the pit destroyed and checks the saved
     stat. Screenshot `screenshots/144.png` (achievements page 3 on a phone). 197 tests.
+- **Iteration 145** (POLISH + BALANCE):
+  - Polish: opening the Achievements screen now runs the achievement check and awards anything already earned, with
+    toasts and rewards. Before, a newly added achievement that a player already qualified for (e.g. Moonwatcher with
+    a level-3 shrine) stayed locked until their next battle, raid or village action.
+  - Screenshot `screenshots/145-ach.png`. 197 tests.
+  - Balance: full 80-level sweep (12 seeds) plus the finale guard; results in Balance Notes.
 
 ## In Progress
 - (none)

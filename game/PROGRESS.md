@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **125** (next balance pass at iteration 130)
+Iteration counter: **126** (next balance pass at iteration 130)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -882,13 +882,15 @@ Iteration counter: **125** (next balance pass at iteration 130)
   duration (pops in, fades as it hauls up). The first version scaled around the scene origin, because it was drawn
   at absolute coordinates, so it flew in from the corner; it is now drawn relative to its own position. Sweep, finale
   guard and hero comparison are in Balance Notes. 189 tests.
+- **Iteration 126**: level 74 **Flagship Wake**. A 2,960px gangway zigzags across a dozen hulls, and a 1,400px north
+  gangway joins near the end. It has 12 pads, 16 waves (Ironkeel packs on the long road) and hpMult 1.9. 189 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 15 level 74, finale 75 with a boss + story card + achievements.
+2. Region 15 finale 75 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -899,6 +901,8 @@ Iteration counter: **125** (next balance pass at iteration 130)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 126**: 74 Flagship Wake was 42/50/0 at hpMult 2.2, with 2-life Ironkeels the main leak. 1.7 gave 100/100/8, 1.97 gave 67/83 (noisy), and **1.9 → 83/83/8** (kept, a fourth-level ramp).
+
 **Iteration 125**:
 - Blackwake, 12 seeds: 71 Blackwake Moorings 100/100/42 · 72 Powder Row 100/100/17 · 73 Gunwale Gauntlet
   100/83/0.

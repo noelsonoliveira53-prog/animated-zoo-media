@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **136** (next balance pass at iteration 140)
+Iteration counter: **137** (next balance pass at iteration 140)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -954,14 +954,18 @@ Iteration counter: **136** (next balance pass at iteration 140)
   1,580px, and the enemies march through a hollow oak. The waves mix all three Amberwood enemies with older ones;
   Sapstoats stay on the long road. `scripts/level-shot.mjs` now unlocks levels up to 80. Screenshot
   `screenshots/136.png`. 193 tests.
+- **Iteration 137** (Amberwood level 4): level 79 **Emberleaf Ridge**. It has 11 pads and two long roads (2,480px from
+  the left, 2,080px from the top) that merge past a central loop. The waves are the region's toughest yet, before
+  the boss.
+  - Polish: battle decorations now start at y 115, so tall trees no longer poke up behind the top bar.
+  - Screenshot `screenshots/137.png`. 193 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Amberwood level 79 (fourth level).
-2. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
-3. Phone QA of the Field Guide at 71 enemies.
+1. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
+2. Phone QA of the Field Guide at 71 enemies.
 
 ## Known Bugs
 - (none known)
@@ -970,6 +974,9 @@ Iteration counter: **136** (next balance pass at iteration 140)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 137**: 79 Emberleaf Ridge: 100/83/0 at hpMult 1.6, 58/33 at 1.9, 83/83 at 1.76, and **1.7 → 92/75/0** (kept,
+fourth-level band).
+
 **Iteration 136**: 78 Hollow Oak Crossing was 50/17/0 at hpMult 1.8, with Sapstoats on the short road the main leak. After
 moving them to the long road: 67/25 at 1.75, 92/50 at 1.55 (noisy), and **1.6 → 100/75/0** (kept, third-level band).
 

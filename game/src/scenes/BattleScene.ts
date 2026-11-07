@@ -339,7 +339,7 @@ export class BattleScene extends Phaser.Scene {
     // decorations: trees & flowers away from roads and slots
     const deco = this.add.graphics().setDepth(1);
     for (let i = 0; i < 60; i++) {
-      const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(90, GAME_H - 10) };
+      const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(115, GAME_H - 10) }; // tall trees start low enough to stay clear of the top bar
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
       // keep clutter out from under the hero portrait and the spell buttons
       if (p.y > 600 && (p.x < 230 || p.x > 980)) continue;

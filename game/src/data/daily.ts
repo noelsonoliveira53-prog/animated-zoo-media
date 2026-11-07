@@ -26,6 +26,9 @@ export const NO_MODS: Modifiers = {
   armorBonus: 0,
 };
 
+/** Daily challenges stack two twists on a level tuned without them, so the level's enemy health is eased to make room. */
+export const DAILY_HP_EASE = 0.7;
+
 export interface ModifierDef {
   id: string;
   name: string;
@@ -44,7 +47,7 @@ export const DAILY_MODIFIERS: ModifierDef[] = [
   { id: 'glass', name: 'Thin Hedge', text: 'Only 5 lives.', apply: { lives: 5 } },
   { id: 'frenzy', name: 'Frenzy', text: 'Waves come twice as fast.', apply: { waveGapMult: 0.5 } },
   { id: 'harvest', name: 'Golden Harvest', text: 'Kills pay 50% more coins.', apply: { bountyMult: 1.5 }, good: true },
-  { id: 'ironbark', name: 'Ironbark', text: 'Enemies have +15% armor.', apply: { armorBonus: 0.15 } },
+  { id: 'ironbark', name: 'Ironbark', text: 'Enemies have +6% armor.', apply: { armorBonus: 0.06 } },
 ];
 
 export function combine(ids: string[]): Modifiers {

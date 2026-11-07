@@ -1,3 +1,4 @@
+import type { Modifiers } from '../data/daily';
 import { HEROES } from '../data/heroes';
 import type { LevelDef, Vec2 } from '../data/types';
 import { TOWERS } from '../data/towers';
@@ -181,9 +182,9 @@ function mulberry32(seed: number): () => number {
 }
 
 /** Plays a whole level with a strategy. `seed` jitters slot order and tower rotation. */
-export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds = 1800): RunResult {
+export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds = 1800, mods?: Modifiers): RunResult {
   const rnd = mulberry32(seed);
-  const sim = new BattleSim(level, strat.hero, { random: mulberry32(seed * 7919 + 17) });
+  const sim = new BattleSim(level, strat.hero, { random: mulberry32(seed * 7919 + 17), mods });
   const ranked = rankSlots(sim);
   // Jitter: swap a few neighbours in the ranking so runs differ.
   for (let i = 0; i < ranked.length - 1; i++) if (rnd() < 0.35) [ranked[i], ranked[i + 1]] = [ranked[i + 1], ranked[i]];

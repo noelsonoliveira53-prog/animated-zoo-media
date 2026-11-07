@@ -8,7 +8,7 @@ import { endlessMutatorFor, makeEndlessLevel, mutatorReward, wavesHeld } from '.
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { combine, DAILY_MODIFIERS } from '../data/daily';
-import { dailyFor, todayString, type DailyChallenge } from '../systems/daily';
+import { dailyFor, dailyLevel, todayString, type DailyChallenge } from '../systems/daily';
 import { isLevelUnlocked, regionOf } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
@@ -102,7 +102,7 @@ export class BattleScene extends Phaser.Scene {
       this.daily = dailyFor(todayString(), unlocked);
       this.levelIndex = this.daily.levelIndex;
     }
-    this.level = this.endless ? makeEndlessLevel(LEVELS[this.levelIndex]) : LEVELS[this.levelIndex];
+    this.level = this.endless ? makeEndlessLevel(LEVELS[this.levelIndex]) : this.daily ? dailyLevel(LEVELS[this.levelIndex]) : LEVELS[this.levelIndex];
     this.mutator = this.endless ? endlessMutatorFor(todayString()) : null;
     const save = loadSave();
     motion.reduced = !!save.settings.reduceMotion;
@@ -2175,7 +2175,8 @@ export class BattleScene extends Phaser.Scene {
       reward = addResources(ensureVillage(after), Math.round(ENDLESS.rewardPerWave.coins * held * payMult), Math.round(ENDLESS.rewardPerWave.glowsap * held * payMult));
       this.endlessResult = { held, best: Math.max(prev, held), isBest: held > prev };
       if (!music.stinger(held > prev ? 'victory' : 'defeat')) sfx.defeat();
-    } else if (won) {
+    } else if (won && !this.daily) {
+      // (daily challenges pay their own reward and never touch campaign stars: their level is eased)
       const prevStars = after.stars[this.level.id] ?? 0;
       after = recordStars(after, this.level.id, stars);
       const want = battleReward(this.levelIndex, prevStars, stars);

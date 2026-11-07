@@ -1,4 +1,5 @@
-import { DAILY_MODIFIERS } from '../data/daily';
+import { DAILY_HP_EASE, DAILY_MODIFIERS } from '../data/daily';
+import type { LevelDef } from '../data/types';
 import { LEVELS } from '../data/levels';
 
 export interface DailyChallenge {
@@ -38,4 +39,9 @@ export function dailyFor(date: string, unlocked: number): DailyChallenge {
     modifiers: [first.id, second.id],
     reward: { coins: 300 + levelIndex * 60, glowsap: 300 + levelIndex * 60 },
   };
+}
+
+/** The level as played in a daily challenge: enemy health eased (`DAILY_HP_EASE`) to make room for the two twists. */
+export function dailyLevel(level: LevelDef): LevelDef {
+  return { ...level, hpMult: (level.hpMult ?? 1) * DAILY_HP_EASE };
 }

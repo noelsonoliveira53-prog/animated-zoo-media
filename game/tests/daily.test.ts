@@ -62,6 +62,18 @@ describe('Golden Harvest and Ironbark', () => {
     const iron = new BattleSim(lvl, null, { mods: combine(['ironbark']) });
     const a = plain.spawn('shellback', 0, 100);
     const b = iron.spawn('shellback', 0, 100);
-    expect(iron.res(b).armor).toBeCloseTo(Math.min(0.85, plain.res(a).armor + 0.15));
+    expect(iron.res(b).armor).toBeCloseTo(Math.min(0.85, plain.res(a).armor + DAILY_MODIFIERS.find((m) => m.id === 'ironbark')!.apply.armorBonus!));
+  });
+});
+
+import { dailyLevel } from '../src/systems/daily';
+import { DAILY_HP_EASE } from '../src/data/daily';
+describe('daily level ease', () => {
+  it("a daily eases the level's enemy health and leaves everything else alone", () => {
+    const base = LEVELS[40];
+    const d = dailyLevel(base);
+    expect(d.hpMult).toBeCloseTo((base.hpMult ?? 1) * DAILY_HP_EASE);
+    expect(d.waves).toBe(base.waves);
+    expect(d.id).toBe(base.id);
   });
 });

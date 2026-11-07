@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **149** (next balance pass at iteration 150)
+Iteration counter: **150** (next balance pass at iteration 155)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1058,6 +1058,18 @@ Iteration counter: **149** (next balance pass at iteration 150)
   - Tests: the shake gate and the save round-trip. `scripts/motion-check.mjs` toggles it with a real click, then
     checks that an Amberwood battle has 0 leaf overlays and no shake on a leak (18 leaves and a shake when off).
   - Screenshot `screenshots/149.png`. 203 tests.
+- **Iteration 150** (POLISH + BALANCE, daily challenges): the campaign is unchanged since the iteration 145 sweep, so
+  this pass simulated the daily twists.
+  - Finding: dailies were brutal. A daily stacks one harmful and one random twist on a level tuned without them, and
+    even Thick Hides alone held the expert to 25% on sample levels. The new Ironbark (+15% armor) dropped the expert
+    to 36% alone and 0% when paired with another harmful twist.
+  - Fixes:
+    - Ironbark is now +6% armor, which tests about as hard as the other harmful twists.
+    - Daily challenges play an eased copy of the level (`DAILY_HP_EASE` 0.7 × enemy health, `dailyLevel()` in
+      `systems/daily.ts`).
+    - Daily wins no longer record campaign stars (they always paid their own reward).
+  - `playLevel` takes optional modifiers for these sims. Tests: daily ease. Screenshot `screenshots/150.png`.
+    204 tests.
 
 ## In Progress
 - (none)
@@ -1072,6 +1084,15 @@ Iteration counter: **149** (next balance pass at iteration 150)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 150** (daily twists; expert / casual, levels 6/21/36/51/66/77 unless noted):
+- Twists alone at full health: none 100/97 · Golden Harvest 100/100 · Thick Hides 25/11 · Swift Horde 50/33 ·
+  Ironbark +15% 36/19 (+6% → 94/81, +8% → 86/64).
+- At 0.75× health: Thick Hides + Swift 21/4 and Ironbark + Frenzy 58/38. At 0.65×: 54/25 and 83/75. Helpful pairs
+  hit 100% at either ease. **0.7 picked.**
+- The 20 real dailies from 2026-11-07 (all levels unlocked, 3 seeds): expert **62%**, casual **57%**. Mixed pairs on
+  early and mid levels are wins. Double-hard pairs on late levels (Thick Hides + Frenzy on 65, Thick Hides + Hero on
+  Leave on 61 and 67) stay out of reach for the sim, which suits a daily stretch.
+
 **Iteration 146** (raids, smart deploy, 10 seeds): Lodge 2 + Otters (6 brawlers, 5 slingers, 3 sappers, 3 otters) earns 3.0★ / 1.9★ /
 0.2★ on Outpost / Warren / Stronghold, against 3.0★ / 1.8★ / 0.4★ for the standard Lodge 2 army. Average loot rises from
 740 to 835 per resource on Outposts and from 1,207 to 1,611 on Warrens (+33%). The first draft (110 hp, 16 damage, no loot

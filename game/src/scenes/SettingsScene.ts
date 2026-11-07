@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { motion } from '../ui/motion';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { loadSave, resetProgress, writeSave } from '../systems/save';
@@ -102,7 +103,7 @@ export class SettingsScene extends Phaser.Scene {
     musicBtn.label.setText(save.settings.music ? 'Music: On' : 'Music: Off');
 
     // Fullscreen (great on phones)
-    const fsBtn = new Button(this, GAME_W / 2, 392, 'Fullscreen', {
+    const fsBtn = new Button(this, GAME_W / 2 - 125, 392, 'Fullscreen', {
       width: 230,
       height: 56,
       fontSize: 20,
@@ -117,6 +118,23 @@ export class SettingsScene extends Phaser.Scene {
       },
     });
     void fsBtn;
+
+    // Reduce motion: no screen shake, no drifting weather overlays
+    const motionLabel = (on: boolean) => (on ? 'Reduce motion: On' : 'Reduce motion: Off');
+    const motionBtn = new Button(this, GAME_W / 2 + 125, 392, motionLabel(!!save.settings.reduceMotion), {
+      width: 230,
+      height: 56,
+      fontSize: 18,
+      color: C.leaf,
+      onClick: () => {
+        const s = loadSave();
+        s.settings.reduceMotion = !s.settings.reduceMotion;
+        motion.reduced = s.settings.reduceMotion;
+        writeSave(s);
+        sfx.click();
+        motionBtn.label.setText(motionLabel(s.settings.reduceMotion));
+      },
+    });
 
     // Reset progress (two taps)
     let armed = false;

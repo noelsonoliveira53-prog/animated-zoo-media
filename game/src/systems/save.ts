@@ -15,7 +15,7 @@ export interface SaveData {
   achievements: string[]; // unlocked achievement ids
   dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
   endlessBest: Record<string, number>; // level id → most endless waves held
-  settings: { volume: number; muted: boolean; music: boolean };
+  settings: { volume: number; muted: boolean; music: boolean; reduceMotion?: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';

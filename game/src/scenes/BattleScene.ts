@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { motion, shake } from '../ui/motion';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -104,6 +105,7 @@ export class BattleScene extends Phaser.Scene {
     this.level = this.endless ? makeEndlessLevel(LEVELS[this.levelIndex]) : LEVELS[this.levelIndex];
     this.mutator = this.endless ? endlessMutatorFor(todayString()) : null;
     const save = loadSave();
+    motion.reduced = !!save.settings.reduceMotion;
     this.perks = battlePerks(save.village);
     this.sim = new BattleSim(this.level, save.hero, {
       ...this.perks,
@@ -288,21 +290,21 @@ export class BattleScene extends Phaser.Scene {
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
       if (this.level.theme.dunes) this.drawOasis(pd);
     }
-    if (this.level.theme.reef) {
+    if (this.level.theme.reef && !motion.reduced) {
       // sunlight caustics: a few soft pale blobs drifting slowly across the shallows
       for (let i = 0; i < 9; i++) {
         const blob = this.add.ellipse(rnd.between(0, GAME_W), rnd.between(100, GAME_H), rnd.between(60, 110), rnd.between(18, 30), 0xe8ffff, 0.1).setDepth(0.6);
         this.tweens.add({ targets: blob, x: blob.x + rnd.between(-60, 60), alpha: 0.2, duration: rnd.between(2400, 3600), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
-    if (this.level.theme.dunes) {
+    if (this.level.theme.dunes && !motion.reduced) {
       // heat shimmer: a few pale horizontal bands slowly breathing in and out
       for (let i = 0; i < 4; i++) {
         const band = this.add.rectangle(GAME_W / 2, 140 + i * 150, GAME_W, 26, 0xfff4d8, 0.08).setDepth(0.6);
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
-    if (this.level.theme.amber) {
+    if (this.level.theme.amber && !motion.reduced) {
       // leaves forever drifting down through the Amberwood, swaying as they fall, then starting again at the top
       for (let i = 0; i < 18; i++) {
         const leaf = this.add.ellipse(rnd.between(0, GAME_W), rnd.between(-40, GAME_H), 9, 5, rnd.pick(theme.trees ?? [0xe87a1a]), 0.85).setDepth(0.6);
@@ -315,7 +317,7 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: leaf, x: leaf.x + rnd.between(30, 60), angle: leaf.angle + 160, duration: rnd.between(1400, 2200), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
-    if (this.level.theme.storm) {
+    if (this.level.theme.storm && !motion.reduced) {
       // light slanting rain over the steppe: a 120px-periodic pattern scrolled down and wrapped
       const rain = this.add.graphics().setDepth(0.6).setAlpha(0.22);
       rain.lineStyle(1.5, 0xdce4f0, 1);
@@ -323,7 +325,7 @@ export class BattleScene extends Phaser.Scene {
         for (let x = (y / 30) % 2 ? 0 : 22; x < GAME_W + 40; x += 44) rain.lineBetween(x, y, x - 7, y + 14);
       this.tweens.add({ targets: rain, y: 120, duration: 900, repeat: -1 });
     }
-    if (this.level.theme.gale) {
+    if (this.level.theme.gale && !motion.reduced) {
       // low clouds drifting past the cliffs, west to east, then wrapping round
       for (let i = 0; i < 5; i++) {
         const cloud = this.add.graphics().setDepth(0.5).setAlpha(0.4);
@@ -1013,7 +1015,7 @@ export class BattleScene extends Phaser.Scene {
       }
       this.particles.setParticleTint(0xa8844e);
       this.particles.explode(30, pos.x, pos.y);
-      this.cameras.main.shake(260, 0.01);
+      shake(this, 260, 0.01);
       sfx.boom();
     } else if (kind === 'rally') {
       // a soft green pulse of healing
@@ -1373,7 +1375,7 @@ export class BattleScene extends Phaser.Scene {
         }
         if (ev.enemy.def.boss) {
           this.showBanner(`${ev.enemy.def.name} approaches!`, 'Focus everything on the boss');
-          this.cameras.main.shake(500, 0.01);
+          shake(this, 500, 0.01);
           sfx.waveHorn();
         }
         break;
@@ -1442,7 +1444,7 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(14, ev.pos.x, ev.pos.y);
         const ring = this.add.circle(ev.pos.x, ev.pos.y, ev.radius, 0xffffff, 0).setStrokeStyle(4, 0xe8d9b5, 0.9).setDepth(2400).setScale(0.3);
         this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 280, onComplete: () => ring.destroy() });
-        this.cameras.main.shake(70, 0.002);
+        shake(this, 70, 0.002);
         sfx.boom();
         break;
       }
@@ -1461,7 +1463,7 @@ export class BattleScene extends Phaser.Scene {
       case 'leak': {
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) this.killView(ev.enemy.uid, v);
-        this.cameras.main.shake(180, 0.006);
+        shake(this, 180, 0.006);
         this.cameras.main.flash(120, 120, 0, 0);
         this.tweens.add({ targets: this.livesText, scale: 1.5, duration: 100, yoyo: true });
         sfx.leak();
@@ -1526,7 +1528,7 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(40, ev.pos.x, ev.pos.y);
         this.particles.setParticleTint(0x9a8a6a);
         this.particles.explode(20, ev.pos.x, ev.pos.y);
-        this.cameras.main.shake(350, 0.014);
+        shake(this, 350, 0.014);
         this.cameras.main.flash(100, 255, 240, 180);
         sfx.boom();
         break;
@@ -1573,7 +1575,7 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(18, ev.pos.x, ev.pos.y - 8);
         this.particles.setParticleTint(0xffb040);
         this.particles.explode(12, ev.pos.x, ev.pos.y - 8);
-        this.cameras.main.shake(140, 0.004);
+        shake(this, 140, 0.004);
         if (ev.hits.length) this.floatText(ev.pos.x, ev.pos.y - 40, 'Kaboom!', '#ffd080', 17);
         break;
       }
@@ -1853,7 +1855,7 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'phase':
         this.showBanner(ev.enemy.def.name, ev.message);
-        this.cameras.main.shake(300, 0.008);
+        shake(this, 300, 0.008);
         sfx.waveHorn();
         break;
       case 'split':

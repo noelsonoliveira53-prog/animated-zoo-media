@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { shake } from '../ui/motion';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
@@ -210,7 +211,7 @@ export class RaidScene extends Phaser.Scene {
         if (zone) this.tweens.add({ targets: zone, alpha: 0, duration: 400 });
         this.particles.setParticleTint(0x8a6440);
         this.particles.explode(24, c.x, c.y);
-        this.cameras.main.shake(150, 0.005);
+        shake(this, 150, 0.005);
         if (ev.loot.coins + ev.loot.glowsap > 0) this.floatText(c.x, c.y - 30, `+${ev.loot.coins}c +${ev.loot.glowsap}s`, TEXT.gold);
         sfx.boom();
         break;

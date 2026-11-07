@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { motion } from '../ui/motion';
 import { pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
@@ -23,6 +24,7 @@ export class MenuScene extends Phaser.Scene {
     music.setTheme(themeById('home'));
     const save = loadSave();
     sfx.setVolume(save.settings.volume, save.settings.muted);
+    motion.reduced = !!save.settings.reduceMotion;
     music.setVolume(save.settings.volume, save.settings.music);
 
     // layered hills backdrop

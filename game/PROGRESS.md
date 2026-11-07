@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **148** (next balance pass at iteration 150)
+Iteration counter: **149** (next balance pass at iteration 150)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1050,6 +1050,14 @@ Iteration counter: **148** (next balance pass at iteration 150)
   - 10 modifiers in total. Today's (2026-11-07) daily happens to roll Thin Hedge + Golden Harvest.
   - Tests for both. Screenshots `screenshots/148.png` (daily banner with the new twist) and `148-menu.png`.
     201 tests.
+- **Iteration 149** (accessibility): new **Reduce motion** setting (Settings, next to Fullscreen, saved as
+  `settings.reduceMotion`, off by default).
+  - When on: no screen shake anywhere (all 8 camera shakes now go through `ui/motion.ts` `shake()`), and no drifting
+    weather overlays (the rain, heat shimmer, caustics, clouds and falling leaves are skipped).
+  - The flag is read when the menu and battles start, and updated live by the toggle.
+  - Tests: the shake gate and the save round-trip. `scripts/motion-check.mjs` toggles it with a real click, then
+    checks that an Amberwood battle has 0 leaf overlays and no shake on a leak (18 leaves and a shake when off).
+  - Screenshot `screenshots/149.png`. 203 tests.
 
 ## In Progress
 - (none)

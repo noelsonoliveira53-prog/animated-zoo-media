@@ -8,6 +8,8 @@ const require = createRequire(import.meta.url);
 let pw;
 try { pw = require('playwright'); } catch { pw = require(execSync('npm root -g').toString().trim() + '/playwright'); }
 const name = process.argv[2] ?? 'phone';
+const region = Number(process.argv[3] ?? 7);
+const levelIdx = Number(process.argv[4] ?? 36);
 const server = await preview({ preview: { port: 4334, strictPort: true } });
 const browser = await pw.chromium.launch();
 const ctx = await browser.newContext({ viewport: { width: 740, height: 360 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 });
@@ -17,7 +19,7 @@ page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
 await page.addInitScript(() => {
   const stars = {};
-  for (let i = 1; i <= 36; i++) stars['l' + i] = 3;
+  for (let i = 1; i <= 60; i++) stars['l' + i] = 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars }));
 });
 await page.goto('http://localhost:4334/');
@@ -27,10 +29,10 @@ const go = (scene, data) => page.evaluate(([sc, d]) => {
   window.__game.scene.getScenes(true).forEach((s) => s.scene.stop());
   window.__game.scene.start(sc, d);
 }, [scene, data ?? {}]);
-await go('WorldMap', { region: 7 });
+await go('WorldMap', { region });
 await page.waitForTimeout(1200);
 await shot('map');
-await go('Battle', { levelIndex: 36 });
+await go('Battle', { levelIndex: levelIdx });
 await page.waitForTimeout(2500);
 await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');

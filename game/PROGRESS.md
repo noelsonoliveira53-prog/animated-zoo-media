@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **84** (next balance pass at iteration 85)
+Iteration counter: **85** (next balance pass at iteration 90)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -607,13 +607,16 @@ Iteration counter: **84** (next balance pass at iteration 85)
   12 pads, 15 waves, hpMult 1.8. Fixes found by the tests/screenshot: the north road first entered at x=840, under the
   top-right buttons (now 800), and a top pad hid its tower behind the wide "Next wave" preview (moved). Endless adds
   Sparkeel from wave 40. Screenshot `84.png`. 165 tests.
+- [x] **Iter 85 — POLISH + BALANCE (47 levels, full sweep).** All 47 levels re-run with 12 seeds after the many
+  mechanic and autoplayer changes since iteration 70: every level is in its band and every region ramps to its boss, so
+  no hpMult changed. Polish: `scripts/phone-late.mjs` now takes a region and level (`node scripts/phone-late.mjs <name>
+  <region> <level>`); the Starwell map, battle and Field Guide pages are clean at 740×360. Screenshot `85.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 85 balance pass.
-2. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
+1. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
 
 ## Known Bugs
 - (none known)
@@ -623,6 +626,11 @@ Iteration counter: **84** (next balance pass at iteration 85)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 85** (full sweep, 12 seeds, expert/casual/novice): levels 1–30 unchanged from iteration 70 except the
+bottom-pad levels (Cinder 83/67/83, Morrowcap 83/67/0); 31–40 as in iteration 75; 41 Boilerworks 100/100/17 ·
+42 Piston 100/83/8 · 43 Gearwell 83/83/17 · 44 Foundry 83/83/0 · 45 Heart of the Engine 83/67/8 · 46 Glimmerpool
+100/100/33 · 47 Lantern Hollow 100/100/25. No retunes.
+
 **Iteration 75** (camp sweep 31–40, 12 seeds): 31 Windgap 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 ·
 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 · 36 Overgrown 100/92/33 · 37 Sunken 100/83/17 · 38 Serpent
 92/92/33 · 39 Idol Courtyard 92/58/33 · 40 Heart of the Ruins 92/50/0. Endless (3 seeds, waves held, expert/casual/

@@ -805,7 +805,7 @@ export class BootScene extends Phaser.Scene {
   private makeTower(id: string, color: number, tier: number, key?: string): void {
     const g = this.g();
     const w = 72;
-    const h = 84;
+    const h = 100; // tall enough for top-tier roofs/orbs (84 used to clip them)
     const cx = w / 2;
     const base = h - 10;
     const dark = Phaser.Display.Color.IntegerToColor(color).darken(30).color;

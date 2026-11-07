@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **18** (next balance pass at iteration 20)
+Iteration counter: **19** (next iteration = 20 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -165,12 +165,21 @@ Iteration counter: **18** (next balance pass at iteration 20)
   10 seeds). Tuning: Outpost +1 Spit Tower, Warren/Stronghold −1 mortar, Stronghold −1 spit, walls 320→220 hp,
   gentler tier scaling (hp +35%/tier, dmg +25%/tier). 92 tests.
 
+- [x] **Iter 19** — **Field Guide + Settings (meta, part 1).** New `FieldGuideScene` (parchment book): tabs for
+  **Enemies** (18 entries; unmet enemies show as "?" silhouettes until first seen in battle, "Discovered N/18"),
+  **Towers** (4 towers + 8 branches) and **Heroes** (with training rank); each entry has art, stats (hp, speed,
+  armor/MR %, lives, bounty, special tags) and a blurb. Battles record sightings (`seenEnemies`, saved
+  immediately; "New in Field Guide!" popup). New `SettingsScene`: volume slider (drag or tap), sound on/off,
+  two-tap **Reset progress** (keeps settings). Menu gets Field Guide + Settings buttons. **Bug fix:** top-tier
+  tower textures were clipped at the top (84px canvas too short for roofs/orbs); now 100px. 95 tests.
+  (Backlog reordered: meta features before the raid training queue, since the whole META pillar was missing.)
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
-2. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+1. Meta part 2: achievements (with small rewards) + daily challenge (seeded modifiers on a campaign level).
+2. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
 3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
 4. Ambient music loop (procedural).
 

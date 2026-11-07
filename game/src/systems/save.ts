@@ -9,13 +9,14 @@ export interface SaveData {
   heroRanks: Record<string, number>; // persistent hero training (battle start level = rank + 1)
   army: Record<string, number>; // trained raid troops waiting at the Ranger Lodge
   raidSeed: number; // rotates after each raid so new camps appear
+  seenEnemies: string[]; // enemy ids met in battle (unlocks Field Guide entries)
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -46,6 +47,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       heroRanks: { ...(parsed.heroRanks ?? {}) },
       army: { ...(parsed.army ?? {}) },
       raidSeed: typeof parsed.raidSeed === 'number' ? parsed.raidSeed : 1,
+      seenEnemies: Array.isArray(parsed.seenEnemies) ? parsed.seenEnemies.filter((x) => typeof x === 'string') : [],
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {
@@ -81,4 +83,16 @@ export function starsForLives(lives: number, maxLives: number): number {
 export function ensureVillage(data: SaveData, now = Date.now()): VillageState {
   if (!data.village) data.village = newVillage(now);
   return data.village;
+}
+
+/** Remember enemies the player has met (adds new ids, keeps order, no duplicates). */
+export function markSeen(data: SaveData, ids: Iterable<string>): SaveData {
+  const set = new Set(data.seenEnemies);
+  for (const id of ids) set.add(id);
+  return { ...data, seenEnemies: [...set] };
+}
+
+/** Wipe all progress but keep settings. */
+export function resetProgress(data: SaveData): SaveData {
+  return { ...defaultSave(), settings: { ...data.settings } };
 }

@@ -6,6 +6,8 @@ import { WorldMapScene } from './scenes/WorldMapScene';
 import { VillageScene } from './scenes/VillageScene';
 import { EndingScene } from './scenes/EndingScene';
 import { RaidScene } from './scenes/RaidScene';
+import { FieldGuideScene } from './scenes/FieldGuideScene';
+import { SettingsScene } from './scenes/SettingsScene';
 import { GAME_H, GAME_W } from './ui/theme';
 
 const game = new Phaser.Game({
@@ -16,7 +18,7 @@ const game = new Phaser.Game({
   backgroundColor: '#10261b',
   scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
   input: { activePointers: 2 },
-  scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, RaidScene],
+  scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, RaidScene, FieldGuideScene, SettingsScene],
 });
 
 // Expose for automated tests / debugging.

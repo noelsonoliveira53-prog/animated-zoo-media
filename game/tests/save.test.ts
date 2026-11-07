@@ -41,3 +41,26 @@ describe('save system', () => {
     expect(starsForLives(0, 20)).toBe(0);
   });
 });
+
+import { markSeen, resetProgress } from '../src/systems/save';
+describe('field guide + reset', () => {
+  it('marks enemies seen without duplicates', () => {
+    let s = defaultSave();
+    s = markSeen(s, ['mudling', 'skitter']);
+    s = markSeen(s, ['mudling', 'gnat']);
+    expect(s.seenEnemies).toEqual(['mudling', 'skitter', 'gnat']);
+  });
+  it('reset clears progress but keeps settings', () => {
+    const s = { ...markSeen(defaultSave(), ['mudling']), stars: { l1: 3 }, settings: { volume: 0.2, muted: true } };
+    const r = resetProgress(s);
+    expect(r.stars).toEqual({});
+    expect(r.seenEnemies).toEqual([]);
+    expect(r.settings).toEqual({ volume: 0.2, muted: true });
+  });
+  it('old saves without seenEnemies load cleanly', () => {
+    const data: Record<string, string> = { [SAVE_KEY]: JSON.stringify({ stars: { l1: 2 } }) };
+    const store: StorageLike = { getItem: (k) => data[k] ?? null, setItem: (k, v) => void (data[k] = v) };
+    expect(loadSave(store).seenEnemies).toEqual([]);
+    expect(loadSave(store).stars.l1).toBe(2);
+  });
+});

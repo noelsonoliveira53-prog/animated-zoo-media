@@ -7,7 +7,7 @@ import { SPELLS, SPELL_ORDER } from '../data/spells';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
-import { ensureVillage, loadSave, recordStars, starsForLives, writeSave } from '../systems/save';
+import { ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
@@ -62,6 +62,7 @@ export class BattleScene extends Phaser.Scene {
   private skillText!: Phaser.GameObjects.Text;
   private bossBar!: Phaser.GameObjects.Graphics;
   private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
+  private seen = new Set<string>();
   private bossLabel!: Phaser.GameObjects.Text;
 
   constructor() {
@@ -76,6 +77,7 @@ export class BattleScene extends Phaser.Scene {
     this.sim = new BattleSim(this.level, save.hero, { ...this.perks, heroLevel: 1 + (save.heroRanks[save.hero] ?? 0) });
     this.heroSprite = null;
     this.heroSelected = false;
+    this.seen = new Set();
     this.speed = 1;
     this.paused = false;
     this.ended = false;
@@ -872,6 +874,15 @@ export class BattleScene extends Phaser.Scene {
     switch (ev.type) {
       case 'spawn':
         this.addEnemyView(ev.enemy);
+        if (!this.seen.has(ev.enemy.def.id)) {
+          this.seen.add(ev.enemy.def.id);
+          // Persist new sightings right away so the Field Guide unlocks even if the battle is quit.
+          const s0 = loadSave();
+          if (!s0.seenEnemies.includes(ev.enemy.def.id)) {
+            writeSave(markSeen(s0, [ev.enemy.def.id]));
+            if (s0.seenEnemies.length > 0) this.floatText(ev.enemy.pos.x + 40, ev.enemy.pos.y - 40, 'New in Field Guide!', '#bfe8ff', 14);
+          }
+        }
         if (ev.enemy.def.boss) {
           this.showBanner(`${ev.enemy.def.name} approaches!`, 'Focus everything on the boss');
           this.cameras.main.shake(500, 0.01);
@@ -1074,7 +1085,7 @@ export class BattleScene extends Phaser.Scene {
         const t = ev.tower;
         if (t.rally && ev.type === 'build') this.updateRallyFlag(t.uid, t.rally);
         this.towerViews[t.slot]?.destroy();
-        const img = this.add.image(t.pos.x, t.pos.y - 26, t.spec ? `tower_${t.def.id}_${t.spec}` : `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
+        const img = this.add.image(t.pos.x, t.pos.y - 34, t.spec ? `tower_${t.def.id}_${t.spec}` : `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
         img.setScale(0.3, 1.4);
         this.tweens.add({ targets: img, scaleX: 1, scaleY: 1, duration: 300, ease: 'Back.easeOut' });
         this.towerViews[t.slot] = img;

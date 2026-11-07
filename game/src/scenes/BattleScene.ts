@@ -15,7 +15,7 @@ import { sfx } from '../systems/audio';
 import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
 import { showAchievementToasts } from '../ui/toast';
-import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
+import { addResources, battlePerks, battleReward, grantSwiftbloom, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 import { fitWidth, padHit, pf } from '../ui/touch';
@@ -1368,11 +1368,14 @@ export class BattleScene extends Phaser.Scene {
     const stars = won ? starsForLives(this.sim.lives, this.sim.maxLives) : 0;
     let reward = { coins: 0, glowsap: 0 };
     let after = loadSave();
+    let bloom = 0;
     if (won) {
       const prevStars = after.stars[this.level.id] ?? 0;
       after = recordStars(after, this.level.id, stars);
       const want = battleReward(this.levelIndex, prevStars, stars);
       reward = addResources(ensureVillage(after), want.coins, want.glowsap);
+      // First time taking this level to 3 stars: a free village speed-up.
+      if (prevStars < 3 && stars === 3) bloom = grantSwiftbloom(ensureVillage(after));
       if (!music.stinger('victory')) sfx.victory();
     } else if (!music.stinger('defeat')) {
       sfx.defeat();
@@ -1418,6 +1421,11 @@ export class BattleScene extends Phaser.Scene {
     );
     if (dailyPaid) {
       panel.add(this.add.text(0, 74, `Daily challenge bonus: +${dailyPaid.coins} coins, +${dailyPaid.glowsap} glowsap`, textStyle(16, '#9be86a', false)).setOrigin(0.5));
+    }
+    if (bloom) {
+      const t = this.add.text(222, -40, '+1\nSwiftbloom', { ...textStyle(16, '#ffc0e8'), align: 'center' }).setOrigin(0.5).setName('bloomText').setScale(0);
+      panel.add(t);
+      this.tweens.add({ targets: t, scale: 1, delay: 1250, duration: 300, ease: 'Back.easeOut' });
     }
     if (won) {
       const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';

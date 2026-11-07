@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **35** (next balance pass at iteration 40)
+Iteration counter: **36** (next balance pass at iteration 40)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -288,13 +288,21 @@ Iteration counter: **35** (next balance pass at iteration 40)
   `ui/paging.ts`, `<`/`>` buttons, "1/2" label), plus a 19th achievement **Mistwalker** (3★ on every Duskcap level).
   `ach-check.mjs` clicks through the pages. 119 tests.
 
+- [x] **Iter 36 — Swiftbloom speed-ups.** Taking a level to 3★ for the first time grants a **Swiftbloom** (hold at most
+  3; data in `SWIFTBLOOM`). Each one cuts 1 hour off a building under construction; the village tick then finishes it
+  if due. Pure rules `grantSwiftbloom` / `rushBuilding` in `systems/village.ts` (stored on `VillageState.swiftblooms`, so
+  old saves just start at 0). The victory panel shows a pink "+1 Swiftbloom"; the building panel shows a
+  "Swiftbloom (N)" button while it is under construction. One per level means at most 20 in a playthrough, so they
+  can't be farmed. Fix: the construction progress bar now clamps to 0–1 (a long timer drew an orange bar across half
+  the village). New `scripts/swift-check.mjs`: a 3★ win grants the token, then real clicks rush a Grove Hall upgrade.
+  122 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Village: a free speed-up after a 3-star win (parked idea).
-2. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
-3. Region 5 (levels 21–25), or an endless or challenge mode that reuses existing maps.
+1. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
+2. Region 5 (levels 21–25), or an endless or challenge mode that reuses existing maps.
 
 ## Known Bugs
 - (none known)

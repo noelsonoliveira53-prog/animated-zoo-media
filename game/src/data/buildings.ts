@@ -142,3 +142,9 @@ export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builde
 
 export const VILLAGE_COLS = 22;
 export const VILLAGE_ROWS = 13;
+
+/** Swiftbloom: a free build speed-up earned by taking a level to 3 stars for the first time. */
+export const SWIFTBLOOM = {
+  maxHeld: 3,
+  seconds: 3600, // build time removed per use
+};

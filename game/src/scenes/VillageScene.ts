@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
-import { BUILDINGS, SHOP_ORDER, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { BUILDINGS, SHOP_ORDER, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
 import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -15,6 +15,7 @@ import {
   countOf,
   footprintFree,
   formatTime,
+  rushBuilding,
   maxCountOf,
   moveBuilding,
   nextLevel,
@@ -175,7 +176,7 @@ export class VillageScene extends Phaser.Scene {
     if (building) {
       const total = (nextLevel(b)?.time ?? 1) * 1000;
       const left = Math.max(0, b.upgradeEnds! - now);
-      const frac = 1 - left / total;
+      const frac = Phaser.Math.Clamp(1 - left / total, 0, 1); // clamp: a save edited by hand (or a changed build time) can exceed the level's time
       v.bar.fillStyle(C.ink, 0.85);
       v.bar.fillRoundedRect(x + 6, y + S - 20, S - 12, 14, 5);
       v.bar.fillStyle(0xffb84a, 1);
@@ -318,7 +319,27 @@ export class VillageScene extends Phaser.Scene {
     let dynamic = false;
     if (b.upgradeEnds !== null) {
       dynamic = true;
-      c.add(this.add.text(W / 2 - 150, -10, `Building…\n${formatTime((b.upgradeEnds - now) / 1000)} left`, { ...textStyle(18), align: 'center' }).setOrigin(0.5));
+      c.add(this.add.text(W / 2 - 150, -30, `Building…\n${formatTime((b.upgradeEnds - now) / 1000)} left`, { ...textStyle(18), align: 'center' }).setOrigin(0.5));
+      const blooms = this.v.swiftblooms ?? 0;
+      const rush = new Button(this, W / 2 - 150, 40, `Swiftbloom (${blooms})`, {
+        width: 190,
+        height: 46,
+        fontSize: 17,
+        color: 0xe8a0d0,
+        onClick: () => {
+          const r = rushBuilding(this.v, uid, Date.now());
+          if (!r.ok) this.toast(r.reason);
+          else {
+            sfx.build();
+            this.toast((r.building.upgradeEnds ?? 0) <= Date.now() ? 'Swiftbloom: finished!' : `Swiftbloom: ${formatTime(SWIFTBLOOM.seconds)} faster`);
+            this.persist();
+            this.refresh();
+          }
+          this.openPanel(uid, false);
+        },
+      });
+      rush.setEnabled(blooms > 0).setName('rushBtn');
+      c.add(rush);
     } else if (next) {
       const thOk = townHallLevel(this.v) >= next.th;
       c.add(

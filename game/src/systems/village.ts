@@ -1,5 +1,5 @@
 import { TROOPS } from '../data/raid';
-import { BUILDINGS, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { BUILDINGS, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 
 // Pure village rules. All time-dependent functions take `now` (ms) so they are testable.
 
@@ -18,6 +18,7 @@ export interface VillageState {
   glowsap: number;
   buildings: Building[];
   nextUid: number;
+  swiftblooms?: number; // free speed-up tokens (see SWIFTBLOOM)
 }
 
 export function newVillage(now: number): VillageState {
@@ -156,6 +157,25 @@ export function upgradeBuilding(v: VillageState, uid: number, now: number): Acti
   pay(v, next.cost);
   if (next.time > 0) b.upgradeEnds = now + next.time * 1000;
   else b.level++;
+  return { ok: true, building: b };
+}
+
+/** Earn one Swiftbloom unless already holding the maximum. Returns how many were granted (0 or 1). */
+export function grantSwiftbloom(v: VillageState): number {
+  const held = v.swiftblooms ?? 0;
+  if (held >= SWIFTBLOOM.maxHeld) return 0;
+  v.swiftblooms = held + 1;
+  return 1;
+}
+
+/** Spend a Swiftbloom to cut up to SWIFTBLOOM.seconds off a construction. If that covers the rest, the next tick() finishes it. */
+export function rushBuilding(v: VillageState, uid: number, now: number): ActionResult {
+  const b = v.buildings.find((x) => x.uid === uid);
+  if (!b) return { ok: false, reason: 'No such building' };
+  if (b.upgradeEnds === null) return { ok: false, reason: 'Nothing to speed up' };
+  if ((v.swiftblooms ?? 0) <= 0) return { ok: false, reason: 'No Swiftblooms (earn them with 3-star wins)' };
+  v.swiftblooms = (v.swiftblooms ?? 0) - 1;
+  b.upgradeEnds = Math.max(now, b.upgradeEnds - SWIFTBLOOM.seconds * 1000); // tick() completes it if now due
   return { ok: true, building: b };
 }
 

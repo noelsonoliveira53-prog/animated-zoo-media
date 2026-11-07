@@ -162,3 +162,42 @@ describe('village → battle perks', () => {
     expect(shot.projectile.damage).toBeCloseTo(7 * 1.5);
   });
 });
+
+import { grantSwiftbloom, rushBuilding } from '../src/systems/village';
+import { SWIFTBLOOM } from '../src/data/buildings';
+
+describe('swiftbloom speed-ups', () => {
+  it('caps how many can be held', () => {
+    const v = newVillage(0);
+    let got = 0;
+    for (let i = 0; i < 10; i++) got += grantSwiftbloom(v);
+    expect(got).toBe(SWIFTBLOOM.maxHeld);
+    expect(v.swiftblooms).toBe(SWIFTBLOOM.maxHeld);
+  });
+  it('cuts build time and finishes short builds on the next tick', () => {
+    const v = newVillage(0);
+    v.coins = v.glowsap = 1e6;
+    const hall = v.buildings.find((b) => b.type === 'townhall')!;
+    expect(upgradeBuilding(v, hall.uid, 0).ok).toBe(true);
+    const ends = hall.upgradeEnds!;
+    expect(rushBuilding(v, hall.uid, 0).ok).toBe(false); // none held yet
+    grantSwiftbloom(v);
+    grantSwiftbloom(v);
+    expect(rushBuilding(v, hall.uid, 0).ok).toBe(true);
+    expect(hall.upgradeEnds).toBe(Math.max(0, ends - SWIFTBLOOM.seconds * 1000));
+    expect(v.swiftblooms).toBe(1);
+    // Rush again until done.
+    while (hall.upgradeEnds !== null && (v.swiftblooms ?? 0) > 0) {
+      rushBuilding(v, hall.uid, 0);
+      tick(v, 0);
+    }
+    if (hall.upgradeEnds === null) expect(hall.level).toBe(2);
+  });
+  it('refuses when nothing is under construction', () => {
+    const v = newVillage(0);
+    grantSwiftbloom(v);
+    const r = rushBuilding(v, v.buildings[0].uid, 0);
+    expect(r.ok).toBe(false);
+    expect(v.swiftblooms).toBe(1);
+  });
+});

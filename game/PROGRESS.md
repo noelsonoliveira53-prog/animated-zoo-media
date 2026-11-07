@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **164** (next balance pass at iteration 165)
+Iteration counter: **165** (next balance pass at iteration 170)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1172,6 +1172,11 @@ Iteration counter: **164** (next balance pass at iteration 165)
 - **Iteration 164** (Highcanopy level 4): level 89 **Thunderbough Heights**. It has 11 pads and two long roads
   (2,520px from the left, 2,150px from the top), with the region's toughest waves before the boss. Screenshot
   `screenshots/164.png`. 212 tests.
+- **Iteration 165** (POLISH + BALANCE): the region picker now **pages**. It shows 18 regions per page, with "<" and ">"
+  buttons and a page label (for example "2/2"), and opens on the page that holds the current region. That unblocks region 19+.
+  - Check: `scripts/region-picker-paging-check.mjs` shrinks the page to 9 to test it today: opens on page 2/2, ">" wraps to 1/2,
+    no console errors. Screenshots `screenshots/165.png` and `165-p2.png`.
+  - Balance: hero comparison on Highcanopy levels 86–89 (see Balance Notes). 212 tests.
 
 ## In Progress
 - (none)
@@ -1180,7 +1185,6 @@ Iteration counter: **164** (next balance pass at iteration 165)
 1. Highcanopy finale (90) with a boss, achievements, a story card
    and the endless boss rotation.
 2. A breather now and then (raid or village variety).
-3. The region picker is full at 18 regions (3×6); region 19 will need a second page or a smaller grid.
 
 ## Known Bugs
 - (none known)
@@ -1189,6 +1193,9 @@ Iteration counter: **164** (next balance pass at iteration 165)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 165**: hero comparison (expert strategy, levels 86–89, 3 seeds each): Bramble 96% (avg 13.3 lives), Fen 100% (12.9),
+Ember 100% (14.0), Wren 100% (14.1), Sorrel 83% (10.0), Hazel 100% (13.0). Sorrel is the weakest here because its heals matter
+less against Mourner grief and Harrier snatches, but it stays inside the 80–100% spread, so it is unchanged.
 **Iteration 164**: 89 Thunderbough Heights: 92/50/75 at hpMult 1.8, 50/8/25 at 2.05, 100/100/92 at 1.55, 100/83/92 at 1.65, and **1.72 → 83/67/83** (kept;
 expert and casual in the fourth-level band). The novice beats the casual here because it builds only arrows and magic, never slows, and so never
 riles the Howlers. That is the Highcanopy's lesson working as intended, so the novice is left high.

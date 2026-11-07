@@ -9,6 +9,7 @@ import { ENEMIES } from '../data/enemies';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
+import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
 // Campaign overview: the Grove's lands from the Mossgate (bottom-left) to Murkmaw's Den (top-right).
@@ -585,11 +586,19 @@ export class WorldMapScene extends Phaser.Scene {
   }
 
   /** A grid of every region: unlocked ones show their stars and jump there; locked ones say what to beat. */
-  private openRegionPicker(): void {
+  /** Regions per picker page: 3 columns × 6 rows fill the screen. */
+  static PICKER_PER_PAGE = 18;
+
+  private openRegionPicker(page?: number): void {
     this.closePanel();
     const save = loadSave();
     const cols = 3;
-    const rows = Math.ceil(REGIONS.length / cols);
+    const perPage = WorldMapScene.PICKER_PER_PAGE;
+    const pages = pageCount(REGIONS.length, perPage);
+    const pg = clampPage(page ?? Math.floor(this.region / perPage), REGIONS.length, perPage);
+    const first = pg * perPage;
+    const shown = pageItems(REGIONS, pg, perPage);
+    const rows = Math.ceil(Math.min(REGIONS.length, perPage) / cols);
     const cw = 330;
     const ch = 70;
     const W = cols * (cw + 14) + 26;
@@ -604,9 +613,15 @@ export class WorldMapScene extends Phaser.Scene {
     p.add(block);
     p.add(this.add.text(0, -H / 2 + 28, 'Choose a region', textStyle(24, TEXT.gold)).setOrigin(0.5));
     p.add(new Button(this, W / 2 - 34, -H / 2 + 28, 'X', { width: 46, height: 40, fontSize: 20, color: C.danger, onClick: () => this.closePanel() }));
-    REGIONS.forEach((r, i) => {
-      const x = -W / 2 + 13 + cw / 2 + (i % cols) * (cw + 14);
-      const y = -H / 2 + 62 + ch / 2 + Math.floor(i / cols) * (ch + 10);
+    if (pages > 1) {
+      p.add(new Button(this, -W / 2 + 40, -H / 2 + 28, '<', { width: 46, height: 40, fontSize: 20, color: C.sky, onClick: () => this.openRegionPicker((pg + pages - 1) % pages) }));
+      p.add(new Button(this, -W / 2 + 96, -H / 2 + 28, '>', { width: 46, height: 40, fontSize: 20, color: C.sky, onClick: () => this.openRegionPicker((pg + 1) % pages) }));
+      p.add(this.add.text(-W / 2 + 140, -H / 2 + 28, `${pg + 1}/${pages}`, textStyle(18, TEXT.dim)).setOrigin(0, 0.5).setName('pickerPage'));
+    }
+    shown.forEach((r, k) => {
+      const i = first + k;
+      const x = -W / 2 + 13 + cw / 2 + (k % cols) * (cw + 14);
+      const y = -H / 2 + 62 + ch / 2 + Math.floor(k / cols) * (ch + 10);
       const open = r.first < LEVELS.length && isLevelUnlocked(r.first, save.stars);
       const ids = LEVELS.slice(r.first, r.first + r.count).map((l) => l.id);
       const stars = ids.reduce((n, id) => n + (save.stars[id] ?? 0), 0);

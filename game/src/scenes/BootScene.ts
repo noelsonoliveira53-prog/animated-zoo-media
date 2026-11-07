@@ -225,6 +225,31 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'reefwarden': {
+        // hermit crab: spiral coral shell, little claws, glowing staff-tip of coral
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(0xd8a080, 1);
+        g.fillEllipse(cx + r * 0.55, cy + r * 0.55, r * 0.9, r * 0.5);
+        g.strokeEllipse(cx + r * 0.55, cy + r * 0.55, r * 0.9, r * 0.5);
+        g.fillCircle(cx + r * 0.95, cy + r * 0.25, r * 0.22);
+        g.strokeCircle(cx + r * 0.95, cy + r * 0.25, r * 0.22);
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.05, r * 0.95);
+        g.strokeCircle(cx - r * 0.15, cy - r * 0.05, r * 0.95);
+        g.lineStyle(2, shade, 1);
+        g.beginPath();
+        g.arc(cx - r * 0.15, cy - r * 0.05, r * 0.6, 0, Math.PI * 1.5);
+        g.strokePath();
+        g.beginPath();
+        g.arc(cx - r * 0.15, cy - r * 0.05, r * 0.3, 0, Math.PI * 1.5);
+        g.strokePath();
+        g.fillStyle(0xffd0d8, 1);
+        for (const [dx, dy] of [[-0.75, -0.75], [-0.35, -1.0], [0.1, -0.95]]) g.fillTriangle(cx + dx * r - 3, cy + dy * r + 4, cx + dx * r + 3, cy + dy * r + 4, cx + dx * r, cy + dy * r - 6);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx + r * 0.9, cy + r * 0.05, r * 0.08);
+        break;
+      }
       case 'barnaclad': {
         // crab: claws, legs, a shell heaped with pale barnacles
         g.lineStyle(2.5, C.ink, 1);

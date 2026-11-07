@@ -32,6 +32,7 @@ export interface EnemyDef {
   spawner?: { enemy: string; count: number; interval: number; limit: number }; // releases minions while alive (limit = max total)
   veil?: number; // stealth: towers can only target it within this many px (splash, spells, soldiers still hit)
   enrage?: { below: number; speedMult: number }; // speeds up once hp drops under this fraction
+  shieldAura?: { amount: number; radius: number; interval: number }; // periodically shields nearby allies
   brittle?: number; // armor lost per hit taken (down to 0)
   swoop?: { interval: number; duration: number }; // flyer that lands for `duration` s every `interval` s
   sporeBurst?: { radius: number; speedMult: number; duration: number }; // on death, hastens nearby allies

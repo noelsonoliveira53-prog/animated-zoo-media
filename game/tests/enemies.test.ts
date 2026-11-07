@@ -277,3 +277,20 @@ describe('shoal enemies', () => {
     expect(g.landed).toBe(false);
   });
 });
+
+describe('reefwarden', () => {
+  it('coats nearby allies (not itself or bosses) in coral shields on a timer', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const r = sim.spawn('reefwarden', 0, 300);
+    const near = sim.spawn('mudling', 0, 360);
+    const far = sim.spawn('mudling', 0, 800);
+    const boss = sim.spawn('murkmaw', 0, 320);
+    for (const e of [r, near, far, boss]) e.def = { ...e.def, speed: 0 };
+    for (let i = 0; i < 60 * ENEMIES.reefwarden.shieldAura!.interval; i++) sim.update(1 / 60);
+    expect(near.shield).toBeGreaterThan(0);
+    expect(far.shield).toBe(0);
+    expect(r.shield).toBe(0);
+    expect(boss.shield).toBe(0);
+  });
+});

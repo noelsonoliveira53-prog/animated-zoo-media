@@ -148,6 +148,7 @@ export type SimEvent =
   | { type: 'burrow'; enemy: Enemy; down: boolean }
   | { type: 'enrage'; enemy: Enemy }
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
+  | { type: 'coral'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
@@ -792,7 +793,7 @@ export class BattleSim {
       attackCd: 0,
       shield: def.shield ?? 0,
       maxShield: def.shield ?? 0,
-      healCd: def.heal ? def.heal.interval : 0,
+      healCd: def.heal ? def.heal.interval : def.shieldAura ? def.shieldAura.interval * 0.5 : 0,
       chillCd: def.chill ? def.chill.interval * 0.6 : 0,
       underground: false,
       burrowCd: def.burrow ? def.burrow.interval : 0,
@@ -828,6 +829,7 @@ export class BattleSim {
       if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.def.spawner) this.tickSpawner(e, dt);
       if (e.def.swoop) this.tickSwoop(e, dt);
+      if (e.def.shieldAura) this.tickShieldAura(e, dt);
       if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
         e.enraged = true;
         e.speedMult = Math.max(e.speedMult, e.def.enrage.speedMult);
@@ -883,6 +885,25 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'swoop', enemy: e, landed: e.landed });
+  }
+
+  /** Reefwardens coat nearby allies (not themselves, not bosses) in a coral shield on a timer. Reuses healCd. */
+  private tickShieldAura(e: Enemy, dt: number): void {
+    const sa = e.def.shieldAura!;
+    e.healCd -= dt;
+    if (e.healCd > 0) return;
+    e.healCd = sa.interval;
+    const amount = Math.round(sa.amount * this.waveHpMult());
+    const targets: Enemy[] = [];
+    for (const o of this.enemies) {
+      if (!o.alive || o === e || o.def.boss || o.underground) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > sa.radius) continue;
+      if (o.shield >= amount) continue;
+      o.shield = amount;
+      o.maxShield = Math.max(o.maxShield, amount);
+      targets.push(o);
+    }
+    this.events.push({ type: 'coral', source: e, targets, radius: sa.radius });
   }
 
   /** In the air right now (flyers, except while a swooper is landed). */

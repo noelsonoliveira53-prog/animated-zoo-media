@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **47** (next balance pass at iteration 50)
+Iteration counter: **48** (next balance pass at iteration 50)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -376,11 +376,16 @@ Iteration counter: **47** (next balance pass at iteration 50)
   the merged tail was only 420 px, so it now bends down to the lower right (680 px). Sprite polish: the first
   Glarefly's wings were thin, dark triangles; they're now broad, pale four-point wings. 136 tests.
 
+- [x] **Iter 48 — Shardglass level 28: Shattered Crossroads.** Three roads (west, southwest, north) merge into a 1,160 px
+  shared tail that dips south and exits east, kept clear of the spell buttons. 11 pads about 100 px from the roads,
+  16 waves mixing all three Shardglass enemies with guests from earlier regions. It followed the region recipe, so no
+  layout fixes were needed. 136 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 6: levels 28–30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
+1. Region 6: levels 29–30 (a Shardglass boss, the 30th enemy, which fills the Field Guide grid; add paging before any 31st).
 2. Hero #4 and a third global spell.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
@@ -404,6 +409,8 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Shattered Crossroads (iteration 48):** 2.6 → 100/100/0, **2.8 → 100% / 75% / 0%** (8 seeds, kept), 3.0 → 83/33/0.
 
 **Prism Canyon (iteration 47, 6–8 seeds):** easy at first: 2.0 → 100/100/100, 2.6 → 100/100/17, 3.0 → 100/100/0;
 **3.1 → 100% / 88% / 0%** (kept); 3.3 → 67/33/0, 3.6 → 17/0/0.

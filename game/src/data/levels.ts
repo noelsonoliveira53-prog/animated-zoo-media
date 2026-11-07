@@ -8,6 +8,7 @@ const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0
 const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
 const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
 const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
+const ABYSS = { grass: 0x1e2440, grassDark: 0x161a32, road: 0x4a4a6a, roadEdge: 0x32324e, trees: [0x6ad8e8, 0x9a7ae8, 0x5ae8b0], abyss: true };
 const GEARS = { grass: 0x5a5a62, grassDark: 0x4a4a52, road: 0x9a8a6a, roadEdge: 0x6a5a40, trees: [0xc8963a, 0x8a6a2a, 0xa0a0aa], gears: true };
 const RUINS = { grass: 0x4a8a3a, grassDark: 0x3a7430, road: 0xb8ae94, roadEdge: 0x8a8270, trees: [0x2f6a2a, 0x3f7f34, 0x4a9a3a], ruins: true };
 const GALE = { grass: 0x9cbca0, grassDark: 0x88a890, road: 0xd8d2c4, roadEdge: 0xb0a898, trees: [0x4a6a5a, 0x5f8270, 0x3f5f50], gale: true };
@@ -2287,6 +2288,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'grindmaw', count: 1, interval: 1, delay: 8 }, { enemy: 'steamrunner', count: 10, interval: 0.8, path: 1, delay: 4 }, { enemy: 'cogjammer', count: 3, interval: 3, path: 1, delay: 16 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 20 }] },
     ],
   },
+  {
+    id: 'l46',
+    name: 'Glimmerpool Descent',
+    blurb: 'Below the engines the stone opens onto a sky of glowing pools. Lantern-jellies drift in the dark, and the wisps here refuse to stay snuffed.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.75,
+    startCoins: 950,
+    lives: 20,
+    theme: ABYSS,
+    paths: [
+      [{ x: -40, y: 520 }, { x: 300, y: 520 }, { x: 300, y: 240 }, { x: 600, y: 240 }, { x: 600, y: 440 }, { x: 880, y: 440 }, { x: 880, y: 240 }, { x: 1320, y: 240 }],
+      [{ x: 960, y: 760 }, { x: 960, y: 620 }, { x: 440, y: 620 }, { x: 440, y: 440 }, { x: 600, y: 440 }, { x: 880, y: 440 }, { x: 880, y: 240 }, { x: 1320, y: 240 }],
+    ],
+    slots: [
+      { x: 180, y: 420 },
+      { x: 400, y: 140 },
+      { x: 450, y: 340 },
+      { x: 370, y: 380 },
+      { x: 700, y: 340 },
+      { x: 520, y: 530 },
+      { x: 760, y: 530 },
+      { x: 980, y: 340 },
+      { x: 1100, y: 148 },
+      { x: 1160, y: 340 },
+      { x: 200, y: 300 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'echowisp', count: 10, interval: 0.8 }, { enemy: 'mudling', count: 10, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'dimlantern', count: 2, interval: 3 }, { enemy: 'skitter', count: 12, interval: 0.4, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'echowisp', count: 12, interval: 0.7, path: 1 }, { enemy: 'shellback', count: 5, interval: 1.4, delay: 2 }] },
+      { groups: [{ enemy: 'dimlantern', count: 3, interval: 2.5 }, { enemy: 'echowisp', count: 8, interval: 0.8, path: 1, delay: 3 }, { enemy: 'gullwing', count: 8, interval: 0.7, path: 1, delay: 6 }] },
+      { groups: [{ enemy: 'echowisp', count: 16, interval: 0.55 }, { enemy: 'steamrunner', count: 6, interval: 0.9, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'dimlantern', count: 4, interval: 2.2, path: 1 }, { enemy: 'rivetshell', count: 3, interval: 2.5, delay: 2 }, { enemy: 'glarefly', count: 6, interval: 0.9, delay: 6 }] },
+      { groups: [{ enemy: 'echowisp', count: 14, interval: 0.55 }, { enemy: 'dimlantern', count: 3, interval: 2.4, path: 1, delay: 4 }, { enemy: 'kitewing', count: 4, interval: 1.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'cogjammer', count: 3, interval: 2.5 }, { enemy: 'echowisp', count: 14, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'dimlantern', count: 5, interval: 2 }, { enemy: 'shiftscale', count: 8, interval: 0.9, path: 1, delay: 3 }, { enemy: 'gnat', count: 18, interval: 0.25, delay: 6 }] },
+      { groups: [{ enemy: 'echowisp', count: 20, interval: 0.42 }, { enemy: 'bramblehide', count: 3, interval: 2.5, delay: 4 }, { enemy: 'gullwing', count: 10, interval: 0.6, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'dimlantern', count: 6, interval: 1.8 }, { enemy: 'cloudram', count: 4, interval: 2.2, path: 1, delay: 3 }, { enemy: 'echowisp', count: 10, interval: 0.6, path: 1, delay: 8 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 2.8 }, { enemy: 'echowisp', count: 18, interval: 0.45, path: 1, delay: 2 }, { enemy: 'dimlantern', count: 3, interval: 2.4, delay: 6 }] },
+      { groups: [{ enemy: 'dimlantern', count: 7, interval: 1.6 }, { enemy: 'galehound', count: 14, interval: 0.45, path: 1, delay: 3 }, { enemy: 'mirrorback', count: 4, interval: 2.2, delay: 8 }] },
+      { groups: [{ enemy: 'echowisp', count: 24, interval: 0.38 }, { enemy: 'dimlantern', count: 5, interval: 2, path: 1, delay: 3 }, { enemy: 'kitewing', count: 6, interval: 1.2, delay: 8 }] },
+      { groups: [{ enemy: 'dimlantern', count: 8, interval: 1.5 }, { enemy: 'echowisp', count: 20, interval: 0.42, path: 1, delay: 2 }, { enemy: 'rivetshell', count: 5, interval: 2, delay: 6 }, { enemy: 'glarefly', count: 10, interval: 0.6, path: 1, delay: 10 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -2312,6 +2357,7 @@ export interface RegionDef {
   gale?: boolean;
   ruins?: boolean;
   gears?: boolean;
+  abyss?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -2324,6 +2370,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Galecrest Aeries', first: 30, count: 5, gale: true },
   { name: 'The Verdant Ruins', first: 35, count: 5, ruins: true },
   { name: 'The Brasswork Hollows', first: 40, count: 5, gears: true },
+  { name: 'The Starwell Abyss', first: 45, count: 5, abyss: true },
 ];
 
 export function regionOf(levelIndex: number): number {

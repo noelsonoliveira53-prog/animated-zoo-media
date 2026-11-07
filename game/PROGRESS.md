@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **82** (next balance pass at iteration 85)
+Iteration counter: **83** (next balance pass at iteration 85)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -593,12 +593,21 @@ Iteration counter: **82** (next balance pass at iteration 85)
   its full epilogue. Tests: every card belongs to a region finale, and every finished region after the Emberdeep has one.
   Browser check `scripts/story-check.mjs` (forced win, checks the panel offers "Story", opens the card). 162 tests.
   Playable demo artifact refreshed with this build (45 levels).
+- [x] **Iter 83 — Region 10 opens: The Starwell Abyss.** A dark cavern lit by glowing pools, below the engines. Two new
+  enemy mechanics (44 enemies): **Dimlantern** (`dim`: shooting towers within 150 px lose 30% range while it lives; the
+  strongest applies; drawn as a dark gloom disc with a violet rim) and **Echo Wisp** (`echo`: on its first death it
+  re-forms on the spot at 50% health, paying no second bounty; "Echo!" ring + double ping). Level 46 **Glimmerpool
+  Descent** (west + winding south road, 1,120 / 1,000 px to the merge, 920 px tail, 11 pads, 15 waves, hpMult 1.75), an
+  `ABYSS` theme (pale stalagmites, breathing glow pools), a starry world-map style and a slow cavernous music theme.
+  Endless adds both from wave 40. Browser check `scripts/abyss-check.mjs`. 164 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 10 (levels 46–50): a new biome, enemies and boss, following the region recipe.
+1. Region 10 level 47 (+ a third Starwell enemy).
+2. Iter 85 balance pass.
+3. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
 
 ## Known Bugs
 - (none known)
@@ -619,6 +628,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 83:** 46 Glimmerpool Descent 100/100/33 at hpMult 1.75 (1.6 → 100/100/100, 1.85 → 100/100/25,
+2.0 → 100/100/0).
 **Iteration 81:** 45 Heart of the Engine 83/67/8 at hpMult 1.58 (1.5 → 83/83/17, 1.61 → 75/67/0, 1.65 → 50/58/0,
 1.8 → 0/33/0).
 **Iteration 79:** 44 Foundry Crossroads 83/83/0 at hpMult 1.39 (1.2 → 100/100/33, 1.36 → 83/100/0, 1.45 → 75/83/0,

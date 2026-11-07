@@ -9,7 +9,7 @@ describe('music themes', () => {
     expect(ids).not.toContain('home');
   });
   it("each region plays its own region's theme, not a neighbour's", () => {
-    const flag = (r: (typeof REGIONS)[number]) => (r.gears ? 'brass' : r.ruins ? 'ruins' : r.gale ? 'gale' : r.glass ? 'glass' : r.shoal ? 'shoal' : r.dusk ? 'dusk' : r.ember ? 'ember' : r.snow ? 'frost' : 'grove');
+    const flag = (r: (typeof REGIONS)[number]) => (r.abyss ? 'abyss' : r.gears ? 'brass' : r.ruins ? 'ruins' : r.gale ? 'gale' : r.glass ? 'glass' : r.shoal ? 'shoal' : r.dusk ? 'dusk' : r.ember ? 'ember' : r.snow ? 'frost' : 'grove');
     REGIONS.forEach((reg, r) => expect(themeForRegion(r).id).toBe(flag(reg)));
     expect(REGION_THEMES.length).toBe(REGIONS.length);
   });

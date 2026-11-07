@@ -172,6 +172,10 @@ class Sfx {
       case 'charge': // steam hiss
         this.noise(0.2, 0.09, 5000);
         break;
+      case 'echo': // ghostly double ping
+        this.tone(1200, 0.12, 'sine', 0.04);
+        this.tone(900, 0.18, 'sine', 0.03, undefined, 0.1);
+        break;
       case 'split': // wet pop
         this.tone(260, 0.08, 'sine', 0.07, 520);
         break;

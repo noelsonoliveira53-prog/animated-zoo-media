@@ -316,6 +316,25 @@ export class BattleScene extends Phaser.Scene {
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
         }
+      } else if (this.level.theme.abyss && rnd.frac() < 0.9) {
+        if (rnd.frac() < 0.5) {
+          // a pale stalagmite cluster
+          deco.fillStyle(0x000000, 0.25);
+          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          for (const [dx, h, w] of [[-8, 18, 7], [2, 30, 9], [10, 14, 6]]) {
+            deco.fillStyle(0x5a5a80, 1);
+            deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+            deco.lineStyle(1.5, C.ink, 0.5);
+            deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+          }
+        } else {
+          // a glowing pool that breathes
+          const col = rnd.pick(this.level.theme.trees ?? [0x6ad8e8]);
+          deco.fillStyle(0x0a0c1a, 1);
+          deco.fillEllipse(p.x, p.y, 44, 20);
+          const glow = this.add.ellipse(p.x, p.y, 36, 14, col, 0.55).setDepth(1);
+          this.tweens.add({ targets: glow, alpha: 0.2, yoyo: true, repeat: -1, duration: rnd.between(1200, 2200), ease: 'Sine.easeInOut' });
+        }
       } else if (this.level.theme.gears && rnd.frac() < 0.9) {
         if (rnd.frac() < 0.6) {
           // a big brass gear half-sunk in the ground
@@ -1265,6 +1284,14 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'echo': {
+        sfx.trait('echo');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 26, 0xd8e8ff, 0.35).setDepth(2450);
+        this.tweens.add({ targets: ring, scale: 1.8, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Echo!', '#d8e8ff', 15);
+        this.enemyViews.get(ev.enemy.uid)?.sprite.setAlpha(0.6);
+        break;
+      }
       case 'charge': {
         sfx.trait('charge');
         this.particles.setParticleTint(0xf0f4f8);
@@ -1460,6 +1487,14 @@ export class BattleScene extends Phaser.Scene {
     // Cogjammer range: a faint dashed brass ring that turns as it rattles.
     if (!this.jamG) this.jamG = this.add.graphics().setDepth(5);
     this.jamG.clear();
+    for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.dim) continue;
+      // Dimlantern gloom: a soft dark disc with a violet rim
+      this.jamG.fillStyle(0x10081e, 0.22);
+      this.jamG.fillCircle(e.pos.x, e.pos.y, e.def.dim.radius);
+      this.jamG.lineStyle(2, 0x8a6ad8, 0.4);
+      this.jamG.strokeCircle(e.pos.x, e.pos.y, e.def.dim.radius);
+    }
     for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.jam) continue;
       const r = e.def.jam.radius;

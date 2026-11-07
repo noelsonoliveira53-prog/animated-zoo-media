@@ -304,6 +304,50 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'dimlantern': {
+        // lantern jelly: a translucent violet bell, trailing tendrils, a dark lantern glowing faintly inside
+        g.lineStyle(2, 0x8a6ad8, 0.9);
+        for (const tx of [-0.5, -0.2, 0.15, 0.45]) {
+          g.beginPath();
+          g.moveTo(cx + tx * r, cy + r * 0.3);
+          g.lineTo(cx + tx * r - r * 0.1, cy + r * 0.7);
+          g.lineTo(cx + tx * r + r * 0.05, cy + r * 1.05);
+          g.strokePath();
+        }
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 0.9);
+        g.beginPath();
+        g.arc(cx, cy + r * 0.3, r * 0.9, Math.PI, 0, false);
+        g.closePath();
+        g.fillPath();
+        g.strokePath();
+        g.fillStyle(0xffe08a, 0.35);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.42);
+        g.fillStyle(0x2a1a3a, 1);
+        g.fillRoundedRect(cx - r * 0.2, cy - r * 0.3, r * 0.4, r * 0.5, 3);
+        g.fillStyle(0xffd84a, 1);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.1);
+        g.fillStyle(0xffffff, 0.4);
+        g.fillEllipse(cx - r * 0.45, cy - r * 0.25, r * 0.25, r * 0.4);
+        break;
+      }
+      case 'echowisp': {
+        // echo wisp: a pale flame with a ghost of itself trailing behind
+        g.fillStyle(color, 0.35);
+        g.fillCircle(cx + r * 0.55, cy + r * 0.15, r * 0.55);
+        g.fillTriangle(cx + r * 0.1, cy, cx + r * 1.0, cy, cx + r * 0.55, cy - r * 0.9);
+        g.lineStyle(2, 0x6a7aa8, 1);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.2, r * 0.6);
+        g.fillTriangle(cx - r * 0.65, cy + r * 0.05, cx + r * 0.45, cy + r * 0.05, cx - r * 0.1, cy - r * 1.05);
+        g.strokeCircle(cx - r * 0.1, cy + r * 0.2, r * 0.6);
+        g.fillStyle(0x9ad8ff, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.25, r * 0.28);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.28, cy + r * 0.1, r * 0.07);
+        g.fillCircle(cx + r * 0.08, cy + r * 0.1, r * 0.07);
+        break;
+      }
       case 'grindmaw': {
         // engine titan: a riveted furnace body on piston legs, a glowing grate mouth, twin smokestacks and a big flywheel
         g.lineStyle(3, C.ink, 1);

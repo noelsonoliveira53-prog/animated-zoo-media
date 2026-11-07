@@ -62,10 +62,13 @@ export const THEMES: ThemeDef[] = [
   // Brasswork Hollows: clockwork staccato, square-wave pistons and a stepping minor figure.
   { id: 'brass', name: 'Brasswork', transpose: -2, tempo: 1.1, arpWave: 'square', leadWave: 'square',
     motif: [[12, 0, 1], [12, 2, 1], [15, 4, 2], [12, 6, 1], [17, 8, 2], [15, 10, 2], [14, 12, 2], [10, 14, 2], [12, 16, 4], [7, 20, 2], [10, 22, 2], [12, 24, 8]] },
+  // Starwell Abyss: slow, cavernous and twinkling, with wide falling intervals.
+  { id: 'abyss', name: 'Starwell', transpose: -4, tempo: 0.9, arpWave: 'sine', leadWave: 'triangle',
+    motif: [[24, 0, 4], [19, 4, 4], [22, 8, 6], [17, 14, 2], [15, 16, 4], [12, 20, 4], [10, 24, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

@@ -163,6 +163,7 @@ export type SimEvent =
   | { type: 'shift'; enemy: Enemy; scales: boolean }
   | { type: 'thorns'; pos: Vec2 }
   | { type: 'charge'; enemy: Enemy }
+  | { type: 'echo'; enemy: Enemy }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -1342,7 +1343,7 @@ export class BattleSim {
       if (t.cooldown > 0) continue;
       const stats = this.stats(t);
       if (stats.soldiers || stats.fireRate <= 0) continue;
-      const targets = this.pickTargets(t, stats.range, stats.multishot ?? 1);
+      const targets = this.pickTargets(t, stats.range * this.towerDim(t), stats.multishot ?? 1);
       if (!targets.length) {
         t.cooldown = 0;
         continue;
@@ -1391,6 +1392,17 @@ export class BattleSim {
       const j = e.def.jam;
       if (!j || !e.alive || e.underground) continue;
       if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= j.radius) f = Math.min(f, 1 - j.slow);
+    }
+    return f;
+  }
+
+  /** Dimlanterns cast gloom: the strongest one in range shrinks a shooting tower's reach (they don't stack). */
+  towerDim(t: Tower): number {
+    let f = 1;
+    for (const e of this.enemies) {
+      const d = e.def.dim;
+      if (!d || !e.alive || e.underground) continue;
+      if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= d.radius) f = Math.min(f, 1 - d.cut);
     }
     return f;
   }
@@ -1526,6 +1538,13 @@ export class BattleSim {
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
       if (e.def.glare) this.glareBurst(e);
+      if (e.def.echo && !e.revived) {
+        // Echo Wisp: re-forms once where it fell, weaker, paying no second bounty.
+        const r = this.spawn(e.def.id, e.path, e.dist);
+        r.hp = Math.round(r.maxHp * e.def.echo.hpFrac);
+        r.revived = true;
+        this.events.push({ type: 'echo', enemy: r });
+      }
       return;
     }
     this.checkPhases(e);

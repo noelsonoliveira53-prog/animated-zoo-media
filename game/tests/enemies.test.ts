@@ -512,3 +512,34 @@ describe('Rivetshell harden', () => {
     expect(sim.res(r).armor).toBe(h.max);
   });
 });
+
+describe('Starwell enemies', () => {
+  it('Dimlantern shrinks the range of shooting towers near it while alive', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 400, y: 160 }, { x: 1600, y: 160 }] };
+    const sim = new BattleSim(l2, null);
+    const near = sim.build(0, 'thornbow')!;
+    const far = sim.build(1, 'thornbow')!;
+    const d = sim.spawn('dimlantern', 0, 420);
+    expect(sim.towerDim(near)).toBeCloseTo(1 - d.def.dim!.cut);
+    expect(sim.towerDim(far)).toBe(1);
+    (sim as any).applyDamage(d, 99999);
+    expect(sim.towerDim(near)).toBe(1);
+  });
+
+  it('Echo Wisp re-forms once at partial health and pays no second bounty', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const w = sim.spawn('echowisp', 0, 400);
+    const c0 = sim.coins;
+    (sim as any).applyDamage(w, 9999);
+    const paid = sim.coins - c0;
+    expect(paid).toBeGreaterThan(0);
+    const echo = sim.enemies.filter((e) => e.alive && e.def.id === 'echowisp');
+    expect(echo.length).toBe(1);
+    expect(echo[0].hp).toBe(Math.round(echo[0].maxHp * w.def.echo!.hpFrac));
+    const c1 = sim.coins;
+    (sim as any).applyDamage(echo[0], 9999);
+    expect(sim.coins).toBe(c1);
+    expect(sim.enemies.filter((e) => e.alive && e.def.id === 'echowisp').length).toBe(0);
+  });
+});

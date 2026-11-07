@@ -91,6 +91,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.jam) tags.push(`Jams towers within ${e.jam.radius}px: ${Math.round(e.jam.slow * 100)}% slower fire`);
         if (e.charge) tags.push(`Bolts at ×${e.charge.speedMult} speed for ${e.charge.duration}s when hit (every ${e.charge.cooldown}s)`);
         if (e.harden) tags.push(`Hardens: +${Math.round(e.harden.perHit * 100)}% armor per hit, up to ${Math.round(e.harden.max * 100)}%`);
+        if (e.dim) tags.push(`Gloom: towers within ${e.dim.radius}px lose ${Math.round(e.dim.cut * 100)}% range`);
+        if (e.echo) tags.push(`Echoes: re-forms once at ${Math.round(e.echo.hpFrac * 100)}% health`);
         if (e.windborne) tags.push('Windborne: immune to every slow');
         if (e.regen) tags.push(`Regrows ${Math.round(e.regen.perSec * 100)}% health/s after ${e.regen.delay}s unhit`);
         if (e.splashResist) tags.push(`Resists ${Math.round(e.splashResist * 100)}% of splash damage`);

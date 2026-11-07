@@ -43,7 +43,7 @@ What's winning
 - Baby Animals (2D) holds 1:13 / 23.7% in its first views, the best 2D retention so far: babies are a strong topic.
 
 What to do more of
-- Phone-verify the channels so every 3D song gets its designed thumbnail (host face + topic object + 1-3 words). This is the biggest lever on CTR.
+- Designed thumbnails on every 3D song where allowed: Zoo, Bloop and Gizmo are now verified (Nov 7) and have custom thumbnails; Truck, Fruity and Moonbeam still need verification.
 - Number + friendly noun in 3D song titles too ("Meet 5 Safari Friends", "Count 5 Stars"), and the new hook formulas (question, command, transformation) going out today.
 - Zoo 3D songs every day (it gets 10x everyone else's reach); Baby Animals and Ocean are the next topics.
 - The chorus line and the host's face in the first 3 s; shorter songs (2:15-2:45).
@@ -53,6 +53,8 @@ What to do less of
 - Openings that spend the first 10-20 s on set-up; most viewers are gone by 0:22-0:26.
 - Planets/space as a song topic for now (Gizmo: 0.8% CTR on 264 impressions).
 
+
+Second run, Nov 7 ~9:30 AM ET (views check already done in the morning run; analytics lag a day, so no new numbers): scheduled Bloop "Bloop Turns Blue!" vrCoNEVpwpc (Nov 8 1:50 PM, custom thumbnail) and Fruity "Five Little Grapes Jumping on the Bed!" 5-uXLW4_RuY (Nov 8 2:20 PM, auto thumbnail, channel unverified). Truck, Gizmo, Zoo and Moonbeam have no to_upload 3D episodes for Nov 8 yet.
 
 ## 2026-11-06 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
 | Channel | Video | Type | Published | Views | Impr. | CTR | Avg view | % viewed | Likes |

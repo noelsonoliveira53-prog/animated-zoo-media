@@ -84,8 +84,17 @@ YouTube's API isn't reachable from the cloud workspace, so uploads go through St
    type "Nov 7, 2026" + Enter; focus+select the time input by script, type + Enter; read back; real-click Schedule (731, 808).
    Do NOT use studio-upload.js `fill()` for scheduled posts: it clicks PUBLIC and publishes immediately.
 5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
-   Nov 7: on unverified channels "Upload file" opens "To add custom thumbnails, verify your phone number" (Cancel it and move on).
-   Setting files on input#file-loader by script does nothing there either. Thumbnails resume once the channels are phone-verified.
+   **Verified channels (Nov 7, 2026, Noelson): The Animated Zoo, Bloop's Color Lab and Gizmo Explains are phone-verified.**
+   On those three, EVERY upload gets the full package before scheduling: custom thumbnail `brand/<channel>/thumb_<id>.png`
+   (1280x720, under 2 MB), title, searchable description, made for kids. Do it in the upload dialog's Details step:
+   `armThumb(path)` (same File + `HTMLInputElement.prototype.click` interception as the MP4), scroll `ytcp-thumbnail-uploader`
+   into view, then REAL-click its "Upload file" tile (the tile's left third). Setting files on input#file-loader by script does
+   nothing. Confirm an `img` with a `data:` src appears in the uploader before clicking Next. If it was missed, fix it after
+   scheduling on /video/<id>/edit (same click, then click `ytcp-button#save`; "Changes saved" toast).
+   Tiny Truck Town, Fruity Friends and Moonbeam Bedtime are NOT verified: "Upload file" opens "verify your phone number";
+   cancel it and schedule without a custom thumbnail.
+   Channel switching (Nov 7): if youtube.com/channel_switcher clicks stop sticking, use Studio's own avatar menu >
+   Switch account (avatar at about (758, 32) on a desktop-size pane), then pick the channel. That always worked.
    Nov 7 run (focused pane): execCommand worked; after "Select files" the date input in the open calendar has no offsetParent, so find it
    with `[...document.querySelectorAll('input')].filter(i=>/202\d/.test(i.value))` (no visibility filter), focus+select, type, Enter.
 

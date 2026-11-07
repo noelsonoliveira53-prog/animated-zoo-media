@@ -98,7 +98,8 @@
   "format": "3d_singalong",
   "duration": 150.0,
   "replaces": "ZrW2mf-oVr4",
-  "video_id": "6wAVI5JdqCg"
+  "video_id": "6wAVI5JdqCg",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "gizmo/gz3d_ep01.mp4",
@@ -123,7 +124,8 @@
   "format": "3d_singalong",
   "duration": 186.4,
   "video_id": "QitKjetUYqU",
-  "scheduled_on": "2026-11-05"
+  "scheduled_on": "2026-11-05",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "fruity/fr3d_ep02.mp4",
@@ -174,7 +176,8 @@
   "format": "3d_singalong",
   "duration": 180.0,
   "video_id": "gPL299G_wt4",
-  "scheduled_on": "2026-11-06"
+  "scheduled_on": "2026-11-06",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "moon/mb3d_ep01.mp4",
@@ -251,7 +254,7 @@
   "duration": 142.4,
   "video_id": "D2F8cq-JVlI",
   "scheduled_on": "2026-11-07",
-  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "gizmo/gz3d_ep02.mp4",
@@ -276,7 +279,8 @@
   "format": "3d_singalong",
   "duration": 165.0,
   "video_id": "cbOHkcFNEnI",
-  "scheduled_on": "2026-11-06"
+  "scheduled_on": "2026-11-06",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "fruity/fr3d_ep03.mp4",
@@ -328,11 +332,11 @@
   "duration": 170.0,
   "video_id": "yN64Pm3CugU",
   "scheduled_on": "2026-11-07",
-  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "moon/mb3d_ep02.mp4",
-  "title": "Count the Stars 🌙 Lullaby for Babies & Kids | Moonbeam",
+  "title": "Count the Stars \ud83c\udf19 Lullaby for Babies & Kids | Moonbeam",
   "description": "Count the Stars, a gentle lullaby for babies and kids. Count from 1 to 5 with Luna the sleepy owl as the stars twinkle and the moon smiles.\nSoft music box and piano, slow breathing, and a calm goodnight to help little ones fall asleep. Ages 0-6.\n\nLYRICS\nCount the stars and close your eyes,\nOne by one across the skies,\nTwinkle softly, shining bright,\nCount the stars and say goodnight.\nOne little star says hello,\nTwo little stars in a sleepy glow,\nThree little stars, yawn so wide,\nSnuggle up, warm inside.\nFour little stars, sparkle and blink,\nFive little stars, softly I think,\nMoon is smiling, round and wide,\nOwls and bunnies sleep inside.\nBreathe in slow, and breathe out slow,\nRest your arms and wiggle your toes,\nStars are suns so far away,\nThey'll shine again another day.\nTeddy's sleepy, lamb is too,\nBunny's dreaming, so are you,\nHush now, hush now, close your eyes,\nStars will twinkle in the skies.\nGoodnight, little stars. Goodnight.",
   "tags": [
    "lullaby for babies",
@@ -357,9 +361,32 @@
   "thumb_note": "custom thumbnail blocked: channel not phone-verified"
  },
  {
+  "file": "truck/tt3d_ep03.mp4",
+  "title": "Wheels on the Fire Truck! Kids Song | Tiny Truck Town",
+  "description": "The Wheels on the Fire Truck go round and round! A fire truck twist on the classic nursery rhyme, with Bolt and his truck friends.\nSing about the siren, flashing lights, ladder and hose, roll your arms like wheels and say thank you to firefighters. Ages 2-6.\n\nLYRICS\nThe wheels on the fire truck go round\nand round\nRound and round\nThe wheels on the fire truck\nAll through the town\nThe wheels on the fire truck go round and round,\nRound and round, round and round!\nAll through the town!\nThe siren on the fire truck goes wee-oo, wee-oo,\nWee-oo, wee-oo, wee-oo, wee-oo!\nThe lights on the fire truck go flash, flash, flash,\nThe ladder on the fire truck goes up and down,\nUp and down, up and down!\nThe hose on the fire truck goes whoosh, whoosh, whoosh,\nRoll your arms like wheels, round and round!\nReach up high like a ladder, up, up, up!\nSpray like a hose, whoosh, whoosh, whoosh!\nHonk like a horn, beep, beep, beep!\nThe firefighters on the truck say, we can help!\nWe can help, we can help!\nThe friends in the town say, thank you, thank you,\nRound and round! Bye-bye, fire truck!",
+  "tags": [
+   "wheels on the fire truck",
+   "wheels on the bus",
+   "fire truck song",
+   "nursery rhymes",
+   "trucks for kids",
+   "kids songs",
+   "vehicle songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ],
+  "date": "2026-11-08",
+  "time": "1:40 PM",
+  "thumb": "brand/truck/thumb_tt3d_ep03.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
+ },
+ {
   "file": "bloop/bl3d_ep03.mp4",
   "title": "Bloop Turns Blue! Blue Color Song for Kids | Part 1",
-  "description": "The Blue Color Song for kids! Bloop the jelly blob turns blue and finds blue things everywhere: the sky, the ocean, blueberries and a big blue whale.\nKids learn the color blue and simple color mixing (blue + yellow = green, blue + red = purple). Part 1 of the Bloop color series. Ages 2-5.\n\nLYRICS\nBlue, blue, I'm turning blue!\nBloop is blue, and you can too!\nBlue sky, blue sea, blue for me,\nBlue, blue, find blue with me!\nLook up high, the sky is blue,\nFluffy clouds are floating through!\nLook down low, the ocean's blue,\nFishies swim and splash with you!\nBlueberries, small and round,\nPick them up from the ground!\nA big blue whale, the biggest one,\nSings and swims and has some fun!\nPoint to something blue!\nTouch your toes, one, two!\nClap your hands, clap, clap!\nJump up high, and back!\nBlue and yellow make green, you see,\nBlue and red make purple, whee!\nBlue is cool and calm and bright,\nBlue, blue, I love you, goodnight!\nBlue, blue! See you next time!\nblue, I'm turning blue\nBlue is blue\nAnd you can too\nBlue sky, blue sea, blue for me\nBlue, blue, find blue with me\nBlue, blue, see you next time",
+  "description": "The Blue Color Song for kids! Bloop the jelly blob turns blue and finds blue things everywhere: the sky, the ocean, blueberries and a big blue whale.\nKids learn the color blue and simple color mixing (blue + yellow = green, blue + red = purple). Part 1 of the Bloop color series. Ages 2-5.\n\nLYRICS\nBlue, blue, I'm turning blue!\nBloop is blue, and you can too!\nBlue sky, blue sea, blue for me,\nBlue, blue, find blue with me!\nLook up high, the sky is blue,\nFluffy clouds are floating through!\nLook down low, the ocean's blue,\nFishies swim and splash with you!\nBlueberries, small and round,\nPick them up from the ground!\nA big blue whale, the biggest one,\nSings and swims and has some fun!\nPoint to something blue!\nTouch your toes, one, two!\nClap your hands, clap, clap!\nJump up high, and back!\nBlue and yellow make green, you see,\nBlue and red make purple, whee!\nBlue is cool and calm and bright,\nBlue, blue, I love you, goodnight!\nBlue, blue! See you next time!",
   "tags": [
    "blue color song",
    "learn colors",
@@ -375,9 +402,33 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep03.png",
   "made_for_kids": true,
+  "status": "scheduled",
+  "format": "3d_singalong",
+  "duration": 150.0,
+  "video_id": "vrCoNEVpwpc",
+  "thumb_set": true
+ },
+ {
+  "file": "gizmo/gz3d_ep03.mp4",
+  "title": "Sink or Float? Science Song for Kids with Gizmo the Robot",
+  "description": "Sink or float? Sing along with Gizmo the robot and test a rubber duck, a rock, a leaf, a coin, an apple and a spoon.\nA first science experiment song: kids learn that floating things push water away and have air inside. Act it out: float like a boat, sink like a rock! Ages 3-6.\n\nLYRICS\nSink or float? Sink or float?\nWill it sink like a rock or float like a boat?\nDrop it in and take a look,\nSink or float? Let's find out!\nA rubber duck goes in, plop, plop,\nIt floats right up on the very top!\nA heavy rock goes in, kerplunk,\nDown, down, down, the rock has sunk!\nA leaf is light, it floats away,\nA coin goes down, it sinks today!\nAn apple bobs, it floats, hooray,\nA spoon sinks down, it will not stay!\nThings that float push water away,\nAir inside helps them stay!\nHeavy, small and packed in tight,\nThose things sink, that's right!\nFloat like a boat, arms out wide!\nSink like a rock, squat down low!\nFloat back up, stand up tall!\nSplash, splash, splash, that's all!\nSink or float! Bye-bye, scientists!\nSink or float, bye-bye, scientist\nType Subscribe",
+  "tags": [
+   "sink or float",
+   "science for kids",
+   "science song",
+   "experiments for kids",
+   "preschool science",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ],
+  "date": "2026-11-08",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep03.png",
+  "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 157.4
  },
  {
   "file": "fruity/fr3d_ep04.mp4",
@@ -397,6 +448,76 @@
   "date": "2026-11-08",
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep04.png",
+  "made_for_kids": true,
+  "status": "scheduled",
+  "format": "3d_singalong",
+  "duration": 150.0,
+  "video_id": "5-uXLW4_RuY",
+  "thumb_set": false
+ },
+ {
+  "file": "zoo3d_ep03.mp4",
+  "title": "Animal Sounds Song for Kids! Roar, Toot, Neigh with Milo",
+  "description": "What does the animal say? Sing the Animal Sounds Song with Milo on the savanna: the lion roars, the elephant toots, the zebra brays and the hippo honks.\nFun fact: giraffes are very quiet, and scientists think they hum at night! Kids copy every sound. Ages 2-6.\n\nLYRICS\nWhat does the animal say? Let's play!\nListen close and sing the sound today!\nRoar and toot and neigh, hooray!\nWhat does the animal say?\nThe lion says roar, roar, roar!\nRoar so loud, the king of the savanna floor!\nRoar, roar, roar,\nCan you roar some more?\nThe elephant says toot, toot, toot!\nWith a long gray trunk like a big flute!\nToot, toot, toot,\nElephants are cute!\nThe giraffe is very quiet, shh, shh, shh,\nShe hums so soft, hmm, hmm, hmm!\nHum, hum, hum,\nGiraffes hum, yum!\nThe zebra says neigh, bray, bray!\nLike a little horse that loves to play!\nThe hippo says honk, grunt, honk,\nSplash in the river, plonk, plonk, plonk!\nRoar like a lion, roar!\nToot like an elephant, toot!\nNeigh like a zebra, neigh!\nHonk like a hippo, honk!\nRoar, toot, neigh, honk! Bye-bye, friends!\nLet's play Listen close and sing the sound\ntoday Roar and toot and they will rain\nRoar! Toot! Nay!\nHonk! Bye-bye friends!\nHonk!",
+  "tags": [
+   "animal sounds song",
+   "animal sounds for kids",
+   "what does the animal say",
+   "safari animals",
+   "zoo animals for kids",
+   "kids songs",
+   "nursery rhymes",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-08",
+  "time": "4:00 PM",
+  "thumb": "brand/zoo/thumb_zoo3d_ep03.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 170.0
+ },
+ {
+  "file": "moon/mb3d_ep03.mp4",
+  "title": "Count the Sleepy Sheep \ud83c\udf19 Lullaby for Babies | Moonbeam",
+  "description": "Count the Sleepy Sheep, a calm counting lullaby for babies and kids. Count 1 to 5 sleepy sheep with Luna the owl, Teddy, Lamb and Bunny.\nSoft music box and piano with slow breathing to help little ones fall asleep. Ages 0-6.\n\nLYRICS\nCount the sleepy sheep, one, two, three,\nJumping softly over the fence for me,\nClose your eyes and count with me,\nSleepy sheep, sleepy sheep.\nOne little sheep jumps over the hill,\nTwo little sheep, so soft and still,\nThree little sheep yawn and say,\nGoodnight, goodnight, the end of day.\nFour little sheep in the silver light,\nFive little sheep, cuddled up tight,\nLuna the owl says hoo, hoo, hoo,\nThe sheep are sleepy, and so are you.\nBreathe in, one, and breathe out, two,\nWiggle your toes, and stretch them too,\nFluffy pillow, cozy bed,\nRest your sleepy little head.\nTeddy's counting, lamb counts too,\nBunny's counting, just like you,\nOne, two, three, four, five, so deep,\nNow it's time to fall asleep.\nSleepy sheep, goodnight. Goodnight.",
+  "tags": [
+   "lullaby for babies",
+   "counting sheep",
+   "sleepy sheep song",
+   "bedtime song",
+   "sleep music for kids",
+   "goodnight song",
+   "baby sleep",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ],
+  "date": "2026-11-08",
+  "time": "7:00 PM",
+  "thumb": "brand/moon/thumb_mb3d_ep03.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 170.0
+ },
+ {
+  "file": "bloop/bl3d_ep04.mp4",
+  "title": "Red + Yellow = Orange?! Bloop Mixes Colors | Kids Song",
+  "description": "Red + yellow = orange?! Bloop the jelly blob mixes colors and changes color every time. A color mixing song for kids.\nKids learn the secondary colors: red + yellow = orange, blue + yellow = green, red + blue = purple, then stir, shake and splash along. Ages 2-6.\n\nLYRICS\nMix, mix, mix the colors!\nSwirl them round and see!\nTwo colors make a new one,\nMix the colors with me!\nRed and yellow, swirl, swirl, swirl,\nWhat do we get? Orange, hooray!\nOrange like a pumpkin, orange like the sun,\nMixing colors is so much fun!\nBlue and yellow, swirl, swirl, swirl,\nWhat do we get? Green, hooray!\nGreen like a froggy, green like a tree,\nGreen, green, green for me!\nStir, stir, stir the paint!\nShake, shake, shake it up!\nSplash, splash, splash, hooray!\nColors everywhere today!\nRed and blue, swirl, swirl, swirl,\nWhat do we get? Purple, hooray!\nPurple like grapes, purple like a plum,\nBloop is purple, yum, yum, yum!\nOrange, green and purple! Bye-bye!\nmix, mix the colors!\nOrange,\ngreen and purple!\nbye bye!\nMix,",
+  "tags": [
+   "color mixing song",
+   "mixing colors for kids",
+   "learn colors",
+   "primary colors",
+   "red yellow orange",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-09",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep04.png",
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_singalong",

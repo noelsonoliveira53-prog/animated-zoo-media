@@ -350,3 +350,33 @@ describe('glarefly', () => {
     expect(far.frozen ?? 0).toBe(0);
   });
 });
+
+describe('Galecrest enemies', () => {
+  it('Galehound (windborne) ignores every slow; others are slowed', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const hound = sim.spawn('galehound', 0, 400);
+    const mud = sim.spawn('mudling', 0, 400);
+    for (const e of [hound, mud]) sim.slow(e, 0.3, 2);
+    expect(hound.slowFactor).toBe(1);
+    expect(mud.slowFactor).toBe(0.3);
+  });
+
+  it('Cloudram regrows only after going unhit for its delay, and never above max', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const ram = sim.spawn('cloudram', 0, 400);
+    ram.def = { ...ram.def, speed: 0 };
+    (sim as any).applyDamage(ram, ram.maxHp / 2);
+    const half = ram.hp;
+    for (let i = 0; i < 60; i++) sim.update(1 / 60); // 1 s: still inside the delay
+    expect(ram.hp).toBe(half);
+    for (let i = 0; i < 120; i++) sim.update(1 / 60); // 2 more s: regrowing
+    expect(ram.hp).toBeGreaterThan(half);
+    expect(sim.regenerating(ram)).toBe(true);
+    (sim as any).applyDamage(ram, 1); // a hit resets the timer
+    expect(sim.regenerating(ram)).toBe(false);
+    for (let i = 0; i < 60 * 30; i++) sim.update(1 / 60);
+    expect(ram.hp).toBe(ram.maxHp);
+  });
+});

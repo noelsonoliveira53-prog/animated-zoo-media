@@ -297,6 +297,59 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.3, cy - r * 0.35, r * 0.09);
         break;
       }
+      case 'galehound': {
+        // lean cliff hound: long low body, swept-back ears, wind streaks trailing behind
+        g.lineStyle(2, 0xffffff, 0.8);
+        for (let k = 0; k < 3; k++) g.lineBetween(cx + r * 1.0, cy - r * 0.4 + k * r * 0.4, cx + r * 1.7, cy - r * 0.5 + k * r * 0.4);
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.6, -0.2, 0.3, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r - r * 0.25, cy + r * 1.0);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
+        g.strokeCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
+        g.fillStyle(0x6a8aa8, 1);
+        g.fillTriangle(cx - r * 0.75, cy - r * 0.65, cx - r * 0.2, cy - r * 0.95, cx - r * 0.5, cy - r * 0.45);
+        g.strokeTriangle(cx - r * 0.75, cy - r * 0.65, cx - r * 0.2, cy - r * 0.95, cx - r * 0.5, cy - r * 0.45);
+        g.fillStyle(0xffffff, 0.6);
+        g.fillEllipse(cx + r * 0.1, cy - r * 0.15, r * 1.1, r * 0.25);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.38, r * 0.1);
+        g.fillCircle(cx - r * 1.3, cy - r * 0.22, r * 0.08);
+        break;
+      }
+      case 'cloudram': {
+        // storm-fleece ram: a puffy cloud body, dark face, curled horns, a spark in the fleece
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.5, 0.5]) g.lineBetween(cx + lx * r, cy + r * 0.5, cx + lx * r, cy + r * 1.05);
+        g.fillStyle(color, 1);
+        for (const [dx, dy, rr] of [[-0.5, 0.1, 0.55], [0.45, 0.1, 0.55], [0, -0.3, 0.6], [0, 0.35, 0.55], [-0.6, -0.35, 0.4], [0.6, -0.35, 0.4]]) {
+          g.fillCircle(cx + dx * r, cy + dy * r, rr * r);
+          g.strokeCircle(cx + dx * r, cy + dy * r, rr * r);
+        }
+        g.fillStyle(color, 1);
+        for (const [dx, dy, rr] of [[-0.5, 0.1, 0.5], [0.45, 0.1, 0.5], [0, -0.3, 0.55], [0, 0.35, 0.5], [-0.6, -0.35, 0.35], [0.6, -0.35, 0.35]]) g.fillCircle(cx + dx * r, cy + dy * r, rr * r);
+        g.fillStyle(0xb8c4d4, 1);
+        g.fillCircle(cx + r * 0.35, cy + r * 0.35, r * 0.3);
+        g.fillStyle(0x4a4a5a, 1);
+        g.fillEllipse(cx, cy - r * 0.05, r * 0.7, r * 0.85);
+        g.strokeEllipse(cx, cy - r * 0.05, r * 0.7, r * 0.85);
+        g.lineStyle(4, 0xc8a878, 1);
+        for (const sx of [-1, 1]) {
+          g.beginPath();
+          g.arc(cx + sx * r * 0.5, cy - r * 0.35, r * 0.3, sx > 0 ? -2.2 : -0.9, sx > 0 ? 1.4 : 2.6, sx < 0);
+          g.strokePath();
+        }
+        g.fillStyle(0xffe066, 1);
+        g.fillTriangle(cx + r * 0.55, cy - r * 0.95, cx + r * 0.75, cy - r * 0.95, cx + r * 0.6, cy - r * 0.65);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.15, r * 0.1);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.15, r * 0.1);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.13, r * 0.05);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.13, r * 0.05);
+        break;
+      }
       case 'mirrorback': {
         // polished beetle: a bright reflective shell with a highlight band
         g.fillStyle(shade, 1);

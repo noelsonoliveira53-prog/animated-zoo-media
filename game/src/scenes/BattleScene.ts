@@ -279,6 +279,20 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
     }
+    if (this.level.theme.gale) {
+      // low clouds drifting past the cliffs, west to east, then wrapping round
+      for (let i = 0; i < 5; i++) {
+        const cloud = this.add.graphics().setDepth(0.5).setAlpha(0.4);
+        cloud.fillStyle(0xffffff, 1);
+        for (const [dx, dy, r] of [[0, 0, 26], [-26, 6, 18], [26, 6, 20], [10, -12, 18]]) cloud.fillCircle(dx, dy, r);
+        cloud.setPosition(rnd.between(0, GAME_W), rnd.between(110, GAME_H - 110));
+        const speed = rnd.between(14, 26);
+        this.tweens.add({ targets: cloud, x: GAME_W + 80, duration: ((GAME_W + 80 - cloud.x) / speed) * 1000, onComplete: () => {
+          cloud.x = -80;
+          this.tweens.add({ targets: cloud, x: GAME_W + 80, duration: ((GAME_W + 160) / speed) * 1000, repeat: -1 });
+        } });
+      }
+    }
     // decorations: trees & flowers away from roads and slots
     const deco = this.add.graphics().setDepth(1);
     for (let i = 0; i < 60; i++) {
@@ -298,6 +312,31 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.gale && rnd.frac() < 0.55) {
+        if (rnd.frac() < 0.7) {
+          // wind-bent pine: tiers swept toward the east
+          const col = rnd.pick(this.level.theme.trees ?? [0x4a6a5a]);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x + 4, p.y + 4, 36, 10);
+          deco.fillStyle(0x6b4a2b, 1);
+          deco.fillRect(p.x - 3, p.y - 10, 6, 14);
+          for (const [dy, w, lean] of [[-6, 34, 8], [-20, 26, 10], [-32, 18, 12]]) {
+            deco.fillStyle(col, 1);
+            deco.fillTriangle(p.x - w / 2, p.y + dy, p.x + w / 2 + lean, p.y + dy, p.x + lean, p.y + dy - 18);
+            deco.lineStyle(1.5, C.ink, 0.5);
+            deco.strokeTriangle(p.x - w / 2, p.y + dy, p.x + w / 2 + lean, p.y + dy, p.x + lean, p.y + dy - 18);
+          }
+        } else {
+          // stone cairn
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 28, 9);
+          for (const [dy, r] of [[0, 10], [-13, 7.5], [-23, 5]]) {
+            deco.fillStyle(0x9a9aa2, 1);
+            deco.fillEllipse(p.x, p.y + dy, r * 2.2, r * 1.5);
+            deco.lineStyle(1.5, C.ink, 0.5);
+            deco.strokeEllipse(p.x, p.y + dy, r * 2.2, r * 1.5);
+          }
         }
       } else if (this.level.theme.shrooms && rnd.frac() < 0.5) {
         // giant duskcap mushrooms with glowing spots
@@ -1301,6 +1340,11 @@ export class BattleScene extends Phaser.Scene {
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
       else if (e.hasteTime <= 0 && v.sprite.tintTopLeft === 0xffc0e8) v.sprite.clearTint();
+      if (this.sim.regenerating(e) && Math.random() < dt * 5) {
+        // Fleece knitting back: little green pluses drift up off it.
+        const plus = this.add.text(e.pos.x + Phaser.Math.Between(-10, 10), e.pos.y - 18, '+', textStyle(16, '#8fe86a')).setOrigin(0.5).setDepth(2500);
+        this.tweens.add({ targets: plus, y: plus.y - 22, alpha: 0, duration: 650, onComplete: () => plus.destroy() });
+      }
       if (e.def.veil) {
         // Veiled: a faint shimmer until a tower is close enough to spot it.
         const veil = e.def.veil;

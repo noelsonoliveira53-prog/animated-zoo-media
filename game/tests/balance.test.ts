@@ -40,3 +40,12 @@ describe('campaign levels 3+', () => {
     }
   });
 });
+
+describe('autoplay determinism', () => {
+  it('replays a Fen run exactly for the same seed (crit rolls are seeded)', () => {
+    const fen = STRATEGIES.find((s) => s.hero === 'fen')!;
+    const a = playLevel(LEVELS[3], fen, 5);
+    const b = playLevel(LEVELS[3], fen, 5);
+    expect(b).toEqual(a);
+  });
+});

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **60** (next balance pass at iteration 65)
+Iteration counter: **61** (next balance pass at iteration 65)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -461,12 +461,27 @@ Iteration counter: **60** (next balance pass at iteration 65)
   Grotto had a wall at waves 6–8 (10 Shellbacks under coral + 20 Gnats, then Splotches) that killed half of expert runs
   before the boss; trimmed those two waves and raised hpMult 2.2 → 2.55 so the boss is the real test. Heart of the
   Emberdeep hpMult 1.06 → 1.03 (casual was 17–25%). Screenshot `60.png` (Saltjaw fight).
+- [x] **Iter 61 — Region 7 opens: The Galecrest Aeries.** Windswept cliffs above the clouds. Two new enemy mechanics
+  (32 enemies): **Galehound** (`windborne`: immune to every slow; all slows now go through one `sim.slow()` helper) and
+  **Cloudram** (`regen`: once unhit for 2 s it regrows 6% max health per second, shown by drifting green pluses).
+  Level 31 **Windgap Ledge** (west + north roads merging into an 800 px tail, 12 pads, 15 waves, hpMult 1.7), a `GALE`
+  theme (wind-bent pines, stone cairns, drifting clouds), a sky-blue world-map style and a soaring music theme. Endless
+  adds both enemies from wave 28. Field Guide tags for both traits.
+  **Bug fixes:** (1) battle music was off by one region for regions 4–6 (Duskcap played the Shoals tune, the Shoals
+  played Shardglass, Shardglass played Duskcap): `themeForRegion` indexed the THEMES list, which isn't in region order;
+  it now uses an explicit `REGION_THEMES` list, and a test checks each region's theme matches its flag. (2) Fen's crit
+  used `Math.random()`, so autoplay "seeds" didn't replay and balance numbers were noisy (casual on Windgap Ledge read
+  38% one run and 100% the next). The sim now takes an optional `random` source; `playLevel` passes a seeded one; a
+  test checks the same seed replays exactly. Browser check `scripts/gale-check.mjs`. 149 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
+1. Region 7 level 32 (+ a third Galecrest enemy, e.g. a flyer that rides gusts).
+2. Region 7 levels 33–34.
+3. Region 7 finale (level 35) with a Galecrest boss.
+4. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
 
 ## Known Bugs
 - (none known)
@@ -479,6 +494,9 @@ Iteration counter: **60** (next balance pass at iteration 65)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 61** (deterministic sim, 12 seeds): 31 Windgap Ledge 100/92/25 at hpMult 1.7 (2.2 was 75/58/0).
+Galehounds were the main leak; Cloudrams on the north road second.
+
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·
 9 Rimewood 100/100/83 · 10 Frostpeak 83/83/67 · 11 Ashfall 83/100/83 · 12 Cinder 100/83/50 · 13 Smoulder 100/83/100 ·

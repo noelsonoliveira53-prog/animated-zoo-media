@@ -8,6 +8,7 @@ const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0
 const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
 const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
 const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
+const GALE = { grass: 0x9cbca0, grassDark: 0x88a890, road: 0xd8d2c4, roadEdge: 0xb0a898, trees: [0x4a6a5a, 0x5f8270, 0x3f5f50], gale: true };
 const GLASS = { grass: 0x8a7aa8, grassDark: 0x7a6a98, road: 0xc8b8d8, roadEdge: 0xa898c0, trees: [0x9ad8f0, 0xc0a0f0, 0x80e8d0], crystals: true };
 const FEN = { grass: 0x4f8a52, grassDark: 0x3f7446, road: 0x9c8a62, roadEdge: 0x7d6c48 };
 
@@ -1593,6 +1594,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'shardskipper', count: 20, interval: 0.45 }, { enemy: 'mirrorback', count: 8, interval: 1.5, path: 1, delay: 2 }, { enemy: 'reefwarden', count: 4, interval: 2.4, delay: 6 }] },
       { groups: [{ enemy: 'kaleidrax', count: 1, interval: 1, delay: 8 }, { enemy: 'mirrorback', count: 6, interval: 1.8, path: 1 }, { enemy: 'glarefly', count: 8, interval: 1, path: 1, delay: 10 }, { enemy: 'thornhog', count: 8, interval: 0.9 }] },
     ],
+  },  {
+    id: 'l31',
+    name: 'Windgap Ledge',
+    blurb: 'Above the clouds the wind never stops. Hounds run with it and rams wear it like wool. Two cliff paths meet at the gap.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.7,
+    startCoins: 900,
+    lives: 20,
+    theme: GALE,
+    paths: [
+      [{ x: -40, y: 300 }, { x: 300, y: 300 }, { x: 300, y: 560 }, { x: 640, y: 560 }, { x: 640, y: 380 }, { x: 1000, y: 380 }, { x: 1000, y: 260 }, { x: 1320, y: 260 }],
+      [{ x: 560, y: -40 }, { x: 560, y: 200 }, { x: 820, y: 200 }, { x: 820, y: 380 }, { x: 1000, y: 380 }, { x: 1000, y: 260 }, { x: 1320, y: 260 }],
+    ],
+    slots: [
+      { x: 160, y: 400 },
+      { x: 200, y: 200 },
+      { x: 400, y: 440 },
+      { x: 470, y: 660 },
+      { x: 540, y: 320 },
+      { x: 740, y: 470 },
+      { x: 460, y: 110 },
+      { x: 680, y: 100 },
+      { x: 920, y: 290 },
+      { x: 900, y: 480 },
+      { x: 1100, y: 360 },
+      { x: 1180, y: 160 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.6 }, { enemy: 'galehound', count: 6, interval: 1, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'galehound', count: 12, interval: 0.7 }, { enemy: 'reedguard', count: 6, interval: 1.2, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'cloudram', count: 3, interval: 3 }, { enemy: 'skitter', count: 12, interval: 0.45, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'gullwing', count: 10, interval: 0.7, path: 1 }, { enemy: 'galehound', count: 10, interval: 0.6, delay: 3 }] },
+      { groups: [{ enemy: 'cloudram', count: 5, interval: 2.4 }, { enemy: 'bogmender', count: 2, interval: 3, delay: 3 }, { enemy: 'galehound', count: 8, interval: 0.6, path: 1, delay: 5 }] },
+      { groups: [{ enemy: 'galehound', count: 16, interval: 0.45 }, { enemy: 'glarefly', count: 8, interval: 0.9, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'cloudram', count: 6, interval: 2.2, path: 1 }, { enemy: 'shellback', count: 6, interval: 1.4, delay: 2 }] },
+      { groups: [{ enemy: 'shardskipper', count: 12, interval: 0.6 }, { enemy: 'galehound', count: 12, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 3 }, { enemy: 'cloudram', count: 5, interval: 2.2, path: 1, delay: 2 }, { enemy: 'gnat', count: 16, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'galehound', count: 22, interval: 0.35 }, { enemy: 'mirrorback', count: 4, interval: 2, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'cloudram', count: 8, interval: 1.8 }, { enemy: 'reefwarden', count: 2, interval: 3, delay: 2 }, { enemy: 'gullwing', count: 14, interval: 0.5, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'thornhog', count: 8, interval: 0.9 }, { enemy: 'galehound', count: 14, interval: 0.45, path: 1, delay: 3 }, { enemy: 'cloudram', count: 4, interval: 2.4, delay: 8 }] },
+      { groups: [{ enemy: 'rootrager', count: 3, interval: 3.2 }, { enemy: 'cloudram', count: 8, interval: 1.8, path: 1, delay: 2 }, { enemy: 'glarefly', count: 10, interval: 0.7, delay: 6 }] },
+      { groups: [{ enemy: 'galehound', count: 26, interval: 0.3 }, { enemy: 'bogbrute', count: 4, interval: 3, path: 1, delay: 2 }, { enemy: 'shardskipper', count: 10, interval: 0.6, delay: 8 }] },
+      { groups: [{ enemy: 'cloudram', count: 10, interval: 1.6 }, { enemy: 'galehound', count: 20, interval: 0.4, path: 1, delay: 2 }, { enemy: 'mirrorback', count: 5, interval: 2, delay: 8 }, { enemy: 'gullwing', count: 16, interval: 0.45, path: 1, delay: 10 }] },
+    ],
   },
 ];
 
@@ -1616,6 +1661,7 @@ export interface RegionDef {
   dusk?: boolean;
   shoal?: boolean;
   glass?: boolean;
+  gale?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -1625,6 +1671,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Duskcap Weald', first: 15, count: 5, dusk: true },
   { name: 'The Saltmarrow Shoals', first: 20, count: 5, shoal: true },
   { name: 'The Shardglass Barrens', first: 25, count: 5, glass: true },
+  { name: 'The Galecrest Aeries', first: 30, count: 5, gale: true },
 ];
 
 export function regionOf(levelIndex: number): number {

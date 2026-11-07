@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { motifAt, MOODS, resolveMood, STINGERS, stingerSeconds, THEMES, themeById, themeForRegion } from '../src/data/musicThemes';
+import { REGION_THEMES, motifAt, MOODS, resolveMood, STINGERS, stingerSeconds, THEMES, themeById, themeForRegion } from '../src/data/musicThemes';
 import { REGIONS } from '../src/data/levels';
 
 describe('music themes', () => {
@@ -8,10 +8,15 @@ describe('music themes', () => {
     expect(new Set(ids).size).toBe(REGIONS.length);
     expect(ids).not.toContain('home');
   });
+  it("each region plays its own region's theme, not a neighbour's", () => {
+    const flag = (r: (typeof REGIONS)[number]) => (r.gale ? 'gale' : r.glass ? 'glass' : r.shoal ? 'shoal' : r.dusk ? 'dusk' : r.ember ? 'ember' : r.snow ? 'frost' : 'grove');
+    REGIONS.forEach((reg, r) => expect(themeForRegion(r).id).toBe(flag(reg)));
+    expect(REGION_THEMES.length).toBe(REGIONS.length);
+  });
   it('unknown ids and regions fall back safely', () => {
     expect(themeById('nope').id).toBe('home');
-    expect(themeForRegion(99).id).toBe(THEMES[THEMES.length - 1].id);
-    expect(themeForRegion(-1).id).toBe(THEMES[1].id);
+    expect(themeForRegion(99).id).toBe(REGION_THEMES[REGION_THEMES.length - 1]);
+    expect(themeForRegion(-1).id).toBe('grove');
   });
   it('motifs fit inside their two bars and play each note once per cycle', () => {
     for (const t of THEMES) {

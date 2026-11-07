@@ -41,6 +41,7 @@ export interface Enemy {
   landed: boolean; // swooping flyers spend part of their cycle on the ground
   swoopCd: number;
   blinkCd: number;
+  sinceHit: number; // seconds since it last took damage (regen enemies heal once this passes their delay)
 }
 
 export interface Soldier {
@@ -212,12 +213,16 @@ export class BattleSim {
   /** Multiplier on Grove Call Rangers' hp and damage (from the village Ranger Lodge). */
   rangerMult = 1;
 
+  /** Source of chance (crit rolls). Headless runs pass a seeded one so each seed replays exactly. */
+  random: () => number = Math.random;
+
   constructor(
     level: LevelDef,
     heroId: string | null = null,
-    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number; mods?: Modifiers } = {},
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
   ) {
     this.level = level;
+    if (opts.random) this.random = opts.random;
     this.mods = opts.mods ?? NO_MODS;
     if (this.mods.noHero) heroId = null;
     this.towerDamageMult = opts.towerDamageMult ?? 1;
@@ -311,8 +316,7 @@ export class BattleSim {
       const hits = this.enemies.filter((e) => e.alive && !e.underground && !this.airborne(e) && Math.hypot(e.pos.x - pos.x, e.pos.y - pos.y) <= radius + e.def.radius);
       for (const e of hits) {
         if (def.slow) {
-          e.slowFactor = Math.min(e.slowFactor, def.slow.factor);
-          e.slowTime = Math.max(e.slowTime, def.slow.duration);
+          this.slow(e, def.slow.factor, def.slow.duration);
         }
         this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)));
       }
@@ -369,8 +373,7 @@ export class BattleSim {
     }
     for (const e of pool) {
       if (sk.slow) {
-        e.slowFactor = Math.min(e.slowFactor, sk.slow.factor);
-        e.slowTime = Math.max(e.slowTime, sk.slow.duration);
+        this.slow(e, sk.slow.factor, sk.slow.duration);
       }
       this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)));
     }
@@ -524,7 +527,7 @@ export class BattleSim {
   private heroHitDamage(): number {
     const h = this.hero!;
     let dmg = this.heroStat(h.def.attack.damage);
-    if (h.def.passive.kind === 'crit' && Math.random() < h.def.passive.chance) dmg *= h.def.passive.mult;
+    if (h.def.passive.kind === 'crit' && this.random() < h.def.passive.chance) dmg *= h.def.passive.mult;
     return dmg;
   }
 
@@ -827,6 +830,7 @@ export class BattleSim {
       landed: false,
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
+      sinceHit: 0,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -844,6 +848,8 @@ export class BattleSim {
         e.hasteTime -= dt;
         if (e.hasteTime <= 0) e.hasteMult = 1;
       }
+      e.sinceHit += dt;
+      if (this.regenerating(e)) e.hp = Math.min(e.maxHp, e.hp + e.maxHp * e.def.regen!.perSec * dt);
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.def.chill) this.tickChill(e, dt);
       if (e.def.burrow) this.tickBurrow(e, dt);
@@ -1330,10 +1336,21 @@ export class BattleSim {
     }
   }
 
+  /** Every slow goes through here, so windborne enemies can shrug them all off. */
+  slow(e: Enemy, factor: number, duration: number): void {
+    if (e.def.windborne) return;
+    e.slowFactor = Math.min(e.slowFactor, factor);
+    e.slowTime = Math.max(e.slowTime, duration);
+  }
+
+  /** True while a regenerating enemy is knitting itself back together. */
+  regenerating(e: Enemy): boolean {
+    return !!e.def.regen && e.alive && e.sinceHit >= e.def.regen.delay && e.hp < e.maxHp;
+  }
+
   private damage(e: Enemy, p: Projectile, mult = 1): void {
     if (p.slow) {
-      e.slowFactor = Math.min(e.slowFactor, p.slow.factor);
-      e.slowTime = Math.max(e.slowTime, p.slow.duration);
+      this.slow(e, p.slow.factor, p.slow.duration);
     }
     const armor = e.armor * (1 - p.pierce);
     this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.def.magicResist }));
@@ -1377,6 +1394,7 @@ export class BattleSim {
       if (e.shield <= 0) this.events.push({ type: 'shieldBreak', enemy: e });
     }
     e.hp -= left;
+    if (dmg > 0) e.sinceHit = 0;
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {

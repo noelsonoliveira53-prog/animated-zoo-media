@@ -53,12 +53,17 @@ export const THEMES: ThemeDef[] = [
   // Duskcap Weald: hushed, drifting, a little uneasy (whole-tone steps).
   { id: 'dusk', name: 'Duskcap', transpose: 1, tempo: 0.94, arpWave: 'triangle', leadWave: 'sine',
     motif: [[14, 0, 4], [16, 4, 4], [18, 8, 6], [16, 14, 2], [12, 16, 4], [10, 20, 4], [12, 24, 8]] },
+  // Galecrest Aeries: airy and soaring, wide leaps up and a long falling glide.
+  { id: 'gale', name: 'Galecrest', transpose: 6, tempo: 1.02, arpWave: 'sine', leadWave: 'square',
+    motif: [[12, 0, 2], [19, 2, 4], [24, 6, 6], [21, 12, 2], [19, 14, 2], [17, 16, 4], [14, 20, 4], [12, 24, 8]] },
 ];
+
+/** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {
-  const battleThemes = THEMES.slice(1);
-  return battleThemes[Math.max(0, Math.min(battleThemes.length - 1, region))];
+  return themeById(REGION_THEMES[Math.max(0, Math.min(REGION_THEMES.length - 1, region))]);
 }
 
 export function themeById(id: string): ThemeDef {

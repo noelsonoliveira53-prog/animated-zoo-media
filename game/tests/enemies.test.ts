@@ -668,3 +668,37 @@ describe('Thunderhead enemies', () => {
     expect(near.hp).toBe(n1 - 10);
   });
 });
+
+describe('Sunscour enemies', () => {
+  it('a Shimmerjack sheds its decoys on the first hit only; decoys pay nothing and cost no lives', () => {
+    const sim = new BattleSim(lvl, null);
+    const sj = sim.spawn('shimmerjack', 0, 400);
+    const n0 = sim.enemies.length;
+    (sim as any).applyDamage(sj, 5);
+    const decoys = sim.enemies.slice(n0);
+    expect(decoys.length).toBe(sj.def.mirage!.count);
+    expect(decoys.every((d) => d.def.id === sj.def.mirage!.into && d.dist < sj.dist)).toBe(true);
+    (sim as any).applyDamage(sj, 5);
+    expect(sim.enemies.length).toBe(n0 + sj.def.mirage!.count);
+    const c0 = sim.coins;
+    (sim as any).applyDamage(decoys[0], 9999);
+    expect(sim.coins).toBe(c0);
+    expect(decoys[0].def.livesCost).toBe(0);
+  });
+
+  it('a Sandpicker that reaches the exit steals coins (never more than the player has)', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    sim.coins = 500;
+    const sp = sim.spawn('sandpicker', 0, 1995);
+    for (let i = 0; i < 60 && sp.alive; i++) sim.update(1 / 60);
+    expect(sp.alive).toBe(false);
+    const ev = sim.drainEvents().find((e) => e.type === 'pilfer') as any;
+    expect(ev.coins).toBeGreaterThan(0);
+    expect(sim.coins).toBe(500 - ev.coins);
+    sim.coins = 10;
+    sim.spawn('sandpicker', 0, 1995);
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(sim.coins).toBe(0);
+  });
+});

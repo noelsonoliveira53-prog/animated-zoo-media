@@ -180,6 +180,13 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'mirage': // shimmering detune
+        this.tone(700, 0.25, 'sine', 0.04, 740);
+        this.tone(705, 0.25, 'sine', 0.04, 660, 0.03);
+        break;
+      case 'pilfer': // jingle of coins running away
+        [1400, 1250, 1100].forEach((f, i) => this.tone(f, 0.06, 'square', 0.03, undefined, i * 0.05));
+        break;
       case 'bolt': // thunderclap: sharp crack then a low rumble
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);

@@ -46,6 +46,7 @@ export interface Enemy {
   fed: number; // times a Gorgegrub has fed
   shockCd: number;
   boltCd: number; // Stormcaller lightning timer
+  mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
   mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
@@ -172,6 +173,8 @@ export type SimEvent =
   | { type: 'echo'; enemy: Enemy }
   | { type: 'grow'; enemy: Enemy }
   | { type: 'bolt'; source: Enemy; tower: Tower }
+  | { type: 'mirage'; enemy: Enemy; decoys: Enemy[] }
+  | { type: 'pilfer'; enemy: Enemy; coins: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
@@ -881,12 +884,13 @@ export class BattleSim {
       armor: def.armor,
       landed: false,
       swoopCd: def.swoop ? def.swoop.interval : 0,
-      blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
       growT: 0,
       fed: 0,
       shockCd: def.shock ? def.shock.interval : 0,
       boltCd: def.bolt ? def.bolt.interval * 0.6 : 0,
+      blinkCd: def.blink ? def.blink.interval : 0,
+      mirrored: false,
       chargeTime: 0,
       chargeCd: 0,
       mr: def.magicResist,
@@ -921,7 +925,6 @@ export class BattleSim {
       if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.def.spawner) this.tickSpawner(e, dt);
       if (e.def.swoop) this.tickSwoop(e, dt);
-      if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.gust) this.tickGust(e, dt);
       if (e.def.grow) {
         e.growT += dt;
@@ -935,6 +938,7 @@ export class BattleSim {
       }
       if (e.def.shock) this.tickShock(e, dt);
       if (e.def.bolt) this.tickBolt(e, dt);
+      if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
@@ -968,6 +972,12 @@ export class BattleSim {
         e.alive = false;
         this.lives = Math.max(0, this.lives - e.def.livesCost);
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
+        if (e.def.pilfer) {
+          // Sandpicker: makes off with a sack of the player's coins.
+          const stolen = Math.min(this.coins, Math.round(e.def.pilfer * this.waveHpMult()));
+          this.coins -= stolen;
+          this.events.push({ type: 'pilfer', enemy: e, coins: stolen });
+        }
       }
     }
   }
@@ -1671,6 +1681,13 @@ export class BattleSim {
       e.chargeTime = e.def.charge.duration;
       e.chargeCd = e.def.charge.cooldown;
       this.events.push({ type: 'charge', enemy: e });
+    }
+    if (e.def.mirage && !e.mirrored && dmg > 0 && e.hp > 0) {
+      // Shimmerjack: heat-shimmer copies peel off just behind it.
+      e.mirrored = true;
+      const decoys: Enemy[] = [];
+      for (let k = 0; k < e.def.mirage.count; k++) decoys.push(this.spawn(e.def.mirage.into, e.path, Math.max(0, e.dist - 18 - k * 16)));
+      this.events.push({ type: 'mirage', enemy: e, decoys });
     }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     if (e.def.harden && dmg > 0) e.armor = Math.min(e.def.harden.max, e.armor + e.def.harden.perHit);

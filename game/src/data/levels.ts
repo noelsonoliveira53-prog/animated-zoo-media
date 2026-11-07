@@ -9,6 +9,7 @@ const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 
 const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
 const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
 const STORM = { grass: 0x7a8a6a, grassDark: 0x6a7a5c, road: 0xb0a488, roadEdge: 0x7a6e58, trees: [0x5a6a5a, 0x6a7a62, 0x4a5a52], storm: true };
+const DUNES = { grass: 0xe0c088, grassDark: 0xd0ac70, road: 0xc8a068, roadEdge: 0x9a7444, trees: [0x6a9a4a, 0x5a8a3a, 0x8aa85a], dunes: true };
 const ORCHARD = { grass: 0xa8a050, grassDark: 0x948c44, road: 0xc8a878, roadEdge: 0x9a7a52, trees: [0xd8642a, 0xe8a03a, 0xb8442a], orchard: true };
 const ABYSS = { grass: 0x1e2440, grassDark: 0x161a32, road: 0x4a4a6a, roadEdge: 0x32324e, trees: [0x6ad8e8, 0x9a7ae8, 0x5ae8b0], abyss: true };
 const GEARS = { grass: 0x5a5a62, grassDark: 0x4a4a52, road: 0x9a8a6a, roadEdge: 0x6a5a40, trees: [0xc8963a, 0x8a6a2a, 0xa0a0aa], gears: true };
@@ -2970,6 +2971,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'thrumhorn', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, path: 1, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l61',
+    name: 'Mirage Flats',
+    blurb: 'Past the steppe the grass gives out to burning sand. Things shimmer on the horizon, and jackals with empty sacks watch the Keepers pass.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.75,
+    startCoins: 1000,
+    lives: 20,
+    theme: DUNES,
+    paths: [
+      [{ x: -40, y: 220 }, { x: 420, y: 220 }, { x: 420, y: 520 }, { x: 820, y: 520 }, { x: 820, y: 220 }, { x: 1320, y: 220 }],
+      [{ x: 620, y: -40 }, { x: 620, y: 380 }, { x: 420, y: 380 }, { x: 420, y: 520 }, { x: 820, y: 520 }, { x: 820, y: 220 }, { x: 1320, y: 220 }],
+    ],
+    slots: [
+      { x: 300, y: 320 },
+      { x: 140, y: 320 },
+      { x: 520, y: 300 },
+      { x: 520, y: 440 },
+      { x: 500, y: 620 },
+      { x: 720, y: 420 },
+      { x: 720, y: 620 },
+      { x: 920, y: 360 },
+      { x: 720, y: 140 },
+      { x: 1000, y: 320 },
+      { x: 1140, y: 320 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.5 }, { enemy: 'shimmerjack', count: 3, interval: 1.5, delay: 4 }, { enemy: 'skitter', count: 8, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'sandpicker', count: 4, interval: 1.2 }, { enemy: 'mudling', count: 12, interval: 0.45, path: 1, delay: 1 }, { enemy: 'gullwing', count: 6, interval: 0.8, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'shimmerjack', count: 6, interval: 1 }, { enemy: 'reedguard', count: 6, interval: 1, path: 1, delay: 3 }, { enemy: 'galehound', count: 6, interval: 0.6, delay: 5 }] },
+      { groups: [{ enemy: 'sandpicker', count: 6, interval: 1 }, { enemy: 'shellback', count: 4, interval: 1.6, path: 1, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 4 }] },
+      { groups: [{ enemy: 'thunderhoof', count: 8, interval: 0.6 }, { enemy: 'shimmerjack', count: 5, interval: 1.1, path: 1, delay: 2 }, { enemy: 'glarefly', count: 6, interval: 0.9, delay: 4 }] },
+      { groups: [{ enemy: 'sandpicker', count: 6, interval: 1 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 3 }, { enemy: 'kitewing', count: 4, interval: 1.5, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'echowisp', count: 12, interval: 0.6 }, { enemy: 'shimmerjack', count: 6, interval: 1, path: 1, delay: 2 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 4 }] },
+      { groups: [{ enemy: 'sandpicker', count: 8, interval: 0.9 }, { enemy: 'stormcaller', count: 3, interval: 2.4, path: 1, delay: 2 }, { enemy: 'skitter', count: 14, interval: 0.3, delay: 4 }] },
+      { groups: [{ enemy: 'shimmerjack', count: 8, interval: 0.9 }, { enemy: 'barkwarden', count: 3, interval: 2.4, delay: 3 }, { enemy: 'gnat', count: 16, interval: 0.26, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'sandpicker', count: 8, interval: 0.9 }, { enemy: 'rivetshell', count: 3, interval: 2.4, path: 1, delay: 2 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 5 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 3 }, { enemy: 'shimmerjack', count: 8, interval: 0.9, path: 1, delay: 2 }, { enemy: 'sandpicker', count: 6, interval: 1, delay: 6 }] },
+      { groups: [{ enemy: 'sandpicker', count: 10, interval: 0.8 }, { enemy: 'gorgegrub', count: 3, interval: 2.2, path: 1, delay: 2 }, { enemy: 'kitewing', count: 6, interval: 1.2, delay: 5 }] },
+      { groups: [{ enemy: 'shimmerjack', count: 10, interval: 0.8 }, { enemy: 'thunderhoof', count: 10, interval: 0.5, path: 1, delay: 2 }, { enemy: 'gullwing', count: 12, interval: 0.5, delay: 5 }] },
+      { groups: [{ enemy: 'sandpicker', count: 10, interval: 0.8 }, { enemy: 'copperhorn', count: 3, interval: 2.2, path: 1, delay: 2 }, { enemy: 'shimmerjack', count: 8, interval: 0.9, delay: 5 }, { enemy: 'cloudram', count: 3, interval: 2.4, path: 1, delay: 6 }] },
+      { groups: [{ enemy: 'shimmerjack', count: 12, interval: 0.7 }, { enemy: 'sandpicker', count: 12, interval: 0.7, path: 1, delay: 1 }, { enemy: 'bramblehide', count: 3, interval: 2.4, delay: 6 }, { enemy: 'glarefly', count: 10, interval: 0.6, path: 1, delay: 8 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -2998,6 +3043,7 @@ export interface RegionDef {
   abyss?: boolean;
   orchard?: boolean;
   storm?: boolean;
+  dunes?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -3013,6 +3059,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Starwell Abyss', first: 45, count: 5, abyss: true },
   { name: 'The Rotbloom Orchard', first: 50, count: 5, orchard: true },
   { name: 'The Thunderhead Steppes', first: 55, count: 5, storm: true },
+  { name: 'The Sunscour Dunes', first: 60, count: 5, dunes: true },
 ];
 
 export function regionOf(levelIndex: number): number {

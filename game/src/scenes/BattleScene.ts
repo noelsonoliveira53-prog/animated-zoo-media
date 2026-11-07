@@ -285,6 +285,13 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
     }
+    if (this.level.theme.dunes) {
+      // heat shimmer: a few pale horizontal bands slowly breathing in and out
+      for (let i = 0; i < 4; i++) {
+        const band = this.add.rectangle(GAME_W / 2, 140 + i * 150, GAME_W, 26, 0xfff4d8, 0.08).setDepth(0.6);
+        this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.storm) {
       // light slanting rain over the steppe: a 120px-periodic pattern scrolled down and wrapped
       const rain = this.add.graphics().setDepth(0.6).setAlpha(0.22);
@@ -326,6 +333,37 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.dunes) {
+        if (rnd.frac() < 0.5) {
+          // a saguaro-style cactus with two arms and a pink flower
+          deco.fillStyle(0x000000, 0.18);
+          deco.fillEllipse(p.x, p.y + 4, 26, 8);
+          const col = rnd.pick(this.level.theme.trees ?? [0x6a9a4a]);
+          deco.fillStyle(col, 1);
+          deco.lineStyle(2, C.ink, 0.55);
+          deco.fillRoundedRect(p.x - 5, p.y - 34, 10, 38, 5);
+          deco.strokeRoundedRect(p.x - 5, p.y - 34, 10, 38, 5);
+          deco.fillRoundedRect(p.x - 15, p.y - 24, 7, 14, 3);
+          deco.fillRoundedRect(p.x - 15, p.y - 14, 12, 6, 3);
+          deco.fillRoundedRect(p.x + 8, p.y - 28, 7, 14, 3);
+          deco.fillRoundedRect(p.x + 3, p.y - 18, 12, 6, 3);
+          deco.fillStyle(0xf08aa8, 1);
+          deco.fillCircle(p.x, p.y - 36, 3);
+        } else if (rnd.frac() < 0.6) {
+          // a sun-bleached rock with a skull of some long-gone beast... or just a rock
+          deco.fillStyle(rnd.pick([0xc8a878, 0xb89868, 0xd8b888]), 1);
+          deco.fillEllipse(p.x, p.y, rnd.between(18, 30), rnd.between(10, 16));
+          deco.lineStyle(1.5, C.ink, 0.4);
+          deco.strokeEllipse(p.x, p.y, 24, 13);
+        } else {
+          // ripples in the sand
+          deco.lineStyle(2, 0xc8a068, 0.7);
+          for (let k = 0; k < 3; k++) {
+            deco.beginPath();
+            deco.arc(p.x + k * 6, p.y + 8 + k * 5, 16, Math.PI * 1.15, Math.PI * 1.85);
+            deco.strokePath();
+          }
         }
       } else if (this.level.theme.storm && rnd.frac() < 0.8) {
         if (rnd.frac() < 0.45) {
@@ -1358,6 +1396,19 @@ export class BattleScene extends Phaser.Scene {
           this.particles.explode(5, h.x, h.y - 14);
         }
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
+        break;
+      }
+      case 'mirage': {
+        sfx.trait('mirage');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 22, 0xfff4d8, 0.3).setDepth(2450);
+        this.tweens.add({ targets: ring, scale: 2.2, alpha: 0, duration: 400, onComplete: () => ring.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Mirage!', '#fff4d8', 15);
+        break;
+      }
+      case 'pilfer': {
+        if (ev.coins <= 0) break;
+        sfx.trait('pilfer');
+        this.floatText(ev.enemy.pos.x - 60, ev.enemy.pos.y - 40, `-${ev.coins} coins!`, '#ffd84a', 18);
         break;
       }
       case 'ground': {

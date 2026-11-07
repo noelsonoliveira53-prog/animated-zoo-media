@@ -71,10 +71,13 @@ export const THEMES: ThemeDef[] = [
   // Thunderhead Steppes: a galloping minor riff, thudding like hooves, with a high rolling answer.
   { id: 'storm', name: 'Thunderhead', transpose: -3, tempo: 1.14, arpWave: 'sawtooth', leadWave: 'square',
     motif: [[12, 0, 1], [12, 1, 1], [15, 2, 2], [12, 4, 1], [12, 5, 1], [17, 6, 2], [19, 8, 4], [22, 12, 2], [19, 14, 2], [17, 16, 2], [15, 18, 2], [12, 20, 8]] },
+  // Sunscour Dunes: a slow, swaying caravan line with an exotic raised fourth, shimmering arp above.
+  { id: 'dunes', name: 'Sunscour', transpose: 2, tempo: 0.96, arpWave: 'triangle', leadWave: 'sine',
+    motif: [[12, 0, 3], [13, 3, 1], [16, 4, 4], [18, 8, 2], [19, 10, 2], [18, 12, 4], [16, 16, 2], [13, 18, 2], [12, 20, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

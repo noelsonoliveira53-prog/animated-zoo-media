@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **105** (next balance pass at iteration 110)
+Iteration counter: **106** (next balance pass at iteration 110)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -734,13 +734,26 @@ Iteration counter: **105** (next balance pass at iteration 110)
 - **Iteration 105** (polish + balance): Thunderhead sweep (all in band) plus a new hero comparison, the expert
   strategy run with each hero (scratch `herocmp.ts`). Sorrel was far behind, so I buffed her sling 14→17 and Second
   Wind damage 25→40. Results in Balance Notes. 179 tests.
+- **Iteration 106**: region 13 opens, **The Sunscour Dunes**.
+  - **Theme:** a `DUNES` theme (sand ground; saguaro cacti with pink flowers, bleached rocks and sand ripples, with no
+    green trees; breathing heat-shimmer bands), a sandy world map with cacti and an oasis lake ("Steppe Edge" exit
+    label), and a swaying "Sunscour" caravan music theme with a raised fourth.
+  - **New traits** (checked against the full trait list first; blink and self-veil already existed):
+    - `mirage`: the **Shimmerjack** sheds 2 decoy Mirages on its first hit. They are worth nothing, cost no lives,
+      and soak up shots.
+    - `pilfer`: the **Sandpicker** steals 60 coins (× the level's multiplier) if it reaches the exit, never more than
+      the player has, with a "-N coins!" floater.
+  - Code-drawn sprites, Field Guide tags (including a decoy tag) and sound cues. Endless adds both from wave 52.
+  - **Level 61 Mirage Flats:** two roads of equal length (≈1,960px) merging at the south loop, 11 pads, 15 waves,
+    hpMult 1.75.
+  - Browser check `scripts/dunes-check.mjs`. Field Guide now 58/60 per two pages. 181 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 13, or a breather feature (hero / tower variety, a village quality-of-life pass).
+2. Region 13 level 62 (+ third Sunscour enemy), 63–64, finale 65 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -751,6 +764,8 @@ Iteration counter: **105** (next balance pass at iteration 110)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 106**: 61 Mirage Flats went 100/100/0 at hpMult 2.1, 100/100/8 at 1.9, and **1.75 → 100/100/42** (kept, the opener target).
+
 **Iteration 105**:
 - Thunderhead, 12 seeds: 56 Rainmarch 100/100/42 · 57 Copperhorn Ford 83/83/25 · 58 Forked Lightning 92/83/0 ·
   59 Stormwatch 83/75/0 · 60 Thunderhead Crown (boss) 83/33/0. All in band.

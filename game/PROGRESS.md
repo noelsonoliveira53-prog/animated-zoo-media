@@ -541,7 +541,7 @@ Iteration counter: **72** (next balance pass at iteration 75)
 
 ## Backlog (ranked)
 1. Region 8 finale (level 40) with a Ruins boss.
-4. Village: drag-to-pan on small phone screens.
+2. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
 - (none known)

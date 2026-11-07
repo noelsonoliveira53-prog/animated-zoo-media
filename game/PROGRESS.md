@@ -578,7 +578,7 @@ Iteration counter: **78** (next balance pass at iteration 80)
 ## Backlog (ranked)
 1. Region 9 level 44.
 2. Region 9 finale (level 45) with a Brasswork boss.
-4. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
 ## Known Bugs
 - (none known)

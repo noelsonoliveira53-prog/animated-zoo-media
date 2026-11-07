@@ -147,13 +147,15 @@ export type HeroPassive =
   | { kind: 'toughness'; armor: number; regen: number; text: string }
   | { kind: 'crit'; chance: number; mult: number; text: string }
   | { kind: 'towerHaste'; radius: number; bonus: number; text: string }
-  | { kind: 'bounty'; radius: number; bonus: number; text: string };
+  | { kind: 'bounty'; radius: number; bonus: number; text: string }
+  | { kind: 'mend'; radius: number; regen: number; text: string };
 
 export interface HeroActive {
   name: string;
   text: string;
   cooldown: number; // seconds
-  kind: 'quake' | 'volley' | 'ring';
+  kind: 'quake' | 'volley' | 'ring' | 'rally';
+  heal?: number; // rally: health restored to every soldier and the hero in radius (scales with hero level)
   damage: number;
   damageType: DamageType;
   radius: number;

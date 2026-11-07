@@ -810,6 +810,11 @@ export class BattleScene extends Phaser.Scene {
       this.particles.explode(30, pos.x, pos.y);
       this.cameras.main.shake(260, 0.01);
       sfx.boom();
+    } else if (kind === 'rally') {
+      // a soft green pulse of healing
+      const ring = this.add.circle(pos.x, pos.y, radius, color, 0.18).setStrokeStyle(4, fx ?? 0x9bff8a, 1).setDepth(2400).setScale(0.1);
+      this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 600, onComplete: () => ring.destroy() });
+      sfx.trait('mend');
     } else if (kind === 'ring') {
       const ring = this.add.circle(pos.x, pos.y, radius, color, 0.25).setStrokeStyle(6, fx ?? 0xffd23c, 1).setDepth(2400).setScale(0.1);
       this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
@@ -1183,6 +1188,11 @@ export class BattleScene extends Phaser.Scene {
             f.setRotation(Math.atan2(e.pos.y - f.y, e.pos.x - f.x));
             this.tweens.add({ targets: f, x: e.pos.x, y: e.pos.y, duration: 200, onComplete: () => f.destroy() });
           }
+        }
+        for (const p of ev.healed ?? []) {
+          this.particles.setParticleTint(0x9bff8a);
+          this.particles.explode(6, p.x, p.y - 16);
+          this.floatText(p.x, p.y - 40, '+' + Math.round(this.sim.heroStat(sk.heal ?? 0)), '#9bff8a', 14);
         }
         this.floatText(ev.hero.pos.x, ev.hero.pos.y - 80, sk.name + '!', TEXT.gold, 22);
         break;

@@ -1726,6 +1726,48 @@ export class BootScene extends Phaser.Scene {
       g.strokePath();
       g.lineStyle(1, 0xffffff, 0.9);
       g.lineBetween(cx - 7, base - 39, cx - 7, base - 17);
+    } else if (id === 'sorrel') {
+      // hare medic: long upright ears, cream belly, a red-cross moss satchel, sling in paw
+      g.fillStyle(0xc8a888, 1);
+      g.fillEllipse(cx, base - 18, 24, 28);
+      g.strokeEllipse(cx, base - 18, 24, 28);
+      g.fillStyle(0xf4e8d8, 1);
+      g.fillEllipse(cx, base - 15, 13, 18);
+      // ears
+      g.fillStyle(0xc8a888, 1);
+      g.fillEllipse(cx - 6, base - 56, 7, 22);
+      g.fillEllipse(cx + 5, base - 57, 7, 22);
+      g.strokeEllipse(cx - 6, base - 56, 7, 22);
+      g.strokeEllipse(cx + 5, base - 57, 7, 22);
+      g.fillStyle(0xf0b8b8, 1);
+      g.fillEllipse(cx - 6, base - 55, 3, 15);
+      g.fillEllipse(cx + 5, base - 56, 3, 15);
+      // head
+      g.fillStyle(0xc8a888, 1);
+      g.fillCircle(cx, base - 38, 11);
+      g.strokeCircle(cx, base - 38, 11);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx - 4, base - 40, 2);
+      g.fillCircle(cx + 4, base - 40, 2);
+      g.fillStyle(0xe88a9a, 1);
+      g.fillCircle(cx, base - 35, 2);
+      // satchel with a green leaf cross
+      g.fillStyle(0xf4f0e0, 1);
+      g.fillRoundedRect(cx - 18, base - 24, 13, 12, 3);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeRoundedRect(cx - 18, base - 24, 13, 12, 3);
+      g.fillStyle(0x4fae4a, 1);
+      g.fillRect(cx - 13, base - 22, 3, 8);
+      g.fillRect(cx - 15.5, base - 19.5, 8, 3);
+      // sling
+      g.lineStyle(2, 0x7a5232, 1);
+      g.lineBetween(cx + 10, base - 26, cx + 16, base - 36);
+      g.fillStyle(0xb8b0a0, 1);
+      g.fillCircle(cx + 16, base - 37, 3);
+      // feet
+      g.fillStyle(0xc8a888, 1);
+      g.fillEllipse(cx - 6, base - 2, 10, 5);
+      g.fillEllipse(cx + 6, base - 2, 10, 5);
     } else if (id === 'wren') {
       // barn owl: round heart-shaped face, wings folded, scroll satchel
       g.fillStyle(0xb8905a, 1);
@@ -2106,6 +2148,7 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
     proj('proj_hero_ember', 0xff9a3c, 5);
     proj('proj_hero_bramble', 0xffffff, 3);
+    proj('proj_hero_sorrel', 0xb8b0a0, 4); // sling pebble
 
     // glowsap icon (glowing drop)
     g = this.g();

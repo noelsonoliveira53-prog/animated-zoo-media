@@ -155,7 +155,7 @@ export type SimEvent =
   | { type: 'spellCast'; spellId: string; pos: Vec2 }
   | { type: 'strike'; spellId: string; uid: number; pos: Vec2; radius: number; hits: Enemy[] }
   | { type: 'summonGone'; soldier: Soldier }
-  | { type: 'heroSkill'; hero: Hero; hits: Enemy[] }
+  | { type: 'heroSkill'; hero: Hero; hits: Enemy[]; healed?: Vec2[] }
   | { type: 'heroShoot'; hero: Hero; projectile: Projectile }
   | { type: 'heroLevel'; hero: Hero }
   | { type: 'heroDown'; hero: Hero }
@@ -404,7 +404,20 @@ export class BattleSim {
       }
       this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)));
     }
-    this.events.push({ type: 'heroSkill', hero: h, hits: pool });
+    let healed: Vec2[] | undefined;
+    if (sk.kind === 'rally' && sk.heal) {
+      // Sorrel's Second Wind: patch up every soldier (and herself) in reach.
+      const amt = this.heroStat(sk.heal);
+      healed = [];
+      for (const s of this.soldiers) {
+        if (!s.alive || Math.hypot(s.pos.x - h.pos.x, s.pos.y - h.pos.y) > sk.radius) continue;
+        s.hp = Math.min(s.maxHp, s.hp + amt);
+        healed.push({ ...s.pos });
+      }
+      h.hp = Math.min(h.maxHp, h.hp + amt);
+      healed.push({ ...h.pos });
+    }
+    this.events.push({ type: 'heroSkill', hero: h, hits: pool, healed });
     return true;
   }
 
@@ -1278,8 +1291,14 @@ export class BattleSim {
 
   private updateSoldiers(dt: number): void {
     const byUid = new Map(this.enemies.map((e) => [e.uid, e]));
+    const h = this.hero;
+    const mend = h && h.alive && h.def.passive.kind === 'mend' ? h.def.passive : null;
     for (const s of this.soldiers) {
       const stats = s.stats;
+      // Sorrel's Field Dressing: soldiers near her heal even mid-fight.
+      if (mend && s.alive && s.hp < s.maxHp && Math.hypot(s.pos.x - h!.pos.x, s.pos.y - h!.pos.y) <= mend.radius) {
+        s.hp = Math.min(s.maxHp, s.hp + mend.regen * dt);
+      }
       if (s.summoned) {
         s.life -= dt;
         if (s.life <= 0 && s.alive) {

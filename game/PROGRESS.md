@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **102** (next balance pass at iteration 105)
+Iteration counter: **103** (next balance pass at iteration 105)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -714,6 +714,15 @@ Iteration counter: **102** (next balance pass at iteration 105)
 
   Also: achievements `boss_thrumhorn` (Lightning Rod) and `storm_stars` (Rainmaker), story card "The Sky Clears", and
   Thrumhorn joins the endless boss rotation. 175 tests.
+- **Iteration 103** (breather: hero variety): fifth hero **Sorrel, Hare Medic**, a support hero.
+  - Ranged sling (14 physical, hits flyers, fast mover).
+  - New passive `mend` ("Field Dressing"): soldiers within 170px heal 10/s, even while brawling.
+  - New active `rally` ("Second Wind", cooldown 16s): heals every soldier in reach and Sorrel by 90 (scales with
+    hero level), and stings enemies around her. It shows a green pulse, "+N" floaters and a chime.
+  - Code-drawn hare sprite with long ears, a leaf-cross satchel and a sling, plus a pebble projectile.
+  - The menu hero card was checked; long ability text overflowed it, so the lines were shortened.
+
+  Browser check `scripts/sorrel-check.mjs`. 177 tests (mend and rally).
 
 ## In Progress
 - (none)

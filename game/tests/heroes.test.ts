@@ -159,3 +159,40 @@ describe('Bramble bulwark', () => {
     expect(HEROES.fen.bulwark).toBeUndefined();
   });
 });
+
+describe('Sorrel', () => {
+  const lvl4 = { ...lvl, startCoins: 2000, slots: [{ x: 600, y: 370 }] } as LevelDef;
+  it('Field Dressing heals soldiers near her (even mid-fight) but not far ones', () => {
+    const sim = new BattleSim(lvl4, 'sorrel');
+    sim.status = 'running';
+    sim.build(0, 'burrow');
+    run(sim, 0.5);
+    const [a, b] = sim.soldiers;
+    sim.hero!.pos = { ...a.pos };
+    sim.hero!.dest = null as any;
+    a.hp = 10;
+    b.hp = 10;
+    b.pos = { x: a.pos.x + 600, y: a.pos.y }; // far away
+    b.home = { ...b.pos };
+    const mend = HEROES.sorrel.passive as { regen: number };
+    (sim as any).updateSoldiers(1);
+    expect(a.hp).toBeGreaterThanOrEqual(10 + mend.regen);
+    expect(b.hp).toBeLessThan(10 + mend.regen);
+  });
+  it('Second Wind restores health to soldiers in reach and to Sorrel', () => {
+    const sim = new BattleSim(lvl4, 'sorrel');
+    sim.status = 'running';
+    sim.build(0, 'burrow');
+    run(sim, 0.5);
+    const s = sim.soldiers[0];
+    sim.hero!.pos = { ...s.pos };
+    s.hp = 5;
+    sim.hero!.hp = 20;
+    expect(sim.useHeroSkill()).toBe(true);
+    const heal = HEROES.sorrel.active.heal!;
+    expect(s.hp).toBe(Math.min(s.maxHp, 5 + heal));
+    expect(sim.hero!.hp).toBe(Math.min(sim.hero!.maxHp, 20 + heal));
+    const ev = sim.drainEvents().find((e) => e.type === 'heroSkill') as any;
+    expect(ev.healed.length).toBeGreaterThanOrEqual(2);
+  });
+});

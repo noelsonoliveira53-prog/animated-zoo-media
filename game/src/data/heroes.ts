@@ -105,9 +105,35 @@ export const HEROES: Record<string, HeroDef> = {
       fxColor: 0xbfe0ff,
     },
   },
+  sorrel: {
+    id: 'sorrel',
+    name: 'Sorrel',
+    title: 'Hare Medic',
+    blurb: 'A quick, kind hare with a satchel of moss bandages and a sling. Wherever she stands, the Keepers fight on a little longer.',
+    color: 0xd88a8a,
+    hp: 175,
+    speed: 125,
+    armor: 0.05,
+    regen: 7,
+    melee: false,
+    attack: { damage: 14, type: 'physical', range: 170, rate: 1.1, hitsAir: true, projectileSpeed: 520 },
+    respawn: 11,
+    passive: { kind: 'mend', radius: 170, regen: 10, text: 'Field Dressing: nearby soldiers heal 10/s, even mid-fight.' },
+    active: {
+      name: 'Second Wind',
+      text: 'Heals nearby soldiers and herself by 90 and stings foes.',
+      cooldown: 16,
+      kind: 'rally',
+      damage: 25,
+      damageType: 'physical',
+      radius: 170,
+      heal: 90,
+      fxColor: 0x9bff8a,
+    },
+  },
 };
 
-export const HERO_ORDER = ['bramble', 'fen', 'ember', 'wren'];
+export const HERO_ORDER = ['bramble', 'fen', 'ember', 'wren', 'sorrel'];
 
 /** XP needed to reach each level (index = level - 1). */
 export const HERO_XP = [0, 40, 110, 220, 380, 600];

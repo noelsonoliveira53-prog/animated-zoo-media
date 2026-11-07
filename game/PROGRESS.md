@@ -709,7 +709,7 @@ Iteration counter: **101** (next balance pass at iteration 105)
 - (none)
 
 ## Backlog (ranked)
-1. Region 12 level 59, finale 60 with a boss + story card + achievements.
+1. Region 12 finale (level 60): Thunderhead boss with phases + story card + achievements.
 2. Iter 105 balance pass.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 

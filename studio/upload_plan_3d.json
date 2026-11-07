@@ -522,5 +522,28 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "fruity/fr3d_ep05.mp4",
+  "title": "Yes Yes Fruit Salad Song for Kids! | Fruity Friends",
+  "description": "Yes, yes, fruit salad! Make a yummy fruit salad with Pipkiko and the Fruity Friends: wash your hands, peel the banana, add strawberries, oranges and grapes.\nA healthy eating song for kids: fruits have vitamins that help you grow. Stir, shake and dance along! Ages 2-5.\n\nLYRICS\nYes, yes, fruit salad, yes, yes, yum!\nChop, chop, mix, mix, here they come!\nApples, bananas, grapes so sweet,\nYes, yes, fruit salad, time to eat!\nWash your hands, scrub, scrub, scrub,\nNow we're ready, rub-a-dub!\nBanana, peel it, slice it thin,\nYes, yes, toss it in!\nStrawberries, red, in they go,\nOrange slices, in a row!\nPurple grapes, one, two, three,\nYes, yes, fruit for me!\nStir it round, round, round!\nStir it up and down!\nShake your hips and shake your hands,\nFruit salad dance, the best in the land!\nFruits have vitamins to help you grow,\nStrong and happy, head to toe!\nShare a bowl with all your friends,\nYes, yes, the yummy end!\nYes, yes, fruit salad! See you tomorrow!",
+  "tags": [
+   "yes yes fruit salad",
+   "fruit salad song",
+   "healthy eating song",
+   "fruit song for kids",
+   "yes yes song",
+   "kids songs",
+   "nursery rhymes",
+   "Fruity Friends",
+   "3D kids songs"
+  ],
+  "date": "2026-11-09",
+  "time": "2:20 PM",
+  "thumb": "brand/fruity/thumb_fr3d_ep05.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

@@ -128,7 +128,8 @@ export interface LevelDef {
 export type HeroPassive =
   | { kind: 'toughness'; armor: number; regen: number; text: string }
   | { kind: 'crit'; chance: number; mult: number; text: string }
-  | { kind: 'towerHaste'; radius: number; bonus: number; text: string };
+  | { kind: 'towerHaste'; radius: number; bonus: number; text: string }
+  | { kind: 'bounty'; radius: number; bonus: number; text: string };
 
 export interface HeroActive {
   name: string;
@@ -139,6 +140,7 @@ export interface HeroActive {
   damageType: DamageType;
   radius: number;
   maxTargets?: number;
+  fxColor?: number; // tint for the skill's visual effect (defaults to the hero's colour / foxfire gold)
   slow?: { factor: number; duration: number };
 }
 

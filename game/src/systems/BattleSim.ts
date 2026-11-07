@@ -929,6 +929,13 @@ export class BattleSim {
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
   }
 
+  /** Wren's Scholar's Eye: enemies that fall near her pay extra coins. */
+  bountyMult(e: Enemy): number {
+    const h = this.hero;
+    if (!h || !h.alive || h.def.passive.kind !== 'bounty') return 1;
+    return Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= h.def.passive.radius ? 1 + h.def.passive.bonus : 1;
+  }
+
   /** In the air right now (flyers, except while a swooper is landed). */
   airborne(e: Enemy): boolean {
     return !!e.def.flying && !e.landed;
@@ -1291,7 +1298,7 @@ export class BattleSim {
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.
-      const bounty = Math.round(e.def.bounty * this.waveHpMult());
+      const bounty = Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e));
       this.coins += bounty;
       this.events.push({ type: 'kill', enemy: e, bounty });
       if (this.hero?.alive) {

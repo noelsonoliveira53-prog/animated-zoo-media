@@ -594,7 +594,7 @@ export class BattleScene extends Phaser.Scene {
     if (!h.alive) this.heroLevelText.setText(`${Math.ceil(h.respawnTimer)}s`);
   }
 
-  private skillEffect(kind: string, pos: Vec2, radius: number, color: number): void {
+  private skillEffect(kind: string, pos: Vec2, radius: number, color: number, fx?: number): void {
     if (kind === 'quake') {
       for (let i = 0; i < 3; i++) {
         const ring = this.add.ellipse(pos.x, pos.y, radius * 2, radius * 1.1).setStrokeStyle(6, 0xc9a66b, 1).setDepth(2400).setScale(0.2);
@@ -605,9 +605,9 @@ export class BattleScene extends Phaser.Scene {
       this.cameras.main.shake(260, 0.01);
       sfx.boom();
     } else if (kind === 'ring') {
-      const ring = this.add.circle(pos.x, pos.y, radius, color, 0.25).setStrokeStyle(6, 0xffd23c, 1).setDepth(2400).setScale(0.1);
+      const ring = this.add.circle(pos.x, pos.y, radius, color, 0.25).setStrokeStyle(6, fx ?? 0xffd23c, 1).setDepth(2400).setScale(0.1);
       this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
-      this.particles.setParticleTint(0xffa040);
+      this.particles.setParticleTint(fx ?? 0xffa040);
       for (let i = 0; i < 12; i++) {
         const a = (i / 12) * Math.PI * 2;
         this.particles.explode(3, pos.x + Math.cos(a) * radius * 0.8, pos.y + Math.sin(a) * radius * 0.8);
@@ -970,7 +970,7 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'heroSkill': {
         const sk = ev.hero.def.active;
-        this.skillEffect(sk.kind, ev.hero.pos, sk.radius, ev.hero.def.color);
+        this.skillEffect(sk.kind, ev.hero.pos, sk.radius, sk.fxColor ?? ev.hero.def.color, sk.fxColor);
         if (sk.kind === 'volley') {
           for (const e of ev.hits) {
             const f = this.add.image(ev.hero.pos.x, ev.hero.pos.y - 30, 'proj_hero_fen').setDepth(2500);

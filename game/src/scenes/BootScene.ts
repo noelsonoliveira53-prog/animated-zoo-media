@@ -1048,6 +1048,36 @@ export class BootScene extends Phaser.Scene {
       g.strokePath();
       g.lineStyle(1, 0xffffff, 0.9);
       g.lineBetween(cx - 7, base - 39, cx - 7, base - 17);
+    } else if (id === 'wren') {
+      // barn owl: round heart-shaped face, wings folded, scroll satchel
+      g.fillStyle(0xb8905a, 1);
+      g.fillEllipse(cx, base - 18, 26, 30);
+      g.strokeEllipse(cx, base - 18, 26, 30);
+      g.fillStyle(0x9a7444, 1);
+      g.fillEllipse(cx - 11, base - 18, 8, 22);
+      g.fillEllipse(cx + 11, base - 18, 8, 22);
+      g.fillStyle(0xd8b880, 1);
+      g.fillCircle(cx, base - 38, 13);
+      g.strokeCircle(cx, base - 38, 13);
+      g.fillStyle(0xfff4e0, 1);
+      g.fillEllipse(cx - 5, base - 38, 11, 14);
+      g.fillEllipse(cx + 5, base - 38, 11, 14);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(cx - 5, base - 39, 2.4);
+      g.fillCircle(cx + 5, base - 39, 2.4);
+      g.fillStyle(0xe0a040, 1);
+      g.fillTriangle(cx - 2, base - 35, cx + 2, base - 35, cx, base - 30);
+      // satchel with a scroll
+      g.fillStyle(0x7a5232, 1);
+      g.fillRoundedRect(cx + 6, base - 20, 12, 10, 3);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeRoundedRect(cx + 6, base - 20, 12, 10, 3);
+      g.fillStyle(0xf0e2cc, 1);
+      g.fillRect(cx + 9, base - 26, 6, 8);
+      // feet
+      g.lineStyle(2.5, 0xe0a040, 1);
+      g.lineBetween(cx - 5, base - 4, cx - 5, base);
+      g.lineBetween(cx + 5, base - 4, cx + 5, base);
     } else if (id === 'ember') {
       // fox: orange body, big tail, ears, flame in paw
       g.fillStyle(0xff8a3c, 1);

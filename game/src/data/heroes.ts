@@ -77,9 +77,35 @@ export const HEROES: Record<string, HeroDef> = {
       slow: { factor: 0.6, duration: 2.5 },
     },
   },
+  wren: {
+    id: 'wren',
+    name: 'Wren',
+    title: 'Owl Lorekeeper',
+    blurb: 'A bookish barn owl with a satchel of scrolls. Nothing escapes her notice, least of all loose coins.',
+    color: 0xd8b880,
+    hp: 170,
+    speed: 110,
+    armor: 0,
+    regen: 6,
+    melee: false,
+    attack: { damage: 16, type: 'magic', range: 175, rate: 1.0, hitsAir: true, projectileSpeed: 480 },
+    respawn: 12,
+    passive: { kind: 'bounty', radius: 200, bonus: 0.3, text: "Scholar's Eye: enemies that fall near her drop 30% more coins." },
+    active: {
+      name: 'Hush',
+      text: 'A deep hoot stills everything nearby: enemies all but stop for a few seconds.',
+      cooldown: 18,
+      kind: 'ring',
+      damage: 30,
+      damageType: 'magic',
+      radius: 160,
+      slow: { factor: 0.2, duration: 3 },
+      fxColor: 0xbfe0ff,
+    },
+  },
 };
 
-export const HERO_ORDER = ['bramble', 'fen', 'ember'];
+export const HERO_ORDER = ['bramble', 'fen', 'ember', 'wren'];
 
 /** XP needed to reach each level (index = level - 1). */
 export const HERO_XP = [0, 40, 110, 220, 380, 600];

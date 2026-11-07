@@ -20,8 +20,9 @@ const run = (sim: BattleSim, s: number) => {
 };
 
 describe('heroes', () => {
-  it('defines three heroes', () => {
-    expect(HERO_ORDER.length).toBe(3);
+  it('defines at least three heroes, all listed in HERO_ORDER', () => {
+    expect(HERO_ORDER.length).toBeGreaterThanOrEqual(3);
+    expect(new Set(HERO_ORDER).size).toBe(Object.keys(HEROES).length);
     for (const id of HERO_ORDER) expect(HEROES[id]).toBeDefined();
   });
 
@@ -96,5 +97,25 @@ describe('heroes', () => {
     expect(sim.towerHaste(t)).toBeCloseTo(1 + (HEROES.ember.passive as { bonus: number }).bonus);
     sim.hero!.pos = { x: 100, y: 330 };
     expect(sim.towerHaste(t)).toBe(1);
+  });
+});
+
+describe('Wren', () => {
+  it("Scholar's Eye pays extra coins only for kills near her", () => {
+    const lvl2 = { id: 'w', name: 'W', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 0, lives: 20, theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },
+      paths: [[{ x: 0, y: 300 }, { x: 2000, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }] } as LevelDef;
+    const sim = new BattleSim(lvl2, 'wren');
+    sim.status = 'running';
+    sim.hero!.pos = { x: 400, y: 300 };
+    const near = sim.spawn('mudling', 0, 420);
+    const far = sim.spawn('mudling', 0, 1500);
+    const c0 = sim.coins;
+    (sim as any).applyDamage(near, 9999);
+    const nearPay = sim.coins - c0;
+    const c1 = sim.coins;
+    (sim as any).applyDamage(far, 9999);
+    const farPay = sim.coins - c1;
+    expect(nearPay).toBeGreaterThan(farPay);
+    expect(nearPay).toBe(Math.round(farPay * (1 + (HEROES.wren.passive as { bonus: number }).bonus)));
   });
 });

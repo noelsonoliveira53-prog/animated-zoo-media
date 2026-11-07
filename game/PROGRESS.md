@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **51** (next balance pass at iteration 55)
+Iteration counter: **52** (next balance pass at iteration 55)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -405,14 +405,21 @@ Iteration counter: **51** (next balance pass at iteration 55)
   unbeatable (3,600 HP, blinking every 9 s; now 2,800 HP every 12 s), and two north pads put towers under the boss bar
   (moved down). The autoplayer weighs a splash-proof boss's HP ×3 when choosing its tower mix. 137 tests.
 
+- [x] **Iter 52 — Hero #4: Wren, the Owl Lorekeeper.** A ranged magic hero who hits flyers. New passive kind
+  `bounty` (**Scholar's Eye**: enemies that fall within 200 px of her pay 30% more coins; `sim.bountyMult`). Active
+  **Hush** (a `ring` with an 80% slow for 3 s and light damage; enemies all but stop). New `HeroActive.fxColor`, so
+  Hush draws a pale moonlight ring instead of Ember's foxfire gold. A hand-drawn barn-owl sprite with a scroll satchel.
+  She appears automatically in the hero picker, Field Guide and village training. Hero win rates on hard levels:
+  Fen 85% / Ember 75% / **Wren 75%** / Bramble 35%. 138 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Hero #4 (a ranged support or summoner) and a third global spell; check hero balance with `heroes.ts`.
-3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
+1. A third global spell (e.g. a slowing or barrier spell) on the spell bar.
+2. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
-4. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
+3. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
 
 ## Known Bugs

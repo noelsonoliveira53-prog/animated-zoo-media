@@ -1,3 +1,4 @@
+import { HEROES } from '../data/heroes';
 import type { LevelDef, Vec2 } from '../data/types';
 import { TOWERS } from '../data/towers';
 import { ENEMIES } from '../data/enemies';
@@ -50,7 +51,8 @@ export interface RunResult {
  * A build order shaped by what the level sends: more air-capable towers vs flyers,
  * more magic vs armor, more physical vs magic resist. Mirrors how a thoughtful player adapts.
  */
-export function adaptiveMix(level: LevelDef): string[] {
+/** Tower mix from the level's enemy makeup. A hero that can't hit flyers means more anti-air is needed. */
+export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
   let total = 0;
   let fly = 0;
   let armored = 0;
@@ -64,7 +66,7 @@ export function adaptiveMix(level: LevelDef): string[] {
       if (e.armor >= 0.4) armored += hp;
       if (e.magicResist >= 0.5) warded += hp;
     }
-  const f = fly / total;
+  const f = Math.min(1, (fly / total) * (heroHitsAir ? 1 : 1.4));
   const a = armored / total;
   const m = warded / total;
   const weights: Record<string, number> = {
@@ -174,7 +176,7 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
   const ranked = rankSlots(sim);
   // Jitter: swap a few neighbours in the ranking so runs differ.
   for (let i = 0; i < ranked.length - 1; i++) if (rnd() < 0.35) [ranked[i], ranked[i + 1]] = [ranked[i + 1], ranked[i]];
-  const mix = strat.mix[0] === 'adaptive' ? adaptiveMix(level) : strat.mix;
+  const mix = strat.mix[0] === 'adaptive' ? adaptiveMix(level, strat.hero ? HEROES[strat.hero].attack.hitsAir : true) : strat.mix;
   const usable = ranked.slice(0, Math.max(1, Math.round(ranked.length * strat.slotFraction)));
   let rotation = Math.floor(rnd() * mix.length);
   let think = 0;

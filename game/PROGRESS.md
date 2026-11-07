@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **39** (next iteration = 40 → POLISH + BALANCE pass)
+Iteration counter: **40** (next balance pass at iteration 45)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -321,13 +321,25 @@ Iteration counter: **39** (next iteration = 40 → POLISH + BALANCE pass)
   from a road, 15 waves), `SHOAL` theme, a shoal world-map style (shells, pebbles, dune grass, lagoon) and a lilting
   Saltmarrow music theme. 129 tests.
 
+- [x] **Iter 40 — POLISH + BALANCE (21 levels + heroes).** The campaign curve was healthy (every level ≥ 83% for the
+  expert), so this pass looked at heroes. Investigating why the novice outlasted the expert in endless showed the hero is
+  the deciding factor: on hard levels, expert wins were Fen 95% / Ember 60% / Bramble 35%, and **Obsidian Bridges was
+  effectively Fen-only** (two lanes that never merge, and only Fen's 190 px range covers both from the hero spot).
+  Fixes: two pads between Obsidian's lanes (hpMult 1.0 → 1.15); Icicle Crossing's big Thornhog waves split across both
+  roads (hpMult 1.58 → 1.7); autoplayer `adaptiveMix` is now hero-aware (more anti-air when the hero can't hit flyers);
+  Ember: bolt 18 → 22 damage, Warm Glow 20% → 25%; Bramble: hit 14 → 18, Earthshake 60 → 70 damage / 110 → 115 px;
+  Murkmaw's Den 1.84 → 1.95 so the buffed Bramble doesn't trivialise it for novices. Hero win rates on hard levels now
+  Fen ~80–95% / Ember 75% / Bramble 35–55%. 129 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Region 5: levels 22–25 (one more enemy, and a Shoals boss for level 25).
 2. Hero #4 and a third global spell.
-3. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
+3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
+   vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
+4. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
 
 ## Known Bugs
@@ -347,6 +359,16 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Heroes (iteration 40; expert wins on Icicle, Frostpeak, Obsidian, Heart and Morrowcap, 4 seeds each):**
+| Hero | Before | After |
+|---|---|---|
+| Bramble | 35% | 35–55% (Fen's crit is the only random element, so ±10% run-to-run) |
+| Fen | 95% | 80–95% |
+| Ember | 60% | 75% |
+Obsidian Bridges per hero (6 seeds): Bramble 0 → 5/6, Ember 0 → 4/6, Fen 5 → 6/6. Endless waves held (expert): Bramble
+about 30, Fen 16–18, Ember 16. Most of Bramble's endless lead comes from regen + blocking in long fights; follow-up in
+the backlog. Changed levels: Icicle 1.7 → 100/67/0, Murkmaw's Den 1.95 → 100/83/67, Obsidian 1.15 → 100/83/0.
 
 **Wrackline Beach (iteration 39, 6 seeds):** at 2.4 → 100/100/0 with the novice losing 72 lives to wave 5's
 Thornhogs (the same novice spike as on earlier maps). Thinned that wave → **2.4: 100% / 100% / 33%** (kept, matches

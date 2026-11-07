@@ -93,7 +93,7 @@ describe('heroes', () => {
     const sim = new BattleSim(lvl, 'ember');
     const t = sim.build(0, 'thornbow')!;
     sim.hero!.pos = { x: 600, y: 330 };
-    expect(sim.towerHaste(t)).toBeCloseTo(1.2);
+    expect(sim.towerHaste(t)).toBeCloseTo(1 + (HEROES.ember.passive as { bonus: number }).bonus);
     sim.hero!.pos = { x: 100, y: 330 };
     expect(sim.towerHaste(t)).toBe(1);
   });

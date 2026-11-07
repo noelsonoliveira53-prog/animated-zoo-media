@@ -67,4 +67,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x1a1a22, 0x8a6a2a],
     accent: 0xff8a3c,
   },
+  l50: {
+    title: 'The Stars Come Home',
+    lines: [
+      'Velumbra sinks back into the deep, and its thousand eyes go dark.',
+      'The glowing pools brighten, one by one, like stars coming home.',
+      'The Murkhorde is broken. The Keepers can finally rest a while.',
+    ],
+    sky: [0x080a18, 0x3a3a6a],
+    accent: 0x5ae8d0,
+  },
 };

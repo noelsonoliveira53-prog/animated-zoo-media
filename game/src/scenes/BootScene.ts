@@ -304,6 +304,35 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'velumbra': {
+        // shadow manta: vast dark wings, a long tail, a cluster of glowing eyes and a faint inner light
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx, cy + r * 0.5, cx + r * 0.2, cy + r * 1.35);
+        const wing = [
+          new Phaser.Math.Vector2(cx, cy - r * 0.8),
+          new Phaser.Math.Vector2(cx + r * 0.9, cy - r * 0.55),
+          new Phaser.Math.Vector2(cx + r * 1.45, cy + r * 0.05),
+          new Phaser.Math.Vector2(cx + r * 0.7, cy + r * 0.25),
+          new Phaser.Math.Vector2(cx, cy + r * 0.65),
+          new Phaser.Math.Vector2(cx - r * 0.7, cy + r * 0.25),
+          new Phaser.Math.Vector2(cx - r * 1.45, cy + r * 0.05),
+          new Phaser.Math.Vector2(cx - r * 0.9, cy - r * 0.55),
+        ];
+        g.fillStyle(color, 1);
+        g.fillPoints(wing, true);
+        g.strokePoints(wing, true);
+        g.fillStyle(0x5a4a9a, 0.6);
+        g.fillEllipse(cx, cy - r * 0.05, r * 0.9, r * 0.9);
+        g.fillStyle(0x8a6ad8, 0.35);
+        for (const sx of [-1, 1]) g.fillTriangle(cx + sx * r * 0.5, cy - r * 0.3, cx + sx * r * 1.3, cy + r * 0.02, cx + sx * r * 0.6, cy + r * 0.15);
+        for (const [dx, dy, rr] of [[0, -0.2, 0.16], [-0.3, -0.05, 0.11], [0.3, -0.05, 0.11], [-0.15, 0.18, 0.08], [0.15, 0.18, 0.08], [0, -0.48, 0.07]]) {
+          g.fillStyle(0x5ae8d0, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, rr * r);
+          g.fillStyle(0x0a0c1a, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, rr * r * 0.45);
+        }
+        break;
+      }
       case 'sparkeel': {
         // cave eel: a long S-curved glowing body, fin ridge, bright spots along its side, a little spark at the tail
         g.lineStyle(r * 0.75, C.ink, 1);

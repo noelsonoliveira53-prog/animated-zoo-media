@@ -16,7 +16,7 @@ page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
 await page.addInitScript(() => {
   const stars = {};
-  for (let i = 1; i <= 45; i++) stars['l' + i] = 3;
+  for (let i = 1; i <= 60; i++) stars['l' + i] = 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars }));
 });
 await page.goto('http://localhost:4338/');

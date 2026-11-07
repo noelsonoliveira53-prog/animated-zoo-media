@@ -34,6 +34,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'ruins_stars', name: 'Pathfinder', text: 'Earn 3 stars on every Verdant Ruins level.', goal: 15, progress: (s) => ['l36', 'l37', 'l38', 'l39', 'l40'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 2800, glowsap: 2800 } },
   { id: 'boss_grindmaw', name: 'Engine Breaker', text: 'Defeat Grindmaw, the Engine Titan.', goal: 1, progress: (s) => stat(s, 'boss_grindmaw'), reward: { coins: 2400, glowsap: 2400 } },
   { id: 'brass_stars', name: 'Master Tinker', text: 'Earn 3 stars on every Brasswork Hollows level.', goal: 15, progress: (s) => ['l41', 'l42', 'l43', 'l44', 'l45'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 3000, glowsap: 3000 } },
+  { id: 'boss_velumbra', name: 'Lightbringer', text: 'Defeat Velumbra, the Dark Below.', goal: 1, progress: (s) => stat(s, 'boss_velumbra'), reward: { coins: 2600, glowsap: 2600 } },
+  { id: 'abyss_stars', name: 'Starwalker', text: 'Earn 3 stars on every Starwell Abyss level.', goal: 15, progress: (s) => ['l46', 'l47', 'l48', 'l49', 'l50'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 3200, glowsap: 3200 } },
   { id: 'campaign', name: 'Keeper of the Grove', text: 'Defeat Vulkhar and finish the story.', goal: 1, progress: (s) => ((s.stars[(LEVELS.find((l) => l.finale) ?? LEVELS[LEVELS.length - 1]).id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
   { id: 'kills500', name: 'Mud on the Boots', text: 'Defeat 500 Murkhorde critters.', goal: 500, progress: (s) => stat(s, 'kills'), reward: { coins: 300 } },
   { id: 'kills5000', name: 'Horde Breaker', text: 'Defeat 5,000 Murkhorde critters.', goal: 5000, progress: (s) => stat(s, 'kills'), reward: { coins: 1500, glowsap: 1000 } },

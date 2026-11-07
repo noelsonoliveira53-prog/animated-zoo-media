@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **87** (next balance pass at iteration 90)
+Iteration counter: **88** (next balance pass at iteration 90)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -620,12 +620,21 @@ Iteration counter: **87** (next balance pass at iteration 90)
   right pad stood its tower on the exit gate's crossbar (moved below the exit road). New test: no tower may overlap a
   road-exit gate's posts or crossbar. It also caught the same spot in Three Winds (moved to (1100,148); balance
   re-checked 92/58/67). Screenshot `87.png`. 166 tests.
+- [x] **Iter 88 — Starwell finale: Heart of the Abyss (level 50) + Velumbra, the Dark Below.** New boss (46 enemies):
+  a shadow manta with a huge `dim` aura (200 px, −25% range), a crackling `shock` (stuns blockers within 150 px every
+  7 s), an Echo Wisp `spawner`, and four phases (dimlanterns → shadow shield + sparkeels → a flood of wisps → a surge).
+  No `echo` on the boss: re-forming at low health would re-trigger every phase at once. Level 50: a long west road (the
+  boss) and a short north road (light groups only) merge into a 1,240 px tail around a glowing pool, 11 pads, 18 waves,
+  hpMult 2.45. Achievements **Lightbringer** and **Starwalker** (30 total); Velumbra joins the endless boss rotation;
+  story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 10 finale (level 50) with a Starwell boss.
+1. Iter 90 balance pass (after iter 89).
+2. Refresh the playable demo artifact (50 levels).
+3. Region 11 (levels 51–55): a new biome, enemies and boss.
 
 ## Known Bugs
 - (none known)
@@ -651,6 +660,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 88:** 50 Heart of the Abyss 92/67/0 at hpMult 2.45 (1.8 → 92/92/0, 2.1 → 92/92/0, 2.4 → 75/75/0,
+2.55 → 67/67/0, 2.7 → 58/33/0). Expert and casual fall together here, so casual sits a little above the boss band.
 **Iteration 87:** 49 Starfall Gorge 83/83/0 at hpMult 2.0 (1.6 → 100/100/0, 1.9 → 92/83/0, 2.1 → 58/33/0).
 Three Winds after its pad move: 92/58/67 at 1.55.
 **Iteration 86:** 48 Moonring Lake 100/83/0 at hpMult 2.38 (2.1 → 100/100/0, 2.45 → 75/75/0, 2.6 → 58/33/0).

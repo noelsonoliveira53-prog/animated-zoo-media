@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **88** (next balance pass at iteration 90)
+Iteration counter: **89** (next balance pass at iteration 90)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -628,14 +628,22 @@ Iteration counter: **88** (next balance pass at iteration 90)
   hpMult 2.45. Achievements **Lightbringer** and **Starwalker** (30 total); Velumbra joins the endless boss rotation;
   story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests. Playable demo
   artifact refreshed with this build.
+- [x] **Iter 89 — Region 11 opens: The Rotbloom Orchard.** The Keepers' own orchards, rotting from the roots. New
+  mechanics (49 enemies): **Barkwarden** (`fortify`: allies within 130 px gain +25% armor while it lives; the strongest
+  aura applies, capped at 85%; shown as a turning ring of leaf-brown dashes; `sim.res()` and projectile damage both use
+  it) and **Seedcaster**, which sows up to three **Rotseeds** (a still, 0-lives "enemy" with `grow`: after 6 s it
+  sprouts into a Skitter, paying nothing). The first draft grew Thornhogs and four seeds per caster, which overran even
+  the expert; now Skitters and three. Field Guide tags for fortify, grow and every spawner. Level 51 **Windfall Rows**
+  (west + winding north road, 1,000 / 920 px, 860 px tail, 11 pads, 15 waves, hpMult 2.1), an `ORCHARD` theme (autumn
+  fruit trees with apples, leaf heaps), an autumn world-map style and a slightly sour harvest-jig music theme. Endless
+  adds Barkwarden and Seedcaster from wave 44. Browser check `scripts/orchard-check.mjs`. 168 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 11 opener (level 51) — iter 89.
-2. Iter 90 balance pass.
-3. Region 11 rest (levels 51–55): a new biome, enemies and boss.
+1. Iter 90 balance pass.
+2. Region 11 levels 52–54 (+ a third Rotbloom enemy), then the finale (level 55) with a Rotbloom boss.
 
 ## Known Bugs
 - (none known)
@@ -661,6 +669,7 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 89:** 51 Windfall Rows 100/92/42 at hpMult 2.1 (1.8 → 100/100/100, 2.15 → 100/83/75, 2.4 → 100/42/17).
 **Iteration 88:** 50 Heart of the Abyss 92/67/0 at hpMult 2.45 (1.8 → 92/92/0, 2.1 → 92/92/0, 2.4 → 75/75/0,
 2.55 → 67/67/0, 2.7 → 58/33/0). Expert and casual fall together here, so casual sits a little above the boss band.
 **Iteration 87:** 49 Starfall Gorge 83/83/0 at hpMult 2.0 (1.6 → 100/100/0, 1.9 → 92/83/0, 2.1 → 58/33/0).

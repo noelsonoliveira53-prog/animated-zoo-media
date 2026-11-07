@@ -565,3 +565,30 @@ describe('Sparkeel shock', () => {
     expect(eel.hp).toBe(hp);
   });
 });
+
+describe('Rotbloom enemies', () => {
+  it('Barkwarden gives nearby allies extra armor while it lives (not itself, not far allies)', () => {
+    const sim = new BattleSim(lvl, null);
+    const bw = sim.spawn('barkwarden', 0, 400);
+    const near = sim.spawn('mudling', 0, 450);
+    const far = sim.spawn('mudling', 0, 1200);
+    const bonus = bw.def.fortify!.bonus;
+    expect(sim.res(near).armor).toBeCloseTo(near.def.armor + bonus);
+    expect(sim.res(far).armor).toBe(far.def.armor);
+    expect(sim.res(bw).armor).toBe(bw.def.armor);
+    (sim as any).applyDamage(bw, 99999);
+    expect(sim.res(near).armor).toBe(near.def.armor);
+  });
+
+  it('a Rotseed left alone sprouts into its grown form and pays nothing', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const seed = sim.spawn('rotseed', 0, 400);
+    const g = seed.def.grow!;
+    const c0 = sim.coins;
+    for (let i = 0; i < Math.ceil(g.after * 60) + 2; i++) sim.update(1 / 60);
+    expect(seed.alive).toBe(false);
+    expect(sim.enemies.some((e) => e.alive && e.def.id === g.into)).toBe(true);
+    expect(sim.coins).toBe(c0);
+  });
+});

@@ -304,6 +304,66 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'barkwarden': {
+        // walking stump: ringed top, root legs, two knot-hole eyes, a few red leaves still clinging on
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.6, -0.2, 0.2, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.55, cx + lx * r * 1.3, cy + r * 1.0);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.8, cy - r * 0.6, r * 1.6, r * 1.25, 6);
+        g.strokeRoundedRect(cx - r * 0.8, cy - r * 0.6, r * 1.6, r * 1.25, 6);
+        g.fillStyle(0xc8a878, 1);
+        g.fillEllipse(cx, cy - r * 0.6, r * 1.6, r * 0.5);
+        g.strokeEllipse(cx, cy - r * 0.6, r * 1.6, r * 0.5);
+        g.lineStyle(1.5, 0x8a6a3a, 1);
+        g.strokeEllipse(cx, cy - r * 0.6, r * 0.9, r * 0.28);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x2a1a0a, 1);
+        g.fillEllipse(cx - r * 0.3, cy - r * 0.05, r * 0.25, r * 0.32);
+        g.fillEllipse(cx + r * 0.3, cy - r * 0.05, r * 0.25, r * 0.32);
+        g.fillStyle(0xffd84a, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.05, r * 0.06);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.05, r * 0.06);
+        g.fillStyle(0xd04a2a, 1);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.85, r * 0.3, r * 0.16);
+        g.fillEllipse(cx + r * 0.45, cy - r * 0.9, r * 0.3, r * 0.16);
+        break;
+      }
+      case 'seedcaster': {
+        // rot-sprite: a hooded little figure with a bulging seed pouch and glowing eyes
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        g.strokeTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        g.fillStyle(0x1a1028, 1);
+        g.fillCircle(cx, cy - r * 0.15, r * 0.32);
+        g.fillStyle(0xc8ff6a, 1);
+        g.fillCircle(cx - r * 0.12, cy - r * 0.18, r * 0.07);
+        g.fillCircle(cx + r * 0.12, cy - r * 0.18, r * 0.07);
+        g.fillStyle(0x6a4a2a, 1);
+        g.fillCircle(cx + r * 0.6, cy + r * 0.45, r * 0.35);
+        g.strokeCircle(cx + r * 0.6, cy + r * 0.45, r * 0.35);
+        g.fillStyle(0x2a1a2a, 1);
+        for (const [dx, dy] of [[0.5, 0.35], [0.7, 0.5], [0.58, 0.6]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.07);
+        break;
+      }
+      case 'rotseed': {
+        // black seed half-buried, a pale shoot just poking out
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
+        g.fillStyle(0x5a4a5a, 1);
+        g.fillEllipse(cx - r * 0.25, cy, r * 0.4, r * 0.25);
+        g.lineStyle(2.5, 0x9ac85a, 1);
+        g.beginPath();
+        g.moveTo(cx, cy - r * 0.3);
+        g.lineTo(cx + r * 0.1, cy - r * 0.8);
+        g.lineTo(cx + r * 0.35, cy - r * 1.0);
+        g.strokePath();
+        g.fillStyle(0x9ac85a, 1);
+        g.fillEllipse(cx + r * 0.45, cy - r * 1.0, r * 0.4, r * 0.2);
+        break;
+      }
       case 'velumbra': {
         // shadow manta: vast dark wings, a long tail, a cluster of glowing eyes and a faint inner light
         g.lineStyle(3, C.ink, 1);

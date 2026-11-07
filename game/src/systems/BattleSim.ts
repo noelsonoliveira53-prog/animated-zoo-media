@@ -42,6 +42,7 @@ export interface Enemy {
   swoopCd: number;
   blinkCd: number;
   gustCd: number;
+  growT: number; // seconds a Rotseed has been growing
   shockCd: number;
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
@@ -167,6 +168,7 @@ export type SimEvent =
   | { type: 'thorns'; pos: Vec2 }
   | { type: 'charge'; enemy: Enemy }
   | { type: 'echo'; enemy: Enemy }
+  | { type: 'grow'; enemy: Enemy }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
@@ -860,6 +862,7 @@ export class BattleSim {
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
+      growT: 0,
       shockCd: def.shock ? def.shock.interval : 0,
       chargeTime: 0,
       chargeCd: 0,
@@ -897,6 +900,16 @@ export class BattleSim {
       if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.gust) this.tickGust(e, dt);
+      if (e.def.grow) {
+        e.growT += dt;
+        if (e.growT >= e.def.grow.after) {
+          // Rotseed sprouts: it is replaced where it stood, and pays nothing.
+          e.alive = false;
+          const g = this.spawn(e.def.grow.into, e.path, e.dist);
+          this.events.push({ type: 'grow', enemy: g });
+          continue;
+        }
+      }
       if (e.def.shock) this.tickShock(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
@@ -1155,7 +1168,18 @@ export class BattleSim {
 
   /** Damage resistances, using the enemy's current armor. */
   res(e: Enemy): { armor: number; magicResist: number } {
-    return { armor: e.armor, magicResist: e.mr };
+    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e)), magicResist: e.mr };
+  }
+
+  /** Barkwardens toughen nearby allies' bark: the strongest aura in range adds armor (they don't stack). */
+  fortifyBonus(e: Enemy): number {
+    let b = 0;
+    for (const o of this.enemies) {
+      const f = o.def.fortify;
+      if (!f || o === e || !o.alive) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= f.radius) b = Math.max(b, f.bonus);
+    }
+    return b;
   }
 
   /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
@@ -1510,7 +1534,7 @@ export class BattleSim {
     if (p.slow) {
       this.slow(e, p.slow.factor, p.slow.duration);
     }
-    const armor = e.armor * (1 - p.pierce);
+    const armor = this.res(e).armor * (1 - p.pierce);
     this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }));
   }
 

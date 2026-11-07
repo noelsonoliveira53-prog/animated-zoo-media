@@ -8,6 +8,7 @@ const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0
 const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
 const DUSK = { grass: 0x4a5a78, grassDark: 0x3c4a66, road: 0xa898b4, roadEdge: 0x7a6a8e, trees: [0x8a5ab8, 0xb85a8a, 0x5a8ab8], shrooms: true };
 const SHOAL = { grass: 0xdcc898, grassDark: 0xc9b47e, road: 0x8a7a62, roadEdge: 0x6a5c48, trees: [0x3f8a5a, 0x4f9a6a, 0x2f7a4a] };
+const ORCHARD = { grass: 0xa8a050, grassDark: 0x948c44, road: 0xc8a878, roadEdge: 0x9a7a52, trees: [0xd8642a, 0xe8a03a, 0xb8442a], orchard: true };
 const ABYSS = { grass: 0x1e2440, grassDark: 0x161a32, road: 0x4a4a6a, roadEdge: 0x32324e, trees: [0x6ad8e8, 0x9a7ae8, 0x5ae8b0], abyss: true };
 const GEARS = { grass: 0x5a5a62, grassDark: 0x4a4a52, road: 0x9a8a6a, roadEdge: 0x6a5a40, trees: [0xc8963a, 0x8a6a2a, 0xa0a0aa], gears: true };
 const RUINS = { grass: 0x4a8a3a, grassDark: 0x3a7430, road: 0xb8ae94, roadEdge: 0x8a8270, trees: [0x2f6a2a, 0x3f7f34, 0x4a9a3a], ruins: true };
@@ -2517,6 +2518,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'velumbra', count: 1, interval: 1, delay: 8 }, { enemy: 'echowisp', count: 12, interval: 0.8, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, path: 1, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l51',
+    name: 'Windfall Rows',
+    blurb: 'Far from the old battles, the orchards of the Keepers rot from the roots. Stumps walk, and something sows black seeds between the rows.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.1,
+    startCoins: 950,
+    lives: 20,
+    theme: ORCHARD,
+    paths: [
+      [{ x: -40, y: 240 }, { x: 360, y: 240 }, { x: 360, y: 500 }, { x: 700, y: 500 }, { x: 1000, y: 500 }, { x: 1000, y: 260 }, { x: 1320, y: 260 }],
+      [{ x: 560, y: -40 }, { x: 560, y: 160 }, { x: 820, y: 160 }, { x: 820, y: 380 }, { x: 700, y: 380 }, { x: 700, y: 500 }, { x: 1000, y: 500 }, { x: 1000, y: 260 }, { x: 1320, y: 260 }],
+    ],
+    slots: [
+      { x: 200, y: 340 },
+      { x: 180, y: 140 },
+      { x: 460, y: 380 },
+      { x: 460, y: 600 },
+      { x: 660, y: 260 },
+      { x: 920, y: 380 },
+      { x: 600, y: 420 },
+      { x: 850, y: 600 },
+      { x: 1100, y: 380 },
+      { x: 1100, y: 160 },
+      { x: 460, y: 160 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.5 }, { enemy: 'seedcaster', count: 2, interval: 3, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'barkwarden', count: 2, interval: 3 }, { enemy: 'skitter', count: 12, interval: 0.4, path: 1, delay: 2 }, { enemy: 'mudling', count: 10, interval: 0.5, delay: 5 }] },
+      { groups: [{ enemy: 'seedcaster', count: 3, interval: 2.5 }, { enemy: 'reedguard', count: 8, interval: 1, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'barkwarden', count: 3, interval: 2.5 }, { enemy: 'thornhog', count: 6, interval: 1, delay: 3 }, { enemy: 'gullwing', count: 6, interval: 0.8, path: 1, delay: 5 }] },
+      { groups: [{ enemy: 'seedcaster', count: 4, interval: 2.2, path: 1 }, { enemy: 'shellback', count: 6, interval: 1.3, delay: 2 }] },
+      { groups: [{ enemy: 'barkwarden', count: 3, interval: 2.4 }, { enemy: 'galehound', count: 10, interval: 0.55, path: 1, delay: 3 }, { enemy: 'seedcaster', count: 2, interval: 3, delay: 6 }] },
+      { groups: [{ enemy: 'echowisp', count: 12, interval: 0.6 }, { enemy: 'barkwarden', count: 3, interval: 2.4, path: 1, delay: 3 }, { enemy: 'glarefly', count: 6, interval: 0.9, delay: 6 }] },
+      { groups: [{ enemy: 'seedcaster', count: 5, interval: 2, path: 1 }, { enemy: 'rivetshell', count: 4, interval: 2.2, delay: 2 }, { enemy: 'kitewing', count: 4, interval: 1.5, path: 1, delay: 6 }] },
+      { groups: [{ enemy: 'barkwarden', count: 4, interval: 2.2 }, { enemy: 'shiftscale', count: 10, interval: 0.8, path: 1, delay: 3 }, { enemy: 'gnat', count: 16, interval: 0.28, delay: 6 }] },
+      { groups: [{ enemy: 'seedcaster', count: 5, interval: 2 }, { enemy: 'barkwarden', count: 3, interval: 2.4, path: 1, delay: 3 }, { enemy: 'sparkeel', count: 4, interval: 2.2, delay: 6 }] },
+      { groups: [{ enemy: 'barkwarden', count: 5, interval: 2, path: 1 }, { enemy: 'cloudram', count: 4, interval: 2.2, delay: 3 }, { enemy: 'seedcaster', count: 4, interval: 2.2, delay: 7 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 2.8 }, { enemy: 'seedcaster', count: 5, interval: 2, path: 1, delay: 2 }, { enemy: 'gullwing', count: 12, interval: 0.5, delay: 6 }] },
+      { groups: [{ enemy: 'barkwarden', count: 6, interval: 1.8 }, { enemy: 'mirrorback', count: 4, interval: 2.2, path: 1, delay: 3 }, { enemy: 'seedcaster', count: 4, interval: 2.2, delay: 8 }] },
+      { groups: [{ enemy: 'seedcaster', count: 7, interval: 1.6 }, { enemy: 'barkwarden', count: 4, interval: 2.2, path: 1, delay: 3 }, { enemy: 'galehound', count: 14, interval: 0.45, delay: 6 }] },
+      { groups: [{ enemy: 'barkwarden', count: 7, interval: 1.6 }, { enemy: 'seedcaster', count: 6, interval: 1.8, path: 1, delay: 2 }, { enemy: 'bramblehide', count: 4, interval: 2.2, delay: 6 }, { enemy: 'glarefly', count: 10, interval: 0.6, path: 1, delay: 10 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -2543,6 +2588,7 @@ export interface RegionDef {
   ruins?: boolean;
   gears?: boolean;
   abyss?: boolean;
+  orchard?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -2556,6 +2602,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Verdant Ruins', first: 35, count: 5, ruins: true },
   { name: 'The Brasswork Hollows', first: 40, count: 5, gears: true },
   { name: 'The Starwell Abyss', first: 45, count: 5, abyss: true },
+  { name: 'The Rotbloom Orchard', first: 50, count: 5, orchard: true },
 ];
 
 export function regionOf(levelIndex: number): number {

@@ -317,6 +317,30 @@ export class BattleScene extends Phaser.Scene {
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
         }
+      } else if (this.level.theme.orchard && rnd.frac() < 0.75) {
+        if (rnd.frac() < 0.7) {
+          // autumn fruit tree with a few red apples (and some fallen ones)
+          const leaf = rnd.pick(this.level.theme.trees ?? [0xd8642a]);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 40, 14);
+          deco.fillStyle(0x6b4a2b, 1);
+          deco.fillRect(p.x - 4, p.y - 14, 8, 18);
+          deco.fillStyle(leaf, 1);
+          deco.fillCircle(p.x, p.y - 26, 18);
+          deco.fillCircle(p.x - 12, p.y - 16, 12);
+          deco.fillCircle(p.x + 12, p.y - 16, 12);
+          deco.lineStyle(2, C.ink, 0.6);
+          deco.strokeCircle(p.x, p.y - 26, 18);
+          deco.fillStyle(0xd02a2a, 1);
+          for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - 22 + rnd.between(-6, 8), 3);
+          deco.fillCircle(p.x + rnd.between(-14, 14), p.y + 6, 2.5);
+        } else {
+          // a little heap of fallen leaves
+          for (let k = 0; k < 5; k++) {
+            deco.fillStyle(rnd.pick([0xd8642a, 0xe8a03a, 0xb8442a]), 0.9);
+            deco.fillEllipse(p.x + rnd.between(-12, 12), p.y + rnd.between(-5, 5), 10, 6);
+          }
+        }
       } else if (this.level.theme.abyss && rnd.frac() < 0.9) {
         if (rnd.frac() < 0.5) {
           // a pale stalagmite cluster
@@ -1296,6 +1320,13 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'grow': {
+        sfx.trait('grow');
+        this.particles.setParticleTint(0x6a9a3a);
+        this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y - 6);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Sprouted!', '#c8e88a', 15);
+        break;
+      }
       case 'echo': {
         sfx.trait('echo');
         const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 26, 0xd8e8ff, 0.35).setDepth(2450);
@@ -1499,6 +1530,18 @@ export class BattleScene extends Phaser.Scene {
     // Cogjammer range: a faint dashed brass ring that turns as it rattles.
     if (!this.jamG) this.jamG = this.add.graphics().setDepth(5);
     this.jamG.clear();
+    for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.fortify) continue;
+      // Barkwarden bark-song: a ring of falling leaf-brown dashes
+      this.jamG.lineStyle(2, 0xc8864a, 0.5);
+      const t0 = -this.sim.time * 0.6;
+      for (let k = 0; k < 10; k++) {
+        const a0 = t0 + (k / 10) * Math.PI * 2;
+        this.jamG.beginPath();
+        this.jamG.arc(e.pos.x, e.pos.y, e.def.fortify.radius, a0, a0 + 0.25);
+        this.jamG.strokePath();
+      }
+    }
     for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.dim) continue;
       // Dimlantern gloom: a soft dark disc with a violet rim

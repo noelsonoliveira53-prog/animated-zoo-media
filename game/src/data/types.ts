@@ -49,6 +49,8 @@ export interface EnemyDef {
   dim?: { radius: number; cut: number }; // shooting towers within radius lose this fraction of their range
   echo?: { hpFrac: number }; // on its first death it re-forms once at this fraction of health
   shock?: { interval: number; radius: number; duration: number }; // stuns nearby soldiers and the hero on a timer
+  fortify?: { radius: number; bonus: number }; // nearby allies gain this much armor while it lives
+  grow?: { into: string; after: number }; // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;
@@ -129,7 +131,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

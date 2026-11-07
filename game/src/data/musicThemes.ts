@@ -65,10 +65,13 @@ export const THEMES: ThemeDef[] = [
   // Starwell Abyss: slow, cavernous and twinkling, with wide falling intervals.
   { id: 'abyss', name: 'Starwell', transpose: -4, tempo: 0.9, arpWave: 'sine', leadWave: 'triangle',
     motif: [[24, 0, 4], [19, 4, 4], [22, 8, 6], [17, 14, 2], [15, 16, 4], [12, 20, 4], [10, 24, 8]] },
+  // Rotbloom Orchard: a homely harvest jig gone slightly sour (a lowered sixth).
+  { id: 'orchard', name: 'Rotbloom', transpose: 1, tempo: 1.04, arpWave: 'triangle', leadWave: 'triangle',
+    motif: [[12, 0, 2], [14, 2, 2], [16, 4, 4], [19, 8, 2], [20, 10, 2], [19, 12, 4], [16, 16, 2], [14, 18, 2], [12, 20, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

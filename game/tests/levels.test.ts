@@ -78,6 +78,20 @@ describe('HUD clearance', () => {
         }
   });
 
+  it('no tower stands behind a road exit gate', () => {
+    for (const l of LEVELS)
+      for (const p of l.paths) {
+        const e = p[p.length - 1];
+        // Same clamping as the battle scene's gate marker; posts and crossbar span ±40 x and -70..+10 y.
+        const gx = Math.max(60, Math.min(1280 - 60, e.x));
+        const gy = Math.max(80, Math.min(720 - 20, e.y));
+        for (const s of l.slots) {
+          const behind = s.x + 32 > gx - 40 && s.x - 32 < gx + 40 && s.y + 24 > gy - 70 && s.y - 75 < gy + 10;
+          expect(behind, `${l.name} pad (${s.x},${s.y}) behind the gate at (${gx},${gy})`).toBe(false);
+        }
+      }
+  });
+
   it('pads near the bottom keep their tower base on screen', () => {
     for (const l of LEVELS) for (const s of l.slots) expect(s.y, `${l.name} pad (${s.x},${s.y}) too close to the bottom edge`).toBeLessThanOrEqual(680);
   });

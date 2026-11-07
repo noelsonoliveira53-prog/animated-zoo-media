@@ -1,6 +1,8 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
+import { ENDLESS } from '../data/endless';
+import { makeEndlessLevel, wavesHeld } from '../systems/endless';
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { combine, DAILY_MODIFIERS } from '../data/daily';
@@ -79,17 +81,21 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private daily: DailyChallenge | null = null;
+  private endless = false;
+  private endlessResult: { held: number; best: number; isBest: boolean } | null = null;
 
-  init(data: { levelIndex?: number; daily?: boolean }): void {
+  init(data: { levelIndex?: number; daily?: boolean; endless?: boolean }): void {
     this.levelIndex = data.levelIndex ?? 0;
     this.daily = null;
+    this.endless = !!data.endless && !data.daily;
+    this.endlessResult = null;
     if (data.daily) {
       const st = loadSave().stars;
       const unlocked = LEVELS.filter((_, i) => isLevelUnlocked(i, st)).length;
       this.daily = dailyFor(todayString(), unlocked);
       this.levelIndex = this.daily.levelIndex;
     }
-    this.level = LEVELS[this.levelIndex];
+    this.level = this.endless ? makeEndlessLevel(LEVELS[this.levelIndex]) : LEVELS[this.levelIndex];
     const save = loadSave();
     this.perks = battlePerks(save.village);
     this.sim = new BattleSim(this.level, save.hero, {
@@ -652,7 +658,7 @@ export class BattleScene extends Phaser.Scene {
   private refreshHud(): void {
     this.livesText.setText(String(this.sim.lives));
     this.coinText.setText(String(this.sim.coins));
-    this.waveText.setText(`${Math.max(0, this.sim.waveIndex + 1)}/${this.sim.totalWaves}`);
+    this.waveText.setText(`${Math.max(0, this.sim.waveIndex + 1)}/${this.endless ? '∞' : this.sim.totalWaves}`);
     if (this.sim.wavesRemaining && this.sim.isActive()) {
       const secs = Math.ceil(this.sim.waveCountdown);
       this.nextWaveBtn.label.setText(
@@ -696,7 +702,7 @@ export class BattleScene extends Phaser.Scene {
     const soundLabel = () => (loadSave().settings.muted ? 'Sound: Off' : 'Sound: On');
     const items: [string, number, () => void][] = [
       ['Resume', C.leaf, () => this.togglePause()],
-      ['Restart', C.sky, () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily })],
+      ['Restart', C.sky, () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily, endless: this.endless })],
       [soundLabel(), 0xb07cff, () => {}],
       ['Quit to Map', 0xff9f43, () => this.scene.start('WorldMap', { focus: this.levelIndex })],
     ];
@@ -1033,7 +1039,7 @@ export class BattleScene extends Phaser.Scene {
           const parts: string[] = [];
           if (ev.income > 0) parts.push(`Supplies +${ev.income}`);
           if (ev.bonus > 0) parts.push(`Early call +${ev.bonus}`);
-          this.showBanner(`Wave ${ev.index + 1} of ${this.sim.totalWaves}`, parts.length ? parts.join('   •   ') + ' coins' : 'Here they come!');
+          this.showBanner(this.endless ? `Endless wave ${ev.index + 1}` : `Wave ${ev.index + 1} of ${this.sim.totalWaves}`, parts.length ? parts.join('   •   ') + ' coins' : 'Here they come!');
           if (ev.income + ev.bonus > 0) this.tweens.add({ targets: this.coinText, scale: 1.35, duration: 120, yoyo: true });
         }
         break;
@@ -1369,7 +1375,16 @@ export class BattleScene extends Phaser.Scene {
     let reward = { coins: 0, glowsap: 0 };
     let after = loadSave();
     let bloom = 0;
-    if (won) {
+    if (this.endless) {
+      // Endless: no stars; pay per wave held and remember the best run on this map.
+      const held = wavesHeld(this.sim.waveIndex + (won ? 1 : 0));
+      const key = LEVELS[this.levelIndex].id;
+      const prev = after.endlessBest[key] ?? 0;
+      after.endlessBest = { ...after.endlessBest, [key]: Math.max(prev, held) };
+      reward = addResources(ensureVillage(after), ENDLESS.rewardPerWave.coins * held, ENDLESS.rewardPerWave.glowsap * held);
+      this.endlessResult = { held, best: Math.max(prev, held), isBest: held > prev };
+      if (!music.stinger(held > prev ? 'victory' : 'defeat')) sfx.defeat();
+    } else if (won) {
       const prevStars = after.stars[this.level.id] ?? 0;
       after = recordStars(after, this.level.id, stars);
       const want = battleReward(this.levelIndex, prevStars, stars);
@@ -1408,13 +1423,20 @@ export class BattleScene extends Phaser.Scene {
     bg.fillStyle(C.panel, 1);
     bg.fillRoundedRect(-270, -190, 540, 380, 22);
     panel.add(bg);
-    panel.add(this.add.text(0, -140, won ? 'Victory!' : 'The Gate Fell', textStyle(54, won ? TEXT.gold : TEXT.heart)).setOrigin(0.5));
-    for (let i = 0; i < 3; i++) {
+    const er = this.endlessResult;
+    panel.add(this.add.text(0, -140, er ? 'Endless Run Over' : won ? 'Victory!' : 'The Gate Fell', textStyle(er ? 46 : 54, won || er?.isBest ? TEXT.gold : TEXT.heart)).setOrigin(0.5));
+    if (er) {
+      panel.add(this.add.text(0, -54, `${er.held}`, textStyle(64, TEXT.gold)).setOrigin(0.5).setName('endlessHeld'));
+      panel.add(this.add.text(0, -6, er.held === 1 ? 'wave held' : 'waves held', textStyle(20)).setOrigin(0.5));
+      panel.add(this.add.text(0, 24, er.isBest ? 'New best on this map!' : `Best on this map: ${er.best}`, textStyle(17, er.isBest ? '#9be86a' : TEXT.dim, false)).setOrigin(0.5));
+      panel.add(this.add.text(0, 52, `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap`, textStyle(16, TEXT.gold, false)).setOrigin(0.5));
+    }
+    for (let i = 0; i < (er ? 0 : 3); i++) {
       const star = this.add.image(-90 + i * 90, -40, i < stars ? 'star' : 'star_empty').setScale(0);
       panel.add(star);
       this.tweens.add({ targets: star, scale: 1.4, delay: 400 + i * 250, duration: 300, ease: 'Back.easeOut' });
     }
-    panel.add(
+    if (!er) panel.add(
       this.add
         .text(0, 14, won ? `Lives kept: ${this.sim.lives}/${this.sim.maxLives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
         .setOrigin(0.5),
@@ -1427,16 +1449,16 @@ export class BattleScene extends Phaser.Scene {
       panel.add(t);
       this.tweens.add({ targets: t, scale: 1, delay: 1250, duration: 300, ease: 'Back.easeOut' });
     }
-    if (won) {
+    if (won && !er) {
       const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
       panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
-    const finale = won && !!this.level.finale;
-    const hasNext = won && (this.levelIndex + 1 < LEVELS.length || finale);
+    const finale = won && !er && !!this.level.finale;
+    const hasNext = won && !er && (this.levelIndex + 1 < LEVELS.length || finale);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,
       color: C.sky,
-      onClick: () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily }),
+      onClick: () => this.scene.restart({ levelIndex: this.levelIndex, daily: !!this.daily, endless: this.endless }),
     });
     const map = new Button(this, hasNext ? 0 : 120, 120, 'Map', {
       width: hasNext ? 150 : 200,

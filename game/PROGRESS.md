@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **37** (next balance pass at iteration 40)
+Iteration counter: **38** (next balance pass at iteration 40)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -305,13 +305,22 @@ Iteration counter: **37** (next balance pass at iteration 40)
   width); the Menu hero description overflowed its panel (kept at desktop size). Desktop layouts re-checked.
   122 tests.
 
+- [x] **Iter 38 — Endless mode.** Any beaten level's map card has an **Endless** button. `systems/endless.ts` turns the
+  map into 200 seeded, generated waves (`data/endless.ts`): the enemy pool grows in tiers (waves 1/4/8/12/16), a boss
+  every 10th wave (Murkmaw → Grimtusk → Vulkhar → Morrowcap), a per-wave HP budget, and a new `LevelDef.endless.hpRamp`
+  (+7% enemy health per wave, bounties too). HUD shows "n/∞" and "Endless wave n". The result panel shows waves held,
+  new best or best on this map, and a village payout (12c + 12s per wave). Best runs go to `save.endlessBest`, and endless
+  never records stars. Retry and pause → Restart stay in endless. New achievement **Unending Vigil** (25 waves; 20 total).
+  New `scripts/endless-balance.ts` and `scripts/endless-check.mjs` (real click on the card's Endless button). 127 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Endless mode: pick any cleared map and survive generated waves (score = waves held); best score per map saved.
-2. Region 5 (levels 21–25) with its own enemy roster.
-3. Hero #4 and a third global spell.
+1. Region 5 (levels 21–25) with its own enemy roster.
+2. Hero #4 and a third global spell.
+3. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
+   levels); also endless-only modifiers (for example a random daily mutator).
 
 ## Known Bugs
 - (none known)
@@ -330,6 +339,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Endless (iteration 38, 3 seeds, waves held expert / casual / novice):** Mossgate 18.7 / 15.7 / 16.3; Murkmaw's Den
+11.7 / 11.7 / 25.0; Frostpeak 25.3 / 12.0 / 19.7; Duskcap Verge 21.3 / 18.3 / 30.7. Runs mostly end at waves 10–30
+(the wave-10 and wave-20 bosses are the usual walls), which is the intended range.
 
 **Campaign (iteration 35, 6 seeds; changed rows use 8):**
 | # | Level | hpMult | Expert | Casual | Novice |

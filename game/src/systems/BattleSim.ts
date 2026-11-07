@@ -510,6 +510,7 @@ export class BattleSim {
    * an economy. Bounties use the same multiplier.
    */
   waveHpMult(): number {
+    if (this.level.endless) return (this.level.hpMult ?? 1) * (1 + this.level.endless.hpRamp * Math.max(0, this.waveIndex));
     const bonus = (this.level.hpMult ?? 1) - 1;
     if (bonus <= 0) return 1 + bonus;
     const f = this.totalWaves > 1 ? Math.max(0, this.waveIndex) / (this.totalWaves - 1) : 1;

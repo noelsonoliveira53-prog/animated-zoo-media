@@ -304,6 +304,20 @@ export class WorldMapScene extends Phaser.Scene {
       onClick: () => this.scene.start('Battle', { levelIndex: i }),
     });
     p.add(play);
+    if (best > 0) {
+      // Endless mode unlocks once the level is beaten.
+      const top = save.endlessBest[lvl.id] ?? 0;
+      p.add(
+        new Button(this, -30, H / 2 - 44, 'Endless', {
+          width: 140,
+          height: 50,
+          fontSize: 20,
+          color: 0xb07ae8,
+          onClick: () => this.scene.start('Battle', { levelIndex: i, endless: true }),
+        }).setName('endlessBtn'),
+      );
+      if (top > 0) p.add(this.add.text(-30, H / 2 - 82, `Best: ${top} waves`, textStyle(14, TEXT.dim, false)).setOrigin(0.5));
+    }
     p.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: p, scale: 1, alpha: 1, duration: 220, ease: 'Back.easeOut' });
     this.panel = p;

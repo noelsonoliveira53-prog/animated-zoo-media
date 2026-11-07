@@ -1,0 +1,24 @@
+// Endless mode tuning: which enemies join as the waves climb, how fast health ramps and when bosses appear.
+
+export interface EndlessTier {
+  fromWave: number; // 1-based wave where these enemies join the pool
+  enemies: string[];
+}
+
+export const ENDLESS = {
+  waves: 200, // generated up front; nobody is expected to see the end
+  hpRampPerWave: 0.07, // each wave's enemies get +7% health (compounding linearly on the level's hpMult)
+  budgetBase: 260, // raw enemy HP per wave at wave 1 ...
+  budgetPerWave: 70, // ... plus this much per wave
+  maxGroupCount: 26,
+  bossEvery: 10,
+  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap'],
+  tiers: [
+    { fromWave: 1, enemies: ['mudling', 'skitter', 'gloomwing', 'gnat'] },
+    { fromWave: 4, enemies: ['shellback', 'bogmender', 'reedguard', 'wispling'] },
+    { fromWave: 8, enemies: ['thornhog', 'splotch', 'puffcap', 'veilstalker'] },
+    { fromWave: 12, enemies: ['bogbrute', 'rimewraith', 'cindermole', 'emberimp'] },
+    { fromWave: 16, enemies: ['rootrager', 'ashhive'] },
+  ] as EndlessTier[],
+  rewardPerWave: { coins: 12, glowsap: 12 }, // village payout per wave held
+};

@@ -14,13 +14,14 @@ export interface SaveData {
   stats: Record<string, number>; // lifetime counters for achievements
   achievements: string[]; // unlocked achievement ids
   dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
+  endlessBest: Record<string, number>; // level id → most endless waves held
   settings: { volume: number; muted: boolean; music: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, trainQueue: [], raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false, music: true } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, trainQueue: [], raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', endlessBest: {}, settings: { volume: 0.6, muted: false, music: true } };
 }
 
 export interface StorageLike {
@@ -56,6 +57,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       stats: { ...(parsed.stats ?? {}) },
       achievements: Array.isArray(parsed.achievements) ? parsed.achievements.filter((x) => typeof x === 'string') : [],
       dailyDone: typeof parsed.dailyDone === 'string' ? parsed.dailyDone : '',
+      endlessBest: { ...(parsed.endlessBest ?? {}) },
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {

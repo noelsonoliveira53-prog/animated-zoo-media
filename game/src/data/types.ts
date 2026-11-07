@@ -112,7 +112,8 @@ export interface LevelDef {
   slots: Vec2[];
   waves: WaveDef[];
   theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean };
-  finale?: boolean; // winning this level plays the ending (the story's last battle)
+  finale?: boolean;
+  endless?: { hpRamp: number }; // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
   hpMult?: number; // difficulty ramp: multiplies every enemy's health on this level
   heroSpawn?: Vec2; // where the hero starts/respawns (default: near the first road's exit)

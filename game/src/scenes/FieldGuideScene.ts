@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeById } from '../data/musicThemes';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS, TOWER_ORDER } from '../data/towers';
 import { HEROES, HERO_ORDER } from '../data/heroes';
@@ -32,6 +33,7 @@ export class FieldGuideScene extends Phaser.Scene {
 
   create(data: { tab?: Tab }): void {
     music.setMood('calm');
+    music.setTheme(themeById('home'));
     this.tab = data?.tab ?? 'enemies';
     const g = this.add.graphics();
     g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);

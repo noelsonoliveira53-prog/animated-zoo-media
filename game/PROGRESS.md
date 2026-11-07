@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **26** (next balance pass at iteration 30)
+Iteration counter: **27** (next balance pass at iteration 30)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -223,13 +223,20 @@ Iteration counter: **26** (next balance pass at iteration 30)
   Desktop hit areas are unchanged. New `scripts/mobile-check.mjs` (740×360, touch emulation) taps just outside a
   button edge and just outside a build pad, and both register. 106 tests.
 
+- [x] **Iter 27 — Music polish.** New `data/musicThemes.ts`: moods plus 4 themes (Sanctuary for menus and the village,
+  Grovelands, Frostfern, Emberdeep). Each theme transposes and re-tempos the mood loop, swaps arp/lead waveforms and
+  adds a 2-bar lead motif every 4 bars (softer in calm). Battles pick the theme for their region; raids use Emberdeep.
+  Victory and defeat stingers (fanfare / falling lament) rest the loop until they ring out; when music is off, the
+  old short sfx jingle still plays. `music-check.mjs` now checks the region themes and that the stinger rests the
+  loop. 111 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Music polish: per-region motifs, victory/defeat stingers.
-2. Mobile follow-up: drag-to-pan in the Village on small screens; slightly larger HUD text on phones.
-3. Region 4 (5 more levels) with 2–3 new enemy types.
+1. Mobile follow-up: drag-to-pan in the Village on small screens; slightly larger HUD text on phones.
+2. Region 4 (5 more levels) with 2–3 new enemy types.
+3. Village: a free speed-up after a 3-star win (parked idea).
 
 ## Known Bugs
 - (none known)

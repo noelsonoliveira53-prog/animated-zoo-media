@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeById } from '../data/musicThemes';
 import { LEVELS, isLevelUnlocked, totalStars } from '../data/levels';
 import { dailyFor, todayString } from '../systems/daily';
 import { DAILY_MODIFIERS } from '../data/daily';
@@ -18,6 +19,7 @@ export class MenuScene extends Phaser.Scene {
 
   create(): void {
     music.setMood('calm');
+    music.setTheme(themeById('home'));
     const save = loadSave();
     sfx.setVolume(save.settings.volume, save.settings.muted);
     music.setVolume(save.settings.volume, save.settings.music);

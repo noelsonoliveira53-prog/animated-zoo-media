@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeById } from '../data/musicThemes';
 import { loadSave, resetProgress, writeSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
@@ -13,6 +14,7 @@ export class SettingsScene extends Phaser.Scene {
 
   create(): void {
     music.setMood('calm');
+    music.setTheme(themeById('home'));
     const g = this.add.graphics();
     g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);
     g.fillRect(0, 0, GAME_W, GAME_H);

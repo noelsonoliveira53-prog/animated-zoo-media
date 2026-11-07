@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeById } from '../data/musicThemes';
 import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { loadSave } from '../systems/save';
@@ -18,6 +19,7 @@ export class WorldMapScene extends Phaser.Scene {
 
   create(data: { focus?: number; region?: number }): void {
     music.setMood('calm');
+    music.setTheme(themeById('home'));
     this.panel = null;
     const save = loadSave();
     // Pick the region: explicit, else the focused level's, else the furthest unlocked level's.

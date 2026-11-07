@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeById } from '../data/musicThemes';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { buildingCenter, CAMP_COLS, CAMP_OX, CAMP_OY, CAMP_ROWS, CAMP_TILE, generateCamp } from '../systems/camp';
 import { RaidSim, type RaidEvent, type Troop } from '../systems/RaidSim';
@@ -30,6 +31,7 @@ export class RaidScene extends Phaser.Scene {
 
   create(data: { tier: number; seed: number }): void {
     music.setMood('battle');
+    music.setTheme(themeById('ember'));
     const save = loadSave();
     const camp = generateCamp(data.seed, data.tier);
     this.sim = new RaidSim(camp, save.army);
@@ -287,7 +289,7 @@ export class RaidScene extends Phaser.Scene {
     const checked = checkAchievements(counted);
     writeSave(checked.save);
     this.time.delayedCall(600, () => showAchievementToasts(this, checked.unlocked));
-    stars > 0 ? sfx.victory() : sfx.defeat();
+    if (!music.stinger(stars > 0 ? 'victory' : 'defeat')) stars > 0 ? sfx.victory() : sfx.defeat();
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0.5).setDepth(8000).setInteractive();
     shade.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());

@@ -1,21 +1,10 @@
 // Procedural background music on WebAudio: a lookahead scheduler plays a soft pad, bass and
-// pentatonic arpeggio over a 4-chord loop. Moods change tempo, scale brightness and drums.
+// arpeggio over a 4-chord loop. Moods change tempo, scale brightness and drums; region themes
+// (data/musicThemes.ts) transpose the loop, swap waveforms and add a lead motif. Stingers mark wins/losses.
 
-export type Mood = 'calm' | 'battle' | 'boss';
+import { motifAt, resolveMood, STINGERS, stingerSeconds, THEMES, type Mood, type MoodDef, type StingerId, type ThemeDef } from '../data/musicThemes';
 
-interface MoodDef {
-  bpm: number;
-  chords: number[][]; // semitone offsets from root per chord
-  root: number; // MIDI note
-  drums: boolean;
-  arpOctave: number;
-}
-
-const MOODS: Record<Mood, MoodDef> = {
-  calm: { bpm: 78, root: 57, chords: [[0, 4, 7], [-3, 0, 4], [5, 9, 12], [7, 11, 14]], drums: false, arpOctave: 12 },
-  battle: { bpm: 112, root: 55, chords: [[0, 3, 7], [-4, 0, 3], [5, 8, 12], [7, 10, 14]], drums: true, arpOctave: 12 },
-  boss: { bpm: 132, root: 52, chords: [[0, 3, 7], [1, 4, 8], [0, 3, 7], [-2, 2, 5]], drums: true, arpOctave: 12 },
-};
+export type { Mood } from '../data/musicThemes';
 
 const midiToHz = (m: number) => 440 * Math.pow(2, (m - 69) / 12);
 
@@ -23,6 +12,7 @@ export class Music {
   private ctx: AudioContext | null = null;
   private out: GainNode | null = null;
   private mood: Mood = 'calm';
+  private theme: ThemeDef = THEMES[0];
   private enabled = true;
   private volume = 0.6;
   private step = 0;
@@ -55,6 +45,32 @@ export class Music {
     this.step = Math.floor(this.step / 16) * 16; // restart on a bar line
   }
 
+  setTheme(t: ThemeDef): void {
+    if (t.id === this.theme.id) return;
+    this.theme = t;
+    this.step = Math.floor(this.step / 16) * 16;
+  }
+
+  getTheme(): ThemeDef {
+    return this.theme;
+  }
+
+  /** Short fanfare/lament over a paused loop. Returns false (plays nothing) before audio is unlocked or with music off. */
+  stinger(id: StingerId): boolean {
+    const ctx = this.ctx;
+    if (!ctx || !this.out || !this.enabled) return false;
+    const s = STINGERS[id];
+    const t0 = ctx.currentTime + 0.05;
+    const sixteenth = 60 / s.bpm / 4;
+    for (const [semi, step, len] of s.notes) this.note(s.root + semi, t0 + step * sixteenth, len * sixteenth * 1.1, s.wave, 0.09, 0.01);
+    const last = s.notes[s.notes.length - 1];
+    for (const c of s.chord) this.note(s.root - 12 + c, t0 + last[1] * sixteenth, last[2] * sixteenth * 1.3, 'sine', 0.05, 0.05);
+    // Rest the loop until the stinger has rung out, then resume on a bar line.
+    this.nextTime = Math.max(this.nextTime, t0 + stingerSeconds(id) + 0.6);
+    this.step = Math.ceil(this.step / 16) * 16;
+    return true;
+  }
+
   getMood(): Mood {
     return this.mood;
   }
@@ -71,7 +87,7 @@ export class Music {
       this.nextTime = ctx.currentTime + 0.1;
       return;
     }
-    const def = MOODS[this.mood];
+    const def = resolveMood(this.mood, this.theme);
     const sixteenth = 60 / def.bpm / 4;
     // Schedule a little ahead of the audio clock.
     while (this.nextTime < ctx.currentTime + 0.25) {
@@ -92,8 +108,11 @@ export class Music {
     // Arpeggio every other sixteenth, walking up the chord.
     if (s % 2 === 0) {
       const n = chord[(s / 2) % chord.length] + def.arpOctave + (s >= 8 ? 12 : 0);
-      this.note(def.root + n, t, len * 1.6, 'square', 0.025, 0.005);
+      this.note(def.root + n, t, len * 1.6, this.theme.arpWave, 0.025, 0.005);
     }
+    // Region motif as a lead line (a quieter echo in calm moods).
+    const lead = this.mood === 'calm' ? 0.025 : 0.045;
+    for (const [semi, , l] of motifAt(this.theme, step)) this.note(def.root + semi, t, len * l * 1.05, this.theme.leadWave, lead, 0.02);
     if (def.drums) {
       if (s % 4 === 0) this.kick(t);
       if (s % 4 === 2) this.hat(t, 0.03);

@@ -1,10 +1,11 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
+import { themeForRegion } from '../data/musicThemes';
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { combine, DAILY_MODIFIERS } from '../data/daily';
 import { dailyFor, todayString, type DailyChallenge } from '../systems/daily';
-import { isLevelUnlocked } from '../data/levels';
+import { isLevelUnlocked, regionOf } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
@@ -117,6 +118,7 @@ export class BattleScene extends Phaser.Scene {
 
   create(): void {
     music.setMood('battle');
+    music.setTheme(themeForRegion(regionOf(this.levelIndex)));
     this.drawMap();
     this.rangeRing = this.add.graphics().setDepth(5);
 
@@ -1335,8 +1337,8 @@ export class BattleScene extends Phaser.Scene {
       after = recordStars(after, this.level.id, stars);
       const want = battleReward(this.levelIndex, prevStars, stars);
       reward = addResources(ensureVillage(after), want.coins, want.glowsap);
-      sfx.victory();
-    } else {
+      if (!music.stinger('victory')) sfx.victory();
+    } else if (!music.stinger('defeat')) {
       sfx.defeat();
     }
     let dailyPaid: { coins: number; glowsap: number } | null = null;

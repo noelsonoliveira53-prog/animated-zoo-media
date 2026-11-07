@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **94** (next balance pass at iteration 95)
+Iteration counter: **95** (next balance pass at iteration 100)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -662,13 +662,14 @@ Iteration counter: **94** (next balance pass at iteration 95)
   Also: achievements `boss_mawbloom` (Heartwood) and `orchard_stars` (Harvest Keeper), story card "The Orchard Wakes",
   and Mawbloom joins the endless boss rotation. New layout test: no road may run under the hero HUD. It caught the
   first draft of this level, where the boss walked behind the portrait. 170 tests.
+- **Iteration 95** (polish + balance): the "Gulp!" feed text is throttled to once per 0.6s per eater, because Mawbloom
+  surrounded by dying minions spammed it. Sweep results are in Balance Notes. 170 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 95 balance pass (full Rotbloom sweep + finale guard).
-2. Region 12 (theme, music, 3 new enemies, levels 56–60, boss) — or a breather feature (e.g. village decorations / raid variety).
+1. Region 12 (theme, music, 3 new enemies, levels 56–60, boss) — or a breather feature (e.g. village decorations / raid variety).
 
 ## Known Bugs
 - (none known)
@@ -678,6 +679,10 @@ Iteration counter: **94** (next balance pass at iteration 95)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 95** (12 seeds, expert/casual/novice): 51 Windfall Rows 100/92/42 · 52 Grubfield Lane 83/100/17 ·
+53 Cider Press Crossing 100/83/8 · 54 Rotroot Hollow 83/67/0 · 55 Heart of the Orchard (boss) 75/50/0. The expert won
+every region finale in at least 3 of 4 seeds (all 11). No retunes.
+
 **Iteration 94**: 55 Heart of the Orchard went 50/75/0 at hpMult 2.2, with gnat swarms on the short north road. I moved them to the long road, which gave 100/92/0. 2.4 gave 83/67, then I reshaped the road away from the HUD and re-tuned: 2.45 gave 67/58, 2.35 gave 83/83, 2.4 gave 83/75, and **2.43 → 75/50/0** (kept, in the boss band).
 
 **Iteration 93**: 54 Rotroot Hollow started at 50/67/0 (hpMult 1.9). 56 of the expert's leaked lives were Galehounds on the short ridge track (the short-road lesson again), so I moved them to the long road, which gave 75/75/0. 1.8 gave 75/67/0, 1.75 gave 92/92/0, and **1.77 → 83/67/0** (kept, a fourth-level ramp).

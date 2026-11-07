@@ -42,6 +42,7 @@ export class BattleScene extends Phaser.Scene {
   private paused = false;
 
   private enemyViews = new Map<number, EnemyView>();
+  private lastGulp = new Map<number, number>(); // uid -> time of the last "Gulp!" text
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
@@ -116,6 +117,7 @@ export class BattleScene extends Phaser.Scene {
     this.paused = false;
     this.ended = false;
     this.enemyViews.clear();
+    this.lastGulp.clear();
     this.projViews.clear();
     this.soldierViews.clear();
     this.rallyFlags.clear();
@@ -1324,7 +1326,12 @@ export class BattleScene extends Phaser.Scene {
         sfx.trait('feed');
         this.particles.setParticleTint(0xc8b878);
         this.particles.explode(6, ev.from.x, ev.from.y - 6);
-        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Gulp!', '#e8d898', 15);
+        // Several deaths at once can feed the same grub: one "Gulp!" per eater every 0.6s keeps the screen readable.
+        const now = this.time.now;
+        if ((this.lastGulp.get(ev.enemy.uid) ?? -1e9) + 600 <= now) {
+          this.lastGulp.set(ev.enemy.uid, now);
+          this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Gulp!', '#e8d898', 15);
+        }
         break;
       }
       case 'grow': {

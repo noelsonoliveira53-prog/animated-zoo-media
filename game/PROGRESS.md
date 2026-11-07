@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **76** (next balance pass at iteration 80)
+Iteration counter: **77** (next balance pass at iteration 80)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -560,13 +560,19 @@ Iteration counter: **76** (next balance pass at iteration 80)
   pipes), a dark brass world-map style and a clockwork music theme. Endless adds both from wave 36. Fix from the
   screenshot: generic round trees picked up the brass/grey palette and looked like metal puffballs, so gears/pipes now
   fill 90% of the scenery. Browser check `scripts/brass-check.mjs`. 157 tests.
+- [x] **Iter 77 — Brasswork level 42 + Rivetshell.** New enemy **Rivetshell** (41 enemies): a clockwork armadillo
+  with `harden` (+2% armor per hit, up to 80%), the reverse of Saltjaw's brittle shell: rapid physical fire makes it
+  tougher, magic and big shots don't care. The autoplayer counts hardeners as armored. Level 42 **Piston Yard**: west +
+  south roads (780 / 660 px to the merge, pad row between the parallel stretches), 1,260 px tail, 12 pads, 15 waves,
+  hpMult 1.28. First draft lost to bolting Steamrunner packs on the south road (moved/thinned). Endless adds Rivetshell
+  from wave 36. Screenshot `77.png`. 158 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 9 level 42 (+ a third Brasswork enemy).
-2. Region 9 levels 43–44.
+1. Region 9 level 43.
+2. Region 9 level 44.
 3. Region 9 finale (level 45) with a Brasswork boss.
 4. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
@@ -589,6 +595,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 77:** 42 Piston Yard 100/83/8 at hpMult 1.28 (1.2 → 100/100/8, 1.35 → 100/75/0, 1.5 → 75/42/0). The
+novice is weak here at any hpMult: jammers slow its towers and bolting Steamrunners slip past Bramble.
 **Iteration 76:** 41 Boilerworks Gate 100/100/~33 at hpMult 1.95 (1.85 → 100/100/83, 1.93 → 100/100/58, 1.96 →
 100/100/17, 2.2 → 92/75/0). The novice falls off a cliff here; expert/casual stay at 100% until ~2.1.
 **Iteration 73:** 40 Heart of the Ruins 92/50/0 at hpMult 1.56 (1.4 → 100/92/0, 1.6 → 83/33/0, 1.7 → 67/25/0).

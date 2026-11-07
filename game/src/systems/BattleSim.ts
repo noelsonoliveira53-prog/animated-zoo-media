@@ -1509,6 +1509,7 @@ export class BattleSim {
       this.events.push({ type: 'charge', enemy: e });
     }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
+    if (e.def.harden && dmg > 0) e.armor = Math.min(e.def.harden.max, e.armor + e.def.harden.perHit);
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {
       e.alive = false;

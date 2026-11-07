@@ -499,3 +499,16 @@ describe('Brasswork enemies', () => {
     expect(sim.chargeMult(r)).toBe(1);
   });
 });
+
+describe('Rivetshell harden', () => {
+  it('gains armor with every hit, up to its cap', () => {
+    const sim = new BattleSim(lvl, null);
+    const r = sim.spawn('rivetshell', 0, 400);
+    const h = r.def.harden!;
+    const a0 = sim.res(r).armor;
+    (sim as any).applyDamage(r, 1);
+    expect(sim.res(r).armor).toBeCloseTo(a0 + h.perHit);
+    for (let i = 0; i < 100; i++) (sim as any).applyDamage(r, 0.1);
+    expect(sim.res(r).armor).toBe(h.max);
+  });
+});

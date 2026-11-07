@@ -25,7 +25,7 @@ import {
   type VillageState,
 } from '../systems/village';
 import { sfx } from '../systems/audio';
-import { armyCapacity, armySpace, lodgeLevel, trainTroop } from '../systems/village';
+import { armyCapacity, armySpace, lodgeLevel, tickTraining, totalArmySpace, trainTroop } from '../systems/village';
 import { CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
@@ -455,9 +455,22 @@ export class VillageScene extends Phaser.Scene {
     const capText = this.add.text(-W / 2 + 30, -H / 2 + 62, '', textStyle(18)).setOrigin(0, 0.5);
     c.add(capText);
     const counts: Phaser.GameObjects.Text[] = [];
+    const queueText = this.add.text(W / 2 - 30, -H / 2 + 62, '', textStyle(16, '#9be86a')).setOrigin(1, 0.5);
+    c.add(queueText);
     const refresh = () => {
-      capText.setText(`Army: ${armySpace(save.army)} / ${cap} space   •   Glowsap: ${Math.floor(this.v.glowsap)}`);
-      TROOP_ORDER.forEach((id, i) => counts[i]?.setText(`×${save.army[id] ?? 0}`));
+      if (tickTraining(save.army, save.trainQueue)) {
+        writeSave(save);
+        sfx.coin();
+      }
+      capText.setText(`Army: ${totalArmySpace(save.army, save.trainQueue)} / ${cap} space   •   Glowsap: ${Math.floor(this.v.glowsap)}`);
+      TROOP_ORDER.forEach((id, i) => {
+        const queued = save.trainQueue.filter((q) => q.id === id).length;
+        counts[i]?.setText(`×${save.army[id] ?? 0}${queued ? ` (+${queued})` : ''}`);
+      });
+      const q = save.trainQueue[0];
+      queueText.setText(
+        q ? `Training ${TROOPS[q.id].name}: ${Math.ceil((q.endsAt - Date.now()) / 1000)}s${save.trainQueue.length > 1 ? `  (+${save.trainQueue.length - 1} queued)` : ''}` : 'Lodge idle',
+      );
     };
     TROOP_ORDER.forEach((id, i) => {
       const def = TROOPS[id];
@@ -470,7 +483,7 @@ export class VillageScene extends Phaser.Scene {
       c.add(card);
       c.add(this.add.image(x - 90, y - 18, `troop_${id}`).setScale(1.8));
       c.add(this.add.text(x - 55, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)));
-      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space`, textStyle(13, TEXT.gold, false)));
+      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space • ${def.trainTime}s`, textStyle(13, TEXT.gold, false)));
       c.add(this.add.text(x - 118, y + 14, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(12, TEXT.dim, false), wordWrap: { width: 160 } }));
       const n = this.add.text(x + 20, y - 8, '', textStyle(22, TEXT.gold)).setOrigin(0, 0.5);
       counts.push(n);
@@ -483,7 +496,7 @@ export class VillageScene extends Phaser.Scene {
             fontSize: 18,
             color: C.leaf,
             onClick: () => {
-              const r = trainTroop(this.v, save.army, id);
+              const r = trainTroop(this.v, save.army, id, save.trainQueue);
               if (!r.ok) this.toast(r.reason ?? '');
               else {
                 save.village = this.v;
@@ -497,6 +510,7 @@ export class VillageScene extends Phaser.Scene {
       }
     });
     refresh();
+    const timer = this.time.addEvent({ delay: 500, loop: true, callback: () => (c.active ? refresh() : timer.remove()) });
     // --- camps ---
     c.add(this.add.text(-W / 2 + 30, 30, 'Choose a camp', textStyle(20, TEXT.gold)));
     CAMP_TIERS.forEach((tier, i) => {
@@ -509,7 +523,7 @@ export class VillageScene extends Phaser.Scene {
       g.fillRoundedRect(x - 170, y - 80, 340, 160, 14);
       c.add(g);
       c.add(this.add.text(x - 155, y - 68, tier.name, textStyle(18, ['#9be86a', TEXT.gold, TEXT.heart][i])));
-      c.add(this.add.text(x - 155, y - 40, ['Easy', 'Medium', 'Hard'][i] + ` • ${camp.buildings.length} buildings`, textStyle(14, TEXT.dim, false)));
+      c.add(this.add.text(x - 155, y - 40, ['Easy', 'Medium', 'Hard'][i] + ` • ${camp.buildings.filter((b) => b.type !== 'wall').length} buildings${tier.walls ? ' + walls' : ''}`, textStyle(14, TEXT.dim, false)));
       c.add(this.add.image(x - 140, y + 4, 'icon_coin').setScale(0.8));
       c.add(this.add.text(x - 124, y + 4, `${loot.coins}`, textStyle(16, TEXT.gold)).setOrigin(0, 0.5));
       c.add(this.add.image(x - 40, y + 4, 'icon_sap').setScale(0.8));
@@ -522,8 +536,10 @@ export class VillageScene extends Phaser.Scene {
           color: 0xff9f43,
           onClick: () => {
             const s2 = loadSave();
+            tickTraining(s2.army, s2.trainQueue);
+            writeSave(s2);
             if (armySpace(s2.army) <= 0) {
-              this.toast('Train some troops first');
+              this.toast(s2.trainQueue.length ? 'Your troops are still training' : 'Train some troops first');
               return;
             }
             this.persist();

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **22** (next balance pass at iteration 25)
+Iteration counter: **23** (next balance pass at iteration 25)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -196,11 +196,18 @@ Iteration counter: **22** (next balance pass at iteration 25)
   spell buttons show as locked under Clouded Sky. Menu re-laid out (stars top-right, version bottom-right).
   4 new tests (102 total). **META pillar complete:** Field Guide, settings, achievements, daily challenge.
 
+- [x] **Iter 23** — **Timed troop training.** Troops now train at the Ranger Lodge over time (Brawler 20s, Slinger 25s,
+  Sapper 45s, Owl 60s), one after another; the queue (`trainQueue`, timestamps) keeps running while away.
+  Glowsap is paid when queued and queued troops count toward army space (`totalArmySpace`). `tickTraining()` moves
+  finished troops into the army. The raid panel shows "Training X: 12s (+N queued)", ready counts with "(+queued)",
+  and train times on cards; Attack ticks the queue first and explains if troops are still training. Camp cards
+  no longer count wall segments as buildings. Restored wall tests that an edit had dropped. 103 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
+1. Raid follow-ups: smarter raid deploy for the balance script; raid-loot vs campaign-loot economy check (iteration 25).
 2. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
 3. Ambient music loop (procedural).
 

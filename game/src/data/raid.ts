@@ -11,6 +11,7 @@ export interface TroopDef {
   speed: number; // pixels / second
   cost: number; // glowsap per troop
   space: number; // army capacity used
+  trainTime: number; // seconds at the Ranger Lodge
   prefers: 'any' | 'defense';
   splash?: number;
   wallMult?: number; // damage multiplier against walls
@@ -31,6 +32,7 @@ export const TROOPS: Record<string, TroopDef> = {
     speed: 45,
     cost: 40,
     space: 1,
+    trainTime: 20,
     prefers: 'any',
     lodge: 1,
     color: 0x6f8fa8,
@@ -46,6 +48,7 @@ export const TROOPS: Record<string, TroopDef> = {
     speed: 55,
     cost: 50,
     space: 1,
+    trainTime: 25,
     prefers: 'any',
     lodge: 1,
     color: 0x6fae4a,
@@ -61,6 +64,7 @@ export const TROOPS: Record<string, TroopDef> = {
     speed: 48,
     cost: 90,
     space: 2,
+    trainTime: 45,
     prefers: 'defense',
     splash: 45,
     wallMult: 3,
@@ -78,6 +82,7 @@ export const TROOPS: Record<string, TroopDef> = {
     speed: 75,
     cost: 120,
     space: 3,
+    trainTime: 60,
     prefers: 'defense',
     flying: true,
     lodge: 2,

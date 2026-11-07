@@ -258,14 +258,45 @@ export function armySpace(army: Record<string, number>): number {
   return Object.entries(army).reduce((n, [id, c]) => n + (TROOPS[id]?.space ?? 0) * c, 0);
 }
 
-/** Train one troop instantly for Glowsap, if there is room and the lodge is high enough. */
-export function trainTroop(v: VillageState, army: Record<string, number>, id: string): { ok: boolean; reason?: string } {
+export interface QueuedTroop {
+  id: string;
+  endsAt: number; // ms timestamp when this troop is ready
+}
+
+/** Space used by ready troops plus troops still in training. */
+export function totalArmySpace(army: Record<string, number>, queue: QueuedTroop[]): number {
+  return armySpace(army) + queue.reduce((n, q) => n + (TROOPS[q.id]?.space ?? 0), 0);
+}
+
+/**
+ * Queue one troop at the Ranger Lodge. Glowsap is paid now; troops train one after another.
+ * `queue` is mutated (a troop is appended).
+ */
+export function trainTroop(
+  v: VillageState,
+  army: Record<string, number>,
+  id: string,
+  queue: QueuedTroop[] = [],
+  now = Date.now(),
+): { ok: boolean; reason?: string } {
   const def = TROOPS[id];
   if (!def) return { ok: false, reason: 'Unknown troop' };
   if (lodgeLevel(v) < def.lodge) return { ok: false, reason: `Needs Ranger Lodge level ${def.lodge}` };
-  if (armySpace(army) + def.space > armyCapacity(v)) return { ok: false, reason: 'The Ranger Lodge is full' };
+  if (totalArmySpace(army, queue) + def.space > armyCapacity(v)) return { ok: false, reason: 'The Ranger Lodge is full' };
   if (v.glowsap < def.cost) return { ok: false, reason: `Needs ${def.cost} glowsap` };
   v.glowsap -= def.cost;
-  army[id] = (army[id] ?? 0) + 1;
+  const start = Math.max(now, queue.length ? queue[queue.length - 1].endsAt : now);
+  queue.push({ id, endsAt: start + def.trainTime * 1000 });
   return { ok: true };
+}
+
+/** Move finished troops from the queue into the army. Returns how many finished. */
+export function tickTraining(army: Record<string, number>, queue: QueuedTroop[], now = Date.now()): number {
+  let done = 0;
+  while (queue.length && queue[0].endsAt <= now) {
+    const q = queue.shift()!;
+    army[q.id] = (army[q.id] ?? 0) + 1;
+    done++;
+  }
+  return done;
 }

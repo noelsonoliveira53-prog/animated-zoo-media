@@ -83,22 +83,39 @@ describe('raid sim', () => {
   });
 });
 
-import { newVillage, trainTroop, armyCapacity, armySpace } from '../src/systems/village';
+import { newVillage, trainTroop, armyCapacity, armySpace, tickTraining, totalArmySpace, type QueuedTroop } from '../src/systems/village';
 describe('army training', () => {
-  it('needs a Ranger Lodge, glowsap and free space', () => {
+  it('needs a Ranger Lodge, glowsap and free space (queued troops count)', () => {
     const v = newVillage(0);
     const army: Record<string, number> = {};
-    expect(trainTroop(v, army, 'brawler').ok).toBe(false); // no lodge
+    const queue: QueuedTroop[] = [];
+    expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(false); // no lodge
     v.buildings.push({ uid: 50, type: 'barracks', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: 0 });
     v.glowsap = 10000;
     expect(armyCapacity(v)).toBe(10);
-    for (let i = 0; i < 10; i++) expect(trainTroop(v, army, 'brawler').ok).toBe(true);
-    expect(trainTroop(v, army, 'brawler').ok).toBe(false); // full
-    expect(armySpace(army)).toBe(10);
-    expect(trainTroop(v, {}, 'owl').ok).toBe(false); // needs lodge 2
+    for (let i = 0; i < 10; i++) expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(true);
+    expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(false); // full (queue counts)
+    expect(totalArmySpace(army, queue)).toBe(10);
+    expect(trainTroop(v, {}, 'owl', [], 0).ok).toBe(false); // needs lodge 2
+  });
+  it('trains troops one after another over time', () => {
+    const v = newVillage(0);
+    v.buildings.push({ uid: 50, type: 'barracks', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: 0 });
+    v.glowsap = 10000;
+    const army: Record<string, number> = {};
+    const queue: QueuedTroop[] = [];
+    trainTroop(v, army, 'brawler', queue, 0); // ready at 20s
+    trainTroop(v, army, 'sapper', queue, 0); // ready at 65s
+    expect(tickTraining(army, queue, 19_000)).toBe(0);
+    expect(tickTraining(army, queue, 21_000)).toBe(1);
+    expect(army.brawler).toBe(1);
+    expect(tickTraining(army, queue, 64_000)).toBe(0);
+    expect(tickTraining(army, queue, 66_000)).toBe(1);
+    expect(army.sapper).toBe(1);
+    expect(queue.length).toBe(0);
+    expect(armySpace(army)).toBe(3);
   });
 });
-
 describe('camp walls', () => {
   const walled = () => ({
     tier: 0,
@@ -136,3 +153,4 @@ describe('camp walls', () => {
 function CAMP_Y(row: number) {
   return 92 + row * 40 + 20;
 }
+

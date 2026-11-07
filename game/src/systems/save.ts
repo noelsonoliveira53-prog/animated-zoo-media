@@ -1,5 +1,5 @@
 // Persistent progress in localStorage. Every access is guarded: storage can be missing or throw.
-import { newVillage, type VillageState } from './village';
+import { newVillage, type QueuedTroop, type VillageState } from './village';
 
 export interface SaveData {
   version: number;
@@ -8,6 +8,7 @@ export interface SaveData {
   village: VillageState | null; // created on first visit
   heroRanks: Record<string, number>; // persistent hero training (battle start level = rank + 1)
   army: Record<string, number>; // trained raid troops waiting at the Ranger Lodge
+  trainQueue: QueuedTroop[]; // troops still training (finish in order)
   raidSeed: number; // rotates after each raid so new camps appear
   seenEnemies: string[]; // enemy ids met in battle (unlocks Field Guide entries)
   stats: Record<string, number>; // lifetime counters for achievements
@@ -19,7 +20,7 @@ export interface SaveData {
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, trainQueue: [], raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], dailyDone: '', settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -49,6 +50,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       village: parsed.village && Array.isArray(parsed.village.buildings) ? parsed.village : null,
       heroRanks: { ...(parsed.heroRanks ?? {}) },
       army: { ...(parsed.army ?? {}) },
+      trainQueue: Array.isArray(parsed.trainQueue) ? parsed.trainQueue.filter((q) => q && typeof q.id === 'string' && typeof q.endsAt === 'number') : [],
       raidSeed: typeof parsed.raidSeed === 'number' ? parsed.raidSeed : 1,
       seenEnemies: Array.isArray(parsed.seenEnemies) ? parsed.seenEnemies.filter((x) => typeof x === 'string') : [],
       stats: { ...(parsed.stats ?? {}) },

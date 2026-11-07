@@ -32,8 +32,16 @@ const card = (i) => ({ x: 640 - 560 + 30 + 132 + i * 270 + 92, y: 380 - 260 + 16
 for (let k = 0; k < 6; k++) await page.mouse.click(card(0).x, card(0).y);
 for (let k = 0; k < 4; k++) await page.mouse.click(card(1).x, card(1).y);
 for (let k = 0; k < 3; k++) await page.mouse.click(card(2).x, card(2).y);
-await page.waitForTimeout(300);
+await page.waitForTimeout(700);
 await page.screenshot({ path: `screenshots/${name}-prep.png` });
+// Training takes real time now: fast-forward the queue so the raid can start.
+await page.evaluate(() => {
+  const s = JSON.parse(localStorage.getItem('grovewatch.save.v1'));
+  for (const q of s.trainQueue) q.endsAt = 0;
+  localStorage.setItem('grovewatch.save.v1', JSON.stringify(s));
+});
+await page.mouse.click(100, 720 - 44); // reopen Raid panel so it reloads the save
+await page.waitForTimeout(700);
 const army = await page.evaluate(() => JSON.parse(localStorage.getItem('grovewatch.save.v1')).army);
 console.log('army', JSON.stringify(army));
 await page.mouse.click(640 - 560 + 30 + 175 + 360 + 90, 380 + 150 + 44); // Attack medium camp

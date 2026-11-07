@@ -41,6 +41,7 @@ export interface Enemy {
   landed: boolean; // swooping flyers spend part of their cycle on the ground
   swoopCd: number;
   blinkCd: number;
+  gustCd: number;
   sinceHit: number; // seconds since it last took damage (regen enemies heal once this passes their delay)
 }
 
@@ -152,6 +153,7 @@ export type SimEvent =
   | { type: 'enrage'; enemy: Enemy }
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
   | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
+  | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
   | { type: 'coral'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
@@ -830,6 +832,7 @@ export class BattleSim {
       landed: false,
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
+      gustCd: def.gust ? def.gust.interval : 0,
       sinceHit: 0,
     };
     this.enemies.push(e);
@@ -856,6 +859,7 @@ export class BattleSim {
       if (e.def.spawner) this.tickSpawner(e, dt);
       if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.blink) this.tickBlink(e, dt);
+      if (e.def.gust) this.tickGust(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
       if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
         e.enraged = true;
@@ -950,6 +954,25 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** Kitewing: a gust shoves nearby free walkers further along their road. Held enemies and bosses don't budge. */
+  private tickGust(e: Enemy, dt: number): void {
+    const gu = e.def.gust!;
+    e.gustCd -= dt;
+    if (e.gustCd > 0) return;
+    e.gustCd = gu.interval;
+    const targets: { enemy: Enemy; from: Vec2 }[] = [];
+    for (const o of this.enemies) {
+      if (o === e || !o.alive || o.underground || o.blockedBy || o.def.boss || this.airborne(o)) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > gu.radius) continue;
+      const path = this.paths[o.path];
+      const from = { ...o.pos };
+      o.dist = Math.min(path.length - 1, o.dist + gu.distance);
+      o.pos = path.pointAt(o.dist);
+      targets.push({ enemy: o, from });
+    }
+    this.events.push({ type: 'gust', source: e, targets, radius: gu.radius });
   }
 
   /** Endless: enemy melee hits ramp with the wave too (otherwise a blocker can stall forever). 1 in the campaign. */

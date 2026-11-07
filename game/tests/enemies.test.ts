@@ -380,3 +380,28 @@ describe('Galecrest enemies', () => {
     expect(ram.hp).toBe(ram.maxHp);
   });
 });
+
+describe('Kitewing gust', () => {
+  it('blows nearby free walkers ahead, but not held enemies, flyers or itself', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const kite = sim.spawn('kitewing', 0, 400);
+    const free = sim.spawn('mudling', 0, 420);
+    const held = sim.spawn('mudling', 0, 380);
+    const far = sim.spawn('mudling', 0, 900);
+    const fly = sim.spawn('gullwing', 0, 410);
+    for (const e of [kite, free, held, far, fly]) e.def = { ...e.def, speed: 0 };
+    held.blockedBy = 999;
+    const d0 = [kite, free, held, far, fly].map((e) => e.dist);
+    for (let i = 0; i < 60 * 5 + 2; i++) {
+      held.blockedBy = 999; // stand-in for a soldier holding it (the sim drops unknown blockers each tick)
+      sim.update(1 / 60);
+    }
+    const gu = kite.def.gust!;
+    expect(free.dist).toBeCloseTo(d0[1] + gu.distance, 3);
+    expect(held.dist).toBe(d0[2]);
+    expect(far.dist).toBe(d0[3]);
+    expect(fly.dist).toBe(d0[4]);
+    expect(kite.dist).toBe(d0[0]);
+  });
+});

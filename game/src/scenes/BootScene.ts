@@ -318,6 +318,32 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 1.3, cy - r * 0.22, r * 0.08);
         break;
       }
+      case 'kitewing': {
+        // sky-ray: broad diamond wings, pale belly stripe, a long ribbon tail with tufts
+        g.lineStyle(2, C.ink, 1);
+        g.lineBetween(cx, cy + r * 0.5, cx + r * 0.25, cy + r * 1.5);
+        g.fillStyle(0xffffff, 1);
+        g.fillTriangle(cx + r * 0.05, cy + r * 1.0, cx + r * 0.35, cy + r * 0.95, cx + r * 0.2, cy + r * 1.2);
+        g.fillTriangle(cx + r * 0.15, cy + r * 1.35, cx + r * 0.45, cy + r * 1.3, cx + r * 0.3, cy + r * 1.55);
+        const wing = [
+          new Phaser.Math.Vector2(cx, cy - r * 0.9),
+          new Phaser.Math.Vector2(cx + r * 1.5, cy + r * 0.05),
+          new Phaser.Math.Vector2(cx, cy + r * 0.6),
+          new Phaser.Math.Vector2(cx - r * 1.5, cy + r * 0.05),
+        ];
+        g.fillStyle(color, 1);
+        g.fillPoints(wing, true);
+        g.strokePoints(wing, true);
+        g.fillStyle(0xd8eef8, 1);
+        g.fillEllipse(cx, cy - r * 0.05, r * 0.5, r * 1.0);
+        g.fillStyle(0x4a7a98, 1);
+        g.fillTriangle(cx - r * 1.5, cy + r * 0.05, cx - r * 0.9, cy - r * 0.2, cx - r * 1.0, cy + r * 0.2);
+        g.fillTriangle(cx + r * 1.5, cy + r * 0.05, cx + r * 0.9, cy - r * 0.2, cx + r * 1.0, cy + r * 0.2);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.18, cy - r * 0.45, r * 0.08);
+        g.fillCircle(cx + r * 0.18, cy - r * 0.45, r * 0.08);
+        break;
+      }
       case 'cloudram': {
         // storm-fleece ram: a puffy cloud body, dark face, curled horns, a spark in the fleece
         g.lineStyle(2.5, C.ink, 1);

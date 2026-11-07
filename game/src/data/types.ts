@@ -39,6 +39,7 @@ export interface EnemyDef {
   brittle?: number; // armor lost per hit taken (down to 0)
   swoop?: { interval: number; duration: number }; // flyer that lands for `duration` s every `interval` s
   sporeBurst?: { radius: number; speedMult: number; duration: number }; // on death, hastens nearby allies
+  gust?: { interval: number; radius: number; distance: number }; // flyer: shoves nearby free walkers ahead on a timer
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;

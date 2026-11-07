@@ -1189,6 +1189,16 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'gust': {
+        // a pale swirl around the Kitewing and wind streaks behind everything it shoved
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y - 30, ev.radius, 0xffffff, 0.08).setStrokeStyle(2, 0xe8f4ff, 0.8).setDepth(2400).setScale(0.4);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, angle: 90, duration: 500, onComplete: () => ring.destroy() });
+        for (const t of ev.targets) {
+          const streak = this.add.line(0, 0, t.from.x, t.from.y - 8, t.enemy.pos.x, t.enemy.pos.y - 8, 0xffffff, 0.7).setOrigin(0, 0).setLineWidth(2).setDepth(2400);
+          this.tweens.add({ targets: streak, alpha: 0, duration: 400, onComplete: () => streak.destroy() });
+        }
+        break;
+      }
       case 'glare': {
         const flash = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 30, ev.radius, 0xffffff, 0.5).setDepth(2600).setScale(0.2);
         this.tweens.add({ targets: flash, scale: 1, alpha: 0, duration: 380, ease: 'Cubic.easeOut', onComplete: () => flash.destroy() });

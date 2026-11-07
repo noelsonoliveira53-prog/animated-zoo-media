@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **61** (next balance pass at iteration 65)
+Iteration counter: **62** (next balance pass at iteration 65)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -473,13 +473,20 @@ Iteration counter: **61** (next balance pass at iteration 65)
   used `Math.random()`, so autoplay "seeds" didn't replay and balance numbers were noisy (casual on Windgap Ledge read
   38% one run and 100% the next). The sim now takes an optional `random` source; `playLevel` passes a seeded one; a
   test checks the same seed replays exactly. Browser check `scripts/gale-check.mjs`. 149 tests.
+- [x] **Iter 62 — Galecrest level 32 + Kitewing.** New enemy **Kitewing** (33 enemies): a sky-ray flyer with `gust`:
+  every 5 s it blows free walkers within 110 px 45 px further along their road (held enemies, flyers and bosses don't
+  budge, so blockers are the counter), shown as a wind ring plus streaks. Level 32 **Updraft Stair**: a switchback west
+  road and a second road rising from the south, 13 pads, 15 waves, hpMult 1.4. First draft was unwinnable for casual:
+  the south road reaches the shared tail after only 620 px, so its fast packs moved to the long road, wave 5's
+  Gullwings and wave 7's Thornhogs were trimmed, and a pad was added by the south entry. Endless adds Kitewing from
+  wave 28. Browser check `scripts/kite-check.mjs`. 150 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 7 level 32 (+ a third Galecrest enemy, e.g. a flyer that rides gusts).
-2. Region 7 levels 33–34.
+1. Region 7 level 33.
+2. Region 7 level 34.
 3. Region 7 finale (level 35) with a Galecrest boss.
 4. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
 
@@ -496,6 +503,8 @@ Iteration counter: **61** (next balance pass at iteration 65)
 ## Balance Notes
 **Iteration 61** (deterministic sim, 12 seeds): 31 Windgap Ledge 100/92/25 at hpMult 1.7 (2.2 was 75/58/0).
 Galehounds were the main leak; Cloudrams on the north road second.
+**Iteration 62:** 32 Updraft Stair 100/83/42 at hpMult 1.4 (first draft 75/0/0 at 1.6). Lesson: on a map where one
+road is far shorter than the other, keep fast packs off the short road.
 
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·

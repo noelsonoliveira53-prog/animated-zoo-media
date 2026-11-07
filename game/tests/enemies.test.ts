@@ -1048,3 +1048,26 @@ describe('Honeycomb Hills enemies', () => {
     expect(q.parryCharges).toBeGreaterThanOrEqual(1);
   });
 });
+
+describe('Honeypaw Cub', () => {
+  it('its swipes leave a blocking soldier swinging at half speed for a while', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    const s = sim.soldiers[0];
+    const c = sim.spawn('honeypaw', 0, 380);
+    c.hp = c.maxHp = 999999;
+    let glazes = 0;
+    for (let i = 0; i < 60 * 6 && !glazes; i++) {
+      sim.update(1 / 60);
+      glazes += sim.drainEvents().filter((e) => e.type === 'glaze').length;
+    }
+    expect(glazes).toBeGreaterThan(0);
+    const victim = sim.soldiers.find((x) => (x.glazed ?? 0) > 0)!;
+    expect(victim).toBeDefined();
+    expect(victim.glazeSlow).toBe(c.def.glaze!.slow);
+    expect(s.stats.attackRate).toBeGreaterThan(0);
+  });
+});

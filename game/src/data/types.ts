@@ -70,6 +70,7 @@ export interface EnemyDef {
   snatch?: { radius: number; cooldown: number }; // flyer: carries off the nearest soldier within radius (it must respawn), on a cooldown
   wax?: { armor: number; melt: number }; // a waxy coat adds `armor` until it has soaked melt × maxHp of magic damage, then melts off for good
   parry?: { charges: number; regen: number }; // its comb-shield turns aside a whole single-target tower shot per charge (splash, chains' jumps and spells still land); regains one charge every regen s
+  glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
   rile?: { perSlow: number; max: number }; // every slow it suffers (at most twice a second) adds perSlow to its speed for good, up to +max
   grief?: { radius: number; armor: number }; // on death, allies within radius gain this much armor for good (capped at 85%)
   lifesteal?: number; // heals this fraction of the melee damage it deals to soldiers and heroes

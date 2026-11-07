@@ -74,6 +74,8 @@ export interface Enemy {
 export interface Soldier {
   uid: number;
   stun?: number; // seconds left of a Sparkeel shock (no attacking or blocking)
+  glazed?: number; // seconds left coated in Honeypaw honey (attacks slowly)
+  glazeSlow?: number; // attack-speed multiplier while glazed
   towerUid: number;
   index: number; // slot within its squad (for formation offsets)
   pos: Vec2;
@@ -200,6 +202,7 @@ export type SimEvent =
   | { type: 'dodge'; enemy: Enemy }
   | { type: 'parry'; enemy: Enemy; left: number }
   | { type: 'melt'; enemy: Enemy }
+  | { type: 'glaze'; soldier: Soldier }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -1031,6 +1034,12 @@ export class BattleSim {
             const hit = e.def.attack * this.attackMult();
             if (isHero) this.hurtHero(hit);
             else this.hurtSoldier(s!, hit);
+            if (e.def.glaze && !isHero && s!.alive) {
+              // Honeypaw Cub: a sticky swipe, and the soldier's sword arm gums up
+              s!.glazed = e.def.glaze.duration;
+              s!.glazeSlow = e.def.glaze.slow;
+              this.events.push({ type: 'glaze', soldier: s! });
+            }
             if (e.def.lifesteal && e.hp < e.maxHp) {
               // Sapstoat: every bite feeds it.
               const healed = Math.min(e.maxHp - e.hp, hit * e.def.lifesteal);
@@ -1540,6 +1549,7 @@ export class BattleSim {
           s.alive = true;
           s.hp = stats.hp;
           s.pos = { ...s.spawnAt };
+          s.glazed = 0;
         }
         continue;
       }
@@ -1547,6 +1557,8 @@ export class BattleSim {
         s.stun -= dt;
         continue;
       }
+      const glazed = (s.glazed ?? 0) > 0;
+      if (glazed) s.glazed! -= dt;
       // Validate current target.
       let target = s.targetUid ? byUid.get(s.targetUid) : undefined;
       if (target && (!target.alive || Math.hypot(target.pos.x - s.anchor.x, target.pos.y - s.anchor.y) > ENGAGE_RADIUS * 1.5)) {
@@ -1565,7 +1577,7 @@ export class BattleSim {
         if (d > SOLDIER_REACH) {
           this.moveToward(s.pos, target.pos, SOLDIER_SPEED * dt, SOLDIER_REACH - 2);
         } else {
-          s.attackCd -= dt;
+          s.attackCd -= dt * (glazed ? (s.glazeSlow ?? 1) : 1);
           if (s.attackCd <= 0) {
             s.attackCd = 1 / stats.attackRate;
             this.events.push({ type: 'melee', pos: { ...target.pos } });

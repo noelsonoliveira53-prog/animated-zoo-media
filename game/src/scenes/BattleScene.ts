@@ -1722,6 +1722,18 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'glaze': {
+        // a splat of honey on the soldier, throttled per soldier
+        const key = -4000000 - ev.soldier.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 900) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('glaze');
+        this.particles.setParticleTint(0xf0b030);
+        this.particles.explode(6, ev.soldier.pos.x, ev.soldier.pos.y - 6);
+        this.floatText(ev.soldier.pos.x, ev.soldier.pos.y - 26, 'Sticky!', '#ffc84a', 12);
+        break;
+      }
       case 'parry': {
         // a little hexagon flash in front of the wasp, throttled per wasp
         const key = -3000000 - ev.enemy.uid;

@@ -896,6 +896,35 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(pts[0].x, pts[0].y, pts[3].x, pts[3].y);
         break;
       }
+      case 'honeypaw': {
+        // round bear cub seen from above: brown body, little round ears, pale muzzle, golden honey dripping off its paws
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        for (const sx of [-1, 1]) {
+          g.fillCircle(cx + sx * r * 0.7, cy + r * 0.35, r * 0.3);
+          g.strokeCircle(cx + sx * r * 0.7, cy + r * 0.35, r * 0.3);
+        }
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.4, r * 1.3);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.4, r * 1.3);
+        g.fillCircle(cx, cy - r * 0.5, r * 0.5);
+        g.strokeCircle(cx, cy - r * 0.5, r * 0.5);
+        for (const sx of [-1, 1]) {
+          g.fillCircle(cx + sx * r * 0.38, cy - r * 0.9, r * 0.17);
+          g.strokeCircle(cx + sx * r * 0.38, cy - r * 0.9, r * 0.17);
+        }
+        g.fillStyle(0xd8b088, 1);
+        g.fillEllipse(cx, cy - r * 0.35, r * 0.42, r * 0.3);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx, cy - r * 0.42, r * 0.07);
+        g.fillCircle(cx - r * 0.2, cy - r * 0.62, r * 0.06);
+        g.fillCircle(cx + r * 0.2, cy - r * 0.62, r * 0.06);
+        g.fillStyle(0xf0b030, 1);
+        for (const sx of [-1, 1]) {
+          g.fillCircle(cx + sx * r * 0.7, cy + r * 0.45, r * 0.18);
+          g.fillEllipse(cx + sx * r * 0.72, cy + r * 0.72, r * 0.1, r * 0.22);
+        }
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

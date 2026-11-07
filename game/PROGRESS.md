@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **168** (next balance pass at iteration 170)
+Iteration counter: **169** (next balance pass at iteration 170)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1206,12 +1206,18 @@ Iteration counter: **168** (next balance pass at iteration 170)
   - Field Guide tags, endless tier at wave 76, sprites, sounds, and the music-flag test. Two new tests (217 total).
   - Check: `scripts/comb-check.mjs`. The comb tune plays and a Waxback's armor drops from 0.55 to 0.15 after a spell; no
     console errors. Screenshots `screenshots/168.png` and `168-map.png`.
+- **Iteration 169** (Honeycomb level 2): level 92 **Clovercomb Rise** and the region's third trait.
+  - **Honeypaw Cub** (`glaze`): a sticky bear cub. Every melee swipe coats the soldier blocking it in honey, so that soldier
+    attacks at half speed for 3s. It shows a honey splat, "Sticky!" and a squelch; the coat clears when the soldier respawns.
+  - The level has 11 pads and two roads (one from the top, one from the left) that merge into a long winding run.
+  - Field Guide tag, sprite, endless tier at wave 78, and one test (218 total). `scripts/level-shot.mjs` now unlocks every
+    level. Screenshot `screenshots/169.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Honeycomb Hills level 92 with a third trait, then levels 93 and 94.
+1. Honeycomb Hills levels 93 and 94.
 2. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1221,6 +1227,8 @@ Iteration counter: **168** (next balance pass at iteration 170)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 169**: 92 Clovercomb Rise (12 seeds): hpMult 1.45 → 100/100/0, 1.55 → 100/100/0, 1.6 → 100/83/0, 1.75 → 92/67/0.
+**1.58 → 100/100/0** (kept; the second-level band is 100/92/0–17).
 **Iteration 168**: 91 Hivegate Meadow, 12 seeds (expert/casual/novice).
 - First pass at hpMult 1.7: 50/33/0 (1.85: 17/8/0). The novice fell at wave 6: the short top road plus heavy early waves of
   wax and shields.

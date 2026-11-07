@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **31** (next balance pass at iteration 35)
+Iteration counter: **32** (next balance pass at iteration 35)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -262,11 +262,17 @@ Iteration counter: **31** (next balance pass at iteration 35)
   under the hero skill button and a Frostfern Pass pad under the wave preview (moved both). `dusk-check.mjs` now
   pops a Puffcap next to a Thornhog pack. 117 tests.
 
+- [x] **Iter 32 — Duskcap level 18: Mirrorpool Glade.** Three roads: two from the west skirt a glowing pool and merge
+  in the glade, and a third winds up from the south and joins the tail. 13 pads, 16 waves. Tracing leaks found a layout trap:
+  nearly every pad sat 120 px from a road, just outside the Veilstalker's 105 px veil, so towers barely saw them.
+  Fix: five pads moved to about 90 px, and the southern road lengthened (about 1280 → 1760 px) with a pad added. New
+  reusable `scripts/level-shot.mjs <name> <levelIndex>` (builds every pad, plays 3 waves, screenshots). 117 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 4: levels 18–20 (a Duskcap boss with phases for level 20).
+1. Region 4: levels 19–20 (a Duskcap boss with phases for level 20).
 2. Village: a free speed-up after a 3-star win (parked idea).
 3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
@@ -287,6 +293,11 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Mirrorpool Glade (iteration 32):** first draft 0/0/0 at hpMult 2.2 and still only 83/100/0 at 1.2, so the problem
+was the layout. Pads beyond veil range made Veilstalkers unhittable on the vertical roads. After moving the pads, lengthening
+the south road and a lighter wave 6: 2.2 → 100/17/0, 2.0 → 88/25/0, **1.8 → 100% / 63% / 0%** (8 seeds, picked).
+Lesson for Duskcap maps: keep some pads within ~95 px of each road.
 
 **Glowspore Hollow (iteration 31, 6–8 seeds):** at hpMult 2.4 → 83/50/0; the novice always died at wave 7 (trace showed
 Puffcap-hastened Thornhogs plus Gnats on the short road). After the wave fixes: **2.2 → 88% / 100% / 0%** (8 seeds).

@@ -18,9 +18,9 @@ export const TOWERS: Record<string, TowerDef> = {
       {
         id: 'hawkeye',
         name: 'Hawkeye Perch',
-        text: 'A sniper nest: huge range, heavy shots that pierce half of all armor.',
+        text: 'A sniper nest: huge range, heavy shots that ignore most armor. Best against tanks and bosses.',
         color: 0xc9e07a,
-        stats: { cost: 220, damage: 70, range: 270, fireRate: 0.65, projectileSpeed: 900, armorPierce: 0.5 },
+        stats: { cost: 220, damage: 110, range: 270, fireRate: 0.65, projectileSpeed: 900, armorPierce: 0.7 },
       },
       {
         id: 'volley',
@@ -56,7 +56,7 @@ export const TOWERS: Record<string, TowerDef> = {
         name: 'Frostbloom Spire',
         text: 'Icy blooms burst on impact, chilling everything nearby to a crawl.',
         color: 0xbfe8ff,
-        stats: { cost: 230, damage: 48, range: 165, fireRate: 0.9, projectileSpeed: 450, splash: 55, slow: { factor: 0.45, duration: 2.5 } },
+        stats: { cost: 230, damage: 34, range: 165, fireRate: 0.9, projectileSpeed: 450, splash: 45, slow: { factor: 0.45, duration: 2.5 } },
       },
     ],
   },

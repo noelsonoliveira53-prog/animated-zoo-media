@@ -76,8 +76,9 @@ describe('tower specializations', () => {
     run(plain, 0.5);
     run(sniper, 0.5);
     const firstHit = (sim: BattleSim) => 9999 - sim.enemies[0].hp;
-    // 70 dmg vs 60% armor pierced by half -> 70 * (1 - 0.3) = 49 per shot
-    expect(firstHit(sniper)).toBeGreaterThanOrEqual(49);
+    // 110 dmg vs 60% armor with 70% pierced -> 110 * (1 - 0.18) ≈ 90 per shot
+    expect(firstHit(sniper)).toBeGreaterThanOrEqual(90);
+    expect(firstHit(sniper)).toBeGreaterThan(firstHit(plain));
   });
 
   it('Stormcall lightning chains to nearby enemies', () => {

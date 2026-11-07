@@ -139,7 +139,7 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-Q', () => this.sim.useHeroSkill());
     this.input.keyboard?.on('keydown-ONE', () => this.armSpell(SPELL_ORDER[0]));
     this.input.keyboard?.on('keydown-TWO', () => this.armSpell(SPELL_ORDER[1]));
-    this.input.keyboard?.on('keydown-ESC', () => this.armSpell(null));
+    this.input.keyboard?.on('keydown-ESC', () => (this.spellMode ? this.armSpell(null) : this.togglePause()));
     this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
       if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY);
     });
@@ -556,8 +556,45 @@ export class BattleScene extends Phaser.Scene {
     if (this.ended) return;
     this.paused = !this.paused;
     this.pauseBtn.label.setText(this.paused ? '>' : 'II');
-    if (this.paused) this.showBanner('Paused', 'Press II again or Space to resume', true);
-    else this.children.getByName('banner')?.destroy();
+    this.children.getByName('pauseMenu')?.destroy();
+    if (!this.paused) return;
+    this.closeMenu();
+    this.children.getByName('banner')?.destroy();
+    const c = this.add.container(GAME_W / 2, GAME_H / 2).setDepth(4800).setName('pauseMenu');
+    const shade = this.add.rectangle(0, 0, GAME_W, GAME_H, 0x000000, 0.45).setInteractive();
+    shade.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    const bg = this.add.graphics();
+    bg.fillStyle(C.ink, 1);
+    bg.fillRoundedRect(-200, -190, 400, 380, 26);
+    bg.fillStyle(C.panel, 1);
+    bg.fillRoundedRect(-192, -182, 384, 364, 22);
+    c.add([shade, bg, this.add.text(0, -140, 'Paused', textStyle(44, TEXT.gold)).setOrigin(0.5)]);
+    const soundLabel = () => (loadSave().settings.muted ? 'Sound: Off' : 'Sound: On');
+    const items: [string, number, () => void][] = [
+      ['Resume', C.leaf, () => this.togglePause()],
+      ['Restart', C.sky, () => this.scene.restart({ levelIndex: this.levelIndex })],
+      [soundLabel(), 0xb07cff, () => {}],
+      ['Quit to Map', 0xff9f43, () => this.scene.start('WorldMap', { focus: this.levelIndex })],
+    ];
+    items.forEach(([label, color, fn], i) => {
+      const b = new Button(this, 0, -60 + i * 70, label, { width: 260, height: 56, fontSize: 22, color, onClick: fn });
+      if (i === 2) {
+        b.removeAllListeners('pointerdown');
+        b.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+          ev.stopPropagation();
+          const s2 = loadSave();
+          s2.settings.muted = !s2.settings.muted;
+          writeSave(s2);
+          sfx.setVolume(s2.settings.volume, s2.settings.muted);
+          sfx.unlock();
+          sfx.click();
+          b.label.setText(soundLabel());
+        });
+      }
+      c.add(b);
+    });
+    c.setScale(0.8).setAlpha(0);
+    this.tweens.add({ targets: c, scale: 1, alpha: 1, duration: 160, ease: 'Back.easeOut' });
   }
 
   private showBanner(title: string, sub: string, sticky = false): void {

@@ -98,6 +98,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l2',
+    hpMult: 1.25,
     name: 'Gloomfen Edge',
     blurb: 'Two bog roads meet at the fen. Old Murkmaw himself comes to test you.',
     mapPos: { x: 380, y: 470 },
@@ -169,6 +170,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l3',
+    hpMult: 1.3,
     name: 'Thornwood Hollow',
     blurb: 'A long road snakes through the old wood. Thornhogs charge and wisplings shrug off magic.',
     mapPos: { x: 600, y: 330 },
@@ -218,6 +220,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l4',
+    hpMult: 1.15,
     name: 'Mirelake Crossing',
     blurb: 'Two separate roads skirt the lake, each with its own gate. Split your defenses wisely.',
     mapPos: { x: 840, y: 420 },
@@ -262,6 +265,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l5',
+    hpMult: 1.4,
     name: "Murkmaw's Den",
     blurb: 'Three roads pour out of the deep bog. End this: defeat Old Murkmaw in his own den.',
     mapPos: { x: 1090, y: 260 },

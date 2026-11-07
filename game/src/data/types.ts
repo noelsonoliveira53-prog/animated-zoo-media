@@ -107,6 +107,7 @@ export interface LevelDef {
   waves: WaveDef[];
   theme: { grass: number; grassDark: number; road: number; roadEdge: number };
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
+  hpMult?: number; // difficulty ramp: multiplies every enemy's health on this level
 }
 
 export type HeroPassive =

@@ -716,8 +716,8 @@ export class BattleSim {
     const e: Enemy = {
       uid: this.nextUid++,
       def,
-      hp: def.hp,
-      maxHp: def.hp,
+      hp: Math.round(def.hp * (this.level.hpMult ?? 1)),
+      maxHp: Math.round(def.hp * (this.level.hpMult ?? 1)),
       path: pathIndex,
       dist,
       pos: path.pointAt(dist),

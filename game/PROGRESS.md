@@ -4,9 +4,9 @@ An original tower-defense + village-building game. The **Keepers of the Grove** 
 woodland sanctuary from the **Murkhorde**, bog critters creeping out of the Gloomfen.
 Resources: **Coins** (battle currency / village gold) and **Glowsap** (the second village resource, planned).
 
-Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
+Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **9** (next iteration = 10 → POLISH + BALANCE pass)
+Iteration counter: **10** (next balance pass at iteration 15)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -85,6 +85,16 @@ Iteration counter: **9** (next iteration = 10 → POLISH + BALANCE pass)
   new stars, shown on the victory panel); the Defense Workshop gives +5% tower damage per level in battle.
   Menu now has Campaign + Village. 10 new tests (71 total).
 
+- [x] **Iter 10 — POLISH + BALANCE.** The autoplayer now casts Starfall on the densest clump, Grove Call ahead of
+  the lead enemy, and the hero skill when ≥3 enemies are in reach; expert/casual pick an **adaptive tower mix**
+  from the level's enemy makeup. The novice profile now has a hero + spells (every real player does).
+  New `scripts/spec-bench.ts` (DPS and DPS-per-coin per branch vs armored / crowd / flyers).
+  Tuning: spells nerfed (Starfall 140→100 dmg, 40→50s; Grove Call 16→12s, 28→35s, weaker Rangers);
+  new per-level **enemy health ramp** (`hpMult`: L2 1.25, L3 1.3, L4 1.15, L5 1.4); Hawkeye Perch buffed
+  (110 dmg, 70% pierce: now the best anti-armor branch); Frostbloom nerfed (34 dmg, 45 splash).
+  Polish: real **pause menu** (Resume / Restart / Sound on-off / Quit to Map; Esc toggles it).
+  Guard rails updated (late levels winnable but not guaranteed). 71 tests.
+
 ## In Progress
 - (none)
 
@@ -108,6 +118,27 @@ Iteration counter: **9** (next iteration = 10 → POLISH + BALANCE pass)
 - Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes
+**Iteration 10** (`balance.ts 10`, autoplayer uses spells + hero skill; novice has a hero now):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1 Mossgate Meadow | 100% | 100% | 100% |
+| 2 Gloomfen Edge | 100% | 90% | 100% |
+| 3 Thornwood Hollow | 90% | 100% | 70% |
+| 4 Mirelake Crossing | 50% | 70% | 40% |
+| 5 Murkmaw's Den | 70% | 70% | 70% |
+
+- Before tuning, spells + hero skill made **every** profile win every level with ~full lives; each single power
+  (Starfall, Grove Call or the hero skill) was enough to flip the novice from losing to winning L3–L5.
+- Difficulty now ramps: trivial → easy → medium → hard. The village Defense Workshop (+5–20% tower damage)
+  gives returning players a way to push through L4–L5.
+- **Autoplayer limitation:** on late levels expert ≈ casual ≈ novice. The novice concentrates upgrades on
+  a few top slots near chokepoints, which turns out to be very efficient. A smarter AI (moving the hero,
+  choosing branches per level) is needed before fine-tuning L4/L5 further.
+- Branch benchmark after tuning (DPS per 100 coins, armored / crowd / flyers): Hawkeye 11.6/14.1/14.1,
+  Volley 2.6/19.5/19.5, Stormcall 7.5/22.9/22.9, Frostbloom 4.9/38.9/29.1, Quake 2.8/55.5/0,
+  Sap 1.9/38.3/0, Stonehide 3.4/8.5/0 (tank), Raiders 10.1/25.3/0. Stationary clumps flatter splash.
+
 **Iteration 7: new levels** (`balance.ts 8–10`; the expert AI now uses Fen since Bramble can't hit flyers):
 
 | Level | expert | casual | novice |

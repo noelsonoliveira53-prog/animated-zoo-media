@@ -45,6 +45,7 @@ export interface EnemyDef {
   thorns?: number; // melee attackers (soldiers, heroes) take this fraction of the damage they deal back
   jam?: { radius: number; slow: number }; // towers within radius fire this fraction slower while it lives
   charge?: { speedMult: number; duration: number; cooldown: number }; // bolts forward for `duration` s when hit
+  harden?: { perHit: number; max: number }; // armor grows with every hit taken (up to max)
   magnet?: { radius: number }; // physical tower shots aimed at allies within radius are pulled onto it instead
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s

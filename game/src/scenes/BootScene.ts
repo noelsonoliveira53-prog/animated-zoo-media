@@ -304,6 +304,25 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'rivetshell': {
+        // clockwork armadillo: banded steel shell studded with rivets, small snout, stubby legs
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.5, -0.15, 0.25, 0.55]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 0.85);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.3);
+        g.strokeEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.3);
+        g.lineStyle(2, 0x5a5a64, 1);
+        for (const bx of [-0.35, 0.1, 0.55]) g.lineBetween(cx + bx * r, cy - r * 0.6, cx + bx * r, cy + r * 0.6);
+        g.fillStyle(0xe8c070, 1);
+        for (const bx of [-0.35, 0.1, 0.55]) for (const by of [-0.35, 0, 0.35]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.07);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x7a7a84, 1);
+        g.fillEllipse(cx - r * 0.95, cy + r * 0.15, r * 0.6, r * 0.45);
+        g.strokeEllipse(cx - r * 0.95, cy + r * 0.15, r * 0.6, r * 0.45);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.95, cy + r * 0.05, r * 0.08);
+        break;
+      }
       case 'cogjammer': {
         // brass beetle: domed shell with a big gear on its back, rivets, little legs
         g.lineStyle(2.5, C.ink, 1);

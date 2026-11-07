@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **110** (next balance pass at iteration 115)
+Iteration counter: **111** (next balance pass at iteration 115)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -763,13 +763,25 @@ Iteration counter: **110** (next balance pass at iteration 115)
 - **Iteration 110** (polish + balance): desert ponds are now drawn as oases, with a ring of reeds and a date palm
   leaning out over each end. The first palm drawing looked like an umbrella (flat ellipses), so it was redrawn with
   drooping curved fronds and dates. The Sunscour sweep and the finale guard are in Balance Notes. 182 tests.
+- **Iteration 111**: Sunscour finale, level 65 **Wyrmsand Deep**: a 2,940px dune road plus a 1,680px north road
+  that joins at the bottom, 12 pads, 18 waves (all fliers on the long road), hpMult 2.08. The boss **Scourmaw, the
+  Dune Wyrm** (2,900 health):
+  - Sunbaked crust (+30% armor while unhit).
+  - Sheds 4 Mirage decoys on the first hit.
+  - Drops a Shimmerjack every 8s (up to 6).
+  - Phases: 75% Kilnbacks; 50% a 1,400 shield plus Shimmerjacks; 25% six Sandpickers and a speed-up; 10% a surge.
+  - Code-drawn sand-wyrm sprite with a ring-toothed maw.
+
+  Also: achievements `boss_scourmaw` (Wyrmbane) and `dunes_stars` (Sandwalker), story card "The Sands Fall Still",
+  and Scourmaw joins the endless boss rotation. The Field Guide now holds exactly 60 (two full pages); the next
+  enemy opens page 3. 182 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 13 finale 65 with a boss + story card + achievements.
+2. Region 14, or a breather (village or raid variety, tower polish). Check Field Guide page 3 when enemy 61 lands.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -780,6 +792,8 @@ Iteration counter: **110** (next balance pass at iteration 115)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 111**: 65 Wyrmsand Deep was 83/67/0 at hpMult 2.0 and 75/50/0 at 2.1, but at 2.1 the finale guard failed (expert 1 of 3 test seeds). 2.05 gave 83/75 (guard ok, casual above the band). **2.08 → 75/50/0, guard passes** (kept).
+
 **Iteration 110** (12 seeds, expert/casual/novice): 61 Mirage Flats 100/100/42 · 62 Kilnstone Wash 100/92/0 ·
 63 Last Oasis 100/75/0 · 64 Scorpion Steps 100/67/8. All in band. The expert stays at 100 while casual ramps; the
 Sunscour finale should give the expert its first real test. The finale guard passes: the expert won every one of the

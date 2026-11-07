@@ -517,6 +517,38 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.95, cy + r * 0.08, r * 0.06);
         break;
       }
+      case 'scourmaw': {
+        // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
+        g.fillStyle(0xe0c088, 1);
+        g.fillEllipse(cx + r * 0.3, cy + r * 0.85, r * 2.2, r * 0.6);
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        for (const [sx, sy, sr] of [[0.9, 0.55, 0.42], [0.55, 0.35, 0.5], [0.15, 0.05, 0.56], [-0.25, -0.3, 0.6]] as const) {
+          g.fillCircle(cx + sx * r, cy + sy * r, sr * r);
+          g.strokeCircle(cx + sx * r, cy + sy * r, sr * r);
+        }
+        g.lineStyle(2, 0x8a5a2a, 1);
+        for (const [sx, sy, sr] of [[0.55, 0.35, 0.5], [0.15, 0.05, 0.56]] as const) {
+          g.beginPath();
+          g.arc(cx + sx * r, cy + sy * r, sr * r * 0.75, Math.PI * 0.9, Math.PI * 1.6);
+          g.strokePath();
+        }
+        g.fillStyle(0x2a1010, 1);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.4, r * 0.36);
+        g.fillStyle(0xf0e8d0, 1);
+        for (let k = 0; k < 10; k++) {
+          const a = (k / 10) * Math.PI * 2;
+          const tx = cx - r * 0.35 + Math.cos(a) * r * 0.3;
+          const ty = cy - r * 0.4 + Math.sin(a) * r * 0.3;
+          g.fillTriangle(tx, ty, tx - Math.cos(a) * r * 0.12 + Math.sin(a) * r * 0.05, ty - Math.sin(a) * r * 0.12 - Math.cos(a) * r * 0.05, tx - Math.cos(a) * r * 0.12 - Math.sin(a) * r * 0.05, ty - Math.sin(a) * r * 0.12 + Math.cos(a) * r * 0.05);
+        }
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.05, cy - r * 0.75, r * 0.07);
+        g.fillCircle(cx - r * 0.65, cy - r * 0.8, r * 0.07);
+        g.fillStyle(0xe0c088, 0.9);
+        for (const [px, py] of [[1.3, 0.6], [1.45, 0.4], [-0.6, 0.85], [-0.8, 0.7]]) g.fillCircle(cx + px * r, cy + py * r, r * 0.08);
+        break;
+      }
       case 'thrumhorn': {
         // colossal storm bull: dark shaggy hump, huge forward horns crackling with sparks, a little thundercloud on its back
         g.lineStyle(3, C.ink, 1);

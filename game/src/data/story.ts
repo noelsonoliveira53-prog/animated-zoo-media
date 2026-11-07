@@ -97,4 +97,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x2a3040, 0x7a8a6a],
     accent: 0xfff07a,
   },
+  l65: {
+    title: 'The Sands Fall Still',
+    lines: [
+      'Scourmaw sinks beneath the dunes with a long, dry sigh, and does not rise.',
+      'The heat haze clears, and the false shapes on the horizon fade away.',
+      'Somewhere past the last dune, the Keepers hear the sea for the first time.',
+    ],
+    sky: [0x3a8aa8, 0xf0dca8],
+    accent: 0xd8a060,
+  },
 };

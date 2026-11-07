@@ -12,7 +12,7 @@ export const ENDLESS = {
   budgetPerWave: 70, // ... plus this much per wave
   maxGroupCount: 26,
   bossEvery: 10,
-  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw', 'kaleidrax', 'zephyrax', 'ulmaroth', 'grindmaw', 'velumbra', 'mawbloom', 'thrumhorn'],
+  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw', 'kaleidrax', 'zephyrax', 'ulmaroth', 'grindmaw', 'velumbra', 'mawbloom', 'thrumhorn', 'scourmaw'],
   tiers: [
     { fromWave: 1, enemies: ['mudling', 'skitter', 'gloomwing', 'gnat'] },
     { fromWave: 4, enemies: ['shellback', 'bogmender', 'reedguard', 'wispling'] },

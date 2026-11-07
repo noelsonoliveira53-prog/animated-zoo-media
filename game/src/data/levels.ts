@@ -3658,7 +3658,7 @@ export const LEVELS: LevelDef[] = [
     name: 'Amberwood Gate',
     blurb: 'Past the drowned fleet, a forest that is always in autumn. Leaves the colour of embers fall without end, and somewhere under the canopy the Murkhorde has found a new beat to march to.',
     mapPos: { x: 200, y: 560 },
-    hpMult: 1.6,
+    hpMult: 1.63,
     startCoins: 1000,
     lives: 20,
     theme: AMBER,

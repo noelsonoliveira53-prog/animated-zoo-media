@@ -15,7 +15,7 @@ export const HEROES: Record<string, HeroDef> = {
     melee: true,
     bulwark: [{ level: 3, holds: 2 }, { level: 5, holds: 3 }],
     toss: { name: 'Shield Toss', damage: 34, range: 160, interval: 2.5 },
-    attack: { damage: 18, type: 'physical', range: 22, rate: 1.1, hitsAir: false, projectileSpeed: 0 },
+    attack: { damage: 20, type: 'physical', range: 22, rate: 1.1, hitsAir: false, projectileSpeed: 0 },
     respawn: 14,
     passive: { kind: 'toughness', armor: 0.15, regen: 6, text: 'Thick Hide: extra armor and fast healing.' },
     active: {
@@ -116,7 +116,7 @@ export const HEROES: Record<string, HeroDef> = {
     armor: 0.05,
     regen: 7,
     melee: false,
-    attack: { damage: 17, type: 'physical', range: 170, rate: 1.1, hitsAir: true, projectileSpeed: 520 },
+    attack: { damage: 19, type: 'physical', range: 170, rate: 1.1, hitsAir: true, projectileSpeed: 520 },
     respawn: 11,
     passive: { kind: 'mend', radius: 170, regen: 10, text: 'Field Dressing: nearby soldiers heal 10/s, even mid-fight.' },
     active: {

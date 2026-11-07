@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **159** (next balance pass at iteration 160)
+Iteration counter: **160** (next balance pass at iteration 165)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1137,6 +1137,13 @@ Iteration counter: **159** (next balance pass at iteration 160)
   - Full Roster now needs all six heroes; its test uses `HERO_ORDER`.
   - Checks: a test for the lullaby; `scripts/hazel-check.mjs` covers the menu card and the battle. Screenshots
     `screenshots/159.png` and `159-menu.png`. 209 tests.
+- **Iteration 160** (POLISH + BALANCE):
+  - Ran the hero comparison for all six heroes over 10 levels, including the Amberwood and Mistwreath bosses.
+    Bramble and Sorrel trailed, so each gained +2 attack damage (Bramble 18 → 20, Sorrel 17 → 19).
+  - Re-checked the region openers for the novice strategy, which plays Bramble; Amberwood Gate was re-tuned.
+  - Polish bug: in the Field Guide detail page, long titles ("Hazel the Dormouse Dreamweaver", and long boss names)
+    wrapped onto a second line and overlapped the portrait and blurb. Titles now shrink to fit one line.
+  - Screenshot `screenshots/160.png`. 209 tests.
 
 ## In Progress
 - (none)
@@ -1151,6 +1158,14 @@ Iteration counter: **159** (next balance pass at iteration 160)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 160**:
+- Hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73/80/85, 6 seeds each): Ember 92% · Fen 90% ·
+  Wren 85% · Hazel 78% · Bramble 75% · Sorrel 75%. After the +2 attack buffs: Bramble 77%, Sorrel 78%. The spread is
+  77–92%; the boss levels 80 and 85 pull everyone down a little.
+- Opener spot check (12 seeds; expert / casual / novice): 60 Mirage Flats 100/100/50 · 70 Blackwake 100/100/42 ·
+  76 Amberwood Gate 100/100/58 → hpMult 1.6 → **1.63** gives 100/100/42 (1.66 gave 25%) · 81 Lanternstep Rise
+  100/100/17, kept at 1.6 (1.54 gave 67%, 1.57 gave 75%: a noisy cliff).
+
 **Iteration 159**: Hazel in the hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds): **79%** (avg 10.7 lives),
 inside the others' 79–90% range. The novice and casual strategies don't use her, so the level bands are unchanged.
 

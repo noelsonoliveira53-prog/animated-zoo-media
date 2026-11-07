@@ -10,7 +10,7 @@ import { CAMP_BUILDINGS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { bossPhaseLines } from '../systems/guideInfo';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
-import { pf } from '../ui/touch';
+import { fitWidth, pf } from '../ui/touch';
 import { Button } from '../ui/Button';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
@@ -310,7 +310,7 @@ export class FieldGuideScene extends Phaser.Scene {
     img.setScale(Math.min(2.2, 130 / Math.max(img.width, img.height)));
     this.tweens.add({ targets: img, y: 254, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
     c.add(img);
-    c.add(this.add.text(x, 130, e.name, { ...textStyle(30, '#3a2a1a'), wordWrap: { width: 470 } }).setStroke('#e8dcb8', 0));
+    c.add(fitWidth(this.add.text(x, 130, e.name, textStyle(30, '#3a2a1a')).setStroke('#e8dcb8', 0), 470)); // long names shrink to one line
     c.add(this.add.text(x + 150, 190, e.blurb, { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 300 } }).setStroke('#e8dcb8', 0));
     const body = this.add.text(x, 350, e.lines.join(e.extra ? '\n' : '\n\n'), { ...textStyle(17, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0);
     c.add(body);

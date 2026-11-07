@@ -7,13 +7,15 @@ export interface SaveData {
   hero: string; // selected hero id
   village: VillageState | null; // created on first visit
   heroRanks: Record<string, number>; // persistent hero training (battle start level = rank + 1)
+  army: Record<string, number>; // trained raid troops waiting at the Ranger Lodge
+  raidSeed: number; // rotates after each raid so new camps appear
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -42,6 +44,8 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       hero: typeof parsed.hero === 'string' ? parsed.hero : base.hero,
       village: parsed.village && Array.isArray(parsed.village.buildings) ? parsed.village : null,
       heroRanks: { ...(parsed.heroRanks ?? {}) },
+      army: { ...(parsed.army ?? {}) },
+      raidSeed: typeof parsed.raidSeed === 'number' ? parsed.raidSeed : 1,
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {

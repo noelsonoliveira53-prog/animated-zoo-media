@@ -3,6 +3,7 @@ import { ENEMIES } from '../data/enemies';
 import { TOWERS } from '../data/towers';
 import { HEROES } from '../data/heroes';
 import { BUILDINGS, type BuildingId } from '../data/buildings';
+import { CAMP_BUILDINGS, TROOPS } from '../data/raid';
 
 export const TILE = 46;
 import { C } from '../ui/theme';
@@ -23,6 +24,8 @@ export class BootScene extends Phaser.Scene {
     for (const def of Object.values(BUILDINGS)) {
       for (let lvl = 1; lvl <= def.levels.length; lvl++) this.makeBuilding(def.id, lvl);
     }
+    for (const id of Object.keys(CAMP_BUILDINGS)) this.makeCampBuilding(id);
+    for (const id of Object.keys(TROOPS)) this.makeTroop(id);
     this.makeMisc();
     this.scene.start('Menu');
   }
@@ -403,6 +406,128 @@ export class BootScene extends Phaser.Scene {
       }
     }
     g.generateTexture(`enemy_${id}`, s, s);
+    g.destroy();
+  }
+
+  /** Murkhorde camp buildings for raids (40px tiles). */
+  private makeCampBuilding(id: string): void {
+    const def = CAMP_BUILDINGS[id];
+    const S = def.size * 40;
+    const cx = S / 2;
+    const cy = S / 2;
+    const g = this.g();
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(cx, cy + S * 0.32, S * 0.9, S * 0.3);
+    g.lineStyle(3, C.ink, 1);
+    switch (id) {
+      case 'totem': {
+        g.fillStyle(0x5a4a32, 1);
+        g.fillRoundedRect(cx - 22, cy - 40, 44, 84, 10);
+        g.strokeRoundedRect(cx - 22, cy - 40, 44, 84, 10);
+        for (let i = 0; i < 3; i++) {
+          g.fillStyle([0x7a5a3a, 0x4fae7c, 0x8a6440][i], 1);
+          g.fillEllipse(cx, cy - 26 + i * 26, 50, 22);
+          g.strokeEllipse(cx, cy - 26 + i * 26, 50, 22);
+          g.fillStyle(0xffe066, 1);
+          g.fillCircle(cx - 9, cy - 28 + i * 26, 4);
+          g.fillCircle(cx + 9, cy - 28 + i * 26, 4);
+        }
+        g.fillStyle(0xb5651d, 1);
+        g.fillTriangle(cx - 16, cy - 52, cx + 16, cy - 52, cx, cy - 72);
+        break;
+      }
+      case 'spit': {
+        g.fillStyle(0x6a5a3a, 1);
+        g.fillRect(cx - 12, cy - 10, 24, 34);
+        g.strokeRect(cx - 12, cy - 10, 24, 34);
+        g.fillStyle(def.color, 1);
+        g.fillEllipse(cx, cy - 16, 40, 30);
+        g.strokeEllipse(cx, cy - 16, 40, 30);
+        this.eyes(g, cx, cy - 20, 5, 9);
+        g.fillStyle(0x2f6a40, 1);
+        g.fillEllipse(cx, cy - 6, 14, 6);
+        break;
+      }
+      case 'mortar': {
+        g.fillStyle(0x6a6a5a, 1);
+        g.fillEllipse(cx, cy + 6, 56, 36);
+        g.strokeEllipse(cx, cy + 6, 56, 36);
+        g.fillStyle(def.color, 1);
+        g.fillRoundedRect(cx - 14, cy - 26, 28, 34, 8);
+        g.strokeRoundedRect(cx - 14, cy - 26, 28, 34, 8);
+        g.fillStyle(0x2a2420, 1);
+        g.fillEllipse(cx, cy - 26, 24, 10);
+        break;
+      }
+      case 'pile': {
+        g.fillStyle(0x7a5a3a, 1);
+        g.fillEllipse(cx, cy + 8, 60, 34);
+        g.strokeEllipse(cx, cy + 8, 60, 34);
+        for (let i = 0; i < 7; i++) {
+          g.fillStyle(i % 2 ? C.gold : 0x9be86a, 1);
+          g.fillCircle(cx - 18 + (i % 4) * 12, cy + 2 - Math.floor(i / 4) * 10, 7);
+          g.lineStyle(1.5, C.ink, 1);
+          g.strokeCircle(cx - 18 + (i % 4) * 12, cy + 2 - Math.floor(i / 4) * 10, 7);
+        }
+        break;
+      }
+      default: {
+        g.fillStyle(def.color, 1);
+        g.fillEllipse(cx, cy + 4, 58, 44);
+        g.strokeEllipse(cx, cy + 4, 58, 44);
+        g.fillStyle(0x9a7a52, 1);
+        g.fillEllipse(cx - 6, cy - 6, 30, 14);
+        g.fillStyle(0x2a2420, 1);
+        g.fillEllipse(cx, cy + 14, 16, 18);
+      }
+    }
+    g.generateTexture(`camp_${id}`, S, S);
+    g.destroy();
+  }
+
+  private makeTroop(id: string): void {
+    const def = TROOPS[id];
+    const g = this.g();
+    const w = 30;
+    const h = 34;
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(15, 30, 22, 7);
+    g.lineStyle(2.5, C.ink, 1);
+    if (def.flying) {
+      g.clear();
+      g.lineStyle(2.5, C.ink, 1);
+      g.fillStyle(0x8a6a40, 1);
+      g.fillEllipse(6, 15, 14, 9);
+      g.fillEllipse(24, 15, 14, 9);
+      g.strokeEllipse(6, 15, 14, 9);
+      g.strokeEllipse(24, 15, 14, 9);
+    }
+    g.fillStyle(def.color, 1);
+    g.fillRoundedRect(6, 12, 18, 17, 7);
+    g.strokeRoundedRect(6, 12, 18, 17, 7);
+    g.fillCircle(15, 10, 8);
+    g.strokeCircle(15, 10, 8);
+    g.fillStyle(0x111111, 1);
+    g.fillCircle(12, 10, 1.6);
+    g.fillCircle(18, 10, 1.6);
+    if (id === 'brawler') {
+      g.fillStyle(0xffffff, 1);
+      g.fillRect(13, 2, 4, 10);
+      g.fillStyle(0x7a5232, 1);
+      g.fillRect(24, 8, 4, 16);
+    } else if (id === 'slinger') {
+      g.fillStyle(0x8a6440, 1);
+      for (let i = 0; i < 4; i++) g.fillTriangle(8 + i * 4, 5, 11 + i * 4, 5, 9.5 + i * 4, 0);
+    } else if (id === 'sapper') {
+      g.fillStyle(0xfff4d6, 1);
+      g.fillRect(13, 13, 4, 4);
+      g.fillStyle(0x6a3a1a, 1);
+      g.fillEllipse(15, 31, 18, 6);
+    } else {
+      g.fillStyle(0xffe066, 1);
+      g.fillTriangle(13, 12, 17, 12, 15, 16);
+    }
+    g.generateTexture(`troop_${id}`, w, h);
     g.destroy();
   }
 

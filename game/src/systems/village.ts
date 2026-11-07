@@ -1,3 +1,4 @@
+import { TROOPS } from '../data/raid';
 import { BUILDINGS, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 
 // Pure village rules. All time-dependent functions take `now` (ms) so they are testable.
@@ -239,5 +240,32 @@ export function trainHero(v: VillageState, ranks: Record<string, number>, heroId
   if (v.glowsap < cost) return { ok: false, reason: `Needs ${cost} glowsap` };
   v.glowsap -= cost;
   ranks[heroId] = rank + 1;
+  return { ok: true };
+}
+
+
+/** Army housing: 10 space per Ranger Lodge level (0 without a lodge). */
+export function armyCapacity(v: VillageState): number {
+  const lodge = Math.max(0, ...v.buildings.filter((b) => b.type === 'barracks').map((b) => b.level));
+  return lodge * 10;
+}
+
+export function lodgeLevel(v: VillageState): number {
+  return Math.max(0, ...v.buildings.filter((b) => b.type === 'barracks').map((b) => b.level));
+}
+
+export function armySpace(army: Record<string, number>): number {
+  return Object.entries(army).reduce((n, [id, c]) => n + (TROOPS[id]?.space ?? 0) * c, 0);
+}
+
+/** Train one troop instantly for Glowsap, if there is room and the lodge is high enough. */
+export function trainTroop(v: VillageState, army: Record<string, number>, id: string): { ok: boolean; reason?: string } {
+  const def = TROOPS[id];
+  if (!def) return { ok: false, reason: 'Unknown troop' };
+  if (lodgeLevel(v) < def.lodge) return { ok: false, reason: `Needs Ranger Lodge level ${def.lodge}` };
+  if (armySpace(army) + def.space > armyCapacity(v)) return { ok: false, reason: 'The Ranger Lodge is full' };
+  if (v.glowsap < def.cost) return { ok: false, reason: `Needs ${def.cost} glowsap` };
+  v.glowsap -= def.cost;
+  army[id] = (army[id] ?? 0) + 1;
   return { ok: true };
 }

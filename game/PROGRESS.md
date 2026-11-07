@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **16** (next balance pass at iteration 20)
+Iteration counter: **17** (next balance pass at iteration 20)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -146,11 +146,23 @@ Iteration counter: **16** (next balance pass at iteration 20)
   ~26 imps each over their slow walk → capped. The smart AI now keeps the hero at a level's designed
   `heroSpawn`. 18 enemy types, 15 levels, 80 tests.
 
+- [x] **Iter 17** — **Raid mode.** Train troops at the Ranger Lodge (instant, costs Glowsap; army space =
+  10 × lodge level): **Badger Brawler** (tank), **Hedgehog Slinger** (ranged), **Beaver Sapper** (targets
+  defenses, splash), **Owl Striker** (flyer, needs Lodge 2). Village **Raid** button opens a panel with
+  training cards and 3 seeded Murkhorde camps (Outpost / Warren / Stronghold) showing their loot. Pure
+  `RaidSim` (`systems/RaidSim.ts`) + seeded `generateCamp` (`systems/camp.ts`): Mud Totem (HQ), Spit Towers
+  (hit air), Bog Mortars (splash, ground only), Loot Piles, Mud Huts; troops pick the nearest (or nearest
+  defense) target, defenses shoot the nearest troop in range. Stars: ≥50%, HQ down, 100%. Loot is banked
+  per destroyed building; survivors and undeployed troops return; new camps after every raid. `RaidScene`
+  with a deploy bar (tap or drag outside the camp; a red no-deploy zone flashes when too close), HP bars,
+  shots, destruction effects, HUD (%, timer, loot, stars) and a result panel. **Save fix:** the village now
+  reloads the save before writing, so it can't overwrite the army or other progress. 89 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+1. Raid follow-ups: walls in camps, training time (queue), raid balance across tiers, raid-loot vs campaign-loot economy check.
 2. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
 3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
 4. Ambient music loop (procedural).
@@ -159,6 +171,7 @@ Iteration counter: **16** (next balance pass at iteration 20)
 - (none known)
 
 ## Ideas parked
+- Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 - Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
 - Pause menu with "Quit to map" / "Restart" (currently only via the end panel).

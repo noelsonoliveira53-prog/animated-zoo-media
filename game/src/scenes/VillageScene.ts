@@ -23,6 +23,9 @@ import {
   type VillageState,
 } from '../systems/village';
 import { sfx } from '../systems/audio';
+import { armyCapacity, armySpace, lodgeLevel, trainTroop } from '../systems/village';
+import { CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
+import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
@@ -85,8 +88,11 @@ export class VillageScene extends Phaser.Scene {
   }
 
   private persist(): void {
-    this.save.village = this.v;
-    writeSave(this.save);
+    // Reload first so changes made elsewhere (army, hero ranks, stars) are never overwritten.
+    const fresh = loadSave();
+    fresh.village = this.v;
+    writeSave(fresh);
+    this.save = fresh;
     this.lastSave = Date.now();
   }
 
@@ -192,6 +198,7 @@ export class VillageScene extends Phaser.Scene {
     new Button(this, 90, 40, 'Menu', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.leave('Menu') }).setDepth(902);
     new Button(this, GAME_W - 110, 40, 'Campaign', { width: 180, height: 50, fontSize: 20, color: 0xff9f43, onClick: () => this.leave('WorldMap') }).setDepth(902);
     new Button(this, GAME_W - 100, GAME_H - 44, 'Build', { width: 160, height: 60, fontSize: 26, color: C.leaf, onClick: () => this.openShop() }).setDepth(902);
+    new Button(this, 100, GAME_H - 44, 'Raid', { width: 160, height: 60, fontSize: 26, color: C.danger, onClick: () => this.openRaid() }).setDepth(902);
     this.refresh();
   }
 
@@ -403,6 +410,117 @@ export class VillageScene extends Phaser.Scene {
     const close = new Button(this, W / 2 - 60, -H / 2 + 26, 'X', { width: 50, height: 44, fontSize: 20, color: C.danger, onClick: () => c.destroy() });
     c.add(close);
     this.panel = c;
+  }
+
+  private openRaid(): void {
+    this.closePanel();
+    this.cancelMode();
+    const save = loadSave();
+    save.village = this.v;
+    const W = 1120;
+    const H = 520;
+    const c = this.add.container(GAME_W / 2, GAME_H / 2 + 20).setDepth(1100);
+    const bg = this.add.graphics();
+    bg.fillStyle(C.ink, 0.97);
+    bg.fillRoundedRect(-W / 2, -H / 2, W, H, 24);
+    c.add(bg);
+    const block = this.add.zone(0, 0, W, H).setInteractive();
+    block.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    c.add(block);
+    c.add(this.add.text(0, -H / 2 + 26, 'Raid the Murkhorde', textStyle(26, TEXT.gold)).setOrigin(0.5));
+    c.add(new Button(this, W / 2 - 40, -H / 2 + 28, 'X', { width: 50, height: 44, fontSize: 20, color: C.danger, onClick: () => c.destroy() }));
+    this.panel = c;
+    const lodge = lodgeLevel(this.v);
+    if (lodge <= 0) {
+      c.add(
+        this.add
+          .text(0, 0, 'Build a Ranger Lodge (needs Grove Hall level 2)\nto train raiders and strike back at Murkhorde camps.', { ...textStyle(20), align: 'center' })
+          .setOrigin(0.5),
+      );
+      return;
+    }
+    // --- army ---
+    const cap = armyCapacity(this.v);
+    const capText = this.add.text(-W / 2 + 30, -H / 2 + 62, '', textStyle(18)).setOrigin(0, 0.5);
+    c.add(capText);
+    const counts: Phaser.GameObjects.Text[] = [];
+    const refresh = () => {
+      capText.setText(`Army: ${armySpace(save.army)} / ${cap} space   •   Glowsap: ${Math.floor(this.v.glowsap)}`);
+      TROOP_ORDER.forEach((id, i) => counts[i]?.setText(`×${save.army[id] ?? 0}`));
+    };
+    TROOP_ORDER.forEach((id, i) => {
+      const def = TROOPS[id];
+      const x = -W / 2 + 30 + 132 + i * 270;
+      const y = -H / 2 + 160;
+      const locked = lodge < def.lodge;
+      const card = this.add.graphics();
+      card.fillStyle(locked ? 0x333b35 : C.panelLight, 1);
+      card.fillRoundedRect(x - 128, y - 70, 256, 140, 14);
+      c.add(card);
+      c.add(this.add.image(x - 90, y - 18, `troop_${id}`).setScale(1.8));
+      c.add(this.add.text(x - 55, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)));
+      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space`, textStyle(13, TEXT.gold, false)));
+      c.add(this.add.text(x - 118, y + 14, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(12, TEXT.dim, false), wordWrap: { width: 160 } }));
+      const n = this.add.text(x + 20, y - 8, '', textStyle(22, TEXT.gold)).setOrigin(0, 0.5);
+      counts.push(n);
+      c.add(n);
+      if (!locked) {
+        c.add(
+          new Button(this, x + 92, y + 34, '+1', {
+            width: 64,
+            height: 44,
+            fontSize: 18,
+            color: C.leaf,
+            onClick: () => {
+              const r = trainTroop(this.v, save.army, id);
+              if (!r.ok) this.toast(r.reason ?? '');
+              else {
+                save.village = this.v;
+                writeSave(save);
+                sfx.build();
+              }
+              refresh();
+            },
+          }),
+        );
+      }
+    });
+    refresh();
+    // --- camps ---
+    c.add(this.add.text(-W / 2 + 30, 30, 'Choose a camp', textStyle(20, TEXT.gold)));
+    CAMP_TIERS.forEach((tier, i) => {
+      const camp = generateCamp(save.raidSeed ?? 1, i);
+      const loot = campLoot(camp);
+      const x = -W / 2 + 30 + 175 + i * 360;
+      const y = 150;
+      const g = this.add.graphics();
+      g.fillStyle(C.panelLight, 1);
+      g.fillRoundedRect(x - 170, y - 80, 340, 160, 14);
+      c.add(g);
+      c.add(this.add.text(x - 155, y - 68, tier.name, textStyle(18, ['#9be86a', TEXT.gold, TEXT.heart][i])));
+      c.add(this.add.text(x - 155, y - 40, ['Easy', 'Medium', 'Hard'][i] + ` • ${camp.buildings.length} buildings`, textStyle(14, TEXT.dim, false)));
+      c.add(this.add.image(x - 140, y + 4, 'icon_coin').setScale(0.8));
+      c.add(this.add.text(x - 124, y + 4, `${loot.coins}`, textStyle(16, TEXT.gold)).setOrigin(0, 0.5));
+      c.add(this.add.image(x - 40, y + 4, 'icon_sap').setScale(0.8));
+      c.add(this.add.text(x - 24, y + 4, `${loot.glowsap}`, textStyle(16, '#c8ff8a')).setOrigin(0, 0.5));
+      c.add(
+        new Button(this, x + 90, y + 44, 'Attack!', {
+          width: 140,
+          height: 48,
+          fontSize: 20,
+          color: 0xff9f43,
+          onClick: () => {
+            const s2 = loadSave();
+            if (armySpace(s2.army) <= 0) {
+              this.toast('Train some troops first');
+              return;
+            }
+            this.persist();
+            this.scene.start('Raid', { tier: i, seed: s2.raidSeed ?? 1 });
+          },
+        }),
+      );
+    });
   }
 
   private startMode(mode: Mode): void {

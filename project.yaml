@@ -1,0 +1,53 @@
+# CCGS project configuration — single source of truth for project settings.
+# See .claude/docs/effects-map.md for full schema.
+
+schema_version: 1
+
+framework:
+  version: 1.2.0
+  last_upgraded: 2026-10-19
+
+# NOTE: this template ships with no `modes:` block, and the six knobs below must
+# never be added to one.
+#
+# `/start` DOES add `modes.rigor` and `modes.automation` here — that is its job,
+# and a `modes:` block containing those two is the expected state of a configured
+# project, not a mistake.
+#
+# What must stay absent is the six knobs `modes.rigor` FRONTS:
+# `modes.review_mode`, `modes.workflow`, `docs.density`, `qa.level`,
+# `modes.story_granularity` and `team.size`. Seeding any of them in this file
+# pins that value and shadows the rigor expansion, so the rigor `/start` infers
+# and saves would stop changing anything. `/start` states the same rule for the
+# settings it writes.
+#
+# Per-developer preferences belong in `project.local.yaml` (gitignored), not
+# here. `/settings --local <key>=<value>` writes there; `/settings <key>=<value>`
+# edits this file. See `.claude/docs/config-resolution.md` for the full
+# precedence order.
+
+# --- Grovewatch: Sanctuary Siege (this repo's game) ---------------------------
+# The game is a browser game in game/ built with Phaser 3 + TypeScript + Vite,
+# tested with Vitest. Phaser is not one of the framework's three engine presets
+# (Godot / Unity / Unreal), so `engine:` / `specialists:` are left unset on
+# purpose: skills then route code work to the generic programmer agents instead
+# of an engine specialist. The code root is game/src, tests are game/tests, and
+# game/PROGRESS.md is the living design + progress log (read it first).
+project:
+  name: "Grovewatch: Sanctuary Siege"
+  genre: "Tower defense + village builder"
+  stage: Production
+
+platform:
+  multiplayer: false
+  online: false
+  targets: [Web, Mobile]
+  primary_input: "Mouse / Touch"
+  gamepad_support: "None"
+  touch_support: "Full"
+
+commands:
+  build: "cd game && npm run build"
+  test: "cd game && npm test"
+  run: "cd game && npm run dev"
+  smoke: "cd game && npm run build && node scripts/screenshot.mjs smoke"

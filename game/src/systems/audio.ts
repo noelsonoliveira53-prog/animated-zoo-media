@@ -184,6 +184,12 @@ class Sfx {
         this.noise(0.1, 0.12, 1800);
         this.tone(160, 0.08, 'square', 0.05, 80);
         break;
+      case 'rile': // an angry little hoot
+        this.tone(520, 0.08, 'square', 0.04, 780);
+        break;
+      case 'grief': // a low mournful note
+        this.tone(220, 0.35, 'sine', 0.05, 165);
+        break;
       case 'mist': // a soft breathy hush
         this.noise(0.25, 0.04, 2500);
         this.tone(660, 0.2, 'sine', 0.025, 990);

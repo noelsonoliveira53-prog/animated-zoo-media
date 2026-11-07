@@ -53,6 +53,7 @@ export interface Enemy {
   anchored: boolean;
   drumCd: number; // Barkdrum: time to its next beat
   phaseCd: number; // Mistfox: time until it fades / returns
+  riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
   phased: boolean;
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
@@ -193,6 +194,8 @@ export type SimEvent =
   | { type: 'leech'; enemy: Enemy; amount: number }
   | { type: 'mist'; enemy: Enemy; on: boolean }
   | { type: 'dodge'; enemy: Enemy }
+  | { type: 'rile'; enemy: Enemy; speedMult: number }
+  | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
@@ -928,6 +931,7 @@ export class BattleSim {
       anchored: false,
       drumCd: def.drum ? def.drum.interval * 0.5 : 0,
       phaseCd: def.phase ? def.phase.interval : 0,
+      riledAt: -99,
       phased: false,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
@@ -1771,6 +1775,13 @@ export class BattleSim {
     if (e.def.windborne) return;
     e.slowFactor = Math.min(e.slowFactor, factor);
     e.slowTime = Math.max(e.slowTime, duration);
+    const r = e.def.rile;
+    if (r && e.alive && this.time - e.riledAt >= 0.5 && e.speedMult < 1 + r.max) {
+      // Howler: being slowed only makes it angrier, and faster for good
+      e.riledAt = this.time;
+      e.speedMult = Math.min(1 + r.max, e.speedMult + r.perSlow);
+      this.events.push({ type: 'rile', enemy: e, speedMult: e.speedMult });
+    }
   }
 
   /** True while a regenerating enemy is knitting itself back together. */
@@ -1906,6 +1917,13 @@ export class BattleSim {
       if (!e.def.boss) this.feedOn(e);
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
+      if (e.def.grief) {
+        // Ringtail Mourner: its fall hardens the resolve (and hides) of those around it
+        const g = e.def.grief;
+        const mourners = this.enemies.filter((o) => o.alive && o !== e && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= g.radius);
+        for (const o of mourners) o.armor = Math.min(0.85, o.armor + g.armor);
+        this.events.push({ type: 'grief', enemy: e, radius: g.radius, mourners });
+      }
       if (e.def.keg) this.kegBlast(e);
       if (e.def.glare) this.glareBurst(e);
       if (e.def.echo && !e.revived) {

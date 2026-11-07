@@ -304,6 +304,13 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.canopy && !motion.reduced) {
+      // slanting sunbeams through the canopy, breathing slowly
+      for (let i = 0; i < 4; i++) {
+        const beam = this.add.rectangle(rnd.between(150, GAME_W - 150), GAME_H / 2, 70, GAME_H * 1.4, 0xfff4c8, 0.06).setAngle(18).setDepth(0.6);
+        this.tweens.add({ targets: beam, alpha: 0.13, duration: rnd.between(2600, 4200), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.mist && !motion.reduced) {
       // low banks of hill fog drifting slowly across the terraces
       for (let i = 0; i < 6; i++) {
@@ -484,6 +491,33 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.canopy) {
+        const k = rnd.frac();
+        if (k < 0.55) {
+          // a great clump of treetop leaves seen from above
+          const col = rnd.pick(this.level.theme.trees ?? [0x3f8a3a]);
+          deco.fillStyle(0x000000, 0.18);
+          deco.fillEllipse(p.x + 4, p.y + 8, 56, 22);
+          deco.fillStyle(col, 1);
+          for (const [dx, dy, r] of [[-14, 0, 14], [12, -2, 15], [0, -12, 14], [2, 8, 12]]) deco.fillCircle(p.x + dx, p.y + dy, r);
+          deco.fillStyle(0xffffff, 0.12);
+          deco.fillCircle(p.x - 4, p.y - 14, 7);
+        } else if (k < 0.8) {
+          // a twiggy nest with speckled eggs
+          deco.fillStyle(0x7a5a3a, 1);
+          deco.fillEllipse(p.x, p.y, 30, 14);
+          deco.lineStyle(1.5, 0x4a3420, 0.8);
+          deco.strokeEllipse(p.x, p.y, 30, 14);
+          deco.fillStyle(0xd8e8f0, 1);
+          deco.fillEllipse(p.x - 5, p.y - 2, 7, 9);
+          deco.fillEllipse(p.x + 4, p.y - 2, 7, 9);
+        } else {
+          // a hanging vine with leaves
+          deco.lineStyle(2, 0x3a6a2a, 1);
+          deco.lineBetween(p.x, p.y - 26, p.x + 3, p.y + 10);
+          deco.fillStyle(0x5aa04a, 1);
+          for (let n = 0; n < 4; n++) deco.fillEllipse(p.x + (n % 2 ? 6 : -4), p.y - 20 + n * 9, 8, 5);
         }
       } else if (this.level.theme.mist) {
         const k = rnd.frac();
@@ -1632,6 +1666,25 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: g, alpha: 0, duration: 160, onComplete: () => g.destroy() });
         this.particles.setParticleTint(0xc8c8c8);
         this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
+        break;
+      }
+      case 'rile': {
+        // throttled per howler: an angry red "!" and a little hop
+        const key = -2000000 - ev.enemy.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 700) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('rile');
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, 'Grr!', '#ff7a5a', 13);
+        const rv = this.enemyViews.get(ev.enemy.uid);
+        if (rv) rv.pulse = 0.15;
+        break;
+      }
+      case 'grief': {
+        sfx.trait('grief');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, 14).setStrokeStyle(3, 0x8a8aa8, 0.8).setDepth(2400);
+        this.tweens.add({ targets: ring, radius: ev.radius, alpha: 0, duration: 600, onComplete: () => ring.destroy() });
+        if (ev.mourners.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Mourned', '#c8c8e0', 13);
         break;
       }
       case 'mist': {

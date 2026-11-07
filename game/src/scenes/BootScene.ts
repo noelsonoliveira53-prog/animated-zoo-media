@@ -811,6 +811,52 @@ export class BootScene extends Phaser.Scene {
         g.fillRect(cx - r * 1.12, cy + r * 0.48, r * 0.34, r * 0.05);
         break;
       }
+      case 'howler': {
+        // howler monkey: shaggy brown body, dark face, long curling tail, wide-open shouting mouth
+        g.lineStyle(2.5, color, 1);
+        g.beginPath();
+        g.arc(cx + r * 0.75, cy - r * 0.1, r * 0.5, Math.PI * 0.6, Math.PI * 2.1);
+        g.strokePath();
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1);
+        g.strokeEllipse(cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1);
+        g.fillCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
+        g.strokeCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
+        g.fillStyle(0x2a1a14, 1);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.35, r * 0.55, r * 0.6);
+        g.fillStyle(0xd84a3a, 1);
+        g.fillEllipse(cx - r * 0.58, cy - r * 0.15, r * 0.24, r * 0.2);
+        g.fillStyle(0xffd040, 1);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.48, r * 0.07);
+        g.fillCircle(cx - r * 0.42, cy - r * 0.48, r * 0.07);
+        break;
+      }
+      case 'mourner': {
+        // ringtail lemur: soft grey body, white face mask with dark eye patches, big black-and-white ringed tail
+        const tx = cx + r * 0.6;
+        for (let k = 0; k < 6; k++) {
+          g.fillStyle(k % 2 ? 0x222222 : 0xf4f4f4, 1);
+          g.fillCircle(tx + k * r * 0.12, cy - r * 0.15 - k * r * 0.16, r * 0.17);
+        }
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.2, r * 1.0);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.2, r * 1.0);
+        g.fillCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
+        g.strokeCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
+        g.fillStyle(0xf4f4f4, 1);
+        g.fillEllipse(cx - r * 0.6, cy - r * 0.3, r * 0.45, r * 0.38);
+        g.fillStyle(0x222222, 1);
+        g.fillCircle(cx - r * 0.72, cy - r * 0.38, r * 0.11);
+        g.fillCircle(cx - r * 0.48, cy - r * 0.38, r * 0.11);
+        g.fillStyle(0xffb040, 1);
+        g.fillCircle(cx - r * 0.72, cy - r * 0.38, r * 0.05);
+        g.fillCircle(cx - r * 0.48, cy - r * 0.38, r * 0.05);
+        g.fillStyle(0x222222, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.06);
+        break;
+      }
       case 'mistfox': {
         // pale fox spirit: slim body, big pointed ears, a long wisp of a tail, glowing amber eyes
         g.lineStyle(2.5, C.ink, 1);

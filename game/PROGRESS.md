@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **160** (next balance pass at iteration 165)
+Iteration counter: **161** (next balance pass at iteration 165)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1144,12 +1144,28 @@ Iteration counter: **160** (next balance pass at iteration 165)
   - Polish bug: in the Field Guide detail page, long titles ("Hazel the Dormouse Dreamweaver", and long boss names)
     wrapped onto a second line and overlapped the portrait and blurb. Titles now shrink to fit one line.
   - Screenshot `screenshots/160.png`. 209 tests.
+- **Iteration 161** (region 18 opener): **The Highcanopy**, plank walkways and rope bridges strung between giant
+  treetops. Level 86 **Ropebridge Reach** has 12 pads, a long winding road of 2,960px and a top road of 1,720px. It
+  uses the `CANOPY` theme: great leaf clumps seen from above, twig nests with eggs, hanging vines, and slanting
+  sunbeams that respect Reduce motion. It also gets a bouncing call-and-answer music theme and a leafy world-map
+  style. Two new enemies, each with a new trait:
+  - **Howler** (a shaggy shouting monkey): `rile` trait. Every slow it suffers (at most twice a second) adds +8%
+    speed for good, up to +50%, so frost and snares backfire if overused. It shows a throttled "Grr!" and a hop.
+  - **Ringtail Mourner** (a grey ringtail lemur): `grief` trait. When it dies, allies within 140px gain +12% armor
+    for good (capped at 85%). A grey ring spreads with "Mourned".
+  - Endless tier at wave 72. Field Guide tags and sound cues. Tests for both traits.
+  - The layout tests caught a pad behind the exit gate; it was moved.
+  - Checks: `scripts/canopy-check.mjs` (Howler at ×1.24 after three slows; the Mourner's death raised a mudling's
+    armor 0 → 0.12). Screenshots `screenshots/161.png` and `161-map.png`. 211 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 18, or a breather (raid or village variety).
+1. Highcanopy levels 87–89 (a third new trait on 87), then the finale (90) with a boss, achievements, a story card
+   and the endless boss rotation.
+2. A breather now and then (raid or village variety).
+3. The region picker is full at 18 regions (3×6); region 19 will need a second page or a smaller grid.
 
 ## Known Bugs
 - (none known)
@@ -1158,6 +1174,9 @@ Iteration counter: **160** (next balance pass at iteration 165)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 161**: 86 Ropebridge Reach: 100/100/75 at hpMult 1.6, 100/100/50 at 1.8, 100/83/25 at 1.95, 100/75/25 at 2.1, and **1.87 → 100/100/42**
+(kept, opener band).
+
 **Iteration 160**:
 - Hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73/80/85, 6 seeds each): Ember 92% · Fen 90% ·
   Wren 85% · Hazel 78% · Bramble 75% · Sorrel 75%. After the +2 attack buffs: Bramble 77%, Sorrel 78%. The spread is

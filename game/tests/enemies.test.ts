@@ -949,3 +949,33 @@ describe('Glowbearer', () => {
     expect(g0 - g.hp).toBe(20);
   });
 });
+
+describe('Highcanopy enemies', () => {
+  it('a Howler gets faster each time it is slowed (at most twice a second), up to its cap', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const h = sim.spawn('howler', 0, 200);
+    const r = h.def.rile!;
+    sim.slow(h, 0.5, 1);
+    expect(h.speedMult).toBeCloseTo(1 + r.perSlow);
+    sim.slow(h, 0.5, 1); // too soon: no extra rile
+    expect(h.speedMult).toBeCloseTo(1 + r.perSlow);
+    for (let k = 0; k < 20; k++) {
+      for (let i = 0; i < 31; i++) sim.update(1 / 60);
+      sim.slow(h, 0.5, 1);
+    }
+    expect(h.speedMult).toBeCloseTo(1 + r.max);
+  });
+
+  it('a Ringtail Mourner toughens nearby allies for good when it dies', () => {
+    const sim = new BattleSim(lvl, null);
+    const m = sim.spawn('mourner', 0, 300);
+    const near = sim.spawn('mudling', 0, 340);
+    const far = sim.spawn('mudling', 0, 900);
+    const a0 = near.armor;
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(m, 99999);
+    expect(near.armor).toBeCloseTo(Math.min(0.85, a0 + m.def.grief!.armor));
+    expect(far.armor).toBe(far.def.armor);
+    expect(sim.drainEvents().some((e) => e.type === 'grief')).toBe(true);
+  });
+});

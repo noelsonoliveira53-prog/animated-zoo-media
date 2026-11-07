@@ -147,4 +147,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x8aa8b8, 0xe8f0e0],
     accent: 0xffd27a,
   },
+  l90: {
+    title: 'The King Steps Down',
+    lines: [
+      'Crownmane sits back on his throne of branches, and for the first time in a hundred years he is quiet.',
+      'The hawks circle once and settle in their nests. The howlers stop howling. The whole canopy holds its breath.',
+      'Then the Old King lifts his vine crown, sets it at the Keepers\' feet, and points a long arm toward the horizon.',
+    ],
+    sky: [0x3a6a3a, 0xd8e8a0],
+    accent: 0xe8a040,
+  },
 };

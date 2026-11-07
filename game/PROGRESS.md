@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **165** (next balance pass at iteration 170)
+Iteration counter: **166** (next balance pass at iteration 170)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1177,14 +1177,22 @@ Iteration counter: **165** (next balance pass at iteration 170)
   - Check: `scripts/region-picker-paging-check.mjs` shrinks the page to 9 to test it today: opens on page 2/2, ">" wraps to 1/2,
     no console errors. Screenshots `screenshots/165.png` and `165-p2.png`.
   - Balance: hero comparison on Highcanopy levels 86–89 (see Balance Notes). 212 tests.
+- **Iteration 166** (Highcanopy finale): level 90 **Crown of the Oldest Tree** and its boss.
+  - The boss is **Crownmane, the Old King of the Canopy**, a red-maned ape with a vine crown, drawn in BootScene.
+    - 3,200 hp, armor 0.3, magic resist 0.3.
+    - Slows rile him (+4% speed each, up to +35%), and he snatches a Keeper off the road every 6 seconds.
+    - He calls a Howler every 7 seconds, up to 6.
+    - Phases: Harriers at 75%; a 1,500 shield and 6 Mourners at 50%; 6 Howlers and a speed-up at 25%; a final dash at 10%.
+  - Achievements Kingtopple (beat the boss) and Treetop Keeper (all 15 Highcanopy stars), story card "The King Steps Down",
+    and Crownmane joins the endless boss rotation. One new test (213 total).
+  - Check: `scripts/crownmane-check.mjs`. The phase-1 Harriers spawned and there were no console errors. Screenshot `screenshots/166.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Highcanopy finale (90) with a boss, achievements, a story card
-   and the endless boss rotation.
-2. A breather now and then (raid or village variety).
+1. A breather (raid or village variety) before region 19.
+2. Region 19: a new theme, traits and five levels (the region picker now pages, so there's room).
 
 ## Known Bugs
 - (none known)
@@ -1193,6 +1201,9 @@ Iteration counter: **165** (next balance pass at iteration 170)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 166**: 90 Crown of the Oldest Tree (12 seeds, expert/casual/novice): hpMult 1.95 → 58/25/0, 1.85 → 58/33/8,
+**1.75 → 75/50/0** (kept; the boss band is 75–92 for the expert and 33–63 for the casual). It sits below Veilwhisker's 2.22
+because Crownmane's snatches strip soldiers and the slow-heavy strategies rile him.
 **Iteration 165**: hero comparison (expert strategy, levels 86–89, 3 seeds each): Bramble 96% (avg 13.3 lives), Fen 100% (12.9),
 Ember 100% (14.0), Wren 100% (14.1), Sorrel 83% (10.0), Hazel 100% (13.0). Sorrel is the weakest here because its heals matter
 less against Mourner grief and Harrier snatches, but it stays inside the 80–100% spread, so it is unchanged.

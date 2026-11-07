@@ -70,3 +70,17 @@ describe('Moonwatcher and Mudlark', () => {
     expect(mud.progress(s)).toBe(4);
   });
 });
+
+describe('Highcanopy finale', () => {
+  it('Crownmane has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_crownmane: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_crownmane');
+    expect(STORY.l90).toBeDefined();
+    expect(ENDLESS.bosses).toContain('crownmane');
+    const b = ENEMIES.crownmane;
+    expect(b.boss && b.rile && b.snatch && b.phases?.length).toBeTruthy();
+  });
+});

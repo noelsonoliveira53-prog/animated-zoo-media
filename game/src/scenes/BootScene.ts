@@ -811,6 +811,45 @@ export class BootScene extends Phaser.Scene {
         g.fillRect(cx - r * 1.12, cy + r * 0.48, r * 0.34, r * 0.05);
         break;
       }
+      case 'crownmane': {
+        // great red-maned ape: shaggy mane, long arms on the ground, pale face, crown of green vines with gold blossoms
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x8a3a1a, 1);
+        for (const sx of [-1, 1]) {
+          g.fillEllipse(cx + sx * r * 0.85, cy + r * 0.35, r * 0.4, r * 0.95);
+          g.strokeEllipse(cx + sx * r * 0.85, cy + r * 0.35, r * 0.4, r * 0.95);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.25);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.25);
+        // mane: a ring of shaggy tufts around the head
+        g.fillStyle(0xd86a2a, 1);
+        for (let k = 0; k < 9; k++) {
+          const a = Math.PI * (0.9 + (k / 8) * 1.2);
+          g.fillCircle(cx + Math.cos(a) * r * 0.55, cy - r * 0.35 + Math.sin(a) * r * 0.5, r * 0.22);
+        }
+        g.fillCircle(cx, cy - r * 0.35, r * 0.5);
+        g.strokeCircle(cx, cy - r * 0.35, r * 0.52);
+        // face
+        g.fillStyle(0xe8c8a0, 1);
+        g.fillEllipse(cx, cy - r * 0.28, r * 0.6, r * 0.55);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeEllipse(cx, cy - r * 0.28, r * 0.6, r * 0.55);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.13, cy - r * 0.36, r * 0.06);
+        g.fillCircle(cx + r * 0.13, cy - r * 0.36, r * 0.06);
+        g.fillEllipse(cx, cy - r * 0.15, r * 0.22, r * 0.1);
+        // vine crown with gold blossoms
+        g.lineStyle(4, 0x3a8a3a, 1);
+        g.beginPath();
+        g.arc(cx, cy - r * 0.45, r * 0.42, Math.PI * 1.15, Math.PI * 1.85);
+        g.strokePath();
+        g.fillStyle(0x4aa04a, 1);
+        for (const lx of [-0.3, 0, 0.3]) g.fillTriangle(cx + lx * r - r * 0.08, cy - r * 0.78, cx + lx * r + r * 0.08, cy - r * 0.78, cx + lx * r, cy - r * 1.02);
+        g.fillStyle(0xffd040, 1);
+        for (const lx of [-0.36, -0.12, 0.12, 0.36]) g.fillCircle(cx + lx * r, cy - r * 0.8 + Math.abs(lx) * r * 0.25, r * 0.06);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

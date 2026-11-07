@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **157** (next balance pass at iteration 160)
+Iteration counter: **158** (next balance pass at iteration 160)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1120,6 +1120,13 @@ Iteration counter: **157** (next balance pass at iteration 160)
   - If nothing is ready, a "Nothing to collect yet" toast shows.
   - Checks: a test, and `scripts/collect-all-check.mjs` (one real tap banked +2,000 coins and +1,500 glowsap).
     Screenshot `screenshots/157.png`. 208 tests.
+- **Iteration 158** (phone QA): re-ran `scripts/phone-screens.mjs` (740×360 touch) over the menu, the village
+  building panel (with the new Collect all button), the shop, the raid panel and achievements.
+  - The Collect all button and the building panel fit side by side.
+  - Fix: the shop and raid panels had a 96–97% opaque background, so the Collect all and Zoom buttons bled through
+    their bottom corners. Both panels are fully opaque now.
+  - The menu's version label was stuck at v0.6; it now reads v0.9.
+  - Screenshots `screenshots/158.png` (raid panel) and `158-menu.png`. 208 tests.
 
 ## In Progress
 - (none)

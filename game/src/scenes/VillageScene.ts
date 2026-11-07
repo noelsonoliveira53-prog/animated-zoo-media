@@ -483,7 +483,7 @@ export class VillageScene extends Phaser.Scene {
     const H = 300;
     const c = this.add.container(GAME_W / 2, GAME_H / 2 + 60).setDepth(1100);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.96);
+    bg.fillStyle(C.ink, 1);
     bg.fillRoundedRect(-W / 2, -H / 2, W, H, 24);
     c.add(bg);
     const block = this.add.zone(0, 0, W, H).setInteractive();
@@ -546,7 +546,7 @@ export class VillageScene extends Phaser.Scene {
     const H = 520;
     const c = this.add.container(GAME_W / 2, GAME_H / 2 + 20).setDepth(1100);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.97);
+    bg.fillStyle(C.ink, 1);
     bg.fillRoundedRect(-W / 2, -H / 2, W, H, 24);
     c.add(bg);
     const block = this.add.zone(0, 0, W, H).setInteractive();

@@ -1299,7 +1299,7 @@ export const LEVELS: LevelDef[] = [
     name: "Saltjaw's Grotto",
     blurb: 'Deep in a sea cave, the ancient Tidecrab stirs. Two tunnels meet in its grotto. Crack that shell.',
     mapPos: { x: 1110, y: 210 },
-    hpMult: 2.25,
+    hpMult: 2.2,
     startCoins: 950,
     lives: 20,
     theme: SHOAL,

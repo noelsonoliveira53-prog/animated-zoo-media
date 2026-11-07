@@ -7,6 +7,7 @@ import { HEROES, HERO_ORDER } from '../data/heroes';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
+import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
 type Tab = 'enemies' | 'towers' | 'heroes';
@@ -23,6 +24,7 @@ interface Entry {
 // The Keepers' Field Guide: everything you've met, with stats and tips.
 export class FieldGuideScene extends Phaser.Scene {
   private tab: Tab = 'enemies';
+  private page = 0;
   private grid: Phaser.GameObjects.Container | null = null;
   private detail: Phaser.GameObjects.Container | null = null;
   private tabButtons: Record<string, Button> = {};
@@ -145,21 +147,31 @@ export class FieldGuideScene extends Phaser.Scene {
     });
   }
 
-  private show(tab: Tab): void {
+  private show(tab: Tab, page = 0): void {
     this.tab = tab;
     for (const [t, b] of Object.entries(this.tabButtons)) b.setColor(t === tab ? 0xff9f43 : C.leaf);
     this.grid?.destroy();
     this.detail?.destroy();
     this.detail = null;
-    const list = this.entries();
+    const all = this.entries();
     const c = this.add.container(0, 0);
     this.grid = c;
     const cols = tab === 'towers' ? 3 : 6;
+    // 6 × 5 enemy cards fit the page; more than that spills onto further pages.
+    const perPage = tab === 'enemies' ? 30 : 99;
+    const pages = pageCount(all.length, perPage);
+    this.page = clampPage(page, all.length, perPage);
+    const list = pageItems(all, this.page, perPage);
     const cell = tab === 'towers' ? 116 : 98;
     const x0 = 90;
     const y0 = 130;
-    const seen = list.filter((e) => !e.locked).length;
-    c.add(this.add.text(x0, GAME_H - 66, tab === 'enemies' ? `Discovered ${seen} / ${list.length}` : `${list.length} entries`, textStyle(16, '#5a4a32', false)).setStroke('#e8dcb8', 0));
+    const seen = all.filter((e) => !e.locked).length;
+    if (pages > 1) {
+      const prev = new Button(this, 560, GAME_H - 58, '<', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + pages - 1) % pages) });
+      const next = new Button(this, 670, GAME_H - 58, '>', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + 1) % pages) });
+      c.add([prev, next, this.add.text(615, GAME_H - 58, `${this.page + 1}/${pages}`, textStyle(18, '#5a4a32', false)).setOrigin(0.5).setStroke('#e8dcb8', 0).setName('guidePage')]);
+    }
+    c.add(this.add.text(x0, GAME_H - 66, tab === 'enemies' ? `Discovered ${seen} / ${all.length}` : `${all.length} entries`, textStyle(16, '#5a4a32', false)).setStroke('#e8dcb8', 0));
     list.forEach((e, i) => {
       const x = x0 + (i % cols) * cell + cell / 2;
       const y = y0 + Math.floor(i / cols) * (tab === 'towers' ? 96 : cell) + cell / 2 - 10;

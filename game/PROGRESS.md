@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **49** (next iteration = 50 → POLISH + BALANCE pass)
+Iteration counter: **50** (next balance pass at iteration 55)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -389,6 +389,13 @@ Iteration counter: **49** (next iteration = 50 → POLISH + BALANCE pass)
   at x=900, under Pause (now x=800). Autoplayer: `adaptiveMix` now builds fewer splash towers when splash-resistant
   enemies are a big share of a level's health. 137 tests.
 
+- [x] **Iter 50 — POLISH + BALANCE (29 levels).** Full campaign re-run: every level except one stays ≥ 83% for the
+  expert, and every region ramps to its boss. Saltjaw's Grotto had slipped (expert 50–63% at 2.25; the curve is very
+  steep there), so hpMult is now 2.2 (2.15 → 100/75/0). Polish: the Field Guide pages (30 per page, `<`/`>` beside the
+  count, reusing `ui/paging.ts`), so the 30-slot grid is no longer a ceiling; the capacity test now checks every enemy
+  lands on exactly one page. New `scripts/guide-paging-check.mjs` inflates the list in-browser and flips pages with real
+  clicks. 137 tests.
+
 ## In Progress
 - (none)
 
@@ -417,6 +424,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Campaign (iteration 50, 6 seeds):** expert ≥ 83% on 28 of 29 levels (the outlier was Saltjaw's Grotto, now fixed).
+Region openers: 100/100/100, 100/100/50, 100/100/67, 100/83/33, 100/100/50, 100/100/33. Bosses: Murkmaw 83/83/67,
+Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 83/33/0, Saltjaw (fixed) ~83/70/0.
 
 **Glassteeth Ladder (iteration 49, 8 seeds):** first draft 0/0/0 at 3.4 (the final wave of 6 Bog Brutes + 12
 Mirrorbacks was a wall). After trimming it and the other Mirrorback waves, and the shorter entry: **2.5 → 100% / 83% / 0%**

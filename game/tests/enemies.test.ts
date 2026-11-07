@@ -295,9 +295,15 @@ describe('reefwarden', () => {
   });
 });
 
+import { pageCount, pageItems } from '../src/ui/paging';
+
 describe('field guide capacity', () => {
-  it('the enemy grid (6 × 5) still fits every enemy; add paging before going past 30', () => {
-    expect(Object.keys(ENEMIES).length).toBeLessThanOrEqual(30);
+  it('enemies are paged 30 per page (6 × 5 grid) and every enemy lands on exactly one page', () => {
+    const ids = Object.keys(ENEMIES);
+    const pages = pageCount(ids.length, 30);
+    const seen = Array.from({ length: pages }, (_, p) => pageItems(ids, p, 30)).flat();
+    expect(seen).toEqual(ids);
+    for (let p = 0; p < pages; p++) expect(pageItems(ids, p, 30).length).toBeLessThanOrEqual(30);
   });
 });
 

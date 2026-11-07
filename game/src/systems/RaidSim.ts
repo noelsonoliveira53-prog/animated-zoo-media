@@ -26,6 +26,7 @@ export type RaidEvent =
   | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding }
   | { type: 'mend'; from: CampBuilding; healed: CampBuilding[] }
   | { type: 'troopHeal'; troop: Troop; healed: Troop[] }
+  | { type: 'swarm'; building: CampBuilding; radius: number; stung: Troop[] }
   | { type: 'end'; stars: number };
 
 export class RaidSim {
@@ -235,7 +236,17 @@ export class RaidSim {
       this.loot.coins += gained.coins;
       this.loot.glowsap += gained.glowsap;
       this.events.push({ type: 'destroyed', building: b, loot: gained });
+      if (CAMP_BUILDINGS[b.type].burst) this.swarm(b);
     }
+  }
+
+  /** Hornet Hive: its fall releases a swarm that stings every troop nearby, flyers included. */
+  private swarm(b: CampBuilding): void {
+    const burst = CAMP_BUILDINGS[b.type].burst!;
+    const c = buildingCenter(b);
+    const stung = this.troops.filter((t) => t.alive && Math.hypot(t.pos.x - c.x, t.pos.y - c.y) <= burst.radius + buildingRadius(b));
+    this.events.push({ type: 'swarm', building: b, radius: burst.radius + buildingRadius(b), stung });
+    for (const t of stung) this.hurtTroop(t, burst.damage * this.dmgMult, c);
   }
 
   private updateDefenses(dt: number): void {

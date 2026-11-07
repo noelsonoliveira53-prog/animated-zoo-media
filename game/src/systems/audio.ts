@@ -236,6 +236,11 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'swarm': // an angry buzzing cloud
+        this.tone(180, 0.5, 'sawtooth', 0.035, 220);
+        this.tone(186, 0.5, 'sawtooth', 0.03, 230);
+        this.noise(0.4, 0.05, 2400);
+        break;
       case 'mend': // soft bubbling chime
         this.tone(660, 0.18, 'sine', 0.04, 880);
         this.tone(990, 0.14, 'sine', 0.03, undefined, 0.08);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **166** (next balance pass at iteration 170)
+Iteration counter: **167** (next balance pass at iteration 170)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1186,13 +1186,21 @@ Iteration counter: **166** (next balance pass at iteration 170)
   - Achievements Kingtopple (beat the boss) and Treetop Keeper (all 15 Highcanopy stars), story card "The King Steps Down",
     and Crownmane joins the endless boss rotation. One new test (213 total).
   - Check: `scripts/crownmane-check.mjs`. The phase-1 Harriers spawned and there were no console errors. Screenshot `screenshots/166.png`.
+- **Iteration 167** (raid break): a new camp building, the **Hornet Hive**. It's a papery striped nest on a branch with
+  hornets around it, drawn in BootScene.
+  - When it's destroyed, a swarm stings every troop within about 140px of its centre, flyers included, for 45 damage
+    (scaled by camp tier). That punishes clumping and owl dives.
+  - Warrens and Strongholds have one hive each; Outposts have none.
+  - The raid shows a yellow ring, a burst of dark specks, "Swarm!" and a buzzing sound. The Field Guide's Raids tab
+    lists it automatically.
+  - Two new tests (215 total). Check: `scripts/hive-check.mjs`. Every troop near the hive lost 56 hp and there were no
+    console errors. Screenshots `screenshots/167.png` (the swarm) and `167-camp.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. A breather (raid or village variety) before region 19.
-2. Region 19: a new theme, traits and five levels (the region picker now pages, so there's room).
+1. Region 19: a new theme, traits and five levels (the region picker now pages, so there's room).
 
 ## Known Bugs
 - (none known)
@@ -1201,6 +1209,10 @@ Iteration counter: **166** (next balance pass at iteration 170)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 167** (raid sim, stars and destruction): the first try, 70 damage with 2 hives in Strongholds, cut the Lodge 3
+army's Stronghold score from 1.1★ 48% to 0.5★ 41%. At **45 damage, radius 100, one hive per camp**: Warren Lodge 2 1.7★ 67%
+(was 1.8★ 70%), Lodge 3 3.0★; Stronghold Lodge 3 1.0★ 49% (was 1.1★ 48%), Lodge 3 + Mender 1.5★ 54% (was 1.6★ 52%).
+The Mender army copes best with the swarm, which is the intended counter.
 **Iteration 166**: 90 Crown of the Oldest Tree (12 seeds, expert/casual/novice): hpMult 1.95 → 58/25/0, 1.85 → 58/33/8,
 **1.75 → 75/50/0** (kept; the boss band is 75–92 for the expert and 33–63 for the casual). It sits below Veilwhisker's 2.22
 because Crownmane's snatches strip soldiers and the slow-heavy strategies rile him.

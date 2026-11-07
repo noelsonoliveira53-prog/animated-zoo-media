@@ -254,3 +254,26 @@ describe('Otter loot bonus', () => {
     expect(lootOf('otter')).toBe(Math.round(lootOf('brawler') * (1 + TROOPS.otter.lootBonus!)));
   });
 });
+
+describe('Hornet Hive', () => {
+  it('stings every troop near it (flyers too) when it falls, but not troops far away', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'hive', col: 10, row: 6, hp: 1, maxHp: 300 }, { uid: 2, type: 'hut', col: 20, row: 2, hp: 280, maxHp: 280 }] };
+    const sim = new RaidSim(camp, { brawler: 1, owl: 1, slinger: 1 });
+    const c = buildingCenter(camp.buildings[0]);
+    const b = sim.deploy('brawler', { x: c.x - 90, y: c.y })!;
+    const o = sim.deploy('owl', { x: c.x + 90, y: c.y })!;
+    const far = sim.deploy('slinger', { x: c.x - 400, y: c.y + 200 })!;
+    (sim as unknown as { hurtBuilding: (x: unknown, d: number, by: unknown) => void }).hurtBuilding(camp.buildings[0], 50, b);
+    const dmg = CAMP_BUILDINGS.hive.burst!.damage;
+    expect(b.hp).toBe(TROOPS.brawler.hp - dmg);
+    expect(o.hp).toBeLessThan(TROOPS.owl.hp);
+    expect(far.hp).toBe(TROOPS.slinger.hp);
+    expect(sim.drainEvents().some((e) => e.type === 'swarm')).toBe(true);
+  });
+  it('Warrens and Strongholds hang a hive; outposts do not', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((b) => b.type === 'hive').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(1);
+  });
+});

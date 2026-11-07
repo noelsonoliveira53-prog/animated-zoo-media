@@ -2148,6 +2148,32 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + 14, cy + 22, 12, 5);
         break;
       }
+      case 'hive': {
+        // a papery striped hornet nest hanging from a dead branch, with a dark entrance hole and a few hornets
+        g.lineStyle(4, 0x5a4632, 1);
+        g.lineBetween(cx - 30, cy - 26, cx + 30, cy - 22);
+        g.lineBetween(cx, cy - 24, cx, cy - 18);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(def.color, 1);
+        g.fillEllipse(cx, cy + 4, 42, 48);
+        g.strokeEllipse(cx, cy + 4, 42, 48);
+        g.lineStyle(2, 0x8a6a30, 1);
+        for (const dy of [-10, 0, 10, 20]) {
+          const w = Math.sqrt(Math.max(0, 1 - ((dy - 4) / 24) ** 2)) * 21;
+          g.lineBetween(cx - w + 2, cy + dy, cx + w - 2, cy + dy);
+        }
+        g.fillStyle(0x1a1208, 1);
+        g.fillCircle(cx, cy + 18, 5);
+        for (const [hx, hy] of [[24, -6], [-24, 6], [20, 22]]) {
+          g.fillStyle(0xffc83a, 1);
+          g.fillEllipse(cx + hx, cy + hy, 8, 5);
+          g.fillStyle(0x1a1208, 1);
+          g.fillRect(cx + hx - 1, cy + hy - 2.5, 2, 5);
+          g.fillStyle(0xffffff, 0.7);
+          g.fillCircle(cx + hx - 1, cy + hy - 4, 2);
+        }
+        break;
+      }
       case 'sludge': {
         // a bubbling pit of brown-green muck ringed with stakes, a ladle sticking out
         g.fillStyle(0x3a2e1e, 1);

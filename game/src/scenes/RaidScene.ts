@@ -248,6 +248,21 @@ export class RaidScene extends Phaser.Scene {
         }
         break;
       }
+      case 'swarm': {
+        // a cloud of hornets boils out of the broken hive and stings everyone close by
+        const c = buildingCenter(ev.building);
+        const ring = this.add.circle(c.x, c.y, ev.radius, 0xffc83a, 0.18).setStrokeStyle(3, 0xffc83a, 0.8).setDepth(5400).setScale(0.3);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 550, onComplete: () => ring.destroy() });
+        this.particles.setParticleTint(0x2a2010);
+        this.particles.explode(30, c.x, c.y - 10);
+        for (const t of ev.stung) {
+          this.particles.setParticleTint(0xffc83a);
+          this.particles.explode(4, t.pos.x, t.pos.y - 8);
+        }
+        if (ev.stung.length) this.floatText(c.x, c.y - 52, 'Swarm!', '#ffd84a');
+        sfx.trait('swarm');
+        break;
+      }
       case 'troopDown': {
         const v = this.troopViews.get(ev.troop.uid);
         if (v) {

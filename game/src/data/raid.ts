@@ -141,6 +141,7 @@ export interface CampBuildingDef {
   wall?: boolean; // blocks ground troops; doesn't count toward destruction
   mend?: { amount: number; interval: number; range: number }; // heals damaged camp buildings in range every `interval` s
   mire?: { radius: number; factor: number }; // ground troops within radius move at this fraction of their speed
+  burst?: { radius: number; damage: number }; // when destroyed, stings every troop (flyers too) within radius
   blurb?: string;
   color: number;
 }
@@ -152,6 +153,7 @@ export const CAMP_BUILDINGS: Record<string, CampBuildingDef> = {
   pile: { id: 'pile', name: 'Loot Pile', blurb: "Stolen acorns and jars of sap, piled high. Smash it to take them home.", hp: 380, size: 2, loot: { coins: 220, glowsap: 220 }, color: 0xb59a4e },
   shaman: { id: 'shaman', name: 'Mire Shaman', blurb: "A reed hut where an old mire-witch brews bog tonic, patching up the buildings around her.", hp: 420, size: 2, mend: { amount: 30, interval: 3, range: 130 }, color: 0x7a4a8a },
   sludge: { id: 'sludge', name: 'Sludge Pit', blurb: "A bubbling pit of muck. Anything walking near it wades slowly, right under the Spit Towers.", hp: 360, size: 2, mire: { radius: 120, factor: 0.55 }, color: 0x5a4a2a },
+  hive: { id: 'hive', name: 'Hornet Hive', blurb: "A papery nest hung from a dead branch, buzzing angrily. Knock it down and the swarm boils out to sting everyone close by, wings or no wings.", hp: 300, size: 2, burst: { radius: 100, damage: 45 }, color: 0xc8a050 },
   hut: { id: 'hut', name: 'Mud Hut', blurb: "Where the critters sleep. Not much to it, but it counts toward the camp's destruction.", hp: 280, size: 2, color: 0x7a5a3a },
   wall: { id: 'wall', name: 'Stake Wall', blurb: "Sharpened stakes lashed together. Ground troops must chew through them.", hp: 220, size: 1, wall: true, color: 0x5a4632 },
 };
@@ -160,6 +162,6 @@ export const RAID_TIME = 90; // seconds
 
 export const CAMP_TIERS = [
   { name: 'Mudling Outpost', counts: { spit: 3, mortar: 1, pile: 2, hut: 3 }, walls: false },
-  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, shaman: 1, sludge: 1, pile: 3, hut: 3 }, walls: true },
-  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, sludge: 2, pile: 4, hut: 4 }, walls: true },
+  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, shaman: 1, sludge: 1, hive: 1, pile: 3, hut: 3 }, walls: true },
+  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, sludge: 2, hive: 1, pile: 4, hut: 4 }, walls: true },
 ];

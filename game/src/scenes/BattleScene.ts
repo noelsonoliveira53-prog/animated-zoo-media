@@ -270,13 +270,14 @@ export class BattleScene extends Phaser.Scene {
     }
     // ponds
     const lava = !!this.level.theme.lava;
+    const abyss = !!this.level.theme.abyss;
     for (const pd of this.level.ponds ?? []) {
-      g.fillStyle(lava ? 0x5a2a1a : 0x3f8a9a, 1);
+      g.fillStyle(lava ? 0x5a2a1a : abyss ? 0x0a0c1a : 0x3f8a9a, 1);
       g.fillEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
-      g.fillStyle(lava ? 0xff6a2a : 0x6fc4dc, 1);
+      g.fillStyle(lava ? 0xff6a2a : abyss ? 0x1a8a8a : 0x6fc4dc, 1);
       g.fillEllipse(pd.x, pd.y, pd.w, pd.h);
-      if (lava) {
-        const glow = this.add.ellipse(pd.x, pd.y, pd.w * 0.7, pd.h * 0.6, 0xffc93c, 0.5).setDepth(-9);
+      if (lava || abyss) {
+        const glow = this.add.ellipse(pd.x, pd.y, pd.w * 0.7, pd.h * 0.6, abyss ? 0x5ae8d0 : 0xffc93c, 0.5).setDepth(-9);
         this.tweens.add({ targets: glow, alpha: 0.15, scale: 0.85, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
       }
       g.fillStyle(0xffffff, 0.35);

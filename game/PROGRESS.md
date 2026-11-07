@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **85** (next balance pass at iteration 90)
+Iteration counter: **86** (next balance pass at iteration 90)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -611,12 +611,17 @@ Iteration counter: **85** (next balance pass at iteration 90)
   mechanic and autoplayer changes since iteration 70: every level is in its band and every region ramps to its boss, so
   no hpMult changed. Polish: `scripts/phone-late.mjs` now takes a region and level (`node scripts/phone-late.mjs <name>
   <region> <level>`); the Starwell map, battle and Field Guide pages are clean at 740×360. Screenshot `85.png`.
+- [x] **Iter 86 — Starwell level 48: Moonring Lake.** One road circles three sides of a glowing lake and exits at the
+  bottom; pads ring the inner shore. 13 pads, 16 waves, hpMult 2.38. Fixes from the screenshot: the first exit came
+  out at the bottom-left beside the hero HUD (now at x=500), and ponds were drawn in the daylight sky-blue; ponds in the
+  Abyss theme now have a dark rim, a teal fill and a pulsing glow. Screenshot `86.png`. 165 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
+1. Region 10 level 49.
+2. Region 10 finale (level 50) with a Starwell boss.
 
 ## Known Bugs
 - (none known)
@@ -642,6 +647,7 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 86:** 48 Moonring Lake 100/83/0 at hpMult 2.38 (2.1 → 100/100/0, 2.45 → 75/75/0, 2.6 → 58/33/0).
 **Iteration 84:** 47 Lantern Hollow 100/100/25 at hpMult 1.8 (1.5 → 100/100/100, 1.9 → 100/100/0, 2.05 → 100/92/0):
 the novice falls off a cliff (Sparkeels break Bramble's holds).
 **Iteration 83:** 46 Glimmerpool Descent 100/100/33 at hpMult 1.75 (1.6 → 100/100/100, 1.85 → 100/100/25,

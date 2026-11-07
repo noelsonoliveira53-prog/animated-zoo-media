@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { sfx } from './systems/audio';
 import { BootScene } from './scenes/BootScene';
 import { MenuScene } from './scenes/MenuScene';
 import { BattleScene } from './scenes/BattleScene';
@@ -29,3 +30,4 @@ window.addEventListener('contextmenu', (e) => e.preventDefault());
 // Expose for automated tests / debugging.
 (window as unknown as { __game: Phaser.Game; __music: typeof music }).__game = game;
 (window as unknown as { __music: typeof music }).__music = music;
+(window as unknown as { __sfx: typeof sfx }).__sfx = sfx; // test handle, like __music

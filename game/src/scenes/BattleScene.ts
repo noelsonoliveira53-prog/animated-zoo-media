@@ -1215,6 +1215,7 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
       case 'spores': {
+        sfx.trait('spores');
         const cloud = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, ev.radius, 0xe8a0d0, 0.28).setStrokeStyle(3, 0xffd0f0, 0.8).setDepth(2400).setScale(0.3);
         this.tweens.add({ targets: cloud, scale: 1, alpha: 0, duration: 700, ease: 'Cubic.easeOut', onComplete: () => cloud.destroy() });
         this.particles.setParticleTint(0xffc0e8);
@@ -1223,6 +1224,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'coral': {
+        sfx.trait('coral');
         const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0xff9aa8, 0.12).setStrokeStyle(3, 0xffc0c8, 0.9).setDepth(2400).setScale(0.3);
         this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 550, onComplete: () => ring.destroy() });
         for (const t of ev.targets) {
@@ -1232,6 +1234,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'thorns': {
+        sfx.trait('thorns');
         // a few green thorn sparks on whoever just hit a thorny enemy
         if (Math.random() < 0.5) {
           this.particles.setParticleTint(0x7ac84a);
@@ -1240,6 +1243,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'shift': {
+        sfx.trait('shift');
         // hide flips: a puff in the new colour (green scales vs red skin)
         this.particles.setParticleTint(ev.scales ? 0x7ad85a : 0xe8604a);
         this.particles.explode(6, ev.enemy.pos.x, ev.enemy.pos.y - 8);
@@ -1251,6 +1255,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'revive': {
+        sfx.trait('revive');
         // golden beam from the idol to the risen ally
         const beam = this.add.line(0, 0, ev.source.pos.x, ev.source.pos.y - 20, ev.enemy.pos.x, ev.enemy.pos.y - 10, 0xffd84a, 0.9).setOrigin(0, 0).setLineWidth(3).setDepth(2450);
         this.tweens.add({ targets: beam, alpha: 0, duration: 500, onComplete: () => beam.destroy() });
@@ -1261,6 +1266,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'gust': {
+        sfx.trait('gust');
         // a pale swirl around the Kitewing and wind streaks behind everything it shoved
         const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y - 30, ev.radius, 0xffffff, 0.08).setStrokeStyle(2, 0xe8f4ff, 0.8).setDepth(2400).setScale(0.4);
         this.tweens.add({ targets: ring, scale: 1, alpha: 0, angle: 90, duration: 500, onComplete: () => ring.destroy() });
@@ -1271,12 +1277,14 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'glare': {
+        sfx.trait('glare');
         const flash = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 30, ev.radius, 0xffffff, 0.5).setDepth(2600).setScale(0.2);
         this.tweens.add({ targets: flash, scale: 1, alpha: 0, duration: 380, ease: 'Cubic.easeOut', onComplete: () => flash.destroy() });
         if (ev.towers.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 50, 'Dazzled!', '#fff0b8', 16);
         break;
       }
       case 'blink': {
+        sfx.trait('blink');
         this.particles.setParticleTint(0xbff4ff);
         this.particles.explode(8, ev.from.x, ev.from.y);
         this.particles.explode(8, ev.to.x, ev.to.y);
@@ -1285,17 +1293,20 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'swoop':
+        sfx.trait('swoop');
         if (ev.landed) {
           this.particles.setParticleTint(0xe8f4ff);
           this.particles.explode(8, ev.enemy.pos.x, ev.enemy.pos.y);
         }
         break;
       case 'enrage':
+        sfx.trait('enrage');
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Enraged!', TEXT.heart, 18);
         this.particles.setParticleTint(0xff5d4a);
         this.particles.explode(12, ev.enemy.pos.x, ev.enemy.pos.y);
         break;
       case 'burrow':
+        sfx.trait('burrow');
         this.particles.setParticleTint(0x9a7a52);
         this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
         break;
@@ -1330,6 +1341,7 @@ export class BattleScene extends Phaser.Scene {
         sfx.waveHorn();
         break;
       case 'split':
+        sfx.trait('split');
         this.particles.setParticleTint(ev.parent.def.color);
         this.particles.explode(20, ev.parent.pos.x, ev.parent.pos.y);
         break;

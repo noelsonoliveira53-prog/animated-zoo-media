@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **74** (next balance pass at iteration 75)
+Iteration counter: **75** (next balance pass at iteration 80)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -547,14 +547,18 @@ Iteration counter: **74** (next balance pass at iteration 75)
   panels, toasts) so the UI never zooms; floating "+coins" text moved to the world layer. Placing/moving buildings uses
   the camera's world point, so it stays exact when zoomed. Browser check `scripts/village-zoom-check.mjs` (real button,
   real drag, tap on the moved Town Hall, zoom out); existing village/phone checks still pass. Screenshot `74.png`.
+- [x] **Iter 75 — POLISH + BALANCE.** Sweep of levels 31–40 (12 seeds; 1–30 unchanged since iteration 70 and untouched
+  by the autoplayer changes): all in band, no retunes. Endless holds 11–21 waves with Zephyrax and Ulmaroth in the boss
+  rotation. Polish: twelve enemy traits were silent (gust, swoop, revive, shift, blink, thorns, glare, coral, spores,
+  enrage, burrow, split); each now has a short, throttled WebAudio cue via `sfx.trait(kind)`. `window.__sfx` test
+  handle; `scripts/sfx-check.mjs` unlocks audio with a click and plays every cue (context running, no errors).
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 75 balance pass.
-2. Region 9 (levels 41–45): a new biome, enemies and boss, following the region recipe.
-3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+1. Region 9 (levels 41–45): a new biome, enemies and boss, following the region recipe.
+2. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
 ## Known Bugs
 - (none known)
@@ -564,6 +568,11 @@ Iteration counter: **74** (next balance pass at iteration 75)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 75** (camp sweep 31–40, 12 seeds): 31 Windgap 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 ·
+34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 · 36 Overgrown 100/92/33 · 37 Sunken 100/83/17 · 38 Serpent
+92/92/33 · 39 Idol Courtyard 92/58/33 · 40 Heart of the Ruins 92/50/0. Endless (3 seeds, waves held, expert/casual/
+novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 12/12/18.
+
 **Iteration 70** (camp sweep, 12 seeds, expert/casual/novice): unchanged from iteration 65 for levels 1–30; 31 Windgap
 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 · 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 ·
 36 Overgrown Causeway 100/100/33 · 37 Sunken Stairs 100/92/17. No retunes needed.

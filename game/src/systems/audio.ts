@@ -131,6 +131,49 @@ class Sfx {
   click(): void {
     this.tone(660, 0.04, 'square', 0.05);
   }
+  /** Short cues for enemy traits, each throttled so a crowd doesn't turn into noise. */
+  trait(kind: string): void {
+    if (!this.throttle('trait' + kind, kind === 'thorns' ? 160 : 120)) return;
+    switch (kind) {
+      case 'gust': // airy whoosh
+      case 'swoop':
+        this.noise(0.28, 0.1, kind === 'gust' ? 1400 : 900);
+        this.tone(320, 0.25, 'sine', 0.03, kind === 'gust' ? 180 : 120);
+        break;
+      case 'revive': // rising golden chime
+        [660, 880, 1320].forEach((f, i) => this.tone(f, 0.16, 'sine', 0.05, undefined, i * 0.07));
+        break;
+      case 'shift': // two-tone flip
+        this.tone(560, 0.05, 'triangle', 0.05);
+        this.tone(840, 0.06, 'triangle', 0.05, undefined, 0.05);
+        break;
+      case 'blink': // quick zip up
+        this.tone(700, 0.08, 'sine', 0.05, 1500);
+        break;
+      case 'thorns': // tiny prick
+        this.noise(0.03, 0.06, 4000);
+        break;
+      case 'glare': // bright flash
+        this.tone(1800, 0.12, 'sine', 0.05, 2400);
+        this.noise(0.08, 0.06, 6000);
+        break;
+      case 'coral': // shimmering shell
+        this.tone(900, 0.2, 'sine', 0.04, 1300);
+        break;
+      case 'spores': // soft puff
+        this.noise(0.18, 0.08, 700);
+        break;
+      case 'enrage': // low growl
+        this.tone(110, 0.35, 'sawtooth', 0.08, 70);
+        break;
+      case 'burrow': // dirt rumble
+        this.noise(0.22, 0.12, 300);
+        break;
+      case 'split': // wet pop
+        this.tone(260, 0.08, 'sine', 0.07, 520);
+        break;
+    }
+  }
   waveHorn(): void {
     this.tone(196, 0.5, 'sawtooth', 0.08, 220);
     this.tone(294, 0.5, 'sawtooth', 0.06, 330, 0.08);

@@ -157,7 +157,7 @@ export class RaidSim {
     const reach = buildingRadius(target) + t.def.range;
     const d = Math.hypot(c.x - t.pos.x, c.y - t.pos.y);
     if (!wall && d > reach) {
-      const step = Math.min(t.def.speed * dt, d - reach + 1);
+      const step = Math.min(t.def.speed * this.mireFactor(t) * dt, d - reach + 1);
       const next = { x: t.pos.x + ((c.x - t.pos.x) / d) * step, y: t.pos.y + ((c.y - t.pos.y) / d) * step };
       if (!t.def.flying && t.def.range < 60) {
         wall = this.walls.find((w) => {
@@ -190,6 +190,19 @@ export class RaidSim {
     } else {
       this.hurtBuilding(target, t.def.damage, t);
     }
+  }
+
+  /** Sludge Pits: ground troops wading near one slow down (the strongest pit in range applies; flyers ignore it). */
+  mireFactor(t: Troop): number {
+    if (t.def.flying) return 1;
+    let f = 1;
+    for (const b of this.standing) {
+      const m = CAMP_BUILDINGS[b.type].mire;
+      if (!m) continue;
+      const c = buildingCenter(b);
+      if (Math.hypot(c.x - t.pos.x, c.y - t.pos.y) <= m.radius) f = Math.min(f, m.factor);
+    }
+    return f;
   }
 
   /** Toad Mender: every few seconds, tops up hurt troops around it (itself included). */

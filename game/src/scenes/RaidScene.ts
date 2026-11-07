@@ -17,6 +17,7 @@ export class RaidScene extends Phaser.Scene {
   private sim!: RaidSim;
   private selected: string | null = null;
   private buildingViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private mireZones = new Map<number, Phaser.GameObjects.Arc>();
   private troopViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private hudText!: Phaser.GameObjects.Text;
   private starIcons: Phaser.GameObjects.Image[] = [];
@@ -38,6 +39,7 @@ export class RaidScene extends Phaser.Scene {
     this.done = false;
     this.selected = TROOP_ORDER.find((id) => (save.army[id] ?? 0) > 0) ?? null;
     this.buildingViews.clear();
+    this.mireZones.clear();
     this.troopViews.clear();
     this.deployButtons = [];
     this.starIcons = [];
@@ -48,6 +50,12 @@ export class RaidScene extends Phaser.Scene {
       const img = this.add.image(CAMP_OX + b.col * CAMP_TILE, CAMP_OY + b.row * CAMP_TILE, `camp_${b.type}`).setOrigin(0, 0);
       img.setDepth(CAMP_OY + (b.row + def.size) * CAMP_TILE);
       this.buildingViews.set(b.uid, { img, bar: this.add.graphics().setDepth(5000) });
+      if (def.mire) {
+        // the muddy ground a Sludge Pit soaks: ground troops wade slowly through it
+        const c = buildingCenter(b);
+        const zone = this.add.circle(c.x, c.y, def.mire.radius, 0x4a5a1e, 0.32).setStrokeStyle(3, 0x8a9a3a, 0.7).setDepth(1);
+        this.mireZones.set(b.uid, zone);
+      }
     }
     this.particles = this.add.particles(0, 0, 'dot', { speed: { min: 50, max: 180 }, scale: { start: 0.6, end: 0 }, lifespan: 500, emitting: false });
     this.particles.setDepth(6000);
@@ -198,6 +206,8 @@ export class RaidScene extends Phaser.Scene {
           this.tweens.add({ targets: v.img, alpha: 0.25, scaleY: 0.5, y: v.img.y + 20, duration: 300 });
           v.bar.clear();
         }
+        const zone = this.mireZones.get(ev.building.uid);
+        if (zone) this.tweens.add({ targets: zone, alpha: 0, duration: 400 });
         this.particles.setParticleTint(0x8a6440);
         this.particles.explode(24, c.x, c.y);
         this.cameras.main.shake(150, 0.005);

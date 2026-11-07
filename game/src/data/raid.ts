@@ -120,6 +120,7 @@ export interface CampBuildingDef {
   hq?: boolean;
   wall?: boolean; // blocks ground troops; doesn't count toward destruction
   mend?: { amount: number; interval: number; range: number }; // heals damaged camp buildings in range every `interval` s
+  mire?: { radius: number; factor: number }; // ground troops within radius move at this fraction of their speed
   color: number;
 }
 
@@ -129,6 +130,7 @@ export const CAMP_BUILDINGS: Record<string, CampBuildingDef> = {
   mortar: { id: 'mortar', name: 'Bog Mortar', hp: 620, size: 2, defense: { damage: 34, rate: 0.45, range: 175, splash: 45, hitsAir: false }, color: 0x5a6b45 },
   pile: { id: 'pile', name: 'Loot Pile', hp: 380, size: 2, loot: { coins: 220, glowsap: 220 }, color: 0xb59a4e },
   shaman: { id: 'shaman', name: 'Mire Shaman', hp: 420, size: 2, mend: { amount: 30, interval: 3, range: 130 }, color: 0x7a4a8a },
+  sludge: { id: 'sludge', name: 'Sludge Pit', hp: 360, size: 2, mire: { radius: 120, factor: 0.55 }, color: 0x5a4a2a },
   hut: { id: 'hut', name: 'Mud Hut', hp: 280, size: 2, color: 0x7a5a3a },
   wall: { id: 'wall', name: 'Stake Wall', hp: 220, size: 1, wall: true, color: 0x5a4632 },
 };
@@ -137,6 +139,6 @@ export const RAID_TIME = 90; // seconds
 
 export const CAMP_TIERS = [
   { name: 'Mudling Outpost', counts: { spit: 3, mortar: 1, pile: 2, hut: 3 }, walls: false },
-  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, shaman: 1, pile: 3, hut: 3 }, walls: true },
-  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, pile: 4, hut: 5 }, walls: true },
+  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, shaman: 1, sludge: 1, pile: 3, hut: 3 }, walls: true },
+  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, sludge: 2, pile: 4, hut: 4 }, walls: true },
 ];

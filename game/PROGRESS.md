@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **140** (next balance pass at iteration 145)
+Iteration counter: **141** (next balance pass at iteration 145)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -981,6 +981,17 @@ Iteration counter: **140** (next balance pass at iteration 145)
   - Polish: a Barkdrum now visibly thumps (a short scale pulse) when it beats its drum, so players can see which
     beetle is speeding up the pack.
   - Screenshot `screenshots/140.png`. 193 tests.
+- **Iteration 141** (raid variety): new Murkhorde camp building, the **Sludge Pit** (360 hp, 2×2). Ground troops
+  within 120px of it move at 55% speed; Owl Strikers fly over it.
+  - It gives raiders a reason to send Owls or break the pit early, since a slowed brawler line soaks far more Spit
+    Tower fire.
+  - Placement: Warrens get 1, Strongholds 2 (a Stronghold hut was traded for the second pit). Pits sit near the
+    defenses.
+  - Rules in `RaidSim.mireFactor`, data in `CAMP_BUILDINGS.sludge.mire`.
+  - The raid screen shades the pit's muddy reach in olive, and the shading fades when the pit is destroyed. The art
+    is a bubbling muck pit ringed with stakes, with a ladle.
+  - Tests: the slow, flyers and destroyed pits are unaffected, and per-tier counts.
+  - Checks: `scripts/sludge-check.mjs`; screenshot `screenshots/141.png`. 195 tests.
 
 ## In Progress
 - (none)
@@ -995,6 +1006,11 @@ Iteration counter: **140** (next balance pass at iteration 145)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 141** (raids, `raid-balance.ts`, smart deploy): Lodge 1 1.8★/67% · 0.2★/25% · 0.0★/16%; Lodge 2 3.0★/100% ·
+1.8★/70% · 0.4★/34%; Lodge 3 3.0★/100% · 3.0★/100% · 1.1★/48%; Lodge 3 + Mender 3.0★ · 2.8★ · 1.6★/52%. Compared with
+iteration 113, the Sludge Pits shave Lodge 2 vs Warren (1.9 → 1.8★) and Lodge 3 vs Stronghold (1.2 → 1.1★). Each lodge
+level keeps a fair camp, and the Stronghold remains the stretch goal.
+
 **Iteration 140**:
 - Amberwood per-level bands (from iterations 133–138): 76 100/100/33 · 77 100/100/17 · 78 100/75/0 · 79 92/75/0 ·
   80 75/42/0 (boss).

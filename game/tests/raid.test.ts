@@ -1,5 +1,5 @@
 import { describe, expect, it } from 'vitest';
-import { CAMP_BUILDINGS } from '../src/data/raid';
+import { CAMP_BUILDINGS, TROOPS } from '../src/data/raid';
 import { buildingCenter, campLoot, generateCamp } from '../src/systems/camp';
 import { RaidSim } from '../src/systems/RaidSim';
 
@@ -198,5 +198,25 @@ describe('Toad Mender', () => {
     expect(near.hp).toBe(50 + h.amount);
     expect(far.hp).toBe(50);
     expect(sim.drainEvents().some((e) => e.type === 'troopHeal')).toBe(true);
+  });
+});
+
+describe('Sludge Pit', () => {
+  it('slows ground troops wading near it, but not flyers or troops far away', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'sludge', col: 10, row: 6, hp: 360, maxHp: 360 }] };
+    const sim = new RaidSim(camp, {});
+    const near = { x: buildingCenter(camp.buildings[0]).x + 40, y: buildingCenter(camp.buildings[0]).y };
+    const mk = (id: string, pos: { x: number; y: number }) => ({ uid: 1, def: TROOPS[id], pos, hp: 1, maxHp: 1, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 });
+    expect(sim.mireFactor(mk('brawler', near))).toBeCloseTo(CAMP_BUILDINGS.sludge.mire!.factor);
+    expect(sim.mireFactor(mk('owl', near))).toBe(1);
+    expect(sim.mireFactor(mk('brawler', { x: 5, y: 5 }))).toBe(1);
+    camp.buildings[0].hp = 0;
+    expect(sim.mireFactor(mk('brawler', near))).toBe(1);
+  });
+  it('Warrens and Strongholds dig sludge pits; outposts do not', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((b) => b.type === 'sludge').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(2);
   });
 });

@@ -1923,6 +1923,29 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + 14, cy + 22, 12, 5);
         break;
       }
+      case 'sludge': {
+        // a bubbling pit of brown-green muck ringed with stakes, a ladle sticking out
+        g.fillStyle(0x3a2e1e, 1);
+        g.fillEllipse(cx, cy + 6, 64, 42);
+        g.strokeEllipse(cx, cy + 6, 64, 42);
+        g.fillStyle(0x6a6a2a, 1);
+        g.fillEllipse(cx, cy + 6, 52, 32);
+        g.fillStyle(0x8a8a3a, 1);
+        for (const [bx, by, br] of [[-12, 2, 5], [8, 10, 4], [14, -2, 3], [-4, 14, 3]]) g.fillCircle(cx + bx, cy + by, br);
+        g.lineStyle(1.5, 0xc8c87a, 0.8);
+        g.strokeCircle(cx - 12, cy + 2, 5);
+        g.lineStyle(3, 0x5a4632, 1);
+        for (const a of [0.3, 1.4, 2.6, 3.7, 4.9, 5.8]) {
+          const sx = cx + Math.cos(a) * 34;
+          const sy = cy + 6 + Math.sin(a) * 23;
+          g.lineBetween(sx, sy, sx, sy - 12);
+        }
+        g.lineStyle(3, 0x9a7a52, 1);
+        g.lineBetween(cx + 4, cy + 4, cx + 22, cy - 22);
+        g.fillStyle(0x9a7a52, 1);
+        g.fillCircle(cx + 23, cy - 23, 4);
+        break;
+      }
       default: {
         g.fillStyle(def.color, 1);
         g.fillEllipse(cx, cy + 4, 58, 44);

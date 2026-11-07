@@ -21,6 +21,11 @@ export interface Enemy {
   alive: boolean;
   blockedBy: number; // soldier uid holding this enemy, 0 if free
   attackCd: number;
+  shield: number;
+  maxShield: number;
+  healCd: number;
+  phase: number; // index of next boss phase to trigger
+  speedMult: number;
 }
 
 export interface Soldier {
@@ -80,6 +85,10 @@ export type SimEvent =
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
   | { type: 'melee'; pos: Vec2 }
+  | { type: 'heal'; source: Enemy; targets: Enemy[]; radius: number }
+  | { type: 'shieldBreak'; enemy: Enemy }
+  | { type: 'phase'; enemy: Enemy; message: string }
+  | { type: 'split'; parent: Enemy; children: Enemy[] }
   | { type: 'soldierDown'; soldier: Soldier }
   | { type: 'victory' }
   | { type: 'defeat' };
@@ -344,6 +353,11 @@ export class BattleSim {
       alive: true,
       blockedBy: 0,
       attackCd: 0,
+      shield: def.shield ?? 0,
+      maxShield: def.shield ?? 0,
+      healCd: def.heal ? def.heal.interval : 0,
+      phase: 0,
+      speedMult: 1,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -357,6 +371,7 @@ export class BattleSim {
         e.slowTime -= dt;
         if (e.slowTime <= 0) e.slowFactor = 1;
       }
+      if (e.def.heal) this.tickHealer(e, dt);
       if (e.blockedBy) {
         const s = this.soldiers.find((so) => so.uid === e.blockedBy);
         if (!s || !s.alive) {
@@ -371,7 +386,7 @@ export class BattleSim {
           continue;
         }
       }
-      e.dist += e.def.speed * e.slowFactor * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -380,6 +395,21 @@ export class BattleSim {
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
       }
     }
+  }
+
+  private tickHealer(e: Enemy, dt: number): void {
+    const heal = e.def.heal!;
+    e.healCd -= dt;
+    if (e.healCd > 0) return;
+    e.healCd = heal.interval;
+    const targets: Enemy[] = [];
+    for (const o of this.enemies) {
+      if (!o.alive || o.hp >= o.maxHp) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > heal.radius) continue;
+      o.hp = Math.min(o.maxHp, o.hp + heal.amount);
+      targets.push(o);
+    }
+    this.events.push({ type: 'heal', source: e, targets, radius: heal.radius });
   }
 
   private updateSoldiers(dt: number): void {
@@ -519,7 +549,7 @@ export class BattleSim {
       if (stats.lob) {
         // Lead the target: predict where it will be when the rock lands.
         const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-        const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor;
+        const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult;
         aim = this.paths[target.path].pointAt(target.dist + moving * flight);
       }
       const p: Projectile = {
@@ -569,7 +599,7 @@ export class BattleSim {
   private impact(p: Projectile, target: Enemy | null): void {
     if (p.splash > 0) {
       this.events.push({ type: 'splash', pos: { ...p.lastTargetPos }, radius: p.splash, color: p.color });
-      for (const e of this.enemies) {
+      for (const e of [...this.enemies]) {
         if (!e.alive) continue;
         if (e.def.flying && !p.hitsAir) continue;
         if (Math.hypot(e.pos.x - p.lastTargetPos.x, e.pos.y - p.lastTargetPos.y) <= p.splash + e.def.radius) {
@@ -591,12 +621,49 @@ export class BattleSim {
 
   private applyDamage(e: Enemy, dmg: number): void {
     if (!e.alive) return;
-    e.hp -= dmg;
+    let left = dmg;
+    if (e.shield > 0) {
+      const absorbed = Math.min(e.shield, left);
+      e.shield -= absorbed;
+      left -= absorbed;
+      if (e.shield <= 0) this.events.push({ type: 'shieldBreak', enemy: e });
+    }
+    e.hp -= left;
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {
       e.alive = false;
       this.coins += e.def.bounty;
       this.events.push({ type: 'kill', enemy: e, bounty: e.def.bounty });
+      if (e.def.splitInto) this.split(e);
+      return;
+    }
+    this.checkPhases(e);
+  }
+
+  private split(parent: Enemy): void {
+    const { enemy, count } = parent.def.splitInto!;
+    const children: Enemy[] = [];
+    for (let i = 0; i < count; i++) {
+      const c = this.spawn(enemy, parent.path, Math.max(0, parent.dist - i * 14));
+      children.push(c);
+    }
+    this.events.push({ type: 'split', parent, children });
+  }
+
+  private checkPhases(e: Enemy): void {
+    const phases = e.def.phases;
+    if (!phases) return;
+    while (e.phase < phases.length && e.hp / e.maxHp <= phases[e.phase].at) {
+      const ph = phases[e.phase++];
+      if (ph.speedMult) e.speedMult = ph.speedMult;
+      if (ph.shield) {
+        e.shield = ph.shield;
+        e.maxShield = ph.shield;
+      }
+      if (ph.summon) {
+        for (let i = 0; i < ph.summon.count; i++) this.spawn(ph.summon.enemy, e.path, Math.max(0, e.dist - 20 - i * 16));
+      }
+      this.events.push({ type: 'phase', enemy: e, message: ph.message });
     }
   }
 

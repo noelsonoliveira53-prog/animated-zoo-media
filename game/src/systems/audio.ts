@@ -91,6 +91,14 @@ class Sfx {
     this.noise(0.25, 0.25, 400);
     this.tone(90, 0.25, 'sine', 0.2, 40);
   }
+  heal(): void {
+    if (!this.throttle('heal', 200)) return;
+    this.tone(500, 0.25, 'sine', 0.06, 900);
+  }
+  shieldBreak(): void {
+    this.noise(0.15, 0.2, 2500);
+    this.tone(900, 0.12, 'square', 0.05, 300);
+  }
   hit(): void {
     if (this.throttle('hit', 50)) this.noise(0.05, 0.12, 2000);
   }

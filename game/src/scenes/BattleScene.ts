@@ -12,6 +12,7 @@ interface EnemyView {
   sprite: Phaser.GameObjects.Image;
   bar: Phaser.GameObjects.Graphics;
   bob: number;
+  shadow: Phaser.GameObjects.Ellipse | null;
 }
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
@@ -42,6 +43,8 @@ export class BattleScene extends Phaser.Scene {
   private rangeRing!: Phaser.GameObjects.Graphics;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private ended = false;
+  private bossBar!: Phaser.GameObjects.Graphics;
+  private bossLabel!: Phaser.GameObjects.Text;
 
   constructor() {
     super('Battle');
@@ -109,7 +112,7 @@ export class BattleScene extends Phaser.Scene {
     const { theme } = this.level;
     const g = this.add.graphics().setDepth(-10);
     g.fillStyle(theme.grass, 1);
-    g.fillRect(0, 0, GAME_W, GAME_H);
+    g.fillRect(-60, -60, GAME_W + 120, GAME_H + 120); // oversized so screen shake never shows edges
     // deterministic grass patches + tufts
     const rnd = new Phaser.Math.RandomDataGenerator([this.level.id]);
     for (let i = 0; i < 40; i++) {
@@ -226,7 +229,33 @@ export class BattleScene extends Phaser.Scene {
       color: C.sky,
       onClick: () => this.togglePause(),
     }).setDepth(3001);
+    this.bossBar = this.add.graphics().setDepth(3001);
+    this.bossLabel = this.add.text(GAME_W / 2, 92, '', textStyle(18, TEXT.heart)).setOrigin(0.5).setDepth(3002).setVisible(false);
     this.refreshHud();
+  }
+
+  private drawBossBar(): void {
+    this.bossBar.clear();
+    const boss = this.sim.enemies.find((e) => e.alive && e.def.boss);
+    this.bossLabel.setVisible(!!boss);
+    if (!boss) return;
+    const w = 420;
+    const x = GAME_W / 2 - w / 2;
+    const y = 104;
+    this.bossBar.fillStyle(C.ink, 0.85);
+    this.bossBar.fillRoundedRect(x - 6, y - 6, w + 12, 26, 10);
+    this.bossBar.fillStyle(0x5a1f24, 1);
+    this.bossBar.fillRect(x, y, w, 14);
+    this.bossBar.fillStyle(C.danger, 1);
+    this.bossBar.fillRect(x, y, w * Math.max(0, boss.hp / boss.maxHp), 14);
+    if (boss.shield > 0) {
+      this.bossBar.fillStyle(0x9fd8ff, 0.9);
+      this.bossBar.fillRect(x, y + 10, w * (boss.shield / Math.max(1, boss.maxShield)), 4);
+    }
+    // phase ticks
+    this.bossBar.fillStyle(C.cream, 0.9);
+    for (const ph of boss.def.phases ?? []) this.bossBar.fillRect(x + w * ph.at - 1, y - 2, 3, 18);
+    this.bossLabel.setText(boss.def.name);
   }
 
   private refreshHud(): void {
@@ -264,13 +293,14 @@ export class BattleScene extends Phaser.Scene {
 
   private showBanner(title: string, sub: string, sticky = false): void {
     this.children.getByName('banner')?.destroy();
-    const c = this.add.container(GAME_W / 2, GAME_H / 2 - 40).setDepth(4000).setName('banner');
+    // Sits just under the HUD so it never hides the battlefield centre.
+    const c = this.add.container(GAME_W / 2, sticky ? GAME_H / 2 - 40 : 172).setDepth(4000).setName('banner');
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.8);
-    bg.fillRoundedRect(-330, -60, 660, 120, 20);
+    bg.fillStyle(C.ink, 0.72);
+    bg.fillRoundedRect(-300, -42, 600, 84, 18);
     c.add(bg);
-    c.add(this.add.text(0, -18, title, textStyle(44, TEXT.gold)).setOrigin(0.5));
-    c.add(this.add.text(0, 30, sub, textStyle(20, TEXT.cream, false)).setOrigin(0.5));
+    c.add(this.add.text(0, -12, title, textStyle(32, TEXT.gold)).setOrigin(0.5));
+    c.add(this.add.text(0, 22, sub, textStyle(17, TEXT.cream, false)).setOrigin(0.5));
     c.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: c, scale: 1, alpha: 1, duration: 250, ease: 'Back.easeOut' });
     if (!sticky) {
@@ -437,6 +467,7 @@ export class BattleScene extends Phaser.Scene {
     if (!this.paused && !this.ended) this.sim.update(dt * this.speed);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
+    this.drawBossBar();
     this.refreshHud();
   }
 
@@ -444,6 +475,11 @@ export class BattleScene extends Phaser.Scene {
     switch (ev.type) {
       case 'spawn':
         this.addEnemyView(ev.enemy);
+        if (ev.enemy.def.boss) {
+          this.showBanner(`${ev.enemy.def.name} approaches!`, 'Focus everything on the boss');
+          this.cameras.main.shake(500, 0.01);
+          sfx.waveHorn();
+        }
         break;
       case 'shoot': {
         const key = `proj_${ev.tower.def.id}`;
@@ -501,6 +537,31 @@ export class BattleScene extends Phaser.Scene {
       case 'melee':
         sfx.melee();
         break;
+      case 'heal': {
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0x6fe08a, 0.12).setStrokeStyle(3, 0x6fe08a, 0.8).setDepth(2400).setScale(0.2);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        for (const t of ev.targets) {
+          this.floatText(t.pos.x, t.pos.y - 26, '+', '#7bff9a', 20);
+        }
+        sfx.heal();
+        break;
+      }
+      case 'shieldBreak': {
+        this.particles.setParticleTint(0xd8c27a);
+        this.particles.explode(12, ev.enemy.pos.x, ev.enemy.pos.y);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 40, 'Shield broken!', '#ffe9a8', 16);
+        sfx.shieldBreak();
+        break;
+      }
+      case 'phase':
+        this.showBanner(ev.enemy.def.name, ev.message);
+        this.cameras.main.shake(300, 0.008);
+        sfx.waveHorn();
+        break;
+      case 'split':
+        this.particles.setParticleTint(ev.parent.def.color);
+        this.particles.explode(20, ev.parent.pos.x, ev.parent.pos.y);
+        break;
       case 'soldierDown':
         this.particles.setParticleTint(0x9aa8b5);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
@@ -543,12 +604,14 @@ export class BattleScene extends Phaser.Scene {
   private addEnemyView(e: Enemy): void {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2 });
+    const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow });
   }
 
   private killView(uid: number, v: EnemyView): void {
     this.enemyViews.delete(uid);
     v.bar.destroy();
+    v.shadow?.destroy();
     this.tweens.add({ targets: v.sprite, scale: 1.4, alpha: 0, duration: 180, onComplete: () => v.sprite.destroy() });
   }
 
@@ -556,22 +619,33 @@ export class BattleScene extends Phaser.Scene {
     for (const e of this.sim.enemies) {
       const v = this.enemyViews.get(e.uid);
       if (!v) continue;
-      v.bob += dt * (6 + e.def.speed / 20);
+      v.bob += dt * (6 + (e.def.speed * e.speedMult) / 20) * (e.blockedBy ? 0.5 : 1);
       const prevX = v.sprite.x;
-      v.sprite.setPosition(e.pos.x, e.pos.y - Math.abs(Math.sin(v.bob)) * 4);
-      v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
+      const lift = e.def.flying ? 34 + Math.sin(v.bob * 0.7) * 5 : Math.abs(Math.sin(v.bob)) * 4;
+      v.sprite.setPosition(e.pos.x, e.pos.y - lift);
+      if (e.def.flying) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
+      else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
+      if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
+      v.shadow?.setPosition(e.pos.x, e.pos.y + 4).setDepth(e.pos.y - 1);
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
-      v.sprite.setDepth(e.pos.y);
+      v.sprite.setDepth(e.def.flying ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
-      if (e.hp < e.maxHp) {
+      if (e.def.boss) continue; // boss uses the big HUD bar
+      if (e.hp < e.maxHp || e.shield > 0) {
         const w = Math.max(24, e.def.radius * 2.4);
         const x = e.pos.x - w / 2;
-        const y = e.pos.y - e.def.radius - 14;
+        const y = e.pos.y - e.def.radius - 14 - (e.def.flying ? 34 : 0);
+        if (e.shield > 0) {
+          v.bar.fillStyle(C.ink, 0.85);
+          v.bar.fillRect(x - 1, y - 7, w + 2, 6);
+          v.bar.fillStyle(0xe8d27a, 1);
+          v.bar.fillRect(x, y - 6, w * (e.shield / Math.max(1, e.maxShield)), 4);
+        }
         v.bar.fillStyle(C.ink, 0.85);
         v.bar.fillRect(x - 1, y - 1, w + 2, 7);
         v.bar.fillStyle(e.hp / e.maxHp > 0.4 ? 0x7be35a : 0xff5d4a, 1);
         v.bar.fillRect(x, y, w * Math.max(0, e.hp / e.maxHp), 5);
-        v.bar.setDepth(e.pos.y + 0.5);
+        v.bar.setDepth(e.def.flying ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
     }
     this.syncSoldiers();

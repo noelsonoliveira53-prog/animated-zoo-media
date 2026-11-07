@@ -10,7 +10,7 @@ export class BootScene extends Phaser.Scene {
   }
 
   create(): void {
-    for (const def of Object.values(ENEMIES)) this.makeEnemy(def.id, def.color, def.radius);
+    for (const def of Object.values(ENEMIES)) this.makeEnemy(def.id, def.color, def.radius, !!def.flying);
     for (const def of Object.values(TOWERS)) {
       for (let tier = 0; tier < def.tiers.length; tier++) this.makeTower(def.id, def.color, tier);
     }
@@ -31,18 +31,191 @@ export class BootScene extends Phaser.Scene {
     g.fillCircle(cx + gap + r * 0.3, cy + r * 0.15, r * 0.55);
   }
 
-  private makeEnemy(id: string, color: number, radius: number): void {
+  private makeEnemy(id: string, color: number, radius: number, flying: boolean): void {
     const g = this.g();
-    const s = radius * 2 + 12;
+    const s = Math.ceil(radius * 3 + 12);
     const cx = s / 2;
     const cy = s / 2 + 2;
     const shade = Phaser.Display.Color.IntegerToColor(color).darken(25).color;
     const light = Phaser.Display.Color.IntegerToColor(color).lighten(20).color;
-    // soft ground shadow
-    g.fillStyle(0x000000, 0.25);
-    g.fillEllipse(cx, cy + radius * 0.85, radius * 1.8, radius * 0.6);
+    // soft ground shadow (flyers get a separate shadow drawn on the ground by the scene)
+    if (!flying) {
+      g.fillStyle(0x000000, 0.25);
+      g.fillEllipse(cx, cy + radius * 0.85, radius * 1.8, radius * 0.6);
+    }
     g.lineStyle(3, C.ink, 1);
+    const r = radius;
     switch (id) {
+      case 'gloomwing':
+      case 'gnat': {
+        const wing = id === 'gnat' ? 0xe8f2c0 : 0x8a78c0;
+        g.fillStyle(wing, id === 'gnat' ? 0.7 : 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillEllipse(cx - r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
+        g.fillEllipse(cx + r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
+        g.strokeEllipse(cx - r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
+        g.strokeEllipse(cx + r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
+        g.lineStyle(id === 'gnat' ? 2 : 3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.2, r * 1.6);
+        g.strokeEllipse(cx, cy, r * 1.2, r * 1.6);
+        if (id === 'gloomwing') {
+          g.fillStyle(shade, 1);
+          g.fillTriangle(cx - r * 0.5, cy - r * 0.6, cx - r * 0.2, cy - r * 0.6, cx - r * 0.45, cy - r * 1.1);
+          g.fillTriangle(cx + r * 0.5, cy - r * 0.6, cx + r * 0.2, cy - r * 0.6, cx + r * 0.45, cy - r * 1.1);
+        }
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.2, r * 0.18);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.2, r * 0.18);
+        break;
+      }
+      case 'bogmender': {
+        // staff with water orb
+        g.lineStyle(3, 0x5a3b22, 1);
+        g.lineBetween(cx + r * 0.9, cy + r * 0.8, cx + r * 0.9, cy - r * 1.2);
+        g.fillStyle(0x6fd8ff, 1);
+        g.fillCircle(cx + r * 0.9, cy - r * 1.3, r * 0.35);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeCircle(cx + r * 0.9, cy - r * 1.3, r * 0.35);
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        g.strokeEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        g.fillStyle(light, 1);
+        g.fillEllipse(cx, cy + r * 0.4, r * 1.1, r * 0.7);
+        // bulging eyes on top
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.45, cy - r * 0.6, r * 0.38);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.6, r * 0.38);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeCircle(cx - r * 0.45, cy - r * 0.6, r * 0.38);
+        g.strokeCircle(cx + r * 0.45, cy - r * 0.6, r * 0.38);
+        this.eyes(g, cx, cy - r * 0.6, r * 0.24, r * 0.45);
+        // leaf hat
+        g.fillStyle(0x2f7a3e, 1);
+        g.fillTriangle(cx - r * 0.3, cy - r * 0.85, cx + r * 0.3, cy - r * 0.85, cx, cy - r * 1.45);
+        break;
+      }
+      case 'reedguard': {
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy, r);
+        g.strokeCircle(cx, cy, r);
+        this.eyes(g, cx - r * 0.15, cy - r * 0.3, r * 0.2, r * 0.28);
+        // woven shield
+        g.fillStyle(0xd8c27a, 1);
+        g.fillRoundedRect(cx + r * 0.1, cy - r * 0.4, r * 1.1, r * 1.4, 5);
+        g.lineStyle(2.5, C.ink, 1);
+        g.strokeRoundedRect(cx + r * 0.1, cy - r * 0.4, r * 1.1, r * 1.4, 5);
+        g.lineStyle(1.5, 0x8a7440, 1);
+        for (let i = 1; i < 4; i++) g.lineBetween(cx + r * 0.1, cy - r * 0.4 + i * r * 0.35, cx + r * 1.2, cy - r * 0.4 + i * r * 0.35);
+        for (let i = 1; i < 3; i++) g.lineBetween(cx + r * 0.1 + i * r * 0.37, cy - r * 0.4, cx + r * 0.1 + i * r * 0.37, cy + r);
+        break;
+      }
+      case 'splotch': {
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.3, r * 2.3, r * 1.5);
+        g.fillCircle(cx - r * 0.4, cy - r * 0.2, r * 0.7);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.1, r * 0.65);
+        g.fillCircle(cx, cy - r * 0.5, r * 0.6);
+        g.strokeEllipse(cx, cy + r * 0.3, r * 2.3, r * 1.5);
+        g.fillStyle(shade, 1);
+        g.fillCircle(cx - r * 0.6, cy + r * 0.5, r * 0.2);
+        g.fillCircle(cx + r * 0.7, cy + r * 0.3, r * 0.15);
+        g.fillStyle(light, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.6, r * 0.18);
+        this.eyes(g, cx, cy - r * 0.05, r * 0.22, r * 0.35);
+        break;
+      }
+      case 'thornhog': {
+        // back spikes
+        g.fillStyle(0xe0d0a0, 1);
+        g.lineStyle(2, C.ink, 1);
+        for (let i = -2; i <= 2; i++) {
+          const bx = cx + i * r * 0.32;
+          g.fillTriangle(bx - r * 0.18, cy - r * 0.4, bx + r * 0.18, cy - r * 0.4, bx, cy - r * 1.15);
+          g.strokeTriangle(bx - r * 0.18, cy - r * 0.4, bx + r * 0.18, cy - r * 0.4, bx, cy - r * 1.15);
+        }
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 2.1, r * 1.5);
+        g.strokeEllipse(cx, cy, r * 2.1, r * 1.5);
+        g.fillStyle(shade, 1);
+        g.fillEllipse(cx + r * 0.85, cy + r * 0.15, r * 0.6, r * 0.5);
+        g.fillStyle(0xfff4d6, 1);
+        g.fillTriangle(cx + r * 0.75, cy + r * 0.35, cx + r * 0.9, cy + r * 0.35, cx + r * 0.7, cy - r * 0.05);
+        this.eyes(g, cx + r * 0.35, cy - r * 0.2, r * 0.15, r * 0.2);
+        break;
+      }
+      case 'wispling': {
+        g.fillStyle(color, 0.25);
+        g.fillCircle(cx, cy, r * 1.45);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy, r);
+        g.fillTriangle(cx - r * 0.9, cy + r * 0.3, cx + r * 0.9, cy + r * 0.3, cx, cy + r * 1.5);
+        g.fillStyle(0xffffff, 0.8);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.35, r * 0.25);
+        g.fillStyle(0x1d4a5a, 1);
+        g.fillCircle(cx - r * 0.3, cy, r * 0.16);
+        g.fillCircle(cx + r * 0.3, cy, r * 0.16);
+        break;
+      }
+      case 'bogbrute': {
+        g.fillStyle(shade, 1);
+        g.fillCircle(cx - r * 0.95, cy + r * 0.25, r * 0.42);
+        g.fillCircle(cx + r * 0.95, cy + r * 0.25, r * 0.42);
+        g.strokeCircle(cx - r * 0.95, cy + r * 0.25, r * 0.42);
+        g.strokeCircle(cx + r * 0.95, cy + r * 0.25, r * 0.42);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.7, r * 1.9, r * 0.6);
+        g.strokeRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.7, r * 1.9, r * 0.6);
+        g.fillStyle(0x7a8a5a, 1);
+        g.fillCircle(cx - r * 0.4, cy + r * 0.5, r * 0.15);
+        g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.12);
+        this.eyes(g, cx, cy - r * 0.4, r * 0.17, r * 0.3);
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx - r * 0.35, cy - r * 0.05, cx + r * 0.35, cy - r * 0.05);
+        g.fillStyle(0xfff4d6, 1);
+        g.fillTriangle(cx - r * 0.3, cy - r * 0.05, cx - r * 0.15, cy - r * 0.05, cx - r * 0.22, cy - r * 0.3);
+        g.fillTriangle(cx + r * 0.3, cy - r * 0.05, cx + r * 0.15, cy - r * 0.05, cx + r * 0.22, cy - r * 0.3);
+        break;
+      }
+      case 'murkmaw': {
+        g.fillStyle(shade, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 2.1, r * 1.6);
+        g.strokeEllipse(cx, cy, r * 2.1, r * 1.6);
+        g.fillStyle(0xc9d08a, 1);
+        g.fillEllipse(cx, cy + r * 0.35, r * 1.4, r * 0.7);
+        // warts
+        g.fillStyle(0x5f8a5a, 1);
+        for (const [wx, wy] of [[-0.6, -0.2], [0.7, -0.1], [-0.3, 0.1], [0.4, 0.2], [0.9, 0.3]]) g.fillCircle(cx + wx * r, cy + wy * r, r * 0.09);
+        // mouth
+        g.lineStyle(3, C.ink, 1);
+        g.beginPath();
+        g.arc(cx, cy + r * 0.05, r * 0.6, 0.15, Math.PI - 0.15);
+        g.strokePath();
+        // eyes + reed crown
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.5, cy - r * 0.6, r * 0.3);
+        g.fillCircle(cx + r * 0.5, cy - r * 0.6, r * 0.3);
+        g.strokeCircle(cx - r * 0.5, cy - r * 0.6, r * 0.3);
+        g.strokeCircle(cx + r * 0.5, cy - r * 0.6, r * 0.3);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.5, cy - r * 0.6, r * 0.18);
+        g.fillCircle(cx + r * 0.5, cy - r * 0.6, r * 0.18);
+        g.fillStyle(0x111111, 1);
+        g.fillRect(cx - r * 0.53, cy - r * 0.72, r * 0.06, r * 0.24);
+        g.fillRect(cx + r * 0.47, cy - r * 0.72, r * 0.06, r * 0.24);
+        g.fillStyle(0xb59a4e, 1);
+        g.lineStyle(2, C.ink, 1);
+        for (let i = -2; i <= 2; i++) {
+          const bx = cx + i * r * 0.18;
+          g.fillTriangle(bx - r * 0.07, cy - r * 0.8, bx + r * 0.07, cy - r * 0.8, bx, cy - r * (1.2 + (i === 0 ? 0.15 : 0)));
+          g.strokeTriangle(bx - r * 0.07, cy - r * 0.8, bx + r * 0.07, cy - r * 0.8, bx, cy - r * (1.2 + (i === 0 ? 0.15 : 0)));
+        }
+        break;
+      }
       case 'skitter': {
         // beetle: oval shell with legs
         g.lineStyle(2, C.ink, 1);

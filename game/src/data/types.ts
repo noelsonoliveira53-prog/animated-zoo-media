@@ -23,6 +23,19 @@ export interface EnemyDef {
   attackRate: number; // melee hits / second
   radius: number; // render + hit size
   color: number; // primary body color
+  shield?: number; // damage pool absorbed before hp
+  heal?: { amount: number; radius: number; interval: number }; // heals nearby allies
+  splitInto?: { enemy: string; count: number }; // spawns children on death
+  phases?: BossPhase[]; // triggered once each as hp drops
+  boss?: boolean;
+}
+
+export interface BossPhase {
+  at: number; // hp fraction that triggers it (e.g. 0.66)
+  summon?: { enemy: string; count: number };
+  speedMult?: number;
+  shield?: number; // grants a fresh shield
+  message: string;
 }
 
 export interface TowerTier {

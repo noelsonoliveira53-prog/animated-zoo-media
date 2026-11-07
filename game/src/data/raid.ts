@@ -102,7 +102,7 @@ export const TROOPS: Record<string, TroopDef> = {
     space: 3,
     trainTime: 55,
     prefers: 'any',
-    heals: { amount: 18, interval: 1.5, radius: 95 },
+    heals: { amount: 28, interval: 1.5, radius: 115 },
     lodge: 3,
     color: 0x6aa84a,
   },

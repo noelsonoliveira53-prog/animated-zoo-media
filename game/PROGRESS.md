@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **112** (next balance pass at iteration 115)
+Iteration counter: **113** (next balance pass at iteration 115)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -785,6 +785,16 @@ Iteration counter: **112** (next balance pass at iteration 115)
     positions.
 
   183 tests.
+- **Iteration 113** (tooling bug + raid tuning):
+  - Fixed the long-noted `scripts/raid-balance.ts` printing nothing: vite-node drops the script path from
+    `process.argv`, so its "run directly" guard never matched. Shared helpers (`ARMIES`, `raidOnce`) moved to
+    `scripts/raid-lib.ts`. The report script now runs unconditionally, and `scripts/economy.ts` imports the lib
+    (it no longer pulls in the report).
+  - Smart deploy sends Menders just behind the brawlers, and a "Lodge 3 + Mender" army was added to the report.
+  - The Mender was underwhelming (Stronghold 1.0 stars vs 1.2 without it), so its heal went 18→28 and its radius
+    95→115. It now matches the 3 slingers it replaces (1.2 stars, 49% vs 47%): a real alternative, not a must-pick.
+
+  183 tests.
 
 ## In Progress
 - (none)
@@ -857,8 +867,7 @@ Every boss is in band (expert 75–92, casual 33–67), and every opener is at 1
 | Lodge 3 | 3.0 / 100% | 3.0 / 100% | 1.2 / 47% (was 1.5 / 51%) |
 
 The first shaman (45 heal every 2.5s, 150px, plus an extra building) dropped Lodge 2 vs Warren to 1.5 stars. It was
-toned down, and one Warren hut was traded for the shaman. Note: `scripts/raid-balance.ts` prints nothing under
-vite-node (argv check), so import `raidOnce` from a wrapper instead.
+toned down, and one Warren hut was traded for the shaman. (raid-balance printing fixed in iteration 113.)
 
 **Iteration 95** (12 seeds, expert/casual/novice): 51 Windfall Rows 100/92/42 · 52 Grubfield Lane 83/100/17 ·
 53 Cider Press Crossing 100/83/8 · 54 Rotroot Hollow 83/67/0 · 55 Heart of the Orchard (boss) 75/50/0. The expert won

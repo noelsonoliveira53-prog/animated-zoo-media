@@ -6,7 +6,7 @@ import { TROOPS, CAMP_TIERS } from '../src/data/raid';
 import { battleReward, HERO_TRAIN_COSTS } from '../src/systems/village';
 import { generateCamp, campLoot } from '../src/systems/camp';
 import { ACHIEVEMENTS } from '../src/data/achievements';
-import { raidOnce, ARMIES } from './raid-balance';
+import { raidOnce, ARMIES } from './raid-lib';
 
 const fmt = (n: number) => Math.round(n).toLocaleString('en-US');
 

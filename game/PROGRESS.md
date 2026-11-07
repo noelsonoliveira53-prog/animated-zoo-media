@@ -626,15 +626,16 @@ Iteration counter: **88** (next balance pass at iteration 90)
   No `echo` on the boss: re-forming at low health would re-trigger every phase at once. Level 50: a long west road (the
   boss) and a short north road (light groups only) merge into a 1,240 px tail around a glowing pool, 11 pads, 18 waves,
   hpMult 2.45. Achievements **Lightbringer** and **Starwalker** (30 total); Velumbra joins the endless boss rotation;
-  story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests.
+  story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests. Playable demo
+  artifact refreshed with this build.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 90 balance pass (after iter 89).
-2. Refresh the playable demo artifact (50 levels).
-3. Region 11 (levels 51–55): a new biome, enemies and boss.
+1. Region 11 opener (level 51) — iter 89.
+2. Iter 90 balance pass.
+3. Region 11 rest (levels 51–55): a new biome, enemies and boss.
 
 ## Known Bugs
 - (none known)

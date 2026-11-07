@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **69** (next balance pass at iteration 70)
+Iteration counter: **70** (next balance pass at iteration 75)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -521,13 +521,18 @@ Iteration counter: **69** (next balance pass at iteration 70)
   a tower (about 75 px tall) must clear the stats panel and the top-right buttons. It caught 8 pads in 7 levels
   (Mossgate Meadow, Gloomfen Edge, Glacier Hold, Windgap Ledge, Updraft Stair, Three Winds ×2, Sunken Stairs), all
   moved down or sideways and re-checked for road clearance. 155 tests.
+- [x] **Iter 70 — POLISH + BALANCE (37 levels).** Full deterministic sweep (12 seeds): every level is in its band and
+  no hpMult changed. Three Winds' novice at 50% is the blocker-at-a-merge quirk (raising hpMult to 1.62 only cut casual
+  67 → 42%, so it stays at 1.55). Polish: new phone check `scripts/phone-late.mjs` (740×360 touch: region 8 map, a Ruins
+  battle, Field Guide spells + boss page), all clean; boss phase lines use the phone font size. Playable demo published
+  as an artifact.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 70 balance pass (re-check Updraft Stair and Three Winds after their pad moves).
-2. Region 8 levels 38–39.
+1. Region 8 level 38.
+2. Region 8 level 39.
 3. Region 8 finale (level 40) with a Ruins boss.
 4. Village: drag-to-pan on small phone screens.
 
@@ -540,6 +545,10 @@ Iteration counter: **69** (next balance pass at iteration 70)
 - Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
 
 ## Balance Notes
+**Iteration 70** (camp sweep, 12 seeds, expert/casual/novice): unchanged from iteration 65 for levels 1–30; 31 Windgap
+100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 · 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 ·
+36 Overgrown Causeway 100/100/33 · 37 Sunken Stairs 100/92/17. No retunes needed.
+
 **Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
 100/100/100 · 3 Thornwood 100/100/100 · 4 Mirelake 100/92/75 · 5 Murkmaw 100/75/83 → **92/58/83 (2.45)** · 6 Frostfern
 100/100/100 · 7 Icicle 100/83/0 · 8 Glacier 92/92/92 · 9 Rimewood 100/100/92 · 10 Frostpeak 100/67/67 → **83/67/42

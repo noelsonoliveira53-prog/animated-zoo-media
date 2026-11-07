@@ -9,6 +9,7 @@ import { spellFacts } from '../systems/spellInfo';
 import { bossPhaseLines } from '../systems/guideInfo';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
+import { pf } from '../ui/touch';
 import { Button } from '../ui/Button';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
@@ -240,7 +241,7 @@ export class FieldGuideScene extends Phaser.Scene {
     if (e.extra) {
       const y = body.y + body.height + 12;
       c.add(this.add.text(x, y, e.extra[0], textStyle(17, '#6a3a1a')).setStroke('#e8dcb8', 0));
-      c.add(this.add.text(x, y + 26, e.extra.slice(1).join('\n'), { ...textStyle(15, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0).setName('bossPhases'));
+      c.add(this.add.text(x, y + 26, e.extra.slice(1).join('\n'), { ...textStyle(pf(15), '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0).setName('bossPhases'));
     }
   }
 }

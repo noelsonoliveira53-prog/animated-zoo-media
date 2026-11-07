@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **79** (next balance pass at iteration 80)
+Iteration counter: **80** (next balance pass at iteration 85)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -575,14 +575,18 @@ Iteration counter: **79** (next balance pass at iteration 80)
   furnace, south 640 px to the shared stretch) feed a 760 px tail. 12 pads, 16 waves, hpMult 1.39; one north-road
   Steamrunner pack thinned. Fix from the screenshot: a pad at the top right hid its tower behind the exit gate posts
   (moved below the exit road). Screenshot `79.png`. 159 tests.
+- [x] **Iter 80 — POLISH + BALANCE.** Region 9 curve checked (41 100/100/33 · 42 100/83/8 · 43 83/83/17 · 44 83/83/0):
+  no retunes. The expert-trails-casual gap on Foundry Crossroads is noise, not a bug: switching off smart branching,
+  forcing either branch or thinking slower moves it by at most one seed in 12 (`expert.ts` probe). New guard-rail test:
+  the expert must win every region finale in at least 2 of 3 seeds, so a change that makes a boss unbeatable fails CI
+  (adds ~7 s). Screenshot `80.png`. 160 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 80 balance pass.
-2. Region 9 finale (level 45) with a Brasswork boss.
-3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+1. Region 9 finale (level 45) with a Brasswork boss.
+2. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
 ## Known Bugs
 - (none known)

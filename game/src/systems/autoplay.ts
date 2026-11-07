@@ -1,4 +1,4 @@
-import type { LevelDef } from '../data/types';
+import type { LevelDef, Vec2 } from '../data/types';
 import { TOWERS } from '../data/towers';
 import { ENEMIES } from '../data/enemies';
 import { BattleSim } from './BattleSim';
@@ -22,10 +22,12 @@ export interface Strategy {
   useSpells?: boolean;
   /** Forces a specialization branch (0/1) for every tower; undefined alternates by slot. */
   specPick?: number;
+  /** Moves the hero to the busiest choke point and picks branches from the level's enemy makeup. */
+  smart?: boolean;
 }
 
 export const STRATEGIES: Strategy[] = [
-  { name: 'expert-mixed', mix: ['adaptive'], slotFraction: 0.75, reserve: 0, upgrades: true, hero: 'fen', thinkEvery: 0.5, useSpells: true },
+  { name: 'expert-mixed', mix: ['adaptive'], slotFraction: 0.75, reserve: 0, upgrades: true, hero: 'fen', thinkEvery: 0.5, useSpells: true, smart: true },
   { name: 'casual-mixed', mix: ['adaptive'], slotFraction: 0.7, reserve: 40, upgrades: true, hero: 'fen', thinkEvery: 3, useSpells: true },
   { name: 'novice', mix: ['thornbow', 'thornbow', 'glimmer'], slotFraction: 0.5, reserve: 60, upgrades: true, hero: 'bramble', thinkEvery: 5, useSpells: true },
   { name: 'only-thornbow', mix: ['thornbow'], slotFraction: 1, reserve: 0, upgrades: true, hero: null, thinkEvery: 1 },
@@ -83,6 +85,61 @@ export function adaptiveMix(level: LevelDef): string[] {
   return order;
 }
 
+/** Level makeup shares (by total enemy hp): flyers, armored, magic-resistant. */
+function makeup(level: LevelDef): { fly: number; armored: number; warded: number } {
+  let total = 0;
+  let fly = 0;
+  let armored = 0;
+  let warded = 0;
+  for (const w of level.waves)
+    for (const g of w.groups) {
+      const e = ENEMIES[g.enemy];
+      const hp = e.hp * g.count;
+      total += hp;
+      if (e.flying) fly += hp;
+      if (e.armor >= 0.4 || e.boss) armored += hp;
+      if (e.magicResist >= 0.5) warded += hp;
+    }
+  return { fly: fly / total, armored: armored / total, warded: warded / total };
+}
+
+/** Branch choice a thoughtful player would make for this level. */
+export function smartSpec(level: LevelDef, towerId: string): number {
+  const m = makeup(level);
+  switch (towerId) {
+    case 'thornbow':
+      return m.fly > 0.2 ? 1 : 0; // Volley vs flyers/swarms, else Hawkeye vs armor
+    case 'glimmer':
+      return 0; // Stormcall: best all-round crowd damage
+    case 'boulder':
+      return m.armored > 0.3 ? 0 : 1; // Quake vs tanks, Sap to hold crowds
+    default:
+      return m.armored > 0.3 ? 0 : 1; // Stonehide vs brutes, Raiders otherwise
+  }
+}
+
+/** The road point with the most road (from all paths) within reach: merges and switchbacks. */
+export function chokePoint(sim: BattleSim, reach = 150): Vec2 {
+  let best = sim.heroSpawnPoint();
+  let bestScore = -1;
+  for (const path of sim.paths) {
+    for (let d = path.length * 0.3; d < path.length - 60; d += 25) {
+      const p = path.pointAt(d);
+      let score = 0;
+      for (const q of sim.paths) for (let k = 0; k < q.length; k += 20) {
+        const r = q.pointAt(k);
+        if (Math.hypot(r.x - p.x, r.y - p.y) <= reach) score++;
+      }
+      score += (d / path.length) * 5; // prefer later (closer to the gate)
+      if (score > bestScore) {
+        bestScore = score;
+        best = p;
+      }
+    }
+  }
+  return best;
+}
+
 /** Ranks slots by how much road lies within a typical tower range (best coverage first). */
 export function rankSlots(sim: BattleSim, range = 160): number[] {
   const scores = sim.level.slots.map((s, i) => {
@@ -122,6 +179,7 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
   let rotation = Math.floor(rnd() * mix.length);
   let think = 0;
   const dt = 1 / 30;
+  if (strat.smart && sim.hero) sim.moveHero(chokePoint(sim));
 
   while (sim.isActive() && sim.time < maxSeconds) {
     think -= dt;
@@ -201,7 +259,7 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
         const slot = sim.towers.findIndex((t) => t && sim.canSpecialize(t));
         if (slot >= 0) {
           const t = sim.towers[slot]!;
-          const pick = strat.specPick ?? slot % 2;
+          const pick = strat.specPick ?? (strat.smart ? smartSpec(level, t.def.id) : slot % 2);
           if (sim.coins - strat.reserve >= t.def.specs[pick].stats.cost && sim.specialize(slot, pick)) continue;
         }
       }

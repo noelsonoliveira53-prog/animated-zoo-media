@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { LEVELS } from '../data/levels';
+import { ENEMIES } from '../data/enemies';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
@@ -146,6 +147,7 @@ export class BattleScene extends Phaser.Scene {
     this.buildHud();
     this.buildHero();
     this.buildSpells();
+    this.refreshWavePreview();
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (this.rallyMode !== null) {
@@ -544,6 +546,33 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
+  /** Small strip under the wave button showing which enemies the next wave brings. */
+  private refreshWavePreview(): void {
+    this.children.getByName('wavePreview')?.destroy();
+    const next = this.sim.waveIndex + 1;
+    if (next >= this.sim.totalWaves || this.ended) return;
+    const counts = new Map<string, number>();
+    for (const g of this.level.waves[next].groups) counts.set(g.enemy, (counts.get(g.enemy) ?? 0) + g.count);
+    const entries = [...counts.entries()].slice(0, 4);
+    const w = entries.length * 62 + 16;
+    // Lives in the empty strip of the top bar between the stats panel and the buttons.
+    const c = this.add.container(470 + 36 + w / 2, 37).setDepth(3000).setName('wavePreview');
+    const bg = this.add.graphics();
+    bg.fillStyle(C.ink, 0.7);
+    bg.fillRoundedRect(-w / 2, -18, w, 36, 12);
+    c.add(bg);
+    entries.forEach(([id, n], i) => {
+      const x = -w / 2 + 22 + i * 62;
+      const img = this.add.image(x, 0, `enemy_${id}`);
+      img.setScale(Math.min(0.8, 30 / Math.max(img.width, img.height)));
+      c.add(img);
+      const def = ENEMIES[id];
+      c.add(this.add.text(x + 14, 2, `${n}`, textStyle(14, def.boss ? TEXT.heart : TEXT.cream)).setOrigin(0, 0.5));
+      if (def.flying) c.add(this.add.text(x - 14, -12, '✈', textStyle(10, '#bfe8ff')).setOrigin(0.5));
+    });
+    c.add(this.add.text(-w / 2 - 4, 0, 'Next', textStyle(13, TEXT.dim)).setOrigin(1, 0.5));
+  }
+
   private drawBossBar(): void {
     this.bossBar.clear();
     const boss = this.sim.enemies.find((e) => e.alive && e.def.boss);
@@ -934,6 +963,7 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'waveStart':
         sfx.waveHorn();
+        this.refreshWavePreview();
         {
           const parts: string[] = [];
           if (ev.income > 0) parts.push(`Supplies +${ev.income}`);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **14** (next iteration = 15 → POLISH + BALANCE pass)
+Iteration counter: **15** (next balance pass at iteration 20)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -128,6 +128,13 @@ Iteration counter: **14** (next iteration = 15 → POLISH + BALANCE pass)
   page ("Ash Road", smoking rocks, lava lake). Levels: **11 Ashfall Gate** (switchbacks, hp×1.8) and
   **12 Cinder Tunnels** (two roads merge, hp×1.6). 15 enemy types now. 78 tests.
 
+- [x] **Iter 15 — POLISH + BALANCE.** Smarter expert autoplayer (`smart: true`): moves its hero to the busiest
+  **choke point** (`chokePoint()`: the road point with the most road in reach, biased toward the gate) and picks
+  **branches from the level's makeup** (`smartSpec()`: Volley vs flyers else Hawkeye; Stormcall; Quake vs tanks
+  else Sap; Stonehide vs brutes else Raiders). Expert now beats casual/novice on most levels. Retuned Glacier
+  Hold and Cinder Tunnels (hp×1.7). Polish: **next-wave preview** in the top bar (enemy icons + counts, ✈ marks
+  flyers, red count for bosses); moved a lava pool out from under the spell buttons. 78 tests.
+
 ## In Progress
 - (none)
 
@@ -148,6 +155,28 @@ Iteration counter: **14** (next iteration = 15 → POLISH + BALANCE pass)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 15** (`balance.ts 10`, smart expert):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1 Mossgate Meadow | 100% | 100% | 100% |
+| 2 Gloomfen Edge | 100% | 100% | 100% |
+| 3 Thornwood Hollow | 100% | 90% | 90% |
+| 4 Mirelake Crossing | 100% | 80% | 80% |
+| 5 Murkmaw's Den | 100% | 90% | 70% |
+| 6 Frostfern Pass | 100% | 100% | 30% |
+| 7 Icicle Crossing | 100% | 80% | 0% |
+| 8 Glacier Hold | 90% | 40% | 50% |
+| 9 Rimewood Hollow | 100% | 100% | 30% |
+| 10 Frostpeak Summit | 80% | 70% | 10% |
+| 11 Ashfall Gate | 100% | 90% | 10% |
+| 12 Cinder Tunnels | 70% | 60% | 60% |
+
+- With choke-point heroes and level-aware branches the expert is now clearly the strongest on 10/12 levels,
+  which suggests the earlier "novice ≈ expert" finding was mostly an AI problem, not a game problem.
+- hpMult is very sensitive on merge maps (Glacier/Cinder: 1.6 → 1.85 took the expert from 90% to 40–60%).
+- Region 1 stays a gentle on-ramp on purpose; difficulty is driven by regions 2–3.
+
 **Iteration 14 (first pass, to revisit in the iteration-15 balance pass):** 11 Ashfall Gate 100/100/13 ·
 12 Cinder Tunnels 75/75/75. At first hp×2.2/2.3 was a wall (Cinder Tunnels: 0% for everyone by wave 6).
 

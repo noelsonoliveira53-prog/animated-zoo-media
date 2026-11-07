@@ -48,6 +48,7 @@ export interface EnemyDef {
   harden?: { perHit: number; max: number }; // armor grows with every hit taken (up to max)
   dim?: { radius: number; cut: number }; // shooting towers within radius lose this fraction of their range
   echo?: { hpFrac: number }; // on its first death it re-forms once at this fraction of health
+  shock?: { interval: number; radius: number; duration: number }; // stuns nearby soldiers and the hero on a timer
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **83** (next balance pass at iteration 85)
+Iteration counter: **84** (next balance pass at iteration 85)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -600,14 +600,20 @@ Iteration counter: **83** (next balance pass at iteration 85)
   Descent** (west + winding south road, 1,120 / 1,000 px to the merge, 920 px tail, 11 pads, 15 waves, hpMult 1.75), an
   `ABYSS` theme (pale stalagmites, breathing glow pools), a starry world-map style and a slow cavernous music theme.
   Endless adds both from wave 40. Browser check `scripts/abyss-check.mjs`. 164 tests.
+- [x] **Iter 84 — Starwell level 47 + Sparkeel.** New enemy **Sparkeel** (45 enemies): a glowing cave eel with `shock`
+  (every 5 s, soldiers and the hero within 110 px are stunned for 1.5 s: no attacking, and they let go of everything they
+  held, including Bramble's Bulwark holds). Soldiers and heroes gained an optional `stun` timer. Level 47 **Lantern
+  Hollow**: bottom-left + north roads (780 / 700 px to the merge, pad row between the parallel stretches), 1,280 px tail,
+  12 pads, 15 waves, hpMult 1.8. Fixes found by the tests/screenshot: the north road first entered at x=840, under the
+  top-right buttons (now 800), and a top pad hid its tower behind the wide "Next wave" preview (moved). Endless adds
+  Sparkeel from wave 40. Screenshot `84.png`. 165 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 10 level 47 (+ a third Starwell enemy).
-2. Iter 85 balance pass.
-3. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
+1. Iter 85 balance pass.
+2. Region 10 levels 48–49, then the finale (level 50) with a Starwell boss.
 
 ## Known Bugs
 - (none known)
@@ -628,6 +634,8 @@ novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 84:** 47 Lantern Hollow 100/100/25 at hpMult 1.8 (1.5 → 100/100/100, 1.9 → 100/100/0, 2.05 → 100/92/0):
+the novice falls off a cliff (Sparkeels break Bramble's holds).
 **Iteration 83:** 46 Glimmerpool Descent 100/100/33 at hpMult 1.75 (1.6 → 100/100/100, 1.85 → 100/100/25,
 2.0 → 100/100/0).
 **Iteration 81:** 45 Heart of the Engine 83/67/8 at hpMult 1.58 (1.5 → 83/83/17, 1.61 → 75/67/0, 1.65 → 50/58/0,

@@ -543,3 +543,25 @@ describe('Starwell enemies', () => {
     expect(sim.enemies.filter((e) => e.alive && e.def.id === 'echowisp').length).toBe(0);
   });
 });
+
+describe('Sparkeel shock', () => {
+  it('stuns a nearby melee hero, who lets go of what it holds and stops attacking for a moment', () => {
+    const l = { ...lvl, slots: [] } as LevelDef;
+    const sim = new BattleSim(l, 'bramble');
+    sim.status = 'running';
+    const h = sim.hero!;
+    h.pos = { x: 400, y: 100 };
+    h.dest = null;
+    const eel = sim.spawn('sparkeel', 0, 396);
+    eel.def = { ...eel.def, speed: 0, attack: 0 };
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    expect(eel.blockedBy).toBe(h.uid);
+    eel.shockCd = 0.001;
+    sim.update(1 / 60);
+    expect(h.stun).toBeGreaterThan(0);
+    expect(eel.blockedBy).toBe(0);
+    const hp = eel.hp;
+    for (let i = 0; i < 30; i++) sim.update(1 / 60); // still stunned: no hits
+    expect(eel.hp).toBe(hp);
+  });
+});

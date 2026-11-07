@@ -42,6 +42,7 @@ export interface Enemy {
   swoopCd: number;
   blinkCd: number;
   gustCd: number;
+  shockCd: number;
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
   mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
@@ -54,6 +55,7 @@ export interface Enemy {
 
 export interface Soldier {
   uid: number;
+  stun?: number; // seconds left of a Sparkeel shock (no attacking or blocking)
   towerUid: number;
   index: number; // slot within its squad (for formation offsets)
   pos: Vec2;
@@ -80,6 +82,7 @@ export interface Strike {
 
 export interface Hero {
   uid: number;
+  stun?: number; // seconds left of a Sparkeel shock
   def: HeroDef;
   pos: Vec2;
   dest: Vec2 | null; // move order
@@ -164,6 +167,7 @@ export type SimEvent =
   | { type: 'thorns'; pos: Vec2 }
   | { type: 'charge'; enemy: Enemy }
   | { type: 'echo'; enemy: Enemy }
+  | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -451,6 +455,10 @@ export class BattleSim {
         h.pos = { ...this.heroSpawnPoint() };
         this.events.push({ type: 'heroBack', hero: h });
       }
+      return;
+    }
+    if (h.stun && h.stun > 0) {
+      h.stun -= dt;
       return;
     }
     const regen = (h.def.regen + (h.def.passive.kind === 'toughness' ? h.def.passive.regen : 0)) * (this.level.endless?.heroRegen ?? 1);
@@ -852,6 +860,7 @@ export class BattleSim {
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
+      shockCd: def.shock ? def.shock.interval : 0,
       chargeTime: 0,
       chargeCd: 0,
       mr: def.magicResist,
@@ -888,6 +897,7 @@ export class BattleSim {
       if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.gust) this.tickGust(e, dt);
+      if (e.def.shock) this.tickShock(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
@@ -984,6 +994,30 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  private tickShock(e: Enemy, dt: number): void {
+    const sh = e.def.shock!;
+    e.shockCd -= dt;
+    if (e.shockCd > 0) return;
+    e.shockCd = sh.interval;
+    const hits: Vec2[] = [];
+    for (const s of this.soldiers) {
+      if (!s.alive || Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y) > sh.radius) continue;
+      s.stun = sh.duration;
+      this.releaseEnemy(s);
+      for (const o of this.enemies) if (o.blockedBy === s.uid) o.blockedBy = 0;
+      hits.push({ ...s.pos });
+    }
+    const h = this.hero;
+    if (h && h.alive && Math.hypot(h.pos.x - e.pos.x, h.pos.y - e.pos.y) <= sh.radius) {
+      h.stun = sh.duration;
+      this.releaseHeroTarget();
+      for (const o of this.enemies) if (o.blockedBy === h.uid) o.blockedBy = 0;
+      hits.push({ ...h.pos });
+    }
+    this.events.push({ type: 'shock', source: e, radius: sh.radius, hits });
   }
 
   /** Kitewing: a gust shoves nearby free walkers further along their road. Held enemies and bosses don't budge. */
@@ -1193,6 +1227,10 @@ export class BattleSim {
           s.hp = stats.hp;
           s.pos = { ...s.spawnAt };
         }
+        continue;
+      }
+      if (s.stun && s.stun > 0) {
+        s.stun -= dt;
         continue;
       }
       // Validate current target.

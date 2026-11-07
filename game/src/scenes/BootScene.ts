@@ -304,6 +304,32 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'sparkeel': {
+        // cave eel: a long S-curved glowing body, fin ridge, bright spots along its side, a little spark at the tail
+        g.lineStyle(r * 0.75, C.ink, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.1, cy - r * 0.1);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.lineTo(cx + r * 0.3, cy + r * 0.2);
+        g.lineTo(cx + r * 1.0, cy - r * 0.15);
+        g.strokePath();
+        g.lineStyle(r * 0.55, color, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.1, cy - r * 0.1);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.lineTo(cx + r * 0.3, cy + r * 0.2);
+        g.lineTo(cx + r * 1.0, cy - r * 0.15);
+        g.strokePath();
+        g.fillStyle(0xbff8ff, 1);
+        for (const [dx, dy] of [[-0.75, -0.25], [-0.1, -0.12], [0.6, 0.05]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.09);
+        g.fillStyle(0xffe066, 1);
+        g.fillTriangle(cx + r * 1.0, cy - r * 0.15, cx + r * 1.35, cy - r * 0.5, cx + r * 1.2, cy - r * 0.05);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.18, r * 0.12);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.18, r * 0.06);
+        break;
+      }
       case 'dimlantern': {
         // lantern jelly: a translucent violet bell, trailing tendrils, a dark lantern glowing faintly inside
         g.lineStyle(2, 0x8a6ad8, 0.9);

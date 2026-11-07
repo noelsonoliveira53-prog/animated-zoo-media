@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **33** (next balance pass at iteration 35)
+Iteration counter: **34** (next iteration = 35 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -273,11 +273,19 @@ Iteration counter: **33** (next balance pass at iteration 35)
   outer row. 12 pads, 16 heavy waves mixing every Duskcap enemy. First tuning try worked; no layout fixes needed.
   117 tests.
 
+- [x] **Iter 34 — Duskcap finale: Morrowcap's Throne (level 20).** New boss **Matriarch Morrowcap** (22 enemies): heals
+  nearby allies (and herself) every 4 s, releases Puffcaps (14 at most), and has four phases (Veilstalker mist → spore-bark
+  shield + Rootragers → scattered Puffcaps + haste → final lurch). Level 20: two roads that merge, 12 pads, 18 waves,
+  boss on the last wave. The Duskcap Weald now has all 5 levels (20-level campaign). New achievement **Weald Warden**
+  (18 total). Fix: a pad near the top edge put a tower behind the speed/next-wave buttons; replaced it.
+  `level-shot.mjs` takes a boss id and drives it through its phases; new `scripts/enemy-sprites.mjs` renders sprites
+  close up. 117 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 4 finale: level 20 with a Duskcap boss (phases), finishing the Weald.
+1. Achievements screen paging: 18 entries fill the 2×9 grid exactly, so the next achievement needs a second page.
 2. Village: a free speed-up after a 3-star win (parked idea).
 3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
@@ -298,6 +306,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Morrowcap's Throne (iteration 34, 8 seeds):** first draft at 2.4 → 63/63/0; leaks were mostly Thornhogs on the south
+road (wave 5 and wave 11). Thinned and split those waves → 2.4: 75/75/0. After replacing the top-edge pad: **2.4 →
+88% / 50% / 0%** (kept). The boss phases trigger correctly in-browser (phase 2 reached, 978 shield).
 
 **Hollowroot Switchback (iteration 33):** the long road makes it easy per HP point: 2.6 → 100/100/33, 3.2 → 100/100/0,
 3.8 → 83/67/0, 4.4 → 33/33/0. **3.7 → 88% / 75% / 0%** (8 seeds, picked). Its hpMult is the campaign's highest, but

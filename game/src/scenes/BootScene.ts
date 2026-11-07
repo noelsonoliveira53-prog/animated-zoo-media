@@ -325,6 +325,42 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.25, cy - r * 0.55, r * 0.09);
         break;
       }
+      case 'morrowcap': {
+        // colossal mushroom matriarch: wide spotted cap, a ring of baby caps, a wise face on the stem
+        g.fillStyle(0xf0e2cc, 1);
+        g.fillRoundedRect(cx - r * 0.55, cy - r * 0.15, r * 1.1, r * 1.15, 10);
+        g.strokeRoundedRect(cx - r * 0.55, cy - r * 0.15, r * 1.1, r * 1.15, 10);
+        g.fillStyle(0xd8c8a8, 1);
+        g.fillEllipse(cx, cy - r * 0.05, r * 1.3, r * 0.3);
+        g.fillStyle(0x6a5a4a, 1);
+        g.fillEllipse(cx - r * 0.4, cy + r * 1.0, r * 0.6, r * 0.25);
+        g.fillEllipse(cx + r * 0.4, cy + r * 1.0, r * 0.6, r * 0.25);
+        // face
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.22, cy + r * 0.3, r * 0.08);
+        g.fillCircle(cx + r * 0.22, cy + r * 0.3, r * 0.08);
+        g.lineStyle(2, C.ink, 1);
+        g.beginPath();
+        g.arc(cx, cy + r * 0.5, r * 0.18, 0.2, Math.PI - 0.2);
+        g.strokePath();
+        g.lineStyle(3, C.ink, 1);
+        // cap
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy - r * 0.4, r * 2.3, r * 1.3);
+        g.strokeEllipse(cx, cy - r * 0.4, r * 2.3, r * 1.3);
+        g.fillStyle(0xbff4ff, 0.95);
+        for (const [dx, dy, rr] of [[-0.7, -0.5, 0.16], [-0.2, -0.85, 0.12], [0.35, -0.6, 0.18], [0.8, -0.35, 0.12], [-0.4, -0.2, 0.1], [0.1, -0.3, 0.09]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
+        // crown of baby caps
+        for (const [dx, col] of [[-0.6, 0xb85a8a], [0, 0x5a8ab8], [0.6, 0xb85a8a]] as [number, number][]) {
+          g.fillStyle(0xf0e2cc, 1);
+          g.fillRect(cx + dx * r - 2, cy - r * 1.15, 4, r * 0.2);
+          g.fillStyle(col, 1);
+          g.lineStyle(2, C.ink, 1);
+          g.fillEllipse(cx + dx * r, cy - r * 1.15, r * 0.42, r * 0.24);
+          g.strokeEllipse(cx + dx * r, cy - r * 1.15, r * 0.42, r * 0.24);
+        }
+        break;
+      }
       case 'vulkhar': {
         // coiled ash wyrm: body coils, horned head, glowing magma cracks
         const shade2 = Phaser.Display.Color.IntegerToColor(color).darken(25).color;

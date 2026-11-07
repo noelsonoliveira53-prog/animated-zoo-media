@@ -5,6 +5,7 @@ const FOREST = { grass: 0x4a8a3f, grassDark: 0x3b7534, road: 0xb89a64, roadEdge:
 const LAKE = { grass: 0x5a9a6a, grassDark: 0x4a8a5c, road: 0xc4b28a, roadEdge: 0xa08e66 };
 const DEN = { grass: 0x3f6b48, grassDark: 0x325a3c, road: 0x8a7a5a, roadEdge: 0x6a5a3e };
 const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0x77808a, trees: [0x2f5a4a, 0x3a6a58, 0x2a4f42], snow: true };
+const EMBER = { grass: 0x5a4a44, grassDark: 0x4a3b36, road: 0x8a6a4a, roadEdge: 0x6a4a32, trees: [0x6a5a3a, 0x7a4a2a, 0x5a4a2a], lava: true };
 const FEN = { grass: 0x4f8a52, grassDark: 0x3f7446, road: 0x9c8a62, roadEdge: 0x7d6c48 };
 
 // Shared tail for Murkmaw's Den: all three roads meet at (600, 360).
@@ -25,6 +26,14 @@ const SUMMIT_TAIL = [
   { x: 940, y: 600 },
   { x: 940, y: 160 },
   { x: 1320, y: 160 },
+];
+
+// Shared tail for Cinder Tunnels: both roads meet at (700, 400).
+const TUNNEL_TAIL = [
+  { x: 700, y: 400 },
+  { x: 1000, y: 400 },
+  { x: 1000, y: 180 },
+  { x: 1320, y: 180 },
 ];
 
 // Shared tail for Glacier Hold: three trails meet at (500, 360).
@@ -556,6 +565,103 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'grimtusk', count: 1, interval: 1, delay: 8 }, { enemy: 'rimewraith', count: 6, interval: 2, path: 1 }, { enemy: 'thornhog', count: 12, interval: 0.8, delay: 2 }, { enemy: 'bogbrute', count: 3, interval: 5, path: 1, delay: 10 }] },
     ],
   },
+  {
+    id: 'l11',
+    name: 'Ashfall Gate',
+    blurb: 'Beyond the peaks lies the Emberdeep. Cinder Moles burrow under your defenses here.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.8,
+    startCoins: 700,
+    lives: 20,
+    theme: EMBER,
+    ponds: [
+      { x: 690, y: 100, w: 150, h: 44 },
+      { x: 990, y: 640, w: 130, h: 40 },
+    ],
+    paths: [
+      [
+        { x: -40, y: 520 },
+        { x: 240, y: 520 },
+        { x: 240, y: 180 },
+        { x: 540, y: 180 },
+        { x: 540, y: 520 },
+        { x: 840, y: 520 },
+        { x: 840, y: 180 },
+        { x: 1140, y: 180 },
+        { x: 1140, y: 520 },
+        { x: 1320, y: 520 },
+      ],
+    ],
+    slots: [
+      { x: 120, y: 360 },
+      { x: 390, y: 300 },
+      { x: 390, y: 420 },
+      { x: 690, y: 300 },
+      { x: 690, y: 420 },
+      { x: 690, y: 640 },
+      { x: 990, y: 300 },
+      { x: 990, y: 420 },
+      { x: 1240, y: 380 },
+      { x: 300, y: 620 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.6 }, { enemy: 'skitter', count: 10, interval: 0.5, delay: 4 }] },
+      { groups: [{ enemy: 'cindermole', count: 4, interval: 2 }, { enemy: 'mudling', count: 10, interval: 0.7, delay: 2 }] },
+      { groups: [{ enemy: 'reedguard', count: 8, interval: 1.1 }, { enemy: 'gloomwing', count: 8, interval: 0.9, delay: 3 }] },
+      { groups: [{ enemy: 'cindermole', count: 6, interval: 1.6 }, { enemy: 'thornhog', count: 6, interval: 1.4, delay: 3 }] },
+      { groups: [{ enemy: 'wispling', count: 12, interval: 0.7 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 3 }] },
+      { groups: [{ enemy: 'splotch', count: 10, interval: 1.1 }, { enemy: 'gnat', count: 24, interval: 0.25, delay: 3 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4 }, { enemy: 'cindermole', count: 8, interval: 1.3, delay: 2 }] },
+      { groups: [{ enemy: 'shellback', count: 12, interval: 0.9 }, { enemy: 'rimewraith', count: 4, interval: 2.5, delay: 3 }] },
+      { groups: [{ enemy: 'thornhog', count: 14, interval: 0.7 }, { enemy: 'gloomwing', count: 14, interval: 0.6, delay: 3 }] },
+      { groups: [{ enemy: 'cindermole', count: 12, interval: 1 }, { enemy: 'bogmender', count: 4, interval: 2.5, delay: 2 }, { enemy: 'reedguard', count: 10, interval: 0.9, delay: 6 }] },
+      { groups: [{ enemy: 'bogbrute', count: 5, interval: 3 }, { enemy: 'wispling', count: 16, interval: 0.6, delay: 3 }] },
+      { groups: [{ enemy: 'cindermole', count: 14, interval: 0.9 }, { enemy: 'bogbrute', count: 3, interval: 4, delay: 3 }, { enemy: 'gnat', count: 30, interval: 0.2, delay: 6 }] },
+    ],
+  },
+  {
+    id: 'l12',
+    name: 'Cinder Tunnels',
+    blurb: 'Two ash roads join under the smoking cliffs. Watch the ground: the moles come in packs.',
+    mapPos: { x: 470, y: 430 },
+    hpMult: 1.6,
+    startCoins: 760,
+    lives: 20,
+    theme: EMBER,
+    ponds: [
+      { x: 250, y: 380, w: 160, h: 50 },
+      { x: 1180, y: 620, w: 120, h: 36 },
+    ],
+    paths: [
+      [{ x: -40, y: 160 }, { x: 700, y: 160 }, ...TUNNEL_TAIL],
+      [{ x: -40, y: 600 }, { x: 500, y: 600 }, { x: 500, y: 400 }, ...TUNNEL_TAIL],
+    ],
+    slots: [
+      { x: 250, y: 270 },
+      { x: 250, y: 490 },
+      { x: 600, y: 280 },
+      { x: 600, y: 520 },
+      { x: 850, y: 280 },
+      { x: 850, y: 520 },
+      { x: 1150, y: 300 },
+      { x: 1150, y: 450 },
+      { x: 400, y: 690 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 10, interval: 0.8 }, { enemy: 'mudling', count: 10, interval: 0.8, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'cindermole', count: 4, interval: 2 }, { enemy: 'skitter', count: 12, interval: 0.5, path: 1 }] },
+      { groups: [{ enemy: 'reedguard', count: 8, interval: 1.2, path: 1 }, { enemy: 'gnat', count: 18, interval: 0.3 }] },
+      { groups: [{ enemy: 'cindermole', count: 6, interval: 1.5, path: 1 }, { enemy: 'wispling', count: 8, interval: 0.9, delay: 2 }] },
+      { groups: [{ enemy: 'thornhog', count: 8, interval: 1.1 }, { enemy: 'splotch', count: 8, interval: 1.2, path: 1 }] },
+      { groups: [{ enemy: 'gloomwing', count: 14, interval: 0.6, path: 1 }, { enemy: 'bogmender', count: 3, interval: 3 }, { enemy: 'shellback', count: 10, interval: 1, delay: 2 }] },
+      { groups: [{ enemy: 'cindermole', count: 10, interval: 1.1 }, { enemy: 'bogbrute', count: 3, interval: 4, path: 1 }] },
+      { groups: [{ enemy: 'rimewraith', count: 5, interval: 2.2, path: 1 }, { enemy: 'thornhog', count: 12, interval: 0.8 }] },
+      { groups: [{ enemy: 'wispling', count: 16, interval: 0.6 }, { enemy: 'reedguard', count: 12, interval: 0.8, path: 1 }, { enemy: 'bogmender', count: 4, interval: 2.6, delay: 4 }] },
+      { groups: [{ enemy: 'cindermole', count: 10, interval: 1 }, { enemy: 'cindermole', count: 10, interval: 1, path: 1, delay: 2 }, { enemy: 'gnat', count: 30, interval: 0.2, delay: 5 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 3.5 }, { enemy: 'bogbrute', count: 4, interval: 3.5, path: 1, delay: 2 }, { enemy: 'gloomwing', count: 16, interval: 0.5, delay: 5 }] },
+      { groups: [{ enemy: 'cindermole', count: 14, interval: 0.8, path: 1 }, { enemy: 'splotch', count: 14, interval: 0.8 }, { enemy: 'rimewraith', count: 6, interval: 2, delay: 4 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -574,11 +680,13 @@ export interface RegionDef {
   first: number; // index of the first level in this region
   count: number; // levels planned for the region (some may not exist yet)
   snow?: boolean;
+  ember?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
   { name: 'The Grovelands', first: 0, count: 5 },
   { name: 'Frostfern Highlands', first: 5, count: 5, snow: true },
+  { name: 'The Emberdeep', first: 10, count: 5, ember: true },
 ];
 
 export function regionOf(levelIndex: number): number {

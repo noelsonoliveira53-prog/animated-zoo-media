@@ -27,6 +27,8 @@ export interface Enemy {
   maxShield: number;
   healCd: number;
   chillCd: number;
+  underground: boolean;
+  burrowCd: number;
   phase: number; // index of next boss phase to trigger
   speedMult: number;
 }
@@ -133,6 +135,7 @@ export type SimEvent =
   | { type: 'heroBack'; hero: Hero }
   | { type: 'heal'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'chill'; source: Enemy; towers: Tower[]; radius: number }
+  | { type: 'burrow'; enemy: Enemy; down: boolean }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
   | { type: 'split'; parent: Enemy; children: Enemy[] }
@@ -287,7 +290,7 @@ export class BattleSim {
       if (st.timer > 0) continue;
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
-      const hits = this.enemies.filter((e) => e.alive && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
+      const hits = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
       for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', e.def));
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }
@@ -317,7 +320,7 @@ export class BattleSim {
     const sk = h.def.active;
     h.skillCd = sk.cooldown;
     const dmg = this.heroStat(sk.damage);
-    let pool = this.enemies.filter((e) => e.alive && Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= sk.radius);
+    let pool = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= sk.radius);
     if (sk.kind === 'quake') pool = pool.filter((e) => !e.def.flying);
     if (sk.maxTargets) {
       pool.sort((a, b) => b.dist - a.dist);
@@ -411,7 +414,7 @@ export class BattleSim {
         let best: Enemy | undefined;
         let bestD = 90;
         for (const e of this.enemies) {
-          if (!e.alive || e.def.flying) continue;
+          if (!e.alive || e.def.flying || e.underground) continue;
           const d = Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) + (e.blockedBy ? 40 : 0);
           if (d < bestD) {
             bestD = d;
@@ -441,7 +444,7 @@ export class BattleSim {
     } else if (h.attackCd <= 0) {
       let best: Enemy | null = null;
       for (const e of this.enemies) {
-        if (!e.alive || (e.def.flying && !atk.hitsAir)) continue;
+        if (!e.alive || e.underground || (e.def.flying && !atk.hitsAir)) continue;
         if (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) > atk.range) continue;
         if (!best || e.dist > best.dist) best = e;
       }
@@ -750,6 +753,8 @@ export class BattleSim {
       maxShield: def.shield ?? 0,
       healCd: def.heal ? def.heal.interval : 0,
       chillCd: def.chill ? def.chill.interval * 0.6 : 0,
+      underground: false,
+      burrowCd: def.burrow ? def.burrow.interval : 0,
       phase: 0,
       speedMult: 1,
     };
@@ -767,6 +772,7 @@ export class BattleSim {
       }
       if (e.def.heal) this.tickHealer(e, dt);
       if (e.def.chill) this.tickChill(e, dt);
+      if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.blockedBy) {
         const isHero = !!this.hero && this.hero.uid === e.blockedBy;
         const s = isHero ? null : this.soldiers.find((so) => so.uid === e.blockedBy);
@@ -793,6 +799,22 @@ export class BattleSim {
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
       }
     }
+  }
+
+  /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
+  private tickBurrow(e: Enemy, dt: number): void {
+    const b = e.def.burrow!;
+    e.burrowCd -= dt;
+    if (e.burrowCd > 0) return;
+    e.underground = !e.underground;
+    e.burrowCd = e.underground ? b.duration : b.interval;
+    e.speedMult = e.underground ? Math.max(e.speedMult, b.speedMult) : e.def.phases ? e.speedMult : 1;
+    if (e.underground && e.blockedBy) {
+      for (const s of this.soldiers) if (s.targetUid === e.uid) s.targetUid = 0;
+      if (this.hero && this.hero.targetUid === e.uid) this.hero.targetUid = 0;
+      e.blockedBy = 0;
+    }
+    this.events.push({ type: 'burrow', enemy: e, down: e.underground });
   }
 
   private tickChill(e: Enemy, dt: number): void {
@@ -884,7 +906,7 @@ export class BattleSim {
     let best: Enemy | undefined;
     let bestScore = -Infinity;
     for (const e of this.enemies) {
-      if (!e.alive || e.def.flying) continue;
+      if (!e.alive || e.def.flying || e.underground) continue;
       const d = Math.hypot(e.pos.x - rally.x, e.pos.y - rally.y);
       if (d > ENGAGE_RADIUS) continue;
       // Prefer free enemies, then the one furthest along.
@@ -923,7 +945,7 @@ export class BattleSim {
     let best: Enemy | null = null;
     let bestScore = -Infinity;
     for (const e of this.enemies) {
-      if (!e.alive) continue;
+      if (!e.alive || e.underground) continue;
       if (e.def.flying && !t.def.hitsAir) continue;
       const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
       if (d > range) continue;
@@ -961,7 +983,7 @@ export class BattleSim {
       let best: Enemy | null = null;
       let bestScore = -Infinity;
       for (const e of this.enemies) {
-        if (!e.alive || taken.has(e.uid) || (e.def.flying && !t.def.hitsAir)) continue;
+        if (!e.alive || e.underground || taken.has(e.uid) || (e.def.flying && !t.def.hitsAir)) continue;
         if (Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y) > range) continue;
         if (e.dist > bestScore) {
           bestScore = e.dist;
@@ -1042,13 +1064,14 @@ export class BattleSim {
     const keep: Projectile[] = [];
     for (const p of this.projectiles) {
       const target = byUid.get(p.targetUid);
-      if (p.homing && target && target.alive) p.lastTargetPos = { ...target.pos };
+      const reachable = target && target.alive && !target.underground;
+      if (p.homing && reachable) p.lastTargetPos = { ...target.pos };
       const dx = p.lastTargetPos.x - p.pos.x;
       const dy = p.lastTargetPos.y - p.pos.y;
       const d = Math.hypot(dx, dy);
       const move = p.speed * dt;
       if (d <= move + 4) {
-        this.impact(p, p.homing && target && target.alive ? target : null);
+        this.impact(p, p.homing && reachable ? target : null);
       } else {
         p.pos.x += (dx / d) * move;
         p.pos.y += (dy / d) * move;
@@ -1062,7 +1085,7 @@ export class BattleSim {
     if (p.splash > 0) {
       this.events.push({ type: 'splash', pos: { ...p.lastTargetPos }, radius: p.splash, color: p.color });
       for (const e of [...this.enemies]) {
-        if (!e.alive) continue;
+        if (!e.alive || e.underground) continue;
         if (e.def.flying && !p.hitsAir) continue;
         if (Math.hypot(e.pos.x - p.lastTargetPos.x, e.pos.y - p.lastTargetPos.y) <= p.splash + e.def.radius) {
           this.damage(e, p);
@@ -1095,7 +1118,7 @@ export class BattleSim {
       let next: Enemy | null = null;
       let bestD = c.range;
       for (const e of this.enemies) {
-        if (!e.alive || hit.has(e.uid) || (e.def.flying && !p.hitsAir)) continue;
+        if (!e.alive || e.underground || hit.has(e.uid) || (e.def.flying && !p.hitsAir)) continue;
         const d = Math.hypot(e.pos.x - from.pos.x, e.pos.y - from.pos.y);
         if (d < bestD) {
           bestD = d;

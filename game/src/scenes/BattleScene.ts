@@ -16,6 +16,7 @@ interface EnemyView {
   bar: Phaser.GameObjects.Graphics;
   bob: number;
   shadow: Phaser.GameObjects.Ellipse | null;
+  mound: Phaser.GameObjects.Image | null;
 }
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
@@ -116,6 +117,20 @@ export class BattleScene extends Phaser.Scene {
     });
     this.particles.setDepth(2000);
 
+    if (this.level.theme.lava) {
+      // drifting embers
+      this.add.particles(0, 0, 'dot', {
+        x: { min: 0, max: GAME_W },
+        y: GAME_H + 10,
+        speedY: { min: -60, max: -25 },
+        speedX: { min: -15, max: 15 },
+        scale: { min: 0.12, max: 0.3 },
+        alpha: { start: 0.9, end: 0 },
+        tint: [0xff8a3c, 0xffc93c, 0xff5d4a],
+        lifespan: 9000,
+        frequency: 160,
+      }).setDepth(2200);
+    }
     if (this.level.theme.snow) {
       this.add.particles(0, 0, 'dot', {
         x: { min: -20, max: GAME_W + 20 },
@@ -204,11 +219,16 @@ export class BattleScene extends Phaser.Scene {
       }
     }
     // ponds
+    const lava = !!this.level.theme.lava;
     for (const pd of this.level.ponds ?? []) {
-      g.fillStyle(0x3f8a9a, 1);
+      g.fillStyle(lava ? 0x5a2a1a : 0x3f8a9a, 1);
       g.fillEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
-      g.fillStyle(0x6fc4dc, 1);
+      g.fillStyle(lava ? 0xff6a2a : 0x6fc4dc, 1);
       g.fillEllipse(pd.x, pd.y, pd.w, pd.h);
+      if (lava) {
+        const glow = this.add.ellipse(pd.x, pd.y, pd.w * 0.7, pd.h * 0.6, 0xffc93c, 0.5).setDepth(-9);
+        this.tweens.add({ targets: glow, alpha: 0.15, scale: 0.85, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
+      }
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
     }
@@ -960,6 +980,10 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x8fdc5a);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
+      case 'burrow':
+        this.particles.setParticleTint(0x9a7a52);
+        this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
+        break;
       case 'chill': {
         const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0xbff4ff, 0.18).setStrokeStyle(4, 0xe8fbff, 0.95).setDepth(2400).setScale(0.2);
         this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
@@ -1054,13 +1078,15 @@ export class BattleScene extends Phaser.Scene {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
     const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow });
+    const mound = e.def.burrow ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound });
   }
 
   private killView(uid: number, v: EnemyView): void {
     this.enemyViews.delete(uid);
     v.bar.destroy();
     v.shadow?.destroy();
+    v.mound?.destroy();
     this.tweens.add({ targets: v.sprite, scale: 1.4, alpha: 0, duration: 180, onComplete: () => v.sprite.destroy() });
   }
 
@@ -1076,6 +1102,14 @@ export class BattleScene extends Phaser.Scene {
       else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       v.shadow?.setPosition(e.pos.x, e.pos.y + 4).setDepth(e.pos.y - 1);
+      if (v.mound) {
+        v.mound.setVisible(e.underground).setPosition(e.pos.x, e.pos.y + 2).setDepth(e.pos.y);
+        v.sprite.setVisible(!e.underground);
+        if (e.underground) {
+          v.bar.clear();
+          continue;
+        }
+      }
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
       v.sprite.setDepth(e.def.flying ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();

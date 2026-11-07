@@ -28,6 +28,7 @@ export interface EnemyDef {
   splitInto?: { enemy: string; count: number }; // spawns children on death
   phases?: BossPhase[]; // triggered once each as hp drops
   chill?: { radius: number; interval: number; duration: number }; // periodically freezes nearby towers
+  burrow?: { interval: number; duration: number; speedMult: number }; // dives underground on a cycle
   boss?: boolean;
 }
 
@@ -106,7 +107,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean };
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water
   hpMult?: number; // difficulty ramp: multiplies every enemy's health on this level
   heroSpawn?: Vec2; // where the hero starts/respawns (default: near the first road's exit)

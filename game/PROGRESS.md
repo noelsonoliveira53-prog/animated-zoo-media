@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **13** (next balance pass at iteration 15)
+Iteration counter: **14** (next iteration = 15 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -120,11 +120,19 @@ Iteration counter: **13** (next balance pass at iteration 15)
   Summit** (two roads merge, Grimtusk finale, hp×1.75). Ice-ring + "Frozen!" effects; enemy showcase script
   takes a level index. 14 enemy types now. 76 tests.
 
+- [x] **Iter 14** — **Region 3: The Emberdeep (levels 11–12) + burrowers.** New mechanic **burrow**: enemies dive
+  underground on a cycle. While underground they can't be targeted by towers, hero, splash, chain, Starfall or
+  hero skills, they can't be blocked (diving frees them from soldiers), and they move 1.5× faster. In-flight
+  shots miss. New enemy **Cinder Mole** (rendered as a moving dirt mound while under). Volcanic theme:
+  dark ash ground, rust/dead trees, **lava pools** with pulsing glow, drifting embers; ember-style world-map
+  page ("Ash Road", smoking rocks, lava lake). Levels: **11 Ashfall Gate** (switchbacks, hp×1.8) and
+  **12 Cinder Tunnels** (two roads merge, hp×1.6). 15 enemy types now. 78 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 3 (levels 11–15) with its own theme + new enemy mechanic + final boss.
+1. Levels 13–15 to finish the Emberdeep + the final boss (and a campaign ending screen).
 2. Raid mode: AI villages, train troops in Barracks, deploy to attack.
 3. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
 4. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
@@ -140,6 +148,9 @@ Iteration counter: **13** (next balance pass at iteration 15)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 14 (first pass, to revisit in the iteration-15 balance pass):** 11 Ashfall Gate 100/100/13 ·
+12 Cinder Tunnels 75/75/75. At first hp×2.2/2.3 was a wall (Cinder Tunnels: 0% for everyone by wave 6).
+
 **Iteration 13:** 9 Rimewood Hollow 100/100/30 · 10 Frostpeak Summit 88/75/13 (expert/casual/novice, 8–10 seeds).
 
 **Iteration 12** (`balance.ts 10`, after bounty scaling + retune):

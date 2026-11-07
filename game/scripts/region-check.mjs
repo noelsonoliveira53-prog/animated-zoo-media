@@ -12,16 +12,16 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
-await page.addInitScript(() => localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 3, l3: 2, l4: 2, l5: 1, l6: 2 }, hero: 'ember' })));
+await page.addInitScript(() => localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 3, l3: 2, l4: 2, l5: 1, l6: 2, l7: 2, l8: 1, l9: 2, l10: 1 }, hero: 'ember' })));
 await page.goto('http://localhost:4327/');
 await page.waitForTimeout(900);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('WorldMap', { region: 0 }));
 await page.waitForTimeout(700);
 await page.screenshot({ path: `screenshots/${name}-r1.png` });
-await page.mouse.click(640 + 300, 38); // > to Highlands
+await page.evaluate(() => window.__game.scene.getScenes(true)[0].scene.start('WorldMap', { region: 2 }));
 await page.waitForTimeout(800);
 await page.screenshot({ path: `screenshots/${name}-r2.png` });
-for (const i of [5, 6, 7]) {
+for (const i of [10, 11]) {
   await page.evaluate((idx) => window.__game.scene.getScenes(true)[0].scene.start('Battle', { levelIndex: idx }), i);
   await page.waitForTimeout(1500);
   await page.screenshot({ path: `screenshots/${name}-level${i + 1}.png` });

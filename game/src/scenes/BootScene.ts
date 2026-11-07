@@ -205,6 +205,23 @@ export class BootScene extends Phaser.Scene {
         for (let i = 0; i < 3; i++) g.fillTriangle(cx - r * 0.9 + i * r * 0.6, cy - r * 0.95, cx - r * 0.7 + i * r * 0.6, cy - r * 0.95, cx - r * 0.8 + i * r * 0.6, cy - r * 1.35);
         break;
       }
+      case 'cindermole': {
+        // stout mole with glowing claws and an ember-speckled coat
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        g.strokeEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        g.fillStyle(0xff8a3c, 1);
+        for (const [ex, ey] of [[-0.5, -0.2], [0.3, -0.4], [-0.1, 0.3], [0.6, 0.2]]) g.fillCircle(cx + ex * r, cy + ey * r, r * 0.09);
+        g.fillStyle(0xe8a090, 1);
+        g.fillEllipse(cx + r * 0.85, cy + r * 0.2, r * 0.6, r * 0.45);
+        g.fillStyle(0xff5d4a, 1);
+        g.fillCircle(cx + r * 1.1, cy + r * 0.2, r * 0.13);
+        g.lineStyle(2.5, 0xffb84a, 1);
+        for (let i = 0; i < 3; i++) g.lineBetween(cx + r * 0.3 + i * 4, cy + r * 0.8, cx + r * 0.4 + i * 4, cy + r * 1.1);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
+        break;
+      }
       case 'grimtusk': {
         // great white boar with ice tusks and a frosty mane
         g.fillStyle(0xb8ccd8, 1);
@@ -877,6 +894,19 @@ export class BootScene extends Phaser.Scene {
     g.lineStyle(2, C.ink, 1);
     g.strokeRoundedRect(4, 4, 22, 9, 3);
     g.generateTexture('icon_hammer', 30, 30);
+    g.destroy();
+
+    // dirt mound (burrowed enemy)
+    g = this.g();
+    g.fillStyle(0x000000, 0.25);
+    g.fillEllipse(16, 14, 32, 12);
+    g.fillStyle(0x7a5a3a, 1);
+    g.fillEllipse(16, 11, 28, 14);
+    g.fillStyle(0x9a7a52, 1);
+    g.fillEllipse(12, 8, 12, 6);
+    g.fillStyle(0xff8a3c, 0.8);
+    g.fillCircle(20, 10, 2);
+    g.generateTexture('mound', 32, 20);
     g.destroy();
 
     // particle

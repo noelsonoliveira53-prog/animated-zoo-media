@@ -114,3 +114,39 @@ describe('frost enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'shoot')).toBe(false);
   });
 });
+
+describe('burrowers', () => {
+  it('Cinder Moles dive (untargetable, faster) and resurface on a cycle', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 600, y: 160 }] };
+    const sim = new BattleSim(l2);
+    sim.build(0, 'glimmer');
+    sim.status = 'running';
+    const m = sim.spawn('cindermole', 0, 100);
+    for (let i = 0; i < 60 * 4.05; i++) sim.update(1 / 60);
+    expect(m.underground).toBe(true);
+    expect(m.speedMult).toBeCloseTo(1.5);
+    // While underground, towers find no target.
+    m.pos = { x: 600, y: 100 };
+    sim.drainEvents();
+    for (const t of sim.towers) if (t) t.cooldown = 0;
+    sim.update(1 / 60);
+    expect(sim.drainEvents().some((e) => e.type === 'shoot')).toBe(false);
+    for (let i = 0; i < 60 * 2.3; i++) sim.update(1 / 60);
+    expect(m.underground).toBe(false);
+    expect(m.speedMult).toBe(1);
+  });
+  it('diving frees the mole from blockers', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 400, y: 170 }] };
+    const sim = new BattleSim(l2);
+    sim.build(0, 'burrow');
+    sim.status = 'running';
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    const m = sim.spawn('cindermole', 0, 360);
+    m.burrowCd = 1.5;
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(m.blockedBy).not.toBe(0);
+    for (let i = 0; i < 40; i++) sim.update(1 / 60);
+    expect(m.underground).toBe(true);
+    expect(m.blockedBy).toBe(0);
+  });
+});

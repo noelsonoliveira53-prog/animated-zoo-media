@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **167** (next balance pass at iteration 170)
+Iteration counter: **168** (next balance pass at iteration 170)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1195,12 +1195,24 @@ Iteration counter: **167** (next balance pass at iteration 170)
     lists it automatically.
   - Two new tests (215 total). Check: `scripts/hive-check.mjs`. Every troop near the hive lost 56 hp and there were no
     console errors. Screenshots `screenshots/167.png` (the swarm) and `167-camp.png`.
+- **Iteration 168** (region 19): **The Honeycomb Hills**. Golden clover hills with a honey lake on the map. In battle the
+  scenery is honeycomb patches, clover and dripping wild hives, with honeybees drifting overhead (off under Reduce motion).
+  It has its own swaying "Honeycomb" tune.
+  - **Waxback Beetle** (`wax`): starts with +40% armor. Once it has taken magic damage worth 20% of its health, the coat
+    melts off for good ("Melted!" and a drip sound).
+  - **Hexguard Wasp** (`parry`): its comb shield turns aside 3 whole single-target shots and regains one every 3s. Splash,
+    chain jumps and spells always land; a hex flash shows each block, with "Shield cracked" when the last one goes.
+  - Level 91 **Hivegate Meadow**: 10 pads, two roads, 14 waves.
+  - Field Guide tags, endless tier at wave 76, sprites, sounds, and the music-flag test. Two new tests (217 total).
+  - Check: `scripts/comb-check.mjs`. The comb tune plays and a Waxback's armor drops from 0.55 to 0.15 after a spell; no
+    console errors. Screenshots `screenshots/168.png` and `168-map.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 19: a new theme, traits and five levels (the region picker now pages, so there's room).
+1. Honeycomb Hills level 92 with a third trait, then levels 93 and 94.
+2. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1209,6 +1221,11 @@ Iteration counter: **167** (next balance pass at iteration 170)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 168**: 91 Hivegate Meadow, 12 seeds (expert/casual/novice).
+- First pass at hpMult 1.7: 50/33/0 (1.85: 17/8/0). The novice fell at wave 6: the short top road plus heavy early waves of
+  wax and shields.
+- Eased waves 1–6 (fewer enemies, Shellbacks and Reedguards moved to the long road) and the wax (0.45/0.25 → 0.4/0.2).
+- After that: 1.4 → 100/100/42, 1.5 → 100/100/50, 1.6 → 100/92/8. **1.55 → 100/100/33** (kept; it's the opener band).
 **Iteration 167** (raid sim, stars and destruction): the first try, 70 damage with 2 hives in Strongholds, cut the Lodge 3
 army's Stronghold score from 1.1★ 48% to 0.5★ 41%. At **45 damage, radius 100, one hive per camp**: Warren Lodge 2 1.7★ 67%
 (was 1.8★ 70%), Lodge 3 3.0★; Stronghold Lodge 3 1.0★ 49% (was 1.1★ 48%), Lodge 3 + Mender 1.5★ 54% (was 1.6★ 52%).

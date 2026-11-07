@@ -304,6 +304,14 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.comb && !motion.reduced) {
+      // honeybees drifting lazily over the hills in slow figure-eights
+      for (let i = 0; i < 10; i++) {
+        const bee = this.add.ellipse(rnd.between(80, GAME_W - 80), rnd.between(130, GAME_H - 140), 6, 4, 0xffd040, 0.85).setDepth(0.7);
+        this.tweens.add({ targets: bee, x: bee.x + rnd.between(-60, 60), duration: rnd.between(1800, 3200), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+        this.tweens.add({ targets: bee, y: bee.y + rnd.between(-24, 24), duration: rnd.between(900, 1500), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.canopy && !motion.reduced) {
       // slanting sunbeams through the canopy, breathing slowly
       for (let i = 0; i < 4; i++) {
@@ -491,6 +499,40 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.comb) {
+        const k = rnd.frac();
+        if (k < 0.45) {
+          // a patch of honeycomb cells half-sunk in the grass
+          deco.fillStyle(0x000000, 0.12);
+          deco.fillEllipse(p.x + 3, p.y + 10, 46, 16);
+          for (const [dx, dy] of [[0, 0], [14, 0], [-14, 0], [7, -12], [-7, -12], [7, 12]]) {
+            const cx = p.x + dx;
+            const cy = p.y + dy;
+            const pts = [0, 1, 2, 3, 4, 5].map((n) => new Phaser.Math.Vector2(cx + Math.cos((n * Math.PI) / 3 + Math.PI / 6) * 8, cy + Math.sin((n * Math.PI) / 3 + Math.PI / 6) * 8));
+            deco.fillStyle(rnd.frac() < 0.5 ? 0xe8b030 : 0xd89a20, 1);
+            deco.fillPoints(pts, true);
+            deco.lineStyle(1.5, 0x9a6a20, 0.9);
+            deco.strokePoints(pts, true);
+          }
+        } else if (k < 0.8) {
+          // a clump of clover with white-pink flower heads
+          deco.fillStyle(0x6a8a2a, 1);
+          for (const [dx, dy] of [[-8, 2], [6, 4], [0, -6]]) deco.fillCircle(p.x + dx, p.y + dy, 7);
+          deco.fillStyle(0xf4d8e8, 1);
+          deco.fillCircle(p.x - 6, p.y - 8, 5);
+          deco.fillCircle(p.x + 7, p.y - 4, 4);
+        } else {
+          // a dripping wild hive hung from a little bent sapling
+          deco.lineStyle(2.5, 0x6a4a2a, 1);
+          deco.lineBetween(p.x - 10, p.y + 12, p.x - 4, p.y - 24);
+          deco.lineBetween(p.x - 4, p.y - 24, p.x + 10, p.y - 22);
+          deco.fillStyle(0xe8c060, 1);
+          deco.fillEllipse(p.x + 8, p.y - 10, 16, 20);
+          deco.lineStyle(1.5, 0x9a7030, 1);
+          deco.strokeEllipse(p.x + 8, p.y - 10, 16, 20);
+          deco.fillStyle(0xd89a20, 1);
+          deco.fillCircle(p.x + 9, p.y + 2, 2.5);
         }
       } else if (this.level.theme.canopy) {
         const k = rnd.frac();
@@ -1678,6 +1720,27 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0xd8b890);
         this.particles.explode(10, ev.pos.x, ev.pos.y - 6);
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
+        break;
+      }
+      case 'parry': {
+        // a little hexagon flash in front of the wasp, throttled per wasp
+        const key = -3000000 - ev.enemy.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 250) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('parry');
+        const hex = this.add.polygon(ev.enemy.pos.x, ev.enemy.pos.y - 6, [0, -14, 12, -7, 12, 7, 0, 14, -12, 7, -12, -7], 0xffd040, 0.5).setStrokeStyle(2, 0xfff0a0, 0.9).setDepth(2400);
+        this.tweens.add({ targets: hex, scale: 1.5, alpha: 0, duration: 260, onComplete: () => hex.destroy() });
+        if (ev.left === 0) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, 'Shield cracked', '#ffe08a', 12);
+        break;
+      }
+      case 'melt': {
+        sfx.trait('melt');
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, 'Melted!', '#ffb84a', 13);
+        this.particles.setParticleTint(0xffc860);
+        this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
+        const mv = this.enemyViews.get(ev.enemy.uid);
+        if (mv) mv.pulse = 0.2;
         break;
       }
       case 'rile': {

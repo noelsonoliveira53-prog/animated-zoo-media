@@ -850,6 +850,52 @@ export class BootScene extends Phaser.Scene {
         for (const lx of [-0.36, -0.12, 0.12, 0.36]) g.fillCircle(cx + lx * r, cy - r * 0.8 + Math.abs(lx) * r * 0.25, r * 0.06);
         break;
       }
+      case 'waxback': {
+        // round beetle under a thick glossy wax coat with drips, little dark legs and antennae
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x3a2a1a, 1);
+        for (const [lx, ly] of [[-0.75, -0.3], [-0.85, 0.2], [-0.6, 0.6], [0.75, -0.3], [0.85, 0.2], [0.6, 0.6]]) g.fillRect(cx + lx * r - r * 0.14, cy + ly * r - r * 0.05, r * 0.28, r * 0.1);
+        g.fillCircle(cx, cy - r * 0.75, r * 0.3);
+        g.lineStyle(1.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.12, cy - r * 0.95, cx - r * 0.35, cy - r * 1.25);
+        g.lineBetween(cx + r * 0.12, cy - r * 0.95, cx + r * 0.35, cy - r * 1.25);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.6);
+        g.strokeEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.6);
+        g.lineStyle(1.5, 0xa87a30, 1);
+        g.lineBetween(cx, cy - r * 0.7, cx, cy + r * 0.8);
+        g.fillStyle(0xfff0b0, 0.7);
+        g.fillEllipse(cx - r * 0.3, cy - r * 0.3, r * 0.35, r * 0.55);
+        g.fillStyle(0xf0c860, 1);
+        for (const dx of [-0.45, 0.2, 0.5]) g.fillEllipse(cx + dx * r, cy + r * 0.8, r * 0.16, r * 0.3);
+        break;
+      }
+      case 'hexguard': {
+        // striped wasp from above with clear wings, holding a six-sided comb shield in front
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(0xe8f4ff, 0.6);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
+        g.fillEllipse(cx + r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
+        g.strokeEllipse(cx - r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
+        g.strokeEllipse(cx + r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.25, r * 0.7, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.25, r * 0.7, r * 1.2);
+        g.fillStyle(0x1a1208, 1);
+        for (const dy of [0.05, 0.4]) g.fillRect(cx - r * 0.33, cy + dy * r, r * 0.66, r * 0.14);
+        g.fillCircle(cx, cy - r * 0.45, r * 0.3);
+        // comb shield
+        const pts: { x: number; y: number }[] = [];
+        for (let n = 0; n < 6; n++) pts.push({ x: cx + r * 0.55 + Math.cos((n * Math.PI) / 3) * r * 0.42, y: cy - r * 0.05 + Math.sin((n * Math.PI) / 3) * r * 0.42 });
+        g.fillStyle(0xe8b030, 1);
+        g.fillPoints(pts, true);
+        g.lineStyle(2, 0x8a5a10, 1);
+        g.strokePoints(pts, true);
+        g.lineStyle(1, 0x8a5a10, 0.8);
+        g.lineBetween(pts[0].x, pts[0].y, pts[3].x, pts[3].y);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

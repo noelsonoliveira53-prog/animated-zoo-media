@@ -1002,3 +1002,49 @@ describe('Canopy Harrier', () => {
     expect(sim.soldiers.some((so) => !so.alive)).toBe(true);
   });
 });
+
+describe('Honeycomb Hills enemies', () => {
+  it('a Waxback keeps its thick coat against physical blows until enough magic melts it', () => {
+    const sim = new BattleSim(lvl, null);
+    const w = sim.spawn('waxback', 0, 300);
+    const wax = w.def.wax!;
+    const hit = (d: number, t: string) => (sim as unknown as { applyDamage: (e: unknown, d: number, t: string) => void }).applyDamage(w, d, t);
+    expect(w.armor).toBeCloseTo(w.def.armor + wax.armor);
+    hit(w.maxHp * 0.5, 'physical');
+    expect(w.armor).toBeCloseTo(w.def.armor + wax.armor);
+    w.hp = w.maxHp;
+    hit(w.maxHp * wax.melt * 0.6, 'magic');
+    expect(w.armor).toBeCloseTo(w.def.armor + wax.armor);
+    hit(w.maxHp * wax.melt * 0.5, 'magic');
+    expect(w.armor).toBeCloseTo(w.def.armor);
+    expect(sim.drainEvents().some((e) => e.type === 'melt')).toBe(true);
+  });
+
+  it('a Hexguard Wasp turns aside its first shots, then regains a charge over time', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'thornbow');
+    const h = sim.spawn('hexguard', 0, 400);
+    h.def = { ...h.def, speed: 0 };
+    h.hp = h.maxHp = 999999;
+    const p = h.def.parry!;
+    let parries = 0;
+    let firstHitAt = -1;
+    for (let i = 0; i < 60 * 12 && firstHitAt < 0; i++) {
+      sim.update(1 / 60);
+      for (const ev of sim.drainEvents()) {
+        if (ev.type === 'parry') parries++;
+        if (ev.type === 'hit' && ev.enemy === h && firstHitAt < 0) firstHitAt = sim.time;
+      }
+    }
+    expect(parries).toBeGreaterThanOrEqual(p.charges);
+    expect(h.hp).toBeLessThan(h.maxHp);
+    // with no shots coming in, a used charge comes back after `regen` seconds
+    const q = sim.spawn('hexguard', 0, 1800);
+    q.parryCharges = 0;
+    q.parryCd = p.regen;
+    for (let i = 0; i < Math.ceil(p.regen * 60) + 2; i++) sim.update(1 / 60);
+    expect(q.parryCharges).toBeGreaterThanOrEqual(1);
+  });
+});

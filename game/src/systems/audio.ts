@@ -236,6 +236,13 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'parry': // a dull waxy tock
+        this.tone(420, 0.06, 'square', 0.035, 300);
+        break;
+      case 'melt': // a soft sliding drip
+        this.tone(700, 0.25, 'sine', 0.045, 260);
+        this.tone(520, 0.2, 'triangle', 0.03, 200, 0.06);
+        break;
       case 'swarm': // an angry buzzing cloud
         this.tone(180, 0.5, 'sawtooth', 0.035, 220);
         this.tone(186, 0.5, 'sawtooth', 0.03, 230);

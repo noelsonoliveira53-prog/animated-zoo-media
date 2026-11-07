@@ -68,6 +68,8 @@ export interface EnemyDef {
   dodge?: number; // chance (0..1) to sidestep a single-target tower shot (splash, chains and spells always land)
   ward?: { radius: number; cut: number }; // allies within radius (not itself) take this fraction less damage of every type
   snatch?: { radius: number; cooldown: number }; // flyer: carries off the nearest soldier within radius (it must respawn), on a cooldown
+  wax?: { armor: number; melt: number }; // a waxy coat adds `armor` until it has soaked melt × maxHp of magic damage, then melts off for good
+  parry?: { charges: number; regen: number }; // its comb-shield turns aside a whole single-target tower shot per charge (splash, chains' jumps and spells still land); regains one charge every regen s
   rile?: { perSlow: number; max: number }; // every slow it suffers (at most twice a second) adds perSlow to its speed for good, up to +max
   grief?: { radius: number; armor: number }; // on death, allies within radius gain this much armor for good (capped at 85%)
   lifesteal?: number; // heals this fraction of the melee damage it deals to soldiers and heroes
@@ -153,7 +155,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean; comb?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

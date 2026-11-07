@@ -56,6 +56,9 @@ export interface Enemy {
   riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
+  waxLeft: number; // Waxback: magic damage still to soak before its coat melts (0 = melted or none)
+  parryCharges: number; // Hexguard Wasp: shots its comb-shield can still turn aside
+  parryCd: number;
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
@@ -195,6 +198,8 @@ export type SimEvent =
   | { type: 'leech'; enemy: Enemy; amount: number }
   | { type: 'mist'; enemy: Enemy; on: boolean }
   | { type: 'dodge'; enemy: Enemy }
+  | { type: 'parry'; enemy: Enemy; left: number }
+  | { type: 'melt'; enemy: Enemy }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -918,7 +923,7 @@ export class BattleSim {
       enraged: false,
       hasteTime: 0,
       hasteMult: 1,
-      armor: def.armor,
+      armor: def.armor + (def.wax?.armor ?? 0),
       landed: false,
       swoopCd: def.swoop ? def.swoop.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
@@ -936,6 +941,9 @@ export class BattleSim {
       riledAt: -99,
       snatchCd: def.snatch ? def.snatch.cooldown * 0.5 : 0,
       phased: false,
+      waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
+      parryCharges: def.parry?.charges ?? 0,
+      parryCd: def.parry?.regen ?? 0,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
@@ -992,6 +1000,13 @@ export class BattleSim {
       if (e.def.drum) this.tickDrum(e, dt);
       if (e.def.phase) this.tickPhase(e, dt);
       if (e.def.snatch) this.tickSnatch(e, dt);
+      if (e.def.parry && e.parryCharges < e.def.parry.charges) {
+        e.parryCd -= dt;
+        if (e.parryCd <= 0) {
+          e.parryCharges++;
+          e.parryCd = e.def.parry.regen;
+        }
+      }
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -1793,6 +1808,13 @@ export class BattleSim {
         this.events.push({ type: 'dodge', enemy: target });
         return;
       }
+      if (target.parryCharges > 0) {
+        // Hexguard Wasp: the comb-shield takes the whole shot, and a cell of it cracks
+        if (target.parryCharges === target.def.parry!.charges) target.parryCd = target.def.parry!.regen;
+        target.parryCharges--;
+        this.events.push({ type: 'parry', enemy: target, left: target.parryCharges });
+        return;
+      }
       this.damage(target, p);
       if (p.chain) this.chainFrom(target, p);
     }
@@ -1915,6 +1937,15 @@ export class BattleSim {
       // Kilnback: the baked shell cracks (this hit already met the thick crust).
       e.armor = e.def.armor;
       this.events.push({ type: 'crack', enemy: e });
+    }
+    if (e.def.wax && e.waxLeft > 0 && type === 'magic' && dmg > 0) {
+      // Waxback: spells soften the coat until it slides off in one go
+      e.waxLeft -= dmg;
+      if (e.waxLeft <= 0) {
+        e.waxLeft = 0;
+        e.armor = Math.max(e.def.armor, e.armor - e.def.wax.armor);
+        this.events.push({ type: 'melt', enemy: e });
+      }
     }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     if (e.def.harden && dmg > 0) e.armor = Math.min(e.def.harden.max, e.armor + e.def.harden.perHit);

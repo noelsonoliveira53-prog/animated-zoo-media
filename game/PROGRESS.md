@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **63** (next balance pass at iteration 65)
+Iteration counter: **64** (next balance pass at iteration 65)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -484,13 +484,17 @@ Iteration counter: **63** (next balance pass at iteration 65)
   stretch at (600, 240), so pads by the crossing cover the road twice. 13 pads, 16 waves mixing all three Galecrest
   enemies with guests. Long single roads are generous (1.8 was 100/100/92), so it sits at hpMult 2.6. Screenshot
   `63.png`. 150 tests.
+- [x] **Iter 64 — Galecrest level 34: Three Winds.** West, north and south roads merge into one tail (two merge points;
+  the west and north roads run 180 px apart with pads between them). 13 pads, 16 waves, hpMult 1.55. First draft was
+  unwinnable (25/0/0 at 1.8): the north road is only 1,100 px, and Cloudrams there never took steady enough fire to stop
+  regrowing, so Cloudrams and Bogbrutes now stay off it and the late south Galehound packs were trimmed. Screenshot
+  `64.png`. 150 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 7 level 34.
-2. Region 7 finale (level 35) with a Galecrest boss.
+1. Region 7 finale (level 35) with a Galecrest boss.
 4. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
 
 ## Known Bugs
@@ -510,6 +514,8 @@ Galehounds were the main leak; Cloudrams on the north road second.
 road is far shorter than the other, keep fast packs off the short road.
 **Iteration 63:** 33 Spiral Gale 100/75/0 at hpMult 2.6 (sweep: 1.4 → 100/100/100, 2.1 → 100/100/8, 2.4 → 100/92/0,
 2.8 → 100/50/0, 3.2 → 42/17/0).
+**Iteration 64:** 34 Three Winds 92/58/33 at hpMult 1.55 (1.4 → 100/92/100, 1.5 → 92/67/42, 1.9 → 17/0/0). The novice
+(Bramble) holds the merge well, so it outscores its usual curve here; regen enemies want the longest road.
 
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·

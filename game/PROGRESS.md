@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
 
-Iteration counter: **8** (next balance pass at iteration 10)
+Iteration counter: **9** (next iteration = 10 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -73,22 +73,36 @@ Iteration counter: **8** (next balance pass at iteration 10)
   the second tap buys. Crested tower art per branch, tinted shots, lightning effect + zap sound. The
   autoplayer buys specializations once everything is maxed. Sell refunds include the spec. 8 new tests (61 total).
 
+- [x] **Iter 9** — **Home village** (`VillageScene`, rules in `systems/village.ts`, data in `data/buildings.ts`).
+  22×13 grid with 8 building types: **Grove Hall** (town hall, 5 levels, gates counts/levels), **Acorn Mine**
+  (coins/hour), **Glowsap Tap** (glowsap/hour, the second resource), **Burrow Vault** (storage), **Builder
+  Burrow** (each = 1 builder), **Defense Workshop**, **Ranger Lodge** (for raids later), **Bramble Wall**.
+  Real-time construction timers (keep running while away), production accumulates offline up to each
+  producer's capacity, storage cap, builders limit, Grove Hall requirements and max counts. Tap a producer
+  to harvest (bubble shows when ready); info panel with upgrade cost/time and a progress bar; Build shop;
+  placement and move modes with a green/red snapped ghost. Procedural art for every building level, coin/
+  glowsap/hammer icons. **Battle links:** campaign wins pay village resources (more for first clears and
+  new stars, shown on the victory panel); the Defense Workshop gives +5% tower damage per level in battle.
+  Menu now has Campaign + Village. 10 new tests (71 total).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Home base (village) scene: grid, Town Hall, Coin Mine, Glowsap Well, Storage, builders, timed upgrades; campaign rewards feed the village.
-2. Village buildings grant battle perks (e.g. Defense Workshop unlocks/boosts towers).
-3. Levels 6–15+, multi-path levels.
-4. Raid mode: AI villages, train troops in Barracks, deploy to attack.
-5. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
-6. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-7. Ambient music loop (procedural).
+1. More village → battle perks: Grove Hall level = +start coins; Ranger Lodge = Grove Call gets stronger;
+   persistent hero levels bought with Glowsap.
+2. Levels 6–15+, multi-path levels.
+3. Raid mode: AI villages, train troops in Barracks, deploy to attack.
+4. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
+5. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+6. Ambient music loop (procedural).
 
 ## Known Bugs
 - (none known)
 
 ## Ideas parked
+- Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
+- Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
 - Pause menu with "Quit to map" / "Restart" (currently only via the end panel).
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 - Persistent hero levels across battles (meta progression) — currently levels reset each battle.

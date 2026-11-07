@@ -56,20 +56,27 @@ export class MenuScene extends Phaser.Scene {
       .text(GAME_W / 2, 290, 'Hold the Mossgate. Stop the Murkhorde.', textStyle(20, TEXT.cream, false))
       .setOrigin(0.5);
 
-    // Campaign entry + progress
-    new Button(this, 460, 420, 'Campaign', {
+    // Campaign + village entries, and progress
+    new Button(this, 460, 390, 'Campaign', {
       width: 360,
-      height: 80,
-      fontSize: 34,
+      height: 74,
+      fontSize: 32,
       color: 0xff9f43,
       onClick: () => this.scene.start('WorldMap'),
     });
-    this.add.image(400, 500, 'star').setScale(0.6);
-    this.add.text(424, 500, `${totalStars(save.stars)} / ${LEVELS.length * 3} stars earned`, textStyle(20)).setOrigin(0, 0.5);
+    new Button(this, 460, 480, 'Village', {
+      width: 360,
+      height: 74,
+      fontSize: 32,
+      color: C.leaf,
+      onClick: () => this.scene.start('Village'),
+    });
+    this.add.image(380, 556, 'star').setScale(0.6);
+    this.add.text(404, 556, `${totalStars(save.stars)} / ${LEVELS.length * 3} stars earned`, textStyle(20)).setOrigin(0, 0.5);
 
     this.buildHeroPicker();
 
-    this.add.text(16, GAME_H - 30, 'v0.3 — prototype', textStyle(14, TEXT.dim, false));
+    this.add.text(16, GAME_H - 30, 'v0.4 — prototype', textStyle(14, TEXT.dim, false));
   }
 
   private buildHeroPicker(): void {

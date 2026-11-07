@@ -6,7 +6,8 @@ import { SPELLS, SPELL_ORDER } from '../data/spells';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
-import { loadSave, recordStars, starsForLives, writeSave } from '../systems/save';
+import { ensureVillage, loadSave, recordStars, starsForLives, writeSave } from '../systems/save';
+import { addResources, battlePerks, battleReward } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
@@ -67,7 +68,8 @@ export class BattleScene extends Phaser.Scene {
   init(data: { levelIndex?: number }): void {
     this.levelIndex = data.levelIndex ?? 0;
     this.level = LEVELS[this.levelIndex];
-    this.sim = new BattleSim(this.level, loadSave().hero);
+    const save = loadSave();
+    this.sim = new BattleSim(this.level, save.hero, battlePerks(save.village));
     this.heroSprite = null;
     this.heroSelected = false;
     this.speed = 1;
@@ -1136,8 +1138,14 @@ export class BattleScene extends Phaser.Scene {
     this.ended = true;
     this.closeMenu();
     const stars = won ? starsForLives(this.sim.lives, this.level.lives) : 0;
+    let reward = { coins: 0, glowsap: 0 };
     if (won) {
-      writeSave(recordStars(loadSave(), this.level.id, stars));
+      const before = loadSave();
+      const prevStars = before.stars[this.level.id] ?? 0;
+      const after = recordStars(before, this.level.id, stars);
+      const want = battleReward(this.levelIndex, prevStars, stars);
+      reward = addResources(ensureVillage(after), want.coins, want.glowsap);
+      writeSave(after);
       sfx.victory();
     } else {
       sfx.defeat();
@@ -1160,9 +1168,13 @@ export class BattleScene extends Phaser.Scene {
     }
     panel.add(
       this.add
-        .text(0, 40, won ? `Lives kept: ${this.sim.lives}/${this.level.lives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
+        .text(0, 30, won ? `Lives kept: ${this.sim.lives}/${this.level.lives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
         .setOrigin(0.5),
     );
+    if (won) {
+      const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
+      panel.add(this.add.text(0, 64, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
+    }
     const hasNext = won && this.levelIndex + 1 < LEVELS.length;
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,

@@ -2,6 +2,9 @@ import Phaser from 'phaser';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS } from '../data/towers';
 import { HEROES } from '../data/heroes';
+import { BUILDINGS, type BuildingId } from '../data/buildings';
+
+export const TILE = 46;
 import { C } from '../ui/theme';
 
 // Generates every texture in code. No image files are shipped.
@@ -17,6 +20,9 @@ export class BootScene extends Phaser.Scene {
       for (const sp of def.specs) this.makeTower(def.id, sp.color, def.tiers.length, `tower_${def.id}_${sp.id}`);
     }
     for (const id of Object.keys(HEROES)) this.makeHero(id);
+    for (const def of Object.values(BUILDINGS)) {
+      for (let lvl = 1; lvl <= def.levels.length; lvl++) this.makeBuilding(def.id, lvl);
+    }
     this.makeMisc();
     this.scene.start('Menu');
   }
@@ -271,6 +277,168 @@ export class BootScene extends Phaser.Scene {
       }
     }
     g.generateTexture(`enemy_${id}`, s, s);
+    g.destroy();
+  }
+
+  /** Village buildings in a top-down 3/4 view. Bigger and fancier with each level. */
+  private makeBuilding(id: BuildingId, lvl: number): void {
+    const def = BUILDINGS[id];
+    const S = def.size * TILE;
+    const g = this.g();
+    const cx = S / 2;
+    const cy = S / 2;
+    const k = 0.8 + lvl * 0.05; // grows a little per level
+    const dark = Phaser.Display.Color.IntegerToColor(def.color).darken(25).color;
+    // ground plate
+    g.fillStyle(0x000000, 0.18);
+    g.fillRoundedRect(4, 8, S - 8, S - 8, 10);
+    g.fillStyle(0x8a9a5a, 1);
+    g.fillRoundedRect(3, 3, S - 6, S - 8, 10);
+    g.lineStyle(2, 0x6a7a44, 1);
+    g.strokeRoundedRect(3, 3, S - 6, S - 8, 10);
+    g.lineStyle(3, C.ink, 1);
+    switch (id) {
+      case 'townhall': {
+        // giant hollow oak
+        g.fillStyle(0x6b4a2b, 1);
+        g.fillRoundedRect(cx - 24 * k, cy - 6, 48 * k, 50 * k, 12);
+        g.strokeRoundedRect(cx - 24 * k, cy - 6, 48 * k, 50 * k, 12);
+        g.fillStyle(0x3b2a1a, 1);
+        g.fillEllipse(cx, cy + 30 * k, 20, 26);
+        g.fillStyle(C.gold, 1);
+        g.fillCircle(cx, cy + 14, 4);
+        const leaf = [0x3f7f34, 0x4b8f3a, 0x5fa848];
+        for (let i = 0; i < 5 + lvl; i++) {
+          const a = (i / (5 + lvl)) * Math.PI * 2;
+          g.fillStyle(leaf[i % 3], 1);
+          g.fillCircle(cx + Math.cos(a) * 30 * k, cy - 24 + Math.sin(a) * 18 * k, 22 * k);
+        }
+        g.fillStyle(0x6fbf52, 1);
+        g.fillCircle(cx, cy - 30, 26 * k);
+        g.lineStyle(2.5, C.ink, 0.8);
+        g.strokeCircle(cx, cy - 30, 26 * k);
+        // banners per level
+        for (let i = 0; i < lvl - 1; i++) {
+          const bx = cx - 40 + i * 26;
+          g.lineStyle(2, 0x5a3b22, 1);
+          g.lineBetween(bx, S - 20, bx, S - 52);
+          g.fillStyle(C.gold, 1);
+          g.fillTriangle(bx + 1, S - 52, bx + 1, S - 40, bx + 14, S - 46);
+        }
+        break;
+      }
+      case 'coinmine': {
+        g.fillStyle(0x8a8578, 1);
+        g.fillEllipse(cx, cy, 70 * k, 56 * k);
+        g.strokeEllipse(cx, cy, 70 * k, 56 * k);
+        g.fillStyle(0x2a2420, 1);
+        g.fillEllipse(cx, cy + 6, 26, 22);
+        g.fillStyle(0x7a5232, 1);
+        g.fillRect(cx - 18, cy + 18, 36, 12);
+        g.strokeRect(cx - 18, cy + 18, 36, 12);
+        g.fillStyle(C.gold, 1);
+        for (let i = 0; i < 2 + lvl; i++) g.fillCircle(cx - 12 + (i % 4) * 8, cy + 16 - Math.floor(i / 4) * 5, 4.5);
+        break;
+      }
+      case 'sapwell': {
+        g.fillStyle(0x7a5232, 1);
+        g.fillEllipse(cx, cy + 4, 56 * k, 40 * k);
+        g.strokeEllipse(cx, cy + 4, 56 * k, 40 * k);
+        g.fillStyle(0xa8784a, 1);
+        g.fillEllipse(cx, cy - 2, 46 * k, 28 * k);
+        g.lineStyle(1.5, 0x7a5232, 1);
+        g.strokeEllipse(cx, cy - 2, 30 * k, 18 * k);
+        g.strokeEllipse(cx, cy - 2, 14 * k, 8 * k);
+        g.fillStyle(0x9be86a, 0.35 + lvl * 0.08);
+        g.fillCircle(cx + 22, cy + 18, 14);
+        g.fillStyle(0xc8ff8a, 1);
+        g.fillCircle(cx + 22, cy + 18, 7);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeCircle(cx + 22, cy + 18, 7);
+        break;
+      }
+      case 'vault': {
+        g.fillStyle(0x6a9a48, 1);
+        g.fillEllipse(cx, cy, 68 * k, 56 * k);
+        g.strokeEllipse(cx, cy, 68 * k, 56 * k);
+        g.fillStyle(0x5a5a64, 1);
+        g.fillCircle(cx, cy + 4, 16);
+        g.strokeCircle(cx, cy + 4, 16);
+        g.fillStyle(0x9a9aa4, 1);
+        g.fillCircle(cx, cy + 4, 6);
+        g.fillStyle(0x9a6a40, 1);
+        for (let i = 0; i < lvl; i++) g.fillRect(cx + 18 + (i % 2) * 8, cy + 12 - Math.floor(i / 2) * 9, 9, 8);
+        break;
+      }
+      case 'builderhut': {
+        g.fillStyle(0x8a5a32, 1);
+        for (let i = 0; i < 5; i++) g.fillRect(cx - 26 + i * 11, cy - 10, 9, 34);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeRect(cx - 26, cy - 10, 53, 34);
+        g.fillStyle(0xb5651d, 1);
+        g.fillTriangle(cx - 32, cy - 8, cx + 32, cy - 8, cx, cy - 34);
+        g.lineStyle(3, C.ink, 1);
+        g.strokeTriangle(cx - 32, cy - 8, cx + 32, cy - 8, cx, cy - 34);
+        g.fillStyle(0x3b2a1a, 1);
+        g.fillRect(cx - 7, cy + 6, 14, 18);
+        break;
+      }
+      case 'barracks': {
+        g.fillStyle(0x9a6a40, 1);
+        g.fillRect(cx - 44 * k, cy - 10, 88 * k, 44);
+        g.strokeRect(cx - 44 * k, cy - 10, 88 * k, 44);
+        g.fillStyle(def.color, 1);
+        g.fillTriangle(cx - 52 * k, cy - 8, cx + 52 * k, cy - 8, cx, cy - 46);
+        g.strokeTriangle(cx - 52 * k, cy - 8, cx + 52 * k, cy - 8, cx, cy - 46);
+        g.fillStyle(0x3b2a1a, 1);
+        g.fillRect(cx - 10, cy + 10, 20, 24);
+        g.lineStyle(2, 0x5a3b22, 1);
+        g.lineBetween(cx + 40, cy + 34, cx + 40, cy - 30);
+        g.fillStyle(dark, 1);
+        g.fillTriangle(cx + 41, cy - 30, cx + 41, cy - 14, cx + 58, cy - 22);
+        break;
+      }
+      case 'workshop': {
+        g.fillStyle(0x7a6a5a, 1);
+        g.fillRect(cx - 46 * k, cy - 6, 92 * k, 40);
+        g.strokeRect(cx - 46 * k, cy - 6, 92 * k, 40);
+        g.fillStyle(def.color, 1);
+        g.fillRect(cx - 52 * k, cy - 22, 104 * k, 18);
+        g.strokeRect(cx - 52 * k, cy - 22, 104 * k, 18);
+        // gear
+        g.fillStyle(0xd0c8b8, 1);
+        for (let i = 0; i < 8; i++) {
+          const a = (i / 8) * Math.PI * 2;
+          g.fillRect(cx + Math.cos(a) * 16 - 3, cy - 40 + Math.sin(a) * 16 - 3, 6, 6);
+        }
+        g.fillCircle(cx, cy - 40, 13);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeCircle(cx, cy - 40, 13);
+        g.fillStyle(0x7a6a5a, 1);
+        g.fillCircle(cx, cy - 40, 5);
+        for (let i = 0; i < lvl; i++) {
+          g.fillStyle(0xb07cff, 1);
+          g.fillCircle(cx - 30 + i * 14, cy + 20, 4);
+        }
+        break;
+      }
+      case 'wall': {
+        g.clear();
+        g.fillStyle(0x000000, 0.2);
+        g.fillRoundedRect(2, 8, S - 4, S - 8, 8);
+        const col = [0x4b8f3a, 0x3f7a6a, 0x5a5a64][lvl - 1] ?? 0x4b8f3a;
+        g.fillStyle(col, 1);
+        g.fillRoundedRect(2, 2, S - 4, S - 8, 8);
+        g.lineStyle(2.5, C.ink, 1);
+        g.strokeRoundedRect(2, 2, S - 4, S - 8, 8);
+        g.fillStyle(0xffffff, 0.2);
+        g.fillCircle(14, 12, 6);
+        g.fillStyle(0xe0d0a0, 1);
+        for (let i = 0; i < 3; i++) g.fillTriangle(8 + i * 12, 8, 12 + i * 12, 8, 10 + i * 12, 2);
+        break;
+      }
+    }
+    g.generateTexture(`bld_${id}_${lvl}`, S, S);
     g.destroy();
   }
 
@@ -643,6 +811,31 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
     proj('proj_hero_ember', 0xff9a3c, 5);
     proj('proj_hero_bramble', 0xffffff, 3);
+
+    // glowsap icon (glowing drop)
+    g = this.g();
+    g.fillStyle(0x9be86a, 0.35);
+    g.fillCircle(14, 17, 13);
+    g.fillStyle(0x9be86a, 1);
+    g.fillCircle(14, 18, 9);
+    g.fillTriangle(6, 15, 22, 15, 14, 2);
+    g.lineStyle(2.5, C.ink, 1);
+    g.strokeCircle(14, 18, 9);
+    g.fillStyle(0xffffff, 0.8);
+    g.fillCircle(11, 15, 3);
+    g.generateTexture('icon_sap', 28, 30);
+    g.destroy();
+
+    // hammer icon (builders)
+    g = this.g();
+    g.fillStyle(0x7a5232, 1);
+    g.fillRect(12, 8, 5, 20);
+    g.fillStyle(0x9a9aa4, 1);
+    g.fillRoundedRect(4, 4, 22, 9, 3);
+    g.lineStyle(2, C.ink, 1);
+    g.strokeRoundedRect(4, 4, 22, 9, 3);
+    g.generateTexture('icon_hammer', 30, 30);
+    g.destroy();
 
     // particle
     g = this.g();

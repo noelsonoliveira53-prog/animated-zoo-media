@@ -174,8 +174,12 @@ export class BattleSim {
 
   private nextUid = 1;
 
-  constructor(level: LevelDef, heroId: string | null = null) {
+  /** Multiplier on tower shot damage (from the village Defense Workshop). */
+  towerDamageMult = 1;
+
+  constructor(level: LevelDef, heroId: string | null = null, opts: { towerDamageMult?: number } = {}) {
     this.level = level;
+    this.towerDamageMult = opts.towerDamageMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
     this.coins = level.startCoins;
     this.lives = level.lives;
@@ -966,7 +970,7 @@ export class BattleSim {
           targetUid: target.uid,
           lastTargetPos: aim,
           speed: stats.projectileSpeed,
-          damage: stats.damage,
+          damage: stats.damage * this.towerDamageMult,
           damageType: t.def.damageType,
           splash: stats.splash ?? 0,
           slow: stats.slow,

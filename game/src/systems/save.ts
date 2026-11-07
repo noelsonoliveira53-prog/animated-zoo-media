@@ -1,16 +1,18 @@
 // Persistent progress in localStorage. Every access is guarded: storage can be missing or throw.
+import { newVillage, type VillageState } from './village';
 
 export interface SaveData {
   version: number;
   stars: Record<string, number>; // level id -> best stars (0-3)
   hero: string; // selected hero id
+  village: VillageState | null; // created on first visit
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -37,6 +39,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       version: 1,
       stars: { ...base.stars, ...(parsed.stars ?? {}) },
       hero: typeof parsed.hero === 'string' ? parsed.hero : base.hero,
+      village: parsed.village && Array.isArray(parsed.village.buildings) ? parsed.village : null,
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {
@@ -66,4 +69,10 @@ export function starsForLives(lives: number, maxLives: number): number {
   if (frac >= 0.9) return 3;
   if (frac >= 0.5) return 2;
   return 1;
+}
+
+/** The village, creating the starter village on first use. */
+export function ensureVillage(data: SaveData, now = Date.now()): VillageState {
+  if (!data.village) data.village = newVillage(now);
+  return data.village;
 }

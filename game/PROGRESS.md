@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **130** (next balance pass at iteration 135)
+Iteration counter: **131** (next balance pass at iteration 135)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -910,6 +910,9 @@ Iteration counter: **130** (next balance pass at iteration 135)
   Powder Row was a touch easy for a second level, so its enemy health went from 2.85× to 2.95×. Polish: battle
   decorations (trees, barrels, buoys, crystals) no longer spawn under the hero portrait or the spell buttons.
   Screenshot `screenshots/130.png`. 189 tests.
+- **Iteration 131** (hero parity): Bramble and Wren trailed the other heroes, so both got a buff. Bramble: health
+  260 → 300, Earthshake damage 70 → 85. Wren: bolt damage 16 → 18, attack rate 1.0 → 1.15, Hush damage 30 → 36.
+  Screenshot `screenshots/131.png` (Bramble's Earthshake). 189 tests.
 
 ## In Progress
 - (none)
@@ -917,7 +920,6 @@ Iteration counter: **130** (next balance pass at iteration 135)
 ## Backlog (ranked)
 1. Region 16, or a breather (raid or village variety, more phone QA).
 2. Field Guide holds 30 enemies per page and has 68 now (3 pages). Region 16 would still fit on page 3.
-3. Bramble and Wren trail the other heroes (75% vs 79–90% in the iteration 125 comparison); consider a small buff.
 
 ## Known Bugs
 - (none known)
@@ -927,6 +929,11 @@ Iteration counter: **130** (next balance pass at iteration 135)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 131** (hero comparison, expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% → 77%
+after the first buff (Earthshake 85, Wren bolt 18 and ring 36), then **79%** with health 300; Wren 77% → **85%** with
+attack rate 1.15. Both now sit inside the others' 79–90% range. Only the novice strategy uses Bramble, so the tuned
+expert and casual level bands are unchanged.
+
 **Iteration 130** (full sweep, 12 seeds; expert / casual / novice):
 - Levels 0–57 were all in band; spot values: 4 Murkmaw's Den 92/58/83 · 29 Kaleidrax's Spire 83/42/58 ·
   54 Heart of the Orchard 75/50/0.

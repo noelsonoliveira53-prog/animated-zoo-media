@@ -1356,8 +1356,9 @@ export class BattleSim {
   /** Wren's Scholar's Eye: enemies that fall near her pay extra coins. */
   bountyMult(e: Enemy): number {
     const h = this.hero;
-    if (!h || !h.alive || h.def.passive.kind !== 'bounty') return 1;
-    return Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= h.def.passive.radius ? 1 + h.def.passive.bonus : 1;
+    const daily = this.mods.bountyMult;
+    if (!h || !h.alive || h.def.passive.kind !== 'bounty') return daily;
+    return daily * (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= h.def.passive.radius ? 1 + h.def.passive.bonus : 1);
   }
 
   /** In the air right now (flyers, except while a swooper is landed). */
@@ -1367,7 +1368,7 @@ export class BattleSim {
 
   /** Damage resistances, using the enemy's current armor. */
   res(e: Enemy): { armor: number; magicResist: number } {
-    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e)), magicResist: e.mr };
+    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e) + this.mods.armorBonus), magicResist: e.mr };
   }
 
   /** Barkwardens toughen nearby allies' bark: the strongest aura in range adds armor (they don't stack). */

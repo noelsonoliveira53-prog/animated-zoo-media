@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **147** (next balance pass at iteration 150)
+Iteration counter: **148** (next balance pass at iteration 150)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1043,6 +1043,13 @@ Iteration counter: **147** (next balance pass at iteration 150)
   - `scripts/guide-spells-check.mjs` now clicks the Spells tab at its new position. New
     `scripts/guide-raids-check.mjs` covers desktop and phone. Screenshots `screenshots/147.png` (Otter page) and
     `147-phone-camp.png` (Sludge Pit page on a phone). 199 tests.
+- **Iteration 148** (daily variety): two new modifiers that daily challenges and endless mutators can roll.
+  - **Golden Harvest** (good): kills pay 50% more coins (`Modifiers.bountyMult`, stacking with Wren's bounty aura).
+  - **Ironbark**: every enemy gets +15% armor (`Modifiers.armorBonus`, added in `res()`, capped at 85%), which
+    pushes players toward magic towers.
+  - 10 modifiers in total. Today's (2026-11-07) daily happens to roll Thin Hedge + Golden Harvest.
+  - Tests for both. Screenshots `screenshots/148.png` (daily banner with the new twist) and `148-menu.png`.
+    201 tests.
 
 ## In Progress
 - (none)

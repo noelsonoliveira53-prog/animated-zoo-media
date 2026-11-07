@@ -9,6 +9,8 @@ export interface Modifiers {
   noHero: boolean;
   lives: number | null; // override
   waveGapMult: number; // time between waves
+  bountyMult: number; // coins per kill
+  armorBonus: number; // added to every enemy's armor
 }
 
 export const NO_MODS: Modifiers = {
@@ -20,6 +22,8 @@ export const NO_MODS: Modifiers = {
   noHero: false,
   lives: null,
   waveGapMult: 1,
+  bountyMult: 1,
+  armorBonus: 0,
 };
 
 export interface ModifierDef {
@@ -39,6 +43,8 @@ export const DAILY_MODIFIERS: ModifierDef[] = [
   { id: 'nohero', name: 'Hero on Leave', text: 'Your hero stays home.', apply: { noHero: true } },
   { id: 'glass', name: 'Thin Hedge', text: 'Only 5 lives.', apply: { lives: 5 } },
   { id: 'frenzy', name: 'Frenzy', text: 'Waves come twice as fast.', apply: { waveGapMult: 0.5 } },
+  { id: 'harvest', name: 'Golden Harvest', text: 'Kills pay 50% more coins.', apply: { bountyMult: 1.5 }, good: true },
+  { id: 'ironbark', name: 'Ironbark', text: 'Enemies have +15% armor.', apply: { armorBonus: 0.15 } },
 ];
 
 export function combine(ids: string[]): Modifiers {
@@ -52,6 +58,8 @@ export function combine(ids: string[]): Modifiers {
     if (a.costMult) m.costMult *= a.costMult;
     if (a.startCoinsMult) m.startCoinsMult *= a.startCoinsMult;
     if (a.waveGapMult) m.waveGapMult *= a.waveGapMult;
+    if (a.bountyMult) m.bountyMult *= a.bountyMult;
+    if (a.armorBonus) m.armorBonus += a.armorBonus;
     if (a.noSpells) m.noSpells = true;
     if (a.noHero) m.noHero = true;
     if (a.lives) m.lives = a.lives;

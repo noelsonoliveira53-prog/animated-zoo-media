@@ -43,3 +43,25 @@ describe('daily challenge', () => {
     expect(a.dist).toBeGreaterThan(b.dist);
   });
 });
+
+describe('Golden Harvest and Ironbark', () => {
+  const lvl = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20,
+    paths: [[{ x: 0, y: 300 }, { x: 1200, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'shellback', count: 1, interval: 1 }] }],
+    theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 } };
+  it('Golden Harvest pays 50% more per kill', () => {
+    const plain = new BattleSim(lvl, null);
+    const gold = new BattleSim(lvl, null, { mods: combine(['harvest']) });
+    for (const s of [plain, gold]) {
+      const e = s.spawn('shellback', 0, 100);
+      (s as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(e, 99999);
+    }
+    expect(gold.coins - 100).toBe(Math.round((plain.coins - 100) * 1.5));
+  });
+  it('Ironbark adds armor to every enemy', () => {
+    const plain = new BattleSim(lvl, null);
+    const iron = new BattleSim(lvl, null, { mods: combine(['ironbark']) });
+    const a = plain.spawn('shellback', 0, 100);
+    const b = iron.spawn('shellback', 0, 100);
+    expect(iron.res(b).armor).toBeCloseTo(Math.min(0.85, plain.res(a).armor + 0.15));
+  });
+});

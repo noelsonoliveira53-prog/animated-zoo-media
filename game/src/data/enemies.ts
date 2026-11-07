@@ -1,0 +1,44 @@
+import type { EnemyDef } from './types';
+
+// The Murkhorde: bog-born critters that creep out of the Gloomfen to raid the sanctuary.
+export const ENEMIES: Record<string, EnemyDef> = {
+  mudling: {
+    id: 'mudling',
+    name: 'Mudling',
+    blurb: 'A soggy little blob of bog. Weak alone, annoying in crowds.',
+    hp: 40,
+    speed: 55,
+    armor: 0,
+    magicResist: 0,
+    bounty: 4,
+    livesCost: 1,
+    radius: 11,
+    color: 0x7a5a3a,
+  },
+  skitter: {
+    id: 'skitter',
+    name: 'Skitter',
+    blurb: 'A fast swamp beetle. Hard to pin down, easy to squash.',
+    hp: 26,
+    speed: 105,
+    armor: 0,
+    magicResist: 0,
+    bounty: 4,
+    livesCost: 1,
+    radius: 9,
+    color: 0x3b8f6a,
+  },
+  shellback: {
+    id: 'shellback',
+    name: 'Shellback',
+    blurb: 'Wears a crust of river stones. Arrows bounce off; spells do not.',
+    hp: 120,
+    speed: 40,
+    armor: 0.6,
+    magicResist: 0,
+    bounty: 10,
+    livesCost: 2,
+    radius: 14,
+    color: 0x6b6f7a,
+  },
+};

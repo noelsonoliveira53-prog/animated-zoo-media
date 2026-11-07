@@ -39,6 +39,10 @@ const GRID_W = VILLAGE_COLS * TILE;
 const GRID_H = VILLAGE_ROWS * TILE;
 const OX = Math.round((GAME_W - GRID_W) / 2);
 const OY = 92;
+/** Objects at this depth or above are HUD/panels and stay fixed when the village is zoomed. */
+const UI_DEPTH = 900;
+const ZOOM_IN = 1.7;
+const DRAG_SLOP = 10;
 
 interface BView {
   img: Phaser.GameObjects.Image;
@@ -58,6 +62,9 @@ export class VillageScene extends Phaser.Scene {
   private panel: Phaser.GameObjects.Container | null = null;
   private selected: number | null = null;
   private mode: Mode = { kind: 'idle' };
+  /** Fixed camera for the HUD and panels (depth >= UI_DEPTH); the main camera can zoom and pan the village. */
+  private uiCam!: Phaser.Cameras.Scene2D.Camera;
+  private drag = { down: false, x: 0, y: 0, sx: 0, sy: 0, moved: false, tapUid: -1, groundTap: false };
   private ghost: Phaser.GameObjects.Image | null = null;
   private ghostCell = { col: 0, row: 0 };
   private coinText!: Phaser.GameObjects.Text;
@@ -90,10 +97,64 @@ export class VillageScene extends Phaser.Scene {
     for (const b of this.v.buildings) this.addView(b);
     this.buildHud();
 
-    this.input.on('pointerdown', (p: Phaser.Input.Pointer) => this.onGroundTap(p));
-    this.input.on('pointermove', (p: Phaser.Input.Pointer) => this.updateGhost(p));
+    this.uiCam = this.cameras.add(0, 0, GAME_W, GAME_H);
+    this.cameras.main.setBounds(0, 0, GAME_W, GAME_H).setZoom(1);
+    this.syncCameras();
+    this.input.on('pointerdown', (p: Phaser.Input.Pointer, over: Phaser.GameObjects.GameObject[]) => {
+      this.beginDrag(p, -1);
+      if (this.zoomed() && this.mode.kind === 'idle' && over.length === 0) this.drag.groundTap = true; // decide on release (it may be a pan)
+      else this.onGroundTap(p);
+    });
+    this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
+      this.updateGhost(p);
+      if (!this.drag.down || !p.isDown || !this.zoomed()) return;
+      const dx = p.x - this.drag.x;
+      const dy = p.y - this.drag.y;
+      if (!this.drag.moved && Math.hypot(dx, dy) < DRAG_SLOP) return;
+      this.drag.moved = true;
+      const z = this.cameras.main.zoom;
+      this.cameras.main.setScroll(this.drag.sx - dx / z, this.drag.sy - dy / z);
+    });
+    this.input.on('pointerup', (p: Phaser.Input.Pointer) => {
+      const d = this.drag;
+      this.drag = { ...d, down: false, tapUid: -1, groundTap: false };
+      if (d.moved) return;
+      if (d.tapUid >= 0) this.tapBuilding(d.tapUid);
+      else if (d.groundTap) this.onGroundTap(p);
+    });
     this.time.addEvent({ delay: 250, loop: true, callback: () => this.refresh() });
     this.cameras.main.fadeIn(250, 16, 38, 27);
+  }
+
+  private beginDrag(p: Phaser.Input.Pointer, tapUid: number): void {
+    const cam = this.cameras.main;
+    this.drag = { down: true, x: p.x, y: p.y, sx: cam.scrollX, sy: cam.scrollY, moved: false, tapUid, groundTap: false };
+  }
+
+  private zoomed(): boolean {
+    return this.cameras.main.zoom > 1.01;
+  }
+
+  /** Main camera draws the village, the UI camera draws the HUD; new objects are sorted every frame. */
+  private syncCameras(): void {
+    for (const o of this.children.list) {
+      const ui = ((o as unknown as { depth?: number }).depth ?? 0) >= UI_DEPTH;
+      (o as Phaser.GameObjects.GameObject & { cameraFilter: number }).cameraFilter = ui ? this.cameras.main.id : this.uiCam.id;
+    }
+  }
+
+  update(): void {
+    this.syncCameras();
+  }
+
+  /** Toggle a closer look at the village (pans by dragging); handy on phones. */
+  toggleZoom(): void {
+    const cam = this.cameras.main;
+    const into = !this.zoomed();
+    const w = cam.getWorldPoint(GAME_W / 2, GAME_H / 2);
+    cam.setZoom(into ? ZOOM_IN : 1);
+    cam.centerOn(into ? w.x : GAME_W / 2, into ? w.y : GAME_H / 2);
+    sfx.click();
   }
 
   private persist(): void {
@@ -151,7 +212,8 @@ export class VillageScene extends Phaser.Scene {
       if (this.mode.kind !== 'idle') return; // let the ground handler place/move
       ev.stopPropagation();
       sfx.unlock();
-      this.tapBuilding(b.uid);
+      if (this.zoomed()) this.beginDrag(_p, b.uid); // zoomed in: open on release, unless the finger pans
+      else this.tapBuilding(b.uid);
     });
     const badge = this.add.text(x + 6, y + 4, '', textStyle(pf(13), TEXT.gold)).setDepth(500);
     const bar = this.add.graphics().setDepth(501);
@@ -216,6 +278,11 @@ export class VillageScene extends Phaser.Scene {
     new Button(this, GAME_W - 110, 40, 'Campaign', { width: 180, height: 50, fontSize: 20, color: 0xff9f43, onClick: () => this.leave('WorldMap') }).setDepth(902);
     new Button(this, GAME_W - 100, GAME_H - 44, 'Build', { width: 160, height: 60, fontSize: 26, color: C.leaf, onClick: () => this.openShop() }).setDepth(902);
     new Button(this, 100, GAME_H - 44, 'Raid', { width: 160, height: 60, fontSize: 26, color: C.danger, onClick: () => this.openRaid() }).setDepth(902);
+    const zoomBtn = new Button(this, GAME_W - 100, GAME_H - 112, 'Zoom in', { width: 140, height: 46, fontSize: 18, color: C.sky, onClick: () => {
+      this.toggleZoom();
+      zoomBtn.label.setText(this.zoomed() ? 'Zoom out' : 'Zoom in');
+    } });
+    zoomBtn.setDepth(902).setName('zoomBtn');
     this.refresh();
   }
 
@@ -604,8 +671,9 @@ export class VillageScene extends Phaser.Scene {
 
   private cellAt(p: Phaser.Input.Pointer, size: number): { col: number; row: number } {
     // Centre the footprint on the pointer.
-    const col = Math.round((p.worldX - OX) / TILE - size / 2);
-    const row = Math.round((p.worldY - OY) / TILE - size / 2);
+    const w = this.cameras.main.getWorldPoint(p.x, p.y);
+    const col = Math.round((w.x - OX) / TILE - size / 2);
+    const row = Math.round((w.y - OY) / TILE - size / 2);
     return { col, row };
   }
 
@@ -668,7 +736,7 @@ export class VillageScene extends Phaser.Scene {
   }
 
   private floatText(x: number, y: number, text: string, color: string): void {
-    const t = this.add.text(x, y, text, textStyle(18, color)).setOrigin(0.5).setDepth(1500);
+    const t = this.add.text(x, y, text, textStyle(18, color)).setOrigin(0.5).setDepth(850); // world layer: drawn over buildings, zooms with them
     this.tweens.add({ targets: t, y: y - 40, alpha: 0, duration: 1100, ease: 'Cubic.easeOut', onComplete: () => t.destroy() });
   }
 }

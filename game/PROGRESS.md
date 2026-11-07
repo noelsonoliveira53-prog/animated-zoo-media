@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **73** (next balance pass at iteration 75)
+Iteration counter: **74** (next balance pass at iteration 75)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -541,12 +541,18 @@ Iteration counter: **73** (next balance pass at iteration 75)
   shiftscales → a lurch for the gate). Level 40: a long west road and a short north road (light groups only) merge into a
   1,240 px tail, 12 pads, 18 waves, hpMult 1.56. Achievements **Idolbreaker** and **Pathfinder** (26 total); Ulmaroth
   joins the endless boss rotation. Region 8 complete: 40 levels. Screenshot `73.png`. 155 tests.
+- [x] **Iter 74 — Village zoom + drag-to-pan.** A "Zoom in / Zoom out" button (above Build) zooms the village 1.7×;
+  while zoomed, dragging anywhere pans (clamped to the village), and a tap only counts on release if the finger didn't
+  move, so panning never opens a building by accident. A second, fixed camera draws everything at depth ≥ 900 (HUD,
+  panels, toasts) so the UI never zooms; floating "+coins" text moved to the world layer. Placing/moving buildings uses
+  the camera's world point, so it stays exact when zoomed. Browser check `scripts/village-zoom-check.mjs` (real button,
+  real drag, tap on the moved Town Hall, zoom out); existing village/phone checks still pass. Screenshot `74.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Village: drag-to-pan on small phone screens.
+1. Iter 75 balance pass.
 2. Region 9 (levels 41–45): a new biome, enemies and boss, following the region recipe.
 3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
@@ -556,7 +562,6 @@ Iteration counter: **73** (next balance pass at iteration 75)
 ## Ideas parked
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
-- Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
 
 ## Balance Notes
 **Iteration 70** (camp sweep, 12 seeds, expert/casual/novice): unchanged from iteration 65 for levels 1–30; 31 Windgap

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **163** (next balance pass at iteration 165)
+Iteration counter: **164** (next balance pass at iteration 165)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1169,12 +1169,15 @@ Iteration counter: **163** (next balance pass at iteration 165)
 - **Iteration 163** (Highcanopy level 3): level 88 **Vinefall Crossing**. It has 11 pads and two roads of 2,500px and
   1,650px; Howlers, Mourners and Harriers mix with older enemies, and the fliers stay on the long road. Screenshot
   `screenshots/163.png`. 212 tests.
+- **Iteration 164** (Highcanopy level 4): level 89 **Thunderbough Heights**. It has 11 pads and two long roads
+  (2,520px from the left, 2,150px from the top), with the region's toughest waves before the boss. Screenshot
+  `screenshots/164.png`. 212 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Highcanopy level 89, then the finale (90) with a boss, achievements, a story card
+1. Highcanopy finale (90) with a boss, achievements, a story card
    and the endless boss rotation.
 2. A breather now and then (raid or village variety).
 3. The region picker is full at 18 regions (3×6); region 19 will need a second page or a smaller grid.
@@ -1186,6 +1189,10 @@ Iteration counter: **163** (next balance pass at iteration 165)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 164**: 89 Thunderbough Heights: 92/50/75 at hpMult 1.8, 50/8/25 at 2.05, 100/100/92 at 1.55, 100/83/92 at 1.65, and **1.72 → 83/67/83** (kept;
+expert and casual in the fourth-level band). The novice beats the casual here because it builds only arrows and magic, never slows, and so never
+riles the Howlers. That is the Highcanopy's lesson working as intended, so the novice is left high.
+
 **Iteration 163**: 88 Vinefall Crossing: 92/50/0 at hpMult 1.8 and 58/25 at 2.05. The casual's leaks were mostly Howlers (riled by its frost) and
 Thunderhoofs. **1.6 → 100/75/0** (kept, third-level band).
 

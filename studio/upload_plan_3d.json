@@ -567,5 +567,28 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "moon/mb3d_ep04.mp4",
+  "title": "Hush Little Bunny \ud83c\udf19 Lullaby for Babies & Kids | Moonbeam",
+  "description": "Hush, Little Bunny, a soft bedtime lullaby for babies and kids. Little bunny hops to bed while the owl hoots, Teddy yawns and the stars blink.\nGentle music box and piano with slow breathing to help little ones relax and fall asleep. Ages 0-6.\n\nLYRICS\nHush, little bunny, close your eyes,\nMoon is rising in the skies,\nSoft and cozy, safe and warm,\nHush, little bunny, sleep till morn.\nLittle bunny hops to bed,\nFluffy pillow for her head,\nEars fold down and paws tuck in,\nSleepy dreams are soon to begin.\nOwl says hoo from the tall oak tree,\nTeddy yawns so sleepily,\nLittle lamb curls up in a ball,\nGoodnight, goodnight, to one and all.\nBreathe in slow, like a gentle breeze,\nBreathe out slow, through the sleepy trees,\nWiggle your toes and let them rest,\nSnuggle in, you're loved the best.\nStars are blinking, one, two, three,\nNight light glowing, soft for me,\nMama sings a lullaby,\nHush now, hush now, close your eyes.\nHush, little bunny. Goodnight.",
+  "tags": [
+   "lullaby for babies",
+   "hush little bunny",
+   "bedtime song",
+   "sleep music for kids",
+   "baby sleep",
+   "goodnight song",
+   "lullabies",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ],
+  "date": "2026-11-09",
+  "time": "7:00 PM",
+  "thumb": "brand/moon/thumb_mb3d_ep04.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 158.0
  }
 ]

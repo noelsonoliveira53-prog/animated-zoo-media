@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **161** (next balance pass at iteration 165)
+Iteration counter: **162** (next balance pass at iteration 165)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1157,12 +1157,21 @@ Iteration counter: **161** (next balance pass at iteration 165)
   - The layout tests caught a pad behind the exit gate; it was moved.
   - Checks: `scripts/canopy-check.mjs` (Howler at ×1.24 after three slows; the Mourner's death raised a mudling's
     armor 0 → 0.12). Screenshots `screenshots/161.png` and `161-map.png`. 211 tests.
+- **Iteration 162** (Highcanopy level 2): level 87 **Hawkwatch Platforms** (11 pads, roads of 2,540px and 1,400px)
+  and a new enemy:
+  - **Canopy Harrier** (a rust-winged hawk, flying): `snatch` trait. Every 8s it carries off the nearest soldier
+    within 90px, killing it, so it has to respawn. Soldiers can't block flyers, which makes this a problem for
+    barracks-heavy defenses; air-capable towers have to catch it.
+  - Visuals and sound: a streak from the hawk to the soldier, a puff of feathers, "Snatched!" and a screech.
+  - Field Guide tag; endless tier at wave 74; test.
+  - Harriers come only on the long road (the fliers-on-short-roads lesson). Screenshot `screenshots/162.png`
+    (a snatch in progress). 212 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Highcanopy levels 87–89 (a third new trait on 87), then the finale (90) with a boss, achievements, a story card
+1. Highcanopy levels 88–89, then the finale (90) with a boss, achievements, a story card
    and the endless boss rotation.
 2. A breather now and then (raid or village variety).
 3. The region picker is full at 18 regions (3×6); region 19 will need a second page or a smaller grid.
@@ -1174,6 +1183,8 @@ Iteration counter: **161** (next balance pass at iteration 165)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 162**: 87 Hawkwatch Platforms: **1.8 → 100/100/0** (10.7 lives; kept, second-level band); 2.1 gave 83/33/0.
+
 **Iteration 161**: 86 Ropebridge Reach: 100/100/75 at hpMult 1.6, 100/100/50 at 1.8, 100/83/25 at 1.95, 100/75/25 at 2.1, and **1.87 → 100/100/42**
 (kept, opener band).
 

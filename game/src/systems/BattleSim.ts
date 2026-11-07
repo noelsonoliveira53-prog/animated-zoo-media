@@ -54,6 +54,7 @@ export interface Enemy {
   drumCd: number; // Barkdrum: time to its next beat
   phaseCd: number; // Mistfox: time until it fades / returns
   riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
+  snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
@@ -195,6 +196,7 @@ export type SimEvent =
   | { type: 'mist'; enemy: Enemy; on: boolean }
   | { type: 'dodge'; enemy: Enemy }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
+  | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
@@ -932,6 +934,7 @@ export class BattleSim {
       drumCd: def.drum ? def.drum.interval * 0.5 : 0,
       phaseCd: def.phase ? def.phase.interval : 0,
       riledAt: -99,
+      snatchCd: def.snatch ? def.snatch.cooldown * 0.5 : 0,
       phased: false,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
@@ -988,6 +991,7 @@ export class BattleSim {
       if (e.def.anchor) this.tickAnchor(e, dt);
       if (e.def.drum) this.tickDrum(e, dt);
       if (e.def.phase) this.tickPhase(e, dt);
+      if (e.def.snatch) this.tickSnatch(e, dt);
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -1176,6 +1180,30 @@ export class BattleSim {
       if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= w.radius) cut = Math.max(cut, w.cut);
     }
     return cut;
+  }
+
+  /** Canopy Harrier: dives on the nearest soldier in reach and carries it off (it has to respawn). */
+  private tickSnatch(e: Enemy, dt: number): void {
+    const sn = e.def.snatch!;
+    e.snatchCd -= dt;
+    if (e.snatchCd > 0) return;
+    let best: Soldier | null = null;
+    let bestD = sn.radius;
+    for (const s of this.soldiers) {
+      if (!s.alive) continue;
+      const d = Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y);
+      if (d <= bestD) {
+        bestD = d;
+        best = s;
+      }
+    }
+    if (!best) {
+      e.snatchCd = 0.3;
+      return;
+    }
+    e.snatchCd = sn.cooldown;
+    this.events.push({ type: 'snatch', enemy: e, pos: { ...best.pos } });
+    this.hurtSoldier(best, 1e9);
   }
 
   /** Mistfox: fades into mist (untouchable) for a moment, then solidifies again, on a cycle. */

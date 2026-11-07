@@ -811,6 +811,33 @@ export class BootScene extends Phaser.Scene {
         g.fillRect(cx - r * 1.12, cy + r * 0.48, r * 0.34, r * 0.05);
         break;
       }
+      case 'harrier': {
+        // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.2, cy - r * 0.1, cx - r * 1.4, cy - r * 0.45, cx - r * 0.25, cy + r * 0.3);
+        g.fillTriangle(cx + r * 0.2, cy - r * 0.1, cx + r * 1.4, cy - r * 0.45, cx + r * 0.25, cy + r * 0.3);
+        g.strokeTriangle(cx - r * 0.2, cy - r * 0.1, cx - r * 1.4, cy - r * 0.45, cx - r * 0.25, cy + r * 0.3);
+        g.strokeTriangle(cx + r * 0.2, cy - r * 0.1, cx + r * 1.4, cy - r * 0.45, cx + r * 0.25, cy + r * 0.3);
+        g.fillStyle(0x3a2418, 1);
+        g.fillTriangle(cx - r * 1.4, cy - r * 0.45, cx - r * 1.05, cy - r * 0.4, cx - r * 1.1, cy - r * 0.2);
+        g.fillTriangle(cx + r * 1.4, cy - r * 0.45, cx + r * 1.05, cy - r * 0.4, cx + r * 1.1, cy - r * 0.2);
+        g.fillStyle(0xe8d8b8, 1);
+        g.fillEllipse(cx, cy, r * 0.6, r * 1.1);
+        g.strokeEllipse(cx, cy, r * 0.6, r * 1.1);
+        g.fillStyle(0x8a5a3a, 1);
+        for (const [sx, sy] of [[-0.1, 0], [0.1, 0.2], [-0.05, 0.3]]) g.fillCircle(cx + sx * r, cy + sy * r, r * 0.05);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.2, cy + r * 0.5, cx + r * 0.2, cy + r * 0.5, cx, cy + r * 0.85);
+        g.fillCircle(cx, cy - r * 0.6, r * 0.28);
+        g.strokeCircle(cx, cy - r * 0.6, r * 0.28);
+        g.fillStyle(0xf0c040, 1);
+        g.fillTriangle(cx - r * 0.08, cy - r * 0.82, cx + r * 0.08, cy - r * 0.82, cx, cy - r * 1.0);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.1, cy - r * 0.66, r * 0.05);
+        g.fillCircle(cx + r * 0.1, cy - r * 0.66, r * 0.05);
+        break;
+      }
       case 'howler': {
         // howler monkey: shaggy brown body, dark face, long curling tail, wide-open shouting mouth
         g.lineStyle(2.5, color, 1);

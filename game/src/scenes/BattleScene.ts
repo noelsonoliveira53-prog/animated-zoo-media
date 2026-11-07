@@ -1668,6 +1668,18 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
         break;
       }
+      case 'snatch': {
+        sfx.trait('snatch');
+        // a streak from the hawk to where the soldier stood, and a puff of feathers
+        const g = this.add.graphics().setDepth(2500);
+        g.lineStyle(3, 0xc8783a, 0.9);
+        g.lineBetween(ev.enemy.pos.x, ev.enemy.pos.y - 30, ev.pos.x, ev.pos.y - 8);
+        this.tweens.add({ targets: g, alpha: 0, duration: 260, onComplete: () => g.destroy() });
+        this.particles.setParticleTint(0xd8b890);
+        this.particles.explode(10, ev.pos.x, ev.pos.y - 6);
+        this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
+        break;
+      }
       case 'rile': {
         // throttled per howler: an angry red "!" and a little hop
         const key = -2000000 - ev.enemy.uid;

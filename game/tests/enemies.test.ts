@@ -979,3 +979,26 @@ describe('Highcanopy enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'grief')).toBe(true);
   });
 });
+
+describe('Canopy Harrier', () => {
+  it('carries off the nearest soldier in reach on its cooldown, forcing a respawn', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 40; i++) sim.update(1 / 60);
+    const s = sim.soldiers[0];
+    const h = sim.spawn('harrier', 0, 100);
+    h.def = { ...h.def, speed: 0 };
+    h.pos = { x: s.pos.x + 20, y: s.pos.y };
+    let snatched = false;
+    for (let i = 0; i < Math.ceil(h.def.snatch!.cooldown * 60); i++) {
+      sim.update(1 / 60);
+      h.pos = { x: s.pos.x + 20, y: s.pos.y };
+      if (sim.drainEvents().some((ev) => ev.type === 'snatch')) snatched = true;
+      if (snatched) break;
+    }
+    expect(snatched).toBe(true);
+    expect(sim.soldiers.some((so) => !so.alive)).toBe(true);
+  });
+});

@@ -67,6 +67,7 @@ export interface EnemyDef {
   phase?: { interval: number; duration: number }; // fades to mist on a cycle: takes no damage while phased (towers still waste shots on it)
   dodge?: number; // chance (0..1) to sidestep a single-target tower shot (splash, chains and spells always land)
   ward?: { radius: number; cut: number }; // allies within radius (not itself) take this fraction less damage of every type
+  snatch?: { radius: number; cooldown: number }; // flyer: carries off the nearest soldier within radius (it must respawn), on a cooldown
   rile?: { perSlow: number; max: number }; // every slow it suffers (at most twice a second) adds perSlow to its speed for good, up to +max
   grief?: { radius: number; armor: number }; // on death, allies within radius gain this much armor for good (capped at 85%)
   lifesteal?: number; // heals this fraction of the melee damage it deals to soldiers and heroes

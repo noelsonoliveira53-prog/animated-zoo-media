@@ -100,6 +100,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.keg) tags.push(`Powder keg: on death, deals ${e.keg.damage} to soldiers and heroes within ${e.keg.radius}px`);
         if (e.ranged) tags.push(`Gunner: shoots soldiers and heroes within ${e.ranged.range}px for ${e.ranged.damage} every ${e.ranged.interval}s`);
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
+        if (e.snatch) tags.push(`Snatches the nearest soldier within ${e.snatch.radius}px every ${e.snatch.cooldown}s (it has to respawn)`);
         if (e.rile) tags.push(`Riled by slows: each one adds +${Math.round(e.rile.perSlow * 100)}% speed for good (up to +${Math.round(e.rile.max * 100)}%)`);
         if (e.grief) tags.push(`When it falls, allies within ${e.grief.radius}px gain +${Math.round(e.grief.armor * 100)}% armor for good`);
         if (e.ward) tags.push(`Lantern ward: allies within ${e.ward.radius}px take ${Math.round(e.ward.cut * 100)}% less damage of every type (not itself)`);

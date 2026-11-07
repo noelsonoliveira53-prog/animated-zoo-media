@@ -184,6 +184,10 @@ class Sfx {
         this.noise(0.1, 0.12, 1800);
         this.tone(160, 0.08, 'square', 0.05, 80);
         break;
+      case 'snatch': // a hawk's screech and a whoosh
+        this.tone(1400, 0.18, 'sawtooth', 0.035, 900);
+        this.noise(0.15, 0.06, 3000);
+        break;
       case 'rile': // an angry little hoot
         this.tone(520, 0.08, 'square', 0.04, 780);
         break;

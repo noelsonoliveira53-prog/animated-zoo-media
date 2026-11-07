@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **100** (next balance pass at iteration 105)
+Iteration counter: **101** (next balance pass at iteration 105)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -700,6 +700,10 @@ Iteration counter: **100** (next balance pass at iteration 105)
 - **Iteration 100** (polish + balance): full 58-level sweep, run in 4 parallel batches (results in Balance Notes). No
   regressions from the new traits, so no retunes. The Field Guide entries for Stormcaller, Thunderhoof and
   Copperhorn were checked in-browser: all fit (right edge ≤ 1214px) with no console errors. 175 tests.
+- **Iteration 101**: level 59 **Stormwatch Barrows**. A 2,540px serpentine herd road from the north-west winds around
+  the barrow mounds. A 720px ridge track from the north joins it at the last bend (1,420px total). It has 10 pads,
+  16 waves (Thunderhoof herds with Copperhorn escorts on the long road, fliers on the ridge) and hpMult 2.1.
+  175 tests.
 
 ## In Progress
 - (none)
@@ -717,6 +721,8 @@ Iteration counter: **100** (next balance pass at iteration 105)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 101**: 59 Stormwatch Barrows was **83/75/0** at hpMult 2.1 on the first try (kept, a fourth-level ramp).
+
 **Iteration 100** (full sweep, 12 seeds, expert/casual/novice):
 - Levels 1–50: identical to the last per-region passes (iterations 70–90), e.g. 5 Murkmaw 92/58/83 · 15 Emberdeep
   83/33/67 · 30 Kaleidrax 83/42/58 · 35 Roc's Aerie 100/50/17 · 45 Engine 83/67/8 · 50 Abyss 92/67/0.

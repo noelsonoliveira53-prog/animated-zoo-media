@@ -591,4 +591,24 @@ describe('Rotbloom enemies', () => {
     expect(sim.enemies.some((e) => e.alive && e.def.id === g.into)).toBe(true);
     expect(sim.coins).toBe(c0);
   });
+
+  it('a Gorgegrub feeds on allies dying nearby: grows, heals, and stops at its stack cap', () => {
+    const sim = new BattleSim(lvl, null);
+    const g = sim.spawn('gorgegrub', 0, 400);
+    const f = g.def.feed!;
+    g.hp = g.maxHp * 0.5;
+    const max0 = g.maxHp;
+    const hp0 = g.hp;
+    const far = sim.spawn('mudling', 0, 1200);
+    (sim as any).applyDamage(far, 99999);
+    expect(g.fed).toBe(0);
+    const near = sim.spawn('mudling', 0, 420);
+    (sim as any).applyDamage(near, 99999);
+    expect(g.fed).toBe(1);
+    expect(g.maxHp).toBe(max0 + Math.round(max0 * f.growth));
+    expect(g.hp).toBeGreaterThan(hp0);
+    expect(sim.drainEvents().some((e) => e.type === 'feed')).toBe(true);
+    for (let i = 0; i < f.maxStacks + 3; i++) (sim as any).applyDamage(sim.spawn('mudling', 0, 410), 99999);
+    expect(g.fed).toBe(f.maxStacks);
+  });
 });

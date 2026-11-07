@@ -50,6 +50,7 @@ export interface EnemyDef {
   echo?: { hpFrac: number }; // on its first death it re-forms once at this fraction of health
   shock?: { interval: number; radius: number; duration: number }; // stuns nearby soldiers and the hero on a timer
   fortify?: { radius: number; bonus: number }; // nearby allies gain this much armor while it lives
+  feed?: { radius: number; heal: number; growth: number; maxStacks: number }; // feeds when a nearby ally dies: heals heal×maxHp and grows maxHp by growth (stacks)
   grow?: { into: string; after: number }; // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s

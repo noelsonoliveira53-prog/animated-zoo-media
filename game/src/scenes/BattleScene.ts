@@ -1320,6 +1320,13 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'feed': {
+        sfx.trait('feed');
+        this.particles.setParticleTint(0xc8b878);
+        this.particles.explode(6, ev.from.x, ev.from.y - 6);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Gulp!', '#e8d898', 15);
+        break;
+      }
       case 'grow': {
         sfx.trait('grow');
         this.particles.setParticleTint(0x6a9a3a);
@@ -1571,8 +1578,9 @@ export class BattleScene extends Phaser.Scene {
       v.air = Phaser.Math.Clamp(v.air + (airborne ? dt : -dt) * 3, 0, 1);
       const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * Math.abs(Math.sin(v.bob)) * 4;
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
-      if (airborne) v.sprite.setScale(1, 1 + Math.sin(v.bob * 3) * 0.08);
-      else v.sprite.setScale(1 + Math.sin(v.bob * 2) * 0.04, 1 - Math.sin(v.bob * 2) * 0.04);
+      const swell = 1 + e.fed * 0.08; // fed Gorgegrubs visibly bulk up
+      if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
+      else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
       if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
       else if (e.hasteTime <= 0 && v.sprite.tintTopLeft === 0xffc0e8) v.sprite.clearTint();

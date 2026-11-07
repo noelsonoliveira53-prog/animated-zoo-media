@@ -346,6 +346,24 @@ export class BootScene extends Phaser.Scene {
         for (const [dx, dy] of [[0.5, 0.35], [0.7, 0.5], [0.58, 0.6]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.07);
         break;
       }
+      case 'gorgegrub': {
+        // fat segmented grub: three bulging rings, stubby legs, a wide hungry mouth
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.5, 0, 0.5]) g.lineBetween(cx + lx * r, cy + r * 0.5, cx + lx * r, cy + r * 0.85);
+        g.fillStyle(color, 1);
+        for (const [dx, sz] of [[0.55, 0.62], [0, 0.8], [-0.55, 0.7]] as const) {
+          g.fillEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
+          g.strokeEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
+        }
+        g.fillStyle(0xe8d8a0, 1);
+        g.fillEllipse(cx - r * 0.55, cy - r * 0.3, r * 0.5, r * 0.2);
+        g.fillStyle(0x3a1a1a, 1);
+        g.fillEllipse(cx - r * 0.8, cy + r * 0.2, r * 0.35, r * 0.3);
+        g.fillStyle(0x1a1010, 1);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.08);
+        g.fillCircle(cx - r * 0.45, cy - r * 0.2, r * 0.08);
+        break;
+      }
       case 'rotseed': {
         // black seed half-buried, a pale shoot just poking out
         g.lineStyle(2, C.ink, 1);

@@ -43,6 +43,7 @@ export interface Enemy {
   blinkCd: number;
   gustCd: number;
   growT: number; // seconds a Rotseed has been growing
+  fed: number; // times a Gorgegrub has fed
   shockCd: number;
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
@@ -169,6 +170,7 @@ export type SimEvent =
   | { type: 'charge'; enemy: Enemy }
   | { type: 'echo'; enemy: Enemy }
   | { type: 'grow'; enemy: Enemy }
+  | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
@@ -863,6 +865,7 @@ export class BattleSim {
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
       growT: 0,
+      fed: 0,
       shockCd: def.shock ? def.shock.interval : 0,
       chargeTime: 0,
       chargeCd: 0,
@@ -1597,6 +1600,7 @@ export class BattleSim {
         const near = Math.hypot(e.pos.x - this.hero.pos.x, e.pos.y - this.hero.pos.y) < 260;
         this.grantHeroXp(e.def.bounty * (near ? 1 : 0.35));
       }
+      if (!e.def.boss) this.feedOn(e);
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
       if (e.def.glare) this.glareBurst(e);
@@ -1610,6 +1614,20 @@ export class BattleSim {
       return;
     }
     this.checkPhases(e);
+  }
+
+  /** Gorgegrubs feed on fallen allies nearby: each meal heals and swells them (up to maxStacks). */
+  private feedOn(dead: Enemy): void {
+    for (const g of this.enemies) {
+      const f = g.def.feed;
+      if (!f || !g.alive || g === dead || g.fed >= f.maxStacks) continue;
+      if (Math.hypot(g.pos.x - dead.pos.x, g.pos.y - dead.pos.y) > f.radius) continue;
+      g.fed++;
+      const grow = Math.round(g.maxHp * f.growth);
+      g.maxHp += grow;
+      g.hp = Math.min(g.maxHp, g.hp + grow + g.maxHp * f.heal);
+      this.events.push({ type: 'feed', enemy: g, from: { ...dead.pos } });
+    }
   }
 
   /** Glareflies flash on death: nearby shooting towers are dazzled (frozen) briefly. Shares the chill immunity window. */

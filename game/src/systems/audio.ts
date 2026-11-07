@@ -180,6 +180,10 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'feed': // wet gulp
+        this.tone(140, 0.16, 'sine', 0.08, 70);
+        this.noise(0.08, 0.05, 600);
+        break;
       case 'grow': // creaky sprout
         this.tone(180, 0.18, 'triangle', 0.07, 360);
         this.noise(0.1, 0.06, 900);

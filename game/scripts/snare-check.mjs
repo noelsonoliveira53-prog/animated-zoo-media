@@ -29,7 +29,9 @@ const crowd = await page.evaluate(() => {
   return { x: e0.pos.x, y: e0.pos.y, ids, fly, spellPos: s.spellPos(2) };
 });
 await page.mouse.click(crowd.spellPos.x, crowd.spellPos.y); // arm Thornsnare
-await page.waitForTimeout(200);
+await page.waitForTimeout(350);
+await page.screenshot({ path: `screenshots/${name}-armed.png` });
+const hint = await page.evaluate(() => !!window.__game.scene.getScene('Battle').children.getByName('spellHint'));
 await page.mouse.click(crowd.x, crowd.y); // cast
 await page.waitForTimeout(400);
 const res = await page.evaluate(({ ids, fly }) => {
@@ -39,8 +41,8 @@ const res = await page.evaluate(({ ids, fly }) => {
   return { rooted: walkers.filter((e) => e.slowFactor < 0.5).length, flyerSlowed: f ? f.slowFactor < 1 : null, cd: Math.round(s.sim.spellCd.thornsnare) };
 }, crowd);
 await page.screenshot({ path: `screenshots/${name}.png` });
-console.log(JSON.stringify(res));
+console.log(JSON.stringify({ ...res, hint }));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();
-process.exit(errors.length || res.rooted < 4 || res.flyerSlowed || res.cd <= 0 ? 1 : 0);
+process.exit(errors.length || res.rooted < 4 || res.flyerSlowed || res.cd <= 0 || !hint ? 1 : 0);

@@ -439,10 +439,23 @@ export class BattleScene extends Phaser.Scene {
     }
     this.spellMode = id;
     this.reticle.setVisible(!!id);
+    this.children.getByName('spellHint')?.destroy();
     if (id) {
       const def = SPELLS[id];
       this.reticle.setRadius(def.radius ?? 50).setStrokeStyle(3, def.color, 0.9).setFillStyle(def.color, 0.12);
-      this.showBanner(def.name, def.kind === 'reinforce' ? 'Tap a spot on the road' : 'Tap where the star should fall');
+      const how = def.kind === 'reinforce' ? 'Tap a spot on the road' : def.kind === 'snare' ? 'Tap a crowd of walkers' : 'Tap where the star should fall';
+      this.showBanner(def.name, how);
+      // What the spell does, just above the spell bar, while it's armed.
+      const w = 330;
+      const hint = this.add.container(GAME_W - 20 - w / 2, GAME_H - 132).setDepth(3500).setName('spellHint');
+      const txt = this.add.text(0, 0, `${def.text}\nRecharge ${def.cooldown}s`, { ...textStyle(pf(14), TEXT.cream, false), align: 'center', wordWrap: { width: w - 24 } }).setOrigin(0.5);
+      const bg = this.add.graphics();
+      bg.fillStyle(C.ink, 0.85);
+      bg.fillRoundedRect(-w / 2, -txt.height / 2 - 10, w, txt.height + 20, 12);
+      bg.lineStyle(2, def.color, 0.9);
+      bg.strokeRoundedRect(-w / 2, -txt.height / 2 - 10, w, txt.height + 20, 12);
+      hint.add([bg, txt]);
+      hint.y = GAME_H - 104 - txt.height / 2;
     } else {
       this.children.getByName('banner')?.destroy();
     }

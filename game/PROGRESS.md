@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **54** (next iteration = 55 → POLISH + BALANCE pass)
+Iteration counter: **55** (next balance pass at iteration 60)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -427,6 +427,14 @@ Iteration counter: **54** (next iteration = 55 → POLISH + BALANCE pass)
   35% to about 40–45%; Heart of the Emberdeep 1/6 → 3/6. Icicle Crossing stays his worst map (two crossing roads that
   only a ranged hero can cover from the crossing). New `scripts/toss-check.mjs`. 139 tests.
 
+- [x] **Iter 55 — POLISH + BALANCE (30 levels, with Thornsnare + Wren + Shield Toss in play).** The new tools made the
+  campaign a little easier across the board (novice win rates rose on most levels). Two levels had become trivial
+  (100/100/100): Wrackline Beach hpMult 2.4 → 2.8 (100/100/50) and Tidepool Terraces 1.4 → 1.55 (100/75/100; Bramble
+  suits that converging map). Every other level still meets its region target. Polish: when a spell is armed, a hint
+  panel above the spell bar shows what it does and its recharge. Fix: arming Thornsnare said "Tap where the star should
+  fall"; each spell kind now gets its own instruction. `snare-check.mjs` also screenshots the armed state and asserts
+  the hint. 139 tests.
+
 ## In Progress
 - (none)
 
@@ -436,8 +444,7 @@ Iteration counter: **54** (next iteration = 55 → POLISH + BALANCE pass)
    endless.
 2. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
-3. Spell polish: show each spell's text on long-press/hover (the bar only shows names), and add a spell section to
-   the Field Guide.
+3. Field Guide: add a Spells tab (name, icon, text, recharge).
 
 ## Known Bugs
 - (none known)
@@ -460,6 +467,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 **Campaign (iteration 50, 6 seeds):** expert ≥ 83% on 28 of 29 levels (the outlier was Saltjaw's Grotto, now fixed).
 Region openers: 100/100/100, 100/100/50, 100/100/67, 100/83/33, 100/100/50, 100/100/33. Bosses: Murkmaw 83/83/67,
 Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 83/33/0, Saltjaw (fixed) ~83/70/0.
+
+**Campaign (iteration 55, 6 seeds, with the new spell/hero):** expert ≥ 83% on 27 of 30 levels; the three at 67%
+are boss or late levels (Obsidian Bridges, Morrowcap's Throne, Saltjaw's Grotto), within noise of earlier passes.
+Novice win rates rose by about 15–30 points on early and mid levels thanks to Thornsnare.
 
 **Kaleidrax's Spire (iteration 51, 8 seeds):** first draft 0/0/0 (the boss leaked every run). After the boss nerf and the
 autoplayer tweak, the curve was jagged: 2.15 → 88/63/100, then after moving the pads 2.15 → 100/63/63, **2.3 → 88% / 38% / 75%**

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **153** (next balance pass at iteration 155)
+Iteration counter: **154** (next balance pass at iteration 155)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1093,12 +1093,16 @@ Iteration counter: **153** (next balance pass at iteration 155)
   1,710px, and the waves mix Mistfoxes, Silkcranes and Glowbearers with older enemies. Silkcrane counts were trimmed
   in the later waves because their dodging was the casual strategy's main leak. Screenshot `screenshots/153.png`.
   207 tests.
+- **Iteration 154** (Mistwreath level 4): level 84 **Paper Lantern Climb**. It has 11 pads and two long roads
+  (2,480px from the left, 2,140px from the top) that merge mid-map, with the region's toughest waves before the boss.
+  The first screenshot showed the top-right outpost sitting on the exit gate, so that pad moved left to (1110,260).
+  Screenshot `screenshots/154.png`. 207 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mistwreath level 84, then the finale (85) with a boss, achievements, a story card and
+1. Mistwreath finale (85) with a boss, achievements, a story card and
    the endless boss rotation.
 2. A breather now and then (raid or village variety).
 
@@ -1109,6 +1113,9 @@ Iteration counter: **153** (next balance pass at iteration 155)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 154**: 84 Paper Lantern Climb: 100/100 at hpMult 1.7, 100/83 at 1.9, 100/67 at 2.0, 92/50 at 2.1, 67/17 at 2.3. **2.0 kept**; after
+the pad move it reads 92/75/0 (fourth-level band).
+
 **Iteration 153**: 83 Fogbell Terraces: 83/50/0 at hpMult 1.8, 67/42 at 2.05, 100/58 at 1.6; the casual's leaks were mostly Silkcranes. After
 trimming crane counts: 100/75 at 1.6, and **1.7 → 92/75/0** (kept, third-level band).
 

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **96** (next balance pass at iteration 100)
+Iteration counter: **97** (next balance pass at iteration 100)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -672,12 +672,28 @@ Iteration counter: **96** (next balance pass at iteration 100)
 
   Camp generation fix: a crowded core used to drop buildings silently. Placement now widens its search after 150
   tries, and Strongholds get every building they list. 172 tests (shaman heal and placement).
+- **Iteration 97**: region 12 opens, **The Thunderhead Steppes**.
+  - **Theme:** a `STORM` theme (grey-green steppe, standing stones with lichen, wind-flattened grass, light scrolling
+    rain), a slate world-map style (grass tufts and standing stones, "Orchard Gate" exit label), and a galloping minor
+    "Thunderhead" music theme.
+  - **New traits:**
+    - `bolt`: the **Stormcaller** calls lightning every 6s on the nearest shooting tower within 170px and stuns it for
+      1.8s. It shares the chill-immunity window, with a jagged bolt, "Struck!" text and a thunderclap sound.
+    - `herd`: the **Thunderhoof** gains +15% speed per herd-mate within 90px on its road, capped at +60%.
+  - Both have code-drawn sprites and Field Guide tags. Endless adds them from wave 48.
+  - **Level 56 Rainmarch Downs:** two long roads (the north road joins the west road early), 11 pads, 15 waves, hpMult
+    2.1.
+  - **World-map title fix:** long region names collided with the star counter. The title is now right-aligned to the
+    star and shrinks to fit.
+  - 174 tests (bolt and herd). The first bolt test passed vacuously because the test level had no pads, so it was
+    rewritten with real pads.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 12 (theme, music, 3 new enemies, levels 56–60, boss) — or a breather feature (e.g. village decorations / raid variety).
+1. Region 12 level 57 (+ third Thunderhead enemy), then levels 58–59, finale 60 with a boss + story card + achievements.
+2. Iter 100 balance pass (full sweep).
 
 ## Known Bugs
 - (none known)
@@ -687,6 +703,8 @@ Iteration counter: **96** (next balance pass at iteration 100)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 97**: 56 Rainmarch Downs began with a 900px north road and went 25/42/0, leaking everything on that road (galehounds, gullwings, skitters). I rerouted it to join the west road early (both ≈2,300px), which gave **100/100/42** at hpMult 2.1 (the opener target).
+
 **Iteration 96** (raids, smart deploy, 10 seeds, avg stars / destruction):
 
 | Army | Outpost | Warren | Stronghold |

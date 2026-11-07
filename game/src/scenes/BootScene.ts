@@ -382,6 +382,51 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.45, cy - r * 1.0, r * 0.4, r * 0.2);
         break;
       }
+      case 'stormcaller': {
+        // hunched shaman in a grey cloak, a copper lightning rod on its back, a little cloud over its head
+        g.lineStyle(3, 0xc87a3a, 1);
+        g.lineBetween(cx + r * 0.35, cy + r * 0.6, cx + r * 0.6, cy - r * 1.05);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.8, cy + r * 0.85, cx + r * 0.8, cy + r * 0.85, cx - r * 0.05, cy - r * 0.55);
+        g.strokeTriangle(cx - r * 0.8, cy + r * 0.85, cx + r * 0.8, cy + r * 0.85, cx - r * 0.05, cy - r * 0.55);
+        g.fillStyle(0x1a1e2a, 1);
+        g.fillCircle(cx - r * 0.05, cy - r * 0.1, r * 0.3);
+        g.fillStyle(0xfff07a, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.12, r * 0.07);
+        g.fillCircle(cx + r * 0.06, cy - r * 0.12, r * 0.07);
+        g.fillStyle(0xd8dce8, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.95, r * 0.22);
+        g.fillCircle(cx, cy - r * 1.05, r * 0.28);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.95, r * 0.2);
+        g.fillStyle(0xfff07a, 1);
+        g.fillTriangle(cx - r * 0.05, cy - r * 0.8, cx + r * 0.1, cy - r * 0.8, cx - r * 0.1, cy - r * 0.55);
+        break;
+      }
+      case 'thunderhoof': {
+        // shaggy buffalo: big humped body, curled horns, stamping hooves
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.4, cx + lx * r, cy + r * 0.95);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy, r * 1.7, r * 1.15);
+        g.strokeEllipse(cx + r * 0.1, cy, r * 1.7, r * 1.15);
+        g.fillStyle(0x4a3226, 1);
+        g.fillEllipse(cx - r * 0.25, cy - r * 0.3, r * 0.9, r * 0.7);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.7, cy + r * 0.05, r * 0.42);
+        g.strokeCircle(cx - r * 0.7, cy + r * 0.05, r * 0.42);
+        g.lineStyle(3, 0xe8e0c8, 1);
+        g.beginPath();
+        g.arc(cx - r * 0.95, cy - r * 0.3, r * 0.22, Math.PI * 0.2, Math.PI * 1.3);
+        g.strokePath();
+        g.beginPath();
+        g.arc(cx - r * 0.45, cy - r * 0.35, r * 0.22, Math.PI * 1.7, Math.PI * 0.8, true);
+        g.strokePath();
+        g.fillStyle(0x1a1010, 1);
+        g.fillCircle(cx - r * 0.82, cy, r * 0.07);
+        g.fillCircle(cx - r * 0.58, cy, r * 0.07);
+        break;
+      }
       case 'mawbloom': {
         // rotten heart-tree: a split trunk with a gaping maw, a crown of withered branches with bruised fruit, root feet
         g.lineStyle(3, C.ink, 1);

@@ -180,6 +180,10 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'bolt': // thunderclap: sharp crack then a low rumble
+        this.noise(0.08, 0.16, 7000);
+        this.noise(0.5, 0.1, 300);
+        break;
       case 'mend': // soft bubbling chime
         this.tone(660, 0.18, 'sine', 0.04, 880);
         this.tone(990, 0.14, 'sine', 0.03, undefined, 0.08);

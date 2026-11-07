@@ -51,7 +51,9 @@ export interface EnemyDef {
   shock?: { interval: number; radius: number; duration: number }; // stuns nearby soldiers and the hero on a timer
   fortify?: { radius: number; bonus: number }; // nearby allies gain this much armor while it lives
   feed?: { radius: number; heal: number; growth: number; maxStacks: number }; // feeds when a nearby ally dies: heals heal×maxHp and grows maxHp by growth (stacks)
-  grow?: { into: string; after: number }; // a planted seed: becomes `into` after `after` seconds unless destroyed
+  grow?: { into: string; after: number };
+  bolt?: { interval: number; range: number; duration: number }; // calls lightning on the nearest tower in range, stunning it
+  herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;
@@ -132,7 +134,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

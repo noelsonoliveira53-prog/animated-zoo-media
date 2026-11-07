@@ -95,6 +95,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.echo) tags.push(`Echoes: re-forms once at ${Math.round(e.echo.hpFrac * 100)}% health`);
         if (e.shock) tags.push(`Shocks every ${e.shock.interval}s: soldiers and heroes within ${e.shock.radius}px are stunned ${e.shock.duration}s`);
         if (e.fortify) tags.push(`Bark-song: allies within ${e.fortify.radius}px gain +${Math.round(e.fortify.bonus * 100)}% armor`);
+        if (e.bolt) tags.push(`Calls lightning every ${e.bolt.interval}s: the nearest tower within ${e.bolt.range}px is stunned ${e.bolt.duration}s`);
+        if (e.herd) tags.push(`Stampede: +${Math.round(e.herd.perAlly * 100)}% speed per nearby herd-mate (up to +${Math.round(e.herd.max * 100)}%)`);
         if (e.feed) tags.push(`Feeds on allies dying within ${e.feed.radius}px: +${Math.round(e.feed.growth * 100)}% max health and heals (up to ${e.feed.maxStacks} times)`);
         if (e.grow) tags.push(`Sprouts into a ${ENEMIES[e.grow.into]?.name ?? e.grow.into} after ${e.grow.after}s`);
         if (e.spawner) tags.push(`Drops a ${ENEMIES[e.spawner.enemy]?.name ?? e.spawner.enemy} every ${e.spawner.interval}s`);

@@ -612,3 +612,38 @@ describe('Rotbloom enemies', () => {
     expect(g.fed).toBe(f.maxStacks);
   });
 });
+
+describe('Thunderhead enemies', () => {
+  it('a Stormcaller strikes the nearest shooting tower in range, stunning it, then waits its interval', () => {
+    // near pad 60px from the caller, far pad well out of range
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 200, y: 160 }, { x: 900, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 9999;
+    sim.build(0, 'thornbow');
+    sim.build(1, 'thornbow');
+    const sc = sim.spawn('stormcaller', 0, 200);
+    sc.def = { ...sc.def, speed: 0 };
+    const b = sc.def.bolt!;
+    for (let i = 0; i < Math.ceil(b.interval * 60) + 2; i++) sim.update(1 / 60);
+    const ev = sim.drainEvents().filter((e) => e.type === 'bolt');
+    expect(ev.length).toBe(1);
+    const struck = (ev[0] as any).tower;
+    expect(Math.hypot(struck.pos.x - sc.pos.x, struck.pos.y - sc.pos.y)).toBeLessThanOrEqual(b.range);
+    expect(struck).toBe(sim.towers[0]);
+    expect(struck.frozen + struck.chillImmune).toBeGreaterThan(0);
+    expect(sim.towers[1]!.chillImmune).toBe(0);
+  });
+
+  it('Thunderhooves run faster in a herd (capped), and alone at base speed', () => {
+    const sim = new BattleSim(lvl, null);
+    const h = sim.spawn('thunderhoof', 0, 300);
+    const herd = h.def.herd!;
+    expect(sim.herdMult(h)).toBe(1);
+    sim.spawn('thunderhoof', 0, 320);
+    expect(sim.herdMult(h)).toBeCloseTo(1 + herd.perAlly);
+    for (let i = 0; i < 10; i++) sim.spawn('thunderhoof', 0, 290 + i * 3);
+    expect(sim.herdMult(h)).toBeCloseTo(1 + herd.max);
+    const far = sim.spawn('thunderhoof', 0, 900);
+    expect(sim.herdMult(far)).toBe(1);
+  });
+});

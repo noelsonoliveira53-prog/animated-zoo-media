@@ -45,6 +45,7 @@ export interface Enemy {
   growT: number; // seconds a Rotseed has been growing
   fed: number; // times a Gorgegrub has fed
   shockCd: number;
+  boltCd: number; // Stormcaller lightning timer
   chargeTime: number; // seconds left of a Steamrunner bolt
   chargeCd: number;
   mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
@@ -170,6 +171,7 @@ export type SimEvent =
   | { type: 'charge'; enemy: Enemy }
   | { type: 'echo'; enemy: Enemy }
   | { type: 'grow'; enemy: Enemy }
+  | { type: 'bolt'; source: Enemy; tower: Tower }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
@@ -867,6 +869,7 @@ export class BattleSim {
       growT: 0,
       fed: 0,
       shockCd: def.shock ? def.shock.interval : 0,
+      boltCd: def.bolt ? def.bolt.interval * 0.6 : 0,
       chargeTime: 0,
       chargeCd: 0,
       mr: def.magicResist,
@@ -914,6 +917,7 @@ export class BattleSim {
         }
       }
       if (e.def.shock) this.tickShock(e, dt);
+      if (e.def.bolt) this.tickBolt(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
@@ -940,7 +944,7 @@ export class BattleSim {
           continue;
         }
       }
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.mods.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1013,6 +1017,44 @@ export class BattleSim {
   }
 
   /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  /** Stormcaller: lightning stuns the nearest shooting tower in range (shares the chill immunity window). */
+  private tickBolt(e: Enemy, dt: number): void {
+    const b = e.def.bolt!;
+    e.boltCd -= dt;
+    if (e.boltCd > 0) return;
+    let best: Tower | null = null;
+    let bestD = b.range;
+    for (const t of this.towers) {
+      if (!t || t.rally || t.chillImmune > 0) continue;
+      const d = Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y);
+      if (d <= bestD) {
+        bestD = d;
+        best = t;
+      }
+    }
+    if (!best) {
+      e.boltCd = 0.5; // nothing to strike yet: look again soon
+      return;
+    }
+    e.boltCd = b.interval;
+    best.frozen = Math.max(best.frozen, b.duration);
+    best.chillImmune = b.duration + THAW_IMMUNITY;
+    this.events.push({ type: 'bolt', source: e, tower: best });
+  }
+
+  /** Thunderhooves stampede: faster for each other herd-mate close by. */
+  herdMult(e: Enemy): number {
+    const h = e.def.herd;
+    if (!h) return 1;
+    let n = 0;
+    for (const o of this.enemies) {
+      if (o === e || !o.alive || !o.def.herd) continue;
+      if (Math.abs(o.dist - e.dist) > h.radius || o.path !== e.path) continue;
+      n++;
+    }
+    return 1 + Math.min(h.max, n * h.perAlly);
+  }
+
   private tickShock(e: Enemy, dt: number): void {
     const sh = e.def.shock!;
     e.shockCd -= dt;
@@ -1420,7 +1462,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {

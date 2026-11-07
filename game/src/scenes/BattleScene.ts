@@ -285,6 +285,14 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
     }
+    if (this.level.theme.storm) {
+      // light slanting rain over the steppe: a 120px-periodic pattern scrolled down and wrapped
+      const rain = this.add.graphics().setDepth(0.6).setAlpha(0.22);
+      rain.lineStyle(1.5, 0xdce4f0, 1);
+      for (let y = -120; y < GAME_H + 120; y += 30)
+        for (let x = (y / 30) % 2 ? 0 : 22; x < GAME_W + 40; x += 44) rain.lineBetween(x, y, x - 7, y + 14);
+      this.tweens.add({ targets: rain, y: 120, duration: 900, repeat: -1 });
+    }
     if (this.level.theme.gale) {
       // low clouds drifting past the cliffs, west to east, then wrapping round
       for (let i = 0; i < 5; i++) {
@@ -318,6 +326,26 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.storm && rnd.frac() < 0.8) {
+        if (rnd.frac() < 0.45) {
+          // a weathered standing stone with a lichen patch
+          const h = rnd.between(22, 34);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 30, 10);
+          deco.fillStyle(rnd.pick([0x7a7a82, 0x6a6e78, 0x8a8a90]), 1);
+          deco.fillRoundedRect(p.x - 8, p.y - h, 16, h + 4, 5);
+          deco.lineStyle(2, C.ink, 0.55);
+          deco.strokeRoundedRect(p.x - 8, p.y - h, 16, h + 4, 5);
+          deco.fillStyle(0x9aaa6a, 0.8);
+          deco.fillEllipse(p.x - 2, p.y - h * 0.4, 8, 5);
+        } else {
+          // tufts of steppe grass bent flat by the wind
+          deco.lineStyle(2, rnd.pick(this.level.theme.trees ?? [0x5a6a5a]), 0.9);
+          for (let k = 0; k < 5; k++) {
+            const bx = p.x - 8 + k * 4;
+            deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
+          }
         }
       } else if (this.level.theme.orchard && rnd.frac() < 0.75) {
         if (rnd.frac() < 0.7) {
@@ -1320,6 +1348,30 @@ export class BattleScene extends Phaser.Scene {
           this.particles.explode(5, h.x, h.y - 14);
         }
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
+        break;
+      }
+      case 'bolt': {
+        sfx.trait('bolt');
+        const g = this.add.graphics().setDepth(2600);
+        const tx = ev.tower.pos.x;
+        const ty = ev.tower.pos.y - 40;
+        g.lineStyle(4, 0xfff07a, 1);
+        g.beginPath();
+        g.moveTo(tx + 10, -10);
+        let y = -10;
+        let x = tx + 10;
+        while (y < ty) {
+          y = Math.min(ty, y + 40);
+          x = tx + Phaser.Math.Between(-18, 18);
+          g.lineTo(x, y);
+        }
+        g.strokePath();
+        g.lineStyle(2, 0xffffff, 1);
+        g.strokePath();
+        this.tweens.add({ targets: g, alpha: 0, duration: 260, onComplete: () => g.destroy() });
+        this.particles.setParticleTint(0xfff07a);
+        this.particles.explode(10, tx, ty + 20);
+        this.floatText(tx, ty - 6, 'Struck!', '#fff07a', 15);
         break;
       }
       case 'feed': {

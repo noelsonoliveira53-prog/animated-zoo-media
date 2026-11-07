@@ -342,6 +342,43 @@ export class BattleScene extends Phaser.Scene {
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
         }
+      } else if (this.level.theme.flotilla) {
+        const k = rnd.frac();
+        if (k < 0.35) {
+          // a floating barrel with iron hoops
+          deco.fillStyle(0x000000, 0.18);
+          deco.fillEllipse(p.x, p.y + 6, 26, 8);
+          deco.fillStyle(rnd.pick(this.level.theme.trees ?? [0x8a6a4a]), 1);
+          deco.fillRoundedRect(p.x - 10, p.y - 14, 20, 22, 6);
+          deco.lineStyle(2, 0x3a3a42, 1);
+          deco.lineBetween(p.x - 10, p.y - 8, p.x + 10, p.y - 8);
+          deco.lineBetween(p.x - 10, p.y + 2, p.x + 10, p.y + 2);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeRoundedRect(p.x - 10, p.y - 14, 20, 22, 6);
+        } else if (k < 0.6) {
+          // a drifting crate
+          deco.fillStyle(0xa8885a, 1);
+          deco.fillRect(p.x - 11, p.y - 11, 22, 22);
+          deco.lineStyle(2, 0x6a4a2a, 1);
+          deco.strokeRect(p.x - 11, p.y - 11, 22, 22);
+          deco.lineBetween(p.x - 11, p.y - 11, p.x + 11, p.y + 11);
+        } else if (k < 0.75) {
+          // a red-and-white buoy
+          deco.fillStyle(0xe8e0d0, 1);
+          deco.fillCircle(p.x, p.y, 9);
+          deco.fillStyle(0xc83a3a, 1);
+          deco.fillRect(p.x - 9, p.y - 3, 18, 6);
+          deco.lineStyle(1.5, C.ink, 0.6);
+          deco.strokeCircle(p.x, p.y, 9);
+        } else {
+          // whitecaps
+          deco.lineStyle(2, 0xbfe0f0, 0.6);
+          for (let w = 0; w < 2; w++) {
+            deco.beginPath();
+            deco.arc(p.x + w * 14, p.y + w * 4, 9, Math.PI * 1.1, Math.PI * 1.9);
+            deco.strokePath();
+          }
+        }
       } else if (this.level.theme.reef) {
         const k = rnd.frac();
         if (k < 0.55) {
@@ -1473,6 +1510,25 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'enemyShot': {
+        sfx.trait('blast');
+        const g = this.add.graphics().setDepth(2500);
+        g.lineStyle(3, 0xffd890, 0.9);
+        g.lineBetween(ev.enemy.pos.x + 12, ev.enemy.pos.y - 10, ev.to.x, ev.to.y - 12);
+        this.tweens.add({ targets: g, alpha: 0, duration: 160, onComplete: () => g.destroy() });
+        this.particles.setParticleTint(0xc8c8c8);
+        this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
+        break;
+      }
+      case 'anchor': {
+        if (ev.down) {
+          sfx.trait('anchor');
+          this.particles.setParticleTint(0xbfe8ff);
+          this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
+          this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Anchored!', '#c8d0d8', 15);
+        }
+        break;
+      }
       case 'ink': {
         sfx.trait('ink');
         // a murky cloud that hides whatever walks inside it, fading as it disperses
@@ -1824,9 +1880,10 @@ export class BattleScene extends Phaser.Scene {
       const swell = 1 + e.fed * 0.08; // fed Gorgegrubs visibly bulk up
       if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
       else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
-      if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
+      if (e.anchored) v.sprite.setTint(0xa8b4c4); // iron-grey while an Ironkeel holds anchor
+      else if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
-      else if (e.hasteTime <= 0 && v.sprite.tintTopLeft === 0xffc0e8) v.sprite.clearTint();
+      else if (e.hasteTime <= 0 && (v.sprite.tintTopLeft === 0xffc0e8 || v.sprite.tintTopLeft === 0xa8b4c4)) v.sprite.clearTint();
       if (this.sim.regenerating(e) && Math.random() < dt * 5) {
         // Fleece knitting back: little green pluses drift up off it.
         const plus = this.add.text(e.pos.x + Phaser.Math.Between(-10, 10), e.pos.y - 18, '+', textStyle(16, '#8fe86a')).setOrigin(0.5).setDepth(2500);

@@ -766,3 +766,37 @@ describe('Coralreach enemies', () => {
     expect(sim.inked(m)).toBe(false);
   });
 });
+
+describe('Blackwake enemies', () => {
+  it('a Deckgunner shoots the nearest soldier in range while walking, on its reload timer', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    const s = sim.soldiers[0];
+    const g = sim.spawn('deckgunner', 0, Math.max(0, s.pos.x - 120));
+    g.def = { ...g.def, speed: 0 };
+    s.home = { ...s.pos };
+    const hp0 = s.hp;
+    for (let i = 0; i < Math.ceil(g.def.ranged!.interval * 60); i++) sim.update(1 / 60);
+    expect(sim.drainEvents().some((e) => e.type === 'enemyShot')).toBe(true);
+    expect(s.hp).toBeLessThan(hp0);
+  });
+
+  it('an Ironkeel drops anchor on its cycle: it stops and armors up, then hauls on', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const k = sim.spawn('ironkeel', 0, 100);
+    const a = k.def.anchor!;
+    for (let i = 0; i < Math.ceil(a.interval * 60) + 1; i++) sim.update(1 / 60);
+    expect(k.anchored).toBe(true);
+    expect(k.armor).toBeCloseTo(Math.min(0.85, k.def.armor + a.armor));
+    const d = k.dist;
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    expect(k.dist).toBe(d);
+    for (let i = 0; i < Math.ceil(a.duration * 60) + 1; i++) sim.update(1 / 60);
+    expect(k.anchored).toBe(false);
+    expect(k.armor).toBe(k.def.armor);
+  });
+});

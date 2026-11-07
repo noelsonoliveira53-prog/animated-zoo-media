@@ -48,6 +48,9 @@ export interface Enemy {
   boltCd: number; // Stormcaller lightning timer
   molted: boolean; // Shellsnap has shed its shell
   inkCd: number; // Inkspitter cloud cooldown
+  rangedCd: number; // Deckgunner reload
+  anchorCd: number; // Ironkeel: time until it next drops / lifts anchor
+  anchored: boolean;
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
@@ -180,6 +183,8 @@ export type SimEvent =
   | { type: 'pilfer'; enemy: Enemy; coins: number }
   | { type: 'crack'; enemy: Enemy }
   | { type: 'molt'; enemy: Enemy }
+  | { type: 'enemyShot'; enemy: Enemy; to: Vec2 }
+  | { type: 'anchor'; enemy: Enemy; down: boolean }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
@@ -901,6 +906,9 @@ export class BattleSim {
       boltCd: def.bolt ? def.bolt.interval * 0.6 : 0,
       molted: false,
       inkCd: 0,
+      rangedCd: def.ranged ? def.ranged.interval * 0.5 : 0,
+      anchorCd: def.anchor ? def.anchor.interval : 0,
+      anchored: false,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
@@ -952,6 +960,8 @@ export class BattleSim {
       if (e.def.shock) this.tickShock(e, dt);
       if (e.def.bolt) this.tickBolt(e, dt);
       if (e.def.cleanse) this.tickCleanse(e, dt);
+      if (e.def.ranged) this.tickRanged(e, dt);
+      if (e.def.anchor) this.tickAnchor(e, dt);
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -980,6 +990,7 @@ export class BattleSim {
           continue;
         }
       }
+      if (e.anchored) continue; // Ironkeel holds fast while its anchor is down
       e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
@@ -1059,6 +1070,47 @@ export class BattleSim {
   }
 
   /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  /** Deckgunner: pops off a shot at the nearest soldier or hero in range (not while brawling). */
+  private tickRanged(e: Enemy, dt: number): void {
+    const r = e.def.ranged!;
+    e.rangedCd -= dt;
+    if (e.rangedCd > 0 || e.blockedBy) return;
+    let best: { pos: Vec2; hit: () => void } | null = null;
+    let bestD = r.range;
+    const dmg = r.damage * this.attackMult();
+    for (const s of this.soldiers) {
+      if (!s.alive) continue;
+      const d = Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y);
+      if (d <= bestD) {
+        bestD = d;
+        best = { pos: s.pos, hit: () => this.hurtSoldier(s, dmg) };
+      }
+    }
+    const h = this.hero;
+    if (h && h.alive) {
+      const d = Math.hypot(h.pos.x - e.pos.x, h.pos.y - e.pos.y);
+      if (d <= bestD) best = { pos: h.pos, hit: () => this.hurtHero(dmg) };
+    }
+    if (!best) {
+      e.rangedCd = 0.3;
+      return;
+    }
+    e.rangedCd = r.interval;
+    this.events.push({ type: 'enemyShot', enemy: e, to: { ...best.pos } });
+    best.hit();
+  }
+
+  /** Ironkeel: drops anchor (stops, armors up), then hauls it up and sails on. */
+  private tickAnchor(e: Enemy, dt: number): void {
+    const a = e.def.anchor!;
+    e.anchorCd -= dt;
+    if (e.anchorCd > 0) return;
+    e.anchored = !e.anchored;
+    e.anchorCd = e.anchored ? a.duration : a.interval;
+    e.armor = e.anchored ? Math.min(0.85, e.def.armor + a.armor) : e.def.armor;
+    this.events.push({ type: 'anchor', enemy: e, down: e.anchored });
+  }
+
   /** Inside an ink cloud? (Grounded enemies only: flyers are above the murk.) */
   inked(e: Enemy): boolean {
     if (!this.inkClouds.length || this.airborne(e)) return false;

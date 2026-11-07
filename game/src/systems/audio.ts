@@ -180,6 +180,14 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'blast': // blunderbuss pop
+        this.noise(0.1, 0.12, 1800);
+        this.tone(160, 0.08, 'square', 0.05, 80);
+        break;
+      case 'anchor': // heavy iron clank and a splash
+        this.tone(110, 0.25, 'square', 0.06, 70);
+        this.noise(0.3, 0.07, 900);
+        break;
       case 'ink': // a soft murky squirt
         this.noise(0.18, 0.08, 500);
         this.tone(220, 0.15, 'sine', 0.04, 110);

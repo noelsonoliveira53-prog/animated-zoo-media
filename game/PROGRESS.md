@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **121** (next balance pass at iteration 125)
+Iteration counter: **122** (next balance pass at iteration 125)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -852,13 +852,29 @@ Iteration counter: **121** (next balance pass at iteration 125)
     updated for the new +1 position.
 
   186 tests.
+- **Iteration 122**: region 15 opens, **The Blackwake Flotilla** (the "dark sail" from the Coralreach story).
+  - **Theme:** a `FLOTILLA` theme (deep sea with plank gangway roads; floating barrels, crates, red-and-white buoys
+    and whitecaps), a night-sea world map dotted with little ships ("Coral Gate" exit label), and a rolling minor
+    "Blackwake" shanty.
+  - **New traits** (checked against the list):
+    - `ranged`: the **Deckgunner** rat shoots the nearest soldier or hero within 150px for 18 every 2s while it
+      walks. This is the first enemy that hurts blockers from range. It shows a muzzle line and smoke.
+    - `anchor`: the **Ironkeel** walrus drops anchor every 6s, stopping dead with +50% armor for 2.5s
+      ("Anchored!", splash, iron-grey tint), then hauls on.
+  - Code-drawn sprites, Field Guide tags and sound cues (blunderbuss pop, anchor clank). Endless adds both from
+    wave 60.
+  - **Level 71 Blackwake Moorings:** a 2,800px gangway road plus a 1,460px north gangway joining at the bottom deck,
+    11 pads, 15 waves, hpMult 1.6.
+  - **Visual fixes:** a scrolling swell overlay striped across the plank roads (the roads share the ground layer),
+    so it was removed. The map's lake was a cream blob and is now dark water.
+  - Browser check `scripts/flotilla-check.mjs`. 188 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 15 (the dark sail: a pirate-flotilla theme?), or a breather feature.
+2. Region 15 level 72 (+ third Blackwake enemy), 73–74, finale 75 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -869,6 +885,8 @@ Iteration counter: **121** (next balance pass at iteration 125)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 122**: 71 Blackwake Moorings went 100/83/0 at hpMult 2.0, 100/100/8 at 1.75, and **1.6 → 100/100/42** (kept, the opener target).
+
 **Iteration 120**: 70 Crown of the Reef, after moving Shellsnaps off the north road: 92/75 at hpMult 2.27, 92/42 at
 2.33 (finale guard passes), 75/50 at 2.36 (guard fails) and 75/42 at 2.4 (guard fails). **2.33 kept → 92/42/0.**
 Casual is now in the boss band; the expert is slightly above it, like the other 92% bosses. Coralreach, 12 seeds:

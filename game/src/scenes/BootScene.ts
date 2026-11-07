@@ -623,6 +623,54 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.35, cy - r * 0.03, r * 0.08);
         break;
       }
+      case 'deckgunner': {
+        // rat pirate: bandana, round ears, a long brass blunderbuss with a flared muzzle
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.1, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.1, r * 1.2);
+        g.fillCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
+        g.strokeCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
+        g.fillStyle(0xd8a0a0, 1);
+        g.fillCircle(cx - r * 0.42, cy - r * 0.78, r * 0.17);
+        g.fillCircle(cx + r * 0.22, cy - r * 0.8, r * 0.17);
+        g.fillStyle(0xc83a3a, 1);
+        g.fillRect(cx - r * 0.5, cy - r * 0.72, r * 0.8, r * 0.14);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.45, r * 0.07);
+        g.fillCircle(cx + r * 0.05, cy - r * 0.45, r * 0.07);
+        g.fillStyle(0xd8a040, 1);
+        g.fillRect(cx - r * 0.2, cy - r * 0.05, r * 1.15, r * 0.16);
+        g.fillTriangle(cx + r * 0.95, cy - r * 0.15, cx + r * 0.95, cy + r * 0.21, cx + r * 1.2, cy + r * 0.03);
+        g.strokeRect(cx - r * 0.2, cy - r * 0.05, r * 1.15, r * 0.16);
+        break;
+      }
+      case 'ironkeel': {
+        // walrus: big round body, white tusks, a dark anchor hanging from a chain over its shoulder
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.7, r * 1.25);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.7, r * 1.25);
+        g.fillCircle(cx - r * 0.6, cy - r * 0.15, r * 0.5);
+        g.strokeCircle(cx - r * 0.6, cy - r * 0.15, r * 0.5);
+        g.fillStyle(0xe8e0d0, 1);
+        g.fillTriangle(cx - r * 0.85, cy + r * 0.05, cx - r * 0.72, cy + r * 0.05, cx - r * 0.8, cy + r * 0.55);
+        g.fillTriangle(cx - r * 0.5, cy + r * 0.05, cx - r * 0.37, cy + r * 0.05, cx - r * 0.44, cy + r * 0.55);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.75, cy - r * 0.35, r * 0.07);
+        g.fillCircle(cx - r * 0.45, cy - r * 0.35, r * 0.07);
+        g.fillStyle(0xe8e0d0, 1);
+        for (const [bx, by] of [[0.3, -0.3], [0.6, 0.1], [0.1, 0.4]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.08);
+        g.lineStyle(2, 0x3a3a42, 1);
+        g.lineBetween(cx + r * 0.2, cy - r * 0.45, cx + r * 0.75, cy - r * 0.05);
+        g.lineStyle(3, 0x3a3a42, 1);
+        g.lineBetween(cx + r * 0.8, cy - r * 0.05, cx + r * 0.8, cy + r * 0.6);
+        g.lineBetween(cx + r * 0.6, cy + r * 0.45, cx + r * 1.0, cy + r * 0.45);
+        g.beginPath();
+        g.arc(cx + r * 0.8, cy + r * 0.45, r * 0.22, 0.2, Math.PI - 0.2);
+        g.strokePath();
+        break;
+      }
       case 'scourmaw': {
         // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
         g.fillStyle(0xe0c088, 1);

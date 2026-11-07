@@ -1510,6 +1510,18 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'keg': {
+        sfx.boom();
+        const ring = this.add.circle(ev.pos.x, ev.pos.y - 6, ev.radius, 0xffa040, 0.35).setStrokeStyle(4, 0xffe080, 0.9).setDepth(2450).setScale(0.2);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 380, onComplete: () => ring.destroy() });
+        this.particles.setParticleTint(0x6a6a72);
+        this.particles.explode(18, ev.pos.x, ev.pos.y - 8);
+        this.particles.setParticleTint(0xffb040);
+        this.particles.explode(12, ev.pos.x, ev.pos.y - 8);
+        this.cameras.main.shake(140, 0.004);
+        if (ev.hits.length) this.floatText(ev.pos.x, ev.pos.y - 40, 'Kaboom!', '#ffd080', 17);
+        break;
+      }
       case 'enemyShot': {
         sfx.trait('blast');
         const g = this.add.graphics().setDepth(2500);

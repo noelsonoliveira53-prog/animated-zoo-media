@@ -61,6 +61,7 @@ export interface EnemyDef {
   ink?: { radius: number; duration: number; cooldown: number }; // when hit, squirts an ink cloud: towers can't target enemies inside it
   ranged?: { range: number; damage: number; interval: number }; // shoots the nearest soldier or hero in range while it walks
   anchor?: { interval: number; duration: number; armor: number }; // drops anchor on a cycle: stops dead and gains armor while anchored
+  keg?: { radius: number; damage: number }; // explodes on death, hurting soldiers and the hero within radius
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)

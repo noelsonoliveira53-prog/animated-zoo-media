@@ -184,6 +184,7 @@ export type SimEvent =
   | { type: 'crack'; enemy: Enemy }
   | { type: 'molt'; enemy: Enemy }
   | { type: 'enemyShot'; enemy: Enemy; to: Vec2 }
+  | { type: 'keg'; pos: Vec2; radius: number; hits: Vec2[] }
   | { type: 'anchor'; enemy: Enemy; down: boolean }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
@@ -1814,6 +1815,7 @@ export class BattleSim {
       if (!e.def.boss) this.feedOn(e);
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
+      if (e.def.keg) this.kegBlast(e);
       if (e.def.glare) this.glareBurst(e);
       if (e.def.echo && !e.revived) {
         // Echo Wisp: re-forms once where it fell, weaker, paying no second bounty.
@@ -1839,6 +1841,24 @@ export class BattleSim {
       g.hp = Math.min(g.maxHp, g.hp + grow + g.maxHp * f.heal);
       this.events.push({ type: 'feed', enemy: g, from: { ...dead.pos } });
     }
+  }
+
+  /** Powdermonkey: its keg goes up when it falls, scorching nearby soldiers and the hero. */
+  private kegBlast(src: Enemy): void {
+    const k = src.def.keg!;
+    const dmg = k.damage * this.attackMult();
+    const hits: Vec2[] = [];
+    for (const s of this.soldiers) {
+      if (!s.alive || Math.hypot(s.pos.x - src.pos.x, s.pos.y - src.pos.y) > k.radius) continue;
+      hits.push({ ...s.pos });
+      this.hurtSoldier(s, dmg);
+    }
+    const h = this.hero;
+    if (h && h.alive && Math.hypot(h.pos.x - src.pos.x, h.pos.y - src.pos.y) <= k.radius) {
+      hits.push({ ...h.pos });
+      this.hurtHero(dmg);
+    }
+    this.events.push({ type: 'keg', pos: { ...src.pos }, radius: k.radius, hits });
   }
 
   /** Glareflies flash on death: nearby shooting towers are dazzled (frozen) briefly. Shares the chill immunity window. */

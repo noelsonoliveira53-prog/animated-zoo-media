@@ -799,4 +799,22 @@ describe('Blackwake enemies', () => {
     expect(k.anchored).toBe(false);
     expect(k.armor).toBe(k.def.armor);
   });
+
+  it("a Powdermonkey's keg blows up on death, hurting soldiers in range only", () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    const [a, b] = sim.soldiers;
+    b.pos = { x: a.pos.x + 400, y: a.pos.y };
+    b.home = { ...b.pos };
+    const m = sim.spawn('powdermonkey', 0, 0);
+    m.pos = { x: a.pos.x + 20, y: a.pos.y };
+    const [ha, hb] = [a.hp, b.hp];
+    (sim as any).applyDamage(m, 99999);
+    expect(a.hp).toBeLessThan(ha);
+    expect(b.hp).toBe(hb);
+    expect(sim.drainEvents().some((e) => e.type === 'keg')).toBe(true);
+  });
 });

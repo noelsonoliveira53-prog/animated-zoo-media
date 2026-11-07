@@ -34,6 +34,7 @@ export const ENDLESS = {
     { fromWave: 56, enemies: ['shellsnap', 'tidecaller'] },
     { fromWave: 58, enemies: ['inkspitter'] },
     { fromWave: 60, enemies: ['deckgunner', 'ironkeel'] },
+    { fromWave: 62, enemies: ['powdermonkey'] },
   ] as EndlessTier[],
   attackRamp: 0.15, // enemy melee hits grow 8% per wave so blockers can't stall forever
   heroRegen: 0.5, // long runs reward tanky regen heroes too much; halve hero healing in endless

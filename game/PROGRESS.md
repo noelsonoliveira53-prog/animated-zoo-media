@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **122** (next balance pass at iteration 125)
+Iteration counter: **123** (next balance pass at iteration 125)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -868,13 +868,20 @@ Iteration counter: **122** (next balance pass at iteration 125)
   - **Visual fixes:** a scrolling swell overlay striped across the plank roads (the roads share the ground layer),
     so it was removed. The map's lake was a cream blob and is now dark water.
   - Browser check `scripts/flotilla-check.mjs`. 188 tests.
+- **Iteration 123**: third Blackwake enemy, the **Powdermonkey** (new `keg` trait).
+  - A deck monkey hauling a fizzing keg. On death it explodes for 45 (scaled by the attack multiplier) to soldiers
+    and the hero within 80px, with a fire ring, smoke, a small shake and "Kaboom!". Kill it at range before it
+    reaches the blockers.
+  - Level 72 **Powder Row**: two west gangways merge into a long winding supply-barge road, 11 pads, 15 waves,
+    hpMult 2.85.
+  - Endless adds Powdermonkey from wave 62. 189 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 15 level 72 (+ third Blackwake enemy), 73–74, finale 75 with a boss + story card + achievements.
+2. Region 15 levels 73–74, finale 75 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -885,6 +892,8 @@ Iteration counter: **122** (next balance pass at iteration 125)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 123**: 72 Powder Row went 100/100/92 at hpMult 1.9 (two long roads and 11 pads are generous), 100/100/75 at 2.4, 100/100/17 at 2.7, and **2.85 → 100/100/17** (kept; casual stays at 100 on this map, like Grubfield Lane).
+
 **Iteration 122**: 71 Blackwake Moorings went 100/83/0 at hpMult 2.0, 100/100/8 at 1.75, and **1.6 → 100/100/42** (kept, the opener target).
 
 **Iteration 120**: 70 Crown of the Reef, after moving Shellsnaps off the north road: 92/75 at hpMult 2.27, 92/42 at

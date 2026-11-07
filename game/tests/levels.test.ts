@@ -64,6 +64,24 @@ describe('HUD clearance', () => {
     }
   });
 
+  it('no road runs under the hero HUD (enemies there would be hidden behind the portrait)', () => {
+    const z = { x0: 16, y0: 620, x1: 200, y1: 712 };
+    for (const l of LEVELS)
+      for (const path of l.paths)
+        for (let i = 1; i < path.length; i++) {
+          const a = path[i - 1];
+          const b = path[i];
+          const n = Math.ceil(Math.hypot(b.x - a.x, b.y - a.y) / 10);
+          for (let k = 0; k <= n; k++) {
+            const x = a.x + ((b.x - a.x) * k) / n;
+            const y = a.y + ((b.y - a.y) * k) / n;
+            // Road is ~56 px wide: keep its centre line 20 px clear of the HUD box.
+            const inside = x > z.x0 - 20 && x < z.x1 + 20 && y > z.y0 - 20 && y < z.y1 + 20;
+            expect(inside, `${l.name} road passes (${Math.round(x)},${Math.round(y)}) under the hero HUD`).toBe(false);
+          }
+        }
+  });
+
   it('towers built near the top stay clear of the stats panel and the top-right buttons', () => {
     // A built tower rises about 75 px above its pad centre.
     const panels = [

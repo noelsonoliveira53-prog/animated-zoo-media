@@ -382,6 +382,29 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.45, cy - r * 1.0, r * 0.4, r * 0.2);
         break;
       }
+      case 'mawbloom': {
+        // rotten heart-tree: a split trunk with a gaping maw, a crown of withered branches with bruised fruit, root feet
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.75, -0.3, 0.3, 0.75]) g.lineBetween(cx + lx * r, cy + r * 0.55, cx + lx * r * 1.35, cy + r * 1.05);
+        g.lineStyle(4, 0x4a2a2a, 1);
+        for (const [x1, y1, x2, y2] of [[-0.3, -0.6, -0.95, -1.15], [0.3, -0.6, 0.95, -1.1], [0, -0.7, 0.1, -1.3], [-0.6, -0.9, -1.25, -0.8], [0.6, -0.85, 1.25, -0.75]]) g.lineBetween(cx + x1 * r, cy + y1 * r, cx + x2 * r, cy + y2 * r);
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.85, cy - r * 0.75, r * 1.7, r * 1.4, 14);
+        g.strokeRoundedRect(cx - r * 0.85, cy - r * 0.75, r * 1.7, r * 1.4, 14);
+        g.lineStyle(2, 0x4a2430, 1);
+        for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy - r * 0.65, cx + lx * r * 0.9, cy + r * 0.5);
+        g.fillStyle(0x1a0a10, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 0.9, r * 0.55);
+        g.fillStyle(0xe8e0c8, 1);
+        for (const tx of [-0.3, -0.1, 0.1, 0.3]) g.fillTriangle(cx + tx * r - r * 0.07, cy - r * 0.08, cx + tx * r + r * 0.07, cy - r * 0.08, cx + tx * r, cy + r * 0.1);
+        g.fillStyle(0xc8ff6a, 1);
+        g.fillCircle(cx - r * 0.32, cy - r * 0.35, r * 0.11);
+        g.fillCircle(cx + r * 0.32, cy - r * 0.35, r * 0.11);
+        g.fillStyle(0x8a3a6a, 1);
+        for (const [fx, fy] of [[-0.95, -1.15], [0.95, -1.1], [0.1, -1.3], [-1.25, -0.8], [1.25, -0.75]]) g.fillCircle(cx + fx * r, cy + fy * r, r * 0.12);
+        break;
+      }
       case 'velumbra': {
         // shadow manta: vast dark wings, a long tail, a cluster of glowing eyes and a faint inner light
         g.lineStyle(3, C.ink, 1);

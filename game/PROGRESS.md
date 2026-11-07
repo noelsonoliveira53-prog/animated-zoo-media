@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **93** (next balance pass at iteration 95)
+Iteration counter: **94** (next balance pass at iteration 95)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -650,13 +650,25 @@ Iteration counter: **93** (next balance pass at iteration 95)
 - **Iteration 93**: level 54 **Rotroot Hollow**. A 2,280px serpentine west road through the hollow, plus a 1,100px
   ridge track from the north for fliers and light enemies. The two roads only join for the last 260px. It has 11 pads,
   16 waves and hpMult 1.77. 169 tests.
+- **Iteration 94**: Rotbloom finale, level 55 **Heart of the Orchard** (18 waves, 12 pads, hpMult 2.43). The boss
+  **Mawbloom, the Rot Heart**:
+  - Bark-song aura (+20% armor to allies within 160px).
+  - Sows Rotseeds every 6s.
+  - Feeds on fallen allies (+3% max health, up to 8 times).
+  - Phases: 75% summons Barkwardens; 50% a 1,300 shield plus Gorgegrubs; 25% Seedcasters and a speed-up; 10% a final
+    surge.
+  - Code-drawn rotten heart-tree sprite with a toothy maw and bruised fruit.
+
+  Also: achievements `boss_mawbloom` (Heartwood) and `orchard_stars` (Harvest Keeper), story card "The Orchard Wakes",
+  and Mawbloom joins the endless boss rotation. New layout test: no road may run under the hero HUD. It caught the
+  first draft of this level, where the boss walked behind the portrait. 170 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 11 finale (level 55) with a Rotbloom boss (phases) + story card.
-2. Iter 95 balance pass.
+1. Iter 95 balance pass (full Rotbloom sweep + finale guard).
+2. Region 12 (theme, music, 3 new enemies, levels 56–60, boss) — or a breather feature (e.g. village decorations / raid variety).
 
 ## Known Bugs
 - (none known)
@@ -666,6 +678,8 @@ Iteration counter: **93** (next balance pass at iteration 95)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 94**: 55 Heart of the Orchard went 50/75/0 at hpMult 2.2, with gnat swarms on the short north road. I moved them to the long road, which gave 100/92/0. 2.4 gave 83/67, then I reshaped the road away from the HUD and re-tuned: 2.45 gave 67/58, 2.35 gave 83/83, 2.4 gave 83/75, and **2.43 → 75/50/0** (kept, in the boss band).
+
 **Iteration 93**: 54 Rotroot Hollow started at 50/67/0 (hpMult 1.9). 56 of the expert's leaked lives were Galehounds on the short ridge track (the short-road lesson again), so I moved them to the long road, which gave 75/75/0. 1.8 gave 75/67/0, 1.75 gave 92/92/0, and **1.77 → 83/67/0** (kept, a fourth-level ramp).
 
 **Iteration 92**: 53 Cider Press Crossing was 83/50/0 at hpMult 1.95, 100/83/8 at 1.85 (kept) and 100/83/17 at 1.8.

@@ -77,4 +77,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x080a18, 0x3a3a6a],
     accent: 0x5ae8d0,
   },
+  l55: {
+    title: 'The Orchard Wakes',
+    lines: [
+      'Mawbloom crumbles into black mulch, and the stumps lie down again.',
+      'By morning, green buds are pushing through the rot between the rows.',
+      'The Keepers fill their baskets and carry the first clean harvest home.',
+    ],
+    sky: [0x5a8aa8, 0xd8c890],
+    accent: 0xd8642a,
+  },
 };

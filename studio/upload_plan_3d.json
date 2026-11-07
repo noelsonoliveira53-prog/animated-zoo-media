@@ -340,5 +340,51 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 170.0
+ },
+ {
+  "file": "bloop/bl3d_ep03.mp4",
+  "title": "Bloop Turns Blue! Blue Color Song for Kids | Part 1",
+  "description": "The Blue Color Song for kids! Bloop the jelly blob turns blue and finds blue things everywhere: the sky, the ocean, blueberries and a big blue whale.\nKids learn the color blue and simple color mixing (blue + yellow = green, blue + red = purple). Part 1 of the Bloop color series. Ages 2-5.\n\nLYRICS\nBlue, blue, I'm turning blue!\nBloop is blue, and you can too!\nBlue sky, blue sea, blue for me,\nBlue, blue, find blue with me!\nLook up high, the sky is blue,\nFluffy clouds are floating through!\nLook down low, the ocean's blue,\nFishies swim and splash with you!\nBlueberries, small and round,\nPick them up from the ground!\nA big blue whale, the biggest one,\nSings and swims and has some fun!\nPoint to something blue!\nTouch your toes, one, two!\nClap your hands, clap, clap!\nJump up high, and back!\nBlue and yellow make green, you see,\nBlue and red make purple, whee!\nBlue is cool and calm and bright,\nBlue, blue, I love you, goodnight!\nBlue, blue! See you next time!\nblue, I'm turning blue\nBlue is blue\nAnd you can too\nBlue sky, blue sea, blue for me\nBlue, blue, find blue with me\nBlue, blue, see you next time",
+  "tags": [
+   "blue color song",
+   "learn colors",
+   "color songs for kids",
+   "colors for toddlers",
+   "color mixing",
+   "kids songs",
+   "nursery rhymes",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-08",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep03.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
+ },
+ {
+  "file": "fruity/fr3d_ep04.mp4",
+  "title": "Five Little Grapes Jumping on the Bed! | Fruity Friends",
+  "description": "Five Little Grapes Jumping on the Bed! A fruity twist on the classic counting rhyme with Pipkiko and the Fruity Friends.\nKids count down from 5 to 1, jump along, and learn to be safe and gentle. Ages 2-5.\n\nLYRICS\nFive little grapes jumping on the bed,\nOne fell off and bumped his head!\nMama called the doctor and the doctor said,\nNo more grapes jumping on the bed!\nFour little grapes jumping on the bed,\nThree little grapes jumping on the bed,\nTwo little grapes jumping on the bed,\nJump, jump, jump with me!\nCount down, five, four, three!\nTwo, one, sit down slow,\nRest and count, here we go!\nOne little grape jumping on the bed,\nShe fell off and bumped her head!\nMama gave a hug and the doctor said,\nGrapes are safe now, sleepy in bed!\nFive, four, three, two, one! Goodnight, grapes!",
+  "tags": [
+   "five little monkeys",
+   "five little grapes",
+   "counting song",
+   "count down from 5",
+   "nursery rhymes",
+   "fruit song",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ],
+  "date": "2026-11-08",
+  "time": "2:20 PM",
+  "thumb": "brand/fruity/thumb_fr3d_ep04.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

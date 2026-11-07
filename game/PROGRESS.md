@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **128** (next balance pass at iteration 130)
+Iteration counter: **129** (next balance pass at iteration 130)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -902,6 +902,10 @@ Iteration counter: **128** (next balance pass at iteration 130)
   - Locked regions say which level to beat (or "coming soon").
 
   The arrows still work. Browser check `scripts/region-picker-check.mjs`. 189 tests.
+- **Iteration 129** (phone QA): checked the new region picker and the late-game screens (a Blackwake battle and the
+  Field Guide at 68 enemies over 3 pages, including boss phases) at phone size (740×360 touch). All readable, no
+  overlaps, no console errors; nothing needed fixing. Housekeeping note: `screenshots/` is about 54MB across 400
+  images. 189 tests.
 
 ## In Progress
 - (none)

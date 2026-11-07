@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **137** (next balance pass at iteration 140)
+Iteration counter: **138** (next balance pass at iteration 140)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -959,13 +959,23 @@ Iteration counter: **137** (next balance pass at iteration 140)
   the boss.
   - Polish: battle decorations now start at y 115, so tall trees no longer poke up behind the top bar.
   - Screenshot `screenshots/137.png`. 193 tests.
+- **Iteration 138** (Amberwood finale): level 80 **Heart of the Amberwood** (11 pads, roads of 2,520px and 2,060px)
+  and its boss.
+  - **Rustantler, the Autumn King**: a great elk with smouldering antlers. 3,000 hp; its war-drum (`drum`, 200px,
+    ×1.3) speeds up everything around it; its hide turns toward incoming damage (`adapt`, +3% per hit, up to +30%);
+    and it releases Sapstoats as it walks (up to 6).
+  - Four phases: Barkdrums at 75%; a 1,400 shield and Turnleafs at 50%; a Sapstoat swarm and speed-up at 25%;
+    a charge at 10%.
+  - Achievements **Kingsfall** (defeat it) and **Leafwalker** (3 stars on every Amberwood level). Story card "The Last
+    Leaf Falls". Rustantler joins the endless boss rotation.
+  - Screenshot `screenshots/138.png` (boss phase 2 banner). 193 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
-2. Phone QA of the Field Guide at 71 enemies.
+1. Phone QA of the Field Guide (72 enemies) and the achievements pages.
+2. Region 17, or a breather (raid or village variety).
 
 ## Known Bugs
 - (none known)
@@ -974,6 +984,9 @@ Iteration counter: **137** (next balance pass at iteration 140)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 138**: 80 Heart of the Amberwood: 8/0/0 at hpMult 2.0 and 67/17 at 1.7 (leaks: Sapstoats, Turnleafs, Glareflies),
+92/58 at 1.55, and **1.6 → 75/42/0** (kept, boss band). Finale guard: the expert won 3 of 4 seeds.
+
 **Iteration 137**: 79 Emberleaf Ridge: 100/83/0 at hpMult 1.6, 58/33 at 1.9, 83/83 at 1.76, and **1.7 → 92/75/0** (kept,
 fourth-level band).
 

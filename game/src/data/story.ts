@@ -127,4 +127,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x0a1a2a, 0x2a5a7a],
     accent: 0xffb040,
   },
+  l80: {
+    title: 'The Last Leaf Falls',
+    lines: [
+      'Rustantler sinks to its knees, and the fire in its antlers gutters out like a candle.',
+      'For the first time in an age, the leaves of the Amberwood stop falling.',
+      'In the hush, the Keepers hear birdsong, and somewhere far ahead, the sound of the sea.',
+    ],
+    sky: [0x5a3a2a, 0xd8a050],
+    accent: 0xe87a1a,
+  },
 };

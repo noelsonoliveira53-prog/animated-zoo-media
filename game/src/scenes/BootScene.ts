@@ -702,6 +702,48 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.8, cy - r * 0.18, r * 0.07);
         break;
       }
+      case 'rustantler': {
+        // great elk: heavy brown body, shaggy cream mane, long legs, huge branching antlers glowing ember-red
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x5a3020, 1);
+        for (const lx of [-0.45, -0.15, 0.3, 0.6]) {
+          g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
+          g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.6, r * 0.9);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.6, r * 0.9);
+        g.fillStyle(0xe8d0a0, 1);
+        g.fillEllipse(cx - r * 0.45, cy + r * 0.05, r * 0.55, r * 0.7);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx - r * 0.75, cy - r * 0.3, r * 0.6, r * 0.42);
+        g.strokeEllipse(cx - r * 0.75, cy - r * 0.3, r * 0.6, r * 0.42);
+        g.fillStyle(0x3a2014, 1);
+        g.fillCircle(cx - r * 1.02, cy - r * 0.25, r * 0.08);
+        g.fillStyle(0xffd040, 1);
+        g.fillCircle(cx - r * 0.78, cy - r * 0.38, r * 0.07);
+        // antlers: two branching sweeps, glowing
+        for (const side of [-1, 1]) {
+          const bx = cx - r * 0.65 + side * r * 0.12;
+          const by = cy - r * 0.48;
+          g.lineStyle(r * 0.16, 0xffb050, 0.35);
+          g.lineBetween(bx, by, bx + side * r * 0.35, by - r * 0.55);
+          g.lineStyle(r * 0.08, 0xd8501a, 1);
+          g.lineBetween(bx, by, bx + side * r * 0.35, by - r * 0.55);
+          g.lineBetween(bx + side * r * 0.12, by - r * 0.2, bx - side * r * 0.08, by - r * 0.45);
+          g.lineBetween(bx + side * r * 0.25, by - r * 0.4, bx + side * r * 0.55, by - r * 0.5);
+          g.lineBetween(bx + side * r * 0.35, by - r * 0.55, bx + side * r * 0.3, by - r * 0.8);
+          g.fillStyle(0xffe08a, 1);
+          g.fillCircle(bx + side * r * 0.3, by - r * 0.8, r * 0.05);
+          g.fillCircle(bx + side * r * 0.55, by - r * 0.5, r * 0.05);
+        }
+        // a few falling leaves around it
+        g.fillStyle(0xe87a1a, 1);
+        g.fillEllipse(cx + r * 0.7, cy - r * 0.55, r * 0.18, r * 0.1);
+        g.fillStyle(0xc83a1a, 1);
+        g.fillEllipse(cx + r * 0.45, cy - r * 0.8, r * 0.16, r * 0.09);
+        break;
+      }
       case 'sapstoat': {
         // stoat: long low russet body, cream belly, black tail tip, bared amber teeth
         g.lineStyle(2.5, C.ink, 1);

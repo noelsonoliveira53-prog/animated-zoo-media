@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **59** (next balance pass at iteration 60)
+Iteration counter: **60** (next balance pass at iteration 65)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -457,14 +457,16 @@ Iteration counter: **59** (next balance pass at iteration 60)
   description and facts built from data by `spellFacts` in `systems/spellInfo.ts` (damage/radius/delay, summoned
   soldiers' stats, snare slow, recharge, hotkey), plus a short how-to-cast note. Tab buttons narrowed to fit four.
   Browser check `scripts/guide-spells-check.mjs` taps the real tab. 145 tests.
+- [x] **Iter 60 — POLISH + BALANCE pass.** Full sweep (`balance.ts 6`, then 12–16 seeds on outliers). Saltjaw's
+  Grotto had a wall at waves 6–8 (10 Shellbacks under coral + 20 Gnats, then Splotches) that killed half of expert runs
+  before the boss; trimmed those two waves and raised hpMult 2.2 → 2.55 so the boss is the real test. Heart of the
+  Emberdeep hpMult 1.06 → 1.03 (casual was 17–25%). Screenshot `60.png` (Saltjaw fight).
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. **Iter 60 balance pass:** re-check early levels the novice now wins every time since Bramble's Bulwark
-   (Thornwood Hollow, Frostfern Pass), plus a full campaign sweep.
-2. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
+1. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
 
 ## Known Bugs
 - (none known)
@@ -477,6 +479,17 @@ Iteration counter: **59** (next balance pass at iteration 60)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
+first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·
+9 Rimewood 100/100/83 · 10 Frostpeak 83/83/67 · 11 Ashfall 83/100/83 · 12 Cinder 100/83/50 · 13 Smoulder 100/83/100 ·
+14 Obsidian 100/83/0 · 16 Duskcap 100/83/100 · 17 Glowspore 83/83/0 · 18 Mirrorpool 100/50/83 · 19 Hollowroot 100/83/0 ·
+20 Morrowcap 83/83/0 · 21 Wrackline 100/100/100 · 22 Tidepool 100/83/100 · 23 Saltspray 100/83/0 · 24 Wreckspiral
+83/100/0 · 26 Glassfall 100/100/83 · 27 Prism 100/83/0 · 28 Shattered 100/67/0 · 29 Glassteeth 100/100/0 ·
+30 Kaleidrax 83/33/50. Retuned (12–16 seeds): **15 Heart of the Emberdeep** 83/25/33 → 88/38/50 (hp 1.03);
+**25 Saltjaw's Grotto** 50/50/8 → 81/69/0 (wave 6–7 trim, hp 2.55). Saltjaw is very sensitive to hpMult (±0.07
+swung expert 75 → 44%) because losses came from one mid-level wave; smoothing the spike fixed that.
+Watch: the novice (Bramble) beats casual on Heart of the Emberdeep and Kaleidrax; casual lags on Mirrorpool.
+
 **Iteration 20** (`balance.ts 10`, after the per-wave ramp + rescale; expert/casual/novice):
 L1 100/100/100 · L2 100/100/100 · L3 100/90/80 · L4 100/70/70 · L5 100/100/60 · L6 100/100/20 · L7 80/80/10 ·
 L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 · L13 100/90/40 · L14 50/40/0 · L15 90/30/0.

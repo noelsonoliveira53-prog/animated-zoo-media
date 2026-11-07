@@ -818,3 +818,46 @@ describe('Blackwake enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'keg')).toBe(true);
   });
 });
+
+describe('Amberwood enemies', () => {
+  it('a Barkdrum beats its drum on a timer, hastening itself and nearby allies but not far ones', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const b = sim.spawn('barkdrum', 0, 300);
+    const near = sim.spawn('mudling', 0, 340);
+    const far = sim.spawn('mudling', 0, 900);
+    near.def = { ...near.def, speed: 0 };
+    far.def = { ...far.def, speed: 0 };
+    b.def = { ...b.def, speed: 0 };
+    const d = b.def.drum!;
+    for (let i = 0; i < Math.ceil(d.interval * 0.5 * 60) + 1; i++) sim.update(1 / 60);
+    expect(sim.drainEvents().some((e) => e.type === 'drum')).toBe(true);
+    expect(near.hasteMult).toBeCloseTo(d.speedMult);
+    expect(b.hasteMult).toBeCloseTo(d.speedMult);
+    expect(far.hasteMult).toBe(1);
+    for (let i = 0; i < Math.ceil(d.duration * 60) + 2; i++) sim.update(1 / 60);
+    expect(near.hasteMult).toBe(1);
+  });
+
+  it('a Turnleaf turns its hide toward the damage that hits it, letting the other guard slip', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    const t = sim.spawn('turnleaf', 0, 400);
+    t.def = { ...t.def, speed: 0, hp: 99999 };
+    t.hp = t.maxHp = 99999;
+    const a = t.def.adapt!;
+    const hit = (type: 'physical' | 'magic') => (sim as unknown as { applyDamage: (e: unknown, d: number, ty: string) => void }).applyDamage(t, 10, type);
+    for (let i = 0; i < 20; i++) hit('physical');
+    expect(t.armor).toBeCloseTo(t.def.armor + a.max);
+    expect(t.mr).toBeCloseTo(t.def.magicResist);
+    for (let i = 0; i < 3; i++) hit('magic');
+    expect(t.mr).toBeCloseTo(t.def.magicResist + 3 * a.step);
+    expect(t.armor).toBeCloseTo(t.def.armor + a.max - 3 * a.step);
+    // a real magic tower shot turns it too
+    sim.coins = 999;
+    sim.build(0, 'glimmer');
+    const mr0 = t.mr;
+    for (let i = 0; i < 60 * 3; i++) sim.update(1 / 60);
+    expect(t.mr).toBeGreaterThan(mr0);
+  });
+});

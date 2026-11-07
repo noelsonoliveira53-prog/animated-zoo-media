@@ -671,6 +671,71 @@ export class BootScene extends Phaser.Scene {
         g.strokePath();
         break;
       }
+      case 'barkdrum': {
+        // stag beetle: glossy brown shell split down the middle, big curved mandibles, a log drum on its back
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.2, r * 1.5, r * 1.3);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.2, r * 1.5, r * 1.3);
+        g.lineBetween(cx + r * 0.1, cy - r * 0.45, cx + r * 0.1, cy + r * 0.85);
+        g.fillStyle(0xffffff, 0.25);
+        g.fillEllipse(cx - r * 0.25, cy, r * 0.35, r * 0.6);
+        g.fillStyle(0x3a2414, 1);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.1, r * 0.35);
+        g.strokeCircle(cx - r * 0.7, cy - r * 0.1, r * 0.35);
+        g.lineStyle(3, 0x3a2414, 1);
+        g.beginPath();
+        g.arc(cx - r * 1.0, cy - r * 0.45, r * 0.35, Math.PI * 0.2, Math.PI * 1.1);
+        g.strokePath();
+        g.beginPath();
+        g.arc(cx - r * 1.0, cy + r * 0.2, r * 0.35, Math.PI * 0.9, Math.PI * 1.8);
+        g.strokePath();
+        // the log drum, strapped across the shell
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(0xa8784a, 1);
+        g.fillRoundedRect(cx - r * 0.25, cy - r * 0.75, r * 0.95, r * 0.5, r * 0.18);
+        g.strokeRoundedRect(cx - r * 0.25, cy - r * 0.75, r * 0.95, r * 0.5, r * 0.18);
+        g.fillStyle(0xe8d0a0, 1);
+        g.fillEllipse(cx + r * 0.7, cy - r * 0.5, r * 0.22, r * 0.5);
+        g.strokeEllipse(cx + r * 0.7, cy - r * 0.5, r * 0.22, r * 0.5);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.8, cy - r * 0.18, r * 0.07);
+        break;
+      }
+      case 'turnleaf': {
+        // gecko: slim orange body, splayed toes, a big maple-leaf tail, round gold eye
+        g.lineStyle(2.5, C.ink, 1);
+        // leaf tail
+        g.fillStyle(0xd84a1a, 1);
+        const tx = cx + r * 0.95;
+        const ty = cy + r * 0.1;
+        g.fillTriangle(tx - r * 0.2, ty, tx + r * 0.5, ty - r * 0.55, tx + r * 0.35, ty);
+        g.fillTriangle(tx - r * 0.2, ty, tx + r * 0.7, ty, tx + r * 0.35, ty + r * 0.2);
+        g.fillTriangle(tx - r * 0.2, ty, tx + r * 0.5, ty + r * 0.55, tx + r * 0.35, ty);
+        g.lineStyle(1.5, 0x8a2a0a, 1);
+        g.lineBetween(tx - r * 0.2, ty, tx + r * 0.55, ty);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.1, r * 1.4, r * 0.75);
+        g.strokeEllipse(cx, cy + r * 0.1, r * 1.4, r * 0.75);
+        g.fillEllipse(cx - r * 0.75, cy - r * 0.1, r * 0.7, r * 0.55);
+        g.strokeEllipse(cx - r * 0.75, cy - r * 0.1, r * 0.7, r * 0.55);
+        // toes
+        g.fillStyle(color, 1);
+        for (const [fx, fy] of [[-0.35, 0.5], [0.35, 0.5], [-0.35, -0.3], [0.35, -0.3]]) {
+          g.fillCircle(cx + fx * r, cy + fy * r, r * 0.13);
+          g.strokeCircle(cx + fx * r, cy + fy * r, r * 0.13);
+        }
+        // spots
+        g.fillStyle(0xf0c040, 1);
+        g.fillCircle(cx - r * 0.1, cy, r * 0.1);
+        g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.08);
+        g.fillStyle(0xffd040, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.14);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.87, cy - r * 0.2, r * 0.06);
+        break;
+      }
       case 'powdermonkey': {
         // monkey with a curly tail, a striped sailor shirt, a black keg on its back with a lit fuse
         g.lineStyle(2.5, color, 1);

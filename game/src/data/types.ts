@@ -62,6 +62,8 @@ export interface EnemyDef {
   ranged?: { range: number; damage: number; interval: number }; // shoots the nearest soldier or hero in range while it walks
   anchor?: { interval: number; duration: number; armor: number }; // drops anchor on a cycle: stops dead and gains armor while anchored
   keg?: { radius: number; damage: number }; // explodes on death, hurting soldiers and the hero within radius
+  drum?: { interval: number; radius: number; speedMult: number; duration: number }; // beats a war-drum on a timer: allies in radius (and itself) speed up briefly
+  adapt?: { step: number; max: number }; // each hit shifts its hide toward that damage type: +step armor (physical) or MR (magic), up to +max, while the other eases back to base
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
@@ -144,7 +146,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

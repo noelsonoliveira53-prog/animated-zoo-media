@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **132** (next balance pass at iteration 135)
+Iteration counter: **133** (next balance pass at iteration 135)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -924,13 +924,27 @@ Iteration counter: **132** (next balance pass at iteration 135)
   - Fixed a stale Ranger Lodge blurb that still said "raids coming soon".
   - Checks: `scripts/shrine-check.mjs`, plus a phone version. Screenshots `screenshots/132.png` (shop) and
     `132-phone.png`. 190 tests.
+- **Iteration 133** (region 16 opener): **The Amberwood**, an autumn forest where leaves fall without end. Level 76
+  **Amberwood Gate** has 11 pads and two roads of 2,280px and 1,580px. It uses the `AMBER` theme: ember-coloured
+  trees, leaf heaps, mossy logs and a drifting-leaves overlay, plus a warm folk-waltz music theme and an amber land
+  style on the world map. Two new enemies, each with a new trait:
+  - **Barkdrum** (stag beetle with a log drum): `drum` trait. Every 5s, allies within 140px, itself included, run
+    ×1.4 for 2s (`tickDrum`, a `drum` event with a warm ring and a "Boom!").
+  - **Turnleaf** (gecko with a maple-leaf tail): `adapt` trait. Each hit shifts its hide toward that damage type:
+    +5% armor for physical, or +5% magic resist for magic, up to +45%, while the other eases back to base. To
+    support this, `applyDamage` now receives the damage type from every tower, spell, hero and soldier hit. It is
+    tinted bark-brown or moon-violet by its current lean.
+  - Endless tier at wave 64. Field Guide tags and a drum sound cue. Tests for both traits.
+  - Checks: `scripts/amber-check.mjs`; screenshots `screenshots/133.png` and `133-map.png`. The region picker still
+    fits at 16 regions. 192 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 16, or a breather (raid or village variety, more phone QA).
-2. Field Guide holds 30 enemies per page and has 68 now (3 pages). Region 16 would still fit on page 3.
+1. Amberwood levels 77–79: a third new trait on level 77, then two more levels.
+2. Amberwood finale (level 80): a boss with phases, achievements, a story card and the endless boss rotation.
+3. Phone QA of the region picker at 6 rows (16 regions) and the Field Guide at 70 enemies.
 
 ## Known Bugs
 - (none known)
@@ -939,6 +953,8 @@ Iteration counter: **132** (next balance pass at iteration 135)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 133**: 76 Amberwood Gate at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/100/0.
+
 **Iteration 131** (hero comparison, expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% → 77%
 after the first buff (Earthshake 85, Wren bolt 18 and ring 36), then **79%** with health 300; Wren 77% → **85%** with
 attack rate 1.15. Both now sit inside the others' 79–90% range. Only the novice strategy uses Bramble, so the tuned

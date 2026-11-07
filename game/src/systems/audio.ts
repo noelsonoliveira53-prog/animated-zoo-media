@@ -184,6 +184,11 @@ class Sfx {
         this.noise(0.1, 0.12, 1800);
         this.tone(160, 0.08, 'square', 0.05, 80);
         break;
+      case 'drum': // two hollow log thumps
+        this.tone(90, 0.12, 'sine', 0.09, 60);
+        this.tone(120, 0.1, 'triangle', 0.06, 70);
+        this.noise(0.06, 0.05, 400);
+        break;
       case 'anchor': // heavy iron clank and a splash
         this.tone(110, 0.25, 'square', 0.06, 70);
         this.noise(0.3, 0.07, 900);

@@ -99,6 +99,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.keg) tags.push(`Powder keg: on death, deals ${e.keg.damage} to soldiers and heroes within ${e.keg.radius}px`);
         if (e.ranged) tags.push(`Gunner: shoots soldiers and heroes within ${e.ranged.range}px for ${e.ranged.damage} every ${e.ranged.interval}s`);
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
+        if (e.drum) tags.push(`War-drum every ${e.drum.interval}s: allies within ${e.drum.radius}px run ×${e.drum.speedMult} for ${e.drum.duration}s`);
+        if (e.adapt) tags.push(`Turning hide: each hit adds +${Math.round(e.adapt.step * 100)}% armor (physical) or magic resist (magic), up to +${Math.round(e.adapt.max * 100)}%, and wears the other down`);
         if (e.ink) tags.push(`When hit: an ink cloud (${e.ink.radius}px, ${e.ink.duration}s) hides grounded enemies from towers; every ${e.ink.cooldown}s at most`);
         if (e.molt) tags.push(`Molts below ${Math.round(e.molt.at * 100)}% health: armor drops to ${Math.round(e.molt.armor * 100)}%, speed ×${e.molt.speedMult}`);
         if (e.cleanse) tags.push(`Washes slows off itself and allies within ${e.cleanse.radius}px every ${e.cleanse.interval}s`);

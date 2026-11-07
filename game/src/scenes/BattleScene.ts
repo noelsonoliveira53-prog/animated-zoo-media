@@ -301,6 +301,19 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.amber) {
+      // leaves forever drifting down through the Amberwood, swaying as they fall, then starting again at the top
+      for (let i = 0; i < 18; i++) {
+        const leaf = this.add.ellipse(rnd.between(0, GAME_W), rnd.between(-40, GAME_H), 9, 5, rnd.pick(theme.trees ?? [0xe87a1a]), 0.85).setDepth(0.6);
+        leaf.setAngle(rnd.between(0, 180));
+        const fall = rnd.between(9000, 15000);
+        this.tweens.add({ targets: leaf, y: GAME_H + 30, duration: fall * ((GAME_H + 30 - leaf.y) / (GAME_H + 70)), onComplete: () => {
+          leaf.y = -40;
+          this.tweens.add({ targets: leaf, y: GAME_H + 30, duration: fall, repeat: -1 });
+        } });
+        this.tweens.add({ targets: leaf, x: leaf.x + rnd.between(30, 60), angle: leaf.angle + 160, duration: rnd.between(1400, 2200), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.storm) {
       // light slanting rain over the steppe: a 120px-periodic pattern scrolled down and wrapped
       const rain = this.add.graphics().setDepth(0.6).setAlpha(0.22);
@@ -461,6 +474,44 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.amber) {
+        const k = rnd.frac();
+        if (k < 0.6) {
+          // a tall autumn tree: layered canopy in ember colours over a dark trunk
+          const leaf = rnd.pick(this.level.theme.trees ?? [0xc83a1a]);
+          const leaf2 = rnd.pick(this.level.theme.trees ?? [0xe87a1a]);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 42, 14);
+          deco.fillStyle(0x4a3020, 1);
+          deco.fillRect(p.x - 4, p.y - 16, 8, 20);
+          deco.fillStyle(leaf2, 1);
+          deco.fillCircle(p.x - 11, p.y - 20, 13);
+          deco.fillCircle(p.x + 11, p.y - 20, 13);
+          deco.fillStyle(leaf, 1);
+          deco.fillCircle(p.x, p.y - 30, 17);
+          deco.lineStyle(2, C.ink, 0.5);
+          deco.strokeCircle(p.x, p.y - 30, 17);
+          deco.fillStyle(0xffffff, 0.16);
+          deco.fillCircle(p.x - 6, p.y - 36, 6);
+        } else if (k < 0.85) {
+          // a heap of fallen leaves
+          for (let n = 0; n < 7; n++) {
+            deco.fillStyle(rnd.pick(this.level.theme.trees ?? [0xe87a1a]), 0.95);
+            deco.fillEllipse(p.x + rnd.between(-14, 14), p.y + rnd.between(-6, 6), 11, 6);
+          }
+        } else {
+          // a mossy fallen log with a little shelf fungus
+          deco.fillStyle(0x000000, 0.18);
+          deco.fillEllipse(p.x, p.y + 6, 50, 10);
+          deco.fillStyle(0x6a4a2a, 1);
+          deco.fillRoundedRect(p.x - 24, p.y - 7, 48, 14, 7);
+          deco.fillStyle(0x9a7a4a, 1);
+          deco.fillEllipse(p.x + 22, p.y, 10, 14);
+          deco.fillStyle(0xe8b04a, 1);
+          deco.fillEllipse(p.x - 6, p.y - 8, 12, 5);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeRoundedRect(p.x - 24, p.y - 7, 48, 14, 7);
         }
       } else if (this.level.theme.orchard && rnd.frac() < 0.75) {
         if (rnd.frac() < 0.7) {
@@ -1535,6 +1586,14 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
         break;
       }
+      case 'drum': {
+        sfx.trait('drum');
+        // the beat spreads as a warm ring; hastened critters flash
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, 16).setStrokeStyle(4, 0xe8a03a, 0.85).setDepth(2400);
+        this.tweens.add({ targets: ring, radius: ev.radius, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Boom!', '#ffcf7a', 14);
+        break;
+      }
       case 'anchor': {
         if (ev.down) {
           sfx.trait('anchor');
@@ -1912,6 +1971,13 @@ export class BattleScene extends Phaser.Scene {
       if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
       else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
       if (e.anchored) v.sprite.setTint(0xa8b4c4); // iron-grey while an Ironkeel holds anchor
+      else if (e.def.adapt) {
+        // Turnleaf: bark-brown when it has turned toward armor, moon-violet toward magic resist
+        const lean = e.armor - e.def.armor - (e.mr - e.def.magicResist);
+        if (lean > 0.1) v.sprite.setTint(0xc8a07a);
+        else if (lean < -0.1) v.sprite.setTint(0xc0b0ff);
+        else v.sprite.clearTint();
+      }
       else if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);
       else if (e.hasteMult > 1) v.sprite.setTint(0xffc0e8);
       else if (e.hasteTime <= 0 && (v.sprite.tintTopLeft === 0xffc0e8 || v.sprite.tintTopLeft === 0xa8b4c4)) v.sprite.clearTint();

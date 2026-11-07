@@ -1,4 +1,4 @@
-import type { EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, Vec2 } from '../data/types';
+import type { DamageType, EnemyDef, HeroDef, LevelDef, SoldierStats, TargetMode, TowerDef, Vec2 } from '../data/types';
 import { SPELLS } from '../data/spells';
 import { NO_MODS, type Modifiers } from '../data/daily';
 import { HEROES, HERO_MAX_LEVEL, HERO_XP, heroLevelMult, levelForXp } from '../data/heroes';
@@ -51,6 +51,7 @@ export interface Enemy {
   rangedCd: number; // Deckgunner reload
   anchorCd: number; // Ironkeel: time until it next drops / lifts anchor
   anchored: boolean;
+  drumCd: number; // Barkdrum: time to its next beat
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
@@ -186,6 +187,7 @@ export type SimEvent =
   | { type: 'enemyShot'; enemy: Enemy; to: Vec2 }
   | { type: 'keg'; pos: Vec2; radius: number; hits: Vec2[] }
   | { type: 'anchor'; enemy: Enemy; down: boolean }
+  | { type: 'drum'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
@@ -373,7 +375,7 @@ export class BattleSim {
         if (def.slow) {
           this.slow(e, def.slow.factor, def.slow.duration);
         }
-        this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)));
+        this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)), def.damageType ?? 'physical');
       }
     } else {
       this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
@@ -391,7 +393,7 @@ export class BattleSim {
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
       const hits = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
-      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)));
+      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)), def.damageType ?? 'physical');
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }
     this.strikes = this.strikes.filter((st) => st.timer > 0);
@@ -430,7 +432,7 @@ export class BattleSim {
       if (sk.slow) {
         this.slow(e, sk.slow.factor, sk.slow.duration);
       }
-      this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)));
+      this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)), sk.damageType);
     }
     let healed: Vec2[] | undefined;
     if (sk.kind === 'rally' && sk.heal) {
@@ -558,7 +560,7 @@ export class BattleSim {
           h.facing = target.pos.x < h.pos.x ? -1 : 1;
           this.events.push({ type: 'melee', pos: { ...target.pos } });
           const dealt = computeDamage(this.heroHitDamage(), atk.type, this.res(target));
-          this.applyDamage(target, dealt);
+          this.applyDamage(target, dealt, atk.type);
           if (target.def.thorns) {
             this.hurtHero(dealt * target.def.thorns);
             this.events.push({ type: 'thorns', pos: { ...h.pos } });
@@ -919,6 +921,7 @@ export class BattleSim {
       rangedCd: def.ranged ? def.ranged.interval * 0.5 : 0,
       anchorCd: def.anchor ? def.anchor.interval : 0,
       anchored: false,
+      drumCd: def.drum ? def.drum.interval * 0.5 : 0,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
@@ -972,6 +975,7 @@ export class BattleSim {
       if (e.def.cleanse) this.tickCleanse(e, dt);
       if (e.def.ranged) this.tickRanged(e, dt);
       if (e.def.anchor) this.tickAnchor(e, dt);
+      if (e.def.drum) this.tickDrum(e, dt);
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -1119,6 +1123,23 @@ export class BattleSim {
     e.anchorCd = e.anchored ? a.duration : a.interval;
     e.armor = e.anchored ? Math.min(0.85, e.def.armor + a.armor) : e.def.armor;
     this.events.push({ type: 'anchor', enemy: e, down: e.anchored });
+  }
+
+  /** Barkdrum: a beat on the war-drum hastens itself and nearby allies (not bosses) for a moment. */
+  private tickDrum(e: Enemy, dt: number): void {
+    const d = e.def.drum!;
+    e.drumCd -= dt;
+    if (e.drumCd > 0) return;
+    e.drumCd = d.interval;
+    const hasted: Enemy[] = [];
+    for (const o of this.enemies) {
+      if (!o.alive || (o.def.boss && o !== e)) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > d.radius) continue;
+      o.hasteMult = Math.max(o.hasteMult, d.speedMult);
+      o.hasteTime = Math.max(o.hasteTime, d.duration);
+      hasted.push(o);
+    }
+    this.events.push({ type: 'drum', enemy: e, radius: d.radius, hasted });
   }
 
   /** Inside an ink cloud? (Grounded enemies only: flyers are above the murk.) */
@@ -1459,7 +1480,7 @@ export class BattleSim {
             s.attackCd = 1 / stats.attackRate;
             this.events.push({ type: 'melee', pos: { ...target.pos } });
             const dealt = computeDamage(stats.damage, 'physical', this.res(target));
-            this.applyDamage(target, dealt);
+            this.applyDamage(target, dealt, 'physical');
             if (target.def.thorns) {
               this.hurtSoldier(s, dealt * target.def.thorns);
               this.events.push({ type: 'thorns', pos: { ...s.pos } });
@@ -1714,7 +1735,7 @@ export class BattleSim {
       this.slow(e, p.slow.factor, p.slow.duration);
     }
     const armor = this.res(e).armor * (1 - p.pierce);
-    this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }));
+    this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }), p.damageType);
   }
 
   /** Lightning: jump from the first target to nearby enemies with falling damage. */
@@ -1739,13 +1760,13 @@ export class BattleSim {
       if (!next) break;
       hit.add(next.uid);
       points.push({ ...next.pos });
-      this.applyDamage(next, computeDamage(dmg, p.damageType, this.res(next)));
+      this.applyDamage(next, computeDamage(dmg, p.damageType, this.res(next)), p.damageType);
       from = next;
     }
     if (points.length > 1) this.events.push({ type: 'chain', points, color: p.color });
   }
 
-  private applyDamage(e: Enemy, dmg: number): void {
+  private applyDamage(e: Enemy, dmg: number, type?: DamageType): void {
     if (!e.alive) return;
     if (dmg > 0 && !e.def.ground) {
       // Copperhorn: the nearest one in range draws part of the blow onto itself.
@@ -1764,7 +1785,7 @@ export class BattleSim {
         const taken = dmg * gr.def.ground!.share;
         dmg -= taken;
         this.events.push({ type: 'ground', from: e, to: gr, damage: taken });
-        this.applyDamage(gr, taken);
+        this.applyDamage(gr, taken, type);
       }
     }
     let left = dmg;
@@ -1808,6 +1829,17 @@ export class BattleSim {
     }
     if (e.def.brittle && dmg > 0) e.armor = Math.max(0, e.armor - e.def.brittle);
     if (e.def.harden && dmg > 0) e.armor = Math.min(e.def.harden.max, e.armor + e.def.harden.perHit);
+    if (e.def.adapt && dmg > 0 && (type === 'physical' || type === 'magic')) {
+      // Turnleaf: its hide turns to meet whatever just hit it, and lets the other guard slip.
+      const a = e.def.adapt;
+      if (type === 'physical') {
+        e.armor = Math.min(e.def.armor + a.max, e.armor + a.step);
+        e.mr = Math.max(e.def.magicResist, e.mr - a.step);
+      } else {
+        e.mr = Math.min(e.def.magicResist + a.max, e.mr + a.step);
+        e.armor = Math.max(e.def.armor, e.armor - a.step);
+      }
+    }
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {
       e.alive = false;

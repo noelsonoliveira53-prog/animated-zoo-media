@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **91** (next balance pass at iteration 95)
+Iteration counter: **92** (next balance pass at iteration 95)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -643,12 +643,16 @@ Iteration counter: **91** (next balance pass at iteration 95)
   snaking west road plus a short north road that joins for the last stretch, 11 pads, 15 waves, hpMult 1.9. Grubs ride
   with fodder packs so they have something to eat. Endless adds Gorgegrub from wave 46. Browser check
   `scripts/grub-check.mjs`. 169 tests.
+- **Iteration 92**: level 53 **Cider Press Crossing**. A north road and a south-west road meet at a central crossing,
+  with a shared 540px tail to an east exit. It has 11 pads, 16 waves and hpMult 1.85, and is the first level to combine
+  all three Rotbloom traits: Seedcasters' seeds die beside Gorgegrubs (food), and Barkwardens armor the swollen grubs.
+  169 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 11 levels 53–54, then the finale (level 55) with a Rotbloom boss (phases) + story card.
+1. Region 11 level 54, then the finale (level 55) with a Rotbloom boss (phases) + story card.
 2. Iter 95 balance pass.
 
 ## Known Bugs
@@ -659,6 +663,8 @@ Iteration counter: **91** (next balance pass at iteration 95)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 92**: 53 Cider Press Crossing was 83/50/0 at hpMult 1.95, 100/83/8 at 1.85 (kept) and 100/83/17 at 1.8.
+
 **Iteration 91**: 52 Grubfield Lane at hpMult 2.15 was 67/58/8 (too hard for the region's second level). 1.95 gave 75/83/42 (noisy), 1.85 gave 100/100/17, and **1.9 → 83/100/17**, which I kept. The expert's main leak is Gorgegrubs on the long road, as intended.
 
 **Iteration 90** (12 seeds, expert/casual/novice, Starwell + Orchard): 46 Glimmerpool 100/100/33 · 47 Lantern Hollow

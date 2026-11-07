@@ -100,6 +100,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.keg) tags.push(`Powder keg: on death, deals ${e.keg.damage} to soldiers and heroes within ${e.keg.radius}px`);
         if (e.ranged) tags.push(`Gunner: shoots soldiers and heroes within ${e.ranged.range}px for ${e.ranged.damage} every ${e.ranged.interval}s`);
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
+        if (e.phase) tags.push(`Fades to mist every ${e.phase.interval}s: takes no damage for ${e.phase.duration}s`);
+        if (e.dodge) tags.push(`Sidesteps ${Math.round(e.dodge * 100)}% of single-target shots (splash, chains and spells always land)`);
         if (e.lifesteal) tags.push(`Bloodthirsty: heals ${Math.round(e.lifesteal * 100)}% of the melee damage it deals to soldiers and heroes`);
         if (e.drum) tags.push(`War-drum every ${e.drum.interval}s: allies within ${e.drum.radius}px run ×${e.drum.speedMult} for ${e.drum.duration}s`);
         if (e.adapt) tags.push(`Turning hide: each hit adds +${Math.round(e.adapt.step * 100)}% armor (physical) or magic resist (magic), up to +${Math.round(e.adapt.max * 100)}%, and wears the other down`);

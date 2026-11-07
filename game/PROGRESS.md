@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **150** (next balance pass at iteration 155)
+Iteration counter: **151** (next balance pass at iteration 155)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1070,12 +1070,25 @@ Iteration counter: **150** (next balance pass at iteration 155)
     - Daily wins no longer record campaign stars (they always paid their own reward).
   - `playLevel` takes optional modifiers for these sims. Tests: daily ease. Screenshot `screenshots/150.png`.
     204 tests.
+- **Iteration 151** (region 17 opener): **The Mistwreath Terraces**, terraced tea hills in the fog with paper
+  lanterns on every step. Level 81 **Lanternstep Rise** has 12 pads and two roads of 2,400px and 1,680px. It uses the
+  `MIST` theme: clipped tea-bush rows, glowing stone lanterns, cherry trees in blossom, and slow fog banks that respect
+  Reduce motion. It also gets a calm pentatonic music theme and a soft green terraced land style on the world map.
+  Two new enemies, each with a new trait:
+  - **Mistfox** (a pale fox spirit): `phase` trait. Every 3.5s it fades to mist for 1.2s and takes no damage, so
+    shots aimed at it are wasted. It turns translucent and puffs particles as it fades.
+  - **Silkcrane** (a white crane): `dodge` trait. It sidesteps 35% of single-target tower shots (seeded, so sims
+    replay exactly); splash, chains and spells always land. Each dodge shows a "Miss!" with a whoosh, throttled.
+  - Endless tier at wave 68. Field Guide tags and sound cues. Tests for both traits.
+  - Checks: `scripts/mist-check.mjs`; screenshots `screenshots/151.png` and `151-map.png`. 206 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 17, or a breather (raid or village variety).
+1. Mistwreath levels 82–84 (a third new trait on 82), then the finale (85) with a boss, achievements, a story card and
+   the endless boss rotation.
+2. A breather now and then (raid or village variety).
 
 ## Known Bugs
 - (none known)
@@ -1084,6 +1097,8 @@ Iteration counter: **150** (next balance pass at iteration 155)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 151**: 81 Lanternstep Rise at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/92/0.
+
 **Iteration 150** (daily twists; expert / casual, levels 6/21/36/51/66/77 unless noted):
 - Twists alone at full health: none 100/97 · Golden Harvest 100/100 · Thick Hides 25/11 · Swift Horde 50/33 ·
   Ironbark +15% 36/19 (+6% → 94/81, +8% → 86/64).

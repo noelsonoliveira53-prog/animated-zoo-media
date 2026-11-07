@@ -13,6 +13,7 @@ const DUNES = { grass: 0xe0c088, grassDark: 0xd0ac70, road: 0xc8a068, roadEdge: 
 const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0xc8b07a, trees: [0xf07a6a, 0xf0a05a, 0xd86aa8], reef: true };
 const FLOTILLA = { grass: 0x2a5a7a, grassDark: 0x24506e, road: 0xb08a5a, roadEdge: 0x6a4a2a, trees: [0x8a6a4a, 0x6a5a4a, 0xa8885a], flotilla: true };
 const AMBER = { grass: 0x9a7a3a, grassDark: 0x8a6a30, road: 0x7a5a3a, roadEdge: 0x4a3424, trees: [0xc83a1a, 0xe87a1a, 0xf0c040, 0x8a3a5a], amber: true };
+const MIST = { grass: 0x7aa878, grassDark: 0x6a9868, road: 0xb8ac90, roadEdge: 0x8a7e66, trees: [0x4a7a5a, 0xe89ab8, 0x5a8a5a], mist: true };
 const ORCHARD = { grass: 0xa8a050, grassDark: 0x948c44, road: 0xc8a878, roadEdge: 0x9a7a52, trees: [0xd8642a, 0xe8a03a, 0xb8442a], orchard: true };
 const ABYSS = { grass: 0x1e2440, grassDark: 0x161a32, road: 0x4a4a6a, roadEdge: 0x32324e, trees: [0x6ad8e8, 0x9a7ae8, 0x5ae8b0], abyss: true };
 const GEARS = { grass: 0x5a5a62, grassDark: 0x4a4a52, road: 0x9a8a6a, roadEdge: 0x6a5a40, trees: [0xc8963a, 0x8a6a2a, 0xa0a0aa], gears: true };
@@ -3872,6 +3873,51 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'rustantler', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l81',
+    name: 'Lanternstep Rise',
+    blurb: 'Beyond the Amberwood the land climbs into terraced hills, green with tea and grey with mist. Paper lanterns sway on every step, and something pale slips between them.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.6,
+    startCoins: 1000,
+    lives: 20,
+    theme: MIST,
+    paths: [
+      [{ x: -40, y: 460 }, { x: 260, y: 460 }, { x: 260, y: 200 }, { x: 540, y: 200 }, { x: 540, y: 520 }, { x: 820, y: 520 }, { x: 820, y: 240 }, { x: 1060, y: 240 }, { x: 1060, y: 420 }, { x: 1320, y: 420 }],
+      [{ x: 660, y: -40 }, { x: 660, y: 520 }, { x: 820, y: 520 }, { x: 820, y: 240 }, { x: 1060, y: 240 }, { x: 1060, y: 420 }, { x: 1320, y: 420 }],
+    ],
+    slots: [
+      { x: 140, y: 370 },
+      { x: 350, y: 290 },
+      { x: 450, y: 300 },
+      { x: 450, y: 440 },
+      { x: 600, y: 400 },
+      { x: 740, y: 420 },
+      { x: 700, y: 620 },
+      { x: 740, y: 150 },
+      { x: 940, y: 330 },
+      { x: 940, y: 150 },
+      { x: 1180, y: 320 },
+      { x: 1180, y: 520 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 14, interval: 0.5 }, { enemy: 'mistfox', count: 3, interval: 1.5, delay: 3 }, { enemy: 'skitter', count: 8, interval: 0.5, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'silkcrane', count: 4, interval: 1.3 }, { enemy: 'mudling', count: 12, interval: 0.45, delay: 1 }, { enemy: 'gullwing', count: 6, interval: 0.8, delay: 5 }] },
+      { groups: [{ enemy: 'mistfox', count: 6, interval: 1 }, { enemy: 'shellback', count: 5, interval: 1.2, delay: 2 }, { enemy: 'reedguard', count: 5, interval: 1, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'silkcrane', count: 6, interval: 1.1 }, { enemy: 'skitter', count: 16, interval: 0.3, delay: 1 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'mistfox', count: 8, interval: 0.9 }, { enemy: 'barkdrum', count: 2, interval: 2, delay: 2 }, { enemy: 'galehound', count: 8, interval: 0.5, delay: 4 }] },
+      { groups: [{ enemy: 'silkcrane', count: 6, interval: 1.1 }, { enemy: 'deckgunner', count: 4, interval: 1.3, path: 1, delay: 2 }, { enemy: 'kitewing', count: 4, interval: 1.5, delay: 6 }] },
+      { groups: [{ enemy: 'mistfox', count: 10, interval: 0.8 }, { enemy: 'echowisp', count: 10, interval: 0.6, delay: 2 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'silkcrane', count: 8, interval: 0.9 }, { enemy: 'thunderhoof', count: 10, interval: 0.5, delay: 1 }, { enemy: 'shellsnap', count: 4, interval: 1.2, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'mistfox', count: 10, interval: 0.8 }, { enemy: 'ironkeel', count: 3, interval: 2.4, delay: 2 }, { enemy: 'gnat', count: 16, interval: 0.26, delay: 7 }] },
+      { groups: [{ enemy: 'silkcrane', count: 8, interval: 0.9 }, { enemy: 'skitter', count: 20, interval: 0.25, delay: 1 }, { enemy: 'tidecaller', count: 3, interval: 2.4, path: 1, delay: 3 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 6 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 3 }, { enemy: 'mistfox', count: 8, interval: 0.9, delay: 2 }, { enemy: 'sapstoat', count: 4, interval: 1.2, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'silkcrane', count: 10, interval: 0.8 }, { enemy: 'galehound', count: 12, interval: 0.4, delay: 2 }, { enemy: 'kitewing', count: 6, interval: 1.2, delay: 7 }] },
+      { groups: [{ enemy: 'mistfox', count: 12, interval: 0.7 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 3 }, { enemy: 'turnleaf', count: 6, interval: 1, path: 1, delay: 3 }, { enemy: 'gullwing', count: 12, interval: 0.5, delay: 6 }] },
+      { groups: [{ enemy: 'silkcrane', count: 10, interval: 0.8 }, { enemy: 'mistfox', count: 8, interval: 0.9, delay: 1 }, { enemy: 'barkdrum', count: 4, interval: 1.4, path: 1, delay: 3 }, { enemy: 'cloudram', count: 3, interval: 2.4, delay: 8 }] },
+      { groups: [{ enemy: 'mistfox', count: 12, interval: 0.7 }, { enemy: 'silkcrane', count: 12, interval: 0.7, delay: 2 }, { enemy: 'bramblehide', count: 3, interval: 2.4, path: 1, delay: 6 }, { enemy: 'glarefly', count: 10, interval: 0.6, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -3904,6 +3950,7 @@ export interface RegionDef {
   reef?: boolean;
   flotilla?: boolean;
   amber?: boolean;
+  mist?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -3923,6 +3970,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Coralreach Shallows', first: 65, count: 5, reef: true },
   { name: 'The Blackwake Flotilla', first: 70, count: 5, flotilla: true },
   { name: 'The Amberwood', first: 75, count: 5, amber: true },
+  { name: 'The Mistwreath Terraces', first: 80, count: 5, mist: true },
 ];
 
 export function regionOf(levelIndex: number): number {

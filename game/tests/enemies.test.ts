@@ -880,3 +880,50 @@ describe('Sapstoat', () => {
     expect(healed).toBeGreaterThan(0);
   });
 });
+
+describe('Mistwreath enemies', () => {
+  it('a Mistfox fades on its cycle and takes no damage while phased', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const f = sim.spawn('mistfox', 0, 200);
+    f.def = { ...f.def, speed: 0 };
+    const ph = f.def.phase!;
+    const hit = (d: number) => (sim as unknown as { applyDamage: (e: unknown, d: number, t: string) => void }).applyDamage(f, d, 'physical');
+    hit(10);
+    expect(f.hp).toBe(f.maxHp - 10);
+    for (let i = 0; i < Math.ceil(ph.interval * 60) + 1; i++) sim.update(1 / 60);
+    expect(f.phased).toBe(true);
+    const hp = f.hp;
+    hit(50);
+    expect(f.hp).toBe(hp);
+    for (let i = 0; i < Math.ceil(ph.duration * 60) + 1; i++) sim.update(1 / 60);
+    expect(f.phased).toBe(false);
+    hit(10);
+    expect(f.hp).toBe(hp - 10);
+  });
+
+  it('a Silkcrane dodges about its share of single-target shots, but never splash', () => {
+    let dodges = 0;
+    let shots = 0;
+    for (let seed = 1; seed <= 4; seed++) {
+      let r = seed * 9301;
+      const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null, { random: () => ((r = (r * 16807) % 2147483647) / 2147483647) });
+      sim.status = 'running';
+      sim.coins = 999;
+      sim.build(0, 'thornbow');
+      const c = sim.spawn('silkcrane', 0, 400);
+      c.def = { ...c.def, speed: 0, hp: 999999 };
+      c.hp = c.maxHp = 999999;
+      for (let i = 0; i < 60 * 20; i++) {
+        sim.update(1 / 60);
+        for (const ev of sim.drainEvents()) {
+          if (ev.type === 'dodge') dodges++;
+          if (ev.type === 'hit' && ev.enemy === c) shots++;
+        }
+      }
+    }
+    const rate = dodges / (dodges + shots);
+    expect(rate).toBeGreaterThan(0.2);
+    expect(rate).toBeLessThan(0.5);
+  });
+});

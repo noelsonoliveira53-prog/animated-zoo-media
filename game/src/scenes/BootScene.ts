@@ -744,6 +744,52 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.45, cy - r * 0.8, r * 0.16, r * 0.09);
         break;
       }
+      case 'mistfox': {
+        // pale fox spirit: slim body, big pointed ears, a long wisp of a tail, glowing amber eyes
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0xeef0ff, 0.9);
+        g.fillEllipse(cx + r * 0.95, cy - r * 0.05, r * 0.95, r * 0.42);
+        g.fillStyle(0xffffff, 0.6);
+        g.fillEllipse(cx + r * 1.25, cy - r * 0.2, r * 0.45, r * 0.25);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.3, r * 0.7);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.3, r * 0.7);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
+        g.strokeCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
+        g.fillTriangle(cx - r * 0.95, cy - r * 0.35, cx - r * 0.75, cy - r * 0.45, cx - r * 0.9, cy - r * 0.9);
+        g.fillTriangle(cx - r * 0.6, cy - r * 0.45, cx - r * 0.4, cy - r * 0.35, cx - r * 0.45, cy - r * 0.9);
+        g.fillStyle(0xffb040, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.08);
+        g.fillCircle(cx - r * 0.6, cy - r * 0.2, r * 0.08);
+        g.fillStyle(0x6a6a8a, 1);
+        g.fillCircle(cx - r * 1.1, cy - r * 0.05, r * 0.06);
+        break;
+      }
+      case 'silkcrane': {
+        // white crane: long legs, long neck, a red crown, black wingtips
+        g.lineStyle(2, 0x3a3a3a, 1);
+        g.lineBetween(cx - r * 0.1, cy + r * 0.3, cx - r * 0.2, cy + r * 0.95);
+        g.lineBetween(cx + r * 0.2, cy + r * 0.3, cx + r * 0.3, cy + r * 0.95);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.2, r * 0.7);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.2, r * 0.7);
+        g.fillStyle(0x1a1a1a, 1);
+        g.fillTriangle(cx + r * 0.5, cy - r * 0.1, cx + r * 0.9, cy + r * 0.05, cx + r * 0.5, cy + r * 0.25);
+        g.lineStyle(r * 0.18, color, 1);
+        g.lineBetween(cx - r * 0.3, cy - r * 0.1, cx - r * 0.55, cy - r * 0.8);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.6, cy - r * 0.85, r * 0.2);
+        g.strokeCircle(cx - r * 0.6, cy - r * 0.85, r * 0.2);
+        g.fillStyle(0xd83a3a, 1);
+        g.fillCircle(cx - r * 0.6, cy - r * 0.98, r * 0.09);
+        g.fillStyle(0xd8b040, 1);
+        g.fillTriangle(cx - r * 0.75, cy - r * 0.88, cx - r * 0.75, cy - r * 0.8, cx - r * 1.15, cy - r * 0.82);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.65, cy - r * 0.88, r * 0.05);
+        break;
+      }
       case 'sapstoat': {
         // stoat: long low russet body, cream belly, black tail tip, bared amber teeth
         g.lineStyle(2.5, C.ink, 1);

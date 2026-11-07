@@ -52,6 +52,8 @@ export interface Enemy {
   anchorCd: number; // Ironkeel: time until it next drops / lifts anchor
   anchored: boolean;
   drumCd: number; // Barkdrum: time to its next beat
+  phaseCd: number; // Mistfox: time until it fades / returns
+  phased: boolean;
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
@@ -189,6 +191,8 @@ export type SimEvent =
   | { type: 'anchor'; enemy: Enemy; down: boolean }
   | { type: 'drum'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'leech'; enemy: Enemy; amount: number }
+  | { type: 'mist'; enemy: Enemy; on: boolean }
+  | { type: 'dodge'; enemy: Enemy }
   | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
@@ -923,6 +927,8 @@ export class BattleSim {
       anchorCd: def.anchor ? def.anchor.interval : 0,
       anchored: false,
       drumCd: def.drum ? def.drum.interval * 0.5 : 0,
+      phaseCd: def.phase ? def.phase.interval : 0,
+      phased: false,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
@@ -977,6 +983,7 @@ export class BattleSim {
       if (e.def.ranged) this.tickRanged(e, dt);
       if (e.def.anchor) this.tickAnchor(e, dt);
       if (e.def.drum) this.tickDrum(e, dt);
+      if (e.def.phase) this.tickPhase(e, dt);
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
@@ -1147,6 +1154,16 @@ export class BattleSim {
       hasted.push(o);
     }
     this.events.push({ type: 'drum', enemy: e, radius: d.radius, hasted });
+  }
+
+  /** Mistfox: fades into mist (untouchable) for a moment, then solidifies again, on a cycle. */
+  private tickPhase(e: Enemy, dt: number): void {
+    const ph = e.def.phase!;
+    e.phaseCd -= dt;
+    if (e.phaseCd > 0) return;
+    e.phased = !e.phased;
+    e.phaseCd = e.phased ? ph.duration : ph.interval;
+    this.events.push({ type: 'mist', enemy: e, on: e.phased });
   }
 
   /** Inside an ink cloud? (Grounded enemies only: flyers are above the murk.) */
@@ -1721,6 +1738,11 @@ export class BattleSim {
         }
       }
     } else if (target) {
+      if (target.def.dodge && this.random() < target.def.dodge) {
+        // Silkcrane: a neat sidestep, and the shot sails past
+        this.events.push({ type: 'dodge', enemy: target });
+        return;
+      }
       this.damage(target, p);
       if (p.chain) this.chainFrom(target, p);
     }
@@ -1776,6 +1798,7 @@ export class BattleSim {
 
   private applyDamage(e: Enemy, dmg: number, type?: DamageType): void {
     if (!e.alive) return;
+    if (e.phased && dmg > 0) return; // Mistfox: the blow passes straight through the mist
     if (dmg > 0 && !e.def.ground) {
       // Copperhorn: the nearest one in range draws part of the blow onto itself.
       let gr: Enemy | null = null;

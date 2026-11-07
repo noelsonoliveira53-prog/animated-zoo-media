@@ -184,6 +184,13 @@ class Sfx {
         this.noise(0.1, 0.12, 1800);
         this.tone(160, 0.08, 'square', 0.05, 80);
         break;
+      case 'mist': // a soft breathy hush
+        this.noise(0.25, 0.04, 2500);
+        this.tone(660, 0.2, 'sine', 0.025, 990);
+        break;
+      case 'dodge': // a quick whoosh
+        this.noise(0.08, 0.06, 4000);
+        break;
       case 'leech': // a quick wet gulp
         this.tone(300, 0.08, 'sine', 0.04, 160);
         break;

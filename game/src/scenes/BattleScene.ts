@@ -304,6 +304,13 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.mist && !motion.reduced) {
+      // low banks of hill fog drifting slowly across the terraces
+      for (let i = 0; i < 6; i++) {
+        const bank = this.add.ellipse(rnd.between(0, GAME_W), rnd.between(120, GAME_H - 60), rnd.between(220, 360), rnd.between(40, 70), 0xffffff, 0.13).setDepth(0.6);
+        this.tweens.add({ targets: bank, x: bank.x + rnd.between(80, 160), alpha: 0.22, duration: rnd.between(5000, 8000), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.amber && !motion.reduced) {
       // leaves forever drifting down through the Amberwood, swaying as they fall, then starting again at the top
       for (let i = 0; i < 18; i++) {
@@ -477,6 +484,44 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.mist) {
+        const k = rnd.frac();
+        if (k < 0.5) {
+          // a row of clipped tea bushes on its terrace
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x, p.y + 6, 52, 10);
+          for (let n = 0; n < 3; n++) {
+            deco.fillStyle(0x3f6e45, 1);
+            deco.fillEllipse(p.x - 16 + n * 16, p.y, 18, 14);
+            deco.fillStyle(0x5f9a5a, 1);
+            deco.fillEllipse(p.x - 17 + n * 16, p.y - 3, 12, 7);
+          }
+        } else if (k < 0.75) {
+          // a stone lantern with a warm glow
+          deco.fillStyle(0x000000, 0.18);
+          deco.fillEllipse(p.x, p.y + 6, 24, 8);
+          deco.fillStyle(0x9a9488, 1);
+          deco.fillRect(p.x - 4, p.y - 10, 8, 14);
+          deco.fillRect(p.x - 9, p.y - 22, 18, 12);
+          deco.fillTriangle(p.x - 13, p.y - 22, p.x + 13, p.y - 22, p.x, p.y - 32);
+          deco.fillStyle(0xffd27a, 1);
+          deco.fillRect(p.x - 5, p.y - 19, 10, 6);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeRect(p.x - 9, p.y - 22, 18, 12);
+        } else {
+          // a cherry tree in blossom
+          const bloom = rnd.pick([0xe89ab8, 0xf4c0d4]);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 38, 12);
+          deco.fillStyle(0x5a3a2a, 1);
+          deco.fillRect(p.x - 3, p.y - 14, 6, 18);
+          deco.fillStyle(bloom, 1);
+          deco.fillCircle(p.x, p.y - 24, 15);
+          deco.fillCircle(p.x - 11, p.y - 16, 10);
+          deco.fillCircle(p.x + 11, p.y - 16, 10);
+          deco.fillStyle(0xffffff, 0.3);
+          deco.fillCircle(p.x - 4, p.y - 28, 5);
         }
       } else if (this.level.theme.amber) {
         const k = rnd.frac();
@@ -1589,6 +1634,24 @@ export class BattleScene extends Phaser.Scene {
         this.particles.explode(5, ev.enemy.pos.x + 14, ev.enemy.pos.y - 10);
         break;
       }
+      case 'mist': {
+        if (ev.on) {
+          sfx.trait('mist');
+          this.particles.setParticleTint(0xeef0ff);
+          this.particles.explode(6, ev.enemy.pos.x, ev.enemy.pos.y);
+        }
+        break;
+      }
+      case 'dodge': {
+        // throttled per crane: a little "Miss!" and a whoosh
+        const key = -1000000 - ev.enemy.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 500) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('dodge');
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, 'Miss!', '#e8f0ff', 13);
+        break;
+      }
       case 'leech': {
         // throttled: a small red-gold "+" and a gulp, at most every 0.6s per stoat
         const last = this.lastGulp.get(ev.enemy.uid) ?? -99;
@@ -1986,6 +2049,7 @@ export class BattleScene extends Phaser.Scene {
       if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
       else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
       if (e.anchored) v.sprite.setTint(0xa8b4c4); // iron-grey while an Ironkeel holds anchor
+      if (e.def.phase) v.sprite.setAlpha(e.phased ? 0.35 : 1); // a Mistfox thinning into fog
       else if (e.def.adapt) {
         // Turnleaf: bark-brown when it has turned toward armor, moon-violet toward magic resist
         const lean = e.armor - e.def.armor - (e.mr - e.def.magicResist);

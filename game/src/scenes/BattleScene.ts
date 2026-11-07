@@ -960,6 +960,15 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0x8fdc5a);
         this.particles.explode(8, ev.soldier.pos.x, ev.soldier.pos.y);
         break;
+      case 'chill': {
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0xbff4ff, 0.18).setStrokeStyle(4, 0xe8fbff, 0.95).setDepth(2400).setScale(0.2);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
+        this.particles.setParticleTint(0xe8fbff);
+        this.particles.explode(16, ev.source.pos.x, ev.source.pos.y);
+        for (const t of ev.towers) this.floatText(t.pos.x, t.pos.y - 70, 'Frozen!', '#bff4ff', 16);
+        if (ev.towers.length) sfx.shieldBreak();
+        break;
+      }
       case 'heal': {
         const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0x6fe08a, 0.12).setStrokeStyle(3, 0x6fe08a, 0.8).setDepth(2400).setScale(0.2);
         this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
@@ -1090,6 +1099,13 @@ export class BattleScene extends Phaser.Scene {
     }
     this.syncSoldiers();
     this.syncStrikes();
+    // Frozen towers turn icy.
+    this.sim.towers.forEach((t, i) => {
+      const v = this.towerViews[i];
+      if (!t || !v) return;
+      if (t.frozen > 0) v.setTint(0xbfe8ff);
+      else if (v.isTinted) v.clearTint();
+    });
     const live = new Set(this.sim.projectiles.map((p) => p.uid));
     for (const p of this.sim.projectiles) {
       const img = this.projViews.get(p.uid);

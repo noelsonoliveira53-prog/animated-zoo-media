@@ -188,6 +188,48 @@ export class BootScene extends Phaser.Scene {
         g.fillTriangle(cx + r * 0.3, cy - r * 0.05, cx + r * 0.15, cy - r * 0.05, cx + r * 0.22, cy - r * 0.3);
         break;
       }
+      case 'rimewraith': {
+        // hooded frost spirit with a wispy tail
+        g.fillStyle(color, 0.3);
+        g.fillCircle(cx, cy, r * 1.4);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r, cy - r * 0.2, cx + r, cy - r * 0.2, cx, cy + r * 1.4);
+        g.fillCircle(cx, cy - r * 0.3, r * 0.9);
+        g.strokeCircle(cx, cy - r * 0.3, r * 0.9);
+        g.fillStyle(0x2a4a6a, 1);
+        g.fillEllipse(cx, cy - r * 0.2, r * 1.1, r * 0.9);
+        g.fillStyle(0xbff4ff, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.25, r * 0.14);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.25, r * 0.14);
+        g.fillStyle(0xffffff, 0.9);
+        for (let i = 0; i < 3; i++) g.fillTriangle(cx - r * 0.9 + i * r * 0.6, cy - r * 0.95, cx - r * 0.7 + i * r * 0.6, cy - r * 0.95, cx - r * 0.8 + i * r * 0.6, cy - r * 1.35);
+        break;
+      }
+      case 'grimtusk': {
+        // great white boar with ice tusks and a frosty mane
+        g.fillStyle(0xb8ccd8, 1);
+        for (let i = -3; i <= 3; i++) {
+          const bx = cx + i * r * 0.22;
+          g.fillTriangle(bx - r * 0.14, cy - r * 0.5, bx + r * 0.14, cy - r * 0.5, bx, cy - r * (1.05 + (i % 2 ? 0 : 0.15)));
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 2.2, r * 1.6);
+        g.strokeEllipse(cx, cy, r * 2.2, r * 1.6);
+        g.fillStyle(0xc4d6e0, 1);
+        g.fillEllipse(cx + r * 0.8, cy + r * 0.15, r * 0.8, r * 0.7);
+        g.strokeEllipse(cx + r * 0.8, cy + r * 0.15, r * 0.8, r * 0.7);
+        g.fillStyle(0x8a6a6a, 1);
+        g.fillEllipse(cx + r * 1.05, cy + r * 0.2, r * 0.3, r * 0.22);
+        g.fillStyle(0xbff4ff, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx + r * 0.7, cy + r * 0.35, cx + r * 0.82, cy + r * 0.35, cx + r * 0.55, cy - r * 0.2);
+        g.strokeTriangle(cx + r * 0.7, cy + r * 0.35, cx + r * 0.82, cy + r * 0.35, cx + r * 0.55, cy - r * 0.2);
+        g.fillTriangle(cx + r * 1.0, cy + r * 0.35, cx + r * 1.12, cy + r * 0.35, cx + r * 1.3, cy - r * 0.15);
+        g.strokeTriangle(cx + r * 1.0, cy + r * 0.35, cx + r * 1.12, cy + r * 0.35, cx + r * 1.3, cy - r * 0.15);
+        g.fillStyle(0x6fd8ff, 1);
+        g.fillCircle(cx + r * 0.6, cy - r * 0.15, r * 0.1);
+        break;
+      }
       case 'murkmaw': {
         g.fillStyle(shade, 1);
         g.fillEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);

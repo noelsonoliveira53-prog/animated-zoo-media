@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **12** (next balance pass at iteration 15)
+Iteration counter: **13** (next balance pass at iteration 15)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -112,11 +112,19 @@ Iteration counter: **12** (next balance pass at iteration 15)
   level's `hpMult` (later levels used to starve the player). All hpMults retuned (L3 1.5, L4 1.15, L5 1.65,
   L6 2.0, L7 1.45, L8 1.6). 75 tests (regions, bounty scaling, levels 3–8 winnable).
 
+- [x] **Iter 13** — **Highlands complete (levels 9–10) + frost enemies.** New mechanic **chill**: enemies with
+  `chill` periodically freeze shooting towers in a radius (soldier dens are immune); frozen towers turn icy
+  and can't fire. New enemies: **Rime Wraith** (hooded frost spirit, 40% magic resist, freezes towers in 95px
+  every 5s) and boss **Grimtusk the Frost Boar** (3200 hp, big freeze aura; phases: summons wraiths → ice
+  hide shield + thornhogs → charge). Levels: **9 Rimewood Hollow** (wraith debut, hp×2.15) and **10 Frostpeak
+  Summit** (two roads merge, Grimtusk finale, hp×1.75). Ice-ring + "Frozen!" effects; enemy showcase script
+  takes a level index. 14 enemy types now. 76 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Levels 9–10 (finish the Highlands: a new Highlands-only enemy + a new boss), then region 3 (levels 11–15).
+1. Region 3 (levels 11–15) with its own theme + new enemy mechanic + final boss.
 2. Raid mode: AI villages, train troops in Barracks, deploy to attack.
 3. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
 4. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
@@ -132,6 +140,8 @@ Iteration counter: **12** (next balance pass at iteration 15)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 13:** 9 Rimewood Hollow 100/100/30 · 10 Frostpeak Summit 88/75/13 (expert/casual/novice, 8–10 seeds).
+
 **Iteration 12** (`balance.ts 10`, after bounty scaling + retune):
 
 | Level | expert | casual | novice |

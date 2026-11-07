@@ -96,3 +96,21 @@ describe('enemy roster', () => {
     expect(flyer.dist).toBeGreaterThan(400);
   });
 });
+
+describe('frost enemies', () => {
+  it('Rime Wraiths freeze nearby shooting towers but not soldier dens', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 1000, slots: [{ x: 300, y: 160 }, { x: 340, y: 40 }] };
+    const sim = new BattleSim(l2);
+    const shooter = sim.build(0, 'thornbow')!;
+    const den = sim.build(1, 'burrow')!;
+    sim.status = 'running';
+    const w = sim.spawn('rimewraith', 0, 300);
+    w.def = { ...w.def, speed: 0 };
+    for (let i = 0; i < 60 * 3.5; i++) sim.update(1 / 60);
+    expect(shooter.frozen).toBeGreaterThan(0);
+    expect(den.frozen).toBe(0);
+    sim.drainEvents();
+    sim.update(1 / 60);
+    expect(sim.drainEvents().some((e) => e.type === 'shoot')).toBe(false);
+  });
+});

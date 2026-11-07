@@ -27,6 +27,7 @@ export interface EnemyDef {
   heal?: { amount: number; radius: number; interval: number }; // heals nearby allies
   splitInto?: { enemy: string; count: number }; // spawns children on death
   phases?: BossPhase[]; // triggered once each as hp drops
+  chill?: { radius: number; interval: number; duration: number }; // periodically freezes nearby towers
   boss?: boolean;
 }
 

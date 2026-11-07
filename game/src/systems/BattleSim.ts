@@ -26,6 +26,7 @@ export interface Enemy {
   shield: number;
   maxShield: number;
   healCd: number;
+  chillCd: number;
   phase: number; // index of next boss phase to trigger
   speedMult: number;
 }
@@ -83,6 +84,7 @@ export interface Tower {
   target: TargetMode;
   rally: Vec2 | null; // for soldier towers
   spec: string | null; // chosen top-tier specialization
+  frozen: number; // seconds left frozen (cannot fire)
 }
 
 export interface Projectile {
@@ -130,6 +132,7 @@ export type SimEvent =
   | { type: 'heroDown'; hero: Hero }
   | { type: 'heroBack'; hero: Hero }
   | { type: 'heal'; source: Enemy; targets: Enemy[]; radius: number }
+  | { type: 'chill'; source: Enemy; towers: Tower[]; radius: number }
   | { type: 'shieldBreak'; enemy: Enemy }
   | { type: 'phase'; enemy: Enemy; message: string }
   | { type: 'split'; parent: Enemy; children: Enemy[] }
@@ -517,7 +520,7 @@ export class BattleSim {
     const def = TOWERS[towerId];
     this.coins -= def.tiers[0].cost;
     const pos = { ...this.level.slots[slot] };
-    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null };
+    const t: Tower = { uid: this.nextUid++, def, tier: 0, slot, pos, cooldown: 0, target: 'first', rally: null, spec: null, frozen: 0 };
     if (def.tiers[0].soldiers) {
       t.rally = this.rallyPointFor(pos, def.tiers[0].range);
       this.syncSquad(t, true);
@@ -746,6 +749,7 @@ export class BattleSim {
       shield: def.shield ?? 0,
       maxShield: def.shield ?? 0,
       healCd: def.heal ? def.heal.interval : 0,
+      chillCd: def.chill ? def.chill.interval * 0.6 : 0,
       phase: 0,
       speedMult: 1,
     };
@@ -762,6 +766,7 @@ export class BattleSim {
         if (e.slowTime <= 0) e.slowFactor = 1;
       }
       if (e.def.heal) this.tickHealer(e, dt);
+      if (e.def.chill) this.tickChill(e, dt);
       if (e.blockedBy) {
         const isHero = !!this.hero && this.hero.uid === e.blockedBy;
         const s = isHero ? null : this.soldiers.find((so) => so.uid === e.blockedBy);
@@ -788,6 +793,21 @@ export class BattleSim {
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
       }
     }
+  }
+
+  private tickChill(e: Enemy, dt: number): void {
+    const c = e.def.chill!;
+    e.chillCd -= dt;
+    if (e.chillCd > 0) return;
+    e.chillCd = c.interval;
+    const hit: Tower[] = [];
+    for (const t of this.towers) {
+      if (!t || t.rally) continue; // soldier dens keep working
+      if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) > c.radius) continue;
+      t.frozen = Math.max(t.frozen, c.duration);
+      hit.push(t);
+    }
+    this.events.push({ type: 'chill', source: e, towers: hit, radius: c.radius });
   }
 
   private tickHealer(e: Enemy, dt: number): void {
@@ -961,6 +981,10 @@ export class BattleSim {
   private fireTowers(dt: number): void {
     for (const t of this.towers) {
       if (!t) continue;
+      if (t.frozen > 0) {
+        t.frozen = Math.max(0, t.frozen - dt);
+        continue;
+      }
       t.cooldown -= dt;
       if (t.cooldown > 0) continue;
       const stats = this.stats(t);

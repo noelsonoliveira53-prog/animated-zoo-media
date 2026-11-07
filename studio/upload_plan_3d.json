@@ -658,5 +658,28 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "fruity/fr3d_ep06.mp4",
+  "title": "Can You Guess the Fruit? Peekaboo Song for Kids",
+  "description": "Can you guess the fruit? Play peekaboo with Pipkiko and the Fruity Friends: listen to the clues about color and shape, then guess banana, strawberry, orange or grapes.\nA guessing game song that builds vocabulary and listening skills. Ages 2-5.\n\nLYRICS\nPeekaboo, peekaboo, guess the fruit!\nWho is hiding? Toot, toot, toot!\nLook at the color, look at the shape,\nCan you guess? Is it a grape?\nI am yellow, long and bright,\nPeel me down and take a bite!\nPeekaboo, who can it be?\nIt's banana! Yes, it's me!\nI am red with seeds outside,\nJuicy, sweet, I cannot hide!\nIt's strawberry! Yes, it's me!\nCover your eyes, peek, peek, peek!\nOpen them up, what do you seek?\nPoint to the fruit, one, two, three,\nPeekaboo, it's fruity time with me!\nI am round and orange too,\nSqueeze me into juice for you!\nSmall and purple, round and sweet,\nOrange and grapes, a yummy treat!\nPeekaboo, fruity friends! See you tomorrow!",
+  "tags": [
+   "guess the fruit",
+   "peekaboo song",
+   "fruit song for kids",
+   "guessing game for kids",
+   "learn fruits",
+   "kids songs",
+   "nursery rhymes",
+   "Fruity Friends",
+   "3D kids songs"
+  ],
+  "date": "2026-11-10",
+  "time": "2:20 PM",
+  "thumb": "brand/fruity/thumb_fr3d_ep06.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

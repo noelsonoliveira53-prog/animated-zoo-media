@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **57** (next balance pass at iteration 60)
+Iteration counter: **58** (next balance pass at iteration 60)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -447,14 +447,19 @@ Iteration counter: **57** (next balance pass at iteration 60)
   expert: Bramble 31.7 → **16.5**, Fen 16.7 → 13.2, Ember 18.2 → 14.7, Wren 15.0 → 13.3 (8% per wave only narrowed it
   to 21 vs 14). Typical runs now end at waves 12–22, and the novice-over-expert oddity mostly went away. 141 tests.
 
+- [x] **Iter 58 — Endless daily mutator.** Every endless run that day gets one modifier picked by date from
+  `ENDLESS.mutators` (Swift Horde, Thick Hides, Beaver Discount, Full Coffers, Clouded Sky, Frenzy; no hero-less or
+  5-life days). Hard mutators pay ×1.5 village coins and glowsap per wave. It's shown on the map card ("Best N • Today:
+  …"), in the endless start banner and on the result panel. `endlessMutatorFor` / `mutatorReward` in `systems/endless.ts`
+  (reusing the daily hash). Fix: Clouded Sky said "No Starfall or Grove Call", outdated since Thornsnare; now "No global
+  spells." 143 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
-   levels); also endless-only modifiers (for example a random daily mutator).
-2. Field Guide: add a Spells tab (name, icon, text, recharge).
-3. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
+1. Field Guide: add a Spells tab (name, icon, text, recharge).
+2. Region 7 (levels 31–35): a new biome, enemies and boss, following the region recipe.
 
 ## Known Bugs
 - (none known)

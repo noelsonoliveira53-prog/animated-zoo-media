@@ -20,6 +20,39 @@ def ts(t):
     h, r = divmod(max(0, t), 3600); m, s = divmod(r, 60)
     return f"{int(h)}:{int(m):02d}:{s:05.2f}"
 
+def clean_extra(timing):
+    """Captions for improvised repeats come from speech-to-text: fix spelling against the lyrics (colours -> colors,
+    'Mama has found' -> 'Mama is found') and drop transcription hallucinations ('Thanks for watching!')."""
+    import difflib, re
+    nrm = lambda x: re.sub(r"[^a-z ]", "", x.lower()).strip()
+    lyr = [l for l in timing["lines"] if not l.get("extra")]
+    vocab = {}
+    for l in lyr:
+        for t in l["text"].split(): vocab.setdefault(nrm(t), t)
+    keep_l, drop = [], set()
+    for l in timing["lines"]:
+        if not l.get("extra"): keep_l.append(l); continue
+        if re.search(r"thanks? for watching|subscribe|like and", l["text"], re.I): drop.add((l["start"], l["end"])); continue
+        best = max(lyr, key=lambda x: difflib.SequenceMatcher(None, nrm(x["text"]), nrm(l["text"])).ratio()) if lyr else None
+        ws = [w for w in timing["words"] if l["start"] - 0.01 <= w["start"] < l["end"] - 0.01 or abs(w["start"] - l["start"]) < 0.01]
+        lt = l["text"].split()
+        wins = [ll["text"].split()[i:i + len(lt)] for ll in lyr for i in range(max(1, len(ll["text"].split()) - len(lt) + 1))]
+        wins = [w for w in wins if len(w) == len(lt)]
+        bw = max(wins, key=lambda w: difflib.SequenceMatcher(None, nrm(" ".join(w)), nrm(l["text"])).ratio()) if wins else None
+        if bw and difflib.SequenceMatcher(None, nrm(" ".join(bw)), nrm(l["text"])).ratio() >= 0.7:
+            bt = bw
+            if True:
+                l["text"] = " ".join(bt)
+                for w, t in zip(sorted(ws, key=lambda w: w["start"])[:len(bt)], bt): w["w"] = t
+        for w in ws:
+            k = nrm(w["w"]); k2 = k.replace("our", "or")
+            if k not in vocab and k2 in vocab: w["w"] = vocab[k2] + ("," if w["w"].endswith(",") else "")
+        l["text"] = " ".join(w["w"] for w in sorted(ws, key=lambda w: w["start"])) or l["text"]
+        keep_l.append(l)
+    timing["lines"] = keep_l
+    timing["words"] = [w for w in timing["words"] if not any(a - 0.01 <= w["start"] <= b + 0.01 for a, b in drop)]
+    return timing
+
 def ass(timing, channel, title, W=1920, H=1080):
     hl = HILITE.get(channel, "&H0000D7FF&")
     soft = channel == "moon"
@@ -67,7 +100,7 @@ Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 def main():
     raw, jobp = sys.argv[1], sys.argv[2]
     job = json.load(open(jobp)); jd = os.path.dirname(os.path.abspath(jobp)); jid = job["id"]
-    timing = json.load(open(os.path.join(jd, job["timing_file"])))
+    timing = clean_extra(json.load(open(os.path.join(jd, job["timing_file"]))))
     trim = float(arg("--trim", "0"))
     if trim > 0:   # cut a long instrumental intro: trim raw video+audio and shift every time by -trim
         tr = os.path.join(os.path.dirname(os.path.abspath(raw)), os.path.basename(raw)[:-4] + f"_trim{trim:g}.mp4")

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **117** (next balance pass at iteration 120)
+Iteration counter: **118** (next balance pass at iteration 120)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -824,13 +824,16 @@ Iteration counter: **117** (next balance pass at iteration 120)
 - **Iteration 117**: level 68 **Shellbreak Reef**. A 3,120px sandbar weaves between coral ridges (the longest road
   so far). A 1,460px north road joins at the mid-reef corner. It has 12 pads, 16 waves (all three Coralreach enemies
   plus fliers on the long road) and hpMult 2.6. 186 tests.
+- **Iteration 118**: level 69 **Tidewrack Lagoon**. A 2,740px lagoon road snakes west to east, and a 1,620px north
+  road drops into its middle bend. It has 10 pads (fewer than usual), 16 waves (fliers on the long road) and hpMult
+  1.7. 186 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 14 level 69, finale 70 with a boss + story card + achievements.
+2. Region 14 finale 70 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -841,6 +844,8 @@ Iteration counter: **117** (next balance pass at iteration 120)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 118**: 69 Tidewrack Lagoon was 8/0/0 at hpMult 2.4, leaking on both roads. It has only 10 pads, so it needs a much lower multiplier: 1.9 gave 100/42/0 and **1.7 → 100/67/0** (kept, a fourth-level ramp). Pad count matters as much as road length.
+
 **Iteration 117**: 68 Shellbreak Reef went 100/100/0 at hpMult 2.4, 92/67/0 at 2.7, 50/42/0 at 2.9 (a steep curve), and **2.6 → 100/75/0** (kept).
 
 **Iteration 116**: 67 Inkwater Cove went 100/100/8 at hpMult 2.05, 100/100/0 at 2.15 and 2.3, and **2.45 → 100/92/0** (kept). Ink only hides enemies from towers, so the expert's spells and hero keep it from becoming swingy.

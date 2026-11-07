@@ -64,8 +64,12 @@ export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
       const hp = e.hp * g.count;
       total += hp;
       if (e.flying) fly += hp * (e.boss ? 3 : 1); // a flying boss decides the level too: build for the air
-      if (e.armor >= 0.4) armored += hp;
-      if (e.magicResist >= 0.5) warded += hp;
+      // A shifter spends half its time in each form: count it half armored, half warded.
+      const sh = e.shift ? 0.5 : 1;
+      if (e.armor >= 0.4) armored += hp * sh;
+      if (e.magicResist >= 0.5) warded += hp * sh;
+      if (e.shift && e.shift.armor >= 0.4) armored += hp * 0.5;
+      if (e.shift && e.shift.magicResist >= 0.5) warded += hp * 0.5;
       if ((e.splashResist ?? 0) >= 0.5) splashProof += hp * (e.boss ? 3 : 1); // a splash-proof boss decides the level
     }
   const f = Math.min(1, (fly / total) * (heroHitsAir ? 1 : 1.4));
@@ -102,8 +106,11 @@ function makeup(level: LevelDef): { fly: number; armored: number; warded: number
       const hp = e.hp * g.count;
       total += hp;
       if (e.flying) fly += hp;
-      if (e.armor >= 0.4 || e.boss) armored += hp;
-      if (e.magicResist >= 0.5) warded += hp;
+      const sh = e.shift ? 0.5 : 1;
+      if (e.armor >= 0.4 || e.boss) armored += hp * sh;
+      if (e.magicResist >= 0.5) warded += hp * sh;
+      if (e.shift && e.shift.armor >= 0.4) armored += hp * 0.5;
+      if (e.shift && e.shift.magicResist >= 0.5) warded += hp * 0.5;
     }
   return { fly: fly / total, armored: armored / total, warded: warded / total };
 }

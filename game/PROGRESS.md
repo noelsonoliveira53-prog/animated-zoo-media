@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **70** (next balance pass at iteration 75)
+Iteration counter: **71** (next balance pass at iteration 75)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -526,14 +526,18 @@ Iteration counter: **70** (next balance pass at iteration 75)
   67 → 42%, so it stays at 1.55). Polish: new phone check `scripts/phone-late.mjs` (740×360 touch: region 8 map, a Ruins
   battle, Field Guide spells + boss page), all clean; boss phase lines use the phone font size. Playable demo published
   as an artifact.
+- [x] **Iter 71 — Ruins level 38: Serpent Terraces.** One 3,560 px road snakes across three terraces (y 160 → 340 →
+  520) with pad rows between the coils, so each pad covers two stretches. 12 pads, 16 waves, hpMult 1.65. The first
+  draft lost to Shiftscale + Idol Keeper packs in waves 5–9 (trimmed). Autoplayer: a shifter now counts half armored,
+  half magic-resistant when picking the tower mix (it was read as purely armored, so the expert over-built magic
+  towers that bounce off the slick form). Screenshot `71.png`. 155 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 8 level 38.
-2. Region 8 level 39.
-3. Region 8 finale (level 40) with a Ruins boss.
+1. Region 8 level 39.
+2. Region 8 finale (level 40) with a Ruins boss.
 4. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
@@ -548,6 +552,9 @@ Iteration counter: **70** (next balance pass at iteration 75)
 **Iteration 70** (camp sweep, 12 seeds, expert/casual/novice): unchanged from iteration 65 for levels 1–30; 31 Windgap
 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 · 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 ·
 36 Overgrown Causeway 100/100/33 · 37 Sunken Stairs 100/92/17. No retunes needed.
+**Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
+the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
+100/83/17.
 
 **Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
 100/100/100 · 3 Thornwood 100/100/100 · 4 Mirelake 100/92/75 · 5 Murkmaw 100/75/83 → **92/58/83 (2.45)** · 6 Frostfern

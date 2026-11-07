@@ -64,3 +64,18 @@ describe('HUD clearance', () => {
     }
   });
 });
+
+describe('gate clearance', () => {
+  it('no road exit puts its gate marker under the top-right buttons', () => {
+    // BattleScene draws each gate at the road end clamped to x 60–1220, y 80–700, spanning ±40 px wide and 60 px up.
+    for (const l of LEVELS) {
+      for (const pts of l.paths) {
+        const end = pts[pts.length - 1];
+        const gx = Math.max(60, Math.min(1220, end.x));
+        const gy = Math.max(80, Math.min(700, end.y));
+        const underButtons = gx + 40 > 830 && gy - 60 < 72;
+        expect(underButtons, `${l.name} gate at (${gx},${gy})`).toBe(false);
+      }
+    }
+  });
+});

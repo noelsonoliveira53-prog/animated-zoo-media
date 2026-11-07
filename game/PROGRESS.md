@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **41** (next balance pass at iteration 45)
+Iteration counter: **42** (next balance pass at iteration 45)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -337,11 +337,17 @@ Iteration counter: **41** (next balance pass at iteration 45)
   first layout was undefendable: the merged tail was only 420 px, so it now bends down to the lower right (+260 px),
   with 2 pads moved. Thornhog and Gullwing spikes trimmed. 130 tests.
 
+- [x] **Iter 42 — Shoals level 23: Saltspray Fork.** One road off the beach splits into two mirrored lanes running to
+  two different gates. Middle-band pads sit about 110 px from both lanes, and the hero starts on the shared stretch
+  before the split. 12 pads, 16 waves using all three Shoals enemies plus a few Duskcap guests. Tuned on the first try
+  (leaks spread out, no spikes). Fix: the north exit at y=120 put its gate marker under the Next Wave button; that lane
+  now runs at y=150. New test: no road exit may put its gate under the top-right buttons. 131 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 5: levels 23–25 (a Shoals boss with phases for level 25).
+1. Region 5: levels 24–25 (a Shoals boss with phases for level 25).
 2. Hero #4 and a third global spell.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
@@ -365,6 +371,8 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Saltspray Fork (iteration 42, 6–8 seeds):** 2.2 → 67/50/0, 1.9 → 83/100/17, **2.05 → 88% / 63% / 0%** (kept).
 
 **Tidepool Terraces (iteration 41):** first draft 0/33/0 at 2.4. Leak traces: Thornhogs (path 0) and Gullwings (short
 north road), plus only 420 px of shared tail before the exit. After the wave trims and the longer tail: 2.2 → 50/33/0,

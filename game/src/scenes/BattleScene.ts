@@ -1538,6 +1538,22 @@ export class BattleScene extends Phaser.Scene {
           this.particles.setParticleTint(0xbfe8ff);
           this.particles.explode(10, ev.enemy.pos.x, ev.enemy.pos.y);
           this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 36, 'Anchored!', '#c8d0d8', 15);
+          // the anchor itself, planted in the deck beside it until it hauls up again
+          const ax = ev.enemy.pos.x + 18;
+          const ay = ev.enemy.pos.y + 4;
+          // drawn around its own origin so the pop-in scale grows in place
+          const g = this.add.graphics().setPosition(ax, ay).setDepth(ay - 1);
+          g.lineStyle(3, 0x3a3a42, 1);
+          g.lineBetween(0, -16, 0, 6);
+          g.lineBetween(-6, -10, 6, -10);
+          g.strokeCircle(0, -19, 3);
+          g.beginPath();
+          g.arc(0, 0, 8, 0.15, Math.PI - 0.15);
+          g.strokePath();
+          g.setScale(0.3);
+          this.tweens.add({ targets: g, scale: 1, duration: 160, ease: 'Back.easeOut' });
+          const hold = (ev.enemy.def.anchor?.duration ?? 2) * 1000;
+          this.tweens.add({ targets: g, alpha: 0, delay: hold - 250, duration: 250, onComplete: () => g.destroy() });
         }
         break;
       }

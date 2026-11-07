@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **124** (next balance pass at iteration 125)
+Iteration counter: **125** (next balance pass at iteration 130)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -878,6 +878,10 @@ Iteration counter: **124** (next balance pass at iteration 125)
 - **Iteration 124**: level 73 **Gunwale Gauntlet**. A 2,600px gangway weaves along a line of gun-decked ships, and a
   1,500px north gangway joins at the third ship. It has 10 pads, 16 waves (all three Blackwake enemies, fliers on the
   long road) and hpMult 2.0. 189 tests.
+- **Iteration 125** (polish + balance): an anchored Ironkeel now plants a visible iron anchor beside it for the anchor
+  duration (pops in, fades as it hauls up). The first version scaled around the scene origin, because it was drawn
+  at absolute coordinates, so it flew in from the corner; it is now drawn relative to its own position. Sweep, finale
+  guard and hero comparison are in Balance Notes. 189 tests.
 
 ## In Progress
 - (none)
@@ -895,6 +899,16 @@ Iteration counter: **124** (next balance pass at iteration 125)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 125**:
+- Blackwake, 12 seeds: 71 Blackwake Moorings 100/100/42 · 72 Powder Row 100/100/17 · 73 Gunwale Gauntlet
+  100/83/0.
+- Finale guard: the expert won all 14 region finales in at least 3 of 4 seeds.
+- Hero comparison (expert strategy with each hero, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% ·
+  Fen 90% · Ember 90% · Wren 75% · Sorrel 79%. A healthy spread; the new anti-blocker enemies (gunners, kegs) did
+  not sink the melee or support heroes.
+
+No retunes.
+
 **Iteration 124**: 73 Gunwale Gauntlet was **100/83/0** at hpMult 2.0 on the first try; 2.15 gave 83/67 (too steep), so 2.0 was kept.
 
 **Iteration 123**: 72 Powder Row went 100/100/92 at hpMult 1.9 (two long roads and 11 pads are generous), 100/100/75 at 2.4, 100/100/17 at 2.7, and **2.85 → 100/100/17** (kept; casual stays at 100 on this map, like Grubfield Lane).

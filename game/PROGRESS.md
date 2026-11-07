@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **143** (next balance pass at iteration 145)
+Iteration counter: **144** (next balance pass at iteration 145)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1009,6 +1009,13 @@ Iteration counter: **143** (next balance pass at iteration 145)
     first, then up to 13 faces and a "+N" count.
   - New `scripts/endless-card-check.mjs` takes desktop and phone shots. Screenshots `screenshots/143.png` and
     `143-phone.png`. 196 tests.
+- **Iteration 144** (achievements for the new village and raid content):
+  - **Moonwatcher**: raise the Moonpetal Shrine to level 3 (1,200c + 1,200s).
+  - **Mudlark**: destroy 10 Sludge Pits in raids (900s). The raid result now banks a `sludgeDestroyed` stat for every
+    pit knocked out.
+  - Now 46 achievements, still 3 pages.
+  - Checks: a unit test, and `scripts/sludge-check.mjs` now ends a raid with the pit destroyed and checks the saved
+    stat. Screenshot `screenshots/144.png` (achievements page 3 on a phone). 197 tests.
 
 ## In Progress
 - (none)

@@ -60,6 +60,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'hall3', name: 'The Great Oak', text: 'Upgrade the Grove Hall to level 3.', goal: 3, progress: (s) => hall(s), reward: { coins: 800, glowsap: 800 } },
   { id: 'raider', name: 'Turnabout', text: 'Win a raid (at least one star).', goal: 1, progress: (s) => stat(s, 'raidsWon'), reward: { glowsap: 300 } },
   { id: 'razed', name: 'Razed to the Mud', text: 'Earn 3 stars on a Murkhorde Stronghold.', goal: 1, progress: (s) => stat(s, 'stronghold3'), reward: { coins: 1500, glowsap: 1500 } },
+  { id: 'moonwatch', name: 'Moonwatcher', text: 'Raise the Moonpetal Shrine to level 3.', goal: 3, progress: (s) => Math.max(0, ...(s.village?.buildings ?? []).filter((b) => b.type === 'shrine').map((b) => b.level)), reward: { coins: 1200, glowsap: 1200 } },
+  { id: 'mudlark', name: 'Mudlark', text: 'Destroy 10 Sludge Pits in raids.', goal: 10, progress: (s) => stat(s, 'sludgeDestroyed'), reward: { glowsap: 900 } },
   {
     id: 'guide',
     name: 'Naturalist',

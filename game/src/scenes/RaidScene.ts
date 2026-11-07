@@ -316,7 +316,8 @@ export class RaidScene extends Phaser.Scene {
     const got = addResources(v, this.sim.loot.coins, this.sim.loot.glowsap);
     save.army = this.sim.survivingArmy();
     save.raidSeed = (save.raidSeed ?? 1) + 1;
-    const counted = bumpStats(save, { raidsWon: stars > 0 ? 1 : 0, stronghold3: stars === 3 && this.sim.camp.tier === 2 ? 1 : 0 });
+    const pits = this.sim.camp.buildings.filter((b) => b.type === 'sludge' && b.hp <= 0).length;
+    const counted = bumpStats(save, { raidsWon: stars > 0 ? 1 : 0, stronghold3: stars === 3 && this.sim.camp.tier === 2 ? 1 : 0, sludgeDestroyed: pits });
     const checked = checkAchievements(counted);
     writeSave(checked.save);
     this.time.delayedCall(600, () => showAchievementToasts(this, checked.unlocked));

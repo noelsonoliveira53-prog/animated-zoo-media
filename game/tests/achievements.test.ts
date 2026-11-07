@@ -55,3 +55,17 @@ describe('hero achievements', () => {
     expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('field_medic');
   });
 });
+
+describe('Moonwatcher and Mudlark', () => {
+  it('track the shrine level and Sludge Pits destroyed', () => {
+    const moon = ACHIEVEMENTS.find((a) => a.id === 'moonwatch')!;
+    const mud = ACHIEVEMENTS.find((a) => a.id === 'mudlark')!;
+    const s = defaultSave();
+    expect(moon.progress(s)).toBe(0);
+    const v = ensureVillage(s);
+    v.buildings.push({ uid: 50, type: 'shrine', level: 3, col: 0, row: 0, upgradeEnds: null, lastCollect: 0 });
+    expect(moon.progress(s)).toBe(3);
+    s.stats = { ...s.stats, sludgeDestroyed: 4 };
+    expect(mud.progress(s)).toBe(4);
+  });
+});

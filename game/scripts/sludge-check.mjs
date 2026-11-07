@@ -40,6 +40,15 @@ const info = await page.evaluate(() => {
 await page.waitForTimeout(1500);
 await page.screenshot({ path: `screenshots/${name}.png` });
 console.log(JSON.stringify(info));
+// knock the pit out, end the raid, and check the Mudlark stat was banked
+const banked = await page.evaluate(async () => {
+  const s = window.__game.scene.getScene('Raid');
+  for (const b of s.sim.camp.buildings) if (b.type === 'sludge') b.hp = 0;
+  s.sim.finish();
+  await new Promise((r) => setTimeout(r, 800));
+  return JSON.parse(localStorage.getItem('grovewatch.save.v1')).stats?.sludgeDestroyed ?? 0;
+});
+console.log('sludgeDestroyed', banked);
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();

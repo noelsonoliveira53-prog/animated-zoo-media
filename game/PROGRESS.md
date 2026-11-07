@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **119** (next balance pass at iteration 120)
+Iteration counter: **120** (next balance pass at iteration 125)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -838,6 +838,10 @@ Iteration counter: **119** (next balance pass at iteration 120)
 
   Also: achievements `boss_brinecrown` (Reefbreaker) and `reef_stars` (Tidewalker), story card "The Tide Turns" (a
   dark sail on the horizon, a hook for region 15), and Brinecrown joins the endless boss rotation. 186 tests.
+- **Iteration 120** (balance): revisited the Coralreach finale. Leak analysis at hpMult 2.3 showed both the expert
+  and casual losing most lives to Shellsnaps on the north road (molted crabs sprinting a 2,040px road). All six
+  Shellsnap groups moved to the long road, and the level was retuned to hpMult 2.33. The Coralreach sweep is in
+  Balance Notes. 186 tests.
 
 ## In Progress
 - (none)
@@ -855,6 +859,12 @@ Iteration counter: **119** (next balance pass at iteration 120)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 120**: 70 Crown of the Reef, after moving Shellsnaps off the north road: 92/75 at hpMult 2.27, 92/42 at
+2.33 (finale guard passes), 75/50 at 2.36 (guard fails) and 75/42 at 2.4 (guard fails). **2.33 kept → 92/42/0.**
+Casual is now in the boss band; the expert is slightly above it, like the other 92% bosses. Coralreach, 12 seeds:
+66 100/92/33 · 67 100/92/0 · 68 100/75/0 · 69 100/67/0 · 70 92/42/0. Lesson: molting runners are "fast packs" too,
+so keep them off short roads.
+
 **Iteration 119**: 70 Crown of the Reef went 100/92/0 at hpMult 2.2, 92/75/0 at 2.27, 75/75 at 2.3 (finale guard fails: expert 1 of 3 test seeds), 67/67 at 2.32, 58/67 at 2.38 and 42/25 at 2.5. Casual tracks the expert here, likely because the slow-washing Tidecallers and ink blunt the expert's tower mix, so there is no setting inside the band that also passes the guard. **2.27 kept** (expert 92, guard passes); casual at 75 sits above the boss band. Worth revisiting in the iteration 120 pass.
 
 **Iteration 118**: 69 Tidewrack Lagoon was 8/0/0 at hpMult 2.4, leaking on both roads. It has only 10 pads, so it needs a much lower multiplier: 1.9 gave 100/42/0 and **1.7 → 100/67/0** (kept, a fourth-level ramp). Pad count matters as much as road length.

@@ -1036,6 +1036,15 @@ Iteration counter: **145** (next balance pass at iteration 150)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 145** (full sweep, all 80 levels, 12 seeds; expert / casual / novice): every level is in band for expert and casual.
+- Region openers: expert 100%, casual 92–100%.
+- Bosses: expert 75–92%, casual 33–67%.
+- Late regions (11–16): the novice stays at 0–42% outside the openers.
+- The iteration 131 Bramble buff lifted the novice on some early and mid levels: 7 Glacier Hold 100%, 21 Tidepool
+  Terraces 100%, 31 Updraft Stair 58%, 33 Three Winds 67%. These are early regions where the novice winning is
+  fine, so no retunes.
+- Finale guard: the expert won all 16 region finales in at least 3 of 4 seeds.
+
 **Iteration 142** (endless with home turf, `endless-balance.ts`, 3 seeds; waves held, expert / casual / novice): Mossgate 12/12/12 ·
 Murkmaw's Den 12/12/18 · Frostpeak 12/12/12 (was 16–19; Grimtusk now arrives at wave 10) · Duskcap 12/12/21 · Boilerworks
 13/13/14 · Mirage Flats 14/14/20 · Amberwood Gate 13/13/25 · Heart of the Amberwood 14/14/26. Expert and casual runs

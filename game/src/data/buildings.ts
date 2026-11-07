@@ -126,14 +126,14 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   wall: {
     id: 'wall',
     name: 'Bramble Wall',
-    blurb: 'A thorny hedge segment. Pretty, and it will matter when raids arrive.',
+    blurb: 'A thorny hedge segment to decorate and fence your sanctuary.',
     size: 1,
     color: 0x4b8f3a,
-    maxCount: [10, 25, 40, 60, 80],
+    maxCount: [10, 15, 20, 25, 30],
     levels: [
-      { cost: { coins: 50 }, time: 0, th: 1, hp: 300 },
-      { cost: { coins: 200 }, time: 0, th: 2, hp: 700 },
-      { cost: { coins: 800 }, time: 0, th: 3, hp: 1500 },
+      { cost: { coins: 40 }, time: 0, th: 1, hp: 300 },
+      { cost: { coins: 120 }, time: 0, th: 2, hp: 700 },
+      { cost: { coins: 300 }, time: 0, th: 3, hp: 1500 },
     ],
   },
 };

@@ -275,6 +275,7 @@ export class RaidScene extends Phaser.Scene {
   private endRaid(): void {
     if (this.done) return;
     this.done = true;
+    music.setMood('calm');
     const stars = this.sim.stars;
     // Bank loot and return surviving troops; the next raid gets fresh camps.
     const save = loadSave();

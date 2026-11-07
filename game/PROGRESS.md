@@ -4,9 +4,9 @@ An original tower-defense + village-building game. The **Keepers of the Grove** 
 woodland sanctuary from the **Murkhorde**, bog critters creeping out of the Gloomfen.
 Resources: **Coins** (battle currency / village gold) and **Glowsap** (the second village resource, planned).
 
-Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
+Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **24** (next iteration = 25 → POLISH + BALANCE pass)
+Iteration counter: **25** (next balance pass at iteration 30)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -210,13 +210,19 @@ Iteration counter: **24** (next iteration = 25 → POLISH + BALANCE pass)
   the volume slider; the Settings screen was re-laid out (Effects / Music / Fullscreen). `scripts/music-check.mjs`
   verifies the music starts after a gesture and changes mood. 103 tests.
 
+- [x] **Iter 25 — POLISH + BALANCE (economy).** Smarter raid deploy in `raid-balance.ts` (side nearest the defenses,
+  sappers/owls first, brawlers 1s later, slingers 3s later; `--naive` keeps the old spread). New `scripts/economy.ts`:
+  income (campaign, achievements, production per Grove Hall level, raid loot minus lost troops) vs spending (full
+  build-out, hero training). Fix: Bramble Walls were an 84k-coin sink with no gameplay use → max 30 (was 80),
+  40/120/300 coins (was 50/200/800); total build-out 179k → 109k coins. Music drops to the calm mood when a battle
+  or raid ends. Campaign re-checked (no regressions). 103 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Raid follow-ups: smarter raid deploy for the balance script; raid-loot vs campaign-loot economy check (iteration 25).
-2. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
-3. Music polish: per-region motifs, victory/defeat stingers.
+1. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
+2. Music polish: per-region motifs, victory/defeat stingers.
 
 ## Known Bugs
 - (none known)
@@ -235,6 +241,16 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Economy (iteration 25, `economy.ts`):**
+- Income: campaign first clears 18.8k coins / 14.9k glowsap (+13.1k / +10.4k for all 3★); achievements 9.1k / 9.8k;
+  production with maxed producers 1.4k/h (Grove Hall 1) → 3.3k (GH2) → 6.4k (GH3) → 11k (GH4) → 13.2k/h (GH5) of each.
+- Raids (smart deploy) net after lost troops: Lodge 1 vs Outpost ≈ +600c +220s; Lodge 2 vs Warren ≈ +1.5k c +0.9k s;
+  Lodge 3 vs Warren ≈ +1.6k c +1.0k s. With ~10–15 min of training per full army that's about 4k/h: on par with GH3
+  production, so raids are worthwhile but not dominant.
+- Spending: full build-out ≈ 109k coins + 66k glowsap, plus 32k glowsap of hero training. Campaign + achievements
+  cover roughly the first third; production and raids carry the rest.
+- Smart deploy vs naive (Lodge 3 vs Stronghold): 1.5★ vs 0.9★, so raid tactics are rewarded.
 
 **Raids (iteration 18, `raid-balance.ts`, avg stars / destruction over 10 seeds, two-side deploy):**
 

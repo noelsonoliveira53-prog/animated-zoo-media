@@ -17,20 +17,47 @@ const edges = [
   (k: number) => ({ x: 300 + k * 60, y: 650 }),
 ];
 
-export function raidOnce(army: Record<string, number>, tier: number, seed: number) {
-  const sim = new RaidSim(generateCamp(seed, tier), army);
-  let i = 0;
-  // Deploy everything spread over two sides (a reasonable player attack).
-  for (const [id, n] of Object.entries(army))
-    for (let c = 0; c < n; c++, i++) {
-      const edge = edges[i % 2 === 0 ? 0 : 1];
-      sim.deploy(id, edge(Math.floor(i / 2) % 12));
-    }
-  for (let s = 0; s < 95 * 30 && !sim.ended; s++) sim.update(1 / 30);
-  return { stars: sim.stars, destruction: sim.destruction, lost: Object.values(army).reduce((a, b) => a + b, 0) - Object.values(sim.survivingArmy()).reduce((a, b) => a + b, 0) };
+const SIDES = [
+  (k: number) => ({ x: 60, y: 160 + k * 40 }),
+  (k: number) => ({ x: 1220, y: 160 + k * 40 }),
+  (k: number) => ({ x: 280 + k * 60, y: 80 }),
+  (k: number) => ({ x: 280 + k * 60, y: 650 }),
+];
+
+/** Smarter deploy: pick the side nearest the defenses; sappers first, brawlers next, slingers 3s later. */
+export function raidOnce(army: Record<string, number>, tier: number, seed: number, smart = true) {
+  const camp = generateCamp(seed, tier);
+  const sim = new RaidSim(camp, army);
+  const run = (sec: number) => {
+    for (let s = 0; s < sec * 30 && !sim.ended; s++) sim.update(1 / 30);
+  };
+  if (!smart) {
+    let i = 0;
+    for (const [id, n] of Object.entries(army))
+      for (let c = 0; c < n; c++, i++) sim.deploy(id, edges[i % 2](Math.floor(i / 2) % 12));
+  } else {
+    const defs = camp.buildings.filter((b) => b.type === 'spit' || b.type === 'mortar').map((b) => ({ x: (b.col + 1) * 40 + 160, y: (b.row + 1) * 40 + 92 }));
+    const sideScore = SIDES.map((f) => {
+      const p = f(4);
+      return Math.min(...defs.map((d) => Math.hypot(d.x - p.x, d.y - p.y)));
+    });
+    const side = SIDES[sideScore.indexOf(Math.min(...sideScore))];
+    let k = 0;
+    const put = (id: string) => {
+      for (let c = 0; c < (army[id] ?? 0); c++) sim.deploy(id, side((k++ % 10) + 0.5));
+    };
+    put('sapper');
+    put('owl');
+    run(1);
+    put('brawler');
+    run(3);
+    put('slinger');
+  }
+  run(95);
+  return { stars: sim.stars, destruction: sim.destruction, loot: sim.loot, survivors: sim.survivingArmy() };
 }
 
-{
+if (process.argv[1]?.includes('raid-balance')) {
   console.log('| Army | ' + CAMP_TIERS.map((t) => t.name).join(' | ') + ' |');
   console.log('|---|---|---|---|');
   for (const [name, army] of Object.entries(ARMIES)) {
@@ -38,7 +65,7 @@ export function raidOnce(army: Record<string, number>, tier: number, seed: numbe
       let stars = 0;
       let dest = 0;
       for (let seed = 1; seed <= 10; seed++) {
-        const r = raidOnce(army, tier, seed);
+        const r = raidOnce(army, tier, seed, !process.argv.includes('--naive'));
         stars += r.stars;
         dest += r.destruction;
       }

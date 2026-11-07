@@ -897,7 +897,7 @@ export class BattleScene extends Phaser.Scene {
     this.syncViews(dt);
     this.syncHero();
     this.drawSpellHud();
-    music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
+    if (!this.ended) music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
     this.drawBossBar();
     this.refreshHud();
   }
@@ -1323,6 +1323,7 @@ export class BattleScene extends Phaser.Scene {
     if (this.ended) return;
     this.ended = true;
     this.closeMenu();
+    music.setMood('calm');
     const stars = won ? starsForLives(this.sim.lives, this.sim.maxLives) : 0;
     let reward = { coins: 0, glowsap: 0 };
     let after = loadSave();

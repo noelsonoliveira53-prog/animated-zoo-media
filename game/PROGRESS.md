@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **170** (next balance pass at iteration 175)
+Iteration counter: **171** (next balance pass at iteration 175)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1217,12 +1217,15 @@ Iteration counter: **170** (next balance pass at iteration 175)
   - A Waxback Beetle shows a glossy amber bar under its health that drains as spells melt the coat.
   - Both show even at full health, so the player can plan before the first shot. Screenshot `screenshots/170.png`.
   - Balance: a sweep of levels 86–92 and a hero comparison on 90–92; no changes needed (see Balance Notes). 218 tests.
+- **Iteration 171** (Honeycomb level 3): level 93 **Waxworks Hollow**. It has 12 pads, a long road from the left that
+  zig-zags, and a short drop from the top that joins it near the end. All three Honeycomb traits mix with older enemies over
+  15 waves, and start coins are 1,150. Screenshot `screenshots/171.png`. 218 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Honeycomb Hills levels 93 and 94.
+1. Honeycomb Hills level 94.
 2. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1232,6 +1235,12 @@ Iteration counter: **170** (next balance pass at iteration 175)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 171**: 93 Waxworks Hollow (12 seeds). The first draft was brutal: 1.5 → 33/0/0.
+- Leak logs (now by wave) showed early Waxback, Honeypaw and Galehound rushes on the short top road and waves 4–6 overloading
+  a thin early economy.
+- Fixes: fast and armoured groups moved to the long road, waves 3–8 thinned, a pad added at the start of the left road, and
+  start coins raised 1,000 → 1,150.
+- After that: 1.6 → 75/75/0, 1.5 → 83/75/0, **1.4 → 92/83/0** (kept; the third-level band is 92–100 / 75–83).
 **Iteration 170**: sweep of levels 86–92 at 6 seeds (expert/casual/novice): 86 100/100/33, 87 100/100/0, 88 100/50/0,
 89 100/67/83, 90 (boss) 100/50/0, 91 100/100/50, 92 100/100/0.
 - Vinefall's 50% casual at 6 seeds was noise: at 12 seeds it reads 75% for hpMult 1.5, 1.55 and 1.6 alike, so it stays at 1.6.

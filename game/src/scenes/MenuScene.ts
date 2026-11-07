@@ -77,8 +77,9 @@ export class MenuScene extends Phaser.Scene {
     this.add.text(404, 556, `${totalStars(save.stars)} / ${LEVELS.length * 3} stars earned`, textStyle(20)).setOrigin(0, 0.5);
 
     this.buildHeroPicker();
-    new Button(this, 340, 640, 'Field Guide', { width: 200, height: 52, fontSize: 20, color: 0xd9c39a, onClick: () => this.scene.start('FieldGuide') });
-    new Button(this, 580, 640, 'Settings', { width: 200, height: 52, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Settings') });
+    new Button(this, 240, 640, 'Field Guide', { width: 190, height: 52, fontSize: 19, color: 0xd9c39a, onClick: () => this.scene.start('FieldGuide') });
+    new Button(this, 460, 640, 'Achievements', { width: 210, height: 52, fontSize: 19, color: C.gold, onClick: () => this.scene.start('Achievements') });
+    new Button(this, 680, 640, 'Settings', { width: 190, height: 52, fontSize: 19, color: C.sky, onClick: () => this.scene.start('Settings') });
 
     this.add.text(16, GAME_H - 30, 'v0.5 — full campaign', textStyle(14, TEXT.dim, false));
   }

@@ -19,7 +19,7 @@ await page.addInitScript(() => {
 await page.goto('http://localhost:4332/');
 await page.waitForTimeout(900);
 await page.screenshot({ path: `screenshots/${name}-menu.png` });
-await page.mouse.click(340, 640); // Field Guide
+await page.mouse.click(240, 640); // Field Guide
 await page.waitForTimeout(600);
 await page.mouse.click(90 + 98 * 5 + 49, 130 + 49 - 10); // 6th entry (murkmaw? order of ENEMIES)
 await page.waitForTimeout(400);
@@ -29,7 +29,7 @@ await page.waitForTimeout(500);
 await page.screenshot({ path: `screenshots/${name}-towers.png` });
 await page.mouse.click(90, 44); // Back
 await page.waitForTimeout(500);
-await page.mouse.click(580, 640); // Settings
+await page.mouse.click(680, 640); // Settings
 await page.waitForTimeout(500);
 await page.mouse.click(640 - 220 + 440 * 0.3, 220); // volume 30%
 await page.mouse.click(640, 320); // mute

@@ -2,7 +2,9 @@ import Phaser from 'phaser';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { buildingCenter, CAMP_COLS, CAMP_OX, CAMP_OY, CAMP_ROWS, CAMP_TILE, generateCamp } from '../systems/camp';
 import { RaidSim, type RaidEvent, type Troop } from '../systems/RaidSim';
-import { ensureVillage, loadSave, writeSave } from '../systems/save';
+import { bumpStats, ensureVillage, loadSave, writeSave } from '../systems/save';
+import { checkAchievements } from '../systems/achievements';
+import { showAchievementToasts } from '../ui/toast';
 import { addResources } from '../systems/village';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
@@ -278,7 +280,10 @@ export class RaidScene extends Phaser.Scene {
     const got = addResources(v, this.sim.loot.coins, this.sim.loot.glowsap);
     save.army = this.sim.survivingArmy();
     save.raidSeed = (save.raidSeed ?? 1) + 1;
-    writeSave(save);
+    const counted = bumpStats(save, { raidsWon: stars > 0 ? 1 : 0, stronghold3: stars === 3 && this.sim.camp.tier === 2 ? 1 : 0 });
+    const checked = checkAchievements(counted);
+    writeSave(checked.save);
+    this.time.delayedCall(600, () => showAchievementToasts(this, checked.unlocked));
     stars > 0 ? sfx.victory() : sfx.defeat();
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0.5).setDepth(8000).setInteractive();

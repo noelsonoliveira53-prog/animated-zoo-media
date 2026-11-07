@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **20** (next balance pass at iteration 25)
+Iteration counter: **21** (next balance pass at iteration 25)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -180,11 +180,19 @@ Iteration counter: **20** (next balance pass at iteration 25)
   difficulty. Mobile polish: **"turn your phone sideways" overlay** in portrait on touch devices, **Fullscreen**
   button in Settings, no long-press context menu or text selection. 95 tests.
 
+- [x] **Iter 21** — **Achievements (meta, part 2).** 17 achievements in `data/achievements.ts` (first win, perfect
+  defense, stars 15/45, each boss, campaign complete, 500/5000 kills, 10 specializations, hero level 6,
+  10 buildings, Grove Hall 3, first raid win, 3-star Stronghold, full Field Guide), each with a Coins/Glowsap reward
+  paid into the village. Lifetime `stats` counters (`bumpStats`) are recorded at battle end (wins/losses), raid end
+  and village building; `checkAchievements()` unlocks and pays out. Slide-in "Achievement" toasts in battle,
+  raid and village; `AchievementsScene` lists all with progress bars; menu button. 98 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Meta part 2: achievements (with small rewards) + daily challenge (seeded modifiers on a campaign level).
+1. Daily challenge: a date-seeded campaign level with 1–2 modifiers (e.g. "enemies +30% speed", "towers cost 20% less",
+   "no Starfall") and a daily reward.
 2. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
 3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
 4. Ambient music loop (procedural).

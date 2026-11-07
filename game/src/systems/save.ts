@@ -10,13 +10,15 @@ export interface SaveData {
   army: Record<string, number>; // trained raid troops waiting at the Ranger Lodge
   raidSeed: number; // rotates after each raid so new camps appear
   seenEnemies: string[]; // enemy ids met in battle (unlocks Field Guide entries)
+  stats: Record<string, number>; // lifetime counters for achievements
+  achievements: string[]; // unlocked achievement ids
   settings: { volume: number; muted: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';
 
 export function defaultSave(): SaveData {
-  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], settings: { volume: 0.6, muted: false } };
+  return { version: 1, stars: {}, hero: 'bramble', village: null, heroRanks: {}, army: {}, raidSeed: 1, seenEnemies: [], stats: {}, achievements: [], settings: { volume: 0.6, muted: false } };
 }
 
 export interface StorageLike {
@@ -48,6 +50,8 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       army: { ...(parsed.army ?? {}) },
       raidSeed: typeof parsed.raidSeed === 'number' ? parsed.raidSeed : 1,
       seenEnemies: Array.isArray(parsed.seenEnemies) ? parsed.seenEnemies.filter((x) => typeof x === 'string') : [],
+      stats: { ...(parsed.stats ?? {}) },
+      achievements: Array.isArray(parsed.achievements) ? parsed.achievements.filter((x) => typeof x === 'string') : [],
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {
@@ -95,4 +99,12 @@ export function markSeen(data: SaveData, ids: Iterable<string>): SaveData {
 /** Wipe all progress but keep settings. */
 export function resetProgress(data: SaveData): SaveData {
   return { ...defaultSave(), settings: { ...data.settings } };
+}
+
+/** Add to lifetime counters (or raise a max-type counter with mode 'max'). */
+export function bumpStats(data: SaveData, add: Record<string, number>, max: Record<string, number> = {}): SaveData {
+  const stats = { ...data.stats };
+  for (const [k, v] of Object.entries(add)) stats[k] = (stats[k] ?? 0) + v;
+  for (const [k, v] of Object.entries(max)) stats[k] = Math.max(stats[k] ?? 0, v);
+  return { ...data, stats };
 }

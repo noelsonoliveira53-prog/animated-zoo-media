@@ -8,6 +8,7 @@ import { EndingScene } from './scenes/EndingScene';
 import { RaidScene } from './scenes/RaidScene';
 import { FieldGuideScene } from './scenes/FieldGuideScene';
 import { SettingsScene } from './scenes/SettingsScene';
+import { AchievementsScene } from './scenes/AchievementsScene';
 import { GAME_H, GAME_W } from './ui/theme';
 
 const game = new Phaser.Game({
@@ -18,7 +19,7 @@ const game = new Phaser.Game({
   backgroundColor: '#10261b',
   scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
   input: { activePointers: 2 },
-  scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, RaidScene, FieldGuideScene, SettingsScene],
+  scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, RaidScene, FieldGuideScene, SettingsScene, AchievementsScene],
 });
 
 // No long-press context menu on touch devices (it interrupts tower menus).

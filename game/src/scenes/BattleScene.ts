@@ -7,7 +7,9 @@ import { SPELLS, SPELL_ORDER } from '../data/spells';
 import type { LevelDef, TargetMode, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
 import { sfx } from '../systems/audio';
-import { ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
+import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
+import { checkAchievements } from '../systems/achievements';
+import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
@@ -63,6 +65,7 @@ export class BattleScene extends Phaser.Scene {
   private bossBar!: Phaser.GameObjects.Graphics;
   private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1 };
   private seen = new Set<string>();
+  private tally = { kills: 0, specs: 0, bosses: [] as string[] };
   private bossLabel!: Phaser.GameObjects.Text;
 
   constructor() {
@@ -78,6 +81,7 @@ export class BattleScene extends Phaser.Scene {
     this.heroSprite = null;
     this.heroSelected = false;
     this.seen = new Set();
+    this.tally = { kills: 0, specs: 0, bosses: [] };
     this.speed = 1;
     this.paused = false;
     this.ended = false;
@@ -954,6 +958,8 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'kill': {
+        this.tally.kills++;
+        if (ev.enemy.def.boss) this.tally.bosses.push(ev.enemy.def.id);
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) this.killView(ev.enemy.uid, v);
         this.particles.setParticleTint(ev.enemy.def.color);
@@ -1074,6 +1080,7 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'specialize':
+        this.tally.specs++;
         this.floatText(ev.tower.pos.x, ev.tower.pos.y - 80, ev.tower.def.specs.find((x) => x.id === ev.tower.spec)!.name + '!', TEXT.gold, 22);
         this.particles.setParticleTint(C.gold);
         this.particles.explode(30, ev.tower.pos.x, ev.tower.pos.y - 30);
@@ -1290,17 +1297,28 @@ export class BattleScene extends Phaser.Scene {
     this.closeMenu();
     const stars = won ? starsForLives(this.sim.lives, this.level.lives) : 0;
     let reward = { coins: 0, glowsap: 0 };
+    let after = loadSave();
     if (won) {
-      const before = loadSave();
-      const prevStars = before.stars[this.level.id] ?? 0;
-      const after = recordStars(before, this.level.id, stars);
+      const prevStars = after.stars[this.level.id] ?? 0;
+      after = recordStars(after, this.level.id, stars);
       const want = battleReward(this.levelIndex, prevStars, stars);
       reward = addResources(ensureVillage(after), want.coins, want.glowsap);
-      writeSave(after);
       sfx.victory();
     } else {
       sfx.defeat();
     }
+    // Lifetime stats + achievements (counted for losses too).
+    const add: Record<string, number> = {
+      kills: this.tally.kills,
+      specs: this.tally.specs,
+      wins: won ? 1 : 0,
+      perfectWins: won && this.sim.lives === this.level.lives ? 1 : 0,
+    };
+    for (const b of this.tally.bosses) add[`boss_${b}`] = (add[`boss_${b}`] ?? 0) + 1;
+    after = bumpStats(after, add, { heroMaxLevel: this.sim.hero?.level ?? 0 });
+    const checked = checkAchievements(after);
+    writeSave(checked.save);
+    showAchievementToasts(this, checked.unlocked);
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0).setDepth(5000).setInteractive();
     this.tweens.add({ targets: shade, fillAlpha: 0.55, duration: 300 });

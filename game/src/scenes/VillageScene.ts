@@ -1,7 +1,9 @@
 import Phaser from 'phaser';
 import { BUILDINGS, SHOP_ORDER, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
-import { loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
+import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
+import { checkAchievements } from '../systems/achievements';
+import { showAchievementToasts } from '../ui/toast';
 import {
   busyBuilders,
   builders,
@@ -60,6 +62,7 @@ export class VillageScene extends Phaser.Scene {
   private hudBars!: Phaser.GameObjects.Graphics;
   private modeBar: Phaser.GameObjects.Container | null = null;
   private lastSave = 0;
+  private pendingBuilt = 0;
 
   constructor() {
     super('Village');
@@ -89,10 +92,18 @@ export class VillageScene extends Phaser.Scene {
 
   private persist(): void {
     // Reload first so changes made elsewhere (army, hero ranks, stars) are never overwritten.
-    const fresh = loadSave();
+    let fresh = loadSave();
     fresh.village = this.v;
-    writeSave(fresh);
-    this.save = fresh;
+    if (this.pendingBuilt) {
+      fresh = bumpStats(fresh, { buildingsBuilt: this.pendingBuilt });
+      this.pendingBuilt = 0;
+    }
+    const checked = checkAchievements(fresh);
+    // Rewards were paid into checked.save's village object; keep our live reference in sync.
+    if (checked.save.village) this.v = checked.save.village;
+    writeSave(checked.save);
+    this.save = checked.save;
+    if (checked.unlocked.length && this.sys.isActive()) showAchievementToasts(this, checked.unlocked, 3000);
     this.lastSave = Date.now();
   }
 
@@ -582,6 +593,7 @@ export class VillageScene extends Phaser.Scene {
         return;
       }
       this.addView(r.building);
+      this.pendingBuilt++;
       sfx.build();
       this.particlesAt(r.building);
       this.cancelMode();

@@ -74,6 +74,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.burrow) tags.push('Burrows');
         if (e.spawner) tags.push('Spawns minions');
         if (e.veil) tags.push(`Veiled (towers see it within ${e.veil}px)`);
+        if (e.blink) tags.push(`Blinks ${e.blink.distance}px ahead every ${e.blink.interval}s`);
+        if (e.splashResist) tags.push(`Resists ${Math.round(e.splashResist * 100)}% of splash damage`);
         if (e.shieldAura) tags.push('Coral shields nearby allies');
         if (e.brittle) tags.push('Brittle: armor chips away with every hit');
         if (e.swoop) tags.push('Swoops: lands every few seconds');

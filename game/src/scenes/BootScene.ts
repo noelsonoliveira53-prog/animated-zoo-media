@@ -225,6 +225,43 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'shardskipper': {
+        // crystal hopper: faceted body, long legs, glowing core
+        g.lineStyle(2.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.3, cy + r * 0.3, cx - r * 0.9, cy + r * 1.0);
+        g.lineBetween(cx + r * 0.3, cy + r * 0.3, cx + r * 0.9, cy + r * 1.0);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r, cy + r * 0.3, cx + r, cy + r * 0.3, cx, cy - r * 1.1);
+        g.strokeTriangle(cx - r, cy + r * 0.3, cx + r, cy + r * 0.3, cx, cy - r * 1.1);
+        g.fillStyle(0xffffff, 0.6);
+        g.fillTriangle(cx - r * 0.3, cy + r * 0.1, cx + r * 0.1, cy + r * 0.1, cx - r * 0.05, cy - r * 0.8);
+        g.fillStyle(0x6a4ab8, 1);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.22);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.35, r * 0.09);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.35, r * 0.09);
+        break;
+      }
+      case 'mirrorback': {
+        // polished beetle: a bright reflective shell with a highlight band
+        g.fillStyle(shade, 1);
+        for (const s of [-1, 1]) for (let k = 0; k < 3; k++) g.fillRect(cx + s * r * 0.85, cy - r * 0.3 + k * r * 0.4, s * r * 0.35, 3);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.8, r * 1.5);
+        g.strokeEllipse(cx, cy, r * 1.8, r * 1.5);
+        g.lineStyle(2, C.ink, 0.8);
+        g.lineBetween(cx, cy - r * 0.75, cx, cy + r * 0.75);
+        g.fillStyle(0xffffff, 0.8);
+        g.fillEllipse(cx - r * 0.35, cy - r * 0.25, r * 0.35, r * 0.8);
+        g.fillStyle(0x9ad8f0, 0.6);
+        g.fillEllipse(cx + r * 0.35, cy + r * 0.2, r * 0.3, r * 0.6);
+        g.fillStyle(0x3a3a4a, 1);
+        g.fillEllipse(cx, cy - r * 0.8, r * 0.8, r * 0.4);
+        g.fillStyle(0xff5d4a, 1);
+        g.fillCircle(cx - r * 0.2, cy - r * 0.85, r * 0.08);
+        g.fillCircle(cx + r * 0.2, cy - r * 0.85, r * 0.08);
+        break;
+      }
       case 'saltjaw': {
         // colossal crab: huge claws, eye stalks, a barnacle-and-coral crusted shell
         g.lineStyle(3, C.ink, 1);

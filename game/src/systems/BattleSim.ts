@@ -40,6 +40,7 @@ export interface Enemy {
   armor: number; // current armor (brittle enemies lose some on every hit)
   landed: boolean; // swooping flyers spend part of their cycle on the ground
   swoopCd: number;
+  blinkCd: number;
 }
 
 export interface Soldier {
@@ -148,6 +149,7 @@ export type SimEvent =
   | { type: 'burrow'; enemy: Enemy; down: boolean }
   | { type: 'enrage'; enemy: Enemy }
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
+  | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
   | { type: 'coral'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'spores'; enemy: Enemy; radius: number; hasted: Enemy[] }
   | { type: 'shieldBreak'; enemy: Enemy }
@@ -807,6 +809,7 @@ export class BattleSim {
       armor: def.armor,
       landed: false,
       swoopCd: def.swoop ? def.swoop.interval : 0,
+      blinkCd: def.blink ? def.blink.interval : 0,
     };
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
@@ -829,6 +832,7 @@ export class BattleSim {
       if (e.def.burrow) this.tickBurrow(e, dt);
       if (e.def.spawner) this.tickSpawner(e, dt);
       if (e.def.swoop) this.tickSwoop(e, dt);
+      if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
       if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
         e.enraged = true;
@@ -904,6 +908,24 @@ export class BattleSim {
       targets.push(o);
     }
     this.events.push({ type: 'coral', source: e, targets, radius: sa.radius });
+  }
+
+  /** Shardskippers jump ahead along their road on a timer, slipping out of any soldier's grip. */
+  private tickBlink(e: Enemy, dt: number): void {
+    const bl = e.def.blink!;
+    e.blinkCd -= dt;
+    if (e.blinkCd > 0) return;
+    e.blinkCd = bl.interval;
+    const path = this.paths[e.path];
+    const from = { ...e.pos };
+    e.dist = Math.min(path.length - 1, e.dist + bl.distance);
+    e.pos = path.pointAt(e.dist);
+    if (e.blockedBy) {
+      for (const s of this.soldiers) if (s.targetUid === e.uid) s.targetUid = 0;
+      if (this.hero && this.hero.targetUid === e.uid) this.hero.targetUid = 0;
+      e.blockedBy = 0;
+    }
+    this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
   }
 
   /** In the air right now (flyers, except while a swooper is landed). */
@@ -1207,7 +1229,7 @@ export class BattleSim {
         if (!e.alive || e.underground) continue;
         if (this.airborne(e) && !p.hitsAir) continue;
         if (Math.hypot(e.pos.x - p.lastTargetPos.x, e.pos.y - p.lastTargetPos.y) <= p.splash + e.def.radius) {
-          this.damage(e, p);
+          this.damage(e, p, 1 - (e.def.splashResist ?? 0));
         }
       }
     } else if (target) {
@@ -1216,13 +1238,13 @@ export class BattleSim {
     }
   }
 
-  private damage(e: Enemy, p: Projectile): void {
+  private damage(e: Enemy, p: Projectile, mult = 1): void {
     if (p.slow) {
       e.slowFactor = Math.min(e.slowFactor, p.slow.factor);
       e.slowTime = Math.max(e.slowTime, p.slow.duration);
     }
     const armor = e.armor * (1 - p.pierce);
-    this.applyDamage(e, computeDamage(p.damage, p.damageType, { armor, magicResist: e.def.magicResist }));
+    this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.def.magicResist }));
   }
 
   /** Lightning: jump from the first target to nearby enemies with falling damage. */

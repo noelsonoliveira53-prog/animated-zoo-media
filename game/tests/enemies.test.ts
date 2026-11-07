@@ -300,3 +300,31 @@ describe('field guide capacity', () => {
     expect(Object.keys(ENEMIES).length).toBeLessThanOrEqual(30);
   });
 });
+
+describe('shardglass enemies', () => {
+  it('Shardskippers blink ahead on a timer and slip free of blockers', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const s = sim.spawn('shardskipper', 0, 100);
+    s.def = { ...s.def, speed: 0 };
+    s.blockedBy = 99;
+    const bl = ENEMIES.shardskipper.blink!;
+    for (let i = 0; i < 60 * bl.interval + 2; i++) sim.update(1 / 60);
+    expect(s.dist).toBeCloseTo(100 + bl.distance, 0);
+    expect(s.blockedBy).toBe(0);
+  });
+  it('Mirrorbacks take much less splash damage than a normal enemy', () => {
+    const sim = new BattleSim({ ...lvl });
+    sim.status = 'running';
+    const m = sim.spawn('mirrorback', 0, 300);
+    const n = sim.spawn('shellback', 0, 300);
+    const p = { splash: 60, lastTargetPos: { ...m.pos }, damage: 100, damageType: 'magic', pierce: 0, hitsAir: false, color: 0 } as any;
+    m.armor = 0;
+    n.armor = 0;
+    (sim as any).impact(p, null);
+    const mLost = m.maxHp - m.hp;
+    const nLost = n.maxHp - n.hp;
+    expect(nLost).toBeGreaterThan(0);
+    expect(mLost).toBeLessThan(nLost * 0.5);
+  });
+});

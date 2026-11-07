@@ -17,7 +17,7 @@ page.on('pageerror', (e) => errors.push(String(e)));
 // Unlock through level 15 so region 4 is open.
 await page.addInitScript(() => {
   const stars = {};
-  for (let i = 1; i <= 20; i++) stars['l' + i] = 3;
+  for (let i = 1; i <= 25; i++) stars['l' + i] = 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars }));
 });
 await page.goto('http://localhost:4322/');

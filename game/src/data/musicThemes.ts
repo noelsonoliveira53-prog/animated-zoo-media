@@ -47,6 +47,9 @@ export const THEMES: ThemeDef[] = [
   // Saltmarrow Shoals: a rolling, lilting tune with a square-wave whistle.
   { id: 'shoal', name: 'Saltmarrow', transpose: 3, tempo: 1.04, arpWave: 'triangle', leadWave: 'square',
     motif: [[12, 0, 3], [16, 3, 3], [19, 6, 6], [17, 12, 3], [16, 15, 3], [14, 18, 6], [12, 24, 8]] },
+  // Shardglass Barrens: bell-like and spacious, built on fourths and fifths.
+  { id: 'glass', name: 'Shardglass', transpose: 4, tempo: 0.98, arpWave: 'sine', leadWave: 'triangle',
+    motif: [[12, 0, 4], [17, 4, 4], [19, 8, 8], [24, 16, 4], [22, 20, 4], [17, 24, 8]] },
   // Duskcap Weald: hushed, drifting, a little uneasy (whole-tone steps).
   { id: 'dusk', name: 'Duskcap', transpose: 1, tempo: 0.94, arpWave: 'triangle', leadWave: 'sine',
     motif: [[14, 0, 4], [16, 4, 4], [18, 8, 6], [16, 14, 2], [12, 16, 4], [10, 20, 4], [12, 24, 8]] },

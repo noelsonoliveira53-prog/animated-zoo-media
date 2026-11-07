@@ -280,7 +280,20 @@ export class BattleScene extends Phaser.Scene {
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
       if (this.level.slots.some((s) => Math.hypot(s.x - p.x, s.y - p.y) < 60)) continue;
       if ((this.level.ponds ?? []).some((pd) => Math.hypot((p.x - pd.x) / (pd.w / 2 + 20), (p.y - pd.y) / (pd.h / 2 + 20)) < 1)) continue;
-      if (this.level.theme.shrooms && rnd.frac() < 0.5) {
+      if (this.level.theme.crystals && rnd.frac() < 0.5) {
+        // glass spires: a cluster of faceted crystals
+        const col = rnd.pick(this.level.theme.trees ?? [0x9ad8f0]);
+        deco.fillStyle(0x000000, 0.2);
+        deco.fillEllipse(p.x, p.y + 4, 34, 10);
+        for (const [dx, h, w] of [[-9, 22, 8], [0, 34, 10], [9, 18, 7]]) {
+          deco.fillStyle(col, 0.95);
+          deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+          deco.fillStyle(0xffffff, 0.45);
+          deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
+        }
+      } else if (this.level.theme.shrooms && rnd.frac() < 0.5) {
         // giant duskcap mushrooms with glowing spots
         const cap = rnd.pick(this.level.theme.trees ?? [0x8a5ab8]);
         const h = rnd.between(14, 24);
@@ -1097,6 +1110,14 @@ export class BattleScene extends Phaser.Scene {
           this.particles.setParticleTint(0xffc0c8);
           this.particles.explode(4, t.pos.x, t.pos.y - 6);
         }
+        break;
+      }
+      case 'blink': {
+        this.particles.setParticleTint(0xbff4ff);
+        this.particles.explode(8, ev.from.x, ev.from.y);
+        this.particles.explode(8, ev.to.x, ev.to.y);
+        const streak = this.add.line(0, 0, ev.from.x, ev.from.y, ev.to.x, ev.to.y, 0xbff4ff, 0.7).setOrigin(0).setLineWidth(3).setDepth(2400);
+        this.tweens.add({ targets: streak, alpha: 0, duration: 300, onComplete: () => streak.destroy() });
         break;
       }
       case 'swoop':

@@ -32,6 +32,8 @@ export interface EnemyDef {
   spawner?: { enemy: string; count: number; interval: number; limit: number }; // releases minions while alive (limit = max total)
   veil?: number; // stealth: towers can only target it within this many px (splash, spells, soldiers still hit)
   enrage?: { below: number; speedMult: number }; // speeds up once hp drops under this fraction
+  blink?: { interval: number; distance: number }; // jumps ahead along the road on a timer (breaks free of blockers)
+  splashResist?: number; // 0..1 less damage from splash (area) tower shots
   shieldAura?: { amount: number; radius: number; interval: number }; // periodically shields nearby allies
   brittle?: number; // armor lost per hit taken (down to 0)
   swoop?: { interval: number; duration: number }; // flyer that lands for `duration` s every `interval` s
@@ -114,7 +116,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number }; // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

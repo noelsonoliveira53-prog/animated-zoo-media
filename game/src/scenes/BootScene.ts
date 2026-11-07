@@ -427,6 +427,28 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.58, cy, r * 0.07);
         break;
       }
+      case 'copperhorn': {
+        // big grey ox, head low, wide horns capped with shining copper, a copper ring through its nose
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.6, -0.25, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.4, cx + lx * r, cy + r * 0.95);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.15, cy, r * 1.7, r * 1.1);
+        g.strokeEllipse(cx + r * 0.15, cy, r * 1.7, r * 1.1);
+        g.fillCircle(cx - r * 0.7, cy + r * 0.1, r * 0.45);
+        g.strokeCircle(cx - r * 0.7, cy + r * 0.1, r * 0.45);
+        g.lineStyle(4, 0xe8e0c8, 1);
+        g.lineBetween(cx - r * 0.9, cy - r * 0.2, cx - r * 1.3, cy - r * 0.6);
+        g.lineBetween(cx - r * 0.5, cy - r * 0.25, cx - r * 0.2, cy - r * 0.7);
+        g.fillStyle(0xd88a3a, 1);
+        g.fillCircle(cx - r * 1.3, cy - r * 0.62, r * 0.13);
+        g.fillCircle(cx - r * 0.2, cy - r * 0.72, r * 0.13);
+        g.lineStyle(2, 0xd88a3a, 1);
+        g.strokeCircle(cx - r * 0.85, cy + r * 0.42, r * 0.11);
+        g.fillStyle(0x1a1010, 1);
+        g.fillCircle(cx - r * 0.85, cy + r * 0.02, r * 0.07);
+        g.fillCircle(cx - r * 0.55, cy + r * 0.02, r * 0.07);
+        break;
+      }
       case 'mawbloom': {
         // rotten heart-tree: a split trunk with a gaping maw, a crown of withered branches with bruised fruit, root feet
         g.lineStyle(3, C.ink, 1);

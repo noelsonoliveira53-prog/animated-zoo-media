@@ -172,6 +172,7 @@ export type SimEvent =
   | { type: 'echo'; enemy: Enemy }
   | { type: 'grow'; enemy: Enemy }
   | { type: 'bolt'; source: Enemy; tower: Tower }
+  | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
   | { type: 'shock'; source: Enemy; radius: number; hits: Vec2[] }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
@@ -1613,6 +1614,26 @@ export class BattleSim {
 
   private applyDamage(e: Enemy, dmg: number): void {
     if (!e.alive) return;
+    if (dmg > 0 && !e.def.ground) {
+      // Copperhorn: the nearest one in range draws part of the blow onto itself.
+      let gr: Enemy | null = null;
+      let bestD = Infinity;
+      for (const o of this.enemies) {
+        const g = o.def.ground;
+        if (!g || !o.alive) continue;
+        const d = Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y);
+        if (d <= g.radius && d < bestD) {
+          bestD = d;
+          gr = o;
+        }
+      }
+      if (gr) {
+        const taken = dmg * gr.def.ground!.share;
+        dmg -= taken;
+        this.events.push({ type: 'ground', from: e, to: gr, damage: taken });
+        this.applyDamage(gr, taken);
+      }
+    }
     let left = dmg;
     if (e.shield > 0) {
       const absorbed = Math.min(e.shield, left);

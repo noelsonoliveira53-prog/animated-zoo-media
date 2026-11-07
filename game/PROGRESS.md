@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **97** (next balance pass at iteration 100)
+Iteration counter: **98** (next balance pass at iteration 100)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -687,12 +687,19 @@ Iteration counter: **97** (next balance pass at iteration 100)
     star and shrinks to fit.
   - 174 tests (bolt and herd). The first bolt test passed vacuously because the test level had no pads, so it was
     rewritten with real pads.
+- **Iteration 98**: third Thunderhead enemy, the **Copperhorn** (new `ground` trait).
+  - A big grey ox with copper-capped horns. The nearest Copperhorn within 110px takes 40% of the damage aimed at
+    an ally onto itself, so splash fire piles damage onto it. It takes its own hits in full, and players will want to
+    focus it first.
+  - A throttled copper arc shows each redirect.
+  - Level 57 **Copperhorn Ford**: a long serpentine west road plus a short north road that joins at the ford, 11 pads,
+    15 waves, hpMult 1.95. Endless adds Copperhorn from wave 50. 175 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 12 level 57 (+ third Thunderhead enemy), then levels 58–59, finale 60 with a boss + story card + achievements.
+1. Region 12 levels 58–59, finale 60 with a boss + story card + achievements.
 2. Iter 100 balance pass (full sweep).
 
 ## Known Bugs
@@ -703,6 +710,8 @@ Iteration counter: **97** (next balance pass at iteration 100)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 98**: 57 Copperhorn Ford is 83/83/25 at hpMult 1.95 on the first try (kept).
+
 **Iteration 97**: 56 Rainmarch Downs began with a 900px north road and went 25/42/0, leaking everything on that road (galehounds, gullwings, skitters). I rerouted it to join the west road early (both ≈2,300px), which gave **100/100/42** at hpMult 2.1 (the opener target).
 
 **Iteration 96** (raids, smart deploy, 10 seeds, avg stars / destruction):

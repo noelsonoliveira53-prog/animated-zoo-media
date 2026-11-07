@@ -53,6 +53,7 @@ export interface EnemyDef {
   feed?: { radius: number; heal: number; growth: number; maxStacks: number }; // feeds when a nearby ally dies: heals heal×maxHp and grows maxHp by growth (stacks)
   grow?: { into: string; after: number };
   bolt?: { interval: number; range: number; duration: number }; // calls lightning on the nearest tower in range, stunning it
+  ground?: { radius: number; share: number }; // takes `share` of the damage aimed at allies within radius onto itself
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s

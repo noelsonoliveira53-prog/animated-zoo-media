@@ -646,4 +646,25 @@ describe('Thunderhead enemies', () => {
     const far = sim.spawn('thunderhoof', 0, 900);
     expect(sim.herdMult(far)).toBe(1);
   });
+
+  it('a Copperhorn takes its share of damage aimed at nearby allies (not far ones), and its own hits in full', () => {
+    const sim = new BattleSim(lvl, null);
+    const ox = sim.spawn('copperhorn', 0, 400);
+    const g = ox.def.ground!;
+    const near = sim.spawn('mudling', 0, 450);
+    const far = sim.spawn('mudling', 0, 1200);
+    const [o0, n0, f0] = [ox.hp, near.hp, far.hp];
+    (sim as any).applyDamage(near, 50);
+    expect(near.hp).toBeCloseTo(n0 - 50 * (1 - g.share));
+    expect(ox.hp).toBeCloseTo(o0 - 50 * g.share);
+    (sim as any).applyDamage(far, 20);
+    expect(far.hp).toBe(f0 - 20);
+    const o1 = ox.hp;
+    (sim as any).applyDamage(ox, 30);
+    expect(ox.hp).toBeCloseTo(o1 - 30);
+    (sim as any).applyDamage(ox, 99999);
+    const n1 = near.hp;
+    (sim as any).applyDamage(near, 10);
+    expect(near.hp).toBe(n1 - 10);
+  });
 });

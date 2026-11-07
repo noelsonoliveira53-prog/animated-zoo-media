@@ -42,7 +42,7 @@ export class BattleScene extends Phaser.Scene {
   private paused = false;
 
   private enemyViews = new Map<number, EnemyView>();
-  private lastGulp = new Map<number, number>(); // uid -> time of the last "Gulp!" text
+  private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
@@ -1348,6 +1348,17 @@ export class BattleScene extends Phaser.Scene {
           this.particles.explode(5, h.x, h.y - 14);
         }
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
+        break;
+      }
+      case 'ground': {
+        // a quick copper arc from the sheltered ally to the Copperhorn (throttled per Copperhorn)
+        const now = this.time.now;
+        if ((this.lastGulp.get(-ev.to.uid) ?? -1e9) + 250 > now) break;
+        this.lastGulp.set(-ev.to.uid, now);
+        const g = this.add.graphics().setDepth(2500);
+        g.lineStyle(2, 0xffb86a, 0.9);
+        g.lineBetween(ev.from.pos.x, ev.from.pos.y - 10, ev.to.pos.x, ev.to.pos.y - 14);
+        this.tweens.add({ targets: g, alpha: 0, duration: 180, onComplete: () => g.destroy() });
         break;
       }
       case 'bolt': {

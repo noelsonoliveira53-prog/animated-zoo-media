@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
+import { STORY } from '../data/story';
 import { ENDLESS } from '../data/endless';
 import { endlessMutatorFor, makeEndlessLevel, mutatorReward, wavesHeld } from '../systems/endless';
 import { LEVELS } from '../data/levels';
@@ -1735,7 +1736,8 @@ export class BattleScene extends Phaser.Scene {
       panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
     }
     const finale = won && !er && !!this.level.finale;
-    const hasNext = won && !er && (this.levelIndex + 1 < LEVELS.length || finale);
+    const story = won && !er && !finale && !!STORY[this.level.id];
+    const hasNext = won && !er && (this.levelIndex + 1 < LEVELS.length || finale || story);
     const retry = new Button(this, hasNext ? -170 : -120, 120, 'Retry', {
       width: hasNext ? 150 : 200,
       color: C.sky,
@@ -1748,10 +1750,11 @@ export class BattleScene extends Phaser.Scene {
     panel.add([retry, map]);
     if (hasNext) {
       panel.add(
-        new Button(this, 170, 120, finale ? 'Epilogue' : 'Next', {
+        new Button(this, 170, 120, finale ? 'Epilogue' : story ? 'Story' : 'Next', {
           width: 150,
           color: 0xff9f43,
-          onClick: () => (finale ? this.scene.start('Ending') : this.scene.start('WorldMap', { focus: this.levelIndex + 1 })),
+          onClick: () =>
+            finale ? this.scene.start('Ending') : story ? this.scene.start('Story', { levelId: this.level.id }) : this.scene.start('WorldMap', { focus: this.levelIndex + 1 }),
         }),
       );
     }

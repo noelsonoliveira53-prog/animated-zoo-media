@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **81** (next balance pass at iteration 85)
+Iteration counter: **82** (next balance pass at iteration 85)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -586,14 +586,19 @@ Iteration counter: **81** (next balance pass at iteration 85)
   a grind for the gate). Level 45: west + south roads (920 / 680 px) merge into a 1,240 px tail, 12 pads, 18 waves,
   hpMult 1.58. Achievements **Engine Breaker** and **Master Tinker** (28 total); Grindmaw joins the endless boss
   rotation. Region 9 complete: 45 levels. Screenshot `81.png`. 160 tests.
+- [x] **Iter 82 — Story cards after every region boss.** New data file `data/story.ts` and `StoryScene`: after a region
+  finale the victory panel's Next button becomes **Story**, which shows a short chapter card in the region's sky colours
+  (title, three lines, drifting motes, victory chime) and then **Onward** to the next land or **Village**. Cards for
+  Morrowcap, Saltjaw, Kaleidrax, Zephyrax, Ulmaroth and Grindmaw; each one hints at the next region. The Emberdeep keeps
+  its full epilogue. Tests: every card belongs to a region finale, and every finished region after the Emberdeep has one.
+  Browser check `scripts/story-check.mjs` (forced win, checks the panel offers "Story", opens the card). 162 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. A story card after the Ruins and Brasswork bosses (short ending text like the Emberdeep one).
-2. Region 10 (levels 46–50): a new biome, enemies and boss, following the region recipe.
-3. Refresh the playable demo artifact with the latest build.
+1. Region 10 (levels 46–50): a new biome, enemies and boss, following the region recipe.
+2. Refresh the playable demo artifact with the latest build.
 
 ## Known Bugs
 - (none known)

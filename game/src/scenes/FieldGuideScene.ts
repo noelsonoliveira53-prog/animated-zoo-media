@@ -265,9 +265,16 @@ export class FieldGuideScene extends Phaser.Scene {
     const body = this.add.text(x, 350, e.lines.join(e.extra ? '\n' : '\n\n'), { ...textStyle(17, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0);
     c.add(body);
     if (e.extra) {
-      const y = body.y + body.height + 12;
-      c.add(this.add.text(x, y, e.extra[0], textStyle(17, '#6a3a1a')).setStroke('#e8dcb8', 0));
-      c.add(this.add.text(x, y + 26, e.extra.slice(1).join('\n'), { ...textStyle(pf(15), '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0).setName('bossPhases'));
+      const head = this.add.text(x, 0, e.extra[0], textStyle(17, '#6a3a1a')).setStroke('#e8dcb8', 0);
+      const phases = this.add.text(x, 0, e.extra.slice(1).join('\n'), { ...textStyle(pf(15), '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0).setName('bossPhases');
+      c.add([head, phases]);
+      // Long boss pages (many traits + phases) shrink as a block so the last phase stays inside the parchment.
+      const room = GAME_H - 44 - body.y;
+      const need = body.height + 12 + 26 + phases.height;
+      const k = Math.min(1, room / need);
+      body.setScale(k);
+      head.setScale(k).setY(body.y + (body.height + 12) * k);
+      phases.setScale(k).setY(head.y + 26 * k);
     }
   }
 }

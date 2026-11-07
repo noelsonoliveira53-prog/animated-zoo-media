@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **138** (next balance pass at iteration 140)
+Iteration counter: **139** (next balance pass at iteration 140)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -969,13 +969,19 @@ Iteration counter: **138** (next balance pass at iteration 140)
   - Achievements **Kingsfall** (defeat it) and **Leafwalker** (3 stars on every Amberwood level). Story card "The Last
     Leaf Falls". Rustantler joins the endless boss rotation.
   - Screenshot `screenshots/138.png` (boss phase 2 banner). 193 tests.
+- **Iteration 139** (phone QA): new `scripts/phone-guide-check.mjs` (740×360 touch) covers Field Guide page 3
+  (72 enemies, 3 pages), the Rustantler boss page, and the last achievements page (44 achievements, 3 pages).
+  - Found: long boss pages (many traits plus 4 phases) ended about 20px from the bottom of the parchment on phones,
+    so one more trait would overflow.
+  - Fix: the stats, the "Phases" heading and the phase list now shrink together as a block when they would run past
+    the panel. Desktop pages are unchanged.
+  - Screenshots `screenshots/139.png` (boss page) and `139-ach.png`. 193 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Phone QA of the Field Guide (72 enemies) and the achievements pages.
-2. Region 17, or a breather (raid or village variety).
+1. Region 17, or a breather (raid or village variety).
 
 ## Known Bugs
 - (none known)

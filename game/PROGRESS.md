@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **71** (next balance pass at iteration 75)
+Iteration counter: **72** (next balance pass at iteration 75)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -531,13 +531,16 @@ Iteration counter: **71** (next balance pass at iteration 75)
   draft lost to Shiftscale + Idol Keeper packs in waves 5–9 (trimmed). Autoplayer: a shifter now counts half armored,
   half magic-resistant when picking the tower mix (it was read as purely armored, so the expert over-built magic
   towers that bounce off the slick form). Screenshot `71.png`. 155 tests.
+- [x] **Iter 72 — Ruins level 39: Idol Courtyard.** A west road and a north road that detours round the shrines
+  (1,220 / 960 px to the merge) meet before an 800 px tail. 12 pads, 16 waves, hpMult 1.22. First draft was 25/0/0 at
+  1.4: wave 1's eight Shiftscales overran the opening gold, and waves 4–7 stacked fast packs on the north road; both
+  thinned. Screenshot `72.png`. 155 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 8 level 39.
-2. Region 8 finale (level 40) with a Ruins boss.
+1. Region 8 finale (level 40) with a Ruins boss.
 4. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
@@ -555,6 +558,7 @@ Iteration counter: **71** (next balance pass at iteration 75)
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 72:** 39 Idol Courtyard 92/58/33 at hpMult 1.22 (1.15 → 100/83/17, 1.3 → 92/33/0).
 
 **Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
 100/100/100 · 3 Thornwood 100/100/100 · 4 Mirelake 100/92/75 · 5 Murkmaw 100/75/83 → **92/58/83 (2.45)** · 6 Frostfern

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **64** (next balance pass at iteration 65)
+Iteration counter: **65** (next balance pass at iteration 70)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -489,13 +489,15 @@ Iteration counter: **64** (next balance pass at iteration 65)
   unwinnable (25/0/0 at 1.8): the north road is only 1,100 px, and Cloudrams there never took steady enough fire to stop
   regrowing, so Cloudrams and Bogbrutes now stay off it and the late south Galehound packs were trimmed. Screenshot
   `64.png`. 150 tests.
+- [x] **Iter 65 — POLISH + BALANCE (34 levels, first sweep with the deterministic sim).** 12 seeds per level and
+  player. Retuned three outliers: Murkmaw's Den 2.3 → 2.45 (boss was 100/75/83), Frostpeak Summit 1.75 → 1.85 (boss
+  was 100/67/67), Cinder Tunnels 1.91 → 1.75 (expert was 75%). Endless still holds 12–22 waves. Screenshot `65.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 65 balance pass: full sweep with the now-deterministic sim (earlier tunings were made under crit noise).
-2. Region 7 finale (level 35) with a Galecrest boss.
+1. Region 7 finale (level 35) with a Galecrest boss.
 
 ## Known Bugs
 - (none known)
@@ -508,6 +510,17 @@ Iteration counter: **64** (next balance pass at iteration 65)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
+100/100/100 · 3 Thornwood 100/100/100 · 4 Mirelake 100/92/75 · 5 Murkmaw 100/75/83 → **92/58/83 (2.45)** · 6 Frostfern
+100/100/100 · 7 Icicle 100/83/0 · 8 Glacier 92/92/92 · 9 Rimewood 100/100/92 · 10 Frostpeak 100/67/67 → **83/67/42
+(1.85)** · 11 Ashfall 100/83/75 · 12 Cinder 75/75/58 → **83/75/75 (1.75)** · 13 Smoulder 100/83/100 · 14 Obsidian
+92/83/0 · 15 Heart 83/33/67 · 16 Duskcap 100/92/100 · 17 Glowspore 92/92/0 · 18 Mirrorpool 100/75/58 · 19 Hollowroot
+92/75/0 · 20 Morrowcap 75/75/0 · 21 Wrackline 100/100/100 · 22 Tidepool 92/83/100 · 23 Saltspray 92/75/0 · 24 Wreckspiral
+92/92/0 · 25 Saltjaw 100/58/0 · 26 Glassfall 100/100/92 · 27 Prism 100/75/8 · 28 Shattered 100/75/0 · 29 Glassteeth
+100/83/0 · 30 Kaleidrax 83/42/58 · 31 Windgap 100/92/25 · 32 Updraft 100/83/42 · 33 Spiral 100/75/0 · 34 Three Winds
+92/58/33. Bosses are steep: ±0.15 hpMult can move expert 25 points (Frostpeak 1.75 → 2.0: 100 → 58%). The novice
+(Bramble) stays strong on bosses and converging maps (Murkmaw, Heart, Kaleidrax, Tidepool, Smoulder).
+
 **Iteration 61** (deterministic sim, 12 seeds): 31 Windgap Ledge 100/92/25 at hpMult 1.7 (2.2 was 75/58/0).
 Galehounds were the main leak; Cloudrams on the north road second.
 **Iteration 62:** 32 Updraft Stair 100/83/42 at hpMult 1.4 (first draft 75/0/0 at 1.6). Lesson: on a map where one

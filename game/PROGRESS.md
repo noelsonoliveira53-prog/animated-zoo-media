@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **43** (next balance pass at iteration 45)
+Iteration counter: **44** (next iteration = 45 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -349,11 +349,19 @@ Iteration counter: **43** (next balance pass at iteration 45)
   and flying gulls hid behind the stats bar; rings moved to y=130/270. New test: no horizontal road above y=120.
   132 tests.
 
+- [x] **Iter 44 — Shoals finale: Saltjaw's Grotto (level 25).** New boss **Saltjaw the Tidecrab** (26 enemies): 80%
+  armor that is itself `brittle` (0.4 points per hit, so sustained fire cracks it), sheds Gullwings (16 at most), and has
+  four phases (Barnaclad shell-kin → coral crust shield + Reefwardens → a gull swarm + haste → a final scuttle for
+  the gate). Level 25: two roads merging into a 1,360 px shared tail, 12 pads, 18 waves, boss on the last wave.
+  **The Saltmarrow Shoals is complete: 25 levels in 5 regions.** New achievement **Tide Turner** (21 total). Boss phases
+  checked in-browser (phase 2 reached, coral shield 1,178). 132 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 5 finale: level 25 with a Shoals boss (phases).
+1. Region 6 (levels 26–30) with a new map style, music theme and 3 enemies plus a boss, following the region recipe
+   (pads within ~100 px of roads, merged tails ≥ 600 px, no road under the top HUD).
 2. Hero #4 and a third global spell.
 3. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
    vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
@@ -377,6 +385,9 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Saltjaw's Grotto (iteration 44, 8 seeds):** 2.2 → 83/83/0, **2.25 → 75% / 88% / 0%** (kept), 2.3 → 50/50/0,
+2.4 → 50/25/0. Very steep around 2.25, like the other late boss levels.
 
 **Wreckspiral (iteration 43):** steep curve: 2.9 → 100/100/0, 3.2 → 83/100/0, **3.25 → 88% / 75% / 0%** (8 seeds,
 kept), 3.35 → 88/38/0, 4.2 → 0/0/0. Leaks at the top end were Reefwarden-shielded Thornhogs.

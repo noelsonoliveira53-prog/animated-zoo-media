@@ -225,6 +225,42 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'saltjaw': {
+        // colossal crab: huge claws, eye stalks, a barnacle-and-coral crusted shell
+        g.lineStyle(3, C.ink, 1);
+        for (const s of [-1, 1]) for (let k = 0; k < 4; k++) g.lineBetween(cx + s * r * 0.5, cy + r * 0.15 + k * 5, cx + s * r * 1.25, cy + r * 0.45 + k * 7);
+        for (const s of [-1, 1]) {
+          g.fillStyle(color, 1);
+          g.fillEllipse(cx + s * r * 1.05, cy - r * 0.55, r * 0.75, r * 0.55);
+          g.strokeEllipse(cx + s * r * 1.05, cy - r * 0.55, r * 0.75, r * 0.55);
+          g.fillStyle(shade, 1);
+          g.fillTriangle(cx + s * r * 1.2, cy - r * 0.6, cx + s * r * 1.5, cy - r * 1.05, cx + s * r * 1.45, cy - r * 0.45);
+          g.strokeTriangle(cx + s * r * 1.2, cy - r * 0.6, cx + s * r * 1.5, cy - r * 1.05, cx + s * r * 1.45, cy - r * 0.45);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.9, r * 1.3);
+        g.strokeEllipse(cx, cy, r * 1.9, r * 1.3);
+        // eye stalks
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx - r * 0.25, cy - r * 0.5, cx - r * 0.3, cy - r * 0.85);
+        g.lineBetween(cx + r * 0.25, cy - r * 0.5, cx + r * 0.3, cy - r * 0.85);
+        g.fillStyle(0xfff0a8, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.88, r * 0.1);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.88, r * 0.1);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.88, r * 0.05);
+        g.fillCircle(cx + r * 0.3, cy - r * 0.88, r * 0.05);
+        // barnacles + coral crust
+        g.lineStyle(1.5, C.ink, 0.8);
+        g.fillStyle(0xeee6d6, 1);
+        for (const [dx, dy, rr] of [[-0.55, -0.15, 0.14], [-0.15, -0.3, 0.17], [0.3, -0.2, 0.13], [0.6, 0.05, 0.11], [-0.35, 0.2, 0.12], [0.1, 0.15, 0.1]]) {
+          g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
+          g.strokeCircle(cx + dx * r, cy + dy * r, r * rr);
+        }
+        g.fillStyle(0xff8a9a, 1);
+        for (const dx of [-0.7, 0.45]) g.fillTriangle(cx + dx * r - 4, cy - r * 0.35, cx + dx * r + 4, cy - r * 0.35, cx + dx * r, cy - r * 0.6);
+        break;
+      }
       case 'reefwarden': {
         // hermit crab: spiral coral shell, little claws, glowing staff-tip of coral
         g.lineStyle(2, C.ink, 1);

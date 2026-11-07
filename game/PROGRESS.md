@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **155** (next balance pass at iteration 160)
+Iteration counter: **156** (next balance pass at iteration 160)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1101,14 +1101,24 @@ Iteration counter: **155** (next balance pass at iteration 160)
   finale guard, endless on two Mistwreath maps). No retunes were needed.
   - Polish: a Silkcrane now flinches (a short scale pulse) when it dodges, tying the "Miss!" to the crane.
   - Screenshot `screenshots/155.png`. 207 tests.
+- **Iteration 156** (Mistwreath finale): level 85 **Shrine of a Thousand Lanterns** (11 pads, roads of 2,520px and
+  2,320px) and its boss.
+  - **Veilwhisker, the Lantern Matriarch**: a great pale fox spirit with a paper lantern in her jaws, 3,000 hp.
+    She fades to mist every 6s for 1.5s (`phase`), her lantern wards allies within 180px for 20% (`ward`), and she
+    releases Mistfoxes as she walks (up to 6).
+  - Four phases: Silkcranes at 75%; a 1,400 shield and Glowbearers at 50%; a Mistfox swarm and speed-up at 25%;
+    a charge at 10%.
+  - Achievements **Lanternbreaker** (defeat her) and **Fogwalker** (3 stars on every Mistwreath level). Story card
+    "The Fog Lifts". She joins the endless boss rotation and is the Mistwreath maps' home boss, so their endless runs
+    no longer fall back to the easiest boss.
+  - The layout tests caught a pad under the spell buttons and a top entry at x=460; both fixed.
+  - Screenshot `screenshots/156.png` (boss phase 2 with her lantern ward). 207 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Mistwreath finale (85) with a boss, achievements, a story card and
-   the endless boss rotation.
-2. A breather now and then (raid or village variety).
+1. Region 18, or a breather (raid or village variety).
 
 ## Known Bugs
 - (none known)
@@ -1117,6 +1127,9 @@ Iteration counter: **155** (next balance pass at iteration 160)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 156**: 85 Shrine of a Thousand Lanterns: 100/100 at hpMult 1.7, 100/58 at 2.0, 100/42 at 2.2, 92/25 at 2.24, 83/8 at 2.27, 58/8 at 2.35.
+Very steep, so **2.22 → 100/33/0** was kept (casual in the boss band; expert slightly above). Finale guard: the expert won 4 of 4 seeds.
+
 **Iteration 155**:
 - Mistwreath per-level bands (iterations 151–154): 81 100/100/33 · 82 100/100/0 · 83 92/75/0 · 84 92/75/0.
 - Hero comparison (expert strategy, levels 81–84, 6 seeds each): Ember 100% · Wren 100% · Bramble 96% · Fen 96% ·

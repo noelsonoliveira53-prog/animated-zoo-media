@@ -137,4 +137,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x5a3a2a, 0xd8a050],
     accent: 0xe87a1a,
   },
+  l85: {
+    title: 'The Fog Lifts',
+    lines: [
+      'Veilwhisker\'s lantern gutters out, and the old fox spirit fades into the morning like the last of the mist.',
+      'One by one, the thousand lanterns go dark. Below them, the terraces shine green in the sun.',
+      'From the summit the Keepers can see the whole road home, and the long road still ahead.',
+    ],
+    sky: [0x8aa8b8, 0xe8f0e0],
+    accent: 0xffd27a,
+  },
 };

@@ -772,6 +772,45 @@ export class BootScene extends Phaser.Scene {
         g.fillRect(cx + r * 0.58, cy - r * 1.02, r * 0.34, r * 0.06);
         break;
       }
+      case 'veilwhisker': {
+        // great fox spirit: tall pale body, pointed ears with violet tips, a huge misty tail, a glowing paper lantern in its jaws
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0xf4f4ff, 0.75);
+        g.fillEllipse(cx + r * 0.85, cy - r * 0.25, r * 1.0, r * 0.6);
+        g.fillStyle(0xffffff, 0.5);
+        g.fillEllipse(cx + r * 1.1, cy - r * 0.5, r * 0.55, r * 0.35);
+        g.fillStyle(0xc8c8e0, 1);
+        for (const lx of [-0.35, -0.05, 0.3, 0.55]) {
+          g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.5);
+          g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.5);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.5, r * 0.8);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.5, r * 0.8);
+        g.fillEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.75, r * 0.6);
+        g.strokeEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.75, r * 0.6);
+        g.fillTriangle(cx - r * 0.85, cy - r * 0.55, cx - r * 0.62, cy - r * 0.62, cx - r * 0.8, cy - r * 1.15);
+        g.fillTriangle(cx - r * 0.5, cy - r * 0.62, cx - r * 0.28, cy - r * 0.55, cx - r * 0.35, cy - r * 1.15);
+        g.fillStyle(0x9a7ae8, 1);
+        g.fillTriangle(cx - r * 0.82, cy - r * 0.95, cx - r * 0.76, cy - r * 0.97, cx - r * 0.8, cy - r * 1.15);
+        g.fillTriangle(cx - r * 0.36, cy - r * 0.97, cx - r * 0.31, cy - r * 0.95, cx - r * 0.35, cy - r * 1.15);
+        g.fillStyle(0xffb040, 1);
+        g.fillCircle(cx - r * 0.75, cy - r * 0.42, r * 0.07);
+        g.fillCircle(cx - r * 0.48, cy - r * 0.42, r * 0.07);
+        // lantern hanging from the jaws
+        g.lineStyle(1.5, 0x5a4a3a, 1);
+        g.lineBetween(cx - r * 0.85, cy - r * 0.15, cx - r * 0.95, cy + r * 0.05);
+        g.fillStyle(0xffd27a, 0.35);
+        g.fillCircle(cx - r * 0.95, cy + r * 0.3, r * 0.4);
+        g.fillStyle(0xf0e0b0, 1);
+        g.fillRoundedRect(cx - r * 1.12, cy + r * 0.05, r * 0.34, r * 0.46, r * 0.1);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeRoundedRect(cx - r * 1.12, cy + r * 0.05, r * 0.34, r * 0.46, r * 0.1);
+        g.fillStyle(0xd84a2a, 1);
+        g.fillRect(cx - r * 1.12, cy + r * 0.03, r * 0.34, r * 0.06);
+        g.fillRect(cx - r * 1.12, cy + r * 0.48, r * 0.34, r * 0.05);
+        break;
+      }
       case 'mistfox': {
         // pale fox spirit: slim body, big pointed ears, a long wisp of a tail, glowing amber eyes
         g.lineStyle(2.5, C.ink, 1);

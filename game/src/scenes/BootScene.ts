@@ -706,6 +706,38 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.22, cy - r * 0.42, r * 0.06);
         break;
       }
+      case 'dreadmast': {
+        // black ship hull with oars, a tall mast and a tattered black sail with a pale skull-less sigil, gun ports glowing
+        g.lineStyle(3, C.ink, 1);
+        for (const ox of [-0.7, -0.35, 0, 0.35, 0.7]) g.lineBetween(cx + ox * r, cy + r * 0.45, cx + ox * r - r * 0.12, cy + r * 0.95);
+        g.fillStyle(color, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 1.2, cy);
+        g.lineTo(cx + r * 1.25, cy - r * 0.1);
+        g.lineTo(cx + r * 0.95, cy + r * 0.55);
+        g.lineTo(cx - r * 0.95, cy + r * 0.55);
+        g.closePath();
+        g.fillPath();
+        g.strokePath();
+        g.fillStyle(0xffb040, 1);
+        for (const gx of [-0.6, -0.2, 0.2, 0.6]) g.fillRect(cx + gx * r - r * 0.07, cy + r * 0.18, r * 0.14, r * 0.12);
+        g.lineStyle(4, 0x5a3a2a, 1);
+        g.lineBetween(cx, cy, cx, cy - r * 1.3);
+        g.fillStyle(0x1a1418, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillTriangle(cx + r * 0.05, cy - r * 1.25, cx + r * 0.05, cy - r * 0.15, cx + r * 0.95, cy - r * 0.3);
+        g.strokeTriangle(cx + r * 0.05, cy - r * 1.25, cx + r * 0.05, cy - r * 0.15, cx + r * 0.95, cy - r * 0.3);
+        g.fillTriangle(cx - r * 0.05, cy - r * 1.1, cx - r * 0.05, cy - r * 0.2, cx - r * 0.75, cy - r * 0.3);
+        g.strokeTriangle(cx - r * 0.05, cy - r * 1.1, cx - r * 0.05, cy - r * 0.2, cx - r * 0.75, cy - r * 0.3);
+        g.fillStyle(0xe8e0c8, 1);
+        g.fillCircle(cx + r * 0.35, cy - r * 0.62, r * 0.13);
+        g.fillStyle(0x1a1418, 1);
+        g.fillCircle(cx + r * 0.31, cy - r * 0.64, r * 0.035);
+        g.fillCircle(cx + r * 0.39, cy - r * 0.64, r * 0.035);
+        g.fillStyle(0xc83a3a, 1);
+        g.fillTriangle(cx, cy - r * 1.3, cx, cy - r * 1.15, cx - r * 0.3, cy - r * 1.22);
+        break;
+      }
       case 'scourmaw': {
         // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
         g.fillStyle(0xe0c088, 1);

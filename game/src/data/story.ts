@@ -117,4 +117,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x1a5a9a, 0x5ac0c8],
     accent: 0xf07a6a,
   },
+  l75: {
+    title: 'The Black Sails Fall',
+    lines: [
+      'Dreadmast lists, groans, and sinks beneath the waves, its black sails last to go.',
+      'The rest of the flotilla scatters into the night, rudderless and afraid.',
+      'The Keepers stand on a borrowed deck and watch the dawn come up over open sea.',
+    ],
+    sky: [0x0a1a2a, 0x2a5a7a],
+    accent: 0xffb040,
+  },
 };

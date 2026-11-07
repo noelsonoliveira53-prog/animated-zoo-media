@@ -35,7 +35,7 @@ export const DAILY_MODIFIERS: ModifierDef[] = [
   { id: 'tough', name: 'Thick Hides', text: 'Enemies have 25% more health.', apply: { hpMult: 1.25 } },
   { id: 'thrifty', name: 'Beaver Discount', text: 'Towers cost 20% less.', apply: { costMult: 0.8 }, good: true },
   { id: 'rich', name: 'Full Coffers', text: 'Start with 50% more coins.', apply: { startCoinsMult: 1.5 }, good: true },
-  { id: 'nospells', name: 'Clouded Sky', text: 'No Starfall or Grove Call.', apply: { noSpells: true } },
+  { id: 'nospells', name: 'Clouded Sky', text: 'No global spells.', apply: { noSpells: true } },
   { id: 'nohero', name: 'Hero on Leave', text: 'Your hero stays home.', apply: { noHero: true } },
   { id: 'glass', name: 'Thin Hedge', text: 'Only 5 lives.', apply: { lives: 5 } },
   { id: 'frenzy', name: 'Frenzy', text: 'Waves come twice as fast.', apply: { waveGapMult: 0.5 } },

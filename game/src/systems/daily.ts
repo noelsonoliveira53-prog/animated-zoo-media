@@ -14,7 +14,7 @@ export function todayString(d = new Date()): string {
   return `${d.getFullYear()}-${m}-${day}`;
 }
 
-function hash(str: string): number {
+export function hash(str: string): number {
   let h = 2166136261;
   for (let i = 0; i < str.length; i++) {
     h ^= str.charCodeAt(i);

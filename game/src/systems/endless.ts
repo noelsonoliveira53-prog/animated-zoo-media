@@ -1,5 +1,7 @@
 import { ENDLESS } from '../data/endless';
 import { ENEMIES } from '../data/enemies';
+import { DAILY_MODIFIERS, type ModifierDef } from '../data/daily';
+import { hash } from './daily';
 import type { LevelDef, SpawnGroup, WaveDef } from '../data/types';
 
 // Endless mode: turn a campaign map into a long run of generated waves (pure + seeded, so it is testable).
@@ -52,4 +54,16 @@ export function makeEndlessLevel(level: LevelDef, seed = 1): LevelDef {
 /** Waves fully survived when a run ends during the given 0-based wave index. */
 export function wavesHeld(waveIndex: number): number {
   return Math.max(0, waveIndex);
+}
+
+/** Today's endless mutator (the same for everyone on a given date). */
+export function endlessMutatorFor(date: string): ModifierDef {
+  const ids = ENDLESS.mutators;
+  const id = ids[hash(`endless:${date}`) % ids.length];
+  return DAILY_MODIFIERS.find((m) => m.id === id)!;
+}
+
+/** Village payout multiplier for a mutator (harder days pay more). */
+export function mutatorReward(m: ModifierDef): number {
+  return m.good ? 1 : ENDLESS.hardMutatorReward;
 }

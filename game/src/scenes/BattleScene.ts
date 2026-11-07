@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { ENDLESS } from '../data/endless';
-import { makeEndlessLevel, wavesHeld } from '../systems/endless';
+import { endlessMutatorFor, makeEndlessLevel, mutatorReward, wavesHeld } from '../systems/endless';
 import { LEVELS } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { combine, DAILY_MODIFIERS } from '../data/daily';
@@ -83,6 +83,7 @@ export class BattleScene extends Phaser.Scene {
 
   private daily: DailyChallenge | null = null;
   private endless = false;
+  private mutator: import('../data/daily').ModifierDef | null = null;
   private endlessResult: { held: number; best: number; isBest: boolean } | null = null;
 
   init(data: { levelIndex?: number; daily?: boolean; endless?: boolean }): void {
@@ -97,12 +98,13 @@ export class BattleScene extends Phaser.Scene {
       this.levelIndex = this.daily.levelIndex;
     }
     this.level = this.endless ? makeEndlessLevel(LEVELS[this.levelIndex]) : LEVELS[this.levelIndex];
+    this.mutator = this.endless ? endlessMutatorFor(todayString()) : null;
     const save = loadSave();
     this.perks = battlePerks(save.village);
     this.sim = new BattleSim(this.level, save.hero, {
       ...this.perks,
       heroLevel: 1 + (save.heroRanks[save.hero] ?? 0),
-      mods: this.daily ? combine(this.daily.modifiers) : undefined,
+      mods: this.daily ? combine(this.daily.modifiers) : this.mutator ? combine([this.mutator.id]) : undefined,
     });
     this.heroSprite = null;
     this.heroSelected = false;
@@ -219,6 +221,9 @@ export class BattleScene extends Phaser.Scene {
     if (this.daily) {
       const names = this.daily.modifiers.map((id) => DAILY_MODIFIERS.find((m) => m.id === id)!.name);
       this.showBanner(`Daily: ${this.level.name}`, `Today's twists: ${names.join(' + ')}`);
+    } else if (this.mutator) {
+      const pay = mutatorReward(this.mutator);
+      this.showBanner(`Endless: ${this.level.name}`, `Today's mutator: ${this.mutator.name} (${this.mutator.text})${pay > 1 ? ` • payout ×${pay}` : ''}`);
     } else {
       this.showBanner(this.level.name, bonus.length ? `Village bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
     }
@@ -1466,7 +1471,8 @@ export class BattleScene extends Phaser.Scene {
       const key = LEVELS[this.levelIndex].id;
       const prev = after.endlessBest[key] ?? 0;
       after.endlessBest = { ...after.endlessBest, [key]: Math.max(prev, held) };
-      reward = addResources(ensureVillage(after), ENDLESS.rewardPerWave.coins * held, ENDLESS.rewardPerWave.glowsap * held);
+      const payMult = this.mutator ? mutatorReward(this.mutator) : 1;
+      reward = addResources(ensureVillage(after), Math.round(ENDLESS.rewardPerWave.coins * held * payMult), Math.round(ENDLESS.rewardPerWave.glowsap * held * payMult));
       this.endlessResult = { held, best: Math.max(prev, held), isBest: held > prev };
       if (!music.stinger(held > prev ? 'victory' : 'defeat')) sfx.defeat();
     } else if (won) {
@@ -1515,6 +1521,7 @@ export class BattleScene extends Phaser.Scene {
       panel.add(this.add.text(0, -6, er.held === 1 ? 'wave held' : 'waves held', textStyle(20)).setOrigin(0.5));
       panel.add(this.add.text(0, 24, er.isBest ? 'New best on this map!' : `Best on this map: ${er.best}`, textStyle(17, er.isBest ? '#9be86a' : TEXT.dim, false)).setOrigin(0.5));
       panel.add(this.add.text(0, 52, `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap`, textStyle(16, TEXT.gold, false)).setOrigin(0.5));
+      if (this.mutator) panel.add(this.add.text(0, 76, `Mutator: ${this.mutator.name}`, textStyle(14, TEXT.dim, false)).setOrigin(0.5));
     }
     for (let i = 0; i < (er ? 0 : 3); i++) {
       const star = this.add.image(-90 + i * 90, -40, i < stars ? 'star' : 'star_empty').setScale(0);

@@ -58,3 +58,24 @@ describe('endless attack ramp', () => {
     expect(c.attackMult()).toBe(1);
   });
 });
+
+import { endlessMutatorFor, mutatorReward } from '../src/systems/endless';
+
+describe('endless daily mutator', () => {
+  it('is deterministic per date and comes from the endless mutator list', () => {
+    expect(endlessMutatorFor('2026-11-07').id).toBe(endlessMutatorFor('2026-11-07').id);
+    const seen = new Set<string>();
+    for (let d = 1; d <= 28; d++) {
+      const m = endlessMutatorFor(`2026-02-${String(d).padStart(2, '0')}`);
+      expect(ENDLESS.mutators).toContain(m.id);
+      seen.add(m.id);
+    }
+    expect(seen.size).toBeGreaterThan(2);
+  });
+  it('hard days pay more', () => {
+    for (let d = 1; d <= 20; d++) {
+      const m = endlessMutatorFor(`2026-03-${String(d).padStart(2, '0')}`);
+      expect(mutatorReward(m)).toBe(m.good ? 1 : ENDLESS.hardMutatorReward);
+    }
+  });
+});

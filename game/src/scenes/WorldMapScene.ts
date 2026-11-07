@@ -1,5 +1,7 @@
 import Phaser from 'phaser';
 import { pf } from '../ui/touch';
+import { endlessMutatorFor } from '../systems/endless';
+import { todayString } from '../systems/daily';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
@@ -361,7 +363,8 @@ export class WorldMapScene extends Phaser.Scene {
           onClick: () => this.scene.start('Battle', { levelIndex: i, endless: true }),
         }).setName('endlessBtn'),
       );
-      if (top > 0) p.add(this.add.text(-30, H / 2 - 82, `Best: ${top} waves`, textStyle(14, TEXT.dim, false)).setOrigin(0.5));
+      const mut = endlessMutatorFor(todayString());
+      p.add(this.add.text(-30, H / 2 - 82, `${top > 0 ? `Best ${top} • ` : ''}Today: ${mut.name}`, textStyle(13, TEXT.dim, false)).setOrigin(0.5));
     }
     p.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: p, scale: 1, alpha: 1, duration: 220, ease: 'Back.easeOut' });

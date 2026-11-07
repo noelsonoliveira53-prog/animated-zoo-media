@@ -1998,6 +1998,21 @@ export class BootScene extends Phaser.Scene {
       g.fillRect(13, 13, 4, 4);
       g.fillStyle(0x6a3a1a, 1);
       g.fillEllipse(15, 31, 18, 6);
+    } else if (id === 'otter') {
+      // otter: cream muzzle, little round ears, a sack slung over the shoulder, a wet sheen
+      g.fillStyle(0xe8d8b8, 1);
+      g.fillEllipse(15, 15, 9, 6);
+      g.fillStyle(0x111111, 1);
+      g.fillCircle(15, 13, 1.4);
+      g.fillStyle(0x6a4a2a, 1);
+      g.fillCircle(9, 6, 2.5);
+      g.fillCircle(21, 6, 2.5);
+      g.fillStyle(0xc8a878, 1);
+      g.fillEllipse(24, 22, 9, 10);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeEllipse(24, 22, 9, 10);
+      g.fillStyle(0xbfe8ff, 0.7);
+      g.fillCircle(10, 18, 1.5);
     } else if (id === 'mender') {
       // toad: wide mouth line, a tonic gourd on its hip
       g.lineStyle(1.5, 0x2a4a1a, 1);

@@ -129,6 +129,9 @@ export class RaidSim {
     if (t.def.prefers === 'defense') {
       const defs = standing.filter((b) => CAMP_BUILDINGS[b.type].defense);
       if (defs.length) pool = defs;
+    } else if (t.def.prefers === 'loot') {
+      const loot = standing.filter((b) => CAMP_BUILDINGS[b.type].loot);
+      if (loot.length) pool = loot;
     }
     let best: CampBuilding | undefined;
     let bestD = Infinity;
@@ -194,7 +197,7 @@ export class RaidSim {
 
   /** Sludge Pits: ground troops wading near one slow down (the strongest pit in range applies; flyers ignore it). */
   mireFactor(t: Troop): number {
-    if (t.def.flying) return 1;
+    if (t.def.flying || t.def.wader) return 1;
     let f = 1;
     for (const b of this.standing) {
       const m = CAMP_BUILDINGS[b.type].mire;
@@ -227,7 +230,8 @@ export class RaidSim {
     if (b.hp <= 0) {
       b.hp = 0;
       const l = CAMP_BUILDINGS[b.type].loot;
-      const gained = l ? { coins: Math.round(l.coins * this.lootMult), glowsap: Math.round(l.glowsap * this.lootMult) } : { coins: 0, glowsap: 0 };
+      const m = this.lootMult * (1 + (by.def.lootBonus ?? 0)); // Otter Scavengers dig out extra
+      const gained = l ? { coins: Math.round(l.coins * m), glowsap: Math.round(l.glowsap * m) } : { coins: 0, glowsap: 0 };
       this.loot.coins += gained.coins;
       this.loot.glowsap += gained.glowsap;
       this.events.push({ type: 'destroyed', building: b, loot: gained });

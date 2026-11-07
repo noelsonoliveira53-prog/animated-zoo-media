@@ -28,8 +28,8 @@ await page.waitForTimeout(800);
 await page.mouse.click(100, 720 - 44); // Raid
 await page.waitForTimeout(400);
 // Train: brawler x6, slinger x4, sapper x3 (+1 buttons at x+92,y+34 for each card)
-// Cards share the 1060px row evenly (5 troop types → 212px steps); the +1 button sits near each card's right edge.
-const step = (1120 - 60) / 5;
+// Cards share the 1060px row evenly (6 troop types → ~177px steps); the +1 button sits near each card's right edge.
+const step = (1120 - 60) / 6;
 const card = (i) => ({ x: 640 - 560 + 30 + step / 2 + i * step + (step - 8) / 2 - 38, y: 380 - 260 + 160 + 74 });
 for (let k = 0; k < 6; k++) await page.mouse.click(card(0).x, card(0).y);
 for (let k = 0; k < 4; k++) await page.mouse.click(card(1).x, card(1).y);

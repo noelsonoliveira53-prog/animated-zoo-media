@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **145** (next balance pass at iteration 150)
+Iteration counter: **146** (next balance pass at iteration 150)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1022,6 +1022,17 @@ Iteration counter: **145** (next balance pass at iteration 150)
     a level-3 shrine) stayed locked until their next battle, raid or village action.
   - Screenshot `screenshots/145-ach.png`. 197 tests.
   - Balance: full 80-level sweep (12 seeds) plus the finale guard; results in Balance Notes.
+- **Iteration 146** (raid troop 6): **Otter Scavenger**. Ranger Lodge 2; 60 sap, 1 space; 150 hp, 20 damage, fast (72).
+  - `prefers: 'loot'`: heads for Loot Piles and the Mud Totem first.
+  - `wader`: Sludge Pits don't slow it.
+  - `lootBonus` 0.3: buildings it finishes off drop 30% more loot.
+  - The role is a raid farmer: same stars, much more loot.
+  - Art: an otter with a cream muzzle and a sack. The raid panel fits 6 cards on desktop and phone (blurb shortened).
+  - Test fixes:
+    - `scripts/raid-check.mjs` card maths updated for 6 troops (its clicks were missing).
+    - `scripts/raid-lib.ts` now deploys otters (after the slingers) and has a "Lodge 2 + Otters" army.
+  - Tests: loot targeting, sludge immunity, loot bonus. Screenshot `screenshots/146.png` (phone raid panel).
+    199 tests.
 
 ## In Progress
 - (none)
@@ -1036,6 +1047,11 @@ Iteration counter: **145** (next balance pass at iteration 150)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 146** (raids, smart deploy, 10 seeds): Lodge 2 + Otters (6 brawlers, 5 slingers, 3 sappers, 3 otters) earns 3.0★ / 1.9★ /
+0.2★ on Outpost / Warren / Stronghold, against 3.0★ / 1.8★ / 0.4★ for the standard Lodge 2 army. Average loot rises from
+740 to 835 per resource on Outposts and from 1,207 to 1,611 on Warrens (+33%). The first draft (110 hp, 16 damage, no loot
+bonus, and not deployed by the sim) scored 1.1★ on Warrens.
+
 **Iteration 145** (full sweep, all 80 levels, 12 seeds; expert / casual / novice): every level is in band for expert and casual.
 - Region openers: expert 100%, casual 92–100%.
 - Bosses: expert 75–92%, casual 33–67%.

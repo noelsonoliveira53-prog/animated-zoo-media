@@ -5,6 +5,7 @@ import { RaidSim } from '../src/systems/RaidSim';
 export const ARMIES: Record<string, Record<string, number>> = {
   'Lodge 1 (10)': { brawler: 5, slinger: 3, sapper: 1 },
   'Lodge 2 (20)': { brawler: 8, slinger: 6, sapper: 3 },
+  'Lodge 2 + Otters (20)': { brawler: 6, slinger: 5, sapper: 3, otter: 3 },
   'Lodge 3 (30)': { brawler: 10, slinger: 8, sapper: 3, owl: 2 },
   'Lodge 3 + Mender (30)': { brawler: 10, slinger: 5, sapper: 3, owl: 2, mender: 1 },
 };
@@ -53,6 +54,8 @@ export function raidOnce(army: Record<string, number>, tier: number, seed: numbe
     put('mender'); // healers walk in just behind the front line
     run(1);
     put('slinger');
+    run(2);
+    put('otter'); // scavengers slip in once the defenses are busy, heading for the loot
   }
   run(95);
   return { stars: sim.stars, destruction: sim.destruction, loot: sim.loot, survivors: sim.survivingArmy() };

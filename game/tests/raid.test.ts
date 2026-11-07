@@ -220,3 +220,37 @@ describe('Sludge Pit', () => {
     expect(n(2)).toBe(2);
   });
 });
+
+describe('Otter Scavenger', () => {
+  it('heads for loot buildings first and wades through sludge at full speed', () => {
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'hut', col: 4, row: 6, hp: 280, maxHp: 280 },
+        { uid: 2, type: 'pile', col: 16, row: 6, hp: 380, maxHp: 380 },
+        { uid: 3, type: 'sludge', col: 7, row: 6, hp: 360, maxHp: 360 },
+      ],
+    };
+    const sim = new RaidSim(camp, {});
+    const mk = (id: string) => ({ uid: 9, def: TROOPS[id], pos: { ...buildingCenter(camp.buildings[2]) }, hp: 100, maxHp: 100, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 });
+    const otter = mk('otter');
+    expect(sim.mireFactor(otter)).toBe(1);
+    expect(sim.mireFactor(mk('brawler'))).toBeLessThan(1);
+    expect((sim as unknown as { pickTarget: (t: unknown) => { uid: number } }).pickTarget(otter).uid).toBe(2);
+    expect((sim as unknown as { pickTarget: (t: unknown) => { uid: number } }).pickTarget(mk('brawler')).uid).not.toBe(2);
+  });
+});
+
+describe('Otter loot bonus', () => {
+  it('a loot building finished off by an otter drops more loot than one finished by a brawler', () => {
+    const lootOf = (id: string) => {
+      const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'pile', col: 10, row: 6, hp: 1, maxHp: 380 }] };
+      const sim = new RaidSim(camp, {});
+      const t = { uid: 9, def: TROOPS[id], pos: { x: 0, y: 0 }, hp: 100, maxHp: 100, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 };
+      (sim as unknown as { hurtBuilding: (b: unknown, d: number, by: unknown) => void }).hurtBuilding(camp.buildings[0], 50, t);
+      return sim.loot.coins;
+    };
+    expect(lootOf('otter')).toBe(Math.round(lootOf('brawler') * (1 + TROOPS.otter.lootBonus!)));
+  });
+});

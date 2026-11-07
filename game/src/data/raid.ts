@@ -12,10 +12,12 @@ export interface TroopDef {
   cost: number; // glowsap per troop
   space: number; // army capacity used
   trainTime: number; // seconds at the Ranger Lodge
-  prefers: 'any' | 'defense';
+  prefers: 'any' | 'defense' | 'loot';
   splash?: number;
   wallMult?: number; // damage multiplier against walls
   flying?: boolean;
+  wader?: boolean; // swims through Sludge Pit muck at full speed
+  lootBonus?: number; // buildings it finishes off drop this much more loot (0.3 = +30%)
   heals?: { amount: number; interval: number; radius: number }; // pulses healing into nearby troops (itself included)
   lodge: number; // Ranger Lodge level required
   color: number;
@@ -106,9 +108,27 @@ export const TROOPS: Record<string, TroopDef> = {
     lodge: 3,
     color: 0x6aa84a,
   },
+  otter: {
+    id: 'otter',
+    name: 'Otter Scavenger',
+    blurb: 'Swims through sludge, runs for the loot and digs out 30% more.',
+    hp: 150,
+    damage: 20,
+    rate: 1.2,
+    range: 22,
+    speed: 72,
+    cost: 60,
+    space: 1,
+    trainTime: 25,
+    prefers: 'loot',
+    wader: true,
+    lootBonus: 0.3,
+    lodge: 2,
+    color: 0x8a5a3a,
+  },
 };
 
-export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'owl', 'mender'];
+export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'otter', 'owl', 'mender'];
 
 export interface CampBuildingDef {
   id: string;

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **65** (next balance pass at iteration 70)
+Iteration counter: **66** (next balance pass at iteration 70)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -492,12 +492,22 @@ Iteration counter: **65** (next balance pass at iteration 70)
 - [x] **Iter 65 — POLISH + BALANCE (34 levels, first sweep with the deterministic sim).** 12 seeds per level and
   player. Retuned three outliers: Murkmaw's Den 2.3 → 2.45 (boss was 100/75/83), Frostpeak Summit 1.75 → 1.85 (boss
   was 100/67/67), Cinder Tunnels 1.91 → 1.75 (expert was 75%). Endless still holds 12–22 waves. Screenshot `65.png`.
+- [x] **Iter 66 — Galecrest finale: Roc's Aerie (level 35) + Zephyrax, the Gale Roc.** New boss (34 enemies), built
+  from existing traits: a flyer that swoops down to land for 3.5 s every 4 s (blockers and ground towers get their
+  window), `windborne` (no slows), `gust` (wingbeats shove the herd 50 px), and four phases (kitewings → thundercloud
+  shield + cloudrams → a pack of galehounds → a dive). Level 35: west + north roads merge into a 1,160 px tail, 12 pads,
+  18 waves, hpMult 1.95. Achievements **Stormbreaker** (beat Zephyrax) and **Cloudwalker** (15 stars in the Aeries):
+  24 total. Zephyrax joins the endless boss rotation. Autoplayer: a flying boss counts triple when picking the tower mix
+  and makes the smart player branch archers into Hawkeye (big single shots); before that the expert lost to the roc
+  more often than the novice. Screenshot `66.png`. 150 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 7 finale (level 35) with a Galecrest boss.
+1. Field Guide: boss pages list their phases (health threshold and what happens).
+2. Region 8 (levels 36–40): a new biome, enemies and boss, following the region recipe.
+3. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
 - (none known)
@@ -506,8 +516,6 @@ Iteration counter: **65** (next balance pass at iteration 70)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 - Village: drag-to-pan for small phone screens (the grid currently fits 1280×720).
-- Pause menu with "Quit to map" / "Restart" (currently only via the end panel).
-- Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
 **Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
@@ -529,6 +537,9 @@ road is far shorter than the other, keep fast packs off the short road.
 2.8 → 100/50/0, 3.2 → 42/17/0).
 **Iteration 64:** 34 Three Winds 92/58/33 at hpMult 1.55 (1.4 → 100/92/100, 1.5 → 92/67/42, 1.9 → 17/0/0). The novice
 (Bramble) holds the merge well, so it outscores its usual curve here; regen enemies want the longest road.
+**Iteration 66:** 35 Roc's Aerie 100/50/17 at hpMult 1.95 (1.72 → 100/83/92, 2.03 → 100/8/8, 2.1 → 83/17/0). The
+first Zephyrax (hp 2900, short landings) was unbeatable (0/8/25 at 1.6); now hp 2200, speed 18, MR 0.35, lands 3.5 s
+of every 7.5 s. Hawkeye archers are the counter: with Volley the expert won only 50% at 1.72.
 
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·

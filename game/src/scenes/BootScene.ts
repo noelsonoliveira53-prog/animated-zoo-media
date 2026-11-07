@@ -225,6 +225,55 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'zephyrax': {
+        // storm roc: vast swept wings with feathered tips, pale chest, crested head, hooked beak, lightning in the wings
+        g.lineStyle(3, C.ink, 1);
+        for (const sx of [-1, 1]) {
+          const wing = [
+            new Phaser.Math.Vector2(cx + sx * r * 0.3, cy - r * 0.3),
+            new Phaser.Math.Vector2(cx + sx * r * 1.0, cy - r * 0.95),
+            new Phaser.Math.Vector2(cx + sx * r * 1.42, cy - r * 0.55),
+            new Phaser.Math.Vector2(cx + sx * r * 1.32, cy - r * 0.15),
+            new Phaser.Math.Vector2(cx + sx * r * 1.46, cy + r * 0.1),
+            new Phaser.Math.Vector2(cx + sx * r * 1.3, cy + r * 0.25),
+            new Phaser.Math.Vector2(cx + sx * r * 1.25, cy + r * 0.5),
+            new Phaser.Math.Vector2(cx + sx * r * 0.35, cy + r * 0.35),
+          ];
+          g.fillStyle(color, 1);
+          g.fillPoints(wing, true);
+          g.strokePoints(wing, true);
+          g.fillStyle(0x3a5a7a, 1);
+          g.fillTriangle(cx + sx * r * 0.9, cy - r * 0.35, cx + sx * r * 1.32, cy - r * 0.4, cx + sx * r * 1.2, cy + r * 0.2);
+          g.lineStyle(2.5, 0xffe066, 1);
+          g.lineBetween(cx + sx * r * 0.65, cy - r * 0.45, cx + sx * r * 0.85, cy - r * 0.1);
+          g.lineBetween(cx + sx * r * 0.85, cy - r * 0.1, cx + sx * r * 0.7, cy - r * 0.05);
+          g.lineBetween(cx + sx * r * 0.7, cy - r * 0.05, cx + sx * r * 0.95, cy + r * 0.25);
+          g.lineStyle(3, C.ink, 1);
+        }
+        g.fillStyle(0x5a7a98, 1);
+        g.fillTriangle(cx - r * 0.3, cy + r * 0.5, cx + r * 0.3, cy + r * 0.5, cx, cy + r * 1.05);
+        g.strokeTriangle(cx - r * 0.3, cy + r * 0.5, cx + r * 0.3, cy + r * 0.5, cx, cy + r * 1.05);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.05, r * 0.85, r * 1.15);
+        g.strokeEllipse(cx, cy + r * 0.05, r * 0.85, r * 1.15);
+        g.fillStyle(0xe8f0f8, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 0.5, r * 0.7);
+        g.fillStyle(0x3a5a7a, 1);
+        for (const dx of [-0.18, 0, 0.18]) g.fillTriangle(cx + dx * r - r * 0.07, cy - r * 0.6, cx + dx * r + r * 0.07, cy - r * 0.6, cx + dx * r, cy - r * 0.95);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy - r * 0.5, r * 0.3);
+        g.strokeCircle(cx, cy - r * 0.5, r * 0.3);
+        g.fillStyle(0xf0c040, 1);
+        g.fillTriangle(cx - r * 0.1, cy - r * 0.42, cx + r * 0.1, cy - r * 0.42, cx, cy - r * 0.15);
+        g.strokeTriangle(cx - r * 0.1, cy - r * 0.42, cx + r * 0.1, cy - r * 0.42, cx, cy - r * 0.15);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.13, cy - r * 0.55, r * 0.08);
+        g.fillCircle(cx + r * 0.13, cy - r * 0.55, r * 0.08);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.13, cy - r * 0.54, r * 0.04);
+        g.fillCircle(cx + r * 0.13, cy - r * 0.54, r * 0.04);
+        break;
+      }
       case 'kaleidrax': {
         // crystal colossus: blocky faceted body, shoulder spires, glowing violet core
         g.lineStyle(3, C.ink, 1);

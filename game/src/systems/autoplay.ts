@@ -63,7 +63,7 @@ export function adaptiveMix(level: LevelDef, heroHitsAir = true): string[] {
       const e = ENEMIES[g.enemy];
       const hp = e.hp * g.count;
       total += hp;
-      if (e.flying) fly += hp;
+      if (e.flying) fly += hp * (e.boss ? 3 : 1); // a flying boss decides the level too: build for the air
       if (e.armor >= 0.4) armored += hp;
       if (e.magicResist >= 0.5) warded += hp;
       if ((e.splashResist ?? 0) >= 0.5) splashProof += hp * (e.boss ? 3 : 1); // a splash-proof boss decides the level
@@ -113,6 +113,7 @@ export function smartSpec(level: LevelDef, towerId: string): number {
   const m = makeup(level);
   switch (towerId) {
     case 'thornbow':
+      if (level.waves.some((w) => w.groups.some((g) => ENEMIES[g.enemy].boss && ENEMIES[g.enemy].flying))) return 0; // a flying boss wants Hawkeye's big single shots
       return m.fly > 0.2 ? 1 : 0; // Volley vs flyers/swarms, else Hawkeye vs armor
     case 'glimmer':
       return 0; // Stormcall: best all-round crowd damage

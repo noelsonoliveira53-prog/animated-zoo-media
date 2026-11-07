@@ -47,6 +47,7 @@ export interface Enemy {
   shockCd: number;
   boltCd: number; // Stormcaller lightning timer
   molted: boolean; // Shellsnap has shed its shell
+  inkCd: number; // Inkspitter cloud cooldown
   cleanseCd: number; // Tidecaller wash timer
   mirrored: boolean; // Shimmerjack already shed its decoys
   chargeTime: number; // seconds left of a Steamrunner bolt
@@ -179,6 +180,7 @@ export type SimEvent =
   | { type: 'pilfer'; enemy: Enemy; coins: number }
   | { type: 'crack'; enemy: Enemy }
   | { type: 'molt'; enemy: Enemy }
+  | { type: 'ink'; enemy: Enemy; pos: Vec2; radius: number; duration: number }
   | { type: 'cleanse'; source: Enemy; washed: Enemy[]; radius: number }
   | { type: 'ground'; from: Enemy; to: Enemy; damage: number }
   | { type: 'feed'; enemy: Enemy; from: Vec2 }
@@ -233,6 +235,8 @@ export class BattleSim {
   hero: Hero | null = null;
   strikes: Strike[] = [];
   spellCd: Record<string, number> = {};
+  /** Ink clouds on the road: towers can't see enemies inside them until they fade. */
+  inkClouds: { pos: Vec2; radius: number; t: number }[] = [];
   healTotal = 0; // health restored to soldiers by the hero (Sorrel), for the Field Medic achievement
   events: SimEvent[] = [];
 
@@ -822,6 +826,7 @@ export class BattleSim {
 
   private step(dt: number): void {
     this.time += dt;
+    if (this.inkClouds.length) this.inkClouds = this.inkClouds.filter((c) => (c.t -= dt) > 0);
 
     // Wave countdown (auto-start). It only runs once the current wave has finished spawning,
     // so waves never stack up on a player who is still building.
@@ -895,6 +900,7 @@ export class BattleSim {
       shockCd: def.shock ? def.shock.interval : 0,
       boltCd: def.bolt ? def.bolt.interval * 0.6 : 0,
       molted: false,
+      inkCd: 0,
       cleanseCd: def.cleanse ? def.cleanse.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       mirrored: false,
@@ -1053,6 +1059,12 @@ export class BattleSim {
   }
 
   /** Sparkeel: a shock that stuns nearby soldiers and the hero, so they drop whatever they were holding. */
+  /** Inside an ink cloud? (Grounded enemies only: flyers are above the murk.) */
+  inked(e: Enemy): boolean {
+    if (!this.inkClouds.length || this.airborne(e)) return false;
+    return this.inkClouds.some((c) => Math.hypot(c.pos.x - e.pos.x, c.pos.y - e.pos.y) <= c.radius);
+  }
+
   /** Tidecaller: a wash of seawater rinses slows off it and its neighbours. */
   private tickCleanse(e: Enemy, dt: number): void {
     const c = e.def.cleanse!;
@@ -1442,7 +1454,7 @@ export class BattleSim {
     let best: Enemy | null = null;
     let bestScore = -Infinity;
     for (const e of this.enemies) {
-      if (!e.alive || e.underground) continue;
+      if (!e.alive || e.underground || this.inked(e)) continue;
       if (this.airborne(e) && !t.def.hitsAir) continue;
       const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
       if (d > range || (e.def.veil && d > e.def.veil)) continue;
@@ -1480,7 +1492,7 @@ export class BattleSim {
       let best: Enemy | null = null;
       let bestScore = -Infinity;
       for (const e of this.enemies) {
-        if (!e.alive || e.underground || taken.has(e.uid) || (this.airborne(e) && !t.def.hitsAir)) continue;
+        if (!e.alive || e.underground || taken.has(e.uid) || this.inked(e) || (this.airborne(e) && !t.def.hitsAir)) continue;
         const d = Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y);
         if (d > range || (e.def.veil && d > e.def.veil)) continue;
         if (e.dist > bestScore) {
@@ -1713,6 +1725,12 @@ export class BattleSim {
       const decoys: Enemy[] = [];
       for (let k = 0; k < e.def.mirage.count; k++) decoys.push(this.spawn(e.def.mirage.into, e.path, Math.max(0, e.dist - 18 - k * 16)));
       this.events.push({ type: 'mirage', enemy: e, decoys });
+    }
+    if (e.def.ink && dmg > 0 && e.hp > 0 && e.inkCd <= this.time) {
+      // Inkspitter: a startled squirt of ink hangs in the water where it was hit.
+      e.inkCd = this.time + e.def.ink.cooldown;
+      this.inkClouds.push({ pos: { ...e.pos }, radius: e.def.ink.radius, t: e.def.ink.duration });
+      this.events.push({ type: 'ink', enemy: e, pos: { ...e.pos }, radius: e.def.ink.radius, duration: e.def.ink.duration });
     }
     if (e.def.molt && !e.molted && e.hp > 0 && e.hp < e.maxHp * e.def.molt.at) {
       // Shellsnap: the cracked shell falls away; soft, but quick.

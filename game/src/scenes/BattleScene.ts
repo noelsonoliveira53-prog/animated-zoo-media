@@ -1473,6 +1473,19 @@ export class BattleScene extends Phaser.Scene {
         if (ev.hits.length) this.floatText(ev.source.pos.x, ev.source.pos.y - 34, 'Zap!', '#bff8ff', 15);
         break;
       }
+      case 'ink': {
+        sfx.trait('ink');
+        // a murky cloud that hides whatever walks inside it, fading as it disperses
+        const cloud = this.add.container(ev.pos.x, ev.pos.y - 6).setDepth(2300);
+        for (const [dx, dy, rr] of [[0, 0, 1], [-0.45, 0.2, 0.7], [0.5, 0.15, 0.75], [0.1, -0.35, 0.7]]) {
+          cloud.add(this.add.circle(dx * ev.radius, dy * ev.radius, ev.radius * rr * 0.7, 0x2a1a3a, 0.62));
+        }
+        cloud.setScale(0.3);
+        this.tweens.add({ targets: cloud, scale: 1, duration: 220, ease: 'Back.easeOut' });
+        this.tweens.add({ targets: cloud, alpha: 0, delay: ev.duration * 1000 - 500, duration: 500, onComplete: () => cloud.destroy() });
+        this.floatText(ev.pos.x, ev.pos.y - 40, 'Ink!', '#c88ad8', 15);
+        break;
+      }
       case 'molt': {
         sfx.trait('crack');
         this.particles.setParticleTint(0x9a8a7a);

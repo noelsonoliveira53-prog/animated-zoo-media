@@ -564,6 +564,31 @@ export class BootScene extends Phaser.Scene {
         g.strokeTriangle(cx + r * 0.2, cy - r * 0.35, cx + r * 0.95, cy - r * 0.55, cx + r * 0.85, cy - r * 0.05);
         break;
       }
+      case 'inkspitter': {
+        // small octopus: round mantle, big eyes, curling tentacles
+        g.lineStyle(3, color, 1);
+        for (const [x1, x2] of [[-0.55, -0.95], [-0.25, -0.45], [0.05, 0.1], [0.35, 0.6], [0.6, 1.0]]) {
+          g.beginPath();
+          g.moveTo(cx + x1 * r, cy + r * 0.25);
+          g.lineTo(cx + (x1 + x2) * 0.5 * r, cy + r * 0.7);
+          g.lineTo(cx + x2 * r, cy + r * 0.6);
+          g.strokePath();
+        }
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy - r * 0.15, r * 1.3, r * 1.2);
+        g.strokeEllipse(cx, cy - r * 0.15, r * 1.3, r * 1.2);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.1, r * 0.2);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.1, r * 0.2);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.22, cy - r * 0.08, r * 0.1);
+        g.fillCircle(cx + r * 0.28, cy - r * 0.08, r * 0.1);
+        g.fillStyle(0xc88ad8, 1);
+        g.fillCircle(cx - r * 0.1, cy - r * 0.5, r * 0.08);
+        g.fillCircle(cx + r * 0.2, cy - r * 0.55, r * 0.06);
+        break;
+      }
       case 'scourmaw': {
         // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
         g.fillStyle(0xe0c088, 1);

@@ -746,4 +746,23 @@ describe('Coralreach enemies', () => {
     expect(near.slowFactor).toBe(1);
     expect(far.slowFactor).toBe(0.4);
   });
+
+  it('an Inkspitter hit leaves an ink cloud that hides grounded enemies from towers until it fades', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    const o = sim.spawn('inkspitter', 0, 400);
+    const m = sim.spawn('mudling', 0, 420);
+    for (const e of [o, m]) e.def = { ...e.def, speed: 0 };
+    (sim as any).applyDamage(o, 5);
+    expect(sim.inked(m)).toBe(true);
+    expect(sim.inked(o)).toBe(true);
+    (sim as any).applyDamage(o, 5); // still on cooldown: no second cloud
+    expect(sim.inkClouds.length).toBe(1);
+    sim.coins = 999;
+    sim.build(0, 'thornbow');
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(m.hp).toBe(m.maxHp); // the tower can't see into the murk
+    for (let i = 0; i < Math.ceil(o.def.ink!.duration * 60); i++) sim.update(1 / 60);
+    expect(sim.inked(m)).toBe(false);
+  });
 });

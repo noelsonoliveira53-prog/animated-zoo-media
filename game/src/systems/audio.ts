@@ -180,6 +180,10 @@ class Sfx {
         this.noise(0.14, 0.12, 6000);
         this.tone(1600, 0.1, 'sawtooth', 0.04, 400);
         break;
+      case 'ink': // a soft murky squirt
+        this.noise(0.18, 0.08, 500);
+        this.tone(220, 0.15, 'sine', 0.04, 110);
+        break;
       case 'cleanse': // splash of a wave
         this.noise(0.35, 0.09, 1200);
         this.tone(520, 0.2, 'sine', 0.03, 260);

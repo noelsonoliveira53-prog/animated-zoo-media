@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **115** (next balance pass at iteration 120)
+Iteration counter: **116** (next balance pass at iteration 120)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -812,13 +812,22 @@ Iteration counter: **115** (next balance pass at iteration 120)
 - **Iteration 115** (polish + balance): full 66-level sweep in 4 parallel batches, all in band (Balance Notes). I
   removed a redundant molt tint, since the per-frame "speed boost" tint already marks molted Shellsnaps. The
   Coralreach browser check was re-run: no console errors. 185 tests.
+- **Iteration 116**: third Coralreach enemy, the **Inkspitter** (new `ink` trait).
+  - A jumpy octopus. When hit (at most every 7s) it squirts a 70px ink cloud that stays where it was struck for
+    2.5s. Towers can't target grounded enemies inside a cloud; heroes, soldiers and spells still can, and flyers are
+    above it.
+  - The sim tracks `inkClouds`, and towers check `inked()`. The cloud is a murky purple puff that hides what's
+    inside, with "Ink!" text and a soft squirt sound.
+  - Level 67 **Inkwater Cove**: a west road and a north-west road merge into one serpentine through the cove, 11
+    pads, 15 waves, hpMult 2.45.
+  - Endless adds Inkspitter from wave 58. 186 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 14 level 67 (+ third Coralreach enemy), 68–69, finale 70 with a boss + story card + achievements.
+2. Region 14 levels 68–69, finale 70 with a boss + story card + achievements.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -829,6 +838,8 @@ Iteration counter: **115** (next balance pass at iteration 120)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 116**: 67 Inkwater Cove went 100/100/8 at hpMult 2.05, 100/100/0 at 2.15 and 2.3, and **2.45 → 100/92/0** (kept). Ink only hides enemies from towers, so the expert's spells and hero keep it from becoming swingy.
+
 **Iteration 115** (full sweep, 12 seeds, 66 levels): levels 1–65 are identical to their last passes (iterations 100,
 105, 110 and 111), so the new traits (mirage, pilfer, crust, molt, cleanse) and the Sorrel/Mender changes caused no
 regressions. 66 Coral Shallows: 100/92/33. Bosses: 5 92/58/83 · 10 83/67/42 · 15 83/33/67 · 20 83/67/0 ·

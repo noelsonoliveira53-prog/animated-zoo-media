@@ -96,6 +96,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.shock) tags.push(`Shocks every ${e.shock.interval}s: soldiers and heroes within ${e.shock.radius}px are stunned ${e.shock.duration}s`);
         if (e.fortify) tags.push(`Bark-song: allies within ${e.fortify.radius}px gain +${Math.round(e.fortify.bonus * 100)}% armor`);
         if (e.bolt) tags.push(`Calls lightning every ${e.bolt.interval}s: the nearest tower within ${e.bolt.range}px is stunned ${e.bolt.duration}s`);
+        if (e.ink) tags.push(`When hit: an ink cloud (${e.ink.radius}px, ${e.ink.duration}s) hides grounded enemies from towers; every ${e.ink.cooldown}s at most`);
         if (e.molt) tags.push(`Molts below ${Math.round(e.molt.at * 100)}% health: armor drops to ${Math.round(e.molt.armor * 100)}%, speed ×${e.molt.speedMult}`);
         if (e.cleanse) tags.push(`Washes slows off itself and allies within ${e.cleanse.radius}px every ${e.cleanse.interval}s`);
         if (e.crust) tags.push(`Sunbaked shell: armor builds to +${Math.round(e.crust.max * 100)}% while unhit; any hit cracks it`);

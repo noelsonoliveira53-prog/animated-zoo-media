@@ -58,6 +58,7 @@ export interface EnemyDef {
   crust?: { max: number; perSec: number }; // armor builds by perSec while unhit (up to +max); any hit cracks it back to base
   molt?: { at: number; armor: number; speedMult: number }; // below `at` health it sheds its shell: armor drops, speed rises
   cleanse?: { radius: number; interval: number }; // washes slows off itself and allies in radius every interval
+  ink?: { radius: number; duration: number; cooldown: number }; // when hit, squirts an ink cloud: towers can't target enemies inside it
   pilfer?: number; // coins stolen from the player if it reaches the exit
   herd?: { radius: number; perAlly: number; max: number }; // runs faster for each other herd-mate nearby (bonus capped at max) // a planted seed: becomes `into` after `after` seconds unless destroyed
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)

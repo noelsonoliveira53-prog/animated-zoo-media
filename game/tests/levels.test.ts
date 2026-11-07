@@ -79,3 +79,16 @@ describe('gate clearance', () => {
     }
   });
 });
+
+describe('top HUD clearance for roads', () => {
+  it('no horizontal road runs under the top HUD bar (enemies and flyers would hide behind it)', () => {
+    for (const l of LEVELS)
+      for (const pts of l.paths)
+        for (let i = 1; i < pts.length; i++) {
+          const a = pts[i - 1];
+          const b = pts[i];
+          const horizontal = a.y === b.y && Math.abs(a.x - b.x) > 60;
+          expect(horizontal && a.y < 120, `${l.name}: road at y=${a.y}`).toBe(false);
+        }
+  });
+});

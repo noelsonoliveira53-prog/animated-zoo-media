@@ -589,6 +589,40 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.2, cy - r * 0.55, r * 0.06);
         break;
       }
+      case 'brinecrown': {
+        // colossal hermit crab: a spiral shell crowned with coral, big claws, stalk eyes, legs splayed under it
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.75, -0.45, 0.45, 0.75]) g.lineBetween(cx + lx * r, cy + r * 0.45, cx + lx * r * 1.35, cy + r * 0.95);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 1.0, cy + r * 0.15, r * 0.38);
+        g.strokeCircle(cx - r * 1.0, cy + r * 0.15, r * 0.38);
+        g.fillCircle(cx + r * 0.95, cy + r * 0.2, r * 0.3);
+        g.strokeCircle(cx + r * 0.95, cy + r * 0.2, r * 0.3);
+        g.fillStyle(0xd8c8a8, 1);
+        g.fillCircle(cx, cy - r * 0.1, r * 0.75);
+        g.strokeCircle(cx, cy - r * 0.1, r * 0.75);
+        g.lineStyle(2, 0x9a8a6a, 1);
+        g.beginPath();
+        g.arc(cx, cy - r * 0.1, r * 0.5, 0, Math.PI * 1.6);
+        g.strokePath();
+        g.beginPath();
+        g.arc(cx, cy - r * 0.1, r * 0.25, 0, Math.PI * 1.5);
+        g.strokePath();
+        // coral crown
+        for (const [dx, h, col] of [[-0.45, 0.55, 0xf07a6a], [-0.15, 0.75, 0xf0a05a], [0.2, 0.65, 0xd86aa8], [0.45, 0.5, 0xf07a6a]] as const) {
+          g.lineStyle(5, col, 1);
+          g.lineBetween(cx + dx * r, cy - r * 0.65, cx + dx * r * 1.2, cy - r * (0.65 + h));
+          g.fillStyle(col, 1);
+          g.fillCircle(cx + dx * r * 1.2, cy - r * (0.65 + h), r * 0.09);
+        }
+        g.lineStyle(2.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.6, cy + r * 0.35, cx - r * 0.65, cy - r * 0.05);
+        g.lineBetween(cx - r * 0.35, cy + r * 0.4, cx - r * 0.35, cy);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.65, cy - r * 0.08, r * 0.08);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.03, r * 0.08);
+        break;
+      }
       case 'scourmaw': {
         // sand wyrm rearing out of a dune: segmented baked-clay body, a ring-toothed round maw, sand spray
         g.fillStyle(0xe0c088, 1);

@@ -107,4 +107,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x3a8aa8, 0xf0dca8],
     accent: 0xd8a060,
   },
+  l70: {
+    title: 'The Tide Turns',
+    lines: [
+      'Brinecrown sinks into the deep water, its coral crown settling on the sand.',
+      'The reef glows softly in the evening light, and the crabs go quiet.',
+      'Far out at sea, a strange dark sail is turning toward the Keepers.',
+    ],
+    sky: [0x1a5a9a, 0x5ac0c8],
+    accent: 0xf07a6a,
+  },
 };

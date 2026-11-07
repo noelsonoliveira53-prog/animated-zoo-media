@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **118** (next balance pass at iteration 120)
+Iteration counter: **119** (next balance pass at iteration 120)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -827,13 +827,24 @@ Iteration counter: **118** (next balance pass at iteration 120)
 - **Iteration 118**: level 69 **Tidewrack Lagoon**. A 2,740px lagoon road snakes west to east, and a 1,620px north
   road drops into its middle bend. It has 10 pads (fewer than usual), 16 waves (fliers on the long road) and hpMult
   1.7. 186 tests.
+- **Iteration 119**: Coralreach finale, level 70 **Crown of the Reef**: a 2,620px reef road plus a 2,040px north
+  road joining at the crown, 12 pads, 18 waves, hpMult 2.27. The boss **Brinecrown, the Reef Colossus** (3,000
+  health, 40% armor):
+  - Molts at 50% (armor down to 15%, speed ×1.25).
+  - Washes slows off allies within 160px every 4s.
+  - Drops a Shellsnap every 8s (up to 6).
+  - Phases: 75% Inkspitters; 50% a 1,400 shield plus Tidecallers; 25% six Shellsnaps and a speed-up; 10% a surge.
+  - Code-drawn giant hermit crab with a coral crown on its spiral shell.
+
+  Also: achievements `boss_brinecrown` (Reefbreaker) and `reef_stars` (Tidewalker), story card "The Tide Turns" (a
+  dark sail on the horizon, a hook for region 15), and Brinecrown joins the endless boss rotation. 186 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Iter 105 balance pass.
-2. Region 14 finale 70 with a boss + story card + achievements.
+2. Region 15 (the dark sail: a pirate-flotilla theme?), or a breather feature.
 3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
@@ -844,6 +855,8 @@ Iteration counter: **118** (next balance pass at iteration 120)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 119**: 70 Crown of the Reef went 100/92/0 at hpMult 2.2, 92/75/0 at 2.27, 75/75 at 2.3 (finale guard fails: expert 1 of 3 test seeds), 67/67 at 2.32, 58/67 at 2.38 and 42/25 at 2.5. Casual tracks the expert here, likely because the slow-washing Tidecallers and ink blunt the expert's tower mix, so there is no setting inside the band that also passes the guard. **2.27 kept** (expert 92, guard passes); casual at 75 sits above the boss band. Worth revisiting in the iteration 120 pass.
+
 **Iteration 118**: 69 Tidewrack Lagoon was 8/0/0 at hpMult 2.4, leaking on both roads. It has only 10 pads, so it needs a much lower multiplier: 1.9 gave 100/42/0 and **1.7 → 100/67/0** (kept, a fourth-level ramp). Pad count matters as much as road length.
 
 **Iteration 117**: 68 Shellbreak Reef went 100/100/0 at hpMult 2.4, 92/67/0 at 2.7, 50/42/0 at 2.9 (a steep curve), and **2.6 → 100/75/0** (kept).

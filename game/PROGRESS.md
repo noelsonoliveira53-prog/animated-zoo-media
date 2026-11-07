@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **99** (next balance pass at iteration 100)
+Iteration counter: **100** (next balance pass at iteration 105)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -697,13 +697,17 @@ Iteration counter: **99** (next balance pass at iteration 100)
 - **Iteration 99**: level 58 **Forked Lightning**. One west entrance forks around two hills (north and south loops)
   that rejoin at x=700, then a shared bend to the south-east exit. It has 11 pads (two between the loops cover both
   forks), 16 waves mixing all three Thunderhead enemies, and hpMult 2.2. 175 tests.
+- **Iteration 100** (polish + balance): full 58-level sweep, run in 4 parallel batches (results in Balance Notes). No
+  regressions from the new traits, so no retunes. The Field Guide entries for Stormcaller, Thunderhoof and
+  Copperhorn were checked in-browser: all fit (right edge ≤ 1214px) with no console errors. 175 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 1. Region 12 level 59, finale 60 with a boss + story card + achievements.
-2. Iter 100 balance pass (full sweep).
+2. Iter 105 balance pass.
+3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
 
 ## Known Bugs
 - (none known)
@@ -713,6 +717,14 @@ Iteration counter: **99** (next balance pass at iteration 100)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 100** (full sweep, 12 seeds, expert/casual/novice):
+- Levels 1–50: identical to the last per-region passes (iterations 70–90), e.g. 5 Murkmaw 92/58/83 · 15 Emberdeep
+  83/33/67 · 30 Kaleidrax 83/42/58 · 35 Roc's Aerie 100/50/17 · 45 Engine 83/67/8 · 50 Abyss 92/67/0.
+- Rotbloom: 51 100/92/42 · 52 83/100/17 · 53 100/83/8 · 54 83/67/0 · 55 75/50/0.
+- Thunderhead: 56 Rainmarch 100/100/42 · 57 Copperhorn Ford 83/83/25 · 58 Forked Lightning 92/83/0.
+
+Every boss is in band (expert 75–92, casual 33–67), and every opener is at 100/≥92. No retunes.
+
 **Iteration 99**: 58 Forked Lightning was 100/100/0 at hpMult 1.85 and 100/100/0 at 2.05. **2.2 → 92/83/0** (kept). Converging forks reward central pads, so it needed a higher multiplier than usual.
 
 **Iteration 98**: 57 Copperhorn Ford is 83/83/25 at hpMult 1.95 on the first try (kept).

@@ -97,7 +97,7 @@ export type SimEvent =
   | { type: 'splash'; pos: Vec2; radius: number; color: number }
   | { type: 'kill'; enemy: Enemy; bounty: number }
   | { type: 'leak'; enemy: Enemy; lives: number }
-  | { type: 'waveStart'; index: number; bonus: number }
+  | { type: 'waveStart'; index: number; bonus: number; income: number }
   | { type: 'waveCleared'; index: number }
   | { type: 'build'; tower: Tower }
   | { type: 'upgrade'; tower: Tower }
@@ -122,6 +122,11 @@ export type BattleStatus = 'prep' | 'running' | 'victory' | 'defeat';
 export const WAVE_GAP = 14;
 export const FIRST_WAVE_GAP = 25;
 const SOLDIER_SPEED = 110;
+
+/** Supply coins the sanctuary sends at the start of each wave (index 0-based). Wave 1 gets none. */
+export function waveIncome(index: number): number {
+  return index === 0 ? 0 : 10 + index * 3;
+}
 const SOLDIER_REACH = 18;
 const ENGAGE_RADIUS = 70;
 
@@ -369,6 +374,11 @@ export class BattleSim {
     return this.level.waves.length;
   }
 
+  /** True while the current wave is still spawning enemies. */
+  get spawning(): boolean {
+    return this.schedules.length > 0;
+  }
+
   get wavesRemaining(): boolean {
     return this.waveIndex < this.totalWaves - 1;
   }
@@ -378,12 +388,13 @@ export class BattleSim {
     if (this.status === 'victory' || this.status === 'defeat') return false;
     if (!this.wavesRemaining) return false;
     const bonus = this.waveIndex >= 0 || this.status === 'running' ? earlyCallBonus(this.waveCountdown, this.waveIndex + 1) : 0;
-    this.coins += bonus;
     this.waveIndex++;
+    const income = waveIncome(this.waveIndex);
+    this.coins += bonus + income;
     this.schedules.push({ events: buildSchedule(this.level.waves[this.waveIndex]), cursor: 0, t: 0 });
     this.status = 'running';
     this.waveCountdown = WAVE_GAP;
-    this.events.push({ type: 'waveStart', index: this.waveIndex, bonus });
+    this.events.push({ type: 'waveStart', index: this.waveIndex, bonus, income });
     return true;
   }
 
@@ -541,8 +552,9 @@ export class BattleSim {
   private step(dt: number): void {
     this.time += dt;
 
-    // Wave countdown (auto-start).
-    if (this.wavesRemaining) {
+    // Wave countdown (auto-start). It only runs once the current wave has finished spawning,
+    // so waves never stack up on a player who is still building.
+    if (this.wavesRemaining && this.schedules.length === 0) {
       this.waveCountdown -= dt;
       if (this.waveCountdown <= 0) {
         this.waveCountdown = 0;

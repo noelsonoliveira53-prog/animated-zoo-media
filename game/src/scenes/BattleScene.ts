@@ -420,7 +420,9 @@ export class BattleScene extends Phaser.Scene {
     this.waveText.setText(`${Math.max(0, this.sim.waveIndex + 1)}/${this.sim.totalWaves}`);
     if (this.sim.wavesRemaining && this.sim.isActive()) {
       const secs = Math.ceil(this.sim.waveCountdown);
-      this.nextWaveBtn.label.setText(this.sim.waveIndex < 0 ? `Start! (${secs})` : `Next Wave (${secs})`);
+      this.nextWaveBtn.label.setText(
+        this.sim.waveIndex < 0 ? `Start! (${secs})` : this.sim.spawning ? 'Call Early' : `Next Wave (${secs})`,
+      );
       this.nextWaveBtn.setEnabled(true);
     } else {
       this.nextWaveBtn.label.setText('Final Wave');
@@ -722,7 +724,13 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'waveStart':
         sfx.waveHorn();
-        this.showBanner(`Wave ${ev.index + 1}`, ev.bonus > 0 ? `Early call bonus +${ev.bonus} coins` : 'Here they come!');
+        {
+          const parts: string[] = [];
+          if (ev.income > 0) parts.push(`Supplies +${ev.income}`);
+          if (ev.bonus > 0) parts.push(`Early call +${ev.bonus}`);
+          this.showBanner(`Wave ${ev.index + 1} of ${this.sim.totalWaves}`, parts.length ? parts.join('   •   ') + ' coins' : 'Here they come!');
+          if (ev.income + ev.bonus > 0) this.tweens.add({ targets: this.coinText, scale: 1.35, duration: 120, yoyo: true });
+        }
         break;
       case 'waveCleared':
         break;

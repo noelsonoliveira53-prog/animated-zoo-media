@@ -4,9 +4,9 @@ An original tower-defense + village-building game. The **Keepers of the Grove** 
 woodland sanctuary from the **Murkhorde**, bog critters creeping out of the Gloomfen.
 Resources: **Coins** (battle currency / village gold) and **Glowsap** (the second village resource, planned).
 
-Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>`
+Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]`
 
-Iteration counter: **4** (next iteration = 5 → POLISH + BALANCE pass)
+Iteration counter: **5** (next balance pass at iteration 10)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -39,6 +39,15 @@ Iteration counter: **4** (next iteration = 5 → POLISH + BALANCE pass)
   Hero picker on the menu (saved). Smoke scripts now start battles via the Menu scene (old way left
   the menu running underneath and its buttons swallowed clicks). 8 new tests (44 total).
 
+- [x] **Iter 5 — POLISH + BALANCE.** Headless autoplayer (`src/systems/autoplay.ts`) with 7 scripted
+  strategies + `scripts/balance.ts` report. Structural fixes: the next-wave countdown now waits until the
+  current wave finishes spawning (waves used to stack every 14s); supply coins at each wave start
+  (`waveIncome`: 10 + 3×wave). Tuning: Boulder Bellows damage/rate up (was useless), Burrow soldiers
+  hit harder and are tougher, Mudling/Skitter/Shellback bounties up, L1 start 250 coins and softer
+  final wave, L2 start 380 coins, softer waves 7–8, Murkmaw hp 2400 → 1900. Polish: wave banner shows
+  "Wave N of M" plus supply and early-call coins; the wave button says "Call Early" while a wave is spawning.
+  Balance guard-rail tests (47 total).
+
 ## In Progress
 - (none)
 
@@ -61,5 +70,26 @@ Iteration counter: **4** (next iteration = 5 → POLISH + BALANCE pass)
 - Persistent hero levels across battles (meta progression) — currently levels reset each battle.
 
 ## Balance Notes
-- Level 2 (Gloomfen Edge) untuned and probably hard — boss has 2400 hp. Check in iteration 5.
-- Level 1 untuned. First real pass scheduled for iteration 5 (headless sim harness to be written then).
+**Iteration 5 results** (`npx vite-node scripts/balance.ts 12`, after tuning):
+
+| Level | Strategy | Win % | Avg lives left |
+|---|---|---|---|
+| Mossgate Meadow | expert-mixed | 100% | 20.0/20 |
+| Mossgate Meadow | casual-mixed | 100% | 20.0/20 |
+| Mossgate Meadow | novice | 100% | 12.6/20 |
+| Mossgate Meadow | only-thornbow | 100% | 15.5/20 |
+| Mossgate Meadow | only-burrow | 0% | 0/20 (support tower, expected) |
+| Gloomfen Edge | expert-mixed | 100% | 11.8/20 |
+| Gloomfen Edge | casual-mixed | 100% | 18.8/20 |
+| Gloomfen Edge | novice | 0% | dies ~wave 9 |
+| Gloomfen Edge | any single tower type | 0% | — (mixing required) |
+
+Before tuning, **every strategy lost both levels** (waves stacked + starved economy).
+
+Findings / follow-ups:
+- Heroes matter a lot on L2: no hero → 0–10% win for the expert AI; with a hero → 40–50% (before the final tuning).
+  Bramble and Fen are close; Ember is a bit weaker for this AI (it doesn't move her next to towers).
+- Filling every slot before upgrading is worse than upgrading the best 70–75% of slots.
+- L1 is now a gentle tutorial; difficulty should ramp from L3 onward (target: expert ~90%, casual ~60%,
+  novice ~10–20% by level 5).
+- Burrow Den alone can't win (it only blocks); that's intended, but its value in mixes deserves a look later.

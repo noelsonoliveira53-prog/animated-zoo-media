@@ -16,7 +16,7 @@ export const LEVELS: LevelDef[] = [
   {
     id: 'l1',
     name: 'Mossgate Meadow',
-    startCoins: 220,
+    startCoins: 250,
     lives: 20,
     theme: MEADOW,
     paths: [
@@ -74,8 +74,8 @@ export const LEVELS: LevelDef[] = [
       },
       {
         groups: [
-          { enemy: 'shellback', count: 8, interval: 1.6 },
-          { enemy: 'skitter', count: 20, interval: 0.35, delay: 4 },
+          { enemy: 'shellback', count: 5, interval: 2 },
+          { enemy: 'skitter', count: 14, interval: 0.45, delay: 4 },
           { enemy: 'mudling', count: 14, interval: 0.6, delay: 8 },
         ],
       },
@@ -84,7 +84,7 @@ export const LEVELS: LevelDef[] = [
   {
     id: 'l2',
     name: 'Gloomfen Edge',
-    startCoins: 300,
+    startCoins: 380,
     lives: 20,
     theme: FEN,
     paths: [
@@ -117,8 +117,8 @@ export const LEVELS: LevelDef[] = [
           { enemy: 'thornhog', count: 4, interval: 2, path: 1, delay: 3 },
         ],
       },
-      { groups: [{ enemy: 'gnat', count: 24, interval: 0.25, path: 1 }, { enemy: 'gloomwing', count: 8, interval: 0.9 }] },
-      { groups: [{ enemy: 'bogbrute', count: 1, interval: 1 }, { enemy: 'mudling', count: 16, interval: 0.5, path: 1 }, { enemy: 'bogmender', count: 2, interval: 3, delay: 4 }] },
+      { groups: [{ enemy: 'gnat', count: 18, interval: 0.3, path: 1 }, { enemy: 'gloomwing', count: 8, interval: 0.9 }] },
+      { groups: [{ enemy: 'bogbrute', count: 1, interval: 1 }, { enemy: 'mudling', count: 12, interval: 0.6, path: 1 }, { enemy: 'bogmender', count: 2, interval: 3, delay: 4 }] },
       {
         groups: [
           { enemy: 'thornhog', count: 8, interval: 1.2 },

@@ -6,6 +6,7 @@ import { TOWERS, TOWER_ORDER } from '../data/towers';
 import { HEROES, HERO_ORDER } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
 import { spellFacts } from '../systems/spellInfo';
+import { bossPhaseLines } from '../systems/guideInfo';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
@@ -21,6 +22,8 @@ interface Entry {
   locked: boolean;
   lines: string[];
   blurb: string;
+  /** Extra compact lines under the stats (boss phases). */
+  extra?: string[];
 }
 
 // The Keepers' Field Guide: everything you've met, with stats and tips.
@@ -101,6 +104,7 @@ export class FieldGuideScene extends Phaser.Scene {
             `Costs ${e.livesCost} ${e.livesCost === 1 ? 'life' : 'lives'}   •   Bounty ${e.bounty}`,
             tags.length ? tags.join('  •  ') : 'No special tricks',
           ],
+          extra: e.phases?.length ? ['Phases', ...bossPhaseLines(e)] : undefined,
         };
       });
     }
@@ -219,15 +223,21 @@ export class FieldGuideScene extends Phaser.Scene {
     this.detail = c;
     if (e.locked) {
       c.add(this.add.text(x, 150, '???', textStyle(34, '#5a4a32')).setStroke('#e8dcb8', 0));
-      c.add(this.add.text(x, 210, 'Not met yet. Face it in battle to fill in this page.', { ...textStyle(18, '#5a4a32', false), wordWrap: { width: 500 } }).setStroke('#e8dcb8', 0));
+      c.add(this.add.text(x, 210, 'Not met yet. Face it in battle to fill in this page.', { ...textStyle(18, '#5a4a32', false), wordWrap: { width: 470 } }).setStroke('#e8dcb8', 0));
       return;
     }
     const img = this.add.image(x + 60, 262, e.texture);
     img.setScale(Math.min(2.2, 130 / Math.max(img.width, img.height)));
     this.tweens.add({ targets: img, y: 254, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
     c.add(img);
-    c.add(this.add.text(x, 130, e.name, { ...textStyle(30, '#3a2a1a'), wordWrap: { width: 540 } }).setStroke('#e8dcb8', 0));
+    c.add(this.add.text(x, 130, e.name, { ...textStyle(30, '#3a2a1a'), wordWrap: { width: 470 } }).setStroke('#e8dcb8', 0));
     c.add(this.add.text(x + 150, 190, e.blurb, { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 300 } }).setStroke('#e8dcb8', 0));
-    c.add(this.add.text(x, 350, e.lines.join('\n\n'), { ...textStyle(17, '#3a2a1a', false), wordWrap: { width: 540 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0));
+    const body = this.add.text(x, 350, e.lines.join(e.extra ? '\n' : '\n\n'), { ...textStyle(17, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0);
+    c.add(body);
+    if (e.extra) {
+      const y = body.y + body.height + 12;
+      c.add(this.add.text(x, y, e.extra[0], textStyle(17, '#6a3a1a')).setStroke('#e8dcb8', 0));
+      c.add(this.add.text(x, y + 26, e.extra.slice(1).join('\n'), { ...textStyle(15, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 2 }).setStroke('#e8dcb8', 0).setName('bossPhases'));
+    }
   }
 }

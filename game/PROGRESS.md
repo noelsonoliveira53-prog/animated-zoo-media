@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **66** (next balance pass at iteration 70)
+Iteration counter: **67** (next balance pass at iteration 70)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -500,14 +500,18 @@ Iteration counter: **66** (next balance pass at iteration 70)
   24 total. Zephyrax joins the endless boss rotation. Autoplayer: a flying boss counts triple when picking the tower mix
   and makes the smart player branch archers into Hawkeye (big single shots); before that the expert lost to the roc
   more often than the novice. Screenshot `66.png`. 150 tests.
+- [x] **Iter 67 — Field Guide boss phases.** Boss pages list each phase under the stats ("At 50%: shield 1200, summons
+  3 Cloudram"), built from data by `bossPhaseLines` in `systems/guideInfo.ts`. **Fix:** the detail text wrapped at
+  540 px starting from x=750, so long trait lines ran off the parchment (edge at 1240); every enemy with several traits
+  was clipped. Now 470 px. Browser check `scripts/guide-boss-check.mjs <name> [bossId]` checks every text fits; all
+  seven bosses do. 151 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Field Guide: boss pages list their phases (health threshold and what happens).
-2. Region 8 (levels 36–40): a new biome, enemies and boss, following the region recipe.
-3. Village: drag-to-pan on small phone screens.
+1. Region 8 (levels 36–40): a new biome, enemies and boss, following the region recipe.
+2. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
 - (none known)

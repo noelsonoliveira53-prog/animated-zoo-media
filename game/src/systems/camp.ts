@@ -36,7 +36,7 @@ function rng(seed: number): () => number {
 
 /** Tier scaling for camp buildings: tougher defenses and richer loot. */
 export function tierMult(tier: number): { hp: number; dmg: number; loot: number } {
-  return { hp: 1 + 0.4 * tier, dmg: 1 + 0.35 * tier, loot: 1 + 0.7 * tier };
+  return { hp: 1 + 0.35 * tier, dmg: 1 + 0.25 * tier, loot: 1 + 0.7 * tier };
 }
 
 export function generateCamp(seed: number, tier: number): Camp {
@@ -76,6 +76,34 @@ export function generateCamp(seed: number, tier: number): Camp {
         break;
       }
     }
+  }
+  if (CAMP_TIERS[t].walls) {
+    // A ring of stake walls around the core (HQ + defenses), one tile outside their footprint.
+    const core = buildings.filter((b) => CAMP_BUILDINGS[b.type].hq || CAMP_BUILDINGS[b.type].defense);
+    let c0 = Infinity;
+    let r0 = Infinity;
+    let c1 = -Infinity;
+    let r1 = -Infinity;
+    for (const b of core) {
+      const sz = CAMP_BUILDINGS[b.type].size;
+      c0 = Math.min(c0, b.col);
+      r0 = Math.min(r0, b.row);
+      c1 = Math.max(c1, b.col + sz - 1);
+      r1 = Math.max(r1, b.row + sz - 1);
+    }
+    c0 = Math.max(1, c0 - 1);
+    r0 = Math.max(0, r0 - 1);
+    c1 = Math.min(CAMP_COLS - 2, c1 + 1);
+    r1 = Math.min(CAMP_ROWS - 1, r1 + 1);
+    const taken = (col: number, row: number) =>
+      buildings.some((b) => {
+        const sz = CAMP_BUILDINGS[b.type].size;
+        return col >= b.col && col < b.col + sz && row >= b.row && row < b.row + sz;
+      });
+    const ring: [number, number][] = [];
+    for (let col = c0; col <= c1; col++) ring.push([col, r0], [col, r1]);
+    for (let row = r0 + 1; row < r1; row++) ring.push([c0, row], [c1, row]);
+    for (const [col, row] of ring) if (!taken(col, row)) add('wall', col, row);
   }
   return { tier: t, seed, buildings };
 }

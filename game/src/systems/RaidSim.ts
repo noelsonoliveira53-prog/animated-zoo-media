@@ -12,6 +12,7 @@ export interface Troop {
   maxHp: number;
   alive: boolean;
   targetUid: number;
+  wallUid: number; // wall currently blocking this troop
   attackCd: number;
 }
 
@@ -50,13 +51,21 @@ export class RaidSim {
     return Math.max(0, RAID_TIME - this.time);
   }
 
-  /** Buildings that count toward destruction (all of them). */
+  /** Buildings that count toward destruction (everything except walls). */
+  get counted(): CampBuilding[] {
+    return this.camp.buildings.filter((b) => !CAMP_BUILDINGS[b.type].wall);
+  }
+
   get standing(): CampBuilding[] {
-    return this.camp.buildings.filter((b) => b.hp > 0);
+    return this.counted.filter((b) => b.hp > 0);
+  }
+
+  get walls(): CampBuilding[] {
+    return this.camp.buildings.filter((b) => CAMP_BUILDINGS[b.type].wall && b.hp > 0);
   }
 
   get destruction(): number {
-    const total = this.camp.buildings.length;
+    const total = this.counted.length;
     return total ? (total - this.standing.length) / total : 0;
   }
 
@@ -81,7 +90,7 @@ export class RaidSim {
     const def = TROOPS[id];
     this.army[id]--;
     this.deployed[id] = (this.deployed[id] ?? 0) + 1;
-    const t: Troop = { uid: this.nextUid++, def, pos: { ...p }, hp: def.hp, maxHp: def.hp, alive: true, targetUid: 0, attackCd: 0.3 };
+    const t: Troop = { uid: this.nextUid++, def, pos: { ...p }, hp: def.hp, maxHp: def.hp, alive: true, targetUid: 0, wallUid: 0, attackCd: 0.3 };
     this.troops.push(t);
     this.events.push({ type: 'deploy', troop: t });
     return t;
@@ -136,22 +145,42 @@ export class RaidSim {
       t.targetUid = target?.uid ?? 0;
     }
     if (!target) return;
+    // A wall in the way? Ground troops must break it first.
+    let wall = t.wallUid ? this.camp.buildings.find((b) => b.uid === t.wallUid && b.hp > 0) : undefined;
+    if (!wall) t.wallUid = 0;
     const c = buildingCenter(target);
     const reach = buildingRadius(target) + t.def.range;
     const d = Math.hypot(c.x - t.pos.x, c.y - t.pos.y);
-    if (d > reach) {
+    if (!wall && d > reach) {
       const step = Math.min(t.def.speed * dt, d - reach + 1);
-      t.pos.x += ((c.x - t.pos.x) / d) * step;
-      t.pos.y += ((c.y - t.pos.y) / d) * step;
+      const next = { x: t.pos.x + ((c.x - t.pos.x) / d) * step, y: t.pos.y + ((c.y - t.pos.y) / d) * step };
+      if (!t.def.flying && t.def.range < 60) {
+        wall = this.walls.find((w) => {
+          const wc = buildingCenter(w);
+          return Math.hypot(wc.x - next.x, wc.y - next.y) < buildingRadius(w) + 10;
+        });
+        if (wall) t.wallUid = wall.uid;
+      }
+      if (!wall) {
+        t.pos = next;
+        return;
+      }
+    }
+    if (wall) {
+      t.attackCd -= dt;
+      if (t.attackCd > 0) return;
+      t.attackCd = 1 / t.def.rate;
+      this.hurtBuilding(wall, t.def.damage * (t.def.wallMult ?? 1), t);
       return;
     }
     t.attackCd -= dt;
     if (t.attackCd > 0) return;
     t.attackCd = 1 / t.def.rate;
     if (t.def.splash) {
-      for (const b of this.standing) {
+      for (const b of [...this.standing, ...this.walls]) {
         const bc = buildingCenter(b);
-        if (b === target || Math.hypot(bc.x - c.x, bc.y - c.y) <= t.def.splash + buildingRadius(b)) this.hurtBuilding(b, t.def.damage, t);
+        const mult = CAMP_BUILDINGS[b.type].wall ? (t.def.wallMult ?? 1) : 1;
+        if (b === target || Math.hypot(bc.x - c.x, bc.y - c.y) <= t.def.splash + buildingRadius(b)) this.hurtBuilding(b, t.def.damage * mult, t);
       }
     } else {
       this.hurtBuilding(target, t.def.damage, t);

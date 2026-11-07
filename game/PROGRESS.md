@@ -4,9 +4,9 @@ An original tower-defense + village-building game. The **Keepers of the Grove** 
 woodland sanctuary from the **Murkhorde**, bog critters creeping out of the Gloomfen.
 Resources: **Coins** (battle currency / village gold) and **Glowsap** (the second village resource, planned).
 
-Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
+Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts`
 
-Iteration counter: **17** (next balance pass at iteration 20)
+Iteration counter: **18** (next balance pass at iteration 20)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -158,11 +158,18 @@ Iteration counter: **17** (next balance pass at iteration 20)
   shots, destruction effects, HUD (%, timer, loot, stars) and a result panel. **Save fix:** the village now
   reloads the save before writing, so it can't overwrite the army or other progress. 89 tests.
 
+- [x] **Iter 18** — **Raid walls + raid balance.** Warren and Stronghold camps get a ring of **Stake Walls** around
+  their core (HQ + defenses). Ground melee troops whose next step would hit a wall stop and break it; Beaver
+  Sappers do 3× damage to walls (and splash them); owls and slingers ignore them; walls don't count toward
+  destruction %. Palisade wall art. New `scripts/raid-balance.ts` (full armies per Lodge level vs each tier,
+  10 seeds). Tuning: Outpost +1 Spit Tower, Warren/Stronghold −1 mortar, Stronghold −1 spit, walls 320→220 hp,
+  gentler tier scaling (hp +35%/tier, dmg +25%/tier). 92 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Raid follow-ups: walls in camps, training time (queue), raid balance across tiers, raid-loot vs campaign-loot economy check.
+1. Raid follow-ups: training time (queue), smarter raid deploy for the balance script, raid-loot vs campaign-loot economy check.
 2. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
 3. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
 4. Ambient music loop (procedural).
@@ -178,6 +185,17 @@ Iteration counter: **17** (next balance pass at iteration 20)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Raids (iteration 18, `raid-balance.ts`, avg stars / destruction over 10 seeds, two-side deploy):**
+
+| Army | Mudling Outpost | Bogscum Warren | Murkhorde Stronghold |
+|---|---|---|---|
+| Lodge 1 (10 space) | 1.8★ 69% | 0.4★ 41% | 0.0★ 36% |
+| Lodge 2 (20 space) | 3.0★ 100% | 2.0★ 76% | 0.2★ 47% |
+| Lodge 3 (30 space) | 3.0★ 100% | 2.9★ 98% | 0.9★ 59% |
+
+Each lodge level has a "fair" camp (~2★), and the Stronghold is a stretch goal. Before tuning: Outpost 2.8★ with
+Lodge 1 (trivial), Warren 0.9★ with Lodge 2.
+
 **Iteration 16 — Emberdeep finale** (`balance.ts 8–10`):
 13 Smoulder Fields 100/88/0 · 14 Obsidian Bridges 50/30/0 · 15 Heart of the Emberdeep 90/30/0 (expert/casual/novice).
 - First drafts were walls (0% for everyone by wave 4–5). Root causes found with per-leak logs: chained freezes

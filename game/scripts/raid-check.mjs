@@ -36,7 +36,7 @@ await page.waitForTimeout(300);
 await page.screenshot({ path: `screenshots/${name}-prep.png` });
 const army = await page.evaluate(() => JSON.parse(localStorage.getItem('grovewatch.save.v1')).army);
 console.log('army', JSON.stringify(army));
-await page.mouse.click(640 - 560 + 30 + 175 + 90, 380 + 150 + 44); // Attack easy camp
+await page.mouse.click(640 - 560 + 30 + 175 + 360 + 90, 380 + 150 + 44); // Attack medium camp
 await page.waitForTimeout(900);
 // Deploy from the left edge, then right edge.
 for (let k = 0; k < 8; k++) await page.mouse.click(70, 160 + k * 55);

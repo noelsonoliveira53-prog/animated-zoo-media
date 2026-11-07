@@ -13,6 +13,7 @@ export interface TroopDef {
   space: number; // army capacity used
   prefers: 'any' | 'defense';
   splash?: number;
+  wallMult?: number; // damage multiplier against walls
   flying?: boolean;
   lodge: number; // Ranger Lodge level required
   color: number;
@@ -62,6 +63,7 @@ export const TROOPS: Record<string, TroopDef> = {
     space: 2,
     prefers: 'defense',
     splash: 45,
+    wallMult: 3,
     lodge: 1,
     color: 0xb5651d,
   },
@@ -93,6 +95,7 @@ export interface CampBuildingDef {
   defense?: { damage: number; rate: number; range: number; splash?: number; hitsAir: boolean };
   loot?: { coins: number; glowsap: number };
   hq?: boolean;
+  wall?: boolean; // blocks ground troops; doesn't count toward destruction
   color: number;
 }
 
@@ -102,12 +105,13 @@ export const CAMP_BUILDINGS: Record<string, CampBuildingDef> = {
   mortar: { id: 'mortar', name: 'Bog Mortar', hp: 620, size: 2, defense: { damage: 34, rate: 0.45, range: 175, splash: 45, hitsAir: false }, color: 0x5a6b45 },
   pile: { id: 'pile', name: 'Loot Pile', hp: 380, size: 2, loot: { coins: 220, glowsap: 220 }, color: 0xb59a4e },
   hut: { id: 'hut', name: 'Mud Hut', hp: 280, size: 2, color: 0x7a5a3a },
+  wall: { id: 'wall', name: 'Stake Wall', hp: 220, size: 1, wall: true, color: 0x5a4632 },
 };
 
 export const RAID_TIME = 90; // seconds
 
 export const CAMP_TIERS = [
-  { name: 'Mudling Outpost', counts: { spit: 2, mortar: 1, pile: 2, hut: 3 } },
-  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 2, pile: 3, hut: 4 } },
-  { name: 'Murkhorde Stronghold', counts: { spit: 4, mortar: 3, pile: 4, hut: 5 } },
+  { name: 'Mudling Outpost', counts: { spit: 3, mortar: 1, pile: 2, hut: 3 }, walls: false },
+  { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, pile: 3, hut: 4 }, walls: true },
+  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, pile: 4, hut: 5 }, walls: true },
 ];

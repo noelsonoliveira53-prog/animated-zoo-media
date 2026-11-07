@@ -459,6 +459,23 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx, cy - 26, 24, 10);
         break;
       }
+      case 'wall': {
+        g.clear();
+        g.fillStyle(0x000000, 0.25);
+        g.fillRect(2, 30, 36, 8);
+        g.lineStyle(2, C.ink, 1);
+        for (let i = 0; i < 4; i++) {
+          const x = 4 + i * 9;
+          g.fillStyle(i % 2 ? 0x6a5236 : 0x5a4632, 1);
+          g.fillRect(x, 8, 7, 26);
+          g.strokeRect(x, 8, 7, 26);
+          g.fillStyle(0xd9c8a0, 1);
+          g.fillTriangle(x, 8, x + 7, 8, x + 3.5, 1);
+        }
+        g.lineStyle(3, 0x3a2a1a, 1);
+        g.lineBetween(2, 20, 38, 20);
+        break;
+      }
       case 'pile': {
         g.fillStyle(0x7a5a3a, 1);
         g.fillEllipse(cx, cy + 8, 60, 34);

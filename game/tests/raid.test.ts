@@ -98,3 +98,41 @@ describe('army training', () => {
     expect(trainTroop(v, {}, 'owl').ok).toBe(false); // needs lodge 2
   });
 });
+
+describe('camp walls', () => {
+  const walled = () => ({
+    tier: 0,
+    seed: 0,
+    buildings: [
+      { uid: 1, type: 'hut', col: 12, row: 6, hp: 280, maxHp: 280 },
+      { uid: 2, type: 'wall', col: 10, row: 6, hp: 320, maxHp: 320 },
+      { uid: 3, type: 'wall', col: 10, row: 7, hp: 320, maxHp: 320 },
+    ],
+  });
+  it('ground troops must break a wall in their way; walls do not count toward destruction', () => {
+    const sim = new RaidSim(walled(), { brawler: 1 });
+    const t = sim.deploy('brawler', { x: 300, y: CAMP_Y(7) })!;
+    run(sim, 6);
+    expect(t.wallUid).not.toBe(0);
+    expect(sim.camp.buildings[0].hp).toBe(280);
+    run(sim, 80);
+    expect(sim.destruction).toBe(1);
+  });
+  it('sappers tear walls down fast and owls fly over', () => {
+    const a = new RaidSim(walled(), { sapper: 1 });
+    a.deploy('sapper', { x: 300, y: CAMP_Y(7) });
+    run(a, 12);
+    expect(a.camp.buildings.filter((b) => b.type === 'wall' && b.hp <= 0).length).toBeGreaterThan(0);
+    const b = new RaidSim(walled(), { owl: 1 });
+    const owl = b.deploy('owl', { x: 300, y: CAMP_Y(7) })!;
+    run(b, 6);
+    expect(owl.wallUid).toBe(0);
+  });
+  it('higher-tier camps are walled', () => {
+    expect(generateCamp(4, 0).buildings.some((b) => b.type === 'wall')).toBe(false);
+    expect(generateCamp(4, 1).buildings.filter((b) => b.type === 'wall').length).toBeGreaterThan(8);
+  });
+});
+function CAMP_Y(row: number) {
+  return 92 + row * 40 + 20;
+}

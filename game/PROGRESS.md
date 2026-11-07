@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **32** (next balance pass at iteration 35)
+Iteration counter: **33** (next balance pass at iteration 35)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -268,11 +268,16 @@ Iteration counter: **32** (next balance pass at iteration 35)
   Fix: five pads moved to about 90 px, and the southern road lengthened (about 1280 → 1760 px) with a pad added. New
   reusable `scripts/level-shot.mjs <name> <levelIndex>` (builds every pad, plays 3 waves, screenshots). 117 tests.
 
+- [x] **Iter 33 — Duskcap level 19: Hollowroot Switchback.** One long road (about 3,440 px) that doubles back three
+  times. Pads between the rows sit about 100 px from both neighbouring roads (inside Veilstalker reveal range), plus an
+  outer row. 12 pads, 16 heavy waves mixing every Duskcap enemy. First tuning try worked; no layout fixes needed.
+  117 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 4: levels 19–20 (a Duskcap boss with phases for level 20).
+1. Region 4 finale: level 20 with a Duskcap boss (phases), finishing the Weald.
 2. Village: a free speed-up after a 3-star win (parked idea).
 3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
 
@@ -293,6 +298,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Hollowroot Switchback (iteration 33):** the long road makes it easy per HP point: 2.6 → 100/100/33, 3.2 → 100/100/0,
+3.8 → 83/67/0, 4.4 → 33/33/0. **3.7 → 88% / 75% / 0%** (8 seeds, picked). Its hpMult is the campaign's highest, but
+bounties scale with it, so coin income keeps pace.
 
 **Mirrorpool Glade (iteration 32):** first draft 0/0/0 at hpMult 2.2 and still only 83/100/0 at 1.2, so the problem
 was the layout. Pads beyond veil range made Veilstalkers unhittable on the vertical roads. After moving the pads, lengthening

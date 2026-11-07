@@ -24,6 +24,7 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'boss_grimtusk', name: 'Frost Breaker', text: 'Defeat Grimtusk the Frost Boar.', goal: 1, progress: (s) => stat(s, 'boss_grimtusk'), reward: { glowsap: 600 } },
   { id: 'boss_vulkhar', name: 'Wyrmsbane', text: 'Defeat Vulkhar the Ash Wyrm.', goal: 1, progress: (s) => stat(s, 'boss_vulkhar'), reward: { glowsap: 900 } },
   { id: 'boss_morrowcap', name: 'Weald Warden', text: 'Defeat Matriarch Morrowcap in the Duskcap Weald.', goal: 1, progress: (s) => stat(s, 'boss_morrowcap'), reward: { coins: 1200, glowsap: 1200 } },
+  { id: 'weald_stars', name: 'Mistwalker', text: 'Earn 3 stars on every Duskcap Weald level.', goal: 15, progress: (s) => ['l16', 'l17', 'l18', 'l19', 'l20'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 2000, glowsap: 2000 } },
   { id: 'campaign', name: 'Keeper of the Grove', text: 'Defeat Vulkhar and finish the story.', goal: 1, progress: (s) => ((s.stars[(LEVELS.find((l) => l.finale) ?? LEVELS[LEVELS.length - 1]).id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
   { id: 'kills500', name: 'Mud on the Boots', text: 'Defeat 500 Murkhorde critters.', goal: 500, progress: (s) => stat(s, 'kills'), reward: { coins: 300 } },
   { id: 'kills5000', name: 'Horde Breaker', text: 'Defeat 5,000 Murkhorde critters.', goal: 5000, progress: (s) => stat(s, 'kills'), reward: { coins: 1500, glowsap: 1000 } },

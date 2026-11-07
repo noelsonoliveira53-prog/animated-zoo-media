@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **34** (next iteration = 35 → POLISH + BALANCE pass)
+Iteration counter: **35** (next balance pass at iteration 40)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -281,13 +281,20 @@ Iteration counter: **34** (next iteration = 35 → POLISH + BALANCE pass)
   `level-shot.mjs` takes a boss id and drives it through its phases; new `scripts/enemy-sprites.mjs` renders sprites
   close up. 117 tests.
 
+- [x] **Iter 35 — POLISH + BALANCE (20 levels).** Full campaign re-run. Fixed two outliers: Frostpeak Summit hpMult
+  1.98 → 1.75 (the Frostfern boss had expert at 50%, below every later boss) and Mirrorpool Glade 1.8 → 1.65 (casual was
+  50%, below the next level; the novice now wins some runs). Economy re-check: with 20 levels, campaign + achievements
+  pay about 65k coins / 55k glowsap against a 109k / 99k full build-out. Polish: Achievements screen pages (new pure
+  `ui/paging.ts`, `<`/`>` buttons, "1/2" label), plus a 19th achievement **Mistwalker** (3★ on every Duskcap level).
+  `ach-check.mjs` clicks through the pages. 119 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Achievements screen paging: 18 entries fill the 2×9 grid exactly, so the next achievement needs a second page.
-2. Village: a free speed-up after a 3-star win (parked idea).
-3. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
+1. Village: a free speed-up after a 3-star win (parked idea).
+2. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
+3. Region 5 (levels 21–25), or an endless or challenge mode that reuses existing maps.
 
 ## Known Bugs
 - (none known)
@@ -306,6 +313,24 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Campaign (iteration 35, 6 seeds; changed rows use 8):**
+| # | Level | hpMult | Expert | Casual | Novice |
+|---|---|---|---|---|---|
+| 1–9 | Grovelands + Frostfern (unchanged) | — | 83–100 | 67–100 | 17–100 |
+| 10 | Frostpeak Summit (boss) | 1.98 → **1.75** | 50 → 88 | 50 → 75 | 17 → 13 |
+| 11 | Ashfall Gate | 2.04 | 100 | 83 | 33 |
+| 12 | Cinder Tunnels | 1.91 | 83 | 83 | 50 |
+| 13 | Smoulder Fields | 2.69 | 100 | 100 | 50 |
+| 14 | Obsidian Bridges | 1.00 | 67 | 83 | 0 |
+| 15 | Heart of the Emberdeep (finale) | 1.06 | 83 | 33 | 0 |
+| 16 | Duskcap Verge | 2.40 | 100 | 83 | 33 |
+| 17 | Glowspore Hollow | 2.20 | 83 | 100 | 0 |
+| 18 | Mirrorpool Glade | 1.80 → **1.65** | 100 → 100 | 50 → 88 | 0 → 25 |
+| 19 | Hollowroot Switchback | 3.70 | 100 | 83 | 0 |
+| 20 | Morrowcap's Throne (boss) | 2.40 | 100 | 33 | 0 |
+The Duskcap Weald is post-story endgame, so novice 0% on most of it is acceptable. Bosses now rank Murkmaw <
+Grimtusk ≈ Vulkhar ≈ Morrowcap for the expert.
 
 **Morrowcap's Throne (iteration 34, 8 seeds):** first draft at 2.4 → 63/63/0; leaks were mostly Thornhogs on the south
 road (wave 5 and wave 11). Thinned and split those waves → 2.4: 75/75/0. After replacing the top-edge pad: **2.4 →

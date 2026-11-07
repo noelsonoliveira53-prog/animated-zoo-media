@@ -24,7 +24,16 @@ console.log('saved', JSON.stringify(saved));
 await page.evaluate(() => window.__game.scene.getScene('Battle').scene.start('Achievements'));
 await page.waitForTimeout(600);
 await page.screenshot({ path: `screenshots/${name}-list.png` });
+// Page 2 via the ">" button (real click), then back to page 1 with "<".
+await page.mouse.click(1280 - 70, 44);
+await page.waitForTimeout(500);
+const page2 = await page.evaluate(() => window.__game.scene.getScene('Achievements').children.getByName('pageLabel')?.text);
+await page.screenshot({ path: `screenshots/${name}-page2.png` });
+await page.mouse.click(1280 - 210, 44);
+await page.waitForTimeout(500);
+const page1 = await page.evaluate(() => window.__game.scene.getScene('Achievements').children.getByName('pageLabel')?.text);
+console.log('pages', page2, page1);
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();
-process.exit(errors.length ? 1 : 0);
+process.exit(errors.length || page2 !== '2/2' || page1 !== '1/2' ? 1 : 0);

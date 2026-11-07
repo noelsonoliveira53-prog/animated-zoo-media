@@ -5,10 +5,20 @@ import { ACHIEVEMENTS } from '../data/achievements';
 import { loadSave } from '../systems/save';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { clampPage, pageCount, pageItems } from '../ui/paging';
+
+/** 2 columns × 9 rows fill the screen. */
+const PER_PAGE = 18;
 
 export class AchievementsScene extends Phaser.Scene {
   constructor() {
     super('Achievements');
+  }
+
+  private page = 0;
+
+  init(data?: { page?: number }): void {
+    this.page = clampPage(data?.page ?? 0, ACHIEVEMENTS.length, PER_PAGE);
   }
 
   create(): void {
@@ -22,10 +32,17 @@ export class AchievementsScene extends Phaser.Scene {
     this.add.text(GAME_W / 2, 44, `Achievements  ${done} / ${ACHIEVEMENTS.length}`, textStyle(34, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
 
+    const pages = pageCount(ACHIEVEMENTS.length, PER_PAGE);
+    if (pages > 1) {
+      new Button(this, GAME_W - 210, 44, '<', { width: 56, height: 50, fontSize: 24, color: C.sky, onClick: () => this.scene.restart({ page: (this.page + pages - 1) % pages }) });
+      new Button(this, GAME_W - 70, 44, '>', { width: 56, height: 50, fontSize: 24, color: C.sky, onClick: () => this.scene.restart({ page: (this.page + 1) % pages }) });
+      this.add.text(GAME_W - 140, 44, `${this.page + 1}/${pages}`, textStyle(20)).setOrigin(0.5).setName('pageLabel');
+    }
+
     const cols = 2;
     const cw = 590;
     const ch = 64;
-    ACHIEVEMENTS.forEach((a, i) => {
+    pageItems(ACHIEVEMENTS, this.page, PER_PAGE).forEach((a, i) => {
       const x = 40 + (i % cols) * (cw + 20);
       const y = 92 + Math.floor(i / cols) * (ch + 4);
       const unlocked = save.achievements.includes(a.id);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **169** (next balance pass at iteration 170)
+Iteration counter: **170** (next balance pass at iteration 175)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1212,6 +1212,11 @@ Iteration counter: **169** (next balance pass at iteration 170)
   - The level has 11 pads and two roads (one from the top, one from the left) that merge into a long winding run.
   - Field Guide tag, sprite, endless tier at wave 78, and one test (218 total). `scripts/level-shot.mjs` now unlocks every
     level. Screenshot `screenshots/169.png`.
+- **Iteration 170** (POLISH + BALANCE): you can now read the Honeycomb traits at a glance in battle.
+  - A Hexguard Wasp shows one amber dot per shield charge left above its head.
+  - A Waxback Beetle shows a glossy amber bar under its health that drains as spells melt the coat.
+  - Both show even at full health, so the player can plan before the first shot. Screenshot `screenshots/170.png`.
+  - Balance: a sweep of levels 86–92 and a hero comparison on 90–92; no changes needed (see Balance Notes). 218 tests.
 
 ## In Progress
 - (none)
@@ -1227,6 +1232,11 @@ Iteration counter: **169** (next balance pass at iteration 170)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 170**: sweep of levels 86–92 at 6 seeds (expert/casual/novice): 86 100/100/33, 87 100/100/0, 88 100/50/0,
+89 100/67/83, 90 (boss) 100/50/0, 91 100/100/50, 92 100/100/0.
+- Vinefall's 50% casual at 6 seeds was noise: at 12 seeds it reads 75% for hpMult 1.5, 1.55 and 1.6 alike, so it stays at 1.6.
+- Hero comparison on levels 90–92: every hero won 100% (average lives: Bramble 15.1, Ember 14.9, Hazel 14.2, Fen 14.0,
+  Wren 13.7, Sorrel 11.7). Sorrel is still the weakest but within range. No changes.
 **Iteration 169**: 92 Clovercomb Rise (12 seeds): hpMult 1.45 → 100/100/0, 1.55 → 100/100/0, 1.6 → 100/83/0, 1.75 → 92/67/0.
 **1.58 → 100/100/0** (kept; the second-level band is 100/92/0–17).
 **Iteration 168**: 91 Hivegate Meadow, 12 seeds (expert/casual/novice).

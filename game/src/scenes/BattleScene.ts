@@ -2266,6 +2266,30 @@ export class BattleScene extends Phaser.Scene {
         v.bar.fillRect(x, y, w * Math.max(0, e.hp / e.maxHp), 5);
         v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
+      if (e.def.parry && e.parryCharges > 0) {
+        // Hexguard Wasp: one little amber cell per shot its comb shield can still turn aside
+        const top = e.pos.y - e.def.radius - 24 - 34 * v.air;
+        for (let k = 0; k < e.parryCharges; k++) {
+          const px = e.pos.x + (k - (e.parryCharges - 1) / 2) * 8;
+          v.bar.fillStyle(C.ink, 0.85);
+          v.bar.fillCircle(px, top, 3.6);
+          v.bar.fillStyle(0xffc83a, 1);
+          v.bar.fillCircle(px, top, 2.4);
+        }
+        v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
+      }
+      if (e.def.wax && e.waxLeft > 0) {
+        // Waxback: a glossy amber band that drains as spells melt the coat
+        const w = Math.max(24, e.def.radius * 2.4);
+        const x = e.pos.x - w / 2;
+        const y = e.pos.y - e.def.radius - 14 - 34 * v.air + 7;
+        const full = Math.max(1, Math.round(e.maxHp * e.def.wax.melt));
+        v.bar.fillStyle(C.ink, 0.85);
+        v.bar.fillRect(x - 1, y, w + 2, 4);
+        v.bar.fillStyle(0xf0b840, 1);
+        v.bar.fillRect(x, y + 1, w * Math.min(1, e.waxLeft / full), 2);
+        v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
+      }
     }
     this.syncSoldiers();
     this.syncStrikes();

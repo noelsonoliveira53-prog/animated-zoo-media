@@ -1342,6 +1342,28 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'shaman': {
+        // reed hut with a bone-and-feather staff planted beside it and a glowing bowl of bog-brew
+        g.fillStyle(def.color, 1);
+        g.fillTriangle(cx - 28, cy + 22, cx + 22, cy + 22, cx - 3, cy - 30);
+        g.strokeTriangle(cx - 28, cy + 22, cx + 22, cy + 22, cx - 3, cy - 30);
+        g.lineStyle(1.5, 0x4a2a5a, 1);
+        for (const dx of [-14, -3, 8]) g.lineBetween(cx + dx * 0.3 - 3, cy - 22, cx + dx, cy + 20);
+        g.fillStyle(0x1a1020, 1);
+        g.fillEllipse(cx - 3, cy + 12, 14, 18);
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(cx + 26, cy + 24, cx + 26, cy - 26);
+        g.fillStyle(0xe8e0c8, 1);
+        g.fillCircle(cx + 26, cy - 28, 6);
+        g.strokeCircle(cx + 26, cy - 28, 6);
+        g.fillStyle(0x4fae7c, 1);
+        g.fillTriangle(cx + 30, cy - 22, cx + 40, cy - 14, cx + 30, cy - 14);
+        g.fillStyle(0x5a4632, 1);
+        g.fillEllipse(cx + 14, cy + 24, 18, 9);
+        g.fillStyle(0x9bff8a, 1);
+        g.fillEllipse(cx + 14, cy + 22, 12, 5);
+        break;
+      }
       default: {
         g.fillStyle(def.color, 1);
         g.fillEllipse(cx, cy + 4, 58, 44);

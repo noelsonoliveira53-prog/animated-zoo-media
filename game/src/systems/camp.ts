@@ -61,15 +61,17 @@ export function generateCamp(seed: number, tier: number): Camp {
   const cy = Math.floor(CAMP_ROWS / 2) - 1;
   add('totem', cx, cy);
   const counts = CAMP_TIERS[t].counts as Record<string, number>;
-  const order = ['mortar', 'spit', 'pile', 'hut'];
+  const order = ['mortar', 'spit', 'shaman', 'pile', 'hut'];
   for (const type of order) {
     const size = CAMP_BUILDINGS[type].size;
-    for (let n = 0; n < counts[type]; n++) {
+    for (let n = 0; n < (counts[type] ?? 0); n++) {
       // Defenses stay closer to the HQ; huts and piles may sit further out.
-      const spread = type === 'mortar' || type === 'spit' ? 5 : 8;
-      for (let tries = 0; tries < 200; tries++) {
-        const col = cx + Math.round((r() * 2 - 1) * spread);
-        const row = cy + Math.round((r() * 2 - 1) * (spread * 0.6));
+      const spread = type === 'mortar' || type === 'spit' || type === 'shaman' ? 5 : 8;
+      for (let tries = 0; tries < 300; tries++) {
+        // A crowded core: widen the search after a while so nothing silently fails to place.
+        const sp = tries < 150 ? spread : spread + 3;
+        const col = cx + Math.round((r() * 2 - 1) * sp);
+        const row = cy + Math.round((r() * 2 - 1) * (sp * 0.6));
         if (col < 3 || row < 1 || col + size > CAMP_COLS - 3 || row + size > CAMP_ROWS - 1) continue;
         if (occupied(col, row, size)) continue;
         add(type, col, row);

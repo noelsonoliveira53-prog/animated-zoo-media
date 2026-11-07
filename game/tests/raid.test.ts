@@ -154,3 +154,31 @@ function CAMP_Y(row: number) {
   return 92 + row * 40 + 20;
 }
 
+
+describe('Mire Shaman', () => {
+  it('pulses healing into damaged camp buildings in range (not far ones, not past full)', () => {
+    const m = CAMP_BUILDINGS.shaman.mend!;
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'shaman', col: 10, row: 6, hp: 420, maxHp: 420 },
+        { uid: 2, type: 'hut', col: 13, row: 6, hp: 100, maxHp: 280 },
+        { uid: 3, type: 'hut', col: 21, row: 1, hp: 100, maxHp: 280 },
+        { uid: 4, type: 'hut', col: 10, row: 9, hp: 275, maxHp: 280 },
+      ],
+    };
+    const sim = new RaidSim(camp, {});
+    run(sim, m.interval + 0.1);
+    expect(sim.camp.buildings[1].hp).toBeCloseTo(100 + m.amount);
+    expect(sim.camp.buildings[2].hp).toBe(100);
+    expect(sim.camp.buildings[3].hp).toBe(280);
+    expect(sim.drainEvents().some((e) => e.type === 'mend')).toBe(true);
+  });
+  it('Warrens and Strongholds field shamans; outposts do not', () => {
+    const n = (tier: number) => generateCamp(7, tier).buildings.filter((b) => b.type === 'shaman').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(2);
+  });
+});

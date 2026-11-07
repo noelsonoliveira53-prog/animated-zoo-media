@@ -216,6 +216,18 @@ export class RaidScene extends Phaser.Scene {
         }
         break;
       }
+      case 'mend': {
+        const c = buildingCenter(ev.from);
+        const ring = this.add.circle(c.x, c.y, 20, 0x9bff8a, 0.25).setDepth(5400);
+        this.tweens.add({ targets: ring, scale: 6, alpha: 0, duration: 500, onComplete: () => ring.destroy() });
+        for (const b of ev.healed) {
+          const bc = buildingCenter(b);
+          this.particles.setParticleTint(0x9bff8a);
+          this.particles.explode(4, bc.x, bc.y - 10);
+        }
+        sfx.trait('mend');
+        break;
+      }
       case 'troopDown': {
         const v = this.troopViews.get(ev.troop.uid);
         if (v) {

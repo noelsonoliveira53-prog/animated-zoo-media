@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **95** (next balance pass at iteration 100)
+Iteration counter: **96** (next balance pass at iteration 100)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -664,6 +664,14 @@ Iteration counter: **95** (next balance pass at iteration 100)
   first draft of this level, where the boss walked behind the portrait. 170 tests.
 - **Iteration 95** (polish + balance): the "Gulp!" feed text is throttled to once per 0.6s per eater, because Mawbloom
   surrounded by dying minions spammed it. Sweep results are in Balance Notes. 170 tests.
+- **Iteration 96** (raid variety): a new camp building, the **Mire Shaman**:
+  - A reed tent with a bone staff and a glowing brew bowl. Every 3s it heals every damaged camp building within 130px
+    (itself and walls included) by 30, scaled by camp tier.
+  - It shows a green pulse ring and sparkles on healed buildings, with a bubbling chime.
+  - Warrens field 1 (replacing a hut) and Strongholds 2, so raiders want to take the shaman out early.
+
+  Camp generation fix: a crowded core used to drop buildings silently. Placement now widens its search after 150
+  tries, and Strongholds get every building they list. 172 tests (shaman heal and placement).
 
 ## In Progress
 - (none)
@@ -679,6 +687,18 @@ Iteration counter: **95** (next balance pass at iteration 100)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 96** (raids, smart deploy, 10 seeds, avg stars / destruction):
+
+| Army | Outpost | Warren | Stronghold |
+|---|---|---|---|
+| Lodge 1 | 1.8 / 67% | 0.4 / 27% | 0.0 / 17% |
+| Lodge 2 | 3.0 / 100% | 1.9 / 75% (was 2.5 / 88%) | 0.6 / 37% |
+| Lodge 3 | 3.0 / 100% | 3.0 / 100% | 1.2 / 47% (was 1.5 / 51%) |
+
+The first shaman (45 heal every 2.5s, 150px, plus an extra building) dropped Lodge 2 vs Warren to 1.5 stars. It was
+toned down, and one Warren hut was traded for the shaman. Note: `scripts/raid-balance.ts` prints nothing under
+vite-node (argv check), so import `raidOnce` from a wrapper instead.
+
 **Iteration 95** (12 seeds, expert/casual/novice): 51 Windfall Rows 100/92/42 · 52 Grubfield Lane 83/100/17 ·
 53 Cider Press Crossing 100/83/8 · 54 Rotroot Hollow 83/67/0 · 55 Heart of the Orchard (boss) 75/50/0. The expert won
 every region finale in at least 3 of 4 seeds (all 11). No retunes.

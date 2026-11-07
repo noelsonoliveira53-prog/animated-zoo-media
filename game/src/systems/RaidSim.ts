@@ -23,6 +23,7 @@ export type RaidEvent =
   | { type: 'buildingHit'; building: CampBuilding; damage: number; by: Troop }
   | { type: 'destroyed'; building: CampBuilding; loot: { coins: number; glowsap: number } }
   | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding }
+  | { type: 'mend'; from: CampBuilding; healed: CampBuilding[] }
   | { type: 'end'; stars: number };
 
 export class RaidSim {
@@ -115,6 +116,7 @@ export class RaidSim {
     this.time += dt;
     for (const t of this.troops) if (t.alive) this.updateTroop(t, dt);
     this.updateDefenses(dt);
+    this.updateMenders(dt);
     this.checkEnd();
   }
 
@@ -238,6 +240,30 @@ export class RaidSim {
       } else {
         this.hurtTroop(best, dmg, c);
       }
+    }
+  }
+
+  /** Mire Shamans pulse healing into damaged camp buildings (walls included) around them, themselves too. */
+  private updateMenders(dt: number): void {
+    for (const b of this.camp.buildings) {
+      const m = CAMP_BUILDINGS[b.type].mend;
+      if (!m || b.hp <= 0) continue;
+      const cd = (this.cooldowns.get(b.uid) ?? m.interval) - dt;
+      if (cd > 0) {
+        this.cooldowns.set(b.uid, cd);
+        continue;
+      }
+      this.cooldowns.set(b.uid, m.interval);
+      const c = buildingCenter(b);
+      const healed: CampBuilding[] = [];
+      for (const o of this.camp.buildings) {
+        if (o.hp <= 0 || o.hp >= o.maxHp) continue;
+        const oc = buildingCenter(o);
+        if (Math.hypot(oc.x - c.x, oc.y - c.y) > m.range) continue;
+        o.hp = Math.min(o.maxHp, o.hp + m.amount * this.dmgMult);
+        healed.push(o);
+      }
+      if (healed.length) this.events.push({ type: 'mend', from: b, healed });
     }
   }
 

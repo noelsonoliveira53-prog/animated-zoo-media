@@ -1650,6 +1650,8 @@ export class BattleScene extends Phaser.Scene {
         this.lastGulp.set(key, this.time.now);
         sfx.trait('dodge');
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 28, 'Miss!', '#e8f0ff', 13);
+        const cv = this.enemyViews.get(ev.enemy.uid);
+        if (cv) cv.pulse = 0.18; // a quick flinch as the crane steps aside
         break;
       }
       case 'leech': {

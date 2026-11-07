@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **154** (next balance pass at iteration 155)
+Iteration counter: **155** (next balance pass at iteration 160)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1097,6 +1097,10 @@ Iteration counter: **154** (next balance pass at iteration 155)
   (2,480px from the left, 2,140px from the top) that merge mid-map, with the region's toughest waves before the boss.
   The first screenshot showed the top-right outpost sitting on the exit gate, so that pad moved left to (1110,260).
   Screenshot `screenshots/154.png`. 207 tests.
+- **Iteration 155** (POLISH + BALANCE): checked the Mistwreath as a whole (hero comparison on levels 81–84, the
+  finale guard, endless on two Mistwreath maps). No retunes were needed.
+  - Polish: a Silkcrane now flinches (a short scale pulse) when it dodges, tying the "Miss!" to the crane.
+  - Screenshot `screenshots/155.png`. 207 tests.
 
 ## In Progress
 - (none)
@@ -1113,6 +1117,16 @@ Iteration counter: **154** (next balance pass at iteration 155)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 155**:
+- Mistwreath per-level bands (iterations 151–154): 81 100/100/33 · 82 100/100/0 · 83 92/75/0 · 84 92/75/0.
+- Hero comparison (expert strategy, levels 81–84, 6 seeds each): Ember 100% · Wren 100% · Bramble 96% · Fen 96% ·
+  Sorrel 96%. A tight spread. The Mistwreath enemies counter tower types (phase and dodge waste single shots, and
+  the ward softens everything) rather than counter heroes.
+- Finale guard: all 16 region finales pass.
+- Endless: Lanternstep Rise 22/15/21 and Paper Lantern Climb 29/16/22 waves (expert / casual / novice). These run
+  longer than other maps because the region has no boss yet, so `endlessBosses` falls back to the rotation's first
+  (easiest) boss at wave 10. The finale (level 85) will fix this.
+
 **Iteration 154**: 84 Paper Lantern Climb: 100/100 at hpMult 1.7, 100/83 at 1.9, 100/67 at 2.0, 92/50 at 2.1, 67/17 at 2.3. **2.0 kept**; after
 the pad move it reads 92/75/0 (fourth-level band).
 

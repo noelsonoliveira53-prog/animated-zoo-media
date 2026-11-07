@@ -12,13 +12,14 @@ export const ENDLESS = {
   budgetPerWave: 70, // ... plus this much per wave
   maxGroupCount: 26,
   bossEvery: 10,
-  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap'],
+  bosses: ['murkmaw', 'grimtusk', 'vulkhar', 'morrowcap', 'saltjaw'],
   tiers: [
     { fromWave: 1, enemies: ['mudling', 'skitter', 'gloomwing', 'gnat'] },
     { fromWave: 4, enemies: ['shellback', 'bogmender', 'reedguard', 'wispling'] },
     { fromWave: 8, enemies: ['thornhog', 'splotch', 'puffcap', 'veilstalker'] },
     { fromWave: 12, enemies: ['bogbrute', 'rimewraith', 'cindermole', 'emberimp'] },
     { fromWave: 16, enemies: ['rootrager', 'ashhive'] },
+    { fromWave: 20, enemies: ['barnaclad', 'gullwing', 'reefwarden'] },
   ] as EndlessTier[],
   rewardPerWave: { coins: 12, glowsap: 12 }, // village payout per wave held
 };

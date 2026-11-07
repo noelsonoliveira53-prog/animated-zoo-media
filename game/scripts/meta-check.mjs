@@ -14,7 +14,7 @@ page.on('pageerror', (e) => errors.push(String(e)));
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 await page.addInitScript(() => {
   if (!localStorage.getItem('grovewatch.save.v1'))
-    localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: ['mudling', 'skitter', 'shellback', 'gloomwing', 'bogmender', 'murkmaw', 'rimewraith', 'veilstalker', 'rootrager', 'vulkhar'] }));
+    localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: ['mudling', 'skitter', 'shellback', 'gloomwing', 'bogmender', 'murkmaw', 'rimewraith', 'veilstalker', 'rootrager', 'vulkhar', 'saltjaw', 'reefwarden'] }));
 });
 await page.goto('http://localhost:4332/');
 await page.waitForTimeout(900);

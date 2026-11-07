@@ -1034,7 +1034,7 @@ export const LEVELS: LevelDef[] = [
     name: "Morrowcap's Throne",
     blurb: 'The heart of the Weald, where the oldest mushroom of all holds court. Bring every tower you have.',
     mapPos: { x: 1110, y: 210 },
-    hpMult: 2.4,
+    hpMult: 2.47,
     startCoins: 950,
     lives: 20,
     theme: DUSK,

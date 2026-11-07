@@ -294,3 +294,9 @@ describe('reefwarden', () => {
     expect(boss.shield).toBe(0);
   });
 });
+
+describe('field guide capacity', () => {
+  it('the enemy grid (6 × 5) still fits every enemy; add paging before going past 30', () => {
+    expect(Object.keys(ENEMIES).length).toBeLessThanOrEqual(30);
+  });
+});

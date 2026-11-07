@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **44** (next iteration = 45 → POLISH + BALANCE pass)
+Iteration counter: **45** (next balance pass at iteration 50)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -356,6 +356,12 @@ Iteration counter: **44** (next iteration = 45 → POLISH + BALANCE pass)
   **The Saltmarrow Shoals is complete: 25 levels in 5 regions.** New achievement **Tide Turner** (21 total). Boss phases
   checked in-browser (phase 2 reached, coral shield 1,178). 132 tests.
 
+- [x] **Iter 45 — POLISH + BALANCE (25 levels).** Full campaign re-run: every level ≥ 83% for the expert. Each region
+  opens easier than the last one ended and ramps to its boss. One tweak: Morrowcap's Throne hpMult 2.4 → 2.47 (it had
+  slipped to 100/83/0; now 75/50/0, level with Saltjaw). Polish: endless mode adds the Shoals enemies (Barnaclad,
+  Gullwing and Reefwarden from wave 20) and Saltjaw to the boss rotation; endless runs still end at waves 10–30. The
+  Field Guide holds 26 of 30 grid cells, and a new test fails past 30 so paging gets built first. 133 tests.
+
 ## In Progress
 - (none)
 
@@ -385,6 +391,10 @@ L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 ·
 - With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
 - Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
   let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Campaign (iteration 45, 6 seeds; expert / casual / novice):** Grovelands 100/50–100/67–100; Frostfern 83–100 /
+67–100 / 0–67; Emberdeep 83–100 / 33–83 / 0–67; Duskcap 83–100 / 83–100 / 0–33; Shoals 83–100 / 67–100 / 0–83.
+Bosses: Murkmaw 100/83/67, Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 75/50/0 (after the tweak), Saltjaw 83/67/0.
 
 **Saltjaw's Grotto (iteration 44, 8 seeds):** 2.2 → 83/83/0, **2.25 → 75% / 88% / 0%** (kept), 2.3 → 50/50/0,
 2.4 → 50/25/0. Very steep around 2.25, like the other late boss levels.

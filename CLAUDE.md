@@ -5,14 +5,19 @@ Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 ## Technology Stack
 
-- **Engine**: [CHOOSE: Godot 4 / Unity / Unreal Engine 5]
-- **Language**: [CHOOSE: GDScript / C# / C++ / Blueprint]
+- **Game**: Grovewatch: Sanctuary Siege, an original tower defense + village builder, in `game/`
+- **Engine**: Phaser 3.80.1 (browser, WebGL/Canvas). Not one of the framework's
+  Godot/Unity/Unreal presets, so `engine:` in `project.yaml` is intentionally unset
+- **Language**: TypeScript 5.6 (strict)
+- **Build System**: Vite 5 (`cd game && npm run build`, dev server `npm run dev`)
+- **Tests**: Vitest (`cd game && npm test`); headless Playwright checks in `game/scripts/*.mjs`
+- **Balance tools**: `npx vite-node scripts/balance.ts [runs] [levelIndex,...]` and friends (see `game/PROGRESS.md`)
+- **Assets**: procedural: textures drawn in `game/src/scenes/BootScene.ts`, WebAudio SFX/music in `game/src/systems/`
 - **Version Control**: Git with trunk-based development
-- **Build System**: [SPECIFY after choosing engine]
-- **Asset Pipeline**: [SPECIFY after choosing engine]
 
-> **Note**: Engine-specialist agents exist for Godot, Unity, and Unreal with
-> dedicated sub-specialists. Use the set matching your engine.
+> **Read `game/PROGRESS.md` first.** It is the design log, backlog and balance notes.
+> Code root is `game/src` (data in `src/data`, pure sim in `src/systems`, Phaser scenes in `src/scenes`);
+> keep game rules in the renderer-free sims (`BattleSim`, `RaidSim`) so they stay unit-testable.
 
 ## Project Structure
 
@@ -20,14 +25,9 @@ Each agent owns a specific domain, enforcing separation of concerns and quality.
 
 ## Engine Version Reference
 
-<!-- ENGINE-REFERENCE-IMPORT: the line below is engine-specific. /setup-engine
-     rewrites it to @docs/engine-reference/<engine>/VERSION.md for the chosen
-     engine, so a Unity or Unreal project stops loading the Godot reference every
-     session. It defaults to Godot (the template's example engine); skills that
-     need the pinned version read docs/engine-reference/<engine>/VERSION.md on
-     demand regardless of this import. -->
-@docs/engine-reference/godot/VERSION.md
-
+<!-- ENGINE-REFERENCE-IMPORT: Phaser is not a framework preset, so no
+     docs/engine-reference import is loaded. The pinned version is in
+     game/package.json (phaser 3.80.1). -->
 
 ## Technical Preferences
 

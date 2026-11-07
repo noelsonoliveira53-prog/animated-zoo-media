@@ -89,6 +89,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.revive) tags.push(`Raises a fallen ally every ${e.revive.interval}s at ${Math.round(e.revive.hpFrac * 100)}% health`);
         if (e.thorns) tags.push(`Thorns: melee attackers take ${Math.round(e.thorns * 100)}% of their damage back`);
         if (e.jam) tags.push(`Jams towers within ${e.jam.radius}px: ${Math.round(e.jam.slow * 100)}% slower fire`);
+        if (e.magnet) tags.push(`Magnet: pulls arrows and rocks aimed at allies within ${e.magnet.radius}px onto itself`);
         if (e.charge) tags.push(`Bolts at ×${e.charge.speedMult} speed for ${e.charge.duration}s when hit (every ${e.charge.cooldown}s)`);
         if (e.windborne) tags.push('Windborne: immune to every slow');
         if (e.regen) tags.push(`Regrows ${Math.round(e.regen.perSec * 100)}% health/s after ${e.regen.delay}s unhit`);

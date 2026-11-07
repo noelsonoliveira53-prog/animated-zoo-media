@@ -172,6 +172,9 @@ class Sfx {
       case 'charge': // steam hiss
         this.noise(0.2, 0.09, 5000);
         break;
+      case 'magnet': // metallic ping, bending down
+        this.tone(1400, 0.12, 'triangle', 0.05, 700);
+        break;
       case 'split': // wet pop
         this.tone(260, 0.08, 'sine', 0.07, 520);
         break;

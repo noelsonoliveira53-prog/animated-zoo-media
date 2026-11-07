@@ -163,6 +163,7 @@ export type SimEvent =
   | { type: 'shift'; enemy: Enemy; scales: boolean }
   | { type: 'thorns'; pos: Vec2 }
   | { type: 'charge'; enemy: Enemy }
+  | { type: 'magnet'; source: Enemy; from: Enemy }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -1348,6 +1349,15 @@ export class BattleSim {
         continue;
       }
       t.cooldown = 1 / (stats.fireRate * this.towerHaste(t) * this.towerJam(t));
+      if (t.def.damageType === 'physical') {
+        for (let k = 0; k < targets.length; k++) {
+          const m = this.magnetFor(t, targets[k], stats.range);
+          if (m) {
+            this.events.push({ type: 'magnet', source: m, from: targets[k] });
+            targets[k] = m;
+          }
+        }
+      }
       for (const target of targets) {
         const origin = { x: t.pos.x, y: t.pos.y - 18 };
         let aim = { ...target.pos };
@@ -1393,6 +1403,27 @@ export class BattleSim {
       if (Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= j.radius) f = Math.min(f, 1 - j.slow);
     }
     return f;
+  }
+
+  /**
+   * Lodestone Golems pull physical shots: if `target` stands within a golem's field (and the golem is in the tower's
+   * range and targetable), the shot goes to the golem instead. The nearest golem to the target wins.
+   */
+  magnetFor(t: Tower, target: Enemy, range: number): Enemy | null {
+    if (target.def.magnet) return null;
+    let best: Enemy | null = null;
+    let bestD = Infinity;
+    for (const e of this.enemies) {
+      const m = e.def.magnet;
+      if (!m || !e.alive || e.underground || e === target) continue;
+      if (this.airborne(e) && !t.def.hitsAir) continue;
+      const d = Math.hypot(e.pos.x - target.pos.x, e.pos.y - target.pos.y);
+      if (d > m.radius || d >= bestD) continue;
+      if (Math.hypot(e.pos.x - t.pos.x, e.pos.y - t.pos.y) > range) continue;
+      best = e;
+      bestD = d;
+    }
+    return best;
   }
 
   /** Steamrunners bolt for a moment after being hit. */

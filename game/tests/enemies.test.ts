@@ -498,4 +498,36 @@ describe('Brasswork enemies', () => {
     (sim as any).applyDamage(r, 1); // still cooling down: no second bolt yet
     expect(sim.chargeMult(r)).toBe(1);
   });
+
+  it('Lodestone Golem pulls physical shots aimed at nearby allies; magic shots and far allies are unaffected', () => {
+    const l2: LevelDef = { ...lvl, startCoins: 2000, slots: [{ x: 500, y: 160 }, { x: 520, y: 160 }] };
+    const sim = new BattleSim(l2, null);
+    const bow = sim.build(0, 'thornbow')!;
+    const orb = sim.build(1, 'glimmer')!;
+    const ally = sim.spawn('mudling', 0, 500);
+    const golem = sim.spawn('lodestone', 0, 440);
+    const range = sim.stats(bow).range;
+    expect(sim.magnetFor(bow, ally, range)).toBe(golem);
+    expect(sim.magnetFor(bow, golem, range)).toBeNull(); // shooting the golem itself is never redirected
+    golem.dist = 900;
+    golem.pos = { x: 900, y: 100 };
+    expect(sim.magnetFor(bow, ally, range)).toBeNull(); // ally is outside the field now
+    golem.dist = 440;
+    golem.pos = { x: 440, y: 100 };
+    sim.status = 'running';
+    sim.drainEvents();
+    bow.cooldown = 0;
+    orb.cooldown = 0;
+    ally.dist = 520;
+    ally.pos = { x: 520, y: 100 };
+    golem.dist = 470;
+    golem.pos = { x: 470, y: 100 };
+    // Both towers aim at the lead enemy (the mudling); only the physical bow gets pulled.
+    bow.target = 'first';
+    orb.target = 'first';
+    sim.update(1 / 60);
+    const shots = sim.drainEvents().filter((e) => e.type === 'shoot') as { type: 'shoot'; tower: { uid: number }; projectile: { targetUid: number } }[];
+    expect(shots.find((e) => e.tower.uid === bow.uid)!.projectile.targetUid).toBe(golem.uid);
+    expect(shots.find((e) => e.tower.uid === orb.uid)!.projectile.targetUid).toBe(ally.uid);
+  });
 });

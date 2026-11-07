@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **76** (next balance pass at iteration 80)
+Iteration counter: **77** (next balance pass at iteration 80)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -560,15 +560,25 @@ Iteration counter: **76** (next balance pass at iteration 80)
   pipes), a dark brass world-map style and a clockwork music theme. Endless adds both from wave 36. Fix from the
   screenshot: generic round trees picked up the brass/grey palette and looked like metal puffballs, so gears/pipes now
   fill 90% of the scenery. Browser check `scripts/brass-check.mjs`. 157 tests.
+- [x] **Iter 77 — Brasswork level 42: Piston Row + Lodestone Golem.** New enemy mechanic (41 enemies): **Lodestone Golem**
+  (`magnet`: physical tower shots aimed at any ally within 110 px are pulled onto the golem instead, if the golem is in the
+  tower's range; magic shots, soldiers, heroes and spells are unaffected). 520 hp, 65% armor, 5% MR, slow, 2 lives: a
+  living shield that wants magic towers or Hawkeye pierce. Pulsing red/blue field arcs, a silver streak on each pulled shot,
+  a metallic ping cue, Field Guide tag, endless tier (wave 36). Level 42 **Piston Row**: a long west road for the golems and a
+  short north road (light groups and flyers only) merging into a bent 650 px tail, 12 pads, 15 waves, hpMult 1.7.
+  Tuning: every first-draft leak was a fast pack on the short north road (the iteration 62 lesson again), so Galehounds moved
+  to the long road and north groups were trimmed 25%. A 13th pad over the north entry *lowered* the novice from 33% to 0%
+  (it lured the novice's few towers away from the golem road), so it was removed. Repo: the Game Studios framework is now
+  configured for this Phaser/TS game (`project.yaml`, root `CLAUDE.md`), and Phaser ships as its own cached chunk
+  (game code 1.8 MB → 357 kB). Screenshot `77.png`. 158 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 9 level 42 (+ a third Brasswork enemy).
-2. Region 9 levels 43–44.
-3. Region 9 finale (level 45) with a Brasswork boss.
-4. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
+1. Region 9 levels 43–44.
+2. Region 9 finale (level 45) with a Brasswork boss.
+3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
 ## Known Bugs
 - (none known)
@@ -578,6 +588,9 @@ Iteration counter: **76** (next balance pass at iteration 80)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 77:** 42 Piston Row 100/100/33 at hpMult 1.7 (12 seeds; expert keeps ~15/20 lives, casual ~18/20;
+1.85 → 100/100/8, 2.0 → 100/100/0). The novice's Thornbow-heavy build feeds the golems, which is the point of the level.
+
 **Iteration 75** (camp sweep 31–40, 12 seeds): 31 Windgap 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 ·
 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 · 36 Overgrown 100/92/33 · 37 Sunken 100/83/17 · 38 Serpent
 92/92/33 · 39 Idol Courtyard 92/58/33 · 40 Heart of the Ruins 92/50/0. Endless (3 seeds, waves held, expert/casual/

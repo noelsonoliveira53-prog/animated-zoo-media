@@ -1264,6 +1264,15 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'magnet': {
+        sfx.trait('magnet');
+        // a short silver streak from the ally the shot was meant for to the golem that stole it
+        const a = ev.from.pos;
+        const b = ev.source.pos;
+        const streak = this.add.line(0, 0, a.x, a.y - 10, b.x, b.y - 10, 0xe8eef4, 0.6).setOrigin(0).setLineWidth(2).setDepth(2400);
+        this.tweens.add({ targets: streak, alpha: 0, duration: 200, onComplete: () => streak.destroy() });
+        break;
+      }
       case 'charge': {
         sfx.trait('charge');
         this.particles.setParticleTint(0xf0f4f8);
@@ -1468,6 +1477,22 @@ export class BattleScene extends Phaser.Scene {
         const a0 = turn + (k / 12) * Math.PI * 2;
         this.jamG.beginPath();
         this.jamG.arc(e.pos.x, e.pos.y, r, a0, a0 + 0.3);
+        this.jamG.strokePath();
+      }
+    }
+    // Lodestone field: faint red/blue arcs pulsing inward toward the golem.
+    for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.magnet || e.underground) continue;
+      const r = e.def.magnet.radius;
+      const pulse = 1 - ((this.sim.time * 0.6) % 1);
+      for (const [k, col] of [[0, 0xe05a5a], [0.5, 0x5a8ae0]] as [number, number][]) {
+        const rr = r * (((pulse + k) % 1) * 0.7 + 0.3);
+        this.jamG.lineStyle(2, col, 0.35);
+        this.jamG.beginPath();
+        this.jamG.arc(e.pos.x, e.pos.y, rr, -Math.PI * 0.85, -Math.PI * 0.15);
+        this.jamG.strokePath();
+        this.jamG.beginPath();
+        this.jamG.arc(e.pos.x, e.pos.y, rr, Math.PI * 0.15, Math.PI * 0.85);
         this.jamG.strokePath();
       }
     }

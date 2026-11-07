@@ -355,6 +355,42 @@ export class BootScene extends Phaser.Scene {
         for (const [dx, dy] of [[-0.55, 0.35], [0.55, 0.35], [-0.55, -0.4], [0.5, -0.45]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.06);
         break;
       }
+      case 'lodestone': {
+        // brass golem: boxy riveted body on stubby legs, a red-and-silver horseshoe magnet glowing in its chest
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x5a4a2a, 1);
+        g.fillRect(cx - r * 0.6, cy + r * 0.45, r * 0.4, r * 0.55);
+        g.strokeRect(cx - r * 0.6, cy + r * 0.45, r * 0.4, r * 0.55);
+        g.fillRect(cx + r * 0.2, cy + r * 0.45, r * 0.4, r * 0.55);
+        g.strokeRect(cx + r * 0.2, cy + r * 0.45, r * 0.4, r * 0.55);
+        for (const s2 of [-1, 1]) {
+          g.fillStyle(0x7a5a2a, 1);
+          g.fillCircle(cx + s2 * r * 0.95, cy - r * 0.05, r * 0.28);
+          g.strokeCircle(cx + s2 * r * 0.95, cy - r * 0.05, r * 0.28);
+        }
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.8, cy - r * 0.7, r * 1.6, r * 1.25, r * 0.25);
+        g.strokeRoundedRect(cx - r * 0.8, cy - r * 0.7, r * 1.6, r * 1.25, r * 0.25);
+        // head: a small dome with a visor slit
+        g.fillStyle(0xc8963a, 1);
+        g.fillEllipse(cx, cy - r * 0.85, r * 0.9, r * 0.55);
+        g.strokeEllipse(cx, cy - r * 0.85, r * 0.9, r * 0.55);
+        g.fillStyle(0x7ad8ff, 1);
+        g.fillRect(cx - r * 0.28, cy - r * 0.92, r * 0.56, r * 0.12);
+        // horseshoe magnet: red body, silver tips, pointing down
+        g.lineStyle(r * 0.22, 0xd83a3a, 1);
+        g.beginPath();
+        g.arc(cx, cy - r * 0.15, r * 0.36, Math.PI, 0, false);
+        g.strokePath();
+        g.lineBetween(cx - r * 0.36, cy - r * 0.15, cx - r * 0.36, cy + r * 0.12);
+        g.lineBetween(cx + r * 0.36, cy - r * 0.15, cx + r * 0.36, cy + r * 0.12);
+        g.fillStyle(0xe8eef4, 1);
+        g.fillRect(cx - r * 0.47, cy + r * 0.12, r * 0.22, r * 0.18);
+        g.fillRect(cx + r * 0.25, cy + r * 0.12, r * 0.22, r * 0.18);
+        g.fillStyle(0x3a3a3a, 1);
+        for (const [dx, dy] of [[-0.65, -0.55], [0.65, -0.55], [-0.65, 0.4], [0.65, 0.4]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.06);
+        break;
+      }
       case 'ulmaroth': {
         // overgrown idol: a stone block body on stumpy legs, a carved face with glowing eyes, vines and moss draped over it
         g.lineStyle(3, C.ink, 1);

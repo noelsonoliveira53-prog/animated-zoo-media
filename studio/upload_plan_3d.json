@@ -98,7 +98,8 @@
   "format": "3d_singalong",
   "duration": 150.0,
   "replaces": "ZrW2mf-oVr4",
-  "video_id": "6wAVI5JdqCg"
+  "video_id": "6wAVI5JdqCg",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "gizmo/gz3d_ep01.mp4",
@@ -123,7 +124,8 @@
   "format": "3d_singalong",
   "duration": 186.4,
   "video_id": "QitKjetUYqU",
-  "scheduled_on": "2026-11-05"
+  "scheduled_on": "2026-11-05",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "fruity/fr3d_ep02.mp4",
@@ -174,7 +176,8 @@
   "format": "3d_singalong",
   "duration": 180.0,
   "video_id": "gPL299G_wt4",
-  "scheduled_on": "2026-11-06"
+  "scheduled_on": "2026-11-06",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "moon/mb3d_ep01.mp4",
@@ -251,7 +254,7 @@
   "duration": 142.4,
   "video_id": "D2F8cq-JVlI",
   "scheduled_on": "2026-11-07",
-  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "gizmo/gz3d_ep02.mp4",
@@ -276,7 +279,8 @@
   "format": "3d_singalong",
   "duration": 165.0,
   "video_id": "cbOHkcFNEnI",
-  "scheduled_on": "2026-11-06"
+  "scheduled_on": "2026-11-06",
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "fruity/fr3d_ep03.mp4",
@@ -328,7 +332,7 @@
   "duration": 170.0,
   "video_id": "yN64Pm3CugU",
   "scheduled_on": "2026-11-07",
-  "thumb_note": "custom thumbnail blocked: channel not phone-verified"
+  "thumb_note": "custom thumbnail set 2026-11-07 after phone verification"
  },
  {
   "file": "moon/mb3d_ep02.mp4",

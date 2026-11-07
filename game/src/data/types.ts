@@ -42,6 +42,7 @@ export interface EnemyDef {
   gust?: { interval: number; radius: number; distance: number }; // flyer: shoves nearby free walkers ahead on a timer
   shift?: { interval: number; armor: number; magicResist: number }; // swaps to this armor/MR (and back) every interval s
   revive?: { interval: number; radius: number; window: number; hpFrac: number }; // raises a fallen ally (died within `window` s, in radius)
+  thorns?: number; // melee attackers (soldiers, heroes) take this fraction of the damage they deal back
   windborne?: boolean; // shrugs off every slow (frost, snares, quakes, hero skills)
   regen?: { perSec: number; delay: number }; // heals perSec × maxHp each second once it hasn't been hit for `delay` s
   boss?: boolean;

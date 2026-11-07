@@ -1231,6 +1231,14 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       }
+      case 'thorns': {
+        // a few green thorn sparks on whoever just hit a thorny enemy
+        if (Math.random() < 0.5) {
+          this.particles.setParticleTint(0x7ac84a);
+          this.particles.explode(3, ev.pos.x, ev.pos.y - 10);
+        }
+        break;
+      }
       case 'shift': {
         // hide flips: a puff in the new colour (green scales vs red skin)
         this.particles.setParticleTint(ev.scales ? 0x7ad85a : 0xe8604a);

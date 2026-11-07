@@ -225,6 +225,34 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'bramblehide': {
+        // vine boar: heavy body, tusks, thorn spikes all along the back, green vines wrapped round
+        g.lineStyle(2.5, C.ink, 1);
+        for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 0.95);
+        g.fillStyle(0x4a8a3a, 1);
+        for (let k = 0; k < 6; k++) {
+          const tx = cx - r * 0.85 + k * r * 0.34;
+          g.fillTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
+          g.strokeTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.1);
+        g.strokeEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.1);
+        g.lineStyle(3, 0x4a8a3a, 1);
+        g.lineBetween(cx - r * 0.3, cy - r * 0.5, cx + r * 0.1, cy + r * 0.5);
+        g.lineBetween(cx + r * 0.4, cy - r * 0.5, cx + r * 0.7, cy + r * 0.45);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.85, cy + r * 0.05, r * 0.45);
+        g.strokeCircle(cx - r * 0.85, cy + r * 0.05, r * 0.45);
+        g.fillStyle(0x9a8a6a, 1);
+        g.fillEllipse(cx - r * 1.15, cy + r * 0.15, r * 0.3, r * 0.25);
+        g.fillStyle(0xf8f0d8, 1);
+        g.fillTriangle(cx - r * 1.05, cy + r * 0.3, cx - r * 0.95, cy + r * 0.3, cx - r * 1.1, cy - r * 0.05);
+        g.fillStyle(0xff5d4a, 1);
+        g.fillCircle(cx - r * 0.95, cy - r * 0.1, r * 0.08);
+        break;
+      }
       case 'shiftscale': {
         // chameleon: low body, curled tail, dorsal spines, half the hide already turning red, a big swivel eye
         g.lineStyle(2.5, C.ink, 1);

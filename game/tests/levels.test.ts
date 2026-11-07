@@ -63,6 +63,20 @@ describe('HUD clearance', () => {
       }
     }
   });
+
+  it('towers built near the top stay clear of the stats panel and the top-right buttons', () => {
+    // A built tower rises about 75 px above its pad centre.
+    const panels = [
+      { name: 'stats panel', x0: 12, x1: 452, y1: 64 },
+      { name: 'top-right buttons', x0: 836, x1: 1262, y1: 72 },
+    ];
+    for (const l of LEVELS)
+      for (const s of l.slots)
+        for (const p of panels) {
+          const hidden = s.y - 75 < p.y1 && s.x + 32 > p.x0 && s.x - 32 < p.x1;
+          expect(hidden, `${l.name} pad (${s.x},${s.y}) tower under the ${p.name}`).toBe(false);
+        }
+  });
 });
 
 describe('gate clearance', () => {

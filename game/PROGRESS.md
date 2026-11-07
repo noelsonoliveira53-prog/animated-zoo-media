@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **68** (next balance pass at iteration 70)
+Iteration counter: **69** (next balance pass at iteration 70)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -513,12 +513,20 @@ Iteration counter: **68** (next balance pass at iteration 70)
   1.4), a `RUINS` theme (palms, vine-wrapped pillars), a jungle world-map style and a hand-drum music theme. Endless adds
   both from wave 32. First draft lost to the short north road again (armored packs moved to the long road).
   `sim.res()` is now public. Browser check `scripts/ruins-check.mjs`. 153 tests.
+- [x] **Iter 69 — Ruins level 37 + Bramblehide.** New enemy **Bramblehide** (37 enemies): a vine-grown temple boar with
+  `thorns` 0.5: soldiers and heroes that hit it in melee take half the damage they deal back (green thorn sparks);
+  ranged attacks are safe. Level 37 **Sunken Stairs**: west + south roads of similar length (760 / 640 px to the merge)
+  meeting on a causeway, 13 pads, 15 waves, hpMult 1.5; early Shiftscale packs trimmed (casual died at wave 7).
+  **Fix from the screenshot:** towers on two pads hid behind the stats panel / poked into the speed buttons. New test:
+  a tower (about 75 px tall) must clear the stats panel and the top-right buttons. It caught 8 pads in 7 levels
+  (Mossgate Meadow, Gloomfen Edge, Glacier Hold, Windgap Ledge, Updraft Stair, Three Winds ×2, Sunken Stairs), all
+  moved down or sideways and re-checked for road clearance. 155 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 8 level 37 (+ a third Ruins enemy).
+1. Iter 70 balance pass (re-check Updraft Stair and Three Winds after their pad moves).
 2. Region 8 levels 38–39.
 3. Region 8 finale (level 40) with a Ruins boss.
 4. Village: drag-to-pan on small phone screens.
@@ -556,6 +564,8 @@ first Zephyrax (hp 2900, short landings) was unbeatable (0/8/25 at 1.6); now hp 
 of every 7.5 s. Hawkeye archers are the counter: with Volley the expert won only 50% at 1.72.
 **Iteration 68:** 36 Overgrown Causeway 100/100/33 at hpMult 1.4 (first draft 67/83/0 at 1.5 from armored packs on
 the short north road; after the fix 1.5 → 100/100/8, 1.7 → 100/50/0).
+**Iteration 69:** 37 Sunken Stairs 100/92/17 at hpMult 1.5 (first draft 92/58/0 at 1.4). After the HUD pad moves:
+Updraft Stair 100/75/42 (was 100/83/42), Three Winds 92/67/50 (was 92/58/33); others unchanged.
 
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·

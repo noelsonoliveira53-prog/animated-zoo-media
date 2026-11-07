@@ -159,6 +159,7 @@ export type SimEvent =
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
   | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
   | { type: 'shift'; enemy: Enemy; scales: boolean }
+  | { type: 'thorns'; pos: Vec2 }
   | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
@@ -494,7 +495,12 @@ export class BattleSim {
           h.attackCd = 1 / atk.rate;
           h.facing = target.pos.x < h.pos.x ? -1 : 1;
           this.events.push({ type: 'melee', pos: { ...target.pos } });
-          this.applyDamage(target, computeDamage(this.heroHitDamage(), atk.type, this.res(target)));
+          const dealt = computeDamage(this.heroHitDamage(), atk.type, this.res(target));
+          this.applyDamage(target, dealt);
+          if (target.def.thorns) {
+            this.hurtHero(dealt * target.def.thorns);
+            this.events.push({ type: 'thorns', pos: { ...h.pos } });
+          }
         }
         return;
       }
@@ -1203,7 +1209,12 @@ export class BattleSim {
           if (s.attackCd <= 0) {
             s.attackCd = 1 / stats.attackRate;
             this.events.push({ type: 'melee', pos: { ...target.pos } });
-            this.applyDamage(target, computeDamage(stats.damage, 'physical', this.res(target)));
+            const dealt = computeDamage(stats.damage, 'physical', this.res(target));
+            this.applyDamage(target, dealt);
+            if (target.def.thorns) {
+              this.hurtSoldier(s, dealt * target.def.thorns);
+              this.events.push({ type: 'thorns', pos: { ...s.pos } });
+            }
           }
         }
       } else {

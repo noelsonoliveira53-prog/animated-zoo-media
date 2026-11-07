@@ -442,3 +442,29 @@ describe('Verdant Ruins enemies', () => {
     expect(sim.enemies.filter((e) => e.alive && e.def.id === 'mudling').length).toBe(0); // never raised twice
   });
 });
+
+describe('Bramblehide thorns', () => {
+  it('hurts a melee hero that hits it, but not ranged attacks', () => {
+    const l = { ...lvl, slots: [] } as LevelDef;
+    const sim = new BattleSim(l, 'bramble');
+    sim.status = 'running';
+    const h = sim.hero!;
+    h.pos = { x: 400, y: 100 };
+    h.dest = null;
+    const boar = sim.spawn('bramblehide', 0, 396);
+    boar.def = { ...boar.def, speed: 0, attack: 0 };
+    for (let i = 0; i < 120; i++) sim.update(1 / 60);
+    expect(boar.hp).toBeLessThan(boar.maxHp);
+    expect(h.hp).toBeLessThan(h.maxHp);
+    const sim2 = new BattleSim(l, 'fen');
+    sim2.status = 'running';
+    const h2 = sim2.hero!;
+    h2.pos = { x: 400, y: 160 };
+    h2.dest = null;
+    const boar2 = sim2.spawn('bramblehide', 0, 420);
+    boar2.def = { ...boar2.def, speed: 0, attack: 0 };
+    for (let i = 0; i < 120; i++) sim2.update(1 / 60);
+    expect(boar2.hp).toBeLessThan(boar2.maxHp);
+    expect(h2.hp).toBe(h2.maxHp);
+  });
+});

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **139** (next balance pass at iteration 140)
+Iteration counter: **140** (next balance pass at iteration 145)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -976,6 +976,11 @@ Iteration counter: **139** (next balance pass at iteration 140)
   - Fix: the stats, the "Phases" heading and the phase list now shrink together as a block when they would run past
     the panel. Desktop pages are unchanged.
   - Screenshots `screenshots/139.png` (boss page) and `139-ach.png`. 193 tests.
+- **Iteration 140** (POLISH + BALANCE): checked the Amberwood as a whole with the hero comparison (all five levels)
+  and endless mode. No retunes were needed.
+  - Polish: a Barkdrum now visibly thumps (a short scale pulse) when it beats its drum, so players can see which
+    beetle is speeding up the pack.
+  - Screenshot `screenshots/140.png`. 193 tests.
 
 ## In Progress
 - (none)
@@ -990,6 +995,16 @@ Iteration counter: **139** (next balance pass at iteration 140)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 140**:
+- Amberwood per-level bands (from iterations 133–138): 76 100/100/33 · 77 100/100/17 · 78 100/75/0 · 79 92/75/0 ·
+  80 75/42/0 (boss).
+- Hero comparison (expert strategy, levels 76–80, 6 seeds each): Fen 97% · Ember 97% · Wren 97% · Sorrel 77% ·
+  Bramble 70%. The Amberwood favours ranged and magic heroes because Sapstoats heal off melee blockers and Turnleafs
+  punish one-type damage. That's the intended counterplay, so no change; the overall spread stays healthy.
+- Endless (`scripts/endless-balance.ts`): expert, casual and novice hold 12–19 waves (Mossgate 12 · Murkmaw's Den
+  12–18 · Frostpeak 16–19 · Duskcap 15–18), the same as earlier passes. The new wave-64/66 tiers and Rustantler only
+  matter for long runs.
+
 **Iteration 138**: 80 Heart of the Amberwood: 8/0/0 at hpMult 2.0 and 67/17 at 1.7 (leaks: Sapstoats, Turnleafs, Glareflies),
 92/58 at 1.55, and **1.6 → 75/42/0** (kept, boss band). Finale guard: the expert won 3 of 4 seeds.
 

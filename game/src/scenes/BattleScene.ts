@@ -30,6 +30,7 @@ interface EnemyView {
   shadow: Phaser.GameObjects.Ellipse | null;
   mound: Phaser.GameObjects.Image | null;
   air: number; // 0 = on the ground, 1 = flying height (eases for swooping flyers)
+  pulse: number; // brief scale bump (a Barkdrum thumping its drum), decays to 0
 }
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
@@ -1597,6 +1598,8 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'drum': {
         sfx.trait('drum');
+        const dv = this.enemyViews.get(ev.enemy.uid);
+        if (dv) dv.pulse = 0.3;
         // the beat spreads as a warm ring; hastened critters flash
         const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, 16).setStrokeStyle(4, 0xe8a03a, 0.85).setDepth(2400);
         this.tweens.add({ targets: ring, radius: ev.radius, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
@@ -1920,7 +1923,7 @@ export class BattleScene extends Phaser.Scene {
     const bar = this.add.graphics();
     const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
     const mound = e.def.burrow ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0 });
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0 });
   }
 
   private killView(uid: number, v: EnemyView): void {
@@ -1976,7 +1979,8 @@ export class BattleScene extends Phaser.Scene {
       v.air = Phaser.Math.Clamp(v.air + (airborne ? dt : -dt) * 3, 0, 1);
       const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * Math.abs(Math.sin(v.bob)) * 4;
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
-      const swell = 1 + e.fed * 0.08; // fed Gorgegrubs visibly bulk up
+      v.pulse = Math.max(0, v.pulse - dt * 1.6);
+      const swell = (1 + e.fed * 0.08) * (1 + v.pulse); // fed Gorgegrubs visibly bulk up; drummers thump
       if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
       else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
       if (e.anchored) v.sprite.setTint(0xa8b4c4); // iron-grey while an Ironkeel holds anchor

@@ -3474,7 +3474,7 @@ export const LEVELS: LevelDef[] = [
     name: 'Powder Row',
     blurb: 'The flotilla keeps its powder on a line of supply barges, and the deck monkeys run kegs between them all day. One stray spark and the whole row goes up.',
     mapPos: { x: 460, y: 430 },
-    hpMult: 2.85,
+    hpMult: 2.95,
     startCoins: 1000,
     lives: 20,
     theme: FLOTILLA,

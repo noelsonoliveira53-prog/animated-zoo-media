@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **129** (next balance pass at iteration 130)
+Iteration counter: **130** (next balance pass at iteration 135)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -906,14 +906,18 @@ Iteration counter: **129** (next balance pass at iteration 130)
   Field Guide at 68 enemies over 3 pages, including boss phases) at phone size (740×360 touch). All readable, no
   overlaps, no console errors; nothing needed fixing. Housekeeping note: `screenshots/` is about 54MB across 400
   images. 189 tests.
+- **Iteration 130** (POLISH + BALANCE): swept all 75 levels with 12 seeds per strategy and re-ran the finale guard.
+  Powder Row was a touch easy for a second level, so its enemy health went from 2.85× to 2.95×. Polish: battle
+  decorations (trees, barrels, buoys, crystals) no longer spawn under the hero portrait or the spell buttons.
+  Screenshot `screenshots/130.png`. 189 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Iter 105 balance pass.
-2. Region 16, or a breather (raid or village variety, more phone QA).
-3. Field Guide holds 30 enemies per page and has 54 now. The next region pushes it past 60, so check paging then.
+1. Region 16, or a breather (raid or village variety, more phone QA).
+2. Field Guide holds 30 enemies per page and has 68 now (3 pages). Region 16 would still fit on page 3.
+3. Bramble and Wren trail the other heroes (75% vs 79–90% in the iteration 125 comparison); consider a small buff.
 
 ## Known Bugs
 - (none known)
@@ -923,6 +927,17 @@ Iteration counter: **129** (next balance pass at iteration 130)
 - Village: "finish now" doesn't exist (no premium currency on purpose); maybe a free speed-up after a 3-star win.
 
 ## Balance Notes
+**Iteration 130** (full sweep, 12 seeds; expert / casual / novice):
+- Levels 0–57 were all in band; spot values: 4 Murkmaw's Den 92/58/83 · 29 Kaleidrax's Spire 83/42/58 ·
+  54 Heart of the Orchard 75/50/0.
+- 58–74: 58 Stormwatch Barrows 83/75/0 · 59 Thunderhead Crown 83/33/0 · 60 Mirage Flats 100/100/42 ·
+  61 Kilnstone Wash 100/92/0 · 62 Last Oasis 100/75/0 · 63 Scorpion Steps 100/67/8 · 64 Wyrmsand Deep 75/50/0 ·
+  65 Coral Shallows 100/92/33 · 66 Inkwater Cove 100/92/0 · 67 Shellbreak Reef 100/75/0 · 68 Tidewrack Lagoon
+  100/67/0 · 69 Crown of the Reef 92/42/0 · 70 Blackwake Moorings 100/100/42 · 72 Gunwale Gauntlet 100/83/0 ·
+  73 Flagship Wake 83/83/8 · 74 The Black Flagship 83/58/0.
+- 71 Powder Row was 100/100/17 at hpMult 2.85, 100/100/17 at 2.9, 83/75/0 at 3.05, and **2.95 → 92/92/8** (kept).
+- Finale guard (4 seeds): the expert won every region finale in at least 3 of 4 seeds.
+
 **Iteration 127**: 75 The Black Flagship went 100/100/33 at hpMult 2.0, 100/100/0 at 2.5, 92/92 at 2.65, 83/67 at 2.72, 67/75 at 2.8, and **2.76 → 83/58/0** (kept; boss band, finale guard passes).
 
 **Iteration 126**: 74 Flagship Wake was 42/50/0 at hpMult 2.2, with 2-life Ironkeels the main leak. 1.7 gave 100/100/8, 1.97 gave 67/83 (noisy), and **1.9 → 83/83/8** (kept, a fourth-level ramp).

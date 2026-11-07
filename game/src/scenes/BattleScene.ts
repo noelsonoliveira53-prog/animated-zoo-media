@@ -327,6 +327,8 @@ export class BattleScene extends Phaser.Scene {
     for (let i = 0; i < 60; i++) {
       const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(90, GAME_H - 10) };
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
+      // keep clutter out from under the hero portrait and the spell buttons
+      if (p.y > 600 && (p.x < 230 || p.x > 980)) continue;
       if (this.level.slots.some((s) => Math.hypot(s.x - p.x, s.y - p.y) < 60)) continue;
       if ((this.level.ponds ?? []).some((pd) => Math.hypot((p.x - pd.x) / (pd.w / 2 + 20), (p.y - pd.y) / (pd.h / 2 + 20)) < 1)) continue;
       if (this.level.theme.crystals && rnd.frac() < 0.5) {

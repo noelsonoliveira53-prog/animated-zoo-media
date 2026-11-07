@@ -179,7 +179,7 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
   const ranked = rankSlots(sim);
   // Jitter: swap a few neighbours in the ranking so runs differ.
   for (let i = 0; i < ranked.length - 1; i++) if (rnd() < 0.35) [ranked[i], ranked[i + 1]] = [ranked[i + 1], ranked[i]];
-  const mix = strat.mix[0] === 'adaptive' ? adaptiveMix(level, strat.hero ? HEROES[strat.hero].attack.hitsAir : true) : strat.mix;
+  const mix = strat.mix[0] === 'adaptive' ? adaptiveMix(level, strat.hero ? HEROES[strat.hero].attack.hitsAir || !!HEROES[strat.hero].toss : true) : strat.mix;
   const usable = ranked.slice(0, Math.max(1, Math.round(ranked.length * strat.slotFraction)));
   let rotation = Math.floor(rnd() * mix.length);
   let think = 0;

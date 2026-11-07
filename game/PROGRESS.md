@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **53** (next balance pass at iteration 55)
+Iteration counter: **54** (next iteration = 55 → POLISH + BALANCE pass)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -420,12 +420,20 @@ Iteration counter: **53** (next balance pass at iteration 55)
   on the densest clump of walkers. New `scripts/snare-check.mjs` (real clicks: arm the button, tap a crowd, 5 walkers
   rooted, the flyer not). 138 tests.
 
+- [x] **Iter 54 — Bramble rework (part 1): Shield Toss.** New optional hero attack `toss`: every 2.5 s Bramble flings
+  his bark shield at the nearest flyer within 160 px (34 dmg × hero level multiplier, hits air), even while he brawls on
+  the ground. That gives the melee tank his first answer to flyers. Shown in his blurb and on the Field Guide hero page.
+  The autoplayer now counts a toss as hitting air when choosing anti-air. Expert wins with Bramble on hard levels go from
+  35% to about 40–45%; Heart of the Emberdeep 1/6 → 3/6. Icicle Crossing stays his worst map (two crossing roads that
+  only a ranged hero can cover from the crossing). New `scripts/toss-check.mjs`. 139 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Bramble rework: still the weakest hero on late, flyer-heavy levels, and the strongest in endless (holds about 30 waves
-   vs 16). Give him a late-game answer to flyers (for example a thrown shield that hits air) and check endless again.
+1. Bramble rework (part 2): still the weakest hero on maps where enemies split across lanes (Icicle Crossing 1/6) and
+   the strongest in endless (about 30 waves vs 16). Ideas: block two enemies at once at higher levels; lower regen in
+   endless.
 2. Endless follow-ups: the autoplayer holds more waves as the novice than the expert (it was tuned for fixed-length
    levels); also endless-only modifiers (for example a random daily mutator).
 3. Spell polish: show each spell's text on long-press/hover (the bar only shows names), and add a spell section to

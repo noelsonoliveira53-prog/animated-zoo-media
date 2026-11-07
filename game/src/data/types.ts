@@ -155,6 +155,7 @@ export interface HeroDef {
   armor: number;
   regen: number; // hp/s when not fighting
   melee: boolean; // melee heroes block an enemy like soldiers do
+  toss?: { name: string; damage: number; range: number; interval: number }; // ranged throw at flyers (melee heroes' answer to air)
   attack: { damage: number; type: DamageType; range: number; rate: number; hitsAir: boolean; projectileSpeed: number };
   respawn: number;
   passive: HeroPassive;

@@ -119,3 +119,21 @@ describe('Wren', () => {
     expect(nearPay).toBe(Math.round(farPay * (1 + (HEROES.wren.passive as { bonus: number }).bonus)));
   });
 });
+
+describe('Bramble shield toss', () => {
+  it('throws at flyers in range on its own timer, and never at walkers', () => {
+    const lvl3 = { id: 'b', name: 'B', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 0, lives: 20, theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 },
+      paths: [[{ x: 0, y: 300 }, { x: 2000, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }] } as LevelDef;
+    const sim = new BattleSim(lvl3, 'bramble');
+    sim.status = 'running';
+    sim.hero!.pos = { x: 400, y: 300 };
+    const fly = sim.spawn('gloomwing', 0, 480);
+    fly.def = { ...fly.def, speed: 0 };
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(fly.hp).toBeLessThan(fly.maxHp);
+    expect(sim.hero!.tossCd).toBeGreaterThan(0);
+    const sim2 = new BattleSim(lvl3, 'fen');
+    expect(HEROES.fen.toss).toBeUndefined();
+    expect(sim2.hero!.tossCd).toBe(0);
+  });
+});

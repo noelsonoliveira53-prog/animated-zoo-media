@@ -82,6 +82,7 @@ export interface Hero {
   xp: number;
   attackCd: number;
   skillCd: number;
+  tossCd: number;
   targetUid: number;
   facing: number; // -1 left, 1 right
 }
@@ -168,6 +169,7 @@ export const FIRST_WAVE_GAP = 25;
 const SOLDIER_SPEED = 110;
 /** After thawing, a tower can't be re-frozen for this long, so packs of chillers can't lock it forever. */
 const THAW_IMMUNITY = 3;
+const C_SHIELD = 0xc9a66b; // Bramble's bark shield
 
 /** Supply coins the sanctuary sends at the start of each wave (index 0-based). Wave 1 gets none. */
 export function waveIncome(index: number): number {
@@ -241,6 +243,7 @@ export class BattleSim {
         xp: 0,
         attackCd: 0,
         skillCd: 0,
+        tossCd: 0,
         targetUid: 0,
         facing: -1,
       };
@@ -442,6 +445,7 @@ export class BattleSim {
     }
     const atk = h.def.attack;
     h.attackCd -= dt;
+    if (h.def.toss) this.heroToss(h, dt);
     if (h.def.melee) {
       let target = h.targetUid ? this.enemies.find((e) => e.uid === h.targetUid && e.alive) : undefined;
       if (target && Math.hypot(target.pos.x - h.pos.x, target.pos.y - h.pos.y) > 120) {
@@ -938,6 +942,46 @@ export class BattleSim {
       e.blockedBy = 0;
     }
     this.events.push({ type: 'blink', enemy: e, from, to: { ...e.pos } });
+  }
+
+  /** Bramble's Shield Toss: a ranged throw at the nearest flyer, on its own timer (works while he brawls). */
+  private heroToss(h: Hero, dt: number): void {
+    const t = h.def.toss!;
+    h.tossCd -= dt;
+    if (h.tossCd > 0) return;
+    let best: Enemy | null = null;
+    let bestD = t.range;
+    for (const e of this.enemies) {
+      if (!e.alive || !this.airborne(e)) continue;
+      const d = Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y);
+      if (d <= bestD) {
+        bestD = d;
+        best = e;
+      }
+    }
+    if (!best) return;
+    h.tossCd = t.interval;
+    const origin = { x: h.pos.x, y: h.pos.y - 20 };
+    const p: Projectile = {
+      uid: this.nextUid++,
+      towerUid: h.uid,
+      pos: { ...origin },
+      targetUid: best.uid,
+      lastTargetPos: { ...best.pos },
+      speed: 520,
+      damage: t.damage * heroLevelMult(h.level),
+      damageType: 'physical',
+      splash: 0,
+      color: C_SHIELD,
+      homing: true,
+      hitsAir: true,
+      origin,
+      travel: 0,
+      kind: 'hero_toss',
+      pierce: 0,
+    };
+    this.projectiles.push(p);
+    this.events.push({ type: 'heroShoot', hero: h, projectile: p });
   }
 
   /** Wren's Scholar's Eye: enemies that fall near her pay extra coins. */

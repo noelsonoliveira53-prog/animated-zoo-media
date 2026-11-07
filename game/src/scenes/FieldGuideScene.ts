@@ -140,6 +140,7 @@ export class FieldGuideScene extends Phaser.Scene {
         lines: [
           `Health ${h.hp}   •   ${h.melee ? 'Melee blocker' : 'Ranged'}${h.attack.hitsAir ? ', hits flyers' : ''}`,
           h.passive.text,
+          ...(h.toss ? [`${h.toss.name}: every ${h.toss.interval}s throws his shield at a flyer within ${h.toss.range}px`] : []),
           `${h.active.name} (${h.active.cooldown}s): ${h.active.text}`,
           `Training rank: ${loadSave().heroRanks[id] ?? 0} / 5`,
         ],

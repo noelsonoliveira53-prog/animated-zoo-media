@@ -225,6 +225,57 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.45, cy - r * 0.15, r * 0.1);
         break;
       }
+      case 'shiftscale': {
+        // chameleon: low body, curled tail, dorsal spines, half the hide already turning red, a big swivel eye
+        g.lineStyle(2.5, C.ink, 1);
+        g.beginPath();
+        g.arc(cx + r * 0.95, cy + r * 0.3, r * 0.35, -1.6, 3.2, false);
+        g.strokePath();
+        for (const lx of [-0.5, 0.4]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r - r * 0.15, cy + r * 0.95);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.9, r * 1.1);
+        g.strokeEllipse(cx, cy, r * 1.9, r * 1.1);
+        g.fillStyle(0xe8604a, 1);
+        g.fillEllipse(cx + r * 0.35, cy + r * 0.05, r * 0.9, r * 0.8);
+        g.fillStyle(0x3a7a2a, 1);
+        for (let k = 0; k < 4; k++) g.fillTriangle(cx - r * 0.6 + k * r * 0.4, cy - r * 0.45, cx - r * 0.4 + k * r * 0.4, cy - r * 0.45, cx - r * 0.5 + k * r * 0.4, cy - r * 0.8);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.1, r * 0.42);
+        g.strokeCircle(cx - r * 0.85, cy - r * 0.1, r * 0.42);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.95, cy - r * 0.2, r * 0.2);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.2, r * 0.09);
+        break;
+      }
+      case 'idolkeeper': {
+        // temple monkey: round body, pale face, long curled tail, holding up a glowing golden idol
+        g.lineStyle(2.5, C.ink, 1);
+        g.beginPath();
+        g.arc(cx + r * 0.8, cy + r * 0.2, r * 0.45, -2.6, 1.6, false);
+        g.strokePath();
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.3, r * 1.3, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.3, r * 1.3, r * 1.2);
+        g.fillCircle(cx - r * 0.1, cy - r * 0.4, r * 0.55);
+        g.strokeCircle(cx - r * 0.1, cy - r * 0.4, r * 0.55);
+        g.fillStyle(0xe8d0b0, 1);
+        g.fillEllipse(cx - r * 0.1, cy - r * 0.3, r * 0.65, r * 0.55);
+        g.fillStyle(0x111111, 1);
+        g.fillCircle(cx - r * 0.25, cy - r * 0.45, r * 0.07);
+        g.fillCircle(cx + r * 0.05, cy - r * 0.45, r * 0.07);
+        g.fillStyle(0xffe066, 0.35);
+        g.fillCircle(cx - r * 0.75, cy - r * 0.95, r * 0.5);
+        g.fillStyle(0xf0c040, 1);
+        g.fillRoundedRect(cx - r * 0.95, cy - r * 1.2, r * 0.4, r * 0.55, 3);
+        g.strokeRoundedRect(cx - r * 0.95, cy - r * 1.2, r * 0.4, r * 0.55, 3);
+        g.fillStyle(0x6a4a1a, 1);
+        g.fillCircle(cx - r * 0.82, cy - r * 1.0, r * 0.05);
+        g.fillCircle(cx - r * 0.68, cy - r * 1.0, r * 0.05);
+        g.lineStyle(2.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
+        break;
+      }
       case 'zephyrax': {
         // storm roc: vast swept wings with feathered tips, pale chest, crested head, hooked beak, lightning in the wings
         g.lineStyle(3, C.ink, 1);

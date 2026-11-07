@@ -313,6 +313,48 @@ export class BattleScene extends Phaser.Scene {
           deco.lineStyle(1.5, C.ink, 0.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
         }
+      } else if (this.level.theme.ruins && rnd.frac() < 0.6) {
+        if (rnd.frac() < 0.65) {
+          // jungle palm: curved trunk and drooping fronds
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 36, 10);
+          deco.lineStyle(5, 0x7a5a3a, 1);
+          deco.beginPath();
+          deco.moveTo(p.x, p.y + 2);
+          deco.lineTo(p.x + 3, p.y - 12);
+          deco.lineTo(p.x + 2, p.y - 26);
+          deco.strokePath();
+          const col = rnd.pick(this.level.theme.trees ?? [0x3f7f34]);
+          deco.fillStyle(col, 1);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          for (const [dx, dy, rot] of [[-14, -22, 0.5], [18, -22, -0.5], [-12, -32, 0.25], [16, -32, -0.25], [2, -36, 0]] as [number, number, number][]) {
+            const f = new Phaser.Geom.Ellipse(p.x + 2 + dx, p.y + dy, 32, 12);
+            deco.save();
+            deco.translateCanvas(f.x, f.y);
+            deco.rotateCanvas(rot);
+            deco.fillEllipse(0, 0, f.width, f.height);
+            deco.strokeEllipse(0, 0, f.width, f.height);
+            deco.restore();
+          }
+        } else {
+          // broken temple pillar wrapped in vines
+          const h = rnd.between(18, 34);
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillStyle(0xb8ae94, 1);
+          deco.fillRect(p.x - 7, p.y - h, 14, h + 4);
+          deco.fillStyle(0x8a8270, 1);
+          deco.fillRect(p.x - 10, p.y - 2, 20, 6);
+          deco.fillRect(p.x - 9, p.y - h - 3, 18, 5);
+          deco.lineStyle(1.5, C.ink, 0.5);
+          deco.strokeRect(p.x - 7, p.y - h, 14, h + 4);
+          deco.lineStyle(2.5, 0x3f8a34, 1);
+          deco.beginPath();
+          deco.moveTo(p.x - 7, p.y);
+          deco.lineTo(p.x + 7, p.y - h * 0.4);
+          deco.lineTo(p.x - 7, p.y - h * 0.75);
+          deco.strokePath();
+        }
       } else if (this.level.theme.gale && rnd.frac() < 0.55) {
         if (rnd.frac() < 0.7) {
           // wind-bent pine: tiers swept toward the east
@@ -1187,6 +1229,27 @@ export class BattleScene extends Phaser.Scene {
           this.particles.setParticleTint(0xffc0c8);
           this.particles.explode(4, t.pos.x, t.pos.y - 6);
         }
+        break;
+      }
+      case 'shift': {
+        // hide flips: a puff in the new colour (green scales vs red skin)
+        this.particles.setParticleTint(ev.scales ? 0x7ad85a : 0xe8604a);
+        this.particles.explode(6, ev.enemy.pos.x, ev.enemy.pos.y - 8);
+        const v = this.enemyViews.get(ev.enemy.uid);
+        if (v) {
+          if (ev.scales) v.sprite.clearTint();
+          else v.sprite.setTint(0xff9a8a);
+        }
+        break;
+      }
+      case 'revive': {
+        // golden beam from the idol to the risen ally
+        const beam = this.add.line(0, 0, ev.source.pos.x, ev.source.pos.y - 20, ev.enemy.pos.x, ev.enemy.pos.y - 10, 0xffd84a, 0.9).setOrigin(0, 0).setLineWidth(3).setDepth(2450);
+        this.tweens.add({ targets: beam, alpha: 0, duration: 500, onComplete: () => beam.destroy() });
+        const glow = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 8, 22, 0xffd84a, 0.45).setDepth(2450);
+        this.tweens.add({ targets: glow, scale: 1.8, alpha: 0, duration: 500, onComplete: () => glow.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, 'Risen!', '#ffe08a', 15);
+        this.enemyViews.get(ev.enemy.uid)?.sprite.setTint(0xffe8a0).setAlpha(0.85); // risen: pale gold, a little ghostly
         break;
       }
       case 'gust': {

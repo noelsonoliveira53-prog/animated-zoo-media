@@ -84,6 +84,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.glare) tags.push('Dazzles nearby towers when it dies');
         if (e.blink) tags.push(`Blinks ${e.blink.distance}px ahead every ${e.blink.interval}s`);
         if (e.gust) tags.push(`Gusts: every ${e.gust.interval}s blows free walkers ${e.gust.distance}px ahead`);
+        if (e.shift) tags.push(`Shifts every ${e.shift.interval}s: armor ${Math.round(e.armor * 100)}% ↔ magic resist ${Math.round(e.shift.magicResist * 100)}%`);
+        if (e.revive) tags.push(`Raises a fallen ally every ${e.revive.interval}s at ${Math.round(e.revive.hpFrac * 100)}% health`);
         if (e.windborne) tags.push('Windborne: immune to every slow');
         if (e.regen) tags.push(`Regrows ${Math.round(e.regen.perSec * 100)}% health/s after ${e.regen.delay}s unhit`);
         if (e.splashResist) tags.push(`Resists ${Math.round(e.splashResist * 100)}% of splash damage`);

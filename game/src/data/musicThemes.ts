@@ -56,10 +56,13 @@ export const THEMES: ThemeDef[] = [
   // Galecrest Aeries: airy and soaring, wide leaps up and a long falling glide.
   { id: 'gale', name: 'Galecrest', transpose: 6, tempo: 1.02, arpWave: 'sine', leadWave: 'square',
     motif: [[12, 0, 2], [19, 2, 4], [24, 6, 6], [21, 12, 2], [19, 14, 2], [17, 16, 4], [14, 20, 4], [12, 24, 8]] },
+  // Verdant Ruins: hand-drum bounce and a pentatonic flute line, old and a little mysterious.
+  { id: 'ruins', name: 'Verdant Ruins', transpose: -1, tempo: 1.06, arpWave: 'triangle', leadWave: 'sine',
+    motif: [[12, 0, 3], [15, 3, 1], [17, 4, 4], [19, 8, 2], [22, 10, 2], [19, 12, 4], [17, 16, 2], [15, 18, 2], [12, 20, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

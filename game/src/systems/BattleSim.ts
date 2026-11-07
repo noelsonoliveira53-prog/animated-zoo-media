@@ -42,6 +42,11 @@ export interface Enemy {
   swoopCd: number;
   blinkCd: number;
   gustCd: number;
+  mr: number; // current magic resist (Shiftscales swap armor and magic resist on a timer)
+  shifted: boolean; // Shiftscale is in its second (slick-skin) form
+  shiftCd: number;
+  reviveCd: number;
+  revived: boolean; // raised by an Idol Keeper: pays no bounty and can't be raised again
   sinceHit: number; // seconds since it last took damage (regen enemies heal once this passes their delay)
 }
 
@@ -153,6 +158,8 @@ export type SimEvent =
   | { type: 'enrage'; enemy: Enemy }
   | { type: 'swoop'; enemy: Enemy; landed: boolean }
   | { type: 'blink'; enemy: Enemy; from: Vec2; to: Vec2 }
+  | { type: 'shift'; enemy: Enemy; scales: boolean }
+  | { type: 'revive'; source: Enemy; enemy: Enemy }
   | { type: 'gust'; source: Enemy; targets: { enemy: Enemy; from: Vec2 }[]; radius: number }
   | { type: 'glare'; enemy: Enemy; towers: Tower[]; radius: number }
   | { type: 'coral'; source: Enemy; targets: Enemy[]; radius: number }
@@ -188,6 +195,8 @@ export class BattleSim {
   lives: number;
   status: BattleStatus = 'prep';
   time = 0;
+  /** Recently killed enemies an Idol Keeper could raise (pruned as they go stale). */
+  fallen: { id: string; path: number; dist: number; pos: Vec2; at: number }[] = [];
 
   waveIndex = -1; // index of last started wave
   waveCountdown = FIRST_WAVE_GAP;
@@ -833,6 +842,11 @@ export class BattleSim {
       swoopCd: def.swoop ? def.swoop.interval : 0,
       blinkCd: def.blink ? def.blink.interval : 0,
       gustCd: def.gust ? def.gust.interval : 0,
+      mr: def.magicResist,
+      shifted: false,
+      shiftCd: def.shift ? def.shift.interval : 0,
+      reviveCd: def.revive ? def.revive.interval : 0,
+      revived: false,
       sinceHit: 0,
     };
     this.enemies.push(e);
@@ -860,6 +874,8 @@ export class BattleSim {
       if (e.def.swoop) this.tickSwoop(e, dt);
       if (e.def.blink) this.tickBlink(e, dt);
       if (e.def.gust) this.tickGust(e, dt);
+      if (e.def.shift) this.tickShift(e, dt);
+      if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
       if (e.def.enrage && !e.enraged && e.hp < e.maxHp * e.def.enrage.below) {
         e.enraged = true;
@@ -975,6 +991,41 @@ export class BattleSim {
     this.events.push({ type: 'gust', source: e, targets, radius: gu.radius });
   }
 
+  /** Shiftscale: swaps between its scaled form (def armor/MR) and its slick form (shift armor/MR) on a timer. */
+  private tickShift(e: Enemy, dt: number): void {
+    const sh = e.def.shift!;
+    e.shiftCd -= dt;
+    if (e.shiftCd > 0) return;
+    e.shiftCd = sh.interval;
+    e.shifted = !e.shifted;
+    e.armor = e.shifted ? sh.armor : e.def.armor;
+    e.mr = e.shifted ? sh.magicResist : e.def.magicResist;
+    this.events.push({ type: 'shift', enemy: e, scales: !e.shifted });
+  }
+
+  /** Idol Keeper: raises the most recent fallen ally nearby at partial health. */
+  private tickRevive(e: Enemy, dt: number): void {
+    const rv = e.def.revive!;
+    this.fallen = this.fallen.filter((f) => this.time - f.at <= rv.window);
+    e.reviveCd -= dt;
+    if (e.reviveCd > 0) return;
+    let best = -1;
+    for (let i = this.fallen.length - 1; i >= 0; i--) {
+      const f = this.fallen[i];
+      if (Math.hypot(f.pos.x - e.pos.x, f.pos.y - e.pos.y) <= rv.radius) { best = i; break; }
+    }
+    if (best < 0) {
+      e.reviveCd = 0.5; // nothing to raise yet: look again soon
+      return;
+    }
+    e.reviveCd = rv.interval;
+    const f = this.fallen.splice(best, 1)[0];
+    const r = this.spawn(f.id, f.path, f.dist);
+    r.hp = Math.round(r.maxHp * rv.hpFrac);
+    r.revived = true;
+    this.events.push({ type: 'revive', source: e, enemy: r });
+  }
+
   /** Endless: enemy melee hits ramp with the wave too (otherwise a blocker can stall forever). 1 in the campaign. */
   attackMult(): number {
     const en = this.level.endless;
@@ -1055,8 +1106,8 @@ export class BattleSim {
   }
 
   /** Damage resistances, using the enemy's current armor. */
-  private res(e: Enemy): { armor: number; magicResist: number } {
-    return { armor: e.armor, magicResist: e.def.magicResist };
+  res(e: Enemy): { armor: number; magicResist: number } {
+    return { armor: e.armor, magicResist: e.mr };
   }
 
   /** Burrowers dive underground (untargetable, unblockable, faster) and resurface on a cycle. */
@@ -1376,7 +1427,7 @@ export class BattleSim {
       this.slow(e, p.slow.factor, p.slow.duration);
     }
     const armor = e.armor * (1 - p.pierce);
-    this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.def.magicResist }));
+    this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }));
   }
 
   /** Lightning: jump from the first target to nearby enemies with falling damage. */
@@ -1423,7 +1474,9 @@ export class BattleSim {
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.
-      const bounty = Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e));
+      const bounty = e.revived ? 0 : Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e));
+      if (!e.revived && !e.def.boss && !e.def.revive) this.fallen.push({ id: e.def.id, path: e.path, dist: e.dist, pos: { ...e.pos }, at: this.time });
+      if (this.fallen.length > 40) this.fallen.splice(0, this.fallen.length - 40);
       this.coins += bounty;
       this.events.push({ type: 'kill', enemy: e, bounty });
       if (this.hero?.alive) {

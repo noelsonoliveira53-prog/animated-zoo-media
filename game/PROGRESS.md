@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **67** (next balance pass at iteration 70)
+Iteration counter: **68** (next balance pass at iteration 70)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -505,13 +505,23 @@ Iteration counter: **67** (next balance pass at iteration 70)
   540 px starting from x=750, so long trait lines ran off the parchment (edge at 1240); every enemy with several traits
   was clipped. Now 470 px. Browser check `scripts/guide-boss-check.mjs <name> [bossId]` checks every text fits; all
   seven bosses do. 151 tests.
+- [x] **Iter 68 — Region 8 opens: The Verdant Ruins.** A jungle swallowing an old temple road. Two new enemy mechanics
+  (36 enemies): **Shiftscale** (`shift`: every 4 s swaps between hard scales, 70% armor / 0 MR, and slick skin,
+  0 armor / 70% MR; enemies now carry a runtime `mr` next to `armor`) and **Idol Keeper** (`revive`: every 6 s raises
+  the latest ally that died within 140 px in the last 8 s at 50% health; risen enemies glow pale gold, pay no bounty and
+  can't rise twice). Level 36 **Overgrown Causeway** (west + north roads, 1,160 px tail, 11 pads, 15 waves, hpMult
+  1.4), a `RUINS` theme (palms, vine-wrapped pillars), a jungle world-map style and a hand-drum music theme. Endless adds
+  both from wave 32. First draft lost to the short north road again (armored packs moved to the long road).
+  `sim.res()` is now public. Browser check `scripts/ruins-check.mjs`. 153 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 8 (levels 36–40): a new biome, enemies and boss, following the region recipe.
-2. Village: drag-to-pan on small phone screens.
+1. Region 8 level 37 (+ a third Ruins enemy).
+2. Region 8 levels 38–39.
+3. Region 8 finale (level 40) with a Ruins boss.
+4. Village: drag-to-pan on small phone screens.
 
 ## Known Bugs
 - (none known)
@@ -544,6 +554,8 @@ road is far shorter than the other, keep fast packs off the short road.
 **Iteration 66:** 35 Roc's Aerie 100/50/17 at hpMult 1.95 (1.72 → 100/83/92, 2.03 → 100/8/8, 2.1 → 83/17/0). The
 first Zephyrax (hp 2900, short landings) was unbeatable (0/8/25 at 1.6); now hp 2200, speed 18, MR 0.35, lands 3.5 s
 of every 7.5 s. Hawkeye archers are the counter: with Volley the expert won only 50% at 1.72.
+**Iteration 68:** 36 Overgrown Causeway 100/100/33 at hpMult 1.4 (first draft 67/83/0 at 1.5 from armored packs on
+the short north road; after the fix 1.5 → 100/100/8, 1.7 → 100/50/0).
 
 **Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
 first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·

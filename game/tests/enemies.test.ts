@@ -405,3 +405,40 @@ describe('Kitewing gust', () => {
     expect(kite.dist).toBe(d0[0]);
   });
 });
+
+describe('Verdant Ruins enemies', () => {
+  it('Shiftscale swaps armor and magic resist on its timer', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const s = sim.spawn('shiftscale', 0, 400);
+    s.def = { ...s.def, speed: 0 };
+    const sh = s.def.shift!;
+    expect(sim.res(s)).toEqual({ armor: s.def.armor, magicResist: s.def.magicResist });
+    for (let i = 0; i < Math.ceil(sh.interval * 60) + 1; i++) sim.update(1 / 60);
+    expect(s.shifted).toBe(true);
+    expect(sim.res(s)).toEqual({ armor: sh.armor, magicResist: sh.magicResist });
+    for (let i = 0; i < Math.ceil(sh.interval * 60) + 1; i++) sim.update(1 / 60);
+    expect(s.shifted).toBe(false);
+    expect(sim.res(s).armor).toBe(s.def.armor);
+  });
+
+  it('Idol Keeper raises a recent nearby fallen ally once, at partial health and no second bounty', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const keeper = sim.spawn('idolkeeper', 0, 400);
+    keeper.def = { ...keeper.def, speed: 0 };
+    const mud = sim.spawn('mudling', 0, 450);
+    (sim as any).applyDamage(mud, 9999);
+    const rv = keeper.def.revive!;
+    for (let i = 0; i < Math.ceil(rv.interval * 60) + 2; i++) sim.update(1 / 60);
+    const risen = sim.enemies.filter((e) => e.alive && e.def.id === 'mudling');
+    expect(risen.length).toBe(1);
+    expect(risen[0].revived).toBe(true);
+    expect(risen[0].hp).toBe(Math.round(risen[0].maxHp * rv.hpFrac));
+    const c0 = sim.coins;
+    (sim as any).applyDamage(risen[0], 9999);
+    expect(sim.coins).toBe(c0);
+    for (let i = 0; i < Math.ceil(rv.interval * 60) + 2; i++) sim.update(1 / 60);
+    expect(sim.enemies.filter((e) => e.alive && e.def.id === 'mudling').length).toBe(0); // never raised twice
+  });
+});

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **36** (next balance pass at iteration 40)
+Iteration counter: **37** (next balance pass at iteration 40)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -297,12 +297,21 @@ Iteration counter: **36** (next balance pass at iteration 40)
   the village). New `scripts/swift-check.mjs`: a 3★ win grants the token, then real clicks rush a Grove Hall upgrade.
   122 tests.
 
+- [x] **Iter 37 — Phone-readable Village, Achievements and Menu text.** `pf()` applied to the small labels in the Village
+  (badges, building panel, shop cards, troop and raid panels), Achievements cards, Menu (daily line, version) and
+  achievement toasts. New `scripts/phone-screens.mjs` (740×360, touch) screenshots each screen; it found and fixed three
+  overflows: the shop's "Defense Workshop" name and its two-part cost ran into the count (the name now shrinks to fit,
+  and costs read "500c + 300s"); the Mistwalker description ran under its progress bar (descriptions shrink to the free
+  width); the Menu hero description overflowed its panel (kept at desktop size). Desktop layouts re-checked.
+  122 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Phone-readable text in Village and Achievements cards (needs a layout check for each card).
-2. Region 5 (levels 21–25), or an endless or challenge mode that reuses existing maps.
+1. Endless mode: pick any cleared map and survive generated waves (score = waves held); best score per map saved.
+2. Region 5 (levels 21–25) with its own enemy roster.
+3. Hero #4 and a third global spell.
 
 ## Known Bugs
 - (none known)

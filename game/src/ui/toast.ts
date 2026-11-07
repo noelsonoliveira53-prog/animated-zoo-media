@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { pf } from './touch';
 import type { AchievementDef } from '../data/achievements';
 import { sfx } from '../systems/audio';
 import { C, GAME_W, TEXT, textStyle } from './theme';
@@ -17,7 +18,7 @@ export function showAchievementToasts(scene: Phaser.Scene, list: AchievementDef[
       c.add(scene.add.image(-222, 0, 'star').setScale(0.7));
       c.add(scene.add.text(-190, -24, `Achievement: ${a.name}`, textStyle(19, TEXT.gold)));
       const r = [a.reward.coins ? `+${a.reward.coins} coins` : '', a.reward.glowsap ? `+${a.reward.glowsap} glowsap` : ''].filter(Boolean).join(', ');
-      c.add(scene.add.text(-190, 4, `${a.text}  ${r}`, { ...textStyle(13, TEXT.cream, false), wordWrap: { width: 430 } }));
+      c.add(scene.add.text(-190, 4, `${a.text}  ${r}`, { ...textStyle(pf(13), TEXT.cream, false), wordWrap: { width: 430 } }));
       scene.tweens.add({ targets: c, y: 120, duration: 350, ease: 'Back.easeOut' });
       scene.tweens.add({ targets: c, y: -80, delay: 2600, duration: 300, onComplete: () => c.destroy() });
       sfx.coin();

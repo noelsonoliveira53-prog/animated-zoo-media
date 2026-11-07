@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { ACHIEVEMENTS } from '../data/achievements';
@@ -54,9 +55,10 @@ export class AchievementsScene extends Phaser.Scene {
       card.strokeRoundedRect(x, y, cw, ch, 12);
       this.add.image(x + 32, y + ch / 2, unlocked ? 'star' : 'star_empty').setScale(0.6);
       this.add.text(x + 62, y + 8, a.name, textStyle(17, unlocked ? TEXT.gold : TEXT.cream));
-      this.add.text(x + 62, y + 34, a.text, textStyle(13, TEXT.dim, false));
+      // Leave room for the progress bar + count on the right when there is one.
+      fitWidth(this.add.text(x + 62, y + 34, a.text, textStyle(pf(13), TEXT.dim, false)), !unlocked && a.goal > 1 ? cw - 62 - 14 - 150 - 70 : cw - 80);
       const reward = [a.reward.coins ? `${a.reward.coins}c` : '', a.reward.glowsap ? `${a.reward.glowsap}s` : ''].filter(Boolean).join(' + ');
-      this.add.text(x + cw - 14, y + 8, reward, textStyle(14, TEXT.gold, false)).setOrigin(1, 0);
+      this.add.text(x + cw - 14, y + 8, reward, textStyle(pf(14), TEXT.gold, false)).setOrigin(1, 0);
       if (!unlocked && a.goal > 1) {
         const bw = 150;
         card.fillStyle(0x000000, 0.5);
@@ -65,7 +67,7 @@ export class AchievementsScene extends Phaser.Scene {
           card.fillStyle(C.leaf, 1);
           card.fillRoundedRect(x + cw - 14 - bw, y + 38, Math.max(10, bw * (prog / a.goal)), 10, 5);
         }
-        this.add.text(x + cw - 14 - bw - 8, y + 43, `${prog}/${a.goal}`, textStyle(12, TEXT.cream, false)).setOrigin(1, 0.5);
+        this.add.text(x + cw - 14 - bw - 8, y + 43, `${prog}/${a.goal}`, textStyle(pf(12), TEXT.cream, false)).setOrigin(1, 0.5);
       }
     });
   }

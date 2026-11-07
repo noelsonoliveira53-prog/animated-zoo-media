@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { BUILDINGS, SHOP_ORDER, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
@@ -152,7 +153,7 @@ export class VillageScene extends Phaser.Scene {
       sfx.unlock();
       this.tapBuilding(b.uid);
     });
-    const badge = this.add.text(x + 6, y + 4, '', textStyle(13, TEXT.gold)).setDepth(500);
+    const badge = this.add.text(x + 6, y + 4, '', textStyle(pf(13), TEXT.gold)).setDepth(500);
     const bar = this.add.graphics().setDepth(501);
     this.views.set(b.uid, { img, badge, bar, bubble: null, shownLevel: b.level });
   }
@@ -209,7 +210,7 @@ export class VillageScene extends Phaser.Scene {
     this.sapText = this.add.text(504, 30, '', textStyle(20, '#c8ff8a')).setDepth(902);
     this.add.image(742, 41, 'icon_hammer').setDepth(902);
     this.builderText = this.add.text(764, 30, '', textStyle(20)).setDepth(902);
-    this.add.text(GAME_W / 2, 84, '', textStyle(14)).setOrigin(0.5).setDepth(902).setName('thLabel');
+    this.add.text(GAME_W / 2, 84, '', textStyle(pf(14))).setOrigin(0.5).setDepth(902).setName('thLabel');
 
     new Button(this, 90, 40, 'Menu', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.leave('Menu') }).setDepth(902);
     new Button(this, GAME_W - 110, 40, 'Campaign', { width: 180, height: 50, fontSize: 20, color: 0xff9f43, onClick: () => this.leave('WorldMap') }).setDepth(902);
@@ -313,7 +314,7 @@ export class VillageScene extends Phaser.Scene {
     if (b.type === 'barracks' && b.level > 0) lines.push(`Battle bonus: Grove Call Rangers +${b.level * 25}% health and damage`);
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
     if (!lines.length) lines.push(def.blurb);
-    c.add(this.add.text(-W / 2 + 140, -H / 2 + 44, lines.join('\n'), { ...textStyle(14, TEXT.cream, false), wordWrap: { width: 300 } }));
+    c.add(this.add.text(-W / 2 + 140, -H / 2 + 44, lines.join('\n'), { ...textStyle(pf(14), TEXT.cream, false), wordWrap: { width: 300 } }));
 
     const next = nextLevel(b);
     let dynamic = false;
@@ -345,7 +346,7 @@ export class VillageScene extends Phaser.Scene {
       c.add(
         this.add
           .text(W / 2 - 150, -H / 2 + 22, thOk ? `Upgrade: ${this.costText(next.cost)}\n${formatTime(next.time)}` : `Needs Grove Hall ${next.th}`, {
-            ...textStyle(14, thOk ? TEXT.cream : TEXT.heart, false),
+            ...textStyle(pf(14), thOk ? TEXT.cream : TEXT.heart, false),
             align: 'center',
           })
           .setOrigin(0.5, 0),
@@ -421,9 +422,9 @@ export class VillageScene extends Phaser.Scene {
       icon.setScale(Math.min(1, 90 / (def.size * TILE)));
       if (!available) icon.setTint(0x777777);
       card.add(icon);
-      card.add(this.add.text(0, 8, def.name, { ...textStyle(15), align: 'center', wordWrap: { width: cardW - 10 } }).setOrigin(0.5, 0));
-      card.add(this.add.text(0, 52, this.costText(lvl.cost), { ...textStyle(13, affordable ? TEXT.gold : TEXT.heart, false), align: 'center', wordWrap: { width: cardW - 10 } }).setOrigin(0.5, 0));
-      card.add(this.add.text(0, 88, max > 0 ? `${count}/${max}` : `Grove Hall ${lvl.th}`, textStyle(14, TEXT.dim)).setOrigin(0.5, 0));
+      card.add(fitWidth(this.add.text(0, 8, def.name, textStyle(pf(15))).setOrigin(0.5, 0), cardW - 10));
+      card.add(fitWidth(this.add.text(0, 52, [lvl.cost.coins ? `${lvl.cost.coins}c` : '', lvl.cost.glowsap ? `${lvl.cost.glowsap}s` : ''].filter(Boolean).join(' + ') || 'Free', { ...textStyle(pf(13), affordable ? TEXT.gold : TEXT.heart, false), align: 'center' }).setOrigin(0.5, 0), cardW - 10));
+      card.add(this.add.text(0, 88, max > 0 ? `${count}/${max}` : `Grove Hall ${lvl.th}`, textStyle(pf(14), TEXT.dim)).setOrigin(0.5, 0));
       card.setSize(cardW, 220).setInteractive({ useHandCursor: available });
       card.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
@@ -508,8 +509,8 @@ export class VillageScene extends Phaser.Scene {
       c.add(card);
       c.add(this.add.image(x - 90, y - 18, `troop_${id}`).setScale(1.8));
       c.add(this.add.text(x - 55, y - 58, def.name, textStyle(16, locked ? TEXT.dim : TEXT.cream)));
-      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space • ${def.trainTime}s`, textStyle(13, TEXT.gold, false)));
-      c.add(this.add.text(x - 118, y + 14, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(12, TEXT.dim, false), wordWrap: { width: 160 } }));
+      c.add(this.add.text(x - 55, y - 34, `${def.cost} sap • ${def.space} space • ${def.trainTime}s`, textStyle(pf(13), TEXT.gold, false)));
+      c.add(this.add.text(x - 118, y + 14, locked ? `Needs Ranger Lodge ${def.lodge}` : def.blurb, { ...textStyle(pf(12), TEXT.dim, false), wordWrap: { width: 160 } }));
       const n = this.add.text(x + 20, y - 8, '', textStyle(22, TEXT.gold)).setOrigin(0, 0.5);
       counts.push(n);
       c.add(n);
@@ -548,7 +549,7 @@ export class VillageScene extends Phaser.Scene {
       g.fillRoundedRect(x - 170, y - 80, 340, 160, 14);
       c.add(g);
       c.add(this.add.text(x - 155, y - 68, tier.name, textStyle(18, ['#9be86a', TEXT.gold, TEXT.heart][i])));
-      c.add(this.add.text(x - 155, y - 40, ['Easy', 'Medium', 'Hard'][i] + ` • ${camp.buildings.filter((b) => b.type !== 'wall').length} buildings${tier.walls ? ' + walls' : ''}`, textStyle(14, TEXT.dim, false)));
+      c.add(this.add.text(x - 155, y - 40, ['Easy', 'Medium', 'Hard'][i] + ` • ${camp.buildings.filter((b) => b.type !== 'wall').length} buildings${tier.walls ? ' + walls' : ''}`, textStyle(pf(14), TEXT.dim, false)));
       c.add(this.add.image(x - 140, y + 4, 'icon_coin').setScale(0.8));
       c.add(this.add.text(x - 124, y + 4, `${loot.coins}`, textStyle(16, TEXT.gold)).setOrigin(0, 0.5));
       c.add(this.add.image(x - 40, y + 4, 'icon_sap').setScale(0.8));

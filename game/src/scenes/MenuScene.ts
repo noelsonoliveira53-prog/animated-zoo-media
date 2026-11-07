@@ -1,4 +1,5 @@
 import Phaser from 'phaser';
+import { pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, isLevelUnlocked, totalStars } from '../data/levels';
@@ -89,7 +90,7 @@ export class MenuScene extends Phaser.Scene {
     new Button(this, 460, 662, 'Achievements', { width: 210, height: 52, fontSize: 19, color: C.gold, onClick: () => this.scene.start('Achievements') });
     new Button(this, 680, 662, 'Settings', { width: 190, height: 52, fontSize: 19, color: C.sky, onClick: () => this.scene.start('Settings') });
 
-    this.add.text(GAME_W - 16, GAME_H - 24, 'v0.6', textStyle(14, TEXT.dim, false)).setOrigin(1, 0.5);
+    this.add.text(GAME_W - 16, GAME_H - 24, 'v0.6', textStyle(pf(14), TEXT.dim, false)).setOrigin(1, 0.5);
   }
 
   private buildDaily(): void {
@@ -107,7 +108,7 @@ export class MenuScene extends Phaser.Scene {
     });
     void b;
     this.add
-      .text(460, 600, done ? `Come back tomorrow for a new challenge` : `${names}  •  Win: +${d.reward.coins}c +${d.reward.glowsap}s`, textStyle(13, TEXT.cream, false))
+      .text(460, 600, done ? `Come back tomorrow for a new challenge` : `${names}  •  Win: +${d.reward.coins}c +${d.reward.glowsap}s`, textStyle(pf(13), TEXT.cream, false))
       .setOrigin(0.5);
   }
 
@@ -143,7 +144,7 @@ export class MenuScene extends Phaser.Scene {
         } else {
           sfx.leak();
           this.children.getByName('trainMsg')?.destroy();
-          const t = this.add.text(x, y + 200, r.reason ?? '', textStyle(15, TEXT.heart)).setOrigin(0.5).setName('trainMsg');
+          const t = this.add.text(x, y + 200, r.reason ?? '', textStyle(pf(15), TEXT.heart)).setOrigin(0.5).setName('trainMsg');
           this.tweens.add({ targets: t, alpha: 0, delay: 1200, duration: 400, onComplete: () => t.destroy() });
         }
         show();

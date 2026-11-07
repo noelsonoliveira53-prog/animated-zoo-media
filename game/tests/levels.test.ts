@@ -25,3 +25,21 @@ describe('level data', () => {
     expect(totalStars({ l1: 3, l2: 2 })).toBe(5);
   });
 });
+
+import { REGIONS, regionOf } from '../src/data/levels';
+describe('regions', () => {
+  it('map every level to a region in order', () => {
+    expect(regionOf(0)).toBe(0);
+    expect(regionOf(4)).toBe(0);
+    expect(regionOf(5)).toBe(1);
+    for (let i = 0; i < LEVELS.length; i++) expect(REGIONS[regionOf(i)]).toBeDefined();
+  });
+  it('kill bounties scale with the level health multiplier', () => {
+    const l = LEVELS.find((x) => (x.hpMult ?? 1) > 1.4)!;
+    const sim = new BattleSim(l);
+    const e = sim.spawn('mudling', 0, 100);
+    const before = sim.coins;
+    (sim as any).applyDamage(e, 1e6);
+    expect(sim.coins - before).toBe(Math.round(5 * l.hpMult!));
+  });
+});

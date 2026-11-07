@@ -1,5 +1,5 @@
 import Phaser from 'phaser';
-import { LEVELS, isLevelUnlocked, totalStars } from '../data/levels';
+import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
 import { ENEMIES } from '../data/enemies';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
@@ -9,61 +9,109 @@ import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 // Campaign overview: the Grove's lands from the Mossgate (bottom-left) to Murkmaw's Den (top-right).
 export class WorldMapScene extends Phaser.Scene {
   private panel: Phaser.GameObjects.Container | null = null;
+  private region = 0;
 
   constructor() {
     super('WorldMap');
   }
 
-  create(data: { focus?: number }): void {
+  create(data: { focus?: number; region?: number }): void {
     this.panel = null;
     const save = loadSave();
-    this.drawLand();
-    this.drawTrail(save.stars);
+    // Pick the region: explicit, else the focused level's, else the furthest unlocked level's.
+    let furthest = 0;
+    LEVELS.forEach((_, i) => {
+      if (isLevelUnlocked(i, save.stars)) furthest = i;
+    });
+    this.region = data?.region ?? regionOf(data?.focus ?? furthest);
+    const reg = REGIONS[this.region];
+    const inRegion = LEVELS.map((_, i) => i).filter((i) => regionOf(i) === this.region);
 
-    LEVELS.forEach((lvl, i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[lvl.id] ?? 0));
+    this.drawLand(!!reg.snow);
+    this.drawTrail(save.stars, inRegion);
+    inRegion.forEach((i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[LEVELS[i].id] ?? 0));
+    // Placeholders for levels still to come in this region.
+    for (let k = inRegion.length; k < reg.count; k++) {
+      const x = 1000 + (k - inRegion.length) * 120;
+      this.add.text(x, 640, '?', textStyle(28, TEXT.dim)).setOrigin(0.5).setAlpha(0.6);
+    }
+    if (inRegion.length < reg.count) this.add.text(1060, 680, 'More lands coming soon…', textStyle(14, TEXT.dim, false)).setOrigin(0.5);
 
     // Top bar
     const bar = this.add.graphics().setDepth(100);
     bar.fillStyle(C.ink, 0.75);
-    bar.fillRoundedRect(GAME_W / 2 - 220, 10, 440, 56, 18);
-    this.add.text(GAME_W / 2 - 40, 38, 'The Grovelands', textStyle(28, TEXT.gold)).setOrigin(0.5).setDepth(101);
-    this.add.image(GAME_W / 2 + 110, 38, 'star').setScale(0.55).setDepth(101);
-    this.add.text(GAME_W / 2 + 132, 38, `${totalStars(save.stars)}/${LEVELS.length * 3}`, textStyle(24)).setOrigin(0, 0.5).setDepth(101);
+    bar.fillRoundedRect(GAME_W / 2 - 260, 10, 520, 56, 18);
+    this.add.text(GAME_W / 2 - 50, 38, reg.name, textStyle(26, TEXT.gold)).setOrigin(0.5).setDepth(101);
+    this.add.image(GAME_W / 2 + 130, 38, 'star').setScale(0.55).setDepth(101);
+    this.add.text(GAME_W / 2 + 152, 38, `${totalStars(save.stars)}/${LEVELS.length * 3}`, textStyle(22)).setOrigin(0, 0.5).setDepth(101);
     new Button(this, 90, 40, 'Back', { width: 140, height: 50, fontSize: 22, color: C.sky, onClick: () => this.scene.start('Menu') }).setDepth(101);
+
+    // Region arrows
+    if (this.region > 0) {
+      new Button(this, GAME_W / 2 - 300, 38, '<', { width: 56, height: 50, fontSize: 24, color: C.sky, onClick: () => this.scene.restart({ region: this.region - 1 }) }).setDepth(101);
+    }
+    if (this.region < REGIONS.length - 1) {
+      const next = REGIONS[this.region + 1];
+      const open = isLevelUnlocked(next.first, save.stars) && next.first < LEVELS.length;
+      new Button(this, GAME_W / 2 + 300, 38, '>', {
+        width: 56,
+        height: 50,
+        fontSize: 24,
+        color: open ? 0xff9f43 : 0x777777,
+        onClick: () => {
+          if (open) this.scene.restart({ region: this.region + 1 });
+          else this.toast(`Beat ${LEVELS[next.first - 1].name} to reach ${next.name}`);
+        },
+      }).setDepth(101);
+    }
 
     this.input.on('pointerdown', () => this.closePanel());
     this.cameras.main.fadeIn(250, 16, 38, 27);
 
     // Open the info card for the focused level (e.g. the next level after a win).
     const focus = data?.focus;
-    if (focus !== undefined && focus >= 0 && focus < LEVELS.length && isLevelUnlocked(focus, save.stars)) {
+    if (focus !== undefined && focus >= 0 && focus < LEVELS.length && regionOf(focus) === this.region && isLevelUnlocked(focus, save.stars)) {
       this.time.delayedCall(250, () => this.openPanel(focus));
     }
   }
 
-  private drawLand(): void {
+  private toast(msg: string): void {
+    this.children.getByName('toast')?.destroy();
+    const t = this.add.text(GAME_W / 2, 100, msg, textStyle(18, TEXT.heart)).setOrigin(0.5).setDepth(300).setName('toast');
+    this.tweens.add({ targets: t, alpha: 0, delay: 1600, duration: 400, onComplete: () => t.destroy() });
+  }
+
+  private drawLand(snow: boolean): void {
     const g = this.add.graphics();
-    g.fillStyle(0x2f6e8f, 1); // sea
+    g.fillStyle(snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea
     g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
     // main island
-    g.fillStyle(0xd9c79a, 1);
+    g.fillStyle(snow ? 0xb8c4cc : 0xd9c79a, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.02, GAME_H * 0.98);
-    g.fillStyle(0x6aae52, 1);
+    g.fillStyle(snow ? 0xe6eef2 : 0x6aae52, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 0.98, GAME_H * 0.92);
     // regions
-    const regions: [number, number, number, number, number][] = [
-      [0x86c56a, 230, 560, 420, 260], // meadow
-      [0x5f8f5a, 420, 430, 300, 220], // fen
-      [0x3f7a3a, 620, 300, 340, 240], // forest
-      [0x4f9a8a, 860, 440, 320, 220], // lake shore
-      [0x3a5a40, 1080, 230, 360, 260], // den
-    ];
+    const regions: [number, number, number, number, number][] = snow
+      ? [
+          [0xd4e2ea, 230, 560, 420, 260],
+          [0xc6d8e4, 480, 420, 320, 230],
+          [0xb4c8d6, 760, 300, 340, 240],
+          [0xa8bccc, 1020, 420, 320, 220],
+          [0x9fb2c2, 1100, 200, 340, 240],
+        ]
+      : [
+          [0x86c56a, 230, 560, 420, 260], // meadow
+          [0x5f8f5a, 420, 430, 300, 220], // fen
+          [0x3f7a3a, 620, 300, 340, 240], // forest
+          [0x4f9a8a, 860, 440, 320, 220], // lake shore
+          [0x3a5a40, 1080, 230, 360, 260], // den
+        ];
     for (const [col, x, y, w, h] of regions) {
       g.fillStyle(col, 0.85);
       g.fillEllipse(x, y, w, h);
     }
-    // lake
-    g.fillStyle(0x5fb8d8, 1);
+    // lake (frozen in the highlands)
+    g.fillStyle(snow ? 0xbfe3f2 : 0x5fb8d8, 1);
     g.fillEllipse(900, 520, 200, 90);
     g.fillStyle(0xffffff, 0.4);
     g.fillEllipse(870, 505, 60, 14);
@@ -72,29 +120,37 @@ export class WorldMapScene extends Phaser.Scene {
     for (let i = 0; i < 90; i++) {
       const x = rnd.between(80, GAME_W - 80);
       const y = rnd.between(110, GAME_H - 60);
-      if (LEVELS.some((l) => Math.hypot(l.mapPos.x - x, l.mapPos.y - y) < 70)) continue;
+      if (LEVELS.some((l, i) => regionOf(i) === this.region && Math.hypot(l.mapPos.x - x, l.mapPos.y - y) < 70)) continue;
       if (Math.hypot((x - 900) / 110, (y - 520) / 55) < 1) continue;
       const dark = x > 960 && y < 380;
+      if (snow) {
+        // pines with snow caps
+        g.fillStyle(0x2f5a4a, 1);
+        g.fillTriangle(x - 10, y + 8, x + 10, y + 8, x, y - 16);
+        g.fillStyle(0xffffff, 1);
+        g.fillTriangle(x - 5, y - 6, x + 5, y - 6, x, y - 16);
+        continue;
+      }
       g.fillStyle(dark ? 0x24412a : 0x2f6a30, 1);
       g.fillCircle(x, y, rnd.between(8, 14));
       g.fillStyle(dark ? 0x2f5236 : 0x3f8a3a, 1);
       g.fillCircle(x - 3, y - 3, rnd.between(4, 7));
     }
-    // the sanctuary at the start
+    // the trail's starting point
     g.fillStyle(0x9a6a40, 1);
     g.fillRect(60, 600, 60, 40);
-    g.fillStyle(0x4b8f3a, 1);
+    g.fillStyle(snow ? 0xffffff : 0x4b8f3a, 1);
     g.fillTriangle(50, 604, 130, 604, 90, 570);
-    this.add.text(90, 660, 'Sanctuary', textStyle(14)).setOrigin(0.5);
+    this.add.text(90, 660, snow ? 'Mountain Gate' : 'Sanctuary', textStyle(14)).setOrigin(0.5);
   }
 
-  private drawTrail(stars: Record<string, number>): void {
+  private drawTrail(stars: Record<string, number>, indices: number[]): void {
     const g = this.add.graphics();
-    const pts = [{ x: 90, y: 600 }, ...LEVELS.map((l) => l.mapPos)];
+    const pts = [{ x: 90, y: 600 }, ...indices.map((i) => LEVELS[i].mapPos)];
     for (let i = 1; i < pts.length; i++) {
       const a = pts[i - 1];
       const b = pts[i];
-      const open = i === 1 || isLevelUnlocked(i - 1, stars);
+      const open = isLevelUnlocked(indices[i - 1], stars);
       const steps = Math.floor(Math.hypot(b.x - a.x, b.y - a.y) / 16);
       for (let k = 1; k < steps; k++) {
         const t = k / steps;

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts`
 
-Iteration counter: **11** (next balance pass at iteration 15)
+Iteration counter: **12** (next balance pass at iteration 15)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -102,11 +102,21 @@ Iteration counter: **11** (next balance pass at iteration 15)
   (persisted in `heroRanks`). Battles open with a "Village bonuses" banner listing what's active; building
   panels describe their battle bonus. 2 new tests (73 total).
 
+- [x] **Iter 12** — **Region 2 + levels 6–8.** World map is now paged by region (`REGIONS`, `regionOf`) with
+  `<`/`>` arrows; the next region stays locked (toast) until its gate level is beaten. New snowy region
+  **Frostfern Highlands** (snowy island map with pines, frozen lake, "Mountain Gate", placeholders for
+  levels still to come). Levels: **6 Frostfern Pass** (long switchback), **7 Icicle Crossing** (two roads
+  cross in an X and split to two gates, hero starts at the crossing), **8 Glacier Hold** (three trails
+  merge; Murkmaw returns). Snow theme: pale ground, pine-colored trees with snow caps, falling snow.
+  New level fields: `heroSpawn`, theme `trees`/`snow`. **Economy fix:** kill bounties now scale with the
+  level's `hpMult` (later levels used to starve the player). All hpMults retuned (L3 1.5, L4 1.15, L5 1.65,
+  L6 2.0, L7 1.45, L8 1.6). 75 tests (regions, bounty scaling, levels 3–8 winnable).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Levels 6–15+, multi-path levels.
+1. Levels 9–10 (finish the Highlands: a new Highlands-only enemy + a new boss), then region 3 (levels 11–15).
 2. Raid mode: AI villages, train troops in Barracks, deploy to attack.
 3. Meta: achievements, daily challenge, encyclopedia, settings scene (volume / mute).
 4. Mobile polish: larger touch targets, pinch-free layout, orientation hint.
@@ -122,6 +132,23 @@ Iteration counter: **11** (next balance pass at iteration 15)
 - Autoplayer should cast spells and move the hero (do this in the iteration-10 balance pass).
 
 ## Balance Notes
+**Iteration 12** (`balance.ts 10`, after bounty scaling + retune):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1–2 | 100% | 100% | 100% |
+| 3 Thornwood Hollow | 100% | 100% | 90% |
+| 4 Mirelake Crossing | 90% | 90% | 80% |
+| 5 Murkmaw's Den | 90% | 80% | 70% |
+| 6 Frostfern Pass | 100% | 100% | 30% |
+| 7 Icicle Crossing | 100%* | 100%* | 0% |
+| 8 Glacier Hold | 100% | 80% | 90% |
+
+\* 90% in the 10-seed tuning run.
+- Icicle Crossing was a wall (0% for everyone at wave ~8) until (a) the hero started at the crossing instead of
+  one gate and (b) bounties scaled with hpMult. On two-gate maps, where the hero starts matters a lot.
+- Novice ≈ expert on Glacier Hold again (chokepoint-focused upgrades). Smarter-AI follow-up still pending.
+
 **Iteration 10** (`balance.ts 10`, autoplayer uses spells + hero skill; novice has a hero now):
 
 | Level | expert | casual | novice |

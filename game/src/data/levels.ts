@@ -4,6 +4,7 @@ const MEADOW = { grass: 0x5f9e45, grassDark: 0x4d8a38, road: 0xc9a66b, roadEdge:
 const FOREST = { grass: 0x4a8a3f, grassDark: 0x3b7534, road: 0xb89a64, roadEdge: 0x96784a };
 const LAKE = { grass: 0x5a9a6a, grassDark: 0x4a8a5c, road: 0xc4b28a, roadEdge: 0xa08e66 };
 const DEN = { grass: 0x3f6b48, grassDark: 0x325a3c, road: 0x8a7a5a, roadEdge: 0x6a5a3e };
+const SNOW = { grass: 0xdde8ee, grassDark: 0xc2d3de, road: 0x9aa3ad, roadEdge: 0x77808a, trees: [0x2f5a4a, 0x3a6a58, 0x2a4f42], snow: true };
 const FEN = { grass: 0x4f8a52, grassDark: 0x3f7446, road: 0x9c8a62, roadEdge: 0x7d6c48 };
 
 // Shared tail for Murkmaw's Den: all three roads meet at (600, 360).
@@ -13,6 +14,16 @@ const DEN_TAIL = [
   { x: 900, y: 170 },
   { x: 1150, y: 170 },
   { x: 1150, y: 560 },
+  { x: 1320, y: 560 },
+];
+
+// Shared tail for Glacier Hold: three trails meet at (500, 360).
+const GLACIER_TAIL = [
+  { x: 500, y: 360 },
+  { x: 820, y: 360 },
+  { x: 820, y: 160 },
+  { x: 1100, y: 160 },
+  { x: 1100, y: 560 },
   { x: 1320, y: 560 },
 ];
 
@@ -170,7 +181,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l3',
-    hpMult: 1.3,
+    hpMult: 1.5,
     name: 'Thornwood Hollow',
     blurb: 'A long road snakes through the old wood. Thornhogs charge and wisplings shrug off magic.',
     mapPos: { x: 600, y: 330 },
@@ -265,7 +276,7 @@ export const LEVELS: LevelDef[] = [
   },
   {
     id: 'l5',
-    hpMult: 1.4,
+    hpMult: 1.65,
     name: "Murkmaw's Den",
     blurb: 'Three roads pour out of the deep bog. End this: defeat Old Murkmaw in his own den.',
     mapPos: { x: 1090, y: 260 },
@@ -307,6 +318,144 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'murkmaw', count: 1, interval: 1, path: 2, delay: 8 }, { enemy: 'thornhog', count: 12, interval: 0.8 }, { enemy: 'skitter', count: 16, interval: 0.4, path: 1 }, { enemy: 'bogbrute', count: 2, interval: 6, delay: 12, path: 1 }] },
     ],
   },
+  {
+    id: 'l6',
+    name: 'Frostfern Pass',
+    blurb: 'The Murkhorde pushes into the snowy highlands. A long switchback trail climbs the pass.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.0,
+    startCoins: 560,
+    lives: 20,
+    theme: SNOW,
+    paths: [
+      [
+        { x: -40, y: 360 },
+        { x: 200, y: 360 },
+        { x: 200, y: 140 },
+        { x: 460, y: 140 },
+        { x: 460, y: 600 },
+        { x: 760, y: 600 },
+        { x: 760, y: 140 },
+        { x: 1040, y: 140 },
+        { x: 1040, y: 460 },
+        { x: 1320, y: 460 },
+      ],
+    ],
+    slots: [
+      { x: 100, y: 240 },
+      { x: 100, y: 480 },
+      { x: 330, y: 250 },
+      { x: 330, y: 470 },
+      { x: 610, y: 60 },
+      { x: 610, y: 300 },
+      { x: 610, y: 470 },
+      { x: 610, y: 680 },
+      { x: 900, y: 260 },
+      { x: 900, y: 460 },
+      { x: 1160, y: 320 },
+      { x: 1200, y: 580 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 12, interval: 0.7 }, { enemy: 'skitter', count: 10, interval: 0.5, delay: 4 }] },
+      { groups: [{ enemy: 'reedguard', count: 6, interval: 1.4 }, { enemy: 'gnat', count: 14, interval: 0.35, delay: 3 }] },
+      { groups: [{ enemy: 'thornhog', count: 6, interval: 1.5 }, { enemy: 'wispling', count: 6, interval: 1, delay: 4 }] },
+      { groups: [{ enemy: 'splotch', count: 8, interval: 1.4 }, { enemy: 'bogmender', count: 2, interval: 4, delay: 2 }] },
+      { groups: [{ enemy: 'gloomwing', count: 12, interval: 0.8 }, { enemy: 'shellback', count: 8, interval: 1.2, delay: 2 }] },
+      { groups: [{ enemy: 'bogbrute', count: 2, interval: 5 }, { enemy: 'skitter', count: 20, interval: 0.35, delay: 2 }] },
+      { groups: [{ enemy: 'wispling', count: 14, interval: 0.6 }, { enemy: 'reedguard', count: 8, interval: 1.1, delay: 4 }] },
+      { groups: [{ enemy: 'thornhog', count: 12, interval: 0.8 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 3 }] },
+      { groups: [{ enemy: 'gnat', count: 30, interval: 0.2 }, { enemy: 'gloomwing', count: 12, interval: 0.6, delay: 3 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4 }, { enemy: 'splotch', count: 10, interval: 1, delay: 2 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 5 }] },
+      { groups: [{ enemy: 'shellback', count: 14, interval: 0.8 }, { enemy: 'wispling', count: 14, interval: 0.6, delay: 4 }] },
+      { groups: [{ enemy: 'bogbrute', count: 4, interval: 3.5 }, { enemy: 'thornhog', count: 14, interval: 0.7, delay: 3 }, { enemy: 'gloomwing', count: 12, interval: 0.6, delay: 6 }] },
+    ],
+  },
+  {
+    id: 'l7',
+    name: 'Icicle Crossing',
+    blurb: 'Two frozen roads cross on the ice and split to two gates. Guard the crossing point.',
+    mapPos: { x: 480, y: 420 },
+    hpMult: 1.45,
+    heroSpawn: { x: 650, y: 360 },
+    startCoins: 820,
+    lives: 25,
+    theme: SNOW,
+    paths: [
+      [{ x: -40, y: 150 }, { x: 500, y: 150 }, { x: 800, y: 570 }, { x: 1320, y: 570 }],
+      [{ x: -40, y: 570 }, { x: 500, y: 570 }, { x: 800, y: 150 }, { x: 1320, y: 150 }],
+    ],
+    slots: [
+      { x: 250, y: 260 },
+      { x: 250, y: 460 },
+      { x: 380, y: 250 },
+      { x: 500, y: 360 },
+      { x: 800, y: 360 },
+      { x: 650, y: 130 },
+      { x: 650, y: 590 },
+      { x: 1050, y: 260 },
+      { x: 1050, y: 460 },
+      { x: 400, y: 660 },
+      { x: 960, y: 660 },
+      { x: 1190, y: 250 },
+      { x: 1190, y: 470 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 10, interval: 0.8 }, { enemy: 'mudling', count: 10, interval: 0.8, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'skitter', count: 12, interval: 0.5 }, { enemy: 'reedguard', count: 5, interval: 1.6, path: 1 }] },
+      { groups: [{ enemy: 'gloomwing', count: 8, interval: 1, path: 1 }, { enemy: 'thornhog', count: 5, interval: 1.6 }] },
+      { groups: [{ enemy: 'wispling', count: 8, interval: 0.9 }, { enemy: 'shellback', count: 6, interval: 1.4, path: 1 }] },
+      { groups: [{ enemy: 'splotch', count: 5, interval: 1.8 }, { enemy: 'splotch', count: 5, interval: 1.8, path: 1 }, { enemy: 'bogmender', count: 2, interval: 4, delay: 3 }] },
+      { groups: [{ enemy: 'gnat', count: 12, interval: 0.3 }, { enemy: 'gnat', count: 12, interval: 0.3, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'bogbrute', count: 2, interval: 5 }, { enemy: 'bogbrute', count: 2, interval: 5, path: 1, delay: 2 }, { enemy: 'skitter', count: 16, interval: 0.4, delay: 4 }] },
+      { groups: [{ enemy: 'thornhog', count: 10, interval: 0.9, path: 1 }, { enemy: 'wispling', count: 10, interval: 0.8 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 4, path: 1 }] },
+      { groups: [{ enemy: 'reedguard', count: 12, interval: 0.9 }, { enemy: 'gloomwing', count: 12, interval: 0.7, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'shellback', count: 12, interval: 0.9, path: 1 }, { enemy: 'splotch', count: 10, interval: 1 }, { enemy: 'gnat', count: 24, interval: 0.25, delay: 5 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4 }, { enemy: 'thornhog', count: 12, interval: 0.8, path: 1 }, { enemy: 'wispling', count: 12, interval: 0.7, delay: 4 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4, path: 1 }, { enemy: 'bogmender', count: 4, interval: 2.5 }, { enemy: 'gloomwing', count: 14, interval: 0.6, delay: 3 }, { enemy: 'reedguard', count: 12, interval: 0.8, path: 1, delay: 6 }] },
+    ],
+  },
+  {
+    id: 'l8',
+    name: 'Glacier Hold',
+    blurb: 'Three icy trails meet below the old glacier fort. The horde attacks from every side.',
+    mapPos: { x: 760, y: 300 },
+    hpMult: 1.6,
+    startCoins: 720,
+    lives: 20,
+    theme: SNOW,
+    paths: [
+      [{ x: -40, y: 360 }, ...GLACIER_TAIL],
+      [{ x: 500, y: -40 }, ...GLACIER_TAIL],
+      [{ x: 500, y: 760 }, ...GLACIER_TAIL],
+    ],
+    slots: [
+      { x: 300, y: 250 },
+      { x: 300, y: 470 },
+      { x: 650, y: 250 },
+      { x: 650, y: 470 },
+      { x: 380, y: 600 },
+      { x: 620, y: 640 },
+      { x: 960, y: 280 },
+      { x: 960, y: 460 },
+      { x: 1220, y: 360 },
+      { x: 380, y: 120 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'mudling', count: 10, interval: 0.8 }, { enemy: 'skitter', count: 8, interval: 0.6, path: 1, delay: 2 }, { enemy: 'mudling', count: 8, interval: 0.8, path: 2, delay: 4 }] },
+      { groups: [{ enemy: 'reedguard', count: 6, interval: 1.4, path: 2 }, { enemy: 'gnat', count: 16, interval: 0.3, path: 1 }] },
+      { groups: [{ enemy: 'thornhog', count: 6, interval: 1.4 }, { enemy: 'wispling', count: 8, interval: 0.9, path: 1 }] },
+      { groups: [{ enemy: 'splotch', count: 8, interval: 1.3, path: 2 }, { enemy: 'gloomwing', count: 10, interval: 0.8, path: 1, delay: 2 }] },
+      { groups: [{ enemy: 'bogmender', count: 3, interval: 3 }, { enemy: 'shellback', count: 10, interval: 1, path: 2 }, { enemy: 'skitter', count: 14, interval: 0.4, path: 1 }] },
+      { groups: [{ enemy: 'bogbrute', count: 3, interval: 4, path: 1 }, { enemy: 'mudling', count: 24, interval: 0.35 }] },
+      { groups: [{ enemy: 'gnat', count: 30, interval: 0.2, path: 2 }, { enemy: 'gloomwing', count: 12, interval: 0.7 }, { enemy: 'thornhog', count: 8, interval: 1.1, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'wispling', count: 14, interval: 0.6, path: 1 }, { enemy: 'reedguard', count: 12, interval: 0.9, path: 2 }, { enemy: 'bogmender', count: 3, interval: 3, delay: 4 }] },
+      { groups: [{ enemy: 'splotch', count: 12, interval: 1 }, { enemy: 'thornhog', count: 12, interval: 0.8, path: 2, delay: 3 }, { enemy: 'bogbrute', count: 3, interval: 4, path: 1, delay: 5 }] },
+      { groups: [{ enemy: 'shellback', count: 14, interval: 0.8, path: 1 }, { enemy: 'wispling', count: 14, interval: 0.7, path: 2 }, { enemy: 'gloomwing', count: 14, interval: 0.6, delay: 4 }] },
+      { groups: [{ enemy: 'bogbrute', count: 5, interval: 3, path: 2 }, { enemy: 'bogmender', count: 5, interval: 2.4 }, { enemy: 'thornhog', count: 14, interval: 0.7, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'gnat', count: 30, interval: 0.2 }, { enemy: 'gnat', count: 30, interval: 0.2, path: 1 }, { enemy: 'gloomwing', count: 16, interval: 0.5, path: 2, delay: 3 }] },
+      { groups: [{ enemy: 'murkmaw', count: 1, interval: 1, path: 1, delay: 8 }, { enemy: 'reedguard', count: 14, interval: 0.8, path: 2 }, { enemy: 'splotch', count: 12, interval: 1 }, { enemy: 'bogbrute', count: 3, interval: 5, path: 2, delay: 10 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -318,4 +467,21 @@ export function isLevelUnlocked(index: number, stars: Record<string, number>): b
 
 export function totalStars(stars: Record<string, number>): number {
   return LEVELS.reduce((n, l) => n + (stars[l.id] ?? 0), 0);
+}
+
+export interface RegionDef {
+  name: string;
+  first: number; // index of the first level in this region
+  count: number; // levels planned for the region (some may not exist yet)
+  snow?: boolean;
+}
+
+export const REGIONS: RegionDef[] = [
+  { name: 'The Grovelands', first: 0, count: 5 },
+  { name: 'Frostfern Highlands', first: 5, count: 5, snow: true },
+];
+
+export function regionOf(levelIndex: number): number {
+  for (let r = REGIONS.length - 1; r >= 0; r--) if (levelIndex >= REGIONS[r].first) return r;
+  return 0;
 }

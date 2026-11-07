@@ -116,6 +116,18 @@ export class BattleScene extends Phaser.Scene {
     });
     this.particles.setDepth(2000);
 
+    if (this.level.theme.snow) {
+      this.add.particles(0, 0, 'dot', {
+        x: { min: -20, max: GAME_W + 20 },
+        y: -10,
+        speedY: { min: 30, max: 70 },
+        speedX: { min: -20, max: 10 },
+        scale: { min: 0.15, max: 0.4 },
+        alpha: { start: 0.9, end: 0.4 },
+        lifespan: 12000,
+        frequency: 120,
+      }).setDepth(2200);
+    }
     this.buildHud();
     this.buildHero();
     this.buildSpells();
@@ -212,13 +224,17 @@ export class BattleScene extends Phaser.Scene {
         deco.fillEllipse(p.x, p.y + 4, 40, 14);
         deco.fillStyle(0x6b4a2b, 1);
         deco.fillRect(p.x - 4, p.y - 14, 8, 18);
-        const leaf = rnd.pick([0x3f7f34, 0x4b8f3a, 0x377030]);
+        const leaf = rnd.pick(this.level.theme.trees ?? [0x3f7f34, 0x4b8f3a, 0x377030]);
         deco.fillStyle(leaf, 1);
         deco.fillCircle(p.x, p.y - 26, 18);
         deco.fillCircle(p.x - 12, p.y - 16, 12);
         deco.fillCircle(p.x + 12, p.y - 16, 12);
         deco.lineStyle(2, C.ink, 0.6);
         deco.strokeCircle(p.x, p.y - 26, 18);
+        if (this.level.theme.snow) {
+          deco.fillStyle(0xffffff, 0.95);
+          deco.fillEllipse(p.x - 3, p.y - 36, 22, 10);
+        }
       } else {
         const col = rnd.pick([0xffffff, 0xffe066, 0xff8fb1, 0xb5a8ff]);
         deco.fillStyle(col, 1);

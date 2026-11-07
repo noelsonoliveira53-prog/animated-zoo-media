@@ -223,6 +223,7 @@ export class BattleSim {
 
   /** Heroes start (and respawn) near the gate, on the last stretch of the first road. */
   heroSpawnPoint(): Vec2 {
+    if (this.level.heroSpawn) return { ...this.level.heroSpawn };
     const p = this.paths[0];
     return p.pointAt(p.length - 260);
   }
@@ -1099,8 +1100,10 @@ export class BattleSim {
     this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
     if (e.hp <= 0) {
       e.alive = false;
-      this.coins += e.def.bounty;
-      this.events.push({ type: 'kill', enemy: e, bounty: e.def.bounty });
+      // Tougher levels (higher hpMult) pay proportionally more per kill.
+      const bounty = Math.round(e.def.bounty * (this.level.hpMult ?? 1));
+      this.coins += bounty;
+      this.events.push({ type: 'kill', enemy: e, bounty });
       if (this.hero?.alive) {
         const near = Math.hypot(e.pos.x - this.hero.pos.x, e.pos.y - this.hero.pos.y) < 260;
         this.grantHeroXp(e.def.bounty * (near ? 1 : 0.35));

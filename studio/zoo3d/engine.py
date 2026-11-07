@@ -224,7 +224,10 @@ RANGE = job.get("frame_range") or [0, NF]          # re-render just a slice (fra
 for f in range(int(RANGE[0]), min(int(RANGE[1]), NF), STEP):
     fp = os.path.join(FR, f"{(f - int(RANGE[0])) // STEP:05d}.png")
     if os.path.exists(fp) and os.path.getsize(fp) > 1000: continue
-    if os.path.exists(os.path.join(os.path.dirname(OUT), "STOP")) or os.path.exists(os.path.join(OUT, "STOP")):
+    def _stop(pth):   # a STOP file pauses rendering unless its text starts with RESUME
+        try: return os.path.exists(pth) and not open(pth, encoding="utf-8", errors="ignore").read().strip().upper().startswith("RESUME")
+        except Exception: return True
+    if _stop(os.path.join(os.path.dirname(OUT), "STOP")) or _stop(os.path.join(OUT, "STOP")):
         print("STOP file found - stopping (frames so far are kept)", flush=True); sys.exit(3)
     apply(f); S.frame_set(f)
     r.filepath = fp; bpy.ops.render.render(write_still=True); done += 1

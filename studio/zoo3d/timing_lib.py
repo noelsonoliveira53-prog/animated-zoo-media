@@ -132,7 +132,7 @@ def repair(line_toks, aligned, tx):
     return times, sum(bad), extra
 
 
-def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
+def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None, pre_extra=None):
     who_map = who_map or spec.get("who_map", {})
     secs = lyric_sections(spec["lyrics"])
     line_toks = [ln for s in secs for ln in s["lines"]]
@@ -150,6 +150,8 @@ def build(song, aligned, tx, spec, ffmpeg="ffmpeg", who="host", who_map=None):
             s0 = lw[0]["start"] if s0 is None else s0
         if s0 is not None: sections.append({"name": s["name"], "start": s0, "who": s_who})
     # the singer often repeats the chorus after the written lyrics end: caption it from the transcription
+    if pre_extra:   # extra sung passes the lyrics don't list (e.g. the singer ran the chorus twice at the start)
+        extra = list(pre_extra) + list(extra or [])
     if extra and lines:
         grp = []
         for w in extra + [None]:

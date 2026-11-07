@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **72** (next balance pass at iteration 75)
+Iteration counter: **73** (next balance pass at iteration 75)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -535,13 +535,20 @@ Iteration counter: **72** (next balance pass at iteration 75)
   (1,220 / 960 px to the merge) meet before an 800 px tail. 12 pads, 16 waves, hpMult 1.22. First draft was 25/0/0 at
   1.4: wave 1's eight Shiftscales overran the opening gold, and waves 4–7 stacked fast packs on the north road; both
   thinned. Screenshot `72.png`. 155 tests.
+- [x] **Iter 73 — Ruins finale: Heart of the Ruins (level 40) + Ulmaroth, the Overgrown Idol.** New boss (38 enemies)
+  built from the region's traits: `shift` (stone 60% armor ↔ moss 60% MR every 6 s), `thorns` 0.3, `revive` (raises
+  fallen allies within 180 px at 60%), and four phases (bramblehides → stone shell + idol keepers → a flood of
+  shiftscales → a lurch for the gate). Level 40: a long west road and a short north road (light groups only) merge into a
+  1,240 px tail, 12 pads, 18 waves, hpMult 1.56. Achievements **Idolbreaker** and **Pathfinder** (26 total); Ulmaroth
+  joins the endless boss rotation. Region 8 complete: 40 levels. Screenshot `73.png`. 155 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 8 finale (level 40) with a Ruins boss.
-2. Village: drag-to-pan on small phone screens.
+1. Village: drag-to-pan on small phone screens.
+2. Region 9 (levels 41–45): a new biome, enemies and boss, following the region recipe.
+3. A second story beat after the Ruins boss (a short ending card like the Emberdeep one).
 
 ## Known Bugs
 - (none known)
@@ -558,6 +565,7 @@ Iteration counter: **72** (next balance pass at iteration 75)
 **Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
 the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
 100/83/17.
+**Iteration 73:** 40 Heart of the Ruins 92/50/0 at hpMult 1.56 (1.4 → 100/92/0, 1.6 → 83/33/0, 1.7 → 67/25/0).
 **Iteration 72:** 39 Idol Courtyard 92/58/33 at hpMult 1.22 (1.15 → 100/83/17, 1.3 → 92/33/0).
 
 **Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen

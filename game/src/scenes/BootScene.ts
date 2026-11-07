@@ -304,6 +304,47 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.55, cy - r * 0.05, cx - r * 0.75, cy - r * 0.65);
         break;
       }
+      case 'ulmaroth': {
+        // overgrown idol: a stone block body on stumpy legs, a carved face with glowing eyes, vines and moss draped over it
+        g.lineStyle(3, C.ink, 1);
+        for (const lx of [-0.55, 0.55]) {
+          g.fillStyle(shade, 1);
+          g.fillRect(cx + lx * r - r * 0.22, cy + r * 0.55, r * 0.44, r * 0.5);
+          g.strokeRect(cx + lx * r - r * 0.22, cy + r * 0.55, r * 0.44, r * 0.5);
+        }
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.95, cy - r * 0.9, r * 1.9, r * 1.55, 8);
+        g.strokeRoundedRect(cx - r * 0.95, cy - r * 0.9, r * 1.9, r * 1.55, 8);
+        g.fillStyle(shade, 1);
+        g.fillRect(cx - r * 1.1, cy - r * 1.05, r * 2.2, r * 0.25);
+        g.strokeRect(cx - r * 1.1, cy - r * 1.05, r * 2.2, r * 0.25);
+        g.fillStyle(0x5a5440, 1);
+        g.fillRect(cx - r * 0.55, cy - r * 0.55, r * 0.35, r * 0.22);
+        g.fillRect(cx + r * 0.2, cy - r * 0.55, r * 0.35, r * 0.22);
+        g.fillStyle(0x9aff8a, 1);
+        g.fillCircle(cx - r * 0.37, cy - r * 0.44, r * 0.09);
+        g.fillCircle(cx + r * 0.37, cy - r * 0.44, r * 0.09);
+        g.fillStyle(0x5a5440, 1);
+        g.fillRect(cx - r * 0.45, cy - r * 0.05, r * 0.9, r * 0.18);
+        for (let k = 0; k < 5; k++) g.fillRect(cx - r * 0.4 + k * r * 0.2, cy + r * 0.13, r * 0.08, r * 0.12);
+        g.lineStyle(4, 0x3f8a34, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 0.95, cy - r * 0.7);
+        g.lineTo(cx - r * 0.4, cy + r * 0.3);
+        g.lineTo(cx + r * 0.1, cy + r * 0.6);
+        g.strokePath();
+        g.beginPath();
+        g.moveTo(cx + r * 0.95, cy - r * 0.8);
+        g.lineTo(cx + r * 0.6, cy - r * 0.2);
+        g.lineTo(cx + r * 0.9, cy + r * 0.5);
+        g.strokePath();
+        g.fillStyle(0x4a9a3a, 1);
+        for (const [dx, dy] of [[-0.8, -1.0], [-0.2, -1.05], [0.5, -1.0], [0.9, -0.95]]) g.fillEllipse(cx + dx * r, cy + dy * r, r * 0.45, r * 0.22);
+        g.fillStyle(0xe8604a, 1);
+        g.fillCircle(cx + r * 0.62, cy + r * 0.05, r * 0.08);
+        g.fillCircle(cx - r * 0.65, cy - r * 0.2, r * 0.07);
+        break;
+      }
       case 'zephyrax': {
         // storm roc: vast swept wings with feathered tips, pale chest, crested head, hooked beak, lightning in the wings
         g.lineStyle(3, C.ink, 1);

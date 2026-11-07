@@ -30,6 +30,8 @@ export const ACHIEVEMENTS: AchievementDef[] = [
   { id: 'boss_kaleidrax', name: 'Shatterer', text: 'Defeat Kaleidrax, the Shattered Colossus.', goal: 1, progress: (s) => stat(s, 'boss_kaleidrax'), reward: { coins: 1800, glowsap: 1800 } },
   { id: 'boss_zephyrax', name: 'Stormbreaker', text: 'Defeat Zephyrax, the Gale Roc.', goal: 1, progress: (s) => stat(s, 'boss_zephyrax'), reward: { coins: 2000, glowsap: 2000 } },
   { id: 'gale_stars', name: 'Cloudwalker', text: 'Earn 3 stars on every Galecrest Aeries level.', goal: 15, progress: (s) => ['l31', 'l32', 'l33', 'l34', 'l35'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 2500, glowsap: 2500 } },
+  { id: 'boss_ulmaroth', name: 'Idolbreaker', text: 'Defeat Ulmaroth, the Overgrown Idol.', goal: 1, progress: (s) => stat(s, 'boss_ulmaroth'), reward: { coins: 2200, glowsap: 2200 } },
+  { id: 'ruins_stars', name: 'Pathfinder', text: 'Earn 3 stars on every Verdant Ruins level.', goal: 15, progress: (s) => ['l36', 'l37', 'l38', 'l39', 'l40'].reduce((n, id) => n + (s.stars[id] ?? 0), 0), reward: { coins: 2800, glowsap: 2800 } },
   { id: 'campaign', name: 'Keeper of the Grove', text: 'Defeat Vulkhar and finish the story.', goal: 1, progress: (s) => ((s.stars[(LEVELS.find((l) => l.finale) ?? LEVELS[LEVELS.length - 1]).id] ?? 0) > 0 ? 1 : 0), reward: { coins: 1500 } },
   { id: 'kills500', name: 'Mud on the Boots', text: 'Defeat 500 Murkhorde critters.', goal: 500, progress: (s) => stat(s, 'kills'), reward: { coins: 300 } },
   { id: 'kills5000', name: 'Horde Breaker', text: 'Defeat 5,000 Murkhorde critters.', goal: 5000, progress: (s) => stat(s, 'kills'), reward: { coins: 1500, glowsap: 1000 } },

@@ -928,5 +928,27 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 165.5
+ },
+ {
+  "file": "gizmo/gz3d_ep07.mp4",
+  "title": "Why Is There Day and Night? Science Song for Kids with Gizmo",
+  "description": "Why is there day and night? Gizmo the robot explains that the Earth spins: when our side faces the sun it's day, and when it turns away it's night. One spin takes 24 hours.\nKids spin like the Earth, stretch like the sun and curl up like the night. Ages 3-6.\n\nLYRICS\nDay and night, day and night,\nThe Earth spins round from dark to light!\nSun comes up and sun goes down,\nOur big Earth keeps spinning round!\nIn the morning, the sun says hi,\nRising up into the sky!\nThe Earth is spinning, slow and steady,\nWake up, wake up, the day is ready!\nWhen our side turns away from the sun,\nNight time comes and the day is done!\nThe moon and stars come out to play,\nGoodnight sun, see you next day!\nOne whole spin takes a day,\nTwenty-four hours, hip hooray!\nSomewhere it's morning, somewhere it's night,\nOur spinning Earth is just right!\nSpin around like the Earth, whee!\nStretch up high like the sun, see!\nCurl up small like the night,\nThen wake up with the morning light!\nDay and night! Bye-bye, friends!\nDay and night, day and night, Day and night,\nDay and night, bye bye friends",
+  "tags": [
+   "day and night song",
+   "why is there day and night",
+   "earth spins",
+   "science song for kids",
+   "space for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ],
+  "date": "2026-11-12",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep07.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 165.0
  }
 ]

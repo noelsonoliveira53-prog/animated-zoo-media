@@ -1901,6 +1901,40 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
+  /** A boss falls: a slow-motion beat, a white flash, a shockwave and a volley of fireworks over the battlefield. */
+  private bossFireworks(x: number, y: number, color: number): void {
+    this.cameras.main.flash(220, 255, 250, 230);
+    shake(this, 400, 0.012);
+    const ring = this.add.circle(x, y, 30, 0xffffff, 0).setStrokeStyle(6, 0xfff0c0, 1).setDepth(2700);
+    this.tweens.add({ targets: ring, scale: 6, alpha: 0, duration: 700, ease: 'Cubic.easeOut', onComplete: () => ring.destroy() });
+    this.particles.setParticleTint(color);
+    this.particles.explode(40, x, y);
+    if (motion.lowFx) return;
+    const colors = [0xffd060, 0xff6a8a, 0x8ae8ff, 0xb08aff, 0x9be86a];
+    for (let k = 0; k < 7; k++) {
+      this.time.delayedCall(200 + k * 260, () => {
+        const fx = Phaser.Math.Between(180, GAME_W - 180);
+        const fy = Phaser.Math.Between(140, GAME_H / 2);
+        const rocket = this.add.circle(fx, GAME_H - 60, 3, 0xfff0c0).setDepth(2700).setBlendMode(Phaser.BlendModes.ADD);
+        this.tweens.add({
+          targets: rocket,
+          y: fy,
+          duration: 420,
+          ease: 'Quad.easeOut',
+          onComplete: () => {
+            rocket.destroy();
+            const col = colors[k % colors.length];
+            const burst = this.add.particles(fx, fy, 'dot', { speed: { min: 80, max: 220 }, scale: { start: 0.6, end: 0 }, lifespan: 900, gravityY: 120, tint: col, blendMode: Phaser.BlendModes.ADD, emitting: false });
+            burst.setDepth(2700);
+            burst.explode(36);
+            this.time.delayedCall(1200, () => burst.destroy());
+            sfx.boom();
+          },
+        });
+      });
+    }
+  }
+
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */
   private drawLighting(): void {
     const key = 'fx_vignette';
@@ -2740,6 +2774,7 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, `+${ev.bounty}`, TEXT.gold, 18);
         sfx.kill();
         sfx.coin();
+        if (ev.enemy.def.boss) this.bossFireworks(ev.enemy.pos.x, ev.enemy.pos.y, ev.enemy.def.color);
         break;
       }
       case 'leak': {

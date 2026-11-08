@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **239** (next balance pass at iteration 240)
+Iteration counter: **240** (next balance pass at iteration 245)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1523,6 +1523,15 @@ Iteration counter: **239** (next balance pass at iteration 240)
   - Heath: dark peat hags and white bog-cotton tufts.
   - Screenshots `screenshots/239-101.png` through `239-121.png` (`239.png` = wold). No console errors, 258 tests.
 
+- **Iteration 240** (POLISH + BALANCE):
+  - Polish: **boss death fireworks**. A defeated boss sets off a warm white flash, a heavy shake, a big shockwave ring and a burst in its colour, then seven rockets climb and pop in coloured firework bursts over the next two seconds, each with a boom. On Graphics: Low only the flash, ring and burst play. Check: `scripts/bossfx-check.mjs`. Screenshots `screenshots/240.png` (a burst over the field), `240-1..3.png`.
+  - Performance: the new `scripts/leak-check.mjs` plays a busy level at ×3 (dev mode, all pads built, waves called early) and compares live tweens, timers and objects after 3 s and 23 s.
+    - Level 96: tweens 68 → 93, timers 1 → 2, objects 153 → 332, by wave 5.
+    - Level 61: tweens 33 → 43, objects 128 → 249.
+    - Growth tracks the enemies on screen, with no runaway leak from the new effects.
+  - The white specks seen around enemies in late screenshots are the slow and frost status effects, which is intended feedback.
+  - Balance: no sim changes since iteration 230, nothing tuned. 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1534,7 +1543,7 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
    and a glowing pulse on the next unbeaten level node.
 2. Battle HUD polish: a glossier top bar and spell buttons (inner gradients, rim light), plus animated coin and life
    counters (tick up and down with a bounce) and a wave progress bar.
-3. Enemy hit and death polish: death puffs tinted by enemy type, a small hit-stop on big hits, and boss death fireworks.
+3. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
 
 ## Known Bugs
 - (none known)

@@ -339,6 +339,10 @@ export class BattleScene extends Phaser.Scene {
     if (theme.ruins) this.drawRuinsGround(rnd);
     if (theme.gears) this.drawGearsGround(rnd);
     if (theme.abyss) this.drawAbyssGround(rnd);
+    if (theme.orchard) this.drawOrchardGround(rnd);
+    if (theme.storm) this.drawStormGround(rnd);
+    if (theme.dunes) this.drawDuneGround(rnd);
+    if (theme.reef) this.drawReefGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1539,6 +1543,139 @@ export class BattleScene extends Phaser.Scene {
       }
     }
     if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.4, duration: 2600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+  }
+
+  /** Orchard regions: windfall apples and pears in the grass and drifts of autumn leaf litter. */
+  private drawOrchardGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 90; i++) {
+      const x = rnd.between(0, GAME_W);
+      const y = rnd.between(80, GAME_H);
+      if (!this.clearOfRoads(x, y, 2)) continue;
+      g.fillStyle(rnd.pick([0xd8642a, 0xe8a03a, 0xb8442a, 0xc8b040]), 0.85);
+      const a = rnd.frac() * Math.PI;
+      g.fillEllipse(x, y, 7, 3.5);
+      g.lineStyle(1, 0x6a3a1a, 0.6);
+      g.lineBetween(x - Math.cos(a) * 3, y - Math.sin(a) * 1.5, x + Math.cos(a) * 3, y + Math.sin(a) * 1.5);
+    }
+    for (let i = 0; i < 20; i++) {
+      const x = rnd.between(20, GAME_W - 20);
+      const y = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 6)) continue;
+      const pear = rnd.frac() < 0.35;
+      g.fillStyle(0x000000, 0.15);
+      g.fillEllipse(x + 2, y + 4, 12, 4);
+      g.fillStyle(pear ? 0xc8c040 : rnd.pick([0xd83a2a, 0xe85a2a]), 1);
+      if (pear) {
+        g.fillCircle(x, y + 1, 4.5);
+        g.fillCircle(x, y - 3, 3);
+      } else g.fillCircle(x, y, 5);
+      g.fillStyle(0xffffff, 0.5);
+      g.fillCircle(x - 1.5, y - 1.5, 1.4);
+      g.lineStyle(1.5, 0x5a3a1a, 1);
+      g.lineBetween(x, y - (pear ? 5 : 4), x + 1, y - (pear ? 8 : 7));
+    }
+  }
+
+  /** Storm regions: rain puddles that ripple, and starburst scorch marks where lightning struck. */
+  private drawStormGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 7; i++) {
+      const x = rnd.between(40, GAME_W - 40);
+      const y = rnd.between(110, GAME_H - 30);
+      if (!this.clearOfRoads(x, y, 16)) continue;
+      g.fillStyle(0x2a2418, 0.45);
+      g.fillCircle(x, y, 10);
+      g.lineStyle(2, 0x2a2418, 0.4);
+      for (let k = 0; k < 7; k++) {
+        const a = (k / 7) * Math.PI * 2 + rnd.frac() * 0.4;
+        g.lineBetween(x, y, x + Math.cos(a) * rnd.between(14, 24), y + Math.sin(a) * rnd.between(8, 14));
+      }
+    }
+    for (let i = 0; i < 9; i++) {
+      const x = rnd.between(40, GAME_W - 40);
+      const y = rnd.between(110, GAME_H - 30);
+      if (!this.clearOfRoads(x, y, 20)) continue;
+      const w = rnd.between(30, 56);
+      g.fillStyle(0x5a6a7a, 0.6);
+      g.fillEllipse(x, y, w, w * 0.36);
+      g.fillStyle(0xc8d8e8, 0.35);
+      g.fillEllipse(x - w * 0.15, y - w * 0.06, w * 0.4, w * 0.08);
+      if (!motion.reduced && !motion.lowFx) {
+        this.time.addEvent({
+          delay: 900 + rnd.between(0, 700),
+          loop: true,
+          callback: () => {
+            const ring = this.add.ellipse(x + (Math.random() - 0.5) * w * 0.6, y + (Math.random() - 0.5) * w * 0.2, 6, 2.5, 0xffffff, 0).setStrokeStyle(1, 0xe8f4ff, 0.7).setDepth(-9);
+            this.tweens.add({ targets: ring, scale: 3, alpha: 0, duration: 700, onComplete: () => ring.destroy() });
+          },
+        });
+      }
+    }
+  }
+
+  /** Desert regions: wind ripples combed across the sand and the odd bleached stone. */
+  private drawDuneGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 26; i++) {
+      const x = rnd.between(0, GAME_W);
+      const y = rnd.between(90, GAME_H);
+      if (!this.clearOfRoads(x, y, 20)) continue;
+      const w = rnd.between(60, 130);
+      for (let k = 0; k < 4; k++) {
+        g.lineStyle(2, 0xb88a50, 0.28);
+        g.beginPath();
+        g.arc(x, y + k * 7 + w, w, Math.PI * 1.32, Math.PI * 1.68);
+        g.strokePath();
+        g.lineStyle(1.5, 0xfff0c8, 0.3);
+        g.beginPath();
+        g.arc(x, y + k * 7 + w - 2, w, Math.PI * 1.34, Math.PI * 1.66);
+        g.strokePath();
+      }
+    }
+    for (let i = 0; i < 8; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(110, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 8)) continue;
+      g.fillStyle(0x000000, 0.15);
+      g.fillEllipse(x + 3, y + 4, 18, 6);
+      g.fillStyle(0xf0e4c8, 1);
+      g.fillEllipse(x, y, 15, 9);
+    }
+  }
+
+  /** Reef regions: branching coral, sea-glass pebbles and swaying anemones on the bright floor. */
+  private drawReefGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 12; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(110, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 16)) continue;
+      const col = rnd.pick([0xf07a6a, 0xf0a05a, 0xd86aa8, 0xf8c8d8]);
+      g.lineStyle(4, col, 1);
+      const branch = (bx: number, by: number, a: number, len: number, depth: number) => {
+        const ex = bx + Math.cos(a) * len;
+        const ey = by + Math.sin(a) * len;
+        g.lineBetween(bx, by, ex, ey);
+        if (depth > 0) {
+          branch(ex, ey, a - 0.5, len * 0.7, depth - 1);
+          branch(ex, ey, a + 0.5, len * 0.7, depth - 1);
+        } else {
+          g.fillStyle(col, 1);
+          g.fillCircle(ex, ey, 2.5);
+        }
+      };
+      branch(x, y, -Math.PI / 2, rnd.between(8, 12), 2);
+    }
+    for (let i = 0; i < 30; i++) {
+      const x = rnd.between(10, GAME_W - 10);
+      const y = rnd.between(90, GAME_H - 10);
+      if (!this.clearOfRoads(x, y, 4)) continue;
+      g.fillStyle(rnd.pick([0x9ae8d8, 0xb8d8f8, 0xd8f0a8]), 0.85);
+      g.fillEllipse(x, y, 6, 4);
+      g.fillStyle(0xffffff, 0.6);
+      g.fillCircle(x - 1, y - 1, 1);
+    }
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

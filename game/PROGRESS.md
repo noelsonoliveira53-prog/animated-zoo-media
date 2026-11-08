@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **246** (next balance pass at iteration 250)
+Iteration counter: **247** (next balance pass at iteration 250)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1574,15 +1574,25 @@ Iteration counter: **246** (next balance pass at iteration 250)
   - Graphics: Low keeps the essentials (scorch, rings, fewer vines with no stagger, no trail, rays, embers, bushes or leaves).
   - Check `scripts/spellfx-check.mjs` (casts all three, follows the sim's strike timer for the mid-fall and impact shots, no console errors, tweens settle). Screenshots `screenshots/246.png` (impact) and `246-star.png` (mid-fall). 265 tests.
 
+- **Iteration 247: hero skill effects.** New `scenes/fx/HeroFx.ts` adds a signature burst per hero, layered on the shared ring or quake effect:
+  - Bramble's **Earthshake**: jagged cracks race out across the ground and rocks hop up.
+  - Fen's **Feather Storm**: a whirl of feathers spirals up with sweeping gust arcs.
+  - Ember's **Foxfire Ring**: a warm glow and 16 flame tongues lick up around the ring.
+  - Wren's **Hush**: three slow, soft ripples and drifting moon crescents.
+  - Sorrel's **Second Wind**: a column of green light with motes spiralling up.
+  - Hazel's **Dream Darts**: purple stars burst out and dream bubbles float up.
+  - Skill button: a glassy highlight and a breathing gold glow while the skill is ready, plus a one-off ping when it comes off cooldown (not at battle start; no pulse with Reduce Motion). Graphics: Low skips the signature bursts.
+  - Check `scripts/herofx-check.mjs` (all six heroes fire their skill, no console errors, no leftover pieces). `screenshots/247.png` is a 3×2 montage of the six bursts.
+  - Note: headless Chromium here renders only a few frames per second on busy maps, so effect screenshots should pause tweens or follow sim timers rather than wall-clock waits. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
-2. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
-3. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
+1. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
+2. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
 
 ## Known Bugs
 - (none known)

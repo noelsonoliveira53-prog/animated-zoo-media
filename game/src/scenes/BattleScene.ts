@@ -6,6 +6,7 @@ import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
+import { heroSignature, readyPing } from './fx/HeroFx';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -78,6 +79,7 @@ export class BattleScene extends Phaser.Scene {
   private shownLives = -1;
   private shownWave = -1;
   private hitStopUntil = 0;
+  private skillWasReady = true;
   private lastHitStop = -9999;
   private nextWaveBtn!: Button;
   private speedBtn!: Button;
@@ -1959,6 +1961,7 @@ export class BattleScene extends Phaser.Scene {
     this.shownCoins = this.shownLives = this.shownWave = -1;
     this.hitStopUntil = 0;
     this.lastHitStop = -9999;
+    this.skillWasReady = true; // no ping for the skill being ready at the start
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2233,6 +2236,16 @@ export class BattleScene extends Phaser.Scene {
         g.fillCircle(sx + 27, py - 26, 7);
       }
     }
+    // glassy highlight, plus a breathing gold glow and a one-off ping when the skill comes off cooldown
+    g.fillStyle(0xffffff, ready ? 0.16 : 0.06);
+    g.fillEllipse(sx, py - 15, 46, 22);
+    if (ready) {
+      const t = motion.reduced ? 0.5 : (Math.sin(this.time.now / 260) + 1) / 2;
+      g.lineStyle(6, 0xffe27a, 0.18 + 0.3 * t);
+      g.strokeCircle(sx, py, 40 + t * 2);
+      if (!this.skillWasReady && !motion.reduced) readyPing(this, sx, py, h.def.color);
+    }
+    this.skillWasReady = ready;
     g.lineStyle(3, ready ? C.gold : 0x777777, 1);
     g.strokeCircle(sx, py, 34);
     this.skillText.setAlpha(ready ? 1 : 0.6);
@@ -2757,6 +2770,7 @@ export class BattleScene extends Phaser.Scene {
       case 'heroSkill': {
         const sk = ev.hero.def.active;
         this.skillEffect(sk.kind, ev.hero.pos, sk.radius, sk.fxColor ?? ev.hero.def.color, sk.fxColor);
+        heroSignature(this, ev.hero.def.id, ev.hero.pos, sk.radius, sk.fxColor ?? ev.hero.def.color, motion.lowFx);
         if (sk.kind === 'volley') {
           for (const e of ev.hits) {
             const f = this.add.image(ev.hero.pos.x, ev.hero.pos.y - 30, 'proj_hero_fen').setDepth(2500);

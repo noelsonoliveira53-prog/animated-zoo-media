@@ -1,3 +1,5 @@
+import { drawMenuBackdrop } from './menu/MenuBackdrop';
+import { addLighting } from '../ui/lighting';
 import { devOn, setDev } from '../systems/dev';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
@@ -28,38 +30,9 @@ export class MenuScene extends Phaser.Scene {
     motion.reduced = !!save.settings.reduceMotion;
     music.setVolume(save.settings.volume, save.settings.music);
 
-    // layered hills backdrop
-    const g = this.add.graphics();
-    g.fillGradientStyle(0x7fd3ff, 0x7fd3ff, 0xc8f0ff, 0xc8f0ff, 1);
-    g.fillRect(0, 0, GAME_W, GAME_H);
-    const hills: [number, number, number][] = [
-      [0x86c56a, 470, 90],
-      [0x6aae52, 540, 70],
-      [0x52953f, 620, 60],
-    ];
-    for (const [color, base, amp] of hills) {
-      g.fillStyle(color, 1);
-      g.beginPath();
-      g.moveTo(0, GAME_H);
-      for (let x = 0; x <= GAME_W; x += 20) g.lineTo(x, base - Math.sin(x / 170 + base) * amp * 0.5 - Math.cos(x / 90) * amp * 0.2);
-      g.lineTo(GAME_W, GAME_H);
-      g.closePath();
-      g.fillPath();
-    }
-    // drifting fireflies
-    for (let i = 0; i < 24; i++) {
-      const dot = this.add.image(Phaser.Math.Between(0, GAME_W), Phaser.Math.Between(200, 700), 'dot').setTint(0xfff3a0).setScale(0.35).setAlpha(0.8);
-      this.tweens.add({
-        targets: dot,
-        y: dot.y - Phaser.Math.Between(30, 80),
-        x: dot.x + Phaser.Math.Between(-40, 40),
-        alpha: 0.2,
-        duration: Phaser.Math.Between(1800, 3600),
-        yoyo: true,
-        repeat: -1,
-        ease: 'Sine.easeInOut',
-      });
-    }
+    motion.lowFx = !!save.settings.fxLow;
+    drawMenuBackdrop(this, GAME_W, GAME_H);
+    addLighting(this, -1);
 
     const title = this.add.text(GAME_W / 2, 150, 'GROVEWATCH', textStyle(96, TEXT.gold)).setOrigin(0.5);
     title.setStroke('#1d2b1f', 14);

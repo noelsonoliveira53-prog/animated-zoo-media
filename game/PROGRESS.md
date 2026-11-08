@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **247** (next balance pass at iteration 250)
+Iteration counter: **248** (next balance pass at iteration 250)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1585,14 +1585,24 @@ Iteration counter: **247** (next balance pass at iteration 250)
   - Check `scripts/herofx-check.mjs` (all six heroes fire their skill, no console errors, no leftover pieces). `screenshots/247.png` is a 3×2 montage of the six bursts.
   - Note: headless Chromium here renders only a few frames per second on busy maps, so effect screenshots should pause tweens or follow sim timers rather than wall-clock waits. 265 tests.
 
+- **Iteration 248: animated main menu backdrop.** New `scenes/menu/MenuBackdrop.ts` replaces the flat hills:
+  - A warm evening sky gradient and a low sun with a breathing halo, placed top-right so it never sits behind the title text.
+  - Seven fluffy clouds with peach undersides that drift right and wrap around.
+  - Pale far mountains, the three hills with a sunlit rim along each ridge, and pine silhouettes on the middle ridge.
+  - A dark watchtower on its hill between the menu buttons and the hero panel, with a flickering lit window and a waving orange pennant.
+  - Glowing fireflies over the meadow, plus the shared lighting and vignette under the UI.
+  - Reduce Motion or Graphics: Low freezes the clouds, flicker, pennant and fireflies (the menu now reads the graphics setting too).
+  - Check `scripts/menu-shot.mjs` (clouds move, no console errors). Screenshot `screenshots/248.png`. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
-2. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
+1. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
+2. Tower build and upgrade juice: a construction puff, scaffold flash and a rising tier badge when a tower is built or upgraded.
+3. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
 
 ## Known Bugs
 - (none known)

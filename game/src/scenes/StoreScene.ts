@@ -9,6 +9,7 @@ import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { fitWidth, pf } from '../ui/touch';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { motion } from '../ui/motion';
 
 // The Keeper's Store: three tier rows of permanent upgrades, bought with village coins and glowsap.
 
@@ -20,6 +21,7 @@ export class StoreScene extends Phaser.Scene {
   private root!: Phaser.GameObjects.Container;
   private back = 'Menu';
   private burst!: Phaser.GameObjects.Particles.ParticleEmitter;
+  private sweepTimers: Phaser.Time.TimerEvent[] = [];
 
   constructor() {
     super('Store');
@@ -30,8 +32,12 @@ export class StoreScene extends Phaser.Scene {
   }
 
   create(): void {
+    this.sweepTimers = [];
     music.setMood('calm');
     music.setTheme(themeById('home'));
+    const save0 = loadSave();
+    motion.reduced = !!save0.settings.reduceMotion;
+    motion.lowFx = !!save0.settings.fxLow;
     const g = this.add.graphics();
     g.fillGradientStyle(0x2a2238, 0x2a2238, 0x14101e, 0x14101e, 1);
     g.fillRect(0, 0, GAME_W, GAME_H);
@@ -46,6 +52,9 @@ export class StoreScene extends Phaser.Scene {
 
   private build(): void {
     this.root?.destroy();
+    // the shine loops belong to the cards being rebuilt
+    for (const t of this.sweepTimers) t.remove();
+    this.sweepTimers = [];
     this.root = this.add.container(0, 0);
     const save = loadSave();
     const v = ensureVillage(save);
@@ -103,9 +112,15 @@ export class StoreScene extends Phaser.Scene {
     bg.fillRoundedRect(-CARD_W / 2 + 4, -CARD_H / 2 + 6, CARD_W, CARD_H, 16);
     bg.fillStyle(maxed ? 0x3a3020 : C.panel, 1);
     bg.fillRoundedRect(-CARD_W / 2, -CARD_H / 2, CARD_W, CARD_H, 16);
+    // glossy upper half and a thin inner rim light
+    bg.fillStyle(0xffffff, 0.035);
+    bg.fillRoundedRect(-CARD_W / 2 + 3, -CARD_H / 2 + 3, CARD_W - 6, 34, { tl: 14, tr: 14, bl: 6, br: 6 }); // gloss behind the title only
+    bg.lineStyle(1, 0xffffff, 0.12);
+    bg.strokeRoundedRect(-CARD_W / 2 + 3, -CARD_H / 2 + 3, CARD_W - 6, CARD_H - 6, 14);
     bg.lineStyle(3, maxed ? 0xffc83a : item.color, open ? 0.9 : 0.3);
     bg.strokeRoundedRect(-CARD_W / 2, -CARD_H / 2, CARD_W, CARD_H, 16);
     c.add(bg);
+    if (maxed && !this.still()) c.add(this.sweep(CARD_W, CARD_H, 0xffe08a, 0.16, 3600));
     c.add(this.icon(item, -CARD_W / 2 + 54, -8));
     c.add(fitWidth(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 22, item.name, textStyle(19, TEXT.cream)).setOrigin(0, 0.5), 250));
     c.add(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 44, `${item.text} per rank`, { ...textStyle(pf(13), TEXT.dim, false), wordWrap: { width: 250 } }).setOrigin(0, 0));
@@ -138,6 +153,12 @@ export class StoreScene extends Phaser.Scene {
     });
     btn.setName(`buy_${item.id}`);
     c.add(btn);
+    // affordable: a glint sweeps across the Buy button now and then
+    if (afford && !this.still()) {
+      const glint = this.sweep(84, 36, 0xffffff, 0.45, 2600);
+      glint.setPosition(CARD_W / 2 - 52, CARD_H / 2 - 24);
+      c.add(glint);
+    }
   }
 
   private buy(item: StoreItem, x: number, y: number): void {
@@ -161,6 +182,10 @@ export class StoreScene extends Phaser.Scene {
     }
     writeSave(s);
     sfx.build();
+    sfx.coin();
+    this.payFlight(x, y);
+    const ring = this.add.circle(x, y, 60, item.color, 0).setStrokeStyle(4, item.color, 0.9).setDepth(45).setScale(0.4);
+    this.tweens.add({ targets: ring, scale: 2.4, alpha: 0, duration: 520, ease: 'Quad.easeOut', onComplete: () => ring.destroy() });
     this.burst.setParticleTint(item.color);
     this.burst.explode(26, x, y);
     this.burst.setParticleTint(0xffd060);
@@ -186,6 +211,47 @@ export class StoreScene extends Phaser.Scene {
     this.burst.setParticleTint(0xffd060);
     for (let k = 0; k < 6; k++) this.time.delayedCall(k * 90, () => this.burst.explode(16, 160 + k * 190, y));
     this.tweens.add({ targets: [band, txt], alpha: 0, delay: 1700, duration: 400, onComplete: () => { band.destroy(); txt.destroy(); } });
+  }
+
+  private still(): boolean {
+    return motion.reduced || motion.lowFx;
+  }
+
+  /**
+   * A slanted band of light that slides across a w×h box (centered on 0,0) and waits, on a loop. The band is
+   * narrow and fades in and out at the edges, so no mask is needed.
+   */
+  private sweep(w: number, h: number, color: number, alpha: number, every: number): Phaser.GameObjects.Container {
+    const box = this.add.container(0, 0);
+    const band = this.add.polygon(0, 0, [0, h / 2 - 3, 12, h / 2 - 3, 24, -h / 2 + 3, 12, -h / 2 + 3], color, 1).setBlendMode(Phaser.BlendModes.ADD).setAlpha(0);
+    box.add(band);
+    const run = () => {
+      if (!band.active) return;
+      band.x = -w / 2 + 2;
+      band.setAlpha(0);
+      this.tweens.add({ targets: band, x: w / 2 - 26, duration: 520, ease: 'Sine.easeInOut' });
+      this.tweens.add({ targets: band, alpha, duration: 260, yoyo: true, ease: 'Sine.easeInOut' });
+    };
+    this.sweepTimers.push(this.time.addEvent({ delay: every, loop: true, startAt: Math.random() * every, callback: run }));
+    return box;
+  }
+
+  /** On purchase: a few coins and sap drops fly from the purse into the card. */
+  private payFlight(x: number, y: number): void {
+    if (this.still()) return;
+    for (let k = 0; k < 8; k++) {
+      const sap = k % 2 === 1;
+      const icon = this.add.image(GAME_W - (sap ? 180 : 352), 43, sap ? 'icon_sap' : 'icon_coin').setScale(0.7).setDepth(55);
+      this.tweens.add({
+        targets: icon,
+        x: x + (Math.random() - 0.5) * 60,
+        y: y + (Math.random() - 0.5) * 30,
+        scale: 0.3,
+        duration: 380 + k * 40,
+        ease: 'Cubic.easeIn',
+        onComplete: () => icon.destroy(),
+      });
+    }
   }
 
   private toast(msg: string): void {

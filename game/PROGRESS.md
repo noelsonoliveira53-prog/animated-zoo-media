@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **251** (next balance pass at iteration 255)
+Iteration counter: **252** (next balance pass at iteration 255)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1614,15 +1614,21 @@ Iteration counter: **251** (next balance pass at iteration 255)
   - Graphics: Low keeps only the ground ring and the badge.
   - Check `scripts/buildfx-check.mjs` (build, upgrade and specialize at once; polls the scene clock and pauses tweens about 0.25 s in, because headless frames are slow and uneven; no console errors, no leftover badges). Screenshot `screenshots/251.png`. 265 tests.
 
+- **Iteration 252: store polish.** The store already had code-drawn item icons and a purchase burst; this pass adds the rest:
+  - **Cards:** a soft gloss behind each title, a thin inner rim light and a slow gold shimmer across maxed cards.
+  - **Buy buttons:** a glint sweeps across each Buy button you can afford, every couple of seconds (staggered). Narrow, edge-faded bands, so no masks are needed.
+  - **Buying:** coins and sap drops fly from the purse into the card, a colored shockwave ring expands and a coin chime plays, on top of the existing burst, flash and rank pop.
+  - The shine loops are removed whenever the cards rebuild after a purchase, so timers don't pile up. Everything moving respects Reduce Motion and Graphics: Low; the store reads both settings itself.
+  - Checked with `scripts/store-check.mjs` (a real Buy tap: purse 5000 → 3800, rank 2 → 3, no console errors). Screenshot `screenshots/252.png`. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
-2. Result screen polish: a glossier victory/defeat panel, stars that slam in with a burst, and coin and glowsap counters that roll up.
-3. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
+1. Result screen polish: a glossier victory/defeat panel, stars that slam in with a burst, and coin and glowsap counters that roll up.
+2. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
 
 ## Known Bugs
 - (none known)

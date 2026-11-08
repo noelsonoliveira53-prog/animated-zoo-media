@@ -71,6 +71,7 @@ export interface EnemyDef {
   wax?: { armor: number; melt: number }; // a waxy coat adds `armor` until it has soaked melt × maxHp of magic damage, then melts off for good
   parry?: { charges: number; regen: number }; // its comb-shield turns aside a whole single-target tower shot per charge (splash, chains' jumps and spells still land); regains one charge every regen s
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
+  venom?: { dps: number; duration: number }; // its melee bites poison soldiers: they lose dps health a second for duration s (refreshed by each bite)
   ambush?: number; // burrows in and pops up at this fraction of the road instead of at the entrance
   curl?: { duration: number; cooldown: number; bonus: number; slow: number }; // when hit (off cooldown), curls up: +bonus armor and magic resist, moving at slow× speed, for duration s
   shepherd?: { radius: number }; // herds stragglers: allies within radius walk at least as fast as it does

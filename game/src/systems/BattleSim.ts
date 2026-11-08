@@ -82,6 +82,8 @@ export interface Soldier {
   uid: number;
   stun?: number; // seconds left of a Sparkeel shock (no attacking or blocking)
   glazed?: number; // seconds left coated in Honeypaw honey (attacks slowly)
+  poisonT?: number; // seconds of Rattler venom left
+  poisonDps?: number;
   glazeSlow?: number; // attack-speed multiplier while glazed
   towerUid: number;
   index: number; // slot within its squad (for formation offsets)
@@ -218,6 +220,7 @@ export type SimEvent =
   | { type: 'alarm'; enemy: Enemy; radius: number; startled: Enemy[] }
   | { type: 'trample'; enemy: Enemy; pos: Vec2 }
   | { type: 'ambush'; enemy: Enemy }
+  | { type: 'venom'; soldier: Soldier }
   | { type: 'curl'; enemy: Enemy }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
@@ -1076,6 +1079,12 @@ export class BattleSim {
             const hit = e.def.attack * this.attackMult();
             if (isHero) this.hurtHero(hit);
             else this.hurtSoldier(s!, hit);
+            if (e.def.venom && !isHero && s!.alive) {
+              // Rattler: the bite keeps working after the snake has moved on
+              s!.poisonT = e.def.venom.duration;
+              s!.poisonDps = e.def.venom.dps;
+              this.events.push({ type: 'venom', soldier: s! });
+            }
             if (e.def.glaze && !isHero && s!.alive) {
               // Honeypaw Cub: a sticky swipe, and the soldier's sword arm gums up
               s!.glazed = e.def.glaze.duration;
@@ -1663,12 +1672,18 @@ export class BattleSim {
           s.hp = stats.hp;
           s.pos = { ...s.spawnAt };
           s.glazed = 0;
+          s.poisonT = 0;
         }
         continue;
       }
       if (s.stun && s.stun > 0) {
         s.stun -= dt;
         continue;
+      }
+      if ((s.poisonT ?? 0) > 0) {
+        s.poisonT! -= dt;
+        this.hurtSoldier(s, (s.poisonDps ?? 0) * this.attackMult() * dt);
+        if (!s.alive) continue;
       }
       const glazed = (s.glazed ?? 0) > 0;
       if (glazed) s.glazed! -= dt;

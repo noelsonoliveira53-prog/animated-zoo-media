@@ -1347,6 +1347,36 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.8, cy - r * 0.08, r * 0.05);
         break;
       }
+      case 'rattler': {
+        // a coiled desert snake from above: banded sandy body in an S, a diamond head, a little segmented rattle
+        g.lineStyle(r * 0.5, C.ink, 1);
+        g.beginPath();
+        g.moveTo(cx + r * 0.9, cy + r * 0.4);
+        g.lineTo(cx + r * 0.3, cy + r * 0.5);
+        g.lineTo(cx - r * 0.1, cy + r * 0.1);
+        g.lineTo(cx + r * 0.3, cy - r * 0.3);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.strokePath();
+        g.lineStyle(r * 0.36, color, 1);
+        g.beginPath();
+        g.moveTo(cx + r * 0.9, cy + r * 0.4);
+        g.lineTo(cx + r * 0.3, cy + r * 0.5);
+        g.lineTo(cx - r * 0.1, cy + r * 0.1);
+        g.lineTo(cx + r * 0.3, cy - r * 0.3);
+        g.lineTo(cx - r * 0.4, cy - r * 0.45);
+        g.strokePath();
+        g.fillStyle(0x6a4a2a, 1);
+        for (const [bx, by] of [[0.55, 0.45], [0.1, 0.3], [0.1, -0.1], [-0.05, -0.38]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.08);
+        g.lineStyle(2, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 0.35, cy - r * 0.62, cx - r * 0.35, cy - r * 0.28, cx - r * 0.85, cy - r * 0.45);
+        g.strokeTriangle(cx - r * 0.35, cy - r * 0.62, cx - r * 0.35, cy - r * 0.28, cx - r * 0.85, cy - r * 0.45);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.55, cy - r * 0.52, r * 0.05);
+        g.fillStyle(0xe8d0a0, 1);
+        for (let n = 0; n < 3; n++) g.fillEllipse(cx + r * (0.98 + n * 0.12), cy + r * 0.38, r * 0.12, r * 0.18);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

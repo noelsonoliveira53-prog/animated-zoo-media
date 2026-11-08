@@ -1906,6 +1906,18 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'venom': {
+        // a sickly green splash on the bitten soldier (throttled per soldier)
+        const key = -6000000 - ev.soldier.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 900) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('venom');
+        this.particles.setParticleTint(0x8ad84a);
+        this.particles.explode(6, ev.soldier.pos.x, ev.soldier.pos.y - 6);
+        this.floatText(ev.soldier.pos.x, ev.soldier.pos.y - 26, 'Poisoned', '#a8f06a', 12);
+        break;
+      }
       case 'ambush': {
         // a spray of red dirt where the gopher bursts out of the ground
         sfx.trait('ambush');

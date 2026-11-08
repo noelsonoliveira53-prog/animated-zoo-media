@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **198** (next balance pass at iteration 200)
+Iteration counter: **199** (next balance pass at iteration 200)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,7 @@ Iteration counter: **198** (next balance pass at iteration 200)
 - (none)
 
 ## Backlog (ranked)
-1. Rustrock level 112 with a third trait, then levels 113 and 114.
+1. Rustrock levels 113 and 114.
 2. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1266,6 +1266,9 @@ Iteration counter: **198** (next balance pass at iteration 200)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 199**: 112 Rattlesnake Narrows (12 seeds): hpMult 1.4–1.55 → 100/100/100, 1.7 → 100/100/92, 1.8 → 100/100/25,
+1.9 → 100/83/0, 2.0 → 92/42/0, 2.3 → 25/8/0. **1.85 → 100/100/33** (kept). It's a touch easier than the second-level band
+(100/92/0–17), but the cliff past 1.9 is steep enough to prefer the gentle side.
 **Iteration 198**: 111 Redstone Gulch (12 seeds): hpMult 1.6 → 100/100/0, 1.8 → 100/100/0. **1.4 → 100/100/42**
 (kept: exactly the opener band, first try).
 **Iteration 196**: 110 The Great Barn (12 seeds): 1.5 → 100/58/0, 1.6 → 100/33/0, 1.7 → 75/17/0, 1.9 → 50/8/0,

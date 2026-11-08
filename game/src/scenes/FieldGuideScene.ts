@@ -102,6 +102,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
         if (e.snatch) tags.push(`Snatches the nearest soldier within ${e.snatch.radius}px every ${e.snatch.cooldown}s (it has to respawn)`);
         if (e.wax) tags.push(`Wax coat: +${Math.round(e.wax.armor * 100)}% armor until magic damage worth ${Math.round(e.wax.melt * 100)}% of its health melts it off`);
+        if (e.venom) tags.push(`Venomous bite: soldiers it hits lose ${e.venom.dps} health a second for ${e.venom.duration}s`);
         if (e.ambush) tags.push(`Ambusher: tunnels in and pops up ${Math.round(e.ambush * 100)}% of the way down the road`);
         if (e.curl) tags.push(`Curls up when hit: +${Math.round(e.curl.bonus * 100)}% armor and magic resist, at ${Math.round(e.curl.slow * 100)}% speed, for ${e.curl.duration}s (every ${e.curl.cooldown}s at most)`);
         if (e.shepherd) tags.push(`Herds stragglers: allies within ${e.shepherd.radius}px walk at least as fast as it does (${e.speed})`);

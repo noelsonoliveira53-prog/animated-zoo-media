@@ -236,6 +236,10 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'venom': // a dry rattle and a hiss
+        this.noise(0.18, 0.03, 4000);
+        this.tone(900, 0.08, 'square', 0.02, 700);
+        break;
       case 'ambush': // a burst of loose earth
         this.noise(0.22, 0.05, 900);
         this.tone(180, 0.15, 'square', 0.03, 320);

@@ -1267,3 +1267,29 @@ describe('Rustrock Canyons enemies', () => {
     expect(a.curlT).toBeLessThanOrEqual(0); // still cooling down
   });
 });
+
+describe('Canyon Rattler', () => {
+  it('its bite poisons a blocking soldier, who keeps losing health over time', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    const r = sim.spawn('rattler', 0, 380);
+    r.hp = r.maxHp = 999999;
+    let bites = 0;
+    for (let i = 0; i < 60 * 6 && !bites; i++) {
+      sim.update(1 / 60);
+      bites += sim.drainEvents().filter((e) => e.type === 'venom').length;
+    }
+    expect(bites).toBeGreaterThan(0);
+    const victim = sim.soldiers.find((s) => (s.poisonT ?? 0) > 0)!;
+    expect(victim.poisonDps).toBe(r.def.venom!.dps);
+    // pull the snake away so only the poison works on the soldier
+    r.hp = 0;
+    r.alive = false;
+    const hp0 = victim.hp;
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(victim.hp).toBeLessThan(hp0);
+  });
+});

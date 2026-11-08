@@ -21,6 +21,7 @@ const STYLE: Record<string, { color: number; muzzle: number }> = {
   thornbow: { color: THORN_GOLD, muzzle: 58 },
   glimmer: { color: GLIM_VIOLET, muzzle: 66 },
   boulder: { color: 0xffa860, muzzle: 50 },
+  burrow: { color: 0x9ad870, muzzle: 40 },
 };
 
 export class TowerFx {
@@ -158,6 +159,46 @@ export class TowerFx {
       }
       this.scene.tweens.add({ targets: g, alpha: 0, scale: 1.4, duration: 220, onComplete: () => g.destroy() });
     }
+  }
+
+  /** A soldier (or the hero) swings: a bright crescent sweeps across the blow and a few steel sparks fly. */
+  swing(from: { x: number; y: number }, to: { x: number; y: number }): void {
+    if (motion.lowFx) return;
+    const a = Math.atan2(to.y - from.y, to.x - from.x);
+    const g = this.scene.add.graphics().setDepth(2550).setBlendMode(Phaser.BlendModes.ADD);
+    const cx = from.x + Math.cos(a) * 10;
+    const cy = from.y - 8 + Math.sin(a) * 6;
+    g.lineStyle(3, 0xffffff, 0.9);
+    g.beginPath();
+    g.arc(cx, cy, 14, a - 1.1, a + 1.1);
+    g.strokePath();
+    g.lineStyle(6, 0xbfe0ff, 0.35);
+    g.beginPath();
+    g.arc(cx, cy, 14, a - 1.1, a + 1.1);
+    g.strokePath();
+    this.scene.tweens.add({ targets: g, alpha: 0, duration: 140, onComplete: () => g.destroy() });
+    this.sparks.setParticleTint(0xd8ecff);
+    this.sparks.explode(3, to.x, to.y - 6);
+  }
+
+  /** A soldier pops back out of its burrow: a spray of earth and a little dust ring. */
+  popOut(x: number, y: number): void {
+    if (motion.lowFx) return;
+    for (let k = 0; k < 6; k++) {
+      const a = Math.random() * Math.PI * 2;
+      const clod = this.scene.add.circle(x, y, 2.5 + Math.random() * 2, 0x6a4a2a).setDepth(y + 2);
+      const peak = 10 + Math.random() * 12;
+      const prog = { t: 0 };
+      this.scene.tweens.add({
+        targets: prog,
+        t: 1,
+        duration: 360,
+        onUpdate: () => clod.setPosition(x + Math.cos(a) * 18 * prog.t, y - Math.sin(Math.PI * prog.t) * peak + Math.sin(a) * 6 * prog.t),
+        onComplete: () => clod.destroy(),
+      });
+    }
+    const ring = this.scene.add.ellipse(x, y + 4, 18, 7, 0x000000, 0).setStrokeStyle(2, 0xc8b490, 0.8).setDepth(y + 1);
+    this.scene.tweens.add({ targets: ring, scale: 2.2, alpha: 0, duration: 380, onComplete: () => ring.destroy() });
   }
 
   /** Draw every live trail as a glowing streak that thins toward its tail. */

@@ -8,6 +8,7 @@ let pw;
 try { pw = require('playwright'); } catch { pw = require(execSync('npm root -g').toString().trim() + '/playwright'); }
 const name = process.argv[2] ?? 'towerfx';
 const tower = process.argv[3] ?? 'thornbow';
+const waitMs = Number(process.argv[4] ?? 1600);
 const server = await preview({ preview: { port: 4399, strictPort: true } });
 const browser = await pw.chromium.launch();
 const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
@@ -40,7 +41,7 @@ const info = await page.evaluate((id) => {
   for (let k = 0; k < 14; k++) s.sim.spawn('mudling', 0, 80 + k * 45);
   return { towers: s.sim.towers.filter(Boolean).map((t) => `${t.def.id}:${t.tier}${t.spec ? ':' + t.spec : ''}`) };
 }, tower);
-await page.waitForTimeout(1600);
+await page.waitForTimeout(waitMs);
 await page.screenshot({ path: `screenshots/${name}.png` });
 for (let k = 0; k < 3; k++) {
   await page.waitForTimeout(130);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **225** (next balance pass at iteration 230)
+Iteration counter: **226** (next balance pass at iteration 230)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1404,19 +1404,24 @@ Iteration counter: **225** (next balance pass at iteration 230)
   - Check: `scripts/settings-fx-check.mjs` (the toggle saves; a battle on Low runs with no console errors). Screenshot `screenshots/225.png`.
   - Balance: a sanity sweep, no changes (see Balance Notes). 253 tests.
 
+- **Iteration 226**: tower VFX overhaul part 4, **Burrow (barracks)**. All four base towers now have their own effects.
+  - The sim's `melee` event now carries the attacker's position (`from`) for soldiers and the hero. Each blow draws a bright white crescent with a pale blue glow sweeping across it, plus steel sparks at the target.
+  - A new `soldierUp` event fires when a fallen soldier respawns, and it pops out of the ground in a spray of earth clods with a dust ring.
+  - Burrows also get the leafy tier aura and motes.
+  - Both new effects are skipped on Graphics: Low.
+  - `scripts/towerfx-check.mjs` takes an optional wait in ms (4th argument). Screenshots `screenshots/226.png` and `226-zoom0..2.png` (a swing at the front line). No console errors, 253 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
-   a per-tier look.
-2. Specialization branches: a signature effect for each of the 8 top-tier branches.
-3. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+1. Specialization branches: a signature effect for each of the 8 top-tier branches.
+2. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
    Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
-4. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+3. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

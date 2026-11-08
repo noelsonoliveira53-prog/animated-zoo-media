@@ -1931,6 +1931,10 @@ export class BattleScene extends Phaser.Scene {
         break;
       case 'melee':
         sfx.melee();
+        if (ev.from) this.fx.swing(ev.from, ev.pos);
+        break;
+      case 'soldierUp':
+        this.fx.popOut(ev.soldier.pos.x, ev.soldier.pos.y);
         break;
       case 'spellCast': {
         const def = SPELLS[ev.spellId];

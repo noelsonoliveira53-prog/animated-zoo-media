@@ -180,7 +180,8 @@ export type SimEvent =
   | { type: 'build'; tower: Tower }
   | { type: 'upgrade'; tower: Tower }
   | { type: 'sell'; tower: Tower; refund: number }
-  | { type: 'melee'; pos: Vec2 }
+  | { type: 'melee'; pos: Vec2; from?: Vec2 }
+  | { type: 'soldierUp'; soldier: Soldier }
   | { type: 'chain'; points: Vec2[]; color: number }
   | { type: 'specialize'; tower: Tower }
   | { type: 'spellCast'; spellId: string; pos: Vec2 }
@@ -608,7 +609,7 @@ export class BattleSim {
         } else if (h.attackCd <= 0) {
           h.attackCd = 1 / atk.rate;
           h.facing = target.pos.x < h.pos.x ? -1 : 1;
-          this.events.push({ type: 'melee', pos: { ...target.pos } });
+          this.events.push({ type: 'melee', pos: { ...target.pos }, from: { ...h.pos } });
           const dealt = computeDamage(this.heroHitDamage(), atk.type, this.res(target));
           this.applyDamage(target, dealt, atk.type);
           if (target.def.thorns) {
@@ -1739,6 +1740,7 @@ export class BattleSim {
           s.pos = { ...s.spawnAt };
           s.glazed = 0;
           s.poisonT = 0;
+          this.events.push({ type: 'soldierUp', soldier: s });
         }
         continue;
       }
@@ -1774,7 +1776,7 @@ export class BattleSim {
           s.attackCd -= dt * (glazed ? (s.glazeSlow ?? 1) : 1);
           if (s.attackCd <= 0) {
             s.attackCd = 1 / stats.attackRate;
-            this.events.push({ type: 'melee', pos: { ...target.pos } });
+            this.events.push({ type: 'melee', pos: { ...target.pos }, from: { ...s.pos } });
             const dealt = computeDamage(stats.damage, 'physical', this.res(target));
             this.applyDamage(target, dealt, 'physical');
             if (target.def.thorns) {

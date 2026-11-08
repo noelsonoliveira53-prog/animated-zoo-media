@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **207** (next balance pass at iteration 210)
+Iteration counter: **208** (next balance pass at iteration 210)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1289,11 +1289,16 @@ Iteration counter: **207** (next balance pass at iteration 210)
   - Also added: a Field Guide tag, a code-drawn otter sprite and an endless tier at wave 98. hpMult 1.3.
   - One new test (244 total). Check: `scripts/otter-check.mjs` (Starfall did 69 to a soaked mudling and 100 to a dry one; the dry figure may be capped by the mudling's health. No console errors). Screenshot `screenshots/207.png`.
 
+- **Iteration 208**: level 118 "Millwheel Race" (Pebblebrook).
+  - A long S-bend stream plus a north race of water that joins it on the lower bank. 13 pads.
+  - 15 waves mixing newts, pikes and otters with older enemies. hpMult 1.35.
+  - Screenshot `screenshots/208.png`. 244 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Pebblebrook levels 118 and 119.
+1. Pebblebrook level 119.
 2. Pebblebrook finale (120) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1303,6 +1308,8 @@ Iteration counter: **207** (next balance pass at iteration 210)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 208**: 118 Millwheel Race (12 seeds): hpMult 1.65 → 67/50/0, 1.5 → 92/67/0, 1.42 → 100/67/0.
+**1.35 → 100/83/0** (kept: the third-level band).
 **Iteration 207**: 117 Otterslide Bend (12 seeds): hpMult 1.65 → 58/17/0, 1.5 → 92/25/0, 1.4 → 100/67/0, 1.35 → 100/100/0.
 **1.3 → 100/92/0** (kept: the second-level band). The casual strategy drops off sharply here; soaked groups shrug off its spells.
 **Iteration 206**: 116 Stepping Stones (12 seeds).

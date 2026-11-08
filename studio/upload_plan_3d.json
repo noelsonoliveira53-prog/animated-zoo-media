@@ -1113,5 +1113,27 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "gizmo/gz3d_ep08.mp4",
+  "title": "How Do Magnets Work? Science Song for Kids with Gizmo",
+  "description": "How do magnets work? Gizmo the robot shows that magnets pull metal things like spoons, keys and paper clips, but not wood, plastic or paper. North and south stick together; north and north push apart.\nKids pull and push like magnets and learn how magnets hold art on the fridge and help a compass point the way. Ages 3-6.\n\nLYRICS\nMagnets, magnets, pull and push!\nSome things stick with a whoosh!\nMetal paper clips go click,\nMagnets make the metal stick!\nA magnet has an invisible pull,\nIt grabs the metal, that's magical!\nA spoon, a key, a paper clip,\nThey jump right up and stick, stick, stick!\nBut wood and plastic, paper too,\nMagnets can't pull those, it's true!\nOnly metal like iron will do,\nTry it out and see for you!\nNorth and south, they come together, click!\nNorth and north, they push apart, quick!\nPull your arms in, push them out,\nMagnet power, give a shout!\nMagnets hold your art up high,\nOn the fridge where it won't fly!\nA compass needle points the way,\nMagnets help us every day!\nMagnets! Bye-bye, friends!",
+  "tags": [
+   "magnets song",
+   "how magnets work",
+   "science song for kids",
+   "magnets for kids",
+   "STEM for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ],
+  "date": "2026-11-13",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep08.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 165.0
  }
 ]

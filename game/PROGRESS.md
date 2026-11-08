@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **209** (next balance pass at iteration 210)
+Iteration counter: **210** (next balance pass at iteration 215)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1299,6 +1299,12 @@ Iteration counter: **209** (next balance pass at iteration 210)
   - 15 waves of newts, pikes and otters with older enemies. hpMult 1.4.
   - A pad that the layout test caught behind the exit gate was moved. Screenshot `screenshots/209.png`. 244 tests.
 
+- **Iteration 210** (POLISH + BALANCE):
+  - Polish: a clump of Spray Otters used to stack their mist circles into an opaque white fog over the road. Now only the first otter in a clump fills its mist, every otter keeps a faint outline ring and drifting droplets, and the fill is lighter (0.08).
+  - Checked the Field Guide's last page: the newt, otter and pike are listed (103/103), and there were no console errors.
+  - Screenshots `screenshots/210.png` (Millwheel Race wave 3 with otters) and `210-guide.png`.
+  - Balance: a Pebblebrook sweep, hero comparison and endless check, with no changes (see Balance Notes). 244 tests.
+
 ## In Progress
 - (none)
 
@@ -1312,6 +1318,20 @@ Iteration counter: **209** (next balance pass at iteration 210)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 210** (POLISH + BALANCE), Pebblebrook sweep at 6 seeds (expert/casual/novice):
+
+| Level | hpMult | Result |
+|---|---|---|
+| 116 | 1.25 | 100/100/33 |
+| 117 | 1.3 | 100/100/0 |
+| 118 | 1.35 | 100/83/0 |
+| 119 | 1.4 | 100/50/0 (12 seeds gave 100/67) |
+
+- Kept. Level 119's casual result is noisy around the cliff noted in iteration 209.
+- Heroes on 116–119 (win %, average lives): Bramble 96/12.0, Fen 100/13.3, Ember 100/13.3, Wren 100/14.5, Sorrel 100/10.8, Hazel 88/11.0. Hazel is lowest but within range.
+- Endless (3 seeds): Stepping Stones 17.3/11.3/17.0, Kingfisher Falls 17.3/14.3/17.0.
+  - The region has no home boss until 120, so the first wall comes later than in Rustrock.
+  - The novice is not an outlier here.
 **Iteration 209**: 119 Kingfisher Falls (12 seeds): hpMult 1.7 → 33/17/0, 1.55 → 92/25/0, 1.45 → 92/50/0.
 **1.4 → 100/67/0** (kept: the fourth-level band). The casual strategy falls off a cliff above 1.4.
 **Iteration 208**: 118 Millwheel Race (12 seeds): hpMult 1.65 → 67/50/0, 1.5 → 92/67/0, 1.42 → 100/67/0.

@@ -2661,8 +2661,14 @@ export class BattleScene extends Phaser.Scene {
       if (e.def.drench) {
         // Spray Otter: a soft drifting mist around it marks where spells fall flat
         const t = this.time.now / 600 + e.uid;
-        v.bar.fillStyle(0xbfe0f0, 0.1);
-        v.bar.fillCircle(e.pos.x, e.pos.y, e.def.drench.radius);
+        // a crowd of otters would stack their mist into a white fog, so only the first otter in a clump fills it
+        const clumped = this.sim.enemies.some((o) => o !== e && o.alive && o.def.drench && o.uid < e.uid && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) < e.def.drench!.radius * 0.6);
+        if (!clumped) {
+          v.bar.fillStyle(0xbfe0f0, 0.08);
+          v.bar.fillCircle(e.pos.x, e.pos.y, e.def.drench.radius);
+        }
+        v.bar.lineStyle(1, 0xe8f6ff, 0.22);
+        v.bar.strokeCircle(e.pos.x, e.pos.y, e.def.drench.radius);
         v.bar.fillStyle(0xe8f6ff, 0.35);
         for (let k = 0; k < 6; k++) {
           const a = t + k * 1.05;

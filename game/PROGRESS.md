@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **233** (next balance pass at iteration 235)
+Iteration counter: **234** (next balance pass at iteration 235)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1478,6 +1478,13 @@ Iteration counter: **233** (next balance pass at iteration 235)
   - Ember (`theme.lava`): scorched cracks winding across the ground with glowing orange lava seams (a dark line under an additive glow) that slowly breathe, plus drifts of grey ash speckles.
   - Helpers `drawFrostGround` and `drawEmberGround` in BattleScene. Screenshots `screenshots/233-frost.png` and `233-ember.png` (= `233.png`). No console errors, 258 tests.
 
+- **Iteration 234**: level graphics overhaul part 4, **dusk, shore and crystal ground**.
+  - Dusk (`shrooms`): clusters of glowing toadstools (blue, violet and mint caps with additive halos) and patches of luminous moss that pulse softly.
+  - Shore: the SHOAL theme now has a `shoal` flag, so the meadow-only clover no longer shows on its sand. It gets darker wet-sand bands with ripple arcs, fan and spiral shells, and the odd starfish.
+  - Crystal (`crystals`): faceted crystal shard clusters with lit faces and shadows, with a twinkle catching on one now and then.
+  - The new `clearOfRoads(x, y, pad)` helper keeps ground detail off the roads. Animations are skipped on Graphics: Low and reduced motion.
+  - Screenshots `screenshots/234-16.png` (= `234.png`), `234-21.png` and `234-26.png`. No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1486,8 +1493,9 @@ Iteration counter: **233** (next balance pass at iteration 235)
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
    richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
-   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Frost and ember were done in iteration 233.
-   Next: dusk (glowing mushrooms, fireflies on the ground), shoal (wet sand and shells), glass (crystal shards), then the rest.
+   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Frost and ember were done in iteration 233; dusk, shoal and glass in 234.
+   Next: gale (wind-bent grass streaks, scattered feathers), ruins (broken flagstones, toppled columns), gears (rivets, oil
+   stains, scrap), abyss (glowing veins), then orchard, storm, dunes, reef, flotilla, amber, mist and the newer regions.
 
 ## Known Bugs
 - (none known)

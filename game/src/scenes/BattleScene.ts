@@ -332,6 +332,9 @@ export class BattleScene extends Phaser.Scene {
     }
     if (theme.snow) this.drawFrostGround(rnd);
     if (theme.lava) this.drawEmberGround(rnd);
+    if (theme.shrooms) this.drawDuskGround(rnd);
+    if (theme.shoal) this.drawShoreGround(rnd);
+    if (theme.crystals) this.drawCrystalGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1257,6 +1260,126 @@ export class BattleScene extends Phaser.Scene {
       dark.fillCircle(rnd.between(0, GAME_W), rnd.between(80, GAME_H), rnd.between(1, 3));
     }
     if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.45, duration: 1600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+  }
+
+  /** True when a point is clear of every road by `pad` px beyond the road's half-width. */
+  private clearOfRoads(x: number, y: number, pad: number): boolean {
+    return !this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 34 + pad));
+  }
+
+  /** Dusk regions: clusters of glowing toadstools and luminous moss that pulse softly. */
+  private drawDuskGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    const glow = this.add.graphics().setDepth(-9.4).setBlendMode(Phaser.BlendModes.ADD);
+    const caps = [0x8ae8ff, 0xd88aff, 0x8affc8];
+    for (let i = 0; i < 16; i++) {
+      const cx = rnd.between(30, GAME_W - 30);
+      const cy = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(cx, cy, 14)) continue;
+      const col = rnd.pick(caps);
+      glow.fillStyle(col, 0.16);
+      glow.fillCircle(cx, cy, 26);
+      for (let k = 0; k < rnd.between(2, 4); k++) {
+        const x = cx + rnd.between(-12, 12);
+        const y = cy + rnd.between(-6, 6);
+        const r = rnd.between(4, 7);
+        g.fillStyle(0xd8d0e0, 1);
+        g.fillRect(x - 1.5, y - r * 0.2, 3, r + 2);
+        g.fillStyle(col, 1);
+        g.fillEllipse(x, y - r * 0.3, r * 2.2, r * 1.3);
+        g.fillStyle(0xffffff, 0.8);
+        g.fillCircle(x - r * 0.4, y - r * 0.5, 1.2);
+        glow.fillStyle(col, 0.5);
+        glow.fillEllipse(x, y - r * 0.3, r * 2.6, r * 1.6);
+      }
+    }
+    for (let i = 0; i < 22; i++) {
+      const x = rnd.between(0, GAME_W);
+      const y = rnd.between(80, GAME_H);
+      if (!this.clearOfRoads(x, y, 6)) continue;
+      glow.fillStyle(0x6ae8c0, 0.22);
+      glow.fillEllipse(x, y, rnd.between(14, 30), rnd.between(6, 12));
+    }
+    if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.55, duration: 2200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+  }
+
+  /** Shore regions: darker wet-sand bands with ripple lines, scattered shells and the odd starfish. */
+  private drawShoreGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 7; i++) {
+      const y = rnd.between(120, GAME_H - 40);
+      const x = rnd.between(0, GAME_W);
+      g.fillStyle(0xb8a070, 0.25);
+      g.fillEllipse(x, y, rnd.between(220, 420), rnd.between(40, 70));
+      g.lineStyle(1.5, 0xf0e2b8, 0.5);
+      for (let k = -2; k <= 2; k++) {
+        g.beginPath();
+        g.arc(x, y + k * 9 + 40, 120, Math.PI * 1.25, Math.PI * 1.75);
+        g.strokePath();
+      }
+    }
+    for (let i = 0; i < 26; i++) {
+      const x = rnd.between(20, GAME_W - 20);
+      const y = rnd.between(90, GAME_H - 15);
+      if (!this.clearOfRoads(x, y, 6)) continue;
+      const kind = rnd.frac();
+      if (kind < 0.55) {
+        // a fan shell with ribs
+        g.fillStyle(rnd.pick([0xf8e8e0, 0xf0c8b8, 0xe8d8a8]), 1);
+        g.slice(x, y + 3, 7, Math.PI * 1.1, Math.PI * 1.9, false);
+        g.fillPath();
+        g.lineStyle(1, 0xb89880, 0.8);
+        for (let k = 0; k < 4; k++) {
+          const a = Math.PI * (1.2 + k * 0.17);
+          g.lineBetween(x, y + 3, x + Math.cos(a) * 6, y + 3 + Math.sin(a) * 6);
+        }
+      } else if (kind < 0.85) {
+        // a little spiral snail shell
+        g.fillStyle(0xe8d0b0, 1);
+        g.fillCircle(x, y, 4);
+        g.lineStyle(1, 0xa88a68, 0.9);
+        g.beginPath();
+        g.arc(x, y, 2.5, 0, Math.PI * 1.5);
+        g.strokePath();
+      } else {
+        // a starfish
+        g.fillStyle(0xf08a5a, 1);
+        for (let k = 0; k < 5; k++) {
+          const a = (k / 5) * Math.PI * 2 - Math.PI / 2;
+          g.fillTriangle(x + Math.cos(a) * 8, y + Math.sin(a) * 8, x + Math.cos(a + 1.2) * 2.5, y + Math.sin(a + 1.2) * 2.5, x + Math.cos(a - 1.2) * 2.5, y + Math.sin(a - 1.2) * 2.5);
+        }
+        g.fillCircle(x, y, 2.8);
+      }
+    }
+  }
+
+  /** Crystal regions: clusters of faceted crystal shards that catch the light, with a twinkle now and then. */
+  private drawCrystalGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    const cols = [0x9ad8f0, 0xc0a0f0, 0x80e8d0];
+    for (let i = 0; i < 14; i++) {
+      const cx = rnd.between(30, GAME_W - 30);
+      const cy = rnd.between(110, GAME_H - 20);
+      if (!this.clearOfRoads(cx, cy, 16)) continue;
+      const col = rnd.pick(cols);
+      const light = Phaser.Display.Color.ValueToColor(col).lighten(18).color;
+      g.fillStyle(0x000000, 0.18);
+      g.fillEllipse(cx + 4, cy + 4, 34, 10);
+      for (let k = 0; k < rnd.between(2, 4); k++) {
+        const x = cx + rnd.between(-10, 10);
+        const h = rnd.between(12, 24);
+        const w = rnd.between(5, 8);
+        const lean = rnd.between(-5, 5);
+        g.fillStyle(col, 0.95);
+        g.fillTriangle(x - w, cy, x + w, cy, x + lean, cy - h);
+        g.fillStyle(light, 0.9);
+        g.fillTriangle(x - w * 0.2, cy, x + w, cy, x + lean, cy - h);
+      }
+      if (!motion.reduced && !motion.lowFx) {
+        const tw = this.add.star(cx + rnd.between(-6, 6), cy - rnd.between(10, 18), 4, 1, 5, 0xffffff, 0.9).setDepth(-8).setBlendMode(Phaser.BlendModes.ADD).setAlpha(0);
+        this.tweens.add({ targets: tw, alpha: 1, scale: 1.4, duration: 240, yoyo: true, repeat: -1, repeatDelay: rnd.between(2000, 4500), delay: rnd.between(0, 3000) });
+      }
+    }
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **269** (next balance pass at iteration 270)
+Iteration counter: **270** (next balance pass at iteration 275)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1752,6 +1752,13 @@ Iteration counter: **269** (next balance pass at iteration 270)
   - Reduce Motion or Graphics: Low gives the plain pop-in and final numbers straight away.
   - `raid-check` now waits on the scene clock for the panel to settle before its result shot. It and `raid-phone-check` pass. Screenshot `screenshots/269.png` (a failed raid: ribbon, faded stars, rolled-up loot). 275 tests.
 
+- **Iteration 270** (POLISH + BALANCE):
+  - **Performance sweep** after the run of visual iterations (weather, idle life, gaits, unit poses, result kits):
+    - `leak-check.mjs` gained `LONG=1` for a third sample, to tell a plateau from growth.
+    - Storm map (level 56) idle: objects 125 → 149 → 146 and tweens 33 → 57 → 55 at 3 s / 23 s / 43 s, so the rain fills up over the first seconds and then holds.
+    - Level 121 busy (waves called every 4 s): objects 151 → 447 by wave 5, tracking the crowd.
+  - **Balance:** a raid sweep after iteration 268 added a `target` field to the raid `shot` event. Results are identical to iteration 250 (Lodge 1: 1.8★ / 0.3★ / 0.1★ … Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★), confirming the raid sim is untouched. Defense levels unchanged since iteration 230 (sweeps in 245, 255 and 265). Nothing tuned. Screenshot `screenshots/270.png` (storm map with rain, mid-wave). 275 tests.
+
 ## In Progress
 - (none)
 
@@ -2646,3 +2653,4 @@ Findings / follow-ups:
 - **Iteration 255 sweep** (4 seeds; expert / casual / novice win %): L7 Icicle Crossing 100/75/0, L15 Heart of the Emberdeep 75/25/75, L25 Heart of the Orchard 75/50/0, L40 Heart of the Glimmerbog 75/50/0, L55 Heart of the Ruins 75/50/0, L70 Crown of the Reef 75/50/0, L85 Saltjaw's Grotto 100/75/0, L100 Shrine of a Thousand Lanterns 100/25/0, L110 The Great Barn 50/25/0 (10 seeds: 80/30/0), L115 The Rattling Spire 75/75/0.
 - **Iteration 260 hero sweep** (expert strategy, levels 20/50/80/100/120, 6 seeds; win %, avg lives): Ember 90 / 9.5, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7. Watch item: if a future sweep puts either below 60%, give Sorrel's sling +2 damage or Bramble's Earthshake +10% radius first.
 - **Iteration 265 opener sweep** (levels 1–10, 6 seeds; expert / casual / novice %): Mossgate 100/100/100, Thornwood 100/100/100, Gloomfen 100/100/100, Rimewood 100/100/100, Frostfern 100/100/100, Murkmaw's Den 83/50/83, Icicle Crossing 100/67/0, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67.
+- **Iteration 270:** raid sweep identical to iteration 250 (the visual-only `shot.target` field changed nothing). Storm-map idle objects plateau at about 146 after warm-up.

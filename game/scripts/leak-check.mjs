@@ -30,7 +30,9 @@ await page.waitForTimeout(3000);
 const a = await snap();
 await page.waitForTimeout(20000);
 const b = await snap();
-console.log(JSON.stringify({ early: a, later: b }));
+// LONG=1 adds a third sample 20 s later, to tell a plateau from steady growth
+const c = process.env.LONG ? (await page.waitForTimeout(20000), await snap()) : undefined;
+console.log(JSON.stringify({ early: a, later: b, ...(c ? { latest: c } : {}) }));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no page errors');
 await browser.close();
 server.httpServer.close();

@@ -1,0 +1,327 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nCrunchy, crunchy veggies, crunch, crunch, crunch!\nVeggies make a yummy lunch!\nCarrots, peas and broccoli,\nVeggies help me grow, you see!\n\n[Verse 1]\nOrange carrot, long and thin,\nCrunch it up and give a grin!\nCarrots help my eyes see bright,\nMorning, noon and every night!\n\n[Chorus]\nCrunchy, crunchy veggies, crunch, crunch, crunch!\nVeggies make a yummy lunch!\nCarrots, peas and broccoli,\nVeggies help me grow, you see!\n\n[Verse 2]\nBroccoli, like a little tree,\nGreen and strong, it's good for me!\nLittle peas, all round and green,\nThe tiniest veggies I have seen!\n\n[Bridge]\nPull a carrot, pull, pull, pull!\nPick some peas, my basket's full!\nGrow up tall like a broccoli tree,\nVeggie power, one, two, three!\n\n[Verse 3]\nRed tomatoes, juicy too,\nCorn so yellow, just for you!\nTry a bite, it's fun to taste,\nVeggies never go to waste!\n\n[Chorus]\nCrunchy, crunchy veggies, crunch, crunch, crunch!\nVeggies make a yummy lunch!\nCarrots, peas and broccoli,\nVeggies help me grow, you see!\n\n[Outro]\nCrunch, crunch, crunch! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 622,
+ "who_map": {},
+ "meta": {
+  "title": "Crunchy Veggies Song! Vegetables for Kids | Fruity Friends",
+  "card": "Crunchy Veggies!",
+  "thumb_text": "CRUNCH CRUNCH!",
+  "description": "Crunch, crunch, crunch! The Fruity Friends sing about vegetables: crunchy orange carrots, broccoli that looks like a little tree, tiny green peas, juicy tomatoes and yellow corn.\nKids pull carrots, pick peas and learn that trying a new veggie is fun. Ages 2-5.",
+  "tags": [
+   "vegetables song",
+   "veggies for kids",
+   "healthy eating song",
+   "carrot song",
+   "broccoli song",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep09",
+  "title": "Crunchy Veggies!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "CRUNCH!",
+      "color": "#ff8418",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "carrot,",
+      "opts": {
+       "kind": "carrot"
+      }
+     },
+     {
+      "type": "text",
+      "text": "SEE BRIGHT!",
+      "color": "#ff8418",
+      "at": [
+       2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.55,
+      "word": "eyes"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "YUM YUM!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "broccoli,",
+      "opts": {
+       "kind": "broccoli"
+      }
+     },
+     {
+      "type": "text",
+      "text": "STRONG!",
+      "color": "#2e9440",
+      "at": [
+       2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.6,
+      "word": "strong,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "PULL!",
+      "color": "#ff8418",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "pull"
+     },
+     {
+      "type": "set_prop",
+      "name": "basket",
+      "at": [
+       2.6,
+       0.8,
+       3.4
+      ],
+      "word": "basket's"
+     },
+     {
+      "type": "text",
+      "text": "VEGGIE POWER!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.55,
+      "word": "power,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "TRY A BITE!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6,
+      "word": "try"
+     },
+     {
+      "type": "set_prop",
+      "name": "plate",
+      "at": [
+       0,
+       0.8,
+       3.4
+      ],
+      "word": "taste,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "CRUNCH!",
+      "color": "#ff8418",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff8418",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep09",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

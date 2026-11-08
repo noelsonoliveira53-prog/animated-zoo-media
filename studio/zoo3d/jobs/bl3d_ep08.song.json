@@ -1,0 +1,322 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBloop turns yellow, yellow, yellow!\nBright and happy, sunny fellow!\nYellow like the sun up high,\nYellow, yellow, wave hi!\n\n[Verse 1]\nA yellow banana, peel, peel, peel,\nYellow banana, what a meal!\nA yellow duck goes quack, quack, quack,\nSwimming out and swimming back!\n\n[Chorus]\nBloop turns yellow, yellow, yellow!\nBright and happy, sunny fellow!\nYellow like the sun up high,\nYellow, yellow, wave hi!\n\n[Verse 2]\nA yellow school bus, beep, beep, beep,\nA yellow chick goes cheep, cheep, cheep!\nYellow lemons, sour and bright,\nPucker up and take a bite!\n\n[Bridge]\nFind something yellow, look around!\nPoint to yellow, up and down!\nClap your hands and shout hooray,\nYellow is the color of the day!\n\n[Verse 3]\nYellow flowers in the sun,\nYellow stars for everyone!\nYellow and blue make green, it's true,\nYellow is happy, just like you!\n\n[Chorus]\nBloop turns yellow, yellow, yellow!\nBright and happy, sunny fellow!\nYellow like the sun up high,\nYellow, yellow, wave hi!\n\n[Outro]\nYellow, yellow! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 631,
+ "who_map": {},
+ "meta": {
+  "title": "Bloop Turns Yellow! Yellow Color Song for Kids | Part 4",
+  "card": "Bloop Turns Yellow!",
+  "thumb_text": "BLOOP TURNS YELLOW!",
+  "description": "Bloop turns yellow! Part 4 of Bloop's color song series: a yellow banana, a yellow duck, a school bus, a little chick, sour lemons and sunny flowers.\nKids find something yellow, point to yellow and learn that yellow and blue make green. Ages 2-5.",
+  "tags": [
+   "yellow color song",
+   "learn colors",
+   "color songs for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep08",
+  "title": "Bloop Turns Yellow!",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "YELLOW!",
+      "color": "#ffd21f",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "banana",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "banana,"
+     },
+     {
+      "type": "text",
+      "text": "QUACK!",
+      "color": "#ffd21f",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "quack,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "BEEP BEEP!",
+      "color": "#ffd21f",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "beep,"
+     },
+     {
+      "type": "text",
+      "text": "CHEEP!",
+      "color": "#ffb000",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "cheep,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIND YELLOW!",
+      "color": "#ffd21f",
+      "at": "top",
+      "size": 0.7,
+      "word": "find"
+     },
+     {
+      "type": "text",
+      "text": "HOORAY!",
+      "color": "#ff8a1f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "hooray,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "flower",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "flowers",
+      "opts": {
+       "color": "#ffd21f"
+      }
+     },
+     {
+      "type": "text",
+      "text": "YELLOW + BLUE = GREEN",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.45,
+      "word": "blue"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "YELLOW!",
+      "color": "#ffd21f",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffd21f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ },
+ "color_words": {
+  "yellow": "#ffd21f"
+ },
+ "color_char": "host"
+}

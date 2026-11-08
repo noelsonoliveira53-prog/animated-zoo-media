@@ -53,8 +53,8 @@ describe('Keeper\'s Store', () => {
     buyItem(s, 'runes');
     const base = battlePerks(s.village);
     const p = withStorePerks(base, s);
-    expect(p.towerDamageMult).toBeCloseTo(base.towerDamageMult * 1.2);
-    expect(p.bonusCoins).toBe(base.bonusCoins + 60);
+    expect(p.towerDamageMult).toBeCloseTo(base.towerDamageMult * 1.15);
+    expect(p.bonusCoins).toBe(base.bonusCoins + 40);
     expect(p.spellCdMult).toBeCloseTo(base.spellCdMult * 0.95);
     expect(withStorePerks(base, defaultSave())).toEqual(base);
   });

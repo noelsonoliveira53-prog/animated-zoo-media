@@ -32,7 +32,7 @@ await page.evaluate(() => {
   const find = (list) => { for (const o of list) { if (o.name === 'buy_whetted') return o; if (o.list) { const f = find(o.list); if (f) return f; } } return null; };
   find(st.children.list).emit('pointerdown', null, 0, 0, { stopPropagation() {} });
 });
-await page.waitForTimeout(150);
+await page.waitForTimeout(450);
 await page.screenshot({ path: `screenshots/${name}-buy.png` });
 await page.waitForTimeout(900);
 const after = await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('grovewatch.save.v1')); return { coins: s.village.coins, rank: s.store.whetted }; });

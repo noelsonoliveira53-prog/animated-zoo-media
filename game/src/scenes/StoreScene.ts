@@ -142,6 +142,7 @@ export class StoreScene extends Phaser.Scene {
 
   private buy(item: StoreItem, x: number, y: number): void {
     const s = loadSave();
+    const openBefore = STORE_TIERS.filter((t) => tierOpen(s, t.tier)).length;
     if (devOn()) {
       // dev mode: free purchases for testing — fund the purchase, buy, then restore the purse
       const v = ensureVillage(s);
@@ -170,6 +171,21 @@ export class StoreScene extends Phaser.Scene {
     const pop = this.add.text(x, y - 40, `${item.name} ${rank}/${item.maxRank}`, textStyle(20, TEXT.gold)).setOrigin(0.5).setDepth(60);
     this.tweens.add({ targets: pop, y: y - 90, alpha: 0, duration: 900, onComplete: () => pop.destroy() });
     this.build();
+    const opened = STORE_TIERS.filter((t) => tierOpen(s, t.tier));
+    if (opened.length > openBefore) this.celebrate(opened[opened.length - 1].name, opened.length - 1);
+  }
+
+  /** A new tier opened: a golden banner sweeps in over its row, with a fanfare and a shower of sparks. */
+  private celebrate(name: string, row: number): void {
+    const y = ROW_Y[row] + 6;
+    sfx.victory();
+    const band = this.add.rectangle(GAME_W / 2, y, GAME_W, 70, 0x1a1208, 0.85).setDepth(70).setScale(0, 1);
+    const txt = this.add.text(GAME_W / 2, y, `${name} unlocked!`, textStyle(34, TEXT.gold)).setOrigin(0.5).setDepth(71).setAlpha(0).setStroke('#1d1428', 8);
+    this.tweens.add({ targets: band, scaleX: 1, duration: 260, ease: 'Cubic.easeOut' });
+    this.tweens.add({ targets: txt, alpha: 1, duration: 260, delay: 120 });
+    this.burst.setParticleTint(0xffd060);
+    for (let k = 0; k < 6; k++) this.time.delayedCall(k * 90, () => this.burst.explode(16, 160 + k * 190, y));
+    this.tweens.add({ targets: [band, txt], alpha: 0, delay: 1700, duration: 400, onComplete: () => { band.destroy(); txt.destroy(); } });
   }
 
   private toast(msg: string): void {

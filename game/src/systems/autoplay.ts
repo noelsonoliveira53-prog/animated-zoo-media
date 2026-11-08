@@ -182,9 +182,9 @@ function mulberry32(seed: number): () => number {
 }
 
 /** Plays a whole level with a strategy. `seed` jitters slot order and tower rotation. */
-export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds = 1800, mods?: Modifiers): RunResult {
+export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds = 1800, mods?: Modifiers, perks?: Partial<ConstructorParameters<typeof BattleSim>[2]>): RunResult {
   const rnd = mulberry32(seed);
-  const sim = new BattleSim(level, strat.hero, { random: mulberry32(seed * 7919 + 17), mods });
+  const sim = new BattleSim(level, strat.hero, { ...perks, random: mulberry32(seed * 7919 + 17), mods });
   const ranked = rankSlots(sim);
   // Jitter: swap a few neighbours in the ranking so runs differ.
   for (let i = 0; i < ranked.length - 1; i++) if (rnd() < 0.35) [ranked[i], ranked[i + 1]] = [ranked[i + 1], ranked[i]];

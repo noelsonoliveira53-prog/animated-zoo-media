@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **229** (next balance pass at iteration 230)
+Iteration counter: **230** (next balance pass at iteration 235)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1455,6 +1455,10 @@ Iteration counter: **229** (next balance pass at iteration 230)
   - First layout fix: the Buy button covered the price, so prices moved to their own "Next:" line and the rows were spaced out.
   - Check: `scripts/store-check.mjs` (menu Store → buying Whetted Tips takes 5000 → 3800 coins and rank 2 → 3; no console errors). Screenshots `screenshots/229.png`, `229-menu.png` and `229-buy.png`. 258 tests.
 
+- **Iteration 230** (POLISH + BALANCE):
+  - Polish: when a purchase opens the next store tier, a golden "<Tier> unlocked!" banner sweeps across that row with a fanfare and a run of spark bursts. Screenshot `screenshots/230.png`.
+  - Balance: the store was too strong, so its numbers were cut (see Balance Notes). New `scripts/store-balance.ts` compares win rates with no store against a fully bought one; `playLevel` takes an optional perks argument. 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1471,6 +1475,23 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 230** (POLISH + BALANCE), store. `store-balance.ts`, 4 seeds, expert/casual/novice, no store → fully bought store.
+- The first numbers made a maxed store trivialise late bosses: +38% tower damage and +310 starting coins took level 125 from 100/75/0 to 100/100/100 and level 30 from 75/25/25 to 100/100/100.
+- Cuts:
+
+| Item | Before | After |
+|---|---|---|
+| Whetted Tips | 4% | 3% |
+| War Chest | 30 coins | 20 coins |
+| Master Craft | 6% | 4% |
+| Dragon's Hoard | 80 coins | 40 coins |
+| Elder Blessing | 10% / 5% | 8% / 4% |
+| Ranger Drill | 15% | 12% |
+
+- That caps the store at +27% tower damage, +180 coins, ×0.77 spell cooldown, +34% hero health and +22% bounty.
+- After the cut (none → maxed): level 5 100/50/100 → 100/100/100, level 30 75/25/25 → 100/75/100, level 60 75/50/0 → 100/100/0, level 90 100/25/0 → 100/75/75, level 120 75/25/0 → 100/100/100, level 125 100/75/0 → 100/100/100.
+- A fully bought store (about 75k coins and 60k glowsap) is a long-term reward and still makes bosses very winnable. The casual gain is the intended effect.
+- **Watch**: the novice jumps on cliff-edge levels (120, 125). If players report the late game feels trivial with a maxed store, trim towerDamage further.
 **Iteration 225** (POLISH + BALANCE): no sim changes since iteration 220 (only visuals, dev mode and settings). A 4-seed sanity sweep matches earlier results within noise:
 
 | Level | Result |

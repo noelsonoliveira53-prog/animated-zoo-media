@@ -9,6 +9,8 @@ import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
 import { buildPuff, upgradeBurst } from './fx/BuildFx';
 import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
+import { startWeather } from './fx/Weather';
+import { weatherFor } from '../data/weather';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -218,6 +220,8 @@ export class BattleScene extends Phaser.Scene {
         frequency: 120,
       }).setDepth(2200);
     }
+    // light weather per theme (leaves, spores, rain, sand...), purely visual
+    if (!motion.lowFx && !motion.reduced) startWeather(this, weatherFor(this.level.theme), GAME_W, GAME_H);
     this.buildHud();
     this.buildHero();
     this.buildSpells();

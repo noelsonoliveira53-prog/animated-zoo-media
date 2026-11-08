@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **258** (next balance pass at iteration 260)
+Iteration counter: **259** (next balance pass at iteration 260)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1666,13 +1666,24 @@ Iteration counter: **258** (next balance pass at iteration 260)
   - **Ending:** a gold-rimmed lit panel behind the title and lines, with the lines typed out.
   - `story-check` and `ending-check` now wait on the scene (text fully typed, buttons up) instead of wall-clock time, and both pass with no console errors. One new test (268 total). Screenshots `screenshots/258.png` (chapter card) and `258e.png` (ending).
 
+- **Iteration 259: battle weather.** New `data/weather.ts` (a typed table from theme flag to weather; first match wins; tested) and `scenes/fx/Weather.ts`. Every piece is a plain shape destroyed by its own tween, drawn above the units and under the HUD.
+  - Plain meadows: a few drifting leaves. Orchards and canopies: denser leaves and blossom.
+  - Storm: slanted rain. Galecrest: wind streaks. Dunes and canyon: blowing sand.
+  - Reef: rising bubbles. Shoals and flotilla: sea spray.
+  - Crystal maps: twinkling sparkles. Shroom, bog, mist and abyss maps: glowing spores. Gears: soot.
+  - Amber and comb: golden pollen. Ruins, thistle, heath and wold: drifting thistledown.
+  - Snow and lava maps keep their existing snowfall and embers. Off with Graphics: Low or Reduce Motion.
+  - Leak check on the storm map (level 56): tweens 32 → 76 and objects 128 → 392 by wave 5, tracking the busy wave plus a bounded amount of rain, not growing without limit.
+  - Two new tests (270 total). `screenshots/259.png` is a montage of storm rain, dune sand, shroom spores and crystal sparkles.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Battle ambience: weather per theme (falling leaves, snow, embers, drifting spores) as a light overlay, off on Graphics: Low.
+1. Tower idle life: archers glance around, mage orbs bob, boulder arms creak back between shots and burrow flags flutter (where not already animated).
+2. Enemy walk cycles: a waddle or hop per enemy family instead of the shared bob, and flyers flap.
 
 ## Known Bugs
 - (none known)

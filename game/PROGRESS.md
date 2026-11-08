@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **224** (next balance pass at iteration 225)
+Iteration counter: **225** (next balance pass at iteration 230)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1397,6 +1397,13 @@ Iteration counter: **224** (next balance pass at iteration 225)
   - Tier 2+ and branches add smoke wisps curling up from the base, plus the warm tier aura.
   - `TowerFx.track` now takes the ground position for lobbed shots. Screenshots `screenshots/224.png` and `224-zoom0..2.png`. No console errors, 253 tests.
 
+- **Iteration 225** (POLISH + BALANCE):
+  - Polish: a new **Graphics: High/Low** setting (Settings screen, saved as `settings.fxLow`, read through `motion.lowFx`), aimed at weaker phones now that towers carry heavier effects.
+  - Low keeps only small impact sparks: no tower auras, motes, smoke or runes, no projectile trails or boulder shadows, no launch flashes, debris clouds or scorch marks, and no idle sway.
+  - The Settings buttons were re-laid out so nothing overlaps. Reset now sits beside Graphics, and the "Effects" label stays for sound effects.
+  - Check: `scripts/settings-fx-check.mjs` (the toggle saves; a battle on Low runs with no console errors). Screenshot `screenshots/225.png`.
+  - Balance: a sanity sweep, no changes (see Balance Notes). 253 tests.
+
 ## In Progress
 - (none)
 
@@ -1419,6 +1426,22 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 225** (POLISH + BALANCE): no sim changes since iteration 220 (only visuals, dev mode and settings). A 4-seed sanity sweep matches earlier results within noise:
+
+| Level | Result |
+|---|---|
+| 1 | 100/100/100 |
+| 2 | 100/100/100 |
+| 3 | 100/100/100 |
+| 4 | 100/100/75 |
+| 5 (boss) | 100/50/100 |
+| 60 | 75/50/0 |
+| 61 | 100/100/50 |
+| 62 | 100/75/0 |
+| 120 | 75/25/0 |
+| 125 | 100/75/0 |
+
+Nothing tuned.
 **Iteration 220** (POLISH + BALANCE), raids. The plain Lodge 3 army had sunk to 0.5★ against Strongholds after the Rattle Trap and Standing Stone. `tierMult` now uses a table, so tier 2 is gentler while tiers 0–1 are unchanged:
 
 | Stronghold hp / damage | Lodge 3 | Lodge 3 + Mender | Lodge 3 + Moles |

@@ -51,6 +51,7 @@ export class TowerFx {
     if (!st) return;
     const color = tower.spec ? p.color : st.color;
     this.trails.set(p.uid, { kind: tower.def.id, color, pts: [] });
+    if (motion.lowFx) return; // Effects: Low — keep only the light impact sparks
     const top = { x: tower.pos.x, y: tower.pos.y - st.muzzle };
     if (tower.def.id === 'boulder') {
       // the catapult arm thumps: the tower squats, a dust puff bursts at its feet and a few pebbles skitter out
@@ -90,7 +91,7 @@ export class TowerFx {
       sh.setPosition(groundX, groundY + 6).setScale(Math.max(0.4, 1 - lift / 160)).setAlpha(0.32 - Math.min(0.18, lift / 600));
     }
     const t = this.trails.get(uid);
-    if (!t) return;
+    if (!t || motion.lowFx) return;
     t.pts.push({ x, y });
     if (t.pts.length > 7) t.pts.shift();
   }
@@ -105,6 +106,11 @@ export class TowerFx {
     const t = this.trails.get(uid);
     if (!t) return;
     this.trails.delete(uid);
+    if (motion.lowFx) {
+      this.sparks.setParticleTint(t.color);
+      this.sparks.explode(4, x, y);
+      return;
+    }
     if (t.kind === 'boulder') {
       // a heavy landing: a dust cloud, chunks of rock arcing out, a hot flash and a scorch mark that fades
       const flash = this.scene.add.circle(x, y, 16, 0xffd8a0, 0.7).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
@@ -199,7 +205,7 @@ export class TowerFx {
   placed(tower: Tower, view: Phaser.GameObjects.Image): void {
     this.removed(tower.slot);
     const st = STYLE[tower.def.id];
-    if (!st) return;
+    if (!st || motion.lowFx) return;
     const objs: Phaser.GameObjects.GameObject[] = [];
     const tier = tower.spec ? 3 : tower.tier;
     if (tower.def.id === 'glimmer' && !motion.reduced) {

@@ -110,6 +110,7 @@ export class BattleScene extends Phaser.Scene {
     this.mutator = this.endless ? endlessMutatorFor(todayString()) : null;
     const save = loadSave();
     motion.reduced = !!save.settings.reduceMotion;
+    motion.lowFx = !!save.settings.fxLow;
     this.perks = battlePerks(save.village);
     this.sim = new BattleSim(this.level, save.hero, {
       ...this.perks,

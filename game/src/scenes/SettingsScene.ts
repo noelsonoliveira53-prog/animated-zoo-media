@@ -138,8 +138,25 @@ export class SettingsScene extends Phaser.Scene {
 
     // Reset progress (two taps)
     let armed = false;
-    const resetBtn = new Button(this, GAME_W / 2, 470, 'Reset progress', {
-      width: 280,
+    // Graphics quality: Low drops tower auras, trails, debris and idle animation for weaker phones
+    const fxLabel = (low: boolean) => (low ? 'Graphics: Low' : 'Graphics: High');
+    const fxBtn = new Button(this, GAME_W / 2 - 125, 464, fxLabel(!!save.settings.fxLow), {
+      width: 230,
+      height: 56,
+      fontSize: 18,
+      color: 0xb07cff,
+      onClick: () => {
+        const s = loadSave();
+        s.settings.fxLow = !s.settings.fxLow;
+        motion.lowFx = s.settings.fxLow;
+        writeSave(s);
+        sfx.click();
+        fxBtn.label.setText(fxLabel(s.settings.fxLow));
+      },
+    });
+
+    const resetBtn = new Button(this, GAME_W / 2 + 125, 464, 'Reset progress', {
+      width: 230,
       height: 56,
       fontSize: 20,
       color: C.danger,

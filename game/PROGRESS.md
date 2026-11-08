@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **219** (next balance pass at iteration 220)
+Iteration counter: **220** (next balance pass at iteration 225)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1363,6 +1363,10 @@ Iteration counter: **219** (next balance pass at iteration 220)
   - The camp shows the stone's hush as a pale ring, and buildings hit under it flash a dull lavender instead of white.
   - Two new tests (252 total). Screenshot `screenshots/219.png` (Stronghold camp with the stone bottom-left). No console errors.
 
+- **Iteration 220** (POLISH + BALANCE):
+  - Polish: the Field Guide's Raids tab said "Just a building to knock down" for the Hornet Hive, Rattle Trap and Standing Stone. It now lists their swarm, venom and ward facts. Check: `scripts/guide-raids-check.mjs`. Screenshot `screenshots/220-guide.png`.
+  - Balance: Strongholds' walls and defences now scale a little gentler (hp ×1.56, damage ×1.40 instead of ×1.70 and ×1.50) to make up for the two extra buildings they gained this week (see Balance Notes). Screenshot `screenshots/220.png`. 252 tests.
+
 ## In Progress
 - (none)
 
@@ -1376,6 +1380,19 @@ Iteration counter: **219** (next balance pass at iteration 220)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 220** (POLISH + BALANCE), raids. The plain Lodge 3 army had sunk to 0.5★ against Strongholds after the Rattle Trap and Standing Stone. `tierMult` now uses a table, so tier 2 is gentler while tiers 0–1 are unchanged:
+
+| Stronghold hp / damage | Lodge 3 | Lodge 3 + Mender | Lodge 3 + Moles |
+|---|---|---|---|
+| 1.6 / 1.42 | 0.7★ | 1.4★ | 1.2★ |
+| 1.58 / 1.41 | 0.7★ | 1.6★ | 1.3★ |
+| **1.56 / 1.40 (kept)** | **0.9★ 45%** | **1.6★ 55%** | **1.3★ 47%** |
+| 1.55 / 1.39 | 1.4★ | 1.7★ | 1.4★ |
+| 1.5 / 1.36 | 1.4★ | 1.8★ | 1.5★ |
+
+- Results jump at the 50%-destruction star line.
+- With the kept values, the plain army is back near its old 1.0★ and both counter armies still clearly beat it. Lodge 2 also improves to 0.6★ against Strongholds; the Outpost and Warren columns are unchanged.
+- The campaign was not touched.
 **Iteration 219** (raid-balance, Stronghold column; after the Rattle Trap → after the stone):
 
 | Army | Before | After |

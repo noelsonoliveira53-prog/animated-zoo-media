@@ -1,37 +1,38 @@
-// Field Guide "Raids" tab: 6 troops + 7 camp buildings, detail pages for the Otter and the Sludge Pit, desktop and phone.
+// Field Guide raids tab: opens the Standing Stone entry and screenshots it, to check camp-building facts are listed.
 import { createRequire } from 'node:module';
 import { execSync } from 'node:child_process';
 import { preview } from 'vite';
+import { readFileSync } from 'node:fs';
+
 const require = createRequire(import.meta.url);
 let pw;
 try { pw = require('playwright'); } catch { pw = require(execSync('npm root -g').toString().trim() + '/playwright'); }
-const name = process.argv[2] ?? 'guide-raids';
-const server = await preview({ preview: { port: 4366, strictPort: true } });
+const name = process.argv[2] ?? 'guide-lastpage';
+const server = await preview({ preview: { port: 4397, strictPort: true } });
 const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const errors = [];
-for (const [suffix, opts] of [['', { viewport: { width: 1280, height: 720 } }], ['-phone', { viewport: { width: 740, height: 360 }, hasTouch: true, isMobile: true, deviceScaleFactor: 2 }]]) {
-  const ctx = await browser.newContext(opts);
-  const page = await ctx.newPage();
-  page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
-  page.on('pageerror', (e) => errors.push(String(e)));
-  await page.goto('http://localhost:4366/');
-  await page.waitForTimeout(1000);
-  await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('FieldGuide', { tab: 'raids' }));
-  await page.waitForTimeout(900);
-  const n = await page.evaluate(() => {
-    const g = window.__game.scene.getScene('FieldGuide');
-    const all = g.entries();
-    g.showDetail(all.find((e) => e.key === (location.hash === '#b' ? 'camp_sludge' : 'troop_otter')));
-    return all.length;
-  });
-  await page.waitForTimeout(400);
-  await page.screenshot({ path: `screenshots/${name}${suffix}.png` });
-  await page.evaluate(() => { const g = window.__game.scene.getScene('FieldGuide'); g.showDetail(g.entries().find((e) => e.key === 'camp_sludge')); });
-  await page.waitForTimeout(300);
-  await page.screenshot({ path: `screenshots/${name}${suffix}-camp.png` });
-  console.log(suffix || 'desktop', 'entries', n);
-  await ctx.close();
-}
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+// a save that has met every enemy so far, so the newest pages show their art and text
+const ids = [...readFileSync('src/data/enemies.ts', 'utf8').matchAll(/^  (\w+): \{$/gm)].map((m) => m[1]);
+await page.addInitScript((seen) => {
+  localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: seen }));
+}, ids);
+await page.goto('http://localhost:4397/');
+await page.waitForTimeout(1000);
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('FieldGuide'));
+await page.waitForTimeout(800);
+const info = await page.evaluate(() => {
+  const g = window.__game.scene.getScene('FieldGuide');
+  g.show('raids');
+  const e = g.entries().find((x) => x.key === 'camp_menhir');
+  g.showDetail(e);
+  return { lines: e.lines };
+});
+await page.waitForTimeout(400);
+await page.screenshot({ path: `screenshots/${name}.png` });
+console.log(JSON.stringify(info));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();

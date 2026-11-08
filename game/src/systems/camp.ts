@@ -36,7 +36,10 @@ function rng(seed: number): () => number {
 
 /** Tier scaling for camp buildings: tougher defenses and richer loot. */
 export function tierMult(tier: number): { hp: number; dmg: number; loot: number } {
-  return { hp: 1 + 0.35 * tier, dmg: 1 + 0.25 * tier, loot: 1 + 0.7 * tier };
+  // Strongholds already pack extra buildings (Rattle Trap, Standing Stone), so their walls and defenses scale a little gentler.
+  const hp = [1, 1.35, 1.56][tier] ?? 1 + 0.35 * tier;
+  const dmg = [1, 1.25, 1.4][tier] ?? 1 + 0.25 * tier;
+  return { hp, dmg, loot: 1 + 0.7 * tier };
 }
 
 export function generateCamp(seed: number, tier: number): Camp {

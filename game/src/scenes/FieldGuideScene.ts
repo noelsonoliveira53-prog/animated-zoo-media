@@ -229,6 +229,9 @@ export class FieldGuideScene extends Phaser.Scene {
           b.loot ? `Loot ${b.loot.coins} coins + ${b.loot.glowsap} glowsap (more in tougher camps)` : '',
           b.mend ? `Heals buildings within ${b.mend.range}px for ${b.mend.amount} every ${b.mend.interval}s` : '',
           b.mire ? `Ground troops within ${b.mire.radius}px move at ${Math.round(b.mire.factor * 100)}% speed` : '',
+          b.burst ? `When destroyed, stings every troop within ${b.burst.radius}px (flyers too) for ${b.burst.damage}` : '',
+          b.venom ? `Poisons ground troops within ${b.venom.radius}px: ${b.venom.dps} health a second for ${b.venom.duration}s after they leave` : '',
+          b.ward ? `Other buildings within ${b.ward.radius}px take ${Math.round(b.ward.cut * 100)}% less damage while it stands` : '',
           b.wall ? 'Blocks ground troops; does not count toward destruction' : '',
         ].filter(Boolean);
         return {

@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
+import { stepCounter, waveProgress } from '../ui/counter';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -68,6 +69,10 @@ export class BattleScene extends Phaser.Scene {
   private titheText!: Phaser.GameObjects.Text; // shown while a Tithe Weasel skims the bounty
   private livesText!: Phaser.GameObjects.Text;
   private waveText!: Phaser.GameObjects.Text;
+  private waveBar!: Phaser.GameObjects.Graphics;
+  private shownCoins = -1;
+  private shownLives = -1;
+  private shownWave = -1;
   private nextWaveBtn!: Button;
   private speedBtn!: Button;
   private pauseBtn!: Button;
@@ -1945,17 +1950,30 @@ export class BattleScene extends Phaser.Scene {
 
   private buildHud(): void {
     const bar = this.add.graphics().setDepth(3000);
-    bar.fillStyle(C.ink, 0.75);
+    // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
+    bar.fillStyle(0x000000, 0.25);
+    bar.fillRoundedRect(14, 14, 440, 54, 16);
+    bar.fillStyle(C.ink, 0.82);
     bar.fillRoundedRect(12, 10, 440, 54, 16);
+    bar.fillStyle(0xffffff, 0.07);
+    bar.fillRoundedRect(14, 12, 436, 24, { tl: 14, tr: 14, bl: 4, br: 4 });
+    bar.lineStyle(2, 0xffffff, 0.18);
+    bar.strokeRoundedRect(13, 11, 438, 52, 15);
+    bar.lineStyle(2, 0x000000, 0.35);
+    bar.strokeRoundedRect(11, 9, 442, 56, 17);
+    bar.fillStyle(C.gold, 0.35);
+    bar.fillRect(132, 22, 2, 30);
+    bar.fillRect(268, 22, 2, 30);
 
     this.add.image(40, 37, 'icon_heart').setDepth(3001);
     this.livesText = this.add.text(60, 37, '', textStyle(26, TEXT.heart)).setOrigin(0, 0.5).setDepth(3001);
     this.add.image(150, 37, 'icon_coin').setDepth(3001);
     this.coinText = this.add.text(170, 37, '', textStyle(26, TEXT.gold)).setOrigin(0, 0.5).setDepth(3001);
-    this.titheText = this.add.text(172, 60, '', textStyle(12, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
+    this.titheText = this.add.text(20, 76, '', textStyle(12, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
     if (devOn()) this.add.text(GAME_W / 2, GAME_H - 14, 'DEV MODE: endless coins, lives and spells (results not saved)', textStyle(12, '#ffb0c8')).setOrigin(0.5).setDepth(3001);
-    this.add.image(290, 36, 'icon_wave').setDepth(3001);
-    this.waveText = this.add.text(310, 37, '', textStyle(24)).setOrigin(0, 0.5).setDepth(3001);
+    this.add.image(290, 34, 'icon_wave').setDepth(3001);
+    this.waveText = this.add.text(310, 34, '', textStyle(24)).setOrigin(0, 0.5).setDepth(3001);
+    this.waveBar = this.add.graphics().setDepth(3001);
 
     this.nextWaveBtn = new Button(this, GAME_W - 130, 40, 'Call Wave', {
       width: 220,
@@ -2074,6 +2092,13 @@ export class BattleScene extends Phaser.Scene {
         g.fillStyle(C.ink, 1);
         g.fillCircle(p.x + 29, p.y - 28, 7);
       }
+      // glassy highlight on the upper half and a soft shade at the bottom
+      g.fillStyle(0xffffff, cd > 0 ? 0.06 : 0.16);
+      g.fillEllipse(p.x, p.y - 17, 50, 24);
+      g.lineStyle(3, 0x000000, 0.18);
+      g.beginPath();
+      g.arc(p.x, p.y, 32, 0.25, Math.PI - 0.25, false);
+      g.strokePath();
       const armed = this.spellMode === id;
       g.lineStyle(armed ? 5 : 3, armed ? C.cream : cd > 0 ? 0x777777 : def.color, 1);
       g.strokeCircle(p.x, p.y, armed ? 41 : 36);
@@ -2367,9 +2392,16 @@ export class BattleScene extends Phaser.Scene {
     this.bossLabel.setText(boss.def.name);
   }
 
-  private refreshHud(): void {
-    this.livesText.setText(String(this.sim.lives));
-    this.coinText.setText(String(this.sim.coins));
+  private refreshHud(dt = 0): void {
+    // rolling counters: snap on the first frame (or with Reduce Motion), then tick toward the real value
+    const snap = this.shownCoins < 0 || motion.reduced || dt === 0;
+    const coins = snap ? this.sim.coins : stepCounter(this.shownCoins, this.sim.coins, dt);
+    const lives = snap ? this.sim.lives : stepCounter(this.shownLives, this.sim.lives, dt);
+    if (Math.round(coins) !== Math.round(this.shownCoins)) this.coinText.setText(String(Math.round(coins)));
+    if (Math.round(lives) !== Math.round(this.shownLives)) this.livesText.setText(String(Math.round(lives)));
+    this.shownCoins = coins;
+    this.shownLives = lives;
+    this.drawWaveBar(dt);
     const cut = this.sim.titheCut();
     const stall = this.sim.stallMult();
     const warn: string[] = [];
@@ -2387,6 +2419,27 @@ export class BattleScene extends Phaser.Scene {
     } else {
       this.nextWaveBtn.label.setText('Final Wave');
       this.nextWaveBtn.setEnabled(false);
+    }
+  }
+
+  /** Slim progress bar under the wave counter: how far through the level's waves we are. */
+  private drawWaveBar(dt: number): void {
+    const target = this.endless ? 0 : waveProgress(this.sim.waveIndex, this.sim.totalWaves);
+    const v = this.shownWave < 0 || dt === 0 ? target : this.shownWave + (target - this.shownWave) * Math.min(1, dt * 4);
+    if (Math.abs(v - this.shownWave) < 0.0005) return;
+    this.shownWave = v;
+    const g = this.waveBar;
+    g.clear();
+    if (this.endless) return;
+    const x = 282, y = 52, w = 156, h = 7;
+    g.fillStyle(0x000000, 0.45);
+    g.fillRoundedRect(x, y, w, h, 3.5);
+    if (v > 0.01) {
+      const fw = Math.max(h, w * v);
+      g.fillStyle(0xff9f43, 1);
+      g.fillRoundedRect(x, y, fw, h, 3.5);
+      g.fillStyle(0xffe0a0, 0.6);
+      g.fillRoundedRect(x + 2, y + 1, fw - 4, 2, 1);
     }
   }
 
@@ -2646,7 +2699,7 @@ export class BattleScene extends Phaser.Scene {
     this.fx.draw();
     if (!this.ended) music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
     this.drawBossBar();
-    this.refreshHud();
+    this.refreshHud(dt);
   }
 
   /** Dev mode: endless coins and lives, spells and the hero skill always ready. */

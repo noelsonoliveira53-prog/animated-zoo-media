@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **241** (next balance pass at iteration 245)
+Iteration counter: **242** (next balance pass at iteration 245)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1538,15 +1538,20 @@ Iteration counter: **241** (next balance pass at iteration 245)
   - The map now reads the motion and graphics settings itself, so it respects them even before any battle.
   - Landmarks per region stay on the idea list. Screenshot `screenshots/241.png`. 258 tests.
 
+- **Iteration 242: battle HUD polish.**
+  - Glossy top bar: drop shadow, lighter upper half, rim light, dark outline and slim gold dividers between lives, coins and waves.
+  - Rolling counters (`ui/counter.ts`, `stepCounter`): coins and lives tick toward their real value instead of jumping (they snap with Reduce Motion).
+  - A wave progress bar under the wave counter, which eases forward as waves start (hidden in endless).
+  - Spell buttons get a glassy highlight and a soft lower shade. The tithe and Moonhush warnings moved below the bar.
+  - Three new tests (261 total). Screenshot `screenshots/242.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Battle HUD polish: a glossier top bar and spell buttons (inner gradients, rim light), plus animated coin and life
-   counters (tick up and down with a bounce) and a wave progress bar.
-2. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
+1. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
 
 ## Known Bugs
 - (none known)

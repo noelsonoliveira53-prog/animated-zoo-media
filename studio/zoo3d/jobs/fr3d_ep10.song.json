@@ -1,0 +1,381 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nLet's go shopping, fruit market fun!\nCount the fruit, every one!\nOne, two, three, into the cart,\nFruit market shopping, let's start!\n\n[Verse 1]\nOne red apple, shiny and round,\nTwo yellow bananas, the best in town!\nThree orange oranges, juicy and sweet,\nCount them up, what a treat!\n\n[Chorus]\nLet's go shopping, fruit market fun!\nCount the fruit, every one!\nOne, two, three, into the cart,\nFruit market shopping, let's start!\n\n[Verse 2]\nFour purple grapes, a bunch to share,\nFive strawberries, red with care!\nCount them all, one to five,\nFruity Friends come alive!\n\n[Bridge]\nHold up one finger, one!\nTwo fingers, two, this is fun!\nThree, four, five, wiggle them high,\nCount with me, wave goodbye!\n\n[Verse 3]\nPut them in the basket, say thank you,\nShare with friends, they want some too!\nFruit for snack and fruit for lunch,\nFruity Friends love fruit a bunch!\n\n[Chorus]\nLet's go shopping, fruit market fun!\nCount the fruit, every one!\nOne, two, three, into the cart,\nFruit market shopping, let's start!\n\n[Outro]\nOne, two, three! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 722,
+ "who_map": {},
+ "meta": {
+  "title": "Fruit Market Counting Song! Count to 5 | Fruity Friends",
+  "card": "Fruit Market Counting!",
+  "thumb_text": "COUNT THE FRUIT!",
+  "description": "Let's go fruit shopping! The Fruity Friends count one apple, two bananas, three oranges, four grapes and five strawberries into the basket.\nKids count on their fingers from one to five and learn to share snacks with friends. Ages 2-5.",
+  "tags": [
+   "counting song for kids",
+   "count to 5",
+   "fruit song",
+   "numbers for toddlers",
+   "shopping song",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep10",
+  "title": "Fruit Market Counting!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "basket",
+      "at": [
+       0,
+       0.8,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "number",
+      "at": [
+       -2.6,
+       1.6,
+       3.4
+      ],
+      "word": "One",
+      "opts": {
+       "n": 1
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.7,
+       3.4
+      ],
+      "word": "apple,",
+      "opts": {
+       "kind": "apple"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "bananas,",
+      "opts": {
+       "kind": "banana"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       0,
+       1.6,
+       3.4
+      ],
+      "word": "oranges,",
+      "opts": {
+       "kind": "orange"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "COUNT!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "grapes,",
+      "opts": {
+       "kind": "grape"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "strawberries,",
+      "opts": {
+       "kind": "strawberry"
+      }
+     },
+     {
+      "type": "text",
+      "text": "1 to 5!",
+      "color": "#ff5c8a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "five,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "number",
+      "at": [
+       -2.6,
+       1.6,
+       3.4
+      ],
+      "word": "one!",
+      "opts": {
+       "n": 1
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "at": [
+       2.6,
+       1.6,
+       3.4
+      ],
+      "word": "two,",
+      "opts": {
+       "n": 2
+      }
+     },
+     {
+      "type": "text",
+      "text": "3, 4, 5!",
+      "color": "#ff8a1f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "Three,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "basket",
+      "at": [
+       0,
+       0.8,
+       3.4
+      ],
+      "word": "basket,"
+     },
+     {
+      "type": "text",
+      "text": "SHARE!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "Share"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

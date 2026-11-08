@@ -1,0 +1,372 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBig or small, big or small,\nBloop can grow up really tall!\nThen he shrinks down tiny, see?\nBig and small, sing with me!\n\n[Verse 1]\nA big, big elephant, stomp, stomp, stomp,\nA tiny mouse goes romp, romp, romp!\nA big balloon, a little ball,\nWhich is big and which is small?\n\n[Chorus]\nBig or small, big or small,\nBloop can grow up really tall!\nThen he shrinks down tiny, see?\nBig and small, sing with me!\n\n[Verse 2]\nA tall, tall tree reaching for the sky,\nA short little flower, waving hi!\nA long, long snake goes wiggle, wiggle,\nA short little worm makes Bloop giggle!\n\n[Bridge]\nMake yourself big, stretch your arms wide!\nMake yourself small, curl up inside!\nStand up tall, then crouch down low,\nBig and small, here we go!\n\n[Verse 3]\nBig blocks stacking up so high,\nLittle blocks, give them a try!\nBig or little, short or tall,\nBloop loves every size of all!\n\n[Chorus]\nBig or small, big or small,\nBloop can grow up really tall!\nThen he shrinks down tiny, see?\nBig and small, sing with me!\n\n[Outro]\nBig and small! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 731,
+ "who_map": {},
+ "meta": {
+  "title": "Big or Small? Bloop Grows and Shrinks! Opposites Song",
+  "card": "Big or Small?",
+  "thumb_text": "BIG OR SMALL?",
+  "description": "Bloop the jelly blob grows big and shrinks small! A big elephant and a tiny mouse, a tall tree and a short flower, a long snake and a short worm.\nKids stretch big, curl up small, stand tall and crouch low while learning big, small, tall, short, long and little. Ages 2-5.",
+  "tags": [
+   "big and small song",
+   "opposites song for kids",
+   "sizes for toddlers",
+   "tall and short",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep09",
+  "title": "Big or Small?",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG!",
+      "color": "#ff4b9b",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 1.0,
+      "word": "tall!"
+     },
+     {
+      "type": "text",
+      "text": "small",
+      "color": "#3b8be0",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.4,
+      "word": "tiny,"
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "balloon",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "word": "balloon,",
+      "opts": {
+       "color": "#ff4b9b"
+      }
+     },
+     {
+      "type": "text",
+      "text": "BIG or small?",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.6,
+      "word": "Which"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG!",
+      "color": "#ff4b9b",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 1.0,
+      "word": "tall!"
+     },
+     {
+      "type": "text",
+      "text": "small",
+      "color": "#3b8be0",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.4,
+      "word": "tiny,"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "flower",
+      "at": [
+       3.4,
+       0.9,
+       3.6
+      ],
+      "word": "flower,",
+      "opts": {
+       "color": "#ffd21f"
+      }
+     },
+     {
+      "type": "text",
+      "text": "LONG!",
+      "color": "#3cc45a",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "long,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG!",
+      "color": "#ff4b9b",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 1.0,
+      "word": "big,"
+     },
+     {
+      "type": "text",
+      "text": "small",
+      "color": "#3b8be0",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.4,
+      "word": "small,"
+     },
+     {
+      "type": "text",
+      "text": "TALL!",
+      "color": "#ff8a1f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "tall,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "block",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "blocks",
+      "opts": {
+       "n": 3,
+       "color": "#ff4b9b"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "block",
+      "at": [
+       3.4,
+       0.6,
+       3.6
+      ],
+      "word": "Little",
+      "opts": {
+       "n": 1,
+       "color": "#3b8be0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG & SMALL!",
+      "color": "#ff4b9b",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff4b9b",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep09",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

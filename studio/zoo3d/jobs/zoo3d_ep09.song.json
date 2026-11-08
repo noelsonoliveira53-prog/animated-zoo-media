@@ -1,0 +1,382 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nOne little, two little, three little animals,\nFour little, five little, six little animals,\nSeven little, eight little, nine little animals,\nTen little zoo friends dancing!\n\n[Verse 1]\nOne big lion with a roar, roar, roar,\nTwo little monkeys swinging more, more, more!\nThree tall giraffes munching on a tree,\nCount with Milo, one, two, three!\n\n[Chorus]\nOne little, two little, three little animals,\nFour little, five little, six little animals,\nSeven little, eight little, nine little animals,\nTen little zoo friends dancing!\n\n[Verse 2]\nFour gray elephants, stomp, stomp, stomp,\nFive stripy zebras, romp, romp, romp!\nSix happy hippos splashing in the sun,\nCounting animals is so much fun!\n\n[Bridge]\nHold up your fingers, let's count to ten,\nOne, two, three, four, five, and then,\nSix, seven, eight, nine, ten,\nLet's count the zoo friends once again!\n\n[Verse 3]\nSeven parrots flying way up high,\nEight penguins waddling by!\nNine pandas munching, ten owls say hoo,\nTen little friends at the animal zoo!\n\n[Chorus]\nOne little, two little, three little animals,\nFour little, five little, six little animals,\nSeven little, eight little, nine little animals,\nTen little zoo friends dancing!\n\n[Outro]\nTen little zoo friends! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 704,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Ten Little Animals! Counting Song for Kids with Milo",
+  "card": "Ten Little Animals!",
+  "thumb_text": "COUNT TO 10!",
+  "description": "Count to ten with Milo and the zoo friends! One big lion, two swinging monkeys, three tall giraffes, four elephants, five zebras, six hippos, seven parrots, eight penguins, nine pandas and ten owls.\nKids count on their fingers from one to ten and roar, stomp and splash along. Ages 2-5.",
+  "tags": [
+   "counting song for kids",
+   "count to 10",
+   "ten little animals",
+   "numbers song",
+   "animal song for kids",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep09",
+  "title": "Ten Little Animals!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "1 to 10!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:lion",
+     "giraffe",
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       -3.2,
+       1.8,
+       3.6
+      ],
+      "word": "One",
+      "opts": {
+       "n": 1
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       0,
+       2.2,
+       3.6
+      ],
+      "word": "Two",
+      "opts": {
+       "n": 2
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       3.2,
+       1.8,
+       3.6
+      ],
+      "word": "Three",
+      "opts": {
+       "n": 3
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "COUNT!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:elephant",
+     "close:zebra",
+     "close:hippo",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       -3.2,
+       1.8,
+       3.6
+      ],
+      "word": "Four",
+      "opts": {
+       "n": 4
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       0,
+       2.2,
+       3.6
+      ],
+      "word": "Five",
+      "opts": {
+       "n": 5
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       3.2,
+       1.8,
+       3.6
+      ],
+      "word": "Six",
+      "opts": {
+       "n": 6
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3, 4, 5",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.55,
+      "word": "One,"
+     },
+     {
+      "type": "text",
+      "text": "6, 7, 8, 9, 10!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.55,
+      "word": "Six,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       -3.2,
+       1.8,
+       3.6
+      ],
+      "word": "Seven",
+      "opts": {
+       "n": 7
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       0,
+       2.2,
+       3.6
+      ],
+      "word": "Nine",
+      "opts": {
+       "n": 9
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "at": [
+       3.2,
+       1.8,
+       3.6
+      ],
+      "word": "Ten",
+      "opts": {
+       "n": 10
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "10 ZOO FRIENDS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep09",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

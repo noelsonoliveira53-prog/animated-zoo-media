@@ -1,4 +1,6 @@
+import { addLighting } from '../ui/lighting';
 import Phaser from 'phaser';
+import { motion } from '../ui/motion';
 import { fitWidth, pf } from '../ui/touch';
 import { endlessBosses, endlessMutatorFor } from '../systems/endless';
 import { todayString } from '../systems/daily';
@@ -26,6 +28,8 @@ export class WorldMapScene extends Phaser.Scene {
     music.setTheme(themeById('home'));
     this.panel = null;
     const save = loadSave();
+    motion.reduced = !!save.settings.reduceMotion;
+    motion.lowFx = !!save.settings.fxLow;
     // Pick the region: explicit, else the focused level's, else the furthest unlocked level's.
     let furthest = 0;
     LEVELS.forEach((_, i) => {
@@ -36,6 +40,8 @@ export class WorldMapScene extends Phaser.Scene {
     const inRegion = LEVELS.map((_, i) => i).filter((i) => regionOf(i) === this.region);
 
     this.drawLand(reg.heath ? 'heath' : reg.brook ? 'brook' : reg.canyon ? 'canyon' : reg.wold ? 'wold' : reg.thistle ? 'thistle' : reg.bog ? 'bog' : reg.comb ? 'comb' : reg.canopy ? 'canopy' : reg.mist ? 'mist' : reg.amber ? 'amber' : reg.flotilla ? 'flotilla' : reg.reef ? 'reef' : reg.dunes ? 'dunes' : reg.storm ? 'storm' : reg.orchard ? 'orchard' : reg.abyss ? 'abyss' : reg.gears ? 'brass' : reg.ruins ? 'ruins' : reg.gale ? 'gale' : reg.glass ? 'glass' : reg.shoal ? 'shoal' : reg.dusk ? 'dusk' : reg.snow ? 'snow' : reg.ember ? 'ember' : 'meadow');
+    addLighting(this, 8);
+    this.addSurf();
     this.drawTrail(save.stars, inRegion);
     inRegion.forEach((i) => this.makeNode(i, isLevelUnlocked(i, save.stars), save.stars[LEVELS[i].id] ?? 0));
     // Placeholders for levels still to come in this region.
@@ -123,9 +129,15 @@ export class WorldMapScene extends Phaser.Scene {
     const g = this.add.graphics();
     g.fillStyle(heath ? 0x6a7a98 : brook ? 0x5a98c0 : canyon ? 0x8ab0c8 : wold ? 0x5a9ac8 : thistle ? 0x6a8ab8 : bog ? 0x0e2230 : comb ? 0x6a8ab8 : canopy ? 0x1e3a22 : mist ? 0x8aa8b8 : amber ? 0x2f5a6a : flotilla ? 0x0a1a2a : reef ? 0x1a5a9a : dunes ? 0x3a8aa8 : storm ? 0x2a3040 : orchard ? 0x5a8aa8 : abyss ? 0x080a18 : brass ? 0x1a1a22 : ruins ? 0x1f5a5a : gale ? 0x9ac8e8 : glass ? 0x241a3a : shoal ? 0x1f6a80 : dusk ? 0x1e2340 : ember ? 0x2a1a18 : snow ? 0x2a4f6a : 0x2f6e8f, 1); // sea (or ash wastes, or night mist)
     g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
+    // a soft shadow under the island, as if it floats a little above the sea
+    g.fillStyle(0x000000, 0.22);
+    g.fillEllipse(GAME_W / 2 + 10, GAME_H / 2 + 36, GAME_W * 1.03, GAME_H * 0.99);
     // main island
     g.fillStyle(heath ? 0xb8b098 : brook ? 0xd8d0a8 : canyon ? 0xe8c098 : wold ? 0xc8b888 : thistle ? 0xd8d0a0 : bog ? 0x2a4a3a : comb ? 0xe8d088 : canopy ? 0x2a5a2a : mist ? 0xc8d4c8 : amber ? 0xd8b070 : flotilla ? 0x1a3a52 : reef ? 0xf0e0b0 : dunes ? 0xf0dca8 : storm ? 0x9a9a88 : orchard ? 0xd8c890 : abyss ? 0x3a3a6a : brass ? 0x8a6a2a : ruins ? 0xc8b890 : gale ? 0xf4f8fc : glass ? 0x6a5a88 : shoal ? 0xf0e2b8 : dusk ? 0x5a4a6a : ember ? 0x3a2a24 : snow ? 0xb8c4cc : 0xd9c79a, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.02, GAME_H * 0.98);
+    // a ring of surf around the shore
+    g.lineStyle(4, 0xffffff, 0.28);
+    g.strokeEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 1.04, GAME_H * 1.0);
     g.fillStyle(heath ? 0x7a7a5a : brook ? 0x6aa860 : canyon ? 0xc8784a : wold ? 0x7aa84a : thistle ? 0x8a9a5a : bog ? 0x3a5a4a : comb ? 0xb8a848 : canopy ? 0x3f6e38 : mist ? 0x7aa878 : amber ? 0x9a7a3a : flotilla ? 0x2a5a7a : reef ? 0x5ac0c8 : dunes ? 0xe0c088 : storm ? 0x7a8a6a : orchard ? 0xa8a050 : abyss ? 0x1e2440 : brass ? 0x5a5a62 : ruins ? 0x4a8a3a : gale ? 0x9cbca0 : glass ? 0x8a7aa8 : shoal ? 0xdcc898 : dusk ? 0x4a5a78 : ember ? 0x5a4a44 : snow ? 0xe6eef2 : 0x6aae52, 1);
     g.fillEllipse(GAME_W / 2, GAME_H / 2 + 20, GAME_W * 0.98, GAME_H * 0.92);
     // regions
@@ -700,6 +712,37 @@ export class WorldMapScene extends Phaser.Scene {
     }
   }
 
+  /** Wave crests that rise, curl along the shore and fade, all round the island. */
+  private addSurf(): void {
+    if (motion.reduced || motion.lowFx) return;
+    const cx = GAME_W / 2;
+    const cy = GAME_H / 2 + 20;
+    const rx = (GAME_W * 1.07) / 2;
+    const ry = (GAME_H * 1.03) / 2;
+    for (let k = 0; k < 26; k++) {
+      const a = (k / 26) * Math.PI * 2;
+      const x = cx + Math.cos(a) * rx;
+      const y = cy + Math.sin(a) * ry;
+      if (x < -20 || x > GAME_W + 20 || y < -20 || y > GAME_H + 20) continue;
+      const crest = this.add.graphics().setDepth(1).setPosition(x, y).setRotation(a + Math.PI / 2).setAlpha(0);
+      crest.lineStyle(2.5, 0xffffff, 0.8);
+      crest.beginPath();
+      crest.arc(0, 6, 12, Math.PI * 1.2, Math.PI * 1.8);
+      crest.strokePath();
+      this.tweens.add({
+        targets: crest,
+        alpha: { from: 0, to: 0.8 },
+        x: x - Math.cos(a) * 8,
+        y: y - Math.sin(a) * 6,
+        duration: 1400,
+        yoyo: true,
+        repeat: -1,
+        delay: (k % 7) * 380,
+        ease: 'Sine.easeInOut',
+      });
+    }
+  }
+
   private makeNode(i: number, unlocked: boolean, stars: number): void {
     const lvl = LEVELS[i];
     const { x, y } = lvl.mapPos;
@@ -741,8 +784,12 @@ export class WorldMapScene extends Phaser.Scene {
       sfx.click();
       this.openPanel(i);
     });
-    // Pulse the next level to play.
-    if (unlocked && stars === 0) this.tweens.add({ targets: c, scale: 1.1, yoyo: true, repeat: -1, duration: 600, ease: 'Sine.easeInOut' });
+    // Pulse the next level to play, with a warm glow breathing behind it.
+    if (unlocked && stars === 0) {
+      this.tweens.add({ targets: c, scale: 1.1, yoyo: true, repeat: -1, duration: 600, ease: 'Sine.easeInOut' });
+      const glow = this.add.circle(x, y, 54, 0xffc860, 0.35).setDepth(9).setBlendMode(Phaser.BlendModes.ADD);
+      this.tweens.add({ targets: glow, scale: 1.35, alpha: 0.08, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
+    }
   }
 
   /** A grid of every region: unlocked ones show their stars and jump there; locked ones say what to beat. */

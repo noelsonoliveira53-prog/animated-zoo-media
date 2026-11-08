@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **240** (next balance pass at iteration 245)
+Iteration counter: **241** (next balance pass at iteration 245)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1532,18 +1532,21 @@ Iteration counter: **240** (next balance pass at iteration 245)
   - The white specks seen around enemies in late screenshots are the slow and frost status effects, which is intended feedback.
   - Balance: no sim changes since iteration 230, nothing tuned. 258 tests.
 
+- **Iteration 241: world map art pass.**
+  - New shared `ui/lighting.ts` (`addLighting`): warm top-left light plus a vignette, now used by both the battle and region maps.
+  - Region map: a soft drop shadow under the island, a surf ring, 26 animated wave crests drifting along the shore (off with Reduce Motion or Graphics: Low), and a breathing golden glow behind the next unbeaten level.
+  - The map now reads the motion and graphics settings itself, so it respects them even before any battle.
+  - Landmarks per region stay on the idea list. Screenshot `screenshots/241.png`. 258 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. World-map art pass: give the region map the same treatment as the battle maps. Soft lighting and a vignette, a
-   drop shadow under the island, animated sea (moving wave crests along the shore), little themed landmarks per region,
-   and a glowing pulse on the next unbeaten level node.
-2. Battle HUD polish: a glossier top bar and spell buttons (inner gradients, rim light), plus animated coin and life
+1. Battle HUD polish: a glossier top bar and spell buttons (inner gradients, rim light), plus animated coin and life
    counters (tick up and down with a bounce) and a wave progress bar.
-3. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
+2. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
 
 ## Known Bugs
 - (none known)

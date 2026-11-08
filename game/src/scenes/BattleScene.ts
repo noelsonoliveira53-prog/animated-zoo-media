@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
 import { TowerFx } from './fx/TowerFx';
+import { addLighting } from '../ui/lighting';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -1937,25 +1938,7 @@ export class BattleScene extends Phaser.Scene {
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */
   private drawLighting(): void {
-    const key = 'fx_vignette';
-    if (!this.textures.exists(key)) {
-      const tex = this.textures.createCanvas(key, GAME_W, GAME_H);
-      if (tex) {
-        const ctx = tex.getContext();
-        const light = ctx.createRadialGradient(GAME_W * 0.25, GAME_H * 0.15, 40, GAME_W * 0.25, GAME_H * 0.15, GAME_W * 0.75);
-        light.addColorStop(0, 'rgba(255,240,200,0.10)');
-        light.addColorStop(1, 'rgba(255,240,200,0)');
-        ctx.fillStyle = light;
-        ctx.fillRect(0, 0, GAME_W, GAME_H);
-        const vig = ctx.createRadialGradient(GAME_W / 2, GAME_H / 2, GAME_H * 0.42, GAME_W / 2, GAME_H / 2, GAME_W * 0.68);
-        vig.addColorStop(0, 'rgba(10,14,24,0)');
-        vig.addColorStop(1, 'rgba(10,14,24,0.38)');
-        ctx.fillStyle = vig;
-        ctx.fillRect(0, 0, GAME_W, GAME_H);
-        tex.refresh();
-      }
-    }
-    this.add.image(0, 0, key).setOrigin(0, 0).setDepth(2900);
+    addLighting(this, 2900);
   }
 
   // ---------- HUD ----------

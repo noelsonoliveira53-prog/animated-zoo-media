@@ -57,7 +57,10 @@ await page.evaluate(() => { const s = window.__game.scene.getScene('Raid'); for 
 await page.waitForTimeout(800);
 await page.screenshot({ path: `screenshots/${name}-battle.png` });
 await page.evaluate(() => { const s = window.__game.scene.getScene('Raid'); for (let i = 0; i < 2400 && !s.sim.ended; i++) s.sim.update(1 / 30); });
-await page.waitForTimeout(1200);
+await page.waitForTimeout(400);
+// the result panel animates (stars slam, loot rolls up); follow the scene clock until it has settled
+const tEnd = await page.evaluate(() => window.__game.scene.getScene('Raid').time.now);
+await page.waitForFunction((t) => window.__game.scene.getScene('Raid').time.now > t + 2600, tEnd, { timeout: 40000, polling: 'raf' });
 await page.screenshot({ path: `screenshots/${name}-result.png` });
 const after = await page.evaluate(() => { const s = JSON.parse(localStorage.getItem('grovewatch.save.v1')); return { army: s.army, coins: Math.floor(s.village.coins), sap: Math.floor(s.village.glowsap), seed: s.raidSeed }; });
 console.log('after', JSON.stringify(after));

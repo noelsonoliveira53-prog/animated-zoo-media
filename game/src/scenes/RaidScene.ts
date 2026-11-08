@@ -1,5 +1,6 @@
 import { campShot, deployMark, drawRaidGround, rubble } from './raid/RaidArt';
 import { poseFor, unitPose } from '../systems/gait';
+import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
 import { addLighting } from '../ui/lighting';
 import { DEV_TROOPS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
@@ -408,22 +409,38 @@ export class RaidScene extends Phaser.Scene {
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0.5).setDepth(8000).setInteractive();
     shade.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    const won = stars > 0;
+    const still = motion.reduced || motion.lowFx;
+    if (won) victoryRays(this, GAME_W / 2, GAME_H / 2 - 50, 8000.5, still);
+    if (won && !still) confetti(this, GAME_W, 8003);
+    if (!won && !still) ash(this, GAME_W, GAME_H, 8000.6);
     const panel = this.add.container(GAME_W / 2, GAME_H / 2).setDepth(8001);
     const bg = this.add.graphics();
+    bg.fillStyle(0x000000, 0.35);
+    bg.fillRoundedRect(-264, -170, 540, 360, 26);
     bg.fillStyle(C.ink, 1);
     bg.fillRoundedRect(-270, -180, 540, 360, 26);
     bg.fillStyle(C.panel, 1);
     bg.fillRoundedRect(-262, -172, 524, 344, 22);
+    bg.fillStyle(0xffffff, 0.05);
+    bg.fillRoundedRect(-258, -168, 516, 84, { tl: 20, tr: 20, bl: 6, br: 6 });
+    bg.lineStyle(3, won ? 0xffc83a : 0xb04a4a, 0.85);
+    bg.strokeRoundedRect(-266, -176, 532, 352, 24);
     panel.add(bg);
-    panel.add(this.add.text(0, -130, stars > 0 ? 'Raid Successful!' : 'Raid Failed', textStyle(44, stars > 0 ? TEXT.gold : TEXT.heart)).setOrigin(0.5));
+    panel.add(ribbon(this, -128, 360, won ? 0xd89a2a : 0x7a2a2a, won ? 0x8a5a14 : 0x4a1414));
+    panel.add(this.add.text(0, -128, won ? 'Raid Successful!' : 'Raid Failed', textStyle(38, won ? '#fff2c0' : '#ffd0c8')).setOrigin(0.5).setStroke(won ? '#5a3a0a' : '#2a0a0a', 8));
     for (let i = 0; i < 3; i++) {
       const s = this.add.image(-80 + i * 80, -50, i < stars ? 'star' : 'star_empty').setScale(0);
       panel.add(s);
-      this.tweens.add({ targets: s, scale: 1.2, delay: 300 + i * 200, duration: 250, ease: 'Back.easeOut' });
+      starSlam(this, s, i < stars, 420 + i * 300, { x: GAME_W / 2 - 80 + i * 80, y: GAME_H / 2 - 50 }, 8004, still);
     }
-    panel.add(this.add.text(0, 20, `${Math.round(this.sim.destruction * 100)}% of the camp destroyed`, textStyle(20)).setOrigin(0.5));
+    const pct = this.add.text(0, 20, '', textStyle(20)).setOrigin(0.5).setName('raidPct');
+    panel.add(pct);
+    countUp(this, pct, [Math.round(this.sim.destruction * 100)], ([p]) => `${p}% of the camp destroyed`, 300, still);
     const full = got.coins < this.sim.loot.coins || got.glowsap < this.sim.loot.glowsap;
-    panel.add(this.add.text(0, 54, `Loot: +${got.coins} coins, +${got.glowsap} glowsap${full ? ' (storage full)' : ''}`, textStyle(18, TEXT.gold, false)).setOrigin(0.5));
+    const lootText = this.add.text(0, 54, '', textStyle(18, TEXT.gold, false)).setOrigin(0.5).setName('raidLoot');
+    panel.add(lootText);
+    countUp(this, lootText, [got.coins, got.glowsap], ([c, g]) => `Loot: +${c} coins, +${g} glowsap${full ? ' (storage full)' : ''}`, 1300, still);
     panel.add(new Button(this, 0, 122, 'Back to Village', { width: 260, color: C.leaf, onClick: () => this.scene.start('Village') }));
     panel.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: panel, scale: 1, alpha: 1, duration: 300, ease: 'Back.easeOut' });

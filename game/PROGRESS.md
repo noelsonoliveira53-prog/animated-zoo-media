@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **208** (next balance pass at iteration 210)
+Iteration counter: **209** (next balance pass at iteration 210)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1294,12 +1294,16 @@ Iteration counter: **208** (next balance pass at iteration 210)
   - 15 waves mixing newts, pikes and otters with older enemies. hpMult 1.35.
   - Screenshot `screenshots/208.png`. 244 tests.
 
+- **Iteration 209**: level 119 "Kingfisher Falls" (Pebblebrook).
+  - A long zig-zag stream plus a north channel that joins it before the last bend. 13 pads.
+  - 15 waves of newts, pikes and otters with older enemies. hpMult 1.4.
+  - A pad that the layout test caught behind the exit gate was moved. Screenshot `screenshots/209.png`. 244 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Pebblebrook level 119.
-2. Pebblebrook finale (120) with a boss, achievements, a story card and the endless boss rotation.
+1. Pebblebrook finale (120) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1308,6 +1312,8 @@ Iteration counter: **208** (next balance pass at iteration 210)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 209**: 119 Kingfisher Falls (12 seeds): hpMult 1.7 → 33/17/0, 1.55 → 92/25/0, 1.45 → 92/50/0.
+**1.4 → 100/67/0** (kept: the fourth-level band). The casual strategy falls off a cliff above 1.4.
 **Iteration 208**: 118 Millwheel Race (12 seeds): hpMult 1.65 → 67/50/0, 1.5 → 92/67/0, 1.42 → 100/67/0.
 **1.35 → 100/83/0** (kept: the third-level band).
 **Iteration 207**: 117 Otterslide Bend (12 seeds): hpMult 1.65 → 58/17/0, 1.5 → 92/25/0, 1.4 → 100/67/0, 1.35 → 100/100/0.

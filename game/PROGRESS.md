@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **248** (next balance pass at iteration 250)
+Iteration counter: **249** (next balance pass at iteration 250)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1594,15 +1594,23 @@ Iteration counter: **248** (next balance pass at iteration 250)
   - Reduce Motion or Graphics: Low freezes the clouds, flicker, pennant and fireflies (the menu now reads the graphics setting too).
   - Check `scripts/menu-shot.mjs` (clouds move, no console errors). Screenshot `screenshots/248.png`. 265 tests.
 
+- **Iteration 249: raid battle graphics pass.** New `scenes/raid/RaidArt.ts` for the raid field:
+  - Marsh: dark puddles with a pale glint, two-tone tufts and reeds with cattails (kept off the camp yard).
+  - Camp yard: a trampled darker rim, lighter patches, cart ruts, muddy puddles and pebbles.
+  - Swaying trees along the far left and right edges, clear of where you deploy.
+  - Torches at the yard's four corners with flickering flames and glow.
+  - The shared lighting and vignette, between the field and the HUD.
+  - Tree drawing now lives in a shared `addTree()` in `VillageArt.ts` (the village looks the same; same RNG order). Sway and flicker respect Reduce Motion and Graphics: Low, which the raid now reads itself.
+  - Checked with `scripts/raid-check.mjs` (a full raid with no console errors) and `scripts/village-shot.mjs`. Screenshot `screenshots/249.png`. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
-2. Tower build and upgrade juice: a construction puff, scaffold flash and a rising tier badge when a tower is built or upgraded.
-3. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
+1. Tower build and upgrade juice: a construction puff, scaffold flash and a rising tier badge when a tower is built or upgraded.
+2. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
 
 ## Known Bugs
 - (none known)

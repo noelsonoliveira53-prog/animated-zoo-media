@@ -1,6 +1,8 @@
+import { drawRaidGround } from './raid/RaidArt';
+import { addLighting } from '../ui/lighting';
 import { DEV_TROOPS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
-import { shake } from '../ui/motion';
+import { motion, shake } from '../ui/motion';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
@@ -37,6 +39,8 @@ export class RaidScene extends Phaser.Scene {
     music.setMood('battle');
     music.setTheme(themeById('ember'));
     const save = loadSave();
+    motion.reduced = !!save.settings.reduceMotion;
+    motion.lowFx = !!save.settings.fxLow;
     const camp = generateCamp(data.seed, data.tier);
     // Dev mode: a full army of every troop for testing
     const army = devOn() ? Object.fromEntries(TROOP_ORDER.map((id) => [id, DEV_TROOPS])) : save.army;
@@ -96,17 +100,8 @@ export class RaidScene extends Phaser.Scene {
   }
 
   private drawGround(): void {
-    const g = this.add.graphics().setDepth(-10);
-    g.fillStyle(0x3f5a3a, 1);
-    g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
-    const rnd = new Phaser.Math.RandomDataGenerator(['raid']);
-    for (let i = 0; i < 60; i++) {
-      g.fillStyle(rnd.pick([0x354f31, 0x4a6642, 0x5a5a3a]), 0.6);
-      g.fillEllipse(rnd.between(0, GAME_W), rnd.between(0, GAME_H), rnd.between(40, 160), rnd.between(20, 70));
-    }
-    // camp mud ground
-    g.fillStyle(0x5a4a32, 0.5);
-    g.fillRoundedRect(CAMP_OX + 2 * CAMP_TILE, CAMP_OY, (CAMP_COLS - 4) * CAMP_TILE, CAMP_ROWS * CAMP_TILE, 40);
+    drawRaidGround(this, { x: CAMP_OX + 2 * CAMP_TILE, y: CAMP_OY, w: (CAMP_COLS - 4) * CAMP_TILE, h: CAMP_ROWS * CAMP_TILE }, GAME_W, GAME_H);
+    addLighting(this, 6500); // above the field and buildings, under the HUD (7000+)
     // Deploy-forbidden glow around buildings is drawn when a troop is selected.
     this.zone = this.add.graphics().setDepth(-5);
   }

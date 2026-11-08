@@ -84,17 +84,7 @@ export function drawVillageGround(scene: Phaser.Scene, box: GridBox, gameW: numb
     const y = rnd.between(130, gameH - 60);
     if (x < 10 || x > gameW - 10) continue;
     const s = rnd.realInRange(0.8, 1.25);
-    const sh = scene.add.ellipse(x + 6 * s, y + 4, 34 * s, 12 * s, 0x000000, 0.22).setDepth(-9);
-    void sh;
-    const t = scene.add.graphics({ x, y }).setDepth(-8 + y / 10000);
-    t.fillStyle(0x6b4a2a, 1);
-    t.fillRect(-3 * s, -14 * s, 6 * s, 14 * s);
-    t.fillStyle(rnd.pick([0x2f6a30, 0x3a7a34, 0x2a5f2c]), 1);
-    t.fillCircle(0, -26 * s, 17 * s);
-    t.fillCircle(-10 * s, -18 * s, 11 * s);
-    t.fillCircle(10 * s, -19 * s, 11 * s);
-    t.fillStyle(0x6fae4c, 0.55);
-    t.fillCircle(-5 * s, -31 * s, 8 * s);
+    const t = addTree(scene, x, y, s, rnd.pick([0x2f6a30, 0x3a7a34, 0x2a5f2c]));
     trees.push(t);
   }
   if (!motion.reduced && !motion.lowFx) {
@@ -102,6 +92,21 @@ export function drawVillageGround(scene: Phaser.Scene, box: GridBox, gameW: numb
       scene.tweens.add({ targets: t, angle: { from: -1.6, to: 1.6 }, duration: rnd.between(1800, 2800), yoyo: true, repeat: -1, ease: 'Sine.easeInOut', delay: rnd.between(0, 1500) });
     }
   }
+}
+
+/** One tree with a shadow, a trunk and a two-tone canopy; returns the canopy graphics (sway it by tweening `angle`). */
+export function addTree(scene: Phaser.Scene, x: number, y: number, s: number, leaf: number, light = 0x6fae4c): Phaser.GameObjects.Graphics {
+  scene.add.ellipse(x + 6 * s, y + 4, 34 * s, 12 * s, 0x000000, 0.22).setDepth(-9);
+  const t = scene.add.graphics({ x, y }).setDepth(-8 + y / 10000);
+  t.fillStyle(0x6b4a2a, 1);
+  t.fillRect(-3 * s, -14 * s, 6 * s, 14 * s);
+  t.fillStyle(leaf, 1);
+  t.fillCircle(0, -26 * s, 17 * s);
+  t.fillCircle(-10 * s, -18 * s, 11 * s);
+  t.fillCircle(10 * s, -19 * s, 11 * s);
+  t.fillStyle(light, 0.55);
+  t.fillCircle(-5 * s, -31 * s, 8 * s);
+  return t;
 }
 
 /** A soft contact shadow under a building footprint (drawn just beneath it). */

@@ -1552,6 +1552,7 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 - (none known)
 
 ## Ideas parked
+- World map: small themed landmarks per region (left out of iteration 241).
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes

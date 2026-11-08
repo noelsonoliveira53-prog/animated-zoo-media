@@ -1389,8 +1389,9 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 4. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
    a per-tier look.
 5. Specialization branches: a signature effect for each of the 8 top-tier branches.
-6. Store: a Store scene with tiers and upgrades (permanent upgrades bought with coins/glowsap, grouped into tiers that
-   unlock in order: towers, hero, spells, economy). **Confirm the exact meaning with the user.**
+6. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+   hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
+   Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
 7. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 

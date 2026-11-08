@@ -2257,6 +2257,27 @@ export class BattleScene extends Phaser.Scene {
       this.jamG.strokeCircle(e.pos.x, e.pos.y, e.def.ward.radius);
     }
     for (const e of this.sim.enemies) {
+      if (!e.alive || !e.def.lure || e.underground) continue;
+      // Lanternfrog bulb: a pale halo that swells and fades, so it's clear why every tower is staring at it
+      const k = (this.sim.time * 0.9 + e.uid * 0.37) % 1;
+      this.jamG.lineStyle(2, 0xe8ff8a, 0.55 * (1 - k));
+      this.jamG.strokeCircle(e.pos.x, e.pos.y, 16 + 30 * k);
+      this.jamG.fillStyle(0xe8ff8a, 0.1);
+      this.jamG.fillCircle(e.pos.x, e.pos.y, 22);
+    }
+    for (const t of this.sim.towers) {
+      if (!t || !((t.hexed ?? 0) > 0)) continue;
+      // a Hexcroak curse: a slow violet ring of little sigils turning around the tower's base
+      const a0 = this.sim.time * 1.6;
+      this.jamG.lineStyle(2, 0xa070e0, 0.6);
+      this.jamG.strokeEllipse(t.pos.x, t.pos.y + 10, 64, 26);
+      this.jamG.fillStyle(0xc8a0f0, 0.85);
+      for (let n = 0; n < 5; n++) {
+        const a = a0 + (n * Math.PI * 2) / 5;
+        this.jamG.fillCircle(t.pos.x + Math.cos(a) * 32, t.pos.y + 10 + Math.sin(a) * 13, 2.5);
+      }
+    }
+    for (const e of this.sim.enemies) {
       if (!e.alive || !e.def.dim) continue;
       // Dimlantern gloom: a soft dark disc with a violet rim
       this.jamG.fillStyle(0x10081e, 0.22);

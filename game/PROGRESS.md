@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **179** (next balance pass at iteration 180)
+Iteration counter: **180** (next balance pass at iteration 185)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1265,6 +1265,14 @@ Iteration counter: **179** (next balance pass at iteration 180)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 180**: hero comparison on Glimmerbog levels 97–99: Fen, Ember and Wren 94%, Bramble 89%, Sorrel and Hazel 83%.
+A tight spread, so no changes.
+- Endless, 3 seeds (waves survived, expert/casual/novice): Hivegate 13.0/12.7/24.7, Lilypad 15.3/18.0/22.0.
+- The arrow-and-magic novice build again outlasts the smart mixed builds on both new maps. Likely causes: Honeypaw glaze
+  and Mudskipper dives blunt the soldier towers the adaptive mix leans on, while Lanternfrog lures and Hexguard shields
+  hurt arrows less over long runs.
+- Endless is open-ended, so a cheap build lasting ~22–25 waves is fine. It's logged as a watch item: if a future pass sees
+  this spread grow past ~2×, give endless tiers an extra anti-arrow enemy rather than nerfing the campaign traits.
 **Iteration 179**: 99 Sunken Lantern Shrine (12 seeds): hpMult 1.65 → 100/83/0, 1.95 → 58/50/0. **1.8 → 92/67/0** (kept:
 the fourth-level band, first try).
 **Iteration 178**: 98 Witchlight Hollow (12 seeds): hpMult 1.45 → 100/100/0, 1.6 → 100/92/0, 1.63 → 100/83/0,

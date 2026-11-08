@@ -192,3 +192,8 @@ EVERY episode published from now on is 4K. No exceptions, no 1080p uploads.
 4. Upload: in YouTube Studio the uploader should see "4K" processing; YouTube serves 2160p/1440p/VP9-AV1 streams for 4K uploads.
 5. Thumbnails stay 1280x720 PNG (YouTube's thumbnail spec).
 Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they are unless Noelson asks to replace them.
+
+## Schedule buffer rule (Noelson, Nov 8, 2026) — the schedule is ALWAYS filled
+- Every channel keeps at least 3 days of episodes uploaded and scheduled in YouTube Studio ahead of today. Every production check uploads the soonest `to_upload` entries (within the ~20/24h account cap) until that buffer is met.
+- Format changes never empty a slot. New formats (2D/3D hybrid, new worlds, lessons) are tested on extra renders only; the classic 3D sing-along keeps rendering daily as the default. If a new-format episode is held or rejected, a classic episode takes that date (as zoo3d_ep06c did for Nov 11).
+- If a render fails or its timing is broken, re-render it or fill the slot with the next finished episode for that channel. A missing slot is worse than a late fix.

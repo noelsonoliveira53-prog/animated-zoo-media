@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **250** (next balance pass at iteration 255)
+Iteration counter: **251** (next balance pass at iteration 255)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1608,14 +1608,21 @@ Iteration counter: **250** (next balance pass at iteration 255)
   - Performance: the new `scripts/village-leak.mjs` idles the village for 20 s. Objects 106 → 113 and tweens 34 → 41 (smoke puffs churning, not piling up). The battle leak check was done in iteration 245.
   - Balance: a raid sweep and an endless sweep (both sims unchanged since iteration 230). Raids still climb as intended: Lodge 1 clears outposts, Lodge 3 clears warrens, and the Stronghold stays the hard target where the Mender helps most. Endless holds 12–21 waves; the novice strategy's endless edge on some maps is the known artifact (iterations 205 and 225). Nothing tuned (see Balance Notes). 265 tests.
 
+- **Iteration 251: tower build and upgrade juice.** New `scenes/fx/BuildFx.ts`:
+  - **Building:** a scaffold frame (two poles, a cross-brace and a plank) flashes up and fades as the tower pops in, a ring thumps the ground and dust rolls out low around the pad.
+  - **Upgrading:** a soft light pillar in the tower's color (three nested bands with rounded tops), rising sparkles (more at higher tiers) and a "Lv 2"/"Lv 3" badge that pops in and floats up. Specializing shows a gold "★★★" badge.
+  - Graphics: Low keeps only the ground ring and the badge.
+  - Check `scripts/buildfx-check.mjs` (build, upgrade and specialize at once; polls the scene clock and pauses tweens about 0.25 s in, because headless frames are slow and uneven; no console errors, no leftover badges). Screenshot `screenshots/251.png`. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower build and upgrade juice: a construction puff, scaffold flash and a rising tier badge when a tower is built or upgraded.
-2. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
+1. Store polish: item icons drawn in code, a shine sweep on affordable Buy buttons and a celebratory burst on purchase.
+2. Result screen polish: a glossier victory/defeat panel, stars that slam in with a burst, and coin and glowsap counters that roll up.
+3. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
 
 ## Known Bugs
 - (none known)

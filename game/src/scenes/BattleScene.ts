@@ -7,6 +7,7 @@ import { deathStyle, bigHit } from '../systems/deathStyle';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
+import { buildPuff, upgradeBurst } from './fx/BuildFx';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -44,6 +45,9 @@ interface EnemyView {
   pulse: number; // brief scale bump (a Barkdrum thumping its drum), decays to 0
   squash: number; // brief squash after a big hit, decays to 0
 }
+
+/** Light color for each tower's upgrade pillar. */
+const TOWER_GLOW: Record<string, number> = { thornbow: 0xb8f07a, glimmer: 0xc8a0ff, boulder: 0xffc870, burrow: 0xe8d9b5 };
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
 
@@ -3511,7 +3515,9 @@ export class BattleScene extends Phaser.Scene {
         if (!this.towerShadows.has(t.slot)) this.towerShadows.set(t.slot, this.add.ellipse(t.pos.x + 4, t.pos.y + 8, 74, 22, 0x000000, 0.22).setDepth(t.pos.y - 2));
         this.slotViews[t.slot].setAlpha(0.6);
         this.particles.setParticleTint(0xd9c39a);
-        this.particles.explode(12, t.pos.x, t.pos.y + 6);
+        this.particles.explode(motion.lowFx ? 8 : 6, t.pos.x, t.pos.y + 6);
+        if (ev.type === 'build') buildPuff(this, t.pos.x, t.pos.y, motion.lowFx);
+        else upgradeBurst(this, t.pos.x, t.pos.y, t.spec ? 4 : t.tier + 1, TOWER_GLOW[t.def.id] ?? 0xffe27a, motion.lowFx);
         sfx.build();
         break;
       }

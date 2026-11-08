@@ -154,3 +154,17 @@ describe('Rustrock finale', () => {
     expect(b.boss && b.curl && b.venom && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Pebblebrook finale', () => {
+  it('Mossback has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_mossback: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_mossback');
+    expect(STORY.l120).toBeDefined();
+    expect(ENDLESS.bosses).toContain('mossback');
+    const b = ENEMIES.mossback;
+    expect(b.boss && b.drench && b.surge && b.phases?.length).toBeTruthy();
+  });
+});

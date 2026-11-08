@@ -207,4 +207,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0xc8502a, 0xf8c880],
     accent: 0xf08040,
   },
+  l120: {
+    title: 'The Pool Lies Still',
+    lines: [
+      'Mossback sinks slowly back into the deep green pool, blowing one last stream of bubbles, and settles on the bottom to sleep for another hundred years.',
+      'The pike drift off downstream, the newts crawl back under their stones, and the otters go back to sliding down the bank just for fun.',
+      'The willows rustle, the kingfishers flash, and the Keepers sit on the bank to dry their boots before the road goes on.',
+    ],
+    sky: [0x4a8a6a, 0xd0f0e0],
+    accent: 0x7ad8b8,
+  },
 };

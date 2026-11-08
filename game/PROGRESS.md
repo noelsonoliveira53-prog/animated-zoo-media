@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **210** (next balance pass at iteration 215)
+Iteration counter: **211** (next balance pass at iteration 215)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1305,11 +1305,20 @@ Iteration counter: **210** (next balance pass at iteration 215)
   - Screenshots `screenshots/210.png` (Millwheel Race wave 3 with otters) and `210-guide.png`.
   - Balance: a Pebblebrook sweep, hero comparison and endless check, with no changes (see Balance Notes). 244 tests.
 
+- **Iteration 211**: the Pebblebrook finale, level 120 "The Elder Pool". The new boss is **Mossback, the River Elder**, an ancient snapping turtle with a meadow of moss on its shell (3600 hp, armour 0.45, magic resist 0.2).
+  - It soaks itself and allies within 120 px: spells deal 40% less to them.
+  - Every 9 s a surge sweeps it and its unheld escort 50 px down the stream.
+  - A newt joins every 7 s.
+  - Phases: 75% four pike, 50% a 1500-point shield plus newts, 25% five otters and a speed-up, 10% it heaves forward on a wall of water.
+  - Also added: a code-drawn turtle sprite, the achievements "Shellcracker" (boss) and "Brook Keeper" (15 stars), the story card "The Pool Lies Still" and a place in the endless boss rotation.
+  - Check: `scripts/mossback-check.mjs` (phase 1 summons 4 pike, no console errors). Screenshots `screenshots/211.png`, `211-boss.png`, `mossback-map.png`. 245 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Pebblebrook finale (120) with a boss, achievements, a story card and the endless boss rotation.
+1. Breather: a village building or raid troop that ties into the river theme (e.g. a Fish Weir that adds a trickle of glowsap, or a raid troop that floats over Sludge Pits).
+2. Region 25 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)
@@ -1318,6 +1327,8 @@ Iteration counter: **210** (next balance pass at iteration 215)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 211**: 120 The Elder Pool (12 seeds): hpMult 1.5 → 92/75/42, 1.9 → 67/33/0. **1.7 → 83/42/0** (kept: the boss band; the
+finale guard passes).
 **Iteration 210** (POLISH + BALANCE), Pebblebrook sweep at 6 seeds (expert/casual/novice):
 
 | Level | hpMult | Result |

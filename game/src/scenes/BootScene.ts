@@ -1331,6 +1331,43 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 1.15, cy, cx - r * 1.32, cy + r * 0.08);
         break;
       }
+      case 'mossback': {
+        // a huge snapping turtle from above: a domed shell plated in moss with reeds and a flower growing on it,
+        // a hooked beak, stubby clawed legs and a ridged tail
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x6a6a4a, 1);
+        for (const [lx, ly] of [[-0.55, -0.8], [-0.55, 0.8], [0.55, -0.8], [0.55, 0.8]]) {
+          g.fillEllipse(cx + lx * r, cy + ly * r * 0.85, r * 0.42, r * 0.32);
+          g.strokeEllipse(cx + lx * r, cy + ly * r * 0.85, r * 0.42, r * 0.32);
+        }
+        g.fillTriangle(cx + r * 0.9, cy - r * 0.15, cx + r * 0.9, cy + r * 0.15, cx + r * 1.35, cy);
+        g.fillCircle(cx - r * 1.0, cy, r * 0.32);
+        g.strokeCircle(cx - r * 1.0, cy, r * 0.32);
+        g.fillStyle(0x4a4a30, 1);
+        g.fillTriangle(cx - r * 1.28, cy - r * 0.1, cx - r * 1.28, cy + r * 0.1, cx - r * 1.42, cy + r * 0.12);
+        g.fillStyle(0xf0d040, 1);
+        g.fillCircle(cx - r * 1.08, cy - r * 0.14, r * 0.06);
+        g.fillCircle(cx - r * 1.08, cy + r * 0.14, r * 0.06);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.9, r * 1.55);
+        g.lineStyle(3, C.ink, 1);
+        g.strokeEllipse(cx, cy, r * 1.9, r * 1.55);
+        g.lineStyle(2, 0x3a5a2a, 1);
+        g.strokeEllipse(cx, cy, r * 0.8, r * 0.65);
+        for (let k = 0; k < 6; k++) {
+          const a = (k / 6) * Math.PI * 2;
+          g.lineBetween(cx + Math.cos(a) * r * 0.4, cy + Math.sin(a) * r * 0.33, cx + Math.cos(a) * r * 0.95, cy + Math.sin(a) * r * 0.77);
+        }
+        g.fillStyle(0x7aaa4a, 1);
+        for (const [mx, my, mr] of [[-0.4, -0.35, 0.22], [0.3, 0.35, 0.2], [0.45, -0.3, 0.16], [-0.25, 0.4, 0.14]]) g.fillCircle(cx + mx * r, cy + my * r, r * mr);
+        g.lineStyle(2, 0x3a7a3a, 1);
+        for (const k of [-1, 0, 1]) g.lineBetween(cx + r * 0.1 + k * 4, cy - r * 0.05, cx + r * 0.15 + k * 6, cy - r * 0.45);
+        g.fillStyle(0xf08aa8, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.1, r * 0.09);
+        g.fillStyle(0xffe070, 1);
+        g.fillCircle(cx - r * 0.1, cy + r * 0.1, r * 0.04);
+        break;
+      }
       case 'sandburrow': {
         // a sandy gopher popping up: round body, little ears, huge orange buck teeth and digging claws
         g.lineStyle(2.5, C.ink, 1);

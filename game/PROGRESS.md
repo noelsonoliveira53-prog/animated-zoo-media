@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **172** (next balance pass at iteration 175)
+Iteration counter: **173** (next balance pass at iteration 175)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1223,12 +1223,25 @@ Iteration counter: **172** (next balance pass at iteration 175)
 - **Iteration 172** (Honeycomb level 4): level 94 **Queenscomb Terraces**. It has 12 pads, a long winding road from the left
   (about 2,460px) and a short drop from the top (about 1,340px). The fast and armoured groups stay on the long road.
   15 waves of the region's toughest mixes before the boss. Screenshot `screenshots/172.png`. 218 tests.
+- **Iteration 173** (Honeycomb finale): level 95 **Throne of the Golden Hive** and its boss.
+  - The boss is **Goldwing, the Comb Matriarch**, a giant queen bee drawn in BootScene: a wax-glazed striped body, four
+    wings and a crown of comb.
+    - She uses the region's own traits: a wax coat (+35% armor until magic damage worth 15% of her health melts it) and
+      a comb shield (4 charges, one back every 5s).
+    - She calls a Hexguard Wasp every 7 seconds.
+    - Phases: Waxbacks at 75%; a 1,500 shield and Honeypaws at 50%; 6 Hexguards and a speed-up at 25%; a final dash at 10%.
+  - Achievements Hivebreaker (beat the boss) and Beekeeper (all 15 Honeycomb stars), story card "The Hive Goes Quiet",
+    and Goldwing joins the endless boss rotation.
+  - The level has 12 pads, a long road from the left and a short one from the top. One new test (219 total).
+  - Check: `scripts/combqueen-check.mjs`. Her first phase called 4 Waxbacks and there were no console errors.
+    Screenshot `screenshots/173.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
+1. A breather (raid or village variety) before region 20.
+2. Region 20: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)
@@ -1237,6 +1250,11 @@ Iteration counter: **172** (next balance pass at iteration 175)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 173**: 95 Throne of the Golden Hive (expert/casual/novice). A very steep cliff:
+- 12 seeds: 1.5 → 100/100/42, 1.8 → 100/100/0, 1.86 → 100/83/0, 1.88 → 92/58/0, 1.92 → 75/50/0, 2.0 → 75/50/0,
+  2.2 → 25/17/0.
+- 1.92 failed the finale guard (the expert won seeds 1–3 only once). **1.88 is kept**: 92/58 sits in the boss band and the
+  expert wins 2 of seeds 1–3, so the guard passes, but only just. If waves or the boss change, re-check this level first.
 **Iteration 172**: 94 Queenscomb Terraces (12 seeds, expert/casual/novice): with the first pad layout, 1.35 → 100/100/17,
 1.45 → 92/83/0, 1.55 → 83/75/0.
 - Moving the pad from behind the exit gate to (1140,270) made it easier: 1.5–1.6 → 100/92–100/0, 1.7 → 83/100/0,

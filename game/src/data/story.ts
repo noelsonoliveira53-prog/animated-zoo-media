@@ -157,4 +157,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x3a6a3a, 0xd8e8a0],
     accent: 0xe8a040,
   },
+  l95: {
+    title: 'The Hive Goes Quiet',
+    lines: [
+      'Goldwing settles on the roof of her great hive, her wings folded, the last of her wax shield cracking away.',
+      'The humming of the hills falls to a gentle murmur. The beetles go back to their burrows; the cubs fall asleep in the clover.',
+      'Before the Keepers leave, the old queen sends them off with a jar of her finest honey, and points them down the road.',
+    ],
+    sky: [0xe8a030, 0xfff0c0],
+    accent: 0xffd040,
+  },
 };

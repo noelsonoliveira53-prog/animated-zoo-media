@@ -925,6 +925,40 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'combqueen': {
+        // giant queen bee from above: long striped abdomen glazed with wax, four big wings, a crown of hexagonal comb
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0xe8f4ff, 0.55);
+        for (const [wx, wy, ww, wh] of [[-0.75, -0.45, 1.0, 0.5], [0.75, -0.45, 1.0, 0.5], [-0.65, -0.05, 0.8, 0.4], [0.65, -0.05, 0.8, 0.4]]) {
+          g.fillEllipse(cx + wx * r, cy + wy * r, ww * r, wh * r);
+          g.strokeEllipse(cx + wx * r, cy + wy * r, ww * r, wh * r);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.4, r * 0.95, r * 1.4);
+        g.strokeEllipse(cx, cy + r * 0.4, r * 0.95, r * 1.4);
+        g.fillStyle(0x1a1208, 1);
+        for (const dy of [0.1, 0.42, 0.74]) g.fillRect(cx - r * 0.44, cy + dy * r, r * 0.88, r * 0.13);
+        g.fillStyle(0xfff0b0, 0.55);
+        g.fillEllipse(cx - r * 0.2, cy + r * 0.2, r * 0.22, r * 0.6);
+        g.fillStyle(0x3a2a10, 1);
+        g.fillCircle(cx, cy - r * 0.4, r * 0.36);
+        g.strokeCircle(cx, cy - r * 0.4, r * 0.36);
+        g.fillStyle(0x6a3a10, 1);
+        g.fillCircle(cx - r * 0.16, cy - r * 0.48, r * 0.1);
+        g.fillCircle(cx + r * 0.16, cy - r * 0.48, r * 0.1);
+        // comb crown
+        for (const k of [-1, 0, 1]) {
+          const hx = cx + k * r * 0.2;
+          const hy = cy - r * 0.86 + Math.abs(k) * r * 0.06;
+          const pts: { x: number; y: number }[] = [];
+          for (let n = 0; n < 6; n++) pts.push({ x: hx + Math.cos((n * Math.PI) / 3 + Math.PI / 6) * r * 0.12, y: hy + Math.sin((n * Math.PI) / 3 + Math.PI / 6) * r * 0.12 });
+          g.fillStyle(0xffd040, 1);
+          g.fillPoints(pts, true);
+          g.lineStyle(1.5, 0x8a5a10, 1);
+          g.strokePoints(pts, true);
+        }
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

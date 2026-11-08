@@ -19,3 +19,13 @@ describe('battle weather', () => {
     expect(weatherFor(LEVELS[0].theme).kind).toBe('leaves');
   });
 });
+
+import { ambienceFor } from '../src/data/weather';
+describe('battle ambience', () => {
+  it('maps themes to a bed', () => {
+    expect(ambienceFor(LEVELS[0].theme)).toBe('meadow');
+    expect(ambienceFor(LEVELS.find((l) => l.theme.lava)!.theme)).toBe('crackle');
+    expect(ambienceFor(LEVELS.find((l) => l.theme.storm)!.theme)).toBe('rain');
+    expect(ambienceFor(LEVELS.find((l) => l.theme.snow)!.theme)).toBe('wind');
+  });
+});

@@ -75,14 +75,96 @@ class Sfx {
     src.start();
   }
 
+  private shotCount = 0;
   shoot(kind: string): void {
     if (!this.throttle('shoot' + kind, 60)) return;
-    if (kind === 'glimmer') this.tone(880, 0.18, 'sine', 0.12, 1400);
+    // a little pitch drift, and every other shot a softer variant, so a busy wave doesn't sound like one stuck note
+    const v = 1 + (Math.random() - 0.5) * 0.12;
+    const soft = (this.shotCount++ & 1) === 1 ? 0.7 : 1;
+    if (kind === 'glimmer') this.tone(880 * v, 0.18, 'sine', 0.12 * soft, 1400 * v);
     else if (kind === 'boulder') {
-      this.tone(140, 0.2, 'triangle', 0.16, 70);
-      this.noise(0.1, 0.12, 500);
+      this.tone(140 * v, 0.2, 'triangle', 0.16 * soft, 70 * v);
+      this.noise(0.1, 0.12 * soft, 500);
     }
-    else this.tone(520, 0.06, 'triangle', 0.08, 300);
+    else this.tone(520 * v, 0.06, 'triangle', 0.08 * soft, 300 * v);
+  }
+  /** A deep thump under heavy kills (bosses, big brutes). */
+  thump(): void {
+    if (!this.throttle('thump', 250)) return;
+    this.tone(70, 0.35, 'sine', 0.28, 32);
+    this.noise(0.18, 0.18, 220);
+  }
+
+  // ---------- ambience ----------
+  private amb: { src: AudioBufferSourceNode; gain: GainNode; lfo: OscillatorNode; timer: number | null } | null = null;
+
+  /**
+   * A quiet looping bed under the music: wind, rain, water, ember crackle or meadow birdsong. Routed through the SFX
+   * master, so the volume slider and the Effects switch apply. Call stopAmbience() when the scene ends.
+   */
+  startAmbience(kind: 'wind' | 'rain' | 'water' | 'crackle' | 'meadow'): void {
+    this.stopAmbience();
+    if (!this.ctx || !this.master) return;
+    try {
+      const ctx = this.ctx;
+      const len = ctx.sampleRate * 2;
+      const buf = ctx.createBuffer(1, len, ctx.sampleRate);
+      const d = buf.getChannelData(0);
+      for (let i = 0; i < len; i++) d[i] = Math.random() * 2 - 1;
+      const src = ctx.createBufferSource();
+      src.buffer = buf;
+      src.loop = true;
+      const filter = ctx.createBiquadFilter();
+      const gain = ctx.createGain();
+      const cfg = {
+        wind: { type: 'bandpass' as BiquadFilterType, f: 420, q: 0.7, g: 0.05, lfo: 0.12 },
+        rain: { type: 'highpass' as BiquadFilterType, f: 1800, q: 0.5, g: 0.035, lfo: 0.3 },
+        water: { type: 'lowpass' as BiquadFilterType, f: 700, q: 0.8, g: 0.05, lfo: 0.45 },
+        crackle: { type: 'lowpass' as BiquadFilterType, f: 300, q: 0.6, g: 0.035, lfo: 0.2 },
+        meadow: { type: 'bandpass' as BiquadFilterType, f: 600, q: 0.5, g: 0.018, lfo: 0.08 },
+      }[kind];
+      filter.type = cfg.type;
+      filter.frequency.value = cfg.f;
+      filter.Q.value = cfg.q;
+      gain.gain.value = cfg.g;
+      // a slow swell so the bed breathes instead of hissing flatly
+      const lfo = ctx.createOscillator();
+      const depth = ctx.createGain();
+      lfo.frequency.value = cfg.lfo;
+      depth.gain.value = cfg.g * 0.6;
+      lfo.connect(depth).connect(gain.gain);
+      src.connect(filter).connect(gain).connect(this.master);
+      src.start();
+      lfo.start();
+      let timer: number | null = null;
+      if (kind === 'meadow') timer = window.setInterval(() => this.chirp(), 2600 + Math.random() * 2400);
+      if (kind === 'crackle') timer = window.setInterval(() => this.pop(), 380);
+      this.amb = { src, gain, lfo, timer };
+    } catch {
+      this.amb = null;
+    }
+  }
+  stopAmbience(): void {
+    if (!this.amb) return;
+    try {
+      this.amb.src.stop();
+      this.amb.lfo.stop();
+      this.amb.gain.disconnect();
+    } catch {
+      /* already stopped */
+    }
+    if (this.amb.timer !== null) window.clearInterval(this.amb.timer);
+    this.amb = null;
+  }
+  private chirp(): void {
+    if (Math.random() < 0.4) return;
+    const f = 2400 + Math.random() * 900;
+    this.tone(f, 0.07, 'sine', 0.025, f * 1.3);
+    this.tone(f * 1.1, 0.06, 'sine', 0.02, f * 1.4, 0.1);
+  }
+  private pop(): void {
+    if (Math.random() < 0.5) return;
+    this.noise(0.02, 0.05 + Math.random() * 0.05, 1800);
   }
   melee(): void {
     if (!this.throttle('melee', 90)) return;

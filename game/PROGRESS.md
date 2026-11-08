@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **270** (next balance pass at iteration 275)
+Iteration counter: **271** (next balance pass at iteration 275)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1759,14 +1759,25 @@ Iteration counter: **270** (next balance pass at iteration 275)
     - Level 121 busy (waves called every 4 s): objects 151 → 447 by wave 5, tracking the crowd.
   - **Balance:** a raid sweep after iteration 268 added a `target` field to the raid `shot` event. Results are identical to iteration 250 (Lodge 1: 1.8★ / 0.3★ / 0.1★ … Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★), confirming the raid sim is untouched. Defense levels unchanged since iteration 230 (sweeps in 245, 255 and 265). Nothing tuned. Screenshot `screenshots/270.png` (storm map with rain, mid-wave). 275 tests.
 
+- **Iteration 271: sound polish** (`systems/audio.ts`):
+  - **Tower shots:** each shot drifts ±6% in pitch, and every other shot plays a softer variant, so a busy wave no longer sounds like one stuck note.
+  - **`sfx.thump()`:** a deep sine drop plus a low noise hit under heavy kills (bosses and 1,500+ health brutes), alongside the hit-stop.
+  - **Ambience beds** (`startAmbience` / `stopAmbience`): a looping filtered-noise bed with a slow swell, routed through the SFX master so the volume slider and the Effects switch apply.
+    - **wind:** snow, gale, sand and thistle maps.
+    - **rain:** storm maps.
+    - **water:** reef, shoal, flotilla and brook maps.
+    - **crackle:** lava maps, with random ember pops.
+    - **meadow:** everywhere else; a soft breeze with occasional two-note birdsong.
+  - New `ambienceFor(theme)` in `data/weather.ts` (1 new test, 276 total). The battle starts the bed and stops it on scene shutdown, so retries and leaving don't stack beds.
+  - New `scripts/audio-check.mjs` (a real click unlocks audio, then three battles back to back on meadow, storm and lava, through restarts; no console errors). Screenshot `screenshots/271.png` (audio has no visuals; a regular battle shot).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Sound polish: layered tower shots (a softer variant every other shot), a low thump under big kills, and a gentle ambience bed per theme (wind, water, crackle) mixed under the music.
-2. Loading and transitions: a short leaf-wipe transition between scenes and a code-drawn loading vignette on boot.
+1. Loading and transitions: a short leaf-wipe transition between scenes and a code-drawn loading vignette on boot.
 
 ## Known Bugs
 - (none known)

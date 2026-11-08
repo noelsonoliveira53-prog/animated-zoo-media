@@ -11,7 +11,7 @@ import { heroSignature, readyPing } from './fx/HeroFx';
 import { buildPuff, upgradeBurst } from './fx/BuildFx';
 import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
 import { startWeather } from './fx/Weather';
-import { weatherFor } from '../data/weather';
+import { ambienceFor, weatherFor } from '../data/weather';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -223,6 +223,9 @@ export class BattleScene extends Phaser.Scene {
     }
     // light weather per theme (leaves, spores, rain, sand...), purely visual
     if (!motion.lowFx && !motion.reduced) startWeather(this, weatherFor(this.level.theme), GAME_W, GAME_H);
+    // a quiet ambience bed for the map (wind, rain, water, crackle or birdsong), stopped when the battle scene ends
+    sfx.startAmbience(ambienceFor(this.level.theme));
+    this.events.once('shutdown', () => sfx.stopAmbience());
     this.buildHud();
     this.buildHero();
     this.buildSpells();
@@ -2857,6 +2860,7 @@ export class BattleScene extends Phaser.Scene {
           const st = deathStyle(ev.enemy.def);
           playDeath(this, ev.enemy.pos.x, ev.enemy.pos.y, st, motion.lowFx);
           // a heavy kill freezes the action for a heartbeat (throttled, never with Reduce Motion)
+          if (st.heavy) sfx.thump();
           if (st.heavy && !motion.reduced && this.time.now - this.lastHitStop > 700) {
             this.lastHitStop = this.time.now;
             this.hitStopUntil = this.time.now + 70;

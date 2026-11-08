@@ -46,3 +46,13 @@ export function weatherFor(theme: ThemeFlags): WeatherSpec {
   for (const [flag, spec] of TABLE) if (theme[flag]) return spec;
   return MEADOW;
 }
+
+/** Which ambience bed a battle map plays (see sfx.startAmbience). */
+export function ambienceFor(theme: ThemeFlags): 'wind' | 'rain' | 'water' | 'crackle' | 'meadow' {
+  if (theme.lava) return 'crackle';
+  const k = weatherFor(theme).kind;
+  if (k === 'rain') return 'rain';
+  if (k === 'bubbles' || k === 'spray' || theme.brook) return 'water';
+  if (theme.snow || k === 'wind' || k === 'sand' || k === 'down') return 'wind';
+  return 'meadow';
+}

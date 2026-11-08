@@ -4,7 +4,7 @@ import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
-import { gaitFor, poseFor } from '../systems/gait';
+import { gaitFor, poseFor, unitPose } from '../systems/gait';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
@@ -2188,8 +2188,11 @@ export class BattleScene extends Phaser.Scene {
     const h = this.sim.hero;
     if (!h || !this.heroSprite) return;
     const moving = !!h.dest;
-    const bob = moving ? Math.abs(Math.sin(this.time.now / 90)) * 4 : 0;
-    this.heroSprite.setVisible(h.alive).setPosition(h.pos.x, h.pos.y - bob).setDepth(h.pos.y).setFlipX(h.facing < 0);
+    const facing = h.facing < 0 ? -1 : 1;
+    // run with a forward lean, swing while fighting, breathe while standing
+    const pose = motion.reduced ? { lift: 0, sx: 1, sy: 1, rot: 0 } : unitPose(moving ? 'walk' : h.targetUid ? 'fight' : 'idle', this.time.now, 0.4, facing);
+    const bob = moving ? pose.lift * 1.3 : 0;
+    this.heroSprite.setVisible(h.alive).setPosition(h.pos.x, h.pos.y - bob).setDepth(h.pos.y).setFlipX(facing < 0).setScale(pose.sx, pose.sy).setRotation(pose.rot * (moving ? 1.4 : 1));
     this.heroRing.setPosition(h.pos.x, h.pos.y).setDepth(h.pos.y - 1);
     if (!h.alive && this.heroSelected) this.selectHero(false);
     this.heroBar.clear();
@@ -3874,8 +3877,8 @@ export class BattleScene extends Phaser.Scene {
       if (!v) {
         v = { sprite: this.add.image(s.pos.x, s.pos.y, s.summoned ? 'ranger' : 'soldier'), bar: this.add.graphics() };
         if (s.summoned) {
-          v.sprite.setScale(0);
-          this.tweens.add({ targets: v.sprite, scale: 1, duration: 250, ease: 'Back.easeOut' });
+          v.sprite.setScale(0).setData('popping', true);
+          this.tweens.add({ targets: v.sprite, scale: 1, duration: 250, ease: 'Back.easeOut', onComplete: () => v?.sprite.setData('popping', false) });
         }
         this.soldierViews.set(s.uid, v);
       }
@@ -3895,9 +3898,15 @@ export class BattleScene extends Phaser.Scene {
     bar.clear();
     if (!s.alive) return;
     const fighting = s.targetUid !== 0;
-    const jiggle = fighting ? Math.sin(this.time.now / 60 + s.uid) * 2 : 0;
-    if (Math.abs(sprite.x - s.pos.x) > 0.3) sprite.setFlipX(s.pos.x < sprite.x);
-    sprite.setPosition(s.pos.x + jiggle, s.pos.y - 10).setDepth(s.pos.y);
+    const px = (sprite.getData('px') as number | undefined) ?? s.pos.x;
+    const py = (sprite.getData('py') as number | undefined) ?? s.pos.y;
+    const walking = !fighting && Math.hypot(s.pos.x - px, s.pos.y - py) > 0.3;
+    sprite.setData('px', s.pos.x).setData('py', s.pos.y);
+    if (Math.abs(s.pos.x - px) > 0.3) sprite.setFlipX(s.pos.x < px);
+    // march with a step, chop in an arc while fighting, breathe while waiting
+    const pose = motion.reduced ? { lift: 0, sx: 1, sy: 1, rot: 0 } : unitPose(fighting ? 'fight' : walking ? 'walk' : 'idle', this.time.now, s.uid * 1.7, sprite.flipX ? -1 : 1);
+    sprite.setPosition(s.pos.x, s.pos.y - 10 - pose.lift).setDepth(s.pos.y).setRotation(pose.rot);
+    if (!sprite.getData('popping')) sprite.setScale(pose.sx, pose.sy); // let a summoned ranger's pop-in finish first
     if (s.summoned && s.life < 3) sprite.setAlpha(0.5 + 0.5 * Math.abs(Math.sin(this.time.now / 120)));
     // status tints so afflictions read at a glance: venom green, honey amber, shock pale blue
     if ((s.poisonT ?? 0) > 0) sprite.setTint(0xa8f07a);

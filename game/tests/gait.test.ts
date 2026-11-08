@@ -28,3 +28,19 @@ describe('enemy gaits', () => {
     expect(poseFor('hop', Math.PI / 2).lift).toBeGreaterThan(8);
   });
 });
+
+import { unitPose } from '../src/systems/gait';
+describe('soldier and hero poses', () => {
+  it('walkers lean and fighters swing toward their facing; idle only breathes', () => {
+    expect(unitPose('walk', 0, 0, 1).rot).toBeGreaterThan(0);
+    expect(unitPose('walk', 0, 0, -1).rot).toBeLessThan(0);
+    let maxSwing = 0;
+    for (let t = 0; t < 500; t += 10) maxSwing = Math.max(maxSwing, unitPose('fight', t, 0, 1).rot);
+    expect(maxSwing).toBeGreaterThan(0.15);
+    for (let t = 0; t < 2000; t += 50) {
+      const p = unitPose('idle', t, 1, 1);
+      expect(p.rot).toBe(0);
+      expect(Math.abs(p.sy - 1)).toBeLessThanOrEqual(0.03);
+    }
+  });
+});

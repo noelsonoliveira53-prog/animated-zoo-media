@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **262** (next balance pass at iteration 265)
+Iteration counter: **263** (next balance pass at iteration 265)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1700,14 +1700,19 @@ Iteration counter: **262** (next balance pass at iteration 265)
   - Rotation mirrors with facing. Tumblehogs keep their momentum spin. Blocked enemies lift less. Reduce Motion holds a still pose.
   - The first pass used a speed threshold of 75, which no walker reaches; it now uses the real speed spread (24–68). Screenshot `screenshots/262.png`.
 
+- **Iteration 263: soldier and hero animation.** New `unitPose` in `systems/gait.ts` (1 new test, 274 total):
+  - **Soldiers** (burrow squads, Grove Call rangers, raiders): march with a stepping bob and a forward lean, chop in a forward-rocking arc while engaged (replacing the old sideways jiggle), and breathe while holding their rally point. Each unit is offset so squads don't move in lockstep.
+  - **Heroes:** run with a stronger lean and bounce, swing while engaged, and breathe while standing.
+  - A summoned ranger's pop-in tween finishes before the pose takes over its scale. Reduce Motion gives a still pose.
+  - Checked with `scripts/level-shot.mjs` and `scripts/hero-check.mjs` (no console errors). Screenshot `screenshots/263.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Soldier and hero animation: soldiers swing in a little arc while fighting and march with a step; heroes get an idle breathe and a run lean.
-2. Village life: tiny villagers (code-drawn) walking between buildings, and resource carts trundling from mines to storage.
+1. Village life: tiny villagers (code-drawn) walking between buildings, and resource carts trundling from mines to storage.
 
 ## Known Bugs
 - (none known)

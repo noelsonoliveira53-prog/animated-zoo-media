@@ -41,3 +41,31 @@ export function poseFor(gait: Gait, b: number): Pose {
       return { lift: Math.abs(s(b)) * 4, sx: 1 + s(2 * b) * 0.04, sy: 1 - s(2 * b) * 0.04, rot: 0 };
   }
 }
+
+/** What a soldier or hero is doing this frame, for its idle/walk/fight animation. */
+export type UnitState = 'idle' | 'walk' | 'fight';
+
+/**
+ * Pose for soldiers and heroes at scene time `t` (ms). `seed` offsets each unit so a squad doesn't move in lockstep;
+ * `facing` is +1 right / −1 left (walkers lean and fighters swing toward it).
+ */
+export function unitPose(state: UnitState, t: number, seed: number, facing: number): Pose {
+  const s = Math.sin;
+  switch (state) {
+    case 'walk': {
+      const p = t / 85 + seed;
+      return { lift: Math.abs(s(p)) * 3, sx: 1, sy: 1 + Math.abs(s(p)) * 0.03, rot: facing * 0.08 + s(p) * 0.04 };
+    }
+    case 'fight': {
+      // a chopping arc: rock forward into the swing, then back
+      const p = t / 70 + seed;
+      const swing = Math.max(0, s(p));
+      return { lift: 0, sx: 1 + swing * 0.04, sy: 1 - swing * 0.03, rot: facing * swing * 0.2 - facing * 0.03 };
+    }
+    default: {
+      // breathing
+      const p = t / 520 + seed;
+      return { lift: 0, sx: 1 - s(p) * 0.012, sy: 1 + s(p) * 0.03, rot: 0 };
+    }
+  }
+}

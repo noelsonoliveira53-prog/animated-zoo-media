@@ -37,7 +37,8 @@ import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
 import { addLighting } from '../ui/lighting';
 import { motion } from '../ui/motion';
-import { addBuildingShadow, drawVillageGround, puffSmoke, SMOKE_SPOTS, startVillageLife } from './village/VillageArt';
+import { addBuildingShadow, drawVillageGround, puffSmoke, SMOKE_SPOTS, startVillageLife, WINDOW_SPOTS, windowGlow } from './village/VillageArt';
+import { dayLight } from '../systems/daylight';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
 const GRID_W = VILLAGE_COLS * TILE;
@@ -56,6 +57,12 @@ interface BView {
   bubble: Phaser.GameObjects.Image | null;
   shownLevel: number;
   shadow: Phaser.GameObjects.Ellipse;
+}
+
+/** Local hour for the village light; a test can pin it with window.__villageHour. */
+function villageHour(): number {
+  const forced = (window as unknown as { __villageHour?: number }).__villageHour;
+  return typeof forced === 'number' ? forced : new Date().getHours();
 }
 
 type Mode = { kind: 'idle' } | { kind: 'place'; type: BuildingId } | { kind: 'move'; uid: number };
@@ -93,6 +100,9 @@ export class VillageScene extends Phaser.Scene {
     motion.reduced = !!this.save.settings.reduceMotion;
     motion.lowFx = !!this.save.settings.fxLow;
     this.views.clear();
+    this.dusk = null;
+    this.glows = [];
+    this.glowKey = '';
     this.panel = null;
     this.selected = null;
     this.mode = { kind: 'idle' };
@@ -103,6 +113,8 @@ export class VillageScene extends Phaser.Scene {
 
     this.drawGround();
     for (const b of this.v.buildings) this.addView(b);
+    this.applyDaylight(true);
+    this.time.addEvent({ delay: 30000, loop: true, callback: () => this.applyDaylight(true) });
     this.buildHud();
 
     this.uiCam = this.cameras.add(0, 0, GAME_W, GAME_H);
@@ -146,6 +158,33 @@ export class VillageScene extends Phaser.Scene {
       (y) => (y - OY) / TILE + 0.2, // same depth scale as buildings (row + size), so walkers pass in front of / behind them
     );
     this.cameras.main.fadeIn(250, 16, 38, 27);
+  }
+
+  private dusk: Phaser.GameObjects.Rectangle | null = null;
+  private glows: Phaser.GameObjects.GameObject[] = [];
+  private glowKey = '';
+
+  /**
+   * Time-of-day tint over the village (under the HUD) and, from early evening, glowing windows on lived-in
+   * buildings. `force` rebuilds the glows; otherwise they're rebuilt only when buildings move or level up.
+   */
+  private applyDaylight(force = false): void {
+    const light = dayLight(villageHour());
+    if (!this.dusk || !this.dusk.active) this.dusk = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W + 40, GAME_H + 40, 0, 0).setDepth(UI_DEPTH - 2);
+    this.dusk.setFillStyle(light.color, light.alpha);
+    const key = light.windows ? this.v.buildings.filter((b) => b.level > 0 && WINDOW_SPOTS[b.type]).map((b) => `${b.uid}:${b.col},${b.row}`).join('|') : '';
+    if (!force && key === this.glowKey) return;
+    this.glowKey = key;
+    for (const o of this.glows) o.destroy();
+    this.glows = [];
+    if (!light.windows || motion.lowFx) return;
+    for (const b of this.v.buildings) {
+      const spots = WINDOW_SPOTS[b.type];
+      if (!spots || b.level === 0) continue;
+      const { x, y } = this.cellToXY(b.col, b.row);
+      const S = BUILDINGS[b.type].size * TILE;
+      for (const sp of spots) this.glows.push(...windowGlow(this, x + S * sp.fx, y + S * sp.fy, UI_DEPTH - 1));
+    }
   }
 
   /** Chimney smoke: finished, working buildings puff now and then (busier while upgrading). */
@@ -321,6 +360,7 @@ export class VillageScene extends Phaser.Scene {
   }
 
   private refresh(): void {
+    this.applyDaylight();
     const now = Date.now();
     const done = tick(this.v, now);
     for (const b of done) {

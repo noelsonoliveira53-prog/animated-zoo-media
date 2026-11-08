@@ -1,4 +1,4 @@
-// Screenshot a busy village (every building type, a wall run, one upgrade in progress): `node scripts/village-shot.mjs <name>`
+// Screenshot a busy village (every building type, a wall run, one upgrade in progress): `node scripts/village-shot.mjs <name> [hour]`
 import { createRequire } from 'node:module';
 import { preview } from 'vite';
 const require = createRequire(import.meta.url);
@@ -10,6 +10,8 @@ const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
+const hour = process.argv[3] !== undefined ? Number(process.argv[3]) : 12; // pin the village clock (day by default)
+await page.addInitScript((h) => { window.__villageHour = h; }, hour);
 await page.addInitScript(() => {
   const now = Date.now();
   let uid = 1;

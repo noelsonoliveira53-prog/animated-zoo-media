@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **265** (next balance pass at iteration 270)
+Iteration counter: **266** (next balance pass at iteration 270)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1721,14 +1721,21 @@ Iteration counter: **265** (next balance pass at iteration 270)
   - Phone battle and result check (`phone-battle.mjs`): passes.
   - **Balance:** a 6-seed sweep of the first ten levels (the new-player stretch). Mossgate, Thornwood, Gloomfen, Rimewood and Frostfern are 100/100/100. Icicle Crossing 100/67/0, Murkmaw's Den 83/50/83, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67. Easy openers that ramp from the first boss on, as targeted, so nothing changed. 274 tests.
 
+- **Iteration 266: village day and night.** New `systems/daylight.ts` (`dayLight(hour)`; 1 test, 275 total):
+  - **Light by the player's local hour:** clear day from 8:00 to 17:00, a warm golden tint until 19:00, a deep blue night, and a pink dawn from 6:00 to 8:00.
+  - **Lit windows:** from 18:00 through the night, lived-in buildings (Grove Hall, builder burrow, barracks, workshop, market, shrine, apiary) show warm window or door lamps. Each is an orange pool with a bright core and a soft flicker, at per-type spots in `WINDOW_SPOTS`.
+  - The tint sits over the village and under the HUD. Glows are rebuilt only when buildings move or level up (checked in the 250 ms refresh), and the hour is re-read every 30 s.
+  - The first pass was too faint (night 0.30) with whitish additive rings; it is now night 0.42 and golden 0.16, with normal-blend orange glows.
+  - Graphics: Low keeps the tint without glows; Reduce Motion stops the flicker. A test can pin the hour with `window.__villageHour`; `village-shot.mjs <name> [hour]` uses it.
+  - `village-leak` at night: objects 124 → 123 and tweens 43 → 42, steady. Screenshot `screenshots/266.png` (21:00).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Day and night tint for the village: a slow warm-to-dusk light cycle with lit windows at dusk (cosmetic, follows real time loosely).
-2. Raid troop polish: deploy puff and a little banner where a squad lands, troop gaits like the defense soldiers, and building rubble when a camp building falls.
+1. Raid troop polish: deploy puff and a little banner where a squad lands, troop gaits like the defense soldiers, and building rubble when a camp building falls.
 
 ## Known Bugs
 - (none known)

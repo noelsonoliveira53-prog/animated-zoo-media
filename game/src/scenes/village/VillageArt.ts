@@ -206,3 +206,24 @@ export function startVillageLife(scene: Phaser.Scene, spots: () => LifeSpot[], d
   for (let i = 0; i < 2; i++) villager();
   return scene.time.addEvent({ delay: 2600, loop: true, callback: () => (Math.random() < 0.35 ? cart() : villager()) });
 }
+
+/** Where a building's windows (or door lamp) sit, as fractions of its footprint, for the evening glow. */
+export const WINDOW_SPOTS: Record<string, { fx: number; fy: number }[]> = {
+  townhall: [{ fx: 0.5, fy: 0.72 }],
+  builderhut: [{ fx: 0.5, fy: 0.68 }],
+  barracks: [{ fx: 0.5, fy: 0.66 }],
+  workshop: [{ fx: 0.36, fy: 0.62 }, { fx: 0.64, fy: 0.62 }],
+  market: [{ fx: 0.5, fy: 0.5 }],
+  shrine: [{ fx: 0.5, fy: 0.4 }],
+  apiary: [{ fx: 0.5, fy: 0.55 }],
+};
+
+/** A warm window glow with a soft flicker; returns the objects so the caller can clear them. */
+export function windowGlow(scene: Phaser.Scene, x: number, y: number, depth: number): Phaser.GameObjects.GameObject[] {
+  // a warm orange pool of light (normal blend, so it stays orange on pale ground) with a bright lamp at its heart
+  const halo = scene.add.circle(x, y, 16, 0xffa040, 0.3).setDepth(depth);
+  const inner = scene.add.circle(x, y, 8, 0xffc860, 0.45).setDepth(depth);
+  const core = scene.add.circle(x, y, 3.5, 0xffe890, 1).setDepth(depth);
+  if (!motion.reduced) scene.tweens.add({ targets: halo, alpha: 0.2, scale: 0.9, duration: 700 + Math.random() * 500, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+  return [halo, inner, core];
+}

@@ -1,0 +1,34 @@
+// Phone-sized (740×360, touch) battle screens: the HUD mid-battle and the victory panel. `node scripts/phone-battle.mjs <name>`
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const name = process.argv[2] ?? 'phone-battle';
+const server = await preview({ preview: { port: 4331, strictPort: true } });
+const browser = await pw.chromium.launch();
+const ctx = await browser.newContext({ viewport: { width: 740, height: 360 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 });
+const page = await ctx.newPage();
+const errors = [];
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+await page.addInitScript(() => localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 3 } })));
+await page.goto('http://localhost:4331/');
+await page.waitForTimeout(1200);
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 2 }));
+await page.waitForTimeout(1500);
+await page.evaluate(() => {
+  const s = window.__game.scene.getScene('Battle');
+  s.sim.coins = 2400;
+  ['thornbow', 'glimmer', 'boulder', 'burrow'].forEach((k, i) => s.sim.build(i, k));
+  s.sim.callNextWave();
+  for (let i = 0; i < 60 * 8; i++) s.sim.update(1 / 60);
+});
+await page.waitForTimeout(1500);
+await page.screenshot({ path: `screenshots/${name}.png` });
+const t0 = await page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); s.endBattle(true); return s.time.now; });
+await page.waitForFunction((t0) => window.__game.scene.getScene('Battle').time.now >= t0 + 2500, t0, { timeout: 30000, polling: 'raf' });
+await page.screenshot({ path: `screenshots/${name}-result.png` });
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length ? 1 : 0);

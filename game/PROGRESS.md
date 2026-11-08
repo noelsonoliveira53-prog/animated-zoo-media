@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **254** (next balance pass at iteration 255)
+Iteration counter: **255** (next balance pass at iteration 260)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1636,6 +1636,11 @@ Iteration counter: **254** (next balance pass at iteration 255)
   - **Hover lift:** unlocked nodes rise 6 px under the pointer (desktop; off with Reduce Motion). It moves the node's y, so it doesn't fight the next-level pulse, which scales.
   - First pass used flat ellipses, which read as "ears"; they became rotated leaf shapes. Screenshot `screenshots/254.png` (Rustrock: four gold laurels and the boss crest on 115).
 
+- **Iteration 255** (POLISH + BALANCE):
+  - Phone check: the new `scripts/phone-battle.mjs` (740×360 touch) shows the battle HUD mid-wave and the victory panel. The bar, rolling counters, wave bar, glossy spell buttons, ribbon, stars and reward all fit, with no console errors (`screenshots/255.png`, `255-result.png`).
+  - Polish fix: the "+1 Swiftbloom" note on the victory panel sat against the panel's inner border; moved 16 px in.
+  - Balance: a 10-level mid/late campaign sweep (4 seeds) over levels not covered in iteration 245. The Great Barn (110) dipped to an expert 50%, but a 10-seed re-run gives 80/30/0, in line with its iteration-196 tuning (hpMult 1.65), so nothing changed. Everything else sits at expert 75–100% (see Balance Notes). 267 tests.
+
 ## In Progress
 - (none)
 
@@ -2527,3 +2532,4 @@ Findings / follow-ups:
 - **Iteration 245 sweep** (4 seeds; expert / casual / novice win %): L1 100/100/100, L3 100/100/100, L5 100/50/100, L10 75/100/50, L20 75/50/0, L30 75/25/25, L45 75/50/0, L60 75/50/0, L75 100/75/0, L90 100/25/0, L105 75/75/0, L120 75/25/0, L125 100/75/0. Single-tower strategies lose from L3 on (intended: mixes matter).
   - Store (3 seeds, none → maxed; expert/casual/novice): L5 100/67/100 → 100/100/100; L30 100/0/33 → 100/67/100; L60 67/33/0 → 100/100/0; L90 100/33/0 → 100/100/67; L120 67/33/0 → 100/100/100; L125 100/67/0 → 100/100/100. A maxed store is still a big long-term boost (about 70k coins and 52k glowsap); keep watching it, but no change.
 - **Iteration 250 sweeps:** raids (stars / % destroyed): Lodge 1: 1.8★ 67% / 0.3★ 23% / 0.1★ 17%; Lodge 2: 3.0★ / 1.7★ 67% / 0.6★ 34%; Lodge 3: 3.0★ / 3.0★ / 0.9★ 45% (with Mender 1.6★ 55%, with Moles 1.3★ 47%). Endless waves (expert/casual/novice): Mossgate 12.0/12.0/12.3, Murkmaw 11.7/11.7/17.7, Frostpeak 12.0/12.0/12.3, Duskcap 12.7/12.3/21.3.
+- **Iteration 255 sweep** (4 seeds; expert / casual / novice win %): L7 Icicle Crossing 100/75/0, L15 Heart of the Emberdeep 75/25/75, L25 Heart of the Orchard 75/50/0, L40 Heart of the Glimmerbog 75/50/0, L55 Heart of the Ruins 75/50/0, L70 Crown of the Reef 75/50/0, L85 Saltjaw's Grotto 100/75/0, L100 Shrine of a Thousand Lanterns 100/25/0, L110 The Great Barn 50/25/0 (10 seeds: 80/30/0), L115 The Rattling Spire 75/75/0.

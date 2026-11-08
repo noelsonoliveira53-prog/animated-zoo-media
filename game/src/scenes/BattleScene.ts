@@ -4025,7 +4025,7 @@ export class BattleScene extends Phaser.Scene {
       panel.add(this.add.text(0, 74, `Daily challenge bonus: +${dailyPaid.coins} coins, +${dailyPaid.glowsap} glowsap`, textStyle(16, '#9be86a', false)).setOrigin(0.5));
     }
     if (bloom) {
-      const t = this.add.text(222, -40, '+1\nSwiftbloom', { ...textStyle(16, '#ffc0e8'), align: 'center' }).setOrigin(0.5).setName('bloomText').setScale(0);
+      const t = this.add.text(206, -40, '+1\nSwiftbloom', { ...textStyle(16, '#ffc0e8'), align: 'center' }).setOrigin(0.5).setName('bloomText').setScale(0);
       panel.add(t);
       this.tweens.add({ targets: t, scale: 1, delay: 1250, duration: 300, ease: 'Back.easeOut' });
     }

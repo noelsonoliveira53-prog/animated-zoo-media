@@ -305,6 +305,13 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.wold && !motion.reduced) {
+      // big soft cloud shadows sliding slowly across the fields
+      for (let i = 0; i < 4; i++) {
+        const sh = this.add.ellipse(rnd.between(-200, GAME_W), rnd.between(150, GAME_H - 150), rnd.between(260, 380), rnd.between(120, 180), 0x1a3a10, 0.1).setDepth(0.6);
+        this.tweens.add({ targets: sh, x: sh.x + GAME_W + 400, duration: rnd.between(40000, 60000), repeat: -1, onRepeat: () => (sh.x = -300) });
+      }
+    }
     if (this.level.theme.thistle && !motion.reduced) {
       // thistledown fluff drifting across the prairie on the wind
       for (let i = 0; i < 16; i++) {
@@ -524,6 +531,37 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.wold) {
+        const k = rnd.frac();
+        if (k < 0.35) {
+          // a round hay bale with a tied band
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x + 3, p.y + 10, 34, 12);
+          deco.fillStyle(0xd8b050, 1);
+          deco.fillCircle(p.x, p.y, 13);
+          deco.lineStyle(2, 0xa88030, 1);
+          deco.strokeCircle(p.x, p.y, 13);
+          deco.strokeCircle(p.x, p.y, 7);
+          deco.lineStyle(2, 0x8a4a2a, 1);
+          deco.lineBetween(p.x - 13, p.y, p.x + 13, p.y);
+        } else if (k < 0.7) {
+          // a little strip of ripe wheat rows
+          deco.fillStyle(0xc8a040, 1);
+          for (let n = 0; n < 4; n++) deco.fillRect(p.x - 20 + n * 10, p.y - 8, 5, 18);
+          deco.fillStyle(0xe8c860, 1);
+          for (let n = 0; n < 4; n++) deco.fillEllipse(p.x - 17.5 + n * 10, p.y - 10, 6, 7);
+        } else {
+          // a scarecrow: a pole, a straw hat and outstretched sleeves
+          deco.lineStyle(3, 0x6a4a2a, 1);
+          deco.lineBetween(p.x, p.y + 14, p.x, p.y - 12);
+          deco.lineBetween(p.x - 14, p.y - 4, p.x + 14, p.y - 4);
+          deco.fillStyle(0x6a8ac8, 1);
+          deco.fillRect(p.x - 6, p.y - 8, 12, 12);
+          deco.fillStyle(0xe8d0a0, 1);
+          deco.fillCircle(p.x, p.y - 13, 5);
+          deco.fillStyle(0xd8b050, 1);
+          deco.fillEllipse(p.x, p.y - 17, 18, 5);
         }
       } else if (this.level.theme.thistle) {
         const k = rnd.frac();
@@ -1818,6 +1856,18 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0xd8b890);
         this.particles.explode(10, ev.pos.x, ev.pos.y - 6);
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
+        break;
+      }
+      case 'trample': {
+        // the ox shoulders a soldier aside: a dust puff and a thud (throttled per ox)
+        const key = -5000000 - ev.enemy.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 300) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('trample');
+        this.particles.setParticleTint(0xc8a878);
+        this.particles.explode(8, ev.pos.x, ev.pos.y);
+        this.floatText(ev.pos.x, ev.pos.y - 24, 'Trampled!', '#e8c8a0', 12);
         break;
       }
       case 'alarm': {

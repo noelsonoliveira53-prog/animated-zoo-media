@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **190** (next balance pass at iteration 195)
+Iteration counter: **191** (next balance pass at iteration 195)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,8 @@ Iteration counter: **190** (next balance pass at iteration 195)
 - (none)
 
 ## Backlog (ranked)
-1. Region 22: a new theme, traits and five levels.
+1. Patchwork Wolds level 107 with a third trait, then levels 108 and 109.
+2. Patchwork finale (110) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1265,6 +1266,14 @@ Iteration counter: **190** (next balance pass at iteration 195)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 191**: 106 Hedgerow Lane (12 seeds, expert/casual/novice).
+- First draft (ox 900 hp, trample 30, tithe 30%): 1.3 → 58/42/83, 1.5 → 33/0/17. The ox flattened the soldier-heavy
+  smart builds and the tithe starved their economy; the arrow novice did best.
+- Eased the ox to 650 hp and trample 20, and the tithe to 20%. That swung to trivial: 1.2–1.5 → 100/100/100.
+- Retuned the multiplier: 1.8 → 92/100/100, 1.95 → 100/100/67, 2.0 → 83/100/67, 2.1 → 83/100/17, 2.4 → 92/100/0.
+  **2.05 → 92/100/50** (kept: near the opener band).
+- The novice's cliff between 1.95 and 2.1 is steep, and the expert can't quite reach 100 here because tramples break its
+  choke-point hero. Watch level 107.
 **Iteration 190**: the two levels flagged as possible drift in 185, rechecked at 12 seeds: Queenscomb 83/75/0 and
 Windfluff 100/100/33. Both match their tuning exactly, so 185's readings were 6-seed noise.
 - Hero comparison on Thistledown levels 102–104: Ember 100%, Bramble/Fen/Sorrel/Hazel 94%, Wren 83% (lowest again; the

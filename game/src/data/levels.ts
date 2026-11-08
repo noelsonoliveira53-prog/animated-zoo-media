@@ -14,6 +14,7 @@ const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0
 const FLOTILLA = { grass: 0x2a5a7a, grassDark: 0x24506e, road: 0xb08a5a, roadEdge: 0x6a4a2a, trees: [0x8a6a4a, 0x6a5a4a, 0xa8885a], flotilla: true };
 const AMBER = { grass: 0x9a7a3a, grassDark: 0x8a6a30, road: 0x7a5a3a, roadEdge: 0x4a3424, trees: [0xc83a1a, 0xe87a1a, 0xf0c040, 0x8a3a5a], amber: true };
 const MIST = { grass: 0x7aa878, grassDark: 0x6a9868, road: 0xb8ac90, roadEdge: 0x8a7e66, trees: [0x4a7a5a, 0xe89ab8, 0x5a8a5a], mist: true };
+const WOLD = { grass: 0x7aa84a, grassDark: 0x6a983e, road: 0xb89868, roadEdge: 0x6a4a2a, trees: [0x5a9a3a, 0xc8a040, 0x8a6a3a], wold: true };
 const THISTLE = { grass: 0x8a9a5a, grassDark: 0x7a8a4e, road: 0xc8a878, roadEdge: 0x7a5a3a, trees: [0x9a6ab8, 0xb88ad0, 0x6a8a3a], thistle: true };
 const BOG = { grass: 0x3a5a4a, grassDark: 0x2f4e40, road: 0x8a7a5a, roadEdge: 0x4a3e2a, trees: [0x2a6a5a, 0x3a7a4a, 0x5a8a3a], bog: true };
 const COMB = { grass: 0xb8a848, grassDark: 0xa8983c, road: 0xe0b860, roadEdge: 0x9a7030, trees: [0xd8a030, 0xc8b040, 0x8a9a3a], comb: true };
@@ -4991,6 +4992,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'galestag', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l106',
+    name: 'Hedgerow Lane',
+    blurb: 'Beyond the prairie lie the Patchwork Wolds, a quilt of fields stitched together with hedgerows. The farm animals here have been talked into joining the Murkhorde, and a weasel with a ledger is keeping count of every coin.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 2.05,
+    startCoins: 1000,
+    lives: 20,
+    theme: WOLD,
+    paths: [
+      [{ x: -40, y: 240 }, { x: 300, y: 240 }, { x: 300, y: 560 }, { x: 660, y: 560 }, { x: 660, y: 200 }, { x: 1020, y: 200 }, { x: 1020, y: 500 }, { x: 1320, y: 500 }],
+      [{ x: 800, y: -40 }, { x: 800, y: 200 }, { x: 1020, y: 200 }, { x: 1020, y: 500 }, { x: 1320, y: 500 }],
+    ],
+    slots: [
+      { x: 200, y: 330 },
+      { x: 210, y: 470 },
+      { x: 390, y: 330 },
+      { x: 390, y: 470 },
+      { x: 570, y: 290 },
+      { x: 570, y: 470 },
+      { x: 710, y: 110 },
+      { x: 750, y: 300 },
+      { x: 930, y: 300 },
+      { x: 930, y: 450 },
+      { x: 1110, y: 300 },
+      { x: 1120, y: 420 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'titheweasel', count: 3, interval: 1.6 }, { enemy: 'mudling', count: 12, interval: 0.5, delay: 2 }] },
+      { groups: [{ enemy: 'ploughox', count: 2, interval: 3 }, { enemy: 'skitter', count: 12, interval: 0.4, delay: 1 }] },
+      { groups: [{ enemy: 'titheweasel', count: 4, interval: 1.4 }, { enemy: 'galehound', count: 6, interval: 0.55, delay: 3 }, { enemy: 'gullwing', count: 5, interval: 0.9, delay: 5 }] },
+      { groups: [{ enemy: 'ploughox', count: 3, interval: 2.6 }, { enemy: 'shellback', count: 4, interval: 1.3, delay: 2 }, { enemy: 'skitter', count: 10, interval: 0.4, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'titheweasel', count: 5, interval: 1.2 }, { enemy: 'ploughox', count: 2, interval: 3, path: 1, delay: 2 }, { enemy: 'kitewing', count: 3, interval: 1.6, delay: 6 }] },
+      { groups: [{ enemy: 'ploughox', count: 4, interval: 2.4 }, { enemy: 'thunderhoof', count: 6, interval: 0.6, delay: 1 }, { enemy: 'glarefly', count: 5, interval: 0.85, delay: 6 }] },
+      { groups: [{ enemy: 'titheweasel', count: 6, interval: 1.1 }, { enemy: 'galehound', count: 8, interval: 0.5, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'ploughox', count: 4, interval: 2.4 }, { enemy: 'reedguard', count: 5, interval: 1.1, delay: 2 }, { enemy: 'titheweasel', count: 3, interval: 1.4, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'titheweasel', count: 7, interval: 1 }, { enemy: 'bogbrute', count: 2, interval: 3, delay: 3 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'ploughox', count: 5, interval: 2.2 }, { enemy: 'skitter', count: 18, interval: 0.28, path: 1, delay: 1 }, { enemy: 'tidecaller', count: 2, interval: 2.6, delay: 3 }] },
+      { groups: [{ enemy: 'titheweasel', count: 8, interval: 0.9 }, { enemy: 'ploughox', count: 3, interval: 2.4, path: 1, delay: 1 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 4 }, { enemy: 'kitewing', count: 5, interval: 1.3, delay: 8 }] },
+      { groups: [{ enemy: 'ploughox', count: 6, interval: 2 }, { enemy: 'titheweasel', count: 6, interval: 1, delay: 1 }, { enemy: 'deckgunner', count: 4, interval: 1.3, delay: 3 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 8 }] },
+      { groups: [{ enemy: 'titheweasel', count: 9, interval: 0.85 }, { enemy: 'galehound', count: 10, interval: 0.4, delay: 2 }, { enemy: 'ploughox', count: 4, interval: 2.2, path: 1, delay: 3 }, { enemy: 'cloudram', count: 2, interval: 2.6, delay: 8 }] },
+      { groups: [{ enemy: 'ploughox', count: 7, interval: 1.8 }, { enemy: 'titheweasel', count: 9, interval: 0.85, delay: 1 }, { enemy: 'bramblehide', count: 3, interval: 2.4, delay: 8 }, { enemy: 'gnat', count: 18, interval: 0.24, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -5028,6 +5073,7 @@ export interface RegionDef {
   comb?: boolean;
   bog?: boolean;
   thistle?: boolean;
+  wold?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -5052,6 +5098,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Honeycomb Hills', first: 90, count: 5, comb: true },
   { name: 'The Glimmerbog', first: 95, count: 5, bog: true },
   { name: 'The Thistledown Prairie', first: 100, count: 5, thistle: true },
+  { name: 'The Patchwork Wolds', first: 105, count: 5, wold: true },
 ];
 
 export function regionOf(levelIndex: number): number {

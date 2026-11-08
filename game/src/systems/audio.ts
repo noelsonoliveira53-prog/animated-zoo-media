@@ -236,6 +236,10 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'trample': // a heavy hoof thud
+        this.tone(90, 0.18, 'sine', 0.07, 50);
+        this.noise(0.12, 0.05, 400);
+        break;
       case 'alarm': // a sharp, rising two-note whistle
         this.tone(1400, 0.12, 'sine', 0.05, 2000);
         this.tone(1800, 0.18, 'sine', 0.05, 2400, 0.12);

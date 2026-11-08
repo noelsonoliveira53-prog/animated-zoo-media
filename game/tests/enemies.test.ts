@@ -1186,3 +1186,39 @@ describe('Lookout Marmot', () => {
     expect(sim.drainEvents().filter((e) => e.type === 'alarm').length).toBe(0);
   });
 });
+
+describe('Patchwork Wolds enemies', () => {
+  it('a living Tithe Weasel skims kill bounties; once it falls, full bounty again', () => {
+    const sim = new BattleSim(lvl, null);
+    const hit = (e: unknown) => (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(e, 99999);
+    const w = sim.spawn('titheweasel', 0, 300);
+    const c0 = sim.coins;
+    hit(sim.spawn('shellback', 0, 500));
+    const skimmed = sim.coins - c0;
+    hit(w);
+    const c1 = sim.coins;
+    hit(sim.spawn('shellback', 0, 500));
+    const full = sim.coins - c1;
+    expect(skimmed).toBe(Math.round(full * (1 - w.def.tithe!)));
+  });
+
+  it('a Plough Ox cannot be held and tramples each soldier once as it passes', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'burrow');
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    const ox = sim.spawn('ploughox', 0, 330);
+    ox.hp = ox.maxHp = 99999;
+    const d0 = ox.dist;
+    let tramples = 0;
+    for (let i = 0; i < 60 * 6; i++) {
+      sim.update(1 / 60);
+      tramples += sim.drainEvents().filter((e) => e.type === 'trample').length;
+      expect(ox.blockedBy).toBe(0);
+    }
+    expect(ox.dist - d0).toBeGreaterThan(ox.def.speed * 5);
+    expect(tramples).toBeGreaterThan(0);
+    expect(new Set(ox.trampled).size).toBe(ox.trampled.length);
+  });
+});

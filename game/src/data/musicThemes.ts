@@ -98,10 +98,13 @@ export const THEMES: ThemeDef[] = [
   // The Thistledown Prairie: an open, galloping major tune with wide leaps, like wind rolling over long grass.
   { id: 'thistle', name: 'Thistledown', transpose: 5, tempo: 1.05, arpWave: 'triangle', leadWave: 'triangle',
     motif: [[12, 0, 2], [19, 2, 2], [24, 4, 4], [21, 8, 2], [19, 10, 2], [16, 12, 4], [14, 16, 2], [16, 18, 2], [19, 20, 4], [12, 24, 8]] },
+  // The Patchwork Wolds: a cheerful, stomping country jig with a bouncing bass, like a harvest dance in a barn.
+  { id: 'wold', name: 'Patchwork', transpose: 0, tempo: 1.12, arpWave: 'square', leadWave: 'triangle',
+    motif: [[12, 0, 1], [14, 1, 1], [16, 2, 2], [12, 4, 2], [19, 6, 2], [16, 8, 2], [14, 10, 2], [12, 12, 4], [16, 16, 1], [17, 17, 1], [19, 18, 2], [21, 20, 2], [19, 22, 2], [12, 24, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes', 'reef', 'flotilla', 'amber', 'mist', 'canopy', 'comb', 'bog', 'thistle'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes', 'reef', 'flotilla', 'amber', 'mist', 'canopy', 'comb', 'bog', 'thistle', 'wold'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

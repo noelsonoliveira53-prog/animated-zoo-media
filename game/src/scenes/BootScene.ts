@@ -1190,6 +1190,58 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'titheweasel': {
+        // a long sleek weasel in a green waistcoat, a tiny ledger under one arm
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.5, cy + r * 0.2, r * 0.9, r * 0.35);
+        g.strokeEllipse(cx + r * 0.5, cy + r * 0.2, r * 0.9, r * 0.35);
+        g.fillEllipse(cx, cy, r * 1.4, r * 0.7);
+        g.strokeEllipse(cx, cy, r * 1.4, r * 0.7);
+        g.fillStyle(0x3a7a3a, 1);
+        g.fillRect(cx - r * 0.35, cy - r * 0.3, r * 0.6, r * 0.6);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.35);
+        g.strokeCircle(cx - r * 0.7, cy - r * 0.15, r * 0.35);
+        g.fillStyle(0xf0e0c0, 1);
+        g.fillEllipse(cx - r * 0.85, cy - r * 0.05, r * 0.25, r * 0.18);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.78, cy - r * 0.25, r * 0.06);
+        g.fillStyle(0xf4ecd8, 1);
+        g.fillRect(cx + r * 0.05, cy - r * 0.55, r * 0.35, r * 0.28);
+        g.lineStyle(1, C.ink, 1);
+        g.strokeRect(cx + r * 0.05, cy - r * 0.55, r * 0.35, r * 0.28);
+        g.fillStyle(0xffd040, 1);
+        g.fillCircle(cx + r * 0.5, cy - r * 0.45, r * 0.08);
+        break;
+      }
+      case 'ploughox': {
+        // a broad ox from above: big brown body, a pale muzzle, curved horns and a wooden yoke across the shoulders
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.6, r * 1.1);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.6, r * 1.1);
+        g.fillStyle(0x6a4a2a, 1);
+        g.fillRect(cx - r * 0.45, cy - r * 0.6, r * 0.18, r * 1.2);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeRect(cx - r * 0.45, cy - r * 0.6, r * 0.18, r * 1.2);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        g.strokeEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        g.fillStyle(0xe8d0b0, 1);
+        g.fillEllipse(cx - r * 0.95, cy, r * 0.25, r * 0.35);
+        g.lineStyle(3, 0xf0e8d0, 1);
+        g.beginPath();
+        g.arc(cx - r * 0.7, cy - r * 0.32, r * 0.22, Math.PI * 1.1, Math.PI * 1.9);
+        g.strokePath();
+        g.beginPath();
+        g.arc(cx - r * 0.7, cy + r * 0.32, r * 0.22, Math.PI * 0.1, Math.PI * 0.9);
+        g.strokePath();
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.75, cy - r * 0.15, r * 0.05);
+        g.fillCircle(cx - r * 0.75, cy + r * 0.15, r * 0.05);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

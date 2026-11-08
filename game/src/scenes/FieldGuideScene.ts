@@ -102,6 +102,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
         if (e.snatch) tags.push(`Snatches the nearest soldier within ${e.snatch.radius}px every ${e.snatch.cooldown}s (it has to respawn)`);
         if (e.wax) tags.push(`Wax coat: +${Math.round(e.wax.armor * 100)}% armor until magic damage worth ${Math.round(e.wax.melt * 100)}% of its health melts it off`);
+        if (e.tithe) tags.push(`Skims ${Math.round(e.tithe * 100)}% off every kill's bounty while it lives`);
+        if (e.trample) tags.push(`Can't be held: tramples each soldier (and the hero) it passes for ${e.trample.damage}`);
         if (e.alarm) tags.push(`Raises the alarm when first hit: allies within ${e.alarm.radius}px run ${Math.round((e.alarm.speedMult - 1) * 100)}% faster for ${e.alarm.duration}s`);
         if (e.momentum) tags.push(`Gathers speed while unhit: +${Math.round(e.momentum.perSec * 100)}% per second (up to +${Math.round(e.momentum.max * 100)}%); any hit resets it`);
         if (e.blossom) tags.push(`When it falls, heals allies within ${e.blossom.radius}px by ${Math.round(e.blossom.heal * 100)}% of their health`);

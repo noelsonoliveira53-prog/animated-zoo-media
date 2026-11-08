@@ -57,6 +57,7 @@ export interface Enemy {
   hexCd: number; // Hexcroak Toad: time to its next curse
   dived: boolean; // Mudskipper has used its one dive
   alarmed: boolean; // Lookout Marmot has already whistled
+  trampled: number[]; // Plough Ox: soldiers / the hero it has already run over
   diveT: number; // seconds left under the mud
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
@@ -213,6 +214,7 @@ export type SimEvent =
   | { type: 'dive'; enemy: Enemy; down: boolean }
   | { type: 'blossom'; enemy: Enemy; radius: number; healed: Enemy[] }
   | { type: 'alarm'; enemy: Enemy; radius: number; startled: Enemy[] }
+  | { type: 'trample'; enemy: Enemy; pos: Vec2 }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -575,7 +577,7 @@ export class BattleSim {
         if (best) {
           target = best;
           h.targetUid = best.uid;
-          if (!best.blockedBy) best.blockedBy = h.uid;
+          if (!best.blockedBy && !best.def.trample) best.blockedBy = h.uid;
         }
       }
       if (target && h.def.bulwark) this.bulwarkHold(h, target);
@@ -959,6 +961,7 @@ export class BattleSim {
       dived: false,
       diveT: 0,
       alarmed: false,
+      trampled: [],
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -1020,6 +1023,7 @@ export class BattleSim {
       if (e.def.phase) this.tickPhase(e, dt);
       if (e.def.snatch) this.tickSnatch(e, dt);
       if (e.def.hex) this.tickHex(e, dt);
+      if (e.def.trample) this.tickTrample(e);
       if (e.diveT > 0) {
         e.diveT -= dt;
         if (e.diveT <= 0) {
@@ -1231,6 +1235,25 @@ export class BattleSim {
   }
 
   /** Canopy Harrier: dives on the nearest soldier in reach and carries it off (it has to respawn). */
+  /** Plough Ox: it can't be held, and it knocks each soldier (and the hero) it passes for a heavy blow, once. */
+  private tickTrample(e: Enemy): void {
+    e.blockedBy = 0;
+    const tr = e.def.trample!;
+    for (const s of this.soldiers) {
+      if (!s.alive || e.trampled.includes(s.uid)) continue;
+      if (Math.hypot(s.pos.x - e.pos.x, s.pos.y - e.pos.y) > SOLDIER_REACH + e.def.radius * 0.5) continue;
+      e.trampled.push(s.uid);
+      this.hurtSoldier(s, tr.damage * this.attackMult());
+      this.events.push({ type: 'trample', enemy: e, pos: { ...s.pos } });
+    }
+    const h = this.hero;
+    if (h && h.alive && !e.trampled.includes(h.uid) && Math.hypot(h.pos.x - e.pos.x, h.pos.y - e.pos.y) <= SOLDIER_REACH + e.def.radius * 0.5) {
+      e.trampled.push(h.uid);
+      this.hurtHero(tr.damage * this.attackMult());
+      this.events.push({ type: 'trample', enemy: e, pos: { ...h.pos } });
+    }
+  }
+
   /** Hexcroak Toad: croaks a curse at the nearest shooting tower, which hits softer for a while. */
   private tickHex(e: Enemy, dt: number): void {
     const hx = e.def.hex!;
@@ -1454,7 +1477,7 @@ export class BattleSim {
     let held = this.enemies.filter((e) => e.alive && e.blockedBy === h.uid).length;
     for (const e of this.enemies) {
       if (held >= max) break;
-      if (e === target || !e.alive || e.blockedBy || e.underground || this.airborne(e)) continue;
+      if (e === target || !e.alive || e.blockedBy || e.def.trample || e.underground || this.airborne(e)) continue;
       if (Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) > SOLDIER_REACH + 6) continue;
       e.blockedBy = h.uid;
       held++;
@@ -1502,6 +1525,13 @@ export class BattleSim {
   }
 
   /** Wren's Scholar's Eye: enemies that fall near her pay extra coins. */
+  /** Tithe Weasels skim the bounty of every kill while any of them lives (the greediest one counts). */
+  titheCut(): number {
+    let cut = 0;
+    for (const o of this.enemies) if (o.alive && o.def.tithe) cut = Math.max(cut, o.def.tithe);
+    return cut;
+  }
+
   bountyMult(e: Enemy): number {
     const h = this.hero;
     const daily = this.mods.bountyMult;
@@ -1626,7 +1656,7 @@ export class BattleSim {
         target = this.findSoldierTarget(s, s.anchor);
         if (target) {
           s.targetUid = target.uid;
-          if (!target.blockedBy) target.blockedBy = s.uid;
+          if (!target.blockedBy && !target.def.trample) target.blockedBy = s.uid;
         }
       }
       if (target) {
@@ -2059,7 +2089,7 @@ export class BattleSim {
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.
-      const bounty = e.revived ? 0 : Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e));
+      const bounty = e.revived ? 0 : Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e) * (1 - this.titheCut()));
       if (!e.revived && !e.def.boss && !e.def.revive) this.fallen.push({ id: e.def.id, path: e.path, dist: e.dist, pos: { ...e.pos }, at: this.time });
       if (this.fallen.length > 40) this.fallen.splice(0, this.fallen.length - 40);
       this.coins += bounty;

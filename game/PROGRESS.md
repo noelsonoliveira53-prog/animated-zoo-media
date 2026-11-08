@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **230** (next balance pass at iteration 235)
+Iteration counter: **231** (next balance pass at iteration 235)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1459,14 +1459,23 @@ Iteration counter: **230** (next balance pass at iteration 235)
   - Polish: when a purchase opens the next store tier, a golden "<Tier> unlocked!" banner sweeps across that row with a fanfare and a run of spark bursts. Screenshot `screenshots/230.png`.
   - Balance: the store was too strong, so its numbers were cut (see Balance Notes). New `scripts/store-balance.ts` compares win rates with no store against a fully bought one; `playLevel` takes an optional perks argument. 258 tests.
 
+- **Iteration 231**: level graphics overhaul part 1, **shared lighting, roads and shadows** (applies to all 125 levels).
+  - Lighting: a generated canvas overlay (`fx_vignette`) with warm light pooling from the top-left and a soft dark vignette round the edges. It sits under the HUD.
+  - Roads: a soft drop shadow under every road so it reads as worn into the ground, a sunlit stripe down the middle, and glinting highlights on the pebbles.
+  - Shadows: every ground enemy now casts a soft shadow (hidden while burrowed; flyers already had one), and every built tower stands on a ground shadow that is removed on sell.
+  - Clean-up: tower motes and sparks were toned down (rarer motes, fewer and smaller sparks), because many maxed towers looked busy in the screenshots.
+  - Screenshots `screenshots/231.png` (meadow) and `231-canyon.png` (late level, many towers). No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
-   shadows under towers and enemies, and animated water. One theme family per iteration.
+1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
+   richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
+   snow drifts), animated water/lava pools (moving highlights and ripple rings), and a themed road texture. Start with the
+   meadow/grove regions (1–2), then frost, ember, dusk and so on.
 
 ## Known Bugs
 - (none known)
@@ -1490,7 +1499,7 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 
 - That caps the store at +27% tower damage, +180 coins, ×0.77 spell cooldown, +34% hero health and +22% bounty.
 - After the cut (none → maxed): level 5 100/50/100 → 100/100/100, level 30 75/25/25 → 100/75/100, level 60 75/50/0 → 100/100/0, level 90 100/25/0 → 100/75/75, level 120 75/25/0 → 100/100/100, level 125 100/75/0 → 100/100/100.
-- A fully bought store (about 75k coins and 60k glowsap) is a long-term reward and still makes bosses very winnable. The casual gain is the intended effect.
+- A fully bought store (about 70k coins and 52k glowsap) is a long-term reward and still makes bosses very winnable. The casual gain is the intended effect.
 - **Watch**: the novice jumps on cliff-edge levels (120, 125). If players report the late game feels trivial with a maxed store, trim towerDamage further.
 **Iteration 225** (POLISH + BALANCE): no sim changes since iteration 220 (only visuals, dev mode and settings). A 4-seed sanity sweep matches earlier results within noise:
 

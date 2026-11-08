@@ -49,7 +49,8 @@ export class BattleScene extends Phaser.Scene {
   private enemyViews = new Map<number, EnemyView>();
   private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
-  private fx!: TowerFx; // per-tower launch flashes, trails, impacts and tier auras
+  private fx!: TowerFx;
+  private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
@@ -134,6 +135,7 @@ export class BattleScene extends Phaser.Scene {
     this.spellMode = null;
     this.strikeViews.clear();
     this.towerViews = this.level.slots.map(() => null);
+    this.towerShadows.clear();
     this.slotViews = [];
     this.menu = null;
     this.jamG = null;
@@ -143,6 +145,7 @@ export class BattleScene extends Phaser.Scene {
     music.setMood('battle');
     music.setTheme(themeForRegion(regionOf(this.levelIndex)));
     this.drawMap();
+    this.drawLighting();
     this.rangeRing = this.add.graphics().setDepth(5);
 
     this.level.slots.forEach((s, i) => {
@@ -268,9 +271,13 @@ export class BattleScene extends Phaser.Scene {
       g.lineBetween(x, y, x + 3, y - 8);
     }
     // roads: edge then fill, with round joints
+    // a soft drop shadow under every road first, so the roads sit slightly sunk into the ground
+    for (const pts of this.level.paths) this.strokePath(g, pts.map((p) => ({ x: p.x + 3, y: p.y + 5 })), 72, 0x000000, 0.12);
     for (const pts of this.level.paths) {
       this.strokePath(g, pts, 64, theme.roadEdge);
       this.strokePath(g, pts, 52, theme.road);
+      // a sunlit stripe down the middle of the road, worn smooth by feet
+      this.strokePath(g, pts, 26, Phaser.Display.Color.ValueToColor(theme.road).lighten(8).color, 0.35);
       // pebbles
       for (let i = 0; i < 50; i++) {
         const seg = rnd.between(1, pts.length - 1);
@@ -281,6 +288,8 @@ export class BattleScene extends Phaser.Scene {
         const py = a.y + (b.y - a.y) * t + rnd.between(-18, 18);
         g.fillStyle(theme.roadEdge, 0.7);
         g.fillCircle(px, py, rnd.between(2, 4));
+        g.fillStyle(0xffffff, 0.18);
+        g.fillCircle(px - 1, py - 1, 1.5);
       }
     }
     // ponds
@@ -1080,14 +1089,37 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
-  private strokePath(g: Phaser.GameObjects.Graphics, pts: Vec2[], width: number, color: number): void {
-    g.lineStyle(width, color, 1);
+  private strokePath(g: Phaser.GameObjects.Graphics, pts: Vec2[], width: number, color: number, alpha = 1): void {
+    g.lineStyle(width, color, alpha);
     g.beginPath();
     g.moveTo(pts[0].x, pts[0].y);
     for (let i = 1; i < pts.length; i++) g.lineTo(pts[i].x, pts[i].y);
     g.strokePath();
-    g.fillStyle(color, 1);
+    g.fillStyle(color, alpha);
     for (const p of pts) g.fillCircle(p.x, p.y, width / 2);
+  }
+
+  /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */
+  private drawLighting(): void {
+    const key = 'fx_vignette';
+    if (!this.textures.exists(key)) {
+      const tex = this.textures.createCanvas(key, GAME_W, GAME_H);
+      if (tex) {
+        const ctx = tex.getContext();
+        const light = ctx.createRadialGradient(GAME_W * 0.25, GAME_H * 0.15, 40, GAME_W * 0.25, GAME_H * 0.15, GAME_W * 0.75);
+        light.addColorStop(0, 'rgba(255,240,200,0.10)');
+        light.addColorStop(1, 'rgba(255,240,200,0)');
+        ctx.fillStyle = light;
+        ctx.fillRect(0, 0, GAME_W, GAME_H);
+        const vig = ctx.createRadialGradient(GAME_W / 2, GAME_H / 2, GAME_H * 0.42, GAME_W / 2, GAME_H / 2, GAME_W * 0.68);
+        vig.addColorStop(0, 'rgba(10,14,24,0)');
+        vig.addColorStop(1, 'rgba(10,14,24,0.38)');
+        ctx.fillStyle = vig;
+        ctx.fillRect(0, 0, GAME_W, GAME_H);
+        tex.refresh();
+      }
+    }
+    this.add.image(0, 0, key).setOrigin(0, 0).setDepth(2900);
   }
 
   // ---------- HUD ----------
@@ -2571,6 +2603,7 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: img, scaleX: 1, scaleY: 1, duration: 300, ease: 'Back.easeOut' });
         this.towerViews[t.slot] = img;
         this.fx.placed(t, img);
+        if (!this.towerShadows.has(t.slot)) this.towerShadows.set(t.slot, this.add.ellipse(t.pos.x + 4, t.pos.y + 8, 74, 22, 0x000000, 0.22).setDepth(t.pos.y - 2));
         this.slotViews[t.slot].setAlpha(0.6);
         this.particles.setParticleTint(0xd9c39a);
         this.particles.explode(12, t.pos.x, t.pos.y + 6);
@@ -2580,6 +2613,8 @@ export class BattleScene extends Phaser.Scene {
       case 'sell': {
         const v = this.towerViews[ev.tower.slot];
         this.fx.removed(ev.tower.slot);
+        this.towerShadows.get(ev.tower.slot)?.destroy();
+        this.towerShadows.delete(ev.tower.slot);
         if (v) {
           this.tweens.killTweensOf(v);
           this.tweens.add({ targets: v, scale: 0, alpha: 0, duration: 200, onComplete: () => v.destroy() });
@@ -2604,7 +2639,10 @@ export class BattleScene extends Phaser.Scene {
   private addEnemyView(e: Enemy): void {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
-    const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
+    // every critter casts a soft ground shadow (flyers a smaller, fainter one far below them)
+    const shadow = e.def.flying
+      ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22)
+      : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, 0.2);
     const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
     this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0 });
   }
@@ -2732,7 +2770,7 @@ export class BattleScene extends Phaser.Scene {
         const spotted = this.sim.towers.some((t) => t && !t.rally && Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y) <= veil);
         v.sprite.setAlpha(spotted ? 1 : 0.32 + Math.sin(v.bob * 1.5) * 0.1);
       }
-      v.shadow?.setPosition(e.pos.x, e.pos.y + 4).setDepth(e.pos.y - 1);
+      v.shadow?.setPosition(e.pos.x, e.pos.y + (e.def.flying ? 4 : e.def.radius * 0.72)).setDepth(e.pos.y - 1).setVisible(!e.underground);
       if (v.mound) {
         v.mound.setVisible(e.underground).setPosition(e.pos.x, e.pos.y + 2).setDepth(e.pos.y);
         v.sprite.setVisible(!e.underground);

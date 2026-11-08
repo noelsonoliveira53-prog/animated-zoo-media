@@ -37,7 +37,7 @@ export class TowerFx {
   constructor(private scene: Phaser.Scene) {
     this.sparks = scene.add.particles(0, 0, 'dot', {
       speed: { min: 40, max: 160 },
-      scale: { start: 0.45, end: 0 },
+      scale: { start: 0.34, end: 0 },
       lifespan: { min: 180, max: 360 },
       blendMode: Phaser.BlendModes.ADD,
       emitting: false,
@@ -87,7 +87,7 @@ export class TowerFx {
       const core = this.scene.add.circle(top.x, top.y, 6, 0xffffff, 1).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
       this.scene.tweens.add({ targets: core, scale: 2.4, alpha: 0, duration: 220, onComplete: () => core.destroy() });
       this.sparks.setParticleTint(color);
-      this.sparks.explode(5, top.x, top.y);
+      this.sparks.explode(3, top.x, top.y);
       return;
     }
     // the bowstring snaps: a bright flick and a little puff of sparks pointing at the target
@@ -95,7 +95,7 @@ export class TowerFx {
     this.scene.tweens.add({ targets: flash, scale: 2.2, alpha: 0, duration: 140, onComplete: () => flash.destroy() });
     const a = Math.atan2(p.lastTargetPos.y - top.y, p.lastTargetPos.x - top.x);
     this.sparks.setParticleTint(color);
-    this.sparks.explode(4, top.x + Math.cos(a) * 10, top.y + Math.sin(a) * 10);
+    this.sparks.explode(2, top.x + Math.cos(a) * 10, top.y + Math.sin(a) * 10);
     if (view && !motion.reduced) this.scene.tweens.add({ targets: view, angle: Math.cos(a) > 0 ? -3 : 3, duration: 60, yoyo: true });
   }
 
@@ -125,7 +125,7 @@ export class TowerFx {
     this.trails.delete(uid);
     if (motion.lowFx) {
       this.sparks.setParticleTint(t.color);
-      this.sparks.explode(4, x, y);
+      this.sparks.explode(2, x, y);
       return;
     }
     if (t.kind === 'boulder') {
@@ -165,7 +165,7 @@ export class TowerFx {
       }
       this.scene.tweens.add({ targets: g, scale: 1.7, alpha: 0, rotation: 0.4, duration: 380, onComplete: () => g.destroy() });
       this.sparks.setParticleTint(0xbfe8ff);
-      this.sparks.explode(10, x, y);
+      this.sparks.explode(6, x, y);
       return;
     }
     if (t.spec === 'quake') {
@@ -203,12 +203,12 @@ export class TowerFx {
       const flash = this.scene.add.circle(x, y, 10, 0xffffff, 0.9).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
       this.scene.tweens.add({ targets: flash, scale: 0.2, alpha: 0, duration: 160, onComplete: () => flash.destroy() });
       this.sparks.setParticleTint(t.color);
-      this.sparks.explode(10, x, y);
+      this.sparks.explode(6, x, y);
       return;
     }
     if (t.kind === 'thornbow') {
       this.sparks.setParticleTint(t.color);
-      this.sparks.explode(7, x, y);
+      this.sparks.explode(4, x, y);
       const g = this.scene.add.graphics().setDepth(2600);
       g.lineStyle(2, 0xc89a5a, 1);
       for (let k = 0; k < 4; k++) {
@@ -236,7 +236,7 @@ export class TowerFx {
     g.strokePath();
     this.scene.tweens.add({ targets: g, alpha: 0, duration: 140, onComplete: () => g.destroy() });
     this.sparks.setParticleTint(0xd8ecff);
-    this.sparks.explode(3, to.x, to.y - 6);
+    this.sparks.explode(2, to.x, to.y - 6);
   }
 
   /** A soldier pops back out of its burrow: a spray of earth and a little dust ring. */
@@ -360,10 +360,10 @@ export class TowerFx {
         x: { min: tower.pos.x - 26, max: tower.pos.x + 26 },
         y: { min: tower.pos.y - 10, max: tower.pos.y + 6 },
         speedY: { min: -30, max: -14 },
-        scale: { start: 0.3, end: 0 },
-        alpha: { start: 0.8, end: 0 },
-        lifespan: 1400,
-        frequency: tier >= 3 ? 220 : 420,
+        scale: { start: 0.26, end: 0 },
+        alpha: { start: 0.6, end: 0 },
+        lifespan: 1300,
+        frequency: tier >= 3 ? 520 : 900,
         tint: tower.spec ? 0xfff0c0 : st.color,
         blendMode: Phaser.BlendModes.ADD,
       });

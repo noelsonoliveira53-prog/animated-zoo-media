@@ -1,4 +1,4 @@
-// Leak check: plays a busy level and compares live tweens, timers and display objects early vs later.
+// Leak check (`node scripts/leak-check.mjs <levelIdx> [idle]`): plays a busy level and compares live tweens, timers and display objects early vs later.
 import { createRequire } from 'node:module';
 import { execSync } from 'node:child_process';
 import { preview } from 'vite';
@@ -16,9 +16,11 @@ await page.goto('http://localhost:4403/');
 await page.waitForTimeout(1000);
 await page.evaluate((i) => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: i }), idx);
 await page.waitForTimeout(1500);
+if (process.argv[3] === 'idle') await page.evaluate(() => { window.__idleOnly = true; });
 await page.evaluate(() => {
   const s = window.__game.scene.getScene('Battle');
   s.level.slots.forEach((_, k) => { s.sim.build(k, ['thornbow', 'glimmer', 'boulder', 'burrow'][k % 4]); s.sim.upgrade(k); s.sim.upgrade(k); });
+  if (window.__idleOnly) return; // idle mode: towers only, no waves (isolates ambient and idle effects)
   s.sim.callNextWave();
   s.speed = 3;
   window.__callAll = setInterval(() => s.sim.callNextWave(), 4000);

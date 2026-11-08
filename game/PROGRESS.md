@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **260** (next balance pass at iteration 265)
+Iteration counter: **261** (next balance pass at iteration 265)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1683,14 +1683,21 @@ Iteration counter: **260** (next balance pass at iteration 265)
     - The simple autoplayer never repositions heroes to use blocking or healing, and Sorrel was last tuned in iteration 175 after overshooting.
     - So nothing changed; kept as a watch item (see Balance Notes). 270 tests.
 
+- **Iteration 261: tower idle life.** New `TowerFx.idleLife`, at every tier, on top of the tier auras and branch idles:
+  - **Thornbow:** turns to face what it shoots, and glances the other way now and then when it hasn't fired for 2.5 s.
+  - **Glimmer:** the orb breathes, a soft violet glow that swells and bobs.
+  - **Boulder:** turns toward its target, and gives an idle creak (a small rock back and forth) between volleys.
+  - **Burrow:** a little critter (round head, ears, eyes) pops up through the top of the round door every few seconds, looks about and ducks back.
+  - Positions follow the 72×100 tower textures. Timers are per slot and removed on upgrade or sell. Off with Reduce Motion; skipped with Graphics: Low like the other auras.
+  - New `scripts/idle-check.mjs` (waits for a peek, pauses, 2× close-up; no console errors). `leak-check.mjs` gained an `idle` mode (towers, no waves): tweens 72 → 75 and objects 157 → 159 over 20 s, steady. The busy-mode growth tracks the waves being called every 4 s. Screenshot `screenshots/261.png`. 270 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower idle life: archers glance around, mage orbs bob, boulder arms creak back between shots and burrow flags flutter (where not already animated).
-2. Enemy walk cycles: a waddle or hop per enemy family instead of the shared bob, and flyers flap.
+1. Enemy walk cycles: a waddle or hop per enemy family instead of the shared bob, and flyers flap.
 
 ## Known Bugs
 - (none known)

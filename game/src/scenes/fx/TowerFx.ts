@@ -33,6 +33,8 @@ export class TowerFx {
   private trails = new Map<number, Trail>();
   private auras = new Map<number, Phaser.GameObjects.GameObject[]>();
   private loops = new Map<number, Phaser.Tweens.Tween[]>(); // tweens driving plain objects (not game objects)
+  private idleTimers = new Map<number, Phaser.Time.TimerEvent>(); // per-slot idle behaviour (glances, peeks, creaks)
+  private lastShot = new Map<number, number>(); // slot → scene time of the last shot
 
   constructor(private scene: Phaser.Scene) {
     this.sparks = scene.add.particles(0, 0, 'dot', {
@@ -69,6 +71,9 @@ export class TowerFx {
       this.sparks.setParticleTint(0xffe8a0);
       for (const da of [-0.5, -0.25, 0, 0.25, 0.5]) this.sparks.explode(1, top.x + Math.cos(a0 + da) * 16, top.y + Math.sin(a0 + da) * 16);
     }
+    this.lastShot.set(tower.slot, this.scene.time.now);
+    // archers and catapults turn to face what they shoot at
+    if (view && (tower.def.id === 'thornbow' || tower.def.id === 'boulder')) view.setFlipX(p.lastTargetPos.x < tower.pos.x - 4);
     const top = { x: tower.pos.x, y: tower.pos.y - st.muzzle };
     if (tower.def.id === 'boulder') {
       // the catapult arm thumps: the tower squats, a dust puff bursts at its feet and a few pebbles skitter out
@@ -370,9 +375,58 @@ export class TowerFx {
       motes.setDepth(tower.pos.y + 2);
       objs.push(motes);
     }
+    if (!motion.reduced) this.idleLife(tower, view, tier, objs);
     if (tower.spec && !motion.reduced) this.branchIdle(tower, st, objs);
     if (!motion.reduced) this.scene.tweens.add({ targets: view, scaleX: 1.03, duration: 1300 + (tower.slot % 5) * 90, yoyo: true, repeat: -1, ease: 'Sine.easeInOut', delay: 320 });
     this.auras.set(tower.slot, objs);
+  }
+
+  /**
+   * Small signs of life between shots, at every tier: the glimmer orb breathes, a burrow critter peeks out of its
+   * door, idle archers glance about and idle catapults creak. Positions follow the tower textures (72×100, drawn
+   * centred 34 px above the pad, so texture (tx, ty) lands at (x − 36 + tx, y − 84 + ty)).
+   */
+  private idleLife(tower: Tower, view: Phaser.GameObjects.Image, tier: number, objs: Phaser.GameObjects.GameObject[]): void {
+    const x = tower.pos.x;
+    const y = tower.pos.y;
+    const idle = () => this.scene.time.now - (this.lastShot.get(tower.slot) ?? -1e9) > 2500;
+    let every = 0;
+    let act: (() => void) | null = null;
+    switch (tower.def.id) {
+      case 'glimmer': {
+        const oy = y - (46 + Math.min(tier, 3) * 6);
+        const orb = this.scene.add.circle(x, oy, 10 + tier, GLIM_VIOLET, 0.35).setDepth(view.depth + 1).setBlendMode(Phaser.BlendModes.ADD);
+        objs.push(orb);
+        this.scene.tweens.add({ targets: orb, scale: 1.35, alpha: 0.12, y: oy - 3, duration: 1200 + (tower.slot % 4) * 150, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+        break;
+      }
+      case 'burrow': {
+        // the critter: a round head with ears and eyes, popping up through the top of the round door
+        const peek = this.scene.add.container(x, y - 6).setDepth(view.depth + 1).setScale(1, 0);
+        peek.add(this.scene.add.circle(-4, -6, 2.5, 0x8a6a4a));
+        peek.add(this.scene.add.circle(4, -6, 2.5, 0x8a6a4a));
+        peek.add(this.scene.add.circle(0, 0, 6, 0x9a7a58).setStrokeStyle(1, 0x3a2a1a));
+        peek.add(this.scene.add.circle(-2, -1, 1.1, 0x111111));
+        peek.add(this.scene.add.circle(2, -1, 1.1, 0x111111));
+        objs.push(peek);
+        every = 3400 + (tower.slot % 5) * 500;
+        act = () => {
+          if (!peek.active) return;
+          peek.setScale(1, 0).setY(y - 6);
+          this.scene.tweens.add({ targets: peek, scaleY: 1, y: y - 12, duration: 220, ease: 'Back.easeOut', yoyo: true, hold: 900 });
+        };
+        break;
+      }
+      case 'thornbow':
+        every = 2800 + (tower.slot % 4) * 400;
+        act = () => idle() && view.active && view.setFlipX(!view.flipX);
+        break;
+      case 'boulder':
+        every = 4600 + (tower.slot % 4) * 500;
+        act = () => idle() && view.active && this.scene.tweens.add({ targets: view, angle: tower.slot % 2 ? 2.5 : -2.5, duration: 160, yoyo: true, repeat: 1, ease: 'Sine.easeInOut' });
+        break;
+    }
+    if (act && every) this.idleTimers.set(tower.slot, this.scene.time.addEvent({ delay: every, loop: true, startAt: Math.random() * every, callback: act }));
   }
 
   /** Each specialization branch's idle signature, layered on top of the tier aura. */
@@ -420,5 +474,8 @@ export class TowerFx {
     this.auras.delete(slot);
     for (const tw of this.loops.get(slot) ?? []) tw.remove();
     this.loops.delete(slot);
+    this.idleTimers.get(slot)?.remove();
+    this.idleTimers.delete(slot);
+    this.lastShot.delete(slot);
   }
 }

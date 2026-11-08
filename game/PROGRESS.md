@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **173** (next balance pass at iteration 175)
+Iteration counter: **174** (next balance pass at iteration 175)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1235,13 +1235,23 @@ Iteration counter: **173** (next balance pass at iteration 175)
   - The level has 12 pads, a long road from the left and a short one from the top. One new test (219 total).
   - Check: `scripts/combqueen-check.mjs`. Her first phase called 4 Waxbacks and there were no console errors.
     Screenshot `screenshots/173.png`.
+- **Iteration 174** (village break): a new building, the **Honeycomb Apiary**. It needs Grove Hall 3 (one per village,
+  3 levels).
+  - Each level gives the hero +10% max health in every battle. The bonus also holds for trained heroes and through
+    in-battle level-ups.
+  - The art is painted hive-boxes on stands (more boxes as it levels), bees and a honey pot. The info panel shows the
+    bonus, and the battle start banner adds "hero +N% health".
+  - The build shop now has 9 cards and still fits.
+  - Polish: long building names no longer run into the panel's "Needs Grove Hall" / upgrade column; the title now shrinks
+    to fit.
+  - One new test (220 total). Check: `scripts/apiary-check.mjs`. Fen started a battle with 192/160 hp at Apiary level 2,
+    and there were no console errors. Screenshots `screenshots/174.png` (shop) and `174-panel.png`.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. A breather (raid or village variety) before region 20.
-2. Region 20: a new theme, traits and five levels.
+1. Region 20: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)

@@ -110,7 +110,7 @@ import { BattleSim } from '../src/systems/BattleSim';
 describe('village → battle perks', () => {
   it('village buildings grant battle perks', () => {
     const v = newVillage(T0);
-    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1 });
+    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1 });
     v.buildings.push({ uid: 99, type: 'workshop', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.push({ uid: 98, type: 'barracks', level: 1, col: 4, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.find((b) => b.type === 'townhall')!.level = 3;
@@ -234,5 +234,23 @@ describe('collect all', () => {
     expect(got.glowsap).toBe(200);
     expect(v.coins).toBe(400);
     expect(collectAll(v, later).per.length).toBe(0);
+  });
+});
+
+describe('Honeycomb Apiary', () => {
+  it('raises the hero’s max health per level, and keeps the bonus through level-ups', () => {
+    const v = newVillage(T0);
+    v.buildings.push({ uid: 96, type: 'apiary', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
+    const p = battlePerks(v);
+    expect(p.heroHpMult).toBeCloseTo(1.2);
+    const lvl = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20,
+      paths: [[{ x: 0, y: 300 }, { x: 1200, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }],
+      theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 } };
+    const plain = new BattleSim(lvl, 'bramble');
+    const blessed = new BattleSim(lvl, 'bramble', { heroHpMult: p.heroHpMult });
+    expect(blessed.hero!.maxHp).toBe(Math.round(plain.hero!.maxHp * 1.2));
+    const trained = new BattleSim(lvl, 'bramble', { heroHpMult: p.heroHpMult, heroLevel: 3 });
+    const trainedPlain = new BattleSim(lvl, 'bramble', { heroLevel: 3 });
+    expect(trained.hero!.maxHp).toBe(Math.round(trainedPlain.hero!.maxHp * 1.2));
   });
 });

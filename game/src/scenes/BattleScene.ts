@@ -77,7 +77,7 @@ export class BattleScene extends Phaser.Scene {
   private heroLevelText!: Phaser.GameObjects.Text;
   private skillText!: Phaser.GameObjects.Text;
   private bossBar!: Phaser.GameObjects.Graphics;
-  private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1 };
+  private perks: BattlePerks = { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1 };
   private seen = new Set<string>();
   private tally = { kills: 0, specs: 0, bosses: [] as string[] };
   private bossLabel!: Phaser.GameObjects.Text;
@@ -225,6 +225,7 @@ export class BattleScene extends Phaser.Scene {
     if (this.perks.bonusCoins) bonus.push(`+${this.perks.bonusCoins} coins`);
     if (this.perks.towerDamageMult > 1) bonus.push(`+${Math.round((this.perks.towerDamageMult - 1) * 100)}% tower damage`);
     if (this.perks.rangerMult > 1) bonus.push(`Rangers +${Math.round((this.perks.rangerMult - 1) * 100)}%`);
+    if (this.perks.heroHpMult > 1 && this.sim.hero) bonus.push(`hero +${Math.round((this.perks.heroHpMult - 1) * 100)}% health`);
     if (this.perks.spellCdMult < 1) bonus.push(`spells recharge ${Math.round((1 - this.perks.spellCdMult) * 100)}% faster`);
     if (this.sim.hero && this.sim.hero.level > 1) bonus.push(`${this.sim.hero.def.name} starts at Lv ${this.sim.hero.level}`);
     if (this.daily) {

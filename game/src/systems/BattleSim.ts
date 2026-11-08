@@ -286,6 +286,7 @@ export class BattleSim {
 
   /** Multiplier on spell cooldowns (from the village Moonpetal Shrine). */
   spellCdMult = 1;
+  heroHpMult = 1; // Honeycomb Apiary: the hero's max health is scaled by this
 
   /** Source of chance (crit rolls). Headless runs pass a seeded one so each seed replays exactly. */
   random: () => number = Math.random;
@@ -293,7 +294,7 @@ export class BattleSim {
   constructor(
     level: LevelDef,
     heroId: string | null = null,
-    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; spellCdMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; spellCdMult?: number; heroHpMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
   ) {
     this.level = level;
     if (opts.random) this.random = opts.random;
@@ -302,6 +303,7 @@ export class BattleSim {
     this.towerDamageMult = opts.towerDamageMult ?? 1;
     this.rangerMult = opts.rangerMult ?? 1;
     this.spellCdMult = opts.spellCdMult ?? 1;
+    this.heroHpMult = opts.heroHpMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
     this.coins = Math.round(level.startCoins * this.mods.startCoinsMult) + (opts.bonusCoins ?? 0);
     this.lives = this.mods.lives ?? level.lives;
@@ -315,8 +317,8 @@ export class BattleSim {
         def,
         pos: { ...spawn },
         dest: null,
-        hp: def.hp,
-        maxHp: def.hp,
+        hp: Math.round(def.hp * this.heroHpMult),
+        maxHp: Math.round(def.hp * this.heroHpMult),
         alive: true,
         respawnTimer: 0,
         level: 1,
@@ -332,7 +334,7 @@ export class BattleSim {
       if (start > 1) {
         this.hero.level = start;
         this.hero.xp = HERO_XP[start - 1];
-        this.hero.maxHp = this.hero.hp = Math.round(def.hp * heroLevelMult(start));
+        this.hero.maxHp = this.hero.hp = Math.round(def.hp * heroLevelMult(start) * this.heroHpMult);
       }
     }
   }
@@ -487,7 +489,7 @@ export class BattleSim {
     if (lvl > h.level) {
       const frac = h.hp / h.maxHp;
       h.level = lvl;
-      h.maxHp = Math.round(h.def.hp * heroLevelMult(lvl));
+      h.maxHp = Math.round(h.def.hp * heroLevelMult(lvl) * this.heroHpMult);
       h.hp = Math.max(h.hp, Math.round(h.maxHp * Math.max(frac, 0.5)));
       this.events.push({ type: 'heroLevel', hero: h });
     }

@@ -2568,6 +2568,44 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + 22, cy - 29, 3, 7);
         break;
       }
+      case 'apiary': {
+        // a little meadow with painted hive-boxes stacked on stands, a few bees, and a honey pot
+        g.fillStyle(0x8ab84a, 0.35);
+        g.fillEllipse(cx, cy + 14, 66 * k, 26 * k);
+        const boxes = 1 + lvl;
+        for (let i = 0; i < boxes; i++) {
+          const bx = cx - 20 + (i % 2) * 26;
+          const by = cy + 8 - Math.floor(i / 2) * 18 - (i % 2) * 4;
+          g.fillStyle(0x7a5a3a, 1);
+          g.fillRect(bx - 1, by + 10, 3, 8);
+          g.fillRect(bx + 17, by + 10, 3, 8);
+          g.fillStyle([0xf0e0b0, 0x9ad0e8, 0xf0b8c8][i % 3], 1);
+          g.fillRect(bx - 4, by - 6, 26, 16);
+          g.lineStyle(2, C.ink, 1);
+          g.strokeRect(bx - 4, by - 6, 26, 16);
+          g.lineStyle(1.5, 0x8a6a40, 0.8);
+          g.lineBetween(bx - 4, by + 1, bx + 22, by + 1);
+          g.fillStyle(0x3a2a1a, 1);
+          g.fillRect(bx + 5, by + 6, 8, 3);
+          g.fillStyle(0xc8a050, 1);
+          g.fillRect(bx - 6, by - 10, 30, 5);
+          g.lineStyle(1.5, C.ink, 1);
+          g.strokeRect(bx - 6, by - 10, 30, 5);
+        }
+        g.fillStyle(0xe8a030, 1);
+        g.fillCircle(cx + 26, cy + 18, 7);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeCircle(cx + 26, cy + 18, 7);
+        g.fillStyle(0xffd060, 1);
+        g.fillEllipse(cx + 26, cy + 12, 10, 4);
+        for (const [hx, hy] of [[-26, -26], [12, -34], [30, -16]]) {
+          g.fillStyle(0xffc83a, 1);
+          g.fillEllipse(cx + hx, cy + hy, 7, 5);
+          g.fillStyle(0x1a1208, 1);
+          g.fillRect(cx + hx - 0.5, cy + hy - 2.5, 1.5, 5);
+        }
+        break;
+      }
       case 'wall': {
         g.clear();
         g.fillStyle(0x000000, 0.2);

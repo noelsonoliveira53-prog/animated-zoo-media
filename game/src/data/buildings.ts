@@ -1,6 +1,6 @@
 // Village buildings. Costs are in Coins (gold) and Glowsap (the glowing tree-sap second resource).
 
-export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'wall';
+export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'apiary' | 'wall';
 
 export interface Cost {
   coins?: number;
@@ -136,6 +136,19 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
       { cost: { coins: 5000, glowsap: 4200 }, time: 1500, th: 4 },
     ],
   },
+  apiary: {
+    id: 'apiary',
+    name: 'Honeycomb Apiary',
+    blurb: 'Painted hive-boxes where friendly bees from the Honeycomb Hills make royal jelly. Each level sends your hero into battle tougher.',
+    size: 2,
+    color: 0xf0b030,
+    maxCount: [0, 0, 1, 1, 1],
+    levels: [
+      { cost: { coins: 1400, glowsap: 1000 }, time: 240, th: 3 },
+      { cost: { coins: 3200, glowsap: 2600 }, time: 900, th: 3 },
+      { cost: { coins: 6500, glowsap: 5200 }, time: 2100, th: 4 },
+    ],
+  },
   wall: {
     id: 'wall',
     name: 'Bramble Wall',
@@ -151,10 +164,13 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   },
 };
 
-export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'wall'];
+export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'apiary', 'wall'];
 
 /** Moonpetal Shrine: battle spell cooldowns shrink by this fraction per level. */
 export const SHRINE_CD_PER_LEVEL = 0.06;
+
+/** Honeycomb Apiary: the hero's max health grows by this fraction per level. */
+export const APIARY_HP_PER_LEVEL = 0.1;
 
 export const VILLAGE_COLS = 22;
 export const VILLAGE_ROWS = 13;

@@ -840,9 +840,10 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep06.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "video_id": "t2AvRlJHZaI"
  },
  {
   "file": "gizmo/gz3d_ep06.mp4",

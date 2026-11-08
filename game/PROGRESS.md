@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **222** (next balance pass at iteration 225)
+Iteration counter: **223** (next balance pass at iteration 225)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1382,23 +1382,29 @@ Iteration counter: **222** (next balance pass at iteration 225)
   - Idle motion, pulses and motes are skipped with reduced motion. Tween clean-up on upgrade and sell avoids leaks.
   - Check: `scripts/towerfx-check.mjs <name> <towerId>` (builds tiers 0–2 plus both branches and sends a column of enemies). Screenshots `screenshots/222.png` and `222-zoom0..2.png`. No console errors, 253 tests.
 
+- **Iteration 223**: tower VFX overhaul part 2, **Glimmer (mage)**. `TowerFx` now has a per-kind style table (colour plus muzzle height).
+  - Each shot gathers light: a violet ring rushes inward and a white core flares.
+  - Bolts leave a crackling arcane streak: a soft wide violet glow with a jittering white filament.
+  - Impacts throw out an expanding rune ring, a flash and violet sparks.
+  - Built Glimmers get a ring of floating runes circling the orb (3 plus the tier count), spinning faster at higher tiers, plus the violet tier aura and motes.
+  - Rune-spin tweens are tracked per slot and removed on sell/upgrade, so nothing draws to destroyed graphics.
+  - Screenshots `screenshots/223.png` and `223-zoom0..2.png`. No console errors, 253 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower VFX overhaul, Glimmer (mage): a charging orb before each bolt, a crackling bolt with an afterglow trail, an
-   arcane burst on impact, a floating rune ring idle animation, and a per-tier look.
-2. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
+1. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
    ground, a big impact with debris, a shockwave ring and a light camera kick, and a per-tier look.
-3. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
+2. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
    a per-tier look.
-4. Specialization branches: a signature effect for each of the 8 top-tier branches.
-5. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+3. Specialization branches: a signature effect for each of the 8 top-tier branches.
+4. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
    Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
-6. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+5. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

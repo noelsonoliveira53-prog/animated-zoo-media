@@ -1,0 +1,290 @@
+{
+ "style": "upbeat preschool kids electro pop sing-along, cheerful playful male vocal, clear diction, bright synths, bleepy robot sounds, handclaps, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nDay and night, day and night,\nThe Earth spins round from dark to light!\nSun comes up and sun goes down,\nOur big Earth keeps spinning round!\n\n[Verse 1]\nIn the morning, the sun says hi,\nRising up into the sky!\nThe Earth is spinning, slow and steady,\nWake up, wake up, the day is ready!\n\n[Verse 2]\nWhen our side turns away from the sun,\nNight time comes and the day is done!\nThe moon and stars come out to play,\nGoodnight sun, see you next day!\n\n[Chorus]\nDay and night, day and night,\nThe Earth spins round from dark to light!\nSun comes up and sun goes down,\nOur big Earth keeps spinning round!\n\n[Verse 3]\nOne whole spin takes a day,\nTwenty-four hours, hip hooray!\nSomewhere it's morning, somewhere it's night,\nOur spinning Earth is just right!\n\n[Bridge]\nSpin around like the Earth, whee!\nStretch up high like the sun, see!\nCurl up small like the night,\nThen wake up with the morning light!\n\n[Chorus]\nDay and night, day and night,\nThe Earth spins round from dark to light!\nSun comes up and sun goes down,\nOur big Earth keeps spinning round!\n\n[Outro]\nDay and night! Bye-bye, friends!",
+ "duration": 165,
+ "bpm": 118,
+ "key": "E Major",
+ "seed": 509,
+ "who_map": {},
+ "meta": {
+  "title": "Why Is There Day and Night? Science Song for Kids with Gizmo",
+  "card": "Day and Night!",
+  "thumb_text": "DAY & NIGHT?",
+  "description": "Why is there day and night? Gizmo the robot explains that the Earth spins: when our side faces the sun it's day, and when it turns away it's night. One spin takes 24 hours.\nKids spin like the Earth, stretch like the sun and curl up like the night. Ages 3-6.",
+  "tags": [
+   "day and night song",
+   "why is there day and night",
+   "earth spins",
+   "science song for kids",
+   "space for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "gz3d_ep07",
+  "title": "Day and Night!",
+  "channel": "gizmo",
+  "set": "sciencelab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "char": "gizmo",
+    "spot": "left",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    },
+    "yaw": 0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "close:host",
+     "wide",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "DAY & NIGHT!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       -3.2,
+       1.2,
+       3.6
+      ],
+      "opts": {
+       "size": 0.7
+      },
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       -3.0,
+       1.2,
+       3.6
+      ],
+      "word": "sun",
+      "opts": {
+       "size": 0.8
+      }
+     },
+     {
+      "type": "text",
+      "text": "SPIN!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7,
+      "word": "spinning,"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "wide",
+     "close:host",
+     "close:pal",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": [
+       3.0,
+       1.4,
+       3.6
+      ],
+      "word": "moon"
+     },
+     {
+      "type": "set_prop",
+      "name": "star",
+      "at": [
+       -3.0,
+       1.6,
+       3.6
+      ],
+      "word": "stars"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "DAY & NIGHT!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:pal"
+    ],
+    "energy": 0.9,
+    "jump": 0.2,
+    "props": [
+     {
+      "type": "text",
+      "text": "24 HOURS!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.6,
+      "word": "twenty-four"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPIN!",
+      "color": "#3b8be0",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "spin"
+     },
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#ffc107",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "stretch"
+     },
+     {
+      "type": "text",
+      "text": "CURL UP!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "curl"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "DAY & NIGHT!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "gz3d_ep07",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

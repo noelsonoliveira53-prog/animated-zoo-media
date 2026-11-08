@@ -1,0 +1,298 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nGarbage truck, garbage truck, clean, clean, clean!\nKeeping our town so neat and green!\nLift it up, dump it in, beep, beep, beep,\nGarbage truck makes the street so neat!\n\n[Verse 1]\nEarly in the morning, rumble, rumble, roar,\nHere comes the garbage truck, past my door!\nBig arms reach out and grab the bin,\nLift it up high and tip it in!\n\n[Chorus]\nGarbage truck, garbage truck, clean, clean, clean!\nKeeping our town so neat and green!\nLift it up, dump it in, beep, beep, beep,\nGarbage truck makes the street so neat!\n\n[Verse 2]\nPaper and bottles go in the blue,\nRecycling helps the planet too!\nBanana peels and apple cores,\nCompost makes the garden grow more!\n\n[Bridge]\nPick up a toy and put it away!\nClean up, clean up, every day!\nSweep, sweep, sweep and wipe, wipe, wipe,\nNow our room looks clean and bright!\n\n[Verse 3]\nThank you, driver, waving hi,\nHonk, honk, honk as you drive by!\nEvery street is clean and neat,\nGarbage truck, you can't be beat!\n\n[Chorus]\nGarbage truck, garbage truck, clean, clean, clean!\nKeeping our town so neat and green!\nLift it up, dump it in, beep, beep, beep,\nGarbage truck makes the street so neat!\n\n[Outro]\nClean, clean, clean! Bye-bye, trucks!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 512,
+ "who_map": {},
+ "meta": {
+  "title": "Garbage Truck Song! Clean Up Song for Kids | Tiny Truck Town",
+  "card": "Garbage Truck Song!",
+  "thumb_text": "GARBAGE TRUCK!",
+  "description": "The garbage truck is here! Sing along with the garbage truck as it lifts the bins, keeps Tiny Truck Town clean and helps with recycling and compost.\nKids clean up their toys, sweep and wipe, and say thank you to the driver. Ages 2-6.",
+  "tags": [
+   "garbage truck song",
+   "clean up song",
+   "recycling for kids",
+   "trucks for kids",
+   "garbage truck for kids",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep07",
+  "title": "Garbage Truck Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLEAN UP!",
+      "color": "#2fb54a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "RUMBLE!",
+      "color": "#ffc107",
+      "at": [
+       -2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "rumble,"
+     },
+     {
+      "type": "text",
+      "text": "LIFT!",
+      "color": "#2fb54a",
+      "at": [
+       2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "lift"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BEEP BEEP!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "RECYCLE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7,
+      "word": "recycling"
+     },
+     {
+      "type": "text",
+      "text": "COMPOST!",
+      "color": "#8a5a32",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "compost"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLEAN UP!",
+      "color": "#2fb54a",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "clean"
+     },
+     {
+      "type": "text",
+      "text": "SWEEP!",
+      "color": "#ffc107",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "sweep,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "THANK YOU!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.7,
+      "word": "thank"
+     },
+     {
+      "type": "set_prop",
+      "name": "cone",
+      "at": [
+       -3.0,
+       0.4,
+       3.6
+      ],
+      "word": "street"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLEAN UP!",
+      "color": "#2fb54a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#2fb54a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep07",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

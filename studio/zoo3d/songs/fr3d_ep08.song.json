@@ -1,0 +1,325 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nEat a rainbow, yum, yum, yum!\nEvery color, here they come!\nRed and orange, yellow, green,\nThe yummiest rainbow you've ever seen!\n\n[Verse 1]\nRed strawberries, sweet and bright,\nOrange carrots, crunchy bite!\nYellow bananas, peel and munch,\nColors for breakfast, colors for lunch!\n\n[Chorus]\nEat a rainbow, yum, yum, yum!\nEvery color, here they come!\nRed and orange, yellow, green,\nThe yummiest rainbow you've ever seen!\n\n[Verse 2]\nGreen broccoli, little trees,\nBlueberries, blue as the seas!\nPurple grapes, round and sweet,\nA rainbow plate is fun to eat!\n\n[Bridge]\nPick a color, one, two, three!\nTake a bite and smile with me!\nRub your tummy, round and round,\nHealthy food makes us strong and sound!\n\n[Verse 3]\nEvery color helps you grow,\nStrong and healthy, head to toe!\nFill your plate with every hue,\nA rainbow lunch for me and you!\n\n[Chorus]\nEat a rainbow, yum, yum, yum!\nEvery color, here they come!\nRed and orange, yellow, green,\nThe yummiest rainbow you've ever seen!\n\n[Outro]\nEat a rainbow! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 522,
+ "who_map": {},
+ "meta": {
+  "title": "Eat a Rainbow! Healthy Food Song for Kids | Fruity Friends",
+  "card": "Eat a Rainbow!",
+  "thumb_text": "EAT A RAINBOW!",
+  "description": "Eat a rainbow! Pipkiko and the Fruity Friends sing about red strawberries, orange carrots, yellow bananas, green broccoli, blueberries and purple grapes.\nA healthy eating song that teaches colors and good food habits. Ages 2-5.",
+  "tags": [
+   "eat a rainbow",
+   "healthy food song",
+   "fruit and vegetable song",
+   "healthy eating for kids",
+   "learn colors",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep08",
+  "title": "Eat a Rainbow!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "EAT A RAINBOW!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6
+     },
+     {
+      "type": "set_prop",
+      "name": "rainbow",
+      "at": [
+       0,
+       1.8,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "strawberries,",
+      "opts": {
+       "kind": "strawberry"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "bananas,",
+      "opts": {
+       "kind": "banana"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "YUM YUM!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "broccoli,",
+      "opts": {
+       "kind": "broccoli"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "grapes,",
+      "opts": {
+       "kind": "grape"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "one,"
+     },
+     {
+      "type": "text",
+      "text": "YUM!",
+      "color": "#ff5c8a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "tummy,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "plate",
+      "at": [
+       0,
+       0.8,
+       3.4
+      ],
+      "word": "plate"
+     },
+     {
+      "type": "text",
+      "text": "GROW!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "grow,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "EAT A RAINBOW!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

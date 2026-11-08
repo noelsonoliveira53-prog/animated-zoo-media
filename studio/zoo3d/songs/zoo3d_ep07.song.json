@@ -1,0 +1,382 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nHead, shoulders, knees and paws, knees and paws!\nHead, shoulders, knees and paws, knees and paws!\nEars and eyes and a nose and jaws,\nHead, shoulders, knees and paws!\n\n[Lion]\nThe lion shakes his fluffy mane,\nShake your head, now do it again!\nRoar, roar, touch your nose,\nHead, shoulders, knees and toes!\n\n[Elephant]\nThe elephant has great big ears,\nFlap, flap, flap, give a cheer!\nToot, toot, swing your arm,\nElephant trunk, safe from harm!\n\n[Chorus]\nHead, shoulders, knees and paws, knees and paws!\nHead, shoulders, knees and paws, knees and paws!\nEars and eyes and a nose and jaws,\nHead, shoulders, knees and paws!\n\n[Giraffe]\nThe giraffe has a long, long neck,\nStretch up tall, now let's check!\nMunch, munch, touch the sky,\nGiraffe neck reaches high!\n\n[Zebra]\nThe zebra stomps with stripy legs,\nThe hippo opens wide and begs!\nStomp your feet and open wide,\nSplash, splash, splash, side to side!\n\n[Bridge]\nFaster now, head, shoulders, go!\nKnees and paws, now nice and slow!\nTouch your nose and touch your ears,\nGive yourself a round of cheers!\n\n[Chorus]\nHead, shoulders, knees and paws, knees and paws!\nHead, shoulders, knees and paws, knees and paws!\nEars and eyes and a nose and jaws,\nHead, shoulders, knees and paws!\n\n[Outro]\nKnees and paws! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 504,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Head, Shoulders, Knees and Paws! Animal Song with Milo",
+  "card": "Head, Shoulders, Knees and Paws!",
+  "thumb_text": "KNEES AND PAWS!",
+  "description": "Head, shoulders, knees and paws! An animal twist on the classic body parts song with Milo, the lion, the elephant, the giraffe, the zebra and the hippo.\nKids touch their head, shoulders, knees and toes, shake like a lion, flap like an elephant and stretch like a giraffe. Ages 2-6.",
+  "tags": [
+   "head shoulders knees and toes",
+   "body parts song",
+   "animal song for kids",
+   "action song",
+   "zoo animals for kids",
+   "kids songs",
+   "nursery rhymes",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep07",
+  "title": "Head, Shoulders, Knees and Paws!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "HEAD!",
+      "color": "#ffb627",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "head,"
+     },
+     {
+      "type": "text",
+      "text": "PAWS!",
+      "color": "#ff7a00",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "paws,"
+     }
+    ]
+   },
+   {
+    "section": "lion1",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SHAKE!",
+      "color": "#ff7a00",
+      "at": [
+       -3.6,
+       -0.3,
+       2.5
+      ],
+      "size": 0.6,
+      "word": "shake"
+     }
+    ]
+   },
+   {
+    "section": "elephant1",
+    "shots": [
+     "close:elephant",
+     "wide",
+     "close:elephant",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FLAP!",
+      "color": "#5d6b8f",
+      "at": [
+       3.4,
+       0.4,
+       3.0
+      ],
+      "size": 0.6,
+      "word": "flap,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "KNEES!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "knees"
+     }
+    ]
+   },
+   {
+    "section": "giraffe1",
+    "shots": [
+     "giraffe",
+     "wide",
+     "giraffe",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#b8692c",
+      "at": [
+       3.2,
+       1.0,
+       3.0
+      ],
+      "size": 0.5,
+      "word": "stretch"
+     }
+    ]
+   },
+   {
+    "section": "zebra1",
+    "shots": [
+     "close:zebra",
+     "wide",
+     "close:hippo",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#25232b",
+      "at": [
+       3.6,
+       0.3,
+       2.6
+      ],
+      "size": 0.5,
+      "word": "stomp"
+     },
+     {
+      "type": "text",
+      "text": "SPLASH!",
+      "color": "#3db8ff",
+      "at": [
+       -3.6,
+       0.3,
+       2.6
+      ],
+      "size": 0.5,
+      "word": "splash,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FASTER!",
+      "color": "#ff7a00",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "faster"
+     },
+     {
+      "type": "text",
+      "text": "SLOW...",
+      "color": "#3db8ff",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "slow"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "HEAD!",
+      "color": "#ffb627",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "head,"
+     },
+     {
+      "type": "text",
+      "text": "PAWS!",
+      "color": "#ff7a00",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "paws,"
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep07",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

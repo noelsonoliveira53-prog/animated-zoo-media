@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { sfx } from './systems/audio';
+import './systems/dev'; // reads the dev-mode switch before any scene checks level locks
 import { BootScene } from './scenes/BootScene';
 import { MenuScene } from './scenes/MenuScene';
 import { BattleScene } from './scenes/BattleScene';

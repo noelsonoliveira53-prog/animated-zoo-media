@@ -1,3 +1,4 @@
+import { devOn, setDev } from '../systems/dev';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
 import { pf } from '../ui/touch';
@@ -93,6 +94,28 @@ export class MenuScene extends Phaser.Scene {
     new Button(this, 680, 662, 'Settings', { width: 190, height: 52, fontSize: 19, color: C.sky, onClick: () => this.scene.start('Settings') });
 
     this.add.text(GAME_W - 16, GAME_H - 24, 'v0.9', textStyle(pf(14), TEXT.dim, false)).setOrigin(1, 0.5);
+    this.buildDevToggle();
+  }
+
+  /** Dev mode switch (top-left): endless everything for testing; real progress is never touched. */
+  private buildDevToggle(): void {
+    const label = () => (devOn() ? 'DEV: ON' : 'DEV: OFF');
+    const b = new Button(this, 86, 34, label(), {
+      width: 140,
+      height: 44,
+      fontSize: 17,
+      color: devOn() ? 0xff5a8a : 0x6a6a7a,
+      onClick: () => {
+        setDev(!devOn());
+        this.scene.restart();
+      },
+    });
+    b.setName('devToggle');
+    if (devOn()) {
+      this.add
+        .text(16, 62, 'All levels open • endless coins,\nlives, spells, troops & builds\n(results are not saved)', { ...textStyle(pf(12), '#ffb0c8', false), align: 'left' })
+        .setOrigin(0, 0);
+    }
   }
 
   private buildDaily(): void {

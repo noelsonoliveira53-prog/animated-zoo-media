@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **220** (next balance pass at iteration 225)
+Iteration counter: **221** (next balance pass at iteration 225)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1367,11 +1367,32 @@ Iteration counter: **220** (next balance pass at iteration 225)
   - Polish: the Field Guide's Raids tab said "Just a building to knock down" for the Hornet Hive, Rattle Trap and Standing Stone. It now lists their swarm, venom and ward facts. Check: `scripts/guide-raids-check.mjs`. Screenshot `screenshots/220-guide.png`.
   - Balance: Strongholds' walls and defences now scale a little gentler (hp ×1.56, damage ×1.40 instead of ×1.70 and ×1.50) to make up for the two extra buildings they gained this week (see Balance Notes). Screenshot `screenshots/220.png`. 252 tests.
 
+- **Iteration 221**: **Dev mode** (requested by the user), switched on and off with a "DEV: ON/OFF" button at the top-left of the main menu.
+  - While on: every level and region is open, and battles top coins up to 999,999 and lives to 9,999, with spells and the hero skill always ready.
+  - The village keeps 999,999 coins and glowsap and finishes every construction at once. Raids get 30 of every troop, and the "train some troops first" check is skipped.
+  - Battle and raid results in dev mode are never saved (no stars, stats, achievements, army or loot changes), so switching it off restores real progress. A pink "DEV MODE" line shows at the bottom of battles.
+  - Code: `systems/dev.ts` (the flag in `save.settings.dev`) and `setAllLevelsOpen` in `levels.ts`.
+  - One new test (253 total). Check: `scripts/dev-check.mjs` (toggle → level 125 opens → 999,999 coins after building, 9,999 lives, Starfall ready; village 999,999 each; raid army 30 of each; no console errors). Screenshots `screenshots/221.png`, `221-menu.png`, `221-map.png` and `221-raid.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 26 opener (theme, music, map art, battle overlay, two new enemies).
+**New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
+base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
+1. Tower VFX overhaul, Thornbow (archer): glowing arrow trails, a launch flash and bowstring snap, impact sparks and
+   splinters, an idle sway/flag animation, and a per-tier look (more banners and metal trim, a soft glow at tier 3).
+2. Tower VFX overhaul, Glimmer (mage): a charging orb before each bolt, a crackling bolt with an afterglow trail, an
+   arcane burst on impact, a floating rune ring idle animation, and a per-tier look.
+3. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
+   ground, a big impact with debris, a shockwave ring and a light camera kick, and a per-tier look.
+4. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
+   a per-tier look.
+5. Specialization branches: a signature effect for each of the 8 top-tier branches.
+6. Store: a Store scene with tiers and upgrades (permanent upgrades bought with coins/glowsap, grouped into tiers that
+   unlock in order: towers, hero, spells, economy). **Confirm the exact meaning with the user.**
+7. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+   shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs
 - (none known)

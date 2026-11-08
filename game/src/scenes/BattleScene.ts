@@ -18,6 +18,7 @@ import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/B
 import { sfx } from '../systems/audio';
 import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
+import { DEV_COINS, DEV_LIVES, devOn } from '../systems/dev';
 import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, grantSwiftbloom, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
@@ -1096,6 +1097,7 @@ export class BattleScene extends Phaser.Scene {
     this.add.image(150, 37, 'icon_coin').setDepth(3001);
     this.coinText = this.add.text(170, 37, '', textStyle(26, TEXT.gold)).setOrigin(0, 0.5).setDepth(3001);
     this.titheText = this.add.text(172, 60, '', textStyle(12, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
+    if (devOn()) this.add.text(GAME_W / 2, GAME_H - 14, 'DEV MODE: endless coins, lives and spells (results not saved)', textStyle(12, '#ffb0c8')).setOrigin(0.5).setDepth(3001);
     this.add.image(290, 36, 'icon_wave').setDepth(3001);
     this.waveText = this.add.text(310, 37, '', textStyle(24)).setOrigin(0, 0.5).setDepth(3001);
 
@@ -1779,6 +1781,7 @@ export class BattleScene extends Phaser.Scene {
 
   update(_time: number, deltaMs: number): void {
     const dt = Math.min(deltaMs / 1000, 0.1);
+    if (devOn() && !this.ended) this.devTopUp();
     if (!this.paused && !this.ended) this.sim.update(dt * this.speed);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
@@ -1787,6 +1790,15 @@ export class BattleScene extends Phaser.Scene {
     if (!this.ended) music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
     this.drawBossBar();
     this.refreshHud();
+  }
+
+  /** Dev mode: endless coins and lives, spells and the hero skill always ready. */
+  private devTopUp(): void {
+    const s = this.sim;
+    if (s.coins < DEV_COINS) s.coins = DEV_COINS;
+    if (s.lives < DEV_LIVES) s.lives = DEV_LIVES;
+    for (const id of Object.keys(s.spellCd)) s.spellCd[id] = 0;
+    if (s.hero) s.hero.skillCd = 0;
   }
 
   private handleEvent(ev: SimEvent): void {
@@ -2982,8 +2994,11 @@ export class BattleScene extends Phaser.Scene {
     for (const b of this.tally.bosses) add[`boss_${b}`] = (add[`boss_${b}`] ?? 0) + 1;
     after = bumpStats(after, add, { heroMaxLevel: this.sim.hero?.level ?? 0 });
     const checked = checkAchievements(after);
-    writeSave(checked.save);
-    showAchievementToasts(this, checked.unlocked);
+    if (!devOn()) {
+      // dev-mode test runs never count toward real progress
+      writeSave(checked.save);
+      showAchievementToasts(this, checked.unlocked);
+    }
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0).setDepth(5000).setInteractive();
     this.tweens.add({ targets: shade, fillAlpha: 0.55, duration: 300 });

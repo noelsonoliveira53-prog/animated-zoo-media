@@ -1,3 +1,4 @@
+import { DEV_TROOPS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { shake } from '../ui/motion';
 import { music } from '../systems/music';
@@ -37,9 +38,11 @@ export class RaidScene extends Phaser.Scene {
     music.setTheme(themeById('ember'));
     const save = loadSave();
     const camp = generateCamp(data.seed, data.tier);
-    this.sim = new RaidSim(camp, save.army);
+    // Dev mode: a full army of every troop for testing
+    const army = devOn() ? Object.fromEntries(TROOP_ORDER.map((id) => [id, DEV_TROOPS])) : save.army;
+    this.sim = new RaidSim(camp, army);
     this.done = false;
-    this.selected = TROOP_ORDER.find((id) => (save.army[id] ?? 0) > 0) ?? null;
+    this.selected = TROOP_ORDER.find((id) => (army[id] ?? 0) > 0) ?? null;
     this.buildingViews.clear();
     this.mireZones.clear();
     this.troopViews.clear();
@@ -377,8 +380,11 @@ export class RaidScene extends Phaser.Scene {
     const pits = this.sim.camp.buildings.filter((b) => b.type === 'sludge' && b.hp <= 0).length;
     const counted = bumpStats(save, { raidsWon: stars > 0 ? 1 : 0, stronghold3: stars === 3 && this.sim.camp.tier === 2 ? 1 : 0, sludgeDestroyed: pits });
     const checked = checkAchievements(counted);
-    writeSave(checked.save);
-    this.time.delayedCall(600, () => showAchievementToasts(this, checked.unlocked));
+    if (!devOn()) {
+      // dev-mode raids never touch the real army, loot or stats
+      writeSave(checked.save);
+      this.time.delayedCall(600, () => showAchievementToasts(this, checked.unlocked));
+    }
     if (!music.stinger(stars > 0 ? 'victory' : 'defeat')) stars > 0 ? sfx.victory() : sfx.defeat();
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0.5).setDepth(8000).setInteractive();

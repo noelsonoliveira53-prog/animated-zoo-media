@@ -1,3 +1,4 @@
+import { DEV_COINS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
@@ -146,6 +147,13 @@ export class VillageScene extends Phaser.Scene {
 
   update(): void {
     this.syncCameras();
+    if (devOn()) {
+      // Dev mode: endless resources and every construction finishes at once.
+      this.v.coins = Math.max(this.v.coins, DEV_COINS);
+      this.v.glowsap = Math.max(this.v.glowsap, DEV_COINS);
+      const now = Date.now();
+      for (const b of this.v.buildings) if (b.upgradeEnds !== null && b.upgradeEnds > now) b.upgradeEnds = now;
+    }
   }
 
   /** Toggle a closer look at the village (pans by dragging); handy on phones. */
@@ -687,7 +695,7 @@ export class VillageScene extends Phaser.Scene {
             const s2 = loadSave();
             tickTraining(s2.army, s2.trainQueue);
             writeSave(s2);
-            if (armySpace(s2.army) <= 0) {
+            if (!devOn() && armySpace(s2.army) <= 0) {
               this.toast(s2.trainQueue.length ? 'Your troops are still training' : 'Train some troops first');
               return;
             }

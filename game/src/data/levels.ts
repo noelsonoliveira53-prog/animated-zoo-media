@@ -5910,9 +5910,15 @@ export const LEVELS: LevelDef[] = [
   },
 ];
 
-/** A level is open once the previous one has been beaten (at least 1 star). */
+let allOpen = false;
+/** Dev mode: open every level (set by systems/dev). */
+export function setAllLevelsOpen(on: boolean): void {
+  allOpen = on;
+}
+
+/** A level is open once the previous one has been beaten (at least 1 star), or always in dev mode. */
 export function isLevelUnlocked(index: number, stars: Record<string, number>): boolean {
-  if (index <= 0) return true;
+  if (index <= 0 || (allOpen && index < LEVELS.length)) return true;
   const prev = LEVELS[index - 1];
   return !!prev && (stars[prev.id] ?? 0) > 0;
 }

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **235** (next balance pass at iteration 240)
+Iteration counter: **236** (next balance pass at iteration 240)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1491,6 +1491,13 @@ Iteration counter: **235** (next balance pass at iteration 240)
   - Screenshot `screenshots/235.png`.
   - Balance: a sanity sweep, no changes (see Balance Notes). 258 tests.
 
+- **Iteration 236**: level graphics overhaul part 5, **gale, ruins, gears and abyss ground**.
+  - Gale: long pale streaks where the wind combs the grass flat, and stray grey-quilled feathers.
+  - Ruins: cracked flagstones half-sunk in the grass, and toppled fluted column drums wrapped in moss.
+  - Gears: riveted steel plates bolted into the ground, glossy oil stains with an oily sheen, and stray brass cogs.
+  - Abyss: branching veins of cold cyan and violet light with bright nodes, pulsing slowly (skipped on Low and reduced motion).
+  - Screenshots `screenshots/236-31.png`, `236-36.png`, `236-41.png` (= `236.png`) and `236-46.png`. No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1499,9 +1506,9 @@ Iteration counter: **235** (next balance pass at iteration 240)
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
    richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
-   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Frost and ember were done in iteration 233; dusk, shoal and glass in 234.
-   Next: gale (wind-bent grass streaks, scattered feathers), ruins (broken flagstones, toppled columns), gears (rivets, oil
-   stains, scrap), abyss (glowing veins), then orchard, storm, dunes, reef, flotilla, amber, mist and the newer regions.
+   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Done so far: frost and ember (233); dusk, shoal and glass (234); gale, ruins, gears and abyss (236).
+   Next: orchard (fallen fruit, leaf litter), storm (puddles, scorch marks from lightning), dunes (sand ripples), reef (coral
+   and sea-glass), flotilla (deck planks and rope coils), amber, mist and the newer regions.
 
 ## Known Bugs
 - (none known)

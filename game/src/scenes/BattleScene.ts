@@ -335,6 +335,10 @@ export class BattleScene extends Phaser.Scene {
     if (theme.shrooms) this.drawDuskGround(rnd);
     if (theme.shoal) this.drawShoreGround(rnd);
     if (theme.crystals) this.drawCrystalGround(rnd);
+    if (theme.gale) this.drawGaleGround(rnd);
+    if (theme.ruins) this.drawRuinsGround(rnd);
+    if (theme.gears) this.drawGearsGround(rnd);
+    if (theme.abyss) this.drawAbyssGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1400,6 +1404,141 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: tw, alpha: 1, scale: 1.4, duration: 240, yoyo: true, repeat: -1, repeatDelay: rnd.between(2000, 4500), delay: rnd.between(0, 3000) });
       }
     }
+  }
+
+  /** Windswept regions: long pale streaks where the wind combs the grass flat, and stray feathers. */
+  private drawGaleGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 70; i++) {
+      const x = rnd.between(0, GAME_W);
+      const y = rnd.between(80, GAME_H);
+      if (!this.clearOfRoads(x, y, 4)) continue;
+      const len = rnd.between(18, 46);
+      g.lineStyle(2, 0xe8f4ec, 0.35);
+      g.lineBetween(x, y, x + len, y - len * 0.18);
+    }
+    for (let i = 0; i < 14; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 6)) continue;
+      const a = rnd.frac() * Math.PI;
+      const dx = Math.cos(a) * 8;
+      const dy = Math.sin(a) * 4;
+      g.lineStyle(1.2, 0x8a8a8a, 1);
+      g.lineBetween(x - dx, y - dy, x + dx, y + dy);
+      g.fillStyle(0xf4f4f0, 0.95);
+      g.fillEllipse(x + dx * 0.2, y + dy * 0.2, 14, 5);
+    }
+  }
+
+  /** Ruined regions: cracked flagstones half-sunk in the grass and toppled column drums. */
+  private drawRuinsGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 12; i++) {
+      const cx = rnd.between(40, GAME_W - 40);
+      const cy = rnd.between(110, GAME_H - 30);
+      if (!this.clearOfRoads(cx, cy, 30)) continue;
+      for (let k = 0; k < rnd.between(3, 6); k++) {
+        const x = cx + rnd.between(-30, 30);
+        const y = cy + rnd.between(-14, 14);
+        const w = rnd.between(14, 24);
+        const h = rnd.between(9, 14);
+        g.fillStyle(0x000000, 0.15);
+        g.fillRect(x - w / 2 + 2, y - h / 2 + 3, w, h);
+        g.fillStyle(rnd.pick([0xb8ae94, 0xa8a088, 0xc4baa0]), 1);
+        g.fillRect(x - w / 2, y - h / 2, w, h);
+        g.lineStyle(1, 0x6a6450, 0.8);
+        g.lineBetween(x - w * 0.3, y - h / 2, x + w * 0.1, y + h / 2);
+      }
+    }
+    for (let i = 0; i < 4; i++) {
+      const x = rnd.between(80, GAME_W - 80);
+      const y = rnd.between(140, GAME_H - 50);
+      if (!this.clearOfRoads(x, y, 34)) continue;
+      // a toppled column: two fluted drums lying in the grass
+      for (const dx of [-16, 18]) {
+        g.fillStyle(0x000000, 0.18);
+        g.fillEllipse(x + dx + 3, y + 9, 34, 10);
+        g.fillStyle(0xd0c8b0, 1);
+        g.fillRect(x + dx - 15, y - 9, 30, 18);
+        g.fillStyle(0xe4dcc4, 1);
+        g.fillEllipse(x + dx + 15, y, 8, 18);
+        g.lineStyle(1, 0x9a927a, 0.8);
+        for (let k = -1; k <= 1; k++) g.lineBetween(x + dx - 15, y + k * 5, x + dx + 13, y + k * 5);
+      }
+      g.fillStyle(0x4a8a3a, 0.9);
+      g.fillEllipse(x, y + 8, 30, 6);
+    }
+  }
+
+  /** Clockwork regions: riveted plates bolted into the ground, glossy oil stains and stray cogs. */
+  private drawGearsGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    for (let i = 0; i < 9; i++) {
+      const x = rnd.between(50, GAME_W - 50);
+      const y = rnd.between(110, GAME_H - 30);
+      if (!this.clearOfRoads(x, y, 30)) continue;
+      const w = rnd.between(40, 70);
+      const h = rnd.between(26, 40);
+      g.fillStyle(0x6a6a72, 1);
+      g.fillRect(x - w / 2, y - h / 2, w, h);
+      g.lineStyle(2, 0x3a3a42, 1);
+      g.strokeRect(x - w / 2, y - h / 2, w, h);
+      g.fillStyle(0xb0b0b8, 1);
+      for (const [rx, ry] of [[-1, -1], [1, -1], [-1, 1], [1, 1]]) g.fillCircle(x + rx * (w / 2 - 5), y + ry * (h / 2 - 5), 2.2);
+    }
+    for (let i = 0; i < 8; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 10)) continue;
+      g.fillStyle(0x1a1a22, 0.55);
+      g.fillEllipse(x, y, rnd.between(24, 44), rnd.between(10, 16));
+      g.fillStyle(0x8a6ac8, 0.25);
+      g.fillEllipse(x - 4, y - 2, 12, 3);
+    }
+    for (let i = 0; i < 10; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 8)) continue;
+      const r = rnd.between(5, 9);
+      g.fillStyle(0xc8963a, 1);
+      for (let k = 0; k < 8; k++) {
+        const a = (k / 8) * Math.PI * 2;
+        g.fillRect(x + Math.cos(a) * r - 1.5, y + Math.sin(a) * r - 1.5, 3, 3);
+      }
+      g.fillCircle(x, y, r);
+      g.fillStyle(0x5a4a2a, 1);
+      g.fillCircle(x, y, r * 0.35);
+    }
+  }
+
+  /** Abyss regions: branching veins of cold light under the dark ground, pulsing slowly. */
+  private drawAbyssGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const glow = this.add.graphics().setDepth(-9.4).setBlendMode(Phaser.BlendModes.ADD);
+    for (let i = 0; i < 12; i++) {
+      let x = rnd.between(30, GAME_W - 30);
+      let y = rnd.between(100, GAME_H - 20);
+      if (!this.clearOfRoads(x, y, 8)) continue;
+      let a = rnd.frac() * Math.PI * 2;
+      const col = rnd.pick([0x5ae8d0, 0x9a7ae8]);
+      for (let k = 0; k < rnd.between(4, 8); k++) {
+        a += (rnd.frac() - 0.5) * 1.1;
+        const nx = x + Math.cos(a) * rnd.between(14, 26);
+        const ny = y + Math.sin(a) * rnd.between(8, 16);
+        if (!this.clearOfRoads(nx, ny, 4)) break;
+        glow.lineStyle(2, col, 0.75);
+        glow.lineBetween(x, y, nx, ny);
+        glow.lineStyle(7, col, 0.12);
+        glow.lineBetween(x, y, nx, ny);
+        if (rnd.frac() < 0.3) {
+          glow.fillStyle(col, 0.8);
+          glow.fillCircle(nx, ny, 2.5);
+        }
+        x = nx;
+        y = ny;
+      }
+    }
+    if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.4, duration: 2600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

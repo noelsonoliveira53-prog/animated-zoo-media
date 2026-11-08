@@ -57,6 +57,8 @@ export interface Enemy {
   hexCd: number; // Hexcroak Toad: time to its next curse
   dived: boolean; // Mudskipper has used its one dive
   alarmed: boolean; // Lookout Marmot has already whistled
+  curlT: number; // Curlshell Armadillo: seconds left curled up
+  curlCd: number;
   trampled: number[]; // Plough Ox: soldiers / the hero it has already run over
   diveT: number; // seconds left under the mud
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
@@ -215,6 +217,8 @@ export type SimEvent =
   | { type: 'blossom'; enemy: Enemy; radius: number; healed: Enemy[] }
   | { type: 'alarm'; enemy: Enemy; radius: number; startled: Enemy[] }
   | { type: 'trample'; enemy: Enemy; pos: Vec2 }
+  | { type: 'ambush'; enemy: Enemy }
+  | { type: 'curl'; enemy: Enemy }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -962,6 +966,8 @@ export class BattleSim {
       diveT: 0,
       alarmed: false,
       trampled: [],
+      curlT: 0,
+      curlCd: 0,
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -978,6 +984,12 @@ export class BattleSim {
       revived: false,
       sinceHit: 0,
     };
+    if (def.ambush && dist === 0) {
+      // Sandburrow: it digs in at the gate and bursts out of the ground partway down the road
+      e.dist = path.length * def.ambush;
+      e.pos = path.pointAt(e.dist);
+      this.events.push({ type: 'ambush', enemy: e });
+    }
     this.enemies.push(e);
     this.events.push({ type: 'spawn', enemy: e });
     return e;
@@ -1024,6 +1036,8 @@ export class BattleSim {
       if (e.def.snatch) this.tickSnatch(e, dt);
       if (e.def.hex) this.tickHex(e, dt);
       if (e.def.trample) this.tickTrample(e);
+      if (e.curlT > 0) e.curlT -= dt;
+      if (e.curlCd > 0) e.curlCd -= dt;
       if (e.diveT > 0) {
         e.diveT -= dt;
         if (e.diveT <= 0) {
@@ -1079,7 +1093,7 @@ export class BattleSim {
         }
       }
       if (e.anchored) continue; // Ironkeel holds fast while its anchor is down
-      e.dist += this.baseSpeed(e) * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.momentumMult(e) * this.mods.speedMult * dt;
+      e.dist += this.baseSpeed(e) * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.momentumMult(e) * (e.curlT > 0 ? e.def.curl!.slow : 1) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1557,7 +1571,8 @@ export class BattleSim {
 
   /** Damage resistances, using the enemy's current armor. */
   res(e: Enemy): { armor: number; magicResist: number } {
-    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e) + this.mods.armorBonus), magicResist: e.mr };
+    const curl = e.curlT > 0 ? e.def.curl!.bonus : 0; // Curlshell Armadillo rolled into its plates
+    return { armor: Math.min(0.85, e.armor + this.fortifyBonus(e) + this.mods.armorBonus + curl), magicResist: Math.min(0.85, e.mr + curl) };
   }
 
   /** Barkwardens toughen nearby allies' bark: the strongest aura in range adds armor (they don't stack). */
@@ -2037,6 +2052,11 @@ export class BattleSim {
       e.inkCd = this.time + e.def.ink.cooldown;
       this.inkClouds.push({ pos: { ...e.pos }, radius: e.def.ink.radius, t: e.def.ink.duration });
       this.events.push({ type: 'ink', enemy: e, pos: { ...e.pos }, radius: e.def.ink.radius, duration: e.def.ink.duration });
+    }
+    if (e.def.curl && e.curlCd <= 0 && dmg > 0 && e.hp > 0) {
+      e.curlT = e.def.curl.duration;
+      e.curlCd = e.def.curl.cooldown;
+      this.events.push({ type: 'curl', enemy: e });
     }
     if (e.def.alarm && !e.alarmed && dmg > 0 && e.hp > 0) {
       // Lookout Marmot: one sharp whistle, and everyone nearby bolts

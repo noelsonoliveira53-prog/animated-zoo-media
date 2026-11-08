@@ -71,6 +71,8 @@ export interface EnemyDef {
   wax?: { armor: number; melt: number }; // a waxy coat adds `armor` until it has soaked melt × maxHp of magic damage, then melts off for good
   parry?: { charges: number; regen: number }; // its comb-shield turns aside a whole single-target tower shot per charge (splash, chains' jumps and spells still land); regains one charge every regen s
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
+  ambush?: number; // burrows in and pops up at this fraction of the road instead of at the entrance
+  curl?: { duration: number; cooldown: number; bonus: number; slow: number }; // when hit (off cooldown), curls up: +bonus armor and magic resist, moving at slow× speed, for duration s
   shepherd?: { radius: number }; // herds stragglers: allies within radius walk at least as fast as it does
   tithe?: number; // while it lives, every kill pays this fraction less bounty (the strongest one counts, they don't stack)
   trample?: { damage: number }; // soldiers and the hero can't hold it: it shoves straight through, hurting each one once as it passes
@@ -165,7 +167,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean; comb?: boolean; bog?: boolean; thistle?: boolean; wold?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean; comb?: boolean; bog?: boolean; thistle?: boolean; wold?: boolean; canyon?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

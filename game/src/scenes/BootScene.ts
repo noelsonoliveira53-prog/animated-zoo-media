@@ -1301,6 +1301,52 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.78, cy + r * 0.15, r * 0.05);
         break;
       }
+      case 'sandburrow': {
+        // a sandy gopher popping up: round body, little ears, huge orange buck teeth and digging claws
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.3, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.3, r * 1.2);
+        g.fillCircle(cx, cy - r * 0.45, r * 0.45);
+        g.strokeCircle(cx, cy - r * 0.45, r * 0.45);
+        for (const sx of [-1, 1]) {
+          g.fillCircle(cx + sx * r * 0.32, cy - r * 0.82, r * 0.12);
+          g.strokeCircle(cx + sx * r * 0.32, cy - r * 0.82, r * 0.12);
+        }
+        g.fillStyle(0xf0dcb0, 1);
+        g.fillEllipse(cx, cy + r * 0.25, r * 0.7, r * 0.75);
+        g.fillStyle(0xf0a040, 1);
+        g.fillRect(cx - r * 0.12, cy - r * 0.3, r * 0.1, r * 0.2);
+        g.fillRect(cx + r * 0.02, cy - r * 0.3, r * 0.1, r * 0.2);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.18, cy - r * 0.55, r * 0.06);
+        g.fillCircle(cx + r * 0.18, cy - r * 0.55, r * 0.06);
+        g.fillCircle(cx, cy - r * 0.4, r * 0.06);
+        g.fillStyle(0xe8d8c8, 1);
+        for (const sx of [-1, 1]) g.fillEllipse(cx + sx * r * 0.6, cy + r * 0.1, r * 0.2, r * 0.14);
+        break;
+      }
+      case 'curlshell': {
+        // an armadillo from above: banded grey-brown shell, small pointed head with big ears, and a ringed tail
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x8a6a4a, 1);
+        g.fillEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.6, r * 0.2);
+        g.strokeEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.6, r * 0.2);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.05, cy, r * 1.35, r * 1.0);
+        g.strokeEllipse(cx + r * 0.05, cy, r * 1.35, r * 1.0);
+        g.lineStyle(1.5, 0x6a5a3a, 1);
+        for (const dx of [-0.3, -0.05, 0.2, 0.45]) g.lineBetween(cx + dx * r, cy - r * 0.45, cx + dx * r, cy + r * 0.45);
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0xc8a888, 1);
+        g.fillTriangle(cx - r * 0.55, cy - r * 0.22, cx - r * 0.55, cy + r * 0.22, cx - r * 1.1, cy);
+        g.strokeTriangle(cx - r * 0.55, cy - r * 0.22, cx - r * 0.55, cy + r * 0.22, cx - r * 1.1, cy);
+        g.fillEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.18, r * 0.28);
+        g.fillEllipse(cx - r * 0.6, cy + r * 0.35, r * 0.18, r * 0.28);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.8, cy - r * 0.08, r * 0.05);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

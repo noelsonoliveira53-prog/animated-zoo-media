@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **197** (next balance pass at iteration 200)
+Iteration counter: **198** (next balance pass at iteration 200)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,8 @@ Iteration counter: **197** (next balance pass at iteration 200)
 - (none)
 
 ## Backlog (ranked)
-1. Region 23: a new theme, traits and five levels.
+1. Rustrock level 112 with a third trait, then levels 113 and 114.
+2. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1265,6 +1266,8 @@ Iteration counter: **197** (next balance pass at iteration 200)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 198**: 111 Redstone Gulch (12 seeds): hpMult 1.6 → 100/100/0, 1.8 → 100/100/0. **1.4 → 100/100/42**
+(kept: exactly the opener band, first try).
 **Iteration 196**: 110 The Great Barn (12 seeds): 1.5 → 100/58/0, 1.6 → 100/33/0, 1.7 → 75/17/0, 1.9 → 50/8/0,
 2.1 → 17/0/0. **1.65 → 83/33/0** (kept): in the boss band, and seeds 1–3 give 2/3 expert wins, so the finale guard
 passes. The 30% boss tithe squeezes casual hard: it drops from 58 to 33 between 1.5 and 1.6.

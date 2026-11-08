@@ -1236,3 +1236,34 @@ describe('Shepherd Collie', () => {
     expect(sim.baseSpeed(near)).toBe(near.def.speed);
   });
 });
+
+describe('Rustrock Canyons enemies', () => {
+  it('a Sandburrow Gopher pops up partway down the road, not at the gate', () => {
+    const sim = new BattleSim(lvl, null);
+    const g = sim.spawn('sandburrow', 0);
+    expect(g.dist).toBeGreaterThan(0);
+    expect(g.dist).toBeCloseTo(2000 * g.def.ambush!, 0);
+    expect(sim.drainEvents().some((e) => e.type === 'ambush')).toBe(true);
+    const child = sim.spawn('sandburrow', 0, 120); // spawned somewhere explicit (split, revive): stays put
+    expect(child.dist).toBe(120);
+  });
+
+  it('a Curlshell Armadillo curls when hit: tougher and slower for a while, then on cooldown', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const a = sim.spawn('curlshell', 0, 300);
+    const c = a.def.curl!;
+    const base = sim.res(a);
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(a, 1);
+    expect(a.curlT).toBeCloseTo(c.duration);
+    expect(sim.res(a).armor).toBeCloseTo(Math.min(0.85, base.armor + c.bonus));
+    expect(sim.res(a).magicResist).toBeCloseTo(Math.min(0.85, base.magicResist + c.bonus));
+    const d0 = a.dist;
+    for (let i = 0; i < 30; i++) sim.update(1 / 60);
+    expect(a.dist - d0).toBeCloseTo(a.def.speed * c.slow * 0.5, 0);
+    for (let i = 0; i < Math.ceil(c.duration * 60); i++) sim.update(1 / 60);
+    expect(a.curlT).toBeLessThanOrEqual(0);
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(a, 1);
+    expect(a.curlT).toBeLessThanOrEqual(0); // still cooling down
+  });
+});

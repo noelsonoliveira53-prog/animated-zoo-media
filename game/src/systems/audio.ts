@@ -236,6 +236,14 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'ambush': // a burst of loose earth
+        this.noise(0.22, 0.05, 900);
+        this.tone(180, 0.15, 'square', 0.03, 320);
+        break;
+      case 'curl': // a dry clack of plates
+        this.tone(600, 0.05, 'square', 0.035, 400);
+        this.tone(420, 0.06, 'square', 0.03, 300, 0.04);
+        break;
       case 'trample': // a heavy hoof thud
         this.tone(90, 0.18, 'sine', 0.07, 50);
         this.noise(0.12, 0.05, 400);

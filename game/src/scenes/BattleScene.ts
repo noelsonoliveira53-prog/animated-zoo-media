@@ -306,6 +306,17 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.canyon && !motion.reduced) {
+      // vulture shadows wheeling slowly over the canyon floor
+      for (let i = 0; i < 3; i++) {
+        const cx0 = rnd.between(250, GAME_W - 250);
+        const cy0 = rnd.between(220, GAME_H - 220);
+        const r0 = rnd.between(90, 160);
+        const sh = this.add.ellipse(cx0 + r0, cy0, 34, 12, 0x2a1408, 0.16).setDepth(0.6);
+        const o = { a: rnd.frac() * Math.PI * 2 };
+        this.tweens.add({ targets: o, a: o.a + Math.PI * 2, duration: rnd.between(14000, 20000), repeat: -1, onUpdate: () => sh.setPosition(cx0 + Math.cos(o.a) * r0, cy0 + Math.sin(o.a) * r0 * 0.6).setRotation(o.a + Math.PI / 2) });
+      }
+    }
     if (this.level.theme.wold && !motion.reduced) {
       // big soft cloud shadows sliding slowly across the fields
       for (let i = 0; i < 4; i++) {
@@ -532,6 +543,38 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.canyon) {
+        const k = rnd.frac();
+        if (k < 0.4) {
+          // a tall saguaro-ish cactus with two arms
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x + 4, p.y + 12, 26, 8);
+          deco.fillStyle(0x5a8a3a, 1);
+          deco.fillRoundedRect(p.x - 4, p.y - 20, 9, 32, 4);
+          deco.fillRoundedRect(p.x - 13, p.y - 8, 6, 12, 3);
+          deco.fillRoundedRect(p.x - 13, p.y - 2, 10, 5, 2);
+          deco.fillRoundedRect(p.x + 8, p.y - 14, 6, 12, 3);
+          deco.fillRoundedRect(p.x + 4, p.y - 6, 10, 5, 2);
+          deco.fillStyle(0xf0d070, 1);
+          deco.fillCircle(p.x + 1, p.y - 21, 2.5);
+        } else if (k < 0.75) {
+          // a stack of balanced red rocks
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x + 3, p.y + 10, 30, 9);
+          deco.fillStyle(0xa85a3a, 1);
+          deco.fillEllipse(p.x, p.y + 4, 26, 14);
+          deco.fillStyle(0xb86a42, 1);
+          deco.fillEllipse(p.x + 2, p.y - 6, 18, 11);
+          deco.fillStyle(0xc87a4a, 1);
+          deco.fillEllipse(p.x - 1, p.y - 14, 11, 8);
+        } else {
+          // a scrubby desert bush with tiny flowers
+          deco.fillStyle(0x8a8a4a, 1);
+          for (const [dx, dy] of [[-6, 0], [6, 1], [0, -5]]) deco.fillCircle(p.x + dx, p.y + dy, 6);
+          deco.fillStyle(0xf08aa8, 1);
+          deco.fillCircle(p.x - 4, p.y - 6, 1.8);
+          deco.fillCircle(p.x + 5, p.y - 3, 1.8);
         }
       } else if (this.level.theme.wold) {
         const k = rnd.frac();
@@ -1863,6 +1906,20 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'ambush': {
+        // a spray of red dirt where the gopher bursts out of the ground
+        sfx.trait('ambush');
+        this.particles.setParticleTint(0xb86a3a);
+        this.particles.explode(14, ev.enemy.pos.x, ev.enemy.pos.y);
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 26, 'Ambush!', '#ffb08a', 13);
+        break;
+      }
+      case 'curl': {
+        sfx.trait('curl');
+        const cv = this.enemyViews.get(ev.enemy.uid);
+        if (cv) cv.pulse = 0.12;
+        break;
+      }
       case 'trample': {
         // the ox shoulders a soldier aside: a dust puff and a thud (throttled per ox)
         const key = -5000000 - ev.enemy.uid;
@@ -2434,6 +2491,11 @@ export class BattleScene extends Phaser.Scene {
         const lean = e.armor - e.def.armor - (e.mr - e.def.magicResist);
         if (lean > 0.1) v.sprite.setTint(0xc8a07a);
         else if (lean < -0.1) v.sprite.setTint(0xc0b0ff);
+        else v.sprite.clearTint();
+      }
+      else if (e.def.curl) {
+        // Curlshell: squashes into a tight sandy ball while curled
+        if (e.curlT > 0) v.sprite.setTint(0xd8c8a0).setScale(v.sprite.scaleX * 0.8, v.sprite.scaleY * 0.75);
         else v.sprite.clearTint();
       }
       else if (e.speedMult > 1) v.sprite.setTint(0xff9a8a);

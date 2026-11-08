@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **244** (next balance pass at iteration 245)
+Iteration counter: **245** (next balance pass at iteration 250)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1562,6 +1562,11 @@ Iteration counter: **244** (next balance pass at iteration 245)
   - Tree sway and smoke turn off with Reduce Motion or Graphics: Low (the village now reads both settings itself).
   - Check `scripts/village-shot.mjs` (every building type, a wall run and an upgrade in progress, no console errors). Screenshot `screenshots/244.png`. 265 tests.
 
+- **Iteration 245** (POLISH + BALANCE):
+  - Polish fix: in dev mode (or with a big late-game hoard) the coin and life counters ran past the top bar's dividers ("9351" and "935165" touched the gold lines). Long numbers now step down in font size (coins: 5 digits 23 px, 6+ digits 19 px; lives: 3 digits 22 px, 4+ digits 18 px). Checked with `scripts/dev-check.mjs`; screenshot `screenshots/245.png`.
+  - Performance: `scripts/leak-check.mjs 95` with the new death bursts, squash and HUD. Tweens 68 → 68, timers 1 → 1, objects 154 → 212 by wave 5, so there is no leak and the per-death shapes are cleaned up.
+  - Balance: a 13-level campaign sweep (4 seeds) and the store comparison (3 seeds). Nothing changed in the sim since iteration 230 and the curve still matches the targets, so nothing was tuned (see Balance Notes). 265 tests.
+
 ## In Progress
 - (none)
 
@@ -2452,3 +2457,5 @@ Findings / follow-ups:
 - L1 is now a gentle tutorial; difficulty should ramp from L3 onward (target: expert ~90%, casual ~60%,
   novice ~10–20% by level 5).
 - Burrow Den alone can't win (it only blocks); that's intended, but its value in mixes deserves a look later.
+- **Iteration 245 sweep** (4 seeds; expert / casual / novice win %): L1 100/100/100, L3 100/100/100, L5 100/50/100, L10 75/100/50, L20 75/50/0, L30 75/25/25, L45 75/50/0, L60 75/50/0, L75 100/75/0, L90 100/25/0, L105 75/75/0, L120 75/25/0, L125 100/75/0. Single-tower strategies lose from L3 on (intended: mixes matter).
+  - Store (3 seeds, none → maxed; expert/casual/novice): L5 100/67/100 → 100/100/100; L30 100/0/33 → 100/67/100; L60 67/33/0 → 100/100/0; L90 100/33/0 → 100/100/67; L120 67/33/0 → 100/100/100; L125 100/67/0 → 100/100/100. A maxed store is still a big long-term boost (about 70k coins and 52k glowsap); keep watching it, but no change.

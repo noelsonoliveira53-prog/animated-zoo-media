@@ -2406,8 +2406,15 @@ export class BattleScene extends Phaser.Scene {
     const snap = this.shownCoins < 0 || motion.reduced || dt === 0;
     const coins = snap ? this.sim.coins : stepCounter(this.shownCoins, this.sim.coins, dt);
     const lives = snap ? this.sim.lives : stepCounter(this.shownLives, this.sim.lives, dt);
-    if (Math.round(coins) !== Math.round(this.shownCoins)) this.coinText.setText(String(Math.round(coins)));
-    if (Math.round(lives) !== Math.round(this.shownLives)) this.livesText.setText(String(Math.round(lives)));
+    // long numbers (dev mode, late-game hoards) shrink so they never run past the bar's dividers
+    if (Math.round(coins) !== Math.round(this.shownCoins)) {
+      const t = String(Math.round(coins));
+      this.coinText.setText(t).setFontSize(t.length >= 6 ? 19 : t.length === 5 ? 23 : 26);
+    }
+    if (Math.round(lives) !== Math.round(this.shownLives)) {
+      const t = String(Math.round(lives));
+      this.livesText.setText(t).setFontSize(t.length >= 4 ? 18 : t.length === 3 ? 22 : 26);
+    }
     this.shownCoins = coins;
     this.shownLives = lives;
     this.drawWaveBar(dt);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **232** (next balance pass at iteration 235)
+Iteration counter: **233** (next balance pass at iteration 235)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1473,6 +1473,11 @@ Iteration counter: **232** (next balance pass at iteration 235)
   - Meadow levels (no theme flags): clover patches with little white and pink flowers, and mossy stones with soft shadows.
   - Screenshots `screenshots/232.png` (meadow), `232-pond.png` (ponds) and `232-frost.png` (kerbs on a snow theme). No console errors, 258 tests.
 
+- **Iteration 233**: level graphics overhaul part 3, **frost and ember ground**.
+  - Frost (`theme.snow`): wind-sculpted snow drifts with a blue lee shadow and a bright crest, and frozen puddles with a crack and a shine (both kept off the roads). Ice glints on the roads twinkle now and then as additive stars (skipped on Graphics: Low and reduced motion).
+  - Ember (`theme.lava`): scorched cracks winding across the ground with glowing orange lava seams (a dark line under an additive glow) that slowly breathe, plus drifts of grey ash speckles.
+  - Helpers `drawFrostGround` and `drawEmberGround` in BattleScene. Screenshots `screenshots/233-frost.png` and `233-ember.png` (= `233.png`). No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1481,8 +1486,8 @@ Iteration counter: **232** (next balance pass at iteration 235)
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
    richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
-   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Next: frost (snow
-   drifts, icy road glints), then ember (cracks with glowing lava seams), dusk, shoal and so on.
+   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Frost and ember were done in iteration 233.
+   Next: dusk (glowing mushrooms, fireflies on the ground), shoal (wet sand and shells), glass (crystal shards), then the rest.
 
 ## Known Bugs
 - (none known)

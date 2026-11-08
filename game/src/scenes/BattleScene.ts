@@ -330,6 +330,8 @@ export class BattleScene extends Phaser.Scene {
         g.fillCircle(px - 1, py - 1, 1.5);
       }
     }
+    if (theme.snow) this.drawFrostGround(rnd);
+    if (theme.lava) this.drawEmberGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1175,6 +1177,86 @@ export class BattleScene extends Phaser.Scene {
     g.strokePath();
     g.fillStyle(color, alpha);
     for (const p of pts) g.fillCircle(p.x, p.y, width / 2);
+  }
+
+  /** Frost regions: wind-sculpted snow drifts, frozen puddles, and ice glinting on the roads. */
+  private drawFrostGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const g = this.add.graphics().setDepth(-9.5);
+    const offRoad = (x: number, y: number, r: number) => !this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 34 + r));
+    for (let i = 0; i < 18; i++) {
+      const x = rnd.between(30, GAME_W - 30);
+      const y = rnd.between(90, GAME_H - 20);
+      const w = rnd.between(50, 120);
+      if (!offRoad(x, y, w / 2)) continue;
+      // a drift: blue shadow on the lee side, bright crest on top
+      g.fillStyle(0x9ab0c8, 0.35);
+      g.fillEllipse(x + 6, y + 5, w, w * 0.32);
+      g.fillStyle(0xf4f8fc, 0.95);
+      g.fillEllipse(x, y, w, w * 0.3);
+      g.fillStyle(0xffffff, 1);
+      g.fillEllipse(x - w * 0.12, y - w * 0.06, w * 0.55, w * 0.1);
+    }
+    for (let i = 0; i < 6; i++) {
+      const x = rnd.between(60, GAME_W - 60);
+      const y = rnd.between(120, GAME_H - 40);
+      if (!offRoad(x, y, 30)) continue;
+      // a frozen puddle with a crack and a shine
+      g.fillStyle(0x8ac0e0, 0.6);
+      g.fillEllipse(x, y, 54, 22);
+      g.lineStyle(1.5, 0xd8f0ff, 0.9);
+      g.strokeEllipse(x, y, 54, 22);
+      g.lineBetween(x - 14, y - 4, x + 2, y + 2);
+      g.lineBetween(x + 2, y + 2, x + 12, y - 3);
+      g.fillStyle(0xffffff, 0.6);
+      g.fillEllipse(x - 10, y - 5, 16, 4);
+    }
+    if (motion.reduced || motion.lowFx) return;
+    // ice glints twinkling along the roads
+    for (const pts of this.level.paths) {
+      for (let i = 0; i < 10; i++) {
+        const k = rnd.between(1, pts.length - 1);
+        const t = rnd.frac();
+        const x = pts[k - 1].x + (pts[k].x - pts[k - 1].x) * t + rnd.between(-18, 18);
+        const y = pts[k - 1].y + (pts[k].y - pts[k - 1].y) * t + rnd.between(-18, 18);
+        if (x < 0 || x > GAME_W || y < 70 || y > GAME_H) continue;
+        const glint = this.add.star(x, y, 4, 1, 5, 0xffffff, 0.9).setDepth(-8).setBlendMode(Phaser.BlendModes.ADD).setAlpha(0);
+        this.tweens.add({ targets: glint, alpha: 0.9, scale: 1.3, duration: 260, yoyo: true, repeat: -1, repeatDelay: rnd.between(1800, 4200), delay: rnd.between(0, 3000) });
+      }
+    }
+  }
+
+  /** Ember regions: scorched cracks with glowing lava seams that slowly breathe, and drifts of grey ash. */
+  private drawEmberGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const dark = this.add.graphics().setDepth(-9.5);
+    const glow = this.add.graphics().setDepth(-9.4).setBlendMode(Phaser.BlendModes.ADD);
+    const offRoad = (x: number, y: number) => !this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 40));
+    for (let i = 0; i < 14; i++) {
+      let x = rnd.between(40, GAME_W - 40);
+      let y = rnd.between(100, GAME_H - 30);
+      if (!offRoad(x, y)) continue;
+      let a = rnd.frac() * Math.PI * 2;
+      const segs = rnd.between(3, 6);
+      for (let k = 0; k < segs; k++) {
+        a += (rnd.frac() - 0.5) * 1.2;
+        const len = rnd.between(12, 26);
+        const nx = x + Math.cos(a) * len;
+        const ny = y + Math.sin(a) * len * 0.6;
+        if (!offRoad(nx, ny)) break;
+        dark.lineStyle(5, 0x1a0e0a, 0.85);
+        dark.lineBetween(x, y, nx, ny);
+        glow.lineStyle(2, 0xff7a2a, 0.9);
+        glow.lineBetween(x, y, nx, ny);
+        glow.lineStyle(6, 0xff5a1a, 0.18);
+        glow.lineBetween(x, y, nx, ny);
+        x = nx;
+        y = ny;
+      }
+    }
+    for (let i = 0; i < 40; i++) {
+      dark.fillStyle(0x8a8078, 0.35);
+      dark.fillCircle(rnd.between(0, GAME_W), rnd.between(80, GAME_H), rnd.between(1, 3));
+    }
+    if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.45, duration: 1600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

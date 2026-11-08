@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **205** (next balance pass at iteration 210)
+Iteration counter: **206** (next balance pass at iteration 210)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1275,11 +1275,21 @@ Iteration counter: **205** (next balance pass at iteration 210)
   - New diagnostic script `scripts/endless-wall.ts`: leaks by wave for each strategy on one endless map.
   - Balance: a Rustrock sweep, hero comparison and endless check, with no changes (see Balance Notes). 241 tests.
 
+- **Iteration 206**: region 24, **The Pebblebrook Rapids**, a green river country whose roads are shallow blue streams.
+  - **Bubbler Newt** (bubble): every 6 s it wraps up to 3 of the nearest allies (itself included, never bosses) in a bubble that blocks the next hit entirely, then pops. Quick, rapid shots strip bubbles best.
+  - **Torrent Pike** (surge): every 8 s, it and every ally within 90 px that no soldier is holding (bosses excepted) are swept 55 px down the stream.
+  - New level 116 "Stepping Stones" (hpMult 1.25).
+  - Theme: a stream-coloured road, reeds and cattails, mossy stones and ferns. Leaves ride the current and dragonflies dart about (skipped with reduced motion).
+  - Also added: the "Pebblebrook" music theme (bright rippling runs), world-map land with reeds and pebbles, Field Guide tags, code-drawn sprites, sounds (blub, pop, rushing splash) and an endless tier from wave 96.
+  - Two new tests (243 total). Check: `scripts/brook-check.mjs` (music brook, 2 enemies bubbled, the pike surged 66 px, no console errors). Screenshots `screenshots/206.png` and `206-map.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 24 opener (theme, music, map art, battle overlay, two new enemies).
+1. Pebblebrook level 117 with a third new enemy.
+2. Pebblebrook levels 118 and 119.
+3. Pebblebrook finale (120) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1288,6 +1298,10 @@ Iteration counter: **205** (next balance pass at iteration 210)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 206**: 116 Stepping Stones (12 seeds).
+- With the first numbers (bubble every 5 s on 4 allies; surge every 6 s, 70 px, 100 px radius), even the expert won only 8–17% at hpMult 1.4–1.8. Leaks showed pikes surging whole groups past the defences, and stacking surges were brutal on the short second road.
+- Eased to bubble 6 s / 3 allies and surge 8 s / 55 px / 90 px radius. Then 1.2 → 100/92/50, 1.3 → 100/100/25, 1.35 → 100/100/8, 1.4 → 100/83/25.
+- **1.25 → 100/100/25** (kept: the opener band, with the novice a little low).
 **Iteration 205** (POLISH + BALANCE), Rustrock sweep at 6 seeds (expert/casual/novice):
 
 | Level | hpMult | Result |

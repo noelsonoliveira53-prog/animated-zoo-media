@@ -14,6 +14,7 @@ const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0
 const FLOTILLA = { grass: 0x2a5a7a, grassDark: 0x24506e, road: 0xb08a5a, roadEdge: 0x6a4a2a, trees: [0x8a6a4a, 0x6a5a4a, 0xa8885a], flotilla: true };
 const AMBER = { grass: 0x9a7a3a, grassDark: 0x8a6a30, road: 0x7a5a3a, roadEdge: 0x4a3424, trees: [0xc83a1a, 0xe87a1a, 0xf0c040, 0x8a3a5a], amber: true };
 const MIST = { grass: 0x7aa878, grassDark: 0x6a9868, road: 0xb8ac90, roadEdge: 0x8a7e66, trees: [0x4a7a5a, 0xe89ab8, 0x5a8a5a], mist: true };
+const BROOK = { grass: 0x6aa860, grassDark: 0x5a9850, road: 0x9ad0e0, roadEdge: 0x4a8aa8, trees: [0x3a7a3a, 0x5a9a4a, 0x8ab85a], brook: true };
 const CANYON = { grass: 0xc8784a, grassDark: 0xb8683e, road: 0xe8c088, roadEdge: 0x8a4a2a, trees: [0x6a8a3a, 0xa85a3a, 0xd89a5a], canyon: true };
 const WOLD = { grass: 0x7aa84a, grassDark: 0x6a983e, road: 0xb89868, roadEdge: 0x6a4a2a, trees: [0x5a9a3a, 0xc8a040, 0x8a6a3a], wold: true };
 const THISTLE = { grass: 0x8a9a5a, grassDark: 0x7a8a4e, road: 0xc8a878, roadEdge: 0x7a5a3a, trees: [0x9a6ab8, 0xb88ad0, 0x6a8a3a], thistle: true };
@@ -5448,6 +5449,51 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'rustcoil', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l116',
+    name: 'Stepping Stones',
+    blurb: 'Down from the canyons the land turns green again, and a hundred chattering streams run between mossy banks. The Murkhorde has taken to the water, riding the current and blowing bubbles to shield one another.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.25,
+    startCoins: 1000,
+    lives: 20,
+    theme: BROOK,
+    paths: [
+      [{ x: -40, y: 520 }, { x: 300, y: 520 }, { x: 300, y: 190 }, { x: 640, y: 190 }, { x: 640, y: 530 }, { x: 980, y: 530 }, { x: 980, y: 230 }, { x: 1320, y: 230 }],
+      [{ x: 810, y: 760 }, { x: 810, y: 530 }, { x: 980, y: 530 }, { x: 980, y: 230 }, { x: 1320, y: 230 }],
+    ],
+    slots: [
+      { x: 200, y: 280 },
+      { x: 200, y: 430 },
+      { x: 390, y: 290 },
+      { x: 390, y: 440 },
+      { x: 550, y: 290 },
+      { x: 550, y: 440 },
+      { x: 730, y: 300 },
+      { x: 730, y: 450 },
+      { x: 890, y: 300 },
+      { x: 890, y: 450 },
+      { x: 1070, y: 330 },
+      { x: 1080, y: 480 },
+      { x: 720, y: 620 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'bubbler', count: 3, interval: 1.6 }, { enemy: 'mudling', count: 12, interval: 0.5, delay: 2 }] },
+      { groups: [{ enemy: 'pike', count: 4, interval: 1.3 }, { enemy: 'skitter', count: 12, interval: 0.4, delay: 1 }] },
+      { groups: [{ enemy: 'bubbler', count: 4, interval: 1.4 }, { enemy: 'galehound', count: 6, interval: 0.55, delay: 3 }, { enemy: 'gullwing', count: 5, interval: 0.9, delay: 5 }] },
+      { groups: [{ enemy: 'pike', count: 5, interval: 1.2 }, { enemy: 'shellback', count: 4, interval: 1.3, delay: 2 }, { enemy: 'skitter', count: 10, interval: 0.4, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'bubbler', count: 4, interval: 1.3 }, { enemy: 'pike', count: 4, interval: 1.2, path: 1, delay: 2 }, { enemy: 'kitewing', count: 3, interval: 1.6, delay: 6 }] },
+      { groups: [{ enemy: 'pike', count: 7, interval: 1 }, { enemy: 'thunderhoof', count: 6, interval: 0.6, delay: 1 }, { enemy: 'glarefly', count: 5, interval: 0.85, delay: 6 }] },
+      { groups: [{ enemy: 'bubbler', count: 5, interval: 1.2 }, { enemy: 'galehound', count: 8, interval: 0.5, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'pike', count: 8, interval: 0.9 }, { enemy: 'reedguard', count: 5, interval: 1.1, delay: 2 }, { enemy: 'bubbler', count: 3, interval: 1.4, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'bubbler', count: 6, interval: 1 }, { enemy: 'bogbrute', count: 2, interval: 3, delay: 3 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'pike', count: 9, interval: 0.85 }, { enemy: 'skitter', count: 18, interval: 0.28, path: 1, delay: 1 }, { enemy: 'tidecaller', count: 2, interval: 2.6, delay: 3 }] },
+      { groups: [{ enemy: 'bubbler', count: 6, interval: 1 }, { enemy: 'pike', count: 6, interval: 1, path: 1, delay: 1 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 4 }, { enemy: 'kitewing', count: 5, interval: 1.3, delay: 8 }] },
+      { groups: [{ enemy: 'pike', count: 10, interval: 0.8 }, { enemy: 'bubbler', count: 5, interval: 1.1, delay: 1 }, { enemy: 'deckgunner', count: 4, interval: 1.3, delay: 3 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 8 }] },
+      { groups: [{ enemy: 'bubbler', count: 7, interval: 0.95 }, { enemy: 'galehound', count: 10, interval: 0.4, delay: 2 }, { enemy: 'pike', count: 8, interval: 0.9, path: 1, delay: 3 }, { enemy: 'cloudram', count: 2, interval: 2.6, delay: 8 }] },
+      { groups: [{ enemy: 'pike', count: 12, interval: 0.7 }, { enemy: 'bubbler', count: 7, interval: 0.95, delay: 1 }, { enemy: 'bramblehide', count: 3, interval: 2.4, delay: 8 }, { enemy: 'gnat', count: 18, interval: 0.24, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -5487,6 +5533,7 @@ export interface RegionDef {
   thistle?: boolean;
   wold?: boolean;
   canyon?: boolean;
+  brook?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -5513,6 +5560,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Thistledown Prairie', first: 100, count: 5, thistle: true },
   { name: 'The Patchwork Wolds', first: 105, count: 5, wold: true },
   { name: 'The Rustrock Canyons', first: 110, count: 5, canyon: true },
+  { name: 'The Pebblebrook Rapids', first: 115, count: 5, brook: true },
 ];
 
 export function regionOf(levelIndex: number): number {

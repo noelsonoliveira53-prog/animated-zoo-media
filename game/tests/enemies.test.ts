@@ -1293,3 +1293,43 @@ describe('Canyon Rattler', () => {
     expect(victim.hp).toBeLessThan(hp0);
   });
 });
+
+describe('Pebblebrook Rapids enemies', () => {
+  const hit = (sim: BattleSim, e: unknown, d: number) => (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(e, d);
+  it('a Bubbler Newt bubbles nearby allies; a bubble eats one whole hit, then pops', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const n = sim.spawn('bubbler', 0, 300);
+    const near = sim.spawn('mudling', 0, 340);
+    const far = sim.spawn('mudling', 0, 900);
+    for (let i = 0; i < Math.ceil(n.def.bubble!.interval * 60); i++) sim.update(1 / 60);
+    expect(near.bubbled).toBe(true);
+    expect(n.bubbled).toBe(true);
+    expect(far.bubbled).toBe(false);
+    const hp = near.hp;
+    hit(sim, near, 50);
+    expect(near.hp).toBe(hp);
+    expect(near.bubbled).toBe(false);
+    hit(sim, near, 5);
+    expect(near.hp).toBeLessThan(hp);
+    expect(sim.drainEvents().some((e) => e.type === 'pop')).toBe(true);
+  });
+
+  it('a Torrent Pike surges itself and unheld neighbours down the road, but not far-off ones', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const p = sim.spawn('pike', 0, 300);
+    const near = sim.spawn('mudling', 0, 330);
+    const far = sim.spawn('mudling', 0, 900);
+    const s = p.def.surge!;
+    p.surgeCd = 0.05; // about to surge
+    const steps = 6;
+    const before = { p: p.dist, near: near.dist, far: far.dist };
+    for (let i = 0; i < steps; i++) sim.update(1 / 60);
+    const walk = (e: typeof p) => e.def.speed * (steps / 60);
+    expect(p.dist - before.p).toBeGreaterThan(walk(p) + s.distance * 0.9);
+    expect(near.dist - before.near).toBeGreaterThan(walk(near) + s.distance * 0.9);
+    expect(far.dist - before.far).toBeLessThan(walk(far) + 5);
+    expect(sim.drainEvents().some((e) => e.type === 'surge')).toBe(true);
+  });
+});

@@ -57,6 +57,9 @@ export interface Enemy {
   hexCd: number; // Hexcroak Toad: time to its next curse
   dived: boolean; // Mudskipper has used its one dive
   alarmed: boolean; // Lookout Marmot has already whistled
+  bubbled: boolean; // Bubbler Newt: the next hit just pops the bubble
+  bubbleCd: number;
+  surgeCd: number;
   curlT: number; // Curlshell Armadillo: seconds left curled up
   curlCd: number;
   trampled: number[]; // Plough Ox: soldiers / the hero it has already run over
@@ -222,6 +225,9 @@ export type SimEvent =
   | { type: 'ambush'; enemy: Enemy }
   | { type: 'venom'; soldier: Soldier }
   | { type: 'curl'; enemy: Enemy }
+  | { type: 'bubble'; source: Enemy; targets: Enemy[]; radius: number }
+  | { type: 'pop'; enemy: Enemy }
+  | { type: 'surge'; source: Enemy; moved: Enemy[]; radius: number }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -971,6 +977,9 @@ export class BattleSim {
       trampled: [],
       curlT: 0,
       curlCd: 0,
+      bubbled: false,
+      bubbleCd: def.bubble ? def.bubble.interval * 0.4 : 0,
+      surgeCd: def.surge ? def.surge.interval : 0,
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -1057,6 +1066,8 @@ export class BattleSim {
       }
       if (e.def.crust && e.sinceHit > 0.4) e.armor = Math.min(e.def.armor + e.def.crust.max, e.armor + e.def.crust.perSec * dt);
       if (e.def.blink) this.tickBlink(e, dt);
+      if (e.def.bubble) this.tickBubble(e, dt);
+      if (e.def.surge) this.tickSurge(e, dt);
       if (e.def.shift) this.tickShift(e, dt);
       if (e.def.revive) this.tickRevive(e, dt);
       if (e.def.shieldAura) this.tickShieldAura(e, dt);
@@ -1160,6 +1171,38 @@ export class BattleSim {
       targets.push(o);
     }
     this.events.push({ type: 'coral', source: e, targets, radius: sa.radius });
+  }
+
+  /** Bubbler Newt: wraps the nearest unbubbled allies (itself included, never bosses) in a bubble that eats the next hit. */
+  private tickBubble(e: Enemy, dt: number): void {
+    const b = e.def.bubble!;
+    e.bubbleCd -= dt;
+    if (e.bubbleCd > 0) return;
+    e.bubbleCd = b.interval;
+    const pool = this.enemies
+      .filter((o) => o.alive && !o.bubbled && !o.def.boss && !o.underground && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= b.radius)
+      .sort((a, c) => Math.hypot(a.pos.x - e.pos.x, a.pos.y - e.pos.y) - Math.hypot(c.pos.x - e.pos.x, c.pos.y - e.pos.y))
+      .slice(0, b.count);
+    for (const o of pool) o.bubbled = true;
+    if (pool.length) this.events.push({ type: 'bubble', source: e, targets: pool, radius: b.radius });
+  }
+
+  /** Torrent Pike: a rush of water sweeps it and every unheld ally nearby (not bosses) down the road. */
+  private tickSurge(e: Enemy, dt: number): void {
+    const s = e.def.surge!;
+    e.surgeCd -= dt;
+    if (e.surgeCd > 0) return;
+    e.surgeCd = s.interval;
+    const moved: Enemy[] = [];
+    for (const o of this.enemies) {
+      if (!o.alive || o.blockedBy || o.underground || (o.def.boss && o !== e)) continue;
+      if (o !== e && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) > s.radius) continue;
+      const path = this.paths[o.path];
+      o.dist = Math.min(path.length - 1, o.dist + s.distance);
+      o.pos = path.pointAt(o.dist);
+      moved.push(o);
+    }
+    if (moved.length) this.events.push({ type: 'surge', source: e, moved, radius: s.radius });
   }
 
   /** Shardskippers jump ahead along their road on a timer, slipping out of any soldier's grip. */
@@ -2020,6 +2063,12 @@ export class BattleSim {
   private applyDamage(e: Enemy, dmg: number, type?: DamageType): void {
     if (!e.alive) return;
     if (e.phased && dmg > 0) return; // Mistfox: the blow passes straight through the mist
+    if (e.bubbled && dmg > 0) {
+      // Bubbler Newt's bubble: the hit just pops it
+      e.bubbled = false;
+      this.events.push({ type: 'pop', enemy: e });
+      return;
+    }
     if (dmg > 0) dmg *= 1 - this.wardCut(e); // Glowbearer lantern-light softens every kind of blow
     if (dmg > 0 && !e.def.ground) {
       // Copperhorn: the nearest one in range draws part of the blow onto itself.

@@ -306,6 +306,23 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.brook && !motion.reduced) {
+      // fallen leaves riding the current, and a couple of darting dragonflies
+      for (let i = 0; i < 10; i++) {
+        const leaf = this.add.ellipse(rnd.between(-40, GAME_W), rnd.between(120, GAME_H - 120), 9, 5, rnd.pick([0xd8a040, 0xc86a30, 0x9ab848]), 0.85).setDepth(0.7).setRotation(rnd.frac() * 3);
+        const dur = rnd.between(16000, 26000);
+        this.tweens.add({ targets: leaf, x: GAME_W + 40, rotation: leaf.rotation + 4, duration: dur * (1 - leaf.x / (GAME_W + 80)), onComplete: () => {
+          leaf.x = -40;
+          this.tweens.add({ targets: leaf, x: GAME_W + 40, rotation: leaf.rotation + 4, duration: dur, repeat: -1 });
+        } });
+        this.tweens.add({ targets: leaf, y: leaf.y + 10, duration: rnd.between(1800, 2600), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+      for (let i = 0; i < 2; i++) {
+        const fly = this.add.ellipse(rnd.between(200, GAME_W - 200), rnd.between(180, GAME_H - 180), 10, 3, 0x4ac0e8, 0.9).setDepth(0.8);
+        const hop = () => this.tweens.add({ targets: fly, x: Phaser.Math.Clamp(fly.x + rnd.between(-160, 160), 80, GAME_W - 80), y: Phaser.Math.Clamp(fly.y + rnd.between(-90, 90), 140, GAME_H - 120), duration: 500, delay: rnd.between(600, 1800), ease: 'Quad.easeOut', onComplete: hop });
+        hop();
+      }
+    }
     if (this.level.theme.canyon && !motion.reduced) {
       // vulture shadows wheeling slowly over the canyon floor
       for (let i = 0; i < 3; i++) {
@@ -543,6 +560,31 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.brook) {
+        const k = rnd.frac();
+        if (k < 0.4) {
+          // a clump of reeds with brown cattail heads
+          deco.lineStyle(2, 0x3a7a3a, 1);
+          for (let r = -2; r <= 2; r++) deco.lineBetween(p.x + r * 3, p.y + 8, p.x + r * 5, p.y - 14 - Math.abs(r) * -2);
+          deco.fillStyle(0x7a4a22, 1);
+          deco.fillEllipse(p.x - 5, p.y - 14, 4, 9);
+          deco.fillEllipse(p.x + 5, p.y - 12, 4, 9);
+        } else if (k < 0.75) {
+          // mossy river stones
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x + 3, p.y + 8, 30, 8);
+          deco.fillStyle(0x8a9090, 1);
+          deco.fillEllipse(p.x - 5, p.y + 2, 18, 12);
+          deco.fillEllipse(p.x + 8, p.y + 4, 13, 9);
+          deco.fillStyle(0x6a9a4a, 1);
+          deco.fillEllipse(p.x - 7, p.y - 2, 10, 4);
+        } else {
+          // a curled fern
+          deco.lineStyle(2, 0x4a8a3a, 1);
+          for (const a of [-0.9, -0.3, 0.3, 0.9]) deco.lineBetween(p.x, p.y + 6, p.x + Math.sin(a) * 14, p.y - Math.cos(a) * 12);
+          deco.fillStyle(0x5a9a4a, 1);
+          for (const a of [-0.9, -0.3, 0.3, 0.9]) deco.fillCircle(p.x + Math.sin(a) * 14, p.y - Math.cos(a) * 12, 3);
         }
       } else if (this.level.theme.canyon) {
         const k = rnd.frac();
@@ -1945,6 +1987,38 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.soldier.pos.x, ev.soldier.pos.y - 26, 'Poisoned', '#a8f06a', 12);
         break;
       }
+      case 'bubble': {
+        // the newt puffs a cloud of shining bubbles over its friends
+        sfx.trait('bubble');
+        for (const t of ev.targets) {
+          this.particles.setParticleTint(0xc8f0ff);
+          this.particles.explode(3, t.pos.x, t.pos.y - 8);
+        }
+        break;
+      }
+      case 'pop': {
+        const key = -6000000 - ev.enemy.uid;
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 250) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('pop');
+        const r = ev.enemy.def.radius + 6;
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y - 4, r, 0xc8f0ff, 0).setStrokeStyle(2, 0xe8fbff, 0.9).setDepth(2400);
+        this.tweens.add({ targets: ring, scale: 1.6, alpha: 0, duration: 220, onComplete: () => ring.destroy() });
+        break;
+      }
+      case 'surge': {
+        // a rush of white water sweeps the school down the stream
+        sfx.trait('surge');
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, ev.radius, 0x9ad8f0, 0.14).setStrokeStyle(3, 0xd8f4ff, 0.9).setDepth(2400).setScale(0.3);
+        this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        for (const t of ev.moved) {
+          this.particles.setParticleTint(0xe8fbff);
+          this.particles.explode(5, t.pos.x, t.pos.y);
+        }
+        this.floatText(ev.source.pos.x, ev.source.pos.y - 28, 'Surge!', '#bfe8ff', 13);
+        break;
+      }
       case 'ambush': {
         // a spray of red dirt where the gopher bursts out of the ground
         sfx.trait('ambush');
@@ -2577,6 +2651,17 @@ export class BattleScene extends Phaser.Scene {
       }
       v.sprite.setDepth(v.air > 0.5 ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
+      if (e.bubbled) {
+        // Bubbler Newt's bubble: a shining soap-film ring that pops on the next hit
+        const by = e.pos.y - 4 - 34 * v.air;
+        v.bar.fillStyle(0xc8f0ff, 0.16);
+        v.bar.fillCircle(e.pos.x, by, e.def.radius + 6);
+        v.bar.lineStyle(1.5, 0xe8fbff, 0.85);
+        v.bar.strokeCircle(e.pos.x, by, e.def.radius + 6);
+        v.bar.fillStyle(0xffffff, 0.8);
+        v.bar.fillCircle(e.pos.x - e.def.radius * 0.45, by - e.def.radius * 0.5, 2);
+        v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
+      }
       if (e.def.boss) continue; // boss uses the big HUD bar
       if (e.hp < e.maxHp || e.shield > 0) {
         const w = Math.max(24, e.def.radius * 2.4);

@@ -240,6 +240,17 @@ class Sfx {
         this.noise(0.18, 0.03, 4000);
         this.tone(900, 0.08, 'square', 0.02, 700);
         break;
+      case 'bubble': // a soft rising blub
+        this.tone(320, 0.12, 'sine', 0.04, 640);
+        this.tone(480, 0.1, 'sine', 0.03, 900, 0.06);
+        break;
+      case 'pop': // a tiny pop
+        this.tone(1200, 0.04, 'sine', 0.035, 600);
+        break;
+      case 'surge': // a rushing splash
+        this.noise(0.35, 0.06, 1400);
+        this.tone(140, 0.25, 'triangle', 0.03, 260);
+        break;
       case 'ambush': // a burst of loose earth
         this.noise(0.22, 0.05, 900);
         this.tone(180, 0.15, 'square', 0.03, 320);

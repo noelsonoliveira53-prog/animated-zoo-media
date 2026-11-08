@@ -631,9 +631,10 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep04.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 170.0
+  "duration": 170.0,
+  "video_id": "t71v9LC5MGk"
  },
  {
   "file": "moon/mb3d_ep04.mp4",

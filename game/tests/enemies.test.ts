@@ -1168,3 +1168,21 @@ describe('Thistledown enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'blossom')).toBe(true);
   });
 });
+
+describe('Lookout Marmot', () => {
+  it('whistles on its first hit only: allies nearby (and itself) speed up for a while', () => {
+    const sim = new BattleSim(lvl, null);
+    const m = sim.spawn('marmot', 0, 300);
+    const near = sim.spawn('mudling', 0, 380);
+    const far = sim.spawn('mudling', 0, 900);
+    const hit = () => (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(m, 5);
+    hit();
+    const a = m.def.alarm!;
+    expect(near.hasteMult).toBeCloseTo(a.speedMult);
+    expect(m.hasteMult).toBeCloseTo(a.speedMult);
+    expect(far.hasteMult).toBe(1);
+    expect(sim.drainEvents().filter((e) => e.type === 'alarm').length).toBe(1);
+    hit();
+    expect(sim.drainEvents().filter((e) => e.type === 'alarm').length).toBe(0);
+  });
+});

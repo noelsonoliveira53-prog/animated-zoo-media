@@ -1820,6 +1820,18 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'alarm': {
+        // the marmot stands up and whistles: a sharp ring, and the startled critters flash
+        sfx.trait('alarm');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, 10).setStrokeStyle(3, 0xffe08a, 0.9).setDepth(2400);
+        this.tweens.add({ targets: ring, radius: ev.radius, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Wheeet!', '#ffe08a', 13);
+        for (const o of ev.startled) {
+          const v = this.enemyViews.get(o.uid);
+          if (v) v.pulse = 0.15;
+        }
+        break;
+      }
       case 'blossom': {
         // a soft burst of white seed-fluff from the fallen doe, drifting onto the healed
         sfx.trait('blossom');

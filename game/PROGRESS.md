@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **183** (next balance pass at iteration 185)
+Iteration counter: **184** (next balance pass at iteration 185)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,7 @@ Iteration counter: **183** (next balance pass at iteration 185)
 - (none)
 
 ## Backlog (ranked)
-1. Thistledown level 102 with a third trait, then levels 103 and 104.
+1. Thistledown levels 103 and 104.
 2. Thistledown finale (105) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1266,6 +1266,10 @@ Iteration counter: **183** (next balance pass at iteration 185)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 184**: 102 Whistling Downs (12 seeds). The tight zig-zags put a lot of road under every pad:
+1.3–1.55 → 100/100/100 (even the novice never lost), 2.0 → 100/100/0, 2.3 → 100/100/0, 2.35 → 100/83/0, 2.4 → 92/75/0,
+2.48 → 75/75/0, 2.6 → 58/67/0. **2.32 → 92/92/0** (kept: in the second-level band). That's the highest hpMult in the
+campaign: dense coverage, not weak enemies. Future layouts should spread the road out rather than lean on hpMult.
 **Iteration 183**: 101 Windfluff Rise (12 seeds): hpMult 1.3 → 100/100/25, 1.4 → 100/92/33, 1.55 → 100/83/17,
 1.7 → 100/83/0. **1.35 → 100/100/33** (kept: exactly the opener band). The low hpMult is because the Bloomdoe heals and the
 Tumblehog rush add a lot of effective health on top of the multiplier.

@@ -236,6 +236,10 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'alarm': // a sharp, rising two-note whistle
+        this.tone(1400, 0.12, 'sine', 0.05, 2000);
+        this.tone(1800, 0.18, 'sine', 0.05, 2400, 0.12);
+        break;
       case 'blossom': // a soft rising shimmer of fluff
         [880, 1100, 1320].forEach((f, i) => this.tone(f, 0.14, 'sine', 0.03, undefined, i * 0.05));
         this.noise(0.25, 0.02, 3000);

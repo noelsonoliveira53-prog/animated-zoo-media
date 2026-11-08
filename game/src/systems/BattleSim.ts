@@ -56,6 +56,7 @@ export interface Enemy {
   riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
   hexCd: number; // Hexcroak Toad: time to its next curse
   dived: boolean; // Mudskipper has used its one dive
+  alarmed: boolean; // Lookout Marmot has already whistled
   diveT: number; // seconds left under the mud
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
@@ -211,6 +212,7 @@ export type SimEvent =
   | { type: 'hex'; source: Enemy; tower: Tower }
   | { type: 'dive'; enemy: Enemy; down: boolean }
   | { type: 'blossom'; enemy: Enemy; radius: number; healed: Enemy[] }
+  | { type: 'alarm'; enemy: Enemy; radius: number; startled: Enemy[] }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -956,6 +958,7 @@ export class BattleSim {
       hexCd: def.hex ? def.hex.interval * 0.5 : 0,
       dived: false,
       diveT: 0,
+      alarmed: false,
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -1991,6 +1994,17 @@ export class BattleSim {
       e.inkCd = this.time + e.def.ink.cooldown;
       this.inkClouds.push({ pos: { ...e.pos }, radius: e.def.ink.radius, t: e.def.ink.duration });
       this.events.push({ type: 'ink', enemy: e, pos: { ...e.pos }, radius: e.def.ink.radius, duration: e.def.ink.duration });
+    }
+    if (e.def.alarm && !e.alarmed && dmg > 0 && e.hp > 0) {
+      // Lookout Marmot: one sharp whistle, and everyone nearby bolts
+      e.alarmed = true;
+      const a = e.def.alarm;
+      const startled = this.enemies.filter((o) => o.alive && !o.def.boss && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= a.radius);
+      for (const o of startled) {
+        o.hasteMult = Math.max(o.hasteMult, a.speedMult);
+        o.hasteTime = Math.max(o.hasteTime, a.duration);
+      }
+      this.events.push({ type: 'alarm', enemy: e, radius: a.radius, startled });
     }
     if (e.def.dive && !e.dived && e.hp > 0 && e.hp < e.maxHp * e.def.dive.at) {
       // Mudskipper: a hard knock, and it vanishes into the mud to lick its wounds

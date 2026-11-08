@@ -1125,6 +1125,31 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'marmot': {
+        // a plump marmot from above, sitting up: round brown body, pale belly, small round ears, a dark nose
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.2, r * 1.3, r * 1.2);
+        g.strokeEllipse(cx, cy + r * 0.2, r * 1.3, r * 1.2);
+        g.fillStyle(0xe8d0a8, 1);
+        g.fillEllipse(cx, cy + r * 0.3, r * 0.75, r * 0.8);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx, cy - r * 0.5, r * 0.45);
+        g.strokeCircle(cx, cy - r * 0.5, r * 0.45);
+        for (const sx of [-1, 1]) {
+          g.fillCircle(cx + sx * r * 0.35, cy - r * 0.85, r * 0.13);
+          g.strokeCircle(cx + sx * r * 0.35, cy - r * 0.85, r * 0.13);
+        }
+        g.fillStyle(0xe8d0a8, 1);
+        g.fillEllipse(cx, cy - r * 0.38, r * 0.4, r * 0.25);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx, cy - r * 0.45, r * 0.07);
+        g.fillCircle(cx - r * 0.18, cy - r * 0.6, r * 0.055);
+        g.fillCircle(cx + r * 0.18, cy - r * 0.6, r * 0.055);
+        g.fillStyle(0x8a5a3a, 1);
+        for (const sx of [-1, 1]) g.fillEllipse(cx + sx * r * 0.25, cy - r * 0.05, r * 0.15, r * 0.25);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

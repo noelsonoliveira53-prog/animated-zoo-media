@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
-import { APIARY_HP_PER_LEVEL, BUILDINGS, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { APIARY_HP_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
 import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -17,6 +17,7 @@ import {
   footprintFree,
   formatTime,
   rushBuilding,
+  marketTrade,
   maxCountOf,
   moveBuilding,
   nextLevel,
@@ -399,6 +400,7 @@ export class VillageScene extends Phaser.Scene {
     if (b.type === 'townhall' && b.level > 1) lines.push(`Battle bonus: +${(b.level - 1) * 40} starting coins`);
     if (b.type === 'townhall' && b.level === 1) lines.push('Upgrade for +40 starting coins in every battle.');
     if (b.type === 'barracks' && b.level > 0) lines.push(`Battle bonus: Grove Call Rangers +${b.level * 25}% health and damage`);
+    if (b.type === 'market' && b.level > 0) lines.push(`Swap ${MARKET_TRADE.give} for ${MARKET_TRADE.get}.`);
     if (b.type === 'apiary' && b.level > 0) lines.push(`Battle bonus: hero health +${Math.round(b.level * APIARY_HP_PER_LEVEL * 100)}%`);
     if (b.type === 'shrine' && b.level > 0) lines.push(`Battle bonus: spell cooldowns ${Math.round(b.level * SHRINE_CD_PER_LEVEL * 100)}% shorter`);
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
@@ -457,6 +459,30 @@ export class VillageScene extends Phaser.Scene {
       });
       btn.setEnabled(thOk && canAfford(this.v, next.cost));
       c.add(btn);
+    } else if (b.type === 'market' && b.level > 0) {
+      // Trading Post: two swap buttons instead of an upgrade
+      const trade = (from: 'coins' | 'glowsap', y: number, label: string) => {
+        const t = new Button(this, W / 2 - 150, y, label, {
+          width: 200,
+          height: 44,
+          fontSize: 16,
+          color: from === 'coins' ? 0xffc93c : 0x9be86a,
+          onClick: () => {
+            const r = marketTrade(this.v, from);
+            if (!r.ok) this.toast(r.reason!);
+            else {
+              sfx.coin();
+              this.persist();
+              this.refresh();
+            }
+            this.openPanel(uid, false);
+          },
+        });
+        t.setName(`trade_${from}`);
+        c.add(t);
+      };
+      trade('coins', -28, `${MARKET_TRADE.give}c → ${MARKET_TRADE.get}s`);
+      trade('glowsap', 28, `${MARKET_TRADE.give}s → ${MARKET_TRADE.get}c`);
     } else {
       c.add(this.add.text(W / 2 - 150, -10, 'Max level', textStyle(20, TEXT.gold)).setOrigin(0.5));
     }

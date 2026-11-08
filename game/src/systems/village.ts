@@ -1,5 +1,5 @@
 import { TROOPS } from '../data/raid';
-import { APIARY_HP_PER_LEVEL, BUILDINGS, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { APIARY_HP_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 
 // Pure village rules. All time-dependent functions take `now` (ms) so they are testable.
 
@@ -45,6 +45,17 @@ export function capacity(v: VillageState): number {
     cap += BUILDINGS[b.type].levels[b.level - 1].storage ?? 0;
   }
   return cap;
+}
+
+/** Trading Post: swap MARKET_TRADE.give of one resource for MARKET_TRADE.get of the other. */
+export function marketTrade(v: VillageState, from: 'coins' | 'glowsap'): { ok: boolean; reason?: string } {
+  if (!v.buildings.some((b) => b.type === 'market' && b.level > 0)) return { ok: false, reason: 'Build a Trading Post first' };
+  const to = from === 'coins' ? 'glowsap' : 'coins';
+  if (v[from] < MARKET_TRADE.give) return { ok: false, reason: `Needs ${MARKET_TRADE.give} ${from}` };
+  if (v[to] + MARKET_TRADE.get > capacity(v)) return { ok: false, reason: `Not enough room for more ${to}` };
+  v[from] -= MARKET_TRADE.give;
+  v[to] += MARKET_TRADE.get;
+  return { ok: true };
 }
 
 export function builders(v: VillageState): number {

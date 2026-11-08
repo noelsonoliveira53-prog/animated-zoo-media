@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **196** (next balance pass at iteration 200)
+Iteration counter: **197** (next balance pass at iteration 200)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,8 +1256,7 @@ Iteration counter: **196** (next balance pass at iteration 200)
 - (none)
 
 ## Backlog (ranked)
-1. A breather (raid or village variety) before region 23.
-2. Region 23: a new theme, traits and five levels.
+1. Region 23: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)

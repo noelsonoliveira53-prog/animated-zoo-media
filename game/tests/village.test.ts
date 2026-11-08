@@ -254,3 +254,26 @@ describe('Honeycomb Apiary', () => {
     expect(trained.hero!.maxHp).toBe(Math.round(trainedPlain.hero!.maxHp * 1.2));
   });
 });
+
+import { marketTrade } from '../src/systems/village';
+import { MARKET_TRADE } from '../src/data/buildings';
+
+describe('Trading Post', () => {
+  it('swaps one resource for the other at the posted rate, only with a post, funds and room', () => {
+    const v = newVillage(T0);
+    v.coins = 500;
+    v.glowsap = 100;
+    expect(marketTrade(v, 'coins').ok).toBe(false); // no post yet
+    v.buildings.push({ uid: 95, type: 'market', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
+    expect(marketTrade(v, 'coins').ok).toBe(true);
+    expect(v.coins).toBe(500 - MARKET_TRADE.give);
+    expect(v.glowsap).toBe(100 + MARKET_TRADE.get);
+    expect(marketTrade(v, 'glowsap').ok).toBe(true);
+    expect(v.glowsap).toBe(100 + MARKET_TRADE.get - MARKET_TRADE.give);
+    v.glowsap = 0;
+    expect(marketTrade(v, 'glowsap').ok).toBe(false); // can't afford
+    v.coins = 5000;
+    v.glowsap = capacity(v);
+    expect(marketTrade(v, 'coins').reason).toMatch(/room/);
+  });
+});

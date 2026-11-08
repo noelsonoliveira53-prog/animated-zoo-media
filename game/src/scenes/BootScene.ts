@@ -2924,6 +2924,34 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + 22, cy - 29, 3, 7);
         break;
       }
+      case 'market': {
+        // a little market stall: a striped awning on poles over a counter with sacks of acorns and jars of glowsap
+        g.fillStyle(0x7a5232, 1);
+        g.fillRect(cx - 26, cy - 14, 4, 34);
+        g.fillRect(cx + 22, cy - 14, 4, 34);
+        g.fillStyle(0x9a6a40, 1);
+        g.fillRect(cx - 28, cy + 6, 56, 14);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeRect(cx - 28, cy + 6, 56, 14);
+        for (let n = 0; n < 5; n++) {
+          g.fillStyle(n % 2 ? 0xf4ecd8 : def.color, 1);
+          g.fillRect(cx - 32 + n * 13, cy - 26, 13, 14);
+        }
+        g.strokeRect(cx - 32, cy - 26, 65, 14);
+        for (let n = 0; n < 5; n++) {
+          g.fillStyle(n % 2 ? 0xf4ecd8 : def.color, 1);
+          g.fillTriangle(cx - 32 + n * 13, cy - 12, cx - 19 + n * 13, cy - 12, cx - 25.5 + n * 13, cy - 6);
+        }
+        g.fillStyle(0xc8a050, 1);
+        g.fillEllipse(cx - 14, cy + 2, 14, 12);
+        g.fillStyle(0xffc93c, 1);
+        g.fillCircle(cx - 16, cy - 2, 2.5);
+        g.fillCircle(cx - 11, cy - 3, 2.5);
+        g.fillStyle(0x9be86a, 1);
+        g.fillRoundedRect(cx + 4, cy - 6, 8, 12, 2);
+        g.fillRoundedRect(cx + 14, cy - 4, 7, 10, 2);
+        break;
+      }
       case 'apiary': {
         // a little meadow with painted hive-boxes stacked on stands, a few bees, and a honey pot
         g.fillStyle(0x8ab84a, 0.35);

@@ -1,6 +1,6 @@
 // Village buildings. Costs are in Coins (gold) and Glowsap (the glowing tree-sap second resource).
 
-export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'apiary' | 'wall';
+export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'apiary' | 'market' | 'wall';
 
 export interface Cost {
   coins?: number;
@@ -149,6 +149,15 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
       { cost: { coins: 6500, glowsap: 5200 }, time: 2100, th: 4 },
     ],
   },
+  market: {
+    id: 'market',
+    name: 'Trading Post',
+    blurb: 'A striped awning where travelling traders swap acorn coins for glowsap and back again, for a small cut.',
+    size: 2,
+    color: 0xd86a4a,
+    maxCount: [0, 1, 1, 1, 1],
+    levels: [{ cost: { coins: 600, glowsap: 600 }, time: 60, th: 2 }],
+  },
   wall: {
     id: 'wall',
     name: 'Bramble Wall',
@@ -164,10 +173,13 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   },
 };
 
-export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'apiary', 'wall'];
+export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'apiary', 'market', 'wall'];
 
 /** Moonpetal Shrine: battle spell cooldowns shrink by this fraction per level. */
 export const SHRINE_CD_PER_LEVEL = 0.06;
+
+/** Trading Post: give this much of one resource, get this much of the other. */
+export const MARKET_TRADE = { give: 200, get: 140 };
 
 /** Honeycomb Apiary: the hero's max health grows by this fraction per level. */
 export const APIARY_HP_PER_LEVEL = 0.1;

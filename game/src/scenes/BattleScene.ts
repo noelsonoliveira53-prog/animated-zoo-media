@@ -2405,7 +2405,7 @@ export class BattleScene extends Phaser.Scene {
         }
       }
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
-      if (e.def.momentum && !e.blockedBy) {
+      if (e.def.momentum && !e.def.boss && !e.blockedBy) {
         // Tumblehog: the thistle ball spins faster the more momentum it has built up, with dust kicking up at full roll
         const m = this.sim.momentumMult(e);
         v.sprite.rotation += (e.pos.x < prevX ? -1 : 1) * 0.06 * m * m;

@@ -1150,6 +1150,46 @@ export class BootScene extends Phaser.Scene {
         for (const sx of [-1, 1]) g.fillEllipse(cx + sx * r * 0.25, cy - r * 0.05, r * 0.15, r * 0.25);
         break;
       }
+      case 'galestag': {
+        // a colossal elk from above: long tawny body, pale rump, a shaggy dark neck-mane,
+        // and wide branching antlers grown through with purple thistle blooms
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x6a4a2a, 1);
+        for (const lx of [-0.55, -0.2, 0.35, 0.65]) {
+          g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
+          g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.6, r * 0.85);
+        g.strokeEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.6, r * 0.85);
+        g.fillStyle(0xe8d8b8, 1);
+        g.fillEllipse(cx + r * 0.75, cy + r * 0.1, r * 0.35, r * 0.5);
+        g.fillStyle(0x5a3a22, 1);
+        g.fillEllipse(cx - r * 0.5, cy - r * 0.05, r * 0.6, r * 0.7);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx - r * 0.75, cy - r * 0.35, r * 0.45, r * 0.4);
+        g.strokeEllipse(cx - r * 0.75, cy - r * 0.35, r * 0.45, r * 0.4);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.38, r * 0.05);
+        // antlers: two branching sprays with thistle heads at the tips
+        g.lineStyle(3, 0xd8c8a0, 1);
+        for (const sx of [-1, 1]) {
+          const bx = cx - r * 0.7;
+          const by = cy - r * 0.5;
+          const tx = bx + sx * r * 0.55;
+          const ty = by - r * 0.7;
+          g.lineBetween(bx, by, tx, ty);
+          g.lineBetween(bx + sx * r * 0.2, by - r * 0.25, bx + sx * r * 0.55, by - r * 0.15);
+          g.lineBetween(bx + sx * r * 0.38, by - r * 0.5, bx + sx * r * 0.2, by - r * 0.85);
+          for (const [px, py] of [[tx, ty], [bx + sx * r * 0.55, by - r * 0.15], [bx + sx * r * 0.2, by - r * 0.85]]) {
+            g.fillStyle(0x9a6ab8, 1);
+            g.fillCircle(px, py, r * 0.11);
+            g.fillStyle(0xd8b8f0, 1);
+            g.fillCircle(px - r * 0.03, py - r * 0.03, r * 0.045);
+          }
+        }
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

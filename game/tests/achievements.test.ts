@@ -112,3 +112,17 @@ describe('Glimmerbog finale', () => {
     expect(b.boss && b.lure && b.hex && b.dive && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Thistledown finale', () => {
+  it('Galestag has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_galestag: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_galestag');
+    expect(STORY.l105).toBeDefined();
+    expect(ENDLESS.bosses).toContain('galestag');
+    const b = ENEMIES.galestag;
+    expect(b.boss && b.momentum && b.alarm && b.phases?.length).toBeTruthy();
+  });
+});

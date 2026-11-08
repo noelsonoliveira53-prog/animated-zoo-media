@@ -177,4 +177,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x0e2230, 0x3a6a5a],
     accent: 0xe8ff8a,
   },
+  l105: {
+    title: 'The Wind Lies Down',
+    lines: [
+      'Galestag stops at the top of the hill, breathing hard, and for the first time in an age the prairie wind falls still.',
+      'The thistledown drifts slowly to the ground like summer snow, and the tumbleweeds roll to a stop in the grass.',
+      'The old elk bows its great crowned head to the Keepers, then turns and walks away into the tall purple grass.',
+    ],
+    sky: [0x8a9ac8, 0xf0e0f0],
+    accent: 0xb88ad0,
+  },
 };

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **189** (next balance pass at iteration 190)
+Iteration counter: **190** (next balance pass at iteration 195)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1265,6 +1265,10 @@ Iteration counter: **189** (next balance pass at iteration 190)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 190**: the two levels flagged as possible drift in 185, rechecked at 12 seeds: Queenscomb 83/75/0 and
+Windfluff 100/100/33. Both match their tuning exactly, so 185's readings were 6-seed noise.
+- Hero comparison on Thistledown levels 102–104: Ember 100%, Bramble/Fen/Sorrel/Hazel 94%, Wren 83% (lowest again; the
+  marmot alarm punishes her many small hits). The spread is fine, so no changes.
 **Iteration 189** (dailies at DAILY_HP_EASE, levels 9/25/45/65/85 × 2 seeds, one twist each):
 - Swift Horde: expert 90%, casual 70%. Thick Hides: 60% / 60%.
 - Prairie Gale at a +30% cap: 90% / 100%, gentler than the other harmful twists.

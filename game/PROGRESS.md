@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **186** (next balance pass at iteration 190)
+Iteration counter: **187** (next balance pass at iteration 190)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,8 +1256,7 @@ Iteration counter: **186** (next balance pass at iteration 190)
 - (none)
 
 ## Backlog (ranked)
-1. Thistledown level 104.
-2. Thistledown finale (105) with a boss, achievements, a story card and the endless boss rotation.
+1. Thistledown finale (105) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1266,6 +1265,8 @@ Iteration counter: **186** (next balance pass at iteration 190)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 187**: 104 Seedstorm Ridge (12 seeds; at x=850 the top entry gave 1.6 → 92/75, 1.75 → 75/42, 1.9 → 33/42).
+With the entry at x=820: 1.55 → 100/83/0, 1.65 → 92/67/0. **1.6 → 100/67/0** (kept: the fourth-level band).
 **Iteration 186**: 103 Tumbleweed Flats (12 seeds): hpMult 1.45 → 100/92/0, 1.5 → 100/92/0, 1.55 → 83/92/0,
 1.6 → 100/67/0, 1.8 → 50/42/0. **1.52 → 92/83/0** (kept: the third-level band). Spreading the road out brought the
 multiplier back to the region's normal range (102 needed 2.32).

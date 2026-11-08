@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **201** (next balance pass at iteration 205)
+Iteration counter: **202** (next balance pass at iteration 205)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1252,12 +1252,15 @@ Iteration counter: **201** (next balance pass at iteration 205)
   fresh shield). Balance: a full Honeycomb sweep, hero comparison and endless check, with no changes (see Balance Notes).
   220 tests.
 
+- **Iteration 202**: level 114 "Sunset Mesa" (Rustrock Canyons). It has a long switchback road plus a north entry that joins it for the final
+  climb, 12 pads and 15 waves of curlshells, rattlers and sandburrows mixed with older enemies. hpMult 2.0. Screenshot
+  `screenshots/202.png`. 238 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Rustrock level 114.
-2. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
+1. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1266,6 +1269,8 @@ Iteration counter: **201** (next balance pass at iteration 205)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 202**: 114 Sunset Mesa (12 seeds): hpMult 1.85 → 100/92/17, 2.15 → 92/50/0. **2.0 → 83/67/8** (kept: the
+fourth-level band).
 **Iteration 201**: 113 Hollowrock Arches (12 seeds): hpMult 1.55 → 100/100/8, 1.7 → 100/100/0, 1.85 → 100/92/0,
 2.05 → 92/67/0. **1.95 → 100/83/0** (kept: the third-level band).
 **Iteration 200**: sweep of levels 103–112 at 6 seeds (expert/casual/novice):

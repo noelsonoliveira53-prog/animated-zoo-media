@@ -1,5 +1,6 @@
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
+import { TowerFx } from './fx/TowerFx';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -47,6 +48,7 @@ export class BattleScene extends Phaser.Scene {
   private enemyViews = new Map<number, EnemyView>();
   private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
+  private fx!: TowerFx; // per-tower launch flashes, trails, impacts and tier auras
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
@@ -163,6 +165,7 @@ export class BattleScene extends Phaser.Scene {
       emitting: false,
     });
     this.particles.setDepth(2000);
+    this.fx = new TowerFx(this);
 
     if (this.level.theme.lava) {
       // drifting embers
@@ -1787,6 +1790,7 @@ export class BattleScene extends Phaser.Scene {
     this.syncViews(dt);
     this.syncHero();
     this.drawSpellHud();
+    this.fx.draw();
     if (!this.ended) music.setMood(this.sim.enemies.some((e) => e.alive && e.def.boss) ? 'boss' : 'battle');
     this.drawBossBar();
     this.refreshHud();
@@ -1867,6 +1871,7 @@ export class BattleScene extends Phaser.Scene {
         this.projViews.set(ev.projectile.uid, img);
         const tv = this.towerViews[ev.tower.slot];
         if (tv) this.tweens.add({ targets: tv, scaleY: 0.92, duration: 50, yoyo: true });
+        this.fx.onShoot(ev.tower, ev.projectile, tv);
         sfx.shoot(ev.tower.def.id);
         break;
       }
@@ -2550,11 +2555,16 @@ export class BattleScene extends Phaser.Scene {
       case 'upgrade': {
         const t = ev.tower;
         if (t.rally && ev.type === 'build') this.updateRallyFlag(t.uid, t.rally);
-        this.towerViews[t.slot]?.destroy();
+        const old = this.towerViews[t.slot];
+        if (old) {
+          this.tweens.killTweensOf(old);
+          old.destroy();
+        }
         const img = this.add.image(t.pos.x, t.pos.y - 34, t.spec ? `tower_${t.def.id}_${t.spec}` : `tower_${t.def.id}_${t.tier}`).setDepth(t.pos.y + 1);
         img.setScale(0.3, 1.4);
         this.tweens.add({ targets: img, scaleX: 1, scaleY: 1, duration: 300, ease: 'Back.easeOut' });
         this.towerViews[t.slot] = img;
+        this.fx.placed(t, img);
         this.slotViews[t.slot].setAlpha(0.6);
         this.particles.setParticleTint(0xd9c39a);
         this.particles.explode(12, t.pos.x, t.pos.y + 6);
@@ -2563,7 +2573,11 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'sell': {
         const v = this.towerViews[ev.tower.slot];
-        if (v) this.tweens.add({ targets: v, scale: 0, alpha: 0, duration: 200, onComplete: () => v.destroy() });
+        this.fx.removed(ev.tower.slot);
+        if (v) {
+          this.tweens.killTweensOf(v);
+          this.tweens.add({ targets: v, scale: 0, alpha: 0, duration: 200, onComplete: () => v.destroy() });
+        }
         this.towerViews[ev.tower.slot] = null;
         this.slotViews[ev.tower.slot].setAlpha(1);
         this.rallyFlags.get(ev.tower.uid)?.destroy();
@@ -2844,6 +2858,7 @@ export class BattleScene extends Phaser.Scene {
       if (p.homing) {
         img.setRotation(Math.atan2(p.lastTargetPos.y - img.y, p.lastTargetPos.x - img.x));
         img.setPosition(p.pos.x, p.pos.y);
+        this.fx.track(p.uid, img.x, img.y);
       } else {
         // Arc: lift by a parabola over the flight progress.
         const left = Math.hypot(p.lastTargetPos.x - p.pos.x, p.lastTargetPos.y - p.pos.y);
@@ -2851,10 +2866,12 @@ export class BattleScene extends Phaser.Scene {
         const lift = Math.sin(Math.PI * Math.max(0, Math.min(1, t))) * Math.min(120, 40 + p.travel * 0.35);
         img.setPosition(p.pos.x, p.pos.y - lift);
         img.rotation += 0.15;
+        this.fx.track(p.uid, img.x, img.y);
       }
     }
     for (const [uid, img] of this.projViews) {
       if (!live.has(uid)) {
+        this.fx.gone(uid, img.x, img.y);
         img.destroy();
         this.projViews.delete(uid);
       }

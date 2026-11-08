@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **221** (next balance pass at iteration 225)
+Iteration counter: **222** (next balance pass at iteration 225)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1374,25 +1374,31 @@ Iteration counter: **221** (next balance pass at iteration 225)
   - Code: `systems/dev.ts` (the flag in `save.settings.dev`) and `setAllLevelsOpen` in `levels.ts`.
   - One new test (253 total). Check: `scripts/dev-check.mjs` (toggle → level 125 opens → 999,999 coins after building, 9,999 lives, Starfall ready; village 999,999 each; raid army 30 of each; no console errors). Screenshots `screenshots/221.png`, `221-menu.png`, `221-map.png` and `221-raid.png`.
 
+- **Iteration 222**: tower VFX overhaul part 1, **Thornbow (archer)**. New module `scenes/fx/TowerFx.ts` holds per-tower effects, built so the other towers can plug in next.
+  - Every shot snaps the bowstring with a bright flash and a little spark puff aimed at the target, and the tower gives a tiny recoil nod.
+  - Arrows leave a glowing additive streak that thins toward its tail (gold, or the branch's colour for specialised towers).
+  - Impacts burst into sparks and wooden splinters.
+  - Upgraded Thornbows stand in a soft golden aura that pulses and grows with tier. Tier 2+ and branches add golden motes rising round the tower, and towers gently breathe.
+  - Idle motion, pulses and motes are skipped with reduced motion. Tween clean-up on upgrade and sell avoids leaks.
+  - Check: `scripts/towerfx-check.mjs <name> <towerId>` (builds tiers 0–2 plus both branches and sends a column of enemies). Screenshots `screenshots/222.png` and `222-zoom0..2.png`. No console errors, 253 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower VFX overhaul, Thornbow (archer): glowing arrow trails, a launch flash and bowstring snap, impact sparks and
-   splinters, an idle sway/flag animation, and a per-tier look (more banners and metal trim, a soft glow at tier 3).
-2. Tower VFX overhaul, Glimmer (mage): a charging orb before each bolt, a crackling bolt with an afterglow trail, an
+1. Tower VFX overhaul, Glimmer (mage): a charging orb before each bolt, a crackling bolt with an afterglow trail, an
    arcane burst on impact, a floating rune ring idle animation, and a per-tier look.
-3. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
+2. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
    ground, a big impact with debris, a shockwave ring and a light camera kick, and a per-tier look.
-4. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
+3. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
    a per-tier look.
-5. Specialization branches: a signature effect for each of the 8 top-tier branches.
-6. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+4. Specialization branches: a signature effect for each of the 8 top-tier branches.
+5. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
    Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
-7. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+6. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

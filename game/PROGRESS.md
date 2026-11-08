@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **237** (next balance pass at iteration 240)
+Iteration counter: **238** (next balance pass at iteration 240)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1505,6 +1505,16 @@ Iteration counter: **237** (next balance pass at iteration 240)
   - Reef: little branching corals in four colours and glinting sea-glass pebbles.
   - Screenshots `screenshots/237-51.png` (= `237.png`), `237-56.png`, `237-61.png` and `237-66.png`. No console errors, 258 tests.
 
+- **Iteration 238**: level graphics overhaul part 7, **six more region families**, via the new `scatter()` helper and `drawMoreGround`.
+  - Flotilla: plank rafts with rings of wake, and rope coils floating on the dark water.
+  - Amber: glistening resin beads with something tiny trapped inside, plus scattered red, orange and gold leaves.
+  - Mist: pale dew patches pooling in hollows and dew glints.
+  - Canopy: tangled surface roots and drifts of fallen leaves.
+  - Comb: broken honeycomb with a warm glow and honey drips.
+  - Bog: lily pads with the odd pale flower over dark peat water, and marsh bubbles rising from a few spots (skipped on Low and reduced motion).
+  - The amber, mist and comb glows breathe slowly.
+  - Screenshots `screenshots/238-71.png` through `238-96.png` (`238.png` = bog). No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1514,8 +1524,8 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
    richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
    snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Done so far: frost and ember (233); dusk, shoal and glass (234); gale, ruins, gears and abyss (236); orchard, storm, dunes
-   and reef (237). Next: flotilla (deck planks, rope coils), amber (resin drips), mist (dew), canopy (roots and fallen
-   leaves), comb (honey drips), bog (lily pads, bubbles), then thistle, wold, canyon, brook and heath.
+   and reef (237); flotilla, amber, mist, canopy, comb and bog (238). Next: thistle, wold, canyon, brook and heath (the last
+   five), then a pass over the world-map art.
 
 ## Known Bugs
 - (none known)

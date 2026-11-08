@@ -343,6 +343,7 @@ export class BattleScene extends Phaser.Scene {
     if (theme.storm) this.drawStormGround(rnd);
     if (theme.dunes) this.drawDuneGround(rnd);
     if (theme.reef) this.drawReefGround(rnd);
+    if (theme.flotilla || theme.amber || theme.mist || theme.canopy || theme.comb || theme.bog) this.drawMoreGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1676,6 +1677,143 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(0xffffff, 0.6);
       g.fillCircle(x - 1, y - 1, 1);
     }
+  }
+
+  /** Scatter `count` spots that keep `pad` px clear of the roads, calling draw(x, y) for each. */
+  private scatter(rnd: Phaser.Math.RandomDataGenerator, count: number, pad: number, draw: (x: number, y: number) => void): void {
+    for (let i = 0; i < count; i++) {
+      const x = rnd.between(20, GAME_W - 20);
+      const y = rnd.between(95, GAME_H - 15);
+      if (this.clearOfRoads(x, y, pad)) draw(x, y);
+    }
+  }
+
+  /** Ground detail for the flotilla, amber, mist, canopy, comb and bog regions. */
+  private drawMoreGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const { theme } = this.level;
+    const g = this.add.graphics().setDepth(-9.5);
+    const glow = this.add.graphics().setDepth(-9.4).setBlendMode(Phaser.BlendModes.ADD);
+    if (theme.flotilla) {
+      // floating flotsam on the dark water: plank rafts, rope coils and bobbing barrels
+      this.scatter(rnd, 10, 24, (x, y) => {
+        for (let k = 0; k < 3; k++) {
+          g.fillStyle(rnd.pick([0x8a6a4a, 0x7a5a3a, 0x9a7a52]), 1);
+          g.fillRect(x - 18, y - 8 + k * 6, 36, 5);
+        }
+        g.lineStyle(1, 0x4a3a2a, 0.8);
+        g.lineBetween(x - 12, y - 9, x - 12, y + 9);
+        g.lineBetween(x + 12, y - 9, x + 12, y + 9);
+        g.lineStyle(1.5, 0xc8e0f0, 0.35);
+        g.strokeEllipse(x, y + 2, 46, 18);
+      });
+      this.scatter(rnd, 8, 10, (x, y) => {
+        g.lineStyle(2.5, 0xc8a86a, 1);
+        g.strokeCircle(x, y, 6);
+        g.strokeCircle(x, y, 3);
+      });
+    }
+    if (theme.amber) {
+      // glistening resin drops and beads of amber with something tiny caught inside
+      this.scatter(rnd, 22, 6, (x, y) => {
+        g.fillStyle(0xd88a20, 0.9);
+        g.fillEllipse(x, y, 10, 7);
+        g.fillStyle(0x6a3a10, 0.8);
+        g.fillCircle(x + 1, y + 1, 1.2);
+        glow.fillStyle(0xffc860, 0.45);
+        glow.fillEllipse(x - 2, y - 2, 4, 2);
+      });
+      this.scatter(rnd, 30, 2, (x, y) => {
+        g.fillStyle(rnd.pick([0xc83a1a, 0xe87a1a, 0xf0c040]), 0.8);
+        g.fillEllipse(x, y, 6, 3);
+      });
+    }
+    if (theme.mist) {
+      // dewy grass glittering in pale patches, and soft low mist pooling in hollows
+      this.scatter(rnd, 10, 10, (x, y) => {
+        g.fillStyle(0xf0f8f4, 0.22);
+        g.fillEllipse(x, y, rnd.between(80, 150), rnd.between(24, 40));
+      });
+      this.scatter(rnd, 60, 0, (x, y) => {
+        glow.fillStyle(0xffffff, 0.55);
+        glow.fillCircle(x, y, 1.2);
+      });
+    }
+    if (theme.canopy) {
+      // tangled surface roots and drifts of big fallen leaves on the forest floor
+      this.scatter(rnd, 10, 16, (x, y) => {
+        g.lineStyle(4, 0x5a3a22, 0.9);
+        let a = rnd.frac() * Math.PI * 2;
+        let px = x;
+        let py = y;
+        for (let k = 0; k < 4; k++) {
+          a += (rnd.frac() - 0.5) * 0.9;
+          const nx = px + Math.cos(a) * 14;
+          const ny = py + Math.sin(a) * 8;
+          g.lineBetween(px, py, nx, ny);
+          px = nx;
+          py = ny;
+        }
+      });
+      this.scatter(rnd, 40, 2, (x, y) => {
+        g.fillStyle(rnd.pick([0x6a8a3a, 0x8a7a3a, 0x5a7a2e]), 0.85);
+        g.fillEllipse(x, y, 11, 5);
+        g.lineStyle(1, 0x3a4a1a, 0.7);
+        g.lineBetween(x - 5, y, x + 5, y);
+      });
+    }
+    if (theme.comb) {
+      // honey drips and broken bits of comb in the grass, with bees' wax glinting
+      this.scatter(rnd, 10, 12, (x, y) => {
+        for (let k = 0; k < 3; k++) {
+          const hx = x + (k % 2) * 9 - 4;
+          const hy = y + Math.floor(k / 2) * 8 - 4;
+          g.fillStyle(0xe8b040, 1);
+          g.fillCircle(hx, hy, 5);
+          g.lineStyle(1.5, 0xa87020, 1);
+          g.strokeCircle(hx, hy, 5);
+        }
+        glow.fillStyle(0xffe08a, 0.4);
+        glow.fillCircle(x, y, 10);
+      });
+      this.scatter(rnd, 16, 4, (x, y) => {
+        g.fillStyle(0xd89a20, 0.85);
+        g.fillEllipse(x, y, 8, 5);
+        g.fillStyle(0xfff0b0, 0.7);
+        g.fillCircle(x - 1.5, y - 1, 1.3);
+      });
+    }
+    if (theme.bog) {
+      // lily pads with the odd pale flower floating on dark peat water, and marsh bubbles
+      this.scatter(rnd, 16, 12, (x, y) => {
+        g.fillStyle(0x1e3a30, 0.6);
+        g.fillEllipse(x + 2, y + 3, 30, 12);
+        g.fillStyle(0x4a8a4a, 1);
+        g.slice(x, y, 11, 0.4, Math.PI * 2 - 0.2, false);
+        g.fillPath();
+        if (rnd.frac() < 0.3) {
+          g.fillStyle(0xf8e8f0, 1);
+          g.fillCircle(x + 2, y - 2, 3);
+          g.fillStyle(0xf0d040, 1);
+          g.fillCircle(x + 2, y - 2, 1.2);
+        }
+      });
+      if (!motion.reduced && !motion.lowFx) {
+        const spots: { x: number; y: number }[] = [];
+        this.scatter(rnd, 8, 10, (x, y) => spots.push({ x, y }));
+        if (spots.length) {
+          this.time.addEvent({
+            delay: 600,
+            loop: true,
+            callback: () => {
+              const p = spots[Math.floor(Math.random() * spots.length)];
+              const b = this.add.circle(p.x + (Math.random() - 0.5) * 10, p.y, 2.5, 0xffffff, 0).setStrokeStyle(1, 0xc8e8d8, 0.8).setDepth(-9);
+              this.tweens.add({ targets: b, y: p.y - 6, scale: 1.6, alpha: 0, duration: 900, onComplete: () => b.destroy() });
+            },
+          });
+        }
+      }
+    }
+    if (!motion.reduced && !motion.lowFx && (theme.amber || theme.mist || theme.comb)) this.tweens.add({ targets: glow, alpha: 0.5, duration: 2000, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

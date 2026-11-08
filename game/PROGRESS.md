@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **181** (next balance pass at iteration 185)
+Iteration counter: **182** (next balance pass at iteration 185)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,8 +1256,7 @@ Iteration counter: **181** (next balance pass at iteration 185)
 - (none)
 
 ## Backlog (ranked)
-1. A breather (raid or village variety) before region 21.
-2. Region 21: a new theme, traits and five levels.
+1. Region 21: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)
@@ -1266,6 +1265,9 @@ Iteration counter: **181** (next balance pass at iteration 185)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 182** (raid sim): with the first mole stats (240 hp, 30 damage), 'Lodge 3 + Moles' scored 0.9★ 42% on the
+Stronghold, against 1.0★ 49% for the standard Lodge 3 army. Raised to **320 hp, 44 damage**: 1.0★ 43%, and the totem falls
+in 14 of 20 Stronghold raids (standard army: 12 of 20). It's a specialist: more HQ stars, a little less total destruction.
 **Iteration 181**: 100 Heart of the Glimmerbog (expert/casual/novice).
 - 12 seeds: 1.7 → 92/75/0, 1.75 → 83/75/0, 1.8 → 75/75/0, 1.85 → 67/67/0, 2.0 → 33/25/0.
 - **1.75 is kept**: the expert's 83 sits in the boss band, and seeds 1–3 give 2/3 expert wins, so the finale guard passes.

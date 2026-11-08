@@ -8,6 +8,7 @@ export const ARMIES: Record<string, Record<string, number>> = {
   'Lodge 2 + Otters (20)': { brawler: 6, slinger: 5, sapper: 3, otter: 3 },
   'Lodge 3 (30)': { brawler: 10, slinger: 8, sapper: 3, owl: 2 },
   'Lodge 3 + Mender (30)': { brawler: 10, slinger: 5, sapper: 3, owl: 2, mender: 1 },
+  'Lodge 3 + Moles (30)': { brawler: 8, slinger: 6, sapper: 3, owl: 2, mole: 2 },
 };
 
 const edges = [
@@ -51,6 +52,7 @@ export function raidOnce(army: Record<string, number>, tier: number, seed: numbe
     run(1);
     put('brawler');
     run(2);
+    put('mole'); // tunnelers dig for the totem while the brawlers draw fire
     put('mender'); // healers walk in just behind the front line
     run(1);
     put('slinger');

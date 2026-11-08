@@ -277,3 +277,35 @@ describe('Hornet Hive', () => {
     expect(n(2)).toBe(1);
   });
 });
+
+describe('Mole Tunneler', () => {
+  it('digs straight for the Mud Totem, under walls, and defenses cannot hit it while it digs', () => {
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'hut', col: 4, row: 6, hp: 280, maxHp: 280 },
+        { uid: 2, type: 'totem', col: 16, row: 6, hp: 1200, maxHp: 1200 },
+        { uid: 3, type: 'wall', col: 12, row: 7, hp: 220, maxHp: 220 },
+        { uid: 4, type: 'spit', col: 10, row: 4, hp: 480, maxHp: 480 },
+      ],
+    };
+    const sim = new RaidSim(camp, { mole: 1 });
+    const m = sim.deploy('mole', { x: 60, y: buildingCenter(camp.buildings[1]).y })!;
+    expect(m).not.toBeNull();
+    let hitWhileDigging = false;
+    for (let i = 0; i < 30 * 40 && m.alive; i++) {
+      sim.update(1 / 30);
+      for (const ev of sim.drainEvents()) {
+        if (ev.type === 'troopHit' && m.tunneling) hitWhileDigging = true;
+        if (ev.type === 'buildingHit' && ev.by === m) {
+          expect(ev.building.uid).toBe(2); // only ever the totem, never the wall or the hut
+        }
+      }
+      if (camp.buildings[1].hp < 1200) break;
+    }
+    expect(hitWhileDigging).toBe(false);
+    expect(camp.buildings[1].hp).toBeLessThan(1200);
+    expect(camp.buildings[2].hp).toBe(220);
+  });
+});

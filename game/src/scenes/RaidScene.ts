@@ -312,6 +312,21 @@ export class RaidScene extends Phaser.Scene {
     if (Math.abs(img.x - t.pos.x) > 0.3) img.setFlipX(t.pos.x < img.x);
     img.setPosition(t.pos.x, t.pos.y - 10 - lift - bob).setDepth(t.pos.y + (t.def.flying ? 3000 : 0));
     bar.clear();
+    if (t.tunneling) {
+      // Mole Tunneler underground: only a moving ridge of churned earth shows where it is
+      img.setAlpha(0);
+      bar.fillStyle(0x6a4a2a, 0.9);
+      bar.fillEllipse(t.pos.x, t.pos.y - 2, 22, 10);
+      bar.fillStyle(0x8a6a40, 1);
+      for (let k = 0; k < 3; k++) bar.fillCircle(t.pos.x - 6 + k * 6, t.pos.y - 5 - ((k + Math.floor(this.time.now / 90)) % 2) * 2, 2.5);
+      bar.setDepth(t.pos.y);
+      return;
+    }
+    if (img.alpha < 1) {
+      img.setAlpha(1);
+      this.particles.setParticleTint(0x8a6a40);
+      this.particles.explode(10, t.pos.x, t.pos.y); // pops up in a spray of dirt
+    }
     if (t.hp < t.maxHp) {
       bar.fillStyle(C.ink, 0.85);
       bar.fillRect(t.pos.x - 12, t.pos.y - 34 - lift, 24, 5);

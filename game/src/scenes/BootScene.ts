@@ -2486,6 +2486,20 @@ export class BootScene extends Phaser.Scene {
       g.strokeEllipse(24, 22, 9, 10);
       g.fillStyle(0xbfe8ff, 0.7);
       g.fillCircle(10, 18, 1.5);
+    } else if (id === 'mole') {
+      // mole: pink star-nose, tiny eyes, a miner's lamp on its head and big pale digging claws
+      g.fillStyle(0xf0a0b0, 1);
+      g.fillCircle(15, 14, 3);
+      g.fillStyle(0xffe066, 1);
+      g.fillCircle(15, 3, 3);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeCircle(15, 3, 3);
+      g.fillStyle(0xe8d8c8, 1);
+      g.fillEllipse(5, 22, 7, 5);
+      g.fillEllipse(25, 22, 7, 5);
+      g.lineStyle(1.2, C.ink, 1);
+      g.strokeEllipse(5, 22, 7, 5);
+      g.strokeEllipse(25, 22, 7, 5);
     } else if (id === 'mender') {
       // toad: wide mouth line, a tonic gourd on its hip
       g.lineStyle(1.5, 0x2a4a1a, 1);

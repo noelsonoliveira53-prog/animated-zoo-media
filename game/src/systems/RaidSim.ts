@@ -15,6 +15,7 @@ export interface Troop {
   wallUid: number; // wall currently blocking this troop
   attackCd: number;
   healCd: number;
+  tunneling?: boolean; // Mole Tunneler: underground while it digs toward a target (defenses can't reach it)
 }
 
 export type RaidEvent =
@@ -130,6 +131,9 @@ export class RaidSim {
     if (t.def.prefers === 'defense') {
       const defs = standing.filter((b) => CAMP_BUILDINGS[b.type].defense);
       if (defs.length) pool = defs;
+    } else if (t.def.prefers === 'hq') {
+      const hq = standing.filter((b) => CAMP_BUILDINGS[b.type].hq);
+      if (hq.length) pool = hq;
     } else if (t.def.prefers === 'loot') {
       const loot = standing.filter((b) => CAMP_BUILDINGS[b.type].loot);
       if (loot.length) pool = loot;
@@ -160,10 +164,11 @@ export class RaidSim {
     const c = buildingCenter(target);
     const reach = buildingRadius(target) + t.def.range;
     const d = Math.hypot(c.x - t.pos.x, c.y - t.pos.y);
+    t.tunneling = !!t.def.burrows && !wall && d > reach;
     if (!wall && d > reach) {
       const step = Math.min(t.def.speed * this.mireFactor(t) * dt, d - reach + 1);
       const next = { x: t.pos.x + ((c.x - t.pos.x) / d) * step, y: t.pos.y + ((c.y - t.pos.y) / d) * step };
-      if (!t.def.flying && t.def.range < 60) {
+      if (!t.def.flying && !t.def.burrows && t.def.range < 60) {
         wall = this.walls.find((w) => {
           const wc = buildingCenter(w);
           return Math.hypot(wc.x - next.x, wc.y - next.y) < buildingRadius(w) + 10;
@@ -198,7 +203,7 @@ export class RaidSim {
 
   /** Sludge Pits: ground troops wading near one slow down (the strongest pit in range applies; flyers ignore it). */
   mireFactor(t: Troop): number {
-    if (t.def.flying || t.def.wader) return 1;
+    if (t.def.flying || t.def.wader || t.def.burrows) return 1;
     let f = 1;
     for (const b of this.standing) {
       const m = CAMP_BUILDINGS[b.type].mire;
@@ -244,7 +249,7 @@ export class RaidSim {
   private swarm(b: CampBuilding): void {
     const burst = CAMP_BUILDINGS[b.type].burst!;
     const c = buildingCenter(b);
-    const stung = this.troops.filter((t) => t.alive && Math.hypot(t.pos.x - c.x, t.pos.y - c.y) <= burst.radius + buildingRadius(b));
+    const stung = this.troops.filter((t) => t.alive && !t.tunneling && Math.hypot(t.pos.x - c.x, t.pos.y - c.y) <= burst.radius + buildingRadius(b));
     this.events.push({ type: 'swarm', building: b, radius: burst.radius + buildingRadius(b), stung });
     for (const t of stung) this.hurtTroop(t, burst.damage * this.dmgMult, c);
   }
@@ -262,7 +267,7 @@ export class RaidSim {
       let best: Troop | null = null;
       let bestD = def.range;
       for (const t of this.troops) {
-        if (!t.alive || (t.def.flying && !def.hitsAir)) continue;
+        if (!t.alive || t.tunneling || (t.def.flying && !def.hitsAir)) continue;
         const d = Math.hypot(t.pos.x - c.x, t.pos.y - c.y);
         if (d <= bestD) {
           bestD = d;
@@ -280,7 +285,7 @@ export class RaidSim {
       if (def.splash) {
         const at = { ...best.pos };
         for (const t of this.troops) {
-          if (!t.alive || t.def.flying) continue;
+          if (!t.alive || t.def.flying || t.tunneling) continue;
           if (Math.hypot(t.pos.x - at.x, t.pos.y - at.y) <= def.splash) this.hurtTroop(t, dmg, c);
         }
       } else {

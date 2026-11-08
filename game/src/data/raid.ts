@@ -12,10 +12,11 @@ export interface TroopDef {
   cost: number; // glowsap per troop
   space: number; // army capacity used
   trainTime: number; // seconds at the Ranger Lodge
-  prefers: 'any' | 'defense' | 'loot';
+  prefers: 'any' | 'defense' | 'loot' | 'hq';
   splash?: number;
   wallMult?: number; // damage multiplier against walls
   flying?: boolean;
+  burrows?: boolean; // tunnels: passes under walls, and defenses can't hit it while it's digging toward a target
   wader?: boolean; // swims through Sludge Pit muck at full speed
   lootBonus?: number; // buildings it finishes off drop this much more loot (0.3 = +30%)
   heals?: { amount: number; interval: number; radius: number }; // pulses healing into nearby troops (itself included)
@@ -94,7 +95,7 @@ export const TROOPS: Record<string, TroopDef> = {
   mender: {
     id: 'mender',
     name: 'Toad Mender',
-    blurb: 'A plump old toad with a gourd of swamp-tonic. Stays behind the front line and patches everyone up.',
+    blurb: 'A plump old toad with a gourd of tonic. Heals the troops around it.',
     hp: 120,
     damage: 6,
     rate: 0.8,
@@ -126,9 +127,26 @@ export const TROOPS: Record<string, TroopDef> = {
     lodge: 2,
     color: 0x8a5a3a,
   },
+  mole: {
+    id: 'mole',
+    name: 'Mole Tunneler',
+    blurb: 'Digs under walls straight for the Mud Totem. Nothing can hit it until it pops up.',
+    hp: 320,
+    damage: 44,
+    rate: 0.8,
+    range: 22,
+    speed: 30,
+    cost: 90,
+    space: 2,
+    trainTime: 45,
+    prefers: 'hq',
+    burrows: true,
+    lodge: 3,
+    color: 0x5a4a5a,
+  },
 };
 
-export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'otter', 'owl', 'mender'];
+export const TROOP_ORDER = ['brawler', 'slinger', 'sapper', 'otter', 'mole', 'owl', 'mender'];
 
 export interface CampBuildingDef {
   id: string;

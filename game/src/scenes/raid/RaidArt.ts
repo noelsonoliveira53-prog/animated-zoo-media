@@ -96,3 +96,49 @@ export function drawRaidGround(scene: Phaser.Scene, camp: CampBox, gameW: number
     }
   }
 }
+
+/** Where a squad lands: a dust ring, a puff and (throttled by the caller) a little banner that fades. */
+export function deployMark(scene: Phaser.Scene, x: number, y: number, banner: boolean): void {
+  const ring = scene.add.ellipse(x, y + 4, 40, 14, 0xd9c39a, 0).setStrokeStyle(3, 0xe8d9b5, 0.85).setDepth(y - 1).setScale(0.3);
+  scene.tweens.add({ targets: ring, scale: 1.3, alpha: 0, duration: 380, onComplete: () => ring.destroy() });
+  if (!banner || motion.reduced || motion.lowFx) return;
+  const flag = scene.add.container(x + 10, y + 2).setDepth(y + 0.5).setScale(1, 0);
+  const pole = scene.add.rectangle(0, -14, 2, 28, 0x5a3e24).setOrigin(0.5, 0.5);
+  const cloth = scene.add.triangle(1, -26, 0, 0, 14, 4, 0, 9, 0x4a9ad8).setOrigin(0, 0);
+  flag.add([pole, cloth]);
+  scene.tweens.add({ targets: flag, scaleY: 1, duration: 180, ease: 'Back.easeOut' });
+  scene.tweens.add({ targets: cloth, scaleX: 0.7, duration: 260, yoyo: true, repeat: 4 });
+  scene.tweens.add({ targets: flag, alpha: 0, delay: 2200, duration: 500, onComplete: () => flag.destroy() });
+}
+
+/** A fallen camp building: a heap of stones and broken planks over its footprint, with smoke curling up for a while. */
+export function rubble(scene: Phaser.Scene, cx: number, cy: number, size: number, depth: number): void {
+  const rnd = new Phaser.Math.RandomDataGenerator([`${cx},${cy}`]);
+  const g = scene.add.graphics().setDepth(depth + 0.1).setAlpha(0);
+  g.fillStyle(0x000000, 0.25);
+  g.fillEllipse(cx + 3, cy + size * 0.18, size * 0.95, size * 0.4);
+  for (let i = 0; i < 9; i++) {
+    const x = cx + rnd.realInRange(-0.36, 0.36) * size, y = cy + rnd.realInRange(-0.05, 0.22) * size;
+    g.fillStyle(rnd.pick([0x8a7a64, 0x6a5e4c, 0x9a8a72]), 1);
+    g.fillCircle(x, y, rnd.realInRange(3, 7));
+  }
+  g.lineStyle(4, 0x6a4a2a, 1);
+  for (let i = 0; i < 4; i++) {
+    const x = cx + rnd.realInRange(-0.3, 0.3) * size, y = cy + rnd.realInRange(0, 0.18) * size;
+    const a = rnd.realInRange(-0.8, 0.8);
+    g.lineBetween(x - Math.cos(a) * 10, y - Math.sin(a) * 10, x + Math.cos(a) * 10, y + Math.sin(a) * 10);
+  }
+  scene.tweens.add({ targets: g, alpha: 1, duration: 260, delay: 120 });
+  if (motion.reduced || motion.lowFx) return;
+  let n = 0;
+  const ev = scene.time.addEvent({
+    delay: 260,
+    repeat: 18,
+    callback: () => {
+      n++;
+      const p = scene.add.circle(cx + rnd.realInRange(-10, 10), cy, 5, 0x8a8278, 0.5).setDepth(depth + 0.2);
+      scene.tweens.add({ targets: p, y: cy - 50 - rnd.between(0, 30), x: p.x + rnd.between(-12, 18), scale: 2.4, alpha: 0, duration: 1600, onComplete: () => p.destroy() });
+      if (n > 18) ev.remove();
+    },
+  });
+}

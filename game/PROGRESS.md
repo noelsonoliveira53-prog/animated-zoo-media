@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **266** (next balance pass at iteration 270)
+Iteration counter: **267** (next balance pass at iteration 270)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1729,13 +1729,21 @@ Iteration counter: **266** (next balance pass at iteration 270)
   - Graphics: Low keeps the tint without glows; Reduce Motion stops the flicker. A test can pin the hour with `window.__villageHour`; `village-shot.mjs <name> [hour]` uses it.
   - `village-leak` at night: objects 124 → 123 and tweens 43 → 42, steady. Screenshot `screenshots/266.png` (21:00).
 
+- **Iteration 267: raid troop polish.** New `deployMark` and `rubble` in `scenes/raid/RaidArt.ts`:
+  - **Deploy:** a dust ring where each troop lands, plus a small blue banner that pops up, flutters and fades. At most one banner every 0.6 s, so dragging out a squad doesn't plant a forest of flags.
+  - **Fallen buildings:** a heap of stones and broken planks over the footprint (seeded per building, so it's stable), with smoke curling up for about 5 s, on top of the existing collapse, burst and shake.
+  - **Troops:** use the defense soldiers' `unitPose` (a marching step, a chopping arc at their target, breathing when idle; flyers flap and drift), replacing the old shared bob. The deploy pop-in finishes before the pose takes over.
+  - Banner, smoke and poses respect Reduce Motion and Graphics: Low.
+  - `raid-check` and `raid-phone-check` pass with no console errors. Screenshot `screenshots/267.png` (rubble where the warren's west wall fell, and a fading banner). 275 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Raid troop polish: deploy puff and a little banner where a squad lands, troop gaits like the defense soldiers, and building rubble when a camp building falls.
+1. Camp defense effects in raids: muzzle flashes and arcing shots from camp towers, impact puffs on troops, and a hit flash on the attacked troop.
+2. Raid result screen: the same ribbon, slamming stars and rolling loot as the battle result panel.
 
 ## Known Bugs
 - (none known)

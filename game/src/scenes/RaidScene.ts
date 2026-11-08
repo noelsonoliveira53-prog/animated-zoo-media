@@ -1,4 +1,5 @@
-import { drawRaidGround } from './raid/RaidArt';
+import { deployMark, drawRaidGround, rubble } from './raid/RaidArt';
+import { poseFor, unitPose } from '../systems/gait';
 import { addLighting } from '../ui/lighting';
 import { DEV_TROOPS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
@@ -29,6 +30,7 @@ export class RaidScene extends Phaser.Scene {
   private deployButtons: { id: string; c: Phaser.GameObjects.Container; count: Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics }[] = [];
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private done = false;
+  private lastBanner = -9999;
   private zone!: Phaser.GameObjects.Graphics;
 
   constructor() {
@@ -46,6 +48,7 @@ export class RaidScene extends Phaser.Scene {
     const army = devOn() ? Object.fromEntries(TROOP_ORDER.map((id) => [id, DEV_TROOPS])) : save.army;
     this.sim = new RaidSim(camp, army);
     this.done = false;
+    this.lastBanner = -9999;
     this.selected = TROOP_ORDER.find((id) => (army[id] ?? 0) > 0) ?? null;
     this.buildingViews.clear();
     this.mireZones.clear();
@@ -194,11 +197,15 @@ export class RaidScene extends Phaser.Scene {
   private handle(ev: RaidEvent): void {
     switch (ev.type) {
       case 'deploy': {
-        const img = this.add.image(ev.troop.pos.x, ev.troop.pos.y, `troop_${ev.troop.def.id}`).setScale(0);
-        this.tweens.add({ targets: img, scale: 1, duration: 180, ease: 'Back.easeOut' });
+        const img = this.add.image(ev.troop.pos.x, ev.troop.pos.y, `troop_${ev.troop.def.id}`).setScale(0).setData('popping', true);
+        this.tweens.add({ targets: img, scale: 1, duration: 180, ease: 'Back.easeOut', onComplete: () => img.setData('popping', false) });
         this.troopViews.set(ev.troop.uid, { img, bar: this.add.graphics() });
         this.particles.setParticleTint(0xd9c39a);
         this.particles.explode(6, ev.troop.pos.x, ev.troop.pos.y);
+        // a banner where a squad lands (at most one every 0.6 s, so drag-deploys don't plant a forest of flags)
+        const banner = this.time.now - this.lastBanner > 600;
+        if (banner) this.lastBanner = this.time.now;
+        deployMark(this, ev.troop.pos.x, ev.troop.pos.y, banner);
         sfx.click();
         break;
       }
@@ -223,6 +230,7 @@ export class RaidScene extends Phaser.Scene {
         if (zone) this.tweens.add({ targets: zone, alpha: 0, duration: 400 });
         this.particles.setParticleTint(0x8a6440);
         this.particles.explode(24, c.x, c.y);
+        rubble(this, c.x, c.y, CAMP_BUILDINGS[ev.building.type].size * CAMP_TILE, v?.img.depth ?? c.y);
         shake(this, 150, 0.005);
         if (ev.loot.coins + ev.loot.glowsap > 0) this.floatText(c.x, c.y - 30, `+${ev.loot.coins}c +${ev.loot.glowsap}s`, TEXT.gold);
         sfx.boom();
@@ -331,9 +339,20 @@ export class RaidScene extends Phaser.Scene {
 
   private drawTroop(t: Troop, img: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics): void {
     const lift = t.def.flying ? 18 : 0;
-    const bob = Math.abs(Math.sin(this.time.now / 120 + t.uid)) * 3;
-    if (Math.abs(img.x - t.pos.x) > 0.3) img.setFlipX(t.pos.x < img.x);
-    img.setPosition(t.pos.x, t.pos.y - 10 - lift - bob).setDepth(t.pos.y + (t.def.flying ? 3000 : 0));
+    // troops share the defense soldiers' poses: a marching step, a chopping arc at their target, flyers flap
+    const px = (img.getData('px') as number | undefined) ?? t.pos.x;
+    const py = (img.getData('py') as number | undefined) ?? t.pos.y;
+    const walking = Math.hypot(t.pos.x - px, t.pos.y - py) > 0.2;
+    img.setData('px', t.pos.x).setData('py', t.pos.y);
+    if (Math.abs(t.pos.x - px) > 0.3) img.setFlipX(t.pos.x < px);
+    const facing = img.flipX ? -1 : 1;
+    const pose = motion.reduced
+      ? { lift: 0, sx: 1, sy: 1, rot: 0 }
+      : t.def.flying
+        ? poseFor('flap', this.time.now / 80 + t.uid)
+        : unitPose(walking ? 'walk' : t.targetUid ? 'fight' : 'idle', this.time.now, t.uid * 1.3, facing);
+    img.setPosition(t.pos.x, t.pos.y - 10 - lift - pose.lift - (t.def.flying ? Math.sin(this.time.now / 300 + t.uid) * 3 : 0)).setDepth(t.pos.y + (t.def.flying ? 3000 : 0)).setRotation(pose.rot);
+    if (!img.getData('popping')) img.setScale(pose.sx, pose.sy);
     bar.clear();
     if (t.tunneling) {
       // Mole Tunneler underground: only a moving ridge of churned earth shows where it is

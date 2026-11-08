@@ -98,3 +98,17 @@ describe('Honeycomb finale', () => {
     expect(b.boss && b.wax && b.parry && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Glimmerbog finale', () => {
+  it('Glowmaw has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_glowmaw: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_glowmaw');
+    expect(STORY.l100).toBeDefined();
+    expect(ENDLESS.bosses).toContain('glowmaw');
+    const b = ENEMIES.glowmaw;
+    expect(b.boss && b.lure && b.hex && b.dive && b.phases?.length).toBeTruthy();
+  });
+});

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **180** (next balance pass at iteration 185)
+Iteration counter: **181** (next balance pass at iteration 185)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,8 @@ Iteration counter: **180** (next balance pass at iteration 185)
 - (none)
 
 ## Backlog (ranked)
-1. Glimmerbog finale (100) with a boss, achievements, a story card and the endless boss rotation.
+1. A breather (raid or village variety) before region 21.
+2. Region 21: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)
@@ -1265,6 +1266,11 @@ Iteration counter: **180** (next balance pass at iteration 185)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 181**: 100 Heart of the Glimmerbog (expert/casual/novice).
+- 12 seeds: 1.7 → 92/75/0, 1.75 → 83/75/0, 1.8 → 75/75/0, 1.85 → 67/67/0, 2.0 → 33/25/0.
+- **1.75 is kept**: the expert's 83 sits in the boss band, and seeds 1–3 give 2/3 expert wins, so the finale guard passes.
+  Casual sits a little above the band (75 against 33–63), because the lure makes casual's simple first-target play
+  less punishing than usual. Accepted, since the cliff past 1.8 is steep.
 **Iteration 180**: hero comparison on Glimmerbog levels 97–99: Fen, Ember and Wren 94%, Bramble 89%, Sorrel and Hazel 83%.
 A tight spread, so no changes.
 - Endless, 3 seeds (waves survived, expert/casual/novice): Hivegate 13.0/12.7/24.7, Lilypad 15.3/18.0/22.0.

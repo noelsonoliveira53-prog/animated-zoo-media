@@ -167,4 +167,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0xe8a030, 0xfff0c0],
     accent: 0xffd040,
   },
+  l100: {
+    title: 'The Lantern Dims',
+    lines: [
+      'Glowmaw sinks down into the black pool, and her great lantern dims to the soft glow of a single firefly.',
+      'All across the bog the croaking stops. Then, one by one, the fireflies come back out to dance over the water.',
+      'The Keepers have walked a hundred battles from the Grovelands. Somewhere beyond the bog, the road keeps going.',
+    ],
+    sky: [0x0e2230, 0x3a6a5a],
+    accent: 0xe8ff8a,
+  },
 };

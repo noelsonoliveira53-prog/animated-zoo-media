@@ -1035,6 +1035,43 @@ export class BootScene extends Phaser.Scene {
         g.strokePath();
         break;
       }
+      case 'glowmaw': {
+        // colossal anglerfrog from above: a wide dark-green body, warts, a huge grin, little arms,
+        // and a tall stalk curling over her head to a blazing lantern bulb
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x245a44, 1);
+        for (const sx of [-1, 1]) {
+          g.fillEllipse(cx + sx * r * 0.9, cy + r * 0.55, r * 0.6, r * 0.35);
+          g.strokeEllipse(cx + sx * r * 0.9, cy + r * 0.55, r * 0.6, r * 0.35);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy + r * 0.15, r * 1.8, r * 1.4);
+        g.strokeEllipse(cx, cy + r * 0.15, r * 1.8, r * 1.4);
+        g.fillStyle(0x5aaa7a, 1);
+        for (const [bx, by] of [[-0.5, 0.3], [0.45, 0.45], [0.15, 0.6], [-0.2, -0.05], [0.6, 0.0]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.07);
+        g.lineStyle(2, C.ink, 1);
+        g.beginPath();
+        g.arc(cx, cy - r * 0.05, r * 0.55, Math.PI * 0.15, Math.PI * 0.85);
+        g.strokePath();
+        for (const sx of [-1, 1]) {
+          g.fillStyle(0xe8e8a0, 1);
+          g.fillCircle(cx + sx * r * 0.4, cy - r * 0.4, r * 0.18);
+          g.lineStyle(2, C.ink, 1);
+          g.strokeCircle(cx + sx * r * 0.4, cy - r * 0.4, r * 0.18);
+          g.fillStyle(C.ink, 1);
+          g.fillCircle(cx + sx * r * 0.4, cy - r * 0.4, r * 0.07);
+        }
+        g.lineStyle(3, 0x1e4a34, 1);
+        g.lineBetween(cx, cy - r * 0.5, cx + r * 0.25, cy - r * 1.05);
+        g.lineBetween(cx + r * 0.25, cy - r * 1.05, cx + r * 0.7, cy - r * 1.15);
+        g.fillStyle(0xe8ff8a, 0.3);
+        g.fillCircle(cx + r * 0.78, cy - r * 1.02, r * 0.42);
+        g.fillStyle(0xf4ffb0, 1);
+        g.fillCircle(cx + r * 0.78, cy - r * 1.02, r * 0.2);
+        g.fillStyle(0xffffff, 0.9);
+        g.fillCircle(cx + r * 0.72, cy - r * 1.08, r * 0.06);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

@@ -861,5 +861,28 @@
   "status": "hold",
   "format": "3d_singalong",
   "duration": 174.3
+ },
+ {
+  "file": "moon/mb3d_ep06.mp4",
+  "title": "Twinkle Twinkle Little Star \ud83c\udf19 Lullaby for Babies | Moonbeam",
+  "description": "Twinkle, Twinkle, Little Star, the classic lullaby with its original verses, sung softly for babies and kids. Luna, Bunny, Lamb and Teddy watch the stars twinkle before bed.\nSoft music box, piano and harp to help little ones fall asleep. Ages 0-6.\n\nLYRICS\nTwinkle, twinkle, little star,\nHow I wonder what you are!\nUp above the world so high,\nLike a diamond in the sky.\nWhen the blazing sun is gone,\nWhen he nothing shines upon,\nThen you show your little light,\nTwinkle, twinkle, all the night.\nThen the traveller in the dark\nThanks you for your tiny spark,\nHe could not see where to go,\nIf you did not twinkle so.\nLuna waves to every star,\nBunny, lamb and teddy are\nSnuggled warm and tucked in tight,\nWatching stars on this sweet night.\nIn the dark blue sky you keep,\nWhile the little ones all sleep,\nThrough the curtains, soft and bright,\nTwinkle, twinkle, sweet goodnight.\nTwinkle, twinkle. Goodnight.",
+  "tags": [
+   "twinkle twinkle little star",
+   "lullaby for babies",
+   "nursery rhymes",
+   "bedtime song",
+   "sleep music for kids",
+   "baby sleep",
+   "lullabies",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ],
+  "date": "2026-11-11",
+  "time": "7:00 PM",
+  "thumb": "brand/moon/thumb_mb3d_ep06.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 165.5
  }
 ]

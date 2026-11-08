@@ -7,6 +7,11 @@ import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { pf } from '../ui/touch';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { loadSave } from '../systems/save';
+import { motion } from '../ui/motion';
+import { typewriter } from '../ui/typewriter';
+import { addLighting } from '../ui/lighting';
+import { litPanel, parallaxHills } from './story/StoryArt';
 
 // A short chapter card after a region boss: the region's sky, a title and a few lines, then on to the next land.
 export class StoryScene extends Phaser.Scene {
@@ -31,16 +36,22 @@ export class StoryScene extends Phaser.Scene {
       const m = this.add.image(Phaser.Math.Between(0, GAME_W), Phaser.Math.Between(120, GAME_H), 'dot').setTint(card.accent).setScale(0.3).setAlpha(0.8);
       this.tweens.add({ targets: m, y: m.y - Phaser.Math.Between(60, 160), alpha: 0, duration: Phaser.Math.Between(2600, 5200), repeat: -1, delay: Phaser.Math.Between(0, 2000) });
     }
-    const shade = this.add.graphics();
-    shade.fillStyle(C.ink, 0.55);
-    shade.fillRoundedRect(GAME_W / 2 - 440, 150, 880, 260, 26);
+    const st = loadSave().settings;
+    motion.reduced = !!st.reduceMotion;
+    const still = motion.reduced || !!st.fxLow;
+    parallaxHills(this, GAME_W, GAME_H, card.sky[1], still);
+    addLighting(this, -1);
+    litPanel(this, GAME_W / 2, 280, 880, 260, card.accent);
     const title = this.add.text(GAME_W / 2, 210, card.title, textStyle(52, TEXT.gold)).setOrigin(0.5).setAlpha(0).setName('storyTitle');
     const body = this.add
       .text(GAME_W / 2, 270, card.lines.join('\n'), { ...textStyle(pf(22), TEXT.cream, false), align: 'center', wordWrap: { width: 820 }, lineSpacing: 8 })
       .setOrigin(0.5, 0)
       .setAlpha(0);
     this.tweens.add({ targets: title, alpha: 1, y: 220, delay: 300, duration: 900 });
-    this.tweens.add({ targets: body, alpha: 1, delay: 1100, duration: 1100 });
+    // the chapter text types itself out (tap to finish it at once)
+    const full = card.lines.join('\n');
+    body.setText(full).setData('full', full);
+    this.time.delayedCall(motion.reduced ? 0 : 1000, () => typewriter(this, body, full, { still: motion.reduced }));
     this.time.delayedCall(500, () => sfx.victory());
     this.time.delayedCall(1600, () => {
       const hasNext = index + 1 < LEVELS.length;

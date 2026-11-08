@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **257** (next balance pass at iteration 260)
+Iteration counter: **258** (next balance pass at iteration 260)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1657,14 +1657,22 @@ Iteration counter: **257** (next balance pass at iteration 260)
   - Both screens read Reduce Motion and Graphics: Low for the motes, shine and breathing.
   - Checks `ach-check`, `settings-fx-check` and `phone-screens` pass with no console errors. Screenshot `screenshots/257.png`. 267 tests.
 
+- **Iteration 258: Story and Ending polish.**
+  - New `ui/typewriter.ts`: the `typeSlice` helper (line breaks are free; tested) and `typewriter()`, which reveals text on the scene clock. A tap finishes it at once; with Reduce Motion it shows straight away.
+  - New `scenes/story/StoryArt.ts`:
+    - `parallaxHills`: three ridges in darker shades of the chapter's sky that drift sideways at different speeds. They are wider than the screen so no edge shows, and are still on Reduce Motion or Graphics: Low.
+    - `litPanel`: an accent-colored glow, a dark glass body, a slim top gloss and an accent rim.
+  - **Chapter cards** (after each region boss): parallax hills, lighting, the lit panel in the region's accent color, and the chapter lines typing themselves out.
+  - **Ending:** a gold-rimmed lit panel behind the title and lines, with the lines typed out.
+  - `story-check` and `ending-check` now wait on the scene (text fully typed, buttons up) instead of wall-clock time, and both pass with no console errors. One new test (268 total). Screenshots `screenshots/258.png` (chapter card) and `258e.png` (ending).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Story and Ending scenes: parallax layers, softly lit text panels and a gentle typewriter reveal.
-2. Battle ambience: weather per theme (falling leaves, snow, embers, drifting spores) as a light overlay, off on Graphics: Low.
+1. Battle ambience: weather per theme (falling leaves, snow, embers, drifting spores) as a light overlay, off on Graphics: Low.
 
 ## Known Bugs
 - (none known)

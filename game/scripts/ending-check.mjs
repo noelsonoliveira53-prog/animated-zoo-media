@@ -14,7 +14,13 @@ page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 await page.goto('http://localhost:4329/');
 await page.waitForTimeout(900);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Ending'));
-await page.waitForTimeout(5500);
+// the body types itself out: wait until it shows the star count line (scene clock, headless frames are slow)
+await page.waitForFunction(() => {
+  const list = window.__game.scene.getScene('Ending').children.list;
+  const typed = list.some((o) => typeof o.text === 'string' && o.alpha === 1 && /Stars earned: \d+ \/ \d+$/.test(o.text));
+  return typed && list.some((o) => o.label?.text === 'Main Menu');
+}, null, { timeout: 60000, polling: 500 });
+await page.waitForTimeout(800);
 await page.screenshot({ path: `screenshots/${process.argv[2] ?? 'ending'}.png` });
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();

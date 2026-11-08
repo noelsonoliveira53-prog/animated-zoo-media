@@ -6,6 +6,9 @@ import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { motion } from '../ui/motion';
+import { typewriter } from '../ui/typewriter';
+import { litPanel } from './story/StoryArt';
 
 // Shown after the final level is won: night turns to dawn over the saved Grove.
 export class EndingScene extends Phaser.Scene {
@@ -61,6 +64,8 @@ export class EndingScene extends Phaser.Scene {
       this.tweens.add({ targets: f, y: f.y - Phaser.Math.Between(40, 120), alpha: 0, duration: Phaser.Math.Between(2500, 5000), repeat: -1 });
     }
 
+    motion.reduced = !!save.settings.reduceMotion;
+    litPanel(this, GAME_W / 2, 208, 820, 256, 0xffd23c);
     const title = this.add.text(GAME_W / 2, 120, 'The Grove is Safe!', textStyle(64, TEXT.gold)).setOrigin(0.5).setAlpha(0);
     const lines = [
       'Old Murkmaw, Grimtusk and Vulkhar have fallen.',
@@ -69,7 +74,8 @@ export class EndingScene extends Phaser.Scene {
     ];
     const body = this.add.text(GAME_W / 2, 215, lines.join('\n'), { ...textStyle(22, TEXT.cream, false), align: 'center' }).setOrigin(0.5, 0).setAlpha(0);
     this.tweens.add({ targets: title, alpha: 1, y: 130, delay: 600, duration: 1200 });
-    this.tweens.add({ targets: body, alpha: 1, delay: 1600, duration: 1200 });
+    const full = lines.join('\n');
+    this.time.delayedCall(motion.reduced ? 0 : 1500, () => typewriter(this, body, full, { still: motion.reduced, cps: 40 }));
     this.time.delayedCall(800, () => sfx.victory());
     this.time.delayedCall(2400, () => {
       new Button(this, GAME_W / 2 - 130, 380, 'Village', { width: 220, color: C.leaf, onClick: () => this.scene.start('Village') });

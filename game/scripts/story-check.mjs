@@ -34,7 +34,8 @@ const labels = await page.evaluate(() => {
 });
 await page.screenshot({ path: `screenshots/${name}-panel.png` });
 await page.evaluate(() => window.__game.scene.getScene('Battle').scene.start('Story', { levelId: window.__game.scene.getScene('Battle').level.id }));
-await page.waitForTimeout(2600);
+// wait (on the scene clock) for the chapter text to finish typing, so the shot shows the whole card
+await page.waitForFunction(() => { const st = window.__game.scene.getScene('Story'); const b = st?.children?.list.find((o) => o.getData && o.getData('full')); return b && b.text === b.getData('full') && st.children.list.some((o) => o.label?.text === 'Onward' || o.label?.text === 'World Map'); }, null, { timeout: 40000, polling: 500 });
 const title = await page.evaluate(() => window.__game.scene.getScene('Story').children.list.find((o) => o.name === 'storyTitle')?.text);
 await page.screenshot({ path: `screenshots/${name}.png` });
 console.log(JSON.stringify({ labels, title }));

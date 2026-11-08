@@ -2731,6 +2731,27 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'rattle': {
+        // a ring of sun-bleached rocks around a sandy pit, with rattlesnake heads and tails poking out
+        g.fillStyle(0xe0c088, 1);
+        g.fillEllipse(cx, cy + 6, 62, 40);
+        g.strokeEllipse(cx, cy + 6, 62, 40);
+        g.fillStyle(0xc8a068, 1);
+        g.fillEllipse(cx, cy + 8, 46, 26);
+        g.fillStyle(0x9a8a7a, 1);
+        for (const a of [0.2, 1.1, 2.0, 2.9, 3.8, 4.7, 5.6]) g.fillCircle(cx + Math.cos(a) * 31, cy + 6 + Math.sin(a) * 20, 5);
+        g.lineStyle(4, 0xb86a3a, 1);
+        for (const [sx, sy, dx, dy] of [[-14, 6, -6, -14], [6, 12, 12, -8], [16, 2, 24, -12]]) {
+          g.lineBetween(cx + sx, cy + sy, cx + dx, cy + dy);
+          g.fillStyle(0xb86a3a, 1);
+          g.fillTriangle(cx + dx - 4, cy + dy + 2, cx + dx + 4, cy + dy + 2, cx + dx, cy + dy - 6);
+          g.fillStyle(0xf0d040, 1);
+          g.fillCircle(cx + dx, cy + dy - 1, 1.2);
+        }
+        g.fillStyle(0xe8d0a0, 1);
+        for (let k = 0; k < 3; k++) g.fillEllipse(cx - 2 + k * 4, cy + 18, 4, 5);
+        break;
+      }
       case 'sludge': {
         // a bubbling pit of brown-green muck ringed with stakes, a ladle sticking out
         g.fillStyle(0x3a2e1e, 1);

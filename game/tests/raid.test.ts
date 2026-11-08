@@ -308,4 +308,28 @@ describe('Mole Tunneler', () => {
     expect(camp.buildings[1].hp).toBeLessThan(1200);
     expect(camp.buildings[2].hp).toBe(220);
   });
+  it('Rattle Traps poison ground troops nearby, the venom lingers after they leave, and flyers are safe', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'rattle', col: 10, row: 6, hp: 340, maxHp: 340 }, { uid: 2, type: 'hut', col: 24, row: 2, hp: 99999, maxHp: 99999 }] };
+    const sim = new RaidSim(camp, { brawler: 1, owl: 1 });
+    const c = buildingCenter(camp.buildings[0]);
+    const b = sim.deploy('brawler', { x: c.x - 100, y: c.y })!;
+    const o = sim.deploy('owl', { x: c.x + 100, y: c.y })!;
+    for (let i = 0; i < 30; i++) sim.update(1 / 30);
+    expect(b.poisonT).toBeGreaterThan(0);
+    expect(b.hp).toBeLessThan(TROOPS.brawler.hp);
+    expect(o.hp).toBe(TROOPS.owl.hp);
+    expect(sim.drainEvents().some((e) => e.type === 'poisoned')).toBe(true);
+    camp.buildings[0].hp = 0; // trap gone: the venom still burns for a while, then stops
+    const hp0 = b.hp;
+    for (let i = 0; i < 60; i++) sim.update(1 / 30);
+    expect(b.hp).toBeLessThan(hp0);
+    for (let i = 0; i < 90; i++) sim.update(1 / 30);
+    const hp1 = b.hp;
+    for (let i = 0; i < 30; i++) sim.update(1 / 30);
+    expect(b.hp).toBe(hp1);
+  });
+  it('only Strongholds dig a Rattle Trap', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((x) => x.type === 'rattle').length;
+    expect([n(0), n(1), n(2)]).toEqual([0, 0, 1]);
+  });
 });

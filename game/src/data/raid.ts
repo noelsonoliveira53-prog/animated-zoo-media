@@ -160,6 +160,7 @@ export interface CampBuildingDef {
   mend?: { amount: number; interval: number; range: number }; // heals damaged camp buildings in range every `interval` s
   mire?: { radius: number; factor: number }; // ground troops within radius move at this fraction of their speed
   burst?: { radius: number; damage: number }; // when destroyed, stings every troop (flyers too) within radius
+  venom?: { radius: number; dps: number; duration: number }; // ground troops passing within radius are poisoned: dps health a second for duration s
   blurb?: string;
   color: number;
 }
@@ -172,6 +173,7 @@ export const CAMP_BUILDINGS: Record<string, CampBuildingDef> = {
   shaman: { id: 'shaman', name: 'Mire Shaman', blurb: "A reed hut where an old mire-witch brews bog tonic, patching up the buildings around her.", hp: 420, size: 2, mend: { amount: 30, interval: 3, range: 130 }, color: 0x7a4a8a },
   sludge: { id: 'sludge', name: 'Sludge Pit', blurb: "A bubbling pit of muck. Anything walking near it wades slowly, right under the Spit Towers.", hp: 360, size: 2, mire: { radius: 120, factor: 0.55 }, color: 0x5a4a2a },
   hive: { id: 'hive', name: 'Hornet Hive', blurb: "A papery nest hung from a dead branch, buzzing angrily. Knock it down and the swarm boils out to sting everyone close by, wings or no wings.", hp: 300, size: 2, burst: { radius: 100, damage: 45 }, color: 0xc8a050 },
+  rattle: { id: 'rattle', name: 'Rattle Trap', blurb: "A sandy pit full of buried rattlesnakes. Walk past it and they strike at your ankles, and the venom keeps burning long after you leave.", hp: 340, size: 2, venom: { radius: 80, dps: 9, duration: 4 }, color: 0xc08a50 },
   hut: { id: 'hut', name: 'Mud Hut', blurb: "Where the critters sleep. Not much to it, but it counts toward the camp's destruction.", hp: 280, size: 2, color: 0x7a5a3a },
   wall: { id: 'wall', name: 'Stake Wall', blurb: "Sharpened stakes lashed together. Ground troops must chew through them.", hp: 220, size: 1, wall: true, color: 0x5a4632 },
 };
@@ -181,5 +183,5 @@ export const RAID_TIME = 90; // seconds
 export const CAMP_TIERS = [
   { name: 'Mudling Outpost', counts: { spit: 3, mortar: 1, pile: 2, hut: 3 }, walls: false },
   { name: 'Bogscum Warren', counts: { spit: 3, mortar: 1, shaman: 1, sludge: 1, hive: 1, pile: 3, hut: 3 }, walls: true },
-  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, sludge: 2, hive: 1, pile: 4, hut: 4 }, walls: true },
+  { name: 'Murkhorde Stronghold', counts: { spit: 3, mortar: 2, shaman: 2, sludge: 2, hive: 1, rattle: 1, pile: 4, hut: 4 }, walls: true },
 ];

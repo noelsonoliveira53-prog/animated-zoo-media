@@ -15,6 +15,8 @@ export interface Troop {
   wallUid: number; // wall currently blocking this troop
   attackCd: number;
   healCd: number;
+  poisonT?: number; // Rattle Trap venom: seconds of poison left
+  poisonDps?: number;
   tunneling?: boolean; // Mole Tunneler: underground while it digs toward a target (defenses can't reach it)
 }
 
@@ -27,6 +29,7 @@ export type RaidEvent =
   | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding }
   | { type: 'mend'; from: CampBuilding; healed: CampBuilding[] }
   | { type: 'troopHeal'; troop: Troop; healed: Troop[] }
+  | { type: 'poisoned'; troop: Troop; building: CampBuilding }
   | { type: 'swarm'; building: CampBuilding; radius: number; stung: Troop[] }
   | { type: 'end'; stars: number };
 
@@ -120,6 +123,7 @@ export class RaidSim {
     this.time += dt;
     for (const t of this.troops) if (t.alive) this.updateTroop(t, dt);
     for (const t of this.troops) if (t.alive && t.def.heals) this.tickHeal(t, dt);
+    this.tickVenom(dt);
     this.updateDefenses(dt);
     this.updateMenders(dt);
     this.checkEnd();
@@ -212,6 +216,33 @@ export class RaidSim {
       if (Math.hypot(c.x - t.pos.x, c.y - t.pos.y) <= m.radius) f = Math.min(f, m.factor);
     }
     return f;
+  }
+
+  /** Rattle Traps: ground troops passing near one are poisoned (refreshed while they stay close) and keep losing health afterwards. */
+  private tickVenom(dt: number): void {
+    const traps = this.standing.filter((b) => CAMP_BUILDINGS[b.type].venom);
+    for (const t of this.troops) {
+      if (!t.alive) continue;
+      if (!t.def.flying && !t.tunneling) {
+        for (const b of traps) {
+          const v = CAMP_BUILDINGS[b.type].venom!;
+          const c = buildingCenter(b);
+          if (Math.hypot(c.x - t.pos.x, c.y - t.pos.y) > v.radius + buildingRadius(b)) continue;
+          if (!(t.poisonT! > 0)) this.events.push({ type: 'poisoned', troop: t, building: b });
+          t.poisonT = v.duration;
+          t.poisonDps = Math.max(t.poisonDps ?? 0, v.dps * this.dmgMult);
+        }
+      }
+      if (t.poisonT! > 0) {
+        t.poisonT! -= dt;
+        t.hp -= (t.poisonDps ?? 0) * dt;
+        if (t.poisonT! <= 0) t.poisonDps = 0;
+        if (t.hp <= 0) {
+          t.alive = false;
+          this.events.push({ type: 'troopDown', troop: t });
+        }
+      }
+    }
   }
 
   /** Toad Mender: every few seconds, tops up hurt troops around it (itself included). */

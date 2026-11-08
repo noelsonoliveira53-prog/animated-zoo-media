@@ -3,7 +3,7 @@ import { shake } from '../ui/motion';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { CAMP_BUILDINGS, CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
-import { buildingCenter, CAMP_COLS, CAMP_OX, CAMP_OY, CAMP_ROWS, CAMP_TILE, generateCamp } from '../systems/camp';
+import { buildingCenter, buildingRadius, CAMP_COLS, CAMP_OX, CAMP_OY, CAMP_ROWS, CAMP_TILE, generateCamp } from '../systems/camp';
 import { RaidSim, type RaidEvent, type Troop } from '../systems/RaidSim';
 import { bumpStats, ensureVillage, loadSave, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -18,6 +18,7 @@ export class RaidScene extends Phaser.Scene {
   private sim!: RaidSim;
   private selected: string | null = null;
   private buildingViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private lastVenomText = -9999;
   private mireZones = new Map<number, Phaser.GameObjects.Arc>();
   private troopViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
   private hudText!: Phaser.GameObjects.Text;
@@ -55,6 +56,12 @@ export class RaidScene extends Phaser.Scene {
         // the muddy ground a Sludge Pit soaks: ground troops wade slowly through it
         const c = buildingCenter(b);
         const zone = this.add.circle(c.x, c.y, def.mire.radius, 0x4a5a1e, 0.32).setStrokeStyle(3, 0x8a9a3a, 0.7).setDepth(1);
+        this.mireZones.set(b.uid, zone);
+      }
+      if (def.venom) {
+        // the sand around a Rattle Trap, where the buried snakes can reach
+        const c = buildingCenter(b);
+        const zone = this.add.circle(c.x, c.y, def.venom.radius + buildingRadius(b), 0xd8b070, 0.18).setStrokeStyle(2, 0xa8f07a, 0.55).setDepth(1);
         this.mireZones.set(b.uid, zone);
       }
     }
@@ -263,6 +270,17 @@ export class RaidScene extends Phaser.Scene {
         sfx.trait('swarm');
         break;
       }
+      case 'poisoned': {
+        // rattlesnakes strike from the sand at a passing troop
+        this.particles.setParticleTint(0xa8f07a);
+        this.particles.explode(6, ev.troop.pos.x, ev.troop.pos.y - 6);
+        if (this.time.now - this.lastVenomText > 700) {
+          this.lastVenomText = this.time.now; // several troops bitten at once share one label and one hiss
+          this.floatText(ev.troop.pos.x, ev.troop.pos.y - 40, 'Venom!', '#b8f08a');
+          sfx.trait('venom');
+        }
+        break;
+      }
       case 'troopDown': {
         const v = this.troopViews.get(ev.troop.uid);
         if (v) {
@@ -327,6 +345,8 @@ export class RaidScene extends Phaser.Scene {
       this.particles.setParticleTint(0x8a6a40);
       this.particles.explode(10, t.pos.x, t.pos.y); // pops up in a spray of dirt
     }
+    if (t.poisonT! > 0) img.setTint(0xa8f07a);
+    else if (img.isTinted && !img.tintFill) img.clearTint();
     if (t.hp < t.maxHp) {
       bar.fillStyle(C.ink, 0.85);
       bar.fillRect(t.pos.x - 12, t.pos.y - 34 - lift, 24, 5);

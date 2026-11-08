@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **203** (next balance pass at iteration 205)
+Iteration counter: **204** (next balance pass at iteration 205)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1263,12 +1263,18 @@ Iteration counter: **203** (next balance pass at iteration 205)
   - Also added: a code-drawn coiled-serpent sprite, the achievements "Snakecharmer" (boss) and "Canyon Keeper" (15 stars), the story card "The Spire Falls Quiet" and a place in the endless boss rotation.
   - Check: `scripts/rustcoil-check.mjs` (phase 1 summons 4 gophers, no console errors). Screenshots `screenshots/203.png`, `rustcoil.png`, `rustcoil-map.png`. 239 tests.
 
+- **Iteration 204**: new raid camp building, the **Rattle Trap** (340 hp). It is a sandy pit of buried rattlesnakes.
+  - Ground troops that pass within 80 px are poisoned for 9 health a second. While they stay close the poison keeps renewing, and it lasts 4 s after they leave.
+  - Flyers and tunnelling moles are safe. Knocking the trap down stops new bites, but troops already poisoned keep burning.
+  - Strongholds dig one.
+  - The camp shows the trap's reach as a ring of sand. Bitten troops turn green and get a "Venom!" pop-up with a hiss; several bites at once share one label.
+  - Two new tests (241 total). Check: `scripts/rattle-check.mjs` (3 brawlers poisoned, the owl untouched, no console errors). Screenshot `screenshots/204.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Breather: a raid camp building, the Rattle Trap: a hidden pit that poisons troops walking over it (venom over time).
-2. Region 24 opener (theme, music, map art, battle overlay, two new enemies).
+1. Region 24 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)
@@ -1277,6 +1283,9 @@ Iteration counter: **203** (next balance pass at iteration 205)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 204** (raid-balance, Stronghold column; before → after): Lodge 3 1.0★ 49% → 0.7★ 44%, Lodge 3 + Mender 1.5★ 54% → 1.4★ 50%,
+Lodge 3 + Moles 1.0★ 43% → 1.2★ 45%. The first try (95 px reach, 12 dps) hit the Mender army harder (1.3★), so it was eased to 80 px / 9 dps.
+Strongholds are meant to need a counter, and healers and tunnellers are that counter. The Outpost and Warren columns are unchanged.
 **Iteration 203**: 115 The Rattling Spire (12 seeds): hpMult 1.55–1.75 → 100/100/83+ (far too easy: the shared middle stretch
 sits between many pads), 2.3 → 67/58/0, 2.6 → 42/33/0. **2.2 → 75/67/0** (kept: the boss band; the finale guard passes).
 **Iteration 202**: 114 Sunset Mesa (12 seeds): hpMult 1.85 → 100/92/17, 2.15 → 92/50/0. **2.0 → 83/67/8** (kept: the

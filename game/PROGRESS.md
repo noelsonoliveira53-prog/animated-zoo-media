@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **249** (next balance pass at iteration 250)
+Iteration counter: **250** (next balance pass at iteration 255)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1603,6 +1603,11 @@ Iteration counter: **249** (next balance pass at iteration 250)
   - Tree drawing now lives in a shared `addTree()` in `VillageArt.ts` (the village looks the same; same RNG order). Sway and flicker respect Reduce Motion and Graphics: Low, which the raid now reads itself.
   - Checked with `scripts/raid-check.mjs` (a full raid with no console errors) and `scripts/village-shot.mjs`. Screenshot `screenshots/249.png`. 265 tests.
 
+- **Iteration 250** (POLISH + BALANCE):
+  - Phone check: `scripts/phone-screens.mjs` at 740×360 over the new menu backdrop, the village art, the building panel, shop, raid and army screens and achievements. Everything fits with no console errors (`screenshots/250.png` is the phone menu).
+  - Performance: the new `scripts/village-leak.mjs` idles the village for 20 s. Objects 106 → 113 and tweens 34 → 41 (smoke puffs churning, not piling up). The battle leak check was done in iteration 245.
+  - Balance: a raid sweep and an endless sweep (both sims unchanged since iteration 230). Raids still climb as intended: Lodge 1 clears outposts, Lodge 3 clears warrens, and the Stronghold stays the hard target where the Mender helps most. Endless holds 12–21 waves; the novice strategy's endless edge on some maps is the known artifact (iterations 205 and 225). Nothing tuned (see Balance Notes). 265 tests.
+
 ## In Progress
 - (none)
 
@@ -2493,3 +2498,4 @@ Findings / follow-ups:
 - Burrow Den alone can't win (it only blocks); that's intended, but its value in mixes deserves a look later.
 - **Iteration 245 sweep** (4 seeds; expert / casual / novice win %): L1 100/100/100, L3 100/100/100, L5 100/50/100, L10 75/100/50, L20 75/50/0, L30 75/25/25, L45 75/50/0, L60 75/50/0, L75 100/75/0, L90 100/25/0, L105 75/75/0, L120 75/25/0, L125 100/75/0. Single-tower strategies lose from L3 on (intended: mixes matter).
   - Store (3 seeds, none → maxed; expert/casual/novice): L5 100/67/100 → 100/100/100; L30 100/0/33 → 100/67/100; L60 67/33/0 → 100/100/0; L90 100/33/0 → 100/100/67; L120 67/33/0 → 100/100/100; L125 100/67/0 → 100/100/100. A maxed store is still a big long-term boost (about 70k coins and 52k glowsap); keep watching it, but no change.
+- **Iteration 250 sweeps:** raids (stars / % destroyed): Lodge 1: 1.8★ 67% / 0.3★ 23% / 0.1★ 17%; Lodge 2: 3.0★ / 1.7★ 67% / 0.6★ 34%; Lodge 3: 3.0★ / 3.0★ / 0.9★ 45% (with Mender 1.6★ 55%, with Moles 1.3★ 47%). Endless waves (expert/casual/novice): Mossgate 12.0/12.0/12.3, Murkmaw 11.7/11.7/17.7, Frostpeak 12.0/12.0/12.3, Duskcap 12.7/12.3/21.3.

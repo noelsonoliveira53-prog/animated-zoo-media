@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **264** (next balance pass at iteration 265)
+Iteration counter: **265** (next balance pass at iteration 270)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1713,6 +1713,14 @@ Iteration counter: **264** (next balance pass at iteration 265)
   - Off with Reduce Motion or Graphics: Low. First pass was too small to read at full view, so walkers draw at 1.8× and carts at 1.6×.
   - `village-leak.mjs`: objects 108 → 113 and tweens 38 → 45 over 20 s, steady. `collect-all-check` still passes. Screenshot `screenshots/264.png`. 274 tests.
 
+- **Iteration 265** (POLISH + BALANCE):
+  - **Bug fix (village build menu):** locked cards printed "Grove Hall N" wider than the 88 px cards, so on phones the labels ran into each other ("Grove HallGrove Hall…"). Building names were also mismatched in size (fit-to-width made short names like "Fish Weir" big and long ones tiny).
+    - Locked cards now say "Hall N" (fit to the card).
+    - Names wrap to two lines at one shared size, and the price line moved down 5 px to clear them.
+    - Checked at phone size (`phone-screens.mjs`) and desktop (`village-shot.mjs`); screenshot `screenshots/265.png`.
+  - Phone battle and result check (`phone-battle.mjs`): passes.
+  - **Balance:** a 6-seed sweep of the first ten levels (the new-player stretch). Mossgate, Thornwood, Gloomfen, Rimewood and Frostfern are 100/100/100. Icicle Crossing 100/67/0, Murkmaw's Den 83/50/83, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67. Easy openers that ramp from the first boss on, as targeted, so nothing changed. 274 tests.
+
 ## In Progress
 - (none)
 
@@ -2606,3 +2614,4 @@ Findings / follow-ups:
 - **Iteration 250 sweeps:** raids (stars / % destroyed): Lodge 1: 1.8★ 67% / 0.3★ 23% / 0.1★ 17%; Lodge 2: 3.0★ / 1.7★ 67% / 0.6★ 34%; Lodge 3: 3.0★ / 3.0★ / 0.9★ 45% (with Mender 1.6★ 55%, with Moles 1.3★ 47%). Endless waves (expert/casual/novice): Mossgate 12.0/12.0/12.3, Murkmaw 11.7/11.7/17.7, Frostpeak 12.0/12.0/12.3, Duskcap 12.7/12.3/21.3.
 - **Iteration 255 sweep** (4 seeds; expert / casual / novice win %): L7 Icicle Crossing 100/75/0, L15 Heart of the Emberdeep 75/25/75, L25 Heart of the Orchard 75/50/0, L40 Heart of the Glimmerbog 75/50/0, L55 Heart of the Ruins 75/50/0, L70 Crown of the Reef 75/50/0, L85 Saltjaw's Grotto 100/75/0, L100 Shrine of a Thousand Lanterns 100/25/0, L110 The Great Barn 50/25/0 (10 seeds: 80/30/0), L115 The Rattling Spire 75/75/0.
 - **Iteration 260 hero sweep** (expert strategy, levels 20/50/80/100/120, 6 seeds; win %, avg lives): Ember 90 / 9.5, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7. Watch item: if a future sweep puts either below 60%, give Sorrel's sling +2 damage or Bramble's Earthshake +10% radius first.
+- **Iteration 265 opener sweep** (levels 1–10, 6 seeds; expert / casual / novice %): Mossgate 100/100/100, Thornwood 100/100/100, Gloomfen 100/100/100, Rimewood 100/100/100, Frostfern 100/100/100, Murkmaw's Den 83/50/83, Icicle Crossing 100/67/0, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67.

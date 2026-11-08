@@ -565,9 +565,11 @@ export class VillageScene extends Phaser.Scene {
       icon.setScale(Math.min(1, 90 / (def.size * TILE)));
       if (!available) icon.setTint(0x777777);
       card.add(icon);
-      card.add(fitWidth(this.add.text(0, 8, def.name, textStyle(pf(15))).setOrigin(0.5, 0), cardW - 10));
-      card.add(fitWidth(this.add.text(0, 52, [lvl.cost.coins ? `${lvl.cost.coins}c` : '', lvl.cost.glowsap ? `${lvl.cost.glowsap}s` : ''].filter(Boolean).join(' + ') || 'Free', { ...textStyle(pf(13), affordable ? TEXT.gold : TEXT.heart, false), align: 'center' }).setOrigin(0.5, 0), cardW - 10));
-      card.add(this.add.text(0, 88, max > 0 ? `${count}/${max}` : `Grove Hall ${lvl.th}`, textStyle(pf(14), TEXT.dim)).setOrigin(0.5, 0));
+      // names wrap to two lines at one shared size, so short and long names read alike
+      const nameText = this.add.text(0, 6, def.name, { ...textStyle(pf(13)), align: 'center', wordWrap: { width: cardW - 8 } }).setOrigin(0.5, 0);
+      card.add(fitWidth(nameText, cardW - 8));
+      card.add(fitWidth(this.add.text(0, 57, [lvl.cost.coins ? `${lvl.cost.coins}c` : '', lvl.cost.glowsap ? `${lvl.cost.glowsap}s` : ''].filter(Boolean).join(' + ') || 'Free', { ...textStyle(pf(13), affordable ? TEXT.gold : TEXT.heart, false), align: 'center' }).setOrigin(0.5, 0), cardW - 10));
+      card.add(fitWidth(this.add.text(0, 88, max > 0 ? `${count}/${max}` : `Hall ${lvl.th}`, textStyle(pf(14), TEXT.dim)).setOrigin(0.5, 0), cardW - 10)); // short, so it never spills onto the next card
       card.setSize(cardW, 220).setInteractive({ useHandCursor: available });
       card.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();

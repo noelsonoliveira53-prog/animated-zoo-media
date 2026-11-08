@@ -14,6 +14,7 @@ const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0
 const FLOTILLA = { grass: 0x2a5a7a, grassDark: 0x24506e, road: 0xb08a5a, roadEdge: 0x6a4a2a, trees: [0x8a6a4a, 0x6a5a4a, 0xa8885a], flotilla: true };
 const AMBER = { grass: 0x9a7a3a, grassDark: 0x8a6a30, road: 0x7a5a3a, roadEdge: 0x4a3424, trees: [0xc83a1a, 0xe87a1a, 0xf0c040, 0x8a3a5a], amber: true };
 const MIST = { grass: 0x7aa878, grassDark: 0x6a9868, road: 0xb8ac90, roadEdge: 0x8a7e66, trees: [0x4a7a5a, 0xe89ab8, 0x5a8a5a], mist: true };
+const THISTLE = { grass: 0x8a9a5a, grassDark: 0x7a8a4e, road: 0xc8a878, roadEdge: 0x7a5a3a, trees: [0x9a6ab8, 0xb88ad0, 0x6a8a3a], thistle: true };
 const BOG = { grass: 0x3a5a4a, grassDark: 0x2f4e40, road: 0x8a7a5a, roadEdge: 0x4a3e2a, trees: [0x2a6a5a, 0x3a7a4a, 0x5a8a3a], bog: true };
 const COMB = { grass: 0xb8a848, grassDark: 0xa8983c, road: 0xe0b860, roadEdge: 0x9a7030, trees: [0xd8a030, 0xc8b040, 0x8a9a3a], comb: true };
 const CANOPY = { grass: 0x3f6e38, grassDark: 0x335e2e, road: 0xb08a5e, roadEdge: 0x6a4a2c, trees: [0x3f8a3a, 0x5aa04a, 0x2f6a3a], canopy: true };
@@ -4764,6 +4765,51 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'glowmaw', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l101',
+    name: 'Windfluff Rise',
+    blurb: 'Out of the bog, the road climbs into a wide prairie of purple thistles, where the wind never stops and the air is full of drifting seed-fluff. Something round and prickly is rolling down the hill, and it is picking up speed.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.35,
+    startCoins: 1000,
+    lives: 20,
+    theme: THISTLE,
+    paths: [
+      [{ x: -40, y: 300 }, { x: 240, y: 300 }, { x: 240, y: 560 }, { x: 540, y: 560 }, { x: 540, y: 220 }, { x: 840, y: 220 }, { x: 840, y: 480 }, { x: 1080, y: 480 }, { x: 1080, y: 260 }, { x: 1320, y: 260 }],
+      [{ x: 690, y: -40 }, { x: 690, y: 220 }, { x: 840, y: 220 }, { x: 840, y: 480 }, { x: 1080, y: 480 }, { x: 1080, y: 260 }, { x: 1320, y: 260 }],
+    ],
+    slots: [
+      { x: 140, y: 210 },
+      { x: 140, y: 390 },
+      { x: 330, y: 400 },
+      { x: 330, y: 650 },
+      { x: 450, y: 300 },
+      { x: 450, y: 470 },
+      { x: 600, y: 120 },
+      { x: 620, y: 330 },
+      { x: 750, y: 350 },
+      { x: 770, y: 120 },
+      { x: 930, y: 390 },
+      { x: 1140, y: 170 },
+      { x: 1170, y: 370 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'tumblehog', count: 4, interval: 1.4 }, { enemy: 'mudling', count: 12, interval: 0.5, delay: 2 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 3, interval: 1.6 }, { enemy: 'skitter', count: 12, interval: 0.4, delay: 1 }] },
+      { groups: [{ enemy: 'tumblehog', count: 5, interval: 1.2 }, { enemy: 'galehound', count: 6, interval: 0.55, delay: 3 }, { enemy: 'gullwing', count: 5, interval: 0.9, delay: 5 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 4, interval: 1.4 }, { enemy: 'shellback', count: 4, interval: 1.3, delay: 2 }, { enemy: 'skitter', count: 10, interval: 0.4, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'tumblehog', count: 6, interval: 1.1 }, { enemy: 'bloomdoe', count: 2, interval: 1.6, path: 1, delay: 2 }, { enemy: 'kitewing', count: 3, interval: 1.6, delay: 6 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 5, interval: 1.2 }, { enemy: 'thunderhoof', count: 6, interval: 0.6, delay: 1 }, { enemy: 'glarefly', count: 5, interval: 0.85, delay: 6 }] },
+      { groups: [{ enemy: 'tumblehog', count: 7, interval: 1 }, { enemy: 'galehound', count: 8, interval: 0.5, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 5, interval: 1.2 }, { enemy: 'reedguard', count: 5, interval: 1.1, delay: 2 }, { enemy: 'tumblehog', count: 3, interval: 1.4, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'tumblehog', count: 8, interval: 0.95 }, { enemy: 'bogbrute', count: 2, interval: 3, delay: 3 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 6, interval: 1.1 }, { enemy: 'skitter', count: 18, interval: 0.28, path: 1, delay: 1 }, { enemy: 'tidecaller', count: 2, interval: 2.6, delay: 3 }] },
+      { groups: [{ enemy: 'tumblehog', count: 9, interval: 0.9 }, { enemy: 'bloomdoe', count: 4, interval: 1.2, path: 1, delay: 1 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 4 }, { enemy: 'kitewing', count: 5, interval: 1.3, delay: 8 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 7, interval: 1 }, { enemy: 'tumblehog', count: 6, interval: 1, delay: 1 }, { enemy: 'deckgunner', count: 4, interval: 1.3, delay: 3 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 8 }] },
+      { groups: [{ enemy: 'tumblehog', count: 10, interval: 0.8 }, { enemy: 'galehound', count: 10, interval: 0.4, delay: 2 }, { enemy: 'bloomdoe', count: 5, interval: 1.1, path: 1, delay: 3 }, { enemy: 'cloudram', count: 2, interval: 2.6, delay: 8 }] },
+      { groups: [{ enemy: 'bloomdoe', count: 8, interval: 0.9 }, { enemy: 'tumblehog', count: 10, interval: 0.8, delay: 1 }, { enemy: 'bramblehide', count: 3, interval: 2.4, delay: 8 }, { enemy: 'gnat', count: 18, interval: 0.24, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -4800,6 +4846,7 @@ export interface RegionDef {
   canopy?: boolean;
   comb?: boolean;
   bog?: boolean;
+  thistle?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -4823,6 +4870,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Highcanopy', first: 85, count: 5, canopy: true },
   { name: 'The Honeycomb Hills', first: 90, count: 5, comb: true },
   { name: 'The Glimmerbog', first: 95, count: 5, bog: true },
+  { name: 'The Thistledown Prairie', first: 100, count: 5, thistle: true },
 ];
 
 export function regionOf(levelIndex: number): number {

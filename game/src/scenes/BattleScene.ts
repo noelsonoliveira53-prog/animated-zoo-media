@@ -305,6 +305,19 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.thistle && !motion.reduced) {
+      // thistledown fluff drifting across the prairie on the wind
+      for (let i = 0; i < 16; i++) {
+        const y = rnd.between(120, GAME_H - 140);
+        const fluff = this.add.circle(rnd.between(-40, GAME_W), y, rnd.between(2, 3), 0xffffff, 0.75).setDepth(0.7);
+        const dur = rnd.between(7000, 12000);
+        this.tweens.add({ targets: fluff, x: GAME_W + 40, duration: dur * (1 - fluff.x / (GAME_W + 80)), onComplete: () => {
+          fluff.x = -40;
+          this.tweens.add({ targets: fluff, x: GAME_W + 40, duration: dur, repeat: -1 });
+        } });
+        this.tweens.add({ targets: fluff, y: y - rnd.between(10, 30), duration: rnd.between(1400, 2600), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      }
+    }
     if (this.level.theme.bog) {
       // night over the bog: a soft dark wash, with fireflies blinking in and out
       this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x0a1a2a, 0.22).setDepth(0.55);
@@ -511,6 +524,29 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.thistle) {
+        const k = rnd.frac();
+        if (k < 0.45) {
+          // a clump of thistles: spiky green leaves under round purple flower heads
+          deco.fillStyle(0x5a7a3a, 1);
+          for (const dx of [-8, 0, 8]) deco.fillTriangle(p.x + dx - 5, p.y + 8, p.x + dx + 5, p.y + 8, p.x + dx, p.y - 8);
+          deco.fillStyle(rnd.pick([0x9a6ab8, 0xb88ad0]), 1);
+          for (const [dx, dy] of [[-6, -10], [5, -13], [0, -4]]) deco.fillCircle(p.x + dx, p.y + dy, 4.5);
+          deco.fillStyle(0xffffff, 0.5);
+          deco.fillCircle(p.x - 7, p.y - 12, 1.5);
+        } else if (k < 0.75) {
+          // a dry tumbleweed resting in the grass
+          deco.lineStyle(1.5, 0xa88a50, 1);
+          deco.strokeCircle(p.x, p.y, 9);
+          deco.lineBetween(p.x - 9, p.y, p.x + 9, p.y);
+          deco.lineBetween(p.x, p.y - 9, p.x, p.y + 9);
+          deco.lineBetween(p.x - 6, p.y - 6, p.x + 6, p.y + 6);
+          deco.lineBetween(p.x - 6, p.y + 6, p.x + 6, p.y - 6);
+        } else {
+          // a tuft of tall, pale prairie grass
+          deco.lineStyle(2, 0xc8c878, 1);
+          for (const dx of [-6, -2, 2, 6]) deco.lineBetween(p.x + dx, p.y + 8, p.x + dx * 1.8, p.y - 14);
         }
       } else if (this.level.theme.bog) {
         const k = rnd.frac();
@@ -1782,6 +1818,20 @@ export class BattleScene extends Phaser.Scene {
         this.particles.setParticleTint(0xd8b890);
         this.particles.explode(10, ev.pos.x, ev.pos.y - 6);
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
+        break;
+      }
+      case 'blossom': {
+        // a soft burst of white seed-fluff from the fallen doe, drifting onto the healed
+        sfx.trait('blossom');
+        const ring = this.add.circle(ev.enemy.pos.x, ev.enemy.pos.y, 14, 0xffffff, 0.15).setStrokeStyle(2, 0xe8d8f8, 0.8).setDepth(2400);
+        this.tweens.add({ targets: ring, radius: ev.radius, alpha: 0, duration: 600, onComplete: () => ring.destroy() });
+        this.particles.setParticleTint(0xffffff);
+        this.particles.explode(16, ev.enemy.pos.x, ev.enemy.pos.y - 6);
+        for (const o of ev.healed) {
+          this.particles.setParticleTint(0x9bff8a);
+          this.particles.explode(3, o.pos.x, o.pos.y - 8);
+        }
+        if (ev.healed.length) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 30, 'Bloom', '#e8d8f8', 13);
         break;
       }
       case 'dive': {

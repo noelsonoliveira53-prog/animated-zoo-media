@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **182** (next balance pass at iteration 185)
+Iteration counter: **183** (next balance pass at iteration 185)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,8 @@ Iteration counter: **182** (next balance pass at iteration 185)
 - (none)
 
 ## Backlog (ranked)
-1. Region 21: a new theme, traits and five levels.
+1. Thistledown level 102 with a third trait, then levels 103 and 104.
+2. Thistledown finale (105) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1265,6 +1266,9 @@ Iteration counter: **182** (next balance pass at iteration 185)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 183**: 101 Windfluff Rise (12 seeds): hpMult 1.3 → 100/100/25, 1.4 → 100/92/33, 1.55 → 100/83/17,
+1.7 → 100/83/0. **1.35 → 100/100/33** (kept: exactly the opener band). The low hpMult is because the Bloomdoe heals and the
+Tumblehog rush add a lot of effective health on top of the multiplier.
 **Iteration 182** (raid sim): with the first mole stats (240 hp, 30 damage), 'Lodge 3 + Moles' scored 0.9★ 42% on the
 Stronghold, against 1.0★ 49% for the standard Lodge 3 army. Raised to **320 hp, 44 damage**: 1.0★ 43%, and the totem falls
 in 14 of 20 Stronghold raids (standard army: 12 of 20). It's a specialist: more HQ stars, a little less total destruction.

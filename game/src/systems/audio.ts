@@ -236,6 +236,10 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'blossom': // a soft rising shimmer of fluff
+        [880, 1100, 1320].forEach((f, i) => this.tone(f, 0.14, 'sine', 0.03, undefined, i * 0.05));
+        this.noise(0.25, 0.02, 3000);
+        break;
       case 'dive': // a wet plop
         this.tone(320, 0.12, 'sine', 0.05, 120);
         this.noise(0.15, 0.04, 700);

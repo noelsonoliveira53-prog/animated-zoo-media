@@ -1140,3 +1140,31 @@ describe('Mudskipper', () => {
     expect(sim.drainEvents().filter((e) => e.type === 'dive').length).toBeGreaterThanOrEqual(1);
   });
 });
+
+describe('Thistledown enemies', () => {
+  it('a Tumblehog speeds up while unhit (capped), and a hit resets it', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const t = sim.spawn('tumblehog', 0, 100);
+    const m = t.def.momentum!;
+    expect(sim.momentumMult(t)).toBeCloseTo(1);
+    for (let i = 0; i < 60 * 3; i++) sim.update(1 / 60);
+    expect(sim.momentumMult(t)).toBeCloseTo(1 + Math.min(m.max, 3 * m.perSec), 1);
+    for (let i = 0; i < 60 * 10; i++) sim.update(1 / 60);
+    expect(sim.momentumMult(t)).toBeCloseTo(1 + m.max);
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(t, 1);
+    expect(sim.momentumMult(t)).toBeCloseTo(1);
+  });
+
+  it('a Bloomdoe heals hurt allies nearby when it falls, but not far ones', () => {
+    const sim = new BattleSim(lvl, null);
+    const d = sim.spawn('bloomdoe', 0, 300);
+    const near = sim.spawn('mudling', 0, 360);
+    const far = sim.spawn('mudling', 0, 900);
+    near.hp = far.hp = 1;
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(d, 99999);
+    expect(near.hp).toBeCloseTo(Math.min(near.maxHp, 1 + near.maxHp * d.def.blossom!.heal));
+    expect(far.hp).toBe(1);
+    expect(sim.drainEvents().some((e) => e.type === 'blossom')).toBe(true);
+  });
+});

@@ -210,6 +210,7 @@ export type SimEvent =
   | { type: 'glaze'; soldier: Soldier }
   | { type: 'hex'; source: Enemy; tower: Tower }
   | { type: 'dive'; enemy: Enemy; down: boolean }
+  | { type: 'blossom'; enemy: Enemy; radius: number; healed: Enemy[] }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -1071,7 +1072,7 @@ export class BattleSim {
         }
       }
       if (e.anchored) continue; // Ironkeel holds fast while its anchor is down
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.mods.speedMult * dt;
+      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.momentumMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1330,6 +1331,12 @@ export class BattleSim {
     best.frozen = Math.max(best.frozen, b.duration);
     best.chillImmune = b.duration + THAW_IMMUNITY;
     this.events.push({ type: 'bolt', source: e, tower: best });
+  }
+
+  /** Tumblehog: picks up speed the longer it rolls without being hit; any hit knocks it back to a walk. */
+  momentumMult(e: Enemy): number {
+    const m = e.def.momentum;
+    return m ? 1 + Math.min(m.max, e.sinceHit * m.perSec) : 1;
   }
 
   /** Thunderhooves stampede: faster for each other herd-mate close by. */
@@ -1766,7 +1773,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.drowseMult(target) * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.drowseMult(target) * this.momentumMult(target) * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {
@@ -2048,6 +2055,13 @@ export class BattleSim {
       if (!e.def.boss) this.feedOn(e);
       if (e.def.splitInto) this.split(e);
       if (e.def.sporeBurst) this.sporeBurst(e);
+      if (e.def.blossom) {
+        // Bloomdoe: its thistle crown bursts into seed-fluff that knits up the wounds of those around it
+        const b = e.def.blossom;
+        const healed = this.enemies.filter((o) => o.alive && o !== e && o.hp < o.maxHp && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= b.radius);
+        for (const o of healed) o.hp = Math.min(o.maxHp, o.hp + o.maxHp * b.heal);
+        this.events.push({ type: 'blossom', enemy: e, radius: b.radius, healed });
+      }
       if (e.def.grief) {
         // Ringtail Mourner: its fall hardens the resolve (and hides) of those around it
         const g = e.def.grief;

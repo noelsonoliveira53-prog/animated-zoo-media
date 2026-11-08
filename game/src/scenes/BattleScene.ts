@@ -1206,6 +1206,24 @@ export class BattleScene extends Phaser.Scene {
     // phase ticks
     this.bossBar.fillStyle(C.cream, 0.9);
     for (const ph of boss.def.phases ?? []) this.bossBar.fillRect(x + w * ph.at - 1, y - 2, 3, 18);
+    if (boss.def.wax && boss.waxLeft > 0) {
+      // a wax-coated boss: a glossy amber strip under the bar that drains as spells melt the coat
+      const full = Math.max(1, Math.round(boss.maxHp * boss.def.wax.melt));
+      this.bossBar.fillStyle(C.ink, 0.85);
+      this.bossBar.fillRoundedRect(x - 2, y + 19, w + 4, 7, 3);
+      this.bossBar.fillStyle(0xf0b840, 1);
+      this.bossBar.fillRect(x, y + 21, w * Math.min(1, boss.waxLeft / full), 3);
+    }
+    if (boss.def.parry) {
+      // comb-shield charges: amber cells to the right of the bar (dim when spent)
+      for (let k = 0; k < boss.def.parry.charges; k++) {
+        const px = x + w + 22 + k * 15;
+        this.bossBar.fillStyle(C.ink, 0.85);
+        this.bossBar.fillCircle(px, y + 7, 7);
+        this.bossBar.fillStyle(k < boss.parryCharges ? 0xffc83a : 0x5a4a2a, 1);
+        this.bossBar.fillCircle(px, y + 7, 5);
+      }
+    }
     this.bossLabel.setText(boss.def.name);
   }
 

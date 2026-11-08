@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **174** (next balance pass at iteration 175)
+Iteration counter: **175** (next balance pass at iteration 180)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1246,6 +1246,11 @@ Iteration counter: **174** (next balance pass at iteration 175)
     to fit.
   - One new test (220 total). Check: `scripts/apiary-check.mjs`. Fen started a battle with 192/160 hp at Apiary level 2,
     and there were no console errors. Screenshots `screenshots/174.png` (shop) and `174-panel.png`.
+- **Iteration 175** (POLISH + BALANCE): the boss health bar now shows a wax-coated boss's coat (an amber strip under the bar
+  that drains as spells melt it) and comb-shield charges (amber cells to the right, dim when spent). That way Goldwing's two
+  defences are as readable as her minions'. Screenshot `screenshots/175.png` (Goldwing in phase 2: 3 of 4 charges,
+  fresh shield). Balance: a full Honeycomb sweep, hero comparison and endless check, with no changes (see Balance Notes).
+  220 tests.
 
 ## In Progress
 - (none)
@@ -1260,6 +1265,14 @@ Iteration counter: **174** (next balance pass at iteration 175)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 175**: Honeycomb sweep, 12 seeds (expert/casual/novice): 91 100/100/33, 92 100/100/0, 93 92/83/0, 94 83/75/0,
+95 (boss) 92/58/0. Every level is in its band, so nothing changed.
+- Hero comparison on 93–95 (the hard end of the region): Ember 94%, Bramble 83%, Fen/Sorrel/Hazel 78%, Wren 72%. Wren (a
+  quick single-target archer) is lowest because Hexguard shields and Goldwing's parry eat her shots. That's the region's
+  lesson, and she is still within ~20 points of the best, so she is left alone.
+- Endless (3 seeds, waves survived): Hivegate Meadow expert 13.0, casual 12.7, novice 24.7; Ropebridge Reach about 14 for
+  all three. The novice's arrow-heavy build lasting much longer on Hivegate is an outlier worth watching: endless home-turf
+  mixes there include many Waxbacks, and steady arrow volleys crack Hexguards. Not tuned yet; noted for the next endless pass.
 **Iteration 173**: 95 Throne of the Golden Hive (expert/casual/novice). A very steep cliff:
 - 12 seeds: 1.5 → 100/100/42, 1.8 → 100/100/0, 1.86 → 100/83/0, 1.88 → 92/58/0, 1.92 → 75/50/0, 2.0 → 75/50/0,
   2.2 → 25/17/0.

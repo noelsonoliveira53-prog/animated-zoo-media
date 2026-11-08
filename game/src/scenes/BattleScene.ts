@@ -4,6 +4,7 @@ import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
+import { gaitFor, poseFor } from '../systems/gait';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
@@ -3652,12 +3653,14 @@ export class BattleScene extends Phaser.Scene {
       const prevX = v.sprite.x;
       const airborne = this.sim.airborne(e);
       v.air = Phaser.Math.Clamp(v.air + (airborne ? dt : -dt) * 3, 0, 1);
-      const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * Math.abs(Math.sin(v.bob)) * 4;
+      // each enemy family has its own gait (march, waddle, hop, scuttle; flyers flap); Reduce Motion keeps a still pose
+      const pose = poseFor(airborne ? 'flap' : gaitFor(e.def), motion.reduced ? 0 : v.bob);
+      const lift = v.air * (34 + Math.sin(v.bob * 0.7) * 5) + (1 - v.air) * (e.blockedBy ? pose.lift * 0.4 : pose.lift);
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
       v.pulse = Math.max(0, v.pulse - dt * 1.6);
       const swell = (1 + e.fed * 0.08) * (1 + v.pulse); // fed Gorgegrubs visibly bulk up; drummers thump
-      if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
-      else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
+      v.sprite.setScale(swell * pose.sx, swell * pose.sy);
+      if (!e.def.momentum) v.sprite.setRotation(pose.rot * (v.sprite.flipX ? -1 : 1));
       if (v.squash > 0) {
         v.squash = Math.max(0, v.squash - dt * 7);
         v.sprite.setScale(v.sprite.scaleX * (1 + v.squash * 0.28), v.sprite.scaleY * (1 - v.squash * 0.22));

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **261** (next balance pass at iteration 265)
+Iteration counter: **262** (next balance pass at iteration 265)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1691,13 +1691,23 @@ Iteration counter: **261** (next balance pass at iteration 265)
   - Positions follow the 72×100 tower textures. Timers are per slot and removed on upgrade or sell. Off with Reduce Motion; skipped with Graphics: Low like the other auras.
   - New `scripts/idle-check.mjs` (waits for a peek, pauses, 2× close-up; no console errors). `leak-check.mjs` gained an `idle` mode (towers, no waves): tweens 72 → 75 and objects 157 → 159 over 20 s, steady. The busy-mode growth tracks the waves being called every 4 s. Screenshot `screenshots/261.png`. 270 tests.
 
+- **Iteration 262: enemy walk cycles.** New `systems/gait.ts` (`gaitFor`, `poseFor`; 3 tests, 273 total) replaces the one shared bob:
+  - **Flap:** all 8 flyers; wings beat as a quick stretch and squeeze, with a slow drift tilt.
+  - **Waddle:** 36 heavy enemies (armor ≥ 35% or big bodies); a side-to-side rock with a small lift.
+  - **Scuttle:** 8 tiny ones; quick jittery steps.
+  - **Hop:** 14 fast walkers (speed ≥ 42, about the quickest fifth); bounding hops that stretch in the air and squash on landing.
+  - **March:** the other 42 keep the original gentle bob.
+  - Rotation mirrors with facing. Tumblehogs keep their momentum spin. Blocked enemies lift less. Reduce Motion holds a still pose.
+  - The first pass used a speed threshold of 75, which no walker reaches; it now uses the real speed spread (24–68). Screenshot `screenshots/262.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Enemy walk cycles: a waddle or hop per enemy family instead of the shared bob, and flyers flap.
+1. Soldier and hero animation: soldiers swing in a little arc while fighting and march with a step; heroes get an idle breathe and a run lean.
+2. Village life: tiny villagers (code-drawn) walking between buildings, and resource carts trundling from mines to storage.
 
 ## Known Bugs
 - (none known)

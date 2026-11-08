@@ -2405,6 +2405,15 @@ export class BattleScene extends Phaser.Scene {
         }
       }
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
+      if (e.def.momentum && !e.blockedBy) {
+        // Tumblehog: the thistle ball spins faster the more momentum it has built up, with dust kicking up at full roll
+        const m = this.sim.momentumMult(e);
+        v.sprite.rotation += (e.pos.x < prevX ? -1 : 1) * 0.06 * m * m;
+        if (m > 1.6 && !motion.reduced && Math.random() < 0.15) {
+          this.particles.setParticleTint(0xc8a878);
+          this.particles.explode(1, e.pos.x, e.pos.y + e.def.radius * 0.6);
+        }
+      }
       v.sprite.setDepth(v.air > 0.5 ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
       if (e.def.boss) continue; // boss uses the big HUD bar

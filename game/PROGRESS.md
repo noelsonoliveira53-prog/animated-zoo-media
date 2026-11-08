@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **184** (next balance pass at iteration 185)
+Iteration counter: **185** (next balance pass at iteration 190)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1266,6 +1266,20 @@ Iteration counter: **184** (next balance pass at iteration 185)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 185**: sweep of levels 91–102 at 6 seeds (expert/casual/novice):
+
+| Level | Result | Level | Result |
+|---|---|---|---|
+| 91 | 100/100/50 | 97 | 100/100/0 |
+| 92 | 100/100/0 | 98 | 100/83/0 |
+| 93 | 83/67/0 | 99 | 83/50/0 |
+| 94 | 67/67/0 | 100 (boss) | 83/67/0 |
+| 95 (boss) | 83/50/0 | 101 | 100/100/67 |
+| 96 | 67/83/33 | 102 | 83/100/0 |
+
+All sit within about one seed of their 12-seed tuning, so nothing changed. Queenscomb (94) reads low this time
+(12-seed: 83/75), and the novice on Windfluff (101) reads high (12-seed: 33). Both are noise at 6 seeds; recheck both at
+12 seeds if a future pass sees the same drift.
 **Iteration 184**: 102 Whistling Downs (12 seeds). The tight zig-zags put a lot of road under every pad:
 1.3–1.55 → 100/100/100 (even the novice never lost), 2.0 → 100/100/0, 2.3 → 100/100/0, 2.35 → 100/83/0, 2.4 → 92/75/0,
 2.48 → 75/75/0, 2.6 → 58/67/0. **2.32 → 92/92/0** (kept: in the second-level band). That's the highest hpMult in the

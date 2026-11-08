@@ -103,6 +103,7 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.snatch) tags.push(`Snatches the nearest soldier within ${e.snatch.radius}px every ${e.snatch.cooldown}s (it has to respawn)`);
         if (e.wax) tags.push(`Wax coat: +${Math.round(e.wax.armor * 100)}% armor until magic damage worth ${Math.round(e.wax.melt * 100)}% of its health melts it off`);
         if (e.venom) tags.push(`Venomous bite: soldiers it hits lose ${e.venom.dps} health a second for ${e.venom.duration}s`);
+        if (e.stall) tags.push(`Moonhush: while it lives, your spells and hero skill recharge ${Math.round((1 - e.stall) * 100)}% slower`);
         if (e.link) tags.push(`Linked: every hit is shared equally with each linked ally within ${e.link.radius}px`);
         if (e.wool) tags.push(`Thick wool: each hit loses ${e.wool} damage (at most 3/4 of it), so big hits work best`);
         if (e.drench) tags.push(`Drench: it and allies within ${e.drench.radius}px take ${Math.round(e.drench.cut * 100)}% less damage from your spells`);

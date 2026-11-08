@@ -435,7 +435,8 @@ export class BattleSim {
   }
 
   private updateSpells(dt: number): void {
-    for (const id of Object.keys(this.spellCd)) this.spellCd[id] = Math.max(0, this.spellCd[id] - dt);
+    const stall = this.stallMult(); // Moon Hare: the moonlight holds the spells back
+    for (const id of Object.keys(this.spellCd)) this.spellCd[id] = Math.max(0, this.spellCd[id] - dt * stall);
     for (const st of this.strikes) {
       st.timer -= dt;
       if (st.timer > 0) continue;
@@ -547,7 +548,7 @@ export class BattleSim {
   private updateHero(dt: number): void {
     const h = this.hero;
     if (!h) return;
-    if (h.skillCd > 0) h.skillCd = Math.max(0, h.skillCd - dt);
+    if (h.skillCd > 0) h.skillCd = Math.max(0, h.skillCd - dt * this.stallMult());
     if (!h.alive) {
       h.respawnTimer -= dt;
       if (h.respawnTimer <= 0) {
@@ -1615,6 +1616,13 @@ export class BattleSim {
       if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= sh.radius) s = o.def.speed;
     }
     return s;
+  }
+
+  /** Moon Hares: while any lives, spells and the hero's skill recharge at this fraction of normal speed. */
+  stallMult(): number {
+    let m = 1;
+    for (const o of this.enemies) if (o.alive && o.def.stall) m = Math.min(m, o.def.stall);
+    return m;
   }
 
   /** Tithe Weasels skim the bounty of every kill while any of them lives (the greediest one counts). */

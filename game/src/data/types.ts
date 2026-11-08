@@ -73,6 +73,7 @@ export interface EnemyDef {
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
   venom?: { dps: number; duration: number }; // its melee bites poison soldiers: they lose dps health a second for duration s (refreshed by each bite)
   ambush?: number; // burrows in and pops up at this fraction of the road instead of at the entrance
+  stall?: number; // while any lives, spell and hero-skill cooldowns tick at this fraction of normal speed (the strongest counts)
   link?: { radius: number }; // shares every hit equally with each linked ally (same trait) within radius
   wool?: number; // thick fleece: each hit loses this much damage (never more than 3/4 of it)
   drench?: { radius: number; cut: number }; // soaks itself and allies within radius: player spells (Starfall, Thornsnare, ...) deal cut less to them

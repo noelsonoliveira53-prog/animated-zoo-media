@@ -1497,8 +1497,12 @@ export class BattleScene extends Phaser.Scene {
     this.livesText.setText(String(this.sim.lives));
     this.coinText.setText(String(this.sim.coins));
     const cut = this.sim.titheCut();
-    this.titheText.setVisible(cut > 0);
-    if (cut > 0) this.titheText.setText(`Weasel tithe: kills pay -${Math.round(cut * 100)}%`);
+    const stall = this.sim.stallMult();
+    const warn: string[] = [];
+    if (cut > 0) warn.push(`Weasel tithe: kills pay -${Math.round(cut * 100)}%`);
+    if (stall < 1) warn.push(`Moon hare: spells recharge -${Math.round((1 - stall) * 100)}%`);
+    this.titheText.setVisible(warn.length > 0);
+    if (warn.length) this.titheText.setText(warn.join('  •  '));
     this.waveText.setText(`${Math.max(0, this.sim.waveIndex + 1)}/${this.endless ? '∞' : this.sim.totalWaves}`);
     if (this.sim.wavesRemaining && this.sim.isActive()) {
       const secs = Math.ceil(this.sim.waveCountdown);

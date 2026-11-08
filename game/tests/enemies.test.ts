@@ -1378,3 +1378,18 @@ describe('Starheath Moors enemies', () => {
     expect(r.hp).toBeCloseTo(hp - (100 - w) - 2);
   });
 });
+
+describe('Moon Hare', () => {
+  it('slows spell and hero-skill recharge while any is alive', () => {
+    const sim = new BattleSim(lvl, 'bramble');
+    sim.status = 'running';
+    expect(sim.stallMult()).toBe(1);
+    const h = sim.spawn('moonhare', 0, 300);
+    expect(sim.stallMult()).toBeCloseTo(h.def.stall!);
+    sim.hero!.skillCd = 10;
+    for (let i = 0; i < 60; i++) sim.update(1 / 60);
+    expect(sim.hero!.skillCd).toBeCloseTo(10 - h.def.stall!, 1);
+    h.alive = false;
+    expect(sim.stallMult()).toBe(1);
+  });
+});

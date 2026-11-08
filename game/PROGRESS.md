@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **213** (next balance pass at iteration 215)
+Iteration counter: **214** (next balance pass at iteration 215)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1328,13 +1328,18 @@ Iteration counter: **213** (next balance pass at iteration 215)
   - Also added: the "Starheath" music theme (a slow minor air), world-map land with heather and stones, Field Guide tags, code-drawn sprites, a glassy shimmer sound and an endless tier from wave 100.
   - Two new tests (248 total). Check: `scripts/heath-check.mjs` (music heath; a 60 hit shared 20 each across 3 wisps; a 20 hit took 12 off the ram; no console errors). Screenshots `screenshots/213.png` and `213-map.png`.
 
+- **Iteration 214**: level 122 "Moonstone Circle" and the **Moon Hare** (stall).
+  - While any Moon Hare lives, spell and hero-skill cooldowns tick at 0.6× speed (the strongest counts). Fast and fragile, so it has to be hunted down.
+  - The top bar warns "Moon hare: spells recharge -40%". It shares one line with the weasel tithe warning, joined by "•".
+  - Also added: a Field Guide tag, a code-drawn silver hare sprite and an endless tier at wave 102. hpMult 1.45.
+  - One new test (249 total). Screenshot `screenshots/214.png` (the warning visible under the coin counter). No console errors.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Starheath level 122 with a third new enemy.
-2. Starheath levels 123 and 124.
-3. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
+1. Starheath levels 123 and 124.
+2. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1343,6 +1348,7 @@ Iteration counter: **213** (next balance pass at iteration 215)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 214**: 122 Moonstone Circle (12 seeds): hpMult 1.3 → 100/100/0, 1.6 → 100/58/0. **1.45 → 100/92/0** (kept: the second-level band).
 **Iteration 213**: 121 Heather Gate (12 seeds).
 - The first numbers (flying wisps, wool 14) were unwinnable: 0–8% for everyone at hpMult 1.25–1.55. Flying plus link meant splash towers (which can't hit flyers) were useless, and wool 14 gutted the arrow towers.
 - Wisps were made ground units and wool cut to 8. Then 1.1 → 100/100/100, 1.25 → 100/100/67, 1.4 → 100/100/17.

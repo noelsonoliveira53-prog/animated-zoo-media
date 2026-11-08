@@ -1444,6 +1444,31 @@ export class BootScene extends Phaser.Scene {
         for (let n = 0; n < 3; n++) g.fillEllipse(cx + r * (0.98 + n * 0.12), cy + r * 0.38, r * 0.12, r * 0.18);
         break;
       }
+      case 'moonhare': {
+        // a silver hare from above: long body, two long black-tipped ears laid back, and pale moon eyes
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.15, cy, r * 1.5, r * 0.85);
+        g.strokeEllipse(cx + r * 0.15, cy, r * 1.5, r * 0.85);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx + r * 0.95, cy, r * 0.22);
+        g.fillStyle(color, 1);
+        g.fillCircle(cx - r * 0.65, cy, r * 0.38);
+        g.strokeCircle(cx - r * 0.65, cy, r * 0.38);
+        for (const sy of [-1, 1]) {
+          g.fillStyle(color, 1);
+          g.fillEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2);
+          g.strokeEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2);
+          g.fillStyle(0x3a3a48, 1);
+          g.fillEllipse(cx + r * 0.22, cy + sy * r * 0.32, r * 0.18, r * 0.14);
+        }
+        g.fillStyle(0xf0f0b0, 1);
+        g.fillCircle(cx - r * 0.78, cy - r * 0.16, r * 0.09);
+        g.fillCircle(cx - r * 0.78, cy + r * 0.16, r * 0.09);
+        g.fillStyle(0xe8a8b8, 1);
+        g.fillCircle(cx - r * 1.02, cy, r * 0.06);
+        break;
+      }
       case 'heathwisp': {
         // a pale floating light: a soft glow, a bright core and a trailing wisp
         g.fillStyle(color, 0.25);

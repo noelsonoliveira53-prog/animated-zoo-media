@@ -1269,6 +1269,38 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 1.05, cy - r * 0.2, r * 0.05);
         break;
       }
+      case 'ironhorn': {
+        // a colossal bull from above: massive dark-brown shoulders, a wheat garland, iron-capped horns and a brass nose ring
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx + r * 0.2, cy + r * 0.05, r * 1.6, r * 1.15);
+        g.strokeEllipse(cx + r * 0.2, cy + r * 0.05, r * 1.6, r * 1.15);
+        g.fillStyle(0x4a2414, 1);
+        g.fillEllipse(cx - r * 0.25, cy, r * 0.8, r * 1.0);
+        g.fillStyle(0xd8b050, 1);
+        for (let n = 0; n < 7; n++) {
+          const a = -Math.PI / 2 + (n / 6) * Math.PI;
+          g.fillEllipse(cx - r * 0.35 + Math.cos(a) * r * 0.15, cy + Math.sin(a) * r * 0.45, r * 0.14, r * 0.22);
+        }
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        g.strokeEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        g.fillStyle(0xd8a888, 1);
+        g.fillEllipse(cx - r * 0.98, cy, r * 0.2, r * 0.32);
+        g.lineStyle(2, 0xd8a840, 1);
+        g.strokeCircle(cx - r * 1.05, cy, r * 0.09);
+        for (const sy of [-1, 1]) {
+          g.lineStyle(4, 0xe8e0c8, 1);
+          g.lineBetween(cx - r * 0.7, cy + sy * r * 0.25, cx - r * 0.55, cy + sy * r * 0.6);
+          g.lineBetween(cx - r * 0.55, cy + sy * r * 0.6, cx - r * 0.75, cy + sy * r * 0.82);
+          g.fillStyle(0x8a8a9a, 1);
+          g.fillCircle(cx - r * 0.75, cy + sy * r * 0.82, r * 0.07);
+        }
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.78, cy - r * 0.15, r * 0.05);
+        g.fillCircle(cx - r * 0.78, cy + r * 0.15, r * 0.05);
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

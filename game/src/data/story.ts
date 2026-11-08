@@ -187,4 +187,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x8a9ac8, 0xf0e0f0],
     accent: 0xb88ad0,
   },
+  l110: {
+    title: 'Harvest Home',
+    lines: [
+      'Ironhorn stops at last in the middle of the field, snorting steam, and lies down in the stubble like any tired old bull.',
+      'The oxen wander back to their ploughs, the collies flop down in the shade, and the weasels quietly hand back every coin.',
+      'That night the Wolds hold a harvest supper, and the Keepers are the guests of honour.',
+    ],
+    sky: [0xd87a3a, 0xf8e0a0],
+    accent: 0xffc040,
+  },
 };

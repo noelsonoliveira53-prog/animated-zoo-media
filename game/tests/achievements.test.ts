@@ -126,3 +126,17 @@ describe('Thistledown finale', () => {
     expect(b.boss && b.momentum && b.alarm && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Patchwork Wolds finale', () => {
+  it('Ironhorn has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_ironhorn: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_ironhorn');
+    expect(STORY.l110).toBeDefined();
+    expect(ENDLESS.bosses).toContain('ironhorn');
+    const b = ENEMIES.ironhorn;
+    expect(b.boss && b.trample && b.tithe && b.phases?.length).toBeTruthy();
+  });
+});

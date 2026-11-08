@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **202** (next balance pass at iteration 205)
+Iteration counter: **203** (next balance pass at iteration 205)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,11 +1256,19 @@ Iteration counter: **202** (next balance pass at iteration 205)
   climb, 12 pads and 15 waves of curlshells, rattlers and sandburrows mixed with older enemies. hpMult 2.0. Screenshot
   `screenshots/202.png`. 238 tests.
 
+- **Iteration 203**: the Rustrock finale, level 115 "The Rattling Spire". The new boss is **Rustcoil, the Mesa Serpent** (3500 hp, armour 0.35, magic resist 0.25).
+  - It curls into iron-hard loops when hit (+0.3 resists for 2.5 s, 8 s cooldown) and its bites poison soldiers (14 dps for 5 s).
+  - A rattler slithers out every 7 s.
+  - Phases: 75% gophers burst up, 50% a 1500-point shield plus armadillos, 25% six rattlers and a speed-up, 10% it strikes for the gate.
+  - Also added: a code-drawn coiled-serpent sprite, the achievements "Snakecharmer" (boss) and "Canyon Keeper" (15 stars), the story card "The Spire Falls Quiet" and a place in the endless boss rotation.
+  - Check: `scripts/rustcoil-check.mjs` (phase 1 summons 4 gophers, no console errors). Screenshots `screenshots/203.png`, `rustcoil.png`, `rustcoil-map.png`. 239 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
+1. Breather: a raid camp building, the Rattle Trap: a hidden pit that poisons troops walking over it (venom over time).
+2. Region 24 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)
@@ -1269,6 +1277,8 @@ Iteration counter: **202** (next balance pass at iteration 205)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 203**: 115 The Rattling Spire (12 seeds): hpMult 1.55–1.75 → 100/100/83+ (far too easy: the shared middle stretch
+sits between many pads), 2.3 → 67/58/0, 2.6 → 42/33/0. **2.2 → 75/67/0** (kept: the boss band; the finale guard passes).
 **Iteration 202**: 114 Sunset Mesa (12 seeds): hpMult 1.85 → 100/92/17, 2.15 → 92/50/0. **2.0 → 83/67/8** (kept: the
 fourth-level band).
 **Iteration 201**: 113 Hollowrock Arches (12 seeds): hpMult 1.55 → 100/100/8, 1.7 → 100/100/0, 1.85 → 100/92/0,

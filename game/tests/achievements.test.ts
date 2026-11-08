@@ -140,3 +140,17 @@ describe('Patchwork Wolds finale', () => {
     expect(b.boss && b.trample && b.tithe && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Rustrock finale', () => {
+  it('Rustcoil has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_rustcoil: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_rustcoil');
+    expect(STORY.l115).toBeDefined();
+    expect(ENDLESS.bosses).toContain('rustcoil');
+    const b = ENEMIES.rustcoil;
+    expect(b.boss && b.curl && b.venom && b.phases?.length).toBeTruthy();
+  });
+});

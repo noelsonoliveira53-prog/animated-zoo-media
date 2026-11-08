@@ -1301,6 +1301,36 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.78, cy + r * 0.15, r * 0.05);
         break;
       }
+      case 'rustcoil': {
+        // a giant coiled rattlesnake from above: rust-red loops with dark diamond bands, a wedge head and a rattle
+        g.lineStyle(3, C.ink, 1);
+        for (const [rr, a0] of [[0.95, 0], [0.62, 0.5], [0.32, 1]] as const) {
+          g.fillStyle(color, 1);
+          g.fillCircle(cx + r * 0.15, cy, r * rr);
+          g.strokeCircle(cx + r * 0.15, cy, r * rr);
+          g.fillStyle(0x5a2214, 1);
+          for (let n = 0; n < 8; n++) {
+            const a = a0 + (n / 8) * Math.PI * 2;
+            g.fillTriangle(
+              cx + r * 0.15 + Math.cos(a) * r * (rr - 0.12), cy + Math.sin(a) * r * (rr - 0.12),
+              cx + r * 0.15 + Math.cos(a + 0.18) * r * (rr - 0.04), cy + Math.sin(a + 0.18) * r * (rr - 0.04),
+              cx + r * 0.15 + Math.cos(a - 0.18) * r * (rr - 0.04), cy + Math.sin(a - 0.18) * r * (rr - 0.04),
+            );
+          }
+        }
+        g.fillStyle(0xe8c890, 1);
+        for (let n = 0; n < 3; n++) g.fillEllipse(cx + r * 1.0 + n * r * 0.12, cy + r * 0.55, r * 0.14, r * 0.2);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - r * 1.15, cy, cx - r * 0.6, cy - r * 0.32, cx - r * 0.6, cy + r * 0.32);
+        g.strokeTriangle(cx - r * 1.15, cy, cx - r * 0.6, cy - r * 0.32, cx - r * 0.6, cy + r * 0.32);
+        g.fillStyle(0xf0d040, 1);
+        g.fillCircle(cx - r * 0.78, cy - r * 0.15, r * 0.07);
+        g.fillCircle(cx - r * 0.78, cy + r * 0.15, r * 0.07);
+        g.lineStyle(2, 0xd83030, 1);
+        g.lineBetween(cx - r * 1.15, cy, cx - r * 1.32, cy - r * 0.08);
+        g.lineBetween(cx - r * 1.15, cy, cx - r * 1.32, cy + r * 0.08);
+        break;
+      }
       case 'sandburrow': {
         // a sandy gopher popping up: round body, little ears, huge orange buck teeth and digging claws
         g.lineStyle(2.5, C.ink, 1);

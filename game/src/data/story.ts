@@ -197,4 +197,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0xd87a3a, 0xf8e0a0],
     accent: 0xffc040,
   },
+  l115: {
+    title: 'The Spire Falls Quiet',
+    lines: [
+      'Rustcoil gives one last, tired rattle and slides away into a crack at the foot of the spire, too deep for anyone to follow.',
+      'The gophers fill in their tunnels, the armadillos uncurl in the evening sun, and for the first time in years the canyon is silent.',
+      'From the top of the spire the Keepers can see the whole road home, and something new glinting far beyond the horizon.',
+    ],
+    sky: [0xc8502a, 0xf8c880],
+    accent: 0xf08040,
+  },
 };

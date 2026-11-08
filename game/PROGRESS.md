@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **226** (next balance pass at iteration 230)
+Iteration counter: **227** (next balance pass at iteration 230)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1411,17 +1411,32 @@ Iteration counter: **226** (next balance pass at iteration 230)
   - Both new effects are skipped on Graphics: Low.
   - `scripts/towerfx-check.mjs` takes an optional wait in ms (4th argument). Screenshots `screenshots/226.png` and `226-zoom0..2.png` (a swing at the front line). No console errors, 253 tests.
 
+- **Iteration 227**: a signature effect for each of the **8 specialization branches** (in `TowerFx`, layered over the tier aura; all skipped on Graphics: Low or reduced motion).
+
+| Branch | Effect |
+|---|---|
+| Hawkeye | A red reticle snaps onto the target as it fires; a lens glint flashes now and then. |
+| Volley | A fan of golden sparks at each launch; feathers flutter down from the quiver. |
+| Storm | Little lightning sparks jump off the orb. |
+| Frost | Snowflakes drift round the tower; bolts land in a ring of ice shards with a cold puff. |
+| Quake | Pebbles hop on the trembling ground; landings crack the earth (cracks fade over about 2 s). |
+| Sap | Golden sap drips from the bucket; landings leave a glistening amber splat. |
+| Stonehide | Stone chips circle the burrow. |
+| Raiders | Red embers rise from the war camp's torches. |
+
+- Trails now remember their branch for branch-specific impacts.
+- Check: `towerfx-check.mjs` for each tower (both branches built). Screenshots `screenshots/227-<tower>.png` and `227.png`. No console errors, 253 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Specialization branches: a signature effect for each of the 8 top-tier branches.
-2. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+1. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
    Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
-3. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+2. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

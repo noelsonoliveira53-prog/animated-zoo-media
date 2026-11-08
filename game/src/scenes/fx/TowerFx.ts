@@ -7,6 +7,7 @@ import { motion } from '../../ui/motion';
 
 interface Trail {
   kind: string;
+  spec?: string; // specialization branch id, for branch signature impacts
   color: number;
   pts: { x: number; y: number }[];
 }
@@ -51,8 +52,23 @@ export class TowerFx {
     const st = STYLE[tower.def.id];
     if (!st) return;
     const color = tower.spec ? p.color : st.color;
-    this.trails.set(p.uid, { kind: tower.def.id, color, pts: [] });
+    this.trails.set(p.uid, { kind: tower.def.id, spec: tower.spec ?? undefined, color, pts: [] });
     if (motion.lowFx) return; // Effects: Low — keep only the light impact sparks
+    if (tower.spec === 'hawkeye') {
+      // Hawkeye: a red reticle snaps onto the mark before the arrow lands
+      const r = this.scene.add.graphics().setDepth(2610).setPosition(p.lastTargetPos.x, p.lastTargetPos.y);
+      r.lineStyle(2, 0xff5a4a, 0.95);
+      r.strokeCircle(0, 0, 12);
+      for (const [dx, dy] of [[1, 0], [-1, 0], [0, 1], [0, -1]]) r.lineBetween(dx * 7, dy * 7, dx * 17, dy * 17);
+      r.setScale(1.8);
+      this.scene.tweens.add({ targets: r, scale: 1, duration: 120, ease: 'Quad.easeOut', onComplete: () => this.scene.tweens.add({ targets: r, alpha: 0, duration: 220, onComplete: () => r.destroy() }) });
+    } else if (tower.spec === 'volley') {
+      // Volley: a fan of golden sparks as the whole quiver goes up at once
+      const top = { x: tower.pos.x, y: tower.pos.y - 58 };
+      const a0 = Math.atan2(p.lastTargetPos.y - top.y, p.lastTargetPos.x - top.x);
+      this.sparks.setParticleTint(0xffe8a0);
+      for (const da of [-0.5, -0.25, 0, 0.25, 0.5]) this.sparks.explode(1, top.x + Math.cos(a0 + da) * 16, top.y + Math.sin(a0 + da) * 16);
+    }
     const top = { x: tower.pos.x, y: tower.pos.y - st.muzzle };
     if (tower.def.id === 'boulder') {
       // the catapult arm thumps: the tower squats, a dust puff bursts at its feet and a few pebbles skitter out
@@ -137,6 +153,48 @@ export class TowerFx {
       const scorch = this.scene.add.ellipse(x, y + 4, 40, 16, 0x2a2018, 0.35).setDepth(1.5);
       this.scene.tweens.add({ targets: scorch, alpha: 0, duration: 2600, delay: 600, onComplete: () => scorch.destroy() });
       return;
+    }
+    if (t.spec === 'frost') {
+      // Frost: a ring of ice shards and a cold puff where the bolt lands
+      const g = this.scene.add.graphics().setDepth(2600).setPosition(x, y);
+      g.lineStyle(2, 0xd8f4ff, 1);
+      for (let k = 0; k < 6; k++) {
+        const a = (k / 6) * Math.PI * 2;
+        g.lineBetween(Math.cos(a) * 5, Math.sin(a) * 5, Math.cos(a) * 15, Math.sin(a) * 15);
+        g.lineBetween(Math.cos(a) * 11 + Math.cos(a + 0.9) * 4, Math.sin(a) * 11 + Math.sin(a + 0.9) * 4, Math.cos(a) * 11, Math.sin(a) * 11);
+      }
+      this.scene.tweens.add({ targets: g, scale: 1.7, alpha: 0, rotation: 0.4, duration: 380, onComplete: () => g.destroy() });
+      this.sparks.setParticleTint(0xbfe8ff);
+      this.sparks.explode(10, x, y);
+      return;
+    }
+    if (t.spec === 'quake') {
+      // Quake: cracks split the ground around the landing site
+      const g = this.scene.add.graphics().setDepth(1.6).setPosition(x, y + 4);
+      g.lineStyle(2.5, 0x3a2a1a, 0.8);
+      for (let k = 0; k < 5; k++) {
+        let a = Math.random() * Math.PI * 2;
+        let px = 0;
+        let py = 0;
+        for (let seg = 0; seg < 3; seg++) {
+          a += (Math.random() - 0.5) * 0.8;
+          const nx = px + Math.cos(a) * 12;
+          const ny = py + Math.sin(a) * 6;
+          g.lineBetween(px, py, nx, ny);
+          px = nx;
+          py = ny;
+        }
+      }
+      this.scene.tweens.add({ targets: g, alpha: 0, duration: 1800, delay: 500, onComplete: () => g.destroy() });
+    } else if (t.spec === 'sap') {
+      // Sap: a sticky amber splat that glistens, then soaks away
+      const splat = this.scene.add.graphics().setDepth(1.6).setPosition(x, y + 4);
+      splat.fillStyle(0xc8901a, 0.7);
+      splat.fillEllipse(0, 0, 34, 14);
+      for (let k = 0; k < 5; k++) splat.fillCircle((Math.random() - 0.5) * 40, (Math.random() - 0.5) * 14, 3 + Math.random() * 3);
+      splat.fillStyle(0xffe08a, 0.8);
+      splat.fillEllipse(-6, -2, 8, 3);
+      this.scene.tweens.add({ targets: splat, alpha: 0, duration: 2200, delay: 600, onComplete: () => splat.destroy() });
     }
     if (t.kind === 'glimmer') {
       // an arcane burst: an expanding rune ring, a flash and a spray of violet sparks
@@ -312,8 +370,46 @@ export class TowerFx {
       motes.setDepth(tower.pos.y + 2);
       objs.push(motes);
     }
+    if (tower.spec && !motion.reduced) this.branchIdle(tower, st, objs);
     if (!motion.reduced) this.scene.tweens.add({ targets: view, scaleX: 1.03, duration: 1300 + (tower.slot % 5) * 90, yoyo: true, repeat: -1, ease: 'Sine.easeInOut', delay: 320 });
     this.auras.set(tower.slot, objs);
+  }
+
+  /** Each specialization branch's idle signature, layered on top of the tier aura. */
+  private branchIdle(tower: Tower, st: { color: number; muzzle: number }, objs: Phaser.GameObjects.GameObject[]): void {
+    const x = tower.pos.x;
+    const top = tower.pos.y - st.muzzle;
+    const add = (cfg: Phaser.Types.GameObjects.Particles.ParticleEmitterConfig, depth = tower.pos.y + 3) => {
+      const em = this.scene.add.particles(0, 0, 'dot', cfg);
+      em.setDepth(depth);
+      objs.push(em);
+    };
+    switch (tower.spec) {
+      case 'hawkeye': // a glint flashing off the sharpshooter's lens
+        add({ x, y: top, scale: { start: 0.7, end: 0 }, alpha: { start: 1, end: 0 }, lifespan: 260, frequency: 1700, tint: 0xffffff, blendMode: Phaser.BlendModes.ADD });
+        break;
+      case 'volley': // feathers fluttering down from the crowded quiver
+        add({ x: { min: x - 20, max: x + 20 }, y: top, speedY: { min: 10, max: 24 }, speedX: { min: -12, max: 12 }, scale: { start: 0.35, end: 0.2 }, alpha: { start: 0.9, end: 0 }, lifespan: 1600, frequency: 700, tint: 0xf0e8d0 });
+        break;
+      case 'storm': // little sparks of lightning jumping off the orb
+        add({ x: { min: x - 16, max: x + 16 }, y: { min: top - 10, max: top + 10 }, speed: { min: 40, max: 90 }, scale: { start: 0.35, end: 0 }, lifespan: 180, frequency: 260, quantity: 2, tint: 0xd8f0ff, blendMode: Phaser.BlendModes.ADD });
+        break;
+      case 'frost': // snowflakes drifting down round the tower
+        add({ x: { min: x - 34, max: x + 34 }, y: top - 20, speedY: { min: 12, max: 26 }, speedX: { min: -6, max: 6 }, scale: { start: 0.4, end: 0.25 }, alpha: { start: 0.95, end: 0 }, lifespan: 2400, frequency: 300, tint: 0xeaf8ff });
+        break;
+      case 'quake': // pebbles hopping on the trembling ground
+        add({ x: { min: x - 30, max: x + 30 }, y: tower.pos.y + 10, speedY: { min: -60, max: -30 }, gravityY: 220, scale: { start: 0.35, end: 0.3 }, lifespan: 500, frequency: 380, tint: 0x8a7a68 }, tower.pos.y + 1);
+        break;
+      case 'sap': // golden sap dripping from the bucket
+        add({ x: { min: x - 6, max: x + 6 }, y: top + 6, speedY: { min: 30, max: 50 }, gravityY: 120, scale: { start: 0.4, end: 0.25 }, lifespan: 700, frequency: 600, tint: 0xe8a830 });
+        break;
+      case 'stonehide': // stone chips circling the fortified burrow
+        add({ x, y: tower.pos.y, emitZone: { type: 'edge', source: new Phaser.Geom.Ellipse(0, 0, 70, 26), quantity: 24 } as unknown as Phaser.Types.GameObjects.Particles.EmitZoneData, scale: { start: 0.4, end: 0.1 }, alpha: { start: 0.9, end: 0 }, lifespan: 900, frequency: 160, tint: 0xa8a8a0 }, tower.pos.y + 1);
+        break;
+      case 'raiders': // red embers off the war-camp's torches
+        add({ x: { min: x - 18, max: x + 18 }, y: top, speedY: { min: -40, max: -20 }, speedX: { min: -8, max: 8 }, scale: { start: 0.35, end: 0 }, lifespan: 900, frequency: 220, tint: 0xff6a3a, blendMode: Phaser.BlendModes.ADD });
+        break;
+    }
   }
 
   removed(slot: number): void {

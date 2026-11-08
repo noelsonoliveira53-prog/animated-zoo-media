@@ -35,6 +35,9 @@ import { armyCapacity, collectAll, armySpace, lodgeLevel, tickTraining, totalArm
 import { CAMP_TIERS, TROOPS, TROOP_ORDER } from '../data/raid';
 import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
+import { addLighting } from '../ui/lighting';
+import { motion } from '../ui/motion';
+import { addBuildingShadow, drawVillageGround, puffSmoke, SMOKE_SPOTS } from './village/VillageArt';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
 const GRID_W = VILLAGE_COLS * TILE;
@@ -52,6 +55,7 @@ interface BView {
   bar: Phaser.GameObjects.Graphics;
   bubble: Phaser.GameObjects.Image | null;
   shownLevel: number;
+  shadow: Phaser.GameObjects.Ellipse;
 }
 
 type Mode = { kind: 'idle' } | { kind: 'place'; type: BuildingId } | { kind: 'move'; uid: number };
@@ -86,6 +90,8 @@ export class VillageScene extends Phaser.Scene {
     music.setTheme(themeById('home'));
     this.save = loadSave();
     this.v = ensureVillage(this.save);
+    motion.reduced = !!this.save.settings.reduceMotion;
+    motion.lowFx = !!this.save.settings.fxLow;
     this.views.clear();
     this.panel = null;
     this.selected = null;
@@ -125,7 +131,21 @@ export class VillageScene extends Phaser.Scene {
       else if (d.groundTap) this.onGroundTap(p);
     });
     this.time.addEvent({ delay: 250, loop: true, callback: () => this.refresh() });
+    if (!motion.reduced && !motion.lowFx) this.time.addEvent({ delay: 700, loop: true, callback: () => this.chimneys() });
     this.cameras.main.fadeIn(250, 16, 38, 27);
+  }
+
+  /** Chimney smoke: finished, working buildings puff now and then (busier while upgrading). */
+  private chimneys(): void {
+    for (const b of this.v.buildings) {
+      const spot = SMOKE_SPOTS[b.type];
+      if (!spot || b.level === 0) continue;
+      if (Math.random() > (b.upgradeEnds !== null ? 0.9 : 0.35)) continue;
+      const def = BUILDINGS[b.type];
+      const { x, y } = this.cellToXY(b.col, b.row);
+      const S = def.size * TILE;
+      puffSmoke(this, x + S * spot.fx, y + S * spot.fy, b.row + def.size);
+    }
   }
 
   private beginDrag(p: Phaser.Input.Pointer, tapUid: number): void {
@@ -186,25 +206,8 @@ export class VillageScene extends Phaser.Scene {
   // ---------- drawing ----------
 
   private drawGround(): void {
-    const g = this.add.graphics().setDepth(-10);
-    g.fillStyle(0x4d8a38, 1);
-    g.fillRect(-20, -20, GAME_W + 40, GAME_H + 40);
-    g.fillStyle(0x5f9e45, 1);
-    g.fillRoundedRect(OX - 14, OY - 14, GRID_W + 28, GRID_H + 28, 24);
-    for (let c = 0; c < VILLAGE_COLS; c++) {
-      for (let r = 0; r < VILLAGE_ROWS; r++) {
-        g.fillStyle((c + r) % 2 ? 0x67a84c : 0x6cae50, 1);
-        g.fillRect(OX + c * TILE, OY + r * TILE, TILE, TILE);
-      }
-    }
-    // a brook along the bottom edge and some flowers outside the grid
-    const rnd = new Phaser.Math.RandomDataGenerator(['village']);
-    for (let i = 0; i < 40; i++) {
-      const x = rnd.pick([rnd.between(10, OX - 24), rnd.between(OX + GRID_W + 24, GAME_W - 10)]);
-      const y = rnd.between(100, GAME_H - 10);
-      g.fillStyle(rnd.pick([0x3f7f34, 0x2f6a30]), 1);
-      g.fillCircle(x, y, rnd.between(10, 18));
-    }
+    drawVillageGround(this, { ox: OX, oy: OY, w: GRID_W, h: GRID_H, tile: TILE, cols: VILLAGE_COLS, rows: VILLAGE_ROWS }, GAME_W, GAME_H);
+    addLighting(this, UI_DEPTH); // screen-space light; drawn by the fixed UI camera, under the HUD (created first)
   }
 
   private cellToXY(col: number, row: number): { x: number; y: number } {
@@ -226,7 +229,8 @@ export class VillageScene extends Phaser.Scene {
     });
     const badge = this.add.text(x + 6, y + 4, '', textStyle(pf(13), TEXT.gold)).setDepth(500);
     const bar = this.add.graphics().setDepth(501);
-    this.views.set(b.uid, { img, badge, bar, bubble: null, shownLevel: b.level });
+    const shadow = addBuildingShadow(this, x, y, def.size * TILE, b.row + def.size);
+    this.views.set(b.uid, { img, badge, bar, bubble: null, shownLevel: b.level, shadow });
   }
 
   private syncView(b: Building, now: number): void {
@@ -236,6 +240,7 @@ export class VillageScene extends Phaser.Scene {
     const { x, y } = this.cellToXY(b.col, b.row);
     const S = def.size * TILE;
     v.img.setPosition(x, y).setDepth(b.row + def.size);
+    v.shadow.setPosition(x + S / 2 + 6, y + S - 6).setDepth(b.row + def.size - 0.01).setVisible(b.type !== 'wall');
     if (v.shownLevel !== b.level) {
       v.shownLevel = b.level;
       v.img.setTexture(`bld_${b.type}_${Math.max(1, b.level)}`);

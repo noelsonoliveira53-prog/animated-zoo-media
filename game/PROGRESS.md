@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **243** (next balance pass at iteration 245)
+Iteration counter: **244** (next balance pass at iteration 245)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1553,17 +1553,25 @@ Iteration counter: **243** (next balance pass at iteration 245)
   - Fix: the HUD counters and hit-stop state now reset at the start of each battle (scene instances are reused).
   - Check `scripts/death-check.mjs` (six enemy kinds killed together, no leftover pieces, no console errors). Four new tests (265 total). Screenshot `screenshots/243.png`.
 
+- **Iteration 244: village graphics pass.**
+  - New `scenes/village/VillageArt.ts`. The lawn now has a raised edge with a drop shadow, warm sunlit patches, faint tile seams (the grid still reads for placing buildings), two-tone grass tufts, flowers, and a brook along the foot of the map.
+  - The flat dark blobs around the lawn became 30-odd trees with shadows and two-tone canopies that sway gently.
+  - Every building (except walls) casts a soft contact shadow that follows it when moved.
+  - The Grove Hall, barracks, workshop, builder hut and coin mines puff chimney smoke, more often while upgrading.
+  - Shared lighting and vignette, drawn by the fixed UI camera under the HUD.
+  - Tree sway and smoke turn off with Reduce Motion or Graphics: Low (the village now reads both settings itself).
+  - Check `scripts/village-shot.mjs` (every building type, a wall run and an upgrade in progress, no console errors). Screenshot `screenshots/244.png`. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Village graphics pass: the shared lighting, soft building shadows, chimney smoke on houses and a gentle sway on trees.
-2. Spell effects upgrade: richer visuals for Starfall, Grove Call and Thornsnare (trails, ground scorch, vines growing in).
-3. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
-4. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
-5. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
+1. Spell effects upgrade: richer visuals for Starfall, Grove Call and Thornsnare (trails, ground scorch, vines growing in).
+2. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
+3. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
+4. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
 
 ## Known Bugs
 - (none known)

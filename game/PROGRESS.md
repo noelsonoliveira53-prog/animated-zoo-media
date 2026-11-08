@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **204** (next balance pass at iteration 205)
+Iteration counter: **205** (next balance pass at iteration 210)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1270,6 +1270,11 @@ Iteration counter: **204** (next balance pass at iteration 205)
   - The camp shows the trap's reach as a ring of sand. Bitten troops turn green and get a "Venom!" pop-up with a hiss; several bites at once share one label.
   - Two new tests (241 total). Check: `scripts/rattle-check.mjs` (3 brawlers poisoned, the owl untouched, no console errors). Screenshot `screenshots/204.png`.
 
+- **Iteration 205** (POLISH + BALANCE):
+  - Polish: a curling boss now has a coil badge to the right of its health bar. It is steel with a steel outline round the bar while curled up (hits glance off), shows a rust ring that refills while the curl recharges, and turns solid rust-red when ready. Players can time big spells for when Rustcoil is uncurled. Screenshot `screenshots/205.png` (Rustcoil curled after a hit).
+  - New diagnostic script `scripts/endless-wall.ts`: leaks by wave for each strategy on one endless map.
+  - Balance: a Rustrock sweep, hero comparison and endless check, with no changes (see Balance Notes). 241 tests.
+
 ## In Progress
 - (none)
 
@@ -1283,6 +1288,22 @@ Iteration counter: **204** (next balance pass at iteration 205)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 205** (POLISH + BALANCE), Rustrock sweep at 6 seeds (expert/casual/novice):
+
+| Level | hpMult | Result |
+|---|---|---|
+| 111 | 1.4 | 100/100/33 |
+| 112 | 1.85 | 100/100/33 |
+| 113 | 1.95 | 100/83/0 |
+| 114 | 2.0 | 67/67/0 (12 seeds gave 83/67) |
+| 115 | 2.2 | 83/83/0 |
+
+- The finale at 18 seeds: 2.2 → 78/72/6, 2.25 → 72/72/6. The expert and casual strategies score alike on this map, so 2.2 was kept: the expert is in the boss band and casual is 9 points over it.
+- Heroes on 111–115 (win %, average lives): Bramble 90/12.6, Fen 90/12.1, Ember 90/12.0, Wren 93/10.7, Sorrel 93/10.2, Hazel 83/10.7. The spread is fine.
+- Endless (3 seeds): Redstone 14/14/19, Spire 14/14/25.
+  - `endless-wall.ts` shows the expert and casual walls are the map's home boss (Rustcoil comes first in the boss rotation). It takes all 20 lives at about wave 12–15.
+  - Other regions behave the same (Crown of the Prairie 13/13/19, Great Barn 11/11/11), so Rustcoil is not an outlier.
+  - The novice strategy (fewer, fully upgraded arrow towers) stays the endless outlier. It is a strategy artifact (upgrades scale better than spreading out); still a watch item.
 **Iteration 204** (raid-balance, Stronghold column; before → after): Lodge 3 1.0★ 49% → 0.7★ 44%, Lodge 3 + Mender 1.5★ 54% → 1.4★ 50%,
 Lodge 3 + Moles 1.0★ 43% → 1.2★ 45%. The first try (95 px reach, 12 dps) hit the Mender army harder (1.3★), so it was eased to 80 px / 9 dps.
 Strongholds are meant to need a counter, and healers and tunnellers are that counter. The Outpost and Warren columns are unchanged.

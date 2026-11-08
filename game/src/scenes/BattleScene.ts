@@ -1386,6 +1386,33 @@ export class BattleScene extends Phaser.Scene {
         this.bossBar.fillCircle(px, y + 7, 5);
       }
     }
+    if (boss.def.curl) {
+      // a curling boss: a coil badge right of the bar. Steel and outlined while curled up (hits glance off),
+      // a dim ring refilling while the curl recharges, and rust-red once it is ready to curl again.
+      const cxb = x + w + 24;
+      const cyb = y + 7;
+      this.bossBar.fillStyle(C.ink, 0.85);
+      this.bossBar.fillCircle(cxb, cyb, 9);
+      if (boss.curlT > 0) {
+        this.bossBar.fillStyle(0xc8d0d8, 1);
+        this.bossBar.fillCircle(cxb, cyb, 7);
+        this.bossBar.lineStyle(2, 0xc8d0d8, 0.9);
+        this.bossBar.strokeRect(x - 2, y - 2, w + 4, 18);
+      } else if (boss.curlCd > 0) {
+        this.bossBar.fillStyle(0x4a3a30, 1);
+        this.bossBar.fillCircle(cxb, cyb, 7);
+        this.bossBar.lineStyle(3, 0xa84a2a, 1);
+        const frac = 1 - Math.min(1, boss.curlCd / boss.def.curl.cooldown);
+        this.bossBar.beginPath();
+        this.bossBar.arc(cxb, cyb, 5, -Math.PI / 2, -Math.PI / 2 + frac * Math.PI * 2);
+        this.bossBar.strokePath();
+      } else {
+        this.bossBar.fillStyle(0xa84a2a, 1);
+        this.bossBar.fillCircle(cxb, cyb, 7);
+      }
+      this.bossBar.lineStyle(1.5, C.ink, 1);
+      this.bossBar.strokeCircle(cxb, cyb, 3.5);
+    }
     this.bossLabel.setText(boss.def.name);
   }
 

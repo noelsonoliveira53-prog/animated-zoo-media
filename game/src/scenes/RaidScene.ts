@@ -1,4 +1,4 @@
-import { deployMark, drawRaidGround, rubble } from './raid/RaidArt';
+import { campShot, deployMark, drawRaidGround, rubble } from './raid/RaidArt';
 import { poseFor, unitPose } from '../systems/gait';
 import { addLighting } from '../ui/lighting';
 import { DEV_TROOPS, devOn } from '../systems/dev';
@@ -237,14 +237,19 @@ export class RaidScene extends Phaser.Scene {
         break;
       }
       case 'shot': {
-        const line = this.add.graphics().setDepth(5500);
-        line.lineStyle(ev.splash ? 5 : 3, ev.splash ? 0x8a6a40 : 0x9be86a, 0.9);
-        line.lineBetween(ev.from.x, ev.from.y - 20, ev.to.x, ev.to.y);
-        this.tweens.add({ targets: line, alpha: 0, duration: 200, onComplete: () => line.destroy() });
-        if (ev.splash) {
-          this.particles.setParticleTint(0x6a5a3a);
-          this.particles.explode(10, ev.to.x, ev.to.y);
-        }
+        // the defense recoils, its shot flies, and the troop flashes when it lands
+        const bv = this.buildingViews.get(ev.building.uid);
+        if (bv && !motion.reduced) this.tweens.add({ targets: bv.img, scaleY: 0.94, duration: 60, yoyo: true });
+        const target = ev.target;
+        campShot(this, ev.from, ev.to, ev.splash, motion.lowFx, () => {
+          const tv = this.troopViews.get(target.uid);
+          if (tv && tv.img.active) {
+            tv.img.setTintFill(0xffffff);
+            this.time.delayedCall(70, () => tv.img.active && tv.img.clearTint());
+          }
+          this.particles.setParticleTint(ev.splash ? 0x6a5a3a : 0xd8ffb0);
+          this.particles.explode(ev.splash ? 10 : 4, ev.to.x, ev.to.y - 6);
+        });
         break;
       }
       case 'mend': {

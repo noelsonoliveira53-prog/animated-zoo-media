@@ -26,7 +26,7 @@ export type RaidEvent =
   | { type: 'troopDown'; troop: Troop }
   | { type: 'buildingHit'; building: CampBuilding; damage: number; by: Troop }
   | { type: 'destroyed'; building: CampBuilding; loot: { coins: number; glowsap: number } }
-  | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding }
+  | { type: 'shot'; from: Vec2; to: Vec2; splash: number; building: CampBuilding; target: Troop }
   | { type: 'mend'; from: CampBuilding; healed: CampBuilding[] }
   | { type: 'troopHeal'; troop: Troop; healed: Troop[] }
   | { type: 'poisoned'; troop: Troop; building: CampBuilding }
@@ -326,7 +326,7 @@ export class RaidSim {
       cd = 1 / def.rate;
       this.cooldowns.set(b.uid, cd);
       const dmg = def.damage * this.dmgMult;
-      this.events.push({ type: 'shot', from: c, to: { ...best.pos }, splash: def.splash ?? 0, building: b });
+      this.events.push({ type: 'shot', from: c, to: { ...best.pos }, splash: def.splash ?? 0, building: b, target: best });
       if (def.splash) {
         const at = { ...best.pos };
         for (const t of this.troops) {

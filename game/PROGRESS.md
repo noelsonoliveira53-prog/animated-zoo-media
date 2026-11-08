@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **267** (next balance pass at iteration 270)
+Iteration counter: **268** (next balance pass at iteration 270)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1736,14 +1736,21 @@ Iteration counter: **267** (next balance pass at iteration 270)
   - Banner, smoke and poses respect Reduce Motion and Graphics: Low.
   - `raid-check` and `raid-phone-check` pass with no console errors. Screenshot `screenshots/267.png` (rubble where the warren's west wall fell, and a fading banner). 275 tests.
 
+- **Iteration 268: camp defense effects in raids.** New `campShot` in `scenes/raid/RaidArt.ts`, which replaces the old flat line flash:
+  - **Darts:** a muzzle flash at the defense's top, and a green dart that streaks to its target.
+  - **Splash shooters:** an orange flash, then a stone lobbed in an arc that lands with a dust ring the size of its splash.
+  - **On impact:** the targeted troop flashes white and a small puff bursts.
+  - **Recoil:** the firing building squashes slightly.
+  - The sim already dealt the damage, so this is visual only. The `shot` event now carries its `target` troop for the flash; the sim is otherwise unchanged. Graphics: Low drops the muzzle flash.
+  - New `scripts/raidfx-check.mjs` (dev army, brawlers sent in, paused mid-volley; no console errors). `raid-check` still passes. Screenshot `screenshots/268.png`. 275 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Camp defense effects in raids: muzzle flashes and arcing shots from camp towers, impact puffs on troops, and a hit flash on the attacked troop.
-2. Raid result screen: the same ribbon, slamming stars and rolling loot as the battle result panel.
+1. Raid result screen: the same ribbon, slamming stars and rolling loot as the battle result panel.
 
 ## Known Bugs
 - (none known)

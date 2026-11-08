@@ -142,3 +142,42 @@ export function rubble(scene: Phaser.Scene, cx: number, cy: number, size: number
     },
   });
 }
+
+const ADD = Phaser.BlendModes.ADD;
+
+/**
+ * A camp defense firing (visual only: the sim has already dealt the damage). Darts streak straight in with a
+ * muzzle flash; splash shooters lob a boulder in an arc that lands with a dust ring. `onHit` runs at impact.
+ */
+export function campShot(scene: Phaser.Scene, from: { x: number; y: number }, to: { x: number; y: number }, splash: number, low: boolean, onHit: () => void): void {
+  const top = { x: from.x, y: from.y - 24 };
+  if (!low) {
+    const flash = scene.add.circle(top.x, top.y, 7, splash ? 0xffb860 : 0xd8ffb0, 0.9).setDepth(5600).setBlendMode(ADD);
+    scene.tweens.add({ targets: flash, scale: 1.8, alpha: 0, duration: 140, onComplete: () => flash.destroy() });
+  }
+  if (!splash) {
+    const dart = scene.add.rectangle(top.x, top.y, 12, 2.5, 0xc8f08a).setDepth(5550).setRotation(Math.atan2(to.y - top.y, to.x - top.x));
+    scene.tweens.add({
+      targets: dart, x: to.x, y: to.y - 8, duration: 140, ease: 'Linear',
+      onComplete: () => { dart.destroy(); onHit(); },
+    });
+    return;
+  }
+  // splash: an arcing stone
+  const stone = scene.add.circle(top.x, top.y, 5, 0x7a6a54).setStrokeStyle(1, 0x3a2a1a).setDepth(5550);
+  const dist = Math.hypot(to.x - top.x, to.y - top.y);
+  const o = { t: 0 };
+  scene.tweens.add({
+    targets: o, t: 1, duration: 260 + dist * 0.6, ease: 'Linear',
+    onUpdate: () => {
+      if (!stone.active) return;
+      stone.setPosition(top.x + (to.x - top.x) * o.t, top.y + (to.y - top.y) * o.t - Math.sin(Math.PI * o.t) * Math.min(90, 30 + dist * 0.3));
+    },
+    onComplete: () => {
+      stone.destroy();
+      const ring = scene.add.ellipse(to.x, to.y + 2, splash * 2, splash * 0.8, 0xb8a888, 0).setStrokeStyle(4, 0xd8c8a0, 0.8).setDepth(to.y + 1).setScale(0.3);
+      scene.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 320, onComplete: () => ring.destroy() });
+      onHit();
+    },
+  });
+}

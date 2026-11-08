@@ -1233,6 +1233,7 @@ export class BattleScene extends Phaser.Scene {
     const dark = this.add.graphics().setDepth(-9.5);
     const glow = this.add.graphics().setDepth(-9.4).setBlendMode(Phaser.BlendModes.ADD);
     const offRoad = (x: number, y: number) => !this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 40));
+    const seams: { x: number; y: number }[] = [];
     for (let i = 0; i < 14; i++) {
       let x = rnd.between(40, GAME_W - 40);
       let y = rnd.between(100, GAME_H - 30);
@@ -1245,12 +1246,15 @@ export class BattleScene extends Phaser.Scene {
         const nx = x + Math.cos(a) * len;
         const ny = y + Math.sin(a) * len * 0.6;
         if (!offRoad(nx, ny)) break;
-        dark.lineStyle(5, 0x1a0e0a, 0.85);
+        dark.lineStyle(8, 0x1a0e0a, 0.85);
         dark.lineBetween(x, y, nx, ny);
-        glow.lineStyle(2, 0xff7a2a, 0.9);
+        dark.fillStyle(0x1a0e0a, 0.85);
+        dark.fillCircle(nx, ny, 4);
+        glow.lineStyle(3.5, 0xffa040, 0.95);
         glow.lineBetween(x, y, nx, ny);
-        glow.lineStyle(6, 0xff5a1a, 0.18);
+        glow.lineStyle(11, 0xff5a1a, 0.22);
         glow.lineBetween(x, y, nx, ny);
+        seams.push({ x: nx, y: ny });
         x = nx;
         y = ny;
       }
@@ -1259,7 +1263,23 @@ export class BattleScene extends Phaser.Scene {
       dark.fillStyle(0x8a8078, 0.35);
       dark.fillCircle(rnd.between(0, GAME_W), rnd.between(80, GAME_H), rnd.between(1, 3));
     }
-    if (!motion.reduced && !motion.lowFx) this.tweens.add({ targets: glow, alpha: 0.45, duration: 1600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+    if (!motion.reduced && !motion.lowFx) {
+      this.tweens.add({ targets: glow, alpha: 0.45, duration: 1600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+      // now and then a spark spits out of a seam and floats up
+      if (seams.length) {
+        const sparks = this.add.particles(0, 0, 'dot', {
+          speedY: { min: -40, max: -18 },
+          speedX: { min: -8, max: 8 },
+          scale: { start: 0.3, end: 0 },
+          lifespan: 1200,
+          tint: 0xffa040,
+          blendMode: Phaser.BlendModes.ADD,
+          emitting: false,
+        });
+        sparks.setDepth(-8);
+        this.time.addEvent({ delay: 420, loop: true, callback: () => { const p = seams[Math.floor(Math.random() * seams.length)]; sparks.explode(1, p.x, p.y); } });
+      }
+    }
   }
 
   /** True when a point is clear of every road by `pad` px beyond the road's half-width. */

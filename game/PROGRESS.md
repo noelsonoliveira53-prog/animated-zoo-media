@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **234** (next balance pass at iteration 235)
+Iteration counter: **235** (next balance pass at iteration 240)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1485,6 +1485,12 @@ Iteration counter: **234** (next balance pass at iteration 235)
   - The new `clearOfRoads(x, y, pad)` helper keeps ground detail off the roads. Animations are skipped on Graphics: Low and reduced motion.
   - Screenshots `screenshots/234-16.png` (= `234.png`), `234-21.png` and `234-26.png`. No console errors, 258 tests.
 
+- **Iteration 235** (POLISH + BALANCE):
+  - Polish: the ember lava cracks read too thin, so they are bolder now: a wider scorched groove with a hotter, thicker glowing seam and a broad halo.
+  - Sparks now spit out of a random seam about every 0.4 s and float up (skipped on Graphics: Low and reduced motion).
+  - Screenshot `screenshots/235.png`.
+  - Balance: a sanity sweep, no changes (see Balance Notes). 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1504,6 +1510,18 @@ base and turn this into the "real" game: high-end graphics, rich per-tower effec
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 235** (POLISH + BALANCE): no sim changes since the iteration 230 store tuning (only visuals). A 4-seed sweep matches earlier results:
+
+| Level | Result |
+|---|---|
+| 1 | 100/100/100 |
+| 3 | 100/100/100 |
+| 5 | 100/50/100 |
+| 45 | 75/50/0 |
+| 90 | 100/25/0 |
+| 125 | 100/75/0 |
+
+Nothing tuned.
 **Iteration 230** (POLISH + BALANCE), store. `store-balance.ts`, 4 seeds, expert/casual/novice, no store → fully bought store.
 - The first numbers made a maxed store trivialise late bosses: +38% tower damage and +310 starting coins took level 125 from 100/75/0 to 100/100/100 and level 30 from 75/25/25 to 100/100/100.
 - Cuts:

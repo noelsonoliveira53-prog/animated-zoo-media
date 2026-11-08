@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **216** (next balance pass at iteration 220)
+Iteration counter: **217** (next balance pass at iteration 220)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1344,12 +1344,16 @@ Iteration counter: **216** (next balance pass at iteration 220)
   - 15 waves of rams, wisps and moon hares with older enemies. hpMult 1.55.
   - Screenshot `screenshots/216.png`. 249 tests.
 
+- **Iteration 217**: level 124 "The Barrow Downs" (Starheath).
+  - The S-bend layout from Millwheel Race, re-themed as burial mounds. 13 pads.
+  - 15 waves of wisps, rams and moon hares with older enemies. hpMult 1.6.
+  - Screenshot `screenshots/217.png`. 249 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Starheath level 124.
-2. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
+1. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1358,6 +1362,7 @@ Iteration counter: **216** (next balance pass at iteration 220)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 217**: 124 The Barrow Downs (12 seeds): hpMult 1.45 → 100/83/0, 1.75 → 83/67/0. **1.6 → 100/75/0** (kept: the fourth-level band).
 **Iteration 216**: 123 Curlew Ridge (12 seeds): hpMult 1.4 → 100/100/0, 1.5 → 100/92/0, 1.7 → 83/67/0. **1.55 → 100/75/0** (kept: the third-level band).
 **Iteration 215** (POLISH + BALANCE), Starheath at 6 seeds: 121 1.32 → 100/100/17, 122 1.45 → 100/83/0. Kept; both are noisy around the 12-seed values (121 novice 33, 122 casual 92).
 - Heroes on 121–122 (win %, average lives): Bramble 92/13.9, Fen 100/17.0, Ember 100/15.8, Wren 100/15.3, Sorrel 100/14.5, Hazel 100/13.5. Even.

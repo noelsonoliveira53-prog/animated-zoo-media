@@ -2683,11 +2683,16 @@ export class BattleScene extends Phaser.Scene {
     if (Math.abs(sprite.x - s.pos.x) > 0.3) sprite.setFlipX(s.pos.x < sprite.x);
     sprite.setPosition(s.pos.x + jiggle, s.pos.y - 10).setDepth(s.pos.y);
     if (s.summoned && s.life < 3) sprite.setAlpha(0.5 + 0.5 * Math.abs(Math.sin(this.time.now / 120)));
+    // status tints so afflictions read at a glance: venom green, honey amber, shock pale blue
+    if ((s.poisonT ?? 0) > 0) sprite.setTint(0xa8f07a);
+    else if ((s.glazed ?? 0) > 0) sprite.setTint(0xffd070);
+    else if ((s.stun ?? 0) > 0) sprite.setTint(0xc8e8ff);
+    else if (sprite.isTinted) sprite.clearTint();
     if (s.hp < s.maxHp) {
       const w = 22;
       bar.fillStyle(C.ink, 0.85);
       bar.fillRect(s.pos.x - w / 2 - 1, s.pos.y - 34, w + 2, 6);
-      bar.fillStyle(0x7fc8ff, 1);
+      bar.fillStyle((s.poisonT ?? 0) > 0 ? 0x8ad84a : 0x7fc8ff, 1); // a poisoned soldier's bar turns green as it drains
       bar.fillRect(s.pos.x - w / 2, s.pos.y - 33, w * (s.hp / s.maxHp), 4);
       bar.setDepth(s.pos.y + 0.5);
     }

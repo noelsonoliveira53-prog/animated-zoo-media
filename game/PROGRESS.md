@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **199** (next balance pass at iteration 200)
+Iteration counter: **200** (next balance pass at iteration 205)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1266,6 +1266,17 @@ Iteration counter: **199** (next balance pass at iteration 200)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 200**: sweep of levels 103–112 at 6 seeds (expert/casual/novice):
+
+| Level | Result | Level | Result |
+|---|---|---|---|
+| 103 | 100/67/0 | 108 | 100/83/0 |
+| 104 | 100/67/0 | 109 | 100/50/0 |
+| 105 (boss) | 83/83/0 | 110 (boss) | 67/33/0 |
+| 106 | 100/100/67 | 111 | 100/100/33 |
+| 107 | 100/100/0 | 112 | 100/100/33 |
+
+Every reading is within a seed or two of its 12-seed tuning, so nothing changed.
 **Iteration 199**: 112 Rattlesnake Narrows (12 seeds): hpMult 1.4–1.55 → 100/100/100, 1.7 → 100/100/92, 1.8 → 100/100/25,
 1.9 → 100/83/0, 2.0 → 92/42/0, 2.3 → 25/8/0. **1.85 → 100/100/33** (kept). It's a touch easier than the second-level band
 (100/92/0–17), but the cliff past 1.9 is steep enough to prefer the gentle side.

@@ -20,11 +20,14 @@ const GLIM_VIOLET = 0xc89aff;
 const STYLE: Record<string, { color: number; muzzle: number }> = {
   thornbow: { color: THORN_GOLD, muzzle: 58 },
   glimmer: { color: GLIM_VIOLET, muzzle: 66 },
+  boulder: { color: 0xffa860, muzzle: 50 },
 };
 
 export class TowerFx {
   private sparks: Phaser.GameObjects.Particles.ParticleEmitter;
   private trailG: Phaser.GameObjects.Graphics;
+  private dustG: Phaser.GameObjects.Graphics; // non-glowing trails (boulder dust)
+  private shadows = new Map<number, Phaser.GameObjects.Ellipse>(); // ground shadows under lobbed shots
   private trails = new Map<number, Trail>();
   private auras = new Map<number, Phaser.GameObjects.GameObject[]>();
   private loops = new Map<number, Phaser.Tweens.Tween[]>(); // tweens driving plain objects (not game objects)
@@ -39,6 +42,7 @@ export class TowerFx {
     });
     this.sparks.setDepth(2600);
     this.trailG = scene.add.graphics().setDepth(2490).setBlendMode(Phaser.BlendModes.ADD);
+    this.dustG = scene.add.graphics().setDepth(2489);
   }
 
   /** A tower fired: a launch flash at the bow and a trail that follows the arrow. */
@@ -48,6 +52,16 @@ export class TowerFx {
     const color = tower.spec ? p.color : st.color;
     this.trails.set(p.uid, { kind: tower.def.id, color, pts: [] });
     const top = { x: tower.pos.x, y: tower.pos.y - st.muzzle };
+    if (tower.def.id === 'boulder') {
+      // the catapult arm thumps: the tower squats, a dust puff bursts at its feet and a few pebbles skitter out
+      if (view) this.scene.tweens.add({ targets: view, scaleY: 0.86, scaleX: 1.06, duration: 70, yoyo: true, ease: 'Quad.easeOut' });
+      for (let k = 0; k < 5; k++) {
+        const puff = this.scene.add.circle(tower.pos.x + (Math.random() - 0.5) * 40, tower.pos.y + 8 + Math.random() * 6, 6 + Math.random() * 5, 0xc8b490, 0.55).setDepth(tower.pos.y + 2);
+        this.scene.tweens.add({ targets: puff, x: puff.x + (puff.x - tower.pos.x) * 0.8, y: puff.y - 6, scale: 2, alpha: 0, duration: 420, onComplete: () => puff.destroy() });
+      }
+      this.shadows.set(p.uid, this.scene.add.ellipse(tower.pos.x, tower.pos.y, 22, 8, 0x000000, 0.28).setDepth(2480));
+      return;
+    }
     if (tower.def.id === 'glimmer') {
       // the orb gathers light, then looses the bolt: an inward-rushing ring and a bright core
       const ring = this.scene.add.circle(top.x, top.y, 18, color, 0).setStrokeStyle(2, color, 0.9).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
@@ -68,7 +82,13 @@ export class TowerFx {
   }
 
   /** Record where a projectile is drawn this frame (for its trail). */
-  track(uid: number, x: number, y: number): void {
+  track(uid: number, x: number, y: number, groundX = x, groundY = y): void {
+    const sh = this.shadows.get(uid);
+    if (sh) {
+      // the shadow stays on the ground and shrinks while the boulder is high
+      const lift = Math.max(0, groundY - y);
+      sh.setPosition(groundX, groundY + 6).setScale(Math.max(0.4, 1 - lift / 160)).setAlpha(0.32 - Math.min(0.18, lift / 600));
+    }
     const t = this.trails.get(uid);
     if (!t) return;
     t.pts.push({ x, y });
@@ -77,9 +97,40 @@ export class TowerFx {
 
   /** A projectile landed (or fizzled): sparks and splinters where it ended. */
   gone(uid: number, x: number, y: number): void {
+    const sh = this.shadows.get(uid);
+    if (sh) {
+      sh.destroy();
+      this.shadows.delete(uid);
+    }
     const t = this.trails.get(uid);
     if (!t) return;
     this.trails.delete(uid);
+    if (t.kind === 'boulder') {
+      // a heavy landing: a dust cloud, chunks of rock arcing out, a hot flash and a scorch mark that fades
+      const flash = this.scene.add.circle(x, y, 16, 0xffd8a0, 0.7).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
+      this.scene.tweens.add({ targets: flash, scale: 2, alpha: 0, duration: 180, onComplete: () => flash.destroy() });
+      for (let k = 0; k < 6; k++) {
+        const a = (k / 6) * Math.PI * 2 + Math.random() * 0.5;
+        const cloud = this.scene.add.circle(x, y, 9, 0xbca888, 0.6).setDepth(2595);
+        this.scene.tweens.add({ targets: cloud, x: x + Math.cos(a) * 34, y: y + Math.sin(a) * 18 - 4, scale: 2.2, alpha: 0, duration: 520, ease: 'Cubic.easeOut', onComplete: () => cloud.destroy() });
+      }
+      for (let k = 0; k < 6; k++) {
+        const chunk = this.scene.add.rectangle(x, y, 4 + Math.random() * 4, 4 + Math.random() * 3, 0x7a7068).setDepth(2600);
+        const dx = (Math.random() - 0.5) * 90;
+        const peak = 20 + Math.random() * 26;
+        const prog = { t: 0 };
+        this.scene.tweens.add({
+          targets: prog,
+          t: 1,
+          duration: 420 + Math.random() * 160,
+          onUpdate: () => chunk.setPosition(x + dx * prog.t, y - Math.sin(Math.PI * prog.t) * peak + prog.t * 10).setRotation(prog.t * 8),
+          onComplete: () => chunk.destroy(),
+        });
+      }
+      const scorch = this.scene.add.ellipse(x, y + 4, 40, 16, 0x2a2018, 0.35).setDepth(1.5);
+      this.scene.tweens.add({ targets: scorch, alpha: 0, duration: 2600, delay: 600, onComplete: () => scorch.destroy() });
+      return;
+    }
     if (t.kind === 'glimmer') {
       // an arcane burst: an expanding rune ring, a flash and a spray of violet sparks
       const ring = this.scene.add.circle(x, y, 8, t.color, 0.25).setStrokeStyle(2.5, t.color, 1).setDepth(2600).setBlendMode(Phaser.BlendModes.ADD);
@@ -107,8 +158,18 @@ export class TowerFx {
   draw(): void {
     const g = this.trailG;
     g.clear();
+    this.dustG.clear();
     for (const t of this.trails.values()) {
       const n = t.pts.length;
+      if (t.kind === 'boulder') {
+        // a faint grey dust trail behind the tumbling rock
+        for (let i = 1; i < n; i++) {
+          const f = i / n;
+          this.dustG.fillStyle(0xb8a888, 0.08 + f * 0.18);
+          this.dustG.fillCircle(t.pts[i].x, t.pts[i].y, 2 + (1 - f) * 5);
+        }
+        continue;
+      }
       if (t.kind === 'glimmer') {
         // a crackling arcane streak: a soft wide glow with a jittering bright filament inside
         for (let i = 1; i < n; i++) {
@@ -173,7 +234,22 @@ export class TowerFx {
       objs.push(glow);
       if (!motion.reduced) this.scene.tweens.add({ targets: glow, alpha: glow.alpha * 0.45, duration: 1100, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
     }
-    if (tier >= 2 && !motion.reduced) {
+    if (tower.def.id === 'boulder' && tier >= 2 && !motion.reduced) {
+      // the top-tier catapult's furnace: wisps of smoke curling up from its base
+      const smoke = this.scene.add.particles(0, 0, 'dot', {
+        x: { min: tower.pos.x - 14, max: tower.pos.x + 14 },
+        y: tower.pos.y - 12,
+        speedY: { min: -26, max: -12 },
+        speedX: { min: -6, max: 10 },
+        scale: { start: 0.5, end: 1.4 },
+        alpha: { start: 0.35, end: 0 },
+        lifespan: 1600,
+        frequency: tier >= 3 ? 260 : 480,
+        tint: 0x8a8278,
+      });
+      smoke.setDepth(tower.pos.y + 2);
+      objs.push(smoke);
+    } else if (tier >= 2 && !motion.reduced) {
       // drifting golden motes rising round the top-tier tower
       const motes = this.scene.add.particles(0, 0, 'dot', {
         x: { min: tower.pos.x - 26, max: tower.pos.x + 26 },

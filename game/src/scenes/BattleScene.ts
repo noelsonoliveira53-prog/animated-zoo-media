@@ -2866,7 +2866,7 @@ export class BattleScene extends Phaser.Scene {
         const lift = Math.sin(Math.PI * Math.max(0, Math.min(1, t))) * Math.min(120, 40 + p.travel * 0.35);
         img.setPosition(p.pos.x, p.pos.y - lift);
         img.rotation += 0.15;
-        this.fx.track(p.uid, img.x, img.y);
+        this.fx.track(p.uid, img.x, img.y, p.pos.x, p.pos.y);
       }
     }
     for (const [uid, img] of this.projViews) {

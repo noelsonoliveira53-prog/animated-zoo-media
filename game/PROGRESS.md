@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **223** (next balance pass at iteration 225)
+Iteration counter: **224** (next balance pass at iteration 225)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1390,21 +1390,26 @@ Iteration counter: **223** (next balance pass at iteration 225)
   - Rune-spin tweens are tracked per slot and removed on sell/upgrade, so nothing draws to destroyed graphics.
   - Screenshots `screenshots/223.png` and `223-zoom0..2.png`. No console errors, 253 tests.
 
+- **Iteration 224**: tower VFX overhaul part 3, **Boulder (artillery)**.
+  - Each throw makes the catapult squat (a squash-and-stretch recoil), bursts a ring of dust at its feet and sends pebbles skittering out.
+  - Lobbed boulders cast a ground shadow that stays under them and shrinks and fades as they rise, and they leave a faint dust trail (drawn without the glow, on its own layer).
+  - Landings bring a hot flash, a rolling dust cloud, rock chunks arcing out on little parabolas and a scorch mark that fades over about 3 s. These add to the existing splash ring and shake.
+  - Tier 2+ and branches add smoke wisps curling up from the base, plus the warm tier aura.
+  - `TowerFx.track` now takes the ground position for lobbed shots. Screenshots `screenshots/224.png` and `224-zoom0..2.png`. No console errors, 253 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower VFX overhaul, Boulder (artillery): a recoil and dust puff on firing, a spinning boulder with a shadow on the
-   ground, a big impact with debris, a shockwave ring and a light camera kick, and a per-tier look.
-2. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
+1. Tower VFX overhaul, Burrow (barracks): a rally-flag wave, soldiers popping out of the burrow, sword-swing arcs, and
    a per-tier look.
-3. Specialization branches: a signature effect for each of the 8 top-tier branches.
-4. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
+2. Specialization branches: a signature effect for each of the 8 top-tier branches.
+3. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
    Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
-5. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+4. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

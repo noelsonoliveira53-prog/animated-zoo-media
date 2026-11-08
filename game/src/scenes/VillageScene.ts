@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import { DEV_COINS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
@@ -93,6 +94,7 @@ export class VillageScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     this.save = loadSave();

@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
@@ -44,6 +45,7 @@ export class FieldGuideScene extends Phaser.Scene {
   }
 
   create(data: { tab?: Tab }): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     this.tab = data?.tab ?? 'enemies';

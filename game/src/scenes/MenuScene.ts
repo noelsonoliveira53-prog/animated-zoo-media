@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import { drawMenuBackdrop } from './menu/MenuBackdrop';
 import { addLighting } from '../ui/lighting';
 import { devOn, setDev } from '../systems/dev';
@@ -23,6 +24,7 @@ export class MenuScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     const save = loadSave();

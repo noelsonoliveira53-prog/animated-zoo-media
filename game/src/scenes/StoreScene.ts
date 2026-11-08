@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { STORE_ITEMS, STORE_TIERS, type StoreItem } from '../data/store';
 import { themeById } from '../data/musicThemes';
@@ -32,6 +33,7 @@ export class StoreScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     this.sweepTimers = [];
     music.setMood('calm');
     music.setTheme(themeById('home'));

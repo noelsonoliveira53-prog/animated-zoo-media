@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import { campShot, deployMark, drawRaidGround, rubble } from './raid/RaidArt';
 import { poseFor, unitPose } from '../systems/gait';
 import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
@@ -39,6 +40,7 @@ export class RaidScene extends Phaser.Scene {
   }
 
   create(data: { tier: number; seed: number }): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('battle');
     music.setTheme(themeById('ember'));
     const save = loadSave();

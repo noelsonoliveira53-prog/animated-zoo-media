@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **271** (next balance pass at iteration 275)
+Iteration counter: **272** (next balance pass at iteration 275)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1771,13 +1771,21 @@ Iteration counter: **271** (next balance pass at iteration 275)
   - New `ambienceFor(theme)` in `data/weather.ts` (1 new test, 276 total). The battle starts the bed and stops it on scene shutdown, so retries and leaving don't stack beds.
   - New `scripts/audio-check.mjs` (a real click unlocks audio, then three battles back to back on meadow, storm and lava, through restarts; no console errors). Screenshot `screenshots/271.png` (audio has no visuals; a regular battle shot).
 
+- **Iteration 272: loading vignette and scene transitions.**
+  - **Boot vignette** (`index.html`): a CSS-only screen on a dark-green radial gradient, with a swaying two-leaf sprout, "Grovewatch" and "Growing the grove…". It covers the moment while the game draws its art in code, and fades out when the first scene is up.
+  - **Leaf wipe** (new `ui/transition.ts`, `leafReveal`): every main scene opens behind a curtain of 40 big leaves in five greens. They blow away to the right in a staggered gust while the backdrop fades.
+    - Used by Menu, World Map, Village, Battle (including retries), Raid, Store, Field Guide, Achievements and Settings.
+    - Drawn at the top depth and never interactive, so taps work at once. Reduce Motion gets a quick plain fade.
+  - New `scripts/transition-check.mjs` (boot vignette removed, a mid-gust shot, no leaves left after; no console errors). menu, dev, store, result, village, achievements and story checks all still pass. Screenshot `screenshots/272.png` (the curtain mid-gust over the world map). 276 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Loading and transitions: a short leaf-wipe transition between scenes and a code-drawn loading vignette on boot.
+1. Encyclopedia of effects: a 'Spells & Effects' tab in the Field Guide showing status effects (slow, frost, venom, shield) with live mini-previews.
+2. Tower range preview polish: a soft gradient range circle with a dashed rim when placing or selecting a tower, and pads that glow when affordable.
 
 ## Known Bugs
 - (none known)

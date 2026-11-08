@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
 import { music } from '../systems/music';
@@ -15,6 +16,7 @@ export class SettingsScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     const s0 = loadSave();

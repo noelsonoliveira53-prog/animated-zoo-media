@@ -1,0 +1,31 @@
+// Boot vignette + leaf-wipe check: screenshots the HTML boot screen, then a scene entrance mid-gust (tweens paused),
+// and confirms the vignette is gone and no leaves are left once things settle. `node scripts/transition-check.mjs <name>`
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const name = process.argv[2] ?? 'transition';
+const server = await preview({ preview: { port: 4335, strictPort: true } });
+const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+await page.goto('http://localhost:4335/', { waitUntil: 'domcontentloaded' });
+await page.screenshot({ path: `screenshots/${name}-boot.png` });
+await page.waitForFunction(() => window.__game?.scene?.isActive('Menu'), null, { timeout: 30000 });
+await page.waitForTimeout(1200);
+const bootGone = await page.evaluate(() => !document.getElementById('boot'));
+const t0 = await page.evaluate(() => { const m = window.__game.scene.getScene('Menu'); m.scene.start('WorldMap'); return performance.now(); });
+await page.waitForFunction(() => { const s = window.__game.scene.getScene('WorldMap'); return s?.sys.isActive() && s.time.now > 0 && s.children.list.some((o) => o.depth === 99991); }, null, { timeout: 20000, polling: 'raf' });
+await page.waitForTimeout(120);
+await page.evaluate(() => window.__game.scene.getScene('WorldMap').tweens.pauseAll());
+await page.screenshot({ path: `screenshots/${name}.png` });
+await page.evaluate(() => window.__game.scene.getScene('WorldMap').tweens.resumeAll());
+await page.waitForTimeout(2500);
+const leftover = await page.evaluate(() => window.__game.scene.getScene('WorldMap').children.list.filter((o) => o.depth >= 99990).length);
+console.log(JSON.stringify({ bootGone, leftover, ms: Math.round(performance.now() - t0) }));
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length || !bootGone || leftover ? 1 : 0);

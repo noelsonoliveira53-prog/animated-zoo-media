@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import { addLighting } from '../ui/lighting';
 import { laurelFor, levelHasBoss } from '../systems/mapNodes';
 import Phaser from 'phaser';
@@ -25,6 +26,7 @@ export class WorldMapScene extends Phaser.Scene {
   }
 
   create(data: { focus?: number; region?: number }): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     this.panel = null;

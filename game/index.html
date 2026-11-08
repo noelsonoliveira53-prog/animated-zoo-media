@@ -16,10 +16,23 @@
       /* Phones held upright: the game is landscape, so ask for a rotation. */
       @media (orientation: portrait) and (pointer: coarse) { #rotate { display: flex; } }
       html, body { -webkit-user-select: none; user-select: none; -webkit-touch-callout: none; }
+      /* Boot vignette: shown while the game draws its art in code, removed once the menu is up. */
+      #boot { position: fixed; inset: 0; z-index: 5; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 18px;
+        background: radial-gradient(ellipse at 50% 40%, #2a4a32 0%, #10261b 70%); color: #fff4d6;
+        font: bold 26px "Trebuchet MS", system-ui, sans-serif; transition: opacity 0.4s ease; }
+      #boot.gone { opacity: 0; pointer-events: none; }
+      #boot .sprout { position: relative; width: 70px; height: 70px; }
+      #boot .sprout i { position: absolute; left: 31px; bottom: 0; width: 8px; height: 40px; border-radius: 4px; background: #6b4a2a; }
+      #boot .sprout b { position: absolute; width: 30px; height: 18px; border-radius: 30px 0; background: #8fdc5a; top: 14px; animation: leaf 1.4s ease-in-out infinite; }
+      #boot .sprout b.l { left: 6px; transform-origin: right bottom; }
+      #boot .sprout b.r { right: 6px; border-radius: 0 30px; transform-origin: left bottom; animation-delay: 0.2s; }
+      @keyframes leaf { 0%, 100% { transform: rotate(-8deg); } 50% { transform: rotate(10deg); } }
+      #boot small { font-size: 14px; opacity: 0.7; font-weight: normal; }
     </style>
   </head>
   <body>
     <div id="game"></div>
+    <div id="boot"><div class="sprout"><i></i><b class="l"></b><b class="r"></b></div><div>Grovewatch</div><small>Growing the grove…</small></div>
     <div id="rotate"><div class="phone"></div><div>Turn your phone sideways to play Grovewatch</div></div>
     <script type="module" src="/src/main.ts"></script>
   </body>

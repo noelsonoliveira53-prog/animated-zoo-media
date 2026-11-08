@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
 import { TowerFx } from './fx/TowerFx';
@@ -165,6 +166,7 @@ export class BattleScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('battle');
     music.setTheme(themeForRegion(regionOf(this.levelIndex)));
     this.drawMap();

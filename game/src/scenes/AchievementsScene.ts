@@ -1,3 +1,4 @@
+import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
@@ -27,6 +28,7 @@ export class AchievementsScene extends Phaser.Scene {
   }
 
   create(): void {
+    leafReveal(this, GAME_W, GAME_H); // a gust of leaves uncovers the scene
     music.setMood('calm');
     music.setTheme(themeById('home'));
     // Catch up on anything already earned but not yet awarded (e.g. achievements added since the last battle).

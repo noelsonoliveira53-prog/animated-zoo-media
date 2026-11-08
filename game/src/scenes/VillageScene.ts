@@ -2,7 +2,7 @@ import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
-import { APIARY_HP_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { APIARY_HP_PER_LEVEL, WEIR_BOUNTY_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 import { TILE } from './BootScene';
 import { bumpStats, loadSave, writeSave, ensureVillage, type SaveData } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -402,6 +402,7 @@ export class VillageScene extends Phaser.Scene {
     if (b.type === 'barracks' && b.level > 0) lines.push(`Battle bonus: Grove Call Rangers +${b.level * 25}% health and damage`);
     if (b.type === 'market' && b.level > 0) lines.push(`Swap ${MARKET_TRADE.give} for ${MARKET_TRADE.get}.`);
     if (b.type === 'apiary' && b.level > 0) lines.push(`Battle bonus: hero health +${Math.round(b.level * APIARY_HP_PER_LEVEL * 100)}%`);
+    if (b.type === 'weir' && b.level > 0) lines.push(`Battle bonus: kills pay +${Math.round(b.level * WEIR_BOUNTY_PER_LEVEL * 100)}% coins`);
     if (b.type === 'shrine' && b.level > 0) lines.push(`Battle bonus: spell cooldowns ${Math.round(b.level * SHRINE_CD_PER_LEVEL * 100)}% shorter`);
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
     if (!lines.length) lines.push(def.blurb);

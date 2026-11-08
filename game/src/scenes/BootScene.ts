@@ -3227,6 +3227,33 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'weir': {
+        // a little stream crossing the plot, a woven willow fence across it, a fish basket and leaping fish
+        g.fillStyle(0x6ab8d8, 1);
+        g.fillRoundedRect(cx - 34 * k, cy - 4, 68 * k, 22, 8);
+        g.lineStyle(1.5, 0xd8f4ff, 0.8);
+        for (let i = 0; i < 4; i++) g.lineBetween(cx - 26 * k + i * 16 * k, cy + 4 + (i % 2) * 6, cx - 18 * k + i * 16 * k, cy + 4 + (i % 2) * 6);
+        const posts = 3 + lvl;
+        g.lineStyle(3, 0x7a5a32, 1);
+        for (let i = 0; i < posts; i++) {
+          const px = cx - 22 + (i * 44) / (posts - 1);
+          g.lineBetween(px, cy + 20, px - 4, cy - 14);
+        }
+        g.lineStyle(2.5, 0xb89a5a, 1);
+        for (const yy of [-6, 2, 10]) g.lineBetween(cx - 26, cy + yy + 4, cx + 22, cy + yy - 4);
+        g.fillStyle(0xc89a5a, 1);
+        g.fillEllipse(cx + 28, cy - 14, 16, 14);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeEllipse(cx + 28, cy - 14, 16, 14);
+        g.lineStyle(1, 0x8a6a3a, 1);
+        g.lineBetween(cx + 21, cy - 14, cx + 35, cy - 14);
+        g.fillStyle(0x7a9ac0, 1);
+        for (const [fx, fy, fr] of [[-14, -22, 0.4], [10, -26, -0.5]] as const) {
+          g.fillEllipse(cx + fx, cy + fy, 12, 5);
+          g.fillTriangle(cx + fx + 5, cy + fy, cx + fx + 10, cy + fy - 4 + fr * 4, cx + fx + 10, cy + fy + 4 + fr * 4);
+        }
+        break;
+      }
       case 'wall': {
         g.clear();
         g.fillStyle(0x000000, 0.2);

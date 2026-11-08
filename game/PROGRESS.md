@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **211** (next balance pass at iteration 215)
+Iteration counter: **212** (next balance pass at iteration 215)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1313,12 +1313,18 @@ Iteration counter: **211** (next balance pass at iteration 215)
   - Also added: a code-drawn turtle sprite, the achievements "Shellcracker" (boss) and "Brook Keeper" (15 stars), the story card "The Pool Lies Still" and a place in the endless boss rotation.
   - Check: `scripts/mossback-check.mjs` (phase 1 summons 4 pike, no console errors). Screenshots `screenshots/211.png`, `211-boss.png`, `mossback-map.png`. 245 tests.
 
+- **Iteration 212**: new village building, the **Fish Weir**: a woven willow fence across a stream, where friendly Pebblebrook otters catch fish.
+  - Unlocks at Grove Hall 3, one per village, 3 levels.
+  - Each level makes every kill in battle pay +5% coins (`WEIR_BOUNTY_PER_LEVEL`), up to +15%. It stacks with the hero and daily bonuses and is applied before the weasel tithe.
+  - The art is a little stream with a fence (more posts as it levels), a fish basket and leaping fish.
+  - The info panel shows "Battle bonus: kills pay +N% coins" and the battle banner adds "kills pay +N%". The build shop now has 11 cards and still fits.
+  - One new test (246 total). Check: `scripts/weir-check.mjs` (a level-2 weir gives 1.1 in battle, no console errors). Screenshots `screenshots/212.png` (shop), `212-panel.png` and `212-battle.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Breather: a village building or raid troop that ties into the river theme (e.g. a Fish Weir that adds a trickle of glowsap, or a raid troop that floats over Sludge Pits).
-2. Region 25 opener (theme, music, map art, battle overlay, two new enemies).
+1. Region 25 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)

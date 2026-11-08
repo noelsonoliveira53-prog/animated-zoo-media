@@ -1,6 +1,6 @@
 // Village buildings. Costs are in Coins (gold) and Glowsap (the glowing tree-sap second resource).
 
-export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'apiary' | 'market' | 'wall';
+export type BuildingId = 'townhall' | 'coinmine' | 'sapwell' | 'vault' | 'builderhut' | 'barracks' | 'workshop' | 'shrine' | 'apiary' | 'weir' | 'market' | 'wall';
 
 export interface Cost {
   coins?: number;
@@ -149,6 +149,19 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
       { cost: { coins: 6500, glowsap: 5200 }, time: 2100, th: 4 },
     ],
   },
+  weir: {
+    id: 'weir',
+    name: 'Fish Weir',
+    blurb: 'A woven willow fence across a stream, where friendly Pebblebrook otters catch fish to trade. Each level makes every kill in battle pay a little more.',
+    size: 2,
+    color: 0x4ab0d8,
+    maxCount: [0, 0, 1, 1, 1],
+    levels: [
+      { cost: { coins: 1600, glowsap: 1200 }, time: 300, th: 3 },
+      { cost: { coins: 3600, glowsap: 3000 }, time: 1000, th: 3 },
+      { cost: { coins: 7000, glowsap: 5800 }, time: 2400, th: 4 },
+    ],
+  },
   market: {
     id: 'market',
     name: 'Trading Post',
@@ -173,7 +186,7 @@ export const BUILDINGS: Record<BuildingId, BuildingDef> = {
   },
 };
 
-export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'apiary', 'market', 'wall'];
+export const SHOP_ORDER: BuildingId[] = ['coinmine', 'sapwell', 'vault', 'builderhut', 'workshop', 'barracks', 'shrine', 'apiary', 'weir', 'market', 'wall'];
 
 /** Moonpetal Shrine: battle spell cooldowns shrink by this fraction per level. */
 export const SHRINE_CD_PER_LEVEL = 0.06;
@@ -183,6 +196,8 @@ export const MARKET_TRADE = { give: 200, get: 140 };
 
 /** Honeycomb Apiary: the hero's max health grows by this fraction per level. */
 export const APIARY_HP_PER_LEVEL = 0.1;
+/** Fish Weir: every kill pays this much more bounty per level. */
+export const WEIR_BOUNTY_PER_LEVEL = 0.05;
 
 export const VILLAGE_COLS = 22;
 export const VILLAGE_ROWS = 13;

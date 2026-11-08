@@ -110,7 +110,7 @@ import { BattleSim } from '../src/systems/BattleSim';
 describe('village → battle perks', () => {
   it('village buildings grant battle perks', () => {
     const v = newVillage(T0);
-    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1 });
+    expect(battlePerks(v)).toEqual({ towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1, weirBountyMult: 1 });
     v.buildings.push({ uid: 99, type: 'workshop', level: 2, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.push({ uid: 98, type: 'barracks', level: 1, col: 4, row: 0, upgradeEnds: null, lastCollect: T0 });
     v.buildings.find((b) => b.type === 'townhall')!.level = 3;
@@ -275,5 +275,31 @@ describe('Trading Post', () => {
     v.coins = 5000;
     v.glowsap = capacity(v);
     expect(marketTrade(v, 'coins').reason).toMatch(/room/);
+  });
+});
+
+import { WEIR_BOUNTY_PER_LEVEL } from '../src/data/buildings';
+
+describe('Fish Weir', () => {
+  it('makes every kill pay more coins per level', () => {
+    const v = newVillage(T0);
+    expect(battlePerks(v).weirBountyMult).toBe(1);
+    v.buildings.push({ uid: 97, type: 'weir', level: 3, col: 0, row: 0, upgradeEnds: null, lastCollect: T0 });
+    const p = battlePerks(v);
+    expect(p.weirBountyMult).toBeCloseTo(1 + 3 * WEIR_BOUNTY_PER_LEVEL);
+    const lvl = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20,
+      paths: [[{ x: 0, y: 300 }, { x: 1200, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'mudling', count: 1, interval: 1 }] }],
+      theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 } };
+    const pay = (mult: number) => {
+      const sim = new BattleSim(lvl, null, { weirBountyMult: mult });
+      sim.status = 'running';
+      const e = sim.spawn('bogbrute', 0, 300);
+      const c0 = sim.coins;
+      (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(e, 1e9);
+      sim.update(1 / 60);
+      return sim.coins - c0;
+    };
+    expect(pay(p.weirBountyMult)).toBeGreaterThan(pay(1));
+    expect(pay(p.weirBountyMult)).toBe(Math.round(pay(1) * p.weirBountyMult));
   });
 });

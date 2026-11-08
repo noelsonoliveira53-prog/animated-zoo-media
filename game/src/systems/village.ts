@@ -1,5 +1,5 @@
 import { TROOPS } from '../data/raid';
-import { APIARY_HP_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
+import { APIARY_HP_PER_LEVEL, WEIR_BOUNTY_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
 
 // Pure village rules. All time-dependent functions take `now` (ms) so they are testable.
 
@@ -265,10 +265,11 @@ export interface BattlePerks {
   rangerMult: number; // Ranger Lodge: Grove Call Rangers +25% hp/damage per level
   spellCdMult: number; // Moonpetal Shrine: spell cooldowns -6% per level
   heroHpMult: number; // Honeycomb Apiary: hero max health +10% per level
+  weirBountyMult: number; // Fish Weir: kills pay +5% bounty per level
 }
 
 export function battlePerks(v: VillageState | null): BattlePerks {
-  if (!v) return { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1 };
+  if (!v) return { towerDamageMult: 1, bonusCoins: 0, rangerMult: 1, spellCdMult: 1, heroHpMult: 1, weirBountyMult: 1 };
   const lvl = (type: BuildingId) => Math.max(0, ...v.buildings.filter((b) => b.type === type).map((b) => b.level));
   return {
     towerDamageMult: 1 + 0.05 * lvl('workshop'),
@@ -276,6 +277,7 @@ export function battlePerks(v: VillageState | null): BattlePerks {
     rangerMult: 1 + 0.25 * lvl('barracks'),
     spellCdMult: 1 - SHRINE_CD_PER_LEVEL * lvl('shrine'),
     heroHpMult: 1 + APIARY_HP_PER_LEVEL * lvl('apiary'),
+    weirBountyMult: 1 + WEIR_BOUNTY_PER_LEVEL * lvl('weir'),
   };
 }
 

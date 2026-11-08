@@ -311,6 +311,7 @@ export class BattleSim {
 
   /** Multiplier on spell cooldowns (from the village Moonpetal Shrine). */
   spellCdMult = 1;
+  weirBountyMult = 1; // Fish Weir: every kill pays this much more
   heroHpMult = 1; // Honeycomb Apiary: the hero's max health is scaled by this
 
   /** Source of chance (crit rolls). Headless runs pass a seeded one so each seed replays exactly. */
@@ -319,7 +320,7 @@ export class BattleSim {
   constructor(
     level: LevelDef,
     heroId: string | null = null,
-    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; spellCdMult?: number; heroHpMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
+    opts: { towerDamageMult?: number; bonusCoins?: number; rangerMult?: number; spellCdMult?: number; heroHpMult?: number; weirBountyMult?: number; heroLevel?: number; mods?: Modifiers; random?: () => number } = {},
   ) {
     this.level = level;
     if (opts.random) this.random = opts.random;
@@ -329,6 +330,7 @@ export class BattleSim {
     this.rangerMult = opts.rangerMult ?? 1;
     this.spellCdMult = opts.spellCdMult ?? 1;
     this.heroHpMult = opts.heroHpMult ?? 1;
+    this.weirBountyMult = opts.weirBountyMult ?? 1;
     this.paths = level.paths.map((p) => new Path(p));
     this.coins = Math.round(level.startCoins * this.mods.startCoinsMult) + (opts.bonusCoins ?? 0);
     this.lives = this.mods.lives ?? level.lives;
@@ -2195,7 +2197,7 @@ export class BattleSim {
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.
-      const bounty = e.revived ? 0 : Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e) * (1 - this.titheCut()));
+      const bounty = e.revived ? 0 : Math.round(e.def.bounty * this.waveHpMult() * this.bountyMult(e) * this.weirBountyMult * (1 - this.titheCut()));
       if (!e.revived && !e.def.boss && !e.def.revive) this.fallen.push({ id: e.def.id, path: e.path, dist: e.dist, pos: { ...e.pos }, at: this.time });
       if (this.fallen.length > 40) this.fallen.splice(0, this.fallen.length - 40);
       this.coins += bounty;

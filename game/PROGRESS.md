@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **200** (next balance pass at iteration 205)
+Iteration counter: **201** (next balance pass at iteration 205)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,7 @@ Iteration counter: **200** (next balance pass at iteration 205)
 - (none)
 
 ## Backlog (ranked)
-1. Rustrock levels 113 and 114.
+1. Rustrock level 114.
 2. Rustrock finale (115) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1266,6 +1266,8 @@ Iteration counter: **200** (next balance pass at iteration 205)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 201**: 113 Hollowrock Arches (12 seeds): hpMult 1.55 → 100/100/8, 1.7 → 100/100/0, 1.85 → 100/92/0,
+2.05 → 92/67/0. **1.95 → 100/83/0** (kept: the third-level band).
 **Iteration 200**: sweep of levels 103–112 at 6 seeds (expert/casual/novice):
 
 | Level | Result | Level | Result |

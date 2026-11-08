@@ -260,8 +260,22 @@ export class RaidSim {
     if (healed.length) this.events.push({ type: 'troopHeal', troop: t, healed });
   }
 
+  /** Standing Stones: the strongest stone in reach (not the stone itself) softens blows on a building. */
+  wardCut(b: CampBuilding): number {
+    let cut = 0;
+    const c = buildingCenter(b);
+    for (const o of this.standing) {
+      const w = CAMP_BUILDINGS[o.type].ward;
+      if (!w || o === b) continue;
+      const oc = buildingCenter(o);
+      if (Math.hypot(oc.x - c.x, oc.y - c.y) <= w.radius) cut = Math.max(cut, w.cut);
+    }
+    return cut;
+  }
+
   private hurtBuilding(b: CampBuilding, dmg: number, by: Troop): void {
     if (b.hp <= 0) return;
+    dmg *= 1 - this.wardCut(b);
     b.hp -= dmg;
     this.events.push({ type: 'buildingHit', building: b, damage: dmg, by });
     if (b.hp <= 0) {

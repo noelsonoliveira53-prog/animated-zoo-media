@@ -332,4 +332,29 @@ describe('Mole Tunneler', () => {
     const n = (tier: number) => generateCamp(11, tier).buildings.filter((x) => x.type === 'rattle').length;
     expect([n(0), n(1), n(2)]).toEqual([0, 0, 1]);
   });
+  it('a Standing Stone softens blows on buildings near it (not on itself) until it falls', () => {
+    const camp = { tier: 0, seed: 0, buildings: [
+      { uid: 1, type: 'menhir', col: 10, row: 6, hp: 520, maxHp: 520 },
+      { uid: 2, type: 'hut', col: 12, row: 6, hp: 280, maxHp: 280 },
+      { uid: 3, type: 'hut', col: 26, row: 2, hp: 280, maxHp: 280 },
+    ] };
+    const sim = new RaidSim(camp, { brawler: 1 });
+    const c = buildingCenter(camp.buildings[1]);
+    const b = sim.deploy('brawler', { x: c.x - 400, y: c.y })!;
+    const hurt = (x: unknown, d: number) => (sim as unknown as { hurtBuilding: (x: unknown, d: number, by: unknown) => void }).hurtBuilding(x, d, b);
+    const cut = CAMP_BUILDINGS.menhir.ward!.cut;
+    hurt(camp.buildings[1], 100);
+    expect(camp.buildings[1].hp).toBeCloseTo(280 - 100 * (1 - cut));
+    hurt(camp.buildings[2], 100);
+    expect(camp.buildings[2].hp).toBe(180);
+    hurt(camp.buildings[0], 100);
+    expect(camp.buildings[0].hp).toBe(420);
+    camp.buildings[0].hp = 0;
+    hurt(camp.buildings[1], 50);
+    expect(camp.buildings[1].hp).toBeCloseTo(280 - 100 * (1 - cut) - 50);
+  });
+  it('only Strongholds raise a Standing Stone', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((x) => x.type === 'menhir').length;
+    expect([n(0), n(1), n(2)]).toEqual([0, 0, 1]);
+  });
 });

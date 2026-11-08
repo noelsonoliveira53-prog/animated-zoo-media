@@ -58,6 +58,12 @@ export class RaidScene extends Phaser.Scene {
         const zone = this.add.circle(c.x, c.y, def.mire.radius, 0x4a5a1e, 0.32).setStrokeStyle(3, 0x8a9a3a, 0.7).setDepth(1);
         this.mireZones.set(b.uid, zone);
       }
+      if (def.ward) {
+        // the hush around a Standing Stone: blows land soft on everything inside the ring
+        const c = buildingCenter(b);
+        const zone = this.add.circle(c.x, c.y, def.ward.radius, 0xb8b8c8, 0.1).setStrokeStyle(2, 0xd8d8e8, 0.5).setDepth(1);
+        this.mireZones.set(b.uid, zone);
+      }
       if (def.venom) {
         // the sand around a Rattle Trap, where the buried snakes can reach
         const c = buildingCenter(b);
@@ -201,7 +207,8 @@ export class RaidScene extends Phaser.Scene {
       case 'buildingHit': {
         const v = this.buildingViews.get(ev.building.uid);
         if (v) {
-          v.img.setTintFill(0xffffff);
+          // a building under a Standing Stone's hush flashes a dull lavender instead of white
+          v.img.setTintFill(this.sim.wardCut(ev.building) > 0 ? 0xb8b8e8 : 0xffffff);
           this.time.delayedCall(50, () => v.img.clearTint());
         }
         sfx.melee();

@@ -2933,6 +2933,30 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'menhir': {
+        // a tall leaning grey standing stone on a heather mound, carved with pale spirals
+        g.fillStyle(0x6a5a6a, 1);
+        g.fillEllipse(cx, cy + 14, 58, 22);
+        g.fillStyle(0x9a6aa8, 1);
+        for (let h = 0; h < 8; h++) g.fillCircle(cx - 24 + h * 7, cy + 12 + (h % 2) * 4, 3);
+        g.fillStyle(0x000000, 0.18);
+        g.fillEllipse(cx + 8, cy + 14, 26, 8);
+        g.fillStyle(0x8a8a88, 1);
+        g.fillRoundedRect(cx - 11, cy - 30, 22, 44, 6);
+        g.lineStyle(2, C.ink, 1);
+        g.strokeRoundedRect(cx - 11, cy - 30, 22, 44, 6);
+        g.fillStyle(0xa8a8a4, 1);
+        g.fillRect(cx - 9, cy - 28, 6, 40);
+        g.lineStyle(1.5, 0xe0e0f0, 0.9);
+        for (const [sx, sy] of [[0, -16], [1, 2]]) {
+          g.beginPath();
+          g.arc(cx + sx, cy + sy, 5, 0, Math.PI * 1.6);
+          g.strokePath();
+        }
+        g.fillStyle(0xc8c060, 0.85);
+        g.fillCircle(cx + 6, cy + 8, 3);
+        break;
+      }
       case 'rattle': {
         // a ring of sun-bleached rocks around a sandy pit, with rattlesnake heads and tails poking out
         g.fillStyle(0xe0c088, 1);

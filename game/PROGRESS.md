@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **218** (next balance pass at iteration 220)
+Iteration counter: **219** (next balance pass at iteration 220)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1357,12 +1357,17 @@ Iteration counter: **218** (next balance pass at iteration 220)
   - The hush warning in the top bar now reads "Moonhush: …", since the boss causes it too, not only hares.
   - Check: `scripts/thunderfleece-check.mjs` (phase 1 summons 4 rams, no console errors). Screenshots `screenshots/218.png`, `218-boss.png`, `thunderfleece-map.png`. 250 tests.
 
+- **Iteration 219**: new raid camp building, the **Standing Stone** (520 hp), a carved stone from the Starheath moors.
+  - While it stands, every other camp building within 110 px takes 30% less damage. It never shields itself, so knock the stone down first.
+  - Strongholds raise one. To make room, a Stronghold now has 3 huts instead of 4.
+  - The camp shows the stone's hush as a pale ring, and buildings hit under it flash a dull lavender instead of white.
+  - Two new tests (252 total). Screenshot `screenshots/219.png` (Stronghold camp with the stone bottom-left). No console errors.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Breather: a raid troop or camp building with a moorland flavour (e.g. a Standing Stone camp building that shields nearby buildings from spells/splash, or a Ram troop with wool that shrugs off spit).
-2. Region 26 opener (theme, music, map art, battle overlay, two new enemies).
+1. Region 26 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)
@@ -1371,6 +1376,16 @@ Iteration counter: **218** (next balance pass at iteration 220)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 219** (raid-balance, Stronghold column; after the Rattle Trap → after the stone):
+
+| Army | Before | After |
+|---|---|---|
+| Lodge 3 | 0.7★ 44% | 0.5★ 42% |
+| Lodge 3 + Mender | 1.4★ 50% | 1.4★ 52% |
+| Lodge 3 + Moles | 1.2★ 45% | 1.2★ 44% |
+
+- The first try (130 px reach, 40% cut) also gave Lodge 3 0.5★, and so did trimming a hut. The plain army simply lacks a counter now.
+- **Watch**: Strongholds keep getting harder for the plain Lodge 3 army (1.0★ at iteration 203 → 0.5★). The next raid breather should give troops a tool, not the camp.
 **Iteration 218**: 125 The Thunder Barrow (12 seeds): hpMult 1.6 → 100/75/0, 1.8 → 92/67/0, 2.0 → 58/33/0. **1.9 → 83/67/0** (kept:
 the expert is in the boss band and casual is 4 points over it; the finale guard passes).
 **Iteration 217**: 124 The Barrow Downs (12 seeds): hpMult 1.45 → 100/83/0, 1.75 → 83/67/0. **1.6 → 100/75/0** (kept: the fourth-level band).

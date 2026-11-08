@@ -1435,6 +1435,30 @@ export class BootScene extends Phaser.Scene {
         g.strokeCircle(cx - r * 1.35, cy - r * 0.15, r * 0.22);
         break;
       }
+      case 'sprayotter': {
+        // a sleek brown otter from above: long body, pale face, thick tapering tail and droplets flying off
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx + r * 0.5, cy - r * 0.25, cx + r * 0.5, cy + r * 0.25, cx + r * 1.3, cy);
+        g.strokeTriangle(cx + r * 0.5, cy - r * 0.25, cx + r * 0.5, cy + r * 0.25, cx + r * 1.3, cy);
+        g.fillEllipse(cx, cy, r * 1.5, r * 0.85);
+        g.strokeEllipse(cx, cy, r * 1.5, r * 0.85);
+        for (const [lx, ly] of [[-0.4, -1], [-0.4, 1], [0.35, -1], [0.35, 1]]) g.fillEllipse(cx + lx * r, cy + ly * r * 0.45, r * 0.22, r * 0.18);
+        g.fillCircle(cx - r * 0.8, cy, r * 0.42);
+        g.strokeCircle(cx - r * 0.8, cy, r * 0.42);
+        g.fillStyle(0xe8d0a8, 1);
+        g.fillEllipse(cx - r * 0.98, cy, r * 0.32, r * 0.42);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - r * 0.82, cy - r * 0.18, r * 0.07);
+        g.fillCircle(cx - r * 0.82, cy + r * 0.18, r * 0.07);
+        g.fillCircle(cx - r * 1.12, cy, r * 0.08);
+        g.fillStyle(0x6a4a2a, 1);
+        g.fillCircle(cx - r * 0.75, cy - r * 0.38, r * 0.09);
+        g.fillCircle(cx - r * 0.75, cy + r * 0.38, r * 0.09);
+        g.fillStyle(0xc8ecff, 0.9);
+        for (const [wx, wy] of [[0.2, -0.75], [-0.3, 0.8], [0.8, 0.6], [0.7, -0.6]]) g.fillCircle(cx + wx * r, cy + wy * r, r * 0.09);
+        break;
+      }
       case 'pike': {
         // a long steel-blue fish from above: pointed snout, banded back, forked tail and a fringe of white water
         g.lineStyle(2.5, C.ink, 1);

@@ -420,7 +420,7 @@ export class BattleSim {
         if (def.slow) {
           this.slow(e, def.slow.factor, def.slow.duration);
         }
-        this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)), def.damageType ?? 'physical');
+        this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)) * (1 - this.drenchCut(e)), def.damageType ?? 'physical');
       }
     } else {
       this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
@@ -438,7 +438,7 @@ export class BattleSim {
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
       const hits = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
-      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)), def.damageType ?? 'physical');
+      for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)) * (1 - this.drenchCut(e)), def.damageType ?? 'physical');
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }
     this.strikes = this.strikes.filter((st) => st.timer > 0);
@@ -1290,6 +1290,17 @@ export class BattleSim {
   }
 
   /** Glowbearer: the strongest ward in range (from another enemy) cuts damage taken by this fraction. */
+  /** Spray Otter mist: the strongest soak around this enemy (its own included) cuts player spell damage. */
+  drenchCut(e: Enemy): number {
+    let cut = 0;
+    for (const o of this.enemies) {
+      const d = o.def.drench;
+      if (!d || !o.alive) continue;
+      if (o === e || Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= d.radius) cut = Math.max(cut, d.cut);
+    }
+    return cut;
+  }
+
   wardCut(e: Enemy): number {
     let cut = 0;
     for (const o of this.enemies) {

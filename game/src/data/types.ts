@@ -73,6 +73,7 @@ export interface EnemyDef {
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
   venom?: { dps: number; duration: number }; // its melee bites poison soldiers: they lose dps health a second for duration s (refreshed by each bite)
   ambush?: number; // burrows in and pops up at this fraction of the road instead of at the entrance
+  drench?: { radius: number; cut: number }; // soaks itself and allies within radius: player spells (Starfall, Thornsnare, ...) deal cut less to them
   bubble?: { radius: number; interval: number; count: number }; // every interval s, wraps up to count nearby allies in a bubble that blocks the next hit entirely
   surge?: { interval: number; distance: number; radius: number }; // every interval s, it and its unheld allies within radius are swept distance px down the road
   curl?: { duration: number; cooldown: number; bonus: number; slow: number }; // when hit (off cooldown), curls up: +bonus armor and magic resist, moving at slow× speed, for duration s

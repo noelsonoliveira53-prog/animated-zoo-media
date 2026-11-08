@@ -1905,6 +1905,13 @@ export class BattleScene extends Phaser.Scene {
         shake(this, 350, 0.014);
         this.cameras.main.flash(100, 255, 240, 180);
         sfx.boom();
+        const soaked = ev.hits.find((h) => h.alive && this.sim.drenchCut(h) > 0);
+        if (soaked) {
+          // Spray Otter mist: the blast hisses into steam on the soaked critters
+          this.particles.setParticleTint(0xe8f6ff);
+          this.particles.explode(14, soaked.pos.x, soaked.pos.y - 6);
+          this.floatText(soaked.pos.x, soaked.pos.y - 30, 'Soaked!', '#bfe8ff', 13);
+        }
         break;
       }
       case 'summonGone':
@@ -2651,6 +2658,18 @@ export class BattleScene extends Phaser.Scene {
       }
       v.sprite.setDepth(v.air > 0.5 ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
+      if (e.def.drench) {
+        // Spray Otter: a soft drifting mist around it marks where spells fall flat
+        const t = this.time.now / 600 + e.uid;
+        v.bar.fillStyle(0xbfe0f0, 0.1);
+        v.bar.fillCircle(e.pos.x, e.pos.y, e.def.drench.radius);
+        v.bar.fillStyle(0xe8f6ff, 0.35);
+        for (let k = 0; k < 6; k++) {
+          const a = t + k * 1.05;
+          v.bar.fillCircle(e.pos.x + Math.cos(a) * e.def.drench.radius * 0.7, e.pos.y + Math.sin(a) * e.def.drench.radius * 0.45, 3);
+        }
+        v.bar.setDepth(e.pos.y - 0.5);
+      }
       if (e.bubbled) {
         // Bubbler Newt's bubble: a shining soap-film ring that pops on the next hit
         const by = e.pos.y - 4 - 34 * v.air;

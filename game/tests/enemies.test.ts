@@ -1333,3 +1333,18 @@ describe('Pebblebrook Rapids enemies', () => {
     expect(sim.drainEvents().some((e) => e.type === 'surge')).toBe(true);
   });
 });
+
+describe('Spray Otter', () => {
+  it('soaks itself and nearby allies so spells hit them for less; towers are unaffected', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const o = sim.spawn('sprayotter', 0, 300);
+    const near = sim.spawn('mudling', 0, 360);
+    const far = sim.spawn('mudling', 0, 1200);
+    expect(sim.drenchCut(o)).toBeCloseTo(o.def.drench!.cut);
+    expect(sim.drenchCut(near)).toBeCloseTo(o.def.drench!.cut);
+    expect(sim.drenchCut(far)).toBe(0);
+    o.alive = false;
+    expect(sim.drenchCut(near)).toBe(0);
+  });
+});

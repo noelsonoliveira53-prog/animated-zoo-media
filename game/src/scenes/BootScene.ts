@@ -1444,6 +1444,42 @@ export class BootScene extends Phaser.Scene {
         for (let n = 0; n < 3; n++) g.fillEllipse(cx + r * (0.98 + n * 0.12), cy + r * 0.38, r * 0.12, r * 0.18);
         break;
       }
+      case 'heathwisp': {
+        // a pale floating light: a soft glow, a bright core and a trailing wisp
+        g.fillStyle(color, 0.25);
+        g.fillCircle(cx, cy, r * 1.15);
+        g.fillStyle(color, 0.5);
+        g.fillCircle(cx, cy, r * 0.8);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx, cy, r * 0.45);
+        g.fillStyle(color, 0.6);
+        g.fillTriangle(cx + r * 0.3, cy - r * 0.35, cx + r * 0.3, cy + r * 0.35, cx + r * 1.4, cy + r * 0.2);
+        g.fillStyle(0x6a7aa8, 1);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.12, r * 0.08);
+        g.fillCircle(cx - r * 0.15, cy + r * 0.12, r * 0.08);
+        break;
+      }
+      case 'moorram': {
+        // a shaggy ram from above: a big cloud of fleece, a dark face and two curled horns
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(color, 1);
+        for (const [fx, fy, fr] of [[0, 0, 0.62], [0.3, -0.3, 0.38], [0.3, 0.3, 0.38], [-0.15, -0.38, 0.32], [-0.15, 0.38, 0.32], [0.55, 0, 0.32]]) g.fillCircle(cx + fx * r, cy + fy * r, r * fr);
+        g.strokeCircle(cx, cy, r * 0.75);
+        g.fillStyle(0xe0d8cc, 1);
+        for (const [fx, fy] of [[0.1, -0.15], [0.35, 0.1], [-0.05, 0.2]]) g.fillCircle(cx + fx * r, cy + fy * r, r * 0.16);
+        g.fillStyle(0x3a3430, 1);
+        g.fillEllipse(cx - r * 0.75, cy, r * 0.45, r * 0.36);
+        g.lineStyle(4, 0xa89068, 1);
+        for (const sy of [-1, 1]) {
+          g.beginPath();
+          g.arc(cx - r * 0.62, cy + sy * r * 0.3, r * 0.22, 0, Math.PI * 2 * 0.8);
+          g.strokePath();
+        }
+        g.fillStyle(0xf0d040, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.09, r * 0.05);
+        g.fillCircle(cx - r * 0.85, cy + r * 0.09, r * 0.05);
+        break;
+      }
       case 'bubbler': {
         // a spotted newt from above: long tail, splayed little legs and a puffed pale throat, with a bubble at its mouth
         g.lineStyle(2.5, C.ink, 1);

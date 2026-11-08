@@ -307,6 +307,16 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.heath && !motion.reduced) {
+      // gusts of wind rolling across the heather: long soft bands sweeping by
+      for (let i = 0; i < 5; i++) {
+        const band = this.add.ellipse(rnd.between(-300, GAME_W), rnd.between(140, GAME_H - 120), rnd.between(300, 460), 26, 0xd8c8e8, 0.07).setDepth(0.6);
+        this.tweens.add({ targets: band, x: GAME_W + 300, duration: rnd.between(9000, 14000) * (1 - band.x / (GAME_W + 600)), onComplete: () => {
+          band.x = -300;
+          this.tweens.add({ targets: band, x: GAME_W + 300, duration: rnd.between(9000, 14000), repeat: -1 });
+        } });
+      }
+    }
     if (this.level.theme.brook && !motion.reduced) {
       // fallen leaves riding the current, and a couple of darting dragonflies
       for (let i = 0; i < 10; i++) {
@@ -561,6 +571,30 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.heath) {
+        const k = rnd.frac();
+        if (k < 0.5) {
+          // a clump of purple heather
+          deco.fillStyle(0x5a5a3a, 1);
+          deco.fillEllipse(p.x, p.y + 4, 24, 10);
+          deco.fillStyle(0x9a6aa8, 1);
+          for (let h = 0; h < 9; h++) deco.fillCircle(p.x - 10 + (h % 5) * 5, p.y - 2 - Math.floor(h / 5) * 5 + rnd.between(-1, 1), 2.6);
+        } else if (k < 0.75) {
+          // a leaning standing stone with a lichen patch
+          deco.fillStyle(0x000000, 0.15);
+          deco.fillEllipse(p.x + 5, p.y + 12, 24, 7);
+          deco.fillStyle(0x8a8a88, 1);
+          deco.fillTriangle(p.x - 7, p.y + 10, p.x + 7, p.y + 10, p.x + 3, p.y - 22);
+          deco.fillRect(p.x - 7, p.y - 6, 12, 16);
+          deco.fillStyle(0xc8c060, 0.8);
+          deco.fillCircle(p.x - 1, p.y - 2, 3);
+        } else {
+          // a yellow-flowered gorse bush
+          deco.fillStyle(0x4a5a2a, 1);
+          for (const [dx, dy] of [[-6, 0], [6, 1], [0, -5]]) deco.fillCircle(p.x + dx, p.y + dy, 7);
+          deco.fillStyle(0xf0c830, 1);
+          for (let h = 0; h < 7; h++) deco.fillCircle(p.x - 9 + h * 3, p.y - 3 + (h % 3) * 3, 1.6);
         }
       } else if (this.level.theme.brook) {
         const k = rnd.frac();
@@ -1995,6 +2029,19 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.soldier.pos.x, ev.soldier.pos.y - 26, 'Poisoned', '#a8f06a', 12);
         break;
       }
+      case 'link': {
+        // the string of wisps flickers together as the blow is shared out (throttled)
+        const key = -7000000 - (ev.mates[0]?.uid ?? 0);
+        const last = this.lastGulp.get(key) ?? -99;
+        if (this.time.now - last < 400) break;
+        this.lastGulp.set(key, this.time.now);
+        sfx.trait('link');
+        for (const m of ev.mates) {
+          const mv = this.enemyViews.get(m.uid);
+          if (mv) mv.pulse = 0.1;
+        }
+        break;
+      }
       case 'bubble': {
         // the newt puffs a cloud of shining bubbles over its friends
         sfx.trait('bubble');
@@ -2659,6 +2706,17 @@ export class BattleScene extends Phaser.Scene {
       }
       v.sprite.setDepth(v.air > 0.5 ? e.pos.y + 1000 : e.pos.y);
       v.bar.clear();
+      if (e.def.link) {
+        // Heath Wisps: faint threads of light to each linked sister close by (drawn once per pair)
+        for (const o of this.sim.enemies) {
+          if (o.uid <= e.uid || !o.alive || !o.def.link) continue;
+          const d = Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y);
+          if (d > e.def.link.radius) continue;
+          v.bar.lineStyle(1.5, 0xd8e8ff, 0.35 * (1 - d / e.def.link.radius) + 0.1);
+          v.bar.lineBetween(e.pos.x, e.pos.y - 4 - 34 * v.air, o.pos.x, o.pos.y - 4 - 34 * v.air);
+        }
+        v.bar.setDepth(e.pos.y + 1000.5);
+      }
       if (e.def.drench) {
         // Spray Otter: a soft drifting mist around it marks where spells fall flat
         const t = this.time.now / 600 + e.uid;

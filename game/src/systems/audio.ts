@@ -240,6 +240,10 @@ class Sfx {
         this.noise(0.18, 0.03, 4000);
         this.tone(900, 0.08, 'square', 0.02, 700);
         break;
+      case 'link': // a faint glassy shimmer
+        this.tone(1320, 0.12, 'sine', 0.02, 1500);
+        this.tone(990, 0.12, 'sine', 0.015, 1100, 0.03);
+        break;
       case 'bubble': // a soft rising blub
         this.tone(320, 0.12, 'sine', 0.04, 640);
         this.tone(480, 0.1, 'sine', 0.03, 900, 0.06);

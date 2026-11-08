@@ -227,6 +227,7 @@ export type SimEvent =
   | { type: 'curl'; enemy: Enemy }
   | { type: 'bubble'; source: Enemy; targets: Enemy[]; radius: number }
   | { type: 'pop'; enemy: Enemy }
+  | { type: 'link'; enemy: Enemy; mates: Enemy[] }
   | { type: 'surge'; source: Enemy; moved: Enemy[]; radius: number }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
@@ -311,6 +312,7 @@ export class BattleSim {
 
   /** Multiplier on spell cooldowns (from the village Moonpetal Shrine). */
   spellCdMult = 1;
+  private linkSharing = false; // Heath Wisp damage is being shared out (don't re-share)
   weirBountyMult = 1; // Fish Weir: every kill pays this much more
   heroHpMult = 1; // Honeycomb Apiary: the hero's max health is scaled by this
 
@@ -2076,6 +2078,18 @@ export class BattleSim {
   private applyDamage(e: Enemy, dmg: number, type?: DamageType): void {
     if (!e.alive) return;
     if (e.phased && dmg > 0) return; // Mistfox: the blow passes straight through the mist
+    if (e.def.link && !this.linkSharing && dmg > 0) {
+      // Heath Wisps: the blow is shared out equally along the linked string
+      const mates = this.enemies.filter((o) => o.alive && o.def.link && !o.underground && Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= e.def.link!.radius);
+      if (mates.length > 1) {
+        this.linkSharing = true;
+        for (const m of mates) this.applyDamage(m, dmg / mates.length, type);
+        this.linkSharing = false;
+        this.events.push({ type: 'link', enemy: e, mates });
+        return;
+      }
+    }
+    if (e.def.wool && dmg > 0) dmg -= Math.min(e.def.wool, dmg * 0.75); // Moorland Ram: the fleece eats the first bit of every hit
     if (e.bubbled && dmg > 0) {
       // Bubbler Newt's bubble: the hit just pops it
       e.bubbled = false;

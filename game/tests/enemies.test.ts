@@ -1348,3 +1348,33 @@ describe('Spray Otter', () => {
     expect(sim.drenchCut(near)).toBe(0);
   });
 });
+
+describe('Starheath Moors enemies', () => {
+  const hit = (sim: BattleSim, e: unknown, d: number) => (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(e, d);
+  it('Heath Wisps share every hit equally along the linked string; a lone wisp takes it all', () => {
+    const sim = new BattleSim(lvl, null);
+    const a = sim.spawn('heathwisp', 0, 300);
+    const b = sim.spawn('heathwisp', 0, 340);
+    const c = sim.spawn('heathwisp', 0, 380);
+    const lone = sim.spawn('heathwisp', 0, 1500);
+    const hp = a.hp;
+    hit(sim, a, 90);
+    expect(a.hp).toBeCloseTo(hp - 30);
+    expect(b.hp).toBeCloseTo(hp - 30);
+    expect(c.hp).toBeCloseTo(hp - 30);
+    hit(sim, lone, 90);
+    expect(lone.hp).toBeCloseTo(hp - 90);
+    expect(sim.drainEvents().some((e) => e.type === 'link')).toBe(true);
+  });
+
+  it('a Moorland Ram shrugs off the first bit of every hit, never more than 3/4 of it', () => {
+    const sim = new BattleSim(lvl, null);
+    const r = sim.spawn('moorram', 0, 300);
+    const w = r.def.wool!;
+    const hp = r.hp;
+    hit(sim, r, 100);
+    expect(r.hp).toBeCloseTo(hp - (100 - w));
+    hit(sim, r, 8);
+    expect(r.hp).toBeCloseTo(hp - (100 - w) - 2);
+  });
+});

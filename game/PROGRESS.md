@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **212** (next balance pass at iteration 215)
+Iteration counter: **213** (next balance pass at iteration 215)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1320,11 +1320,21 @@ Iteration counter: **212** (next balance pass at iteration 215)
   - The info panel shows "Battle bonus: kills pay +N% coins" and the battle banner adds "kills pay +N%". The build shop now has 11 cards and still fits.
   - One new test (246 total). Check: `scripts/weir-check.mjs` (a level-2 weir gives 1.1 in battle, no console errors). Screenshots `screenshots/212.png` (shop), `212-panel.png` and `212-battle.png`.
 
+- **Iteration 213**: region 25, **The Starheath Moors**: windswept purple heather with leaning standing stones and gorse.
+  - **Heath Wisp** (link): every hit is shared equally among all linked wisps within 120 px (a lone wisp takes it all), so splash and area attacks are the answer. Faint threads of light join linked wisps, and they flicker together when a hit is shared.
+  - **Moorland Ram** (wool): each hit loses 8 damage, never more than 3/4 of it, so big hits beat many small ones.
+  - New level 121 "Heather Gate" (hpMult 1.32).
+  - Theme: a peat road, heather clumps, standing stones and gorse deco, plus soft gusts of wind rolling across (skipped with reduced motion).
+  - Also added: the "Starheath" music theme (a slow minor air), world-map land with heather and stones, Field Guide tags, code-drawn sprites, a glassy shimmer sound and an endless tier from wave 100.
+  - Two new tests (248 total). Check: `scripts/heath-check.mjs` (music heath; a 60 hit shared 20 each across 3 wisps; a 20 hit took 12 off the ram; no console errors). Screenshots `screenshots/213.png` and `213-map.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Region 25 opener (theme, music, map art, battle overlay, two new enemies).
+1. Starheath level 122 with a third new enemy.
+2. Starheath levels 123 and 124.
+3. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1333,6 +1343,10 @@ Iteration counter: **212** (next balance pass at iteration 215)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 213**: 121 Heather Gate (12 seeds).
+- The first numbers (flying wisps, wool 14) were unwinnable: 0–8% for everyone at hpMult 1.25–1.55. Flying plus link meant splash towers (which can't hit flyers) were useless, and wool 14 gutted the arrow towers.
+- Wisps were made ground units and wool cut to 8. Then 1.1 → 100/100/100, 1.25 → 100/100/67, 1.4 → 100/100/17.
+- **1.32 → 100/100/33** (kept: the opener band).
 **Iteration 211**: 120 The Elder Pool (12 seeds): hpMult 1.5 → 92/75/42, 1.9 → 67/33/0. **1.7 → 83/42/0** (kept: the boss band; the
 finale guard passes).
 **Iteration 210** (POLISH + BALANCE), Pebblebrook sweep at 6 seeds (expert/casual/novice):

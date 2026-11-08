@@ -73,6 +73,8 @@ export interface EnemyDef {
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
   venom?: { dps: number; duration: number }; // its melee bites poison soldiers: they lose dps health a second for duration s (refreshed by each bite)
   ambush?: number; // burrows in and pops up at this fraction of the road instead of at the entrance
+  link?: { radius: number }; // shares every hit equally with each linked ally (same trait) within radius
+  wool?: number; // thick fleece: each hit loses this much damage (never more than 3/4 of it)
   drench?: { radius: number; cut: number }; // soaks itself and allies within radius: player spells (Starfall, Thornsnare, ...) deal cut less to them
   bubble?: { radius: number; interval: number; count: number }; // every interval s, wraps up to count nearby allies in a bubble that blocks the next hit entirely
   surge?: { interval: number; distance: number; radius: number }; // every interval s, it and its unheld allies within radius are swept distance px down the road
@@ -171,7 +173,7 @@ export interface LevelDef {
   paths: Vec2[][];
   slots: Vec2[];
   waves: WaveDef[];
-  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean; comb?: boolean; bog?: boolean; thistle?: boolean; wold?: boolean; canyon?: boolean; brook?: boolean };
+  theme: { grass: number; grassDark: number; road: number; roadEdge: number; trees?: number[]; snow?: boolean; lava?: boolean; shrooms?: boolean; crystals?: boolean; gale?: boolean; ruins?: boolean; gears?: boolean; abyss?: boolean; orchard?: boolean; storm?: boolean; dunes?: boolean; reef?: boolean; flotilla?: boolean; amber?: boolean; mist?: boolean; canopy?: boolean; comb?: boolean; bog?: boolean; thistle?: boolean; wold?: boolean; canyon?: boolean; brook?: boolean; heath?: boolean };
   finale?: boolean;
   endless?: { hpRamp: number; heroRegen?: number; attackRamp?: number }; // attackRamp: +x enemy melee damage per wave // heroRegen: multiplier on hero regeneration in endless runs // endless mode: health grows by hpRamp per wave instead of the campaign ramp // winning this level plays the ending (the story's last battle)
   ponds?: { x: number; y: number; w: number; h: number }[]; // decorative water

@@ -168,3 +168,17 @@ describe('Pebblebrook finale', () => {
     expect(b.boss && b.drench && b.surge && b.phases?.length).toBeTruthy();
   });
 });
+
+describe('Starheath finale', () => {
+  it('Thunderfleece has an achievement, a story card and a place in endless', async () => {
+    const { STORY } = await import('../src/data/story');
+    const { ENDLESS } = await import('../src/data/endless');
+    const { ENEMIES } = await import('../src/data/enemies');
+    const s = bumpStats(defaultSave(), { boss_thunderfleece: 1 });
+    expect(checkAchievements(s).unlocked.map((a) => a.id)).toContain('boss_thunderfleece');
+    expect(STORY.l125).toBeDefined();
+    expect(ENDLESS.bosses).toContain('thunderfleece');
+    const b = ENEMIES.thunderfleece;
+    expect(b.boss && b.wool && b.stall && b.phases?.length).toBeTruthy();
+  });
+});

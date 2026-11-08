@@ -217,4 +217,14 @@ export const STORY: Record<string, StoryCard> = {
     sky: [0x4a8a6a, 0xd0f0e0],
     accent: 0x7ad8b8,
   },
+  l125: {
+    title: 'Quiet on the Moor',
+    lines: [
+      'Thunderfleece gives one last rumbling bleat, turns its great horned head, and plods back into the barrow, where it lies down among the old stones and is still.',
+      'The rams scatter over the heather, the wisps drift apart into the dusk, and the moon hares go back to dancing just for the joy of it.',
+      'For the first time in weeks the Keepers can feel their spells come quick and bright again, and the wind over the moor sounds almost like singing.',
+    ],
+    sky: [0x6a5a8a, 0xe0d0f0],
+    accent: 0xb89ad8,
+  },
 };

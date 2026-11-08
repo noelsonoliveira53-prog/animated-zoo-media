@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **217** (next balance pass at iteration 220)
+Iteration counter: **218** (next balance pass at iteration 220)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1349,11 +1349,20 @@ Iteration counter: **217** (next balance pass at iteration 220)
   - 15 waves of wisps, rams and moon hares with older enemies. hpMult 1.6.
   - Screenshot `screenshots/217.png`. 249 tests.
 
+- **Iteration 218**: the Starheath finale, level 125 "The Thunder Barrow" (the Elder Pool layout, re-themed). The new boss is **Thunderfleece, the Barrow Ram** (3700 hp).
+  - Its fleece eats 22 damage from every hit (at most 3/4 of it), and while it lives spells and the hero skill recharge at 0.65× speed.
+  - Two wisps join every 7 s, up to 8.
+  - Phases: 75% four rams, 50% a 1500-point shield plus a string of six wisps, 25% five moon hares and a speed-up, 10% it charges.
+  - Also added: a code-drawn storm-cloud ram sprite with triple-curled horns and sparks, the achievements "Fleece Shearer" (boss) and "Moorland Keeper" (15 stars), the story card "Quiet on the Moor" and a place in the endless boss rotation.
+  - The hush warning in the top bar now reads "Moonhush: …", since the boss causes it too, not only hares.
+  - Check: `scripts/thunderfleece-check.mjs` (phase 1 summons 4 rams, no console errors). Screenshots `screenshots/218.png`, `218-boss.png`, `thunderfleece-map.png`. 250 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Starheath finale (125) with a boss, achievements, a story card and the endless boss rotation.
+1. Breather: a raid troop or camp building with a moorland flavour (e.g. a Standing Stone camp building that shields nearby buildings from spells/splash, or a Ram troop with wool that shrugs off spit).
+2. Region 26 opener (theme, music, map art, battle overlay, two new enemies).
 
 ## Known Bugs
 - (none known)
@@ -1362,6 +1371,8 @@ Iteration counter: **217** (next balance pass at iteration 220)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 218**: 125 The Thunder Barrow (12 seeds): hpMult 1.6 → 100/75/0, 1.8 → 92/67/0, 2.0 → 58/33/0. **1.9 → 83/67/0** (kept:
+the expert is in the boss band and casual is 4 points over it; the finale guard passes).
 **Iteration 217**: 124 The Barrow Downs (12 seeds): hpMult 1.45 → 100/83/0, 1.75 → 83/67/0. **1.6 → 100/75/0** (kept: the fourth-level band).
 **Iteration 216**: 123 Curlew Ridge (12 seeds): hpMult 1.4 → 100/100/0, 1.5 → 100/92/0, 1.7 → 83/67/0. **1.55 → 100/75/0** (kept: the third-level band).
 **Iteration 215** (POLISH + BALANCE), Starheath at 6 seeds: 121 1.32 → 100/100/17, 122 1.45 → 100/83/0. Kept; both are noisy around the 12-seed values (121 novice 33, 122 casual 92).

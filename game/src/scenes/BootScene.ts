@@ -1331,6 +1331,37 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 1.15, cy, cx - r * 1.32, cy + r * 0.08);
         break;
       }
+      case 'thunderfleece': {
+        // a colossal ram from above: a great storm-cloud of fleece with darker billows, a craggy face,
+        // horns curling round three times, and little sparks crackling in the wool
+        g.lineStyle(3, C.ink, 1);
+        g.fillStyle(0x8a8478, 1);
+        for (const [fx, fy, fr] of [[0.1, 0, 0.75], [0.5, -0.4, 0.45], [0.5, 0.4, 0.45], [-0.15, -0.5, 0.4], [-0.15, 0.5, 0.4], [0.85, 0, 0.42]]) g.fillCircle(cx + fx * r, cy + fy * r, r * fr);
+        g.fillStyle(color, 1);
+        for (const [fx, fy, fr] of [[0.1, 0, 0.62], [0.5, -0.35, 0.36], [0.5, 0.35, 0.36], [-0.12, -0.42, 0.3], [-0.12, 0.42, 0.3], [0.8, 0, 0.32]]) g.fillCircle(cx + fx * r, cy + fy * r, r * fr);
+        g.strokeCircle(cx + r * 0.1, cy, r * 0.92);
+        g.fillStyle(0xe0d8cc, 1);
+        for (const [fx, fy] of [[0.2, -0.2], [0.45, 0.15], [0, 0.25], [0.65, -0.15]]) g.fillCircle(cx + fx * r, cy + fy * r, r * 0.12);
+        g.fillStyle(0x2e2a28, 1);
+        g.fillEllipse(cx - r * 0.85, cy, r * 0.5, r * 0.4);
+        g.lineStyle(5, 0xa89068, 1);
+        for (const sy of [-1, 1]) {
+          for (const [rr, a1] of [[0.32, 0.9], [0.2, 0.85], [0.1, 0.8]] as const) {
+            g.beginPath();
+            g.arc(cx - r * 0.68, cy + sy * r * 0.36, r * rr, 0, Math.PI * 2 * a1);
+            g.strokePath();
+          }
+        }
+        g.fillStyle(0xf0d040, 1);
+        g.fillCircle(cx - r * 0.98, cy - r * 0.1, r * 0.05);
+        g.fillCircle(cx - r * 0.98, cy + r * 0.1, r * 0.05);
+        g.lineStyle(2, 0xfff0a0, 1);
+        for (const [sx, sy] of [[0.3, -0.6], [0.7, 0.45], [-0.1, 0.55]]) {
+          g.lineBetween(cx + sx * r, cy + sy * r, cx + sx * r + 4, cy + sy * r + 5);
+          g.lineBetween(cx + sx * r + 4, cy + sy * r + 5, cx + sx * r, cy + sy * r + 9);
+        }
+        break;
+      }
       case 'mossback': {
         // a huge snapping turtle from above: a domed shell plated in moss with reeds and a flower growing on it,
         // a hooked beak, stubby clawed legs and a ridged tail

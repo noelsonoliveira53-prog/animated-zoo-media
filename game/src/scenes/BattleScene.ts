@@ -1202,10 +1202,19 @@ export class BattleScene extends Phaser.Scene {
       g.fillCircle(p.x, p.y, 40);
       g.fillStyle(cd > 0 ? 0x3a4a3e : C.panelLight, 1);
       g.fillCircle(p.x, p.y, 35);
+      const stalled = cd > 0 && this.sim.stallMult() < 1;
       if (cd > 0) {
-        g.fillStyle(0x000000, 0.5);
+        // Moon Hare hush: the recharge wedge turns a cold moonlit blue while it crawls
+        g.fillStyle(stalled ? 0x2a3a6a : 0x000000, stalled ? 0.6 : 0.5);
         g.slice(p.x, p.y, 35, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * (cd / this.sim.spellCooldown(id)), false);
         g.fillPath();
+      }
+      if (stalled) {
+        // a little crescent moon badge on the button's shoulder
+        g.fillStyle(0xe8ecff, 1);
+        g.fillCircle(p.x + 26, p.y - 26, 8);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(p.x + 29, p.y - 28, 7);
       }
       const armed = this.spellMode === id;
       g.lineStyle(armed ? 5 : 3, armed ? C.cream : cd > 0 ? 0x777777 : def.color, 1);
@@ -1320,9 +1329,16 @@ export class BattleScene extends Phaser.Scene {
     g.fillCircle(sx, py, 33);
     if (!ready && h.alive) {
       const cdFrac = h.skillCd / h.def.active.cooldown;
-      g.fillStyle(0x000000, 0.45);
+      const stalled = this.sim.stallMult() < 1;
+      g.fillStyle(stalled ? 0x2a3a6a : 0x000000, stalled ? 0.6 : 0.45);
       g.slice(sx, py, 33, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * cdFrac, false);
       g.fillPath();
+      if (stalled) {
+        g.fillStyle(0xe8ecff, 1);
+        g.fillCircle(sx + 24, py - 24, 8);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(sx + 27, py - 26, 7);
+      }
     }
     g.lineStyle(3, ready ? C.gold : 0x777777, 1);
     g.strokeCircle(sx, py, 34);

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **214** (next balance pass at iteration 215)
+Iteration counter: **215** (next balance pass at iteration 220)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1334,6 +1334,11 @@ Iteration counter: **214** (next balance pass at iteration 215)
   - Also added: a Field Guide tag, a code-drawn silver hare sprite and an endless tier at wave 102. hpMult 1.45.
   - One new test (249 total). Screenshot `screenshots/214.png` (the warning visible under the coin counter). No console errors.
 
+- **Iteration 215** (POLISH + BALANCE):
+  - Polish: while a Moon Hare's hush is slowing recharge, the spell buttons and the hero-skill button draw their recharge wedge in a cold moonlit blue and show a little crescent-moon badge. That way the cause is visible right where players look, not only in the top-bar line.
+  - Check: `scripts/moonhare-check.mjs` (stall 0.6; Starfall's cooldown ticked 0.6 s in 1 s; no console errors). Screenshot `screenshots/215.png`.
+  - Balance: a Starheath check, hero comparison and endless check, with no changes (see Balance Notes). 249 tests.
+
 ## In Progress
 - (none)
 
@@ -1348,6 +1353,9 @@ Iteration counter: **214** (next balance pass at iteration 215)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 215** (POLISH + BALANCE), Starheath at 6 seeds: 121 1.32 → 100/100/17, 122 1.45 → 100/83/0. Kept; both are noisy around the 12-seed values (121 novice 33, 122 casual 92).
+- Heroes on 121–122 (win %, average lives): Bramble 92/13.9, Fen 100/17.0, Ember 100/15.8, Wren 100/15.3, Sorrel 100/14.5, Hazel 100/13.5. Even.
+- Endless (3 seeds): Heather Gate 14.3/14.3/17.3, Moonstone Circle 17.3/11.7/17.3. The novice's endless edge is back on Heather Gate (watch item, see iteration 205).
 **Iteration 214**: 122 Moonstone Circle (12 seeds): hpMult 1.3 → 100/100/0, 1.6 → 100/58/0. **1.45 → 100/92/0** (kept: the second-level band).
 **Iteration 213**: 121 Heather Gate (12 seeds).
 - The first numbers (flying wisps, wool 14) were unwinnable: 0–8% for everyone at hpMult 1.25–1.55. Flying plus link meant splash towers (which can't hit flyers) were useless, and wool 14 gutted the arrow towers.

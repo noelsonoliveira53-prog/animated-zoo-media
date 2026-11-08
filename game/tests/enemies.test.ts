@@ -1222,3 +1222,17 @@ describe('Patchwork Wolds enemies', () => {
     expect(new Set(ox.trampled).size).toBe(ox.trampled.length);
   });
 });
+
+describe('Shepherd Collie', () => {
+  it('hurries slow allies near it up to its own speed, but not far ones', () => {
+    const sim = new BattleSim(lvl, null);
+    const dog = sim.spawn('collie', 0, 300);
+    const near = sim.spawn('ploughox', 0, 360);
+    const far = sim.spawn('ploughox', 0, 900);
+    expect(sim.baseSpeed(near)).toBe(dog.def.speed);
+    expect(sim.baseSpeed(far)).toBe(far.def.speed);
+    expect(sim.baseSpeed(dog)).toBe(dog.def.speed);
+    (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(dog, 99999);
+    expect(sim.baseSpeed(near)).toBe(near.def.speed);
+  });
+});

@@ -1079,7 +1079,7 @@ export class BattleSim {
         }
       }
       if (e.anchored) continue; // Ironkeel holds fast while its anchor is down
-      e.dist += e.def.speed * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.momentumMult(e) * this.mods.speedMult * dt;
+      e.dist += this.baseSpeed(e) * e.slowFactor * e.speedMult * e.hasteMult * this.chargeMult(e) * this.herdMult(e) * this.drowseMult(e) * this.momentumMult(e) * this.mods.speedMult * dt;
       const path = this.paths[e.path];
       e.pos = path.pointAt(e.dist);
       if (e.dist >= path.length) {
@@ -1525,6 +1525,17 @@ export class BattleSim {
   }
 
   /** Wren's Scholar's Eye: enemies that fall near her pay extra coins. */
+  /** Shepherd Collie: slow critters near a collie are hurried along at the collie's own pace. */
+  baseSpeed(e: Enemy): number {
+    let s = e.def.speed;
+    for (const o of this.enemies) {
+      const sh = o.def.shepherd;
+      if (!sh || o === e || !o.alive || o.def.speed <= s) continue;
+      if (Math.hypot(o.pos.x - e.pos.x, o.pos.y - e.pos.y) <= sh.radius) s = o.def.speed;
+    }
+    return s;
+  }
+
   /** Tithe Weasels skim the bounty of every kill while any of them lives (the greediest one counts). */
   titheCut(): number {
     let cut = 0;
@@ -1808,7 +1819,7 @@ export class BattleSim {
         if (stats.lob) {
           // Lead the target: predict where it will be when the rock lands.
           const flight = Math.hypot(aim.x - origin.x, aim.y - origin.y) / stats.projectileSpeed;
-          const moving = target.blockedBy ? 0 : target.def.speed * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.drowseMult(target) * this.momentumMult(target) * this.mods.speedMult;
+          const moving = target.blockedBy ? 0 : this.baseSpeed(target) * target.slowFactor * target.speedMult * target.hasteMult * this.chargeMult(target) * this.herdMult(target) * this.drowseMult(target) * this.momentumMult(target) * this.mods.speedMult;
           aim = this.paths[target.path].pointAt(target.dist + moving * flight);
         }
         const p: Projectile = {

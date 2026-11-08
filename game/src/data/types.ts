@@ -71,6 +71,7 @@ export interface EnemyDef {
   wax?: { armor: number; melt: number }; // a waxy coat adds `armor` until it has soaked melt × maxHp of magic damage, then melts off for good
   parry?: { charges: number; regen: number }; // its comb-shield turns aside a whole single-target tower shot per charge (splash, chains' jumps and spells still land); regains one charge every regen s
   glaze?: { duration: number; slow: number }; // its melee hits coat a soldier in honey: that soldier attacks at `slow`× speed for `duration` s
+  shepherd?: { radius: number }; // herds stragglers: allies within radius walk at least as fast as it does
   tithe?: number; // while it lives, every kill pays this fraction less bounty (the strongest one counts, they don't stack)
   trample?: { damage: number }; // soldiers and the hero can't hold it: it shoves straight through, hurting each one once as it passes
   alarm?: { radius: number; speedMult: number; duration: number }; // the first time it's hit, it whistles: allies within radius (and itself) run at speedMult for duration s

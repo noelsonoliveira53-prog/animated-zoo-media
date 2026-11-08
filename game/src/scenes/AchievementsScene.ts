@@ -9,6 +9,8 @@ import { showAchievementToasts } from '../ui/toast';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
+import { motion } from '../ui/motion';
+import { addShine, glossPanel, screenBackdrop } from '../ui/panels';
 
 /** 2 columns × 9 rows fill the screen. */
 const PER_PAGE = 18;
@@ -34,9 +36,9 @@ export class AchievementsScene extends Phaser.Scene {
       this.time.delayedCall(400, () => showAchievementToasts(this, checked.unlocked));
     }
     const save = checked.save;
-    const g = this.add.graphics();
-    g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);
-    g.fillRect(0, 0, GAME_W, GAME_H);
+    motion.reduced = !!save.settings.reduceMotion;
+    motion.lowFx = !!save.settings.fxLow;
+    screenBackdrop(this, GAME_W, GAME_H);
     const done = ACHIEVEMENTS.filter((a) => save.achievements.includes(a.id)).length;
     this.add.text(GAME_W / 2, 44, `Achievements  ${done} / ${ACHIEVEMENTS.length}`, textStyle(34, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
@@ -57,11 +59,15 @@ export class AchievementsScene extends Phaser.Scene {
       const unlocked = save.achievements.includes(a.id);
       const prog = Math.min(a.goal, a.progress(save));
       const card = this.add.graphics();
-      card.fillStyle(unlocked ? 0x3f6a3a : C.ink, unlocked ? 1 : 0.8);
-      card.fillRoundedRect(x, y, cw, ch, 12);
-      card.lineStyle(2, unlocked ? C.gold : 0x445544, 1);
-      card.strokeRoundedRect(x, y, cw, ch, 12);
-      this.add.image(x + 32, y + ch / 2, unlocked ? 'star' : 'star_empty').setScale(0.6);
+      glossPanel(card, x, y, cw, ch, { fill: unlocked ? 0x3f6a3a : C.ink, alpha: unlocked ? 1 : 0.8, rim: unlocked ? C.gold : 0x445544, radius: 12 });
+      if (unlocked) {
+        // a trophy medallion: warm glow behind the star, and a shine that sweeps the card now and then
+        card.fillStyle(0xffd23c, 0.18);
+        card.fillCircle(x + 32, y + ch / 2, 24);
+        addShine(this, x, y, cw, ch, 4200 + (i % 5) * 700, 0.16);
+      }
+      const medal = this.add.image(x + 32, y + ch / 2, unlocked ? 'star' : 'star_empty').setScale(0.6);
+      if (unlocked && !motion.reduced) this.tweens.add({ targets: medal, scale: 0.68, duration: 1400 + (i % 4) * 200, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       this.add.text(x + 62, y + 8, a.name, textStyle(17, unlocked ? TEXT.gold : TEXT.cream));
       // Leave room for the progress bar + count on the right when there is one.
       fitWidth(this.add.text(x + 62, y + 34, a.text, textStyle(pf(13), TEXT.dim, false)), !unlocked && a.goal > 1 ? cw - 62 - 14 - 150 - 70 : cw - 80);
@@ -72,8 +78,11 @@ export class AchievementsScene extends Phaser.Scene {
         card.fillStyle(0x000000, 0.5);
         card.fillRoundedRect(x + cw - 14 - bw, y + 38, bw, 10, 5);
         if (prog > 0) {
+          const fw = Math.max(10, bw * (prog / a.goal));
           card.fillStyle(C.leaf, 1);
-          card.fillRoundedRect(x + cw - 14 - bw, y + 38, Math.max(10, bw * (prog / a.goal)), 10, 5);
+          card.fillRoundedRect(x + cw - 14 - bw, y + 38, fw, 10, 5);
+          card.fillStyle(0xffffff, 0.3);
+          card.fillRoundedRect(x + cw - 12 - bw, y + 39, fw - 4, 3, 1.5);
         }
         this.add.text(x + cw - 14 - bw - 8, y + 43, `${prog}/${a.goal}`, textStyle(pf(12), TEXT.cream, false)).setOrigin(1, 0.5);
       }

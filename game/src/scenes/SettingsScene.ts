@@ -7,6 +7,7 @@ import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 import { padHit } from '../ui/touch';
+import { glossPanel, screenBackdrop } from '../ui/panels';
 
 export class SettingsScene extends Phaser.Scene {
   constructor() {
@@ -16,11 +17,12 @@ export class SettingsScene extends Phaser.Scene {
   create(): void {
     music.setMood('calm');
     music.setTheme(themeById('home'));
+    const s0 = loadSave();
+    motion.reduced = !!s0.settings.reduceMotion;
+    motion.lowFx = !!s0.settings.fxLow;
+    screenBackdrop(this, GAME_W, GAME_H);
     const g = this.add.graphics();
-    g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);
-    g.fillRect(0, 0, GAME_W, GAME_H);
-    g.fillStyle(C.ink, 0.8);
-    g.fillRoundedRect(GAME_W / 2 - 360, 110, 720, 520, 26);
+    glossPanel(g, GAME_W / 2 - 360, 110, 720, 520, { fill: C.ink, alpha: 0.85, rim: 0xc8a050, rimAlpha: 0.7, radius: 26 });
     this.add.text(GAME_W / 2, 60, 'Settings', textStyle(40, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
 
@@ -40,7 +42,9 @@ export class SettingsScene extends Phaser.Scene {
       track.fillStyle(0x000000, 0.5);
       track.fillRoundedRect(sx, sy - 7, sw, 14, 7);
       track.fillStyle(C.leaf, 1);
-      track.fillRoundedRect(sx, sy - 7, sw * volume, 14, 7);
+      track.fillRoundedRect(sx, sy - 7, Math.max(14, sw * volume), 14, 7);
+      track.fillStyle(0xffffff, 0.3);
+      track.fillRoundedRect(sx + 3, sy - 6, Math.max(8, sw * volume - 6), 4, 2);
       knob.setX(sx + sw * volume);
       label.setText(`${Math.round(volume * 100)}%`);
     };

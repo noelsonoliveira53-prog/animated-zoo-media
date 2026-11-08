@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **256** (next balance pass at iteration 260)
+Iteration counter: **257** (next balance pass at iteration 260)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1648,13 +1648,23 @@ Iteration counter: **256** (next balance pass at iteration 260)
   - **Page turns:** the detail page eases in from the right when you pick an entry, and the card grid slides in from the side you paged toward. Both are off with Reduce Motion, which the guide now reads itself.
   - All six guide checks pass (`guide-boss`, `guide-paging`, `guide-spells`, `guide-raids`, `guide-lastpage`, `phone-guide`), and long boss pages still fit. Screenshot `screenshots/256.png`. 267 tests.
 
+- **Iteration 257: Settings and Achievements polish.** New shared `ui/panels.ts`:
+  - `screenBackdrop`: the deep green gradient, faint lantern glows, a few drifting motes and the shared lighting and vignette.
+  - `glossPanel`: a drop shadow, a slim gloss along the top edge (kept clear of the text after a first pass cut through it), an inner rim light and a colored border.
+  - `addShine`: a mask-free slanted light sweep on a timer.
+  - **Achievements:** every card is a gloss panel. Unlocked ones get a warm medallion glow behind a gently breathing star and a shine that sweeps across now and then (staggered). Progress bars have a highlight line.
+  - **Settings:** the main panel is a gloss panel with a soft gold rim, and the volume bar has a highlight.
+  - Both screens read Reduce Motion and Graphics: Low for the motes, shine and breathing.
+  - Checks `ach-check`, `settings-fx-check` and `phone-screens` pass with no console errors. Screenshot `screenshots/257.png`. 267 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Settings and Achievements screens: the same glossy panels and lighting as the store, plus a trophy shine on unlocked achievements.
+1. Story and Ending scenes: parallax layers, softly lit text panels and a gentle typewriter reveal.
+2. Battle ambience: weather per theme (falling leaves, snow, embers, drifting spores) as a light overlay, off on Graphics: Low.
 
 ## Known Bugs
 - (none known)

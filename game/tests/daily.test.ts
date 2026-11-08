@@ -77,3 +77,26 @@ describe('daily level ease', () => {
     expect(d.id).toBe(base.id);
   });
 });
+
+describe('Prairie Gale', () => {
+  const lvl = { id: 't', name: 't', blurb: '', mapPos: { x: 0, y: 0 }, startCoins: 100, lives: 20,
+    paths: [[{ x: 0, y: 300 }, { x: 3000, y: 300 }]], slots: [], waves: [{ groups: [{ enemy: 'shellback', count: 1, interval: 1 }] }],
+    theme: { grass: 0, grassDark: 0, road: 0, roadEdge: 0 } };
+  it('every enemy gathers speed while unhit, capped, and a hit resets it; off without the twist', () => {
+    const cap = DAILY_MODIFIERS.find((m) => m.id === 'gale')!.apply.momentumMax!;
+    const plain = new BattleSim(lvl, null);
+    const gale = new BattleSim(lvl, null, { mods: combine(['gale']) });
+    for (const s of [plain, gale]) s.status = 'running';
+    const a = plain.spawn('shellback', 0, 100);
+    const b = gale.spawn('shellback', 0, 100);
+    for (let i = 0; i < 60 * 12; i++) {
+      plain.update(1 / 60);
+      gale.update(1 / 60);
+    }
+    expect(plain.momentumMult(a)).toBe(1);
+    expect(gale.momentumMult(b)).toBeCloseTo(1 + cap);
+    expect(b.dist).toBeGreaterThan(a.dist);
+    (gale as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(b, 1);
+    expect(gale.momentumMult(b)).toBeCloseTo(1);
+  });
+});

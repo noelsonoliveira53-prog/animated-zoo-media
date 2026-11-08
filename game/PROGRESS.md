@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **188** (next balance pass at iteration 190)
+Iteration counter: **189** (next balance pass at iteration 190)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,8 +1256,7 @@ Iteration counter: **188** (next balance pass at iteration 190)
 - (none)
 
 ## Backlog (ranked)
-1. A breather (raid or village variety) before region 22.
-2. Region 22: a new theme, traits and five levels.
+1. Region 22: a new theme, traits and five levels.
 
 ## Known Bugs
 - (none known)
@@ -1266,6 +1265,11 @@ Iteration counter: **188** (next balance pass at iteration 190)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 189** (dailies at DAILY_HP_EASE, levels 9/25/45/65/85 × 2 seeds, one twist each):
+- Swift Horde: expert 90%, casual 70%. Thick Hides: 60% / 60%.
+- Prairie Gale at a +30% cap: 90% / 100%, gentler than the other harmful twists.
+- Raised the cap to **+50%: 90% / 90%**. It's in line with Swift Horde for the expert; casual still copes a little better,
+  because any hit resets the gale.
 **Iteration 188**: 105 Crown of the Prairie (12 seeds): 1.6 → 100/100/0, 1.75 → 100/92/0, 1.9 → 92/75/0,
 2.05 → 83/75/0. **2.2 → 75/67/0** (kept): the expert is at the bottom of the boss band and seeds 1–3 give 2/3 expert wins,
 so the finale guard passes. Casual sits just above its band (67 against 33–63). The spread-out layout lets casual

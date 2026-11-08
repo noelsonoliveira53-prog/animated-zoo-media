@@ -1339,7 +1339,9 @@ export class BattleSim {
   /** Tumblehog: picks up speed the longer it rolls without being hit; any hit knocks it back to a walk. */
   momentumMult(e: Enemy): number {
     const m = e.def.momentum;
-    return m ? 1 + Math.min(m.max, e.sinceHit * m.perSec) : 1;
+    if (m) return 1 + Math.min(m.max, e.sinceHit * m.perSec);
+    // Prairie Gale (daily twist): the wind pushes everyone along until a hit breaks their stride
+    return this.mods.momentumMax > 0 ? 1 + Math.min(this.mods.momentumMax, e.sinceHit * 0.06) : 1;
   }
 
   /** Thunderhooves stampede: faster for each other herd-mate close by. */

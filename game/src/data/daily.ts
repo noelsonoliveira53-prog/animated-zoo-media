@@ -11,6 +11,7 @@ export interface Modifiers {
   waveGapMult: number; // time between waves
   bountyMult: number; // coins per kill
   armorBonus: number; // added to every enemy's armor
+  momentumMax: number; // Prairie Gale: every enemy gathers speed while unhit (+6%/s), up to +this (0 = off)
 }
 
 export const NO_MODS: Modifiers = {
@@ -24,6 +25,7 @@ export const NO_MODS: Modifiers = {
   waveGapMult: 1,
   bountyMult: 1,
   armorBonus: 0,
+  momentumMax: 0,
 };
 
 /** Daily challenges stack two twists on a level tuned without them, so the level's enemy health is eased to make room. */
@@ -48,6 +50,7 @@ export const DAILY_MODIFIERS: ModifierDef[] = [
   { id: 'frenzy', name: 'Frenzy', text: 'Waves come twice as fast.', apply: { waveGapMult: 0.5 } },
   { id: 'harvest', name: 'Golden Harvest', text: 'Kills pay 50% more coins.', apply: { bountyMult: 1.5 }, good: true },
   { id: 'ironbark', name: 'Ironbark', text: 'Enemies have +6% armor.', apply: { armorBonus: 0.06 } },
+  { id: 'gale', name: 'Prairie Gale', text: 'Enemies gather speed while unhit (up to +50%).', apply: { momentumMax: 0.5 } },
 ];
 
 export function combine(ids: string[]): Modifiers {
@@ -63,6 +66,7 @@ export function combine(ids: string[]): Modifiers {
     if (a.waveGapMult) m.waveGapMult *= a.waveGapMult;
     if (a.bountyMult) m.bountyMult *= a.bountyMult;
     if (a.armorBonus) m.armorBonus += a.armorBonus;
+    if (a.momentumMax) m.momentumMax = Math.max(m.momentumMax, a.momentumMax);
     if (a.noSpells) m.noSpells = true;
     if (a.noHero) m.noHero = true;
     if (a.lives) m.lives = a.lives;

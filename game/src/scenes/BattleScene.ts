@@ -2405,6 +2405,11 @@ export class BattleScene extends Phaser.Scene {
         }
       }
       if (Math.abs(e.pos.x - prevX) > 0.01) v.sprite.setFlipX(e.pos.x < prevX);
+      if (!e.def.momentum && this.sim.mods.momentumMax > 0 && !e.blockedBy && !motion.reduced && this.sim.momentumMult(e) > 1.3 && Math.random() < 0.08) {
+        // Prairie Gale: wind-blown critters trail little puffs of dust
+        this.particles.setParticleTint(0xd8c8a0);
+        this.particles.explode(1, e.pos.x, e.pos.y + e.def.radius * 0.6);
+      }
       if (e.def.momentum && !e.def.boss && !e.blockedBy) {
         // Tumblehog: the thistle ball spins faster the more momentum it has built up, with dust kicking up at full roll
         const m = this.sim.momentumMult(e);

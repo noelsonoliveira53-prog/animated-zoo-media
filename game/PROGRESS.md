@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **171** (next balance pass at iteration 175)
+Iteration counter: **172** (next balance pass at iteration 175)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1220,13 +1220,15 @@ Iteration counter: **171** (next balance pass at iteration 175)
 - **Iteration 171** (Honeycomb level 3): level 93 **Waxworks Hollow**. It has 12 pads, a long road from the left that
   zig-zags, and a short drop from the top that joins it near the end. All three Honeycomb traits mix with older enemies over
   15 waves, and start coins are 1,150. Screenshot `screenshots/171.png`. 218 tests.
+- **Iteration 172** (Honeycomb level 4): level 94 **Queenscomb Terraces**. It has 12 pads, a long winding road from the left
+  (about 2,460px) and a short drop from the top (about 1,340px). The fast and armoured groups stay on the long road.
+  15 waves of the region's toughest mixes before the boss. Screenshot `screenshots/172.png`. 218 tests.
 
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
-1. Honeycomb Hills level 94.
-2. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
+1. Honeycomb finale (95) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1235,6 +1237,12 @@ Iteration counter: **171** (next balance pass at iteration 175)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 172**: 94 Queenscomb Terraces (12 seeds, expert/casual/novice): with the first pad layout, 1.35 → 100/100/17,
+1.45 → 92/83/0, 1.55 → 83/75/0.
+- Moving the pad from behind the exit gate to (1140,270) made it easier: 1.5–1.6 → 100/92–100/0, 1.7 → 83/100/0,
+  1.9 → 67/50/0.
+- **1.8 → 83/75/0** (kept; the fourth-level band is 83–100 / 67–75). Applying the lessons from level 93 up front
+  (heavy groups on the long road, gentler early waves) meant the first draft needed no wave edits.
 **Iteration 171**: 93 Waxworks Hollow (12 seeds). The first draft was brutal: 1.5 → 33/0/0.
 - Leak logs (now by wave) showed early Waxback, Honeypaw and Galehound rushes on the short top road and waves 4–6 overloading
   a thin early economy.

@@ -8,6 +8,7 @@ import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
 import { buildPuff, upgradeBurst } from './fx/BuildFx';
+import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -3982,15 +3983,27 @@ export class BattleScene extends Phaser.Scene {
 
     const shade = this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x000000, 0).setDepth(5000).setInteractive();
     this.tweens.add({ targets: shade, fillAlpha: 0.55, duration: 300 });
+    const er = this.endlessResult;
+    const still = motion.reduced || motion.lowFx;
+    const happy = won || !!er?.isBest;
+    if (happy) victoryRays(this, GAME_W / 2, GAME_H / 2 - 60, 5000.5, still);
+    if (won && !er && !still) confetti(this, GAME_W, 5003);
+    if (!won && !er && !still) ash(this, GAME_W, GAME_H, 5000.6);
     const panel = this.add.container(GAME_W / 2, GAME_H / 2).setDepth(5001);
     const bg = this.add.graphics();
+    bg.fillStyle(0x000000, 0.35);
+    bg.fillRoundedRect(-274, -190, 560, 400, 28);
     bg.fillStyle(C.ink, 1);
     bg.fillRoundedRect(-280, -200, 560, 400, 28);
     bg.fillStyle(C.panel, 1);
     bg.fillRoundedRect(-270, -190, 540, 380, 22);
+    bg.fillStyle(0xffffff, 0.05);
+    bg.fillRoundedRect(-266, -186, 532, 92, { tl: 20, tr: 20, bl: 6, br: 6 }); // gloss ends under the ribbon
+    bg.lineStyle(3, happy ? 0xffc83a : 0xb04a4a, 0.85);
+    bg.strokeRoundedRect(-276, -196, 552, 392, 26);
     panel.add(bg);
-    const er = this.endlessResult;
-    panel.add(this.add.text(0, -140, er ? 'Endless Run Over' : won ? 'Victory!' : 'The Gate Fell', textStyle(er ? 46 : 54, won || er?.isBest ? TEXT.gold : TEXT.heart)).setOrigin(0.5));
+    panel.add(ribbon(this, -140, er ? 400 : 330, happy ? 0xd89a2a : 0x7a2a2a, happy ? 0x8a5a14 : 0x4a1414));
+    panel.add(this.add.text(0, -140, er ? 'Endless Run Over' : won ? 'Victory!' : 'The Gate Fell', textStyle(er ? 40 : 48, happy ? '#fff2c0' : '#ffd0c8')).setOrigin(0.5).setStroke(happy ? '#5a3a0a' : '#2a0a0a', 8));
     if (er) {
       panel.add(this.add.text(0, -54, `${er.held}`, textStyle(64, TEXT.gold)).setOrigin(0.5).setName('endlessHeld'));
       panel.add(this.add.text(0, -6, er.held === 1 ? 'wave held' : 'waves held', textStyle(20)).setOrigin(0.5));
@@ -4001,7 +4014,7 @@ export class BattleScene extends Phaser.Scene {
     for (let i = 0; i < (er ? 0 : 3); i++) {
       const star = this.add.image(-90 + i * 90, -40, i < stars ? 'star' : 'star_empty').setScale(0);
       panel.add(star);
-      this.tweens.add({ targets: star, scale: 1.4, delay: 400 + i * 250, duration: 300, ease: 'Back.easeOut' });
+      starSlam(this, star, i < stars, 450 + i * 320, { x: GAME_W / 2 - 90 + i * 90, y: GAME_H / 2 - 40 }, 5004, still);
     }
     if (!er) panel.add(
       this.add
@@ -4017,8 +4030,11 @@ export class BattleScene extends Phaser.Scene {
       this.tweens.add({ targets: t, scale: 1, delay: 1250, duration: 300, ease: 'Back.easeOut' });
     }
     if (won && !er) {
-      const msg = reward.coins + reward.glowsap > 0 ? `Village reward: +${reward.coins} coins, +${reward.glowsap} glowsap` : 'Village storage is full!';
-      panel.add(this.add.text(0, 46, msg, textStyle(17, TEXT.gold, false)).setOrigin(0.5));
+      const full = reward.coins + reward.glowsap <= 0;
+      const rt = this.add.text(0, 46, full ? 'Village storage is full!' : '', textStyle(17, TEXT.gold, false)).setOrigin(0.5).setName('rewardText');
+      panel.add(rt);
+      // the reward rolls up once the stars have landed
+      if (!full) countUp(this, rt, [reward.coins, reward.glowsap], ([c, g]) => `Village reward: +${c} coins, +${g} glowsap`, 1400, still);
     }
     const finale = won && !er && !!this.level.finale;
     const story = won && !er && !finale && !!STORY[this.level.id];

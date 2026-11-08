@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **252** (next balance pass at iteration 255)
+Iteration counter: **253** (next balance pass at iteration 255)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1621,14 +1621,22 @@ Iteration counter: **252** (next balance pass at iteration 255)
   - The shine loops are removed whenever the cards rebuild after a purchase, so timers don't pile up. Everything moving respects Reduce Motion and Graphics: Low; the store reads both settings itself.
   - Checked with `scripts/store-check.mjs` (a real Buy tap: purse 5000 → 3800, rank 2 → 3, no console errors). Screenshot `screenshots/252.png`. 265 tests.
 
+- **Iteration 253: result screen polish.** New `scenes/fx/ResultFx.ts`:
+  - **Panel:** a drop shadow, a short gloss under the title, and a gold rim for a win (or a new endless best) or a red rim for a defeat. The title sits on a ribbon banner with forked tails (gold for a win, dark red for a defeat).
+  - **Victory:** slowly turning sun rays behind the panel and a burst of tumbling confetti.
+  - **Defeat:** grey ash drifts up.
+  - **Stars:** each earned star drops in large and tilted, then slams down with a camera bump, a flash ring, a ring of sparks and a chime. Empty stars just fade up.
+  - **Reward:** "Village reward: +X coins, +Y glowsap" rolls up from zero once the stars have landed.
+  - Reduce Motion or Graphics: Low gives the plain pop-in, no confetti or ash, still rays and the final reward number straight away.
+  - Check `scripts/result-check.mjs` (a win and a defeat, following the scene clock; the reward text lands on the exact amount; no console errors). Screenshots `screenshots/253.png` (victory) and `253-defeat.png`. `scripts/endless-check.mjs` still passes. 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Result screen polish: a glossier victory/defeat panel, stars that slam in with a burst, and coin and glowsap counters that roll up.
-2. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
+1. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
 
 ## Known Bugs
 - (none known)

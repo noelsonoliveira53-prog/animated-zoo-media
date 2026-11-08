@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
 import { TowerFx } from './fx/TowerFx';
+import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -263,12 +264,49 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(theme.grassDark, 0.5);
       g.fillEllipse(rnd.between(0, GAME_W), rnd.between(0, GAME_H), rnd.between(60, 180), rnd.between(30, 90));
     }
+    // sunlit patches: the ground catches the light in soft, broad pools
+    const sunlit = Phaser.Display.Color.ValueToColor(theme.grass).lighten(9).color;
+    for (let i = 0; i < 22; i++) {
+      g.fillStyle(sunlit, 0.32);
+      g.fillEllipse(rnd.between(0, GAME_W), rnd.between(0, GAME_H), rnd.between(120, 260), rnd.between(50, 110));
+    }
     for (let i = 0; i < 160; i++) {
       const x = rnd.between(0, GAME_W);
       const y = rnd.between(0, GAME_H);
       g.lineStyle(2, theme.grassDark, 0.9);
       g.lineBetween(x, y, x - 3, y - 7);
       g.lineBetween(x, y, x + 3, y - 8);
+      // a lighter middle blade catching the sun
+      g.lineStyle(1.5, sunlit, 0.9);
+      g.lineBetween(x, y, x + 0.5, y - 9);
+    }
+    // the meadows (no special theme) get clover patches and the odd mossy stone
+    const meadow = !Object.values(theme).some((v) => v === true);
+    if (meadow) {
+      for (let i = 0; i < 26; i++) {
+        const cx = rnd.between(20, GAME_W - 20);
+        const cy = rnd.between(90, GAME_H - 20);
+        for (let k = 0; k < 5; k++) {
+          const fx = cx + rnd.between(-12, 12);
+          const fy = cy + rnd.between(-7, 7);
+          g.fillStyle(0x3f8a34, 0.8);
+          for (const [dx, dy] of [[-2, 0], [2, 0], [0, -2]]) g.fillCircle(fx + dx, fy + dy, 2.2);
+          if (rnd.frac() < 0.35) {
+            g.fillStyle(rnd.pick([0xffffff, 0xf8c8d8]), 1);
+            g.fillCircle(fx, fy - 4, 2);
+          }
+        }
+      }
+      for (let i = 0; i < 6; i++) {
+        const sx = rnd.between(40, GAME_W - 40);
+        const sy = rnd.between(120, GAME_H - 40);
+        g.fillStyle(0x000000, 0.15);
+        g.fillEllipse(sx + 3, sy + 5, 26, 9);
+        g.fillStyle(0x8a8e84, 1);
+        g.fillEllipse(sx, sy, 22, 14);
+        g.fillStyle(0x6a9a4a, 0.9);
+        g.fillEllipse(sx - 3, sy - 4, 13, 6);
+      }
     }
     // roads: edge then fill, with round joints
     // a soft drop shadow under every road first, so the roads sit slightly sunk into the ground
@@ -292,6 +330,31 @@ export class BattleScene extends Phaser.Scene {
         g.fillCircle(px - 1, py - 1, 1.5);
       }
     }
+    // kerb stones along the road edges (skipped where another road runs through)
+    const nearRoad = (x: number, y: number) =>
+      this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
+    const stone = Phaser.Display.Color.ValueToColor(theme.roadEdge);
+    const stoneTop = stone.clone().lighten(14).color;
+    for (const pts of this.level.paths) {
+      for (let k = 1; k < pts.length; k++) {
+        const a = pts[k - 1];
+        const b = pts[k];
+        const len = Math.hypot(b.x - a.x, b.y - a.y);
+        const nx = -(b.y - a.y) / len;
+        const ny = (b.x - a.x) / len;
+        for (let d = 14; d < len - 14; d += 30 + rnd.between(-6, 6)) {
+          for (const side of [-1, 1]) {
+            const x = a.x + ((b.x - a.x) * d) / len + nx * side * 31;
+            const y = a.y + ((b.y - a.y) * d) / len + ny * side * 31;
+            if (x < -10 || x > GAME_W + 10 || y < -10 || y > GAME_H + 10 || nearRoad(x, y)) continue;
+            g.fillStyle(stone.color, 1);
+            g.fillEllipse(x, y + 1, 9, 6);
+            g.fillStyle(stoneTop, 1);
+            g.fillEllipse(x - 1, y - 1, 6, 3.5);
+          }
+        }
+      }
+    }
     // ponds
     const lava = !!this.level.theme.lava;
     const abyss = !!this.level.theme.abyss;
@@ -306,6 +369,21 @@ export class BattleScene extends Phaser.Scene {
       }
       g.fillStyle(0xffffff, 0.35);
       g.fillEllipse(pd.x - pd.w * 0.2, pd.y - pd.h * 0.2, pd.w * 0.3, pd.h * 0.2);
+      if (!lava && !abyss && !motion.reduced && !motion.lowFx) {
+        // living water: a glint drifting across the surface and ripple rings spreading now and then
+        const glint = this.add.ellipse(pd.x - pd.w * 0.15, pd.y - pd.h * 0.1, pd.w * 0.22, pd.h * 0.1, 0xffffff, 0.3).setDepth(-9);
+        this.tweens.add({ targets: glint, x: pd.x + pd.w * 0.15, alpha: 0.12, duration: 2600, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+        this.time.addEvent({
+          delay: 1700 + rnd.between(0, 600),
+          loop: true,
+          callback: () => {
+            const rx = pd.x + (Math.random() - 0.5) * pd.w * 0.6;
+            const ry = pd.y + (Math.random() - 0.5) * pd.h * 0.5;
+            const ring = this.add.ellipse(rx, ry, 10, 4, 0xffffff, 0).setStrokeStyle(1.5, 0xe8fbff, 0.7).setDepth(-9);
+            this.tweens.add({ targets: ring, scaleX: 3.2, scaleY: 3.2, alpha: 0, duration: 1400, onComplete: () => ring.destroy() });
+          },
+        });
+      }
       if (this.level.theme.dunes) this.drawOasis(pd);
     }
     if (this.level.theme.reef && !motion.reduced) {

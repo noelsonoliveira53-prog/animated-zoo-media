@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **231** (next balance pass at iteration 235)
+Iteration counter: **232** (next balance pass at iteration 235)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1466,6 +1466,13 @@ Iteration counter: **231** (next balance pass at iteration 235)
   - Clean-up: tower motes and sparks were toned down (rarer motes, fewer and smaller sparks), because many maxed towers looked busy in the screenshots.
   - Screenshots `screenshots/231.png` (meadow) and `231-canyon.png` (late level, many towers). No console errors, 258 tests.
 
+- **Iteration 232**: level graphics overhaul part 2, **richer ground, kerb stones and living water**.
+  - All levels, coloured from each theme: broad sunlit patches (the grass colour lightened) over the old shade patches, and grass tufts with a lighter centre blade.
+  - All levels: kerb stones every ~30 px along both road edges, with a lighter top face. They are skipped wherever another road runs through, so junctions stay clean.
+  - All ordinary ponds: a glint drifting across the surface and ripple rings spreading every ~2 s (skipped on Graphics: Low and reduced motion; lava and abyss pools keep their glow).
+  - Meadow levels (no theme flags): clover patches with little white and pink flowers, and mossy stones with soft shadows.
+  - Screenshots `screenshots/232.png` (meadow), `232-pond.png` (ponds) and `232-frost.png` (kerbs on a snow theme). No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
@@ -1474,8 +1481,8 @@ Iteration counter: **231** (next balance pass at iteration 235)
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
    richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
-   snow drifts), animated water/lava pools (moving highlights and ripple rings), and a themed road texture. Start with the
-   meadow/grove regions (1–2), then frost, ember, dusk and so on.
+   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Next: frost (snow
+   drifts, icy road glints), then ember (cracks with glowing lava seams), dusk, shoal and so on.
 
 ## Known Bugs
 - (none known)

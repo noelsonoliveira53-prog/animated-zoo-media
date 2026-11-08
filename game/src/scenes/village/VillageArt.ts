@@ -128,3 +128,81 @@ export function puffSmoke(scene: Phaser.Scene, x: number, y: number, depth: numb
     onComplete: () => c.destroy(),
   });
 }
+
+export interface LifeSpot { x: number; y: number; type: string; depth: number }
+
+/**
+ * Village life: a few villagers stroll between buildings and little carts trundle resources from mines and sap
+ * wells to the vault or Grove Hall. `spots` is called each time so moved or new buildings are used. Each walker is
+ * a small container destroyed when its trip ends; at most 5 villagers and 2 carts are out at once.
+ */
+export function startVillageLife(scene: Phaser.Scene, spots: () => LifeSpot[], depthAt: (y: number) => number): Phaser.Time.TimerEvent | null {
+  if (motion.reduced || motion.lowFx) return null;
+  let walkers = 0;
+  let carts = 0;
+  const coats = [0xc8604a, 0x4a7ac8, 0xd8a83a, 0x6aae42, 0x9a6ac8];
+  const trip = (o: Phaser.GameObjects.Container, from: LifeSpot, to: LifeSpot, speed: number, k: number, done: () => void) => {
+    // an L-shaped route along the grid: across first, then up or down
+    const mid = { x: to.x, y: from.y };
+    const leg = (a: { x: number; y: number }, b: { x: number; y: number }, next: () => void) => {
+      const d = Math.hypot(b.x - a.x, b.y - a.y);
+      if (b.x !== a.x) o.setScale(b.x < a.x ? -k : k, k); // face the way it walks, at its display size
+      scene.tweens.add({
+        targets: o, x: b.x, y: b.y, duration: Math.max(200, (d / speed) * 1000),
+        onUpdate: () => o.active && o.setDepth(depthAt(o.y)),
+        onComplete: next,
+      });
+    };
+    leg(from, mid, () => leg(mid, to, () => {
+      scene.tweens.add({ targets: o, alpha: 0, duration: 250, onComplete: () => { o.destroy(); done(); } });
+    }));
+  };
+  const villager = () => {
+    const all = spots();
+    if (all.length < 2 || walkers >= 5) return;
+    const a = all[Math.floor(Math.random() * all.length)];
+    let b = all[Math.floor(Math.random() * all.length)];
+    if (b === a) b = all[(all.indexOf(a) + 1) % all.length];
+    const v = scene.add.container(a.x, a.y).setAlpha(0);
+    const body = scene.add.container(0, 0);
+    body.add(scene.add.ellipse(0, 1, 10, 4, 0x000000, 0.25));
+    body.add(scene.add.ellipse(0, -5, 8, 10, coats[Math.floor(Math.random() * coats.length)]));
+    body.add(scene.add.circle(0, -12, 4, 0xa07850));
+    body.add(scene.add.circle(-2.5, -15, 1.6, 0xa07850));
+    body.add(scene.add.circle(2.5, -15, 1.6, 0xa07850));
+    body.add(scene.add.circle(1.6, -12.5, 0.8, 0x111111));
+    v.add(body);
+    scene.tweens.add({ targets: v, alpha: 1, duration: 250 });
+    scene.tweens.add({ targets: body, y: -2, duration: 160, yoyo: true, repeat: -1 }); // a stepping bob
+    walkers++;
+    v.setScale(1.8);
+    trip(v, a, b, 34, 1.8, () => walkers--);
+  };
+  const cart = () => {
+    const all = spots();
+    const sources = all.filter((s) => s.type === 'coinmine' || s.type === 'sapwell');
+    const sinks = all.filter((s) => s.type === 'vault' || s.type === 'townhall');
+    if (!sources.length || !sinks.length || carts >= 2) return;
+    const a = sources[Math.floor(Math.random() * sources.length)];
+    const b = sinks[Math.floor(Math.random() * sinks.length)];
+    const c = scene.add.container(a.x, a.y).setAlpha(0);
+    c.add(scene.add.ellipse(0, 2, 22, 6, 0x000000, 0.25));
+    c.add(scene.add.rectangle(0, -5, 18, 9, 0x8a5a32).setStrokeStyle(1, 0x3a2a18));
+    const load = a.type === 'coinmine' ? 0xffd23c : 0x9be86a;
+    c.add(scene.add.circle(-4, -11, 3, load));
+    c.add(scene.add.circle(3, -11, 3, load));
+    const w1 = scene.add.circle(-6, 0, 3.2, 0x3a2a18);
+    const w2 = scene.add.circle(6, 0, 3.2, 0x3a2a18);
+    c.add([w1, w2]);
+    // the pusher: a villager walking behind the cart
+    c.add(scene.add.ellipse(-15, -5, 7, 9, 0x6aae42));
+    c.add(scene.add.circle(-15, -11.5, 3.5, 0xa07850));
+    scene.tweens.add({ targets: c, alpha: 1, duration: 250 });
+    scene.tweens.add({ targets: [w1, w2], scaleY: 0.8, duration: 120, yoyo: true, repeat: -1 }); // a wobbly wheel
+    carts++;
+    c.setScale(1.6);
+    trip(c, a, b, 26, 1.6, () => carts--);
+  };
+  for (let i = 0; i < 2; i++) villager();
+  return scene.time.addEvent({ delay: 2600, loop: true, callback: () => (Math.random() < 0.35 ? cart() : villager()) });
+}

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **263** (next balance pass at iteration 265)
+Iteration counter: **264** (next balance pass at iteration 265)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1706,13 +1706,21 @@ Iteration counter: **263** (next balance pass at iteration 265)
   - A summoned ranger's pop-in tween finishes before the pose takes over its scale. Reduce Motion gives a still pose.
   - Checked with `scripts/level-shot.mjs` and `scripts/hero-check.mjs` (no console errors). Screenshot `screenshots/263.png`.
 
+- **Iteration 264: village life.** New `startVillageLife` in `scenes/village/VillageArt.ts`:
+  - **Villagers** (small code-drawn critters in five coat colours, with ears and a stepping bob) stroll between the front edges of finished buildings. They take an L-shaped route along the grid, face the way they walk, and fade out on arrival.
+  - **Carts:** a cart loaded with coins or sap, pushed by a villager, trundles from a coin mine or sap well to the vault or Grove Hall with wobbling wheels.
+  - Walkers use the same depth scale as buildings, so they pass in front of and behind them. At most 5 villagers and 2 carts are out at once; spots are re-read every spawn, so moved and new buildings are used.
+  - Off with Reduce Motion or Graphics: Low. First pass was too small to read at full view, so walkers draw at 1.8× and carts at 1.6×.
+  - `village-leak.mjs`: objects 108 → 113 and tweens 38 → 45 over 20 s, steady. `collect-all-check` still passes. Screenshot `screenshots/264.png`. 274 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Village life: tiny villagers (code-drawn) walking between buildings, and resource carts trundling from mines to storage.
+1. Day and night tint for the village: a slow warm-to-dusk light cycle with lit windows at dusk (cosmetic, follows real time loosely).
+2. Raid troop polish: deploy puff and a little banner where a squad lands, troop gaits like the defense soldiers, and building rubble when a camp building falls.
 
 ## Known Bugs
 - (none known)

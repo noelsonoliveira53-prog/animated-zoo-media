@@ -37,7 +37,7 @@ import { campLoot, generateCamp } from '../systems/camp';
 import { Button } from '../ui/Button';
 import { addLighting } from '../ui/lighting';
 import { motion } from '../ui/motion';
-import { addBuildingShadow, drawVillageGround, puffSmoke, SMOKE_SPOTS } from './village/VillageArt';
+import { addBuildingShadow, drawVillageGround, puffSmoke, SMOKE_SPOTS, startVillageLife } from './village/VillageArt';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 
 const GRID_W = VILLAGE_COLS * TILE;
@@ -132,6 +132,19 @@ export class VillageScene extends Phaser.Scene {
     });
     this.time.addEvent({ delay: 250, loop: true, callback: () => this.refresh() });
     if (!motion.reduced && !motion.lowFx) this.time.addEvent({ delay: 700, loop: true, callback: () => this.chimneys() });
+    // villagers stroll between finished buildings (standing at each one's front edge); carts haul from mines to storage
+    startVillageLife(
+      this,
+      () =>
+        this.v.buildings
+          .filter((b) => b.level > 0 && b.type !== 'wall')
+          .map((b) => {
+            const S = BUILDINGS[b.type].size * TILE;
+            const { x, y } = this.cellToXY(b.col, b.row);
+            return { x: x + S / 2, y: y + S + 6, type: b.type, depth: b.row + BUILDINGS[b.type].size };
+          }),
+      (y) => (y - OY) / TILE + 0.2, // same depth scale as buildings (row + size), so walkers pass in front of / behind them
+    );
     this.cameras.main.fadeIn(250, 16, 38, 27);
   }
 

@@ -723,9 +723,10 @@
   "time": "2:10 PM",
   "thumb": "brand/gizmo/thumb_gz3d_ep05.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
-  "duration": 158.0
+  "duration": 158.0,
+  "video_id": "qJ5hnGSX8jw"
  },
  {
   "file": "fruity/fr3d_ep06.mp4",

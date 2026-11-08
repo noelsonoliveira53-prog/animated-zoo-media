@@ -55,6 +55,8 @@ export interface Enemy {
   phaseCd: number; // Mistfox: time until it fades / returns
   riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
   hexCd: number; // Hexcroak Toad: time to its next curse
+  dived: boolean; // Mudskipper has used its one dive
+  diveT: number; // seconds left under the mud
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
   waxLeft: number; // Waxback: magic damage still to soak before its coat melts (0 = melted or none)
@@ -207,6 +209,7 @@ export type SimEvent =
   | { type: 'melt'; enemy: Enemy }
   | { type: 'glaze'; soldier: Soldier }
   | { type: 'hex'; source: Enemy; tower: Tower }
+  | { type: 'dive'; enemy: Enemy; down: boolean }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -950,6 +953,8 @@ export class BattleSim {
       riledAt: -99,
       snatchCd: def.snatch ? def.snatch.cooldown * 0.5 : 0,
       hexCd: def.hex ? def.hex.interval * 0.5 : 0,
+      dived: false,
+      diveT: 0,
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -1011,6 +1016,13 @@ export class BattleSim {
       if (e.def.phase) this.tickPhase(e, dt);
       if (e.def.snatch) this.tickSnatch(e, dt);
       if (e.def.hex) this.tickHex(e, dt);
+      if (e.diveT > 0) {
+        e.diveT -= dt;
+        if (e.diveT <= 0) {
+          e.underground = false;
+          this.events.push({ type: 'dive', enemy: e, down: false });
+        }
+      }
       if (e.def.parry && e.parryCharges < e.def.parry.charges) {
         e.parryCd -= dt;
         if (e.parryCd <= 0) {
@@ -1972,6 +1984,19 @@ export class BattleSim {
       e.inkCd = this.time + e.def.ink.cooldown;
       this.inkClouds.push({ pos: { ...e.pos }, radius: e.def.ink.radius, t: e.def.ink.duration });
       this.events.push({ type: 'ink', enemy: e, pos: { ...e.pos }, radius: e.def.ink.radius, duration: e.def.ink.duration });
+    }
+    if (e.def.dive && !e.dived && e.hp > 0 && e.hp < e.maxHp * e.def.dive.at) {
+      // Mudskipper: a hard knock, and it vanishes into the mud to lick its wounds
+      e.dived = true;
+      e.underground = true;
+      e.diveT = e.def.dive.duration;
+      e.hp = Math.min(e.maxHp, e.hp + e.maxHp * e.def.dive.heal);
+      if (e.blockedBy) {
+        for (const s of this.soldiers) if (s.targetUid === e.uid) s.targetUid = 0;
+        if (this.hero && this.hero.targetUid === e.uid) this.hero.targetUid = 0;
+        e.blockedBy = 0;
+      }
+      this.events.push({ type: 'dive', enemy: e, down: true });
     }
     if (e.def.molt && !e.molted && e.hp > 0 && e.hp < e.maxHp * e.def.molt.at) {
       // Shellsnap: the cracked shell falls away; soft, but quick.

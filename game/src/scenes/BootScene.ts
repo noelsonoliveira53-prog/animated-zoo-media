@@ -1009,6 +1009,32 @@ export class BootScene extends Phaser.Scene {
         }
         break;
       }
+      case 'mudskipper': {
+        // a mud-brown fish propped on its front fins, with big goggling eyes on top and a wide grin
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0x6a5a3a, 1);
+        g.fillTriangle(cx + r * 0.7, cy, cx + r * 1.25, cy - r * 0.35, cx + r * 1.25, cy + r * 0.35);
+        g.strokeTriangle(cx + r * 0.7, cy, cx + r * 1.25, cy - r * 0.35, cx + r * 1.25, cy + r * 0.35);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx, cy, r * 1.7, r * 1.0);
+        g.strokeEllipse(cx, cy, r * 1.7, r * 1.0);
+        g.fillStyle(0x5a4a2a, 1);
+        for (const sx of [-1, 1]) g.fillEllipse(cx - r * 0.2, cy + sx * r * 0.55, r * 0.45, r * 0.22);
+        g.fillStyle(0x6a5a3a, 1);
+        for (const [bx, by] of [[0.1, -0.15], [0.35, 0.15], [-0.05, 0.25]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.07);
+        for (const sx of [-1, 1]) {
+          g.fillStyle(0xf0f0e0, 1);
+          g.fillCircle(cx - r * 0.5, cy + sx * r * 0.22, r * 0.2);
+          g.strokeCircle(cx - r * 0.5, cy + sx * r * 0.22, r * 0.2);
+          g.fillStyle(C.ink, 1);
+          g.fillCircle(cx - r * 0.56, cy + sx * r * 0.22, r * 0.09);
+        }
+        g.lineStyle(1.5, C.ink, 1);
+        g.beginPath();
+        g.arc(cx - r * 0.72, cy, r * 0.22, Math.PI * 0.6, Math.PI * 1.4);
+        g.strokePath();
+        break;
+      }
       case 'harrier': {
         // hawk from above: broad rust wings with dark tips, pale speckled breast, hooked yellow beak
         g.lineStyle(2.5, C.ink, 1);

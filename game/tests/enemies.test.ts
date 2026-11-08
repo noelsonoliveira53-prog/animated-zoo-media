@@ -1120,3 +1120,23 @@ describe('Glimmerbog enemies', () => {
     expect(p.damage).toBeCloseTo(base * (1 - h.def.hex!.cut));
   });
 });
+
+describe('Mudskipper', () => {
+  it('dives once when knocked below half health: untouchable for a moment, healed, then back up', () => {
+    const sim = new BattleSim(lvl, null);
+    sim.status = 'running';
+    const m = sim.spawn('mudskipper', 0, 300);
+    const d = m.def.dive!;
+    const hit = (n: number) => (sim as unknown as { applyDamage: (e: unknown, d: number) => void }).applyDamage(m, n);
+    hit(m.maxHp * 0.6);
+    expect(m.underground).toBe(true);
+    expect(m.hp).toBeCloseTo(m.maxHp * (0.4 + d.heal));
+    const dist0 = m.dist;
+    for (let i = 0; i < Math.ceil(d.duration * 60) + 2; i++) sim.update(1 / 60);
+    expect(m.underground).toBe(false);
+    expect(m.dist).toBeGreaterThan(dist0);
+    hit(m.maxHp * 0.3);
+    expect(m.underground).toBe(false); // only once
+    expect(sim.drainEvents().filter((e) => e.type === 'dive').length).toBeGreaterThanOrEqual(1);
+  });
+});

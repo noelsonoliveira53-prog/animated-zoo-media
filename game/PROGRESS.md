@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **176** (next balance pass at iteration 180)
+Iteration counter: **177** (next balance pass at iteration 180)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,7 @@ Iteration counter: **176** (next balance pass at iteration 180)
 - (none)
 
 ## Backlog (ranked)
-1. Glimmerbog level 97 with a third trait, then levels 98 and 99.
+1. Glimmerbog levels 98 and 99.
 2. Glimmerbog finale (100) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
@@ -1266,6 +1266,8 @@ Iteration counter: **176** (next balance pass at iteration 180)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 177**: 97 Reedwater Crossing (12 seeds): hpMult 1.45 → 100/100/0, 1.75 → 100/83/0. **1.6 → 100/92/0** (kept:
+exactly the second-level band, first try).
 **Iteration 176**: 96 Lilypad Landing (12 seeds, expert/casual/novice).
 - First draft: 1.4 → 67/100/83. Oddly the expert did worst. Leak logs showed Lanternfrogs and Hexcroaks from waves 5–7
   slipping through: the expert's smart specs and early wave calls suffer most when lures pull its fire and hexes soften

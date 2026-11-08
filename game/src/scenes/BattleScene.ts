@@ -1784,6 +1784,14 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'dive': {
+        // a muddy splash as the Mudskipper ducks under (or pops back up)
+        sfx.trait('dive');
+        this.particles.setParticleTint(0x5a4a2a);
+        this.particles.explode(ev.down ? 12 : 8, ev.enemy.pos.x, ev.enemy.pos.y);
+        if (ev.down) this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 26, 'Splosh!', '#c8b08a', 13);
+        break;
+      }
       case 'hex': {
         // a sour green-violet croak ring rolls from the toad to the tower it curses
         sfx.trait('hex');
@@ -2203,7 +2211,7 @@ export class BattleScene extends Phaser.Scene {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
     const shadow = e.def.flying ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22) : null;
-    const mound = e.def.burrow ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
+    const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
     this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0 });
   }
 

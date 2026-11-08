@@ -236,6 +236,10 @@ class Sfx {
         this.noise(0.08, 0.16, 7000);
         this.noise(0.5, 0.1, 300);
         break;
+      case 'dive': // a wet plop
+        this.tone(320, 0.12, 'sine', 0.05, 120);
+        this.noise(0.15, 0.04, 700);
+        break;
       case 'hex': // a long, sour, wobbling croak
         this.tone(140, 0.4, 'sawtooth', 0.04, 90);
         this.tone(147, 0.4, 'square', 0.02, 95, 0.05);

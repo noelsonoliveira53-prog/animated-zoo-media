@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **238** (next balance pass at iteration 240)
+Iteration counter: **239** (next balance pass at iteration 240)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1515,17 +1515,26 @@ Iteration counter: **238** (next balance pass at iteration 240)
   - The amber, mist and comb glows breathe slowly.
   - Screenshots `screenshots/238-71.png` through `238-96.png` (`238.png` = bog). No console errors, 258 tests.
 
+- **Iteration 239**: level graphics overhaul part 8 (the last), **thistle, wold, canyon, brook and heath ground**, in `drawLastGround`. Every region family now has its own ground detail.
+  - Thistle: thistledown tufts caught in the grass and low purple thistle heads.
+  - Wold: furrowed field strips and stooks of cut wheat.
+  - Canyon: sun-baked cracked mud plates and rust-red pebbles.
+  - Brook: smooth river pebbles and patches of yellow marsh flowers.
+  - Heath: dark peat hags and white bog-cotton tufts.
+  - Screenshots `screenshots/239-101.png` through `239-121.png` (`239.png` = wold). No console errors, 258 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Level graphics overhaul, per theme family (the shared lighting, road shading and shadows were done in iteration 231). Give each family
-   richer ground (a large-scale colour variation layer, theme-specific ground detail such as cobbles, cracks, sand ripples or
-   snow drifts) and a themed road texture. Meadow, kerb stones and pond animation were done in iteration 232. Done so far: frost and ember (233); dusk, shoal and glass (234); gale, ruins, gears and abyss (236); orchard, storm, dunes
-   and reef (237); flotilla, amber, mist, canopy, comb and bog (238). Next: thistle, wold, canyon, brook and heath (the last
-   five), then a pass over the world-map art.
+1. World-map art pass: give the region map the same treatment as the battle maps. Soft lighting and a vignette, a
+   drop shadow under the island, animated sea (moving wave crests along the shore), little themed landmarks per region,
+   and a glowing pulse on the next unbeaten level node.
+2. Battle HUD polish: a glossier top bar and spell buttons (inner gradients, rim light), plus animated coin and life
+   counters (tick up and down with a bounce) and a wave progress bar.
+3. Enemy hit and death polish: death puffs tinted by enemy type, a small hit-stop on big hits, and boss death fireworks.
 
 ## Known Bugs
 - (none known)

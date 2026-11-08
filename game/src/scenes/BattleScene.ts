@@ -344,6 +344,7 @@ export class BattleScene extends Phaser.Scene {
     if (theme.dunes) this.drawDuneGround(rnd);
     if (theme.reef) this.drawReefGround(rnd);
     if (theme.flotilla || theme.amber || theme.mist || theme.canopy || theme.comb || theme.bog) this.drawMoreGround(rnd);
+    if (theme.thistle || theme.wold || theme.canyon || theme.brook || theme.heath) this.drawLastGround(rnd);
     // kerb stones along the road edges (skipped where another road runs through)
     const nearRoad = (x: number, y: number) =>
       this.level.paths.some((pts) => pts.some((p, k) => k > 0 && distToSegment({ x, y }, pts[k - 1], p) < 28));
@@ -1814,6 +1815,90 @@ export class BattleScene extends Phaser.Scene {
       }
     }
     if (!motion.reduced && !motion.lowFx && (theme.amber || theme.mist || theme.comb)) this.tweens.add({ targets: glow, alpha: 0.5, duration: 2000, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+  }
+
+  /** Ground detail for the thistle, wold, canyon, brook and heath regions. */
+  private drawLastGround(rnd: Phaser.Math.RandomDataGenerator): void {
+    const { theme } = this.level;
+    const g = this.add.graphics().setDepth(-9.5);
+    if (theme.thistle) {
+      // tufts of thistledown caught in the grass and the odd low purple thistle head
+      this.scatter(rnd, 40, 2, (x, y) => {
+        g.fillStyle(0xffffff, 0.75);
+        g.fillCircle(x, y, 2);
+        g.lineStyle(0.8, 0xffffff, 0.6);
+        for (let k = 0; k < 5; k++) {
+          const a = (k / 5) * Math.PI * 2;
+          g.lineBetween(x, y, x + Math.cos(a) * 4, y + Math.sin(a) * 4);
+        }
+      });
+      this.scatter(rnd, 12, 6, (x, y) => {
+        g.fillStyle(0x6a8a3a, 1);
+        g.fillTriangle(x - 4, y + 2, x + 4, y + 2, x, y - 4);
+        g.fillStyle(0xa86ac8, 1);
+        g.fillCircle(x, y - 6, 3.5);
+      });
+    }
+    if (theme.wold) {
+      // furrowed field strips and scattered stooks of cut wheat
+      this.scatter(rnd, 6, 40, (x, y) => {
+        g.lineStyle(2, 0x5a8a3a, 0.35);
+        for (let k = -3; k <= 3; k++) g.lineBetween(x - 60, y + k * 7, x + 60, y + k * 7 - 10);
+      });
+      this.scatter(rnd, 10, 8, (x, y) => {
+        g.fillStyle(0x000000, 0.15);
+        g.fillEllipse(x + 3, y + 5, 16, 5);
+        g.fillStyle(0xd8b050, 1);
+        g.fillTriangle(x - 7, y + 4, x + 7, y + 4, x, y - 10);
+        g.lineStyle(1, 0xa88030, 1);
+        g.lineBetween(x - 6, y, x + 6, y);
+      });
+    }
+    if (theme.canyon) {
+      // sun-baked cracked mud plates and rust-red pebbles
+      this.scatter(rnd, 8, 20, (x, y) => {
+        g.lineStyle(1.5, 0x8a4a2a, 0.55);
+        for (let k = 0; k < 6; k++) {
+          const a = (k / 6) * Math.PI * 2;
+          g.lineBetween(x, y, x + Math.cos(a) * 22, y + Math.sin(a) * 12);
+          g.lineBetween(x + Math.cos(a) * 12, y + Math.sin(a) * 7, x + Math.cos(a + 1) * 12, y + Math.sin(a + 1) * 7);
+        }
+      });
+      this.scatter(rnd, 40, 2, (x, y) => {
+        g.fillStyle(rnd.pick([0x9a4a2a, 0xb8683e, 0x7a3a22]), 0.9);
+        g.fillCircle(x, y, rnd.between(1, 3));
+      });
+    }
+    if (theme.brook) {
+      // smooth river pebbles along the banks and patches of yellow marsh flowers
+      this.scatter(rnd, 30, 4, (x, y) => {
+        g.fillStyle(rnd.pick([0x9aa0a0, 0xb8b0a0, 0x8a9090]), 1);
+        g.fillEllipse(x, y, rnd.between(6, 11), rnd.between(4, 7));
+        g.fillStyle(0xffffff, 0.3);
+        g.fillEllipse(x - 1, y - 1, 3, 1.5);
+      });
+      this.scatter(rnd, 10, 6, (x, y) => {
+        for (let k = 0; k < 4; k++) {
+          g.fillStyle(0xf0d040, 1);
+          g.fillCircle(x + rnd.between(-8, 8), y + rnd.between(-4, 4), 2.2);
+        }
+      });
+    }
+    if (theme.heath) {
+      // peat hags (dark exposed patches) and white bog-cotton tufts
+      this.scatter(rnd, 7, 20, (x, y) => {
+        g.fillStyle(0x3a2e24, 0.55);
+        g.fillEllipse(x, y, rnd.between(40, 70), rnd.between(14, 22));
+        g.fillStyle(0x5a4a3a, 0.5);
+        g.fillEllipse(x - 4, y - 3, 20, 5);
+      });
+      this.scatter(rnd, 30, 3, (x, y) => {
+        g.lineStyle(1, 0x6a6a4a, 1);
+        g.lineBetween(x, y + 4, x, y - 2);
+        g.fillStyle(0xffffff, 0.95);
+        g.fillCircle(x, y - 4, 2.4);
+      });
+    }
   }
 
   /** Scene lighting: warm light from the top-left, a cooler bottom-right, and a soft vignette over the field. */

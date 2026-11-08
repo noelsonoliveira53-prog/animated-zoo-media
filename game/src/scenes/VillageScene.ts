@@ -285,6 +285,7 @@ export class VillageScene extends Phaser.Scene {
 
     new Button(this, 90, 40, 'Menu', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.leave('Menu') }).setDepth(902);
     new Button(this, GAME_W - 110, 40, 'Campaign', { width: 180, height: 50, fontSize: 20, color: 0xff9f43, onClick: () => this.leave('WorldMap') }).setDepth(902);
+    new Button(this, GAME_W - 110, 100, 'Store', { width: 180, height: 50, fontSize: 20, color: 0xffc83a, onClick: () => this.leave('Store', { from: 'Village' }) }).setDepth(902);
     new Button(this, GAME_W - 100, GAME_H - 44, 'Build', { width: 160, height: 60, fontSize: 26, color: C.leaf, onClick: () => this.openShop() }).setDepth(902);
     new Button(this, 100, GAME_H - 112, 'Collect all', { width: 160, height: 46, fontSize: 18, color: 0xffc93c, onClick: () => this.collectEverything() }).setDepth(902).setName('collectAllBtn');
     new Button(this, 100, GAME_H - 44, 'Raid', { width: 160, height: 60, fontSize: 26, color: C.danger, onClick: () => this.openRaid() }).setDepth(902);
@@ -296,9 +297,9 @@ export class VillageScene extends Phaser.Scene {
     this.refresh();
   }
 
-  private leave(scene: string): void {
+  private leave(scene: string, data?: object): void {
     this.persist();
-    this.scene.start(scene);
+    this.scene.start(scene, data);
   }
 
   private refresh(): void {

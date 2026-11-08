@@ -84,6 +84,13 @@ export class MenuScene extends Phaser.Scene {
       color: C.leaf,
       onClick: () => this.scene.start('Village'),
     });
+    new Button(this, 140, 435, 'Store', {
+      width: 200,
+      height: 74,
+      fontSize: 28,
+      color: 0xffc83a,
+      onClick: () => this.scene.start('Store', { from: 'Menu' }),
+    });
     this.add.image(GAME_W - 150, 30, 'star').setScale(0.55);
     this.add.text(GAME_W - 128, 30, `${totalStars(save.stars)} / ${LEVELS.length * 3}`, textStyle(20)).setOrigin(0, 0.5);
     this.buildDaily();

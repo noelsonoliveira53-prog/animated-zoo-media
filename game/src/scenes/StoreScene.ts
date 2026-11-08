@@ -1,0 +1,249 @@
+import Phaser from 'phaser';
+import { STORE_ITEMS, STORE_TIERS, type StoreItem } from '../data/store';
+import { themeById } from '../data/musicThemes';
+import { buyItem, nextPrice, rankOf, tierOpen, totalRanks } from '../systems/store';
+import { devOn } from '../systems/dev';
+import { ensureVillage, loadSave, writeSave, type SaveData } from '../systems/save';
+import { music } from '../systems/music';
+import { sfx } from '../systems/audio';
+import { Button } from '../ui/Button';
+import { fitWidth, pf } from '../ui/touch';
+import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+
+// The Keeper's Store: three tier rows of permanent upgrades, bought with village coins and glowsap.
+
+const CARD_W = 372;
+const CARD_H = 150;
+const ROW_Y = [222, 406, 590];
+
+export class StoreScene extends Phaser.Scene {
+  private root!: Phaser.GameObjects.Container;
+  private back = 'Menu';
+  private burst!: Phaser.GameObjects.Particles.ParticleEmitter;
+
+  constructor() {
+    super('Store');
+  }
+
+  init(data?: { from?: string }): void {
+    this.back = data?.from ?? 'Menu';
+  }
+
+  create(): void {
+    music.setMood('calm');
+    music.setTheme(themeById('home'));
+    const g = this.add.graphics();
+    g.fillGradientStyle(0x2a2238, 0x2a2238, 0x14101e, 0x14101e, 1);
+    g.fillRect(0, 0, GAME_W, GAME_H);
+    // soft lantern glow behind the counter
+    for (let k = 0; k < 3; k++) this.add.circle(GAME_W / 2 + (k - 1) * 420, 120, 220, 0xffc860, 0.05).setBlendMode(Phaser.BlendModes.ADD);
+    this.add.text(GAME_W / 2, 42, "Keeper's Store", textStyle(40, TEXT.gold)).setOrigin(0.5).setStroke('#1d1428', 8);
+    new Button(this, 90, 42, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start(this.back) });
+    this.burst = this.add.particles(0, 0, 'dot', { speed: { min: 80, max: 260 }, scale: { start: 0.7, end: 0 }, lifespan: 700, gravityY: 260, emitting: false, blendMode: Phaser.BlendModes.ADD });
+    this.burst.setDepth(50);
+    this.build();
+  }
+
+  private build(): void {
+    this.root?.destroy();
+    this.root = this.add.container(0, 0);
+    const save = loadSave();
+    const v = ensureVillage(save);
+    // village purse, top right
+    const purse = this.add.graphics();
+    purse.fillStyle(C.ink, 0.8);
+    purse.fillRoundedRect(GAME_W - 380, 18, 360, 50, 14);
+    this.root.add(purse);
+    this.root.add(this.add.image(GAME_W - 352, 43, 'icon_coin').setScale(0.9));
+    this.root.add(this.add.text(GAME_W - 332, 43, devOn() ? '∞' : `${Math.floor(v.coins)}`, textStyle(20, TEXT.gold)).setOrigin(0, 0.5));
+    this.root.add(this.add.image(GAME_W - 180, 43, 'icon_sap').setScale(0.9));
+    this.root.add(this.add.text(GAME_W - 160, 43, devOn() ? '∞' : `${Math.floor(v.glowsap)}`, textStyle(20, '#c8ff8a')).setOrigin(0, 0.5));
+    this.root.add(this.add.text(GAME_W / 2, 84, `Permanent upgrades for every battle  •  ${totalRanks(save)} ranks owned${devOn() ? '  •  DEV: purchases are free' : ''}`, textStyle(pf(14), TEXT.dim, false)).setOrigin(0.5));
+    if (devOn()) {
+      this.root.add(
+        new Button(this, 90, 100, 'Refund all', {
+          width: 140,
+          height: 36,
+          fontSize: 14,
+          color: 0xff5a8a,
+          onClick: () => {
+            const s = loadSave();
+            s.store = {};
+            writeSave(s);
+            this.build();
+          },
+        }),
+      );
+    }
+    STORE_TIERS.forEach((t, row) => {
+      const y = ROW_Y[row];
+      const open = tierOpen(save, t.tier);
+      this.root.add(this.add.text(36, y - CARD_H / 2 - 14, `${['I', 'II', 'III'][row]}  ${t.name}`, textStyle(17, open ? TEXT.gold : TEXT.dim)).setOrigin(0, 0.5));
+      const items = STORE_ITEMS.filter((i) => i.tier === t.tier);
+      items.forEach((item, k) => this.card(save, item, 36 + CARD_W / 2 + k * (CARD_W + 26), y + 6, open));
+      if (!open) {
+        const need = t.needRanks - totalRanks(save, t.tier);
+        const lock = this.add.graphics();
+        lock.fillStyle(0x0a0812, 0.62);
+        lock.fillRoundedRect(28, y + 6 - CARD_H / 2 - 6, GAME_W - 56, CARD_H + 12, 16);
+        this.root.add(lock);
+        this.root.add(this.lockIcon(GAME_W / 2 - 170, y + 6));
+        this.root.add(this.add.text(GAME_W / 2 - 140, y + 6, `Buy ${need} more rank${need === 1 ? '' : 's'} to open`, textStyle(22, TEXT.cream)).setOrigin(0, 0.5));
+      }
+    });
+  }
+
+  private card(save: SaveData, item: StoreItem, x: number, y: number, open: boolean): void {
+    const c = this.add.container(x, y);
+    this.root.add(c);
+    const rank = rankOf(save, item.id);
+    const maxed = rank >= item.maxRank;
+    const bg = this.add.graphics();
+    bg.fillStyle(0x000000, 0.3);
+    bg.fillRoundedRect(-CARD_W / 2 + 4, -CARD_H / 2 + 6, CARD_W, CARD_H, 16);
+    bg.fillStyle(maxed ? 0x3a3020 : C.panel, 1);
+    bg.fillRoundedRect(-CARD_W / 2, -CARD_H / 2, CARD_W, CARD_H, 16);
+    bg.lineStyle(3, maxed ? 0xffc83a : item.color, open ? 0.9 : 0.3);
+    bg.strokeRoundedRect(-CARD_W / 2, -CARD_H / 2, CARD_W, CARD_H, 16);
+    c.add(bg);
+    c.add(this.icon(item, -CARD_W / 2 + 54, -8));
+    c.add(fitWidth(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 22, item.name, textStyle(19, TEXT.cream)).setOrigin(0, 0.5), 250));
+    c.add(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 44, `${item.text} per rank`, { ...textStyle(pf(13), TEXT.dim, false), wordWrap: { width: 250 } }).setOrigin(0, 0));
+    // rank pips
+    for (let r = 0; r < item.maxRank; r++) {
+      const pip = this.add.circle(-CARD_W / 2 + 22 + r * 18, CARD_H / 2 - 22, 6, r < rank ? item.color : 0x2a2a34).setStrokeStyle(2, C.ink, 1);
+      c.add(pip);
+    }
+    if (maxed) {
+      c.add(this.add.text(CARD_W / 2 - 18, CARD_H / 2 - 22, 'MAX', textStyle(18, TEXT.gold)).setOrigin(1, 0.5));
+      return;
+    }
+    const price = nextPrice(save, item)!;
+    const v = ensureVillage(save);
+    const afford = devOn() || (v.coins >= (price.coins ?? 0) && v.glowsap >= (price.glowsap ?? 0));
+    // next-rank price on its own line, clear of the Buy button
+    const py = CARD_H / 2 - 54;
+    c.add(this.add.text(-CARD_W / 2 + 104, py, 'Next:', textStyle(pf(13), TEXT.dim, false)).setOrigin(0, 0.5));
+    c.add(this.add.image(-CARD_W / 2 + 152, py, 'icon_coin').setScale(0.6));
+    c.add(this.add.text(-CARD_W / 2 + 164, py, `${price.coins}`, textStyle(pf(14), afford ? TEXT.gold : TEXT.heart)).setOrigin(0, 0.5));
+    c.add(this.add.image(-CARD_W / 2 + 224, py, 'icon_sap').setScale(0.6));
+    c.add(this.add.text(-CARD_W / 2 + 236, py, `${price.glowsap}`, textStyle(pf(14), afford ? '#c8ff8a' : TEXT.heart)).setOrigin(0, 0.5));
+    if (!open) return;
+    const btn = new Button(this, CARD_W / 2 - 52, CARD_H / 2 - 24, 'Buy', {
+      width: 84,
+      height: 40,
+      fontSize: 18,
+      color: afford ? 0xff9f43 : 0x6a6a7a,
+      onClick: () => this.buy(item, x, y),
+    });
+    btn.setName(`buy_${item.id}`);
+    c.add(btn);
+  }
+
+  private buy(item: StoreItem, x: number, y: number): void {
+    const s = loadSave();
+    if (devOn()) {
+      // dev mode: free purchases for testing — fund the purchase, buy, then restore the purse
+      const v = ensureVillage(s);
+      const keep = { coins: v.coins, glowsap: v.glowsap };
+      v.coins = v.glowsap = 1e9;
+      const r = buyItem(s, item.id);
+      v.coins = keep.coins;
+      v.glowsap = keep.glowsap;
+      if (!r.ok) return this.toast(r.reason ?? 'Cannot buy');
+    } else {
+      const r = buyItem(s, item.id);
+      if (!r.ok) {
+        sfx.click();
+        return this.toast(r.reason === 'Not enough resources' ? 'Not enough coins or glowsap' : (r.reason ?? 'Cannot buy'));
+      }
+    }
+    writeSave(s);
+    sfx.build();
+    this.burst.setParticleTint(item.color);
+    this.burst.explode(26, x, y);
+    this.burst.setParticleTint(0xffd060);
+    this.burst.explode(14, x, y);
+    const flash = this.add.rectangle(x, y, CARD_W, CARD_H, 0xffffff, 0.5).setDepth(40).setBlendMode(Phaser.BlendModes.ADD);
+    this.tweens.add({ targets: flash, alpha: 0, duration: 260, onComplete: () => flash.destroy() });
+    const rank = rankOf(s, item.id);
+    const pop = this.add.text(x, y - 40, `${item.name} ${rank}/${item.maxRank}`, textStyle(20, TEXT.gold)).setOrigin(0.5).setDepth(60);
+    this.tweens.add({ targets: pop, y: y - 90, alpha: 0, duration: 900, onComplete: () => pop.destroy() });
+    this.build();
+  }
+
+  private toast(msg: string): void {
+    const t = this.add.text(GAME_W / 2, GAME_H - 30, msg, textStyle(20, TEXT.heart)).setOrigin(0.5).setDepth(60);
+    this.tweens.add({ targets: t, alpha: 0, delay: 900, duration: 400, onComplete: () => t.destroy() });
+  }
+
+  private lockIcon(x: number, y: number): Phaser.GameObjects.Graphics {
+    const g = this.add.graphics();
+    g.lineStyle(4, 0xd8d0c0, 1);
+    g.beginPath();
+    g.arc(x, y - 6, 9, Math.PI, 0);
+    g.strokePath();
+    g.fillStyle(0xd8d0c0, 1);
+    g.fillRoundedRect(x - 13, y - 6, 26, 20, 4);
+    g.fillStyle(0x2a2238, 1);
+    g.fillCircle(x, y + 3, 3);
+    return g;
+  }
+
+  /** A code-drawn emblem for each upgrade, picked from its first effect. */
+  private icon(item: StoreItem, x: number, y: number): Phaser.GameObjects.Graphics {
+    const g = this.add.graphics();
+    g.fillStyle(0x000000, 0.25);
+    g.fillCircle(x + 2, y + 3, 34);
+    g.fillStyle(item.color, 1);
+    g.fillCircle(x, y, 34);
+    g.lineStyle(3, C.ink, 1);
+    g.strokeCircle(x, y, 34);
+    g.fillStyle(0xffffff, 0.25);
+    g.fillEllipse(x - 10, y - 14, 30, 14);
+    g.fillStyle(C.ink, 1);
+    g.lineStyle(4, C.ink, 1);
+    switch (item.effects[0].kind) {
+      case 'towerDamage': // crossed arrowheads
+        g.lineBetween(x - 16, y + 16, x + 14, y - 14);
+        g.fillTriangle(x + 18, y - 18, x + 6, y - 14, x + 14, y - 6);
+        g.lineBetween(x + 16, y + 16, x - 14, y - 14);
+        g.fillTriangle(x - 18, y - 18, x - 6, y - 14, x - 14, y - 6);
+        break;
+      case 'startCoins': // a stack of coins
+        for (let k = 0; k < 3; k++) {
+          g.fillStyle(0xffe08a, 1);
+          g.fillEllipse(x, y + 12 - k * 9, 34, 12);
+          g.strokeEllipse(x, y + 12 - k * 9, 34, 12);
+        }
+        break;
+      case 'heroHp': // a heart
+        g.fillStyle(0xff5d6a, 1);
+        g.fillCircle(x - 8, y - 4, 10);
+        g.fillCircle(x + 8, y - 4, 10);
+        g.fillTriangle(x - 18, y, x + 18, y, x, y + 20);
+        break;
+      case 'spellCd': // a four-point star
+        g.fillStyle(0xfff6c8, 1);
+        g.fillTriangle(x, y - 22, x - 6, y, x + 6, y);
+        g.fillTriangle(x, y + 22, x - 6, y, x + 6, y);
+        g.fillTriangle(x - 22, y, x, y - 6, x, y + 6);
+        g.fillTriangle(x + 22, y, x, y - 6, x, y + 6);
+        break;
+      case 'rangers': // a shield
+        g.fillStyle(0x6a8a4a, 1);
+        g.fillRoundedRect(x - 15, y - 18, 30, 22, 4);
+        g.fillTriangle(x - 15, y + 2, x + 15, y + 2, x, y + 20);
+        g.lineStyle(3, C.ink, 1);
+        g.lineBetween(x, y - 16, x, y + 16);
+        break;
+      case 'bounty': // a four-leaf charm
+        g.fillStyle(0x3a9a4a, 1);
+        for (const [dx, dy] of [[-8, -8], [8, -8], [-8, 8], [8, 8]]) g.fillCircle(x + dx, y + dy, 9);
+        g.fillStyle(C.ink, 1);
+        g.fillRect(x - 2, y + 8, 4, 14);
+        break;
+    }
+    return g;
+  }
+}

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **228** (next balance pass at iteration 230)
+Iteration counter: **229** (next balance pass at iteration 230)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1447,18 +1447,21 @@ Iteration counter: **228** (next balance pass at iteration 230)
   - Ranks are saved in `save.store`. BattleScene now uses `withStorePerks(battlePerks(village), save)`, and the battle banner reads "Bonuses: …" since it includes store upgrades.
   - Five new tests (258 total). Check: `scripts/store-perks-check.mjs` (a save with 5 Whetted, 3 War Chest, 2 Runes and 1 Stew gives ×1.2 tower damage, +90 coins, ×0.9 spell cooldown and ×1.06 hero health in battle; no console errors). Screenshot `screenshots/228.png`.
 
+- **Iteration 229**: **Keeper's Store, part 2 (the scene)**. `scenes/StoreScene.ts`, opened from a gold "Store" button on the main menu (left of Campaign) and under Campaign in the village. Back returns to wherever it was opened from.
+  - Lantern-lit dusk backdrop. Three tier rows (I Apprentice, II Journeyman, III Master), each with three cards: a code-drawn emblem (crossed arrowheads, coin stack, heart, star, shield or charm), the name, the per-rank effect, rank pips, the next price on its own line, and a Buy button.
+  - Locked tiers are dimmed with a padlock and "Buy N more ranks to open". Maxed items show gold "MAX".
+  - Buying bursts sparks in the item's colour plus gold, flashes the card, floats "Name r/max" and plays the build sound. Failures show a toast ("Not enough coins or glowsap").
+  - The village purse sits top-right. In dev mode purchases are free, a "Refund all" button clears ranks, and the purse shows ∞.
+  - First layout fix: the Buy button covered the price, so prices moved to their own "Next:" line and the rows were spaced out.
+  - Check: `scripts/store-check.mjs` (menu Store → buying Whetted Tips takes 5000 → 3800 coins and rank 2 → 3; no console errors). Screenshots `screenshots/229.png`, `229-menu.png` and `229-buy.png`. 258 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
-   hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
-   Part (a) is done (iteration 228). **Next: part (b), the Store scene**: a "Store" button on the main menu and in the village,
-   three tier rows (locked rows dimmed with "buy N more ranks to open"), item cards with art, the current/max rank as
-   pips, the next price and a Buy button, a coin burst and sound on purchase, and the village coin/glowsap totals at the top.
-2. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
+1. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 
 ## Known Bugs

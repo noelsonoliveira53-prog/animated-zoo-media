@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **242** (next balance pass at iteration 245)
+Iteration counter: **243** (next balance pass at iteration 245)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1545,13 +1545,25 @@ Iteration counter: **242** (next balance pass at iteration 245)
   - Spell buttons get a glassy highlight and a soft lower shade. The tithe and Moonhush warnings moved below the bar.
   - Three new tests (261 total). Screenshot `screenshots/242.png`.
 
+- **Iteration 243: enemy hit and death polish.**
+  - New `systems/deathStyle.ts` picks a death burst per enemy: flyers shed feathers, heavily armored foes crack into grey and colored shards, splitters, healers and feeders leave a slime splat on the road, and everyone else bursts into a smoke puff. Every death also gets a colored flash ring; sizes follow the enemy's size.
+  - `scenes/fx/DeathFx.ts` draws them: plain shapes, each destroyed by its own tween. Graphics: Low keeps only the ring.
+  - Big hits (at least 15% of a sturdy enemy's health) squash the sprite briefly and hold the white flash longer.
+  - Heavy kills (bosses and enemies with 1,500+ health) freeze the action for 70 ms (at most once every 0.7 s, never with Reduce Motion).
+  - Fix: the HUD counters and hit-stop state now reset at the start of each battle (scene instances are reused).
+  - Check `scripts/death-check.mjs` (six enemy kinds killed together, no leftover pieces, no console errors). Four new tests (265 total). Screenshot `screenshots/243.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Enemy hit and death polish: death puffs tinted by enemy type and a small hit-stop on big hits (boss fireworks were done in iteration 240).
+1. Village graphics pass: the shared lighting, soft building shadows, chimney smoke on houses and a gentle sway on trees.
+2. Spell effects upgrade: richer visuals for Starfall, Grove Call and Thornsnare (trails, ground scorch, vines growing in).
+3. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
+4. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
+5. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
 
 ## Known Bugs
 - (none known)

@@ -3,6 +3,8 @@ import { motion, shake } from '../ui/motion';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
+import { deathStyle, bigHit } from '../systems/deathStyle';
+import { playDeath } from './fx/DeathFx';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -38,6 +40,7 @@ interface EnemyView {
   mound: Phaser.GameObjects.Image | null;
   air: number; // 0 = on the ground, 1 = flying height (eases for swooping flyers)
   pulse: number; // brief scale bump (a Barkdrum thumping its drum), decays to 0
+  squash: number; // brief squash after a big hit, decays to 0
 }
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
@@ -73,6 +76,8 @@ export class BattleScene extends Phaser.Scene {
   private shownCoins = -1;
   private shownLives = -1;
   private shownWave = -1;
+  private hitStopUntil = 0;
+  private lastHitStop = -9999;
   private nextWaveBtn!: Button;
   private speedBtn!: Button;
   private pauseBtn!: Button;
@@ -1949,6 +1954,10 @@ export class BattleScene extends Phaser.Scene {
   // ---------- HUD ----------
 
   private buildHud(): void {
+    // scene instances are reused between battles, so reset per-battle HUD state here
+    this.shownCoins = this.shownLives = this.shownWave = -1;
+    this.hitStopUntil = 0;
+    this.lastHitStop = -9999;
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2691,7 +2700,7 @@ export class BattleScene extends Phaser.Scene {
   update(_time: number, deltaMs: number): void {
     const dt = Math.min(deltaMs / 1000, 0.1);
     if (devOn() && !this.ended) this.devTopUp();
-    if (!this.paused && !this.ended) this.sim.update(dt * this.speed);
+    if (!this.paused && !this.ended && this.time.now >= this.hitStopUntil) this.sim.update(dt * this.speed);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
     this.syncHero();
@@ -2785,7 +2794,9 @@ export class BattleScene extends Phaser.Scene {
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) {
           v.sprite.setTintFill(0xffffff);
-          this.time.delayedCall(60, () => v.sprite.active && v.sprite.clearTint());
+          const big = bigHit(ev.damage, ev.enemy.maxHp);
+          if (big && !motion.reduced) v.squash = 1;
+          this.time.delayedCall(big ? 90 : 60, () => v.sprite.active && v.sprite.clearTint());
         }
         this.floatText(ev.pos.x, ev.pos.y - 20, String(Math.round(ev.damage)), '#ffffff', 16);
         sfx.hit();
@@ -2806,7 +2817,16 @@ export class BattleScene extends Phaser.Scene {
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) this.killView(ev.enemy.uid, v);
         this.particles.setParticleTint(ev.enemy.def.color);
-        this.particles.explode(14, ev.enemy.pos.x, ev.enemy.pos.y);
+        this.particles.explode(motion.lowFx ? 8 : 10, ev.enemy.pos.x, ev.enemy.pos.y);
+        {
+          const st = deathStyle(ev.enemy.def);
+          playDeath(this, ev.enemy.pos.x, ev.enemy.pos.y, st, motion.lowFx);
+          // a heavy kill freezes the action for a heartbeat (throttled, never with Reduce Motion)
+          if (st.heavy && !motion.reduced && this.time.now - this.lastHitStop > 700) {
+            this.lastHitStop = this.time.now;
+            this.hitStopUntil = this.time.now + 70;
+          }
+        }
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, `+${ev.bounty}`, TEXT.gold, 18);
         sfx.kill();
         sfx.coin();
@@ -3517,7 +3537,7 @@ export class BattleScene extends Phaser.Scene {
       ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22)
       : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, 0.2);
     const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0 });
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0 });
   }
 
   private killView(uid: number, v: EnemyView): void {
@@ -3615,6 +3635,10 @@ export class BattleScene extends Phaser.Scene {
       const swell = (1 + e.fed * 0.08) * (1 + v.pulse); // fed Gorgegrubs visibly bulk up; drummers thump
       if (airborne) v.sprite.setScale(swell, swell * (1 + Math.sin(v.bob * 3) * 0.08));
       else v.sprite.setScale(swell * (1 + Math.sin(v.bob * 2) * 0.04), swell * (1 - Math.sin(v.bob * 2) * 0.04));
+      if (v.squash > 0) {
+        v.squash = Math.max(0, v.squash - dt * 7);
+        v.sprite.setScale(v.sprite.scaleX * (1 + v.squash * 0.28), v.sprite.scaleY * (1 - v.squash * 0.22));
+      }
       if (e.anchored) v.sprite.setTint(0xa8b4c4); // iron-grey while an Ironkeel holds anchor
       if (e.def.phase) v.sprite.setAlpha(e.phased ? 0.35 : 1); // a Mistfox thinning into fog
       else if (e.def.adapt) {

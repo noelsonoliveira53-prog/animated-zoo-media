@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **245** (next balance pass at iteration 250)
+Iteration counter: **246** (next balance pass at iteration 250)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1567,16 +1567,22 @@ Iteration counter: **245** (next balance pass at iteration 250)
   - Performance: `scripts/leak-check.mjs 95` with the new death bursts, squash and HUD. Tweens 68 → 68, timers 1 → 1, objects 154 → 212 by wave 5, so there is no leak and the per-death shapes are cleaned up.
   - Balance: a 13-level campaign sweep (4 seeds) and the store comparison (3 seeds). Nothing changed in the sim since iteration 230 and the curve still matches the targets, so nothing was tuned (see Balance Notes). 265 tests.
 
+- **Iteration 246: spell effects upgrade.** New `scenes/fx/SpellFx.ts`.
+  - **Starfall:** the falling star leaves a glowing ember trail, and a thin ring closes in on the target as it falls. On landing: a scorched patch with an orange glow that fades over about 4 s, eight light rays, a dust shockwave and rising embers (on top of the existing flash, shake and burst).
+  - **Grove Call:** three bushes pop up around the spot, a whirl of leaves flies out and a golden ring marks where the Rangers arrive.
+  - **Thornsnare:** a dark tangled patch spreads on the road and 13 thorny vines grow up one after another. The patch and vines stay for exactly as long as walkers are slowed (the spell's 3 s), then shrink away.
+  - Graphics: Low keeps the essentials (scorch, rings, fewer vines with no stagger, no trail, rays, embers, bushes or leaves).
+  - Check `scripts/spellfx-check.mjs` (casts all three, follows the sim's strike timer for the mid-fall and impact shots, no console errors, tweens settle). Screenshots `screenshots/246.png` (impact) and `246-star.png` (mid-fall). 265 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Spell effects upgrade: richer visuals for Starfall, Grove Call and Thornsnare (trails, ground scorch, vines growing in).
-2. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
-3. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
-4. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
+1. Hero skill effects: give each hero's active skill its own distinct burst and a charge-up glow when ready.
+2. Title and menu backdrop: an animated scene behind the main menu (drifting clouds, a tower silhouette, fireflies).
+3. Raid battle graphics pass: the same lighting and ground detail as the defense maps.
 
 ## Known Bugs
 - (none known)

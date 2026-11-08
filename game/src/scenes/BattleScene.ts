@@ -5,6 +5,7 @@ import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
 import { playDeath } from './fx/DeathFx';
+import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { distToSegment } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -63,7 +64,7 @@ export class BattleScene extends Phaser.Scene {
   private rallyMode: number | null = null; // slot whose rally point is being placed
   private spellMode: string | null = null; // spell waiting for a target tap
   private spellHud!: Phaser.GameObjects.Graphics;
-  private strikeViews = new Map<number, { star: Phaser.GameObjects.Image; mark: Phaser.GameObjects.Arc }>();
+  private strikeViews = new Map<number, { star: Phaser.GameObjects.Image; mark: Phaser.GameObjects.Arc; ring: Phaser.GameObjects.Arc }>();
   private reticle!: Phaser.GameObjects.Arc;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
   private slotViews: Phaser.GameObjects.Image[] = [];
@@ -2876,26 +2877,14 @@ export class BattleScene extends Phaser.Scene {
           sfx.waveHorn();
         } else if (def.kind === 'snare') {
           const r = def.radius ?? 90;
-          const ring = this.add.circle(ev.pos.x, ev.pos.y, r, 0x4a7a2a, 0.3).setStrokeStyle(5, 0x8fdc5a, 1).setDepth(2400).setScale(0.3);
-          this.tweens.add({ targets: ring, scale: 1, alpha: 0, duration: 600, ease: 'Back.easeOut', onComplete: () => ring.destroy() });
-          const vines = this.add.graphics().setDepth(2401);
-          for (let k = 0; k < 9; k++) {
-            const a = (k / 9) * Math.PI * 2;
-            const d = r * (0.3 + (k % 3) * 0.25);
-            const x = ev.pos.x + Math.cos(a) * d;
-            const y = ev.pos.y + Math.sin(a) * d * 0.6;
-            vines.fillStyle(0x3f7a2e, 1);
-            vines.fillTriangle(x - 5, y + 4, x + 5, y + 4, x, y - 16);
-            vines.fillStyle(0xd9e8a0, 1);
-            vines.fillTriangle(x - 1, y - 6, x + 3, y - 8, x + 1, y - 12);
-          }
-          this.tweens.add({ targets: vines, alpha: 0, delay: 2500, duration: 900, onComplete: () => vines.destroy() });
+          thornGrowth(this, ev.pos.x, ev.pos.y, r, def.slow?.duration ?? 3, motion.lowFx);
           this.particles.setParticleTint(0x6a9a3a);
           this.particles.explode(20, ev.pos.x, ev.pos.y);
           sfx.build();
         } else {
           this.particles.setParticleTint(0x8fdc5a);
-          this.particles.explode(24, ev.pos.x, ev.pos.y);
+          this.particles.explode(motion.lowFx ? 14 : 18, ev.pos.x, ev.pos.y);
+          groveBurst(this, ev.pos.x, ev.pos.y, motion.lowFx);
           this.floatText(ev.pos.x, ev.pos.y - 50, 'Rangers, to me!', TEXT.gold, 20);
           sfx.build();
         }
@@ -2905,7 +2894,9 @@ export class BattleScene extends Phaser.Scene {
         const sv = this.strikeViews.get(ev.uid);
         sv?.star.destroy();
         sv?.mark.destroy();
+        sv?.ring.destroy();
         this.strikeViews.delete(ev.uid);
+        starImpact(this, ev.pos.x, ev.pos.y, ev.radius, motion.lowFx);
         const ring = this.add.circle(ev.pos.x, ev.pos.y, ev.radius, 0xfff0a8, 0.4).setStrokeStyle(8, 0xffc93c, 1).setDepth(2400).setScale(0.2);
         this.tweens.add({ targets: ring, scale: 1.1, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
         this.particles.setParticleTint(0xffc93c);
@@ -3834,12 +3825,16 @@ export class BattleScene extends Phaser.Scene {
         const mark = this.add.circle(st.pos.x, st.pos.y, def.radius ?? 60, def.color, 0.15).setStrokeStyle(3, def.color, 0.9).setDepth(2300);
         this.tweens.add({ targets: mark, alpha: 0.4, yoyo: true, repeat: -1, duration: 150 });
         const star = this.add.image(st.pos.x + 260, -60, 'meteor').setDepth(4500).setScale(1.6);
-        v = { star, mark };
+        // a thin ring that closes in on the target as the star falls
+        const ring = this.add.circle(st.pos.x, st.pos.y, def.radius ?? 60, def.color, 0).setStrokeStyle(2, 0xfff0b0, 0.9).setDepth(2301).setScale(1.7);
+        v = { star, mark, ring };
         this.strikeViews.set(st.uid, v);
       }
       const t = 1 - Math.max(0, st.timer) / (def.delay ?? 1);
       const e = t * t; // ease-in fall
       v.star.setPosition(st.pos.x + 260 * (1 - e), -60 + (st.pos.y + 60) * e).setRotation(t * 6);
+      v.ring.setScale(1.7 - 0.7 * e).setAlpha(0.4 + 0.6 * t);
+      if (!this.paused) starTrail(this, v.star.x, v.star.y, motion.lowFx);
     }
   }
 

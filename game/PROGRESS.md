@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **194** (next balance pass at iteration 195)
+Iteration counter: **195** (next balance pass at iteration 200)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1265,6 +1265,8 @@ Iteration counter: **194** (next balance pass at iteration 195)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 195**: hero comparison on Wolds levels 107–109: Bramble, Fen, Ember, Wren and Hazel 100%, Sorrel 94% (she has
+the fewest lives, as her heals do little against tramples). The tightest spread yet, so no changes.
 **Iteration 194**: 109 Harvest Moon Barns (12 seeds): hpMult 1.65 → 75/25/0, 1.8 → 42/17/0. **1.5 → 100/67/0** (kept:
 the fourth-level band, though casual drops fast above it).
 **Iteration 193**: 108 Millrace Fields (12 seeds): hpMult 1.45 → 100/100/0, 1.55 → 100/92/0, 1.58 → 100/67/0,

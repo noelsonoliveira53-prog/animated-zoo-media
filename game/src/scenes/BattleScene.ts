@@ -58,6 +58,7 @@ export class BattleScene extends Phaser.Scene {
   private slotViews: Phaser.GameObjects.Image[] = [];
 
   private coinText!: Phaser.GameObjects.Text;
+  private titheText!: Phaser.GameObjects.Text; // shown while a Tithe Weasel skims the bounty
   private livesText!: Phaser.GameObjects.Text;
   private waveText!: Phaser.GameObjects.Text;
   private nextWaveBtn!: Button;
@@ -974,6 +975,7 @@ export class BattleScene extends Phaser.Scene {
     this.livesText = this.add.text(60, 37, '', textStyle(26, TEXT.heart)).setOrigin(0, 0.5).setDepth(3001);
     this.add.image(150, 37, 'icon_coin').setDepth(3001);
     this.coinText = this.add.text(170, 37, '', textStyle(26, TEXT.gold)).setOrigin(0, 0.5).setDepth(3001);
+    this.titheText = this.add.text(172, 60, '', textStyle(12, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
     this.add.image(290, 36, 'icon_wave').setDepth(3001);
     this.waveText = this.add.text(310, 37, '', textStyle(24)).setOrigin(0, 0.5).setDepth(3001);
 
@@ -1347,6 +1349,9 @@ export class BattleScene extends Phaser.Scene {
   private refreshHud(): void {
     this.livesText.setText(String(this.sim.lives));
     this.coinText.setText(String(this.sim.coins));
+    const cut = this.sim.titheCut();
+    this.titheText.setVisible(cut > 0);
+    if (cut > 0) this.titheText.setText(`Weasel tithe: kills pay -${Math.round(cut * 100)}%`);
     this.waveText.setText(`${Math.max(0, this.sim.waveIndex + 1)}/${this.endless ? '∞' : this.sim.totalWaves}`);
     if (this.sim.wavesRemaining && this.sim.isActive()) {
       const secs = Math.ceil(this.sim.waveCountdown);

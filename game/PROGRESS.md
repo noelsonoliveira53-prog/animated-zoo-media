@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **259** (next balance pass at iteration 260)
+Iteration counter: **260** (next balance pass at iteration 265)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1676,6 +1676,13 @@ Iteration counter: **259** (next balance pass at iteration 260)
   - Leak check on the storm map (level 56): tweens 32 → 76 and objects 128 → 392 by wave 5, tracking the busy wave plus a bounded amount of rain, not growing without limit.
   - Two new tests (270 total). `screenshots/259.png` is a montage of storm rain, dune sand, shroom spores and crystal sparkles.
 
+- **Iteration 260** (POLISH + BALANCE):
+  - Polish fix: on the Ending screen the buttons sat right against the lit panel's bottom edge; they and the hint line moved 16 px down. Checked with `scripts/ending-check.mjs`; screenshot `screenshots/260.png`.
+  - Balance: a hero comparison (expert strategy with each hero, levels 20/50/80/100/120, 6 seeds each): Ember 90%, Fen 87%, Wren 87%, Hazel 80%, Bramble 67%, Sorrel 67%.
+    - The melee/support pair trails by about 20%, the same shape as every earlier sweep (iterations 131 and 175: Bramble 63–77%, Sorrel 52–79%).
+    - The simple autoplayer never repositions heroes to use blocking or healing, and Sorrel was last tuned in iteration 175 after overshooting.
+    - So nothing changed; kept as a watch item (see Balance Notes). 270 tests.
+
 ## In Progress
 - (none)
 
@@ -2568,3 +2575,4 @@ Findings / follow-ups:
   - Store (3 seeds, none → maxed; expert/casual/novice): L5 100/67/100 → 100/100/100; L30 100/0/33 → 100/67/100; L60 67/33/0 → 100/100/0; L90 100/33/0 → 100/100/67; L120 67/33/0 → 100/100/100; L125 100/67/0 → 100/100/100. A maxed store is still a big long-term boost (about 70k coins and 52k glowsap); keep watching it, but no change.
 - **Iteration 250 sweeps:** raids (stars / % destroyed): Lodge 1: 1.8★ 67% / 0.3★ 23% / 0.1★ 17%; Lodge 2: 3.0★ / 1.7★ 67% / 0.6★ 34%; Lodge 3: 3.0★ / 3.0★ / 0.9★ 45% (with Mender 1.6★ 55%, with Moles 1.3★ 47%). Endless waves (expert/casual/novice): Mossgate 12.0/12.0/12.3, Murkmaw 11.7/11.7/17.7, Frostpeak 12.0/12.0/12.3, Duskcap 12.7/12.3/21.3.
 - **Iteration 255 sweep** (4 seeds; expert / casual / novice win %): L7 Icicle Crossing 100/75/0, L15 Heart of the Emberdeep 75/25/75, L25 Heart of the Orchard 75/50/0, L40 Heart of the Glimmerbog 75/50/0, L55 Heart of the Ruins 75/50/0, L70 Crown of the Reef 75/50/0, L85 Saltjaw's Grotto 100/75/0, L100 Shrine of a Thousand Lanterns 100/25/0, L110 The Great Barn 50/25/0 (10 seeds: 80/30/0), L115 The Rattling Spire 75/75/0.
+- **Iteration 260 hero sweep** (expert strategy, levels 20/50/80/100/120, 6 seeds; win %, avg lives): Ember 90 / 9.5, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7. Watch item: if a future sweep puts either below 60%, give Sorrel's sling +2 damage or Bramble's Earthshake +10% radius first.

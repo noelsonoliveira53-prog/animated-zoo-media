@@ -78,9 +78,9 @@ export class EndingScene extends Phaser.Scene {
     this.time.delayedCall(motion.reduced ? 0 : 1500, () => typewriter(this, body, full, { still: motion.reduced, cps: 40 }));
     this.time.delayedCall(800, () => sfx.victory());
     this.time.delayedCall(2400, () => {
-      new Button(this, GAME_W / 2 - 130, 380, 'Village', { width: 220, color: C.leaf, onClick: () => this.scene.start('Village') });
-      new Button(this, GAME_W / 2 + 130, 380, 'Main Menu', { width: 220, color: C.sky, onClick: () => this.scene.start('Menu') });
-      this.add.text(GAME_W / 2, 440, 'Replay levels for 3 stars, train your heroes, and grow your village.', textStyle(16, TEXT.cream, false)).setOrigin(0.5);
+      new Button(this, GAME_W / 2 - 130, 396, 'Village', { width: 220, color: C.leaf, onClick: () => this.scene.start('Village') });
+      new Button(this, GAME_W / 2 + 130, 396, 'Main Menu', { width: 220, color: C.sky, onClick: () => this.scene.start('Menu') });
+      this.add.text(GAME_W / 2, 456, 'Replay levels for 3 stars, train your heroes, and grow your village.', textStyle(16, TEXT.cream, false)).setOrigin(0.5);
     });
   }
 }

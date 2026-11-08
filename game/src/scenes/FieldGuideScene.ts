@@ -14,6 +14,8 @@ import { fitWidth, pf } from '../ui/touch';
 import { Button } from '../ui/Button';
 import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { motion } from '../ui/motion';
+import { drawParchment, portraitBacking } from './guide/Parchment';
 
 type Tab = 'enemies' | 'towers' | 'heroes' | 'spells' | 'raids';
 
@@ -33,6 +35,7 @@ export class FieldGuideScene extends Phaser.Scene {
   private tab: Tab = 'enemies';
   private page = 0;
   private grid: Phaser.GameObjects.Container | null = null;
+  private cardRings = new Map<string, Phaser.GameObjects.Graphics>(); // keyed by entry name
   private detail: Phaser.GameObjects.Container | null = null;
   private tabButtons: Record<string, Button> = {};
 
@@ -47,13 +50,14 @@ export class FieldGuideScene extends Phaser.Scene {
     const g = this.add.graphics();
     g.fillGradientStyle(0x22382a, 0x22382a, 0x10261b, 0x10261b, 1);
     g.fillRect(0, 0, GAME_W, GAME_H);
-    // parchment page
-    g.fillStyle(0xe8dcb8, 1);
-    g.fillRoundedRect(40, 90, GAME_W - 80, GAME_H - 120, 24);
-    g.lineStyle(4, 0x8a6a40, 1);
-    g.strokeRoundedRect(40, 90, GAME_W - 80, GAME_H - 120, 24);
-    g.lineStyle(2, 0xb59a6a, 1);
-    g.lineBetween(GAME_W / 2 + 70, 120, GAME_W / 2 + 70, GAME_H - 60);
+    // aged parchment page with torn edges, and the binding fold down the middle
+    drawParchment(this, 40, 90, GAME_W - 80, GAME_H - 120);
+    const fold = this.add.graphics();
+    fold.fillStyle(0x8a6a40, 0.12);
+    fold.fillRect(GAME_W / 2 + 62, 112, 16, GAME_H - 166);
+    fold.lineStyle(2, 0xb59a6a, 1);
+    fold.lineBetween(GAME_W / 2 + 70, 120, GAME_W / 2 + 70, GAME_H - 60);
+    motion.reduced = !!loadSave().settings.reduceMotion;
 
     this.add.text(400, 44, "Keeper's Field Guide", textStyle(32, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
@@ -271,10 +275,11 @@ export class FieldGuideScene extends Phaser.Scene {
     });
   }
 
-  private show(tab: Tab, page = 0): void {
+  private show(tab: Tab, page = 0, dir = 0): void {
     this.tab = tab;
     for (const [t, b] of Object.entries(this.tabButtons)) b.setColor(t === tab ? 0xff9f43 : C.leaf);
     this.grid?.destroy();
+    this.cardRings.clear();
     this.detail?.destroy();
     this.detail = null;
     const all = this.entries();
@@ -291,8 +296,8 @@ export class FieldGuideScene extends Phaser.Scene {
     const y0 = 130;
     const seen = all.filter((e) => !e.locked).length;
     if (pages > 1) {
-      const prev = new Button(this, 560, GAME_H - 58, '<', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + pages - 1) % pages) });
-      const next = new Button(this, 670, GAME_H - 58, '>', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + 1) % pages) });
+      const prev = new Button(this, 560, GAME_H - 58, '<', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + pages - 1) % pages, -1) });
+      const next = new Button(this, 670, GAME_H - 58, '>', { width: 48, height: 40, fontSize: 20, color: C.sky, onClick: () => this.show(tab, (this.page + 1) % pages, 1) });
       c.add([prev, next, this.add.text(615, GAME_H - 58, `${this.page + 1}/${pages}`, textStyle(18, '#5a4a32', false)).setOrigin(0.5).setStroke('#e8dcb8', 0).setName('guidePage')]);
     }
     c.add(this.add.text(x0, GAME_H - 66, tab === 'enemies' ? `Discovered ${seen} / ${all.length}` : `${all.length} entries`, textStyle(16, '#5a4a32', false)).setStroke('#e8dcb8', 0));
@@ -303,9 +308,18 @@ export class FieldGuideScene extends Phaser.Scene {
       const x = x0 + (i % cols) * cell + cell / 2;
       const y = y0 + Math.floor(i / cols) * (tab === 'towers' ? 96 : cell) + cell / 2 - 10;
       const bg = this.add.graphics();
+      bg.fillStyle(0xc4b088, 0.6);
+      bg.fillRoundedRect(x - cell / 2 + 7, y - 39, cell - 10, 84, 12);
       bg.fillStyle(0xd4c49c, 1);
       bg.fillRoundedRect(x - cell / 2 + 5, y - 42, cell - 10, 84, 12);
+      bg.fillStyle(0xffffff, 0.12);
+      bg.fillRoundedRect(x - cell / 2 + 8, y - 39, cell - 16, 26, 9);
       c.add(bg);
+      const ring = this.add.graphics().setVisible(false);
+      ring.lineStyle(3, 0x8a4a1a, 1);
+      ring.strokeRoundedRect(x - cell / 2 + 4, y - 43, cell - 8, 86, 13);
+      c.add(ring);
+      this.cardRings.set(e.name, ring);
       const img = this.add.image(x, y, e.texture);
       img.setScale(Math.min(tab === 'raids' ? 2 : 1, 64 / Math.max(img.width, img.height))); // small troop sprites may grow
       if (e.locked) img.setTintFill(0x5a4a32);
@@ -319,20 +333,34 @@ export class FieldGuideScene extends Phaser.Scene {
       });
       c.add(hit);
     });
+    // page turn: the card grid slides in from the side you paged toward
+    if (dir !== 0 && !motion.reduced) {
+      c.x = dir * 60;
+      c.alpha = 0;
+      this.tweens.add({ targets: c, x: 0, alpha: 1, duration: 220, ease: 'Cubic.easeOut' });
+    }
     const first = list.find((e) => !e.locked);
     if (first) this.showDetail(first);
   }
 
   private showDetail(e: Entry): void {
     this.detail?.destroy();
+    for (const [k, r] of this.cardRings) r.setVisible(k === e.name);
     const x = GAME_W / 2 + 110;
     const c = this.add.container(0, 0);
     this.detail = c;
+    // the right-hand page eases in like a turned leaf
+    if (!motion.reduced) {
+      c.x = 24;
+      c.alpha = 0;
+      this.tweens.add({ targets: c, x: 0, alpha: 1, duration: 200, ease: 'Cubic.easeOut' });
+    }
     if (e.locked) {
       c.add(this.add.text(x, 150, '???', textStyle(34, '#5a4a32')).setStroke('#e8dcb8', 0));
       c.add(this.add.text(x, 210, 'Not met yet. Face it in battle to fill in this page.', { ...textStyle(18, '#5a4a32', false), wordWrap: { width: 470 } }).setStroke('#e8dcb8', 0));
       return;
     }
+    c.add(portraitBacking(this, x + 60, 258, 74));
     const img = this.add.image(x + 60, 262, e.texture);
     img.setScale(Math.min(2.2, 130 / Math.max(img.width, img.height)));
     this.tweens.add({ targets: img, y: 254, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });

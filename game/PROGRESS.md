@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **255** (next balance pass at iteration 260)
+Iteration counter: **256** (next balance pass at iteration 260)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1641,14 +1641,20 @@ Iteration counter: **255** (next balance pass at iteration 260)
   - Polish fix: the "+1 Swiftbloom" note on the victory panel sat against the panel's inner border; moved 16 px in.
   - Balance: a 10-level mid/late campaign sweep (4 seeds) over levels not covered in iteration 245. The Great Barn (110) dipped to an expert 50%, but a 10-seed re-run gives 80/30/0, in line with its iteration-196 tuning (hpMult 1.65), so nothing changed. Everything else sits at expert 75–100% (see Balance Notes). 267 tests.
 
+- **Iteration 256: Field Guide polish.** New `scenes/guide/Parchment.ts`:
+  - **Parchment:** the page is now aged paper with a torn (deckled) outline, a burnt rim fading inward, warm stains, faint mug rings, fibres, speckles, corner curl shadows and a drop shadow. A soft fold shadow runs down the binding.
+  - **Cards:** a lifted shadow and a light top gloss. The selected entry gets a rust-brown outline (keyed by name, so it also works when an entry is opened from code).
+  - **Portrait:** the bobbing portrait (it already had an idle bob) now sits on an ink-wash disc with a ground shadow.
+  - **Page turns:** the detail page eases in from the right when you pick an entry, and the card grid slides in from the side you paged toward. Both are off with Reduce Motion, which the guide now reads itself.
+  - All six guide checks pass (`guide-boss`, `guide-paging`, `guide-spells`, `guide-raids`, `guide-lastpage`, `phone-guide`), and long boss pages still fit. Screenshot `screenshots/256.png`. 267 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Field Guide polish: animated portraits (idle bob), a parchment texture with torn edges, and a page-turn slide between entries.
-2. Settings and Achievements screens: the same glossy panels and lighting as the store, plus a trophy shine on unlocked achievements.
+1. Settings and Achievements screens: the same glossy panels and lighting as the store, plus a trophy shine on unlocked achievements.
 
 ## Known Bugs
 - (none known)

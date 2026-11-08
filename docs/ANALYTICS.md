@@ -1,5 +1,58 @@
 # Views check log (newest first)
 
+## 2026-11-08 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
+| Channel | Video | Type | Published | Views (yday) | Impr. | CTR | Avg view | % viewed | Likes |
+|---|---|---|---|---|---|---|---|---|---|
+| Animated Zoo | Amazing Animal Bodies for Kids! 5 Surprise Facts with Milo (4:58) | 2D episode | Nov 5 | 543 (519) | 15,811 | 2.7% | 0:25 | 8.7% | 0 |
+| Animated Zoo | Savanna Animals for Kids! Meet 5 Zoo Friends with Milo (5:08) | 2D episode | Nov 2 | 505 (444) | 11,426 | **3.8%** | 0:28 | 9.2% | 0 |
+| Animated Zoo | Safari Animals Song for Kids! Roar and Stomp with Milo (3:01) | 3D song | Nov 6 | 491 (494) | 22,561 | 2.0% | 0:27 | 15.2% | 0 |
+| Animated Zoo | **What Do Animals Eat? Safari Song for Kids with Milo (2:51)** | **3D song** | Nov 7 | **483 (new)** | **17,945** | **2.6%** | 0:24 | 14.5% | 1 |
+| Animated Zoo | Ocean & Ice Animals for Kids! 5 Surprise Facts with Milo (5:11) | 2D episode | Nov 3 | 312 (270) | 16,353 | 1.5% | **0:47** | 15.3% | 1 |
+| Animated Zoo | Treetop Animals for Kids! 5 Zoo Friends with Milo (5:02) | 2D episode | Nov 4 | 221 (192) | 11,787 | 1.5% | 0:32 | 10.9% | 2 |
+| Animated Zoo | Desert Animals for Kids! 5 Sunny Friends with Milo (5:20) | 2D episode | Nov 7 | 110 (new) | 3,204 | 3.0% | 0:23 | 7.2% | — |
+| Animated Zoo | Baby Animals for Kids! Meet 5 Zoo Babies with Milo (5:11) | 2D episode | Nov 6 | 103 (5) | 2,437 | 3.6% | 0:34 | 11.1% | 2 |
+| Animated Zoo | Old songs "Sing, Dance, Giggle" / "Toddler Dance Craze" | old songs | Mar 2025 | 31 / 23 | 205 / 291 | 5.9% / 2.8% | 0:30 | 15.2% / 12.5% | 0 |
+| Animated Zoo | 33 Shorts + old ep01 (best: Zebras 96, Flamingos 85, Octopus 66) | Short | Nov 1-4 | 0-96 each | 6-150 | 0-6.6% | 0:04-2:04 | 17-565% | 0-2 |
+| Bloop's Color Lab | Learn Colors for Kids! Red, Blue, Yellow and More with Bloop (4:34) | 2D episode | Nov 4 | 58 (57) | 2,201 | 2.0% | 0:32 | 11.8% | 0 |
+| Bloop's Color Lab | Colors Song for Kids! Learn Colors with Bloop (3D v3) (2:31) | 3D song | Nov 6 | **53 (32)** | 2,730 | 1.5% | 0:23 | 15.5% | 0 |
+| Bloop's Color Lab | Colors Song (3D v1, private) / Bloop Turns Blue! (airs Nov 8) | 3D song | Nov 5 / 8 | 5 / 1 | 6 / 0 | — | 0:35 / 0:22 | 20.6% / 14.9% | 0 |
+| Gizmo Explains | Planets for Kids! 5 Space Surprises with Gizmo (5:04) | 2D episode | Nov 4 | 10 (10) | 321 | 1.6% | 0:22 | 7.4% | 0 |
+| Gizmo Explains | The Planets Song / Weather Song (3D) | 3D song | Nov 6 / 7 | 6 (6) / 1 (0) | 242 / 5 | 0.8% / 0% | 0:40 / 0:32 | 21.9% / 19.6% | 0 |
+| Moonbeam Bedtime | Time for Bed Song for Kids! Bedtime Routine with Luna (2:51) | 3D song | Nov 6 | 7 (3) | 274 | 1.5% | 0:30 | 18.1% | 0 |
+| Moonbeam Bedtime | Goodnight 5 Sleepy Animals 🌙 (2D) / Count the Stars 🌙 (3D) | 2D / 3D | Nov 4 / 7 | 5 / 1 | 57 / 3 | 5.3% / 0% | 0:13 / 0:10 | 4.6% / 6.3% | 0 |
+| Fruity Friends | Yummy Fruits / Banana Dance! / Five Little Grapes (3D) + 1 Short | 3D song | Nov 5-8 | 1 each | 0-14 | 0% | 0:04-0:49 | 3-24% | 0 |
+| Tiny Truck Town | Fire Truck Song / Red Means Stop! (3D) + 5 Shorts | 3D / Short | Nov 4-7 | 0-2 each | 2-34 | 0-10% | 0:05-0:34 | 16-71% | 0 |
+
+Network total: 3,378 lifetime views (+1,158 since Nov 7), about 110,000 impressions. The Animated Zoo is 95% of views and 94% of impressions.
+Change since yesterday: the second Zoo 3D song, "What Do Animals Eat?", opened with 483 views on 17,945 impressions at **2.6% CTR, 30% better
+than the plain-titled Safari Song (2.0%)**. The Safari Song did not grow on day 2 (494 -> 491; YouTube's lifetime count and impressions were
+revised down slightly), while every 2D Zoo episode kept compounding (+24 to +98 a day). Bloop's Colors Song +21 (CTR 1.1% -> 1.5%).
+Truck, Gizmo, Moonbeam and Fruity are still under 650 impressions each.
+
+Uploaded today (all scheduled, made for kids, 4K, trailing auto-transcribed lyric junk trimmed from descriptions): Truck "Wheels on the Fire Truck!"
+PRofXrs4TIA (Nov 8 1:40 PM), Gizmo "Sink or Float?" vqGEuVjyLZA (Nov 8 2:10 PM, custom thumb), Zoo "Animal Sounds Song" yjrj2-moCUY
+(Nov 8 4:00 PM, custom thumb), Moonbeam "Count the Sleepy Sheep 🌙" NNztmD-gh5M (Nov 8 7:00 PM), Bloop "Red + Yellow = Orange?!" vfs-2gBC9ig
+(Nov 9 1:50 PM, custom thumb), Fruity "Yes Yes Fruit Salad" IIRDgaLXeT8 (Nov 9 2:20 PM).
+
+What's winning
+- **Question titles beat plain song titles on the Zoo:** "What Do Animals Eat?" 2.6% CTR vs "Safari Animals Song for Kids!" 2.0%, both on 18-23k impressions.
+  The best CTRs in the network are still the "Meet 5 ..." 2D titles (Savanna 3.8%, Zoo Babies 3.6%) and Desert "5 Sunny Friends" (3.0%).
+- **Every format loses kids at about 0:25.** Average view is 0:23-0:28 for 3D songs and 5-minute 2D episodes alike (Ocean & Ice 0:47 is the
+  only outlier). Shorter songs show a higher % viewed (14-16% vs 7-11%) only because they're shorter. The first 25 seconds decide everything.
+- **2D episodes compound, 3D songs spike:** the 2D Zoo episodes all gained views again today; the first 3D song flat-lined on day 2. One data point,
+  so re-check on Nov 9 before changing the format.
+- Bloop's Colors Song is catching up with its 2D episode (53 vs 58 views), so color songs work on Bloop.
+
+What to do more of
+- Question or "Meet 5 <friendly noun>" titles on every Zoo song (never the plain "<Topic> Song for Kids!" pattern).
+- A second payoff by 0:20-0:25 (the action break or a "Can you roar?" call-and-response), so kids who stay for the chorus get a reason to keep going.
+- Colors series on Bloop (Blue, Green, mixing); habitat and animal-sound songs on the Zoo.
+
+What to do less of
+- Plain "<Topic> Song for Kids! ... with <Host>" titles (2.0% Zoo, 0.8% Gizmo).
+- Space/planet songs on Gizmo (0.8% CTR, 6 views in 2 days).
+- Leaving auto-transcription fragments in plan descriptions (the gz3d_ep03 draft ended with "Type Subscribe", which breaks the no-subscribe-nag rule; trimmed before upload).
+
 ## 2026-11-07 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day)
 | Channel | Video | Type | Published | Views (yday) | Impr. | CTR | Avg view | % viewed | Likes |
 |---|---|---|---|---|---|---|---|---|---|

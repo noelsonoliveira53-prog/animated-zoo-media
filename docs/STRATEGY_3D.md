@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v3, Nov 7, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v4, Nov 8, 2026). The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -94,6 +94,25 @@
 - **Topics:** Zoo next = Baby Animals song ("Meet 5 Zoo Babies", the 2D babies episode holds 1:13 / 23.7%), then Ocean Animals song, then Animal Sounds.
   Gizmo: pause planets/space songs (0.8% CTR); do weather, body, "Why Is the Sky Blue?", "Sink or Float?".
 - **Posting times:** still no clear signal; keep the slots one more week (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
+
+## Adjustments from the Nov 8 views check (second Zoo 3D song: "What Do Animals Eat?", 483 views / 17,945 impressions)
+- **Titles (confirmed): question / "Meet 5" only on the Zoo.** "What Do Animals Eat?" got 2.6% CTR vs 2.0% for the plain "Safari Animals Song
+  for Kids!" on similar reach (18k vs 23k impressions), +30%. The 2D "Meet 5 Zoo Friends" (3.8%) and "Meet 5 Zoo Babies" (3.6%) are still the best.
+  Every Zoo title must open with a question ("What Does the Lion Say?", "Where Is My Mama?") or "Meet 5 <friendly noun>!". Next Ocean song title:
+  "Meet 5 Ocean Friends! Ocean Animals Song for Kids". The plain "<Topic> Song for Kids! ... with <Host>" pattern is retired on every channel.
+- **The 0:25 wall (new structure rule).** Average view is 0:23-0:28 on 3D songs AND 5-minute 2D episodes. Kids decide in the first 25 s, whatever
+  the length. Restructure every new song as: chorus line + host close-up by 0:03 -> title payoff by 0:08 -> **action break or call-and-response
+  ("Can you roar? ROAR!") at 0:15-0:25** -> verse 1. Move the action break from mid-song to right after the first chorus; repeat it near the end.
+- **Length:** keep 2:15-2:45. Shorter songs show a higher % viewed only because they are shorter; do not add verses until average view passes 0:40.
+- **Day-2 watch item:** the first Zoo song (Safari) did not grow on day 2 (494 -> 491) while every 2D Zoo episode kept gaining (+24 to +98 a day).
+  If "What Do Animals Eat?" also stalls on Nov 9, songs are spiking on browse/new-video reach and not becoming evergreen: then give each Zoo song a
+  multi-animal "Meet 5" thumbnail like the 2D episodes (the CTR leaders) and add a matching end screen to the next song.
+- **Bloop:** the Colors Song is catching its 2D episode (53 vs 58 views, CTR 1.1% -> 1.5%). Keep the color series (Blue -> Green -> mixing).
+- **Gizmo:** still no space/planet songs (0.8% CTR). Weather, Sink or Float, Sky Blue and Rainbow are queued.
+- **Descriptions:** strip auto-transcribed lyric fragments after the last real lyric line before the plan is committed (gz3d_ep03's draft ended
+  in "Type Subscribe", which breaks the kids rule). The morning run trims anything after the final "Bye-bye / Goodnight / See you" line.
+- **Posting times:** still no signal (sister channels under 650 impressions each). Keep the slots through Nov 11 (Truck 1:40, Bloop 1:50,
+  Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
 
 ## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)
 Data: docs/research/collected.json + swipe.txt (Cocomelon, Super Simple, Pinkfong, Little Angel, ChuChu TV, Morphle).

@@ -1,0 +1,250 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nGoodnight moon and goodnight stars,\nGoodnight sky, near and far,\nGoodnight room, so warm and still,\nGoodnight trees upon the hill.\n\n[Verse 1]\nGoodnight lamp, it's time to rest,\nGoodnight teddy, you're the best,\nGoodnight window, goodnight door,\nGoodnight toys upon the floor.\n\n[Chorus]\nGoodnight moon and goodnight stars,\nGoodnight sky, near and far,\nGoodnight room, so warm and still,\nGoodnight trees upon the hill.\n\n[Verse 2]\nGoodnight Bunny, snuggled tight,\nGoodnight Lamb, sleep well tonight,\nGoodnight Owl up in the tree,\nGoodnight, goodnight, from you and me.\n\n[Bridge]\nBreathe in slow, the day is done,\nBreathe out soft, goodnight sun,\nClose your eyes and rest your head,\nCozy, cozy in your bed.\n\n[Verse 3]\nGoodnight Mommy, goodnight Dad,\nThank you for the day we had,\nTomorrow brings a brand new day,\nBut now it's time to drift away.\n\n[Chorus]\nGoodnight moon and goodnight stars,\nGoodnight sky, near and far,\nGoodnight room, so warm and still,\nGoodnight trees upon the hill.\n\n[Outro]\nGoodnight, goodnight. Sweet dreams.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 806,
+ "who_map": {},
+ "meta": {
+  "title": "Goodnight Everything \ud83c\udf19 Calm Bedtime Lullaby | Moonbeam",
+  "card": "Goodnight Everything",
+  "thumb_text": "GOODNIGHT",
+  "description": "A calm bedtime lullaby where Luna, Bunny and Lamb say goodnight to the moon, the stars, the lamp, the toys and everyone they love.\nA slow breathing break helps little ones settle down and drift off to sleep. For babies and toddlers.",
+  "tags": [
+   "goodnight song",
+   "bedtime lullaby",
+   "lullaby for babies",
+   "sleep music for kids",
+   "calming bedtime song",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep10",
+  "title": "Goodnight Everything",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Goodnight",
+      "color": "#ffd88a",
+      "at": "top",
+      "size": 0.55
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "delay": 2
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "teddy,"
+     },
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "left",
+      "word": "rest,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "numstar",
+      "at": "left",
+      "word": "stars,",
+      "opts": {
+       "size": 0.4
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "Bunny,"
+     },
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "left",
+      "word": "Owl"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "Breathe"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "Thank"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "dreams."
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

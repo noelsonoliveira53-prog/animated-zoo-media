@@ -1,0 +1,320 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nWash, wash, truck wash, splish, splash, splosh!\nBubbles and suds, it's time to wash!\nScrub, scrub, rinse and shine,\nClean trucks looking fine!\n\n[Verse 1]\nMuddy wheels from a muddy road,\nBolt the fire truck had a heavy load!\nInto the truck wash, here we go,\nWater spraying, to and fro!\n\n[Chorus]\nWash, wash, truck wash, splish, splash, splosh!\nBubbles and suds, it's time to wash!\nScrub, scrub, rinse and shine,\nClean trucks looking fine!\n\n[Verse 2]\nBig round brushes spinning around,\nSwish, swish, swish, what a sound!\nSoap on the windows, soap on the door,\nBubbles on the roof and on the floor!\n\n[Bridge]\nScrub your arms, scrub, scrub, scrub!\nRinse your hands, rub, rub, rub!\nShake it dry, shake, shake, shake,\nShiny and clean, no mistake!\n\n[Verse 3]\nOut comes Bolt, shiny and red,\nSparkly bright from wheels to head!\nHonk, honk, thank you, truck wash crew,\nNow my trucks look good as new!\n\n[Chorus]\nWash, wash, truck wash, splish, splash, splosh!\nBubbles and suds, it's time to wash!\nScrub, scrub, rinse and shine,\nClean trucks looking fine!\n\n[Outro]\nSplish, splash! Bye-bye, trucks!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 812,
+ "who_map": {},
+ "meta": {
+  "title": "Truck Wash Song! Splish Splash Trucks | Tiny Truck Town",
+  "card": "Truck Wash Song!",
+  "thumb_text": "TRUCK WASH!",
+  "description": "Splish, splash, splosh! After a muddy day, Bolt the fire truck and friends go through the truck wash: water sprays, big brushes spin and bubbles cover everything.\nKids scrub, rinse and shake dry along with the trucks. Ages 2-5.",
+  "tags": [
+   "truck wash song",
+   "car wash song for kids",
+   "fire truck song",
+   "trucks for kids",
+   "bath song",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep10",
+  "title": "Truck Wash Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPLISH SPLASH!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     },
+     {
+      "type": "set_prop",
+      "name": "water",
+      "at": [
+       0,
+       1.6,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "MUDDY!",
+      "color": "#8a5a32",
+      "at": [
+       -2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "Muddy"
+     },
+     {
+      "type": "set_prop",
+      "name": "water",
+      "at": [
+       2.8,
+       1.6,
+       3.6
+      ],
+      "word": "spraying,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SCRUB!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7,
+      "word": "Swish,"
+     },
+     {
+      "type": "text",
+      "text": "BUBBLES!",
+      "color": "#7fd3ff",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "Bubbles"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "SCRUB!",
+      "color": "#3b8be0",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Scrub"
+     },
+     {
+      "type": "text",
+      "text": "RINSE!",
+      "color": "#7fd3ff",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Rinse"
+     },
+     {
+      "type": "text",
+      "text": "SHAKE!",
+      "color": "#ffc107",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "Shake"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "SHINY!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7,
+      "word": "shiny"
+     },
+     {
+      "type": "text",
+      "text": "THANK YOU!",
+      "color": "#e8302a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "thank"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPLISH SPLASH!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

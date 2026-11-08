@@ -1,0 +1,329 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nMake a smoothie, whirr, whirr, whirr!\nFruit goes in and round they stir!\nBlend it up, pour it out,\nSmoothie time, let's sing and shout!\n\n[Verse 1]\nIn goes banana, peel it first,\nIn go berries, ready to burst!\nA splash of milk, a spoon of yogurt,\nSmoothie, smoothie, here's the best part!\n\n[Chorus]\nMake a smoothie, whirr, whirr, whirr!\nFruit goes in and round they stir!\nBlend it up, pour it out,\nSmoothie time, let's sing and shout!\n\n[Verse 2]\nStrawberry pink and mango gold,\nBlend it smooth and nice and cold!\nAsk a grown-up to press the button,\nSafety first, now watch it spin!\n\n[Bridge]\nSpin around like a blender, whirr!\nShake your hips, give it a stir!\nPour it slowly, glug, glug, glug,\nTake a sip from your smoothie mug!\n\n[Verse 3]\nFruit gives energy to run and play,\nA healthy snack for any day!\nShare your smoothie with a friend,\nYummy, yummy, to the end!\n\n[Chorus]\nMake a smoothie, whirr, whirr, whirr!\nFruit goes in and round they stir!\nBlend it up, pour it out,\nSmoothie time, let's sing and shout!\n\n[Outro]\nWhirr, whirr, whirr! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 822,
+ "who_map": {},
+ "meta": {
+  "title": "Make a Smoothie Song! Healthy Snack | Fruity Friends",
+  "card": "Make a Smoothie!",
+  "thumb_text": "SMOOTHIE TIME!",
+  "description": "Whirr, whirr, whirr! The Fruity Friends make a smoothie: in go bananas, berries, mango, milk and yogurt, then a grown-up presses the blender button.\nKids spin like a blender, pour it slowly and learn that fruit gives energy to play. Ages 2-5.",
+  "tags": [
+   "smoothie song",
+   "healthy snack song",
+   "fruit song for kids",
+   "healthy eating",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep11",
+  "title": "Make a Smoothie!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "WHIRR!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "banana,",
+      "opts": {
+       "kind": "banana"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "berries,",
+      "opts": {
+       "kind": "strawberry"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "BLEND IT!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "Strawberry",
+      "opts": {
+       "kind": "strawberry"
+      }
+     },
+     {
+      "type": "text",
+      "text": "ASK A GROWN-UP!",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.5,
+      "word": "grown-up"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPIN!",
+      "color": "#ff5c8a",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Spin"
+     },
+     {
+      "type": "text",
+      "text": "SHAKE!",
+      "color": "#ff8a1f",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Shake"
+     },
+     {
+      "type": "text",
+      "text": "GLUG GLUG!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "glug,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "ENERGY!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7,
+      "word": "energy"
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       0,
+       1.8,
+       3.4
+      ],
+      "word": "Share"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "WHIRR!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep11",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

@@ -1,0 +1,284 @@
+{
+ "style": "upbeat preschool kids electro pop sing-along, cheerful playful male vocal, clear diction, bright synths, bleepy robot sounds, handclaps, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBoom, boom, my heart goes boom!\nPumping blood in every room!\nThump, thump, all day long,\nMy heart is beating, big and strong!\n\n[Verse 1]\nPut your hand upon your chest,\nFeel the beat, it never rests!\nYour heart's about the size of your fist,\nA super pump that can't be missed!\n\n[Chorus]\nBoom, boom, my heart goes boom!\nPumping blood in every room!\nThump, thump, all day long,\nMy heart is beating, big and strong!\n\n[Verse 2]\nBlood goes round from head to toes,\nUp and down your body it flows!\nIt carries air your body needs,\nThat's how your heart helps you succeed!\n\n[Bridge]\nJump, jump, jump up high!\nFeel your heart beat fast, oh my!\nNow sit down and breathe so slow,\nYour heartbeat slows down, now you know!\n\n[Verse 3]\nHealthy food and lots of play,\nKeep your heart strong every day!\nRunning, dancing, jumping too,\nA happy heart is good for you!\n\n[Chorus]\nBoom, boom, my heart goes boom!\nPumping blood in every room!\nThump, thump, all day long,\nMy heart is beating, big and strong!\n\n[Outro]\nBoom, boom! Bye-bye, friends!",
+ "duration": 165,
+ "bpm": 118,
+ "key": "E Major",
+ "seed": 809,
+ "who_map": {},
+ "meta": {
+  "title": "How Does Your Heart Work? Body Song for Kids with Gizmo",
+  "card": "Your Heart!",
+  "thumb_text": "BOOM BOOM HEART!",
+  "description": "Boom, boom! Gizmo the robot explains the heart: it's about the size of your fist and pumps blood from your head to your toes, carrying the air your body needs.\nKids feel their heartbeat, jump to make it go fast, sit to slow it down and learn that play and healthy food keep the heart strong. Ages 3-6.",
+  "tags": [
+   "heart song for kids",
+   "human body song",
+   "how the heart works",
+   "science song for kids",
+   "body parts",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "gz3d_ep10",
+  "title": "Your Heart!",
+  "channel": "gizmo",
+  "set": "sciencelab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "char": "gizmo",
+    "spot": "left",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    },
+    "yaw": 0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "close:host",
+     "wide",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BOOM BOOM!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       -3.0,
+       1.4,
+       3.6
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "FEEL THE BEAT!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.6,
+      "word": "Feel"
+     },
+     {
+      "type": "text",
+      "text": "FIST SIZE!",
+      "color": "#ff8a1f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "fist,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "THUMP THUMP!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "wide",
+     "close:host",
+     "close:pal",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "HEAD TO TOES!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.6,
+      "word": "toes,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.8,
+      "word": "Jump,"
+     },
+     {
+      "type": "text",
+      "text": "FAST!",
+      "color": "#e53935",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "fast,"
+     },
+     {
+      "type": "text",
+      "text": "SLOW...",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "slow,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:pal"
+    ],
+    "energy": 0.9,
+    "jump": 0.2,
+    "props": [
+     {
+      "type": "text",
+      "text": "PLAY!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "play,"
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       3.0,
+       1.4,
+       3.6
+      ],
+      "word": "happy"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BOOM BOOM!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "gz3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

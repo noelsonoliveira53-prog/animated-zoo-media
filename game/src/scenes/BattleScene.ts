@@ -19,6 +19,7 @@ import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/B
 import { sfx } from '../systems/audio';
 import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
+import { withStorePerks } from '../systems/store';
 import { DEV_COINS, DEV_LIVES, devOn } from '../systems/dev';
 import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, grantSwiftbloom, type BattlePerks } from '../systems/village';
@@ -111,7 +112,7 @@ export class BattleScene extends Phaser.Scene {
     const save = loadSave();
     motion.reduced = !!save.settings.reduceMotion;
     motion.lowFx = !!save.settings.fxLow;
-    this.perks = battlePerks(save.village);
+    this.perks = withStorePerks(battlePerks(save.village), save);
     this.sim = new BattleSim(this.level, save.hero, {
       ...this.perks,
       heroLevel: 1 + (save.heroRanks[save.hero] ?? 0),
@@ -242,7 +243,7 @@ export class BattleScene extends Phaser.Scene {
       const pay = mutatorReward(this.mutator);
       this.showBanner(`Endless: ${this.level.name}`, `Today's mutator: ${this.mutator.name} (${this.mutator.text})${pay > 1 ? ` • payout ×${pay}` : ''}`);
     } else {
-      this.showBanner(this.level.name, bonus.length ? `Village bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
+      this.showBanner(this.level.name, bonus.length ? `Bonuses: ${bonus.join(' • ')}` : 'Build outposts on the stone pads, then call the first wave!');
     }
   }
 

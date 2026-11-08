@@ -15,6 +15,7 @@ export interface SaveData {
   achievements: string[]; // unlocked achievement ids
   dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
   endlessBest: Record<string, number>; // level id → most endless waves held
+  store?: Record<string, number>; // Keeper's Store item id → ranks bought
   settings: { volume: number; muted: boolean; music: boolean; reduceMotion?: boolean; dev?: boolean; fxLow?: boolean };
 }
 
@@ -58,6 +59,7 @@ export function loadSave(store: StorageLike | null = storage()): SaveData {
       achievements: Array.isArray(parsed.achievements) ? parsed.achievements.filter((x) => typeof x === 'string') : [],
       dailyDone: typeof parsed.dailyDone === 'string' ? parsed.dailyDone : '',
       endlessBest: { ...(parsed.endlessBest ?? {}) },
+      store: { ...(parsed.store ?? {}) },
       settings: { ...base.settings, ...(parsed.settings ?? {}) },
     };
   } catch {

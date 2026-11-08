@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **227** (next balance pass at iteration 230)
+Iteration counter: **228** (next balance pass at iteration 230)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1427,6 +1427,26 @@ Iteration counter: **227** (next balance pass at iteration 230)
 - Trails now remember their branch for branch-specific impacts.
 - Check: `towerfx-check.mjs` for each tower (both branches built). Screenshots `screenshots/227-<tower>.png` and `227.png`. No console errors, 253 tests.
 
+- **Iteration 228**: **Keeper's Store, part 1** (data, logic and battle hookup; the scene comes next).
+  - `data/store.ts`: three tiers (Apprentice open from the start, Journeyman after 5 ranks, Master after 10) and nine items.
+
+| Tier | Item | Effect per rank | Ranks |
+|---|---|---|---|
+| Apprentice | Whetted Tips | +4% tower damage | 5 |
+| Apprentice | War Chest | +30 starting coins | 5 |
+| Apprentice | Hearty Stew | +6% hero health | 3 |
+| Journeyman | Quickened Runes | spells 5% faster | 3 |
+| Journeyman | Ranger Drill | Grove Call rangers +15% | 3 |
+| Journeyman | Lucky Charms | kills +4% coins | 3 |
+| Master | Master Craft | +6% tower damage | 3 |
+| Master | Elder Blessing | +10% hero health and spells 5% faster | 2 |
+| Master | Dragon's Hoard | +80 starting coins and kills +5% | 2 |
+
+  - Rank n costs (n + 1) × the base price, paid from village coins and glowsap.
+  - `systems/store.ts`: `rankOf`, `totalRanks`, `tierOpen`, `nextPrice`, `buyItem` (checks the tier, max rank and funds) and `withStorePerks`, which folds ranks into the village's battle perks (spell cooldown cut capped at 50%).
+  - Ranks are saved in `save.store`. BattleScene now uses `withStorePerks(battlePerks(village), save)`, and the battle banner reads "Bonuses: …" since it includes store upgrades.
+  - Five new tests (258 total). Check: `scripts/store-perks-check.mjs` (a save with 5 Whetted, 3 War Chest, 2 Runes and 1 Stew gives ×1.2 tower damage, +90 coins, ×0.9 spell cooldown and ×1.06 hero health in battle; no console errors). Screenshot `screenshots/228.png`.
+
 ## In Progress
 - (none)
 
@@ -1435,7 +1455,9 @@ Iteration counter: **227** (next balance pass at iteration 230)
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Store (confirmed by the user: "tiered upgrade shop"): a Store scene of permanent upgrades (stronger towers, a tougher
    hero, faster spells, more income) bought with coins/glowsap and grouped into tiers that unlock one after another.
-   Build it in 2 iterations: (a) data + logic + tests + battle hookup, (b) the scene with art, tier rows and buy effects.
+   Part (a) is done (iteration 228). **Next: part (b), the Store scene**: a "Store" button on the main menu and in the village,
+   three tier rows (locked rows dimmed with "buy N more ranks to open"), item cards with art, the current/max rank as
+   pips, the next price and a Buy button, a coin burst and sound on purchase, and the village coin/glowsap totals at the top.
 2. Level graphics overhaul: layered terrain with soft lighting and a vignette, road texture and edge shading, ambient
    shadows under towers and enemies, and animated water. One theme family per iteration.
 

@@ -305,6 +305,17 @@ export class BattleScene extends Phaser.Scene {
         this.tweens.add({ targets: band, alpha: 0.18, y: band.y - 8, duration: 1600 + i * 300, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
       }
     }
+    if (this.level.theme.bog) {
+      // night over the bog: a soft dark wash, with fireflies blinking in and out
+      this.add.rectangle(GAME_W / 2, GAME_H / 2, GAME_W, GAME_H, 0x0a1a2a, 0.22).setDepth(0.55);
+      if (!motion.reduced) {
+        for (let i = 0; i < 18; i++) {
+          const fly = this.add.circle(rnd.between(60, GAME_W - 60), rnd.between(120, GAME_H - 130), 2.4, 0xe8ff8a, 0).setDepth(0.7);
+          this.tweens.add({ targets: fly, alpha: 0.95, duration: rnd.between(500, 1100), yoyo: true, repeat: -1, delay: rnd.between(0, 3000), hold: rnd.between(100, 600), repeatDelay: rnd.between(800, 2600) });
+          this.tweens.add({ targets: fly, x: fly.x + rnd.between(-40, 40), y: fly.y + rnd.between(-30, 30), duration: rnd.between(2600, 4800), yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+        }
+      }
+    }
     if (this.level.theme.comb && !motion.reduced) {
       // honeybees drifting lazily over the hills in slow figure-eights
       for (let i = 0; i < 10; i++) {
@@ -500,6 +511,38 @@ export class BattleScene extends Phaser.Scene {
             const bx = p.x - 8 + k * 4;
             deco.lineBetween(bx, p.y + 4, bx + 9, p.y - 8 + rnd.between(-2, 2));
           }
+        }
+      } else if (this.level.theme.bog) {
+        const k = rnd.frac();
+        if (k < 0.45) {
+          // a lily pad on a dark pool, maybe with a pale flower
+          deco.fillStyle(0x1a3a3a, 0.8);
+          deco.fillEllipse(p.x, p.y + 4, 54, 26);
+          deco.fillStyle(0x4a9a5a, 1);
+          deco.slice(p.x - 6, p.y + 2, 13, Phaser.Math.DegToRad(20), Phaser.Math.DegToRad(340), false);
+          deco.fillPath();
+          deco.fillStyle(0x3a8a4a, 1);
+          deco.fillCircle(p.x + 12, p.y + 8, 7);
+          if (rnd.frac() < 0.5) {
+            deco.fillStyle(0xf4e8f0, 1);
+            for (let n = 0; n < 5; n++) deco.fillEllipse(p.x - 6 + Math.cos(n * 1.26) * 4, p.y + Math.sin(n * 1.26) * 3, 6, 4);
+            deco.fillStyle(0xffe06a, 1);
+            deco.fillCircle(p.x - 6, p.y, 2);
+          }
+        } else if (k < 0.8) {
+          // a clump of cattails
+          deco.lineStyle(2, 0x4a6a3a, 1);
+          for (const dx of [-6, 0, 6]) deco.lineBetween(p.x + dx, p.y + 10, p.x + dx * 1.4, p.y - 18);
+          deco.fillStyle(0x6a4a2a, 1);
+          for (const dx of [-6, 0, 6]) deco.fillEllipse(p.x + dx * 1.35, p.y - 14, 5, 12);
+        } else {
+          // a mossy, half-sunk stump with a glowing mushroom
+          deco.fillStyle(0x4a3a2a, 1);
+          deco.fillEllipse(p.x, p.y, 26, 14);
+          deco.fillStyle(0x5a8a4a, 1);
+          deco.fillEllipse(p.x - 3, p.y - 3, 18, 8);
+          deco.fillStyle(0x9affd8, 0.9);
+          deco.fillCircle(p.x + 10, p.y - 6, 3.5);
         }
       } else if (this.level.theme.comb) {
         const k = rnd.frac();
@@ -1741,6 +1784,18 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.pos.x, ev.pos.y - 30, 'Snatched!', '#ffb070', 14);
         break;
       }
+      case 'hex': {
+        // a sour green-violet croak ring rolls from the toad to the tower it curses
+        sfx.trait('hex');
+        const ring = this.add.circle(ev.source.pos.x, ev.source.pos.y, 12).setStrokeStyle(3, 0xa070e0, 0.8).setDepth(2400);
+        this.tweens.add({ targets: ring, radius: 40, alpha: 0, duration: 450, onComplete: () => ring.destroy() });
+        const line = this.add.graphics().setDepth(2400);
+        line.lineStyle(3, 0xa070e0, 0.7);
+        line.lineBetween(ev.source.pos.x, ev.source.pos.y - 8, ev.tower.pos.x, ev.tower.pos.y - 16);
+        this.tweens.add({ targets: line, alpha: 0, duration: 400, onComplete: () => line.destroy() });
+        this.floatText(ev.tower.pos.x, ev.tower.pos.y - 44, 'Hexed', '#c8a0f0', 13);
+        break;
+      }
       case 'glaze': {
         // a splat of honey on the soldier, throttled per soldier
         const key = -4000000 - ev.soldier.uid;
@@ -2317,6 +2372,7 @@ export class BattleScene extends Phaser.Scene {
       const v = this.towerViews[i];
       if (!t || !v) return;
       if (t.frozen > 0) v.setTint(0xbfe8ff);
+      else if ((t.hexed ?? 0) > 0) v.setTint(0xc8a0f0); // cursed by a Hexcroak: a sickly violet
       else if (v.isTinted) v.clearTint();
     });
     const live = new Set(this.sim.projectiles.map((p) => p.uid));

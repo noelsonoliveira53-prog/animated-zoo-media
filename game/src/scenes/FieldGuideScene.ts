@@ -102,6 +102,8 @@ export class FieldGuideScene extends Phaser.Scene {
         if (e.anchor) tags.push(`Drops anchor every ${e.anchor.interval}s: stops for ${e.anchor.duration}s with +${Math.round(e.anchor.armor * 100)}% armor`);
         if (e.snatch) tags.push(`Snatches the nearest soldier within ${e.snatch.radius}px every ${e.snatch.cooldown}s (it has to respawn)`);
         if (e.wax) tags.push(`Wax coat: +${Math.round(e.wax.armor * 100)}% armor until magic damage worth ${Math.round(e.wax.melt * 100)}% of its health melts it off`);
+        if (e.lure) tags.push('Glowing lure: single-target towers in range must shoot it first, whatever their targeting mode');
+        if (e.hex) tags.push(`Croaks a curse every ${e.hex.interval}s: the nearest tower within ${e.hex.range}px deals ${Math.round(e.hex.cut * 100)}% less damage for ${e.hex.duration}s`);
         if (e.glaze) tags.push(`Sticky paws: soldiers it hits attack at ${Math.round(e.glaze.slow * 100)}% speed for ${e.glaze.duration}s`);
         if (e.parry) tags.push(`Comb shield: turns aside ${e.parry.charges} whole single-target shots, regaining one every ${e.parry.regen}s (splash and spells always land)`);
         if (e.rile) tags.push(`Riled by slows: each one adds +${Math.round(e.rile.perSlow * 100)}% speed for good (up to +${Math.round(e.rile.max * 100)}%)`);

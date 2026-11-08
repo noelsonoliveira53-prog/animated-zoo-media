@@ -92,10 +92,13 @@ export const THEMES: ThemeDef[] = [
   // The Honeycomb Hills: a lazy, buzzing waltz-like hum that sways from note to note, like bees drifting between clover.
   { id: 'comb', name: 'Honeycomb', transpose: 2, tempo: 0.95, arpWave: 'sawtooth', leadWave: 'triangle',
     motif: [[12, 0, 3], [14, 3, 1], [16, 4, 4], [14, 8, 2], [12, 10, 2], [9, 12, 4], [12, 16, 3], [16, 19, 1], [19, 20, 4], [16, 24, 8]] },
+  // The Glimmerbog: a slow, croaking minor tune that plops and gurgles, like frogs singing to each other across dark water.
+  { id: 'bog', name: 'Glimmerbog', transpose: -2, tempo: 0.85, arpWave: 'square', leadWave: 'sine',
+    motif: [[12, 0, 2], [10, 2, 2], [12, 4, 4], [15, 8, 2], [12, 10, 2], [7, 12, 4], [10, 16, 2], [12, 18, 2], [15, 20, 2], [17, 22, 2], [12, 24, 8]] },
 ];
 
 /** Battle theme of each region, in REGIONS order (the THEMES list is not in region order). */
-export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes', 'reef', 'flotilla', 'amber', 'mist', 'canopy', 'comb'];
+export const REGION_THEMES = ['grove', 'frost', 'ember', 'dusk', 'shoal', 'glass', 'gale', 'ruins', 'brass', 'abyss', 'orchard', 'storm', 'dunes', 'reef', 'flotilla', 'amber', 'mist', 'canopy', 'comb', 'bog'];
 
 /** Theme for a battle in a given region (index into REGIONS); clamps to the last themed region. */
 export function themeForRegion(region: number): ThemeDef {

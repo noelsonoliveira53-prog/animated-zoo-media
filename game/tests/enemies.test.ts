@@ -1071,3 +1071,52 @@ describe('Honeypaw Cub', () => {
     expect(s.stats.attackRate).toBeGreaterThan(0);
   });
 });
+
+describe('Glimmerbog enemies', () => {
+  it('a Lanternfrog draws a single-target tower even when the tower is set to another mode', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'thornbow');
+    const ahead = sim.spawn('mudling', 0, 460);
+    const frog = sim.spawn('lanternfrog', 0, 340);
+    for (const e of [ahead, frog]) e.def = { ...e.def, speed: 0 };
+    ahead.hp = ahead.maxHp = 99999;
+    frog.hp = frog.maxHp = 99999;
+    let hitFrog = 0;
+    let hitAhead = 0;
+    for (let i = 0; i < 60 * 3; i++) {
+      sim.update(1 / 60);
+      for (const ev of sim.drainEvents()) if (ev.type === 'hit') ev.enemy === frog ? hitFrog++ : ev.enemy === ahead && hitAhead++;
+    }
+    expect(hitFrog).toBeGreaterThan(0);
+    expect(hitAhead).toBe(0);
+  });
+
+  it('a Hexcroak curses the nearest tower so its shots hit softer for a while', () => {
+    const sim = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    sim.status = 'running';
+    sim.coins = 999;
+    sim.build(0, 'thornbow');
+    const t = sim.towers[0]!;
+    const h = sim.spawn('hexcroak', 0, 400);
+    h.def = { ...h.def, speed: 0 };
+    h.hp = h.maxHp = 99999;
+    let hexes = 0;
+    for (let i = 0; i < 60 * 4 && !hexes; i++) {
+      sim.update(1 / 60);
+      hexes += sim.drainEvents().filter((e) => e.type === 'hex').length;
+    }
+    expect(hexes).toBe(1);
+    expect(t.hexed).toBeGreaterThan(0);
+    expect(t.hexCut).toBe(h.def.hex!.cut);
+    const shot = sim.projectiles.find((p) => p.towerUid === t.uid);
+    for (let i = 0; i < 60 && !sim.projectiles.some((p) => p.towerUid === t.uid); i++) sim.update(1 / 60);
+    const p = shot ?? sim.projectiles.find((q) => q.towerUid === t.uid)!;
+    const plain = new BattleSim({ ...lvl, slots: [{ x: 400, y: 160 }] }, null);
+    plain.coins = 999;
+    plain.build(0, 'thornbow');
+    const base = (plain as unknown as { stats: (t: unknown) => { damage: number } }).stats(plain.towers[0]).damage;
+    expect(p.damage).toBeCloseTo(base * (1 - h.def.hex!.cut));
+  });
+});

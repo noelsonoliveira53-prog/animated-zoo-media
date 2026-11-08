@@ -14,6 +14,7 @@ const REEF = { grass: 0x5ac0c8, grassDark: 0x4aaab8, road: 0xead8a8, roadEdge: 0
 const FLOTILLA = { grass: 0x2a5a7a, grassDark: 0x24506e, road: 0xb08a5a, roadEdge: 0x6a4a2a, trees: [0x8a6a4a, 0x6a5a4a, 0xa8885a], flotilla: true };
 const AMBER = { grass: 0x9a7a3a, grassDark: 0x8a6a30, road: 0x7a5a3a, roadEdge: 0x4a3424, trees: [0xc83a1a, 0xe87a1a, 0xf0c040, 0x8a3a5a], amber: true };
 const MIST = { grass: 0x7aa878, grassDark: 0x6a9868, road: 0xb8ac90, roadEdge: 0x8a7e66, trees: [0x4a7a5a, 0xe89ab8, 0x5a8a5a], mist: true };
+const BOG = { grass: 0x3a5a4a, grassDark: 0x2f4e40, road: 0x8a7a5a, roadEdge: 0x4a3e2a, trees: [0x2a6a5a, 0x3a7a4a, 0x5a8a3a], bog: true };
 const COMB = { grass: 0xb8a848, grassDark: 0xa8983c, road: 0xe0b860, roadEdge: 0x9a7030, trees: [0xd8a030, 0xc8b040, 0x8a9a3a], comb: true };
 const CANOPY = { grass: 0x3f6e38, grassDark: 0x335e2e, road: 0xb08a5e, roadEdge: 0x6a4a2c, trees: [0x3f8a3a, 0x5aa04a, 0x2f6a3a], canopy: true };
 const ORCHARD = { grass: 0xa8a050, grassDark: 0x948c44, road: 0xc8a878, roadEdge: 0x9a7a52, trees: [0xd8642a, 0xe8a03a, 0xb8442a], orchard: true };
@@ -4538,6 +4539,50 @@ export const LEVELS: LevelDef[] = [
       { groups: [{ enemy: 'combqueen', count: 1, interval: 1, delay: 8 }, { enemy: 'mudling', count: 14, interval: 0.6, delay: 14 }, { enemy: 'gullwing', count: 10, interval: 0.8, delay: 4 }, { enemy: 'skitter', count: 16, interval: 0.5, path: 1, delay: 16 }] },
     ],
   },
+  {
+    id: 'l96',
+    name: 'Lilypad Landing',
+    blurb: 'Down from the golden hills, the road sinks into a warm, dark bog lit by a thousand fireflies. Something out on the water is glowing too, and every tower the Keepers build wants to stare at it.',
+    mapPos: { x: 200, y: 560 },
+    hpMult: 1.7,
+    startCoins: 1000,
+    lives: 20,
+    theme: BOG,
+    paths: [
+      [{ x: -40, y: 420 }, { x: 260, y: 420 }, { x: 260, y: 180 }, { x: 560, y: 180 }, { x: 560, y: 500 }, { x: 860, y: 500 }, { x: 860, y: 260 }, { x: 1100, y: 260 }, { x: 1100, y: 460 }, { x: 1320, y: 460 }],
+      [{ x: 700, y: -40 }, { x: 700, y: 500 }, { x: 860, y: 500 }, { x: 860, y: 260 }, { x: 1100, y: 260 }, { x: 1100, y: 460 }, { x: 1320, y: 460 }],
+    ],
+    slots: [
+      { x: 160, y: 330 },
+      { x: 350, y: 300 },
+      { x: 470, y: 280 },
+      { x: 480, y: 440 },
+      { x: 630, y: 410 },
+      { x: 760, y: 180 },
+      { x: 790, y: 410 },
+      { x: 790, y: 590 },
+      { x: 950, y: 380 },
+      { x: 980, y: 170 },
+      { x: 1190, y: 360 },
+      { x: 1200, y: 560 },
+    ],
+    waves: [
+      { groups: [{ enemy: 'lanternfrog', count: 3, interval: 1.6 }, { enemy: 'mudling', count: 12, interval: 0.5, delay: 2 }] },
+      { groups: [{ enemy: 'hexcroak', count: 4, interval: 1.3 }, { enemy: 'skitter', count: 12, interval: 0.4, delay: 1 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 4, interval: 1.4 }, { enemy: 'galehound', count: 6, interval: 0.55, delay: 3 }, { enemy: 'gullwing', count: 5, interval: 0.9, delay: 5 }] },
+      { groups: [{ enemy: 'hexcroak', count: 5, interval: 1.2 }, { enemy: 'shellback', count: 4, interval: 1.3, delay: 2 }, { enemy: 'skitter', count: 10, interval: 0.4, path: 1, delay: 3 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 4, interval: 1.4 }, { enemy: 'hexcroak', count: 2, interval: 1.5, path: 1, delay: 2 }, { enemy: 'kitewing', count: 3, interval: 1.6, delay: 6 }] },
+      { groups: [{ enemy: 'hexcroak', count: 5, interval: 1.2 }, { enemy: 'thunderhoof', count: 6, interval: 0.6, delay: 1 }, { enemy: 'glarefly', count: 5, interval: 0.85, delay: 6 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 4, interval: 1.4 }, { enemy: 'galehound', count: 8, interval: 0.45, delay: 2 }, { enemy: 'gnat', count: 12, interval: 0.3, delay: 6 }] },
+      { groups: [{ enemy: 'hexcroak', count: 7, interval: 1 }, { enemy: 'reedguard', count: 5, interval: 1.1, delay: 2 }, { enemy: 'lanternfrog', count: 3, interval: 1.5, path: 1, delay: 4 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 7, interval: 1.1 }, { enemy: 'bogbrute', count: 2, interval: 3, delay: 3 }, { enemy: 'gullwing', count: 10, interval: 0.6, delay: 6 }] },
+      { groups: [{ enemy: 'hexcroak', count: 8, interval: 0.9 }, { enemy: 'skitter', count: 18, interval: 0.28, path: 1, delay: 1 }, { enemy: 'tidecaller', count: 2, interval: 2.6, delay: 3 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 8, interval: 1 }, { enemy: 'hexcroak', count: 6, interval: 1, path: 1, delay: 1 }, { enemy: 'copperhorn', count: 2, interval: 2.5, delay: 4 }, { enemy: 'kitewing', count: 5, interval: 1.3, delay: 8 }] },
+      { groups: [{ enemy: 'hexcroak', count: 9, interval: 0.85 }, { enemy: 'lanternfrog', count: 6, interval: 1.1, delay: 1 }, { enemy: 'deckgunner', count: 4, interval: 1.3, delay: 3 }, { enemy: 'glarefly', count: 8, interval: 0.7, delay: 8 }] },
+      { groups: [{ enemy: 'lanternfrog', count: 7, interval: 1.1 }, { enemy: 'galehound', count: 10, interval: 0.4, delay: 2 }, { enemy: 'hexcroak', count: 6, interval: 1, path: 1, delay: 3 }, { enemy: 'cloudram', count: 2, interval: 2.6, delay: 8 }] },
+      { groups: [{ enemy: 'hexcroak', count: 10, interval: 0.8 }, { enemy: 'lanternfrog', count: 10, interval: 0.9, delay: 1 }, { enemy: 'bramblehide', count: 3, interval: 2.4, delay: 8 }, { enemy: 'gnat', count: 18, interval: 0.24, delay: 9 }] },
+    ],
+  },
 ];
 
 /** A level is open once the previous one has been beaten (at least 1 star). */
@@ -4573,6 +4618,7 @@ export interface RegionDef {
   mist?: boolean;
   canopy?: boolean;
   comb?: boolean;
+  bog?: boolean;
 }
 
 export const REGIONS: RegionDef[] = [
@@ -4595,6 +4641,7 @@ export const REGIONS: RegionDef[] = [
   { name: 'The Mistwreath Terraces', first: 80, count: 5, mist: true },
   { name: 'The Highcanopy', first: 85, count: 5, canopy: true },
   { name: 'The Honeycomb Hills', first: 90, count: 5, comb: true },
+  { name: 'The Glimmerbog', first: 95, count: 5, bog: true },
 ];
 
 export function regionOf(levelIndex: number): number {

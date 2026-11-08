@@ -54,6 +54,7 @@ export interface Enemy {
   drumCd: number; // Barkdrum: time to its next beat
   phaseCd: number; // Mistfox: time until it fades / returns
   riledAt: number; // Howler: sim time of the last rile (at most one every 0.5s)
+  hexCd: number; // Hexcroak Toad: time to its next curse
   snatchCd: number; // Canopy Harrier: time until it can carry off another soldier
   phased: boolean;
   waxLeft: number; // Waxback: magic damage still to soak before its coat melts (0 = melted or none)
@@ -130,6 +131,8 @@ export interface Tower {
   rally: Vec2 | null; // for soldier towers
   spec: string | null; // chosen top-tier specialization
   frozen: number; // seconds left frozen (cannot fire)
+  hexed?: number; // seconds left under a Hexcroak curse (deals less damage)
+  hexCut?: number; // damage fraction lost while hexed
   chillImmune: number; // seconds left before it can be frozen again (prevents perma-freeze)
 }
 
@@ -203,6 +206,7 @@ export type SimEvent =
   | { type: 'parry'; enemy: Enemy; left: number }
   | { type: 'melt'; enemy: Enemy }
   | { type: 'glaze'; soldier: Soldier }
+  | { type: 'hex'; source: Enemy; tower: Tower }
   | { type: 'rile'; enemy: Enemy; speedMult: number }
   | { type: 'snatch'; enemy: Enemy; pos: Vec2 }
   | { type: 'grief'; enemy: Enemy; radius: number; mourners: Enemy[] }
@@ -945,6 +949,7 @@ export class BattleSim {
       phaseCd: def.phase ? def.phase.interval : 0,
       riledAt: -99,
       snatchCd: def.snatch ? def.snatch.cooldown * 0.5 : 0,
+      hexCd: def.hex ? def.hex.interval * 0.5 : 0,
       phased: false,
       waxLeft: def.wax ? Math.round(def.hp * this.waveHpMult() * this.mods.hpMult * def.wax.melt) : 0,
       parryCharges: def.parry?.charges ?? 0,
@@ -1005,6 +1010,7 @@ export class BattleSim {
       if (e.def.drum) this.tickDrum(e, dt);
       if (e.def.phase) this.tickPhase(e, dt);
       if (e.def.snatch) this.tickSnatch(e, dt);
+      if (e.def.hex) this.tickHex(e, dt);
       if (e.def.parry && e.parryCharges < e.def.parry.charges) {
         e.parryCd -= dt;
         if (e.parryCd <= 0) {
@@ -1209,6 +1215,31 @@ export class BattleSim {
   }
 
   /** Canopy Harrier: dives on the nearest soldier in reach and carries it off (it has to respawn). */
+  /** Hexcroak Toad: croaks a curse at the nearest shooting tower, which hits softer for a while. */
+  private tickHex(e: Enemy, dt: number): void {
+    const hx = e.def.hex!;
+    e.hexCd -= dt;
+    if (e.hexCd > 0) return;
+    let best: Tower | null = null;
+    let bestD = hx.range;
+    for (const t of this.towers) {
+      if (!t || t.rally || (t.hexed ?? 0) > 0) continue;
+      const d = Math.hypot(t.pos.x - e.pos.x, t.pos.y - e.pos.y);
+      if (d <= bestD) {
+        bestD = d;
+        best = t;
+      }
+    }
+    if (!best) {
+      e.hexCd = 0.5;
+      return;
+    }
+    e.hexCd = hx.interval;
+    best.hexed = hx.duration;
+    best.hexCut = hx.cut;
+    this.events.push({ type: 'hex', source: e, tower: best });
+  }
+
   private tickSnatch(e: Enemy, dt: number): void {
     const sn = e.def.snatch!;
     e.snatchCd -= dt;
@@ -1660,6 +1691,7 @@ export class BattleSim {
           score = -d;
           break;
       }
+      if (e.def.lure) score += 1e12; // Lanternfrog: nothing in range can look away from that glow
       if (score > bestScore) {
         bestScore = score;
         best = e;
@@ -1701,6 +1733,7 @@ export class BattleSim {
     for (const t of this.towers) {
       if (!t) continue;
       if (t.chillImmune > 0) t.chillImmune = Math.max(0, t.chillImmune - dt);
+      if ((t.hexed ?? 0) > 0) t.hexed = Math.max(0, t.hexed! - dt);
       if (t.frozen > 0) {
         t.frozen = Math.max(0, t.frozen - dt);
         continue;
@@ -1731,7 +1764,7 @@ export class BattleSim {
           targetUid: target.uid,
           lastTargetPos: aim,
           speed: stats.projectileSpeed,
-          damage: stats.damage * this.towerDamageMult,
+          damage: stats.damage * this.towerDamageMult * ((t.hexed ?? 0) > 0 ? 1 - (t.hexCut ?? 0) : 1),
           damageType: t.def.damageType,
           splash: stats.splash ?? 0,
           slow: stats.slow,

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **175** (next balance pass at iteration 180)
+Iteration counter: **176** (next balance pass at iteration 180)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1256,7 +1256,8 @@ Iteration counter: **175** (next balance pass at iteration 180)
 - (none)
 
 ## Backlog (ranked)
-1. Region 20: a new theme, traits and five levels.
+1. Glimmerbog level 97 with a third trait, then levels 98 and 99.
+2. Glimmerbog finale (100) with a boss, achievements, a story card and the endless boss rotation.
 
 ## Known Bugs
 - (none known)
@@ -1265,6 +1266,14 @@ Iteration counter: **175** (next balance pass at iteration 180)
 - Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
 
 ## Balance Notes
+**Iteration 176**: 96 Lilypad Landing (12 seeds, expert/casual/novice).
+- First draft: 1.4 → 67/100/83. Oddly the expert did worst. Leak logs showed Lanternfrogs and Hexcroaks from waves 5–7
+  slipping through: the expert's smart specs and early wave calls suffer most when lures pull its fire and hexes soften
+  its best towers.
+- Fixes: Lanternfrog hp 460 → 400, and the frog/hex counts in waves 5–7 and 13 trimmed.
+- After that: 1.45 → 100/100/92, 1.55 → 92/100/83, 1.6 → 92/100/75, 1.75 → 83/92/25. **1.7 → 83/92/33** (kept: the
+  novice sits in the opener band and casual is near it). The expert at 83 is below the usual ~100 because this region's
+  traits punish clever targeting. That is deliberate and documented; watch it on the next levels.
 **Iteration 175**: Honeycomb sweep, 12 seeds (expert/casual/novice): 91 100/100/33, 92 100/100/0, 93 92/83/0, 94 83/75/0,
 95 (boss) 92/58/0. Every level is in its band, so nothing changed.
 - Hero comparison on 93–95 (the hard end of the region): Ember 94%, Bramble 83%, Fen/Sorrel/Hazel 78%, Wren 72%. Wren (a

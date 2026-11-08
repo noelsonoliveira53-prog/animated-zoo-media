@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **253** (next balance pass at iteration 255)
+Iteration counter: **254** (next balance pass at iteration 255)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1630,13 +1630,20 @@ Iteration counter: **253** (next balance pass at iteration 255)
   - Reduce Motion or Graphics: Low gives the plain pop-in, no confetti or ash, still rays and the final reward number straight away.
   - Check `scripts/result-check.mjs` (a win and a defeat, following the scene clock; the reward text lands on the exact amount; no console errors). Screenshots `screenshots/253.png` (victory) and `253-defeat.png`. `scripts/endless-check.mjs` still passes. 265 tests.
 
+- **Iteration 254: world map node polish.** New `systems/mapNodes.ts` with `levelHasBoss` and `laurelFor`, plus 2 tests (267 total).
+  - **Beaten levels:** a laurel wreath of 10 leaves climbing both sides of the node and pointing up along the ring, clear of the stars. Green for 1–2 stars, gold for a perfect 3.
+  - **Boss levels** (any wave brings a boss): a dark red outer ring and a small red shield crest with a gold crown, pinned to the node's shoulder. It is greyed out while the level is locked.
+  - **Hover lift:** unlocked nodes rise 6 px under the pointer (desktop; off with Reduce Motion). It moves the node's y, so it doesn't fight the next-level pulse, which scales.
+  - First pass used flat ellipses, which read as "ears"; they became rotated leaf shapes. Screenshot `screenshots/254.png` (Rustrock: four gold laurels and the boss crest on 115).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. World map node polish: beaten nodes show a small laurel, the boss node gets a glowing skull-free crest, and hovering a node lifts it.
+1. Field Guide polish: animated portraits (idle bob), a parchment texture with torn edges, and a page-turn slide between entries.
+2. Settings and Achievements screens: the same glossy panels and lighting as the store, plus a trophy shine on unlocked achievements.
 
 ## Known Bugs
 - (none known)

@@ -1,4 +1,5 @@
 import { addLighting } from '../ui/lighting';
+import { laurelFor, levelHasBoss } from '../systems/mapNodes';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
 import { fitWidth, pf } from '../ui/touch';
@@ -756,7 +757,38 @@ export class WorldMapScene extends Phaser.Scene {
     g.fillCircle(0, 0, 31);
     g.fillStyle(0xffffff, 0.25);
     g.fillEllipse(-6, -12, 34, 16);
+    const boss = levelHasBoss(lvl);
+    if (boss) {
+      // boss level: a dark red outer ring
+      g.lineStyle(4, 0x9a2a2a, 1);
+      g.strokeCircle(0, 0, 39);
+    }
+    // laurel around the lower half once beaten: green, or gold for three stars
+    const laurel = laurelFor(unlocked ? stars : 0);
+    if (laurel !== 'none') {
+      const leaf = laurel === 'gold' ? 0xffd23c : 0x7ac85a;
+      const edge = laurel === 'gold' ? 0x8a5a14 : 0x2f5e26;
+      for (const side of [-1, 1]) {
+        for (let k = 0; k < 5; k++) {
+          // leaves climb each side from low on the ring, pointing up along it (clear of the stars below)
+          const a = Math.PI / 2 + side * (0.95 + k * 0.36);
+          const cx = Math.cos(a) * 43, cy = Math.sin(a) * 43;
+          const tx = -Math.sin(a) * -side, ty = Math.cos(a) * -side; // tangent pointing upward
+          const nx = Math.cos(a), ny = Math.sin(a); // outward normal
+          const len = 8, wid = 3.6, out = 2.5;
+          const tip = { x: cx + tx * len + nx * out, y: cy + ty * len + ny * out };
+          const base = { x: cx - tx * len * 0.6, y: cy - ty * len * 0.6 };
+          const l = { x: cx + nx * wid, y: cy + ny * wid };
+          const r = { x: cx - nx * wid, y: cy - ny * wid };
+          g.fillStyle(edge, 1);
+          g.fillPoints([{ x: tip.x + 1, y: tip.y + 1 }, { x: l.x + 1, y: l.y + 1 }, { x: base.x + 1, y: base.y + 1 }, { x: r.x + 1, y: r.y + 1 }], true);
+          g.fillStyle(leaf, 1);
+          g.fillPoints([tip, l, base, r], true);
+        }
+      }
+    }
     c.add(g);
+    if (boss) c.add(this.crest(26, -28, unlocked));
     if (unlocked) c.add(this.add.text(0, -1, String(i + 1), textStyle(30)).setOrigin(0.5));
     else {
       const lock = this.add.graphics();
@@ -773,6 +805,11 @@ export class WorldMapScene extends Phaser.Scene {
     for (let s = 0; s < 3; s++) c.add(this.add.image(-28 + s * 28, 44, s < stars ? 'star' : 'star_empty').setScale(0.48));
     c.add(this.add.text(0, 72, lvl.name, textStyle(16, unlocked ? TEXT.cream : TEXT.dim)).setOrigin(0.5));
     c.setSize(80, 80).setInteractive({ useHandCursor: unlocked });
+    // hover lift (desktop): the node rises a little and its name brightens
+    if (unlocked && !motion.reduced) {
+      c.on('pointerover', () => this.tweens.add({ targets: c, y: y - 6, duration: 120, ease: 'Quad.easeOut' }));
+      c.on('pointerout', () => this.tweens.add({ targets: c, y, duration: 160, ease: 'Quad.easeOut' }));
+    }
     c.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();
@@ -790,6 +827,26 @@ export class WorldMapScene extends Phaser.Scene {
       const glow = this.add.circle(x, y, 54, 0xffc860, 0.35).setDepth(9).setBlendMode(Phaser.BlendModes.ADD);
       this.tweens.add({ targets: glow, scale: 1.35, alpha: 0.08, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
     }
+  }
+
+  /** Boss crest: a small red shield with a gold crown, pinned to a boss level's node. */
+  private crest(x: number, y: number, lit: boolean): Phaser.GameObjects.Graphics {
+    const g = this.add.graphics({ x, y });
+    g.fillStyle(0x000000, 0.3);
+    g.fillRoundedRect(-11, -11, 24, 20, 4);
+    g.fillTriangle(-11, 9, 13, 9, 1, 22);
+    g.fillStyle(C.ink, 1);
+    g.fillRoundedRect(-13, -13, 26, 21, 5);
+    g.fillTriangle(-13, 6, 13, 6, 0, 22);
+    g.fillStyle(lit ? 0xc23a3a : 0x6a5050, 1);
+    g.fillRoundedRect(-10, -10, 20, 16, 4);
+    g.fillTriangle(-10, 4, 10, 4, 0, 18);
+    g.fillStyle(lit ? 0xffd23c : 0xa89a80, 1); // a little three-point crown
+    g.fillRect(-6, -2, 12, 5);
+    g.fillTriangle(-6, -2, -3, -2, -6, -8);
+    g.fillTriangle(-2, -2, 2, -2, 0, -9);
+    g.fillTriangle(3, -2, 6, -2, 6, -8);
+    return g;
   }
 
   /** A grid of every region: unlocked ones show their stars and jump there; locked ones say what to beat. */

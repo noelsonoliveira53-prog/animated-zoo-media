@@ -33,12 +33,13 @@ export class BootScene extends Phaser.Scene {
   /**
    * Outline weight by role: every ink stroke of 2.5 px or more on this sprite is a body outline and becomes
    * `body` (3 px heroes and bosses, 2.5 px regular foes); ink strokes of 2 to 2.5 px are small parts and become 2 px.
-   * Finer ink detail lines and coloured strokes are left as drawn.
+   * Finer ink detail lines, coloured strokes and thick ink strokes used as shapes (over 4 px, e.g. an eel's
+   * inked body underlay) are left as drawn.
    */
   private roleOutlines(g: Phaser.GameObjects.Graphics, body: number): void {
     const lineStyle = g.lineStyle.bind(g);
     g.lineStyle = ((width: number, color: number, alpha?: number) =>
-      lineStyle(color === C.ink ? (width >= 2.5 ? body : width >= 2 ? 2 : width) : width, color, alpha)) as typeof g.lineStyle;
+      lineStyle(color === C.ink && width <= 4 ? (width >= 2.5 ? body : width >= 2 ? 2 : width) : width, color, alpha)) as typeof g.lineStyle;
   }
 
   private g(): Phaser.GameObjects.Graphics {
@@ -453,6 +454,18 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xd04a2a, 1);
         g.fillEllipse(cx - r * 0.55, cy - r * 0.85, r * 0.3, r * 0.16);
         g.fillEllipse(cx + r * 0.45, cy - r * 0.9, r * 0.3, r * 0.16);
+        // bark grain down the trunk, a shaded right side and a patch of moss (design F21)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(22).color, 1);
+        g.fillRect(cx + r * 0.42, cy - r * 0.35, r * 0.34, r * 0.95);
+        g.lineStyle(1.2, Phaser.Display.Color.IntegerToColor(color).darken(35).color, 1);
+        for (const bx of [-0.55, -0.05, 0.55]) g.lineBetween(cx + bx * r, cy - r * 0.3, cx + bx * r + r * 0.05, cy + r * 0.55);
+        g.fillStyle(0x6ab04c, 1);
+        g.fillEllipse(cx - r * 0.5, cy + r * 0.48, r * 0.5, r * 0.2);
+        g.fillStyle(0x9ae87a, 1);
+        g.fillEllipse(cx - r * 0.55, cy + r * 0.44, r * 0.22, r * 0.08);
+        g.fillStyle(0xffffff, 0.8);
+        g.fillCircle(cx - r * 0.33, cy - r * 0.09, r * 0.025);
+        g.fillCircle(cx + r * 0.27, cy - r * 0.09, r * 0.025);
         break;
       }
       case 'seedcaster': {
@@ -461,8 +474,26 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(color, 1);
         g.fillTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
         g.strokeTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        // shaded right side of the hood, a frayed hem, and a seedling sprouting from the hood's tip (design F21)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(25).color, 1);
+        g.fillTriangle(cx, cy - r * 0.9, cx + r * 0.75, cy + r * 0.8, cx + r * 0.15, cy + r * 0.8);
+        g.fillStyle(0xffffff, 0.22);
+        g.fillTriangle(cx - r * 0.05, cy - r * 0.7, cx - r * 0.45, cy + r * 0.5, cx - r * 0.25, cy + r * 0.5);
+        g.strokeTriangle(cx - r * 0.75, cy + r * 0.8, cx + r * 0.75, cy + r * 0.8, cx, cy - r * 0.9);
+        g.fillStyle(color, 1);
+        for (let k = 0; k < 4; k++) g.fillTriangle(cx - r * 0.7 + k * r * 0.36, cy + r * 0.78, cx - r * 0.52 + k * r * 0.36, cy + r * 0.78, cx - r * 0.61 + k * r * 0.36, cy + r * 0.98);
+        g.lineStyle(1.5, 0x3a7a2a, 1);
+        g.lineBetween(cx, cy - r * 0.9, cx + r * 0.08, cy - r * 1.2);
+        g.fillStyle(0x8ad86a, 1);
+        g.fillEllipse(cx - r * 0.1, cy - r * 1.18, r * 0.26, r * 0.14);
+        g.fillEllipse(cx + r * 0.22, cy - r * 1.24, r * 0.28, r * 0.15);
+        g.lineStyle(2.5, C.ink, 1);
+        // the dark face inside the hood, eyes glowing with a soft halo
         g.fillStyle(0x1a1028, 1);
         g.fillCircle(cx, cy - r * 0.15, r * 0.32);
+        g.fillStyle(0xc8ff6a, 0.35);
+        g.fillCircle(cx - r * 0.12, cy - r * 0.18, r * 0.13);
+        g.fillCircle(cx + r * 0.12, cy - r * 0.18, r * 0.13);
         g.fillStyle(0xc8ff6a, 1);
         g.fillCircle(cx - r * 0.12, cy - r * 0.18, r * 0.07);
         g.fillCircle(cx + r * 0.12, cy - r * 0.18, r * 0.07);
@@ -2002,8 +2033,20 @@ export class BootScene extends Phaser.Scene {
         g.lineTo(cx + r * 0.3, cy + r * 0.2);
         g.lineTo(cx + r * 1.0, cy - r * 0.15);
         g.strokePath();
-        g.fillStyle(0xbff8ff, 1);
-        for (const [dx, dy] of [[-0.75, -0.25], [-0.1, -0.12], [0.6, 0.05]]) g.fillCircle(cx + dx * r, cy + dy * r, r * 0.09);
+        // a lit stripe along the upper edge of the body, and glowing spots with soft halos (design F21)
+        g.lineStyle(r * 0.14, 0xffffff, 0.35);
+        g.beginPath();
+        g.moveTo(cx - r * 1.05, cy - r * 0.22);
+        g.lineTo(cx - r * 0.4, cy - r * 0.56);
+        g.lineTo(cx + r * 0.3, cy + r * 0.08);
+        g.lineTo(cx + r * 0.95, cy - r * 0.26);
+        g.strokePath();
+        for (const [dx, dy] of [[-0.75, -0.25], [-0.1, -0.12], [0.6, 0.05]]) {
+          g.fillStyle(0xbff8ff, 0.35);
+          g.fillCircle(cx + dx * r, cy + dy * r, r * 0.16);
+          g.fillStyle(0xbff8ff, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, r * 0.09);
+        }
         g.fillStyle(0xffe066, 1);
         g.fillTriangle(cx + r * 1.0, cy - r * 0.15, cx + r * 1.35, cy - r * 0.5, cx + r * 1.2, cy - r * 0.05);
         g.fillStyle(0xffffff, 1);

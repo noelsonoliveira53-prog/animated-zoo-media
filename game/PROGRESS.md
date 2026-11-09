@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F20**
+Fix counter: **F21**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2169,6 +2169,15 @@ Fix counter: **F20**
     - When several new foes enter in one wave, their "New in Field Guide!" labels printed over each other. Labels within 1.5 s now stack 20 px apart.
 
   Screenshots: `fix-20-desk-*` (before), `fix-20-after-*`, `fix-20-phone-*`.
+
+- **F21 (Design Backlog 1, part d) Grove and cave foes, plus an F11 regression fixed.**
+  - **Regression:** `roleOutlines` had been clamping thick ink strokes used as shapes. The Sparkeel's and Rattler's inked body underlays (r × 0.75 and r × 0.5 wide) shrank to 2.5 px, so both eels lost their outline. Only ink strokes of 4 px or less are now treated as outlines.
+  - **Sparkeel**: a lit stripe along its back and haloed glow spots.
+  - **Seedcaster**: shaded right side of the hood, a lit left edge, a frayed hem, a seedling sprouting from the hood's tip, and eyes glowing with soft halos.
+  - **Barkwarden**: bark grain, a shaded right side, a patch of moss and glints in its knot-hole eyes.
+  - **Echowisp**, **Dimlantern** and **Rivetshell** already read well.
+
+  Sheets: `fix-21-before.png` and `fix-21-after.png` (Rattler's restored outline included).
 
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.

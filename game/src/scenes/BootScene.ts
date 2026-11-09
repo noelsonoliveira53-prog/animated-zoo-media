@@ -3214,8 +3214,20 @@ export class BootScene extends Phaser.Scene {
           g.fillCircle(cx - 9, cy - 28 + i * 26, 4);
           g.fillCircle(cx + 9, cy - 28 + i * 26, 4);
         }
-        g.fillStyle(0xb5651d, 1);
-        g.fillTriangle(cx - 16, cy - 52, cx + 16, cy - 52, cx, cy - 72);
+        // a crest of three red-tipped feathers on top, inside the frame (it used to poke out above it), and war-paint
+        // stripes down the post (design F38)
+        for (const [fx, tilt] of [[-10, -0.35], [0, 0], [10, 0.35]] as const) {
+          const tx = cx + fx + Math.sin(tilt) * 18;
+          const ty = cy - 40 - Math.cos(tilt) * 18;
+          g.fillStyle(0xe8dcc0, 1);
+          g.fillTriangle(cx + fx - 4, cy - 40, cx + fx + 4, cy - 40, tx, ty);
+          g.fillStyle(0xd8453a, 1);
+          g.fillTriangle(cx + fx + (tx - cx - fx) * 0.6 - 2, cy - 40 + (ty - cy + 40) * 0.6, cx + fx + (tx - cx - fx) * 0.6 + 2, cy - 40 + (ty - cy + 40) * 0.6, tx, ty);
+          g.lineStyle(1.5, C.ink, 1);
+          g.strokeTriangle(cx + fx - 4, cy - 40, cx + fx + 4, cy - 40, tx, ty);
+        }
+        g.fillStyle(0xd8453a, 1);
+        for (const yy of [-14, 12, 38]) g.fillRect(cx + 14, cy + yy - 2, 6, 3);
         break;
       }
       case 'spit': {
@@ -3398,6 +3410,8 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(`camp_${id}`, S, S);
     g.destroy();
+    // the Murkhorde's camp catches a sickly bog-green rim light instead of the village's warm sheen (design F38)
+    this.rimLight(`camp_${id}`, 0xc8f0a0, 0.35);
   }
 
   /**

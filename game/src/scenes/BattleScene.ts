@@ -5,6 +5,7 @@ import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
+import { enemyKeyTrait } from '../systems/guideInfo';
 import { gaitFor, poseFor, unitPose } from '../systems/gait';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
@@ -1985,6 +1986,7 @@ export class BattleScene extends Phaser.Scene {
     // scene instances are reused between battles, so reset per-battle HUD state here
     this.shownCoins = this.shownLives = this.shownWave = -1;
     this.cheapestTower = 0;
+    this.tipped = new Set();
     this.hitStopUntil = 0;
     this.lastHitStop = -9999;
     this.skillWasReady = true; // no ping for the skill being ready at the start
@@ -2355,7 +2357,9 @@ export class BattleScene extends Phaser.Scene {
     if (next >= this.sim.totalWaves || this.ended) return;
     const counts = new Map<string, number>();
     for (const g of this.level.waves[next].groups) counts.set(g.enemy, (counts.get(g.enemy) ?? 0) + g.count);
-    const entries = [...counts.entries()].slice(0, 4);
+    // enemies the player has never met get a NEW tag and go first in the strip
+    const seen = new Set(loadSave().seenEnemies);
+    const entries = [...counts.entries()].sort((a, b) => Number(seen.has(a[0])) - Number(seen.has(b[0]))).slice(0, 4);
     const w = entries.length * 62 + 16;
     // Lives in the empty strip of the top bar between the stats panel and the buttons.
     const c = this.add.container(470 + 36 + w / 2, 37).setDepth(3000).setName('wavePreview');
@@ -2371,8 +2375,46 @@ export class BattleScene extends Phaser.Scene {
       const def = ENEMIES[id];
       c.add(this.add.text(x + 14, 2, `${n}`, textStyle(pf(14), def.boss ? TEXT.heart : TEXT.cream)).setOrigin(0, 0.5));
       if (def.flying) c.add(this.add.text(x - 14, -12, '✈', textStyle(pf(10), '#bfe8ff')).setOrigin(0.5));
+      if (!seen.has(id)) {
+        const glow = this.add.circle(x, 0, 16, 0xffe27a, 0.25).setBlendMode(Phaser.BlendModes.ADD);
+        c.addAt(glow, 1);
+        if (!motion.reduced) this.tweens.add({ targets: glow, scale: 1.3, alpha: 0.05, duration: 700, yoyo: true, repeat: -1 });
+        const tag = this.add.container(x, -19);
+        const pill = this.add.graphics();
+        pill.fillStyle(0xffc83a, 1);
+        pill.fillRoundedRect(-17, -7, 34, 14, 7);
+        pill.lineStyle(1.5, 0x5a3a0a, 1);
+        pill.strokeRoundedRect(-17, -7, 34, 14, 7);
+        tag.add([pill, this.add.text(0, 0, 'NEW', textStyle(pf(10), '#3a2408', false)).setOrigin(0.5)]);
+        c.add(tag);
+      }
     });
+    // a short tip about the first brand-new enemy, shown once per battle under the strip
+    const fresh = entries.find(([id]) => !seen.has(id) && !this.tipped.has(id));
+    if (fresh) {
+      this.tipped.add(fresh[0]);
+      this.newEnemyTip(fresh[0], c.x, 66);
+    }
     c.add(this.add.text(-w / 2 - 4, 0, 'Next', textStyle(pf(13), TEXT.dim)).setOrigin(1, 0.5));
+  }
+
+  private tipped = new Set<string>();
+
+  /** "New: Name, key trait" under the next-wave strip for a few seconds. */
+  private newEnemyTip(id: string, x: number, y: number): void {
+    this.children.getByName('newEnemyTip')?.destroy();
+    const def = ENEMIES[id];
+    const text = this.add.text(0, 0, `New: ${def.name}  •  ${enemyKeyTrait(def)}`, textStyle(pf(13), TEXT.cream, false)).setOrigin(0.5);
+    const w = text.width + 24;
+    const tip = this.add.container(Math.min(GAME_W - w / 2 - 10, Math.max(w / 2 + 10, x)), y).setDepth(3001).setName('newEnemyTip').setAlpha(0);
+    const bg = this.add.graphics();
+    bg.fillStyle(C.ink, 0.88);
+    bg.fillRoundedRect(-w / 2, -13, w, 26, 10);
+    bg.lineStyle(2, 0xffc83a, 0.9);
+    bg.strokeRoundedRect(-w / 2, -13, w, 26, 10);
+    tip.add([bg, text]);
+    this.tweens.add({ targets: tip, alpha: 1, y: y + 4, duration: 220 });
+    this.tweens.add({ targets: tip, alpha: 0, delay: 6000, duration: 400, onComplete: () => tip.destroy() });
   }
 
   private drawBossBar(): void {

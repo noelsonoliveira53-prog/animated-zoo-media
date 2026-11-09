@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **275** (next balance pass at iteration 280)
+Iteration counter: **276** (next balance pass at iteration 280)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1804,14 +1804,19 @@ Iteration counter: **275** (next balance pass at iteration 280)
     - About 60% of days pair with a boon.
   - New test: a full year of dates never pairs two heavy twists (278 tests). `daily-check` still passes. Screenshot `screenshots/275.png` (menu with today's daily).
 
+- **Iteration 276: new-enemy tags in the wave preview.**
+  - **Tags:** enemies the player has never met (not in `seenEnemies`) now go first in the next-wave strip, with a pulsing gold glow behind the icon and a small gold "NEW" pill above it.
+  - **Tip:** the first brand-new enemy of each upcoming wave also gets a one-line tip under the strip for about 6 s, e.g. "New: Skitter • Fast: slows and blockers help". Shown once per enemy per battle.
+  - The tip comes from the new `enemyKeyTrait(def)` in `systems/guideInfo.ts`: the most useful trait as advice, in priority order (boss, flying, healer, shield, splitter, chill, veil, armor, magic resist, fast). 1 test, 279 total.
+  - New `scripts/newenemy-check.mjs`: a save that has met only Mudlings sees the tag and the tip; a save that has met everything sees neither; no console errors. Screenshot `screenshots/276.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Wave preview polish: when a new enemy type is about to appear, a 'New!' tag on its icon in the next-wave strip and a short tooltip with its key trait.
-2. Boss intro: a brief nameplate slide-in and screen-edge vignette pulse when a boss enters the field.
+1. Boss intro: a brief nameplate slide-in and screen-edge vignette pulse when a boss enters the field.
 
 ## Known Bugs
 - (none known)

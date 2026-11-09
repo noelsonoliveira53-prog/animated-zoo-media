@@ -175,7 +175,13 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
         d = datetime.date.today() + datetime.timedelta(days=1)
         while d.isoformat() in taken: d += datetime.timedelta(days=1)
         date = d.isoformat()
-    lyrics = "\n".join(l["text"] for l in timing["lines"] if l.get("kind") == "sing")
+    # Description lyrics come from the WRITTEN song (songs/<id>.json "lyrics"), not the timing lines: the timing
+    # includes speech-to-text captions for improvised repeats, which left junk like "Type Subscribe" / "Thank you."
+    # in descriptions (Nov 8-9 runs). Fall back to timing only if the spec has no lyrics.
+    if song.get("lyrics"):
+        lyrics = "\n".join(x.strip() for x in song["lyrics"].split("\n") if x.strip() and not x.strip().startswith("["))
+    else:
+        lyrics = "\n".join(l["text"] for l in timing["lines"] if l.get("kind") == "sing")
     seen = []; [seen.append(x) for x in lyrics.split("\n") if x not in seen]
     desc = meta["description"].rstrip() + "\n\nLYRICS\n" + "\n".join(seen[:40])
     entry = {"file": rel, "title": meta["title"], "description": desc, "tags": meta.get("tags", []), "date": date,

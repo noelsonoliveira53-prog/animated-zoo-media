@@ -1,0 +1,41 @@
+[
+ {
+  "file": "shorts3d/zs3d_lion_say.mp4",
+  "source": "zoo3d_ep03.mp4 11.0-24.0",
+  "date": "2026-11-10",
+  "time": "11:00 AM",
+  "title": "What Does the Lion Say? Roar Along with Milo!",
+  "description": "What does the lion say? Roar, roar, roar! A 13-second animal sounds sing-along for kids with Milo the bluebird and the lion.\nLearn animal sounds, then roar along. From the Animal Sounds Song on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_test",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_giraffe_eat.mp4",
+  "source": "zoo3d_ep02.mp4 50.0-67.8",
+  "date": "2026-11-11",
+  "time": "11:00 AM",
+  "title": "What Do Giraffes Eat? Munch Along with Milo!",
+  "description": "What do giraffes eat? Acacia leaves, way up high! A short animal song for kids: the giraffe grabs leaves with her long tongue.\nLearn what zoo animals eat and stretch up tall. From \"What Do Animals Eat?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_test",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_elephant_eat.mp4",
+  "source": "zoo3d_ep02.mp4 26.2-41.6",
+  "date": "2026-11-12",
+  "time": "11:00 AM",
+  "title": "What Do Elephants Eat? Toot Along with Milo!",
+  "description": "What do elephants eat? Grass, leaves, bark and fruit! A short animal song for kids: the elephant picks up lunch with its trunk.\nLearn what zoo animals eat and toot along. From \"What Do Animals Eat?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_test",
+  "thumb": null
+ }
+]

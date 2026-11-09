@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F7**
+Fix counter: **F8**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2081,15 +2081,21 @@ Fix counter: **F7**
 
 - **F7 (F3) Contact shadows follow the light.** All 27 decoration contact shadows in the battle-map decoration pass (trees, pines, crystals, barrels, mushrooms, cairns, reef rocks and the rest) now fall down and to the right of the object (`SHADOW_DX` 4, `SHADOW_DY` 2) instead of sitting dead centre. Broadleaf trees cast a slightly longer shadow. Flower clusters, which had no shadow, now give each blossom its own small shadow. The meadow's mossy stones already had an offset shadow. Before/after: `fix-7-before-*` and `fix-7-after-*`.
 
+- **F8 (F4) Floor outline rule.** Things you interact with now carry the ink outline:
+  - Roads get a 2 px ink line outside the kerb, and the kerb's lower-right side catches the light (a lighter kerb, with the normal kerb shifted 1.5 px up-left over it).
+  - Ponds, which block building, get a 2.5 px ink rim.
+  - Tower pads already had their dark rim.
+
+  Decoration no longer uses ink: all 19 decoration edge strokes (crystals, barrels, buoys, trees, pines, mushrooms, cairns, reef rocks and others) are now a 32 % darker tint of the object's own body colour. A small wrapper on the decoration graphics remembers the last body fill, and `decoEdge(w)` uses it. Before/after: `fix-8-before-*` and `fix-8-after-*`.
+
 ### Fix Backlog (ranked)
-1. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
-2. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
-3. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
-4. **C2** Colour accents on the early brown / grey enemy families.
-5. **C3** Status-effect icons, not tint only.
-6. **A4** Tooltips on icon-only controls.
-7. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-8. Then resume the Design Backlog below.
+1. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
+2. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
+3. **C2** Colour accents on the early brown / grey enemy families.
+4. **C3** Status-effect icons, not tint only.
+5. **A4** Tooltips on icon-only controls.
+6. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+7. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

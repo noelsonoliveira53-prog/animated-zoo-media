@@ -480,8 +480,10 @@ export class BattleScene extends Phaser.Scene {
     const shade = (c: number, n: number) => (n > 0 ? Phaser.Display.Color.ValueToColor(c).lighten(n).color : Phaser.Display.Color.ValueToColor(c).darken(-n).color);
     const shift = (pts: Vec2[], d: number) => pts.map((p) => ({ x: p.x + d, y: p.y + d }));
     // the lower-right bank catches the light: a pale rim just past the kerb on that side
-    for (const pts of this.level.paths) this.strokePath(g, shift(pts, 2), 64, shade(theme.roadEdge, 18), 0.9);
-    for (const pts of this.level.paths) this.strokePath(g, pts, 64, theme.roadEdge);
+    // an ink line outside the kerb (roads are interactive floor), then a kerb whose lower-right side catches the light
+    for (const pts of this.level.paths) this.strokePath(g, pts, 68, C.ink, 0.85);
+    for (const pts of this.level.paths) this.strokePath(g, pts, 64, shade(theme.roadEdge, 18));
+    for (const pts of this.level.paths) this.strokePath(g, shift(pts, -1.5), 61, theme.roadEdge);
     // the road bed sits low: the upper-left bank throws a strip of shadow across its near edge
     for (const pts of this.level.paths) this.strokePath(g, pts, 52, shade(theme.road, -10));
     for (const pts of this.level.paths) this.strokePath(g, shift(pts, 3), 46, theme.road);
@@ -573,6 +575,8 @@ export class BattleScene extends Phaser.Scene {
     for (const pd of this.level.ponds ?? []) {
       g.fillStyle(lava ? 0x5a2a1a : abyss ? 0x0a0c1a : 0x3f8a9a, 1);
       g.fillEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
+      g.lineStyle(2.5, C.ink, 0.9); // ponds block building: interactive floor, so it gets the ink outline
+      g.strokeEllipse(pd.x, pd.y + 3, pd.w + 10, pd.h + 8);
       g.fillStyle(lava ? 0xff6a2a : abyss ? 0x1a8a8a : 0x6fc4dc, 1);
       g.fillEllipse(pd.x, pd.y, pd.w, pd.h);
       if (lava || abyss) {
@@ -743,6 +747,15 @@ export class BattleScene extends Phaser.Scene {
     // contact shadows fall down and right of each object: the light comes from the upper left
     const SHADOW_DX = 4;
     const SHADOW_DY = 2;
+    // Floor outline rule: only things you interact with (roads, pads, ponds) get ink outlines.
+    // Decoration edges are a darker tint of the decoration's own last body colour instead.
+    let decoFill = 0x5a7a4a;
+    const fillStyle = deco.fillStyle.bind(deco);
+    deco.fillStyle = ((color: number, alpha = 1) => {
+      if (alpha > 0.5 && color !== 0x000000 && color !== 0xffffff) decoFill = color;
+      return fillStyle(color, alpha);
+    }) as typeof deco.fillStyle;
+    const decoEdge = (w: number) => deco.lineStyle(w, Phaser.Display.Color.ValueToColor(decoFill).darken(32).color, 0.95);
     for (let i = 0; i < 60; i++) {
       const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(115, GAME_H - 10) }; // tall trees start low enough to stay clear of the top bar
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
@@ -760,7 +773,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
           deco.fillStyle(0xffffff, 0.45);
           deco.fillTriangle(p.x + dx - w * 0.3, p.y, p.x + dx + w * 0.2, p.y, p.x + dx, p.y - h * 0.9);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
         }
       } else if (this.level.theme.flotilla) {
@@ -774,7 +787,7 @@ export class BattleScene extends Phaser.Scene {
           deco.lineStyle(2, 0x3a3a42, 1);
           deco.lineBetween(p.x - 10, p.y - 8, p.x + 10, p.y - 8);
           deco.lineBetween(p.x - 10, p.y + 2, p.x + 10, p.y + 2);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeRoundedRect(p.x - 10, p.y - 14, 20, 22, 6);
         } else if (k < 0.6) {
           // a drifting crate
@@ -789,7 +802,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillCircle(p.x, p.y, 9);
           deco.fillStyle(0xc83a3a, 1);
           deco.fillRect(p.x - 9, p.y - 3, 18, 6);
-          deco.lineStyle(1.5, C.ink, 0.6);
+          decoEdge(1.5);
           deco.strokeCircle(p.x, p.y, 9);
         } else {
           // whitecaps
@@ -836,7 +849,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 26, 8);
           const col = rnd.pick(this.level.theme.trees ?? [0x6a9a4a]);
           deco.fillStyle(col, 1);
-          deco.lineStyle(2, C.ink, 0.55);
+          decoEdge(2);
           deco.fillRoundedRect(p.x - 5, p.y - 34, 10, 38, 5);
           deco.strokeRoundedRect(p.x - 5, p.y - 34, 10, 38, 5);
           deco.fillRoundedRect(p.x - 15, p.y - 24, 7, 14, 3);
@@ -849,7 +862,7 @@ export class BattleScene extends Phaser.Scene {
           // a sun-bleached rock with a skull of some long-gone beast... or just a rock
           deco.fillStyle(rnd.pick([0xc8a878, 0xb89868, 0xd8b888]), 1);
           deco.fillEllipse(p.x, p.y, rnd.between(18, 30), rnd.between(10, 16));
-          deco.lineStyle(1.5, C.ink, 0.4);
+          decoEdge(1.5);
           deco.strokeEllipse(p.x, p.y, 24, 13);
         } else {
           // ripples in the sand
@@ -868,7 +881,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 10);
           deco.fillStyle(rnd.pick([0x7a7a82, 0x6a6e78, 0x8a8a90]), 1);
           deco.fillRoundedRect(p.x - 8, p.y - h, 16, h + 4, 5);
-          deco.lineStyle(2, C.ink, 0.55);
+          decoEdge(2);
           deco.strokeRoundedRect(p.x - 8, p.y - h, 16, h + 4, 5);
           deco.fillStyle(0x9aaa6a, 0.8);
           deco.fillEllipse(p.x - 2, p.y - h * 0.4, 8, 5);
@@ -1130,7 +1143,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillTriangle(p.x - 13, p.y - 22, p.x + 13, p.y - 22, p.x, p.y - 32);
           deco.fillStyle(0xffd27a, 1);
           deco.fillRect(p.x - 5, p.y - 19, 10, 6);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeRect(p.x - 9, p.y - 22, 18, 12);
         } else {
           // a cherry tree in blossom
@@ -1161,7 +1174,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillCircle(p.x + 11, p.y - 20, 13);
           deco.fillStyle(leaf, 1);
           deco.fillCircle(p.x, p.y - 30, 17);
-          deco.lineStyle(2, C.ink, 0.5);
+          decoEdge(2);
           deco.strokeCircle(p.x, p.y - 30, 17);
           deco.fillStyle(0xffffff, 0.16);
           deco.fillCircle(p.x - 6, p.y - 36, 6);
@@ -1181,7 +1194,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillEllipse(p.x + 22, p.y, 10, 14);
           deco.fillStyle(0xe8b04a, 1);
           deco.fillEllipse(p.x - 6, p.y - 8, 12, 5);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeRoundedRect(p.x - 24, p.y - 7, 48, 14, 7);
         }
       } else if (this.level.theme.orchard && rnd.frac() < 0.75) {
@@ -1196,7 +1209,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillCircle(p.x, p.y - 26, 18);
           deco.fillCircle(p.x - 12, p.y - 16, 12);
           deco.fillCircle(p.x + 12, p.y - 16, 12);
-          deco.lineStyle(2, C.ink, 0.6);
+          decoEdge(2);
           deco.strokeCircle(p.x, p.y - 26, 18);
           deco.fillStyle(0xd02a2a, 1);
           for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - 22 + rnd.between(-6, 8), 3);
@@ -1216,7 +1229,7 @@ export class BattleScene extends Phaser.Scene {
           for (const [dx, h, w] of [[-8, 18, 7], [2, 30, 9], [10, 14, 6]]) {
             deco.fillStyle(0x5a5a80, 1);
             deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
-            deco.lineStyle(1.5, C.ink, 0.5);
+            decoEdge(1.5);
             deco.strokeTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
           }
         } else {
@@ -1240,7 +1253,7 @@ export class BattleScene extends Phaser.Scene {
             deco.fillRect(p.x + Math.cos(a0) * r0 - 4, p.y - r0 + Math.sin(a0) * r0 - 4, 8, 8);
           }
           deco.fillCircle(p.x, p.y - r0, r0);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeCircle(p.x, p.y - r0, r0);
           deco.fillStyle(0x2a2a30, 1);
           deco.fillCircle(p.x, p.y - r0, r0 * 0.3);
@@ -1251,7 +1264,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillStyle(0x7a7a84, 1);
           deco.fillRect(p.x - 6, p.y - 30, 12, 34);
           deco.fillRect(p.x - 6, p.y - 30, 24, 10);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeRect(p.x - 6, p.y - 30, 12, 34);
           deco.lineStyle(3, 0xd03a2a, 1);
           deco.strokeCircle(p.x, p.y - 12, 6);
@@ -1269,7 +1282,7 @@ export class BattleScene extends Phaser.Scene {
           deco.strokePath();
           const col = rnd.pick(this.level.theme.trees ?? [0x3f7f34]);
           deco.fillStyle(col, 1);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           for (const [dx, dy, rot] of [[-14, -22, 0.5], [18, -22, -0.5], [-12, -32, 0.25], [16, -32, -0.25], [2, -36, 0]] as [number, number, number][]) {
             const f = new Phaser.Geom.Ellipse(p.x + 2 + dx, p.y + dy, 32, 12);
             deco.save();
@@ -1289,7 +1302,7 @@ export class BattleScene extends Phaser.Scene {
           deco.fillStyle(0x8a8270, 1);
           deco.fillRect(p.x - 10, p.y - 2, 20, 6);
           deco.fillRect(p.x - 9, p.y - h - 3, 18, 5);
-          deco.lineStyle(1.5, C.ink, 0.5);
+          decoEdge(1.5);
           deco.strokeRect(p.x - 7, p.y - h, 14, h + 4);
           deco.lineStyle(2.5, 0x3f8a34, 1);
           deco.beginPath();
@@ -1309,7 +1322,7 @@ export class BattleScene extends Phaser.Scene {
           for (const [dy, w, lean] of [[-6, 34, 8], [-20, 26, 10], [-32, 18, 12]]) {
             deco.fillStyle(col, 1);
             deco.fillTriangle(p.x - w / 2, p.y + dy, p.x + w / 2 + lean, p.y + dy, p.x + lean, p.y + dy - 18);
-            deco.lineStyle(1.5, C.ink, 0.5);
+            decoEdge(1.5);
             deco.strokeTriangle(p.x - w / 2, p.y + dy, p.x + w / 2 + lean, p.y + dy, p.x + lean, p.y + dy - 18);
           }
         } else {
@@ -1319,7 +1332,7 @@ export class BattleScene extends Phaser.Scene {
           for (const [dy, r] of [[0, 10], [-13, 7.5], [-23, 5]]) {
             deco.fillStyle(0x9a9aa2, 1);
             deco.fillEllipse(p.x, p.y + dy, r * 2.2, r * 1.5);
-            deco.lineStyle(1.5, C.ink, 0.5);
+            decoEdge(1.5);
             deco.strokeEllipse(p.x, p.y + dy, r * 2.2, r * 1.5);
           }
         }
@@ -1333,7 +1346,7 @@ export class BattleScene extends Phaser.Scene {
         deco.fillRoundedRect(p.x - 5, p.y - h, 10, h + 4, 4);
         deco.fillStyle(cap, 1);
         deco.fillEllipse(p.x, p.y - h, 40, 24);
-        deco.lineStyle(2, C.ink, 0.6);
+        decoEdge(2);
         deco.strokeEllipse(p.x, p.y - h, 40, 24);
         deco.fillStyle(0xbff4ff, 0.9);
         for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - h - 4 + rnd.between(-2, 3), 2.5);
@@ -1347,7 +1360,7 @@ export class BattleScene extends Phaser.Scene {
         deco.fillCircle(p.x, p.y - 26, 18);
         deco.fillCircle(p.x - 12, p.y - 16, 12);
         deco.fillCircle(p.x + 12, p.y - 16, 12);
-        deco.lineStyle(2, C.ink, 0.6);
+        decoEdge(2);
         deco.strokeCircle(p.x, p.y - 26, 18);
         if (this.level.theme.snow) {
           deco.fillStyle(0xffffff, 0.95);

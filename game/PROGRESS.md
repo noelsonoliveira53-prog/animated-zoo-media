@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **304** (next balance pass at iteration 305)
+Iteration counter: **305** (next balance pass at iteration 310)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1978,6 +1978,10 @@ Iteration counter: **304** (next balance pass at iteration 305)
   - A touch that moves less than 24 px (`HERO_DRAG_MIN`) is still a tap that selects the hero as before, so tap-hero-then-tap-ground keeps working. Mouse play is unchanged.
   - The trail stays still with Reduce Motion, and the drag state is reset per battle.
   - New `scripts/herodrag-check.mjs` (real touch drag over CDP on a phone: trail mid-drag; the hero is ordered exactly to the lift point; a short tap selects; no console errors). The `hero`, `touchaim`, `rallydrag`, `cards` and `herocard` checks still pass. Screenshot `screenshots/304.png`. 324 tests.
+- **Iteration 305** (POLISH + BALANCE), tuning the veteran badge for feel:
+  - The autoplayer's `RunResult` now carries `towerKills` (kills per tower), and a new `scripts/veteran-balance.ts` (expert strategy, nine levels from L1 to L125) measures how many towers earn the badge.
+  - At 50 kills, 29% of towers became veterans (3–4 per run), too common to feel special. **`VETERAN_KILLS` is now 75** (8% of towers, 0–1.7 per run, none on the gentle first level). Details under Balance Notes.
+  - `veteran-check.mjs` was updated for the new line ("★ 75 kills"); no console errors. Screenshot `screenshots/305.png`. 324 tests.
 
 ## In Progress
 - (none)
@@ -2880,3 +2884,4 @@ Findings / follow-ups:
 - **Iteration 290 hero sweep** (`hero-balance.ts 6`, expert strategy, levels 20/50/80/100/120): unchanged since iteration 260 — Ember 90% / 9.5 lives, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7 — so the watch-item buffs were applied early, since the gap had held for 30 iterations and both lagged on Heart of the Amberwood (33% and 50%). **Sorrel sling 19 → 21, Bramble Earthshake radius 115 → 127.** After: Bramble 80% / 8.9 (Amberwood 50%), Sorrel 77% / 6.5 (Amberwood 50%), both inside the 77–90% band and neither above the top. Openers re-checked (levels 1–10, 6 seeds) against iteration 265: identical apart from single-seed swings in the novice column (Murkmaw 83 → 67, Frostpeak 50 → 67), so the novice-only Bramble buff doesn't flatten the early game. New watch item: Heart of the Amberwood is the weakest level for melee and support heroes (Bramble and Sorrel 50%).
 - **Iteration 295, Heart of the Amberwood** (level 80, 10 seeds): at start coins 1050 it ran 70 / 30 / 0 (expert / casual / novice); heroes Ember 90, Wren 90, Hazel 80, Fen 70, Bramble 60, Sorrel 50. Its waves aren't air-heavy (7% of health flies, like its neighbours) but are packed with fast swarms (about 180 Sapstoats, Turnleafs and Skitters), which melee and support heroes handle worst. Start-coin steps: 1150 → 90/80/0 (far too easy), 1100 → 90/60/0, **1075 → 80/40/0 (picked)**, in line with the other late boss-style levels (The Elder Pool 80/40, The Great Barn 80/30, the region hearts about 75/50). At 1075 Bramble is 60% and Sorrel 80%. Watch item closed: Bramble stays the weakest pick here, but that suits a swarm map for a slow melee hero.
 - **Iteration 300 drift check** (4 seeds; expert / casual / novice %): Mossgate 100/100/100, Murkmaw's Den 100/50/100, Morrowcap's Throne (L20) 75/50/0, Heart of the Engine (L45) 75/50/0, The Black Flagship (L75) 100/75/0, Crown of the Prairie (L105) 75/75/0, The Thunder Barrow (L125) 100/75/0, identical to the iteration 245 sweep (L125 also matches iteration 285). Branch DPS unchanged. The shared hit-rule refactors, the early-call bonus refactor and the iteration 290 hero buffs left campaign difficulty where it was.
+- **Iteration 305 veteran sweep** (`veteran-balance.ts 3`, expert): kills per tower over all runs: median 32, p75 52, p90 71, max 159 (a Frostpeak Summit tower). Veterans per run at 75 kills (was 50): Mossgate 0 (0), Murkmaw's Den 1.3 (4.0), Frostpeak 1.7 (3.0), Morrowcap's Throne 1.7 (3.3), Heart of the Ruins 0.7 (3.0), Thunderhead Crown 0.3 (3.0), Heart of the Amberwood 1.3 (4.3), Heart of the Glimmerbog 0 (1.3), The Thunder Barrow 0 (2.3). Late levels spread kills over more towers, so veterans there come from a player who leans on a few strong towers, which suits a badge. Combat itself is untouched (UI-only threshold).

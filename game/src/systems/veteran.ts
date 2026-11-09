@@ -1,5 +1,5 @@
 /** Kills after which a tower counts as a veteran and wears a small gold badge. */
-export const VETERAN_KILLS = 50;
+export const VETERAN_KILLS = 75; // about the top 10% of towers in a run (iteration 305 sweep)
 
 /** A tower's run record from the sim's tallies: kills, health removed, and whether it has earned the badge. */
 export function towerRecord(uid: number, dmgBy: Record<string, number>, killsBy: Record<string, number>): { kills: number; damage: number; veteran: boolean } {

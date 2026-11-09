@@ -1,5 +1,5 @@
-// Veteran towers: gives a Thornbow 49 kills, lets it land the 50th (a real sim kill credited to it), checks the gold
-// badge pops once, then opens its menu and screenshots the card's "★ 50 kills" record. Selling removes the badge.
+// Veteran towers: gives a Thornbow 74 kills, lets it land the 75th (a real sim kill credited to it), checks the gold
+// badge pops once, then opens its menu and screenshots the card's "★ 75 kills" record. Selling removes the badge.
 // `node scripts/veteran-check.mjs <name>`
 import { createRequire } from 'node:module';
 import { preview } from 'vite';
@@ -22,7 +22,7 @@ const r = await page.evaluate(() => {
   const t = s.sim.build(3, 'thornbow');
   s.sim.upgrade(3);
   const key = `tower:${t.uid}`;
-  s.sim.killsBy[key] = 49;
+  s.sim.killsBy[key] = 74;
   s.sim.dmgBy[key] = 3480;
   const e = s.sim.spawn('mudling', 0, 300);
   s.sim.update(1 / 60);
@@ -41,7 +41,7 @@ await page.waitForTimeout(400);
 const rec = await page.evaluate(() => window.__game.scene.getScene('Battle').menu.getByName('towerCard').getByName('towerRecord').text);
 await page.screenshot({ path: `screenshots/${name}.png` });
 const sold = await page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); s.sim.sell(3); for (const ev of s.sim.drainEvents()) s.handleEvent(ev); return !s.veteranBadges.has(window.__uid); });
-const ok = badge.badge && badge.kills === 50 && /★ 50 kills/.test(rec) && sold;
+const ok = badge.badge && badge.kills === 75 && /★ 75 kills/.test(rec) && sold;
 console.log(JSON.stringify({ ...badge, rec, sold, ok }));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();

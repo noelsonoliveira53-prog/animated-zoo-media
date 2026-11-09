@@ -46,6 +46,7 @@ export interface RunResult {
   totalWaves: number;
   coinsLeft: number;
   seconds: number;
+  towerKills: number[]; // kills per tower (incl. sold ones) for the veteran-badge sweep
 }
 
 /**
@@ -304,5 +305,6 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
     totalWaves: sim.totalWaves,
     coinsLeft: sim.coins,
     seconds: Math.round(sim.time),
+    towerKills: Object.entries(sim.killsBy).filter(([k]) => k.startsWith('tower:')).map(([, v]) => v),
   };
 }

@@ -1776,6 +1776,13 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x3a2418, 1);
         g.fillTriangle(cx - r * 1.4, cy - r * 0.45, cx - r * 1.05, cy - r * 0.4, cx - r * 1.1, cy - r * 0.2);
         g.fillTriangle(cx + r * 1.4, cy - r * 0.45, cx + r * 1.05, cy - r * 0.4, cx + r * 1.1, cy - r * 0.2);
+        // pale feather bars across each wing and a lit leading edge (design F26)
+        g.lineStyle(1, 0xe8c8a0, 0.6);
+        for (const sd of [-1, 1]) for (const t of [0.5, 0.78]) g.lineBetween(cx + sd * r * (0.2 + t * 1.2), cy - r * (0.1 + t * 0.35), cx + sd * r * (0.25 + t * 0.85), cy + r * (0.3 - t * 0.45));
+        g.lineStyle(1.5, 0xffe8c8, 0.7);
+        g.lineBetween(cx - r * 0.25, cy - r * 0.12, cx - r * 1.3, cy - r * 0.44);
+        g.lineBetween(cx + r * 0.25, cy - r * 0.12, cx + r * 1.3, cy - r * 0.44);
+        g.lineStyle(2.5, C.ink, 1);
         g.fillStyle(0xe8d8b8, 1);
         g.fillEllipse(cx, cy, r * 0.6, r * 1.1);
         g.strokeEllipse(cx, cy, r * 0.6, r * 1.1);
@@ -1800,15 +1807,28 @@ export class BootScene extends Phaser.Scene {
         g.strokePath();
         g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1, color);
-        g.fillCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
-        g.strokeCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
+        this.orbKeep(g, cx - r * 0.45, cy - r * 0.4, r * 0.96, r * 0.96, color);
+        // shaggy tufts on its crown and back, a bearded throat, and sound rings bursting from its howl (design F26)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).lighten(12).color, 1);
+        for (const [tx, ty] of [[-0.6, -0.85], [-0.35, -0.9], [0.3, -0.35], [0.55, -0.2]]) g.fillTriangle(cx + tx * r - r * 0.08, cy + ty * r + r * 0.12, cx + tx * r + r * 0.08, cy + ty * r + r * 0.12, cx + tx * r, cy + ty * r - r * 0.06);
         g.fillStyle(0x2a1a14, 1);
         g.fillEllipse(cx - r * 0.55, cy - r * 0.35, r * 0.55, r * 0.6);
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(15).color, 1);
+        g.fillTriangle(cx - r * 0.75, cy - r * 0.1, cx - r * 0.35, cy - r * 0.1, cx - r * 0.55, cy + r * 0.2);
         g.fillStyle(0xd84a3a, 1);
         g.fillEllipse(cx - r * 0.58, cy - r * 0.15, r * 0.24, r * 0.2);
         g.fillStyle(0xffd040, 1);
         g.fillCircle(cx - r * 0.7, cy - r * 0.48, r * 0.07);
         g.fillCircle(cx - r * 0.42, cy - r * 0.48, r * 0.07);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.72, cy - r * 0.51, r * 0.025);
+        g.fillCircle(cx - r * 0.44, cy - r * 0.51, r * 0.025);
+        g.lineStyle(1.5, 0xfff4d6, 0.8);
+        for (const rr of [0.25, 0.42]) {
+          g.beginPath();
+          g.arc(cx - r * 0.95, cy - r * 0.15, r * rr, Math.PI * 0.75, Math.PI * 1.25);
+          g.strokePath();
+        }
         break;
       }
       case 'mourner': {
@@ -1820,8 +1840,11 @@ export class BootScene extends Phaser.Scene {
         }
         g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx, cy + r * 0.2, r * 1.2, r * 1.0, color);
-        g.fillCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
-        g.strokeCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
+        // fluffy cheeks either side of a shaded head (design F26)
+        g.fillStyle(0xd8d8e0, 1);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.22, r * 0.16);
+        g.fillCircle(cx - r * 0.18, cy - r * 0.22, r * 0.16);
+        this.orbKeep(g, cx - r * 0.5, cy - r * 0.35, r * 0.84, r * 0.84, color);
         g.fillStyle(0xf4f4f4, 1);
         g.fillEllipse(cx - r * 0.6, cy - r * 0.3, r * 0.45, r * 0.38);
         g.fillStyle(0x222222, 1);
@@ -1830,8 +1853,15 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffb040, 1);
         g.fillCircle(cx - r * 0.72, cy - r * 0.38, r * 0.05);
         g.fillCircle(cx - r * 0.48, cy - r * 0.38, r * 0.05);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.74, cy - r * 0.4, r * 0.02);
+        g.fillCircle(cx - r * 0.5, cy - r * 0.4, r * 0.02);
         g.fillStyle(0x222222, 1);
         g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.06);
+        // a single pale tear on its cheek: the Mourner weeps as it walks
+        g.fillStyle(0x9ad8ff, 1);
+        g.fillCircle(cx - r * 0.74, cy - r * 0.2, r * 0.04);
+        g.fillTriangle(cx - r * 0.77, cy - r * 0.21, cx - r * 0.71, cy - r * 0.21, cx - r * 0.74, cy - r * 0.29);
         break;
       }
       case 'mistfox': {

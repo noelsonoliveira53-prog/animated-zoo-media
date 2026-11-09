@@ -2,6 +2,8 @@ import { leafReveal } from '../ui/transition';
 import { DEV_COINS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
+import { glossPanel } from '../ui/panels';
+import { upgradePreview } from '../systems/upgradePreview';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { APIARY_HP_PER_LEVEL, WEIR_BOUNTY_PER_LEVEL, BUILDINGS, MARKET_TRADE, SHOP_ORDER, SHRINE_CD_PER_LEVEL, SWIFTBLOOM, VILLAGE_COLS, VILLAGE_ROWS, type BuildingId, type Cost } from '../data/buildings';
@@ -449,17 +451,23 @@ export class VillageScene extends Phaser.Scene {
     this.selected = uid;
     const def = BUILDINGS[b.type];
     const now = Date.now();
-    const W = 640;
-    const H = 150;
-    const c = this.add.container(GAME_W / 2 - 60, GAME_H - H / 2 - 12).setDepth(1000);
+    const W = 700;
+    const H = 176;
+    const c = this.add.container(GAME_W / 2 - 80, GAME_H - H / 2 - 12).setDepth(1000);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.95);
-    bg.fillRoundedRect(-W / 2, -H / 2, W, H, 20);
+    glossPanel(bg, -W / 2, -H / 2, W, H, { fill: C.ink, alpha: 0.96, rim: 0xc8a050, rimAlpha: 0.55, radius: 20 });
+    // portrait backing: a soft lit disc behind the building
+    bg.fillStyle(0x2f5a3a, 1);
+    bg.fillCircle(-W / 2 + 70, 0, 58);
+    bg.fillStyle(0x4a8a52, 0.5);
+    bg.fillCircle(-W / 2 + 64, -6, 46);
+    bg.lineStyle(3, 0xc8a050, 0.7);
+    bg.strokeCircle(-W / 2 + 70, 0, 58);
     c.add(bg);
     const block = this.add.zone(0, 0, W, H).setInteractive();
     block.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
     c.add(block);
-    c.add(this.add.image(-W / 2 + 70, 0, `bld_${b.type}_${Math.max(1, b.level)}`).setScale(Math.min(1, 110 / (def.size * TILE))));
+    c.add(this.add.image(-W / 2 + 70, 0, `bld_${b.type}_${Math.max(1, b.level)}`).setScale(Math.min(1, 84 / (def.size * TILE)))); // the square tile fits inside the disc
     c.add(fitWidth(this.add.text(-W / 2 + 140, -H / 2 + 14, `${def.name}  •  Level ${Math.max(0, b.level)}`, textStyle(20, TEXT.gold)), 250)); // stays clear of the upgrade column
     const cur = b.level > 0 ? def.levels[b.level - 1] : undefined;
     const lines: string[] = [];
@@ -476,6 +484,20 @@ export class VillageScene extends Phaser.Scene {
     if (b.type === 'builderhut') lines.push('Each Builder Burrow works on one project at a time.');
     if (!lines.length) lines.push(def.blurb);
     c.add(this.add.text(-W / 2 + 140, -H / 2 + 44, lines.join('\n'), { ...textStyle(pf(14), TEXT.cream, false), wordWrap: { width: 300 } }));
+    // what the next level changes: little cards reading `label / cur → next`
+    if (b.upgradeEnds === null) {
+      upgradePreview(b.type, b.level).forEach((row, i) => {
+        const px = -W / 2 + 140 + i * 104;
+        const py = H / 2 - 54;
+        const g = this.add.graphics();
+        glossPanel(g, px, py, 98, 42, { fill: 0x24402c, rim: 0x6ab04c, rimAlpha: 0.6, radius: 10, shadow: false });
+        const label = fitWidth(this.add.text(px + 49, py + 11, row.label, textStyle(pf(11), '#b8d8a8', false)).setOrigin(0.5), 90);
+        const cur = fitWidth(this.add.text(px + 42, py + 29, row.cur, textStyle(pf(13), '#d8d0b8', false)).setOrigin(1, 0.5), 38);
+        const arrow = this.add.text(px + 49, py + 29, '→', textStyle(pf(13), '#9be86a', false)).setOrigin(0.5);
+        const nxt = fitWidth(this.add.text(px + 56, py + 29, row.next, textStyle(pf(13), '#b8ff8a', false)).setOrigin(0, 0.5), 38);
+        c.add([g, label, cur, arrow, nxt]);
+      });
+    }
 
     const next = nextLevel(b);
     let dynamic = false;
@@ -504,13 +526,13 @@ export class VillageScene extends Phaser.Scene {
       c.add(rush);
     } else if (next) {
       const thOk = townHallLevel(this.v) >= next.th;
-      c.add(
+      c.add(fitWidth(
         this.add
           .text(W / 2 - 150, -H / 2 + 22, thOk ? `Upgrade: ${this.costText(next.cost)}\n${formatTime(next.time)}` : `Needs Grove Hall ${next.th}`, {
             ...textStyle(pf(14), thOk ? TEXT.cream : TEXT.heart, false),
             align: 'center',
           })
-          .setOrigin(0.5, 0),
+          .setOrigin(0.5, 0), 250)
       );
       const btn = new Button(this, W / 2 - 150, 36, 'Upgrade', {
         width: 160,

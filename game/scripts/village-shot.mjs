@@ -1,4 +1,4 @@
-// Screenshot a busy village (every building type, a wall run, one upgrade in progress): `node scripts/village-shot.mjs <name> [hour]`
+// Screenshot a busy village (every building type, a wall run, one upgrade in progress): `node scripts/village-shot.mjs <name> [hour]` (PANEL=<uid> to open a building panel)
 import { createRequire } from 'node:module';
 import { preview } from 'vite';
 const require = createRequire(import.meta.url);
@@ -28,6 +28,8 @@ await page.goto('http://localhost:4371/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Village'));
 await page.waitForTimeout(1800);
+// PANEL=<uid> opens that building's info panel first (1 = Grove Hall, 2 = coin mine, 13 = market mid-upgrade)
+if (process.env.PANEL) { await page.evaluate((u) => window.__game.scene.getScene('Village').openPanel(u, false), Number(process.env.PANEL)); await page.waitForTimeout(300); }
 await page.screenshot({ path: `screenshots/${name}.png` });
 const n = await page.evaluate(() => window.__game.scene.getScene('Village').v.buildings.length);
 console.log(JSON.stringify({ buildings: n }));

@@ -7,6 +7,7 @@ import { pickEnemy } from '../systems/enemyPick';
 import { snapRally } from '../systems/rallySnap';
 import { waveChart } from '../systems/waveChart';
 import { runSummary, shortNum } from '../systems/runSummary';
+import { justVeteran, towerRecord } from '../systems/veteran';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
@@ -104,6 +105,7 @@ export class BattleScene extends Phaser.Scene {
   private callLast = 0;
   private skillPreview = false;
   private skillHold = false;
+  private veteranBadges = new Map<number, Phaser.GameObjects.Container>(); // tower uid → gold star
   private rallyDrag = false; // touch: dragging a rally flag
   private rallyFinger: Vec2 | null = null;
   private rallyG: Phaser.GameObjects.Graphics | null = null;
@@ -193,6 +195,7 @@ export class BattleScene extends Phaser.Scene {
     this.lastGulp.clear();
     this.projViews.clear();
     this.soldierViews.clear();
+    this.veteranBadges.clear();
     this.heroTrail = newTrail(1);
     this.rallyFlags.clear();
     this.rallyMode = null;
@@ -3229,6 +3232,37 @@ export class BattleScene extends Phaser.Scene {
     card.setPosition(Phaser.Math.Clamp(e.pos.x - W / 2, 8, GAME_W - W - 8), Math.min(y, GAME_H - H - 100));
   }
 
+  /** A tower's 50th kill: a small gold star pops onto its shoulder with a ring of sparkles, and stays. */
+  private addVeteranBadge(uid: number): void {
+    const t = this.sim.towers.find((x) => x?.uid === uid);
+    if (!t || this.veteranBadges.has(uid)) return;
+    const x = t.pos.x + 22;
+    const y = t.pos.y - 40;
+    const badge = this.add.container(x, y).setDepth(t.pos.y + 2);
+    const g = this.add.graphics();
+    g.fillStyle(0x16241c, 0.9);
+    g.fillCircle(0, 0, 10);
+    g.lineStyle(2, 0xffd23c, 1);
+    g.strokeCircle(0, 0, 10);
+    const star: Phaser.Math.Vector2[] = [];
+    for (let k = 0; k < 10; k++) {
+      const a = -Math.PI / 2 + (k * Math.PI) / 5;
+      const r = k % 2 ? 3 : 7;
+      star.push(new Phaser.Math.Vector2(Math.cos(a) * r, Math.sin(a) * r));
+    }
+    g.fillStyle(0xffd23c, 1);
+    g.fillPoints(star, true);
+    badge.add(g);
+    this.veteranBadges.set(uid, badge);
+    this.floatText(t.pos.x, t.pos.y - 60, 'Veteran!', TEXT.gold, 18);
+    if (!motion.reduced) {
+      badge.setScale(0);
+      this.tweens.add({ targets: badge, scale: 1, duration: 260, ease: 'Back.easeOut' });
+      this.particles.setParticleTint(0xffd23c);
+      this.particles.explode(motion.lowFx ? 6 : 14, x, y);
+    }
+  }
+
   /**
    * Info card beside the tower menu: name and level, trait tags, and three stat bars. `next` (the next tier,
    * or the branch you just tapped) shows as a green extension of each bar that grows.
@@ -3249,7 +3283,15 @@ export class BattleScene extends Phaser.Scene {
     const tags = cardTags(tower.def, cur).join(' • ');
     card.add(fitWidth(this.add.text(10, 29, tags, textStyle(pf(11), '#b8d0c0', false)), W - 20));
     this.drawCardRows(card, g, cardRows(cur, next), 52, W, tower.def.color);
-    if (next) card.add(fitWidth(this.add.text(10, H - 14, nextName ? `Branch: ${nextName}` : 'Green: next level', textStyle(pf(10), '#9be86a', false)).setOrigin(0, 0.5), W - 20));
+    if (next) card.add(fitWidth(this.add.text(10, H - 14, nextName ? `Branch: ${nextName}` : 'Green: next level', textStyle(pf(10), '#9be86a', false)).setOrigin(0, 0.5), W / 2 - 14));
+    // this run's record: kills and damage, gold once it's a veteran
+    const rec = towerRecord(tower.uid, this.sim.dmgBy, this.sim.killsBy);
+    card.add(
+      fitWidth(
+        this.add.text(W - 10, H - 14, `${rec.veteran ? '★ ' : ''}${rec.kills} kills • ${shortNum(rec.damage)} dmg`, textStyle(pf(10), rec.veteran ? TEXT.gold : '#c8d8c8', false)).setOrigin(1, 0.5).setName('towerRecord'),
+        next ? W / 2 - 14 : W - 20,
+      ),
+    );
     return card;
   }
 
@@ -3516,6 +3558,7 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'kill': {
         this.tally.kills++;
+        if (ev.enemy.lastSrc?.startsWith('tower:') && justVeteran(this.sim.killsBy[ev.enemy.lastSrc] ?? 0)) this.addVeteranBadge(Number(ev.enemy.lastSrc.slice(6)));
         if (ev.enemy.def.boss) this.tally.bosses.push(ev.enemy.def.id);
         const v = this.enemyViews.get(ev.enemy.uid);
         if (v) this.killView(ev.enemy.uid, v);
@@ -4200,6 +4243,8 @@ export class BattleScene extends Phaser.Scene {
         break;
       }
       case 'sell': {
+        this.veteranBadges.get(ev.tower.uid)?.destroy();
+        this.veteranBadges.delete(ev.tower.uid);
         const v = this.towerViews[ev.tower.slot];
         this.fx.removed(ev.tower.slot);
         this.towerShadows.get(ev.tower.slot)?.destroy();

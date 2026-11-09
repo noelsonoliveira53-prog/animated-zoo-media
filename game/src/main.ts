@@ -15,6 +15,7 @@ import { AchievementsScene } from './scenes/AchievementsScene';
 import { StoreScene } from './scenes/StoreScene';
 import { GAME_H, GAME_W } from './ui/theme';
 import { music } from './systems/music';
+import { KeyNavPlugin } from './ui/keyNav';
 
 const game = new Phaser.Game({
   type: Phaser.AUTO,
@@ -24,6 +25,7 @@ const game = new Phaser.Game({
   backgroundColor: '#10261b',
   scale: { mode: Phaser.Scale.FIT, autoCenter: Phaser.Scale.CENTER_BOTH },
   input: { activePointers: 2 },
+  plugins: { scene: [{ key: 'KeyNav', plugin: KeyNavPlugin, mapping: 'keyNav' }] },
   scene: [BootScene, MenuScene, WorldMapScene, VillageScene, BattleScene, EndingScene, StoryScene, RaidScene, FieldGuideScene, SettingsScene, AchievementsScene, StoreScene],
 });
 

@@ -1,0 +1,3274 @@
+# Grovewatch: Sanctuary Siege — Progress
+
+An original tower-defense + village-building game. The **Keepers of the Grove** defend their
+woodland sanctuary from the **Murkhorde**, bog critters creeping out of the Gloomfen.
+Resources: **Coins** (battle currency / village gold) and **Glowsap** (the second village resource, planned).
+
+Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
+
+Iteration counter: **316** (feature loop stopped at the user's request; design loop running, see Design Loop below) (next balance pass at iteration 320)
+
+## Done
+- [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
+  Renderer-free `BattleSim` (paths, waves, towers, projectiles, splash/slow support, armor/magic resist,
+  4 targeting modes, early-call bonus, win/lose). Level 1 *Mossgate Meadow* (8 waves), 2 towers
+  (Thornbow Nest, Glimmer Spire, 3 tiers each), 3 enemies (Mudling, Skitter, Shellback).
+  Battle HUD (lives/coins/wave, call wave, pause, speed x1/x2/x3), radial build/upgrade/sell/aim menu,
+  hit flash, damage numbers, particles, screen shake on leak, victory/defeat panel with stars saved to localStorage.
+  Headless Playwright smoke test script.
+- [x] **Iter 2** — All 4 base tower types. **Boulder Bellows** (artillery: lobbed rocks that aim ahead of
+  the target, splash damage, can't hit flyers, arc rendering, dust ring + small shake) and **Burrow Den**
+  (barracks: squads of Badger Wardens that walk to a rally point on the road, block and brawl with ground
+  enemies, take damage, die, respawn, heal when idle; tap "Rally Point" then the road to move them).
+  Enemies now have melee stats. 4-option radial build menu. 7 new unit tests (30 total).
+- [x] **Iter 3** — Enemy roster expanded to **12 types**: Gloomwing + Bog Gnat (flying: soldiers and
+  artillery can't touch them; drawn high with a ground shadow), Bogmender (healer aura), Reedguard
+  (reed shield absorbs damage first), Splotch (splits into 2 Mudlings), Thornhog (fast + armored),
+  Wispling (70% magic resist), Bog Brute (tank that hits soldiers hard), and the boss **Old Murkmaw**
+  with 3 phases (summons Mudlings → mud shell + healers → enrage speed). Boss HUD bar with phase ticks
+  and shield, boss arrival/phase banners + shake, heal/shield-break/split effects. New level 2
+  **Gloomfen Edge** (2 merging roads, 12 waves, boss finale). Banners moved under the HUD so they
+  don't cover the battlefield; oversized map background so shake doesn't show edges.
+  `scripts/showcase-enemies.mjs` visual check. 6 new tests (36 total).
+- [x] **Iter 4** — **Heroes.** 3 heroes in `data/heroes.ts`: **Bramble** the Badger Knight (melee
+  blocker; passive Thick Hide; active Earthshake = ground AoE + slow), **Fen** the Heron Ranger (ranged,
+  hits air; passive 25% crits; active Feather Storm = volley at 8 targets), **Ember** the Fox Sage
+  (magic; passive Warm Glow = nearby towers +20% fire rate; active Foxfire Ring = AoE burn + slow).
+  Tap the hero (or portrait / H) then tap the map to move; skill button (or Q) with cooldown pie.
+  XP from kills (full nearby, 35% far), levels 1–6 (+12% stats/level), death + respawn timer.
+  Hero picker on the menu (saved). Smoke scripts now start battles via the Menu scene (old way left
+  the menu running underneath and its buttons swallowed clicks). 8 new tests (44 total).
+
+- [x] **Iter 5 — POLISH + BALANCE.** Headless autoplayer (`src/systems/autoplay.ts`) with 7 scripted
+  strategies + `scripts/balance.ts` report. Structural fixes: the next-wave countdown now waits until the
+  current wave finishes spawning (waves used to stack every 14s); supply coins at each wave start
+  (`waveIncome`: 10 + 3×wave). Tuning: Boulder Bellows damage/rate up (was useless), Burrow soldiers
+  hit harder and are tougher, Mudling/Skitter/Shellback bounties up, L1 start 250 coins and softer
+  final wave, L2 start 380 coins, softer waves 7–8, Murkmaw hp 2400 → 1900. Polish: wave banner shows
+  "Wave N of M" plus supply and early-call coins; the wave button says "Call Early" while a wave is spawning.
+  Balance guard-rail tests (47 total).
+
+- [x] **Iter 6** — **Global spells** (`data/spells.ts`): **Starfall** (tap a spot; a falling star lands
+  0.9s later for 140 damage in an 85px radius, hits flyers; 40s cooldown) and **Grove Call** (tap the
+  road; 3 hedgehog Rangers hold that spot for 16s; 28s cooldown). Bottom-right spell buttons with
+  cooldown pies and a targeting reticle; keys 1/2, Esc cancels. Soldiers now carry their own stats/anchor
+  (needed for summons). The falling-star animation follows game time (stays in sync on slow devices and at
+  x3 speed). Moved the L1 bottom-right build pad out from under the spell buttons. 2 new tests (49 total).
+
+- [x] **Iter 7** — **World map + campaign levels 3–5.** New `WorldMapScene` ("The Grovelands"): island
+  map with regions, dotted trail, level nodes with stars, locks, a pulsing next level, total stars, and a
+  level card (blurb, waves/roads/lives, enemy preview, Play). Levels unlock in order (≥1 star on the
+  previous one). Menu → Campaign; the victory screen has Retry / Map / Next. New levels: **3 Thornwood Hollow**
+  (long serpentine road), **4 Mirelake Crossing** (two separate roads and gates, 25 lives, ponds),
+  **5 Murkmaw's Den** (three roads merge, 15 waves, boss finale). Gates are now drawn at the real road
+  exit and deduplicated; levels can have decorative ponds. Level-data tests (pads off roads, on screen)
+  and guard rails for levels 3–5 (53 tests).
+
+- [x] **Iter 8** — **Tower specializations.** Every tower offers 2 branches at max tier (`specs` in
+  `data/towers.ts`): Thornbow → **Hawkeye Perch** (270 range, 70 dmg, pierces 50% armor) / **Bramble
+  Volley** (3 targets per volley); Glimmer → **Stormcall Spire** (chain lightning to 4 more) / **Frostbloom
+  Spire** (splash + heavy slow); Boulder → **Quake Mortar** (huge blast) / **Sap Catapult** (slowing splash);
+  Burrow → **Stonehide Wardens** (armored tanks) / **Thornback Raiders** (4 fast hitters). New sim mechanics:
+  multishot, chain, armor pierce. Menu shows both branches; the first tap previews (description + range),
+  the second tap buys. Crested tower art per branch, tinted shots, lightning effect + zap sound. The
+  autoplayer buys specializations once everything is maxed. Sell refunds include the spec. 8 new tests (61 total).
+
+- [x] **Iter 9** — **Home village** (`VillageScene`, rules in `systems/village.ts`, data in `data/buildings.ts`).
+  22×13 grid with 8 building types: **Grove Hall** (town hall, 5 levels, gates counts/levels), **Acorn Mine**
+  (coins/hour), **Glowsap Tap** (glowsap/hour, the second resource), **Burrow Vault** (storage), **Builder
+  Burrow** (each = 1 builder), **Defense Workshop**, **Ranger Lodge** (for raids later), **Bramble Wall**.
+  Real-time construction timers (keep running while away), production accumulates offline up to each
+  producer's capacity, storage cap, builders limit, Grove Hall requirements and max counts. Tap a producer
+  to harvest (bubble shows when ready); info panel with upgrade cost/time and a progress bar; Build shop;
+  placement and move modes with a green/red snapped ghost. Procedural art for every building level, coin/
+  glowsap/hammer icons. **Battle links:** campaign wins pay village resources (more for first clears and
+  new stars, shown on the victory panel); the Defense Workshop gives +5% tower damage per level in battle.
+  Menu now has Campaign + Village. 10 new tests (71 total).
+
+- [x] **Iter 10 — POLISH + BALANCE.** The autoplayer now casts Starfall on the densest clump, Grove Call ahead of
+  the lead enemy, and the hero skill when ≥3 enemies are in reach; expert/casual pick an **adaptive tower mix**
+  from the level's enemy makeup. The novice profile now has a hero + spells (every real player does).
+  New `scripts/spec-bench.ts` (DPS and DPS-per-coin per branch vs armored / crowd / flyers).
+  Tuning: spells nerfed (Starfall 140→100 dmg, 40→50s; Grove Call 16→12s, 28→35s, weaker Rangers);
+  new per-level **enemy health ramp** (`hpMult`: L2 1.25, L3 1.3, L4 1.15, L5 1.4); Hawkeye Perch buffed
+  (110 dmg, 70% pierce: now the best anti-armor branch); Frostbloom nerfed (34 dmg, 45 splash).
+  Polish: real **pause menu** (Resume / Restart / Sound on-off / Quit to Map; Esc toggles it).
+  Guard rails updated (late levels winnable but not guaranteed). 71 tests.
+
+- [x] **Iter 11** — **More village → battle perks.** `battlePerks()` now returns tower damage (Defense
+  Workshop +5%/lvl), **starting coins** (Grove Hall +40 per level above 1) and **Ranger strength** (Ranger
+  Lodge: Grove Call Rangers +25% hp/damage per level). **Hero training**: spend Glowsap on the menu's hero
+  card (300/800/1600/3000/5000) to raise a hero's rank; rank N heroes start every battle at level N+1
+  (persisted in `heroRanks`). Battles open with a "Village bonuses" banner listing what's active; building
+  panels describe their battle bonus. 2 new tests (73 total).
+
+- [x] **Iter 12** — **Region 2 + levels 6–8.** World map is now paged by region (`REGIONS`, `regionOf`) with
+  `<`/`>` arrows; the next region stays locked (toast) until its gate level is beaten. New snowy region
+  **Frostfern Highlands** (snowy island map with pines, frozen lake, "Mountain Gate", placeholders for
+  levels still to come). Levels: **6 Frostfern Pass** (long switchback), **7 Icicle Crossing** (two roads
+  cross in an X and split to two gates, hero starts at the crossing), **8 Glacier Hold** (three trails
+  merge; Murkmaw returns). Snow theme: pale ground, pine-colored trees with snow caps, falling snow.
+  New level fields: `heroSpawn`, theme `trees`/`snow`. **Economy fix:** kill bounties now scale with the
+  level's `hpMult` (later levels used to starve the player). All hpMults retuned (L3 1.5, L4 1.15, L5 1.65,
+  L6 2.0, L7 1.45, L8 1.6). 75 tests (regions, bounty scaling, levels 3–8 winnable).
+
+- [x] **Iter 13** — **Highlands complete (levels 9–10) + frost enemies.** New mechanic **chill**: enemies with
+  `chill` periodically freeze shooting towers in a radius (soldier dens are immune); frozen towers turn icy
+  and can't fire. New enemies: **Rime Wraith** (hooded frost spirit, 40% magic resist, freezes towers in 95px
+  every 5s) and boss **Grimtusk the Frost Boar** (3200 hp, big freeze aura; phases: summons wraiths → ice
+  hide shield + thornhogs → charge). Levels: **9 Rimewood Hollow** (wraith debut, hp×2.15) and **10 Frostpeak
+  Summit** (two roads merge, Grimtusk finale, hp×1.75). Ice-ring + "Frozen!" effects; enemy showcase script
+  takes a level index. 14 enemy types now. 76 tests.
+
+- [x] **Iter 14** — **Region 3: The Emberdeep (levels 11–12) + burrowers.** New mechanic **burrow**: enemies dive
+  underground on a cycle. While underground they can't be targeted by towers, hero, splash, chain, Starfall or
+  hero skills, they can't be blocked (diving frees them from soldiers), and they move 1.5× faster. In-flight
+  shots miss. New enemy **Cinder Mole** (rendered as a moving dirt mound while under). Volcanic theme:
+  dark ash ground, rust/dead trees, **lava pools** with pulsing glow, drifting embers; ember-style world-map
+  page ("Ash Road", smoking rocks, lava lake). Levels: **11 Ashfall Gate** (switchbacks, hp×1.8) and
+  **12 Cinder Tunnels** (two roads merge, hp×1.6). 15 enemy types now. 78 tests.
+
+- [x] **Iter 15 — POLISH + BALANCE.** Smarter expert autoplayer (`smart: true`): moves its hero to the busiest
+  **choke point** (`chokePoint()`: the road point with the most road in reach, biased toward the gate) and picks
+  **branches from the level's makeup** (`smartSpec()`: Volley vs flyers else Hawkeye; Stormcall; Quake vs tanks
+  else Sap; Stonehide vs brutes else Raiders). Expert now beats casual/novice on most levels. Retuned Glacier
+  Hold and Cinder Tunnels (hp×1.7). Polish: **next-wave preview** in the top bar (enemy icons + counts, ✈ marks
+  flyers, red count for bosses); moved a lava pool out from under the spell buttons. 78 tests.
+
+- [x] **Iter 16** — **Campaign complete: levels 13–15, final boss, ending.** New mechanic **spawner** (enemies
+  that release minions on a timer, capped by `limit`). New enemies: **Ember Imp** (fast flyer), **Ash Hive**
+  (slow tank that hatches up to 6 imps) and final boss **Vulkhar the Ash Wyrm** (3200 hp, burrows, breeds imps,
+  4 phases: moles → obsidian shield + brutes → frost wraiths + speed → fury). Levels: **13 Smoulder Fields**
+  (long serpentine plain), **14 Obsidian Bridges** (two separate lava-bridge roads, two gates), **15 Heart of
+  the Emberdeep** (three roads; Murkmaw, Grimtusk and Vulkhar return as a boss rush). New **EndingScene**
+  (night-to-dawn over the great oak, stars total); the final victory shows "Epilogue". **Bug fixes found by
+  the sim:** packs of Rime Wraiths could freeze towers forever → 3s thaw immunity; Ash Hives used to spawn
+  ~26 imps each over their slow walk → capped. The smart AI now keeps the hero at a level's designed
+  `heroSpawn`. 18 enemy types, 15 levels, 80 tests.
+
+- [x] **Iter 17** — **Raid mode.** Train troops at the Ranger Lodge (instant, costs Glowsap; army space =
+  10 × lodge level): **Badger Brawler** (tank), **Hedgehog Slinger** (ranged), **Beaver Sapper** (targets
+  defenses, splash), **Owl Striker** (flyer, needs Lodge 2). Village **Raid** button opens a panel with
+  training cards and 3 seeded Murkhorde camps (Outpost / Warren / Stronghold) showing their loot. Pure
+  `RaidSim` (`systems/RaidSim.ts`) + seeded `generateCamp` (`systems/camp.ts`): Mud Totem (HQ), Spit Towers
+  (hit air), Bog Mortars (splash, ground only), Loot Piles, Mud Huts; troops pick the nearest (or nearest
+  defense) target, defenses shoot the nearest troop in range. Stars: ≥50%, HQ down, 100%. Loot is banked
+  per destroyed building; survivors and undeployed troops return; new camps after every raid. `RaidScene`
+  with a deploy bar (tap or drag outside the camp; a red no-deploy zone flashes when too close), HP bars,
+  shots, destruction effects, HUD (%, timer, loot, stars) and a result panel. **Save fix:** the village now
+  reloads the save before writing, so it can't overwrite the army or other progress. 89 tests.
+
+- [x] **Iter 18** — **Raid walls + raid balance.** Warren and Stronghold camps get a ring of **Stake Walls** around
+  their core (HQ + defenses). Ground melee troops whose next step would hit a wall stop and break it; Beaver
+  Sappers do 3× damage to walls (and splash them); owls and slingers ignore them; walls don't count toward
+  destruction %. Palisade wall art. New `scripts/raid-balance.ts` (full armies per Lodge level vs each tier,
+  10 seeds). Tuning: Outpost +1 Spit Tower, Warren/Stronghold −1 mortar, Stronghold −1 spit, walls 320→220 hp,
+  gentler tier scaling (hp +35%/tier, dmg +25%/tier). 92 tests.
+
+- [x] **Iter 19** — **Field Guide + Settings (meta, part 1).** New `FieldGuideScene` (parchment book): tabs for
+  **Enemies** (18 entries; unmet enemies show as "?" silhouettes until first seen in battle, "Discovered N/18"),
+  **Towers** (4 towers + 8 branches) and **Heroes** (with training rank); each entry has art, stats (hp, speed,
+  armor/MR %, lives, bounty, special tags) and a blurb. Battles record sightings (`seenEnemies`, saved
+  immediately; "New in Field Guide!" popup). New `SettingsScene`: volume slider (drag or tap), sound on/off,
+  two-tap **Reset progress** (keeps settings). Menu gets Field Guide + Settings buttons. **Bug fix:** top-tier
+  tower textures were clipped at the top (84px canvas too short for roofs/orbs); now 100px. 95 tests.
+  (Backlog reordered: meta features before the raid training queue, since the whole META pillar was missing.)
+
+- [x] **Iter 20 — POLISH + BALANCE.** Structural: **per-wave health ramp** (`waveHpMult()`): a level's health bonus
+  now ramps from 60% on wave 1 to 100% on the last wave (bounties follow), so late levels no longer open with
+  brutal waves before the player has an economy. All level `hpMult`s rescaled (bonus × 1.3) to keep late-wave
+  difficulty. Mobile polish: **"turn your phone sideways" overlay** in portrait on touch devices, **Fullscreen**
+  button in Settings, no long-press context menu or text selection. 95 tests.
+
+- [x] **Iter 21** — **Achievements (meta, part 2).** 17 achievements in `data/achievements.ts` (first win, perfect
+  defense, stars 15/45, each boss, campaign complete, 500/5000 kills, 10 specializations, hero level 6,
+  10 buildings, Grove Hall 3, first raid win, 3-star Stronghold, full Field Guide), each with a Coins/Glowsap reward
+  paid into the village. Lifetime `stats` counters (`bumpStats`) are recorded at battle end (wins/losses), raid end
+  and village building; `checkAchievements()` unlocks and pays out. Slide-in "Achievement" toasts in battle,
+  raid and village; `AchievementsScene` lists all with progress bars; menu button. 98 tests.
+
+- [x] **Iter 22** — **Daily challenge (meta, part 3).** `dailyFor(date, unlocked)` hashes the local date into one of
+  the player's unlocked levels plus 2 modifiers (always at least one hard): Swift Horde (+30% speed), Thick Hides
+  (+25% hp), Beaver Discount (−20% tower prices), Full Coffers (+50% coins), Clouded Sky (no spells), Hero on Leave,
+  Thin Hedge (5 lives), Frenzy (waves twice as fast). New `Modifiers` in `BattleSim` (prices via `sim.price()`,
+  sell refunds scaled, `maxLives` for stars). Menu card "Daily: <level>" with twists and reward; first win of the day
+  pays +300…+1140 coins & glowsap (saved as `dailyDone`), replays allowed. Battle banner lists today's twists;
+  spell buttons show as locked under Clouded Sky. Menu re-laid out (stars top-right, version bottom-right).
+  4 new tests (102 total). **META pillar complete:** Field Guide, settings, achievements, daily challenge.
+
+- [x] **Iter 23** — **Timed troop training.** Troops now train at the Ranger Lodge over time (Brawler 20s, Slinger 25s,
+  Sapper 45s, Owl 60s), one after another; the queue (`trainQueue`, timestamps) keeps running while away.
+  Glowsap is paid when queued and queued troops count toward army space (`totalArmySpace`). `tickTraining()` moves
+  finished troops into the army. The raid panel shows "Training X: 12s (+N queued)", ready counts with "(+queued)",
+  and train times on cards; Attack ticks the queue first and explains if troops are still training. Camp cards
+  no longer count wall segments as buildings. Restored wall tests that an edit had dropped. 103 tests.
+
+- [x] **Iter 24** — **Procedural background music** (`systems/music.ts`). A WebAudio lookahead scheduler plays a soft pad,
+  bass and pentatonic arpeggio over a 4-chord loop, with three moods: **calm** (menu, map, village, guides; 78 bpm),
+  **battle** (112 bpm, minor, kick + hats) and **boss** (132 bpm, tense progression), switching on a bar line. Battles
+  flip to the boss mood while a boss is alive. Music has its own **Music: On/Off** toggle (`settings.music`) and follows
+  the volume slider; the Settings screen was re-laid out (Effects / Music / Fullscreen). `scripts/music-check.mjs`
+  verifies the music starts after a gesture and changes mood. 103 tests.
+
+- [x] **Iter 25 — POLISH + BALANCE (economy).** Smarter raid deploy in `raid-balance.ts` (side nearest the defenses,
+  sappers/owls first, brawlers 1s later, slingers 3s later; `--naive` keeps the old spread). New `scripts/economy.ts`:
+  income (campaign, achievements, production per Grove Hall level, raid loot minus lost troops) vs spending (full
+  build-out, hero training). Fix: Bramble Walls were an 84k-coin sink with no gameplay use → max 30 (was 80),
+  40/120/300 coins (was 50/200/800); total build-out 179k → 109k coins. Music drops to the calm mood when a battle
+  or raid ends. Campaign re-checked (no regressions). 103 tests.
+
+- [x] **Iter 26 — Mobile touch targets.** New `ui/touch.ts` (+ pure `ui/hitpad.ts`): on coarse-pointer devices, hit
+  areas grow toward 72 game px (≈42 CSS px on a phone), capped at 12 px per side so neighbours don't steal taps.
+  Applied to every `Button`, build pads, the hero sprite, text options in the tower menu and the volume knob.
+  Desktop hit areas are unchanged. New `scripts/mobile-check.mjs` (740×360, touch emulation) taps just outside a
+  button edge and just outside a build pad, and both register. 106 tests.
+
+- [x] **Iter 27 — Music polish.** New `data/musicThemes.ts`: moods plus 4 themes (Sanctuary for menus and the village,
+  Grovelands, Frostfern, Emberdeep). Each theme transposes and re-tempos the mood loop, swaps arp/lead waveforms and
+  adds a 2-bar lead motif every 4 bars (softer in calm). Battles pick the theme for their region; raids use Emberdeep.
+  Victory and defeat stingers (fanfare / falling lament) rest the loop until they ring out; when music is off, the
+  old short sfx jingle still plays. `music-check.mjs` now checks the region themes and that the stinger rests the
+  loop. 111 tests.
+
+- [x] **Iter 28 — Phone-readable labels.** On a phone the 1280×720 game renders at about 0.5×, so 12–14 px labels
+  shrank to 6–7 CSS px. New `pf()` (pure `phoneFontSize`): on touch devices, labels under 18 px grow by up to 4 px
+  (capped at 18). Applied to battle labels (spell names, hero skill, wave preview, spec names, tower menu) and the
+  world map. `fitWidth()` shrinks a label back to fit its circle (the "Earthshake" skill name overflowed). Fix: the
+  map's starting-point label sat under the first level's name on phones; moved it down. Village drag-to-pan dropped:
+  FIT scaling already shows the whole grid. `mobile-check.mjs` now also captures the upgrade menu and map. 113 tests.
+
+- [x] **Iter 29 — Region 4 opens: The Duskcap Weald.** A twilight forest of giant mushrooms beyond the Emberdeep.
+  Two new enemy mechanics (20 enemies now): **Veilstalker** (`veil`: towers only target it within 105 px; splash,
+  spells and soldiers still hit it, and it is drawn as a faint shimmer until a tower spots it) and **Rootrager**
+  (`enrage`: double speed below 50% HP, red tint + "Enraged!"). Level 16 **Duskcap Verge** (2 roads, 11 pads, 15
+  waves, `DUSK` theme with glowing-mushroom scenery), a Duskcap world-map style, and a hushed whole-tone music theme.
+  The story ending is now tied to a `finale` flag on level 15 (it was "last level in the list"); the
+  "Keeper of the Grove" achievement follows it. Fix: with 4 levels still to come, the 4th "?" placeholder on the
+  world map was off-screen; placeholders now spread evenly. `balance.ts` takes an optional level filter. New
+  `scripts/dusk-check.mjs`. 115 tests.
+
+- [x] **Iter 30 — POLISH + BALANCE (16 levels).** Full campaign re-run (6–8 seeds × expert/casual/novice). Fixed three
+  outliers: Glacier Hold hpMult 1.91 → 1.7 (expert was below casual), Obsidian Bridges 1.19 → 1.0 (expert only won
+  17%), Heart of the Emberdeep 1.13 → 1.06 (finale: expert 88%). Polish: the Field Guide lists the new traits
+  ("Veiled (towers see it within 105px)", "Enrages below 50% health"); checked that the 20-enemy grid still fits.
+  `meta-check.mjs` now opens the Veilstalker entry. 115 tests.
+
+- [x] **Iter 31 — Duskcap level 17 + Puffcap.** New enemy **Puffcap** (21 enemies): `sporeBurst` on death hastens
+  nearby non-boss allies ×1.6 for 3 s (pink tint, spore cloud, "Spores! ×N"), so it pays to pop it away from the crowd.
+  Level 17 **Glowspore Hollow**: long switchback plus a second road climbing up from the south and merging late,
+  12 pads, 15 waves. Tuning found two spikes and fixed them: wave 6 mixed Puffcaps into fast Thornhogs (12-life leak
+  for the novice), so the Puffcaps now trail behind; wave 5 Rootragers and the wave 6 Gnats moved to the long road.
+  New test: no build pad may sit under the HUD (hero portrait/skill, spell buttons, top bar). It caught a Glowspore pad
+  under the hero skill button and a Frostfern Pass pad under the wave preview (moved both). `dusk-check.mjs` now
+  pops a Puffcap next to a Thornhog pack. 117 tests.
+
+- [x] **Iter 32 — Duskcap level 18: Mirrorpool Glade.** Three roads: two from the west skirt a glowing pool and merge
+  in the glade, and a third winds up from the south and joins the tail. 13 pads, 16 waves. Tracing leaks found a layout trap:
+  nearly every pad sat 120 px from a road, just outside the Veilstalker's 105 px veil, so towers barely saw them.
+  Fix: five pads moved to about 90 px, and the southern road lengthened (about 1280 → 1760 px) with a pad added. New
+  reusable `scripts/level-shot.mjs <name> <levelIndex>` (builds every pad, plays 3 waves, screenshots). 117 tests.
+
+- [x] **Iter 33 — Duskcap level 19: Hollowroot Switchback.** One long road (about 3,440 px) that doubles back three
+  times. Pads between the rows sit about 100 px from both neighbouring roads (inside Veilstalker reveal range), plus an
+  outer row. 12 pads, 16 heavy waves mixing every Duskcap enemy. First tuning try worked; no layout fixes needed.
+  117 tests.
+
+- [x] **Iter 34 — Duskcap finale: Morrowcap's Throne (level 20).** New boss **Matriarch Morrowcap** (22 enemies): heals
+  nearby allies (and herself) every 4 s, releases Puffcaps (14 at most), and has four phases (Veilstalker mist → spore-bark
+  shield + Rootragers → scattered Puffcaps + haste → final lurch). Level 20: two roads that merge, 12 pads, 18 waves,
+  boss on the last wave. The Duskcap Weald now has all 5 levels (20-level campaign). New achievement **Weald Warden**
+  (18 total). Fix: a pad near the top edge put a tower behind the speed/next-wave buttons; replaced it.
+  `level-shot.mjs` takes a boss id and drives it through its phases; new `scripts/enemy-sprites.mjs` renders sprites
+  close up. 117 tests.
+
+- [x] **Iter 35 — POLISH + BALANCE (20 levels).** Full campaign re-run. Fixed two outliers: Frostpeak Summit hpMult
+  1.98 → 1.75 (the Frostfern boss had expert at 50%, below every later boss) and Mirrorpool Glade 1.8 → 1.65 (casual was
+  50%, below the next level; the novice now wins some runs). Economy re-check: with 20 levels, campaign + achievements
+  pay about 65k coins / 55k glowsap against a 109k / 99k full build-out. Polish: Achievements screen pages (new pure
+  `ui/paging.ts`, `<`/`>` buttons, "1/2" label), plus a 19th achievement **Mistwalker** (3★ on every Duskcap level).
+  `ach-check.mjs` clicks through the pages. 119 tests.
+
+- [x] **Iter 36 — Swiftbloom speed-ups.** Taking a level to 3★ for the first time grants a **Swiftbloom** (hold at most
+  3; data in `SWIFTBLOOM`). Each one cuts 1 hour off a building under construction; the village tick then finishes it
+  if due. Pure rules `grantSwiftbloom` / `rushBuilding` in `systems/village.ts` (stored on `VillageState.swiftblooms`, so
+  old saves just start at 0). The victory panel shows a pink "+1 Swiftbloom"; the building panel shows a
+  "Swiftbloom (N)" button while it is under construction. One per level means at most 20 in a playthrough, so they
+  can't be farmed. Fix: the construction progress bar now clamps to 0–1 (a long timer drew an orange bar across half
+  the village). New `scripts/swift-check.mjs`: a 3★ win grants the token, then real clicks rush a Grove Hall upgrade.
+  122 tests.
+
+- [x] **Iter 37 — Phone-readable Village, Achievements and Menu text.** `pf()` applied to the small labels in the Village
+  (badges, building panel, shop cards, troop and raid panels), Achievements cards, Menu (daily line, version) and
+  achievement toasts. New `scripts/phone-screens.mjs` (740×360, touch) screenshots each screen; it found and fixed three
+  overflows: the shop's "Defense Workshop" name and its two-part cost ran into the count (the name now shrinks to fit,
+  and costs read "500c + 300s"); the Mistwalker description ran under its progress bar (descriptions shrink to the free
+  width); the Menu hero description overflowed its panel (kept at desktop size). Desktop layouts re-checked.
+  122 tests.
+
+- [x] **Iter 38 — Endless mode.** Any beaten level's map card has an **Endless** button. `systems/endless.ts` turns the
+  map into 200 seeded, generated waves (`data/endless.ts`): the enemy pool grows in tiers (waves 1/4/8/12/16), a boss
+  every 10th wave (Murkmaw → Grimtusk → Vulkhar → Morrowcap), a per-wave HP budget, and a new `LevelDef.endless.hpRamp`
+  (+7% enemy health per wave, bounties too). HUD shows "n/∞" and "Endless wave n". The result panel shows waves held,
+  new best or best on this map, and a village payout (12c + 12s per wave). Best runs go to `save.endlessBest`, and endless
+  never records stars. Retry and pause → Restart stay in endless. New achievement **Unending Vigil** (25 waves; 20 total).
+  New `scripts/endless-balance.ts` and `scripts/endless-check.mjs` (real click on the card's Endless button). 127 tests.
+
+- [x] **Iter 39 — Region 5 opens: The Saltmarrow Shoals.** A sandy coast of sandbars and tide pools. Two new enemy
+  mechanics (24 enemies): **Barnaclad** (`brittle`: 75% armor that drops 5 points with every hit taken, so fast towers strip
+  it; a grey crust bar shows what's left) and **Gullwing** (`swoop`: a flyer that lands for 1.6 s every 3 s, when
+  ground-only towers and soldiers can reach it; soldiers let go when it takes off). Enemies now carry runtime `armor`,
+  and all flyer checks go through `sim.airborne(e)`. Level 21 **Wrackline Beach** (2 roads, 12 pads all about 100 px
+  from a road, 15 waves), `SHOAL` theme, a shoal world-map style (shells, pebbles, dune grass, lagoon) and a lilting
+  Saltmarrow music theme. 129 tests.
+
+- [x] **Iter 40 — POLISH + BALANCE (21 levels + heroes).** The campaign curve was healthy (every level ≥ 83% for the
+  expert), so this pass looked at heroes. Investigating why the novice outlasted the expert in endless showed the hero is
+  the deciding factor: on hard levels, expert wins were Fen 95% / Ember 60% / Bramble 35%, and **Obsidian Bridges was
+  effectively Fen-only** (two lanes that never merge, and only Fen's 190 px range covers both from the hero spot).
+  Fixes: two pads between Obsidian's lanes (hpMult 1.0 → 1.15); Icicle Crossing's big Thornhog waves split across both
+  roads (hpMult 1.58 → 1.7); autoplayer `adaptiveMix` is now hero-aware (more anti-air when the hero can't hit flyers);
+  Ember: bolt 18 → 22 damage, Warm Glow 20% → 25%; Bramble: hit 14 → 18, Earthshake 60 → 70 damage / 110 → 115 px;
+  Murkmaw's Den 1.84 → 1.95 so the buffed Bramble doesn't trivialise it for novices. Hero win rates on hard levels now
+  Fen ~80–95% / Ember 75% / Bramble 35–55%. 129 tests.
+
+- [x] **Iter 41 — Shoals level 22 + Reefwarden.** New enemy **Reefwarden** (25 enemies): `shieldAura` coats nearby
+  non-boss allies in a coral shield (40 × the wave HP multiplier) every 5 s (pink ring), so it's a priority target. Level 22
+  **Tidepool Terraces**: a long zigzag road plus a short northern road that merge, 13 pads, 16 waves. Tuning found the
+  first layout was undefendable: the merged tail was only 420 px, so it now bends down to the lower right (+260 px),
+  with 2 pads moved. Thornhog and Gullwing spikes trimmed. 130 tests.
+
+- [x] **Iter 42 — Shoals level 23: Saltspray Fork.** One road off the beach splits into two mirrored lanes running to
+  two different gates. Middle-band pads sit about 110 px from both lanes, and the hero starts on the shared stretch
+  before the split. 12 pads, 16 waves using all three Shoals enemies plus a few Duskcap guests. Tuned on the first try
+  (leaks spread out, no spikes). Fix: the north exit at y=120 put its gate marker under the Next Wave button; that lane
+  now runs at y=150. New test: no road exit may put its gate under the top-right buttons. 131 tests.
+
+- [x] **Iter 43 — Shoals level 24: Wreckspiral.** One road (about 4,700 px) spirals inward around an old shipwreck to a
+  gate at the centre of the map. 12 pads in the bands between rings (70–90 px from each road), 16 heavy waves mixing all
+  Shoals enemies with Duskcap and Murkhorde guests. Fix: the outer ring started at y=100, under the top HUD, so enemies
+  and flying gulls hid behind the stats bar; rings moved to y=130/270. New test: no horizontal road above y=120.
+  132 tests.
+
+- [x] **Iter 44 — Shoals finale: Saltjaw's Grotto (level 25).** New boss **Saltjaw the Tidecrab** (26 enemies): 80%
+  armor that is itself `brittle` (0.4 points per hit, so sustained fire cracks it), sheds Gullwings (16 at most), and has
+  four phases (Barnaclad shell-kin → coral crust shield + Reefwardens → a gull swarm + haste → a final scuttle for
+  the gate). Level 25: two roads merging into a 1,360 px shared tail, 12 pads, 18 waves, boss on the last wave.
+  **The Saltmarrow Shoals is complete: 25 levels in 5 regions.** New achievement **Tide Turner** (21 total). Boss phases
+  checked in-browser (phase 2 reached, coral shield 1,178). 132 tests.
+
+- [x] **Iter 45 — POLISH + BALANCE (25 levels).** Full campaign re-run: every level ≥ 83% for the expert. Each region
+  opens easier than the last one ended and ramps to its boss. One tweak: Morrowcap's Throne hpMult 2.4 → 2.47 (it had
+  slipped to 100/83/0; now 75/50/0, level with Saltjaw). Polish: endless mode adds the Shoals enemies (Barnaclad,
+  Gullwing and Reefwarden from wave 20) and Saltjaw to the boss rotation; endless runs still end at waves 10–30. The
+  Field Guide holds 26 of 30 grid cells, and a new test fails past 30 so paging gets built first. 133 tests.
+
+- [x] **Iter 46 — Region 6 opens: The Shardglass Barrens.** A twilight desert of glass dunes and crystal spires. Two
+  new enemy mechanics (28 enemies): **Shardskipper** (`blink`: jumps 90 px ahead every 3.5 s and breaks free of any
+  blocker, with a streak effect) and **Mirrorback** (`splashResist` 0.8: area shots barely scratch it, so it wants
+  focused single-target fire). Level 26 **Glassfall Flats** (2 roads merging into a 1,280 px tail, 12 pads about 100 px
+  from roads, 15 waves), a `GLASS` theme with crystal-spire scenery, a Shardglass world-map style and a bell-like
+  music theme built on fourths. 135 tests.
+
+- [x] **Iter 47 — Shardglass level 27 + Glarefly.** New enemy **Glarefly** (29 enemies): a glass moth (flyer) that
+  flashes on death and dazzles shooting towers within 120 px for 2 s. It reuses the frozen state and the 3 s immunity
+  window, so flashes can't chain; soldier dens are unaffected. Kill it before it reaches your towers. Level 27 **Prism
+  Canyon**: a doubling-back west road plus a north road joining late, 12 pads, 15 waves. Fix found by the region rules:
+  the merged tail was only 420 px, so it now bends down to the lower right (680 px). Sprite polish: the first
+  Glarefly's wings were thin, dark triangles; they're now broad, pale four-point wings. 136 tests.
+
+- [x] **Iter 48 — Shardglass level 28: Shattered Crossroads.** Three roads (west, southwest, north) merge into a 1,160 px
+  shared tail that dips south and exits east, kept clear of the spell buttons. 11 pads about 100 px from the roads,
+  16 waves mixing all three Shardglass enemies with guests from earlier regions. It followed the region recipe, so no
+  layout fixes were needed. 136 tests.
+
+- [x] **Iter 49 — Shardglass level 29: Glassteeth Ladder.** One road (about 3,300 px) zigzags up and down five glass
+  columns, with pads between the columns, 16 heavy waves and a final wave trimmed so it isn't a wall. Fixes from the
+  screenshot: the road first entered from the top at x=140, behind the stats panel. New test: top entries must come
+  down in the gap between the stats panel and the buttons (x 470–830). It caught two existing maps, now fixed: Tidepool
+  Terraces' north road came down at x=1100, under Next Wave (now x=720, hpMult 1.9 → 1.4), and Shattered Crossroads'
+  at x=900, under Pause (now x=800). Autoplayer: `adaptiveMix` now builds fewer splash towers when splash-resistant
+  enemies are a big share of a level's health. 137 tests.
+
+- [x] **Iter 50 — POLISH + BALANCE (29 levels).** Full campaign re-run: every level except one stays ≥ 83% for the
+  expert, and every region ramps to its boss. Saltjaw's Grotto had slipped (expert 50–63% at 2.25; the curve is very
+  steep there), so hpMult is now 2.2 (2.15 → 100/75/0). Polish: the Field Guide pages (30 per page, `<`/`>` beside the
+  count, reusing `ui/paging.ts`), so the 30-slot grid is no longer a ceiling; the capacity test now checks every enemy
+  lands on exactly one page. New `scripts/guide-paging-check.mjs` inflates the list in-browser and flips pages with real
+  clicks. 137 tests.
+
+- [x] **Iter 51 — Shardglass finale: Kaleidrax's Spire (level 30).** New boss **Kaleidrax, the Shattered Colossus**
+  (30 enemies): 50% splash resistance, blinks 60 px every 12 s, sheds Shardskippers (16 at most), and has four phases
+  (Mirrorback shards → a light-wall shield + Glareflies → a skipper storm + haste → a final lunge). Level 30: two roads
+  (a west road, and a north road that enters through the HUD gap at x=520) merging into a 1,360 px tail, 13 pads,
+  18 waves. **The Shardglass Barrens is complete: 30 levels in 6 regions.** New achievement **Shatterer** (22 total).
+  Endless adds the Shardglass enemies from wave 24 and Kaleidrax to the boss rotation. Fixes: the first-draft boss was
+  unbeatable (3,600 HP, blinking every 9 s; now 2,800 HP every 12 s), and two north pads put towers under the boss bar
+  (moved down). The autoplayer weighs a splash-proof boss's HP ×3 when choosing its tower mix. 137 tests.
+
+- [x] **Iter 52 — Hero #4: Wren, the Owl Lorekeeper.** A ranged magic hero who hits flyers. New passive kind
+  `bounty` (**Scholar's Eye**: enemies that fall within 200 px of her pay 30% more coins; `sim.bountyMult`). Active
+  **Hush** (a `ring` with an 80% slow for 3 s and light damage; enemies all but stop). New `HeroActive.fxColor`, so
+  Hush draws a pale moonlight ring instead of Ember's foxfire gold. A hand-drawn barn-owl sprite with a scroll satchel.
+  She appears automatically in the hero picker, Field Guide and village training. Hero win rates on hard levels:
+  Fen 85% / Ember 75% / **Wren 75%** / Bramble 35%. 138 tests.
+
+- [x] **Iter 53 — Third global spell: Thornsnare.** New spell kind `snare` (instant): brambles burst from the road,
+  dealing 30 damage and rooting ground enemies within 95 px (a 75% slow for 3 s); flyers are unaffected. Cooldown 55 s
+  (first tuned at 40 s / 90% slow, which made bosses too easy). It has a THREE hotkey, a vine-coil icon and a bramble-burst
+  effect. The spell bar grows to three buttons, so the HUD clearance test's spell zone widened to x ≥ 1000; it caught
+  two pads now under the third button (Mossgate Meadow, Saltjaw's Grotto; both moved). The autoplayer casts Thornsnare
+  on the densest clump of walkers. New `scripts/snare-check.mjs` (real clicks: arm the button, tap a crowd, 5 walkers
+  rooted, the flyer not). 138 tests.
+
+- [x] **Iter 54 — Bramble rework (part 1): Shield Toss.** New optional hero attack `toss`: every 2.5 s Bramble flings
+  his bark shield at the nearest flyer within 160 px (34 dmg × hero level multiplier, hits air), even while he brawls on
+  the ground. That gives the melee tank his first answer to flyers. Shown in his blurb and on the Field Guide hero page.
+  The autoplayer now counts a toss as hitting air when choosing anti-air. Expert wins with Bramble on hard levels go from
+  35% to about 40–45%; Heart of the Emberdeep 1/6 → 3/6. Icicle Crossing stays his worst map (two crossing roads that
+  only a ranged hero can cover from the crossing). New `scripts/toss-check.mjs`. 139 tests.
+
+- [x] **Iter 55 — POLISH + BALANCE (30 levels, with Thornsnare + Wren + Shield Toss in play).** The new tools made the
+  campaign a little easier across the board (novice win rates rose on most levels). Two levels had become trivial
+  (100/100/100): Wrackline Beach hpMult 2.4 → 2.8 (100/100/50) and Tidepool Terraces 1.4 → 1.55 (100/75/100; Bramble
+  suits that converging map). Every other level still meets its region target. Polish: when a spell is armed, a hint
+  panel above the spell bar shows what it does and its recharge. Fix: arming Thornsnare said "Tap where the star should
+  fall"; each spell kind now gets its own instruction. `snare-check.mjs` also screenshots the armed state and asserts
+  the hint. 139 tests.
+
+- [x] **Iter 56 — Bramble rework (part 2): Bulwark.** New melee-hero trait `bulwark`: Bramble holds 2 enemies at once
+  from hero level 3 and 3 from level 5 (`sim.heroHolds`; extra free ground enemies within reach get pinned while he
+  brawls). It's listed on the Field Guide hero page. Endless levels now carry `heroRegen` (0.5); halving regen, or
+  even cutting it to 20%, didn't dent Bramble's endless lead, which comes from blocking. Results: expert wins with Bramble
+  on hard levels **40% → 60%**, Icicle Crossing 1/6 → 4/6. Side effect: the novice (Bramble) got much stronger early, so
+  Murkmaw's Den hpMult goes 1.95 → 2.3 (83/67/67); a full retune at iteration 60. 140 tests.
+
+- [x] **Iter 57 — Endless hero balance.** In endless, enemy melee hits now ramp with the wave (`endless.attackRamp`,
+  +15% per wave; `sim.attackMult()`, 1 in the campaign), so a blocker can't stall forever. Endless waves held by the
+  expert: Bramble 31.7 → **16.5**, Fen 16.7 → 13.2, Ember 18.2 → 14.7, Wren 15.0 → 13.3 (8% per wave only narrowed it
+  to 21 vs 14). Typical runs now end at waves 12–22, and the novice-over-expert oddity mostly went away. 141 tests.
+
+- [x] **Iter 58 — Endless daily mutator.** Every endless run that day gets one modifier picked by date from
+  `ENDLESS.mutators` (Swift Horde, Thick Hides, Beaver Discount, Full Coffers, Clouded Sky, Frenzy; no hero-less or
+  5-life days). Hard mutators pay ×1.5 village coins and glowsap per wave. It's shown on the map card ("Best N • Today:
+  …"), in the endless start banner and on the result panel. `endlessMutatorFor` / `mutatorReward` in `systems/endless.ts`
+  (reusing the daily hash). Fix: Clouded Sky said "No Starfall or Grove Call", outdated since Thornsnare; now "No global
+  spells." 143 tests.
+- [x] **Iter 59 — Field Guide Spells tab.** A fourth tab lists Starfall, Grove Call and Thornsnare with their icon,
+  description and facts built from data by `spellFacts` in `systems/spellInfo.ts` (damage/radius/delay, summoned
+  soldiers' stats, snare slow, recharge, hotkey), plus a short how-to-cast note. Tab buttons narrowed to fit four.
+  Browser check `scripts/guide-spells-check.mjs` taps the real tab. 145 tests.
+- [x] **Iter 60 — POLISH + BALANCE pass.** Full sweep (`balance.ts 6`, then 12–16 seeds on outliers). Saltjaw's
+  Grotto had a wall at waves 6–8 (10 Shellbacks under coral + 20 Gnats, then Splotches) that killed half of expert runs
+  before the boss; trimmed those two waves and raised hpMult 2.2 → 2.55 so the boss is the real test. Heart of the
+  Emberdeep hpMult 1.06 → 1.03 (casual was 17–25%). Screenshot `60.png` (Saltjaw fight).
+- [x] **Iter 61 — Region 7 opens: The Galecrest Aeries.** Windswept cliffs above the clouds. Two new enemy mechanics
+  (32 enemies): **Galehound** (`windborne`: immune to every slow; all slows now go through one `sim.slow()` helper) and
+  **Cloudram** (`regen`: once unhit for 2 s it regrows 6% max health per second, shown by drifting green pluses).
+  Level 31 **Windgap Ledge** (west + north roads merging into an 800 px tail, 12 pads, 15 waves, hpMult 1.7), a `GALE`
+  theme (wind-bent pines, stone cairns, drifting clouds), a sky-blue world-map style and a soaring music theme. Endless
+  adds both enemies from wave 28. Field Guide tags for both traits.
+  **Bug fixes:** (1) battle music was off by one region for regions 4–6 (Duskcap played the Shoals tune, the Shoals
+  played Shardglass, Shardglass played Duskcap): `themeForRegion` indexed the THEMES list, which isn't in region order;
+  it now uses an explicit `REGION_THEMES` list, and a test checks each region's theme matches its flag. (2) Fen's crit
+  used `Math.random()`, so autoplay "seeds" didn't replay and balance numbers were noisy (casual on Windgap Ledge read
+  38% one run and 100% the next). The sim now takes an optional `random` source; `playLevel` passes a seeded one; a
+  test checks the same seed replays exactly. Browser check `scripts/gale-check.mjs`. 149 tests.
+- [x] **Iter 62 — Galecrest level 32 + Kitewing.** New enemy **Kitewing** (33 enemies): a sky-ray flyer with `gust`:
+  every 5 s it blows free walkers within 110 px 45 px further along their road (held enemies, flyers and bosses don't
+  budge, so blockers are the counter), shown as a wind ring plus streaks. Level 32 **Updraft Stair**: a switchback west
+  road and a second road rising from the south, 13 pads, 15 waves, hpMult 1.4. First draft was unwinnable for casual:
+  the south road reaches the shared tail after only 620 px, so its fast packs moved to the long road, wave 5's
+  Gullwings and wave 7's Thornhogs were trimmed, and a pad was added by the south entry. Endless adds Kitewing from
+  wave 28. Browser check `scripts/kite-check.mjs`. 150 tests.
+- [x] **Iter 63 — Galecrest level 33: Spiral Gale.** One 3,200 px road loops round a mesa and crosses its own earlier
+  stretch at (600, 240), so pads by the crossing cover the road twice. 13 pads, 16 waves mixing all three Galecrest
+  enemies with guests. Long single roads are generous (1.8 was 100/100/92), so it sits at hpMult 2.6. Screenshot
+  `63.png`. 150 tests.
+- [x] **Iter 64 — Galecrest level 34: Three Winds.** West, north and south roads merge into one tail (two merge points;
+  the west and north roads run 180 px apart with pads between them). 13 pads, 16 waves, hpMult 1.55. First draft was
+  unwinnable (25/0/0 at 1.8): the north road is only 1,100 px, and Cloudrams there never took steady enough fire to stop
+  regrowing, so Cloudrams and Bogbrutes now stay off it and the late south Galehound packs were trimmed. Screenshot
+  `64.png`. 150 tests.
+- [x] **Iter 65 — POLISH + BALANCE (34 levels, first sweep with the deterministic sim).** 12 seeds per level and
+  player. Retuned three outliers: Murkmaw's Den 2.3 → 2.45 (boss was 100/75/83), Frostpeak Summit 1.75 → 1.85 (boss
+  was 100/67/67), Cinder Tunnels 1.91 → 1.75 (expert was 75%). Endless still holds 12–22 waves. Screenshot `65.png`.
+- [x] **Iter 66 — Galecrest finale: Roc's Aerie (level 35) + Zephyrax, the Gale Roc.** New boss (34 enemies), built
+  from existing traits: a flyer that swoops down to land for 3.5 s every 4 s (blockers and ground towers get their
+  window), `windborne` (no slows), `gust` (wingbeats shove the herd 50 px), and four phases (kitewings → thundercloud
+  shield + cloudrams → a pack of galehounds → a dive). Level 35: west + north roads merge into a 1,160 px tail, 12 pads,
+  18 waves, hpMult 1.95. Achievements **Stormbreaker** (beat Zephyrax) and **Cloudwalker** (15 stars in the Aeries):
+  24 total. Zephyrax joins the endless boss rotation. Autoplayer: a flying boss counts triple when picking the tower mix
+  and makes the smart player branch archers into Hawkeye (big single shots); before that the expert lost to the roc
+  more often than the novice. Screenshot `66.png`. 150 tests.
+- [x] **Iter 67 — Field Guide boss phases.** Boss pages list each phase under the stats ("At 50%: shield 1200, summons
+  3 Cloudram"), built from data by `bossPhaseLines` in `systems/guideInfo.ts`. **Fix:** the detail text wrapped at
+  540 px starting from x=750, so long trait lines ran off the parchment (edge at 1240); every enemy with several traits
+  was clipped. Now 470 px. Browser check `scripts/guide-boss-check.mjs <name> [bossId]` checks every text fits; all
+  seven bosses do. 151 tests.
+- [x] **Iter 68 — Region 8 opens: The Verdant Ruins.** A jungle swallowing an old temple road. Two new enemy mechanics
+  (36 enemies): **Shiftscale** (`shift`: every 4 s swaps between hard scales, 70% armor / 0 MR, and slick skin,
+  0 armor / 70% MR; enemies now carry a runtime `mr` next to `armor`) and **Idol Keeper** (`revive`: every 6 s raises
+  the latest ally that died within 140 px in the last 8 s at 50% health; risen enemies glow pale gold, pay no bounty and
+  can't rise twice). Level 36 **Overgrown Causeway** (west + north roads, 1,160 px tail, 11 pads, 15 waves, hpMult
+  1.4), a `RUINS` theme (palms, vine-wrapped pillars), a jungle world-map style and a hand-drum music theme. Endless adds
+  both from wave 32. First draft lost to the short north road again (armored packs moved to the long road).
+  `sim.res()` is now public. Browser check `scripts/ruins-check.mjs`. 153 tests.
+- [x] **Iter 69 — Ruins level 37 + Bramblehide.** New enemy **Bramblehide** (37 enemies): a vine-grown temple boar with
+  `thorns` 0.5: soldiers and heroes that hit it in melee take half the damage they deal back (green thorn sparks);
+  ranged attacks are safe. Level 37 **Sunken Stairs**: west + south roads of similar length (760 / 640 px to the merge)
+  meeting on a causeway, 13 pads, 15 waves, hpMult 1.5; early Shiftscale packs trimmed (casual died at wave 7).
+  **Fix from the screenshot:** towers on two pads hid behind the stats panel / poked into the speed buttons. New test:
+  a tower (about 75 px tall) must clear the stats panel and the top-right buttons. It caught 8 pads in 7 levels
+  (Mossgate Meadow, Gloomfen Edge, Glacier Hold, Windgap Ledge, Updraft Stair, Three Winds ×2, Sunken Stairs), all
+  moved down or sideways and re-checked for road clearance. 155 tests.
+- [x] **Iter 70 — POLISH + BALANCE (37 levels).** Full deterministic sweep (12 seeds): every level is in its band and
+  no hpMult changed. Three Winds' novice at 50% is the blocker-at-a-merge quirk (raising hpMult to 1.62 only cut casual
+  67 → 42%, so it stays at 1.55). Polish: new phone check `scripts/phone-late.mjs` (740×360 touch: region 8 map, a Ruins
+  battle, Field Guide spells + boss page), all clean; boss phase lines use the phone font size. Playable demo published
+  as an artifact.
+- [x] **Iter 71 — Ruins level 38: Serpent Terraces.** One 3,560 px road snakes across three terraces (y 160 → 340 →
+  520) with pad rows between the coils, so each pad covers two stretches. 12 pads, 16 waves, hpMult 1.65. The first
+  draft lost to Shiftscale + Idol Keeper packs in waves 5–9 (trimmed). Autoplayer: a shifter now counts half armored,
+  half magic-resistant when picking the tower mix (it was read as purely armored, so the expert over-built magic
+  towers that bounce off the slick form). Screenshot `71.png`. 155 tests.
+- [x] **Iter 72 — Ruins level 39: Idol Courtyard.** A west road and a north road that detours round the shrines
+  (1,220 / 960 px to the merge) meet before an 800 px tail. 12 pads, 16 waves, hpMult 1.22. First draft was 25/0/0 at
+  1.4: wave 1's eight Shiftscales overran the opening gold, and waves 4–7 stacked fast packs on the north road; both
+  thinned. Screenshot `72.png`. 155 tests.
+- [x] **Iter 73 — Ruins finale: Heart of the Ruins (level 40) + Ulmaroth, the Overgrown Idol.** New boss (38 enemies)
+  built from the region's traits: `shift` (stone 60% armor ↔ moss 60% MR every 6 s), `thorns` 0.3, `revive` (raises
+  fallen allies within 180 px at 60%), and four phases (bramblehides → stone shell + idol keepers → a flood of
+  shiftscales → a lurch for the gate). Level 40: a long west road and a short north road (light groups only) merge into a
+  1,240 px tail, 12 pads, 18 waves, hpMult 1.56. Achievements **Idolbreaker** and **Pathfinder** (26 total); Ulmaroth
+  joins the endless boss rotation. Region 8 complete: 40 levels. Screenshot `73.png`. 155 tests.
+- [x] **Iter 74 — Village zoom + drag-to-pan.** A "Zoom in / Zoom out" button (above Build) zooms the village 1.7×;
+  while zoomed, dragging anywhere pans (clamped to the village), and a tap only counts on release if the finger didn't
+  move, so panning never opens a building by accident. A second, fixed camera draws everything at depth ≥ 900 (HUD,
+  panels, toasts) so the UI never zooms; floating "+coins" text moved to the world layer. Placing/moving buildings uses
+  the camera's world point, so it stays exact when zoomed. Browser check `scripts/village-zoom-check.mjs` (real button,
+  real drag, tap on the moved Town Hall, zoom out); existing village/phone checks still pass. Screenshot `74.png`.
+- [x] **Iter 75 — POLISH + BALANCE.** Sweep of levels 31–40 (12 seeds; 1–30 unchanged since iteration 70 and untouched
+  by the autoplayer changes): all in band, no retunes. Endless holds 11–21 waves with Zephyrax and Ulmaroth in the boss
+  rotation. Polish: twelve enemy traits were silent (gust, swoop, revive, shift, blink, thorns, glare, coral, spores,
+  enrage, burrow, split); each now has a short, throttled WebAudio cue via `sfx.trait(kind)`. `window.__sfx` test
+  handle; `scripts/sfx-check.mjs` unlocks audio with a click and plays every cue (context running, no errors).
+- [x] **Iter 76 — Region 9 opens: The Brasswork Hollows.** An underground machine city of brass and steam. Two new enemy
+  mechanics (40 enemies): **Cogjammer** (`jam`: towers within 130 px fire 40% slower while it lives; the strongest
+  jammer applies, they don't stack; shown as a turning dashed brass ring) and **Steamrunner** (`charge`: bolts at ×2.2
+  for 1.6 s when hit, then 4 s cooldown; steam puff + hiss). Level 41 **Boilerworks Gate** (west + winding north road,
+  1,000 / 920 px to the merge, 860 px tail, 11 pads, 15 waves, hpMult 1.95), a `GEARS` theme (half-sunk gears, steam
+  pipes), a dark brass world-map style and a clockwork music theme. Endless adds both from wave 36. Fix from the
+  screenshot: generic round trees picked up the brass/grey palette and looked like metal puffballs, so gears/pipes now
+  fill 90% of the scenery. Browser check `scripts/brass-check.mjs`. 157 tests.
+- [x] **Iter 77 — Brasswork level 42 + Rivetshell.** New enemy **Rivetshell** (41 enemies): a clockwork armadillo
+  with `harden` (+2% armor per hit, up to 80%), the reverse of Saltjaw's brittle shell: rapid physical fire makes it
+  tougher, magic and big shots don't care. The autoplayer counts hardeners as armored. Level 42 **Piston Yard**: west +
+  south roads (780 / 660 px to the merge, pad row between the parallel stretches), 1,260 px tail, 12 pads, 15 waves,
+  hpMult 1.28. First draft lost to bolting Steamrunner packs on the south road (moved/thinned). Endless adds Rivetshell
+  from wave 36. Screenshot `77.png`. 158 tests.
+- [x] **Iter 78 — Brasswork level 43: Gearwell Shafts.** One ~3,000 px road zigzags up and down five shafts 200 px
+  apart, with pad columns between them (each pad covers two shafts). 12 pads, 16 waves, hpMult 1.42; waves 9–10 thinned.
+  **Fix from the screenshot:** two pads at y=690 cut their towers off at the bottom edge. New test: pads stay at
+  y ≤ 680. It caught six more in Cinder Tunnels, Mirrorpool Glade, Morrowcap's Throne (×2), Tidepool Terraces and
+  Updraft Stair, all moved up to 680 (balance re-checked, small shifts only). Screenshot `78.png`. 159 tests.
+- [x] **Iter 79 — Brasswork level 44: Foundry Crossroads.** Three roads (west 840 px, north 920 px looping round the
+  furnace, south 640 px to the shared stretch) feed a 760 px tail. 12 pads, 16 waves, hpMult 1.39; one north-road
+  Steamrunner pack thinned. Fix from the screenshot: a pad at the top right hid its tower behind the exit gate posts
+  (moved below the exit road). Screenshot `79.png`. 159 tests.
+- [x] **Iter 80 — POLISH + BALANCE.** Region 9 curve checked (41 100/100/33 · 42 100/83/8 · 43 83/83/17 · 44 83/83/0):
+  no retunes. The expert-trails-casual gap on Foundry Crossroads is noise, not a bug: switching off smart branching,
+  forcing either branch or thinking slower moves it by at most one seed in 12 (`expert.ts` probe). New guard-rail test:
+  the expert must win every region finale in at least 2 of 3 seeds, so a change that makes a boss unbeatable fails CI
+  (adds ~7 s). Screenshot `80.png`. 160 tests.
+- [x] **Iter 81 — Brasswork finale: Heart of the Engine (level 45) + Grindmaw, the Engine Titan.** New boss (42
+  enemies) from the region's traits: a wide `jam` aura (180 px, 30% slower fire), slow `harden` (+0.3% armor per hit,
+  up to 70%), a Steamrunner `spawner`, and four phases (cogjammers → steam shield + rivetshells → every boiler at once →
+  a grind for the gate). Level 45: west + south roads (920 / 680 px) merge into a 1,240 px tail, 12 pads, 18 waves,
+  hpMult 1.58. Achievements **Engine Breaker** and **Master Tinker** (28 total); Grindmaw joins the endless boss
+  rotation. Region 9 complete: 45 levels. Screenshot `81.png`. 160 tests.
+- [x] **Iter 82 — Story cards after every region boss.** New data file `data/story.ts` and `StoryScene`: after a region
+  finale the victory panel's Next button becomes **Story**, which shows a short chapter card in the region's sky colours
+  (title, three lines, drifting motes, victory chime) and then **Onward** to the next land or **Village**. Cards for
+  Morrowcap, Saltjaw, Kaleidrax, Zephyrax, Ulmaroth and Grindmaw; each one hints at the next region. The Emberdeep keeps
+  its full epilogue. Tests: every card belongs to a region finale, and every finished region after the Emberdeep has one.
+  Browser check `scripts/story-check.mjs` (forced win, checks the panel offers "Story", opens the card). 162 tests.
+  Playable demo artifact refreshed with this build (45 levels).
+- [x] **Iter 83 — Region 10 opens: The Starwell Abyss.** A dark cavern lit by glowing pools, below the engines. Two new
+  enemy mechanics (44 enemies): **Dimlantern** (`dim`: shooting towers within 150 px lose 30% range while it lives; the
+  strongest applies; drawn as a dark gloom disc with a violet rim) and **Echo Wisp** (`echo`: on its first death it
+  re-forms on the spot at 50% health, paying no second bounty; "Echo!" ring + double ping). Level 46 **Glimmerpool
+  Descent** (west + winding south road, 1,120 / 1,000 px to the merge, 920 px tail, 11 pads, 15 waves, hpMult 1.75), an
+  `ABYSS` theme (pale stalagmites, breathing glow pools), a starry world-map style and a slow cavernous music theme.
+  Endless adds both from wave 40. Browser check `scripts/abyss-check.mjs`. 164 tests.
+- [x] **Iter 84 — Starwell level 47 + Sparkeel.** New enemy **Sparkeel** (45 enemies): a glowing cave eel with `shock`
+  (every 5 s, soldiers and the hero within 110 px are stunned for 1.5 s: no attacking, and they let go of everything they
+  held, including Bramble's Bulwark holds). Soldiers and heroes gained an optional `stun` timer. Level 47 **Lantern
+  Hollow**: bottom-left + north roads (780 / 700 px to the merge, pad row between the parallel stretches), 1,280 px tail,
+  12 pads, 15 waves, hpMult 1.8. Fixes found by the tests/screenshot: the north road first entered at x=840, under the
+  top-right buttons (now 800), and a top pad hid its tower behind the wide "Next wave" preview (moved). Endless adds
+  Sparkeel from wave 40. Screenshot `84.png`. 165 tests.
+- [x] **Iter 85 — POLISH + BALANCE (47 levels, full sweep).** All 47 levels re-run with 12 seeds after the many
+  mechanic and autoplayer changes since iteration 70: every level is in its band and every region ramps to its boss, so
+  no hpMult changed. Polish: `scripts/phone-late.mjs` now takes a region and level (`node scripts/phone-late.mjs <name>
+  <region> <level>`); the Starwell map, battle and Field Guide pages are clean at 740×360. Screenshot `85.png`.
+- [x] **Iter 86 — Starwell level 48: Moonring Lake.** One road circles three sides of a glowing lake and exits at the
+  bottom; pads ring the inner shore. 13 pads, 16 waves, hpMult 2.38. Fixes from the screenshot: the first exit came
+  out at the bottom-left beside the hero HUD (now at x=500), and ponds were drawn in the daylight sky-blue; ponds in the
+  Abyss theme now have a dark rim, a teal fill and a pulsing glow. Screenshot `86.png`. 165 tests.
+- [x] **Iter 87 — Starwell level 49: Starfall Gorge.** A west road and a north road that winds round the gorge edge
+  (1,180 / 880 px) meet at a T before a 760 px tail. 11 pads, 16 waves, hpMult 2.0. **Fix from the screenshot:** a top-
+  right pad stood its tower on the exit gate's crossbar (moved below the exit road). New test: no tower may overlap a
+  road-exit gate's posts or crossbar. It also caught the same spot in Three Winds (moved to (1100,148); balance
+  re-checked 92/58/67). Screenshot `87.png`. 166 tests.
+- [x] **Iter 88 — Starwell finale: Heart of the Abyss (level 50) + Velumbra, the Dark Below.** New boss (46 enemies):
+  a shadow manta with a huge `dim` aura (200 px, −25% range), a crackling `shock` (stuns blockers within 150 px every
+  7 s), an Echo Wisp `spawner`, and four phases (dimlanterns → shadow shield + sparkeels → a flood of wisps → a surge).
+  No `echo` on the boss: re-forming at low health would re-trigger every phase at once. Level 50: a long west road (the
+  boss) and a short north road (light groups only) merge into a 1,240 px tail around a glowing pool, 11 pads, 18 waves,
+  hpMult 2.45. Achievements **Lightbringer** and **Starwalker** (30 total); Velumbra joins the endless boss rotation;
+  story card "The Stars Come Home". Region 10 complete: 50 levels. Screenshot `88.png`. 166 tests. Playable demo
+  artifact refreshed with this build.
+- [x] **Iter 89 — Region 11 opens: The Rotbloom Orchard.** The Keepers' own orchards, rotting from the roots. New
+  mechanics (49 enemies): **Barkwarden** (`fortify`: allies within 130 px gain +25% armor while it lives; the strongest
+  aura applies, capped at 85%; shown as a turning ring of leaf-brown dashes; `sim.res()` and projectile damage both use
+  it) and **Seedcaster**, which sows up to three **Rotseeds** (a still, 0-lives "enemy" with `grow`: after 6 s it
+  sprouts into a Skitter, paying nothing). The first draft grew Thornhogs and four seeds per caster, which overran even
+  the expert; now Skitters and three. Field Guide tags for fortify, grow and every spawner. Level 51 **Windfall Rows**
+  (west + winding north road, 1,000 / 920 px, 860 px tail, 11 pads, 15 waves, hpMult 2.1), an `ORCHARD` theme (autumn
+  fruit trees with apples, leaf heaps), an autumn world-map style and a slightly sour harvest-jig music theme. Endless
+  adds Barkwarden and Seedcaster from wave 44. Browser check `scripts/orchard-check.mjs`. 168 tests.
+- **Iteration 91**: third Rotbloom enemy, the **Gorgegrub** (new `feed` trait). When a non-boss ally dies within 120px,
+  it gains +15% max health and heals 20% (up to 4 meals), and it visibly swells with each one. It comes with "Gulp!" text,
+  crumbs and a wet-gulp sound cue, a segmented-grub sprite and a Field Guide tag. Level 52 **Grubfield Lane**: a long
+  snaking west road plus a short north road that joins for the last stretch, 11 pads, 15 waves, hpMult 1.9. Grubs ride
+  with fodder packs so they have something to eat. Endless adds Gorgegrub from wave 46. Browser check
+  `scripts/grub-check.mjs`. 169 tests.
+- **Iteration 92**: level 53 **Cider Press Crossing**. A north road and a south-west road meet at a central crossing,
+  with a shared 540px tail to an east exit. It has 11 pads, 16 waves and hpMult 1.85, and is the first level to combine
+  all three Rotbloom traits: Seedcasters' seeds die beside Gorgegrubs (food), and Barkwardens armor the swollen grubs.
+  169 tests.
+- **Iteration 93**: level 54 **Rotroot Hollow**. A 2,280px serpentine west road through the hollow, plus a 1,100px
+  ridge track from the north for fliers and light enemies. The two roads only join for the last 260px. It has 11 pads,
+  16 waves and hpMult 1.77. 169 tests.
+- **Iteration 94**: Rotbloom finale, level 55 **Heart of the Orchard** (18 waves, 12 pads, hpMult 2.43). The boss
+  **Mawbloom, the Rot Heart**:
+  - Bark-song aura (+20% armor to allies within 160px).
+  - Sows Rotseeds every 6s.
+  - Feeds on fallen allies (+3% max health, up to 8 times).
+  - Phases: 75% summons Barkwardens; 50% a 1,300 shield plus Gorgegrubs; 25% Seedcasters and a speed-up; 10% a final
+    surge.
+  - Code-drawn rotten heart-tree sprite with a toothy maw and bruised fruit.
+
+  Also: achievements `boss_mawbloom` (Heartwood) and `orchard_stars` (Harvest Keeper), story card "The Orchard Wakes",
+  and Mawbloom joins the endless boss rotation. New layout test: no road may run under the hero HUD. It caught the
+  first draft of this level, where the boss walked behind the portrait. 170 tests.
+- **Iteration 95** (polish + balance): the "Gulp!" feed text is throttled to once per 0.6s per eater, because Mawbloom
+  surrounded by dying minions spammed it. Sweep results are in Balance Notes. 170 tests.
+- **Iteration 96** (raid variety): a new camp building, the **Mire Shaman**:
+  - A reed tent with a bone staff and a glowing brew bowl. Every 3s it heals every damaged camp building within 130px
+    (itself and walls included) by 30, scaled by camp tier.
+  - It shows a green pulse ring and sparkles on healed buildings, with a bubbling chime.
+  - Warrens field 1 (replacing a hut) and Strongholds 2, so raiders want to take the shaman out early.
+
+  Camp generation fix: a crowded core used to drop buildings silently. Placement now widens its search after 150
+  tries, and Strongholds get every building they list. 172 tests (shaman heal and placement).
+- **Iteration 97**: region 12 opens, **The Thunderhead Steppes**.
+  - **Theme:** a `STORM` theme (grey-green steppe, standing stones with lichen, wind-flattened grass, light scrolling
+    rain), a slate world-map style (grass tufts and standing stones, "Orchard Gate" exit label), and a galloping minor
+    "Thunderhead" music theme.
+  - **New traits:**
+    - `bolt`: the **Stormcaller** calls lightning every 6s on the nearest shooting tower within 170px and stuns it for
+      1.8s. It shares the chill-immunity window, with a jagged bolt, "Struck!" text and a thunderclap sound.
+    - `herd`: the **Thunderhoof** gains +15% speed per herd-mate within 90px on its road, capped at +60%.
+  - Both have code-drawn sprites and Field Guide tags. Endless adds them from wave 48.
+  - **Level 56 Rainmarch Downs:** two long roads (the north road joins the west road early), 11 pads, 15 waves, hpMult
+    2.1.
+  - **World-map title fix:** long region names collided with the star counter. The title is now right-aligned to the
+    star and shrinks to fit.
+  - 174 tests (bolt and herd). The first bolt test passed vacuously because the test level had no pads, so it was
+    rewritten with real pads.
+- **Iteration 98**: third Thunderhead enemy, the **Copperhorn** (new `ground` trait).
+  - A big grey ox with copper-capped horns. The nearest Copperhorn within 110px takes 40% of the damage aimed at
+    an ally onto itself, so splash fire piles damage onto it. It takes its own hits in full, and players will want to
+    focus it first.
+  - A throttled copper arc shows each redirect.
+  - Level 57 **Copperhorn Ford**: a long serpentine west road plus a short north road that joins at the ford, 11 pads,
+    15 waves, hpMult 1.95. Endless adds Copperhorn from wave 50. 175 tests.
+- **Iteration 99**: level 58 **Forked Lightning**. One west entrance forks around two hills (north and south loops)
+  that rejoin at x=700, then a shared bend to the south-east exit. It has 11 pads (two between the loops cover both
+  forks), 16 waves mixing all three Thunderhead enemies, and hpMult 2.2. 175 tests.
+- **Iteration 100** (polish + balance): full 58-level sweep, run in 4 parallel batches (results in Balance Notes). No
+  regressions from the new traits, so no retunes. The Field Guide entries for Stormcaller, Thunderhoof and
+  Copperhorn were checked in-browser: all fit (right edge ≤ 1214px) with no console errors. 175 tests.
+- **Iteration 101**: level 59 **Stormwatch Barrows**. A 2,540px serpentine herd road from the north-west winds around
+  the barrow mounds. A 720px ridge track from the north joins it at the last bend (1,420px total). It has 10 pads,
+  16 waves (Thunderhoof herds with Copperhorn escorts on the long road, fliers on the ridge) and hpMult 2.1.
+  175 tests.
+- **Iteration 102**: Thunderhead finale, level 60 **Thunderhead Crown**: a 2,960px storm-crown road plus a 1,360px
+  north track, 12 pads, 18 waves, hpMult 2.0. The boss **Thrumhorn, the Storm Bull** (2,800 health):
+  - Lightning bolt on the nearest tower in range 220, every 7s, stunning it 1.8s.
+  - Calls in Thunderhoof herds (2 every 10s, up to 8).
+  - Phases: 75% Stormcallers; 50% a 1,400 shield plus 2 Copperhorns; 25% a 10-strong stampede and a speed-up; 10%
+    a charge.
+  - Code-drawn sprite: storm bull with sparking horns and a little thundercloud on its back.
+
+  Also: achievements `boss_thrumhorn` (Lightning Rod) and `storm_stars` (Rainmaker), story card "The Sky Clears", and
+  Thrumhorn joins the endless boss rotation. 175 tests.
+- **Iteration 103** (breather: hero variety): fifth hero **Sorrel, Hare Medic**, a support hero.
+  - Ranged sling (14 physical, hits flyers, fast mover).
+  - New passive `mend` ("Field Dressing"): soldiers within 170px heal 10/s, even while brawling.
+  - New active `rally` ("Second Wind", cooldown 16s): heals every soldier in reach and Sorrel by 90 (scales with
+    hero level), and stings enemies around her. It shows a green pulse, "+N" floaters and a chime.
+  - Code-drawn hare sprite with long ears, a leaf-cross satchel and a sling, plus a pebble projectile.
+  - The menu hero card was checked; long ability text overflowed it, so the lines were shortened.
+
+  Browser check `scripts/sorrel-check.mjs`. 177 tests (mend and rally).
+- **Iteration 104** (meta): two hero achievements.
+  - **Full Roster**: win a battle with each of the five heroes. A new `wins_hero_<id>` stat is bumped on each win.
+  - **Field Medic**: restore 3,000 soldier health with Sorrel. The sim's `healTotal` counts real health restored by
+    Field Dressing and Second Wind, saved as the lifetime `soldierHealing` stat.
+  - The Achievements screen now holds 36, filling two pages exactly; the next ones open page 3 through the existing
+    paging. Checked in-browser.
+
+  179 tests.
+- **Iteration 105** (polish + balance): Thunderhead sweep (all in band) plus a new hero comparison, the expert
+  strategy run with each hero (scratch `herocmp.ts`). Sorrel was far behind, so I buffed her sling 14→17 and Second
+  Wind damage 25→40. Results in Balance Notes. 179 tests.
+- **Iteration 106**: region 13 opens, **The Sunscour Dunes**.
+  - **Theme:** a `DUNES` theme (sand ground; saguaro cacti with pink flowers, bleached rocks and sand ripples, with no
+    green trees; breathing heat-shimmer bands), a sandy world map with cacti and an oasis lake ("Steppe Edge" exit
+    label), and a swaying "Sunscour" caravan music theme with a raised fourth.
+  - **New traits** (checked against the full trait list first; blink and self-veil already existed):
+    - `mirage`: the **Shimmerjack** sheds 2 decoy Mirages on its first hit. They are worth nothing, cost no lives,
+      and soak up shots.
+    - `pilfer`: the **Sandpicker** steals 60 coins (× the level's multiplier) if it reaches the exit, never more than
+      the player has, with a "-N coins!" floater.
+  - Code-drawn sprites, Field Guide tags (including a decoy tag) and sound cues. Endless adds both from wave 52.
+  - **Level 61 Mirage Flats:** two roads of equal length (≈1,960px) merging at the south loop, 11 pads, 15 waves,
+    hpMult 1.75.
+  - Browser check `scripts/dunes-check.mjs`. Field Guide now 58/60 per two pages. 181 tests.
+- **Iteration 107**: third Sunscour enemy, the **Kilnback** (new `crust` trait).
+  - A desert tortoise whose glazed clay shell gains +15% armor per second while unhit (after 0.4s), up to +60%.
+    The next hit lands against the thick crust, then cracks it back to base ("Crack!", clay chips, a dry snap).
+  - Rewards steady fire; punishes waiting for a big shot.
+  - Level 62 **Kilnstone Wash**: two west roads (y=560 and y=300) merge into one long serpentine through the dry
+    wash, 11 pads, 15 waves, hpMult 2.05.
+  - Endless adds Kilnback from wave 54. 182 tests.
+- **Iteration 108**: level 63 **Last Oasis**. A 2,700px caravan road loops around an oasis pond (the first desert
+  pond). A 1,520px north road joins it beside the water. It has 10 pads, 16 waves (all fliers on the long road,
+  Kilnback packs late) and hpMult 1.7. 182 tests.
+- **Iteration 109**: level 64 **Scorpion Steps**. A 2,600px zigzag caravan road climbs the terraces. A north road
+  (≈1,540px) joins it at the mid-terrace corner. It has 11 pads, 16 waves (fliers on the long road; Shimmerjacks and
+  Sandpickers on the north road) and hpMult 1.52. 182 tests.
+- **Iteration 110** (polish + balance): desert ponds are now drawn as oases, with a ring of reeds and a date palm
+  leaning out over each end. The first palm drawing looked like an umbrella (flat ellipses), so it was redrawn with
+  drooping curved fronds and dates. The Sunscour sweep and the finale guard are in Balance Notes. 182 tests.
+- **Iteration 111**: Sunscour finale, level 65 **Wyrmsand Deep**: a 2,940px dune road plus a 1,680px north road
+  that joins at the bottom, 12 pads, 18 waves (all fliers on the long road), hpMult 2.08. The boss **Scourmaw, the
+  Dune Wyrm** (2,900 health):
+  - Sunbaked crust (+30% armor while unhit).
+  - Sheds 4 Mirage decoys on the first hit.
+  - Drops a Shimmerjack every 8s (up to 6).
+  - Phases: 75% Kilnbacks; 50% a 1,400 shield plus Shimmerjacks; 25% six Sandpickers and a speed-up; 10% a surge.
+  - Code-drawn sand-wyrm sprite with a ring-toothed maw.
+
+  Also: achievements `boss_scourmaw` (Wyrmbane) and `dunes_stars` (Sandwalker), story card "The Sands Fall Still",
+  and Scourmaw joins the endless boss rotation. The Field Guide now holds exactly 60 (two full pages); the next
+  enemy opens page 3. 182 tests.
+- **Iteration 112** (raid variety): fifth raid troop, the **Toad Mender** (Ranger Lodge 3).
+  - Stats: 110 sap, 3 space, 55s training, 120 health, weak 90px spit.
+  - New `heals` trait: every 1.5s it restores 18 health to each hurt troop within 95px, itself included. It shows a
+    green pulse ring and sparkles in the raid.
+  - Code-drawn toad with a tonic gourd.
+  - The Raid panel's troop cards are now laid out responsively (row width split evenly across the troop types), so
+    five fit where four fixed 270px cards did. `scripts/raid-check.mjs` was updated to click the new +1 button
+    positions.
+
+  183 tests.
+- **Iteration 113** (tooling bug + raid tuning):
+  - Fixed the long-noted `scripts/raid-balance.ts` printing nothing: vite-node drops the script path from
+    `process.argv`, so its "run directly" guard never matched. Shared helpers (`ARMIES`, `raidOnce`) moved to
+    `scripts/raid-lib.ts`. The report script now runs unconditionally, and `scripts/economy.ts` imports the lib
+    (it no longer pulls in the report).
+  - Smart deploy sends Menders just behind the brawlers, and a "Lodge 3 + Mender" army was added to the report.
+  - The Mender was underwhelming (Stronghold 1.0 stars vs 1.2 without it), so its heal went 18→28 and its radius
+    95→115. It now matches the 3 slingers it replaces (1.2 stars, 49% vs 47%): a real alternative, not a must-pick.
+
+  183 tests.
+- **Iteration 114**: region 14 opens, **The Coralreach Shallows**.
+  - **Theme:** a `REEF` theme (shallow turquoise ground with sandbar roads; branching coral, brain coral and
+    starfish; drifting sunlight caustics), a deep-blue world map with coral heads and starfish ("Dune Shore" exit
+    label), and a lilting island "Coralreach" music theme.
+  - **New traits** (checked against the trait list):
+    - `molt`: the **Shellsnap** crab (50% armor) sheds its shell below 50% health, dropping to 5% armor and moving
+      ×1.7, with "Molted!", shell chips and a pink tint.
+    - `cleanse`: the **Tidecaller** sea otter washes slows off itself and allies within 140px every 3s, countering
+      frost and mud, with a seawater ring and a splash sound.
+  - Code-drawn sprites and Field Guide tags. Endless adds both from wave 56.
+  - **Level 66 Coral Shallows:** a 2,240px sandbar road plus a 1,640px north road joining at the middle loop, 11
+    pads, 15 waves, hpMult 2.0.
+  - **Field Guide:** now 62 enemies; page 3 checked and the pager shows 2/3. Browser check `scripts/reef-check.mjs`.
+  - 185 tests.
+- **Iteration 115** (polish + balance): full 66-level sweep in 4 parallel batches, all in band (Balance Notes). I
+  removed a redundant molt tint, since the per-frame "speed boost" tint already marks molted Shellsnaps. The
+  Coralreach browser check was re-run: no console errors. 185 tests.
+- **Iteration 116**: third Coralreach enemy, the **Inkspitter** (new `ink` trait).
+  - A jumpy octopus. When hit (at most every 7s) it squirts a 70px ink cloud that stays where it was struck for
+    2.5s. Towers can't target grounded enemies inside a cloud; heroes, soldiers and spells still can, and flyers are
+    above it.
+  - The sim tracks `inkClouds`, and towers check `inked()`. The cloud is a murky purple puff that hides what's
+    inside, with "Ink!" text and a soft squirt sound.
+  - Level 67 **Inkwater Cove**: a west road and a north-west road merge into one serpentine through the cove, 11
+    pads, 15 waves, hpMult 2.45.
+  - Endless adds Inkspitter from wave 58. 186 tests.
+- **Iteration 117**: level 68 **Shellbreak Reef**. A 3,120px sandbar weaves between coral ridges (the longest road
+  so far). A 1,460px north road joins at the mid-reef corner. It has 12 pads, 16 waves (all three Coralreach enemies
+  plus fliers on the long road) and hpMult 2.6. 186 tests.
+- **Iteration 118**: level 69 **Tidewrack Lagoon**. A 2,740px lagoon road snakes west to east, and a 1,620px north
+  road drops into its middle bend. It has 10 pads (fewer than usual), 16 waves (fliers on the long road) and hpMult
+  1.7. 186 tests.
+- **Iteration 119**: Coralreach finale, level 70 **Crown of the Reef**: a 2,620px reef road plus a 2,040px north
+  road joining at the crown, 12 pads, 18 waves, hpMult 2.27. The boss **Brinecrown, the Reef Colossus** (3,000
+  health, 40% armor):
+  - Molts at 50% (armor down to 15%, speed ×1.25).
+  - Washes slows off allies within 160px every 4s.
+  - Drops a Shellsnap every 8s (up to 6).
+  - Phases: 75% Inkspitters; 50% a 1,400 shield plus Tidecallers; 25% six Shellsnaps and a speed-up; 10% a surge.
+  - Code-drawn giant hermit crab with a coral crown on its spiral shell.
+
+  Also: achievements `boss_brinecrown` (Reefbreaker) and `reef_stars` (Tidewalker), story card "The Tide Turns" (a
+  dark sail on the horizon, a hook for region 15), and Brinecrown joins the endless boss rotation. 186 tests.
+- **Iteration 120** (balance): revisited the Coralreach finale. Leak analysis at hpMult 2.3 showed both the expert
+  and casual losing most lives to Shellsnaps on the north road (molted crabs sprinting a 2,040px road). All six
+  Shellsnap groups moved to the long road, and the level was retuned to hpMult 2.33. The Coralreach sweep is in
+  Balance Notes. 186 tests.
+- **Iteration 121** (phone QA): checked the newest content at phone size (740×360 touch).
+  - The Coralreach world map and battle were clean.
+  - **Found a bug:** the five-card Raid panel overflowed on phones. Phone-enlarged blurbs ran out of the cards into
+    "Choose a camp", and troop counts overlapped the cost line.
+  - **Fix:** cards now use three rows (header; a blurb scaled to fit 66px; count and +1 button along the bottom),
+    and the cards are 30px taller to use the spare panel room. The Sapper blurb was shortened so it stays readable.
+  - New script `scripts/raid-phone-check.mjs` opens the Raid panel at phone size, and `scripts/raid-check.mjs` was
+    updated for the new +1 position.
+
+  186 tests.
+- **Iteration 122**: region 15 opens, **The Blackwake Flotilla** (the "dark sail" from the Coralreach story).
+  - **Theme:** a `FLOTILLA` theme (deep sea with plank gangway roads; floating barrels, crates, red-and-white buoys
+    and whitecaps), a night-sea world map dotted with little ships ("Coral Gate" exit label), and a rolling minor
+    "Blackwake" shanty.
+  - **New traits** (checked against the list):
+    - `ranged`: the **Deckgunner** rat shoots the nearest soldier or hero within 150px for 18 every 2s while it
+      walks. This is the first enemy that hurts blockers from range. It shows a muzzle line and smoke.
+    - `anchor`: the **Ironkeel** walrus drops anchor every 6s, stopping dead with +50% armor for 2.5s
+      ("Anchored!", splash, iron-grey tint), then hauls on.
+  - Code-drawn sprites, Field Guide tags and sound cues (blunderbuss pop, anchor clank). Endless adds both from
+    wave 60.
+  - **Level 71 Blackwake Moorings:** a 2,800px gangway road plus a 1,460px north gangway joining at the bottom deck,
+    11 pads, 15 waves, hpMult 1.6.
+  - **Visual fixes:** a scrolling swell overlay striped across the plank roads (the roads share the ground layer),
+    so it was removed. The map's lake was a cream blob and is now dark water.
+  - Browser check `scripts/flotilla-check.mjs`. 188 tests.
+- **Iteration 123**: third Blackwake enemy, the **Powdermonkey** (new `keg` trait).
+  - A deck monkey hauling a fizzing keg. On death it explodes for 45 (scaled by the attack multiplier) to soldiers
+    and the hero within 80px, with a fire ring, smoke, a small shake and "Kaboom!". Kill it at range before it
+    reaches the blockers.
+  - Level 72 **Powder Row**: two west gangways merge into a long winding supply-barge road, 11 pads, 15 waves,
+    hpMult 2.85.
+  - Endless adds Powdermonkey from wave 62. 189 tests.
+- **Iteration 124**: level 73 **Gunwale Gauntlet**. A 2,600px gangway weaves along a line of gun-decked ships, and a
+  1,500px north gangway joins at the third ship. It has 10 pads, 16 waves (all three Blackwake enemies, fliers on the
+  long road) and hpMult 2.0. 189 tests.
+- **Iteration 125** (polish + balance): an anchored Ironkeel now plants a visible iron anchor beside it for the anchor
+  duration (pops in, fades as it hauls up). The first version scaled around the scene origin, because it was drawn
+  at absolute coordinates, so it flew in from the corner; it is now drawn relative to its own position. Sweep, finale
+  guard and hero comparison are in Balance Notes. 189 tests.
+- **Iteration 126**: level 74 **Flagship Wake**. A 2,960px gangway zigzags across a dozen hulls, and a 1,400px north
+  gangway joins near the end. It has 12 pads, 16 waves (Ironkeel packs on the long road) and hpMult 1.9. 189 tests.
+- **Iteration 127**: Blackwake finale, level 75 **The Black Flagship**: a 2,640px gangway plus a 2,120px north gangway
+  joining at the second hull, 12 pads, 18 waves, hpMult 2.76. The boss **Dreadmast, the Black Flagship** (3,000
+  health):
+  - Cannon fire at soldiers and heroes within 200px for 40 every 3s.
+  - Drops anchor every 9s (+30% armor for 2.5s).
+  - Drops a Powdermonkey every 8s (up to 6).
+  - Phases: 75% Deckgunners; 50% a 1,400 shield plus 2 Ironkeels; 25% six Powdermonkeys and a speed-up; 10% a ram.
+  - Code-drawn black-sailed hulk on barnacled oars with glowing gun ports.
+
+  Also: achievements `boss_dreadmast` (Admiral of the Grove) and `flotilla_stars` (Old Salt), story card "The Black
+  Sails Fall", and Dreadmast joins the endless boss rotation. 189 tests.
+- **Iteration 128** (QoL): world-map **region picker**. With 15 regions, the "<" and ">" arrows meant up to 14 taps,
+  so a new "Regions" button (top right) opens a 3-column grid of every region:
+  - Unlocked regions show their stars (x / 15) and jump straight there.
+  - The current region is highlighted with a gold outline.
+  - Locked regions say which level to beat (or "coming soon").
+
+  The arrows still work. Browser check `scripts/region-picker-check.mjs`. 189 tests.
+- **Iteration 129** (phone QA): checked the new region picker and the late-game screens (a Blackwake battle and the
+  Field Guide at 68 enemies over 3 pages, including boss phases) at phone size (740×360 touch). All readable, no
+  overlaps, no console errors; nothing needed fixing. Housekeeping note: `screenshots/` is about 54MB across 400
+  images. 189 tests.
+- **Iteration 130** (POLISH + BALANCE): swept all 75 levels with 12 seeds per strategy and re-ran the finale guard.
+  Powder Row was a touch easy for a second level, so its enemy health went from 2.85× to 2.95×. Polish: battle
+  decorations (trees, barrels, buoys, crystals) no longer spawn under the hero portrait or the spell buttons.
+  Screenshot `screenshots/130.png`. 189 tests.
+- **Iteration 131** (hero parity): Bramble and Wren trailed the other heroes, so both got a buff. Bramble: health
+  260 → 300, Earthshake damage 70 → 85. Wren: bolt damage 16 → 18, attack rate 1.0 → 1.15, Hush damage 30 → 36.
+  Screenshot `screenshots/131.png` (Bramble's Earthshake). 189 tests.
+- **Iteration 132** (village variety): new village building, the **Moonpetal Shrine**. It is 2×2, unlocks at Grove
+  Hall 2, one per village, and has 3 levels; each level makes battle spells recharge 6% faster.
+  - Data: `shrine` in `data/buildings.ts` and `SHRINE_CD_PER_LEVEL`.
+  - Perk: `BattlePerks.spellCdMult` → `BattleSim.spellCdMult`, with `spellCooldown(id)` driving the cast cooldown and
+    the HUD ring.
+  - Visible in the battle bonus banner and the building panel. The art is a ring of standing stones (one more per
+    level), a glowing moon-petal flower and a little moth keeper.
+  - The build shop's cards now size to fit 8 entries.
+  - Fixed a stale Ranger Lodge blurb that still said "raids coming soon".
+  - Checks: `scripts/shrine-check.mjs`, plus a phone version. Screenshots `screenshots/132.png` (shop) and
+    `132-phone.png`. 190 tests.
+- **Iteration 133** (region 16 opener): **The Amberwood**, an autumn forest where leaves fall without end. Level 76
+  **Amberwood Gate** has 11 pads and two roads of 2,280px and 1,580px. It uses the `AMBER` theme: ember-coloured
+  trees, leaf heaps, mossy logs and a drifting-leaves overlay, plus a warm folk-waltz music theme and an amber land
+  style on the world map. Two new enemies, each with a new trait:
+  - **Barkdrum** (stag beetle with a log drum): `drum` trait. Every 5s, allies within 140px, itself included, run
+    ×1.4 for 2s (`tickDrum`, a `drum` event with a warm ring and a "Boom!").
+  - **Turnleaf** (gecko with a maple-leaf tail): `adapt` trait. Each hit shifts its hide toward that damage type:
+    +5% armor for physical, or +5% magic resist for magic, up to +45%, while the other eases back to base. To
+    support this, `applyDamage` now receives the damage type from every tower, spell, hero and soldier hit. It is
+    tinted bark-brown or moon-violet by its current lean.
+  - Endless tier at wave 64. Field Guide tags and a drum sound cue. Tests for both traits.
+  - Checks: `scripts/amber-check.mjs`; screenshots `screenshots/133.png` and `133-map.png`. The region picker still
+    fits at 16 regions. 192 tests.
+- **Iteration 134** (Amberwood level 2): level 77 **Russet Hollow** (11 pads, roads of 2,500px and 1,420px) and a new
+  enemy:
+  - **Sapstoat** (russet stoat with amber teeth): `lifesteal` trait. It heals 120% of the melee damage it deals to
+    soldiers and heroes, so a lone blocker can't wear it down and towers have to finish it.
+  - Supporting pieces: a throttled `leech` event shows "+N" and a gulp cue, a Field Guide tag, and an endless tier at
+    wave 66.
+  - Checks: a unit test and `scripts/sapstoat-check.mjs`. Screenshot `screenshots/134.png`. 193 tests.
+- **Iteration 135** (POLISH + BALANCE):
+  - Re-swept a sample of levels from every region plus Blackwake and the Amberwood (12 seeds). The iteration 131
+    Bramble buff had lifted the novice strategy, which plays Bramble, on some region openers; two were re-tuned.
+  - Re-ran the finale guard.
+  - Polish: phone-size check of the region picker at 16 regions (6 rows). Everything fits and reads well.
+    New `scripts/region-picker-phone-check.mjs`; screenshot `screenshots/135.png`. 193 tests.
+- **Iteration 136** (Amberwood level 3): level 78 **Hollow Oak Crossing**. It has 11 pads and two roads of 2,440px and
+  1,580px, and the enemies march through a hollow oak. The waves mix all three Amberwood enemies with older ones;
+  Sapstoats stay on the long road. `scripts/level-shot.mjs` now unlocks levels up to 80. Screenshot
+  `screenshots/136.png`. 193 tests.
+- **Iteration 137** (Amberwood level 4): level 79 **Emberleaf Ridge**. It has 11 pads and two long roads (2,480px from
+  the left, 2,080px from the top) that merge past a central loop. The waves are the region's toughest yet, before
+  the boss.
+  - Polish: battle decorations now start at y 115, so tall trees no longer poke up behind the top bar.
+  - Screenshot `screenshots/137.png`. 193 tests.
+- **Iteration 138** (Amberwood finale): level 80 **Heart of the Amberwood** (11 pads, roads of 2,520px and 2,060px)
+  and its boss.
+  - **Rustantler, the Autumn King**: a great elk with smouldering antlers. 3,000 hp; its war-drum (`drum`, 200px,
+    ×1.3) speeds up everything around it; its hide turns toward incoming damage (`adapt`, +3% per hit, up to +30%);
+    and it releases Sapstoats as it walks (up to 6).
+  - Four phases: Barkdrums at 75%; a 1,400 shield and Turnleafs at 50%; a Sapstoat swarm and speed-up at 25%;
+    a charge at 10%.
+  - Achievements **Kingsfall** (defeat it) and **Leafwalker** (3 stars on every Amberwood level). Story card "The Last
+    Leaf Falls". Rustantler joins the endless boss rotation.
+  - Screenshot `screenshots/138.png` (boss phase 2 banner). 193 tests.
+- **Iteration 139** (phone QA): new `scripts/phone-guide-check.mjs` (740×360 touch) covers Field Guide page 3
+  (72 enemies, 3 pages), the Rustantler boss page, and the last achievements page (44 achievements, 3 pages).
+  - Found: long boss pages (many traits plus 4 phases) ended about 20px from the bottom of the parchment on phones,
+    so one more trait would overflow.
+  - Fix: the stats, the "Phases" heading and the phase list now shrink together as a block when they would run past
+    the panel. Desktop pages are unchanged.
+  - Screenshots `screenshots/139.png` (boss page) and `139-ach.png`. 193 tests.
+- **Iteration 140** (POLISH + BALANCE): checked the Amberwood as a whole with the hero comparison (all five levels)
+  and endless mode. No retunes were needed.
+  - Polish: a Barkdrum now visibly thumps (a short scale pulse) when it beats its drum, so players can see which
+    beetle is speeding up the pack.
+  - Screenshot `screenshots/140.png`. 193 tests.
+- **Iteration 141** (raid variety): new Murkhorde camp building, the **Sludge Pit** (360 hp, 2×2). Ground troops
+  within 120px of it move at 55% speed; Owl Strikers fly over it.
+  - It gives raiders a reason to send Owls or break the pit early, since a slowed brawler line soaks far more Spit
+    Tower fire.
+  - Placement: Warrens get 1, Strongholds 2 (a Stronghold hut was traded for the second pit). Pits sit near the
+    defenses.
+  - Rules in `RaidSim.mireFactor`, data in `CAMP_BUILDINGS.sludge.mire`.
+  - The raid screen shades the pit's muddy reach in olive, and the shading fades when the pit is destroyed. The art
+    is a bubbling muck pit ringed with stakes, with a ladle.
+  - Tests: the slow, flyers and destroyed pits are unaffected, and per-tier counts.
+  - Checks: `scripts/sludge-check.mjs`; screenshot `screenshots/141.png`. 195 tests.
+- **Iteration 142** (endless "home turf"): endless runs usually end around wave 12–25, so the late tiers (enemies
+  from regions 5–16, from wave 20 up to 66) almost never showed up. Now each map's endless run also draws on that
+  map's own campaign enemies, from wave 5 (`ENDLESS.nativeFrom`). Its first boss (wave 10) is the map's own region
+  boss, followed by the usual rotation. An Amberwood map now plays like the Amberwood: Sapstoats, Barkdrums and
+  Turnleafs from wave 5, then Rustantler at 10.
+  - Code: `nativeEnemies(level)` and `endlessBosses(level)` in `systems/endless.ts`, and `endlessWave` takes the
+    native pool and boss order.
+  - Test: native enemies appear only from `nativeFrom`, and the region boss comes first.
+  - Checks: `scripts/endless-home-check.mjs`; screenshot `screenshots/142.png` (endless wave 5 in the Amberwood).
+    196 tests.
+- **Iteration 143** (level card polish):
+  - The Endless line on a beaten level's card now also names the wave-10 home boss, e.g. "Best 17 • Today: Beaver
+    Discount • Wave 10: Rustantler", shrunk to fit.
+  - Long enemy rosters (late levels use 20+ types) no longer squeeze into a row of tiny icons. The card shows bosses
+    first, then up to 13 faces and a "+N" count.
+  - New `scripts/endless-card-check.mjs` takes desktop and phone shots. Screenshots `screenshots/143.png` and
+    `143-phone.png`. 196 tests.
+- **Iteration 144** (achievements for the new village and raid content):
+  - **Moonwatcher**: raise the Moonpetal Shrine to level 3 (1,200c + 1,200s).
+  - **Mudlark**: destroy 10 Sludge Pits in raids (900s). The raid result now banks a `sludgeDestroyed` stat for every
+    pit knocked out.
+  - Now 46 achievements, still 3 pages.
+  - Checks: a unit test, and `scripts/sludge-check.mjs` now ends a raid with the pit destroyed and checks the saved
+    stat. Screenshot `screenshots/144.png` (achievements page 3 on a phone). 197 tests.
+- **Iteration 145** (POLISH + BALANCE):
+  - Polish: opening the Achievements screen now runs the achievement check and awards anything already earned, with
+    toasts and rewards. Before, a newly added achievement that a player already qualified for (e.g. Moonwatcher with
+    a level-3 shrine) stayed locked until their next battle, raid or village action.
+  - Screenshot `screenshots/145-ach.png`. 197 tests.
+  - Balance: full 80-level sweep (12 seeds) plus the finale guard; results in Balance Notes.
+- **Iteration 146** (raid troop 6): **Otter Scavenger**. Ranger Lodge 2; 60 sap, 1 space; 150 hp, 20 damage, fast (72).
+  - `prefers: 'loot'`: heads for Loot Piles and the Mud Totem first.
+  - `wader`: Sludge Pits don't slow it.
+  - `lootBonus` 0.3: buildings it finishes off drop 30% more loot.
+  - The role is a raid farmer: same stars, much more loot.
+  - Art: an otter with a cream muzzle and a sack. The raid panel fits 6 cards on desktop and phone (blurb shortened).
+  - Test fixes:
+    - `scripts/raid-check.mjs` card maths updated for 6 troops (its clicks were missing).
+    - `scripts/raid-lib.ts` now deploys otters (after the slingers) and has a "Lodge 2 + Otters" army.
+  - Tests: loot targeting, sludge immunity, loot bonus. Screenshot `screenshots/146.png` (phone raid panel).
+    199 tests.
+- **Iteration 147** (Field Guide Raids tab): a fifth tab, **Raids**, lists the 6 troops and the 8 Murkhorde camp
+  buildings. Each has a blurb and stats.
+  - Troops: health, damage, range, speed, cost, space and lodge level, plus traits (flies, defense- or loot-seeking,
+    splash, wall damage, wader, loot bonus, heals).
+  - Buildings: health and size, plus defense range and damage, loot, mending, mire slow and wall behaviour.
+  - Camp buildings gained a `blurb` field in `data/raid.ts`. Small troop sprites scale up to 2× in this tab's grid.
+    The title and the five tab buttons were re-spaced.
+  - `scripts/guide-spells-check.mjs` now clicks the Spells tab at its new position. New
+    `scripts/guide-raids-check.mjs` covers desktop and phone. Screenshots `screenshots/147.png` (Otter page) and
+    `147-phone-camp.png` (Sludge Pit page on a phone). 199 tests.
+- **Iteration 148** (daily variety): two new modifiers that daily challenges and endless mutators can roll.
+  - **Golden Harvest** (good): kills pay 50% more coins (`Modifiers.bountyMult`, stacking with Wren's bounty aura).
+  - **Ironbark**: every enemy gets +15% armor (`Modifiers.armorBonus`, added in `res()`, capped at 85%), which
+    pushes players toward magic towers.
+  - 10 modifiers in total. Today's (2026-11-07) daily happens to roll Thin Hedge + Golden Harvest.
+  - Tests for both. Screenshots `screenshots/148.png` (daily banner with the new twist) and `148-menu.png`.
+    201 tests.
+- **Iteration 149** (accessibility): new **Reduce motion** setting (Settings, next to Fullscreen, saved as
+  `settings.reduceMotion`, off by default).
+  - When on: no screen shake anywhere (all 8 camera shakes now go through `ui/motion.ts` `shake()`), and no drifting
+    weather overlays (the rain, heat shimmer, caustics, clouds and falling leaves are skipped).
+  - The flag is read when the menu and battles start, and updated live by the toggle.
+  - Tests: the shake gate and the save round-trip. `scripts/motion-check.mjs` toggles it with a real click, then
+    checks that an Amberwood battle has 0 leaf overlays and no shake on a leak (18 leaves and a shake when off).
+  - Screenshot `screenshots/149.png`. 203 tests.
+- **Iteration 150** (POLISH + BALANCE, daily challenges): the campaign is unchanged since the iteration 145 sweep, so
+  this pass simulated the daily twists.
+  - Finding: dailies were brutal. A daily stacks one harmful and one random twist on a level tuned without them, and
+    even Thick Hides alone held the expert to 25% on sample levels. The new Ironbark (+15% armor) dropped the expert
+    to 36% alone and 0% when paired with another harmful twist.
+  - Fixes:
+    - Ironbark is now +6% armor, which tests about as hard as the other harmful twists.
+    - Daily challenges play an eased copy of the level (`DAILY_HP_EASE` 0.7 × enemy health, `dailyLevel()` in
+      `systems/daily.ts`).
+    - Daily wins no longer record campaign stars (they always paid their own reward).
+  - `playLevel` takes optional modifiers for these sims. Tests: daily ease. Screenshot `screenshots/150.png`.
+    204 tests.
+- **Iteration 151** (region 17 opener): **The Mistwreath Terraces**, terraced tea hills in the fog with paper
+  lanterns on every step. Level 81 **Lanternstep Rise** has 12 pads and two roads of 2,400px and 1,680px. It uses the
+  `MIST` theme: clipped tea-bush rows, glowing stone lanterns, cherry trees in blossom, and slow fog banks that respect
+  Reduce motion. It also gets a calm pentatonic music theme and a soft green terraced land style on the world map.
+  Two new enemies, each with a new trait:
+  - **Mistfox** (a pale fox spirit): `phase` trait. Every 3.5s it fades to mist for 1.2s and takes no damage, so
+    shots aimed at it are wasted. It turns translucent and puffs particles as it fades.
+  - **Silkcrane** (a white crane): `dodge` trait. It sidesteps 35% of single-target tower shots (seeded, so sims
+    replay exactly); splash, chains and spells always land. Each dodge shows a "Miss!" with a whoosh, throttled.
+  - Endless tier at wave 68. Field Guide tags and sound cues. Tests for both traits.
+  - Checks: `scripts/mist-check.mjs`; screenshots `screenshots/151.png` and `151-map.png`. 206 tests.
+- **Iteration 152** (Mistwreath level 2): level 82 **Teahouse Switchback** (11 pads, roads of 2,480px and 1,420px)
+  and a new enemy:
+  - **Glowbearer** (a tortoise with a paper lantern on a pole): `ward` trait. Allies within 130px take 25% less
+    damage of every type: physical, magic and true. It isn't warded itself, so it is the one to kill first. This
+    differs from Barkwarden's armor aura, which only softens physical hits. `wardCut()` is applied at the top of
+    `applyDamage`.
+  - The ward shows as a warm gold disc with a breathing rim. Field Guide tag; endless tier at wave 70; test.
+  - Screenshot `screenshots/152.png` (two lantern glows). 207 tests.
+- **Iteration 153** (Mistwreath level 3): level 83 **Fogbell Terraces**. It has 11 pads and two roads of 2,520px and
+  1,710px, and the waves mix Mistfoxes, Silkcranes and Glowbearers with older enemies. Silkcrane counts were trimmed
+  in the later waves because their dodging was the casual strategy's main leak. Screenshot `screenshots/153.png`.
+  207 tests.
+- **Iteration 154** (Mistwreath level 4): level 84 **Paper Lantern Climb**. It has 11 pads and two long roads
+  (2,480px from the left, 2,140px from the top) that merge mid-map, with the region's toughest waves before the boss.
+  The first screenshot showed the top-right outpost sitting on the exit gate, so that pad moved left to (1110,260).
+  Screenshot `screenshots/154.png`. 207 tests.
+- **Iteration 155** (POLISH + BALANCE): checked the Mistwreath as a whole (hero comparison on levels 81–84, the
+  finale guard, endless on two Mistwreath maps). No retunes were needed.
+  - Polish: a Silkcrane now flinches (a short scale pulse) when it dodges, tying the "Miss!" to the crane.
+  - Screenshot `screenshots/155.png`. 207 tests.
+- **Iteration 156** (Mistwreath finale): level 85 **Shrine of a Thousand Lanterns** (11 pads, roads of 2,520px and
+  2,320px) and its boss.
+  - **Veilwhisker, the Lantern Matriarch**: a great pale fox spirit with a paper lantern in her jaws, 3,000 hp.
+    She fades to mist every 6s for 1.5s (`phase`), her lantern wards allies within 180px for 20% (`ward`), and she
+    releases Mistfoxes as she walks (up to 6).
+  - Four phases: Silkcranes at 75%; a 1,400 shield and Glowbearers at 50%; a Mistfox swarm and speed-up at 25%;
+    a charge at 10%.
+  - Achievements **Lanternbreaker** (defeat her) and **Fogwalker** (3 stars on every Mistwreath level). Story card
+    "The Fog Lifts". She joins the endless boss rotation and is the Mistwreath maps' home boss, so their endless runs
+    no longer fall back to the easiest boss.
+  - The layout tests caught a pad under the spell buttons and a top entry at x=460; both fixed.
+  - Screenshot `screenshots/156.png` (boss phase 2 with her lantern ward). 207 tests.
+- **Iteration 157** (village quality of life): a **Collect all** button (bottom left, above Raid) harvests every
+  Acorn Mine and Glowsap Tap in one tap, with a "+N" floating over each.
+  - Rules: `collectAll(v, now)` in `systems/village.ts` returns totals and per-building amounts and reuses
+    `collect()`, so a full storage still leaves the remainder in the producer.
+  - If nothing is ready, a "Nothing to collect yet" toast shows.
+  - Checks: a test, and `scripts/collect-all-check.mjs` (one real tap banked +2,000 coins and +1,500 glowsap).
+    Screenshot `screenshots/157.png`. 208 tests.
+- **Iteration 158** (phone QA): re-ran `scripts/phone-screens.mjs` (740×360 touch) over the menu, the village
+  building panel (with the new Collect all button), the shop, the raid panel and achievements.
+  - The Collect all button and the building panel fit side by side.
+  - Fix: the shop and raid panels had a 96–97% opaque background, so the Collect all and Zoom buttons bled through
+    their bottom corners. Both panels are fully opaque now.
+  - The menu's version label was stuck at v0.6; it now reads v0.9.
+  - Screenshots `screenshots/158.png` (raid panel) and `158-menu.png`. 208 tests.
+- **Iteration 159** (hero 6): **Hazel the Dormouse Dreamweaver**, a ranged magic hero (165 hp, magic darts,
+  hits flyers).
+  - New passive `drowse` ("Lullaby"): enemies within 160px of her move 15% slower; windborne foes shrug it off.
+    `drowseMult()` feeds both movement and tower aim-lead.
+  - Active **Dream Darts**: a magic volley at up to 6 enemies.
+  - Her lullaby shows as a faint breathing lilac ring. Art: a golden dormouse with a patchwork nightcap; she also
+    gets a lilac dart projectile.
+  - Full Roster now needs all six heroes; its test uses `HERO_ORDER`.
+  - Checks: a test for the lullaby; `scripts/hazel-check.mjs` covers the menu card and the battle. Screenshots
+    `screenshots/159.png` and `159-menu.png`. 209 tests.
+- **Iteration 160** (POLISH + BALANCE):
+  - Ran the hero comparison for all six heroes over 10 levels, including the Amberwood and Mistwreath bosses.
+    Bramble and Sorrel trailed, so each gained +2 attack damage (Bramble 18 → 20, Sorrel 17 → 19).
+  - Re-checked the region openers for the novice strategy, which plays Bramble; Amberwood Gate was re-tuned.
+  - Polish bug: in the Field Guide detail page, long titles ("Hazel the Dormouse Dreamweaver", and long boss names)
+    wrapped onto a second line and overlapped the portrait and blurb. Titles now shrink to fit one line.
+  - Screenshot `screenshots/160.png`. 209 tests.
+- **Iteration 161** (region 18 opener): **The Highcanopy**, plank walkways and rope bridges strung between giant
+  treetops. Level 86 **Ropebridge Reach** has 12 pads, a long winding road of 2,960px and a top road of 1,720px. It
+  uses the `CANOPY` theme: great leaf clumps seen from above, twig nests with eggs, hanging vines, and slanting
+  sunbeams that respect Reduce motion. It also gets a bouncing call-and-answer music theme and a leafy world-map
+  style. Two new enemies, each with a new trait:
+  - **Howler** (a shaggy shouting monkey): `rile` trait. Every slow it suffers (at most twice a second) adds +8%
+    speed for good, up to +50%, so frost and snares backfire if overused. It shows a throttled "Grr!" and a hop.
+  - **Ringtail Mourner** (a grey ringtail lemur): `grief` trait. When it dies, allies within 140px gain +12% armor
+    for good (capped at 85%). A grey ring spreads with "Mourned".
+  - Endless tier at wave 72. Field Guide tags and sound cues. Tests for both traits.
+  - The layout tests caught a pad behind the exit gate; it was moved.
+  - Checks: `scripts/canopy-check.mjs` (Howler at ×1.24 after three slows; the Mourner's death raised a mudling's
+    armor 0 → 0.12). Screenshots `screenshots/161.png` and `161-map.png`. 211 tests.
+- **Iteration 162** (Highcanopy level 2): level 87 **Hawkwatch Platforms** (11 pads, roads of 2,540px and 1,400px)
+  and a new enemy:
+  - **Canopy Harrier** (a rust-winged hawk, flying): `snatch` trait. Every 8s it carries off the nearest soldier
+    within 90px, killing it, so it has to respawn. Soldiers can't block flyers, which makes this a problem for
+    barracks-heavy defenses; air-capable towers have to catch it.
+  - Visuals and sound: a streak from the hawk to the soldier, a puff of feathers, "Snatched!" and a screech.
+  - Field Guide tag; endless tier at wave 74; test.
+  - Harriers come only on the long road (the fliers-on-short-roads lesson). Screenshot `screenshots/162.png`
+    (a snatch in progress). 212 tests.
+- **Iteration 163** (Highcanopy level 3): level 88 **Vinefall Crossing**. It has 11 pads and two roads of 2,500px and
+  1,650px; Howlers, Mourners and Harriers mix with older enemies, and the fliers stay on the long road. Screenshot
+  `screenshots/163.png`. 212 tests.
+- **Iteration 164** (Highcanopy level 4): level 89 **Thunderbough Heights**. It has 11 pads and two long roads
+  (2,520px from the left, 2,150px from the top), with the region's toughest waves before the boss. Screenshot
+  `screenshots/164.png`. 212 tests.
+- **Iteration 165** (POLISH + BALANCE): the region picker now **pages**. It shows 18 regions per page, with "<" and ">"
+  buttons and a page label (for example "2/2"), and opens on the page that holds the current region. That unblocks region 19+.
+  - Check: `scripts/region-picker-paging-check.mjs` shrinks the page to 9 to test it today: opens on page 2/2, ">" wraps to 1/2,
+    no console errors. Screenshots `screenshots/165.png` and `165-p2.png`.
+  - Balance: hero comparison on Highcanopy levels 86–89 (see Balance Notes). 212 tests.
+- **Iteration 166** (Highcanopy finale): level 90 **Crown of the Oldest Tree** and its boss.
+  - The boss is **Crownmane, the Old King of the Canopy**, a red-maned ape with a vine crown, drawn in BootScene.
+    - 3,200 hp, armor 0.3, magic resist 0.3.
+    - Slows rile him (+4% speed each, up to +35%), and he snatches a Keeper off the road every 6 seconds.
+    - He calls a Howler every 7 seconds, up to 6.
+    - Phases: Harriers at 75%; a 1,500 shield and 6 Mourners at 50%; 6 Howlers and a speed-up at 25%; a final dash at 10%.
+  - Achievements Kingtopple (beat the boss) and Treetop Keeper (all 15 Highcanopy stars), story card "The King Steps Down",
+    and Crownmane joins the endless boss rotation. One new test (213 total).
+  - Check: `scripts/crownmane-check.mjs`. The phase-1 Harriers spawned and there were no console errors. Screenshot `screenshots/166.png`.
+- **Iteration 167** (raid break): a new camp building, the **Hornet Hive**. It's a papery striped nest on a branch with
+  hornets around it, drawn in BootScene.
+  - When it's destroyed, a swarm stings every troop within about 140px of its centre, flyers included, for 45 damage
+    (scaled by camp tier). That punishes clumping and owl dives.
+  - Warrens and Strongholds have one hive each; Outposts have none.
+  - The raid shows a yellow ring, a burst of dark specks, "Swarm!" and a buzzing sound. The Field Guide's Raids tab
+    lists it automatically.
+  - Two new tests (215 total). Check: `scripts/hive-check.mjs`. Every troop near the hive lost 56 hp and there were no
+    console errors. Screenshots `screenshots/167.png` (the swarm) and `167-camp.png`.
+- **Iteration 168** (region 19): **The Honeycomb Hills**. Golden clover hills with a honey lake on the map. In battle the
+  scenery is honeycomb patches, clover and dripping wild hives, with honeybees drifting overhead (off under Reduce motion).
+  It has its own swaying "Honeycomb" tune.
+  - **Waxback Beetle** (`wax`): starts with +40% armor. Once it has taken magic damage worth 20% of its health, the coat
+    melts off for good ("Melted!" and a drip sound).
+  - **Hexguard Wasp** (`parry`): its comb shield turns aside 3 whole single-target shots and regains one every 3s. Splash,
+    chain jumps and spells always land; a hex flash shows each block, with "Shield cracked" when the last one goes.
+  - Level 91 **Hivegate Meadow**: 10 pads, two roads, 14 waves.
+  - Field Guide tags, endless tier at wave 76, sprites, sounds, and the music-flag test. Two new tests (217 total).
+  - Check: `scripts/comb-check.mjs`. The comb tune plays and a Waxback's armor drops from 0.55 to 0.15 after a spell; no
+    console errors. Screenshots `screenshots/168.png` and `168-map.png`.
+- **Iteration 169** (Honeycomb level 2): level 92 **Clovercomb Rise** and the region's third trait.
+  - **Honeypaw Cub** (`glaze`): a sticky bear cub. Every melee swipe coats the soldier blocking it in honey, so that soldier
+    attacks at half speed for 3s. It shows a honey splat, "Sticky!" and a squelch; the coat clears when the soldier respawns.
+  - The level has 11 pads and two roads (one from the top, one from the left) that merge into a long winding run.
+  - Field Guide tag, sprite, endless tier at wave 78, and one test (218 total). `scripts/level-shot.mjs` now unlocks every
+    level. Screenshot `screenshots/169.png`.
+- **Iteration 170** (POLISH + BALANCE): you can now read the Honeycomb traits at a glance in battle.
+  - A Hexguard Wasp shows one amber dot per shield charge left above its head.
+  - A Waxback Beetle shows a glossy amber bar under its health that drains as spells melt the coat.
+  - Both show even at full health, so the player can plan before the first shot. Screenshot `screenshots/170.png`.
+  - Balance: a sweep of levels 86–92 and a hero comparison on 90–92; no changes needed (see Balance Notes). 218 tests.
+- **Iteration 171** (Honeycomb level 3): level 93 **Waxworks Hollow**. It has 12 pads, a long road from the left that
+  zig-zags, and a short drop from the top that joins it near the end. All three Honeycomb traits mix with older enemies over
+  15 waves, and start coins are 1,150. Screenshot `screenshots/171.png`. 218 tests.
+- **Iteration 172** (Honeycomb level 4): level 94 **Queenscomb Terraces**. It has 12 pads, a long winding road from the left
+  (about 2,460px) and a short drop from the top (about 1,340px). The fast and armoured groups stay on the long road.
+  15 waves of the region's toughest mixes before the boss. Screenshot `screenshots/172.png`. 218 tests.
+- **Iteration 173** (Honeycomb finale): level 95 **Throne of the Golden Hive** and its boss.
+  - The boss is **Goldwing, the Comb Matriarch**, a giant queen bee drawn in BootScene: a wax-glazed striped body, four
+    wings and a crown of comb.
+    - She uses the region's own traits: a wax coat (+35% armor until magic damage worth 15% of her health melts it) and
+      a comb shield (4 charges, one back every 5s).
+    - She calls a Hexguard Wasp every 7 seconds.
+    - Phases: Waxbacks at 75%; a 1,500 shield and Honeypaws at 50%; 6 Hexguards and a speed-up at 25%; a final dash at 10%.
+  - Achievements Hivebreaker (beat the boss) and Beekeeper (all 15 Honeycomb stars), story card "The Hive Goes Quiet",
+    and Goldwing joins the endless boss rotation.
+  - The level has 12 pads, a long road from the left and a short one from the top. One new test (219 total).
+  - Check: `scripts/combqueen-check.mjs`. Her first phase called 4 Waxbacks and there were no console errors.
+    Screenshot `screenshots/173.png`.
+- **Iteration 174** (village break): a new building, the **Honeycomb Apiary**. It needs Grove Hall 3 (one per village,
+  3 levels).
+  - Each level gives the hero +10% max health in every battle. The bonus also holds for trained heroes and through
+    in-battle level-ups.
+  - The art is painted hive-boxes on stands (more boxes as it levels), bees and a honey pot. The info panel shows the
+    bonus, and the battle start banner adds "hero +N% health".
+  - The build shop now has 9 cards and still fits.
+  - Polish: long building names no longer run into the panel's "Needs Grove Hall" / upgrade column; the title now shrinks
+    to fit.
+  - One new test (220 total). Check: `scripts/apiary-check.mjs`. Fen started a battle with 192/160 hp at Apiary level 2,
+    and there were no console errors. Screenshots `screenshots/174.png` (shop) and `174-panel.png`.
+- **Iteration 175** (POLISH + BALANCE): the boss health bar now shows a wax-coated boss's coat (an amber strip under the bar
+  that drains as spells melt it) and comb-shield charges (amber cells to the right, dim when spent). That way Goldwing's two
+  defences are as readable as her minions'. Screenshot `screenshots/175.png` (Goldwing in phase 2: 3 of 4 charges,
+  fresh shield). Balance: a full Honeycomb sweep, hero comparison and endless check, with no changes (see Balance Notes).
+  220 tests.
+
+- **Iteration 202**: level 114 "Sunset Mesa" (Rustrock Canyons). It has a long switchback road plus a north entry that joins it for the final
+  climb, 12 pads and 15 waves of curlshells, rattlers and sandburrows mixed with older enemies. hpMult 2.0. Screenshot
+  `screenshots/202.png`. 238 tests.
+
+- **Iteration 203**: the Rustrock finale, level 115 "The Rattling Spire". The new boss is **Rustcoil, the Mesa Serpent** (3500 hp, armour 0.35, magic resist 0.25).
+  - It curls into iron-hard loops when hit (+0.3 resists for 2.5 s, 8 s cooldown) and its bites poison soldiers (14 dps for 5 s).
+  - A rattler slithers out every 7 s.
+  - Phases: 75% gophers burst up, 50% a 1500-point shield plus armadillos, 25% six rattlers and a speed-up, 10% it strikes for the gate.
+  - Also added: a code-drawn coiled-serpent sprite, the achievements "Snakecharmer" (boss) and "Canyon Keeper" (15 stars), the story card "The Spire Falls Quiet" and a place in the endless boss rotation.
+  - Check: `scripts/rustcoil-check.mjs` (phase 1 summons 4 gophers, no console errors). Screenshots `screenshots/203.png`, `rustcoil.png`, `rustcoil-map.png`. 239 tests.
+
+- **Iteration 204**: new raid camp building, the **Rattle Trap** (340 hp). It is a sandy pit of buried rattlesnakes.
+  - Ground troops that pass within 80 px are poisoned for 9 health a second. While they stay close the poison keeps renewing, and it lasts 4 s after they leave.
+  - Flyers and tunnelling moles are safe. Knocking the trap down stops new bites, but troops already poisoned keep burning.
+  - Strongholds dig one.
+  - The camp shows the trap's reach as a ring of sand. Bitten troops turn green and get a "Venom!" pop-up with a hiss; several bites at once share one label.
+  - Two new tests (241 total). Check: `scripts/rattle-check.mjs` (3 brawlers poisoned, the owl untouched, no console errors). Screenshot `screenshots/204.png`.
+
+- **Iteration 205** (POLISH + BALANCE):
+  - Polish: a curling boss now has a coil badge to the right of its health bar. It is steel with a steel outline round the bar while curled up (hits glance off), shows a rust ring that refills while the curl recharges, and turns solid rust-red when ready. Players can time big spells for when Rustcoil is uncurled. Screenshot `screenshots/205.png` (Rustcoil curled after a hit).
+  - New diagnostic script `scripts/endless-wall.ts`: leaks by wave for each strategy on one endless map.
+  - Balance: a Rustrock sweep, hero comparison and endless check, with no changes (see Balance Notes). 241 tests.
+
+- **Iteration 206**: region 24, **The Pebblebrook Rapids**, a green river country whose roads are shallow blue streams.
+  - **Bubbler Newt** (bubble): every 6 s it wraps up to 3 of the nearest allies (itself included, never bosses) in a bubble that blocks the next hit entirely, then pops. Quick, rapid shots strip bubbles best.
+  - **Torrent Pike** (surge): every 8 s, it and every ally within 90 px that no soldier is holding (bosses excepted) are swept 55 px down the stream.
+  - New level 116 "Stepping Stones" (hpMult 1.25).
+  - Theme: a stream-coloured road, reeds and cattails, mossy stones and ferns. Leaves ride the current and dragonflies dart about (skipped with reduced motion).
+  - Also added: the "Pebblebrook" music theme (bright rippling runs), world-map land with reeds and pebbles, Field Guide tags, code-drawn sprites, sounds (blub, pop, rushing splash) and an endless tier from wave 96.
+  - Two new tests (243 total). Check: `scripts/brook-check.mjs` (music brook, 2 enemies bubbled, the pike surged 66 px, no console errors). Screenshots `screenshots/206.png` and `206-map.png`.
+
+- **Iteration 207**: level 117 "Otterslide Bend" and the **Spray Otter** (drench).
+  - The otter wraps itself and every ally within 100 px in a cold mist. Player spells (Starfall and Thornsnare) deal 60% less to soaked critters, so the towers have to handle them.
+  - A faint drifting mist ring shows the soaked zone. A spell that lands on soaked critters hisses into steam with a "Soaked!" pop-up.
+  - Also added: a Field Guide tag, a code-drawn otter sprite and an endless tier at wave 98. hpMult 1.3.
+  - One new test (244 total). Check: `scripts/otter-check.mjs` (Starfall did 69 to a soaked mudling and 100 to a dry one; the dry figure may be capped by the mudling's health. No console errors). Screenshot `screenshots/207.png`.
+
+- **Iteration 208**: level 118 "Millwheel Race" (Pebblebrook).
+  - A long S-bend stream plus a north race of water that joins it on the lower bank. 13 pads.
+  - 15 waves mixing newts, pikes and otters with older enemies. hpMult 1.35.
+  - Screenshot `screenshots/208.png`. 244 tests.
+
+- **Iteration 209**: level 119 "Kingfisher Falls" (Pebblebrook).
+  - A long zig-zag stream plus a north channel that joins it before the last bend. 13 pads.
+  - 15 waves of newts, pikes and otters with older enemies. hpMult 1.4.
+  - A pad that the layout test caught behind the exit gate was moved. Screenshot `screenshots/209.png`. 244 tests.
+
+- **Iteration 210** (POLISH + BALANCE):
+  - Polish: a clump of Spray Otters used to stack their mist circles into an opaque white fog over the road. Now only the first otter in a clump fills its mist, every otter keeps a faint outline ring and drifting droplets, and the fill is lighter (0.08).
+  - Checked the Field Guide's last page: the newt, otter and pike are listed (103/103), and there were no console errors.
+  - Screenshots `screenshots/210.png` (Millwheel Race wave 3 with otters) and `210-guide.png`.
+  - Balance: a Pebblebrook sweep, hero comparison and endless check, with no changes (see Balance Notes). 244 tests.
+
+- **Iteration 211**: the Pebblebrook finale, level 120 "The Elder Pool". The new boss is **Mossback, the River Elder**, an ancient snapping turtle with a meadow of moss on its shell (3600 hp, armour 0.45, magic resist 0.2).
+  - It soaks itself and allies within 120 px: spells deal 40% less to them.
+  - Every 9 s a surge sweeps it and its unheld escort 50 px down the stream.
+  - A newt joins every 7 s.
+  - Phases: 75% four pike, 50% a 1500-point shield plus newts, 25% five otters and a speed-up, 10% it heaves forward on a wall of water.
+  - Also added: a code-drawn turtle sprite, the achievements "Shellcracker" (boss) and "Brook Keeper" (15 stars), the story card "The Pool Lies Still" and a place in the endless boss rotation.
+  - Check: `scripts/mossback-check.mjs` (phase 1 summons 4 pike, no console errors). Screenshots `screenshots/211.png`, `211-boss.png`, `mossback-map.png`. 245 tests.
+
+- **Iteration 212**: new village building, the **Fish Weir**: a woven willow fence across a stream, where friendly Pebblebrook otters catch fish.
+  - Unlocks at Grove Hall 3, one per village, 3 levels.
+  - Each level makes every kill in battle pay +5% coins (`WEIR_BOUNTY_PER_LEVEL`), up to +15%. It stacks with the hero and daily bonuses and is applied before the weasel tithe.
+  - The art is a little stream with a fence (more posts as it levels), a fish basket and leaping fish.
+  - The info panel shows "Battle bonus: kills pay +N% coins" and the battle banner adds "kills pay +N%". The build shop now has 11 cards and still fits.
+  - One new test (246 total). Check: `scripts/weir-check.mjs` (a level-2 weir gives 1.1 in battle, no console errors). Screenshots `screenshots/212.png` (shop), `212-panel.png` and `212-battle.png`.
+
+- **Iteration 213**: region 25, **The Starheath Moors**: windswept purple heather with leaning standing stones and gorse.
+  - **Heath Wisp** (link): every hit is shared equally among all linked wisps within 120 px (a lone wisp takes it all), so splash and area attacks are the answer. Faint threads of light join linked wisps, and they flicker together when a hit is shared.
+  - **Moorland Ram** (wool): each hit loses 8 damage, never more than 3/4 of it, so big hits beat many small ones.
+  - New level 121 "Heather Gate" (hpMult 1.32).
+  - Theme: a peat road, heather clumps, standing stones and gorse deco, plus soft gusts of wind rolling across (skipped with reduced motion).
+  - Also added: the "Starheath" music theme (a slow minor air), world-map land with heather and stones, Field Guide tags, code-drawn sprites, a glassy shimmer sound and an endless tier from wave 100.
+  - Two new tests (248 total). Check: `scripts/heath-check.mjs` (music heath; a 60 hit shared 20 each across 3 wisps; a 20 hit took 12 off the ram; no console errors). Screenshots `screenshots/213.png` and `213-map.png`.
+
+- **Iteration 214**: level 122 "Moonstone Circle" and the **Moon Hare** (stall).
+  - While any Moon Hare lives, spell and hero-skill cooldowns tick at 0.6× speed (the strongest counts). Fast and fragile, so it has to be hunted down.
+  - The top bar warns "Moon hare: spells recharge -40%". It shares one line with the weasel tithe warning, joined by "•".
+  - Also added: a Field Guide tag, a code-drawn silver hare sprite and an endless tier at wave 102. hpMult 1.45.
+  - One new test (249 total). Screenshot `screenshots/214.png` (the warning visible under the coin counter). No console errors.
+
+- **Iteration 215** (POLISH + BALANCE):
+  - Polish: while a Moon Hare's hush is slowing recharge, the spell buttons and the hero-skill button draw their recharge wedge in a cold moonlit blue and show a little crescent-moon badge. That way the cause is visible right where players look, not only in the top-bar line.
+  - Check: `scripts/moonhare-check.mjs` (stall 0.6; Starfall's cooldown ticked 0.6 s in 1 s; no console errors). Screenshot `screenshots/215.png`.
+  - Balance: a Starheath check, hero comparison and endless check, with no changes (see Balance Notes). 249 tests.
+
+- **Iteration 216**: level 123 "Curlew Ridge" (Starheath).
+  - The zig-zag layout from Kingfisher Falls, re-themed as a stony ridge. 13 pads.
+  - 15 waves of rams, wisps and moon hares with older enemies. hpMult 1.55.
+  - Screenshot `screenshots/216.png`. 249 tests.
+
+- **Iteration 217**: level 124 "The Barrow Downs" (Starheath).
+  - The S-bend layout from Millwheel Race, re-themed as burial mounds. 13 pads.
+  - 15 waves of wisps, rams and moon hares with older enemies. hpMult 1.6.
+  - Screenshot `screenshots/217.png`. 249 tests.
+
+- **Iteration 218**: the Starheath finale, level 125 "The Thunder Barrow" (the Elder Pool layout, re-themed). The new boss is **Thunderfleece, the Barrow Ram** (3700 hp).
+  - Its fleece eats 22 damage from every hit (at most 3/4 of it), and while it lives spells and the hero skill recharge at 0.65× speed.
+  - Two wisps join every 7 s, up to 8.
+  - Phases: 75% four rams, 50% a 1500-point shield plus a string of six wisps, 25% five moon hares and a speed-up, 10% it charges.
+  - Also added: a code-drawn storm-cloud ram sprite with triple-curled horns and sparks, the achievements "Fleece Shearer" (boss) and "Moorland Keeper" (15 stars), the story card "Quiet on the Moor" and a place in the endless boss rotation.
+  - The hush warning in the top bar now reads "Moonhush: …", since the boss causes it too, not only hares.
+  - Check: `scripts/thunderfleece-check.mjs` (phase 1 summons 4 rams, no console errors). Screenshots `screenshots/218.png`, `218-boss.png`, `thunderfleece-map.png`. 250 tests.
+
+- **Iteration 219**: new raid camp building, the **Standing Stone** (520 hp), a carved stone from the Starheath moors.
+  - While it stands, every other camp building within 110 px takes 30% less damage. It never shields itself, so knock the stone down first.
+  - Strongholds raise one. To make room, a Stronghold now has 3 huts instead of 4.
+  - The camp shows the stone's hush as a pale ring, and buildings hit under it flash a dull lavender instead of white.
+  - Two new tests (252 total). Screenshot `screenshots/219.png` (Stronghold camp with the stone bottom-left). No console errors.
+
+- **Iteration 220** (POLISH + BALANCE):
+  - Polish: the Field Guide's Raids tab said "Just a building to knock down" for the Hornet Hive, Rattle Trap and Standing Stone. It now lists their swarm, venom and ward facts. Check: `scripts/guide-raids-check.mjs`. Screenshot `screenshots/220-guide.png`.
+  - Balance: Strongholds' walls and defences now scale a little gentler (hp ×1.56, damage ×1.40 instead of ×1.70 and ×1.50) to make up for the two extra buildings they gained this week (see Balance Notes). Screenshot `screenshots/220.png`. 252 tests.
+
+- **Iteration 221**: **Dev mode** (requested by the user), switched on and off with a "DEV: ON/OFF" button at the top-left of the main menu.
+  - While on: every level and region is open, and battles top coins up to 999,999 and lives to 9,999, with spells and the hero skill always ready.
+  - The village keeps 999,999 coins and glowsap and finishes every construction at once. Raids get 30 of every troop, and the "train some troops first" check is skipped.
+  - Battle and raid results in dev mode are never saved (no stars, stats, achievements, army or loot changes), so switching it off restores real progress. A pink "DEV MODE" line shows at the bottom of battles.
+  - Code: `systems/dev.ts` (the flag in `save.settings.dev`) and `setAllLevelsOpen` in `levels.ts`.
+  - One new test (253 total). Check: `scripts/dev-check.mjs` (toggle → level 125 opens → 999,999 coins after building, 9,999 lives, Starfall ready; village 999,999 each; raid army 30 of each; no console errors). Screenshots `screenshots/221.png`, `221-menu.png`, `221-map.png` and `221-raid.png`.
+
+- **Iteration 222**: tower VFX overhaul part 1, **Thornbow (archer)**. New module `scenes/fx/TowerFx.ts` holds per-tower effects, built so the other towers can plug in next.
+  - Every shot snaps the bowstring with a bright flash and a little spark puff aimed at the target, and the tower gives a tiny recoil nod.
+  - Arrows leave a glowing additive streak that thins toward its tail (gold, or the branch's colour for specialised towers).
+  - Impacts burst into sparks and wooden splinters.
+  - Upgraded Thornbows stand in a soft golden aura that pulses and grows with tier. Tier 2+ and branches add golden motes rising round the tower, and towers gently breathe.
+  - Idle motion, pulses and motes are skipped with reduced motion. Tween clean-up on upgrade and sell avoids leaks.
+  - Check: `scripts/towerfx-check.mjs <name> <towerId>` (builds tiers 0–2 plus both branches and sends a column of enemies). Screenshots `screenshots/222.png` and `222-zoom0..2.png`. No console errors, 253 tests.
+
+- **Iteration 223**: tower VFX overhaul part 2, **Glimmer (mage)**. `TowerFx` now has a per-kind style table (colour plus muzzle height).
+  - Each shot gathers light: a violet ring rushes inward and a white core flares.
+  - Bolts leave a crackling arcane streak: a soft wide violet glow with a jittering white filament.
+  - Impacts throw out an expanding rune ring, a flash and violet sparks.
+  - Built Glimmers get a ring of floating runes circling the orb (3 plus the tier count), spinning faster at higher tiers, plus the violet tier aura and motes.
+  - Rune-spin tweens are tracked per slot and removed on sell/upgrade, so nothing draws to destroyed graphics.
+  - Screenshots `screenshots/223.png` and `223-zoom0..2.png`. No console errors, 253 tests.
+
+- **Iteration 224**: tower VFX overhaul part 3, **Boulder (artillery)**.
+  - Each throw makes the catapult squat (a squash-and-stretch recoil), bursts a ring of dust at its feet and sends pebbles skittering out.
+  - Lobbed boulders cast a ground shadow that stays under them and shrinks and fades as they rise, and they leave a faint dust trail (drawn without the glow, on its own layer).
+  - Landings bring a hot flash, a rolling dust cloud, rock chunks arcing out on little parabolas and a scorch mark that fades over about 3 s. These add to the existing splash ring and shake.
+  - Tier 2+ and branches add smoke wisps curling up from the base, plus the warm tier aura.
+  - `TowerFx.track` now takes the ground position for lobbed shots. Screenshots `screenshots/224.png` and `224-zoom0..2.png`. No console errors, 253 tests.
+
+- **Iteration 225** (POLISH + BALANCE):
+  - Polish: a new **Graphics: High/Low** setting (Settings screen, saved as `settings.fxLow`, read through `motion.lowFx`), aimed at weaker phones now that towers carry heavier effects.
+  - Low keeps only small impact sparks: no tower auras, motes, smoke or runes, no projectile trails or boulder shadows, no launch flashes, debris clouds or scorch marks, and no idle sway.
+  - The Settings buttons were re-laid out so nothing overlaps. Reset now sits beside Graphics, and the "Effects" label stays for sound effects.
+  - Check: `scripts/settings-fx-check.mjs` (the toggle saves; a battle on Low runs with no console errors). Screenshot `screenshots/225.png`.
+  - Balance: a sanity sweep, no changes (see Balance Notes). 253 tests.
+
+- **Iteration 226**: tower VFX overhaul part 4, **Burrow (barracks)**. All four base towers now have their own effects.
+  - The sim's `melee` event now carries the attacker's position (`from`) for soldiers and the hero. Each blow draws a bright white crescent with a pale blue glow sweeping across it, plus steel sparks at the target.
+  - A new `soldierUp` event fires when a fallen soldier respawns, and it pops out of the ground in a spray of earth clods with a dust ring.
+  - Burrows also get the leafy tier aura and motes.
+  - Both new effects are skipped on Graphics: Low.
+  - `scripts/towerfx-check.mjs` takes an optional wait in ms (4th argument). Screenshots `screenshots/226.png` and `226-zoom0..2.png` (a swing at the front line). No console errors, 253 tests.
+
+- **Iteration 227**: a signature effect for each of the **8 specialization branches** (in `TowerFx`, layered over the tier aura; all skipped on Graphics: Low or reduced motion).
+
+| Branch | Effect |
+|---|---|
+| Hawkeye | A red reticle snaps onto the target as it fires; a lens glint flashes now and then. |
+| Volley | A fan of golden sparks at each launch; feathers flutter down from the quiver. |
+| Storm | Little lightning sparks jump off the orb. |
+| Frost | Snowflakes drift round the tower; bolts land in a ring of ice shards with a cold puff. |
+| Quake | Pebbles hop on the trembling ground; landings crack the earth (cracks fade over about 2 s). |
+| Sap | Golden sap drips from the bucket; landings leave a glistening amber splat. |
+| Stonehide | Stone chips circle the burrow. |
+| Raiders | Red embers rise from the war camp's torches. |
+
+- Trails now remember their branch for branch-specific impacts.
+- Check: `towerfx-check.mjs` for each tower (both branches built). Screenshots `screenshots/227-<tower>.png` and `227.png`. No console errors, 253 tests.
+
+- **Iteration 228**: **Keeper's Store, part 1** (data, logic and battle hookup; the scene comes next).
+  - `data/store.ts`: three tiers (Apprentice open from the start, Journeyman after 5 ranks, Master after 10) and nine items.
+
+| Tier | Item | Effect per rank | Ranks |
+|---|---|---|---|
+| Apprentice | Whetted Tips | +4% tower damage | 5 |
+| Apprentice | War Chest | +30 starting coins | 5 |
+| Apprentice | Hearty Stew | +6% hero health | 3 |
+| Journeyman | Quickened Runes | spells 5% faster | 3 |
+| Journeyman | Ranger Drill | Grove Call rangers +15% | 3 |
+| Journeyman | Lucky Charms | kills +4% coins | 3 |
+| Master | Master Craft | +6% tower damage | 3 |
+| Master | Elder Blessing | +10% hero health and spells 5% faster | 2 |
+| Master | Dragon's Hoard | +80 starting coins and kills +5% | 2 |
+
+  - Rank n costs (n + 1) × the base price, paid from village coins and glowsap.
+  - `systems/store.ts`: `rankOf`, `totalRanks`, `tierOpen`, `nextPrice`, `buyItem` (checks the tier, max rank and funds) and `withStorePerks`, which folds ranks into the village's battle perks (spell cooldown cut capped at 50%).
+  - Ranks are saved in `save.store`. BattleScene now uses `withStorePerks(battlePerks(village), save)`, and the battle banner reads "Bonuses: …" since it includes store upgrades.
+  - Five new tests (258 total). Check: `scripts/store-perks-check.mjs` (a save with 5 Whetted, 3 War Chest, 2 Runes and 1 Stew gives ×1.2 tower damage, +90 coins, ×0.9 spell cooldown and ×1.06 hero health in battle; no console errors). Screenshot `screenshots/228.png`.
+
+- **Iteration 229**: **Keeper's Store, part 2 (the scene)**. `scenes/StoreScene.ts`, opened from a gold "Store" button on the main menu (left of Campaign) and under Campaign in the village. Back returns to wherever it was opened from.
+  - Lantern-lit dusk backdrop. Three tier rows (I Apprentice, II Journeyman, III Master), each with three cards: a code-drawn emblem (crossed arrowheads, coin stack, heart, star, shield or charm), the name, the per-rank effect, rank pips, the next price on its own line, and a Buy button.
+  - Locked tiers are dimmed with a padlock and "Buy N more ranks to open". Maxed items show gold "MAX".
+  - Buying bursts sparks in the item's colour plus gold, flashes the card, floats "Name r/max" and plays the build sound. Failures show a toast ("Not enough coins or glowsap").
+  - The village purse sits top-right. In dev mode purchases are free, a "Refund all" button clears ranks, and the purse shows ∞.
+  - First layout fix: the Buy button covered the price, so prices moved to their own "Next:" line and the rows were spaced out.
+  - Check: `scripts/store-check.mjs` (menu Store → buying Whetted Tips takes 5000 → 3800 coins and rank 2 → 3; no console errors). Screenshots `screenshots/229.png`, `229-menu.png` and `229-buy.png`. 258 tests.
+
+- **Iteration 230** (POLISH + BALANCE):
+  - Polish: when a purchase opens the next store tier, a golden "<Tier> unlocked!" banner sweeps across that row with a fanfare and a run of spark bursts. Screenshot `screenshots/230.png`.
+  - Balance: the store was too strong, so its numbers were cut (see Balance Notes). New `scripts/store-balance.ts` compares win rates with no store against a fully bought one; `playLevel` takes an optional perks argument. 258 tests.
+
+- **Iteration 231**: level graphics overhaul part 1, **shared lighting, roads and shadows** (applies to all 125 levels).
+  - Lighting: a generated canvas overlay (`fx_vignette`) with warm light pooling from the top-left and a soft dark vignette round the edges. It sits under the HUD.
+  - Roads: a soft drop shadow under every road so it reads as worn into the ground, a sunlit stripe down the middle, and glinting highlights on the pebbles.
+  - Shadows: every ground enemy now casts a soft shadow (hidden while burrowed; flyers already had one), and every built tower stands on a ground shadow that is removed on sell.
+  - Clean-up: tower motes and sparks were toned down (rarer motes, fewer and smaller sparks), because many maxed towers looked busy in the screenshots.
+  - Screenshots `screenshots/231.png` (meadow) and `231-canyon.png` (late level, many towers). No console errors, 258 tests.
+
+- **Iteration 232**: level graphics overhaul part 2, **richer ground, kerb stones and living water**.
+  - All levels, coloured from each theme: broad sunlit patches (the grass colour lightened) over the old shade patches, and grass tufts with a lighter centre blade.
+  - All levels: kerb stones every ~30 px along both road edges, with a lighter top face. They are skipped wherever another road runs through, so junctions stay clean.
+  - All ordinary ponds: a glint drifting across the surface and ripple rings spreading every ~2 s (skipped on Graphics: Low and reduced motion; lava and abyss pools keep their glow).
+  - Meadow levels (no theme flags): clover patches with little white and pink flowers, and mossy stones with soft shadows.
+  - Screenshots `screenshots/232.png` (meadow), `232-pond.png` (ponds) and `232-frost.png` (kerbs on a snow theme). No console errors, 258 tests.
+
+- **Iteration 233**: level graphics overhaul part 3, **frost and ember ground**.
+  - Frost (`theme.snow`): wind-sculpted snow drifts with a blue lee shadow and a bright crest, and frozen puddles with a crack and a shine (both kept off the roads). Ice glints on the roads twinkle now and then as additive stars (skipped on Graphics: Low and reduced motion).
+  - Ember (`theme.lava`): scorched cracks winding across the ground with glowing orange lava seams (a dark line under an additive glow) that slowly breathe, plus drifts of grey ash speckles.
+  - Helpers `drawFrostGround` and `drawEmberGround` in BattleScene. Screenshots `screenshots/233-frost.png` and `233-ember.png` (= `233.png`). No console errors, 258 tests.
+
+- **Iteration 234**: level graphics overhaul part 4, **dusk, shore and crystal ground**.
+  - Dusk (`shrooms`): clusters of glowing toadstools (blue, violet and mint caps with additive halos) and patches of luminous moss that pulse softly.
+  - Shore: the SHOAL theme now has a `shoal` flag, so the meadow-only clover no longer shows on its sand. It gets darker wet-sand bands with ripple arcs, fan and spiral shells, and the odd starfish.
+  - Crystal (`crystals`): faceted crystal shard clusters with lit faces and shadows, with a twinkle catching on one now and then.
+  - The new `clearOfRoads(x, y, pad)` helper keeps ground detail off the roads. Animations are skipped on Graphics: Low and reduced motion.
+  - Screenshots `screenshots/234-16.png` (= `234.png`), `234-21.png` and `234-26.png`. No console errors, 258 tests.
+
+- **Iteration 235** (POLISH + BALANCE):
+  - Polish: the ember lava cracks read too thin, so they are bolder now: a wider scorched groove with a hotter, thicker glowing seam and a broad halo.
+  - Sparks now spit out of a random seam about every 0.4 s and float up (skipped on Graphics: Low and reduced motion).
+  - Screenshot `screenshots/235.png`.
+  - Balance: a sanity sweep, no changes (see Balance Notes). 258 tests.
+
+- **Iteration 236**: level graphics overhaul part 5, **gale, ruins, gears and abyss ground**.
+  - Gale: long pale streaks where the wind combs the grass flat, and stray grey-quilled feathers.
+  - Ruins: cracked flagstones half-sunk in the grass, and toppled fluted column drums wrapped in moss.
+  - Gears: riveted steel plates bolted into the ground, glossy oil stains with an oily sheen, and stray brass cogs.
+  - Abyss: branching veins of cold cyan and violet light with bright nodes, pulsing slowly (skipped on Low and reduced motion).
+  - Screenshots `screenshots/236-31.png`, `236-36.png`, `236-41.png` (= `236.png`) and `236-46.png`. No console errors, 258 tests.
+
+- **Iteration 237**: level graphics overhaul part 6, **orchard, storm, dunes and reef ground**.
+  - Orchard: autumn leaf litter scattered through the grass, and windfall apples and pears with highlights and stalks.
+  - Storm: starburst scorch marks where lightning struck, and rain puddles with ripple rings spreading in them (skipped on Low and reduced motion).
+  - Dunes: wind ripples combed across the sand (shadow and highlight arcs) and bleached stones.
+  - Reef: little branching corals in four colours and glinting sea-glass pebbles.
+  - Screenshots `screenshots/237-51.png` (= `237.png`), `237-56.png`, `237-61.png` and `237-66.png`. No console errors, 258 tests.
+
+- **Iteration 238**: level graphics overhaul part 7, **six more region families**, via the new `scatter()` helper and `drawMoreGround`.
+  - Flotilla: plank rafts with rings of wake, and rope coils floating on the dark water.
+  - Amber: glistening resin beads with something tiny trapped inside, plus scattered red, orange and gold leaves.
+  - Mist: pale dew patches pooling in hollows and dew glints.
+  - Canopy: tangled surface roots and drifts of fallen leaves.
+  - Comb: broken honeycomb with a warm glow and honey drips.
+  - Bog: lily pads with the odd pale flower over dark peat water, and marsh bubbles rising from a few spots (skipped on Low and reduced motion).
+  - The amber, mist and comb glows breathe slowly.
+  - Screenshots `screenshots/238-71.png` through `238-96.png` (`238.png` = bog). No console errors, 258 tests.
+
+- **Iteration 239**: level graphics overhaul part 8 (the last), **thistle, wold, canyon, brook and heath ground**, in `drawLastGround`. Every region family now has its own ground detail.
+  - Thistle: thistledown tufts caught in the grass and low purple thistle heads.
+  - Wold: furrowed field strips and stooks of cut wheat.
+  - Canyon: sun-baked cracked mud plates and rust-red pebbles.
+  - Brook: smooth river pebbles and patches of yellow marsh flowers.
+  - Heath: dark peat hags and white bog-cotton tufts.
+  - Screenshots `screenshots/239-101.png` through `239-121.png` (`239.png` = wold). No console errors, 258 tests.
+
+- **Iteration 240** (POLISH + BALANCE):
+  - Polish: **boss death fireworks**. A defeated boss sets off a warm white flash, a heavy shake, a big shockwave ring and a burst in its colour, then seven rockets climb and pop in coloured firework bursts over the next two seconds, each with a boom. On Graphics: Low only the flash, ring and burst play. Check: `scripts/bossfx-check.mjs`. Screenshots `screenshots/240.png` (a burst over the field), `240-1..3.png`.
+  - Performance: the new `scripts/leak-check.mjs` plays a busy level at ×3 (dev mode, all pads built, waves called early) and compares live tweens, timers and objects after 3 s and 23 s.
+    - Level 96: tweens 68 → 93, timers 1 → 2, objects 153 → 332, by wave 5.
+    - Level 61: tweens 33 → 43, objects 128 → 249.
+    - Growth tracks the enemies on screen, with no runaway leak from the new effects.
+  - The white specks seen around enemies in late screenshots are the slow and frost status effects, which is intended feedback.
+  - Balance: no sim changes since iteration 230, nothing tuned. 258 tests.
+
+- **Iteration 241: world map art pass.**
+  - New shared `ui/lighting.ts` (`addLighting`): warm top-left light plus a vignette, now used by both the battle and region maps.
+  - Region map: a soft drop shadow under the island, a surf ring, 26 animated wave crests drifting along the shore (off with Reduce Motion or Graphics: Low), and a breathing golden glow behind the next unbeaten level.
+  - The map now reads the motion and graphics settings itself, so it respects them even before any battle.
+  - Landmarks per region stay on the idea list. Screenshot `screenshots/241.png`. 258 tests.
+
+- **Iteration 242: battle HUD polish.**
+  - Glossy top bar: drop shadow, lighter upper half, rim light, dark outline and slim gold dividers between lives, coins and waves.
+  - Rolling counters (`ui/counter.ts`, `stepCounter`): coins and lives tick toward their real value instead of jumping (they snap with Reduce Motion).
+  - A wave progress bar under the wave counter, which eases forward as waves start (hidden in endless).
+  - Spell buttons get a glassy highlight and a soft lower shade. The tithe and Moonhush warnings moved below the bar.
+  - Three new tests (261 total). Screenshot `screenshots/242.png`.
+
+- **Iteration 243: enemy hit and death polish.**
+  - New `systems/deathStyle.ts` picks a death burst per enemy: flyers shed feathers, heavily armored foes crack into grey and colored shards, splitters, healers and feeders leave a slime splat on the road, and everyone else bursts into a smoke puff. Every death also gets a colored flash ring; sizes follow the enemy's size.
+  - `scenes/fx/DeathFx.ts` draws them: plain shapes, each destroyed by its own tween. Graphics: Low keeps only the ring.
+  - Big hits (at least 15% of a sturdy enemy's health) squash the sprite briefly and hold the white flash longer.
+  - Heavy kills (bosses and enemies with 1,500+ health) freeze the action for 70 ms (at most once every 0.7 s, never with Reduce Motion).
+  - Fix: the HUD counters and hit-stop state now reset at the start of each battle (scene instances are reused).
+  - Check `scripts/death-check.mjs` (six enemy kinds killed together, no leftover pieces, no console errors). Four new tests (265 total). Screenshot `screenshots/243.png`.
+
+- **Iteration 244: village graphics pass.**
+  - New `scenes/village/VillageArt.ts`. The lawn now has a raised edge with a drop shadow, warm sunlit patches, faint tile seams (the grid still reads for placing buildings), two-tone grass tufts, flowers, and a brook along the foot of the map.
+  - The flat dark blobs around the lawn became 30-odd trees with shadows and two-tone canopies that sway gently.
+  - Every building (except walls) casts a soft contact shadow that follows it when moved.
+  - The Grove Hall, barracks, workshop, builder hut and coin mines puff chimney smoke, more often while upgrading.
+  - Shared lighting and vignette, drawn by the fixed UI camera under the HUD.
+  - Tree sway and smoke turn off with Reduce Motion or Graphics: Low (the village now reads both settings itself).
+  - Check `scripts/village-shot.mjs` (every building type, a wall run and an upgrade in progress, no console errors). Screenshot `screenshots/244.png`. 265 tests.
+
+- **Iteration 245** (POLISH + BALANCE):
+  - Polish fix: in dev mode (or with a big late-game hoard) the coin and life counters ran past the top bar's dividers ("9351" and "935165" touched the gold lines). Long numbers now step down in font size (coins: 5 digits 23 px, 6+ digits 19 px; lives: 3 digits 22 px, 4+ digits 18 px). Checked with `scripts/dev-check.mjs`; screenshot `screenshots/245.png`.
+  - Performance: `scripts/leak-check.mjs 95` with the new death bursts, squash and HUD. Tweens 68 → 68, timers 1 → 1, objects 154 → 212 by wave 5, so there is no leak and the per-death shapes are cleaned up.
+  - Balance: a 13-level campaign sweep (4 seeds) and the store comparison (3 seeds). Nothing changed in the sim since iteration 230 and the curve still matches the targets, so nothing was tuned (see Balance Notes). 265 tests.
+
+- **Iteration 246: spell effects upgrade.** New `scenes/fx/SpellFx.ts`.
+  - **Starfall:** the falling star leaves a glowing ember trail, and a thin ring closes in on the target as it falls. On landing: a scorched patch with an orange glow that fades over about 4 s, eight light rays, a dust shockwave and rising embers (on top of the existing flash, shake and burst).
+  - **Grove Call:** three bushes pop up around the spot, a whirl of leaves flies out and a golden ring marks where the Rangers arrive.
+  - **Thornsnare:** a dark tangled patch spreads on the road and 13 thorny vines grow up one after another. The patch and vines stay for exactly as long as walkers are slowed (the spell's 3 s), then shrink away.
+  - Graphics: Low keeps the essentials (scorch, rings, fewer vines with no stagger, no trail, rays, embers, bushes or leaves).
+  - Check `scripts/spellfx-check.mjs` (casts all three, follows the sim's strike timer for the mid-fall and impact shots, no console errors, tweens settle). Screenshots `screenshots/246.png` (impact) and `246-star.png` (mid-fall). 265 tests.
+
+- **Iteration 247: hero skill effects.** New `scenes/fx/HeroFx.ts` adds a signature burst per hero, layered on the shared ring or quake effect:
+  - Bramble's **Earthshake**: jagged cracks race out across the ground and rocks hop up.
+  - Fen's **Feather Storm**: a whirl of feathers spirals up with sweeping gust arcs.
+  - Ember's **Foxfire Ring**: a warm glow and 16 flame tongues lick up around the ring.
+  - Wren's **Hush**: three slow, soft ripples and drifting moon crescents.
+  - Sorrel's **Second Wind**: a column of green light with motes spiralling up.
+  - Hazel's **Dream Darts**: purple stars burst out and dream bubbles float up.
+  - Skill button: a glassy highlight and a breathing gold glow while the skill is ready, plus a one-off ping when it comes off cooldown (not at battle start; no pulse with Reduce Motion). Graphics: Low skips the signature bursts.
+  - Check `scripts/herofx-check.mjs` (all six heroes fire their skill, no console errors, no leftover pieces). `screenshots/247.png` is a 3×2 montage of the six bursts.
+  - Note: headless Chromium here renders only a few frames per second on busy maps, so effect screenshots should pause tweens or follow sim timers rather than wall-clock waits. 265 tests.
+
+- **Iteration 248: animated main menu backdrop.** New `scenes/menu/MenuBackdrop.ts` replaces the flat hills:
+  - A warm evening sky gradient and a low sun with a breathing halo, placed top-right so it never sits behind the title text.
+  - Seven fluffy clouds with peach undersides that drift right and wrap around.
+  - Pale far mountains, the three hills with a sunlit rim along each ridge, and pine silhouettes on the middle ridge.
+  - A dark watchtower on its hill between the menu buttons and the hero panel, with a flickering lit window and a waving orange pennant.
+  - Glowing fireflies over the meadow, plus the shared lighting and vignette under the UI.
+  - Reduce Motion or Graphics: Low freezes the clouds, flicker, pennant and fireflies (the menu now reads the graphics setting too).
+  - Check `scripts/menu-shot.mjs` (clouds move, no console errors). Screenshot `screenshots/248.png`. 265 tests.
+
+- **Iteration 249: raid battle graphics pass.** New `scenes/raid/RaidArt.ts` for the raid field:
+  - Marsh: dark puddles with a pale glint, two-tone tufts and reeds with cattails (kept off the camp yard).
+  - Camp yard: a trampled darker rim, lighter patches, cart ruts, muddy puddles and pebbles.
+  - Swaying trees along the far left and right edges, clear of where you deploy.
+  - Torches at the yard's four corners with flickering flames and glow.
+  - The shared lighting and vignette, between the field and the HUD.
+  - Tree drawing now lives in a shared `addTree()` in `VillageArt.ts` (the village looks the same; same RNG order). Sway and flicker respect Reduce Motion and Graphics: Low, which the raid now reads itself.
+  - Checked with `scripts/raid-check.mjs` (a full raid with no console errors) and `scripts/village-shot.mjs`. Screenshot `screenshots/249.png`. 265 tests.
+
+- **Iteration 250** (POLISH + BALANCE):
+  - Phone check: `scripts/phone-screens.mjs` at 740×360 over the new menu backdrop, the village art, the building panel, shop, raid and army screens and achievements. Everything fits with no console errors (`screenshots/250.png` is the phone menu).
+  - Performance: the new `scripts/village-leak.mjs` idles the village for 20 s. Objects 106 → 113 and tweens 34 → 41 (smoke puffs churning, not piling up). The battle leak check was done in iteration 245.
+  - Balance: a raid sweep and an endless sweep (both sims unchanged since iteration 230). Raids still climb as intended: Lodge 1 clears outposts, Lodge 3 clears warrens, and the Stronghold stays the hard target where the Mender helps most. Endless holds 12–21 waves; the novice strategy's endless edge on some maps is the known artifact (iterations 205 and 225). Nothing tuned (see Balance Notes). 265 tests.
+
+- **Iteration 251: tower build and upgrade juice.** New `scenes/fx/BuildFx.ts`:
+  - **Building:** a scaffold frame (two poles, a cross-brace and a plank) flashes up and fades as the tower pops in, a ring thumps the ground and dust rolls out low around the pad.
+  - **Upgrading:** a soft light pillar in the tower's color (three nested bands with rounded tops), rising sparkles (more at higher tiers) and a "Lv 2"/"Lv 3" badge that pops in and floats up. Specializing shows a gold "★★★" badge.
+  - Graphics: Low keeps only the ground ring and the badge.
+  - Check `scripts/buildfx-check.mjs` (build, upgrade and specialize at once; polls the scene clock and pauses tweens about 0.25 s in, because headless frames are slow and uneven; no console errors, no leftover badges). Screenshot `screenshots/251.png`. 265 tests.
+
+- **Iteration 252: store polish.** The store already had code-drawn item icons and a purchase burst; this pass adds the rest:
+  - **Cards:** a soft gloss behind each title, a thin inner rim light and a slow gold shimmer across maxed cards.
+  - **Buy buttons:** a glint sweeps across each Buy button you can afford, every couple of seconds (staggered). Narrow, edge-faded bands, so no masks are needed.
+  - **Buying:** coins and sap drops fly from the purse into the card, a colored shockwave ring expands and a coin chime plays, on top of the existing burst, flash and rank pop.
+  - The shine loops are removed whenever the cards rebuild after a purchase, so timers don't pile up. Everything moving respects Reduce Motion and Graphics: Low; the store reads both settings itself.
+  - Checked with `scripts/store-check.mjs` (a real Buy tap: purse 5000 → 3800, rank 2 → 3, no console errors). Screenshot `screenshots/252.png`. 265 tests.
+
+- **Iteration 253: result screen polish.** New `scenes/fx/ResultFx.ts`:
+  - **Panel:** a drop shadow, a short gloss under the title, and a gold rim for a win (or a new endless best) or a red rim for a defeat. The title sits on a ribbon banner with forked tails (gold for a win, dark red for a defeat).
+  - **Victory:** slowly turning sun rays behind the panel and a burst of tumbling confetti.
+  - **Defeat:** grey ash drifts up.
+  - **Stars:** each earned star drops in large and tilted, then slams down with a camera bump, a flash ring, a ring of sparks and a chime. Empty stars just fade up.
+  - **Reward:** "Village reward: +X coins, +Y glowsap" rolls up from zero once the stars have landed.
+  - Reduce Motion or Graphics: Low gives the plain pop-in, no confetti or ash, still rays and the final reward number straight away.
+  - Check `scripts/result-check.mjs` (a win and a defeat, following the scene clock; the reward text lands on the exact amount; no console errors). Screenshots `screenshots/253.png` (victory) and `253-defeat.png`. `scripts/endless-check.mjs` still passes. 265 tests.
+
+- **Iteration 254: world map node polish.** New `systems/mapNodes.ts` with `levelHasBoss` and `laurelFor`, plus 2 tests (267 total).
+  - **Beaten levels:** a laurel wreath of 10 leaves climbing both sides of the node and pointing up along the ring, clear of the stars. Green for 1–2 stars, gold for a perfect 3.
+  - **Boss levels** (any wave brings a boss): a dark red outer ring and a small red shield crest with a gold crown, pinned to the node's shoulder. It is greyed out while the level is locked.
+  - **Hover lift:** unlocked nodes rise 6 px under the pointer (desktop; off with Reduce Motion). It moves the node's y, so it doesn't fight the next-level pulse, which scales.
+  - First pass used flat ellipses, which read as "ears"; they became rotated leaf shapes. Screenshot `screenshots/254.png` (Rustrock: four gold laurels and the boss crest on 115).
+
+- **Iteration 255** (POLISH + BALANCE):
+  - Phone check: the new `scripts/phone-battle.mjs` (740×360 touch) shows the battle HUD mid-wave and the victory panel. The bar, rolling counters, wave bar, glossy spell buttons, ribbon, stars and reward all fit, with no console errors (`screenshots/255.png`, `255-result.png`).
+  - Polish fix: the "+1 Swiftbloom" note on the victory panel sat against the panel's inner border; moved 16 px in.
+  - Balance: a 10-level mid/late campaign sweep (4 seeds) over levels not covered in iteration 245. The Great Barn (110) dipped to an expert 50%, but a 10-seed re-run gives 80/30/0, in line with its iteration-196 tuning (hpMult 1.65), so nothing changed. Everything else sits at expert 75–100% (see Balance Notes). 267 tests.
+
+- **Iteration 256: Field Guide polish.** New `scenes/guide/Parchment.ts`:
+  - **Parchment:** the page is now aged paper with a torn (deckled) outline, a burnt rim fading inward, warm stains, faint mug rings, fibres, speckles, corner curl shadows and a drop shadow. A soft fold shadow runs down the binding.
+  - **Cards:** a lifted shadow and a light top gloss. The selected entry gets a rust-brown outline (keyed by name, so it also works when an entry is opened from code).
+  - **Portrait:** the bobbing portrait (it already had an idle bob) now sits on an ink-wash disc with a ground shadow.
+  - **Page turns:** the detail page eases in from the right when you pick an entry, and the card grid slides in from the side you paged toward. Both are off with Reduce Motion, which the guide now reads itself.
+  - All six guide checks pass (`guide-boss`, `guide-paging`, `guide-spells`, `guide-raids`, `guide-lastpage`, `phone-guide`), and long boss pages still fit. Screenshot `screenshots/256.png`. 267 tests.
+
+- **Iteration 257: Settings and Achievements polish.** New shared `ui/panels.ts`:
+  - `screenBackdrop`: the deep green gradient, faint lantern glows, a few drifting motes and the shared lighting and vignette.
+  - `glossPanel`: a drop shadow, a slim gloss along the top edge (kept clear of the text after a first pass cut through it), an inner rim light and a colored border.
+  - `addShine`: a mask-free slanted light sweep on a timer.
+  - **Achievements:** every card is a gloss panel. Unlocked ones get a warm medallion glow behind a gently breathing star and a shine that sweeps across now and then (staggered). Progress bars have a highlight line.
+  - **Settings:** the main panel is a gloss panel with a soft gold rim, and the volume bar has a highlight.
+  - Both screens read Reduce Motion and Graphics: Low for the motes, shine and breathing.
+  - Checks `ach-check`, `settings-fx-check` and `phone-screens` pass with no console errors. Screenshot `screenshots/257.png`. 267 tests.
+
+- **Iteration 258: Story and Ending polish.**
+  - New `ui/typewriter.ts`: the `typeSlice` helper (line breaks are free; tested) and `typewriter()`, which reveals text on the scene clock. A tap finishes it at once; with Reduce Motion it shows straight away.
+  - New `scenes/story/StoryArt.ts`:
+    - `parallaxHills`: three ridges in darker shades of the chapter's sky that drift sideways at different speeds. They are wider than the screen so no edge shows, and are still on Reduce Motion or Graphics: Low.
+    - `litPanel`: an accent-colored glow, a dark glass body, a slim top gloss and an accent rim.
+  - **Chapter cards** (after each region boss): parallax hills, lighting, the lit panel in the region's accent color, and the chapter lines typing themselves out.
+  - **Ending:** a gold-rimmed lit panel behind the title and lines, with the lines typed out.
+  - `story-check` and `ending-check` now wait on the scene (text fully typed, buttons up) instead of wall-clock time, and both pass with no console errors. One new test (268 total). Screenshots `screenshots/258.png` (chapter card) and `258e.png` (ending).
+
+- **Iteration 259: battle weather.** New `data/weather.ts` (a typed table from theme flag to weather; first match wins; tested) and `scenes/fx/Weather.ts`. Every piece is a plain shape destroyed by its own tween, drawn above the units and under the HUD.
+  - Plain meadows: a few drifting leaves. Orchards and canopies: denser leaves and blossom.
+  - Storm: slanted rain. Galecrest: wind streaks. Dunes and canyon: blowing sand.
+  - Reef: rising bubbles. Shoals and flotilla: sea spray.
+  - Crystal maps: twinkling sparkles. Shroom, bog, mist and abyss maps: glowing spores. Gears: soot.
+  - Amber and comb: golden pollen. Ruins, thistle, heath and wold: drifting thistledown.
+  - Snow and lava maps keep their existing snowfall and embers. Off with Graphics: Low or Reduce Motion.
+  - Leak check on the storm map (level 56): tweens 32 → 76 and objects 128 → 392 by wave 5, tracking the busy wave plus a bounded amount of rain, not growing without limit.
+  - Two new tests (270 total). `screenshots/259.png` is a montage of storm rain, dune sand, shroom spores and crystal sparkles.
+
+- **Iteration 260** (POLISH + BALANCE):
+  - Polish fix: on the Ending screen the buttons sat right against the lit panel's bottom edge; they and the hint line moved 16 px down. Checked with `scripts/ending-check.mjs`; screenshot `screenshots/260.png`.
+  - Balance: a hero comparison (expert strategy with each hero, levels 20/50/80/100/120, 6 seeds each): Ember 90%, Fen 87%, Wren 87%, Hazel 80%, Bramble 67%, Sorrel 67%.
+    - The melee/support pair trails by about 20%, the same shape as every earlier sweep (iterations 131 and 175: Bramble 63–77%, Sorrel 52–79%).
+    - The simple autoplayer never repositions heroes to use blocking or healing, and Sorrel was last tuned in iteration 175 after overshooting.
+    - So nothing changed; kept as a watch item (see Balance Notes). 270 tests.
+
+- **Iteration 261: tower idle life.** New `TowerFx.idleLife`, at every tier, on top of the tier auras and branch idles:
+  - **Thornbow:** turns to face what it shoots, and glances the other way now and then when it hasn't fired for 2.5 s.
+  - **Glimmer:** the orb breathes, a soft violet glow that swells and bobs.
+  - **Boulder:** turns toward its target, and gives an idle creak (a small rock back and forth) between volleys.
+  - **Burrow:** a little critter (round head, ears, eyes) pops up through the top of the round door every few seconds, looks about and ducks back.
+  - Positions follow the 72×100 tower textures. Timers are per slot and removed on upgrade or sell. Off with Reduce Motion; skipped with Graphics: Low like the other auras.
+  - New `scripts/idle-check.mjs` (waits for a peek, pauses, 2× close-up; no console errors). `leak-check.mjs` gained an `idle` mode (towers, no waves): tweens 72 → 75 and objects 157 → 159 over 20 s, steady. The busy-mode growth tracks the waves being called every 4 s. Screenshot `screenshots/261.png`. 270 tests.
+
+- **Iteration 262: enemy walk cycles.** New `systems/gait.ts` (`gaitFor`, `poseFor`; 3 tests, 273 total) replaces the one shared bob:
+  - **Flap:** all 8 flyers; wings beat as a quick stretch and squeeze, with a slow drift tilt.
+  - **Waddle:** 36 heavy enemies (armor ≥ 35% or big bodies); a side-to-side rock with a small lift.
+  - **Scuttle:** 8 tiny ones; quick jittery steps.
+  - **Hop:** 14 fast walkers (speed ≥ 42, about the quickest fifth); bounding hops that stretch in the air and squash on landing.
+  - **March:** the other 42 keep the original gentle bob.
+  - Rotation mirrors with facing. Tumblehogs keep their momentum spin. Blocked enemies lift less. Reduce Motion holds a still pose.
+  - The first pass used a speed threshold of 75, which no walker reaches; it now uses the real speed spread (24–68). Screenshot `screenshots/262.png`.
+
+- **Iteration 263: soldier and hero animation.** New `unitPose` in `systems/gait.ts` (1 new test, 274 total):
+  - **Soldiers** (burrow squads, Grove Call rangers, raiders): march with a stepping bob and a forward lean, chop in a forward-rocking arc while engaged (replacing the old sideways jiggle), and breathe while holding their rally point. Each unit is offset so squads don't move in lockstep.
+  - **Heroes:** run with a stronger lean and bounce, swing while engaged, and breathe while standing.
+  - A summoned ranger's pop-in tween finishes before the pose takes over its scale. Reduce Motion gives a still pose.
+  - Checked with `scripts/level-shot.mjs` and `scripts/hero-check.mjs` (no console errors). Screenshot `screenshots/263.png`.
+
+- **Iteration 264: village life.** New `startVillageLife` in `scenes/village/VillageArt.ts`:
+  - **Villagers** (small code-drawn critters in five coat colours, with ears and a stepping bob) stroll between the front edges of finished buildings. They take an L-shaped route along the grid, face the way they walk, and fade out on arrival.
+  - **Carts:** a cart loaded with coins or sap, pushed by a villager, trundles from a coin mine or sap well to the vault or Grove Hall with wobbling wheels.
+  - Walkers use the same depth scale as buildings, so they pass in front of and behind them. At most 5 villagers and 2 carts are out at once; spots are re-read every spawn, so moved and new buildings are used.
+  - Off with Reduce Motion or Graphics: Low. First pass was too small to read at full view, so walkers draw at 1.8× and carts at 1.6×.
+  - `village-leak.mjs`: objects 108 → 113 and tweens 38 → 45 over 20 s, steady. `collect-all-check` still passes. Screenshot `screenshots/264.png`. 274 tests.
+
+- **Iteration 265** (POLISH + BALANCE):
+  - **Bug fix (village build menu):** locked cards printed "Grove Hall N" wider than the 88 px cards, so on phones the labels ran into each other ("Grove HallGrove Hall…"). Building names were also mismatched in size (fit-to-width made short names like "Fish Weir" big and long ones tiny).
+    - Locked cards now say "Hall N" (fit to the card).
+    - Names wrap to two lines at one shared size, and the price line moved down 5 px to clear them.
+    - Checked at phone size (`phone-screens.mjs`) and desktop (`village-shot.mjs`); screenshot `screenshots/265.png`.
+  - Phone battle and result check (`phone-battle.mjs`): passes.
+  - **Balance:** a 6-seed sweep of the first ten levels (the new-player stretch). Mossgate, Thornwood, Gloomfen, Rimewood and Frostfern are 100/100/100. Icicle Crossing 100/67/0, Murkmaw's Den 83/50/83, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67. Easy openers that ramp from the first boss on, as targeted, so nothing changed. 274 tests.
+
+- **Iteration 266: village day and night.** New `systems/daylight.ts` (`dayLight(hour)`; 1 test, 275 total):
+  - **Light by the player's local hour:** clear day from 8:00 to 17:00, a warm golden tint until 19:00, a deep blue night, and a pink dawn from 6:00 to 8:00.
+  - **Lit windows:** from 18:00 through the night, lived-in buildings (Grove Hall, builder burrow, barracks, workshop, market, shrine, apiary) show warm window or door lamps. Each is an orange pool with a bright core and a soft flicker, at per-type spots in `WINDOW_SPOTS`.
+  - The tint sits over the village and under the HUD. Glows are rebuilt only when buildings move or level up (checked in the 250 ms refresh), and the hour is re-read every 30 s.
+  - The first pass was too faint (night 0.30) with whitish additive rings; it is now night 0.42 and golden 0.16, with normal-blend orange glows.
+  - Graphics: Low keeps the tint without glows; Reduce Motion stops the flicker. A test can pin the hour with `window.__villageHour`; `village-shot.mjs <name> [hour]` uses it.
+  - `village-leak` at night: objects 124 → 123 and tweens 43 → 42, steady. Screenshot `screenshots/266.png` (21:00).
+
+- **Iteration 267: raid troop polish.** New `deployMark` and `rubble` in `scenes/raid/RaidArt.ts`:
+  - **Deploy:** a dust ring where each troop lands, plus a small blue banner that pops up, flutters and fades. At most one banner every 0.6 s, so dragging out a squad doesn't plant a forest of flags.
+  - **Fallen buildings:** a heap of stones and broken planks over the footprint (seeded per building, so it's stable), with smoke curling up for about 5 s, on top of the existing collapse, burst and shake.
+  - **Troops:** use the defense soldiers' `unitPose` (a marching step, a chopping arc at their target, breathing when idle; flyers flap and drift), replacing the old shared bob. The deploy pop-in finishes before the pose takes over.
+  - Banner, smoke and poses respect Reduce Motion and Graphics: Low.
+  - `raid-check` and `raid-phone-check` pass with no console errors. Screenshot `screenshots/267.png` (rubble where the warren's west wall fell, and a fading banner). 275 tests.
+
+- **Iteration 268: camp defense effects in raids.** New `campShot` in `scenes/raid/RaidArt.ts`, which replaces the old flat line flash:
+  - **Darts:** a muzzle flash at the defense's top, and a green dart that streaks to its target.
+  - **Splash shooters:** an orange flash, then a stone lobbed in an arc that lands with a dust ring the size of its splash.
+  - **On impact:** the targeted troop flashes white and a small puff bursts.
+  - **Recoil:** the firing building squashes slightly.
+  - The sim already dealt the damage, so this is visual only. The `shot` event now carries its `target` troop for the flash; the sim is otherwise unchanged. Graphics: Low drops the muzzle flash.
+  - New `scripts/raidfx-check.mjs` (dev army, brawlers sent in, paused mid-volley; no console errors). `raid-check` still passes. Screenshot `screenshots/268.png`. 275 tests.
+
+- **Iteration 269: raid result screen.** The raid end panel now uses the battle result kit (`fx/ResultFx.ts`):
+  - **Panel:** a drop shadow, a short gloss, and a gold or red rim. The title ("Raid Successful!" / "Raid Failed") sits on a gold or dark-red forked ribbon.
+  - **Success:** turning sun rays and confetti. **Failure:** drifting ash.
+  - **Stars:** earned stars slam in with a ring, sparks, a chime and a camera bump; empty ones fade up.
+  - **Numbers:** the destruction percentage and the loot (coins and glowsap, plus "(storage full)" when capped) roll up from zero.
+  - Reduce Motion or Graphics: Low gives the plain pop-in and final numbers straight away.
+  - `raid-check` now waits on the scene clock for the panel to settle before its result shot. It and `raid-phone-check` pass. Screenshot `screenshots/269.png` (a failed raid: ribbon, faded stars, rolled-up loot). 275 tests.
+
+- **Iteration 270** (POLISH + BALANCE):
+  - **Performance sweep** after the run of visual iterations (weather, idle life, gaits, unit poses, result kits):
+    - `leak-check.mjs` gained `LONG=1` for a third sample, to tell a plateau from growth.
+    - Storm map (level 56) idle: objects 125 → 149 → 146 and tweens 33 → 57 → 55 at 3 s / 23 s / 43 s, so the rain fills up over the first seconds and then holds.
+    - Level 121 busy (waves called every 4 s): objects 151 → 447 by wave 5, tracking the crowd.
+  - **Balance:** a raid sweep after iteration 268 added a `target` field to the raid `shot` event. Results are identical to iteration 250 (Lodge 1: 1.8★ / 0.3★ / 0.1★ … Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★), confirming the raid sim is untouched. Defense levels unchanged since iteration 230 (sweeps in 245, 255 and 265). Nothing tuned. Screenshot `screenshots/270.png` (storm map with rain, mid-wave). 275 tests.
+
+- **Iteration 271: sound polish** (`systems/audio.ts`):
+  - **Tower shots:** each shot drifts ±6% in pitch, and every other shot plays a softer variant, so a busy wave no longer sounds like one stuck note.
+  - **`sfx.thump()`:** a deep sine drop plus a low noise hit under heavy kills (bosses and 1,500+ health brutes), alongside the hit-stop.
+  - **Ambience beds** (`startAmbience` / `stopAmbience`): a looping filtered-noise bed with a slow swell, routed through the SFX master so the volume slider and the Effects switch apply.
+    - **wind:** snow, gale, sand and thistle maps.
+    - **rain:** storm maps.
+    - **water:** reef, shoal, flotilla and brook maps.
+    - **crackle:** lava maps, with random ember pops.
+    - **meadow:** everywhere else; a soft breeze with occasional two-note birdsong.
+  - New `ambienceFor(theme)` in `data/weather.ts` (1 new test, 276 total). The battle starts the bed and stops it on scene shutdown, so retries and leaving don't stack beds.
+  - New `scripts/audio-check.mjs` (a real click unlocks audio, then three battles back to back on meadow, storm and lava, through restarts; no console errors). Screenshot `screenshots/271.png` (audio has no visuals; a regular battle shot).
+
+- **Iteration 272: loading vignette and scene transitions.**
+  - **Boot vignette** (`index.html`): a CSS-only screen on a dark-green radial gradient, with a swaying two-leaf sprout, "Grovewatch" and "Growing the grove…". It covers the moment while the game draws its art in code, and fades out when the first scene is up.
+  - **Leaf wipe** (new `ui/transition.ts`, `leafReveal`): every main scene opens behind a curtain of 40 big leaves in five greens. They blow away to the right in a staggered gust while the backdrop fades.
+    - Used by Menu, World Map, Village, Battle (including retries), Raid, Store, Field Guide, Achievements and Settings.
+    - Drawn at the top depth and never interactive, so taps work at once. Reduce Motion gets a quick plain fade.
+  - New `scripts/transition-check.mjs` (boot vignette removed, a mid-gust shot, no leaves left after; no console errors). menu, dev, store, result, village, achievements and story checks all still pass. Screenshot `screenshots/272.png` (the curtain mid-gust over the world map). 276 tests.
+
+- **Iteration 273: Field Guide Effects tab.** New `data/statusEffects.ts` (six typed entries; 1 test, 277 total) and a sixth guide tab:
+  - **Effects:** Slowed, Shielded, Frozen tower, Venom, Shocked and Honey-glazed. Each page says who it affects, where it comes from and how to deal with it, plus a short intro on the left page.
+  - **Icons:** code-drawn round badges (snail spiral, shield, snowflake, drop, bolt, honey drip), generated once.
+  - **Live previews:** the portrait shows a sample enemy, soldier or tower wearing the effect.
+    - Slowed: green tint, swaying vines and a slow bob. Shielded: a pulsing bubble.
+    - Frozen: blue tint, ice spikes and a glint. Venom: green tint and rising bubbles.
+    - Shocked: pale tint and stars circling the head. Honey-glazed: amber tint and drips.
+    - Still with Reduce Motion.
+  - Tabs are now 104 px wide on a 110 px pitch so six fit clear of the title, at desktop and phone size. `guide-spells-check` was updated for the new Spells tab position.
+  - New `scripts/guide-effects-check.mjs` (every effect page fits the parchment; no console errors). All six other guide checks pass. Screenshot `screenshots/273.png` (Shocked, stars circling).
+
+- **Iteration 274: range preview and pad glow.**
+  - **Range preview** (tower menu, build previews, rally placement): the flat fill and ring became a soft field that brightens toward the edge (nested rings), a faint centre light, an inner glow band, and a dashed rim in the tower's colour that slowly turns (still on Reduce Motion). The rim hides whenever the ring clears.
+  - **Pad glow:** empty build pads breathe a warm glow while you can afford at least the cheapest tower (after store and daily cost modifiers). It turns off when you're short or the battle is over.
+  - New `scripts/range-check.mjs` (8 pads glow with coins, 0 when broke; no console errors). `phone-battle` still passes. Screenshot `screenshots/274.png` (the Glimmer Spire's range and glowing pads). 277 tests.
+
+- **Iteration 275** (POLISH + BALANCE): daily challenge balance.
+  - New `scripts/daily-balance.ts` (expert win rate on the daily-eased Murkmaw's Den, Morrowcap's Throne, Heart of the Ruins and Black Flagship; add `pairs` for the pairs the picker can roll).
+  - **Single twists** are fair: most are 67–100%. The harshest are Hero on Leave and Frenzy on Heart of the Ruins (0%), and Thick Hides on the middle two (33%).
+  - **Two heavy twists together were near-unwinnable:** Thick Hides + Swift Horde 0/0/0/100, No hero + No spells 0/33/0/67, Thin Hedge + Frenzy 33/33/0/67. `dailyFor` could roll these, since the second twist came from any modifier.
+  - **Fix:** the second twist is now a boon (Beaver Discount, Full Coffers, Golden Harvest) or a light twist (`LIGHT_TWISTS`: Ironbark, Prairie Gale), never another heavy one.
+    - Heavy + boon days: 100% across the sample.
+    - Heavy + light days stay spicy (Frenzy + Gale 67/33/0/100, Thin Hedge + Ironbark 67/33/67/33).
+    - About 60% of days pair with a boon.
+  - New test: a full year of dates never pairs two heavy twists (278 tests). `daily-check` still passes. Screenshot `screenshots/275.png` (menu with today's daily).
+
+- **Iteration 276: new-enemy tags in the wave preview.**
+  - **Tags:** enemies the player has never met (not in `seenEnemies`) now go first in the next-wave strip, with a pulsing gold glow behind the icon and a small gold "NEW" pill above it.
+  - **Tip:** the first brand-new enemy of each upcoming wave also gets a one-line tip under the strip for about 6 s, e.g. "New: Skitter • Fast: slows and blockers help". Shown once per enemy per battle.
+  - The tip comes from the new `enemyKeyTrait(def)` in `systems/guideInfo.ts`: the most useful trait as advice, in priority order (boss, flying, healer, shield, splitter, chill, veil, armor, magic resist, fast). 1 test, 279 total.
+  - New `scripts/newenemy-check.mjs`: a save that has met only Mudlings sees the tag and the tip; a save that has met everything sees neither; no console errors. Screenshot `screenshots/276.png`.
+
+- **Iteration 277: boss intro.** New `scenes/fx/BossIntro.ts` replaces the plain "X approaches!" banner when a boss spawns:
+  - **Edge pulse:** the screen edges pulse red twice (a canvas radial vignette made once).
+  - **Nameplate:** a dark-red-rimmed plate slides in from the left. It shows the boss's portrait in a red ring, "BOSS APPROACHES", the name in big gold and a facts line (health at this level's scaling, phase count, and flies / armor / magic resist when notable). The portrait pulses; the plate holds about 1.8 s, then slides out right. Shake and horn as before.
+  - Reduce Motion shows the plate in place briefly with no slide or pulse.
+  - New `scripts/bossintro-check.mjs` (Zephyrax plate mid-hold, nothing left after; no console errors). `bossfx-check` still passes. Screenshot `screenshots/277.png`. 279 tests.
+
+- **Iteration 278: hero badge polish** (bottom-left of battles):
+  - **Frame:** a drop shadow, a dark rim with a thin gold bevel, a backdrop tinted in the hero's colour and a gloss.
+  - **XP:** the gold arc now runs on a dark track, with a bright dot at its leading edge.
+  - **When the hero is down:** the portrait turns grey and a dark sweep drains away as the respawn timer runs out (the level badge already shows the seconds left).
+  - **Level up:** a gold ring and ten rays burst from the badge and the portrait pops.
+  - New `scripts/herobadge-check.mjs` (alive with XP, down mid-respawn, level-up flare; no console errors). `hero-check` still passes. `screenshots/278.png` shows the three states side by side. 279 tests.
+
+- **Iteration 279: spell button feedback.**
+  - **Tap:** the spell icon squashes in and springs back.
+  - **Ready:** when a spell comes off cooldown, its button sends out a gold ping ring (the hero skill's `readyPing`), eight sparks in the spell's colour and a quick icon pop. No ping for spells that start ready or on "Clouded Sky" days. Reduce Motion keeps only the ring.
+  - New `scripts/spellbtn-check.mjs` (a real tap arms Starfall, then cast, ready again and the ping captured; no console errors). `spellfx-check` still passes. Screenshot `screenshots/279.png`. 279 tests.
+
+- **Iteration 280** (POLISH + BALANCE):
+  - **Phone check** of the newest battle UI: `bossintro-check` and `newenemy-check` gained `PHONE=1` (740×360 touch). The boss nameplate, its facts line, the NEW pills and the new-enemy tip all fit and stay legible at phone size, and the tip clears the boss bar. No console errors. Screenshot `screenshots/280.png` (phone: Zephyrax nameplate with three NEW pills and a tip).
+  - **Balance:** a branch DPS benchmark (`spec-bench.ts`). The numbers match the iteration-7 tuning exactly (Hawkeye 11.6/14.1/14.1, Stormcall 7.5/22.9/22.9, Frostbloom 4.9/38.9/29.1, Quake 2.8/55.5/0, Raiders 10.1/25.3/0, per 100 coins vs armored / crowd / flyers), so no branch drifted. Frostbloom's high crowd number is the known stationary-clump flattery of splash. Nothing tuned. 279 tests.
+
+- **Iteration 281: tower menu polish** (the build, upgrade and branch ring):
+  - **Buttons:** glossy discs with a drop shadow, a darker inner face, a top gloss and a gold rim (grey when you can't afford it).
+  - **Prices:** each price sits on a rounded tag with a coin. Unaffordable prices turn red with a little padlock, and the tower icon greys out (it still shakes on tap).
+  - **Feel:** buttons lift slightly on hover (desktop) and pop in one after another (35 ms stagger) inside the existing menu pop. Text buttons (sell, aim, rally) get the same shadow and gloss. The guide ring around the pad is now dashed.
+  - Reduce Motion keeps the menu static.
+  - New `scripts/towermenu-check.mjs` (a real tap opens the build ring with 100 coins; no console errors). `buildfx`, `range` and `phone-battle` checks still pass. Screenshot `screenshots/281.png` (three affordable towers and a locked red 120). 279 tests.
+
+- **Iteration 282: damage numbers polish.**
+  - The sim's `hit` event now carries the damage type (`dtype`, visual only).
+  - New `systems/damageText.ts` (`damageTextStyle`; 1 test, 280 total) colours numbers by type: physical cream, magic violet, true gold.
+  - **Big hits** (at least 15% of a sturdy foe's health, or 60+) are larger and bolder. They overshoot to 1.3× and settle back. **Hits on bosses** are a touch larger.
+  - **Movement:** every number pops in, arcs up and to one side, and fades late (three tweens per number).
+  - **Bugs found and fixed while checking:**
+    - Numbers were drawn under the lighting vignette (2900) and looked dim; they now sit just under the HUD.
+    - A yoyo pop would have left big hits at half size.
+  - Reduce Motion gives a plain rise and fade.
+  - New `scripts/dmgtext-check.mjs` (physical, magic, true and a 140 big hit; logs each number's alpha, scale and depth; no console errors). Busy leak check stays bounded. Screenshot `screenshots/282.png`.
+
+- **Iteration 283: pause menu polish.**
+  - Darker green-black shade plus the shared vignette, so the panel sits in a pool of light; the HUD is dimmed too.
+  - Panel with a drop shadow, a top gloss band and a gold rim; a blue ribbon title "Paused".
+  - A status line under the title (level name, wave n/total or ∞, lives), shrunk to fit on phones.
+  - Buttons pop in one by one (skipped with Reduce Motion).
+  - New `scripts/pause-check.mjs` (desktop and `PHONE=1`; checks nothing is left behind after closing; no console errors). Screenshots `screenshots/283.png` and `283-phone.png`.
+- **Iteration 284: village building panel polish.**
+  - Glossy panel (shared `glossPanel`, gold rim), now 700×176; the building sits on a lit disc with a gold ring, scaled so its tile fits inside.
+  - New `systems/upgradePreview.ts`: up to three stats that change on the next level (per hour, holds, storage, the battle bonus of workshop / hall / barracks / apiary / weir / shrine, health). Shown as small cards reading `label`, then `cur → next`, with the new value in green. Hidden while a building is under construction or at max level.
+  - The upgrade cost line shrinks to fit (long "coins + glowsap" costs).
+  - Tests: `tests/upgradePreview.test.ts` (empty at max level, only changed stats, at most 3, production goes up, workshop step). `scripts/village-shot.mjs` gained `PANEL=<uid>`. Village leak check stays flat. Screenshots `screenshots/284.png`, `284-workshop.png`, `284-building.png`.
+- **Iteration 285** (POLISH + BALANCE):
+  - **Phone check** of the new village building panel: `village-shot.mjs` gained `PHONE=1`. At 740×360 the larger phone text wraps the description to two lines, which still clears the upgrade cards, and the cards' `1100 → 1600` values fit. No console errors. Screenshot `screenshots/285-phone-panel.png`.
+  - **Balance:** a sweep of the last ten campaign levels (indexes 115–124, the stretch never sampled before), described under Balance Notes. All within target and nothing tuned. 284 tests.
+- **Iteration 286: enemy health bars.**
+  - Rounded bars with a dark inner track, a top highlight, and fill colours green → amber → red (above 60% / 30%).
+  - **Damage trail:** a pale cream segment holds where the health was for 0.35 s after a hit, then drains down (faster for big gaps). It restarts on each new hit and jumps up with healing.
+  - **Resistance markers** left of the bar: a grey shield for armor, a violet gem for magic resist. They only show from 0.3 (`RESIST_PIP_MIN`), because most foes have a little of both. Brittle foes lose the shield as their crust wears below 0.3.
+  - New `systems/hpBar.ts` (`stepTrail`, `hpColor`, `resistPips`) with 6 tests (290 total).
+  - New `scripts/hpbar-check.mjs` (four foes at 75/50/30/12%; trail held then drained exactly to the fill; no console errors). Screenshot `screenshots/286.png`.
+- **Iteration 287: tower info card.**
+  - Tapping a built tower now shows a glossy card beside its ring menu, replacing the plain name line under the ring.
+  - **Header:** the name and level (or branch name), plus trait tags (damage type, flyers or ground only, and up to two specials such as Splash, Slows, Chains, N targets or Pierces armor).
+  - **Stat bars:** three rows (Damage / Shots/s / Range, or Wardens / Melee / Reach for the Burrow Den), each scaled against the best any tower tier or branch reaches.
+  - **Upgrade preview:** the next level shows as a green extension and `cur → next` text. Tapping a branch once swaps the card to preview that branch, with stats that drop shown in orange.
+  - **Placement:** the card sits right of the tower, or left near the right edge, and is clamped clear of the HUD and the spell buttons.
+  - New `systems/towerCard.ts` (`cardRows`, `cardTags`, `statMaxima`) with 5 tests (295 total).
+  - New `scripts/towercard-check.mjs <name> [tower] [slot] [tier]` (desktop and `PHONE=1`; checks the card is fully on screen; no console errors). Screenshots `screenshots/287.png`, `287-burrow.png`, `287-phone.png`.
+- **Iteration 288: hero and soldier bars.**
+  - New shared `ui/bars.ts` (`drawBar`: rim, track, damage trail, fill, highlight), now used by enemy, hero and soldier bars. The enemy bar code shrank to one call.
+  - **Hero:** a slightly longer bar with a gold rim so it stands out, filled green → amber → red, with the damage trail. The trail resets when the hero falls.
+  - **Wardens and Rangers:** a rounded blue bar (red below 30%, green while poisoned) with the same trail.
+  - Trails live on the views (`heroTrail`, per-soldier `trail`), and `heroTrail` is reset with the other per-battle state when the scene is reused.
+  - New `scripts/allybar-check.mjs` (hero at 40%, Wardens at 55% and 25% poisoned; trails held then drained exactly to the fill; no console errors). `hpbar-check` unchanged. Screenshot `screenshots/288.png`. 295 tests.
+- **Iteration 289: hero info card.**
+  - Tapping the hero portrait now also opens a glossy card above it, as well as selecting the hero for a move order.
+  - **Contents:**
+    - Name and title.
+    - Level with a gold XP track and `have/need XP` (or "Max level").
+    - Health / Dmg/s / Speed bars with the next level's gain in green and `cur → next`.
+    - Passive and skill texts (the skill with its cooldown), wrapped; the card grows to fit.
+  - **Closing:** the card closes with a move order or a second tap, and refreshes on level up. A fallen hero's card shows "Recovering: back in Ns" and closes by itself after 4 s. That uses a scene-clock check in `syncHero`, not a delayed timer, which crawls under slow frames.
+  - The stat-bar drawing is now shared with the tower card (`drawCardRows`).
+  - New `systems/heroCard.ts` (`heroXpProgress`, `heroCardRows`) with 2 tests (297 total).
+  - New `scripts/herocard-check.mjs <name> [hero]` (a real tap on the portrait, desktop and `PHONE=1`, using the canvas's real bounds; checks the card is on screen and the fallen card closes; no console errors). Screenshots `screenshots/289.png` (Fen) and `289-phone.png` (Bramble).
+- **Iteration 290** (POLISH + BALANCE):
+  - **Polish (one card at a time):** opening a tower menu now ends the hero's move selection and closes the hero card. Before, both cards could stack, and the next map tap still moved the hero. New `scripts/cards-check.mjs` (real taps: portrait, then a tower; no console errors). Screenshot `screenshots/290.png`.
+  - **Balance:** a new `scripts/hero-balance.ts` (expert strategy per hero, optional hero filter). The gap from iteration 260 was unchanged, so Sorrel's sling went 19 → 21 damage and Bramble's Earthshake radius 115 → 127 (+10%). Details are under Balance Notes. 297 tests.
+- **Iteration 291: raid mode bars.**
+  - Raid troops and camp buildings now use the shared `drawBar` with a damage trail.
+  - **Colours:** buildings are orange (red below 30%). Troops are blue like the defense Wardens (red below 30%, green while poisoned).
+  - The trails live on the views, and `sync(dt)` now gets the frame time.
+  - **Bug fixed along the way:** deploy-bar labels with big counts (dev army ×30) ran into each other ("Scavenger ×30Tunneler"). Labels now shrink to fit their 110-wide slot.
+  - New `scripts/raidbar-check.mjs` (two troops and two buildings wounded with the sim frozen; trails held then drained exactly to the fill; no console errors). `raid-check` and `raidfx-check` still pass. Screenshot `screenshots/291.png`. 297 tests.
+- **Iteration 292: enemy info card.**
+  - A plain tap on a foe (no spell armed, no hero selected, no menu open) opens a small glossy card that follows it.
+  - **Contents:** the name (marked "(boss)" for bosses), a live health bar with the damage trail and `hp/max`, an Armor % • Magic res % • Speed line, and the key trait from the Field Guide.
+  - **Placement:** the card sits above the foe, flipping below it near the top of the screen, and is clamped clear of the HUD.
+  - **Closing:** it closes when the foe dies, on a tap on empty ground, or when a tower menu or the hero card opens (one card at a time).
+  - New `systems/enemyPick.ts` (`pickEnemy`: the nearest living foe within its radius + 14 px, using the lifted body for flyers) with 4 tests (301 total).
+  - New `scripts/enemycard-check.mjs` (real taps on a Shellback and a Gloomwing, desktop and `PHONE=1`; live hp update, empty-ground close, slot-menu close; no console errors). `cards`, `herocard`, `towermenu` and `hero` checks still pass. Screenshots `screenshots/292.png` and `292-phone.png`.
+- **Iteration 293: village construction bars.**
+  - Buildings being upgraded now show the shared rounded bar in amber, with slanted candy stripes sliding along the fill and a softly pulsing glow at the leading edge. The stripes hold still with Reduce Motion.
+  - The bar is redrawn every frame (`drawBuildBar`, only for buildings under construction) instead of every 250 ms, so the animation is smooth; the countdown badge still updates on the regular refresh.
+  - `scripts/village-shot.mjs` gained `BUILD=<0..1>` (puts the level-2 acorn mine mid-upgrade).
+  - The village leak check is flat (124 objects / 43 tweens early and late). Screenshot `screenshots/293.png` (acorn mine at 60%). 301 tests.
+- **Iteration 294: spell targeting polish.**
+  - While a spell is armed, the aim circle gets soft glow rings in the spell's colour, a slowly turning dashed rim and a small crosshair.
+  - Every foe it would hit gets a pulsing ring, and a pill above the circle reads "N foes" ("No foes here" when it would hit no one, or "Rangers land here" for Grove Call).
+  - New `BattleSim.spellHits(id, pos)` holds the hit rules: stars hit everything above ground including flyers, a snare grabs walkers only, and reinforcements hit no one. Both the cast and the preview use it, so the count can never disagree with the real hit.
+  - New `tests/spellHits.test.ts` (3 tests, 304 total). The refactor leaves combat unchanged.
+  - New `scripts/spellaim-check.mjs` (three walkers and a flyer: Starfall "4 foes", Thornsnare "3 foes", aim hidden when disarmed; no console errors). `spell`, `spellbtn`, `spellfx` and `guide-spells` checks still pass. Screenshot `screenshots/294.png`.
+- **Iteration 295** (POLISH + BALANCE):
+  - **Phone sweep** (`phone-screens.mjs`): menu, village panel, shop and achievements are fine.
+  - **Locked raid panel rebuilt:** the old version was a 1120×520 flat box with one line of text. It's now a compact 660×360 glossy card with five greyed raiders behind a gold padlock, two unlock steps with check marks (Grove Hall level 2 ✓ / build a Ranger Lodge), and a button to the next step (opens the Grove Hall panel, or the Build shop once the hall is ready). The full raid panel also got the gloss and rim. `village-check` and `raid-phone-check` still pass. Screenshot `screenshots/295.png` (phone).
+  - **Balance:** looked into Heart of the Amberwood (iteration 290's watch item) and set its start coins 1050 → 1075; details under Balance Notes. 304 tests.
+- **Iteration 296: wave call button.**
+  - A soft pulsing amber glow sits behind the button, stronger before the first wave ("press me").
+  - A cream countdown strip along the button's bottom drains from full as the timer runs.
+  - A chip under the button reads "Call now: +N coins" while an early call would pay a bonus.
+  - New `BattleSim.callBonus()` is the single source of that bonus: `callNextWave` pays it, and the chip shows it.
+  - New `tests/callBonus.test.ts` (2 tests, 306 total: nothing for the first wave, and the shown bonus equals the bonus paid).
+  - New `scripts/wavecall-check.mjs` (start glow, mid-countdown "+18 coins", and a real call paid exactly 18; no console errors). `phone-battle` still fits (chip under the button on a phone). Screenshots `screenshots/296.png` and `296-start.png`.
+- **Iteration 297: hero skill preview.**
+  - Hovering the hero's skill button shows the skill's reach around the hero: a tinted disc, glow rings in the hero's colour and a counter-turning dashed rim.
+  - Every foe it would hit gets a pulsing ring, and a pill reads e.g. "Earthshake: 3 foes" ("no foes in reach"; " (ready in Ns)" while it recharges). Sorrel's rally marks the soldiers in reach and reads "Heals N allies + Sorrel".
+  - New `BattleSim.heroSkillHits()` holds the hit rules (within radius, walkers only for a quake, target cap keeps the foes furthest along). `useHeroSkill` uses it too, so the preview always matches.
+  - New `tests/heroSkillHits.test.ts` (3 tests, 309 total).
+  - New `scripts/skillaim-check.mjs <name> [hero]` (Bramble "3 foes" leaves the flyer out, Fen "4 foes", Sorrel heals; hidden when the pointer leaves; no console errors). The `hero`, `herofx`, `spellaim` and `herocard` checks still pass. Screenshots `screenshots/297.png`, `297-fen.png`, `297-sorrel.png`.
+- **Iteration 298: result screen wave chart.**
+  - A glossy card under the result panel (campaign and daily, not endless) charts lives lost per wave. Each wave played gets an amber bar scaled to the worst wave, which is red; clean waves get a small green pip on the axis.
+  - The header reads "Toughest: wave N (-X)" or "Flawless: nothing got through!", with wave numbers under the bars (every 1, 2 or 5 for long levels). The bars grow in one after another (static with Reduce Motion).
+  - The sim now records `leaksByWave`, charging each leak to the latest called wave.
+  - New `systems/waveChart.ts` with 4 tests (313 total), including a sim run where the tally covers the lives lost.
+  - **Bug fixed along the way:** the wave button's glow and "Call now" chip stayed on screen after a battle ended. They now hide once the battle is over.
+  - `result-check.mjs` now feeds a believable leak pattern and waits for the bars; no console errors. Screenshots `screenshots/298.png` (victory) and `298-defeat.png`.
+- **Iteration 299: touch previews for spells and the hero skill.**
+  - **Spells on touch:** with a spell armed, pressing on the map (or on a tower pad) starts aiming. The aim circle floats 60 px above the finger (`TOUCH_AIM_LIFT`) so it isn't hidden, follows it with the foe marks and count, and the spell lands where the circle is when the finger lifts. Lifting over the spell bar cancels and keeps the spell armed. Until a finger is down, the aim stays hidden on touch.
+  - **Hero skill on touch:** holding the skill button shows the reach preview from iteration 297. Lifting on the button uses the skill; sliding off and lifting cancels.
+  - Mouse play is unchanged: click to cast, hover to preview.
+  - New `scripts/touchaim-check.mjs` (real touch events over CDP on a 740×360 phone: aim visible with "3 foes" and nothing cast while held; cast on lift; cancel over the bar keeps Thornsnare ready; skill held shows "Earthshake: 3 foes" without firing, then fires on lift; no console errors). The `spell`, `spellaim`, `skillaim`, `spellfx`, `phone-battle` and `hero` checks still pass. Screenshots `screenshots/299.png` and `299-skill.png`. 313 tests.
+- **Iteration 300** (POLISH + BALANCE), a drift check after the sim refactors of iterations 294–298 (`spellHits`, `heroSkillHits`, `callBonus`, `leaksByWave`):
+  - **Combat:** the branch benchmark (`spec-bench.ts`) is identical to iterations 7 and 280, and the campaign sweep matches iteration 245 on every sampled level (Balance Notes). Nothing tuned.
+  - **Memory:** idle battle steady (139 → 138 objects). The busy battle grows only with the crowd, since `leak-check.mjs` now also logs enemies, views, projectiles and soldiers. At 108 enemies the 528 objects are about 3.5 per enemy (sprite, bar, shadow), and enemy views always equal live enemies, so the new per-frame overlays (aim, wave-call glow, cards, bars) leave nothing behind.
+  - Screenshot `screenshots/300.png` (phone battle with the new HUD: wave-call strip, "Call now: +17 coins", rounded bars). 313 tests.
+- **Iteration 301: run summary on the result screen.**
+  - The wave-chart card (now 136 high) ends with a line such as "Best tower: Boulder Bellows Lv 3 (14.2k dmg, 41 kills) • Bramble: 820 dmg, 6 kills • Spells: 3".
+  - **New sim tallies (visual only):**
+    - `dmgBy` and `killsBy`, keyed `tower:<uid>`, `hero` or `spell`. Each of the nine damage call sites sets the source; the tally counts health actually removed (overkill excluded); kills go to whoever landed the last blow; summoned Rangers count as the spell.
+    - `spellsCast`.
+  - New `systems/runSummary.ts` (`runSummary`, `shortNum`) with 5 tests (318 total), including a real sim run where towers deal damage and score kills.
+  - `result-check.mjs` now seeds two towers and tallies and reads the summary back; no console errors. A level 5 spot check is identical to iteration 300, so combat is untouched. Screenshot `screenshots/301.png`.
+- **Iteration 302: rally flag on touch.**
+  - In rally mode on a touch screen, pressing shows a ghost flag 60 px above the finger, snapped onto the nearest road, with a ring that is green when the spot is inside the tower's reach and red when it isn't, plus a line from the finger to the snap point. Lifting plants it.
+  - On touch, a miss ("Out of reach!" or "Drop it on the road") keeps rally mode and the reach circle up, so the player can drag again.
+  - Mouse clicks also snap to the road now, so flags always sit on the road's centre line; the snap is generous (46 px instead of the old 34 px on-road check). The banner text names the gesture for each input.
+  - New `systems/rallySnap.ts` (`snapRally`, `RALLY_SNAP`) with 4 tests (322 total).
+  - New `scripts/rallydrag-check.mjs` (real touch drag over CDP on a phone: ghost shown mid-drag, flag planted on the road, a drop out of reach keeps rally mode; no console errors). A desktop click a little off the road snapped onto its centre. Screenshot `screenshots/302.png`.
+- **Iteration 303: tower kills and veterans.**
+  - The tower info card's footer now shows this run's record ("12 kills • 3.4k dmg") from iteration 301's tallies; it turns gold with a ★ once the tower is a veteran.
+  - **Veteran badge:** on its 50th kill (`VETERAN_KILLS`) a tower gets a small gold star badge on its shoulder with a sparkle burst and a "Veteran!" float. The pop is skipped with Reduce Motion, and selling removes the badge.
+  - New `systems/veteran.ts` (`towerRecord`, `justVeteran`, which fires exactly once) with 2 tests (324 total).
+  - New `scripts/veteran-check.mjs` (a real sim kill credited to the tower as its 50th; badge pops; the card reads "★ 50 kills • 3536 dmg"; selling removes it; no console errors). `towercard-check` still passes. Screenshots `screenshots/303.png` (card) and `303-badge.png`.
+- **Iteration 304: hero move on touch.**
+  - On a touch screen, pressing the hero and dragging shows a marching dashed gold trail from the hero to the finger and a gold ring where they'll stand. Lifting orders the move.
+  - A touch that moves less than 24 px (`HERO_DRAG_MIN`) is still a tap that selects the hero as before, so tap-hero-then-tap-ground keeps working. Mouse play is unchanged.
+  - The trail stays still with Reduce Motion, and the drag state is reset per battle.
+  - New `scripts/herodrag-check.mjs` (real touch drag over CDP on a phone: trail mid-drag; the hero is ordered exactly to the lift point; a short tap selects; no console errors). The `hero`, `touchaim`, `rallydrag`, `cards` and `herocard` checks still pass. Screenshot `screenshots/304.png`. 324 tests.
+- **Iteration 305** (POLISH + BALANCE), tuning the veteran badge for feel:
+  - The autoplayer's `RunResult` now carries `towerKills` (kills per tower), and a new `scripts/veteran-balance.ts` (expert strategy, nine levels from L1 to L125) measures how many towers earn the badge.
+  - At 50 kills, 29% of towers became veterans (3–4 per run), too common to feel special. **`VETERAN_KILLS` is now 75** (8% of towers, 0–1.7 per run, none on the gentle first level). Details under Balance Notes.
+  - `veteran-check.mjs` was updated for the new line ("★ 75 kills"); no console errors. Screenshot `screenshots/305.png`. 324 tests.
+- **Iteration 306: boss health bar polish.**
+  - The HUD boss bar now uses the shared rounded `drawBar` in danger red (brighter red below 30%), on a framed backing with a drop shadow and a faint red rim.
+  - It has the damage trail (`bossTrail`, reset whenever a new boss shows up).
+  - **Phase notches:** a small diamond plus a thin line at each threshold, cream while still ahead and gold once passed.
+  - **Phase-change flash:** a phase change flashes the bar white for 450 ms (half as long with Reduce Motion), alongside the existing banner and shake. The shield strip is rounded too.
+  - New `scripts/bossbar-check.mjs <name> [boss] [level]` (Zephyrax knocked just past 75%: a real phase event, the flash catches, the gold notch shows, and the trail drains exactly to 0.71; no console errors). `bossintro-check` (desktop and phone) still passes. Screenshot `screenshots/306.png`. 324 tests.
+- **Iteration 307: touch gestures tip.**
+  - On a player's first battle on a touch screen, a glossy one-time card explains the touch gestures: hold to preview (hero skill), drag to aim (spells, lift to cast, lift on the bar to cancel) and drag the hero (rally flags too). Each gesture has a small fingertip icon.
+  - The battle pauses until "Got it!", which remembers it in `settings.touchTipSeen` (merged on load, so no save migration).
+  - Rows are laid out from their measured text heights. The first try overlapped titles and bodies at phone font sizes, so this was fixed.
+  - New `systems/touchTip.ts` (`TOUCH_TIPS`, `shouldShowTouchTip`) with 3 tests (327 total), including a save round-trip.
+  - New test hook `window.__noTouchTip`, now set by the 19 phone and touch check scripts so the card doesn't cover them. They still pass.
+  - New `scripts/touchtip-check.mjs` (phone: card and pause on first battle; a real tap on "Got it!" closes, unpauses and saves; the next battle has no card; no console errors). Screenshot `screenshots/307.png`.
+- **Iteration 308: boss defeat moment.**
+  - On top of the existing flash, shake, shockwave ring and fireworks, a boss kill now gets a slow-motion beat: the battle runs at a quarter speed and eases back to full speed over 1.1 s (half as long with Reduce Motion).
+  - A gold ribbon near the top reads "<Boss> defeated!" with the bounty below; it pops in, holds and floats away after about 2 s.
+  - The slow-motion only scales the scene's sim step (`slowMoStart`, reset per battle), so the autoplayer and balance sims are untouched.
+  - New `systems/slowMo.ts` (`slowMoScale`, `SLOWMO_MS`, `SLOWMO_MIN`) with 3 tests (330 total).
+  - New `scripts/bossdown-check.mjs <name> [boss] [level]` (Zephyrax killed by a real sim kill: the slow-motion starts and ends, the ribbon reads "Zephyrax, the Gale Roc defeated!" / "+989 coins" and then goes away; no console errors). `bossbar` and `result` checks still pass. Screenshot `screenshots/308.png`.
+- **Iteration 309: touch settings.**
+  - **New Settings buttons:**
+    - "Touch aim: Lift to cast / Tap to cast" (`settings.touchAim`). Tap to cast skips drag-and-lift: on touch, a single tap casts the armed spell where you tap, as with a mouse.
+    - "Show touch tips", which clears `touchTipSeen` so the gestures card from iteration 307 appears on the next battle.
+  - The battle reads `touchAim` once at the start of each battle.
+  - Settings layout: a fourth button row was added, with the reset note and the panel resized and the credits moved below the panel on one line. The first try had the credits overlapping the panel edge, so that was fixed.
+  - The BattleScene field comments that had drifted onto the wrong lines across iterations 297–308 were tidied.
+  - New `scripts/settings-touch-check.mjs` (real clicks on both buttons save `touchAim: 'tap'` and `touchTipSeen: false`; then on a phone with Tap to cast a single tap casts Starfall at once; no console errors). `settings-fx`, `phone-screens` and `touchaim` (lift mode) checks still pass. Screenshot `screenshots/309.png`. 330 tests.
+- **Iteration 310** (POLISH + BALANCE):
+  - **Phone check** of the Settings screen after iteration 309's new row: all eight buttons, the reset note and the credits fit inside their spots at 740×360. Screenshot `screenshots/310.png`.
+  - **Balance:** the raid and endless sweeps (unchanged since iteration 250) were re-run, plus a hero-versus-strategy split of an endless oddity; details under Balance Notes. Nothing tuned. 330 tests.
+- **Iteration 311: wave clear moment.**
+  - The sim's existing `waveCleared` event (fired when every called wave is done and the field is empty) now shows a glossy pill "✓ Wave N cleared". It has a gold "Flawless" tag when no lives were lost that wave (from `leaksByWave`) and "N waves to go" (hidden in endless).
+  - **Sound and sparkle:** a new two-note `sfx.waveClear` chime, with a third sparkle note when flawless, plus a small green or gold sparkle burst.
+  - It sits under the HUD, or below the centre banner if one is up (the first try overlapped the next wave's banner). It pops in, holds and floats away (static with Reduce Motion).
+  - No coin trickle: clearing a wave pays nothing, so coins would mislead.
+  - New `systems/waveClear.ts` (`waveClearInfo`) with 2 tests (332 total), including a sim run that fires `waveCleared`.
+  - New `scripts/waveclear-check.mjs` (wave 1 played out: "✓ Wave 1 cleared", "Flawless", "11 waves to go", then the pill leaves; no console errors). `audio-check` still passes. Screenshot `screenshots/311.png`.
+- **Iteration 312: world map progress ribbon.**
+  - The map's top bar is now a glossy gold-rimmed ribbon: region name and total stars on top, and beneath them a slim gold bar of this region's stars with "N/M here" ("Region complete!" when every level has 3 stars).
+  - **Next pill:** a "Next: 3. Thornwood Hollow ›" pill under the ribbon points at the first unlocked level here with no stars yet. It breathes gently (still with Reduce Motion), and tapping it opens that level's card.
+  - New `systems/mapProgress.ts` (`regionProgress`) with 3 tests (335 total).
+  - New `scripts/mapprogress-check.mjs` (desktop and `PHONE=1`; "5/15 here", the pill text, and a real tap opens level 3's card; no console errors). `map-check` and `region-picker-phone-check` still pass. Screenshots `screenshots/312.png` and `312-phone.png`.
+- **Iteration 313: endless-aware expert autoplayer** (balance tooling).
+  - New `Strategy.upgradeFirstAfter`: from that wave on, the autoplayer stops opening new slots and spends on specializations first (saving up for them), then upgrades.
+  - New `ENDLESS_EXPERT` (the expert with `upgradeFirstAfter: 5`), added as a fourth column in `endless-balance.ts`. The campaign `STRATEGIES` are untouched, so every earlier sweep still compares like-for-like.
+  - The endless ceiling rises from 12.0 / 11.7 / 12.0 / 12.7 to 22.3 / 24.3 / 12.0 / 18.3 waves (details under Balance Notes).
+  - New `tests/autoplay-endless.test.ts` (2 tests, 337 total: only the deepening differs, and it holds at least as long). No visual change; screenshot `screenshots/313.png` is the endless card (`endless-card-check`, no console errors).
+- **Iteration 314: village HUD polish.**
+  - The top bar is now a gold-rimmed glossy panel. The coin and glowsap bars use the shared rounded `drawBar`.
+  - **Full storage:** a full store gets a soft red glow around its bar and a pulsing red "FULL" pill (still with Reduce Motion), so you can see that collecting would be wasted.
+  - **Builder pips:** one pip per builder under "N/M free", amber with a little hammer head while busy and a green ring when free.
+  - The texts and icons moved up a few pixels so the numbers no longer touch their bars (seen in the first screenshot).
+  - New `systems/villageHud.ts` (`villageHud`) with 2 tests (339 total).
+  - `village-shot.mjs` gained `FULL=1`. `village-check`, `village-leak` (flat) and `phone-screens` still pass. Screenshot `screenshots/314.png` (full coins, one busy builder).
+- **Iteration 315** (POLISH + BALANCE), the Frostpeak endless wall:
+  - **Diagnosis:** leak tracing showed it wasn't wave 13 at all. Grimtusk, the wave-10 boss (endless opened with the map's own region boss), outlived every build and walked through in wave 13 for all 20 lives. Swapping only that boss for Murkmaw took expert-endless from 12 to 31.7 waves and the novice from 12.3 to 25.
+  - **Fix (`endlessBosses`):** the gentlest boss (Murkmaw) now always opens at wave 10, and the map's own region boss comes second at wave 20, followed by the usual rotation. Maps whose own boss is Murkmaw are unchanged. Late regions were worse than Frostpeak: Amberwood's endless opened with Rustantler, 16th in difficulty.
+  - New `endlessHomeBoss(level)`. The endless card's line now names the map's own boss at its wave ("Wave 20: Rustantler").
+  - `tests/endless.test.ts` updated (home boss second, nothing lost or doubled, wave 20 brings it; 339 tests). `endless-card-check` passes. Screenshot `screenshots/315.png`.
+- **Iteration 316: village collect feedback.**
+  - Collecting from a building (tap or "Collect all") sends little coin or glowsap icons arcing on a curve from the building up to its HUD icon. The icon bumps as each one lands, and the coin sound plays on the last.
+  - The icons live on the fixed UI camera, starting from the building's on-screen spot (world to screen through the main camera), so it works zoomed and panned. With Reduce Motion the HUD icon just bumps.
+  - New `systems/collectFx.ts` (`flightCount`: 2 to 6 per building by haul, capped at about 24 in total for a big "Collect all") with 2 tests (341 total).
+  - New `scripts/collectfx-check.mjs` (busy village, "Collect all": 11 icons in flight, all landed and cleaned up, coins rose; no console errors). `village-leak` (flat) and `village-zoom-check` still pass. Screenshot `screenshots/316.png`.
+
+## In Progress
+- (none)
+
+## Fix Loop (requested by the user after the skill reviews)
+**Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
+
+Fix counter: **F39**
+
+### Fix Done
+- **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
+
+- **F2 (A2) Hit areas of at least 44 CSS px on every device.** New scene plugin `src/ui/autoPad.ts` (registered in `main.ts`) rescans every 400 ms for clickable controls (hand cursor, plain rectangular hit area) and grows each hit area toward `minHitGamePx` (44 CSS px converted through `scale.displayScale`; never below TOUCH_MIN on touch). Growth on each axis stops at half the gap to the nearest neighbour beside it (`roomToGrow`, capped at 30 game px per side), so neighbours keep their taps. Custom hit shapes and areas `padHit` already set are left alone. Pure maths in `src/ui/hitpad.ts` with 9 new tests. `scripts/hitsize-check.mjs` measures every control on the menu and map at 1280×720 and 740×360. On the phone, the map's Next pill grew from 15 to 44 CSS px tall and Field Guide / Settings / DEV from 22–26 to 44. Daily stays at 36, limited by the Village button just above it. keynav, tower-menu and card checks still pass. Screenshot `fix-2-phone-map.png`.
+
+- **F3 (A3) Readable small text.** `phoneFontSize` (behind `pf()`) now never returns below `MIN_READABLE_FONT` = 13 game px, so every small caption is at least 13 px on desktop and 17 px on phones. That covers wave-chart numbers (were 9), card tags and stats (11), the NEW tag (10) and the branch/record footers (10). The tithe and dev-mode lines go from 12 to 13. Cards adapt so the larger text doesn't overlap: the tower card places its stat rows below the tags and grows taller to fit, the stat-row label column widens to its longest label (66–96 px) and all labels share one size, the hero card's skill bodies start below their headings, the enemy card's stats wrap instead of shrinking to about 7 px, and the NEW pill sizes itself to its text. Tests updated and extended (358 total). Before/after screenshots for the tower, hero and enemy cards (desktop and phone) and the results chart: `fix-3-before-*` and `fix-3-after-*`.
+
+- **F4 (F1) Ground variation on every battle map.** New pure module `src/systems/groundNoise.ts`: seeded value noise and 3-octave fbm, lit from the upper left (ground rising toward the light brightens), quantised into 4 flat value steps with crisp but smoothly curving edges (sampled on an 8 px grid, interpolated per pixel). `stepColors` keeps the steps close to the theme's grass colour, darker steps leaning to `grassDark` and lighter ones to a lightened grass. `BattleScene.bakeGround` bakes each level's field once into a canvas texture (cached per level id) under all decoration. It replaces the 62 random dark and sunlit ellipses, so the ground reads as gently lit terrain instead of a flat colour with blots. It works for every theme (meadow, frost, tidepool, gale, moonlit abyss checked). 6 new tests. Before/after: `fix-4-before-*` and `fix-4-after-*` (levels 1, 10, 22, 34, 48). New `scripts/maps-shot.mjs` screenshots any levels by index.
+
+- **F5 (F2) Path edge polish.** Roads are now drawn in passes over all paths, so crossings merge cleanly (before, a later road's kerb cut across an earlier road's bed, e.g. on Three Winds). The light comes from the upper left on the roads too:
+  - a pale rim catches the light just past the kerb on the lower-right bank;
+  - the bed sits low, so the upper-left bank throws a darker strip across its near edge (the light road fill is 46 px wide, shifted 3 px down-right, over a 52 px darker bed);
+  - the paler worn middle stripe moves with the light.
+
+  Grass tufts now spill over the verges: small fans of curved blades every ~46 px, leaning toward the road on side verges and skipped where another road runs. They are left off snow, lava, crystal, clockwork and abyss floors. New pure helper `roadEdgeSpots` in `systems/path.ts` (spots beside a road with outward normals) with 3 tests. Before/after: `fix-5-before-*` and `fix-5-after-*`.
+
+- **F6 Consistency pass (phone readability after F1–F5).** New `scripts/phone-tour.mjs` takes 740×360 touch screenshots of the menu, world map, two battles (levels 1 and 34) and settings. It restarts the same scene correctly when asked for the same scene again. Fixes:
+  - Every `Button` label now uses `pf()` (small labels grow on phones) and shrinks to fit inside its button, at creation and after any later `label.setText`.
+  - The menu's hero blurb uses the phone size but steps down until it fits between the name and the Train row (it was 14 px, about 7 CSS px on a phone).
+  - The "Starts at Lv" rank line uses `pf(15)` and fits before the Train button.
+  - The settings reset note and credits line use `pf`.
+
+  The palette and outlines of the new ground and roads are consistent across the meadow, frost, tidepool, gale and abyss themes (checked in F4/F5 shots). Keyboard, hit-size, test and build checks still pass. Before/after: `fix-6-before-*` and `fix-6-after-*`, plus `fix-6-desktop-menu.png`.
+
+- **F7 (F3) Contact shadows follow the light.** All 27 decoration contact shadows in the battle-map decoration pass (trees, pines, crystals, barrels, mushrooms, cairns, reef rocks and the rest) now fall down and to the right of the object (`SHADOW_DX` 4, `SHADOW_DY` 2) instead of sitting dead centre. Broadleaf trees cast a slightly longer shadow. Flower clusters, which had no shadow, now give each blossom its own small shadow. The meadow's mossy stones already had an offset shadow. Before/after: `fix-7-before-*` and `fix-7-after-*`.
+
+- **F8 (F4) Floor outline rule.** Things you interact with now carry the ink outline:
+  - Roads get a 2 px ink line outside the kerb, and the kerb's lower-right side catches the light (a lighter kerb, with the normal kerb shifted 1.5 px up-left over it).
+  - Ponds, which block building, get a 2.5 px ink rim.
+  - Tower pads already had their dark rim.
+
+  Decoration no longer uses ink: all 19 decoration edge strokes (crystals, barrels, buoys, trees, pines, mushrooms, cairns, reef rocks and others) are now a 32 % darker tint of the object's own body colour. A small wrapper on the decoration graphics remembers the last body fill, and `decoEdge(w)` uses it. Before/after: `fix-8-before-*` and `fix-8-after-*`.
+
+- **F9 (F5) The banner keeps clear of the roads.** New pure module `src/systems/bannerSpot.ts`:
+  - `roadCover` measures how much road (32 px wide) a banner rect hides; the first 260 px of each road, where foes enter, counts triple.
+  - `pickBannerY` chooses between the usual spot under the HUD (y 172) and a low spot (y 544), whichever hides less road. It is computed once per level and reset in `init`.
+
+  If the chosen spot still covers road, the banner fades back to 35 % after 1.5 s (then out at 2.6 s as before), so the first foes stay visible. Sticky centre banners are unchanged. On Three Winds, where roads cross both spots, the banner fades; Frostpeak keeps the top spot. 3 new tests. Boss-intro check still passes. Screenshots: `fix-9-before-*` and `fix-9-after-*`.
+
+- **F10 Consistency pass (phone tour of the remaining screens).** `scripts/phone-tour.mjs` now also covers the village, field guide, achievements and store at 740×360. The store cards were the broken screen. On phones the wrapped description ran into the "Next:" price row, and "Next:" overlapped its coin icon. Now the price row is laid out by measured widths and sits 7 px lower, and the description steps down from the phone size until it ends above the price row. The village, guide and achievements read fine (achievement descriptions already shrink to fit one line). Palette and outlines were already consistent after F7–F9. Store check and tests pass. Screenshots: `fix-10-before-*` and `fix-10-after-*`.
+
+- **F11 (C1) Outline weight by role.** New `BootScene.roleOutlines(g, body)` wraps a sprite's `lineStyle`:
+  - every ink stroke of 2.5 px or more is a body outline and becomes `body` (3 px for all heroes and the boss enemies, 2.5 px for the regular foes, which were a mix of 2.5 and 3);
+  - ink strokes of 2–2.5 px are small parts and become 2 px;
+  - finer ink detail and coloured strokes stay as drawn.
+
+  `makeEnemy` now gets the enemy's `boss` flag. Bosses and heroes read a touch heavier than the rank-and-file, as the critique asked; regular foes like Mudling and Bogbrute are slightly lighter. Sheets: `fix-11-before/after-heroes.png` and `fix-11-before/after-enemies.png` (Bogbrute, Gloomwing, Gnat, Grimtusk, Mudling, Murkmaw, Shellback, Vulkhar), plus `fix-11-battle-0.png`.
+
+- **F12 (C2) Colour accents on the early brown, grey and olive foes** (first-region roster):
+  - **Mudling** gets a pink flower bud on its sprout and rosy cheeks.
+  - **Shellback** gets bright orange lichen freckles on its grey plates.
+  - **Bogbrute** gets glowing bog-light warts (it had dull olive spots) and a red, white-spotted toadstool growing from its mossy cap.
+
+  The other first-region foes (Reedguard gold, Skitter teal, Thornhog red) were already saturated. Gameplay data is unchanged. Sheets: `fix-12-before.png` and `fix-12-after.png`.
+
+- **F13 (C3) Status-effect icons.** Statuses no longer rely on tint or colour alone. New pure module `src/systems/statusIcons.ts` decides which icons show, in a fixed order:
+  - `enemyStatuses`: slow, haste, rage, anchor (slow was previously invisible apart from the movement);
+  - `soldierStatuses`: poison, glaze, stun;
+  - `iconX` lays them out in a row.
+
+  `BattleScene.drawStatusIcon` draws each as a small ink disc with a symbol: a pale-blue snowflake (slow), pink double chevrons (haste), an orange flame (rage), a grey anchor (anchored), a green venom drop (poison), an amber honey drop (glaze) and a yellow bolt (stun). Icons sit right of the health bar, or in a row over the head when the bar is hidden; bosses show them over the head. The old tints stay as a second cue. 5 tests. New `scripts/status-icons-check.mjs` and close-up `fix-13-icons.png`.
+
+- **F14 (A4) Tooltips on icon-only controls.** New `src/ui/tooltip.ts` (`attachTip(obj, text | () => text, { touch })`) with pure placement in `src/ui/tipPlace.ts` (centred under the control, flipped above if there's no room, kept on screen; 3 tests).
+  - When it shows: on mouse hover after 350 ms, on a 450 ms long press on touch screens, and whenever the keyboard focus ring lands on the control (keyNav calls `showTip`).
+  - It uses real-time timers, so it works while the battle is paused.
+  - Attached to the battle HUD's icon controls: pause ("Pause / Resume (Space)"), speed ("Game speed: x1, x2, x3"), each spell ("Starfall (key 1): …"), the hero skill ("Earthshake (Q): …") and the hero portrait ("Bramble the Badger Knight: select or move (H)"). The portrait also gets a hand cursor, so the focus ring can reach it.
+  - Spells and the hero skill skip the touch long-press, because touch already shows their card.
+
+  New `scripts/tooltip-check.mjs` hovers pause and a spell on desktop, checks the tip clears on leave, and long-presses pause on a phone (it still explains itself while paused). Screenshots `fix-14-pause.png`, `fix-14-spell.png`, `fix-14-phone.png`.
+
+- **F15 Consistency pass.** Re-ran the full phone tour (`fix-15-*`) after F11–F14: menu, map, two battles, settings, village, guide, achievements and store all read cleanly. Palette and outlines match across themes, no text is below 13 game px, and the store fits.
+  - The new status icons were the only thing that read too small on a phone (about 3 CSS px). They now draw 35 % larger on touch screens (`iconScale`), with spacing to match. `drawStatusIcon` draws through a small scaled-graphics shim, so every symbol scales together.
+  - `status-icons-check.mjs` takes `PHONE=1`; phone close-up `fix-15-icons-phone.png`, desktop `fix-13-icons.png` unchanged.
+
+- **F16 (A5) Screen-reader announcements.** New `src/systems/announce.ts` creates a visually hidden `aria-live="polite"` status region (`#announcer`) and an `announce(text)` that clears and re-sets it, so repeated words are read again. Repeats within 0.9 s merge (`shouldAnnounce`), so a burst of leaks isn't a flood. What gets announced (wording in `announceText`):
+  - wave start ("Wave 3 of 8 has started.", endless has no total);
+  - each lost life ("A life lost. 19 lives left.");
+  - victory with stars, or defeat;
+  - every keyboard focus move: the control's label plus its tooltip text, e.g. "II. Pause (Space)".
+
+  2 tests. `scripts/announce-check.mjs` checks focus, wave start and a leak in the real game. This completes the Fix Loop backlog from the skill reviews.
+
+- **F17 (Design Backlog 1, part a) First-region foes finished.** These were the rank-and-file you meet first and hadn't been hand-detailed yet:
+  - **Skitter**: iridescent teal sheen on both wing cases, a gold glint and inked feelers.
+  - **Reedguard**: a red feather tucked in a green reed headband, and a polished river-stone boss on its woven shield.
+  - **Thornhog**: four pale quills with brown tips (outlines are now drawn first, so the fills read instead of a dark crest), a pink snout tip, a pink-lined ear and a lit back.
+  - **Gloomwing / Gnat**: wing veins and sheen, eye glints; Gloomwing gets two little fangs and the Gnat a striped body.
+
+  Bogmender already read well. Sheets: `fix-17-before.png` and `fix-17-after.png`; battle `fix-17-battle-1.png`.
+
+- **F18 (Design Backlog 1, part b) Shoals and peaks foes.** The next six regular foes by first appearance:
+  - **Shardskipper** (it was a bare triangle): a shaded right face with a facet ridge, two pale crystal shards riding its back, a haloed glowing core with a glint, and proper eyes.
+  - **Gullwing**: shaded orb body and head, feather lines on the swept wings, the gull's red beak spot and an eye glint.
+  - **Galehound**: a feathery tail plume streaming in the wind, a shaded head, and a white-ringed eye with a glint.
+  - **Glarefly**: a warm glow behind its body, feathery gold-tipped feelers and dark eyes.
+  - **Mirrorback** and **Cloudram** already read well.
+
+  Sheets: `fix-18-before.png` and `fix-18-after.png`.
+
+- **F19 (Design Backlog 1, part c) Ruins and clockwork foes.**
+  - **Bramblehide**: five green thorns with pale tips, outlines drawn first so they read instead of a black crest, plus ripe purple bramble berries caught in its vines.
+  - **Kitewing**: the lower-right half of the kite in shadow, a lit upper-left edge, a cross spar, proper eyes, and a red bow on its ribbon tail.
+  - **Shiftscale**: scale freckles in green on the green half and orange on the half turning red, plus an eye glint.
+  - **Idolkeeper**, **Cogjammer** and **Steamrunner** already read well.
+
+  Sheets: `fix-19-before.png` and `fix-19-after.png`.
+
+- **F20 Consistency pass (detailed foes on their home maps).**
+  - Compared every foe detailed so far side by side at gameplay size (`fix-20-sheet.png`): outline weights, upper-left light and accents now match.
+  - New `scripts/foes-on-map.mjs <prefix> <level>:<foe,...>` spawns foes on their real map (`PHONE=1` for phone size). It showed two problems, both fixed with pure helpers in `src/systems/foeReadability.ts` (3 tests):
+    - Pale foes (Shardskipper, Glarefly, Kitewing) read weakly on pale stone roads. Ground shadows are now deeper (+0.14 alpha) on roads brighter than 0.6.
+    - When several new foes enter in one wave, their "New in Field Guide!" labels printed over each other. Labels within 1.5 s now stack 20 px apart.
+
+  Screenshots: `fix-20-desk-*` (before), `fix-20-after-*`, `fix-20-phone-*`.
+
+- **F21 (Design Backlog 1, part d) Grove and cave foes, plus an F11 regression fixed.**
+  - **Regression:** `roleOutlines` had been clamping thick ink strokes used as shapes. The Sparkeel's and Rattler's inked body underlays (r × 0.75 and r × 0.5 wide) shrank to 2.5 px, so both eels lost their outline. Only ink strokes of 4 px or less are now treated as outlines.
+  - **Sparkeel**: a lit stripe along its back and haloed glow spots.
+  - **Seedcaster**: shaded right side of the hood, a lit left edge, a frayed hem, a seedling sprouting from the hood's tip, and eyes glowing with soft halos.
+  - **Barkwarden**: bark grain, a shaded right side, a patch of moss and glints in its knot-hole eyes.
+  - **Echowisp**, **Dimlantern** and **Rivetshell** already read well.
+
+  Sheets: `fix-21-before.png` and `fix-21-after.png` (Rattler's restored outline included).
+
+- **F22 (Design Backlog 1, part e) Steppe and hollow foes.**
+  - **Stormcaller**: cloak shading with a lit left fold, a yellow zigzag bolt stitched down the front, eyes glowing with halos, and a sparking copper rod tip.
+  - **Copperhorn**: a copper-studded harness over the shoulders, a pale muzzle with nostrils, shine on its copper horn caps, and eye glints.
+  - **Gorgegrub**: each of its three rings shaded as its own orb, two little teeth, a hungry drool drop and eye glints.
+  - **Sandpicker**, **Shimmerjack** and **Thunderhoof** already read well.
+
+  Sheets: `fix-22-before.png` and `fix-22-after.png`.
+
+- **F23 (Design Backlog 1, part f) Reef and flotilla foes.**
+  - **Deckgunner**: a striped sailor's shirt, inked ears behind a shaded head, a pink snout, bandana tails, eye glints and brass shine along the blunderbuss.
+  - **Tidecaller**: spiral bands and a pink lip on the conch, a dark nose, eye glints, and rings of water at its waist, since it floats upright.
+  - **Shellsnap**: a shaded orb shell with a frond of seaweed, and pale pincer notches in its claws.
+  - **Inkspitter**, **Ironkeel** and **Kilnback** already read well.
+
+  Sheets: `fix-23-before.png` and `fix-23-after.png`.
+
+- **F24 (Design Backlog 1, part g) Hollow and heath foes.**
+  - **Mistfox**: a shaded head with pale ears and lavender insides (drawn over the head and left unoutlined, because outlines made the slim ears read as black spikes), amber eyes glowing through the mist with glints, and wisps curling off its tail.
+  - **Barkdrum**: rope lacing round its log drum, wood grain, and a drumstick tucked under the strap.
+  - **Powdermonkey**, **Sapstoat**, **Silkcrane** and **Turnleaf** already read well.
+
+  Sheets: `fix-24-before.png` and `fix-24-after.png`.
+
+- **F25 Consistency pass (ink balance).** New `scripts/ink-ratio.mjs [prefix] [top]` renders every texture and ranks sprites by the share of near-ink pixels. Median is 37 %, so outliers point to sprites drowned in outline.
+  - The top four (Dreadmast 91 %, Collie 87 %, Rotseed 79 %, Harrier 69 %) are near-black by design, and their bodies swallowed their own ink outline, so they read as blobs on dark maps.
+  - New pure `src/systems/rimLight.ts` (`rimPixels` / `applyRim`, 3 tests) lights opaque pixels whose upper-left neighbour is empty, the same light direction as every hand-drawn highlight.
+  - `BootScene.rimLight` bakes a subtle 1 px cool rim (45 %) into every enemy whose body colour is darker than 0.25 brightness, so dark silhouettes separate from the ground without changing their palette.
+  - The next outliers (Seedcaster, Skitter, Shellback around 55–60 %) carry deliberate dark faces and shells and read fine at gameplay size.
+
+  Sheets: `fix-25-before.png` and `fix-25-after.png`.
+
+- **F26 (Design Backlog 1, part h) Canopy foes.**
+  - **Howler**: a shaded head, lighter shaggy tufts on its crown and back, a bearded throat, eye glints, and pale sound rings bursting from its howl.
+  - **Harrier**: pale feather bars across each wing and a lit leading edge.
+  - **Mourner**: fluffy cheeks either side of a shaded head, eye glints, and a single pale tear (it weeps as it walks).
+  - **Glowbearer**, **Hexguard** and **Waxback** already read well.
+
+  Sheets: `fix-26-before.png` and `fix-26-after.png`.
+
+- **F27 (Design Backlog 1, part i) Comb, bog and prairie foes.**
+  - **Bloomdoe**: its four legs were filled ink-outlined rectangles that read as a black block. They are now slim fawn legs drawn over an ink underlay, with dark hooves. It also gets a shaded body, a white tail flag, pink inner ears and a nose.
+  - **Hexcroak**: glowing halos round its heavy-lidded eyes, a glossy sheen on its throat sac, and a faint green hex rune on its back.
+  - **Mudskipper**: a spiny orange dorsal fin, a wet sheen of mud and eye glints.
+  - **Honeypaw**, **Lanternfrog** and **Tumblehog** already read well.
+
+  Sheets: `fix-27-before.png` and `fix-27-after.png`.
+
+- **F28 (Design Backlog 1, part j) Wold and prairie foes.**
+  - **Collie**: a red neckerchief, a pink lolling tongue, a white tail tip and an eye glint; it also keeps its F25 rim light.
+  - **Plough Ox**: a brass nose ring, a lit flank and a little yoke bell.
+  - **Tithe Weasel**: ledger lines on its tally sheet, a bulging coin purse at its hip, and a sly eye glint.
+  - **Curlshell**, **Marmot** and **Sandburrow** already read well.
+
+  Sheets: `fix-28-before.png` and `fix-28-after.png`.
+
+- **F29 (Design Backlog 1, part k: last of the regular foes) Brook and heath foes.**
+  - **Moonhare**: its laid-back ears were orbs only 0.2 r tall, so they read as two black bars. They are now silver ears with thin outlines, pink insides and black tips, and there is moonlight along its back.
+  - **Moorram**: horn ridges, a lit top-left and shaded lower-right of the fleece, and a sprig of heather caught in it.
+  - **Sprayotter**: shaded orb body and head, a wet sheen, whiskers and eye glints.
+  - **Bubbler**, **Pike** and **Heathwisp** already read well.
+
+  **Every regular foe has now had its pass, so Design Backlog item 1 is done.** Sheets: `fix-29-before.png` and `fix-29-after.png`.
+
+- **F30 Consistency pass (all foes, after F26–F29).**
+  - The full enemy sheet at gameplay scale (`fix-30-all.png`) reads as one family: ink outlines, upper-left light, eye glints and accents.
+  - Ink-ratio rescan: median down to 36 %. Outliers are only the deliberately dark Dreadmast, Collie and Rotseed, which carry the F25 rim light.
+  - Phone fix: the smallest foes (Gnat radius 7, three at 9, eight at 11) shrank to a few CSS px. New pure `phoneFoeScale` in `systems/foeReadability.ts` (2 tests) draws foes below radius 12 up to 25 % bigger on touch screens. It is visual only; the simulation radius and tap tests are unchanged.
+
+  Phone shot: `fix-30-phone-1.png`.
+
+- **F31 (Design Backlog 3, part a) Boss aura.** All 25 bosses now stand in a ground aura that marks them as the big threat at a glance. The aura (`BattleScene.bossAura`) has:
+  - a soft fill in the boss's own lightened body colour;
+  - a boss-red (#ff7a5a) ring over an ink underlay, the same red as the boss bar and the boss rim on enemy cards, so every boss shares one cue;
+  - a pale inner ring.
+
+  It follows the boss under its contact shadow, hides while the boss is underground, is destroyed with the view, and breathes slowly (still under Reduce Motion). A first try used only the body colour; that vanished under green bosses on green maps, so the ring was switched to boss-red. Shots: `fix-31-before-*` and `fix-31-after-*` (Old Murkmaw, Grimtusk, Galestag).
+
+- **F32 (Design Backlog 3, part b) Boss sheen.** Every boss that isn't near-black now gets a warm 1 px sheen (#fff0c8, 40 %) baked along all its upper-left edges, using the F25 `rimLight` pass. Horns, crowns, shells and wings catch the light the way polished metal and chitin would. Near-black bosses (Dreadmast) keep their cool rim instead. Generic and automatic, so all 25 bosses are covered. Sheets: `fix-32-before.png` and `fix-32-after.png` (all bosses), `fix-32-zoom-after.png` (Grimtusk, Ironhorn, Kaleidrax, Rustantler, Saltjaw, Zephyrax at 3×), battle `fix-32-battle-9.png`.
+
+- **F33 (Design Backlog 4) Towers, every tier and branch.** `makeTower` adds family details and then the warm F25/F32 edge sheen (30 %) on every tower texture:
+  - **Boulder catapult**: a lit top edge and shaded lower-right on the stone base, block seams, wood grain on the posts, and from tier 1 a pennant in the tower colour.
+  - **Burrow**: door planks, a shaded lower-right of the mound, a lit round window and meadow flowers at its foot.
+  - **Glimmer spire**: stone courses, a glowing rune in the window and a lit left edge.
+  - **Thornbow nest**: platform planks, wood grain on the legs, and from tier 1 a pennant in the tower colour.
+
+  All 22 tower textures are covered. Tower card check passes. Sheets: `fix-33-before.png` and `fix-33-after.png`; battle `fix-33-battle.png`.
+
+- **F34 (Design Backlog 6) Wardens, Rangers and raid troops.** New `BootScene.shadeChibi` shades the shared chibi body and head: a darker lower-right on each, a lit upper-left, and the head re-inked (only the head: re-inking the body drew its outline across the chin). It applies to all seven raid troops (Brawler, Mender, Mole, Otter, Owl, Sapper, Slinger), the Badger Warden and the Grove Call Ranger, each with eye glints and the warm F25 edge sheen.
+  - The Warden also gets a gold belt buckle and a shield boss with a glint.
+  - The Ranger gets a bowstring on its bow.
+
+  Sheets: `fix-34-before.png`, `fix-34-after.png` and `fix-34-units-after.png`.
+
+- **F35 Consistency pass (heroes, enemies, towers, troops; Design Backlog 5).** One lighting rule now runs across the whole cast:
+  - every sprite is lit from the upper left with an ink outline by role (F11);
+  - the important, light-catching cast (heroes, bosses, towers, Wardens, Rangers and raid troops) shares one warm 1 px edge sheen;
+  - near-black foes get the cool rim (F25), and regular foes rely on their hand-drawn shading.
+
+  The heroes were the one group without the sheen, so they get it here at the same 30 % as towers and troops. The phone tour of menu, map, battles, settings, village, guide, achievements and store still reads cleanly. Sheets: `fix-35-heroes-before.png` and `fix-35-heroes-after.png`; tour `fix-35-*`.
+
+- **F36 (Design Backlog 7) Battle-map vignette.** Every battle map now has a soft vignette: corners and edges sink gently into a deep-green shadow (0 → 10 % → 32 % from 38 % of the short side outward), so the eye rests on the middle of the field.
+  - `BattleScene.addVignette` bakes it once into a shared canvas texture, oversized for screen shake.
+  - It sits at depth 1.5: over the ground and decoration, under every unit, tower and HUD element.
+
+  The rest of item 7 was already in place: richer path edges (F2/F5), lit ground (F1/F4), and per-region theme props drawn by the theme ground passes (frost drifts, ember cracks, dusk mushrooms, reef coral, gears, ruins…). Shots: `fix-36-before-*` and `fix-36-after-*` (levels 1, 22, 48).
+
+- **F37 (Design Backlog 8) Village buildings.** Two new helpers in `BootScene`:
+  - `roofDetail` gives a gable roof a shaded right half, tile rows, a lit left eave and a re-inked edge.
+  - `windowLit` draws warm glass with a cross frame.
+
+  What changed:
+  - **Barracks**: plank seams, a detailed roof and two lit windows.
+  - **Builder's hut**: a detailed roof and a lit window.
+  - **Workshop**: three lit windows and a tiled, half-shaded flat roof.
+  - **Every village building and level** (town hall, mines, wells, vault, shrine, market, apiary, weir, walls…) gets the cast's warm edge sheen.
+
+  Sheets: `fix-37-before.png` and `fix-37-after.png`; phone tour `fix-37-*`.
+
+- **F38 (Design Backlog 9) Raid camp buildings.**
+  - **Mud Totem** (the camp HQ): its topper was drawn at y = −12, so it poked out above the texture and was clipped. It is now a crest of three bone-white, red-tipped feathers that fits inside the frame, plus red war-paint stripes down the post.
+  - **Every Murkhorde camp building** (hive, hut, menhir, mortar, pile, rattle, shaman tent, sludge pit, spitter, totem, wall) gets a sickly bog-green rim light instead of the village's warm sheen, so the two sides read differently at a glance.
+
+  Raid check passes. Sheets: `fix-38-before.png` and `fix-38-after.png`.
+
+- **F39 Final consistency pass (Design Backlog 10).** Checked the menu, map, battles, village and a raid (phone tour `fix-39-*`, plus `raid-battle.png` from the F38 raid check). One art direction runs through all of them:
+  - lit from the upper left, with ink outlines by role;
+  - a warm edge sheen on the player's side, bosses and village;
+  - a bog-green rim on Murkhorde camps and a cool rim on near-black foes;
+  - lit, stepped ground with polished roads and a vignette;
+  - no text below 13 game px, and controls reachable by keyboard and touch.
+
+  No new problems were found. **The Fix Loop backlog and the Design Backlog are both complete;** the loop is stopped here.
+
+### Fix Backlog (ranked)
+- Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.
+
+## Design Loop (requested by the user after iteration 316)
+**Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**
+Each design iteration (D-number) picks one visual item below and redraws it in code: shading, outline, highlights and signature details, with gameplay data untouched. It is checked with `scripts/design-sheet.mjs <name> <prefix> [scale]` before/after sheets plus an in-game screenshot, and tsc, build and vitest must pass. Every 5th design iteration is a consistency pass (palette, outline weight, phone readability).
+
+Design counter: **D3**
+
+### Design Done
+- **D1: heroes.**
+  - New `orb()` helper in BootScene: a shaded body part with a darker lower-right crescent, an upper-left highlight and a crisp ink outline. All six heroes use it for body and head.
+  - **Bug fixed:** the hero texture grew from 60 to 70 px tall; the 60 px height clipped Fen's cap, Hazel's nightcap and Sorrel's ears.
+  - **Signature details:**
+    - Bramble: a red cape, a shaded bark breastplate with a gold stud, and a leaf crest.
+    - Ember: a shaded robe with gold trim and hem, and a layered flame (halo, tongue, white-hot core).
+    - Fen: a quiver of arrows and a red scarf.
+    - Hazel: a glowing lantern on a stick.
+    - Sorrel: a satchel strap and a medic headband with a leaf.
+    - Wren: speckled chest feathers and round spectacles.
+  - The first try greyed Ember's ears (they inherited the highlight colour) and clipped Hazel's lantern; both fixed.
+  - New `scripts/design-sheet.mjs`. The HUD portrait and in-battle hero still sit right (`herobadge`, `skillaim`). Sheets `screenshots/design-1-before.png` and `design-1-after.png`. 341 tests.
+
+- **D2: enemies, part 1 (plus a shading sweep over all enemies).**
+  - **Shared upgrades:**
+    - `eyes()` now adds a glint to every pupil (used by many foes).
+    - New `orbKeep()` (like `orb` but keeps each enemy's own outline weight and restores the fill colour afterwards). An automated rewrite applied it to all 88 main-body fill-and-stroke pairs across the 107 enemy drawings, so most foes got a shaded body in one go.
+  - **Hand details:**
+    - Mudling: a shaded droop, a mud drip, a two-leaf sprout and freckles.
+    - Shellback: each stone plate shaded, plus a moss tuft.
+    - Splotch: a glossy shaded mound and mud drips.
+    - Wispling: a layered halo, a bright core and a sparkle trail.
+    - Puffcap: rosy cheeks and a cap-rim shadow.
+    - Veilstalker: a shaded head, glowing eyes and mist curling off the tail.
+  - Sheets `screenshots/design-2-before.png` and `design-2-after.png` (part-1 foes at 3×). In-game `design-2-ingame.png` (`hpbar-check`, no console errors). 341 tests.
+
+- **D3: enemies, part 2** (Emberdeep, Duskcap and Reef foes).
+  - Bogbrute: a shaded hide and a mossy cap.
+  - Rimewraith: a shaded hood and drifting frost sparkles.
+  - Cindermole: a warm halo under its glowing claws.
+  - Rootrager: shaded bark with a lit edge, leaf sprigs on the rim and haloed eyes.
+  - Emberimp: a shaded body, a layered flame crown (moved in front of the head after the first sheet hid it) and glowing eyes.
+  - Ashhive: a shaded hive and rising smoke wisps.
+  - Barnaclad: a shaded shell, with barnacles that have dark mouths and glints.
+  - Reefwarden: glowing coral tips.
+  - Sheets `screenshots/design-3-before.png` and `design-3-after.png`. In-game `design-3-ingame.png` (`enemycard-check` with a Cindermole and an Emberimp, no console errors). 341 tests.
+
+### Design Backlog (ranked)
+1. ~~Enemies, part 3~~ done in F17–F29 (every regular foe hand-detailed).
+3. Bosses: shading, crowns and horns with metal shine, ~~a faint aura ring~~ (F31), and bigger silhouettes. Generic sheen added (F32); bosses were already hand-detailed in earlier loops and are large. Treat item 3 as done unless a boss looks weak in play.
+4. ~~Towers~~ done in F33 (stone and wood shading, seams and grain, pennants in the tower colour, edge sheen).
+5. ~~Consistency pass across heroes, enemies and towers~~ done in F35.
+6. ~~Wardens, Rangers and raid troops~~ done in F34.
+7. ~~Battle maps~~ done (path edges F2/F5, ground F1/F4, theme props already per region, vignette F36).
+8. ~~Village buildings~~ done in F37 (roofs, windows, sheen).
+9. ~~Raid camp buildings~~ done in F38.
+10. ~~Consistency pass~~ done in F39. **Design Backlog complete.**
+
+## Feature Backlog (paused while the design loop runs)
+**New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
+base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
+1. Raid loot feedback: loot flies from a destroyed camp building to the raid HUD's loot counter.
+2. Battle coin feedback: the HUD coin counter bumps (and briefly glows gold) on each bounty, with a small coin arc from big kills.
+
+## Known Bugs
+- (none known)
+
+## Ideas parked
+- World map: small themed landmarks per region (left out of iteration 241).
+- Headless Chromium renders only a few FPS here, so live game time crawls in screenshots; scripts fast-forward sims.
+
+## Balance Notes
+**Iteration 235** (POLISH + BALANCE): no sim changes since the iteration 230 store tuning (only visuals). A 4-seed sweep matches earlier results:
+
+| Level | Result |
+|---|---|
+| 1 | 100/100/100 |
+| 3 | 100/100/100 |
+| 5 | 100/50/100 |
+| 45 | 75/50/0 |
+| 90 | 100/25/0 |
+| 125 | 100/75/0 |
+
+Nothing tuned.
+**Iteration 230** (POLISH + BALANCE), store. `store-balance.ts`, 4 seeds, expert/casual/novice, no store → fully bought store.
+- The first numbers made a maxed store trivialise late bosses: +38% tower damage and +310 starting coins took level 125 from 100/75/0 to 100/100/100 and level 30 from 75/25/25 to 100/100/100.
+- Cuts:
+
+| Item | Before | After |
+|---|---|---|
+| Whetted Tips | 4% | 3% |
+| War Chest | 30 coins | 20 coins |
+| Master Craft | 6% | 4% |
+| Dragon's Hoard | 80 coins | 40 coins |
+| Elder Blessing | 10% / 5% | 8% / 4% |
+| Ranger Drill | 15% | 12% |
+
+- That caps the store at +27% tower damage, +180 coins, ×0.77 spell cooldown, +34% hero health and +22% bounty.
+- After the cut (none → maxed): level 5 100/50/100 → 100/100/100, level 30 75/25/25 → 100/75/100, level 60 75/50/0 → 100/100/0, level 90 100/25/0 → 100/75/75, level 120 75/25/0 → 100/100/100, level 125 100/75/0 → 100/100/100.
+- A fully bought store (about 70k coins and 52k glowsap) is a long-term reward and still makes bosses very winnable. The casual gain is the intended effect.
+- **Watch**: the novice jumps on cliff-edge levels (120, 125). If players report the late game feels trivial with a maxed store, trim towerDamage further.
+**Iteration 225** (POLISH + BALANCE): no sim changes since iteration 220 (only visuals, dev mode and settings). A 4-seed sanity sweep matches earlier results within noise:
+
+| Level | Result |
+|---|---|
+| 1 | 100/100/100 |
+| 2 | 100/100/100 |
+| 3 | 100/100/100 |
+| 4 | 100/100/75 |
+| 5 (boss) | 100/50/100 |
+| 60 | 75/50/0 |
+| 61 | 100/100/50 |
+| 62 | 100/75/0 |
+| 120 | 75/25/0 |
+| 125 | 100/75/0 |
+
+Nothing tuned.
+**Iteration 220** (POLISH + BALANCE), raids. The plain Lodge 3 army had sunk to 0.5★ against Strongholds after the Rattle Trap and Standing Stone. `tierMult` now uses a table, so tier 2 is gentler while tiers 0–1 are unchanged:
+
+| Stronghold hp / damage | Lodge 3 | Lodge 3 + Mender | Lodge 3 + Moles |
+|---|---|---|---|
+| 1.6 / 1.42 | 0.7★ | 1.4★ | 1.2★ |
+| 1.58 / 1.41 | 0.7★ | 1.6★ | 1.3★ |
+| **1.56 / 1.40 (kept)** | **0.9★ 45%** | **1.6★ 55%** | **1.3★ 47%** |
+| 1.55 / 1.39 | 1.4★ | 1.7★ | 1.4★ |
+| 1.5 / 1.36 | 1.4★ | 1.8★ | 1.5★ |
+
+- Results jump at the 50%-destruction star line.
+- With the kept values, the plain army is back near its old 1.0★ and both counter armies still clearly beat it. Lodge 2 also improves to 0.6★ against Strongholds; the Outpost and Warren columns are unchanged.
+- The campaign was not touched.
+**Iteration 219** (raid-balance, Stronghold column; after the Rattle Trap → after the stone):
+
+| Army | Before | After |
+|---|---|---|
+| Lodge 3 | 0.7★ 44% | 0.5★ 42% |
+| Lodge 3 + Mender | 1.4★ 50% | 1.4★ 52% |
+| Lodge 3 + Moles | 1.2★ 45% | 1.2★ 44% |
+
+- The first try (130 px reach, 40% cut) also gave Lodge 3 0.5★, and so did trimming a hut. The plain army simply lacks a counter now.
+- **Watch**: Strongholds keep getting harder for the plain Lodge 3 army (1.0★ at iteration 203 → 0.5★). The next raid breather should give troops a tool, not the camp.
+**Iteration 218**: 125 The Thunder Barrow (12 seeds): hpMult 1.6 → 100/75/0, 1.8 → 92/67/0, 2.0 → 58/33/0. **1.9 → 83/67/0** (kept:
+the expert is in the boss band and casual is 4 points over it; the finale guard passes).
+**Iteration 217**: 124 The Barrow Downs (12 seeds): hpMult 1.45 → 100/83/0, 1.75 → 83/67/0. **1.6 → 100/75/0** (kept: the fourth-level band).
+**Iteration 216**: 123 Curlew Ridge (12 seeds): hpMult 1.4 → 100/100/0, 1.5 → 100/92/0, 1.7 → 83/67/0. **1.55 → 100/75/0** (kept: the third-level band).
+**Iteration 215** (POLISH + BALANCE), Starheath at 6 seeds: 121 1.32 → 100/100/17, 122 1.45 → 100/83/0. Kept; both are noisy around the 12-seed values (121 novice 33, 122 casual 92).
+- Heroes on 121–122 (win %, average lives): Bramble 92/13.9, Fen 100/17.0, Ember 100/15.8, Wren 100/15.3, Sorrel 100/14.5, Hazel 100/13.5. Even.
+- Endless (3 seeds): Heather Gate 14.3/14.3/17.3, Moonstone Circle 17.3/11.7/17.3. The novice's endless edge is back on Heather Gate (watch item, see iteration 205).
+**Iteration 214**: 122 Moonstone Circle (12 seeds): hpMult 1.3 → 100/100/0, 1.6 → 100/58/0. **1.45 → 100/92/0** (kept: the second-level band).
+**Iteration 213**: 121 Heather Gate (12 seeds).
+- The first numbers (flying wisps, wool 14) were unwinnable: 0–8% for everyone at hpMult 1.25–1.55. Flying plus link meant splash towers (which can't hit flyers) were useless, and wool 14 gutted the arrow towers.
+- Wisps were made ground units and wool cut to 8. Then 1.1 → 100/100/100, 1.25 → 100/100/67, 1.4 → 100/100/17.
+- **1.32 → 100/100/33** (kept: the opener band).
+**Iteration 211**: 120 The Elder Pool (12 seeds): hpMult 1.5 → 92/75/42, 1.9 → 67/33/0. **1.7 → 83/42/0** (kept: the boss band; the
+finale guard passes).
+**Iteration 210** (POLISH + BALANCE), Pebblebrook sweep at 6 seeds (expert/casual/novice):
+
+| Level | hpMult | Result |
+|---|---|---|
+| 116 | 1.25 | 100/100/33 |
+| 117 | 1.3 | 100/100/0 |
+| 118 | 1.35 | 100/83/0 |
+| 119 | 1.4 | 100/50/0 (12 seeds gave 100/67) |
+
+- Kept. Level 119's casual result is noisy around the cliff noted in iteration 209.
+- Heroes on 116–119 (win %, average lives): Bramble 96/12.0, Fen 100/13.3, Ember 100/13.3, Wren 100/14.5, Sorrel 100/10.8, Hazel 88/11.0. Hazel is lowest but within range.
+- Endless (3 seeds): Stepping Stones 17.3/11.3/17.0, Kingfisher Falls 17.3/14.3/17.0.
+  - The region has no home boss until 120, so the first wall comes later than in Rustrock.
+  - The novice is not an outlier here.
+**Iteration 209**: 119 Kingfisher Falls (12 seeds): hpMult 1.7 → 33/17/0, 1.55 → 92/25/0, 1.45 → 92/50/0.
+**1.4 → 100/67/0** (kept: the fourth-level band). The casual strategy falls off a cliff above 1.4.
+**Iteration 208**: 118 Millwheel Race (12 seeds): hpMult 1.65 → 67/50/0, 1.5 → 92/67/0, 1.42 → 100/67/0.
+**1.35 → 100/83/0** (kept: the third-level band).
+**Iteration 207**: 117 Otterslide Bend (12 seeds): hpMult 1.65 → 58/17/0, 1.5 → 92/25/0, 1.4 → 100/67/0, 1.35 → 100/100/0.
+**1.3 → 100/92/0** (kept: the second-level band). The casual strategy drops off sharply here; soaked groups shrug off its spells.
+**Iteration 206**: 116 Stepping Stones (12 seeds).
+- With the first numbers (bubble every 5 s on 4 allies; surge every 6 s, 70 px, 100 px radius), even the expert won only 8–17% at hpMult 1.4–1.8. Leaks showed pikes surging whole groups past the defences, and stacking surges were brutal on the short second road.
+- Eased to bubble 6 s / 3 allies and surge 8 s / 55 px / 90 px radius. Then 1.2 → 100/92/50, 1.3 → 100/100/25, 1.35 → 100/100/8, 1.4 → 100/83/25.
+- **1.25 → 100/100/25** (kept: the opener band, with the novice a little low).
+**Iteration 205** (POLISH + BALANCE), Rustrock sweep at 6 seeds (expert/casual/novice):
+
+| Level | hpMult | Result |
+|---|---|---|
+| 111 | 1.4 | 100/100/33 |
+| 112 | 1.85 | 100/100/33 |
+| 113 | 1.95 | 100/83/0 |
+| 114 | 2.0 | 67/67/0 (12 seeds gave 83/67) |
+| 115 | 2.2 | 83/83/0 |
+
+- The finale at 18 seeds: 2.2 → 78/72/6, 2.25 → 72/72/6. The expert and casual strategies score alike on this map, so 2.2 was kept: the expert is in the boss band and casual is 9 points over it.
+- Heroes on 111–115 (win %, average lives): Bramble 90/12.6, Fen 90/12.1, Ember 90/12.0, Wren 93/10.7, Sorrel 93/10.2, Hazel 83/10.7. The spread is fine.
+- Endless (3 seeds): Redstone 14/14/19, Spire 14/14/25.
+  - `endless-wall.ts` shows the expert and casual walls are the map's home boss (Rustcoil comes first in the boss rotation). It takes all 20 lives at about wave 12–15.
+  - Other regions behave the same (Crown of the Prairie 13/13/19, Great Barn 11/11/11), so Rustcoil is not an outlier.
+  - The novice strategy (fewer, fully upgraded arrow towers) stays the endless outlier. It is a strategy artifact (upgrades scale better than spreading out); still a watch item.
+**Iteration 204** (raid-balance, Stronghold column; before → after): Lodge 3 1.0★ 49% → 0.7★ 44%, Lodge 3 + Mender 1.5★ 54% → 1.4★ 50%,
+Lodge 3 + Moles 1.0★ 43% → 1.2★ 45%. The first try (95 px reach, 12 dps) hit the Mender army harder (1.3★), so it was eased to 80 px / 9 dps.
+Strongholds are meant to need a counter, and healers and tunnellers are that counter. The Outpost and Warren columns are unchanged.
+**Iteration 203**: 115 The Rattling Spire (12 seeds): hpMult 1.55–1.75 → 100/100/83+ (far too easy: the shared middle stretch
+sits between many pads), 2.3 → 67/58/0, 2.6 → 42/33/0. **2.2 → 75/67/0** (kept: the boss band; the finale guard passes).
+**Iteration 202**: 114 Sunset Mesa (12 seeds): hpMult 1.85 → 100/92/17, 2.15 → 92/50/0. **2.0 → 83/67/8** (kept: the
+fourth-level band).
+**Iteration 201**: 113 Hollowrock Arches (12 seeds): hpMult 1.55 → 100/100/8, 1.7 → 100/100/0, 1.85 → 100/92/0,
+2.05 → 92/67/0. **1.95 → 100/83/0** (kept: the third-level band).
+**Iteration 200**: sweep of levels 103–112 at 6 seeds (expert/casual/novice):
+
+| Level | Result | Level | Result |
+|---|---|---|---|
+| 103 | 100/67/0 | 108 | 100/83/0 |
+| 104 | 100/67/0 | 109 | 100/50/0 |
+| 105 (boss) | 83/83/0 | 110 (boss) | 67/33/0 |
+| 106 | 100/100/67 | 111 | 100/100/33 |
+| 107 | 100/100/0 | 112 | 100/100/33 |
+
+Every reading is within a seed or two of its 12-seed tuning, so nothing changed.
+**Iteration 199**: 112 Rattlesnake Narrows (12 seeds): hpMult 1.4–1.55 → 100/100/100, 1.7 → 100/100/92, 1.8 → 100/100/25,
+1.9 → 100/83/0, 2.0 → 92/42/0, 2.3 → 25/8/0. **1.85 → 100/100/33** (kept). It's a touch easier than the second-level band
+(100/92/0–17), but the cliff past 1.9 is steep enough to prefer the gentle side.
+**Iteration 198**: 111 Redstone Gulch (12 seeds): hpMult 1.6 → 100/100/0, 1.8 → 100/100/0. **1.4 → 100/100/42**
+(kept: exactly the opener band, first try).
+**Iteration 196**: 110 The Great Barn (12 seeds): 1.5 → 100/58/0, 1.6 → 100/33/0, 1.7 → 75/17/0, 1.9 → 50/8/0,
+2.1 → 17/0/0. **1.65 → 83/33/0** (kept): in the boss band, and seeds 1–3 give 2/3 expert wins, so the finale guard
+passes. The 30% boss tithe squeezes casual hard: it drops from 58 to 33 between 1.5 and 1.6.
+**Iteration 195**: hero comparison on Wolds levels 107–109: Bramble, Fen, Ember, Wren and Hazel 100%, Sorrel 94% (she has
+the fewest lives, as her heals do little against tramples). The tightest spread yet, so no changes.
+**Iteration 194**: 109 Harvest Moon Barns (12 seeds): hpMult 1.65 → 75/25/0, 1.8 → 42/17/0. **1.5 → 100/67/0** (kept:
+the fourth-level band, though casual drops fast above it).
+**Iteration 193**: 108 Millrace Fields (12 seeds): hpMult 1.45 → 100/100/0, 1.55 → 100/92/0, 1.58 → 100/67/0,
+1.6 → 92/67/0, 1.75 → 58/33/0. **1.56 → 92/83/0** (kept: the third-level band). The casual cliff between 1.55 and 1.58
+is steep.
+**Iteration 192**: 107 Sheepfold Commons (12 seeds): hpMult 1.6 → 92/83/0, 1.7 → 92/75/0, 1.9 → 67/33/0, 2.1 → 42/0/0.
+**1.5 → 92/92/0** (kept: in the second-level band). The expert again stalls at 92: Plough Ox tramples break its
+choke-point hero, the same ceiling as level 106.
+**Iteration 191**: 106 Hedgerow Lane (12 seeds, expert/casual/novice).
+- First draft (ox 900 hp, trample 30, tithe 30%): 1.3 → 58/42/83, 1.5 → 33/0/17. The ox flattened the soldier-heavy
+  smart builds and the tithe starved their economy; the arrow novice did best.
+- Eased the ox to 650 hp and trample 20, and the tithe to 20%. That swung to trivial: 1.2–1.5 → 100/100/100.
+- Retuned the multiplier: 1.8 → 92/100/100, 1.95 → 100/100/67, 2.0 → 83/100/67, 2.1 → 83/100/17, 2.4 → 92/100/0.
+  **2.05 → 92/100/50** (kept: near the opener band).
+- The novice's cliff between 1.95 and 2.1 is steep, and the expert can't quite reach 100 here because tramples break its
+  choke-point hero. Watch level 107.
+**Iteration 190**: the two levels flagged as possible drift in 185, rechecked at 12 seeds: Queenscomb 83/75/0 and
+Windfluff 100/100/33. Both match their tuning exactly, so 185's readings were 6-seed noise.
+- Hero comparison on Thistledown levels 102–104: Ember 100%, Bramble/Fen/Sorrel/Hazel 94%, Wren 83% (lowest again; the
+  marmot alarm punishes her many small hits). The spread is fine, so no changes.
+**Iteration 189** (dailies at DAILY_HP_EASE, levels 9/25/45/65/85 × 2 seeds, one twist each):
+- Swift Horde: expert 90%, casual 70%. Thick Hides: 60% / 60%.
+- Prairie Gale at a +30% cap: 90% / 100%, gentler than the other harmful twists.
+- Raised the cap to **+50%: 90% / 90%**. It's in line with Swift Horde for the expert; casual still copes a little better,
+  because any hit resets the gale.
+**Iteration 188**: 105 Crown of the Prairie (12 seeds): 1.6 → 100/100/0, 1.75 → 100/92/0, 1.9 → 92/75/0,
+2.05 → 83/75/0. **2.2 → 75/67/0** (kept): the expert is at the bottom of the boss band and seeds 1–3 give 2/3 expert wins,
+so the finale guard passes. Casual sits just above its band (67 against 33–63). The spread-out layout lets casual
+coverage catch up with the expert's, so the two strategies stay close.
+**Iteration 187**: 104 Seedstorm Ridge (12 seeds; at x=850 the top entry gave 1.6 → 92/75, 1.75 → 75/42, 1.9 → 33/42).
+With the entry at x=820: 1.55 → 100/83/0, 1.65 → 92/67/0. **1.6 → 100/67/0** (kept: the fourth-level band).
+**Iteration 186**: 103 Tumbleweed Flats (12 seeds): hpMult 1.45 → 100/92/0, 1.5 → 100/92/0, 1.55 → 83/92/0,
+1.6 → 100/67/0, 1.8 → 50/42/0. **1.52 → 92/83/0** (kept: the third-level band). Spreading the road out brought the
+multiplier back to the region's normal range (102 needed 2.32).
+**Iteration 185**: sweep of levels 91–102 at 6 seeds (expert/casual/novice):
+
+| Level | Result | Level | Result |
+|---|---|---|---|
+| 91 | 100/100/50 | 97 | 100/100/0 |
+| 92 | 100/100/0 | 98 | 100/83/0 |
+| 93 | 83/67/0 | 99 | 83/50/0 |
+| 94 | 67/67/0 | 100 (boss) | 83/67/0 |
+| 95 (boss) | 83/50/0 | 101 | 100/100/67 |
+| 96 | 67/83/33 | 102 | 83/100/0 |
+
+All sit within about one seed of their 12-seed tuning, so nothing changed. Queenscomb (94) reads low this time
+(12-seed: 83/75), and the novice on Windfluff (101) reads high (12-seed: 33). Both are noise at 6 seeds; recheck both at
+12 seeds if a future pass sees the same drift.
+**Iteration 184**: 102 Whistling Downs (12 seeds). The tight zig-zags put a lot of road under every pad:
+1.3–1.55 → 100/100/100 (even the novice never lost), 2.0 → 100/100/0, 2.3 → 100/100/0, 2.35 → 100/83/0, 2.4 → 92/75/0,
+2.48 → 75/75/0, 2.6 → 58/67/0. **2.32 → 92/92/0** (kept: in the second-level band). That's the highest hpMult in the
+campaign: dense coverage, not weak enemies. Future layouts should spread the road out rather than lean on hpMult.
+**Iteration 183**: 101 Windfluff Rise (12 seeds): hpMult 1.3 → 100/100/25, 1.4 → 100/92/33, 1.55 → 100/83/17,
+1.7 → 100/83/0. **1.35 → 100/100/33** (kept: exactly the opener band). The low hpMult is because the Bloomdoe heals and the
+Tumblehog rush add a lot of effective health on top of the multiplier.
+**Iteration 182** (raid sim): with the first mole stats (240 hp, 30 damage), 'Lodge 3 + Moles' scored 0.9★ 42% on the
+Stronghold, against 1.0★ 49% for the standard Lodge 3 army. Raised to **320 hp, 44 damage**: 1.0★ 43%, and the totem falls
+in 14 of 20 Stronghold raids (standard army: 12 of 20). It's a specialist: more HQ stars, a little less total destruction.
+**Iteration 181**: 100 Heart of the Glimmerbog (expert/casual/novice).
+- 12 seeds: 1.7 → 92/75/0, 1.75 → 83/75/0, 1.8 → 75/75/0, 1.85 → 67/67/0, 2.0 → 33/25/0.
+- **1.75 is kept**: the expert's 83 sits in the boss band, and seeds 1–3 give 2/3 expert wins, so the finale guard passes.
+  Casual sits a little above the band (75 against 33–63), because the lure makes casual's simple first-target play
+  less punishing than usual. Accepted, since the cliff past 1.8 is steep.
+**Iteration 180**: hero comparison on Glimmerbog levels 97–99: Fen, Ember and Wren 94%, Bramble 89%, Sorrel and Hazel 83%.
+A tight spread, so no changes.
+- Endless, 3 seeds (waves survived, expert/casual/novice): Hivegate 13.0/12.7/24.7, Lilypad 15.3/18.0/22.0.
+- The arrow-and-magic novice build again outlasts the smart mixed builds on both new maps. Likely causes: Honeypaw glaze
+  and Mudskipper dives blunt the soldier towers the adaptive mix leans on, while Lanternfrog lures and Hexguard shields
+  hurt arrows less over long runs.
+- Endless is open-ended, so a cheap build lasting ~22–25 waves is fine. It's logged as a watch item: if a future pass sees
+  this spread grow past ~2×, give endless tiers an extra anti-arrow enemy rather than nerfing the campaign traits.
+**Iteration 179**: 99 Sunken Lantern Shrine (12 seeds): hpMult 1.65 → 100/83/0, 1.95 → 58/50/0. **1.8 → 92/67/0** (kept:
+the fourth-level band, first try).
+**Iteration 178**: 98 Witchlight Hollow (12 seeds): hpMult 1.45 → 100/100/0, 1.6 → 100/92/0, 1.63 → 100/83/0,
+1.67 → 100/83/0, 1.75 → 100/33/0. **1.65 is kept** (it lies between 1.63 and 1.67, both 100/83/0, so it is the
+third-level band). Watch the steep casual drop past 1.7.
+**Iteration 177**: 97 Reedwater Crossing (12 seeds): hpMult 1.45 → 100/100/0, 1.75 → 100/83/0. **1.6 → 100/92/0** (kept:
+exactly the second-level band, first try).
+**Iteration 176**: 96 Lilypad Landing (12 seeds, expert/casual/novice).
+- First draft: 1.4 → 67/100/83. Oddly the expert did worst. Leak logs showed Lanternfrogs and Hexcroaks from waves 5–7
+  slipping through: the expert's smart specs and early wave calls suffer most when lures pull its fire and hexes soften
+  its best towers.
+- Fixes: Lanternfrog hp 460 → 400, and the frog/hex counts in waves 5–7 and 13 trimmed.
+- After that: 1.45 → 100/100/92, 1.55 → 92/100/83, 1.6 → 92/100/75, 1.75 → 83/92/25. **1.7 → 83/92/33** (kept: the
+  novice sits in the opener band and casual is near it). The expert at 83 is below the usual ~100 because this region's
+  traits punish clever targeting. That is deliberate and documented; watch it on the next levels.
+**Iteration 175**: Honeycomb sweep, 12 seeds (expert/casual/novice): 91 100/100/33, 92 100/100/0, 93 92/83/0, 94 83/75/0,
+95 (boss) 92/58/0. Every level is in its band, so nothing changed.
+- Hero comparison on 93–95 (the hard end of the region): Ember 94%, Bramble 83%, Fen/Sorrel/Hazel 78%, Wren 72%. Wren (a
+  quick single-target archer) is lowest because Hexguard shields and Goldwing's parry eat her shots. That's the region's
+  lesson, and she is still within ~20 points of the best, so she is left alone.
+- Endless (3 seeds, waves survived): Hivegate Meadow expert 13.0, casual 12.7, novice 24.7; Ropebridge Reach about 14 for
+  all three. The novice's arrow-heavy build lasting much longer on Hivegate is an outlier worth watching: endless home-turf
+  mixes there include many Waxbacks, and steady arrow volleys crack Hexguards. Not tuned yet; noted for the next endless pass.
+**Iteration 173**: 95 Throne of the Golden Hive (expert/casual/novice). A very steep cliff:
+- 12 seeds: 1.5 → 100/100/42, 1.8 → 100/100/0, 1.86 → 100/83/0, 1.88 → 92/58/0, 1.92 → 75/50/0, 2.0 → 75/50/0,
+  2.2 → 25/17/0.
+- 1.92 failed the finale guard (the expert won seeds 1–3 only once). **1.88 is kept**: 92/58 sits in the boss band and the
+  expert wins 2 of seeds 1–3, so the guard passes, but only just. If waves or the boss change, re-check this level first.
+**Iteration 172**: 94 Queenscomb Terraces (12 seeds, expert/casual/novice): with the first pad layout, 1.35 → 100/100/17,
+1.45 → 92/83/0, 1.55 → 83/75/0.
+- Moving the pad from behind the exit gate to (1140,270) made it easier: 1.5–1.6 → 100/92–100/0, 1.7 → 83/100/0,
+  1.9 → 67/50/0.
+- **1.8 → 83/75/0** (kept; the fourth-level band is 83–100 / 67–75). Applying the lessons from level 93 up front
+  (heavy groups on the long road, gentler early waves) meant the first draft needed no wave edits.
+**Iteration 171**: 93 Waxworks Hollow (12 seeds). The first draft was brutal: 1.5 → 33/0/0.
+- Leak logs (now by wave) showed early Waxback, Honeypaw and Galehound rushes on the short top road and waves 4–6 overloading
+  a thin early economy.
+- Fixes: fast and armoured groups moved to the long road, waves 3–8 thinned, a pad added at the start of the left road, and
+  start coins raised 1,000 → 1,150.
+- After that: 1.6 → 75/75/0, 1.5 → 83/75/0, **1.4 → 92/83/0** (kept; the third-level band is 92–100 / 75–83).
+**Iteration 170**: sweep of levels 86–92 at 6 seeds (expert/casual/novice): 86 100/100/33, 87 100/100/0, 88 100/50/0,
+89 100/67/83, 90 (boss) 100/50/0, 91 100/100/50, 92 100/100/0.
+- Vinefall's 50% casual at 6 seeds was noise: at 12 seeds it reads 75% for hpMult 1.5, 1.55 and 1.6 alike, so it stays at 1.6.
+- Hero comparison on levels 90–92: every hero won 100% (average lives: Bramble 15.1, Ember 14.9, Hazel 14.2, Fen 14.0,
+  Wren 13.7, Sorrel 11.7). Sorrel is still the weakest but within range. No changes.
+**Iteration 169**: 92 Clovercomb Rise (12 seeds): hpMult 1.45 → 100/100/0, 1.55 → 100/100/0, 1.6 → 100/83/0, 1.75 → 92/67/0.
+**1.58 → 100/100/0** (kept; the second-level band is 100/92/0–17).
+**Iteration 168**: 91 Hivegate Meadow, 12 seeds (expert/casual/novice).
+- First pass at hpMult 1.7: 50/33/0 (1.85: 17/8/0). The novice fell at wave 6: the short top road plus heavy early waves of
+  wax and shields.
+- Eased waves 1–6 (fewer enemies, Shellbacks and Reedguards moved to the long road) and the wax (0.45/0.25 → 0.4/0.2).
+- After that: 1.4 → 100/100/42, 1.5 → 100/100/50, 1.6 → 100/92/8. **1.55 → 100/100/33** (kept; it's the opener band).
+**Iteration 167** (raid sim, stars and destruction): the first try, 70 damage with 2 hives in Strongholds, cut the Lodge 3
+army's Stronghold score from 1.1★ 48% to 0.5★ 41%. At **45 damage, radius 100, one hive per camp**: Warren Lodge 2 1.7★ 67%
+(was 1.8★ 70%), Lodge 3 3.0★; Stronghold Lodge 3 1.0★ 49% (was 1.1★ 48%), Lodge 3 + Mender 1.5★ 54% (was 1.6★ 52%).
+The Mender army copes best with the swarm, which is the intended counter.
+**Iteration 166**: 90 Crown of the Oldest Tree (12 seeds, expert/casual/novice): hpMult 1.95 → 58/25/0, 1.85 → 58/33/8,
+**1.75 → 75/50/0** (kept; the boss band is 75–92 for the expert and 33–63 for the casual). It sits below Veilwhisker's 2.22
+because Crownmane's snatches strip soldiers and the slow-heavy strategies rile him.
+**Iteration 165**: hero comparison (expert strategy, levels 86–89, 3 seeds each): Bramble 96% (avg 13.3 lives), Fen 100% (12.9),
+Ember 100% (14.0), Wren 100% (14.1), Sorrel 83% (10.0), Hazel 100% (13.0). Sorrel is the weakest here because its heals matter
+less against Mourner grief and Harrier snatches, but it stays inside the 80–100% spread, so it is unchanged.
+**Iteration 164**: 89 Thunderbough Heights: 92/50/75 at hpMult 1.8, 50/8/25 at 2.05, 100/100/92 at 1.55, 100/83/92 at 1.65, and **1.72 → 83/67/83** (kept;
+expert and casual in the fourth-level band). The novice beats the casual here because it builds only arrows and magic, never slows, and so never
+riles the Howlers. That is the Highcanopy's lesson working as intended, so the novice is left high.
+
+**Iteration 163**: 88 Vinefall Crossing: 92/50/0 at hpMult 1.8 and 58/25 at 2.05. The casual's leaks were mostly Howlers (riled by its frost) and
+Thunderhoofs. **1.6 → 100/75/0** (kept, third-level band).
+
+**Iteration 162**: 87 Hawkwatch Platforms: **1.8 → 100/100/0** (10.7 lives; kept, second-level band); 2.1 gave 83/33/0.
+
+**Iteration 161**: 86 Ropebridge Reach: 100/100/75 at hpMult 1.6, 100/100/50 at 1.8, 100/83/25 at 1.95, 100/75/25 at 2.1, and **1.87 → 100/100/42**
+(kept, opener band).
+
+**Iteration 160**:
+- Hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73/80/85, 6 seeds each): Ember 92% · Fen 90% ·
+  Wren 85% · Hazel 78% · Bramble 75% · Sorrel 75%. After the +2 attack buffs: Bramble 77%, Sorrel 78%. The spread is
+  77–92%; the boss levels 80 and 85 pull everyone down a little.
+- Opener spot check (12 seeds; expert / casual / novice): 60 Mirage Flats 100/100/50 · 70 Blackwake 100/100/42 ·
+  76 Amberwood Gate 100/100/58 → hpMult 1.6 → **1.63** gives 100/100/42 (1.66 gave 25%) · 81 Lanternstep Rise
+  100/100/17, kept at 1.6 (1.54 gave 67%, 1.57 gave 75%: a noisy cliff).
+
+**Iteration 159**: Hazel in the hero comparison (expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds): **79%** (avg 10.7 lives),
+inside the others' 79–90% range. The novice and casual strategies don't use her, so the level bands are unchanged.
+
+**Iteration 156**: 85 Shrine of a Thousand Lanterns: 100/100 at hpMult 1.7, 100/58 at 2.0, 100/42 at 2.2, 92/25 at 2.24, 83/8 at 2.27, 58/8 at 2.35.
+Very steep, so **2.22 → 100/33/0** was kept (casual in the boss band; expert slightly above). Finale guard: the expert won 4 of 4 seeds.
+
+**Iteration 155**:
+- Mistwreath per-level bands (iterations 151–154): 81 100/100/33 · 82 100/100/0 · 83 92/75/0 · 84 92/75/0.
+- Hero comparison (expert strategy, levels 81–84, 6 seeds each): Ember 100% · Wren 100% · Bramble 96% · Fen 96% ·
+  Sorrel 96%. A tight spread. The Mistwreath enemies counter tower types (phase and dodge waste single shots, and
+  the ward softens everything) rather than counter heroes.
+- Finale guard: all 16 region finales pass.
+- Endless: Lanternstep Rise 22/15/21 and Paper Lantern Climb 29/16/22 waves (expert / casual / novice). These run
+  longer than other maps because the region has no boss yet, so `endlessBosses` falls back to the rotation's first
+  (easiest) boss at wave 10. The finale (level 85) will fix this.
+
+**Iteration 154**: 84 Paper Lantern Climb: 100/100 at hpMult 1.7, 100/83 at 1.9, 100/67 at 2.0, 92/50 at 2.1, 67/17 at 2.3. **2.0 kept**; after
+the pad move it reads 92/75/0 (fourth-level band).
+
+**Iteration 153**: 83 Fogbell Terraces: 83/50/0 at hpMult 1.8, 67/42 at 2.05, 100/58 at 1.6; the casual's leaks were mostly Silkcranes. After
+trimming crane counts: 100/75 at 1.6, and **1.7 → 92/75/0** (kept, third-level band).
+
+**Iteration 152**: 82 Teahouse Switchback: 100/100/0 at hpMult 1.6 (17.8 lives, too comfy), 92/100 at 1.85, 75/75 at 1.95, 75/67 at
+2.05, and **1.8 → 100/100/0** (12.3 lives; kept, second-level band).
+
+**Iteration 151**: 81 Lanternstep Rise at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/92/0.
+
+**Iteration 150** (daily twists; expert / casual, levels 6/21/36/51/66/77 unless noted):
+- Twists alone at full health: none 100/97 · Golden Harvest 100/100 · Thick Hides 25/11 · Swift Horde 50/33 ·
+  Ironbark +15% 36/19 (+6% → 94/81, +8% → 86/64).
+- At 0.75× health: Thick Hides + Swift 21/4 and Ironbark + Frenzy 58/38. At 0.65×: 54/25 and 83/75. Helpful pairs
+  hit 100% at either ease. **0.7 picked.**
+- The 20 real dailies from 2026-11-07 (all levels unlocked, 3 seeds): expert **62%**, casual **57%**. Mixed pairs on
+  early and mid levels are wins. Double-hard pairs on late levels (Thick Hides + Frenzy on 65, Thick Hides + Hero on
+  Leave on 61 and 67) stay out of reach for the sim, which suits a daily stretch.
+
+**Iteration 146** (raids, smart deploy, 10 seeds): Lodge 2 + Otters (6 brawlers, 5 slingers, 3 sappers, 3 otters) earns 3.0★ / 1.9★ /
+0.2★ on Outpost / Warren / Stronghold, against 3.0★ / 1.8★ / 0.4★ for the standard Lodge 2 army. Average loot rises from
+740 to 835 per resource on Outposts and from 1,207 to 1,611 on Warrens (+33%). The first draft (110 hp, 16 damage, no loot
+bonus, and not deployed by the sim) scored 1.1★ on Warrens.
+
+**Iteration 145** (full sweep, all 80 levels, 12 seeds; expert / casual / novice): every level is in band for expert and casual.
+- Region openers: expert 100%, casual 92–100%.
+- Bosses: expert 75–92%, casual 33–67%.
+- Late regions (11–16): the novice stays at 0–42% outside the openers.
+- The iteration 131 Bramble buff lifted the novice on some early and mid levels: 7 Glacier Hold 100%, 21 Tidepool
+  Terraces 100%, 31 Updraft Stair 58%, 33 Three Winds 67%. These are early regions where the novice winning is
+  fine, so no retunes.
+- Finale guard: the expert won all 16 region finales in at least 3 of 4 seeds.
+
+**Iteration 142** (endless with home turf, `endless-balance.ts`, 3 seeds; waves held, expert / casual / novice): Mossgate 12/12/12 ·
+Murkmaw's Den 12/12/18 · Frostpeak 12/12/12 (was 16–19; Grimtusk now arrives at wave 10) · Duskcap 12/12/21 · Boilerworks
+13/13/14 · Mirage Flats 14/14/20 · Amberwood Gate 13/13/25 · Heart of the Amberwood 14/14/26. Expert and casual runs
+still end within the usual 11–22 waves. The wave-10 home boss is now the main wall, which suits a "beat your region's
+boss" goal.
+
+**Iteration 141** (raids, `raid-balance.ts`, smart deploy): Lodge 1 1.8★/67% · 0.2★/25% · 0.0★/16%; Lodge 2 3.0★/100% ·
+1.8★/70% · 0.4★/34%; Lodge 3 3.0★/100% · 3.0★/100% · 1.1★/48%; Lodge 3 + Mender 3.0★ · 2.8★ · 1.6★/52%. Compared with
+iteration 113, the Sludge Pits shave Lodge 2 vs Warren (1.9 → 1.8★) and Lodge 3 vs Stronghold (1.2 → 1.1★). Each lodge
+level keeps a fair camp, and the Stronghold remains the stretch goal.
+
+**Iteration 140**:
+- Amberwood per-level bands (from iterations 133–138): 76 100/100/33 · 77 100/100/17 · 78 100/75/0 · 79 92/75/0 ·
+  80 75/42/0 (boss).
+- Hero comparison (expert strategy, levels 76–80, 6 seeds each): Fen 97% · Ember 97% · Wren 97% · Sorrel 77% ·
+  Bramble 70%. The Amberwood favours ranged and magic heroes because Sapstoats heal off melee blockers and Turnleafs
+  punish one-type damage. That's the intended counterplay, so no change; the overall spread stays healthy.
+- Endless (`scripts/endless-balance.ts`): expert, casual and novice hold 12–19 waves (Mossgate 12 · Murkmaw's Den
+  12–18 · Frostpeak 16–19 · Duskcap 15–18), the same as earlier passes. The new wave-64/66 tiers and Rustantler only
+  matter for long runs.
+
+**Iteration 138**: 80 Heart of the Amberwood: 8/0/0 at hpMult 2.0 and 67/17 at 1.7 (leaks: Sapstoats, Turnleafs, Glareflies),
+92/58 at 1.55, and **1.6 → 75/42/0** (kept, boss band). Finale guard: the expert won 3 of 4 seeds.
+
+**Iteration 137**: 79 Emberleaf Ridge: 100/83/0 at hpMult 1.6, 58/33 at 1.9, 83/83 at 1.76, and **1.7 → 92/75/0** (kept,
+fourth-level band).
+
+**Iteration 136**: 78 Hollow Oak Crossing was 50/17/0 at hpMult 1.8, with Sapstoats on the short road the main leak. After
+moving them to the long road: 67/25 at 1.75, 92/50 at 1.55 (noisy), and **1.6 → 100/75/0** (kept, third-level band).
+
+**Iteration 135** (12 seeds; expert / casual / novice):
+- Sample: 0/1/2 all 100% · 10 Ashfall Gate 100/83/75 · 20 Wrackline Beach 100/100/100 · 30 Windgap Ledge
+  100/92/42 · 40 Boilerworks Gate 100/100/25 · 71–74 unchanged · 75 Amberwood Gate 100/100/33 · 76 Russet Hollow
+  100/100/17.
+- After the Bramble buff, the novice rose on three openers: 50 Windfall Rows 67%, 60 Mirage Flats 67%, 70 Blackwake
+  Moorings 83%.
+  - Mirage Flats: 25% at 1.9, 8% at 2.0, **1.82 → 100/100/42** (kept).
+  - Blackwake Moorings: 17% at 1.68 and at 1.75, **1.64 → 100/100/42** (kept).
+  - Windfall Rows kept at 2.1: raising it to 2.25–2.35 dropped casual to 67% before the novice settled.
+- Finale guard (4 seeds): the expert won every region finale in at least 3 of 4 seeds.
+
+**Iteration 134**: 77 Russet Hollow: 92/83/0 at hpMult 1.8, 67/33 at 2.1, 92/100 at 1.7 and 1.65, **1.6 → 100/100/17** (kept,
+second-level band).
+
+**Iteration 133**: 76 Amberwood Gate at hpMult **1.6 → 100/100/33** (kept, opener band); 1.9 gave 100/100/0.
+
+**Iteration 131** (hero comparison, expert strategy, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% → 77%
+after the first buff (Earthshake 85, Wren bolt 18 and ring 36), then **79%** with health 300; Wren 77% → **85%** with
+attack rate 1.15. Both now sit inside the others' 79–90% range. Only the novice strategy uses Bramble, so the tuned
+expert and casual level bands are unchanged.
+
+**Iteration 130** (full sweep, 12 seeds; expert / casual / novice):
+- Levels 0–57 were all in band; spot values: 4 Murkmaw's Den 92/58/83 · 29 Kaleidrax's Spire 83/42/58 ·
+  54 Heart of the Orchard 75/50/0.
+- 58–74: 58 Stormwatch Barrows 83/75/0 · 59 Thunderhead Crown 83/33/0 · 60 Mirage Flats 100/100/42 ·
+  61 Kilnstone Wash 100/92/0 · 62 Last Oasis 100/75/0 · 63 Scorpion Steps 100/67/8 · 64 Wyrmsand Deep 75/50/0 ·
+  65 Coral Shallows 100/92/33 · 66 Inkwater Cove 100/92/0 · 67 Shellbreak Reef 100/75/0 · 68 Tidewrack Lagoon
+  100/67/0 · 69 Crown of the Reef 92/42/0 · 70 Blackwake Moorings 100/100/42 · 72 Gunwale Gauntlet 100/83/0 ·
+  73 Flagship Wake 83/83/8 · 74 The Black Flagship 83/58/0.
+- 71 Powder Row was 100/100/17 at hpMult 2.85, 100/100/17 at 2.9, 83/75/0 at 3.05, and **2.95 → 92/92/8** (kept).
+- Finale guard (4 seeds): the expert won every region finale in at least 3 of 4 seeds.
+
+**Iteration 127**: 75 The Black Flagship went 100/100/33 at hpMult 2.0, 100/100/0 at 2.5, 92/92 at 2.65, 83/67 at 2.72, 67/75 at 2.8, and **2.76 → 83/58/0** (kept; boss band, finale guard passes).
+
+**Iteration 126**: 74 Flagship Wake was 42/50/0 at hpMult 2.2, with 2-life Ironkeels the main leak. 1.7 gave 100/100/8, 1.97 gave 67/83 (noisy), and **1.9 → 83/83/8** (kept, a fourth-level ramp).
+
+**Iteration 125**:
+- Blackwake, 12 seeds: 71 Blackwake Moorings 100/100/42 · 72 Powder Row 100/100/17 · 73 Gunwale Gauntlet
+  100/83/0.
+- Finale guard: the expert won all 14 region finales in at least 3 of 4 seeds.
+- Hero comparison (expert strategy with each hero, levels 10/20/30/40/50/60/67/73, 6 seeds each): Bramble 75% ·
+  Fen 90% · Ember 90% · Wren 75% · Sorrel 79%. A healthy spread; the new anti-blocker enemies (gunners, kegs) did
+  not sink the melee or support heroes.
+
+No retunes.
+
+**Iteration 124**: 73 Gunwale Gauntlet was **100/83/0** at hpMult 2.0 on the first try; 2.15 gave 83/67 (too steep), so 2.0 was kept.
+
+**Iteration 123**: 72 Powder Row went 100/100/92 at hpMult 1.9 (two long roads and 11 pads are generous), 100/100/75 at 2.4, 100/100/17 at 2.7, and **2.85 → 100/100/17** (kept; casual stays at 100 on this map, like Grubfield Lane).
+
+**Iteration 122**: 71 Blackwake Moorings went 100/83/0 at hpMult 2.0, 100/100/8 at 1.75, and **1.6 → 100/100/42** (kept, the opener target).
+
+**Iteration 120**: 70 Crown of the Reef, after moving Shellsnaps off the north road: 92/75 at hpMult 2.27, 92/42 at
+2.33 (finale guard passes), 75/50 at 2.36 (guard fails) and 75/42 at 2.4 (guard fails). **2.33 kept → 92/42/0.**
+Casual is now in the boss band; the expert is slightly above it, like the other 92% bosses. Coralreach, 12 seeds:
+66 100/92/33 · 67 100/92/0 · 68 100/75/0 · 69 100/67/0 · 70 92/42/0. Lesson: molting runners are "fast packs" too,
+so keep them off short roads.
+
+**Iteration 119**: 70 Crown of the Reef went 100/92/0 at hpMult 2.2, 92/75/0 at 2.27, 75/75 at 2.3 (finale guard fails: expert 1 of 3 test seeds), 67/67 at 2.32, 58/67 at 2.38 and 42/25 at 2.5. Casual tracks the expert here, likely because the slow-washing Tidecallers and ink blunt the expert's tower mix, so there is no setting inside the band that also passes the guard. **2.27 kept** (expert 92, guard passes); casual at 75 sits above the boss band. Worth revisiting in the iteration 120 pass.
+
+**Iteration 118**: 69 Tidewrack Lagoon was 8/0/0 at hpMult 2.4, leaking on both roads. It has only 10 pads, so it needs a much lower multiplier: 1.9 gave 100/42/0 and **1.7 → 100/67/0** (kept, a fourth-level ramp). Pad count matters as much as road length.
+
+**Iteration 117**: 68 Shellbreak Reef went 100/100/0 at hpMult 2.4, 92/67/0 at 2.7, 50/42/0 at 2.9 (a steep curve), and **2.6 → 100/75/0** (kept).
+
+**Iteration 116**: 67 Inkwater Cove went 100/100/8 at hpMult 2.05, 100/100/0 at 2.15 and 2.3, and **2.45 → 100/92/0** (kept). Ink only hides enemies from towers, so the expert's spells and hero keep it from becoming swingy.
+
+**Iteration 115** (full sweep, 12 seeds, 66 levels): levels 1–65 are identical to their last passes (iterations 100,
+105, 110 and 111), so the new traits (mirage, pilfer, crust, molt, cleanse) and the Sorrel/Mender changes caused no
+regressions. 66 Coral Shallows: 100/92/33. Bosses: 5 92/58/83 · 10 83/67/42 · 15 83/33/67 · 20 83/67/0 ·
+25 100/58/0 · 30 83/42/58 · 35 100/50/17 · 40 92/50/0 · 45 83/67/8 · 50 92/67/0 · 55 75/50/0 · 60 83/33/0 ·
+65 75/50/0. No retunes.
+
+**Iteration 114**: 66 Coral Shallows went 100/100/83 at hpMult 1.8, **2.0 → 100/92/33** (kept, the opener target), and 2.15 gave 83/83/17.
+
+**Iteration 111**: 65 Wyrmsand Deep was 83/67/0 at hpMult 2.0 and 75/50/0 at 2.1, but at 2.1 the finale guard failed (expert 1 of 3 test seeds). 2.05 gave 83/75 (guard ok, casual above the band). **2.08 → 75/50/0, guard passes** (kept).
+
+**Iteration 110** (12 seeds, expert/casual/novice): 61 Mirage Flats 100/100/42 · 62 Kilnstone Wash 100/92/0 ·
+63 Last Oasis 100/75/0 · 64 Scorpion Steps 100/67/8. All in band. The expert stays at 100 while casual ramps; the
+Sunscour finale should give the expert its first real test. The finale guard passes: the expert won every one of the
+12 region finales in at least 3 of 4 seeds. No retunes.
+
+**Iteration 109**: 64 Scorpion Steps. The first draft's 1,320px north road leaked Shimmerjacks and Sandpickers by wave 6 (42/0/0). I rerouted it to join at the terrace corner, which gave 83/17 at hpMult 1.8. 1.6 gave 100/42/8, 1.45 gave 100/75/33, and **1.52 → 100/67/8** (kept). Lesson: even ground lights need a long road when they come in packs of 8–14.
+
+**Iteration 108**: 63 Last Oasis was 8/8/0 at first, with fliers leaking on the short north road (the short-road lesson once more, this time with air). Moving every flier group to the long road gave 42/17 at hpMult 2.1, with late Kilnbacks leaking. 1.8 gave 100/67 and 1.65 gave 100/75. The final pack went from 10 Kilnbacks to 8, and **1.7 → 100/75/0** (kept).
+
+**Iteration 107**: 62 Kilnstone Wash went 100/92/0 at hpMult 1.8, 100/100/0 at 1.92 and 2.0, 100/75/0 at 2.1, and **2.05 → 100/92/0** (kept; a steep curve).
+
+**Iteration 106**: 61 Mirage Flats went 100/100/0 at hpMult 2.1, 100/100/8 at 1.9, and **1.75 → 100/100/42** (kept, the opener target).
+
+**Iteration 105**:
+- Thunderhead, 12 seeds: 56 Rainmarch 100/100/42 · 57 Copperhorn Ford 83/83/25 · 58 Forked Lightning 92/83/0 ·
+  59 Stormwatch 83/75/0 · 60 Thunderhead Crown (boss) 83/33/0. All in band.
+- Hero comparison (expert strategy with each hero, levels 10/20/30/40/50/52/57/60, 6 seeds each, wins / average
+  lives): Bramble 63% / 7.4 · Fen 85% / 11.3 · Ember 88% / 11.2 · Wren 67% / 8.0 · **Sorrel 52% / 5.9**.
+- Sorrel tuning: sling 20 and Second Wind 50 gave 88% (on par with the best, too strong). **17 and 40 gave 77% / 9.4**
+  (kept, mid-pack for a support hero).
+- Bramble and Wren trail the ranged heroes as before. Bramble is the novice benchmark hero, so he is left alone.
+
+**Iteration 102**: 60 Thunderhead Crown started at hpMult 2.5 with the boss at 3,000 health, bolting every 5s and
+spawning herds of up to 12. The expert went 0/3, leaking Glareflies on the north track and wave 6–7 Echo Wisps and
+Thunderhooves. Fixes: Glareflies moved to the long road, wave 6 trimmed to 9 wisps and wave 7 to 10 hooves, the boss
+bolts every 7s with a herd limit of 8, and boss health went to 2,800. Tuning: 2.3 gave 33/8, 2.1 gave 67/17, 1.9 gave
+83/25, and **2.0 → 83/33/0** (kept; the casual player mainly loses to the boss itself).
+
+**Iteration 101**: 59 Stormwatch Barrows was **83/75/0** at hpMult 2.1 on the first try (kept, a fourth-level ramp).
+
+**Iteration 100** (full sweep, 12 seeds, expert/casual/novice):
+- Levels 1–50: identical to the last per-region passes (iterations 70–90), e.g. 5 Murkmaw 92/58/83 · 15 Emberdeep
+  83/33/67 · 30 Kaleidrax 83/42/58 · 35 Roc's Aerie 100/50/17 · 45 Engine 83/67/8 · 50 Abyss 92/67/0.
+- Rotbloom: 51 100/92/42 · 52 83/100/17 · 53 100/83/8 · 54 83/67/0 · 55 75/50/0.
+- Thunderhead: 56 Rainmarch 100/100/42 · 57 Copperhorn Ford 83/83/25 · 58 Forked Lightning 92/83/0.
+
+Every boss is in band (expert 75–92, casual 33–67), and every opener is at 100/≥92. No retunes.
+
+**Iteration 99**: 58 Forked Lightning was 100/100/0 at hpMult 1.85 and 100/100/0 at 2.05. **2.2 → 92/83/0** (kept). Converging forks reward central pads, so it needed a higher multiplier than usual.
+
+**Iteration 98**: 57 Copperhorn Ford is 83/83/25 at hpMult 1.95 on the first try (kept).
+
+**Iteration 97**: 56 Rainmarch Downs began with a 900px north road and went 25/42/0, leaking everything on that road (galehounds, gullwings, skitters). I rerouted it to join the west road early (both ≈2,300px), which gave **100/100/42** at hpMult 2.1 (the opener target).
+
+**Iteration 96** (raids, smart deploy, 10 seeds, avg stars / destruction):
+
+| Army | Outpost | Warren | Stronghold |
+|---|---|---|---|
+| Lodge 1 | 1.8 / 67% | 0.4 / 27% | 0.0 / 17% |
+| Lodge 2 | 3.0 / 100% | 1.9 / 75% (was 2.5 / 88%) | 0.6 / 37% |
+| Lodge 3 | 3.0 / 100% | 3.0 / 100% | 1.2 / 47% (was 1.5 / 51%) |
+
+The first shaman (45 heal every 2.5s, 150px, plus an extra building) dropped Lodge 2 vs Warren to 1.5 stars. It was
+toned down, and one Warren hut was traded for the shaman. (raid-balance printing fixed in iteration 113.)
+
+**Iteration 95** (12 seeds, expert/casual/novice): 51 Windfall Rows 100/92/42 · 52 Grubfield Lane 83/100/17 ·
+53 Cider Press Crossing 100/83/8 · 54 Rotroot Hollow 83/67/0 · 55 Heart of the Orchard (boss) 75/50/0. The expert won
+every region finale in at least 3 of 4 seeds (all 11). No retunes.
+
+**Iteration 94**: 55 Heart of the Orchard went 50/75/0 at hpMult 2.2, with gnat swarms on the short north road. I moved them to the long road, which gave 100/92/0. 2.4 gave 83/67, then I reshaped the road away from the HUD and re-tuned: 2.45 gave 67/58, 2.35 gave 83/83, 2.4 gave 83/75, and **2.43 → 75/50/0** (kept, in the boss band).
+
+**Iteration 93**: 54 Rotroot Hollow started at 50/67/0 (hpMult 1.9). 56 of the expert's leaked lives were Galehounds on the short ridge track (the short-road lesson again), so I moved them to the long road, which gave 75/75/0. 1.8 gave 75/67/0, 1.75 gave 92/92/0, and **1.77 → 83/67/0** (kept, a fourth-level ramp).
+
+**Iteration 92**: 53 Cider Press Crossing was 83/50/0 at hpMult 1.95, 100/83/8 at 1.85 (kept) and 100/83/17 at 1.8.
+
+**Iteration 91**: 52 Grubfield Lane at hpMult 2.15 was 67/58/8 (too hard for the region's second level). 1.95 gave 75/83/42 (noisy), 1.85 gave 100/100/17, and **1.9 → 83/100/17**, which I kept. The expert's main leak is Gorgegrubs on the long road, as intended.
+
+**Iteration 90** (12 seeds, expert/casual/novice, Starwell + Orchard): 46 Glimmerpool 100/100/33 · 47 Lantern Hollow
+100/100/25 · 48 Moonring Lake 100/83/0 · 49 Starfall 83/83/0 · 50 Heart of the Abyss (boss) 92/67/0 · 51 Windfall Rows
+100/92/42. All in band, so no retunes. A per-step cache of Barkwarden auras was benchmarked: no measurable gain, and it gave
+stale armor between steps. I reverted it, so `res()` stays exact.
+
+**Iteration 85** (full sweep, 12 seeds, expert/casual/novice): levels 1–30 unchanged from iteration 70 except the
+bottom-pad levels (Cinder 83/67/83, Morrowcap 83/67/0); 31–40 as in iteration 75; 41 Boilerworks 100/100/17 ·
+42 Piston 100/83/8 · 43 Gearwell 83/83/17 · 44 Foundry 83/83/0 · 45 Heart of the Engine 83/67/8 · 46 Glimmerpool
+100/100/33 · 47 Lantern Hollow 100/100/25. No retunes.
+
+**Iteration 75** (camp sweep 31–40, 12 seeds): 31 Windgap 100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 ·
+34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 · 36 Overgrown 100/92/33 · 37 Sunken 100/83/17 · 38 Serpent
+92/92/33 · 39 Idol Courtyard 92/58/33 · 40 Heart of the Ruins 92/50/0. Endless (3 seeds, waves held, expert/casual/
+novice): Mossgate 12/12/12 · Duskcap 15/15/18 · Windgap 17/11/21 · Overgrown 12/12/18.
+
+**Iteration 70** (camp sweep, 12 seeds, expert/casual/novice): unchanged from iteration 65 for levels 1–30; 31 Windgap
+100/92/25 · 32 Updraft 100/75/42 · 33 Spiral 100/75/0 · 34 Three Winds 92/67/50 · 35 Roc's Aerie 100/50/17 ·
+36 Overgrown Causeway 100/100/33 · 37 Sunken Stairs 100/92/17. No retunes needed.
+**Iteration 71:** 38 Serpent Terraces 92/92/33 at hpMult 1.65 (1.5 → 100/100/50, 1.72 → 67/67/17, 1.8 → 58/58/0):
+the steepest curve yet, so it errs easy. After the shifter mix change: Overgrown Causeway 100/92/33, Sunken Stairs
+100/83/17.
+**Iteration 89:** 51 Windfall Rows 100/92/42 at hpMult 2.1 (1.8 → 100/100/100, 2.15 → 100/83/75, 2.4 → 100/42/17).
+**Iteration 88:** 50 Heart of the Abyss 92/67/0 at hpMult 2.45 (1.8 → 92/92/0, 2.1 → 92/92/0, 2.4 → 75/75/0,
+2.55 → 67/67/0, 2.7 → 58/33/0). Expert and casual fall together here, so casual sits a little above the boss band.
+**Iteration 87:** 49 Starfall Gorge 83/83/0 at hpMult 2.0 (1.6 → 100/100/0, 1.9 → 92/83/0, 2.1 → 58/33/0).
+Three Winds after its pad move: 92/58/67 at 1.55.
+**Iteration 86:** 48 Moonring Lake 100/83/0 at hpMult 2.38 (2.1 → 100/100/0, 2.45 → 75/75/0, 2.6 → 58/33/0).
+**Iteration 84:** 47 Lantern Hollow 100/100/25 at hpMult 1.8 (1.5 → 100/100/100, 1.9 → 100/100/0, 2.05 → 100/92/0):
+the novice falls off a cliff (Sparkeels break Bramble's holds).
+**Iteration 83:** 46 Glimmerpool Descent 100/100/33 at hpMult 1.75 (1.6 → 100/100/100, 1.85 → 100/100/25,
+2.0 → 100/100/0).
+**Iteration 81:** 45 Heart of the Engine 83/67/8 at hpMult 1.58 (1.5 → 83/83/17, 1.61 → 75/67/0, 1.65 → 50/58/0,
+1.8 → 0/33/0).
+**Iteration 79:** 44 Foundry Crossroads 83/83/0 at hpMult 1.39 (1.2 → 100/100/33, 1.36 → 83/100/0, 1.45 → 75/83/0,
+1.55 → 42/67/0). The expert trails casual here: likely its branch picks vs. Rivetshells/Cogjammers; check in iter 80.
+**Iteration 78:** 43 Gearwell Shafts 83/83/17 at hpMult 1.42 (1.3 → 100/100/42, 1.5 → 75/58/0, 1.7 → 25/0/0). After
+the bottom-pad moves: Cinder Tunnels 83/67/83, Mirrorpool 100/75/58, Morrowcap 83/67/0, Tidepool 92/83/100,
+Updraft 100/75/42.
+**Iteration 77:** 42 Piston Yard 100/83/8 at hpMult 1.28 (1.2 → 100/100/8, 1.35 → 100/75/0, 1.5 → 75/42/0). The
+novice is weak here at any hpMult: jammers slow its towers and bolting Steamrunners slip past Bramble.
+**Iteration 76:** 41 Boilerworks Gate 100/100/~33 at hpMult 1.95 (1.85 → 100/100/83, 1.93 → 100/100/58, 1.96 →
+100/100/17, 2.2 → 92/75/0). The novice falls off a cliff here; expert/casual stay at 100% until ~2.1.
+**Iteration 73:** 40 Heart of the Ruins 92/50/0 at hpMult 1.56 (1.4 → 100/92/0, 1.6 → 83/33/0, 1.7 → 67/25/0).
+**Iteration 72:** 39 Idol Courtyard 92/58/33 at hpMult 1.22 (1.15 → 100/83/17, 1.3 → 92/33/0).
+
+**Iteration 65** (camp sweep, 12 seeds, expert/casual/novice, deterministic): 1 Mossgate 100/100/100 · 2 Gloomfen
+100/100/100 · 3 Thornwood 100/100/100 · 4 Mirelake 100/92/75 · 5 Murkmaw 100/75/83 → **92/58/83 (2.45)** · 6 Frostfern
+100/100/100 · 7 Icicle 100/83/0 · 8 Glacier 92/92/92 · 9 Rimewood 100/100/92 · 10 Frostpeak 100/67/67 → **83/67/42
+(1.85)** · 11 Ashfall 100/83/75 · 12 Cinder 75/75/58 → **83/75/75 (1.75)** · 13 Smoulder 100/83/100 · 14 Obsidian
+92/83/0 · 15 Heart 83/33/67 · 16 Duskcap 100/92/100 · 17 Glowspore 92/92/0 · 18 Mirrorpool 100/75/58 · 19 Hollowroot
+92/75/0 · 20 Morrowcap 75/75/0 · 21 Wrackline 100/100/100 · 22 Tidepool 92/83/100 · 23 Saltspray 92/75/0 · 24 Wreckspiral
+92/92/0 · 25 Saltjaw 100/58/0 · 26 Glassfall 100/100/92 · 27 Prism 100/75/8 · 28 Shattered 100/75/0 · 29 Glassteeth
+100/83/0 · 30 Kaleidrax 83/42/58 · 31 Windgap 100/92/25 · 32 Updraft 100/83/42 · 33 Spiral 100/75/0 · 34 Three Winds
+92/58/33. Bosses are steep: ±0.15 hpMult can move expert 25 points (Frostpeak 1.75 → 2.0: 100 → 58%). The novice
+(Bramble) stays strong on bosses and converging maps (Murkmaw, Heart, Kaleidrax, Tidepool, Smoulder).
+
+**Iteration 61** (deterministic sim, 12 seeds): 31 Windgap Ledge 100/92/25 at hpMult 1.7 (2.2 was 75/58/0).
+Galehounds were the main leak; Cloudrams on the north road second.
+**Iteration 62:** 32 Updraft Stair 100/83/42 at hpMult 1.4 (first draft 75/0/0 at 1.6). Lesson: on a map where one
+road is far shorter than the other, keep fast packs off the short road.
+**Iteration 63:** 33 Spiral Gale 100/75/0 at hpMult 2.6 (sweep: 1.4 → 100/100/100, 2.1 → 100/100/8, 2.4 → 100/92/0,
+2.8 → 100/50/0, 3.2 → 42/17/0).
+**Iteration 64:** 34 Three Winds 92/58/33 at hpMult 1.55 (1.4 → 100/92/100, 1.5 → 92/67/42, 1.9 → 17/0/0). The novice
+(Bramble) holds the merge well, so it outscores its usual curve here; regen enemies want the longest road.
+**Iteration 66:** 35 Roc's Aerie 100/50/17 at hpMult 1.95 (1.72 → 100/83/92, 2.03 → 100/8/8, 2.1 → 83/17/0). The
+first Zephyrax (hp 2900, short landings) was unbeatable (0/8/25 at 1.6); now hp 2200, speed 18, MR 0.35, lands 3.5 s
+of every 7.5 s. Hawkeye archers are the counter: with Volley the expert won only 50% at 1.72.
+**Iteration 68:** 36 Overgrown Causeway 100/100/33 at hpMult 1.4 (first draft 67/83/0 at 1.5 from armored packs on
+the short north road; after the fix 1.5 → 100/100/8, 1.7 → 100/50/0).
+**Iteration 69:** 37 Sunken Stairs 100/92/17 at hpMult 1.5 (first draft 92/58/0 at 1.4). After the HUD pad moves:
+Updraft Stair 100/75/42 (was 100/83/42), Three Winds 92/67/50 (was 92/58/33); others unchanged.
+
+**Iteration 60** (`balance.ts 6` full sweep, expert/casual/novice): 1–3, 6 at 100/100/100 (left easy on purpose:
+first levels of a region) · 4 Mirelake 100/83/67 · 5 Murkmaw 83/50/67 · 7 Icicle 100/83/0 · 8 Glacier 100/83/83 ·
+9 Rimewood 100/100/83 · 10 Frostpeak 83/83/67 · 11 Ashfall 83/100/83 · 12 Cinder 100/83/50 · 13 Smoulder 100/83/100 ·
+14 Obsidian 100/83/0 · 16 Duskcap 100/83/100 · 17 Glowspore 83/83/0 · 18 Mirrorpool 100/50/83 · 19 Hollowroot 100/83/0 ·
+20 Morrowcap 83/83/0 · 21 Wrackline 100/100/100 · 22 Tidepool 100/83/100 · 23 Saltspray 100/83/0 · 24 Wreckspiral
+83/100/0 · 26 Glassfall 100/100/83 · 27 Prism 100/83/0 · 28 Shattered 100/67/0 · 29 Glassteeth 100/100/0 ·
+30 Kaleidrax 83/33/50. Retuned (12–16 seeds): **15 Heart of the Emberdeep** 83/25/33 → 88/38/50 (hp 1.03);
+**25 Saltjaw's Grotto** 50/50/8 → 81/69/0 (wave 6–7 trim, hp 2.55). Saltjaw is very sensitive to hpMult (±0.07
+swung expert 75 → 44%) because losses came from one mid-level wave; smoothing the spike fixed that.
+Watch: the novice (Bramble) beats casual on Heart of the Emberdeep and Kaleidrax; casual lags on Mirrorpool.
+
+**Iteration 20** (`balance.ts 10`, after the per-wave ramp + rescale; expert/casual/novice):
+L1 100/100/100 · L2 100/100/100 · L3 100/90/80 · L4 100/70/70 · L5 100/100/60 · L6 100/100/20 · L7 80/80/10 ·
+L8 80/50/60 · L9 100/100/10 · L10 70/40/10 · L11 100/90/40 · L12 70/70/60 · L13 100/90/40 · L14 50/40/0 · L15 90/30/0.
+- With the ramp alone (no rescale) almost every level got easier (Ashfall/Frostfern/Smoulder 100/100/100), as expected.
+- Overall shape matches iteration 15, with gentler openings on late levels. Glacier Hold and Cinder Tunnels still
+  let the novice keep up (merge maps favor Bramble at the choke); not worth more tuning until the AI can micro.
+
+**Campaign (iteration 50, 6 seeds):** expert ≥ 83% on 28 of 29 levels (the outlier was Saltjaw's Grotto, now fixed).
+Region openers: 100/100/100, 100/100/50, 100/100/67, 100/83/33, 100/100/50, 100/100/33. Bosses: Murkmaw 83/83/67,
+Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 83/33/0, Saltjaw (fixed) ~83/70/0.
+
+**Campaign (iteration 55, 6 seeds, with the new spell/hero):** expert ≥ 83% on 27 of 30 levels; the three at 67%
+are boss or late levels (Obsidian Bridges, Morrowcap's Throne, Saltjaw's Grotto), within noise of earlier passes.
+Novice win rates rose by about 15–30 points on early and mid levels thanks to Thornsnare.
+
+**Kaleidrax's Spire (iteration 51, 8 seeds):** first draft 0/0/0 (the boss leaked every run). After the boss nerf and the
+autoplayer tweak, the curve was jagged: 2.15 → 88/63/100, then after moving the pads 2.15 → 100/63/63, **2.3 → 88% / 38% / 75%**
+(kept), 2.45 → 63/0/25. The novice (Bramble blocking + all single-target towers) suits this boss's splash resistance.
+
+**Glassteeth Ladder (iteration 49, 8 seeds):** first draft 0/0/0 at 3.4 (the final wave of 6 Bog Brutes + 12
+Mirrorbacks was a wall). After trimming it and the other Mirrorback waves, and the shorter entry: **2.5 → 100% / 83% / 0%**
+(kept). The casual autoplayer lags the expert most on Mirrorback-heavy maps (it specializes into splash variants
+blindly). Re-tuned after the entry moves: Tidepool Terraces **1.4 → 88% / 88% / 25%**; Shattered Crossroads
+2.8 → 100/67/0 (unchanged).
+
+**Shattered Crossroads (iteration 48):** 2.6 → 100/100/0, **2.8 → 100% / 75% / 0%** (8 seeds, kept), 3.0 → 83/33/0.
+
+**Prism Canyon (iteration 47, 6–8 seeds):** easy at first: 2.0 → 100/100/100, 2.6 → 100/100/17, 3.0 → 100/100/0;
+**3.1 → 100% / 88% / 0%** (kept); 3.3 → 67/33/0, 3.6 → 17/0/0.
+
+**Glassfall Flats (iteration 46, 6 seeds):** 2.4 → 100/100/0 (the novice lost 96 lives to big Shardskipper waves
+on the short south road). Trimmed those two waves → **2.4: 100% / 100% / 33%** (kept, matches the other openers).
+
+**Campaign (iteration 45, 6 seeds; expert / casual / novice):** Grovelands 100/50–100/67–100; Frostfern 83–100 /
+67–100 / 0–67; Emberdeep 83–100 / 33–83 / 0–67; Duskcap 83–100 / 83–100 / 0–33; Shoals 83–100 / 67–100 / 0–83.
+Bosses: Murkmaw 100/83/67, Frostpeak 83/83/33, Heart 83/33/33, Morrowcap 75/50/0 (after the tweak), Saltjaw 83/67/0.
+
+**Saltjaw's Grotto (iteration 44, 8 seeds):** 2.2 → 83/83/0, **2.25 → 75% / 88% / 0%** (kept), 2.3 → 50/50/0,
+2.4 → 50/25/0. Very steep around 2.25, like the other late boss levels.
+
+**Wreckspiral (iteration 43):** steep curve: 2.9 → 100/100/0, 3.2 → 83/100/0, **3.25 → 88% / 75% / 0%** (8 seeds,
+kept), 3.35 → 88/38/0, 4.2 → 0/0/0. Leaks at the top end were Reefwarden-shielded Thornhogs.
+
+**Saltspray Fork (iteration 42, 6–8 seeds):** 2.2 → 67/50/0, 1.9 → 83/100/17, **2.05 → 88% / 63% / 0%** (kept).
+
+**Tidepool Terraces (iteration 41):** first draft 0/33/0 at 2.4. Leak traces: Thornhogs (path 0) and Gullwings (short
+north road), plus only 420 px of shared tail before the exit. After the wave trims and the longer tail: 2.2 → 50/33/0,
+2.0 → 67/67/50, **1.9 → 75% / 50% / 75%** (8 seeds, picked). Bramble/novice does well on this converging map.
+Lesson: give merged tails at least ~600 px.
+
+**Heroes (iteration 40; expert wins on Icicle, Frostpeak, Obsidian, Heart and Morrowcap, 4 seeds each):**
+| Hero | Before | After |
+|---|---|---|
+| Bramble | 35% | 35–55% (Fen's crit is the only random element, so ±10% run-to-run) |
+| Fen | 95% | 80–95% |
+| Ember | 60% | 75% |
+Obsidian Bridges per hero (6 seeds): Bramble 0 → 5/6, Ember 0 → 4/6, Fen 5 → 6/6. Endless waves held (expert): Bramble
+about 30, Fen 16–18, Ember 16. Most of Bramble's endless lead comes from regen + blocking in long fights; follow-up in
+the backlog. Changed levels: Icicle 1.7 → 100/67/0, Murkmaw's Den 1.95 → 100/83/67, Obsidian 1.15 → 100/83/0.
+
+**Wrackline Beach (iteration 39, 6 seeds):** at 2.4 → 100/100/0 with the novice losing 72 lives to wave 5's
+Thornhogs (the same novice spike as on earlier maps). Thinned that wave → **2.4: 100% / 100% / 33%** (kept, matches
+the Duskcap opener).
+
+**Endless (iteration 38, 3 seeds, waves held expert / casual / novice):** Mossgate 18.7 / 15.7 / 16.3; Murkmaw's Den
+11.7 / 11.7 / 25.0; Frostpeak 25.3 / 12.0 / 19.7; Duskcap Verge 21.3 / 18.3 / 30.7. Runs mostly end at waves 10–30
+(the wave-10 and wave-20 bosses are the usual walls), which is the intended range.
+
+**Campaign (iteration 35, 6 seeds; changed rows use 8):**
+| # | Level | hpMult | Expert | Casual | Novice |
+|---|---|---|---|---|---|
+| 1–9 | Grovelands + Frostfern (unchanged) | — | 83–100 | 67–100 | 17–100 |
+| 10 | Frostpeak Summit (boss) | 1.98 → **1.75** | 50 → 88 | 50 → 75 | 17 → 13 |
+| 11 | Ashfall Gate | 2.04 | 100 | 83 | 33 |
+| 12 | Cinder Tunnels | 1.91 | 83 | 83 | 50 |
+| 13 | Smoulder Fields | 2.69 | 100 | 100 | 50 |
+| 14 | Obsidian Bridges | 1.00 | 67 | 83 | 0 |
+| 15 | Heart of the Emberdeep (finale) | 1.06 | 83 | 33 | 0 |
+| 16 | Duskcap Verge | 2.40 | 100 | 83 | 33 |
+| 17 | Glowspore Hollow | 2.20 | 83 | 100 | 0 |
+| 18 | Mirrorpool Glade | 1.80 → **1.65** | 100 → 100 | 50 → 88 | 0 → 25 |
+| 19 | Hollowroot Switchback | 3.70 | 100 | 83 | 0 |
+| 20 | Morrowcap's Throne (boss) | 2.40 | 100 | 33 | 0 |
+The Duskcap Weald is post-story endgame, so novice 0% on most of it is acceptable. Bosses now rank Murkmaw <
+Grimtusk ≈ Vulkhar ≈ Morrowcap for the expert.
+
+**Morrowcap's Throne (iteration 34, 8 seeds):** first draft at 2.4 → 63/63/0; leaks were mostly Thornhogs on the south
+road (wave 5 and wave 11). Thinned and split those waves → 2.4: 75/75/0. After replacing the top-edge pad: **2.4 →
+88% / 50% / 0%** (kept). The boss phases trigger correctly in-browser (phase 2 reached, 978 shield).
+
+**Hollowroot Switchback (iteration 33):** the long road makes it easy per HP point: 2.6 → 100/100/33, 3.2 → 100/100/0,
+3.8 → 83/67/0, 4.4 → 33/33/0. **3.7 → 88% / 75% / 0%** (8 seeds, picked). Its hpMult is the campaign's highest, but
+bounties scale with it, so coin income keeps pace.
+
+**Mirrorpool Glade (iteration 32):** first draft 0/0/0 at hpMult 2.2 and still only 83/100/0 at 1.2, so the problem
+was the layout. Pads beyond veil range made Veilstalkers unhittable on the vertical roads. After moving the pads, lengthening
+the south road and a lighter wave 6: 2.2 → 100/17/0, 2.0 → 88/25/0, **1.8 → 100% / 63% / 0%** (8 seeds, picked).
+Lesson for Duskcap maps: keep some pads within ~95 px of each road.
+
+**Glowspore Hollow (iteration 31, 6–8 seeds):** at hpMult 2.4 → 83/50/0; the novice always died at wave 7 (trace showed
+Puffcap-hastened Thornhogs plus Gnats on the short road). After the wave fixes: **2.2 → 88% / 100% / 0%** (8 seeds).
+The novice still can't clear it even at 2.0: it fills only half the pads, so the late Veilstalkers on the merging road
+slip past. That's acceptable for the region's second level.
+
+**Campaign (iteration 30, 6 seeds unless noted; win % expert / casual / novice):**
+| # | Level | hpMult | Expert | Casual | Novice |
+|---|---|---|---|---|---|
+| 1 | Mossgate Meadow | 1.00 | 100 | 100 | 100 |
+| 2 | Gloomfen Edge | 1.32 | 100 | 100 | 100 |
+| 3 | Thornwood Hollow | 1.65 | 100 | 100 | 67 |
+| 4 | Mirelake Crossing | 1.19 | 100 | 50 | 67 |
+| 5 | Murkmaw's Den | 1.84 | 100 | 100 | 50 |
+| 6 | Frostfern Pass | 2.30 | 100 | 100 | 33 |
+| 7 | Icicle Crossing | 1.58 | 83 | 83 | 17 |
+| 8 | Glacier Hold | 1.91 → **1.7** | 50 → 83 | 67 → 83 | 50 → 50 |
+| 9 | Rimewood Hollow | 2.50 | 100 | 100 | 17 |
+| 10 | Frostpeak Summit | 1.98 | 67 | 50 | 17 |
+| 11 | Ashfall Gate | 2.04 | 100 | 83 | 33 |
+| 12 | Cinder Tunnels | 1.91 | 83 | 67 | 50 |
+| 13 | Smoulder Fields | 2.69 | 100 | 83 | 50 |
+| 14 | Obsidian Bridges | 1.19 → **1.0** | 17 → 88* | 17 → 75* | 0 → 0* |
+| 15 | Heart of the Emberdeep | 1.13 → **1.06** | 67 → 88* | 33 → 38* | 0 → 13* |
+| 16 | Duskcap Verge | 2.40 | 100 | 83 | 33 |
+(* 8 seeds.) The novice can't clear Obsidian Bridges even at hpMult 0.8 (its bridges need focused anti-air/armor
+picks), which is acceptable for the 14th level. Curve: each region opens easier than the previous region's end and
+ramps up to its boss.
+
+**Duskcap Verge (iteration 29, 6 seeds, expert / casual / novice):** hpMult 1.2 → 100/100/100 with ~20 lives (far too
+easy); 2.0 → novice still 100%; **2.4 → 100% / 83% / 33%** (picked: matches the Emberdeep opener); 2.8 → novice 0%.
+
+**Economy (iteration 25, `economy.ts`):**
+- Income: campaign first clears 18.8k coins / 14.9k glowsap (+13.1k / +10.4k for all 3★); achievements 9.1k / 9.8k;
+  production with maxed producers 1.4k/h (Grove Hall 1) → 3.3k (GH2) → 6.4k (GH3) → 11k (GH4) → 13.2k/h (GH5) of each.
+- Raids (smart deploy) net after lost troops: Lodge 1 vs Outpost ≈ +600c +220s; Lodge 2 vs Warren ≈ +1.5k c +0.9k s;
+  Lodge 3 vs Warren ≈ +1.6k c +1.0k s. With ~10–15 min of training per full army that's about 4k/h: on par with GH3
+  production, so raids are worthwhile but not dominant.
+- Spending: full build-out ≈ 109k coins + 66k glowsap, plus 32k glowsap of hero training. Campaign + achievements
+  cover roughly the first third; production and raids carry the rest.
+- Smart deploy vs naive (Lodge 3 vs Stronghold): 1.5★ vs 0.9★, so raid tactics are rewarded.
+
+**Raids (iteration 18, `raid-balance.ts`, avg stars / destruction over 10 seeds, two-side deploy):**
+
+| Army | Mudling Outpost | Bogscum Warren | Murkhorde Stronghold |
+|---|---|---|---|
+| Lodge 1 (10 space) | 1.8★ 69% | 0.4★ 41% | 0.0★ 36% |
+| Lodge 2 (20 space) | 3.0★ 100% | 2.0★ 76% | 0.2★ 47% |
+| Lodge 3 (30 space) | 3.0★ 100% | 2.9★ 98% | 0.9★ 59% |
+
+Each lodge level has a "fair" camp (~2★), and the Stronghold is a stretch goal. Before tuning: Outpost 2.8★ with
+Lodge 1 (trivial), Warren 0.9★ with Lodge 2.
+
+**Iteration 16 — Emberdeep finale** (`balance.ts 8–10`):
+13 Smoulder Fields 100/88/0 · 14 Obsidian Bridges 50/30/0 · 15 Heart of the Emberdeep 90/30/0 (expert/casual/novice).
+- First drafts were walls (0% for everyone by wave 4–5). Root causes found with per-leak logs: chained freezes
+  (fixed with thaw immunity), uncapped hive spawns (capped at 6), a too-short straight lane on Obsidian Bridges
+  (now has a dip), no pads beside Heart's top road (added 2), and an overtuned final boss (5000 → 3200 hp).
+- The level-wide `hpMult` also makes early waves harsh on late levels; a per-wave ramp might be cleaner later.
+
+**Iteration 15** (`balance.ts 10`, smart expert):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1 Mossgate Meadow | 100% | 100% | 100% |
+| 2 Gloomfen Edge | 100% | 100% | 100% |
+| 3 Thornwood Hollow | 100% | 90% | 90% |
+| 4 Mirelake Crossing | 100% | 80% | 80% |
+| 5 Murkmaw's Den | 100% | 90% | 70% |
+| 6 Frostfern Pass | 100% | 100% | 30% |
+| 7 Icicle Crossing | 100% | 80% | 0% |
+| 8 Glacier Hold | 90% | 40% | 50% |
+| 9 Rimewood Hollow | 100% | 100% | 30% |
+| 10 Frostpeak Summit | 80% | 70% | 10% |
+| 11 Ashfall Gate | 100% | 90% | 10% |
+| 12 Cinder Tunnels | 70% | 60% | 60% |
+
+- With choke-point heroes and level-aware branches the expert is now clearly the strongest on 10/12 levels,
+  which suggests the earlier "novice ≈ expert" finding was mostly an AI problem, not a game problem.
+- hpMult is very sensitive on merge maps (Glacier/Cinder: 1.6 → 1.85 took the expert from 90% to 40–60%).
+- Region 1 stays a gentle on-ramp on purpose; difficulty is driven by regions 2–3.
+
+**Iteration 14 (first pass, to revisit in the iteration-15 balance pass):** 11 Ashfall Gate 100/100/13 ·
+12 Cinder Tunnels 75/75/75. At first hp×2.2/2.3 was a wall (Cinder Tunnels: 0% for everyone by wave 6).
+
+**Iteration 13:** 9 Rimewood Hollow 100/100/30 · 10 Frostpeak Summit 88/75/13 (expert/casual/novice, 8–10 seeds).
+
+**Iteration 12** (`balance.ts 10`, after bounty scaling + retune):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1–2 | 100% | 100% | 100% |
+| 3 Thornwood Hollow | 100% | 100% | 90% |
+| 4 Mirelake Crossing | 90% | 90% | 80% |
+| 5 Murkmaw's Den | 90% | 80% | 70% |
+| 6 Frostfern Pass | 100% | 100% | 30% |
+| 7 Icicle Crossing | 100%* | 100%* | 0% |
+| 8 Glacier Hold | 100% | 80% | 90% |
+
+\* 90% in the 10-seed tuning run.
+- Icicle Crossing was a wall (0% for everyone at wave ~8) until (a) the hero started at the crossing instead of
+  one gate and (b) bounties scaled with hpMult. On two-gate maps, where the hero starts matters a lot.
+- Novice ≈ expert on Glacier Hold again (chokepoint-focused upgrades). Smarter-AI follow-up still pending.
+
+**Iteration 10** (`balance.ts 10`, autoplayer uses spells + hero skill; novice has a hero now):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 1 Mossgate Meadow | 100% | 100% | 100% |
+| 2 Gloomfen Edge | 100% | 90% | 100% |
+| 3 Thornwood Hollow | 90% | 100% | 70% |
+| 4 Mirelake Crossing | 50% | 70% | 40% |
+| 5 Murkmaw's Den | 70% | 70% | 70% |
+
+- Before tuning, spells + hero skill made **every** profile win every level with ~full lives; each single power
+  (Starfall, Grove Call or the hero skill) was enough to flip the novice from losing to winning L3–L5.
+- Difficulty now ramps: trivial → easy → medium → hard. The village Defense Workshop (+5–20% tower damage)
+  gives returning players a way to push through L4–L5.
+- **Autoplayer limitation:** on late levels expert ≈ casual ≈ novice. The novice concentrates upgrades on
+  a few top slots near chokepoints, which turns out to be very efficient. A smarter AI (moving the hero,
+  choosing branches per level) is needed before fine-tuning L4/L5 further.
+- Branch benchmark after tuning (DPS per 100 coins, armored / crowd / flyers): Hawkeye 11.6/14.1/14.1,
+  Volley 2.6/19.5/19.5, Stormcall 7.5/22.9/22.9, Frostbloom 4.9/38.9/29.1, Quake 2.8/55.5/0,
+  Sap 1.9/38.3/0, Stonehide 3.4/8.5/0 (tank), Raiders 10.1/25.3/0. Stationary clumps flatter splash.
+
+**Iteration 7: new levels** (`balance.ts 8–10`; the expert AI now uses Fen since Bramble can't hit flyers):
+
+| Level | expert | casual | novice |
+|---|---|---|---|
+| 3 Thornwood Hollow | 100% | 88% | 0% |
+| 4 Mirelake Crossing | 80% | 60% | 0% |
+| 5 Murkmaw's Den | 100% | 88% | 0% |
+
+- Mirelake was unwinnable at first (two full roads on one budget, and the hero can only guard one). Fixes: 700 start
+  coins, lighter waves, 25 lives (one pool per gate).
+- Hero choice is level-dependent: Bramble is weak on flyer-heavy maps (Den: expert with Bramble 0%, with Fen 100%).
+  Good for strategy, but players need a hint (show flyers in the level card ✔ — enemy preview icons).
+- The autoplayer still doesn't cast spells or move the hero, so humans should do better than these numbers.
+
+**Iteration 5 results** (`npx vite-node scripts/balance.ts 12`, after tuning):
+
+| Level | Strategy | Win % | Avg lives left |
+|---|---|---|---|
+| Mossgate Meadow | expert-mixed | 100% | 20.0/20 |
+| Mossgate Meadow | casual-mixed | 100% | 20.0/20 |
+| Mossgate Meadow | novice | 100% | 12.6/20 |
+| Mossgate Meadow | only-thornbow | 100% | 15.5/20 |
+| Mossgate Meadow | only-burrow | 0% | 0/20 (support tower, expected) |
+| Gloomfen Edge | expert-mixed | 100% | 11.8/20 |
+| Gloomfen Edge | casual-mixed | 100% | 18.8/20 |
+| Gloomfen Edge | novice | 0% | dies ~wave 9 |
+| Gloomfen Edge | any single tower type | 0% | — (mixing required) |
+
+Before tuning, **every strategy lost both levels** (waves stacked + starved economy).
+
+Findings / follow-ups:
+- Heroes matter a lot on L2: no hero → 0–10% win for the expert AI; with a hero → 40–50% (before the final tuning).
+  Bramble and Fen are close; Ember is a bit weaker for this AI (it doesn't move her next to towers).
+- Filling every slot before upgrading is worse than upgrading the best 70–75% of slots.
+- L1 is now a gentle tutorial; difficulty should ramp from L3 onward (target: expert ~90%, casual ~60%,
+  novice ~10–20% by level 5).
+- Burrow Den alone can't win (it only blocks); that's intended, but its value in mixes deserves a look later.
+- **Iteration 245 sweep** (4 seeds; expert / casual / novice win %): L1 100/100/100, L3 100/100/100, L5 100/50/100, L10 75/100/50, L20 75/50/0, L30 75/25/25, L45 75/50/0, L60 75/50/0, L75 100/75/0, L90 100/25/0, L105 75/75/0, L120 75/25/0, L125 100/75/0. Single-tower strategies lose from L3 on (intended: mixes matter).
+  - Store (3 seeds, none → maxed; expert/casual/novice): L5 100/67/100 → 100/100/100; L30 100/0/33 → 100/67/100; L60 67/33/0 → 100/100/0; L90 100/33/0 → 100/100/67; L120 67/33/0 → 100/100/100; L125 100/67/0 → 100/100/100. A maxed store is still a big long-term boost (about 70k coins and 52k glowsap); keep watching it, but no change.
+- **Iteration 250 sweeps:** raids (stars / % destroyed): Lodge 1: 1.8★ 67% / 0.3★ 23% / 0.1★ 17%; Lodge 2: 3.0★ / 1.7★ 67% / 0.6★ 34%; Lodge 3: 3.0★ / 3.0★ / 0.9★ 45% (with Mender 1.6★ 55%, with Moles 1.3★ 47%). Endless waves (expert/casual/novice): Mossgate 12.0/12.0/12.3, Murkmaw 11.7/11.7/17.7, Frostpeak 12.0/12.0/12.3, Duskcap 12.7/12.3/21.3.
+- **Iteration 255 sweep** (4 seeds; expert / casual / novice win %): L7 Icicle Crossing 100/75/0, L15 Heart of the Emberdeep 75/25/75, L25 Heart of the Orchard 75/50/0, L40 Heart of the Glimmerbog 75/50/0, L55 Heart of the Ruins 75/50/0, L70 Crown of the Reef 75/50/0, L85 Saltjaw's Grotto 100/75/0, L100 Shrine of a Thousand Lanterns 100/25/0, L110 The Great Barn 50/25/0 (10 seeds: 80/30/0), L115 The Rattling Spire 75/75/0.
+- **Iteration 260 hero sweep** (expert strategy, levels 20/50/80/100/120, 6 seeds; win %, avg lives): Ember 90 / 9.5, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7. Watch item: if a future sweep puts either below 60%, give Sorrel's sling +2 damage or Bramble's Earthshake +10% radius first.
+- **Iteration 265 opener sweep** (levels 1–10, 6 seeds; expert / casual / novice %): Mossgate 100/100/100, Thornwood 100/100/100, Gloomfen 100/100/100, Rimewood 100/100/100, Frostfern 100/100/100, Murkmaw's Den 83/50/83, Icicle Crossing 100/67/0, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67.
+- **Iteration 270:** raid sweep identical to iteration 250 (the visual-only `shot.target` field changed nothing). Storm-map idle objects plateau at about 146 after warm-up.
+- **Iteration 275 daily sweep** (expert, 3 seeds; Murkmaw / Morrowcap / Ruins / Flagship): none 100/100/100/100; swift 100/67/67/100; tough 100/33/33/100; nospells 100/67/100/100; nohero 67/67/0/100; glass 100/67/100/67; frenzy 67/100/0/100; ironbark and gale 100 across. Old heavy pairs: tough+swift 0/0/0/100, nohero+nospells 0/33/0/67, glass+frenzy 33/33/0/67. New pickable pairs: heavy + boon 100 across; frenzy+gale 67/33/0/100; glass+ironbark 67/33/67/33; tough+ironbark 67/33/0/100.
+- **Iteration 280:** branch benchmark unchanged since iteration 7 (all twelve branches identical), confirming the visual work (iterations 241–279) never touched combat numbers.
+- **Iteration 285 late-campaign sweep** (levels 116–125, 4 seeds; expert / casual / novice win %): Stepping Stones 100/100/25, Otterslide Bend 100/100/0, Millwheel Race 100/75/0, Kingfisher Falls 100/50/0, The Elder Pool 75/25/0 (10 seeds: 80/40/0), Heather Gate 100/100/0, Moonstone Circle 100/75/0, Curlew Ridge 100/100/0, The Barrow Downs 100/75/0, The Thunder Barrow 100/75/0 (expert keeps only 8.8 lives). Single-tower strategies all lose (intended). The Elder Pool is the stiffest of the stretch, on par with The Great Barn (80/30/0); no change.
+- **Iteration 290 hero sweep** (`hero-balance.ts 6`, expert strategy, levels 20/50/80/100/120): unchanged since iteration 260 — Ember 90% / 9.5 lives, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7 — so the watch-item buffs were applied early, since the gap had held for 30 iterations and both lagged on Heart of the Amberwood (33% and 50%). **Sorrel sling 19 → 21, Bramble Earthshake radius 115 → 127.** After: Bramble 80% / 8.9 (Amberwood 50%), Sorrel 77% / 6.5 (Amberwood 50%), both inside the 77–90% band and neither above the top. Openers re-checked (levels 1–10, 6 seeds) against iteration 265: identical apart from single-seed swings in the novice column (Murkmaw 83 → 67, Frostpeak 50 → 67), so the novice-only Bramble buff doesn't flatten the early game. New watch item: Heart of the Amberwood is the weakest level for melee and support heroes (Bramble and Sorrel 50%).
+- **Iteration 295, Heart of the Amberwood** (level 80, 10 seeds): at start coins 1050 it ran 70 / 30 / 0 (expert / casual / novice); heroes Ember 90, Wren 90, Hazel 80, Fen 70, Bramble 60, Sorrel 50. Its waves aren't air-heavy (7% of health flies, like its neighbours) but are packed with fast swarms (about 180 Sapstoats, Turnleafs and Skitters), which melee and support heroes handle worst. Start-coin steps: 1150 → 90/80/0 (far too easy), 1100 → 90/60/0, **1075 → 80/40/0 (picked)**, in line with the other late boss-style levels (The Elder Pool 80/40, The Great Barn 80/30, the region hearts about 75/50). At 1075 Bramble is 60% and Sorrel 80%. Watch item closed: Bramble stays the weakest pick here, but that suits a swarm map for a slow melee hero.
+- **Iteration 300 drift check** (4 seeds; expert / casual / novice %): Mossgate 100/100/100, Murkmaw's Den 100/50/100, Morrowcap's Throne (L20) 75/50/0, Heart of the Engine (L45) 75/50/0, The Black Flagship (L75) 100/75/0, Crown of the Prairie (L105) 75/75/0, The Thunder Barrow (L125) 100/75/0, identical to the iteration 245 sweep (L125 also matches iteration 285). Branch DPS unchanged. The shared hit-rule refactors, the early-call bonus refactor and the iteration 290 hero buffs left campaign difficulty where it was.
+- **Iteration 305 veteran sweep** (`veteran-balance.ts 3`, expert): kills per tower over all runs: median 32, p75 52, p90 71, max 159 (a Frostpeak Summit tower). Veterans per run at 75 kills (was 50): Mossgate 0 (0), Murkmaw's Den 1.3 (4.0), Frostpeak 1.7 (3.0), Morrowcap's Throne 1.7 (3.3), Heart of the Ruins 0.7 (3.0), Thunderhead Crown 0.3 (3.0), Heart of the Amberwood 1.3 (4.3), Heart of the Glimmerbog 0 (1.3), The Thunder Barrow 0 (2.3). Late levels spread kills over more towers, so veterans there come from a player who leans on a few strong towers, which suits a badge. Combat itself is untouched (UI-only threshold).
+- **Iteration 310 raid and endless re-check:** the raid sweep is identical to iterations 250 and 270 (Lodge 1: 1.8★ / 0.3★ / 0.1★; Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★). Endless waves are identical to iteration 250. The long-standing oddity is that the novice outlasts the expert on two maps (Murkmaw's Den 17.7 vs 11.7, Duskcap Verge 21.3 vs 12.7). Hero/strategy split (3 seeds): Murkmaw expert+Fen 11.7, expert+Bramble 18.7, novice+Bramble 17.7, novice+Fen 14.7, so there it's the hero (Bramble's blocking suits the converging map). Duskcap expert+Fen 12.7, expert+Bramble 13.0, novice+Bramble 21.3, novice+Fen 20.7, so there it's the strategy (the novice's upgraded Thornbow/Glimmer spam beats the expert's adaptive mix in endless scaling). Both are autoplayer artifacts, not player-facing balance; no change. Follow-up idea: an endless-aware expert (upgrade-first after wave 10) for a truer ceiling.
+- **Iteration 313 endless ceiling** (`endless-balance.ts 3`, waves held: Mossgate / Murkmaw's Den / Frostpeak / Duskcap): expert 12.0 / 11.7 / 12.0 / 12.7, novice 12.3 / 17.7 / 12.3 / 21.3, and the new **expert-endless 22.3 / 24.3 / 12.0 / 18.3** (deepening from wave 5; waves 3, 4 and 5 all plateau, 8 gives 15.0 / 24.3 / 12.0 / 18.3 and 11 gives 12.0 / 18.0 / 12.0 / 12.7). So the iteration-310 oddity was strategy, as suspected: concentrating coins into a few specialized towers beats a wide spread under endless scaling. Frostpeak's 12-wave wall holds for every strategy (backlog item).
+- **Iteration 315 endless boss order** (`endless-balance.ts 3`; Mossgate / Murkmaw's Den / Frostpeak / Duskcap): before (home boss at wave 10) expert 12.0 / 11.7 / 12.0 / 12.7, expert-endless 22.3 / 24.3 / **12.0** / 18.3. After (gentlest opens, home boss at wave 20) expert 12.0 / 11.7 / 18.7 / 15.0, casual 12.0 / 11.7 / 12.0 / 15.3, novice 12.3 / 17.7 / 22.0 / 17.7, expert-endless 22.0 / 24.3 / **29.0** / 25.3. The strong-player ceiling is now 22–29 waves on every sampled map instead of one map capped at 12. Bosses' toughness (hp ÷ (1 − mean resistance)): Murkmaw 2923, Grimtusk 4923, Morrowcap 4800, Saltjaw 7556; the wave-10 slot now always holds the 2923 one.

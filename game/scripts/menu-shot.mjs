@@ -1,0 +1,26 @@
+// Main menu screenshot: `node scripts/menu-shot.mjs <name>` (also checks that clouds drift).
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const name = process.argv[2] ?? 'menu';
+const server = await preview({ preview: { port: 4328, strictPort: true } });
+const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+await page.addInitScript(() => localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 2 } })));
+await page.goto('http://localhost:4328/');
+await page.waitForTimeout(1500);
+const cloudX = () => page.evaluate(() => window.__game.scene.getScene('Menu').children.list.filter((o) => o.type === 'Container' && o.depth === -18).map((o) => Math.round(o.x)));
+const a = await cloudX();
+await page.waitForTimeout(2500);
+const b = await cloudX();
+await page.screenshot({ path: `screenshots/${name}.png` });
+const moved = a.some((x, i) => b[i] !== x);
+console.log(JSON.stringify({ clouds: a.length, moved }));
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length || !moved ? 1 : 0);

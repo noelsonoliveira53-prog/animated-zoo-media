@@ -1,0 +1,34 @@
+// Damage numbers: physical, magic, true and a big hit on enemies, paused mid-pop for a close-up.
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const name = process.argv[2] ?? 'dmgtext';
+const server = await preview({ preview: { port: 4343, strictPort: true } });
+const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
+const errors = [];
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+await page.goto('http://localhost:4343/');
+await page.waitForTimeout(900);
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 2 }));
+await page.waitForTimeout(1500);
+const p = await page.evaluate(() => {
+  const s = window.__game.scene.getScene('Battle');
+  const hits = [['physical', 12], ['magic', 18], ['true', 25], ['physical', 140]];
+  const es = hits.map((_, i) => s.sim.spawn('shellback', 0, 480 + i * 60));
+  s.sim.update(1 / 60);
+  hits.forEach(([t, d], i) => s.sim.applyDamage(es[i], d, t));
+  s.sim.update(1 / 60);
+  return es[1].pos;
+});
+const t0 = await page.evaluate(() => window.__game.scene.getScene('Battle').time.now);
+await page.waitForFunction((t) => window.__game.scene.getScene('Battle').time.now > t + 120, t0, { timeout: 20000, polling: 'raf' });
+await page.evaluate(() => window.__game.scene.getScene('Battle').tweens.pauseAll());
+console.log(JSON.stringify(await page.evaluate(() => window.__game.scene.getScene('Battle').children.list.filter((o) => o.type === 'Text' && /^[0-9]+$/.test(o.text)).map((o) => [o.text, +o.alpha.toFixed(2), +o.scale.toFixed(2), o.depth]))));
+await page.screenshot({ path: `screenshots/${name}.png`, clip: { x: Math.max(0, p.x - 220), y: Math.max(0, p.y - 170), width: 440, height: 260 } });
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length ? 1 : 0);

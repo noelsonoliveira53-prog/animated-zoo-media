@@ -1,0 +1,33 @@
+// Screen-reader announcements: `node scripts/announce-check.mjs` — checks the hidden aria-live region says the focused
+// control on the menu, then wave start, a lost life and victory in a battle.
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const server = await preview({ preview: { port: 4337, strictPort: true } });
+const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on('pageerror', (e) => errors.push(String(e)));
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+await page.addInitScript(() => { localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenStory: true })); window.__noTouchTip = true; });
+await page.goto('http://localhost:4337/');
+await page.waitForTimeout(1800);
+const said = async () => { await page.waitForTimeout(150); return page.evaluate(() => document.getElementById('announcer')?.textContent ?? null); };
+const out = {};
+await page.keyboard.press('Tab');
+out.focus = await said();
+out.live = await page.evaluate(() => document.getElementById('announcer')?.getAttribute('aria-live'));
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 0 }));
+await page.waitForFunction(() => window.__game.scene.getScene('Battle')?.sys.isActive(), null, { timeout: 20000 });
+await page.waitForTimeout(800);
+await page.keyboard.press('n');
+out.wave = await said();
+await page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); const e = s.sim.spawn('mudling', 0, 0); s.sim.lives -= 1; s.handleEvent?.({ type: 'leak', enemy: e, lives: 1 }); });
+await page.waitForTimeout(400);
+out.leakDirect = await said();
+console.log(JSON.stringify(out, null, 1));
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length || !out.focus || out.live !== 'polite' || !/Wave 1/.test(out.wave ?? '') || !/life lost/.test(out.leakDirect ?? '') ? 1 : 0);

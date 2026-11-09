@@ -1,0 +1,45 @@
+// Spell aim: spawns a small crowd (three walkers and a flyer), arms Starfall and hovers over them, screenshots the
+// aim (glow, marks, count), then checks Thornsnare's count leaves the flyer out. `node scripts/spellaim-check.mjs <name>`
+import { createRequire } from 'node:module';
+import { preview } from 'vite';
+const require = createRequire(import.meta.url);
+const pw = require('playwright');
+const name = process.argv[2] ?? 'spellaim';
+const server = await preview({ preview: { port: 4350, strictPort: true } });
+const browser = await pw.chromium.launch();
+const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const errors = [];
+page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
+page.on('pageerror', (e) => errors.push(String(e)));
+await page.goto('http://localhost:4350/');
+await page.waitForTimeout(900);
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 2 }));
+await page.waitForTimeout(1500);
+const c = await page.evaluate(() => {
+  const s = window.__game.scene.getScene('Battle');
+  const es = [s.sim.spawn('shellback', 0, 600), s.sim.spawn('mudling', 0, 620), s.sim.spawn('skitter', 0, 585), s.sim.spawn('gloomwing', 0, 605)];
+  s.sim.update(1 / 60);
+  s.paused = true;
+  const x = es.slice(0, 3).reduce((a, e) => a + e.pos.x, 0) / 3;
+  const y = es.slice(0, 3).reduce((a, e) => a + e.pos.y, 0) / 3;
+  s.armSpell('starfall');
+  return { x, y };
+});
+await page.mouse.move(c.x, c.y);
+let t0 = await page.evaluate(() => window.__game.scene.getScene('Battle').time.now);
+await page.waitForFunction((t) => window.__game.scene.getScene('Battle').time.now > t + 300, t0, { timeout: 20000, polling: 'raf' });
+const star = await page.evaluate(() => window.__game.scene.getScene('Battle').aimText.text);
+await page.screenshot({ path: `screenshots/${name}.png` });
+await page.evaluate(() => window.__game.scene.getScene('Battle').armSpell('thornsnare'));
+await page.mouse.move(c.x + 1, c.y);
+t0 = await page.evaluate(() => window.__game.scene.getScene('Battle').time.now);
+await page.waitForFunction((t) => window.__game.scene.getScene('Battle').time.now > t + 300, t0, { timeout: 20000, polling: 'raf' });
+const snare = await page.evaluate(() => window.__game.scene.getScene('Battle').aimText.text);
+await page.evaluate(() => window.__game.scene.getScene('Battle').armSpell(null));
+await page.waitForTimeout(200);
+const hidden = await page.evaluate(() => !window.__game.scene.getScene('Battle').aimText.visible);
+console.log(JSON.stringify({ star, snare, hidden }));
+console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
+await browser.close();
+server.httpServer.close();
+process.exit(errors.length || !hidden ? 1 : 0);

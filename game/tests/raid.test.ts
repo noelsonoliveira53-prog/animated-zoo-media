@@ -1,0 +1,360 @@
+import { describe, expect, it } from 'vitest';
+import { CAMP_BUILDINGS, TROOPS } from '../src/data/raid';
+import { buildingCenter, campLoot, generateCamp } from '../src/systems/camp';
+import { RaidSim } from '../src/systems/RaidSim';
+
+const run = (sim: RaidSim, s: number) => {
+  for (let i = 0; i < s * 30 && !sim.ended; i++) sim.update(1 / 30);
+};
+
+describe('camp generation', () => {
+  it('is deterministic per seed and tier', () => {
+    expect(generateCamp(42, 1)).toEqual(generateCamp(42, 1));
+    expect(generateCamp(42, 1)).not.toEqual(generateCamp(43, 1));
+  });
+  it('places one HQ and no overlapping buildings', () => {
+    for (let seed = 1; seed < 20; seed++) {
+      const camp = generateCamp(seed, 2);
+      expect(camp.buildings.filter((b) => CAMP_BUILDINGS[b.type].hq).length).toBe(1);
+      for (const a of camp.buildings)
+        for (const b of camp.buildings) {
+          if (a === b) continue;
+          const sa = CAMP_BUILDINGS[a.type].size;
+          const sb = CAMP_BUILDINGS[b.type].size;
+          const overlap = a.col < b.col + sb && a.col + sa > b.col && a.row < b.row + sb && a.row + sa > b.row;
+          expect(overlap).toBe(false);
+        }
+    }
+  });
+  it('higher tiers have more buildings and loot', () => {
+    expect(generateCamp(5, 2).buildings.length).toBeGreaterThan(generateCamp(5, 0).buildings.length);
+    expect(campLoot(generateCamp(5, 2)).coins).toBeGreaterThan(campLoot(generateCamp(5, 0)).coins);
+  });
+});
+
+describe('raid sim', () => {
+  it('rejects deploying on top of the camp or without troops', () => {
+    const camp = generateCamp(1, 0);
+    const sim = new RaidSim(camp, { brawler: 1 });
+    expect(sim.deploy('brawler', buildingCenter(camp.buildings[0]))).toBeNull();
+    expect(sim.deploy('slinger', { x: 60, y: 120 })).toBeNull();
+    expect(sim.deploy('brawler', { x: 60, y: 120 })).not.toBeNull();
+    expect(sim.deploy('brawler', { x: 60, y: 140 })).toBeNull();
+  });
+
+  it('a big army wipes an outpost for 3 stars and full loot', () => {
+    const camp = generateCamp(3, 0);
+    const sim = new RaidSim(camp, { brawler: 20, sapper: 8, slinger: 10 });
+    for (let i = 0; i < 20; i++) sim.deploy('brawler', { x: 70, y: 120 + i * 25 });
+    for (let i = 0; i < 8; i++) sim.deploy('sapper', { x: 1210, y: 150 + i * 50 });
+    for (let i = 0; i < 10; i++) sim.deploy('slinger', { x: 640, y: 680 - (i % 2) * 10 });
+    run(sim, 90);
+    expect(sim.destruction).toBe(1);
+    expect(sim.stars).toBe(3);
+    expect(sim.loot).toEqual(campLoot(camp));
+  });
+
+  it('the raid ends when time runs out', () => {
+    const camp = generateCamp(3, 2);
+    const sim = new RaidSim(camp, { slinger: 1 });
+    sim.deploy('slinger', { x: 70, y: 380 });
+    run(sim, 95);
+    expect(sim.ended).toBe(true);
+    expect(sim.stars).toBe(0);
+  });
+
+  it('a spit tower kills a slinger that walks into range', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'spit', col: 10, row: 5, hp: 480, maxHp: 480 }] };
+    const sim = new RaidSim(camp, { slinger: 1 });
+    const s = sim.deploy('slinger', { x: 400, y: 160 })!;
+    run(sim, 20);
+    expect(s.alive).toBe(false);
+    expect(sim.ended).toBe(true);
+    expect(sim.survivingArmy().slinger ?? 0).toBe(0);
+  });
+
+  it('mortars cannot hit owls', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'mortar', col: 10, row: 5, hp: 620, maxHp: 620 }] };
+    const sim = new RaidSim(camp, { owl: 1 });
+    const owl = sim.deploy('owl', { x: 300, y: 300 })!;
+    run(sim, 60);
+    expect(owl.hp).toBe(owl.maxHp);
+    expect(sim.destruction).toBe(1);
+  });
+});
+
+import { newVillage, trainTroop, armyCapacity, armySpace, tickTraining, totalArmySpace, type QueuedTroop } from '../src/systems/village';
+describe('army training', () => {
+  it('needs a Ranger Lodge, glowsap and free space (queued troops count)', () => {
+    const v = newVillage(0);
+    const army: Record<string, number> = {};
+    const queue: QueuedTroop[] = [];
+    expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(false); // no lodge
+    v.buildings.push({ uid: 50, type: 'barracks', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: 0 });
+    v.glowsap = 10000;
+    expect(armyCapacity(v)).toBe(10);
+    for (let i = 0; i < 10; i++) expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(true);
+    expect(trainTroop(v, army, 'brawler', queue, 0).ok).toBe(false); // full (queue counts)
+    expect(totalArmySpace(army, queue)).toBe(10);
+    expect(trainTroop(v, {}, 'owl', [], 0).ok).toBe(false); // needs lodge 2
+  });
+  it('trains troops one after another over time', () => {
+    const v = newVillage(0);
+    v.buildings.push({ uid: 50, type: 'barracks', level: 1, col: 0, row: 0, upgradeEnds: null, lastCollect: 0 });
+    v.glowsap = 10000;
+    const army: Record<string, number> = {};
+    const queue: QueuedTroop[] = [];
+    trainTroop(v, army, 'brawler', queue, 0); // ready at 20s
+    trainTroop(v, army, 'sapper', queue, 0); // ready at 65s
+    expect(tickTraining(army, queue, 19_000)).toBe(0);
+    expect(tickTraining(army, queue, 21_000)).toBe(1);
+    expect(army.brawler).toBe(1);
+    expect(tickTraining(army, queue, 64_000)).toBe(0);
+    expect(tickTraining(army, queue, 66_000)).toBe(1);
+    expect(army.sapper).toBe(1);
+    expect(queue.length).toBe(0);
+    expect(armySpace(army)).toBe(3);
+  });
+});
+describe('camp walls', () => {
+  const walled = () => ({
+    tier: 0,
+    seed: 0,
+    buildings: [
+      { uid: 1, type: 'hut', col: 12, row: 6, hp: 280, maxHp: 280 },
+      { uid: 2, type: 'wall', col: 10, row: 6, hp: 320, maxHp: 320 },
+      { uid: 3, type: 'wall', col: 10, row: 7, hp: 320, maxHp: 320 },
+    ],
+  });
+  it('ground troops must break a wall in their way; walls do not count toward destruction', () => {
+    const sim = new RaidSim(walled(), { brawler: 1 });
+    const t = sim.deploy('brawler', { x: 300, y: CAMP_Y(7) })!;
+    run(sim, 6);
+    expect(t.wallUid).not.toBe(0);
+    expect(sim.camp.buildings[0].hp).toBe(280);
+    run(sim, 80);
+    expect(sim.destruction).toBe(1);
+  });
+  it('sappers tear walls down fast and owls fly over', () => {
+    const a = new RaidSim(walled(), { sapper: 1 });
+    a.deploy('sapper', { x: 300, y: CAMP_Y(7) });
+    run(a, 12);
+    expect(a.camp.buildings.filter((b) => b.type === 'wall' && b.hp <= 0).length).toBeGreaterThan(0);
+    const b = new RaidSim(walled(), { owl: 1 });
+    const owl = b.deploy('owl', { x: 300, y: CAMP_Y(7) })!;
+    run(b, 6);
+    expect(owl.wallUid).toBe(0);
+  });
+  it('higher-tier camps are walled', () => {
+    expect(generateCamp(4, 0).buildings.some((b) => b.type === 'wall')).toBe(false);
+    expect(generateCamp(4, 1).buildings.filter((b) => b.type === 'wall').length).toBeGreaterThan(8);
+  });
+});
+function CAMP_Y(row: number) {
+  return 92 + row * 40 + 20;
+}
+
+
+describe('Mire Shaman', () => {
+  it('pulses healing into damaged camp buildings in range (not far ones, not past full)', () => {
+    const m = CAMP_BUILDINGS.shaman.mend!;
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'shaman', col: 10, row: 6, hp: 420, maxHp: 420 },
+        { uid: 2, type: 'hut', col: 13, row: 6, hp: 100, maxHp: 280 },
+        { uid: 3, type: 'hut', col: 21, row: 1, hp: 100, maxHp: 280 },
+        { uid: 4, type: 'hut', col: 10, row: 9, hp: 275, maxHp: 280 },
+      ],
+    };
+    const sim = new RaidSim(camp, {});
+    run(sim, m.interval + 0.1);
+    expect(sim.camp.buildings[1].hp).toBeCloseTo(100 + m.amount);
+    expect(sim.camp.buildings[2].hp).toBe(100);
+    expect(sim.camp.buildings[3].hp).toBe(280);
+    expect(sim.drainEvents().some((e) => e.type === 'mend')).toBe(true);
+  });
+  it('Warrens and Strongholds field shamans; outposts do not', () => {
+    const n = (tier: number) => generateCamp(7, tier).buildings.filter((b) => b.type === 'shaman').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(2);
+  });
+});
+
+describe('Toad Mender', () => {
+  it('heals hurt troops in range (not far ones, not past full) on its timer', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'hut', col: 20, row: 12, hp: 99999, maxHp: 99999 }] };
+    const sim = new RaidSim(camp, { mender: 1, brawler: 2 });
+    const m = sim.deploy('mender', { x: 100, y: 120 })!;
+    const near = sim.deploy('brawler', { x: 130, y: 120 })!;
+    const far = sim.deploy('brawler', { x: 100, y: 600 })!;
+    for (const t of [m, near, far]) t.def = { ...t.def, speed: 0 };
+    near.hp = 50;
+    far.hp = 50;
+    const h = m.def.heals!;
+    for (let i = 0; i < Math.ceil(0.6 * 30); i++) sim.update(1 / 30);
+    expect(near.hp).toBe(50 + h.amount);
+    expect(far.hp).toBe(50);
+    expect(sim.drainEvents().some((e) => e.type === 'troopHeal')).toBe(true);
+  });
+});
+
+describe('Sludge Pit', () => {
+  it('slows ground troops wading near it, but not flyers or troops far away', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'sludge', col: 10, row: 6, hp: 360, maxHp: 360 }] };
+    const sim = new RaidSim(camp, {});
+    const near = { x: buildingCenter(camp.buildings[0]).x + 40, y: buildingCenter(camp.buildings[0]).y };
+    const mk = (id: string, pos: { x: number; y: number }) => ({ uid: 1, def: TROOPS[id], pos, hp: 1, maxHp: 1, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 });
+    expect(sim.mireFactor(mk('brawler', near))).toBeCloseTo(CAMP_BUILDINGS.sludge.mire!.factor);
+    expect(sim.mireFactor(mk('owl', near))).toBe(1);
+    expect(sim.mireFactor(mk('brawler', { x: 5, y: 5 }))).toBe(1);
+    camp.buildings[0].hp = 0;
+    expect(sim.mireFactor(mk('brawler', near))).toBe(1);
+  });
+  it('Warrens and Strongholds dig sludge pits; outposts do not', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((b) => b.type === 'sludge').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(2);
+  });
+});
+
+describe('Otter Scavenger', () => {
+  it('heads for loot buildings first and wades through sludge at full speed', () => {
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'hut', col: 4, row: 6, hp: 280, maxHp: 280 },
+        { uid: 2, type: 'pile', col: 16, row: 6, hp: 380, maxHp: 380 },
+        { uid: 3, type: 'sludge', col: 7, row: 6, hp: 360, maxHp: 360 },
+      ],
+    };
+    const sim = new RaidSim(camp, {});
+    const mk = (id: string) => ({ uid: 9, def: TROOPS[id], pos: { ...buildingCenter(camp.buildings[2]) }, hp: 100, maxHp: 100, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 });
+    const otter = mk('otter');
+    expect(sim.mireFactor(otter)).toBe(1);
+    expect(sim.mireFactor(mk('brawler'))).toBeLessThan(1);
+    expect((sim as unknown as { pickTarget: (t: unknown) => { uid: number } }).pickTarget(otter).uid).toBe(2);
+    expect((sim as unknown as { pickTarget: (t: unknown) => { uid: number } }).pickTarget(mk('brawler')).uid).not.toBe(2);
+  });
+});
+
+describe('Otter loot bonus', () => {
+  it('a loot building finished off by an otter drops more loot than one finished by a brawler', () => {
+    const lootOf = (id: string) => {
+      const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'pile', col: 10, row: 6, hp: 1, maxHp: 380 }] };
+      const sim = new RaidSim(camp, {});
+      const t = { uid: 9, def: TROOPS[id], pos: { x: 0, y: 0 }, hp: 100, maxHp: 100, alive: true, targetUid: 0, wallUid: 0, attackCd: 0, healCd: 0 };
+      (sim as unknown as { hurtBuilding: (b: unknown, d: number, by: unknown) => void }).hurtBuilding(camp.buildings[0], 50, t);
+      return sim.loot.coins;
+    };
+    expect(lootOf('otter')).toBe(Math.round(lootOf('brawler') * (1 + TROOPS.otter.lootBonus!)));
+  });
+});
+
+describe('Hornet Hive', () => {
+  it('stings every troop near it (flyers too) when it falls, but not troops far away', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'hive', col: 10, row: 6, hp: 1, maxHp: 300 }, { uid: 2, type: 'hut', col: 20, row: 2, hp: 280, maxHp: 280 }] };
+    const sim = new RaidSim(camp, { brawler: 1, owl: 1, slinger: 1 });
+    const c = buildingCenter(camp.buildings[0]);
+    const b = sim.deploy('brawler', { x: c.x - 90, y: c.y })!;
+    const o = sim.deploy('owl', { x: c.x + 90, y: c.y })!;
+    const far = sim.deploy('slinger', { x: c.x - 400, y: c.y + 200 })!;
+    (sim as unknown as { hurtBuilding: (x: unknown, d: number, by: unknown) => void }).hurtBuilding(camp.buildings[0], 50, b);
+    const dmg = CAMP_BUILDINGS.hive.burst!.damage;
+    expect(b.hp).toBe(TROOPS.brawler.hp - dmg);
+    expect(o.hp).toBeLessThan(TROOPS.owl.hp);
+    expect(far.hp).toBe(TROOPS.slinger.hp);
+    expect(sim.drainEvents().some((e) => e.type === 'swarm')).toBe(true);
+  });
+  it('Warrens and Strongholds hang a hive; outposts do not', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((b) => b.type === 'hive').length;
+    expect(n(0)).toBe(0);
+    expect(n(1)).toBe(1);
+    expect(n(2)).toBe(1);
+  });
+});
+
+describe('Mole Tunneler', () => {
+  it('digs straight for the Mud Totem, under walls, and defenses cannot hit it while it digs', () => {
+    const camp = {
+      tier: 0,
+      seed: 0,
+      buildings: [
+        { uid: 1, type: 'hut', col: 4, row: 6, hp: 280, maxHp: 280 },
+        { uid: 2, type: 'totem', col: 16, row: 6, hp: 1200, maxHp: 1200 },
+        { uid: 3, type: 'wall', col: 12, row: 7, hp: 220, maxHp: 220 },
+        { uid: 4, type: 'spit', col: 10, row: 4, hp: 480, maxHp: 480 },
+      ],
+    };
+    const sim = new RaidSim(camp, { mole: 1 });
+    const m = sim.deploy('mole', { x: 60, y: buildingCenter(camp.buildings[1]).y })!;
+    expect(m).not.toBeNull();
+    let hitWhileDigging = false;
+    for (let i = 0; i < 30 * 40 && m.alive; i++) {
+      sim.update(1 / 30);
+      for (const ev of sim.drainEvents()) {
+        if (ev.type === 'troopHit' && m.tunneling) hitWhileDigging = true;
+        if (ev.type === 'buildingHit' && ev.by === m) {
+          expect(ev.building.uid).toBe(2); // only ever the totem, never the wall or the hut
+        }
+      }
+      if (camp.buildings[1].hp < 1200) break;
+    }
+    expect(hitWhileDigging).toBe(false);
+    expect(camp.buildings[1].hp).toBeLessThan(1200);
+    expect(camp.buildings[2].hp).toBe(220);
+  });
+  it('Rattle Traps poison ground troops nearby, the venom lingers after they leave, and flyers are safe', () => {
+    const camp = { tier: 0, seed: 0, buildings: [{ uid: 1, type: 'rattle', col: 10, row: 6, hp: 340, maxHp: 340 }, { uid: 2, type: 'hut', col: 24, row: 2, hp: 99999, maxHp: 99999 }] };
+    const sim = new RaidSim(camp, { brawler: 1, owl: 1 });
+    const c = buildingCenter(camp.buildings[0]);
+    const b = sim.deploy('brawler', { x: c.x - 100, y: c.y })!;
+    const o = sim.deploy('owl', { x: c.x + 100, y: c.y })!;
+    for (let i = 0; i < 30; i++) sim.update(1 / 30);
+    expect(b.poisonT).toBeGreaterThan(0);
+    expect(b.hp).toBeLessThan(TROOPS.brawler.hp);
+    expect(o.hp).toBe(TROOPS.owl.hp);
+    expect(sim.drainEvents().some((e) => e.type === 'poisoned')).toBe(true);
+    camp.buildings[0].hp = 0; // trap gone: the venom still burns for a while, then stops
+    const hp0 = b.hp;
+    for (let i = 0; i < 60; i++) sim.update(1 / 30);
+    expect(b.hp).toBeLessThan(hp0);
+    for (let i = 0; i < 90; i++) sim.update(1 / 30);
+    const hp1 = b.hp;
+    for (let i = 0; i < 30; i++) sim.update(1 / 30);
+    expect(b.hp).toBe(hp1);
+  });
+  it('only Strongholds dig a Rattle Trap', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((x) => x.type === 'rattle').length;
+    expect([n(0), n(1), n(2)]).toEqual([0, 0, 1]);
+  });
+  it('a Standing Stone softens blows on buildings near it (not on itself) until it falls', () => {
+    const camp = { tier: 0, seed: 0, buildings: [
+      { uid: 1, type: 'menhir', col: 10, row: 6, hp: 520, maxHp: 520 },
+      { uid: 2, type: 'hut', col: 12, row: 6, hp: 280, maxHp: 280 },
+      { uid: 3, type: 'hut', col: 26, row: 2, hp: 280, maxHp: 280 },
+    ] };
+    const sim = new RaidSim(camp, { brawler: 1 });
+    const c = buildingCenter(camp.buildings[1]);
+    const b = sim.deploy('brawler', { x: c.x - 400, y: c.y })!;
+    const hurt = (x: unknown, d: number) => (sim as unknown as { hurtBuilding: (x: unknown, d: number, by: unknown) => void }).hurtBuilding(x, d, b);
+    const cut = CAMP_BUILDINGS.menhir.ward!.cut;
+    hurt(camp.buildings[1], 100);
+    expect(camp.buildings[1].hp).toBeCloseTo(280 - 100 * (1 - cut));
+    hurt(camp.buildings[2], 100);
+    expect(camp.buildings[2].hp).toBe(180);
+    hurt(camp.buildings[0], 100);
+    expect(camp.buildings[0].hp).toBe(420);
+    camp.buildings[0].hp = 0;
+    hurt(camp.buildings[1], 50);
+    expect(camp.buildings[1].hp).toBeCloseTo(280 - 100 * (1 - cut) - 50);
+  });
+  it('only Strongholds raise a Standing Stone', () => {
+    const n = (tier: number) => generateCamp(11, tier).buildings.filter((x) => x.type === 'menhir').length;
+    expect([n(0), n(1), n(2)]).toEqual([0, 0, 1]);
+  });
+});

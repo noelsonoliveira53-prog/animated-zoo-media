@@ -157,7 +157,7 @@ def build(L, prefix="Bloop", loc=(0, 0, 0), scale=1.0, **opts):
     # two floating bubbles above the head (from the 2D logo)
     bubbles = [L.sphere(f"{prefix}Bub{k}", r, p, (1, 1, 1), lite, root, 20)
                for k, (r, p) in enumerate(((0.12, (0.62, 0.1, 2.35)), (0.075, (0.86, 0.1, 2.6))))]
-    return Char(L, root, rig, eyes, mouth, arms, bubbles, jelly, lite, L.rgb(base_hex), norm_sched(L, opts.get("color_schedule")))
+    return Char(L, root, rig, eyes, mouth, arms, bubbles, jelly, lite, L.rgb(base_hex), norm_sched(L, opts.get("color_schedule") or [[0.0, base_hex]]))
 
 
 class Char:

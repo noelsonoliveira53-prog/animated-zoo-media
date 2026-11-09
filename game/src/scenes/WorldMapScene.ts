@@ -4,11 +4,13 @@ import { laurelFor, levelHasBoss } from '../systems/mapNodes';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
 import { fitWidth, pf } from '../ui/touch';
+import { glossPanel } from '../ui/panels';
 import { endlessBosses, endlessMutatorFor } from '../systems/endless';
 import { todayString } from '../systems/daily';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
+import { regionProgress } from '../systems/mapProgress';
 import { ENEMIES } from '../data/enemies';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
@@ -56,14 +58,41 @@ export class WorldMapScene extends Phaser.Scene {
     if (inRegion.length < reg.count) this.add.text(1060, 680, 'More lands coming soon…', textStyle(pf(14), TEXT.dim, false)).setOrigin(0.5);
 
     // Top bar
+    // a glossy ribbon: region name and total stars on top, this region's star progress as a slim bar beneath
+    const prog = regionProgress(this.region, save.stars);
     const bar = this.add.graphics().setDepth(100);
-    bar.fillStyle(C.ink, 0.75);
-    bar.fillRoundedRect(GAME_W / 2 - 260, 10, 520, 56, 18);
+    glossPanel(bar, GAME_W / 2 - 260, 8, 520, 70, { fill: C.ink, alpha: 0.85, rim: 0xc8a050, rimAlpha: 0.6, radius: 18 });
     // Right-aligned against the star counter; long region names shrink to fit between the '<' button and the star.
-    const title = this.add.text(GAME_W / 2 + 108, 38, reg.name, textStyle(26, TEXT.gold)).setOrigin(1, 0.5).setDepth(101);
+    const title = this.add.text(GAME_W / 2 + 108, 32, reg.name, textStyle(26, TEXT.gold)).setOrigin(1, 0.5).setDepth(101);
     if (title.width > 350) title.setScale(350 / title.width);
-    this.add.image(GAME_W / 2 + 130, 38, 'star').setScale(0.55).setDepth(101);
-    this.add.text(GAME_W / 2 + 152, 38, `${totalStars(save.stars)}/${LEVELS.length * 3}`, textStyle(22)).setOrigin(0, 0.5).setDepth(101);
+    this.add.image(GAME_W / 2 + 130, 32, 'star').setScale(0.55).setDepth(101);
+    this.add.text(GAME_W / 2 + 152, 32, `${totalStars(save.stars)}/${LEVELS.length * 3}`, textStyle(22)).setOrigin(0, 0.5).setDepth(101);
+    const px = GAME_W / 2 - 236;
+    const pw = 340;
+    const frac = prog.max ? prog.stars / prog.max : 0;
+    bar.fillStyle(0x0c1a12, 1);
+    bar.fillRoundedRect(px, 56, pw, 8, 4);
+    bar.fillStyle(prog.done ? 0xffd23c : 0xf2c94c, 1);
+    if (frac > 0) bar.fillRoundedRect(px, 56, Math.max(8, pw * frac), 8, 4);
+    bar.fillStyle(0xffffff, 0.3);
+    if (frac > 0) bar.fillRect(px + 3, 57, Math.max(2, pw * frac - 6), 1.5);
+    this.add.text(px + pw + 12, 60, prog.done ? 'Region complete!' : `${prog.stars}/${prog.max} here`, textStyle(pf(13), prog.done ? TEXT.gold : '#e8dcb8', false)).setOrigin(0, 0.5).setDepth(101).setName('regionStars');
+    // next level to play in this region, as a tappable pill under the ribbon
+    if (prog.next) {
+      const nx = prog.next;
+      const pill = this.add.container(GAME_W / 2, 96).setDepth(101).setName('nextPill');
+      const label = this.add.text(0, 0, `Next: ${nx.index + 1}. ${nx.name}  ›`, textStyle(pf(14), TEXT.cream, false)).setOrigin(0.5);
+      const g = this.add.graphics();
+      glossPanel(g, -label.width / 2 - 14, -15, label.width + 28, 30, { fill: 0x2a4a30, alpha: 0.95, rim: 0x9be86a, rimAlpha: 0.7, radius: 14, shadow: false });
+      pill.add([g, label]);
+      pill.setSize(label.width + 28, 30).setInteractive({ useHandCursor: true });
+      pill.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+        ev.stopPropagation();
+        sfx.click();
+        this.openPanel(nx.index);
+      });
+      if (!motion.reduced) this.tweens.add({ targets: pill, scale: 1.04, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
+    }
     new Button(this, 90, 40, 'Back', { width: 140, height: 50, fontSize: 22, color: C.sky, onClick: () => this.scene.start('Menu') }).setDepth(101);
 
     // Region arrows

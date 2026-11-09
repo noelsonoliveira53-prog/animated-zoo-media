@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **311** (next balance pass at iteration 315)
+Iteration counter: **312** (next balance pass at iteration 315)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2019,6 +2019,11 @@ Iteration counter: **311** (next balance pass at iteration 315)
   - No coin trickle: clearing a wave pays nothing, so coins would mislead.
   - New `systems/waveClear.ts` (`waveClearInfo`) with 2 tests (332 total), including a sim run that fires `waveCleared`.
   - New `scripts/waveclear-check.mjs` (wave 1 played out: "✓ Wave 1 cleared", "Flawless", "11 waves to go", then the pill leaves; no console errors). `audio-check` still passes. Screenshot `screenshots/311.png`.
+- **Iteration 312: world map progress ribbon.**
+  - The map's top bar is now a glossy gold-rimmed ribbon: region name and total stars on top, and beneath them a slim gold bar of this region's stars with "N/M here" ("Region complete!" when every level has 3 stars).
+  - **Next pill:** a "Next: 3. Thornwood Hollow ›" pill under the ribbon points at the first unlocked level here with no stars yet. It breathes gently (still with Reduce Motion), and tapping it opens that level's card.
+  - New `systems/mapProgress.ts` (`regionProgress`) with 3 tests (335 total).
+  - New `scripts/mapprogress-check.mjs` (desktop and `PHONE=1`; "5/15 here", the pill text, and a real tap opens level 3's card; no console errors). `map-check` and `region-picker-phone-check` still pass. Screenshots `screenshots/312.png` and `312-phone.png`.
 
 ## In Progress
 - (none)
@@ -2026,8 +2031,8 @@ Iteration counter: **311** (next balance pass at iteration 315)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Map screen polish: a progress ribbon on the world map (stars collected / total, next unlock) styled like the result card.
-2. Endless-aware expert autoplayer: upgrade-first after wave 10, for a truer endless ceiling in the balance sims.
+1. Endless-aware expert autoplayer: upgrade-first after wave 10, for a truer endless ceiling in the balance sims.
+2. Village HUD polish: the resource bars get the glossy ribbon look with a storage-full pulse and a builder-busy pip per builder.
 
 ## Known Bugs
 - (none known)

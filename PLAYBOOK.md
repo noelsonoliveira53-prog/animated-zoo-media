@@ -197,3 +197,8 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - Every channel keeps at least 3 days of episodes uploaded and scheduled in YouTube Studio ahead of today. Every production check uploads the soonest `to_upload` entries (within the ~20/24h account cap) until that buffer is met.
 - Format changes never empty a slot. New formats (2D/3D hybrid, new worlds, lessons) are tested on extra renders only; the classic 3D sing-along keeps rendering daily as the default. If a new-format episode is held or rejected, a classic episode takes that date (as zoo3d_ep06c did for Nov 11).
 - If a render fails or its timing is broken, re-render it or fill the slot with the next finished episode for that channel. A missing slot is worse than a late fix.
+
+## Packaging rules (yt-package check, Nov 9, 2026)
+- Thumbnail text: 3 words max and it must NOT repeat the title's words (the title says the topic, the thumbnail adds the hook: "ALL RED!", "STICK OR NOT?", "1 TO 10!"). Set `meta.thumb_text` that way in every new song spec; lint with `python3 /root/.claude/skills/yt-package/title.py --title "..." --thumb "..."`.
+- Custom thumbnails only show on Zoo, Bloop and Gizmo (phone-verified). To redo a thumbnail after finishing: `studio/zoo3d/rethumb.py` (crops out the burned-in lyrics).
+- Before every finish: `studio/zoo3d/check_timing.py <timing.json> <words_tx.json>`; skipped verses or garbled/wrong-fact singing → rebuild timing or re-sing; never publish a wrong fact.

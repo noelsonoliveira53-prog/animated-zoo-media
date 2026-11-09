@@ -3507,6 +3507,34 @@ export class BootScene extends Phaser.Scene {
   }
 
   /** Village buildings in a top-down 3/4 view. Bigger and fancier with each level. */
+  /**
+   * A gable roof with depth: the right half in shadow (light from the upper left), tile rows, and a ridge line
+   * (design F37). Draws over an already-filled roof triangle with apex (ax, ay) and eaves from x0 to x1 at y.
+   */
+  private roofDetail(g: Phaser.GameObjects.Graphics, x0: number, x1: number, y: number, ax: number, ay: number, color: number): void {
+    g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(18).color, 1);
+    g.fillTriangle(ax, ay, x1, y, ax, y);
+    g.lineStyle(1, Phaser.Display.Color.IntegerToColor(color).darken(32).color, 1);
+    for (const t of [0.35, 0.62, 0.86]) {
+      const yy = ay + (y - ay) * t;
+      g.lineBetween(ax - (ax - x0) * t + 2, yy, ax + (x1 - ax) * t - 2, yy);
+    }
+    g.lineStyle(1.5, Phaser.Display.Color.IntegerToColor(color).lighten(25).color, 1);
+    g.lineBetween(ax, ay + 2, x0 + 4, y - 1);
+    g.lineStyle(3, C.ink, 1);
+    g.strokeTriangle(x0, y, x1, y, ax, ay);
+  }
+
+  /** A small lit window: warm glass, a cross frame and an ink edge. */
+  private windowLit(g: Phaser.GameObjects.Graphics, x: number, y: number, w: number, h: number): void {
+    g.fillStyle(0xffd86a, 1);
+    g.fillRect(x, y, w, h);
+    g.lineStyle(1.5, C.ink, 1);
+    g.strokeRect(x, y, w, h);
+    g.lineBetween(x + w / 2, y, x + w / 2, y + h);
+    g.lineBetween(x, y + h / 2, x + w, y + h / 2);
+  }
+
   private makeBuilding(id: BuildingId, lvl: number): void {
     const def = BUILDINGS[id];
     const S = def.size * TILE;
@@ -3603,21 +3631,27 @@ export class BootScene extends Phaser.Scene {
         g.strokeRect(cx - 26, cy - 10, 53, 34);
         g.fillStyle(0xb5651d, 1);
         g.fillTriangle(cx - 32, cy - 8, cx + 32, cy - 8, cx, cy - 34);
-        g.lineStyle(3, C.ink, 1);
-        g.strokeTriangle(cx - 32, cy - 8, cx + 32, cy - 8, cx, cy - 34);
+        this.roofDetail(g, cx - 32, cx + 32, cy - 8, cx, cy - 34, 0xb5651d);
         g.fillStyle(0x3b2a1a, 1);
         g.fillRect(cx - 7, cy + 6, 14, 18);
+        this.windowLit(g, cx + 12, cy, 9, 8);
         break;
       }
       case 'barracks': {
         g.fillStyle(0x9a6a40, 1);
         g.fillRect(cx - 44 * k, cy - 10, 88 * k, 44);
         g.strokeRect(cx - 44 * k, cy - 10, 88 * k, 44);
+        // plank seams on the walls (design F37)
+        g.lineStyle(1, 0x6a4a2a, 1);
+        for (let px = -30; px <= 30; px += 15) g.lineBetween(cx + px * k, cy - 8, cx + px * k, cy + 32);
+        g.lineStyle(3, C.ink, 1);
         g.fillStyle(def.color, 1);
         g.fillTriangle(cx - 52 * k, cy - 8, cx + 52 * k, cy - 8, cx, cy - 46);
-        g.strokeTriangle(cx - 52 * k, cy - 8, cx + 52 * k, cy - 8, cx, cy - 46);
+        this.roofDetail(g, cx - 52 * k, cx + 52 * k, cy - 8, cx, cy - 46, def.color);
         g.fillStyle(0x3b2a1a, 1);
         g.fillRect(cx - 10, cy + 10, 20, 24);
+        this.windowLit(g, cx - 32 * k, cy + 2, 12, 10);
+        this.windowLit(g, cx + 20 * k, cy + 2, 12, 10);
         g.lineStyle(2, 0x5a3b22, 1);
         g.lineBetween(cx + 40, cy + 34, cx + 40, cy - 30);
         g.fillStyle(dark, 1);
@@ -3628,8 +3662,16 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x7a6a5a, 1);
         g.fillRect(cx - 46 * k, cy - 6, 92 * k, 40);
         g.strokeRect(cx - 46 * k, cy - 6, 92 * k, 40);
+        // lit windows along the front and a shaded, tiled flat roof (design F37)
+        for (const wx of [-36, -16, 16]) this.windowLit(g, cx + wx * k, cy + 4, 11, 10);
+        g.lineStyle(3, C.ink, 1);
         g.fillStyle(def.color, 1);
         g.fillRect(cx - 52 * k, cy - 22, 104 * k, 18);
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(def.color).darken(18).color, 1);
+        g.fillRect(cx - 52 * k, cy - 12, 104 * k, 8);
+        g.lineStyle(1, Phaser.Display.Color.IntegerToColor(def.color).darken(32).color, 1);
+        for (let tx = -44; tx <= 44; tx += 11) g.lineBetween(cx + tx * k, cy - 22, cx + tx * k, cy - 4);
+        g.lineStyle(3, C.ink, 1);
         g.strokeRect(cx - 52 * k, cy - 22, 104 * k, 18);
         // gear
         g.fillStyle(0xd0c8b8, 1);
@@ -3793,6 +3835,7 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(`bld_${id}_${lvl}`, S, S);
     g.destroy();
+    this.rimLight(`bld_${id}_${lvl}`, 0xfff0c8, 0.3); // the village shares the cast's warm edge sheen (F25/F35)
   }
 
   /**

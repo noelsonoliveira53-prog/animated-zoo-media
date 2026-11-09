@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F26**
+Fix counter: **F27**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2217,6 +2217,14 @@ Fix counter: **F26**
   - **Glowbearer**, **Hexguard** and **Waxback** already read well.
 
   Sheets: `fix-26-before.png` and `fix-26-after.png`.
+
+- **F27 (Design Backlog 1, part i) Comb, bog and prairie foes.**
+  - **Bloomdoe**: its four legs were filled ink-outlined rectangles that read as a black block. They are now slim fawn legs drawn over an ink underlay, with dark hooves. It also gets a shaded body, a white tail flag, pink inner ears and a nose.
+  - **Hexcroak**: glowing halos round its heavy-lidded eyes, a glossy sheen on its throat sac, and a faint green hex rune on its back.
+  - **Mudskipper**: a spiny orange dorsal fin, a wet sheen of mud and eye glints.
+  - **Honeypaw**, **Lanternfrog** and **Tumblehog** already read well.
+
+  Sheets: `fix-27-before.png` and `fix-27-after.png`.
 
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.

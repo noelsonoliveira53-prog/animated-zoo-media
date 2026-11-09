@@ -1200,6 +1200,8 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x4a2a5a, 1);
         for (const [bx, by] of [[-0.45, -0.1], [0.5, 0.05], [-0.2, -0.3], [0.25, -0.35]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.08);
         for (const sx of [-1, 1]) {
+          g.fillStyle(0xf0d040, 0.35);
+          g.fillCircle(cx + sx * r * 0.4, cy - r * 0.45, r * 0.28);
           g.fillStyle(0xf0d040, 1);
           g.fillCircle(cx + sx * r * 0.4, cy - r * 0.45, r * 0.18);
           g.fillStyle(color, 1);
@@ -1207,6 +1209,23 @@ export class BootScene extends Phaser.Scene {
           g.fillStyle(C.ink, 1);
           g.fillRect(cx + sx * r * 0.4 - r * 0.1, cy - r * 0.45, r * 0.2, r * 0.05);
         }
+        // a glossy sheen on the throat sac and a faint green hex rune glowing on its back (design F27)
+        g.fillStyle(0xffffff, 0.55);
+        g.fillEllipse(cx - r * 0.14, cy + r * 0.22, r * 0.2, r * 0.12);
+        g.lineStyle(1.5, 0x9aff7a, 0.85);
+        const hx = cx + r * 0.42;
+        const hy = cy - r * 0.02;
+        g.beginPath();
+        for (let k = 0; k <= 6; k++) {
+          const a = (k / 6) * Math.PI * 2 + Math.PI / 6;
+          const px = hx + Math.cos(a) * r * 0.16;
+          const py = hy + Math.sin(a) * r * 0.16;
+          if (k === 0) g.moveTo(px, py);
+          else g.lineTo(px, py);
+        }
+        g.strokePath();
+        g.fillStyle(0x9aff7a, 1);
+        g.fillCircle(hx, hy, r * 0.04);
         break;
       }
       case 'mudskipper': {
@@ -1220,12 +1239,19 @@ export class BootScene extends Phaser.Scene {
         for (const sx of [-1, 1]) g.fillEllipse(cx - r * 0.2, cy + sx * r * 0.55, r * 0.45, r * 0.22);
         g.fillStyle(0x6a5a3a, 1);
         for (const [bx, by] of [[0.1, -0.15], [0.35, 0.15], [-0.05, 0.25]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.07);
+        // a spiny dorsal fin along its back and a wet sheen of mud (design F27)
+        g.fillStyle(0xd88a4a, 1);
+        for (let k = 0; k < 4; k++) g.fillTriangle(cx - r * 0.05 + k * r * 0.18, cy - r * 0.05, cx + r * 0.12 + k * r * 0.18, cy - r * 0.05, cx + r * 0.04 + k * r * 0.18, cy - r * 0.32);
+        g.fillStyle(0xffffff, 0.35);
+        g.fillEllipse(cx + r * 0.2, cy - r * 0.25, r * 0.6, r * 0.12);
         for (const sx of [-1, 1]) {
           g.fillStyle(0xf0f0e0, 1);
           g.fillCircle(cx - r * 0.5, cy + sx * r * 0.22, r * 0.2);
           g.strokeCircle(cx - r * 0.5, cy + sx * r * 0.22, r * 0.2);
           g.fillStyle(C.ink, 1);
           g.fillCircle(cx - r * 0.56, cy + sx * r * 0.22, r * 0.09);
+          g.fillStyle(0xffffff, 1);
+          g.fillCircle(cx - r * 0.59, cy + sx * r * 0.22 - r * 0.04, r * 0.035);
         }
         g.lineStyle(1.5, C.ink, 1);
         g.beginPath();
@@ -1295,20 +1321,27 @@ export class BootScene extends Phaser.Scene {
       case 'bloomdoe': {
         // a slender prairie deer seen from above: fawn body with pale spots, long neck, big ears, a crown of purple thistle blooms
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        for (const lx of [-0.45, -0.15, 0.25, 0.5]) {
-          g.fillRect(cx + lx * r - r * 0.06, cy + r * 0.3, r * 0.12, r * 0.5);
-          g.strokeRect(cx + lx * r - r * 0.06, cy + r * 0.3, r * 0.12, r * 0.5);
-        }
-        g.fillEllipse(cx + r * 0.05, cy + r * 0.1, r * 1.3, r * 0.75);
-        g.strokeEllipse(cx + r * 0.05, cy + r * 0.1, r * 1.3, r * 0.75);
+        // slim legs: ink first, then the fawn colour down the middle with dark little hooves (design F27)
+        const legs = [-0.45, -0.15, 0.25, 0.5];
+        g.lineStyle(r * 0.2, C.ink, 1);
+        for (const lx of legs) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r, cy + r * 0.82);
+        g.lineStyle(r * 0.09, Phaser.Display.Color.IntegerToColor(color).lighten(8).color, 1);
+        for (const lx of legs) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r, cy + r * 0.74);
+        g.lineStyle(2.5, C.ink, 1);
+        this.orbKeep(g, cx + r * 0.05, cy + r * 0.1, r * 1.3, r * 0.75, color);
+        g.fillStyle(0xfff4e8, 1);
+        g.fillEllipse(cx + r * 0.68, cy + r * 0.0, r * 0.18, r * 0.2); // a white tail flag
         g.fillStyle(0xf0e0c8, 1);
         for (const [sx, sy] of [[0.2, -0.05], [0.4, 0.15], [-0.05, 0.2]]) g.fillCircle(cx + sx * r, cy + sy * r, r * 0.07);
         this.orbKeep(g, cx - r * 0.6, cy - r * 0.35, r * 0.5, r * 0.45, color);
         g.fillEllipse(cx - r * 0.85, cy - r * 0.6, r * 0.18, r * 0.35);
         g.fillEllipse(cx - r * 0.38, cy - r * 0.62, r * 0.18, r * 0.35);
+        g.fillStyle(0xd8b8c8, 1);
+        g.fillEllipse(cx - r * 0.85, cy - r * 0.6, r * 0.08, r * 0.2);
+        g.fillEllipse(cx - r * 0.38, cy - r * 0.62, r * 0.08, r * 0.2);
         g.fillStyle(C.ink, 1);
         g.fillCircle(cx - r * 0.7, cy - r * 0.32, r * 0.05);
+        g.fillCircle(cx - r * 0.82, cy - r * 0.22, r * 0.035);
         for (const [fx, fy] of [[-0.75, -0.75], [-0.55, -0.82], [-0.35, -0.75]]) {
           g.fillStyle(0x9a6ab8, 1);
           g.fillCircle(cx + fx * r, cy + fy * r, r * 0.12);

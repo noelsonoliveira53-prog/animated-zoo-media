@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F35**
+Fix counter: **F36**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2279,6 +2279,12 @@ Fix counter: **F35**
 
   The heroes were the one group without the sheen, so they get it here at the same 30 % as towers and troops. The phone tour of menu, map, battles, settings, village, guide, achievements and store still reads cleanly. Sheets: `fix-35-heroes-before.png` and `fix-35-heroes-after.png`; tour `fix-35-*`.
 
+- **F36 (Design Backlog 7) Battle-map vignette.** Every battle map now has a soft vignette: corners and edges sink gently into a deep-green shadow (0 → 10 % → 32 % from 38 % of the short side outward), so the eye rests on the middle of the field.
+  - `BattleScene.addVignette` bakes it once into a shared canvas texture, oversized for screen shake.
+  - It sits at depth 1.5: over the ground and decoration, under every unit, tower and HUD element.
+
+  The rest of item 7 was already in place: richer path edges (F2/F5), lit ground (F1/F4), and per-region theme props drawn by the theme ground passes (frost drifts, ember cracks, dusk mushrooms, reef coral, gears, ruins…). Shots: `fix-36-before-*` and `fix-36-after-*` (levels 1, 22, 48).
+
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.
 
@@ -2332,7 +2338,7 @@ Design counter: **D3**
 4. ~~Towers~~ done in F33 (stone and wood shading, seams and grain, pennants in the tower colour, edge sheen).
 5. ~~Consistency pass across heroes, enemies and towers~~ done in F35.
 6. ~~Wardens, Rangers and raid troops~~ done in F34.
-7. Battle maps: richer path edges, theme props per region (snow drifts, ember cracks, dusk mushrooms, reef coral…) and soft vignettes.
+7. ~~Battle maps~~ done (path edges F2/F5, ground F1/F4, theme props already per region, vignette F36).
 8. Village buildings and villagers: shading, roof tiles and windows.
 9. Raid camp buildings: Murkhorde style, shaded.
 10. Consistency pass.

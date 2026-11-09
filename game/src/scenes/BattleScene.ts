@@ -436,6 +436,30 @@ export class BattleScene extends Phaser.Scene {
       tex.refresh();
     }
     this.add.image(-60, -60, key).setOrigin(0).setDepth(-11);
+    this.addVignette();
+  }
+
+  /**
+   * A soft vignette: the map's corners and edges sink a little into shadow so the eye rests on the middle of the
+   * field. Baked once into a shared canvas texture; it sits over ground and decoration but under every unit (design F36).
+   */
+  private addVignette(): void {
+    const key = 'vignette';
+    if (!this.textures.exists(key)) {
+      const w = GAME_W + 120;
+      const h = GAME_H + 120;
+      const tex = this.textures.createCanvas(key, w, h);
+      if (!tex) return;
+      const ctx = tex.getContext();
+      const grad = ctx.createRadialGradient(w / 2, h / 2, Math.min(w, h) * 0.38, w / 2, h / 2, Math.hypot(w, h) * 0.55);
+      grad.addColorStop(0, 'rgba(10, 20, 14, 0)');
+      grad.addColorStop(0.6, 'rgba(10, 20, 14, 0.10)');
+      grad.addColorStop(1, 'rgba(10, 20, 14, 0.32)');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, w, h);
+      tex.refresh();
+    }
+    this.add.image(-60, -60, key).setOrigin(0).setDepth(1.5);
   }
 
   private drawMap(): void {

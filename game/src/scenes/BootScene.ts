@@ -708,11 +708,16 @@ export class BootScene extends Phaser.Scene {
         this.orbKeep(g, cx - r * 0.95, cy - r * 0.05, (r * 0.32) * 2, (r * 0.32) * 2, color);
         g.fillCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
         g.strokeCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
-        g.fillStyle(0x9a8a7a, 1);
-        g.fillEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.1);
-        g.strokeEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.1);
+        // the claw tips: a pale pincer notch in each (design F23)
+        g.fillStyle(0xfff0e0, 1);
+        g.fillTriangle(cx - r * 1.2, cy - r * 0.2, cx - r * 1.05, cy - r * 0.05, cx - r * 1.25, cy + r * 0.0);
+        g.fillTriangle(cx + r * 1.2, cy - r * 0.2, cx + r * 1.05, cy - r * 0.05, cx + r * 1.25, cy + r * 0.0);
+        g.lineStyle(2.5, C.ink, 1);
+        this.orbKeep(g, cx, cy + r * 0.05, r * 1.5, r * 1.1, 0x9a8a7a);
         g.fillStyle(0xe8e0d0, 1);
         for (const [bx, by] of [[-0.3, -0.15], [0.25, -0.2], [0, 0.2], [0.4, 0.15], [-0.4, 0.2]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.09);
+        g.fillStyle(0x6ab04c, 1);
+        g.fillEllipse(cx + r * 0.1, cy - r * 0.32, r * 0.4, r * 0.14); // a frond of seaweed on the shell
         g.lineStyle(2, C.ink, 1);
         g.lineBetween(cx - r * 0.2, cy - r * 0.45, cx - r * 0.25, cy - r * 0.75);
         g.lineBetween(cx + r * 0.2, cy - r * 0.45, cx + r * 0.25, cy - r * 0.75);
@@ -740,6 +745,21 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(2, C.ink, 1);
         g.fillTriangle(cx + r * 0.2, cy - r * 0.35, cx + r * 0.95, cy - r * 0.55, cx + r * 0.85, cy - r * 0.05);
         g.strokeTriangle(cx + r * 0.2, cy - r * 0.35, cx + r * 0.95, cy - r * 0.55, cx + r * 0.85, cy - r * 0.05);
+        // conch spiral bands and a pink lip, a dark nose, eye glints, and little rings of water at its waist (design F23)
+        g.lineStyle(1.2, 0xc88a6a, 1);
+        g.lineBetween(cx + r * 0.45, cy - r * 0.42, cx + r * 0.58, cy - r * 0.15);
+        g.lineBetween(cx + r * 0.68, cy - r * 0.47, cx + r * 0.75, cy - r * 0.1);
+        g.fillStyle(0xff9ab8, 1);
+        g.fillCircle(cx + r * 0.9, cy - r * 0.3, r * 0.08);
+        g.fillStyle(0x3a2a2a, 1);
+        g.fillEllipse(cx, cy - r * 0.47, r * 0.16, r * 0.1);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.19, cy - r * 0.68, r * 0.03);
+        g.fillCircle(cx + r * 0.15, cy - r * 0.68, r * 0.03);
+        g.lineStyle(1.5, 0x9ae8ff, 0.9);
+        g.strokeEllipse(cx, cy + r * 0.85, r * 1.5, r * 0.32);
+        g.lineStyle(1, 0xd8f8ff, 0.7);
+        g.strokeEllipse(cx, cy + r * 0.88, r * 1.9, r * 0.4);
         break;
       }
       case 'inkspitter': {
@@ -801,20 +821,37 @@ export class BootScene extends Phaser.Scene {
         // rat pirate: bandana, round ears, a long brass blunderbuss with a flared muzzle
         g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx, cy + r * 0.2, r * 1.1, r * 1.2, color);
-        g.fillCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
-        g.strokeCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
         g.fillStyle(0xd8a0a0, 1);
         g.fillCircle(cx - r * 0.42, cy - r * 0.78, r * 0.17);
         g.fillCircle(cx + r * 0.22, cy - r * 0.8, r * 0.17);
+        g.strokeCircle(cx - r * 0.42, cy - r * 0.78, r * 0.17);
+        g.strokeCircle(cx + r * 0.22, cy - r * 0.8, r * 0.17);
+        this.orbKeep(g, cx - r * 0.1, cy - r * 0.45, r * 0.84, r * 0.84, color);
+        // a striped sailor's shirt, pink snout and a bandana with trailing tails (design F23)
+        g.fillStyle(0xf0ece0, 1);
+        g.fillEllipse(cx, cy + r * 0.35, r * 0.8, r * 0.6);
+        g.fillStyle(0x3a6ac8, 1);
+        for (const yy of [0.18, 0.38, 0.56]) g.fillRect(cx - r * 0.36, cy + yy * r, r * 0.72, r * 0.07);
+        g.fillStyle(0xff9aa8, 1);
+        g.fillCircle(cx - r * 0.48, cy - r * 0.38, r * 0.08);
         g.fillStyle(0xc83a3a, 1);
         g.fillRect(cx - r * 0.5, cy - r * 0.72, r * 0.8, r * 0.14);
+        g.fillTriangle(cx + r * 0.28, cy - r * 0.7, cx + r * 0.55, cy - r * 0.62, cx + r * 0.42, cy - r * 0.48);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.68, r * 0.03);
+        g.fillCircle(cx, cy - r * 0.68, r * 0.03);
         g.fillStyle(0x111111, 1);
         g.fillCircle(cx - r * 0.3, cy - r * 0.45, r * 0.07);
         g.fillCircle(cx + r * 0.05, cy - r * 0.45, r * 0.07);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.32, cy - r * 0.48, r * 0.025);
+        g.fillCircle(cx + r * 0.03, cy - r * 0.48, r * 0.025);
         g.fillStyle(0xd8a040, 1);
         g.fillRect(cx - r * 0.2, cy - r * 0.05, r * 1.15, r * 0.16);
         g.fillTriangle(cx + r * 0.95, cy - r * 0.15, cx + r * 0.95, cy + r * 0.21, cx + r * 1.2, cy + r * 0.03);
         g.strokeRect(cx - r * 0.2, cy - r * 0.05, r * 1.15, r * 0.16);
+        g.fillStyle(0xfff0b0, 1);
+        g.fillRect(cx - r * 0.1, cy - r * 0.03, r * 0.9, r * 0.04); // brass shine along the barrel
         break;
       }
       case 'ironkeel': {

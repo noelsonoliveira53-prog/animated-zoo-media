@@ -58,7 +58,7 @@ import { showAchievementToasts } from '../ui/toast';
 import { addResources, battlePerks, battleReward, grantSwiftbloom, type BattlePerks } from '../systems/village';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
-import { fitWidth, padHit, pf } from '../ui/touch';
+import { fitWidth, isTouch, padHit, pf } from '../ui/touch';
 
 interface EnemyView {
   sprite: Phaser.GameObjects.Image;
@@ -95,6 +95,7 @@ export class BattleScene extends Phaser.Scene {
   private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private fx!: TowerFx;
+  private readonly iconScale = isTouch() ? 1.35 : 1; // status icons read bigger on phones
   private bannerSpot: { y: number; cover: number } | null = null; // where the banner hides the least road (per level)
   private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
@@ -4818,7 +4819,7 @@ export class BattleScene extends Phaser.Scene {
         const barShown = !e.def.boss && (e.hp < e.maxHp || e.shield > 0);
         const bw = Math.max(24, e.def.radius * 2.4);
         const sy = e.pos.y - e.def.radius - 14 - 34 * v.air + 2.5;
-        statuses.forEach((kind, k) => this.drawStatusIcon(v.bar, kind, barShown ? iconX(e.pos.x + bw / 2 + 9, k) : iconX(e.pos.x - ((statuses.length - 1) * 12) / 2, k), barShown ? sy : sy - 2));
+        statuses.forEach((kind, k) => this.drawStatusIcon(v.bar, kind, barShown ? iconX(e.pos.x + bw / 2 + 3 + 6 * this.iconScale, k, 12 * this.iconScale) : iconX(e.pos.x - ((statuses.length - 1) * 12 * this.iconScale) / 2, k, 12 * this.iconScale), barShown ? sy : sy - 2));
         v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
       if (e.def.boss) continue; // boss uses the big HUD bar
@@ -4998,54 +4999,70 @@ export class BattleScene extends Phaser.Scene {
     }
     // status icons beside the bar (or over the head at full health), so afflictions never rely on tint alone
     const icons = soldierStatuses(s);
-    icons.forEach((kind, k) => this.drawStatusIcon(bar, kind, s.hp < s.maxHp ? iconX(s.pos.x + 20, k) : iconX(s.pos.x - ((icons.length - 1) * 12) / 2, k), s.pos.y - 31));
+    icons.forEach((kind, k) => this.drawStatusIcon(bar, kind, s.hp < s.maxHp ? iconX(s.pos.x + 14 + 6 * this.iconScale, k, 12 * this.iconScale) : iconX(s.pos.x - ((icons.length - 1) * 12 * this.iconScale) / 2, k, 12 * this.iconScale), s.pos.y - 31));
     if (icons.length) bar.setDepth(s.pos.y + 0.5);
   }
 
   /** One status icon: a little ink disc with a symbol (slow snowflake, haste chevrons, rage flame, anchor, venom drop, honey drop, stun bolt). */
-  private drawStatusIcon(g: Phaser.GameObjects.Graphics, kind: StatusIcon, x: number, y: number): void {
-    g.fillStyle(C.ink, 0.92);
-    g.fillCircle(x, y, 6);
+  private drawStatusIcon(g: Phaser.GameObjects.Graphics, kind: StatusIcon, x0: number, y0: number): void {
+    // drawn in a unit box around (0, 0), scaled up a third on phones where the game renders at about half size
+    const k = this.iconScale;
+    const tx = (v: number) => x0 + (v - x0) * k;
+    const ty = (v: number) => y0 + (v - y0) * k;
+    const x = x0;
+    const y = y0;
+    const G = {
+      fillCircle: (cx: number, cy: number, r: number) => g.fillCircle(tx(cx), ty(cy), r * k),
+      fillTriangle: (a: number, b: number, c: number, d: number, e: number, f: number) => g.fillTriangle(tx(a), ty(b), tx(c), ty(d), tx(e), ty(f)),
+      lineBetween: (a: number, b: number, c: number, d: number) => g.lineBetween(tx(a), ty(b), tx(c), ty(d)),
+      lineStyle: (w: number, col: number, al: number) => g.lineStyle(w * k, col, al),
+      fillStyle: (col: number, al: number) => g.fillStyle(col, al),
+      arc: (cx: number, cy: number, r: number, a0: number, a1: number) => {
+        g.beginPath();
+        g.arc(tx(cx), ty(cy), r * k, a0, a1);
+        g.strokePath();
+      },
+    };
+    G.fillStyle(C.ink, 0.92);
+    G.fillCircle(x, y, 6);
     switch (kind) {
       case 'slow':
-        g.lineStyle(1.4, 0x9ad8ff, 1);
+        G.lineStyle(1.4, 0x9ad8ff, 1);
         for (let a = 0; a < 3; a++) {
           const t = (a * Math.PI) / 3;
-          g.lineBetween(x - Math.cos(t) * 3.6, y - Math.sin(t) * 3.6, x + Math.cos(t) * 3.6, y + Math.sin(t) * 3.6);
+          G.lineBetween(x - Math.cos(t) * 3.6, y - Math.sin(t) * 3.6, x + Math.cos(t) * 3.6, y + Math.sin(t) * 3.6);
         }
         break;
       case 'haste':
-        g.lineStyle(1.5, 0xffa8dc, 1);
-        g.lineBetween(x - 3, y - 3, x, y);
-        g.lineBetween(x, y, x - 3, y + 3);
-        g.lineBetween(x, y - 3, x + 3, y);
-        g.lineBetween(x + 3, y, x, y + 3);
+        G.lineStyle(1.5, 0xffa8dc, 1);
+        G.lineBetween(x - 3, y - 3, x, y);
+        G.lineBetween(x, y, x - 3, y + 3);
+        G.lineBetween(x, y - 3, x + 3, y);
+        G.lineBetween(x + 3, y, x, y + 3);
         break;
       case 'rage':
-        g.fillStyle(0xff6a3a, 1);
-        g.fillTriangle(x - 3, y + 3, x + 3, y + 3, x, y - 4);
-        g.fillStyle(0xffd23c, 1);
-        g.fillTriangle(x - 1.4, y + 3, x + 1.4, y + 3, x, y - 0.6);
+        G.fillStyle(0xff6a3a, 1);
+        G.fillTriangle(x - 3, y + 3, x + 3, y + 3, x, y - 4);
+        G.fillStyle(0xffd23c, 1);
+        G.fillTriangle(x - 1.4, y + 3, x + 1.4, y + 3, x, y - 0.6);
         break;
       case 'anchor':
-        g.lineStyle(1.4, 0xc8d0d8, 1);
-        g.lineBetween(x, y - 3.6, x, y + 3);
-        g.lineBetween(x - 2, y - 2, x + 2, y - 2);
-        g.beginPath();
-        g.arc(x, y, 3, Math.PI * 0.15, Math.PI * 0.85);
-        g.strokePath();
+        G.lineStyle(1.4, 0xc8d0d8, 1);
+        G.lineBetween(x, y - 3.6, x, y + 3);
+        G.lineBetween(x - 2, y - 2, x + 2, y - 2);
+        G.arc(x, y, 3, Math.PI * 0.15, Math.PI * 0.85);
         break;
       case 'poison':
       case 'glaze':
-        g.fillStyle(kind === 'poison' ? 0x8ad84a : 0xffc83a, 1);
-        g.fillCircle(x, y + 1, 2.6);
-        g.fillTriangle(x - 2.4, y + 0.4, x + 2.4, y + 0.4, x, y - 3.8);
+        G.fillStyle(kind === 'poison' ? 0x8ad84a : 0xffc83a, 1);
+        G.fillCircle(x, y + 1, 2.6);
+        G.fillTriangle(x - 2.4, y + 0.4, x + 2.4, y + 0.4, x, y - 3.8);
         break;
       case 'stun':
-        g.lineStyle(1.5, 0xfff07a, 1);
-        g.lineBetween(x + 1.5, y - 4, x - 1.5, y);
-        g.lineBetween(x - 1.5, y, x + 1.5, y);
-        g.lineBetween(x + 1.5, y, x - 1.5, y + 4);
+        G.lineStyle(1.5, 0xfff07a, 1);
+        G.lineBetween(x + 1.5, y - 4, x - 1.5, y);
+        G.lineBetween(x - 1.5, y, x + 1.5, y);
+        G.lineBetween(x + 1.5, y, x - 1.5, y + 4);
         break;
     }
   }

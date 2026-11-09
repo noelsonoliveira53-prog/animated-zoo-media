@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F14**
+Fix counter: **F15**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2124,6 +2124,10 @@ Fix counter: **F14**
   - Spells and the hero skill skip the touch long-press, because touch already shows their card.
 
   New `scripts/tooltip-check.mjs` hovers pause and a spell on desktop, checks the tip clears on leave, and long-presses pause on a phone (it still explains itself while paused). Screenshots `fix-14-pause.png`, `fix-14-spell.png`, `fix-14-phone.png`.
+
+- **F15 Consistency pass.** Re-ran the full phone tour (`fix-15-*`) after F11–F14: menu, map, two battles, settings, village, guide, achievements and store all read cleanly. Palette and outlines match across themes, no text is below 13 game px, and the store fits.
+  - The new status icons were the only thing that read too small on a phone (about 3 CSS px). They now draw 35 % larger on touch screens (`iconScale`), with spacing to match. `drawStatusIcon` draws through a small scaled-graphics shim, so every symbol scales together.
+  - `status-icons-check.mjs` takes `PHONE=1`; phone close-up `fix-15-icons-phone.png`, desktop `fix-13-icons.png` unchanged.
 
 ### Fix Backlog (ranked)
 1. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).

@@ -6,7 +6,8 @@ const require = createRequire(import.meta.url);
 const pw = require('playwright');
 const server = await preview({ preview: { port: 4335, strictPort: true } });
 const browser = await pw.chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
+const phone = !!process.env.PHONE; // PHONE=1: a 740×360 touch screen (icons draw bigger there)
+const page = phone ? await (await browser.newContext({ viewport: { width: 740, height: 360 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 })).newPage() : await browser.newPage({ viewport: { width: 1280, height: 720 }, deviceScaleFactor: 2 });
 const errors = [];
 page.on('pageerror', (e) => errors.push(String(e)));
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
@@ -32,10 +33,12 @@ const info = await page.evaluate(() => {
 });
 await page.waitForTimeout(300);
 const xs = info.map((p) => p.x), ys = info.map((p) => p.y);
-const clip = { x: Math.max(0, Math.min(...xs) - 90), y: Math.max(0, Math.min(...ys) - 90), width: 0, height: 0 };
-clip.width = Math.min(1280 - clip.x, Math.max(...xs) - clip.x + 90);
-clip.height = Math.min(720 - clip.y, Math.max(...ys) - clip.y + 60);
-await page.screenshot({ path: 'screenshots/fix-13-icons.png', clip });
+const r = await page.evaluate(() => { const b = window.__game.canvas.getBoundingClientRect(); return { l: b.left, t: b.top, k: b.width / 1280 }; });
+const sx = (v) => r.l + v * r.k, sy = (v) => r.t + v * r.k;
+const clip = { x: sx(Math.min(...xs) - 90), y: sy(Math.max(0, Math.min(...ys) - 90)), width: 0, height: 0 };
+clip.width = sx(Math.max(...xs) + 90) - clip.x;
+clip.height = sy(Math.max(...ys) + 60) - clip.y;
+await page.screenshot({ path: phone ? 'screenshots/fix-15-icons-phone.png' : 'screenshots/fix-13-icons.png', clip });
 console.log(JSON.stringify(info));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();

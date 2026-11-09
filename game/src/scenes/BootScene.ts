@@ -41,6 +41,26 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(0x111111, 1);
     g.fillCircle(cx - gap + r * 0.3, cy + r * 0.15, r * 0.55);
     g.fillCircle(cx + gap + r * 0.3, cy + r * 0.15, r * 0.55);
+    // a glint in each pupil (design D2)
+    g.fillStyle(0xffffff, 0.95);
+    g.fillCircle(cx - gap + r * 0.12, cy - r * 0.08, Math.max(0.7, r * 0.2));
+    g.fillCircle(cx + gap + r * 0.12, cy - r * 0.08, Math.max(0.7, r * 0.2));
+  }
+
+  /**
+   * Like orb() but strokes with whatever line style is already set (each enemy picks its own outline weight) and
+   * leaves the fill colour on `color` afterwards, so the drawing code that follows behaves as before (design D2).
+   */
+  private orbKeep(g: Phaser.GameObjects.Graphics, x: number, y: number, w: number, h: number, color: number): void {
+    const dark = Phaser.Display.Color.IntegerToColor(color).darken(16).color;
+    g.fillStyle(dark, 1);
+    g.fillEllipse(x, y, w, h);
+    g.fillStyle(color, 1);
+    g.fillEllipse(x - w * 0.06, y - h * 0.07, w * 0.86, h * 0.84);
+    g.fillStyle(0xffffff, 0.26);
+    g.fillEllipse(x - w * 0.2, y - h * 0.24, w * 0.3, h * 0.18);
+    g.strokeEllipse(x, y, w, h);
+    g.fillStyle(color, 1);
   }
 
   private makeEnemy(id: string, color: number, radius: number, flying: boolean): void {
@@ -68,9 +88,7 @@ export class BootScene extends Phaser.Scene {
         g.strokeEllipse(cx - r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
         g.strokeEllipse(cx + r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
         g.lineStyle(id === 'gnat' ? 2 : 3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 1.2, r * 1.6);
-        g.strokeEllipse(cx, cy, r * 1.2, r * 1.6);
+        this.orbKeep(g, cx, cy, r * 1.2, r * 1.6, color);
         if (id === 'gloomwing') {
           g.fillStyle(shade, 1);
           g.fillTriangle(cx - r * 0.5, cy - r * 0.6, cx - r * 0.2, cy - r * 0.6, cx - r * 0.45, cy - r * 1.1);
@@ -90,9 +108,7 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(2, C.ink, 1);
         g.strokeCircle(cx + r * 0.9, cy - r * 1.3, r * 0.35);
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 2, r * 1.6, color);
         g.fillStyle(light, 1);
         g.fillEllipse(cx, cy + r * 0.4, r * 1.1, r * 0.7);
         // bulging eyes on top
@@ -109,9 +125,7 @@ export class BootScene extends Phaser.Scene {
         break;
       }
       case 'reedguard': {
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy, r);
-        g.strokeCircle(cx, cy, r);
+        this.orbKeep(g, cx, cy, (r) * 2, (r) * 2, color);
         this.eyes(g, cx - r * 0.15, cy - r * 0.3, r * 0.2, r * 0.28);
         // woven shield
         g.fillStyle(0xd8c27a, 1);
@@ -124,12 +138,16 @@ export class BootScene extends Phaser.Scene {
         break;
       }
       case 'splotch': {
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.3, r * 2.3, r * 1.5);
+        // mud drips trailing off the sides (design D2)
+        g.fillStyle(shade, 1);
+        g.fillEllipse(cx - r * 1.05, cy + r * 0.85, r * 0.3, r * 0.42);
+        g.fillEllipse(cx + r * 0.95, cy + r * 0.9, r * 0.26, r * 0.36);
+        this.orbKeep(g, cx, cy + r * 0.3, r * 2.3, r * 1.5, color);
         g.fillCircle(cx - r * 0.4, cy - r * 0.2, r * 0.7);
         g.fillCircle(cx + r * 0.45, cy - r * 0.1, r * 0.65);
         g.fillCircle(cx, cy - r * 0.5, r * 0.6);
-        g.strokeEllipse(cx, cy + r * 0.3, r * 2.3, r * 1.5);
+        g.fillStyle(0xffffff, 0.22);
+        g.fillEllipse(cx - r * 0.45, cy - r * 0.55, r * 0.5, r * 0.28);
         g.fillStyle(shade, 1);
         g.fillCircle(cx - r * 0.6, cy + r * 0.5, r * 0.2);
         g.fillCircle(cx + r * 0.7, cy + r * 0.3, r * 0.15);
@@ -148,9 +166,7 @@ export class BootScene extends Phaser.Scene {
           g.strokeTriangle(bx - r * 0.18, cy - r * 0.4, bx + r * 0.18, cy - r * 0.4, bx, cy - r * 1.15);
         }
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 2.1, r * 1.5);
-        g.strokeEllipse(cx, cy, r * 2.1, r * 1.5);
+        this.orbKeep(g, cx, cy, r * 2.1, r * 1.5, color);
         g.fillStyle(shade, 1);
         g.fillEllipse(cx + r * 0.85, cy + r * 0.15, r * 0.6, r * 0.5);
         g.fillStyle(0xfff4d6, 1);
@@ -159,12 +175,20 @@ export class BootScene extends Phaser.Scene {
         break;
       }
       case 'wispling': {
-        g.fillStyle(color, 0.25);
-        g.fillCircle(cx, cy, r * 1.45);
+        g.fillStyle(color, 0.18);
+        g.fillCircle(cx, cy, r * 1.55);
+        g.fillStyle(color, 0.3);
+        g.fillCircle(cx, cy, r * 1.25);
+        // a trail of sparkles drifting below (design D2)
+        g.fillStyle(0xffffff, 0.7);
+        for (const [dx, dy, rr] of [[-0.5, 1.45, 0.1], [0.35, 1.7, 0.08], [-0.1, 1.95, 0.06]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
         g.fillStyle(color, 1);
         g.fillCircle(cx, cy, r);
         g.fillTriangle(cx - r * 0.9, cy + r * 0.3, cx + r * 0.9, cy + r * 0.3, cx, cy + r * 1.5);
-        g.fillStyle(0xffffff, 0.8);
+        // a bright core
+        g.fillStyle(0xffffff, 0.45);
+        g.fillCircle(cx + r * 0.05, cy + r * 0.1, r * 0.55);
+        g.fillStyle(0xffffff, 0.85);
         g.fillCircle(cx - r * 0.3, cy - r * 0.35, r * 0.25);
         g.fillStyle(0x1d4a5a, 1);
         g.fillCircle(cx - r * 0.3, cy, r * 0.16);
@@ -210,9 +234,7 @@ export class BootScene extends Phaser.Scene {
       }
       case 'cindermole': {
         // stout mole with glowing claws and an ember-speckled coat
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 2, r * 1.6);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 2, r * 1.6, color);
         g.fillStyle(0xff8a3c, 1);
         for (const [ex, ey] of [[-0.5, -0.2], [0.3, -0.4], [-0.1, 0.3], [0.6, 0.2]]) g.fillCircle(cx + ex * r, cy + ey * r, r * 0.09);
         g.fillStyle(0xe8a090, 1);
@@ -235,16 +257,12 @@ export class BootScene extends Phaser.Scene {
           g.fillTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
           g.strokeTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.1);
-        g.strokeEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.1);
+        this.orbKeep(g, cx + r * 0.1, cy, r * 1.9, r * 1.1, color);
         g.lineStyle(3, 0x4a8a3a, 1);
         g.lineBetween(cx - r * 0.3, cy - r * 0.5, cx + r * 0.1, cy + r * 0.5);
         g.lineBetween(cx + r * 0.4, cy - r * 0.5, cx + r * 0.7, cy + r * 0.45);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.85, cy + r * 0.05, r * 0.45);
-        g.strokeCircle(cx - r * 0.85, cy + r * 0.05, r * 0.45);
+        this.orbKeep(g, cx - r * 0.85, cy + r * 0.05, (r * 0.45) * 2, (r * 0.45) * 2, color);
         g.fillStyle(0x9a8a6a, 1);
         g.fillEllipse(cx - r * 1.15, cy + r * 0.15, r * 0.3, r * 0.25);
         g.fillStyle(0xf8f0d8, 1);
@@ -260,16 +278,12 @@ export class BootScene extends Phaser.Scene {
         g.arc(cx + r * 0.95, cy + r * 0.3, r * 0.35, -1.6, 3.2, false);
         g.strokePath();
         for (const lx of [-0.5, 0.4]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r - r * 0.15, cy + r * 0.95);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 1.9, r * 1.1);
-        g.strokeEllipse(cx, cy, r * 1.9, r * 1.1);
+        this.orbKeep(g, cx, cy, r * 1.9, r * 1.1, color);
         g.fillStyle(0xe8604a, 1);
         g.fillEllipse(cx + r * 0.35, cy + r * 0.05, r * 0.9, r * 0.8);
         g.fillStyle(0x3a7a2a, 1);
         for (let k = 0; k < 4; k++) g.fillTriangle(cx - r * 0.6 + k * r * 0.4, cy - r * 0.45, cx - r * 0.4 + k * r * 0.4, cy - r * 0.45, cx - r * 0.5 + k * r * 0.4, cy - r * 0.8);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.85, cy - r * 0.1, r * 0.42);
-        g.strokeCircle(cx - r * 0.85, cy - r * 0.1, r * 0.42);
+        this.orbKeep(g, cx - r * 0.85, cy - r * 0.1, (r * 0.42) * 2, (r * 0.42) * 2, color);
         g.fillStyle(0xffe066, 1);
         g.fillCircle(cx - r * 0.95, cy - r * 0.2, r * 0.2);
         g.fillStyle(0x111111, 1);
@@ -282,9 +296,7 @@ export class BootScene extends Phaser.Scene {
         g.beginPath();
         g.arc(cx + r * 0.8, cy + r * 0.2, r * 0.45, -2.6, 1.6, false);
         g.strokePath();
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.3, r * 1.3, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.3, r * 1.3, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.3, r * 1.3, r * 1.2, color);
         g.fillCircle(cx - r * 0.1, cy - r * 0.4, r * 0.55);
         g.strokeCircle(cx - r * 0.1, cy - r * 0.4, r * 0.55);
         g.fillStyle(0xe8d0b0, 1);
@@ -367,9 +379,7 @@ export class BootScene extends Phaser.Scene {
       case 'rotseed': {
         // black seed half-buried, a pale shoot just poking out
         g.lineStyle(2, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.1);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 1.5, r * 1.1, color);
         g.fillStyle(0x5a4a5a, 1);
         g.fillEllipse(cx - r * 0.25, cy, r * 0.4, r * 0.25);
         g.lineStyle(2.5, 0x9ac85a, 1);
@@ -407,14 +417,10 @@ export class BootScene extends Phaser.Scene {
         // shaggy buffalo: big humped body, curled horns, stamping hooves
         g.lineStyle(3, C.ink, 1);
         for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.4, cx + lx * r, cy + r * 0.95);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy, r * 1.7, r * 1.15);
-        g.strokeEllipse(cx + r * 0.1, cy, r * 1.7, r * 1.15);
+        this.orbKeep(g, cx + r * 0.1, cy, r * 1.7, r * 1.15, color);
         g.fillStyle(0x4a3226, 1);
         g.fillEllipse(cx - r * 0.25, cy - r * 0.3, r * 0.9, r * 0.7);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.7, cy + r * 0.05, r * 0.42);
-        g.strokeCircle(cx - r * 0.7, cy + r * 0.05, r * 0.42);
+        this.orbKeep(g, cx - r * 0.7, cy + r * 0.05, (r * 0.42) * 2, (r * 0.42) * 2, color);
         g.lineStyle(3, 0xe8e0c8, 1);
         g.beginPath();
         g.arc(cx - r * 0.95, cy - r * 0.3, r * 0.22, Math.PI * 0.2, Math.PI * 1.3);
@@ -431,9 +437,7 @@ export class BootScene extends Phaser.Scene {
         // big grey ox, head low, wide horns capped with shining copper, a copper ring through its nose
         g.lineStyle(3, C.ink, 1);
         for (const lx of [-0.6, -0.25, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.4, cx + lx * r, cy + r * 0.95);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.15, cy, r * 1.7, r * 1.1);
-        g.strokeEllipse(cx + r * 0.15, cy, r * 1.7, r * 1.1);
+        this.orbKeep(g, cx + r * 0.15, cy, r * 1.7, r * 1.1, color);
         g.fillCircle(cx - r * 0.7, cy + r * 0.1, r * 0.45);
         g.strokeCircle(cx - r * 0.7, cy + r * 0.1, r * 0.45);
         g.lineStyle(4, 0xe8e0c8, 1);
@@ -461,9 +465,7 @@ export class BootScene extends Phaser.Scene {
           g.strokePath();
         }
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.4, r * 0.95);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.4, r * 0.95);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.15, r * 1.4, r * 0.95, color);
         g.fillCircle(cx - r * 0.55, cy - r * 0.15, r * 0.42);
         g.strokeCircle(cx - r * 0.55, cy - r * 0.15, r * 0.42);
         g.fillEllipse(cx - r * 0.6, cy - r * 0.95, r * 0.24, r * 0.85);
@@ -483,9 +485,7 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x8a7a5a, 1);
         g.fillCircle(cx + r * 0.6, cy - r * 0.15, r * 0.45);
         g.strokeCircle(cx + r * 0.6, cy - r * 0.15, r * 0.45);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.1, r * 1.0);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.1, r * 1.0);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.1, r * 1.0, color);
         g.fillCircle(cx - r * 0.45, cy - r * 0.4, r * 0.38);
         g.strokeCircle(cx - r * 0.45, cy - r * 0.4, r * 0.38);
         g.fillTriangle(cx - r * 0.75, cy - r * 0.6, cx - r * 0.55, cy - r * 0.6, cx - r * 0.7, cy - r * 1.05);
@@ -506,9 +506,7 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x8a7a5a, 1);
         g.fillCircle(cx - r * 0.85, cy + r * 0.15, r * 0.3);
         g.strokeCircle(cx - r * 0.85, cy + r * 0.15, r * 0.3);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.05, cy, r * 1.6, r * 1.3);
-        g.strokeEllipse(cx + r * 0.05, cy, r * 1.6, r * 1.3);
+        this.orbKeep(g, cx + r * 0.05, cy, r * 1.6, r * 1.3, color);
         g.lineStyle(1.8, 0x7a3a1a, 1);
         for (const [hx, hy] of [[-0.35, -0.15], [0.1, -0.3], [0.5, -0.1], [-0.1, 0.2], [0.35, 0.25]]) g.strokeCircle(cx + hx * r, cy + hy * r, r * 0.2);
         g.fillStyle(0xffe0a0, 0.6);
@@ -521,9 +519,7 @@ export class BootScene extends Phaser.Scene {
         // reef crab: barnacled dome shell, two big claws, stalk eyes, little legs
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.7, -0.4, 0.4, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r * 1.3, cy + r * 0.85);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.95, cy - r * 0.05, r * 0.32);
-        g.strokeCircle(cx - r * 0.95, cy - r * 0.05, r * 0.32);
+        this.orbKeep(g, cx - r * 0.95, cy - r * 0.05, (r * 0.32) * 2, (r * 0.32) * 2, color);
         g.fillCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
         g.strokeCircle(cx + r * 0.95, cy - r * 0.05, r * 0.32);
         g.fillStyle(0x9a8a7a, 1);
@@ -542,14 +538,10 @@ export class BootScene extends Phaser.Scene {
       case 'tidecaller': {
         // sea otter floating upright: round face with whiskers, a pale belly, a spiral conch held to its mouth
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.2, r * 1.4);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.2, r * 1.4);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.2, r * 1.4, color);
         g.fillStyle(0xd8c8a8, 1);
         g.fillEllipse(cx, cy + r * 0.3, r * 0.7, r * 0.9);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy - r * 0.55, r * 0.45);
-        g.strokeCircle(cx, cy - r * 0.55, r * 0.45);
+        this.orbKeep(g, cx, cy - r * 0.55, (r * 0.45) * 2, (r * 0.45) * 2, color);
         g.fillStyle(0xd8c8a8, 1);
         g.fillEllipse(cx, cy - r * 0.42, r * 0.5, r * 0.3);
         g.fillStyle(0x111111, 1);
@@ -575,9 +567,7 @@ export class BootScene extends Phaser.Scene {
           g.strokePath();
         }
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy - r * 0.15, r * 1.3, r * 1.2);
-        g.strokeEllipse(cx, cy - r * 0.15, r * 1.3, r * 1.2);
+        this.orbKeep(g, cx, cy - r * 0.15, r * 1.3, r * 1.2, color);
         g.fillStyle(0xffffff, 1);
         g.fillCircle(cx - r * 0.25, cy - r * 0.1, r * 0.2);
         g.fillCircle(cx + r * 0.25, cy - r * 0.1, r * 0.2);
@@ -593,9 +583,7 @@ export class BootScene extends Phaser.Scene {
         // colossal hermit crab: a spiral shell crowned with coral, big claws, stalk eyes, legs splayed under it
         g.lineStyle(3, C.ink, 1);
         for (const lx of [-0.75, -0.45, 0.45, 0.75]) g.lineBetween(cx + lx * r, cy + r * 0.45, cx + lx * r * 1.35, cy + r * 0.95);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 1.0, cy + r * 0.15, r * 0.38);
-        g.strokeCircle(cx - r * 1.0, cy + r * 0.15, r * 0.38);
+        this.orbKeep(g, cx - r * 1.0, cy + r * 0.15, (r * 0.38) * 2, (r * 0.38) * 2, color);
         g.fillCircle(cx + r * 0.95, cy + r * 0.2, r * 0.3);
         g.strokeCircle(cx + r * 0.95, cy + r * 0.2, r * 0.3);
         g.fillStyle(0xd8c8a8, 1);
@@ -626,9 +614,7 @@ export class BootScene extends Phaser.Scene {
       case 'deckgunner': {
         // rat pirate: bandana, round ears, a long brass blunderbuss with a flared muzzle
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 1.1, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 1.1, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 1.1, r * 1.2, color);
         g.fillCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
         g.strokeCircle(cx - r * 0.1, cy - r * 0.45, r * 0.42);
         g.fillStyle(0xd8a0a0, 1);
@@ -648,9 +634,7 @@ export class BootScene extends Phaser.Scene {
       case 'ironkeel': {
         // walrus: big round body, white tusks, a dark anchor hanging from a chain over its shoulder
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.7, r * 1.25);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.7, r * 1.25);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.15, r * 1.7, r * 1.25, color);
         g.fillCircle(cx - r * 0.6, cy - r * 0.15, r * 0.5);
         g.strokeCircle(cx - r * 0.6, cy - r * 0.15, r * 0.5);
         g.fillStyle(0xe8e0d0, 1);
@@ -674,9 +658,7 @@ export class BootScene extends Phaser.Scene {
       case 'barkdrum': {
         // stag beetle: glossy brown shell split down the middle, big curved mandibles, a log drum on its back
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.2, r * 1.5, r * 1.3);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.2, r * 1.5, r * 1.3);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.2, r * 1.5, r * 1.3, color);
         g.lineBetween(cx + r * 0.1, cy - r * 0.45, cx + r * 0.1, cy + r * 0.85);
         g.fillStyle(0xffffff, 0.25);
         g.fillEllipse(cx - r * 0.25, cy, r * 0.35, r * 0.6);
@@ -710,14 +692,10 @@ export class BootScene extends Phaser.Scene {
           g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
           g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.6, r * 0.9);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.15, r * 1.6, r * 0.9);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.15, r * 1.6, r * 0.9, color);
         g.fillStyle(0xe8d0a0, 1);
         g.fillEllipse(cx - r * 0.45, cy + r * 0.05, r * 0.55, r * 0.7);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.75, cy - r * 0.3, r * 0.6, r * 0.42);
-        g.strokeEllipse(cx - r * 0.75, cy - r * 0.3, r * 0.6, r * 0.42);
+        this.orbKeep(g, cx - r * 0.75, cy - r * 0.3, r * 0.6, r * 0.42, color);
         g.fillStyle(0x3a2014, 1);
         g.fillCircle(cx - r * 1.02, cy - r * 0.25, r * 0.08);
         g.fillStyle(0xffd040, 1);
@@ -751,9 +729,7 @@ export class BootScene extends Phaser.Scene {
         for (const [lx, ly] of [[-0.55, 0.45], [0.45, 0.45], [-0.35, 0.6], [0.25, 0.6]]) g.fillCircle(cx + lx * r, cy + ly * r, r * 0.16);
         g.fillCircle(cx - r * 0.95, cy + r * 0.15, r * 0.25);
         g.strokeCircle(cx - r * 0.95, cy + r * 0.15, r * 0.25);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.0);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.0);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 1.6, r * 1.0, color);
         g.lineStyle(1.5, 0x3a5a3a, 1);
         for (const [hx, hy] of [[-0.35, 0], [0.05, -0.12], [0.4, 0.05], [-0.1, 0.3], [0.25, 0.32]]) g.strokeCircle(cx + hx * r, cy + hy * r, r * 0.17);
         g.fillStyle(0x111111, 1);
@@ -784,9 +760,7 @@ export class BootScene extends Phaser.Scene {
           g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.5);
           g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.5);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.5, r * 0.8);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.5, r * 0.8);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.1, r * 1.5, r * 0.8, color);
         g.fillEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.75, r * 0.6);
         g.strokeEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.75, r * 0.6);
         g.fillTriangle(cx - r * 0.85, cy - r * 0.55, cx - r * 0.62, cy - r * 0.62, cx - r * 0.8, cy - r * 1.15);
@@ -819,9 +793,7 @@ export class BootScene extends Phaser.Scene {
           g.fillEllipse(cx + sx * r * 0.85, cy + r * 0.35, r * 0.4, r * 0.95);
           g.strokeEllipse(cx + sx * r * 0.85, cy + r * 0.35, r * 0.4, r * 0.95);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.25);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 1.5, r * 1.25);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 1.5, r * 1.25, color);
         // mane: a ring of shaggy tufts around the head
         g.fillStyle(0xd86a2a, 1);
         for (let k = 0; k < 9; k++) {
@@ -860,9 +832,7 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.12, cy - r * 0.95, cx - r * 0.35, cy - r * 1.25);
         g.lineBetween(cx + r * 0.12, cy - r * 0.95, cx + r * 0.35, cy - r * 1.25);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.6);
-        g.strokeEllipse(cx, cy + r * 0.05, r * 1.5, r * 1.6);
+        this.orbKeep(g, cx, cy + r * 0.05, r * 1.5, r * 1.6, color);
         g.lineStyle(1.5, 0xa87a30, 1);
         g.lineBetween(cx, cy - r * 0.7, cx, cy + r * 0.8);
         g.fillStyle(0xfff0b0, 0.7);
@@ -879,9 +849,7 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
         g.strokeEllipse(cx - r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
         g.strokeEllipse(cx + r * 0.55, cy - r * 0.35, r * 0.8, r * 0.45);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.25, r * 0.7, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.25, r * 0.7, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.25, r * 0.7, r * 1.2, color);
         g.fillStyle(0x1a1208, 1);
         for (const dy of [0.05, 0.4]) g.fillRect(cx - r * 0.33, cy + dy * r, r * 0.66, r * 0.14);
         g.fillCircle(cx, cy - r * 0.45, r * 0.3);
@@ -933,9 +901,7 @@ export class BootScene extends Phaser.Scene {
           g.fillEllipse(cx + wx * r, cy + wy * r, ww * r, wh * r);
           g.strokeEllipse(cx + wx * r, cy + wy * r, ww * r, wh * r);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.4, r * 0.95, r * 1.4);
-        g.strokeEllipse(cx, cy + r * 0.4, r * 0.95, r * 1.4);
+        this.orbKeep(g, cx, cy + r * 0.4, r * 0.95, r * 1.4, color);
         g.fillStyle(0x1a1208, 1);
         for (const dy of [0.1, 0.42, 0.74]) g.fillRect(cx - r * 0.44, cy + dy * r, r * 0.88, r * 0.13);
         g.fillStyle(0xfff0b0, 0.55);
@@ -967,9 +933,7 @@ export class BootScene extends Phaser.Scene {
           g.fillEllipse(cx + sx * r * 0.75, cy + r * 0.5, r * 0.5, r * 0.32);
           g.strokeEllipse(cx + sx * r * 0.75, cy + r * 0.5, r * 0.5, r * 0.32);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 1.5, r * 1.3);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 1.5, r * 1.3);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 1.5, r * 1.3, color);
         g.fillStyle(0x5aaa7a, 1);
         for (const [bx, by] of [[-0.3, 0.2], [0.35, 0.35], [0.1, -0.1], [-0.1, 0.5]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.08);
         for (const sx of [-1, 1]) {
@@ -991,9 +955,7 @@ export class BootScene extends Phaser.Scene {
       case 'hexcroak': {
         // round purple toad with a puffed throat sac, warts and heavy-lidded yellow eyes
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 1.5, r * 1.3);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 1.5, r * 1.3);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 1.5, r * 1.3, color);
         g.fillStyle(0xc8a0e8, 1);
         g.fillCircle(cx, cy + r * 0.35, r * 0.42);
         g.strokeCircle(cx, cy + r * 0.35, r * 0.42);
@@ -1015,9 +977,7 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x6a5a3a, 1);
         g.fillTriangle(cx + r * 0.7, cy, cx + r * 1.25, cy - r * 0.35, cx + r * 1.25, cy + r * 0.35);
         g.strokeTriangle(cx + r * 0.7, cy, cx + r * 1.25, cy - r * 0.35, cx + r * 1.25, cy + r * 0.35);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 1.7, r * 1.0);
-        g.strokeEllipse(cx, cy, r * 1.7, r * 1.0);
+        this.orbKeep(g, cx, cy, r * 1.7, r * 1.0, color);
         g.fillStyle(0x5a4a2a, 1);
         for (const sx of [-1, 1]) g.fillEllipse(cx - r * 0.2, cy + sx * r * 0.55, r * 0.45, r * 0.22);
         g.fillStyle(0x6a5a3a, 1);
@@ -1044,9 +1004,7 @@ export class BootScene extends Phaser.Scene {
           g.fillEllipse(cx + sx * r * 0.9, cy + r * 0.55, r * 0.6, r * 0.35);
           g.strokeEllipse(cx + sx * r * 0.9, cy + r * 0.55, r * 0.6, r * 0.35);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.8, r * 1.4);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.8, r * 1.4);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.8, r * 1.4, color);
         g.fillStyle(0x5aaa7a, 1);
         for (const [bx, by] of [[-0.5, 0.3], [0.45, 0.45], [0.15, 0.6], [-0.2, -0.05], [0.6, 0.0]]) g.fillCircle(cx + bx * r, cy + by * r, r * 0.07);
         g.lineStyle(2, C.ink, 1);
@@ -1075,9 +1033,7 @@ export class BootScene extends Phaser.Scene {
       case 'tumblehog': {
         // a hedgehog curled inside a ball of dry thistle stems, its little face peeking out
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy, r * 0.95);
-        g.strokeCircle(cx, cy, r * 0.95);
+        this.orbKeep(g, cx, cy, (r * 0.95) * 2, (r * 0.95) * 2, color);
         g.lineStyle(1.5, 0x8a6a30, 1);
         for (let n = 0; n < 6; n++) {
           const a = (n * Math.PI) / 3;
@@ -1110,9 +1066,7 @@ export class BootScene extends Phaser.Scene {
         g.strokeEllipse(cx + r * 0.05, cy + r * 0.1, r * 1.3, r * 0.75);
         g.fillStyle(0xf0e0c8, 1);
         for (const [sx, sy] of [[0.2, -0.05], [0.4, 0.15], [-0.05, 0.2]]) g.fillCircle(cx + sx * r, cy + sy * r, r * 0.07);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.5, r * 0.45);
-        g.strokeEllipse(cx - r * 0.6, cy - r * 0.35, r * 0.5, r * 0.45);
+        this.orbKeep(g, cx - r * 0.6, cy - r * 0.35, r * 0.5, r * 0.45, color);
         g.fillEllipse(cx - r * 0.85, cy - r * 0.6, r * 0.18, r * 0.35);
         g.fillEllipse(cx - r * 0.38, cy - r * 0.62, r * 0.18, r * 0.35);
         g.fillStyle(C.ink, 1);
@@ -1128,14 +1082,10 @@ export class BootScene extends Phaser.Scene {
       case 'marmot': {
         // a plump marmot from above, sitting up: round brown body, pale belly, small round ears, a dark nose
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 1.3, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 1.3, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 1.3, r * 1.2, color);
         g.fillStyle(0xe8d0a8, 1);
         g.fillEllipse(cx, cy + r * 0.3, r * 0.75, r * 0.8);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy - r * 0.5, r * 0.45);
-        g.strokeCircle(cx, cy - r * 0.5, r * 0.45);
+        this.orbKeep(g, cx, cy - r * 0.5, (r * 0.45) * 2, (r * 0.45) * 2, color);
         for (const sx of [-1, 1]) {
           g.fillCircle(cx + sx * r * 0.35, cy - r * 0.85, r * 0.13);
           g.strokeCircle(cx + sx * r * 0.35, cy - r * 0.85, r * 0.13);
@@ -1159,16 +1109,12 @@ export class BootScene extends Phaser.Scene {
           g.fillRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
           g.strokeRect(cx + lx * r - r * 0.07, cy + r * 0.3, r * 0.14, r * 0.55);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.6, r * 0.85);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.1, r * 1.6, r * 0.85);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.1, r * 1.6, r * 0.85, color);
         g.fillStyle(0xe8d8b8, 1);
         g.fillEllipse(cx + r * 0.75, cy + r * 0.1, r * 0.35, r * 0.5);
         g.fillStyle(0x5a3a22, 1);
         g.fillEllipse(cx - r * 0.5, cy - r * 0.05, r * 0.6, r * 0.7);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.75, cy - r * 0.35, r * 0.45, r * 0.4);
-        g.strokeEllipse(cx - r * 0.75, cy - r * 0.35, r * 0.45, r * 0.4);
+        this.orbKeep(g, cx - r * 0.75, cy - r * 0.35, r * 0.45, r * 0.4, color);
         g.fillStyle(C.ink, 1);
         g.fillCircle(cx - r * 0.85, cy - r * 0.38, r * 0.05);
         // antlers: two branching sprays with thistle heads at the tips
@@ -1193,16 +1139,12 @@ export class BootScene extends Phaser.Scene {
       case 'titheweasel': {
         // a long sleek weasel in a green waistcoat, a tiny ledger under one arm
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.5, cy + r * 0.2, r * 0.9, r * 0.35);
-        g.strokeEllipse(cx + r * 0.5, cy + r * 0.2, r * 0.9, r * 0.35);
+        this.orbKeep(g, cx + r * 0.5, cy + r * 0.2, r * 0.9, r * 0.35, color);
         g.fillEllipse(cx, cy, r * 1.4, r * 0.7);
         g.strokeEllipse(cx, cy, r * 1.4, r * 0.7);
         g.fillStyle(0x3a7a3a, 1);
         g.fillRect(cx - r * 0.35, cy - r * 0.3, r * 0.6, r * 0.6);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.35);
-        g.strokeCircle(cx - r * 0.7, cy - r * 0.15, r * 0.35);
+        this.orbKeep(g, cx - r * 0.7, cy - r * 0.15, (r * 0.35) * 2, (r * 0.35) * 2, color);
         g.fillStyle(0xf0e0c0, 1);
         g.fillEllipse(cx - r * 0.85, cy - r * 0.05, r * 0.25, r * 0.18);
         g.fillStyle(C.ink, 1);
@@ -1218,16 +1160,12 @@ export class BootScene extends Phaser.Scene {
       case 'ploughox': {
         // a broad ox from above: big brown body, a pale muzzle, curved horns and a wooden yoke across the shoulders
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.6, r * 1.1);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.6, r * 1.1);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.05, r * 1.6, r * 1.1, color);
         g.fillStyle(0x6a4a2a, 1);
         g.fillRect(cx - r * 0.45, cy - r * 0.6, r * 0.18, r * 1.2);
         g.lineStyle(2, C.ink, 1);
         g.strokeRect(cx - r * 0.45, cy - r * 0.6, r * 0.18, r * 1.2);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
-        g.strokeEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        this.orbKeep(g, cx - r * 0.75, cy, r * 0.55, r * 0.6, color);
         g.fillStyle(0xe8d0b0, 1);
         g.fillEllipse(cx - r * 0.95, cy, r * 0.25, r * 0.35);
         g.lineStyle(3, 0xf0e8d0, 1);
@@ -1245,9 +1183,7 @@ export class BootScene extends Phaser.Scene {
       case 'collie': {
         // a black-and-white sheepdog mid-dash: long body, white collar and blaze, flicking tail, one ear up
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.85, cy - r * 0.1, r * 0.6, r * 0.25);
-        g.strokeEllipse(cx + r * 0.85, cy - r * 0.1, r * 0.6, r * 0.25);
+        this.orbKeep(g, cx + r * 0.85, cy - r * 0.1, r * 0.6, r * 0.25, color);
         for (const lx of [-0.45, -0.15, 0.3, 0.55]) {
           g.fillRect(cx + lx * r - r * 0.06, cy + r * 0.2, r * 0.12, r * 0.45);
           g.strokeRect(cx + lx * r - r * 0.06, cy + r * 0.2, r * 0.12, r * 0.45);
@@ -1256,9 +1192,7 @@ export class BootScene extends Phaser.Scene {
         g.strokeEllipse(cx + r * 0.05, cy, r * 1.3, r * 0.6);
         g.fillStyle(0xf4f0e8, 1);
         g.fillEllipse(cx - r * 0.45, cy + r * 0.05, r * 0.35, r * 0.5);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.75, cy - r * 0.25, r * 0.5, r * 0.4);
-        g.strokeEllipse(cx - r * 0.75, cy - r * 0.25, r * 0.5, r * 0.4);
+        this.orbKeep(g, cx - r * 0.75, cy - r * 0.25, r * 0.5, r * 0.4, color);
         g.fillStyle(0xf4f0e8, 1);
         g.fillRect(cx - r * 0.8, cy - r * 0.42, r * 0.08, r * 0.3);
         g.fillEllipse(cx - r * 0.98, cy - r * 0.18, r * 0.2, r * 0.15);
@@ -1272,9 +1206,7 @@ export class BootScene extends Phaser.Scene {
       case 'ironhorn': {
         // a colossal bull from above: massive dark-brown shoulders, a wheat garland, iron-capped horns and a brass nose ring
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.2, cy + r * 0.05, r * 1.6, r * 1.15);
-        g.strokeEllipse(cx + r * 0.2, cy + r * 0.05, r * 1.6, r * 1.15);
+        this.orbKeep(g, cx + r * 0.2, cy + r * 0.05, r * 1.6, r * 1.15, color);
         g.fillStyle(0x4a2414, 1);
         g.fillEllipse(cx - r * 0.25, cy, r * 0.8, r * 1.0);
         g.fillStyle(0xd8b050, 1);
@@ -1282,9 +1214,7 @@ export class BootScene extends Phaser.Scene {
           const a = -Math.PI / 2 + (n / 6) * Math.PI;
           g.fillEllipse(cx - r * 0.35 + Math.cos(a) * r * 0.15, cy + Math.sin(a) * r * 0.45, r * 0.14, r * 0.22);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
-        g.strokeEllipse(cx - r * 0.75, cy, r * 0.55, r * 0.6);
+        this.orbKeep(g, cx - r * 0.75, cy, r * 0.55, r * 0.6, color);
         g.fillStyle(0xd8a888, 1);
         g.fillEllipse(cx - r * 0.98, cy, r * 0.2, r * 0.32);
         g.lineStyle(2, 0xd8a840, 1);
@@ -1305,9 +1235,7 @@ export class BootScene extends Phaser.Scene {
         // a giant coiled rattlesnake from above: rust-red loops with dark diamond bands, a wedge head and a rattle
         g.lineStyle(3, C.ink, 1);
         for (const [rr, a0] of [[0.95, 0], [0.62, 0.5], [0.32, 1]] as const) {
-          g.fillStyle(color, 1);
-          g.fillCircle(cx + r * 0.15, cy, r * rr);
-          g.strokeCircle(cx + r * 0.15, cy, r * rr);
+          this.orbKeep(g, cx + r * 0.15, cy, (r * rr) * 2, (r * rr) * 2, color);
           g.fillStyle(0x5a2214, 1);
           for (let n = 0; n < 8; n++) {
             const a = a0 + (n / 8) * Math.PI * 2;
@@ -1402,9 +1330,7 @@ export class BootScene extends Phaser.Scene {
       case 'sandburrow': {
         // a sandy gopher popping up: round body, little ears, huge orange buck teeth and digging claws
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.3, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.3, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.3, r * 1.2, color);
         g.fillCircle(cx, cy - r * 0.45, r * 0.45);
         g.strokeCircle(cx, cy - r * 0.45, r * 0.45);
         for (const sx of [-1, 1]) {
@@ -1430,9 +1356,7 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x8a6a4a, 1);
         g.fillEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.6, r * 0.2);
         g.strokeEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.6, r * 0.2);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.05, cy, r * 1.35, r * 1.0);
-        g.strokeEllipse(cx + r * 0.05, cy, r * 1.35, r * 1.0);
+        this.orbKeep(g, cx + r * 0.05, cy, r * 1.35, r * 1.0, color);
         g.lineStyle(1.5, 0x6a5a3a, 1);
         for (const dx of [-0.3, -0.05, 0.2, 0.45]) g.lineBetween(cx + dx * r, cy - r * 0.45, cx + dx * r, cy + r * 0.45);
         g.lineStyle(2.5, C.ink, 1);
@@ -1478,18 +1402,12 @@ export class BootScene extends Phaser.Scene {
       case 'moonhare': {
         // a silver hare from above: long body, two long black-tipped ears laid back, and pale moon eyes
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.15, cy, r * 1.5, r * 0.85);
-        g.strokeEllipse(cx + r * 0.15, cy, r * 1.5, r * 0.85);
+        this.orbKeep(g, cx + r * 0.15, cy, r * 1.5, r * 0.85, color);
         g.fillStyle(0xffffff, 1);
         g.fillCircle(cx + r * 0.95, cy, r * 0.22);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.65, cy, r * 0.38);
-        g.strokeCircle(cx - r * 0.65, cy, r * 0.38);
+        this.orbKeep(g, cx - r * 0.65, cy, (r * 0.38) * 2, (r * 0.38) * 2, color);
         for (const sy of [-1, 1]) {
-          g.fillStyle(color, 1);
-          g.fillEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2);
-          g.strokeEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2);
+          this.orbKeep(g, cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2, color);
           g.fillStyle(0x3a3a48, 1);
           g.fillEllipse(cx + r * 0.22, cy + sy * r * 0.32, r * 0.18, r * 0.14);
         }
@@ -1643,9 +1561,7 @@ export class BootScene extends Phaser.Scene {
         g.arc(cx + r * 0.75, cy - r * 0.1, r * 0.5, Math.PI * 0.6, Math.PI * 2.1);
         g.strokePath();
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1);
-        g.strokeEllipse(cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1);
+        this.orbKeep(g, cx + r * 0.05, cy + r * 0.15, r * 1.2, r * 1.1, color);
         g.fillCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
         g.strokeCircle(cx - r * 0.45, cy - r * 0.4, r * 0.48);
         g.fillStyle(0x2a1a14, 1);
@@ -1665,9 +1581,7 @@ export class BootScene extends Phaser.Scene {
           g.fillCircle(tx + k * r * 0.12, cy - r * 0.15 - k * r * 0.16, r * 0.17);
         }
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 1.2, r * 1.0);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 1.2, r * 1.0);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 1.2, r * 1.0, color);
         g.fillCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
         g.strokeCircle(cx - r * 0.5, cy - r * 0.35, r * 0.42);
         g.fillStyle(0xf4f4f4, 1);
@@ -1689,9 +1603,7 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.95, cy - r * 0.05, r * 0.95, r * 0.42);
         g.fillStyle(0xffffff, 0.6);
         g.fillEllipse(cx + r * 1.25, cy - r * 0.2, r * 0.45, r * 0.25);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.3, r * 0.7);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.3, r * 0.7);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.3, r * 0.7, color);
         g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
         g.strokeCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
         g.fillTriangle(cx - r * 0.95, cy - r * 0.35, cx - r * 0.75, cy - r * 0.45, cx - r * 0.9, cy - r * 0.9);
@@ -1709,17 +1621,13 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.1, cy + r * 0.3, cx - r * 0.2, cy + r * 0.95);
         g.lineBetween(cx + r * 0.2, cy + r * 0.3, cx + r * 0.3, cy + r * 0.95);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.2, r * 0.7);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.2, r * 0.7);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.05, r * 1.2, r * 0.7, color);
         g.fillStyle(0x1a1a1a, 1);
         g.fillTriangle(cx + r * 0.5, cy - r * 0.1, cx + r * 0.9, cy + r * 0.05, cx + r * 0.5, cy + r * 0.25);
         g.lineStyle(r * 0.18, color, 1);
         g.lineBetween(cx - r * 0.3, cy - r * 0.1, cx - r * 0.55, cy - r * 0.8);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.6, cy - r * 0.85, r * 0.2);
-        g.strokeCircle(cx - r * 0.6, cy - r * 0.85, r * 0.2);
+        this.orbKeep(g, cx - r * 0.6, cy - r * 0.85, (r * 0.2) * 2, (r * 0.2) * 2, color);
         g.fillStyle(0xd83a3a, 1);
         g.fillCircle(cx - r * 0.6, cy - r * 0.98, r * 0.09);
         g.fillStyle(0xd8b040, 1);
@@ -1731,19 +1639,13 @@ export class BootScene extends Phaser.Scene {
       case 'sapstoat': {
         // stoat: long low russet body, cream belly, black tail tip, bared amber teeth
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.9, r * 0.32);
-        g.strokeEllipse(cx + r * 0.85, cy + r * 0.05, r * 0.9, r * 0.32);
+        this.orbKeep(g, cx + r * 0.85, cy + r * 0.05, r * 0.9, r * 0.32, color);
         g.fillStyle(0x1a1a1a, 1);
         g.fillCircle(cx + r * 1.25, cy + r * 0.02, r * 0.17);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.15, r * 1.6, r * 0.75);
-        g.strokeEllipse(cx, cy + r * 0.15, r * 1.6, r * 0.75);
+        this.orbKeep(g, cx, cy + r * 0.15, r * 1.6, r * 0.75, color);
         g.fillStyle(0xf0e0c0, 1);
         g.fillEllipse(cx - r * 0.1, cy + r * 0.35, r * 0.9, r * 0.28);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.8, cy - r * 0.15, r * 0.42);
-        g.strokeCircle(cx - r * 0.8, cy - r * 0.15, r * 0.42);
+        this.orbKeep(g, cx - r * 0.8, cy - r * 0.15, (r * 0.42) * 2, (r * 0.42) * 2, color);
         g.fillCircle(cx - r * 0.65, cy - r * 0.55, r * 0.14);
         g.strokeCircle(cx - r * 0.65, cy - r * 0.55, r * 0.14);
         g.fillStyle(0xf0e0c0, 1);
@@ -1769,9 +1671,7 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(1.5, 0x8a2a0a, 1);
         g.lineBetween(tx - r * 0.2, ty, tx + r * 0.55, ty);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 1.4, r * 0.75);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 1.4, r * 0.75);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 1.4, r * 0.75, color);
         g.fillEllipse(cx - r * 0.75, cy - r * 0.1, r * 0.7, r * 0.55);
         g.strokeEllipse(cx - r * 0.75, cy - r * 0.1, r * 0.7, r * 0.55);
         // toes
@@ -1815,9 +1715,7 @@ export class BootScene extends Phaser.Scene {
         g.lineBetween(cx - r * 0.6, cy + r * 0.1, cx + r * 0.1, cy + r * 0.1);
         g.lineBetween(cx - r * 0.6, cy + r * 0.4, cx + r * 0.1, cy + r * 0.4);
         g.lineStyle(2.5, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.3, cy - r * 0.35, r * 0.38);
-        g.strokeCircle(cx - r * 0.3, cy - r * 0.35, r * 0.38);
+        this.orbKeep(g, cx - r * 0.3, cy - r * 0.35, (r * 0.38) * 2, (r * 0.38) * 2, color);
         g.fillStyle(0xe8c8a0, 1);
         g.fillEllipse(cx - r * 0.35, cy - r * 0.28, r * 0.45, r * 0.32);
         g.fillStyle(0x111111, 1);
@@ -1893,14 +1791,10 @@ export class BootScene extends Phaser.Scene {
         // colossal storm bull: dark shaggy hump, huge forward horns crackling with sparks, a little thundercloud on its back
         g.lineStyle(3, C.ink, 1);
         for (const lx of [-0.65, -0.25, 0.3, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 1.0);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.15, cy, r * 1.75, r * 1.2);
-        g.strokeEllipse(cx + r * 0.15, cy, r * 1.75, r * 1.2);
+        this.orbKeep(g, cx + r * 0.15, cy, r * 1.75, r * 1.2, color);
         g.fillStyle(0x2a2a36, 1);
         g.fillEllipse(cx - r * 0.2, cy - r * 0.35, r * 1.0, r * 0.75);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.75, cy + r * 0.1, r * 0.48);
-        g.strokeCircle(cx - r * 0.75, cy + r * 0.1, r * 0.48);
+        this.orbKeep(g, cx - r * 0.75, cy + r * 0.1, (r * 0.48) * 2, (r * 0.48) * 2, color);
         g.lineStyle(5, 0xe8e0c8, 1);
         g.beginPath();
         g.moveTo(cx - r * 1.0, cy - r * 0.15);
@@ -2086,9 +1980,7 @@ export class BootScene extends Phaser.Scene {
         // clockwork armadillo: banded steel shell studded with rivets, small snout, stubby legs
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.5, -0.15, 0.25, 0.55]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 0.85);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.3);
-        g.strokeEllipse(cx + r * 0.1, cy, r * 1.9, r * 1.3);
+        this.orbKeep(g, cx + r * 0.1, cy, r * 1.9, r * 1.3, color);
         g.lineStyle(2, 0x5a5a64, 1);
         for (const bx of [-0.35, 0.1, 0.55]) g.lineBetween(cx + bx * r, cy - r * 0.6, cx + bx * r, cy + r * 0.6);
         g.fillStyle(0xe8c070, 1);
@@ -2105,9 +1997,7 @@ export class BootScene extends Phaser.Scene {
         // brass beetle: domed shell with a big gear on its back, rivets, little legs
         g.lineStyle(2.5, C.ink, 1);
         for (const s2 of [-1, 1]) for (let k = 0; k < 3; k++) g.lineBetween(cx + s2 * r * 0.6, cy - r * 0.2 + k * r * 0.35, cx + s2 * r * 1.1, cy - r * 0.05 + k * r * 0.4);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.4);
-        g.strokeEllipse(cx, cy + r * 0.1, r * 1.6, r * 1.4);
+        this.orbKeep(g, cx, cy + r * 0.1, r * 1.6, r * 1.4, color);
         // gear: toothed ring
         g.fillStyle(0x8a6a2a, 1);
         for (let k = 0; k < 8; k++) {
@@ -2137,9 +2027,7 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffffff, 0.85);
         g.fillCircle(cx + r * 0.45, cy - r * 1.2, r * 0.18);
         g.fillCircle(cx + r * 0.65, cy - r * 1.3, r * 0.13);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy, r * 0.8);
-        g.strokeCircle(cx, cy, r * 0.8);
+        this.orbKeep(g, cx, cy, (r * 0.8) * 2, (r * 0.8) * 2, color);
         g.fillStyle(0xc8963a, 1);
         g.fillRect(cx - r * 0.8, cy - r * 0.08, r * 1.6, r * 0.16);
         g.fillStyle(0xf0ead8, 1);
@@ -2221,16 +2109,12 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x5a7a98, 1);
         g.fillTriangle(cx - r * 0.3, cy + r * 0.5, cx + r * 0.3, cy + r * 0.5, cx, cy + r * 1.05);
         g.strokeTriangle(cx - r * 0.3, cy + r * 0.5, cx + r * 0.3, cy + r * 0.5, cx, cy + r * 1.05);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.05, r * 0.85, r * 1.15);
-        g.strokeEllipse(cx, cy + r * 0.05, r * 0.85, r * 1.15);
+        this.orbKeep(g, cx, cy + r * 0.05, r * 0.85, r * 1.15, color);
         g.fillStyle(0xe8f0f8, 1);
         g.fillEllipse(cx, cy + r * 0.2, r * 0.5, r * 0.7);
         g.fillStyle(0x3a5a7a, 1);
         for (const dx of [-0.18, 0, 0.18]) g.fillTriangle(cx + dx * r - r * 0.07, cy - r * 0.6, cx + dx * r + r * 0.07, cy - r * 0.6, cx + dx * r, cy - r * 0.95);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy - r * 0.5, r * 0.3);
-        g.strokeCircle(cx, cy - r * 0.5, r * 0.3);
+        this.orbKeep(g, cx, cy - r * 0.5, (r * 0.3) * 2, (r * 0.3) * 2, color);
         g.fillStyle(0xf0c040, 1);
         g.fillTriangle(cx - r * 0.1, cy - r * 0.42, cx + r * 0.1, cy - r * 0.42, cx, cy - r * 0.15);
         g.strokeTriangle(cx - r * 0.1, cy - r * 0.42, cx + r * 0.1, cy - r * 0.42, cx, cy - r * 0.15);
@@ -2292,9 +2176,7 @@ export class BootScene extends Phaser.Scene {
           g.fillTriangle(cx + s * r * 0.3, cy - up * r * 0.25, cx + s * r * 0.85, cy - up * r * 1.0, cx + s * r * 1.1, cy - up * r * 0.6);
         }
         g.lineStyle(2, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 0.6, r * 1.3);
-        g.strokeEllipse(cx, cy, r * 0.6, r * 1.3);
+        this.orbKeep(g, cx, cy, r * 0.6, r * 1.3, color);
         break;
       }
       case 'shardskipper': {
@@ -2320,9 +2202,7 @@ export class BootScene extends Phaser.Scene {
         for (let k = 0; k < 3; k++) g.lineBetween(cx + r * 1.0, cy - r * 0.4 + k * r * 0.4, cx + r * 1.7, cy - r * 0.5 + k * r * 0.4);
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.6, -0.2, 0.3, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r - r * 0.25, cy + r * 1.0);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9);
-        g.strokeEllipse(cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9);
+        this.orbKeep(g, cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9, color);
         g.fillCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
         g.strokeCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
         g.fillStyle(0x6a8aa8, 1);
@@ -2397,9 +2277,7 @@ export class BootScene extends Phaser.Scene {
         // polished beetle: a bright reflective shell with a highlight band
         g.fillStyle(shade, 1);
         for (const s of [-1, 1]) for (let k = 0; k < 3; k++) g.fillRect(cx + s * r * 0.85, cy - r * 0.3 + k * r * 0.4, s * r * 0.35, 3);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 1.8, r * 1.5);
-        g.strokeEllipse(cx, cy, r * 1.8, r * 1.5);
+        this.orbKeep(g, cx, cy, r * 1.8, r * 1.5, color);
         g.lineStyle(2, C.ink, 0.8);
         g.lineBetween(cx, cy - r * 0.75, cx, cy + r * 0.75);
         g.fillStyle(0xffffff, 0.8);
@@ -2418,16 +2296,12 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(3, C.ink, 1);
         for (const s of [-1, 1]) for (let k = 0; k < 4; k++) g.lineBetween(cx + s * r * 0.5, cy + r * 0.15 + k * 5, cx + s * r * 1.25, cy + r * 0.45 + k * 7);
         for (const s of [-1, 1]) {
-          g.fillStyle(color, 1);
-          g.fillEllipse(cx + s * r * 1.05, cy - r * 0.55, r * 0.75, r * 0.55);
-          g.strokeEllipse(cx + s * r * 1.05, cy - r * 0.55, r * 0.75, r * 0.55);
+          this.orbKeep(g, cx + s * r * 1.05, cy - r * 0.55, r * 0.75, r * 0.55, color);
           g.fillStyle(shade, 1);
           g.fillTriangle(cx + s * r * 1.2, cy - r * 0.6, cx + s * r * 1.5, cy - r * 1.05, cx + s * r * 1.45, cy - r * 0.45);
           g.strokeTriangle(cx + s * r * 1.2, cy - r * 0.6, cx + s * r * 1.5, cy - r * 1.05, cx + s * r * 1.45, cy - r * 0.45);
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 1.9, r * 1.3);
-        g.strokeEllipse(cx, cy, r * 1.9, r * 1.3);
+        this.orbKeep(g, cx, cy, r * 1.9, r * 1.3, color);
         // eye stalks
         g.lineStyle(3, C.ink, 1);
         g.lineBetween(cx - r * 0.25, cy - r * 0.5, cx - r * 0.3, cy - r * 0.85);
@@ -2458,9 +2332,7 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.95, cy + r * 0.25, r * 0.22);
         g.strokeCircle(cx + r * 0.95, cy + r * 0.25, r * 0.22);
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillCircle(cx - r * 0.15, cy - r * 0.05, r * 0.95);
-        g.strokeCircle(cx - r * 0.15, cy - r * 0.05, r * 0.95);
+        this.orbKeep(g, cx - r * 0.15, cy - r * 0.05, (r * 0.95) * 2, (r * 0.95) * 2, color);
         g.lineStyle(2, shade, 1);
         g.beginPath();
         g.arc(cx - r * 0.15, cy - r * 0.05, r * 0.6, 0, Math.PI * 1.5);
@@ -2533,14 +2405,18 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x5a4a3a, 1);
         g.fillEllipse(cx - r * 0.35, cy + r * 0.98, r * 0.5, r * 0.25);
         g.fillEllipse(cx + r * 0.35, cy + r * 0.98, r * 0.5, r * 0.25);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy - r * 0.25, r * 2.1, r * 1.35);
-        g.strokeEllipse(cx, cy - r * 0.25, r * 2.1, r * 1.35);
+        this.orbKeep(g, cx, cy - r * 0.25, r * 2.1, r * 1.35, color);
         g.fillStyle(0xfff0f8, 1);
         for (const [dx, dy, rr] of [[-0.55, -0.45, 0.18], [0.1, -0.7, 0.14], [0.6, -0.35, 0.16], [-0.1, -0.2, 0.1]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
         g.fillStyle(0x111111, 1);
         g.fillCircle(cx - r * 0.2, cy + r * 0.35, r * 0.1);
         g.fillCircle(cx + r * 0.2, cy + r * 0.35, r * 0.1);
+        // rosy cheeks and a shadow under the cap's rim (design D2)
+        g.fillStyle(0xf08aa8, 0.6);
+        g.fillCircle(cx - r * 0.38, cy + r * 0.48, r * 0.1);
+        g.fillCircle(cx + r * 0.38, cy + r * 0.48, r * 0.1);
+        g.fillStyle(0x000000, 0.15);
+        g.fillEllipse(cx, cy + r * 0.05, r * 1.0, r * 0.18);
         break;
       }
       case 'veilstalker': {
@@ -2550,16 +2426,20 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(3, C.ink, 1);
         g.lineBetween(cx - r * 0.8, cy + r * 0.4, cx - r * 1.5, cy - r * 0.4);
         g.lineStyle(2, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.3, r * 1.8, r * 1.1);
-        g.strokeEllipse(cx, cy + r * 0.3, r * 1.8, r * 1.1);
-        g.fillCircle(cx + r * 0.6, cy - r * 0.35, r * 0.7);
-        g.strokeCircle(cx + r * 0.6, cy - r * 0.35, r * 0.7);
+        this.orbKeep(g, cx, cy + r * 0.3, r * 1.8, r * 1.1, color);
+        this.orbKeep(g, cx + r * 0.6, cy - r * 0.35, r * 1.4, r * 1.4, color);
         g.fillTriangle(cx + r * 0.15, cy - r * 0.7, cx + r * 0.5, cy - r * 0.8, cx + r * 0.2, cy - r * 1.3);
         g.fillTriangle(cx + r * 0.75, cy - r * 0.8, cx + r * 1.1, cy - r * 0.7, cx + r * 1.0, cy - r * 1.3);
+        g.fillStyle(0xbff4ff, 0.35);
+        g.fillCircle(cx + r * 0.45, cy - r * 0.4, r * 0.24);
+        g.fillCircle(cx + r * 0.85, cy - r * 0.4, r * 0.24);
         g.fillStyle(0xbff4ff, 1);
         g.fillCircle(cx + r * 0.45, cy - r * 0.4, r * 0.13);
         g.fillCircle(cx + r * 0.85, cy - r * 0.4, r * 0.13);
+        // mist curling off the tail tip (design D2)
+        g.fillStyle(0xe8e0ff, 0.5);
+        g.fillCircle(cx - r * 1.55, cy - r * 0.5, r * 0.18);
+        g.fillCircle(cx - r * 1.35, cy - r * 0.75, r * 0.12);
         break;
       }
       case 'rootrager': {
@@ -2643,9 +2523,7 @@ export class BootScene extends Phaser.Scene {
         g.strokePath();
         g.lineStyle(3, C.ink, 1);
         // cap
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy - r * 0.4, r * 2.3, r * 1.3);
-        g.strokeEllipse(cx, cy - r * 0.4, r * 2.3, r * 1.3);
+        this.orbKeep(g, cx, cy - r * 0.4, r * 2.3, r * 1.3, color);
         g.fillStyle(0xbff4ff, 0.95);
         for (const [dx, dy, rr] of [[-0.7, -0.5, 0.16], [-0.2, -0.85, 0.12], [0.35, -0.6, 0.18], [0.8, -0.35, 0.12], [-0.4, -0.2, 0.1], [0.1, -0.3, 0.09]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
         // crown of baby caps
@@ -2665,18 +2543,14 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(shade2, 1);
         g.fillEllipse(cx - r * 0.3, cy + r * 0.45, r * 2.1, r * 1.1);
         g.strokeEllipse(cx - r * 0.3, cy + r * 0.45, r * 2.1, r * 1.1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.05, r * 1.9, r * 1.2);
-        g.strokeEllipse(cx, cy + r * 0.05, r * 1.9, r * 1.2);
+        this.orbKeep(g, cx, cy + r * 0.05, r * 1.9, r * 1.2, color);
         g.lineStyle(3, 0xffb84a, 1);
         g.lineBetween(cx - r * 0.7, cy + r * 0.1, cx - r * 0.2, cy + r * 0.3);
         g.lineBetween(cx - r * 0.2, cy + r * 0.3, cx + r * 0.2, cy);
         g.lineBetween(cx - r * 0.9, cy + r * 0.6, cx - r * 0.4, cy + r * 0.75);
         g.lineStyle(3, C.ink, 1);
         // head
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx + r * 0.65, cy - r * 0.45, r * 1.1, r * 0.85);
-        g.strokeEllipse(cx + r * 0.65, cy - r * 0.45, r * 1.1, r * 0.85);
+        this.orbKeep(g, cx + r * 0.65, cy - r * 0.45, r * 1.1, r * 0.85, color);
         g.fillStyle(0x3a2a24, 1);
         g.lineStyle(2, C.ink, 1);
         g.fillTriangle(cx + r * 0.35, cy - r * 0.75, cx + r * 0.5, cy - r * 0.8, cx + r * 0.2, cy - r * 1.35);
@@ -2696,9 +2570,7 @@ export class BootScene extends Phaser.Scene {
           const bx = cx + i * r * 0.22;
           g.fillTriangle(bx - r * 0.14, cy - r * 0.5, bx + r * 0.14, cy - r * 0.5, bx, cy - r * (1.05 + (i % 2 ? 0 : 0.15)));
         }
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 2.2, r * 1.6);
-        g.strokeEllipse(cx, cy, r * 2.2, r * 1.6);
+        this.orbKeep(g, cx, cy, r * 2.2, r * 1.6, color);
         g.fillStyle(0xc4d6e0, 1);
         g.fillEllipse(cx + r * 0.8, cy + r * 0.15, r * 0.8, r * 0.7);
         g.strokeEllipse(cx + r * 0.8, cy + r * 0.15, r * 0.8, r * 0.7);
@@ -2717,9 +2589,7 @@ export class BootScene extends Phaser.Scene {
       case 'murkmaw': {
         g.fillStyle(shade, 1);
         g.fillEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, r * 2.1, r * 1.6);
-        g.strokeEllipse(cx, cy, r * 2.1, r * 1.6);
+        this.orbKeep(g, cx, cy, r * 2.1, r * 1.6, color);
         g.fillStyle(0xc9d08a, 1);
         g.fillEllipse(cx, cy + r * 0.35, r * 1.4, r * 0.7);
         // warts
@@ -2759,9 +2629,7 @@ export class BootScene extends Phaser.Scene {
           g.lineBetween(cx + radius * 0.6, cy + i * 4, cx + radius * 1.25, cy + i * 6 + 2);
         }
         g.lineStyle(3, C.ink, 1);
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy, radius * 1.6, radius * 2);
-        g.strokeEllipse(cx, cy, radius * 1.6, radius * 2);
+        this.orbKeep(g, cx, cy, radius * 1.6, radius * 2, color);
         g.lineBetween(cx, cy - radius * 0.4, cx, cy + radius);
         g.fillStyle(light, 1);
         g.fillCircle(cx - radius * 0.35, cy - radius * 0.1, radius * 0.25);
@@ -2781,24 +2649,36 @@ export class BootScene extends Phaser.Scene {
           [-0.5, 0.35],
           [0.5, 0.3],
         ];
-        for (const [px, py] of plates) {
-          g.fillCircle(cx + px * radius, cy + py * radius, radius * 0.38);
-          g.lineStyle(2, C.ink, 0.8);
-          g.strokeCircle(cx + px * radius, cy + py * radius, radius * 0.38);
-        }
+        g.lineStyle(2, C.ink, 0.8);
+        for (const [px, py] of plates) this.orbKeep(g, cx + px * radius, cy + py * radius, radius * 0.76, radius * 0.76, color);
+        // a tuft of moss on the shell (design D2)
+        g.fillStyle(0x6ab04c, 1);
+        g.fillEllipse(cx - radius * 0.15, cy - radius * 0.82, radius * 0.5, radius * 0.22);
+        g.fillStyle(0x8ad86a, 1);
+        g.fillEllipse(cx - radius * 0.22, cy - radius * 0.86, radius * 0.24, radius * 0.12);
         this.eyes(g, cx, cy - radius * 0.05, radius * 0.17, radius * 0.25);
         break;
       }
       default: {
-        // mudling: droopy blob
-        g.fillStyle(color, 1);
-        g.fillCircle(cx, cy, radius);
-        g.fillEllipse(cx, cy + radius * 0.45, radius * 2.2, radius * 1.1);
-        g.strokeCircle(cx, cy, radius);
-        g.fillStyle(light, 1);
-        g.fillCircle(cx - radius * 0.4, cy - radius * 0.45, radius * 0.22);
+        // mudling: droopy blob with a little sprout and a mud drip (design D2)
         g.fillStyle(shade, 1);
-        g.fillCircle(cx + radius * 0.5, cy + radius * 0.5, radius * 0.18);
+        g.fillEllipse(cx, cy + radius * 0.5, radius * 2.2, radius * 1.05);
+        this.orbKeep(g, cx, cy, radius * 2, radius * 2, color);
+        g.fillStyle(color, 1);
+        g.fillEllipse(cx - radius * 0.1, cy + radius * 0.42, radius * 1.9, radius * 0.8);
+        g.fillStyle(shade, 1);
+        g.fillEllipse(cx + radius * 0.75, cy + radius * 0.95, radius * 0.28, radius * 0.4);
+        g.fillStyle(light, 1);
+        g.fillCircle(cx - radius * 0.42, cy - radius * 0.48, radius * 0.2);
+        g.fillStyle(shade, 1);
+        g.fillCircle(cx + radius * 0.5, cy + radius * 0.4, radius * 0.16);
+        g.fillCircle(cx - radius * 0.6, cy + radius * 0.25, radius * 0.1);
+        // sprout
+        g.lineStyle(1.5, 0x3a6a2a, 1);
+        g.lineBetween(cx, cy - radius * 0.95, cx + radius * 0.05, cy - radius * 1.3);
+        g.fillStyle(0x7bc85a, 1);
+        g.fillEllipse(cx - radius * 0.18, cy - radius * 1.32, radius * 0.4, radius * 0.22);
+        g.fillEllipse(cx + radius * 0.26, cy - radius * 1.38, radius * 0.42, radius * 0.24);
         this.eyes(g, cx, cy - radius * 0.1, radius * 0.25, radius * 0.35);
       }
     }

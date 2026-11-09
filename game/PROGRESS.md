@@ -2054,7 +2054,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**
 Each design iteration (D-number) picks one visual item below and redraws it in code: shading, outline, highlights and signature details, with gameplay data untouched. It is checked with `scripts/design-sheet.mjs <name> <prefix> [scale]` before/after sheets plus an in-game screenshot, and tsc, build and vitest must pass. Every 5th design iteration is a consistency pass (palette, outline weight, phone readability).
 
-Design counter: **D1**
+Design counter: **D2**
 
 ### Design Done
 - **D1: heroes.**
@@ -2070,9 +2070,21 @@ Design counter: **D1**
   - The first try greyed Ember's ears (they inherited the highlight colour) and clipped Hazel's lantern; both fixed.
   - New `scripts/design-sheet.mjs`. The HUD portrait and in-battle hero still sit right (`herobadge`, `skillaim`). Sheets `screenshots/design-1-before.png` and `design-1-after.png`. 341 tests.
 
+- **D2: enemies, part 1 (plus a shading sweep over all enemies).**
+  - **Shared upgrades:**
+    - `eyes()` now adds a glint to every pupil (used by many foes).
+    - New `orbKeep()` (like `orb` but keeps each enemy's own outline weight and restores the fill colour afterwards). An automated rewrite applied it to all 88 main-body fill-and-stroke pairs across the 107 enemy drawings, so most foes got a shaded body in one go.
+  - **Hand details:**
+    - Mudling: a shaded droop, a mud drip, a two-leaf sprout and freckles.
+    - Shellback: each stone plate shaded, plus a moss tuft.
+    - Splotch: a glossy shaded mound and mud drips.
+    - Wispling: a layered halo, a bright core and a sparkle trail.
+    - Puffcap: rosy cheeks and a cap-rim shadow.
+    - Veilstalker: a shaded head, glowing eyes and mist curling off the tail.
+  - Sheets `screenshots/design-2-before.png` and `design-2-after.png` (part-1 foes at 3×). In-game `design-2-ingame.png` (`hpbar-check`, no console errors). 341 tests.
+
 ### Design Backlog (ranked)
-1. Enemies, part 1 (Grovelands and Frostfern foes: Mudling, Skitter, Shellback, Gloomwing, Gnat, Bogmender, Reedguard, Splotch, Thornhog, Wispling, Puffcap, Veilstalker): shading via `orb`, eye shine, and one signature detail each.
-2. Enemies, part 2 (the rest of the regular foes, region by region).
+1. Enemies, part 2 (the rest of the regular foes, region by region; their bodies already got `orbKeep` shading in D2, so this adds the hand details: glints on shells and armor, glows, accessories).
 3. Bosses: shading, crowns and horns with metal shine, a faint aura ring, and bigger silhouettes.
 4. Towers: every tier and branch gets shaded stone and wood, roof highlights, and banners in the tower colour.
 5. Consistency pass: palette, outline weight and phone readability across heroes, enemies and towers.

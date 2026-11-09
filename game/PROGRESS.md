@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **292** (next balance pass at iteration 295)
+Iteration counter: **293** (next balance pass at iteration 295)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1911,6 +1911,11 @@ Iteration counter: **292** (next balance pass at iteration 295)
   - **Closing:** it closes when the foe dies, on a tap on empty ground, or when a tower menu or the hero card opens (one card at a time).
   - New `systems/enemyPick.ts` (`pickEnemy`: the nearest living foe within its radius + 14 px, using the lifted body for flyers) with 4 tests (301 total).
   - New `scripts/enemycard-check.mjs` (real taps on a Shellback and a Gloomwing, desktop and `PHONE=1`; live hp update, empty-ground close, slot-menu close; no console errors). `cards`, `herocard`, `towermenu` and `hero` checks still pass. Screenshots `screenshots/292.png` and `292-phone.png`.
+- **Iteration 293: village construction bars.**
+  - Buildings being upgraded now show the shared rounded bar in amber, with slanted candy stripes sliding along the fill and a softly pulsing glow at the leading edge. The stripes hold still with Reduce Motion.
+  - The bar is redrawn every frame (`drawBuildBar`, only for buildings under construction) instead of every 250 ms, so the animation is smooth; the countdown badge still updates on the regular refresh.
+  - `scripts/village-shot.mjs` gained `BUILD=<0..1>` (puts the level-2 acorn mine mid-upgrade).
+  - The village leak check is flat (124 objects / 43 tweens early and late). Screenshot `screenshots/293.png` (acorn mine at 60%). 301 tests.
 
 ## In Progress
 - (none)
@@ -1918,8 +1923,8 @@ Iteration counter: **292** (next balance pass at iteration 295)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Village construction bars: the building-in-progress timer bar in the village gets the same rounded, glossy style.
-2. Spell targeting polish: while a spell is armed, show its radius as a glowing ring with the number of foes it would hit.
+1. Spell targeting polish: while a spell is armed, show its radius as a glowing ring with the number of foes it would hit.
+2. Wave call button: a glowing, pulsing "next wave" button with a ring that fills as the early-call bonus shrinks.
 
 ## Known Bugs
 - (none known)

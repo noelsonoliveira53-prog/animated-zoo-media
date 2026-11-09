@@ -29,6 +29,16 @@ await page.goto('http://localhost:4371/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Village'));
 await page.waitForTimeout(1800);
+// BUILD=<0..1> puts the level-2 acorn mine (uid 3) mid-upgrade, that far along, to see the progress bar
+if (process.env.BUILD) {
+  await page.evaluate((f) => {
+    const s = window.__game.scene.getScene('Village');
+    const b = s.v.buildings.find((x) => x.uid === 3);
+    const total = 180; // seconds: the acorn mine's level 2 → 3 build time (data/buildings.ts)
+    b.upgradeEnds = Date.now() + total * 1000 * (1 - f);
+  }, Number(process.env.BUILD));
+  await page.waitForTimeout(600);
+}
 // PANEL=<uid> opens that building's info panel first (1 = Grove Hall, 2 = coin mine, 13 = market mid-upgrade)
 if (process.env.PANEL) { await page.evaluate((u) => window.__game.scene.getScene('Village').openPanel(u, false), Number(process.env.PANEL)); await page.waitForTimeout(300); }
 await page.screenshot({ path: `screenshots/${name}.png` });

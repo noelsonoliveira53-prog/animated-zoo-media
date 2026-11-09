@@ -3,6 +3,7 @@ import { DEV_COINS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { glossPanel } from '../ui/panels';
+import { drawBar } from '../ui/bars';
 import { upgradePreview } from '../systems/upgradePreview';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
@@ -223,6 +224,8 @@ export class VillageScene extends Phaser.Scene {
 
   update(): void {
     this.syncCameras();
+    const t = Date.now();
+    for (const b of this.v.buildings) if (b.upgradeEnds !== null && b.upgradeEnds > t) this.drawBuildBar(b, t);
     if (devOn()) {
       // Dev mode: endless resources and every construction finishes at once.
       this.v.coins = Math.max(this.v.coins, DEV_COINS);
@@ -289,6 +292,40 @@ export class VillageScene extends Phaser.Scene {
     this.views.set(b.uid, { img, badge, bar, bubble: null, shownLevel: b.level, shadow });
   }
 
+  /**
+   * Construction progress under a building: the shared rounded bar in amber, with candy stripes sliding along
+   * the fill and a soft glow at its leading edge. Drawn every frame (only for buildings being upgraded).
+   */
+  private drawBuildBar(b: Building, now: number): void {
+    const v = this.views.get(b.uid);
+    if (!v || b.upgradeEnds === null) return;
+    const def = BUILDINGS[b.type];
+    const { x, y } = this.cellToXY(b.col, b.row);
+    const S = def.size * TILE;
+    const total = (nextLevel(b)?.time ?? 1) * 1000;
+    const left = Math.max(0, b.upgradeEnds - now);
+    const frac = Phaser.Math.Clamp(1 - left / total, 0, 1); // clamp: a save edited by hand (or a changed build time) can exceed the level's time
+    const g = v.bar;
+    g.clear();
+    const bx = x + 8;
+    const by = y + S - 17;
+    const bw = S - 16;
+    drawBar(g, bx, by, bw, 9, frac, frac, 0xffb84a);
+    const fw = bw * frac;
+    if (fw > 10) {
+      // slanted stripes, sliding to the right
+      const shift = motion.reduced ? 0 : (this.time.now / 40) % 12;
+      g.lineStyle(3, 0xffffff, 0.22);
+      for (let sx = bx - 12 + shift; sx + 5 <= bx + fw - 2; sx += 12) {
+        if (sx < bx + 2) continue;
+        g.lineBetween(sx, by + 8, sx + 5, by + 1);
+      }
+      const pulse = motion.reduced ? 0.5 : 0.35 + 0.3 * Math.sin(this.time.now / 180);
+      g.fillStyle(0xfff2c0, pulse);
+      g.fillCircle(bx + fw - 2, by + 4.5, 5);
+    }
+  }
+
   private syncView(b: Building, now: number): void {
     const v = this.views.get(b.uid);
     if (!v) return;
@@ -307,13 +344,8 @@ export class VillageScene extends Phaser.Scene {
     v.badge.setPosition(x + 6, y + 4).setText(b.type === 'wall' ? '' : `${Math.max(1, b.level)}`);
     v.bar.clear();
     if (building) {
-      const total = (nextLevel(b)?.time ?? 1) * 1000;
       const left = Math.max(0, b.upgradeEnds! - now);
-      const frac = Phaser.Math.Clamp(1 - left / total, 0, 1); // clamp: a save edited by hand (or a changed build time) can exceed the level's time
-      v.bar.fillStyle(C.ink, 0.85);
-      v.bar.fillRoundedRect(x + 6, y + S - 20, S - 12, 14, 5);
-      v.bar.fillStyle(0xffb84a, 1);
-      v.bar.fillRoundedRect(x + 8, y + S - 18, (S - 16) * frac, 10, 4);
+      this.drawBuildBar(b, now);
       v.badge.setText(`⏳ ${formatTime(left / 1000)}`);
     }
     // ready-to-collect bubble

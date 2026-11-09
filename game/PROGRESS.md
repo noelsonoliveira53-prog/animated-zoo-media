@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **273** (next balance pass at iteration 275)
+Iteration counter: **274** (next balance pass at iteration 275)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1789,13 +1789,19 @@ Iteration counter: **273** (next balance pass at iteration 275)
   - Tabs are now 104 px wide on a 110 px pitch so six fit clear of the title, at desktop and phone size. `guide-spells-check` was updated for the new Spells tab position.
   - New `scripts/guide-effects-check.mjs` (every effect page fits the parchment; no console errors). All six other guide checks pass. Screenshot `screenshots/273.png` (Shocked, stars circling).
 
+- **Iteration 274: range preview and pad glow.**
+  - **Range preview** (tower menu, build previews, rally placement): the flat fill and ring became a soft field that brightens toward the edge (nested rings), a faint centre light, an inner glow band, and a dashed rim in the tower's colour that slowly turns (still on Reduce Motion). The rim hides whenever the ring clears.
+  - **Pad glow:** empty build pads breathe a warm glow while you can afford at least the cheapest tower (after store and daily cost modifiers). It turns off when you're short or the battle is over.
+  - New `scripts/range-check.mjs` (8 pads glow with coins, 0 when broke; no console errors). `phone-battle` still passes. Screenshot `screenshots/274.png` (the Glimmer Spire's range and glowing pads). 277 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower range preview polish: a soft gradient range circle with a dashed rim when placing or selecting a tower, and pads that glow when affordable.
+1. Wave preview polish: when a new enemy type is about to appear, a 'New!' tag on its icon in the next-wave strip and a short tooltip with its key trait.
+2. Boss intro: a brief nameplate slide-in and screen-edge vignette pulse when a boss enters the field.
 
 ## Known Bugs
 - (none known)

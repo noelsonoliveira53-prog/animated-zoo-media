@@ -97,6 +97,9 @@ export class BattleScene extends Phaser.Scene {
   private menu: Phaser.GameObjects.Container | null = null;
   private jamG: Phaser.GameObjects.Graphics | null = null;
   private rangeRing!: Phaser.GameObjects.Graphics;
+  private rangeDash: Phaser.GameObjects.Graphics | null = null;
+  private padGlows: Phaser.GameObjects.Ellipse[] = [];
+  private cheapestTower = 0;
   private particles!: Phaser.GameObjects.Particles.ParticleEmitter;
   private ended = false;
   private heroSprite: Phaser.GameObjects.Image | null = null;
@@ -172,6 +175,13 @@ export class BattleScene extends Phaser.Scene {
     this.drawMap();
     this.drawLighting();
     this.rangeRing = this.add.graphics().setDepth(5);
+    this.rangeDash = null;
+    // empty pads glow softly while you can afford at least the cheapest tower
+    this.padGlows = this.level.slots.map((p) => {
+      const glow = this.add.ellipse(p.x, p.y + 4, 82, 32, 0xffe27a, 0.22).setDepth(p.y - 0.5).setBlendMode(Phaser.BlendModes.ADD).setVisible(false);
+      if (!motion.reduced) this.tweens.add({ targets: glow, alpha: 0.06, scale: 1.08, duration: 900, yoyo: true, repeat: -1, ease: 'Sine.easeInOut', delay: Math.random() * 600 });
+      return glow;
+    });
 
     this.level.slots.forEach((s, i) => {
       const img = padHit(this.add.image(s.x, s.y, 'slot').setDepth(s.y).setInteractive({ useHandCursor: true }));
@@ -1974,6 +1984,7 @@ export class BattleScene extends Phaser.Scene {
   private buildHud(): void {
     // scene instances are reused between battles, so reset per-battle HUD state here
     this.shownCoins = this.shownLives = this.shownWave = -1;
+    this.cheapestTower = 0;
     this.hitStopUntil = 0;
     this.lastHitStop = -9999;
     this.skillWasReady = true; // no ping for the skill being ready at the start
@@ -2434,6 +2445,9 @@ export class BattleScene extends Phaser.Scene {
   }
 
   private refreshHud(dt = 0): void {
+    if (!this.cheapestTower) this.cheapestTower = Math.min(...Object.values(TOWERS).map((t) => this.sim.price(t.tiers[0].cost)));
+    const canBuild = this.sim.isActive() && this.sim.coins >= this.cheapestTower;
+    this.padGlows.forEach((g, i) => g.setVisible(canBuild && !this.sim.towers[i]));
     // rolling counters: snap on the first frame (or with Reduce Motion), then tick toward the real value
     const snap = this.shownCoins < 0 || motion.reduced || dt === 0;
     const coins = snap ? this.sim.coins : stepCounter(this.shownCoins, this.sim.coins, dt);
@@ -2571,14 +2585,35 @@ export class BattleScene extends Phaser.Scene {
     this.menu?.destroy();
     this.menu = null;
     this.rangeRing.clear();
+    this.rangeDash?.setVisible(false);
   }
 
   private drawRange(pos: Vec2, range: number, color: number): void {
-    this.rangeRing.clear();
-    this.rangeRing.fillStyle(color, 0.12);
-    this.rangeRing.fillCircle(pos.x, pos.y, range);
-    this.rangeRing.lineStyle(3, color, 0.7);
-    this.rangeRing.strokeCircle(pos.x, pos.y, range);
+    const g = this.rangeRing;
+    g.clear();
+    // a soft field that brightens toward the edge (nested rings), so the reach reads at a glance
+    for (let k = 0; k < 5; k++) {
+      g.fillStyle(color, 0.035 + k * 0.012);
+      g.fillCircle(pos.x, pos.y, range * (1 - k * 0.06));
+    }
+    g.fillStyle(0xffffff, 0.04);
+    g.fillCircle(pos.x, pos.y, range * 0.25);
+    g.lineStyle(6, color, 0.18);
+    g.strokeCircle(pos.x, pos.y, range - 2);
+    // a dashed rim that slowly turns
+    if (!this.rangeDash) this.rangeDash = this.add.graphics().setDepth(5.1);
+    const d = this.rangeDash;
+    d.clear().setPosition(pos.x, pos.y).setVisible(true).setAngle(0);
+    d.lineStyle(3, color, 0.85);
+    const n = Math.max(16, Math.round(range / 9));
+    for (let k = 0; k < n; k++) {
+      const a0 = (k / n) * Math.PI * 2;
+      d.beginPath();
+      d.arc(0, 0, range, a0, a0 + (Math.PI * 2) / n * 0.55);
+      d.strokePath();
+    }
+    this.tweens.killTweensOf(d);
+    if (!motion.reduced) this.tweens.add({ targets: d, angle: 360, duration: 16000, repeat: -1 });
   }
 
   private openSlotMenu(slot: number): void {
@@ -2675,6 +2710,7 @@ export class BattleScene extends Phaser.Scene {
   private placeRally(slot: number, p: Vec2): void {
     this.rallyMode = null;
     this.rangeRing.clear();
+    this.rangeDash?.setVisible(false);
     this.children.getByName('banner')?.destroy();
     const onRoad = this.sim.paths.some((path) => path.distanceTo(p) < 34);
     if (onRoad && this.sim.setRally(slot, p)) {

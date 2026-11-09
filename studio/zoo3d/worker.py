@@ -6,7 +6,7 @@ Loop: for every jobs\\<id>.json without out\\<id>\\DONE ->
   2) assemble out\\<id>\\<id>_raw.mp4 with ffmpeg + jobs\\<id>_song.wav
 Writes worker.log (everything) and status.txt (one line: what it's doing now).
 """
-import os, sys, time, glob, subprocess, datetime, traceback
+import os, sys, time, glob, subprocess, datetime, traceback, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOBS, OUT = os.path.join(ROOT, "jobs"), os.path.join(ROOT, "out")
@@ -159,7 +159,14 @@ def assemble(jid, ff):
         log(f"{jid}: ffmpeg failed: {p.stderr[-800:]}"); return False
     open(os.path.join(OUT, jid, "DONE"), "w").write(datetime.datetime.now().isoformat())
     log(f"{jid}: DONE -> {mp4} ({os.path.getsize(mp4) // 1048576} MB)")
+    clean_frames(jid)
     return True
+
+def clean_frames(jid):
+    """The raw MP4 holds everything we need; the PNG frames (~10 GB per episode) are deleted to keep the disk free."""
+    d = os.path.join(OUT, jid, "frames")
+    if os.path.isdir(d) and os.path.exists(os.path.join(OUT, jid, jid + "_raw.mp4")):
+        shutil.rmtree(d, ignore_errors=True); log(f"{jid}: frames deleted to free disk space")
 
 def main():
     log(f"worker started. Blender: {BLENDER}")
@@ -167,6 +174,8 @@ def main():
     log(f"ffmpeg: {ff}")
     if ff: open(os.path.join(ROOT, "ffmpeg_path.txt"), "w").write(ff)
     fails = {}
+    for dd in glob.glob(os.path.join(OUT, "*", "DONE")):   # free space from older finished jobs
+        clean_frames(os.path.basename(os.path.dirname(dd)))
     while True:
         busy = False
         for sp in sorted(glob.glob(os.path.join(JOBS, "*.song.json"))):

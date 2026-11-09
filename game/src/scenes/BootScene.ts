@@ -347,16 +347,28 @@ export class BootScene extends Phaser.Scene {
         // vine boar: heavy body, tusks, thorn spikes all along the back, green vines wrapped round
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.55, -0.2, 0.25, 0.6]) g.lineBetween(cx + lx * r, cy + r * 0.35, cx + lx * r, cy + r * 0.95);
-        g.fillStyle(0x4a8a3a, 1);
-        for (let k = 0; k < 6; k++) {
-          const tx = cx - r * 0.85 + k * r * 0.34;
-          g.fillTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
-          g.strokeTriangle(tx - r * 0.12, cy - r * 0.42, tx + r * 0.12, cy - r * 0.42, tx, cy - r * 0.85);
+        // bramble thorns: outlines first, then green fills with pale tips, so they read instead of a dark crest (design F19)
+        const thorns = [0, 1, 2, 3, 4].map((k) => cx - r * 0.7 + k * r * 0.38);
+        g.lineStyle(2.2, C.ink, 1);
+        for (const tx of thorns) g.strokeTriangle(tx - r * 0.16, cy - r * 0.42, tx + r * 0.16, cy - r * 0.42, tx, cy - r * 0.9);
+        for (const tx of thorns) {
+          g.fillStyle(0x5aa04a, 1);
+          g.fillTriangle(tx - r * 0.16, cy - r * 0.42, tx + r * 0.16, cy - r * 0.42, tx, cy - r * 0.9);
+          g.fillStyle(0xe8f0b0, 1);
+          g.fillTriangle(tx - r * 0.06, cy - r * 0.72, tx + r * 0.06, cy - r * 0.72, tx, cy - r * 0.9);
         }
+        g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx + r * 0.1, cy, r * 1.9, r * 1.1, color);
         g.lineStyle(3, 0x4a8a3a, 1);
         g.lineBetween(cx - r * 0.3, cy - r * 0.5, cx + r * 0.1, cy + r * 0.5);
         g.lineBetween(cx + r * 0.4, cy - r * 0.5, cx + r * 0.7, cy + r * 0.45);
+        // ripe bramble berries caught in the vines
+        for (const [bx, by] of [[-0.1, 0.1], [0.55, -0.05], [0.62, 0.3]]) {
+          g.fillStyle(0x8a2a6a, 1);
+          g.fillCircle(cx + bx * r, cy + by * r, r * 0.11);
+          g.fillStyle(0xe8a0d8, 1);
+          g.fillCircle(cx + bx * r - r * 0.03, cy + by * r - r * 0.04, r * 0.035);
+        }
         g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx - r * 0.85, cy + r * 0.05, (r * 0.45) * 2, (r * 0.45) * 2, color);
         g.fillStyle(0x9a8a6a, 1);
@@ -384,6 +396,13 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.95, cy - r * 0.2, r * 0.2);
         g.fillStyle(0x111111, 1);
         g.fillCircle(cx - r * 1.0, cy - r * 0.2, r * 0.09);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 1.03, cy - r * 0.25, r * 0.04);
+        // scale freckles across both halves of the hide: green on the green, orange on the turning red (design F19)
+        for (const [dx, dy] of [[-0.35, 0.15], [-0.1, -0.1], [-0.2, 0.3], [0.2, -0.15], [0.45, 0.2], [0.6, -0.05], [0.3, 0.35]]) {
+          g.fillStyle(dx > 0.05 ? 0xffa86a : 0x8ad86a, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, r * 0.06);
+        }
         break;
       }
       case 'idolkeeper': {
@@ -2365,14 +2384,25 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(color, 1);
         g.fillPoints(wing, true);
         g.strokePoints(wing, true);
+        // the lower-right half in shadow and a lit upper-left edge, light from the upper left (design F19)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(18).color, 1);
+        g.fillTriangle(cx, cy + r * 0.6, cx + r * 1.5, cy + r * 0.05, cx, cy + r * 0.05);
+        g.fillStyle(0xffffff, 0.35);
+        g.fillTriangle(cx, cy - r * 0.9, cx - r * 1.5, cy + r * 0.05, cx - r * 1.2, cy + r * 0.0);
+        g.lineStyle(1.5, C.ink, 0.5);
+        g.lineBetween(cx - r * 1.5, cy + r * 0.05, cx + r * 1.5, cy + r * 0.05);
+        g.lineStyle(2, C.ink, 1);
+        g.strokePoints(wing, true);
         g.fillStyle(0xd8eef8, 1);
         g.fillEllipse(cx, cy - r * 0.05, r * 0.5, r * 1.0);
         g.fillStyle(0x4a7a98, 1);
         g.fillTriangle(cx - r * 1.5, cy + r * 0.05, cx - r * 0.9, cy - r * 0.2, cx - r * 1.0, cy + r * 0.2);
         g.fillTriangle(cx + r * 1.5, cy + r * 0.05, cx + r * 0.9, cy - r * 0.2, cx + r * 1.0, cy + r * 0.2);
-        g.fillStyle(0x111111, 1);
-        g.fillCircle(cx - r * 0.18, cy - r * 0.45, r * 0.08);
-        g.fillCircle(cx + r * 0.18, cy - r * 0.45, r * 0.08);
+        this.eyes(g, cx, cy - r * 0.45, r * 0.12, r * 0.2);
+        // a red bow on the ribbon tail
+        g.fillStyle(0xe8453a, 1);
+        g.fillTriangle(cx + r * 0.12, cy + r * 0.78, cx + r * 0.36, cy + r * 0.7, cx + r * 0.24, cy + r * 0.86);
+        g.fillTriangle(cx + r * 0.12, cy + r * 0.78, cx + r * 0.0, cy + r * 0.9, cx + r * 0.24, cy + r * 0.86);
         break;
       }
       case 'cloudram': {

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **308** (next balance pass at iteration 310)
+Iteration counter: **309** (next balance pass at iteration 310)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2001,6 +2001,14 @@ Iteration counter: **308** (next balance pass at iteration 310)
   - The slow-motion only scales the scene's sim step (`slowMoStart`, reset per battle), so the autoplayer and balance sims are untouched.
   - New `systems/slowMo.ts` (`slowMoScale`, `SLOWMO_MS`, `SLOWMO_MIN`) with 3 tests (330 total).
   - New `scripts/bossdown-check.mjs <name> [boss] [level]` (Zephyrax killed by a real sim kill: the slow-motion starts and ends, the ribbon reads "Zephyrax, the Gale Roc defeated!" / "+989 coins" and then goes away; no console errors). `bossbar` and `result` checks still pass. Screenshot `screenshots/308.png`.
+- **Iteration 309: touch settings.**
+  - **New Settings buttons:**
+    - "Touch aim: Lift to cast / Tap to cast" (`settings.touchAim`). Tap to cast skips drag-and-lift: on touch, a single tap casts the armed spell where you tap, as with a mouse.
+    - "Show touch tips", which clears `touchTipSeen` so the gestures card from iteration 307 appears on the next battle.
+  - The battle reads `touchAim` once at the start of each battle.
+  - Settings layout: a fourth button row was added, with the reset note and the panel resized and the credits moved below the panel on one line. The first try had the credits overlapping the panel edge, so that was fixed.
+  - The BattleScene field comments that had drifted onto the wrong lines across iterations 297–308 were tidied.
+  - New `scripts/settings-touch-check.mjs` (real clicks on both buttons save `touchAim: 'tap'` and `touchTipSeen: false`; then on a phone with Tap to cast a single tap casts Starfall at once; no console errors). `settings-fx`, `phone-screens` and `touchaim` (lift mode) checks still pass. Screenshot `screenshots/309.png`. 330 tests.
 
 ## In Progress
 - (none)
@@ -2008,8 +2016,8 @@ Iteration counter: **308** (next balance pass at iteration 310)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Settings: a "Show touch tips again" button and a "Touch aiming" option (lift-to-cast vs tap-to-cast).
-2. Wave clear moment: a small "Wave N cleared" chime and coin trickle when the last foe of a wave falls, so the rhythm between waves reads.
+1. Wave clear moment: a small "Wave N cleared" chime and coin trickle when the last foe of a wave falls, so the rhythm between waves reads.
+2. Map screen polish: a progress ribbon on the world map (stars collected / total, next unlock) styled like the result card.
 
 ## Known Bugs
 - (none known)

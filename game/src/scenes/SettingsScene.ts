@@ -24,7 +24,7 @@ export class SettingsScene extends Phaser.Scene {
     motion.lowFx = !!s0.settings.fxLow;
     screenBackdrop(this, GAME_W, GAME_H);
     const g = this.add.graphics();
-    glossPanel(g, GAME_W / 2 - 360, 110, 720, 520, { fill: C.ink, alpha: 0.85, rim: 0xc8a050, rimAlpha: 0.7, radius: 26 });
+    glossPanel(g, GAME_W / 2 - 360, 104, 720, 512, { fill: C.ink, alpha: 0.85, rim: 0xc8a050, rimAlpha: 0.7, radius: 26 });
     this.add.text(GAME_W / 2, 60, 'Settings', textStyle(40, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
 
@@ -161,7 +161,40 @@ export class SettingsScene extends Phaser.Scene {
       },
     });
 
-    const resetBtn = new Button(this, GAME_W / 2 + 125, 464, 'Reset progress', {
+    // Touch aiming: drag-and-lift (preview first) or cast right where you tap
+    const aimLabel = (tap: boolean) => (tap ? 'Touch aim: Tap to cast' : 'Touch aim: Lift to cast');
+    const aimBtn = new Button(this, GAME_W / 2 + 125, 464, aimLabel(save.settings.touchAim === 'tap'), {
+      width: 230,
+      height: 56,
+      fontSize: 16,
+      color: C.sky,
+      onClick: () => {
+        const s = loadSave();
+        s.settings.touchAim = s.settings.touchAim === 'tap' ? 'lift' : 'tap';
+        writeSave(s);
+        sfx.click();
+        aimBtn.label.setText(aimLabel(s.settings.touchAim === 'tap'));
+      },
+    });
+    aimBtn.setName('touchAimBtn');
+
+    // Show the one-time touch gestures card again on the next battle
+    const tipsBtn = new Button(this, GAME_W / 2 - 125, 536, save.settings.touchTipSeen ? 'Show touch tips' : 'Touch tips: on', {
+      width: 230,
+      height: 56,
+      fontSize: 18,
+      color: 0x6ab04c,
+      onClick: () => {
+        const s = loadSave();
+        s.settings.touchTipSeen = false;
+        writeSave(s);
+        sfx.click();
+        tipsBtn.label.setText('Touch tips: on');
+      },
+    });
+    tipsBtn.setName('touchTipsBtn');
+
+    const resetBtn = new Button(this, GAME_W / 2 + 125, 536, 'Reset progress', {
       width: 230,
       height: 56,
       fontSize: 20,
@@ -182,10 +215,10 @@ export class SettingsScene extends Phaser.Scene {
         armed = false;
       },
     });
-    this.add.text(GAME_W / 2, 516, 'Clears stars, village, heroes, army and Field Guide. Settings are kept.', textStyle(14, TEXT.dim, false)).setOrigin(0.5);
+    this.add.text(GAME_W / 2, 588, 'Reset clears stars, village, heroes, army and Field Guide. Settings are kept.', textStyle(14, TEXT.dim, false)).setOrigin(0.5);
 
     this.add
-      .text(GAME_W / 2, 570, 'Grovewatch: Sanctuary Siege\nAll art and sound are generated in code.', { ...textStyle(16, TEXT.cream, false), align: 'center' })
+      .text(GAME_W / 2, 664, 'Grovewatch: Sanctuary Siege  •  All art and sound are generated in code.', textStyle(15, TEXT.dim, false))
       .setOrigin(0.5);
   }
 }

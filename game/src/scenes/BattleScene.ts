@@ -109,21 +109,22 @@ export class BattleScene extends Phaser.Scene {
   private callChip: Phaser.GameObjects.Text | null = null;
   private callFull = 1; // the countdown's starting length, so the strip drains from full
   private callLast = 0;
-  private skillPreview = false;
-  private skillHold = false;
+  private skillPreview = false; // the pointer is over the hero's skill button
+  private skillHold = false; // touch: the finger is holding the skill button
   private veteranBadges = new Map<number, Phaser.GameObjects.Container>(); // tower uid → gold star
   private heroDrag: Vec2 | null = null; // touch: where a drag from the hero started
   private heroDragTo: Vec2 | null = null;
   private heroDragG: Phaser.GameObjects.Graphics | null = null;
   private bossTrail: TrailState = newTrail(1);
   private bossTrailUid = 0;
-  private bossFlashUntil = 0;
-  private slowMoStart = 0; // scene time a boss-kill slow-motion beat began (0 = none) // scene time until which the boss bar flashes after a phase change
+  private bossFlashUntil = 0; // scene time until which the boss bar flashes after a phase change
+  private slowMoStart = 0; // scene time a boss-kill slow-motion beat began (0 = none)
   private rallyDrag = false; // touch: dragging a rally flag
   private rallyFinger: Vec2 | null = null;
   private rallyG: Phaser.GameObjects.Graphics | null = null;
-  private rallyGhost: Phaser.GameObjects.Image | null = null; // touch: the finger is holding the skill button
-  private aimHold = false; // touch: the finger is aiming an armed spell // the pointer is over the hero's skill button
+  private rallyGhost: Phaser.GameObjects.Image | null = null;
+  private aimHold = false; // touch: the finger is aiming an armed spell
+  private touchAimTap = false; // Settings → Touch aim: Tap to cast (no drag-and-lift)
   private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
   private aimText: Phaser.GameObjects.Text | null = null;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
@@ -245,7 +246,7 @@ export class BattleScene extends Phaser.Scene {
         ev.stopPropagation();
         sfx.unlock();
         if (this.spellMode) {
-          if (_p.wasTouch) this.beginTouchAim(_p);
+          if (_p.wasTouch && !this.touchAimTap) this.beginTouchAim(_p);
           else this.castAt(this.spellMode, { x: _p.worldX, y: _p.worldY });
           return;
         }
@@ -310,7 +311,7 @@ export class BattleScene extends Phaser.Scene {
         return;
       }
       if (this.spellMode !== null) {
-        if (p.wasTouch) this.beginTouchAim(p);
+        if (p.wasTouch && !this.touchAimTap) this.beginTouchAim(p);
         else this.castAt(this.spellMode, { x: p.worldX, y: p.worldY });
         return;
       }
@@ -371,6 +372,7 @@ export class BattleScene extends Phaser.Scene {
       this.castAt(this.spellMode, { x: this.reticle.x, y: this.reticle.y });
     });
 
+    this.touchAimTap = loadSave().settings.touchAim === 'tap';
     this.cameras.main.fadeIn(300, 16, 38, 27);
     // first battle on a touch screen: a one-time card about the touch gestures
     if (shouldShowTouchTip(loadSave(), this.sys.game.device.input.touch) && !(window as unknown as { __noTouchTip?: boolean }).__noTouchTip) this.showTouchTip(); // __noTouchTip: test hook for the phone checks

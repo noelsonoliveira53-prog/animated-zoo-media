@@ -32,7 +32,7 @@ import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { pickBannerY } from '../systems/bannerSpot';
 import { enemyStatuses, iconX, soldierStatuses, type StatusIcon } from '../systems/statusIcons';
 import { attachTip } from '../ui/tooltip';
-import { foeShadowAlpha, stackLabel } from '../systems/foeReadability';
+import { foeShadowAlpha, phoneFoeScale, stackLabel } from '../systems/foeReadability';
 import { announce, announceText } from '../systems/announce';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -4725,7 +4725,8 @@ export class BattleScene extends Phaser.Scene {
       v.sprite.setPosition(e.pos.x, e.pos.y - lift);
       v.pulse = Math.max(0, v.pulse - dt * 1.6);
       const swell = (1 + e.fed * 0.08) * (1 + v.pulse); // fed Gorgegrubs visibly bulk up; drummers thump
-      v.sprite.setScale(swell * pose.sx, swell * pose.sy);
+      const ps = phoneFoeScale(e.def.radius, this.iconScale > 1); // small foes draw a little bigger on phones (visual only)
+      v.sprite.setScale(swell * pose.sx * ps, swell * pose.sy * ps);
       if (!e.def.momentum) v.sprite.setRotation(pose.rot * (v.sprite.flipX ? -1 : 1));
       if (v.squash > 0) {
         v.squash = Math.max(0, v.squash - dt * 7);

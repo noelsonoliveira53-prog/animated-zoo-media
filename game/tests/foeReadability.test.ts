@@ -21,3 +21,19 @@ describe('foe readability', () => {
     expect(stackLabel(r, 5000).dy).toBe(0);
   });
 });
+
+import { phoneFoeScale } from '../src/systems/foeReadability';
+
+describe('phone foe scale', () => {
+  it('leaves desktop and normal-sized foes alone', () => {
+    expect(phoneFoeScale(7, false)).toBe(1);
+    expect(phoneFoeScale(12, true)).toBe(1);
+    expect(phoneFoeScale(16, true)).toBe(1);
+  });
+  it('grows small foes on phones, capped', () => {
+    expect(phoneFoeScale(11, true)).toBeCloseTo(1.05, 5);
+    expect(phoneFoeScale(9, true)).toBeCloseTo(1.15, 5);
+    expect(phoneFoeScale(7, true)).toBe(1.25);
+    expect(phoneFoeScale(2, true)).toBe(1.25);
+  });
+});

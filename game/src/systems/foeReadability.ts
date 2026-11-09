@@ -22,3 +22,12 @@ export function stackLabel(recent: number[], now: number, windowMs = 1500, step 
   const live = recent.filter((t) => now - t < windowMs);
   return { dy: live.length ? -live.length * step : 0, recent: [...live, now] };
 }
+
+/**
+ * Extra draw scale for small foes on phones, where the game renders at about half size and a radius-7 gnat
+ * shrinks to a few CSS px. Visual only: the simulation's radius and hit tests are unchanged.
+ */
+export function phoneFoeScale(radius: number, touch: boolean): number {
+  if (!touch || radius >= 12) return 1;
+  return Math.min(1.25, 1 + (12 - radius) / 20);
+}

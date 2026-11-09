@@ -90,6 +90,7 @@ export class BattleScene extends Phaser.Scene {
   private shownLives = -1;
   private shownWave = -1;
   private hitStopUntil = 0;
+  private heroPortrait: Phaser.GameObjects.Image | null = null;
   private skillWasReady = true;
   private lastHitStop = -9999;
   private nextWaveBtn!: Button;
@@ -1991,6 +1992,7 @@ export class BattleScene extends Phaser.Scene {
     this.hitStopUntil = 0;
     this.lastHitStop = -9999;
     this.skillWasReady = true; // no ping for the skill being ready at the start
+    this.heroPortrait = null;
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2169,6 +2171,7 @@ export class BattleScene extends Phaser.Scene {
     const py = GAME_H - 58;
     this.heroHud = this.add.graphics().setDepth(3000);
     const portrait = this.add.image(px, py + 6, `hero_${h.def.id}`).setDepth(3001).setScale(1.05);
+    this.heroPortrait = portrait;
     portrait.setInteractive(new Phaser.Geom.Circle(26, 30, 40), Phaser.Geom.Circle.Contains);
     portrait.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
@@ -2186,6 +2189,20 @@ export class BattleScene extends Phaser.Scene {
     });
     this.skillText = this.add.text(px + 104, py, h.def.active.name.replace(' ', '\n'), { ...textStyle(pf(13)), align: 'center' }).setOrigin(0.5).setDepth(3002);
     fitWidth(this.skillText, 68);
+  }
+
+  /** Level up: a gold flare bursts from the hero badge and its portrait pops. */
+  private heroBadgeFlare(): void {
+    const px = 58, py = GAME_H - 58;
+    const ring = this.add.circle(px, py, 40, 0xffe27a, 0).setStrokeStyle(5, 0xffe27a, 1).setDepth(3003);
+    this.tweens.add({ targets: ring, scale: 1.8, alpha: 0, duration: 520, onComplete: () => ring.destroy() });
+    if (motion.reduced) return;
+    for (let k = 0; k < 10; k++) {
+      const a = (k / 10) * Math.PI * 2;
+      const ray = this.add.rectangle(px, py, 18, 3, 0xfff0b0).setOrigin(0, 0.5).setRotation(a).setDepth(3003).setBlendMode(Phaser.BlendModes.ADD);
+      this.tweens.add({ targets: ray, x: px + Math.cos(a) * 50, y: py + Math.sin(a) * 50, alpha: 0, duration: 480, ease: 'Quad.easeOut', onComplete: () => ray.destroy() });
+    }
+    if (this.heroPortrait) this.tweens.add({ targets: this.heroPortrait, scale: 1.3, duration: 140, yoyo: true });
   }
 
   private selectHero(on: boolean): void {
@@ -2229,18 +2246,42 @@ export class BattleScene extends Phaser.Scene {
     const py = GAME_H - 58;
     const g = this.heroHud;
     g.clear();
-    g.fillStyle(C.ink, 0.8);
-    g.fillCircle(px, py, 42);
-    g.fillStyle(h.alive ? C.panelLight : 0x553333, 1);
-    g.fillCircle(px, py, 36);
-    // xp arc
+    // framed portrait: shadow, dark rim, a gold bevel, then the hero-tinted backdrop with a gloss
+    g.fillStyle(0x000000, 0.3);
+    g.fillCircle(px + 2, py + 3, 44);
+    g.fillStyle(C.ink, 0.9);
+    g.fillCircle(px, py, 44);
+    g.lineStyle(2, 0xffe08a, 0.55);
+    g.strokeCircle(px, py, 43);
+    g.fillStyle(h.alive ? h.def.color : 0x553333, 1);
+    g.fillCircle(px, py, 35);
+    g.fillStyle(h.alive ? C.panelLight : 0x553333, 0.55);
+    g.fillCircle(px, py + 4, 33);
+    g.fillStyle(0xffffff, 0.14);
+    g.fillEllipse(px - 6, py - 16, 40, 18);
+    // xp track and arc, with a bright dot at its leading edge
     const next = HERO_XP[h.level] ?? HERO_XP[HERO_MAX_LEVEL - 1];
     const prev = HERO_XP[h.level - 1];
     const frac = h.level >= HERO_MAX_LEVEL ? 1 : (h.xp - prev) / Math.max(1, next - prev);
+    g.lineStyle(5, 0x000000, 0.45);
+    g.strokeCircle(px, py, 39);
     g.lineStyle(5, C.gold, 1);
     g.beginPath();
     g.arc(px, py, 39, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * frac);
     g.strokePath();
+    if (frac > 0.01 && frac < 1) {
+      const a = -Math.PI / 2 + Math.PI * 2 * frac;
+      g.fillStyle(0xfff6c8, 1);
+      g.fillCircle(px + Math.cos(a) * 39, py + Math.sin(a) * 39, 3.5);
+    }
+    // down: a dark sweep that drains away as the respawn timer runs out, and a greyed portrait
+    if (!h.alive) {
+      const left = Math.max(0, Math.min(1, h.respawnTimer / Math.max(0.1, h.def.respawn)));
+      g.fillStyle(0x000000, 0.55);
+      g.slice(px, py, 35, -Math.PI / 2, -Math.PI / 2 + Math.PI * 2 * left, false);
+      g.fillPath();
+    }
+    this.heroPortrait?.setTint(h.alive ? 0xffffff : 0x888888);
     if (this.heroSelected) {
       g.lineStyle(3, C.cream, 1);
       g.strokeCircle(px, py, 44);
@@ -2891,6 +2932,7 @@ export class BattleScene extends Phaser.Scene {
       }
       case 'heroLevel':
         this.floatText(ev.hero.pos.x, ev.hero.pos.y - 80, `Level ${ev.hero.level}!`, TEXT.gold, 24);
+        this.heroBadgeFlare();
         this.particles.setParticleTint(C.gold);
         this.particles.explode(24, ev.hero.pos.x, ev.hero.pos.y - 30);
         sfx.victory();

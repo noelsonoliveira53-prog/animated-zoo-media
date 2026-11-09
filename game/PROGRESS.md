@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **284** (next balance pass at iteration 285)
+Iteration counter: **285** (next balance pass at iteration 290)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1861,6 +1861,9 @@ Iteration counter: **284** (next balance pass at iteration 285)
   - New `systems/upgradePreview.ts`: up to three stats that change on the next level (per hour, holds, storage, the battle bonus of workshop / hall / barracks / apiary / weir / shrine, health). Shown as small cards reading `label`, then `cur → next`, with the new value in green. Hidden while a building is under construction or at max level.
   - The upgrade cost line shrinks to fit (long "coins + glowsap" costs).
   - Tests: `tests/upgradePreview.test.ts` (empty at max level, only changed stats, at most 3, production goes up, workshop step). `scripts/village-shot.mjs` gained `PANEL=<uid>`. Village leak check stays flat. Screenshots `screenshots/284.png`, `284-workshop.png`, `284-building.png`.
+- **Iteration 285** (POLISH + BALANCE):
+  - **Phone check** of the new village building panel: `village-shot.mjs` gained `PHONE=1`. At 740×360 the larger phone text wraps the description to two lines, which still clears the upgrade cards, and the cards' `1100 → 1600` values fit. No console errors. Screenshot `screenshots/285-phone-panel.png`.
+  - **Balance:** a sweep of the last ten campaign levels (indexes 115–124, the stretch never sampled before), described under Balance Notes. All within target and nothing tuned. 284 tests.
 
 ## In Progress
 - (none)
@@ -2759,3 +2762,4 @@ Findings / follow-ups:
 - **Iteration 270:** raid sweep identical to iteration 250 (the visual-only `shot.target` field changed nothing). Storm-map idle objects plateau at about 146 after warm-up.
 - **Iteration 275 daily sweep** (expert, 3 seeds; Murkmaw / Morrowcap / Ruins / Flagship): none 100/100/100/100; swift 100/67/67/100; tough 100/33/33/100; nospells 100/67/100/100; nohero 67/67/0/100; glass 100/67/100/67; frenzy 67/100/0/100; ironbark and gale 100 across. Old heavy pairs: tough+swift 0/0/0/100, nohero+nospells 0/33/0/67, glass+frenzy 33/33/0/67. New pickable pairs: heavy + boon 100 across; frenzy+gale 67/33/0/100; glass+ironbark 67/33/67/33; tough+ironbark 67/33/0/100.
 - **Iteration 280:** branch benchmark unchanged since iteration 7 (all twelve branches identical), confirming the visual work (iterations 241–279) never touched combat numbers.
+- **Iteration 285 late-campaign sweep** (levels 116–125, 4 seeds; expert / casual / novice win %): Stepping Stones 100/100/25, Otterslide Bend 100/100/0, Millwheel Race 100/75/0, Kingfisher Falls 100/50/0, The Elder Pool 75/25/0 (10 seeds: 80/40/0), Heather Gate 100/100/0, Moonstone Circle 100/75/0, Curlew Ridge 100/100/0, The Barrow Downs 100/75/0, The Thunder Barrow 100/75/0 (expert keeps only 8.8 lives). Single-tower strategies all lose (intended). The Elder Pool is the stiffest of the stretch, on par with The Great Barn (80/30/0); no change.

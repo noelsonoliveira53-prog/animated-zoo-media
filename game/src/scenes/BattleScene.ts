@@ -32,6 +32,7 @@ import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { pickBannerY } from '../systems/bannerSpot';
 import { enemyStatuses, iconX, soldierStatuses, type StatusIcon } from '../systems/statusIcons';
 import { attachTip } from '../ui/tooltip';
+import { foeShadowAlpha, stackLabel } from '../systems/foeReadability';
 import { announce, announceText } from '../systems/announce';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
@@ -96,6 +97,7 @@ export class BattleScene extends Phaser.Scene {
   private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private fx!: TowerFx;
+  private guideLabelTimes: number[] = []; // when recent "New in Field Guide!" labels popped (for stacking)
   private readonly iconScale = isTouch() ? 1.35 : 1; // status icons read bigger on phones
   private bannerSpot: { y: number; cover: number } | null = null; // where the banner hides the least road (per level)
   private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
@@ -3799,7 +3801,12 @@ export class BattleScene extends Phaser.Scene {
           const s0 = loadSave();
           if (!s0.seenEnemies.includes(ev.enemy.def.id)) {
             writeSave(markSeen(s0, [ev.enemy.def.id]));
-            if (s0.seenEnemies.length > 0) this.floatText(ev.enemy.pos.x + 40, ev.enemy.pos.y - 40, 'New in Field Guide!', '#bfe8ff', 14);
+            if (s0.seenEnemies.length > 0) {
+              // several new foes in one wave: their labels stack instead of printing over each other
+              const st = stackLabel(this.guideLabelTimes, this.time.now);
+              this.guideLabelTimes = st.recent;
+              this.floatText(ev.enemy.pos.x + 40, ev.enemy.pos.y - 40 + st.dy, 'New in Field Guide!', '#bfe8ff', 14);
+            }
           }
         }
         if (ev.enemy.def.boss) {
@@ -4614,9 +4621,11 @@ export class BattleScene extends Phaser.Scene {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
     // every critter casts a soft ground shadow (flyers a smaller, fainter one far below them)
+    // (deeper on pale stone, sand and snow roads, so pale foes stay grounded and easy to pick out)
+    const sa = foeShadowAlpha(this.level.theme.road, !!e.def.flying);
     const shadow = e.def.flying
-      ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22)
-      : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, 0.2);
+      ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, sa)
+      : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, sa);
     const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
     this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0, trail: newTrail(1) });
   }

@@ -1,6 +1,7 @@
 import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
+import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
 import { stepCounter, waveProgress } from '../ui/counter';
@@ -52,6 +53,7 @@ interface EnemyView {
   air: number; // 0 = on the ground, 1 = flying height (eases for swooping flyers)
   pulse: number; // brief scale bump (a Barkdrum thumping its drum), decays to 0
   squash: number; // brief squash after a big hit, decays to 0
+  trail: TrailState; // pale "damage trail" behind the health fill
 }
 
 /** Light color for each tower's upgrade pillar. */
@@ -3785,7 +3787,7 @@ export class BattleScene extends Phaser.Scene {
       ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, 0.22)
       : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, 0.2);
     const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0 });
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0, trail: newTrail(1) });
   }
 
   private killView(uid: number, v: EnemyView): void {
@@ -4001,10 +4003,45 @@ export class BattleScene extends Phaser.Scene {
           v.bar.fillStyle(0xc8c0b4, 1);
           v.bar.fillRect(x, y + 7, w * (e.armor / e.def.armor), 2);
         }
-        v.bar.fillStyle(C.ink, 0.85);
-        v.bar.fillRect(x - 1, y - 1, w + 2, 7);
-        v.bar.fillStyle(e.hp / e.maxHp > 0.4 ? 0x7be35a : 0xff5d4a, 1);
-        v.bar.fillRect(x, y, w * Math.max(0, e.hp / e.maxHp), 5);
+        const frac = Math.max(0, e.hp / e.maxHp);
+        stepTrail(v.trail, frac, dt);
+        const seg = (from: number, to: number) => {
+          // rounded ends, but plain rects when the segment is too thin to round
+          const sw = w * (to - from);
+          if (sw <= 0) return;
+          if (sw < 5) v.bar.fillRect(x + w * from, y, sw, 5);
+          else v.bar.fillRoundedRect(x + w * from, y, sw, 5, 2.5);
+        };
+        v.bar.fillStyle(C.ink, 0.9);
+        v.bar.fillRoundedRect(x - 1.5, y - 1.5, w + 3, 8, 4);
+        v.bar.fillStyle(0x3a2420, 1);
+        seg(0, 1);
+        if (v.trail.trail > frac + 0.002) {
+          v.bar.fillStyle(0xfff0c8, 0.9);
+          seg(0, v.trail.trail);
+        }
+        v.bar.fillStyle(hpColor(frac), 1);
+        seg(0, frac);
+        if (w * frac > 4) {
+          v.bar.fillStyle(0xffffff, 0.32);
+          v.bar.fillRect(x + 1.5, y + 0.6, w * frac - 3, 1.4);
+        }
+        // armor / magic-resist markers to the left of the bar
+        resistPips(e.armor, e.def.magicResist).forEach((pip, k) => {
+          const px = x - 6 - k * 9;
+          const py = y + 2.5;
+          v.bar.fillStyle(C.ink, 0.9);
+          v.bar.fillCircle(px, py, 4.6);
+          if (pip === 'armor') {
+            v.bar.fillStyle(0xc8d0d8, 1);
+            v.bar.fillTriangle(px - 3, py - 2.6, px + 3, py - 2.6, px, py + 3.4);
+            v.bar.fillRect(px - 3, py - 3, 6, 1.6);
+          } else {
+            v.bar.fillStyle(0xc890ff, 1);
+            v.bar.fillTriangle(px - 3, py, px + 3, py, px, py - 3.4);
+            v.bar.fillTriangle(px - 3, py, px + 3, py, px, py + 3.4);
+          }
+        });
         v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
       if (e.def.parry && e.parryCharges > 0) {

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **285** (next balance pass at iteration 290)
+Iteration counter: **286** (next balance pass at iteration 290)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1864,6 +1864,12 @@ Iteration counter: **285** (next balance pass at iteration 290)
 - **Iteration 285** (POLISH + BALANCE):
   - **Phone check** of the new village building panel: `village-shot.mjs` gained `PHONE=1`. At 740×360 the larger phone text wraps the description to two lines, which still clears the upgrade cards, and the cards' `1100 → 1600` values fit. No console errors. Screenshot `screenshots/285-phone-panel.png`.
   - **Balance:** a sweep of the last ten campaign levels (indexes 115–124, the stretch never sampled before), described under Balance Notes. All within target and nothing tuned. 284 tests.
+- **Iteration 286: enemy health bars.**
+  - Rounded bars with a dark inner track, a top highlight, and fill colours green → amber → red (above 60% / 30%).
+  - **Damage trail:** a pale cream segment holds where the health was for 0.35 s after a hit, then drains down (faster for big gaps). It restarts on each new hit and jumps up with healing.
+  - **Resistance markers** left of the bar: a grey shield for armor, a violet gem for magic resist. They only show from 0.3 (`RESIST_PIP_MIN`), because most foes have a little of both. Brittle foes lose the shield as their crust wears below 0.3.
+  - New `systems/hpBar.ts` (`stepTrail`, `hpColor`, `resistPips`) with 6 tests (290 total).
+  - New `scripts/hpbar-check.mjs` (four foes at 75/50/30/12%; trail held then drained exactly to the fill; no console errors). Screenshot `screenshots/286.png`.
 
 ## In Progress
 - (none)
@@ -1871,8 +1877,8 @@ Iteration counter: **285** (next balance pass at iteration 290)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Enemy health bars: rounded bars with a delayed "damage trail", plus small armor / magic-resist pips.
-2. Tower info panel: a glossy card for the selected tower with stat bars and a next-tier preview.
+1. Tower info panel: a glossy card for the selected tower with stat bars and a next-tier preview.
+2. Hero and soldier bars: the same rounded look and damage trail as enemy bars.
 
 ## Known Bugs
 - (none known)

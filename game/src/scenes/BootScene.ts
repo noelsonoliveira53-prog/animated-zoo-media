@@ -4092,6 +4092,25 @@ export class BootScene extends Phaser.Scene {
       g.fillCircle(cx + 18, base - 64 - tier * 4, 6);
       g.fillStyle(dark, 1);
       g.fillRect(cx - 24, base - 44 - tier * 3, 48, 7);
+      // stone base: lit top edge, shaded lower right, block seams; wood grain on the posts; a pennant in the tower colour (design F33)
+      g.fillStyle(0xb8b2a4, 1);
+      g.fillRect(cx - 22, base - 16, 44, 3);
+      g.fillStyle(0x000000, 0.18);
+      g.fillRect(cx + 4, base - 9, 20, 7);
+      g.lineStyle(1, 0x5a564c, 1);
+      for (const sx of [-10, 6]) g.lineBetween(cx + sx, base - 16, cx + sx, base - 2);
+      g.lineBetween(cx - 24, base - 9, cx + 24, base - 9);
+      g.lineStyle(1, 0xa8784a, 1);
+      g.lineBetween(cx - 18, base - 38 - tier * 3, cx - 18, base - 18);
+      g.lineBetween(cx + 14, base - 38 - tier * 3, cx + 14, base - 18);
+      if (tier > 0) {
+        g.lineStyle(2, 0x5a3b22, 1);
+        g.lineBetween(cx - 24, base - 44 - tier * 3, cx - 24, base - 62 - tier * 3);
+        g.fillStyle(color, 1);
+        g.fillTriangle(cx - 24, base - 62 - tier * 3, cx - 24, base - 52 - tier * 3, cx - 36, base - 57 - tier * 3);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeTriangle(cx - 24, base - 62 - tier * 3, cx - 24, base - 52 - tier * 3, cx - 36, base - 57 - tier * 3);
+      }
     } else if (id === 'burrow') {
       // grassy mound with a round wooden door and a banner
       g.fillStyle(0x6a9a48, 1);
@@ -4106,6 +4125,21 @@ export class BootScene extends Phaser.Scene {
       g.fillCircle(cx, base - 10, 9);
       g.fillStyle(C.gold, 1);
       g.fillCircle(cx + 5, base - 10, 2);
+      // door planks, a shaded lower-right of the mound, a lit window and a few meadow flowers (design F33)
+      g.lineStyle(1, 0x5a3b22, 1);
+      g.lineBetween(cx - 3, base - 18, cx - 3, base - 2);
+      g.lineBetween(cx + 3, base - 18, cx + 3, base - 2);
+      g.fillStyle(0x000000, 0.14);
+      g.fillEllipse(cx + 14, base - 8, 30, 14);
+      g.fillStyle(0xffd86a, 1);
+      g.fillCircle(cx - 18, base - 18, 4);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeCircle(cx - 18, base - 18, 4);
+      g.lineBetween(cx - 22, base - 18, cx - 14, base - 18);
+      for (const [fx, fy, fc] of [[-26, -4, 0xffe066], [24, -2, 0xff8fb1], [-12, -1, 0xffffff]] as const) {
+        g.fillStyle(fc, 1);
+        g.fillCircle(cx + fx, base + fy, 2.5);
+      }
       g.lineStyle(3, 0x5a3b22, 1);
       g.lineBetween(cx + 20, base - 26, cx + 20, base - 60 - tier * 4);
       g.fillStyle(color, 1);
@@ -4122,6 +4156,17 @@ export class BootScene extends Phaser.Scene {
       g.fillTriangle(cx, base, cx + 18, base, cx, base - height);
       g.fillStyle(dark, 1);
       g.fillRect(cx - 4, base - height * 0.55, 8, 10);
+      // stone courses across the spire, a glowing rune in the window and a lit left edge (design F33)
+      g.lineStyle(1, 0x55536e, 1);
+      for (const t of [0.25, 0.45, 0.7]) {
+        const yy = base - height * t;
+        const half = 18 * (1 - t);
+        g.lineBetween(cx - half, yy, cx + half, yy);
+      }
+      g.fillStyle(light, 0.9);
+      g.fillRect(cx - 2, base - height * 0.55 + 2, 4, 6);
+      g.lineStyle(1.5, 0xc8c6e0, 1);
+      g.lineBetween(cx - 17, base - 1, cx - 1, base - height + 2);
       g.fillStyle(color, 0.35);
       g.fillCircle(cx, base - height - 6, 14 + tier * 2);
       g.fillStyle(light, 1);
@@ -4141,6 +4186,21 @@ export class BootScene extends Phaser.Scene {
       g.fillStyle(0x9a6a40, 1);
       g.fillRect(cx - 24, base - height - 12, 48, 16);
       g.strokeRect(cx - 24, base - height - 12, 48, 16);
+      // platform planks, wood grain on the legs, and a pennant in the tower colour from tier 1 (design F33)
+      g.lineStyle(1, 0x6a4a2a, 1);
+      for (const px of [-12, 0, 12]) g.lineBetween(cx + px, base - height - 12, cx + px, base - height + 4);
+      g.lineStyle(1, 0xb08050, 1);
+      g.lineBetween(cx - 14, base - height + 2, cx - 14, base - 2);
+      g.lineBetween(cx + 10, base - height + 2, cx + 10, base - 2);
+      if (tier > 0) {
+        g.lineStyle(2, 0x5a3b22, 1);
+        g.lineBetween(cx + 24, base - height - 4, cx + 24, base - height - 30);
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(10).color, 1);
+        g.fillTriangle(cx + 24, base - height - 30, cx + 24, base - height - 20, cx + 36, base - height - 25);
+        g.lineStyle(1.5, C.ink, 1);
+        g.strokeTriangle(cx + 24, base - height - 30, cx + 24, base - height - 20, cx + 36, base - height - 25);
+      }
+      g.lineStyle(3, C.ink, 1);
       // leafy roof
       g.fillStyle(color, 1);
       g.fillCircle(cx - 14, base - height - 18, 12);
@@ -4171,6 +4231,8 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(key ?? `tower_${id}_${tier}`, w, h);
     g.destroy();
+    // towers catch the upper-left light along every edge too (the F25 rim pass), warm like the bosses' sheen
+    this.rimLight(key ?? `tower_${id}_${tier}`, 0xfff0c8, 0.3);
   }
 
   private makeMisc(): void {

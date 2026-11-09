@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **276** (next balance pass at iteration 280)
+Iteration counter: **277** (next balance pass at iteration 280)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1810,13 +1810,20 @@ Iteration counter: **276** (next balance pass at iteration 280)
   - The tip comes from the new `enemyKeyTrait(def)` in `systems/guideInfo.ts`: the most useful trait as advice, in priority order (boss, flying, healer, shield, splitter, chill, veil, armor, magic resist, fast). 1 test, 279 total.
   - New `scripts/newenemy-check.mjs`: a save that has met only Mudlings sees the tag and the tip; a save that has met everything sees neither; no console errors. Screenshot `screenshots/276.png`.
 
+- **Iteration 277: boss intro.** New `scenes/fx/BossIntro.ts` replaces the plain "X approaches!" banner when a boss spawns:
+  - **Edge pulse:** the screen edges pulse red twice (a canvas radial vignette made once).
+  - **Nameplate:** a dark-red-rimmed plate slides in from the left. It shows the boss's portrait in a red ring, "BOSS APPROACHES", the name in big gold and a facts line (health at this level's scaling, phase count, and flies / armor / magic resist when notable). The portrait pulses; the plate holds about 1.8 s, then slides out right. Shake and horn as before.
+  - Reduce Motion shows the plate in place briefly with no slide or pulse.
+  - New `scripts/bossintro-check.mjs` (Zephyrax plate mid-hold, nothing left after; no console errors). `bossfx-check` still passes. Screenshot `screenshots/277.png`. 279 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Boss intro: a brief nameplate slide-in and screen-edge vignette pulse when a boss enters the field.
+1. Hero portrait polish: the bottom-left hero badge gets a framed portrait with an XP ring, a level-up flare and a respawn countdown sweep.
+2. Spell button feedback: a radial 'ready' flash when a spell comes off cooldown and a press-in squash on tap.
 
 ## Known Bugs
 - (none known)

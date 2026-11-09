@@ -11,6 +11,7 @@ import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
 import { buildPuff, upgradeBurst } from './fx/BuildFx';
+import { bossIntro } from './fx/BossIntro';
 import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
 import { startWeather } from './fx/Weather';
 import { ambienceFor, weatherFor } from '../data/weather';
@@ -2851,7 +2852,13 @@ export class BattleScene extends Phaser.Scene {
           }
         }
         if (ev.enemy.def.boss) {
-          this.showBanner(`${ev.enemy.def.name} approaches!`, 'Focus everything on the boss');
+          // a nameplate slides across with a red edge pulse (replaces the plain banner)
+          const bd = ev.enemy.def;
+          const facts = [`Health ${Math.round(ev.enemy.maxHp)}`, `${bd.phases?.length ?? 0} phases`];
+          if (bd.flying) facts.push('flies');
+          if (bd.armor >= 0.3) facts.push(`armor ${Math.round(bd.armor * 100)}%`);
+          if (bd.magicResist >= 0.3) facts.push(`magic resist ${Math.round(bd.magicResist * 100)}%`);
+          bossIntro(this, bd, facts.join('  •  '), GAME_W, GAME_H, motion.reduced);
           shake(this, 500, 0.01);
           sfx.waveHorn();
         }

@@ -1268,6 +1268,28 @@
   "duration": 150.0
  },
  {
+  "file": "gizmo/gz3d_ep09.mp4",
+  "title": "Ice, Water and Steam! States of Matter Song with Gizmo",
+  "description": "Solid, liquid, gas! Gizmo the robot shows how water changes: ice is solid, it melts into liquid water, and heated water rises as steam, a gas. Steam makes clouds and rain falls back down in the water cycle.\nKids freeze like ice, melt like water and float like steam. Ages 3-6.\n\nLYRICS\nSolid, liquid, gas, hooray!\nWater changes every day!\nFreeze it, melt it, watch it go,\nWater's magic, now you know!\nIce is solid, cold and hard,\nIce cubes and snow in the yard!\nPut it in the sun and see,\nIce melts into water, whee!\nWater is liquid, splash and pour,\nIn a cup or on the floor!\nHeat it up and steam will rise,\nSteam is gas up to the skies!\nFreeze like ice, stand very still!\nMelt like water, down the hill!\nFloat like steam up in the air,\nWater changes everywhere!\nSteam goes up and makes a cloud,\nRain comes down, pitter-patter loud!\nRound and round the water goes,\nThat's the water cycle, now Gizmo knows!\nSolid, liquid, gas! Bye-bye, friends!",
+  "tags": [
+   "states of matter song",
+   "solid liquid gas",
+   "water cycle song",
+   "science song for kids",
+   "STEM for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ],
+  "date": "2026-11-14",
+  "time": "2:10 PM",
+  "thumb": "brand/gizmo/thumb_gz3d_ep09.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 165.0
+ },
+ {
   "file": "fruity/fr3d_ep10.mp4",
   "title": "Fruit Market Counting Song! Count to 5 | Fruity Friends",
   "description": "Let's go fruit shopping! The Fruity Friends count one apple, two bananas, three oranges, four grapes and five strawberries into the basket.\nKids count on their fingers from one to five and learn to share snacks with friends. Ages 2-5.\n\nLYRICS\nLet's go shopping, fruit market fun!\nCount the fruit, every one!\nOne, two, three, into the cart,\nFruit market shopping, let's start!\nOne red apple, shiny and round,\nTwo yellow bananas, the best in town!\nThree orange oranges, juicy and sweet,\nCount them up, what a treat!\nFour purple grapes, a bunch to share,\nFive strawberries, red with care!\nCount them all, one to five,\nFruity Friends come alive!\nHold up one finger, one!\nTwo fingers, two, this is fun!\nThree, four, five, wiggle them high,\nCount with me, wave goodbye!\nPut them in the basket, say thank you,\nShare with friends, they want some too!\nFruit for snack and fruit for lunch,\nFruity Friends love fruit a bunch!\nOne, two, three! Bye-bye, fruity friends!",
@@ -1332,5 +1354,26 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 170.0
+ },
+ {
+  "file": "bloop/bl3d_ep10.mp4",
+  "title": "Bloop Turns Purple! Purple Color Song for Kids | Part 5",
+  "description": "Bloop turns purple! Part 5 of Bloop's color song series: purple grapes, a purple flower, a purple crayon and balloon, and a purple butterfly.\nKids find something purple and learn that red and blue mix to make purple. Ages 2-5.\n\nLYRICS\nBloop turns purple, purple, purple!\nPurple, purple, round in a circle!\nRed and blue, mix them, see?\nPurple is magic, one, two, three!\nPurple grapes in a bunch so sweet,\nPurple grapes, a yummy treat!\nA purple flower, a purple shoe,\nPurple, purple, I see you!\nA purple crayon, draw a line,\nA purple balloon, isn't it fine?\nA purple butterfly flutters by,\nPurple wings up in the sky!\nFind something purple, point and say,\nPurple, purple, hip hooray!\nSpin around and touch your knees,\nPurple is the color, if you please!\nRed plus blue makes purple, true,\nMix it up, you can do it too!\nPurple, purple, all day long,\nSing along with Bloop's purple song!\nPurple, purple! Bye-bye, friends!\nPurple, purple, bye, bye, friends.\nThank you.",
+  "tags": [
+   "purple color song",
+   "learn colors",
+   "color mixing for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ],
+  "date": "2026-11-15",
+  "time": "1:50 PM",
+  "thumb": "brand/bloop/thumb_bl3d_ep10.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 150.0
  }
 ]

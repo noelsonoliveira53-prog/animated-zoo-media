@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **298** (next balance pass at iteration 300)
+Iteration counter: **299** (next balance pass at iteration 300)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1946,6 +1946,11 @@ Iteration counter: **298** (next balance pass at iteration 300)
   - New `systems/waveChart.ts` with 4 tests (313 total), including a sim run where the tally covers the lives lost.
   - **Bug fixed along the way:** the wave button's glow and "Call now" chip stayed on screen after a battle ended. They now hide once the battle is over.
   - `result-check.mjs` now feeds a believable leak pattern and waits for the bars; no console errors. Screenshots `screenshots/298.png` (victory) and `298-defeat.png`.
+- **Iteration 299: touch previews for spells and the hero skill.**
+  - **Spells on touch:** with a spell armed, pressing on the map (or on a tower pad) starts aiming. The aim circle floats 60 px above the finger (`TOUCH_AIM_LIFT`) so it isn't hidden, follows it with the foe marks and count, and the spell lands where the circle is when the finger lifts. Lifting over the spell bar cancels and keeps the spell armed. Until a finger is down, the aim stays hidden on touch.
+  - **Hero skill on touch:** holding the skill button shows the reach preview from iteration 297. Lifting on the button uses the skill; sliding off and lifting cancels.
+  - Mouse play is unchanged: click to cast, hover to preview.
+  - New `scripts/touchaim-check.mjs` (real touch events over CDP on a 740×360 phone: aim visible with "3 foes" and nothing cast while held; cast on lift; cancel over the bar keeps Thornsnare ready; skill held shows "Earthshake: 3 foes" without firing, then fires on lift; no console errors). The `spell`, `spellaim`, `skillaim`, `spellfx`, `phone-battle` and `hero` checks still pass. Screenshots `screenshots/299.png` and `299-skill.png`. 313 tests.
 
 ## In Progress
 - (none)
@@ -1953,8 +1958,8 @@ Iteration counter: **298** (next balance pass at iteration 300)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Touch preview for spells and skills: on touch screens, a press-and-hold on a spell or the skill button shows the same preview before letting go (no hover there).
-2. Run summary stats on the result screen: top tower by damage, spells cast, hero kills.
+1. Run summary stats on the result screen: top tower by damage, spells cast, hero kills.
+2. Rally point on touch: drag the rally flag instead of tap-to-place, with the reach circle and a snap to the road.
 
 ## Known Bugs
 - (none known)

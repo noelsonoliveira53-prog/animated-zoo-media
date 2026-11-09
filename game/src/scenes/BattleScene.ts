@@ -65,6 +65,9 @@ interface EnemyView {
 /** Light color for each tower's upgrade pillar. */
 const TOWER_GLOW: Record<string, number> = { thornbow: 0xb8f07a, glimmer: 0xc8a0ff, boulder: 0xffc870, burrow: 0xe8d9b5 };
 
+/** Touch aiming draws the aim circle this far above the finger so it stays visible. */
+const TOUCH_AIM_LIFT = 60;
+
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
 
 export class BattleScene extends Phaser.Scene {
@@ -97,7 +100,9 @@ export class BattleScene extends Phaser.Scene {
   private callChip: Phaser.GameObjects.Text | null = null;
   private callFull = 1; // the countdown's starting length, so the strip drains from full
   private callLast = 0;
-  private skillPreview = false; // the pointer is over the hero's skill button
+  private skillPreview = false;
+  private skillHold = false; // touch: the finger is holding the skill button
+  private aimHold = false; // touch: the finger is aiming an armed spell // the pointer is over the hero's skill button
   private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
   private aimText: Phaser.GameObjects.Text | null = null;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
@@ -215,7 +220,8 @@ export class BattleScene extends Phaser.Scene {
         ev.stopPropagation();
         sfx.unlock();
         if (this.spellMode) {
-          this.castAt(this.spellMode, { x: _p.worldX, y: _p.worldY });
+          if (_p.wasTouch) this.beginTouchAim(_p);
+          else this.castAt(this.spellMode, { x: _p.worldX, y: _p.worldY });
           return;
         }
         this.openSlotMenu(i);
@@ -275,7 +281,8 @@ export class BattleScene extends Phaser.Scene {
         return;
       }
       if (this.spellMode !== null) {
-        this.castAt(this.spellMode, { x: p.worldX, y: p.worldY });
+        if (p.wasTouch) this.beginTouchAim(p);
+        else this.castAt(this.spellMode, { x: p.worldX, y: p.worldY });
         return;
       }
       if (this.heroSelected && !this.menu) {
@@ -296,7 +303,24 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-THREE', () => this.armSpell(SPELL_ORDER[2]));
     this.input.keyboard?.on('keydown-ESC', () => (this.spellMode ? this.armSpell(null) : this.togglePause()));
     this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
-      if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY);
+      if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY - (this.aimHold ? TOUCH_AIM_LIFT : 0));
+    });
+    this.input.on('pointerup', (p: Phaser.Input.Pointer) => {
+      // a touch skill-hold that slid off the button: cancel quietly
+      if (this.skillHold) {
+        this.skillHold = false;
+        this.skillPreview = false;
+    this.skillHold = false;
+    this.aimHold = false;
+      }
+      if (!this.aimHold || !this.spellMode) return;
+      this.aimHold = false;
+      if (p.worldY > GAME_H - 110) {
+        // let go over the spell bar: keep the spell armed, cast nothing
+        this.floatText(p.worldX, GAME_H - 140, 'Cancelled', TEXT.dim, 16);
+        return;
+      }
+      this.castAt(this.spellMode, { x: this.reticle.x, y: this.reticle.y });
     });
 
     this.cameras.main.fadeIn(300, 16, 38, 27);
@@ -2137,6 +2161,13 @@ export class BattleScene extends Phaser.Scene {
       else label.setVisible(false);
       return;
     }
+    // on touch the aim only shows while a finger is down (there's no hovering pointer to follow)
+    const touchIdle = this.input.activePointer.wasTouch && !this.aimHold;
+    this.reticle.setVisible(!touchIdle);
+    if (touchIdle) {
+      label.setVisible(false);
+      return;
+    }
     const def = SPELLS[id];
     const x = this.reticle.x;
     const y = this.reticle.y;
@@ -2215,6 +2246,16 @@ export class BattleScene extends Phaser.Scene {
     if (h.skillCd > 0) text += `  (ready in ${Math.ceil(h.skillCd)}s)`;
     label.setText(text).setColor(TEXT.cream).setBackgroundColor('#16241cd0').setPadding(8, 3, 8, 3);
     label.setPosition(Phaser.Math.Clamp(h.pos.x, label.width / 2 + 8, GAME_W - label.width / 2 - 8), Math.max(80, h.pos.y - r - 18)).setVisible(true);
+  }
+
+  /**
+   * Touch aiming: the aim circle appears a little above the finger (so the finger doesn't hide it) and follows it;
+   * the spell lands where the circle is when the finger lifts (see the scene's pointerup handler).
+   */
+  private beginTouchAim(p: Phaser.Input.Pointer): void {
+    this.aimHold = true;
+    this.reticle.setPosition(p.worldX, p.worldY - TOUCH_AIM_LIFT);
+    this.showBanner(SPELLS[this.spellMode!].name, 'Drag to aim, lift to cast (lift on the spell bar to cancel)');
   }
 
   private armSpell(id: string | null): void {
@@ -2349,10 +2390,25 @@ export class BattleScene extends Phaser.Scene {
     const skillZone = this.add.zone(px + 104, py, 76, 76).setDepth(3002).setInteractive({ useHandCursor: true });
     skillZone.on('pointerover', () => (this.skillPreview = true));
     skillZone.on('pointerout', () => (this.skillPreview = false));
-    skillZone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+    const fireSkill = () => {
+      if (!this.sim.useHeroSkill()) this.tweens.add({ targets: this.skillText, x: this.skillText.x + 4, duration: 40, yoyo: true, repeat: 2 });
+    };
+    skillZone.on('pointerdown', (p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();
-      if (!this.sim.useHeroSkill()) this.tweens.add({ targets: this.skillText, x: this.skillText.x + 4, duration: 40, yoyo: true, repeat: 2 });
+      if (p.wasTouch) {
+        // touch has no hover: hold to see the skill's reach, let go on the button to use it, slide off to cancel
+        this.skillHold = true;
+        this.skillPreview = true;
+        return;
+      }
+      fireSkill();
+    });
+    skillZone.on('pointerup', (p: Phaser.Input.Pointer) => {
+      if (!p.wasTouch || !this.skillHold) return;
+      this.skillHold = false;
+      this.skillPreview = false;
+      fireSkill();
     });
     this.skillText = this.add.text(px + 104, py, h.def.active.name.replace(' ', '\n'), { ...textStyle(pf(13)), align: 'center' }).setOrigin(0.5).setDepth(3002);
     fitWidth(this.skillText, 68);

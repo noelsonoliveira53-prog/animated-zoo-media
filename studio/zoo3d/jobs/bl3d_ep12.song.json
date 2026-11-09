@@ -1,0 +1,326 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBloop turns orange, orange, orange!\nBright and bouncy, oh so gorgeous!\nOrange like a pumpkin, orange like the sun,\nOrange, orange, orange, fun, fun, fun!\n\n[Verse 1]\nA juicy orange, peel it round,\nOrange carrots in the ground!\nAn orange goldfish swims so fast,\nSwishing, swishing, swimming past!\n\n[Chorus]\nBloop turns orange, orange, orange!\nBright and bouncy, oh so gorgeous!\nOrange like a pumpkin, orange like the sun,\nOrange, orange, orange, fun, fun, fun!\n\n[Verse 2]\nAn orange pumpkin, big and round,\nOrange leaves fall to the ground!\nAn orange tiger, stripes so bold,\nOrange sunsets, warm and gold!\n\n[Bridge]\nSwim like a goldfish, swish, swish, swish!\nRoll like a pumpkin, make a wish!\nFall like a leaf, down, down, down,\nOrange, orange all around!\n\n[Verse 3]\nRed and yellow make orange, see?\nMix them up, one, two, three!\nOrange is warm and orange is bright,\nOrange makes me feel just right!\n\n[Chorus]\nBloop turns orange, orange, orange!\nBright and bouncy, oh so gorgeous!\nOrange like a pumpkin, orange like the sun,\nOrange, orange, orange, fun, fun, fun!\n\n[Outro]\nOrange, orange! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 1031,
+ "who_map": {},
+ "meta": {
+  "title": "Bloop Turns Orange! Orange Color Song for Kids | Part 7",
+  "card": "Bloop Turns Orange!",
+  "thumb_text": "PUMPKIN TIME!",
+  "description": "Bloop turns orange! Part 7 of Bloop's color song series: a juicy orange, carrots, a goldfish, a big pumpkin, falling leaves and a warm sunset.\nKids swim like a goldfish, roll like a pumpkin and learn that red and yellow make orange. Ages 2-5.",
+  "tags": [
+   "orange color song",
+   "learn colors",
+   "color songs for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep12",
+  "title": "Bloop Turns Orange!",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "ORANGE!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "carrot",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "carrots"
+     },
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#ff8a1f",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "Swishing,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "leaf",
+      "at": [
+       3.4,
+       1.2,
+       3.6
+      ],
+      "word": "leaves",
+      "opts": {
+       "color": "#ff8a1f"
+      }
+     },
+     {
+      "type": "text",
+      "text": "ROAR!",
+      "color": "#ff8a1f",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "tiger,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#ff8a1f",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Swim"
+     },
+     {
+      "type": "text",
+      "text": "ROLL!",
+      "color": "#ffb000",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Roll"
+     },
+     {
+      "type": "text",
+      "text": "DOWN!",
+      "color": "#e85d00",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "Fall"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED + YELLOW = ORANGE",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.42,
+      "word": "yellow"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "ORANGE!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep12",
+  "res": "1920x1080",
+  "step": 1
+ },
+ "color_words": {
+  "orange": "#ff8a1f"
+ },
+ "color_char": "host"
+}

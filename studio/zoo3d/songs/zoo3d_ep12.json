@@ -1,0 +1,359 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nHow do animals sleep at night?\nSome lie down and some stand upright!\nClose your eyes and count to three,\nSleepy zoo friends, just like me!\n\n[Verse 1]\nThe lion sleeps most of the day,\nNapping lots, then up to play!\nThe giraffe takes tiny naps,\nStanding up, just short ones, perhaps!\n\n[Chorus]\nHow do animals sleep at night?\nSome lie down and some stand upright!\nClose your eyes and count to three,\nSleepy zoo friends, just like me!\n\n[Verse 2]\nThe zebra can sleep standing tall,\nReady to run if friends should call!\nThe hippo naps in water deep,\nFloating up to breathe in sleep!\n\n[Bridge]\nStand up tall and close your eyes,\nLike a zebra, what a surprise!\nCurl up small like a cozy cat,\nYawn, yawn, yawn, imagine that!\n\n[Verse 3]\nThe elephant can stand or lie,\nUnder the big savanna sky!\nMilo sleeps up in his tree,\nTucked in his nest, sleepy as can be!\n\n[Chorus]\nHow do animals sleep at night?\nSome lie down and some stand upright!\nClose your eyes and count to three,\nSleepy zoo friends, just like me!\n\n[Outro]\nGoodnight, zoo friends! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 1004,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "How Do Animals Sleep? Sleepy Animal Song for Kids with Milo",
+  "card": "How Do Animals Sleep?",
+  "thumb_text": "STANDING UP?!",
+  "description": "How do animals sleep? Milo finds out: lions nap for most of the day, giraffes take tiny naps standing up, zebras can sleep standing, hippos nap in the water and float up to breathe, and elephants can sleep standing or lying down.\nKids stand tall like a zebra, curl up small and yawn along. Ages 2-5.",
+  "tags": [
+   "how do animals sleep",
+   "animal facts for kids",
+   "sleepy song",
+   "safari animals",
+   "animal song for kids",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep12",
+  "title": "How Do Animals Sleep?",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SLEEPY ZOO!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:lion",
+     "giraffe",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "lion",
+      "opts": {
+       "text": "LION"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "giraffe",
+      "opts": {
+       "text": "GIRAFFE"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3...",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.6,
+      "word": "count"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:zebra",
+     "close:hippo",
+     "close:zebra",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "zebra",
+      "opts": {
+       "text": "ZEBRA"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "hippo",
+      "opts": {
+       "text": "HIPPO"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STAND TALL!",
+      "color": "#ffb627",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.55,
+      "word": "Stand"
+     },
+     {
+      "type": "text",
+      "text": "CURL UP!",
+      "color": "#8e5bd8",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.55,
+      "word": "Curl"
+     },
+     {
+      "type": "text",
+      "text": "YAWN!",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "Yawn,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:elephant",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "elephant",
+      "opts": {
+       "text": "ELEPHANT"
+      }
+     },
+     {
+      "type": "text",
+      "text": "NEST!",
+      "color": "#8a5a32",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "nest,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SLEEPY ZOO!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "GOODNIGHT!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep12",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

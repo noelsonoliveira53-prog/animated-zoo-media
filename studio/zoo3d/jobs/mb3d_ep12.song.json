@@ -1,0 +1,238 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nWaves are rolling, soft and slow,\nBack and forth they come and go,\nHush now, hush now, close your eyes,\nSleep beneath the starry skies.\n\n[Verse 1]\nThe ocean whispers, shh, shh, shh,\nLittle boats are resting, hush,\nSeashells sleeping in the sand,\nMoonlight shining on the land.\n\n[Chorus]\nWaves are rolling, soft and slow,\nBack and forth they come and go,\nHush now, hush now, close your eyes,\nSleep beneath the starry skies.\n\n[Verse 2]\nLittle fishes, swimming deep,\nSnuggle down and fall asleep,\nGentle turtles, slow and calm,\nRocking in the ocean's arms.\n\n[Bridge]\nBreathe in slowly, like a wave comes in,\nBreathe out softly, let the rest begin,\nRock, rock, rocking, side to side,\nFloating on the sleepy tide.\n\n[Verse 3]\nBunny, Lamb and Teddy too,\nThe ocean sings a song for you,\nWaves are quiet, stars are bright,\nGoodnight ocean, sleep tight.\n\n[Chorus]\nWaves are rolling, soft and slow,\nBack and forth they come and go,\nHush now, hush now, close your eyes,\nSleep beneath the starry skies.\n\n[Outro]\nShh, shh, shh. Goodnight.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 1006,
+ "who_map": {},
+ "meta": {
+  "title": "Sleepy Ocean Waves \ud83c\udf19 Calm Lullaby for Babies | Moonbeam",
+  "card": "Sleepy Ocean Waves",
+  "thumb_text": "SHH... WAVES",
+  "description": "A calm ocean lullaby. Soft waves roll in and out, little boats rest, seashells sleep in the sand and turtles rock gently as Luna, Bunny, Lamb and Teddy drift off.\nA slow breathing break, in like a wave and out like the tide, helps little ones fall asleep. For babies and toddlers.",
+  "tags": [
+   "ocean lullaby",
+   "waves for sleep",
+   "lullaby for babies",
+   "calming bedtime song",
+   "sleep music for kids",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep12",
+  "title": "Sleepy Ocean Waves",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Sleepy Waves",
+      "color": "#9fd3ff",
+      "at": "top",
+      "size": 0.55
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "delay": 2
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "word": "Moonlight"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "numstar",
+      "at": "left",
+      "word": "starry",
+      "opts": {
+       "size": 0.4
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "asleep,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "Breathe"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "Teddy"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "Goodnight."
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep12",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

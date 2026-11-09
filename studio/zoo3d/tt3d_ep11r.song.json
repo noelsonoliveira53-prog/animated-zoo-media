@@ -1,0 +1,312 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nTow truck, tow truck, here to help!\nHook it up and pull it out!\nBeep, beep, beep, don't you worry,\nTow truck's coming in a hurry!\n\n[Verse 1]\nA little car got stuck in the mud,\nWheels went spinning, squish and thud!\nWho can help? Let's call for one,\nHere comes Tow, helping is fun!\n\n[Chorus]\nTow truck, tow truck, here to help!\nHook it up and pull it out!\nBeep, beep, beep, don't you worry,\nTow truck's coming in a hurry!\n\n[Verse 2]\nDown goes the hook, clank, clank, clank,\nWind up the chain with a crank, crank, crank!\nPull, pull, pull with all his might,\nOut comes the car, safe and right!\n\n[Bridge]\nPull the rope, heave, ho!\nPull it again, here we go!\nBend your knees and pull real strong,\nHelping friends all day long!\n\n[Verse 3]\nThe little car says, thank you, Tow!\nOff to the garage we go!\nWhen a friend needs help today,\nLend a hand and help them on their way!\n\n[Chorus]\nTow truck, tow truck, here to help!\nHook it up and pull it out!\nBeep, beep, beep, don't you worry,\nTow truck's coming in a hurry!\n\n[Outro]\nBeep, beep! Bye-bye, trucks!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 989,
+ "who_map": {},
+ "meta": {
+  "title": "Tow Truck to the Rescue! Helping Song | Tiny Truck Town",
+  "card": "Tow Truck to the Rescue!",
+  "thumb_text": "STUCK IN MUD!",
+  "description": "Oh no, a little car is stuck in the mud! Tow the tow truck drops his hook, cranks the chain and pulls with all his might until the car is safe.\nKids heave-ho and pull along, and learn that helping a friend feels great. Ages 2-5.",
+  "tags": [
+   "tow truck song",
+   "trucks for kids",
+   "rescue song",
+   "helping song for kids",
+   "car song",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep11r",
+  "title": "Tow Truck to the Rescue!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "TO THE RESCUE!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "STUCK!",
+      "color": "#8a5a32",
+      "at": [
+       -2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "stuck"
+     },
+     {
+      "type": "text",
+      "text": "HELP!",
+      "color": "#e8302a",
+      "at": [
+       2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "help?"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BEEP BEEP!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLANK!",
+      "color": "#9e9e9e",
+      "at": "top",
+      "size": 0.7,
+      "word": "clank,"
+     },
+     {
+      "type": "text",
+      "text": "PULL!",
+      "color": "#ffc107",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.8,
+      "word": "Pull,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "HEAVE!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "heave,"
+     },
+     {
+      "type": "text",
+      "text": "HO!",
+      "color": "#e8302a",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.8,
+      "word": "ho!"
+     },
+     {
+      "type": "text",
+      "text": "PULL STRONG!",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "strong,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "THANK YOU!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.7,
+      "word": "thank"
+     },
+     {
+      "type": "text",
+      "text": "HELP A FRIEND!",
+      "color": "#2fb54a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.55,
+      "word": "friend"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "TO THE RESCUE!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep11r",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

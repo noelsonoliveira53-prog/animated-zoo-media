@@ -201,12 +201,22 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx + r * 0.95, cy + r * 0.25, r * 0.42);
         g.strokeCircle(cx - r * 0.95, cy + r * 0.25, r * 0.42);
         g.strokeCircle(cx + r * 0.95, cy + r * 0.25, r * 0.42);
-        g.fillStyle(color, 1);
+        // shaded hide: darker right side, lit top-left (design D3)
+        g.fillStyle(shade, 1);
         g.fillRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.7, r * 1.9, r * 0.6);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.45, r * 1.75, r * 0.55);
+        g.fillStyle(0xffffff, 0.2);
+        g.fillEllipse(cx - r * 0.45, cy - r * 0.55, r * 0.5, r * 0.3);
         g.strokeRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.7, r * 1.9, r * 0.6);
         g.fillStyle(0x7a8a5a, 1);
         g.fillCircle(cx - r * 0.4, cy + r * 0.5, r * 0.15);
         g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.12);
+        // a mossy cap on the head
+        g.fillStyle(0x5a9a3e, 1);
+        g.fillEllipse(cx - r * 0.1, cy - r * 0.92, r * 1.0, r * 0.32);
+        g.fillStyle(0x8ad86a, 1);
+        g.fillEllipse(cx - r * 0.25, cy - r * 0.98, r * 0.4, r * 0.14);
         this.eyes(g, cx, cy - r * 0.4, r * 0.17, r * 0.3);
         g.lineStyle(3, C.ink, 1);
         g.lineBetween(cx - r * 0.35, cy - r * 0.05, cx + r * 0.35, cy - r * 0.05);
@@ -221,8 +231,10 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx, cy, r * 1.4);
         g.fillStyle(color, 1);
         g.fillTriangle(cx - r, cy - r * 0.2, cx + r, cy - r * 0.2, cx, cy + r * 1.4);
-        g.fillCircle(cx, cy - r * 0.3, r * 0.9);
-        g.strokeCircle(cx, cy - r * 0.3, r * 0.9);
+        this.orbKeep(g, cx, cy - r * 0.3, r * 1.8, r * 1.8, color);
+        // frost sparkles drifting off the hood (design D3)
+        g.fillStyle(0xffffff, 0.85);
+        for (const [dx, dy, rr] of [[-1.1, -0.6, 0.08], [1.05, -0.2, 0.07], [0.8, 0.7, 0.06], [-0.9, 0.5, 0.06]]) g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
         g.fillStyle(0x2a4a6a, 1);
         g.fillEllipse(cx, cy - r * 0.2, r * 1.1, r * 0.9);
         g.fillStyle(0xbff4ff, 1);
@@ -241,6 +253,9 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.85, cy + r * 0.2, r * 0.6, r * 0.45);
         g.fillStyle(0xff5d4a, 1);
         g.fillCircle(cx + r * 1.1, cy + r * 0.2, r * 0.13);
+        // glowing claws: a warm halo under the bright claw lines (design D3)
+        g.fillStyle(0xff8a3c, 0.3);
+        g.fillEllipse(cx + r * 0.45, cy + r * 0.95, r * 0.8, r * 0.45);
         g.lineStyle(2.5, 0xffb84a, 1);
         for (let i = 0; i < 3; i++) g.lineBetween(cx + r * 0.3 + i * 4, cy + r * 0.8, cx + r * 0.4 + i * 4, cy + r * 1.1);
         g.fillStyle(0x111111, 1);
@@ -2340,6 +2355,9 @@ export class BootScene extends Phaser.Scene {
         g.beginPath();
         g.arc(cx - r * 0.15, cy - r * 0.05, r * 0.3, 0, Math.PI * 1.5);
         g.strokePath();
+        // coral tips with a soft glow (design D3)
+        g.fillStyle(0xffb0c0, 0.35);
+        for (const [dx, dy] of [[-0.75, -0.75], [-0.35, -1.0], [0.1, -0.95]]) g.fillCircle(cx + dx * r, cy + dy * r - 2, 6);
         g.fillStyle(0xffd0d8, 1);
         for (const [dx, dy] of [[-0.75, -0.75], [-0.35, -1.0], [0.1, -0.95]]) g.fillTriangle(cx + dx * r - 3, cy + dy * r + 4, cx + dx * r + 3, cy + dy * r + 4, cx + dx * r, cy + dy * r - 6);
         g.fillStyle(0x111111, 1);
@@ -2359,13 +2377,17 @@ export class BootScene extends Phaser.Scene {
           g.fillStyle(color, 1);
         }
         g.lineStyle(3, C.ink, 1);
-        g.fillEllipse(cx, cy, r * 2, r * 1.4);
-        g.strokeEllipse(cx, cy, r * 2, r * 1.4);
-        g.fillStyle(0xeee6d6, 1);
+        this.orbKeep(g, cx, cy, r * 2, r * 1.4, color);
         g.lineStyle(1.5, C.ink, 0.8);
         for (const [dx, dy, rr] of [[-0.45, -0.25, 0.22], [0.05, -0.4, 0.26], [0.5, -0.15, 0.2], [-0.1, 0.1, 0.18], [0.35, 0.25, 0.15]]) {
+          g.fillStyle(0xeee6d6, 1);
           g.fillCircle(cx + dx * r, cy + dy * r, r * rr);
           g.strokeCircle(cx + dx * r, cy + dy * r, r * rr);
+          // each barnacle's dark mouth and a glint (design D3)
+          g.fillStyle(0x6a6058, 1);
+          g.fillCircle(cx + dx * r, cy + dy * r, r * rr * 0.35);
+          g.fillStyle(0xffffff, 0.8);
+          g.fillCircle(cx + dx * r - r * rr * 0.4, cy + dy * r - r * rr * 0.4, r * rr * 0.22);
         }
         g.fillStyle(0x111111, 1);
         g.fillCircle(cx - r * 0.25, cy + r * 0.45, r * 0.09);
@@ -2446,9 +2468,18 @@ export class BootScene extends Phaser.Scene {
         // angry stump: bark body, rings on top, root legs, glowing eyes
         g.fillStyle(shade, 1);
         for (const dx of [-0.8, -0.25, 0.3, 0.85]) g.fillTriangle(cx + dx * r - 4, cy + r * 0.6, cx + dx * r + 4, cy + r * 0.6, cx + dx * r * 1.2, cy + r * 1.15);
-        g.fillStyle(color, 1);
+        // shaded bark: the right side in shadow, a lit edge on the left (design D3)
+        g.fillStyle(shade, 1);
         g.fillRoundedRect(cx - r, cy - r * 0.7, r * 2, r * 1.5, 6);
+        g.fillStyle(color, 1);
+        g.fillRoundedRect(cx - r, cy - r * 0.7, r * 1.55, r * 1.5, 6);
+        g.fillStyle(0xffffff, 0.16);
+        g.fillRect(cx - r * 0.9, cy - r * 0.4, r * 0.18, r * 0.9);
         g.strokeRoundedRect(cx - r, cy - r * 0.7, r * 2, r * 1.5, 6);
+        // leaf sprigs sprouting from the rim
+        g.fillStyle(0x6ab04c, 1);
+        g.fillEllipse(cx - r * 0.75, cy - r * 0.95, r * 0.4, r * 0.2);
+        g.fillEllipse(cx + r * 0.7, cy - r * 1.0, r * 0.36, r * 0.18);
         g.fillStyle(0xd9b47a, 1);
         g.fillEllipse(cx, cy - r * 0.7, r * 2, r * 0.6);
         g.strokeEllipse(cx, cy - r * 0.7, r * 2, r * 0.6);
@@ -2458,6 +2489,9 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(2, shade, 1);
         g.lineBetween(cx - r * 0.5, cy - r * 0.2, cx - r * 0.5, cy + r * 0.6);
         g.lineBetween(cx + r * 0.6, cy - r * 0.1, cx + r * 0.6, cy + r * 0.5);
+        g.fillStyle(0xffb84a, 0.35);
+        g.fillCircle(cx - r * 0.3, cy, r * 0.26);
+        g.fillCircle(cx + r * 0.3, cy, r * 0.26);
         g.fillStyle(0xffb84a, 1);
         g.fillCircle(cx - r * 0.3, cy, r * 0.15);
         g.fillCircle(cx + r * 0.3, cy, r * 0.15);
@@ -2475,20 +2509,30 @@ export class BootScene extends Phaser.Scene {
         g.fillTriangle(cx + r * 0.4, cy, cx + r * 1.6, cy - r * 0.8, cx + r * 1.2, cy + r * 0.4);
         g.strokeTriangle(cx - r * 0.4, cy, cx - r * 1.6, cy - r * 0.8, cx - r * 1.2, cy + r * 0.4);
         g.strokeTriangle(cx + r * 0.4, cy, cx + r * 1.6, cy - r * 0.8, cx + r * 1.2, cy + r * 0.4);
+        this.orbKeep(g, cx, cy, r * 2, r * 2, color);
+        // a layered flame crown on top of the head: orange tongue, yellow core (design D3)
         g.fillStyle(color, 1);
-        g.fillCircle(cx, cy, r);
-        g.fillTriangle(cx - r * 0.7, cy - r * 0.5, cx + r * 0.7, cy - r * 0.5, cx, cy - r * 1.6);
-        g.strokeCircle(cx, cy, r);
+        g.fillTriangle(cx - r * 0.6, cy - r * 0.62, cx + r * 0.6, cy - r * 0.62, cx, cy - r * 1.6);
+        g.fillStyle(0xffc93c, 1);
+        g.fillTriangle(cx - r * 0.3, cy - r * 0.66, cx + r * 0.3, cy - r * 0.66, cx, cy - r * 1.25);
+        g.fillStyle(0xfff0a8, 0.4);
+        g.fillCircle(cx - r * 0.35, cy - r * 0.1, r * 0.34);
+        g.fillCircle(cx + r * 0.35, cy - r * 0.1, r * 0.34);
         g.fillStyle(0xfff0a8, 1);
         g.fillCircle(cx - r * 0.35, cy - r * 0.1, r * 0.22);
         g.fillCircle(cx + r * 0.35, cy - r * 0.1, r * 0.22);
         break;
       }
       case 'ashhive': {
-        g.fillStyle(color, 1);
-        g.fillEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
+        // wisps of smoke rising from the top (design D3)
+        g.fillStyle(0x9a8a88, 0.45);
+        g.fillCircle(cx - r * 0.2, cy - r * 1.35, r * 0.22);
+        g.fillCircle(cx + r * 0.15, cy - r * 1.6, r * 0.17);
+        g.fillCircle(cx - r * 0.05, cy - r * 1.85, r * 0.12);
+        this.orbKeep(g, cx, cy + r * 0.2, r * 2.2, r * 1.7, color);
         g.fillCircle(cx, cy - r * 0.4, r * 0.8);
-        g.strokeEllipse(cx, cy + r * 0.2, r * 2.2, r * 1.7);
+        g.fillStyle(0xffffff, 0.18);
+        g.fillEllipse(cx - r * 0.25, cy - r * 0.65, r * 0.5, r * 0.25);
         g.fillStyle(0x5a3f38, 1);
         g.fillEllipse(cx - r * 0.3, cy - r * 0.2, r * 0.9, r * 0.5);
         // glowing holes

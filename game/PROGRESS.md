@@ -2054,7 +2054,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**
 Each design iteration (D-number) picks one visual item below and redraws it in code: shading, outline, highlights and signature details, with gameplay data untouched. It is checked with `scripts/design-sheet.mjs <name> <prefix> [scale]` before/after sheets plus an in-game screenshot, and tsc, build and vitest must pass. Every 5th design iteration is a consistency pass (palette, outline weight, phone readability).
 
-Design counter: **D2**
+Design counter: **D3**
 
 ### Design Done
 - **D1: heroes.**
@@ -2083,8 +2083,19 @@ Design counter: **D2**
     - Veilstalker: a shaded head, glowing eyes and mist curling off the tail.
   - Sheets `screenshots/design-2-before.png` and `design-2-after.png` (part-1 foes at 3×). In-game `design-2-ingame.png` (`hpbar-check`, no console errors). 341 tests.
 
+- **D3: enemies, part 2** (Emberdeep, Duskcap and Reef foes).
+  - Bogbrute: a shaded hide and a mossy cap.
+  - Rimewraith: a shaded hood and drifting frost sparkles.
+  - Cindermole: a warm halo under its glowing claws.
+  - Rootrager: shaded bark with a lit edge, leaf sprigs on the rim and haloed eyes.
+  - Emberimp: a shaded body, a layered flame crown (moved in front of the head after the first sheet hid it) and glowing eyes.
+  - Ashhive: a shaded hive and rising smoke wisps.
+  - Barnaclad: a shaded shell, with barnacles that have dark mouths and glints.
+  - Reefwarden: glowing coral tips.
+  - Sheets `screenshots/design-3-before.png` and `design-3-after.png`. In-game `design-3-ingame.png` (`enemycard-check` with a Cindermole and an Emberimp, no console errors). 341 tests.
+
 ### Design Backlog (ranked)
-1. Enemies, part 2 (the rest of the regular foes, region by region; their bodies already got `orbKeep` shading in D2, so this adds the hand details: glints on shells and armor, glows, accessories).
+1. Enemies, part 3 (the remaining regular foes from the later regions: hand details, glints, glows, accessories).
 3. Bosses: shading, crowns and horns with metal shine, a faint aura ring, and bigger silhouettes.
 4. Towers: every tier and branch gets shaded stone and wood, roof highlights, and banners in the tower colour.
 5. Consistency pass: palette, outline weight and phone readability across heroes, enemies and towers.

@@ -25,11 +25,12 @@ await page.evaluate(() => {
   s.speed = 3;
   window.__callAll = setInterval(() => s.sim.callNextWave(), 4000);
 });
-const snap = () => page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); return { tweens: s.tweens.getTweens().length, timers: (s.time._active ?? []).length, objects: s.children.list.length, wave: s.sim.waveIndex }; });
+const snap = () => page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); return { tweens: s.tweens.getTweens().length, timers: (s.time._active ?? []).length, objects: s.children.list.length, wave: s.sim.waveIndex, enemies: s.sim.enemies.length, views: s.enemyViews.size, proj: s.sim.projectiles.length, soldiers: s.sim.soldiers.length }; });
 await page.waitForTimeout(3000);
 const a = await snap();
 await page.waitForTimeout(20000);
 const b = await snap();
+// (enemies / views / proj / soldiers let you tell 'more on the field' from a leak: objects should track them)
 // LONG=1 adds a third sample 20 s later, to tell a plateau from steady growth
 const c = process.env.LONG ? (await page.waitForTimeout(20000), await snap()) : undefined;
 console.log(JSON.stringify({ early: a, later: b, ...(c ? { latest: c } : {}) }));

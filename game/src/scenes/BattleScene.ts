@@ -28,7 +28,7 @@ import { bossIntro } from './fx/BossIntro';
 import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/ResultFx';
 import { startWeather } from './fx/Weather';
 import { ambienceFor, weatherFor } from '../data/weather';
-import { distToSegment } from '../systems/path';
+import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -476,11 +476,18 @@ export class BattleScene extends Phaser.Scene {
     // roads: edge then fill, with round joints
     // a soft drop shadow under every road first, so the roads sit slightly sunk into the ground
     for (const pts of this.level.paths) this.strokePath(g, pts.map((p) => ({ x: p.x + 3, y: p.y + 5 })), 72, 0x000000, 0.12);
+    // Roads are drawn in passes over every path, so crossings merge cleanly. Light comes from the upper left:
+    const shade = (c: number, n: number) => (n > 0 ? Phaser.Display.Color.ValueToColor(c).lighten(n).color : Phaser.Display.Color.ValueToColor(c).darken(-n).color);
+    const shift = (pts: Vec2[], d: number) => pts.map((p) => ({ x: p.x + d, y: p.y + d }));
+    // the lower-right bank catches the light: a pale rim just past the kerb on that side
+    for (const pts of this.level.paths) this.strokePath(g, shift(pts, 2), 64, shade(theme.roadEdge, 18), 0.9);
+    for (const pts of this.level.paths) this.strokePath(g, pts, 64, theme.roadEdge);
+    // the road bed sits low: the upper-left bank throws a strip of shadow across its near edge
+    for (const pts of this.level.paths) this.strokePath(g, pts, 52, shade(theme.road, -10));
+    for (const pts of this.level.paths) this.strokePath(g, shift(pts, 3), 46, theme.road);
     for (const pts of this.level.paths) {
-      this.strokePath(g, pts, 64, theme.roadEdge);
-      this.strokePath(g, pts, 52, theme.road);
-      // a sunlit stripe down the middle of the road, worn smooth by feet
-      this.strokePath(g, pts, 26, Phaser.Display.Color.ValueToColor(theme.road).lighten(8).color, 0.35);
+      // a paler stripe down the middle of the road, worn smooth by feet
+      this.strokePath(g, shift(pts, 2), 24, shade(theme.road, 9), 0.4);
       // pebbles
       for (let i = 0; i < 50; i++) {
         const seg = rnd.between(1, pts.length - 1);
@@ -532,6 +539,31 @@ export class BattleScene extends Phaser.Scene {
             g.fillStyle(stoneTop, 1);
             g.fillEllipse(x - 1, y - 1, 6, 3.5);
           }
+        }
+      }
+    }
+    // grass tufts along the verges, leaning in over the kerb so the road sits in the ground, not on it
+    // (grassy ground only: no tufts on snow, lava, crystal, clockwork or abyss floors)
+    const tuftSun = shade(theme.grass, 12);
+    const grassy = !(theme.snow || theme.lava || theme.crystals || theme.gears || theme.abyss);
+    for (const pts of grassy ? this.level.paths : []) {
+      for (const sp of roadEdgeSpots(pts, 46, 35, () => rnd.between(-14, 14))) {
+        if (sp.x < -10 || sp.x > GAME_W + 10 || sp.y < -10 || sp.y > GAME_H + 10 || nearRoad(sp.x, sp.y) || rnd.frac() < 0.45) continue;
+        // a little fan of curved blades; on a side verge the fan leans toward the road
+        const n = rnd.between(3, 5);
+        const lean = Math.abs(sp.nx) > 0.5 ? -Math.sign(sp.nx) * 0.4 : 0;
+        for (let k = 0; k < n; k++) {
+          const ang = -Math.PI / 2 + (k / (n - 1) - 0.5) * 1.3 + lean;
+          const len = rnd.between(6, 10);
+          const bx = sp.x + rnd.between(-2, 2);
+          const by = sp.y + rnd.between(-1, 1) + (sp.ny > 0.5 ? 3 : 0);
+          const curl = Math.cos(ang) >= 0 ? 0.3 : -0.3;
+          g.lineStyle(k === 1 ? 1.5 : 2, k === 1 ? tuftSun : theme.grassDark, 0.9);
+          g.beginPath();
+          g.moveTo(bx, by);
+          g.lineTo(bx + Math.cos(ang) * len * 0.5, by + Math.sin(ang) * len * 0.55);
+          g.lineTo(bx + Math.cos(ang + curl) * len, by + Math.sin(ang + curl) * len);
+          g.strokePath();
         }
       }
     }

@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F4**
+Fix counter: **F5**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2064,17 +2064,23 @@ Fix counter: **F4**
 
 - **F4 (F1) Ground variation on every battle map.** New pure module `src/systems/groundNoise.ts`: seeded value noise and 3-octave fbm, lit from the upper left (ground rising toward the light brightens), quantised into 4 flat value steps with crisp but smoothly curving edges (sampled on an 8 px grid, interpolated per pixel). `stepColors` keeps the steps close to the theme's grass colour, darker steps leaning to `grassDark` and lighter ones to a lightened grass. `BattleScene.bakeGround` bakes each level's field once into a canvas texture (cached per level id) under all decoration. It replaces the 62 random dark and sunlit ellipses, so the ground reads as gently lit terrain instead of a flat colour with blots. It works for every theme (meadow, frost, tidepool, gale, moonlit abyss checked). 6 new tests. Before/after: `fix-4-before-*` and `fix-4-after-*` (levels 1, 10, 22, 34, 48). New `scripts/maps-shot.mjs` screenshots any levels by index.
 
+- **F5 (F2) Path edge polish.** Roads are now drawn in passes over all paths, so crossings merge cleanly (before, a later road's kerb cut across an earlier road's bed, e.g. on Three Winds). The light comes from the upper left on the roads too:
+  - a pale rim catches the light just past the kerb on the lower-right bank;
+  - the bed sits low, so the upper-left bank throws a darker strip across its near edge (the light road fill is 46 px wide, shifted 3 px down-right, over a 52 px darker bed);
+  - the paler worn middle stripe moves with the light.
+
+  Grass tufts now spill over the verges: small fans of curved blades every ~46 px, leaning toward the road on side verges and skipped where another road runs. They are left off snow, lava, crystal, clockwork and abyss floors. New pure helper `roadEdgeSpots` in `systems/path.ts` (spots beside a road with outward normals) with 3 tests. Before/after: `fix-5-before-*` and `fix-5-after-*`.
+
 ### Fix Backlog (ranked)
-1. **F2** Path edge polish: worn lighter middle, shaded upper-left bank, lit lower-right bank, grass tufts spilling over the edges.
-2. **F3** Contact shadows under trees, standing stones and flowers.
-3. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
-4. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
-5. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
-6. **C2** Colour accents on the early brown / grey enemy families.
-7. **C3** Status-effect icons, not tint only.
-8. **A4** Tooltips on icon-only controls.
-9. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-10. Then resume the Design Backlog below.
+1. **F3** Contact shadows under trees, standing stones and flowers.
+2. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
+3. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
+4. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
+5. **C2** Colour accents on the early brown / grey enemy families.
+6. **C3** Status-effect icons, not tint only.
+7. **A4** Tooltips on icon-only controls.
+8. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+9. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

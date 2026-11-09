@@ -66,3 +66,35 @@ export function distToSegment(p: Vec2, a: Vec2, b: Vec2): number {
   t = Math.max(0, Math.min(1, t));
   return Math.hypot(p.x - (a.x + dx * t), p.y - (a.y + dy * t));
 }
+
+/** A spot beside a road: where it sits, which side, and the outward unit normal (pointing away from the road). */
+export interface EdgeSpot {
+  x: number;
+  y: number;
+  nx: number;
+  ny: number;
+  side: -1 | 1;
+}
+
+/**
+ * Spots along both edges of a road polyline, `offset` px from its centre line, about every `spacing` px
+ * (`jitter(k)` returns a per-spot extra in px, so callers can keep it seeded). Ends of segments are skipped
+ * by `margin` px so corners stay clean.
+ */
+export function roadEdgeSpots(pts: Vec2[], spacing: number, offset: number, jitter: () => number = () => 0, margin = 14): EdgeSpot[] {
+  const out: EdgeSpot[] = [];
+  for (let k = 1; k < pts.length; k++) {
+    const a = pts[k - 1];
+    const b = pts[k];
+    const len = Math.hypot(b.x - a.x, b.y - a.y);
+    if (len < margin * 2) continue;
+    const nx = -(b.y - a.y) / len;
+    const ny = (b.x - a.x) / len;
+    for (let d = margin; d < len - margin; d += Math.max(4, spacing + jitter())) {
+      for (const side of [-1, 1] as const) {
+        out.push({ x: a.x + ((b.x - a.x) * d) / len + nx * side * offset, y: a.y + ((b.y - a.y) * d) / len + ny * side * offset, nx: nx * side, ny: ny * side, side });
+      }
+    }
+  }
+  return out;
+}

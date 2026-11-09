@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **278** (next balance pass at iteration 280)
+Iteration counter: **279** (next balance pass at iteration 280)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1823,13 +1823,19 @@ Iteration counter: **278** (next balance pass at iteration 280)
   - **Level up:** a gold ring and ten rays burst from the badge and the portrait pops.
   - New `scripts/herobadge-check.mjs` (alive with XP, down mid-respawn, level-up flare; no console errors). `hero-check` still passes. `screenshots/278.png` shows the three states side by side. 279 tests.
 
+- **Iteration 279: spell button feedback.**
+  - **Tap:** the spell icon squashes in and springs back.
+  - **Ready:** when a spell comes off cooldown, its button sends out a gold ping ring (the hero skill's `readyPing`), eight sparks in the spell's colour and a quick icon pop. No ping for spells that start ready or on "Clouded Sky" days. Reduce Motion keeps only the ring.
+  - New `scripts/spellbtn-check.mjs` (a real tap arms Starfall, then cast, ready again and the ping captured; no console errors). `spellfx-check` still passes. Screenshot `screenshots/279.png`. 279 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Spell button feedback: a radial 'ready' flash when a spell comes off cooldown and a press-in squash on tap.
+1. Tower menu polish: radial build menu with glossy round buttons, a price tag that turns red when unaffordable, and a pop-open animation.
+2. Damage numbers polish: bigger, bolder crits and boss hits, colour by damage type (physical cream, magic violet, true gold), with a little arc and fade.
 
 ## Known Bugs
 - (none known)

@@ -2051,18 +2051,31 @@ export class BattleScene extends Phaser.Scene {
     return { x: GAME_W - 58 - (SPELL_ORDER.length - 1 - i) * 92, y: GAME_H - 58 };
   }
 
+  private spellIcons: Record<string, Phaser.GameObjects.Image> = {};
+  private spellWasReady: Record<string, boolean> = {};
+
   private buildSpells(): void {
+    this.spellIcons = {};
+    this.spellWasReady = {};
     this.spellHud = this.add.graphics().setDepth(3000);
     this.reticle = this.add.circle(0, 0, 60, 0xffffff, 0.12).setStrokeStyle(3, C.cream, 0.9).setDepth(2900).setVisible(false);
     SPELL_ORDER.forEach((id, i) => {
       const p = this.spellPos(i);
-      this.add.image(p.x, p.y - 4, `icon_${id}`).setDepth(3001);
+      this.spellIcons[id] = this.add.image(p.x, p.y - 4, `icon_${id}`).setDepth(3001);
+      this.spellWasReady[id] = true; // no ping for spells that start ready
       fitWidth(this.add.text(p.x, p.y + 30, SPELLS[id].name, textStyle(pf(12))).setOrigin(0.5).setDepth(3002), 84);
       const zone = this.add.zone(p.x, p.y, 80, 80).setDepth(3002).setInteractive({ useHandCursor: true });
       zone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
         sfx.unlock();
         sfx.click();
+        // press-in: the icon squashes and springs back
+        const icon = this.spellIcons[id];
+        if (icon && !motion.reduced) {
+          this.tweens.killTweensOf(icon);
+          icon.setScale(1);
+          this.tweens.add({ targets: icon, scaleX: 0.82, scaleY: 0.78, duration: 70, yoyo: true, ease: 'Quad.easeOut' });
+        }
         this.closeMenu();
         this.selectHero(false);
         this.armSpell(this.spellMode === id ? null : id);
@@ -2118,6 +2131,21 @@ export class BattleScene extends Phaser.Scene {
       const p = this.spellPos(i);
       const def = SPELLS[id];
       const cd = this.sim.mods.noSpells ? def.cooldown : (this.sim.spellCd[id] ?? 0);
+      // coming off cooldown: a radial ping in the spell's colour and a little icon pop
+      const nowReady = cd <= 0;
+      if (nowReady && !this.spellWasReady[id] && !this.ended) {
+        readyPing(this, p.x, p.y, def.color);
+        const icon = this.spellIcons[id];
+        if (icon && !motion.reduced) this.tweens.add({ targets: icon, scale: 1.25, duration: 120, yoyo: true, ease: 'Back.easeOut' });
+        if (!motion.reduced) {
+          for (let k = 0; k < 8; k++) {
+            const a = (k / 8) * Math.PI * 2;
+            const sp = this.add.circle(p.x + Math.cos(a) * 30, p.y + Math.sin(a) * 30, 2.5, def.color).setDepth(3003).setBlendMode(Phaser.BlendModes.ADD);
+            this.tweens.add({ targets: sp, x: p.x + Math.cos(a) * 52, y: p.y + Math.sin(a) * 52, alpha: 0, duration: 380, onComplete: () => sp.destroy() });
+          }
+        }
+      }
+      this.spellWasReady[id] = nowReady;
       g.fillStyle(C.ink, 0.85);
       g.fillCircle(p.x, p.y, 40);
       g.fillStyle(cd > 0 ? 0x3a4a3e : C.panelLight, 1);

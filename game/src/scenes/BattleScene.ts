@@ -740,6 +740,9 @@ export class BattleScene extends Phaser.Scene {
     }
     // decorations: trees & flowers away from roads and slots
     const deco = this.add.graphics().setDepth(1);
+    // contact shadows fall down and right of each object: the light comes from the upper left
+    const SHADOW_DX = 4;
+    const SHADOW_DY = 2;
     for (let i = 0; i < 60; i++) {
       const p = { x: rnd.between(20, GAME_W - 20), y: rnd.between(115, GAME_H - 10) }; // tall trees start low enough to stay clear of the top bar
       if (this.sim.paths.some((path) => path.distanceTo(p) < 60)) continue;
@@ -751,7 +754,7 @@ export class BattleScene extends Phaser.Scene {
         // glass spires: a cluster of faceted crystals
         const col = rnd.pick(this.level.theme.trees ?? [0x9ad8f0]);
         deco.fillStyle(0x000000, 0.2);
-        deco.fillEllipse(p.x, p.y + 4, 34, 10);
+        deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 34, 10);
         for (const [dx, h, w] of [[-9, 22, 8], [0, 34, 10], [9, 18, 7]]) {
           deco.fillStyle(col, 0.95);
           deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
@@ -765,7 +768,7 @@ export class BattleScene extends Phaser.Scene {
         if (k < 0.35) {
           // a floating barrel with iron hoops
           deco.fillStyle(0x000000, 0.18);
-          deco.fillEllipse(p.x, p.y + 6, 26, 8);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 6 + SHADOW_DY, 26, 8);
           deco.fillStyle(rnd.pick(this.level.theme.trees ?? [0x8a6a4a]), 1);
           deco.fillRoundedRect(p.x - 10, p.y - 14, 20, 22, 6);
           deco.lineStyle(2, 0x3a3a42, 1);
@@ -803,7 +806,7 @@ export class BattleScene extends Phaser.Scene {
           // a branching coral head
           const col = rnd.pick(this.level.theme.trees ?? [0xf07a6a]);
           deco.fillStyle(0x000000, 0.12);
-          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 9);
           deco.lineStyle(5, col, 1);
           for (const [dx, h] of [[-8, 18], [0, 26], [8, 20], [-14, 10], [14, 12]]) {
             deco.lineBetween(p.x + dx * 0.3, p.y + 2, p.x + dx, p.y - h);
@@ -830,7 +833,7 @@ export class BattleScene extends Phaser.Scene {
         if (rnd.frac() < 0.5) {
           // a saguaro-style cactus with two arms and a pink flower
           deco.fillStyle(0x000000, 0.18);
-          deco.fillEllipse(p.x, p.y + 4, 26, 8);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 26, 8);
           const col = rnd.pick(this.level.theme.trees ?? [0x6a9a4a]);
           deco.fillStyle(col, 1);
           deco.lineStyle(2, C.ink, 0.55);
@@ -862,7 +865,7 @@ export class BattleScene extends Phaser.Scene {
           // a weathered standing stone with a lichen patch
           const h = rnd.between(22, 34);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 30, 10);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 10);
           deco.fillStyle(rnd.pick([0x7a7a82, 0x6a6e78, 0x8a8a90]), 1);
           deco.fillRoundedRect(p.x - 8, p.y - h, 16, h + 4, 5);
           deco.lineStyle(2, C.ink, 0.55);
@@ -888,7 +891,7 @@ export class BattleScene extends Phaser.Scene {
         } else if (k < 0.75) {
           // a leaning standing stone with a lichen patch
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x + 5, p.y + 12, 24, 7);
+          deco.fillEllipse(p.x + 5 + SHADOW_DX, p.y + 12 + SHADOW_DY, 24, 7);
           deco.fillStyle(0x8a8a88, 1);
           deco.fillTriangle(p.x - 7, p.y + 10, p.x + 7, p.y + 10, p.x + 3, p.y - 22);
           deco.fillRect(p.x - 7, p.y - 6, 12, 16);
@@ -913,7 +916,7 @@ export class BattleScene extends Phaser.Scene {
         } else if (k < 0.75) {
           // mossy river stones
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x + 3, p.y + 8, 30, 8);
+          deco.fillEllipse(p.x + 3 + SHADOW_DX, p.y + 8 + SHADOW_DY, 30, 8);
           deco.fillStyle(0x8a9090, 1);
           deco.fillEllipse(p.x - 5, p.y + 2, 18, 12);
           deco.fillEllipse(p.x + 8, p.y + 4, 13, 9);
@@ -931,7 +934,7 @@ export class BattleScene extends Phaser.Scene {
         if (k < 0.4) {
           // a tall saguaro-ish cactus with two arms
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x + 4, p.y + 12, 26, 8);
+          deco.fillEllipse(p.x + 4 + SHADOW_DX, p.y + 12 + SHADOW_DY, 26, 8);
           deco.fillStyle(0x5a8a3a, 1);
           deco.fillRoundedRect(p.x - 4, p.y - 20, 9, 32, 4);
           deco.fillRoundedRect(p.x - 13, p.y - 8, 6, 12, 3);
@@ -943,7 +946,7 @@ export class BattleScene extends Phaser.Scene {
         } else if (k < 0.75) {
           // a stack of balanced red rocks
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x + 3, p.y + 10, 30, 9);
+          deco.fillEllipse(p.x + 3 + SHADOW_DX, p.y + 10 + SHADOW_DY, 30, 9);
           deco.fillStyle(0xa85a3a, 1);
           deco.fillEllipse(p.x, p.y + 4, 26, 14);
           deco.fillStyle(0xb86a42, 1);
@@ -963,7 +966,7 @@ export class BattleScene extends Phaser.Scene {
         if (k < 0.35) {
           // a round hay bale with a tied band
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x + 3, p.y + 10, 34, 12);
+          deco.fillEllipse(p.x + 3 + SHADOW_DX, p.y + 10 + SHADOW_DY, 34, 12);
           deco.fillStyle(0xd8b050, 1);
           deco.fillCircle(p.x, p.y, 13);
           deco.lineStyle(2, 0xa88030, 1);
@@ -1049,7 +1052,7 @@ export class BattleScene extends Phaser.Scene {
         if (k < 0.45) {
           // a patch of honeycomb cells half-sunk in the grass
           deco.fillStyle(0x000000, 0.12);
-          deco.fillEllipse(p.x + 3, p.y + 10, 46, 16);
+          deco.fillEllipse(p.x + 3 + SHADOW_DX, p.y + 10 + SHADOW_DY, 46, 16);
           for (const [dx, dy] of [[0, 0], [14, 0], [-14, 0], [7, -12], [-7, -12], [7, 12]]) {
             const cx = p.x + dx;
             const cy = p.y + dy;
@@ -1084,7 +1087,7 @@ export class BattleScene extends Phaser.Scene {
           // a great clump of treetop leaves seen from above
           const col = rnd.pick(this.level.theme.trees ?? [0x3f8a3a]);
           deco.fillStyle(0x000000, 0.18);
-          deco.fillEllipse(p.x + 4, p.y + 8, 56, 22);
+          deco.fillEllipse(p.x + 4 + SHADOW_DX, p.y + 8 + SHADOW_DY, 56, 22);
           deco.fillStyle(col, 1);
           for (const [dx, dy, r] of [[-14, 0, 14], [12, -2, 15], [0, -12, 14], [2, 8, 12]]) deco.fillCircle(p.x + dx, p.y + dy, r);
           deco.fillStyle(0xffffff, 0.12);
@@ -1110,7 +1113,7 @@ export class BattleScene extends Phaser.Scene {
         if (k < 0.5) {
           // a row of clipped tea bushes on its terrace
           deco.fillStyle(0x000000, 0.15);
-          deco.fillEllipse(p.x, p.y + 6, 52, 10);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 6 + SHADOW_DY, 52, 10);
           for (let n = 0; n < 3; n++) {
             deco.fillStyle(0x3f6e45, 1);
             deco.fillEllipse(p.x - 16 + n * 16, p.y, 18, 14);
@@ -1120,7 +1123,7 @@ export class BattleScene extends Phaser.Scene {
         } else if (k < 0.75) {
           // a stone lantern with a warm glow
           deco.fillStyle(0x000000, 0.18);
-          deco.fillEllipse(p.x, p.y + 6, 24, 8);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 6 + SHADOW_DY, 24, 8);
           deco.fillStyle(0x9a9488, 1);
           deco.fillRect(p.x - 4, p.y - 10, 8, 14);
           deco.fillRect(p.x - 9, p.y - 22, 18, 12);
@@ -1133,7 +1136,7 @@ export class BattleScene extends Phaser.Scene {
           // a cherry tree in blossom
           const bloom = rnd.pick([0xe89ab8, 0xf4c0d4]);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 38, 12);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 38, 12);
           deco.fillStyle(0x5a3a2a, 1);
           deco.fillRect(p.x - 3, p.y - 14, 6, 18);
           deco.fillStyle(bloom, 1);
@@ -1150,7 +1153,7 @@ export class BattleScene extends Phaser.Scene {
           const leaf = rnd.pick(this.level.theme.trees ?? [0xc83a1a]);
           const leaf2 = rnd.pick(this.level.theme.trees ?? [0xe87a1a]);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 42, 14);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 42, 14);
           deco.fillStyle(0x4a3020, 1);
           deco.fillRect(p.x - 4, p.y - 16, 8, 20);
           deco.fillStyle(leaf2, 1);
@@ -1171,7 +1174,7 @@ export class BattleScene extends Phaser.Scene {
         } else {
           // a mossy fallen log with a little shelf fungus
           deco.fillStyle(0x000000, 0.18);
-          deco.fillEllipse(p.x, p.y + 6, 50, 10);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 6 + SHADOW_DY, 50, 10);
           deco.fillStyle(0x6a4a2a, 1);
           deco.fillRoundedRect(p.x - 24, p.y - 7, 48, 14, 7);
           deco.fillStyle(0x9a7a4a, 1);
@@ -1186,7 +1189,7 @@ export class BattleScene extends Phaser.Scene {
           // autumn fruit tree with a few red apples (and some fallen ones)
           const leaf = rnd.pick(this.level.theme.trees ?? [0xd8642a]);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 40, 14);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 40, 14);
           deco.fillStyle(0x6b4a2b, 1);
           deco.fillRect(p.x - 4, p.y - 14, 8, 18);
           deco.fillStyle(leaf, 1);
@@ -1209,7 +1212,7 @@ export class BattleScene extends Phaser.Scene {
         if (rnd.frac() < 0.5) {
           // a pale stalagmite cluster
           deco.fillStyle(0x000000, 0.25);
-          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 9);
           for (const [dx, h, w] of [[-8, 18, 7], [2, 30, 9], [10, 14, 6]]) {
             deco.fillStyle(0x5a5a80, 1);
             deco.fillTriangle(p.x + dx - w, p.y + 2, p.x + dx + w, p.y + 2, p.x + dx, p.y - h);
@@ -1230,7 +1233,7 @@ export class BattleScene extends Phaser.Scene {
           const col = rnd.pick(this.level.theme.trees ?? [0xc8963a]);
           const r0 = rnd.between(12, 20);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, r0 * 2.2, r0 * 0.7);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, r0 * 2.2, r0 * 0.7);
           deco.fillStyle(col, 1);
           for (let k = 0; k < 8; k++) {
             const a0 = (k / 8) * Math.PI * 2;
@@ -1244,7 +1247,7 @@ export class BattleScene extends Phaser.Scene {
         } else {
           // a steam pipe with a valve wheel
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 9);
           deco.fillStyle(0x7a7a84, 1);
           deco.fillRect(p.x - 6, p.y - 30, 12, 34);
           deco.fillRect(p.x - 6, p.y - 30, 24, 10);
@@ -1257,7 +1260,7 @@ export class BattleScene extends Phaser.Scene {
         if (rnd.frac() < 0.65) {
           // jungle palm: curved trunk and drooping fronds
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 36, 10);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 36, 10);
           deco.lineStyle(5, 0x7a5a3a, 1);
           deco.beginPath();
           deco.moveTo(p.x, p.y + 2);
@@ -1280,7 +1283,7 @@ export class BattleScene extends Phaser.Scene {
           // broken temple pillar wrapped in vines
           const h = rnd.between(18, 34);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 30, 9);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 30, 9);
           deco.fillStyle(0xb8ae94, 1);
           deco.fillRect(p.x - 7, p.y - h, 14, h + 4);
           deco.fillStyle(0x8a8270, 1);
@@ -1300,7 +1303,7 @@ export class BattleScene extends Phaser.Scene {
           // wind-bent pine: tiers swept toward the east
           const col = rnd.pick(this.level.theme.trees ?? [0x4a6a5a]);
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x + 4, p.y + 4, 36, 10);
+          deco.fillEllipse(p.x + 4 + SHADOW_DX, p.y + 4 + SHADOW_DY, 36, 10);
           deco.fillStyle(0x6b4a2b, 1);
           deco.fillRect(p.x - 3, p.y - 10, 6, 14);
           for (const [dy, w, lean] of [[-6, 34, 8], [-20, 26, 10], [-32, 18, 12]]) {
@@ -1312,7 +1315,7 @@ export class BattleScene extends Phaser.Scene {
         } else {
           // stone cairn
           deco.fillStyle(0x000000, 0.2);
-          deco.fillEllipse(p.x, p.y + 4, 28, 9);
+          deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 28, 9);
           for (const [dy, r] of [[0, 10], [-13, 7.5], [-23, 5]]) {
             deco.fillStyle(0x9a9aa2, 1);
             deco.fillEllipse(p.x, p.y + dy, r * 2.2, r * 1.5);
@@ -1325,7 +1328,7 @@ export class BattleScene extends Phaser.Scene {
         const cap = rnd.pick(this.level.theme.trees ?? [0x8a5ab8]);
         const h = rnd.between(14, 24);
         deco.fillStyle(0x000000, 0.2);
-        deco.fillEllipse(p.x, p.y + 4, 36, 12);
+        deco.fillEllipse(p.x + SHADOW_DX, p.y + 4 + SHADOW_DY, 36, 12);
         deco.fillStyle(0xe8dcc8, 1);
         deco.fillRoundedRect(p.x - 5, p.y - h, 10, h + 4, 4);
         deco.fillStyle(cap, 1);
@@ -1336,7 +1339,7 @@ export class BattleScene extends Phaser.Scene {
         for (let k = 0; k < 3; k++) deco.fillCircle(p.x - 10 + k * 10 + rnd.between(-2, 2), p.y - h - 4 + rnd.between(-2, 3), 2.5);
       } else if (rnd.frac() < 0.45) {
         deco.fillStyle(0x000000, 0.2);
-        deco.fillEllipse(p.x, p.y + 4, 40, 14);
+        deco.fillEllipse(p.x + SHADOW_DX + 3, p.y + 4 + SHADOW_DY, 46, 15);
         deco.fillStyle(0x6b4a2b, 1);
         deco.fillRect(p.x - 4, p.y - 14, 8, 18);
         const leaf = rnd.pick(this.level.theme.trees ?? [0x3f7f34, 0x4b8f3a, 0x377030]);
@@ -1352,8 +1355,15 @@ export class BattleScene extends Phaser.Scene {
         }
       } else {
         const col = rnd.pick([0xffffff, 0xffe066, 0xff8fb1, 0xb5a8ff]);
-        deco.fillStyle(col, 1);
-        for (let k = 0; k < 4; k++) deco.fillCircle(p.x + rnd.between(-8, 8), p.y + rnd.between(-6, 6), 3);
+        for (let k = 0; k < 4; k++) {
+          const fx = p.x + rnd.between(-8, 8);
+          const fy = p.y + rnd.between(-6, 6);
+          // each blossom sits on its own small shadow, down and right of it
+          deco.fillStyle(0x000000, 0.2);
+          deco.fillEllipse(fx + 1.5, fy + 2.5, 7, 4);
+          deco.fillStyle(col, 1);
+          deco.fillCircle(fx, fy, 3);
+        }
       }
     }
     // gate marker at each distinct road exit (clamped on screen)

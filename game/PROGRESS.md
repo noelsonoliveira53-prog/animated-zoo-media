@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F6**
+Fix counter: **F7**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2079,16 +2079,17 @@ Fix counter: **F6**
 
   The palette and outlines of the new ground and roads are consistent across the meadow, frost, tidepool, gale and abyss themes (checked in F4/F5 shots). Keyboard, hit-size, test and build checks still pass. Before/after: `fix-6-before-*` and `fix-6-after-*`, plus `fix-6-desktop-menu.png`.
 
+- **F7 (F3) Contact shadows follow the light.** All 27 decoration contact shadows in the battle-map decoration pass (trees, pines, crystals, barrels, mushrooms, cairns, reef rocks and the rest) now fall down and to the right of the object (`SHADOW_DX` 4, `SHADOW_DY` 2) instead of sitting dead centre. Broadleaf trees cast a slightly longer shadow. Flower clusters, which had no shadow, now give each blossom its own small shadow. The meadow's mossy stones already had an offset shadow. Before/after: `fix-7-before-*` and `fix-7-after-*`.
+
 ### Fix Backlog (ranked)
-1. **F3** Contact shadows under trees, standing stones and flowers.
-2. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
-3. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
-4. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
-5. **C2** Colour accents on the early brown / grey enemy families.
-6. **C3** Status-effect icons, not tint only.
-7. **A4** Tooltips on icon-only controls.
-8. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-9. Then resume the Design Backlog below.
+1. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
+2. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
+3. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
+4. **C2** Colour accents on the early brown / grey enemy families.
+5. **C3** Status-effect icons, not tint only.
+6. **A4** Tooltips on icon-only controls.
+7. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+8. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

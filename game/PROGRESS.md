@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **280** (next balance pass at iteration 285)
+Iteration counter: **281** (next balance pass at iteration 285)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1832,14 +1832,20 @@ Iteration counter: **280** (next balance pass at iteration 285)
   - **Phone check** of the newest battle UI: `bossintro-check` and `newenemy-check` gained `PHONE=1` (740×360 touch). The boss nameplate, its facts line, the NEW pills and the new-enemy tip all fit and stay legible at phone size, and the tip clears the boss bar. No console errors. Screenshot `screenshots/280.png` (phone: Zephyrax nameplate with three NEW pills and a tip).
   - **Balance:** a branch DPS benchmark (`spec-bench.ts`). The numbers match the iteration-7 tuning exactly (Hawkeye 11.6/14.1/14.1, Stormcall 7.5/22.9/22.9, Frostbloom 4.9/38.9/29.1, Quake 2.8/55.5/0, Raiders 10.1/25.3/0, per 100 coins vs armored / crowd / flyers), so no branch drifted. Frostbloom's high crowd number is the known stationary-clump flattery of splash. Nothing tuned. 279 tests.
 
+- **Iteration 281: tower menu polish** (the build, upgrade and branch ring):
+  - **Buttons:** glossy discs with a drop shadow, a darker inner face, a top gloss and a gold rim (grey when you can't afford it).
+  - **Prices:** each price sits on a rounded tag with a coin. Unaffordable prices turn red with a little padlock, and the tower icon greys out (it still shakes on tap).
+  - **Feel:** buttons lift slightly on hover (desktop) and pop in one after another (35 ms stagger) inside the existing menu pop. Text buttons (sell, aim, rally) get the same shadow and gloss. The guide ring around the pad is now dashed.
+  - Reduce Motion keeps the menu static.
+  - New `scripts/towermenu-check.mjs` (a real tap opens the build ring with 100 coins; no console errors). `buildfx`, `range` and `phone-battle` checks still pass. Screenshot `screenshots/281.png` (three affordable towers and a locked red 120). 279 tests.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower menu polish: radial build menu with glossy round buttons, a price tag that turns red when unaffordable, and a pop-open animation.
-2. Damage numbers polish: bigger, bolder crits and boss hits, colour by damage type (physical cream, magic violet, true gold), with a little arc and fade.
+1. Damage numbers polish: bigger, bolder crits and boss hits, colour by damage type (physical cream, magic violet, true gold), with a little arc and fade.
 
 ## Known Bugs
 - (none known)

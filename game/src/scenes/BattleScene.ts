@@ -2737,9 +2737,15 @@ export class BattleScene extends Phaser.Scene {
     this.menu = c;
 
     const ring = this.add.graphics();
-    ring.lineStyle(4, C.cream, 0.6);
-    ring.strokeCircle(0, 0, 70);
+    ring.lineStyle(3, C.cream, 0.55);
+    for (let k = 0; k < 24; k++) {
+      const a0 = (k / 24) * Math.PI * 2;
+      ring.beginPath();
+      ring.arc(0, 0, 70, a0, a0 + 0.16);
+      ring.strokePath();
+    }
     c.add(ring);
+    this.popIndex = 0;
 
     if (!tower) {
       const offsets = [
@@ -2844,15 +2850,40 @@ export class BattleScene extends Phaser.Scene {
   private menuOption(x: number, y: number, tex: string, cost: string, affordable: boolean, onPick: () => void): Phaser.GameObjects.Container {
     const o = this.add.container(x, y);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.9);
+    // glossy disc: shadow, dark body, gold (or grey) rim, a soft top gloss
+    bg.fillStyle(0x000000, 0.3);
+    bg.fillCircle(2, 3, 38);
+    bg.fillStyle(C.ink, 0.92);
     bg.fillCircle(0, 0, 38);
+    bg.fillStyle(affordable ? 0x3a5a3a : 0x3a3a3a, 0.9);
+    bg.fillCircle(0, 2, 33);
+    bg.fillStyle(0xffffff, affordable ? 0.14 : 0.06);
+    bg.fillEllipse(-4, -16, 46, 20);
     bg.lineStyle(3, affordable ? C.gold : 0x777777, 1);
     bg.strokeCircle(0, 0, 38);
-    const icon = this.add.image(0, -4, tex).setScale(0.62);
-    const label = this.add.text(0, 30, cost, textStyle(17, affordable ? TEXT.gold : '#999999')).setOrigin(0.5);
-    o.add([bg, icon, label]);
+    const icon = this.add.image(0, -6, tex).setScale(0.6);
+    // the price sits on a little tag with a coin; red with a lock when you can't afford it
+    const tag = this.add.graphics();
+    tag.fillStyle(affordable ? 0x2a2010 : 0x3a1414, 0.95);
+    tag.fillRoundedRect(-28, 22, 56, 20, 10);
+    tag.lineStyle(2, affordable ? 0xffc83a : 0xd05a5a, 1);
+    tag.strokeRoundedRect(-28, 22, 56, 20, 10);
+    tag.fillStyle(affordable ? 0xffd23c : 0xd05a5a, 1);
+    if (affordable) tag.fillCircle(-17, 32, 5);
+    else {
+      tag.fillRect(-21, 31, 8, 6); // a tiny padlock
+      tag.lineStyle(2, 0xd05a5a, 1);
+      tag.beginPath();
+      tag.arc(-17, 31, 3, Math.PI, 0);
+      tag.strokePath();
+    }
+    const label = this.add.text(4, 32, cost, textStyle(15, affordable ? TEXT.gold : '#ff9a8a')).setOrigin(0.5);
+    o.add([bg, icon, tag, label]);
     if (!affordable) icon.setTint(0x777777);
     o.setSize(76, 76).setInteractive({ useHandCursor: true });
+    o.on('pointerover', () => !motion.reduced && this.tweens.add({ targets: o, scale: 1.08, duration: 90 }));
+    o.on('pointerout', () => !motion.reduced && this.tweens.add({ targets: o, scale: 1, duration: 90 }));
+    this.popIn(o);
     o.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       if (!affordable) {
@@ -2864,15 +2895,28 @@ export class BattleScene extends Phaser.Scene {
     return o;
   }
 
+  /** Menu buttons pop in one after another. */
+  private popIndex = 0;
+  private popIn(o: Phaser.GameObjects.Container): void {
+    if (motion.reduced) return;
+    o.setScale(0.2);
+    this.tweens.add({ targets: o, scale: 1, duration: 200, delay: (this.popIndex++ % 8) * 35, ease: 'Back.easeOut' });
+  }
+
   private textOption(x: number, y: number, text: string, color: number, onPick: () => void): Phaser.GameObjects.Container {
     const o = this.add.container(x, y);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 0.9);
+    bg.fillStyle(0x000000, 0.3);
+    bg.fillCircle(2, 3, 34);
+    bg.fillStyle(C.ink, 0.92);
     bg.fillCircle(0, 0, 34);
+    bg.fillStyle(0xffffff, 0.1);
+    bg.fillEllipse(-3, -14, 42, 18);
     bg.lineStyle(3, color, 1);
     bg.strokeCircle(0, 0, 34);
     o.add([bg, this.add.text(0, 0, text, { ...textStyle(pf(14)), align: 'center' }).setOrigin(0.5)]);
     o.setSize(68, 68).setInteractive({ useHandCursor: true });
+    this.popIn(o);
     padHit(o);
     o.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();

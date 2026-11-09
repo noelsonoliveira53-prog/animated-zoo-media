@@ -125,7 +125,10 @@ export class StoreScene extends Phaser.Scene {
     if (maxed && !this.still()) c.add(this.sweep(CARD_W, CARD_H, 0xffe08a, 0.16, 3600));
     c.add(this.icon(item, -CARD_W / 2 + 54, -8));
     c.add(fitWidth(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 22, item.name, textStyle(19, TEXT.cream)).setOrigin(0, 0.5), 250));
-    c.add(this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 44, `${item.text} per rank`, { ...textStyle(pf(13), TEXT.dim, false), wordWrap: { width: 250 } }).setOrigin(0, 0));
+    // the description steps down from the phone size until it ends above the price row
+    const desc = this.add.text(-CARD_W / 2 + 104, -CARD_H / 2 + 44, `${item.text} per rank`, { ...textStyle(pf(13), TEXT.dim, false), wordWrap: { width: 250 } }).setOrigin(0, 0);
+    for (let size = pf(13); size > 12 && desc.y + desc.height > CARD_H / 2 - 58; size--) desc.setFontSize(size);
+    c.add(desc);
     // rank pips
     for (let r = 0; r < item.maxRank; r++) {
       const pip = this.add.circle(-CARD_W / 2 + 22 + r * 18, CARD_H / 2 - 22, 6, r < rank ? item.color : 0x2a2a34).setStrokeStyle(2, C.ink, 1);
@@ -139,12 +142,14 @@ export class StoreScene extends Phaser.Scene {
     const v = ensureVillage(save);
     const afford = devOn() || (v.coins >= (price.coins ?? 0) && v.glowsap >= (price.glowsap ?? 0));
     // next-rank price on its own line, clear of the Buy button
-    const py = CARD_H / 2 - 54;
-    c.add(this.add.text(-CARD_W / 2 + 104, py, 'Next:', textStyle(pf(13), TEXT.dim, false)).setOrigin(0, 0.5));
-    c.add(this.add.image(-CARD_W / 2 + 152, py, 'icon_coin').setScale(0.6));
-    c.add(this.add.text(-CARD_W / 2 + 164, py, `${price.coins}`, textStyle(pf(14), afford ? TEXT.gold : TEXT.heart)).setOrigin(0, 0.5));
-    c.add(this.add.image(-CARD_W / 2 + 224, py, 'icon_sap').setScale(0.6));
-    c.add(this.add.text(-CARD_W / 2 + 236, py, `${price.glowsap}`, textStyle(pf(14), afford ? '#c8ff8a' : TEXT.heart)).setOrigin(0, 0.5));
+    const py = CARD_H / 2 - 47;
+    // laid out by measured widths, so bigger phone text never runs into the icons
+    const nextT = this.add.text(-CARD_W / 2 + 104, py, 'Next:', textStyle(pf(13), TEXT.dim, false)).setOrigin(0, 0.5);
+    const coinI = this.add.image(nextT.x + nextT.width + 12, py, 'icon_coin').setScale(0.6);
+    const coinT = this.add.text(coinI.x + 12, py, `${price.coins}`, textStyle(pf(14), afford ? TEXT.gold : TEXT.heart)).setOrigin(0, 0.5);
+    const sapI = this.add.image(coinT.x + coinT.width + 16, py, 'icon_sap').setScale(0.6);
+    const sapT = this.add.text(sapI.x + 12, py, `${price.glowsap}`, textStyle(pf(14), afford ? '#c8ff8a' : TEXT.heart)).setOrigin(0, 0.5);
+    c.add([nextT, coinI, coinT, sapI, sapT]);
     if (!open) return;
     const btn = new Button(this, CARD_W / 2 - 52, CARD_H / 2 - 24, 'Buy', {
       width: 84,

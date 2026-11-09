@@ -1,4 +1,4 @@
-// Phone consistency tour: `node scripts/phone-tour.mjs <prefix>` → menu, world map, battle (levels 1 and 34), settings at 740×360 touch.
+// Phone consistency tour: `node scripts/phone-tour.mjs <prefix>` → menu, world map, battles (levels 1 and 34), settings, village, field guide, achievements and store at 740×360 touch.
 import { createRequire } from 'node:module';
 import { preview } from 'vite';
 const require = createRequire(import.meta.url);
@@ -30,6 +30,10 @@ await go('WorldMap', {}); await page.screenshot({ path: `screenshots/${prefix}-m
 await go('Battle', { levelIndex: 0 }); await page.screenshot({ path: `screenshots/${prefix}-battle1.png` });
 await go('Battle', { levelIndex: 33 }); await page.screenshot({ path: `screenshots/${prefix}-battle34.png` });
 await go('Settings', {}); await page.screenshot({ path: `screenshots/${prefix}-settings.png` });
+await go('Village', {}); await page.screenshot({ path: `screenshots/${prefix}-village.png` });
+await go('FieldGuide', {}); await page.screenshot({ path: `screenshots/${prefix}-guide.png` });
+await go('Achievements', {}); await page.screenshot({ path: `screenshots/${prefix}-achievements.png` });
+await go('Store', {}); await page.screenshot({ path: `screenshots/${prefix}-store.png` });
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();

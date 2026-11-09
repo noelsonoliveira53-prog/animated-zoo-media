@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F9**
+Fix counter: **F10**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2093,6 +2093,8 @@ Fix counter: **F9**
   - `pickBannerY` chooses between the usual spot under the HUD (y 172) and a low spot (y 544), whichever hides less road. It is computed once per level and reset in `init`.
 
   If the chosen spot still covers road, the banner fades back to 35 % after 1.5 s (then out at 2.6 s as before), so the first foes stay visible. Sticky centre banners are unchanged. On Three Winds, where roads cross both spots, the banner fades; Frostpeak keeps the top spot. 3 new tests. Boss-intro check still passes. Screenshots: `fix-9-before-*` and `fix-9-after-*`.
+
+- **F10 Consistency pass (phone tour of the remaining screens).** `scripts/phone-tour.mjs` now also covers the village, field guide, achievements and store at 740×360. The store cards were the broken screen. On phones the wrapped description ran into the "Next:" price row, and "Next:" overlapped its coin icon. Now the price row is laid out by measured widths and sits 7 px lower, and the description steps down from the phone size until it ends above the price row. The village, guide and achievements read fine (achievement descriptions already shrink to fit one line). Palette and outlines were already consistent after F7–F9. Store check and tests pass. Screenshots: `fix-10-before-*` and `fix-10-after-*`.
 
 ### Fix Backlog (ranked)
 1. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.

@@ -18,7 +18,8 @@ const page = process.env.PHONE ? await (await browser.newContext({ viewport: { w
     const all = m === 'veteran';
     localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3 }, seenEnemies: all ? ['__all__'] : ['mudling'] }));
   }, mode);
-  await page.goto('http://localhost:4338/');
+  await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
+await page.goto('http://localhost:4338/');
   await page.waitForTimeout(900);
   await page.evaluate((m) => {
     if (m === 'veteran') {

@@ -5,6 +5,7 @@ import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
 import { heroCardRows, heroXpProgress } from '../systems/heroCard';
 import { pickEnemy } from '../systems/enemyPick';
 import { snapRally } from '../systems/rallySnap';
+import { shouldShowTouchTip, TOUCH_TIPS } from '../systems/touchTip';
 import { waveChart } from '../systems/waveChart';
 import { runSummary, shortNum } from '../systems/runSummary';
 import { justVeteran, towerRecord } from '../systems/veteran';
@@ -368,6 +369,8 @@ export class BattleScene extends Phaser.Scene {
     });
 
     this.cameras.main.fadeIn(300, 16, 38, 27);
+    // first battle on a touch screen: a one-time card about the touch gestures
+    if (shouldShowTouchTip(loadSave(), this.sys.game.device.input.touch) && !(window as unknown as { __noTouchTip?: boolean }).__noTouchTip) this.showTouchTip(); // __noTouchTip: test hook for the phone checks
     const bonus: string[] = [];
     if (this.perks.bonusCoins) bonus.push(`+${this.perks.bonusCoins} coins`);
     if (this.perks.towerDamageMult > 1) bonus.push(`+${Math.round((this.perks.towerDamageMult - 1) * 100)}% tower damage`);
@@ -2303,6 +2306,73 @@ export class BattleScene extends Phaser.Scene {
     this.aimHold = true;
     this.reticle.setPosition(p.worldX, p.worldY - TOUCH_AIM_LIFT);
     this.showBanner(SPELLS[this.spellMode!].name, 'Drag to aim, lift to cast (lift on the spell bar to cancel)');
+  }
+
+  /** One-time card on a touch screen: hold to preview, drag to aim, drag the hero. Pauses until dismissed. */
+  private showTouchTip(): void {
+    const wasPaused = this.paused;
+    this.paused = true;
+    const W = 580;
+    const c = this.add.container(GAME_W / 2, GAME_H / 2).setDepth(4900).setName('touchTip');
+    const shade = this.add.rectangle(0, 0, GAME_W, GAME_H, 0x0a1410, 0.55).setInteractive();
+    shade.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    const bg = this.add.graphics();
+    c.add([shade, bg]);
+    // lay the rows out top-down from their measured text heights (phone fonts are larger), then size the panel
+    const items: { obj: Phaser.GameObjects.GameObject & { y: number }; y: number }[] = [];
+    const title = this.add.text(0, 0, 'Playing on a touch screen', textStyle(pf(24), TEXT.gold)).setOrigin(0.5, 0);
+    items.push({ obj: title, y: 0 });
+    let y = title.height + 22;
+    const ix = -W / 2 + 56;
+    for (const tip of TOUCH_TIPS) {
+      const head = this.add.text(ix + 46, 0, tip.title, textStyle(pf(17), TEXT.gold)).setOrigin(0, 0);
+      const body = this.add.text(ix + 46, 0, tip.text, { ...textStyle(pf(14), TEXT.cream, false), wordWrap: { width: W - 140 } }).setOrigin(0, 0);
+      const rowH = Math.max(56, head.height + 4 + body.height);
+      const g = this.add.graphics();
+      const cy = rowH / 2;
+      g.fillStyle(0x24402c, 1);
+      g.fillCircle(ix, cy, 26);
+      g.lineStyle(2, 0x6ab04c, 0.8);
+      g.strokeCircle(ix, cy, 26);
+      // a fingertip, plus what the gesture does: rings for a hold, an arrow for a drag
+      g.fillStyle(0xf2dcc0, 1);
+      g.fillCircle(ix - 2, cy + 4, 8);
+      g.fillRoundedRect(ix - 6, cy + 4, 8, 14, 3);
+      if (tip.icon === 'hold') {
+        g.lineStyle(2.5, 0xffd23c, 1);
+        g.strokeCircle(ix - 2, cy + 4, 14);
+        g.lineStyle(1.5, 0xffd23c, 0.5);
+        g.strokeCircle(ix - 2, cy + 4, 19);
+      } else {
+        const col = tip.icon === 'drag' ? 0x9be86a : 0xffd23c;
+        g.lineStyle(3, col, 1);
+        g.lineBetween(ix + 6, cy - 4, ix + 18, cy - 16);
+        g.fillStyle(col, 1);
+        g.fillTriangle(ix + 20, cy - 18, ix + 12, cy - 17, ix + 19, cy - 10);
+      }
+      items.push({ obj: g as unknown as Phaser.GameObjects.GameObject & { y: number }, y });
+      items.push({ obj: head, y: y + Math.max(0, (rowH - head.height - 4 - body.height) / 2) });
+      items.push({ obj: body, y: y + Math.max(0, (rowH - head.height - 4 - body.height) / 2) + head.height + 4 });
+      y += rowH + 12;
+    }
+    const H = 28 + y + 70;
+    for (const it of items) {
+      it.obj.y = -H / 2 + 26 + it.y;
+      c.add(it.obj);
+    }
+    glossPanel(bg, -W / 2, -H / 2, W, H, { fill: C.ink, alpha: 0.97, rim: 0xc8a050, rimAlpha: 0.7, radius: 22 });
+    const close = () => {
+      const save = loadSave();
+      save.settings.touchTipSeen = true;
+      writeSave(save);
+      c.destroy();
+      this.paused = wasPaused;
+    };
+    c.add(new Button(this, 0, H / 2 - 44, 'Got it!', { width: 200, height: 52, fontSize: 22, color: C.leaf, onClick: close }));
+    if (!motion.reduced) {
+      c.setScale(0.85).setAlpha(0);
+      this.tweens.add({ targets: c, scale: 1, alpha: 1, duration: 200, ease: 'Back.easeOut' });
+    }
   }
 
   private armSpell(id: string | null): void {

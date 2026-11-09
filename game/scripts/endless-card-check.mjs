@@ -20,7 +20,8 @@ for (const [suffix, opts] of [['', { viewport: { width: 1280, height: 720 } }], 
     for (let i = 1; i <= 80; i++) stars['l' + i] = 3;
     localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars, endlessBest: { l78: 17 } }));
   });
-  await page.goto('http://localhost:4364/');
+  await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
+await page.goto('http://localhost:4364/');
   await page.waitForTimeout(1000);
   await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('WorldMap', { region: 15 }));
   await page.waitForTimeout(1200);

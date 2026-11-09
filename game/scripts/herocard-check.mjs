@@ -13,6 +13,7 @@ const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
 await page.addInitScript((h) => localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 3, l3: 3 }, hero: h })), heroId);
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4345/');
 await page.waitForTimeout(900);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 2 }));

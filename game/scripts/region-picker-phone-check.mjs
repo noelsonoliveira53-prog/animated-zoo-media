@@ -19,6 +19,7 @@ await page.addInitScript(() => {
   for (let i = 1; i <= 42; i++) stars['l' + i] = i % 4 === 0 ? 2 : 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars }));
 });
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4348/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('WorldMap', { region: 2 }));

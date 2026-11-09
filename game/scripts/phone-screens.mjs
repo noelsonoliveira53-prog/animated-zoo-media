@@ -20,6 +20,7 @@ await page.addInitScript(() => {
   for (let i = 1; i <= 6; i++) stars['l' + i] = 3;
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars, stats: { kills: 820 }, achievements: ['first_win'] }));
 });
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4326/');
 await page.waitForTimeout(1200);
 const shot = async (suffix) => page.screenshot({ path: `screenshots/${name}-${suffix}.png` });

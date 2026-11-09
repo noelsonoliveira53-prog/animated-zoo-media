@@ -23,6 +23,7 @@ await page.addInitScript(() => {
     village: { coins: 1000, glowsap: 3000, nextUid: 20, buildings: [b(1, 'townhall', 2, 10, 5), b(2, 'barracks', 2, 2, 2), b(3, 'builderhut', 1, 2, 10), b(4, 'vault', 2, 6, 8)] },
   }));
 });
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4346/');
 await page.waitForTimeout(900);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Village'));

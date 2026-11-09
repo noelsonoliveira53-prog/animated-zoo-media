@@ -15,6 +15,7 @@ const page = await ctx.newPage();
 const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4321/');
 await page.waitForTimeout(1200);
 // Convert game coords to page coords via the canvas rect.

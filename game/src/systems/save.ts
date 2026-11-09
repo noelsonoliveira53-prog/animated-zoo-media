@@ -16,7 +16,7 @@ export interface SaveData {
   dailyDone: string; // date (YYYY-MM-DD) of the last completed daily challenge
   endlessBest: Record<string, number>; // level id → most endless waves held
   store?: Record<string, number>; // Keeper's Store item id → ranks bought
-  settings: { volume: number; muted: boolean; music: boolean; reduceMotion?: boolean; dev?: boolean; fxLow?: boolean };
+  settings: { volume: number; muted: boolean; music: boolean; reduceMotion?: boolean; dev?: boolean; fxLow?: boolean; touchTipSeen?: boolean };
 }
 
 export const SAVE_KEY = 'grovewatch.save.v1';

@@ -25,6 +25,7 @@ await page.addInitScript(() => {
   for (let c = 9; c <= 13; c++) blds.push(b('wall', 1, c, 3));
   localStorage.setItem('grovewatch.save.v1', JSON.stringify({ stars: { l1: 3, l2: 3, l3: 3 }, village: { coins: 5000, glowsap: 3000, nextUid: uid, buildings: blds } }));
 });
+await page.addInitScript(() => { window.__noTouchTip = true; }); // the one-time touch tip card would cover the screen
 await page.goto('http://localhost:4371/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Village'));

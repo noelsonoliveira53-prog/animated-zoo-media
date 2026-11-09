@@ -508,18 +508,23 @@ export class BootScene extends Phaser.Scene {
         // fat segmented grub: three bulging rings, stubby legs, a wide hungry mouth
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.5, 0, 0.5]) g.lineBetween(cx + lx * r, cy + r * 0.5, cx + lx * r, cy + r * 0.85);
-        g.fillStyle(color, 1);
-        for (const [dx, sz] of [[0.55, 0.62], [0, 0.8], [-0.55, 0.7]] as const) {
-          g.fillEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
-          g.strokeEllipse(cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4);
-        }
+        // each ring shaded as its own orb, lit from the upper left (design F22)
+        for (const [dx, sz] of [[0.55, 0.62], [0, 0.8], [-0.55, 0.7]] as const) this.orbKeep(g, cx + dx * r, cy + r * 0.05, r * sz * 1.3, r * sz * 1.4, color);
         g.fillStyle(0xe8d8a0, 1);
         g.fillEllipse(cx - r * 0.55, cy - r * 0.3, r * 0.5, r * 0.2);
         g.fillStyle(0x3a1a1a, 1);
         g.fillEllipse(cx - r * 0.8, cy + r * 0.2, r * 0.35, r * 0.3);
+        g.fillStyle(0xfff4d6, 1);
+        g.fillTriangle(cx - r * 0.92, cy + r * 0.08, cx - r * 0.84, cy + r * 0.08, cx - r * 0.88, cy + r * 0.2);
+        g.fillTriangle(cx - r * 0.76, cy + r * 0.07, cx - r * 0.68, cy + r * 0.07, cx - r * 0.72, cy + r * 0.19);
+        g.fillStyle(0x9ae8ff, 0.85);
+        g.fillEllipse(cx - r * 0.86, cy + r * 0.42, r * 0.08, r * 0.16); // a hungry drool drop
         g.fillStyle(0x1a1010, 1);
         g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.08);
         g.fillCircle(cx - r * 0.45, cy - r * 0.2, r * 0.08);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.72, cy - r * 0.18, r * 0.03);
+        g.fillCircle(cx - r * 0.47, cy - r * 0.23, r * 0.03);
         break;
       }
       case 'rotseed': {
@@ -546,11 +551,31 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(color, 1);
         g.fillTriangle(cx - r * 0.8, cy + r * 0.85, cx + r * 0.8, cy + r * 0.85, cx - r * 0.05, cy - r * 0.55);
         g.strokeTriangle(cx - r * 0.8, cy + r * 0.85, cx + r * 0.8, cy + r * 0.85, cx - r * 0.05, cy - r * 0.55);
+        // cloak shading, a lit left fold and a zigzag bolt stitched down the front (design F22)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(25).color, 1);
+        g.fillTriangle(cx - r * 0.05, cy - r * 0.55, cx + r * 0.8, cy + r * 0.85, cx + r * 0.15, cy + r * 0.85);
+        g.fillStyle(0xffffff, 0.2);
+        g.fillTriangle(cx - r * 0.1, cy - r * 0.35, cx - r * 0.55, cy + r * 0.6, cx - r * 0.35, cy + r * 0.6);
+        g.strokeTriangle(cx - r * 0.8, cy + r * 0.85, cx + r * 0.8, cy + r * 0.85, cx - r * 0.05, cy - r * 0.55);
+        g.lineStyle(2, 0xfff07a, 1);
+        g.beginPath();
+        g.moveTo(cx - r * 0.05, cy + r * 0.25);
+        g.lineTo(cx - r * 0.2, cy + r * 0.45);
+        g.lineTo(cx + r * 0.02, cy + r * 0.48);
+        g.lineTo(cx - r * 0.12, cy + r * 0.75);
+        g.strokePath();
+        g.lineStyle(2.5, C.ink, 1);
         g.fillStyle(0x1a1e2a, 1);
         g.fillCircle(cx - r * 0.05, cy - r * 0.1, r * 0.3);
+        g.fillStyle(0xfff07a, 0.35);
+        g.fillCircle(cx - r * 0.15, cy - r * 0.12, r * 0.13);
+        g.fillCircle(cx + r * 0.06, cy - r * 0.12, r * 0.13);
         g.fillStyle(0xfff07a, 1);
         g.fillCircle(cx - r * 0.15, cy - r * 0.12, r * 0.07);
         g.fillCircle(cx + r * 0.06, cy - r * 0.12, r * 0.07);
+        // the rod's copper tip sparks
+        g.fillStyle(0xfff07a, 1);
+        g.fillCircle(cx + r * 0.6, cy - r * 1.07, r * 0.09);
         g.fillStyle(0xd8dce8, 1);
         g.fillCircle(cx - r * 0.3, cy - r * 0.95, r * 0.22);
         g.fillCircle(cx, cy - r * 1.05, r * 0.28);
@@ -592,11 +617,26 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xd88a3a, 1);
         g.fillCircle(cx - r * 1.3, cy - r * 0.62, r * 0.13);
         g.fillCircle(cx - r * 0.2, cy - r * 0.72, r * 0.13);
+        g.fillStyle(0xffd8a0, 1);
+        g.fillCircle(cx - r * 1.34, cy - r * 0.66, r * 0.05);
+        g.fillCircle(cx - r * 0.24, cy - r * 0.76, r * 0.05);
         g.lineStyle(2, 0xd88a3a, 1);
         g.strokeCircle(cx - r * 0.85, cy + r * 0.42, r * 0.11);
+        // a woven copper-studded harness over the shoulders and a pale muzzle (design F22)
+        g.fillStyle(0x8a5a2a, 1);
+        g.fillRect(cx - r * 0.05, cy - r * 0.5, r * 0.22, r * 1.0);
+        g.fillStyle(0xd88a3a, 1);
+        for (const yy of [-0.32, 0.0, 0.32]) g.fillCircle(cx + r * 0.06, cy + yy * r, r * 0.07);
+        g.fillStyle(0xc8c0b8, 1);
+        g.fillEllipse(cx - r * 0.82, cy + r * 0.28, r * 0.42, r * 0.3);
         g.fillStyle(0x1a1010, 1);
+        g.fillCircle(cx - r * 0.9, cy + r * 0.28, r * 0.04);
+        g.fillCircle(cx - r * 0.75, cy + r * 0.28, r * 0.04);
         g.fillCircle(cx - r * 0.85, cy + r * 0.02, r * 0.07);
         g.fillCircle(cx - r * 0.55, cy + r * 0.02, r * 0.07);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.87, cy - r * 0.01, r * 0.03);
+        g.fillCircle(cx - r * 0.57, cy - r * 0.01, r * 0.03);
         break;
       }
       case 'shimmerjack':

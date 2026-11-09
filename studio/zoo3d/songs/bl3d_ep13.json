@@ -1,0 +1,327 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nRainbow Bloop, rainbow Bloop,\nChanging colors, loop-de-loop!\nEvery color, one by one,\nRainbow Bloop is so much fun!\n\n[Verse 1]\nFirst he's red like a fire truck,\nThen he's orange, what good luck!\nYellow like a sunny day,\nGreen like grass where we can play!\n\n[Chorus]\nRainbow Bloop, rainbow Bloop,\nChanging colors, loop-de-loop!\nEvery color, one by one,\nRainbow Bloop is so much fun!\n\n[Verse 2]\nBlue like the ocean, deep and wide,\nPurple like grapes, he jumps with pride!\nPink like a flamingo, standing tall,\nBloop has turned into them all!\n\n[Bridge]\nShout a color, red, red, red!\nTouch something green, now touch your head!\nFind something blue and wave hello,\nRainbow colors, here we go!\n\n[Verse 3]\nRed and orange, yellow and green,\nBlue and purple, the best I've seen!\nPink at the end, now count with me,\nSeven colors, one, two, three!\n\n[Chorus]\nRainbow Bloop, rainbow Bloop,\nChanging colors, loop-de-loop!\nEvery color, one by one,\nRainbow Bloop is so much fun!\n\n[Outro]\nRainbow Bloop! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 1131,
+ "who_map": {},
+ "meta": {
+  "title": "Rainbow Bloop! 7 Colors Song for Kids | Color Review",
+  "card": "Rainbow Bloop!",
+  "thumb_text": "7 COLORS!",
+  "description": "Bloop turns every color of the rainbow! A review of the whole color series: red like a fire truck, orange, sunny yellow, green grass, blue ocean, purple grapes and a pink flamingo.\nKids shout colors, touch something green and find something blue. Ages 2-5.",
+  "tags": [
+   "rainbow colors song",
+   "learn colors",
+   "color songs for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep13",
+  "title": "Rainbow Bloop!",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "RAINBOW!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "rainbow",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED!",
+      "color": "#ff3b3b",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "red"
+     },
+     {
+      "type": "text",
+      "text": "GREEN!",
+      "color": "#3cc45a",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "Green"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "rainbow",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "BLUE!",
+      "color": "#3b8be0",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "Blue"
+     },
+     {
+      "type": "text",
+      "text": "PINK!",
+      "color": "#ff6fb5",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "Pink"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "SHOUT A COLOR!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.55,
+      "word": "Shout"
+     },
+     {
+      "type": "text",
+      "text": "HELLO!",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "hello,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "7 COLORS!",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.7,
+      "word": "Seven"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "RAINBOW!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep13",
+  "res": "1920x1080",
+  "step": 1
+ },
+ "color_words": {
+  "red": "#ff3b3b",
+  "orange": "#ff8a1f",
+  "yellow": "#ffd21f",
+  "green": "#3cc45a",
+  "blue": "#3b8be0",
+  "purple": "#8e3fd0",
+  "pink": "#ff6fb5"
+ },
+ "color_char": "host"
+}

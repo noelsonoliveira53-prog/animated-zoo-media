@@ -1,0 +1,244 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nAll aboard the starlight train,\nChugging softly down the lane,\nChoo-choo, choo-choo, slow and deep,\nStarlight train will bring you sleep.\n\n[Verse 1]\nBunny has a ticket, Lamb has one too,\nTeddy has a pillow, soft and blue,\nThe moon is the light at the front of the train,\nRolling past the fields of grain.\n\n[Chorus]\nAll aboard the starlight train,\nChugging softly down the lane,\nChoo-choo, choo-choo, slow and deep,\nStarlight train will bring you sleep.\n\n[Verse 2]\nPast the sleepy mountains, past the quiet sea,\nPast the sleepy owl in the tall pine tree,\nEvery little star is a station light,\nWaving to the train goodnight.\n\n[Bridge]\nBreathe in slowly, the train goes slow,\nBreathe out softly, steady, low,\nRock, rock, rocking on the track,\nClose your eyes and settle back.\n\n[Verse 3]\nThe train is getting quiet as it rolls along,\nHumming you a soft and gentle song,\nLast stop is your cozy bed,\nRest now, sleepy little head.\n\n[Chorus]\nAll aboard the starlight train,\nChugging softly down the lane,\nChoo-choo, choo-choo, slow and deep,\nStarlight train will bring you sleep.\n\n[Outro]\nChoo-choo. Goodnight.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 1106,
+ "who_map": {},
+ "meta": {
+  "title": "The Starlight Train \ud83c\udf19 Sleepy Lullaby for Babies | Moonbeam",
+  "card": "The Starlight Train",
+  "thumb_text": "ALL ABOARD...",
+  "description": "All aboard the starlight train! Luna, Bunny, Lamb and Teddy ride a gentle night train past sleepy mountains, the quiet sea and twinkling star stations, with the moon lighting the way to bed.\nA slow breathing break helps little ones settle down for sleep. For babies and toddlers.",
+  "tags": [
+   "train lullaby",
+   "lullaby for babies",
+   "bedtime song",
+   "sleep music for kids",
+   "calming lullaby",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep13",
+  "title": "The Starlight Train",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Starlight Train",
+      "color": "#ffd88a",
+      "at": "top",
+      "size": 0.55
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "delay": 2
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "Teddy"
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "word": "moon"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "sleep."
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "numstar",
+      "at": "left",
+      "word": "star",
+      "opts": {
+       "size": 0.4
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "Breathe"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "bed,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "Goodnight."
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep13",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

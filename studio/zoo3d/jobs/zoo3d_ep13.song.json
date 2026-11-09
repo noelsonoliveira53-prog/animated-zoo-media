@@ -1,0 +1,359 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nWhat do we call the baby, baby?\nEvery animal baby has a name, maybe!\nCub and calf and foal, it's true,\nBaby animals, just like you!\n\n[Verse 1]\nA baby lion is called a cub,\nRoaring small with a playful rub!\nA baby elephant is called a calf,\nSwinging its trunk, it makes us laugh!\n\n[Chorus]\nWhat do we call the baby, baby?\nEvery animal baby has a name, maybe!\nCub and calf and foal, it's true,\nBaby animals, just like you!\n\n[Verse 2]\nA baby zebra is called a foal,\nWobbly legs out on a stroll!\nA baby giraffe is a calf too,\nAlready taller than me and you!\n\n[Bridge]\nRoar like a cub, roar, roar, roar!\nWobble like a foal across the floor!\nSwing your arm like a calf's small trunk,\nStomp, stomp, stomp, ka-plunk!\n\n[Verse 3]\nA baby hippo is a calf as well,\nSwimming close to Mom, she knows it well!\nMilo was once a chick so small,\nNow he's singing with you all!\n\n[Chorus]\nWhat do we call the baby, baby?\nEvery animal baby has a name, maybe!\nCub and calf and foal, it's true,\nBaby animals, just like you!\n\n[Outro]\nCub, calf, foal! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 1104,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Baby Animal Names! Cub, Calf, Foal Song for Kids with Milo",
+  "card": "Baby Animal Names!",
+  "thumb_text": "WHAT'S MY NAME?",
+  "description": "What do we call baby animals? Milo and friends learn the names: a baby lion is a cub, a baby elephant, giraffe or hippo is a calf, a baby zebra is a foal, and a baby bird like Milo is a chick.\nKids roar like a cub, wobble like a foal and stomp like a calf. Ages 2-5.",
+  "tags": [
+   "baby animal names",
+   "cub calf foal",
+   "baby animals song",
+   "animal song for kids",
+   "safari animals",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep13",
+  "title": "Baby Animal Names!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BABY NAMES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:lion",
+     "close:elephant",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "cub,",
+      "opts": {
+       "text": "CUB"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "calf,",
+      "opts": {
+       "text": "CALF"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "CUB! CALF! FOAL!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:zebra",
+     "giraffe",
+     "close:zebra",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "foal,",
+      "opts": {
+       "text": "FOAL"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "calf",
+      "opts": {
+       "text": "CALF"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "ROAR!",
+      "color": "#ffb627",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Roar"
+     },
+     {
+      "type": "text",
+      "text": "WOBBLE!",
+      "color": "#333333",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Wobble"
+     },
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#8a5a32",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "Stomp,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:hippo",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "hippo",
+      "opts": {
+       "text": "CALF"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "chick",
+      "opts": {
+       "text": "CHICK"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BABY NAMES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep13",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

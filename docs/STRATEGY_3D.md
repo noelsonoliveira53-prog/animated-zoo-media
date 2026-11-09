@@ -127,8 +127,10 @@
 - **Reach trend (Zoo):** day-one impressions 24k -> 18k -> 30k. Keep giving the Zoo the first finished render each day.
 - **Sister channels:** still under 3k impressions each after 4-5 days (Bloop 5.1k lifetime is best). No format change yet; keep the Bloop color series
   (Red, Green, Blue, mixing) and question titles on Gizmo ("Why Is There Day and Night?" airs Nov 12) and compare on Nov 13.
-- **Shorts signal (decision for Noelson, not applied):** Shorts stay dropped per the Nov 4 call. If he re-opens them, the test is one Zoo Short a day cut
-  from each 3D song's best 20 s, titled with the song's question.
+- **Shorts test (Noelson approved Nov 9, Zoo only):** one Zoo Short a day at 11:00 AM ET, cut from a 3D song with `studio/zoo3d/make_short.sh`
+  (13-18 s, one animal, the question as the big on-screen title, lyrics kept). First three: "What Does the Lion Say?" (Nov 10), "What Do Giraffes
+  Eat?" (Nov 11), "What Do Elephants Eat?" (Nov 12). Plan: `studio/upload_plan_shorts_zoo.json`. Judge on Nov 13: views and % viewed vs the 2D Shorts
+  (Flamingos 1,825 / 131%). Sister channels stay episodes-only until the Zoo test has a result.
 - **Posting times:** still no signal; keep the slots through Nov 11 (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
 
 ## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)

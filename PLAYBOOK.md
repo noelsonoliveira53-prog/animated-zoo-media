@@ -208,3 +208,13 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - Install the `HTMLInputElement.prototype.click` intercept BEFORE clicking "Select files", and make it swallow every file-input click, so a failed fetch never opens a native picker on the PC.
 - Studio avatar menu > Switch account: the submenu opens slowly; wait ~2 s and screenshot before clicking a channel, or the click lands on the account under the cursor (it switched to Rainy Window Dog TV twice).
 - The Schedule button usually needs two real clicks at (720, 535) in an 800x600 frame (first one blurs the time field). Confirm via the "Video processing ... set to public on <date> at <time>" dialog.
+
+## Zoo Shorts test (Noelson approved Nov 9, 2026)
+- The Nov 4 "no Shorts" rule is lifted for **The Animated Zoo only**, as a test after "Why Are Flamingos Pink?" went 85 -> 1,825 views in a day.
+- One Short a day at **11:00 AM ET**, made from finished 3D songs: `studio/zoo3d/make_short.sh <song.mp4> <start> <end> "<LINE1>" "<LINE2>" shorts3d/<id>.mp4`
+  (vertical 1080x1920, blurred background, 4:3 song crop with the burned lyrics, question title on top, loudness -16 LUFS). Find clean cut points by OCR'ing the
+  burned lyrics (1 fps strips + tesseract) because job timing files don't match the published edit.
+- Pick one animal + one true fact or sound per Short, 13-20 s, title "What/Why ... ? <Verb> Along with Milo!" (60 chars max). Made for kids, scheduled, never published now.
+  Studio preselects PUBLIC for Shorts: always open Schedule and confirm the button reads "Schedule" before clicking it.
+- Plan file: `studio/upload_plan_shorts_zoo.json`. These count toward the account's ~20 uploads/24h, so they come after the 6 daily episodes.
+- Tiny Truck Town duplicate 1VDyCj71-hA was deleted Nov 9 (Noelson approved).

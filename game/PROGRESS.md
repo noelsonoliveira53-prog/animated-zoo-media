@@ -2072,6 +2072,7 @@ Fix counter: **F5**
   Grass tufts now spill over the verges: small fans of curved blades every ~46 px, leaning toward the road on side verges and skipped where another road runs. They are left off snow, lava, crystal, clockwork and abyss floors. New pure helper `roadEdgeSpots` in `systems/path.ts` (spots beside a road with outward normals) with 3 tests. Before/after: `fix-5-before-*` and `fix-5-after-*`.
 
 ### Fix Backlog (ranked)
+0. **Consistency pass** (was due at F5; run it as F6): palette, outline weight, phone readability at 740×360 across the menu, map, battle HUD and cards after F1–F5.
 1. **F3** Contact shadows under trees, standing stones and flowers.
 2. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
 3. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).

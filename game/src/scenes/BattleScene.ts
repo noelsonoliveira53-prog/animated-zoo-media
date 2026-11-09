@@ -4,6 +4,7 @@ import { motion, shake } from '../ui/motion';
 import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
 import { heroCardRows, heroXpProgress } from '../systems/heroCard';
 import { pickEnemy } from '../systems/enemyPick';
+import { snapRally } from '../systems/rallySnap';
 import { waveChart } from '../systems/waveChart';
 import { runSummary, shortNum } from '../systems/runSummary';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
@@ -102,7 +103,11 @@ export class BattleScene extends Phaser.Scene {
   private callFull = 1; // the countdown's starting length, so the strip drains from full
   private callLast = 0;
   private skillPreview = false;
-  private skillHold = false; // touch: the finger is holding the skill button
+  private skillHold = false;
+  private rallyDrag = false; // touch: dragging a rally flag
+  private rallyFinger: Vec2 | null = null;
+  private rallyG: Phaser.GameObjects.Graphics | null = null;
+  private rallyGhost: Phaser.GameObjects.Image | null = null; // touch: the finger is holding the skill button
   private aimHold = false; // touch: the finger is aiming an armed spell // the pointer is over the hero's skill button
   private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
   private aimText: Phaser.GameObjects.Text | null = null;
@@ -278,7 +283,11 @@ export class BattleScene extends Phaser.Scene {
 
     this.input.on('pointerdown', (p: Phaser.Input.Pointer) => {
       if (this.rallyMode !== null) {
-        this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY });
+        if (p.wasTouch) {
+          // touch: drag a ghost flag along the road, let go to plant it
+          this.rallyDrag = true;
+          this.rallyFinger = { x: p.worldX, y: p.worldY };
+        } else this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY });
         return;
       }
       if (this.spellMode !== null) {
@@ -304,15 +313,23 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-THREE', () => this.armSpell(SPELL_ORDER[2]));
     this.input.keyboard?.on('keydown-ESC', () => (this.spellMode ? this.armSpell(null) : this.togglePause()));
     this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
+      if (this.rallyDrag) this.rallyFinger = { x: p.worldX, y: p.worldY };
       if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY - (this.aimHold ? TOUCH_AIM_LIFT : 0));
     });
     this.input.on('pointerup', (p: Phaser.Input.Pointer) => {
+      if (this.rallyDrag && this.rallyMode !== null) {
+        this.rallyDrag = false;
+        this.rallyGhost?.setVisible(false);
+        this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY - TOUCH_AIM_LIFT }, true);
+        return;
+      }
       // a touch skill-hold that slid off the button: cancel quietly
       if (this.skillHold) {
         this.skillHold = false;
         this.skillPreview = false;
     this.skillHold = false;
     this.aimHold = false;
+    this.rallyDrag = false;
       }
       if (!this.aimHold || !this.spellMode) return;
       this.aimHold = false;
@@ -2122,6 +2139,8 @@ export class BattleScene extends Phaser.Scene {
     this.spellHud = this.add.graphics().setDepth(3000);
     this.reticle = this.add.circle(0, 0, 60, 0xffffff, 0.12).setStrokeStyle(3, C.cream, 0.9).setDepth(2900).setVisible(false);
     this.aimG = this.add.graphics().setDepth(2905);
+    this.rallyG = this.add.graphics().setDepth(3290);
+    this.rallyGhost = null;
     this.aimText = this.add.text(0, 0, '', textStyle(pf(14), TEXT.cream)).setOrigin(0.5).setDepth(2906).setVisible(false);
     SPELL_ORDER.forEach((id, i) => {
       const p = this.spellPos(i);
@@ -3067,7 +3086,7 @@ export class BattleScene extends Phaser.Scene {
             this.closeMenu();
             this.rallyMode = slot;
             this.drawRange(pos, stats.range, tower.def.color);
-            this.showBanner('Rally Point', 'Tap the road inside the circle to send your Wardens there');
+            this.showBanner('Rally Point', this.input.activePointer.wasTouch ? 'Drag the flag onto the road inside the circle' : 'Tap the road inside the circle to send your Wardens there');
           }),
         );
       } else {
@@ -3234,19 +3253,53 @@ export class BattleScene extends Phaser.Scene {
     return card;
   }
 
-  private placeRally(slot: number, p: Vec2): void {
+  private placeRally(slot: number, p: Vec2, touch = false): void {
+    const t = this.sim.towers[slot];
+    const snap = t ? snapRally(this.sim.paths, p, t.pos, this.sim.stats(t).range) : { point: null, ok: false };
+    const placed = !!snap.point && snap.ok && this.sim.setRally(slot, snap.point);
+    if (!placed && touch) {
+      // keep the circle up so the player can drag again
+      this.floatText(p.x, p.y, snap.point ? 'Out of reach!' : 'Drop it on the road', TEXT.heart, 18);
+      return;
+    }
     this.rallyMode = null;
     this.rangeRing.clear();
     this.rangeDash?.setVisible(false);
     this.children.getByName('banner')?.destroy();
-    const onRoad = this.sim.paths.some((path) => path.distanceTo(p) < 34);
-    if (onRoad && this.sim.setRally(slot, p)) {
-      const t = this.sim.towers[slot];
-      if (t) this.updateRallyFlag(t.uid, p);
+    if (placed && t && snap.point) {
+      this.updateRallyFlag(t.uid, snap.point);
       sfx.click();
     } else {
       this.floatText(p.x, p.y, 'Out of reach!', TEXT.heart, 18);
     }
+  }
+
+  /** Touch rally drag: a ghost flag above the finger, snapped onto the road, green when it can be planted. */
+  private drawRallyGhost(): void {
+    const g = this.rallyG;
+    if (!g) return;
+    g.clear();
+    const slot = this.rallyMode;
+    if (!this.rallyDrag || slot === null || !this.rallyFinger) {
+      this.rallyGhost?.setVisible(false);
+      return;
+    }
+    const t = this.sim.towers[slot];
+    if (!t) return;
+    const at = { x: this.rallyFinger.x, y: this.rallyFinger.y - TOUCH_AIM_LIFT };
+    const snap = snapRally(this.sim.paths, at, t.pos, this.sim.stats(t).range);
+    const spot = snap.point ?? at;
+    const color = snap.ok ? 0x7be35a : 0xff5d4a;
+    if (snap.point) {
+      g.lineStyle(2, 0xffffff, 0.5);
+      g.lineBetween(at.x, at.y, spot.x, spot.y);
+    }
+    g.fillStyle(color, 0.22);
+    g.fillEllipse(spot.x, spot.y, 46, 20);
+    g.lineStyle(2.5, color, 0.95);
+    g.strokeEllipse(spot.x, spot.y, 46, 20);
+    if (!this.rallyGhost) this.rallyGhost = this.add.image(0, 0, 'rally').setDepth(3300);
+    this.rallyGhost.setPosition(spot.x + 6, spot.y - 10).setVisible(true).setAlpha(snap.ok ? 0.95 : 0.5).setTint(snap.ok ? 0xffffff : 0xff9a8a);
   }
 
   private updateRallyFlag(towerUid: number, p: Vec2): void {
@@ -3344,6 +3397,7 @@ export class BattleScene extends Phaser.Scene {
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
     this.drawAim();
+    this.drawRallyGhost();
     this.syncHero();
     this.drawSpellHud();
     this.fx.draw();

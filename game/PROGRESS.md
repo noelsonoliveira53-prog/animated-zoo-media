@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **301** (next balance pass at iteration 305)
+Iteration counter: **302** (next balance pass at iteration 305)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1962,6 +1962,12 @@ Iteration counter: **301** (next balance pass at iteration 305)
     - `spellsCast`.
   - New `systems/runSummary.ts` (`runSummary`, `shortNum`) with 5 tests (318 total), including a real sim run where towers deal damage and score kills.
   - `result-check.mjs` now seeds two towers and tallies and reads the summary back; no console errors. A level 5 spot check is identical to iteration 300, so combat is untouched. Screenshot `screenshots/301.png`.
+- **Iteration 302: rally flag on touch.**
+  - In rally mode on a touch screen, pressing shows a ghost flag 60 px above the finger, snapped onto the nearest road, with a ring that is green when the spot is inside the tower's reach and red when it isn't, plus a line from the finger to the snap point. Lifting plants it.
+  - On touch, a miss ("Out of reach!" or "Drop it on the road") keeps rally mode and the reach circle up, so the player can drag again.
+  - Mouse clicks also snap to the road now, so flags always sit on the road's centre line; the snap is generous (46 px instead of the old 34 px on-road check). The banner text names the gesture for each input.
+  - New `systems/rallySnap.ts` (`snapRally`, `RALLY_SNAP`) with 4 tests (322 total).
+  - New `scripts/rallydrag-check.mjs` (real touch drag over CDP on a phone: ghost shown mid-drag, flag planted on the road, a drop out of reach keeps rally mode; no console errors). A desktop click a little off the road snapped onto its centre. Screenshot `screenshots/302.png`.
 
 ## In Progress
 - (none)
@@ -1969,8 +1975,8 @@ Iteration counter: **301** (next balance pass at iteration 305)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Rally point on touch: drag the rally flag instead of tap-to-place, with the reach circle and a snap to the road.
-2. Tower kill counter: a tiny kill tally on each tower's info card (from the new `killsBy`), plus a "veteran" glint on towers past 50 kills.
+1. Tower kill counter: a tiny kill tally on each tower's info card (from the new `killsBy`), plus a "veteran" glint on towers past 50 kills.
+2. Hero move on touch: drag from the hero to a spot (with a path preview line) instead of tap-hero-then-tap-ground.
 
 ## Known Bugs
 - (none known)

@@ -13,6 +13,8 @@ FONT_DIR = os.path.join(HERE, "fonts")
 SLOT = {"truck": "1:40 PM", "bloop": "1:50 PM", "gizmo": "2:10 PM", "fruity": "2:20 PM", "moon": "7:00 PM", "zoo": "4:00 PM"}
 HILITE = {"truck": "&H0000D7FF&", "bloop": "&H00FF66CC&", "fruity": "&H0040C0FF&", "moon": "&H00FFE0A0&", "gizmo": "&H00FFD040&", "zoo": "&H0000D7FF&"}
 
+LOUD = "loudnorm=I=-14:TP=-1.5:LRA=11"   # YouTube reference loudness; set per channel in main()
+
 def arg(k, d=None):
     return sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
 
@@ -114,6 +116,8 @@ def main():
         job["thumb_frame"] = max(0, job.get("thumb_frame", 120) - int(trim * 24))
     song = json.load(open(os.path.join(HERE, "songs", job.get("song", jid) + ".json")))
     meta = song["meta"]; ch = job["channel"]
+    global LOUD
+    LOUD = "loudnorm=I=-16:TP=-1.5:LRA=11" if ch == "moon" else "loudnorm=I=-14:TP=-1.5:LRA=11"   # lullabies a bit softer
     repo = arg("--repo", "/home/claude/animated-zoo-media")
     work = os.path.join(HERE, "finished"); os.makedirs(work, exist_ok=True)
     sub = os.path.join(work, jid + ".ass")
@@ -122,13 +126,13 @@ def main():
     if "--hd" in sys.argv and os.environ.get("ZOO_ALLOW_HD"):   # legacy 1080p path, disabled unless explicitly allowed
         vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libx264", "-preset", "veryfast", "-crf", "22", "-maxrate", "4M", "-bufsize", "8M",
-                        "-pix_fmt", "yuv420p", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+                        "-pix_fmt", "yuv420p", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
     else:   # 4K: lanczos upscale + light sharpen, lyrics burned at 4K (crisp), AV1 10-bit sized to stay under GitHub's 100 MB
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", raw], capture_output=True, text=True).stdout.strip() or timing["duration"])
         vb = int(((94 * 8 * 1e6) / dur - 192e3) * 0.96)
         vf = f"scale=3840:2160:flags=lanczos,unsharp=5:5:0.5:5:5:0.0,subtitles={sub}:fontsdir={FONT_DIR}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
-                        "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+                        "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
         print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")
         # quality gate: every published episode must be 3840x2160 and under 100 MB (GitHub raw upload limit)
         wh = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", out], capture_output=True, text=True).stdout.strip()
@@ -136,7 +140,7 @@ def main():
         if os.path.getsize(out) >= 99.5e6:   # re-encode tighter once
             vb = int(vb * 0.9)
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
-                            "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
+                            "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
             if os.path.getsize(out) >= 99.5e6: sys.exit("QUALITY GATE: 4K file still over 100 MB")
     # thumbnail: the thumb frame + big words
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)

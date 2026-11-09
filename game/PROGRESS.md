@@ -1912,8 +1912,7 @@ Iteration counter: **291** (next balance pass at iteration 295)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Enemy info card: tapping an enemy on the road shows a small card (name, health bar, armor / magic resist, speed, key trait) that follows it.
-
-2. Village defense bars: when the village is raided or a building is under construction, show the same rounded bar style for construction progress.
+2. Village construction bars: the building-in-progress timer bar in the village gets the same rounded, glossy style.
 
 ## Known Bugs
 - (none known)

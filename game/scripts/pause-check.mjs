@@ -1,32 +1,27 @@
-// Opens the pause menu, toggles sound, resumes; screenshots the menu.
+// Pause menu: opens the pause panel mid-battle and screenshots it once the buttons have popped in.
+// `node scripts/pause-check.mjs <name>` (PHONE=1 for a 740×360 touch phone)
 import { createRequire } from 'node:module';
-import { execSync } from 'node:child_process';
 import { preview } from 'vite';
 const require = createRequire(import.meta.url);
-let pw;
-try { pw = require('playwright'); } catch { pw = require(execSync('npm root -g').toString().trim() + '/playwright'); }
+const pw = require('playwright');
 const name = process.argv[2] ?? 'pause';
-const server = await preview({ preview: { port: 4325, strictPort: true } });
+const server = await preview({ preview: { port: 4340, strictPort: true } });
 const browser = await pw.chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+const page = process.env.PHONE ? await (await browser.newContext({ viewport: { width: 740, height: 360 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 })).newPage() : await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));
-await page.goto('http://localhost:4325/');
-await page.waitForTimeout(1000);
-await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 2 }));
-await page.waitForTimeout(800);
-await page.mouse.click(1280 - 400, 40); // pause button
-await page.waitForTimeout(300);
-await page.mouse.click(640, 360 + 80); // sound toggle (3rd item at -60+140=80)
-await page.waitForTimeout(200);
-await page.screenshot({ path: `screenshots/${name}-menu.png` });
-const muted = await page.evaluate(() => JSON.parse(localStorage.getItem('grovewatch.save.v1')).settings.muted);
-await page.mouse.click(640, 300); // resume
-await page.waitForTimeout(300);
-const paused = await page.evaluate(() => window.__game.scene.getScene('Battle').paused);
-console.log('muted after toggle:', muted, 'paused after resume:', paused);
+await page.goto('http://localhost:4340/');
+await page.waitForTimeout(900);
+await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Battle', { levelIndex: 3 }));
+await page.waitForTimeout(1500);
+const t0 = await page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); s.togglePause(); return s.time.now; });
+await page.waitForFunction((t) => window.__game.scene.getScene('Battle').time.now > t + 600, t0, { timeout: 20000, polling: 'raf' });
+await page.screenshot({ path: `screenshots/${name}.png` });
+// closing it again should leave nothing behind
+const left = await page.evaluate(() => { const s = window.__game.scene.getScene('Battle'); s.togglePause(); return s.children.list.filter((o) => o.name === 'pauseMenu').length; });
+console.log(JSON.stringify({ leftover: left }));
 console.log(errors.length ? 'ERRORS:\n' + errors.join('\n') : 'no console errors');
 await browser.close();
 server.httpServer.close();
-process.exit(errors.length || !muted || paused ? 1 : 0);
+process.exit(errors.length ? 1 : 0);

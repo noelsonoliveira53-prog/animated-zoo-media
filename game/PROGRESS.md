@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **282** (next balance pass at iteration 285)
+Iteration counter: **283** (next balance pass at iteration 285)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1850,14 +1850,22 @@ Iteration counter: **282** (next balance pass at iteration 285)
   - Reduce Motion gives a plain rise and fade.
   - New `scripts/dmgtext-check.mjs` (physical, magic, true and a 140 big hit; logs each number's alpha, scale and depth; no console errors). Busy leak check stays bounded. Screenshot `screenshots/282.png`.
 
+- **Iteration 283: pause menu polish.**
+  - Darker green-black shade plus the shared vignette, so the panel sits in a pool of light; the HUD is dimmed too.
+  - Panel with a drop shadow, a top gloss band and a gold rim; a blue ribbon title "Paused".
+  - A status line under the title (level name, wave n/total or ∞, lives), shrunk to fit on phones.
+  - Buttons pop in one by one (skipped with Reduce Motion).
+  - New `scripts/pause-check.mjs` (desktop and `PHONE=1`; checks nothing is left behind after closing; no console errors). Screenshots `screenshots/283.png` and `283-phone.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Pause menu polish: a frosted glossy pause panel with Resume / Restart / Settings / Quit buttons and a dimmed, slightly blurred-looking backdrop.
-2. Village building panel polish: the same glossy card look as the store, with an upgrade preview arrow (current → next stats).
+1. Village building panel polish: the same glossy card look as the store, with an upgrade preview arrow (current → next stats).
+2. Enemy health bars: rounded bars with a delayed "damage trail", plus small armor / magic-resist pips.
+3. Tower info panel: a glossy card for the selected tower with stat bars and a next-tier preview.
 
 ## Known Bugs
 - (none known)

@@ -2638,14 +2638,25 @@ export class BattleScene extends Phaser.Scene {
     this.closeMenu();
     this.children.getByName('banner')?.destroy();
     const c = this.add.container(GAME_W / 2, GAME_H / 2).setDepth(4800).setName('pauseMenu');
-    const shade = this.add.rectangle(0, 0, GAME_W, GAME_H, 0x000000, 0.45).setInteractive();
+    const shade = this.add.rectangle(0, 0, GAME_W, GAME_H, 0x0a1410, 0.55).setInteractive();
     shade.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
+    // a darker rim around the screen so the panel sits in a pool of light
+    const rim = this.add.image(-GAME_W / 2, -GAME_H / 2, 'fx_vignette').setOrigin(0, 0).setAlpha(0.9);
     const bg = this.add.graphics();
+    bg.fillStyle(0x000000, 0.35);
+    bg.fillRoundedRect(-194, -182, 400, 392, 26);
     bg.fillStyle(C.ink, 1);
-    bg.fillRoundedRect(-200, -190, 400, 380, 26);
-    bg.fillStyle(C.panel, 1);
-    bg.fillRoundedRect(-192, -182, 384, 364, 22);
-    c.add([shade, bg, this.add.text(0, -140, 'Paused', textStyle(44, TEXT.gold)).setOrigin(0.5)]);
+    bg.fillRoundedRect(-200, -190, 400, 392, 26);
+    bg.fillStyle(C.panel, 0.97);
+    bg.fillRoundedRect(-192, -182, 384, 376, 22);
+    bg.fillStyle(0xffffff, 0.05);
+    bg.fillRoundedRect(-188, -178, 376, 70, { tl: 20, tr: 20, bl: 6, br: 6 });
+    bg.lineStyle(2, 0xc8a050, 0.6);
+    bg.strokeRoundedRect(-196, -186, 392, 384, 24);
+    c.add([shade, rim, bg, ribbon(this, -150, 260, 0x3a6a8a, 0x1a3a5a), this.add.text(0, -150, 'Paused', textStyle(40, '#e8f4ff')).setOrigin(0.5).setStroke('#0a1a2a', 8)]);
+    // where you are: level, wave and lives at a glance
+    const wave = `${Math.max(0, this.sim.waveIndex + 1)}/${this.endless ? '∞' : this.sim.totalWaves}`;
+    c.add(fitWidth(this.add.text(0, -98, `${this.level.name}  •  Wave ${wave}  •  ${this.sim.lives} lives`, textStyle(pf(14), TEXT.cream, false)).setOrigin(0.5), 340));
     const soundLabel = () => (loadSave().settings.muted ? 'Sound: Off' : 'Sound: On');
     const items: [string, number, () => void][] = [
       ['Resume', C.leaf, () => this.togglePause()],
@@ -2654,7 +2665,11 @@ export class BattleScene extends Phaser.Scene {
       ['Quit to Map', 0xff9f43, () => this.scene.start('WorldMap', { focus: this.levelIndex })],
     ];
     items.forEach(([label, color, fn], i) => {
-      const b = new Button(this, 0, -60 + i * 70, label, { width: 260, height: 56, fontSize: 22, color, onClick: fn });
+      const b = new Button(this, 0, -46 + i * 64, label, { width: 260, height: 54, fontSize: 22, color, onClick: fn });
+      if (!motion.reduced) {
+        b.setScale(0.6).setAlpha(0);
+        this.tweens.add({ targets: b, scale: 1, alpha: 1, delay: 60 + i * 50, duration: 180, ease: 'Back.easeOut' });
+      }
       if (i === 2) {
         b.removeAllListeners('pointerdown');
         b.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {

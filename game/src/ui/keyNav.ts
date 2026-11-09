@@ -1,6 +1,7 @@
 import Phaser from 'phaser';
 import { C, GAME_H, GAME_W } from './theme';
 import { FocusDir, isBackLabel, nextFocus } from '../systems/focusNav';
+import { hideTip, showTip } from './tooltip';
 
 type GO = Phaser.GameObjects.GameObject & {
   visible?: boolean;
@@ -98,6 +99,9 @@ export class KeyNavPlugin extends Phaser.Plugins.ScenePlugin {
       this.focused = i >= 0 ? ts[i].obj : null;
       this.shown = true;
       this.drawRing();
+      // an icon-only control explains itself when the focus ring lands on it
+      hideTip(this.scene!);
+      if (this.focused?.getData?.('tip')) showTip(this.focused);
       return;
     }
     if (press && this.shown && this.focused && ts.some((t) => t.obj === this.focused)) {

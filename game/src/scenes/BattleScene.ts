@@ -31,6 +31,7 @@ import { ambienceFor, weatherFor } from '../data/weather';
 import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { pickBannerY } from '../systems/bannerSpot';
 import { enemyStatuses, iconX, soldierStatuses, type StatusIcon } from '../systems/statusIcons';
+import { attachTip } from '../ui/tooltip';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -2299,6 +2300,7 @@ export class BattleScene extends Phaser.Scene {
       color: C.sky,
       onClick: () => this.cycleSpeed(),
     }).setDepth(3001);
+    attachTip(this.speedBtn, 'Game speed: x1, x2, x3');
     this.pauseBtn = new Button(this, GAME_W - 400, 40, 'II', {
       width: 80,
       height: 52,
@@ -2306,6 +2308,7 @@ export class BattleScene extends Phaser.Scene {
       color: C.sky,
       onClick: () => this.togglePause(),
     }).setDepth(3001);
+    attachTip(this.pauseBtn, () => (this.paused ? 'Resume (Space)' : 'Pause (Space)'));
     this.bossBar = this.add.graphics().setDepth(3001);
     this.bossLabel = this.add.text(GAME_W / 2, 92, '', textStyle(18, TEXT.heart)).setOrigin(0.5).setDepth(3002).setVisible(false);
     this.refreshHud();
@@ -2336,6 +2339,7 @@ export class BattleScene extends Phaser.Scene {
       this.spellWasReady[id] = true; // no ping for spells that start ready
       fitWidth(this.add.text(p.x, p.y + 30, SPELLS[id].name, textStyle(pf(12))).setOrigin(0.5).setDepth(3002), 84);
       const zone = this.add.zone(p.x, p.y, 80, 80).setDepth(3002).setInteractive({ useHandCursor: true });
+      attachTip(zone, `${SPELLS[id].name} (key ${i + 1}): ${SPELLS[id].text}`, { touch: false }); // touch already shows the spell card
       zone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
         ev.stopPropagation();
         sfx.unlock();
@@ -2657,6 +2661,8 @@ export class BattleScene extends Phaser.Scene {
     const portrait = this.add.image(px, py + 6, `hero_${h.def.id}`).setDepth(3001).setScale(1.05);
     this.heroPortrait = portrait;
     portrait.setInteractive(new Phaser.Geom.Circle(26, 30, 40), Phaser.Geom.Circle.Contains);
+    if (portrait.input) portrait.input.cursor = 'pointer'; // a hand cursor, and reachable by the keyboard focus ring
+    attachTip(portrait, `${h.def.name}: select or move (H)`);
     portrait.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();
@@ -2669,6 +2675,7 @@ export class BattleScene extends Phaser.Scene {
     });
     this.heroLevelText = this.add.text(px + 30, py + 30, '1', textStyle(18, TEXT.gold)).setOrigin(0.5).setDepth(3002);
     const skillZone = this.add.zone(px + 104, py, 76, 76).setDepth(3002).setInteractive({ useHandCursor: true });
+    attachTip(skillZone, `${h.def.active.name} (Q): ${h.def.active.text}`, { touch: false });
     skillZone.on('pointerover', () => (this.skillPreview = true));
     skillZone.on('pointerout', () => (this.skillPreview = false));
     const fireSkill = () => {

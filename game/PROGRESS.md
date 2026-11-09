@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F13**
+Fix counter: **F14**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2117,10 +2117,17 @@ Fix counter: **F13**
 
   `BattleScene.drawStatusIcon` draws each as a small ink disc with a symbol: a pale-blue snowflake (slow), pink double chevrons (haste), an orange flame (rage), a grey anchor (anchored), a green venom drop (poison), an amber honey drop (glaze) and a yellow bolt (stun). Icons sit right of the health bar, or in a row over the head when the bar is hidden; bosses show them over the head. The old tints stay as a second cue. 5 tests. New `scripts/status-icons-check.mjs` and close-up `fix-13-icons.png`.
 
+- **F14 (A4) Tooltips on icon-only controls.** New `src/ui/tooltip.ts` (`attachTip(obj, text | () => text, { touch })`) with pure placement in `src/ui/tipPlace.ts` (centred under the control, flipped above if there's no room, kept on screen; 3 tests).
+  - When it shows: on mouse hover after 350 ms, on a 450 ms long press on touch screens, and whenever the keyboard focus ring lands on the control (keyNav calls `showTip`).
+  - It uses real-time timers, so it works while the battle is paused.
+  - Attached to the battle HUD's icon controls: pause ("Pause / Resume (Space)"), speed ("Game speed: x1, x2, x3"), each spell ("Starfall (key 1): …"), the hero skill ("Earthshake (Q): …") and the hero portrait ("Bramble the Badger Knight: select or move (H)"). The portrait also gets a hand cursor, so the focus ring can reach it.
+  - Spells and the hero skill skip the touch long-press, because touch already shows their card.
+
+  New `scripts/tooltip-check.mjs` hovers pause and a spell on desktop, checks the tip clears on leave, and long-presses pause on a phone (it still explains itself while paused). Screenshots `fix-14-pause.png`, `fix-14-spell.png`, `fix-14-phone.png`.
+
 ### Fix Backlog (ranked)
-1. **A4** Tooltips on icon-only controls.
-2. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-3. Then resume the Design Backlog below.
+1. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+2. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

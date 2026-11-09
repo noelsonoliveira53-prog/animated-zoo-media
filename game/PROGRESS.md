@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **316** (next balance pass at iteration 320)
+Iteration counter: **316** (feature loop stopped at the user's request; design loop running, see Design Loop below) (next balance pass at iteration 320)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2050,7 +2050,39 @@ Iteration counter: **316** (next balance pass at iteration 320)
 ## In Progress
 - (none)
 
-## Backlog (ranked)
+## Design Loop (requested by the user after iteration 316)
+**Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**
+Each design iteration (D-number) picks one visual item below and redraws it in code: shading, outline, highlights and signature details, with gameplay data untouched. It is checked with `scripts/design-sheet.mjs <name> <prefix> [scale]` before/after sheets plus an in-game screenshot, and tsc, build and vitest must pass. Every 5th design iteration is a consistency pass (palette, outline weight, phone readability).
+
+Design counter: **D1**
+
+### Design Done
+- **D1: heroes.**
+  - New `orb()` helper in BootScene: a shaded body part with a darker lower-right crescent, an upper-left highlight and a crisp ink outline. All six heroes use it for body and head.
+  - **Bug fixed:** the hero texture grew from 60 to 70 px tall; the 60 px height clipped Fen's cap, Hazel's nightcap and Sorrel's ears.
+  - **Signature details:**
+    - Bramble: a red cape, a shaded bark breastplate with a gold stud, and a leaf crest.
+    - Ember: a shaded robe with gold trim and hem, and a layered flame (halo, tongue, white-hot core).
+    - Fen: a quiver of arrows and a red scarf.
+    - Hazel: a glowing lantern on a stick.
+    - Sorrel: a satchel strap and a medic headband with a leaf.
+    - Wren: speckled chest feathers and round spectacles.
+  - The first try greyed Ember's ears (they inherited the highlight colour) and clipped Hazel's lantern; both fixed.
+  - New `scripts/design-sheet.mjs`. The HUD portrait and in-battle hero still sit right (`herobadge`, `skillaim`). Sheets `screenshots/design-1-before.png` and `design-1-after.png`. 341 tests.
+
+### Design Backlog (ranked)
+1. Enemies, part 1 (Grovelands and Frostfern foes: Mudling, Skitter, Shellback, Gloomwing, Gnat, Bogmender, Reedguard, Splotch, Thornhog, Wispling, Puffcap, Veilstalker): shading via `orb`, eye shine, and one signature detail each.
+2. Enemies, part 2 (the rest of the regular foes, region by region).
+3. Bosses: shading, crowns and horns with metal shine, a faint aura ring, and bigger silhouettes.
+4. Towers: every tier and branch gets shaded stone and wood, roof highlights, and banners in the tower colour.
+5. Consistency pass: palette, outline weight and phone readability across heroes, enemies and towers.
+6. Wardens, Rangers and raid troops: shaded bodies, armor glints and readable silhouettes.
+7. Battle maps: richer path edges, theme props per region (snow drifts, ember cracks, dusk mushrooms, reef coral…) and soft vignettes.
+8. Village buildings and villagers: shading, roof tiles and windows.
+9. Raid camp buildings: Murkhorde style, shaded.
+10. Consistency pass.
+
+## Feature Backlog (paused while the design loop runs)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
 1. Raid loot feedback: loot flies from a destroyed camp building to the raid HUD's loot counter.

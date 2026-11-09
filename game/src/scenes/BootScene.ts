@@ -3390,10 +3390,28 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
   }
 
+  /**
+   * A shaded rounded body part: base colour, a darker crescent toward the lower right, a soft highlight toward the
+   * upper left, then a crisp ink outline — gives the flat shapes some volume (design pass, iteration D1).
+   */
+  private orb(g: Phaser.GameObjects.Graphics, x: number, y: number, w: number, h: number, color: number, outline = 2.5): void {
+    const dark = Phaser.Display.Color.IntegerToColor(color).darken(18).color;
+    g.fillStyle(dark, 1);
+    g.fillEllipse(x, y, w, h);
+    g.fillStyle(color, 1);
+    g.fillEllipse(x - w * 0.06, y - h * 0.07, w * 0.86, h * 0.84);
+    g.fillStyle(0xffffff, 0.28);
+    g.fillEllipse(x - w * 0.2, y - h * 0.24, w * 0.32, h * 0.2);
+    if (outline > 0) {
+      g.lineStyle(outline, C.ink, 1);
+      g.strokeEllipse(x, y, w, h);
+    }
+  }
+
   private makeHero(id: string): void {
     const g = this.g();
     const w = 52;
-    const h = 60;
+    const h = 70; // 60 clipped Fen's cap, Hazel's nightcap and Sorrel's ears; the art is drawn up from the feet
     const cx = w / 2;
     const base = h - 6;
     g.fillStyle(0x000000, 0.25);
@@ -3405,15 +3423,27 @@ export class BootScene extends Phaser.Scene {
       g.lineBetween(cx - 4, base - 2, cx - 3, base - 18);
       g.lineBetween(cx + 4, base - 2, cx + 3, base - 18);
       g.lineStyle(3, C.ink, 1);
-      g.fillStyle(0xdde8f0, 1);
-      g.fillEllipse(cx, base - 26, 22, 22);
-      g.strokeEllipse(cx, base - 26, 22, 22);
+      // a quiver of arrows on the back (behind the body)
+      g.fillStyle(0x7a5232, 1);
+      g.fillRoundedRect(cx + 5, base - 44, 7, 20, 3);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeRoundedRect(cx + 5, base - 44, 7, 20, 3);
+      g.fillStyle(0xe8e0c8, 1);
+      for (let k = 0; k < 3; k++) g.fillTriangle(cx + 5 + k * 2.5, base - 44, cx + 7 + k * 2.5, base - 44, cx + 6 + k * 2.5, base - 50);
+      this.orb(g, cx, base - 26, 22, 22, 0xdde8f0, 3);
       g.fillStyle(0x7fb0d8, 1);
       g.fillEllipse(cx + 3, base - 24, 14, 16);
+      g.fillStyle(0x5a8ab8, 0.6);
+      g.fillEllipse(cx + 5, base - 21, 9, 9);
+      // a knitted scarf
+      g.fillStyle(0xd8584a, 1);
+      g.fillRoundedRect(cx - 6, base - 37, 12, 5, 2);
+      g.fillRect(cx - 5, base - 34, 4, 9);
+      g.fillStyle(0xf09080, 1);
+      g.fillRect(cx - 5, base - 30, 4, 1.5);
       g.fillStyle(0xdde8f0, 1);
-      g.fillRect(cx - 3, base - 46, 6, 14);
-      g.fillCircle(cx, base - 46, 7);
-      g.strokeCircle(cx, base - 46, 7);
+      g.fillRect(cx - 3, base - 46, 6, 10);
+      this.orb(g, cx, base - 46, 14, 14, 0xdde8f0, 3);
       g.fillStyle(0xf0b040, 1);
       g.fillTriangle(cx + 5, base - 48, cx + 5, base - 44, cx + 20, base - 46);
       g.fillStyle(0x334455, 1);
@@ -3432,11 +3462,20 @@ export class BootScene extends Phaser.Scene {
       g.fillStyle(0xb88a5a, 1);
       g.fillEllipse(cx + 14, base - 14, 12, 20);
       g.strokeEllipse(cx + 14, base - 14, 12, 20);
-      g.fillStyle(0xd8b088, 1);
-      g.fillEllipse(cx, base - 18, 26, 28);
-      g.strokeEllipse(cx, base - 18, 26, 28);
+      this.orb(g, cx, base - 18, 26, 28, 0xd8b088, 3);
       g.fillStyle(0xf4e4c8, 1);
       g.fillEllipse(cx, base - 14, 14, 16);
+      // a tiny lantern on a stick, glowing warm
+      g.lineStyle(2, 0x7a5232, 1);
+      g.lineBetween(cx - 10, base - 14, cx - 15, base - 30);
+      g.fillStyle(0xffd060, 0.35);
+      g.fillCircle(cx - 16, base - 26, 7);
+      g.fillStyle(0x5a4a3a, 1);
+      g.fillRect(cx - 19, base - 31, 7, 2);
+      g.fillStyle(0xffe680, 1);
+      g.fillRoundedRect(cx - 18.5, base - 29, 6, 7, 2);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeRoundedRect(cx - 18.5, base - 29, 6, 7, 2);
       g.fillStyle(0xd8b088, 1);
       g.fillCircle(cx - 9, base - 46, 7);
       g.fillCircle(cx + 9, base - 46, 7);
@@ -3445,9 +3484,7 @@ export class BootScene extends Phaser.Scene {
       g.fillStyle(0xf0b8b8, 1);
       g.fillCircle(cx - 9, base - 46, 3.5);
       g.fillCircle(cx + 9, base - 46, 3.5);
-      g.fillStyle(0xd8b088, 1);
-      g.fillCircle(cx, base - 37, 11);
-      g.strokeCircle(cx, base - 37, 11);
+      this.orb(g, cx, base - 37, 22, 22, 0xd8b088, 3);
       g.fillStyle(0x111111, 1);
       g.fillCircle(cx - 4, base - 38, 2.6);
       g.fillCircle(cx + 4, base - 38, 2.6);
@@ -3467,11 +3504,12 @@ export class BootScene extends Phaser.Scene {
       g.fillCircle(cx + 16, base - 58, 3);
     } else if (id === 'sorrel') {
       // hare medic: long upright ears, cream belly, a red-cross moss satchel, sling in paw
-      g.fillStyle(0xc8a888, 1);
-      g.fillEllipse(cx, base - 18, 24, 28);
-      g.strokeEllipse(cx, base - 18, 24, 28);
+      this.orb(g, cx, base - 18, 24, 28, 0xc8a888, 3);
       g.fillStyle(0xf4e8d8, 1);
       g.fillEllipse(cx, base - 15, 13, 18);
+      // satchel strap across the chest
+      g.lineStyle(2.5, 0x8a6a4a, 1);
+      g.lineBetween(cx + 9, base - 30, cx - 11, base - 18);
       // ears
       g.fillStyle(0xc8a888, 1);
       g.fillEllipse(cx - 6, base - 56, 7, 22);
@@ -3482,9 +3520,12 @@ export class BootScene extends Phaser.Scene {
       g.fillEllipse(cx - 6, base - 55, 3, 15);
       g.fillEllipse(cx + 5, base - 56, 3, 15);
       // head
-      g.fillStyle(0xc8a888, 1);
-      g.fillCircle(cx, base - 38, 11);
-      g.strokeCircle(cx, base - 38, 11);
+      this.orb(g, cx, base - 38, 22, 22, 0xc8a888, 3);
+      // a white medic headband with a green leaf
+      g.fillStyle(0xf4f0e0, 1);
+      g.fillRect(cx - 10, base - 45, 20, 3.5);
+      g.fillStyle(0x4fae4a, 1);
+      g.fillEllipse(cx + 6, base - 43.5, 5, 3);
       g.fillStyle(0x111111, 1);
       g.fillCircle(cx - 4, base - 40, 2);
       g.fillCircle(cx + 4, base - 40, 2);
@@ -3509,15 +3550,16 @@ export class BootScene extends Phaser.Scene {
       g.fillEllipse(cx + 6, base - 2, 10, 5);
     } else if (id === 'wren') {
       // barn owl: round heart-shaped face, wings folded, scroll satchel
-      g.fillStyle(0xb8905a, 1);
-      g.fillEllipse(cx, base - 18, 26, 30);
-      g.strokeEllipse(cx, base - 18, 26, 30);
+      this.orb(g, cx, base - 18, 26, 30, 0xb8905a, 3);
+      // speckled chest feathers
+      g.fillStyle(0xf0dcb0, 1);
+      g.fillEllipse(cx, base - 14, 12, 16);
+      g.fillStyle(0x8a6a3a, 1);
+      for (const [dx, dy] of [[-3, -18], [2, -15], [-1, -11], [3, -9]]) g.fillCircle(cx + dx, base + dy, 0.9);
       g.fillStyle(0x9a7444, 1);
       g.fillEllipse(cx - 11, base - 18, 8, 22);
       g.fillEllipse(cx + 11, base - 18, 8, 22);
-      g.fillStyle(0xd8b880, 1);
-      g.fillCircle(cx, base - 38, 13);
-      g.strokeCircle(cx, base - 38, 13);
+      this.orb(g, cx, base - 38, 26, 26, 0xd8b880, 3);
       g.fillStyle(0xfff4e0, 1);
       g.fillEllipse(cx - 5, base - 38, 11, 14);
       g.fillEllipse(cx + 5, base - 38, 11, 14);
@@ -3526,6 +3568,14 @@ export class BootScene extends Phaser.Scene {
       g.fillCircle(cx + 5, base - 39, 2.4);
       g.fillStyle(0xe0a040, 1);
       g.fillTriangle(cx - 2, base - 35, cx + 2, base - 35, cx, base - 30);
+      // round reading spectacles
+      g.lineStyle(1.5, 0x5a4020, 1);
+      g.strokeCircle(cx - 5, base - 39, 4.5);
+      g.strokeCircle(cx + 5, base - 39, 4.5);
+      g.lineBetween(cx - 0.5, base - 39, cx + 0.5, base - 39);
+      g.fillStyle(0xffffff, 0.35);
+      g.fillCircle(cx - 6.5, base - 41, 1.2);
+      g.fillCircle(cx + 3.5, base - 41, 1.2);
       // satchel with a scroll
       g.fillStyle(0x7a5232, 1);
       g.fillRoundedRect(cx + 6, base - 20, 12, 10, 3);
@@ -3544,12 +3594,20 @@ export class BootScene extends Phaser.Scene {
       g.strokeEllipse(cx - 13, base - 14, 18, 12);
       g.fillStyle(0xffffff, 1);
       g.fillCircle(cx - 20, base - 15, 4);
-      g.fillStyle(0x8a4a9a, 1);
+      g.fillStyle(0x6a3478, 1);
       g.fillRoundedRect(cx - 9, base - 30, 18, 26, 7);
+      g.fillStyle(0x8a4a9a, 1);
+      g.fillRoundedRect(cx - 9, base - 30, 15, 24, 7);
+      g.fillStyle(0xffffff, 0.2);
+      g.fillRoundedRect(cx - 7, base - 28, 5, 12, 3);
+      // gold trim down the robe and along its hem
+      g.fillStyle(0xf0c040, 1);
+      g.fillRect(cx - 1, base - 26, 2, 21);
+      g.fillRect(cx - 8, base - 7, 16, 2.5);
+      g.lineStyle(3, C.ink, 1);
       g.strokeRoundedRect(cx - 9, base - 30, 18, 26, 7);
+      this.orb(g, cx, base - 36, 20, 20, 0xff8a3c, 3);
       g.fillStyle(0xff8a3c, 1);
-      g.fillCircle(cx, base - 36, 10);
-      g.strokeCircle(cx, base - 36, 10);
       g.fillTriangle(cx - 9, base - 40, cx - 3, base - 44, cx - 8, base - 52);
       g.fillTriangle(cx + 9, base - 40, cx + 3, base - 44, cx + 8, base - 52);
       g.fillStyle(0xffffff, 1);
@@ -3558,20 +3616,44 @@ export class BootScene extends Phaser.Scene {
       g.fillCircle(cx - 4, base - 38, 1.8);
       g.fillCircle(cx + 4, base - 38, 1.8);
       g.fillCircle(cx, base - 33, 1.5);
-      g.fillStyle(0xffd23c, 0.5);
-      g.fillCircle(cx + 15, base - 26, 8);
+      // the flame in her paw: a soft halo, an orange tongue and a white-hot core
+      g.fillStyle(0xffd23c, 0.28);
+      g.fillCircle(cx + 15, base - 27, 10);
+      g.fillStyle(0xff8a3c, 1);
+      g.fillTriangle(cx + 10, base - 25, cx + 20, base - 25, cx + 15, base - 39);
+      g.fillCircle(cx + 15, base - 25, 5);
       g.fillStyle(0xffe680, 1);
-      g.fillCircle(cx + 15, base - 26, 4.5);
+      g.fillCircle(cx + 15, base - 26, 3.5);
+      g.fillStyle(0xffffff, 1);
+      g.fillCircle(cx + 15, base - 26.5, 1.6);
     } else {
-      // badger knight with bark armor and a wooden sword
-      g.fillStyle(0x7a5232, 1);
+      // badger knight with bark armor, a red cape and a wooden sword
+      g.fillStyle(0xa8302a, 1);
+      g.fillTriangle(cx - 13, base - 30, cx + 13, base - 30, cx + 16, base - 4);
+      g.fillTriangle(cx - 13, base - 30, cx - 16, base - 4, cx + 16, base - 4);
+      g.fillStyle(0x7a1e1a, 1);
+      g.fillTriangle(cx + 4, base - 28, cx + 13, base - 30, cx + 16, base - 4);
+      g.lineStyle(2, C.ink, 1);
+      g.strokeTriangle(cx - 13, base - 30, cx - 16, base - 4, cx + 16, base - 4);
+      g.fillStyle(0x5a3a1e, 1);
       g.fillRoundedRect(cx - 12, base - 28, 24, 24, 8);
+      g.fillStyle(0x7a5232, 1);
+      g.fillRoundedRect(cx - 12, base - 28, 21, 22, 8);
+      g.fillStyle(0xffffff, 0.18);
+      g.fillRoundedRect(cx - 10, base - 26, 7, 10, 4);
+      g.lineStyle(3, C.ink, 1);
       g.strokeRoundedRect(cx - 12, base - 28, 24, 24, 8);
       g.fillStyle(0x9a6a40, 1);
       g.fillRect(cx - 10, base - 22, 20, 4);
-      g.fillStyle(0x3b3b3b, 1);
-      g.fillCircle(cx, base - 36, 12);
-      g.strokeCircle(cx, base - 36, 12);
+      g.fillStyle(0xf0c040, 1);
+      g.fillCircle(cx, base - 20, 2);
+      this.orb(g, cx, base - 36, 24, 24, 0x3b3b3b, 3);
+      // a little crest of leaves on top of the head
+      g.fillStyle(0x6ab04c, 1);
+      g.fillEllipse(cx - 3, base - 49, 5, 9);
+      g.fillEllipse(cx + 3, base - 50, 5, 10);
+      g.lineStyle(1.5, C.ink, 1);
+      g.strokeEllipse(cx + 3, base - 50, 5, 10);
       g.fillStyle(0xffffff, 1);
       g.fillRect(cx - 2.5, base - 48, 5, 18);
       g.fillStyle(0x111111, 1);

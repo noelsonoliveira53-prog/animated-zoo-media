@@ -3400,6 +3400,21 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
   }
 
+  /**
+   * Shade a chibi body + head (troops, Wardens, Rangers): a darker lower-right on both, a lit upper-left,
+   * with the head re-inked so the shading never covers its outline (design F34).
+   */
+  private shadeChibi(g: Phaser.GameObjects.Graphics, body: { x: number; y: number; w: number; h: number; r: number }, head: { x: number; y: number; r: number }): void {
+    g.fillStyle(0x000000, 0.16);
+    g.fillRoundedRect(body.x + body.w * 0.55, body.y + 2, body.w * 0.42, body.h - 3, Math.min(body.r, body.w * 0.2));
+    g.fillCircle(head.x + head.r * 0.35, head.y + head.r * 0.3, head.r * 0.62);
+    g.fillStyle(0xffffff, 0.28);
+    g.fillEllipse(body.x + body.w * 0.3, body.y + body.h * 0.28, body.w * 0.32, body.h * 0.26);
+    g.fillEllipse(head.x - head.r * 0.38, head.y - head.r * 0.42, head.r * 0.7, head.r * 0.45);
+    g.lineStyle(2.5, C.ink, 1);
+    g.strokeCircle(head.x, head.y, head.r); // only the head is re-inked: the body's outline sits under the head and stays covered
+  }
+
   private makeTroop(id: string): void {
     const def = TROOPS[id];
     const g = this.g();
@@ -3422,9 +3437,13 @@ export class BootScene extends Phaser.Scene {
     g.strokeRoundedRect(6, 12, 18, 17, 7);
     g.fillCircle(15, 10, 8);
     g.strokeCircle(15, 10, 8);
+    this.shadeChibi(g, { x: 6, y: 12, w: 18, h: 17, r: 7 }, { x: 15, y: 10, r: 8 });
     g.fillStyle(0x111111, 1);
     g.fillCircle(12, 10, 1.6);
     g.fillCircle(18, 10, 1.6);
+    g.fillStyle(0xffffff, 1);
+    g.fillCircle(11.5, 9.4, 0.6);
+    g.fillCircle(17.5, 9.4, 0.6);
     if (id === 'brawler') {
       g.fillStyle(0xffffff, 1);
       g.fillRect(13, 2, 4, 10);
@@ -3484,6 +3503,7 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(`troop_${id}`, w, h);
     g.destroy();
+    this.rimLight(`troop_${id}`, 0xfff0c8, 0.3);
   }
 
   /** Village buildings in a top-down 3/4 view. Bigger and fancier with each level. */
@@ -4294,18 +4314,30 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(0x3b3b3b, 1);
     g.fillCircle(14, 11, 9);
     g.strokeCircle(14, 11, 9);
+    this.shadeChibi(g, { x: 5, y: 13, w: 18, h: 16, r: 6 }, { x: 14, y: 11, r: 9 });
     g.fillStyle(0xffffff, 1);
     g.fillRect(12, 3, 4, 14);
     g.fillStyle(0x111111, 1);
     g.fillCircle(10.5, 11, 1.8);
     g.fillCircle(17.5, 11, 1.8);
+    g.fillStyle(0xffffff, 1);
+    g.fillCircle(10, 10.3, 0.7);
+    g.fillCircle(17, 10.3, 0.7);
+    // a belt buckle and a glint on the spear tip (design F34)
+    g.fillStyle(0xd8b04a, 1);
+    g.fillRect(12, 21, 4, 3);
     g.fillStyle(0xd9d2c0, 1);
     g.fillRect(23, 8, 3, 18);
     g.fillStyle(0x6f8fa8, 1);
     g.fillCircle(6, 21, 6);
     g.strokeCircle(6, 21, 6);
+    g.fillStyle(0xc8d8e8, 1);
+    g.fillCircle(6, 21, 2); // the shield boss
+    g.fillStyle(0xffffff, 0.6);
+    g.fillCircle(4.5, 19, 1.5);
     g.generateTexture('soldier', 30, 34);
     g.destroy();
+    this.rimLight('soldier', 0xfff0c8, 0.3);
 
     // Ranger (summoned by Grove Call): hedgehog in a green hood
     g = this.g();
@@ -4320,16 +4352,23 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(0x6fae4a, 1);
     g.fillCircle(14, 11, 9);
     g.strokeCircle(14, 11, 9);
+    this.shadeChibi(g, { x: 5, y: 13, w: 18, h: 16, r: 6 }, { x: 14, y: 11, r: 9 });
     g.fillStyle(0xe8c9a0, 1);
     g.fillEllipse(15, 13, 10, 8);
     g.fillStyle(0x111111, 1);
     g.fillCircle(12, 12, 1.6);
     g.fillCircle(18, 12, 1.6);
     g.fillCircle(15, 15, 1.4);
+    g.fillStyle(0xffffff, 1);
+    g.fillCircle(11.5, 11.4, 0.6);
+    g.fillCircle(17.5, 11.4, 0.6);
     g.fillStyle(0x7a5232, 1);
     g.fillRect(23, 6, 3, 20);
+    g.lineStyle(1.2, 0xe8e0c8, 1);
+    g.lineBetween(24.5, 6, 24.5, 26); // the bowstring
     g.generateTexture('ranger', 30, 34);
     g.destroy();
+    this.rimLight('ranger', 0xfff0c8, 0.3);
 
     // spell icons
     g = this.g();

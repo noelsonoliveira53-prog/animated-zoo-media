@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F5**
+Fix counter: **F6**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2071,8 +2071,15 @@ Fix counter: **F5**
 
   Grass tufts now spill over the verges: small fans of curved blades every ~46 px, leaning toward the road on side verges and skipped where another road runs. They are left off snow, lava, crystal, clockwork and abyss floors. New pure helper `roadEdgeSpots` in `systems/path.ts` (spots beside a road with outward normals) with 3 tests. Before/after: `fix-5-before-*` and `fix-5-after-*`.
 
+- **F6 Consistency pass (phone readability after F1–F5).** New `scripts/phone-tour.mjs` takes 740×360 touch screenshots of the menu, world map, two battles (levels 1 and 34) and settings. It restarts the same scene correctly when asked for the same scene again. Fixes:
+  - Every `Button` label now uses `pf()` (small labels grow on phones) and shrinks to fit inside its button, at creation and after any later `label.setText`.
+  - The menu's hero blurb uses the phone size but steps down until it fits between the name and the Train row (it was 14 px, about 7 CSS px on a phone).
+  - The "Starts at Lv" rank line uses `pf(15)` and fits before the Train button.
+  - The settings reset note and credits line use `pf`.
+
+  The palette and outlines of the new ground and roads are consistent across the meadow, frost, tidepool, gale and abyss themes (checked in F4/F5 shots). Keyboard, hit-size, test and build checks still pass. Before/after: `fix-6-before-*` and `fix-6-after-*`, plus `fix-6-desktop-menu.png`.
+
 ### Fix Backlog (ranked)
-0. **Consistency pass** (was due at F5; run it as F6): palette, outline weight, phone readability at 740×360 across the menu, map, battle HUD and cards after F1–F5.
 1. **F3** Contact shadows under trees, standing stones and flowers.
 2. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
 3. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).

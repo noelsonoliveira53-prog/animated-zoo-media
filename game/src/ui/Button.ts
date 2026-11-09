@@ -1,7 +1,7 @@
 import Phaser from 'phaser';
 import { C, textStyle } from './theme';
 import { sfx } from '../systems/audio';
-import { padHit } from './touch';
+import { fitWidth, padHit, pf } from './touch';
 
 export interface ButtonOpts {
   width?: number;
@@ -26,9 +26,17 @@ export class Button extends Phaser.GameObjects.Container {
     this.bh = opts.height ?? 56;
     this.color = opts.color ?? C.leaf;
     this.bg = scene.add.graphics();
-    this.label = scene.add.text(0, -2, text, textStyle(opts.fontSize ?? 24)).setOrigin(0.5);
+    // small labels grow on phones (pf), and every label shrinks to fit inside the button, now and after setText
+    this.label = scene.add.text(0, -2, text, textStyle(pf(opts.fontSize ?? 24))).setOrigin(0.5);
+    const setText = this.label.setText.bind(this.label);
+    this.label.setText = ((value: string | string[]) => {
+      setText(value);
+      this.fitLabel();
+      return this.label;
+    }) as typeof this.label.setText;
     this.add([this.bg, this.label]);
     this.draw();
+    this.fitLabel();
     this.setSize(this.bw, this.bh);
     this.setInteractive({ useHandCursor: true });
     padHit(this);
@@ -43,6 +51,11 @@ export class Button extends Phaser.GameObjects.Container {
     this.on('pointerover', () => this.enabled && this.setScale(1.04));
     this.on('pointerout', () => this.setScale(1));
     scene.add.existing(this);
+  }
+
+  private fitLabel(): void {
+    this.label.setScale(1);
+    fitWidth(this.label, this.bw - 16);
   }
 
   setEnabled(on: boolean): this {

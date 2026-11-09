@@ -4,7 +4,7 @@ import { addLighting } from '../ui/lighting';
 import { devOn, setDev } from '../systems/dev';
 import Phaser from 'phaser';
 import { motion } from '../ui/motion';
-import { pf } from '../ui/touch';
+import { fitWidth, pf } from '../ui/touch';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, isLevelUnlocked, totalStars } from '../data/levels';
@@ -132,10 +132,10 @@ export class MenuScene extends Phaser.Scene {
     this.tweens.add({ targets: sprite, y: sprite.y - 6, yoyo: true, repeat: -1, duration: 800, ease: 'Sine.easeInOut' });
     const name = this.add.text(x, y + 22, '', textStyle(24)).setOrigin(0.5);
     const info = this.add
-      .text(x, y + 80, '', { ...textStyle(14, TEXT.cream, false), align: 'center', wordWrap: { width: 340 } })
+      .text(x, y + 80, '', { ...textStyle(pf(14), TEXT.cream, false), align: 'center', wordWrap: { width: 340 } })
       .setOrigin(0.5);
 
-    const rankText = this.add.text(x - 170, y + 152, '', textStyle(15, TEXT.gold)).setOrigin(0, 0.5);
+    const rankText = this.add.text(x - 170, y + 152, '', textStyle(pf(15), TEXT.gold)).setOrigin(0, 0.5);
     const trainBtn = new Button(this, x + 95, y + 152, 'Train', {
       width: 170,
       height: 46,
@@ -163,10 +163,17 @@ export class MenuScene extends Phaser.Scene {
       sprite.setTexture(`hero_${h.id}`);
       name.setText(`${h.name} the ${h.title}`);
       info.setText(`${h.passive.text}\n${h.active.name}: ${h.active.text}`);
+      // as big as the phone size allows, stepping down until it fits between the name and the Train row
+      for (let size = pf(14); size >= 13; size--) {
+        info.setFontSize(size);
+        if (info.height <= 66) break;
+      }
       const s = loadSave();
       const rank = s.heroRanks[h.id] ?? 0;
       const cost = heroTrainCost(rank);
       rankText.setText(`Starts at Lv ${Math.min(HERO_MAX_LEVEL, rank + 1)}  ${'●'.repeat(rank)}${'○'.repeat(Math.max(0, 5 - rank))}`);
+      rankText.setScale(1);
+      fitWidth(rankText, 172);
       trainBtn.label.setText(cost === null ? 'Max rank' : `Train: ${cost} sap`);
       trainBtn.setEnabled(cost !== null && (s.village?.glowsap ?? 600) >= cost);
     };

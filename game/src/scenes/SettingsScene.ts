@@ -7,7 +7,7 @@ import { loadSave, resetProgress, writeSave } from '../systems/save';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
-import { padHit } from '../ui/touch';
+import { padHit, pf } from '../ui/touch';
 import { glossPanel, screenBackdrop } from '../ui/panels';
 
 export class SettingsScene extends Phaser.Scene {
@@ -215,10 +215,10 @@ export class SettingsScene extends Phaser.Scene {
         armed = false;
       },
     });
-    this.add.text(GAME_W / 2, 588, 'Reset clears stars, village, heroes, army and Field Guide. Settings are kept.', textStyle(14, TEXT.dim, false)).setOrigin(0.5);
+    this.add.text(GAME_W / 2, 588, 'Reset clears stars, village, heroes, army and Field Guide. Settings are kept.', textStyle(pf(14), TEXT.dim, false)).setOrigin(0.5);
 
     this.add
-      .text(GAME_W / 2, 664, 'Grovewatch: Sanctuary Siege  •  All art and sound are generated in code.', textStyle(15, TEXT.dim, false))
+      .text(GAME_W / 2, 664, 'Grovewatch: Sanctuary Siege  •  All art and sound are generated in code.', textStyle(pf(15), TEXT.dim, false))
       .setOrigin(0.5);
   }
 }

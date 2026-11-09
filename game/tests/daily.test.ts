@@ -100,3 +100,17 @@ describe('Prairie Gale', () => {
     expect(gale.momentumMult(b)).toBeCloseTo(1);
   });
 });
+
+import { dailyFor as pickDaily, LIGHT_TWISTS } from '../src/systems/daily';
+import { DAILY_MODIFIERS as MODS } from '../src/data/daily';
+describe('daily twist pairing', () => {
+  it('never pairs two heavy twists over a year of dates', () => {
+    const heavy = (id: string) => { const m = MODS.find((x) => x.id === id)!; return !m.good && !LIGHT_TWISTS.includes(id); };
+    for (let d = 0; d < 366; d++) {
+      const date = new Date(Date.UTC(2026, 0, 1 + d)).toISOString().slice(0, 10);
+      const c = pickDaily(date, 60);
+      expect(c.modifiers[0]).not.toBe(c.modifiers[1]);
+      expect(heavy(c.modifiers[0]) && heavy(c.modifiers[1])).toBe(false);
+    }
+  });
+});

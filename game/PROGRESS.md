@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **274** (next balance pass at iteration 275)
+Iteration counter: **275** (next balance pass at iteration 280)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1794,6 +1794,16 @@ Iteration counter: **274** (next balance pass at iteration 275)
   - **Pad glow:** empty build pads breathe a warm glow while you can afford at least the cheapest tower (after store and daily cost modifiers). It turns off when you're short or the battle is over.
   - New `scripts/range-check.mjs` (8 pads glow with coins, 0 when broke; no console errors). `phone-battle` still passes. Screenshot `screenshots/274.png` (the Glimmer Spire's range and glowing pads). 277 tests.
 
+- **Iteration 275** (POLISH + BALANCE): daily challenge balance.
+  - New `scripts/daily-balance.ts` (expert win rate on the daily-eased Murkmaw's Den, Morrowcap's Throne, Heart of the Ruins and Black Flagship; add `pairs` for the pairs the picker can roll).
+  - **Single twists** are fair: most are 67–100%. The harshest are Hero on Leave and Frenzy on Heart of the Ruins (0%), and Thick Hides on the middle two (33%).
+  - **Two heavy twists together were near-unwinnable:** Thick Hides + Swift Horde 0/0/0/100, No hero + No spells 0/33/0/67, Thin Hedge + Frenzy 33/33/0/67. `dailyFor` could roll these, since the second twist came from any modifier.
+  - **Fix:** the second twist is now a boon (Beaver Discount, Full Coffers, Golden Harvest) or a light twist (`LIGHT_TWISTS`: Ironbark, Prairie Gale), never another heavy one.
+    - Heavy + boon days: 100% across the sample.
+    - Heavy + light days stay spicy (Frenzy + Gale 67/33/0/100, Thin Hedge + Ironbark 67/33/67/33).
+    - About 60% of days pair with a boon.
+  - New test: a full year of dates never pairs two heavy twists (278 tests). `daily-check` still passes. Screenshot `screenshots/275.png` (menu with today's daily).
+
 ## In Progress
 - (none)
 
@@ -2689,3 +2699,4 @@ Findings / follow-ups:
 - **Iteration 260 hero sweep** (expert strategy, levels 20/50/80/100/120, 6 seeds; win %, avg lives): Ember 90 / 9.5, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7. Watch item: if a future sweep puts either below 60%, give Sorrel's sling +2 damage or Bramble's Earthshake +10% radius first.
 - **Iteration 265 opener sweep** (levels 1–10, 6 seeds; expert / casual / novice %): Mossgate 100/100/100, Thornwood 100/100/100, Gloomfen 100/100/100, Rimewood 100/100/100, Frostfern 100/100/100, Murkmaw's Den 83/50/83, Icicle Crossing 100/67/0, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67.
 - **Iteration 270:** raid sweep identical to iteration 250 (the visual-only `shot.target` field changed nothing). Storm-map idle objects plateau at about 146 after warm-up.
+- **Iteration 275 daily sweep** (expert, 3 seeds; Murkmaw / Morrowcap / Ruins / Flagship): none 100/100/100/100; swift 100/67/67/100; tough 100/33/33/100; nospells 100/67/100/100; nohero 67/67/0/100; glass 100/67/100/67; frenzy 67/100/0/100; ironbark and gale 100 across. Old heavy pairs: tough+swift 0/0/0/100, nohero+nospells 0/33/0/67, glass+frenzy 33/33/0/67. New pickable pairs: heavy + boon 100 across; frenzy+gale 67/33/0/100; glass+ironbark 67/33/67/33; tough+ironbark 67/33/0/100.

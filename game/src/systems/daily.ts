@@ -25,13 +25,18 @@ export function hash(str: string): number {
 }
 
 /** The challenge for a date, limited to levels the player has unlocked (`unlocked` = count). */
+/** Hard twists mild enough to pair with another hard one. */
+export const LIGHT_TWISTS = ['ironbark', 'gale'];
+
 export function dailyFor(date: string, unlocked: number): DailyChallenge {
   const h = hash(`grovewatch:${date}`);
   const pool = Math.max(1, Math.min(LEVELS.length, unlocked));
   const levelIndex = h % pool;
   const hard = DAILY_MODIFIERS.filter((m) => !m.good);
   const first = hard[(h >>> 8) % hard.length];
-  const rest = DAILY_MODIFIERS.filter((m) => m.id !== first.id);
+  // the second twist is a boon or a light one, never another heavy twist: two heavy twists together (Thick Hides +
+  // Swift Horde, No hero + No spells…) made dailies near-unwinnable in the iteration-275 sweep
+  const rest = DAILY_MODIFIERS.filter((m) => m.id !== first.id && (m.good || LIGHT_TWISTS.includes(m.id)));
   const second = rest[(h >>> 16) % rest.length];
   return {
     date,

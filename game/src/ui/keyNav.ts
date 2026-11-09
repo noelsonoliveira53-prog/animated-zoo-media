@@ -2,6 +2,7 @@ import Phaser from 'phaser';
 import { C, GAME_H, GAME_W } from './theme';
 import { FocusDir, isBackLabel, nextFocus } from '../systems/focusNav';
 import { hideTip, showTip } from './tooltip';
+import { announce, announceText } from '../systems/announce';
 
 type GO = Phaser.GameObjects.GameObject & {
   visible?: boolean;
@@ -102,6 +103,11 @@ export class KeyNavPlugin extends Phaser.Plugins.ScenePlugin {
       // an icon-only control explains itself when the focus ring lands on it
       hideTip(this.scene!);
       if (this.focused?.getData?.('tip')) showTip(this.focused);
+      // and screen readers hear what is focused (its label, plus the tooltip text if it has one)
+      if (this.focused) {
+        const tip = this.focused.getData?.('tip') as string | (() => string) | undefined;
+        announce(announceText.focus(labelOf(this.focused), typeof tip === 'function' ? tip() : tip));
+      }
       return;
     }
     if (press && this.shown && this.focused && ts.some((t) => t.obj === this.focused)) {

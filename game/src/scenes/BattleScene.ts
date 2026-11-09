@@ -32,6 +32,7 @@ import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { pickBannerY } from '../systems/bannerSpot';
 import { enemyStatuses, iconX, soldierStatuses, type StatusIcon } from '../systems/statusIcons';
 import { attachTip } from '../ui/tooltip';
+import { announce, announceText } from '../systems/announce';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -3922,10 +3923,12 @@ export class BattleScene extends Phaser.Scene {
         this.cameras.main.flash(120, 120, 0, 0);
         this.tweens.add({ targets: this.livesText, scale: 1.5, duration: 100, yoyo: true });
         sfx.leak();
+        announce(announceText.leak(ev.lives, this.sim.lives));
         break;
       }
       case 'waveStart':
         sfx.waveHorn();
+        announce(announceText.wave(ev.index, this.endless ? null : this.sim.totalWaves));
         this.refreshWavePreview();
         {
           const parts: string[] = [];
@@ -5182,6 +5185,7 @@ export class BattleScene extends Phaser.Scene {
     this.closeMenu();
     music.setMood('calm');
     const stars = won ? starsForLives(this.sim.lives, this.sim.maxLives) : 0;
+    announce(won ? announceText.victory(stars) : announceText.defeat());
     let reward = { coins: 0, glowsap: 0 };
     let after = loadSave();
     let bloom = 0;

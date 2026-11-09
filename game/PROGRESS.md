@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F15**
+Fix counter: **F16**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2129,9 +2129,16 @@ Fix counter: **F15**
   - The new status icons were the only thing that read too small on a phone (about 3 CSS px). They now draw 35 % larger on touch screens (`iconScale`), with spacing to match. `drawStatusIcon` draws through a small scaled-graphics shim, so every symbol scales together.
   - `status-icons-check.mjs` takes `PHONE=1`; phone close-up `fix-15-icons-phone.png`, desktop `fix-13-icons.png` unchanged.
 
+- **F16 (A5) Screen-reader announcements.** New `src/systems/announce.ts` creates a visually hidden `aria-live="polite"` status region (`#announcer`) and an `announce(text)` that clears and re-sets it, so repeated words are read again. Repeats within 0.9 s merge (`shouldAnnounce`), so a burst of leaks isn't a flood. What gets announced (wording in `announceText`):
+  - wave start ("Wave 3 of 8 has started.", endless has no total);
+  - each lost life ("A life lost. 19 lives left.");
+  - victory with stars, or defeat;
+  - every keyboard focus move: the control's label plus its tooltip text, e.g. "II. Pause (Space)".
+
+  2 tests. `scripts/announce-check.mjs` checks focus, wave start and a leak in the real game. This completes the Fix Loop backlog from the skill reviews.
+
 ### Fix Backlog (ranked)
-1. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-2. Then resume the Design Backlog below.
+- Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

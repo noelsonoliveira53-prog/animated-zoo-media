@@ -1418,5 +1418,26 @@
   "status": "to_upload",
   "format": "3d_singalong",
   "duration": 150.0
+ },
+ {
+  "file": "moon/mb3d_ep10.mp4",
+  "title": "Goodnight Everything \ud83c\udf19 Calm Bedtime Lullaby | Moonbeam",
+  "description": "A calm bedtime lullaby where Luna, Bunny and Lamb say goodnight to the moon, the stars, the lamp, the toys and everyone they love.\nA slow breathing break helps little ones settle down and drift off to sleep. For babies and toddlers.\n\nLYRICS\nGoodnight moon and goodnight stars,\nGoodnight sky, near and far,\nGoodnight room, so warm and still,\nGoodnight trees upon the hill.\nGoodnight lamp, it's time to rest,\nGoodnight teddy, you're the best,\nGoodnight window, goodnight door,\nGoodnight toys upon the floor.\nGoodnight Bunny, snuggled tight,\nGoodnight Lamb, sleep well tonight,\nGoodnight Owl up in the tree,\nGoodnight, goodnight, from you and me.\nBreathe in slow, the day is done,\nBreathe out soft, goodnight sun,\nClose your eyes and rest your head,\nCozy, cozy in your bed.\nGoodnight Mommy, goodnight Dad,\nThank you for the day we had,\nTomorrow brings a brand new day,\nBut now it's time to drift away.\nGoodnight, goodnight. Sweet dreams.",
+  "tags": [
+   "goodnight song",
+   "bedtime lullaby",
+   "lullaby for babies",
+   "sleep music for kids",
+   "calming bedtime song",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ],
+  "date": "2026-11-15",
+  "time": "7:00 PM",
+  "thumb": "brand/moon/thumb_mb3d_ep10.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 170.0
  }
 ]

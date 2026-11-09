@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **297** (next balance pass at iteration 300)
+Iteration counter: **298** (next balance pass at iteration 300)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1939,6 +1939,13 @@ Iteration counter: **297** (next balance pass at iteration 300)
   - New `BattleSim.heroSkillHits()` holds the hit rules (within radius, walkers only for a quake, target cap keeps the foes furthest along). `useHeroSkill` uses it too, so the preview always matches.
   - New `tests/heroSkillHits.test.ts` (3 tests, 309 total).
   - New `scripts/skillaim-check.mjs <name> [hero]` (Bramble "3 foes" leaves the flyer out, Fen "4 foes", Sorrel heals; hidden when the pointer leaves; no console errors). The `hero`, `herofx`, `spellaim` and `herocard` checks still pass. Screenshots `screenshots/297.png`, `297-fen.png`, `297-sorrel.png`.
+- **Iteration 298: result screen wave chart.**
+  - A glossy card under the result panel (campaign and daily, not endless) charts lives lost per wave. Each wave played gets an amber bar scaled to the worst wave, which is red; clean waves get a small green pip on the axis.
+  - The header reads "Toughest: wave N (-X)" or "Flawless: nothing got through!", with wave numbers under the bars (every 1, 2 or 5 for long levels). The bars grow in one after another (static with Reduce Motion).
+  - The sim now records `leaksByWave`, charging each leak to the latest called wave.
+  - New `systems/waveChart.ts` with 4 tests (313 total), including a sim run where the tally covers the lives lost.
+  - **Bug fixed along the way:** the wave button's glow and "Call now" chip stayed on screen after a battle ended. They now hide once the battle is over.
+  - `result-check.mjs` now feeds a believable leak pattern and waits for the bars; no console errors. Screenshots `screenshots/298.png` (victory) and `298-defeat.png`.
 
 ## In Progress
 - (none)
@@ -1946,8 +1953,8 @@ Iteration counter: **297** (next balance pass at iteration 300)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Victory ribbon polish: wave-by-wave mini chart on the result screen (lives lost per wave) so players see where it got tight.
-2. Touch preview for spells and skills: on touch screens, a press-and-hold on a spell or the skill button shows the same preview before letting go (no hover there).
+1. Touch preview for spells and skills: on touch screens, a press-and-hold on a spell or the skill button shows the same preview before letting go (no hover there).
+2. Run summary stats on the result screen: top tower by damage, spells cast, hero kills.
 
 ## Known Bugs
 - (none known)

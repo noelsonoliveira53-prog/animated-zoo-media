@@ -20,12 +20,15 @@ for (const won of [true, false]) {
   await page.waitForTimeout(1500);
   const t0 = await page.evaluate((won) => {
     const s = window.__game.scene.getScene('Battle');
-    if (!won) s.sim.lives = 0;
+    // a believable run for the wave chart: a couple of slips and one rough wave (the defeat ends at wave 7)
+    s.sim.leaksByWave = won ? [0, 0, 1, 0, 0, 2, 0, 0, 4, 0, 1, 0] : [0, 1, 0, 3, 2, 6, 8];
+    if (!won) { s.sim.lives = 0; s.sim.waveIndex = 6; }
     s.endBattle(won);
     return s.time.now;
   }, won);
-  // follow the scene clock (headless frames are slow): stars land by ~1.4 s, the reward has rolled by ~2.4 s
-  await page.waitForFunction((t0) => window.__game.scene.getScene('Battle').time.now >= t0 + 2500, t0, { timeout: 30000, polling: 'raf' });
+  // follow the scene clock (headless frames are slow): stars land by ~1.4 s, the reward has rolled by ~2.4 s,
+  // the wave chart's bars have all grown by ~3.3 s
+  await page.waitForFunction((t0) => window.__game.scene.getScene('Battle').time.now >= t0 + 3600, t0, { timeout: 30000, polling: 'raf' });
   out[won ? 'victory' : 'defeat'] = await page.evaluate(() => {
     const s = window.__game.scene.getScene('Battle');
     const find = (list, n) => { for (const o of list) { if (o.name === n) return o; if (o.list) { const f = find(o.list, n); if (f) return f; } } return null; };

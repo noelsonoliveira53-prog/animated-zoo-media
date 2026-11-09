@@ -279,6 +279,8 @@ export class BattleSim {
 
   waveIndex = -1; // index of last started wave
   waveCountdown = FIRST_WAVE_GAP;
+  /** Lives lost while each wave was the latest one called (index = wave), for the result screen's chart. */
+  leaksByWave: number[] = [];
   private schedules: { events: SpawnEvent[]; cursor: number; t: number }[] = [];
 
   enemies: Enemy[] = [];
@@ -1156,6 +1158,8 @@ export class BattleSim {
       if (e.dist >= path.length) {
         e.alive = false;
         this.lives = Math.max(0, this.lives - e.def.livesCost);
+        const w = Math.max(0, this.waveIndex);
+        this.leaksByWave[w] = (this.leaksByWave[w] ?? 0) + e.def.livesCost;
         this.events.push({ type: 'leak', enemy: e, lives: e.def.livesCost });
         if (e.def.pilfer) {
           // Sandpicker: makes off with a sack of the player's coins.

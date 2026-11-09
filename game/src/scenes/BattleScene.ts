@@ -4,6 +4,7 @@ import { motion, shake } from '../ui/motion';
 import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
 import { heroCardRows, heroXpProgress } from '../systems/heroCard';
 import { pickEnemy } from '../systems/enemyPick';
+import { waveChart } from '../systems/waveChart';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
@@ -2749,7 +2750,7 @@ export class BattleScene extends Phaser.Scene {
     if (!g || !strip || !chip) return;
     g.clear();
     strip.clear();
-    const active = this.sim.wavesRemaining && this.sim.isActive();
+    const active = !this.ended && this.sim.wavesRemaining && this.sim.isActive();
     const c = Math.max(0, this.sim.waveCountdown);
     if (c > this.callLast + 0.5) this.callFull = Math.max(1, c); // a fresh countdown started
     this.callLast = c;
@@ -4533,6 +4534,65 @@ export class BattleScene extends Phaser.Scene {
 
   // ---------- end of battle ----------
 
+  /**
+   * A small card under the result panel: lives lost per wave as bars, the worst wave picked out in red with a
+   * label, or a "Flawless" line when nothing got through. Bars grow in one after another.
+   */
+  private addWaveChart(won: boolean, still: boolean): void {
+    const played = won ? this.sim.totalWaves : Math.max(1, this.sim.waveIndex + 1);
+    const chart = waveChart(this.sim.leaksByWave, played);
+    const W = 560;
+    const H = 108;
+    const card = this.add.container(GAME_W / 2 - W / 2, GAME_H / 2 + 212).setDepth(5001).setName('waveChart');
+    const bg = this.add.graphics();
+    glossPanel(bg, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: 0xc8a050, rimAlpha: 0.5, radius: 16 });
+    card.add(bg);
+    card.add(this.add.text(14, 10, 'Lives lost per wave', textStyle(pf(13), TEXT.gold)));
+    const note =
+      chart.worst < 0 ? 'Flawless: nothing got through!' : `Toughest: wave ${chart.worst + 1} (-${chart.bars[chart.worst].lost})`;
+    card.add(this.add.text(W - 14, 10, note, textStyle(pf(13), chart.worst < 0 ? '#9be86a' : '#ffb0a0', false)).setOrigin(1, 0));
+    const left = 18;
+    const base = H - 16;
+    const top = 38;
+    const slot = (W - left * 2) / played;
+    const bw = Math.max(4, Math.min(22, slot - 6));
+    const bars = this.add.graphics();
+    card.add(bars);
+    const axis = this.add.graphics();
+    axis.lineStyle(1, 0xffffff, 0.2);
+    axis.lineBetween(left - 4, base + 0.5, W - left + 4, base + 0.5);
+    card.add(axis);
+    const draw = (shown: number) => {
+      bars.clear();
+      chart.bars.forEach((b, i) => {
+        const x = left + slot * i + slot / 2 - bw / 2;
+        if (b.lost <= 0) {
+          // a clean wave: a small green pip on the axis
+          bars.fillStyle(0x6ab04c, 0.9);
+          bars.fillCircle(x + bw / 2, base - 3, 2.5);
+          return;
+        }
+        const grow = Phaser.Math.Clamp(shown - i, 0, 1);
+        const h = Math.max(4, (base - top) * b.h) * grow;
+        bars.fillStyle(i === chart.worst ? 0xff5d4a : 0xff9f43, 1);
+        bars.fillRoundedRect(x, base - h, bw, h, Math.min(4, bw / 2));
+        bars.fillStyle(0xffffff, 0.25);
+        bars.fillRect(x + 2, base - h + 2, Math.max(1, bw * 0.25), Math.max(0, h - 4));
+      });
+    };
+    // wave numbers under every few bars, so long levels stay readable
+    const every = played > 14 ? 5 : played > 8 ? 2 : 1;
+    for (let i = 0; i < played; i += every) card.add(this.add.text(left + slot * i + slot / 2, base + 1, String(i + 1), textStyle(pf(9), '#9ab09a', false)).setOrigin(0.5, 0));
+    if (still || motion.reduced) draw(played);
+    else {
+      draw(0);
+      const t = { v: 0 };
+      this.tweens.add({ targets: t, v: played, delay: 900, duration: 120 * played, onUpdate: () => draw(t.v) });
+      card.setAlpha(0);
+      this.tweens.add({ targets: card, alpha: 1, delay: 700, duration: 250 });
+    }
+  }
+
   private endBattle(won: boolean): void {
     if (this.ended) return;
     this.ended = true;
@@ -4628,6 +4688,7 @@ export class BattleScene extends Phaser.Scene {
         .text(0, 14, won ? `Lives kept: ${this.sim.lives}/${this.sim.maxLives}` : `You held until wave ${this.sim.waveIndex + 1}`, textStyle(22))
         .setOrigin(0.5),
     );
+    if (!er) this.addWaveChart(won, still);
     if (dailyPaid) {
       panel.add(this.add.text(0, 74, `Daily challenge bonus: +${dailyPaid.coins} coins, +${dailyPaid.glowsap} glowsap`, textStyle(16, '#9be86a', false)).setOrigin(0.5));
     }

@@ -1,6 +1,7 @@
 import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
+import { cardRows, cardTags } from '../systems/towerCard';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
@@ -31,8 +32,9 @@ import { isLevelUnlocked, regionOf } from '../data/levels';
 import { TOWERS, TOWER_ORDER, sellValue } from '../data/towers';
 import { HERO_MAX_LEVEL, HERO_XP } from '../data/heroes';
 import { SPELLS, SPELL_ORDER } from '../data/spells';
-import type { LevelDef, TargetMode, Vec2 } from '../data/types';
-import { BattleSim, type Enemy, type SimEvent, type Soldier } from '../systems/BattleSim';
+import type { LevelDef, TargetMode, TowerTier, Vec2 } from '../data/types';
+import { BattleSim, type Enemy, type SimEvent, type Soldier, type Tower } from '../systems/BattleSim';
+import { glossPanel } from '../ui/panels';
 import { sfx } from '../systems/audio';
 import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -2797,6 +2799,8 @@ export class BattleScene extends Phaser.Scene {
             }
             this.pendingSpec = `${slot}:${k}`;
             this.drawRange(pos, sp.stats.range, sp.color);
+            c.getByName('towerCard')?.destroy();
+            c.add(this.towerCard(tower, pos, sp.stats, sp.name));
             this.showBanner(sp.name, `${sp.text}  (tap again to buy)`);
           });
           opt.add(this.add.text(0, -50, sp.name, { ...textStyle(pf(13)), align: 'center', wordWrap: { width: 110 } }).setOrigin(0.5, 1));
@@ -2836,11 +2840,51 @@ export class BattleScene extends Phaser.Scene {
           }),
         );
       }
-      const specName = tower.spec ? tower.def.specs.find((x) => x.id === tower.spec)!.name : `${tower.def.name} • Lv ${tower.tier + 1}`;
-      c.add(this.add.text(0, 92, specName, textStyle(16)).setOrigin(0.5));
+      c.add(this.towerCard(tower, pos, upCost !== null && !this.sim.canSpecialize(tower) ? tower.def.tiers[tower.tier + 1] : null));
     }
     c.setScale(0.5);
     this.tweens.add({ targets: c, scale: 1, duration: 160, ease: 'Back.easeOut' });
+  }
+
+  /**
+   * Info card beside the tower menu: name and level, trait tags, and three stat bars. `next` (the next tier,
+   * or the branch you just tapped) shows as a green extension of each bar that grows.
+   */
+  private towerCard(tower: Tower, pos: Vec2, next: TowerTier | null, nextName?: string): Phaser.GameObjects.Container {
+    const W = 226;
+    const H = 132;
+    const right = pos.x < GAME_W - 370;
+    const x0 = right ? 118 : -118 - W;
+    const top = Phaser.Math.Clamp(pos.y - H / 2, 70, GAME_H - H - 106) - pos.y; // clear of the HUD and the spell buttons
+    const card = this.add.container(x0, top).setName('towerCard');
+    const g = this.add.graphics();
+    glossPanel(g, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: tower.def.color, rimAlpha: 0.7, radius: 12 });
+    card.add(g);
+    const cur = this.sim.stats(tower);
+    const title = tower.spec ? tower.def.specs.find((x) => x.id === tower.spec)!.name : `${tower.def.name}  Lv ${tower.tier + 1}`;
+    card.add(fitWidth(this.add.text(10, 8, title, textStyle(pf(15), TEXT.gold)), W - 20));
+    const tags = cardTags(tower.def, cur).join(' • ');
+    card.add(fitWidth(this.add.text(10, 29, tags, textStyle(pf(11), '#b8d0c0', false)), W - 20));
+    cardRows(cur, next).forEach((r, i) => {
+      const y = 52 + i * 22;
+      const bx = 66;
+      card.add(fitWidth(this.add.text(10, y, r.label, textStyle(pf(11), TEXT.cream, false)).setOrigin(0, 0.5), bx - 14));
+      const bw = 72;
+      g.fillStyle(0x0c1a12, 1);
+      g.fillRoundedRect(bx, y - 4, bw, 8, 4);
+      if (r.next !== null && r.next > r.value) {
+        g.fillStyle(0x7be35a, 0.95);
+        g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.next), 8, 4);
+      }
+      g.fillStyle(r.next !== null && r.next < r.value ? 0xff9f6a : tower.def.color, 1);
+      g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.value), 8, 4);
+      g.fillStyle(0xffffff, 0.3);
+      g.fillRect(bx + 3, y - 3, Math.max(2, bw * r.value - 6), 1.5);
+      const txt = r.nextText ? `${r.text} → ${r.nextText}` : r.text;
+      card.add(fitWidth(this.add.text(W - 8, y, txt, textStyle(pf(11), r.nextText ? '#b8ff8a' : TEXT.cream, false)).setOrigin(1, 0.5), W - bx - bw - 12));
+    });
+    if (next) card.add(fitWidth(this.add.text(10, H - 14, nextName ? `Branch: ${nextName}` : 'Green: next level', textStyle(pf(10), '#9be86a', false)).setOrigin(0, 0.5), W - 20));
+    return card;
   }
 
   private placeRally(slot: number, p: Vec2): void {

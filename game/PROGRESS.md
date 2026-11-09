@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **286** (next balance pass at iteration 290)
+Iteration counter: **287** (next balance pass at iteration 290)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1870,6 +1870,14 @@ Iteration counter: **286** (next balance pass at iteration 290)
   - **Resistance markers** left of the bar: a grey shield for armor, a violet gem for magic resist. They only show from 0.3 (`RESIST_PIP_MIN`), because most foes have a little of both. Brittle foes lose the shield as their crust wears below 0.3.
   - New `systems/hpBar.ts` (`stepTrail`, `hpColor`, `resistPips`) with 6 tests (290 total).
   - New `scripts/hpbar-check.mjs` (four foes at 75/50/30/12%; trail held then drained exactly to the fill; no console errors). Screenshot `screenshots/286.png`.
+- **Iteration 287: tower info card.**
+  - Tapping a built tower now shows a glossy card beside its ring menu, replacing the plain name line under the ring.
+  - **Header:** the name and level (or branch name), plus trait tags (damage type, flyers or ground only, and up to two specials such as Splash, Slows, Chains, N targets or Pierces armor).
+  - **Stat bars:** three rows (Damage / Shots/s / Range, or Wardens / Melee / Reach for the Burrow Den), each scaled against the best any tower tier or branch reaches.
+  - **Upgrade preview:** the next level shows as a green extension and `cur → next` text. Tapping a branch once swaps the card to preview that branch, with stats that drop shown in orange.
+  - **Placement:** the card sits right of the tower, or left near the right edge, and is clamped clear of the HUD and the spell buttons.
+  - New `systems/towerCard.ts` (`cardRows`, `cardTags`, `statMaxima`) with 5 tests (295 total).
+  - New `scripts/towercard-check.mjs <name> [tower] [slot] [tier]` (desktop and `PHONE=1`; checks the card is fully on screen; no console errors). Screenshots `screenshots/287.png`, `287-burrow.png`, `287-phone.png`.
 
 ## In Progress
 - (none)
@@ -1877,8 +1885,8 @@ Iteration counter: **286** (next balance pass at iteration 290)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Tower info panel: a glossy card for the selected tower with stat bars and a next-tier preview.
-2. Hero and soldier bars: the same rounded look and damage trail as enemy bars.
+1. Hero and soldier bars: the same rounded look and damage trail as enemy bars.
+2. Hero info card: tapping the hero portrait shows a card like the tower one (level, XP, passive and active skill, health and damage bars).
 
 ## Known Bugs
 - (none known)

@@ -1426,6 +1426,17 @@ export class BootScene extends Phaser.Scene {
         g.strokeRect(cx + r * 0.05, cy - r * 0.55, r * 0.35, r * 0.28);
         g.fillStyle(0xffd040, 1);
         g.fillCircle(cx + r * 0.5, cy - r * 0.45, r * 0.08);
+        // ledger lines on its tally sheet, a bulging coin purse at its hip and a sly eye glint (design F28)
+        g.lineStyle(0.8, 0x8a7a5a, 1);
+        for (const ly of [-0.48, -0.41, -0.34]) g.lineBetween(cx + r * 0.1, cy + ly * r, cx + r * 0.35, cy + ly * r);
+        g.fillStyle(0x8a5a2a, 1);
+        g.lineStyle(1.5, C.ink, 1);
+        g.fillCircle(cx + r * 0.45, cy + r * 0.25, r * 0.17);
+        g.strokeCircle(cx + r * 0.45, cy + r * 0.25, r * 0.17);
+        g.fillStyle(0xffd040, 1);
+        g.fillCircle(cx + r * 0.45, cy + r * 0.08, r * 0.07);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.8, cy - r * 0.27, r * 0.025);
         break;
       }
       case 'ploughox': {
@@ -1449,6 +1460,15 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(C.ink, 1);
         g.fillCircle(cx - r * 0.75, cy - r * 0.15, r * 0.05);
         g.fillCircle(cx - r * 0.75, cy + r * 0.15, r * 0.05);
+        // a brass nose ring, a lit flank and a little bell hanging from the yoke (design F28)
+        g.lineStyle(1.5, 0xe8b04a, 1);
+        g.strokeCircle(cx - r * 1.06, cy, r * 0.08);
+        g.fillStyle(0xffffff, 0.22);
+        g.fillEllipse(cx + r * 0.15, cy - r * 0.32, r * 0.9, r * 0.25);
+        g.fillStyle(0xf0c040, 1);
+        g.fillCircle(cx - r * 0.42, cy + r * 0.55, r * 0.1);
+        g.fillStyle(0x8a6a1a, 1);
+        g.fillCircle(cx - r * 0.42, cy + r * 0.6, r * 0.03);
         break;
       }
       case 'collie': {
@@ -1472,6 +1492,15 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(C.ink, 1);
         g.fillCircle(cx - r * 0.85, cy - r * 0.3, r * 0.05);
         g.fillCircle(cx - r * 1.05, cy - r * 0.2, r * 0.05);
+        // a bright eye, a pink lolling tongue, a red neckerchief and a white tail tip (design F28)
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.86, cy - r * 0.32, r * 0.022);
+        g.fillStyle(0xff8aa0, 1);
+        g.fillEllipse(cx - r * 0.98, cy - r * 0.04, r * 0.08, r * 0.14);
+        g.fillStyle(0xd83a3a, 1);
+        g.fillTriangle(cx - r * 0.62, cy - r * 0.12, cx - r * 0.38, cy - r * 0.1, cx - r * 0.5, cy + r * 0.12);
+        g.fillStyle(0xf4f0e8, 1);
+        g.fillCircle(cx + r * 0.92, cy - r * 0.12, r * 0.1);
         break;
       }
       case 'ironhorn': {

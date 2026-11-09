@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **314** (next balance pass at iteration 315)
+Iteration counter: **315** (next balance pass at iteration 320)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2036,6 +2036,11 @@ Iteration counter: **314** (next balance pass at iteration 315)
   - The texts and icons moved up a few pixels so the numbers no longer touch their bars (seen in the first screenshot).
   - New `systems/villageHud.ts` (`villageHud`) with 2 tests (339 total).
   - `village-shot.mjs` gained `FULL=1`. `village-check`, `village-leak` (flat) and `phone-screens` still pass. Screenshot `screenshots/314.png` (full coins, one busy builder).
+- **Iteration 315** (POLISH + BALANCE), the Frostpeak endless wall:
+  - **Diagnosis:** leak tracing showed it wasn't wave 13 at all. Grimtusk, the wave-10 boss (endless opened with the map's own region boss), outlived every build and walked through in wave 13 for all 20 lives. Swapping only that boss for Murkmaw took expert-endless from 12 to 31.7 waves and the novice from 12.3 to 25.
+  - **Fix (`endlessBosses`):** the gentlest boss (Murkmaw) now always opens at wave 10, and the map's own region boss comes second at wave 20, followed by the usual rotation. Maps whose own boss is Murkmaw are unchanged. Late regions were worse than Frostpeak: Amberwood's endless opened with Rustantler, 16th in difficulty.
+  - New `endlessHomeBoss(level)`. The endless card's line now names the map's own boss at its wave ("Wave 20: Rustantler").
+  - `tests/endless.test.ts` updated (home boss second, nothing lost or doubled, wave 20 brings it; 339 tests). `endless-card-check` passes. Screenshot `screenshots/315.png`.
 
 ## In Progress
 - (none)
@@ -2043,8 +2048,7 @@ Iteration counter: **314** (next balance pass at iteration 315)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Frostpeak endless wall: every strategy stops at exactly 12 waves on Frostpeak Summit's endless map; find what wave 13 throws (likely a flyer or ice mix the build can't answer) and whether the endless generator needs a gentler step there.
-2. Village collect feedback: coins and glowsap fly from a tapped building to the HUD bar, which bumps as they land.
+1. Village collect feedback: coins and glowsap fly from a tapped building to the HUD bar, which bumps as they land.
 
 ## Known Bugs
 - (none known)
@@ -2941,3 +2945,4 @@ Findings / follow-ups:
 - **Iteration 305 veteran sweep** (`veteran-balance.ts 3`, expert): kills per tower over all runs: median 32, p75 52, p90 71, max 159 (a Frostpeak Summit tower). Veterans per run at 75 kills (was 50): Mossgate 0 (0), Murkmaw's Den 1.3 (4.0), Frostpeak 1.7 (3.0), Morrowcap's Throne 1.7 (3.3), Heart of the Ruins 0.7 (3.0), Thunderhead Crown 0.3 (3.0), Heart of the Amberwood 1.3 (4.3), Heart of the Glimmerbog 0 (1.3), The Thunder Barrow 0 (2.3). Late levels spread kills over more towers, so veterans there come from a player who leans on a few strong towers, which suits a badge. Combat itself is untouched (UI-only threshold).
 - **Iteration 310 raid and endless re-check:** the raid sweep is identical to iterations 250 and 270 (Lodge 1: 1.8★ / 0.3★ / 0.1★; Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★). Endless waves are identical to iteration 250. The long-standing oddity is that the novice outlasts the expert on two maps (Murkmaw's Den 17.7 vs 11.7, Duskcap Verge 21.3 vs 12.7). Hero/strategy split (3 seeds): Murkmaw expert+Fen 11.7, expert+Bramble 18.7, novice+Bramble 17.7, novice+Fen 14.7, so there it's the hero (Bramble's blocking suits the converging map). Duskcap expert+Fen 12.7, expert+Bramble 13.0, novice+Bramble 21.3, novice+Fen 20.7, so there it's the strategy (the novice's upgraded Thornbow/Glimmer spam beats the expert's adaptive mix in endless scaling). Both are autoplayer artifacts, not player-facing balance; no change. Follow-up idea: an endless-aware expert (upgrade-first after wave 10) for a truer ceiling.
 - **Iteration 313 endless ceiling** (`endless-balance.ts 3`, waves held: Mossgate / Murkmaw's Den / Frostpeak / Duskcap): expert 12.0 / 11.7 / 12.0 / 12.7, novice 12.3 / 17.7 / 12.3 / 21.3, and the new **expert-endless 22.3 / 24.3 / 12.0 / 18.3** (deepening from wave 5; waves 3, 4 and 5 all plateau, 8 gives 15.0 / 24.3 / 12.0 / 18.3 and 11 gives 12.0 / 18.0 / 12.0 / 12.7). So the iteration-310 oddity was strategy, as suspected: concentrating coins into a few specialized towers beats a wide spread under endless scaling. Frostpeak's 12-wave wall holds for every strategy (backlog item).
+- **Iteration 315 endless boss order** (`endless-balance.ts 3`; Mossgate / Murkmaw's Den / Frostpeak / Duskcap): before (home boss at wave 10) expert 12.0 / 11.7 / 12.0 / 12.7, expert-endless 22.3 / 24.3 / **12.0** / 18.3. After (gentlest opens, home boss at wave 20) expert 12.0 / 11.7 / 18.7 / 15.0, casual 12.0 / 11.7 / 12.0 / 15.3, novice 12.3 / 17.7 / 22.0 / 17.7, expert-endless 22.0 / 24.3 / **29.0** / 25.3. The strong-player ceiling is now 22–29 waves on every sampled map instead of one map capped at 12. Bosses' toughness (hp ÷ (1 − mean resistance)): Murkmaw 2923, Grimtusk 4923, Morrowcap 4800, Saltjaw 7556; the wave-10 slot now always holds the 2923 one.

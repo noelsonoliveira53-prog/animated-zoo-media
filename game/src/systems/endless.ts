@@ -52,14 +52,16 @@ export function nativeEnemies(level: LevelDef): string[] {
   return [...ids];
 }
 
-/** Boss order for an endless run on this map: its own region's boss first, then the usual rotation. */
+/**
+ * Boss order for an endless run on this map: the gentlest boss always opens (wave 10), then the map's own region
+ * boss (wave 20), then the usual rotation. Opening with a late region's boss walled every strategy at wave 12
+ * (Grimtusk on Frostpeak, iteration 315), since the towers are still young at wave 10.
+ */
 export function endlessBosses(level: LevelDef): string[] {
-  const idx = LEVELS.findIndex((l) => l.id === level.id);
-  if (idx < 0) return ENDLESS.bosses;
-  const reg = REGIONS[regionOf(idx)];
-  const finale = LEVELS[reg.first + reg.count - 1];
-  const home = finale?.waves.flatMap((w) => w.groups.map((g) => g.enemy)).find((id) => ENEMIES[id]?.boss && ENDLESS.bosses.includes(id));
-  return home ? [home, ...ENDLESS.bosses.filter((b) => b !== home)] : ENDLESS.bosses;
+  const home = endlessHomeBoss(level);
+  if (!home || home === ENDLESS.bosses[0]) return ENDLESS.bosses;
+  const [first, ...rest] = ENDLESS.bosses;
+  return [first, home, ...rest.filter((b) => b !== home)];
 }
 
 /** A copy of a campaign level set up for endless play. */
@@ -87,4 +89,13 @@ export function endlessMutatorFor(date: string): ModifierDef {
 /** Village payout multiplier for a mutator (harder days pay more). */
 export function mutatorReward(m: ModifierDef): number {
   return m.good ? 1 : ENDLESS.hardMutatorReward;
+}
+
+/** The boss of this map's region (from its finale) if it is in the endless rotation, else null. */
+export function endlessHomeBoss(level: LevelDef): string | null {
+  const idx = LEVELS.findIndex((l) => l.id === level.id);
+  if (idx < 0) return null;
+  const reg = REGIONS[regionOf(idx)];
+  const finale = LEVELS[reg.first + reg.count - 1];
+  return finale?.waves.flatMap((w) => w.groups.map((g) => g.enemy)).find((id) => ENEMIES[id]?.boss && ENDLESS.bosses.includes(id)) ?? null;
 }

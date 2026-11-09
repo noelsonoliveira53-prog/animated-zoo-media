@@ -5,12 +5,13 @@ import Phaser from 'phaser';
 import { motion } from '../ui/motion';
 import { fitWidth, pf } from '../ui/touch';
 import { glossPanel } from '../ui/panels';
-import { endlessBosses, endlessMutatorFor } from '../systems/endless';
+import { endlessBosses, endlessHomeBoss, endlessMutatorFor } from '../systems/endless';
 import { todayString } from '../systems/daily';
 import { music } from '../systems/music';
 import { themeById } from '../data/musicThemes';
 import { LEVELS, REGIONS, isLevelUnlocked, regionOf, totalStars } from '../data/levels';
 import { regionProgress } from '../systems/mapProgress';
+
 import { ENEMIES } from '../data/enemies';
 import { loadSave } from '../systems/save';
 import { sfx } from '../systems/audio';
@@ -1018,8 +1019,13 @@ export class WorldMapScene extends Phaser.Scene {
         }).setName('endlessBtn'),
       );
       const mut = endlessMutatorFor(todayString());
-      const boss = ENEMIES[endlessBosses(lvl)[0]]?.name.split(',')[0] ?? '';
-      const info = `${top > 0 ? `Best ${top} • ` : ''}Today: ${mut.name}${boss ? ` • Wave 10: ${boss}` : ''}`;
+      // name this map's own boss: wave 20 (the gentlest boss opens at wave 10), or wave 10 when it is that boss
+      const home = endlessHomeBoss(lvl);
+      const order = endlessBosses(lvl);
+      const shown = home ?? order[0];
+      const boss = ENEMIES[shown]?.name.split(',')[0] ?? '';
+      const homeAt = shown === order[0] ? 0 : 1;
+      const info = `${top > 0 ? `Best ${top} • ` : ''}Today: ${mut.name}${boss ? ` • Wave ${(homeAt + 1) * 10}: ${boss}` : ''}`;
       p.add(fitWidth(this.add.text(-30, H / 2 - 82, info, textStyle(13, TEXT.dim, false)).setOrigin(0.5).setName('endlessInfo'), 340));
     }
     p.setScale(0.6).setAlpha(0);

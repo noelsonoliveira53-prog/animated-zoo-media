@@ -25,7 +25,7 @@ export const HEROES: Record<string, HeroDef> = {
       kind: 'quake',
       damage: 85,
       damageType: 'physical',
-      radius: 115,
+      radius: 127,
       slow: { factor: 0.4, duration: 3 },
     },
   },
@@ -116,7 +116,7 @@ export const HEROES: Record<string, HeroDef> = {
     armor: 0.05,
     regen: 7,
     melee: false,
-    attack: { damage: 19, type: 'physical', range: 170, rate: 1.1, hitsAir: true, projectileSpeed: 520 },
+    attack: { damage: 21, type: 'physical', range: 170, rate: 1.1, hitsAir: true, projectileSpeed: 520 },
     respawn: 11,
     passive: { kind: 'mend', radius: 170, regen: 10, text: 'Field Dressing: nearby soldiers heal 10/s, even mid-fight.' },
     active: {

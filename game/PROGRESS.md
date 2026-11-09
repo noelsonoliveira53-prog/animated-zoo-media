@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **289** (next balance pass at iteration 290)
+Iteration counter: **290** (next balance pass at iteration 295)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1895,6 +1895,9 @@ Iteration counter: **289** (next balance pass at iteration 290)
   - The stat-bar drawing is now shared with the tower card (`drawCardRows`).
   - New `systems/heroCard.ts` (`heroXpProgress`, `heroCardRows`) with 2 tests (297 total).
   - New `scripts/herocard-check.mjs <name> [hero]` (a real tap on the portrait, desktop and `PHONE=1`, using the canvas's real bounds; checks the card is on screen and the fallen card closes; no console errors). Screenshots `screenshots/289.png` (Fen) and `289-phone.png` (Bramble).
+- **Iteration 290** (POLISH + BALANCE):
+  - **Polish (one card at a time):** opening a tower menu now ends the hero's move selection and closes the hero card. Before, both cards could stack, and the next map tap still moved the hero. New `scripts/cards-check.mjs` (real taps: portrait, then a tower; no console errors). Screenshot `screenshots/290.png`.
+  - **Balance:** a new `scripts/hero-balance.ts` (expert strategy per hero, optional hero filter). The gap from iteration 260 was unchanged, so Sorrel's sling went 19 → 21 damage and Bramble's Earthshake radius 115 → 127 (+10%). Details are under Balance Notes. 297 tests.
 
 ## In Progress
 - (none)
@@ -2794,3 +2797,4 @@ Findings / follow-ups:
 - **Iteration 275 daily sweep** (expert, 3 seeds; Murkmaw / Morrowcap / Ruins / Flagship): none 100/100/100/100; swift 100/67/67/100; tough 100/33/33/100; nospells 100/67/100/100; nohero 67/67/0/100; glass 100/67/100/67; frenzy 67/100/0/100; ironbark and gale 100 across. Old heavy pairs: tough+swift 0/0/0/100, nohero+nospells 0/33/0/67, glass+frenzy 33/33/0/67. New pickable pairs: heavy + boon 100 across; frenzy+gale 67/33/0/100; glass+ironbark 67/33/67/33; tough+ironbark 67/33/0/100.
 - **Iteration 280:** branch benchmark unchanged since iteration 7 (all twelve branches identical), confirming the visual work (iterations 241–279) never touched combat numbers.
 - **Iteration 285 late-campaign sweep** (levels 116–125, 4 seeds; expert / casual / novice win %): Stepping Stones 100/100/25, Otterslide Bend 100/100/0, Millwheel Race 100/75/0, Kingfisher Falls 100/50/0, The Elder Pool 75/25/0 (10 seeds: 80/40/0), Heather Gate 100/100/0, Moonstone Circle 100/75/0, Curlew Ridge 100/100/0, The Barrow Downs 100/75/0, The Thunder Barrow 100/75/0 (expert keeps only 8.8 lives). Single-tower strategies all lose (intended). The Elder Pool is the stiffest of the stretch, on par with The Great Barn (80/30/0); no change.
+- **Iteration 290 hero sweep** (`hero-balance.ts 6`, expert strategy, levels 20/50/80/100/120): unchanged since iteration 260 — Ember 90% / 9.5 lives, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7 — so the watch-item buffs were applied early, since the gap had held for 30 iterations and both lagged on Heart of the Amberwood (33% and 50%). **Sorrel sling 19 → 21, Bramble Earthshake radius 115 → 127.** After: Bramble 80% / 8.9 (Amberwood 50%), Sorrel 77% / 6.5 (Amberwood 50%), both inside the 77–90% band and neither above the top. Openers re-checked (levels 1–10, 6 seeds) against iteration 265: identical apart from single-seed swings in the novice column (Murkmaw 83 → 67, Frostpeak 50 → 67), so the novice-only Bramble buff doesn't flatten the early game. New watch item: Heart of the Amberwood is the weakest level for melee and support heroes (Bramble and Sorrel 50%).

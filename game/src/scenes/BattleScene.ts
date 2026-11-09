@@ -2765,6 +2765,9 @@ export class BattleScene extends Phaser.Scene {
 
   private openSlotMenu(slot: number): void {
     this.closeMenu();
+    // one card at a time: a tower menu ends the hero's move selection and closes the hero card
+    if (this.heroSelected) this.selectHero(false);
+    if (this.heroCard) this.toggleHeroCard(false);
     if (!this.sim.isActive()) return;
     const tower = this.sim.towers[slot];
     const pos = this.level.slots[slot];

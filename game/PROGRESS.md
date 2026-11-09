@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F31**
+Fix counter: **F32**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2256,6 +2256,8 @@ Fix counter: **F31**
 
   It follows the boss under its contact shadow, hides while the boss is underground, is destroyed with the view, and breathes slowly (still under Reduce Motion). A first try used only the body colour; that vanished under green bosses on green maps, so the ring was switched to boss-red. Shots: `fix-31-before-*` and `fix-31-after-*` (Old Murkmaw, Grimtusk, Galestag).
 
+- **F32 (Design Backlog 3, part b) Boss sheen.** Every boss that isn't near-black now gets a warm 1 px sheen (#fff0c8, 40 %) baked along all its upper-left edges, using the F25 `rimLight` pass. Horns, crowns, shells and wings catch the light the way polished metal and chitin would. Near-black bosses (Dreadmast) keep their cool rim instead. Generic and automatic, so all 25 bosses are covered. Sheets: `fix-32-before.png` and `fix-32-after.png` (all bosses), `fix-32-zoom-after.png` (Grimtusk, Ironhorn, Kaleidrax, Rustantler, Saltjaw, Zephyrax at 3×), battle `fix-32-battle-9.png`.
+
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.
 
@@ -2305,7 +2307,7 @@ Design counter: **D3**
 
 ### Design Backlog (ranked)
 1. ~~Enemies, part 3~~ done in F17–F29 (every regular foe hand-detailed).
-3. Bosses: shading, crowns and horns with metal shine, ~~a faint aura ring~~ (F31), and bigger silhouettes. Next: metal shine on crowns and horns, boss by boss.
+3. Bosses: shading, crowns and horns with metal shine, ~~a faint aura ring~~ (F31), and bigger silhouettes. Generic sheen added (F32); bosses were already hand-detailed in earlier loops and are large. Treat item 3 as done unless a boss looks weak in play.
 4. Towers: every tier and branch gets shaded stone and wood, roof highlights, and banners in the tower colour.
 5. Consistency pass: palette, outline weight and phone readability across heroes, enemies and towers.
 6. Wardens, Rangers and raid troops: shaded bodies, armor glints and readable silhouettes.

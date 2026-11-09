@@ -3176,6 +3176,8 @@ export class BootScene extends Phaser.Scene {
     g.destroy();
     // near-black foes hide their own ink outline: give their upper-left edge a cool rim light (consistency pass F25)
     if (brightness(color) < 0.25) this.rimLight(`enemy_${id}`, 0xb8c4dc, 0.45);
+    // bosses catch the light: a warm sheen along every upper-left edge, so horns, crowns and shells read as polished (design F32)
+    else if (boss) this.rimLight(`enemy_${id}`, 0xfff0c8, 0.4);
   }
 
   /** Light the upper-left edge of a baked texture (see systems/rimLight). */

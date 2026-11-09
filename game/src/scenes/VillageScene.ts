@@ -3,6 +3,7 @@ import { DEV_COINS, devOn } from '../systems/dev';
 import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { glossPanel } from '../ui/panels';
+import { villageHud } from '../systems/villageHud';
 import { drawBar } from '../ui/bars';
 import { upgradePreview } from '../systems/upgradePreview';
 import { music } from '../systems/music';
@@ -365,15 +366,19 @@ export class VillageScene extends Phaser.Scene {
 
   private buildHud(): void {
     const g = this.add.graphics().setDepth(900);
-    g.fillStyle(C.ink, 0.8);
-    g.fillRoundedRect(190, 10, 720, 62, 18);
+    glossPanel(g, 190, 8, 720, 66, { fill: C.ink, alpha: 0.85, rim: 0xc8a050, rimAlpha: 0.6, radius: 18 });
     this.hudBars = this.add.graphics().setDepth(901);
-    this.add.image(222, 41, 'icon_coin').setDepth(902);
-    this.coinText = this.add.text(244, 30, '', textStyle(20, TEXT.gold)).setDepth(902);
-    this.add.image(482, 41, 'icon_sap').setDepth(902);
-    this.sapText = this.add.text(504, 30, '', textStyle(20, '#c8ff8a')).setDepth(902);
-    this.add.image(742, 41, 'icon_hammer').setDepth(902);
-    this.builderText = this.add.text(764, 30, '', textStyle(20)).setDepth(902);
+    // "FULL" tags: a pulsing red pill on a store that can't take any more (collecting would be wasted)
+    for (const [x, name] of [[420, 'coinFull'], [680, 'sapFull']] as const) {
+      const tag = this.add.text(x, 34, 'FULL', textStyle(pf(12), '#ffffff')).setOrigin(0.5).setDepth(903).setBackgroundColor('#c84a3a').setPadding(6, 1, 6, 2).setName(name).setVisible(false);
+      if (!motion.reduced) this.tweens.add({ targets: tag, alpha: 0.45, yoyo: true, repeat: -1, duration: 520, ease: 'Sine.easeInOut' });
+    }
+    this.add.image(222, 38, 'icon_coin').setDepth(902);
+    this.coinText = this.add.text(244, 24, '', textStyle(20, TEXT.gold)).setDepth(902);
+    this.add.image(482, 38, 'icon_sap').setDepth(902);
+    this.sapText = this.add.text(504, 24, '', textStyle(20, '#c8ff8a')).setDepth(902);
+    this.add.image(742, 38, 'icon_hammer').setDepth(902);
+    this.builderText = this.add.text(764, 24, '', textStyle(20)).setDepth(902);
     this.add.text(GAME_W / 2, 84, '', textStyle(pf(14))).setOrigin(0.5).setDepth(902).setName('thLabel');
 
     new Button(this, 90, 40, 'Menu', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.leave('Menu') }).setDepth(902);
@@ -410,17 +415,39 @@ export class VillageScene extends Phaser.Scene {
     this.coinText.setText(`${Math.floor(this.v.coins)} / ${cap}`);
     this.sapText.setText(`${Math.floor(this.v.glowsap)} / ${cap}`);
     this.builderText.setText(`${builders(this.v) - busyBuilders(this.v, now)}/${builders(this.v)} free`);
+    const hud = villageHud(this.v, now);
     const bars = this.hudBars;
     bars.clear();
-    for (const [x, val, col] of [
-      [244, this.v.coins, C.gold],
-      [504, this.v.glowsap, 0x9be86a],
+    for (const [x, frac, full, col] of [
+      [244, hud.coinFrac, hud.coinFull, C.gold],
+      [504, hud.sapFrac, hud.sapFull, 0x9be86a],
     ] as const) {
-      bars.fillStyle(0x000000, 0.5);
-      bars.fillRoundedRect(x, 56, 200, 7, 3);
-      bars.fillStyle(col, 1);
-      bars.fillRoundedRect(x, 56, 200 * Math.min(1, val / Math.max(1, cap)), 7, 3);
+      if (full) {
+        // a soft red glow around a full store's bar
+        bars.fillStyle(0xff5d4a, 0.28);
+        bars.fillRoundedRect(x - 4, 51, 208, 17, 8);
+      }
+      drawBar(bars, x, 55, 200, 8, frac, frac, col);
     }
+    (this.children.getByName('coinFull') as Phaser.GameObjects.Text).setVisible(hud.coinFull);
+    (this.children.getByName('sapFull') as Phaser.GameObjects.Text).setVisible(hud.sapFull);
+    // one pip per builder: amber with a hammer head while busy, a green ring when free
+    hud.builders.forEach((busy, i) => {
+      const bx = 768 + i * 18;
+      const by = 59;
+      bars.fillStyle(0x0c1a12, 1);
+      bars.fillCircle(bx, by, 7);
+      if (busy) {
+        bars.fillStyle(0xffb84a, 1);
+        bars.fillCircle(bx, by, 5.5);
+        bars.fillStyle(0x5a3a1a, 1);
+        bars.fillRect(bx - 3, by - 2.5, 6, 2.5);
+        bars.fillRect(bx - 0.75, by - 1, 1.5, 4);
+      } else {
+        bars.lineStyle(2, 0x9be86a, 1);
+        bars.strokeCircle(bx, by, 5);
+      }
+    });
     (this.children.getByName('thLabel') as Phaser.GameObjects.Text).setText(`Grove Hall level ${townHallLevel(this.v)}`);
     if (this.selected !== null && this.panel && this.panel.getData('dynamic')) this.openPanel(this.selected, false);
     if (now - this.lastSave > 5000) this.persist();

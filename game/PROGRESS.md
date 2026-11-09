@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **313** (next balance pass at iteration 315)
+Iteration counter: **314** (next balance pass at iteration 315)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2029,6 +2029,13 @@ Iteration counter: **313** (next balance pass at iteration 315)
   - New `ENDLESS_EXPERT` (the expert with `upgradeFirstAfter: 5`), added as a fourth column in `endless-balance.ts`. The campaign `STRATEGIES` are untouched, so every earlier sweep still compares like-for-like.
   - The endless ceiling rises from 12.0 / 11.7 / 12.0 / 12.7 to 22.3 / 24.3 / 12.0 / 18.3 waves (details under Balance Notes).
   - New `tests/autoplay-endless.test.ts` (2 tests, 337 total: only the deepening differs, and it holds at least as long). No visual change; screenshot `screenshots/313.png` is the endless card (`endless-card-check`, no console errors).
+- **Iteration 314: village HUD polish.**
+  - The top bar is now a gold-rimmed glossy panel. The coin and glowsap bars use the shared rounded `drawBar`.
+  - **Full storage:** a full store gets a soft red glow around its bar and a pulsing red "FULL" pill (still with Reduce Motion), so you can see that collecting would be wasted.
+  - **Builder pips:** one pip per builder under "N/M free", amber with a little hammer head while busy and a green ring when free.
+  - The texts and icons moved up a few pixels so the numbers no longer touch their bars (seen in the first screenshot).
+  - New `systems/villageHud.ts` (`villageHud`) with 2 tests (339 total).
+  - `village-shot.mjs` gained `FULL=1`. `village-check`, `village-leak` (flat) and `phone-screens` still pass. Screenshot `screenshots/314.png` (full coins, one busy builder).
 
 ## In Progress
 - (none)
@@ -2036,8 +2043,8 @@ Iteration counter: **313** (next balance pass at iteration 315)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Village HUD polish: the resource bars get the glossy ribbon look with a storage-full pulse and a builder-busy pip per builder.
-2. Frostpeak endless wall: every strategy stops at exactly 12 waves on Frostpeak Summit's endless map; find what wave 13 throws (likely a flyer or ice mix the build can't answer) and whether the endless generator needs a gentler step there.
+1. Frostpeak endless wall: every strategy stops at exactly 12 waves on Frostpeak Summit's endless map; find what wave 13 throws (likely a flyer or ice mix the build can't answer) and whether the endless generator needs a gentler step there.
+2. Village collect feedback: coins and glowsap fly from a tapped building to the HUD bar, which bumps as they land.
 
 ## Known Bugs
 - (none known)

@@ -30,6 +30,11 @@ await page.goto('http://localhost:4371/');
 await page.waitForTimeout(1000);
 await page.evaluate(() => window.__game.scene.getScene('Menu').scene.start('Village'));
 await page.waitForTimeout(1800);
+// FULL=1 fills the coin store to its cap (to see the HUD's FULL tag and glow)
+if (process.env.FULL) {
+  await page.evaluate(() => { const s = window.__game.scene.getScene('Village'); s.v.coins = Number(s.coinText.text.split('/')[1]); });
+  await page.waitForTimeout(800);
+}
 // BUILD=<0..1> puts the level-2 acorn mine (uid 3) mid-upgrade, that far along, to see the progress bar
 if (process.env.BUILD) {
   await page.evaluate((f) => {

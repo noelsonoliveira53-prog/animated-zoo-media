@@ -4078,6 +4078,8 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(`hero_${id}`, w, h);
     g.destroy();
+    // consistency pass F35: heroes share the warm edge sheen of towers, troops and bosses (the light-catching, important cast)
+    this.rimLight(`hero_${id}`, 0xfff0c8, 0.3);
   }
 
   private makeTower(id: string, color: number, tier: number, key?: string): void {

@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F11**
+Fix counter: **F12**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2103,12 +2103,18 @@ Fix counter: **F11**
 
   `makeEnemy` now gets the enemy's `boss` flag. Bosses and heroes read a touch heavier than the rank-and-file, as the critique asked; regular foes like Mudling and Bogbrute are slightly lighter. Sheets: `fix-11-before/after-heroes.png` and `fix-11-before/after-enemies.png` (Bogbrute, Gloomwing, Gnat, Grimtusk, Mudling, Murkmaw, Shellback, Vulkhar), plus `fix-11-battle-0.png`.
 
+- **F12 (C2) Colour accents on the early brown, grey and olive foes** (first-region roster):
+  - **Mudling** gets a pink flower bud on its sprout and rosy cheeks.
+  - **Shellback** gets bright orange lichen freckles on its grey plates.
+  - **Bogbrute** gets glowing bog-light warts (it had dull olive spots) and a red, white-spotted toadstool growing from its mossy cap.
+
+  The other first-region foes (Reedguard gold, Skitter teal, Thornhog red) were already saturated. Gameplay data is unchanged. Sheets: `fix-12-before.png` and `fix-12-after.png`.
+
 ### Fix Backlog (ranked)
-1. **C2** Colour accents on the early brown / grey enemy families.
-2. **C3** Status-effect icons, not tint only.
-3. **A4** Tooltips on icon-only controls.
-4. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-5. Then resume the Design Backlog below.
+1. **C3** Status-effect icons, not tint only.
+2. **A4** Tooltips on icon-only controls.
+3. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+4. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

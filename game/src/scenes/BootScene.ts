@@ -221,14 +221,29 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffffff, 0.2);
         g.fillEllipse(cx - r * 0.45, cy - r * 0.55, r * 0.5, r * 0.3);
         g.strokeRoundedRect(cx - r * 0.85, cy - r * 0.9, r * 1.7, r * 1.9, r * 0.6);
-        g.fillStyle(0x7a8a5a, 1);
-        g.fillCircle(cx - r * 0.4, cy + r * 0.5, r * 0.15);
-        g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.12);
+        // colour accent (fix C2): glowing bog-light warts instead of dull olive ones
+        g.fillStyle(0xd8f05a, 0.35);
+        g.fillCircle(cx - r * 0.4, cy + r * 0.5, r * 0.24);
+        g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.2);
+        g.fillStyle(0xe8ff7a, 1);
+        g.fillCircle(cx - r * 0.4, cy + r * 0.5, r * 0.13);
+        g.fillCircle(cx + r * 0.3, cy + r * 0.2, r * 0.1);
         // a mossy cap on the head
         g.fillStyle(0x5a9a3e, 1);
         g.fillEllipse(cx - r * 0.1, cy - r * 0.92, r * 1.0, r * 0.32);
         g.fillStyle(0x8ad86a, 1);
         g.fillEllipse(cx - r * 0.25, cy - r * 0.98, r * 0.4, r * 0.14);
+        // a little red toadstool growing out of the moss
+        g.fillStyle(0xfff4d6, 1);
+        g.fillRect(cx + r * 0.26, cy - r * 1.02, r * 0.14, r * 0.2);
+        g.lineStyle(1.5, C.ink, 1);
+        g.fillStyle(0xe8453a, 1);
+        g.fillEllipse(cx + r * 0.33, cy - r * 1.06, r * 0.56, r * 0.32);
+        g.strokeEllipse(cx + r * 0.33, cy - r * 1.06, r * 0.56, r * 0.32);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx + r * 0.22, cy - r * 1.1, r * 0.06);
+        g.fillCircle(cx + r * 0.4, cy - r * 1.12, r * 0.05);
+        g.fillCircle(cx + r * 0.46, cy - r * 1.02, r * 0.04);
         this.eyes(g, cx, cy - r * 0.4, r * 0.17, r * 0.3);
         g.lineStyle(3, C.ink, 1);
         g.lineBetween(cx - r * 0.35, cy - r * 0.05, cx + r * 0.35, cy - r * 0.05);
@@ -2712,6 +2727,11 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx - radius * 0.15, cy - radius * 0.82, radius * 0.5, radius * 0.22);
         g.fillStyle(0x8ad86a, 1);
         g.fillEllipse(cx - radius * 0.22, cy - radius * 0.86, radius * 0.24, radius * 0.12);
+        // colour accent (fix C2): bright orange lichen freckling the plates, so the grey shell pops off grey roads
+        g.fillStyle(0xffa63a, 1);
+        for (const [lx, ly, lr] of [[0.42, -0.5, 0.15], [0.58, -0.32, 0.1], [-0.58, 0.42, 0.14], [0.6, 0.42, 0.11], [-0.45, -0.22, 0.09]]) g.fillCircle(cx + lx * radius, cy + ly * radius, lr * radius);
+        g.fillStyle(0xffe08a, 1);
+        g.fillCircle(cx + 0.4 * radius, cy - 0.53 * radius, 0.04 * radius);
         this.eyes(g, cx, cy - radius * 0.05, radius * 0.17, radius * 0.25);
         break;
       }
@@ -2735,6 +2755,14 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x7bc85a, 1);
         g.fillEllipse(cx - radius * 0.18, cy - radius * 1.32, radius * 0.4, radius * 0.22);
         g.fillEllipse(cx + radius * 0.26, cy - radius * 1.38, radius * 0.42, radius * 0.24);
+        // colour accent (fix C2): a pink flower bud on the sprout and rosy cheeks, so the brown blob pops off dirt roads
+        g.fillStyle(0xff7aa8, 1);
+        g.fillCircle(cx + radius * 0.05, cy - radius * 1.36, radius * 0.16);
+        g.fillStyle(0xffd0e0, 1);
+        g.fillCircle(cx + radius * 0.01, cy - radius * 1.4, radius * 0.06);
+        g.fillStyle(0xff8a95, 0.75);
+        g.fillEllipse(cx - radius * 0.62, cy + radius * 0.18, radius * 0.34, radius * 0.18);
+        g.fillEllipse(cx + radius * 0.62, cy + radius * 0.18, radius * 0.34, radius * 0.18);
         this.eyes(g, cx, cy - radius * 0.1, radius * 0.25, radius * 0.35);
       }
     }

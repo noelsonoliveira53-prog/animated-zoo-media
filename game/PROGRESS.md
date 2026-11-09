@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **293** (next balance pass at iteration 295)
+Iteration counter: **294** (next balance pass at iteration 295)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1916,6 +1916,12 @@ Iteration counter: **293** (next balance pass at iteration 295)
   - The bar is redrawn every frame (`drawBuildBar`, only for buildings under construction) instead of every 250 ms, so the animation is smooth; the countdown badge still updates on the regular refresh.
   - `scripts/village-shot.mjs` gained `BUILD=<0..1>` (puts the level-2 acorn mine mid-upgrade).
   - The village leak check is flat (124 objects / 43 tweens early and late). Screenshot `screenshots/293.png` (acorn mine at 60%). 301 tests.
+- **Iteration 294: spell targeting polish.**
+  - While a spell is armed, the aim circle gets soft glow rings in the spell's colour, a slowly turning dashed rim and a small crosshair.
+  - Every foe it would hit gets a pulsing ring, and a pill above the circle reads "N foes" ("No foes here" when it would hit no one, or "Rangers land here" for Grove Call).
+  - New `BattleSim.spellHits(id, pos)` holds the hit rules: stars hit everything above ground including flyers, a snare grabs walkers only, and reinforcements hit no one. Both the cast and the preview use it, so the count can never disagree with the real hit.
+  - New `tests/spellHits.test.ts` (3 tests, 304 total). The refactor leaves combat unchanged.
+  - New `scripts/spellaim-check.mjs` (three walkers and a flyer: Starfall "4 foes", Thornsnare "3 foes", aim hidden when disarmed; no console errors). `spell`, `spellbtn`, `spellfx` and `guide-spells` checks still pass. Screenshot `screenshots/294.png`.
 
 ## In Progress
 - (none)
@@ -1923,8 +1929,8 @@ Iteration counter: **293** (next balance pass at iteration 295)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Spell targeting polish: while a spell is armed, show its radius as a glowing ring with the number of foes it would hit.
-2. Wave call button: a glowing, pulsing "next wave" button with a ring that fills as the early-call bonus shrinks.
+1. Wave call button: a glowing, pulsing "next wave" button with a ring that fills as the early-call bonus shrinks.
+2. Hero skill aim: preview the hero's active skill area (radius ring and foes hit) while hovering the skill button.
 
 ## Known Bugs
 - (none known)

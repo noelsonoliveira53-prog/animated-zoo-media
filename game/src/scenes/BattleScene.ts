@@ -91,6 +91,8 @@ export class BattleScene extends Phaser.Scene {
   private spellHud!: Phaser.GameObjects.Graphics;
   private strikeViews = new Map<number, { star: Phaser.GameObjects.Image; mark: Phaser.GameObjects.Arc; ring: Phaser.GameObjects.Arc }>();
   private reticle!: Phaser.GameObjects.Arc;
+  private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
+  private aimText: Phaser.GameObjects.Text | null = null;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
   private slotViews: Phaser.GameObjects.Image[] = [];
 
@@ -2079,6 +2081,8 @@ export class BattleScene extends Phaser.Scene {
     this.spellWasReady = {};
     this.spellHud = this.add.graphics().setDepth(3000);
     this.reticle = this.add.circle(0, 0, 60, 0xffffff, 0.12).setStrokeStyle(3, C.cream, 0.9).setDepth(2900).setVisible(false);
+    this.aimG = this.add.graphics().setDepth(2905);
+    this.aimText = this.add.text(0, 0, '', textStyle(pf(14), TEXT.cream)).setOrigin(0.5).setDepth(2906).setVisible(false);
     SPELL_ORDER.forEach((id, i) => {
       const p = this.spellPos(i);
       this.spellIcons[id] = this.add.image(p.x, p.y - 4, `icon_${id}`).setDepth(3001);
@@ -2101,6 +2105,58 @@ export class BattleScene extends Phaser.Scene {
         this.armSpell(this.spellMode === id ? null : id);
       });
     });
+  }
+
+  /**
+   * While a spell is armed: soft glow rings and a slowly turning dashed rim around the aim circle, a small
+   * crosshair, a ring on every foe it would hit (same rules as the cast, via `spellHits`) and a count above it.
+   */
+  private drawAim(): void {
+    const g = this.aimG;
+    const label = this.aimText;
+    if (!g || !label) return;
+    g.clear();
+    const id = this.spellMode;
+    if (!id) {
+      label.setVisible(false);
+      return;
+    }
+    const def = SPELLS[id];
+    const x = this.reticle.x;
+    const y = this.reticle.y;
+    const r = def.radius ?? 50;
+    for (let k = 0; k < 3; k++) {
+      g.lineStyle(4, def.color, 0.22 - k * 0.06);
+      g.strokeCircle(x, y, r + 3 + k * 4);
+    }
+    const turn = motion.reduced ? 0 : this.time.now / 900;
+    g.lineStyle(2, 0xffffff, 0.75);
+    for (let k = 0; k < 16; k++) {
+      const a0 = turn + (k / 16) * Math.PI * 2;
+      g.beginPath();
+      g.arc(x, y, r - 5, a0, a0 + 0.2);
+      g.strokePath();
+    }
+    g.lineStyle(2, 0xffffff, 0.8);
+    g.lineBetween(x - 8, y, x - 3, y);
+    g.lineBetween(x + 3, y, x + 8, y);
+    g.lineBetween(x, y - 8, x, y - 3);
+    g.lineBetween(x, y + 3, x, y + 8);
+    if (def.kind === 'reinforce') {
+      label.setText('Rangers land here');
+    } else {
+      const hits = this.sim.spellHits(id, { x, y });
+      const pulse = motion.reduced ? 1 : 1 + 0.12 * Math.sin(this.time.now / 140);
+      for (const e of hits) {
+        const ey = e.pos.y - 34 * (this.enemyViews.get(e.uid)?.air ?? 0);
+        g.lineStyle(2.5, def.color, 0.95);
+        g.strokeCircle(e.pos.x, ey, (e.def.radius + 5) * pulse);
+      }
+      label.setText(hits.length ? `${hits.length} ${hits.length === 1 ? 'foe' : 'foes'}` : 'No foes here');
+      label.setColor(hits.length ? TEXT.cream : '#c8c0b0');
+    }
+    label.setPosition(x, Math.max(80, y - r - 18)).setVisible(true);
+    label.setBackgroundColor('#16241cd0').setPadding(8, 3, 8, 3);
   }
 
   private armSpell(id: string | null): void {
@@ -3132,6 +3188,7 @@ export class BattleScene extends Phaser.Scene {
     if (!this.paused && !this.ended && this.time.now >= this.hitStopUntil) this.sim.update(dt * this.speed);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
+    this.drawAim();
     this.syncHero();
     this.drawSpellHud();
     this.fx.draw();

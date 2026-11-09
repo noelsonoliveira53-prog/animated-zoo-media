@@ -419,8 +419,7 @@ export class BattleSim {
       }
     } else if (def.kind === 'snare') {
       // Instant: bramble burst roots ground enemies in the area.
-      const radius = def.radius ?? 90;
-      const hits = this.enemies.filter((e) => e.alive && !e.underground && !this.airborne(e) && Math.hypot(e.pos.x - pos.x, e.pos.y - pos.y) <= radius + e.def.radius);
+      const hits = this.spellHits(id, pos);
       for (const e of hits) {
         if (def.slow) {
           this.slow(e, def.slow.factor, def.slow.duration);
@@ -435,6 +434,19 @@ export class BattleSim {
     return true;
   }
 
+  /**
+   * The foes a spell would hit at `pos` right now: falling stars hit everything above ground (flyers too),
+   * a snare only grabs walkers, and reinforcements hit no one. Used both to resolve a cast and to preview it.
+   */
+  spellHits(id: string, pos: Vec2): Enemy[] {
+    const def = SPELLS[id];
+    if (!def || def.kind === 'reinforce') return [];
+    const radius = def.radius ?? (def.kind === 'snare' ? 90 : 60);
+    return this.enemies.filter(
+      (e) => e.alive && !e.underground && (def.kind !== 'snare' || !this.airborne(e)) && Math.hypot(e.pos.x - pos.x, e.pos.y - pos.y) <= radius + e.def.radius,
+    );
+  }
+
   private updateSpells(dt: number): void {
     const stall = this.stallMult(); // Moon Hare: the moonlight holds the spells back
     for (const id of Object.keys(this.spellCd)) this.spellCd[id] = Math.max(0, this.spellCd[id] - dt * stall);
@@ -443,7 +455,7 @@ export class BattleSim {
       if (st.timer > 0) continue;
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
-      const hits = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - st.pos.x, e.pos.y - st.pos.y) <= radius + e.def.radius);
+      const hits = this.spellHits(st.spellId, st.pos);
       for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)) * (1 - this.drenchCut(e)), def.damageType ?? 'physical');
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }

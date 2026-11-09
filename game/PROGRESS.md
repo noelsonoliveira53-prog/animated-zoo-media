@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F16**
+Fix counter: **F17**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2137,6 +2137,14 @@ Fix counter: **F16**
 
   2 tests. `scripts/announce-check.mjs` checks focus, wave start and a leak in the real game. This completes the Fix Loop backlog from the skill reviews.
 
+- **F17 (Design Backlog 1, part a) First-region foes finished.** These were the rank-and-file you meet first and hadn't been hand-detailed yet:
+  - **Skitter**: iridescent teal sheen on both wing cases, a gold glint and inked feelers.
+  - **Reedguard**: a red feather tucked in a green reed headband, and a polished river-stone boss on its woven shield.
+  - **Thornhog**: four pale quills with brown tips (outlines are now drawn first, so the fills read instead of a dark crest), a pink snout tip, a pink-lined ear and a lit back.
+  - **Gloomwing / Gnat**: wing veins and sheen, eye glints; Gloomwing gets two little fangs and the Gnat a striped body.
+
+  Bogmender already read well. Sheets: `fix-17-before.png` and `fix-17-after.png`; battle `fix-17-battle-1.png`.
+
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.
 
@@ -2185,7 +2193,7 @@ Design counter: **D3**
   - Sheets `screenshots/design-3-before.png` and `design-3-after.png`. In-game `design-3-ingame.png` (`enemycard-check` with a Cindermole and an Emberimp, no console errors). 341 tests.
 
 ### Design Backlog (ranked)
-1. Enemies, part 3 (the remaining regular foes from the later regions: hand details, glints, glows, accessories).
+1. Enemies, part 3 (the remaining regular foes from the later regions: hand details, glints, glows, accessories). First-region foes done in F17; next the second- and third-region rank-and-file (Bogmender's region mates, frost and ember foes not yet detailed).
 3. Bosses: shading, crowns and horns with metal shine, a faint aura ring, and bigger silhouettes.
 4. Towers: every tier and branch gets shaded stone and wood, roof highlights, and banners in the tower colour.
 5. Consistency pass: palette, outline weight and phone readability across heroes, enemies and towers.

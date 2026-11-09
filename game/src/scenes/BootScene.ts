@@ -99,8 +99,22 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
         g.strokeEllipse(cx - r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
         g.strokeEllipse(cx + r * 1.05, cy - r * 0.3, r * 1.5, r * 1.1);
+        // wing veins and a sheen (design F17)
+        g.lineStyle(1, id === 'gnat' ? 0xa8b880 : 0x5a4a90, 0.9);
+        for (const side of [-1, 1]) {
+          g.lineBetween(cx + side * r * 0.5, cy - r * 0.3, cx + side * r * 1.6, cy - r * 0.55);
+          g.lineBetween(cx + side * r * 0.5, cy - r * 0.3, cx + side * r * 1.5, cy + r * 0.05);
+        }
+        g.fillStyle(0xffffff, id === 'gnat' ? 0.5 : 0.25);
+        g.fillEllipse(cx - r * 1.2, cy - r * 0.55, r * 0.6, r * 0.25);
+        g.fillEllipse(cx + r * 0.9, cy - r * 0.55, r * 0.6, r * 0.25);
         g.lineStyle(id === 'gnat' ? 2 : 3, C.ink, 1);
         this.orbKeep(g, cx, cy, r * 1.2, r * 1.6, color);
+        if (id === 'gnat') {
+          g.fillStyle(0x4a4a2a, 0.8);
+          g.fillRect(cx - r * 0.5, cy + r * 0.2, r, r * 0.14);
+          g.fillRect(cx - r * 0.42, cy + r * 0.5, r * 0.84, r * 0.12);
+        }
         if (id === 'gloomwing') {
           g.fillStyle(shade, 1);
           g.fillTriangle(cx - r * 0.5, cy - r * 0.6, cx - r * 0.2, cy - r * 0.6, cx - r * 0.45, cy - r * 1.1);
@@ -109,6 +123,15 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffe066, 1);
         g.fillCircle(cx - r * 0.25, cy - r * 0.2, r * 0.18);
         g.fillCircle(cx + r * 0.25, cy - r * 0.2, r * 0.18);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.3, cy - r * 0.26, r * 0.06);
+        g.fillCircle(cx + r * 0.2, cy - r * 0.26, r * 0.06);
+        if (id === 'gloomwing') {
+          // two little white fangs
+          g.fillStyle(0xfff4d6, 1);
+          g.fillTriangle(cx - r * 0.18, cy + r * 0.15, cx - r * 0.06, cy + r * 0.15, cx - r * 0.12, cy + r * 0.38);
+          g.fillTriangle(cx + r * 0.06, cy + r * 0.15, cx + r * 0.18, cy + r * 0.15, cx + r * 0.12, cy + r * 0.38);
+        }
         break;
       }
       case 'bogmender': {
@@ -147,6 +170,22 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(1.5, 0x8a7440, 1);
         for (let i = 1; i < 4; i++) g.lineBetween(cx + r * 0.1, cy - r * 0.4 + i * r * 0.35, cx + r * 1.2, cy - r * 0.4 + i * r * 0.35);
         for (let i = 1; i < 3; i++) g.lineBetween(cx + r * 0.1 + i * r * 0.37, cy - r * 0.4, cx + r * 0.1 + i * r * 0.37, cy + r);
+        // a polished river-stone boss on the shield and a green reed headband with a feather (design F17)
+        g.fillStyle(0x6a8a9a, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillCircle(cx + r * 0.65, cy + r * 0.3, r * 0.2);
+        g.strokeCircle(cx + r * 0.65, cy + r * 0.3, r * 0.2);
+        g.fillStyle(0xffffff, 0.7);
+        g.fillCircle(cx + r * 0.6, cy + r * 0.24, r * 0.06);
+        g.fillStyle(0xe8453a, 1);
+        g.lineStyle(1.5, C.ink, 1);
+        g.fillEllipse(cx - r * 0.62, cy - r * 0.95, r * 0.2, r * 0.48);
+        g.strokeEllipse(cx - r * 0.62, cy - r * 0.95, r * 0.2, r * 0.48);
+        g.fillStyle(0x5aa04a, 1);
+        g.fillRoundedRect(cx - r * 0.88, cy - r * 0.72, r * 1.0, r * 0.2, r * 0.08);
+        g.strokeRoundedRect(cx - r * 0.88, cy - r * 0.72, r * 1.0, r * 0.2, r * 0.08);
+        g.fillStyle(0x9ae87a, 1);
+        g.fillRect(cx - r * 0.8, cy - r * 0.69, r * 0.8, r * 0.05);
         break;
       }
       case 'splotch': {
@@ -169,13 +208,15 @@ export class BootScene extends Phaser.Scene {
         break;
       }
       case 'thornhog': {
-        // back spikes
-        g.fillStyle(0xe0d0a0, 1);
-        g.lineStyle(2, C.ink, 1);
-        for (let i = -2; i <= 2; i++) {
-          const bx = cx + i * r * 0.32;
-          g.fillTriangle(bx - r * 0.18, cy - r * 0.4, bx + r * 0.18, cy - r * 0.4, bx, cy - r * 1.15);
-          g.strokeTriangle(bx - r * 0.18, cy - r * 0.4, bx + r * 0.18, cy - r * 0.4, bx, cy - r * 1.15);
+        // back quills: four pale spines with brown tips, outlines drawn first so the fills sit on top and read (design F17)
+        const quills = [-1.5, -0.5, 0.5, 1.5].map((i) => cx + i * r * 0.4);
+        g.lineStyle(2.4, C.ink, 1);
+        for (const bx of quills) g.strokeTriangle(bx - r * 0.2, cy - r * 0.4, bx + r * 0.2, cy - r * 0.4, bx, cy - r * 1.12);
+        for (const bx of quills) {
+          g.fillStyle(0xf0e0b0, 1);
+          g.fillTriangle(bx - r * 0.2, cy - r * 0.4, bx + r * 0.2, cy - r * 0.4, bx, cy - r * 1.12);
+          g.fillStyle(0x9a6a3a, 1);
+          g.fillTriangle(bx - r * 0.08, cy - r * 0.86, bx + r * 0.08, cy - r * 0.86, bx, cy - r * 1.12);
         }
         g.lineStyle(3, C.ink, 1);
         this.orbKeep(g, cx, cy, r * 2.1, r * 1.5, color);
@@ -183,6 +224,19 @@ export class BootScene extends Phaser.Scene {
         g.fillEllipse(cx + r * 0.85, cy + r * 0.15, r * 0.6, r * 0.5);
         g.fillStyle(0xfff4d6, 1);
         g.fillTriangle(cx + r * 0.75, cy + r * 0.35, cx + r * 0.9, cy + r * 0.35, cx + r * 0.7, cy - r * 0.05);
+        // pink snout tip, a perky ear and a lit back (design F17)
+        g.fillStyle(0xff9aa8, 1);
+        g.fillCircle(cx + r * 1.08, cy + r * 0.12, r * 0.12);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx + r * 1.1, cy + r * 0.1, r * 0.04);
+        g.fillStyle(color, 1);
+        g.lineStyle(1.5, C.ink, 1);
+        g.fillEllipse(cx + r * 0.62, cy - r * 0.55, r * 0.3, r * 0.22);
+        g.strokeEllipse(cx + r * 0.62, cy - r * 0.55, r * 0.3, r * 0.22);
+        g.fillStyle(0xff9aa8, 1);
+        g.fillEllipse(cx + r * 0.62, cy - r * 0.55, r * 0.14, r * 0.1);
+        g.fillStyle(0xffffff, 0.22);
+        g.fillEllipse(cx - r * 0.35, cy - r * 0.3, r * 0.8, r * 0.25);
         this.eyes(g, cx + r * 0.35, cy - r * 0.2, r * 0.15, r * 0.2);
         break;
       }
@@ -2702,8 +2756,22 @@ export class BootScene extends Phaser.Scene {
         g.lineStyle(3, C.ink, 1);
         this.orbKeep(g, cx, cy, radius * 1.6, radius * 2, color);
         g.lineBetween(cx, cy - radius * 0.4, cx, cy + radius);
+        // iridescent shell: a long sky-teal sheen on each wing case and a gold glint (design F17)
+        g.fillStyle(0x9af0d8, 0.55);
+        g.fillEllipse(cx - radius * 0.38, cy + radius * 0.15, radius * 0.22, radius * 0.9);
+        g.fillStyle(0x7ad0ff, 0.4);
+        g.fillEllipse(cx + radius * 0.4, cy + radius * 0.25, radius * 0.16, radius * 0.7);
         g.fillStyle(light, 1);
         g.fillCircle(cx - radius * 0.35, cy - radius * 0.1, radius * 0.25);
+        g.fillStyle(0xfff0a0, 1);
+        g.fillCircle(cx - radius * 0.42, cy - radius * 0.18, radius * 0.08);
+        // feelers
+        g.lineStyle(1.5, C.ink, 1);
+        g.lineBetween(cx - radius * 0.2, cy - radius * 0.9, cx - radius * 0.55, cy - radius * 1.35);
+        g.lineBetween(cx + radius * 0.2, cy - radius * 0.9, cx + radius * 0.55, cy - radius * 1.35);
+        g.fillStyle(C.ink, 1);
+        g.fillCircle(cx - radius * 0.57, cy - radius * 1.37, radius * 0.08);
+        g.fillCircle(cx + radius * 0.57, cy - radius * 1.37, radius * 0.08);
         this.eyes(g, cx, cy - radius * 0.65, radius * 0.22, radius * 0.3);
         break;
       }

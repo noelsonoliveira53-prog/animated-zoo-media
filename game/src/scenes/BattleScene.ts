@@ -70,6 +70,8 @@ const TOWER_GLOW: Record<string, number> = { thornbow: 0xb8f07a, glimmer: 0xc8a0
 
 /** Touch aiming draws the aim circle this far above the finger so it stays visible. */
 const TOUCH_AIM_LIFT = 60;
+/** A touch on the hero that moves less than this is a tap (select), more is a drag (move there). */
+const HERO_DRAG_MIN = 24;
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
 
@@ -106,6 +108,9 @@ export class BattleScene extends Phaser.Scene {
   private skillPreview = false;
   private skillHold = false;
   private veteranBadges = new Map<number, Phaser.GameObjects.Container>(); // tower uid → gold star
+  private heroDrag: Vec2 | null = null; // touch: where a drag from the hero started
+  private heroDragTo: Vec2 | null = null;
+  private heroDragG: Phaser.GameObjects.Graphics | null = null;
   private rallyDrag = false; // touch: dragging a rally flag
   private rallyFinger: Vec2 | null = null;
   private rallyG: Phaser.GameObjects.Graphics | null = null;
@@ -316,12 +321,23 @@ export class BattleScene extends Phaser.Scene {
     this.input.keyboard?.on('keydown-THREE', () => this.armSpell(SPELL_ORDER[2]));
     this.input.keyboard?.on('keydown-ESC', () => (this.spellMode ? this.armSpell(null) : this.togglePause()));
     this.input.on('pointermove', (p: Phaser.Input.Pointer) => {
+      if (this.heroDrag) this.heroDragTo = { x: p.worldX, y: p.worldY };
       if (this.rallyDrag) this.rallyFinger = { x: p.worldX, y: p.worldY };
       if (this.spellMode) this.reticle.setPosition(p.worldX, p.worldY - (this.aimHold ? TOUCH_AIM_LIFT : 0));
     });
     this.input.on('pointerup', (p: Phaser.Input.Pointer) => {
+      if (this.heroDrag) {
+        const from = this.heroDrag;
+        this.heroDrag = null;
+        this.heroDragTo = null;
+        if (Math.hypot(p.worldX - from.x, p.worldY - from.y) > HERO_DRAG_MIN) this.orderHeroMove({ x: p.worldX, y: p.worldY });
+        else this.selectHero(!this.heroSelected);
+        return;
+      }
       if (this.rallyDrag && this.rallyMode !== null) {
         this.rallyDrag = false;
+    this.heroDrag = null;
+    this.heroDragTo = null;
         this.rallyGhost?.setVisible(false);
         this.placeRally(this.rallyMode, { x: p.worldX, y: p.worldY - TOUCH_AIM_LIFT }, true);
         return;
@@ -2143,6 +2159,7 @@ export class BattleScene extends Phaser.Scene {
     this.reticle = this.add.circle(0, 0, 60, 0xffffff, 0.12).setStrokeStyle(3, C.cream, 0.9).setDepth(2900).setVisible(false);
     this.aimG = this.add.graphics().setDepth(2905);
     this.rallyG = this.add.graphics().setDepth(3290);
+    this.heroDragG = this.add.graphics().setDepth(3290);
     this.rallyGhost = null;
     this.aimText = this.add.text(0, 0, '', textStyle(pf(14), TEXT.cream)).setOrigin(0.5).setDepth(2906).setVisible(false);
     SPELL_ORDER.forEach((id, i) => {
@@ -2384,10 +2401,16 @@ export class BattleScene extends Phaser.Scene {
     this.tweens.add({ targets: this.heroRing, scale: 1.15, yoyo: true, repeat: -1, duration: 500 });
     this.heroSprite = this.add.image(h.pos.x, h.pos.y, `hero_${h.def.id}`).setOrigin(0.5, 0.9).setInteractive({ useHandCursor: true });
     padHit(this.heroSprite, 84);
-    this.heroSprite.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
+    this.heroSprite.on('pointerdown', (p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();
       this.closeMenu();
+      if (p.wasTouch) {
+        // touch: drag from the hero to where they should go (a short tap still selects, as before)
+        this.heroDrag = { x: p.worldX, y: p.worldY };
+        this.heroDragTo = { x: p.worldX, y: p.worldY };
+        return;
+      }
       this.selectHero(!this.heroSelected);
     });
     this.heroBar = this.add.graphics();
@@ -3316,6 +3339,29 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
+  /** Touch hero drag: a dashed trail from the hero to the finger and a gold ring where they'll stand. */
+  private drawHeroDrag(): void {
+    const g = this.heroDragG;
+    if (!g) return;
+    g.clear();
+    const h = this.sim.hero;
+    const to = this.heroDragTo;
+    if (!this.heroDrag || !to || !h?.alive) return;
+    if (Math.hypot(to.x - this.heroDrag.x, to.y - this.heroDrag.y) <= HERO_DRAG_MIN) return; // still a tap
+    const dx = to.x - h.pos.x;
+    const dy = to.y - h.pos.y;
+    const len = Math.hypot(dx, dy);
+    const shift = motion.reduced ? 0 : (this.time.now / 30) % 18;
+    g.lineStyle(3, C.gold, 0.85);
+    for (let d = shift; d + 9 < len; d += 18) {
+      g.lineBetween(h.pos.x + (dx * d) / len, h.pos.y + (dy * d) / len, h.pos.x + (dx * (d + 9)) / len, h.pos.y + (dy * (d + 9)) / len);
+    }
+    g.fillStyle(C.gold, 0.18);
+    g.fillEllipse(to.x, to.y, 56, 22);
+    g.lineStyle(3, C.gold, 1);
+    g.strokeEllipse(to.x, to.y, 56, 22);
+  }
+
   /** Touch rally drag: a ghost flag above the finger, snapped onto the road, green when it can be planted. */
   private drawRallyGhost(): void {
     const g = this.rallyG;
@@ -3440,6 +3486,7 @@ export class BattleScene extends Phaser.Scene {
     this.syncViews(dt);
     this.drawAim();
     this.drawRallyGhost();
+    this.drawHeroDrag();
     this.syncHero();
     this.drawSpellHud();
     this.fx.draw();

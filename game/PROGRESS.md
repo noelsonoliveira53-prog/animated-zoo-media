@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **300** (next balance pass at iteration 305)
+Iteration counter: **301** (next balance pass at iteration 305)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1955,6 +1955,13 @@ Iteration counter: **300** (next balance pass at iteration 305)
   - **Combat:** the branch benchmark (`spec-bench.ts`) is identical to iterations 7 and 280, and the campaign sweep matches iteration 245 on every sampled level (Balance Notes). Nothing tuned.
   - **Memory:** idle battle steady (139 → 138 objects). The busy battle grows only with the crowd, since `leak-check.mjs` now also logs enemies, views, projectiles and soldiers. At 108 enemies the 528 objects are about 3.5 per enemy (sprite, bar, shadow), and enemy views always equal live enemies, so the new per-frame overlays (aim, wave-call glow, cards, bars) leave nothing behind.
   - Screenshot `screenshots/300.png` (phone battle with the new HUD: wave-call strip, "Call now: +17 coins", rounded bars). 313 tests.
+- **Iteration 301: run summary on the result screen.**
+  - The wave-chart card (now 136 high) ends with a line such as "Best tower: Boulder Bellows Lv 3 (14.2k dmg, 41 kills) • Bramble: 820 dmg, 6 kills • Spells: 3".
+  - **New sim tallies (visual only):**
+    - `dmgBy` and `killsBy`, keyed `tower:<uid>`, `hero` or `spell`. Each of the nine damage call sites sets the source; the tally counts health actually removed (overkill excluded); kills go to whoever landed the last blow; summoned Rangers count as the spell.
+    - `spellsCast`.
+  - New `systems/runSummary.ts` (`runSummary`, `shortNum`) with 5 tests (318 total), including a real sim run where towers deal damage and score kills.
+  - `result-check.mjs` now seeds two towers and tallies and reads the summary back; no console errors. A level 5 spot check is identical to iteration 300, so combat is untouched. Screenshot `screenshots/301.png`.
 
 ## In Progress
 - (none)
@@ -1962,8 +1969,8 @@ Iteration counter: **300** (next balance pass at iteration 305)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Run summary stats on the result screen: top tower by damage, spells cast, hero kills.
-2. Rally point on touch: drag the rally flag instead of tap-to-place, with the reach circle and a snap to the road.
+1. Rally point on touch: drag the rally flag instead of tap-to-place, with the reach circle and a snap to the road.
+2. Tower kill counter: a tiny kill tally on each tower's info card (from the new `killsBy`), plus a "veteran" glint on towers past 50 kills.
 
 ## Known Bugs
 - (none known)

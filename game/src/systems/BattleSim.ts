@@ -12,6 +12,7 @@ import { buildSchedule, earlyCallBonus, type SpawnEvent } from './waves';
 // which lets the headless balance simulator run the exact same rules.
 
 export interface Enemy {
+  lastSrc?: string; // who landed the latest blow (for kill credit on the result screen)
   uid: number;
   def: EnemyDef;
   hp: number;
@@ -292,6 +293,12 @@ export class BattleSim {
   spellCd: Record<string, number> = {};
   /** Ink clouds on the road: towers can't see enemies inside them until they fade. */
   inkClouds: { pos: Vec2; radius: number; t: number }[] = [];
+  /** Run stats for the result screen: health removed and kills by source ('tower:<uid>', 'hero', 'spell'), spells cast. */
+  dmgBy: Record<string, number> = {};
+  killsBy: Record<string, number> = {};
+  spellsCast = 0;
+  /** Who the damage being applied right now comes from (set at each damage call site). */
+  private dmgSrc = '';
   healTotal = 0; // health restored to soldiers by the hero (Sorrel), for the Field Medic achievement
   events: SimEvent[] = [];
 
@@ -426,12 +433,14 @@ export class BattleSim {
         if (def.slow) {
           this.slow(e, def.slow.factor, def.slow.duration);
         }
+        this.dmgSrc = 'spell';
         this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)) * (1 - this.drenchCut(e)), def.damageType ?? 'physical');
       }
     } else {
       this.strikes.push({ uid: this.nextUid++, pos: { ...pos }, timer: def.delay ?? 0, spellId: id });
     }
     this.spellCd[id] = this.spellCooldown(id);
+    this.spellsCast++;
     this.events.push({ type: 'spellCast', spellId: id, pos: { ...pos } });
     return true;
   }
@@ -458,6 +467,7 @@ export class BattleSim {
       const def = SPELLS[st.spellId];
       const radius = def.radius ?? 60;
       const hits = this.spellHits(st.spellId, st.pos);
+      this.dmgSrc = 'spell';
       for (const e of hits) this.applyDamage(e, computeDamage(def.damage ?? 0, def.damageType ?? 'physical', this.res(e)) * (1 - this.drenchCut(e)), def.damageType ?? 'physical');
       this.events.push({ type: 'strike', spellId: st.spellId, uid: st.uid, pos: st.pos, radius, hits });
     }
@@ -510,6 +520,7 @@ export class BattleSim {
       if (sk.slow) {
         this.slow(e, sk.slow.factor, sk.slow.duration);
       }
+      this.dmgSrc = 'hero';
       this.applyDamage(e, computeDamage(dmg, sk.damageType, this.res(e)), sk.damageType);
     }
     let healed: Vec2[] | undefined;
@@ -638,6 +649,7 @@ export class BattleSim {
           h.facing = target.pos.x < h.pos.x ? -1 : 1;
           this.events.push({ type: 'melee', pos: { ...target.pos }, from: { ...h.pos } });
           const dealt = computeDamage(this.heroHitDamage(), atk.type, this.res(target));
+          this.dmgSrc = 'hero';
           this.applyDamage(target, dealt, atk.type);
           if (target.def.thorns) {
             this.hurtHero(dealt * target.def.thorns);
@@ -1813,6 +1825,7 @@ export class BattleSim {
             s.attackCd = 1 / stats.attackRate;
             this.events.push({ type: 'melee', pos: { ...target.pos }, from: { ...s.pos } });
             const dealt = computeDamage(stats.damage, 'physical', this.res(target));
+            this.dmgSrc = s.towerUid ? `tower:${s.towerUid}` : 'spell'; // summoned Rangers count as the spell
             this.applyDamage(target, dealt, 'physical');
             if (target.def.thorns) {
               this.hurtSoldier(s, dealt * target.def.thorns);
@@ -2089,6 +2102,7 @@ export class BattleSim {
       this.slow(e, p.slow.factor, p.slow.duration);
     }
     const armor = this.res(e).armor * (1 - p.pierce);
+    this.dmgSrc = p.towerUid ? `tower:${p.towerUid}` : 'hero';
     this.applyDamage(e, computeDamage(p.damage * mult, p.damageType, { armor, magicResist: e.mr }), p.damageType);
   }
 
@@ -2114,6 +2128,7 @@ export class BattleSim {
       if (!next) break;
       hit.add(next.uid);
       points.push({ ...next.pos });
+      this.dmgSrc = p.towerUid ? `tower:${p.towerUid}` : 'hero';
       this.applyDamage(next, computeDamage(dmg, p.damageType, this.res(next)), p.damageType);
       from = next;
     }
@@ -2168,6 +2183,10 @@ export class BattleSim {
       e.shield -= absorbed;
       left -= absorbed;
       if (e.shield <= 0) this.events.push({ type: 'shieldBreak', enemy: e });
+    }
+    if (left > 0 && this.dmgSrc) {
+      this.dmgBy[this.dmgSrc] = (this.dmgBy[this.dmgSrc] ?? 0) + Math.min(left, Math.max(0, e.hp)); // overkill doesn't count
+      e.lastSrc = this.dmgSrc;
     }
     e.hp -= left;
     if (dmg > 0) e.sinceHit = 0;
@@ -2260,6 +2279,7 @@ export class BattleSim {
       if (!e.revived && !e.def.boss && !e.def.revive) this.fallen.push({ id: e.def.id, path: e.path, dist: e.dist, pos: { ...e.pos }, at: this.time });
       if (this.fallen.length > 40) this.fallen.splice(0, this.fallen.length - 40);
       this.coins += bounty;
+      if (e.lastSrc) this.killsBy[e.lastSrc] = (this.killsBy[e.lastSrc] ?? 0) + 1;
       this.events.push({ type: 'kill', enemy: e, bounty });
       if (this.hero?.alive) {
         const near = Math.hypot(e.pos.x - this.hero.pos.x, e.pos.y - this.hero.pos.y) < 260;

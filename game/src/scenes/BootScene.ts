@@ -1,4 +1,6 @@
 import Phaser from 'phaser';
+import { applyRim } from '../systems/rimLight';
+import { brightness } from '../systems/foeReadability';
 import { ENEMIES } from '../data/enemies';
 import { TOWERS } from '../data/towers';
 import { HEROES } from '../data/heroes';
@@ -3056,6 +3058,19 @@ export class BootScene extends Phaser.Scene {
     }
     g.generateTexture(`enemy_${id}`, s, s);
     g.destroy();
+    // near-black foes hide their own ink outline: give their upper-left edge a cool rim light (consistency pass F25)
+    if (brightness(color) < 0.25) this.rimLight(`enemy_${id}`, 0xb8c4dc, 0.45);
+  }
+
+  /** Light the upper-left edge of a baked texture (see systems/rimLight). */
+  private rimLight(key: string, color: number, amount: number): void {
+    const tex = this.textures.get(key) as Phaser.Textures.CanvasTexture;
+    if (!tex || typeof tex.getContext !== 'function') return;
+    const ctx = tex.getContext();
+    const img = ctx.getImageData(0, 0, tex.width, tex.height);
+    applyRim(img.data, tex.width, tex.height, color, amount, 1);
+    ctx.putImageData(img, 0, 0);
+    tex.refresh();
   }
 
   /** Murkhorde camp buildings for raids (40px tiles). */

@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F24**
+Fix counter: **F25**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2201,6 +2201,14 @@ Fix counter: **F24**
   - **Powdermonkey**, **Sapstoat**, **Silkcrane** and **Turnleaf** already read well.
 
   Sheets: `fix-24-before.png` and `fix-24-after.png`.
+
+- **F25 Consistency pass (ink balance).** New `scripts/ink-ratio.mjs [prefix] [top]` renders every texture and ranks sprites by the share of near-ink pixels. Median is 37 %, so outliers point to sprites drowned in outline.
+  - The top four (Dreadmast 91 %, Collie 87 %, Rotseed 79 %, Harrier 69 %) are near-black by design, and their bodies swallowed their own ink outline, so they read as blobs on dark maps.
+  - New pure `src/systems/rimLight.ts` (`rimPixels` / `applyRim`, 3 tests) lights opaque pixels whose upper-left neighbour is empty, the same light direction as every hand-drawn highlight.
+  - `BootScene.rimLight` bakes a subtle 1 px cool rim (45 %) into every enemy whose body colour is darker than 0.25 brightness, so dark silhouettes separate from the ground without changing their palette.
+  - The next outliers (Seedcaster, Skitter, Shellback around 55–60 %) carry deliberate dark faces and shells and read fine at gameplay size.
+
+  Sheets: `fix-25-before.png` and `fix-25-after.png`.
 
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.

@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<!--
+    THIS IS A TEMPLATE THAT SHOULD BE USED EVERY TIME AND MODIFIED.
+    WHAT TO KEEP:
+    ✓ Overall structure (header, sidebar, main content)
+    ✓ Anthropic branding (colors, fonts, layout)
+    ✓ Seed navigation section (always include this)
+    ✓ Self-contained artifact (everything inline)
+
+    WHAT TO CREATIVELY EDIT:
+    ✗ The p5.js algorithm (implement YOUR vision)
+    ✗ The parameters (define what YOUR art needs)
+    ✗ The UI controls (match YOUR parameters)
+
+    Let your philosophy guide the implementation.
+    The world is your oyster - be creative!
+-->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Desire Lines</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.7.0/p5.min.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&family=Lora:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        /* Anthropic Brand Colors */
+        :root {
+            --anthropic-dark: #141413;
+            --anthropic-light: #faf9f5;
+            --anthropic-mid-gray: #b0aea5;
+            --anthropic-light-gray: #e8e6dc;
+            --anthropic-orange: #d97757;
+            --anthropic-blue: #6a9bcc;
+            --anthropic-green: #788c5d;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, var(--anthropic-light) 0%, #f5f3ee 100%);
+            min-height: 100vh;
+            color: var(--anthropic-dark);
+        }
+
+        .container {
+            display: flex;
+            min-height: 100vh;
+            padding: 20px;
+            gap: 20px;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            width: 320px;
+            flex-shrink: 0;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            padding: 24px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(20, 20, 19, 0.1);
+            overflow-y: auto;
+            overflow-x: hidden;
+        }
+
+        .sidebar h1 {
+            font-family: 'Lora', serif;
+            font-size: 24px;
+            font-weight: 500;
+            color: var(--anthropic-dark);
+            margin-bottom: 8px;
+        }
+
+        .sidebar .subtitle {
+            color: var(--anthropic-mid-gray);
+            font-size: 14px;
+            margin-bottom: 32px;
+            line-height: 1.4;
+        }
+
+        /* Control Sections */
+        .control-section {
+            margin-bottom: 32px;
+        }
+
+        .control-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: var(--anthropic-dark);
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .control-section h3::before {
+            content: '•';
+            color: var(--anthropic-orange);
+            font-weight: bold;
+        }
+
+        /* Seed Controls */
+        .seed-input {
+            width: 100%;
+            background: var(--anthropic-light);
+            padding: 12px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            font-size: 14px;
+            margin-bottom: 12px;
+            border: 1px solid var(--anthropic-light-gray);
+            text-align: center;
+        }
+
+        .seed-input:focus {
+            outline: none;
+            border-color: var(--anthropic-orange);
+            box-shadow: 0 0 0 2px rgba(217, 119, 87, 0.1);
+            background: white;
+        }
+
+        .seed-controls {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 8px;
+            margin-bottom: 8px;
+        }
+
+        .regen-button {
+            margin-bottom: 0;
+        }
+
+        /* Parameter Controls */
+        .control-group {
+            margin-bottom: 20px;
+        }
+
+        .control-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--anthropic-dark);
+            margin-bottom: 8px;
+        }
+
+        .slider-container {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slider-container input[type="range"] {
+            flex: 1;
+            height: 4px;
+            background: var(--anthropic-light-gray);
+            border-radius: 2px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 16px;
+            height: 16px;
+            background: var(--anthropic-orange);
+            border-radius: 50%;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .slider-container input[type="range"]::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+            background: #c86641;
+        }
+
+        .slider-container input[type="range"]::-moz-range-thumb {
+            width: 16px;
+            height: 16px;
+            background: var(--anthropic-orange);
+            border-radius: 50%;
+            border: none;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .value-display {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+            min-width: 60px;
+            text-align: right;
+        }
+
+        /* Color Pickers */
+        .color-group {
+            margin-bottom: 16px;
+        }
+
+        .color-group label {
+            display: block;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+            margin-bottom: 4px;
+        }
+
+        .color-picker-container {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-picker-container input[type="color"] {
+            width: 32px;
+            height: 32px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            background: none;
+            padding: 0;
+        }
+
+        .color-value {
+            font-family: 'Courier New', monospace;
+            font-size: 12px;
+            color: var(--anthropic-mid-gray);
+        }
+
+        /* Buttons */
+        .button {
+            background: var(--anthropic-orange);
+            color: white;
+            border: none;
+            padding: 10px 16px;
+            border-radius: 6px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            width: 100%;
+        }
+
+        .button:hover {
+            background: #c86641;
+            transform: translateY(-1px);
+        }
+
+        .button:active {
+            transform: translateY(0);
+        }
+
+        .button.secondary {
+            background: var(--anthropic-blue);
+        }
+
+        .button.secondary:hover {
+            background: #5a8bb8;
+        }
+
+        .button.tertiary {
+            background: var(--anthropic-green);
+        }
+
+        .button.tertiary:hover {
+            background: #6b7b52;
+        }
+
+        .button-row {
+            display: flex;
+            gap: 8px;
+        }
+
+        .button-row .button {
+            flex: 1;
+        }
+
+        /* Canvas Area */
+        .canvas-area {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 0;
+        }
+
+        #canvas-container {
+            width: 100%;
+            max-width: 1000px;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(20, 20, 19, 0.1);
+            background: white;
+        }
+
+        #canvas-container canvas {
+            display: block;
+            width: 100% !important;
+            height: auto !important;
+        }
+
+        /* Loading State */
+        .loading {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 18px;
+            color: var(--anthropic-mid-gray);
+        }
+
+        /* Responsive - Stack on mobile */
+        @media (max-width: 600px) {
+            .container {
+                flex-direction: column;
+            }
+
+            .sidebar {
+                width: 100%;
+            }
+
+            .canvas-area {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="sidebar">
+            <h1>Desire Lines</h1>
+            <div class="subtitle">Paths no one drew: travellers wander a lit meadow, follow each other's footsteps, and wear roads into the grass.</div>
+
+            <div class="control-section">
+                <h3>Seed</h3>
+                <input type="number" id="seed-input" class="seed-input" value="12345" onchange="updateSeed()">
+                <div class="seed-controls">
+                    <button class="button secondary" onclick="previousSeed()">← Prev</button>
+                    <button class="button secondary" onclick="nextSeed()">Next →</button>
+                </div>
+                <button class="button tertiary regen-button" onclick="randomSeedAndUpdate()">↻ Random</button>
+            </div>
+
+            <div class="control-section">
+                <h3>Parameters</h3>
+                <div class="control-group"><label>Travellers</label><div class="slider-container">
+                    <input type="range" id="travellers" min="20" max="220" step="10" value="90" oninput="updateParam('travellers', this.value)">
+                    <span class="value-display" id="travellers-value">90</span></div></div>
+                <div class="control-group"><label>Tread Width</label><div class="slider-container">
+                    <input type="range" id="tread" min="2" max="7" step="0.5" value="4" oninput="updateParam('tread', this.value)">
+                    <span class="value-display" id="tread-value">4</span></div></div>
+                <div class="control-group"><label>Follow the Herd</label><div class="slider-container">
+                    <input type="range" id="cohesion" min="0" max="2" step="0.1" value="1" oninput="updateParam('cohesion', this.value)">
+                    <span class="value-display" id="cohesion-value">1</span></div></div>
+                <div class="control-group"><label>Wander</label><div class="slider-container">
+                    <input type="range" id="wander" min="0" max="1.2" step="0.05" value="0.45" oninput="updateParam('wander', this.value)">
+                    <span class="value-display" id="wander-value">0.45</span></div></div>
+                <div class="control-group"><label>Land Relief</label><div class="slider-container">
+                    <input type="range" id="relief" min="0" max="2" step="0.1" value="1" oninput="updateParam('relief', this.value)">
+                    <span class="value-display" id="relief-value">1</span></div></div>
+                <div class="control-group"><label>Value Steps</label><div class="slider-container">
+                    <input type="range" id="steps" min="2" max="7" step="1" value="4" oninput="updateParam('steps', this.value)">
+                    <span class="value-display" id="steps-value">4</span></div></div>
+                <div class="control-group"><label>Grass Tufts</label><div class="slider-container">
+                    <input type="range" id="tufts" min="0" max="2500" step="100" value="1100" oninput="updateParam('tufts', this.value)">
+                    <span class="value-display" id="tufts-value">1100</span></div></div>
+                <div class="control-group"><label>Flower Clusters</label><div class="slider-container">
+                    <input type="range" id="flowers" min="0" max="80" step="2" value="26" oninput="updateParam('flowers', this.value)">
+                    <span class="value-display" id="flowers-value">26</span></div></div>
+            </div>
+
+            <div class="control-section">
+                <h3>Colors</h3>
+                <div class="color-group"><label>Ink</label><div class="color-picker-container">
+                    <input type="color" id="color1" value="#1d2b1f" onchange="updateColor('color1', this.value)"><span class="color-value" id="color1-value">#1d2b1f</span></div></div>
+                <div class="color-group"><label>Leaf</label><div class="color-picker-container">
+                    <input type="color" id="color2" value="#8fdc5a" onchange="updateColor('color2', this.value)"><span class="color-value" id="color2-value">#8fdc5a</span></div></div>
+                <div class="color-group"><label>Cream</label><div class="color-picker-container">
+                    <input type="color" id="color3" value="#fff4d6" onchange="updateColor('color3', this.value)"><span class="color-value" id="color3-value">#fff4d6</span></div></div>
+                <div class="color-group"><label>Gold</label><div class="color-picker-container">
+                    <input type="color" id="color4" value="#ffc93c" onchange="updateColor('color4', this.value)"><span class="color-value" id="color4-value">#ffc93c</span></div></div>
+            </div>
+
+            <div class="control-section">
+                <h3>Actions</h3>
+                <div class="button-row">
+                    <button class="button" onclick="initializeSystem()">Regenerate</button>
+                    <button class="button" onclick="resetParameters()">Reset</button>
+                </div>
+                <div class="button-row" style="margin-top:8px">
+                    <button class="button secondary" onclick="saveCanvas('desire-lines-' + params.seed, 'png')">Download PNG</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="canvas-area">
+            <div id="canvas-container">
+                <div class="loading">Initializing generative art...</div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // ═══ PARAMETERS ═══
+        let params = {
+            seed: 12345, travellers: 90, tread: 4, cohesion: 1, wander: 0.45,
+            relief: 1, steps: 4, tufts: 1100, flowers: 26,
+            colorPalette: ['#1d2b1f', '#8fdc5a', '#fff4d6', '#ffc93c']
+        };
+        let defaultParams = { ...params, colorPalette: [...params.colorPalette] };
+
+        // ═══ ALGORITHM ═══
+        const W = 1200, CELL = 4, N = W / CELL;        // simulation grid: 300 x 300 cells of 4 px
+        const TH = 0.5;                                 // wear threshold where grass becomes bare earth
+        const LX = Math.SQRT1_2, LY = Math.SQRT1_2;     // light travels from the upper left toward the lower right
+        let wear, wn, hField, sField, trips, tripIdx, phase, groundImg, overlay;
+        let INK, LEAF, CREAM, GOLD, DIRT, DIRT_DARK, tones;
+
+        const hex = (h) => [parseInt(h.slice(1, 3), 16), parseInt(h.slice(3, 5), 16), parseInt(h.slice(5, 7), 16)];
+        const mix = (a, b, t) => [a[0] + (b[0] - a[0]) * t, a[1] + (b[1] - a[1]) * t, a[2] + (b[2] - a[2]) * t];
+        const sstep = (a, b, x) => { const t = Math.min(1, Math.max(0, (x - a) / (b - a))); return t * t * (3 - 2 * t); };
+        const angDiff = (a, b) => { let d = a - b; while (d > Math.PI) d -= 2 * Math.PI; while (d < -Math.PI) d += 2 * Math.PI; return d; };
+
+        function bil(arr, px, py) {               // bilinear sample of a cell grid at pixel coordinates
+            let gx = px / CELL - 0.5, gy = py / CELL - 0.5;
+            gx = Math.min(N - 1.001, Math.max(0, gx)); gy = Math.min(N - 1.001, Math.max(0, gy));
+            const ix = gx | 0, iy = gy | 0, fx = gx - ix, fy = gy - iy, i = iy * N + ix;
+            const a = arr[i] + (arr[i + 1] - arr[i]) * fx, b = arr[i + N] + (arr[i + N + 1] - arr[i + N]) * fx;
+            return a + (b - a) * fy;
+        }
+        const cellAt = (cx, cy) => (cx < 0 || cy < 0 || cx >= N || cy >= N) ? 0 : wear[(cy | 0) * N + (cx | 0)];
+
+        function setup() {
+            const c = createCanvas(W, W);
+            c.parent('canvas-container');
+            pixelDensity(1);
+            document.querySelector('.loading').style.display = 'none';
+            initializeSystem();
+        }
+
+        function buildPalette() {
+            [INK, LEAF, CREAM, GOLD] = params.colorPalette.map(hex);
+            DIRT = mix(mix(CREAM, GOLD, 0.3), INK, 0.3);      // sun-baked tan earth
+            DIRT_DARK = mix(DIRT, INK, 0.25);
+            tones = [];
+            for (let i = 0; i < params.steps; i++) {
+                const t = params.steps === 1 ? 1 : i / (params.steps - 1);
+                tones.push(mix(mix(INK, LEAF, 0.5 + 0.42 * t), CREAM, 0.1 * t * t));
+            }
+        }
+
+        function initializeSystem() {
+            randomSeed(params.seed); noiseSeed(params.seed);
+            buildPalette();
+
+            // the land: layered noise heights, lit from the upper left
+            hField = new Float32Array(N * N); sField = new Float32Array(N * N);
+            for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+                const u = x * 0.012, v = y * 0.012;
+                hField[y * N + x] = noise(u, v) * 0.62 + noise(u * 2.3 + 40, v * 2.3) * 0.28 + noise(u * 5.1, v * 5.1 + 90) * 0.1;
+            }
+            for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+                const a = hField[Math.max(0, y - 1) * N + Math.max(0, x - 1)], b = hField[Math.min(N - 1, y + 1) * N + Math.min(N - 1, x + 1)];
+                sField[y * N + x] = (a - b) * 9;   // slopes facing the light are positive
+            }
+
+            // gates on the meadow's edge, and clearings where routes meet
+            const gates = [], nG = 3 + floor(random(3));
+            const sides = shuffle([0, 1, 2, 3, floor(random(4)), floor(random(4))]);
+            for (let i = 0; i < nG; i++) {
+                const s = sides[i], t = random(0.15, 0.85) * N;
+                gates.push(s === 0 ? { x: t, y: 1 } : s === 1 ? { x: N - 2, y: t } : s === 2 ? { x: t, y: N - 2 } : { x: 1, y: t });
+            }
+            const hubs = [];
+            for (let i = 0, n = 1 + floor(random(2)); i < n; i++) hubs.push({ x: random(0.3, 0.7) * N, y: random(0.3, 0.7) * N });
+
+            trips = [];
+            for (let k = 0; k < params.travellers; k++) {
+                const a = random(gates); let b = random(gates); while (b === a) b = random(gates);
+                trips.push({ id: k, a, b, via: random() < 0.55 ? random(hubs) : null });
+            }
+            wear = new Float32Array(N * N);
+            tripIdx = 0; phase = 'sim';
+
+            // the untouched meadow, rendered once, and the live wear overlay drawn over it while walkers travel
+            groundImg = createImage(W, W);
+            renderScene(groundImg, true);
+            if (!overlay) { overlay = createGraphics(N, N); overlay.pixelDensity(1); }
+            loop();
+        }
+
+        function deposit(cx, cy, r) {
+            const R = Math.ceil(r * 1.6), k = 1 / (r * r * 0.5);
+            for (let j = -R; j <= R; j++) for (let i = -R; i <= R; i++) {
+                const x = (cx + i) | 0, y = (cy + j) | 0;
+                if (x < 0 || y < 0 || x >= N || y >= N) continue;
+                const dx = x + 0.5 - cx, dy = y + 0.5 - cy;
+                wear[y * N + x] += 0.16 * Math.exp(-(dx * dx + dy * dy) * k);
+            }
+        }
+
+        function runTrip(t) {
+            const p = { x: t.a.x + random(-3, 3), y: t.a.y + random(-3, 3) };
+            const goals = t.via ? [t.via, t.b] : [t.b];
+            let gi = 0, ang = Math.atan2(goals[0].y - p.y, goals[0].x - p.x);
+            const SD = params.tread * 1.7 + 3, SA = 0.55;
+            for (let s = 0; s < 2000; s++) {
+                const g = goals[gi], dx = g.x - p.x, dy = g.y - p.y;
+                if (dx * dx + dy * dy < 16) { if (++gi >= goals.length) break; continue; }
+                // sense trodden ground ahead, left and right, and lean toward the most-walked
+                const f = cellAt(p.x + Math.cos(ang) * SD, p.y + Math.sin(ang) * SD);
+                const l = cellAt(p.x + Math.cos(ang - SA) * SD, p.y + Math.sin(ang - SA) * SD);
+                const r = cellAt(p.x + Math.cos(ang + SA) * SD, p.y + Math.sin(ang + SA) * SD);
+                let turn = 0;
+                if (l > f && l > r) turn = -1; else if (r > f && r > l) turn = 1;
+                const pull = Math.min(1, Math.hypot(dx, dy) < 25 ? 0.2 : 0.055);   // the goal's pull firms up near arrival
+                ang += angDiff(Math.atan2(dy, dx), ang) * pull
+                     + turn * params.cohesion * 0.09
+                     + (noise(p.x * 0.025, p.y * 0.025, t.id * 0.61) - 0.5) * params.wander * 0.5;
+                p.x += Math.cos(ang) * 1.2; p.y += Math.sin(ang) * 1.2;
+                if (p.x < -2 || p.y < -2 || p.x > N + 2 || p.y > N + 2) break;
+                deposit(p.x, p.y, params.tread);
+            }
+        }
+
+        function finishWear() {
+            // soften the footfall record, then map it through the trample curve to 0..1
+            let a = wear, b = new Float32Array(N * N);
+            for (let pass = 0; pass < 2; pass++) {
+                for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+                    let s = 0; for (let i = -2; i <= 2; i++) s += a[y * N + Math.min(N - 1, Math.max(0, x + i))];
+                    b[y * N + x] = s / 5;
+                }
+                for (let y = 0; y < N; y++) for (let x = 0; x < N; x++) {
+                    let s = 0; for (let i = -2; i <= 2; i++) s += b[Math.min(N - 1, Math.max(0, y + i)) * N + x];
+                    a[y * N + x] = s / 5;
+                }
+            }
+            wn = new Float32Array(N * N);
+            for (let i = 0; i < N * N; i++) wn[i] = 1 - Math.exp(-a[i] / 3.2);
+        }
+
+        const tmp = [0, 0, 0];
+        function groundTone(x, y) {              // the stepped, lit meadow colour at a pixel
+            const v = bil(hField, x, y) * 0.8 + bil(sField, x, y) * params.relief * 0.22 + 0.05;
+            const idx = Math.min(params.steps - 1, Math.max(0, Math.floor(v * params.steps)));
+            return tones[idx];
+        }
+
+        function renderScene(img, bare) {
+            img.loadPixels();
+            const px = img.pixels;
+            for (let y = 0; y < W; y++) for (let x = 0; x < W; x++) {
+                let c = groundTone(x, y);
+                if (!bare) {
+                    const w = bil(wn, x, y);
+                    if (w > TH - 0.3) {
+                        const gx = (bil(wn, x + 2, y) - bil(wn, x - 2, y)) / 4, gy = (bil(wn, x, y + 2) - bil(wn, x, y - 2)) / 4;
+                        const gm = Math.hypot(gx, gy) + 1e-6;
+                        const dist = (w - TH) / gm;                                    // signed px distance to the path's edge
+                        c = mix(c, DIRT_DARK, sstep(TH - 0.3, TH, w) * 0.32);         // grass thinning and yellowing
+                        if (dist > -1.5) {
+                            let d = mix(DIRT, CREAM, sstep(0.72, 0.98, w) * 0.4);    // the most-walked middle is palest
+                            const facing = (gx * LX + gy * LY) / gm;                   // >0 on the upper-left bank
+                            const band = Math.max(0, 1 - dist / 9);
+                            if (facing > 0) d = mix(d, INK, band * facing * 0.38);    // the bank shades the path
+                            else d = mix(d, CREAM, band * -facing * 0.3);              // the far bank catches light
+                            c = mix(c, d, sstep(-0.8, 0.8, dist));
+                            c = mix(c, INK, 1 - sstep(1.4, 2.4, Math.abs(dist)));      // ink line, as wide as the characters' outlines
+                        }
+                    }
+                }
+                // one light for the whole world: a soft wash from the upper left
+                const g = (x + y) / (2 * W);
+                const k = (y * W + x) * 4;
+                px[k] = c[0] + (CREAM[0] - c[0]) * 0.07 * (1 - g) + (INK[0] - c[0]) * 0.1 * g;
+                px[k + 1] = c[1] + (CREAM[1] - c[1]) * 0.07 * (1 - g) + (INK[1] - c[1]) * 0.1 * g;
+                px[k + 2] = c[2] + (CREAM[2] - c[2]) * 0.07 * (1 - g) + (INK[2] - c[2]) * 0.1 * g;
+                px[k + 3] = 255;
+            }
+            img.updatePixels();
+        }
+
+        function drawPreview() {
+            image(groundImg, 0, 0);
+            overlay.loadPixels();
+            for (let i = 0; i < N * N; i++) {
+                const a = sstep(0.2, 1.4, wear[i]) * 230;
+                overlay.pixels[i * 4] = DIRT[0]; overlay.pixels[i * 4 + 1] = DIRT[1]; overlay.pixels[i * 4 + 2] = DIRT[2]; overlay.pixels[i * 4 + 3] = a;
+            }
+            overlay.updatePixels();
+            image(overlay, 0, 0, W, W);
+        }
+
+        function draw() {
+            if (phase !== 'sim') return;
+            const perFrame = Math.max(1, Math.ceil(params.travellers / 70));
+            for (let i = 0; i < perFrame && tripIdx < trips.length; i++) runTrip(trips[tripIdx++]);
+            if (tripIdx < trips.length) { drawPreview(); return; }
+            finishWear();
+            const finalImg = createImage(W, W);
+            renderScene(finalImg, false);
+            image(finalImg, 0, 0);
+            decorate();
+            phase = 'done';
+            noLoop();
+        }
+
+        // ═══ DECORATION: pebbles in the earth, tufts at the verge, flowers and stones apart ═══
+        const wAt = (x, y) => bil(wn, x, y);
+
+        function decorate() {
+            // pebbles settle only in bare earth
+            noStroke();
+            for (let i = 0; i < 2600; i++) {
+                const x = random(W), y = random(W);
+                if (wAt(x, y) < TH + 0.08) continue;
+                const s = random(2, 5.5);
+                fill(...mix(DIRT, INK, random(0.22, 0.4))); ellipse(x, y, s * 1.3, s);
+                fill(...mix(DIRT, CREAM, 0.5)); ellipse(x - s * 0.25, y - s * 0.25, s * 0.45, s * 0.35);
+            }
+            // mossy stones keep their distance from the road
+            for (let i = 0, placed = 0; i < 200 && placed < 7; i++) {
+                const x = random(60, W - 60), y = random(60, W - 60), w = random(34, 72), h = w * random(0.5, 0.62);
+                if ([[0, 0], [-w / 2, 0], [w / 2, 0], [0, -h], [0, h]].some(([dx, dy]) => wAt(x + dx, y + dy) > TH - 0.25)) continue;
+                stone(x, y, w, h); placed++;
+            }
+            // grass tufts: densest where the meadow meets the path, spilling over its edge
+            strokeCap(ROUND);
+            for (let i = 0; i < params.tufts * 3 && i < 9000; i++) {
+                const x = random(W), y = random(W), w = wAt(x, y);
+                if (w > TH + 0.04) continue;
+                const verge = w > TH - 0.3;
+                if (!verge && random() > 0.33) continue;
+                if (i % 3 && !verge) continue;
+                tuft(x, y, verge ? random(7, 12) : random(6, 10));
+            }
+            // flower clusters, each on its own small shadow
+            for (let i = 0, placed = 0; i < 600 && placed < params.flowers; i++) {
+                const cx = random(30, W - 30), cy = random(30, W - 30);
+                if (wAt(cx, cy) > TH - 0.2) continue;
+                const n = 3 + floor(random(4)), col = random() < 0.65 ? GOLD : CREAM;
+                for (let j = 0; j < n; j++) {
+                    const x = cx + random(-11, 11), y = cy + random(-8, 8);
+                    noStroke(); fill(INK[0], INK[1], INK[2], 55); ellipse(x + 2, y + 2.5, 7, 5);
+                    fill(...col); circle(x, y, 6);
+                    fill(...mix(col, INK, 0.5)); circle(x, y, 2);
+                }
+                placed++;
+            }
+        }
+
+        function tuft(x, y, len) {
+            const base = groundTone(x, y), dark = mix(base, INK, 0.38), lite = mix(base, CREAM, 0.28);
+            const n = 3 + floor(random(3));
+            strokeWeight(2);
+            for (let j = 0; j < n; j++) {
+                const a = map(j, 0, n - 1, -0.7, 0.7) + random(-0.15, 0.15);
+                const L = len * random(0.7, 1.05), bx = x + (j - n / 2) * 1.6;
+                stroke(...(j === 0 ? lite : dark)); noFill();
+                bezier(bx, y, bx + Math.sin(a) * L * 0.2, y - L * 0.5, bx + Math.sin(a) * L * 0.6, y - L * 0.8, bx + Math.sin(a) * L, y - L);
+            }
+        }
+
+        function stone(x, y, w, h) {
+            const body = mix(CREAM, INK, 0.3);
+            noStroke();
+            fill(INK[0], INK[1], INK[2], 70); ellipse(x + 6, y + 6, w * 1.02, h * 1.02);   // shadow, lower right
+            fill(...mix(body, INK, 0.22)); ellipse(x, y, w, h);                             // shaded crescent
+            fill(...body); ellipse(x - w * 0.06, y - h * 0.1, w * 0.86, h * 0.78);
+            fill(...mix(body, CREAM, 0.55)); ellipse(x - w * 0.22, y - h * 0.24, w * 0.22, h * 0.16);   // upper-left glint
+            fill(...mix(LEAF, INK, 0.12));                                                  // moss
+            ellipse(x + w * 0.18, y - h * 0.22, w * 0.3, h * 0.26); ellipse(x + w * 0.3, y - h * 0.08, w * 0.16, h * 0.18);
+            noFill(); stroke(...INK); strokeWeight(2.5); ellipse(x, y, w, h);
+        }
+
+        // ═══ UI HANDLERS ═══
+        function updateParam(name, value) {
+            params[name] = parseFloat(value);
+            document.getElementById(name + '-value').textContent = value;
+            initializeSystem();
+        }
+        function updateColor(id, value) {
+            params.colorPalette[parseInt(id.slice(5)) - 1] = value;
+            document.getElementById(id + '-value').textContent = value;
+            initializeSystem();
+        }
+
+        // ═══ SEED CONTROLS ═══
+        function updateSeedDisplay() { document.getElementById('seed-input').value = params.seed; }
+        function updateSeed() {
+            const s = parseInt(document.getElementById('seed-input').value);
+            if (s && s > 0) { params.seed = s; initializeSystem(); } else updateSeedDisplay();
+        }
+        function previousSeed() { params.seed = Math.max(1, params.seed - 1); updateSeedDisplay(); initializeSystem(); }
+        function nextSeed() { params.seed = params.seed + 1; updateSeedDisplay(); initializeSystem(); }
+        function randomSeedAndUpdate() { params.seed = Math.floor(Math.random() * 999999) + 1; updateSeedDisplay(); initializeSystem(); }
+        function resetParameters() {
+            params = { ...defaultParams, colorPalette: [...defaultParams.colorPalette] };
+            for (const k of ['travellers', 'tread', 'cohesion', 'wander', 'relief', 'steps', 'tufts', 'flowers']) {
+                document.getElementById(k).value = params[k];
+                document.getElementById(k + '-value').textContent = params[k];
+            }
+            params.colorPalette.forEach((c, i) => {
+                document.getElementById('color' + (i + 1)).value = c;
+                document.getElementById('color' + (i + 1) + '-value').textContent = c;
+            });
+            updateSeedDisplay(); initializeSystem();
+        }
+        window.addEventListener('load', updateSeedDisplay);
+    </script>
+</body>
+</html>

@@ -1706,11 +1706,20 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffffff, 1);
         g.fillCircle(cx + r * 0.95, cy, r * 0.22);
         this.orbKeep(g, cx - r * 0.65, cy, (r * 0.38) * 2, (r * 0.38) * 2, color);
+        // long laid-back ears: thin outlines so the slim ears stay silver, pink insides, black tips (design F29)
+        g.lineStyle(1.5, C.ink, 1);
         for (const sy of [-1, 1]) {
-          this.orbKeep(g, cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.2, color);
+          g.fillStyle(color, 1);
+          g.fillEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.24);
+          g.strokeEllipse(cx - r * 0.2, cy + sy * r * 0.32, r * 0.95, r * 0.24);
+          g.fillStyle(0xf0c0cc, 1);
+          g.fillEllipse(cx - r * 0.25, cy + sy * r * 0.32, r * 0.6, r * 0.08);
           g.fillStyle(0x3a3a48, 1);
-          g.fillEllipse(cx + r * 0.22, cy + sy * r * 0.32, r * 0.18, r * 0.14);
+          g.fillEllipse(cx + r * 0.2, cy + sy * r * 0.32, r * 0.16, r * 0.14);
         }
+        g.lineStyle(2.5, C.ink, 1);
+        g.fillStyle(0xffffff, 0.35);
+        g.fillEllipse(cx + r * 0.1, cy - r * 0.22, r * 0.9, r * 0.15); // moonlight along its back
         g.fillStyle(0xf0f0b0, 1);
         g.fillCircle(cx - r * 0.78, cy - r * 0.16, r * 0.09);
         g.fillCircle(cx - r * 0.78, cy + r * 0.16, r * 0.09);
@@ -1752,6 +1761,15 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xf0d040, 1);
         g.fillCircle(cx - r * 0.85, cy - r * 0.09, r * 0.05);
         g.fillCircle(cx - r * 0.85, cy + r * 0.09, r * 0.05);
+        // horn ridges and a lit top-left of the fleece, shade on the lower right, a sprig of heather caught in it (design F29)
+        g.lineStyle(1, 0x6a5838, 1);
+        for (const sy of [-1, 1]) for (const a of [0.6, 1.5, 2.4]) g.lineBetween(cx - r * 0.62 + Math.cos(a) * r * 0.15, cy + sy * r * 0.3 + Math.sin(a) * r * 0.15, cx - r * 0.62 + Math.cos(a) * r * 0.28, cy + sy * r * 0.3 + Math.sin(a) * r * 0.28);
+        g.fillStyle(0xffffff, 0.3);
+        g.fillCircle(cx + r * 0.05, cy - r * 0.3, r * 0.22);
+        g.fillStyle(0x000000, 0.12);
+        g.fillCircle(cx + r * 0.4, cy + r * 0.35, r * 0.25);
+        g.fillStyle(0xb06ab8, 1);
+        for (const [hx, hy] of [[0.45, -0.45], [0.52, -0.38], [0.4, -0.36]]) g.fillCircle(cx + hx * r, cy + hy * r, r * 0.05);
         break;
       }
       case 'bubbler': {
@@ -1788,11 +1806,11 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(color, 1);
         g.fillTriangle(cx + r * 0.5, cy - r * 0.25, cx + r * 0.5, cy + r * 0.25, cx + r * 1.3, cy);
         g.strokeTriangle(cx + r * 0.5, cy - r * 0.25, cx + r * 0.5, cy + r * 0.25, cx + r * 1.3, cy);
-        g.fillEllipse(cx, cy, r * 1.5, r * 0.85);
-        g.strokeEllipse(cx, cy, r * 1.5, r * 0.85);
         for (const [lx, ly] of [[-0.4, -1], [-0.4, 1], [0.35, -1], [0.35, 1]]) g.fillEllipse(cx + lx * r, cy + ly * r * 0.45, r * 0.22, r * 0.18);
-        g.fillCircle(cx - r * 0.8, cy, r * 0.42);
-        g.strokeCircle(cx - r * 0.8, cy, r * 0.42);
+        this.orbKeep(g, cx, cy, r * 1.5, r * 0.85, color);
+        g.fillStyle(0xffffff, 0.35);
+        g.fillEllipse(cx + r * 0.1, cy - r * 0.2, r * 0.9, r * 0.12); // wet sheen along its back (design F29)
+        this.orbKeep(g, cx - r * 0.8, cy, r * 0.84, r * 0.84, color);
         g.fillStyle(0xe8d0a8, 1);
         g.fillEllipse(cx - r * 0.98, cy, r * 0.32, r * 0.42);
         g.fillStyle(C.ink, 1);
@@ -1804,6 +1822,12 @@ export class BootScene extends Phaser.Scene {
         g.fillCircle(cx - r * 0.75, cy + r * 0.38, r * 0.09);
         g.fillStyle(0xc8ecff, 0.9);
         for (const [wx, wy] of [[0.2, -0.75], [-0.3, 0.8], [0.8, 0.6], [0.7, -0.6]]) g.fillCircle(cx + wx * r, cy + wy * r, r * 0.09);
+        // whiskers and eye glints
+        g.lineStyle(1, 0xfff4e0, 0.9);
+        for (const sy of [-1, 1]) for (const k of [0, 1]) g.lineBetween(cx - r * 1.1, cy + sy * r * 0.05, cx - r * 1.35, cy + sy * r * (0.12 + k * 0.12));
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.84, cy - r * 0.2, r * 0.025);
+        g.fillCircle(cx - r * 0.84, cy + r * 0.16, r * 0.025);
         break;
       }
       case 'pike': {

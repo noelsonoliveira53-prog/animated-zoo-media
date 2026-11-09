@@ -19,14 +19,19 @@ describe('touch hit padding', () => {
   });
 });
 
-import { phoneFontSize, PHONE_MIN_FONT } from '../src/ui/hitpad';
+import { MIN_READABLE_FONT, phoneFontSize, PHONE_MIN_FONT } from '../src/ui/hitpad';
 
 describe('phone font sizes', () => {
   it('leaves desktop sizes alone', () => {
-    expect(phoneFontSize(12, false)).toBe(12);
+    expect(phoneFontSize(14, false)).toBe(14);
+  });
+  it('lifts tiny labels to the readable minimum everywhere', () => {
+    expect(phoneFontSize(9, false)).toBe(MIN_READABLE_FONT);
+    expect(phoneFontSize(12, false)).toBe(MIN_READABLE_FONT);
+    expect(phoneFontSize(9, true)).toBe(PHONE_MIN_FONT - 1);
   });
   it('bumps small labels on phones, capped at the minimum', () => {
-    expect(phoneFontSize(12, true)).toBe(16);
+    expect(phoneFontSize(12, true)).toBe(17);
     expect(phoneFontSize(14, true)).toBe(PHONE_MIN_FONT);
     expect(phoneFontSize(16, true)).toBe(PHONE_MIN_FONT);
     expect(phoneFontSize(24, true)).toBe(24);

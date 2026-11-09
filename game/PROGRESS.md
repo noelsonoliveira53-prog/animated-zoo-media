@@ -2053,26 +2053,27 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F2**
+Fix counter: **F3**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
 
 - **F2 (A2) Hit areas of at least 44 CSS px on every device.** New scene plugin `src/ui/autoPad.ts` (registered in `main.ts`) rescans every 400 ms for clickable controls (hand cursor, plain rectangular hit area) and grows each hit area toward `minHitGamePx` (44 CSS px converted through `scale.displayScale`; never below TOUCH_MIN on touch). Growth on each axis stops at half the gap to the nearest neighbour beside it (`roomToGrow`, capped at 30 game px per side), so neighbours keep their taps. Custom hit shapes and areas `padHit` already set are left alone. Pure maths in `src/ui/hitpad.ts` with 9 new tests. `scripts/hitsize-check.mjs` measures every control on the menu and map at 1280×720 and 740×360. On the phone, the map's Next pill grew from 15 to 44 CSS px tall and Field Guide / Settings / DEV from 22–26 to 44. Daily stays at 36, limited by the Village button just above it. keynav, tower-menu and card checks still pass. Screenshot `fix-2-phone-map.png`.
 
+- **F3 (A3) Readable small text.** `phoneFontSize` (behind `pf()`) now never returns below `MIN_READABLE_FONT` = 13 game px, so every small caption is at least 13 px on desktop and 17 px on phones. That covers wave-chart numbers (were 9), card tags and stats (11), the NEW tag (10) and the branch/record footers (10). The tithe and dev-mode lines go from 12 to 13. Cards adapt so the larger text doesn't overlap: the tower card places its stat rows below the tags and grows taller to fit, the stat-row label column widens to its longest label (66–96 px) and all labels share one size, the hero card's skill bodies start below their headings, the enemy card's stats wrap instead of shrinking to about 7 px, and the NEW pill sizes itself to its text. Tests updated and extended (358 total). Before/after screenshots for the tower, hero and enemy cards (desktop and phone) and the results chart: `fix-3-before-*` and `fix-3-after-*`.
+
 ### Fix Backlog (ranked)
-1. **A3** Readable text of at least pf(13) for the wave chart and card captions.
-2. **F1** Ground variation: per-theme baked low-contrast value-step noise lit from the upper left (see `docs/art/desire-lines.html`).
-3. **F2** Path edge polish: worn lighter middle, shaded upper-left bank, lit lower-right bank, grass tufts spilling over the edges.
-4. **F3** Contact shadows under trees, standing stones and flowers.
-5. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
-6. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
-7. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
-8. **C2** Colour accents on the early brown / grey enemy families.
-9. **C3** Status-effect icons, not tint only.
-10. **A4** Tooltips on icon-only controls.
-11. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-12. Then resume the Design Backlog below.
+1. **F1** Ground variation: per-theme baked low-contrast value-step noise lit from the upper left (see `docs/art/desire-lines.html`).
+2. **F2** Path edge polish: worn lighter middle, shaded upper-left bank, lit lower-right bank, grass tufts spilling over the edges.
+3. **F3** Contact shadows under trees, standing stones and flowers.
+4. **F4** Floor outline rule: interactive items (paths, slots, ponds) ink-outlined; decoration a darker tint only.
+5. **F5** The wave / boss banner no longer covers path entries (move up, or fade after 1.5 s).
+6. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
+7. **C2** Colour accents on the early brown / grey enemy families.
+8. **C3** Status-effect icons, not tint only.
+9. **A4** Tooltips on icon-only controls.
+10. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+11. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

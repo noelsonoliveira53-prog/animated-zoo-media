@@ -2193,8 +2193,8 @@ export class BattleScene extends Phaser.Scene {
     this.livesText = this.add.text(60, 37, '', textStyle(26, TEXT.heart)).setOrigin(0, 0.5).setDepth(3001);
     this.add.image(150, 37, 'icon_coin').setDepth(3001);
     this.coinText = this.add.text(170, 37, '', textStyle(26, TEXT.gold)).setOrigin(0, 0.5).setDepth(3001);
-    this.titheText = this.add.text(20, 76, '', textStyle(12, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
-    if (devOn()) this.add.text(GAME_W / 2, GAME_H - 14, 'DEV MODE: endless coins, lives and spells (results not saved)', textStyle(12, '#ffb0c8')).setOrigin(0.5).setDepth(3001);
+    this.titheText = this.add.text(20, 76, '', textStyle(13, '#ff9a7a')).setOrigin(0, 0.5).setDepth(3001).setVisible(false);
+    if (devOn()) this.add.text(GAME_W / 2, GAME_H - 14, 'DEV MODE: endless coins, lives and spells (results not saved)', textStyle(13, '#ffb0c8')).setOrigin(0.5).setDepth(3001);
     this.add.image(290, 34, 'icon_wave').setDepth(3001);
     this.waveText = this.add.text(310, 34, '', textStyle(24)).setOrigin(0, 0.5).setDepth(3001);
     this.waveBar = this.add.graphics().setDepth(3001);
@@ -2855,10 +2855,13 @@ export class BattleScene extends Phaser.Scene {
         const tag = this.add.container(x, -19);
         const pill = this.add.graphics();
         pill.fillStyle(0xffc83a, 1);
-        pill.fillRoundedRect(-17, -7, 34, 14, 7);
+        const newT = this.add.text(0, 0, 'NEW', textStyle(pf(10), '#3a2408', false)).setOrigin(0.5);
+        const pw = Math.max(34, newT.width + 10);
+        const ph = Math.max(14, newT.height);
+        pill.fillRoundedRect(-pw / 2, -ph / 2, pw, ph, ph / 2);
         pill.lineStyle(1.5, 0x5a3a0a, 1);
-        pill.strokeRoundedRect(-17, -7, 34, 14, 7);
-        tag.add([pill, this.add.text(0, 0, 'NEW', textStyle(pf(10), '#3a2408', false)).setOrigin(0.5)]);
+        pill.strokeRoundedRect(-pw / 2, -ph / 2, pw, ph, ph / 2);
+        tag.add([pill, newT]);
         c.add(tag);
       }
     });
@@ -3310,11 +3313,15 @@ export class BattleScene extends Phaser.Scene {
 
   /** Stat bars on an info card: label, a bar with the next step as a green extension, and `cur → next` text. */
   private drawCardRows(card: Phaser.GameObjects.Container, g: Phaser.GameObjects.Graphics, rows: CardRow[], y0: number, W: number, color: number): void {
+    // the label column is as wide as its longest label (66..96 px); labels share one size if they still need shrinking
+    const labels = rows.map((r) => this.add.text(10, 0, r.label, textStyle(pf(11), TEXT.cream, false)).setOrigin(0, 0.5));
+    const maxW = Math.max(...labels.map((l) => l.width));
+    const bx = Phaser.Math.Clamp(Math.ceil(10 + maxW + 8), 66, 96);
+    const bw = W - bx - 88;
+    const sc = Math.min(1, (bx - 14) / maxW);
     rows.forEach((r, i) => {
       const y = y0 + i * 22;
-      const bx = 66;
-      const bw = W - 154;
-      card.add(fitWidth(this.add.text(10, y, r.label, textStyle(pf(11), TEXT.cream, false)).setOrigin(0, 0.5), bx - 14));
+      card.add(labels[i].setY(y).setScale(sc));
       g.fillStyle(0x0c1a12, 1);
       g.fillRoundedRect(bx, y - 4, bw, 8, 4);
       if (r.next !== null && r.next > r.value) {
@@ -3326,7 +3333,7 @@ export class BattleScene extends Phaser.Scene {
       g.fillStyle(0xffffff, 0.3);
       g.fillRect(bx + 3, y - 3, Math.max(2, bw * r.value - 6), 1.5);
       const txt = r.nextText ? `${r.text} → ${r.nextText}` : r.text;
-      card.add(fitWidth(this.add.text(W - 8, y, txt, textStyle(pf(11), r.nextText ? '#b8ff8a' : TEXT.cream, false)).setOrigin(1, 0.5), W - bx - bw - 12));
+      card.add(fitWidth(this.add.text(W - 8, y, txt, textStyle(pf(11), r.nextText ? '#b8ff8a' : TEXT.cream, false)).setOrigin(1, 0.5), 76));
     });
   }
 
@@ -3359,10 +3366,10 @@ export class BattleScene extends Phaser.Scene {
     this.drawCardRows(card, g, heroCardRows(h.def, h.level), 62, W, h.def.color);
     let y = 62 + 3 * 22 - 4;
     const para = (head: string, body: string, color: string) => {
-      card.add(fitWidth(this.add.text(12, y, head, textStyle(pf(11), color, false)), W - 24));
-      const t = this.add.text(12, y + 15, body, { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 24 } });
-      card.add(t);
-      y += 15 + t.height + 6;
+      const hd = fitWidth(this.add.text(12, y, head, textStyle(pf(11), color, false)), W - 24);
+      const t = this.add.text(12, y + hd.displayHeight - 2, body, { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 24 } });
+      card.add([hd, t]);
+      y = t.y + t.height + 6;
     };
     para('Passive', h.def.passive.text, '#9be86a');
     para(`Skill: ${h.def.active.name} (${Math.round(h.def.active.cooldown)}s)`, h.def.active.text, '#ffc870');
@@ -3394,10 +3401,11 @@ export class BattleScene extends Phaser.Scene {
     const hp = this.add.text(W - 10, 36, '', textStyle(pf(11), TEXT.cream, false)).setOrigin(1, 0.5);
     card.add(hp);
     const stats = `Armor ${Math.round(e.def.armor * 100)}%  •  Magic res ${Math.round(e.def.magicResist * 100)}%  •  Speed ${Math.round(e.def.speed)}`;
-    card.add(fitWidth(this.add.text(10, 50, stats, textStyle(pf(11), '#c8d8c8', false)), W - 20));
-    const trait = this.add.text(10, 68, enemyKeyTrait(e.def), { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 20 } });
-    card.add(trait);
-    const H = 68 + trait.height + 10;
+    // stats wrap rather than shrink, so they stay readable on a phone
+    const st = this.add.text(10, 44, stats.replace(/ {2}• {2}/g, ' • '), { ...textStyle(pf(11), '#c8d8c8', false), wordWrap: { width: W - 20 } });
+    const trait = this.add.text(10, st.y + st.height + 3, enemyKeyTrait(e.def), { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 20 } });
+    card.add([st, trait]);
+    const H = trait.y + trait.height + 10;
     glossPanel(bg, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: 0xff7a5a, rimAlpha: 0.7, radius: 12 });
     card.setData({ W, H, bar, hp, trail: newTrail(Math.max(0, e.hp / e.maxHp)) });
     this.enemyCard = card;
@@ -3470,20 +3478,24 @@ export class BattleScene extends Phaser.Scene {
    */
   private towerCard(tower: Tower, pos: Vec2, next: TowerTier | null, nextName?: string): Phaser.GameObjects.Container {
     const W = 226;
-    const H = 132;
     const right = pos.x < GAME_W - 370;
     const x0 = right ? 118 : -118 - W;
-    const top = Phaser.Math.Clamp(pos.y - H / 2, 70, GAME_H - H - 106) - pos.y; // clear of the HUD and the spell buttons
-    const card = this.add.container(x0, top).setName('towerCard');
+    const card = this.add.container(x0, 0).setName('towerCard');
     const g = this.add.graphics();
-    glossPanel(g, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: tower.def.color, rimAlpha: 0.7, radius: 12 });
     card.add(g);
     const cur = this.sim.stats(tower);
     const title = tower.spec ? tower.def.specs.find((x) => x.id === tower.spec)!.name : `${tower.def.name}  Lv ${tower.tier + 1}`;
-    card.add(fitWidth(this.add.text(10, 8, title, textStyle(pf(15), TEXT.gold)), W - 20));
+    const titleT = fitWidth(this.add.text(10, 8, title, textStyle(pf(15), TEXT.gold)), W - 20);
     const tags = cardTags(tower.def, cur).join(' • ');
-    card.add(fitWidth(this.add.text(10, 29, tags, textStyle(pf(11), '#b8d0c0', false)), W - 20));
-    this.drawCardRows(card, g, cardRows(cur, next), 52, W, tower.def.color);
+    const tagsT = fitWidth(this.add.text(10, titleT.y + titleT.displayHeight - 1, tags, textStyle(pf(11), '#b8d0c0', false)), W - 20);
+    card.add([titleT, tagsT]);
+    // rows start below the tags and the card grows to fit, so bigger phone text never overlaps
+    const rows = cardRows(cur, next);
+    const y0 = Math.max(52, tagsT.y + tagsT.displayHeight + 11);
+    const H = Math.max(132, y0 + (rows.length - 1) * 22 + 38);
+    card.y = Phaser.Math.Clamp(pos.y - H / 2, 70, GAME_H - H - 106) - pos.y; // clear of the HUD and the spell buttons
+    glossPanel(g, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: tower.def.color, rimAlpha: 0.7, radius: 12 });
+    this.drawCardRows(card, g, rows, y0, W, tower.def.color);
     if (next) card.add(fitWidth(this.add.text(10, H - 14, nextName ? `Branch: ${nextName}` : 'Green: next level', textStyle(pf(10), '#9be86a', false)).setOrigin(0, 0.5), W / 2 - 14));
     // this run's record: kills and damage, gold once it's a veteran
     const rec = towerRecord(tower.uid, this.sim.dmgBy, this.sim.killsBy);

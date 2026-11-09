@@ -19,10 +19,14 @@ export function paddedHit(w: number, h: number, min = TOUCH_MIN, maxPad = TOUCH_
 /** Smallest font (game px) we want for in-play labels on a phone, where the game renders at ~0.5×. */
 export const PHONE_MIN_FONT = 18;
 
-/** Font size for a small label: on phones, +4 px but no bigger than PHONE_MIN_FONT (or the original). */
+/** Smallest label size anywhere (game px): small captions and chart numbers never go below this. */
+export const MIN_READABLE_FONT = 13;
+
+/** Font size for a small label: never below MIN_READABLE_FONT; on phones, +4 px but no bigger than PHONE_MIN_FONT (or the original). */
 export function phoneFontSize(size: number, touch: boolean): number {
-  if (!touch) return size;
-  return Math.min(size + 4, Math.max(size, PHONE_MIN_FONT));
+  const s = Math.max(size, MIN_READABLE_FONT);
+  if (!touch) return s;
+  return Math.min(s + 4, Math.max(s, PHONE_MIN_FONT));
 }
 
 /** WCAG 2.5.5: a target should be at least this many CSS px across, on any device. */

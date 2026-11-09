@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **287** (next balance pass at iteration 290)
+Iteration counter: **288** (next balance pass at iteration 290)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1878,6 +1878,12 @@ Iteration counter: **287** (next balance pass at iteration 290)
   - **Placement:** the card sits right of the tower, or left near the right edge, and is clamped clear of the HUD and the spell buttons.
   - New `systems/towerCard.ts` (`cardRows`, `cardTags`, `statMaxima`) with 5 tests (295 total).
   - New `scripts/towercard-check.mjs <name> [tower] [slot] [tier]` (desktop and `PHONE=1`; checks the card is fully on screen; no console errors). Screenshots `screenshots/287.png`, `287-burrow.png`, `287-phone.png`.
+- **Iteration 288: hero and soldier bars.**
+  - New shared `ui/bars.ts` (`drawBar`: rim, track, damage trail, fill, highlight), now used by enemy, hero and soldier bars. The enemy bar code shrank to one call.
+  - **Hero:** a slightly longer bar with a gold rim so it stands out, filled green → amber → red, with the damage trail. The trail resets when the hero falls.
+  - **Wardens and Rangers:** a rounded blue bar (red below 30%, green while poisoned) with the same trail.
+  - Trails live on the views (`heroTrail`, per-soldier `trail`), and `heroTrail` is reset with the other per-battle state when the scene is reused.
+  - New `scripts/allybar-check.mjs` (hero at 40%, Wardens at 55% and 25% poisoned; trails held then drained exactly to the fill; no console errors). `hpbar-check` unchanged. Screenshot `screenshots/288.png`. 295 tests.
 
 ## In Progress
 - (none)
@@ -1885,8 +1891,8 @@ Iteration counter: **287** (next balance pass at iteration 290)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Hero and soldier bars: the same rounded look and damage trail as enemy bars.
-2. Hero info card: tapping the hero portrait shows a card like the tower one (level, XP, passive and active skill, health and damage bars).
+1. Hero info card: tapping the hero portrait shows a card like the tower one (level, XP, passive and active skill, health and damage bars).
+2. Raid mode bars: the same rounded bars with a damage trail for raid troops and camp defenses.
 
 ## Known Bugs
 - (none known)

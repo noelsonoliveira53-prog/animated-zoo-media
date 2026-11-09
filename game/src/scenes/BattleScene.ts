@@ -35,6 +35,7 @@ import { SPELLS, SPELL_ORDER } from '../data/spells';
 import type { LevelDef, TargetMode, TowerTier, Vec2 } from '../data/types';
 import { BattleSim, type Enemy, type SimEvent, type Soldier, type Tower } from '../systems/BattleSim';
 import { glossPanel } from '../ui/panels';
+import { drawBar } from '../ui/bars';
 import { sfx } from '../systems/audio';
 import { bumpStats, ensureVillage, loadSave, markSeen, recordStars, starsForLives, writeSave } from '../systems/save';
 import { checkAchievements } from '../systems/achievements';
@@ -75,7 +76,8 @@ export class BattleScene extends Phaser.Scene {
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private fx!: TowerFx;
   private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
-  private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
+  private heroTrail: TrailState = newTrail(1);
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
   private rallyMode: number | null = null; // slot whose rally point is being placed
@@ -165,6 +167,7 @@ export class BattleScene extends Phaser.Scene {
     this.lastGulp.clear();
     this.projViews.clear();
     this.soldierViews.clear();
+    this.heroTrail = newTrail(1);
     this.rallyFlags.clear();
     this.rallyMode = null;
     this.spellMode = null;
@@ -2265,12 +2268,15 @@ export class BattleScene extends Phaser.Scene {
     this.heroRing.setPosition(h.pos.x, h.pos.y).setDepth(h.pos.y - 1);
     if (!h.alive && this.heroSelected) this.selectHero(false);
     this.heroBar.clear();
+    if (h.alive) stepTrail(this.heroTrail, h.hp / h.maxHp, Math.min(this.game.loop.delta / 1000, 0.1));
+    else this.heroTrail = newTrail(1);
     if (h.alive && h.hp < h.maxHp) {
-      const w = 34;
-      this.heroBar.fillStyle(C.ink, 0.85);
-      this.heroBar.fillRect(h.pos.x - w / 2 - 1, h.pos.y - 62, w + 2, 7);
-      this.heroBar.fillStyle(0x7be35a, 1);
-      this.heroBar.fillRect(h.pos.x - w / 2, h.pos.y - 61, w * (h.hp / h.maxHp), 5);
+      // the hero's bar is a touch longer and gold-rimmed so it stands out from the soldiers'
+      const w = 38;
+      const frac = Math.max(0, h.hp / h.maxHp);
+      this.heroBar.fillStyle(0xc8a050, 0.8);
+      this.heroBar.fillRoundedRect(h.pos.x - w / 2 - 3, h.pos.y - 64, w + 6, 10, 5);
+      drawBar(this.heroBar, h.pos.x - w / 2, h.pos.y - 61.5, w, 5, frac, this.heroTrail.trail, hpColor(frac));
       this.heroBar.setDepth(h.pos.y + 0.5);
     }
 
@@ -4049,27 +4055,7 @@ export class BattleScene extends Phaser.Scene {
         }
         const frac = Math.max(0, e.hp / e.maxHp);
         stepTrail(v.trail, frac, dt);
-        const seg = (from: number, to: number) => {
-          // rounded ends, but plain rects when the segment is too thin to round
-          const sw = w * (to - from);
-          if (sw <= 0) return;
-          if (sw < 5) v.bar.fillRect(x + w * from, y, sw, 5);
-          else v.bar.fillRoundedRect(x + w * from, y, sw, 5, 2.5);
-        };
-        v.bar.fillStyle(C.ink, 0.9);
-        v.bar.fillRoundedRect(x - 1.5, y - 1.5, w + 3, 8, 4);
-        v.bar.fillStyle(0x3a2420, 1);
-        seg(0, 1);
-        if (v.trail.trail > frac + 0.002) {
-          v.bar.fillStyle(0xfff0c8, 0.9);
-          seg(0, v.trail.trail);
-        }
-        v.bar.fillStyle(hpColor(frac), 1);
-        seg(0, frac);
-        if (w * frac > 4) {
-          v.bar.fillStyle(0xffffff, 0.32);
-          v.bar.fillRect(x + 1.5, y + 0.6, w * frac - 3, 1.4);
-        }
+        drawBar(v.bar, x, y, w, 5, frac, v.trail.trail, hpColor(frac));
         // armor / magic-resist markers to the left of the bar
         resistPips(e.armor, e.def.magicResist).forEach((pip, k) => {
           const px = x - 6 - k * 9;
@@ -4177,14 +4163,14 @@ export class BattleScene extends Phaser.Scene {
       seen.add(s.uid);
       let v = this.soldierViews.get(s.uid);
       if (!v) {
-        v = { sprite: this.add.image(s.pos.x, s.pos.y, s.summoned ? 'ranger' : 'soldier'), bar: this.add.graphics() };
+        v = { sprite: this.add.image(s.pos.x, s.pos.y, s.summoned ? 'ranger' : 'soldier'), bar: this.add.graphics(), trail: newTrail(1) };
         if (s.summoned) {
           v.sprite.setScale(0).setData('popping', true);
           this.tweens.add({ targets: v.sprite, scale: 1, duration: 250, ease: 'Back.easeOut', onComplete: () => v?.sprite.setData('popping', false) });
         }
         this.soldierViews.set(s.uid, v);
       }
-      this.drawSoldier(s, v.sprite, v.bar);
+      this.drawSoldier(s, v.sprite, v.bar, v.trail);
     }
     for (const [uid, v] of this.soldierViews) {
       if (!seen.has(uid)) {
@@ -4195,7 +4181,7 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
-  private drawSoldier(s: Soldier, sprite: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics): void {
+  private drawSoldier(s: Soldier, sprite: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics, trail: TrailState): void {
     sprite.setVisible(s.alive);
     bar.clear();
     if (!s.alive) return;
@@ -4215,12 +4201,12 @@ export class BattleScene extends Phaser.Scene {
     else if ((s.glazed ?? 0) > 0) sprite.setTint(0xffd070);
     else if ((s.stun ?? 0) > 0) sprite.setTint(0xc8e8ff);
     else if (sprite.isTinted) sprite.clearTint();
+    stepTrail(trail, s.hp / s.maxHp, Math.min(this.game.loop.delta / 1000, 0.1));
     if (s.hp < s.maxHp) {
-      const w = 22;
-      bar.fillStyle(C.ink, 0.85);
-      bar.fillRect(s.pos.x - w / 2 - 1, s.pos.y - 34, w + 2, 6);
-      bar.fillStyle((s.poisonT ?? 0) > 0 ? 0x8ad84a : 0x7fc8ff, 1); // a poisoned soldier's bar turns green as it drains
-      bar.fillRect(s.pos.x - w / 2, s.pos.y - 33, w * (s.hp / s.maxHp), 4);
+      const w = 24;
+      const frac = Math.max(0, s.hp / s.maxHp);
+      // our side reads blue (a poisoned soldier's bar turns green as it drains)
+      drawBar(bar, s.pos.x - w / 2, s.pos.y - 33, w, 4, frac, trail.trail, (s.poisonT ?? 0) > 0 ? 0x8ad84a : frac > 0.3 ? 0x7fc8ff : 0xff7a5a);
       bar.setDepth(s.pos.y + 0.5);
     }
   }

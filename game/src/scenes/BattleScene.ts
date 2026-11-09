@@ -30,6 +30,7 @@ import { startWeather } from './fx/Weather';
 import { ambienceFor, weatherFor } from '../data/weather';
 import { distToSegment, roadEdgeSpots } from '../systems/path';
 import { pickBannerY } from '../systems/bannerSpot';
+import { enemyStatuses, iconX, soldierStatuses, type StatusIcon } from '../systems/statusIcons';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -4804,6 +4805,15 @@ export class BattleScene extends Phaser.Scene {
         v.bar.fillCircle(e.pos.x - e.def.radius * 0.45, by - e.def.radius * 0.5, 2);
         v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
+      // status icons: to the right of the health bar, or in a row over the head when the bar is hidden
+      const statuses = enemyStatuses(e);
+      if (statuses.length) {
+        const barShown = !e.def.boss && (e.hp < e.maxHp || e.shield > 0);
+        const bw = Math.max(24, e.def.radius * 2.4);
+        const sy = e.pos.y - e.def.radius - 14 - 34 * v.air + 2.5;
+        statuses.forEach((kind, k) => this.drawStatusIcon(v.bar, kind, barShown ? iconX(e.pos.x + bw / 2 + 9, k) : iconX(e.pos.x - ((statuses.length - 1) * 12) / 2, k), barShown ? sy : sy - 2));
+        v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
+      }
       if (e.def.boss) continue; // boss uses the big HUD bar
       if (e.hp < e.maxHp || e.shield > 0) {
         const w = Math.max(24, e.def.radius * 2.4);
@@ -4978,6 +4988,58 @@ export class BattleScene extends Phaser.Scene {
       // our side reads blue (a poisoned soldier's bar turns green as it drains)
       drawBar(bar, s.pos.x - w / 2, s.pos.y - 33, w, 4, frac, trail.trail, (s.poisonT ?? 0) > 0 ? 0x8ad84a : frac > 0.3 ? 0x7fc8ff : 0xff7a5a);
       bar.setDepth(s.pos.y + 0.5);
+    }
+    // status icons beside the bar (or over the head at full health), so afflictions never rely on tint alone
+    const icons = soldierStatuses(s);
+    icons.forEach((kind, k) => this.drawStatusIcon(bar, kind, s.hp < s.maxHp ? iconX(s.pos.x + 20, k) : iconX(s.pos.x - ((icons.length - 1) * 12) / 2, k), s.pos.y - 31));
+    if (icons.length) bar.setDepth(s.pos.y + 0.5);
+  }
+
+  /** One status icon: a little ink disc with a symbol (slow snowflake, haste chevrons, rage flame, anchor, venom drop, honey drop, stun bolt). */
+  private drawStatusIcon(g: Phaser.GameObjects.Graphics, kind: StatusIcon, x: number, y: number): void {
+    g.fillStyle(C.ink, 0.92);
+    g.fillCircle(x, y, 6);
+    switch (kind) {
+      case 'slow':
+        g.lineStyle(1.4, 0x9ad8ff, 1);
+        for (let a = 0; a < 3; a++) {
+          const t = (a * Math.PI) / 3;
+          g.lineBetween(x - Math.cos(t) * 3.6, y - Math.sin(t) * 3.6, x + Math.cos(t) * 3.6, y + Math.sin(t) * 3.6);
+        }
+        break;
+      case 'haste':
+        g.lineStyle(1.5, 0xffa8dc, 1);
+        g.lineBetween(x - 3, y - 3, x, y);
+        g.lineBetween(x, y, x - 3, y + 3);
+        g.lineBetween(x, y - 3, x + 3, y);
+        g.lineBetween(x + 3, y, x, y + 3);
+        break;
+      case 'rage':
+        g.fillStyle(0xff6a3a, 1);
+        g.fillTriangle(x - 3, y + 3, x + 3, y + 3, x, y - 4);
+        g.fillStyle(0xffd23c, 1);
+        g.fillTriangle(x - 1.4, y + 3, x + 1.4, y + 3, x, y - 0.6);
+        break;
+      case 'anchor':
+        g.lineStyle(1.4, 0xc8d0d8, 1);
+        g.lineBetween(x, y - 3.6, x, y + 3);
+        g.lineBetween(x - 2, y - 2, x + 2, y - 2);
+        g.beginPath();
+        g.arc(x, y, 3, Math.PI * 0.15, Math.PI * 0.85);
+        g.strokePath();
+        break;
+      case 'poison':
+      case 'glaze':
+        g.fillStyle(kind === 'poison' ? 0x8ad84a : 0xffc83a, 1);
+        g.fillCircle(x, y + 1, 2.6);
+        g.fillTriangle(x - 2.4, y + 0.4, x + 2.4, y + 0.4, x, y - 3.8);
+        break;
+      case 'stun':
+        g.lineStyle(1.5, 0xfff07a, 1);
+        g.lineBetween(x + 1.5, y - 4, x - 1.5, y);
+        g.lineBetween(x - 1.5, y, x + 1.5, y);
+        g.lineBetween(x + 1.5, y, x - 1.5, y + 4);
+        break;
     }
   }
 

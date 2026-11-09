@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F12**
+Fix counter: **F13**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2110,11 +2110,17 @@ Fix counter: **F12**
 
   The other first-region foes (Reedguard gold, Skitter teal, Thornhog red) were already saturated. Gameplay data is unchanged. Sheets: `fix-12-before.png` and `fix-12-after.png`.
 
+- **F13 (C3) Status-effect icons.** Statuses no longer rely on tint or colour alone. New pure module `src/systems/statusIcons.ts` decides which icons show, in a fixed order:
+  - `enemyStatuses`: slow, haste, rage, anchor (slow was previously invisible apart from the movement);
+  - `soldierStatuses`: poison, glaze, stun;
+  - `iconX` lays them out in a row.
+
+  `BattleScene.drawStatusIcon` draws each as a small ink disc with a symbol: a pale-blue snowflake (slow), pink double chevrons (haste), an orange flame (rage), a grey anchor (anchored), a green venom drop (poison), an amber honey drop (glaze) and a yellow bolt (stun). Icons sit right of the health bar, or in a row over the head when the bar is hidden; bosses show them over the head. The old tints stay as a second cue. 5 tests. New `scripts/status-icons-check.mjs` and close-up `fix-13-icons.png`.
+
 ### Fix Backlog (ranked)
-1. **C3** Status-effect icons, not tint only.
-2. **A4** Tooltips on icon-only controls.
-3. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-4. Then resume the Design Backlog below.
+1. **A4** Tooltips on icon-only controls.
+2. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+3. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

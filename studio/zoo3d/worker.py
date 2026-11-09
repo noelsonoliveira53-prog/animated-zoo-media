@@ -136,7 +136,11 @@ def render_frames(jid, jp):
     eng = os.path.join(ROOT, "zoo3d", "engine.py")
     with open(os.path.join(OUT, jid + ".log"), "a", encoding="utf-8", errors="ignore") as lf:
         lf.write(f"\n===== {datetime.datetime.now()} start =====\n"); lf.flush()
-        p = subprocess.run([BLENDER, "-b", "--factory-startup", "-P", eng, "--", "--job", jp, "--engine", "EEVEE"], stdout=lf, stderr=subprocess.STDOUT)
+        # if the GPU driver crashes Blender at startup (0xC0000005 in nvoglv64.dll), fall back to the Vulkan backend, then Cycles
+        for extra, engine in (([], "EEVEE"), (["--gpu-backend", "vulkan"], "EEVEE"), (["--gpu-backend", "vulkan"], "CYCLES")):
+            p = subprocess.run([BLENDER, "-b", "--factory-startup"] + extra + ["-P", eng, "--", "--job", jp, "--engine", engine], stdout=lf, stderr=subprocess.STDOUT)
+            if p.returncode != 3221225477: break
+            lf.write(f"\n[worker] crash at startup with {extra or 'default backend'} {engine}; trying the next fallback\n"); lf.flush()
     log(f"{jid}: blender exit code {p.returncode}")
     return os.path.exists(os.path.join(OUT, jid, "FRAMES_DONE"))
 

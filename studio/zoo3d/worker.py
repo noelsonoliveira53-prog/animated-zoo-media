@@ -83,6 +83,8 @@ def make_song(sid, sp):
     out = os.path.join(SONGS, sid); os.makedirs(out, exist_ok=True)
     spec = json.load(open(sp, encoding="utf-8"))
     mp3 = os.path.join(out, "song.mp3")
+    if os.path.exists(mp3) and os.path.getsize(mp3) < 20000:   # empty/broken file (e.g. written while the disk was full): make it again
+        os.remove(mp3)
     if not os.path.exists(mp3):
         if not ace_up(): return False
         status(f"SONG {sid}")

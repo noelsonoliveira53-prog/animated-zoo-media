@@ -171,7 +171,7 @@ export interface Projectile {
 export type SimEvent =
   | { type: 'spawn'; enemy: Enemy }
   | { type: 'shoot'; tower: Tower; projectile: Projectile }
-  | { type: 'hit'; enemy: Enemy; damage: number; pos: Vec2 }
+  | { type: 'hit'; enemy: Enemy; damage: number; pos: Vec2; dtype?: DamageType }
   | { type: 'splash'; pos: Vec2; radius: number; color: number }
   | { type: 'kill'; enemy: Enemy; bounty: number }
   | { type: 'leak'; enemy: Enemy; lives: number }
@@ -2217,7 +2217,7 @@ export class BattleSim {
         e.armor = Math.max(e.def.armor, e.armor - a.step);
       }
     }
-    this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos } });
+    this.events.push({ type: 'hit', enemy: e, damage: dmg, pos: { ...e.pos }, dtype: type });
     if (e.hp <= 0) {
       e.alive = false;
       // Tougher levels (higher hpMult) pay proportionally more per kill.

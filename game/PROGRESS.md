@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **281** (next balance pass at iteration 285)
+Iteration counter: **282** (next balance pass at iteration 285)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1839,13 +1839,25 @@ Iteration counter: **281** (next balance pass at iteration 285)
   - Reduce Motion keeps the menu static.
   - New `scripts/towermenu-check.mjs` (a real tap opens the build ring with 100 coins; no console errors). `buildfx`, `range` and `phone-battle` checks still pass. Screenshot `screenshots/281.png` (three affordable towers and a locked red 120). 279 tests.
 
+- **Iteration 282: damage numbers polish.**
+  - The sim's `hit` event now carries the damage type (`dtype`, visual only).
+  - New `systems/damageText.ts` (`damageTextStyle`; 1 test, 280 total) colours numbers by type: physical cream, magic violet, true gold.
+  - **Big hits** (at least 15% of a sturdy foe's health, or 60+) are larger and bolder. They overshoot to 1.3× and settle back. **Hits on bosses** are a touch larger.
+  - **Movement:** every number pops in, arcs up and to one side, and fades late (three tweens per number).
+  - **Bugs found and fixed while checking:**
+    - Numbers were drawn under the lighting vignette (2900) and looked dim; they now sit just under the HUD.
+    - A yoyo pop would have left big hits at half size.
+  - Reduce Motion gives a plain rise and fade.
+  - New `scripts/dmgtext-check.mjs` (physical, magic, true and a 140 big hit; logs each number's alpha, scale and depth; no console errors). Busy leak check stays bounded. Screenshot `screenshots/282.png`.
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Damage numbers polish: bigger, bolder crits and boss hits, colour by damage type (physical cream, magic violet, true gold), with a little arc and fade.
+1. Pause menu polish: a frosted glossy pause panel with Resume / Restart / Settings / Quit buttons and a dimmed, slightly blurred-looking backdrop.
+2. Village building panel polish: the same glossy card look as the store, with an upgrade preview arrow (current → next stats).
 
 ## Known Bugs
 - (none known)

@@ -7,6 +7,7 @@ import { stepCounter, waveProgress } from '../ui/counter';
 import { deathStyle, bigHit } from '../systems/deathStyle';
 import { enemyKeyTrait } from '../systems/guideInfo';
 import { gaitFor, poseFor, unitPose } from '../systems/gait';
+import { damageTextStyle } from '../systems/damageText';
 import { playDeath } from './fx/DeathFx';
 import { groveBurst, starImpact, starTrail, thornGrowth } from './fx/SpellFx';
 import { heroSignature, readyPing } from './fx/HeroFx';
@@ -3037,7 +3038,7 @@ export class BattleScene extends Phaser.Scene {
           if (big && !motion.reduced) v.squash = 1;
           this.time.delayedCall(big ? 90 : 60, () => v.sprite.active && v.sprite.clearTint());
         }
-        this.floatText(ev.pos.x, ev.pos.y - 20, String(Math.round(ev.damage)), '#ffffff', 16);
+        this.floatDamage(ev.pos.x, ev.pos.y - 20, ev.damage, damageTextStyle(ev.damage, ev.enemy.maxHp, ev.dtype, !!ev.enemy.def.boss));
         sfx.hit();
         break;
       }
@@ -4138,6 +4139,24 @@ export class BattleScene extends Phaser.Scene {
     }
     g.lineTo(b.x, b.y - 10);
     g.strokePath();
+  }
+
+  /** A damage number: pops in, arcs up and to one side and fades; big hits pop harder and hold a moment. */
+  private floatDamage(x: number, y: number, damage: number, st: { color: string; size: number; big: boolean }): void {
+    const t = this.add.text(x, y, String(Math.round(damage)), textStyle(st.size, st.color)).setOrigin(0.5).setDepth(st.big ? 2960 : 2950).setStroke('#1a1410', st.big ? 6 : 4); // above the lighting overlay (2900), under the HUD
+    if (motion.reduced) {
+      this.tweens.add({ targets: t, y: y - 26, alpha: 0, duration: 650, onComplete: () => t.destroy() });
+      return;
+    }
+    const dx = (Math.random() - 0.5) * (st.big ? 30 : 22);
+    t.setScale(0.5);
+    // pop in; big hits overshoot to 1.3 and settle back to full size (a yoyo would return to the 0.5 start)
+    this.tweens.add({
+      targets: t, scale: st.big ? 1.3 : 1.05, duration: st.big ? 110 : 80, ease: 'Back.easeOut',
+      onComplete: () => st.big && t.active && this.tweens.add({ targets: t, scale: 1.05, delay: 60, duration: 120 }),
+    });
+    this.tweens.add({ targets: t, x: x + dx, y: y - (st.big ? 44 : 32), duration: st.big ? 900 : 700, ease: 'Quad.easeOut' });
+    this.tweens.add({ targets: t, alpha: 0, delay: st.big ? 450 : 300, duration: st.big ? 450 : 400, onComplete: () => t.destroy() });
   }
 
   private floatText(x: number, y: number, text: string, color: string, size: number): void {

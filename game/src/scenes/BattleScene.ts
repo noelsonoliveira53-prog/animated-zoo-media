@@ -3,6 +3,7 @@ import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
 import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
 import { heroCardRows, heroXpProgress } from '../systems/heroCard';
+import { pickEnemy } from '../systems/enemyPick';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
@@ -80,6 +81,8 @@ export class BattleScene extends Phaser.Scene {
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
   private heroTrail: TrailState = newTrail(1);
   private heroCard: Phaser.GameObjects.Container | null = null;
+  private enemyCard: Phaser.GameObjects.Container | null = null;
+  private enemyCardUid = 0;
   private heroCardUntil = 0; // scene time when a fallen hero's status card closes itself (0 = stays)
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
@@ -270,7 +273,10 @@ export class BattleScene extends Phaser.Scene {
         this.orderHeroMove({ x: p.worldX, y: p.worldY });
         return;
       }
+      const hadMenu = !!this.menu;
       this.closeMenu();
+      // a plain tap on the map: tapping a foe shows its card, tapping anywhere else closes it
+      if (!hadMenu) this.openEnemyCard(pickEnemy(this.sim.enemies, p.worldX, p.worldY));
     });
     this.input.keyboard?.on('keydown-SPACE', () => this.togglePause());
     this.input.keyboard?.on('keydown-N', () => this.callWave());
@@ -2005,6 +2011,8 @@ export class BattleScene extends Phaser.Scene {
     this.skillWasReady = true; // no ping for the skill being ready at the start
     this.heroPortrait = null;
     this.heroCard = null;
+    this.enemyCard = null;
+    this.enemyCardUid = 0;
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2220,6 +2228,7 @@ export class BattleScene extends Phaser.Scene {
       this.closeMenu();
       const open = !this.heroCard;
       this.selectHero(open);
+      if (this.enemyCard) this.openEnemyCard(null);
       this.toggleHeroCard(open);
     });
     this.heroLevelText = this.add.text(px + 30, py + 30, '1', textStyle(18, TEXT.gold)).setOrigin(0.5).setDepth(3002);
@@ -2768,6 +2777,7 @@ export class BattleScene extends Phaser.Scene {
     // one card at a time: a tower menu ends the hero's move selection and closes the hero card
     if (this.heroSelected) this.selectHero(false);
     if (this.heroCard) this.toggleHeroCard(false);
+    if (this.enemyCard) this.openEnemyCard(null);
     if (!this.sim.isActive()) return;
     const tower = this.sim.towers[slot];
     const pos = this.level.slots[slot];
@@ -2932,6 +2942,61 @@ export class BattleScene extends Phaser.Scene {
     this.heroCard = card;
     // a fallen hero's card is just a status glance: it closes by itself
     this.heroCardUntil = h.alive ? 0 : this.time.now + 4000;
+  }
+
+  /** A small card that follows a tapped enemy: name, live health bar, armor / magic resist / speed, key trait. */
+  private openEnemyCard(e: Enemy | null): void {
+    this.enemyCard?.destroy();
+    this.enemyCard = null;
+    this.enemyCardUid = 0;
+    if (!e) return;
+    sfx.click();
+    const W = 236;
+    const card = this.add.container(0, 0).setDepth(3400).setName('enemyCard');
+    const bg = this.add.graphics();
+    const bar = this.add.graphics();
+    card.add([bg, bar]);
+    card.add(fitWidth(this.add.text(10, 8, e.def.boss ? `${e.def.name}  (boss)` : e.def.name, textStyle(pf(14), '#ffb89a')), W - 20));
+    const hp = this.add.text(W - 10, 36, '', textStyle(pf(11), TEXT.cream, false)).setOrigin(1, 0.5);
+    card.add(hp);
+    const stats = `Armor ${Math.round(e.def.armor * 100)}%  •  Magic res ${Math.round(e.def.magicResist * 100)}%  •  Speed ${Math.round(e.def.speed)}`;
+    card.add(fitWidth(this.add.text(10, 50, stats, textStyle(pf(11), '#c8d8c8', false)), W - 20));
+    const trait = this.add.text(10, 68, enemyKeyTrait(e.def), { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 20 } });
+    card.add(trait);
+    const H = 68 + trait.height + 10;
+    glossPanel(bg, 0, 0, W, H, { fill: C.ink, alpha: 0.94, rim: 0xff7a5a, rimAlpha: 0.7, radius: 12 });
+    card.setData({ W, H, bar, hp, trail: newTrail(Math.max(0, e.hp / e.maxHp)) });
+    this.enemyCard = card;
+    this.enemyCardUid = e.uid;
+    this.updateEnemyCard(0);
+    if (!motion.reduced) {
+      card.setAlpha(0);
+      this.tweens.add({ targets: card, alpha: 1, duration: 140 });
+    }
+  }
+
+  /** Keep the enemy card above its foe and its health bar live; close it when the foe is gone. */
+  private updateEnemyCard(dt: number): void {
+    const card = this.enemyCard;
+    if (!card) return;
+    const e = this.sim.enemies.find((x) => x.uid === this.enemyCardUid);
+    if (!e || e.hp <= 0) {
+      this.openEnemyCard(null);
+      return;
+    }
+    const W = card.getData('W') as number;
+    const H = card.getData('H') as number;
+    const frac = Math.max(0, e.hp / e.maxHp);
+    const trail = stepTrail(card.getData('trail') as TrailState, frac, dt);
+    const bar = card.getData('bar') as Phaser.GameObjects.Graphics;
+    bar.clear();
+    drawBar(bar, 10, 32, W - 92, 7, frac, trail.trail, hpColor(frac));
+    (card.getData('hp') as Phaser.GameObjects.Text).setText(`${Math.ceil(e.hp)}/${Math.round(e.maxHp)}`);
+    const v = this.enemyViews.get(e.uid);
+    const top = e.pos.y - 34 * (v?.air ?? (e.def.flying ? 1 : 0)) - e.def.radius;
+    let y = top - 26 - H;
+    if (y < 70) y = e.pos.y + e.def.radius + 16; // no room above: hang the card below the foe
+    card.setPosition(Phaser.Math.Clamp(e.pos.x - W / 2, 8, GAME_W - W - 8), Math.min(y, GAME_H - H - 100));
   }
 
   /**
@@ -4164,6 +4229,7 @@ export class BattleScene extends Phaser.Scene {
         v.bar.setDepth(v.air > 0.5 ? e.pos.y + 1000.5 : e.pos.y + 0.5);
       }
     }
+    this.updateEnemyCard(dt);
     this.syncSoldiers();
     this.syncStrikes();
     // Frozen towers turn icy.

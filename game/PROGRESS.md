@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **291** (next balance pass at iteration 295)
+Iteration counter: **292** (next balance pass at iteration 295)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1904,6 +1904,13 @@ Iteration counter: **291** (next balance pass at iteration 295)
   - The trails live on the views, and `sync(dt)` now gets the frame time.
   - **Bug fixed along the way:** deploy-bar labels with big counts (dev army ×30) ran into each other ("Scavenger ×30Tunneler"). Labels now shrink to fit their 110-wide slot.
   - New `scripts/raidbar-check.mjs` (two troops and two buildings wounded with the sim frozen; trails held then drained exactly to the fill; no console errors). `raid-check` and `raidfx-check` still pass. Screenshot `screenshots/291.png`. 297 tests.
+- **Iteration 292: enemy info card.**
+  - A plain tap on a foe (no spell armed, no hero selected, no menu open) opens a small glossy card that follows it.
+  - **Contents:** the name (marked "(boss)" for bosses), a live health bar with the damage trail and `hp/max`, an Armor % • Magic res % • Speed line, and the key trait from the Field Guide.
+  - **Placement:** the card sits above the foe, flipping below it near the top of the screen, and is clamped clear of the HUD.
+  - **Closing:** it closes when the foe dies, on a tap on empty ground, or when a tower menu or the hero card opens (one card at a time).
+  - New `systems/enemyPick.ts` (`pickEnemy`: the nearest living foe within its radius + 14 px, using the lifted body for flyers) with 4 tests (301 total).
+  - New `scripts/enemycard-check.mjs` (real taps on a Shellback and a Gloomwing, desktop and `PHONE=1`; live hp update, empty-ground close, slot-menu close; no console errors). `cards`, `herocard`, `towermenu` and `hero` checks still pass. Screenshots `screenshots/292.png` and `292-phone.png`.
 
 ## In Progress
 - (none)
@@ -1911,8 +1918,8 @@ Iteration counter: **291** (next balance pass at iteration 295)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Enemy info card: tapping an enemy on the road shows a small card (name, health bar, armor / magic resist, speed, key trait) that follows it.
-2. Village construction bars: the building-in-progress timer bar in the village gets the same rounded, glossy style.
+1. Village construction bars: the building-in-progress timer bar in the village gets the same rounded, glossy style.
+2. Spell targeting polish: while a spell is armed, show its radius as a glowing ring with the number of foes it would hit.
 
 ## Known Bugs
 - (none known)

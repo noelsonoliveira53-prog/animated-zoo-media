@@ -22,6 +22,9 @@ export interface Strategy {
   thinkEvery: number;
   /** Casts Starfall / Grove Call and the hero skill when useful. */
   useSpells?: boolean;
+  /** From this wave on, stop opening new slots: spend on specializations and upgrades of the towers already up
+   *  (concentrated power holds endless's scaling waves better than a wide spread). Unset = keep building. */
+  upgradeFirstAfter?: number;
   /** Forces a specialization branch (0/1) for every tower; undefined alternates by slot. */
   specPick?: number;
   /** Moves the hero to the busiest choke point and picks branches from the level's enemy makeup. */
@@ -37,6 +40,9 @@ export const STRATEGIES: Strategy[] = [
   { name: 'only-boulder', mix: ['boulder'], slotFraction: 1, reserve: 0, upgrades: true, hero: null, thinkEvery: 1 },
   { name: 'only-burrow', mix: ['burrow'], slotFraction: 1, reserve: 0, upgrades: true, hero: null, thinkEvery: 1 },
 ];
+
+/** The expert, tuned for endless: same play, but from wave 5 it deepens its towers instead of widening (iteration 313 sweep: 3–5 all plateau). */
+export const ENDLESS_EXPERT: Strategy = { ...STRATEGIES[0], name: 'expert-endless', upgradeFirstAfter: 5 };
 
 export interface RunResult {
   won: boolean;
@@ -257,8 +263,20 @@ export function playLevel(level: LevelDef, strat: Strategy, seed = 1, maxSeconds
   }
 
   function act(): void {
+    const growing = strat.upgradeFirstAfter === undefined || sim.waveIndex < strat.upgradeFirstAfter;
     for (let guard = 0; guard < 20; guard++) {
-      const free = usable.find((i) => sim.towers[i] === null);
+      // late in a long run, deepen rather than widen: specialize the towers already standing before anything else
+      if (!growing) {
+        const slot = sim.towers.findIndex((t) => t && sim.canSpecialize(t));
+        if (slot >= 0) {
+          const t = sim.towers[slot]!;
+          const pick = strat.specPick ?? (strat.smart ? smartSpec(level, t.def.id) : slot % 2);
+          if (sim.coins - strat.reserve >= t.def.specs[pick].stats.cost) {
+            if (sim.specialize(slot, pick)) continue;
+          } else return; // save up for it
+        }
+      }
+      const free = growing ? usable.find((i) => sim.towers[i] === null) : undefined;
       if (free !== undefined) {
         const id = mix[rotation % mix.length];
         if (sim.coins - strat.reserve >= TOWERS[id].tiers[0].cost) {

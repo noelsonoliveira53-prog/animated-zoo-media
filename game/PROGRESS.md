@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **312** (next balance pass at iteration 315)
+Iteration counter: **313** (next balance pass at iteration 315)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2024,6 +2024,11 @@ Iteration counter: **312** (next balance pass at iteration 315)
   - **Next pill:** a "Next: 3. Thornwood Hollow ›" pill under the ribbon points at the first unlocked level here with no stars yet. It breathes gently (still with Reduce Motion), and tapping it opens that level's card.
   - New `systems/mapProgress.ts` (`regionProgress`) with 3 tests (335 total).
   - New `scripts/mapprogress-check.mjs` (desktop and `PHONE=1`; "5/15 here", the pill text, and a real tap opens level 3's card; no console errors). `map-check` and `region-picker-phone-check` still pass. Screenshots `screenshots/312.png` and `312-phone.png`.
+- **Iteration 313: endless-aware expert autoplayer** (balance tooling).
+  - New `Strategy.upgradeFirstAfter`: from that wave on, the autoplayer stops opening new slots and spends on specializations first (saving up for them), then upgrades.
+  - New `ENDLESS_EXPERT` (the expert with `upgradeFirstAfter: 5`), added as a fourth column in `endless-balance.ts`. The campaign `STRATEGIES` are untouched, so every earlier sweep still compares like-for-like.
+  - The endless ceiling rises from 12.0 / 11.7 / 12.0 / 12.7 to 22.3 / 24.3 / 12.0 / 18.3 waves (details under Balance Notes).
+  - New `tests/autoplay-endless.test.ts` (2 tests, 337 total: only the deepening differs, and it holds at least as long). No visual change; screenshot `screenshots/313.png` is the endless card (`endless-card-check`, no console errors).
 
 ## In Progress
 - (none)
@@ -2031,8 +2036,8 @@ Iteration counter: **312** (next balance pass at iteration 315)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Endless-aware expert autoplayer: upgrade-first after wave 10, for a truer endless ceiling in the balance sims.
-2. Village HUD polish: the resource bars get the glossy ribbon look with a storage-full pulse and a builder-busy pip per builder.
+1. Village HUD polish: the resource bars get the glossy ribbon look with a storage-full pulse and a builder-busy pip per builder.
+2. Frostpeak endless wall: every strategy stops at exactly 12 waves on Frostpeak Summit's endless map; find what wave 13 throws (likely a flyer or ice mix the build can't answer) and whether the endless generator needs a gentler step there.
 
 ## Known Bugs
 - (none known)
@@ -2928,3 +2933,4 @@ Findings / follow-ups:
 - **Iteration 300 drift check** (4 seeds; expert / casual / novice %): Mossgate 100/100/100, Murkmaw's Den 100/50/100, Morrowcap's Throne (L20) 75/50/0, Heart of the Engine (L45) 75/50/0, The Black Flagship (L75) 100/75/0, Crown of the Prairie (L105) 75/75/0, The Thunder Barrow (L125) 100/75/0, identical to the iteration 245 sweep (L125 also matches iteration 285). Branch DPS unchanged. The shared hit-rule refactors, the early-call bonus refactor and the iteration 290 hero buffs left campaign difficulty where it was.
 - **Iteration 305 veteran sweep** (`veteran-balance.ts 3`, expert): kills per tower over all runs: median 32, p75 52, p90 71, max 159 (a Frostpeak Summit tower). Veterans per run at 75 kills (was 50): Mossgate 0 (0), Murkmaw's Den 1.3 (4.0), Frostpeak 1.7 (3.0), Morrowcap's Throne 1.7 (3.3), Heart of the Ruins 0.7 (3.0), Thunderhead Crown 0.3 (3.0), Heart of the Amberwood 1.3 (4.3), Heart of the Glimmerbog 0 (1.3), The Thunder Barrow 0 (2.3). Late levels spread kills over more towers, so veterans there come from a player who leans on a few strong towers, which suits a badge. Combat itself is untouched (UI-only threshold).
 - **Iteration 310 raid and endless re-check:** the raid sweep is identical to iterations 250 and 270 (Lodge 1: 1.8★ / 0.3★ / 0.1★; Lodge 3 + Mender: 3.0★ / 3.0★ / 1.6★). Endless waves are identical to iteration 250. The long-standing oddity is that the novice outlasts the expert on two maps (Murkmaw's Den 17.7 vs 11.7, Duskcap Verge 21.3 vs 12.7). Hero/strategy split (3 seeds): Murkmaw expert+Fen 11.7, expert+Bramble 18.7, novice+Bramble 17.7, novice+Fen 14.7, so there it's the hero (Bramble's blocking suits the converging map). Duskcap expert+Fen 12.7, expert+Bramble 13.0, novice+Bramble 21.3, novice+Fen 20.7, so there it's the strategy (the novice's upgraded Thornbow/Glimmer spam beats the expert's adaptive mix in endless scaling). Both are autoplayer artifacts, not player-facing balance; no change. Follow-up idea: an endless-aware expert (upgrade-first after wave 10) for a truer ceiling.
+- **Iteration 313 endless ceiling** (`endless-balance.ts 3`, waves held: Mossgate / Murkmaw's Den / Frostpeak / Duskcap): expert 12.0 / 11.7 / 12.0 / 12.7, novice 12.3 / 17.7 / 12.3 / 21.3, and the new **expert-endless 22.3 / 24.3 / 12.0 / 18.3** (deepening from wave 5; waves 3, 4 and 5 all plateau, 8 gives 15.0 / 24.3 / 12.0 / 18.3 and 11 gives 12.0 / 18.0 / 12.0 / 12.7). So the iteration-310 oddity was strategy, as suspected: concentrating coins into a few specialized towers beats a wide spread under endless scaling. Frostpeak's 12-wave wall holds for every strategy (backlog item).

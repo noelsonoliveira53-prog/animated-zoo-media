@@ -7,6 +7,7 @@ import { pickEnemy } from '../systems/enemyPick';
 import { snapRally } from '../systems/rallySnap';
 import { shouldShowTouchTip, TOUCH_TIPS } from '../systems/touchTip';
 import { slowMoScale, SLOWMO_MS } from '../systems/slowMo';
+import { waveClearInfo } from '../systems/waveClear';
 import { waveChart } from '../systems/waveChart';
 import { runSummary, shortNum } from '../systems/runSummary';
 import { justVeteran, towerRecord } from '../systems/veteran';
@@ -2046,6 +2047,57 @@ export class BattleScene extends Phaser.Scene {
   }
 
   /** A boss falls: a slow-motion beat, a white flash, a shockwave and a volley of fireworks over the battlefield. */
+  /** "Wave N cleared" pill under the HUD (gold "Flawless" tag when no lives were lost), a chime and a sparkle. */
+  private waveClearedPill(index: number): void {
+    const info = waveClearInfo(index, this.sim.leaksByWave, this.sim.totalWaves, this.endless);
+    sfx.waveClear(info.flawless);
+    this.children.getByName('waveClear')?.destroy();
+    // sit under the HUD, or below the centre banner if one is up (e.g. the next wave was called straight away)
+    const py = this.children.getByName('banner') ? 262 : 140;
+    const c = this.add.container(GAME_W / 2, py).setDepth(3990).setName('waveClear');
+    const title = this.add.text(0, 0, `✓ ${info.title}`, textStyle(pf(18), '#d8ffc0')).setOrigin(0.5);
+    const tag = info.flawless ? this.add.text(0, 0, 'Flawless', textStyle(pf(13), '#16241c')).setOrigin(0.5) : null;
+    const sub = info.left ? this.add.text(0, 0, info.left, textStyle(pf(12), TEXT.cream, false)).setOrigin(0.5) : null;
+    const tagW = tag ? tag.width + 18 : 0;
+    const W = Math.max(title.width + tagW + 40, (sub?.width ?? 0) + 40);
+    const H = sub ? 58 : 40;
+    const g = this.add.graphics();
+    glossPanel(g, -W / 2, -H / 2, W, H, { fill: 0x1e3a24, alpha: 0.95, rim: info.flawless ? 0xffd23c : 0x6ab04c, rimAlpha: 0.9, radius: 14 });
+    c.add(g);
+    title.setPosition(-tagW / 2, sub ? -10 : 0);
+    c.add(title);
+    if (tag) {
+      const tx = title.x + title.width / 2 + 10 + tag.width / 2;
+      const tg = this.add.graphics();
+      tg.fillStyle(0xffd23c, 1);
+      tg.fillRoundedRect(tx - tag.width / 2 - 7, title.y - 11, tag.width + 14, 22, 10);
+      c.add(tg);
+      tag.setPosition(tx, title.y);
+      c.add(tag);
+    }
+    if (sub) {
+      sub.setPosition(0, 14);
+      c.add(sub);
+    }
+    if (!motion.lowFx) {
+      this.particles.setParticleTint(info.flawless ? 0xffd23c : 0x9be86a);
+      this.particles.explode(motion.reduced ? 4 : 12, GAME_W / 2, py);
+    }
+    if (motion.reduced) {
+      this.time.delayedCall(1800, () => c.destroy());
+      return;
+    }
+    c.setScale(0.6).setAlpha(0);
+    this.tweens.add({
+      targets: c,
+      scale: 1,
+      alpha: 1,
+      duration: 220,
+      ease: 'Back.easeOut',
+      onComplete: () => this.tweens.add({ targets: c, alpha: 0, y: c.y - 14, delay: 1400, duration: 350, onComplete: () => c.destroy() }),
+    });
+  }
+
   /** "<Boss> defeated!" on a gold ribbon near the top, with the bounty, that pops in, holds and fades away. */
   private bossDefeatedBanner(name: string, bounty: number): void {
     this.children.getByName('bossDefeated')?.destroy();
@@ -3781,6 +3833,7 @@ export class BattleScene extends Phaser.Scene {
         }
         break;
       case 'waveCleared':
+        this.waveClearedPill(ev.index);
         break;
       case 'melee':
         sfx.melee();

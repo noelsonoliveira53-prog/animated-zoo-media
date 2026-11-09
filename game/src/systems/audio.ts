@@ -402,6 +402,12 @@ class Sfx {
     this.tone(196, 0.5, 'sawtooth', 0.08, 220);
     this.tone(294, 0.5, 'sawtooth', 0.06, 330, 0.08);
   }
+  /** A wave cleared: two soft rising notes (a sparkle on top when no lives were lost). */
+  waveClear(flawless: boolean): void {
+    this.tone(659, 0.18, 'triangle', 0.07);
+    this.tone(988, 0.22, 'triangle', 0.06, undefined, 0.09);
+    if (flawless) this.tone(1319, 0.25, 'sine', 0.05, undefined, 0.2);
+  }
   victory(): void {
     [523, 659, 784, 1046].forEach((f, i) => this.tone(f, 0.3, 'triangle', 0.12, undefined, i * 0.13));
   }

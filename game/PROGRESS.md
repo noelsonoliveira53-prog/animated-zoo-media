@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **310** (next balance pass at iteration 315)
+Iteration counter: **311** (next balance pass at iteration 315)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2012,6 +2012,13 @@ Iteration counter: **310** (next balance pass at iteration 315)
 - **Iteration 310** (POLISH + BALANCE):
   - **Phone check** of the Settings screen after iteration 309's new row: all eight buttons, the reset note and the credits fit inside their spots at 740×360. Screenshot `screenshots/310.png`.
   - **Balance:** the raid and endless sweeps (unchanged since iteration 250) were re-run, plus a hero-versus-strategy split of an endless oddity; details under Balance Notes. Nothing tuned. 330 tests.
+- **Iteration 311: wave clear moment.**
+  - The sim's existing `waveCleared` event (fired when every called wave is done and the field is empty) now shows a glossy pill "✓ Wave N cleared". It has a gold "Flawless" tag when no lives were lost that wave (from `leaksByWave`) and "N waves to go" (hidden in endless).
+  - **Sound and sparkle:** a new two-note `sfx.waveClear` chime, with a third sparkle note when flawless, plus a small green or gold sparkle burst.
+  - It sits under the HUD, or below the centre banner if one is up (the first try overlapped the next wave's banner). It pops in, holds and floats away (static with Reduce Motion).
+  - No coin trickle: clearing a wave pays nothing, so coins would mislead.
+  - New `systems/waveClear.ts` (`waveClearInfo`) with 2 tests (332 total), including a sim run that fires `waveCleared`.
+  - New `scripts/waveclear-check.mjs` (wave 1 played out: "✓ Wave 1 cleared", "Flawless", "11 waves to go", then the pill leaves; no console errors). `audio-check` still passes. Screenshot `screenshots/311.png`.
 
 ## In Progress
 - (none)
@@ -2019,8 +2026,8 @@ Iteration counter: **310** (next balance pass at iteration 315)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Wave clear moment: a small "Wave N cleared" chime and coin trickle when the last foe of a wave falls, so the rhythm between waves reads.
-2. Map screen polish: a progress ribbon on the world map (stars collected / total, next unlock) styled like the result card.
+1. Map screen polish: a progress ribbon on the world map (stars collected / total, next unlock) styled like the result card.
+2. Endless-aware expert autoplayer: upgrade-first after wave 10, for a truer endless ceiling in the balance sims.
 
 ## Known Bugs
 - (none known)

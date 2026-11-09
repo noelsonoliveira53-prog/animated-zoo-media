@@ -6,6 +6,7 @@ import { heroCardRows, heroXpProgress } from '../systems/heroCard';
 import { pickEnemy } from '../systems/enemyPick';
 import { snapRally } from '../systems/rallySnap';
 import { shouldShowTouchTip, TOUCH_TIPS } from '../systems/touchTip';
+import { slowMoScale, SLOWMO_MS } from '../systems/slowMo';
 import { waveChart } from '../systems/waveChart';
 import { runSummary, shortNum } from '../systems/runSummary';
 import { justVeteran, towerRecord } from '../systems/veteran';
@@ -116,7 +117,8 @@ export class BattleScene extends Phaser.Scene {
   private heroDragG: Phaser.GameObjects.Graphics | null = null;
   private bossTrail: TrailState = newTrail(1);
   private bossTrailUid = 0;
-  private bossFlashUntil = 0; // scene time until which the boss bar flashes after a phase change
+  private bossFlashUntil = 0;
+  private slowMoStart = 0; // scene time a boss-kill slow-motion beat began (0 = none) // scene time until which the boss bar flashes after a phase change
   private rallyDrag = false; // touch: dragging a rally flag
   private rallyFinger: Vec2 | null = null;
   private rallyG: Phaser.GameObjects.Graphics | null = null;
@@ -209,6 +211,7 @@ export class BattleScene extends Phaser.Scene {
     this.veteranBadges.clear();
     this.bossTrailUid = 0;
     this.bossFlashUntil = 0;
+    this.slowMoStart = 0;
     this.heroTrail = newTrail(1);
     this.rallyFlags.clear();
     this.rallyMode = null;
@@ -2041,6 +2044,28 @@ export class BattleScene extends Phaser.Scene {
   }
 
   /** A boss falls: a slow-motion beat, a white flash, a shockwave and a volley of fireworks over the battlefield. */
+  /** "<Boss> defeated!" on a gold ribbon near the top, with the bounty, that pops in, holds and fades away. */
+  private bossDefeatedBanner(name: string, bounty: number): void {
+    this.children.getByName('bossDefeated')?.destroy();
+    const c = this.add.container(GAME_W / 2, 196).setDepth(3995).setName('bossDefeated');
+    c.add(ribbon(this, 0, 520, 0xd89a2a, 0x8a5a14));
+    c.add(fitWidth(this.add.text(0, -4, `${name} defeated!`, textStyle(pf(30), '#fff2c0')).setOrigin(0.5).setStroke('#5a3a0a', 7), 420));
+    c.add(this.add.text(0, 50, `+${bounty} coins`, textStyle(pf(18), TEXT.gold)).setOrigin(0.5).setStroke('#16241c', 5));
+    if (motion.reduced) {
+      this.time.delayedCall(2200, () => c.destroy());
+      return;
+    }
+    c.setScale(0.4).setAlpha(0);
+    this.tweens.add({
+      targets: c,
+      scale: 1,
+      alpha: 1,
+      duration: 260,
+      ease: 'Back.easeOut',
+      onComplete: () => this.tweens.add({ targets: c, alpha: 0, y: c.y - 20, delay: 1700, duration: 400, onComplete: () => c.destroy() }),
+    });
+  }
+
   private bossFireworks(x: number, y: number, color: number): void {
     this.cameras.main.flash(220, 255, 250, 230);
     shake(this, 400, 0.012);
@@ -3580,7 +3605,10 @@ export class BattleScene extends Phaser.Scene {
   update(_time: number, deltaMs: number): void {
     const dt = Math.min(deltaMs / 1000, 0.1);
     if (devOn() && !this.ended) this.devTopUp();
-    if (!this.paused && !this.ended && this.time.now >= this.hitStopUntil) this.sim.update(dt * this.speed);
+    // a boss kill slows everything down for a moment, then eases back to full speed
+    const slow = this.slowMoStart ? slowMoScale(this.time.now - this.slowMoStart, motion.reduced ? SLOWMO_MS / 2 : SLOWMO_MS) : 1;
+    if (slow >= 1) this.slowMoStart = 0;
+    if (!this.paused && !this.ended && this.time.now >= this.hitStopUntil) this.sim.update(dt * this.speed * slow);
     for (const ev of this.sim.drainEvents()) this.handleEvent(ev);
     this.syncViews(dt);
     this.drawAim();
@@ -3723,7 +3751,11 @@ export class BattleScene extends Phaser.Scene {
         this.floatText(ev.enemy.pos.x, ev.enemy.pos.y - 34, `+${ev.bounty}`, TEXT.gold, 18);
         sfx.kill();
         sfx.coin();
-        if (ev.enemy.def.boss) this.bossFireworks(ev.enemy.pos.x, ev.enemy.pos.y, ev.enemy.def.color);
+        if (ev.enemy.def.boss) {
+          this.bossFireworks(ev.enemy.pos.x, ev.enemy.pos.y, ev.enemy.def.color);
+          this.bossDefeatedBanner(ev.enemy.def.name, ev.bounty);
+          this.slowMoStart = this.time.now;
+        }
         break;
       }
       case 'leak': {

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **307** (next balance pass at iteration 310)
+Iteration counter: **308** (next balance pass at iteration 310)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1995,6 +1995,12 @@ Iteration counter: **307** (next balance pass at iteration 310)
   - New `systems/touchTip.ts` (`TOUCH_TIPS`, `shouldShowTouchTip`) with 3 tests (327 total), including a save round-trip.
   - New test hook `window.__noTouchTip`, now set by the 19 phone and touch check scripts so the card doesn't cover them. They still pass.
   - New `scripts/touchtip-check.mjs` (phone: card and pause on first battle; a real tap on "Got it!" closes, unpauses and saves; the next battle has no card; no console errors). Screenshot `screenshots/307.png`.
+- **Iteration 308: boss defeat moment.**
+  - On top of the existing flash, shake, shockwave ring and fireworks, a boss kill now gets a slow-motion beat: the battle runs at a quarter speed and eases back to full speed over 1.1 s (half as long with Reduce Motion).
+  - A gold ribbon near the top reads "<Boss> defeated!" with the bounty below; it pops in, holds and floats away after about 2 s.
+  - The slow-motion only scales the scene's sim step (`slowMoStart`, reset per battle), so the autoplayer and balance sims are untouched.
+  - New `systems/slowMo.ts` (`slowMoScale`, `SLOWMO_MS`, `SLOWMO_MIN`) with 3 tests (330 total).
+  - New `scripts/bossdown-check.mjs <name> [boss] [level]` (Zephyrax killed by a real sim kill: the slow-motion starts and ends, the ribbon reads "Zephyrax, the Gale Roc defeated!" / "+989 coins" and then goes away; no console errors). `bossbar` and `result` checks still pass. Screenshot `screenshots/308.png`.
 
 ## In Progress
 - (none)
@@ -2002,8 +2008,8 @@ Iteration counter: **307** (next balance pass at iteration 310)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Boss defeat moment: a slow-motion beat, a big burst and a "Boss defeated!" ribbon when a boss falls.
-2. Settings: a "Show touch tips again" button and a "Touch aiming" option (lift-to-cast vs tap-to-cast).
+1. Settings: a "Show touch tips again" button and a "Touch aiming" option (lift-to-cast vs tap-to-cast).
+2. Wave clear moment: a small "Wave N cleared" chime and coin trickle when the last foe of a wave falls, so the rhythm between waves reads.
 
 ## Known Bugs
 - (none known)

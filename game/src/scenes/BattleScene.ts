@@ -29,6 +29,7 @@ import { ash, confetti, countUp, ribbon, starSlam, victoryRays } from './fx/Resu
 import { startWeather } from './fx/Weather';
 import { ambienceFor, weatherFor } from '../data/weather';
 import { distToSegment, roadEdgeSpots } from '../systems/path';
+import { pickBannerY } from '../systems/bannerSpot';
 import { music } from '../systems/music';
 import { themeForRegion } from '../data/musicThemes';
 import { STORY } from '../data/story';
@@ -92,6 +93,7 @@ export class BattleScene extends Phaser.Scene {
   private lastGulp = new Map<number, number>(); // throttle clock: uid -> last "Gulp!" text; -uid -> last Copperhorn arc
   private projViews = new Map<number, Phaser.GameObjects.Image>();
   private fx!: TowerFx;
+  private bannerSpot: { y: number; cover: number } | null = null; // where the banner hides the least road (per level)
   private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
   private heroTrail: TrailState = newTrail(1);
@@ -179,6 +181,7 @@ export class BattleScene extends Phaser.Scene {
   private endlessResult: { held: number; best: number; isBest: boolean } | null = null;
 
   init(data: { levelIndex?: number; daily?: boolean; endless?: boolean }): void {
+    this.bannerSpot = null;
     this.levelIndex = data.levelIndex ?? 0;
     this.daily = null;
     this.endless = !!data.endless && !data.daily;
@@ -3231,8 +3234,11 @@ export class BattleScene extends Phaser.Scene {
 
   private showBanner(title: string, sub: string, sticky = false): void {
     this.children.getByName('banner')?.destroy();
-    // Sits just under the HUD so it never hides the battlefield centre.
-    const c = this.add.container(GAME_W / 2, sticky ? GAME_H / 2 - 40 : 172).setDepth(4000).setName('banner');
+    // Sits under the HUD, or low over the field when a road enters at the top centre, so it hides the least road;
+    // if it still covers some, it fades back after 1.5 s so the first foes stay visible.
+    this.bannerSpot ??= pickBannerY(this.level.paths, GAME_W / 2, 600, 84, [172, GAME_H - 176]);
+    const spot = this.bannerSpot;
+    const c = this.add.container(GAME_W / 2, sticky ? GAME_H / 2 - 40 : spot.y).setDepth(4000).setName('banner');
     const bg = this.add.graphics();
     bg.fillStyle(C.ink, 0.72);
     bg.fillRoundedRect(-300, -42, 600, 84, 18);
@@ -3242,6 +3248,7 @@ export class BattleScene extends Phaser.Scene {
     c.setScale(0.6).setAlpha(0);
     this.tweens.add({ targets: c, scale: 1, alpha: 1, duration: 250, ease: 'Back.easeOut' });
     if (!sticky) {
+      if (spot.cover > 0) this.tweens.add({ targets: c, alpha: 0.35, delay: 1500, duration: 300 });
       this.tweens.add({ targets: c, alpha: 0, delay: 2600, duration: 400, onComplete: () => c.destroy() });
     }
   }

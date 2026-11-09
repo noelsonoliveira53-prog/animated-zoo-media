@@ -72,6 +72,8 @@ const TOWER_GLOW: Record<string, number> = { thornbow: 0xb8f07a, glimmer: 0xc8a0
 const TOUCH_AIM_LIFT = 60;
 /** A touch on the hero that moves less than this is a tap (select), more is a drag (move there). */
 const HERO_DRAG_MIN = 24;
+/** How long the boss bar flashes white on a phase change. */
+const BOSS_FLASH_MS = 450;
 
 const TARGET_MODES: TargetMode[] = ['first', 'last', 'strongest', 'closest'];
 
@@ -111,6 +113,9 @@ export class BattleScene extends Phaser.Scene {
   private heroDrag: Vec2 | null = null; // touch: where a drag from the hero started
   private heroDragTo: Vec2 | null = null;
   private heroDragG: Phaser.GameObjects.Graphics | null = null;
+  private bossTrail: TrailState = newTrail(1);
+  private bossTrailUid = 0;
+  private bossFlashUntil = 0; // scene time until which the boss bar flashes after a phase change
   private rallyDrag = false; // touch: dragging a rally flag
   private rallyFinger: Vec2 | null = null;
   private rallyG: Phaser.GameObjects.Graphics | null = null;
@@ -201,6 +206,8 @@ export class BattleScene extends Phaser.Scene {
     this.projViews.clear();
     this.soldierViews.clear();
     this.veteranBadges.clear();
+    this.bossTrailUid = 0;
+    this.bossFlashUntil = 0;
     this.heroTrail = newTrail(1);
     this.rallyFlags.clear();
     this.rallyMode = null;
@@ -2742,19 +2749,41 @@ export class BattleScene extends Phaser.Scene {
     const w = 420;
     const x = GAME_W / 2 - w / 2;
     const y = 104;
-    this.bossBar.fillStyle(C.ink, 0.85);
-    this.bossBar.fillRoundedRect(x - 6, y - 6, w + 12, 26, 10);
-    this.bossBar.fillStyle(0x5a1f24, 1);
-    this.bossBar.fillRect(x, y, w, 14);
-    this.bossBar.fillStyle(C.danger, 1);
-    this.bossBar.fillRect(x, y, w * Math.max(0, boss.hp / boss.maxHp), 14);
+    const frac = Math.max(0, boss.hp / boss.maxHp);
+    // a fresh boss starts a fresh trail
+    if (this.bossTrailUid !== boss.uid) {
+      this.bossTrailUid = boss.uid;
+      this.bossTrail = newTrail(frac);
+    }
+    stepTrail(this.bossTrail, frac, Math.min(this.game.loop.delta / 1000, 0.1));
+    this.bossBar.fillStyle(0x000000, 0.3);
+    this.bossBar.fillRoundedRect(x - 4, y - 3, w + 12, 26, 12);
+    this.bossBar.fillStyle(C.ink, 0.9);
+    this.bossBar.fillRoundedRect(x - 6, y - 6, w + 12, 26, 12);
+    this.bossBar.lineStyle(1.5, 0xff8a7a, 0.35);
+    this.bossBar.strokeRoundedRect(x - 6, y - 6, w + 12, 26, 12);
+    drawBar(this.bossBar, x, y, w, 14, frac, this.bossTrail.trail, frac > 0.3 ? C.danger : 0xff3a2a);
     if (boss.shield > 0) {
       this.bossBar.fillStyle(0x9fd8ff, 0.9);
-      this.bossBar.fillRect(x, y + 10, w * (boss.shield / Math.max(1, boss.maxShield)), 4);
+      this.bossBar.fillRoundedRect(x, y + 10, Math.max(4, w * (boss.shield / Math.max(1, boss.maxShield))), 4, 2);
     }
-    // phase ticks
-    this.bossBar.fillStyle(C.cream, 0.9);
-    for (const ph of boss.def.phases ?? []) this.bossBar.fillRect(x + w * ph.at - 1, y - 2, 3, 18);
+    // phase notches: a little diamond at each threshold, gold once passed, cream while still ahead
+    for (const ph of boss.def.phases ?? []) {
+      const nx = x + w * ph.at;
+      const passed = frac <= ph.at;
+      this.bossBar.fillStyle(C.ink, 0.95);
+      this.bossBar.fillTriangle(nx - 7, y - 4, nx + 7, y - 4, nx, y + 4);
+      this.bossBar.fillStyle(passed ? 0xffd23c : C.cream, 1);
+      this.bossBar.fillTriangle(nx - 5, y - 5, nx + 5, y - 5, nx, y + 2);
+      this.bossBar.fillStyle(passed ? 0xffd23c : C.cream, passed ? 0.9 : 0.55);
+      this.bossBar.fillRect(nx - 1, y, 2, 14);
+    }
+    // phase change: the bar flashes white and fades back
+    const flash = this.bossFlashUntil - this.time.now;
+    if (flash > 0) {
+      this.bossBar.fillStyle(0xffffff, 0.75 * (flash / BOSS_FLASH_MS));
+      this.bossBar.fillRoundedRect(x - 6, y - 6, w + 12, 26, 12);
+    }
     if (boss.def.wax && boss.waxLeft > 0) {
       // a wax-coated boss: a glossy amber strip under the bar that drains as spells melt the coat
       const full = Math.max(1, Math.round(boss.maxHp * boss.def.wax.melt));
@@ -4237,6 +4266,7 @@ export class BattleScene extends Phaser.Scene {
       case 'phase':
         this.showBanner(ev.enemy.def.name, ev.message);
         shake(this, 300, 0.008);
+        if (ev.enemy.def.boss) this.bossFlashUntil = this.time.now + (motion.reduced ? BOSS_FLASH_MS / 2 : BOSS_FLASH_MS);
         sfx.waveHorn();
         break;
       case 'split':

@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **305** (next balance pass at iteration 310)
+Iteration counter: **306** (next balance pass at iteration 310)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1982,6 +1982,12 @@ Iteration counter: **305** (next balance pass at iteration 310)
   - The autoplayer's `RunResult` now carries `towerKills` (kills per tower), and a new `scripts/veteran-balance.ts` (expert strategy, nine levels from L1 to L125) measures how many towers earn the badge.
   - At 50 kills, 29% of towers became veterans (3–4 per run), too common to feel special. **`VETERAN_KILLS` is now 75** (8% of towers, 0–1.7 per run, none on the gentle first level). Details under Balance Notes.
   - `veteran-check.mjs` was updated for the new line ("★ 75 kills"); no console errors. Screenshot `screenshots/305.png`. 324 tests.
+- **Iteration 306: boss health bar polish.**
+  - The HUD boss bar now uses the shared rounded `drawBar` in danger red (brighter red below 30%), on a framed backing with a drop shadow and a faint red rim.
+  - It has the damage trail (`bossTrail`, reset whenever a new boss shows up).
+  - **Phase notches:** a small diamond plus a thin line at each threshold, cream while still ahead and gold once passed.
+  - **Phase-change flash:** a phase change flashes the bar white for 450 ms (half as long with Reduce Motion), alongside the existing banner and shake. The shield strip is rounded too.
+  - New `scripts/bossbar-check.mjs <name> [boss] [level]` (Zephyrax knocked just past 75%: a real phase event, the flash catches, the gold notch shows, and the trail drains exactly to 0.71; no console errors). `bossintro-check` (desktop and phone) still passes. Screenshot `screenshots/306.png`. 324 tests.
 
 ## In Progress
 - (none)
@@ -1989,8 +1995,8 @@ Iteration counter: **305** (next balance pass at iteration 310)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Boss health bar polish: the big HUD boss bar gets phase notches, a damage trail and a phase-change flash.
-2. Touch gestures help card: a one-time tip on first battle on a touch device (hold to preview, drag to aim, drag the hero).
+1. Touch gestures help card: a one-time tip on first battle on a touch device (hold to preview, drag to aim, drag the hero).
+2. Boss defeat moment: a slow-motion beat, a big burst and a "Boss defeated!" ribbon when a boss falls.
 
 ## Known Bugs
 - (none known)

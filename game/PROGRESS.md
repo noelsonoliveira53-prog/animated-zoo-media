@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **290** (next balance pass at iteration 295)
+Iteration counter: **291** (next balance pass at iteration 295)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1898,6 +1898,12 @@ Iteration counter: **290** (next balance pass at iteration 295)
 - **Iteration 290** (POLISH + BALANCE):
   - **Polish (one card at a time):** opening a tower menu now ends the hero's move selection and closes the hero card. Before, both cards could stack, and the next map tap still moved the hero. New `scripts/cards-check.mjs` (real taps: portrait, then a tower; no console errors). Screenshot `screenshots/290.png`.
   - **Balance:** a new `scripts/hero-balance.ts` (expert strategy per hero, optional hero filter). The gap from iteration 260 was unchanged, so Sorrel's sling went 19 → 21 damage and Bramble's Earthshake radius 115 → 127 (+10%). Details are under Balance Notes. 297 tests.
+- **Iteration 291: raid mode bars.**
+  - Raid troops and camp buildings now use the shared `drawBar` with a damage trail.
+  - **Colours:** buildings are orange (red below 30%). Troops are blue like the defense Wardens (red below 30%, green while poisoned).
+  - The trails live on the views, and `sync(dt)` now gets the frame time.
+  - **Bug fixed along the way:** deploy-bar labels with big counts (dev army ×30) ran into each other ("Scavenger ×30Tunneler"). Labels now shrink to fit their 110-wide slot.
+  - New `scripts/raidbar-check.mjs` (two troops and two buildings wounded with the sim frozen; trails held then drained exactly to the fill; no console errors). `raid-check` and `raidfx-check` still pass. Screenshot `screenshots/291.png`. 297 tests.
 
 ## In Progress
 - (none)
@@ -1905,8 +1911,9 @@ Iteration counter: **290** (next balance pass at iteration 295)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Raid mode bars: the same rounded bars with a damage trail for raid troops and camp defenses.
-2. Enemy info card: tapping an enemy on the road shows a small card (name, health bar, armor / magic resist, speed, key trait) that follows it.
+1. Enemy info card: tapping an enemy on the road shows a small card (name, health bar, armor / magic resist, speed, key trait) that follows it.
+
+2. Village defense bars: when the village is raided or a building is under construction, show the same rounded bar style for construction progress.
 
 ## Known Bugs
 - (none known)

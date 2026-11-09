@@ -18,15 +18,18 @@ import { addResources } from '../systems/village';
 import { sfx } from '../systems/audio';
 import { Button } from '../ui/Button';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
+import { drawBar } from '../ui/bars';
+import { fitWidth } from '../ui/touch';
+import { newTrail, stepTrail, type TrailState } from '../systems/hpBar';
 
 // Attack a Murkhorde camp with the army trained at the Ranger Lodge.
 export class RaidScene extends Phaser.Scene {
   private sim!: RaidSim;
   private selected: string | null = null;
-  private buildingViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private buildingViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
   private lastVenomText = -9999;
   private mireZones = new Map<number, Phaser.GameObjects.Arc>();
-  private troopViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics }>();
+  private troopViews = new Map<number, { img: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
   private hudText!: Phaser.GameObjects.Text;
   private starIcons: Phaser.GameObjects.Image[] = [];
   private deployButtons: { id: string; c: Phaser.GameObjects.Container; count: Phaser.GameObjects.Text; ring: Phaser.GameObjects.Graphics }[] = [];
@@ -64,7 +67,7 @@ export class RaidScene extends Phaser.Scene {
       const def = CAMP_BUILDINGS[b.type];
       const img = this.add.image(CAMP_OX + b.col * CAMP_TILE, CAMP_OY + b.row * CAMP_TILE, `camp_${b.type}`).setOrigin(0, 0);
       img.setDepth(CAMP_OY + (b.row + def.size) * CAMP_TILE);
-      this.buildingViews.set(b.uid, { img, bar: this.add.graphics().setDepth(5000) });
+      this.buildingViews.set(b.uid, { img, bar: this.add.graphics().setDepth(5000), trail: newTrail(1) });
       if (def.mire) {
         // the muddy ground a Sludge Pit soaks: ground troops wade slowly through it
         const c = buildingCenter(b);
@@ -157,7 +160,8 @@ export class RaidScene extends Phaser.Scene {
   private refreshBar(): void {
     for (const b of this.deployButtons) {
       const n = this.sim.army[b.id] ?? 0;
-      b.count.setText(`${TROOPS[b.id].name.split(' ')[1]} ×${n}`);
+      b.count.setScale(1).setText(`${TROOPS[b.id].name.split(' ')[1]} ×${n}`);
+      fitWidth(b.count, 102); // big counts ("Scavenger ×30") stay inside their 110-wide slot
       b.c.setAlpha(n > 0 ? 1 : 0.4);
       b.ring.clear();
       b.ring.fillStyle(this.selected === b.id ? C.panelLight : 0x22382a, 1);
@@ -194,7 +198,7 @@ export class RaidScene extends Phaser.Scene {
   update(_t: number, deltaMs: number): void {
     if (!this.done) this.sim.update(Math.min(deltaMs / 1000, 0.1));
     for (const ev of this.sim.drainEvents()) this.handle(ev);
-    this.sync();
+    this.sync(Math.min(deltaMs / 1000, 0.1));
   }
 
   private handle(ev: RaidEvent): void {
@@ -202,7 +206,7 @@ export class RaidScene extends Phaser.Scene {
       case 'deploy': {
         const img = this.add.image(ev.troop.pos.x, ev.troop.pos.y, `troop_${ev.troop.def.id}`).setScale(0).setData('popping', true);
         this.tweens.add({ targets: img, scale: 1, duration: 180, ease: 'Back.easeOut', onComplete: () => img.setData('popping', false) });
-        this.troopViews.set(ev.troop.uid, { img, bar: this.add.graphics() });
+        this.troopViews.set(ev.troop.uid, { img, bar: this.add.graphics(), trail: newTrail(1) });
         this.particles.setParticleTint(0xd9c39a);
         this.particles.explode(6, ev.troop.pos.x, ev.troop.pos.y);
         // a banner where a squad lands (at most one every 0.6 s, so drag-deploys don't plant a forest of flags)
@@ -319,24 +323,24 @@ export class RaidScene extends Phaser.Scene {
     }
   }
 
-  private sync(): void {
+  private sync(dt: number): void {
     for (const t of this.sim.troops) {
       const v = this.troopViews.get(t.uid);
       if (!v || !t.alive) continue;
-      this.drawTroop(t, v.img, v.bar);
+      this.drawTroop(t, v.img, v.bar, v.trail, dt);
     }
     for (const b of this.sim.camp.buildings) {
       const v = this.buildingViews.get(b.uid);
       if (!v || b.hp <= 0) continue;
       v.bar.clear();
+      const frac = Math.max(0, b.hp / b.maxHp);
+      stepTrail(v.trail, frac, dt);
       if (b.hp < b.maxHp) {
         const c = buildingCenter(b);
         const w = CAMP_BUILDINGS[b.type].size * CAMP_TILE * 0.7;
         const y = c.y - (CAMP_BUILDINGS[b.type].size * CAMP_TILE) / 2 - 6;
-        v.bar.fillStyle(C.ink, 0.85);
-        v.bar.fillRect(c.x - w / 2 - 1, y - 1, w + 2, 7);
-        v.bar.fillStyle(0xff9f43, 1);
-        v.bar.fillRect(c.x - w / 2, y, w * (b.hp / b.maxHp), 5);
+        // enemy buildings read orange, turning red when nearly razed
+        drawBar(v.bar, c.x - w / 2, y, w, 6, frac, v.trail.trail, frac > 0.3 ? 0xff9f43 : 0xff5d4a);
       }
     }
     const pct = Math.round(this.sim.destruction * 100);
@@ -345,7 +349,7 @@ export class RaidScene extends Phaser.Scene {
     this.starIcons.forEach((img, i) => img.setTexture(i < stars ? 'star' : 'star_empty'));
   }
 
-  private drawTroop(t: Troop, img: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics): void {
+  private drawTroop(t: Troop, img: Phaser.GameObjects.Image, bar: Phaser.GameObjects.Graphics, trail: TrailState, dt: number): void {
     const lift = t.def.flying ? 18 : 0;
     // troops share the defense soldiers' poses: a marching step, a chopping arc at their target, flyers flap
     const px = (img.getData('px') as number | undefined) ?? t.pos.x;
@@ -379,11 +383,11 @@ export class RaidScene extends Phaser.Scene {
     }
     if (t.poisonT! > 0) img.setTint(0xa8f07a);
     else if (img.isTinted && !img.tintFill) img.clearTint();
+    const frac = Math.max(0, t.hp / t.maxHp);
+    stepTrail(trail, frac, dt);
     if (t.hp < t.maxHp) {
-      bar.fillStyle(C.ink, 0.85);
-      bar.fillRect(t.pos.x - 12, t.pos.y - 34 - lift, 24, 5);
-      bar.fillStyle(0x7be35a, 1);
-      bar.fillRect(t.pos.x - 11, t.pos.y - 33 - lift, 22 * (t.hp / t.maxHp), 3);
+      // our troops read blue like the defense Wardens (green while poisoned, red when nearly down)
+      drawBar(bar, t.pos.x - 12, t.pos.y - 33 - lift, 24, 4, frac, trail.trail, t.poisonT! > 0 ? 0x8ad84a : frac > 0.3 ? 0x7fc8ff : 0xff7a5a);
       bar.setDepth(t.pos.y + 3001);
     }
   }

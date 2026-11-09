@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **288** (next balance pass at iteration 290)
+Iteration counter: **289** (next balance pass at iteration 290)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1884,6 +1884,17 @@ Iteration counter: **288** (next balance pass at iteration 290)
   - **Wardens and Rangers:** a rounded blue bar (red below 30%, green while poisoned) with the same trail.
   - Trails live on the views (`heroTrail`, per-soldier `trail`), and `heroTrail` is reset with the other per-battle state when the scene is reused.
   - New `scripts/allybar-check.mjs` (hero at 40%, Wardens at 55% and 25% poisoned; trails held then drained exactly to the fill; no console errors). `hpbar-check` unchanged. Screenshot `screenshots/288.png`. 295 tests.
+- **Iteration 289: hero info card.**
+  - Tapping the hero portrait now also opens a glossy card above it, as well as selecting the hero for a move order.
+  - **Contents:**
+    - Name and title.
+    - Level with a gold XP track and `have/need XP` (or "Max level").
+    - Health / Dmg/s / Speed bars with the next level's gain in green and `cur → next`.
+    - Passive and skill texts (the skill with its cooldown), wrapped; the card grows to fit.
+  - **Closing:** the card closes with a move order or a second tap, and refreshes on level up. A fallen hero's card shows "Recovering: back in Ns" and closes by itself after 4 s. That uses a scene-clock check in `syncHero`, not a delayed timer, which crawls under slow frames.
+  - The stat-bar drawing is now shared with the tower card (`drawCardRows`).
+  - New `systems/heroCard.ts` (`heroXpProgress`, `heroCardRows`) with 2 tests (297 total).
+  - New `scripts/herocard-check.mjs <name> [hero]` (a real tap on the portrait, desktop and `PHONE=1`, using the canvas's real bounds; checks the card is on screen and the fallen card closes; no console errors). Screenshots `screenshots/289.png` (Fen) and `289-phone.png` (Bramble).
 
 ## In Progress
 - (none)
@@ -1891,8 +1902,8 @@ Iteration counter: **288** (next balance pass at iteration 290)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Hero info card: tapping the hero portrait shows a card like the tower one (level, XP, passive and active skill, health and damage bars).
-2. Raid mode bars: the same rounded bars with a damage trail for raid troops and camp defenses.
+1. Raid mode bars: the same rounded bars with a damage trail for raid troops and camp defenses.
+2. Enemy info card: tapping an enemy on the road shows a small card (name, health bar, armor / magic resist, speed, key trait) that follows it.
 
 ## Known Bugs
 - (none known)

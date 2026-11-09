@@ -1,7 +1,8 @@
 import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
 import { motion, shake } from '../ui/motion';
-import { cardRows, cardTags } from '../systems/towerCard';
+import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
+import { heroCardRows, heroXpProgress } from '../systems/heroCard';
 import { hpColor, newTrail, resistPips, stepTrail, type TrailState } from '../systems/hpBar';
 import { TowerFx } from './fx/TowerFx';
 import { addLighting } from '../ui/lighting';
@@ -78,6 +79,8 @@ export class BattleScene extends Phaser.Scene {
   private towerShadows = new Map<number, Phaser.GameObjects.Ellipse>(); // soft ground shadow under each built tower // per-tower launch flashes, trails, impacts and tier auras
   private soldierViews = new Map<number, { sprite: Phaser.GameObjects.Image; bar: Phaser.GameObjects.Graphics; trail: TrailState }>();
   private heroTrail: TrailState = newTrail(1);
+  private heroCard: Phaser.GameObjects.Container | null = null;
+  private heroCardUntil = 0; // scene time when a fallen hero's status card closes itself (0 = stays)
   private rallyFlags = new Map<number, Phaser.GameObjects.Image>();
   private pendingSpec: string | null = null; // "slot:index" awaiting a confirming tap
   private rallyMode: number | null = null; // slot whose rally point is being placed
@@ -2001,6 +2004,7 @@ export class BattleScene extends Phaser.Scene {
     this.lastHitStop = -9999;
     this.skillWasReady = true; // no ping for the skill being ready at the start
     this.heroPortrait = null;
+    this.heroCard = null;
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2214,7 +2218,9 @@ export class BattleScene extends Phaser.Scene {
       sfx.unlock();
       sfx.click();
       this.closeMenu();
-      this.selectHero(!this.heroSelected);
+      const open = !this.heroCard;
+      this.selectHero(open);
+      this.toggleHeroCard(open);
     });
     this.heroLevelText = this.add.text(px + 30, py + 30, '1', textStyle(18, TEXT.gold)).setOrigin(0.5).setDepth(3002);
     const skillZone = this.add.zone(px + 104, py, 76, 76).setDepth(3002).setInteractive({ useHandCursor: true });
@@ -2239,12 +2245,14 @@ export class BattleScene extends Phaser.Scene {
       this.tweens.add({ targets: ray, x: px + Math.cos(a) * 50, y: py + Math.sin(a) * 50, alpha: 0, duration: 480, ease: 'Quad.easeOut', onComplete: () => ray.destroy() });
     }
     if (this.heroPortrait) this.tweens.add({ targets: this.heroPortrait, scale: 1.3, duration: 140, yoyo: true });
+    if (this.heroCard) this.toggleHeroCard(true); // fresh numbers for the new level
   }
 
   private selectHero(on: boolean): void {
     if (!this.sim.hero?.alive) on = false;
     this.heroSelected = on;
     this.heroRing?.setVisible(on);
+    if (!on && this.heroCard && this.sim.hero?.alive) this.toggleHeroCard(false);
     if (on) this.floatText(this.sim.hero!.pos.x, this.sim.hero!.pos.y - 70, 'Tap to move', TEXT.cream, 16);
   }
 
@@ -2268,6 +2276,7 @@ export class BattleScene extends Phaser.Scene {
     this.heroRing.setPosition(h.pos.x, h.pos.y).setDepth(h.pos.y - 1);
     if (!h.alive && this.heroSelected) this.selectHero(false);
     this.heroBar.clear();
+    if (this.heroCard && this.heroCardUntil && this.time.now > this.heroCardUntil) this.toggleHeroCard(false);
     if (h.alive) stepTrail(this.heroTrail, h.hp / h.maxHp, Math.min(this.game.loop.delta / 1000, 0.1));
     else this.heroTrail = newTrail(1);
     if (h.alive && h.hp < h.maxHp) {
@@ -2852,6 +2861,76 @@ export class BattleScene extends Phaser.Scene {
     this.tweens.add({ targets: c, scale: 1, duration: 160, ease: 'Back.easeOut' });
   }
 
+  /** Stat bars on an info card: label, a bar with the next step as a green extension, and `cur → next` text. */
+  private drawCardRows(card: Phaser.GameObjects.Container, g: Phaser.GameObjects.Graphics, rows: CardRow[], y0: number, W: number, color: number): void {
+    rows.forEach((r, i) => {
+      const y = y0 + i * 22;
+      const bx = 66;
+      const bw = W - 154;
+      card.add(fitWidth(this.add.text(10, y, r.label, textStyle(pf(11), TEXT.cream, false)).setOrigin(0, 0.5), bx - 14));
+      g.fillStyle(0x0c1a12, 1);
+      g.fillRoundedRect(bx, y - 4, bw, 8, 4);
+      if (r.next !== null && r.next > r.value) {
+        g.fillStyle(0x7be35a, 0.95);
+        g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.next), 8, 4);
+      }
+      g.fillStyle(r.next !== null && r.next < r.value ? 0xff9f6a : color, 1);
+      g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.value), 8, 4);
+      g.fillStyle(0xffffff, 0.3);
+      g.fillRect(bx + 3, y - 3, Math.max(2, bw * r.value - 6), 1.5);
+      const txt = r.nextText ? `${r.text} → ${r.nextText}` : r.text;
+      card.add(fitWidth(this.add.text(W - 8, y, txt, textStyle(pf(11), r.nextText ? '#b8ff8a' : TEXT.cream, false)).setOrigin(1, 0.5), W - bx - bw - 12));
+    });
+  }
+
+  /**
+   * Hero card above the portrait: name and title, level with an XP track (or the respawn countdown), health /
+   * damage / speed bars with the next level's gain in green, and the passive and active skill texts.
+   */
+  private toggleHeroCard(open: boolean): void {
+    this.heroCard?.destroy();
+    this.heroCard = null;
+    const h = this.sim.hero;
+    if (!open || !h) return;
+    const W = 320;
+    const card = this.add.container(12, 0).setDepth(3500).setName('heroCard');
+    const bg = this.add.graphics();
+    const g = this.add.graphics();
+    card.add([bg, g]);
+    card.add(fitWidth(this.add.text(12, 8, `${h.def.name}, ${h.def.title}`, textStyle(pf(16), TEXT.gold)), W - 24));
+    if (h.alive) {
+      const xp = heroXpProgress(h.xp, h.level);
+      card.add(fitWidth(this.add.text(12, 38, `Level ${h.level}`, textStyle(pf(12), TEXT.cream, false)).setOrigin(0, 0.5), 64));
+      g.fillStyle(0x0c1a12, 1);
+      g.fillRoundedRect(84, 34, 130, 8, 4);
+      g.fillStyle(0xffd23c, 1);
+      g.fillRoundedRect(84, 34, Math.max(8, 130 * xp.frac), 8, 4);
+      card.add(fitWidth(this.add.text(W - 10, 38, xp.max ? 'Max level' : `${Math.floor(xp.have)}/${xp.need} XP`, textStyle(pf(11), '#ffe9a0', false)).setOrigin(1, 0.5), W - 226));
+    } else {
+      card.add(this.add.text(12, 38, `Recovering: back in ${Math.ceil(h.respawnTimer)}s`, textStyle(pf(12), TEXT.heart, false)).setOrigin(0, 0.5));
+    }
+    this.drawCardRows(card, g, heroCardRows(h.def, h.level), 62, W, h.def.color);
+    let y = 62 + 3 * 22 - 4;
+    const para = (head: string, body: string, color: string) => {
+      card.add(fitWidth(this.add.text(12, y, head, textStyle(pf(11), color, false)), W - 24));
+      const t = this.add.text(12, y + 15, body, { ...textStyle(pf(11), TEXT.cream, false), wordWrap: { width: W - 24 } });
+      card.add(t);
+      y += 15 + t.height + 6;
+    };
+    para('Passive', h.def.passive.text, '#9be86a');
+    para(`Skill: ${h.def.active.name} (${Math.round(h.def.active.cooldown)}s)`, h.def.active.text, '#ffc870');
+    const H = y + 6;
+    glossPanel(bg, 0, 0, W, H, { fill: C.ink, alpha: 0.95, rim: h.def.color, rimAlpha: 0.75, radius: 14 });
+    card.setY(GAME_H - 112 - H);
+    if (!motion.reduced) {
+      card.setAlpha(0).setY(card.y + 12);
+      this.tweens.add({ targets: card, alpha: 1, y: card.y - 12, duration: 160, ease: 'Cubic.easeOut' });
+    }
+    this.heroCard = card;
+    // a fallen hero's card is just a status glance: it closes by itself
+    this.heroCardUntil = h.alive ? 0 : this.time.now + 4000;
+  }
+
   /**
    * Info card beside the tower menu: name and level, trait tags, and three stat bars. `next` (the next tier,
    * or the branch you just tapped) shows as a green extension of each bar that grows.
@@ -2871,24 +2950,7 @@ export class BattleScene extends Phaser.Scene {
     card.add(fitWidth(this.add.text(10, 8, title, textStyle(pf(15), TEXT.gold)), W - 20));
     const tags = cardTags(tower.def, cur).join(' • ');
     card.add(fitWidth(this.add.text(10, 29, tags, textStyle(pf(11), '#b8d0c0', false)), W - 20));
-    cardRows(cur, next).forEach((r, i) => {
-      const y = 52 + i * 22;
-      const bx = 66;
-      card.add(fitWidth(this.add.text(10, y, r.label, textStyle(pf(11), TEXT.cream, false)).setOrigin(0, 0.5), bx - 14));
-      const bw = 72;
-      g.fillStyle(0x0c1a12, 1);
-      g.fillRoundedRect(bx, y - 4, bw, 8, 4);
-      if (r.next !== null && r.next > r.value) {
-        g.fillStyle(0x7be35a, 0.95);
-        g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.next), 8, 4);
-      }
-      g.fillStyle(r.next !== null && r.next < r.value ? 0xff9f6a : tower.def.color, 1);
-      g.fillRoundedRect(bx, y - 4, Math.max(8, bw * r.value), 8, 4);
-      g.fillStyle(0xffffff, 0.3);
-      g.fillRect(bx + 3, y - 3, Math.max(2, bw * r.value - 6), 1.5);
-      const txt = r.nextText ? `${r.text} → ${r.nextText}` : r.text;
-      card.add(fitWidth(this.add.text(W - 8, y, txt, textStyle(pf(11), r.nextText ? '#b8ff8a' : TEXT.cream, false)).setOrigin(1, 0.5), W - bx - bw - 12));
-    });
+    this.drawCardRows(card, g, cardRows(cur, next), 52, W, tower.def.color);
     if (next) card.add(fitWidth(this.add.text(10, H - 14, nextName ? `Branch: ${nextName}` : 'Green: next level', textStyle(pf(10), '#9be86a', false)).setOrigin(0, 0.5), W - 20));
     return card;
   }

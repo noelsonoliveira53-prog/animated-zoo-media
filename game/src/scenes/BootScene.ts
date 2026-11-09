@@ -903,6 +903,19 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xe8d0a0, 1);
         g.fillEllipse(cx + r * 0.7, cy - r * 0.5, r * 0.22, r * 0.5);
         g.strokeEllipse(cx + r * 0.7, cy - r * 0.5, r * 0.22, r * 0.5);
+        // rope lacing zig-zagging round the drum, wood grain, and a stick tucked under the strap (design F24)
+        g.lineStyle(1, 0x7a5030, 0.9);
+        for (let k = 0; k < 3; k++) {
+          const lx = cx - r * 0.12 + k * r * 0.26;
+          g.lineBetween(lx, cy - r * 0.72, lx + r * 0.13, cy - r * 0.28);
+          g.lineBetween(lx + r * 0.13, cy - r * 0.28, lx + r * 0.26, cy - r * 0.72);
+        }
+        g.lineStyle(1, 0x7a5030, 1);
+        g.lineBetween(cx - r * 0.2, cy - r * 0.62, cx + r * 0.6, cy - r * 0.62);
+        g.lineStyle(2.5, 0x5a3a1a, 1);
+        g.lineBetween(cx + r * 0.25, cy - r * 0.95, cx + r * 0.85, cy - r * 0.8);
+        g.fillStyle(0xe8d0a0, 1);
+        g.fillCircle(cx + r * 0.25, cy - r * 0.95, r * 0.07);
         g.fillStyle(0xffe066, 1);
         g.fillCircle(cx - r * 0.8, cy - r * 0.18, r * 0.07);
         break;
@@ -1827,15 +1840,30 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0xffffff, 0.6);
         g.fillEllipse(cx + r * 1.25, cy - r * 0.2, r * 0.45, r * 0.25);
         this.orbKeep(g, cx, cy + r * 0.15, r * 1.3, r * 0.7, color);
-        g.fillCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
-        g.strokeCircle(cx - r * 0.7, cy - r * 0.15, r * 0.42);
+        this.orbKeep(g, cx - r * 0.7, cy - r * 0.15, r * 0.84, r * 0.84, color);
+        // pale ears with lavender insides (the ears are too slim to outline), drawn over the shaded head (design F24)
+        g.lineStyle(1.5, C.ink, 1);
+        g.fillStyle(color, 1);
         g.fillTriangle(cx - r * 0.95, cy - r * 0.35, cx - r * 0.75, cy - r * 0.45, cx - r * 0.9, cy - r * 0.9);
         g.fillTriangle(cx - r * 0.6, cy - r * 0.45, cx - r * 0.4, cy - r * 0.35, cx - r * 0.45, cy - r * 0.9);
+        g.fillStyle(0xc8b8e8, 1);
+        g.fillTriangle(cx - r * 0.88, cy - r * 0.42, cx - r * 0.8, cy - r * 0.45, cx - r * 0.88, cy - r * 0.72);
+        g.fillTriangle(cx - r * 0.55, cy - r * 0.45, cx - r * 0.47, cy - r * 0.42, cx - r * 0.5, cy - r * 0.72);
+        // amber eyes glowing through the mist, and wisps curling off its tail
+        g.fillStyle(0xffb040, 0.35);
+        g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.14);
+        g.fillCircle(cx - r * 0.6, cy - r * 0.2, r * 0.14);
         g.fillStyle(0xffb040, 1);
         g.fillCircle(cx - r * 0.85, cy - r * 0.2, r * 0.08);
         g.fillCircle(cx - r * 0.6, cy - r * 0.2, r * 0.08);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 0.87, cy - r * 0.23, r * 0.03);
+        g.fillCircle(cx - r * 0.62, cy - r * 0.23, r * 0.03);
         g.fillStyle(0x6a6a8a, 1);
         g.fillCircle(cx - r * 1.1, cy - r * 0.05, r * 0.06);
+        g.fillStyle(0xeef0ff, 0.5);
+        g.fillCircle(cx + r * 1.55, cy - r * 0.38, r * 0.12);
+        g.fillCircle(cx + r * 1.72, cy - r * 0.52, r * 0.08);
         break;
       }
       case 'silkcrane': {

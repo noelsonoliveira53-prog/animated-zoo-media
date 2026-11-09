@@ -4,6 +4,7 @@ import Phaser from 'phaser';
 import { fitWidth, pf } from '../ui/touch';
 import { glossPanel } from '../ui/panels';
 import { villageHud } from '../systems/villageHud';
+import { flightCount } from '../systems/collectFx';
 import { drawBar } from '../ui/bars';
 import { upgradePreview } from '../systems/upgradePreview';
 import { music } from '../systems/music';
@@ -82,6 +83,8 @@ export class VillageScene extends Phaser.Scene {
   private mode: Mode = { kind: 'idle' };
   /** Fixed camera for the HUD and panels (depth >= UI_DEPTH); the main camera can zoom and pan the village. */
   private uiCam!: Phaser.Cameras.Scene2D.Camera;
+  private coinIcon: Phaser.GameObjects.Image | null = null;
+  private sapIcon: Phaser.GameObjects.Image | null = null;
   private drag = { down: false, x: 0, y: 0, sx: 0, sy: 0, moved: false, tapUid: -1, groundTap: false };
   private ghost: Phaser.GameObjects.Image | null = null;
   private ghostCell = { col: 0, row: 0 };
@@ -373,9 +376,9 @@ export class VillageScene extends Phaser.Scene {
       const tag = this.add.text(x, 34, 'FULL', textStyle(pf(12), '#ffffff')).setOrigin(0.5).setDepth(903).setBackgroundColor('#c84a3a').setPadding(6, 1, 6, 2).setName(name).setVisible(false);
       if (!motion.reduced) this.tweens.add({ targets: tag, alpha: 0.45, yoyo: true, repeat: -1, duration: 520, ease: 'Sine.easeInOut' });
     }
-    this.add.image(222, 38, 'icon_coin').setDepth(902);
+    this.coinIcon = this.add.image(222, 38, 'icon_coin').setDepth(902);
     this.coinText = this.add.text(244, 24, '', textStyle(20, TEXT.gold)).setDepth(902);
-    this.add.image(482, 38, 'icon_sap').setDepth(902);
+    this.sapIcon = this.add.image(482, 38, 'icon_sap').setDepth(902);
     this.sapText = this.add.text(504, 24, '', textStyle(20, '#c8ff8a')).setDepth(902);
     this.add.image(742, 38, 'icon_hammer').setDepth(902);
     this.builderText = this.add.text(764, 24, '', textStyle(20)).setDepth(902);
@@ -463,6 +466,7 @@ export class VillageScene extends Phaser.Scene {
       const prod = BUILDINGS[b.type].levels[b.level - 1].produces!;
       const { x, y } = this.cellToXY(b.col, b.row);
       this.floatText(x + (BUILDINGS[b.type].size * TILE) / 2, y, `+${got}`, prod.resource === 'coins' ? TEXT.gold : '#c8ff8a');
+      this.flyToHud(x + (BUILDINGS[b.type].size * TILE) / 2, y + 10, prod.resource, flightCount(got));
       sfx.coin();
       this.persist();
     } else {
@@ -485,9 +489,56 @@ export class VillageScene extends Phaser.Scene {
       const prod = BUILDINGS[b.type].levels[b.level - 1].produces!;
       const { x, y } = this.cellToXY(b.col, b.row);
       this.floatText(x + (BUILDINGS[b.type].size * TILE) / 2, y, `+${amount}`, prod.resource === 'coins' ? TEXT.gold : '#c8ff8a');
+      this.flyToHud(x + (BUILDINGS[b.type].size * TILE) / 2, y + 10, prod.resource, flightCount(amount, got.per.length));
     }
     sfx.coin();
     this.persist();
+  }
+
+  /**
+   * Little coin / glowsap icons arc from a building (world position) up to its HUD icon, which bumps as each one
+   * lands. They live on the fixed UI camera, starting from the building's on-screen spot, so zoom and pan work.
+   */
+  private flyToHud(wx: number, wy: number, resource: 'coins' | 'glowsap', count: number): void {
+    const target = resource === 'coins' ? this.coinIcon : this.sapIcon;
+    if (!target || count <= 0) return;
+    const bump = () => {
+      this.tweens.killTweensOf(target);
+      target.setScale(1.35);
+      this.tweens.add({ targets: target, scale: 1, duration: 180, ease: 'Quad.easeOut' });
+    };
+    if (motion.reduced) {
+      bump();
+      return;
+    }
+    const cam = this.cameras.main;
+    const sx = (wx - cam.worldView.x) * cam.zoom;
+    const sy = (wy - cam.worldView.y) * cam.zoom;
+    const tex = resource === 'coins' ? 'icon_coin' : 'icon_sap';
+    for (let k = 0; k < count; k++) {
+      const icon = this.add.image(sx + Phaser.Math.Between(-14, 14), sy + Phaser.Math.Between(-8, 8), tex).setDepth(UI_DEPTH + 40).setScale(0.75);
+      const ctrl = { x: (icon.x + target.x) / 2 + Phaser.Math.Between(-60, 60), y: Math.min(icon.y, target.y) - 60 - Phaser.Math.Between(0, 40) };
+      const from = { x: icon.x, y: icon.y };
+      const t = { v: 0 };
+      this.tweens.add({
+        targets: t,
+        v: 1,
+        delay: k * 70,
+        duration: 520 + Phaser.Math.Between(0, 120),
+        ease: 'Cubic.easeIn',
+        onUpdate: () => {
+          const u = t.v;
+          // a quadratic curve up and over to the HUD icon, shrinking a little as it goes
+          icon.setPosition((1 - u) * (1 - u) * from.x + 2 * (1 - u) * u * ctrl.x + u * u * target.x, (1 - u) * (1 - u) * from.y + 2 * (1 - u) * u * ctrl.y + u * u * target.y);
+          icon.setScale(0.75 - 0.25 * u);
+        },
+        onComplete: () => {
+          icon.destroy();
+          bump();
+          if (k === count - 1) sfx.coin();
+        },
+      });
+    }
   }
 
   private closePanel(): void {

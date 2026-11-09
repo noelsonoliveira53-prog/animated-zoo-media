@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **315** (next balance pass at iteration 320)
+Iteration counter: **316** (next balance pass at iteration 320)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -2041,6 +2041,11 @@ Iteration counter: **315** (next balance pass at iteration 320)
   - **Fix (`endlessBosses`):** the gentlest boss (Murkmaw) now always opens at wave 10, and the map's own region boss comes second at wave 20, followed by the usual rotation. Maps whose own boss is Murkmaw are unchanged. Late regions were worse than Frostpeak: Amberwood's endless opened with Rustantler, 16th in difficulty.
   - New `endlessHomeBoss(level)`. The endless card's line now names the map's own boss at its wave ("Wave 20: Rustantler").
   - `tests/endless.test.ts` updated (home boss second, nothing lost or doubled, wave 20 brings it; 339 tests). `endless-card-check` passes. Screenshot `screenshots/315.png`.
+- **Iteration 316: village collect feedback.**
+  - Collecting from a building (tap or "Collect all") sends little coin or glowsap icons arcing on a curve from the building up to its HUD icon. The icon bumps as each one lands, and the coin sound plays on the last.
+  - The icons live on the fixed UI camera, starting from the building's on-screen spot (world to screen through the main camera), so it works zoomed and panned. With Reduce Motion the HUD icon just bumps.
+  - New `systems/collectFx.ts` (`flightCount`: 2 to 6 per building by haul, capped at about 24 in total for a big "Collect all") with 2 tests (341 total).
+  - New `scripts/collectfx-check.mjs` (busy village, "Collect all": 11 icons in flight, all landed and cleaned up, coins rose; no console errors). `village-leak` (flat) and `village-zoom-check` still pass. Screenshot `screenshots/316.png`.
 
 ## In Progress
 - (none)
@@ -2048,7 +2053,8 @@ Iteration counter: **315** (next balance pass at iteration 320)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Village collect feedback: coins and glowsap fly from a tapped building to the HUD bar, which bumps as they land.
+1. Raid loot feedback: loot flies from a destroyed camp building to the raid HUD's loot counter.
+2. Battle coin feedback: the HUD coin counter bumps (and briefly glows gold) on each bounty, with a small coin arc from big kills.
 
 ## Known Bugs
 - (none known)

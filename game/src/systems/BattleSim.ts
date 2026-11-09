@@ -479,18 +479,31 @@ export class BattleSim {
   }
 
   /** Fire the hero's active skill. Returns false if not ready. */
-  useHeroSkill(): boolean {
+  /**
+   * The foes the hero's active skill would hit right now: everyone above ground within its radius (walkers only
+   * for a quake), trimmed to the ones furthest along the road when the skill has a target cap. Used both by the
+   * skill itself and by the preview on the skill button.
+   */
+  heroSkillHits(): Enemy[] {
     const h = this.hero;
-    if (!h || !h.alive || h.skillCd > 0 || !this.isActive()) return false;
+    if (!h || !h.alive) return [];
     const sk = h.def.active;
-    h.skillCd = sk.cooldown;
-    const dmg = this.heroStat(sk.damage);
     let pool = this.enemies.filter((e) => e.alive && !e.underground && Math.hypot(e.pos.x - h.pos.x, e.pos.y - h.pos.y) <= sk.radius);
     if (sk.kind === 'quake') pool = pool.filter((e) => !this.airborne(e));
     if (sk.maxTargets) {
       pool.sort((a, b) => b.dist - a.dist);
       pool = pool.slice(0, sk.maxTargets);
     }
+    return pool;
+  }
+
+  useHeroSkill(): boolean {
+    const h = this.hero;
+    if (!h || !h.alive || h.skillCd > 0 || !this.isActive()) return false;
+    const sk = h.def.active;
+    h.skillCd = sk.cooldown;
+    const dmg = this.heroStat(sk.damage);
+    const pool = this.heroSkillHits();
     for (const e of pool) {
       if (sk.slow) {
         this.slow(e, sk.slow.factor, sk.slow.duration);

@@ -96,6 +96,7 @@ export class BattleScene extends Phaser.Scene {
   private callChip: Phaser.GameObjects.Text | null = null;
   private callFull = 1; // the countdown's starting length, so the strip drains from full
   private callLast = 0;
+  private skillPreview = false; // the pointer is over the hero's skill button
   private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
   private aimText: Phaser.GameObjects.Text | null = null;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
@@ -2020,6 +2021,7 @@ export class BattleScene extends Phaser.Scene {
     this.heroCard = null;
     this.enemyCard = null;
     this.enemyCardUid = 0;
+    this.skillPreview = false;
     const bar = this.add.graphics().setDepth(3000);
     // glossy top bar: drop shadow, dark body, lighter upper half, rim light and slim gold dividers
     bar.fillStyle(0x000000, 0.25);
@@ -2130,7 +2132,8 @@ export class BattleScene extends Phaser.Scene {
     g.clear();
     const id = this.spellMode;
     if (!id) {
-      label.setVisible(false);
+      if (this.skillPreview) this.drawSkillPreview(g, label);
+      else label.setVisible(false);
       return;
     }
     const def = SPELLS[id];
@@ -2169,6 +2172,48 @@ export class BattleScene extends Phaser.Scene {
     }
     label.setPosition(x, Math.max(80, y - r - 18)).setVisible(true);
     label.setBackgroundColor('#16241cd0').setPadding(8, 3, 8, 3);
+  }
+
+  /** Hovering the hero's skill button: its reach around the hero, the foes it would hit and a count. */
+  private drawSkillPreview(g: Phaser.GameObjects.Graphics, label: Phaser.GameObjects.Text): void {
+    const h = this.sim.hero;
+    if (!h || !h.alive) {
+      label.setVisible(false);
+      return;
+    }
+    const sk = h.def.active;
+    const color = h.def.color;
+    const r = sk.radius;
+    g.fillStyle(color, 0.08);
+    g.fillCircle(h.pos.x, h.pos.y, r);
+    for (let k = 0; k < 3; k++) {
+      g.lineStyle(4, color, 0.24 - k * 0.07);
+      g.strokeCircle(h.pos.x, h.pos.y, r + 3 + k * 4);
+    }
+    const turn = motion.reduced ? 0 : -this.time.now / 1100;
+    g.lineStyle(2, 0xffffff, 0.7);
+    for (let k = 0; k < 18; k++) {
+      const a0 = turn + (k / 18) * Math.PI * 2;
+      g.beginPath();
+      g.arc(h.pos.x, h.pos.y, r - 5, a0, a0 + 0.18);
+      g.strokePath();
+    }
+    let text: string;
+    if (sk.kind === 'rally') {
+      const allies = this.sim.soldiers.filter((s) => s.alive && Math.hypot(s.pos.x - h.pos.x, s.pos.y - h.pos.y) <= r);
+      g.lineStyle(2.5, 0x9be86a, 0.95);
+      for (const s of allies) g.strokeCircle(s.pos.x, s.pos.y - 10, 14);
+      text = `Heals ${allies.length} ${allies.length === 1 ? 'ally' : 'allies'} + ${h.def.name}`;
+    } else {
+      const hits = this.sim.heroSkillHits();
+      const pulse = motion.reduced ? 1 : 1 + 0.12 * Math.sin(this.time.now / 140);
+      g.lineStyle(2.5, color, 0.95);
+      for (const e of hits) g.strokeCircle(e.pos.x, e.pos.y - 34 * (this.enemyViews.get(e.uid)?.air ?? 0), (e.def.radius + 5) * pulse);
+      text = hits.length ? `${sk.name}: ${hits.length} ${hits.length === 1 ? 'foe' : 'foes'}` : `${sk.name}: no foes in reach`;
+    }
+    if (h.skillCd > 0) text += `  (ready in ${Math.ceil(h.skillCd)}s)`;
+    label.setText(text).setColor(TEXT.cream).setBackgroundColor('#16241cd0').setPadding(8, 3, 8, 3);
+    label.setPosition(Phaser.Math.Clamp(h.pos.x, label.width / 2 + 8, GAME_W - label.width / 2 - 8), Math.max(80, h.pos.y - r - 18)).setVisible(true);
   }
 
   private armSpell(id: string | null): void {
@@ -2301,6 +2346,8 @@ export class BattleScene extends Phaser.Scene {
     });
     this.heroLevelText = this.add.text(px + 30, py + 30, '1', textStyle(18, TEXT.gold)).setOrigin(0.5).setDepth(3002);
     const skillZone = this.add.zone(px + 104, py, 76, 76).setDepth(3002).setInteractive({ useHandCursor: true });
+    skillZone.on('pointerover', () => (this.skillPreview = true));
+    skillZone.on('pointerout', () => (this.skillPreview = false));
     skillZone.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => {
       ev.stopPropagation();
       sfx.unlock();

@@ -3843,7 +3843,7 @@ export const LEVELS: LevelDef[] = [
     blurb: 'Under the oldest canopy, in a clearing knee-deep in red leaves, the Autumn King waits. Every drum in the forest beats in time with its hooves.',
     mapPos: { x: 1110, y: 210 },
     hpMult: 1.6,
-    startCoins: 1050,
+    startCoins: 1075,
     lives: 20,
     theme: AMBER,
     paths: [

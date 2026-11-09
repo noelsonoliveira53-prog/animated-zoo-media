@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **294** (next balance pass at iteration 295)
+Iteration counter: **295** (next balance pass at iteration 300)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1922,6 +1922,10 @@ Iteration counter: **294** (next balance pass at iteration 295)
   - New `BattleSim.spellHits(id, pos)` holds the hit rules: stars hit everything above ground including flyers, a snare grabs walkers only, and reinforcements hit no one. Both the cast and the preview use it, so the count can never disagree with the real hit.
   - New `tests/spellHits.test.ts` (3 tests, 304 total). The refactor leaves combat unchanged.
   - New `scripts/spellaim-check.mjs` (three walkers and a flyer: Starfall "4 foes", Thornsnare "3 foes", aim hidden when disarmed; no console errors). `spell`, `spellbtn`, `spellfx` and `guide-spells` checks still pass. Screenshot `screenshots/294.png`.
+- **Iteration 295** (POLISH + BALANCE):
+  - **Phone sweep** (`phone-screens.mjs`): menu, village panel, shop and achievements are fine.
+  - **Locked raid panel rebuilt:** the old version was a 1120×520 flat box with one line of text. It's now a compact 660×360 glossy card with five greyed raiders behind a gold padlock, two unlock steps with check marks (Grove Hall level 2 ✓ / build a Ranger Lodge), and a button to the next step (opens the Grove Hall panel, or the Build shop once the hall is ready). The full raid panel also got the gloss and rim. `village-check` and `raid-phone-check` still pass. Screenshot `screenshots/295.png` (phone).
+  - **Balance:** looked into Heart of the Amberwood (iteration 290's watch item) and set its start coins 1050 → 1075; details under Balance Notes. 304 tests.
 
 ## In Progress
 - (none)
@@ -2822,3 +2826,4 @@ Findings / follow-ups:
 - **Iteration 280:** branch benchmark unchanged since iteration 7 (all twelve branches identical), confirming the visual work (iterations 241–279) never touched combat numbers.
 - **Iteration 285 late-campaign sweep** (levels 116–125, 4 seeds; expert / casual / novice win %): Stepping Stones 100/100/25, Otterslide Bend 100/100/0, Millwheel Race 100/75/0, Kingfisher Falls 100/50/0, The Elder Pool 75/25/0 (10 seeds: 80/40/0), Heather Gate 100/100/0, Moonstone Circle 100/75/0, Curlew Ridge 100/100/0, The Barrow Downs 100/75/0, The Thunder Barrow 100/75/0 (expert keeps only 8.8 lives). Single-tower strategies all lose (intended). The Elder Pool is the stiffest of the stretch, on par with The Great Barn (80/30/0); no change.
 - **Iteration 290 hero sweep** (`hero-balance.ts 6`, expert strategy, levels 20/50/80/100/120): unchanged since iteration 260 — Ember 90% / 9.5 lives, Fen 87 / 9.7, Wren 87 / 9.6, Hazel 80 / 8.6, Bramble 67 / 7.1, Sorrel 67 / 6.7 — so the watch-item buffs were applied early, since the gap had held for 30 iterations and both lagged on Heart of the Amberwood (33% and 50%). **Sorrel sling 19 → 21, Bramble Earthshake radius 115 → 127.** After: Bramble 80% / 8.9 (Amberwood 50%), Sorrel 77% / 6.5 (Amberwood 50%), both inside the 77–90% band and neither above the top. Openers re-checked (levels 1–10, 6 seeds) against iteration 265: identical apart from single-seed swings in the novice column (Murkmaw 83 → 67, Frostpeak 50 → 67), so the novice-only Bramble buff doesn't flatten the early game. New watch item: Heart of the Amberwood is the weakest level for melee and support heroes (Bramble and Sorrel 50%).
+- **Iteration 295, Heart of the Amberwood** (level 80, 10 seeds): at start coins 1050 it ran 70 / 30 / 0 (expert / casual / novice); heroes Ember 90, Wren 90, Hazel 80, Fen 70, Bramble 60, Sorrel 50. Its waves aren't air-heavy (7% of health flies, like its neighbours) but are packed with fast swarms (about 180 Sapstoats, Turnleafs and Skitters), which melee and support heroes handle worst. Start-coin steps: 1150 → 90/80/0 (far too easy), 1100 → 90/60/0, **1075 → 80/40/0 (picked)**, in line with the other late boss-style levels (The Elder Pool 80/40, The Great Barn 80/30, the region hearts about 75/50). At 1075 Bramble is 60% and Sorrel 80%. Watch item closed: Bramble stays the weakest pick here, but that suits a swarm map for a slow melee hero.

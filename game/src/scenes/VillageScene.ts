@@ -695,12 +695,14 @@ export class VillageScene extends Phaser.Scene {
     this.cancelMode();
     const save = loadSave();
     save.village = this.v;
-    const W = 1120;
-    const H = 520;
+    const lodge = lodgeLevel(this.v);
+    const locked = lodge <= 0;
+    // locked: a compact card with the two steps to unlock raids, instead of a big empty panel
+    const W = locked ? 660 : 1120;
+    const H = locked ? 360 : 520;
     const c = this.add.container(GAME_W / 2, GAME_H / 2 + 20).setDepth(1100);
     const bg = this.add.graphics();
-    bg.fillStyle(C.ink, 1);
-    bg.fillRoundedRect(-W / 2, -H / 2, W, H, 24);
+    glossPanel(bg, -W / 2, -H / 2, W, H, { fill: C.ink, alpha: 1, rim: 0xc8a050, rimAlpha: 0.55, radius: 24 });
     c.add(bg);
     const block = this.add.zone(0, 0, W, H).setInteractive();
     block.on('pointerdown', (_p: Phaser.Input.Pointer, _x: number, _y: number, ev: Phaser.Types.Input.EventData) => ev.stopPropagation());
@@ -708,12 +710,59 @@ export class VillageScene extends Phaser.Scene {
     c.add(this.add.text(0, -H / 2 + 26, 'Raid the Murkhorde', textStyle(26, TEXT.gold)).setOrigin(0.5));
     c.add(new Button(this, W / 2 - 40, -H / 2 + 28, 'X', { width: 50, height: 44, fontSize: 20, color: C.danger, onClick: () => c.destroy() }));
     this.panel = c;
-    const lodge = lodgeLevel(this.v);
-    if (lodge <= 0) {
+    if (locked) {
+      // a row of the raiders you'll be able to train, greyed out behind a padlock
+      TROOP_ORDER.slice(0, 5).forEach((id, i) => {
+        const tx = (i - 2) * 86;
+        const disc = this.add.graphics();
+        disc.fillStyle(0x24402c, 1);
+        disc.fillCircle(tx, -82, 34);
+        disc.lineStyle(2, 0x6a8a6a, 0.6);
+        disc.strokeCircle(tx, -82, 34);
+        c.add([disc, this.add.image(tx, -84, `troop_${id}`).setScale(1.3).setTint(0x7a8a7a).setAlpha(0.8)]);
+      });
+      const lock = this.add.graphics();
+      lock.fillStyle(0x16241c, 0.9);
+      lock.fillCircle(0, -82, 30);
+      lock.lineStyle(5, 0xffd23c, 1);
+      lock.beginPath();
+      lock.arc(0, -90, 11, Math.PI, 0, false);
+      lock.strokePath();
+      lock.fillStyle(0xffd23c, 1);
+      lock.fillRoundedRect(-15, -88, 30, 22, 5);
+      lock.fillStyle(0x16241c, 1);
+      lock.fillCircle(0, -79, 3.5);
+      c.add(lock);
+      c.add(this.add.text(0, -20, 'Train raiders to strike back at Murkhorde camps.', textStyle(pf(16), TEXT.cream, false)).setOrigin(0.5));
+      const thOk = townHallLevel(this.v) >= 2;
+      const step = (y: number, done: boolean, text: string) => {
+        const g = this.add.graphics();
+        g.fillStyle(done ? 0x6ab04c : 0x24402c, 1);
+        g.fillCircle(-210, y, 13);
+        g.lineStyle(2, done ? 0xb8ff8a : 0x6a8a6a, 1);
+        g.strokeCircle(-210, y, 13);
+        c.add(g);
+        c.add(this.add.text(-210, y, done ? '✓' : '•', textStyle(16, done ? '#ffffff' : '#9ab09a')).setOrigin(0.5));
+        c.add(fitWidth(this.add.text(-186, y, text, textStyle(pf(15), done ? '#b8ff8a' : TEXT.cream, false)).setOrigin(0, 0.5), 400));
+      };
+      step(26, thOk, 'Upgrade the Grove Hall to level 2');
+      step(62, false, 'Build a Ranger Lodge');
       c.add(
-        this.add
-          .text(0, 0, 'Build a Ranger Lodge (needs Grove Hall level 2)\nto train raiders and strike back at Murkhorde camps.', { ...textStyle(20), align: 'center' })
-          .setOrigin(0.5),
+        new Button(this, 0, H / 2 - 52, thOk ? 'Build a Ranger Lodge' : 'Go to the Grove Hall', {
+          width: 280,
+          height: 52,
+          fontSize: 20,
+          color: C.leaf,
+          onClick: () => {
+            c.destroy();
+            this.panel = null;
+            if (thOk) this.openShop();
+            else {
+              const th = this.v.buildings.find((b) => b.type === 'townhall');
+              if (th) this.openPanel(th.uid, true);
+            }
+          },
+        }),
       );
       return;
     }

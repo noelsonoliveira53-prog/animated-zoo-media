@@ -10,7 +10,8 @@ const browser = await pw.chromium.launch();
 const errors = [];
 const out = {};
 for (const mode of ['fresh', 'veteran']) {
-  const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+  // PHONE=1: a 740×360 touch phone instead of desktop
+const page = process.env.PHONE ? await (await browser.newContext({ viewport: { width: 740, height: 360 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 })).newPage() : await browser.newPage({ viewport: { width: 1280, height: 720 } });
   page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
   page.on('pageerror', (e) => errors.push(String(e)));
   await page.addInitScript((m) => {
@@ -37,7 +38,7 @@ for (const mode of ['fresh', 'veteran']) {
     const tip = s.children.getByName('newEnemyTip');
     return { tags, tip: tip ? tip.list.find((o) => o.type === 'Text').text : null };
   });
-  if (mode === 'fresh') await page.screenshot({ path: `screenshots/${name}.png`, clip: { x: 300, y: 0, width: 760, height: 120 } });
+  if (mode === 'fresh') await page.screenshot({ path: `screenshots/${name}.png`, ...(process.env.PHONE ? {} : { clip: { x: 300, y: 0, width: 760, height: 120 } }) });
   await page.close();
 }
 console.log(JSON.stringify(out));

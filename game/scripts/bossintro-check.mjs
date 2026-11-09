@@ -6,7 +6,8 @@ const pw = require('playwright');
 const name = process.argv[2] ?? 'bossintro';
 const server = await preview({ preview: { port: 4339, strictPort: true } });
 const browser = await pw.chromium.launch();
-const page = await browser.newPage({ viewport: { width: 1280, height: 720 } });
+// PHONE=1: a 740×360 touch phone instead of desktop
+const page = process.env.PHONE ? await (await browser.newContext({ viewport: { width: 740, height: 360 }, isMobile: true, hasTouch: true, deviceScaleFactor: 2 })).newPage() : await browser.newPage({ viewport: { width: 1280, height: 720 } });
 const errors = [];
 page.on('console', (m) => m.type() === 'error' && errors.push(m.text()));
 page.on('pageerror', (e) => errors.push(String(e)));

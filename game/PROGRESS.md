@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **279** (next balance pass at iteration 280)
+Iteration counter: **280** (next balance pass at iteration 285)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1828,6 +1828,10 @@ Iteration counter: **279** (next balance pass at iteration 280)
   - **Ready:** when a spell comes off cooldown, its button sends out a gold ping ring (the hero skill's `readyPing`), eight sparks in the spell's colour and a quick icon pop. No ping for spells that start ready or on "Clouded Sky" days. Reduce Motion keeps only the ring.
   - New `scripts/spellbtn-check.mjs` (a real tap arms Starfall, then cast, ready again and the ping captured; no console errors). `spellfx-check` still passes. Screenshot `screenshots/279.png`. 279 tests.
 
+- **Iteration 280** (POLISH + BALANCE):
+  - **Phone check** of the newest battle UI: `bossintro-check` and `newenemy-check` gained `PHONE=1` (740×360 touch). The boss nameplate, its facts line, the NEW pills and the new-enemy tip all fit and stay legible at phone size, and the tip clears the boss bar. No console errors. Screenshot `screenshots/280.png` (phone: Zephyrax nameplate with three NEW pills and a tip).
+  - **Balance:** a branch DPS benchmark (`spec-bench.ts`). The numbers match the iteration-7 tuning exactly (Hawkeye 11.6/14.1/14.1, Stormcall 7.5/22.9/22.9, Frostbloom 4.9/38.9/29.1, Quake 2.8/55.5/0, Raiders 10.1/25.3/0, per 100 coins vs armored / crowd / flyers), so no branch drifted. Frostbloom's high crowd number is the known stationary-clump flattery of splash. Nothing tuned. 279 tests.
+
 ## In Progress
 - (none)
 
@@ -2724,3 +2728,4 @@ Findings / follow-ups:
 - **Iteration 265 opener sweep** (levels 1–10, 6 seeds; expert / casual / novice %): Mossgate 100/100/100, Thornwood 100/100/100, Gloomfen 100/100/100, Rimewood 100/100/100, Frostfern 100/100/100, Murkmaw's Den 83/50/83, Icicle Crossing 100/67/0, Frostpeak 83/83/50, Glacier Hold 83/83/100, Mirelake 100/83/67.
 - **Iteration 270:** raid sweep identical to iteration 250 (the visual-only `shot.target` field changed nothing). Storm-map idle objects plateau at about 146 after warm-up.
 - **Iteration 275 daily sweep** (expert, 3 seeds; Murkmaw / Morrowcap / Ruins / Flagship): none 100/100/100/100; swift 100/67/67/100; tough 100/33/33/100; nospells 100/67/100/100; nohero 67/67/0/100; glass 100/67/100/67; frenzy 67/100/0/100; ironbark and gale 100 across. Old heavy pairs: tough+swift 0/0/0/100, nohero+nospells 0/33/0/67, glass+frenzy 33/33/0/67. New pickable pairs: heavy + boon 100 across; frenzy+gale 67/33/0/100; glass+ironbark 67/33/67/33; tough+ironbark 67/33/0/100.
+- **Iteration 280:** branch benchmark unchanged since iteration 7 (all twelve branches identical), confirming the visual work (iterations 241–279) never touched combat numbers.

@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v4, Nov 8, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v5, Nov 9, 2026). The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -113,6 +113,23 @@
   in "Type Subscribe", which breaks the kids rule). The morning run trims anything after the final "Bye-bye / Goodnight / See you" line.
 - **Posting times:** still no signal (sister channels under 650 impressions each). Keep the slots through Nov 11 (Truck 1:40, Bloop 1:50,
   Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
+
+## Adjustments from the Nov 9 views check (Animal Sounds Song: 624 views / 29,911 impressions day one; Flamingo Short 85 -> 1,825)
+- **Titles (tightened): every Zoo song title is a question about something kids can SEE.** Animal Sounds Song (plain title) got 1.9% CTR on 30k
+  impressions; "What Do Animals Eat?" holds 2.6%. The overnight breakout "Why Are Flamingos Pink?" is the model: "Why/What/Where + animal + visible
+  surprise". Next Zoo titles: "Why Do Zebras Have Stripes? Animal Song with Milo", "Why Do Elephants Have Big Ears?", "Meet 5 Ocean Friends!".
+  "Familiar song + twist" titles ("Head, Shoulders, Knees and Paws!") are allowed as the second choice. Retire "<Topic> Song for Kids!" as the opening words everywhere.
+- **Payoff by 0:05 (was 0:08).** Animal Sounds held only 0:20 (12%), the weakest Zoo song: the first real ROAR comes too late. On any sound, color or
+  transformation song, the first payoff (a sound, a color change, the animal appearing) lands by 0:05, then the call-and-response by 0:15.
+- **Use proven "body surprise" facts as the spoken fact line.** The four Shorts that jumped overnight are all body surprises (pink flamingos, koala
+  fingerprints, unique gorilla noses, octopus 3 hearts). Put one of these, with a pop-in prop, right after the first chorus in Zoo songs.
+- **Evergreen check passed:** "What Do Animals Eat?" grew +24 on day 2 and Safari +32 on day 3, so 3D songs keep earning like the 2D episodes. Keep the format.
+- **Reach trend (Zoo):** day-one impressions 24k -> 18k -> 30k. Keep giving the Zoo the first finished render each day.
+- **Sister channels:** still under 3k impressions each after 4-5 days (Bloop 5.1k lifetime is best). No format change yet; keep the Bloop color series
+  (Red, Green, Blue, mixing) and question titles on Gizmo ("Why Is There Day and Night?" airs Nov 12) and compare on Nov 13.
+- **Shorts signal (decision for Noelson, not applied):** Shorts stay dropped per the Nov 4 call. If he re-opens them, the test is one Zoo Short a day cut
+  from each 3D song's best 20 s, titled with the song's question.
+- **Posting times:** still no signal; keep the slots through Nov 11 (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
 
 ## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)
 Data: docs/research/collected.json + swipe.txt (Cocomelon, Super Simple, Pinkfong, Little Angel, ChuChu TV, Morphle).

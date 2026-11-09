@@ -202,3 +202,9 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - Thumbnail text: 3 words max and it must NOT repeat the title's words (the title says the topic, the thumbnail adds the hook: "ALL RED!", "STICK OR NOT?", "1 TO 10!"). Set `meta.thumb_text` that way in every new song spec; lint with `python3 /root/.claude/skills/yt-package/title.py --title "..." --thumb "..."`.
 - Custom thumbnails only show on Zoo, Bloop and Gizmo (phone-verified). To redo a thumbnail after finishing: `studio/zoo3d/rethumb.py` (crops out the burned-in lyrics).
 - Before every finish: `studio/zoo3d/check_timing.py <timing.json> <words_tx.json>`; skipped verses or garbled/wrong-fact singing → rebuild timing or re-sing; never publish a wrong fact.
+
+## Run notes (Nov 9, 2026)
+- `fetch(raw).blob()` on a 90 MB MP4 sometimes throws "Failed to fetch" in the hidden pane; reading `r.body.getReader()` chunks into a File worked every time.
+- Install the `HTMLInputElement.prototype.click` intercept BEFORE clicking "Select files", and make it swallow every file-input click, so a failed fetch never opens a native picker on the PC.
+- Studio avatar menu > Switch account: the submenu opens slowly; wait ~2 s and screenshot before clicking a channel, or the click lands on the account under the cursor (it switched to Rainy Window Dog TV twice).
+- The Schedule button usually needs two real clicks at (720, 535) in an 800x600 frame (first one blurs the time field). Confirm via the "Video processing ... set to public on <date> at <time>" dialog.

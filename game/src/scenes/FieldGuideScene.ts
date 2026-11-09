@@ -17,8 +17,9 @@ import { clampPage, pageCount, pageItems } from '../ui/paging';
 import { C, GAME_H, GAME_W, TEXT, textStyle } from '../ui/theme';
 import { motion } from '../ui/motion';
 import { drawParchment, portraitBacking } from './guide/Parchment';
+import { STATUS_EFFECTS, type StatusEffect } from '../data/statusEffects';
 
-type Tab = 'enemies' | 'towers' | 'heroes' | 'spells' | 'raids';
+type Tab = 'enemies' | 'towers' | 'heroes' | 'spells' | 'raids' | 'effects';
 
 interface Entry {
   key: string;
@@ -63,11 +64,13 @@ export class FieldGuideScene extends Phaser.Scene {
 
     this.add.text(400, 44, "Keeper's Field Guide", textStyle(32, TEXT.gold)).setOrigin(0.5);
     new Button(this, 90, 44, 'Back', { width: 140, height: 50, fontSize: 20, color: C.sky, onClick: () => this.scene.start('Menu') });
-    (['enemies', 'towers', 'heroes', 'spells', 'raids'] as Tab[]).forEach((t, i) => {
-      this.tabButtons[t] = new Button(this, GAME_W - 568 + i * 124, 44, t[0].toUpperCase() + t.slice(1), {
-        width: 116,
+    this.makeEffectIcons();
+    // six tabs: slightly narrower so they stay clear of the title
+    (['enemies', 'towers', 'heroes', 'spells', 'raids', 'effects'] as Tab[]).forEach((t, i) => {
+      this.tabButtons[t] = new Button(this, GAME_W - 60 - (5 - i) * 110, 44, t[0].toUpperCase() + t.slice(1), {
+        width: 104,
         height: 46,
-        fontSize: 18,
+        fontSize: 17,
         color: C.leaf,
         onClick: () => this.show(t),
       });
@@ -77,6 +80,17 @@ export class FieldGuideScene extends Phaser.Scene {
 
   private entries(): Entry[] {
     const save = loadSave();
+    if (this.tab === 'effects') {
+      const who = { enemies: 'Enemies', towers: 'Your towers', soldiers: 'Your soldiers and hero' };
+      return STATUS_EFFECTS.map((e) => ({
+        key: e.id,
+        texture: `status_${e.id}`,
+        name: e.name,
+        locked: false,
+        blurb: e.blurb,
+        lines: [`Affects: ${who[e.on]}`, `From: ${e.sources}`, `Tip: ${e.counter}`],
+      }));
+    }
     if (this.tab === 'enemies') {
       return Object.values(ENEMIES).map((e) => {
         const tags: string[] = [];
@@ -303,6 +317,9 @@ export class FieldGuideScene extends Phaser.Scene {
       c.add([prev, next, this.add.text(615, GAME_H - 58, `${this.page + 1}/${pages}`, textStyle(18, '#5a4a32', false)).setOrigin(0.5).setStroke('#e8dcb8', 0).setName('guidePage')]);
     }
     c.add(this.add.text(x0, GAME_H - 66, tab === 'enemies' ? `Discovered ${seen} / ${all.length}` : `${all.length} entries`, textStyle(16, '#5a4a32', false)).setStroke('#e8dcb8', 0));
+    if (tab === 'effects') {
+      c.add(this.add.text(x0, 250, 'Effects you will meet in battle. Tap one to see what it does, where it comes from and how to deal with it. The picture on the right shows how it looks on the field.', { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 520 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0));
+    }
     if (tab === 'spells') {
       c.add(this.add.text(x0, 260, 'How to cast: tap a spell icon at the bottom right of the battlefield (or press its number key), then tap a spot on the road. Each spell recharges on its own timer, so save them for the waves that would break through.', { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 520 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0));
     }
@@ -363,10 +380,12 @@ export class FieldGuideScene extends Phaser.Scene {
       return;
     }
     c.add(portraitBacking(this, x + 60, 258, 74));
-    const img = this.add.image(x + 60, 262, e.texture);
+    const fx = this.tab === 'effects' ? STATUS_EFFECTS.find((s) => s.id === e.key) : undefined;
+    const img = this.add.image(x + 60, 262, fx ? fx.sample : e.texture);
     img.setScale(Math.min(2.2, 130 / Math.max(img.width, img.height)));
-    this.tweens.add({ targets: img, y: 254, yoyo: true, repeat: -1, duration: 900, ease: 'Sine.easeInOut' });
+    this.tweens.add({ targets: img, y: 254, yoyo: true, repeat: -1, duration: fx?.id === 'slow' ? 2200 : 900, ease: 'Sine.easeInOut' });
     c.add(img);
+    if (fx) this.effectPreview(c, fx, img);
     c.add(fitWidth(this.add.text(x, 130, e.name, textStyle(30, '#3a2a1a')).setStroke('#e8dcb8', 0), 470)); // long names shrink to one line
     c.add(this.add.text(x + 150, 190, e.blurb, { ...textStyle(17, '#4a3a2a', false), wordWrap: { width: 300 } }).setStroke('#e8dcb8', 0));
     const body = this.add.text(x, 350, e.lines.join(e.extra ? '\n' : '\n\n'), { ...textStyle(17, '#3a2a1a', false), wordWrap: { width: 470 }, lineSpacing: 4 }).setStroke('#e8dcb8', 0);
@@ -382,6 +401,127 @@ export class FieldGuideScene extends Phaser.Scene {
       body.setScale(k);
       head.setScale(k).setY(body.y + (body.height + 12) * k);
       phases.setScale(k).setY(head.y + 26 * k);
+    }
+  }
+
+  /** Round badge icons for the Effects tab, drawn once. */
+  private makeEffectIcons(): void {
+    for (const e of STATUS_EFFECTS) {
+      const key = `status_${e.id}`;
+      if (this.textures.exists(key)) continue;
+      const g = this.add.graphics();
+      g.fillStyle(0x000000, 0.25);
+      g.fillCircle(33, 35, 28);
+      g.fillStyle(e.color, 1);
+      g.fillCircle(32, 32, 28);
+      g.lineStyle(3, 0x2a2018, 1);
+      g.strokeCircle(32, 32, 28);
+      g.fillStyle(0xffffff, 0.3);
+      g.fillEllipse(24, 22, 26, 12);
+      g.fillStyle(0x2a2018, 1);
+      g.lineStyle(4, 0x2a2018, 1);
+      switch (e.id) {
+        case 'slow': // a snail-shell spiral
+          g.beginPath();
+          for (let a = 0; a < Math.PI * 4; a += 0.2) {
+            const r = 3 + a * 1.4;
+            const px = 32 + Math.cos(a) * r, py = 33 + Math.sin(a) * r;
+            if (a === 0) g.moveTo(px, py); else g.lineTo(px, py);
+          }
+          g.strokePath();
+          break;
+        case 'shield':
+          g.fillRoundedRect(20, 16, 24, 18, 4);
+          g.fillTriangle(20, 32, 44, 32, 32, 48);
+          break;
+        case 'frozen': // a snowflake
+          for (let k = 0; k < 3; k++) {
+            const a = (k / 3) * Math.PI;
+            g.lineBetween(32 - Math.cos(a) * 16, 32 - Math.sin(a) * 16, 32 + Math.cos(a) * 16, 32 + Math.sin(a) * 16);
+          }
+          break;
+        case 'venom': // a drop
+          g.fillCircle(32, 37, 10);
+          g.fillTriangle(23, 33, 41, 33, 32, 14);
+          break;
+        case 'stun': // a bolt
+          g.fillTriangle(36, 12, 22, 34, 33, 34);
+          g.fillTriangle(30, 30, 42, 30, 27, 52);
+          break;
+        case 'honey': // a drip of honey under a comb cell
+          g.lineStyle(3, 0x2a2018, 1);
+          g.strokeRoundedRect(20, 16, 24, 14, 4);
+          g.fillCircle(32, 40, 7);
+          g.fillRect(29, 28, 6, 10);
+          break;
+      }
+      g.generateTexture(key, 66, 66);
+      g.destroy();
+    }
+  }
+
+  /** The live preview: the sample sprite shows the effect (tint plus a small looping overlay). */
+  private effectPreview(c: Phaser.GameObjects.Container, e: StatusEffect, img: Phaser.GameObjects.Image): void {
+    const x = img.x, y = img.y;
+    const still = motion.reduced;
+    const loop = (o: Phaser.GameObjects.GameObject, props: object, duration: number, delay = 0) => !still && this.tweens.add({ targets: o, ...props, duration, delay, repeat: -1 });
+    switch (e.id) {
+      case 'slow': {
+        img.setTint(0xb8e890);
+        for (let k = 0; k < 6; k++) {
+          const a = (k / 6) * Math.PI * 2;
+          const v = this.add.triangle(x + Math.cos(a) * 34, y + 30 + Math.sin(a) * 10, -4, 4, 4, 4, 0, -12, 0x3f7a2e);
+          c.add(v);
+          loop(v, { scaleY: 0.6 }, 900, k * 120);
+        }
+        break;
+      }
+      case 'shield': {
+        const bubble = this.add.ellipse(x, y - 4, 96, 104, e.color, 0.15).setStrokeStyle(3, e.color, 0.9);
+        c.add(bubble);
+        loop(bubble, { scale: 1.06, alpha: 0.7 }, 800);
+        break;
+      }
+      case 'frozen': {
+        img.setTint(0xbfe8ff);
+        for (let k = 0; k < 5; k++) {
+          const ice = this.add.triangle(x - 36 + k * 18, y + 34, -6, 0, 6, 0, 0, -16 - (k % 2) * 8, 0xe8f8ff, 0.9).setStrokeStyle(1, 0x7fb8d8);
+          c.add(ice);
+        }
+        const glint = this.add.star(x + 22, y - 20, 4, 2, 7, 0xffffff);
+        c.add(glint);
+        loop(glint, { scale: 0.3, angle: 90 }, 700);
+        break;
+      }
+      case 'venom': {
+        img.setTint(0xa8f07a);
+        for (let k = 0; k < 5; k++) {
+          const b = this.add.circle(x - 14 + k * 7, y + 6, 3, 0x7ad84a, 0.9);
+          c.add(b);
+          loop(b, { y: y - 40, alpha: 0 }, 1300, k * 260);
+        }
+        break;
+      }
+      case 'stun': {
+        img.setTint(0xc8e8ff);
+        for (let k = 0; k < 3; k++) {
+          const st = this.add.star(x, y - 46, 5, 3, 7, 0xffe880);
+          c.add(st);
+          const o = { a: (k / 3) * Math.PI * 2 };
+          if (!still) this.tweens.add({ targets: o, a: o.a + Math.PI * 2, duration: 1400, repeat: -1, onUpdate: () => st.active && st.setPosition(x + Math.cos(o.a) * 22, y - 46 + Math.sin(o.a) * 7) });
+          else st.setPosition(x + Math.cos(o.a) * 22, y - 46);
+        }
+        break;
+      }
+      case 'honey': {
+        img.setTint(0xffd070);
+        for (let k = 0; k < 3; k++) {
+          const d = this.add.ellipse(x - 12 + k * 12, y + 4, 6, 9, 0xe8a830);
+          c.add(d);
+          loop(d, { y: y + 40, alpha: 0 }, 1100, k * 350);
+        }
+        break;
+      }
     }
   }
 }

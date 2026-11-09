@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **272** (next balance pass at iteration 275)
+Iteration counter: **273** (next balance pass at iteration 275)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1778,14 +1778,24 @@ Iteration counter: **272** (next balance pass at iteration 275)
     - Drawn at the top depth and never interactive, so taps work at once. Reduce Motion gets a quick plain fade.
   - New `scripts/transition-check.mjs` (boot vignette removed, a mid-gust shot, no leaves left after; no console errors). menu, dev, store, result, village, achievements and story checks all still pass. Screenshot `screenshots/272.png` (the curtain mid-gust over the world map). 276 tests.
 
+- **Iteration 273: Field Guide Effects tab.** New `data/statusEffects.ts` (six typed entries; 1 test, 277 total) and a sixth guide tab:
+  - **Effects:** Slowed, Shielded, Frozen tower, Venom, Shocked and Honey-glazed. Each page says who it affects, where it comes from and how to deal with it, plus a short intro on the left page.
+  - **Icons:** code-drawn round badges (snail spiral, shield, snowflake, drop, bolt, honey drip), generated once.
+  - **Live previews:** the portrait shows a sample enemy, soldier or tower wearing the effect.
+    - Slowed: green tint, swaying vines and a slow bob. Shielded: a pulsing bubble.
+    - Frozen: blue tint, ice spikes and a glint. Venom: green tint and rising bubbles.
+    - Shocked: pale tint and stars circling the head. Honey-glazed: amber tint and drips.
+    - Still with Reduce Motion.
+  - Tabs are now 104 px wide on a 110 px pitch so six fit clear of the title, at desktop and phone size. `guide-spells-check` was updated for the new Spells tab position.
+  - New `scripts/guide-effects-check.mjs` (every effect page fits the parchment; no console errors). All six other guide checks pass. Screenshot `screenshots/273.png` (Shocked, stars circling).
+
 ## In Progress
 - (none)
 
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Encyclopedia of effects: a 'Spells & Effects' tab in the Field Guide showing status effects (slow, frost, venom, shield) with live mini-previews.
-2. Tower range preview polish: a soft gradient range circle with a dashed rim when placing or selecting a tower, and pads that glow when affordable.
+1. Tower range preview polish: a soft gradient range circle with a dashed rim when placing or selecting a tower, and pads that glow when affordable.
 
 ## Known Bugs
 - (none known)

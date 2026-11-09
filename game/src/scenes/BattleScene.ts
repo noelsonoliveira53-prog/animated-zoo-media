@@ -1,5 +1,6 @@
 import { leafReveal } from '../ui/transition';
 import Phaser from 'phaser';
+import { groundSteps, stepColors } from '../systems/groundNoise';
 import { motion, shake } from '../ui/motion';
 import { cardRows, cardTags, type CardRow } from '../systems/towerCard';
 import { heroCardRows, heroXpProgress } from '../systems/heroCard';
@@ -398,23 +399,42 @@ export class BattleScene extends Phaser.Scene {
 
   // ---------- map ----------
 
+  /** Bake this level's ground once into a canvas texture under everything else (see systems/groundNoise). */
+  private bakeGround(base: number, dark: number): void {
+    const w = GAME_W + 120;
+    const h = GAME_H + 120;
+    const key = `ground_${this.level.id}`;
+    if (!this.textures.exists(key)) {
+      const tex = this.textures.createCanvas(key, w, h);
+      if (!tex) return;
+      const light = Phaser.Display.Color.ValueToColor(base).lighten(14).color;
+      const cols = stepColors(base, dark, light, 4, 1.6).map((c) => [(c >> 16) & 255, (c >> 8) & 255, c & 255]);
+      let seed = 7;
+      for (const ch of this.level.id) seed = (seed * 31 + ch.charCodeAt(0)) | 0;
+      const idx = groundSteps(w, h, seed, { scale: 220, cell: 8, relief: 1.4 });
+      const ctx = tex.getContext();
+      const img = ctx.createImageData(w, h);
+      const px = img.data;
+      for (let i = 0; i < idx.length; i++) {
+        const c = cols[idx[i]];
+        px[i * 4] = c[0];
+        px[i * 4 + 1] = c[1];
+        px[i * 4 + 2] = c[2];
+        px[i * 4 + 3] = 255;
+      }
+      ctx.putImageData(img, 0, 0);
+      tex.refresh();
+    }
+    this.add.image(-60, -60, key).setOrigin(0).setDepth(-11);
+  }
+
   private drawMap(): void {
     const { theme } = this.level;
     const g = this.add.graphics().setDepth(-10);
-    g.fillStyle(theme.grass, 1);
-    g.fillRect(-60, -60, GAME_W + 120, GAME_H + 120); // oversized so screen shake never shows edges
-    // deterministic grass patches + tufts
+    // the ground: a baked, low-contrast value-step field lit from the upper left (oversized so screen shake never shows edges)
+    this.bakeGround(theme.grass, theme.grassDark);
     const rnd = new Phaser.Math.RandomDataGenerator([this.level.id]);
-    for (let i = 0; i < 40; i++) {
-      g.fillStyle(theme.grassDark, 0.5);
-      g.fillEllipse(rnd.between(0, GAME_W), rnd.between(0, GAME_H), rnd.between(60, 180), rnd.between(30, 90));
-    }
-    // sunlit patches: the ground catches the light in soft, broad pools
     const sunlit = Phaser.Display.Color.ValueToColor(theme.grass).lighten(9).color;
-    for (let i = 0; i < 22; i++) {
-      g.fillStyle(sunlit, 0.32);
-      g.fillEllipse(rnd.between(0, GAME_W), rnd.between(0, GAME_H), rnd.between(120, 260), rnd.between(50, 110));
-    }
     for (let i = 0; i < 160; i++) {
       const x = rnd.between(0, GAME_W);
       const y = rnd.between(0, GAME_H);

@@ -15,7 +15,7 @@ export class BootScene extends Phaser.Scene {
   }
 
   create(): void {
-    for (const def of Object.values(ENEMIES)) this.makeEnemy(def.id, def.color, def.radius, !!def.flying);
+    for (const def of Object.values(ENEMIES)) this.makeEnemy(def.id, def.color, def.radius, !!def.flying, !!def.boss);
     for (const def of Object.values(TOWERS)) {
       for (let tier = 0; tier < def.tiers.length; tier++) this.makeTower(def.id, def.color, tier);
       for (const sp of def.specs) this.makeTower(def.id, sp.color, def.tiers.length, `tower_${def.id}_${sp.id}`);
@@ -28,6 +28,17 @@ export class BootScene extends Phaser.Scene {
     for (const id of Object.keys(TROOPS)) this.makeTroop(id);
     this.makeMisc();
     this.scene.start('Menu');
+  }
+
+  /**
+   * Outline weight by role: every ink stroke of 2.5 px or more on this sprite is a body outline and becomes
+   * `body` (3 px heroes and bosses, 2.5 px regular foes); ink strokes of 2 to 2.5 px are small parts and become 2 px.
+   * Finer ink detail lines and coloured strokes are left as drawn.
+   */
+  private roleOutlines(g: Phaser.GameObjects.Graphics, body: number): void {
+    const lineStyle = g.lineStyle.bind(g);
+    g.lineStyle = ((width: number, color: number, alpha?: number) =>
+      lineStyle(color === C.ink ? (width >= 2.5 ? body : width >= 2 ? 2 : width) : width, color, alpha)) as typeof g.lineStyle;
   }
 
   private g(): Phaser.GameObjects.Graphics {
@@ -63,8 +74,9 @@ export class BootScene extends Phaser.Scene {
     g.fillStyle(color, 1);
   }
 
-  private makeEnemy(id: string, color: number, radius: number, flying: boolean): void {
+  private makeEnemy(id: string, color: number, radius: number, flying: boolean, boss = false): void {
     const g = this.g();
+    this.roleOutlines(g, boss ? 3 : 2.5);
     const s = Math.ceil(radius * 3 + 12);
     const cx = s / 2;
     const cy = s / 2 + 2;
@@ -3334,6 +3346,7 @@ export class BootScene extends Phaser.Scene {
 
   private makeHero(id: string): void {
     const g = this.g();
+    this.roleOutlines(g, 3);
     const w = 52;
     const h = 70; // 60 clipped Fen's cap, Hazel's nightcap and Sorrel's ears; the art is drawn up from the feet
     const cx = w / 2;

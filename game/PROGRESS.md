@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F10**
+Fix counter: **F11**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2096,13 +2096,19 @@ Fix counter: **F10**
 
 - **F10 Consistency pass (phone tour of the remaining screens).** `scripts/phone-tour.mjs` now also covers the village, field guide, achievements and store at 740×360. The store cards were the broken screen. On phones the wrapped description ran into the "Next:" price row, and "Next:" overlapped its coin icon. Now the price row is laid out by measured widths and sits 7 px lower, and the description steps down from the phone size until it ends above the price row. The village, guide and achievements read fine (achievement descriptions already shrink to fit one line). Palette and outlines were already consistent after F7–F9. Store check and tests pass. Screenshots: `fix-10-before-*` and `fix-10-after-*`.
 
+- **F11 (C1) Outline weight by role.** New `BootScene.roleOutlines(g, body)` wraps a sprite's `lineStyle`:
+  - every ink stroke of 2.5 px or more is a body outline and becomes `body` (3 px for all heroes and the boss enemies, 2.5 px for the regular foes, which were a mix of 2.5 and 3);
+  - ink strokes of 2–2.5 px are small parts and become 2 px;
+  - finer ink detail and coloured strokes stay as drawn.
+
+  `makeEnemy` now gets the enemy's `boss` flag. Bosses and heroes read a touch heavier than the rank-and-file, as the critique asked; regular foes like Mudling and Bogbrute are slightly lighter. Sheets: `fix-11-before/after-heroes.png` and `fix-11-before/after-enemies.png` (Bogbrute, Gloomwing, Gnat, Grimtusk, Mudling, Murkmaw, Shellback, Vulkhar), plus `fix-11-battle-0.png`.
+
 ### Fix Backlog (ranked)
-1. **C1** Outline weight by role: 3 px heroes and bosses, 2.5 px foes, 2 px small parts.
-2. **C2** Colour accents on the early brown / grey enemy families.
-3. **C3** Status-effect icons, not tint only.
-4. **A4** Tooltips on icon-only controls.
-5. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
-6. Then resume the Design Backlog below.
+1. **C2** Colour accents on the early brown / grey enemy families.
+2. **C3** Status-effect icons, not tint only.
+3. **A4** Tooltips on icon-only controls.
+4. **A5** Hidden aria-live region announcing wave start, lives lost, victory and the focused control (`keyNav.focusedLabel()` is ready for it).
+5. Then resume the Design Backlog below.
 
 ## Design Loop (requested by the user after iteration 316)
 **Goal: make every character and every existing level look fancy. No new levels, regions, enemies or features.**

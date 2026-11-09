@@ -6,7 +6,7 @@ Resources: **Coins** (battle currency / village gold) and **Glowsap** (the secon
 
 Run: `npm run dev` · Build: `npm run build` · Tests: `npm test` · Smoke test + screenshots: `npm run build && node scripts/screenshot.mjs <name>` · Balance report: `npx vite-node scripts/balance.ts [runs]` · Branch damage benchmark: `npx vite-node scripts/spec-bench.ts` · Raid balance: `npx vite-node scripts/raid-balance.ts [--naive]` · Economy report: `npx vite-node scripts/economy.ts`
 
-Iteration counter: **295** (next balance pass at iteration 300)
+Iteration counter: **296** (next balance pass at iteration 300)
 
 ## Done
 - [x] **Iter 1** — Project scaffold (Vite + TS + Phaser 3 + Vitest), procedural textures, WebAudio SFX.
@@ -1926,6 +1926,13 @@ Iteration counter: **295** (next balance pass at iteration 300)
   - **Phone sweep** (`phone-screens.mjs`): menu, village panel, shop and achievements are fine.
   - **Locked raid panel rebuilt:** the old version was a 1120×520 flat box with one line of text. It's now a compact 660×360 glossy card with five greyed raiders behind a gold padlock, two unlock steps with check marks (Grove Hall level 2 ✓ / build a Ranger Lodge), and a button to the next step (opens the Grove Hall panel, or the Build shop once the hall is ready). The full raid panel also got the gloss and rim. `village-check` and `raid-phone-check` still pass. Screenshot `screenshots/295.png` (phone).
   - **Balance:** looked into Heart of the Amberwood (iteration 290's watch item) and set its start coins 1050 → 1075; details under Balance Notes. 304 tests.
+- **Iteration 296: wave call button.**
+  - A soft pulsing amber glow sits behind the button, stronger before the first wave ("press me").
+  - A cream countdown strip along the button's bottom drains from full as the timer runs.
+  - A chip under the button reads "Call now: +N coins" while an early call would pay a bonus.
+  - New `BattleSim.callBonus()` is the single source of that bonus: `callNextWave` pays it, and the chip shows it.
+  - New `tests/callBonus.test.ts` (2 tests, 306 total: nothing for the first wave, and the shown bonus equals the bonus paid).
+  - New `scripts/wavecall-check.mjs` (start glow, mid-countdown "+18 coins", and a real call paid exactly 18; no console errors). `phone-battle` still fits (chip under the button on a phone). Screenshots `screenshots/296.png` and `296-start.png`.
 
 ## In Progress
 - (none)
@@ -1933,8 +1940,8 @@ Iteration counter: **295** (next balance pass at iteration 300)
 ## Backlog (ranked)
 **New direction (requested by the user after iteration 220): stop adding levels and regions. Use the 125 levels as the
 base and turn this into the "real" game: high-end graphics, rich per-tower effects, and a store with tiers and upgrades.**
-1. Wave call button: a glowing, pulsing "next wave" button with a ring that fills as the early-call bonus shrinks.
-2. Hero skill aim: preview the hero's active skill area (radius ring and foes hit) while hovering the skill button.
+1. Hero skill aim: preview the hero's active skill area (radius ring and foes hit) while hovering the skill button.
+2. Victory ribbon polish: wave-by-wave mini chart on the result screen (lives lost per wave) so players see where it got tight.
 
 ## Known Bugs
 - (none known)

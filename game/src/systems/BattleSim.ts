@@ -701,11 +701,17 @@ export class BattleSim {
     return this.waveIndex < this.totalWaves - 1;
   }
 
+  /** Coins an early call would pay right now (0 before the first wave, at the end, or once the timer runs out). */
+  callBonus(): number {
+    if (this.status === 'victory' || this.status === 'defeat' || !this.wavesRemaining) return 0;
+    return this.waveIndex >= 0 || this.status === 'running' ? earlyCallBonus(this.waveCountdown, this.waveIndex + 1) : 0;
+  }
+
   /** Start the next wave now. Calling early awards bonus coins. */
   callNextWave(): boolean {
     if (this.status === 'victory' || this.status === 'defeat') return false;
     if (!this.wavesRemaining) return false;
-    const bonus = this.waveIndex >= 0 || this.status === 'running' ? earlyCallBonus(this.waveCountdown, this.waveIndex + 1) : 0;
+    const bonus = this.callBonus();
     this.waveIndex++;
     const income = waveIncome(this.waveIndex);
     this.coins += bonus + income;

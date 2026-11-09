@@ -91,6 +91,11 @@ export class BattleScene extends Phaser.Scene {
   private spellHud!: Phaser.GameObjects.Graphics;
   private strikeViews = new Map<number, { star: Phaser.GameObjects.Image; mark: Phaser.GameObjects.Arc; ring: Phaser.GameObjects.Arc }>();
   private reticle!: Phaser.GameObjects.Arc;
+  private callG: Phaser.GameObjects.Graphics | null = null;
+  private callStrip: Phaser.GameObjects.Graphics | null = null;
+  private callChip: Phaser.GameObjects.Text | null = null;
+  private callFull = 1; // the countdown's starting length, so the strip drains from full
+  private callLast = 0;
   private aimG: Phaser.GameObjects.Graphics | null = null; // spell aim: glow, turning rim, marks on the foes it would hit
   private aimText: Phaser.GameObjects.Text | null = null;
   private towerViews: (Phaser.GameObjects.Image | null)[] = [];
@@ -2048,6 +2053,13 @@ export class BattleScene extends Phaser.Scene {
       color: 0xff9f43,
       onClick: () => this.callWave(),
     }).setDepth(3001);
+    // wave-call dressing: a pulsing glow behind the button, a countdown strip along its bottom, and a chip with
+    // the coins an early call would pay right now
+    this.callG = this.add.graphics().setDepth(3000);
+    this.callStrip = this.add.graphics().setDepth(3002);
+    this.callChip = this.add.text(GAME_W - 130, 80, '', textStyle(pf(13), TEXT.gold)).setOrigin(0.5, 0).setDepth(3002).setBackgroundColor('#16241ce0').setPadding(8, 2, 8, 3).setVisible(false);
+    this.callFull = 1;
+    this.callLast = 0;
     this.speedBtn = new Button(this, GAME_W - 300, 40, 'x1', {
       width: 80,
       height: 52,
@@ -2679,6 +2691,44 @@ export class BattleScene extends Phaser.Scene {
       this.nextWaveBtn.label.setText('Final Wave');
       this.nextWaveBtn.setEnabled(false);
     }
+    this.drawCallFx();
+  }
+
+  /** The wave button's glow, countdown strip and early-call bonus chip. */
+  private drawCallFx(): void {
+    const g = this.callG;
+    const strip = this.callStrip;
+    const chip = this.callChip;
+    if (!g || !strip || !chip) return;
+    g.clear();
+    strip.clear();
+    const active = this.sim.wavesRemaining && this.sim.isActive();
+    const c = Math.max(0, this.sim.waveCountdown);
+    if (c > this.callLast + 0.5) this.callFull = Math.max(1, c); // a fresh countdown started
+    this.callLast = c;
+    if (!active) {
+      chip.setVisible(false);
+      return;
+    }
+    const x = GAME_W - 130;
+    const y = 40;
+    const pulse = motion.reduced ? 0.5 : 0.5 + 0.5 * Math.sin(this.time.now / 260);
+    // the first wave glows more: it's the "press me" moment
+    const base = this.sim.waveIndex < 0 ? 0.28 : 0.16;
+    for (let k = 0; k < 3; k++) {
+      g.fillStyle(0xffb84a, (base + 0.12 * pulse) * (1 - k * 0.3));
+      g.fillRoundedRect(x - 114 - k * 4, y - 30 - k * 4, 228 + k * 8, 60 + k * 8, 18 + k * 4);
+    }
+    const frac = Phaser.Math.Clamp(c / this.callFull, 0, 1);
+    if (frac > 0) {
+      strip.fillStyle(0x000000, 0.35);
+      strip.fillRoundedRect(x - 96, y + 15, 192, 5, 2.5);
+      strip.fillStyle(0xfff2c0, 0.95);
+      strip.fillRoundedRect(x - 96, y + 15, Math.max(5, 192 * frac), 5, 2.5);
+    }
+    const bonus = this.sim.callBonus();
+    chip.setVisible(bonus > 0);
+    if (bonus > 0) chip.setText(`Call now: +${bonus} coins`);
   }
 
   /** Slim progress bar under the wave counter: how far through the level's waves we are. */

@@ -2053,7 +2053,7 @@ Iteration counter: **316** (feature loop stopped at the user's request; design l
 ## Fix Loop (requested by the user after the skill reviews)
 **Goal: apply every fix from the design critique, accessibility audit and game-floors scoring, one per iteration, then resume the Design Backlog.** No new levels, regions, enemies or features. Every 5th fix iteration is a consistency pass (palette, outline weight, phone readability at 740x360). Screenshots go to `screenshots/fix-<n>-*.png`.
 
-Fix counter: **F17**
+Fix counter: **F18**
 
 ### Fix Done
 - **F1 (A1) Keyboard play everywhere.** New scene plugin `src/ui/keyNav.ts` (registered in `main.ts`, so every scene gets it). Tab / Shift+Tab and the arrow keys move a pulsing gold focus ring (ink-backed) between every reachable control: anything with a hand cursor whose centre a tap would actually hit, so controls under a modal blocker are skipped. Enter presses the focused control (Space too, in scenes that don't bind Space). Esc presses a Back / Close control in scenes without an Esc key of their own. Only the top-most running scene with controls takes the keys, and a panel that opens takes the focus on its biggest new control (map node → level card → Replay). Pure logic in `src/systems/focusNav.ts` (reading order, directional nearest with sideways penalty, back-label match) with 7 tests in `tests/focusNav.test.ts`. `scripts/keynav-check.mjs` plays menu → Campaign → level 1 → Replay → battle with keys only. Screenshots: `fix-1-menu.png`, `fix-1-map.png`, `fix-1-card.png`, `fix-1-battle.png`.
@@ -2144,6 +2144,15 @@ Fix counter: **F17**
   - **Gloomwing / Gnat**: wing veins and sheen, eye glints; Gloomwing gets two little fangs and the Gnat a striped body.
 
   Bogmender already read well. Sheets: `fix-17-before.png` and `fix-17-after.png`; battle `fix-17-battle-1.png`.
+
+- **F18 (Design Backlog 1, part b) Shoals and peaks foes.** The next six regular foes by first appearance:
+  - **Shardskipper** (it was a bare triangle): a shaded right face with a facet ridge, two pale crystal shards riding its back, a haloed glowing core with a glint, and proper eyes.
+  - **Gullwing**: shaded orb body and head, feather lines on the swept wings, the gull's red beak spot and an eye glint.
+  - **Galehound**: a feathery tail plume streaming in the wind, a shaded head, and a white-ringed eye with a glint.
+  - **Glarefly**: a warm glow behind its body, feathery gold-tipped feelers and dark eyes.
+  - **Mirrorback** and **Cloudram** already read well.
+
+  Sheets: `fix-18-before.png` and `fix-18-after.png`.
 
 ### Fix Backlog (ranked)
 - Empty: every review fix is done (A1–A5, F1–F5, C1–C3, plus consistency passes F6, F10, F15). **Next: resume the Design Backlog below** (from item 1, enemies part 3), still counting iterations as F-numbers here.

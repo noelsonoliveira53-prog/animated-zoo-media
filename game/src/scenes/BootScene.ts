@@ -2271,8 +2271,20 @@ export class BootScene extends Phaser.Scene {
           g.fillStyle(0xffffff, 0.7);
           g.fillTriangle(cx + s * r * 0.3, cy - up * r * 0.25, cx + s * r * 0.85, cy - up * r * 1.0, cx + s * r * 1.1, cy - up * r * 0.6);
         }
+        // a warm glow behind the body, feathery feelers and two dark eyes (design F18)
+        g.fillStyle(0xfff0b8, 0.35);
+        g.fillCircle(cx, cy, r * 0.6);
+        g.lineStyle(1.5, C.ink, 1);
+        g.lineBetween(cx - r * 0.1, cy - r * 0.6, cx - r * 0.45, cy - r * 1.2);
+        g.lineBetween(cx + r * 0.1, cy - r * 0.6, cx + r * 0.45, cy - r * 1.2);
+        g.fillStyle(0xffe066, 1);
+        g.fillCircle(cx - r * 0.46, cy - r * 1.22, r * 0.08);
+        g.fillCircle(cx + r * 0.46, cy - r * 1.22, r * 0.08);
         g.lineStyle(2, C.ink, 1);
         this.orbKeep(g, cx, cy, r * 0.6, r * 1.3, color);
+        g.fillStyle(0x2a2a3a, 1);
+        g.fillCircle(cx - r * 0.11, cy - r * 0.42, r * 0.08);
+        g.fillCircle(cx + r * 0.11, cy - r * 0.42, r * 0.08);
         break;
       }
       case 'shardskipper': {
@@ -2283,13 +2295,28 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(color, 1);
         g.fillTriangle(cx - r, cy + r * 0.3, cx + r, cy + r * 0.3, cx, cy - r * 1.1);
         g.strokeTriangle(cx - r, cy + r * 0.3, cx + r, cy + r * 0.3, cx, cy - r * 1.1);
+        // faceted: a shaded right face, a facet ridge and two small shards riding its back (design F18)
+        g.fillStyle(Phaser.Display.Color.IntegerToColor(color).darken(22).color, 1);
+        g.fillTriangle(cx, cy - r * 1.1, cx + r, cy + r * 0.3, cx + r * 0.15, cy + r * 0.3);
+        g.lineStyle(1.5, C.ink, 0.6);
+        g.lineBetween(cx, cy - r * 1.1, cx + r * 0.15, cy + r * 0.3);
         g.fillStyle(0xffffff, 0.6);
         g.fillTriangle(cx - r * 0.3, cy + r * 0.1, cx + r * 0.1, cy + r * 0.1, cx - r * 0.05, cy - r * 0.8);
-        g.fillStyle(0x6a4ab8, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.lineStyle(1.5, C.ink, 1);
+        for (const [sx, h] of [[-0.78, 0.5], [0.74, 0.4]]) {
+          g.fillStyle(0xd8f8ff, 1);
+          g.fillTriangle(cx + sx * r - r * 0.24, cy + r * 0.25, cx + sx * r + r * 0.24, cy + r * 0.25, cx + sx * r, cy - h * r - r * 0.15);
+          g.strokeTriangle(cx + sx * r - r * 0.24, cy + r * 0.25, cx + sx * r + r * 0.24, cy + r * 0.25, cx + sx * r, cy - h * r - r * 0.15);
+        }
+        // the glowing core, with a soft halo
+        g.fillStyle(0xb89aff, 0.35);
+        g.fillCircle(cx, cy - r * 0.05, r * 0.38);
+        g.fillStyle(0x7a5ad8, 1);
         g.fillCircle(cx, cy - r * 0.05, r * 0.22);
-        g.fillStyle(0x111111, 1);
-        g.fillCircle(cx - r * 0.3, cy - r * 0.35, r * 0.09);
-        g.fillCircle(cx + r * 0.3, cy - r * 0.35, r * 0.09);
+        g.fillStyle(0xe8dcff, 1);
+        g.fillCircle(cx - r * 0.07, cy - r * 0.12, r * 0.07);
+        this.eyes(g, cx, cy - r * 0.42, r * 0.13, r * 0.26);
         break;
       }
       case 'galehound': {
@@ -2298,17 +2325,28 @@ export class BootScene extends Phaser.Scene {
         for (let k = 0; k < 3; k++) g.lineBetween(cx + r * 1.0, cy - r * 0.4 + k * r * 0.4, cx + r * 1.7, cy - r * 0.5 + k * r * 0.4);
         g.lineStyle(2.5, C.ink, 1);
         for (const lx of [-0.6, -0.2, 0.3, 0.7]) g.lineBetween(cx + lx * r, cy + r * 0.3, cx + lx * r - r * 0.25, cy + r * 1.0);
+        // a feathery tail swept back in the wind (design F18)
+        g.fillStyle(color, 1);
+        g.lineStyle(2, C.ink, 1);
+        g.fillEllipse(cx + r * 1.15, cy - r * 0.3, r * 0.9, r * 0.42);
+        g.strokeEllipse(cx + r * 1.15, cy - r * 0.3, r * 0.9, r * 0.42);
+        g.fillStyle(0xffffff, 0.5);
+        g.fillEllipse(cx + r * 1.2, cy - r * 0.38, r * 0.5, r * 0.12);
+        g.lineStyle(2.5, C.ink, 1);
         this.orbKeep(g, cx + r * 0.1, cy + r * 0.05, r * 1.9, r * 0.9, color);
-        g.fillCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
-        g.strokeCircle(cx - r * 0.85, cy - r * 0.3, r * 0.48);
+        this.orbKeep(g, cx - r * 0.85, cy - r * 0.3, r * 0.96, r * 0.96, color);
         g.fillStyle(0x6a8aa8, 1);
         g.fillTriangle(cx - r * 0.75, cy - r * 0.65, cx - r * 0.2, cy - r * 0.95, cx - r * 0.5, cy - r * 0.45);
         g.strokeTriangle(cx - r * 0.75, cy - r * 0.65, cx - r * 0.2, cy - r * 0.95, cx - r * 0.5, cy - r * 0.45);
         g.fillStyle(0xffffff, 0.6);
         g.fillEllipse(cx + r * 0.1, cy - r * 0.15, r * 1.1, r * 0.25);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 1.0, cy - r * 0.38, r * 0.14);
         g.fillStyle(0x111111, 1);
-        g.fillCircle(cx - r * 1.0, cy - r * 0.38, r * 0.1);
-        g.fillCircle(cx - r * 1.3, cy - r * 0.22, r * 0.08);
+        g.fillCircle(cx - r * 1.02, cy - r * 0.37, r * 0.09);
+        g.fillCircle(cx - r * 1.3, cy - r * 0.22, r * 0.09);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx - r * 1.04, cy - r * 0.41, r * 0.035);
         break;
       }
       case 'kitewing': {
@@ -2486,16 +2524,20 @@ export class BootScene extends Phaser.Scene {
         g.fillStyle(0x3a3a3a, 1);
         g.fillTriangle(cx - r * 1.5, cy - r * 0.6, cx - r * 1.8, cy - r * 0.7, cx - r * 1.55, cy - r * 0.35);
         g.fillTriangle(cx + r * 1.5, cy - r * 0.6, cx + r * 1.8, cy - r * 0.7, cx + r * 1.55, cy - r * 0.35);
-        g.fillStyle(color, 1);
+        // feather lines along each swept wing (design F18)
+        g.lineStyle(1, 0x7a8490, 1);
+        for (const sd of [-1, 1]) for (const t of [0.45, 0.7]) g.lineBetween(cx + sd * r * 0.4, cy - r * 0.05, cx + sd * r * (0.4 + t * 1.3), cy - r * (0.05 + t * 0.6));
         g.lineStyle(2.5, C.ink, 1);
-        g.fillEllipse(cx, cy, r * 1.3, r * 1.1);
-        g.strokeEllipse(cx, cy, r * 1.3, r * 1.1);
-        g.fillCircle(cx + r * 0.45, cy - r * 0.45, r * 0.45);
-        g.strokeCircle(cx + r * 0.45, cy - r * 0.45, r * 0.45);
+        this.orbKeep(g, cx, cy, r * 1.3, r * 1.1, color);
+        this.orbKeep(g, cx + r * 0.45, cy - r * 0.45, r * 0.9, r * 0.9, color);
         g.fillStyle(0xffc93c, 1);
         g.fillTriangle(cx + r * 0.8, cy - r * 0.5, cx + r * 0.8, cy - r * 0.3, cx + r * 1.25, cy - r * 0.4);
+        g.fillStyle(0xe8453a, 1);
+        g.fillCircle(cx + r * 1.05, cy - r * 0.36, r * 0.05); // the gull's red beak spot
         g.fillStyle(0x111111, 1);
-        g.fillCircle(cx + r * 0.55, cy - r * 0.55, r * 0.09);
+        g.fillCircle(cx + r * 0.55, cy - r * 0.55, r * 0.1);
+        g.fillStyle(0xffffff, 1);
+        g.fillCircle(cx + r * 0.52, cy - r * 0.59, r * 0.04);
         break;
       }
       case 'puffcap': {

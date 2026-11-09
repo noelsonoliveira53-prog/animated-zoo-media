@@ -72,6 +72,7 @@ interface EnemyView {
   pulse: number; // brief scale bump (a Barkdrum thumping its drum), decays to 0
   squash: number; // brief squash after a big hit, decays to 0
   trail: TrailState; // pale "damage trail" behind the health fill
+  aura?: Phaser.GameObjects.Graphics; // bosses: a faint ring of their colour on the ground, breathing slowly
 }
 
 /** Light color for each tower's upgrade pillar. */
@@ -4617,6 +4618,25 @@ export class BattleScene extends Phaser.Scene {
     }
   }
 
+  /** A boss's ground aura: a soft fill in its body colour and boss-red rings, breathing slowly (still under Reduce Motion). */
+  private bossAura(e: Enemy): Phaser.GameObjects.Graphics {
+    const col = Phaser.Display.Color.IntegerToColor(e.def.color).lighten(18).color;
+    const w = e.def.radius * 3.4;
+    const h = e.def.radius * 1.25;
+    const g = this.add.graphics();
+    // the soft fill takes the boss's own colour; the rings use the boss-red of the boss bar and cards, so every boss shares one cue
+    g.fillStyle(col, 0.18);
+    g.fillEllipse(0, 0, w, h);
+    g.lineStyle(5, C.ink, 0.35);
+    g.strokeEllipse(0, 0, w, h);
+    g.lineStyle(3, 0xff7a5a, 0.85);
+    g.strokeEllipse(0, 0, w, h);
+    g.lineStyle(1.5, 0xffd0a0, 0.55);
+    g.strokeEllipse(0, 0, w * 0.8, h * 0.8);
+    if (!motion.reduced) this.tweens.add({ targets: g, scaleX: 1.12, scaleY: 1.12, alpha: 0.6, duration: 1100, yoyo: true, repeat: -1, ease: 'Sine.easeInOut' });
+    return g;
+  }
+
   private addEnemyView(e: Enemy): void {
     const sprite = this.add.image(e.pos.x, e.pos.y, `enemy_${e.def.id}`);
     const bar = this.add.graphics();
@@ -4627,13 +4647,16 @@ export class BattleScene extends Phaser.Scene {
       ? this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.6, e.def.radius * 0.6, 0x000000, sa)
       : this.add.ellipse(e.pos.x, e.pos.y, e.def.radius * 1.9, e.def.radius * 0.7, 0x000000, sa);
     const mound = e.def.burrow || e.def.dive ? this.add.image(e.pos.x, e.pos.y, 'mound').setVisible(false) : null;
-    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0, trail: newTrail(1) });
+    // bosses stand in a faint aura ring of their own colour, so they read as the big threat at a glance (design F31)
+    const aura = e.def.boss ? this.bossAura(e) : undefined;
+    this.enemyViews.set(e.uid, { sprite, bar, bob: Math.random() * Math.PI * 2, shadow, mound, air: e.def.flying ? 1 : 0, pulse: 0, squash: 0, trail: newTrail(1), aura });
   }
 
   private killView(uid: number, v: EnemyView): void {
     this.enemyViews.delete(uid);
     v.bar.destroy();
     v.shadow?.destroy();
+    v.aura?.destroy();
     v.mound?.destroy();
     this.tweens.add({ targets: v.sprite, scale: 1.4, alpha: 0, duration: 180, onComplete: () => v.sprite.destroy() });
   }
@@ -4761,6 +4784,7 @@ export class BattleScene extends Phaser.Scene {
         v.sprite.setAlpha(spotted ? 1 : 0.32 + Math.sin(v.bob * 1.5) * 0.1);
       }
       v.shadow?.setPosition(e.pos.x, e.pos.y + (e.def.flying ? 4 : e.def.radius * 0.72)).setDepth(e.pos.y - 1).setVisible(!e.underground);
+      v.aura?.setPosition(e.pos.x, e.pos.y + (e.def.flying ? 4 : e.def.radius * 0.72)).setDepth(e.pos.y - 1.5).setVisible(!e.underground);
       if (v.mound) {
         v.mound.setVisible(e.underground).setPosition(e.pos.x, e.pos.y + 2).setDepth(e.pos.y);
         v.sprite.setVisible(!e.underground);

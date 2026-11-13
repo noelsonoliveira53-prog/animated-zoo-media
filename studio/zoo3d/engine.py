@@ -25,7 +25,7 @@ JOB_DIR = os.path.dirname(JOB_PATH)
 job = json.load(open(JOB_PATH))
 TEST = bool(opt("test", False))
 ENGINE = str(opt("engine", job.get("engine", "EEVEE"))).upper()
-W, H = map(int, str(opt("res", "960x540" if TEST else job.get("res", "1280x720"))).split("x"))   # default: 720p, upscaled to 1080p when assembling
+W, H = map(int, str(opt("res", "960x540" if TEST else job.get("res", "1920x1080"))).split("x"))
 SAMPLES = int(opt("samples", 16 if TEST else job.get("samples", 24 if str(opt("engine", job.get("engine", "EEVEE"))).upper() == "EEVEE" else 64)))
 OUT = os.path.abspath(opt("out", os.path.join(os.path.dirname(JOB_DIR), "out", job["id"])))
 timing = job.get("timing") or json.load(open(os.path.join(JOB_DIR, job["timing_file"])))
@@ -35,6 +35,29 @@ NF = int(math.ceil(DUR * FPS))
 
 # setting values directly (no keyframes): characters call L.key(o, path, f, v)
 L.key = lambda o, path, f, v: setattr(o, path, v)
+
+# ---------------------------------------------------------------- asset fetch (Meshy characters)
+# Any assets/meshy/<name>.url file (one signed download link) is downloaded to assets/meshy/<name>.glb before the job runs.
+def _fetch_assets():
+    import urllib.request, glob as _g, re as _re
+    base = os.path.join(HERE, "assets"); os.makedirs(os.path.join(base, "meshy"), exist_ok=True)
+    for up in _g.glob(os.path.join(base, "**", "*.url"), recursive=True):
+        d = os.path.dirname(up); name = os.path.splitext(os.path.basename(up))[0]
+        try:
+            url = open(up, encoding="utf-8").read().strip()
+            m = _re.search(r"\.(glb|png|jpe?g|webp)(\?|$)", url.split("?")[0] + "?", _re.I)
+            ext = "." + (m.group(1).lower() if m else "glb")
+            dst = os.path.join(d, name + ext)
+            with urllib.request.urlopen(url, timeout=180) as r, open(dst + ".part", "wb") as f:
+                while True:
+                    b = r.read(1 << 20)
+                    if not b: break
+                    f.write(b)
+            if os.path.getsize(dst + ".part") > 10000:
+                os.replace(dst + ".part", dst); os.remove(up); print("ASSET fetched", name, os.path.getsize(dst))
+        except Exception as ex:
+            print("ASSET fetch failed", name, ex)
+_fetch_assets()
 
 bpy.ops.wm.read_factory_settings(use_empty=True)
 S = bpy.context.scene
@@ -92,9 +115,15 @@ co = bpy.data.objects.new("Cam", cam); S.collection.objects.link(co); S.camera =
 aim = L.empty("Aim", (0, 0, 1.4))
 tr = co.constraints.new("TRACK_TO"); tr.target = aim; tr.track_axis = "TRACK_NEGATIVE_Z"; tr.up_axis = "UP_Y"
 cam.dof.focus_object = aim
+if SET.get("flat"): cam.dof.use_dof = False   # 2D worlds stay crisp, like a cartoon
 
 def shot_pose(shot, u, t):
     """Camera (loc, aim, lens) for a shot name; u = 0..1 progress through the shot (slow push-in)."""
+    if SET.get("flat"):   # 2D-background worlds: side-scroller camera only (no orbit or top-down: flat layers would show)
+        shot = {"orbit": "slide", "top": "wide"}.get(shot, shot)
+        if shot == "slide":
+            c = SET["cams"].get("center", (0, 0, 1.4)); x = -2.2 + 4.4 * u
+            return (c[0] + x, SET["cams"]["wide"][0][1] + 1.5, c[2] + 0.9), (c[0] + x * 0.85, c[1], c[2] + 0.2), 35
     if shot.startswith("close"):
         cid = shot.split(":")[1] if ":" in shot else host_id
         ch = cast.get(cid, cast[host_id]); bx, by, bz = ch.base; sc = ch.scale
@@ -224,9 +253,9 @@ def apply(f):
 r = S.render; r.resolution_x, r.resolution_y, r.resolution_percentage = W, H, 100
 r.image_settings.file_format = "PNG"
 vt = [i.identifier for i in type(S.view_settings).bl_rna.properties["view_transform"].enum_items]
-S.view_settings.view_transform = "AgX" if "AgX" in vt else "Filmic"
+S.view_settings.view_transform = SET["view"] if SET.get("view") in vt else ("AgX" if "AgX" in vt else "Filmic")
 S.view_settings.exposure = SET.get("exposure", -0.3)
-try: S.view_settings.look = SET.get("look", "AgX - Punchy")
+try: S.view_settings.look = SET.get("look", "AgX - Punchy") if not SET.get("view") else SET.get("look", "None")
 except Exception: pass
 if ENGINE == "EEVEE":
     for e in ("BLENDER_EEVEE_NEXT", "BLENDER_EEVEE"):
@@ -259,7 +288,7 @@ if TEST:
 
 thumb = job.get("thumb_frame")
 t_start = time.time(); done = 0
-STEP = int(opt("step", job.get("step", 2)))   # default: on twos (12 fps animation)
+STEP = int(opt("step", job.get("step", 1)))
 RANGE = job.get("frame_range") or [0, NF]          # re-render just a slice (frames named from 0 inside the slice)
 for f in range(int(RANGE[0]), min(int(RANGE[1]), NF), STEP):
     fp = os.path.join(FR, f"{(f - int(RANGE[0])) // STEP:05d}.png")

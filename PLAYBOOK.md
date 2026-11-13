@@ -232,3 +232,8 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - **Channel switch:** youtube.com/channel_switcher, take a screenshot (renders the list), click the `ytd-account-item-renderer` by script, then load
   Studio twice (first load is a 403 "Oops").
 - **Google Vids:** see docs/GOOGLE_VIDS.md. Noelson's PC browser pane is signed in to vids.google.com. Free plan = about 10 AI clips a month.
+- **Zoo-only mode (Nov 13, evening):** other 5 channels paused (plan status "paused_channel").
+- **PC render state (Nov 13):** zoo3d_ep11-13 (v1 songs) are already RENDERED in Documents\ZooBlender\out (since Nov 10) and only need
+  finish.py (4K) + upload: Zoo stock for Nov 15-17. Note: the cloud box has 2 cores, so a full 4K finish takes about an hour per episode;
+  do one per run. zoo3d_ep14-16 (songs v2 + editing v2) were copied to ZooBlender\jobs for the worker to make songs; next runs build
+  timing/job files and queue the renders. ZooBlender\zoo3d\engine.py now = repo engine.py (PC version merged with the v2 cut logic).

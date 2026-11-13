@@ -1,0 +1,311 @@
+{
+ "style": "high-energy modern sing-along pop for families, 122 bpm, bright major key, punchy drums and big handclaps, bouncy synth bass, ukulele and glockenspiel hooks, warm friendly male lead vocal with a cheerful group chorus on every chorus, call-and-response, verses light and bouncy, pre-chorus builds with a rising snare roll, chorus explodes with full band and group vocals, short claps-and-stomps breakdown, final chorus modulates up a whole step with the biggest energy, vocals start right away on the first beat with the chorus, no instrumental intro, short punchy ending",
+ "lyrics": "[Chorus - full band, group vocals]\nWhose tail is this? Swish, swish, swish!\nGuess the friend and make a wish!\nLong or short or fluffy too,\nWhose tail is this? I'll guess with you!\n\n[Verse 1 - light and bouncy]\nA tail with a tuft, a fluffy end,\nIt's the lion, our golden friend!\nA tail with a brush to swish the flies,\nIt's the giraffe, so tall, surprise!\n\n[Pre-Chorus - build up, rising drums]\nPeek behind and count to three,\nWho is it? Let's look and see!\n\n[Chorus - full band, group vocals]\nWhose tail is this? Swish, swish, swish!\nGuess the friend and make a wish!\nLong or short or fluffy too,\nWhose tail is this? I'll guess with you!\n\n[Verse 2 - light and bouncy]\nA tail with stripes, black and white,\nIt's the zebra, what a sight!\nA tiny tail that flicks and flaps,\nIt's the hippo after naps!\n\n[Bridge - claps and stomps, call and response]\nSwish your tail! (Swish, swish!)\nWiggle, wiggle! (Wiggle, wiggle!)\nShake it left! (Shake, shake!)\nNow shake it right and giggle!\n\n[Verse 3 - light and bouncy]\nA thin tail with a hairy tip,\nIt's the elephant, hip hip!\nAnd Milo's tail is feathers blue,\nEvery tail is special too!\n\n[Pre-Chorus - build up, rising drums]\nPeek behind and count to three,\nWho is it? Let's look and see!\n\n[Final Chorus - key change up, biggest energy, everyone sings]\nWhose tail is this? Swish, swish, swish!\nWe guessed them all, we got our wish!\nLong or short or fluffy too,\nEvery tail says hi to you!\n\n[Outro - quick and happy]\nSwish, swish! Bye-bye, friends!",
+ "duration": 160,
+ "bpm": 122,
+ "key": "A Major",
+ "seed": 914,
+ "who_map": {},
+ "meta": {
+  "title": "Whose Tail Is This? Animal Guessing Song with Milo",
+  "card": "Whose Tail Is This?",
+  "thumb_text": "WHOSE TAIL?",
+  "description": "Whose tail is this? Guess the animal from its tail with Milo the bluebird: the lion's fluffy tuft, the giraffe's swishing brush, the zebra's stripes, the hippo's tiny tail and the elephant's hairy tip.\nA guessing game animal song for kids: swish, wiggle and shake along. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "whose tail is this",
+   "animal tails for kids",
+   "guessing game song",
+   "animal song for kids",
+   "zoo animals for kids",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "song_v": "v2 dynamic (Nov 13)"
+ },
+ "job": {
+  "id": "zoo3d_ep14",
+  "title": "Whose Tail Is This?",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:giraffe",
+     "wide",
+     "close:zebra",
+     "close:hippo",
+     "close:elephant"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TUFT!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus1",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "GUESS!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:giraffe",
+     "wide",
+     "close:zebra",
+     "close:hippo",
+     "close:elephant"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#25232b",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.5,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "WIGGLE!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:giraffe",
+     "wide",
+     "close:zebra",
+     "close:hippo",
+     "close:elephant"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TIP!",
+      "color": "#5d6b8f",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus2",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep14",
+  "res": "1920x1080",
+  "step": 1,
+  "cut_mode": "beat",
+  "cut_beats": {
+   "chorus": 4,
+   "bridge": 4,
+   "prechorus": 2
+  },
+  "follow_singer": true,
+  "punch": true
+ }
+}

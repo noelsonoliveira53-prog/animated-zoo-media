@@ -1,1 +1,6 @@
 __pycache__/
+
+# finish.py scratch output (published copies live at the repo root)
+studio/zoo3d/finished/*.ass
+studio/zoo3d/finished/thumb_*.png
+studio/zoo3d/finished/zoo3d_ep1[2-9]*.mp4

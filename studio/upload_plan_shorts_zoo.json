@@ -40,5 +40,83 @@
   "format": "3d_short_test",
   "thumb": null,
   "video_id": "PpzAEHzEtQg"
+ },
+ {
+  "file": "shorts3d/zs3d_mama_hook.mp4",
+  "source": "zoo3d_ep04.mp4 0.0-15.0",
+  "date": "2026-11-14",
+  "time": "11:00 AM",
+  "title": "Where Is My Mama? Baby Animals Sing-Along with Milo!",
+  "description": "Where is my mama? Milo helps the baby animals find their mamas in this short sing-along for kids.\nBaby animals song with a lion cub, a baby elephant and a baby giraffe. From \"Where Is My Mama?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_mama_elephant.mp4",
+  "source": "zoo3d_ep04.mp4 17.5-31.5",
+  "date": "2026-11-15",
+  "time": "11:00 AM",
+  "title": "Baby Elephant Finds Mama! Toot Toot with Milo!",
+  "description": "Where is baby elephant's mama? Toot, toot! Listen for the trunk and find her with Milo the bluebird.\nA short baby animals song for kids about elephants. From \"Where Is My Mama?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_milo_lion.mp4",
+  "source": "zoo3d_ep05.mp4 25.0-38.0",
+  "date": "2026-11-16",
+  "time": "11:00 AM",
+  "title": "Milo Had a Zoo, E-I-E-I-O! And a Lion Says Roar!",
+  "description": "Milo had a zoo, E-I-E-I-O! And at the zoo he had a lion: roar here, roar there!\nA short animal sounds sing-along for kids to the Old MacDonald tune. From \"Milo Had a Zoo!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_mama_giraffe.mp4",
+  "source": "zoo3d_ep04.mp4 50.0-63.0",
+  "date": "2026-11-17",
+  "time": "11:00 AM",
+  "title": "Where Is Baby Giraffe's Mama? Look Up High!",
+  "description": "Where is baby giraffe's mama? She is very tall, so look up high with Milo the bluebird!\nA short baby animals song for kids about giraffes. From \"Where Is My Mama?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_count123.mp4",
+  "source": "zoo3d_ep09.mp4 26.0-38.0",
+  "date": "2026-11-18",
+  "time": "11:00 AM",
+  "title": "Count 1, 2, 3 Zoo Animals! Counting Song with Milo",
+  "description": "One big lion, two little monkeys, three tall giraffes! Count 1, 2, 3 with Milo the bluebird.\nA short counting song for kids with zoo animals. From \"Can You Count 10 Zoo Animals?\" on The Animated Zoo. Ages 2-5.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_knees_paws.mp4",
+  "source": "zoo3d_ep07.mp4 18.0-33.5",
+  "date": "2026-11-19",
+  "time": "11:00 AM",
+  "title": "Shake Like a Lion, Flap Like an Elephant! Action Song",
+  "description": "Shake your head like a lion and flap your ears like an elephant! A short action song for kids with Milo.\nMove along to \"Head, Shoulders, Knees and Paws!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null
  }
 ]

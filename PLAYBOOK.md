@@ -242,3 +242,5 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - PC queue (worker, alphabetical): zoo3d_ep12w (rendering, ~35 min each), ep13w, ep14w, ep15w, ep16w. Old savanna jobs zoo3d_ep15/ep16 have STOP files; zoo3d_ep14/ep15 savanna raws exist but must not be used.
 - Finish each with `python3 finish.py <ZooBlender/out/<id>w/<id>w_raw.mp4> jobs/<id>w.json --date <plan date> --time "4:00 PM" --nopush --preset 10`; it publishes as <id>.mp4 and sets to_upload.
 - Plan dates: ep12 Nov 16, ep13 Nov 17 (status rendering_variety until finished); ep14-16 get the next free days.
+- Nov 13 (late): zoo3d_ep12.mp4 is now the new-places render (to_upload, Nov 16). Songs v3 (studio/zoo3d/make_specs_v3.py): ep17 panda/tiger/monkey/koala/fox, ep18 polar bear/arctic fox/bear/horse, ep19 cow/pig/horse; their .song.json files are on the PC. When songs_out/<id> is done, build timing + jobs/<id>.json from the spec's "job" block (already zooworld + locations) and send it to the PC.
+- The daily task's model could not be changed from a session (device-bound task): Noelson switches it to Fable in the task's settings.

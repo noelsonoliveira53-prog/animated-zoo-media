@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v5, Nov 9, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v6, Nov 13, 2026). The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -132,6 +132,28 @@
   Eat?" (Nov 11), "What Do Elephants Eat?" (Nov 12). Plan: `studio/upload_plan_shorts_zoo.json`. Judge on Nov 13: views and % viewed vs the 2D Shorts
   (Flamingos 1,825 / 131%). Sister channels stay episodes-only until the Zoo test has a result.
 - **Posting times:** still no signal; keep the slots through Nov 11 (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
+
+## Adjustments from the Nov 13 views check ("Where Is My Mama?" 3,788 views / 119k impressions; network 6,456 -> 23,773)
+- **Lead topic formula (new, all channels): a story question with a friend in trouble, solved in every verse.** "Where Is My Mama?" (lost baby, finds mama
+  each verse) got 4x the reach of any other song; Truck's "Help! The Dump Truck Is Stuck!" holds 0:56 (39%), the best 3D retention. Write each song as:
+  problem in the first line (0-5 s) -> verse = one try / one friend / one reveal -> chorus repeats the question -> last chorus = solved, everyone dances.
+- **Zoo topic queue (next 6, in order):** "Where Is Baby Penguin?" (ocean babies), "Help! Baby Elephant Is Stuck in the Mud!", "Who Lost Their Stripes?"
+  (zebra, tiger, bee, skunk... facts true), "Old MacDonald Had a Zoo" style twist #2 ("Five Little Monkeys at the Zoo"), "Where Is Baby Panda?",
+  "Peekaboo Zoo! Who Is Hiding?". Fix zoo3d_ep08's hippo line before it airs.
+- **Familiar tunes (nursery-rhyme twists) for CTR:** "Milo Had a Zoo! E-I-E-I-O" 5.0% and "Zoo Freeze Dance!" 8.8% CTR vs 1.8-2.9% for original tunes.
+  Aim for 1 in 3 songs per channel on a public-domain tune (Old MacDonald, Wheels on the Bus, Five Little ..., If You're Happy, Row Row, Twinkle).
+  Public-domain melodies only; our own words.
+- **Gizmo:** "Gizmo Makes a ...!" visible experiments (Rainbow 370 views / 19k impressions, best sister-channel video). Next: "Gizmo Makes a Volcano Fizz!"
+  (baking soda + vinegar, grown-up helps), "Gizmo Makes Ice Melt!", "Gizmo Makes Giant Bubbles!", "Gizmo Makes a Shadow Puppet!". Keep body topics (5 Senses 214).
+- **Truck:** rescue/problem songs ("Oh No, a Flat Tire!", "Help! The Garbage Truck Is Full!", "Who Can Pull the Bus Out?"), Bolt and friends solve it together.
+- **Bloop:** drop "| Part N" from titles (Parts 2-3: 8-12 impressions, 0 views). Use "Bloop Turns Yellow!" style plus a hook word ("...and Nobody Can Find Him!").
+- **Moonbeam / Fruity:** still no reach (under 400 impressions per video). Try the winning formulas there: "Where Is Baby Bunny's Blanket? 🌙", "Help! Banana
+  Can't Find Her Peel!". Phone verification for custom thumbnails is still pending.
+- **Shorts (decision for Noelson, nothing changed):** song cut-downs flopped (10-79 views) while fact-surprise Shorts gained ~11,000 views since Nov 9 and hold
+  70-130% viewed. If Shorts come back, make them the "Why Are Flamingos Pink?" type (one visible body surprise, 20-30 s), not song cuts.
+- **Length / posting times:** unchanged (2:30-3:00; slots Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET). Not enough data on timing.
+- **Production:** Blender stock is nearly empty (Zoo has 1 episode left, Gizmo 2, Bloop 3). New "Vids hybrid" pipeline (docs/GOOGLE_VIDS.md) starts with a Zoo
+  pilot; Blender keeps rendering the rest.
 
 ## Competitor outliers (Nov 6, 2026 — yt-viral research: multiple over each channel's own median)
 Data: docs/research/collected.json + swipe.txt (Cocomelon, Super Simple, Pinkfong, Little Angel, ChuChu TV, Morphle).

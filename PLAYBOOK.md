@@ -218,3 +218,17 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   Studio preselects PUBLIC for Shorts: always open Schedule and confirm the button reads "Schedule" before clicking it.
 - Plan file: `studio/upload_plan_shorts_zoo.json`. These count toward the account's ~20 uploads/24h, so they come after the 6 daily episodes.
 - Tiny Truck Town duplicate 1VDyCj71-hA was deleted Nov 9 (Noelson approved).
+
+## Nov 13, 2026 run notes
+- **Missed runs:** no morning runs happened Nov 10-12, so Truck/Fruity/Moonbeam slots on those days stayed empty. Backlogs were re-dated to one per day
+  from Nov 14 (`planned_date` keeps the old date). If a run is missed again, upload the soonest `to_upload` per channel on the next free day.
+- **Holds:** `"status": "hold_fact_check"` in upload_plan_3d.json means never upload until fixed (zoo3d_ep08: hippo "purple" line).
+- **Upload recipe that worked (PC browser pane, hidden):** Studio tab (not fronted is fine for script steps) -> `?d=ud` -> one script that fetches the plan
+  JSON from raw GitHub, arms the MP4, clicks `#select-files-button`, fills title/description (execCommand with textContent fallback), ticks made for kids.
+  Thumbnail (verified channels): arm the PNG, then scroll `ytcp-thumbnail-uploader` into view; it has zero size until the video finishes uploading, so
+  scroll the dialog once with the mouse and retry, then real-click "Upload file" at about (122, 328) in an 800x600 view and check for a `data:` img.
+  Then Next x3 by script, expand Schedule, real-click the date box (144, 388), focus+select the date input by script, type "Nov 13, 2026" + Enter,
+  focus+select the time input, type "1:40 PM" + Enter, read both back, real-click Schedule (720, 535).
+- **Channel switch:** youtube.com/channel_switcher, take a screenshot (renders the list), click the `ytd-account-item-renderer` by script, then load
+  Studio twice (first load is a 403 "Oops").
+- **Google Vids:** see docs/GOOGLE_VIDS.md. Noelson's PC browser pane is signed in to vids.google.com. Free plan = about 10 AI clips a month.

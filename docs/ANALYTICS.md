@@ -1,5 +1,65 @@
 # Views check log (newest first)
 
+## 2026-11-13 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day; no checks ran Nov 10-12)
+| Channel | Video | Type | Published | Views (Nov 9) | Impr. | CTR | Avg view | % viewed | Likes |
+|---|---|---|---|---|---|---|---|---|---|
+| Animated Zoo | **Where Is My Mama? Baby Animals Song for Kids with Milo (2:51)** | **3D song** | Nov 9 | **3,788 (new)** | **119,082** | **2.9%** | 0:28 | 16.4% | 1 |
+| Animated Zoo | **An Octopus Has 3 Hearts! (0:23)** | Short | Nov 1-4 | **3,228 (104)** | 4,035 | 0.2% | 0:21 | 94.5% | 27 |
+| Animated Zoo | **Camel Humps Are Full of Fat, Not Water! (0:29)** | Short | Nov 1-4 | **3,206 (~0)** | 2,597 | 0.3% | 0:20 | 71.7% | 37 |
+| Animated Zoo | Why Are Flamingos Pink? (0:22) | Short | Nov 1-4 | 2,925 (1,825) | 14,263 | 0.2% | 0:28 | 130.4% | 31 |
+| Animated Zoo | Meerkats Have Built-In Sunglasses! (0:26) | Short | Nov 1-4 | 925 | 2,245 | 0.5% | 0:21 | 82.8% | 7 |
+| Animated Zoo | Animal Sounds Song for Kids! Roar, Toot, Neigh with Milo (2:51) | 3D song | Nov 8 | 738 (624) | 34,140 | 1.8% | 0:20 | 12.1% | 1 |
+| Animated Zoo | Amazing Animal Bodies for Kids! 5 Surprise Facts (4:58) | 2D episode | Nov 5 | 676 (561) | 21,671 | 2.8% | 0:26 | 9.0% | 2 |
+| Animated Zoo | Savanna Animals for Kids! Meet 5 Zoo Friends (5:08) | 2D episode | Nov 2 | 600 (520) | 14,772 | 3.5% | 0:26 | 8.6% | 0 |
+| Animated Zoo | T. Rex Never Met Stegosaurus! Here's Why (0:31) | Short | Nov | 568 | 3,682 | 0.4% | 0:27 | 88.6% | 3 |
+| Animated Zoo | What Do Animals Eat? Safari Song (2:51) | 3D song | Nov 7 | 567 (507) | 20,001 | 2.6% | 0:26 | 15.8% | 1 |
+| Animated Zoo | Safari Animals Song for Kids! (3:01) | 3D song | Nov 6 | 549 (523) | 23,642 | 2.1% | 0:28 | 15.9% | 1 |
+| Animated Zoo | Snail's Eyes 461, Polar Bears Black Skin 447, Ants 230, Ostriches 211, Gorilla Noses 204, Koalas 193, Zebras 191 + 20 more | Short | Nov 1-4 | 18-461 | 87-319 | 0-4.6% | 0:06-0:26 | 38-100% | 0-8 |
+| Animated Zoo | Milo Had a Zoo! E-I-E-I-O (2:51) | 3D song | Nov 10 | 147 | 2,568 | **5.0%** | 0:34 | 19.9% | 1 |
+| Animated Zoo | Zoo Freeze Dance! (2:41) | 3D song | Nov 11 | 18 | 159 | **8.8%** | 0:19 | 12.0% | 1 |
+| Animated Zoo | Zoo Shorts test cut from songs: Lion Say 79, Giraffes Eat 20, Elephants Eat 10 | Short | Nov 10-12 | 10-79 | 61-95 | 3.3-5.3% | 0:06-0:13 | 38-96% | 0-2 |
+| Gizmo Explains | **Gizmo Makes a Rainbow! Science Song for Kids (2:39)** | 3D song | Nov 10 | **370** | **19,041** | 1.7% | 0:21 | 13.4% | 0 |
+| Gizmo Explains | **Meet Your 5 Senses! Body Song for Kids with Gizmo (2:36)** | 3D song | Nov 11 | **214** | **12,480** | 1.5% | 0:20 | 13.1% | 0 |
+| Gizmo Explains | Jupiter Storm Short 229, Saturn Bathtub Short 34, Moon Footprints 16; Sky Blue 18, Planets 2D 15, Planets Song 11, Sink or Float 10 | Short / 3D | Nov 4-9 | 3-229 | 27-344 | 0-16.1% | 0:11-0:48 | 7-124% | 0-4 |
+| Tiny Truck Town | Trains 100 Cars (Short) 85, Fire Trucks Long (Short) 27, School Buses (Short) 20, Cement Mixer 13 | Short | Nov 4 | 13-85 | 30-108 | 0-7.5% | 0:12-0:17 | 49-61% | 0 |
+| Tiny Truck Town | **Help! The Dump Truck Is Stuck! (2:23)** | 3D song | Nov 9 | 11 | 57 | **19.3%** | **0:56** | 39.3% | 0 |
+| Tiny Truck Town | Red Means Stop 3, Fire Truck Song 2, Wheels on the Fire Truck 2 | 3D song | Nov 6-8 | 2-3 | 31-39 | 2.6-5.7% | 0:11-0:20 | 8-14% | 0 |
+| Bloop's Color Lab | Colors Song (3D v3) 73, Learn Colors (2D) 63, Bloop Turns Blue 2 (57% viewed), Red+Yellow=Orange 2; Parts 2-3, Shapes, Hide and Seek: 0 | 3D / 2D | Nov 4-12 | 0-73 | 8-3,102 | 0-2.8% | 0:02-1:26 | 2-57% | 0 |
+| Moonbeam Bedtime | Moon Change Shape? (Short) 21, Hush Little Bunny 15, Time for Bed 7, Goodnight 5 Sleepy Animals 5, Count the Stars 1, Sheep 0 | 3D / 2D / Short | Nov 4-9 | 0-21 | 5-373 | 0-10% | 0:09-0:30 | 5-42% | 0 |
+| Fruity Friends | Banana Dance 3, Carrots Short 3, Five Little Grapes 2, Yummy Fruits 1, 5 others 0 | 3D / Short | Nov 5-10 | 0-3 | 4-100 | 0-4.2% | 0:10-0:49 | 7-98% | 0 |
+
+Network total: **23,773 lifetime views (+17,317 since Nov 9, 3.7x)**, about 372,000 impressions. The Animated Zoo is 94% (22,466), Gizmo is now second (932, up from 17).
+Change since Nov 9: Zoo Shorts +~11,000 (Octopus +3,124, Camel +3,200, Flamingos +1,100, Meerkats +900), "Where Is My Mama?" +3,788 from zero,
+Gizmo +915 (Rainbow and 5 Senses each got 12-19k impressions, the first sister-channel breakout). Truck, Bloop, Moonbeam and Fruity together +223.
+
+Uploaded today (all scheduled Nov 13, made for kids, 4K): Truck "Big Truck vs Little Truck!" axk5sgGYBsU (1:40 PM), Bloop "Bloop Turns Yellow! | Part 4"
+hVqQvF7vekk (1:50 PM, custom thumb), Gizmo "How Do Magnets Work?" BS_8eEOu5k0 (2:10 PM, custom thumb), Fruity "Wash Your Hands!" 16qMUz7SpbQ (2:20 PM),
+Zoo "Can You Count 10 Zoo Animals?" i9LUZ5JyU5k (4:00 PM, custom thumb), Moonbeam "Goodnight Little Animals 🌙" 9NPWHPkgdTk (7:00 PM).
+The Nov 10-12 runs didn't happen, so Truck, Fruity and Moonbeam had no new episode since Nov 9-10; their backlog was re-dated to run daily from Nov 14.
+zoo3d_ep08 (Stripes or Spots?) is on hold: it still sings "Hippo is smooth and purple too". zoo3d_ep09 took the Zoo slot.
+
+What's winning
+- **"Where Is My Mama?" is the network's best long-form ever:** 3,788 views on 119k impressions in ~3 days, 4x the reach of any other song. It is an emotional
+  question kids care about (a lost baby looking for mama), baby animals, a familiar search phrase ("where is my mama"), and a reveal in every verse.
+- **Fact-surprise Shorts are the biggest view engine** (~60% of Zoo views): octopus hearts, camel humps, pink flamingos, meerkat "sunglasses". 70-130% viewed,
+  and they get almost all the likes (37, 31, 27). The 3 Shorts cut from songs got only 10-79 views: song cut-downs don't work as Shorts, fact surprises do.
+- **Nursery-rhyme twists get the highest CTR:** "Milo Had a Zoo! E-I-E-I-O" 5.0%, "Zoo Freeze Dance!" 8.8% (small sample) vs 1.8-2.9% for other songs.
+- **Gizmo's breakout came from "Gizmo Makes a Rainbow!"** (a visible transformation in the title) and "Meet Your 5 Senses!", not from space.
+- **Truck's best is a story-problem song:** "Help! The Dump Truck Is Stuck!" 19.3% CTR and 0:56 average view (39%), the best retention of any 3D song.
+- Retention on Zoo songs is still 0:20-0:34 (12-20%).
+
+What to do more of
+- "Where is / Who lost / Help!" story questions with a baby or a friend in trouble, solved in every verse: "Where Is Baby Penguin?", "Who Lost Their Stripes?",
+  "Help! Baby Elephant Is Stuck in the Mud!".
+- Familiar nursery-rhyme tunes with our cast (Old MacDonald, Freeze Dance, Wheels on the Bus, Five Little ..., Head Shoulders).
+- Gizmo: "Gizmo Makes a ...!" experiments kids can see (rainbow, volcano fizz, magnets, bubbles, ice melting).
+- Truck: rescue/problem songs ("Help! ... Is Stuck!", "Oh No, a Flat Tire!").
+
+What to do less of
+- Shorts cut from songs (10-79 views each). Fact-surprise Shorts are the format that works (still paused per the Nov 4 strategy; Noelson's call).
+- "Part N" series titles on Bloop: Parts 2 and 3 got 8-12 impressions and 0 views.
+- Plain "<Topic> Song for Kids!" titles (Animal Sounds 1.8% CTR on 34k impressions).
+
 ## 2026-11-09 (all 6 channels, Studio Advanced analytics, lifetime Nov 2-8; analytics lag about a day)
 | Channel | Video | Type | Published | Views (yday) | Impr. | CTR | Avg view | % viewed | Likes |
 |---|---|---|---|---|---|---|---|---|---|

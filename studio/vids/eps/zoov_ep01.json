@@ -132,7 +132,8 @@
   "minutes_total": "about 45 (most of it working out the Vids UI; the next run should take about 20)",
   "final_length": "2:10 (13 scenes); song ends at 2:03",
   "vids_file": "https://docs.google.com/videos/d/14veTw8H1nGLgFRjy2AYfC8n5njDKj2JHTfJMNJneJYY/edit",
-  "export": "Export to YouTube (private, The Animated Zoo) + Export to Drive"
+  "export": "Export to YouTube (private, The Animated Zoo) + Export to Drive",
+  "upload": "Scheduled on The Animated Zoo Nov 14 12:00 PM ET, video jYYShVPAxfE, custom thumbnail, 1080p (cloud 4K encode too slow: ~1 fps on 2 cores)"
  },
  "clips_order_used": [
   0,

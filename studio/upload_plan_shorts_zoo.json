@@ -50,9 +50,10 @@
   "description": "Where is my mama? Milo helps the baby animals find their mamas in this short sing-along for kids.\nBaby animals song with a lion cub, a baby elephant and a baby giraffe. From \"Where Is My Mama?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
   "channel": "animated-zoo",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": null,
+  "video_id": "LQYmUf0PMgg"
  },
  {
   "file": "shorts3d/zs3d_mama_elephant.mp4",
@@ -63,9 +64,10 @@
   "description": "Where is baby elephant's mama? Toot, toot! Listen for the trunk and find her with Milo the bluebird.\nA short baby animals song for kids about elephants. From \"Where Is My Mama?\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.",
   "channel": "animated-zoo",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": null,
+  "video_id": "l2wpBUcjXC4"
  },
  {
   "file": "shorts3d/zs3d_milo_lion.mp4",

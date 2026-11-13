@@ -1111,10 +1111,12 @@
   "time": "12:00 PM",
   "thumb": "brand/zoo/thumb_zoov_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "vids_full",
   "duration": 130.5,
-  "note": "Google Vids pilot (Lyria song + 13 Omni clips). 1080p H.264: 4K upscale on the 2-core cloud box ran at 1 fps, so this pilot is uploaded at 1080p."
+  "note": "Google Vids pilot (Lyria song + 13 Omni clips). 1080p H.264: 4K upscale on the 2-core cloud box ran at 1 fps, so this pilot is uploaded at 1080p.",
+  "video_id": "jYYShVPAxfE",
+  "uploaded": "2026-11-13"
  },
  {
   "file": "truck/tt3d_ep06.mp4",

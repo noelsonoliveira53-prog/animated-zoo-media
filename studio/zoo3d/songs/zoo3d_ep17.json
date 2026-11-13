@@ -1,0 +1,351 @@
+{
+ "style": "high-energy modern sing-along pop for families, 122 bpm, bright major key, punchy drums and big handclaps, bouncy synth bass, ukulele, marimba and bamboo flute hooks, warm friendly male lead vocal with a cheerful group chorus on every chorus, call-and-response, verses light and bouncy, pre-chorus builds with a rising snare roll, chorus explodes with full band and group vocals, short claps-and-stomps breakdown, final chorus modulates up a whole step with the biggest energy, vocals start right away on the first beat with the chorus, no instrumental intro, short punchy ending",
+ "lyrics": "[Chorus - full band, group vocals]\nPanda, panda, munch, munch, munch!\nBamboo breakfast, bamboo lunch!\nForest friends, come sing with me,\nClap your hands, one, two, three!\n\n[Verse 1 - light and bouncy]\nThe panda is black and white,\nEating bamboo, bite by bite!\nThe tiger has stripes, orange and black,\nStripes on its tail and stripes on its back!\n\n[Pre-Chorus - build up, rising drums]\nWho is next? Let's take a look,\nPeek around the forest nook!\n\n[Chorus - full band, group vocals]\nPanda, panda, munch, munch, munch!\nBamboo breakfast, bamboo lunch!\nForest friends, come sing with me,\nClap your hands, one, two, three!\n\n[Verse 2 - light and bouncy]\nThe monkey swings from tree to tree,\nSwing your arms and swing with me!\nThe koala naps the day away,\nLeaves for dinner, every day!\n\n[Bridge - claps and stomps, call and response]\nMunch like a panda! (Munch, munch, munch!)\nSwing like a monkey! (Swing, swing, swing!)\nStretch like a tiger! (Stretch up high!)\nNow wave your tail and say goodbye!\n\n[Verse 3 - light and bouncy]\nThe fox has a tail so fluffy and red,\nIt curls up warm when it goes to bed!\nMilo sings up in the tree,\nForest friends, sing along with me!\n\n[Pre-Chorus - build up, rising drums]\nWho is next? Let's take a look,\nPeek around the forest nook!\n\n[Final Chorus - key change up, biggest energy, everyone sings]\nPanda, panda, munch, munch, munch!\nBamboo breakfast, bamboo lunch!\nForest friends, we sang with glee,\nClap your hands, one, two, three!\n\n[Outro - quick and happy]\nMunch, munch, munch! Bye-bye, friends!",
+ "duration": 160,
+ "bpm": 122,
+ "key": "G Major",
+ "seed": 917,
+ "who_map": {},
+ "meta": {
+  "title": "Panda Loves Bamboo! Forest Animals Song with Milo",
+  "card": "Forest Friends!",
+  "thumb_text": "PANDA!",
+  "description": "Meet the forest friends with Milo the bluebird! The panda munches bamboo, the tiger shows its stripes, the monkey swings, the koala naps in a tree and the fox has a fluffy tail.\nA forest animals song for kids: munch, swing and clap along. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "panda song for kids",
+   "forest animals song",
+   "animal song for kids",
+   "bamboo song",
+   "kids songs",
+   "preschool learning song",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "song_v": "v3 new cast + places (Nov 13)"
+ },
+ "job": {
+  "id": "zoo3d_ep17",
+  "title": "Forest Friends!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 17,
+  "new_song": true,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "panda",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "panda"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "monkey",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "monkey"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "koala"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "fox",
+    "char": "animal",
+    "spot": "s5",
+    "opts": {
+     "kind": "fox"
+    },
+    "yaw": -0.1
+   }
+  ],
+  "locations": [
+   {
+    "from": "chorus1",
+    "biome": "bamboo",
+    "tod": "morning"
+   },
+   {
+    "from": "verse1",
+    "biome": "jungle",
+    "tod": "noon",
+    "seed": 1
+   },
+   {
+    "from": "chorus2",
+    "biome": "bamboo",
+    "tod": "noon",
+    "seed": 2
+   },
+   {
+    "from": "verse2",
+    "biome": "autumn_forest",
+    "tod": "golden",
+    "seed": 3
+   },
+   {
+    "from": "bridge1",
+    "biome": "jungle",
+    "tod": "morning",
+    "seed": 4
+   },
+   {
+    "from": "chorus3",
+    "biome": "bamboo",
+    "tod": "sunset",
+    "seed": 5
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "close:panda",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "CRUNCH!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:panda",
+     "close:host",
+     "close:tiger",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus1",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "vista",
+     "close:host",
+     "orbit",
+     "close:fox",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "MUNCH!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:monkey",
+     "close:host",
+     "close:koala",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWING!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:panda",
+     "close:tiger",
+     "close:monkey",
+     "close:koala",
+     "close:fox",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.5,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:fox",
+     "close:host",
+     "close:host",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FLUFFY!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus2",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host",
+     "high"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FOREST FRIENDS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep17",
+  "res": "1920x1080",
+  "step": 1,
+  "cut_mode": "beat",
+  "cut_beats": {
+   "chorus": 4,
+   "bridge": 4,
+   "prechorus": 2
+  },
+  "follow_singer": true,
+  "punch": true
+ }
+}

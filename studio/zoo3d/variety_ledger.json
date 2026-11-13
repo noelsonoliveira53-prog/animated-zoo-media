@@ -225,5 +225,113 @@
    "zebra"
   ],
   "new_song": false
+ },
+ {
+  "id": "zoo3d_ep17",
+  "places": [
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "fox",
+   "koala",
+   "monkey",
+   "panda",
+   "tiger"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zoo3d_ep18",
+  "places": [
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "arctic",
+    "morning"
+   ],
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "arctic",
+    "sunset"
+   ],
+   [
+    "arctic",
+    "night"
+   ]
+  ],
+  "cast": [
+   "arctic_fox",
+   "bear",
+   "horse",
+   "polar_bear"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zoo3d_ep19",
+  "places": [
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "farm",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "horse",
+   "pig"
+  ],
+  "new_song": true
  }
 ]

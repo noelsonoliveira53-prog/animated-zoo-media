@@ -67,3 +67,26 @@ not for the whole network. Network-wide Vids needs a paid Google AI plan (Noelso
    Check the current price on Google's plans page before buying. Nothing has been bought.
 3. Until then, Blender keeps rendering the other five channels, and the hybrid method cuts Blender time by rendering stills
    instead of full animations if you want that switched on.
+
+## Update Nov 13 (afternoon): Noelson already has Google AI Pro ($19.99/mo)
+With Pro, Vids shows **Music = "Generate a song" (Lyria 3.5)** with own lyrics, full-length songs and vocals. So the whole episode
+can be made inside Vids: song + AI clips + captions. Pilot `zoov_ep01` "Where Is Baby Penguin?" was built fully in Vids
+(spec: studio/vids/eps/zoov_ep01.json, agent: .claude/agents/vids-producer.md, steps: studio/vids/RUNBOOK.md).
+
+### Credit log
+| Date | Episode | Songs (blocked) | AI clips | Length | Notes |
+|---|---|---|---|---|---|
+| Nov 13 | Vids pilot test | 0 | 1 | 0:10 | first test clip |
+| Nov 13 | zoov_ep01 Where Is Baby Penguin? | 1 (1) | 13 | 2:10 | 5 clips generated in parallel; no clip refused |
+
+Lessons from the first episode
+- Lyria refuses style text that says "preschool kids" or "kids chorus". Say "sing-along pop song for families" and "group chorus".
+- Clip prompts: put the look + full character descriptions in every prompt; "all characters fully visible and centered" fixes Milo
+  being cut off. Penguins came out consistent across clips without reference images.
+- Insert clips with: Ctrl+M (new blank scene) then the card's "Insert" button. Clicking Insert while a clip is selected says
+  "Replace"; clicking an already inserted card opens "Insert in new scene" (makes duplicates).
+- AI clips carry their own sound: mute every Video track (Sound > All tracks > expand each Video > Mute), keep the song.
+- Captions panel > "All scenes" + yellow word-emphasis style gives karaoke lyrics automatically.
+- Export to YouTube uploads as Private to the channel active in YouTube; then schedule it in Studio (title, description, made for kids).
+- Output is 1080p from 720p clips, so this episode is an exception to the 4K rule (decision for Noelson).
+- Pro plan's monthly clip allowance is still unknown; no limit message appeared after 14 clips. Watch for a limit warning on the next episodes.

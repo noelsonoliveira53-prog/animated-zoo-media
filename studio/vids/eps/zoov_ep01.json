@@ -1,48 +1,152 @@
 {
-  "id": "zoov_ep01",
-  "channel": "animated-zoo",
-  "channel_id": "UC1YuY8nqnViTtm85qxE_M1w",
-  "format": "vids_full",
-  "length_target_s": 150,
-  "aspect": "16:9",
-  "song": {
-    "engine": "Vids Music (Lyria 3.5), Full song, own lyrics",
-    "style": "Upbeat preschool kids sing-along, cheerful friendly male lead vocal with a small kids chorus on the chorus, clear diction, ukulele, glockenspiel, soft handclaps, bouncy bass, major key, 112 bpm, catchy repetitive chorus, vocals start on the first beat, no long intro, short happy ending.",
-    "lyrics": "[Chorus]\nWhere is baby penguin? Where, oh where?\nWaddle, waddle, waddle, is he over there?\nListen for his peep-peep, listen everywhere,\nWhere is baby penguin? Where, oh where?\n\n[Verse 1]\nMama penguin's home from the big blue sea,\nPeep, peep! Where's my baby? Where can he be?\nLots of fluffy babies standing in a crowd,\nShe listens for his voice and calls out loud!\n\n[Chorus]\nWhere is baby penguin? Where, oh where?\nWaddle, waddle, waddle, is he over there?\nListen for his peep-peep, listen everywhere,\nWhere is baby penguin? Where, oh where?\n\n[Verse 2]\nIs he by the ice hole? No, that's a seal!\nIs he on the snow hill? Slide, slide, wheee!\nIs he with the big friends huddled in a line?\nNot yet, mama, keep on looking, you'll be fine!\n\n[Bridge]\nFlap your flippers, flap, flap, flap!\nWaddle side to side and clap, clap, clap!\nSlide on your tummy, wheee, wheee, wheee!\nPeep like a baby, one, two, three!\n\n[Verse 3]\nPeep, peep! There he is, fluffy and gray!\nMama found her baby, hip hip hooray!\nSnuggle up close, nice and cozy and warm,\nA great big penguin hug, safe and calm!\n\n[Final Chorus]\nThere is baby penguin! There he is!\nWaddle, waddle, waddle, give a happy kiss!\nMama found her baby, hear them sing,\nPeep, peep, peep, the happiest thing!\n\n[Outro]\nPeep, peep! Bye-bye, friends!"
+ "id": "zoov_ep01",
+ "channel": "animated-zoo",
+ "channel_id": "UC1YuY8nqnViTtm85qxE_M1w",
+ "format": "vids_full",
+ "length_target_s": 150,
+ "aspect": "16:9",
+ "song": {
+  "engine": "Vids Music (Lyria 3.5), Full song, own lyrics",
+  "style": "Upbeat preschool kids sing-along, cheerful friendly male lead vocal with a small kids chorus on the chorus, clear diction, ukulele, glockenspiel, soft handclaps, bouncy bass, major key, 112 bpm, catchy repetitive chorus, vocals start on the first beat, no long intro, short happy ending.",
+  "lyrics": "[Chorus]\nWhere is baby penguin? Where, oh where?\nWaddle, waddle, waddle, is he over there?\nListen for his peep-peep, listen everywhere,\nWhere is baby penguin? Where, oh where?\n\n[Verse 1]\nMama penguin's home from the big blue sea,\nPeep, peep! Where's my baby? Where can he be?\nLots of fluffy babies standing in a crowd,\nShe listens for his voice and calls out loud!\n\n[Chorus]\nWhere is baby penguin? Where, oh where?\nWaddle, waddle, waddle, is he over there?\nListen for his peep-peep, listen everywhere,\nWhere is baby penguin? Where, oh where?\n\n[Verse 2]\nIs he by the ice hole? No, that's a seal!\nIs he on the snow hill? Slide, slide, wheee!\nIs he with the big friends huddled in a line?\nNot yet, mama, keep on looking, you'll be fine!\n\n[Bridge]\nFlap your flippers, flap, flap, flap!\nWaddle side to side and clap, clap, clap!\nSlide on your tummy, wheee, wheee, wheee!\nPeep like a baby, one, two, three!\n\n[Verse 3]\nPeep, peep! There he is, fluffy and gray!\nMama found her baby, hip hip hooray!\nSnuggle up close, nice and cozy and warm,\nA great big penguin hug, safe and calm!\n\n[Final Chorus]\nThere is baby penguin! There he is!\nWaddle, waddle, waddle, give a happy kiss!\nMama found her baby, hear them sing,\nPeep, peep, peep, the happiest thing!\n\n[Outro]\nPeep, peep! Bye-bye, friends!",
+  "style_used": "Cheerful bouncy sing-along pop song for families, warm friendly male lead vocal with a happy group chorus on the chorus, clear words, ukulele, glockenspiel, soft handclaps, bouncy bass, major key, about 112 bpm, catchy repetitive chorus, vocals start right away with the chorus, short happy ending."
+ },
+ "facts_checked": [
+  "Emperor penguin chicks are fluffy and gray (Smithsonian's National Zoo, San Diego Zoo).",
+  "Penguin parents find their own chick in a big group by its call/voice (San Diego Zoo, British Antarctic Survey).",
+  "Chicks gather in groups (creches) while parents fish at sea; penguins slide on their bellies (tobogganing).",
+  "Seals share the Antarctic ice with penguins."
+ ],
+ "look": "Soft 3D cartoon for toddlers, rounded friendly characters with big shiny eyes, bright saturated colors, gentle light, no text, no logos, calm and cheerful.",
+ "cast": {
+  "milo": "a small round bright-blue bluebird with big friendly brown eyes, a white belly and a yellow beak (the host, from the first clip)",
+  "mama": "a kind mama emperor penguin with a yellow-orange neck patch",
+  "baby": "a tiny fluffy gray baby penguin chick with a white face mask and big eyes"
+ },
+ "clips": [
+  {
+   "t": "0-10",
+   "section": "chorus hook",
+   "prompt": "Milo the bluebird pops up in front of the camera on a snowy Antarctic ice field, tilts his head and looks around with a curious face, a mama emperor penguin waddles behind him looking left and right. Sunny blue sky, sparkling snow, camera slowly pushes in."
   },
-  "facts_checked": [
-    "Emperor penguin chicks are fluffy and gray (Smithsonian's National Zoo, San Diego Zoo).",
-    "Penguin parents find their own chick in a big group by its call/voice (San Diego Zoo, British Antarctic Survey).",
-    "Chicks gather in groups (creches) while parents fish at sea; penguins slide on their bellies (tobogganing).",
-    "Seals share the Antarctic ice with penguins."
-  ],
-  "look": "Soft 3D cartoon for toddlers, rounded friendly characters with big shiny eyes, bright saturated colors, gentle light, no text, no logos, calm and cheerful.",
-  "cast": {
-    "milo": "a small round bright-blue bluebird with big friendly brown eyes, a white belly and a yellow beak (the host, from the first clip)",
-    "mama": "a kind mama emperor penguin with a yellow-orange neck patch",
-    "baby": "a tiny fluffy gray baby penguin chick with a white face mask and big eyes"
+  {
+   "t": "10-20",
+   "section": "chorus",
+   "prompt": "Wide shot: a big group of fluffy gray baby penguin chicks standing together on the snow, the mama emperor penguin and Milo the bluebird walk along the group peeking between the chicks, playful bouncy movement."
   },
-  "clips": [
-    {"t": "0-10",   "section": "chorus hook", "prompt": "Milo the bluebird pops up in front of the camera on a snowy Antarctic ice field, tilts his head and looks around with a curious face, a mama emperor penguin waddles behind him looking left and right. Sunny blue sky, sparkling snow, camera slowly pushes in."},
-    {"t": "10-20",  "section": "chorus", "prompt": "Wide shot: a big group of fluffy gray baby penguin chicks standing together on the snow, the mama emperor penguin and Milo the bluebird walk along the group peeking between the chicks, playful bouncy movement."},
-    {"t": "20-30",  "section": "verse 1", "prompt": "The mama emperor penguin climbs out of the blue sea onto the ice, shakes water drops off happily, Milo the bluebird flutters beside her and waves a wing."},
-    {"t": "30-40",  "section": "verse 1", "prompt": "Close-up of the mama emperor penguin lifting her beak and calling out gently, Milo the bluebird cups a wing to his ear and listens, cozy snowy background."},
-    {"t": "40-50",  "section": "chorus", "prompt": "Milo the bluebird and the mama emperor penguin waddle side by side across the snow to the beat, both looking left and right, cheerful, slow camera tracking."},
-    {"t": "50-60",  "section": "fact", "prompt": "Close-up of many fluffy gray penguin chicks in a group, one tiny chick in the middle peeps and lifts its head, soft musical note sparkles float up from it, gentle and cute."},
-    {"t": "60-70",  "section": "verse 2", "prompt": "Milo the bluebird peeks into a round hole in the ice and a friendly smiling cartoon seal pops its head out and blinks, Milo giggles and flaps his wings."},
-    {"t": "70-80",  "section": "verse 2", "prompt": "Milo the bluebird and two happy penguins slide down a gentle snowy hill on their bellies, snow sparkles, joyful, sunny."},
-    {"t": "80-90",  "section": "verse 2", "prompt": "A line of big emperor penguins huddled together, the mama penguin peeks behind them, Milo the bluebird flutters overhead looking down, playful search."},
-    {"t": "90-100", "section": "bridge", "prompt": "Milo the bluebird and three penguins dance on the snow: flapping flippers and wings, waddling side to side, clapping, very bouncy and happy, wide shot."},
-    {"t": "100-110","section": "bridge", "prompt": "Penguins and Milo the bluebird slide on their tummies across smooth ice in a fun parade, then stand up and wave, cheerful."},
-    {"t": "110-120","section": "verse 3 reveal", "prompt": "The tiny fluffy gray baby penguin chick waddles out from the group and peeps, the mama emperor penguin sees him and her face lights up with joy, Milo the bluebird cheers."},
-    {"t": "120-130","section": "verse 3", "prompt": "The mama emperor penguin snuggles her fluffy gray chick close against her tummy, a warm gentle hug, Milo the bluebird smiles and hugs himself with his wings, soft warm light."},
-    {"t": "130-140","section": "final chorus", "prompt": "Big happy celebration on the snow: the mama penguin and her chick, many penguins and Milo the bluebird dance and wave together, confetti of snowflakes, camera slowly orbits."},
-    {"t": "140-150","section": "outro", "prompt": "Milo the bluebird waves goodbye to the camera with the mama penguin and her chick beside him, they all wave flippers and wings, sunny snowy background, gentle push-out."}
-  ],
-  "meta": {
-    "title": "Where Is Baby Penguin? Penguin Song for Kids with Milo",
-    "thumb_text": "WHERE IS BABY?",
-    "description": "Where is baby penguin? Sing along with Milo the bluebird as a mama penguin searches the snowy ice for her fluffy baby and finds him by his peep-peep!\nA penguin song for kids about baby animals: waddle, flap, slide and peep along. Real fact: penguin mamas find their baby by its voice. Ages 2-6.",
-    "tags": ["where is baby penguin", "penguin song for kids", "baby animals song", "where is my mama", "animal song for kids", "kids songs", "The Animated Zoo", "Milo", "nursery rhymes"]
+  {
+   "t": "20-30",
+   "section": "verse 1",
+   "prompt": "The mama emperor penguin climbs out of the blue sea onto the ice, shakes water drops off happily, Milo the bluebird flutters beside her and waves a wing."
+  },
+  {
+   "t": "30-40",
+   "section": "verse 1",
+   "prompt": "Close-up of the mama emperor penguin lifting her beak and calling out gently, Milo the bluebird cups a wing to his ear and listens, cozy snowy background."
+  },
+  {
+   "t": "40-50",
+   "section": "chorus",
+   "prompt": "Milo the bluebird and the mama emperor penguin waddle side by side across the snow to the beat, both looking left and right, cheerful, slow camera tracking."
+  },
+  {
+   "t": "50-60",
+   "section": "fact",
+   "prompt": "Close-up of many fluffy gray penguin chicks in a group, one tiny chick in the middle peeps and lifts its head, soft musical note sparkles float up from it, gentle and cute."
+  },
+  {
+   "t": "60-70",
+   "section": "verse 2",
+   "prompt": "Milo the bluebird peeks into a round hole in the ice and a friendly smiling cartoon seal pops its head out and blinks, Milo giggles and flaps his wings."
+  },
+  {
+   "t": "70-80",
+   "section": "verse 2",
+   "prompt": "Milo the bluebird and two happy penguins slide down a gentle snowy hill on their bellies, snow sparkles, joyful, sunny."
+  },
+  {
+   "t": "80-90",
+   "section": "verse 2",
+   "prompt": "A line of big emperor penguins huddled together, the mama penguin peeks behind them, Milo the bluebird flutters overhead looking down, playful search."
+  },
+  {
+   "t": "90-100",
+   "section": "bridge",
+   "prompt": "Milo the bluebird and three penguins dance on the snow: flapping flippers and wings, waddling side to side, clapping, very bouncy and happy, wide shot."
+  },
+  {
+   "t": "100-110",
+   "section": "bridge",
+   "prompt": "Penguins and Milo the bluebird slide on their tummies across smooth ice in a fun parade, then stand up and wave, cheerful."
+  },
+  {
+   "t": "110-120",
+   "section": "verse 3 reveal",
+   "prompt": "The tiny fluffy gray baby penguin chick waddles out from the group and peeps, the mama emperor penguin sees him and her face lights up with joy, Milo the bluebird cheers."
+  },
+  {
+   "t": "120-130",
+   "section": "verse 3",
+   "prompt": "The mama emperor penguin snuggles her fluffy gray chick close against her tummy, a warm gentle hug, Milo the bluebird smiles and hugs himself with his wings, soft warm light."
+  },
+  {
+   "t": "130-140",
+   "section": "final chorus",
+   "prompt": "Big happy celebration on the snow: the mama penguin and her chick, many penguins and Milo the bluebird dance and wave together, confetti of snowflakes, camera slowly orbits."
+  },
+  {
+   "t": "140-150",
+   "section": "outro",
+   "prompt": "Milo the bluebird waves goodbye to the camera with the mama penguin and her chick beside him, they all wave flippers and wings, sunny snowy background, gentle push-out."
   }
+ ],
+ "meta": {
+  "title": "Where Is Baby Penguin? Penguin Song for Kids with Milo",
+  "thumb_text": "WHERE IS BABY?",
+  "description": "Where is baby penguin? Sing along with Milo the bluebird as a mama penguin searches the snowy ice for her fluffy baby and finds him by his peep-peep!\nA penguin song for kids about baby animals: waddle, flap, slide and peep along. Real fact: penguin mamas find their baby by its voice. Ages 2-6.",
+  "tags": [
+   "where is baby penguin",
+   "penguin song for kids",
+   "baby animals song",
+   "where is my mama",
+   "animal song for kids",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "nursery rhymes"
+  ]
+ },
+ "usage": {
+  "date": "2026-11-13",
+  "plan": "Google AI Pro ($19.99/mo)",
+  "songs_generated": 1,
+  "songs_blocked": 1,
+  "song_block_reason": "Lyria refused the first style text (it said 'preschool kids' / 'kids chorus'); rewording to 'for families' / 'group chorus' worked",
+  "song_length": "2:03",
+  "clips_generated": 13,
+  "clips_used": 13,
+  "clips_blocked": 0,
+  "pilot_test_clips": 1,
+  "clip_spec": "Omni, 720p, 10 s, landscape",
+  "parallel_generation": "5 clips at once worked",
+  "minutes_total": "about 45 (most of it working out the Vids UI; the next run should take about 20)",
+  "final_length": "2:10 (13 scenes); song ends at 2:03",
+  "vids_file": "https://docs.google.com/videos/d/14veTw8H1nGLgFRjy2AYfC8n5njDKj2JHTfJMNJneJYY/edit",
+  "export": "Export to YouTube (private, The Animated Zoo) + Export to Drive"
+ },
+ "clips_order_used": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  9,
+  11,
+  12,
+  13,
+  14
+ ]
 }

@@ -117,18 +117,55 @@ def shot_pose(shot, u, t):
     return (tgt[0] + (loc[0] - tgt[0]) * push, tgt[1] + (loc[1] - tgt[1]) * push, tgt[2] + (loc[2] - tgt[2]) * push), tgt, 35
 
 # shot list over time: each section cycles its shots per line (cuts land on line starts)
+# v2 (Nov 13, 2026), opt-in per job:
+#   "cut_mode": "beat"     -> every cut snaps to the nearest beat (on the music, not between beats)
+#   "cut_beats": {"chorus": 4, "bridge": 4, "verse": 8, ...} -> extra cuts every N beats inside long lines/sections
+#   "follow_singer": true  -> when a line is sung by one animal, cut to a close-up of that animal (lip-sync on screen)
+#   "punch": true          -> small camera punch-in on every downbeat in high-energy sections (energy >= 0.9)
+_beats = timing.get("beats") or []
+def _snap(t):
+    if job.get("cut_mode") != "beat" or not _beats: return t
+    b = min(_beats, key=lambda x: abs(x - t))
+    return b if abs(b - t) <= 0.3 else t
+_cutb = job.get("cut_beats", {})
+_bl = 60 / timing["bpm"]
 cuts = []   # (t_start, shot, section_directive)
 dmap = {d["section"]: d for d in job["direct"]}
+prev = None
 for sec in timing["sections"]:
     d = dmap.get(sec["name"], {})
     shots = d.get("shots", ["wide"])
-    ls = [l["start"] for l in timing["lines"] if sec["start"] - 0.01 <= l["start"] < sec["end"]]
+    sec_end = sec.get("end") or next((s2["start"] for s2 in timing["sections"] if s2["start"] > sec["start"]), DUR)
+    lns = [l for l in timing["lines"] if sec["start"] - 0.01 <= l["start"] < sec_end]
+    ls = [l["start"] for l in lns]
     starts = [sec["start"]] + [x for x in ls if x - sec["start"] > 0.8]
+    kind = "".join(ch for ch in sec["name"] if ch.isalpha())
+    nb = d.get("cut_beats", _cutb.get(kind))
+    if nb:   # add cuts every nb beats where the gap to the next cut is long
+        ext = []
+        bnd = starts + [sec_end]
+        for a, b in zip(bnd, bnd[1:]):
+            x = a + nb * _bl
+            while x < b - nb * _bl * 0.5:
+                ext.append(x); x += nb * _bl
+        starts = sorted(starts + ext)
     for k, st in enumerate(starts):
-        cuts.append((st, shots[k % len(shots)], d))
+        shot = shots[k % len(shots)]
+        if job.get("follow_singer"):
+            ln = next((l for l in lns if abs(l["start"] - st) < 0.05), None)
+            if ln and ln.get("who") not in (None, "host", "all", host_id) and ln.get("who") in cast and k % 2 == 1:
+                shot = "close:" + ln["who"]
+        if shot == prev and len(shots) > 1: shot = shots[(k + 1) % len(shots)]
+        prev = shot
+        cuts.append((_snap(st), shot, d))
 if not cuts or cuts[0][0] > 0:
     cuts.insert(0, (0.0, job.get("intro_shot", "orbit"), job.get("intro", {"energy": 0.6})))
 cuts.sort(key=lambda c: c[0])
+_dd = []
+for c in cuts:   # drop cuts closer than 1 beat to the previous one (snapping can stack them)
+    if _dd and c[0] - _dd[-1][0] < _bl * 0.9: _dd[-1] = c if c[0] == _dd[-1][0] else _dd[-1]; continue
+    _dd.append(c)
+cuts = _dd
 
 def cut_at(t):
     i = max(k for k, c in enumerate(cuts) if c[0] <= t)
@@ -177,6 +214,9 @@ def apply(f):
     shot, u, d = cut_at(t)
     loc, tgt, lens = shot_pose(shot, L.smoothstep(u), t)
     sway = 0.05 * math.sin(t * 0.9)
+    if job.get("punch") and d.get("energy", 0.5) >= 0.9:   # punch-in on each downbeat, eases out over the beat
+        bp = (t / beat_len) % 4.0
+        lens = lens * (1 + 0.035 * math.exp(-bp * 5) if bp < 1 else 1)
     co.location = (loc[0] + sway, loc[1], loc[2] + 0.03 * math.sin(t * 1.3)); aim.location = tgt; cam.lens = lens
     if hasattr(setmod, "animate"): setmod.animate(L, SET, f, t, {"beat": (t / beat_len) % 1.0, "bar": (t / (beat_len * 4)) % 1.0, "energy": d.get("energy", 0.5), "bpm": timing["bpm"], "talk": mouth[f] if f < len(mouth) else 0})
 

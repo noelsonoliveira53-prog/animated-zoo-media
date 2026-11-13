@@ -1,4 +1,4 @@
-# Viral 3D sing-along playbook (v6, Nov 13, 2026). The daily views check updates this from real numbers.
+# Viral 3D sing-along playbook (v7, Nov 13, 2026, evening). Only The Animated Zoo is active; the other 5 channels are paused. The daily views check updates this from real numbers.
 
 ## The format
 - **One 3D episode per channel per day.** Each runs 2:30 to 3:30 and is a sing-along song that teaches one simple idea.
@@ -132,6 +132,40 @@
   Eat?" (Nov 11), "What Do Elephants Eat?" (Nov 12). Plan: `studio/upload_plan_shorts_zoo.json`. Judge on Nov 13: views and % viewed vs the 2D Shorts
   (Flamingos 1,825 / 131%). Sister channels stay episodes-only until the Zoo test has a result.
 - **Posting times:** still no signal; keep the slots through Nov 11 (Truck 1:40, Bloop 1:50, Gizmo 2:10, Fruity 2:20, Zoo 4:00, Moonbeam 7:00 PM ET).
+
+## Nov 13 (evening): Zoo-only, dynamic songs v2, synced editing v2, rulebook fixes
+**Network:** Noelson paused Tiny Truck Town, Bloop, Fruity, Moonbeam and Gizmo. Their plan entries are "paused_channel". Only the Zoo posts:
+one Blender episode with a 10 s Vids hook (4:00 PM), one Zoo Short (11:00 AM), and a full Vids episode only when Noelson asks.
+
+**Rulebook correction (youtube-network-channels skill, KID-03 "no distress storylines"):** no animal or child lost, stuck, crying or in danger,
+even if it ends well. That rules out the "Where is my mama / Help! ... stuck" idea from earlier today (the queue items "Help! Baby Elephant
+Is Stuck in the Mud!" are cancelled). Keep the curiosity pull with PLAYFUL framings instead: hide-and-seek, peekaboo, guessing games,
+"Who is hiding?", "What's in the box?", "Whose tail is this?". Everyone is happy and safe the whole time; nobody is lost.
+Also META-03: every description ends with the AI disclosure: "The Animated Zoo makes gentle, colorful videos for little learners. New videos
+every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+
+**Songs v2 (sound like the Lyria song, but made by our ACE-Step engine on the PC):** what makes the Google song feel dynamic is contrast and lift,
+not a different genre. Every new song spec now uses:
+- style: high-energy modern sing-along pop, 120-124 bpm, punchy drums + big claps, bouncy synth bass, ukulele + glockenspiel hooks, lead vocal
+  with a group chorus on every chorus, call-and-response; verses light, pre-chorus builds (rising snare roll), chorus explodes, short claps-and-stomps
+  breakdown, final chorus key change up a whole step; vocals on beat 1, no intro, punchy ending. (Lyria refused "kids"/"preschool" words; ACE-Step
+  doesn't care, but keep "for families" anyway.)
+- structure tags with directions inside the brackets (the timing builder only reads the first word):
+  [Chorus - full band, group vocals] -> [Verse 1 - light and bouncy] -> [Pre-Chorus - build up, rising drums] (2 lines) -> [Chorus] -> [Verse 2] ->
+  [Bridge - claps and stomps, call and response] -> [Verse 3] -> [Pre-Chorus] -> [Final Chorus - key change up, biggest energy, everyone sings] -> [Outro - quick].
+- length 2:40 (duration 160). Lines short (5-8 syllables), questions answered in the next line, one sound word per verse ("Roar!", "Splash!").
+Applied to zoo3d_ep11-13 (songs/*.json and jobs/*.song.json, meta.song_v = "v2 dynamic").
+
+**Editing v2 (engine.py, opt-in flags in each job; on for all new Zoo jobs):**
+- `cut_mode: "beat"`: every cut snaps to the nearest beat, so pictures change on the music.
+- `cut_beats: {"chorus": 4, "bridge": 4, "prechorus": 2}`: extra cuts every 4 beats in choruses/bridges, every 2 in the build-up. Measured on the
+  episode-1 timing: average shot 3.9 s -> 3.0 s, chorus shots ~2 s, verses unchanged so facts stay readable.
+- `follow_singer: true`: when an animal sings its own line, the camera cuts to that animal's close-up (on-screen lip-sync).
+- `punch: true`: a 3.5% camera punch-in on each downbeat in high-energy sections (energy >= 0.9), easing out over the beat.
+- No shot repeats back to back (also across section boundaries).
+Why: Vids' clips feel alive because something new happens every few seconds (new place, new action, camera move). These flags give Blender
+the same rhythm without leaving the 4K pipeline. Next step after the views data: a second camera zone per set so each verse moves to a
+different spot of the savanna (like the Vids clips changing location).
 
 ## Adjustments from the Nov 13 views check ("Where Is My Mama?" 3,788 views / 119k impressions; network 6,456 -> 23,773)
 - **Lead topic formula (new, all channels): a story question with a friend in trouble, solved in every verse.** "Where Is My Mama?" (lost baby, finds mama

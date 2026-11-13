@@ -1137,10 +1137,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep06.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 147.0,
-  "planned_date": "2026-11-11"
+  "planned_date": "2026-11-11",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "bloop/bl3d_ep09.mp4",
@@ -1159,9 +1160,10 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "gizmo/gz3d_ep09.mp4",
@@ -1181,9 +1183,10 @@
   "time": "2:10 PM",
   "thumb": "brand/gizmo/thumb_gz3d_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
-  "duration": 165.0
+  "duration": 165.0,
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "fruity/fr3d_ep08.mp4",
@@ -1203,10 +1206,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep08.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-12"
+  "planned_date": "2026-11-12",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "zoo3d_ep10h.mp4",
@@ -1255,10 +1259,11 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep06.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 165.5,
-  "planned_date": "2026-11-11"
+  "planned_date": "2026-11-11",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "truck/tt3d_ep07.mp4",
@@ -1278,10 +1283,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep07.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-12"
+  "planned_date": "2026-11-12",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "bloop/bl3d_ep10.mp4",
@@ -1300,9 +1306,10 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "gizmo/gz3d_ep10.mp4",
@@ -1322,9 +1329,10 @@
   "time": "2:10 PM",
   "thumb": "brand/gizmo/thumb_gz3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
-  "duration": 165.0
+  "duration": 165.0,
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "fruity/fr3d_ep09.mp4",
@@ -1344,10 +1352,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-13"
+  "planned_date": "2026-11-13",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "moon/mb3d_ep07.mp4",
@@ -1368,10 +1377,11 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep07.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 170.0,
-  "planned_date": "2026-11-12"
+  "planned_date": "2026-11-12",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "truck/tt3d_ep08.mp4",
@@ -1391,10 +1401,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep08.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-13"
+  "planned_date": "2026-11-13",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "bloop/bl3d_ep11.mp4",
@@ -1413,9 +1424,10 @@
   "time": "1:50 PM",
   "thumb": "brand/bloop/thumb_bl3d_ep11.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
-  "duration": 150.0
+  "duration": 150.0,
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "fruity/fr3d_ep10.mp4",
@@ -1435,10 +1447,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-14"
+  "planned_date": "2026-11-14",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "moon/mb3d_ep08.mp4",
@@ -1457,10 +1470,11 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep08.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 170.0,
-  "planned_date": "2026-11-13"
+  "planned_date": "2026-11-13",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "truck/tt3d_ep09.mp4",
@@ -1480,10 +1494,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-14"
+  "planned_date": "2026-11-14",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "fruity/fr3d_ep11.mp4",
@@ -1502,10 +1517,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep11.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-15"
+  "planned_date": "2026-11-15",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "moon/mb3d_ep09.mp4",
@@ -1524,10 +1540,11 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 170.0,
-  "planned_date": "2026-11-14"
+  "planned_date": "2026-11-14",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "truck/tt3d_ep10.mp4",
@@ -1547,10 +1564,11 @@
   "time": "1:40 PM",
   "thumb": "brand/truck/thumb_tt3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-15"
+  "planned_date": "2026-11-15",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "fruity/fr3d_ep12.mp4",
@@ -1570,10 +1588,11 @@
   "time": "2:20 PM",
   "thumb": "brand/fruity/thumb_fr3d_ep12.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 150.0,
-  "planned_date": "2026-11-16"
+  "planned_date": "2026-11-16",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
   "file": "moon/mb3d_ep10.mp4",
@@ -1592,9 +1611,10 @@
   "time": "7:00 PM",
   "thumb": "brand/moon/thumb_mb3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "paused_channel",
   "format": "3d_singalong",
   "duration": 170.0,
-  "planned_date": "2026-11-15"
+  "planned_date": "2026-11-15",
+  "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  }
 ]

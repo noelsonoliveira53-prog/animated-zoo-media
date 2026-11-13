@@ -15,3 +15,7 @@ Hard rules
 - One episode per channel per day, max 6 uploads per run across the network, stop on "Daily upload limit reached".
 - Log every AI generation (song, clip, image, retries) in the episode's `usage` block so credit use can be measured.
 - Leave YouTube Studio on The Animated Zoo when done.
+
+
+## Variety rule (Noelson, Nov 13, 2026)
+No two episodes may look the same. Pick places and animals with `python3 studio/zoo3d/variety.py suggest`, give the clips 3-5 different settings, and record the episode in studio/zoo3d/variety_ledger.json. Topics suggested by YouTube Studio may be reused only as topics, never as the same pictures.

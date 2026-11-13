@@ -2,6 +2,11 @@
 
 Browser: the Claude browser pane on Noelson's PC (signed in to Google with the AI Pro plan). Vids = docs.google.com/videos.
 
+## Variety rule (Nov 13): no two episodes look alike
+Every Vids episode (and every hook) needs its own places and cast: run `python3 studio/zoo3d/variety.py suggest`, use 3-5
+different settings across the clips (never the same background twice in a row), and never copy the look of a recent episode,
+even if YouTube Studio suggests that topic. Record the episode in studio/zoo3d/variety_ledger.json.
+
 ## 1. Write the spec (cloud)
 `studio/vids/eps/<id>.json` (id: zoov_epNN, ttv_epNN, blv_epNN, frv_epNN, mbv_epNN, gzv_epNN). Copy zoov_ep01.json:
 song.style, song.lyrics ([Chorus]/[Verse]/[Bridge]/[Final Chorus]/[Outro] tags, about 2:30), facts_checked, look, cast,

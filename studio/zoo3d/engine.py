@@ -66,7 +66,26 @@ rng = random.Random(job.get("seed", 7))
 
 # ---------------------------------------------------------------- set + cast
 setmod = importlib.import_module("sets." + job["set"])
-SET = setmod.build(L, rng, **job.get("set_opts", {}))
+# "locations" (Nov 13, 2026, Google Vids principle: each part of the song gets a fresh place):
+#   [{"from": "<section name>", "biome": "...", "tod": "...", ...set_opts}, ...]; the first one starts at 0:00.
+#   Every location is built once, 1 km apart under its own root; the camera, cast and props jump to the active one,
+#   the others are hidden from the render, and the world (sky) switches with it.
+LOCS = job.get("locations") or [dict(job.get("set_opts", {}))]
+SETS, LOC_OFF, LOC_WORLD, LOC_COLL = [], [], [], []
+for _i, _lc in enumerate(LOCS):
+    _before = set(bpy.data.objects)
+    _opts = dict(job.get("set_opts", {})); _opts.update({k: v for k, v in _lc.items() if k != "from"})
+    _st = setmod.build(L, random.Random(job.get("seed", 7) + 101 * _i), **_opts)
+    if len(LOCS) > 1:
+        _col = bpy.data.collections.new(f"Location{_i}"); S.collection.children.link(_col)
+        _root = bpy.data.objects.new(f"LocRoot{_i}", None); _col.objects.link(_root); _root.location = (_i * 1000.0, 0, 0)
+        for _o in [o for o in bpy.data.objects if o not in _before and o is not _root]:
+            for _c in list(_o.users_collection): _c.objects.unlink(_o)
+            _col.objects.link(_o)
+            if _o.parent is None: _o.parent = _root
+        LOC_COLL.append(_col)
+    SETS.append(_st); LOC_OFF.append(_i * 1000.0); LOC_WORLD.append(S.world)
+SET = SETS[0]
 spots = SET["spots"]
 cast = {}
 for c in job["cast"]:
@@ -228,8 +247,31 @@ def state_for(ch, f, t):
             "wave": d.get("wave", 0) * (1 if (t % (beat_len * 8)) < beat_len * 2 else 0), "jump": d.get("jump", 0),
             "blink": blink, "singing": singing, "t_section": t, "bpm": timing["bpm"]}
 
+_LOC_T = []
+for _i, _lc in enumerate(LOCS):
+    _sec = next((x for x in timing["sections"] if x["name"] == _lc.get("from")), None)
+    _LOC_T.append((0.0 if _i == 0 or not _sec else _sec["start"], _i))
+_LOC_T.sort()
+_PROP_BASE = [(o, tuple(o.location)) for o, *_ in props]
+_loc_now = [None]
+
+def loc_at(t):
+    return max((x for x in _LOC_T if x[0] <= t + 1e-6), default=(0.0, 0))[1]
+
+def set_location(i):
+    global SET
+    if _loc_now[0] == i: return
+    _loc_now[0] = i; SET = SETS[i]; ox = LOC_OFF[i]
+    for k, col in enumerate(LOC_COLL): col.hide_render = (k != i); col.hide_viewport = (k != i)
+    S.world = LOC_WORLD[i]
+    for ch in cast.values(): ch.root.location = (ch.base[0] + ox, ch.base[1], ch.base[2])
+    for o, b in _PROP_BASE: o.location = (b[0] + ox, b[1], b[2])
+    try: S.view_settings.exposure = SET.get("exposure", -0.3)
+    except Exception: pass
+
 def apply(f):
     t = f / FPS
+    set_location(loc_at(t))
     for ch in cast.values():
         ch.pose(f, t, state_for(ch, f, t))
     for o, t0, t1, bs, spin in props:
@@ -246,7 +288,8 @@ def apply(f):
     if job.get("punch") and d.get("energy", 0.5) >= 0.9:   # punch-in on each downbeat, eases out over the beat
         bp = (t / beat_len) % 4.0
         lens = lens * (1 + 0.035 * math.exp(-bp * 5) if bp < 1 else 1)
-    co.location = (loc[0] + sway, loc[1], loc[2] + 0.03 * math.sin(t * 1.3)); aim.location = tgt; cam.lens = lens
+    ox = LOC_OFF[_loc_now[0] or 0]
+    co.location = (loc[0] + sway + ox, loc[1], loc[2] + 0.03 * math.sin(t * 1.3)); aim.location = (tgt[0] + ox, tgt[1], tgt[2]); cam.lens = lens
     if hasattr(setmod, "animate"): setmod.animate(L, SET, f, t, {"beat": (t / beat_len) % 1.0, "bar": (t / (beat_len * 4)) % 1.0, "energy": d.get("energy", 0.5), "bpm": timing["bpm"], "talk": mouth[f] if f < len(mouth) else 0})
 
 # ---------------------------------------------------------------- render settings

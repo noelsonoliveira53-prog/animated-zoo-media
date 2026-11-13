@@ -19,6 +19,21 @@ bash studio/zoo3d/setup.sh        # pip pyworld soundfile kokoro-onnx, Kokoro mo
    upload_plan_3d.json entry for the channel's next free day, then commits and pushes.
 2. Spot-check one finished MP4: grab 3 frames with ffmpeg and look at them (faces visible, lyrics readable, nothing broken).
 
+## Variety rule (Noelson, Nov 13, 2026): no two Zoo episodes may look the same
+"Each episode should have different images and theme ... no videos are the same, even if that is what YouTube Studio is suggesting."
+A winning topic or title pattern may be reused; the PICTURES may not. Every Zoo job uses `"set": "zooworld"` with a
+`"locations"` route (3-5 places, a new place every ~20-35 s, like Google Vids where each part of the song is its own scene):
+`[{"from": "chorus1", "biome": "jungle", "tod": "morning"}, {"from": "verse1", "biome": "river", "tod": "noon"}, ...]`.
+Biomes: savanna, jungle, arctic, beach, farm, desert, autumn_forest, spring_meadow, river, mountain, bamboo, night_meadow.
+Times of day: morning, noon, golden, sunset, night. Animals (chars/animal.py): lion, elephant, giraffe, zebra, hippo, tiger,
+bear, polar_bear, panda, monkey, fox, arctic_fox, koala, horse, pig, cow, rhino (+ scale 0.55 for babies).
+1. `python3 studio/zoo3d/variety.py suggest` -> least-used places and animals. Build the NEW song around them
+   (lyrics name that cast; set `"new_song": true` in the job so the cast check applies: change 2+ animals vs the last episode).
+2. `python3 studio/zoo3d/variety.py check jobs/<id>.json` must say OK (first place differs from the last 4 episodes,
+   at most half the places repeat the previous one, 3+ places). Then `variety.py record jobs/<id>.json` and commit the ledger.
+3. Thumbnails follow: thumb_frame must show the episode's first place and its own cast. Vids hooks animate that frame.
+4. Never re-use the savanna-only look for a new episode. Old savanna renders that were not posted get re-rendered (`<id>w` jobs).
+
 ## B. Write tomorrow's episodes (one per channel)
 For each channel: truck (set town, char truck), bloop (colorlab, bloop + shape), fruity (kitchen, fruit),
 moon (nightroom, luna + sleepy), gizmo (sciencelab, gizmo), zoo (savanna or park or a new habitat set, milo + animal).

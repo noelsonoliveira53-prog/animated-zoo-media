@@ -1,0 +1,229 @@
+[
+ {
+  "id": "zoo3d_ep10",
+  "places": [
+   [
+    "savanna",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep11",
+  "places": [
+   [
+    "savanna",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep12w",
+  "places": [
+   [
+    "river",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "night_meadow",
+    "night"
+   ],
+   [
+    "river",
+    "night"
+   ],
+   [
+    "mountain",
+    "night"
+   ],
+   [
+    "night_meadow",
+    "night"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep13w",
+  "places": [
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep14w",
+  "places": [
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "desert",
+    "golden"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep15w",
+  "places": [
+   [
+    "beach",
+    "noon"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "beach",
+    "golden"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "farm",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "beach",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ },
+ {
+  "id": "zoo3d_ep16",
+  "places": [
+   [
+    "mountain",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "hippo",
+   "lion",
+   "zebra"
+  ],
+  "new_song": false
+ }
+]

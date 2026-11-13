@@ -1,0 +1,370 @@
+{
+ "id": "zoo3d_ep12w",
+ "title": "How Do Animals Sleep?",
+ "channel": "zoo",
+ "set": "zooworld",
+ "seed": 7,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "lion",
+   "char": "animal",
+   "spot": "lion",
+   "opts": {
+    "kind": "lion"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "elephant",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "giraffe",
+   "char": "animal",
+   "spot": "giraffe",
+   "opts": {
+    "kind": "giraffe"
+   },
+   "yaw": -0.1
+  },
+  {
+   "id": "zebra",
+   "char": "animal",
+   "spot": "zebra",
+   "opts": {
+    "kind": "zebra"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "hippo",
+   "char": "animal",
+   "spot": "hippo",
+   "opts": {
+    "kind": "hippo"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SLEEPY ZOO!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:lion",
+    "giraffe",
+    "close:lion",
+    "wide"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "at": [
+      -3.2,
+      1.6,
+      3.6
+     ],
+     "word": "lion",
+     "opts": {
+      "text": "LION"
+     }
+    },
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "at": [
+      3.2,
+      1.6,
+      3.6
+     ],
+     "word": "giraffe",
+     "opts": {
+      "text": "GIRAFFE"
+     }
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "wide",
+    "orbit",
+    "close:host",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.3,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "1, 2, 3...",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.6,
+     "word": "count"
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:zebra",
+    "close:hippo",
+    "close:zebra",
+    "wide"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "at": [
+      -3.2,
+      1.6,
+      3.6
+     ],
+     "word": "zebra",
+     "opts": {
+      "text": "ZEBRA"
+     }
+    },
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "at": [
+      3.2,
+      1.6,
+      3.6
+     ],
+     "word": "hippo",
+     "opts": {
+      "text": "HIPPO"
+     }
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:host",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "jump": 0.5,
+   "wave": 1,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "STAND TALL!",
+     "color": "#ffb627",
+     "at": [
+      -3.4,
+      0.3,
+      3.5
+     ],
+     "size": 0.55,
+     "word": "Stand"
+    },
+    {
+     "type": "text",
+     "text": "CURL UP!",
+     "color": "#8e5bd8",
+     "at": [
+      3.4,
+      0.3,
+      3.5
+     ],
+     "size": 0.55,
+     "word": "Curl"
+    },
+    {
+     "type": "text",
+     "text": "YAWN!",
+     "color": "#3b8be0",
+     "at": [
+      0,
+      0.6,
+      4.3
+     ],
+     "size": 0.7,
+     "word": "Yawn,"
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:elephant",
+    "close:host",
+    "wide",
+    "close:host"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "at": [
+      -3.2,
+      1.6,
+      3.6
+     ],
+     "word": "elephant",
+     "opts": {
+      "text": "ELEPHANT"
+     }
+    },
+    {
+     "type": "text",
+     "text": "NEST!",
+     "color": "#8a5a32",
+     "at": [
+      3.2,
+      1.6,
+      3.6
+     ],
+     "size": 0.6,
+     "word": "nest,"
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.6,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SLEEPY ZOO!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "GOODNIGHT!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.8
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep12",
+ "res": "1920x1080",
+ "step": 1,
+ "timing_file": "zoo3d_ep12_timing.json",
+ "audio": "zoo3d_ep12_song.wav",
+ "set_opts": {},
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "river",
+   "tod": "sunset"
+  },
+  {
+   "from": "verse1",
+   "biome": "savanna",
+   "tod": "sunset"
+  },
+  {
+   "from": "chorus2",
+   "biome": "night_meadow",
+   "tod": "night"
+  },
+  {
+   "from": "verse2",
+   "biome": "river",
+   "tod": "night",
+   "seed": 2
+  },
+  {
+   "from": "bridge1",
+   "biome": "mountain",
+   "tod": "night"
+  },
+  {
+   "from": "verse3",
+   "biome": "night_meadow",
+   "tod": "night",
+   "seed": 9
+  }
+ ],
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4
+ },
+ "follow_singer": true,
+ "punch": true
+}

@@ -167,6 +167,18 @@ Why: Vids' clips feel alive because something new happens every few seconds (new
 the same rhythm without leaving the 4K pipeline. Next step after the views data: a second camera zone per set so each verse moves to a
 different spot of the savanna (like the Vids clips changing location).
 
+## Nov 13 (night): VARIETY RULE, every episode looks different (Noelson)
+Noelson: themes changed but "images and background is the same", follow the Google Vids principles in Blender and
+"ensure no videos are the same even if that is what YouTube Studio is suggesting". Done:
+- New set `sets/zooworld.py`: 12 biomes x 5 times of day (sky, light, ground, trees, far background, moving details:
+  butterflies, fireflies, snow, falling leaves, bubbles, waterfall).
+- Engine `locations`: an episode travels through 3-5 places, switching at song sections (Vids principle: every part is a fresh scene).
+- 12 new animals on the shared rig (tiger, bear, polar bear, panda, monkey, fox, arctic fox, koala, horse, pig, cow, rhino) + babies.
+- `variety.py` ledger blocks repeats (first place vs last 4 episodes, place overlap, cast change for new songs).
+- Re-rendering with new worlds: ep12 (sunset river -> night meadow, sleepy song), ep13 (spring meadow + babies),
+  ep14 (jungle/bamboo/desert), ep15 (beach/jungle/farm), ep16 (mountain/meadow/autumn/arctic). ep10h/ep11h were already scheduled.
+- Studio "inspiration" topics may be reused only as topics; pictures and casts must be new.
+
 ## Adjustments from the Nov 13 views check ("Where Is My Mama?" 3,788 views / 119k impressions; network 6,456 -> 23,773)
 - **Lead topic formula (new, all channels): a story question with a friend in trouble, solved in every verse.** "Where Is My Mama?" (lost baby, finds mama
   each verse) got 4x the reach of any other song; Truck's "Help! The Dump Truck Is Stuck!" holds 0:56 (39%), the best 3D retention. Write each song as:

@@ -13,6 +13,24 @@ KINDS = {
     "hippo":    ("#a493d6", "#f2b8d4", "#7f6cb8", "#ff9ec0", "#3a2414"),
 }
 
+# Variety cast (Nov 13, 2026): new animals built on the five bodies above, so every episode can have its own cast.
+#   name: (base body, (fur, belly, dark, inner-ear, iris), extras)
+VARIANTS = {
+    "tiger":      ("lion",  ("#f28a2e", "#fff3e0", "#2b1d16", "#ffb0c0", "#7a4a12"), {"nomane": 1, "stripes": 1}),
+    "bear":       ("lion",  ("#9c6b43", "#e8c9a0", "#5e3b22", "#e8a58f", "#3a2414"), {"nomane": 1}),
+    "polar_bear": ("lion",  ("#f4f6fa", "#ffffff", "#9aa3b5", "#f0c9d2", "#2a1c10"), {"nomane": 1}),
+    "panda":      ("lion",  ("#f7f7f2", "#ffffff", "#2a2930", "#2a2930", "#2a1c10"), {"nomane": 1, "panda": 1}),
+    "monkey":     ("lion",  ("#8a5a3a", "#f2d2a9", "#5a3622", "#f5b3a0", "#3a2414"), {"nomane": 1, "sideears": 1, "longtail": 1}),
+    "fox":        ("lion",  ("#f07a2a", "#fff6ea", "#3a2a24", "#ffb0b8", "#6a3a12"), {"nomane": 1, "pointyears": 1, "bushytail": 1}),
+    "arctic_fox": ("lion",  ("#f6f8fc", "#ffffff", "#c9d2e3", "#ffc3cf", "#3a4a6a"), {"nomane": 1, "pointyears": 1, "bushytail": 1}),
+    "koala":      ("lion",  ("#a7adb8", "#e9ecf1", "#4a4d57", "#f6f0f2", "#2a1c10"), {"nomane": 1, "fluffyears": 1}),
+    "horse":      ("zebra", ("#b8794a", "#e8c9a6", "#5a3422", "#ffb0c0", "#3a2414"), {"plain": 1}),
+    "pig":        ("hippo", ("#ffb3c6", "#ffd6e2", "#e886a4", "#ff8fb0", "#3a2414"), {"pointyears": 1, "noteeth": 1, "curlytail": 1}),
+    "cow":        ("hippo", ("#fbfaf6", "#ffc9d8", "#2a2830", "#ffb3c7", "#3a2414"), {"cowspots": 1, "horns": 1, "noteeth": 1}),
+    "rhino":      ("hippo", ("#9fa6b2", "#d3d8e0", "#6f7684", "#ffb3c7", "#3a2414"), {"horn": 1, "noteeth": 1}),
+}
+ALL_KINDS = list(KINDS) + list(VARIANTS)
+
 
 # ---------------------------------------------------------------- materials
 def _fur(L, kind, slot, hexc, sheen=0.55, rough=0.62):
@@ -63,28 +81,45 @@ def _pattern(L, kind, name, base_hex, mark_hex, mode, scale, cut):
 
 # ---------------------------------------------------------------- build
 def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
-    kind = kind if kind in KINDS else "lion"
-    fur_h, belly_h, dark_h, ear_h, iris_h = KINDS[kind]
+    vk = kind if (kind in KINDS or kind in VARIANTS) else "lion"   # visual kind (colors, extras)
+    X = {}
+    if vk in VARIANTS:
+        kind, cols, X = VARIANTS[vk]
+    else:
+        kind, cols = vk, KINDS[vk]
+    fur_h, belly_h, dark_h, ear_h, iris_h = cols
     fur_h = opts.get("color", fur_h)
     P = prefix
     M = {
-        "fur": _fur(L, kind, "fur", fur_h),
-        "belly": _fur(L, kind, "belly", belly_h, 0.45, 0.66),
-        "dark": _fur(L, kind, "dark", dark_h, 0.5, 0.68),
-        "ear": L.mat(f"{kind}_ear", ear_h, 0.55, sss=0.15),
+        "fur": _fur(L, vk, "fur", fur_h),
+        "belly": _fur(L, vk, "belly", belly_h, 0.45, 0.66),
+        "dark": _fur(L, vk, "dark", dark_h, 0.5, 0.68),
+        "ear": L.mat(f"{vk}_ear", ear_h, 0.55, sss=0.15),
         "cheek": L.mat("AnimalCheek", "#ff86a8", 0.6),
         "mouth": L.mat("AnimalMouth", "#5a1724", 0.5, coat=0.4),
         "tongue": L.mat("AnimalTongue", "#ff6f8e", 0.4, coat=0.5, sss=0.1),
-        "nose": L.mat(f"{kind}_nose", {"lion": "#7a3b2a", "elephant": "#5d6b8f", "giraffe": "#5b3a1e",
+        "nose": L.mat(f"{vk}_nose", {"lion": "#7a3b2a", "elephant": "#5d6b8f", "giraffe": "#5b3a1e",
                                         "zebra": "#2a2830", "hippo": "#6e5aa8"}[kind], 0.3, coat=0.8),
-        "hoof": L.mat(f"{kind}_hoof", {"lion": "#fde3a7", "elephant": "#f3ead8", "giraffe": "#5b3a1e",
+        "hoof": L.mat(f"{vk}_hoof", {"lion": "#fde3a7", "elephant": "#f3ead8", "giraffe": "#5b3a1e",
                                         "zebra": "#26242b", "hippo": "#f3e3ee"}[kind], 0.35, coat=0.6),
-        "brow": L.mat(f"{kind}_brow", {"lion": "#9a4a14", "elephant": "#55638a", "giraffe": "#8a5222",
+        "brow": L.mat(f"{vk}_brow", {"lion": "#9a4a14", "elephant": "#55638a", "giraffe": "#8a5222",
                                         "zebra": "#25232b", "hippo": "#5e4c99"}[kind], 0.6),
         "tooth": L.mat("AnimalTooth", "#ffffff", 0.25, coat=0.8),
     }
+    if vk in VARIANTS:   # variant noses/brows follow their own palette
+        M["nose"] = L.mat(f"{vk}_nose2", "#ff8fab" if vk == "pig" else ("#3a2a24" if vk not in ("cow",) else "#f2a7b8"), 0.3, coat=0.8)
+        M["brow"] = L.mat(f"{vk}_brow2", dark_h, 0.6)
+        if kind == "zebra": M["hoof"] = L.mat(f"{vk}_hoof2", "#4a2e1e", 0.35, coat=0.6)
     body_m = M["fur"]; head_m = M["fur"]; limb_m = M["fur"]
-    if kind == "zebra":
+    if X.get("stripes"):
+        body_m = _pattern(L, vk, "stripesX", fur_h, dark_h, "stripes_x", 1.6, 0.74)
+        head_m = _pattern(L, vk, "stripesH", fur_h, dark_h, "stripes_z", 1.7, 0.78)
+        limb_m = _pattern(L, vk, "stripesZ", fur_h, dark_h, "stripes_z", 1.9, 0.76)
+    if X.get("cowspots"):
+        body_m = head_m = _pattern(L, vk, "spots", fur_h, dark_h, "spots", 2.8, 0.3)
+    if X.get("panda"):
+        limb_m = M["dark"]
+    if kind == "zebra" and not X.get("plain"):
         body_m = _pattern(L, kind, "stripesX", "#f7f4ee", "#25232b", "stripes_x", 1.45, 0.5)
         limb_m = _pattern(L, kind, "stripesZ", "#f7f4ee", "#25232b", "stripes_z", 1.8, 0.5)
         head_m = _pattern(L, kind, "stripesH", "#f7f4ee", "#25232b", "stripes_z", 1.55, 0.5)
@@ -96,7 +131,7 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
     rig = L.empty(P + "Rig", (0, 0, hip), root)
     wide = 1.12 if kind in ("hippo", "elephant") else 1.0
     L.sphere(P + "Body", 0.58, (0, 0, 0), (1.0 * wide, 0.9 * wide, 1.05), body_m, rig, 40)
-    if kind != "zebra":
+    if kind != "zebra" or X.get("plain"):
         L.sphere(P + "Belly", 0.46, (0, -0.24, -0.08), (0.92 * wide, 0.62, 0.95), M["belly"], rig, 32)
 
     # ---- head (giraffe: on a long neck)
@@ -133,7 +168,12 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
                 "hippo": ((0, -0.885, -0.2), 0.27)}[kind]
     (mx, my, mz), mw = mouth_at
     jaw = L.empty(P + "Jaw", (0, -0.25, -0.26), head)
-    if kind == "lion":
+    if kind == "lion" and vk == "monkey":
+        L.sphere(P + "Face", 1.0, (0, -0.3, -0.02), (0.4, 0.3, 0.38), M["belly"], head, 32)
+    if kind == "lion" and vk == "koala":
+        L.sphere(P + "Snout", 0.15, (0, -0.44, -0.08), (1.0, 0.75, 1.3), M["dark"], head, 24)
+        my, mz = -0.45, -0.35
+    elif kind == "lion":
         for sx in (-1, 1):
             L.sphere(f"{P}Pad{sx}", 0.15, (0.12 * sx, -0.4, -0.15), (1, 0.8, 0.85), M["belly"], head, 24)
         L.sphere(P + "Snout", 0.16, (0, -0.37, -0.27), (1.1, 0.8, 0.7), M["belly"], head, 24)
@@ -142,7 +182,7 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
     elif kind in ("giraffe", "zebra"):
         mzc = (0, -0.42, -0.17) if kind == "giraffe" else (0, -0.44, -0.17)
         ms = (0.29, 0.34, 0.24) if kind == "giraffe" else (0.29, 0.34, 0.24)
-        L.sphere(P + "Muzzle", 1.0, mzc, ms, M["belly"] if kind == "giraffe" else L.mat("zebra_muzzle", "#55505e", 0.55, sheen=0.4), head, 32)
+        L.sphere(P + "Muzzle", 1.0, mzc, ms, M["belly"] if (kind == "giraffe" or X.get("plain")) else L.mat("zebra_muzzle", "#55505e", 0.55, sheen=0.4), head, 32)
         for sx in (-1, 1):
             L.sphere(f"{P}Nostril{sx}", 0.035, (0.1 * sx, mzc[1] - ms[1] + 0.06, mzc[2] + 0.08), (1, 0.6, 1.2), M["mouth"], head, 10)
     elif kind == "hippo":
@@ -150,8 +190,18 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
         for sx in (-1, 1):
             L.sphere(f"{P}Nostril{sx}", 0.06, (0.17 * sx, -0.78, 0.08), (1, 0.8, 0.6), M["dark"], head, 12)
         L.sphere(P + "Chin", 1.0, (0, -0.24, -0.02), (0.46, 0.36, 0.16), M["belly"], jaw, 40)
-        for sx in (-1, 1):
-            L.cone(f"{P}Tooth{sx}", 0.05, 0.02, 0.12, (0.24 * sx, -0.52, 0.12), (1, 1, 1), M["tooth"], jaw, verts=12)
+        if not X.get("noteeth"):
+            for sx in (-1, 1):
+                L.cone(f"{P}Tooth{sx}", 0.05, 0.02, 0.12, (0.24 * sx, -0.52, 0.12), (1, 1, 1), M["tooth"], jaw, verts=12)
+        if vk == "pig":
+            L.cylinder(P + "PigNose", 0.2, 0.1, (0, -0.86, 0.02), (1.2, 1, 0.85), M["nose"], head, (math.pi / 2, 0, 0), verts=32)
+            for sx in (-1, 1):
+                L.sphere(f"{P}PigNostril{sx}", 0.045, (0.08 * sx, -0.915, 0.02), (1, 0.5, 1.3), M["mouth"], head, 12)
+        if X.get("horn"):
+            L.cone(P + "Horn", 0.13, 0.0, 0.4, (0, -0.74, 0.32), (1, 0.8, 1), L.mat(f"{vk}_horn", "#efe6d2", 0.4, coat=0.5), head, (-0.35, 0, 0), verts=20)
+        if X.get("horns"):
+            for sx in (-1, 1):
+                L.cone(f"{P}Horn{sx}", 0.06, 0.015, 0.26, (0.3 * sx, 0.0, hr + 0.02), (1, 1, 1), L.mat(f"{vk}_horn", "#f3ead2", 0.4, coat=0.5), head, (0, 0.5 * sx, 0), verts=14)
     mouth_m = L.mat("AnimalMouthDark", "#3a0912", 0.8)
     smile = L.torus(P + "Smile", mw * 0.9, 0.02 if kind != "hippo" else 0.03, (mx, my - 0.005, mz + mw * 0.45), (1, 0.35 if kind == "hippo" else 0.6, 0.75),
                     mouth_m, head, (math.pi / 2, 0, 0))
@@ -163,7 +213,31 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
 
     # ---- ears and signature features
     flaps = []      # (pivot, base_rot, axis_index, amp, phase)
-    if kind == "lion":
+    if kind == "lion" and X:
+        if X.get("panda"):
+            for sx in (-1, 1):
+                L.sphere(f"{P}Patch{sx}", er * 1.25, (esp * sx, ey + 0.06, ez), (1.0, 0.45, 1.25), M["dark"], head, 20, (0, -0.35 * sx, 0))
+        if X.get("pointyears"):
+            for sx in (-1, 1):
+                e = L.empty(f"{P}Ear{sx}", (0.3 * sx, 0.04, 0.4), head); e.rotation_euler = (0, 0.4 * sx, 0)
+                L.cone(P + "EarO", 0.15, 0.02, 0.4, (0, 0, 0.14), (1, 0.5, 1), M["fur"], e, verts=16)
+                L.cone(P + "EarI", 0.09, 0.01, 0.27, (0, -0.05, 0.12), (1, 0.4, 1), M["ear"], e, verts=12)
+                L.cone(P + "EarTip", 0.06, 0.0, 0.12, (0, 0, 0.3), (1, 0.55, 1), M["dark"], e, verts=12)
+                flaps.append((e, (0, 0.4 * sx, 0), 1, 0.2 * sx, 0))
+        elif X.get("sideears") or X.get("fluffyears"):
+            big = 1.45 if X.get("fluffyears") else 1.0
+            for sx in (-1, 1):
+                e = L.empty(f"{P}Ear{sx}", ((0.5 if X.get("sideears") else 0.42) * sx, 0.04, 0.12 if X.get("sideears") else 0.36), head)
+                L.sphere(P + "EarO", 0.17 * big, (0.05 * sx, 0, 0), (1, 0.45, 1), M["fur"] if not X.get("fluffyears") else M["belly"], e, 20)
+                L.sphere(P + "EarI", 0.11 * big, (0.05 * sx, -0.05, 0), (1, 0.35, 1), M["ear"], e, 16)
+                flaps.append((e, (0, 0, 0), 1, 0.18 * sx, 0))
+        else:
+            for sx in (-1, 1):
+                e = L.empty(f"{P}Ear{sx}", (0.36 * sx, 0.02, 0.42), head)
+                L.sphere(P + "EarO", 0.15, (0, 0, 0), (1, 0.55, 1), M["dark"] if X.get("panda") else M["fur"], e, 20)
+                L.sphere(P + "EarI", 0.095, (0, -0.06, -0.01), (1, 0.4, 1), M["dark"] if X.get("panda") else M["ear"], e, 16)
+                flaps.append((e, (0, 0, 0), 1, 0.15 * sx, 0))
+    elif kind == "lion":
         for k in range(14):
             a = k / 14 * math.tau
             L.sphere(P + "Mane", 0.25 if k % 2 else 0.22, (math.cos(a) * 0.58, 0.14, math.sin(a) * 0.6 + 0.02), (1, 0.75, 1),
@@ -193,12 +267,18 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
         for k in range(7):
             a = -0.2 + k * 0.33
             z, y = math.cos(a) * (hr + 0.03), math.sin(a) * (hr + 0.03)
-            L.sphere(P + "Mane", 0.1, (0, y, z), (0.55, 1.1, 1.2), M["dark"] if k % 2 == 0 else M["fur"], head, 14, (a, 0, 0))
+            L.sphere(P + "Mane", 0.1, (0, y, z), (0.55, 1.1, 1.2), M["dark"] if (k % 2 == 0 or X.get("plain")) else M["fur"], head, 14, (a, 0, 0))
         for sx in (-1, 1):
             e = L.empty(f"{P}Ear{sx}", (0.26 * sx, 0.04, 0.42), head); e.rotation_euler = (0, 0.35 * sx, 0)
             L.cone(P + "EarO", 0.1, 0.02, 0.32, (0, 0, 0.12), (1, 0.55, 1), M["fur"], e, verts=16)
             L.cone(P + "EarI", 0.06, 0.01, 0.22, (0, -0.04, 0.1), (1, 0.4, 1), M["ear"], e, verts=12)
             flaps.append((e, (0, 0.35 * sx, 0), 1, 0.2 * sx, 0))
+    elif kind == "hippo" and X.get("pointyears"):
+        for sx in (-1, 1):
+            e = L.empty(f"{P}Ear{sx}", (0.36 * sx, 0.08, 0.46), head); e.rotation_euler = (-0.5, 0.45 * sx, 0)
+            L.cone(P + "EarO", 0.16, 0.02, 0.32, (0, 0, 0.12), (1, 0.45, 1), M["fur"], e, verts=16)
+            L.cone(P + "EarI", 0.1, 0.01, 0.22, (0, -0.04, 0.1), (1, 0.35, 1), M["ear"], e, verts=12)
+            flaps.append((e, (-0.5, 0.45 * sx, 0), 1, 0.25 * sx, 0))
     elif kind == "hippo":
         for sx in (-1, 1):
             e = L.empty(f"{P}Ear{sx}", (0.42 * sx, 0.12, 0.44), head)
@@ -245,11 +325,25 @@ def build(L, prefix="Animal", loc=(0, 0, 0), scale=1.0, kind="lion", **opts):
     # ---- tail
     tail = L.empty(P + "Tail", (0, 0.5 * wide, -0.25), rig)
     tl = {"lion": 0.5, "elephant": 0.3, "giraffe": 0.45, "zebra": 0.45, "hippo": 0.15}[kind]
-    L.cylinder(P + "TailS", 0.035 if kind != "hippo" else 0.06, tl, (0, tl * 0.35, -tl * 0.35), m=M["fur"] if kind != "zebra" else M["dark"], parent=tail, rot=(-0.8, 0, 0), verts=10)
-    if kind in ("lion", "giraffe", "zebra", "elephant"):
-        L.sphere(P + "TailTuft", 0.09 if kind == "lion" else 0.07, (0, tl * 0.7, -tl * 0.7), (1, 1, 1.4), M["dark"], tail, 14)
+    if X.get("bushytail"):
+        L.sphere(P + "TailS", 0.2, (0, 0.32, -0.2), (0.75, 1.5, 0.75), M["fur"], tail, 24, (-0.6, 0, 0))
+        L.sphere(P + "TailTip", 0.13, (0, 0.6, -0.38), (0.8, 1.1, 0.8), M["belly"], tail, 20, (-0.6, 0, 0))
+    elif X.get("longtail"):
+        for k in range(7):
+            a = k / 6 * 2.4
+            L.sphere(f"{P}TailS{k}", 0.05, (0, 0.12 + 0.13 * k, -0.25 + 0.6 * math.sin(a * 0.9)), (1, 1, 1), M["fur"], tail, 12)
+    elif X.get("curlytail"):
+        L.torus(P + "TailS", 0.08, 0.03, (0, 0.1, 0.0), (1, 1, 1), M["fur"], tail, (0, math.pi / 2, 0))
+    elif kind == "lion" and X:
+        L.sphere(P + "TailS", 0.1, (0, 0.08, 0.0), (1, 1, 1), M["fur"], tail, 14)   # short bear tail
+    else:
+        hair = X.get("plain")
+        L.cylinder(P + "TailS", 0.035 if kind != "hippo" else 0.06, tl, (0, tl * 0.35, -tl * 0.35), m=(M["dark"] if kind == "zebra" else M["fur"]), parent=tail, rot=(-0.8, 0, 0), verts=10)
+        if kind in ("lion", "giraffe", "zebra", "elephant"):
+            L.sphere(P + "TailTuft", (0.13 if hair else (0.09 if kind == "lion" else 0.07)), (0, tl * 0.7, -tl * 0.7), (1, 1, 1.4 if not hair else 2.2), M["dark"], tail, 14)
 
     ch = Char(L, kind, root, rig, head, neck, eyes, brows, jaw, cav, cav_s, tongue, flaps, trunk, arms, legs, tail)
+    ch.vkind = vk
     return ch
 
 

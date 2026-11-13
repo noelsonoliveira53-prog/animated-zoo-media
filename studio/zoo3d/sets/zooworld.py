@@ -76,13 +76,12 @@ def _world(L, name, stops):
     tc = nt.nodes.new("ShaderNodeTexCoord"); sep = nt.nodes.new("ShaderNodeSeparateXYZ")
     nt.links.new(tc.outputs["Generated"], sep.inputs[0])
     ramp = nt.nodes.new("ShaderNodeValToRGB"); cr = ramp.color_ramp
-    pos = (0.0, 0.08, 0.22, 0.45)
+    pos = (0.0, 0.05, 0.14, 0.42)
     cr.elements[0].position = pos[0]; cr.elements[0].color = (*L.rgb(stops[0]), 1)
     cr.elements[1].position = pos[3]; cr.elements[1].color = (*L.rgb(stops[3]), 1)
     for p, c in zip(pos[1:3], stops[1:3]):
         e = cr.elements.new(p); e.color = (*L.rgb(c), 1)
-    mr = nt.nodes.new("ShaderNodeMapRange"); mr.inputs["From Min"].default_value = 0.5; mr.inputs["From Max"].default_value = 1.0
-    nt.links.new(sep.outputs["Z"], mr.inputs["Value"]); nt.links.new(mr.outputs["Result"], ramp.inputs["Fac"])
+    nt.links.new(sep.outputs["Z"], ramp.inputs["Fac"])
     nt.links.new(ramp.outputs["Color"], bg.inputs["Color"]); bg.inputs["Strength"].default_value = 1.0
     return w
 
@@ -210,9 +209,9 @@ def _far(L, rng, kind, B):
         ice = L.mat("ZWIceberg", "#cfe8ff", 0.25, coat=0.8, sss=0.2)
         for k, (x, y, s) in enumerate(((-26, 60, 7), (-6, 70, 9), (18, 62, 6), (36, 72, 8))):
             L.cone("Iceberg", s, s * 0.3, s * 1.1, (x, y, s * 0.4), (1.3, 0.8, 1), ice, verts=7, rot=(0, 0, k))
-        L.cube("Sea", 1, (0, 75, -0.45), (240, 40, 1), L.mat("ZWSea", "#4aa8e0", 0.08, coat=1.0))
+        L.cube("Sea", 1, (0, 75, -0.45), (240, 40, 1), L.mat("ZWSea", "#4aa8e0", 0.45, emission="#4aa8e0", emit=0.15))
     elif kind == "ocean":
-        L.cube("Sea", 1, (0, 50, -0.42), (260, 70, 1), L.mat("ZWOcean", "#2fb4e0", 0.06, coat=1.0))
+        L.cube("Sea", 1, (0, 50, -0.42), (260, 70, 1), L.mat("ZWOcean", "#2fb4e0", 0.45, sheen=0.2, emission="#2fb4e0", emit=0.15))
         for k in range(5):
             L.torus("Wave", 6 + k * 3, 0.06, (-10 + k * 6, 14 + k * 4, -0.36), (1, 0.12, 1), L.mat("ZWFoam", "#ffffff", 0.3, emission="#ffffff", emit=0.3))
         for k, (x, y) in enumerate(((-40, 70), (35, 80))):

@@ -237,3 +237,8 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   finish.py (4K) + upload: Zoo stock for Nov 15-17. Note: the cloud box has 2 cores, so a full 4K finish takes about an hour per episode;
   do one per run. zoo3d_ep14-16 (songs v2 + editing v2) were copied to ZooBlender\jobs for the worker to make songs; next runs build
   timing/job files and queue the renders. ZooBlender\zoo3d\engine.py now = repo engine.py (PC version merged with the v2 cut logic).
+
+### Nov 13 (night) variety re-renders
+- PC queue (worker, alphabetical): zoo3d_ep12w (rendering, ~35 min each), ep13w, ep14w, ep15w, ep16w. Old savanna jobs zoo3d_ep15/ep16 have STOP files; zoo3d_ep14/ep15 savanna raws exist but must not be used.
+- Finish each with `python3 finish.py <ZooBlender/out/<id>w/<id>w_raw.mp4> jobs/<id>w.json --date <plan date> --time "4:00 PM" --nopush --preset 10`; it publishes as <id>.mp4 and sets to_upload.
+- Plan dates: ep12 Nov 16, ep13 Nov 17 (status rendering_variety until finished); ep14-16 get the next free days.

@@ -32,7 +32,13 @@ bear, polar_bear, panda, monkey, fox, arctic_fox, koala, horse, pig, cow, rhino 
 2. `python3 studio/zoo3d/variety.py check jobs/<id>.json` must say OK (first place differs from the last 4 episodes,
    at most half the places repeat the previous one, 3+ places). Then `variety.py record jobs/<id>.json` and commit the ledger.
 3. Thumbnails follow: thumb_frame must show the episode's first place and its own cast. Vids hooks animate that frame.
-4. Never re-use the savanna-only look for a new episode. Old savanna renders that were not posted get re-rendered (`<id>w` jobs).
+4. Scene plan (Nov 13 night, "more change on the scenes"): after the song's timing file exists, run
+   `python3 studio/zoo3d/routes.py jobs/<id>.json`. It turns the coarse route into a fine plan: every chorus, each half of
+   every verse and the bridge is its own scene (about 12 scenes per song, a change every 8-15 s), each with a formation
+   (line, arc, v, duo, host_left, host_right), only the animals that part is about ("show"), an automatic closer camera,
+   and a camera move (dolly, reveal, vista, side, high, low). New songs carry `"verses": [[animals of verse 1], ...]`.
+   Places come with landmarks (windmill, igloo, cabin, bridge, umbrella, kite ...) and moving details.
+5. Never re-use the savanna-only look for a new episode. Old savanna renders that were not posted get re-rendered (`<id>w` jobs).
 
 ## B. Write tomorrow's episodes (one per channel)
 For each channel: truck (set town, char truck), bloop (colorlab, bloop + shape), fruity (kitchen, fruit),

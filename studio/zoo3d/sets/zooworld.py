@@ -332,6 +332,125 @@ def _fx(L, rng, kind):
     return out
 
 
+# --------------------------------------------------------------------------- landmarks (each place gets its own big shapes)
+def _landmark(L, rng, biome, v):
+    """Mid-distance landmark(s) that give a place its identity. v (0..3) picks the side and the variant."""
+    sx = -1 if v % 2 else 1; X = lambda x: x * sx
+    wood = L.mat("ZWWood", "#a8743e", 0.8, bump=0.3, bump_scale=8); white = L.mat("ZWWhite", "#ffffff", 0.6)
+    red = L.mat("ZWRed", "#e2463a", 0.5, coat=0.3); yellow = L.mat("ZWYellow", "#ffd23f", 0.5); stone = L.mat("ZWStoneLm", "#a9a59c", 0.85, bump=0.3, bump_scale=4)
+    out = {}
+    if biome == "farm":
+        bx, by = X(9.5), 15
+        L.cone("MillBody", 1.5, 0.9, 5.0, (bx, by, 2.5), m=white, verts=8)
+        L.cone("MillRoof", 1.2, 0.0, 1.3, (bx, by, 5.6), m=red, verts=8)
+        hub = L.empty("MillHub", (bx, by - 1.2, 4.5))
+        for k in range(4):
+            bp = L.empty(f"BladeP{k}", (0, 0, 0), hub); bp.rotation_euler = (0, k * math.pi / 2, 0)
+            L.cube("Blade", 1, (0, 0, 1.5), (0.5, 0.06, 3.0), wood, parent=bp)
+        out["_spin"] = hub
+        hay = L.mat("ZWHay", "#f0c95a", 0.9, bump=0.4, bump_scale=14)
+        for k, (x, y) in enumerate(((-7.5, 5.5), (-8.6, 6.3), (-8.0, 5.9))):
+            L.cylinder("Hay", 0.7, 1.0, (X(x), y, 0.7 + (0.95 if k == 2 else 0)), m=hay, rot=(math.pi / 2, 0, 0.4), verts=20)
+    elif biome == "arctic":
+        ix, iy = X(-8.5), 9
+        L.sphere("Igloo", 2.4, (ix, iy, 0), (1, 1, 0.85), L.mat("ZWIgloo", "#eef7ff", 0.5, sheen=0.4, bump=0.25, bump_scale=3), segs=24)
+        L.cylinder("IglooDoor", 0.9, 1.4, (ix, iy - 2.3, 0.5), m=L.mat("ZWIglooDoor", "#5a7fb0", 0.7), rot=(math.pi / 2, 0, 0), verts=16)
+        mx, my = X(8.0), 6.5
+        for z, r in ((0.7, 0.8), (1.75, 0.58), (2.55, 0.42)): L.sphere("Snowman", r, (mx, my, z), m=white, segs=20)
+        L.cone("Carrot", 0.08, 0.0, 0.4, (mx, my - 0.5, 2.55), m=L.mat("ZWCarrot", "#ff8a1f", 0.5), rot=(math.pi / 2, 0, 0), verts=10)
+        L.cylinder("Hat", 0.3, 0.4, (mx, my, 3.05), m=red, verts=16)
+    elif biome == "beach":
+        ux, uy = X(-7.0), 4.5
+        L.cylinder("Pole", 0.06, 3.0, (ux, uy, 1.5), m=white, verts=10)
+        for k in range(8):
+            L.cone(f"Umb{k}", 2.0, 0.0, 0.8, (ux, uy, 3.1), m=(red if k % 2 else white), verts=3, rot=(0, 0, k * math.pi / 4))
+        cx, cy = X(7.5), 5
+        sand = L.mat("ZWCastle", "#f2d28a", 0.95, bump=0.3, bump_scale=20)
+        L.cube("Castle", 1, (cx, cy, 0.5), (2.2, 1.6, 1.0), sand)
+        for dx in (-1.1, 1.1):
+            L.cylinder("Tower", 0.45, 1.8, (cx + dx, cy, 0.9), m=sand, verts=14); L.cone("TowerTop", 0.5, 0.0, 0.6, (cx + dx, cy, 2.1), m=red, verts=14)
+        bx = X(14)
+        out["_boat"] = L.cube("Boat", 1, (bx, 30, 0.3), (4, 1.4, 0.9), red); L.cone("Sail", 1.8, 0.0, 3.6, (bx, 30, 2.8), (0.15, 1, 1), white, verts=3)
+    elif biome == "jungle":
+        ax, ay = X(-8.0), 8
+        vine = L.mat("ZWVine", "#3b8a3a", 0.7, sheen=0.3)
+        L.torus("VineArch", 3.2, 0.3, (ax, ay, 0), (1, 1, 1.25), vine, rot=(math.pi / 2, 0, 0.3))
+        for k in range(9):
+            a = k / 8 * math.pi
+            L.sphere("ArchFlower", 0.28, (ax + math.cos(a) * 3.2 * math.cos(0.3), ay - 0.25 + math.cos(a) * 3.2 * math.sin(0.3) * 0, math.sin(a) * 4.0), m=L.mat(f"ZWArchF{k % 3}", ("#ff4f8b", "#ffcc00", "#ff7a1a")[k % 3], 0.4, emission=("#ff4f8b", "#ffcc00", "#ff7a1a")[k % 3], emit=0.15), segs=12)
+        for k, (x, y, sc) in enumerate(((8.5, 6, 1.0), (10, 9, 1.3), (7.2, 10, 0.8))):
+            L.cylinder("BigStem", 0.1 * sc, 1.6 * sc, (X(x), y, 0.8 * sc), m=vine, verts=8)
+            for j in range(6):
+                a = j / 6 * math.tau
+                L.sphere("BigPetal", 0.42 * sc, (X(x) + math.cos(a) * 0.5 * sc, y, 1.7 * sc + math.sin(a) * 0.5 * sc), (1, 0.4, 1), L.mat(f"ZWBigPetal{k}", ("#ff5fa2", "#ff9f1c", "#b57cff")[k], 0.5, sss=0.2), segs=14)
+            L.sphere("BigCore", 0.3 * sc, (X(x), y - 0.12, 1.7 * sc), m=yellow, segs=12)
+    elif biome == "desert":
+        ax, ay = X(-9), 12
+        rock = L.mat("ZWArchRock", "#d0703c", 0.95, bump=0.4, bump_scale=3)
+        L.torus("RockArch", 4.0, 1.1, (ax, ay, 0), (1, 1, 1.15), rock, rot=(math.pi / 2, 0, -0.25))
+        ox_, oy = X(8.5), 8
+        L.cylinder("Oasis", 1.0, 0.05, (ox_, oy, 0.03), (2.6, 1.6, 1), L.mat("ZWOasis", "#39b6e6", 0.4, emission="#39b6e6", emit=0.15), verts=32)
+        _tree(L, rng, "palm", ox_ + 2.4, oy + 1.2, 0.9, 1); _tree(L, rng, "palm", ox_ - 2.6, oy + 1.6, 0.75, 2)
+    elif biome in ("autumn_forest", "mountain"):
+        cx, cy = X(9.5), 13
+        L.cube("Cabin", 1, (cx, cy, 1.3), (4.2, 3.4, 2.6), wood)
+        L.cone("CabinRoof", 3.6, 0.0, 2.0, (cx, cy, 3.6), (1, 0.85, 1), L.mat("ZWCabinRoof", "#7a3a2a" if biome == "autumn_forest" else "#4a6a8a", 0.7), verts=4, rot=(0, 0, math.pi / 4))
+        L.cube("CabinDoor", 1, (cx, cy - 1.72, 0.9), (0.9, 0.08, 1.8), L.mat("ZWDoor", "#5a3a22", 0.7))
+        L.cube("CabinWin", 1, (cx + 1.3, cy - 1.72, 1.6), (0.8, 0.08, 0.8), L.mat("ZWWin", "#ffe9a0", 0.3, emission="#ffe9a0", emit=1.5))
+        if biome == "autumn_forest":
+            pk = L.mat("ZWPumpkin", "#f28a1f", 0.5, coat=0.3, bump=0.2, bump_scale=6)
+            for k, (x, y, r) in enumerate(((-7.2, 4.5, 0.5), (-8.3, 5.2, 0.38), (-6.6, 5.6, 0.3), (-8.9, 4.2, 0.28))):
+                L.sphere("Pumpkin", r, (X(x), y, r * 0.75), (1.15, 1.15, 0.85), pk, segs=16); L.cylinder("PStem", r * 0.12, r * 0.4, (X(x), y, r * 1.5), m=L.mat("ZWVine", "#3b8a3a", 0.7), verts=8)
+        else:
+            L.cylinder("Lake", 1.0, 0.05, (X(-9), 11, 0.03), (5.5, 2.6, 1), L.mat("ZWLake", "#4fb4e8", 0.4, emission="#4fb4e8", emit=0.15), verts=40)
+    elif biome == "river":
+        bx = X(-6.5)
+        L.torus("Bridge", 2.6, 0.22, (bx, 9, -0.7), (1, 1, 1), wood, rot=(0, math.pi / 2, 0))
+        L.cube("BridgeDeck", 1, (bx, 9, 1.55), (1.6, 3.0, 0.14), wood)
+        for sy in (-1, 1):
+            for k in (-1, 1): L.cylinder("BPost", 0.08, 0.9, (bx + 0.75 * k, 9 + sy * 1.3, 2.0), m=wood, verts=8)
+        boat = L.cube("RowBoat", 1, (X(6), 9, 0.25), (2.2, 0.9, 0.5), red, bevel=0.1)
+        out["_boat"] = boat
+    elif biome == "bamboo":
+        for k, (x, y) in enumerate(((-7.5, 4.5), (7.8, 5.2))):
+            L.cylinder("LanternBase", 0.3, 1.2, (X(x), y, 0.6), m=stone, verts=8)
+            L.cube("LanternBox", 1, (X(x), y, 1.5), (0.7, 0.7, 0.6), L.mat("ZWLantern", "#ffe9a0", 0.3, emission="#ffd070", emit=2.5))
+            L.cone("LanternTop", 0.7, 0.0, 0.5, (X(x), y, 2.05), m=stone, verts=4, rot=(0, 0, math.pi / 4))
+        L.torus("RedBridge", 3.0, 0.25, (X(9), 13, -1.2), (1, 1, 1), red, rot=(math.pi / 2, 0, 0))
+    elif biome == "spring_meadow":
+        L.cube("Blanket", 1, (X(-7.5), 4.5, 0.03), (2.6, 2.0, 0.04), L.mat("ZWBlanket", "#ff6f7a", 0.9), rot=(0, 0, 0.3))
+        L.cube("Basket", 1, (X(-7.2), 4.8, 0.3), (0.7, 0.5, 0.5), wood, bevel=0.08)
+        kite = L.empty("Kite", (X(9), 14, 9))
+        L.cone("KiteBody", 0.9, 0.0, 0.12, (0, 0, 0), (1, 1, 1), L.mat("ZWKite", "#ff4f8b", 0.4, emission="#ff4f8b", emit=0.3), kite, verts=4, rot=(math.pi / 2, 0, 0))
+        for k in range(4): L.sphere("KiteTail", 0.14, (0.15 * k, 0, -0.7 - 0.5 * k), m=(yellow if k % 2 else red), parent=kite, segs=8)
+        out["_kite"] = kite
+        L.cylinder("Pond", 1.0, 0.05, (X(8), 7, 0.03), (3.0, 1.8, 1), L.mat("ZWPondSm", "#4fb4e8", 0.4, emission="#4fb4e8", emit=0.15), verts=32)
+    elif biome == "night_meadow":
+        tx, ty = X(-8), 7
+        L.cone("Tent", 2.4, 0.0, 2.6, (tx, ty, 1.3), m=L.mat("ZWTent", "#ff8a3d", 0.7), verts=4, rot=(0, 0, math.pi / 4))
+        L.sphere("TentGlow", 0.4, (tx, ty - 1.9, 0.6), m=L.mat("ZWTentGlow", "#ffe9a0", 0.3, emission="#ffd070", emit=6.0), segs=12)
+        gl = []
+        for k in range(9):
+            u = k / 8
+            gl.append(L.sphere("StringLight", 0.16, (X(3 + u * 8), 6 + u * 2, 3.4 - math.sin(u * math.pi) * 0.8),
+                               m=L.mat(f"ZWStr{k % 3}", ("#ffd070", "#ff8fb0", "#8fd0ff")[k % 3], 0.3, emission=("#ffd070", "#ff8fb0", "#8fd0ff")[k % 3], emit=5.0), segs=10))
+        for x in (3, 11): L.cylinder("LightPole", 0.07, 3.5, (X(x), 6 if x == 3 else 8, 1.75), m=wood, verts=8)
+    elif biome == "savanna":
+        for k, (x, y, h) in enumerate(((-8.0, 6.5, 2.2), (-9.2, 7.6, 1.4))):
+            L.cone("Termite", 0.9, 0.2, h, (X(x), y, h / 2), m=L.mat("ZWTermite", "#b8743a", 0.95, bump=0.4, bump_scale=6), verts=10)
+        L.cylinder("Hole", 1.0, 0.05, (X(8), 6.5, 0.03), (3.4, 2.0, 1), L.mat("ZWHole", "#39a8e0", 0.4, emission="#39a8e0", emit=0.15), verts=40)
+    # birds far in the sky (every daytime place)
+    birds = []
+    bm_ = L.mat("ZWBird", "#3a3a4a", 0.8)
+    for k in range(5):
+        b = L.empty("SkyBird", (-20 + k * 9 + (v * 5), 60, 16 + (k % 3) * 2))
+        for s_ in (-1, 1): L.sphere("BW", 0.5, (0.45 * s_, 0, 0), (1, 0.25, 0.12), bm_, b, 8, (0, 0.4 * s_, 0))
+        birds.append(b)
+    out["_birds"] = birds
+    return out
+
+
+
 # --------------------------------------------------------------------------- build
 def build(L, rng, biome="savanna", tod="golden", seed=None, **_):
     if seed is not None:
@@ -367,6 +486,7 @@ def build(L, rng, biome="savanna", tod="golden", seed=None, **_):
         if B["water"] == "river" and abs(y - 9) < 3: y += 5
         _tree(L, rng, kinds[(k + (seed or 0)) % len(kinds)], x + (rng.random() - 0.5) * 2, y, s * (0.85 + rng.random() * 0.3), k)
     extra = _far(L, rng, B["far"], B)
+    extra.update(_landmark(L, rng, biome, (seed or 0) % 4))
     if B["water"] == "ocean": _far(L, rng, "ocean", B)
 
     # sky: sun or moon + stars, clouds
@@ -444,5 +564,14 @@ def animate(L, SET, f, t, s):
         elif kind == "bubbles":
             zz = (z + t * 0.5) % 4.0
             o.location = (x + math.sin(t + ph) * 0.3, y, zz)
+    sp = SET.get("_spin")
+    if sp: sp.rotation_euler = (0, t * 0.9, 0)
+    bo = SET.get("_boat")
+    if bo: bo.rotation_euler = (math.sin(t * 1.2) * 0.05, 0, 0); bo.location.z = 0.28 + math.sin(t * 1.5) * 0.05
+    ki = SET.get("_kite")
+    if ki: ki.rotation_euler = (0, math.sin(t * 1.1) * 0.25, math.sin(t * 0.7) * 0.2)
+    for k, b in enumerate(SET.get("_birds", [])):
+        fl = math.sin(t * 7 + k)
+        for w in b.children: w.rotation_euler = (0, (0.4 + fl * 0.5) * (1 if w.location.x > 0 else -1), 0)
     fall = SET.get("_fall")
     if fall: fall.scale.z = 13 * (1 + 0.01 * math.sin(t * 6))

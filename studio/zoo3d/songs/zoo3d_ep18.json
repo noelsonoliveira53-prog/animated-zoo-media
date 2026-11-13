@@ -74,6 +74,20 @@
     "yaw": -0.38
    }
   ],
+  "verses": [
+   [
+    "polar_bear",
+    "arctic_fox"
+   ],
+   [
+    "bear",
+    "horse"
+   ],
+   [
+    "host",
+    "polar_bear"
+   ]
+  ],
   "locations": [
    {
     "from": "chorus1",

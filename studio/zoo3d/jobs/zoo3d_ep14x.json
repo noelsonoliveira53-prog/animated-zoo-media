@@ -1,6 +1,6 @@
 {
- "id": "zoo3d_ep15w",
- "title": "Stomp Like an Elephant!",
+ "id": "zoo3d_ep14x",
+ "title": "Whose Tail Is This?",
  "channel": "zoo",
  "set": "zooworld",
  "seed": 7,
@@ -78,8 +78,8 @@
    "props": [
     {
      "type": "text",
-     "text": "STOMP!",
-     "color": "#ff7a00",
+     "text": "SWISH!",
+     "color": "#ffb627",
      "at": "top",
      "size": 0.7
     }
@@ -103,8 +103,8 @@
    "props": [
     {
      "type": "text",
-     "text": "BOOM!",
-     "color": "#5d6b8f",
+     "text": "TUFT!",
+     "color": "#ff7a00",
      "at": "top",
      "size": 0.7
     }
@@ -137,8 +137,8 @@
    "props": [
     {
      "type": "text",
-     "text": "STRETCH!",
-     "color": "#ffb627",
+     "text": "GUESS!",
+     "color": "#3db8ff",
      "at": "top",
      "size": 0.7
     }
@@ -162,7 +162,7 @@
    "props": [
     {
      "type": "text",
-     "text": "TROT!",
+     "text": "STRIPES!",
      "color": "#25232b",
      "at": "top",
      "size": 0.7
@@ -209,8 +209,8 @@
    "props": [
     {
      "type": "text",
-     "text": "FLAP!",
-     "color": "#3db8ff",
+     "text": "TIP!",
+     "color": "#5d6b8f",
      "at": "top",
      "size": 0.7
     }
@@ -243,8 +243,8 @@
    "props": [
     {
      "type": "text",
-     "text": "STOMP!",
-     "color": "#ff7a00",
+     "text": "SWISH!",
+     "color": "#ffb627",
      "at": "top",
      "size": 0.7
     }
@@ -271,7 +271,7 @@
    ]
   }
  ],
- "song": "zoo3d_ep15",
+ "song": "zoo3d_ep14",
  "res": "1920x1080",
  "step": 1,
  "cut_mode": "beat",
@@ -282,46 +282,116 @@
  },
  "follow_singer": true,
  "punch": true,
- "timing_file": "zoo3d_ep15_timing.json",
- "audio": "zoo3d_ep15_song.wav",
+ "timing_file": "zoo3d_ep14_timing.json",
+ "audio": "zoo3d_ep14_song.wav",
  "set_opts": {},
  "locations": [
   {
    "from": "chorus1",
-   "biome": "beach",
-   "tod": "noon"
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "line"
   },
   {
    "from": "verse1",
-   "biome": "jungle",
-   "tod": "morning"
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "lion"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "giraffe"
+   ]
+  },
+  {
+   "from": "prechorus1",
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "v",
+   "shot": "low"
   },
   {
    "from": "chorus2",
-   "biome": "beach",
+   "biome": "river",
    "tod": "golden",
-   "seed": 2
+   "formation": "arc",
+   "shot": "vista"
   },
   {
    "from": "verse2",
    "biome": "desert",
-   "tod": "noon"
+   "tod": "golden",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "zebra"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "hippo"
+   ]
   },
   {
    "from": "bridge1",
-   "biome": "farm",
-   "tod": "noon"
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "duo",
+   "shot": "side"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "v",
+   "shot": "low"
   },
   {
    "from": "chorus3",
-   "biome": "spring_meadow",
-   "tod": "sunset"
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
   },
   {
-   "from": "break_chorus3",
-   "biome": "beach",
+   "from": "outro1",
+   "biome": "jungle",
    "tod": "sunset",
-   "seed": 6
+   "formation": "line"
   }
  ]
 }

@@ -83,6 +83,20 @@
     "yaw": -0.1
    }
   ],
+  "verses": [
+   [
+    "panda",
+    "tiger"
+   ],
+   [
+    "monkey",
+    "koala"
+   ],
+   [
+    "fox",
+    "host"
+   ]
+  ],
   "locations": [
    {
     "from": "chorus1",

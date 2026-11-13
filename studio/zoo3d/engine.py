@@ -71,12 +71,16 @@ setmod = importlib.import_module("sets." + job["set"])
 #   Every location is built once, 1 km apart under its own root; the camera, cast and props jump to the active one,
 #   the others are hidden from the render, and the world (sky) switches with it.
 LOCS = job.get("locations") or [dict(job.get("set_opts", {}))]
+# identical places (same options) are built once and revisited; each visit can have its own "formation"/"show"/"zoom"
+_VIS = ("from", "line", "formation", "show", "zoom")
+_keys = [json.dumps({k: v for k, v in _lc.items() if k not in _VIS}, sort_keys=True) for _lc in LOCS]
+_uniq = list(dict.fromkeys(_keys)); LOC_SET = [_uniq.index(k) for k in _keys]
 SETS, LOC_OFF, LOC_WORLD, LOC_COLL = [], [], [], []
-for _i, _lc in enumerate(LOCS):
+for _i, _k in enumerate(_uniq):
     _before = set(bpy.data.objects)
-    _opts = dict(job.get("set_opts", {})); _opts.update({k: v for k, v in _lc.items() if k != "from"})
+    _opts = dict(job.get("set_opts", {})); _opts.update(json.loads(_k))
     _st = setmod.build(L, random.Random(job.get("seed", 7) + 101 * _i), **_opts)
-    if len(LOCS) > 1:
+    if len(_uniq) > 1:
         _col = bpy.data.collections.new(f"Location{_i}"); S.collection.children.link(_col)
         _root = bpy.data.objects.new(f"LocRoot{_i}", None); _col.objects.link(_root); _root.location = (_i * 1000.0, 0, 0)
         for _o in [o for o in bpy.data.objects if o not in _before and o is not _root]:
@@ -84,7 +88,12 @@ for _i, _lc in enumerate(LOCS):
             _col.objects.link(_o)
             if _o.parent is None: _o.parent = _root
         LOC_COLL.append(_col)
+        try: bpy.context.view_layer.layer_collection.children[_col.name].exclude = True   # keeps building the next place fast
+        except Exception: pass
     SETS.append(_st); LOC_OFF.append(_i * 1000.0); LOC_WORLD.append(S.world)
+for _col in LOC_COLL:
+    try: bpy.context.view_layer.layer_collection.children[_col.name].exclude = False
+    except Exception: pass
 SET = SETS[0]
 spots = SET["spots"]
 cast = {}
@@ -145,15 +154,24 @@ def shot_pose(shot, u, t):
             return (c[0] + x, SET["cams"]["wide"][0][1] + 1.5, c[2] + 0.9), (c[0] + x * 0.85, c[1], c[2] + 0.2), 35
     if shot.startswith("close"):
         cid = shot.split(":")[1] if ":" in shot else host_id
-        ch = cast.get(cid, cast[host_id]); bx, by, bz = ch.base; sc = ch.scale
+        ch = cast.get(cid, cast[host_id])
+        if getattr(ch, "hidden", False):   # that animal is not at this place: show one that is
+            ch = cast[VISNOW[int(t / 4) % len(VISNOW)]] if VISNOW else cast[host_id]
+        bx, by, bz = ch.base; sc = ch.scale
         fz = bz + ch.face_z * sc
         dist = (getattr(ch, "close_dist", 6.4) - 0.6 * u) * sc
         side = 0.35 if zlib.crc32(cid.encode()) % 2 else -0.35
         return (bx + side * dist * 0.4, by - dist, fz + 0.35 * sc), (bx, by, fz - 0.1 * sc), 45
     if shot == "orbit":
         a = -0.6 + 1.2 * u
-        c = SET["cams"].get("center", (0, 0, 1.4)); r = SET["cams"].get("orbit_r", 9)
+        c = SET["cams"].get("center", (0, 0, 1.4)); r = SET["cams"].get("orbit_r", 9) * (0.5 + 0.5 * ZOOM[0])
         return (c[0] + math.sin(a) * r, c[1] - math.cos(a) * r, c[2] + 1.0), c, 35
+    if shot == "dolly":      # sideways travel past the cast
+        c = SET["cams"].get("center", (0, 0, 1.4)); x = -3.2 + 6.4 * u
+        return (c[0] + x, c[1] - 8.6 * (0.6 + 0.4 * ZOOM[0]), c[2] + 0.5), (c[0] + x * 0.35, c[1], c[2] + 0.15), 32
+    if shot == "reveal":     # crane up from the ground to show the whole place
+        c = SET["cams"].get("center", (0, 0, 1.4))
+        return (c[0] - 1.0, c[1] - 9.5, 0.7 + 5.0 * u), (c[0], c[1] + 1.5 + 3.0 * u, c[2] + 0.4), 30
     if shot == "low":
         c = SET["cams"].get("center", (0, 0, 1.4))
         return (c[0] + 1.2 - 2.4 * u, c[1] - 6.5, 0.45), (c[0], c[1], c[2] + 0.8), 28
@@ -161,7 +179,7 @@ def shot_pose(shot, u, t):
         c = SET["cams"].get("center", (0, 0, 1.4))
         return (c[0], c[1] - 5.5, c[2] + 6.5 - u), c, 32
     loc, tgt = SET["cams"].get(shot, SET["cams"]["wide"])
-    push = 1 - 0.12 * u
+    push = (1 - 0.12 * u) * ZOOM[0]
     return (tgt[0] + (loc[0] - tgt[0]) * push, tgt[1] + (loc[1] - tgt[1]) * push, tgt[2] + (loc[2] - tgt[2]) * push), tgt, 35
 
 # shot list over time: each section cycles its shots per line (cuts land on line starts)
@@ -247,11 +265,42 @@ def state_for(ch, f, t):
             "wave": d.get("wave", 0) * (1 if (t % (beat_len * 8)) < beat_len * 2 else 0), "jump": d.get("jump", 0),
             "blink": blink, "singing": singing, "t_section": t, "bpm": timing["bpm"]}
 
+# Formations (Nov 13 night, "more change on the scenes"): where the host and the visible animals stand at each place.
+#   location keys: "formation": line | arc | duo | v | host_left | host_right, "show": [cast ids] (others step out),
+#   "zoom": camera distance factor (auto: closer when few animals are on screen), "line": n (start at the nth sung line
+#   of the section, so one verse can visit two places).
+_FORM = {
+    "line": ((0, -0.6), [(-2.35, 0.1), (2.6, 0.2), (-4.6, 1.3), (4.9, 1.4), (1.1, 3.3), (-1.6, 3.2)]),
+    "arc": ((0, -0.9), [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]),
+    "duo": ((0, -0.7), [(-2.5, 0.0), (2.5, 0.0), (-4.4, 1.6), (4.4, 1.6), (-1.3, 2.9), (1.4, 3.0)]),
+    "v": ((0, -1.0), [(-1.9, 0.4), (1.9, 0.4), (-3.7, 1.7), (3.7, 1.7), (-5.3, 3.0), (5.3, 3.0)]),
+    "host_left": ((-2.7, -0.5), [(0.1, 0.1), (2.3, -0.1), (4.4, 0.9), (1.2, 2.5), (3.4, 2.9), (-0.9, 2.9)]),
+    "host_right": ((2.7, -0.5), [(-0.1, 0.1), (-2.3, -0.1), (-4.4, 0.9), (-1.2, 2.5), (-3.4, 2.9), (0.9, 2.9)]),
+}
+for ch in cast.values(): ch.base0 = ch.base; ch.yaw0 = ch.root.rotation_euler.z; ch.hidden = False
+ZOOM = [1.0]; VISNOW = []
+
+def _sec_end(sec):
+    return sec.get("end") or next((s2["start"] for s2 in timing["sections"] if s2["start"] > sec["start"]), DUR)
+
 _LOC_T = []
 for _i, _lc in enumerate(LOCS):
     _sec = next((x for x in timing["sections"] if x["name"] == _lc.get("from")), None)
-    _LOC_T.append((0.0 if _i == 0 or not _sec else _sec["start"], _i))
+    _t = 0.0 if _i == 0 or not _sec else _sec["start"]
+    if _sec and _lc.get("line"):
+        _ln = [l for l in timing["lines"] if _sec["start"] - 0.01 <= l["start"] < _sec_end(_sec)]
+        if len(_ln) > _lc["line"]: _t = _snap(_ln[_lc["line"]]["start"] - 0.1)
+    _LOC_T.append((_t, _i))
 _LOC_T.sort()
+# a new place always starts on a camera cut (never mid-shot)
+_alt = ["wide", "orbit", "vista", "side", "low", "high"]
+for _n, (_t, _i) in enumerate(_LOC_T):
+    if _t <= 0: continue
+    _near = [k for k, c in enumerate(cuts) if abs(c[0] - _t) < 0.6]
+    _d = cut_at(_t)[2]
+    if _near: cuts[_near[0]] = (_t, cuts[_near[0]][1], cuts[_near[0]][2])
+    else: cuts.append((_t, LOCS[_i].get("shot", _alt[_n % len(_alt)]), _d))
+    cuts.sort(key=lambda c: c[0])
 _PROP_BASE = [(o, tuple(o.location)) for o, *_ in props]
 _loc_now = [None]
 
@@ -261,10 +310,24 @@ def loc_at(t):
 def set_location(i):
     global SET
     if _loc_now[0] == i: return
-    _loc_now[0] = i; SET = SETS[i]; ox = LOC_OFF[i]
-    for k, col in enumerate(LOC_COLL): col.hide_render = (k != i); col.hide_viewport = (k != i)
-    S.world = LOC_WORLD[i]
-    for ch in cast.values(): ch.root.location = (ch.base[0] + ox, ch.base[1], ch.base[2])
+    _loc_now[0] = i; si = LOC_SET[i]; SET = SETS[si]; ox = LOC_OFF[si]; lc = LOCS[i]
+    for k, col in enumerate(LOC_COLL): col.hide_render = (k != si); col.hide_viewport = (k != si)
+    S.world = LOC_WORLD[si]
+    show = lc.get("show"); form = lc.get("formation")
+    others = [c for c in cast if c != host_id]
+    vis = [c for c in others if not show or c in show]
+    if form or show:
+        hp, slots = _FORM.get(form or "line", _FORM["line"])
+        cast[host_id].base = (hp[0], hp[1], 0); cast[host_id].root.rotation_euler.z = -0.09 * hp[0]
+        for k, c in enumerate(vis):
+            x, y = slots[k % len(slots)]; cast[c].base = (x, y, 0); cast[c].root.rotation_euler.z = -0.09 * x
+    else:
+        for ch in cast.values(): ch.base = ch.base0; ch.root.rotation_euler.z = ch.yaw0
+    for c in others: cast[c].hidden = c not in vis
+    VISNOW[:] = vis
+    ZOOM[0] = lc.get("zoom", 0.74 if len(vis) <= 2 else (0.86 if len(vis) == 3 else 1.0))
+    for ch in cast.values():
+        ch.root.location = (ch.base[0] + ox, ch.base[1], ch.base[2] - (300 if ch.hidden else 0))
     for o, b in _PROP_BASE: o.location = (b[0] + ox, b[1], b[2])
     try: S.view_settings.exposure = SET.get("exposure", -0.3)
     except Exception: pass
@@ -288,7 +351,7 @@ def apply(f):
     if job.get("punch") and d.get("energy", 0.5) >= 0.9:   # punch-in on each downbeat, eases out over the beat
         bp = (t / beat_len) % 4.0
         lens = lens * (1 + 0.035 * math.exp(-bp * 5) if bp < 1 else 1)
-    ox = LOC_OFF[_loc_now[0] or 0]
+    ox = LOC_OFF[LOC_SET[_loc_now[0] or 0]]
     co.location = (loc[0] + sway + ox, loc[1], loc[2] + 0.03 * math.sin(t * 1.3)); aim.location = (tgt[0] + ox, tgt[1], tgt[2]); cam.lens = lens
     if hasattr(setmod, "animate"): setmod.animate(L, SET, f, t, {"beat": (t / beat_len) % 1.0, "bar": (t / (beat_len * 4)) % 1.0, "energy": d.get("energy", 0.5), "bpm": timing["bpm"], "talk": mouth[f] if f < len(mouth) else 0})
 

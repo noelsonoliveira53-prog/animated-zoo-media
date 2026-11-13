@@ -1,5 +1,5 @@
 {
- "id": "zoo3d_ep16w",
+ "id": "zoo3d_ep16x",
  "title": "Big and Small!",
  "channel": "zoo",
  "set": "zooworld",
@@ -289,33 +289,108 @@
   {
    "from": "chorus1",
    "biome": "mountain",
-   "tod": "noon"
+   "tod": "noon",
+   "formation": "line"
   },
   {
    "from": "verse1",
    "biome": "spring_meadow",
-   "tod": "noon"
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "giraffe",
+    "hippo"
+   ]
+  },
+  {
+   "from": "prechorus1",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "low"
   },
   {
    "from": "chorus2",
-   "biome": "autumn_forest",
-   "tod": "golden"
+   "biome": "farm",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "vista"
   },
   {
    "from": "verse2",
-   "biome": "farm",
-   "tod": "morning"
+   "biome": "arctic",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "lion",
+    "zebra"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "mountain",
+   "tod": "sunset",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "hippo"
+   ]
   },
   {
    "from": "bridge1",
-   "biome": "arctic",
-   "tod": "noon"
+   "biome": "mountain",
+   "tod": "noon",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "duo",
+   "shot": "side"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "low"
   },
   {
    "from": "chorus3",
    "biome": "mountain",
    "tod": "sunset",
-   "seed": 3
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "mountain",
+   "tod": "sunset",
+   "formation": "line"
   }
  ]
 }

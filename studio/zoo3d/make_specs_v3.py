@@ -3,6 +3,8 @@ Each song is written for its own animals and its own route of places (sets/zoowo
 
   python3 make_specs_v3.py     -> songs/<id>.json + jobs/<id>.song.json, variety-checked and recorded in the ledger
 
+The spec holds the coarse route; once the song is sung and jobs/<id>_timing.json exists, run
+`python3 routes.py jobs/<id>.json` to turn it into the fine scene plan (each chorus, half-verse and bridge its own scene).
 To add a song: append a dict to SONGS (cast = animal kinds from chars/animal.py, route = [(section, biome, tod)]).
 """
 import json, os, sys
@@ -233,7 +235,7 @@ def build(s):
               dict(chorus(3, ["orbit", "hero", "wide", "close:host", "high"]), props=[T(W[6], COLORS[6], 0.6)]),
               {"section": "outro1", "shots": ["close:host", "wide"], "energy": 0.7, "wave": 1, "jump": 0.2, "group": True, "props": [T("BYE-BYE!", "#ffb627", 0.8)]}]
     job = {"id": s["id"], "title": s["card"], "channel": "zoo", "set": "zooworld", "set_opts": {}, "seed": s["seed"] % 50, "new_song": True,
-           "cast": cast, "locations": [{"from": a, "biome": b, "tod": t, **({"seed": i} if i else {})} for i, (a, b, t) in enumerate(s["route"])],
+           "cast": cast, "verses": s["verses"], "locations": [{"from": a, "biome": b, "tod": t, **({"seed": i} if i else {})} for i, (a, b, t) in enumerate(s["route"])],
            "intro_shot": "orbit", "intro": {"energy": 0.6, "wave": 1}, "thumb_frame": 96, "direct": direct, "song": s["id"],
            "res": "1920x1080", "step": 1, "cut_mode": "beat", "cut_beats": {"chorus": 4, "bridge": 4, "prechorus": 2}, "follow_singer": True, "punch": True}
     spec = {"style": STYLE.format(bpm=s["bpm"], flavor=s["flavor"]), "lyrics": s["lyrics"], "duration": 160, "bpm": s["bpm"], "key": s["key"],

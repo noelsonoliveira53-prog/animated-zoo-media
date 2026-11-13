@@ -1,0 +1,50 @@
+[Script Info]
+ScriptType: v4.00+
+PlayResX: 1920
+PlayResY: 1080
+WrapStyle: 0
+
+[V4+ Styles]
+Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
+Style: Lyric,Baloo 2 ExtraBold,86,&H0000D7FF&,&H00FFFFFF&,&H00402010&,&H80000000&,-1,0,0,0,100,100,1,0,1,6,3,2,80,80,46,1
+Style: Speak,Baloo 2 ExtraBold,66,&H00FFFFFF&,&H00FFFFFF&,&H00402010&,&H80000000&,-1,0,0,0,100,100,0,0,1,5,2,2,120,120,50,1
+Style: Title,Baloo 2 ExtraBold,150,&H00FFFFFF&,&H00FFFFFF&,&H00402010&,&H64000000&,-1,0,0,0,100,100,2,0,1,9,5,8,60,60,70,1
+
+[Events]
+Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
+Dialogue: 0,0:00:00.00,0:00:02.35,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf8}Where {\kf28}do {\kf36}animals {\kf80}live? {\k12}{\kf24}Let's {\kf66}see!
+Dialogue: 0,0:00:02.35,0:00:06.21,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf35}Every {\kf41}friend {\kf48}has {\kf24}a {\kf37}home {\kf46}like {\kf92}me!
+Dialogue: 0,0:00:06.53,0:00:10.17,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf10}Big {\kf19}or {\kf114}small, {\k41}{\kf8}high {\kf50}or {\kf66}low,
+Dialogue: 0,0:00:10.25,0:00:14.05,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf30}Animal {\kf109}homes, {\k17}{\kf30}let's {\kf63}go, {\k14}{\kf24}go, {\k25}{\kf54}go!
+Dialogue: 0,0:00:14.05,0:00:18.51,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf13}The {\kf74}lion {\kf75}rests {\kf44}in {\kf19}the {\kf46}tall {\kf53}dry {\kf83}grass,
+Dialogue: 0,0:00:18.51,0:00:22.19,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf30}Watching {\kf44}the {\kf66}savanna {\kf67}friends {\kf50}walk {\kf109}past!
+Dialogue: 0,0:00:22.19,0:00:26.83,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf16}The {\kf42}giraffe {\kf55}stands {\kf66}where {\kf39}the {\kf46}tall {\kf42}trees {\kf114}grow,
+Dialogue: 0,0:00:26.83,0:00:30.31,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf50}Munching {\kf80}leaves {\kf48}from {\kf67}high {\kf33}to {\kf7}low!
+Dialogue: 0,0:00:30.57,0:00:33.13,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf11}Where {\kf22}do {\kf35}animals {\kf85}live? {\k4}{\kf29}Let's {\kf65}see!
+Dialogue: 0,0:00:33.13,0:00:36.93,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf34}Every {\kf39}friend {\kf52}has {\kf28}a {\kf33}home {\kf43}like {\kf102}me!
+Dialogue: 0,0:00:36.93,0:00:40.97,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf32}Big {\kf29}or {\kf100}small, {\k60}{\kf7}high {\kf45}or {\kf80}low,
+Dialogue: 0,0:00:40.97,0:00:44.87,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf35}Animal {\kf111}homes, {\k12}{\kf33}let's {\kf58}go, {\k17}{\kf29}go, {\k17}{\kf65}go!
+Dialogue: 0,0:00:44.87,0:00:49.19,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf20}The {\kf57}hippo {\kf50}lives {\kf52}in {\kf17}the {\kf37}river {\kf42}so {\kf103}wide,
+Dialogue: 0,0:00:49.19,0:00:53.21,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf46}Splashing {\kf42}and {\kf50}swimming {\kf35}from {\kf50}side {\kf37}to {\kf115}side!
+Dialogue: 0,0:00:53.21,0:00:57.49,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf19}The {\kf34}zebra {\kf85}runs {\kf35}with {\k6}{\kf19}the {\kf38}herd {\kf61}all {\kf66}day,
+Dialogue: 0,0:00:57.63,0:01:01.39,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf24}Out {\kf28}on {\kf14}the {\kf46}plains {\kf35}where {\kf24}they {\kf25}love {\k3}{\kf57}to {\kf100}play!
+Dialogue: 0,0:01:01.39,0:01:04.47,Lyric,,0,0,0,,{\fad(100,120)}{\k35}{\kf11}Build {\kf21}a {\kf38}nest {\kf39}like {\kf21}a {\kf62}bird, {\k19}{\kf30}tweet, {\k6}{\kf55}tweet!
+Dialogue: 0,0:01:04.47,0:01:08.11,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf14}Dig {\kf28}a {\kf21}den {\kf48}with {\kf26}your {\kf45}paws {\kf50}and {\kf88}feet!
+Dialogue: 0,0:01:08.11,0:01:12.15,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf22}Splash {\kf47}in {\kf24}the {\kf64}river, {\k21}{\kf81}splash, {\kf50}splash, {\k1}{\kf62}splash,
+Dialogue: 0,0:01:12.15,0:01:16.19,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf28}Run {\kf50}with {\kf28}the {\kf73}herd, {\k46}{\kf51}dash, {\k3}{\kf46}dash, {\k34}{\kf9}dash!
+Dialogue: 0,0:01:16.19,0:01:20.33,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf15}The {\kf57}elephant {\kf78}walks {\kf48}with {\kf19}her {\kf46}family {\kf120}near,
+Dialogue: 0,0:01:20.33,0:01:24.53,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf50}Finding {\kf89}water {\kf79}every {\kf38}day {\kf29}of {\kf17}the {\kf114}year!
+Dialogue: 0,0:01:24.53,0:01:28.97,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf90}Milo's {\kf34}nest {\kf61}is {\kf48}up {\kf51}in {\kf18}a {\kf79}tree,
+Dialogue: 0,0:01:29.25,0:01:32.53,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf21}Home, {\k10}{\kf15}sweet {\kf50}home {\kf37}for {\kf38}you {\kf61}and {\kf78}me!
+Dialogue: 0,0:01:32.53,0:01:35.23,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf21}Where {\kf24}do {\kf37}animals {\kf78}live? {\kf35}Let's {\kf71}see!
+Dialogue: 0,0:01:35.23,0:01:38.71,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf32}Every {\kf39}friend {\kf51}has {\kf28}a {\kf32}home {\kf48}like {\kf107}me!
+Dialogue: 0,0:01:38.71,0:01:43.01,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf64}Big {\kf28}or {\kf120}small, {\kf41}high {\kf46}or {\kf79}low,
+Dialogue: 0,0:01:43.01,0:01:47.55,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf35}Animal {\kf115}homes, {\k6}{\kf40}let's {\kf65}go, {\k7}{\kf35}go, {\k18}{\kf67}go!
+Dialogue: 0,0:02:05.39,0:02:10.29,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf57}Home, {\kf116}sweet {\kf71}home! {\k46}{\kf80}Bye-bye, {\kf57}friends!
+Dialogue: 0,0:02:13.91,0:02:15.39,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf36}do {\kf34}animals {\kf47}live?
+Dialogue: 0,0:02:15.39,0:02:18.75,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf31}Let's {\kf43}see {\kf58}every {\kf50}friend {\kf45}has {\kf26}a {\kf37}home {\kf41}like
+Dialogue: 0,0:02:18.75,0:02:23.45,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf58}me {\k21}{\kf81}Big {\kf47}or {\kf43}small, {\k68}{\kf54}high {\kf43}or {\kf50}low
+Dialogue: 0,0:02:23.45,0:02:28.17,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf109}Animal {\kf90}homes, {\k29}{\kf46}let's {\kf40}go, {\k3}{\kf41}go, {\k21}{\kf28}go!
+Dialogue: 0,0:02:28.27,0:02:31.51,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf63}Home, {\kf110}sweet {\kf89}home
+Dialogue: 0,0:02:31.79,0:02:33.31,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf40}Bye-bye, {\kf52}friends!
+Dialogue: 0,0:02:42.16,0:02:44.99,Lyric,,0,0,0,,{\fad(100,120)}{\k34}{\kf189}Bye-bye, {\kf34}friends!

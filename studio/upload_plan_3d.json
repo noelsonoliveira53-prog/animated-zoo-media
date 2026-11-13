@@ -1209,7 +1209,7 @@
   "planned_date": "2026-11-12"
  },
  {
-  "file": "zoo3d_ep10.mp4",
+  "file": "zoo3d_ep10h.mp4",
   "title": "Who's Hiding at the Zoo? Peekaboo Animal Song with Milo",
   "description": "Peekaboo! Milo plays hide and seek in the savanna. Kids guess each hidden friend from clues: a golden mane, a long tall neck, black and white stripes, a splashing hippo and big flapping ears.\nKids cover their eyes, count to three and shout peekaboo. Ages 1-4.\n\nLYRICS\nWho's hiding in the savanna? Peekaboo!\nWho's hiding in the grass? Is it you?\nLook, look, look around,\nA zoo friend will be found!\nI see a mane, big and gold,\nA mighty roar, brave and bold!\nPeekaboo, who could it be?\nIt's the lion, smiling at me!\nI see a neck, so long and tall,\nMunching leaves, the tallest of all!\nIt's the giraffe up by the tree!\nCover your eyes, one, two, three,\nOpen them up, what do you see?\nHide behind your hands so small,\nPeekaboo! We found them all!\nI see stripes, black and white,\nAnd a hippo, splashing bright!\nBig gray ears go flap, flap, flap,\nThe elephant joins the clap, clap, clap!\nPeekaboo! Bye-bye, friends!",
   "tags": [
@@ -1228,9 +1228,11 @@
   "thumb": "brand/zoo/thumb_zoo3d_ep10.png",
   "made_for_kids": true,
   "status": "to_upload",
-  "format": "3d_singalong",
+  "format": "3d_singalong_vids_hook",
   "duration": 170.0,
-  "planned_date": "2026-11-15"
+  "planned_date": "2026-11-15",
+  "original_file": "zoo3d_ep10.mp4",
+  "note": "Hybrid test: first 10 s = Google Vids Animate clip made from the Blender start frame (1 clip, 10 s of Vids allowance), rest = Blender 4K; spliced with studio/vids/hybrid_splice.sh"
  },
  {
   "file": "moon/mb3d_ep06.mp4",

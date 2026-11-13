@@ -1227,12 +1227,14 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong_vids_hook",
   "duration": 170.0,
   "planned_date": "2026-11-15",
   "original_file": "zoo3d_ep10.mp4",
-  "note": "Hybrid test: first 10 s = Google Vids Animate clip made from the Blender start frame (1 clip, 10 s of Vids allowance), rest = Blender 4K; spliced with studio/vids/hybrid_splice.sh"
+  "note": "Hybrid test: first 10 s = Google Vids Animate clip made from the Blender start frame (1 clip, 10 s of Vids allowance), rest = Blender 4K; spliced with studio/vids/hybrid_splice.sh",
+  "video_id": "-c9dHJ5UOlc",
+  "uploaded": "2026-11-13"
  },
  {
   "file": "moon/mb3d_ep06.mp4",

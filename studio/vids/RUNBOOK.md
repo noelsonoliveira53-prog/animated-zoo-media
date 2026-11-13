@@ -36,3 +36,6 @@ Upload with the PLAYBOOK.md Studio recipe on the channel's next free slot. Mark 
 
 ## 7. Report usage
 Write `usage` into the spec: songs, clips, images, retries, minutes spent. Add a row to docs/GOOGLE_VIDS.md "Credit log".
+
+## Hybrid hook (daily Zoo method)
+See docs/GOOGLE_VIDS.md "Hybrid". 1 Animate clip (10 s) per Blender episode, spliced with studio/vids/hybrid_splice.sh. No Lyria.

@@ -90,3 +90,20 @@ Lessons from the first episode
 - Export to YouTube uploads as Private to the channel active in YouTube; then schedule it in Studio (title, description, made for kids).
 - Output is 1080p from 720p clips, so this episode is an exception to the 4K rule (decision for Noelson).
 - Pro plan's monthly clip allowance is still unknown; no limit message appeared after 14 clips. Watch for a limit warning on the next episodes.
+| Nov 13 | zoo3d_ep10h hybrid hook (Animate from Blender frame) | 0 | 1 | 0:10 | spliced onto the 4K Blender episode |
+
+## Hybrid "Vids hook + Blender" (tested Nov 13; the daily Zoo method from Nov 14)
+Why: the first 10 s is where viewers leave (avg view 0:20-0:34). One Vids clip makes that opening more alive, while Blender
+keeps the rest on-model, in 4K, with our ACE-Step song and karaoke lyrics. It costs 10 s of Vids allowance per episode:
+30 episodes a month = 300 s, which fits AI Pro (500 s) with 200 s spare for tests. No Lyria songs needed.
+Recipe (studio/vids/RUNBOOK.md, section "Hybrid hook"):
+1. Clean start frame from the finished Blender MP4: crop off the lyric band, keep 16:9, scale to 1920x1080
+   (`ffmpeg -ss 0.4 -i ep.mp4 -frames:v 1 -vf "crop=ih*0.84*16/9:ih*0.84:(iw-ih*0.84*16/9)/2:0,scale=1920:1080" start.png`), push it.
+2. Vids > AI Video > Animate > Add image (arm the PNG from raw GitHub with the file-input trick), prompt: "Keep this exact 3D cartoon
+   style, characters, colors and background..." + the action of the first sung lines. 10 s, 720p. Insert, File > Download > MP4.
+3. Stage it from Downloads, write the hook lyrics (start end text, from the song's first 10 s), then
+   `studio/vids/hybrid_splice.sh ep.mp4 hook.mp4 10 lyrics.txt epNNh.mp4` (the Blender MP4 has a keyframe at 10.0 s; the hook is
+   upscaled to 4K AV1 and the rest is stream-copied, about 1 minute, result stays under 100 MB).
+4. Upload epNNh.mp4 instead of epNN.mp4 (plan `format: 3d_singalong_vids_hook`).
+First result: zoo3d_ep10h "Who's Hiding at the Zoo?" -c9dHJ5UOlc, Nov 14 4:00 PM. The Animate clip kept the Blender look
+(same Milo, lion, elephant, zebra, hippo, giraffe, set) and the cut at 10 s is seamless.

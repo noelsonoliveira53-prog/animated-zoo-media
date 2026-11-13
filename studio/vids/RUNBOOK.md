@@ -25,8 +25,18 @@ Character consistency: from clip 2 on, add the best Milo frame (and mama/baby fr
 Clips back to back in lyric order on the timeline; the song as the audio track starting at 0:00; trim the last clip to the
 song end. Captions: add the lyric lines as on-screen text per section (big, bottom, high contrast).
 
-## 5. Export + finish
-File -> Download -> MP4 (1080p if offered). Then in the cloud: stage it, run
+## 5. Export + finish (no clicks from Noelson, ever)
+File -> Download -> MP4 (1080p if offered). **Never wait for, or ask Noelson to answer, the browser's save prompt.**
+The pane writes the whole video to `~/Downloads/<uuid>.tmp` (or `.crdownload`) before the prompt is answered. So:
+1. Note the time, click Download, wait about 30-60 s (Vids shows "Preparing download" then finishes).
+2. `device_list_dir` on the Downloads folder; take the newest `*.mp4`, `*.tmp` or `*.crdownload` modified after step 1
+   (size stops growing between two listings 10 s apart).
+3. `device_stage_files` it, then `bash studio/vids/pick_download.sh <staged> <scratch>/hook.mp4 9` (checks duration and a
+   full decode). NOT_READY: wait 20 s, re-stage, retry (3 tries).
+4. Fallback if nothing shows in Downloads: File -> Export to Drive, then Google Drive `search_files` for the title and
+   `download_file_content` (works up to 10 MB; a 10 s 720p hook is about 3-6 MB).
+The leftover prompt on the PC can be ignored or closed; it does not block anything.
+Then in the cloud: run
 `python3 studio/zoo3d/finish.py <mp4> --vids studio/vids/eps/<id>.json` (4K upscale + <100 MB gate) or, until that flag
 exists, `ffmpeg` lanczos to 3840x2160 + SVT-AV1 sized under 100 MB, copy into the channel folder, add the plan entry
 (`"format": "vids_full"`, status to_upload) to studio/upload_plan_3d.json, commit, push.

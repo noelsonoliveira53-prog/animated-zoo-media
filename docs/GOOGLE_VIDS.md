@@ -101,7 +101,9 @@ Recipe (studio/vids/RUNBOOK.md, section "Hybrid hook"):
    (`ffmpeg -ss 0.4 -i ep.mp4 -frames:v 1 -vf "crop=ih*0.84*16/9:ih*0.84:(iw-ih*0.84*16/9)/2:0,scale=1920:1080" start.png`), push it.
 2. Vids > AI Video > Animate > Add image (arm the PNG from raw GitHub with the file-input trick), prompt: "Keep this exact 3D cartoon
    style, characters, colors and background..." + the action of the first sung lines. 10 s, 720p. Insert, File > Download > MP4.
-3. Stage it from Downloads, write the hook lyrics (start end text, from the song's first 10 s), then
+3. Stage it from Downloads with no click (Noelson asked Nov 13: "this needs to be automated without me clicking"): the pane
+   holds the finished video as `~/Downloads/<uuid>.tmp` while its save prompt waits, so stage the newest .tmp/.mp4 and verify it
+   with `studio/vids/pick_download.sh` (RUNBOOK step 5; Drive export is the fallback). Then write the hook lyrics (start end text, from the song's first 10 s), then
    `studio/vids/hybrid_splice.sh ep.mp4 hook.mp4 10 lyrics.txt epNNh.mp4` (the Blender MP4 has a keyframe at 10.0 s; the hook is
    upscaled to 4K AV1 and the rest is stream-copied, about 1 minute, result stays under 100 MB).
 4. Upload epNNh.mp4 instead of epNN.mp4 (plan `format: 3d_singalong_vids_hook`).

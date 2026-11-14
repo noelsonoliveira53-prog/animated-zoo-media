@@ -1,0 +1,194 @@
+{
+ "id": "zool_ep01",
+ "title": "Forest Animals for Kids! 5 Fun Facts with Milo",
+ "card": "Forest Animals!",
+ "thumb_text": "5 FUN FACTS!",
+ "description": "Meet five forest friends with Milo the bluebird and learn one true fact about each: pandas eat bamboo for most of the day, every tiger has its own stripes, monkeys use their tails to balance, koalas sleep most of the day, and foxes use their fluffy tails like a blanket.\nA gentle animal lesson for kids with questions, actions to copy and a quiz at the end. Ages 2-6.",
+ "tags": [
+  "forest animals for kids",
+  "animal facts for kids",
+  "panda facts for kids",
+  "learn animals",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "voice": "af_heart",
+ "speed": 0.82,
+ "seed": 11,
+ "cast": [
+  "panda",
+  "tiger",
+  "monkey",
+  "koala",
+  "fox"
+ ],
+ "facts": [
+  "Pandas eat bamboo for most of the day.",
+  "Every tiger has its own pattern of stripes.",
+  "Many monkeys use their long tails to balance in the trees.",
+  "Koalas sleep for most of the day and eat eucalyptus leaves.",
+  "A fox curls its fluffy tail around itself like a blanket."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "biome": "mountain",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "word": "HELLO!",
+   "energy": 0.8,
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are going to the forest.",
+    "Five animal friends are waiting for us.",
+    "Let's count them. One, two, three, four, five!",
+    "Each friend has one fun fact to share.",
+    "Are you ready? Let's go!"
+   ]
+  },
+  {
+   "name": "panda",
+   "biome": "bamboo",
+   "tod": "noon",
+   "show": [
+    "panda"
+   ],
+   "word": "BAMBOO!",
+   "lines": [
+    "Look! Who is black and white, and round and fluffy?",
+    "It is the panda!",
+    "What do you think the panda likes to eat?",
+    "Bamboo! Crunchy, green bamboo.",
+    "Here is the fun fact. Pandas eat bamboo for most of the day.",
+    "Munch, munch, munch. Breakfast, lunch and dinner!",
+    "Say it with me. Pandas eat bamboo!",
+    "Can you munch like a panda? Munch, munch, munch!",
+    "Great munching!"
+   ]
+  },
+  {
+   "name": "tiger",
+   "biome": "jungle",
+   "tod": "noon",
+   "show": [
+    "tiger"
+   ],
+   "word": "STRIPES!",
+   "lines": [
+    "Now we walk into the jungle.",
+    "Who is orange, with black stripes?",
+    "It is the tiger!",
+    "Look at all those stripes. On the back, on the legs, and on the tail.",
+    "Here is the fun fact. Every tiger has its own stripes.",
+    "No two tigers look the same. Just like you. There is only one you!",
+    "Say it with me. Every tiger has its own stripes!",
+    "Can you stretch like a tiger? Reach up high. Streeetch!",
+    "What a big stretch!"
+   ]
+  },
+  {
+   "name": "monkey",
+   "biome": "river",
+   "tod": "golden",
+   "show": [
+    "monkey"
+   ],
+   "word": "BALANCE!",
+   "lines": [
+    "Listen! Who is playing by the river?",
+    "It is the monkey!",
+    "The monkey has a long, long tail.",
+    "Why does a monkey need a tail?",
+    "Here is the fun fact. Many monkeys use their tails to balance in the trees.",
+    "The tail helps them stay steady on a branch.",
+    "Say it with me. Monkeys balance with their tails!",
+    "Can you balance on one foot? Arms out wide. One, two, three!",
+    "You did it!"
+   ]
+  },
+  {
+   "name": "koala",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "show": [
+    "koala"
+   ],
+   "word": "SLEEPY!",
+   "lines": [
+    "Shh. Somebody here is very sleepy.",
+    "It is the koala!",
+    "The koala is gray and soft, with big fluffy ears.",
+    "Koalas eat leaves from the eucalyptus tree.",
+    "Here is the fun fact. Koalas sleep for most of the day.",
+    "They nap in the morning. They nap in the afternoon. And they sleep at night, too!",
+    "Say it with me. Koalas sleep most of the day!",
+    "Can you pretend to sleep like a koala? Close your eyes. Shh.",
+    "Now wake up! Good morning, koala!"
+   ]
+  },
+  {
+   "name": "fox",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "show": [
+    "fox"
+   ],
+   "word": "FLUFFY!",
+   "lines": [
+    "Look at the orange leaves. Who lives here?",
+    "It is the fox!",
+    "The fox has pointy ears and a big, fluffy tail.",
+    "What is that fluffy tail for?",
+    "Here is the fun fact. A fox curls its tail around itself like a blanket.",
+    "It keeps the fox warm and cozy when it sleeps.",
+    "Say it with me. A fox tail is a cozy blanket!",
+    "Can you give yourself a big, cozy hug? Squeeze!",
+    "So warm and cozy!"
+   ]
+  },
+  {
+   "name": "quiz",
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "vista",
+   "word": "QUIZ TIME!",
+   "energy": 0.85,
+   "lines": [
+    "Wow! We met five forest friends.",
+    "Now it is quiz time. Let's see what you remember!",
+    "Who eats bamboo for most of the day?",
+    "The panda! Yes!",
+    "Who has stripes that no other friend has?",
+    "The tiger! That's right!",
+    "Who uses a long tail to balance?",
+    "The monkey! Good job!",
+    "Who sleeps for most of the day?",
+    "The koala! You remembered!",
+    "And who uses a fluffy tail like a blanket?",
+    "The fox! You are so clever!"
+   ]
+  },
+  {
+   "name": "goodbye",
+   "biome": "mountain",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal",
+   "word": "BYE-BYE!",
+   "energy": 0.85,
+   "lines": [
+    "You learned five new things today.",
+    "Panda, tiger, monkey, koala and fox.",
+    "Munch like a panda. Stretch like a tiger. Balance like a monkey.",
+    "Sleep like a koala. And hug like a fox!",
+    "Which forest friend is your favorite?",
+    "Thank you for learning with me.",
+    "Bye-bye, friends! See you next time!"
+   ]
+  }
+ ]
+}

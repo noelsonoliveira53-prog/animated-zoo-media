@@ -1,0 +1,397 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Pandas eat bamboo for most of the day.\nEvery tiger has its own pattern of stripes.\nMany monkeys use their long tails to balance in the trees.\nKoalas sleep for most of the day and eat eucalyptus leaves.\nA fox curls its fluffy tail around itself like a blanket.",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are going to the forest.\nFive animal friends are waiting for us.\nLet's count them. One, two, three, four, five!\nEach friend has one fun fact to share.\nAre you ready? Let's go!\nLook! Who is black and white, and round and fluffy?\nIt is the panda!\nWhat do you think the panda likes to eat?\nBamboo! Crunchy, green bamboo.\nHere is the fun fact. Pandas eat bamboo for most of the day.\nMunch, munch, munch. Breakfast, lunch and dinner!\nSay it with me. Pandas eat bamboo!\nCan you munch like a panda? Munch, munch, munch!\nGreat munching!\nNow we walk into the jungle.\nWho is orange, with black stripes?\nIt is the tiger!\nLook at all those stripes. On the back, on the legs, and on the tail.\nHere is the fun fact. Every tiger has its own stripes.\nNo two tigers look the same. Just like you. There is only one you!\nSay it with me. Every tiger has its own stripes!\nCan you stretch like a tiger? Reach up high. Streeetch!\nWhat a big stretch!\nListen! Who is playing by the river?\nIt is the monkey!\nThe monkey has a long, long tail.\nWhy does a monkey need a tail?\nHere is the fun fact. Many monkeys use their tails to balance in the trees.\nThe tail helps them stay steady on a branch.\nSay it with me. Monkeys balance with their tails!\nCan you balance on one foot? Arms out wide. One, two, three!\nYou did it!\nShh. Somebody here is very sleepy.\nIt is the koala!\nThe koala is gray and soft, with big fluffy ears.\nKoalas eat leaves from the eucalyptus tree.\nHere is the fun fact. Koalas sleep for most of the day.\nThey nap in the morning. They nap in the afternoon. And they sleep at night, too!\nSay it with me. Koalas sleep most of the day!\nCan you pretend to sleep like a koala? Close your eyes. Shh.\nNow wake up! Good morning, koala!\nLook at the orange leaves. Who lives here?\nIt is the fox!\nThe fox has pointy ears and a big, fluffy tail.\nWhat is that fluffy tail for?\nHere is the fun fact. A fox curls its tail around itself like a blanket.\nIt keeps the fox warm and cozy when it sleeps.\nSay it with me. A fox tail is a cozy blanket!\nCan you give yourself a big, cozy hug? Squeeze!\nSo warm and cozy!\nWow! We met five forest friends.\nNow it is quiz time. Let's see what you remember!\nWho eats bamboo for most of the day?\nThe panda! Yes!\nWho has stripes that no other friend has?\nThe tiger! That's right!\nWho uses a long tail to balance?\nThe monkey! Good job!\nWho sleeps for most of the day?\nThe koala! You remembered!\nAnd who uses a fluffy tail like a blanket?\nThe fox! You are so clever!\nYou learned five new things today.\nPanda, tiger, monkey, koala and fox.\nMunch like a panda. Stretch like a tiger. Balance like a monkey.\nSleep like a koala. And hug like a fox!\nWhich forest friend is your favorite?\nThank you for learning with me.\nBye-bye, friends! See you next time!",
+ "duration": 281.52,
+ "bpm": 96,
+ "meta": {
+  "title": "Forest Animals for Kids! 5 Fun Facts with Milo",
+  "card": "Forest Animals!",
+  "thumb_text": "5 FUN FACTS!",
+  "description": "Meet five forest friends with Milo the bluebird and learn one true fact about each: pandas eat bamboo for most of the day, every tiger has its own stripes, monkeys use their tails to balance, koalas sleep most of the day, and foxes use their fluffy tails like a blanket.\nA gentle animal lesson for kids with questions, actions to copy and a quiz at the end. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "forest animals for kids",
+   "animal facts for kids",
+   "panda facts for kids",
+   "learn animals",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "job": {
+  "id": "zool_ep01",
+  "title": "Forest Animals!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 11,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "panda",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "panda"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "monkey",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "monkey"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "koala"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "fox",
+    "char": "animal",
+    "spot": "s5",
+    "opts": {
+     "kind": "fox"
+    },
+    "yaw": -0.1
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "mountain",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal"
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "noon",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "panda"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "jungle",
+    "tod": "noon",
+    "formation": "host_left",
+    "shot": "reveal",
+    "show": [
+     "tiger"
+    ]
+   },
+   {
+    "from": "monkey",
+    "biome": "river",
+    "tod": "golden",
+    "formation": "host_right",
+    "shot": "vista",
+    "show": [
+     "monkey"
+    ]
+   },
+   {
+    "from": "koala",
+    "biome": "spring_meadow",
+    "tod": "sunset",
+    "formation": "host_left",
+    "shot": "dolly",
+    "show": [
+     "koala"
+    ]
+   },
+   {
+    "from": "fox",
+    "biome": "autumn_forest",
+    "tod": "golden",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "fox"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "jungle",
+    "tod": "sunset",
+    "formation": "arc",
+    "shot": "vista"
+   },
+   {
+    "from": "goodbye",
+    "biome": "mountain",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "reveal"
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 72,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.8,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "HELLO!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "panda",
+    "shots": [
+     "close:panda",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:panda",
+     "side",
+     "low",
+     "orbit",
+     "close:panda"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BAMBOO!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "tiger",
+    "shots": [
+     "close:tiger",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:tiger",
+     "side",
+     "low",
+     "orbit",
+     "close:tiger"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "monkey",
+    "shots": [
+     "close:monkey",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:monkey",
+     "side",
+     "low",
+     "orbit",
+     "close:monkey"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BALANCE!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "koala",
+    "shots": [
+     "close:koala",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:koala",
+     "side",
+     "low",
+     "orbit",
+     "close:koala"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SLEEPY!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "fox",
+    "shots": [
+     "close:fox",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:fox",
+     "side",
+     "low",
+     "orbit",
+     "close:fox"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FLUFFY!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep01",
+  "res": "1920x1080",
+  "step": 1,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep01_timing.json",
+  "audio": "zool_ep01_song.wav"
+ }
+}

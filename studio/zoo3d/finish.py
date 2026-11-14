@@ -183,10 +183,10 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
     else:
         lyrics = "\n".join(l["text"] for l in timing["lines"] if l.get("kind") == "sing")
     seen = []; [seen.append(x) for x in lyrics.split("\n") if x not in seen]
-    desc = meta["description"].rstrip() + "\n\nLYRICS\n" + "\n".join(seen[:40])
+    desc = meta["description"].rstrip() + "\n\n" + song.get("desc_header", "LYRICS") + "\n" + "\n".join(seen[:40])
     entry = {"file": rel, "title": meta["title"], "description": desc, "tags": meta.get("tags", []), "date": date,
              "time": arg("--time", SLOT.get(ch, "2:00 PM")), "thumb": os.path.relpath(tdst, repo), "made_for_kids": True,
-             "status": "to_upload", "format": "3d_singalong", "duration": round(timing["duration"], 1)}
+             "status": "to_upload", "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1)}
     plan = [p for p in plan if p["file"] != rel] + [entry]
     plan.sort(key=lambda p: (p["date"], p["time"]))
     json.dump(plan, open(plan_p, "w"), indent=1)

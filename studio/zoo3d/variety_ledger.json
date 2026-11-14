@@ -417,5 +417,50 @@
    "pig"
   ],
   "new_song": true
+ },
+ {
+  "id": "zool_ep01",
+  "places": [
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "fox",
+   "koala",
+   "monkey",
+   "panda",
+   "tiger"
+  ],
+  "new_song": true
  }
 ]

@@ -366,5 +366,6 @@
   "bridge": 4
  },
  "follow_singer": true,
- "punch": true
+ "punch": true,
+ "pre_scene_plan": true
 }

@@ -67,3 +67,11 @@ waiting), write fewer new jobs that day.
 - Length 2:30-3:30 until average view duration passes 1:00.
 - Title pattern: "<Topic> Song for Kids! <number/hook> with <Host>" (60 characters or less), plus an optional theme emoji at the end.
 - Keep props out of the singer's close-up (Fruity carrot verse was blocked by cherries and the arrow).
+
+## Lessons (Nov 14, 2026)
+Narrated teaching episodes alternate with songs. Spec in `lessons/<id>.json`, built by `lesson.py` (Kokoro voice, slow,
+with quiet time after every question and "Can you ...?"). 4:30-6:30 long. See docs/DAILY_RUN.md rule 5.
+
+## Review gate and improvement loop (Nov 14, 2026)
+`review.py` before every upload, `review.py --brief` before every new spec. Logs: docs/REVIEW_LOG.md, docs/IMPROVE.md.
+Minimum look: docs/quality_baseline/. See docs/DAILY_RUN.md rules 3 and 4.

@@ -442,5 +442,6 @@
   "prechorus": 2
  },
  "follow_singer": true,
- "punch": true
+ "punch": true,
+ "pre_scene_plan": true
 }

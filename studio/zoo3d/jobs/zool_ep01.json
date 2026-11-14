@@ -1,0 +1,372 @@
+{
+ "id": "zool_ep01",
+ "title": "Forest Animals!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 11,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "panda",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "panda"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "tiger",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "tiger"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "monkey",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "monkey"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "koala",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "koala"
+   },
+   "yaw": -0.38
+  },
+  {
+   "id": "fox",
+   "char": "animal",
+   "spot": "s5",
+   "opts": {
+    "kind": "fox"
+   },
+   "yaw": -0.1
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "mountain",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal"
+  },
+  {
+   "from": "panda",
+   "biome": "bamboo",
+   "tod": "noon",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "panda"
+   ]
+  },
+  {
+   "from": "tiger",
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "reveal",
+   "show": [
+    "tiger"
+   ]
+  },
+  {
+   "from": "monkey",
+   "biome": "river",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "vista",
+   "show": [
+    "monkey"
+   ]
+  },
+  {
+   "from": "koala",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "koala"
+   ]
+  },
+  {
+   "from": "fox",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "fox"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "goodbye",
+   "biome": "mountain",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 72,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.8,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HELLO!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "panda",
+   "shots": [
+    "close:panda",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:panda",
+    "side",
+    "low",
+    "orbit",
+    "close:panda"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BAMBOO!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "tiger",
+   "shots": [
+    "close:tiger",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:tiger",
+    "side",
+    "low",
+    "orbit",
+    "close:tiger"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRIPES!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "monkey",
+   "shots": [
+    "close:monkey",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:monkey",
+    "side",
+    "low",
+    "orbit",
+    "close:monkey"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BALANCE!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "koala",
+   "shots": [
+    "close:koala",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:koala",
+    "side",
+    "low",
+    "orbit",
+    "close:koala"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SLEEPY!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "fox",
+   "shots": [
+    "close:fox",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:fox",
+    "side",
+    "low",
+    "orbit",
+    "close:fox"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "FLUFFY!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "zool_ep01",
+ "res": "1920x1080",
+ "step": 1,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "zool_ep01_timing.json",
+ "audio": "zool_ep01_song.wav"
+}

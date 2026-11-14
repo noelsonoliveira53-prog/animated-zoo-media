@@ -97,7 +97,8 @@ def review(fname):
         job = json.load(open(jp)); n = len(job.get("locations", []))
         if n < 8: (warns if job.get("pre_scene_plan") else fails).append(f"only {n} scenes in the scene plan (need 8+; run routes.py)")
         led = variety.load()
-        if not any(e["id"] == job["id"] for e in led): fails.append("episode is not recorded in the variety ledger")
+        _ids = {job["id"], job.get("song", job["id"])}   # re-renders (w/x/a4k ids) share the original episode's ledger entry
+        if not any(e["id"] in _ids for e in led): fails.append("episode is not recorded in the variety ledger")
     elif "short" not in fmt and "vids" not in fmt: warns.append("no --job given: scene plan and variety were not checked")
     ok = not fails
     print(("PASS" if ok else "FAIL"), fname)

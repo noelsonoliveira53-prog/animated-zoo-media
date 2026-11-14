@@ -194,7 +194,8 @@
     "title": "A Giraffe Can Peek Into an Upstairs Window!",
     "l1": "WHO IS THE",
     "l2": "TALLEST?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "SO TALL!"
    },
    "kind": "teach"
   },
@@ -307,7 +308,8 @@
     "title": "An Elephant Is as Heavy as 4 Cars!",
     "l1": "WHO IS THE",
     "l2": "BIGGEST?",
-    "to": 7
+    "to": 7,
+    "thumb_text": "COUNT THEM!"
    },
    "kind": "teach"
   },
@@ -423,7 +425,8 @@
     "title": "The Tiger Is the Biggest Cat in the World!",
     "l1": "BIGGEST",
     "l2": "CAT?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "GIANT KITTY!"
    },
    "kind": "teach"
   },
@@ -535,7 +538,8 @@
     "title": "You Can Hear a Lion Roar From 5 Miles Away!",
     "l1": "WHO IS THE",
     "l2": "LOUDEST?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "SO LOUD!"
    },
    "kind": "teach"
   },

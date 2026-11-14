@@ -84,7 +84,22 @@ written, rendered, titled and uploaded.
    lessons with lesson_shorts.py once Noelson approves the format (older note: 15-20 s cuts with make_short.sh,
    question title with the answer inside the clip), and never two Shorts from the same episode on the same day. Check each
    new Short has sound.
-3. PLAYBOOK.md Studio recipe: MP4 from raw GitHub, Made for kids = yes, custom thumbnail, title 60 characters or less,
+3. THUMBNAILS ARE MANDATORY (Noelson, Nov 14: "ensure the new posts are activating with YouTube skills to ensure personalized
+   thumbnails are being applied to all videos upon posting"). Every upload, episode AND Short, gets its own custom thumbnail:
+   - The file comes from the plan entry's "thumb" (episodes: brand/zoo/thumb_<id>.png from finish.py; Shorts:
+     brand/zoo/shorts/thumb_<id>.png from lesson_shorts.py or `python3 studio/zoo3d/short_thumb.py <short.mp4> --text "3 WORDS" --plan`).
+     Packaging follows the yt-package skill: title and thumbnail are one unit, thumbnail text 3 words max and never the title's
+     words, lint with `python3 /root/.claude/skills/yt-package/title.py --title "..." --thumb "..."`. review.py FAILS a video
+     with no thumbnail file, a thumbnail shared with another video, or more than 3 thumbnail words.
+   - In the upload dialog set the thumbnail (PLAYBOOK recipe: arm the PNG, `ytcp-thumbnail-uploader`, "Upload file"), then
+     VERIFY it before scheduling: the uploader shows the image as selected (a `data:`/`blob:` img with the "custom" tile active).
+     Never use the old fallback "schedule without a custom thumbnail". If it will not take after 3 tries, schedule the video,
+     then open its Details page (studio.youtube.com/video/<id>/edit) and set the thumbnail there in the same run.
+   - Shorts: Studio on desktop accepts custom Shorts thumbnails since July 2026 (rolled out to Partner Program channels
+     first). If the Short's upload dialog / Details page offers "Upload file", use the plan's thumb; if it only offers frame
+     picking, pick the frame closest to the thumb and record it.
+   - Record the result in the plan entry: "thumb_set": true | "frame_only" | false, and report every false to Noelson.
+   Then the rest of the PLAYBOOK.md Studio recipe: MP4 from raw GitHub, Made for kids = yes, title 60 characters or less,
    first 2 description lines searchable, AI-disclosure boilerplate, SCHEDULE (never publish now). Passed slot: next free day.
 4. Mark each upload "scheduled" with its video id, commit, push, and set it in the Command Center "videos" collection.
 

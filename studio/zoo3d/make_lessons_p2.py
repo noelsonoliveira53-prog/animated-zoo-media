@@ -438,8 +438,16 @@ IMPROVES = ["interactive lesson v2: answer signs + thinking timer, the fact is s
             "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
             "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
             "native 4K render (3840x2160)"]
+# Shorts thumbnails (yt-package): 3 words max, different words from the title, the hook the picture proves
+SHORT_THUMB = {"zs4k_zebra_flies": "NO BUZZING!", "zs4k_pig_mud": "SQUISHY BATH!", "zs4k_koala_notbear": "POUCH BABY!", "zs4k_polar_swim": "SUPER SWIMMER!",
+               "zs4k_giraffe_tallest": "SO TALL!", "zs4k_elephant_cars": "COUNT THEM!", "zs4k_tiger_bigcat": "GIANT KITTY!", "zs4k_lion_roar": "SO LOUD!",
+               "zs4k_zebra_skin": "LOOK CLOSER!", "zs4k_tiger_skin": "UNDER THE FUR", "zs4k_panda_pink": "SO TINY!", "zs4k_cow_spots": "ONLY ONE!",
+               "zs4k_polar_skin": "WHITE FUR?", "zs4k_horse_sleep": "TINY NAPS!", "zs4k_elephant_jump": "TOO HEAVY!", "zs4k_giraffe_neck": "COUNT ALONG!",
+               "zs4k_arcticfox_color": "BROWN TOO!", "zs4k_panda_home": "MISTY MOUNTAINS!", "zs4k_monkey_trees": "UP TOP!", "zs4k_bear_den": "COZY NAP!"}
 for spec in L:
     spec.update({"voice": "af_heart", "speed": 0.84, "improves": IMPROVES})
+    for g in spec["segments"]:
+        if g.get("short"): g["short"]["thumb_text"] = SHORT_THUMB[g["short"]["id"]]
     assert len(spec["title"]) <= 60, spec["title"]
     for g in spec["segments"]:
         g.setdefault("kind", "teach")

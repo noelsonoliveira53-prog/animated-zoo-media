@@ -290,7 +290,8 @@
     "title": "Zebra Stripes Keep Flies Away! Guess the Animal",
     "l1": "GUESS WHO?",
     "l2": "3 CLUES!",
-    "to": 8
+    "to": 8,
+    "thumb_text": "NO BUZZING!"
    },
    "kind": "teach"
   },
@@ -469,7 +470,8 @@
     "title": "Why Do Pigs Roll in Mud? To Keep Cool!",
     "l1": "GUESS WHO?",
     "l2": "OINK OINK!",
-    "to": 9
+    "to": 9,
+    "thumb_text": "SQUISHY BATH!"
    },
    "kind": "teach"
   },
@@ -696,7 +698,8 @@
     "l1": "IS A KOALA",
     "l2": "A BEAR?",
     "from": 4,
-    "to": 10
+    "to": 10,
+    "thumb_text": "POUCH BABY!"
    },
    "kind": "teach"
   },
@@ -905,7 +908,8 @@
     "title": "Polar Bear Paws Are as Big as Dinner Plates!",
     "l1": "GUESS WHO?",
     "l2": "SO FLUFFY!",
-    "to": 9
+    "to": 9,
+    "thumb_text": "SUPER SWIMMER!"
    },
    "kind": "teach"
   },

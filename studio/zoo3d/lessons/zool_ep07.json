@@ -277,7 +277,8 @@
     "title": "Arctic Foxes Change Color! White in Winter",
     "l1": "WHERE DOES THE",
     "l2": "ARCTIC FOX LIVE?",
-    "to": 7
+    "to": 7,
+    "thumb_text": "BROWN TOO!"
    },
    "kind": "teach"
   },
@@ -386,7 +387,8 @@
     "title": "Where Do Pandas Live? In the Bamboo Forest!",
     "l1": "WHERE DO",
     "l2": "PANDAS LIVE?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "MISTY MOUNTAINS!"
    },
    "kind": "teach"
   },
@@ -501,7 +503,8 @@
     "title": "Monkeys Live High in the Jungle Trees!",
     "l1": "WHERE DO",
     "l2": "MONKEYS LIVE?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "UP TOP!"
    },
    "kind": "teach"
   },
@@ -629,7 +632,8 @@
     "title": "Bears Sleep in a Den All Winter! Animal Homes",
     "l1": "WHERE DO",
     "l2": "BEARS LIVE?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "COZY NAP!"
    },
    "kind": "teach"
   },

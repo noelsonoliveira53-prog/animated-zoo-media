@@ -165,7 +165,8 @@
     "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
     "l1": "YES",
     "l2": "OR NO?",
-    "to": 5
+    "to": 5,
+    "thumb_text": "WHITE FUR?"
    },
    "kind": "teach"
   },
@@ -242,7 +243,8 @@
     "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
     "l1": "YES",
     "l2": "OR NO?",
-    "to": 5
+    "to": 5,
+    "thumb_text": "TINY NAPS!"
    },
    "kind": "teach"
   },
@@ -341,7 +343,8 @@
     "title": "Elephants Can't Jump! Yes or No Animal Quiz",
     "l1": "CAN AN ELEPHANT",
     "l2": "JUMP?",
-    "to": 5
+    "to": 5,
+    "thumb_text": "TOO HEAVY!"
    },
    "kind": "teach"
   },
@@ -443,7 +446,8 @@
     "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
     "l1": "YES",
     "l2": "OR NO?",
-    "to": 5
+    "to": 5,
+    "thumb_text": "COUNT ALONG!"
    },
    "kind": "teach"
   },

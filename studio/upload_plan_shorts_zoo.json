@@ -52,8 +52,9 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
-  "video_id": "LQYmUf0PMgg"
+  "thumb": "brand/zoo/shorts/thumb_zs3d_mama_hook.png",
+  "video_id": "LQYmUf0PMgg",
+  "thumb_text": "WHO IS HIDING?"
  },
  {
   "file": "shorts3d/zs3d_home_hippo.mp4",
@@ -66,9 +67,10 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
+  "thumb": "brand/zoo/shorts/thumb_zs3d_home_hippo.png",
   "video_id": "bxGO367Jkgo",
-  "scheduled_on": "2026-11-14"
+  "scheduled_on": "2026-11-14",
+  "thumb_text": "SPLASH SPLASH!"
  },
  {
   "file": "shorts3d/zs3d_sleep_giraffe.mp4",
@@ -81,9 +83,10 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
+  "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_giraffe.png",
   "video_id": "i4rqbji991k",
-  "scheduled_on": "2026-11-14"
+  "scheduled_on": "2026-11-14",
+  "thumb_text": "NO PILLOW!"
  },
  {
   "file": "shorts3d/zs3d_mama_elephant.mp4",
@@ -96,8 +99,9 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
-  "video_id": "l2wpBUcjXC4"
+  "thumb": "brand/zoo/shorts/thumb_zs3d_mama_elephant.png",
+  "video_id": "l2wpBUcjXC4",
+  "thumb_text": "FOUND YOU!"
  },
  {
   "file": "shorts3d/zs3d_baby_cub.mp4",
@@ -110,9 +114,10 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
+  "thumb": "brand/zoo/shorts/thumb_zs3d_baby_cub.png",
   "video_id": "pc0zAY86lcE",
-  "scheduled_on": "2026-11-14"
+  "scheduled_on": "2026-11-14",
+  "thumb_text": "TINY ROAR!"
  },
  {
   "file": "shorts3d/zs3d_home_action.mp4",
@@ -125,9 +130,10 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
+  "thumb": "brand/zoo/shorts/thumb_zs3d_home_action.png",
   "video_id": "Cq7yX_gDLzk",
-  "scheduled_on": "2026-11-14"
+  "scheduled_on": "2026-11-14",
+  "thumb_text": "TWIG BY TWIG!"
  },
  {
   "file": "shorts3d/zs3d_lion_sleep.mp4",
@@ -140,8 +146,9 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
-  "video_id": "qo1yYmWfPbo"
+  "thumb": "brand/zoo/shorts/thumb_zs3d_lion_sleep.png",
+  "video_id": "qo1yYmWfPbo",
+  "thumb_text": "BIG YAWN!"
  },
  {
   "file": "shorts3d/zs3d_baby_foal.mp4",
@@ -154,8 +161,9 @@
   "made_for_kids": true,
   "status": "scheduled",
   "format": "3d_short_cut",
-  "thumb": null,
-  "video_id": "1hWZMJUm1eA"
+  "thumb": "brand/zoo/shorts/thumb_zs3d_baby_foal.png",
+  "video_id": "1hWZMJUm1eA",
+  "thumb_text": "LITTLE STRIPES!"
  },
  {
   "file": "shorts3d/zs3d_sleep_zebra.mp4",
@@ -168,7 +176,8 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_zebra.png",
+  "thumb_text": "YES OR NO?"
  },
  {
   "file": "shorts3d/zs3d_mama_giraffe.mp4",
@@ -181,7 +190,8 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_mama_giraffe.png",
+  "thumb_text": "HELLO, MAMA!"
  },
  {
   "file": "shorts3d/zs3d_sleep_action.mp4",
@@ -194,7 +204,8 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_action.png",
+  "thumb_text": "STAND STILL!"
  },
  {
   "file": "shorts3d/zs3d_baby_action.mp4",
@@ -207,7 +218,8 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_baby_action.png",
+  "thumb_text": "BIG VOICE!"
  },
  {
   "file": "shorts3d/zs3d_count123.mp4",
@@ -220,7 +232,8 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_count123.png",
+  "thumb_text": "HOW MANY?"
  },
  {
   "file": "shorts3d/zs3d_milo_lion.mp4",
@@ -233,8 +246,9 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null,
-  "note": "moved from Nov 16 11:30 (fact-surprise Short took the slot); retitle to the fact pattern before upload"
+  "thumb": "brand/zoo/shorts/thumb_zs3d_milo_lion.png",
+  "note": "moved from Nov 16 11:30 (fact-surprise Short took the slot); retitle to the fact pattern before upload",
+  "thumb_text": "WHO IS NEXT?"
  },
  {
   "file": "shorts3d/zs3d_knees_paws.mp4",
@@ -247,6 +261,7 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_short_cut",
-  "thumb": null
+  "thumb": "brand/zoo/shorts/thumb_zs3d_knees_paws.png",
+  "thumb_text": "COPY ME!"
  }
 ]

@@ -55,6 +55,19 @@ def review(fname):
     if len(caps) > 1: fails.append(f"more than one ALL-CAPS word in the title: {caps}")
     for b in BANNED:
         if re.search(r"\b" + re.escape(b) + r"\b", low): fails.append(f"banned word in title/description: {b}")
+    # PACKAGING (yt-package; Noelson Nov 14: "personalized thumbnails are being applied to all videos upon posting")
+    th = entry.get("thumb"); tpath = os.path.join(REPO, th) if th else None
+    if not tpath or not os.path.exists(tpath): fails.append("no custom thumbnail file for this video (plan 'thumb'): make one before uploading (finish.py / lesson_shorts.py / short_thumb.py)")
+    else:
+        if os.path.getsize(tpath) > 2e6: fails.append("thumbnail is over 2 MB (YouTube's limit)")
+        if any(e is not entry and e.get("thumb") == th and e.get("status") != "dropped" for e in allp): fails.append("this thumbnail file is used by another video: every video gets its own")
+    _sj = os.path.join(HERE, "songs", os.path.splitext(os.path.basename(fname))[0] + ".json")
+    tt = entry.get("thumb_text") or (json.load(open(_sj)).get("meta", {}).get("thumb_text", "") if os.path.exists(_sj) else "")
+    if tt:
+        tw = re.findall(r"[A-Za-z0-9']+", tt.lower()); stop = {"the", "a", "an", "is", "or", "and", "to", "of", "in", "it", "so", "no", "too", "can"}
+        if len(tw) > 3: fails.append(f"thumbnail text has {len(tw)} words (max 3): '{tt}'")
+        rep = [w for w in tw if w not in stop and w in re.findall(r"[a-z0-9']+", title.lower())]
+        if rep: warns.append(f"thumbnail text repeats the title's words {rep}: the thumbnail should add a hook, not say the title again")
     same = [e for e in allp if e is not entry and e["title"].strip().lower() == title.strip().lower() and e.get("status") != "dropped"]
     if same: fails.append("title repeats another video on this channel (META-02)")
     if "AI tools" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the AI-disclosure boilerplate (META-03)")

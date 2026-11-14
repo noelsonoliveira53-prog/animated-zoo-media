@@ -52,9 +52,19 @@ def make(raw, sid, sh, outdir):
            "-filter_complex", fc, "-map", "[v]", "-map", "[au]", "-r", "24", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "40M", "-bufsize", "80M",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", out]
     subprocess.run(cmd, check=True)
+    # custom thumbnail (Noelson, Nov 14: every video gets its own thumbnail when it is posted): the moment the example is on
+    # screen, same layout as the Short, its own 3 words (never the title's words), no captions. 1080x1920 PNG.
+    tdir = os.path.join(REPO, "brand", "zoo", "shorts"); os.makedirs(tdir, exist_ok=True)
+    thumb = os.path.join(tdir, "thumb_" + sh["id"] + ".png")
+    tt = sh.get("thumb_text", "").replace("'", "\u2019").replace(":", "\\:"); st = min(330, int(1900 / max(1, len(tt) * 0.62)))
+    tfc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.12:saturation=1.2[bg];"
+           f"[b]crop=2880:2160:480:0,scale=2160:1620:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1110,"
+           f"drawbox=x=0:y=1098:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2730:w=2160:h=12:color=white@0.9:t=fill,"
+           f"drawtext=fontfile={FONT}:text='{tt}':fontsize={st}:fontcolor=0xFFD23F:borderw=24:bordercolor=0x402010:x=(w-tw)/2:y=1190,scale=1080:1920:flags=lanczos")
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(a + d * sh.get("thumb_at", 0.78)), "-i", raw, "-filter_complex", tfc, "-frames:v", "1", thumb], check=True)
     mb = os.path.getsize(out) / 1e6
     print(f"SHORT {sh['id']}: {d} s, 2160x3840, {mb:.1f} MB -> {out}")
-    return out, d
+    return out, d, thumb
 
 
 def main():
@@ -67,12 +77,13 @@ def main():
     items = plan if isinstance(plan, list) else (plan.get("items") or plan.get("shorts") or [])
     for sh in song.get("shorts", []):
         if only and sh["id"] != only: continue
-        out, d = make(raw, sid, sh, outdir)
+        out, d, thumb = make(raw, sid, sh, outdir)
         rel = os.path.relpath(out, REPO)
         fact = next((x for x in song.get("lyrics", "").split("\n") if sh["seg"].replace("_", " ").split()[-1] in x.lower()), "")
         desc = f"{sh['title']} A quick animal fact for kids with Milo the bluebird, from the lesson “{song['meta']['title']}”.\n{fact}\n\n{BOILER}"
         ent = {"file": rel, "title": sh["title"], "description": desc, "tags": song["meta"].get("tags", [])[:8], "made_for_kids": True,
                "status": "hold_review", "format": "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
+               "thumb": os.path.relpath(thumb, REPO), "thumb_text": sh.get("thumb_text", ""),
                "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"}
         old = next((e for e in items if e.get("file") == rel), None)
         if old: old.update(ent)

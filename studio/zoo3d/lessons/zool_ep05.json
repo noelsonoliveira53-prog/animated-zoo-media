@@ -203,7 +203,8 @@
     "title": "A Zebra's Skin Is Black Under Its Stripes!",
     "l1": "STRIPES",
     "l2": "OR SPOTS?",
-    "to": 6
+    "to": 6,
+    "thumb_text": "LOOK CLOSER!"
    },
    "kind": "teach"
   },
@@ -290,7 +291,8 @@
     "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?",
     "l1": "STRIPES",
     "l2": "OR SPOTS?",
-    "to": 7
+    "to": 7,
+    "thumb_text": "UNDER THE FUR"
    },
    "kind": "teach"
   },
@@ -417,7 +419,8 @@
     "title": "Baby Pandas Are Born Pink! As Small as Butter",
     "l1": "WHAT COLOR IS",
     "l2": "A BABY PANDA?",
-    "to": 5
+    "to": 5,
+    "thumb_text": "SO TINY!"
    },
    "kind": "teach"
   },
@@ -531,7 +534,8 @@
     "title": "Every Cow Has Her Own Spots, Like a Fingerprint!",
     "l1": "STRIPES",
     "l2": "OR SPOTS?",
-    "to": 7
+    "to": 7,
+    "thumb_text": "ONLY ONE!"
    },
    "kind": "teach"
   },

@@ -28,14 +28,23 @@ written, rendered, titled and uploaded.
      Upload only on PASS and only if it meets the quality bar; otherwise fix (retitle, re-cut, re-render) or hold, and say so.
      "check:" lines are read and judged by you against the rulebook (a flagged word in a harmless sentence is fine).
    - After the views check: add one number-backed note with `review.py --improve "..." --why "..."`.
-5. SONGS AND LESSONS (Nov 14): the channel posts teaching lessons as well as songs. The 4:00 PM slot alternates for now: song one
-   day, lesson the next. Lessons are narrated by Milo, 4:30-6:30 long (rulebook KID-04), one true fact per animal, a question
-   and an action to copy in every segment, a recap quiz at the end, no calls to action. Write `studio/zoo3d/lessons/<id>.json`
-   (ids zool_epNN; copy zool_ep01.json), run `python3 studio/zoo3d/lesson.py lessons/<id>.json` (needs studio/zoo3d/setup.sh
-   for the voice), variety check + record, 2 test stills, send the 3 job files to the PC. Keep 2 lessons and 3 songs queued ahead.
-   Noelson decides on a DAILY lesson (1:30 PM, next to the daily song) after he has seen the first finished lesson: when
-   zool_ep01 is finished and passes review, send him a 60-second sample and ask; do not go daily before he says yes.
-   Every fact is checked against a reliable source before the lesson is built; list them in the spec's "facts".
+5. TEACHING FIRST (Noelson, Nov 14 noon; replaces the "song one day, lesson the next" rule):
+   - Direction: "production needs to shift to videos teaching kids instead of music only": ONE music video a day and FOUR
+     teaching lessons a day; Shorts come ONLY from teaching lessons (never cut a new Short from a song); everything native 4K.
+     His proof (Studio, last 28 days): fact videos lead (Camel Humps 4.5K, Octopus 3.5K, Flamingos 3.0K, Meerkats 1.0K).
+   - "Lessons should be interactive, not just the cartoon moving his body ... in-depth, with examples and images matching
+     the items discussed. Music videos can keep the same dynamic." So lessons are built with `studio/zoo3d/teach.py` (v2):
+     Milo left, the animal in the middle, a teaching board on the right: two answer signs + thinking timer, then the fact is
+     SHOWN with an example from `teachprops.py` (house next to the giraffe, 4 cars counted, 7 neck bones counted, black skin under
+     a magnifier, tiny pink newborn panda next to a stick of butter ...), calm cast (no dancing), a quiz with check marks.
+     Formats: guessing game, champions, look-and-find, yes-or-no, this-or-that (specs: `make_lessons_p2.py`, ids zool_epNN).
+     `lesson.py` (v1, narration over dancing characters) is retired for new lessons.
+   - NOT LIVE YET. Prototypes zool_ep03..07 and their Shorts (shorts3d/zs4k_*.mp4, from `lesson_shorts.py`, 2160x3840) are
+     "hold_review": NEVER upload a hold_review item. Noelson approves the format first; then this file gets the daily slots.
+     Until then keep everything that is already scheduled and keep the schedule filled from the existing plan
+     ("keep current videos ... keep the posting schedule; the new ones need to be approved by me first").
+   - Every fact is checked against a reliable source before the lesson is built (spec "facts"). Lessons render with 16 samples
+     at 3840x2160 (1.35 s/frame on the PC, same picture as 32); a 4:45 lesson takes about 2.6 hours, so 4 a day = ~10.5 h of GPU.
 6. FULLY AUTOMATIC (Nov 13): Noelson never has to click anything for the daily run. A Google Vids download that opens a
    "save" prompt is picked up from ~/Downloads (newest .tmp/.crdownload/.mp4 after the click, size stable, verified with
    `bash studio/vids/pick_download.sh <staged> <out.mp4> 9`, 3 tries 20 s apart). Fallback: File > Export to Drive, then the
@@ -71,8 +80,9 @@ written, rendered, titled and uploaded.
    Never upload "hold_fact_check", "paused_channel" or "rendering_variety" items. Review gate first (rule 4).
 2. Shorts: THREE A DAY (Noelson, Nov 14) at 7:30 AM, 11:30 AM and 6:30 PM ET, at least 2 hours apart. Upload every
    "to_upload" item in studio/upload_plan_shorts_zoo.json dated today or tomorrow (soonest first), review gate first. Keep
-   at least 6 Shorts (2 days) ready: cut new 15-20 s Shorts from finished episodes (songs and lessons) with make_short.sh,
-   question title with the answer inside the clip, and never two Shorts from the same episode on the same day. Check each
+   at least 6 Shorts (2 days) ready from what is already cut. Do NOT cut new Shorts from songs (rule 5); new Shorts come from
+   lessons with lesson_shorts.py once Noelson approves the format (older note: 15-20 s cuts with make_short.sh,
+   question title with the answer inside the clip), and never two Shorts from the same episode on the same day. Check each
    new Short has sound.
 3. PLAYBOOK.md Studio recipe: MP4 from raw GitHub, Made for kids = yes, custom thumbnail, title 60 characters or less,
    first 2 description lines searchable, AI-disclosure boilerplate, SCHEDULE (never publish now). Passed slot: next free day.

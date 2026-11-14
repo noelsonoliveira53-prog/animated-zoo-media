@@ -9,6 +9,9 @@ in its own place, one true fact at a time, with a question, an action to copy an
 Spec: {"id", "title" (<=60), "card", "thumb_text", "description", "tags", "voice": "af_heart", "speed": 0.9,
        "cast": [animal kinds], "segments": [{"name": "panda", "biome", "tod", "show": [ids] (omit = everyone),
        "formation", "energy", "word": "BAMBOO!" (3D word that pops in), "lines": ["sentence", ...]}], "facts": [...]}
+Nov 14 (noon): lessons render NATIVE 4K ("res" 3840x2160, 32 samples; set "res" in the spec to override). Segment extras:
+  "visits" (change place / hide the animal until a reveal line), "word_at" (3D word pops in when Milo says it), "short" (cut this
+  segment into a fact Short: {"title", "l1", "l2"}; start/end land in songs/<id>.json "shorts").
 Voice: Kokoro (same engine as the old narrated videos), slowed for little listeners. Music: gentle, ducked under the voice.
 """
 import json, os, sys, re
@@ -84,35 +87,50 @@ def build(spec):
     cast = [{"id": "host", "char": "milo", "spot": "center"}]
     for i, kind in enumerate(spec["cast"]):
         cast.append({"id": kind, "char": "animal", "spot": SPOTS[i][0], "opts": {"kind": kind}, "yaw": SPOTS[i][1]})
-    locs, direct = [], []
+    locs, direct, shorts = [], [], []
     for i, seg in enumerate(spec["segments"]):
-        show = seg.get("show")
-        lc = {"from": seg["name"], "biome": seg["biome"], "tod": seg.get("tod", "noon"),
-              "formation": seg.get("formation", ("host_left", "host_right")[i % 2] if show else ("line", "arc", "v")[i % 3]),
-              "shot": seg.get("shot", ("dolly", "side", "reveal", "vista")[i % 4])}
-        if show: lc["show"] = show
-        locs.append(lc)
-        if show:
-            shots = []
-            for k in range(len(seg["lines"])):
-                shots.append(("close:" + show[k % len(show)], "wide", "close:host", "dolly", "close:" + show[0], "side", "low", "orbit")[k % 8])
-        else:
-            shots = ["wide", "close:host", "orbit", "low", "vista", "close:host", "high", "dolly"]
-        d = {"section": seg["name"], "shots": shots, "energy": seg.get("energy", 0.5 if show else 0.75), "wave": 0 if show else 1,
-             "jump": 0.1 if show else 0.25, "group": False, "props": []}
+        # "visits": [{"line": n, "biome", "tod", "show", "formation"}] lets one segment change place or cast part-way
+        # (guessing games hide the animal with "show": ["none"] until the reveal line; "this or that" lessons walk to a 2nd place)
+        visits = seg.get("visits") or [{}]
+        nl = len(seg["lines"]); shots = [None] * nl; any_show = False
+        for vi, v in enumerate(visits):
+            show = v.get("show", seg.get("show"))
+            lc = {"from": seg["name"], "biome": v.get("biome", seg["biome"]), "tod": v.get("tod", seg.get("tod", "noon")),
+                  "formation": v.get("formation", seg.get("formation", ("host_left", "host_right")[i % 2] if show and show != ["none"] else ("line", "arc", "v")[i % 3])),
+                  "shot": v.get("shot", seg.get("shot", ("dolly", "side", "reveal", "vista")[(i + vi) % 4]))}
+            if v.get("line"): lc["line"] = v["line"]
+            if show: lc["show"] = show
+            locs.append(lc)
+            a = v.get("line", 0); b = visits[vi + 1].get("line", nl) if vi + 1 < len(visits) else nl
+            for k in range(a, b):
+                j = k - a
+                if show == ["none"]: shots[k] = ("wide", "close:host", "low", "close:host", "side", "close:host")[j % 6]
+                elif show:
+                    any_show = True
+                    shots[k] = ("close:" + show[j % len(show)], "wide", "close:host", "dolly", "close:" + show[0], "side", "low", "orbit")[j % 8]
+                else: shots[k] = ("wide", "close:host", "orbit", "low", "vista", "close:host", "high", "dolly")[j % 8]
+        d = {"section": seg["name"], "shots": shots, "energy": seg.get("energy", 0.5 if any_show else 0.75), "wave": 0 if any_show else 1,
+             "jump": 0.1 if any_show else 0.25, "group": False, "props": []}
         if seg.get("word"):
-            d["props"].append({"type": "text", "text": seg["word"], "color": COLORS[i % len(COLORS)], "at": "top", "size": 0.7, "delay": 1.0})
+            pr = {"type": "text", "text": seg["word"], "color": COLORS[i % len(COLORS)], "at": seg.get("word_pos", "top"), "size": seg.get("word_size", 0.7), "delay": 1.0}
+            if seg.get("word_at"):   # pop the word in when Milo says it: "zebra" or ["no", 1] (2nd time it is said in the segment)
+                wa = seg["word_at"] if isinstance(seg["word_at"], list) else [seg["word_at"], 0]
+                pr.update({"word": wa[0], "nth": wa[1], "delay": 0.0})
+            d["props"].append(pr)
         direct.append(d)
+        if seg.get("short"):   # this segment is also cut into a fact Short (shorts only come from teaching videos)
+            sc = sections[i]; shorts.append(dict(seg["short"], seg=seg["name"], start=sc["start"], end=sc["end"]))
     job = {"id": sid, "title": spec.get("card", spec["title"]), "channel": "zoo", "set": "zooworld", "set_opts": {}, "seed": spec.get("seed", 5),
            "new_song": True, "kind": "lesson", "cast": cast, "locations": locs, "intro_shot": "reveal", "intro": {"energy": 0.6, "wave": 1},
-           "thumb_frame": spec.get("thumb_frame", 72), "direct": direct, "song": sid, "res": "1920x1080", "step": 1,
+           "thumb_frame": spec.get("thumb_frame", 72), "direct": direct, "song": sid, "res": spec.get("res", "3840x2160"),
+           "samples": spec.get("samples", 32), "step": 1,
            "cut_mode": "beat", "follow_singer": False, "punch": False,
            "timing_file": f"{sid}_timing.json", "audio": f"{sid}_song.wav"}
     json.dump(job, open(os.path.join(HERE, "jobs", f"{sid}.json"), "w"), indent=1)
     song = {"kind": "lesson", "format": "3d_lesson", "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
             "script": "\n".join(l["text"] for l in lines), "duration": dur, "bpm": BPM,
             "meta": {"title": spec["title"], "card": spec.get("card", spec["title"]), "thumb_text": spec.get("thumb_text", ""),
-                     "description": spec["description"].rstrip() + "\n\n" + BOILER, "tags": spec.get("tags", [])}, "job": job}
+                     "description": spec["description"].rstrip() + "\n\n" + BOILER, "tags": spec.get("tags", [])}, "shorts": shorts, "job": job}
     json.dump(song, open(os.path.join(HERE, "songs", f"{sid}.json"), "w"), indent=1)
     print(f"OK {sid}: {dur:.0f} s ({int(dur // 60)}:{int(dur % 60):02d}), {wc} words, {len(lines)} lines, {len(locs)} scenes")
     return job

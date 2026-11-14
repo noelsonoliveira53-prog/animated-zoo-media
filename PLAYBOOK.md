@@ -256,3 +256,19 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   New: zoo3d_ep17y (16 scenes, 9 places, engine.py "after" key = seconds into a section, so long outros get extra places) rendered in 30 min; finished as zoo3d_ep17.mp4 for Nov 21 (cast = zool_ep01's, so never post it next to the forest lesson). zool_ep02 "Amazing Animal Noses" (elephant, rhino, pig, bear, cow; facts sourced in the spec) is on the PC. Raws waiting for the 4K finish: zoo3d_ep14x, ep15x, ep16x (Nov 19/20/22 candidates; ep18 native-4K test is hold_review, moved to Nov 19).
   Upload notes: the raw GitHub CDN serves stale files for a few minutes after a push (even with ?query); fetch from the commit SHA (raw.githubusercontent.com/<owner>/<repo>/<sha>/<path>). In the hidden pane, take a screenshot before reading element rects (they are 0x0 until it renders) and split long scripts (45 s tool timeout). Studio video edit: Visibility at page (1168,685) with a 1400x900 viewport.
   Shorts plan Nov 17 has two cuts from the OLD ep12 render (sleep_zebra, sleep_action, same episode, same day): re-cut them from the new ep12 with fact titles before uploading.
+
+### Nov 14 (noon, production session): TEACHING FIRST + interactive lessons v2
+- Noelson (12:01-12:10 ET): shift from music-only to teaching videos: 1 music video + 4 teaching lessons a day, Shorts only from
+  lessons, everything native 4K, 5 prototypes for his review, current videos and schedule stay, nothing new uploads before he
+  approves. Lessons must be interactive and in-depth with examples on screen; music videos keep their style. See docs/DAILY_RUN.md rule 5.
+- New files: `studio/zoo3d/teach.py` (lesson builder v2), `teachprops.py` (answer signs, thinking dots, mystery box, counters and
+  ~25 example props), `make_lessons_p2.py` (5 prototype specs zool_ep03..07), `lesson_shorts.py` (4K vertical fact Shorts from the
+  lesson RAW with their own captions), `teach_stills.py` (local test stills). Engine additions: prop type "teach" with per-frame
+  animation, shots "teach"/"exhibit", formation "teach", location "place" (exact spot for one cast member), job "hold_shots"
+  (same framing over several lines = one continuous shot), directive "jumpers", location key "shot" no longer makes a new set.
+  New look-alike kinds in chars/animal.py: pink_cub (newborn panda), summer_fox, cat. PC copy: zoo3d\engine.py, teachprops.py,
+  chars\animal.py, fonts\Baloo2-ExtraBold.ttf (all sent Nov 14 12:36 ET).
+- Measured on the PC (jobs aa_t16 / aa_t32, same 72 frames at 3840x2160): 16 samples = 1.35 s/frame, 32 samples = 1.97 s/frame,
+  PSNR 45 dB, no visible difference. Lessons use 16 samples. The 4K song test used 32 (1.7 s/frame); songs can drop to 16 too.
+- Background processes started with nohup/& die when the turn ends in this container: run long encodes with the Bash tool's
+  run_in_background (finish.py was killed this way once).

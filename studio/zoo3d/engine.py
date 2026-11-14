@@ -72,7 +72,7 @@ setmod = importlib.import_module("sets." + job["set"])
 #   the others are hidden from the render, and the world (sky) switches with it.
 LOCS = job.get("locations") or [dict(job.get("set_opts", {}))]
 # identical places (same options) are built once and revisited; each visit can have its own "formation"/"show"/"zoom"
-_VIS = ("from", "line", "formation", "show", "zoom", "after")
+_VIS = ("from", "line", "formation", "show", "zoom", "after", "shot", "place")   # "shot" (Nov 14): the camera move of a visit, not part of the place
 _keys = [json.dumps({k: v for k, v in _lc.items() if k not in _VIS}, sort_keys=True) for _lc in LOCS]
 _uniq = list(dict.fromkeys(_keys)); LOC_SET = [_uniq.index(k) for k in _keys]
 SETS, LOC_OFF, LOC_WORLD, LOC_COLL = [], [], [], []
@@ -122,6 +122,9 @@ for d in job["direct"]:
             if PROP_FONT: o.data.font = PROP_FONT
         elif p["type"] == "set_prop" and hasattr(setmod, "prop"):
             o = setmod.prop(L, p["name"], at, **p.get("opts", {}))
+        elif p["type"] == "teach":   # lesson props (teachprops.py): answer signs, counters, examples of the thing being taught
+            import teachprops as TP
+            o = TP.build(L, p["name"], at, **p.get("opts", {}))
         elif p["type"] == "shape":
             m = L.mat("Shape" + p.get("color", "#ff5252"), p.get("color", "#ff5252"), 0.25, coat=0.8)
             shp = p.get("shape", "sphere")
@@ -162,6 +165,12 @@ def shot_pose(shot, u, t):
         dist = (getattr(ch, "close_dist", 6.4) - 0.6 * u) * sc
         side = 0.35 if zlib.crc32(cid.encode()) % 2 else -0.35
         return (bx + side * dist * 0.4, by - dist, fz + 0.35 * sc), (bx, by, fz - 0.1 * sc), 45
+    if shot == "teach":      # lesson board shot: Milo left, the animal in the middle, the example / answer signs on the right
+        c = SET["cams"].get("center", (0, 0, 1.4))
+        return (c[0] + 0.2 - 0.4 * u, c[1] - 11.2 + 0.35 * u, 2.6), (c[0], c[1] - 0.6, 2.0), 35
+    if shot == "exhibit":    # closer look at the animal and the example next to it
+        c = SET["cams"].get("center", (0, 0, 1.4))
+        return (c[0] + 1.9 + 0.4 * u, c[1] - 8.6 + 0.5 * u, 2.3), (c[0] + 1.25, c[1] - 0.6, 1.75), 35
     if shot == "orbit":
         a = -0.6 + 1.2 * u
         c = SET["cams"].get("center", (0, 0, 1.4)); r = SET["cams"].get("orbit_r", 9) * (0.5 + 0.5 * ZOOM[0])
@@ -221,7 +230,9 @@ for sec in timing["sections"]:
             ln = next((l for l in lns if abs(l["start"] - st) < 0.05), None)
             if ln and ln.get("who") not in (None, "host", "all", host_id) and ln.get("who") in cast and k % 2 == 1:
                 shot = "close:" + ln["who"]
-        if shot == prev and len(shots) > 1: shot = shots[(k + 1) % len(shots)]
+        if job.get("hold_shots"):   # lessons: the same framing over several lines is ONE continuous shot (no jump cut, no swap)
+            if shot == prev and k > 0: continue
+        elif shot == prev and len(shots) > 1: shot = shots[(k + 1) % len(shots)]
         prev = shot
         cuts.append((_snap(st), shot, d))
 if not cuts or cuts[0][0] > 0:
@@ -262,7 +273,8 @@ def state_for(ch, f, t):
         sx = cast[who].base[0] - ch.base[0]
         look = max(-0.6, min(0.6, sx * 0.15))
     return {"talk": m if singing else 0.0, "energy": e, "beat": bpos, "bar": barpos, "look": look,
-            "wave": d.get("wave", 0) * (1 if (t % (beat_len * 8)) < beat_len * 2 else 0), "jump": d.get("jump", 0),
+            "wave": d.get("wave", 0) * (1 if (t % (beat_len * 8)) < beat_len * 2 else 0),
+            "jump": d.get("jump", 0) if (not d.get("jumpers") or ch.id in d["jumpers"]) else 0,
             "blink": blink, "singing": singing, "t_section": t, "bpm": timing["bpm"]}
 
 # Formations (Nov 13 night, "more change on the scenes"): where the host and the visible animals stand at each place.
@@ -276,6 +288,9 @@ _FORM = {
     "v": ((0, -1.0), [(-1.9, 0.4), (1.9, 0.4), (-3.7, 1.7), (3.7, 1.7), (-5.3, 3.0), (5.3, 3.0)]),
     "host_left": ((-2.7, -0.5), [(0.1, 0.1), (2.3, -0.1), (4.4, 0.9), (1.2, 2.5), (3.4, 2.9), (-0.9, 2.9)]),
     "host_right": ((2.7, -0.5), [(-0.1, 0.1), (-2.3, -0.1), (-4.4, 0.9), (-1.2, 2.5), (-3.4, 2.9), (0.9, 2.9)]),
+    # lessons (Nov 14): Milo left, the animal in the middle, the right third is kept free for examples and answer signs
+    "teach": ((-3.05, -0.9), [(-0.55, -0.3), (2.55, -0.5), (1.1, 1.5), (3.9, 1.3), (-1.9, 2.2), (0.3, 3.0)]),
+    "teach_solo": ((-2.2, -0.9), [(-0.55, -0.3), (2.55, -0.5), (1.1, 1.5), (3.9, 1.3), (-1.9, 2.2), (0.3, 3.0)]),
 }
 for ch in cast.values(): ch.base0 = ch.base; ch.yaw0 = ch.root.rotation_euler.z; ch.hidden = False
 ZOOM = [1.0]; VISNOW = []
@@ -325,6 +340,8 @@ def set_location(i):
             x, y = slots[k % len(slots)]; cast[c].base = (x, y, 0); cast[c].root.rotation_euler.z = -0.09 * x
     else:
         for ch in cast.values(): ch.base = ch.base0; ch.root.rotation_euler.z = ch.yaw0
+    for c, pos in (lc.get("place") or {}).items():   # exact spot for one cast member at this visit: {"joey": [x, y, z]}
+        if c in cast: cast[c].base = tuple(pos); cast[c].root.rotation_euler.z = -0.09 * pos[0]
     for c in others: cast[c].hidden = c not in vis
     VISNOW[:] = vis
     ZOOM[0] = lc.get("zoom", 0.74 if len(vis) <= 2 else (0.86 if len(vis) == 3 else 1.0))
@@ -347,6 +364,9 @@ def apply(f):
         o.scale = (bs[0] * s, bs[1] * s, bs[2] * s)
         o.hide_render = (s == 0)
         o.rotation_euler.z = math.sin(t * 1.3) * spin
+        if s > 0 and o.name.startswith("TP_"):
+            import teachprops as TP
+            TP.animate(o, t - t0, t1 - t0, {"beat": (t / beat_len) % 1.0})
     shot, u, d = cut_at(t)
     loc, tgt, lens = shot_pose(shot, L.smoothstep(u), t)
     sway = 0.05 * math.sin(t * 0.9)

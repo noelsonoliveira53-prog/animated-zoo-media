@@ -28,6 +28,10 @@ VARIANTS = {
     "pig":        ("hippo", ("#ffb3c6", "#ffd6e2", "#e886a4", "#ff8fb0", "#3a2414"), {"pointyears": 1, "noteeth": 1, "curlytail": 1}),
     "cow":        ("hippo", ("#fbfaf6", "#ffc9d8", "#2a2830", "#ffb3c7", "#3a2414"), {"cowspots": 1, "horns": 1, "noteeth": 1}),
     "rhino":      ("hippo", ("#9fa6b2", "#d3d8e0", "#6f7684", "#ffb3c7", "#3a2414"), {"horn": 1, "noteeth": 1}),
+    # lesson helpers (Nov 14): shown next to the real animal as a living example, never as a cast member of their own
+    "pink_cub":   ("lion",  ("#ffb9c9", "#ffd3dd", "#f59ab0", "#ffc3cf", "#2a1c10"), {"nomane": 1}),                                  # newborn panda
+    "summer_fox": ("lion",  ("#8f7257", "#d9c7b0", "#5e4a3a", "#ffc3cf", "#3a4a6a"), {"nomane": 1, "pointyears": 1, "bushytail": 1}),  # arctic fox in summer
+    "cat":        ("lion",  ("#f4a64a", "#fff1dc", "#b86a24", "#ffb0c0", "#3a6a3a"), {"nomane": 1, "pointyears": 1}),                 # a pet cat, to compare with the tiger
 }
 ALL_KINDS = list(KINDS) + list(VARIANTS)
 

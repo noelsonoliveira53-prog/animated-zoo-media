@@ -1,0 +1,444 @@
+"""Interactive teaching prototypes P1-P5 (Noelson, Nov 14 2026: teaching videos instead of music only; 1 music video + 4
+teaching videos a day; Shorts only from teaching videos; all native 4K; "lessons should be interactive ... in-depth, with
+examples and images matching the items discussed"; 5 prototypes for his review, nothing uploads before he approves).
+
+Five teaching FORMATS (teach.py builds them; teachprops.py holds the on-screen examples):
+  zool_ep03 guessing game   3 numbered clues and a mystery box, the animal appears, then the fact is SHOWN with an example
+  zool_ep04 champions       pick-one question with two answer signs, then a comparison the child knows (house, cars, pet cat)
+  zool_ep05 look and find   stripes or spots signs, then a magnifier / fingerprint / tiny pink newborn
+  zool_ep06 yes or no       YES / NO signs with a thinking timer, then the proof (black skin, 7 bones counted one by one)
+  zool_ep07 this or that    is this its home? Milo checks a place, then walks to the real home and shows why
+Run: python3 make_lessons_p2.py && for i in 03 04 05 06 07; do python3 teach.py lessons/zool_ep$i.json; done
+Facts checked Nov 14, 2026 (sources in each spec's "facts").
+"""
+import json, os
+HERE = os.path.dirname(os.path.abspath(__file__))
+TAGS = ["animals for kids", "learn animals", "animal facts for kids", "preschool learning", "animals for toddlers", "The Animated Zoo", "Milo"]
+HELLO = "Hello, friends! I am Milo the bluebird."
+BX = [(1.55, -1.2, 3.75), (2.6, -1.2, 3.75), (3.65, -1.2, 3.75)]     # clue badges
+
+
+def Q(t, pause=3.2): return {"t": t, "pause": pause}
+def q0(t): return {"t": t, "pause": 0.4}
+def X(t, shot): return [t, shot]
+def ex(prop, at, on, off=None, **kw):
+    d = {"prop": prop, "at": at, "on": on}
+    if off is not None: d["off"] = off
+    for k in ("times", "leave"):
+        if k in kw: d[k] = kw.pop(k)
+    if kw: d["opts"] = kw
+    return d
+
+
+def clues(reveal=4):
+    """Mystery box + three numbered clue badges + thinking dots (lines 0-3), gone at the reveal line."""
+    return [ex("qbox", "mid", [0], [reveal])] + [ex("badge", list(BX[k]), [k + 1], [reveal], text=str(k + 1), s=1.1, color=("#ffb627", "#3db8ff", "#3cc45a")[k]) for k in range(3)] + \
+           [ex("dots", "dots", [3, "end"], [reveal])]
+
+
+L = []
+# =========================================================================================== P1 guessing game
+L.append({
+ "id": "zool_ep03", "seed": 31, "title": "Who Am I? Animal Guessing Game for Kids with Milo", "card": "Who Am I?", "thumb_text": "3 CLUES!",
+ "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away, pigs roll in mud to keep cool, a koala is not a bear, and polar bears paddle with paws as big as dinner plates.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
+ "tags": ["animal guessing game for kids", "who am i animals", "guess the animal"] + TAGS,
+ "cast": ["zebra", "pig", "koala", "polar_bear"],
+ "extras": [{"id": "horse", "kind": "horse"}, {"id": "bear", "kind": "bear"}, {"id": "joey", "kind": "koala", "scale": 0.36}],
+ "facts": [
+  "A zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).",
+  "Pigs have very few working sweat glands, so they wallow in mud to cool down; mud also protects their skin from sunburn (Bracke 2011, Applied Animal Behaviour Science).",
+  "A koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).",
+  "Polar bears are strong swimmers; their front paws work like paddles and are as big as dinner plates (Polar Bears International)."],
+ "segments": [
+  {"name": "hello", "kind": "intro", "biome": "beach", "tod": "morning", "show": ["none"], "word": "WHO AM I?", "energy": 0.7,
+   "exhibits": [ex("qbox", [-2.9, 0.2, 0], [2]), ex("qbox", [2.9, 0.2, 0], [2, "friends"], color="#e85d8a"),
+                ex("count", [-0.7, -1.6, 3.5], [3, "three"], n=3, gap=0.45)],
+   "lines": [HELLO, "Today we are going to play a guessing game!", "Four animal friends are hiding.",
+             "I will give you three clues. Then you guess who it is.", "Put on your thinking cap. Are you ready? Let's play!"]},
+  {"name": "zebra", "biome": "savanna", "tod": "noon", "word": "ZEBRA!", "word_on": [4, "zebra"], "word_off": [6],
+   "visits": [{"show": ["none"]}, {"line": 4, "show": ["zebra"]}, {"line": 6, "show": ["zebra", "horse"]}],
+   "exhibits": clues() + [ex("flies", [2.55, -1.2, 2.4], [6, "flies"], n=5), ex("flies", [-0.55, -1.1, 2.5], [7], n=4, leave=[7, "mix"])],
+   "lines": ["Guess who! Here are three clues.", "Clue one. This friend looks like a horse.", "Clue two. This friend has black and white stripes.",
+             Q("Clue three. This friend lives on the sunny, grassy savanna. Who is it?"),
+             X("It is the zebra! Great guessing!", "close:zebra"),
+             "Now, here is the fun fact. A zebra's stripes help keep the pesky flies away!",
+             X("Look. The flies land on the plain brown horse.", "exhibit"),
+             X("But on the stripy zebra? The stripes mix the flies up. They cannot land!", "exhibit"),
+             X("Say it with me. Stripes keep the flies away!", "close:host"),
+             "Can you gallop like a zebra? Clip, clop, clip, clop!", "What a great gallop!"],
+   "short": {"id": "zs4k_zebra_flies", "title": "Zebra Stripes Keep Flies Away! Guess the Animal", "l1": "GUESS WHO?", "l2": "3 CLUES!", "to": 8}},
+  {"name": "pig", "biome": "farm", "tod": "morning", "word": "PIG!", "word_on": [4, "pig"], "word_off": [6],
+   "visits": [{"show": ["none"]}, {"line": 4, "show": ["pig"]}, {"line": 8, "show": ["pig"], "place": {"pig": [2.45, -0.5, 0.0]}}],
+   "exhibits": clues() + [ex("sun", [2.6, -1.1, 3.75], [5, "hot"], s=1.25), ex("mud", "ex", [6, "mud"])],
+   "lines": ["Guess who! Here are three clues.", "Clue one. This friend is pink, with a curly tail.", "Clue two. This friend lives on the farm.",
+             Q("Clue three. This friend says oink, oink! Who is it?"),
+             X("It is the pig! You got it!", "close:pig"),
+             "What does a pig do on a hot, sunny day? Here is the fun fact.",
+             X("Pigs roll in the mud to keep cool!", "exhibit"),
+             "When you are hot, you sweat. But a pig cannot sweat much.",
+             X("So the pig rolls in cool, squishy mud. The mud even stops sunburn, like sunscreen!", "exhibit"),
+             X("Say it with me. Pigs roll in mud to keep cool!", "close:host"),
+             "Can you roll your arms like a pig in the mud? Roll, roll, roll!", "Super rolling!"],
+   "short": {"id": "zs4k_pig_mud", "title": "Why Do Pigs Roll in Mud? To Keep Cool!", "l1": "GUESS WHO?", "l2": "OINK OINK!", "to": 9}},
+  {"name": "koala", "biome": "autumn_forest", "tod": "golden", "word": "KOALA!", "word_on": [4, "koala"], "word_off": [5],
+   "visits": [{"show": ["none"]}, {"line": 4, "show": ["koala"]}, {"line": 7, "show": ["koala", "bear"]},
+              {"line": 8, "show": ["koala", "joey"], "place": {"joey": [-0.55, -1.15, 0.5]}}],
+   "choices": {"a": "A BEAR", "b": "NOT A BEAR", "right": "b", "ask": [5], "answer": [6], "hold": 2.2},
+   "exhibits": clues() + [ex("leaves", "ex", [4], [5]), ex("cross", [2.55, -1.4, 3.35], [7, "no"], [8], s=0.9),
+                          ex("arrow", [-0.55, -1.3, 1.6], [8, "pouch"], [9]), ex("heart", [1.4, -1.0, 2.7], [9], s=1.3)],
+   "lines": ["Guess who! Here are three clues.", "Clue one. This friend is gray and fluffy, with a big black nose.", "Clue two. This friend loves to hug a tree.",
+             Q("Clue three. This friend munches on green leaves. Who is it?"),
+             X("It is the koala! Well done!", "close:koala"),
+             Q("Now, a tricky question. Is a koala a bear?"),
+             "No! Here is the fun fact. A koala is not a bear!",
+             X("Look. This is a bear. A bear has no pouch.", "exhibit"),
+             X("But a mama koala has a pouch on her tummy, like a cozy pocket. Her baby rides inside!", "teach"),
+             X("A baby koala is called a joey.", "close:joey"),
+             X("Say it with me. A koala is not a bear!", "close:host"),
+             "Can you hug yourself, like a koala hugs a tree? Squeeze!", "What a lovely hug!"],
+   "short": {"id": "zs4k_koala_notbear", "title": "A Koala Is Not a Bear! Guess the Animal", "l1": "IS A KOALA", "l2": "A BEAR?", "from": 4, "to": 10}},
+  {"name": "polar_bear", "biome": "arctic", "tod": "golden", "word": "POLAR BEAR!", "word_on": [4, "polar"], "word_off": [5],
+   "visits": [{"show": ["none"]}, {"line": 4, "show": ["polar_bear"]}, {"line": 7, "show": ["polar_bear"], "place": {"polar_bear": [2.45, -0.45, 0.0]}}],
+   "choices": {"a": "YES", "b": "NO", "right": "a", "ask": [5], "answer": [6], "hold": 2.2},
+   "exhibits": clues() + [ex("snowflake", [2.6, -1.2, 2.75], [2, "icy"], [4], s=1.2), ex("pool", "ex", [6, "swimmers"]),
+                          ex("plate", [0.35, -1.3, 0.0], [8, "dinner"])],
+   "lines": ["Guess who! Here are three clues.", "Clue one. This friend is very big and very fluffy.", "Clue two. This friend lives where it is icy and cold.",
+             Q("Clue three. This friend looks as white as snow. Who is it?"),
+             X("It is the polar bear! Hooray!", "close:polar_bear"),
+             Q("Can a polar bear swim?"),
+             "Yes! Here is the fun fact. Polar bears are super swimmers!",
+             X("Look at those big front paws. They work like paddles in the water.", "exhibit"),
+             X("Each paw is as big as a dinner plate!", "exhibit"),
+             X("Say it with me. Polar bears are super swimmers!", "close:host"),
+             "Can you paddle your paws like a polar bear? Paddle, paddle, paddle!", "Splendid swimming!"],
+   "short": {"id": "zs4k_polar_swim", "title": "Polar Bear Paws Are as Big as Dinner Plates!", "l1": "GUESS WHO?", "l2": "SO FLUFFY!", "to": 9}},
+  {"name": "quiz", "kind": "quiz", "biome": "mountain", "tod": "sunset", "word": "QUIZ TIME!",
+   "lines": ["Wow! You guessed all four friends. Now it is quiz time!", "Get ready. Think hard!"],
+   "quiz": [["Whose stripes keep the flies away?", "The zebra! Yes!", "zebra"], ["Who rolls in the mud to keep cool?", "The pig! That's right!", "pig"],
+            ["Who is not a bear, and rides in a pouch as a baby?", "The koala! Good job!", "koala"], ["Whose paws are as big as dinner plates?", "The polar bear! You remembered!", "polar_bear"]]},
+  {"name": "goodbye", "kind": "outro", "biome": "beach", "tod": "golden", "word": "BYE-BYE!",
+   "lines": ["You learned four new things today.", "Gallop like a zebra. Roll like a pig. Hug like a koala. And paddle like a polar bear!",
+             "Which friend was the hardest to guess?", "Thank you for playing with me. Bye-bye, friends! See you next time!"]}]})
+
+# =========================================================================================== P2 champions
+def champ_visits(name, n=2): return [{"show": ["none"]}, {"line": n, "show": [name]}]
+
+L.append({
+ "id": "zool_ep04", "seed": 37, "title": "Animal Champions for Kids! Tallest, Biggest, Loudest", "card": "Animal Champions!", "thumb_text": "WHO WINS?",
+ "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet four animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars, the tiger is the giant cousin of a pet cat, and a lion's roar can be heard from five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
+ "tags": ["biggest animals for kids", "tallest animal", "animal records for kids"] + TAGS,
+ "cast": ["giraffe", "elephant", "tiger", "lion"], "extras": [{"id": "cat", "kind": "cat", "scale": 0.4}],
+ "facts": [
+  "The giraffe is the tallest living land animal, up to about 18 feet (5.5 m) (Bristol Zoo; San Diego Zoo).",
+  "The African elephant is the largest living land animal; a big male weighs about 6 tons, about as much as four cars (Smithsonian's National Zoo; WWF).",
+  "The tiger is the largest cat species, belongs to the same family as pet cats, and is a strong swimmer (WWF; Live Science).",
+  "A lion's roar can be heard up to 5 miles (8 km) away; lions roar to mark their territory (National Geographic)."],
+ "segments": [
+  {"name": "hello", "kind": "intro", "biome": "desert", "tod": "morning", "word": "CHAMPIONS!", "energy": 0.7,
+   "exhibits": [ex("count", [-1.05, -1.7, 3.55], [3, "one"], n=4, times=[[3, "one"], [3, "two"], [3, "three"], [3, "four"]])],
+   "lines": [HELLO, "Today is Animal Champions day!", "We will find the tallest, the biggest, and the loudest animals.",
+             "Four champions are here. Count them with me. One, two, three, four!", "Are you ready to meet the champions? Let's go!"]},
+  {"name": "giraffe", "biome": "savanna", "tod": "noon", "word": "TALLEST!", "word_on": [2, "giraffe"], "visits": champ_visits("giraffe"),
+   "choices": {"a": "ELEPHANT", "b": "GIRAFFE", "right": "b", "ask": [1], "answer": [2], "hold": 2.4},
+   "exhibits": [ex("ruler", [0.85, -0.2, 0.0], [3, "tallest"], mark=3.75), ex("house2", [2.85, -0.2, 0.0], [4, "look"], h=3.3)],
+   "lines": [q0("Who is the tallest animal in the whole world?"), Q("Is it the elephant? Or is it the giraffe?"),
+             X("It is the giraffe!", "close:giraffe"),
+             "Here is the fun fact. The giraffe is the tallest animal on land.",
+             X("How tall? Look! A giraffe can peek into an upstairs window.", "exhibit"),
+             "Its long neck helps it reach the leaves at the very top of the tree.",
+             X("Even a baby giraffe is tall. On the day it is born, it is as tall as a grown-up!", "close:giraffe"),
+             "And a giraffe's tongue is long too. As long as your arm!",
+             X("Say it with me. The giraffe is the tallest!", "close:host"),
+             "Can you stretch up tall like a giraffe? Reach, reach, reach!", "So tall!"],
+   "short": {"id": "zs4k_giraffe_tallest", "title": "A Giraffe Can Peek Into an Upstairs Window!", "l1": "WHO IS THE", "l2": "TALLEST?", "to": 6}},
+  {"name": "elephant", "biome": "jungle", "tod": "morning", "word": "BIGGEST!", "word_on": [2, "elephant"], "visits": champ_visits("elephant"),
+   "choices": {"a": "ELEPHANT", "b": "HIPPO", "right": "a", "ask": [1], "answer": [2], "hold": 2.4},
+   "exhibits": [ex("cars", [2.75, -0.7, 0.0], [4, "cars"], n=4, times=[[5, "one"], [5, "two"], [5, "three"], [5, "four"]])],
+   "lines": [q0("Who is the biggest animal that walks on land?"), Q("Is it the elephant? Or is it the hippo?"),
+             X("It is the elephant!", "close:elephant"),
+             "Here is the fun fact. The elephant is the biggest animal on land.",
+             X("How heavy is an elephant? As heavy as four cars! Count them with me.", "exhibit"),
+             X("One, two, three, four!", "exhibit"),
+             X("Big body, big ears, and a big, long trunk!", "close:elephant"),
+             "The trunk works like a hand and like a hose. It can pick up a tiny peanut, or spray a big shower!",
+             "Even a baby elephant is heavy. It weighs as much as a big grown-up on the day it is born.",
+             X("Say it with me. The elephant is the biggest!", "close:host"),
+             "Can you stomp like a big elephant? Stomp, stomp, stomp!", "What big stomps!"],
+   "short": {"id": "zs4k_elephant_cars", "title": "An Elephant Is as Heavy as 4 Cars!", "l1": "WHO IS THE", "l2": "BIGGEST?", "to": 7}},
+  {"name": "tiger", "biome": "bamboo", "tod": "noon", "word": "BIGGEST CAT!", "word_on": [2, "tiger"],
+   "visits": [{"show": ["none"]}, {"line": 2, "show": ["tiger"]}, {"line": 4, "show": ["tiger", "cat"]}],
+   "choices": {"a": "LION", "b": "TIGER", "right": "b", "ask": [1], "answer": [2], "hold": 2.4},
+   "exhibits": [ex("arrow", [2.55, -0.7, 1.35], [4, "pet"], [5]), ex("pool", [1.0, -1.9, 0.0], [5, "swim"], s=0.7)],
+   "lines": [q0("Who is the biggest cat in the whole world?"), Q("Is it the lion? Or is it the tiger?"),
+             X("It is the tiger!", "close:tiger"),
+             "Here is the fun fact. The tiger is the biggest cat of all.",
+             X("Look at this little pet cat. The tiger is its giant cousin!", "exhibit"),
+             X("And guess what? Most cats do not like water. But tigers love to swim!", "exhibit"),
+             X("A tiger has soft, padded paws. So it can walk very, very quietly.", "close:tiger"),
+             "And every tiger has its own stripes, like a name tag.",
+             X("Say it with me. The tiger is the biggest cat!", "close:host"),
+             "Can you show me your tiger paws? Paws up! Rawr!", "What a great tiger!"],
+   "short": {"id": "zs4k_tiger_bigcat", "title": "The Tiger Is the Biggest Cat in the World!", "l1": "BIGGEST", "l2": "CAT?", "to": 6}},
+  {"name": "lion", "biome": "desert", "tod": "sunset", "word": "LOUDEST!", "word_on": [2, "lion"], "visits": champ_visits("lion"),
+   "choices": {"a": "LION", "b": "TIGER", "right": "a", "ask": [1], "answer": [2], "hold": 2.4},
+   "exhibits": [ex("rings", [0.25, -1.0, 2.05], [3, "roar"], [5], reach=2.5), ex("town", [3.2, -0.7, 0.0], [3, "five"], text="5 MILES")],
+   "lines": [q0("Who has the loudest roar of all the big cats?"), Q("Is it the lion? Or is it the tiger?"),
+             X("It is the lion!", "close:lion"),
+             X("Here is the fun fact. You can hear a lion's roar from five miles away!", "exhibit"),
+             X("Five miles is a long, long way. Like the other side of town!", "exhibit"),
+             "Why does a lion roar? To tell everyone, this is my home!",
+             X("A lion's roar is almost as loud as thunder. Boom!", "close:lion"),
+             "Lions live in a family called a pride. The roar helps the family find each other.",
+             X("Say it with me. The lion has the loudest roar!", "close:host"),
+             "Can you roar like a lion? One, two, three. Roar!", "What a mighty roar!"],
+   "short": {"id": "zs4k_lion_roar", "title": "You Can Hear a Lion Roar From 5 Miles Away!", "l1": "WHO IS THE", "l2": "LOUDEST?", "to": 6}},
+  {"name": "quiz", "kind": "quiz", "biome": "night_meadow", "tod": "sunset", "word": "QUIZ TIME!",
+   "lines": ["Wow! We met four animal champions. Now it is quiz time!", "Get ready. Think hard!"],
+   "quiz": [["Who can peek into an upstairs window?", "The giraffe! Yes!", "giraffe"], ["Who is as heavy as four cars?", "The elephant! That's right!", "elephant"],
+            ["Who is the giant cousin of a pet cat?", "The tiger! Good job!", "tiger"], ["Whose roar can you hear from five miles away?", "The lion! You remembered!", "lion"]]},
+  {"name": "goodbye", "kind": "outro", "biome": "savanna", "tod": "sunset", "word": "BYE-BYE!",
+   "lines": ["You learned four new things today.", "Stretch like a giraffe. Stomp like an elephant. Paws up like a tiger. And roar like a lion!",
+             "Which champion is your favorite?", "Thank you for learning with me. Bye-bye, friends! See you next time!"]}]})
+
+# =========================================================================================== P3 look and find
+SS = {"a": "STRIPES", "b": "SPOTS"}
+L.append({
+ "id": "zool_ep05", "seed": 41, "title": "Stripes or Spots? Animal Patterns for Kids with Milo", "card": "Stripes or Spots?", "thumb_text": "LOOK CLOSE!",
+ "description": "Stripes or spots? Look closely with Milo the bluebird and pick your answer! Then look even closer: a zebra's skin is black under its stripes, a tiger's skin is striped too, a baby panda is born pink and as small as a stick of butter, and every cow's spots are like a fingerprint.\nAn interactive look-and-find animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
+ "tags": ["animal patterns for kids", "stripes and spots", "zebra stripes for kids"] + TAGS,
+ "cast": ["zebra", "tiger", "panda", "cow"], "extras": [{"id": "cub", "kind": "pink_cub", "scale": 0.3}],
+ "facts": [
+  "Zebras have black skin underneath their striped coat (Britannica; San Diego Zoo).",
+  "A tiger's stripes are also on its skin, and no two tigers have the same stripes (WWF).",
+  "A newborn giant panda is pink, almost hairless and about the size of a stick of butter; the black and white markings appear within a few weeks (Smithsonian's National Zoo; National Geographic).",
+  "The black and white pattern of every Holstein cow is unique, like a fingerprint (Holstein Association USA)."],
+ "segments": [
+  {"name": "hello", "kind": "intro", "biome": "autumn_forest", "tod": "morning", "word": "PATTERNS!", "energy": 0.7,
+   "exhibits": [ex("swatch", [-2.6, -1.9, 3.75], [2, "stripes"], kind="stripes", s=0.8), ex("sock", [-1.7, -2.5, 0.0], [2, "sock"], s=1.0),
+                ex("swatch", [2.6, -1.9, 3.75], [3, "spots"], kind="spots", s=0.8, base="#ffd23f", mark="#f0443a"), ex("ball", [1.7, -2.5, 0.0], [3, "ball"])],
+   "lines": [HELLO, "Today we are looking for patterns!", "Stripes are long lines. Like the lines on a stripy sock.",
+             "Spots are round dots. Like the dots on a spotty ball.", "Some animal friends wear stripes. Some wear spots.",
+             "Put on your looking eyes. Are you ready? Let's go!"]},
+  {"name": "zebra", "biome": "river", "tod": "noon", "show": ["zebra"], "word": "BLACK SKIN!", "word_on": [4, "black"],
+   "choices": dict(SS, right="a", ask=[1], answer=[2], hold=2.2),
+   "exhibits": [ex("magnifier", [2.6, -1.1, 2.3], [4, "skin"], fill="#17171c", label="SKIN", s=1.25)],
+   "lines": ["Look at this friend.", Q("Stripes, or spots?"),
+             X("Stripes! Black and white stripes. It is the zebra!", "close:zebra"),
+             Q("Now look closer. What color is a zebra's skin, under all that hair?", 2.4),
+             X("Here is the fun fact. Under the stripes, a zebra's skin is black!", "exhibit"),
+             X("Black skin, with black and white hair growing on top.", "exhibit"),
+             X("And every zebra has its own stripes. No two zebras match!", "close:zebra"),
+             "A baby zebra knows its mama by her stripes.",
+             X("Say it with me. Zebra skin is black!", "close:host"),
+             "Can you draw stripes in the air? Down, down, down!", "Super stripes!"],
+   "short": {"id": "zs4k_zebra_skin", "title": "A Zebra's Skin Is Black Under Its Stripes!", "l1": "STRIPES", "l2": "OR SPOTS?", "to": 6}},
+  {"name": "tiger", "biome": "jungle", "tod": "golden", "show": ["tiger"], "word": "STRIPY SKIN!", "word_on": [4, "stripy"],
+   "choices": dict(SS, right="a", ask=[1], answer=[2], hold=2.2),
+   "exhibits": [ex("magnifier", [2.6, -1.1, 2.3], [4, "skin"], fill="#f0b98a", stripes=1, stripe="#3a2a24", label="SKIN", s=1.25)],
+   "lines": ["Here comes an orange friend.", Q("Stripes, or spots?"),
+             X("Stripes! Orange and black stripes. It is the tiger!", "close:tiger"),
+             Q("Are the stripes only on the fur?", 2.4),
+             X("No! Here is the fun fact. A tiger's skin is stripy too!", "exhibit"),
+             X("Stripes on the fur, and the very same stripes on the skin underneath.", "exhibit"),
+             X("And no two tigers have the same stripes.", "close:tiger"),
+             X("Say it with me. Tiger skin is stripy too!", "close:host"),
+             "Can you creep like a tiger? Creep, creep, creep. Pounce!", "What a quiet tiger!"],
+   "short": {"id": "zs4k_tiger_skin", "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?", "l1": "STRIPES", "l2": "OR SPOTS?", "to": 7}},
+  {"name": "panda", "biome": "bamboo", "tod": "morning", "word": "BORN PINK!", "word_on": [2, "pink"],
+   "visits": [{"show": ["panda"]}, {"line": 3, "show": ["panda", "cub"], "place": {"cub": [2.0, -1.0, 0.0]}}],
+   "choices": {"a": "BLACK + WHITE", "b": "PINK", "right": "b", "ask": [1], "answer": [2], "hold": 2.2, "colors": {"a": "#2b2b33", "b": "#e85d8a"}},
+   "exhibits": [ex("butter", [3.3, -1.1, 0.0], [3, "butter"]), ex("arrow", [2.0, -1.2, 1.15], [3, "tiny"], [4])],
+   "lines": ["Look at this round friend, with black and white patches. It is the panda!",
+             Q("Now, what color is a newborn baby panda? Black and white? Or pink?"),
+             "Pink! Here is the fun fact. A baby panda is born pink!",
+             X("Look how tiny! A newborn panda is as small as a stick of butter.", "exhibit"),
+             X("The black and white patches grow later, when the baby is a few weeks old.", "close:cub"),
+             X("A grown-up panda is big. But its baby is one of the tiniest babies of all!", "exhibit"),
+             "The mama panda holds her tiny baby very, very gently.",
+             X("Say it with me. Baby pandas are born pink!", "close:host"),
+             "Can you curl up small like a baby panda? Tiny, tiny, tiny!", "So tiny and cute!"],
+   "short": {"id": "zs4k_panda_pink", "title": "Baby Pandas Are Born Pink! As Small as Butter", "l1": "WHAT COLOR IS", "l2": "A BABY PANDA?", "to": 5}},
+  {"name": "cow", "biome": "farm", "tod": "sunset", "show": ["cow"], "word": "HER OWN SPOTS!", "word_on": [4, "spots"],
+   "choices": dict(SS, right="b", ask=[1], answer=[2], hold=2.2),
+   "exhibits": [ex("fingerprint", [2.6, -1.1, 2.3], [5, "fingerprint"], [6], s=1.2),
+                ex("count", [1.9, -1.2, 2.4], [6, "one"], n=3, times=[[6, "one"], [6, "two"], [6, "three"]], s=1.3, dx=0.85)],
+   "lines": ["Moo! Look at this farm friend.", Q("Stripes, or spots?"),
+             X("Spots! Big black spots. It is the cow!", "close:cow"),
+             Q("Do any two cows have the same spots?", 2.4),
+             "No! Here is the fun fact. Every spotted cow has her very own spots.",
+             X("Her spots are like your fingerprint. Nobody else has the same one!", "exhibit"),
+             X("Let's count some spots. One spot, two spots, three spots!", "exhibit"),
+             X("Say it with me. Every cow has her own spots!", "close:host"),
+             "Can you draw a spot in the air? Round and round!", "Beautiful spots!"],
+   "short": {"id": "zs4k_cow_spots", "title": "Every Cow Has Her Own Spots, Like a Fingerprint!", "l1": "STRIPES", "l2": "OR SPOTS?", "to": 7}},
+  {"name": "quiz", "kind": "quiz", "biome": "spring_meadow", "tod": "golden", "word": "QUIZ TIME!",
+   "lines": ["Wow! We found so many patterns. Now it is quiz time!", "Get ready. Think hard!"],
+   "quiz": [["Whose skin is black under the stripes?", "The zebra! Yes!", "zebra"], ["Whose skin is stripy too?", "The tiger! That's right!", "tiger"],
+            ["Who is born pink, and as small as a stick of butter?", "The panda! Good job!", "panda"], ["Whose spots are like a fingerprint?", "The cow! You remembered!", "cow"]]},
+  {"name": "goodbye", "kind": "outro", "biome": "autumn_forest", "tod": "sunset", "word": "BYE-BYE!",
+   "exhibits": [ex("sock", [-1.7, -2.5, 0.0], [2, "sock"]), ex("ball", [1.7, -2.5, 0.0], [2, "ball"])],
+   "lines": ["You learned four new things today.", "Stripes on the zebra. Stripes on the tiger. Patches on the panda. And spots on the cow!",
+             "Can you find stripes or spots at home today? Maybe on a sock. Maybe on a ball!",
+             "Thank you for looking with me. Bye-bye, friends! See you next time!"]}]})
+
+# =========================================================================================== P4 yes or no
+def yn(right): return {"a": "YES", "b": "NO", "right": right, "ask": [1], "answer": [2], "hold": 2.4, "colors": {"a": "#22a84a", "b": "#e23b34"}}
+
+L.append({
+ "id": "zool_ep06", "seed": 43, "title": "Yes or No? Animal Quiz for Kids with Milo", "card": "Yes or No?", "thumb_text": "CAN IT JUMP?",
+ "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy and a recap at the end.",
+ "tags": ["animal quiz for kids", "yes or no quiz for kids", "true or false animals"] + TAGS,
+ "cast": ["polar_bear", "horse", "elephant", "giraffe"],
+ "facts": [
+  "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).",
+  "Horses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).",
+  "Elephants cannot jump; they keep at least one foot on the ground even when moving fast, and they are strong swimmers (Smithsonian Magazine, 'Ask Smithsonian').",
+  "A giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo)."],
+ "segments": [
+  {"name": "hello", "kind": "intro", "biome": "mountain", "tod": "morning", "word": "YES OR NO?", "energy": 0.7,
+   "exhibits": [ex("sign", [-2.5, -1.9, 3.7], [3, "yes"], text="YES", color="#22a84a", win=0.2), ex("sign", [2.5, -1.9, 3.7], [3, "no"], text="NO", color="#e23b34")],
+   "lines": [HELLO, "Today we are playing Yes or No!", "I will ask a question about an animal friend.",
+             "If you think yes, give a thumbs up. If you think no, shake your head.",
+             {"t": "Let's practice. Yes or no. Am I a bluebird?", "pause": 2.6}, "Yes! I am Milo the bluebird! Good job.", "Are you ready? Let's play!"]},
+  {"name": "polar_bear", "biome": "arctic", "tod": "noon", "show": ["polar_bear"], "word": "BLACK SKIN!", "word_on": [2, "black"], "choices": yn("b"),
+   "exhibits": [ex("magnifier", [2.6, -1.1, 2.3], [3], fill="#17171c", hairs=6, label="SKIN", s=1.25)],
+   "lines": ["Here is the polar bear. Look at that white, fluffy fur.", Q("Yes or no. Is a polar bear's skin white?"),
+             "No! Here is the fun fact. Under the fur, a polar bear's skin is black!",
+             X("Look closer. Black skin, hiding under all that fur.", "exhibit"),
+             X("And the fur is not really white. Each hair is clear, like glass!", "exhibit"),
+             "The black skin soaks up the warm sunshine. It helps the polar bear stay cozy in the cold.",
+             X("Say it with me. Polar bear skin is black!", "close:host"),
+             "Can you shiver like you are in the snow? Brrr, brrr, brrr!", "Brilliant!"],
+   "short": {"id": "zs4k_polar_skin", "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz", "l1": "YES", "l2": "OR NO?", "to": 5}},
+  {"name": "horse", "biome": "farm", "tod": "morning", "show": ["horse"], "word": "SLEEPS STANDING!", "word_on": [2, "sleep"], "choices": yn("a"),
+   "exhibits": [ex("zzz", [0.75, -1.0, 2.6], [3], s=1.5)],
+   "lines": ["Here is the horse. Clip, clop!", Q("Yes or no. Can a horse sleep standing up?"),
+             "Yes! Here is the fun fact. A horse can sleep standing up!",
+             X("Its legs lock in place, so it does not fall over.", "exhibit"),
+             X("For a big, deep sleep, the horse lies down on the soft ground.", "close:horse"),
+             "A horse does not sleep all night like you. It takes lots of tiny naps!",
+             X("Say it with me. Horses can sleep standing up!", "close:host"),
+             "Can you stand very still and close your eyes? Shh. One, two, three.", "Wake up! Good job!"],
+   "short": {"id": "zs4k_horse_sleep", "title": "Horses Can Sleep Standing Up! Yes or No Quiz", "l1": "YES", "l2": "OR NO?", "to": 5}},
+  {"name": "elephant", "biome": "savanna", "tod": "golden", "show": ["elephant"], "word": "NO JUMPING!", "word_on": [2, "cannot"], "choices": yn("b"),
+   "exhibits": [ex("arrow", [2.5, -0.9, 0.5], [3], [4], up=1, s=2.2, color="#3db8ff"), ex("cross", [2.5, -1.2, 1.6], [3, "heavy"], [4], s=1.3)],
+   "lines": ["Here is the elephant. So big and strong!", Q("Yes or no. Can an elephant jump?"),
+             "No! Here is the fun fact. Elephants cannot jump!",
+             X("An elephant is too big and heavy. It always keeps a foot on the ground.", "exhibit"),
+             "A frog can jump. A bunny can jump. And you can jump. But an elephant? No!",
+             X("But elephants can walk fast, and they are great swimmers!", "close:elephant"),
+             X("Say it with me. Elephants cannot jump!", "close:host"),
+             "Can you jump? Elephants can't, but you can! Jump, jump, jump!", "What great jumping!"],
+   "short": {"id": "zs4k_elephant_jump", "title": "Elephants Can't Jump! Yes or No Animal Quiz", "l1": "CAN AN ELEPHANT", "l2": "JUMP?", "to": 5}},
+  {"name": "giraffe", "biome": "spring_meadow", "tod": "sunset", "show": ["giraffe"], "word": "7 NECK BONES!", "word_on": [2, "seven"], "choices": yn("a"),
+   "exhibits": [ex("bones", "ex", [3], n=7, times=[[4, "one"], [4, "two"], [4, "three"], [4, "four"], [4, "five"], [4, "six"], [4, "seven"]])],
+   "lines": ["Here is the giraffe. Look at that long, long neck!", Q("Yes or no. Does a giraffe have the same number of neck bones as you?"),
+             "Yes! Here is the fun fact. A giraffe has seven neck bones. And so do you!",
+             X("The giraffe's neck bones are just much, much bigger. Each one is as long as a ruler!", "exhibit"),
+             X("Let's count them. One, two, three, four, five, six, seven!", "exhibit"),
+             "A tiny mouse has seven neck bones too. Almost every furry animal has seven!",
+             X("Say it with me. Seven neck bones, just like me!", "close:host"),
+             "Can you touch your neck? Gently now. Nod your head. Yes, yes, yes!", "Super nodding!"],
+   "short": {"id": "zs4k_giraffe_neck", "title": "A Giraffe Has 7 Neck Bones, Just Like You!", "l1": "YES", "l2": "OR NO?", "to": 5}},
+  {"name": "quiz", "kind": "quiz", "biome": "beach", "tod": "sunset", "word": "ONE MORE TIME!",
+   "lines": ["Wow! What a great game. Let's play one more time, super fast!", "Get ready!"],
+   "quiz": [["Is a polar bear's skin white?", "No! It is black!", "polar_bear"], ["Can a horse sleep standing up?", "Yes! It can!", "horse"],
+            ["Can an elephant jump?", "No! Elephants cannot jump!", "elephant"], ["Does a giraffe have seven neck bones, like you?", "Yes! Seven, just like you!", "giraffe"]]},
+  {"name": "goodbye", "kind": "outro", "biome": "mountain", "tod": "golden", "word": "BYE-BYE!",
+   "lines": ["You learned four new things today.", "Shiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!",
+             "Which answer surprised you the most?", "Thank you for playing with me. Bye-bye, friends! See you next time!"]}]})
+
+# =========================================================================================== P5 this or that (homes)
+def here(right): return {"a": "YES", "b": "NO", "right": right, "ask": [1], "answer": [2], "hold": 1.6, "colors": {"a": "#22a84a", "b": "#e23b34"}}
+
+DES, ARC, SAV, BAM, JUN, MOU = ("desert", "noon"), ("arctic", "noon"), ("savanna", "golden"), ("bamboo", "morning"), ("jungle", "noon"), ("mountain", "sunset")
+def v(place, **kw): return dict({"biome": place[0], "tod": place[1]}, **kw)
+
+L.append({
+ "id": "zool_ep07", "seed": 47, "title": "Where Do Animals Live? Animal Homes for Kids with Milo", "card": "Where Do Animals Live?", "thumb_text": "HOT OR COLD?",
+ "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the bamboo forest, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the panda, the monkey and the bear, and see why they live there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
+ "tags": ["animal homes for kids", "where do animals live", "animal habitats for kids"] + TAGS,
+ "cast": ["arctic_fox", "panda", "monkey", "bear"], "extras": [{"id": "sfox", "kind": "summer_fox"}],
+ "facts": [
+  "Arctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).",
+  "Giant pandas live in cool, misty bamboo forests in the mountains of China and eat almost only bamboo (Smithsonian's National Zoo; WWF).",
+  "Many monkeys are tree-dwelling and live in tropical rainforests (San Diego Zoo; Britannica).",
+  "Many bears spend the winter resting in a den (U.S. National Park Service)."],
+ "segments": [
+  {"name": "hello", "kind": "intro", "biome": "spring_meadow", "tod": "morning", "word": "ANIMAL HOMES!", "energy": 0.7,
+   "exhibits": [ex("thermo", [-3.4, -2.3, 0.0], [2, "hot"], hot=True), ex("thermo", [3.4, -2.3, 0.0], [2, "cold"], hot=False),
+                ex("count", [-1.05, -1.7, 3.55], [3, "one"], n=4, times=[[3, "one"], [3, "two"], [3, "three"], [3, "four"]])],
+   "lines": [HELLO, "Today we are going on a big trip!", "Every animal has a home. Some homes are hot. Some homes are cold.",
+             "Four animal friends are coming with us. One, two, three, four!", "Let's find out where they live. Are you ready? Let's go!"]},
+  {"name": "arctic_fox", "biome": "arctic", "tod": "noon", "word": "THE ARCTIC!", "word_on": [3, "snowy"], "word_off": [5],
+   "visits": [v(DES, show=["none"]), v(ARC, line=3, show=["arctic_fox"]), v(ARC, line=5, show=["arctic_fox", "sfox"])],
+   "choices": here("b"),
+   "exhibits": [ex("thermo", [0.2, -0.7, 0.0], [1, "hot"], [3], hot=True), ex("thermo", "ex", [3, "snowy"], [5], hot=False),
+                ex("snowflake", [-0.55, -1.1, 3.55], [5], s=1.2), ex("sun", [2.55, -1.1, 3.55], [5, "summer"], s=1.1)],
+   "lines": [q0("Where does the arctic fox live?"), Q("Does the arctic fox live here, in the hot, sandy desert?"),
+             "No! Too hot for a fluffy fox. Let's try again.",
+             X("The arctic fox lives in the snowy Arctic! Brrr!", "teach"),
+             "Here is the fun fact. In winter, the arctic fox is white, like the snow.",
+             X("But in summer, when the snow melts, its fur turns brown!", "exhibit"),
+             X("White in winter, to hide in the snow. Brown in summer, to hide in the rocks.", "exhibit"),
+             X("Say it with me. White in winter, brown in summer!", "close:host"),
+             "Can you curl up like a fox in the snow? Curl, curl, curl!", "So cozy!"],
+   "short": {"id": "zs4k_arcticfox_color", "title": "Arctic Foxes Change Color! White in Winter", "l1": "WHERE DOES THE", "l2": "ARCTIC FOX LIVE?", "to": 7}},
+  {"name": "panda", "biome": "bamboo", "tod": "morning", "word": "BAMBOO FOREST!", "word_on": [3, "bamboo"],
+   "visits": [v(SAV, show=["none"]), v(BAM, line=3, show=["panda"])],
+   "choices": here("b"),
+   "exhibits": [ex("thermo", [0.2, -0.7, 0.0], [1, "hot"], [3], hot=True), ex("bamboo", "ex", [3, "bamboo"])],
+   "lines": [q0("Where does the panda live?"), Q("Does the panda live here, on the hot, grassy savanna?"),
+             "No! Nothing yummy for a panda here. Let's try again.",
+             X("The panda lives in the bamboo forest!", "teach"),
+             X("Here is the fun fact. Pandas live in cool, misty bamboo forests, high in the mountains.", "exhibit"),
+             "Why bamboo? Because bamboo is a panda's favorite food. It eats bamboo almost all day!",
+             X("Say it with me. Pandas live in the bamboo forest!", "close:host"),
+             "Can you munch like a panda? Munch, munch, munch!", "Great munching!"],
+   "short": {"id": "zs4k_panda_home", "title": "Where Do Pandas Live? In the Bamboo Forest!", "l1": "WHERE DO", "l2": "PANDAS LIVE?", "to": 6}},
+  {"name": "monkey", "biome": "jungle", "tod": "noon", "word": "THE JUNGLE!", "word_on": [2, "jungle"],
+   "visits": [v(JUN, show=["none"]), v(JUN, line=2, show=["monkey"])],
+   "choices": here("a"),
+   "exhibits": [ex("notree", "ex", [3, "trees"], nocross=1, s=1.0), ex("arrow", [2.55, -0.9, 3.0], [4], [5], color="#ffd23f")],
+   "lines": [q0("Where does the monkey live?"), Q("Does the monkey live here, in the warm, rainy jungle?"),
+             X("Yes! The monkey lives in the jungle!", "close:monkey"),
+             X("Here is the fun fact. Many monkeys live high up in the jungle trees.", "exhibit"),
+             X("They eat in the trees, play in the trees, and sleep in the trees!", "exhibit"),
+             "A long tail helps a monkey balance on the branches.",
+             X("Up in the trees there are sweet fruits and crunchy leaves to eat.", "close:monkey"),
+             X("Say it with me. Monkeys live in the trees!", "close:host"),
+             "Can you swing your arms like a monkey? Swing, swing, swing!", "Super swinging!"],
+   "short": {"id": "zs4k_monkey_trees", "title": "Monkeys Live High in the Jungle Trees!", "l1": "WHERE DO", "l2": "MONKEYS LIVE?", "to": 6}},
+  {"name": "bear", "biome": "mountain", "tod": "sunset", "word": "THE MOUNTAINS!", "word_on": [3, "mountain"],
+   "visits": [v(DES, show=["none"]), v(MOU, line=3, show=["bear"])],
+   "choices": here("b"),
+   "exhibits": [ex("thermo", [0.2, -0.7, 0.0], [1, "hot"], [3], hot=True), ex("den", [2.75, -0.2, 0.0], [4, "den"]), ex("zzz", [2.9, -1.4, 2.0], [4, "sleep"], s=1.4)],
+   "lines": [q0("Where does the brown bear live?"), Q("Does the bear live here, in the hot, sandy desert?"),
+             "No! Too hot for a furry bear. Let's try again.",
+             X("The brown bear lives in the mountain forest!", "teach"),
+             X("Here is the fun fact. In winter, many bears sleep in a cozy den.", "exhibit"),
+             X("They snooze through the cold, snowy days, until spring comes back.", "exhibit"),
+             "In spring, the bear wakes up very, very hungry. Time to find some berries!",
+             X("Say it with me. Bears sleep in a den in winter!", "close:host"),
+             "Can you yawn and stretch like a sleepy bear? Yawn. Stretch!", "What a sleepy bear!"],
+   "short": {"id": "zs4k_bear_den", "title": "Bears Sleep in a Den All Winter! Animal Homes", "l1": "WHERE DO", "l2": "BEARS LIVE?", "to": 6}},
+  {"name": "quiz", "kind": "quiz", "biome": "beach", "tod": "golden", "word": "QUIZ TIME!",
+   "lines": ["Wow! We visited four animal homes. Now it is quiz time!", "Get ready. Think hard!"],
+   "quiz": [["Who lives in the snowy Arctic, and turns brown in summer?", "The arctic fox! Yes!", "arctic_fox"], ["Who lives in the bamboo forest?", "The panda! That's right!", "panda"],
+            ["Who lives high in the jungle trees?", "The monkey! Good job!", "monkey"], ["And who sleeps in a den in winter?", "The bear! You remembered!", "bear"]]},
+  {"name": "goodbye", "kind": "outro", "biome": "spring_meadow", "tod": "morning", "word": "BYE-BYE!",
+   "lines": ["You learned four new things today.", "Curl up like a fox. Munch like a panda. Swing like a monkey. And stretch like a bear!",
+             "Where is your home? Is it hot or cold today?", "Thank you for traveling with me. Bye-bye, friends! See you next time!"]}]})
+
+IMPROVES = ["interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+            "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+            "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+            "native 4K render (3840x2160)"]
+for spec in L:
+    spec.update({"voice": "af_heart", "speed": 0.84, "improves": IMPROVES})
+    assert len(spec["title"]) <= 60, spec["title"]
+    for g in spec["segments"]:
+        g.setdefault("kind", "teach")
+        if g.get("short"): assert len(g["short"]["title"]) <= 60, g["short"]["title"]
+    json.dump(spec, open(os.path.join(HERE, "lessons", spec["id"] + ".json"), "w"), indent=1)
+    print("wrote", spec["id"], spec["title"])

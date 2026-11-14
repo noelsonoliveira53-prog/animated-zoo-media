@@ -182,6 +182,9 @@ def assemble(jid, ff):
     mp4 = os.path.join(OUT, jid, jid + "_raw.mp4")
     try: job = json.load(open(os.path.join(JOBS, jid + ".json")))
     except Exception: job = {}
+    if not os.path.exists(song) and job.get("audio"):   # re-render jobs (<id>w, <id>x) use the original song's audio file
+        song = os.path.join(JOBS, job["audio"])
+    if not os.path.exists(song): log(f"{jid}: WARNING no audio file found, the video will be silent")
     step = int(job.get("step", 2))
     cmd = [ff, "-y", "-loglevel", "error", "-framerate", str(24 / step), "-i", fr]
     if os.path.exists(song): cmd += ["-i", song]

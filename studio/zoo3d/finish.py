@@ -118,6 +118,13 @@ def main():
     meta = song["meta"]; ch = job["channel"]
     global LOUD
     LOUD = "loudnorm=I=-16:TP=-1.5:LRA=11" if ch == "moon" else "loudnorm=I=-14:TP=-1.5:LRA=11"   # lullabies a bit softer
+    _has_a = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=codec_name", "-of", "csv=p=0", raw], capture_output=True, text=True).stdout.strip()
+    if not _has_a:   # a silent raw (Nov 14: ep12w/ep13w were assembled without their song) must never be published
+        _au = os.path.join(jd, job.get("audio", ""))
+        if not (job.get("audio") and os.path.exists(_au)): sys.exit(f"QUALITY GATE: {raw} has no audio and {_au} is missing; stage the song file into jobs/ first")
+        _fx = raw[:-4] + "_withaudio.mp4"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", _au, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", _fx], check=True)
+        raw = _fx; print("raw had no audio: added", _au)
     repo = arg("--repo", "/home/claude/animated-zoo-media")
     work = os.path.join(HERE, "finished"); os.makedirs(work, exist_ok=True)
     sub = os.path.join(work, jid + ".ass")

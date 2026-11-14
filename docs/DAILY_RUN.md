@@ -28,11 +28,13 @@ written, rendered, titled and uploaded.
      Upload only on PASS and only if it meets the quality bar; otherwise fix (retitle, re-cut, re-render) or hold, and say so.
      "check:" lines are read and judged by you against the rulebook (a flagged word in a harmless sentence is fine).
    - After the views check: add one number-backed note with `review.py --improve "..." --why "..."`.
-5. SONGS AND LESSONS (Nov 14): the channel posts teaching lessons as well as songs. The 4:00 PM slot alternates: song one
+5. SONGS AND LESSONS (Nov 14): the channel posts teaching lessons as well as songs. The 4:00 PM slot alternates for now: song one
    day, lesson the next. Lessons are narrated by Milo, 4:30-6:30 long (rulebook KID-04), one true fact per animal, a question
    and an action to copy in every segment, a recap quiz at the end, no calls to action. Write `studio/zoo3d/lessons/<id>.json`
    (ids zool_epNN; copy zool_ep01.json), run `python3 studio/zoo3d/lesson.py lessons/<id>.json` (needs studio/zoo3d/setup.sh
    for the voice), variety check + record, 2 test stills, send the 3 job files to the PC. Keep 2 lessons and 3 songs queued ahead.
+   Noelson decides on a DAILY lesson (1:30 PM, next to the daily song) after he has seen the first finished lesson: when
+   zool_ep01 is finished and passes review, send him a 60-second sample and ask; do not go daily before he says yes.
    Every fact is checked against a reliable source before the lesson is built; list them in the spec's "facts".
 6. FULLY AUTOMATIC (Nov 13): Noelson never has to click anything for the daily run. A Google Vids download that opens a
    "save" prompt is picked up from ~/Downloads (newest .tmp/.crdownload/.mp4 after the click, size stable, verified with
@@ -64,12 +66,14 @@ written, rendered, titled and uploaded.
 4. If nothing is available for tomorrow's 4:00 PM slot and the month's Vids allowance has 140 s or more, make one full Vids
    episode (RUNBOOK). Never more than one a day. If Vids shows a limit, terms or sign-in page: skip Vids and report it.
 
-## C. Posting (HARD CAP 4 uploads per run; stop on "Daily upload limit reached")
+## C. Posting (HARD CAP 6 uploads per run; stop on "Daily upload limit reached")
 1. Episode: the soonest "to_upload" Zoo entry in studio/upload_plan_3d.json at 4:00 PM ET (full Vids episodes 12:00 PM).
    Never upload "hold_fact_check", "paused_channel" or "rendering_variety" items. Review gate first (rule 4).
-2. Short: the soonest "to_upload" item in studio/upload_plan_shorts_zoo.json at 11:00 AM ET, review gate first. When fewer
-   than 3 are left, cut new 15-20 s Shorts from published/scheduled episodes (songs and lessons) with make_short.sh, from
-   different places and casts.
+2. Shorts: THREE A DAY (Noelson, Nov 14) at 7:30 AM, 11:30 AM and 6:30 PM ET, at least 2 hours apart. Upload every
+   "to_upload" item in studio/upload_plan_shorts_zoo.json dated today or tomorrow (soonest first), review gate first. Keep
+   at least 6 Shorts (2 days) ready: cut new 15-20 s Shorts from finished episodes (songs and lessons) with make_short.sh,
+   question title with the answer inside the clip, and never two Shorts from the same episode on the same day. Check each
+   new Short has sound.
 3. PLAYBOOK.md Studio recipe: MP4 from raw GitHub, Made for kids = yes, custom thumbnail, title 60 characters or less,
    first 2 description lines searchable, AI-disclosure boilerplate, SCHEDULE (never publish now). Passed slot: next free day.
 4. Mark each upload "scheduled" with its video id, commit, push, and set it in the Command Center "videos" collection.

@@ -69,6 +69,12 @@ def review(fname):
         w, h, dur = probe(path); lo, hi = RANGE.get(fmt, (15, 400))
         if "short" not in fmt and (w, h) != (3840, 2160): fails.append(f"video is {w}x{h}, expected 3840x2160")
         if os.path.getsize(path) >= 100e6: fails.append("file is over 100 MB")
+        au = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=codec_name", "-of", "csv=p=0", path], capture_output=True, text=True).stdout.strip()
+        if not au: fails.append("video has NO SOUND (no audio stream)")
+        else:
+            vol = subprocess.run(["ffmpeg", "-v", "info", "-t", "60", "-i", path, "-vn", "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr
+            m = re.search(r"mean_volume: (-?[0-9.]+)", vol)
+            if m and float(m.group(1)) < -45: fails.append(f"audio is almost silent (mean {m.group(1)} dB)")
         if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo}-{hi} s for {fmt} (KID-04)")
         os.makedirs(os.path.join(HERE, "finished"), exist_ok=True)
         sheet = os.path.join(HERE, "finished", "review_" + os.path.splitext(os.path.basename(fname))[0] + ".png")

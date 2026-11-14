@@ -1593,10 +1593,11 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep13.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 170.0,
-  "replaced_video": "BKfS-luRPeo (set to Private: outro captions said four/foe for foal)"
+  "replaced_video": "BKfS-luRPeo (set to Private: outro captions said four/foe for foal)",
+  "video_id": "tt34irM1y7o"
  },
  {
   "file": "moon/mb3d_ep09.mp4",

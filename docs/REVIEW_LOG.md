@@ -11,3 +11,6 @@
 | 2026-11-14 | shorts3d/zs3d_sleep_giraffe.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs3d_baby_cub.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs3d_home_action.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | - | native 4K test (a4k2), arctic/mountain/autumn, fixed timing |
+| 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | native 4K test (a4k2), arctic/mountain/autumn, fixed timing |
+| 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | - |

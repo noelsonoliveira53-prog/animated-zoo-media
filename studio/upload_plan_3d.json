@@ -1499,10 +1499,9 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep12.png",
   "made_for_kids": true,
-  "status": "rendering_variety",
+  "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 170.0,
-  "note": "Nov 14 daily run: held at the quality gate (contact sheet below docs/quality_baseline: mostly crowd line-ups, ep12 mostly one night meadow, 6-7 scenes). Re-render queued on the PC as zoo3d_ep12y (13 scenes, routes.py + extra outro scenes, single-animal shows, audio file <id>y_song.wav). Finish with finish.py jobs/zoo3d_ep12y.json, review, then upload in this slot."
+  "duration": 170.0
  },
  {
   "file": "moon/mb3d_ep08.mp4",

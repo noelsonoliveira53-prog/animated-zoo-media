@@ -14,3 +14,4 @@
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | - | native 4K test (a4k2), arctic/mountain/autumn, fixed timing |
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | native 4K test (a4k2), arctic/mountain/autumn, fixed timing |
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | - |
+| 2026-11-14 | zoo3d_ep12.mp4 | 3d_singalong | PASS | - | - | Write the outro as its own sung lines (or use 'after' places) so the last 30 s keep changing scenes and captions stay in sync |

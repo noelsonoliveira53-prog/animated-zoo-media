@@ -1,0 +1,575 @@
+{
+ "id": "zool_ep04",
+ "seed": 37,
+ "title": "Animal Champions for Kids! Tallest, Biggest, Loudest",
+ "card": "Animal Champions!",
+ "thumb_text": "WHO WINS?",
+ "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet four animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars, the tiger is the giant cousin of a pet cat, and a lion's roar can be heard from five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
+ "tags": [
+  "biggest animals for kids",
+  "tallest animal",
+  "animal records for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "giraffe",
+  "elephant",
+  "tiger",
+  "lion"
+ ],
+ "extras": [
+  {
+   "id": "cat",
+   "kind": "cat",
+   "scale": 0.4
+  }
+ ],
+ "facts": [
+  "The giraffe is the tallest living land animal, up to about 18 feet (5.5 m) (Bristol Zoo; San Diego Zoo).",
+  "The African elephant is the largest living land animal; a big male weighs about 6 tons, about as much as four cars (Smithsonian's National Zoo; WWF).",
+  "The tiger is the largest cat species, belongs to the same family as pet cats, and is a strong swimmer (WWF; Live Science).",
+  "A lion's roar can be heard up to 5 miles (8 km) away; lions roar to mark their territory (National Geographic)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "desert",
+   "tod": "morning",
+   "word": "CHAMPIONS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -1.05,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ],
+      [
+       3,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today is Animal Champions day!",
+    "We will find the tallest, the biggest, and the loudest animals.",
+    "Four champions are here. Count them with me. One, two, three, four!",
+    "Are you ready to meet the champions? Let's go!"
+   ]
+  },
+  {
+   "name": "giraffe",
+   "biome": "savanna",
+   "tod": "noon",
+   "word": "TALLEST!",
+   "word_on": [
+    2,
+    "giraffe"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "giraffe"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ELEPHANT",
+    "b": "GIRAFFE",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "exhibits": [
+    {
+     "prop": "ruler",
+     "at": [
+      0.85,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      3,
+      "tallest"
+     ],
+     "opts": {
+      "mark": 3.75
+     }
+    },
+    {
+     "prop": "house2",
+     "at": [
+      2.85,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      4,
+      "look"
+     ],
+     "opts": {
+      "h": 3.3
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who is the tallest animal in the whole world?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the elephant? Or is it the giraffe?",
+     "pause": 3.2
+    },
+    [
+     "It is the giraffe!",
+     "close:giraffe"
+    ],
+    "Here is the fun fact. The giraffe is the tallest animal on land.",
+    [
+     "How tall? Look! A giraffe can peek into an upstairs window.",
+     "exhibit"
+    ],
+    "Its long neck helps it reach the leaves at the very top of the tree.",
+    [
+     "Say it with me. The giraffe is the tallest!",
+     "close:host"
+    ],
+    "Can you stretch up tall like a giraffe? Reach, reach, reach!",
+    "So tall!"
+   ],
+   "short": {
+    "id": "zs4k_giraffe_tallest",
+    "title": "A Giraffe Can Peek Into an Upstairs Window!",
+    "l1": "WHO IS THE",
+    "l2": "TALLEST?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "elephant",
+   "biome": "jungle",
+   "tod": "morning",
+   "word": "BIGGEST!",
+   "word_on": [
+    2,
+    "elephant"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "elephant"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ELEPHANT",
+    "b": "HIPPO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "exhibits": [
+    {
+     "prop": "cars",
+     "at": [
+      2.75,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      4,
+      "cars"
+     ],
+     "times": [
+      [
+       5,
+       "one"
+      ],
+      [
+       5,
+       "two"
+      ],
+      [
+       5,
+       "three"
+      ],
+      [
+       5,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who is the biggest animal that walks on land?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the elephant? Or is it the hippo?",
+     "pause": 3.2
+    },
+    [
+     "It is the elephant!",
+     "close:elephant"
+    ],
+    "Here is the fun fact. The elephant is the biggest animal on land.",
+    [
+     "How heavy is an elephant? As heavy as four cars! Count them with me.",
+     "exhibit"
+    ],
+    [
+     "One, two, three, four!",
+     "exhibit"
+    ],
+    [
+     "Big body, big ears, and a big, long trunk!",
+     "close:elephant"
+    ],
+    [
+     "Say it with me. The elephant is the biggest!",
+     "close:host"
+    ],
+    "Can you stomp like a big elephant? Stomp, stomp, stomp!",
+    "What big stomps!"
+   ],
+   "short": {
+    "id": "zs4k_elephant_cars",
+    "title": "An Elephant Is as Heavy as 4 Cars!",
+    "l1": "WHO IS THE",
+    "l2": "BIGGEST?",
+    "to": 7
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "tiger",
+   "biome": "bamboo",
+   "tod": "noon",
+   "word": "BIGGEST CAT!",
+   "word_on": [
+    2,
+    "tiger"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "tiger"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "tiger",
+      "cat"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "LION",
+    "b": "TIGER",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "exhibits": [
+    {
+     "prop": "arrow",
+     "at": [
+      2.55,
+      -0.7,
+      1.35
+     ],
+     "on": [
+      4,
+      "pet"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "pool",
+     "at": [
+      1.0,
+      -1.9,
+      0.0
+     ],
+     "on": [
+      5,
+      "swim"
+     ],
+     "opts": {
+      "s": 0.7
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who is the biggest cat in the whole world?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the lion? Or is it the tiger?",
+     "pause": 3.2
+    },
+    [
+     "It is the tiger!",
+     "close:tiger"
+    ],
+    "Here is the fun fact. The tiger is the biggest cat of all.",
+    [
+     "Look at this little pet cat. The tiger is its giant cousin!",
+     "exhibit"
+    ],
+    [
+     "And guess what? Most cats do not like water. But tigers love to swim!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. The tiger is the biggest cat!",
+     "close:host"
+    ],
+    "Can you show me your tiger paws? Paws up! Rawr!",
+    "What a great tiger!"
+   ],
+   "short": {
+    "id": "zs4k_tiger_bigcat",
+    "title": "The Tiger Is the Biggest Cat in the World!",
+    "l1": "BIGGEST",
+    "l2": "CAT?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "lion",
+   "biome": "desert",
+   "tod": "sunset",
+   "word": "LOUDEST!",
+   "word_on": [
+    2,
+    "lion"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "lion"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "LION",
+    "b": "TIGER",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "exhibits": [
+    {
+     "prop": "rings",
+     "at": [
+      0.25,
+      -1.0,
+      2.05
+     ],
+     "on": [
+      3,
+      "roar"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "reach": 2.5
+     }
+    },
+    {
+     "prop": "town",
+     "at": [
+      3.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      3,
+      "five"
+     ],
+     "opts": {
+      "text": "5 MILES"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has the loudest roar of all the big cats?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the lion? Or is it the tiger?",
+     "pause": 3.2
+    },
+    [
+     "It is the lion!",
+     "close:lion"
+    ],
+    [
+     "Here is the fun fact. You can hear a lion's roar from five miles away!",
+     "exhibit"
+    ],
+    [
+     "Five miles is a long, long way. Like the other side of town!",
+     "exhibit"
+    ],
+    "Why does a lion roar? To tell everyone, this is my home!",
+    [
+     "Say it with me. The lion has the loudest roar!",
+     "close:host"
+    ],
+    "Can you roar like a lion? One, two, three. Roar!",
+    "What a mighty roar!"
+   ],
+   "short": {
+    "id": "zs4k_lion_roar",
+    "title": "You Can Hear a Lion Roar From 5 Miles Away!",
+    "l1": "WHO IS THE",
+    "l2": "LOUDEST?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met four animal champions. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who can peek into an upstairs window?",
+     "The giraffe! Yes!",
+     "giraffe"
+    ],
+    [
+     "Who is as heavy as four cars?",
+     "The elephant! That's right!",
+     "elephant"
+    ],
+    [
+     "Who is the giant cousin of a pet cat?",
+     "The tiger! Good job!",
+     "tiger"
+    ],
+    [
+     "Whose roar can you hear from five miles away?",
+     "The lion! You remembered!",
+     "lion"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "savanna",
+   "tod": "sunset",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned four new things today.",
+    "Stretch like a giraffe. Stomp like an elephant. Paws up like a tiger. And roar like a lion!",
+    "Which champion is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+  "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+  "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+  "native 4K render (3840x2160, 32 samples)"
+ ]
+}

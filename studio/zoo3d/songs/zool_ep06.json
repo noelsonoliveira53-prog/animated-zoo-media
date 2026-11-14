@@ -1,0 +1,444 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).\nHorses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).\nElephants cannot jump; they keep at least one foot on the ground even when moving fast (Smithsonian Magazine, 'Ask Smithsonian').\nA giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches long (Bristol Zoo; San Diego Zoo).\nHippos cannot swim or float; they walk or push off along the river bottom (San Diego Zoo).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are playing Yes or No!\nI will ask a question about an animal friend.\nIf you think yes, give a thumbs up. If you think no, shake your head.\nAre you ready? Let's play!\nHere is the polar bear. Look at that white, fluffy fur.\nYes or no. Is a polar bear's skin white?\nNo! Here is the fun fact. Under the fur, a polar bear's skin is black!\nAnd the fur is not really white. Each hair is clear, like glass!\nSay it with me. Polar bear skin is black!\nCan you shiver like you are in the snow? Brrr, brrr, brrr!\nBrilliant!\nHere is the horse. Clip, clop!\nYes or no. Can a horse sleep standing up?\nYes! Here is the fun fact. A horse can sleep standing up!\nIts legs lock in place, so it does not fall over.\nSay it with me. Horses can sleep standing up!\nCan you stand very still and close your eyes? Shh. One, two, three.\nWake up! Good job!\nHere is the elephant. So big and strong!\nYes or no. Can an elephant jump?\nNo! Here is the fun fact. Elephants cannot jump!\nAn elephant is too big and heavy. It always keeps a foot on the ground.\nSay it with me. Elephants cannot jump!\nCan you jump? Elephants can't, but you can! Jump, jump, jump!\nWhat great jumping!\nHere is the giraffe. Look at that long, long neck!\nYes or no. Does a giraffe have the same number of neck bones as you?\nYes! Here is the fun fact. A giraffe has seven neck bones. And so do you!\nThe giraffe's neck bones are just much, much bigger.\nSay it with me. Seven neck bones, just like me!\nCan you count to seven? One, two, three, four, five, six, seven!\nSuper counting!\nHere is the hippo, in the cool river.\nYes or no. Can a hippo swim?\nNo! Here is the fun fact. A hippo cannot swim!\nA hippo is too heavy to float. It walks along the bottom of the river.\nSay it with me. Hippos walk under the water!\nCan you walk in slow motion like a hippo? Slow, slow steps!\nSo slow and steady!\nWow! What a great game. Let's play one more time, super fast!\nGet ready. Think hard!\nIs a polar bear's skin white?\nNo! It is black!\nCan a horse sleep standing up?\nYes! It can!\nCan an elephant jump?\nNo! Elephants cannot jump!\nDoes a giraffe have seven neck bones, like you?\nYes! Seven, just like you!\nAnd can a hippo swim?\nNo! A hippo walks under the water!\nYou learned five new things today.\nShiver like a polar bear. Stand still like a horse. Jump, because elephants can't! Count to seven like a giraffe. And walk slowly like a hippo!\nWhich answer surprised you the most?\nThank you for playing with me. Bye-bye, friends! See you next time!",
+ "duration": 251.72,
+ "bpm": 96,
+ "meta": {
+  "title": "Yes or No? Animal Quiz for Kids with Milo",
+  "card": "Yes or No?",
+  "thumb_text": "CAN IT JUMP?",
+  "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Can a hippo swim? Guess first, then learn the true answer.\nA gentle yes-or-no animal quiz for kids ages 2-6 with actions to copy and a recap at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal quiz for kids",
+   "yes or no quiz for kids",
+   "true or false animals",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs4k_polar_skin",
+   "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
+   "l1": "YES",
+   "l2": "OR NO?",
+   "seg": "polar_bear",
+   "start": 18.300833333333333,
+   "end": 53.629
+  },
+  {
+   "id": "zs4k_horse_sleep",
+   "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
+   "l1": "YES",
+   "l2": "OR NO?",
+   "seg": "horse",
+   "start": 53.62862500000001,
+   "end": 85.31
+  },
+  {
+   "id": "zs4k_elephant_jump",
+   "title": "Elephants Can't Jump! Yes or No Animal Quiz",
+   "l1": "CAN AN ELEPHANT",
+   "l2": "JUMP?",
+   "seg": "elephant",
+   "start": 85.30962500000001,
+   "end": 117.059
+  },
+  {
+   "id": "zs4k_giraffe_neck",
+   "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
+   "l1": "YES",
+   "l2": "OR NO?",
+   "seg": "giraffe",
+   "start": 117.05945833333332,
+   "end": 152.278
+  },
+  {
+   "id": "zs4k_hippo_swim",
+   "title": "Hippos Can't Swim! Yes or No Animal Quiz",
+   "l1": "CAN A HIPPO",
+   "l2": "SWIM?",
+   "seg": "hippo",
+   "start": 152.27762499999997,
+   "end": 183.365
+  }
+ ],
+ "job": {
+  "id": "zool_ep06",
+  "title": "Yes or No?",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 43,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "polar_bear",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "polar_bear"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "horse",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "horse"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "s5",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.1
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "mountain",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal"
+   },
+   {
+    "from": "polar_bear",
+    "biome": "arctic",
+    "tod": "noon",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "polar_bear"
+    ]
+   },
+   {
+    "from": "horse",
+    "biome": "farm",
+    "tod": "morning",
+    "formation": "host_left",
+    "shot": "reveal",
+    "show": [
+     "horse"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "host_right",
+    "shot": "vista",
+    "show": [
+     "elephant"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "spring_meadow",
+    "tod": "sunset",
+    "formation": "host_left",
+    "shot": "dolly",
+    "show": [
+     "giraffe"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "golden",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "hippo"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "beach",
+    "tod": "sunset",
+    "formation": "arc",
+    "shot": "vista"
+   },
+   {
+    "from": "goodbye",
+    "biome": "mountain",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "reveal"
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 72,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista"
+    ],
+    "energy": 0.8,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "YES OR NO?",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "polar_bear",
+    "shots": [
+     "close:polar_bear",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:polar_bear",
+     "side",
+     "low"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "NO!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.0,
+      "word": "no",
+      "nth": 1
+     }
+    ]
+   },
+   {
+    "section": "horse",
+    "shots": [
+     "close:horse",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:horse",
+     "side",
+     "low"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "YES!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.0,
+      "word": "yes",
+      "nth": 1
+     }
+    ]
+   },
+   {
+    "section": "elephant",
+    "shots": [
+     "close:elephant",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:elephant",
+     "side",
+     "low"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "NO!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.0,
+      "word": "no",
+      "nth": 1
+     }
+    ]
+   },
+   {
+    "section": "giraffe",
+    "shots": [
+     "close:giraffe",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:giraffe",
+     "side",
+     "low"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "YES!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.0,
+      "word": "yes",
+      "nth": 1
+     }
+    ]
+   },
+   {
+    "section": "hippo",
+    "shots": [
+     "close:hippo",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:hippo",
+     "side",
+     "low"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "NO!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.0,
+      "word": "no",
+      "nth": 1
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly",
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "ONE MORE TIME!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep06",
+  "res": "3840x2160",
+  "samples": 32,
+  "step": 1,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep06_timing.json",
+  "audio": "zool_ep06_song.wav"
+ }
+}

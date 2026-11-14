@@ -1,0 +1,673 @@
+{
+ "id": "zool_ep07",
+ "seed": 47,
+ "title": "Where Do Animals Live? Animal Homes for Kids with Milo",
+ "card": "Where Do Animals Live?",
+ "thumb_text": "HOT OR COLD?",
+ "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the bamboo forest, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the panda, the monkey and the bear, and see why they live there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
+ "tags": [
+  "animal homes for kids",
+  "where do animals live",
+  "animal habitats for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "arctic_fox",
+  "panda",
+  "monkey",
+  "bear"
+ ],
+ "extras": [
+  {
+   "id": "sfox",
+   "kind": "summer_fox"
+  }
+ ],
+ "facts": [
+  "Arctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).",
+  "Giant pandas live in cool, misty bamboo forests in the mountains of China and eat almost only bamboo (Smithsonian's National Zoo; WWF).",
+  "Many monkeys are tree-dwelling and live in tropical rainforests (San Diego Zoo; Britannica).",
+  "Many bears spend the winter resting in a den (U.S. National Park Service)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "word": "ANIMAL HOMES!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      -3.4,
+      -2.3,
+      0.0
+     ],
+     "on": [
+      2,
+      "hot"
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "thermo",
+     "at": [
+      3.4,
+      -2.3,
+      0.0
+     ],
+     "on": [
+      2,
+      "cold"
+     ],
+     "opts": {
+      "hot": false
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      -1.05,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ],
+      [
+       3,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are going on a big trip!",
+    "Every animal has a home. Some homes are hot. Some homes are cold.",
+    "Four animal friends are coming with us. One, two, three, four!",
+    "Let's find out where they live. Are you ready? Let's go!"
+   ]
+  },
+  {
+   "name": "arctic_fox",
+   "biome": "arctic",
+   "tod": "noon",
+   "word": "THE ARCTIC!",
+   "word_on": [
+    3,
+    "snowy"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "biome": "desert",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "arctic",
+     "tod": "noon",
+     "line": 3,
+     "show": [
+      "arctic_fox"
+     ]
+    },
+    {
+     "biome": "arctic",
+     "tod": "noon",
+     "line": 5,
+     "show": [
+      "arctic_fox",
+      "sfox"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      0.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      1,
+      "hot"
+     ],
+     "off": [
+      3
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "thermo",
+     "at": "ex",
+     "on": [
+      3,
+      "snowy"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "hot": false
+     }
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      -0.55,
+      -1.1,
+      3.55
+     ],
+     "on": [
+      5
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.55,
+      -1.1,
+      3.55
+     ],
+     "on": [
+      5,
+      "summer"
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the arctic fox live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the arctic fox live here, in the hot, sandy desert?",
+     "pause": 3.2
+    },
+    "No! Too hot for a fluffy fox. Let's try again.",
+    [
+     "The arctic fox lives in the snowy Arctic! Brrr!",
+     "teach"
+    ],
+    "Here is the fun fact. In winter, the arctic fox is white, like the snow.",
+    [
+     "But in summer, when the snow melts, its fur turns brown!",
+     "exhibit"
+    ],
+    [
+     "White in winter, to hide in the snow. Brown in summer, to hide in the rocks.",
+     "exhibit"
+    ],
+    [
+     "Say it with me. White in winter, brown in summer!",
+     "close:host"
+    ],
+    "Can you curl up like a fox in the snow? Curl, curl, curl!",
+    "So cozy!"
+   ],
+   "short": {
+    "id": "zs4k_arcticfox_color",
+    "title": "Arctic Foxes Change Color! White in Winter",
+    "l1": "WHERE DOES THE",
+    "l2": "ARCTIC FOX LIVE?",
+    "to": 7
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "panda",
+   "biome": "bamboo",
+   "tod": "morning",
+   "word": "BAMBOO FOREST!",
+   "word_on": [
+    3,
+    "bamboo"
+   ],
+   "visits": [
+    {
+     "biome": "savanna",
+     "tod": "golden",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "bamboo",
+     "tod": "morning",
+     "line": 3,
+     "show": [
+      "panda"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      0.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      1,
+      "hot"
+     ],
+     "off": [
+      3
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "bamboo",
+     "at": "ex",
+     "on": [
+      3,
+      "bamboo"
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the panda live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the panda live here, on the hot, grassy savanna?",
+     "pause": 3.2
+    },
+    "No! Nothing yummy for a panda here. Let's try again.",
+    [
+     "The panda lives in the bamboo forest!",
+     "teach"
+    ],
+    [
+     "Here is the fun fact. Pandas live in cool, misty bamboo forests, high in the mountains.",
+     "exhibit"
+    ],
+    "Why bamboo? Because bamboo is a panda's favorite food. It eats bamboo almost all day!",
+    [
+     "Say it with me. Pandas live in the bamboo forest!",
+     "close:host"
+    ],
+    "Can you munch like a panda? Munch, munch, munch!",
+    "Great munching!"
+   ],
+   "short": {
+    "id": "zs4k_panda_home",
+    "title": "Where Do Pandas Live? In the Bamboo Forest!",
+    "l1": "WHERE DO",
+    "l2": "PANDAS LIVE?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "monkey",
+   "biome": "jungle",
+   "tod": "noon",
+   "word": "THE JUNGLE!",
+   "word_on": [
+    2,
+    "jungle"
+   ],
+   "visits": [
+    {
+     "biome": "jungle",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "jungle",
+     "tod": "noon",
+     "line": 2,
+     "show": [
+      "monkey"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "notree",
+     "at": "ex",
+     "on": [
+      3,
+      "trees"
+     ],
+     "opts": {
+      "nocross": 1,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "arrow",
+     "at": [
+      2.55,
+      -0.9,
+      3.0
+     ],
+     "on": [
+      4
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "color": "#ffd23f"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the monkey live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the monkey live here, in the warm, rainy jungle?",
+     "pause": 3.2
+    },
+    [
+     "Yes! The monkey lives in the jungle!",
+     "close:monkey"
+    ],
+    [
+     "Here is the fun fact. Many monkeys live high up in the jungle trees.",
+     "exhibit"
+    ],
+    [
+     "They eat in the trees, play in the trees, and sleep in the trees!",
+     "exhibit"
+    ],
+    "A long tail helps a monkey balance on the branches.",
+    [
+     "Say it with me. Monkeys live in the trees!",
+     "close:host"
+    ],
+    "Can you swing your arms like a monkey? Swing, swing, swing!",
+    "Super swinging!"
+   ],
+   "short": {
+    "id": "zs4k_monkey_trees",
+    "title": "Monkeys Live High in the Jungle Trees!",
+    "l1": "WHERE DO",
+    "l2": "MONKEYS LIVE?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "bear",
+   "biome": "mountain",
+   "tod": "sunset",
+   "word": "THE MOUNTAINS!",
+   "word_on": [
+    3,
+    "mountain"
+   ],
+   "visits": [
+    {
+     "biome": "desert",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "mountain",
+     "tod": "sunset",
+     "line": 3,
+     "show": [
+      "bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      0.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      1,
+      "hot"
+     ],
+     "off": [
+      3
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "den",
+     "at": [
+      2.75,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      4,
+      "den"
+     ]
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      2.9,
+      -1.4,
+      2.0
+     ],
+     "on": [
+      4,
+      "sleep"
+     ],
+     "opts": {
+      "s": 1.4
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the brown bear live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the bear live here, in the hot, sandy desert?",
+     "pause": 3.2
+    },
+    "No! Too hot for a furry bear. Let's try again.",
+    [
+     "The brown bear lives in the mountain forest!",
+     "teach"
+    ],
+    [
+     "Here is the fun fact. In winter, many bears sleep in a cozy den.",
+     "exhibit"
+    ],
+    [
+     "They snooze through the cold, snowy days, until spring comes back.",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Bears sleep in a den in winter!",
+     "close:host"
+    ],
+    "Can you yawn and stretch like a sleepy bear? Yawn. Stretch!",
+    "What a sleepy bear!"
+   ],
+   "short": {
+    "id": "zs4k_bear_den",
+    "title": "Bears Sleep in a Den All Winter! Animal Homes",
+    "l1": "WHERE DO",
+    "l2": "BEARS LIVE?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "golden",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We visited four animal homes. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who lives in the snowy Arctic, and turns brown in summer?",
+     "The arctic fox! Yes!",
+     "arctic_fox"
+    ],
+    [
+     "Who lives in the bamboo forest?",
+     "The panda! That's right!",
+     "panda"
+    ],
+    [
+     "Who lives high in the jungle trees?",
+     "The monkey! Good job!",
+     "monkey"
+    ],
+    [
+     "And who sleeps in a den in winter?",
+     "The bear! You remembered!",
+     "bear"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned four new things today.",
+    "Curl up like a fox. Munch like a panda. Swing like a monkey. And stretch like a bear!",
+    "Where is your home? Is it hot or cold today?",
+    "Thank you for traveling with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+  "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+  "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+  "native 4K render (3840x2160, 32 samples)"
+ ]
+}

@@ -1,0 +1,976 @@
+{
+ "id": "zool_ep03",
+ "seed": 31,
+ "title": "Who Am I? Animal Guessing Game for Kids with Milo",
+ "card": "Who Am I?",
+ "thumb_text": "3 CLUES!",
+ "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away, pigs roll in mud to keep cool, a koala is not a bear, and polar bears paddle with paws as big as dinner plates.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
+ "tags": [
+  "animal guessing game for kids",
+  "who am i animals",
+  "guess the animal",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "zebra",
+  "pig",
+  "koala",
+  "polar_bear"
+ ],
+ "extras": [
+  {
+   "id": "horse",
+   "kind": "horse"
+  },
+  {
+   "id": "bear",
+   "kind": "bear"
+  },
+  {
+   "id": "joey",
+   "kind": "koala",
+   "scale": 0.36
+  }
+ ],
+ "facts": [
+  "A zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).",
+  "Pigs have very few working sweat glands, so they wallow in mud to cool down; mud also protects their skin from sunburn (Bracke 2011, Applied Animal Behaviour Science).",
+  "A koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).",
+  "Polar bears are strong swimmers; their front paws work like paddles and are as big as dinner plates (Polar Bears International)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "beach",
+   "tod": "morning",
+   "show": [
+    "none"
+   ],
+   "word": "WHO AM I?",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": [
+      -2.9,
+      0.2,
+      0
+     ],
+     "on": [
+      2
+     ]
+    },
+    {
+     "prop": "qbox",
+     "at": [
+      2.9,
+      0.2,
+      0
+     ],
+     "on": [
+      2,
+      "friends"
+     ],
+     "opts": {
+      "color": "#e85d8a"
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      -0.7,
+      -1.6,
+      3.5
+     ],
+     "on": [
+      3,
+      "three"
+     ],
+     "opts": {
+      "n": 3,
+      "gap": 0.45
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are going to play a guessing game!",
+    "Four animal friends are hiding.",
+    "I will give you three clues. Then you guess who it is.",
+    "Put on your thinking cap. Are you ready? Let's play!"
+   ]
+  },
+  {
+   "name": "zebra",
+   "biome": "savanna",
+   "tod": "noon",
+   "word": "ZEBRA!",
+   "word_on": [
+    4,
+    "zebra"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "zebra"
+     ]
+    },
+    {
+     "line": 6,
+     "show": [
+      "zebra",
+      "horse"
+     ]
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.55,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.6,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.65,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "flies",
+     "at": [
+      2.55,
+      -1.2,
+      2.4
+     ],
+     "on": [
+      6,
+      "flies"
+     ],
+     "opts": {
+      "n": 5
+     }
+    },
+    {
+     "prop": "flies",
+     "at": [
+      -0.55,
+      -1.1,
+      2.5
+     ],
+     "on": [
+      7
+     ],
+     "leave": [
+      7,
+      "mix"
+     ],
+     "opts": {
+      "n": 4
+     }
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend looks like a horse.",
+    "Clue two. This friend has black and white stripes.",
+    {
+     "t": "Clue three. This friend lives on the sunny, grassy savanna. Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the zebra! Great guessing!",
+     "close:zebra"
+    ],
+    "Now, here is the fun fact. A zebra's stripes help keep the biting flies away!",
+    [
+     "Look. The flies land on the plain brown horse.",
+     "exhibit"
+    ],
+    [
+     "But on the stripy zebra? The stripes mix the flies up. They cannot land!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Stripes keep the flies away!",
+     "close:host"
+    ],
+    "Can you gallop like a zebra? Clip, clop, clip, clop!",
+    "What a great gallop!"
+   ],
+   "short": {
+    "id": "zs4k_zebra_flies",
+    "title": "Zebra Stripes Keep Flies Away! Guess the Animal",
+    "l1": "GUESS WHO?",
+    "l2": "3 CLUES!",
+    "to": 8
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "pig",
+   "biome": "farm",
+   "tod": "morning",
+   "word": "PIG!",
+   "word_on": [
+    4,
+    "pig"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "pig"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "pig"
+     ],
+     "place": {
+      "pig": [
+       2.45,
+       -0.5,
+       0.0
+      ]
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.55,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.6,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.65,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.6,
+      -1.1,
+      3.75
+     ],
+     "on": [
+      5,
+      "hot"
+     ],
+     "opts": {
+      "s": 1.25
+     }
+    },
+    {
+     "prop": "mud",
+     "at": "ex",
+     "on": [
+      6,
+      "mud"
+     ]
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend is pink, with a curly tail.",
+    "Clue two. This friend lives on the farm.",
+    {
+     "t": "Clue three. This friend says oink, oink! Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the pig! You got it!",
+     "close:pig"
+    ],
+    "What does a pig do on a hot, sunny day? Here is the fun fact.",
+    [
+     "Pigs roll in the mud to keep cool!",
+     "exhibit"
+    ],
+    "When you are hot, you sweat. But a pig cannot sweat much.",
+    [
+     "So the pig rolls in cool, squishy mud. The mud even stops sunburn, like sunscreen!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Pigs roll in mud to keep cool!",
+     "close:host"
+    ],
+    "Can you roll your arms like a pig in the mud? Roll, roll, roll!",
+    "Super rolling!"
+   ],
+   "short": {
+    "id": "zs4k_pig_mud",
+    "title": "Why Do Pigs Roll in Mud? To Keep Cool!",
+    "l1": "GUESS WHO?",
+    "l2": "OINK OINK!",
+    "to": 9
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "koala",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "word": "KOALA!",
+   "word_on": [
+    4,
+    "koala"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "koala"
+     ]
+    },
+    {
+     "line": 7,
+     "show": [
+      "koala",
+      "bear"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "koala",
+      "joey"
+     ],
+     "place": {
+      "joey": [
+       -0.55,
+       -1.15,
+       0.5
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "A BEAR",
+    "b": "NOT A BEAR",
+    "right": "b",
+    "ask": [
+     5
+    ],
+    "answer": [
+     6
+    ],
+    "hold": 2.2
+   },
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.55,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.6,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.65,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      4
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "cross",
+     "at": [
+      2.55,
+      -1.4,
+      3.35
+     ],
+     "on": [
+      7,
+      "no"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "arrow",
+     "at": [
+      -0.55,
+      -1.3,
+      1.6
+     ],
+     "on": [
+      8,
+      "pouch"
+     ],
+     "off": [
+      9
+     ]
+    },
+    {
+     "prop": "heart",
+     "at": [
+      1.4,
+      -1.0,
+      2.7
+     ],
+     "on": [
+      9
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend is gray and fluffy, with a big black nose.",
+    "Clue two. This friend loves to hug a tree.",
+    {
+     "t": "Clue three. This friend munches on green leaves. Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the koala! Well done!",
+     "close:koala"
+    ],
+    {
+     "t": "Now, a tricky question. Is a koala a bear?",
+     "pause": 3.2
+    },
+    "No! Here is the fun fact. A koala is not a bear!",
+    [
+     "Look. This is a bear. A bear has no pouch.",
+     "exhibit"
+    ],
+    [
+     "But a mama koala has a pouch on her tummy, like a cozy pocket. Her baby rides inside!",
+     "teach"
+    ],
+    [
+     "A baby koala is called a joey.",
+     "close:joey"
+    ],
+    [
+     "Say it with me. A koala is not a bear!",
+     "close:host"
+    ],
+    "Can you hug yourself, like a koala hugs a tree? Squeeze!",
+    "What a lovely hug!"
+   ],
+   "short": {
+    "id": "zs4k_koala_notbear",
+    "title": "A Koala Is Not a Bear! Guess the Animal",
+    "l1": "IS A KOALA",
+    "l2": "A BEAR?",
+    "from": 4,
+    "to": 10
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "golden",
+   "word": "POLAR BEAR!",
+   "word_on": [
+    4,
+    "polar"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "polar_bear"
+     ]
+    },
+    {
+     "line": 7,
+     "show": [
+      "polar_bear"
+     ],
+     "place": {
+      "polar_bear": [
+       2.45,
+       -0.45,
+       0.0
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     5
+    ],
+    "answer": [
+     6
+    ],
+    "hold": 2.2
+   },
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.55,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.6,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.65,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      2.6,
+      -1.2,
+      2.75
+     ],
+     "on": [
+      2,
+      "icy"
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "pool",
+     "at": "ex",
+     "on": [
+      6,
+      "swimmers"
+     ]
+    },
+    {
+     "prop": "plate",
+     "at": [
+      0.35,
+      -1.3,
+      0.0
+     ],
+     "on": [
+      8,
+      "dinner"
+     ]
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend is very big and very fluffy.",
+    "Clue two. This friend lives where it is icy and cold.",
+    {
+     "t": "Clue three. This friend looks as white as snow. Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the polar bear! Hooray!",
+     "close:polar_bear"
+    ],
+    {
+     "t": "Can a polar bear swim?",
+     "pause": 3.2
+    },
+    "Yes! Here is the fun fact. Polar bears are super swimmers!",
+    [
+     "Look at those big front paws. They work like paddles in the water.",
+     "exhibit"
+    ],
+    [
+     "Each paw is as big as a dinner plate!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Polar bears are super swimmers!",
+     "close:host"
+    ],
+    "Can you paddle your paws like a polar bear? Paddle, paddle, paddle!",
+    "Splendid swimming!"
+   ],
+   "short": {
+    "id": "zs4k_polar_swim",
+    "title": "Polar Bear Paws Are as Big as Dinner Plates!",
+    "l1": "GUESS WHO?",
+    "l2": "SO FLUFFY!",
+    "to": 9
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "mountain",
+   "tod": "sunset",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! You guessed all four friends. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Whose stripes keep the flies away?",
+     "The zebra! Yes!",
+     "zebra"
+    ],
+    [
+     "Who rolls in the mud to keep cool?",
+     "The pig! That's right!",
+     "pig"
+    ],
+    [
+     "Who is not a bear, and rides in a pouch as a baby?",
+     "The koala! Good job!",
+     "koala"
+    ],
+    [
+     "Whose paws are as big as dinner plates?",
+     "The polar bear! You remembered!",
+     "polar_bear"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "beach",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned four new things today.",
+    "Gallop like a zebra. Roll like a pig. Hug like a koala. And paddle like a polar bear!",
+    "Which friend was the hardest to guess?",
+    "Thank you for playing with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+  "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+  "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+  "native 4K render (3840x2160, 32 samples)"
+ ]
+}

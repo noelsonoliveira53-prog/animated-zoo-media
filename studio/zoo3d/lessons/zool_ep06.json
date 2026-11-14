@@ -1,0 +1,490 @@
+{
+ "id": "zool_ep06",
+ "seed": 43,
+ "title": "Yes or No? Animal Quiz for Kids with Milo",
+ "card": "Yes or No?",
+ "thumb_text": "CAN IT JUMP?",
+ "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy and a recap at the end.",
+ "tags": [
+  "animal quiz for kids",
+  "yes or no quiz for kids",
+  "true or false animals",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "polar_bear",
+  "horse",
+  "elephant",
+  "giraffe"
+ ],
+ "facts": [
+  "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).",
+  "Horses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).",
+  "Elephants cannot jump; they keep at least one foot on the ground even when moving fast, and they are strong swimmers (Smithsonian Magazine, 'Ask Smithsonian').",
+  "A giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "mountain",
+   "tod": "morning",
+   "word": "YES OR NO?",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      -2.5,
+      -1.9,
+      3.7
+     ],
+     "on": [
+      3,
+      "yes"
+     ],
+     "opts": {
+      "text": "YES",
+      "color": "#22a84a",
+      "win": 0.2
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      2.5,
+      -1.9,
+      3.7
+     ],
+     "on": [
+      3,
+      "no"
+     ],
+     "opts": {
+      "text": "NO",
+      "color": "#e23b34"
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are playing Yes or No!",
+    "I will ask a question about an animal friend.",
+    "If you think yes, give a thumbs up. If you think no, shake your head.",
+    "Are you ready? Let's play!"
+   ]
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "noon",
+   "show": [
+    "polar_bear"
+   ],
+   "word": "BLACK SKIN!",
+   "word_on": [
+    2,
+    "black"
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "magnifier",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      3
+     ],
+     "opts": {
+      "fill": "#17171c",
+      "hairs": 6,
+      "label": "SKIN",
+      "s": 1.25
+     }
+    }
+   ],
+   "lines": [
+    "Here is the polar bear. Look at that white, fluffy fur.",
+    {
+     "t": "Yes or no. Is a polar bear's skin white?",
+     "pause": 3.2
+    },
+    "No! Here is the fun fact. Under the fur, a polar bear's skin is black!",
+    [
+     "Look closer. Black skin, hiding under all that fur.",
+     "exhibit"
+    ],
+    [
+     "And the fur is not really white. Each hair is clear, like glass!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Polar bear skin is black!",
+     "close:host"
+    ],
+    "Can you shiver like you are in the snow? Brrr, brrr, brrr!",
+    "Brilliant!"
+   ],
+   "short": {
+    "id": "zs4k_polar_skin",
+    "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "to": 5
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "horse",
+   "biome": "farm",
+   "tod": "morning",
+   "show": [
+    "horse"
+   ],
+   "word": "SLEEPS STANDING!",
+   "word_on": [
+    2,
+    "sleep"
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "zzz",
+     "at": [
+      0.75,
+      -1.0,
+      2.6
+     ],
+     "on": [
+      3
+     ],
+     "opts": {
+      "s": 1.5
+     }
+    }
+   ],
+   "lines": [
+    "Here is the horse. Clip, clop!",
+    {
+     "t": "Yes or no. Can a horse sleep standing up?",
+     "pause": 3.2
+    },
+    "Yes! Here is the fun fact. A horse can sleep standing up!",
+    [
+     "Its legs lock in place, so it does not fall over.",
+     "exhibit"
+    ],
+    [
+     "For a big, deep sleep, the horse lies down on the soft ground.",
+     "close:horse"
+    ],
+    [
+     "Say it with me. Horses can sleep standing up!",
+     "close:host"
+    ],
+    "Can you stand very still and close your eyes? Shh. One, two, three.",
+    "Wake up! Good job!"
+   ],
+   "short": {
+    "id": "zs4k_horse_sleep",
+    "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "to": 5
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "elephant",
+   "biome": "savanna",
+   "tod": "golden",
+   "show": [
+    "elephant"
+   ],
+   "word": "NO JUMPING!",
+   "word_on": [
+    2,
+    "cannot"
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "arrow",
+     "at": [
+      2.5,
+      -0.9,
+      0.5
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "up": 1,
+      "s": 2.2,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "cross",
+     "at": [
+      2.5,
+      -1.2,
+      1.6
+     ],
+     "on": [
+      3,
+      "heavy"
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    }
+   ],
+   "lines": [
+    "Here is the elephant. So big and strong!",
+    {
+     "t": "Yes or no. Can an elephant jump?",
+     "pause": 3.2
+    },
+    "No! Here is the fun fact. Elephants cannot jump!",
+    [
+     "An elephant is too big and heavy. It always keeps a foot on the ground.",
+     "exhibit"
+    ],
+    [
+     "But elephants can walk fast, and they are great swimmers!",
+     "close:elephant"
+    ],
+    [
+     "Say it with me. Elephants cannot jump!",
+     "close:host"
+    ],
+    "Can you jump? Elephants can't, but you can! Jump, jump, jump!",
+    "What great jumping!"
+   ],
+   "short": {
+    "id": "zs4k_elephant_jump",
+    "title": "Elephants Can't Jump! Yes or No Animal Quiz",
+    "l1": "CAN AN ELEPHANT",
+    "l2": "JUMP?",
+    "to": 5
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "giraffe",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "show": [
+    "giraffe"
+   ],
+   "word": "7 NECK BONES!",
+   "word_on": [
+    2,
+    "seven"
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "bones",
+     "at": "ex",
+     "on": [
+      3
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ],
+      [
+       4,
+       "three"
+      ],
+      [
+       4,
+       "four"
+      ],
+      [
+       4,
+       "five"
+      ],
+      [
+       4,
+       "six"
+      ],
+      [
+       4,
+       "seven"
+      ]
+     ],
+     "opts": {
+      "n": 7
+     }
+    }
+   ],
+   "lines": [
+    "Here is the giraffe. Look at that long, long neck!",
+    {
+     "t": "Yes or no. Does a giraffe have the same number of neck bones as you?",
+     "pause": 3.2
+    },
+    "Yes! Here is the fun fact. A giraffe has seven neck bones. And so do you!",
+    [
+     "The giraffe's neck bones are just much, much bigger. Each one is as long as a ruler!",
+     "exhibit"
+    ],
+    [
+     "Let's count them. One, two, three, four, five, six, seven!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Seven neck bones, just like me!",
+     "close:host"
+    ],
+    "Can you touch your neck? Gently now. Nod your head. Yes, yes, yes!",
+    "Super nodding!"
+   ],
+   "short": {
+    "id": "zs4k_giraffe_neck",
+    "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "to": 5
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "sunset",
+   "word": "ONE MORE TIME!",
+   "lines": [
+    "Wow! What a great game. Let's play one more time, super fast!",
+    "Get ready!"
+   ],
+   "quiz": [
+    [
+     "Is a polar bear's skin white?",
+     "No! It is black!",
+     "polar_bear"
+    ],
+    [
+     "Can a horse sleep standing up?",
+     "Yes! It can!",
+     "horse"
+    ],
+    [
+     "Can an elephant jump?",
+     "No! Elephants cannot jump!",
+     "elephant"
+    ],
+    [
+     "Does a giraffe have seven neck bones, like you?",
+     "Yes! Seven, just like you!",
+     "giraffe"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "mountain",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned four new things today.",
+    "Shiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!",
+    "Which answer surprised you the most?",
+    "Thank you for playing with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+  "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+  "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+  "native 4K render (3840x2160, 32 samples)"
+ ]
+}

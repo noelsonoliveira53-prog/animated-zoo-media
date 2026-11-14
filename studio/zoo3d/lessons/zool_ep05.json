@@ -1,0 +1,588 @@
+{
+ "id": "zool_ep05",
+ "seed": 41,
+ "title": "Stripes or Spots? Animal Patterns for Kids with Milo",
+ "card": "Stripes or Spots?",
+ "thumb_text": "LOOK CLOSE!",
+ "description": "Stripes or spots? Look closely with Milo the bluebird and pick your answer! Then look even closer: a zebra's skin is black under its stripes, a tiger's skin is striped too, a baby panda is born pink and as small as a stick of butter, and every cow's spots are like a fingerprint.\nAn interactive look-and-find animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
+ "tags": [
+  "animal patterns for kids",
+  "stripes and spots",
+  "zebra stripes for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "zebra",
+  "tiger",
+  "panda",
+  "cow"
+ ],
+ "extras": [
+  {
+   "id": "cub",
+   "kind": "pink_cub",
+   "scale": 0.3
+  }
+ ],
+ "facts": [
+  "Zebras have black skin underneath their striped coat (Britannica; San Diego Zoo).",
+  "A tiger's stripes are also on its skin, and no two tigers have the same stripes (WWF).",
+  "A newborn giant panda is pink, almost hairless and about the size of a stick of butter; the black and white markings appear within a few weeks (Smithsonian's National Zoo; National Geographic).",
+  "The black and white pattern of every Holstein cow is unique, like a fingerprint (Holstein Association USA)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "word": "PATTERNS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "swatch",
+     "at": [
+      -2.6,
+      -1.9,
+      3.75
+     ],
+     "on": [
+      2,
+      "stripes"
+     ],
+     "opts": {
+      "kind": "stripes",
+      "s": 0.8
+     }
+    },
+    {
+     "prop": "sock",
+     "at": [
+      -1.7,
+      -2.5,
+      0.0
+     ],
+     "on": [
+      2,
+      "sock"
+     ],
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "swatch",
+     "at": [
+      2.6,
+      -1.9,
+      3.75
+     ],
+     "on": [
+      3,
+      "spots"
+     ],
+     "opts": {
+      "kind": "spots",
+      "s": 0.8,
+      "base": "#ffd23f",
+      "mark": "#f0443a"
+     }
+    },
+    {
+     "prop": "ball",
+     "at": [
+      1.7,
+      -2.5,
+      0.0
+     ],
+     "on": [
+      3,
+      "ball"
+     ]
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are looking for patterns!",
+    "Stripes are long lines. Like the lines on a stripy sock.",
+    "Spots are round dots. Like the dots on a spotty ball.",
+    "Some animal friends wear stripes. Some wear spots.",
+    "Put on your looking eyes. Are you ready? Let's go!"
+   ]
+  },
+  {
+   "name": "zebra",
+   "biome": "river",
+   "tod": "noon",
+   "show": [
+    "zebra"
+   ],
+   "word": "BLACK SKIN!",
+   "word_on": [
+    4,
+    "black"
+   ],
+   "choices": {
+    "a": "STRIPES",
+    "b": "SPOTS",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.2
+   },
+   "exhibits": [
+    {
+     "prop": "magnifier",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      4,
+      "skin"
+     ],
+     "opts": {
+      "fill": "#17171c",
+      "label": "SKIN",
+      "s": 1.25
+     }
+    }
+   ],
+   "lines": [
+    "Look at this friend.",
+    {
+     "t": "Stripes, or spots?",
+     "pause": 3.2
+    },
+    [
+     "Stripes! Black and white stripes. It is the zebra!",
+     "close:zebra"
+    ],
+    {
+     "t": "Now look closer. What color is a zebra's skin, under all that hair?",
+     "pause": 2.4
+    },
+    [
+     "Here is the fun fact. Under the stripes, a zebra's skin is black!",
+     "exhibit"
+    ],
+    [
+     "Black skin, with black and white hair growing on top.",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Zebra skin is black!",
+     "close:host"
+    ],
+    "Can you draw stripes in the air? Down, down, down!",
+    "Super stripes!"
+   ],
+   "short": {
+    "id": "zs4k_zebra_skin",
+    "title": "A Zebra's Skin Is Black Under Its Stripes!",
+    "l1": "STRIPES",
+    "l2": "OR SPOTS?",
+    "to": 6
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "tiger",
+   "biome": "jungle",
+   "tod": "golden",
+   "show": [
+    "tiger"
+   ],
+   "word": "STRIPY SKIN!",
+   "word_on": [
+    4,
+    "stripy"
+   ],
+   "choices": {
+    "a": "STRIPES",
+    "b": "SPOTS",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.2
+   },
+   "exhibits": [
+    {
+     "prop": "magnifier",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      4,
+      "skin"
+     ],
+     "opts": {
+      "fill": "#f0b98a",
+      "stripes": 1,
+      "stripe": "#3a2a24",
+      "label": "SKIN",
+      "s": 1.25
+     }
+    }
+   ],
+   "lines": [
+    "Here comes an orange friend.",
+    {
+     "t": "Stripes, or spots?",
+     "pause": 3.2
+    },
+    [
+     "Stripes! Orange and black stripes. It is the tiger!",
+     "close:tiger"
+    ],
+    {
+     "t": "Are the stripes only on the fur?",
+     "pause": 2.4
+    },
+    [
+     "No! Here is the fun fact. A tiger's skin is stripy too!",
+     "exhibit"
+    ],
+    [
+     "Stripes on the fur, and the very same stripes on the skin underneath.",
+     "exhibit"
+    ],
+    [
+     "And no two tigers have the same stripes.",
+     "close:tiger"
+    ],
+    [
+     "Say it with me. Tiger skin is stripy too!",
+     "close:host"
+    ],
+    "Can you creep like a tiger? Creep, creep, creep. Pounce!",
+    "What a quiet tiger!"
+   ],
+   "short": {
+    "id": "zs4k_tiger_skin",
+    "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?",
+    "l1": "STRIPES",
+    "l2": "OR SPOTS?",
+    "to": 7
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "panda",
+   "biome": "bamboo",
+   "tod": "morning",
+   "word": "BORN PINK!",
+   "word_on": [
+    2,
+    "pink"
+   ],
+   "visits": [
+    {
+     "show": [
+      "panda"
+     ]
+    },
+    {
+     "line": 3,
+     "show": [
+      "panda",
+      "cub"
+     ],
+     "place": {
+      "cub": [
+       2.0,
+       -1.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "BLACK + WHITE",
+    "b": "PINK",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.2,
+    "colors": {
+     "a": "#2b2b33",
+     "b": "#e85d8a"
+    }
+   },
+   "exhibits": [
+    {
+     "prop": "butter",
+     "at": [
+      3.3,
+      -1.1,
+      0.0
+     ],
+     "on": [
+      3,
+      "butter"
+     ]
+    },
+    {
+     "prop": "arrow",
+     "at": [
+      2.0,
+      -1.2,
+      1.15
+     ],
+     "on": [
+      3,
+      "tiny"
+     ],
+     "off": [
+      4
+     ]
+    }
+   ],
+   "lines": [
+    "Look at this round friend, with black and white patches. It is the panda!",
+    {
+     "t": "Now, what color is a newborn baby panda? Black and white? Or pink?",
+     "pause": 3.2
+    },
+    "Pink! Here is the fun fact. A baby panda is born pink!",
+    [
+     "Look how tiny! A newborn panda is as small as a stick of butter.",
+     "exhibit"
+    ],
+    [
+     "The black and white patches grow later, when the baby is a few weeks old.",
+     "close:cub"
+    ],
+    [
+     "Say it with me. Baby pandas are born pink!",
+     "close:host"
+    ],
+    "Can you curl up small like a baby panda? Tiny, tiny, tiny!",
+    "So tiny and cute!"
+   ],
+   "short": {
+    "id": "zs4k_panda_pink",
+    "title": "Baby Pandas Are Born Pink! As Small as Butter",
+    "l1": "WHAT COLOR IS",
+    "l2": "A BABY PANDA?",
+    "to": 5
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "cow",
+   "biome": "farm",
+   "tod": "sunset",
+   "show": [
+    "cow"
+   ],
+   "word": "HER OWN SPOTS!",
+   "word_on": [
+    4,
+    "spots"
+   ],
+   "choices": {
+    "a": "STRIPES",
+    "b": "SPOTS",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.2
+   },
+   "exhibits": [
+    {
+     "prop": "fingerprint",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      5,
+      "fingerprint"
+     ],
+     "off": [
+      6
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      1.9,
+      -1.2,
+      2.4
+     ],
+     "on": [
+      6,
+      "one"
+     ],
+     "times": [
+      [
+       6,
+       "one"
+      ],
+      [
+       6,
+       "two"
+      ],
+      [
+       6,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "s": 1.3,
+      "dx": 0.85
+     }
+    }
+   ],
+   "lines": [
+    "Moo! Look at this farm friend.",
+    {
+     "t": "Stripes, or spots?",
+     "pause": 3.2
+    },
+    [
+     "Spots! Big black spots. It is the cow!",
+     "close:cow"
+    ],
+    {
+     "t": "Do any two cows have the same spots?",
+     "pause": 2.4
+    },
+    "No! Here is the fun fact. Every spotted cow has her very own spots.",
+    [
+     "Her spots are like your fingerprint. Nobody else has the same one!",
+     "exhibit"
+    ],
+    [
+     "Let's count some spots. One spot, two spots, three spots!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Every cow has her own spots!",
+     "close:host"
+    ],
+    "Can you draw a spot in the air? Round and round!",
+    "Beautiful spots!"
+   ],
+   "short": {
+    "id": "zs4k_cow_spots",
+    "title": "Every Cow Has Her Own Spots, Like a Fingerprint!",
+    "l1": "STRIPES",
+    "l2": "OR SPOTS?",
+    "to": 7
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We found so many patterns. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Whose skin is black under the stripes?",
+     "The zebra! Yes!",
+     "zebra"
+    ],
+    [
+     "Whose skin is stripy too?",
+     "The tiger! That's right!",
+     "tiger"
+    ],
+    [
+     "Who is born pink, and as small as a stick of butter?",
+     "The panda! Good job!",
+     "panda"
+    ],
+    [
+     "Whose spots are like a fingerprint?",
+     "The cow! You remembered!",
+     "cow"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "autumn_forest",
+   "tod": "sunset",
+   "word": "BYE-BYE!",
+   "exhibits": [
+    {
+     "prop": "sock",
+     "at": [
+      -1.7,
+      -2.5,
+      0.0
+     ],
+     "on": [
+      2,
+      "sock"
+     ]
+    },
+    {
+     "prop": "ball",
+     "at": [
+      1.7,
+      -2.5,
+      0.0
+     ],
+     "on": [
+      2,
+      "ball"
+     ]
+    }
+   ],
+   "lines": [
+    "You learned four new things today.",
+    "Stripes on the zebra. Stripes on the tiger. Patches on the panda. And spots on the cow!",
+    "Can you find stripes or spots at home today? Maybe on a sock. Maybe on a ball!",
+    "Thank you for looking with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
+  "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
+  "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
+  "native 4K render (3840x2160, 32 samples)"
+ ]
+}

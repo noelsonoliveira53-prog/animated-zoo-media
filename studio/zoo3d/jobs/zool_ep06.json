@@ -1,0 +1,370 @@
+{
+ "id": "zool_ep06",
+ "title": "Yes or No?",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 43,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "polar_bear",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "polar_bear"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "horse",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "horse"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "giraffe",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "giraffe"
+   },
+   "yaw": -0.38
+  },
+  {
+   "id": "hippo",
+   "char": "animal",
+   "spot": "s5",
+   "opts": {
+    "kind": "hippo"
+   },
+   "yaw": -0.1
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "mountain",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal"
+  },
+  {
+   "from": "polar_bear",
+   "biome": "arctic",
+   "tod": "noon",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "polar_bear"
+   ]
+  },
+  {
+   "from": "horse",
+   "biome": "farm",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "reveal",
+   "show": [
+    "horse"
+   ]
+  },
+  {
+   "from": "elephant",
+   "biome": "savanna",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "vista",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "giraffe",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "giraffe"
+   ]
+  },
+  {
+   "from": "hippo",
+   "biome": "river",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "hippo"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "beach",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "goodbye",
+   "biome": "mountain",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "reveal"
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 72,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista"
+   ],
+   "energy": 0.8,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "YES OR NO?",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "polar_bear",
+   "shots": [
+    "close:polar_bear",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:polar_bear",
+    "side",
+    "low"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "NO!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 1.0,
+     "delay": 0.0,
+     "word": "no",
+     "nth": 1
+    }
+   ]
+  },
+  {
+   "section": "horse",
+   "shots": [
+    "close:horse",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:horse",
+    "side",
+    "low"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "YES!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 1.0,
+     "delay": 0.0,
+     "word": "yes",
+     "nth": 1
+    }
+   ]
+  },
+  {
+   "section": "elephant",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:elephant",
+    "side",
+    "low"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "NO!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 1.0,
+     "delay": 0.0,
+     "word": "no",
+     "nth": 1
+    }
+   ]
+  },
+  {
+   "section": "giraffe",
+   "shots": [
+    "close:giraffe",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:giraffe",
+    "side",
+    "low"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "YES!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 1.0,
+     "delay": 0.0,
+     "word": "yes",
+     "nth": 1
+    }
+   ]
+  },
+  {
+   "section": "hippo",
+   "shots": [
+    "close:hippo",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:hippo",
+    "side",
+    "low"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "NO!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 1.0,
+     "delay": 0.0,
+     "word": "no",
+     "nth": 1
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly",
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "ONE MORE TIME!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "zool_ep06",
+ "res": "3840x2160",
+ "samples": 32,
+ "step": 1,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "zool_ep06_timing.json",
+ "audio": "zool_ep06_song.wav"
+}

@@ -1,0 +1,964 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 2,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Zebras have black skin underneath their striped coat (Britannica; San Diego Zoo).\nA tiger's stripes are also on its skin, and no two tigers have the same stripes (WWF).\nA newborn giant panda is pink, almost hairless and about the size of a stick of butter; the black and white markings appear within a few weeks (Smithsonian's National Zoo; National Geographic).\nThe black and white pattern of every Holstein cow is unique, like a fingerprint (Holstein Association USA).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are looking for patterns!\nStripes are long lines. Like the lines on a stripy sock.\nSpots are round dots. Like the dots on a spotty ball.\nSome animal friends wear stripes. Some wear spots.\nPut on your looking eyes. Are you ready? Let's go!\nLook at this friend.\nStripes, or spots?\nStripes! Black and white stripes. It is the zebra!\nNow look closer. What color is a zebra's skin, under all that hair?\nHere is the fun fact. Under the stripes, a zebra's skin is black!\nBlack skin, with black and white hair growing on top.\nSay it with me. Zebra skin is black!\nCan you draw stripes in the air? Down, down, down!\nSuper stripes!\nHere comes an orange friend.\nStripes, or spots?\nStripes! Orange and black stripes. It is the tiger!\nAre the stripes only on the fur?\nNo! Here is the fun fact. A tiger's skin is stripy too!\nStripes on the fur, and the very same stripes on the skin underneath.\nAnd no two tigers have the same stripes.\nSay it with me. Tiger skin is stripy too!\nCan you creep like a tiger? Creep, creep, creep. Pounce!\nWhat a quiet tiger!\nLook at this round friend, with black and white patches. It is the panda!\nNow, what color is a newborn baby panda? Black and white? Or pink?\nPink! Here is the fun fact. A baby panda is born pink!\nLook how tiny! A newborn panda is as small as a stick of butter.\nThe black and white patches grow later, when the baby is a few weeks old.\nSay it with me. Baby pandas are born pink!\nCan you curl up small like a baby panda? Tiny, tiny, tiny!\nSo tiny and cute!\nMoo! Look at this farm friend.\nStripes, or spots?\nSpots! Big black spots. It is the cow!\nDo any two cows have the same spots?\nNo! Here is the fun fact. Every spotted cow has her very own spots.\nHer spots are like your fingerprint. Nobody else has the same one!\nLet's count some spots. One spot, two spots, three spots!\nSay it with me. Every cow has her own spots!\nCan you draw a spot in the air? Round and round!\nBeautiful spots!\nWow! We found so many patterns. Now it is quiz time!\nGet ready. Think hard!\nWhose skin is black under the stripes?\nThe zebra! Yes!\nWhose skin is stripy too?\nThe tiger! That's right!\nWho is born pink, and as small as a stick of butter?\nThe panda! Good job!\nWhose spots are like a fingerprint?\nThe cow! You remembered!\nYou learned four new things today.\nStripes on the zebra. Stripes on the tiger. Patches on the panda. And spots on the cow!\nCan you find stripes or spots at home today? Maybe on a sock. Maybe on a ball!\nThank you for looking with me. Bye-bye, friends! See you next time!",
+ "duration": 252.13,
+ "bpm": 96,
+ "meta": {
+  "title": "Stripes or Spots? Animal Patterns for Kids with Milo",
+  "card": "Stripes or Spots?",
+  "thumb_text": "LOOK CLOSE!",
+  "description": "Stripes or spots? Look closely with Milo the bluebird and pick your answer! Then look even closer: a zebra's skin is black under its stripes, a tiger's skin is striped too, a baby panda is born pink and as small as a stick of butter, and every cow's spots are like a fingerprint.\nAn interactive look-and-find animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal patterns for kids",
+   "stripes and spots",
+   "zebra stripes for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs4k_zebra_skin",
+   "title": "A Zebra's Skin Is Black Under Its Stripes!",
+   "l1": "STRIPES",
+   "l2": "OR SPOTS?",
+   "to": 6,
+   "seg": "zebra",
+   "start": 23.684,
+   "end": 50.615,
+   "seconds": 26.9
+  },
+  {
+   "id": "zs4k_tiger_skin",
+   "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?",
+   "l1": "STRIPES",
+   "l2": "OR SPOTS?",
+   "to": 7,
+   "seg": "tiger",
+   "start": 63.09,
+   "end": 91.653,
+   "seconds": 28.6
+  },
+  {
+   "id": "zs4k_panda_pink",
+   "title": "Baby Pandas Are Born Pink! As Small as Butter",
+   "l1": "WHAT COLOR IS",
+   "l2": "A BABY PANDA?",
+   "to": 5,
+   "seg": "panda",
+   "start": 104.749,
+   "end": 132.551,
+   "seconds": 27.8
+  },
+  {
+   "id": "zs4k_cow_spots",
+   "title": "Every Cow Has Her Own Spots, Like a Fingerprint!",
+   "l1": "STRIPES",
+   "l2": "OR SPOTS?",
+   "to": 7,
+   "seg": "cow",
+   "start": 146.37,
+   "end": 177.908,
+   "seconds": 31.5
+  }
+ ],
+ "job": {
+  "id": "zool_ep05",
+  "title": "Stripes or Spots?",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 41,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "panda",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "panda"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "cow"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "cub",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pink_cub",
+     "scale": 0.3
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "zebra",
+     "tiger",
+     "panda",
+     "cow"
+    ]
+   },
+   {
+    "from": "zebra",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "zebra"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "jungle",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "tiger"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "panda"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 3,
+    "show": [
+     "panda",
+     "cub"
+    ],
+    "place": {
+     "cub": [
+      2.0,
+      -1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "from": "cow",
+    "biome": "farm",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "cow"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "arc",
+    "shot": "dolly",
+    "show": [
+     "zebra",
+     "tiger",
+     "panda",
+     "cow"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "autumn_forest",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "reveal",
+    "show": [
+     "zebra",
+     "tiger",
+     "panda",
+     "cow"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 72,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "PATTERNS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "swatch",
+      "at": [
+       -2.6,
+       -1.9,
+       3.75
+      ],
+      "delay": 6.454,
+      "dur": 16.93,
+      "spin": 0,
+      "opts": {
+       "kind": "stripes",
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sock",
+      "at": [
+       -1.7,
+       -2.5,
+       0.0
+      ],
+      "delay": 9.83,
+      "dur": 13.554,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "swatch",
+      "at": [
+       2.6,
+       -1.9,
+       3.75
+      ],
+      "delay": 10.917,
+      "dur": 12.467,
+      "spin": 0,
+      "opts": {
+       "kind": "spots",
+       "s": 0.8,
+       "base": "#ffd23f",
+       "mark": "#f0443a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "ball",
+      "at": [
+       1.7,
+       -2.5,
+       0.0
+      ],
+      "delay": 14.122,
+      "dur": 9.262,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "zebra",
+    "shots": [
+     "teach",
+     "teach",
+     "close:zebra",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BLACK SKIN!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 22.133
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 1.873,
+      "dur": 7.388,
+      "spin": 0,
+      "opts": {
+       "text": "STRIPES",
+       "color": "#1479d6",
+       "win": 5.188
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 2.323,
+      "dur": 4.738,
+      "spin": 0,
+      "opts": {
+       "text": "SPOTS",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 3.311,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "magnifier",
+      "at": [
+       2.6,
+       -1.1,
+       2.3
+      ],
+      "delay": 21.586,
+      "dur": 17.52,
+      "spin": 0,
+      "opts": {
+       "fill": "#17171c",
+       "label": "SKIN",
+       "s": 1.25
+      }
+     }
+    ]
+   },
+   {
+    "section": "tiger",
+    "shots": [
+     "teach",
+     "teach",
+     "close:tiger",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:tiger",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPY SKIN!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 19.4
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.406,
+      "dur": 7.387,
+      "spin": 0,
+      "opts": {
+       "text": "STRIPES",
+       "color": "#1479d6",
+       "win": 5.187
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 2.856,
+      "dur": 4.737,
+      "spin": 0,
+      "opts": {
+       "text": "SPOTS",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 3.843,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "magnifier",
+      "at": [
+       2.6,
+       -1.1,
+       2.3
+      ],
+      "delay": 18.808,
+      "dur": 22.551,
+      "spin": 0,
+      "opts": {
+       "fill": "#f0b98a",
+       "stripes": 1,
+       "stripe": "#3a2a24",
+       "label": "SKIN",
+       "s": 1.25
+      }
+     }
+    ]
+   },
+   {
+    "section": "panda",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "close:cub",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BORN PINK!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 13.559
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 5.098,
+      "dur": 8.561,
+      "spin": 0,
+      "opts": {
+       "text": "BLACK + WHITE",
+       "color": "#2b2b33"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.548,
+      "dur": 10.311,
+      "spin": 0,
+      "opts": {
+       "text": "PINK",
+       "color": "#e85d8a",
+       "win": 8.111
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 9.909,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "butter",
+      "at": [
+       3.3,
+       -1.1,
+       0.0
+      ],
+      "delay": 21.799,
+      "dur": 19.522,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       2.0,
+       -1.2,
+       1.15
+      ],
+      "delay": 18.615,
+      "dur": 4.489,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "cow",
+    "shots": [
+     "teach",
+     "teach",
+     "close:cow",
+     "teach",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "HER OWN SPOTS!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 20.995
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.528,
+      "dur": 5.188,
+      "spin": 0,
+      "opts": {
+       "text": "STRIPES",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 2.978,
+      "dur": 6.938,
+      "spin": 0,
+      "opts": {
+       "text": "SPOTS",
+       "color": "#e85d00",
+       "win": 4.738
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 3.966,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "fingerprint",
+      "at": [
+       2.6,
+       -1.1,
+       2.3
+      ],
+      "delay": 23.688,
+      "dur": 3.373,
+      "spin": 0,
+      "opts": {
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.9,
+       -1.2,
+       2.4
+      ],
+      "delay": 28.607,
+      "dur": 15.447,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "s": 1.3,
+       "dx": 0.85,
+       "times": [
+        0.0,
+        0.686,
+        1.44
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:zebra",
+     "wide",
+     "close:tiger",
+     "wide",
+     "close:panda",
+     "wide",
+     "close:cow"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.494,
+      "dur": 5.066,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.5499999999999998,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 11.81,
+      "dur": 2.139,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 13.799,
+      "dur": 4.675,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.05,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 18.725,
+      "dur": 2.132,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 20.706,
+      "dur": 6.221,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.3499999999999996,
+       -0.8,
+       2.9
+      ],
+      "delay": 27.177,
+      "dur": 2.153,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 29.179,
+      "dur": 5.064,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.85,
+       -0.8,
+       2.9
+      ],
+      "delay": 34.493,
+      "dur": 2.233,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sock",
+      "at": [
+       -1.7,
+       -2.5,
+       0.0
+      ],
+      "delay": 12.893,
+      "dur": 11.087,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "ball",
+      "at": [
+       1.7,
+       -2.5,
+       0.0
+      ],
+      "delay": 13.992,
+      "dur": 9.988,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep05",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep05_timing.json",
+  "audio": "zool_ep05_song.wav"
+ }
+}

@@ -210,7 +210,7 @@
   "energy": 0.6,
   "wave": 1
  },
- "thumb_frame": 72,
+ "thumb_frame": 978,
  "direct": [
   {
    "section": "hello",
@@ -218,7 +218,7 @@
     "wide",
     "close:host",
     "orbit",
-    "low",
+    "wide",
     "vista"
    ],
    "energy": 0.7,

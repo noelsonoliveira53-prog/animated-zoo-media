@@ -210,15 +210,15 @@
   "energy": 0.6,
   "wave": 1
  },
- "thumb_frame": 72,
+ "thumb_frame": 1177,
  "direct": [
   {
    "section": "hello",
    "shots": [
     "wide",
     "close:host",
-    "orbit",
-    "low",
+    "wide",
+    "wide",
     "vista"
    ],
    "energy": 0.7,

@@ -135,6 +135,10 @@ def build(spec):
                 if given: shots[k] = given
                 elif kind == "teach": shots[k] = "teach"
                 else: shots[k] = ("wide", "close:host", "orbit", "low", "vista", "close:host", "high", "dolly")[(k - a) % 8]
+        if kind != "teach":   # group scenes: a line that brings in an example is shown wide, so the example is in the picture
+            for e_ in seg.get("exhibits", []):
+                k_ = e_["on"][0] if isinstance(e_["on"], list) else int(e_["on"])
+                if not seg["_lt"][k_][2].get("shot"): shots[k_] = "wide"
         d = {"section": seg["name"], "shots": shots, "energy": seg.get("energy", 0.3 if kind == "teach" else 0.6), "wave": 0 if kind == "teach" else 1,
              "jump": seg.get("jump", 0.0 if kind == "teach" else 0.2), "group": False, "props": []}
         if seg.get("jumpers"): d["jumpers"] = seg["jumpers"]

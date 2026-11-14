@@ -303,8 +303,8 @@
    "shots": [
     "wide",
     "close:host",
-    "orbit",
-    "low",
+    "wide",
+    "wide",
     "vista"
    ],
    "energy": 0.7,

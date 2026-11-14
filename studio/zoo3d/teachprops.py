@@ -216,7 +216,15 @@ def build(L, name, at, **o):
             sm = _m(L, o.get("stripe", "#f28a2e"), 0.55, 0.3)
             for k in range(3):
                 L.cube("st", 1, ((-0.36 + k * 0.36) * s, -0.04, 0), (0.17 * s, 0.03, 1.1 * s), sm, root)
-        if o.get("label"): _txt(L, o["label"], 0.3 * s, (0, -0.05, -0.72 * s - 0.34 * s), "#ffffff", root)
+        if o.get("label"):
+            lw = len(o["label"]) * 0.2 * s + 0.35
+            L.cube("plate", 1, (0, 0.0, -0.72 * s - 0.36 * s), (lw, 0.1, 0.46 * s), _m(L, "#2459b8", 0.85, 0.0, 0.2), root, bevel=0.05)
+            _txt(L, o["label"], 0.3 * s, (0, -0.09, -0.72 * s - 0.37 * s), "#ffffff", root, emit=0.9)
+    elif name == "table":         # little display table, so small examples are easy to see
+        w = o.get("w", 2.4); h = o.get("h", 0.9)
+        L.cylinder("leg", 0.16, h, (0, 0, h / 2), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, verts=16)
+        L.cube("top", 1, (0, 0, h), (w, 1.0, 0.12), _m(L, o.get("color", "#ffd98a"), 0.6, 0.2), root, bevel=0.05)
+        L.cylinder("foot", 0.5, 0.08, (0, 0, 0.04), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, verts=24)
     elif name == "butter":        # a stick of butter on a little dish (how small a newborn panda is)
         L.cylinder("dish", 0.55, 0.05, (0, 0, 0.03), m=_m(L, "#ffffff", 0.15, 0.9), parent=root, verts=32)
         L.cube("butter", 1, (0, 0, 0.19), (0.72, 0.3, 0.26), _m(L, "#ffe066", 0.35, 0.6), root, bevel=0.03)

@@ -193,9 +193,9 @@
     ],
     "place": {
      "cub": [
-      2.0,
-      -1.0,
-      0.0
+      2.05,
+      -0.95,
+      0.97
      ]
     }
    },
@@ -242,15 +242,15 @@
    "energy": 0.6,
    "wave": 1
   },
-  "thumb_frame": 72,
+  "thumb_frame": 3242,
   "direct": [
    {
     "section": "hello",
     "shots": [
      "wide",
      "close:host",
-     "orbit",
-     "low",
+     "wide",
+     "wide",
      "vista",
      "close:host"
     ],
@@ -423,7 +423,7 @@
       "opts": {
        "fill": "#17171c",
        "label": "SKIN",
-       "s": 1.25
+       "s": 1.05
       }
      }
     ]
@@ -521,7 +521,7 @@
        "stripes": 1,
        "stripe": "#3a2a24",
        "label": "SKIN",
-       "s": 1.25
+       "s": 1.05
       }
      }
     ]
@@ -605,11 +605,27 @@
      },
      {
       "type": "teach",
+      "name": "table",
+      "at": [
+       2.6,
+       -0.95,
+       0.0
+      ],
+      "delay": 13.559,
+      "dur": 37.935,
+      "spin": 0,
+      "opts": {
+       "w": 2.5,
+       "h": 0.9
+      }
+     },
+     {
+      "type": "teach",
       "name": "butter",
       "at": [
-       3.3,
-       -1.1,
-       0.0
+       3.15,
+       -1.0,
+       0.97
       ],
       "delay": 21.799,
       "dur": 29.695,
@@ -620,9 +636,9 @@
       "type": "teach",
       "name": "arrow",
       "at": [
-       2.0,
-       -1.2,
-       1.15
+       2.05,
+       -1.1,
+       2.15
       ],
       "delay": 18.615,
       "dur": 4.489,
@@ -909,7 +925,7 @@
     "shots": [
      "wide",
      "close:host",
-     "orbit",
+     "wide",
      "low"
     ],
     "energy": 0.6,

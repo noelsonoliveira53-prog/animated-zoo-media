@@ -42,7 +42,9 @@ def signature(job):
 
 
 def check(job, ledger=None):
-    ledger = [e for e in (ledger if ledger is not None else load()) if e["id"] != job["id"]]
+    ledger = list(ledger if ledger is not None else load())
+    ids = [e["id"] for e in ledger]
+    if job["id"] in ids: ledger = ledger[:ids.index(job["id"])]   # already recorded: compare with the episodes before it
     sig = signature(job); why = []
     if len(sig["places"]) < 3: why.append(f"only {len(sig['places'])} place(s); use 3-5 locations per song")
     first = sig["places"][0] if sig["places"] else None

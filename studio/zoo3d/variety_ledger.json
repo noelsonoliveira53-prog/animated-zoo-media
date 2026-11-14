@@ -326,12 +326,40 @@
     "noon"
    ],
    [
+    "bamboo",
+    "noon"
+   ],
+   [
     "autumn_forest",
     "golden"
    ],
    [
     "jungle",
     "morning"
+   ],
+   [
+    "bamboo",
+    "sunset"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "sunset"
    ],
    [
     "bamboo",
@@ -367,12 +395,48 @@
     "golden"
    ],
    [
+    "autumn_forest",
+    "golden"
+   ],
+   [
     "arctic",
     "sunset"
    ],
    [
     "arctic",
     "night"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "arctic",
+    "morning"
+   ],
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "arctic",
+    "sunset"
+   ],
+   [
+    "arctic",
+    "sunset"
+   ],
+   [
+    "arctic",
+    "sunset"
+   ],
+   [
+    "arctic",
+    "sunset"
    ]
   ],
   "cast": [
@@ -399,12 +463,40 @@
     "noon"
    ],
    [
+    "spring_meadow",
+    "noon"
+   ],
+   [
     "river",
     "golden"
    ],
    [
     "spring_meadow",
     "morning"
+   ],
+   [
+    "farm",
+    "sunset"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "farm",
+    "sunset"
    ],
    [
     "farm",

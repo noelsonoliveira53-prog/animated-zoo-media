@@ -189,7 +189,9 @@ def assemble(jid, ff):
     cmd = [ff, "-y", "-loglevel", "error", "-framerate", str(24 / step), "-i", fr]
     if os.path.exists(song): cmd += ["-i", song]
     vf = ["fps=24"]                                   # on-twos frames are held for 2 frames each
-    if str(job.get("res", "1280x720")) != "1920x1080": vf.append("scale=1920:1080:flags=lanczos")   # upscale 720p renders
+    try: rw = int(str(job.get("res", "1280x720")).split("x")[0])
+    except Exception: rw = 1280
+    if rw < 1920: vf.append("scale=1920:1080:flags=lanczos")   # upscale 720p renders; 1080p and native 4K keep their size
     cmd += ["-vf", ",".join(vf), "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p"]
     if os.path.exists(song): cmd += ["-c:a", "aac", "-b:a", "192k", "-shortest"]
     cmd += ["-movflags", "+faststart", mp4]

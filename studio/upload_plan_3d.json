@@ -1592,10 +1592,9 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep13.png",
   "made_for_kids": true,
-  "status": "rendering_variety",
+  "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 170.0,
-  "notes": "Nov 13: re-rendered with new worlds (zooworld locations) so it does not repeat the savanna look of ep10/ep11. The current zoo3d_ep13.mp4 is the old savanna render: do NOT upload it. finish.py on out/zoo3d_ep13w (job zoo3d_ep13w.json) replaces it and sets to_upload."
+  "duration": 170.0
  },
  {
   "file": "moon/mb3d_ep09.mp4",

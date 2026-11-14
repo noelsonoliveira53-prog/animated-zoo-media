@@ -7,21 +7,27 @@
  "seed": 918,
  "who_map": {},
  "meta": {
-  "title": "Fluffy Coats! Snowy Animals Song for Kids with Milo",
-  "card": "Snowy Friends!",
-  "thumb_text": "BRRR!",
-  "description": "Brrr, it's snowy! Milo the bluebird meets animals with fluffy coats: the polar bear and the arctic fox have white fur for the snow, the brown bear has thick fur, and the horse grows a warm winter coat.\nA snowy animals song for kids: shiver, hug and stomp along. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "title": "Who Stays Warm in the Snow? Fluffy Coats Song with Milo",
+  "card": "Who Stays Warm in the Snow?",
+  "thumb_text": "BRRR! SO COZY",
+  "description": "Who stays warm in the snow? Sing along with Milo the bluebird and meet the animals with fluffy coats: the polar bear and the arctic fox with white fur, the brown bear with thick fur, and the horse that grows a winter coat.\nA snowy animals song for kids ages 2-6: shiver, hug, stomp and spin along, then put on your coat, hat and mitts!\n\nChapters\n00:00 Fluffy coats in the snow (sing along)\n00:20 Polar bear and arctic fox\n00:44 Chorus: shake and spin\n01:04 Brown bear and the horse's winter coat\n01:20 Shiver, hug and stomp with Milo\n01:37 Milo's feathers, your coat and mitts\n02:02 Big final chorus\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "tags": [
    "winter animals song",
    "snow song for kids",
    "polar bear song",
-   "arctic animals for kids",
+   "arctic fox for kids",
+   "animals in winter",
    "kids songs",
    "preschool learning song",
    "The Animated Zoo",
-   "Milo"
+   "Milo",
+   "3D kids songs"
   ],
-  "song_v": "v3 new cast + places (Nov 13)"
+  "song_v": "v3 new cast + places (Nov 13)",
+  "improves": [
+   "2026-11-14 open on the featured animal within 5 s / scene change every 15 s (15-scene plan)",
+   "native 4K render (3840x2160, 32 samples) instead of 1080p upscale"
+  ]
  },
  "job": {
   "id": "zoo3d_ep18",

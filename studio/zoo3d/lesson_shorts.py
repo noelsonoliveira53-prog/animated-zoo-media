@@ -5,7 +5,7 @@ Noelson, Nov 14 2026: "Shorts should come only from teaching videos ... create a
 
 Uses the RAW 4K render (no burned captions) so the Short gets its own big captions, the lesson's own voice track
 (jobs/<id>_song.wav) and the cut points teach.py stored in songs/<id>.json "shorts" (question -> answer -> example, 20-60 s).
-Layout: blurred full-frame background, the centre 4:3 of the 4K picture across the full width (2160x1620, real 4K detail),
+Layout: blurred full-frame background, the centre 3:2 of the 4K picture across the full width (2160x1440, real 4K detail; 4:3 cut off the answer signs),
 the question as a big title on top, the spoken line as a caption underneath. No calls to action.
 Writes <repo>/shorts3d/<short id>.mp4 and adds/updates studio/upload_plan_shorts_zoo.json entries with status "hold_review".
 """
@@ -31,7 +31,7 @@ def make(raw, sid, sh, outdir):
     with open(ass, "w") as f:
         f.write("[Script Info]\nScriptType: v4.00+\nPlayResX: 2160\nPlayResY: 3840\nWrapStyle: 0\n\n[V4+ Styles]\n"
                 "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-                "Style: Cap,Baloo 2 ExtraBold,132,&H00FFFFFF,&H00FFFFFF,&H00102040,&H00000000,1,0,0,0,100,100,0,0,1,12,4,8,110,110,2700,1\n\n"
+                "Style: Cap,Baloo 2 ExtraBold,132,&H00FFFFFF,&H00FFFFFF,&H00102040,&H00000000,1,0,0,0,100,100,0,0,1,12,4,8,110,110,2640,1\n\n"
                 "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
         for i, l in enumerate(lines):
             st = max(0.0, l["start"] - a); en = min(d, (lines[i + 1]["start"] - a) if i + 1 < len(lines) else l["end"] - a + 0.8)
@@ -41,8 +41,8 @@ def make(raw, sid, sh, outdir):
     l1 = sh.get("l1", "").replace("'", "’").replace(":", "\\:"); l2 = sh.get("l2", "").replace("'", "’").replace(":", "\\:")
     s1 = min(230, int(2000 / max(1, len(l1) * 0.62))); s2 = min(330, int(2000 / max(1, len(l2) * 0.62)))
     fc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.10:saturation=1.15[bg];"
-          f"[b]crop=2880:2160:480:0,scale=2160:1620:flags=lanczos[fg];[bg][fg]overlay=0:1070,"
-          f"drawbox=x=0:y=1058:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2690:w=2160:h=12:color=white@0.9:t=fill,"
+          f"[b]crop=3240:2160:300:0,scale=2160:1440:flags=lanczos[fg];[bg][fg]overlay=0:1130,"
+          f"drawbox=x=0:y=1118:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2570:w=2160:h=12:color=white@0.9:t=fill,"
           f"drawtext=fontfile={FONT}:text='{l1}':fontsize={s1}:fontcolor=white:borderw=18:bordercolor=0x402010:x=(w-tw)/2:y=470,"
           f"drawtext=fontfile={FONT}:text='{l2}':fontsize={s2}:fontcolor=0xFFD23F:borderw=22:bordercolor=0x402010:x=(w-tw)/2:y=710,"
           f"subtitles={ass}:fontsdir={os.path.join(HERE, 'fonts')},"
@@ -58,9 +58,9 @@ def make(raw, sid, sh, outdir):
     thumb = os.path.join(tdir, "thumb_" + sh["id"] + ".png")
     tt = sh.get("thumb_text", "").replace("'", "\u2019").replace(":", "\\:"); st = min(330, int(1900 / max(1, len(tt) * 0.62)))
     tfc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.12:saturation=1.2[bg];"
-           f"[b]crop=2880:2160:480:0,scale=2160:1620:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1110,"
-           f"drawbox=x=0:y=1098:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2730:w=2160:h=12:color=white@0.9:t=fill,"
-           f"drawtext=fontfile={FONT}:text='{tt}':fontsize={st}:fontcolor=0xFFD23F:borderw=24:bordercolor=0x402010:x=(w-tw)/2:y=1190,scale=1080:1920:flags=lanczos")
+           f"[b]crop=3240:2160:300:0,scale=2160:1440:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1200,"
+           f"drawbox=x=0:y=1188:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2640:w=2160:h=12:color=white@0.9:t=fill,"
+           f"drawtext=fontfile={FONT}:text='{tt}':fontsize={st}:fontcolor=0xFFD23F:borderw=24:bordercolor=0x402010:x=(w-tw)/2:y=1270,scale=1080:1920:flags=lanczos")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(a + d * sh.get("thumb_at", 0.78)), "-i", raw, "-filter_complex", tfc, "-frames:v", "1", thumb], check=True)
     mb = os.path.getsize(out) / 1e6
     print(f"SHORT {sh['id']}: {d} s, 2160x3840, {mb:.1f} MB -> {out}")

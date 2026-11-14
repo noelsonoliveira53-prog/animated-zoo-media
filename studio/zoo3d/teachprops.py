@@ -257,7 +257,8 @@ def build(L, name, at, **o):
         L.cylinder("tube", 0.16, h, (0, 0, 0.5 + h / 2), m=_m(L, "#ffffff", 0.15, 0.9), parent=root, verts=24)
         L.sphere("bulb", 0.3, (0, 0, 0.42), m=_m(L, col, 0.2, 0.8, 0.5), parent=root, segs=24)
         L.cylinder("fill", 0.1, h * lv, (0, -0.09, 0.5 + h * lv / 2), m=_m(L, col, 0.2, 0.8, 0.5), parent=root, verts=16)
-        _txt(L, "HOT" if hot else "COLD", 0.36, (0, -0.05, h + 0.9), col, root)
+        L.cube("tag", 1, (0, 0.0, h + 0.95), (1.5 if hot else 1.8, 0.1, 0.62), _m(L, "#ffffff", 0.8, 0.0), root, bevel=0.06)
+        _txt(L, "HOT" if hot else "COLD", 0.44, (0, -0.08, h + 0.93), "#d42a20" if hot else "#1479d6", root, emit=0.5)
     elif name == "bamboo":
         g = _m(L, "#6cc04a", 0.4, 0.5); g2 = _m(L, "#3f9a3a", 0.5, 0.3)
         for k, (dx, hh) in enumerate(((-0.7, 3.0), (-0.25, 3.6), (0.25, 2.7), (0.7, 3.3))):
@@ -343,7 +344,7 @@ def animate(root, tr, dur, st):
         P["top"].location.x = 0.06 * math.sin(tr * 5)
     elif name == "rings":
         for k, r in enumerate(P["rings"]):
-            ph = (tr * 0.75 + k * 0.25) % 1.0; s = 0.5 + 3.2 * ph
+            ph = (tr * 0.75 + k * 0.25) % 1.0; s = 0.5 + 1.9 * ph
             r.location = (ph * o.get("reach", 5.0), 0, 0); r.scale = (s, s, max(0.05, 1 - ph))
     elif name == "zzz":
         for k, z in enumerate(P["z"]):

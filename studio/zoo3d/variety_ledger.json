@@ -741,5 +741,212 @@
    "zebra"
   ],
   "new_song": true
+ },
+ {
+  "id": "zool_ep04",
+  "places": [
+   [
+    "desert",
+    "morning"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "desert",
+    "sunset"
+   ],
+   [
+    "desert",
+    "sunset"
+   ],
+   [
+    "night_meadow",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "cat",
+   "elephant",
+   "giraffe",
+   "lion",
+   "tiger"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep05",
+  "places": [
+   [
+    "autumn_forest",
+    "morning"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "jungle",
+    "golden"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "farm",
+    "sunset"
+   ],
+   [
+    "spring_meadow",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "panda",
+   "pink_cub",
+   "tiger",
+   "zebra"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep06",
+  "places": [
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "beach",
+    "sunset"
+   ],
+   [
+    "mountain",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "horse",
+   "polar_bear"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep07",
+  "places": [
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ],
+   [
+    "beach",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "morning"
+   ]
+  ],
+  "cast": [
+   "arctic_fox",
+   "bear",
+   "monkey",
+   "panda",
+   "summer_fox"
+  ],
+  "new_song": true
  }
 ]

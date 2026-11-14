@@ -178,7 +178,7 @@ def build(spec):
                 add("badge", (0.0, -1.2, 3.55), tq, ta, {"text": "?", "color": "#8e5bd8", "s": 1.25})
                 if who in mains:
                     x, y = ARC[mains.index(who) % len(ARC)]
-                    add("check", (x + 0.75, y - 0.9, TALL.get(who, 2.65) + 0.25), ta + 0.25, te + 0.9, {"s": 0.8})
+                    add("check", (x + 1.0, y - 0.9, TALL.get(who, 2.65) - 0.3), ta + 0.25, te + 0.9, {"s": 0.7})
         direct.append(d)
         if seg.get("short"):
             sh = seg["short"]   # "from"/"to": line numbers, so the Short is the question, the answer and the example (20-60 s)

@@ -32,6 +32,7 @@
    "l1": "STRIPES",
    "l2": "OR SPOTS?",
    "to": 6,
+   "thumb_text": "LOOK CLOSER!",
    "seg": "zebra",
    "start": 23.684,
    "end": 50.615,
@@ -43,6 +44,7 @@
    "l1": "STRIPES",
    "l2": "OR SPOTS?",
    "to": 7,
+   "thumb_text": "UNDER THE FUR",
    "seg": "tiger",
    "start": 71.742,
    "end": 100.305,
@@ -54,6 +56,7 @@
    "l1": "WHAT COLOR IS",
    "l2": "A BABY PANDA?",
    "to": 5,
+   "thumb_text": "SO TINY!",
    "seg": "panda",
    "start": 113.4,
    "end": 141.202,
@@ -65,6 +68,7 @@
    "l1": "STRIPES",
    "l2": "OR SPOTS?",
    "to": 7,
+   "thumb_text": "ONLY ONE!",
    "seg": "cow",
    "start": 165.194,
    "end": 196.732,
@@ -811,15 +815,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -1.5499999999999998,
+       -1.2999999999999998,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 11.81,
       "dur": 2.139,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -843,15 +847,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       3.05,
+       3.3,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 18.725,
       "dur": 2.132,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -875,15 +879,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -3.3499999999999996,
+       -3.0999999999999996,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 27.177,
       "dur": 2.153,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -907,15 +911,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       4.85,
+       5.1,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 34.493,
       "dur": 2.233,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      }
     ]

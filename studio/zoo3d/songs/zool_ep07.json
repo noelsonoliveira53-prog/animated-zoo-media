@@ -32,6 +32,7 @@
    "l1": "WHERE DOES THE",
    "l2": "ARCTIC FOX LIVE?",
    "to": 7,
+   "thumb_text": "BROWN TOO!",
    "seg": "arctic_fox",
    "start": 21.077,
    "end": 55.765,
@@ -43,6 +44,7 @@
    "l1": "WHERE DO",
    "l2": "PANDAS LIVE?",
    "to": 6,
+   "thumb_text": "MISTY MOUNTAINS!",
    "seg": "panda",
    "start": 74.844,
    "end": 105.513,
@@ -54,6 +56,7 @@
    "l1": "WHERE DO",
    "l2": "MONKEYS LIVE?",
    "to": 6,
+   "thumb_text": "UP TOP!",
    "seg": "monkey",
    "start": 123.176,
    "end": 149.641,
@@ -65,6 +68,7 @@
    "l1": "WHERE DO",
    "l2": "BEARS LIVE?",
    "to": 6,
+   "thumb_text": "COZY NAP!",
    "seg": "bear",
    "start": 167.257,
    "end": 194.198,
@@ -693,8 +697,8 @@
        -0.5,
        0.0
       ],
-      "delay": 16.973,
-      "dur": 26.808,
+      "delay": 14.187,
+      "dur": 29.594,
       "spin": 0,
       "opts": {
        "nocross": 1,
@@ -818,8 +822,8 @@
        -0.2,
        0.0
       ],
-      "delay": 21.166,
-      "dur": 24.938,
+      "delay": 19.141,
+      "dur": 26.963,
       "spin": 0,
       "opts": {}
      },
@@ -827,15 +831,16 @@
       "type": "teach",
       "name": "zzz",
       "at": [
-       2.9,
+       2.4,
        -1.4,
-       2.0
+       1.7
       ],
       "delay": 19.951,
       "dur": 26.153,
       "spin": 0,
       "opts": {
-       "s": 1.4
+       "s": 1.1,
+       "color": "#2459b8"
       }
      }
     ]
@@ -888,15 +893,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -1.5499999999999998,
+       -1.2999999999999998,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 13.81,
       "dur": 2.344,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -920,15 +925,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       3.05,
+       3.3,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 21.286,
       "dur": 2.043,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -952,15 +957,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -3.3499999999999996,
+       -3.0999999999999996,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 28.641,
       "dur": 2.204,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -984,15 +989,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       4.85,
+       5.1,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 35.943,
       "dur": 2.084,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      }
     ]

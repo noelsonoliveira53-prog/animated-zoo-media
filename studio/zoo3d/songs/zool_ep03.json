@@ -32,6 +32,7 @@
    "l1": "GUESS WHO?",
    "l2": "3 CLUES!",
    "to": 8,
+   "thumb_text": "NO BUZZING!",
    "seg": "zebra",
    "start": 17.698,
    "end": 52.922,
@@ -43,6 +44,7 @@
    "l1": "GUESS WHO?",
    "l2": "OINK OINK!",
    "to": 9,
+   "thumb_text": "SQUISHY BATH!",
    "seg": "pig",
    "start": 65.902,
    "end": 102.219,
@@ -55,6 +57,7 @@
    "l2": "A BEAR?",
    "from": 4,
    "to": 10,
+   "thumb_text": "POUCH BABY!",
    "seg": "koala",
    "start": 134.188,
    "end": 161.796,
@@ -66,6 +69,7 @@
    "l1": "GUESS WHO?",
    "l2": "SO FLUFFY!",
    "to": 9,
+   "thumb_text": "SUPER SWIMMER!",
    "seg": "polar_bear",
    "start": 174.773,
    "end": 212.624,
@@ -1175,15 +1179,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -1.5499999999999998,
+       -1.2999999999999998,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 11.598,
       "dur": 2.139,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -1207,15 +1211,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       3.05,
+       3.3,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 18.864,
       "dur": 1.974,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -1239,15 +1243,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -3.3499999999999996,
+       -3.0999999999999996,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 27.145,
       "dur": 2.354,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -1271,15 +1275,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       4.85,
+       5.1,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 34.85,
       "dur": 2.489,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      }
     ]

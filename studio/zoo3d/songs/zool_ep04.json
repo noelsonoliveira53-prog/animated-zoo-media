@@ -32,6 +32,7 @@
    "l1": "WHO IS THE",
    "l2": "TALLEST?",
    "to": 6,
+   "thumb_text": "SO TALL!",
    "seg": "giraffe",
    "start": 19.967,
    "end": 46.66,
@@ -43,6 +44,7 @@
    "l1": "WHO IS THE",
    "l2": "BIGGEST?",
    "to": 7,
+   "thumb_text": "COUNT THEM!",
    "seg": "elephant",
    "start": 70.21,
    "end": 98.357,
@@ -54,6 +56,7 @@
    "l1": "BIGGEST",
    "l2": "CAT?",
    "to": 6,
+   "thumb_text": "GIANT KITTY!",
    "seg": "tiger",
    "start": 125.707,
    "end": 151.352,
@@ -65,6 +68,7 @@
    "l1": "WHO IS THE",
    "l2": "LOUDEST?",
    "to": 6,
+   "thumb_text": "SO LOUD!",
    "seg": "lion",
    "start": 173.793,
    "end": 200.247,
@@ -638,14 +642,14 @@
       "name": "pool",
       "at": [
        1.0,
-       -1.9,
+       -1.0,
        0.0
       ],
-      "delay": 24.708,
-      "dur": 23.078,
+      "delay": 23.017,
+      "dur": 24.769,
       "spin": 0,
       "opts": {
-       "s": 0.7
+       "s": 0.55
       }
      }
     ]
@@ -808,15 +812,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -1.5499999999999998,
+       -1.2999999999999998,
        0.29999999999999993,
-       4.05
+       3.5
       ],
       "delay": 12.276,
       "dur": 2.027,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -840,15 +844,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       3.05,
+       3.3,
        0.29999999999999993,
-       2.9
+       2.35
       ],
       "delay": 19.312,
       "dur": 2.209,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -872,15 +876,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       -3.3499999999999996,
+       -3.0999999999999996,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 26.96,
       "dur": 2.208,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      },
      {
@@ -904,15 +908,15 @@
       "type": "teach",
       "name": "check",
       "at": [
-       4.85,
+       5.1,
        -0.8,
-       2.9
+       2.35
       ],
       "delay": 34.901,
       "dur": 2.239,
       "spin": 0,
       "opts": {
-       "s": 0.8
+       "s": 0.7
       }
      }
     ]

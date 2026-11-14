@@ -130,17 +130,48 @@ def find_ffmpeg():
         except Exception: continue
     return None
 
+def _run_watched(cmd, lf, logp, quiet_start=900, quiet=480):
+    """Run Blender, but kill it if its log stops growing (GPU hang): 15 min allowed before the first frame, 8 min after.
+    Returns (returncode, hung)."""
+    p = subprocess.Popen(cmd, stdout=lf, stderr=subprocess.STDOUT)
+    last_size, last_t, t0 = -1, time.time(), time.time()
+    while p.poll() is None:
+        time.sleep(15)
+        try: sz = os.path.getsize(logp)
+        except Exception: sz = last_size
+        if sz != last_size: last_size, last_t = sz, time.time()
+        limit = quiet_start if time.time() - t0 < quiet_start else quiet
+        if time.time() - last_t > limit:
+            try: p.kill(); p.wait(timeout=60)
+            except Exception: pass
+            return -9, True
+    return p.returncode, False
+
+def _nframes(jid):
+    try: return len(os.listdir(os.path.join(OUT, jid, "frames")))
+    except Exception: return 0
+
 def render_frames(jid, jp):
     status(f"RENDERING {jid}")
     log(f"{jid}: rendering 3D frames")
     eng = os.path.join(ROOT, "zoo3d", "engine.py")
-    with open(os.path.join(OUT, jid + ".log"), "a", encoding="utf-8", errors="ignore") as lf:
+    logp = os.path.join(OUT, jid + ".log")
+    with open(logp, "a", encoding="utf-8", errors="ignore") as lf:
         lf.write(f"\n===== {datetime.datetime.now()} start =====\n"); lf.flush()
-        # if the GPU driver crashes Blender at startup (0xC0000005 in nvoglv64.dll), fall back to the Vulkan backend, then Cycles
-        for extra, engine in (([], "EEVEE"), (["--gpu-backend", "vulkan"], "EEVEE"), (["--gpu-backend", "vulkan"], "CYCLES")):
-            p = subprocess.run([BLENDER, "-b", "--factory-startup"] + extra + ["-P", eng, "--", "--job", jp, "--engine", engine], stdout=lf, stderr=subprocess.STDOUT)
-            if p.returncode != 3221225477: break
-            lf.write(f"\n[worker] crash at startup with {extra or 'default backend'} {engine}; trying the next fallback\n"); lf.flush()
+        # Blender can crash (0xC0000005) or hang on the GPU. Frames already rendered are kept, so: if frames were made,
+        # run the same setup again (it resumes); if none were made, fall back to the Vulkan backend, then Cycles.
+        setups = [([], "EEVEE"), (["--gpu-backend", "vulkan"], "EEVEE"), (["--gpu-backend", "vulkan"], "CYCLES")]
+        k = 0; tries = 0
+        while k < len(setups) and tries < 8:
+            extra, engine = setups[k]; tries += 1; before = _nframes(jid)
+            rc, hung = _run_watched([BLENDER, "-b", "--factory-startup"] + extra + ["-P", eng, "--", "--job", jp, "--engine", engine], lf, logp)
+            if not hung and rc != 3221225477: break
+            made = _nframes(jid) - before
+            log(f"{jid}: Blender {'hung and was stopped' if hung else 'crashed'} ({extra or 'default backend'} {engine}), {made} new frames; " + ("resuming" if made > 0 else "trying the next setup"))
+            lf.write(f"\n[worker] {'hang' if hung else 'crash'} with {extra or 'default backend'} {engine}, {made} new frames\n"); lf.flush()
+            if made <= 0: k += 1
+    class _P: returncode = rc
+    p = _P
     log(f"{jid}: blender exit code {p.returncode}")
     return os.path.exists(os.path.join(OUT, jid, "FRAMES_DONE"))
 

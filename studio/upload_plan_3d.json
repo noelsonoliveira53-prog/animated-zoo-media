@@ -1714,9 +1714,10 @@
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zool_ep01.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
-  "duration": 281.5
+  "duration": 281.5,
+  "video_id": "U0f336VeEjM"
  },
  {
   "file": "moon/mb3d_ep10.mp4",

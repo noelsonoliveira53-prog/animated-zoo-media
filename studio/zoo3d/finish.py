@@ -137,7 +137,11 @@ def main():
     else:   # 4K: lanczos upscale + light sharpen, lyrics burned at 4K (crisp), AV1 10-bit sized to stay under GitHub's 100 MB
         dur = float(subprocess.run(["ffprobe", "-v", "error", "-show_entries", "format=duration", "-of", "csv=p=0", raw], capture_output=True, text=True).stdout.strip() or timing["duration"])
         vb = int(((94 * 8 * 1e6) / dur - 192e3) * 0.96)
-        vf = f"scale=3840:2160:flags=lanczos,unsharp=5:5:0.5:5:5:0.0,subtitles={sub}:fontsdir={FONT_DIR}"
+        src_h = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=height", "-of", "csv=p=0", raw], capture_output=True, text=True).stdout.strip()
+        if src_h == "2160":   # native 4K render: no upscale, no sharpen, just burn the lyrics
+            vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
+        else:
+            vf = f"scale=3840:2160:flags=lanczos,unsharp=5:5:0.5:5:5:0.0,subtitles={sub}:fontsdir={FONT_DIR}"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                         "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
         print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")

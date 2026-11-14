@@ -184,6 +184,9 @@ def assemble(jid, ff):
     except Exception: job = {}
     if not os.path.exists(song) and job.get("audio"):   # re-render jobs (<id>w, <id>x) use the original song's audio file
         song = os.path.join(JOBS, job["audio"])
+    if not os.path.exists(song):   # fall back to the sung song in songs_out/<song id>/song.mp3
+        for sid in (job.get("song"), jid):
+            if sid and os.path.exists(os.path.join(SONGS, sid, "song.mp3")): song = os.path.join(SONGS, sid, "song.mp3"); break
     if not os.path.exists(song): log(f"{jid}: WARNING no audio file found, the video will be silent")
     step = int(job.get("step", 2))
     cmd = [ff, "-y", "-loglevel", "error", "-framerate", str(24 / step), "-i", fr]

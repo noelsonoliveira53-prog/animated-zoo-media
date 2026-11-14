@@ -54,7 +54,9 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_mama_hook.png",
   "video_id": "LQYmUf0PMgg",
-  "thumb_text": "WHO IS HIDING?"
+  "thumb_text": "WHO IS HIDING?",
+  "thumb_set": false,
+  "thumb_note": "already public when thumbnails became mandatory (Nov 14); file is ready, set it if Noelson says so"
  },
  {
   "file": "shorts3d/zs3d_home_hippo.mp4",
@@ -70,7 +72,8 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_home_hippo.png",
   "video_id": "bxGO367Jkgo",
   "scheduled_on": "2026-11-14",
-  "thumb_text": "SPLASH SPLASH!"
+  "thumb_text": "SPLASH SPLASH!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_sleep_giraffe.mp4",
@@ -86,7 +89,8 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_giraffe.png",
   "video_id": "i4rqbji991k",
   "scheduled_on": "2026-11-14",
-  "thumb_text": "NO PILLOW!"
+  "thumb_text": "NO PILLOW!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_mama_elephant.mp4",
@@ -101,7 +105,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_mama_elephant.png",
   "video_id": "l2wpBUcjXC4",
-  "thumb_text": "FOUND YOU!"
+  "thumb_text": "FOUND YOU!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_baby_cub.mp4",
@@ -117,7 +122,8 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_baby_cub.png",
   "video_id": "pc0zAY86lcE",
   "scheduled_on": "2026-11-14",
-  "thumb_text": "TINY ROAR!"
+  "thumb_text": "TINY ROAR!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_home_action.mp4",
@@ -133,7 +139,8 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_home_action.png",
   "video_id": "Cq7yX_gDLzk",
   "scheduled_on": "2026-11-14",
-  "thumb_text": "TWIG BY TWIG!"
+  "thumb_text": "TWIG BY TWIG!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_lion_sleep.mp4",
@@ -148,7 +155,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_lion_sleep.png",
   "video_id": "qo1yYmWfPbo",
-  "thumb_text": "BIG YAWN!"
+  "thumb_text": "BIG YAWN!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_baby_foal.mp4",
@@ -163,7 +171,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_baby_foal.png",
   "video_id": "1hWZMJUm1eA",
-  "thumb_text": "LITTLE STRIPES!"
+  "thumb_text": "LITTLE STRIPES!",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs3d_sleep_zebra.mp4",

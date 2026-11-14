@@ -272,3 +272,18 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   PSNR 45 dB, no visible difference. Lessons use 16 samples. The 4K song test used 32 (1.7 s/frame); songs can drop to 16 too.
 - Background processes started with nohup/& die when the turn ends in this container: run long encodes with the Bash tool's
   run_in_background (finish.py was killed this way once).
+
+### Nov 14 (1:30 PM): thumbnails on every upload, Shorts included
+- Noelson: "ensure the new posts are activating with YouTube skills to ensure personalized thumbnails are being applied to all
+  videos upon posting". Audit in Studio: the 5 scheduled episodes (Nov 14-18) all show their custom thumbnail. The Animated Zoo
+  CAN take custom thumbnails on Shorts: a Short's Details page has the same `ytcp-thumbnail-uploader input#file-loader`
+  ("up to 2160 by 3840 pixels (9:16 ratio)", under 50 MB). The 7 scheduled Shorts (Nov 14 6:30 PM - Nov 16 6:30 PM) now have theirs
+  (plan "thumb_set": true); the 7 to_upload Shorts have a thumbnail file in brand/zoo/shorts/ and get it at upload.
+- Recipe that worked (hidden pane): open studio.youtube.com/video/<id>/edit, wait 8 s, one script: fetch the PNG from
+  raw.githubusercontent.com/<owner>/<repo>/<commit sha>/<path>, `new File`, DataTransfer into
+  `ytcp-thumbnail-uploader input#file-loader`, dispatch `change`, wait until an `ytcp-thumbnail-uploader img` has a `data:` src.
+  Then `find` "Save" and REAL-click the button ref (a scripted `#save.click()` saved only sometimes). Success = toast
+  "Changes saved" and the uploader img becomes `.../vi/<id>/sddefault.jpg?v=...` (an auto frame is `vi_webp/<id>/sd2.webp`).
+  Never navigate away before the toast: the change is silently dropped.
+- Shorts thumbnails: `studio/zoo3d/short_thumb.py` (existing cuts) and `lesson_shorts.py` (lesson Shorts) write 1080x1920 PNGs with
+  their own 3 words; text sits at the top of the picture area so YouTube's 3:2 crop keeps it.

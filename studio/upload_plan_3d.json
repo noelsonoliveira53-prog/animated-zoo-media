@@ -1238,7 +1238,8 @@
   "original_file": "zoo3d_ep10.mp4",
   "note": "Hybrid test: first 10 s = Google Vids Animate clip made from the Blender start frame (1 clip, 10 s of Vids allowance), rest = Blender 4K; spliced with studio/vids/hybrid_splice.sh",
   "video_id": "-c9dHJ5UOlc",
-  "uploaded": "2026-11-13"
+  "uploaded": "2026-11-13",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep06.mp4",
@@ -1383,7 +1384,8 @@
   "original_file": "zoo3d_ep11.mp4",
   "note": "Hybrid: 10 s Vids Animate hook + Blender 4K",
   "video_id": "udUxlIxTQBM",
-  "url": "https://youtu.be/udUxlIxTQBM"
+  "url": "https://youtu.be/udUxlIxTQBM",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep07.mp4",
@@ -1502,7 +1504,8 @@
   "status": "scheduled",
   "format": "3d_singalong",
   "duration": 170.0,
-  "video_id": "ssAP26fD0hI"
+  "video_id": "ssAP26fD0hI",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep08.mp4",
@@ -1597,7 +1600,8 @@
   "format": "3d_singalong",
   "duration": 170.0,
   "replaced_video": "BKfS-luRPeo (set to Private: outro captions said four/foe for foal)",
-  "video_id": "tt34irM1y7o"
+  "video_id": "tt34irM1y7o",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep09.mp4",
@@ -1691,7 +1695,8 @@
   "status": "scheduled",
   "format": "3d_lesson",
   "duration": 281.5,
-  "video_id": "U0f336VeEjM"
+  "video_id": "U0f336VeEjM",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep10.mp4",

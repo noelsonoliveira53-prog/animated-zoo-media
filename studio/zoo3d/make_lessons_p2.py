@@ -39,7 +39,7 @@ def clues(reveal=4):
 L = []
 # =========================================================================================== P1 guessing game
 L.append({
- "id": "zool_ep03", "seed": 31, "title": "Who Am I? Animal Guessing Game for Kids with Milo", "card": "Who Am I?", "thumb_text": "3 CLUES!",
+ "id": "zool_ep03", "thumb_at": ["zebra", 6, 0.8], "seed": 31, "title": "Who Am I? Animal Guessing Game for Kids with Milo", "card": "Who Am I?", "thumb_text": "3 CLUES!",
  "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away, pigs roll in mud to keep cool, a koala is not a bear, and polar bears paddle with paws as big as dinner plates.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
  "tags": ["animal guessing game for kids", "who am i animals", "guess the animal"] + TAGS,
  "cast": ["zebra", "pig", "koala", "polar_bear"],
@@ -124,7 +124,7 @@ L.append({
 def champ_visits(name, n=2): return [{"show": ["none"]}, {"line": n, "show": [name]}]
 
 L.append({
- "id": "zool_ep04", "seed": 37, "title": "Animal Champions for Kids! Tallest, Biggest, Loudest", "card": "Animal Champions!", "thumb_text": "WHO WINS?",
+ "id": "zool_ep04", "thumb_at": ["giraffe", 4, 0.85], "seed": 37, "title": "Animal Champions for Kids! Tallest, Biggest, Loudest", "card": "Animal Champions!", "thumb_text": "WHO WINS?",
  "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet four animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars, the tiger is the giant cousin of a pet cat, and a lion's roar can be heard from five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
  "tags": ["biggest animals for kids", "tallest animal", "animal records for kids"] + TAGS,
  "cast": ["giraffe", "elephant", "tiger", "lion"], "extras": [{"id": "cat", "kind": "cat", "scale": 0.4}],
@@ -203,7 +203,7 @@ L.append({
 # =========================================================================================== P3 look and find
 SS = {"a": "STRIPES", "b": "SPOTS"}
 L.append({
- "id": "zool_ep05", "seed": 41, "title": "Stripes or Spots? Animal Patterns for Kids with Milo", "card": "Stripes or Spots?", "thumb_text": "LOOK CLOSE!",
+ "id": "zool_ep05", "thumb_at": ["panda", 3, 0.85], "seed": 41, "title": "Stripes or Spots? Animal Patterns for Kids with Milo", "card": "Stripes or Spots?", "thumb_text": "LOOK CLOSE!",
  "description": "Stripes or spots? Look closely with Milo the bluebird and pick your answer! Then look even closer: a zebra's skin is black under its stripes, a tiger's skin is striped too, a baby panda is born pink and as small as a stick of butter, and every cow's spots are like a fingerprint.\nAn interactive look-and-find animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.",
  "tags": ["animal patterns for kids", "stripes and spots", "zebra stripes for kids"] + TAGS,
  "cast": ["zebra", "tiger", "panda", "cow"], "extras": [{"id": "cub", "kind": "pink_cub", "scale": 0.3}],
@@ -285,7 +285,7 @@ L.append({
 def yn(right): return {"a": "YES", "b": "NO", "right": right, "ask": [1], "answer": [2], "hold": 2.4, "colors": {"a": "#22a84a", "b": "#e23b34"}}
 
 L.append({
- "id": "zool_ep06", "seed": 43, "title": "Yes or No? Animal Quiz for Kids with Milo", "card": "Yes or No?", "thumb_text": "CAN IT JUMP?",
+ "id": "zool_ep06", "thumb_at": ["giraffe", 4, 0.97], "seed": 43, "title": "Yes or No? Animal Quiz for Kids with Milo", "card": "Yes or No?", "thumb_text": "CAN IT JUMP?",
  "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy and a recap at the end.",
  "tags": ["animal quiz for kids", "yes or no quiz for kids", "true or false animals"] + TAGS,
  "cast": ["polar_bear", "horse", "elephant", "giraffe"],
@@ -317,6 +317,7 @@ L.append({
              X("Its legs lock in place, so it does not fall over.", "exhibit"),
              X("For a big, deep sleep, the horse lies down on the soft ground.", "close:horse"),
              "A horse does not sleep all night like you. It takes lots of tiny naps!",
+             "Standing up, the horse is always ready to trot away with its friends.",
              X("Say it with me. Horses can sleep standing up!", "close:host"),
              "Can you stand very still and close your eyes? Shh. One, two, three.", "Wake up! Good job!"],
    "short": {"id": "zs4k_horse_sleep", "title": "Horses Can Sleep Standing Up! Yes or No Quiz", "l1": "YES", "l2": "OR NO?", "to": 5}},
@@ -346,7 +347,8 @@ L.append({
             ["Can an elephant jump?", "No! Elephants cannot jump!", "elephant"], ["Does a giraffe have seven neck bones, like you?", "Yes! Seven, just like you!", "giraffe"]]},
   {"name": "goodbye", "kind": "outro", "biome": "mountain", "tod": "golden", "word": "BYE-BYE!",
    "lines": ["You learned four new things today.", "Shiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!",
-             "Which answer surprised you the most?", "Thank you for playing with me. Bye-bye, friends! See you next time!"]}]})
+             "Which answer surprised you the most?", {"t": "One last question. Yes or no. Did you have fun today?", "pause": 2.0}, "Yes! Me too!",
+             "Thank you for playing with me. Bye-bye, friends! See you next time!"]}]})
 
 # =========================================================================================== P5 this or that (homes)
 def here(right): return {"a": "YES", "b": "NO", "right": right, "ask": [1], "answer": [2], "hold": 1.6, "colors": {"a": "#22a84a", "b": "#e23b34"}}
@@ -355,7 +357,7 @@ DES, ARC, SAV, BAM, JUN, MOU = ("desert", "noon"), ("arctic", "noon"), ("savanna
 def v(place, **kw): return dict({"biome": place[0], "tod": place[1]}, **kw)
 
 L.append({
- "id": "zool_ep07", "seed": 47, "title": "Where Do Animals Live? Animal Homes for Kids with Milo", "card": "Where Do Animals Live?", "thumb_text": "HOT OR COLD?",
+ "id": "zool_ep07", "thumb_at": ["arctic_fox", 5, 0.85], "seed": 47, "title": "Where Do Animals Live? Animal Homes for Kids with Milo", "card": "Where Do Animals Live?", "thumb_text": "HOT OR COLD?",
  "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the bamboo forest, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the panda, the monkey and the bear, and see why they live there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.",
  "tags": ["animal homes for kids", "where do animals live", "animal habitats for kids"] + TAGS,
  "cast": ["arctic_fox", "panda", "monkey", "bear"], "extras": [{"id": "sfox", "kind": "summer_fox"}],

@@ -170,7 +170,7 @@ def shot_pose(shot, u, t):
         return (c[0] + 0.2 - 0.4 * u, c[1] - 11.2 + 0.35 * u, 2.6), (c[0], c[1] - 0.6, 2.0), 35
     if shot == "exhibit":    # closer look at the animal and the example next to it
         c = SET["cams"].get("center", (0, 0, 1.4))
-        return (c[0] + 1.9 + 0.4 * u, c[1] - 8.6 + 0.5 * u, 2.3), (c[0] + 1.25, c[1] - 0.6, 1.75), 35
+        return (c[0] + 2.15 + 0.3 * u, c[1] - 7.95 + 0.4 * u, 2.25), (c[0] + 1.6, c[1] - 0.6, 1.72), 35
     if shot == "orbit":
         a = -0.6 + 1.2 * u
         c = SET["cams"].get("center", (0, 0, 1.4)); r = SET["cams"].get("orbit_r", 9) * (0.5 + 0.5 * ZOOM[0])

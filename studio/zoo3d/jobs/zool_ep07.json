@@ -297,6 +297,7 @@
     "teach",
     "exhibit",
     "exhibit",
+    "close:arctic_fox",
     "close:host",
     "teach",
     "teach"
@@ -404,7 +405,7 @@
       3.55
      ],
      "delay": 25.255,
-     "dur": 22.447,
+     "dur": 28.212,
      "spin": 0,
      "opts": {
       "s": 1.2
@@ -419,7 +420,7 @@
       3.55
      ],
      "delay": 25.587,
-     "dur": 22.115,
+     "dur": 27.88,
      "spin": 0,
      "opts": {
       "s": 1.1
@@ -436,6 +437,7 @@
     "teach",
     "exhibit",
     "teach",
+    "close:panda",
     "close:host",
     "teach",
     "teach"
@@ -527,7 +529,7 @@
       0.0
      ],
      "delay": 15.596,
-     "dur": 27.903,
+     "dur": 32.436,
      "spin": 0,
      "opts": {}
     }
@@ -542,6 +544,7 @@
     "exhibit",
     "exhibit",
     "teach",
+    "close:monkey",
     "close:host",
     "teach",
     "teach"
@@ -618,7 +621,7 @@
       0.0
      ],
      "delay": 16.973,
-     "dur": 22.402,
+     "dur": 26.808,
      "spin": 0,
      "opts": {
       "nocross": 1,
@@ -651,6 +654,7 @@
     "teach",
     "exhibit",
     "exhibit",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -742,7 +746,7 @@
       0.0
      ],
      "delay": 21.166,
-     "dur": 19.278,
+     "dur": 24.938,
      "spin": 0,
      "opts": {}
     },
@@ -755,7 +759,7 @@
       2.0
      ],
      "delay": 19.951,
-     "dur": 20.493,
+     "dur": 26.153,
      "spin": 0,
      "opts": {
       "s": 1.4

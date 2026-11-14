@@ -28,7 +28,7 @@ SR, FPS, BPM = LS.SR, LS.FPS, LS.BPM
 GAP, SEG_GAP, LEAD = 0.75, 1.3, 0.5
 THINK, DO, CHOOSE = 2.0, 2.6, 3.2
 POS = {"ex": (2.55, -0.5, 0.0), "ex_front": (2.2, -1.5, 0.0), "ex_hi": (2.6, -1.1, 3.2), "sign_a": (2.6, -1.3, 3.7), "sign_b": (2.6, -1.3, 2.55),
-       "dots": (2.6, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (-0.55, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (0, -0.6, 4.35)}
+       "dots": (2.6, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (0.1, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (0, -0.6, 4.35)}
 SIGN_COL = {"a": "#1479d6", "b": "#e85d00"}
 ARC = [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]     # engine "arc" slots (quiz)
 TALL = {"giraffe": 3.8}
@@ -182,9 +182,13 @@ def build(spec):
             b0 = seg["_lt"][sh["to"]][0] - 0.25 if sh.get("to") else sc["end"]
             shorts.append(dict(sh, seg=seg["name"], start=round(max(0.0, a0), 3), end=round(b0, 3), seconds=round(b0 - a0, 1)))
 
+    thumb = spec.get("thumb_frame", 72)
+    if spec.get("thumb_at"):   # ["segment", line, 0..1]: the thumbnail shows a teaching moment (animal + example), not the hello
+        sg = next(g for g in spec["segments"] if g["name"] == spec["thumb_at"][0]); a0, b0, _ = sg["_lt"][spec["thumb_at"][1]]
+        thumb = int((a0 + (b0 - a0) * spec["thumb_at"][2]) * FPS)
     job = {"id": sid, "title": spec.get("card", spec["title"]), "channel": "zoo", "set": "zooworld", "set_opts": {}, "seed": spec.get("seed", 5),
            "new_song": True, "kind": "lesson", "cast": cast, "locations": locs, "intro_shot": "reveal", "intro": {"energy": 0.6, "wave": 1},
-           "thumb_frame": spec.get("thumb_frame", 72), "direct": direct, "song": sid, "res": spec.get("res", "3840x2160"),
+           "thumb_frame": thumb, "direct": direct, "song": sid, "res": spec.get("res", "3840x2160"),
            "samples": spec.get("samples", 16), "step": 1, "hold_shots": True, "cut_mode": "beat", "follow_singer": False, "punch": False,
            "timing_file": f"{sid}_timing.json", "audio": f"{sid}_song.wav"}
     json.dump(job, open(os.path.join(HERE, "jobs", f"{sid}.json"), "w"), indent=1)

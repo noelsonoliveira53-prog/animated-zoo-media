@@ -266,6 +266,8 @@
     "teach",
     "exhibit",
     "teach",
+    "close:giraffe",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -342,7 +344,7 @@
       0.0
      ],
      "delay": 14.955,
-     "dur": 24.45,
+     "dur": 34.988,
      "spin": 0,
      "opts": {
       "mark": 3.75
@@ -357,7 +359,7 @@
       0.0
      ],
      "delay": 17.956,
-     "dur": 21.448,
+     "dur": 31.987,
      "spin": 0,
      "opts": {
       "h": 3.3
@@ -375,6 +377,8 @@
     "exhibit",
     "exhibit",
     "close:elephant",
+    "teach",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -451,7 +455,7 @@
       0.0
      ],
      "delay": 20.237,
-     "dur": 20.888,
+     "dur": 34.96,
      "spin": 0,
      "opts": {
       "n": 4,
@@ -474,6 +478,8 @@
     "teach",
     "exhibit",
     "exhibit",
+    "close:tiger",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -563,7 +569,7 @@
       0.0
      ],
      "delay": 24.708,
-     "dur": 13.474,
+     "dur": 23.078,
      "spin": 0,
      "opts": {
       "s": 0.7
@@ -579,6 +585,8 @@
     "close:lion",
     "exhibit",
     "exhibit",
+    "teach",
+    "close:lion",
     "teach",
     "close:host",
     "teach",
@@ -671,7 +679,7 @@
       0.0
      ],
      "delay": 15.387,
-     "dur": 23.588,
+     "dur": 33.918,
      "spin": 0,
      "opts": {
       "text": "5 MILES"

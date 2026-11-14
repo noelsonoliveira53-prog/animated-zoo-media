@@ -267,6 +267,8 @@
     "teach",
     "exhibit",
     "exhibit",
+    "close:zebra",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -343,7 +345,7 @@
       2.3
      ],
      "delay": 21.586,
-     "dur": 17.52,
+     "dur": 26.172,
      "spin": 0,
      "opts": {
       "fill": "#17171c",
@@ -439,7 +441,7 @@
       2.3
      ],
      "delay": 18.808,
-     "dur": 22.551,
+     "dur": 22.55,
      "spin": 0,
      "opts": {
       "fill": "#f0b98a",
@@ -459,6 +461,8 @@
     "teach",
     "exhibit",
     "close:cub",
+    "exhibit",
+    "teach",
     "close:host",
     "teach",
     "teach"
@@ -535,7 +539,7 @@
       0.0
      ],
      "delay": 21.799,
-     "dur": 19.522,
+     "dur": 29.695,
      "spin": 0,
      "opts": {}
     },
@@ -857,7 +861,7 @@
       0.0
      ],
      "delay": 12.893,
-     "dur": 11.087,
+     "dur": 11.093,
      "spin": 0,
      "opts": {}
     },
@@ -870,7 +874,7 @@
       0.0
      ],
      "delay": 13.992,
-     "dur": 9.988,
+     "dur": 9.994,
      "spin": 0,
      "opts": {}
     }

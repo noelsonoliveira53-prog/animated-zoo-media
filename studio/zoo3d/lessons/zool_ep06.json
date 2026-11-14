@@ -1,5 +1,10 @@
 {
  "id": "zool_ep06",
+ "thumb_at": [
+  "giraffe",
+  4,
+  0.97
+ ],
  "seed": 43,
  "title": "Yes or No? Animal Quiz for Kids with Milo",
  "card": "Yes or No?",
@@ -224,6 +229,7 @@
      "close:horse"
     ],
     "A horse does not sleep all night like you. It takes lots of tiny naps!",
+    "Standing up, the horse is always ready to trot away with its friends.",
     [
      "Say it with me. Horses can sleep standing up!",
      "close:host"
@@ -484,6 +490,11 @@
     "You learned four new things today.",
     "Shiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!",
     "Which answer surprised you the most?",
+    {
+     "t": "One last question. Yes or no. Did you have fun today?",
+     "pause": 2.0
+    },
+    "Yes! Me too!",
     "Thank you for playing with me. Bye-bye, friends! See you next time!"
    ]
   }

@@ -15,3 +15,4 @@
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | native 4K test (a4k2), arctic/mountain/autumn, fixed timing |
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-14 | zoo3d_ep12.mp4 | 3d_singalong | PASS | - | - | Write the outro as its own sung lines (or use 'after' places) so the last 30 s keep changing scenes and captions stay in sync |
+| 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | Give every baby-animal verse its parent+baby pair in a NEW place (never the same meadow twice in a row), and start the thumbnail on the first single-animal close-up |

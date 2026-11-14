@@ -20,3 +20,4 @@
 | 2026-11-14 | shorts3d/zs3d_lion_sleep.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs3d_baby_foal.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-14 | zool_ep01.mp4 | 3d_lesson | PASS | - | - | Lessons: cut each fact segment into a fact-surprise Short right after the lesson passes (the lesson already states the fact on screen) |
+| 2026-11-14 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | ep17y: 16 scenes incl. 2 'after' outro places; next song: write a real sung outro instead of a 35 s instrumental tail |

@@ -355,7 +355,7 @@
     }
    ],
    "choices": {
-    "a": "BLACK + WHITE",
+    "a": "BLACK+WHITE",
     "b": "PINK",
     "right": "b",
     "ask": [

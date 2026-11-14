@@ -5,8 +5,18 @@
  "desc_header": "IN THIS LESSON",
  "lyrics": "Arctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).\nGiant pandas live in cool, misty bamboo forests in the mountains of China and eat almost only bamboo (Smithsonian's National Zoo; WWF).\nMany monkeys are tree-dwelling and live in tropical rainforests (San Diego Zoo; Britannica).\nMany bears spend the winter resting in a den (U.S. National Park Service).",
  "script": "Hello, friends! I am Milo the bluebird.\nToday we are going on a big trip!\nEvery animal has a home. Some homes are hot. Some homes are cold.\nFour animal friends are coming with us. One, two, three, four!\nLet's find out where they live. Are you ready? Let's go!\nWhere does the arctic fox live?\nDoes the arctic fox live here, in the hot, sandy desert?\nNo! Too hot for a fluffy fox. Let's try again.\nThe arctic fox lives in the snowy Arctic! Brrr!\nHere is the fun fact. In winter, the arctic fox is white, like the snow.\nBut in summer, when the snow melts, its fur turns brown!\nWhite in winter, to hide in the snow. Brown in summer, to hide in the rocks.\nAnd its thick, fluffy fur is one of the warmest coats in the whole animal world!\nSay it with me. White in winter, brown in summer!\nCan you curl up like a fox in the snow? Curl, curl, curl!\nSo cozy!\nWhere does the panda live?\nDoes the panda live here, on the hot, grassy savanna?\nNo! Nothing yummy for a panda here. Let's try again.\nThe panda lives in the bamboo forest!\nHere is the fun fact. Pandas live in cool, misty bamboo forests, high in the mountains.\nWhy bamboo? Because bamboo is a panda's favorite food. It eats bamboo almost all day!\nA panda's thick fur keeps it warm in the cool, wet forest.\nSay it with me. Pandas live in the bamboo forest!\nCan you munch like a panda? Munch, munch, munch!\nGreat munching!\nWhere does the monkey live?\nDoes the monkey live here, in the warm, rainy jungle?\nYes! The monkey lives in the jungle!\nHere is the fun fact. Many monkeys live high up in the jungle trees.\nThey eat in the trees, play in the trees, and sleep in the trees!\nA long tail helps a monkey balance on the branches.\nUp in the trees there are sweet fruits and crunchy leaves to eat.\nSay it with me. Monkeys live in the trees!\nCan you swing your arms like a monkey? Swing, swing, swing!\nSuper swinging!\nWhere does the brown bear live?\nDoes the bear live here, in the hot, sandy desert?\nNo! Too hot for a furry bear. Let's try again.\nThe brown bear lives in the mountain forest!\nHere is the fun fact. In winter, many bears sleep in a cozy den.\nThey snooze through the cold, snowy days, until spring comes back.\nIn spring, the bear wakes up very, very hungry. Time to find some berries!\nSay it with me. Bears sleep in a den in winter!\nCan you yawn and stretch like a sleepy bear? Yawn. Stretch!\nWhat a sleepy bear!\nWow! We visited four animal homes. Now it is quiz time!\nGet ready. Think hard!\nWho lives in the snowy Arctic, and turns brown in summer?\nThe arctic fox! Yes!\nWho lives in the bamboo forest?\nThe panda! That's right!\nWho lives high in the jungle trees?\nThe monkey! Good job!\nAnd who sleeps in a den in winter?\nThe bear! You remembered!\nYou learned four new things today.\nCurl up like a fox. Munch like a panda. Swing like a monkey. And stretch like a bear!\nWhere is your home? Is it hot or cold today?\nThank you for traveling with me. Bye-bye, friends! See you next time!",
- "duration": 273.39,
+ "duration": 272.84,
  "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 568,
+  "words": 568,
+  "pause_onsets_checked": 43,
+  "onset_err_mean_ms": 23.5,
+  "onset_err_max_ms": 110.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
  "meta": {
   "title": "Where Do Animals Live? Animal Homes for Kids with Milo",
   "card": "Where Do Animals Live?",
@@ -35,8 +45,8 @@
    "thumb_text": "BROWN TOO!",
    "seg": "arctic_fox",
    "start": 21.077,
-   "end": 55.765,
-   "seconds": 34.7
+   "end": 55.211,
+   "seconds": 34.1
   },
   {
    "id": "zs4k_panda_home",
@@ -46,8 +56,8 @@
    "to": 6,
    "thumb_text": "MISTY MOUNTAINS!",
    "seg": "panda",
-   "start": 74.844,
-   "end": 105.513,
+   "start": 74.29,
+   "end": 104.959,
    "seconds": 30.7
   },
   {
@@ -58,8 +68,8 @@
    "to": 6,
    "thumb_text": "UP TOP!",
    "seg": "monkey",
-   "start": 123.176,
-   "end": 149.641,
+   "start": 122.622,
+   "end": 149.087,
    "seconds": 26.5
   },
   {
@@ -70,8 +80,8 @@
    "to": 6,
    "thumb_text": "COZY NAP!",
    "seg": "bear",
-   "start": 167.257,
-   "end": 194.198,
+   "start": 166.704,
+   "end": 193.645,
    "seconds": 26.9
   }
  ],
@@ -287,7 +297,7 @@
    "energy": 0.6,
    "wave": 1
   },
-  "thumb_frame": 1177,
+  "thumb_frame": 1164,
   "direct": [
    {
     "section": "hello",
@@ -319,8 +329,8 @@
        -2.3,
        0.0
       ],
-      "delay": 9.235,
-      "dur": 11.542,
+      "delay": 8.975,
+      "dur": 11.802,
       "spin": 0,
       "opts": {
        "hot": true
@@ -334,8 +344,8 @@
        -2.3,
        0.0
       ],
-      "delay": 10.568,
-      "dur": 10.209,
+      "delay": 10.335,
+      "dur": 10.442,
       "spin": 0,
       "opts": {
        "hot": false
@@ -349,16 +359,16 @@
        -1.7,
        3.55
       ],
-      "delay": 14.36,
-      "dur": 6.417,
+      "delay": 14.157,
+      "dur": 6.62,
       "spin": 0,
       "opts": {
        "n": 4,
        "times": [
         0.0,
-        0.286,
-        0.571,
-        -2.693
+        0.31,
+        0.68,
+        -2.49
        ]
       }
      }
@@ -394,8 +404,8 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 17.133,
-      "dur": 8.122
+      "delay": 16.184,
+      "dur": 8.517
      },
      {
       "type": "teach",
@@ -451,8 +461,8 @@
        -0.7,
        0.0
       ],
-      "delay": 5.396,
-      "dur": 9.368,
+      "delay": 5.12,
+      "dur": 9.644,
       "spin": 0,
       "opts": {
        "hot": true
@@ -466,8 +476,8 @@
        -0.5,
        0.0
       ],
-      "delay": 17.133,
-      "dur": 8.122,
+      "delay": 16.184,
+      "dur": 8.517,
       "spin": 0,
       "opts": {
        "hot": false
@@ -481,7 +491,7 @@
        -1.1,
        3.55
       ],
-      "delay": 25.255,
+      "delay": 24.701,
       "dur": 28.212,
       "spin": 0,
       "opts": {
@@ -496,8 +506,8 @@
        -1.1,
        3.55
       ],
-      "delay": 25.587,
-      "dur": 27.88,
+      "delay": 24.841,
+      "dur": 28.072,
       "spin": 0,
       "opts": {
        "s": 1.1
@@ -534,7 +544,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 15.596
+      "delay": 15.403
      },
      {
       "type": "teach",
@@ -590,8 +600,8 @@
        -0.7,
        0.0
       ],
-      "delay": 4.697,
-      "dur": 9.456,
+      "delay": 4.355,
+      "dur": 9.798,
       "spin": 0,
       "opts": {
        "hot": true
@@ -605,8 +615,8 @@
        -0.5,
        0.0
       ],
-      "delay": 15.596,
-      "dur": 32.436,
+      "delay": 15.403,
+      "dur": 32.629,
       "spin": 0,
       "opts": {}
      }
@@ -641,7 +651,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 11.522
+      "delay": 11.421
      },
      {
       "type": "teach",
@@ -697,8 +707,8 @@
        -0.5,
        0.0
       ],
-      "delay": 14.187,
-      "dur": 29.594,
+      "delay": 14.539,
+      "dur": 29.243,
       "spin": 0,
       "opts": {
        "nocross": 1,
@@ -751,7 +761,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 15.102
+      "delay": 14.961
      },
      {
       "type": "teach",
@@ -807,8 +817,8 @@
        -0.7,
        0.0
       ],
-      "delay": 4.483,
-      "dur": 8.968,
+      "delay": 4.093,
+      "dur": 9.358,
       "spin": 0,
       "opts": {
        "hot": true
@@ -822,8 +832,8 @@
        -0.2,
        0.0
       ],
-      "delay": 19.141,
-      "dur": 26.963,
+      "delay": 19.363,
+      "dur": 26.74,
       "spin": 0,
       "opts": {}
      },
@@ -835,8 +845,8 @@
        -1.4,
        1.7
       ],
-      "delay": 19.951,
-      "dur": 26.153,
+      "delay": 19.963,
+      "dur": 26.14,
       "spin": 0,
       "opts": {
        "s": 1.1,

@@ -55,6 +55,14 @@ def review(fname):
     if len(caps) > 1: fails.append(f"more than one ALL-CAPS word in the title: {caps}")
     for b in BANNED:
         if re.search(r"\b" + re.escape(b) + r"\b", low): fails.append(f"banned word in title/description: {b}")
+    # WORD SYNC (Noelson Nov 14: "all words in sync"): v2 lessons carry the forced-alignment result
+    if os.path.exists(os.path.join(HERE, "songs", os.path.splitext(os.path.basename(fname))[0] + ".json")):
+        _sy = json.load(open(os.path.join(HERE, "songs", os.path.splitext(os.path.basename(fname))[0] + ".json")))
+        if _sy.get("lesson_version") == 2:
+            sy = _sy.get("sync") or {}
+            if not sy: fails.append("lesson has no word-sync record: rebuild it with teach.py (wordsync)")
+            elif sy.get("aligned", 0) < sy.get("words", 1): fails.append(f"word sync: only {sy.get('aligned')}/{sy.get('words')} words were placed from the audio")
+            if sy.get("suspect_words"): fails.append(f"the voice may have mispronounced: {sy['suspect_words'][:3]}")
     # PACKAGING (yt-package; Noelson Nov 14: "personalized thumbnails are being applied to all videos upon posting")
     th = entry.get("thumb"); tpath = os.path.join(REPO, th) if th else None
     if not tpath or not os.path.exists(tpath): fails.append("no custom thumbnail file for this video (plan 'thumb'): make one before uploading (finish.py / lesson_shorts.py / short_thumb.py)")

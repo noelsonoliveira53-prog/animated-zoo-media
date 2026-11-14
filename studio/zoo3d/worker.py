@@ -6,7 +6,7 @@ Loop: for every jobs\\<id>.json without out\\<id>\\DONE ->
   2) assemble out\\<id>\\<id>_raw.mp4 with ffmpeg + jobs\\<id>_song.wav
 Writes worker.log (everything) and status.txt (one line: what it's doing now).
 """
-import os, sys, time, glob, subprocess, datetime, traceback, shutil
+import re, os, sys, time, glob, subprocess, datetime, traceback, shutil
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 JOBS, OUT = os.path.join(ROOT, "jobs"), os.path.join(ROOT, "out")
@@ -204,8 +204,31 @@ def assemble(jid, ff):
         log(f"{jid}: ffmpeg failed: {p.stderr[-800:]}"); return False
     open(os.path.join(OUT, jid, "DONE"), "w").write(datetime.datetime.now().isoformat())
     log(f"{jid}: DONE -> {mp4} ({os.path.getsize(mp4) // 1048576} MB)")
+    split_big(jid, ff)
     clean_frames(jid)
     return True
+
+def split_big(jid, ff):
+    """The cloud session can fetch at most 400 MB per file, and a 4K lesson raw is ~500 MB. So a raw over 380 MB also gets
+    lossless pieces next to it (<id>_raw.part00.mp4, part01 ... stream copy, cut on keyframes); the session joins them again."""
+    mp4 = os.path.join(OUT, jid, jid + "_raw.mp4")
+    try:
+        if not ff or not os.path.exists(mp4) or os.path.getsize(mp4) < 380 * 1048576: return
+        if glob.glob(os.path.join(OUT, jid, jid + "_raw.part*.mp4")): return
+        pr = subprocess.run([ff, "-i", mp4], capture_output=True, text=True)
+        m = re.search(r"Duration: (\d+):(\d+):([\d.]+)", pr.stderr)
+        if not m: log(f"{jid}: could not read the raw's duration, not split"); return
+        dur = int(m.group(1)) * 3600 + int(m.group(2)) * 60 + float(m.group(3))
+        n = os.path.getsize(mp4) // (230 * 1048576) + 1
+        p = subprocess.run([ff, "-y", "-loglevel", "error", "-i", mp4, "-c", "copy", "-map", "0", "-f", "segment", "-segment_time", f"{dur / n:.2f}",
+                            "-reset_timestamps", "1", os.path.join(OUT, jid, jid + "_raw.part%02d.mp4")], capture_output=True, text=True)
+        parts = sorted(glob.glob(os.path.join(OUT, jid, jid + "_raw.part*.mp4")))
+        if p.returncode == 0 and parts:
+            open(os.path.join(OUT, jid, "PARTS"), "w").write("\n".join(os.path.basename(x) for x in parts))
+            log(f"{jid}: raw is {os.path.getsize(mp4) // 1048576} MB, also written as {len(parts)} pieces")
+        else: log(f"{jid}: splitting the raw failed: {p.stderr[-400:]}")
+    except Exception:
+        log(f"{jid}: split_big crashed: {traceback.format_exc()[-600:]}")
 
 def clean_frames(jid):
     """The raw MP4 holds everything we need; the PNG frames (~10 GB per episode) are deleted to keep the disk free."""
@@ -221,6 +244,7 @@ def main():
     fails = {}
     for dd in glob.glob(os.path.join(OUT, "*", "DONE")):   # free space from older finished jobs
         clean_frames(os.path.basename(os.path.dirname(dd)))
+        split_big(os.path.basename(os.path.dirname(dd)), ff)   # and make big finished raws fetchable
     while True:
         busy = False
         for sp in sorted(glob.glob(os.path.join(JOBS, "*.song.json"))):

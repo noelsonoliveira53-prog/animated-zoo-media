@@ -5,8 +5,18 @@
  "desc_header": "IN THIS LESSON",
  "lyrics": "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).\nHorses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).\nElephants cannot jump; they keep at least one foot on the ground even when moving fast, and they are strong swimmers (Smithsonian Magazine, 'Ask Smithsonian').\nA giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo).",
  "script": "Hello, friends! I am Milo the bluebird.\nToday we are playing Yes or No!\nI will ask a question about an animal friend.\nIf you think yes, give a thumbs up. If you think no, shake your head.\nLet's practice. Yes or no. Am I a bluebird?\nYes! I am Milo the bluebird! Good job.\nAre you ready? Let's play!\nHere is the polar bear. Look at that white, fluffy fur.\nYes or no. Is a polar bear's skin white?\nNo! Here is the fun fact. Under the fur, a polar bear's skin is black!\nLook closer. Black skin, hiding under all that fur.\nAnd the fur is not really white. Each hair is clear, like glass!\nThe black skin soaks up the warm sunshine. It helps the polar bear stay cozy in the cold.\nSay it with me. Polar bear skin is black!\nCan you shiver like you are in the snow? Brrr, brrr, brrr!\nBrilliant!\nHere is the horse. Clip, clop!\nYes or no. Can a horse sleep standing up?\nYes! Here is the fun fact. A horse can sleep standing up!\nIts legs lock in place, so it does not fall over.\nFor a big, deep sleep, the horse lies down on the soft ground.\nA horse does not sleep all night like you. It takes lots of tiny naps!\nStanding up, the horse is always ready to trot away with its friends.\nSay it with me. Horses can sleep standing up!\nCan you stand very still and close your eyes? Shh. One, two, three.\nWake up! Good job!\nHere is the elephant. So big and strong!\nYes or no. Can an elephant jump?\nNo! Here is the fun fact. Elephants cannot jump!\nAn elephant is too big and heavy. It always keeps a foot on the ground.\nA frog can jump. A bunny can jump. And you can jump. But an elephant? No!\nBut elephants can walk fast, and they are great swimmers!\nSay it with me. Elephants cannot jump!\nCan you jump? Elephants can't, but you can! Jump, jump, jump!\nWhat great jumping!\nHere is the giraffe. Look at that long, long neck!\nYes or no. Does a giraffe have the same number of neck bones as you?\nYes! Here is the fun fact. A giraffe has seven neck bones. And so do you!\nThe giraffe's neck bones are just much, much bigger. Each one is as long as a ruler!\nLet's count them. One, two, three, four, five, six, seven!\nA tiny mouse has seven neck bones too. Almost every furry animal has seven!\nSay it with me. Seven neck bones, just like me!\nCan you touch your neck? Gently now. Nod your head. Yes, yes, yes!\nSuper nodding!\nWow! What a great game. Let's play one more time, super fast!\nGet ready!\nIs a polar bear's skin white?\nNo! It is black!\nCan a horse sleep standing up?\nYes! It can!\nCan an elephant jump?\nNo! Elephants cannot jump!\nDoes a giraffe have seven neck bones, like you?\nYes! Seven, just like you!\nYou learned four new things today.\nShiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!\nWhich answer surprised you the most?\nOne last question. Yes or no. Did you have fun today?\nYes! Me too!\nThank you for playing with me. Bye-bye, friends! See you next time!",
- "duration": 277.92,
+ "duration": 275.1,
  "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 567,
+  "words": 567,
+  "pause_onsets_checked": 48,
+  "onset_err_mean_ms": 25.6,
+  "onset_err_max_ms": 70.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
  "meta": {
   "title": "Yes or No? Animal Quiz for Kids with Milo",
   "card": "Yes or No?",
@@ -46,8 +56,8 @@
    "to": 5,
    "thumb_text": "TINY NAPS!",
    "seg": "horse",
-   "start": 74.08,
-   "end": 96.351,
+   "start": 71.63,
+   "end": 93.901,
    "seconds": 22.3
   },
   {
@@ -58,8 +68,8 @@
    "to": 5,
    "thumb_text": "TOO HEAVY!",
    "seg": "elephant",
-   "start": 121.326,
-   "end": 145.907,
+   "start": 118.51,
+   "end": 143.09,
    "seconds": 24.6
   },
   {
@@ -70,8 +80,8 @@
    "to": 5,
    "thumb_text": "COUNT ALONG!",
    "seg": "giraffe",
-   "start": 163.491,
-   "end": 191.969,
+   "start": 160.675,
+   "end": 189.153,
    "seconds": 28.5
   }
  ],
@@ -217,7 +227,7 @@
    "energy": 0.6,
    "wave": 1
   },
-  "thumb_frame": 4592,
+  "thumb_frame": 4525,
   "direct": [
    {
     "section": "hello",
@@ -251,8 +261,8 @@
        -1.9,
        3.7
       ],
-      "delay": 10.659,
-      "dur": 16.706,
+      "delay": 10.398,
+      "dur": 16.967,
       "spin": 0,
       "opts": {
        "text": "YES",
@@ -267,8 +277,8 @@
        -1.9,
        3.7
       ],
-      "delay": 12.707,
-      "dur": 14.658,
+      "delay": 12.658,
+      "dur": 14.707,
       "spin": 0,
       "opts": {
        "text": "NO",
@@ -305,7 +315,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 14.98
+      "delay": 14.902
      },
      {
       "type": "teach",
@@ -362,7 +372,7 @@
        2.3
       ],
       "delay": 16.24,
-      "dur": 29.875,
+      "dur": 27.425,
       "spin": 0,
       "opts": {
        "fill": "#17171c",
@@ -402,7 +412,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 11.908
+      "delay": 11.986
      },
      {
       "type": "teach",
@@ -458,8 +468,8 @@
        -1.0,
        1.7
       ],
-      "delay": 11.908,
-      "dur": 35.038,
+      "delay": 11.986,
+      "dur": 34.594,
       "spin": 0,
       "opts": {
        "s": 1.2,
@@ -496,7 +506,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 11.972
+      "delay": 12.028
      },
      {
       "type": "teach",
@@ -569,8 +579,8 @@
        -1.2,
        1.6
       ],
-      "delay": 15.293,
-      "dur": 3.554,
+      "delay": 15.266,
+      "dur": 3.581,
       "spin": 0,
       "opts": {
        "s": 1.3
@@ -606,7 +616,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 15.087
+      "delay": 15.065
      },
      {
       "type": "teach",
@@ -668,13 +678,13 @@
       "opts": {
        "n": 7,
        "times": [
-        7.108,
-        7.411,
-        7.714,
-        8.152,
-        8.522,
-        8.892,
-        9.195
+        7.231,
+        7.471,
+        7.741,
+        8.011,
+        8.301,
+        8.691,
+        9.061
        ]
       }
      }

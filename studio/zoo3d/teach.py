@@ -23,6 +23,7 @@ import numpy as np, soundfile as sf
 HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE); sys.path.insert(0, os.path.join(HERE, "..", "sing"))
 import sing
 import lesson as LS
+import wordsync as WS
 
 SR, FPS, BPM = LS.SR, LS.FPS, LS.BPM
 GAP, SEG_GAP, LEAD = 0.75, 1.3, 0.5
@@ -51,6 +52,7 @@ def build(spec):
             seg["lines"] = ls
     # ---- voice + timing
     t = LEAD; sections, lines, words, clips = [], [], [], []
+    SYNC = {"aligned": 0, "words": 0, "onset_err": [], "unaligned_lines": []}
     for seg in spec["segments"]:
         sec = {"name": seg["name"], "start": t if sections else 0.0, "who": "host"}
         seg["_lt"] = []; seg["_words"] = []
@@ -58,12 +60,18 @@ def build(spec):
             if isinstance(ln, str): ln = {"t": ln}
             elif isinstance(ln, list): ln = {"t": ln[0], "shot": ln[1] if len(ln) > 1 else None}
             text = ln["t"]
-            a = sing.say(text, voice, speed); d = len(a) / SR
+            said = WS.spoken(text)                       # the voice gets a sayable spelling ("Brrr" -> "Burr"); the caption keeps the text
+            a = sing.say(said, voice, speed); d = len(a) / SR
             clips.append((t, a)); lines.append({"text": text, "start": round(t, 3), "end": round(t + d, 3), "who": "host", "kind": "say", "section": seg["name"]})
-            toks = text.split(); tot = sum(len(_norm(w)) + 1.5 for w in toks); c = t; lw = []
-            for w in toks:
-                wd = d * (len(_norm(w)) + 1.5) / tot
-                words.append({"w": w, "start": round(c, 3), "end": round(c + wd, 3), "who": "host"}); lw.append((_norm(w), c)); c += wd
+            # every word is placed from the sound itself (forced alignment), not estimated: captions, counting props and
+            # answer signs all hang on these times ("all words in sync", Noelson Nov 14)
+            toks = text.split(); al, got, nw = WS.align(a, said); lw = []
+            SYNC["aligned"] += got; SYNC["words"] += nw; SYNC["onset_err"] += WS.onset_errors(a, al)
+            if got < nw: SYNC["unaligned_lines"].append(text)
+            for w_, (ws_, we_) in zip(toks, al):         # a word that takes far too long was probably mispronounced by the voice
+                if we_ - ws_ > max(0.95, 0.2 * len(_norm(w_))): SYNC.setdefault("suspect", []).append(f"{w_} ({we_ - ws_:.1f} s) in: {text}")
+            for w, (ws, we) in zip(toks, al):
+                words.append({"w": w, "start": round(t + ws, 3), "end": round(t + we, 3), "who": "host"}); lw.append((_norm(w), t + ws))
             seg["_lt"].append((t, t + d, ln)); seg["_words"].append(lw)
             pause = ln.get("pause")
             if pause is None: pause = DO if text.lower().startswith("can you") else (THINK if text.rstrip().endswith("?") else 0)
@@ -198,11 +206,19 @@ def build(spec):
     json.dump(job, open(os.path.join(HERE, "jobs", f"{sid}.json"), "w"), indent=1)
     song = {"kind": "lesson", "format": "3d_lesson", "lesson_version": 2, "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
             "script": "\n".join(l["text"] for l in lines), "duration": dur, "bpm": BPM,
+            "sync": {"method": "forced alignment of every line (PocketSphinx)", "aligned": SYNC["aligned"], "words": SYNC["words"],
+                     "pause_onsets_checked": len(SYNC["onset_err"]), "onset_err_mean_ms": round(1000 * float(np.mean(SYNC["onset_err"] or [0])), 1),
+                     "onset_err_max_ms": round(1000 * float(max(SYNC["onset_err"] or [0])), 1), "unaligned_lines": SYNC["unaligned_lines"],
+                     "suspect_words": SYNC.get("suspect", [])},
             "meta": {"title": spec["title"], "card": spec.get("card", spec["title"]), "thumb_text": spec.get("thumb_text", ""),
                      "description": spec["description"].rstrip() + "\n\n" + LS.BOILER, "tags": spec.get("tags", [])}, "shorts": shorts, "job": job}
     json.dump(song, open(os.path.join(HERE, "songs", f"{sid}.json"), "w"), indent=1)
     print(f"OK {sid}: {dur:.0f} s ({int(dur // 60)}:{int(dur % 60):02d}), {wc} words, {len(lines)} lines, {len(locs)} visits, "
           f"{sum(len(x['props']) for x in direct)} teaching props, {len(shorts)} shorts")
+    print(f"   sync: {SYNC['aligned']}/{SYNC['words']} words aligned from the audio; at {len(SYNC['onset_err'])} pauses the next word starts "
+          f"{1000 * float(np.mean(SYNC['onset_err'] or [0])):.0f} ms (mean) / {1000 * float(max(SYNC['onset_err'] or [0])):.0f} ms (max) from the measured sound onset"
+          + (f"; NOT aligned: {SYNC['unaligned_lines']}" if SYNC['unaligned_lines'] else "")
+          + (f"; CHECK PRONUNCIATION: {SYNC['suspect']}" if SYNC.get('suspect') else ""))
     return job
 
 

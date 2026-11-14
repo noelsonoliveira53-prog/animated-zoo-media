@@ -39,7 +39,23 @@ written, rendered, titled and uploaded.
      a magnifier, tiny pink newborn panda next to a stick of butter ...), calm cast (no dancing), a quiz with check marks.
      Formats: guessing game, champions, look-and-find, yes-or-no, this-or-that (specs: `make_lessons_p2.py`, ids zool_epNN).
      `lesson.py` (v1, narration over dancing characters) is retired for new lessons.
-   - NOT LIVE YET. Prototypes zool_ep03..07 and their Shorts (shorts3d/zs4k_*.mp4, from `lesson_shorts.py`, 2160x3840) are
+   - CONFIRMED as the plan (Noelson, Nov 14 3:28 PM: "Keep that as the new plan"). He also asked: use the
+     youtube-network-channels skill (channel bible + rulebook) on every new video; "ensure graphics are improved and enriched
+     with details and all words in sync"; and "don't make assumptions, say only what is delivered".
+     * REPORTING RULE: in every message to Noelson state only what exists and was checked (file made, render finished and
+       probed, upload confirmed in Studio). No estimates presented as facts, no "should be", no promises about results.
+     * WORD SYNC: teach.py places every word by forced alignment of each spoken line (`wordsync.py`, PocketSphinx, in setup.sh).
+       Captions, counting props, answer signs and Shorts captions all use those times. songs/<id>.json "sync" records
+       aligned/words; review.py FAILS a v2 lesson under 100% aligned or with "suspect_words" (a word the voice mispronounced:
+       Kokoro read "Shh." as S-H-H and "Brrr" as B-R-R-R; wordsync.SAY maps such spellings to sayable ones, captions keep the text).
+     * GRAPHICS: every new lesson must add or enrich on-screen detail (teachprops.py `_detail` pass: shutters, flower boxes,
+       confetti on a right answer, sparkles, bubbles, smoke ...) and say what changed in the spec's "improves".
+       Check new props with `python3 bpyrun.py prop_gallery.py -- out.png` before a lesson uses them.
+     * 4K lesson raws are ~500 MB and the session can fetch 400 MB per file: the worker (split_big, needs the worker restarted
+       once) also writes <id>_raw.partNN.mp4 pieces; join them with ffmpeg concat (-c copy) before finish.py.
+   - NOT LIVE YET (videos): the plan is confirmed, but each new-format video still needs his look before it is scheduled
+     (his rule: he sees a full episode before anything in a new format posts). Prototypes are the "b" renders zool_ep03b..07b
+     (word-synced, enriched). Prototypes zool_ep03..07 and their Shorts (shorts3d/zs4k_*.mp4, from `lesson_shorts.py`, 2160x3840) are
      "hold_review": NEVER upload a hold_review item. Noelson approves the format first; then this file gets the daily slots.
      Until then keep everything that is already scheduled and keep the schedule filled from the existing plan
      ("keep current videos ... keep the posting schedule; the new ones need to be approved by me first").

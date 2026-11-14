@@ -1,7 +1,7 @@
 #!/bin/bash
 # Fresh-container setup for the 3D sing-along pipeline (song engine + finishing + optional bpy previews).
 set -e
-pip install --break-system-packages -q pyworld soundfile kokoro-onnx fonttools brotli numpy 2>/dev/null || true
+pip install --break-system-packages -q pyworld soundfile kokoro-onnx fonttools brotli numpy pocketsphinx 2>/dev/null || true
 D=/root/.cache/hyperframes/tts
 if [ ! -f $D/models/kokoro-v1.0.onnx ]; then
   if command -v hyperframes >/dev/null; then hyperframes tts "hello" -o /tmp/_warm.wav >/dev/null 2>&1 || true; fi

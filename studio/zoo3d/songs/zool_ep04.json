@@ -5,8 +5,18 @@
  "desc_header": "IN THIS LESSON",
  "lyrics": "The giraffe is the tallest living land animal, up to about 18 feet (5.5 m) (Bristol Zoo; San Diego Zoo).\nThe African elephant is the largest living land animal; a big male weighs about 6 tons, about as much as four cars (Smithsonian's National Zoo; WWF).\nThe tiger is the largest cat species, belongs to the same family as pet cats, and is a strong swimmer (WWF; Live Science).\nA lion's roar can be heard up to 5 miles (8 km) away; lions roar to mark their territory (National Geographic).",
  "script": "Hello, friends! I am Milo the bluebird.\nToday is Animal Champions day!\nWe will find the tallest, the biggest, and the loudest animals.\nFour champions are here. Count them with me. One, two, three, four!\nAre you ready to meet the champions? Let's go!\nWho is the tallest animal in the whole world?\nIs it the elephant? Or is it the giraffe?\nIt is the giraffe!\nHere is the fun fact. The giraffe is the tallest animal on land.\nHow tall? Look! A giraffe can peek into an upstairs window.\nIts long neck helps it reach the leaves at the very top of the tree.\nEven a baby giraffe is tall. On the day it is born, it is as tall as a grown-up!\nAnd a giraffe's tongue is long too. As long as your arm!\nSay it with me. The giraffe is the tallest!\nCan you stretch up tall like a giraffe? Reach, reach, reach!\nSo tall!\nWho is the biggest animal that walks on land?\nIs it the elephant? Or is it the hippo?\nIt is the elephant!\nHere is the fun fact. The elephant is the biggest animal on land.\nHow heavy is an elephant? As heavy as four cars! Count them with me.\nOne, two, three, four!\nBig body, big ears, and a big, long trunk!\nThe trunk works like a hand and like a hose. It can pick up a tiny peanut, or spray a big shower!\nEven a baby elephant is heavy. It weighs as much as a big grown-up on the day it is born.\nSay it with me. The elephant is the biggest!\nCan you stomp like a big elephant? Stomp, stomp, stomp!\nWhat big stomps!\nWho is the biggest cat in the whole world?\nIs it the lion? Or is it the tiger?\nIt is the tiger!\nHere is the fun fact. The tiger is the biggest cat of all.\nLook at this little pet cat. The tiger is its giant cousin!\nAnd guess what? Most cats do not like water. But tigers love to swim!\nA tiger has soft, padded paws. So it can walk very, very quietly.\nAnd every tiger has its own stripes, like a name tag.\nSay it with me. The tiger is the biggest cat!\nCan you show me your tiger paws? Paws up! Rawr!\nWhat a great tiger!\nWho has the loudest roar of all the big cats?\nIs it the lion? Or is it the tiger?\nIt is the lion!\nHere is the fun fact. You can hear a lion's roar from five miles away!\nFive miles is a long, long way. Like the other side of town!\nWhy does a lion roar? To tell everyone, this is my home!\nA lion's roar is almost as loud as thunder. Boom!\nLions live in a family called a pride. The roar helps the family find each other.\nSay it with me. The lion has the loudest roar!\nCan you roar like a lion? One, two, three. Roar!\nWhat a mighty roar!\nWow! We met four animal champions. Now it is quiz time!\nGet ready. Think hard!\nWho can peek into an upstairs window?\nThe giraffe! Yes!\nWho is as heavy as four cars?\nThe elephant! That's right!\nWho is the giant cousin of a pet cat?\nThe tiger! Good job!\nWhose roar can you hear from five miles away?\nThe lion! You remembered!\nYou learned four new things today.\nStretch like a giraffe. Stomp like an elephant. Paws up like a tiger. And roar like a lion!\nWhich champion is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
- "duration": 281.72,
+ "duration": 281.64,
  "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 609,
+  "words": 609,
+  "pause_onsets_checked": 41,
+  "onset_err_mean_ms": 27.8,
+  "onset_err_max_ms": 50.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
  "meta": {
   "title": "Animal Champions for Kids! Tallest, Biggest, Loudest",
   "card": "Animal Champions!",
@@ -70,8 +80,8 @@
    "to": 6,
    "thumb_text": "SO LOUD!",
    "seg": "lion",
-   "start": 173.793,
-   "end": 200.247,
+   "start": 173.711,
+   "end": 200.164,
    "seconds": 26.5
   }
  ],
@@ -319,16 +329,16 @@
        -1.7,
        3.55
       ],
-      "delay": 13.748,
-      "dur": 5.919,
+      "delay": 13.707,
+      "dur": 5.96,
       "spin": 0,
       "opts": {
        "n": 4,
        "times": [
         0.0,
-        0.282,
-        0.563,
-        -2.941
+        0.24,
+        0.54,
+        -2.89
        ]
       }
      }
@@ -364,7 +374,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 10.835
+      "delay": 10.579
      },
      {
       "type": "teach",
@@ -420,8 +430,8 @@
        -0.2,
        0.0
       ],
-      "delay": 14.955,
-      "dur": 34.988,
+      "delay": 14.935,
+      "dur": 35.008,
       "spin": 0,
       "opts": {
        "mark": 3.75
@@ -435,8 +445,8 @@
        -0.2,
        0.0
       ],
-      "delay": 17.956,
-      "dur": 31.987,
+      "delay": 18.187,
+      "dur": 31.756,
       "spin": 0,
       "opts": {
        "h": 3.3
@@ -475,7 +485,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 10.887
+      "delay": 10.703
      },
      {
       "type": "teach",
@@ -531,16 +541,16 @@
        -0.7,
        0.0
       ],
-      "delay": 20.237,
-      "dur": 34.96,
+      "delay": 20.037,
+      "dur": 35.16,
       "spin": 0,
       "opts": {
        "n": 4,
        "times": [
-        2.318,
-        2.599,
-        2.88,
-        3.286
+        2.518,
+        2.808,
+        3.038,
+        3.288
        ]
       }
      }
@@ -576,7 +586,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 10.411
+      "delay": 10.219
      },
      {
       "type": "teach",
@@ -632,8 +642,8 @@
        -0.7,
        1.35
       ],
-      "delay": 17.364,
-      "dur": 3.234,
+      "delay": 16.866,
+      "dur": 3.732,
       "spin": 0,
       "opts": {}
      },
@@ -645,8 +655,8 @@
        -1.0,
        0.0
       ],
-      "delay": 23.017,
-      "dur": 24.769,
+      "delay": 22.608,
+      "dur": 25.096,
       "spin": 0,
       "opts": {
        "s": 0.55
@@ -684,7 +694,7 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 10.667
+      "delay": 10.406
      },
      {
       "type": "teach",
@@ -740,8 +750,8 @@
        -1.0,
        2.05
       ],
-      "delay": 14.7,
-      "dur": 7.625,
+      "delay": 14.727,
+      "dur": 7.598,
       "spin": 0,
       "opts": {
        "reach": 2.5
@@ -755,8 +765,8 @@
        -0.7,
        0.0
       ],
-      "delay": 15.387,
-      "dur": 33.918,
+      "delay": 15.247,
+      "dur": 34.058,
       "spin": 0,
       "opts": {
        "text": "5 MILES"

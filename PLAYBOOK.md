@@ -287,3 +287,22 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   Never navigate away before the toast: the change is silently dropped.
 - Shorts thumbnails: `studio/zoo3d/short_thumb.py` (existing cuts) and `lesson_shorts.py` (lesson Shorts) write 1080x1920 PNGs with
   their own 3 words; text sits at the top of the picture area so YouTube's 3:2 crop keeps it.
+
+### Nov 14 (3:30-3:55 PM): plan confirmed, word sync, enriched props, raw size limit
+- Noelson 3:28 PM: "Keep that as the new plan" + use the youtube-network-channels skill on every new video + "graphics improved
+  and enriched with details and all words in sync" + "don't make assumptions, say only what is delivered" (DAILY_RUN rule 5).
+- Word sync: `studio/zoo3d/wordsync.py` force-aligns every spoken line (PocketSphinx, pip, no network). All 5 prototype lessons:
+  605/605, 609/609, 540/540, 567/567, 568/568 words aligned; at pauses the next word starts 23-34 ms (mean) from the measured sound
+  onset. Before this, word times were estimated from word length (the counting props could be ~0.4 s off).
+- The check also caught two mispronunciations: the Kokoro voice spelled out "Shh." (S-H-H) and "Brrr" (B-R-R-R). wordsync.SAY now
+  gives the voice "Shush" / "Burr" while captions keep the written word. teach.py prints CHECK PRONUNCIATION for any word that
+  takes far too long.
+- teachprops.py got a detail pass (`_detail`): confetti burst on the right answer, sparkles around the mystery box and check marks,
+  house with shutters/flower box/chimney smoke/bushes/path, numbered ruler, cars with lamps/bumpers/hubcaps, smiling sun, pool with
+  stones/lily pads/reeds, mud with bubbles and grass, den with stone arch, town with road and trees, fork and spoon by the plate.
+  `prop_gallery.py` renders all props on one sheet for a quick check.
+- zool_ep03 rendered (285 s, 4K) but its raw is 515 MB: over the 400 MB per-file fetch limit. worker.py now has split_big
+  (pieces of ~230 MB, lossless); it needs START_RENDER_WORKER.bat restarted once (asked Noelson 3:36 PM).
+- The first renders (zool_ep03 done, zool_ep04..07 queued) were made before word sync and the detail pass: zool_ep04..07 cancelled
+  (DONE markers / STOP), replaced by zool_ep03b..07b (same lessons, song id zool_epNN, new timing + audio + props) queued 3:49 PM.
+  A stopped job keeps being retried by the worker until it has a DONE marker: write DONE, not only STOP.

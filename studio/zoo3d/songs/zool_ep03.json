@@ -7,6 +7,16 @@
  "script": "Hello, friends! I am Milo the bluebird.\nToday we are going to play a guessing game!\nFour animal friends are hiding.\nI will give you three clues. Then you guess who it is.\nPut on your thinking cap. Are you ready? Let's play!\nGuess who! Here are three clues.\nClue one. This friend looks like a horse.\nClue two. This friend has black and white stripes.\nClue three. This friend lives on the sunny, grassy savanna. Who is it?\nIt is the zebra! Great guessing!\nNow, here is the fun fact. A zebra's stripes help keep the pesky flies away!\nLook. The flies land on the plain brown horse.\nBut on the stripy zebra? The stripes mix the flies up. They cannot land!\nSay it with me. Stripes keep the flies away!\nCan you gallop like a zebra? Clip, clop, clip, clop!\nWhat a great gallop!\nGuess who! Here are three clues.\nClue one. This friend is pink, with a curly tail.\nClue two. This friend lives on the farm.\nClue three. This friend says oink, oink! Who is it?\nIt is the pig! You got it!\nWhat does a pig do on a hot, sunny day? Here is the fun fact.\nPigs roll in the mud to keep cool!\nWhen you are hot, you sweat. But a pig cannot sweat much.\nSo the pig rolls in cool, squishy mud. The mud even stops sunburn, like sunscreen!\nSay it with me. Pigs roll in mud to keep cool!\nCan you roll your arms like a pig in the mud? Roll, roll, roll!\nSuper rolling!\nGuess who! Here are three clues.\nClue one. This friend is gray and fluffy, with a big black nose.\nClue two. This friend loves to hug a tree.\nClue three. This friend munches on green leaves. Who is it?\nIt is the koala! Well done!\nNow, a tricky question. Is a koala a bear?\nNo! Here is the fun fact. A koala is not a bear!\nLook. This is a bear. A bear has no pouch.\nBut a mama koala has a pouch on her tummy, like a cozy pocket. Her baby rides inside!\nA baby koala is called a joey.\nSay it with me. A koala is not a bear!\nCan you hug yourself, like a koala hugs a tree? Squeeze!\nWhat a lovely hug!\nGuess who! Here are three clues.\nClue one. This friend is very big and very fluffy.\nClue two. This friend lives where it is icy and cold.\nClue three. This friend looks as white as snow. Who is it?\nIt is the polar bear! Hooray!\nCan a polar bear swim?\nYes! Here is the fun fact. Polar bears are super swimmers!\nLook at those big front paws. They work like paddles in the water.\nEach paw is as big as a dinner plate!\nSay it with me. Polar bears are super swimmers!\nCan you paddle your paws like a polar bear? Paddle, paddle, paddle!\nSplendid swimming!\nWow! You guessed all four friends. Now it is quiz time!\nGet ready. Think hard!\nWhose stripes keep the flies away?\nThe zebra! Yes!\nWho rolls in the mud to keep cool?\nThe pig! That's right!\nWho is not a bear, and rides in a pouch as a baby?\nThe koala! Good job!\nWhose paws are as big as dinner plates?\nThe polar bear! You remembered!\nYou learned four new things today.\nGallop like a zebra. Roll like a pig. Hug like a koala. And paddle like a polar bear!\nWhich friend was the hardest to guess?\nThank you for playing with me. Bye-bye, friends! See you next time!",
  "duration": 285.05,
  "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 605,
+  "words": 605,
+  "pause_onsets_checked": 47,
+  "onset_err_mean_ms": 31.3,
+  "onset_err_max_ms": 90.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
  "meta": {
   "title": "Who Am I? Animal Guessing Game for Kids with Milo",
   "card": "Who Am I?",
@@ -419,8 +429,8 @@
        0.2,
        0
       ],
-      "delay": 7.617,
-      "dur": 9.781,
+      "delay": 7.648,
+      "dur": 9.75,
       "spin": 0,
       "opts": {
        "color": "#e85d8a"
@@ -434,8 +444,8 @@
        -1.6,
        3.5
       ],
-      "delay": 10.446,
-      "dur": 6.952,
+      "delay": 10.157,
+      "dur": 7.241,
       "spin": 0,
       "opts": {
        "n": 3,
@@ -474,8 +484,8 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 18.345,
-      "dur": 8.033000000000001
+      "delay": 18.016,
+      "dur": 8.362000000000002
      },
      {
       "type": "teach",
@@ -562,8 +572,8 @@
        -1.2,
        2.4
       ],
-      "delay": 26.87,
-      "dur": 21.034,
+      "delay": 26.868,
+      "dur": 21.036,
       "spin": 0,
       "opts": {
        "n": 5
@@ -582,7 +592,7 @@
       "spin": 0,
       "opts": {
        "n": 4,
-       "leave": 2.294
+       "leave": 2.12
       }
      }
     ]
@@ -618,8 +628,8 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 17.046,
-      "dur": 6.4190000000000005
+      "delay": 16.806,
+      "dur": 6.658999999999999
      },
      {
       "type": "teach",
@@ -706,8 +716,8 @@
        -1.1,
        3.75
       ],
-      "delay": 20.422,
-      "dur": 29.279,
+      "delay": 19.775,
+      "dur": 29.926,
       "spin": 0,
       "opts": {
        "s": 1.25
@@ -721,8 +731,8 @@
        -0.5,
        0.0
       ],
-      "delay": 24.308,
-      "dur": 25.393,
+      "delay": 24.195,
+      "dur": 25.506,
       "spin": 0,
       "opts": {}
      }
@@ -760,8 +770,8 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 19.34,
-      "dur": 2.0770000000000017
+      "delay": 19.024,
+      "dur": 2.3930000000000007
      },
      {
       "type": "teach",
@@ -907,8 +917,8 @@
        -1.4,
        3.35
       ],
-      "delay": 34.665,
-      "dur": 1.485,
+      "delay": 34.531,
+      "dur": 1.619,
       "spin": 0,
       "opts": {
        "s": 0.9
@@ -922,8 +932,8 @@
        -1.0,
        2.5
       ],
-      "delay": 41.106,
-      "dur": 17.464,
+      "delay": 40.821,
+      "dur": 17.749,
       "spin": 0,
       "opts": {
        "s": 1.3
@@ -962,8 +972,8 @@
        4.35
       ],
       "size": 0.62,
-      "delay": 18.64,
-      "dur": 2.1119999999999983
+      "delay": 18.335,
+      "dur": 2.416999999999998
      },
      {
       "type": "teach",
@@ -1096,8 +1106,8 @@
        -1.2,
        2.75
       ],
-      "delay": 8.785,
-      "dur": 9.21,
+      "delay": 8.403,
+      "dur": 9.592,
       "spin": 0,
       "opts": {
        "s": 1.2
@@ -1111,8 +1121,8 @@
        -0.5,
        0.0
       ],
-      "delay": 29.291,
-      "dur": 22.304,
+      "delay": 29.296,
+      "dur": 22.299,
       "spin": 0,
       "opts": {}
      },
@@ -1124,8 +1134,8 @@
        -1.3,
        0.0
       ],
-      "delay": 36.573,
-      "dur": 15.022,
+      "delay": 36.571,
+      "dur": 15.024,
       "spin": 0,
       "opts": {}
      }

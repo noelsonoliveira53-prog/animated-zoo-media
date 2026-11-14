@@ -81,6 +81,7 @@ def build(L, name, at, **o):
         L.cube("back", 1, (0, 0.05, 0), (w + 0.18, 0.12, h + 0.18), _m(L, "#ffffff", 0.8, 0.0), root, bevel=0.06)
         L.cube("board", 1, (0, 0, 0), (w, 0.14, h), _m(L, o.get("color", "#1479d6"), 0.85, 0.0, 0.35), root, bevel=0.06)
         _txt(L, text, ts, (0, -0.1, -ts * 0.04), o.get("tcolor", "#ffffff"), root, extrude=0.05, emit=1.1)
+        P["wh"] = (w, h)
         P["check"] = L.empty("ckroot", (w / 2 - 0.12, -0.22, h / 2 - 0.12), root)
         L.cylinder("ckdisc", 0.36, 0.06, (0, 0.04, 0), m=_m(L, "#ffffff", 0.8, 0.0), parent=P["check"], rot=(math.pi / 2, 0, 0), verts=32)
         _check(L, P["check"], (0.02, -0.02, 0.02), 0.72, "#18a03a"); P["check"].scale = (0, 0, 0)
@@ -286,8 +287,229 @@ def build(L, name, at, **o):
         L.cone("tip", 0.44 * s, 0, 0.62 * s, (0, 0, -0.22 * s), (1, 0.62, 1), m, root, rot=(math.pi, 0, 0), verts=32)
     else:
         L.sphere("unknown", 0.4, (0, 0, 0.4), m=_m(L, "#ff00ff"), parent=root)
+    try: _detail(L, name, root, P, o)      # second pass: the small things that make a prop read as a real object
+    except Exception as e: print("teachprops detail skipped for", name, e)
     ANIM[root.name] = (name, dict(o), P)
     return root
+
+
+def _sparkle(L, parent, loc, r=0.1, color="#fff3a0"):
+    e = L.empty("spark", loc, parent); m = _m(L, color, 0.3, 0.5, 1.4)
+    L.cone("s1", r * 0.45, 0, r * 2.2, (0, 0, r * 1.1), m=m, parent=e, verts=4)
+    L.cone("s2", r * 0.45, 0, r * 2.2, (0, 0, -r * 1.1), m=m, parent=e, rot=(math.pi, 0, 0), verts=4)
+    L.cone("s3", r * 0.45, 0, r * 1.6, (r * 0.8, 0, 0), m=m, parent=e, rot=(0, math.pi / 2, 0), verts=4)
+    L.cone("s4", r * 0.45, 0, r * 1.6, (-r * 0.8, 0, 0), m=m, parent=e, rot=(0, -math.pi / 2, 0), verts=4)
+    return e
+
+
+def _tuft(L, parent, loc, s=1.0, color="#4fb35a"):
+    for k, (dx, a) in enumerate(((-0.1, -0.35), (0, 0.0), (0.1, 0.35))):
+        L.cone("blade", 0.05 * s, 0, 0.42 * s, (loc[0] + dx * s, loc[1], loc[2] + 0.2 * s), m=_m(L, color, 0.6, 0.2), parent=parent, rot=(0, a, 0), verts=6)
+
+
+def _window(L, parent, x, y, z, w=0.62, shutter="#3d8fd9"):
+    L.cube("frame", 1, (x, y, z), (w, 0.06, w), _m(L, "#ffffff", 0.5, 0.2), parent, bevel=0.03)
+    L.cube("glass", 1, (x, y - 0.03, z), (w * 0.78, 0.04, w * 0.78), _m(L, "#7fd3ff", 0.05, 1.0, 0.3), parent)
+    L.cube("barv", 1, (x, y - 0.05, z), (0.045, 0.03, w * 0.78), _m(L, "#ffffff", 0.5, 0.2), parent)
+    L.cube("barh", 1, (x, y - 0.05, z), (w * 0.78, 0.03, 0.045), _m(L, "#ffffff", 0.5, 0.2), parent)
+    for sx in (-1, 1):
+        L.cube("shutter", 1, (x + sx * (w * 0.5 + 0.11), y, z), (0.18, 0.05, w), _m(L, shutter, 0.6, 0.2), parent, bevel=0.02)
+    L.cube("sill", 1, (x, y - 0.06, z - w * 0.5 - 0.04), (w + 0.2, 0.14, 0.07), _m(L, "#ffffff", 0.5, 0.2), parent, bevel=0.02)
+
+
+def _detail(L, name, root, P, o):
+    s = o.get("s", 1.0); cols = ["#f0443a", "#ffb627", "#3cc45a", "#3db8ff", "#8e5bd8", "#ff6fb5"]
+    if name == "sign":
+        w, h = P["wh"][0] + 0.18, P["wh"][1] + 0.18
+        for sx in (-1, 1):
+            for sz in (-1, 1):
+                L.sphere("stud", 0.055, (sx * (w / 2 - 0.1), -0.09, sz * (h / 2 - 0.1)), m=_m(L, "#ffd23f", 0.3, 0.6, 0.6), parent=root, segs=12)
+        L.cube("shine", 1, (0, -0.075, h * 0.3), (w * 0.8, 0.01, 0.045), _m(L, "#ffffff", 0.2, 0.6, 0.5, 0.55), root)
+        P["confetti"] = []
+        for k in range(20):                      # bursts when this answer is marked right
+            c = L.cube("conf", 1, (0, -0.25, 0), (0.1, 0.02, 0.07), _m(L, cols[k % 6], 0.4, 0.4, 0.7), root, rot=(0.4 * k, 0.9 * k, 0.3 * k))
+            c.scale = (0, 0, 0); P["confetti"].append(c)
+    elif name == "badge":
+        for k in range(12):
+            a = k * math.tau / 12
+            L.cone("ray", 0.09 * s, 0, 0.2 * s, (math.cos(a) * 0.5 * s, 0.04, math.sin(a) * 0.5 * s), m=_m(L, "#ffffff", 0.4, 0.4), parent=root, rot=(0, math.pi / 2 - a, 0), verts=4)
+    elif name == "qbox":
+        rb = _m(L, "#ff5fa2", 0.35, 0.6)
+        L.cube("ribv", 1, (0, 0, 1.0), (0.3, 1.54, 2.04), rb, root, bevel=0.03)
+        L.cube("ribh", 1, (0, 0, 2.08), (2.1, 0.3, 0.26), rb, root, bevel=0.03)
+        for sx in (-1, 1):
+            L.sphere("bow", 0.3, (sx * 0.3, 0, 2.42), (1.2, 0.55, 0.75), rb, root, 18, rot=(0, sx * 0.5, 0))
+        L.sphere("knot", 0.14, (0, 0, 2.34), m=rb, parent=root, segs=14)
+        for sx in (-0.62, 0.62):
+            _txt(L, "?", 0.42, (sx, -0.79, 1.55 if sx < 0 else 0.5), "#ffd23f", root, extrude=0.04)
+        P["sparks"] = [_sparkle(L, root, (0, 0, 0), 0.11, ("#fff3a0", "#ffd0e6", "#c9ecff")[k % 3]) for k in range(6)]
+    elif name == "dots":
+        L.cube("pill", 1, (0, 0.08, 0), (1.5 * s, 0.08, 0.5 * s), _m(L, "#ffffff", 0.8, 0.0, 0.0, 0.9), root, bevel=0.2 * s)
+    elif name == "check":
+        sc = 1.5 * s
+        L.cylinder("disc", 0.52 * sc, 0.06, (0.0, 0.08, 0.0), m=_m(L, "#ffffff", 0.8, 0.0), parent=root, rot=(math.pi / 2, 0, 0), verts=40)
+        L.torus("ring", 0.52 * sc, 0.05 * sc, (0, 0.06, 0), m=_m(L, "#18a03a", 0.5, 0.2, 0.5), parent=root, rot=(math.pi / 2, 0, 0))
+        P["sparks"] = [_sparkle(L, root, (0, 0, 0), 0.09 * sc) for _ in range(5)]
+    elif name == "cross":
+        sc = 1.3 * s
+        L.cylinder("disc", 0.56 * sc, 0.06, (0.0, 0.08, 0.0), m=_m(L, "#ffffff", 0.8, 0.0), parent=root, rot=(math.pi / 2, 0, 0), verts=40)
+        L.torus("ring", 0.56 * sc, 0.05 * sc, (0, 0.06, 0), m=_m(L, "#f0443a", 0.5, 0.2, 0.5), parent=root, rot=(math.pi / 2, 0, 0))
+    elif name == "count":
+        for e in P["items"]:
+            L.torus("ring", 0.3 * s, 0.035 * s, (0, 0.0, 0), m=_m(L, "#ffffff", 0.4, 0.4), parent=e, rot=(math.pi / 2, 0, 0))
+            L.sphere("hl", 0.06 * s, (-0.12 * s, -0.11, 0.14 * s), m=_m(L, "#ffffff", 0.2, 0.6, 0.8), parent=e, segs=10)
+    elif name == "mud":
+        L.torus("rim", 1.05, 0.12, (0, 0, 0.02), (1.32, 0.93, 0.5), _m(L, "#5c3620", 0.5, 0.3), root)
+        P["bubbles"] = [L.sphere("bub", 0.09, (dx, dy, 0.1), m=_m(L, "#9a6a45", 0.15, 0.9), parent=root, segs=12) for dx, dy in ((-0.45, 0.1), (0.3, -0.25), (0.6, 0.3), (-0.1, -0.4))]
+        for dx, dy in ((-1.45, -0.3), (1.5, 0.35), (-0.9, 0.85), (1.0, -0.8)): _tuft(L, root, (dx, dy, 0), 1.0)
+    elif name == "sun":
+        fm = _m(L, "#7a4a1e", 0.5, 0.2)
+        for sx in (-1, 1):
+            L.sphere("eye", 0.055 * s, (sx * 0.15 * s, -0.39 * s, 0.08 * s), m=fm, parent=root, segs=12)
+            L.sphere("cheek", 0.07 * s, (sx * 0.25 * s, -0.36 * s, -0.06 * s), (1, 0.4, 0.7), _m(L, "#ff9d6b", 0.5, 0.2), root, 12)
+        L.torus("smile", 0.13 * s, 0.022 * s, (0, -0.4 * s, -0.04 * s), (1, 1, 0.55), fm, root, rot=(math.pi / 2, 0, 0))
+        L.sphere("smilecover", 0.16 * s, (0, -0.37 * s, 0.045 * s), (1.1, 0.5, 0.6), _m(L, "#ffcf33", 0.3, 0.5, 1.6), root, 16)
+    elif name == "snowflake":
+        m = _m(L, "#e9f6ff", 0.2, 0.8, 0.9)
+        for k in range(6):
+            a = k * math.pi / 3; cx, cz = math.cos(a) * 0.3 * s, math.sin(a) * 0.3 * s
+            for da in (0.9, -0.9):
+                L.cube("twig", 1, (cx + math.cos(a + da) * 0.08 * s, 0, cz + math.sin(a + da) * 0.08 * s), (0.2 * s, 0.06, 0.05 * s), m, root, rot=(0, -(a + da), 0))
+        L.sphere("gem", 0.1 * s, (0, -0.02, 0), m=_m(L, "#bfe8ff", 0.1, 0.9, 1.0), parent=root, segs=12)
+    elif name == "leaves":
+        for dx, dz in ((-0.2, 0.55), (0.45, 1.25), (0.2, 2.2)):
+            L.sphere("nut", 0.09, (dx, -0.12, dz), m=_m(L, "#b98a5a", 0.6, 0.2), parent=root, segs=10)
+        L.sphere("mound", 0.5, (0.1, 0, 0), (1.3, 1, 0.3), _m(L, "#6a4a2e", 0.9, 0.0), root, 16)
+    elif name == "plate":
+        r = o.get("r", 0.62); mm = _m(L, "#d9dde3", 0.2, 0.8)
+        L.cube("forkh", 1, (-r - 0.3, 0, r * 0.75), (0.07, 0.04, r * 1.2), mm, root, bevel=0.02)
+        for k in (-1, 0, 1):
+            L.cube("tine", 1, (-r - 0.3 + k * 0.07, 0, r * 1.5), (0.035, 0.04, 0.3), mm, root, bevel=0.01)
+        L.cube("spoonh", 1, (r + 0.3, 0, r * 0.75), (0.07, 0.04, r * 1.2), mm, root, bevel=0.02)
+        L.sphere("spoon", 0.15, (r + 0.3, 0, r * 1.5), (0.85, 0.3, 1.25), mm, root, 14)
+        L.sphere("stand", 0.3, (0, 0.1, 0.02), (1.6, 0.8, 0.2), _m(L, "#f2e2b8", 0.7, 0.1), root, 14)
+    elif name == "pool":
+        st = _m(L, "#b9b3a6", 0.8, 0.1)
+        for k in range(9):
+            a = k * math.tau / 9 + 0.3
+            L.sphere("stone", 0.2 * s, (math.cos(a) * 1.32 * s, math.sin(a) * 1.32 * s, 0.06), (1.2, 1, 0.6), st, root, 12, rot=(0, 0, a))
+        for dx, dy in ((-0.45, 0.4), (0.5, 0.1)):
+            L.cylinder("pad", 0.2 * s, 0.03, (dx * s, dy * s, 0.09), m=_m(L, "#4fb35a", 0.5, 0.3), parent=root, verts=16)
+        L.sphere("lily", 0.08 * s, (-0.45 * s, 0.4 * s, 0.15), m=_m(L, "#ffb3d1", 0.4, 0.4, 0.4), parent=root, segs=10)
+        for dx in (-1.1, -0.95):
+            L.cylinder("reed", 0.025, 0.9, (dx * s, 0.85 * s, 0.45), m=_m(L, "#3f9a3a", 0.6, 0.2), parent=root, verts=8)
+            L.sphere("cattail", 0.06, (dx * s, 0.85 * s, 0.85), (1, 1, 2.2), _m(L, "#7a4a2a", 0.7, 0.1), root, 10)
+    elif name == "house2":
+        h = o.get("h", 3.3); w = 2.1; fy = -w * 0.4 - 0.02
+        for c in [c for c in root.children if c.name.startswith(("frame", "glass"))]: c.scale = (0, 0, 0)   # plain windows -> detailed ones
+        _window(L, root, 0.47, fy, 0.95, 0.56); _window(L, root, -0.47, fy, h - 0.8, 0.56); _window(L, root, 0.47, fy, h - 0.8, 0.56)
+        L.cube("doorframe", 1, (-0.45, fy + 0.01, 0.63), (0.7, 0.05, 1.32), _m(L, "#ffffff", 0.5, 0.2), root, bevel=0.03)
+        L.sphere("knob", 0.05, (-0.27, fy - 0.07, 0.6), m=_m(L, "#ffd23f", 0.2, 0.8, 0.4), parent=root, segs=10)
+        L.cube("step", 1, (-0.45, fy - 0.2, 0.05), (0.9, 0.4, 0.1), _m(L, "#c9c2b4", 0.8, 0.1), root, bevel=0.03)
+        L.cube("chimney", 1, (0.62, 0.2, h + 0.75), (0.36, 0.36, 0.9), _m(L, "#b5533c", 0.8, 0.1), root, bevel=0.03)
+        P["smoke"] = [L.sphere("puff", 0.2, (0.62, 0.2, h + 1.3), m=_m(L, "#ffffff", 0.9, 0.0, 0.0, 0.85), parent=root, segs=12) for _ in range(3)]
+        L.cube("box", 1, (0.47, fy - 0.12, 0.6), (0.7, 0.2, 0.14), _m(L, "#8a5a36", 0.7, 0.1), root, bevel=0.03)
+        for k in range(4):
+            L.sphere("flower", 0.08, (0.22 + k * 0.17, fy - 0.14, 0.73), m=_m(L, cols[(k * 2) % 6], 0.4, 0.4, 0.4), parent=root, segs=10)
+        for dx in (-1.25, 1.3):
+            L.sphere("bush", 0.36, (dx, fy + 0.1, 0.26), (1, 0.8, 0.85), _m(L, "#57b86a", 0.7, 0.1), root, 14)
+        for k in range(3):
+            L.cylinder("path", 0.2, 0.04, (-0.45 + 0.05 * k, fy - 0.75 - k * 0.45, 0.02), (1.2, 0.8, 1), _m(L, "#d9d2c4", 0.8, 0.1), root, verts=12)
+    elif name == "ruler":
+        h = o.get("h", 4.2)
+        for k in range(1, int(h) + 1):
+            _txt(L, str(k), 0.2, (-0.12, -0.07, k * 1.0 - 0.33), "#402010", root, extrude=0.02, emit=0.0)
+        L.cube("foot", 1, (0, 0, 0.06), (0.9, 0.5, 0.12), _m(L, "#e0a81e", 0.5, 0.4), root, bevel=0.04)
+    elif name == "cars":
+        for c in P["items"]:
+            for sy in (-1, 1):
+                L.sphere("lamp", 0.07, (0.62, sy * 0.2, 0.4), m=_m(L, "#fff3a0", 0.2, 0.6, 1.2), parent=c, segs=10)
+            L.cube("bumper", 1, (0.63, 0, 0.24), (0.06, 0.6, 0.09), _m(L, "#d9dde3", 0.2, 0.8), c, bevel=0.02)
+            L.cube("pillar", 1, (-0.05, -0.29, 0.68), (0.06, 0.03, 0.3), _m(L, "#ffffff", 0.4, 0.4), c)
+            for wx in (-0.38, 0.38):
+                L.cylinder("hub", 0.08, 0.68, (wx, 0, 0.17), m=_m(L, "#d9dde3", 0.3, 0.7), parent=c, rot=(math.pi / 2, 0, 0), verts=12)
+    elif name == "town":
+        for dx, hh in ((-0.8, 0.8), (0.0, 1.1), (0.8, 0.7)):
+            L.cube("door", 1, (dx, -0.26, 0.17), (0.16, 0.03, 0.34), _m(L, "#8a5a36", 0.6, 0.2), root)
+            L.cube("win", 1, (dx, -0.26, hh * 0.68), (0.2, 0.03, 0.2), _m(L, "#7fd3ff", 0.1, 0.9, 0.5), root)
+        for dx in (-1.35, 1.35, 0.42):
+            L.cylinder("trunk", 0.04, 0.3, (dx, 0.1, 0.15), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, verts=8)
+            L.sphere("crown", 0.2, (dx, 0.1, 0.45), m=_m(L, "#57b86a", 0.7, 0.1), parent=root, segs=12)
+        L.cube("road", 1, (0, -0.55, 0.012), (3.1, 0.36, 0.02), _m(L, "#8d8f96", 0.9, 0.0), root)
+        for k in range(5):
+            L.cube("dash", 1, (-1.2 + k * 0.6, -0.55, 0.026), (0.26, 0.04, 0.01), _m(L, "#ffffff", 0.6, 0.1), root)
+        L.cube("plate", 1, (0, 0.02, 1.75), (1.75, 0.06, 0.52), _m(L, "#2459b8", 0.85, 0.0, 0.2), root, bevel=0.05)
+        L.cylinder("post", 0.035, 0.5, (0, 0.03, 1.3), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, verts=8)
+    elif name == "swatch":
+        for sx in (-1, 1):
+            L.cylinder("leg", 0.045, 1.3 * s, (sx * 0.45 * s, 0.12, -1.1 * s), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, rot=(0, sx * 0.14, 0), verts=10)
+    elif name == "fingerprint":
+        L.cube("title", 1, (0, -0.01, 0.6 * s), (1.2 * s, 0.11, 0.26 * s), _m(L, "#ff7a00", 0.6, 0.2), root, bevel=0.04)
+        L.sphere("thumb", 0.34 * s, (0, -0.03, 0.02 * s), (1, 0.12, 1.3), _m(L, "#ffd9b8", 0.6, 0.2), root, 20)
+    elif name == "magnifier":
+        L.torus("shine", 0.5 * s, 0.03, (-0.08 * s, -0.045, 0.08 * s), (0.7, 1, 0.7), _m(L, "#ffffff", 0.1, 0.9, 0.9, 0.7), root, rot=(math.pi / 2, 0, 0.6))
+        for k in range(3):
+            L.torus("grip", 0.092, 0.018, ((0.92 + k * 0.1) * s, 0, (-1.0 - k * 0.11) * s), m=_m(L, "#5e3a20", 0.6, 0.2), parent=root, rot=(0, math.radians(48), 0))
+    elif name == "table":
+        w = o.get("w", 2.4); h = o.get("h", 0.9)
+        L.cube("cloth", 1, (0, 0, h + 0.05), (w * 0.62, 1.04, 0.04), _m(L, "#ffffff", 0.9, 0.0), root, bevel=0.02)
+        for k in range(int(w * 0.62 / 0.24)):
+            L.sphere("scallop", 0.12, (-w * 0.31 + 0.12 + k * 0.24, -0.52, h + 0.0), (1, 0.25, 1), _m(L, cols[k % 6], 0.7, 0.1), root, 12)
+    elif name == "butter":
+        L.cube("wrap", 1, (-0.2, 0, 0.2), (0.36, 0.34, 0.3), _m(L, "#f5f1e6", 0.8, 0.0), root, bevel=0.02)
+        L.cube("stripe", 1, (-0.2, -0.171, 0.2), (0.3, 0.01, 0.08), _m(L, "#3d8fd9", 0.7, 0.1), root)
+    elif name == "ball":
+        L.sphere("hl", 0.09 * s, (-0.17 * s, -0.4 * s, 0.72 * s), m=_m(L, "#ffffff", 0.1, 0.8, 0.9), parent=root, segs=10)
+    elif name == "sock":
+        L.cube("cuff", 1, (0, 0, 0.92), (0.56, 0.36, 0.14), _m(L, o.get("color", "#f0443a"), 0.8, 0.0), root, bevel=0.05)
+        L.sphere("heel", 0.2, (0.2, 0, 0.1), (1, 0.8, 1), _m(L, o.get("color", "#f0443a"), 0.8, 0.0), root, 12)
+        L.sphere("toe", 0.22, (-0.72, 0, 0.03), (1, 0.72, 1), _m(L, o.get("color", "#f0443a"), 0.8, 0.0), root, 12)
+    elif name == "bones":
+        n = o.get("n", 7)
+        L.cube("title", 1, (0, 0.1, n * 0.42 + 0.62), (1.9, 0.12, 0.42), _m(L, "#ffd23f", 0.7, 0.1), root, bevel=0.06)
+        _txt(L, o.get("title", "NECK BONES"), 0.2, (0, 0.03, n * 0.42 + 0.6), "#402010", root, extrude=0.02, emit=0.0)
+        for sx in (-1, 1):
+            L.cylinder("leg", 0.05, 0.3, (sx * 0.7, 0.14, 0.0), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, verts=10)
+    elif name == "thermo":
+        for k in range(1, 8):
+            L.cube("tick", 1, (0.2, -0.02, 0.5 + k * 0.25), (0.12 if k % 2 else 0.2, 0.03, 0.03), _m(L, "#402010", 0.6, 0.1), root)
+        L.sphere("hl", 0.07, (-0.1, -0.24, 0.52), m=_m(L, "#ffffff", 0.1, 0.8, 0.9), parent=root, segs=10)
+        L.cylinder("base", 0.42, 0.06, (0, 0, 0.03), m=_m(L, "#d9d2c4", 0.8, 0.1), parent=root, verts=20)
+    elif name == "bamboo":
+        L.sphere("mound", 1.0, (0, 0.05, 0), (1.2, 0.6, 0.16), _m(L, "#5a8a3a", 0.9, 0.0), root, 16)
+        g2 = _m(L, "#3f9a3a", 0.5, 0.3)
+        for k, (dx, dz) in enumerate(((-0.95, 1.4), (0.95, 1.9), (-0.5, 2.3), (0.5, 1.0), (0.0, 2.9), (-0.9, 0.6))):
+            L.sphere("leaf", 0.26, (dx, -0.05, dz), (1.25, 0.22, 0.38), g2, root, 10, rot=(0, math.radians(35 if k % 2 else -35), 0))
+        for dx in (-0.45, 0.45): _tuft(L, root, (dx, -0.4, 0), 0.9, "#6cc04a")
+    elif name == "den":
+        st = _m(L, "#a39683", 0.85, 0.05)
+        for k in range(7):
+            a = math.pi * k / 6
+            L.sphere("stone", 0.2, (math.cos(a) * 0.92, -0.72, math.sin(a) * 0.95), (1.1, 0.8, 0.9), st, root, 12)
+        for dx in (-1.6, 1.65, -0.2): _tuft(L, root, (dx, -0.9, 0), 1.0)
+        for dx, col in ((-1.35, "#ffb3d1"), (1.4, "#ffd23f")):
+            L.sphere("flower", 0.08, (dx, -0.95, 0.2), m=_m(L, col, 0.4, 0.4, 0.4), parent=root, segs=10)
+        L.sphere("bed", 0.6, (0, -0.6, 0.03), (1.2, 0.5, 0.12), _m(L, "#c9a56a", 0.9, 0.0), root, 14)
+    elif name == "notree":
+        for k in range(3):
+            L.torus("ringt", 0.205, 0.02, (0, 0, 0.5 + k * 0.5), m=_m(L, "#6f4526", 0.7, 0.1), parent=root)
+        for dx, dy in ((0.16, -0.12), (-0.14, -0.1), (0.02, 0.15)):
+            L.sphere("coconut", 0.12, (dx, dy, 1.9), m=_m(L, "#6f4526", 0.7, 0.1), parent=root, segs=10)
+        _tuft(L, root, (-0.5, -0.2, 0), 1.0); _tuft(L, root, (0.55, 0.1, 0), 0.9)
+    elif name == "heart":
+        m = _m(L, "#ff8fb0", 0.25, 0.8, 0.5); P["minis"] = []
+        for dx, dz in ((-0.55, 0.4), (0.6, 0.55)):
+            e = L.empty("mini", (dx * s, 0, dz * s), root)
+            for sx in (-1, 1):
+                L.sphere("lobe", 0.1 * s, (sx * 0.075 * s, 0, 0.05 * s), m=m, parent=e, segs=12)
+            L.cone("tip", 0.15 * s, 0, 0.21 * s, (0, 0, -0.075 * s), (1, 0.62, 1), m, e, rot=(math.pi, 0, 0), verts=16)
+            P["minis"].append(e)
+    elif name == "arrow":
+        P["bob"] = [(c, c.location.z) for c in root.children]
+    elif name == "flies":
+        for f in P["flies"]:
+            for sx in (-1, 1):
+                L.cylinder("ant", 0.008, 0.12, (0.2, sx * 0.04, 0.08), m=_m(L, "#2b2b33", 0.5, 0.2), parent=f, rot=(0, 0.9, sx * 0.4), verts=6)
 
 
 def _pop(x):
@@ -301,6 +523,31 @@ def animate(root, tr, dur, st):
     rec = ANIM.get(root.name)
     if not rec: return
     name, o, P = rec
+    if "sparks" in P:                        # sparkles circle the prop
+        R = 1.5 if name == "qbox" else 0.75 * 1.5 * o.get("s", 1.0)
+        for k, e in enumerate(P["sparks"]):
+            a_ = tr * 1.6 + k * math.tau / len(P["sparks"]); tw = 0.6 + 0.4 * math.sin(tr * 5 + k * 1.7)
+            e.location = (math.cos(a_) * R, -0.3 if name == "qbox" else -0.1, (1.15 if name == "qbox" else 0.0) + math.sin(a_) * R * (0.85 if name == "qbox" else 1.0))
+            e.scale = (tw, tw, tw); e.rotation_euler.y = tr * 2 + k
+    if "confetti" in P:
+        win = o.get("win")
+        for k, c in enumerate(P["confetti"]):
+            if win is None or tr < win or tr > win + 1.7: c.scale = (0, 0, 0); continue
+            x = tr - win; a_ = k * 2.399; v = 1.6 + 0.9 * ((k * 37) % 10) / 10
+            c.location = (math.cos(a_) * v * x, -0.25 - 0.1 * x, math.sin(a_) * v * x + 1.2 * x - 1.9 * x * x)
+            c.rotation_euler = (x * 7 + k, x * 5 + 2 * k, x * 3); sc = 1.0 if x < 1.2 else max(0.0, 1 - (x - 1.2) / 0.5); c.scale = (0.1 * sc, 0.02 * sc, 0.07 * sc)
+    if "bubbles" in P:
+        for k, b in enumerate(P["bubbles"]):
+            ph = (tr * 0.6 + k * 0.27) % 1.0; sc = 0.3 + ph * 1.2 if ph < 0.85 else 0.0; b.scale = (sc, sc, sc * 0.8)
+    if "smoke" in P:
+        h_ = o.get("h", 3.3)
+        for k, p in enumerate(P["smoke"]):
+            ph = (tr * 0.35 + k / 3.0) % 1.0; p.location = (0.62 + 0.35 * ph * math.sin(tr + k), 0.2, h_ + 1.3 + ph * 1.1); sc = 0.5 + ph * 0.9 if ph < 0.9 else 0.0; p.scale = (sc, sc, sc)
+    if "minis" in P:
+        for k, e in enumerate(P["minis"]):
+            b_ = 1 + 0.25 * math.sin(tr * 4 + k * 2); e.scale = (b_, b_, b_); e.location.z += 0.0
+    if "bob" in P:
+        for c, z0 in P["bob"]: c.location.z = z0 + 0.12 * math.sin(tr * 5.0)
     if name == "sign":
         win = o.get("win")
         if win is not None and tr >= win:

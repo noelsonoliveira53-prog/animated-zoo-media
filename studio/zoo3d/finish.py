@@ -133,6 +133,12 @@ def main():
         _fx = raw[:-4] + "_withaudio.mp4"
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", _au, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "192k", "-shortest", _fx], check=True)
         raw = _fx; print("raw had no audio: added", _au)
+    _au = os.path.join(jd, job.get("audio", "")) if job.get("audio") else ""
+    if _has_a and job.get("kind") == "lesson" and _au and os.path.exists(_au) and open(_au, "rb").read(4) == b"RIFF":
+        # lessons: the PC gets a small Opus copy of the voice track; publish from the lossless master when it is here
+        _fx = raw[:-4] + "_master.mp4"
+        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", _au, "-map", "0:v", "-map", "1:a", "-c:v", "copy", "-c:a", "aac", "-b:a", "256k", "-shortest", _fx], check=True)
+        raw = _fx; print("lesson: using the master voice track", _au)
     repo = arg("--repo", "/home/claude/animated-zoo-media")
     work = os.path.join(HERE, "finished"); os.makedirs(work, exist_ok=True)
     sub = os.path.join(work, jid + ".ass")

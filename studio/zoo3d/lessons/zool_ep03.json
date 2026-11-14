@@ -639,29 +639,15 @@
      }
     },
     {
-     "prop": "arrow",
+     "prop": "heart",
      "at": [
-      -0.55,
-      -1.3,
-      1.6
+      1.3,
+      -1.0,
+      2.5
      ],
      "on": [
       8,
-      "pouch"
-     ],
-     "off": [
-      9
-     ]
-    },
-    {
-     "prop": "heart",
-     "at": [
-      1.4,
-      -1.0,
-      2.7
-     ],
-     "on": [
-      9
+      "baby"
      ],
      "opts": {
       "s": 1.3
@@ -695,7 +681,7 @@
     ],
     [
      "A baby koala is called a joey.",
-     "close:joey"
+     "close:koala"
     ],
     [
      "Say it with me. A koala is not a bear!",

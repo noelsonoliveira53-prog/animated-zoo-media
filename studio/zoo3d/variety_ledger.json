@@ -663,5 +663,83 @@
    "rhino"
   ],
   "new_song": true
+ },
+ {
+  "id": "zool_ep03",
+  "places": [
+   [
+    "beach",
+    "morning"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "arctic",
+    "golden"
+   ],
+   [
+    "arctic",
+    "golden"
+   ],
+   [
+    "arctic",
+    "golden"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ],
+   [
+    "beach",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "bear",
+   "horse",
+   "koala",
+   "pig",
+   "polar_bear",
+   "zebra"
+  ],
+  "new_song": true
  }
 ]

@@ -72,7 +72,7 @@ setmod = importlib.import_module("sets." + job["set"])
 #   the others are hidden from the render, and the world (sky) switches with it.
 LOCS = job.get("locations") or [dict(job.get("set_opts", {}))]
 # identical places (same options) are built once and revisited; each visit can have its own "formation"/"show"/"zoom"
-_VIS = ("from", "line", "formation", "show", "zoom")
+_VIS = ("from", "line", "formation", "show", "zoom", "after")
 _keys = [json.dumps({k: v for k, v in _lc.items() if k not in _VIS}, sort_keys=True) for _lc in LOCS]
 _uniq = list(dict.fromkeys(_keys)); LOC_SET = [_uniq.index(k) for k in _keys]
 SETS, LOC_OFF, LOC_WORLD, LOC_COLL = [], [], [], []
@@ -268,7 +268,7 @@ def state_for(ch, f, t):
 # Formations (Nov 13 night, "more change on the scenes"): where the host and the visible animals stand at each place.
 #   location keys: "formation": line | arc | duo | v | host_left | host_right, "show": [cast ids] (others step out),
 #   "zoom": camera distance factor (auto: closer when few animals are on screen), "line": n (start at the nth sung line
-#   of the section, so one verse can visit two places).
+#   of the section, so one verse can visit two places), "after": seconds into the section (for long outros without lines).
 _FORM = {
     "line": ((0, -0.6), [(-2.35, 0.1), (2.6, 0.2), (-4.6, 1.3), (4.9, 1.4), (1.1, 3.3), (-1.6, 3.2)]),
     "arc": ((0, -0.9), [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]),
@@ -290,6 +290,8 @@ for _i, _lc in enumerate(LOCS):
     if _sec and _lc.get("line"):
         _ln = [l for l in timing["lines"] if _sec["start"] - 0.01 <= l["start"] < _sec_end(_sec)]
         if len(_ln) > _lc["line"]: _t = _snap(_ln[_lc["line"]]["start"] - 0.1)
+    if _sec and _lc.get("after"):   # Nov 14: "after": seconds into the section (long instrumental outros get extra places)
+        _t = _snap(min(_sec["start"] + float(_lc["after"]), _sec_end(_sec) - 2.0))
     _LOC_T.append((_t, _i))
 _LOC_T.sort()
 # a new place always starts on a camera cut (never mid-shot)

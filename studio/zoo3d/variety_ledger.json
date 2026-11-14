@@ -363,7 +363,7 @@
   "new_song": false
  },
  {
-  "id": "zoo3d_ep17",
+  "id": "zoo3d_ep17y",
   "places": [
    [
     "bamboo",
@@ -374,15 +374,15 @@
     "noon"
    ],
    [
-    "bamboo",
-    "noon"
-   ],
-   [
-    "bamboo",
-    "noon"
-   ],
-   [
     "autumn_forest",
+    "golden"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "mountain",
     "golden"
    ],
    [
@@ -390,23 +390,27 @@
     "morning"
    ],
    [
-    "bamboo",
+    "spring_meadow",
     "sunset"
    ],
    [
     "bamboo",
+    "noon"
+   ],
+   [
+    "autumn_forest",
     "morning"
    ],
    [
-    "jungle",
-    "noon"
+    "night_meadow",
+    "sunset"
    ],
    [
-    "bamboo",
-    "noon"
+    "river",
+    "golden"
    ],
    [
-    "bamboo",
+    "beach",
     "noon"
    ],
    [
@@ -414,7 +418,15 @@
     "sunset"
    ],
    [
-    "bamboo",
+    "mountain",
+    "sunset"
+   ],
+   [
+    "spring_meadow",
+    "golden"
+   ],
+   [
+    "beach",
     "sunset"
    ]
   ],

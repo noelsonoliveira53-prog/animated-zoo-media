@@ -1,0 +1,439 @@
+{
+ "id": "zoo3d_ep17y",
+ "title": "Forest Friends!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 17,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "panda",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "panda"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "tiger",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "tiger"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "monkey",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "monkey"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "koala",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "koala"
+   },
+   "yaw": -0.38
+  },
+  {
+   "id": "fox",
+   "char": "animal",
+   "spot": "s5",
+   "opts": {
+    "kind": "fox"
+   },
+   "yaw": -0.1
+  }
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "duo",
+   "show": [
+    "panda"
+   ],
+   "shot": "low"
+  },
+  {
+   "from": "verse1",
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "panda"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "tiger"
+   ]
+  },
+  {
+   "from": "prechorus1",
+   "biome": "river",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "mountain",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "jungle",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "monkey"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "koala"
+   ]
+  },
+  {
+   "from": "bridge1",
+   "biome": "bamboo",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "high",
+   "show": [
+    "panda",
+    "monkey"
+   ]
+  },
+  {
+   "from": "bridge1",
+   "line": 2,
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "formation": "duo",
+   "shot": "side",
+   "show": [
+    "tiger"
+   ]
+  },
+  {
+   "from": "verse3",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "fox"
+   ]
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "river",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "side"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "beach",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "bamboo",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "mountain",
+   "tod": "sunset",
+   "formation": "line"
+  },
+  {
+   "from": "outro1",
+   "after": 12,
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "outro1",
+   "after": 24,
+   "biome": "beach",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "low"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:panda",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "CRUNCH!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:panda",
+    "close:host",
+    "close:tiger",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRIPES!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:fox",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "MUNCH!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:monkey",
+    "close:host",
+    "close:koala",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SWING!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:panda",
+    "close:tiger",
+    "close:monkey",
+    "close:koala",
+    "close:fox",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "CLAP!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:fox",
+    "close:host",
+    "close:host",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "FLUFFY!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "FOREST FRIENDS!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.8
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep17",
+ "res": "1920x1080",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "timing_file": "zoo3d_ep17_timing.json",
+ "audio": "zoo3d_ep17y_song.wav",
+ "improves": [
+  "one animal per verse scene (show)",
+  "outro gets 2 extra places ('after')",
+  "new place every scene, 9 biomes"
+ ]
+}

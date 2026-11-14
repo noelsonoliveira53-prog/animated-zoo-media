@@ -18,7 +18,8 @@ BANNED = ["cocomelon", "bluey", "peppa", "paw patrol", "disney", "pixar", "pokem
 DISTRESS = ["lost", "cry", "cries", "crying", "scared", "afraid", "hurt", "trapped", "stuck", "danger", "dangerous", "alone", "help me",
             "bite", "bites", "attack", "hunt", "hunts", "dead", "die", "sad", "tears", "monster", "fight"]
 CTA = ["subscribe", "like this video", "hit the bell", "smash", "comment below", "click"]
-RANGE = {"3d_singalong": (120, 200), "3d_singalong_vids_hook": (120, 200), "vids_full": (120, 200), "3d_lesson": (270, 390), "3d_short_cut": (15, 60)}
+RANGE = {"3d_singalong": (120, 200), "3d_singalong_vids_hook": (120, 200), "vids_full": (120, 200), "3d_lesson": (270, 390), "3d_short_cut": (15, 60),
+         "3d_lesson_v3": (300, 390), "lesson_fact_short_90": (85, 95)}   # Noelson, Nov 14 5:12 PM: lessons at least 5 minutes, Shorts a minute and a half
 arg = lambda k, d=None: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
 
 def note(text, why=""):
@@ -82,12 +83,19 @@ def review(fname):
     first2 = desc.split("\n")[:2]
     if len(" ".join(first2)) < 80: warns.append("first 2 description lines are short; make them searchable")
     # KID-01
+    if entry.get("status") == "hold_review": warns.append("NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves")
     if entry.get("made_for_kids") is not True and "short" not in fmt: fails.append("made_for_kids is not true (KID-01)")
     # file checks
     path = os.path.join(REPO, fname)
     if not os.path.exists(path): fails.append("video file is missing")
     else:
         w, h, dur = probe(path); lo, hi = RANGE.get(fmt, (15, 400))
+        _v3 = os.path.exists(_sj) and json.load(open(_sj)).get("lesson_version", 0) >= 3
+        if fmt == "3d_lesson" and _v3: lo, hi = RANGE["3d_lesson_v3"]
+        if fmt == "lesson_fact_short_90" and (w, h) != (2160, 3840): fails.append(f"lesson Short is {w}x{h}, expected 2160x3840 (4K vertical)")
+        if fmt == "lesson_fact_short_4k": warns.append("this Short is from the old 30-second lesson cut; new lesson Shorts are 85-95 s (format lesson_fact_short_90)")
+        if _v3 and os.path.exists(os.path.join(HERE, "jobs", os.path.splitext(os.path.basename(fname))[0] + "_problems.json")):
+            for pr in json.load(open(os.path.join(HERE, "jobs", os.path.splitext(os.path.basename(fname))[0] + "_problems.json"))): fails.append("teach.py: " + pr)
         if "short" not in fmt and (w, h) != (3840, 2160): fails.append(f"video is {w}x{h}, expected 3840x2160")
         if os.path.getsize(path) >= 100e6: fails.append("file is over 100 MB")
         au = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "a", "-show_entries", "stream=codec_name", "-of", "csv=p=0", path], capture_output=True, text=True).stdout.strip()

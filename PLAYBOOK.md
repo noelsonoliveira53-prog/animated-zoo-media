@@ -306,3 +306,23 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
 - The first renders (zool_ep03 done, zool_ep04..07 queued) were made before word sync and the detail pass: zool_ep04..07 cancelled
   (DONE markers / STOP), replaced by zool_ep03b..07b (same lessons, song id zool_epNN, new timing + audio + props) queued 3:49 PM.
   A stopped job keeps being retried by the worker until it has a DONE marker: write DONE, not only STOP.
+- Nov 14, 5:15-6:30 PM (lesson format v3; Noelson 5:12 PM: "adjust the shorts to be a minute and half long and long videos to
+  be minimum 5 minutes long. Perfect the process and the prompt here to adjust to that and the quality improvement process going"):
+  * New specs `studio/zoo3d/make_lessons_p3.py` -> lessons/zool_ep08..12.json ("version": 3): hello, 3 parts of 85-95 s, quiz,
+    goodbye. Built: zool_ep08 333.3 s (parts as Shorts 88.2/89.2/89.4 s), ep09 337.2 (88.6/91.3/88.7), ep10 339.9 (88.0/88.6/87.2),
+    ep11 350.9 (89.0/88.8/88.8), ep12 336.7 (88.4/87.7/88.9). Word sync 732/732, 709/709, 709/709, 741/741, 718/718.
+    Casts: 08 zebra pig koala; 09 giraffe elephant lion; 10 tiger panda cow; 11 polar_bear horse giraffe; 12 arctic_fox monkey bear.
+  * Code: teach.py ("checks" = extra question rounds, board cleared before each, Shorts = whole part, FAIL lines + jobs/<id>_problems.json),
+    teachprops.py (sign width cap 2.8, flies fs 0.5, plate r 0.4, new props grass + milk), engine.py (teach formation: Milo x -2.8,
+    animal x -0.45), lesson_shorts.py (v3: 85-95 s, crop = centre 90% of the width, 100 MB guard, format lesson_fact_short_90),
+    review.py (v3 lesson 300-390 s, lesson Shorts 85-95 s and 2160x3840, teach.py problems fail the video), finish.py (v3 lessons are
+    written as hold_review until the file studio/zoo3d/LESSON_V3_APPROVED exists).
+  * PC at 6:16 PM: zool_ep03b at frame 6,319 of 6,842 (log). zool_ep04b..07b CANCELLED (DONE markers written 6:20 PM). engine.py and
+    teachprops.py copied to Documents\ZooBlender\zoo3d. zool_ep08 job + timing + audio (Opus 58k as _song.wav) on the PC; timing +
+    audio for zool_ep09..12 are on the PC, their job files go up after their test stills are looked at.
+  * Variety ledger: entries zool_ep03..07 (never published) replaced by zool_ep08..12.
+  * Daily-run scheduled task prompt updated (lengths, nine-step quality loop, hold_review, reporting rule). docs/DAILY_RUN.md rule 4
+    "THE QUALITY LOOP FOR EVERY NEW LESSON" and rule 5 "LENGTHS".
+  * Old prototypes (zool_ep03.mp4, zool_ep03b when it finishes, shorts3d/zs4k_*.mp4) stay hold_review: under 5:00 / 30-second Shorts.
+  * Finish a v3 lesson: stage out\<id>\<id>_raw.partNN.mp4, concat -c copy, `python3 finish.py <raw> jobs/<id>.json --date <d> --time
+    "1:30 PM" --nopush --preset 10` (run_in_background), `review.py <id>.mp4 --job jobs/<id>.json`, `lesson_shorts.py <raw> <id>`.

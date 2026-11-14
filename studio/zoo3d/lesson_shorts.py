@@ -4,8 +4,8 @@ Noelson, Nov 14 2026: "Shorts should come only from teaching videos ... create a
   python3 lesson_shorts.py <lesson_raw.mp4> <lesson id> [--only <short id>] [--out <dir>]
 
 Uses the RAW 4K render (no burned captions) so the Short gets its own big captions, the lesson's own voice track
-(jobs/<id>_song.wav) and the cut points teach.py stored in songs/<id>.json "shorts" (question -> answer -> example, 20-60 s).
-Layout: blurred full-frame background, the centre 3:2 of the 4K picture across the full width (2160x1440, real 4K detail; 4:3 cut off the answer signs),
+(jobs/<id>_song.wav) and the cut points teach.py stored in songs/<id>.json "shorts" (v3 lessons, since Nov 14 5:12 PM: one whole part = one 85-95 s Short; older v2 lessons: question -> answer -> example, 15-60 s).
+Layout: blurred full-frame background, the centre 90% of the 4K picture across the full width (3456 of 3840 px -> 2160x1350; 4:3 and 3:2 cut the answer signs and Milo's wing),
 the question as a big title on top, the spoken line as a caption underneath. No calls to action.
 Writes <repo>/shorts3d/<short id>.mp4 and adds/updates studio/upload_plan_shorts_zoo.json entries with status "hold_review".
 """
@@ -25,7 +25,8 @@ def ts(t):
 def make(raw, sid, sh, outdir):
     timing = json.load(open(os.path.join(HERE, "jobs", f"{sid}_timing.json")))
     a, b = sh["start"], sh["end"]; d = round(b - a, 2)
-    assert 15 <= d <= 60, f"{sh['id']}: {d} s is outside 15-60 s"
+    lo, hi = (85, 95) if V3 else (15, 60)       # v3 (Noelson, Nov 14 5:12 PM): "Shorts a minute and a half long"; the whole part is the Short
+    assert lo <= d <= hi, f"{sh['id']}: {d} s is outside {lo}-{hi} s"
     lines = [l for l in timing["lines"] if a - 0.05 <= l["start"] < b - 0.3]
     ass = os.path.join(outdir, sh["id"] + ".ass")
     with open(ass, "w") as f:
@@ -41,8 +42,8 @@ def make(raw, sid, sh, outdir):
     l1 = sh.get("l1", "").replace("'", "’").replace(":", "\\:"); l2 = sh.get("l2", "").replace("'", "’").replace(":", "\\:")
     s1 = min(230, int(2000 / max(1, len(l1) * 0.62))); s2 = min(330, int(2000 / max(1, len(l2) * 0.62)))
     fc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.10:saturation=1.15[bg];"
-          f"[b]crop=3240:2160:300:0,scale=2160:1440:flags=lanczos[fg];[bg][fg]overlay=0:1130,"
-          f"drawbox=x=0:y=1118:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2570:w=2160:h=12:color=white@0.9:t=fill,"
+          f"[b]crop=3456:2160:192:0,scale=2160:1350:flags=lanczos[fg];[bg][fg]overlay=0:1175,"
+          f"drawbox=x=0:y=1163:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2525:w=2160:h=12:color=white@0.9:t=fill,"
           f"drawtext=fontfile={FONT}:text='{l1}':fontsize={s1}:fontcolor=white:borderw=18:bordercolor=0x402010:x=(w-tw)/2:y=470,"
           f"drawtext=fontfile={FONT}:text='{l2}':fontsize={s2}:fontcolor=0xFFD23F:borderw=22:bordercolor=0x402010:x=(w-tw)/2:y=710,"
           f"subtitles={ass}:fontsdir={os.path.join(HERE, 'fonts')},"
@@ -52,14 +53,17 @@ def make(raw, sid, sh, outdir):
            "-filter_complex", fc, "-map", "[v]", "-map", "[au]", "-r", "24", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "40M", "-bufsize", "80M",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", out]
     subprocess.run(cmd, check=True)
+    if os.path.getsize(out) > 95e6:             # files are fetched from GitHub for the upload: 100 MB is the limit there
+        cmd[cmd.index("-crf") + 1] = "23"; cmd[cmd.index("-maxrate") + 1] = "8M"; cmd[cmd.index("-bufsize") + 1] = "16M"; subprocess.run(cmd, check=True)
+    assert os.path.getsize(out) < 100e6, f"{out} is over 100 MB"
     # custom thumbnail (Noelson, Nov 14: every video gets its own thumbnail when it is posted): the moment the example is on
     # screen, same layout as the Short, its own 3 words (never the title's words), no captions. 1080x1920 PNG.
     tdir = os.path.join(REPO, "brand", "zoo", "shorts"); os.makedirs(tdir, exist_ok=True)
     thumb = os.path.join(tdir, "thumb_" + sh["id"] + ".png")
     tt = sh.get("thumb_text", "").replace("'", "\u2019").replace(":", "\\:"); st = min(330, int(1900 / max(1, len(tt) * 0.62)))
     tfc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.12:saturation=1.2[bg];"
-           f"[b]crop=3240:2160:300:0,scale=2160:1440:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1200,"
-           f"drawbox=x=0:y=1188:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2640:w=2160:h=12:color=white@0.9:t=fill,"
+           f"[b]crop=3456:2160:192:0,scale=2160:1350:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1200,"
+           f"drawbox=x=0:y=1188:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2550:w=2160:h=12:color=white@0.9:t=fill,"
            f"drawtext=fontfile={FONT}:text='{tt}':fontsize={st}:fontcolor=0xFFD23F:borderw=24:bordercolor=0x402010:x=(w-tw)/2:y=1270,scale=1080:1920:flags=lanczos")
     subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(a + d * sh.get("thumb_at", 0.78)), "-i", raw, "-filter_complex", tfc, "-frames:v", "1", thumb], check=True)
     mb = os.path.getsize(out) / 1e6
@@ -67,9 +71,14 @@ def make(raw, sid, sh, outdir):
     return out, d, thumb
 
 
+V3 = False
+
+
 def main():
+    global V3
     raw, sid = sys.argv[1], sys.argv[2]
     song = json.load(open(os.path.join(HERE, "songs", f"{sid}.json")))
+    V3 = song.get("lesson_version", 0) >= 3
     outdir = arg("--out", os.path.join(REPO, "shorts3d")); os.makedirs(outdir, exist_ok=True)
     only = arg("--only")
     planp = os.path.join(REPO, "studio", "upload_plan_shorts_zoo.json")
@@ -82,7 +91,7 @@ def main():
         fact = next((x for x in song.get("lyrics", "").split("\n") if sh["seg"].replace("_", " ").split()[-1] in x.lower()), "")
         desc = f"{sh['title']} A quick animal fact for kids with Milo the bluebird, from the lesson “{song['meta']['title']}”.\n{fact}\n\n{BOILER}"
         ent = {"file": rel, "title": sh["title"], "description": desc, "tags": song["meta"].get("tags", [])[:8], "made_for_kids": True,
-               "status": "hold_review", "format": "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
+               "status": "hold_review", "format": "lesson_fact_short_90" if V3 else "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
                "thumb": os.path.relpath(thumb, REPO), "thumb_text": sh.get("thumb_text", ""),
                "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"}
         old = next((e for e in items if e.get("file") == rel), None)

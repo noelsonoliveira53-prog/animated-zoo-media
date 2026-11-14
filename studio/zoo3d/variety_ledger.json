@@ -665,7 +665,7 @@
   "new_song": true
  },
  {
-  "id": "zool_ep03",
+  "id": "zool_ep08",
   "places": [
    [
     "beach",
@@ -684,8 +684,8 @@
     "noon"
    ],
    [
-    "farm",
-    "morning"
+    "savanna",
+    "noon"
    ],
    [
     "farm",
@@ -696,8 +696,12 @@
     "morning"
    ],
    [
-    "autumn_forest",
-    "golden"
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "morning"
    ],
    [
     "autumn_forest",
@@ -712,15 +716,11 @@
     "golden"
    ],
    [
-    "arctic",
+    "autumn_forest",
     "golden"
    ],
    [
-    "arctic",
-    "golden"
-   ],
-   [
-    "arctic",
+    "autumn_forest",
     "golden"
    ],
    [
@@ -737,13 +737,12 @@
    "horse",
    "koala",
    "pig",
-   "polar_bear",
    "zebra"
   ],
   "new_song": true
  },
  {
-  "id": "zool_ep04",
+  "id": "zool_ep09",
   "places": [
    [
     "desert",
@@ -764,18 +763,6 @@
    [
     "jungle",
     "morning"
-   ],
-   [
-    "bamboo",
-    "noon"
-   ],
-   [
-    "bamboo",
-    "noon"
-   ],
-   [
-    "bamboo",
-    "noon"
    ],
    [
     "desert",
@@ -795,28 +782,34 @@
    ]
   ],
   "cast": [
-   "cat",
    "elephant",
    "giraffe",
-   "lion",
-   "tiger"
+   "lion"
   ],
   "new_song": true
  },
  {
-  "id": "zool_ep05",
+  "id": "zool_ep10",
   "places": [
    [
     "autumn_forest",
     "morning"
    ],
    [
-    "river",
-    "noon"
+    "jungle",
+    "golden"
    ],
    [
     "jungle",
     "golden"
+   ],
+   [
+    "jungle",
+    "golden"
+   ],
+   [
+    "bamboo",
+    "morning"
    ],
    [
     "bamboo",
@@ -843,13 +836,12 @@
    "cow",
    "panda",
    "pink_cub",
-   "tiger",
-   "zebra"
+   "tiger"
   ],
   "new_song": true
  },
  {
-  "id": "zool_ep06",
+  "id": "zool_ep11",
   "places": [
    [
     "mountain",
@@ -860,12 +852,24 @@
     "noon"
    ],
    [
+    "arctic",
+    "noon"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
     "farm",
     "morning"
    ],
    [
-    "savanna",
-    "golden"
+    "farm",
+    "morning"
+   ],
+   [
+    "farm",
+    "morning"
    ],
    [
     "spring_meadow",
@@ -881,7 +885,6 @@
    ]
   ],
   "cast": [
-   "elephant",
    "giraffe",
    "horse",
    "polar_bear"
@@ -889,7 +892,7 @@
   "new_song": true
  },
  {
-  "id": "zool_ep07",
+  "id": "zool_ep12",
   "places": [
    [
     "spring_meadow",
@@ -908,12 +911,8 @@
     "noon"
    ],
    [
-    "savanna",
-    "golden"
-   ],
-   [
-    "bamboo",
-    "morning"
+    "arctic",
+    "noon"
    ],
    [
     "jungle",
@@ -944,7 +943,6 @@
    "arctic_fox",
    "bear",
    "monkey",
-   "panda",
    "summer_fox"
   ],
   "new_song": true

@@ -1771,7 +1771,7 @@
   "format": "3d_lesson",
   "duration": 285.1,
   "res": "3840x2160",
-  "note": "interactive lesson prototype 1, FIRST render (props timed before the word-sync fix, before the graphics detail pass); the b render replaces it. Do not upload until Noelson approves."
+  "note": "superseded Nov 14 5:12 PM by lesson format v3 (lesson at least 5:00, Shorts 85-95 s: zool_ep08-12); kept for reference, do not upload"
  },
  {
   "file": "zoo3d_ep17.mp4",

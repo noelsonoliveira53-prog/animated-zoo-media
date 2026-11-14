@@ -1,0 +1,789 @@
+{
+ "id": "zool_ep12",
+ "thumb_at": [
+  "arctic_fox",
+  5,
+  0.85
+ ],
+ "seed": 47,
+ "title": "Where Do Animals Live? Animal Homes for Kids with Milo",
+ "card": "Where Do Animals Live?",
+ "thumb_text": "HOT OR COLD?",
+ "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the monkey and the bear, and see how each one lives there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal homes for kids",
+  "where do animals live",
+  "animal habitats for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "arctic_fox",
+  "monkey",
+  "bear"
+ ],
+ "extras": [
+  {
+   "id": "sfox",
+   "kind": "summer_fox"
+  }
+ ],
+ "facts": [
+  "Arctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).",
+  "An arctic fox wraps its fluffy tail around its body like a blanket to sleep, and thick fur on its feet works like built-in snow boots; it lives within the Arctic Circle and can dig a snow den and stay in it for up to two weeks (National Geographic Kids, 'Arctic Fox').",
+  "Most monkeys live in trees; monkey groups are called troops and travel together by day to find food; monkeys eat fruits, leaves, nuts and seeds; some New World monkeys, such as spider monkeys, can grip with their tails (San Diego Zoo, 'Monkey').",
+  "In fall bears eat and drink nearly nonstop (hyperphagia); most bears den in winter, cubs are born in the den, and bears leave the den in spring to look for food (U.S. National Park Service, 'When Bears Prepare For Winter')."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "word": "ANIMAL HOMES!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      -3.4,
+      -2.3,
+      0.0
+     ],
+     "on": [
+      2,
+      "hot"
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "thermo",
+     "at": [
+      3.4,
+      -2.3,
+      0.0
+     ],
+     "on": [
+      2,
+      "cold"
+     ],
+     "opts": {
+      "hot": false
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are going on a big trip!",
+    "Every animal has a home. Some homes are hot. Some homes are cold.",
+    "Three animal friends are coming with us. One, two, three!",
+    "Let's find out where they live. Are you ready? Let's go!"
+   ]
+  },
+  {
+   "name": "arctic_fox",
+   "biome": "arctic",
+   "tod": "noon",
+   "word": "THE ARCTIC!",
+   "word_on": [
+    3,
+    "snowy"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "biome": "desert",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "arctic",
+     "tod": "noon",
+     "line": 3,
+     "show": [
+      "arctic_fox"
+     ]
+    },
+    {
+     "biome": "arctic",
+     "tod": "noon",
+     "line": 5,
+     "show": [
+      "arctic_fox",
+      "sfox"
+     ]
+    },
+    {
+     "biome": "arctic",
+     "tod": "noon",
+     "line": 7,
+     "show": [
+      "arctic_fox"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "WHITE",
+     "b": "BROWN",
+     "right": "a",
+     "ask": [
+      14
+     ],
+     "answer": [
+      15
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#3db8ff",
+      "b": "#8a5a36"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      0.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      1,
+      "hot"
+     ],
+     "off": [
+      3
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "thermo",
+     "at": "ex",
+     "on": [
+      3,
+      "snowy"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "hot": false
+     }
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      -0.45,
+      -1.1,
+      3.55
+     ],
+     "on": [
+      5
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.55,
+      -1.1,
+      3.55
+     ],
+     "on": [
+      5,
+      "summer"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      7,
+      "end"
+     ],
+     "off": [
+      8
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.2
+     ],
+     "on": [
+      9,
+      "snow"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "SNOW BOOTS",
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the arctic fox live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the arctic fox live here, in the hot, sandy desert?",
+     "pause": 3.2
+    },
+    "No! Too hot for a fluffy fox. Let's try again.",
+    [
+     "The arctic fox lives in the snowy Arctic! Brrr!",
+     "teach"
+    ],
+    "Here is the fun fact. In winter, the arctic fox is white, like the snow.",
+    [
+     "But in summer, when the snow melts, its fur turns brown!",
+     "exhibit"
+    ],
+    [
+     "White in winter, to hide in the snow. Brown in summer, to hide in the rocks.",
+     "exhibit"
+    ],
+    {
+     "t": "But how does a little fox stay warm in all that snow?",
+     "pause": 2.4
+    },
+    [
+     "At bedtime, it wraps its fluffy tail around itself, like a blanket!",
+     "close:arctic_fox"
+    ],
+    "And it has thick fur under its paws, like snow boots!",
+    "The arctic fox lives at the very top of the world, where it is cold almost all year.",
+    "When a snowstorm comes, the fox digs a den in the snow, and stays cozy inside.",
+    [
+     "Say it with me. White in winter, brown in summer!",
+     "close:host"
+    ],
+    "Can you curl up like a fox in the snow? Curl, curl, curl!",
+    {
+     "t": "Quick check! What color is the arctic fox in winter? White? Or brown?",
+     "pause": 3.2
+    },
+    "White! White like the snow.",
+    "Wave bye-bye to the fluffy fox. Bye-bye, fox!"
+   ],
+   "short": {
+    "id": "zs90_arcticfox_color",
+    "title": "Arctic Foxes Change Color! White in Winter",
+    "l1": "WHERE DOES THE",
+    "l2": "ARCTIC FOX LIVE?",
+    "thumb_text": "BROWN TOO!"
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "monkey",
+   "biome": "jungle",
+   "tod": "noon",
+   "word": "THE JUNGLE!",
+   "word_on": [
+    2,
+    "jungle"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "biome": "jungle",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "jungle",
+     "tod": "noon",
+     "line": 2,
+     "show": [
+      "monkey"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "TREES",
+     "b": "SEA",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#1479d6"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "notree",
+     "at": "ex",
+     "on": [
+      3,
+      "many"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "nocross": 1,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "arrow",
+     "at": [
+      2.55,
+      -0.9,
+      3.0
+     ],
+     "on": [
+      4
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "color": "#ffd23f"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.2
+     ],
+     "on": [
+      8,
+      "troop"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "TROOP",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the monkey live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the monkey live here, in the warm, rainy jungle?",
+     "pause": 3.2
+    },
+    [
+     "Yes! The monkey lives in the jungle!",
+     "close:monkey"
+    ],
+    [
+     "Here is the fun fact. Many monkeys live high up in the jungle trees.",
+     "exhibit"
+    ],
+    [
+     "They eat in the trees, play in the trees, and sleep in the trees!",
+     "exhibit"
+    ],
+    {
+     "t": "Why do monkeys like the trees so much?",
+     "pause": 2.4
+    },
+    [
+     "Up in the trees there are sweet fruits, crunchy leaves, nuts, and seeds. Yum!",
+     "close:monkey"
+    ],
+    "Some monkeys can even hold on to a branch with their tail, like an extra hand!",
+    "Monkeys live together in a big group. A group of monkeys is called a troop.",
+    {
+     "t": "Can you say troop?",
+     "pause": 2.0
+    },
+    "They travel together all day, looking for food.",
+    "A troop can be small, with just a few monkeys. Or very, very big!",
+    "Trees are a monkey's kitchen, playground, and bedroom!",
+    [
+     "Say it with me. Monkeys live in the trees!",
+     "close:host"
+    ],
+    "Can you swing your arms like a monkey? Swing, swing, swing!",
+    {
+     "t": "Quick check! Where do many monkeys live? Up in the trees? Or under the sea?",
+     "pause": 3.2
+    },
+    "Up in the trees! Super!",
+    "Wave bye-bye to the monkey. Bye-bye, monkey!"
+   ],
+   "short": {
+    "id": "zs90_monkey_trees",
+    "title": "Monkeys Live High in the Jungle Trees!",
+    "l1": "WHERE DO",
+    "l2": "MONKEYS LIVE?",
+    "thumb_text": "UP TOP!"
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "bear",
+   "biome": "mountain",
+   "tod": "sunset",
+   "word": "THE MOUNTAINS!",
+   "word_on": [
+    3,
+    "mountain"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "biome": "desert",
+     "tod": "noon",
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "biome": "mountain",
+     "tod": "sunset",
+     "line": 3,
+     "show": [
+      "bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 1.6,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "A DEN",
+     "b": "A TREE",
+     "right": "a",
+     "ask": [
+      16
+     ],
+     "answer": [
+      17
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "thermo",
+     "at": [
+      0.2,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      1,
+      "hot"
+     ],
+     "off": [
+      3
+     ],
+     "opts": {
+      "hot": true
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      4,
+      "end"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "den",
+     "at": [
+      2.75,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      6,
+      "many"
+     ]
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      2.4,
+      -1.4,
+      1.7
+     ],
+     "on": [
+      6,
+      "sleep"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "s": 1.1,
+      "color": "#2459b8"
+     }
+    },
+    {
+     "prop": "heart",
+     "at": [
+      2.6,
+      -1.4,
+      2.3
+     ],
+     "on": [
+      8,
+      "baby"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Where does the brown bear live?",
+     "pause": 0.4
+    },
+    {
+     "t": "Does the bear live here, in the hot, sandy desert?",
+     "pause": 3.2
+    },
+    "No! Too hot for a furry bear. Let's try again.",
+    [
+     "The brown bear lives in the mountain forest!",
+     "teach"
+    ],
+    {
+     "t": "How does a bear get ready for the cold winter?",
+     "pause": 2.4
+    },
+    "Before winter comes, the bear eats, and eats, and eats! It gets nice and round.",
+    [
+     "Here is the fun fact. In winter, many bears sleep in a cozy den.",
+     "exhibit"
+    ],
+    [
+     "They snooze through the cold, snowy days, until spring comes back.",
+     "exhibit"
+    ],
+    "And here is a surprise. Baby bears are born in the den, in the middle of winter!",
+    "Baby bears are called cubs.",
+    "The tiny cubs snuggle close to their mama until spring.",
+    "The den keeps the bear family warm in the snow.",
+    {
+     "t": "Can you say den?",
+     "pause": 2.0
+    },
+    "In spring, the bear family comes out of the den. Time to find some food!",
+    [
+     "Say it with me. Bears sleep in a den in winter!",
+     "close:host"
+    ],
+    "Can you yawn and stretch like a sleepy bear? Yawn. Stretch!",
+    {
+     "t": "Quick check! Where do many bears sleep in winter? In a den? Or in a tree?",
+     "pause": 3.2
+    },
+    "In a den! Cozy and warm.",
+    "Sleep well, sleepy bear!"
+   ],
+   "short": {
+    "id": "zs90_bear_den",
+    "title": "Bears Sleep in a Den in Winter! Animal Homes",
+    "l1": "WHERE DO",
+    "l2": "BEARS LIVE?",
+    "thumb_text": "COZY NAP!"
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "golden",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We visited three animal homes. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who lives in the snowy Arctic, and turns brown in summer?",
+     "The arctic fox! Yes!",
+     "arctic_fox"
+    ],
+    [
+     "Who lives high in the jungle trees?",
+     "The monkey! Good job!",
+     "monkey"
+    ],
+    [
+     "And who sleeps in a den in winter?",
+     "The bear! You remembered!",
+     "bear"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Curl up like a fox. Swing like a monkey. And stretch like a bear!",
+    "Where is your home? Is it hot or cold today?",
+    "Thank you for traveling with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "format v3 (Noelson, Nov 14 5:12 PM): lesson at least 5:00, every part is one complete 85-95 s mini-lesson that becomes a 90-second Short",
+  "deeper parts: a 'why?' or second question round, one more sourced fact with its own example, and a quick check with answer signs at the end of each part",
+  "picture fixes from the review of the first render: flies half the size, dinner plate paw-sized, answer signs and Milo moved inside the centre 3:2 so the Shorts never cut them",
+  "new on-screen examples: grass patch with daisies, milk bottle and glass, SNOUT / TROOP / SNOW BOOTS word signs, fly count, second counting rounds",
+  "interactive lesson v2 base: answer signs + thinking timer, calm cast, one continuous teaching shot per idea, native 4K, every word placed from the audio"
+ ],
+ "version": 3
+}

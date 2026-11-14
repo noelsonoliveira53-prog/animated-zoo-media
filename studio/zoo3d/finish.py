@@ -211,7 +211,7 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
     desc = meta["description"].rstrip() + "\n\n" + song.get("desc_header", "LYRICS") + "\n" + "\n".join(seen[:40])
     entry = {"file": rel, "title": meta["title"], "description": desc, "tags": meta.get("tags", []), "date": date,
              "time": arg("--time", SLOT.get(ch, "2:00 PM")), "thumb": os.path.relpath(tdst, repo), "made_for_kids": True,
-             "status": "to_upload", "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1)}
+             "status": ("hold_review" if song.get("lesson_version", 0) >= 3 and not os.path.exists(os.path.join(HERE, "LESSON_V3_APPROVED")) else "to_upload"), "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1)}
     plan = [p for p in plan if p["file"] != rel] + [entry]
     plan.sort(key=lambda p: (p["date"], p["time"]))
     json.dump(plan, open(plan_p, "w"), indent=1)

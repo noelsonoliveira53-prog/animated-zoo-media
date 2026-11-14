@@ -28,8 +28,8 @@ import wordsync as WS
 SR, FPS, BPM = LS.SR, LS.FPS, LS.BPM
 GAP, SEG_GAP, LEAD = 0.75, 1.3, 0.5
 THINK, DO, CHOOSE = 2.0, 2.6, 3.2
-POS = {"ex": (2.55, -0.5, 0.0), "ex_front": (2.2, -1.5, 0.0), "ex_hi": (2.6, -1.1, 3.2), "sign_a": (2.6, -1.3, 3.7), "sign_b": (2.6, -1.3, 2.55),
-       "dots": (2.6, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (0.1, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (0, -0.6, 4.35)}
+POS = {"ex": (2.55, -0.5, 0.0), "ex_front": (2.2, -1.5, 0.0), "ex_hi": (2.6, -1.1, 3.2), "sign_a": (1.95, -1.3, 3.7), "sign_b": (1.95, -1.3, 2.55),
+       "dots": (1.95, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (0.1, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (0, -0.6, 4.35)}
 SIGN_COL = {"a": "#1479d6", "b": "#e85d00"}
 ARC = [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]     # engine "arc" slots (quiz)
 TALL = {"giraffe": 3.8}
@@ -79,7 +79,11 @@ def build(spec):
         t += SEG_GAP - GAP; sec["end"] = round(t, 3); sections.append(sec)
     dur = round(t + 1.2, 2); sections[-1]["end"] = dur
     wc = sum(len(l["text"].split()) for l in lines)
-    if not 270 <= dur <= 390: print(f"WARNING: lesson is {dur:.0f} s; rulebook KID-04 wants 4:30-6:30 (270-390 s)")
+    V3 = spec.get("version", 2) >= 3     # Noelson, Nov 14 5:12 PM: lessons at least 5 minutes, Shorts a minute and a half
+    LMIN, LMAX = (300, 390) if V3 else (270, 390)
+    PROBLEMS = []
+    if not LMIN <= dur <= LMAX: PROBLEMS.append(f"lesson is {dur:.1f} s; it must be {LMIN}-{LMAX} s")
+    print("   parts: " + ", ".join(f"{sc_['name']} {sc_['end'] - (sc_['start'] if k_ else 0.0):.1f}" for k_, sc_ in enumerate(sections)))
     n = int(SR * dur); vox = np.zeros(n)
     for st, a in clips:
         s0 = int(st * SR); vox[s0:s0 + len(a)] += a[:n - s0]
@@ -156,6 +160,9 @@ def build(spec):
             at = POS[at] if isinstance(at, str) else tuple(at)
             t_on = max(0.0, on - lead); t_off = seg_len - 0.3 if off is None else off
             P.append({"type": "teach", "name": prop, "at": list(at), "delay": round(t_on, 3), "dur": round(max(0.6, t_off - t_on), 3), "spin": 0, "opts": opts or {}})
+            if prop == "sign" and kind == "teach":      # Shorts-safe check: the Short shows the centre 90% of the picture's width (still review Nov 14: x=3.94 touched the edge)
+                tx = (opts or {}).get("text", "?"); ts_ = 0.5 * (8.0 / len(tx) if len(tx) > 8 else 1.0); w_ = min(2.8, max(1.5, len(tx) * ts_ * 0.66 + 0.6))
+                if at[0] + w_ / 2 + 0.24 > 3.7 or at[0] - w_ / 2 < -4.0: PROBLEMS.append(f"sign '{tx}' in {seg['name']} reaches x={at[0] + w_ / 2 + 0.24:.2f}: outside the Shorts-safe area (3.7)")
 
         if seg.get("word"):
             pr = {"type": "text", "text": seg["word"], "color": LS.COLORS[i % len(LS.COLORS)], "at": list(POS["top"]) if kind == "teach" else "top",
@@ -163,8 +170,11 @@ def build(spec):
             if seg.get("word_on"): pr["delay"] = ref(seg, seg["word_on"], s0)
             if seg.get("word_off"): pr["dur"] = max(1.0, ref(seg, seg["word_off"], s0) - pr["delay"])
             P.append(pr)
-        ch = seg.get("choices")
-        if ch:   # two answer signs, a thinking timer, then the right one is marked and the wrong one leaves
+        rounds = ([seg["choices"]] if seg.get("choices") else []) + list(seg.get("checks", []))
+        # "checks": more question rounds in the same part (a second yes/no, the quick check at the end). The board is cleared
+        # for each of them: an example on the right that has no "off" of its own leaves just before the signs come in.
+        clear_at = sorted(ref(seg, c_["ask"], s0) - 0.25 for c_ in seg.get("checks", []))
+        for ch in rounds:   # two answer signs, a thinking timer, then the right one is marked and the wrong one leaves
             t_ask = ref(seg, ch["ask"], s0); t_ans = ref(seg, ch["answer"], s0)
             q_end = seg["_lt"][ch["ask"][0]][1] - s0
             for key in ("a", "b"):
@@ -175,6 +185,10 @@ def build(spec):
             add("dots", "dots", q_end + 0.2, t_ans, {})
         for ex in seg.get("exhibits", []):
             on = ref(seg, ex["on"], s0); off = ref(seg, ex["off"], s0) if ex.get("off") else None
+            at_ = POS[ex.get("at", "ex")] if isinstance(ex.get("at", "ex"), str) else ex["at"]
+            if off is None and kind == "teach" and at_[0] >= 0.8 and not ex.get("keep"):
+                nxt = [c_ for c_ in clear_at if c_ > on + 0.5]
+                if nxt: off = nxt[0]
             o = dict(ex.get("opts", {}))
             if ex.get("times"): o["times"] = [round(ref(seg, r, s0) - on, 3) for r in ex["times"]]
             if ex.get("leave"): o["leave"] = round(ref(seg, ex["leave"], s0) - on, 3)
@@ -190,9 +204,10 @@ def build(spec):
         direct.append(d)
         if seg.get("short"):
             sh = seg["short"]   # "from"/"to": line numbers, so the Short is the question, the answer and the example (20-60 s)
-            a0 = seg["_lt"][sh["from"]][0] - 0.35 if sh.get("from") else s0
-            b0 = seg["_lt"][sh["to"]][0] - 0.25 if sh.get("to") else sc["end"]
+            a0 = seg["_lt"][sh["from"]][0] - 0.35 if sh.get("from") else (seg["_lt"][0][0] - 0.4 if V3 else s0)
+            b0 = seg["_lt"][sh["to"]][0] - 0.25 if sh.get("to") else (seg["_lt"][-1][1] + 0.9 if V3 else sc["end"])
             shorts.append(dict(sh, seg=seg["name"], start=round(max(0.0, a0), 3), end=round(b0, 3), seconds=round(b0 - a0, 1)))
+            if V3 and not 85 <= b0 - a0 <= 95: PROBLEMS.append(f"Short {sh['id']} ({seg['name']}) is {b0 - a0:.1f} s; it must be 85-95 s (a minute and a half)")
 
     thumb = spec.get("thumb_frame", 72)
     if spec.get("thumb_at"):   # ["segment", line, 0..1]: the thumbnail shows a teaching moment (animal + example), not the hello
@@ -204,7 +219,7 @@ def build(spec):
            "samples": spec.get("samples", 16), "step": 1, "hold_shots": True, "cut_mode": "beat", "follow_singer": False, "punch": False,
            "timing_file": f"{sid}_timing.json", "audio": f"{sid}_song.wav"}
     json.dump(job, open(os.path.join(HERE, "jobs", f"{sid}.json"), "w"), indent=1)
-    song = {"kind": "lesson", "format": "3d_lesson", "lesson_version": 2, "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
+    song = {"kind": "lesson", "format": "3d_lesson", "lesson_version": 3 if V3 else 2, "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
             "script": "\n".join(l["text"] for l in lines), "duration": dur, "bpm": BPM,
             "sync": {"method": "forced alignment of every line (PocketSphinx)", "aligned": SYNC["aligned"], "words": SYNC["words"],
                      "pause_onsets_checked": len(SYNC["onset_err"]), "onset_err_mean_ms": round(1000 * float(np.mean(SYNC["onset_err"] or [0])), 1),
@@ -219,6 +234,9 @@ def build(spec):
           f"{1000 * float(np.mean(SYNC['onset_err'] or [0])):.0f} ms (mean) / {1000 * float(max(SYNC['onset_err'] or [0])):.0f} ms (max) from the measured sound onset"
           + (f"; NOT aligned: {SYNC['unaligned_lines']}" if SYNC['unaligned_lines'] else "")
           + (f"; CHECK PRONUNCIATION: {SYNC['suspect']}" if SYNC.get('suspect') else ""))
+    json.dump(PROBLEMS, open(os.path.join(HERE, "jobs", f"{sid}_problems.json"), "w"))
+    for p_ in PROBLEMS: print("   FAIL:", p_)
+    if SYNC["aligned"] < SYNC["words"] or SYNC.get("suspect"): print("   FAIL: word sync is not 100% clean")
     return job
 
 

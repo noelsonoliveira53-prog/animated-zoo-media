@@ -77,7 +77,9 @@ def build(L, name, at, **o):
     if name == "sign":            # answer choice board: text, color; "win" marks it right
         text = o.get("text", "?"); ts = o.get("size", 0.5) * s
         if len(text) > 8: ts *= 8.0 / len(text)
-        w = max(1.5, len(text) * ts * 0.66 + 0.6); h = max(0.95, ts * 1.9)
+        w = max(1.5, len(text) * ts * 0.66 + 0.6)
+        if w > 2.8: ts *= (2.8 - 0.6) / (w - 0.6); w = 2.8      # Shorts-safe: the sign and its check badge stay inside the Short's picture
+        h = max(0.95, ts * 1.9)
         L.cube("back", 1, (0, 0.05, 0), (w + 0.18, 0.12, h + 0.18), _m(L, "#ffffff", 0.8, 0.0), root, bevel=0.06)
         L.cube("board", 1, (0, 0, 0), (w, 0.14, h), _m(L, o.get("color", "#1479d6"), 0.85, 0.0, 0.35), root, bevel=0.06)
         _txt(L, text, ts, (0, -0.1, -ts * 0.04), o.get("tcolor", "#ffffff"), root, extrude=0.05, emit=1.1)
@@ -150,7 +152,7 @@ def build(L, name, at, **o):
         for k, (dx, dz) in enumerate(((-0.55, 0.7), (0.25, 0.95), (-0.25, 1.35), (0.55, 1.6), (0.05, 1.95), (0.75, 2.2), (0.35, 2.45))):
             L.sphere("leaf", 0.3, (dx, -0.05, dz), (1.25, 0.3, 0.55), g if k % 2 else g2, root, 16, rot=(0, math.radians(-35 + 70 * (k % 2)), 0))
     elif name == "plate":         # dinner plate, standing up so the camera sees it
-        r = o.get("r", 0.62)
+        r = o.get("r", 0.4)
         L.cylinder("plate", r, 0.06, (0, 0, r + 0.1), m=_m(L, "#ffffff", 0.15, 0.9), parent=root, rot=(math.radians(78), 0, 0))
         L.torus("rim", r * 0.72, 0.03, (0, -0.04, r + 0.1), m=_m(L, "#8fd3ff", 0.2, 0.8), parent=root, rot=(math.radians(78), 0, 0))
     elif name == "pool":          # little pool of water
@@ -280,6 +282,29 @@ def build(L, name, at, **o):
             a = k * math.tau / 6
             L.sphere("frond", 0.6, (math.cos(a) * 0.55, math.sin(a) * 0.3, 2.1), (1.3, 0.4, 0.3), _m(L, "#2f9e55", 0.5, 0.3), root, 14, rot=(0, math.radians(20) * math.cos(a), a))
         if not o.get("nocross"): P["cross"] = _cross(L, root, (0, -0.6, 1.5), 1.6)
+    elif name == "grass":         # a patch of fresh grass with daisies (what the cow eats)
+        g = [_m(L, "#3fae4f", 0.6, 0.2), _m(L, "#5cc866", 0.6, 0.2), _m(L, "#2f9442", 0.6, 0.2)]
+        L.sphere("patch", 1.0, (0, 0, 0.02), (1.25 * s, 0.85 * s, 0.05), _m(L, "#4fb85c", 0.7, 0.1), root, 28)
+        for k in range(26):
+            a = k * 2.399; r = (0.18 + 0.95 * ((k * 0.618) % 1.0)) * s
+            L.cone("blade", 0.06 * s, 0, (0.42 + 0.3 * ((k * 0.37) % 1.0)) * s, (math.cos(a) * r, math.sin(a) * r * 0.65, 0.25 * s), m=g[k % 3], parent=root,
+                   rot=(0.25 * math.sin(k), 0.25 * math.cos(k * 1.7), 0), verts=6)
+        for dx, dy in ((-0.7, -0.35), (0.55, -0.45), (0.1, 0.3)):
+            L.cylinder("stem", 0.015 * s, 0.4 * s, (dx * s, dy * s, 0.2 * s), m=g[2], parent=root, verts=6)
+            for k in range(6):
+                a = k * math.tau / 6
+                L.sphere("petal", 0.06 * s, (dx * s + math.cos(a) * 0.08 * s, dy * s, 0.42 * s + math.sin(a) * 0.08 * s), (1, 0.4, 1), _m(L, "#ffffff", 0.4, 0.4, 0.3), root, 8)
+            L.sphere("eye", 0.045 * s, (dx * s, dy * s - 0.02, 0.42 * s), m=_m(L, "#ffd23f", 0.4, 0.4, 0.5), parent=root, segs=8)
+    elif name == "milk":          # a bottle and a glass of milk
+        w = _m(L, "#fffdf5", 0.25, 0.7, 0.15); gl = _m(L, "#dff4ff", 0.05, 1.0, 0.0, 0.35)
+        L.cylinder("bottle", 0.3 * s, 0.95 * s, (-0.45 * s, 0, 0.5 * s), m=w, parent=root, verts=28)
+        L.cone("neck", 0.3 * s, 0.14 * s, 0.3 * s, (-0.45 * s, 0, 1.12 * s), m=w, parent=root, verts=28)
+        L.cylinder("cap", 0.16 * s, 0.12 * s, (-0.45 * s, 0, 1.32 * s), m=_m(L, "#3db8ff", 0.3, 0.7), parent=root, verts=24)
+        L.cube("label", 1, (-0.45 * s, -0.29 * s, 0.55 * s), (0.42 * s, 0.03, 0.34 * s), _m(L, "#3db8ff", 0.5, 0.3), root, bevel=0.02)
+        _txt(L, "MILK", 0.15 * s, (-0.45 * s, -0.33 * s, 0.5 * s), "#ffffff", root, extrude=0.02)
+        L.cylinder("milk", 0.24 * s, 0.5 * s, (0.4 * s, 0, 0.29 * s), m=w, parent=root, verts=28)
+        L.cylinder("glass", 0.27 * s, 0.7 * s, (0.4 * s, 0, 0.37 * s), m=gl, parent=root, verts=28)
+        L.sphere("tray", 0.9 * s, (0, 0, 0.02), (1.1, 0.7, 0.05), _m(L, "#f2c58a", 0.6, 0.2), root, 24)
     elif name == "heart":
         m = _m(L, "#ff4f7a", 0.25, 0.8, 0.5)
         for sx in (-1, 1):
@@ -381,7 +406,7 @@ def _detail(L, name, root, P, o):
             L.sphere("nut", 0.09, (dx, -0.12, dz), m=_m(L, "#b98a5a", 0.6, 0.2), parent=root, segs=10)
         L.sphere("mound", 0.5, (0.1, 0, 0), (1.3, 1, 0.3), _m(L, "#6a4a2e", 0.9, 0.0), root, 16)
     elif name == "plate":
-        r = o.get("r", 0.62); mm = _m(L, "#d9dde3", 0.2, 0.8)
+        r = o.get("r", 0.4); mm = _m(L, "#d9dde3", 0.2, 0.8)
         L.cube("forkh", 1, (-r - 0.3, 0, r * 0.75), (0.07, 0.04, r * 1.2), mm, root, bevel=0.02)
         for k in (-1, 0, 1):
             L.cube("tine", 1, (-r - 0.3 + k * 0.07, 0, r * 1.5), (0.035, 0.04, 0.3), mm, root, bevel=0.01)
@@ -576,6 +601,7 @@ def animate(root, tr, dur, st):
             sc = 1.0
             if leave is not None and tr > leave:
                 u = min(1.0, (tr - leave) / 1.6); x += u * u * (4.5 + k); z += u * u * (2.5 + 0.5 * k); sc = 1 - 0.85 * u
+            sc *= o.get("fs", 0.5)                           # fly size (0.5 since Nov 14: the first render's flies were far too big)
             f.location = (x, y, z); f.rotation_euler.z = a + math.pi / 2; f.scale = (sc, sc, sc)
     elif name == "mud":
         for k, d in enumerate(P["drops"]):

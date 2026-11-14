@@ -130,12 +130,12 @@
   "scheduled_on": "2026-11-14"
  },
  {
-  "file": "shorts3d/zs3d_milo_lion.mp4",
-  "source": "zoo3d_ep05.mp4 25.0-38.0",
+  "file": "shorts3d/zs3d_lion_sleep.mp4",
+  "source": "zoo3d_ep12.mp4 17.3-34.3 (ep12y render)",
   "date": "2026-11-16",
   "time": "11:30 AM",
-  "title": "Milo Had a Zoo, E-I-E-I-O! And a Lion Says Roar!",
-  "description": "Milo had a zoo, E-I-E-I-O! And at the zoo he had a lion: roar here, roar there!\nA short animal sounds sing-along for kids to the Old MacDonald tune. From \"Milo Had a Zoo!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "title": "Lions Sleep Most of the Day! Sleepy Animals with Milo",
+  "description": "Lions sleep most of the day, then wake up to play! And giraffes take tiny naps standing up.\nA short sleepy animals song for kids with Milo the bluebird. From \"How Do Animals Sleep?\" on The Animated Zoo. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
   "made_for_kids": true,
   "status": "to_upload",
@@ -144,11 +144,11 @@
  },
  {
   "file": "shorts3d/zs3d_baby_foal.mp4",
-  "source": "zoo3d_ep13.mp4 48.9-67.1",
+  "source": "zoo3d_ep13.mp4 49.2-67.2 (re-cut from the 13-scene ep13y render, Nov 14)",
   "date": "2026-11-16",
   "time": "6:30 PM",
-  "title": "What Is a Baby Zebra Called? A Foal! Song with Milo",
-  "description": "What is a baby zebra called? A foal, with wobbly legs! And a baby giraffe is a calf, already taller than you.\nA short baby animal names song for kids with Milo the bluebird. From \"Baby Animal Names!\" on The Animated Zoo. Ages 2-5.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "title": "A Baby Zebra Is Called a Foal! Baby Animal Names",
+  "description": "A baby zebra is called a foal, with wobbly legs out on a stroll! And a baby giraffe is a calf, already taller than you.\nA short baby animal names song for kids with Milo the bluebird. From \"Baby Animal Names!\" on The Animated Zoo. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
   "made_for_kids": true,
   "status": "to_upload",
@@ -219,6 +219,20 @@
   "status": "to_upload",
   "format": "3d_short_cut",
   "thumb": null
+ },
+ {
+  "file": "shorts3d/zs3d_milo_lion.mp4",
+  "source": "zoo3d_ep05.mp4 25.0-38.0",
+  "date": "2026-11-19",
+  "time": "7:30 AM",
+  "title": "Milo Had a Zoo, E-I-E-I-O! And a Lion Says Roar!",
+  "description": "Milo had a zoo, E-I-E-I-O! And at the zoo he had a lion: roar here, roar there!\nA short animal sounds sing-along for kids to the Old MacDonald tune. From \"Milo Had a Zoo!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "channel": "animated-zoo",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_short_cut",
+  "thumb": null,
+  "note": "moved from Nov 16 11:30 (fact-surprise Short took the slot); retitle to the fact pattern before upload"
  },
  {
   "file": "shorts3d/zs3d_knees_paws.mp4",

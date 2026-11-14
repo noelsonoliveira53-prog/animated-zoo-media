@@ -16,3 +16,6 @@
 | 2026-11-14 | zoo3d_ep18.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-14 | zoo3d_ep12.mp4 | 3d_singalong | PASS | - | - | Write the outro as its own sung lines (or use 'after' places) so the last 30 s keep changing scenes and captions stay in sync |
 | 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | Give every baby-animal verse its parent+baby pair in a NEW place (never the same meadow twice in a row), and start the thumbnail on the first single-animal close-up |
+| 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | finish.py now matches mis-heard outro captions across two lyric lines (ep13 had 'four'/'foe' for 'foal'); grep every .ass for words not in the lyrics before upload |
+| 2026-11-14 | shorts3d/zs3d_lion_sleep.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs3d_baby_foal.mp4 | 3d_short_cut | PASS | - | - | - |

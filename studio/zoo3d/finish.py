@@ -40,7 +40,15 @@ def clean_extra(timing):
         lt = l["text"].split()
         wins = [ll["text"].split()[i:i + len(lt)] for ll in lyr for i in range(max(1, len(ll["text"].split()) - len(lt) + 1))]
         wins = [w for w in wins if len(w) == len(lt)]
-        bw = max(wins, key=lambda w: difflib.SequenceMatcher(None, nrm(" ".join(w)), nrm(l["text"])).ratio()) if wins else None
+        _r = lambda w: difflib.SequenceMatcher(None, nrm(" ".join(w)), nrm(l["text"])).ratio()
+        bw = max(wins, key=_r) if wins else None
+        if not bw or _r(bw) < 0.7:   # Nov 14: also try windows that span two lyric lines ("maybe! Cub and calf and foal"; ep13 burned "four"/"foe")
+            _stream = [t for ll in lyr for t in ll["text"].split()]
+            _sw = [_stream[i:i + len(lt)] for i in range(max(1, len(_stream) - len(lt) + 1))]
+            _sw = [w for w in _sw if len(w) == len(lt)]
+            if _sw:
+                _b2 = max(_sw, key=_r)
+                if not bw or _r(_b2) > _r(bw): bw = _b2
         if bw and difflib.SequenceMatcher(None, nrm(" ".join(bw)), nrm(l["text"])).ratio() >= 0.7:
             bt = bw
             if True:

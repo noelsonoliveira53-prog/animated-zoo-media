@@ -7,3 +7,7 @@
 | 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | only 7 scenes in the scene plan (need 8+; run routes.py) | - |
 | 2026-11-14 | zoo3d_ep12.mp4 | 3d_singalong | PASS | - | only 6 scenes in the scene plan (need 8+; run routes.py) | - |
 | 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | only 7 scenes in the scene plan (need 8+; run routes.py) | - |
+| 2026-11-14 | shorts3d/zs3d_home_hippo.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs3d_sleep_giraffe.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs3d_baby_cub.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs3d_home_action.mp4 | 3d_short_cut | PASS | - | - | - |

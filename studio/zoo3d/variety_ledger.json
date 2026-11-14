@@ -34,7 +34,7 @@
   "new_song": false
  },
  {
-  "id": "zoo3d_ep12w",
+  "id": "zoo3d_ep12y",
   "places": [
    [
     "river",
@@ -42,6 +42,10 @@
    ],
    [
     "savanna",
+    "golden"
+   ],
+   [
+    "beach",
     "sunset"
    ],
    [
@@ -49,16 +53,40 @@
     "night"
    ],
    [
-    "river",
-    "night"
+    "autumn_forest",
+    "sunset"
    ],
    [
     "mountain",
     "night"
    ],
    [
+    "river",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "beach",
+    "sunset"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
     "night_meadow",
     "night"
+   ],
+   [
+    "beach",
+    "sunset"
    ]
   ],
   "cast": [
@@ -71,7 +99,7 @@
   "new_song": false
  },
  {
-  "id": "zoo3d_ep13w",
+  "id": "zoo3d_ep13y",
   "places": [
    [
     "spring_meadow",
@@ -79,10 +107,6 @@
    ],
    [
     "savanna",
-    "morning"
-   ],
-   [
-    "spring_meadow",
     "noon"
    ],
    [
@@ -90,16 +114,44 @@
     "morning"
    ],
    [
-    "jungle",
-    "morning"
+    "farm",
+    "noon"
    ],
    [
     "river",
     "noon"
    ],
    [
-    "spring_meadow",
+    "bamboo",
     "golden"
+   ],
+   [
+    "beach",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "farm",
+    "golden"
+   ],
+   [
+    "beach",
+    "noon"
    ]
   ],
   "cast": [

@@ -1,5 +1,16 @@
 # Views check log (newest first)
 
+## 2026-11-14 (The Animated Zoo only, Studio Advanced analytics, lifetime; numbers identical to the Nov 13 check: Studio has not refreshed)
+Totals: 22,466 views, 332,437 impressions, 2.3% CTR, 0:25 average view, 174 likes (per-video list in the Command Center, analytics/animated-zoo-2026-11-14).
+Top: Where Is My Mama? (3D song) 3,788 · Octopus 3 Hearts (fact Short) 3,228 · Camel Humps (fact Short) 3,206 · Flamingos Pink (fact Short) 2,925 · Meerkats (fact Short) 925 ·
+Animal Sounds Song 738 · Amazing Animal Bodies (2D lesson) 676 · Savanna Animals (2D lesson) 600. Short cuts from songs: Lion Say 79, Giraffes Eat 20, Elephants Eat 10.
+Nothing published since Nov 13 has data yet (Count 10 Zoo Animals, Nov 13: 5 views in Studio's content list).
+
+What's winning (same data as Nov 13, so no new trend): fact-surprise Shorts beat song-cut Shorts 10-40x; 2D lessons hold 0:24-0:45 vs 0:19-0:34 for 3D songs;
+nursery-rhyme songs have the best CTR (5.0-8.8%). Scene-plan episodes and new casts have no public data yet (first ones air Nov 16+).
+Adjustment: Shorts are now 3 a day cut from songs, so each cut should lead with a true surprising fact as the on-screen question, answered within 5 s.
+Rulebook flag on the Nov 13 "more of" list: "Help! ... Is Stuck" and "Who Lost ...?" ideas break KID-03 (no animals lost/stuck/in danger, even if rescued). Use peekaboo, hide-and-seek and guessing games instead.
+
 ## 2026-11-13 (all 6 channels, Studio Advanced analytics, lifetime; analytics lag about a day; no checks ran Nov 10-12)
 | Channel | Video | Type | Published | Views (Nov 9) | Impr. | CTR | Avg view | % viewed | Likes |
 |---|---|---|---|---|---|---|---|---|---|

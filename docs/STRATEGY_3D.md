@@ -221,3 +221,8 @@ Moon "Ten Sleepy Sheep Counting Lullaby"; Gizmo "Sink or Float?", "Why Is the Sk
 Renders are now native 1920x1080, every frame (no "on twos"), then finish.py upscales to 3840x2160 (lanczos + light sharpen),
 burns the lyrics at 4K and encodes AV1 10-bit sized under 100 MB so the raw-GitHub upload recipe still works.
 Mouth animation is now syllable-driven (one open/close per syllable, loudness scales it) for clearer lip-sync.
+
+
+## Nov 14 adjustment (views check)
+- Song-cut Shorts (10-79 views) trail fact-surprise Shorts (200-3,228). New cuts: on-screen question = a surprising true fact, answered inside the first 5 s; pick the verse line that states the fact, not the chorus.
+- No 'stuck'/'lost' story hooks (KID-03); keep the question-and-reveal energy with peekaboo / guess-who instead.

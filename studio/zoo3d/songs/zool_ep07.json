@@ -1,0 +1,1031 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 2,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Arctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).\nGiant pandas live in cool, misty bamboo forests in the mountains of China and eat almost only bamboo (Smithsonian's National Zoo; WWF).\nMany monkeys are tree-dwelling and live in tropical rainforests (San Diego Zoo; Britannica).\nMany bears spend the winter resting in a den (U.S. National Park Service).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are going on a big trip!\nEvery animal has a home. Some homes are hot. Some homes are cold.\nFour animal friends are coming with us. One, two, three, four!\nLet's find out where they live. Are you ready? Let's go!\nWhere does the arctic fox live?\nDoes the arctic fox live here, in the hot, sandy desert?\nNo! Too hot for a fluffy fox. Let's try again.\nThe arctic fox lives in the snowy Arctic! Brrr!\nHere is the fun fact. In winter, the arctic fox is white, like the snow.\nBut in summer, when the snow melts, its fur turns brown!\nWhite in winter, to hide in the snow. Brown in summer, to hide in the rocks.\nSay it with me. White in winter, brown in summer!\nCan you curl up like a fox in the snow? Curl, curl, curl!\nSo cozy!\nWhere does the panda live?\nDoes the panda live here, on the hot, grassy savanna?\nNo! Nothing yummy for a panda here. Let's try again.\nThe panda lives in the bamboo forest!\nHere is the fun fact. Pandas live in cool, misty bamboo forests, high in the mountains.\nWhy bamboo? Because bamboo is a panda's favorite food. It eats bamboo almost all day!\nSay it with me. Pandas live in the bamboo forest!\nCan you munch like a panda? Munch, munch, munch!\nGreat munching!\nWhere does the monkey live?\nDoes the monkey live here, in the warm, rainy jungle?\nYes! The monkey lives in the jungle!\nHere is the fun fact. Many monkeys live high up in the jungle trees.\nThey eat in the trees, play in the trees, and sleep in the trees!\nA long tail helps a monkey balance on the branches.\nSay it with me. Monkeys live in the trees!\nCan you swing your arms like a monkey? Swing, swing, swing!\nSuper swinging!\nWhere does the brown bear live?\nDoes the bear live here, in the hot, sandy desert?\nNo! Too hot for a furry bear. Let's try again.\nThe brown bear lives in the mountain forest!\nHere is the fun fact. In winter, many bears sleep in a cozy den.\nThey snooze through the cold, snowy days, until spring comes back.\nSay it with me. Bears sleep in a den in winter!\nCan you yawn and stretch like a sleepy bear? Yawn. Stretch!\nWhat a sleepy bear!\nWow! We visited four animal homes. Now it is quiz time!\nGet ready. Think hard!\nWho lives in the snowy Arctic, and turns brown in summer?\nThe arctic fox! Yes!\nWho lives in the bamboo forest?\nThe panda! That's right!\nWho lives high in the jungle trees?\nThe monkey! Good job!\nAnd who sleeps in a den in winter?\nThe bear! You remembered!\nYou learned four new things today.\nCurl up like a fox. Munch like a panda. Swing like a monkey. And stretch like a bear!\nWhere is your home? Is it hot or cold today?\nThank you for traveling with me. Bye-bye, friends! See you next time!",
+ "duration": 253.03,
+ "bpm": 96,
+ "meta": {
+  "title": "Where Do Animals Live? Animal Homes for Kids with Milo",
+  "card": "Where Do Animals Live?",
+  "thumb_text": "HOT OR COLD?",
+  "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the bamboo forest, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the panda, the monkey and the bear, and see why they live there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal homes for kids",
+   "where do animals live",
+   "animal habitats for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs4k_arcticfox_color",
+   "title": "Arctic Foxes Change Color! White in Winter",
+   "l1": "WHERE DOES THE",
+   "l2": "ARCTIC FOX LIVE?",
+   "to": 7,
+   "seg": "arctic_fox",
+   "start": 21.077,
+   "end": 55.765,
+   "seconds": 34.7
+  },
+  {
+   "id": "zs4k_panda_home",
+   "title": "Where Do Pandas Live? In the Bamboo Forest!",
+   "l1": "WHERE DO",
+   "l2": "PANDAS LIVE?",
+   "to": 6,
+   "seg": "panda",
+   "start": 69.079,
+   "end": 99.749,
+   "seconds": 30.7
+  },
+  {
+   "id": "zs4k_monkey_trees",
+   "title": "Monkeys Live High in the Jungle Trees!",
+   "l1": "WHERE DO",
+   "l2": "MONKEYS LIVE?",
+   "to": 6,
+   "seg": "monkey",
+   "start": 112.878,
+   "end": 139.343,
+   "seconds": 26.5
+  },
+  {
+   "id": "zs4k_bear_den",
+   "title": "Bears Sleep in a Den All Winter! Animal Homes",
+   "l1": "WHERE DO",
+   "l2": "BEARS LIVE?",
+   "to": 6,
+   "seg": "bear",
+   "start": 152.553,
+   "end": 179.494,
+   "seconds": 26.9
+  }
+ ],
+ "job": {
+  "id": "zool_ep07",
+  "title": "Where Do Animals Live?",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 47,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "arctic_fox",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "arctic_fox"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "panda",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "panda"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "monkey",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "monkey"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "bear",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "bear"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "sfox",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "summer_fox",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "spring_meadow",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "arctic_fox",
+     "panda",
+     "monkey",
+     "bear"
+    ]
+   },
+   {
+    "from": "arctic_fox",
+    "biome": "desert",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "arctic_fox",
+    "biome": "arctic",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 3,
+    "show": [
+     "arctic_fox"
+    ]
+   },
+   {
+    "from": "arctic_fox",
+    "biome": "arctic",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 5,
+    "show": [
+     "arctic_fox",
+     "sfox"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 3,
+    "show": [
+     "panda"
+    ]
+   },
+   {
+    "from": "monkey",
+    "biome": "jungle",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "monkey",
+    "biome": "jungle",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "monkey"
+    ]
+   },
+   {
+    "from": "bear",
+    "biome": "desert",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "bear",
+    "biome": "mountain",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 3,
+    "show": [
+     "bear"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "beach",
+    "tod": "golden",
+    "formation": "arc",
+    "shot": "dolly",
+    "show": [
+     "arctic_fox",
+     "panda",
+     "monkey",
+     "bear"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "spring_meadow",
+    "tod": "morning",
+    "formation": "v",
+    "shot": "reveal",
+    "show": [
+     "arctic_fox",
+     "panda",
+     "monkey",
+     "bear"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 72,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "ANIMAL HOMES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       -3.4,
+       -2.3,
+       0.0
+      ],
+      "delay": 9.235,
+      "dur": 11.542,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       3.4,
+       -2.3,
+       0.0
+      ],
+      "delay": 10.568,
+      "dur": 10.209,
+      "spin": 0,
+      "opts": {
+       "hot": false
+      }
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -1.05,
+       -1.7,
+       3.55
+      ],
+      "delay": 14.36,
+      "dur": 6.417,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "times": [
+        0.0,
+        0.286,
+        0.571,
+        -2.693
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "arctic_fox",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "THE ARCTIC!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 17.133,
+      "dur": 8.122
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.96,
+      "dur": 7.631,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.41,
+      "dur": 8.781,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34",
+       "win": 7.181
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.841,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       0.2,
+       -0.7,
+       0.0
+      ],
+      "delay": 5.396,
+      "dur": 9.368,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 17.133,
+      "dur": 8.122,
+      "spin": 0,
+      "opts": {
+       "hot": false
+      }
+     },
+     {
+      "type": "teach",
+      "name": "snowflake",
+      "at": [
+       -0.55,
+       -1.1,
+       3.55
+      ],
+      "delay": 25.255,
+      "dur": 22.447,
+      "spin": 0,
+      "opts": {
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sun",
+      "at": [
+       2.55,
+       -1.1,
+       3.55
+      ],
+      "delay": 25.587,
+      "dur": 22.115,
+      "spin": 0,
+      "opts": {
+       "s": 1.1
+      }
+     }
+    ]
+   },
+   {
+    "section": "panda",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BAMBOO FOREST!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 15.596
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.605,
+      "dur": 7.407,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.055,
+      "dur": 8.557,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34",
+       "win": 6.957
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.262,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       0.2,
+       -0.7,
+       0.0
+      ],
+      "delay": 4.697,
+      "dur": 9.456,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "bamboo",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 15.596,
+      "dur": 27.903,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "monkey",
+    "shots": [
+     "teach",
+     "teach",
+     "close:monkey",
+     "exhibit",
+     "exhibit",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "THE JUNGLE!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.522
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.552,
+      "dur": 8.909,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 7.309
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.002,
+      "dur": 6.859,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.111,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "notree",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 16.973,
+      "dur": 22.402,
+      "spin": 0,
+      "opts": {
+       "nocross": 1,
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       2.55,
+       -0.9,
+       3.0
+      ],
+      "delay": 18.234,
+      "dur": 4.459,
+      "spin": 0,
+      "opts": {
+       "color": "#ffd23f"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bear",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "THE MOUNTAINS!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 15.102
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.683,
+      "dur": 6.869,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.133,
+      "dur": 8.019,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34",
+       "win": 6.419
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.802,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       0.2,
+       -0.7,
+       0.0
+      ],
+      "delay": 4.483,
+      "dur": 8.968,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "den",
+      "at": [
+       2.75,
+       -0.2,
+       0.0
+      ],
+      "delay": 21.166,
+      "dur": 19.278,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "zzz",
+      "at": [
+       2.9,
+       -1.4,
+       2.0
+      ],
+      "delay": 19.951,
+      "dur": 20.493,
+      "spin": 0,
+      "opts": {
+       "s": 1.4
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:arctic_fox",
+     "wide",
+     "close:panda",
+     "wide",
+     "close:monkey",
+     "wide",
+     "close:bear"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.852,
+      "dur": 6.707,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.5499999999999998,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 13.81,
+      "dur": 2.344,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 16.003,
+      "dur": 5.033,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.05,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 21.286,
+      "dur": 2.043,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 23.18,
+      "dur": 5.211,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.3499999999999996,
+       -0.8,
+       2.9
+      ],
+      "delay": 28.641,
+      "dur": 2.204,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 30.695,
+      "dur": 4.998,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.85,
+       -0.8,
+       2.9
+      ],
+      "delay": 35.943,
+      "dur": 2.084,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep07",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep07_timing.json",
+  "audio": "zool_ep07_song.wav"
+ }
+}

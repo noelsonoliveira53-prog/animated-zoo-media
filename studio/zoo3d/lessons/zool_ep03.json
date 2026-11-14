@@ -264,7 +264,7 @@
      "It is the zebra! Great guessing!",
      "close:zebra"
     ],
-    "Now, here is the fun fact. A zebra's stripes help keep the biting flies away!",
+    "Now, here is the fun fact. A zebra's stripes help keep the pesky flies away!",
     [
      "Look. The flies land on the plain brown horse.",
      "exhibit"
@@ -971,6 +971,6 @@
   "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
   "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
   "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
-  "native 4K render (3840x2160, 32 samples)"
+  "native 4K render (3840x2160)"
  ]
 }

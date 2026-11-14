@@ -77,6 +77,11 @@
     "Today we are playing Yes or No!",
     "I will ask a question about an animal friend.",
     "If you think yes, give a thumbs up. If you think no, shake your head.",
+    {
+     "t": "Let's practice. Yes or no. Am I a bluebird?",
+     "pause": 2.6
+    },
+    "Yes! I am Milo the bluebird! Good job.",
     "Are you ready? Let's play!"
    ]
   },
@@ -142,6 +147,7 @@
      "And the fur is not really white. Each hair is clear, like glass!",
      "exhibit"
     ],
+    "The black skin soaks up the warm sunshine. It helps the polar bear stay cozy in the cold.",
     [
      "Say it with me. Polar bear skin is black!",
      "close:host"
@@ -217,6 +223,7 @@
      "For a big, deep sleep, the horse lies down on the soft ground.",
      "close:horse"
     ],
+    "A horse does not sleep all night like you. It takes lots of tiny naps!",
     [
      "Say it with me. Horses can sleep standing up!",
      "close:host"
@@ -311,6 +318,7 @@
      "An elephant is too big and heavy. It always keeps a foot on the ground.",
      "exhibit"
     ],
+    "A frog can jump. A bunny can jump. And you can jump. But an elephant? No!",
     [
      "But elephants can walk fast, and they are great swimmers!",
      "close:elephant"
@@ -416,6 +424,7 @@
      "Let's count them. One, two, three, four, five, six, seven!",
      "exhibit"
     ],
+    "A tiny mouse has seven neck bones too. Almost every furry animal has seven!",
     [
      "Say it with me. Seven neck bones, just like me!",
      "close:host"
@@ -485,6 +494,6 @@
   "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
   "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
   "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
-  "native 4K render (3840x2160, 32 samples)"
+  "native 4K render (3840x2160)"
  ]
 }

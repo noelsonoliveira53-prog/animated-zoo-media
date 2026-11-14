@@ -257,6 +257,10 @@
      "exhibit"
     ],
     [
+     "And its thick, fluffy fur is one of the warmest coats in the whole animal world!",
+     "close:arctic_fox"
+    ],
+    [
      "Say it with me. White in winter, brown in summer!",
      "close:host"
     ],
@@ -361,6 +365,10 @@
      "exhibit"
     ],
     "Why bamboo? Because bamboo is a panda's favorite food. It eats bamboo almost all day!",
+    [
+     "A panda's thick fur keeps it warm in the cool, wet forest.",
+     "close:panda"
+    ],
     [
      "Say it with me. Pandas live in the bamboo forest!",
      "close:host"
@@ -472,6 +480,10 @@
      "exhibit"
     ],
     "A long tail helps a monkey balance on the branches.",
+    [
+     "Up in the trees there are sweet fruits and crunchy leaves to eat.",
+     "close:monkey"
+    ],
     [
      "Say it with me. Monkeys live in the trees!",
      "close:host"
@@ -599,6 +611,7 @@
      "They snooze through the cold, snowy days, until spring comes back.",
      "exhibit"
     ],
+    "In spring, the bear wakes up very, very hungry. Time to find some berries!",
     [
      "Say it with me. Bears sleep in a den in winter!",
      "close:host"
@@ -668,6 +681,6 @@
   "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
   "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
   "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
-  "native 4K render (3840x2160, 32 samples)"
+  "native 4K render (3840x2160)"
  ]
 }

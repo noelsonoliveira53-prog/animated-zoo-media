@@ -1,16 +1,17 @@
 {
  "kind": "lesson",
  "format": "3d_lesson",
+ "lesson_version": 2,
  "desc_header": "IN THIS LESSON",
- "lyrics": "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).\nHorses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).\nElephants cannot jump; they keep at least one foot on the ground even when moving fast (Smithsonian Magazine, 'Ask Smithsonian').\nA giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches long (Bristol Zoo; San Diego Zoo).\nHippos cannot swim or float; they walk or push off along the river bottom (San Diego Zoo).",
- "script": "Hello, friends! I am Milo the bluebird.\nToday we are playing Yes or No!\nI will ask a question about an animal friend.\nIf you think yes, give a thumbs up. If you think no, shake your head.\nAre you ready? Let's play!\nHere is the polar bear. Look at that white, fluffy fur.\nYes or no. Is a polar bear's skin white?\nNo! Here is the fun fact. Under the fur, a polar bear's skin is black!\nAnd the fur is not really white. Each hair is clear, like glass!\nSay it with me. Polar bear skin is black!\nCan you shiver like you are in the snow? Brrr, brrr, brrr!\nBrilliant!\nHere is the horse. Clip, clop!\nYes or no. Can a horse sleep standing up?\nYes! Here is the fun fact. A horse can sleep standing up!\nIts legs lock in place, so it does not fall over.\nSay it with me. Horses can sleep standing up!\nCan you stand very still and close your eyes? Shh. One, two, three.\nWake up! Good job!\nHere is the elephant. So big and strong!\nYes or no. Can an elephant jump?\nNo! Here is the fun fact. Elephants cannot jump!\nAn elephant is too big and heavy. It always keeps a foot on the ground.\nSay it with me. Elephants cannot jump!\nCan you jump? Elephants can't, but you can! Jump, jump, jump!\nWhat great jumping!\nHere is the giraffe. Look at that long, long neck!\nYes or no. Does a giraffe have the same number of neck bones as you?\nYes! Here is the fun fact. A giraffe has seven neck bones. And so do you!\nThe giraffe's neck bones are just much, much bigger.\nSay it with me. Seven neck bones, just like me!\nCan you count to seven? One, two, three, four, five, six, seven!\nSuper counting!\nHere is the hippo, in the cool river.\nYes or no. Can a hippo swim?\nNo! Here is the fun fact. A hippo cannot swim!\nA hippo is too heavy to float. It walks along the bottom of the river.\nSay it with me. Hippos walk under the water!\nCan you walk in slow motion like a hippo? Slow, slow steps!\nSo slow and steady!\nWow! What a great game. Let's play one more time, super fast!\nGet ready. Think hard!\nIs a polar bear's skin white?\nNo! It is black!\nCan a horse sleep standing up?\nYes! It can!\nCan an elephant jump?\nNo! Elephants cannot jump!\nDoes a giraffe have seven neck bones, like you?\nYes! Seven, just like you!\nAnd can a hippo swim?\nNo! A hippo walks under the water!\nYou learned five new things today.\nShiver like a polar bear. Stand still like a horse. Jump, because elephants can't! Count to seven like a giraffe. And walk slowly like a hippo!\nWhich answer surprised you the most?\nThank you for playing with me. Bye-bye, friends! See you next time!",
- "duration": 251.72,
+ "lyrics": "A polar bear's skin is black, and its fur is not white but transparent and hollow (Polar Bears International; SeaWorld).\nHorses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).\nElephants cannot jump; they keep at least one foot on the ground even when moving fast, and they are strong swimmers (Smithsonian Magazine, 'Ask Smithsonian').\nA giraffe has seven neck vertebrae, the same number as a human; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are playing Yes or No!\nI will ask a question about an animal friend.\nIf you think yes, give a thumbs up. If you think no, shake your head.\nAre you ready? Let's play!\nHere is the polar bear. Look at that white, fluffy fur.\nYes or no. Is a polar bear's skin white?\nNo! Here is the fun fact. Under the fur, a polar bear's skin is black!\nLook closer. Black skin, hiding under all that fur.\nAnd the fur is not really white. Each hair is clear, like glass!\nSay it with me. Polar bear skin is black!\nCan you shiver like you are in the snow? Brrr, brrr, brrr!\nBrilliant!\nHere is the horse. Clip, clop!\nYes or no. Can a horse sleep standing up?\nYes! Here is the fun fact. A horse can sleep standing up!\nIts legs lock in place, so it does not fall over.\nFor a big, deep sleep, the horse lies down on the soft ground.\nSay it with me. Horses can sleep standing up!\nCan you stand very still and close your eyes? Shh. One, two, three.\nWake up! Good job!\nHere is the elephant. So big and strong!\nYes or no. Can an elephant jump?\nNo! Here is the fun fact. Elephants cannot jump!\nAn elephant is too big and heavy. It always keeps a foot on the ground.\nBut elephants can walk fast, and they are great swimmers!\nSay it with me. Elephants cannot jump!\nCan you jump? Elephants can't, but you can! Jump, jump, jump!\nWhat great jumping!\nHere is the giraffe. Look at that long, long neck!\nYes or no. Does a giraffe have the same number of neck bones as you?\nYes! Here is the fun fact. A giraffe has seven neck bones. And so do you!\nThe giraffe's neck bones are just much, much bigger. Each one is as long as a ruler!\nLet's count them. One, two, three, four, five, six, seven!\nSay it with me. Seven neck bones, just like me!\nCan you touch your neck? Gently now. Nod your head. Yes, yes, yes!\nSuper nodding!\nWow! What a great game. Let's play one more time, super fast!\nGet ready!\nIs a polar bear's skin white?\nNo! It is black!\nCan a horse sleep standing up?\nYes! It can!\nCan an elephant jump?\nNo! Elephants cannot jump!\nDoes a giraffe have seven neck bones, like you?\nYes! Seven, just like you!\nYou learned four new things today.\nShiver like a polar bear. Stand still like a horse. Jump, because elephants can't! And nod like a giraffe!\nWhich answer surprised you the most?\nThank you for playing with me. Bye-bye, friends! See you next time!",
+ "duration": 230.77,
  "bpm": 96,
  "meta": {
   "title": "Yes or No? Animal Quiz for Kids with Milo",
   "card": "Yes or No?",
   "thumb_text": "CAN IT JUMP?",
-  "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Can a hippo swim? Guess first, then learn the true answer.\nA gentle yes-or-no animal quiz for kids ages 2-6 with actions to copy and a recap at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a horse sleep standing up? Can an elephant jump? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy and a recap at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "tags": [
    "animal quiz for kids",
    "yes or no quiz for kids",
@@ -30,45 +31,44 @@
    "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
    "l1": "YES",
    "l2": "OR NO?",
+   "to": 5,
    "seg": "polar_bear",
-   "start": 18.300833333333333,
-   "end": 53.629
+   "start": 17.691,
+   "end": 42.631,
+   "seconds": 24.9
   },
   {
    "id": "zs4k_horse_sleep",
    "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
    "l1": "YES",
    "l2": "OR NO?",
+   "to": 5,
    "seg": "horse",
-   "start": 53.62862500000001,
-   "end": 85.31
+   "start": 57.484,
+   "end": 79.755,
+   "seconds": 22.3
   },
   {
    "id": "zs4k_elephant_jump",
    "title": "Elephants Can't Jump! Yes or No Animal Quiz",
    "l1": "CAN AN ELEPHANT",
    "l2": "JUMP?",
+   "to": 5,
    "seg": "elephant",
-   "start": 85.30962500000001,
-   "end": 117.059
+   "start": 94.515,
+   "end": 117.194,
+   "seconds": 22.7
   },
   {
    "id": "zs4k_giraffe_neck",
    "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
    "l1": "YES",
    "l2": "OR NO?",
+   "to": 5,
    "seg": "giraffe",
-   "start": 117.05945833333332,
-   "end": 152.278
-  },
-  {
-   "id": "zs4k_hippo_swim",
-   "title": "Hippos Can't Swim! Yes or No Animal Quiz",
-   "l1": "CAN A HIPPO",
-   "l2": "SWIM?",
-   "seg": "hippo",
-   "start": 152.27762499999997,
-   "end": 183.365
+   "start": 130.697,
+   "end": 159.175,
+   "seconds": 28.5
   }
  ],
  "job": {
@@ -121,15 +121,6 @@
      "kind": "giraffe"
     },
     "yaw": -0.38
-   },
-   {
-    "id": "hippo",
-    "char": "animal",
-    "spot": "s5",
-    "opts": {
-     "kind": "hippo"
-    },
-    "yaw": -0.1
    }
   ],
   "locations": [
@@ -138,14 +129,21 @@
     "biome": "mountain",
     "tod": "morning",
     "formation": "line",
-    "shot": "reveal"
+    "shot": "reveal",
+    "show": [
+     "polar_bear",
+     "horse",
+     "elephant",
+     "giraffe"
+    ]
    },
    {
     "from": "polar_bear",
     "biome": "arctic",
     "tod": "noon",
-    "formation": "host_right",
-    "shot": "side",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
     "show": [
      "polar_bear"
     ]
@@ -154,8 +152,9 @@
     "from": "horse",
     "biome": "farm",
     "tod": "morning",
-    "formation": "host_left",
-    "shot": "reveal",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
     "show": [
      "horse"
     ]
@@ -164,8 +163,9 @@
     "from": "elephant",
     "biome": "savanna",
     "tod": "golden",
-    "formation": "host_right",
-    "shot": "vista",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
     "show": [
      "elephant"
     ]
@@ -174,20 +174,11 @@
     "from": "giraffe",
     "biome": "spring_meadow",
     "tod": "sunset",
-    "formation": "host_left",
-    "shot": "dolly",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
     "show": [
      "giraffe"
-    ]
-   },
-   {
-    "from": "hippo",
-    "biome": "river",
-    "tod": "golden",
-    "formation": "host_right",
-    "shot": "side",
-    "show": [
-     "hippo"
     ]
    },
    {
@@ -195,14 +186,26 @@
     "biome": "beach",
     "tod": "sunset",
     "formation": "arc",
-    "shot": "vista"
+    "shot": "dolly",
+    "show": [
+     "polar_bear",
+     "horse",
+     "elephant",
+     "giraffe"
+    ]
    },
    {
     "from": "goodbye",
     "biome": "mountain",
     "tod": "golden",
     "formation": "v",
-    "shot": "reveal"
+    "shot": "reveal",
+    "show": [
+     "polar_bear",
+     "horse",
+     "elephant",
+     "giraffe"
+    ]
    }
   ],
   "intro_shot": "reveal",
@@ -221,9 +224,9 @@
      "low",
      "vista"
     ],
-    "energy": 0.8,
+    "energy": 0.7,
     "wave": 1,
-    "jump": 0.25,
+    "jump": 0.2,
     "group": false,
     "props": [
      {
@@ -233,146 +236,436 @@
       "at": "top",
       "size": 0.7,
       "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       -2.5,
+       -1.9,
+       3.7
+      ],
+      "delay": 10.659,
+      "dur": 6.732,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 0.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.5,
+       -1.9,
+       3.7
+      ],
+      "delay": 12.707,
+      "dur": 4.684,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
      }
     ]
    },
    {
     "section": "polar_bear",
     "shots": [
-     "close:polar_bear",
-     "wide",
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "exhibit",
      "close:host",
-     "dolly",
-     "close:polar_bear",
-     "side",
-     "low"
+     "teach",
+     "teach"
     ],
-    "energy": 0.5,
+    "energy": 0.3,
     "wave": 0,
-    "jump": 0.1,
+    "jump": 0.0,
     "group": false,
     "props": [
      {
       "type": "text",
-      "text": "NO!",
+      "text": "BLACK SKIN!",
       "color": "#3db8ff",
-      "at": "top",
-      "size": 1.0,
-      "delay": 0.0,
-      "word": "no",
-      "nth": 1
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 14.98
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.199,
+      "dur": 6.662,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.649,
+      "dur": 8.612,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34",
+       "win": 6.212
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.112,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "magnifier",
+      "at": [
+       2.6,
+       -1.1,
+       2.3
+      ],
+      "delay": 16.24,
+      "dur": 23.253,
+      "spin": 0,
+      "opts": {
+       "fill": "#17171c",
+       "hairs": 6,
+       "label": "SKIN",
+       "s": 1.25
+      }
      }
     ]
    },
    {
     "section": "horse",
     "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
      "close:horse",
-     "wide",
      "close:host",
-     "dolly",
-     "close:horse",
-     "side",
-     "low"
+     "teach",
+     "teach"
     ],
-    "energy": 0.5,
+    "energy": 0.3,
     "wave": 0,
-    "jump": 0.1,
+    "jump": 0.0,
     "group": false,
     "props": [
      {
       "type": "text",
-      "text": "YES!",
+      "text": "SLEEPS STANDING!",
       "color": "#ff7a00",
-      "at": "top",
-      "size": 1.0,
-      "delay": 0.0,
-      "word": "yes",
-      "nth": 1
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.908
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.81,
+      "dur": 9.046,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 6.646
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.26,
+      "dur": 6.196,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.706,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "zzz",
+      "at": [
+       0.75,
+       -1.0,
+       2.6
+      ],
+      "delay": 13.958,
+      "dur": 22.773,
+      "spin": 0,
+      "opts": {
+       "s": 1.5
+      }
      }
     ]
    },
    {
     "section": "elephant",
     "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
      "close:elephant",
-     "wide",
      "close:host",
-     "dolly",
-     "close:elephant",
-     "side",
-     "low"
+     "teach",
+     "teach"
     ],
-    "energy": 0.5,
+    "energy": 0.3,
     "wave": 0,
-    "jump": 0.1,
+    "jump": 0.0,
     "group": false,
     "props": [
      {
       "type": "text",
-      "text": "NO!",
+      "text": "NO JUMPING!",
       "color": "#8e5bd8",
-      "at": "top",
-      "size": 1.0,
-      "delay": 0.0,
-      "word": "no",
-      "nth": 1
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.972
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.356,
+      "dur": 6.222,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.806,
+      "dur": 8.172,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34",
+       "win": 5.772
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.828,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       2.5,
+       -0.9,
+       0.5
+      ],
+      "delay": 13.686,
+      "dur": 5.161,
+      "spin": 0,
+      "opts": {
+       "up": 1,
+       "s": 2.2,
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "cross",
+      "at": [
+       2.5,
+       -1.2,
+       1.6
+      ],
+      "delay": 15.293,
+      "dur": 3.554,
+      "spin": 0,
+      "opts": {
+       "s": 1.3
+      }
      }
     ]
    },
    {
     "section": "giraffe",
     "shots": [
-     "close:giraffe",
-     "wide",
+     "teach",
+     "teach",
+     "teach",
+     "exhibit",
+     "exhibit",
      "close:host",
-     "dolly",
-     "close:giraffe",
-     "side",
-     "low"
+     "teach",
+     "teach"
     ],
-    "energy": 0.5,
+    "energy": 0.3,
     "wave": 0,
-    "jump": 0.1,
+    "jump": 0.0,
     "group": false,
     "props": [
      {
       "type": "text",
-      "text": "YES!",
+      "text": "7 NECK BONES!",
       "color": "#3cc45a",
-      "at": "top",
-      "size": 1.0,
-      "delay": 0.0,
-      "word": "yes",
-      "nth": 1
-     }
-    ]
-   },
-   {
-    "section": "hippo",
-    "shots": [
-     "close:hippo",
-     "wide",
-     "close:host",
-     "dolly",
-     "close:hippo",
-     "side",
-     "low"
-    ],
-    "energy": 0.5,
-    "wave": 0,
-    "jump": 0.1,
-    "group": false,
-    "props": [
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 15.087
+     },
      {
-      "type": "text",
-      "text": "NO!",
-      "color": "#ff6fb5",
-      "at": "top",
-      "size": 1.0,
-      "delay": 0.0,
-      "word": "no",
-      "nth": 1
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.867,
+      "dur": 10.808,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 8.408
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.317,
+      "dur": 7.958,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 8.525,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "bones",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 18.246,
+      "dur": 24.024,
+      "spin": 0,
+      "opts": {
+       "n": 7,
+       "times": [
+        7.108,
+        7.411,
+        7.714,
+        8.152,
+        8.522,
+        8.892,
+        9.195
+       ]
+      }
      }
     ]
    },
@@ -381,29 +674,155 @@
     "shots": [
      "wide",
      "close:host",
-     "orbit",
-     "low",
-     "vista",
-     "close:host",
-     "high",
-     "dolly",
      "wide",
-     "close:host",
-     "orbit",
-     "low"
+     "close:polar_bear",
+     "wide",
+     "close:horse",
+     "wide",
+     "close:elephant",
+     "wide",
+     "close:giraffe"
     ],
-    "energy": 0.85,
+    "energy": 0.6,
     "wave": 1,
-    "jump": 0.25,
+    "jump": 0.2,
     "group": false,
     "props": [
      {
       "type": "text",
       "text": "ONE MORE TIME!",
-      "color": "#ffb627",
+      "color": "#ff6fb5",
       "at": "top",
       "size": 0.7,
       "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.34,
+      "dur": 4.821,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.5499999999999998,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 11.412,
+      "dur": 1.789,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 13.051,
+      "dur": 4.822,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.05,
+       0.29999999999999993,
+       2.9
+      ],
+      "delay": 18.123,
+      "dur": 1.677,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 19.649,
+      "dur": 4.456,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.3499999999999996,
+       -0.8,
+       2.9
+      ],
+      "delay": 24.355,
+      "dur": 2.464,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 26.669,
+      "dur": 5.732,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.85,
+       -0.8,
+       4.05
+      ],
+      "delay": 32.651,
+      "dur": 2.461,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
      }
     ]
    },
@@ -415,15 +834,15 @@
      "orbit",
      "low"
     ],
-    "energy": 0.85,
+    "energy": 0.6,
     "wave": 1,
-    "jump": 0.25,
+    "jump": 0.2,
     "group": false,
     "props": [
      {
       "type": "text",
       "text": "BYE-BYE!",
-      "color": "#3db8ff",
+      "color": "#ffb627",
       "at": "top",
       "size": 0.7,
       "delay": 1.0
@@ -433,8 +852,9 @@
   ],
   "song": "zool_ep06",
   "res": "3840x2160",
-  "samples": 32,
+  "samples": 16,
   "step": 1,
+  "hold_shots": true,
   "cut_mode": "beat",
   "follow_singer": false,
   "punch": false,

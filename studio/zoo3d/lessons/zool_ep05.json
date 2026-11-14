@@ -182,6 +182,11 @@
      "exhibit"
     ],
     [
+     "And every zebra has its own stripes. No two zebras match!",
+     "close:zebra"
+    ],
+    "A baby zebra knows its mama by her stripes.",
+    [
      "Say it with me. Zebra skin is black!",
      "close:host"
     ],
@@ -374,6 +379,11 @@
      "The black and white patches grow later, when the baby is a few weeks old.",
      "close:cub"
     ],
+    [
+     "A grown-up panda is big. But its baby is one of the tiniest babies of all!",
+     "exhibit"
+    ],
+    "The mama panda holds her tiny baby very, very gently.",
     [
      "Say it with me. Baby pandas are born pink!",
      "close:host"
@@ -583,6 +593,6 @@
   "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
   "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
   "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
-  "native 4K render (3840x2160, 32 samples)"
+  "native 4K render (3840x2160)"
  ]
 }

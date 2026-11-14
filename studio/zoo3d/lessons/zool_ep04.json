@@ -173,6 +173,11 @@
     ],
     "Its long neck helps it reach the leaves at the very top of the tree.",
     [
+     "Even a baby giraffe is tall. On the day it is born, it is as tall as a grown-up!",
+     "close:giraffe"
+    ],
+    "And a giraffe's tongue is long too. As long as your arm!",
+    [
      "Say it with me. The giraffe is the tallest!",
      "close:host"
     ],
@@ -283,6 +288,8 @@
      "Big body, big ears, and a big, long trunk!",
      "close:elephant"
     ],
+    "The trunk works like a hand and like a hose. It can pick up a tiny peanut, or spray a big shower!",
+    "Even a baby elephant is heavy. It weighs as much as a big grown-up on the day it is born.",
     [
      "Say it with me. The elephant is the biggest!",
      "close:host"
@@ -395,6 +402,11 @@
      "exhibit"
     ],
     [
+     "A tiger has soft, padded paws. So it can walk very, very quietly.",
+     "close:tiger"
+    ],
+    "And every tiger has its own stripes, like a name tag.",
+    [
      "Say it with me. The tiger is the biggest cat!",
      "close:host"
     ],
@@ -502,6 +514,11 @@
     ],
     "Why does a lion roar? To tell everyone, this is my home!",
     [
+     "A lion's roar is almost as loud as thunder. Boom!",
+     "close:lion"
+    ],
+    "Lions live in a family called a pride. The roar helps the family find each other.",
+    [
      "Say it with me. The lion has the loudest roar!",
      "close:host"
     ],
@@ -570,6 +587,6 @@
   "interactive lesson v2: answer signs + thinking timer, the fact is shown with an example of the thing discussed (Noelson, Nov 14 noon)",
   "calm cast, no dancing; one continuous teaching shot per idea instead of music-video cuts",
   "every animal scene is cut into a fact Short (question, answer, example); Shorts only come from lessons",
-  "native 4K render (3840x2160, 32 samples)"
+  "native 4K render (3840x2160)"
  ]
 }

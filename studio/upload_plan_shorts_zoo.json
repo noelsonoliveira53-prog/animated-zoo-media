@@ -272,5 +272,101 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_knees_paws.png",
   "thumb_text": "COPY ME!"
+ },
+ {
+  "file": "shorts3d/zs4k_zebra_flies.mp4",
+  "title": "Zebra Stripes Keep Flies Away! Guess the Animal",
+  "description": "Zebra Stripes Keep Flies Away! Guess the Animal A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nA zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_4k",
+  "from": "zool_ep03",
+  "seconds": 35.22,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs4k_zebra_flies.png",
+  "thumb_text": "NO BUZZING!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
+ },
+ {
+  "file": "shorts3d/zs4k_pig_mud.mp4",
+  "title": "Why Do Pigs Roll in Mud? To Keep Cool!",
+  "description": "Why Do Pigs Roll in Mud? To Keep Cool! A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nPigs have very few working sweat glands, so they wallow in mud to cool down; mud also protects their skin from sunburn (Bracke 2011, Applied Animal Behaviour Science).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_4k",
+  "from": "zool_ep03",
+  "seconds": 36.32,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs4k_pig_mud.png",
+  "thumb_text": "SQUISHY BATH!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
+ },
+ {
+  "file": "shorts3d/zs4k_koala_notbear.mp4",
+  "title": "A Koala Is Not a Bear! Guess the Animal",
+  "description": "A Koala Is Not a Bear! Guess the Animal A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_4k",
+  "from": "zool_ep03",
+  "seconds": 27.61,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs4k_koala_notbear.png",
+  "thumb_text": "POUCH BABY!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
+ },
+ {
+  "file": "shorts3d/zs4k_polar_swim.mp4",
+  "title": "Polar Bear Paws Are as Big as Dinner Plates!",
+  "description": "Polar Bear Paws Are as Big as Dinner Plates! A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_4k",
+  "from": "zool_ep03",
+  "seconds": 37.85,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs4k_polar_swim.png",
+  "thumb_text": "SUPER SWIMMER!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
  }
 ]

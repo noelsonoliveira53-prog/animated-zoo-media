@@ -1686,15 +1686,37 @@
    "Milo",
    "3D kids songs"
   ],
-  "date": "2026-11-18",
+  "date": "2026-11-19",
   "time": "4:00 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep18.png",
   "made_for_kids": true,
   "status": "hold_review",
   "format": "3d_singalong",
   "duration": 160.0,
-  "note": "native 4K test (a4k2) - awaiting Noelson approval before any upload",
+  "note": "native 4K test (a4k2) - awaiting Noelson approval before any upload moved to Nov 19 (zool_ep01 lesson takes Nov 18, song/lesson alternation)",
   "res": "3840x2160"
+ },
+ {
+  "file": "zool_ep01.mp4",
+  "title": "Forest Animals for Kids! 5 Fun Facts with Milo",
+  "description": "Meet five forest friends with Milo the bluebird and learn one true fact about each: pandas eat bamboo for most of the day, every tiger has its own stripes, monkeys use their tails to balance, koalas sleep most of the day, and foxes use their fluffy tails like a blanket.\nA gentle animal lesson for kids with questions, actions to copy and a quiz at the end. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nPandas eat bamboo for most of the day.\nEvery tiger has its own pattern of stripes.\nMany monkeys use their long tails to balance in the trees.\nKoalas sleep for most of the day and eat eucalyptus leaves.\nA fox curls its fluffy tail around itself like a blanket.",
+  "tags": [
+   "forest animals for kids",
+   "animal facts for kids",
+   "panda facts for kids",
+   "learn animals",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-18",
+  "time": "4:00 PM",
+  "thumb": "brand/zoo/thumb_zool_ep01.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_lesson",
+  "duration": 281.5
  },
  {
   "file": "moon/mb3d_ep10.mp4",

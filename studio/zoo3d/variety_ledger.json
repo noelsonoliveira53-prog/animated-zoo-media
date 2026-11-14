@@ -164,6 +164,51 @@
   "new_song": false
  },
  {
+  "id": "zool_ep01",
+  "places": [
+   [
+    "mountain",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "sunset"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "fox",
+   "koala",
+   "monkey",
+   "panda",
+   "tiger"
+  ],
+  "new_song": true
+ },
+ {
   "id": "zoo3d_ep14x",
   "places": [
    [
@@ -575,47 +620,47 @@
   "new_song": true
  },
  {
-  "id": "zool_ep01",
+  "id": "zool_ep02",
   "places": [
    [
-    "mountain",
+    "savanna",
     "morning"
    ],
    [
-    "bamboo",
-    "noon"
-   ],
-   [
-    "jungle",
-    "noon"
-   ],
-   [
     "river",
+    "noon"
+   ],
+   [
+    "desert",
     "golden"
+   ],
+   [
+    "farm",
+    "morning"
+   ],
+   [
+    "mountain",
+    "noon"
    ],
    [
     "spring_meadow",
     "sunset"
    ],
    [
-    "autumn_forest",
+    "night_meadow",
+    "sunset"
+   ],
+   [
+    "beach",
     "golden"
-   ],
-   [
-    "jungle",
-    "sunset"
-   ],
-   [
-    "mountain",
-    "sunset"
    ]
   ],
   "cast": [
-   "fox",
-   "koala",
-   "monkey",
-   "panda",
-   "tiger"
+   "bear",
+   "cow",
+   "elephant",
+   "pig",
+   "rhino"
   ],
   "new_song": true
  }

@@ -1,0 +1,367 @@
+{
+ "id": "zool_ep02",
+ "title": "Amazing Noses!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 23,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "rhino",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "rhino"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "pig",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "pig"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "bear",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "bear"
+   },
+   "yaw": -0.38
+  },
+  {
+   "id": "cow",
+   "char": "animal",
+   "spot": "s5",
+   "opts": {
+    "kind": "cow"
+   },
+   "yaw": -0.1
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "savanna",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal"
+  },
+  {
+   "from": "elephant",
+   "biome": "river",
+   "tod": "noon",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "rhino",
+   "biome": "desert",
+   "tod": "golden",
+   "formation": "host_left",
+   "shot": "reveal",
+   "show": [
+    "rhino"
+   ]
+  },
+  {
+   "from": "pig",
+   "biome": "farm",
+   "tod": "morning",
+   "formation": "host_right",
+   "shot": "vista",
+   "show": [
+    "pig"
+   ]
+  },
+  {
+   "from": "bear",
+   "biome": "mountain",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "bear"
+   ]
+  },
+  {
+   "from": "cow",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "cow"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "goodbye",
+   "biome": "beach",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "reveal"
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 72,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.8,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SNIFF SNIFF!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "elephant",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:elephant",
+    "side",
+    "low",
+    "orbit"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "TRUNK!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "rhino",
+   "shots": [
+    "close:rhino",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:rhino",
+    "side",
+    "low",
+    "orbit"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HORN!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "pig",
+   "shots": [
+    "close:pig",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:pig",
+    "side",
+    "low",
+    "orbit"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "OINK!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "bear",
+   "shots": [
+    "close:bear",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:bear",
+    "side",
+    "low",
+    "orbit"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SNIFF!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "cow",
+   "shots": [
+    "close:cow",
+    "wide",
+    "close:host",
+    "dolly",
+    "close:cow",
+    "side",
+    "low",
+    "orbit"
+   ],
+   "energy": 0.5,
+   "wave": 0,
+   "jump": 0.1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "MOO!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low",
+    "vista",
+    "close:host",
+    "high",
+    "dolly"
+   ],
+   "energy": 0.85,
+   "wave": 1,
+   "jump": 0.25,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "zool_ep02",
+ "res": "1920x1080",
+ "step": 1,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "zool_ep02_timing.json",
+ "audio": "zool_ep02_song.wav"
+}

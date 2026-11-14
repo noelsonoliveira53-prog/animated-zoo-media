@@ -19,3 +19,4 @@
 | 2026-11-14 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | finish.py now matches mis-heard outro captions across two lyric lines (ep13 had 'four'/'foe' for 'foal'); grep every .ass for words not in the lyrics before upload |
 | 2026-11-14 | shorts3d/zs3d_lion_sleep.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs3d_baby_foal.mp4 | 3d_short_cut | PASS | - | - | - |
+| 2026-11-14 | zool_ep01.mp4 | 3d_lesson | PASS | - | - | Lessons: cut each fact segment into a fact-surprise Short right after the lesson passes (the lesson already states the fact on screen) |

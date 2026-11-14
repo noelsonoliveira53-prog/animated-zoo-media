@@ -1,0 +1,392 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "An elephant's trunk is its nose; elephants use it to smell, breathe, drink and pick up food (Smithsonian's National Zoo).\nA rhino's horn is made of keratin, the same material as hair and fingernails (Save the Rhino International).\nPigs use their strong snouts to dig in the ground for food, and they have an excellent sense of smell (Rutgers 4-H Animal Science).\nBears have one of the best senses of smell of any animal, much better than ours (National Park Service, Yosemite).\nEvery cow has its own nose print, like a fingerprint; farmers and scientists can tell cows apart by them (dairy science research, SciDev.Net).",
+ "script": "Hello, friends! I am Milo the bluebird.\nCan you touch your nose? Boop!\nNoses help animals smell their food and find their friends.\nToday we are going to meet five animal friends with amazing noses.\nLet's count them. One, two, three, four, five!\nEach friend has one fun fact to share. Are you ready? Sniff, sniff! Let's go!\nLook! Who is big and gray, with flappy ears?\nIt is the elephant!\nWhere is the elephant's nose? Can you find it?\nIt is the trunk! Here is the fun fact. An elephant's trunk is its nose.\nThe elephant smells with its trunk, drinks with its trunk, and picks up food with its trunk!\nSay it with me. A trunk is a nose!\nCan you swing your arm like a trunk? Swing, swing, swing!\nGreat swinging!\nNow we walk to the sunny desert. Who is this?\nIt is the rhino! The rhino has a horn on its nose.\nWhat do you think the horn is made of?\nHere is the fun fact. A rhino's horn is made of the same stuff as your fingernails!\nLook at your fingernails. Wiggle your fingers!\nSay it with me. A rhino horn is like a fingernail!\nCan you stomp like a big rhino? Stomp, stomp, stomp!\nWonderful stomping!\nListen! Oink, oink! Who lives on the farm?\nIt is the pig! The pig has a round, pink snout.\nWhat does a pig do with its snout?\nHere is the fun fact. Pigs dig in the ground with their snouts to find food.\nAnd pigs are very good at smelling!\nSay it with me. Pigs dig with their snouts!\nCan you say oink like a pig? Oink, oink!\nWhat a great oink!\nLook at the tall mountains. Who is fluffy and brown?\nIt is the bear!\nCan a bear smell yummy berries from far away?\nYes! Here is the fun fact. Bears have a super nose. They smell much better than we do.\nSniff, sniff! The bear finds berries with its nose.\nSay it with me. Bears have super noses!\nCan you take a big sniff like a bear? Sniff, sniff, sniff!\nGood sniffing!\nMoo! Who is in the green meadow?\nIt is the cow!\nDo all cows have the same nose?\nNo! Here is the fun fact. Every cow has its own nose print, just like your fingerprint.\nNo two cows have the same nose print. Just like you. There is only one you!\nSay it with me. Every cow has its own nose!\nCan you moo like a cow? Moooo!\nWhat a lovely moo!\nWow! We met five friends with amazing noses. Now it is quiz time. Let's see what you remember!\nGet ready. Think hard!\nWhose nose is a long trunk? The elephant! Yes!\nWhose horn is like your fingernails? The rhino! That's right!\nWho digs with a snout? The pig! Good job!\nWho has a super nose for berries? The bear! You remembered!\nAnd who has a nose print like your fingerprint? The cow! You are so clever!\nYou learned five new things today. Elephant, rhino, pig, bear and cow.\nSwing like an elephant. Stomp like a rhino. Oink like a pig. Sniff like a bear. And moo like a cow!\nNow touch your own nose. Boop! Which nose was your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 274.77,
+ "bpm": 96,
+ "meta": {
+  "title": "Amazing Animal Noses for Kids! 5 Fun Facts with Milo",
+  "card": "Amazing Noses!",
+  "thumb_text": "SNIFF SNIFF!",
+  "description": "Sniff, sniff! Meet five animal friends with Milo the bluebird and learn one true fact about each nose: an elephant's trunk is its nose, a rhino's horn is made of the same stuff as your fingernails, pigs dig with their snouts, bears have a super sense of smell, and every cow has its own nose print.\nA gentle animal lesson for kids with questions, actions to copy and a quiz at the end. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal noses for kids",
+   "animal facts for kids",
+   "elephant trunk for kids",
+   "learn animals",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "job": {
+  "id": "zool_ep02",
+  "title": "Amazing Noses!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 23,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "rhino",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "rhino"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "pig"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "bear",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "bear"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "s5",
+    "opts": {
+     "kind": "cow"
+    },
+    "yaw": -0.1
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "savanna",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal"
+   },
+   {
+    "from": "elephant",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "elephant"
+    ]
+   },
+   {
+    "from": "rhino",
+    "biome": "desert",
+    "tod": "golden",
+    "formation": "host_left",
+    "shot": "reveal",
+    "show": [
+     "rhino"
+    ]
+   },
+   {
+    "from": "pig",
+    "biome": "farm",
+    "tod": "morning",
+    "formation": "host_right",
+    "shot": "vista",
+    "show": [
+     "pig"
+    ]
+   },
+   {
+    "from": "bear",
+    "biome": "mountain",
+    "tod": "noon",
+    "formation": "host_left",
+    "shot": "dolly",
+    "show": [
+     "bear"
+    ]
+   },
+   {
+    "from": "cow",
+    "biome": "spring_meadow",
+    "tod": "sunset",
+    "formation": "host_right",
+    "shot": "side",
+    "show": [
+     "cow"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "night_meadow",
+    "tod": "sunset",
+    "formation": "arc",
+    "shot": "vista"
+   },
+   {
+    "from": "goodbye",
+    "biome": "beach",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "reveal"
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 72,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.8,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SNIFF SNIFF!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "elephant",
+    "shots": [
+     "close:elephant",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:elephant",
+     "side",
+     "low",
+     "orbit"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TRUNK!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "rhino",
+    "shots": [
+     "close:rhino",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:rhino",
+     "side",
+     "low",
+     "orbit"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "HORN!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "pig",
+    "shots": [
+     "close:pig",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:pig",
+     "side",
+     "low",
+     "orbit"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "OINK!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "bear",
+    "shots": [
+     "close:bear",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:bear",
+     "side",
+     "low",
+     "orbit"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SNIFF!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "cow",
+    "shots": [
+     "close:cow",
+     "wide",
+     "close:host",
+     "dolly",
+     "close:cow",
+     "side",
+     "low",
+     "orbit"
+    ],
+    "energy": 0.5,
+    "wave": 0,
+    "jump": 0.1,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "MOO!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low",
+     "vista",
+     "close:host",
+     "high",
+     "dolly"
+    ],
+    "energy": 0.85,
+    "wave": 1,
+    "jump": 0.25,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep02",
+  "res": "1920x1080",
+  "step": 1,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep02_timing.json",
+  "audio": "zool_ep02_song.wav"
+ }
+}

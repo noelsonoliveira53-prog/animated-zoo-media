@@ -226,3 +226,10 @@ Mouth animation is now syllable-driven (one open/close per syllable, loudness sc
 ## Nov 14 adjustment (views check)
 - Song-cut Shorts (10-79 views) trail fact-surprise Shorts (200-3,228). New cuts: on-screen question = a surprising true fact, answered inside the first 5 s; pick the verse line that states the fact, not the chorus.
 - No 'stuck'/'lost' story hooks (KID-03); keep the question-and-reveal energy with peekaboo / guess-who instead.
+
+## Nov 14 (6:50 AM re-read, Studio refreshed): Shorts titles = fact surprise
+- 22,466 -> 26,724 views in a day; ~70% of the gain came from old fact-surprise Shorts (Camel +1,332, Ants +532, Octopus +346, Snail +260).
+  Song-cut Shorts titled "<Verb> Along with Milo!" sit at 23-184 lifetime.
+- So every Short now gets a fact-surprise title, "<Animal> <true surprising fact>!" (e.g. "Giraffes Sleep Standing Up!"), with the fact answered in the clip.
+- Lessons are the best Short source: each segment is one checked fact with a picture of that animal. Cut fact Shorts from zool_ep01 once it passes review.
+- Long-form songs stall without a browse burst (Where Is My Mama? +28/day). Keep the 4:00 PM slot alternating song / lesson; lessons hold 0:35-0:45.

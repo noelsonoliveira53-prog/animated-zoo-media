@@ -1,6 +1,22 @@
 # Views check log (newest first)
 
-## 2026-11-14 (The Animated Zoo only, Studio Advanced analytics, lifetime; numbers identical to the Nov 13 check: Studio has not refreshed)
+## 2026-11-14, 6:50 AM ET re-read (Studio refreshed; The Animated Zoo only, lifetime)
+Totals: **26,724 views (+4,258 vs the stale overnight read of 22,466)**, 349,661 impressions (+17,224), 2.3% CTR, 0:25 average view, 21.8% viewed, 202 likes (+28).
+Per-video list: Command Center analytics/animated-zoo-2026-11-14 (version 2).
+Gains in the last day: Camel Humps (fact Short) 3,206 -> 4,538 (+1,332, now #1) · Ants 230 -> 762 (+532) · Octopus 3,228 -> 3,574 (+346) · Snail's Eyes 461 -> 721 (+260) ·
+T. Rex Never Met Stegosaurus 568 -> 745 (+177) · Meerkats +141 · Polar Bears +137 · Flamingos +136 · Lion song-cut Short 79 -> 184 (+105).
+Long-form: Where Is My Mama? 3,788 -> 3,816 (+28, stalled after its Nov 9-12 burst), Animal Sounds +11, What Do Animals Eat +5, 2D lessons +1 to +2 each.
+Nursery-rhyme songs keep the top CTR but tiny reach: Head, Shoulders, Knees and Paws 12.2% CTR (189 impressions), Zoo Freeze Dance 9.7%, Milo Had a Zoo 5.1%.
+Not in the table yet: Count 10 Zoo Animals (Nov 13), Peekaboo Penguin and Who's Hiding (Nov 14).
+
+What's winning: fact-surprise Shorts are now ~70% of daily growth (old Shorts keep compounding: Camel and Ants took off 10+ days after posting). Song-cut Shorts
+with "<Verb> Along with Milo!" titles stay at 23-184. Long-form songs need the browse push; without a new burst they add only 1-30 views a day.
+2D lessons still hold longer (0:35-0:45 for Ocean & Ice, Treetop, Baby Animals) than 3D songs (0:21-0:33). Scene-plan episodes and new casts: no public data until Nov 16+.
+Adjustments: (1) Shorts titles switch to the fact-surprise pattern "<Animal> <true surprising fact>!" (the remaining song-cut titles in upload_plan_shorts_zoo.json
+were retitled before upload); (2) cut fact Shorts from the finished lesson zool_ep01 (one fact per segment) to feed the 3-a-day slots; (3) keep alternating lessons
+with songs at 4:00 PM, since lessons hold viewers longer.
+
+## 2026-11-14 overnight read (The Animated Zoo only, Studio Advanced analytics, lifetime; numbers identical to the Nov 13 check: Studio has not refreshed)
 Totals: 22,466 views, 332,437 impressions, 2.3% CTR, 0:25 average view, 174 likes (per-video list in the Command Center, analytics/animated-zoo-2026-11-14).
 Top: Where Is My Mama? (3D song) 3,788 · Octopus 3 Hearts (fact Short) 3,228 · Camel Humps (fact Short) 3,206 · Flamingos Pink (fact Short) 2,925 · Meerkats (fact Short) 925 ·
 Animal Sounds Song 738 · Amazing Animal Bodies (2D lesson) 676 · Savanna Animals (2D lesson) 600. Short cuts from songs: Lion Say 79, Giraffes Eat 20, Elephants Eat 10.

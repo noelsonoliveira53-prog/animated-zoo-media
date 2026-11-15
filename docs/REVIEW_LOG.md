@@ -40,3 +40,4 @@
 | 2026-11-15 | zool_ep09.mp4 | 3d_lesson | PASS | - | - | - |
 | 2026-11-15 | zool_ep08.mp4 | 3d_lesson | PASS | - | - | - |
 | 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | - |
+| 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | - |

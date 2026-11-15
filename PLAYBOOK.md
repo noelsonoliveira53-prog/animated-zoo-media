@@ -403,3 +403,24 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   PENDING), so this session did NOT open YouTube Studio. zoo3d_ep13.mp4 (fixed) is "to_upload" Nov 17 3:30 PM for whichever session
   uploads first; check Studio for an existing scheduled "Baby Animal Names" before uploading. zool_ep09 / zool_ep10 are "hold_fix" by the
   daily run (answer signs cut in close-up answer shots; re-renders zool_ep09b / zool_ep10a queued). A check-in at 10:30 AM verifies.
+- Nov 15, 6:43-9:00 AM ET (daily run):
+  * Views (Studio Content list + overview): 30.4K views / 28 days, 7,406 / 48 h, 68 subs. Fact Shorts still lead (Ants +549, Octopus +423,
+    Camel +288 since Nov 14); new song-cut Shorts 3-69. Impressions/CTR/AVD per video NOT read. docs/ANALYTICS.md, Command Center
+    analytics/animated-zoo-2026-11-15 + ops/status v31.
+  * Uploads (2 of 9): zool_ep08 "Who Am I?" ulm1vcaY7ZM, Nov 15 1:30 PM; zoo3d_ep13 fixed "Baby Animal Names!" lHrOXq1Ccvo, Nov 17 3:30 PM
+    (new video; tt34irM1y7o and BKfS-luRPeo stay Private). Both: review.py PASS, custom thumbnail seen as data: img, "scheduled" dialog read.
+  * HELD: zool_ep09 and zool_ep10. Frame check of the reveal moments: when an answer line is a close-up, the answer signs (still up for the
+    "hold") are cut by the right edge (ep09 0:30 GIRAFFE, ep10 0:31 STRIPES, 3:28 SPOTS). Same pattern found in the specs of zool_ep12 (monkey)
+    and in zool_ep11's hello (YES/NO signs cut in a vista shot, missing in the close:host reveal).
+    Fix: teach.py forces the 'teach' shot on every line that starts while answer signs are up; studio/zoo3d/fix_sign_shots.py patches an
+    existing job without re-voicing. Re-render jobs (test stills looked at for every changed line): zool_ep09b, zool_ep10a, zool_ep11c
+    (hello lines 3-6 'wide' + YES/NO signs at z 3.95), zool_ep12b. zool_ep11b was stopped at 8:54 AM (STOP+DONE), zool_ep12a skipped (DONE).
+  * New lessons (make_lessons_p4.py, facts read Nov 15 at SDZWA Library fact sheets, Save the Rhino, Missouri Dept. of Conservation, NPS,
+    eXtension Horses): zool_ep13 "Super Senses!" (hippo, rhino, fox; 347 s, parts 93.2/92.3/87.7) and zool_ep14 "Baby Animals" (bear+cub,
+    horse+foal, elephant+calf; 340 s, parts 86.6/88.5/93.0). teach.py: no FAIL line, 747/747 and 753/753 words aligned. Test stills looked
+    at (9 + 4 frames ep14, 9 ep13). Variety OK, recorded. Jobs + timing + audio (Opus 56k as _song.wav) on the PC, md5 read back.
+    Only TWO new lessons were written this run (the run asks for four).
+  * PC queue at 8:55 AM (worker picks alphabetically): zool_ep09b rendering, then zool_ep10a, zool_ep11c, zool_ep12b, zool_ep13, zool_ep14
+    (about 3 h each). Finish 09b/10a/11c/12b with their own job file (they publish as zool_ep09/10/11/12.mp4); frame-check every reveal.
+  * Next slots: Nov 16 9:30 AM zool_ep09 (from 09b), 1:30 PM zool_ep10 (from 10a); Nov 17 lessons from 11c/12b; Nov 18 from ep13/ep14.
+  * wordsync.EXTRA: peekaboo, yip, kits. Note: a pgrep -f loop matches its own bash command line; don't wait with "while pgrep -f".

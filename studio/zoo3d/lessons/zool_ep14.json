@@ -32,6 +32,21 @@
   {
    "id": "pig",
    "kind": "pig"
+  },
+  {
+   "id": "cub",
+   "kind": "bear",
+   "scale": 0.45
+  },
+  {
+   "id": "foal",
+   "kind": "horse",
+   "scale": 0.5
+  },
+  {
+   "id": "calf",
+   "kind": "elephant",
+   "scale": 0.45
   }
  ],
  "facts": [
@@ -109,8 +124,16 @@
     {
      "line": 2,
      "show": [
-      "bear"
-     ]
+      "bear",
+      "cub"
+     ],
+     "place": {
+      "cub": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
     }
    ],
    "choices": {
@@ -285,8 +308,16 @@
     {
      "line": 2,
      "show": [
-      "horse"
-     ]
+      "horse",
+      "foal"
+     ],
+     "place": {
+      "foal": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
     }
    ],
    "choices": {
@@ -447,8 +478,16 @@
     {
      "line": 2,
      "show": [
-      "elephant"
-     ]
+      "elephant",
+      "calf"
+     ],
+     "place": {
+      "calf": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
     }
    ],
    "choices": {

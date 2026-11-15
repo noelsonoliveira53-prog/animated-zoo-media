@@ -16,7 +16,7 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 - Daily grid (ET): lessons 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM; Shorts 7:30 AM, 11:30 AM, 7:30 PM; song 3:30 PM. Always schedule, never publish immediately.
 - Nothing in a new format is uploaded until the owner has watched one full video of it and approved it.
 - Before rendering, look at test stills of every example, every answer sign and every group scene: no character stands inside another, nothing is cut by the frame or by the Short's crop, each example is the right size next to the animal.
-- After rendering, look at frames of the finished video, of every Short and of every thumbnail before sending or uploading anything.
+- After rendering, look at frames of the finished video (every answer reveal included: close-ups cut the answer signs in zool_ep09/10), of every Short and of every thumbnail before sending or uploading anything; a "PASS" from review.py is not that look.
 - Read every fact at its source on the day the script is written; if the source cannot be read, take the line out.
 - Log every defect in `docs/IMPROVE.md` the same day and name it as fixed in the next video's spec; a defect counts as fixed only after a frame shows it fixed.
 - When the owner says a scheduled or published video is wrong: set it to Private (do not delete), fix the cause in the engine, check every other video for the same cause, re-render, upload the fixed one on the same slot.

@@ -1673,11 +1673,13 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep13.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 170.0,
   "old_video_id": "tt34irM1y7o",
-  "note": "FIXED render (PC job zoo3d_ep13za, native 4K, Nov 15 6:46 AM): babies stand beside their parents; 32 frames of the raw looked at before encoding. Replaces YouTube video tt34irM1y7o, which is PRIVATE since Nov 14 11:46 PM (keep it private, do not delete, do not re-schedule it). Upload THIS file as a NEW video and schedule it Nov 17 3:30 PM ET. Before uploading, check in Studio that no other \"Baby Animal Names\" video is already scheduled."
+  "note": "FIXED render (PC job zoo3d_ep13za, native 4K, Nov 15 6:46 AM): babies stand beside their parents; 32 frames of the raw looked at before encoding. Replaces YouTube video tt34irM1y7o, which is PRIVATE since Nov 14 11:46 PM (keep it private, do not delete, do not re-schedule it). Upload THIS file as a NEW video and schedule it Nov 17 3:30 PM ET. Before uploading, check in Studio that no other \"Baby Animal Names\" video is already scheduled.; Nov 15 daily run: review.py PASS (after ledger 13y->13za), uploaded as a NEW video lHrOXq1Ccvo, scheduled Nov 17 3:30 PM (dialog confirmed), custom thumbnail confirmed",
+  "video_id": "lHrOXq1Ccvo",
+  "thumb_set": true
  },
  {
   "file": "moon/mb3d_ep09.mp4",

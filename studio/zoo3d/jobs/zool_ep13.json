@@ -240,7 +240,7 @@
      "text": "PEEKABOO!",
      "color": "#3db8ff",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -486,7 +486,7 @@
      "text": "SUPER NOSE!",
      "color": "#ff7a00",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -695,7 +695,7 @@
      "text": "SUPER EARS!",
      "color": "#8e5bd8",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -924,7 +924,8 @@
      "color": "#3cc45a",
      "at": "top",
      "size": 0.7,
-     "delay": 1.0
+     "delay": 1.0,
+     "dur": 6.308
     },
     {
      "type": "teach",
@@ -947,15 +948,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      -1.2999999999999998,
-      0.29999999999999993,
-      2.35
+      -0.8,
+      1.2,
+      2.5
      ],
      "delay": 14.366,
-     "dur": 2.103,
+     "dur": 1.903,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     },
     {
@@ -979,15 +980,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      3.3,
-      0.29999999999999993,
-      2.35
+      4.05,
+      1.2,
+      2.2
      ],
      "delay": 22.617,
-     "dur": 2.124,
+     "dur": 1.924,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     },
     {
@@ -1011,15 +1012,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      -3.0999999999999996,
-      -0.8,
-      2.35
+      -5.85,
+      0.1,
+      2.2
      ],
      "delay": 30.336,
      "dur": 2.141,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     }
    ]
@@ -1057,5 +1058,6 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep13_timing.json",
- "audio": "zool_ep13_song.wav"
+ "audio": "zool_ep13_song.wav",
+ "layout_fix": "2026-11-15"
 }

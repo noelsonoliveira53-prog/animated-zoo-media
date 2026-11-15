@@ -29,7 +29,7 @@ SR, FPS, BPM = LS.SR, LS.FPS, LS.BPM
 GAP, SEG_GAP, LEAD = 0.75, 1.3, 0.5
 THINK, DO, CHOOSE = 2.0, 2.6, 3.2
 POS = {"ex": (2.55, -0.5, 0.0), "ex_front": (2.2, -1.5, 0.0), "ex_hi": (2.6, -1.1, 3.2), "sign_a": (1.95, -1.3, 3.7), "sign_b": (1.95, -1.3, 2.55),
-       "dots": (1.95, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (0.1, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (0, -0.6, 4.35)}
+       "dots": (1.95, -1.3, 1.7), "mid_hi": (-0.55, -0.9, 3.75), "mid": (0.1, -0.3, 0.0), "host_hi": (-3.05, -1.0, 3.3), "top": (-0.7, -0.6, 4.35)}   # top: x=-0.7 since Nov 15 (at x=0 a wide top sign covered the end of the word)
 SIGN_COL = {"a": "#1479d6", "b": "#e85d00"}
 ARC = [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]     # engine "arc" slots (quiz)
 TALL = {"giraffe": 3.8}
@@ -202,14 +202,35 @@ def build(spec):
             if ex.get("times"): o["times"] = [round(ref(seg, r, s0) - on, 3) for r in ex["times"]]
             if ex.get("leave"): o["leave"] = round(ref(seg, ex["leave"], s0) - on, 3)
             add(ex["prop"], ex.get("at", "ex"), on, off, o)
+        if kind == "teach":
+            # Nov 15 frame check (sun at 2:32 of zool_ep09b, 2:23 of zool_ep08): a close-up while a high example (z >= 3.0: sun,
+            # count badges) is up cuts it at the top of the picture. Close-up lines that overlap one use the teaching shot.
+            hi_ = [(p_["delay"], p_["delay"] + p_["dur"], p_["name"]) for p_ in P if p_.get("type") == "teach" and p_["name"] not in ("sign", "dots") and p_["at"][2] >= 3.0]
+            for k_ in range(nl):
+                a_, b_ = seg["_lt"][k_][0] - s0, seg["_lt"][k_][1] - s0
+                hit_ = [h_ for h_ in hi_ if h_[0] < b_ and a_ < h_[1]]
+                if hit_ and str(shots[k_]).startswith("close"):
+                    print(f"  note: {seg['name']} line {k_} shot {shots[k_]} -> teach ({hit_[0][2]} is up high)"); shots[k_] = "teach"
         if kind == "quiz" and seg.get("quiz"):
             q0 = seg["_q0"]
             for k, (q, a, who) in enumerate(seg["quiz"]):
                 tq = seg["_lt"][q0 + 2 * k][0] - s0; ta = seg["_lt"][q0 + 2 * k + 1][0] - s0; te = seg["_lt"][q0 + 2 * k + 1][1] - s0
                 add("badge", (0.0, -1.2, 3.55), tq, ta, {"text": "?", "color": "#8e5bd8", "s": 1.25})
                 if who in mains:
+                    # Nov 15 frames (lion 5:16 of zool_ep09b, koala 5:12 of zool_ep08): 0.9 in front of the animal the check
+                    # covered its face in the answer close-up. It stands beside the head on the outer side (1.75: clear of the
+                    # elephant's ears and the lion's mane in the stills), smaller, and is gone before the next question's wide shot.
                     x, y = ARC[mains.index(who) % len(ARC)]
-                    add("check", (x + 1.0, y - 0.9, TALL.get(who, 2.65) - 0.3), ta + 0.25, te + 0.9, {"s": 0.7})
+                    nq_ = seg["_lt"][q0 + 2 * k + 2][0] - s0 - 0.05 if q0 + 2 * k + 2 < nl else te + 0.9
+                    sl_ = mains.index(who) % len(ARC)     # back-left place: its outer side is hidden behind the front-left animal -> inner side
+                    zc_ = TALL.get(who, 2.65) - 0.45       # inner side: 1.5 from the head and 0.3 higher, or Milo's head hides its lower edge
+                    if sl_ == 0 and zc_ < 3.0: zc_ += 0.3
+                    add("check", (x + ((1.5 if sl_ == 0 else 1.75) if (x >= 0 or sl_ == 0) else -1.75), y, zc_), ta + 0.25, min(te + 0.9, nq_), {"s": 0.6})
+                    if len(mains) > 3: PROBLEMS.append("quiz with more than 3 animals: the check places are only checked for 3; look at a still of every quiz answer")
+            # the "?" badge covered the middle of the QUIZ TIME! word: the word leaves just before the first badge
+            tq0_ = seg["_lt"][q0][0] - s0
+            for p_ in P:
+                if p_.get("type") == "text" and "dur" not in p_: p_["dur"] = round(max(1.0, tq0_ - p_.get("delay", 0) - 0.15), 3)
         direct.append(d)
         if seg.get("short"):
             sh = seg["short"]   # "from"/"to": line numbers, so the Short is the question, the answer and the example (20-60 s)

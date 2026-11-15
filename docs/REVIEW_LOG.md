@@ -41,3 +41,4 @@
 | 2026-11-15 | zool_ep08.mp4 | 3d_lesson | PASS | - | - | - |
 | 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | - |
 | 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | - |
+| 2026-11-15 | zool_ep09.mp4 | 3d_lesson | PASS | - | - | quiz check beside the head, QUIZ TIME word leaves before the ? badge, 3D word at x=-0.7, no close-up while a high example is up (fix_layout.py; zool_ep09 gets them by slice jobs 09q/09s) |

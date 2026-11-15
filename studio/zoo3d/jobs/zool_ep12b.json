@@ -296,7 +296,7 @@
      "text": "THE ARCTIC!",
      "color": "#3db8ff",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -519,7 +519,7 @@
      "text": "THE JUNGLE!",
      "color": "#ff7a00",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -714,7 +714,7 @@
      "text": "THE MOUNTAINS!",
      "color": "#8e5bd8",
      "at": [
-      0,
+      -0.7,
       -0.6,
       4.35
      ],
@@ -911,7 +911,8 @@
      "color": "#3cc45a",
      "at": "top",
      "size": 0.7,
-     "delay": 1.0
+     "delay": 1.0,
+     "dur": 5.677
     },
     {
      "type": "teach",
@@ -934,15 +935,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      -1.2999999999999998,
-      0.29999999999999993,
-      2.35
+      -0.8,
+      1.2,
+      2.5
      ],
      "delay": 13.785,
-     "dur": 2.344,
+     "dur": 2.143,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     },
     {
@@ -966,15 +967,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      3.3,
-      0.29999999999999993,
-      2.35
+      4.05,
+      1.2,
+      2.2
      ],
      "delay": 21.439,
-     "dur": 2.204,
+     "dur": 2.004,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     },
     {
@@ -998,15 +999,15 @@
      "type": "teach",
      "name": "check",
      "at": [
-      -3.0999999999999996,
-      -0.8,
-      2.35
+      -5.85,
+      0.1,
+      2.2
      ],
      "delay": 28.741,
      "dur": 2.084,
      "spin": 0,
      "opts": {
-      "s": 0.7
+      "s": 0.6
      }
     }
    ]
@@ -1044,5 +1045,6 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep12_timing.json",
- "audio": "zool_ep12_song.wav"
+ "audio": "zool_ep12_song.wav",
+ "layout_fix": "2026-11-15"
 }

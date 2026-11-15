@@ -43,6 +43,12 @@ written, rendered, titled and uploaded.
      4. LOOK: `python3 teach_stills.py <id> "<part>:<line>:<frac>" ...` for at least one frame per part where an example or
         the answer signs are on screen. Check by eye: the example is the right size next to the animal, nothing covers a
         face, the signs and Milo are inside the centre 90% of the picture's width (that is what the Short shows).
+        Also one frame of EVERY quiz answer close-up (the green check must stand beside the head, not on a face and not
+        hidden behind a neighbour), one of the quiz question (the "?" badge and the QUIZ TIME! word are not on top of
+        each other) and one of every close-up line while an example is up (Nov 15: all four were wrong in the approved
+        format; engine `--frames a,b,c --test` renders any frame numbers; at most 10 stills per run, one run at a time:
+        two at once ran out of memory). A rendered lesson with one of these defects is repaired with a slice job
+        ("frame_range" in the job, see fix_layout.py) and `splice_slices.py`, not with a full re-render.
      5. RENDER on the PC (native 4K), then finish.py. v3 lessons are written to the plan as "hold_review".
      6. GATE: `review.py <file> --job jobs/<job>.json --note "<one concrete thing the next lesson does better>"`, and look at
         the contact sheet next to docs/quality_baseline/.

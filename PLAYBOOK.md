@@ -424,3 +424,27 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     (about 3 h each). Finish 09b/10a/11c/12b with their own job file (they publish as zool_ep09/10/11/12.mp4); frame-check every reveal.
   * Next slots: Nov 16 9:30 AM zool_ep09 (from 09b), 1:30 PM zool_ep10 (from 10a); Nov 17 lessons from 11c/12b; Nov 18 from ep13/ep14.
   * wordsync.EXTRA: peekaboo, yip, kits. Note: a pgrep -f loop matches its own bash command line; don't wait with "while pgrep -f".
+- Nov 15, 12:05-2:30 PM ET (check-in session; the daily run ended 8:57 AM):
+  * Studio (read only): lHrOXq1Ccvo "Baby Animal Names" is Scheduled Nov 17, 2026 3:30 PM, made for kids; tt34irM1y7o and BKfS-luRPeo are
+    Private. Nothing was changed in Studio.
+  * zool_ep09b DONE on the PC 11:51 AM (8,092 frames, 3 parts joined) -> zool_ep09.mp4 (AV1 4K, 337.2 s, 87.0 MB), review.py PASS,
+    plan "to_upload" Nov 16 9:30 AM. 30 raw frames + 6 final frames of the six answer reveals looked at: every winning sign is whole.
+    finish.py had put WHO WINS? back over the giraffe's eyes (old thumb_frame 1143): thumbnail restored from git, thumb_frame now 1265.
+  * FOUND in the same look (34 more raw frames) and ALSO in zool_ep08 "Who Am I?" (public since 1:30 PM today, same frames checked in the
+    final file): (1) quiz: the green check covers the answering animal's face in the close-up (lion 5:16 of ep09, koala 5:12 of ep08);
+    (2) quiz: the "?" badge covers the middle of QUIZ TIME!; (3) the 3D word's end is behind a wide top sign; (4) a close-up while the sun
+    example is up shows only a ray of it (2:32 ep09, 2:23 ep08). zool_ep08 was NOT touched (the owner approved that video; his call).
+  * Fix: studio/zoo3d/fix_layout.py patches a job without re-voicing; teach.py does the same for new lessons (teach.py was NOT run
+    after the edit: the next lesson build is its first test). Stills looked at for every quiz answer of ep09/10/11/12/13/14's
+    back-left animal and for all three answers of every one of the six lessons: faces clear, checks at least 95% visible
+    (the elephant's check touches the edge of its ear; Milo's head touches the edge of the polar bear's and the bear's check).
+  * PC: zool_ep11c.json, zool_ep12b.json, zool_ep13.json and zool_ep14.json REPLACED with the patched jobs before they start (md5
+    57d116cfedd7, a5960e53a901, 8ca68f1b9e6d, dcf737b3e12b; each read back = local; jobs/ in the repo holds the same files). New slice jobs (render only
+    a frame range; they run after zool_ep14, about 3-4 AM Nov 16): zool_ep09q [6913,7635) quiz, zool_ep09s [3448,3789) sun line,
+    zool_ep10q [6898,7611) quiz (read back = local). zool_ep10a was already rendering with the old layout (frame 6,545 of 8,159 at 2:20 PM).
+  * To use a slice: stage out\<slice>\<slice>_raw.mp4 and the full raw, then
+    `python3 splice_slices.py <full raw> <out raw> <09q raw>:6913 <09s raw>:3448` (checks the frame count; tested on a small copy),
+    then finish.py with the ORIGINAL job (jobs/zool_ep09b.json / zool_ep10a.json), look at the quiz frames, review.py.
+  * Still stills: one Blender at a time, at most 10 stills per run (two at once: out of memory, one run was killed).
+  * Next: zool_ep10a ends about 3:00 PM (finish as it is for Nov 16 1:30 PM, slice later); zool_ep11c about 6 PM, zool_ep12b about 9 PM,
+    zool_ep13 about midnight, zool_ep14 about 3 AM, then the three slices. zool_ep11/12/13/14 need no slice.

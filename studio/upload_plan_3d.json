@@ -1602,10 +1602,10 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep09.png",
   "made_for_kids": true,
-  "status": "hold_fix",
+  "status": "to_upload",
   "format": "3d_lesson",
   "duration": 337.2,
-  "note": "; Nov 15 daily run: HELD (not uploaded): answer signs cut by the close-up answer shots (giraffe 0:30, also elephant and lion answers). Re-render job zool_ep09b (fix_sign_shots.py, test stills looked at) queued on the PC; refinish from out/zool_ep09b, frame check, then upload on the Nov 16 9:30 AM slot."
+  "note": "Nov 15 12:30 PM: finished from the zool_ep09b re-render (review.py PASS). Frames of all six answer reveals looked at: every winning sign is whole in the picture. STILL IN THIS FILE: the quiz check covers half of the lion's face at 5:16, the ? badge covers QUIZ TIME!, only a ray of the sun shows at 2:32. Slice jobs zool_ep09q (frames 6913-7634) and zool_ep09s (3448-3788) are queued on the PC behind zool_ep14. If out\\zool_ep09q\\DONE and out\\zool_ep09s\\DONE exist: splice_slices.py + finish.py with jobs/zool_ep09b.json, look at the quiz frames, then upload. If they do not exist by upload time, this file may be uploaded as it is (same quiz layout as the approved zool_ep08)."
  },
  {
   "file": "truck/tt3d_ep09.mp4",

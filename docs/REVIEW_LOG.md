@@ -27,3 +27,6 @@
 | 2026-11-14 | shorts3d/zs90_zebra_stripes.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
 | 2026-11-14 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
 | 2026-11-14 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-14 | shorts3d/zs90_zebra_stripes.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-14 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | - | - |

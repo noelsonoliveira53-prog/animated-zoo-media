@@ -324,6 +324,46 @@ _loc_now = [None]
 def loc_at(t):
     return max((x for x in _LOC_T if x[0] <= t + 1e-6), default=(0.0, 0))[1]
 
+def _formation_spots(vis, slots, hp):
+    """Where everyone stands. Fewer animals than places: the places, in order. More: grown-ups take the places, each small
+    animal (scale < 1) stands next to the grown-up of its own kind, and whoever is left gets a free spot. Every spot is
+    tested against everyone already placed (and Milo), so two characters can never stand in the same place."""
+    if len(vis) <= len(slots): return {c: slots[k] for k, c in enumerate(vis)}
+    kind = {c["id"]: (c.get("opts") or {}).get("kind") for c in job["cast"]}
+    scale = {c["id"]: (c.get("opts") or {}).get("scale", 1.0) for c in job["cast"]}
+    rad = lambda c: 0.95 * scale.get(c, 1.0)
+    big = [c for c in vis if scale.get(c, 1.0) >= 0.8]; small = [c for c in vis if c not in big]
+    spot = {c: slots[k] for k, c in enumerate(big[:len(slots)])}
+    def free(x, y, r):
+        if math.hypot(x - hp[0], y - hp[1]) < r + 1.3: return False
+        return all(math.hypot(x - sx, y - sy) >= r + rad(o) + 0.12 for o, (sx, sy) in spot.items())
+    def seen(x, y, r):      # not hidden behind Milo or behind a bigger animal standing in front of it
+        if hp[1] < y - 0.25 and abs(x - hp[0]) < 1.25 + 0.5 * r: return False
+        if any(sy < y - 0.25 and abs(x - sx) < 0.9 * rad(o) + 0.5 * r for o, (sx, sy) in spot.items()): return False
+        # ... and it must not stand right in front of another small animal either (a cub's head on top of a calf looks stacked)
+        return not any(scale.get(o, 1.0) < 0.8 and y < sy - 0.25 and abs(x - sx) < 0.9 * r + 0.9 * rad(o) for o, (sx, sy) in spot.items())
+    def near(px, py, pr, r):
+        sg = 1.0 if px >= hp[0] else -1.0
+        for extra in (0.15, 0.5, 0.9, 1.4, 2.0, 2.7, 3.4):
+            for a in (90, 60, -90, -60, 35, -35, 0, 120, -120, 150, -150, 180):   # beside the parent first, then in front
+                d = pr + r + extra; x = px + sg * math.sin(math.radians(a)) * d; y = py - math.cos(math.radians(a)) * d
+                if abs(x) <= 5.8 and -1.7 <= y <= 5.6 and free(x, y, r) and seen(x, y, r): return (round(x, 2), round(y, 2))
+        return None
+    left = big[len(slots):]
+    for c in small:
+        par = next((b for b in big if b in spot and kind.get(b) and kind.get(b) == kind.get(c)), None)
+        p = near(spot[par][0], spot[par][1], rad(par), rad(c)) if par else None
+        if p: spot[c] = p
+        else: left.append((c, par))
+    grid = [(round(-5.6 + 0.4 * i, 2), round(-1.6 + 0.4 * k, 2)) for k in range(19) for i in range(29)]
+    for c, par in [(x if isinstance(x, tuple) else (x, None)) for x in left]:
+        # no room beside the parent (it stands in the back row): the free, visible spot closest to the parent
+        ax, ay = spot[par] if par else (hp[0], hp[1] + 4.5)
+        ok = [q for q in grid if free(q[0], q[1], rad(c)) and seen(q[0], q[1], rad(c))] or [q for q in grid if free(q[0], q[1], rad(c))]
+        spot[c] = min(ok, key=lambda q: math.hypot(q[0] - ax, q[1] - ay)) if ok else (0.0, 6.6 + 0.9 * len(spot))
+    return spot
+
+
 def set_location(i):
     global SET
     if _loc_now[0] == i: return
@@ -336,8 +376,13 @@ def set_location(i):
     if form or show:
         hp, slots = _FORM.get(form or "line", _FORM["line"])
         cast[host_id].base = (hp[0], hp[1], 0); cast[host_id].root.rotation_euler.z = -0.09 * hp[0]
-        for k, c in enumerate(vis):
-            x, y = slots[k % len(slots)]; cast[c].base = (x, y, 0); cast[c].root.rotation_euler.z = -0.09 * x
+        # A formation has 6 places. With more animals than places the old code wrapped around and put the 7th animal ON the
+        # 1st one: in zoo3d_ep13y the babies stood inside their parents (Noelson, Nov 14: "the babies inside the animals is
+        # strange"). Now: grown-ups take the places first; a small animal (scale < 1) of the same kind stands beside and in
+        # front of its parent; anything still left over gets its own spot in a back row. Nobody ever shares a spot.
+        _spot = _formation_spots(vis, slots, hp)
+        for c in vis:
+            x, y = _spot[c]; cast[c].base = (x, y, 0); cast[c].root.rotation_euler.z = -0.09 * x
     else:
         for ch in cast.values(): ch.base = ch.base0; ch.root.rotation_euler.z = ch.yaw0
     for c, pos in (lc.get("place") or {}).items():   # exact spot for one cast member at this visit: {"joey": [x, y, z]}

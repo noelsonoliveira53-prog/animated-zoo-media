@@ -346,3 +346,23 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   Frames looked at: 14 of the lesson (flies, fly count, all answer signs, mud, SNOUT, joey, leaves), 7 of the Shorts, 3 thumbnails.
   Defects found: sun above the pig cut at the top of the exhibit shot (2:23); Short thumbnails first landed on Milo's close-up (redone
   with "thumb_line"); Short captions small (164 pt from the next cut). zool_ep09 was rendering next on the PC (not checked after 9:38 PM).
+- Nov 14 11:00 PM - Nov 15 12:35 AM:
+  * Noelson 11:00 PM: "1: approved" (lesson format v3), "2: yes" (re-cut the zool_ep08 Shorts with larger captions), "3: leave songs
+    duration according to each necessity you judge". Done: studio/zoo3d/LESSON_V3_APPROVED, zool_ep08.mp4 to_upload Nov 15 1:30 PM,
+    the 3 Shorts re-cut (captions 164 pt) to_upload Nov 17/18/19 11:30 AM (three song Shorts moved to later slots), DAILY_RUN rule 5
+    and C.1, daily task prompt. NOT decided: the slots for lessons 2-4 a day (one lesson a day at 1:30 PM until he answers).
+  * TRAP: `git pull --rebase --autostash` while ffmpeg was still writing a tracked file (shorts3d/zs90_pig_mud.mp4) replaced the
+    half-written file: "moov atom not found". Re-cut with --only. Never run git stash/pull while an encode writes into the repo.
+  * Noelson 11:40 PM: "Animal baby episode is sloppy, the babies inside the animals is strange, fix that one; the already uploaded
+    episode cancel and upload the fixed one". = zoo3d_ep13 "Baby Animal Names!" (video tt34irM1y7o, was scheduled Nov 17 4:00 PM).
+    Cause: the 13y re-render has 10 animals on formations with 6 places; engine.set_location wrapped around (slots[k % 6]) and put each
+    baby ON its parent in all 8 group scenes. A scan of every zoo job found no other job with more animals than places.
+    Fix: engine._formation_spots (every character gets its own free, visible spot; babies beside their parents; lessons unchanged).
+    Checked on 6 test stills of the group scenes (out/zoo3d_ep13z/sheet4.png): all 10 characters separate.
+    YouTube: tt34irM1y7o set to PRIVATE, schedule removed (11:46 PM, "Changes saved", Private after reload). Not deleted.
+    PC: engine.py copied; job zoo3d_ep13z (native 4K, 16 samples, song zoo3d_ep13). To render it before the next lesson, zool_ep11 was
+    marked DONE (skipped) and re-queued as zool_ep11a. Order after zool_ep10: zoo3d_ep13z, zool_ep09, zool_ep11a, zool_ep12.
+    Plan: zoo3d_ep13.mp4 = "hold_fix". The Shorts zs3d_baby_cub / baby_foal / baby_action were looked at (6 frames each): no baby
+    inside a parent in them (two come from the first render, baby_foal shows only single animals); left as they are.
+    TO DO when zoo3d_ep13z is DONE: finish.py <raw> jobs/zoo3d_ep13z.json --date 2026-11-17 --time "4:00 PM" --nopush --preset 10,
+    review.py, look at every group scene, upload as a NEW video with its thumbnail, schedule Nov 17 4:00 PM, record the new id.

@@ -45,7 +45,11 @@
    "seg": "tiger",
    "start": 23.284,
    "end": 111.241,
-   "seconds": 88.0
+   "seconds": 88.0,
+   "thumb_line": [
+    5,
+    0.6
+   ]
   },
   {
    "id": "zs90_panda_pink",
@@ -56,7 +60,11 @@
    "seg": "panda",
    "start": 111.241,
    "end": 199.85,
-   "seconds": 88.6
+   "seconds": 88.6,
+   "thumb_line": [
+    3,
+    0.85
+   ]
   },
   {
    "id": "zs90_cow_spots",
@@ -67,7 +75,11 @@
    "seg": "cow",
    "start": 199.85,
    "end": 287.046,
-   "seconds": 87.2
+   "seconds": 87.2,
+   "thumb_line": [
+    5,
+    0.8
+   ]
   }
  ],
  "job": {

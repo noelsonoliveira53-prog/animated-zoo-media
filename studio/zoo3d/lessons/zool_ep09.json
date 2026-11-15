@@ -299,7 +299,11 @@
     "title": "Who Is the Tallest Animal? Giraffe Facts for Kids",
     "l1": "WHO IS THE",
     "l2": "TALLEST?",
-    "thumb_text": "UPSTAIRS WINDOW!"
+    "thumb_text": "UPSTAIRS WINDOW!",
+    "thumb_line": [
+     5,
+     0.9
+    ]
    },
    "kind": "teach"
   },
@@ -504,7 +508,11 @@
     "title": "An Elephant Is as Heavy as 4 Cars! Count With Milo",
     "l1": "WHO IS THE",
     "l2": "BIGGEST?",
-    "thumb_text": "BIG EARS!"
+    "thumb_text": "BIG EARS!",
+    "thumb_line": [
+     5,
+     0.97
+    ]
    },
    "kind": "teach"
   },
@@ -690,7 +698,11 @@
     "title": "How Loud Is a Lion's Roar? Lion Facts for Kids",
     "l1": "WHO IS THE",
     "l2": "LOUDEST?",
-    "thumb_text": "5 MILES!"
+    "thumb_text": "5 MILES!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
    },
    "kind": "teach"
   },

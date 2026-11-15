@@ -1,7 +1,7 @@
 """Cut the fact Shorts out of a finished teaching lesson, in 4K vertical (2160x3840).
 Noelson, Nov 14 2026: "Shorts should come only from teaching videos ... create all of them in 4K".
 
-  python3 lesson_shorts.py <lesson_raw.mp4> <lesson id> [--only <short id>] [--out <dir>]
+  python3 lesson_shorts.py <lesson_raw.mp4> <lesson id> [--only <short id>] [--out <dir>] [--thumbs-only]
 
 Uses the RAW 4K render (no burned captions) so the Short gets its own big captions, the lesson's own voice track
 (jobs/<id>_song.wav) and the cut points teach.py stored in songs/<id>.json "shorts" (v3 lessons, since Nov 14 5:12 PM: one whole part = one 85-95 s Short; older v2 lessons: question -> answer -> example, 15-60 s).
@@ -32,11 +32,11 @@ def make(raw, sid, sh, outdir):
     with open(ass, "w") as f:
         f.write("[Script Info]\nScriptType: v4.00+\nPlayResX: 2160\nPlayResY: 3840\nWrapStyle: 0\n\n[V4+ Styles]\n"
                 "Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding\n"
-                "Style: Cap,Baloo 2 ExtraBold,132,&H00FFFFFF,&H00FFFFFF,&H00102040,&H00000000,1,0,0,0,100,100,0,0,1,12,4,8,110,110,2640,1\n\n"
+                "Style: Cap,Baloo 2 ExtraBold,164,&H00FFFFFF,&H00FFFFFF,&H00102040,&H00000000,1,0,0,0,100,100,0,0,1,12,4,8,110,110,2640,1\n\n"
                 "[Events]\nFormat: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text\n")
         for i, l in enumerate(lines):
             st = max(0.0, l["start"] - a); en = min(d, (lines[i + 1]["start"] - a) if i + 1 < len(lines) else l["end"] - a + 0.8)
-            txt = "\\N".join(textwrap.wrap(l["text"], 26))
+            txt = "\\N".join(textwrap.wrap(l["text"], 21))      # bigger captions since Nov 14 (132 pt read small on a phone)
             f.write(f"Dialogue: 0,{ts(st)},{ts(en)},Cap,,0,0,0,,{txt}\n")
     out = os.path.join(outdir, sh["id"] + ".mp4")
     l1 = sh.get("l1", "").replace("'", "’").replace(":", "\\:"); l2 = sh.get("l2", "").replace("'", "’").replace(":", "\\:")
@@ -52,7 +52,7 @@ def make(raw, sid, sh, outdir):
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(a), "-t", str(d), "-i", raw, "-ss", str(a), "-t", str(d), "-i", os.path.join(HERE, "jobs", f"{sid}_song.wav"),
            "-filter_complex", fc, "-map", "[v]", "-map", "[au]", "-r", "24", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "40M", "-bufsize", "80M",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", out]
-    subprocess.run(cmd, check=True)
+    if not THUMBS_ONLY: subprocess.run(cmd, check=True)
     if os.path.getsize(out) > 95e6:             # files are fetched from GitHub for the upload: 100 MB is the limit there
         cmd[cmd.index("-crf") + 1] = "23"; cmd[cmd.index("-maxrate") + 1] = "8M"; cmd[cmd.index("-bufsize") + 1] = "16M"; subprocess.run(cmd, check=True)
     assert os.path.getsize(out) < 100e6, f"{out} is over 100 MB"
@@ -65,13 +65,18 @@ def make(raw, sid, sh, outdir):
            f"[b]crop=3456:2160:192:0,scale=2160:1350:flags=lanczos,eq=saturation=1.15:contrast=1.05[fg];[bg][fg]overlay=0:1200,"
            f"drawbox=x=0:y=1188:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2550:w=2160:h=12:color=white@0.9:t=fill,"
            f"drawtext=fontfile={FONT}:text='{tt}':fontsize={st}:fontcolor=0xFFD23F:borderw=24:bordercolor=0x402010:x=(w-tw)/2:y=1270,scale=1080:1920:flags=lanczos")
-    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(a + d * sh.get("thumb_at", 0.78)), "-i", raw, "-filter_complex", tfc, "-frames:v", "1", thumb], check=True)
+    # the thumbnail frame is the moment the EXAMPLE is on screen: "thumb_line": [line of the part, fraction through it].
+    # (Nov 14: the old default, 78% through, landed on Milo's "say it with me" close-up for all three zool_ep08 Shorts.)
+    tl = sh.get("thumb_line")
+    tt_s = (lines[tl[0]]["start"] + tl[1] * (lines[tl[0]]["end"] - lines[tl[0]]["start"])) if tl else a + d * sh.get("thumb_at", 0.78)
+    subprocess.run(["ffmpeg", "-v", "error", "-y", "-ss", str(round(tt_s, 2)), "-i", raw, "-filter_complex", tfc, "-frames:v", "1", thumb], check=True)
     mb = os.path.getsize(out) / 1e6
     print(f"SHORT {sh['id']}: {d} s, 2160x3840, {mb:.1f} MB -> {out}")
     return out, d, thumb
 
 
 V3 = False
+THUMBS_ONLY = "--thumbs-only" in sys.argv      # redo only the thumbnails of Shorts that are already cut
 
 
 def main():

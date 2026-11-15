@@ -311,7 +311,11 @@
     "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?",
     "l1": "STRIPES",
     "l2": "OR SPOTS?",
-    "thumb_text": "UNDER THE FUR"
+    "thumb_text": "UNDER THE FUR",
+    "thumb_line": [
+     5,
+     0.6
+    ]
    },
    "kind": "teach"
   },
@@ -510,7 +514,11 @@
     "title": "Baby Pandas Are Born Pink! As Small as Butter",
     "l1": "WHAT COLOR IS",
     "l2": "A BABY PANDA?",
-    "thumb_text": "SO TINY!"
+    "thumb_text": "SO TINY!",
+    "thumb_line": [
+     3,
+     0.85
+    ]
    },
    "kind": "teach"
   },
@@ -743,7 +751,11 @@
     "title": "Every Cow Has Her Own Spots, Like a Fingerprint!",
     "l1": "STRIPES",
     "l2": "OR SPOTS?",
-    "thumb_text": "ONLY ONE!"
+    "thumb_text": "ONLY ONE!",
+    "thumb_line": [
+     5,
+     0.8
+    ]
    },
    "kind": "teach"
   },

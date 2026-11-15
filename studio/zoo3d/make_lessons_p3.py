@@ -539,6 +539,8 @@ SHORT_THUMB = {"zs90_zebra_stripes": "NO BUZZING!", "zs90_pig_mud": "SQUISHY BAT
                "zs90_tiger_skin": "UNDER THE FUR", "zs90_panda_pink": "SO TINY!", "zs90_cow_spots": "ONLY ONE!",
                "zs90_polar_skin": "WHITE FUR?", "zs90_horse_sleep": "TINY NAPS!", "zs90_giraffe_neck": "COUNT ALONG!",
                "zs90_arcticfox_color": "BROWN TOO!", "zs90_monkey_trees": "UP TOP!", "zs90_bear_den": "COZY NAP!"}
+# the Short's thumbnail frame: [line of the part, fraction through that line] = the moment the example is on screen
+SHORT_THUMB_LINE = {"zs90_zebra_stripes": [7, 0.8], "zs90_pig_mud": [8, 0.6], "zs90_koala_notbear": [8, 0.7], "zs90_giraffe_tallest": [5, 0.9], "zs90_elephant_cars": [5, 0.97], "zs90_lion_roar": [4, 0.6], "zs90_tiger_skin": [5, 0.6], "zs90_panda_pink": [3, 0.85], "zs90_cow_spots": [5, 0.8], "zs90_polar_skin": [3, 0.8], "zs90_horse_sleep": [4, 0.7], "zs90_giraffe_neck": [4, 0.97], "zs90_arcticfox_color": [6, 0.5], "zs90_monkey_trees": [4, 0.6], "zs90_bear_den": [7, 0.5]}
 if __name__ == "__main__":
     for spec in L:
         spec.update({"voice": "af_heart", "speed": 0.84, "improves": IMPROVES, "version": 3})
@@ -549,6 +551,7 @@ if __name__ == "__main__":
             if g["kind"] == "teach": assert g.get("short") and g.get("checks"), g["name"]
             if g.get("short"):
                 g["short"]["thumb_text"] = SHORT_THUMB[g["short"]["id"]]
+                g["short"]["thumb_line"] = SHORT_THUMB_LINE[g["short"]["id"]]
                 assert len(g["short"]["title"]) <= 60, g["short"]["title"]
         json.dump(spec, open(os.path.join(HERE, "lessons", spec["id"] + ".json"), "w"), indent=1)
         print("wrote", spec["id"], spec["title"])

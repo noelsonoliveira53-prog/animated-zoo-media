@@ -22,3 +22,8 @@
 | 2026-11-14 | zool_ep01.mp4 | 3d_lesson | PASS | - | - | Lessons: cut each fact segment into a fact-surprise Short right after the lesson passes (the lesson already states the fact on screen) |
 | 2026-11-14 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | ep17y: 16 scenes incl. 2 'after' outro places; next song: write a real sung outro instead of a 35 s instrumental tail |
 | 2026-11-14 | zool_ep03.mp4 | 3d_lesson | PASS | - | - | interactive lesson prototype 1 (first render) |
+| 2026-11-14 | zool_ep08.mp4 | 3d_lesson | FAIL | title repeats another video on this channel (META-02) | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | exhibit-shot props stay at z<=3.2 so nothing is cut at the top (sun above the pig was cut in zool_ep08) |
+| 2026-11-14 | zool_ep08.mp4 | 3d_lesson | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-14 | shorts3d/zs90_zebra_stripes.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-14 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-14 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |

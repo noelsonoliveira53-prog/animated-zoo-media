@@ -285,7 +285,11 @@
     "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
     "l1": "YES",
     "l2": "OR NO?",
-    "thumb_text": "WHITE FUR?"
+    "thumb_text": "WHITE FUR?",
+    "thumb_line": [
+     3,
+     0.8
+    ]
    },
    "kind": "teach"
   },
@@ -504,7 +508,11 @@
     "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
     "l1": "YES",
     "l2": "OR NO?",
-    "thumb_text": "TINY NAPS!"
+    "thumb_text": "TINY NAPS!",
+    "thumb_line": [
+     4,
+     0.7
+    ]
    },
    "kind": "teach"
   },
@@ -708,7 +716,11 @@
     "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
     "l1": "YES",
     "l2": "OR NO?",
-    "thumb_text": "COUNT ALONG!"
+    "thumb_text": "COUNT ALONG!",
+    "thumb_line": [
+     4,
+     0.97
+    ]
    },
    "kind": "teach"
   },

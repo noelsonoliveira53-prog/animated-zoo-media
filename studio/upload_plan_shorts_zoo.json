@@ -368,5 +368,77 @@
   "thumb": "brand/zoo/shorts/thumb_zs4k_polar_swim.png",
   "thumb_text": "SUPER SWIMMER!",
   "note": "superseded Nov 14 5:12 PM by lesson format v3 (lesson at least 5:00, Shorts 85-95 s: zool_ep08-12); kept for reference, do not upload"
+ },
+ {
+  "file": "shorts3d/zs90_zebra_stripes.mp4",
+  "title": "Why Do Zebras Have Stripes? Guess the Animal!",
+  "description": "Why Do Zebras Have Stripes? Guess the Animal! A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nA zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_90",
+  "from": "zool_ep08",
+  "seconds": 88.23,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs90_zebra_stripes.png",
+  "thumb_text": "NO BUZZING!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
+ },
+ {
+  "file": "shorts3d/zs90_pig_mud.mp4",
+  "title": "Why Do Pigs Roll in Mud? Guess the Animal!",
+  "description": "Why Do Pigs Roll in Mud? Guess the Animal! A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nPigs' sweat glands do little to cool them, so they wallow in mud; mud also protects their skin from sunburn (Britannica Kids, 'pig'; Bracke 2011, Applied Animal Behaviour Science).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_90",
+  "from": "zool_ep08",
+  "seconds": 89.16,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs90_pig_mud.png",
+  "thumb_text": "SQUISHY BATH!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
+ },
+ {
+  "file": "shorts3d/zs90_koala_notbear.mp4",
+  "title": "Is a Koala a Bear? Guess the Animal with Milo",
+  "description": "Is a Koala a Bear? Guess the Animal with Milo A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWho Am I? Animal Guessing Game for Kids with Milo\u201d.\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "lesson_fact_short_90",
+  "from": "zool_ep08",
+  "seconds": 89.37,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs90_koala_notbear.png",
+  "thumb_text": "POUCH BABY!",
+  "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"
  }
 ]

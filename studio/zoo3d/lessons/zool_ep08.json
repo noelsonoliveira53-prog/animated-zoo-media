@@ -428,7 +428,11 @@
     "title": "Why Do Zebras Have Stripes? Guess the Animal!",
     "l1": "GUESS WHO?",
     "l2": "3 CLUES!",
-    "thumb_text": "NO BUZZING!"
+    "thumb_text": "NO BUZZING!",
+    "thumb_line": [
+     7,
+     0.8
+    ]
    },
    "kind": "teach"
   },
@@ -675,7 +679,11 @@
     "title": "Why Do Pigs Roll in Mud? Guess the Animal!",
     "l1": "GUESS WHO?",
     "l2": "OINK OINK!",
-    "thumb_text": "SQUISHY BATH!"
+    "thumb_text": "SQUISHY BATH!",
+    "thumb_line": [
+     8,
+     0.6
+    ]
    },
    "kind": "teach"
   },
@@ -962,7 +970,11 @@
     "title": "Is a Koala a Bear? Guess the Animal with Milo",
     "l1": "GUESS WHO?",
     "l2": "SO FLUFFY!",
-    "thumb_text": "POUCH BABY!"
+    "thumb_text": "POUCH BABY!",
+    "thumb_line": [
+     8,
+     0.7
+    ]
    },
    "kind": "teach"
   },

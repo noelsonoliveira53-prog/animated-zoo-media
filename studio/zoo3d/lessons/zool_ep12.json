@@ -348,7 +348,11 @@
     "title": "Arctic Foxes Change Color! White in Winter",
     "l1": "WHERE DOES THE",
     "l2": "ARCTIC FOX LIVE?",
-    "thumb_text": "BROWN TOO!"
+    "thumb_text": "BROWN TOO!",
+    "thumb_line": [
+     6,
+     0.5
+    ]
    },
    "kind": "teach"
   },
@@ -534,7 +538,11 @@
     "title": "Monkeys Live High in the Jungle Trees!",
     "l1": "WHERE DO",
     "l2": "MONKEYS LIVE?",
-    "thumb_text": "UP TOP!"
+    "thumb_text": "UP TOP!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
    },
    "kind": "teach"
   },
@@ -730,7 +738,11 @@
     "title": "Bears Sleep in a Den in Winter! Animal Homes",
     "l1": "WHERE DO",
     "l2": "BEARS LIVE?",
-    "thumb_text": "COZY NAP!"
+    "thumb_text": "COZY NAP!",
+    "thumb_line": [
+     7,
+     0.5
+    ]
    },
    "kind": "teach"
   },

@@ -337,3 +337,12 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Old prototypes (zool_ep03.mp4, zool_ep03b when it finishes, shorts3d/zs4k_*.mp4) stay hold_review: under 5:00 / 30-second Shorts.
   * Finish a v3 lesson: stage out\<id>\<id>_raw.partNN.mp4, concat -c copy, `python3 finish.py <raw> jobs/<id>.json --date <d> --time
     "1:30 PM" --nopush --preset 10` (run_in_background), `review.py <id>.mp4 --job jobs/<id>.json`, `lesson_shorts.py <raw> <id>`.
+- Nov 14, 9:50-11:00 PM (first v3 lesson finished): job zool_ep08a DONE on the PC 9:38:46 PM (2 h 59 m 51 s, 8,000 frames, 1.30 s/frame).
+  Raw staged in 3 parts, joined: 3840x2160, 333.3 s. finish.py -> zool_ep08.mp4 (AV1 4K, 90.5 MB, 333.4 s, hold_review, Nov 20 1:30 PM
+  placeholder date), thumbnail brand/zoo/thumb_zool_ep08.png. review.py PASS (after the superseded zool_ep03.mp4 plan entry was set to
+  "dropped": same title). lesson_shorts.py -> shorts3d/zs90_zebra_stripes.mp4 88.2 s 70.7 MB, zs90_pig_mud.mp4 89.2 s 81.8 MB,
+  zs90_koala_notbear.mp4 89.4 s 78.5 MB (2160x3840, hold_review, review.py PASS each). Encoding the lesson and the 3 Shorts together
+  took about 50 minutes on this 2-core container.
+  Frames looked at: 14 of the lesson (flies, fly count, all answer signs, mud, SNOUT, joey, leaves), 7 of the Shorts, 3 thumbnails.
+  Defects found: sun above the pig cut at the top of the exhibit shot (2:23); Short thumbnails first landed on Milo's close-up (redone
+  with "thumb_line"); Short captions small (164 pt from the next cut). zool_ep09 was rendering next on the PC (not checked after 9:38 PM).

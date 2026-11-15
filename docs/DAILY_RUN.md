@@ -44,7 +44,8 @@ written, rendered, titled and uploaded.
      6. GATE: `review.py <file> --job jobs/<job>.json --note "<one concrete thing the next lesson does better>"`, and look at
         the contact sheet next to docs/quality_baseline/.
      7. SHORTS: `lesson_shorts.py <raw> <id>` (one 85-95 s Short per part), then look at one frame of EVERY Short at a
-        moment with the answer signs: nothing may touch the edge of the middle band.
+        moment with the answer signs: nothing may touch the edge of the middle band. Look at every Short's THUMBNAIL too:
+        it must show the example (set "thumb_line" in the spec), not Milo's close-up.
      8. LOG: every defect seen in steps 4, 6 and 7 goes into docs/IMPROVE.md with `review.py --improve` the same day, and
         the next lesson's "improves" must name it as fixed. A defect is "fixed" only after a frame shows it fixed.
      9. REPORT to Noelson only what exists and was checked; list what was NOT checked.
@@ -99,9 +100,10 @@ written, rendered, titled and uploaded.
      Until then keep everything that is already scheduled and keep the schedule filled from the existing plan
      ("keep current videos ... keep the posting schedule; the new ones need to be approved by me first").
    - Every fact is checked against a reliable source before the lesson is built (spec "facts"). Lessons render with 16 samples
-     at 3840x2160 (measured on the PC Nov 14: 1.29-1.35 s/frame, same picture as 32). A v3 lesson is 8,000-8,430 frames;
-     at that measured rate this is CALCULATED as 2.9-3.2 hours each, about 12-13 hours for 4 a day (no v3 render has finished yet:
-     replace this with the measured time after the first one).
+     at 3840x2160 (measured on the PC Nov 14: 1.29-1.35 s/frame, same picture as 32). A v3 lesson is 8,000-8,430 frames.
+     MEASURED Nov 14 on the first v3 lesson (job zool_ep08a, 8,000 frames): started 6:38:55 PM, frames done 9:35:06 PM, raw
+     assembled 9:38:46 PM = 2 h 59 m 51 s for the whole job (1.30 s/frame after a 3 m 17 s scene load). Four lessons a day
+     at that rate is about 12 hours of GPU; the song comes on top.
 6. FULLY AUTOMATIC (Nov 13): Noelson never has to click anything for the daily run. A Google Vids download that opens a
    "save" prompt is picked up from ~/Downloads (newest .tmp/.crdownload/.mp4 after the click, size stable, verified with
    `bash studio/vids/pick_download.sh <staged> <out.mp4> 9`, 3 tries 20 s apart). Fallback: File > Export to Drive, then the

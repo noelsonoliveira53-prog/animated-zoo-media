@@ -1767,11 +1767,35 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep03.png",
   "made_for_kids": true,
-  "status": "hold_review",
+  "status": "dropped",
   "format": "3d_lesson",
   "duration": 285.1,
   "res": "3840x2160",
-  "note": "superseded Nov 14 5:12 PM by lesson format v3 (lesson at least 5:00, Shorts 85-95 s: zool_ep08-12); kept for reference, do not upload"
+  "note": "replaced by zool_ep08.mp4 (same lesson in format v3: 5:33, three 90-second parts). Never uploaded."
+ },
+ {
+  "file": "zool_ep08.mp4",
+  "title": "Who Am I? Animal Guessing Game for Kids with Milo",
+  "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away and no two zebras match, pigs roll in mud to keep cool and dig with a strong snout, and a koala is not a bear but carries her joey in a pouch.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nA zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).\nEach zebra's stripes are unique, like a human fingerprint; foals can stand and walk soon after birth; zebras eat mostly grass (Live Science, 'Zebra Facts').\nPigs' sweat glands do little to cool them, so they wallow in mud; mud also protects their skin from sunburn (Britannica Kids, 'pig'; Bracke 2011, Applied Animal Behaviour Science).\nPigs root for food with their snouts and have a good sense of smell; piglets are born with a well-developed sense of smell (Britannica Kids, 'pig').\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\nKoalas eat mainly eucalyptus (gum) leaves and sleep 18 to 22 hours a day (Australian Koala Foundation, savethekoala.com).",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-20",
+  "time": "1:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep08.png",
+  "made_for_kids": true,
+  "status": "hold_review",
+  "format": "3d_lesson",
+  "duration": 333.3
  },
  {
   "file": "zoo3d_ep17.mp4",

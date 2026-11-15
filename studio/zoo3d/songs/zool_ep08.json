@@ -45,7 +45,11 @@
    "seg": "zebra",
    "start": 17.311,
    "end": 105.537,
-   "seconds": 88.2
+   "seconds": 88.2,
+   "thumb_line": [
+    7,
+    0.8
+   ]
   },
   {
    "id": "zs90_pig_mud",
@@ -56,7 +60,11 @@
    "seg": "pig",
    "start": 105.537,
    "end": 194.694,
-   "seconds": 89.2
+   "seconds": 89.2,
+   "thumb_line": [
+    8,
+    0.6
+   ]
   },
   {
    "id": "zs90_koala_notbear",
@@ -67,7 +75,11 @@
    "seg": "koala",
    "start": 194.694,
    "end": 284.063,
-   "seconds": 89.4
+   "seconds": 89.4,
+   "thumb_line": [
+    8,
+    0.7
+   ]
   }
  ],
  "job": {

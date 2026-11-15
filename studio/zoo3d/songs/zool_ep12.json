@@ -45,7 +45,11 @@
    "seg": "arctic_fox",
    "start": 20.207,
    "end": 108.608,
-   "seconds": 88.4
+   "seconds": 88.4,
+   "thumb_line": [
+    6,
+    0.5
+   ]
   },
   {
    "id": "zs90_monkey_trees",
@@ -56,7 +60,11 @@
    "seg": "monkey",
    "start": 108.608,
    "end": 196.302,
-   "seconds": 87.7
+   "seconds": 87.7,
+   "thumb_line": [
+    4,
+    0.6
+   ]
   },
   {
    "id": "zs90_bear_den",
@@ -67,7 +75,11 @@
    "seg": "bear",
    "start": 196.302,
    "end": 285.171,
-   "seconds": 88.9
+   "seconds": 88.9,
+   "thumb_line": [
+    7,
+    0.5
+   ]
   }
  ],
  "job": {

@@ -45,7 +45,11 @@
    "seg": "giraffe",
    "start": 19.132,
    "end": 107.709,
-   "seconds": 88.6
+   "seconds": 88.6,
+   "thumb_line": [
+    5,
+    0.9
+   ]
   },
   {
    "id": "zs90_elephant_cars",
@@ -56,7 +60,11 @@
    "seg": "elephant",
    "start": 107.709,
    "end": 198.996,
-   "seconds": 91.3
+   "seconds": 91.3,
+   "thumb_line": [
+    5,
+    0.97
+   ]
   },
   {
    "id": "zs90_lion_roar",
@@ -67,7 +75,11 @@
    "seg": "lion",
    "start": 198.996,
    "end": 287.67,
-   "seconds": 88.7
+   "seconds": 88.7,
+   "thumb_line": [
+    4,
+    0.6
+   ]
   }
  ],
  "job": {

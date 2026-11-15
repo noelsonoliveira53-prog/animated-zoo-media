@@ -45,7 +45,11 @@
    "seg": "polar_bear",
    "start": 27.265,
    "end": 116.309,
-   "seconds": 89.0
+   "seconds": 89.0,
+   "thumb_line": [
+    3,
+    0.8
+   ]
   },
   {
    "id": "zs90_horse_sleep",
@@ -56,7 +60,11 @@
    "seg": "horse",
    "start": 116.309,
    "end": 205.148,
-   "seconds": 88.8
+   "seconds": 88.8,
+   "thumb_line": [
+    4,
+    0.7
+   ]
   },
   {
    "id": "zs90_giraffe_neck",
@@ -67,7 +75,11 @@
    "seg": "giraffe",
    "start": 205.148,
    "end": 293.944,
-   "seconds": 88.8
+   "seconds": 88.8,
+   "thumb_line": [
+    4,
+    0.97
+   ]
   }
  ],
  "job": {

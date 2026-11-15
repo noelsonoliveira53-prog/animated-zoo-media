@@ -1267,6 +1267,31 @@
   "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
  },
  {
+  "file": "zool_ep08.mp4",
+  "title": "Who Am I? Animal Guessing Game for Kids with Milo",
+  "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away and no two zebras match, pigs roll in mud to keep cool and dig with a strong snout, and a koala is not a bear but carries her joey in a pouch.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nA zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).\nEach zebra's stripes are unique, like a human fingerprint; foals can stand and walk soon after birth; zebras eat mostly grass (Live Science, 'Zebra Facts').\nPigs' sweat glands do little to cool them, so they wallow in mud; mud also protects their skin from sunburn (Britannica Kids, 'pig'; Bracke 2011, Applied Animal Behaviour Science).\nPigs root for food with their snouts and have a good sense of smell; piglets are born with a well-developed sense of smell (Britannica Kids, 'pig').\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\nKoalas eat mainly eucalyptus (gum) leaves and sleep 18 to 22 hours a day (Australian Koala Foundation, savethekoala.com).",
+  "tags": [
+   "animal guessing game for kids",
+   "who am i animals",
+   "guess the animal",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-15",
+  "time": "1:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep08.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_lesson",
+  "duration": 333.3,
+  "note": "format v3 approved by Noelson Nov 14 11:00 PM; review.py PASS Nov 14"
+ },
+ {
   "file": "truck/tt3d_ep07.mp4",
   "title": "Garbage Truck Song! Clean Up Song for Kids | Tiny Truck Town",
   "description": "The garbage truck is here! Sing along with the garbage truck as it lifts the bins, keeps Tiny Truck Town clean and helps with recycling and compost.\nKids clean up their toys, sweep and wipe, and say thank you to the driver. Ages 2-6.\n\nLYRICS\nGarbage truck, garbage truck, clean, clean, clean!\nKeeping our town so neat and green!\nLift it up, dump it in, beep, beep, beep,\nGarbage truck makes the street so neat!\nEarly in the morning, rumble, rumble, roar,\nHere comes the garbage truck, past my door!\nBig arms reach out and grab the bin,\nLift it up high and tip it in!\nPaper and bottles go in the blue,\nRecycling helps the planet too!\nBanana peels and apple cores,\nCompost makes the garden grow more!\nPick up a toy and put it away!\nClean up, clean up, every day!\nSweep, sweep, sweep and wipe, wipe, wipe,\nNow our room looks clean and bright!\nThank you, driver, waving hi,\nHonk, honk, honk as you drive by!\nEvery street is clean and neat,\nGarbage truck, you can't be beat!\nClean, clean, clean! Bye-bye, trucks!",
@@ -1411,6 +1436,31 @@
   "duration": 170.0,
   "planned_date": "2026-11-12",
   "paused_note": "Nov 13: Noelson paused all channels except The Animated Zoo"
+ },
+ {
+  "file": "zool_ep10.mp4",
+  "title": "Stripes or Spots? Animal Patterns for Kids with Milo",
+  "description": "Stripes or spots? Look closely with Milo the bluebird and pick your answer! Then look even closer: a tiger's skin is striped too and its stripes help it hide, a baby panda is born pink and as small as a stick of butter, and every cow's spots are like a fingerprint.\nAn interactive look-and-find animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nA tiger's stripe pattern is unique like a fingerprint and is also visible on its skin; the stripes help it blend in with grasses and trees; tigers are the biggest cats and very adept swimmers with partially webbed toes, and enter water to cool off (WWF Australia, '10 facts about tigers').\nA newborn giant panda is pink, hairless and about the size of a stick of butter, 1/900th the size of its mother (Smithsonian's National Zoo, 'Giant panda'); the black and white markings appear within a few weeks (National Geographic).\nGiant pandas spend 10 to 16 hours a day foraging and eating bamboo (70 to 100 pounds a day), hold the stems with a 'pseudo thumb', and live in mountain forests in China (Smithsonian's National Zoo, 'Giant panda').\nThe black and white pattern of every Holstein cow is unique, like a fingerprint (Holstein Association USA).\nCows are ruminants: they swallow grass, bring it back up as cud and chew it again; the stomach has four chambers (Britannica, 'cud').",
+  "tags": [
+   "animal patterns for kids",
+   "stripes and spots",
+   "tiger stripes for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-16",
+  "time": "1:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep10.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_lesson",
+  "duration": 339.9,
+  "note": "format v3 approved Nov 14; review.py PASS Nov 15 1:21 AM; frames of every example and answer sign looked at"
  },
  {
   "file": "truck/tt3d_ep08.mp4",
@@ -1593,7 +1643,7 @@
    "3D kids songs"
   ],
   "date": "2026-11-17",
-  "time": "4:00 PM",
+  "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep13.png",
   "made_for_kids": true,
   "status": "hold_fix",
@@ -1740,7 +1790,7 @@
    "3D kids songs"
   ],
   "date": "2026-11-19",
-  "time": "4:00 PM",
+  "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep18.png",
   "made_for_kids": true,
   "status": "hold_review",
@@ -1776,31 +1826,6 @@
   "note": "replaced by zool_ep08.mp4 (same lesson in format v3: 5:33, three 90-second parts). Never uploaded."
  },
  {
-  "file": "zool_ep08.mp4",
-  "title": "Who Am I? Animal Guessing Game for Kids with Milo",
-  "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away and no two zebras match, pigs roll in mud to keep cool and dig with a strong snout, and a koala is not a bear but carries her joey in a pouch.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nA zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).\nEach zebra's stripes are unique, like a human fingerprint; foals can stand and walk soon after birth; zebras eat mostly grass (Live Science, 'Zebra Facts').\nPigs' sweat glands do little to cool them, so they wallow in mud; mud also protects their skin from sunburn (Britannica Kids, 'pig'; Bracke 2011, Applied Animal Behaviour Science).\nPigs root for food with their snouts and have a good sense of smell; piglets are born with a well-developed sense of smell (Britannica Kids, 'pig').\nA koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).\nKoalas eat mainly eucalyptus (gum) leaves and sleep 18 to 22 hours a day (Australian Koala Foundation, savethekoala.com).",
-  "tags": [
-   "animal guessing game for kids",
-   "who am i animals",
-   "guess the animal",
-   "animals for kids",
-   "learn animals",
-   "animal facts for kids",
-   "preschool learning",
-   "animals for toddlers",
-   "The Animated Zoo",
-   "Milo"
-  ],
-  "date": "2026-11-15",
-  "time": "1:30 PM",
-  "thumb": "brand/zoo/thumb_zool_ep08.png",
-  "made_for_kids": true,
-  "status": "to_upload",
-  "format": "3d_lesson",
-  "duration": 333.3,
-  "note": "format v3 approved by Noelson Nov 14 11:00 PM; review.py PASS Nov 14"
- },
- {
   "file": "zoo3d_ep17.mp4",
   "title": "Panda Loves Bamboo! Forest Animals Song with Milo",
   "description": "Meet the forest friends with Milo the bluebird! The panda munches bamboo, the tiger shows its stripes, the monkey swings, the koala naps in a tree and the fox has a fluffy tail.\nA forest animals song for kids: munch, swing and clap along. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nLYRICS\nPanda, panda, munch, munch, munch!\nBamboo breakfast, bamboo lunch!\nForest friends, come sing with me,\nClap your hands, one, two, three!\nThe panda is black and white,\nEating bamboo, bite by bite!\nThe tiger has stripes, orange and black,\nStripes on its tail and stripes on its back!\nWho is next? Let's take a look,\nPeek around the forest nook!\nThe monkey swings from tree to tree,\nSwing your arms and swing with me!\nThe koala naps the day away,\nLeaves for dinner, every day!\nMunch like a panda! (Munch, munch, munch!)\nSwing like a monkey! (Swing, swing, swing!)\nStretch like a tiger! (Stretch up high!)\nNow wave your tail and say goodbye!\nThe fox has a tail so fluffy and red,\nIt curls up warm when it goes to bed!\nMilo sings up in the tree,\nForest friends, sing along with me!\nForest friends, we sang with glee,\nMunch, munch, munch! Bye-bye, friends!",
@@ -1815,7 +1840,7 @@
    "Milo"
   ],
   "date": "2026-11-21",
-  "time": "4:00 PM",
+  "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep17.png",
   "made_for_kids": true,
   "status": "to_upload",

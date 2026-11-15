@@ -366,3 +366,14 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     inside a parent in them (two come from the first render, baby_foal shows only single animals); left as they are.
     TO DO when zoo3d_ep13z is DONE: finish.py <raw> jobs/zoo3d_ep13z.json --date 2026-11-17 --time "4:00 PM" --nopush --preset 10,
     review.py, look at every group scene, upload as a NEW video with its thumbnail, schedule Nov 17 4:00 PM, record the new id.
+- Nov 15, 1:00-1:30 AM:
+  * zool_ep10 DONE on the PC 12:48:16 AM (8,158 frames). Raw joined 3840x2160 339.9 s -> zool_ep10.mp4 (AV1 4K, 90.3 MB, 340.0 s),
+    to_upload Nov 16 1:30 PM, review.py PASS, 18 frames looked at (every answer sign inside the 5%-95% lines, magnifier, cub on the
+    table, bamboo, fingerprint, counts, grass, milk). Weak spots logged: "tall grass" only reaches the tiger's feet; jungle backdrop
+    reads as a flat green wall.
+  * The PC took zoo3d_ep13z right after zool_ep10 (frames folder present at 1:01 AM), as planned.
+  * Noelson 1:08 AM: "Fit four" -> THE DAILY GRID in docs/DAILY_RUN.md rule 5 (lessons 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM; Shorts
+    7:30 AM, 11:30 AM, 7:30 PM; song 3:30 PM). Not-yet-uploaded plan items moved (songs 4:00 -> 3:30 PM, evening Shorts 6:30 -> 7:30 PM
+    from Nov 17). Upload cap per run 6 -> 9. The fixed zoo3d_ep13 goes to Nov 17 3:30 PM (not 4:00 PM).
+  * Noelson 1:22 AM: use the task-observer skill, "learn all improvement that works and perfect them next time". -> CLAUDE.md
+    "## Working preferences" in the repo root (15 rules) and a line in docs/DAILY_RUN.md: read it first, add one line per run.

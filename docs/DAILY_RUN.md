@@ -4,7 +4,10 @@ Channel: The Animated Zoo (UC1YuY8nqnViTtm85qxE_M1w, Milo the bluebird, ages 2-6
 (Noelson, Nov 13, 2026). Tiny Truck Town, Bloop's Color Lab, Fruity Friends, Moonbeam Bedtime and Gizmo Explains are PAUSED:
 do not check, render for, or upload to them; their plan entries stay "paused_channel" until Noelson says otherwise.
 
-Read first: PLAYBOOK.md (incl. all run notes at the end: current PC queue, what is cancelled), docs/STRATEGY_3D.md,
+Read first: CLAUDE.md "Working preferences" (the lasting rules learned from Noelson's corrections; Noelson, Nov 15: "learn all
+improvement that works and perfect them next time for every run to be better"). At the END of every run: if something new
+worked, or he corrected something, add or replace ONE short imperative line there (never a duplicate, never a secret), and
+say in the run note which line changed. Then: PLAYBOOK.md (incl. all run notes at the end: current PC queue, what is cancelled), docs/STRATEGY_3D.md,
 studio/zoo3d/DAILY_3D.md, docs/GOOGLE_VIDS.md, studio/vids/RUNBOOK.md, docs/IMPROVE.md, docs/quality_baseline/README.md.
 Load the `youtube-network-channels` skill (the channel rulebook) at the start of every run and apply it to everything
 written, rendered, titled and uploaded.
@@ -94,10 +97,19 @@ written, rendered, titled and uploaded.
    - FORMAT V3 APPROVED (Noelson, Nov 14 11:00 PM, after watching zool_ep08 and its three Shorts: "1: approved"). The file
      studio/zoo3d/LESSON_V3_APPROVED exists, so finish.py writes v3 lessons as "to_upload". Approved means the FORMAT: every
      single video still goes through the quality loop and the review gate, and an item marked "hold_review" is never uploaded.
-     * LESSON SLOT: one v3 lesson a day at 1:30 PM ET (the rulebook's long-video slot), IN ADDITION to the 4:00 PM song.
-       First five: zool_ep08 Nov 15, zool_ep10 Nov 16, zool_ep11 Nov 17, zool_ep09 Nov 18, zool_ep12 Nov 19 (the order the PC
-       renders them). His plan is 4 lessons a day: the slots for lessons 2-4 are NOT decided yet (asked Nov 14 11 PM; with the
-       2-hour spacing rule and the existing slots only 9:30 AM and 8:30 PM are free). Until he answers: one lesson a day.
+     * THE DAILY GRID (Noelson, Nov 15 1:08 AM: "Fit four" = four lessons a day, existing times moved to fit). Eight
+       videos a day, every slot 2 hours apart, all times ET:
+         5:30 AM lesson 1 | 7:30 AM Short | 9:30 AM lesson 2 | 11:30 AM Short | 1:30 PM lesson 3 | 3:30 PM SONG |
+         5:30 PM lesson 4 | 7:30 PM Short
+       (song moved from 4:00 PM to 3:30 PM, evening Short from 6:30 PM to 7:30 PM, for everything NOT yet on YouTube).
+       Fill order for lessons when fewer than four are ready: 1:30 PM, 9:30 AM, 5:30 PM, 5:30 AM.
+       A slot is filled ONLY with a lesson that passed the whole quality loop; an empty lesson slot is better than a weak
+       video. Videos already scheduled on YouTube keep their times; on a day that still has one at 4:00 PM or 6:30 PM the
+       5:30 PM lesson slot stays empty (it would be closer than 2 hours).
+       To reach four a day the PC must render four lessons a day (measured: 3 h each = 12 h) plus the song: write the next
+       day's four lessons FIRST in every run and queue them before anything else.
+       First lessons: zool_ep08 Nov 15 1:30 PM; zool_ep09 Nov 16 9:30 AM; zool_ep10 Nov 16 1:30 PM; zool_ep11 Nov 17 9:30 AM;
+       zool_ep12 Nov 17 1:30 PM.
      * LESSON SHORTS get the Shorts slots first (his rule: Shorts only from teaching videos): from Nov 17 each day's three
        slots go to lesson Shorts (three different lessons on one day), and an already-cut song Short only fills a slot when
        no lesson Short is ready. Re-cut zool_ep08 Shorts (larger captions): Nov 17, 18 and 19 at 11:30 AM.
@@ -141,12 +153,13 @@ written, rendered, titled and uploaded.
 4. If nothing is available for tomorrow's 4:00 PM slot and the month's Vids allowance has 140 s or more, make one full Vids
    episode (RUNBOOK). Never more than one a day. If Vids shows a limit, terms or sign-in page: skip Vids and report it.
 
-## C. Posting (HARD CAP 6 uploads per run; stop on "Daily upload limit reached")
+## C. Posting (HARD CAP 9 uploads per run since Nov 15: the grid is 8 a day; stop on "Daily upload limit reached")
 1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
-   at 4:00 PM ET (full Vids episodes 12:00 PM); the LESSON = the soonest "to_upload" 3d_lesson entry with lesson_version 3 at
-   1:30 PM ET on its plan date (rule 5 FORMAT V3 APPROVED). Schedule each for its own date and time, never "publish now".
+   at 3:30 PM ET (full Vids episodes 12:00 PM); the LESSONS = every "to_upload" 3d_lesson entry with lesson_version 3, each at
+   the date and time in its plan entry (rule 5 THE DAILY GRID: 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM). Schedule each for its own
+   date and time, never "publish now".
    Never upload "hold_fact_check", "paused_channel" or "rendering_variety" items. Review gate first (rule 4).
-2. Shorts: THREE A DAY (Noelson, Nov 14) at 7:30 AM, 11:30 AM and 6:30 PM ET, at least 2 hours apart. Upload every
+2. Shorts: THREE A DAY (Noelson, Nov 14) at 7:30 AM, 11:30 AM and 7:30 PM ET (6:30 PM until Nov 16), at least 2 hours apart. Upload every
    "to_upload" item in studio/upload_plan_shorts_zoo.json dated today or tomorrow (soonest first), review gate first. Keep
    at least 6 Shorts (2 days) ready from what is already cut. Do NOT cut new Shorts from songs (rule 5); new Shorts come from
    lessons with lesson_shorts.py (format approved Nov 14 11:00 PM; lesson Shorts take the slots first): 85-95 s each, one whole lesson part per Short (rule 5

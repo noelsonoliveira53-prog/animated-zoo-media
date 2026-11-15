@@ -30,3 +30,4 @@
 | 2026-11-14 | shorts3d/zs90_zebra_stripes.mp4 | lesson_fact_short_90 | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | - | - |
 | 2026-11-14 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | jungle set: the flat green wall with a white column behind the tiger reads as an unfinished backdrop; and the 'tall grass' the tiger hides in only reaches its feet |

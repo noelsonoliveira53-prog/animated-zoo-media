@@ -33,3 +33,8 @@
 | 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | jungle set: the flat green wall with a white column behind the tiger reads as an unfinished backdrop; and the 'tall grass' the tiger hides in only reaches its feet |
 | 2026-11-15 | shorts3d/zs90_tiger_skin.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
 | 2026-11-15 | shorts3d/zs90_tiger_skin.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | - | group scenes with babies: every character has its own spot (engine._formation_spots); check 30 frames of the raw before encoding |
+| 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | - | - |
+| 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | - |
+| 2026-11-15 | zool_ep09.mp4 | 3d_lesson | FAIL | banned word in title/description: blood | - | when the answer line is a close-up, the winning answer sign is half out of the picture (giraffe, 0:30): keep the teach shot for the answer or hide the sign in close-ups |
+| 2026-11-15 | zool_ep09.mp4 | 3d_lesson | PASS | - | - | - |

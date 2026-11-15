@@ -389,3 +389,13 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Queue now: zool_ep09 is rendering (started ~2:19 AM, old engine: fine for lessons). zool_ep11a and zool_ep12 marked DONE (skipped)
     and re-queued as zool_ep11b and zool_ep12a so that the next scan takes zoo3d_ep13za (the real fix) first, then 11b, 12a.
   * zoo3d_ep13.mp4 stays "hold_fix"; old video tt34irM1y7o stays Private. Upload slot for the fix: Nov 17 3:30 PM.
+- Nov 15, 7:15-7:45 AM (check-in session):
+  * zoo3d_ep13za (the real fix) DONE on the PC 6:46 AM: raw 3840x2160, 4,080 frames. 32 frames of the RAW looked at before encoding:
+    in every group scene each baby stands beside or in front of its parent, none inside. finish.py -> zoo3d_ep13.mp4 (AV1 4K, 170.1 s,
+    90.1 MB), thumbnail brand/zoo/thumb_zoo3d_ep13.png, review.py PASS. Plan: to_upload Nov 17 3:30 PM as a NEW video (old tt34irM1y7o
+    stays Private). Ledger entry zoo3d_ep13y renamed zoo3d_ep13za (same episode).
+  * zool_ep09 DONE on the PC 5:15 AM: raw 3840x2160, 8,092 frames -> zool_ep09.mp4 (AV1 4K, 337.2 s, 86.7 MB), to_upload Nov 16 9:30 AM,
+    review.py PASS after one fix: the description contained the banned word "blood" (elephant-ears fact) -> reworded in the spec, the
+    song json and the plan. 18 frames looked at: every answer sign inside the 5%-95% lines; the giraffe's water arrow, the 1-2-3 count,
+    the four cars and the 5 MILES town are in the picture. Defect logged: at 0:30 the winning GIRAFFE sign is half cut in the close-up.
+  * Not uploaded by this session: the daily run started 6:31 AM and may be in YouTube Studio.

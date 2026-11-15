@@ -99,7 +99,7 @@
   "new_song": false
  },
  {
-  "id": "zoo3d_ep13y",
+  "id": "zoo3d_ep13za",
   "places": [
    [
     "spring_meadow",
@@ -161,7 +161,8 @@
    "lion",
    "zebra"
   ],
-  "new_song": false
+  "new_song": false,
+  "note": "same episode as the 13y render (re-rendered Nov 15 with the formation fix, native 4K)"
  },
  {
   "id": "zool_ep01",

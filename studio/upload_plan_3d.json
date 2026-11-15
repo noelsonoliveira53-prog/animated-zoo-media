@@ -1789,13 +1789,14 @@
    "The Animated Zoo",
    "Milo"
   ],
-  "date": "2026-11-20",
+  "date": "2026-11-15",
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep08.png",
   "made_for_kids": true,
-  "status": "hold_review",
+  "status": "to_upload",
   "format": "3d_lesson",
-  "duration": 333.3
+  "duration": 333.3,
+  "note": "format v3 approved by Noelson Nov 14 11:00 PM; review.py PASS Nov 14"
  },
  {
   "file": "zoo3d_ep17.mp4",

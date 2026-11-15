@@ -90,14 +90,21 @@ written, rendered, titled and uploaded.
      * Cut Shorts ON DEMAND: only for the slots of the next 2 days (3 a day), never the whole backlog. A 90 s 4K Short is a
        large file and the repo is already 9.1 GB (measured Nov 14).
      * The rulebook's old numbers (Shorts 20-60 s, long 4:30-6:30) no longer apply to The Animated Zoo's lessons; songs
-       keep their own length until Noelson says otherwise (asked Nov 14, not answered yet).
-   - NOT LIVE YET (videos): the plan is confirmed, but each new-format video still needs his look before it is scheduled
-     (his rule: he sees a full episode before anything in a new format posts). The v3 prototypes are zool_ep08..12
-     (5:33-5:51, three 87-91 s parts each, built Nov 14; PC jobs zool_ep08a, zool_ep09, 10, 11, 12). The older prototypes zool_ep03..07, the "b" renders
-     zool_ep03b..07b and the 30-second Shorts shorts3d/zs4k_*.mp4 are superseded by v3: they stay "hold_review" and are
-     not uploaded. NEVER upload a hold_review item. Noelson approves the format first (then create the empty file
-     studio/zoo3d/LESSON_V3_APPROVED so finish.py writes "to_upload"); then this file gets the daily slots.
-     Until then keep everything that is already scheduled and keep the schedule filled from the existing plan
+       are as long as each one needs (his answer Nov 14 11:00 PM; no minimum).
+   - FORMAT V3 APPROVED (Noelson, Nov 14 11:00 PM, after watching zool_ep08 and its three Shorts: "1: approved"). The file
+     studio/zoo3d/LESSON_V3_APPROVED exists, so finish.py writes v3 lessons as "to_upload". Approved means the FORMAT: every
+     single video still goes through the quality loop and the review gate, and an item marked "hold_review" is never uploaded.
+     * LESSON SLOT: one v3 lesson a day at 1:30 PM ET (the rulebook's long-video slot), IN ADDITION to the 4:00 PM song.
+       First five: zool_ep08 Nov 15, zool_ep10 Nov 16, zool_ep11 Nov 17, zool_ep09 Nov 18, zool_ep12 Nov 19 (the order the PC
+       renders them). His plan is 4 lessons a day: the slots for lessons 2-4 are NOT decided yet (asked Nov 14 11 PM; with the
+       2-hour spacing rule and the existing slots only 9:30 AM and 8:30 PM are free). Until he answers: one lesson a day.
+     * LESSON SHORTS get the Shorts slots first (his rule: Shorts only from teaching videos): from Nov 17 each day's three
+       slots go to lesson Shorts (three different lessons on one day), and an already-cut song Short only fills a slot when
+       no lesson Short is ready. Re-cut zool_ep08 Shorts (larger captions): Nov 17, 18 and 19 at 11:30 AM.
+     * SONGS (Noelson, Nov 14 11:00 PM: "leave songs duration according to each necessity you judge"): no minimum length;
+       each song is as long as its lyrics and teaching need. The 5-minute minimum is for teaching lessons only.
+     * Superseded and never uploaded: zool_ep03..07, the "b" renders zool_ep03b..07b, shorts3d/zs4k_*.mp4.
+     Keep everything that is already scheduled and keep the schedule filled from the existing plan
      ("keep current videos ... keep the posting schedule; the new ones need to be approved by me first").
    - Every fact is checked against a reliable source before the lesson is built (spec "facts"). Lessons render with 16 samples
      at 3840x2160 (measured on the PC Nov 14: 1.29-1.35 s/frame, same picture as 32). A v3 lesson is 8,000-8,430 frames.
@@ -135,12 +142,14 @@ written, rendered, titled and uploaded.
    episode (RUNBOOK). Never more than one a day. If Vids shows a limit, terms or sign-in page: skip Vids and report it.
 
 ## C. Posting (HARD CAP 6 uploads per run; stop on "Daily upload limit reached")
-1. Episode: the soonest "to_upload" Zoo entry in studio/upload_plan_3d.json at 4:00 PM ET (full Vids episodes 12:00 PM).
+1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
+   at 4:00 PM ET (full Vids episodes 12:00 PM); the LESSON = the soonest "to_upload" 3d_lesson entry with lesson_version 3 at
+   1:30 PM ET on its plan date (rule 5 FORMAT V3 APPROVED). Schedule each for its own date and time, never "publish now".
    Never upload "hold_fact_check", "paused_channel" or "rendering_variety" items. Review gate first (rule 4).
 2. Shorts: THREE A DAY (Noelson, Nov 14) at 7:30 AM, 11:30 AM and 6:30 PM ET, at least 2 hours apart. Upload every
    "to_upload" item in studio/upload_plan_shorts_zoo.json dated today or tomorrow (soonest first), review gate first. Keep
    at least 6 Shorts (2 days) ready from what is already cut. Do NOT cut new Shorts from songs (rule 5); new Shorts come from
-   lessons with lesson_shorts.py once Noelson approves the format: 85-95 s each, one whole lesson part per Short (rule 5
+   lessons with lesson_shorts.py (format approved Nov 14 11:00 PM; lesson Shorts take the slots first): 85-95 s each, one whole lesson part per Short (rule 5
    LENGTHS; the older 15-60 s cuts are no longer made), and never two Shorts from the same episode on the same day. Check each
    new Short has sound.
 3. THUMBNAILS ARE MANDATORY (Noelson, Nov 14: "ensure the new posts are activating with YouTube skills to ensure personalized

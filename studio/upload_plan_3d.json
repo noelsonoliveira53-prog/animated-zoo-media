@@ -1602,10 +1602,12 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 337.2,
-  "note": "Nov 15 12:30 PM: finished from the zool_ep09b re-render (review.py PASS). Frames of all six answer reveals looked at: every winning sign is whole in the picture. STILL IN THIS FILE: the quiz check covers half of the lion's face at 5:16, the ? badge covers QUIZ TIME!, only a ray of the sun shows at 2:32. Slice jobs zool_ep09q (frames 6913-7634) and zool_ep09s (3448-3788) are queued on the PC behind zool_ep14. If out\\zool_ep09q\\DONE and out\\zool_ep09s\\DONE exist: splice_slices.py + finish.py with jobs/zool_ep09b.json, look at the quiz frames, then upload. If they do not exist by upload time, this file may be uploaded as it is (same quiz layout as the approved zool_ep08)."
+  "note": "Nov 15 3:00 PM: uploaded and scheduled Nov 16 9:30 AM (wzJiaHEj6tY; dialog read: 'set to public on November 16, 2026 at 9:30 AM'; title, description, made for kids and custom thumbnail read back on the Details page). Owner Nov 15 2:50 PM: decide yourself and upload. This file is the zool_ep09b re-render: all six answer signs whole. STILL IN IT: quiz check on the lion's face at 5:16, ? badge over QUIZ TIME!, only a ray of the sun at 2:32. DECISION: when the slices zool_ep09q + zool_ep09s are DONE (about 3-4 AM Nov 16) and the spliced file passes the frame look before 9:30 AM, upload the spliced file on the same slot and set wzJiaHEj6tY to Private (not deleted). If not ready, wzJiaHEj6tY goes out.",
+  "video_id": "wzJiaHEj6tY",
+  "thumb_set": true
  },
  {
   "file": "truck/tt3d_ep09.mp4",

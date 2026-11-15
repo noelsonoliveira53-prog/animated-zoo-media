@@ -448,3 +448,8 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Still stills: one Blender at a time, at most 10 stills per run (two at once: out of memory, one run was killed).
   * Next: zool_ep10a ends about 3:00 PM (finish as it is for Nov 16 1:30 PM, slice later); zool_ep11c about 6 PM, zool_ep12b about 9 PM,
     zool_ep13 about midnight, zool_ep14 about 3 AM, then the three slices. zool_ep11/12/13/14 need no slice.
+- Nov 15, 2:50-3:05 PM ET: Noelson: "Make the decision yourself and start uploading, don't ask me every time" -> CLAUDE.md rule. zool_ep09.mp4
+  uploaded from commit 04a418c and SCHEDULED Nov 16 9:30 AM: wzJiaHEj6tY (thumbnail attached in the dialog, data: img seen; Details page read
+  back: title, 1,637-character description, made for kids, custom thumbnail; visibility showed "Pending" while 4K was processing).
+  Decisions taken: (1) lessons are uploaded as soon as they pass the frame look; (2) a spliced, checked file replaces an uploaded one on the
+  same slot (old one Private) only before its publish time; (3) the public zool_ep08 stays as it is.

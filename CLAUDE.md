@@ -8,6 +8,7 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 
 - Report only what exists and was checked; say what was not checked; never present an estimate as a fact.
 - Deliver finished files to look at, not explanations of what will be done.
+- Decide production, quality and scheduling questions yourself and act (upload, hold, replace, re-render); tell the owner the decision afterwards in one line. Do not ask him. The only things left to him: passwords, purchases, new accounts or terms, deleting a video.
 - Teaching lessons are at least 5:00 long (6:30 at most), built from three parts of 85-95 s; each part is cut whole into one Short of about a minute and a half.
 - Shorts come only from teaching lessons, never from songs. Songs have no minimum length: each is as long as it needs.
 - Lessons are interactive: questions with answer signs and thinking time, on-screen examples of the exact thing being discussed, every word in sync with the voice. Never just a character moving to narration.

@@ -44,3 +44,4 @@
 | 2026-11-15 | zool_ep09.mp4 | 3d_lesson | PASS | - | - | quiz check beside the head, QUIZ TIME word leaves before the ? badge, 3D word at x=-0.7, no close-up while a high example is up (fix_layout.py; zool_ep09 gets them by slice jobs 09q/09s) |
 | 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | quiz check beside the head and QUIZ TIME word clear of the ? badge (slice zool_ep10q); striped sock and ball inside the picture in the hello close-up |
 | 2026-11-15 | shorts3d/zs90_tiger_skin.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-15 | zool_ep11.mp4 | 3d_lesson | PASS | - | - | neck-bones board title inside the picture for the whole exhibit shot; plate visible on snow |

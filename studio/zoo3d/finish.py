@@ -167,7 +167,8 @@ def main():
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                             "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
             if os.path.getsize(out) >= 99.5e6: sys.exit("QUALITY GATE: 4K file still over 100 MB")
-    # thumbnail: the thumb frame + big words
+    # thumbnail: the thumb frame + big words (job "thumb_align": 7 = top left (default), 1 = bottom left when a face is top left:
+    # COUNT THE BONES! sat on the giraffe's eyes in zool_ep11, Nov 15)
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
     thumb = os.path.join(work, f"thumb_{jid}.png")
     words = meta.get("thumb_text", meta["title"].split("|")[0].strip().upper())
@@ -177,7 +178,7 @@ PlayResX: 1280
 PlayResY: 720
 [V4+ Styles]
 Format: Name, Fontname, Fontsize, PrimaryColour, SecondaryColour, OutlineColour, BackColour, Bold, Italic, Underline, StrikeOut, ScaleX, ScaleY, Spacing, Angle, BorderStyle, Outline, Shadow, Alignment, MarginL, MarginR, MarginV, Encoding
-Style: T,Baloo 2 ExtraBold,150,{HILITE.get(ch, '&H0000D7FF&')},&H00FFFFFF&,&H00301808&,&H96000000&,-1,0,0,0,100,100,2,-4,1,10,6,7,40,40,26,1
+Style: T,Baloo 2 ExtraBold,150,{HILITE.get(ch, '&H0000D7FF&')},&H00FFFFFF&,&H00301808&,&H96000000&,-1,0,0,0,100,100,2,-4,1,10,6,{job.get('thumb_align', 7)},40,40,{30 if job.get('thumb_align', 7) < 4 else 26},1
 [Events]
 Format: Layer, Start, End, Style, Name, MarginL, MarginR, MarginV, Effect, Text
 Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}

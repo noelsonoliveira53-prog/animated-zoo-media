@@ -1103,5 +1103,6 @@
  "punch": false,
  "timing_file": "zool_ep11_timing.json",
  "audio": "zool_ep11_song.wav",
- "layout_fix": "2026-11-15"
+ "layout_fix": "2026-11-15",
+ "thumb_align": 1
 }

@@ -206,8 +206,8 @@
  {
   "file": "shorts3d/zs3d_sleep_action.mp4",
   "source": "zoo3d_ep12.mp4 67.3-85.0",
-  "date": "2026-11-17",
-  "time": "7:30 PM",
+  "date": "2026-11-20",
+  "time": "11:30 AM",
   "title": "Can You Sleep Like a Zebra? Action Song with Milo",
   "description": "Can you sleep like a zebra? Stand up tall and close your eyes, then curl up small and yawn!\nA short action song for kids about how animals sleep, with Milo the bluebird. From \"How Do Animals Sleep?\" on The Animated Zoo. Ages 2-5.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
@@ -215,7 +215,8 @@
   "status": "to_upload",
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_action.png",
-  "thumb_text": "STAND STILL!"
+  "thumb_text": "STAND STILL!",
+  "note_moved": "moved from 2026-11-17 7:30 PM on Nov 15: lesson Shorts take the slots first"
  },
  {
   "file": "shorts3d/zs3d_baby_action.mp4",
@@ -449,5 +450,31 @@
   "note": "format v3 approved by Noelson Nov 14 11:00 PM; re-cut with larger captions; from lesson zool_ep08 (publishes Nov 15)",
   "date": "2026-11-19",
   "time": "11:30 AM"
+ },
+ {
+  "file": "shorts3d/zs90_tiger_skin.mp4",
+  "title": "A Tiger's Skin Is Stripy Too! Stripes or Spots?",
+  "description": "A Tiger's Skin Is Stripy Too! Stripes or Spots? A quick animal fact for kids with Milo the bluebird, from the lesson \u201cStripes or Spots? Animal Patterns for Kids with Milo\u201d.\nA tiger's stripe pattern is unique like a fingerprint and is also visible on its skin; the stripes help it blend in with grasses and trees; tigers are the biggest cats and very adept swimmers with partially webbed toes, and enter water to cool off (WWF Australia, '10 facts about tigers').\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal patterns for kids",
+   "stripes and spots",
+   "tiger stripes for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers"
+  ],
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "lesson_fact_short_90",
+  "from": "zool_ep10",
+  "seconds": 87.96,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zs90_tiger_skin.png",
+  "thumb_text": "UNDER THE FUR",
+  "note": "format v3 approved Nov 14; from lesson zool_ep10 (publishes Nov 16); review.py PASS, sign frames and thumbnail looked at Nov 15",
+  "date": "2026-11-17",
+  "time": "7:30 PM"
  }
 ]

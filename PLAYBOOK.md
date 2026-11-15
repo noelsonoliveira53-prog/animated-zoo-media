@@ -320,6 +320,17 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * PC at 6:16 PM: zool_ep03b at frame 6,319 of 6,842 (log). zool_ep04b..07b CANCELLED (DONE markers written 6:20 PM). engine.py and
     teachprops.py copied to Documents\ZooBlender\zoo3d. zool_ep08 job + timing + audio (Opus 58k as _song.wav) on the PC; timing +
     audio for zool_ep09..12 are on the PC, their job files go up after their test stills are looked at.
+  * 6:38-7:10 PM: test stills looked at for all five lessons (out/chk_ep08/09/11/12.png, out/zool_ep10_sheet.png). Fixed from them:
+    answer signs x 2.2 -> 1.95 and width cap 3.0 -> 2.8 (NOT A BEAR badge was at 92.5% of the width), Short crop 3:2 -> centre 90%,
+    ep08 fly count was above the exhibit shot (moved to z=3.0; exhibit shots end near z=3.7, teach shots show z=4.2), ep12 snowflake/sun
+    lowered for the same reason, ep10 sign text BLACK+WHITE, ep11 plate r 0.22, ep09 arrow over the giraffe's water.
+    NOT re-checked with a still after the last change: ep11 plate at r=0.22, ep12 snowflake/sun, ep09 arrow, ep10 BLACK+WHITE sign.
+    Open: the giraffe does not bend down while Milo says it bends to drink (no such animation); only 4 of the 5 flies were visible
+    in the counted frame; the plate is white on snow.
+  * PC queue at 7:06 PM: zool_ep03b DONE 6:32 PM (raw 531.7 MB + 3 parts; old 4:45 format, not finished into a video: superseded).
+    zool_ep08 was stopped at 6:38 PM (STOP + DONE) and replaced by job zool_ep08a (same lesson, song id zool_ep08, fly count fix):
+    frame 1,102 of 8,000 at 7:06 PM, no errors in the log, worker's own estimate ~151 min left. Then zool_ep09, 10, 11, 12 (all job
+    files on the PC). Finish 08a with `finish.py <raw> jobs/zool_ep08a.json` (publishes as zool_ep08.mp4).
   * Variety ledger: entries zool_ep03..07 (never published) replaced by zool_ep08..12.
   * Daily-run scheduled task prompt updated (lengths, nine-step quality loop, hold_review, reporting rule). docs/DAILY_RUN.md rule 4
     "THE QUALITY LOOP FOR EVERY NEW LESSON" and rule 5 "LENGTHS".

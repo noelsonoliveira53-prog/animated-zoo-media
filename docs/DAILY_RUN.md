@@ -92,7 +92,7 @@ written, rendered, titled and uploaded.
        keep their own length until Noelson says otherwise (asked Nov 14, not answered yet).
    - NOT LIVE YET (videos): the plan is confirmed, but each new-format video still needs his look before it is scheduled
      (his rule: he sees a full episode before anything in a new format posts). The v3 prototypes are zool_ep08..12
-     (5:33-5:51, three 87-91 s parts each, built Nov 14 5:50 PM). The older prototypes zool_ep03..07, the "b" renders
+     (5:33-5:51, three 87-91 s parts each, built Nov 14; PC jobs zool_ep08a, zool_ep09, 10, 11, 12). The older prototypes zool_ep03..07, the "b" renders
      zool_ep03b..07b and the 30-second Shorts shorts3d/zs4k_*.mp4 are superseded by v3: they stay "hold_review" and are
      not uploaded. NEVER upload a hold_review item. Noelson approves the format first (then create the empty file
      studio/zoo3d/LESSON_V3_APPROVED so finish.py writes "to_upload"); then this file gets the daily slots.

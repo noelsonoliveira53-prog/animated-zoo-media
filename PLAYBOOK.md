@@ -399,3 +399,7 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     song json and the plan. 18 frames looked at: every answer sign inside the 5%-95% lines; the giraffe's water arrow, the 1-2-3 count,
     the four cars and the 5 MILES town are in the picture. Defect logged: at 0:30 the winning GIRAFFE sign is half cut in the close-up.
   * Not uploaded by this session: the daily run started 6:31 AM and may be in YouTube Studio.
+- Nov 15, 8:05 AM (check-in session, after pulling the daily run's commit 10e9f17): the daily run is still running (trigger last_run
+  PENDING), so this session did NOT open YouTube Studio. zoo3d_ep13.mp4 (fixed) is "to_upload" Nov 17 3:30 PM for whichever session
+  uploads first; check Studio for an existing scheduled "Baby Animal Names" before uploading. zool_ep09 / zool_ep10 are "hold_fix" by the
+  daily run (answer signs cut in close-up answer shots; re-renders zool_ep09b / zool_ep10a queued). A check-in at 10:30 AM verifies.

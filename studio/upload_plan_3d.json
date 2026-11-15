@@ -1581,9 +1581,12 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep11.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
-  "duration": 350.9
+  "duration": 350.9,
+  "video_id": "mdOiBUzxczo",
+  "thumb_set": true,
+  "note": "Nov 15 6:45 PM: finished from the patched zool_ep11c render (review.py PASS). Looked at: 27 raw + 9 final frames of the nine answer reveals (every winning sign whole), the quiz (word alone, ? badge alone, the three checks beside the heads, faces clear), 18 example/hello/goodbye frames. Thumbnail redone: words at the bottom, off the giraffe's face. Uploaded and scheduled Nov 16 5:30 PM (mdOiBUzxczo; dialog read: 'set to public on November 16, 2026 at 5:30 PM'; Details page read back). No slice needed."
  },
  {
   "file": "moon/mb3d_ep08.mp4",

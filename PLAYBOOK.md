@@ -460,3 +460,10 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   thumbnail attached). Old quiz layout still in it (check on the cow's face 5:15); slice zool_ep10q replaces it if ready in time.
   The Short zs90_tiger_skin was cut from the OLD zool_ep10 render (frames looked at: the answer is a close-up, no sign in the picture):
   re-cut from the zool_ep10a raw with lesson_shorts.py --only.
+- Nov 15, 6:15-6:50 PM ET (check-in): zool_ep11c DONE on the PC 6:12 PM (8,420 frames) -> zool_ep11.mp4 (AV1 4K, 350.9 s, 88.0 MB), review.py
+  PASS. First lesson rendered with fix_layout.py: quiz word, "?" badge and the three checks looked at in raw frames (faces clear; the giraffe's
+  check touches the left edge at 5:22). Thumbnail: COUNT THE BONES! was on the giraffe's eyes -> words at the bottom (job "thumb_align": 1,
+  new option in finish.py). Uploaded from commit 019fc27 and SCHEDULED Nov 16 5:30 PM: mdOiBUzxczo (dialog + Details page read back).
+  Studio list 6:48 PM: 8IgNBQcHiZw and wzJiaHEj6tY read Scheduled Nov 16; "Who Am I?" and the 4 PM song read Public.
+  Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 3 (this session). DECISION: zool_ep12 goes on Nov 16 5:30 AM (last free
+  lesson slot of Nov 16) when it passes the frame look tonight; zool_ep13/14 are for Nov 17.

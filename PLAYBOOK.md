@@ -453,3 +453,10 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   back: title, 1,637-character description, made for kids, custom thumbnail; visibility showed "Pending" while 4K was processing).
   Decisions taken: (1) lessons are uploaded as soon as they pass the frame look; (2) a spliced, checked file replaces an uploaded one on the
   same slot (old one Private) only before its publish time; (3) the public zool_ep08 stays as it is.
+- Nov 15, 3:08-3:50 PM ET (check-in): Studio: wzJiaHEj6tY (zool_ep09) reads Scheduled, Nov 16, 2026, 9:30 AM.
+  zool_ep10a DONE on the PC 3:00 PM (8,158 frames, 3 parts joined) -> zool_ep10.mp4 (AV1 4K, 340.0 s, 90.3 MB), review.py PASS; 18 raw and
+  6 final frames of the six answer reveals looked at (every winning sign whole), 18 frames of examples and quiz. Thumbnail LOOK CLOSE!
+  looked at (words in the sky). Uploaded from commit 03ae1df and SCHEDULED Nov 16 1:30 PM: 8IgNBQcHiZw (dialog and Details page read back,
+  thumbnail attached). Old quiz layout still in it (check on the cow's face 5:15); slice zool_ep10q replaces it if ready in time.
+  The Short zs90_tiger_skin was cut from the OLD zool_ep10 render (frames looked at: the answer is a close-up, no sign in the picture):
+  re-cut from the zool_ep10a raw with lesson_shorts.py --only.

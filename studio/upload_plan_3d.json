@@ -1459,9 +1459,12 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
-  "duration": 339.9
+  "duration": 339.9,
+  "video_id": "8IgNBQcHiZw",
+  "thumb_set": true,
+  "note": "Nov 15 3:40 PM: finished from the zool_ep10a re-render (review.py PASS; 18 raw + 6 final frames of the six answer reveals: every winning sign whole), uploaded and scheduled Nov 16 1:30 PM (8IgNBQcHiZw; dialog read: 'set to public on November 16, 2026 at 1:30 PM'; Details page read back). STILL IN IT: quiz check on the cow's face at 5:15 and partly on the panda's, ? badge over QUIZ TIME!. DECISION: when the slice zool_ep10q is DONE and the spliced file passes the frame look before 1:30 PM Nov 16, upload it on the same slot and set 8IgNBQcHiZw to Private. If not ready, 8IgNBQcHiZw goes out."
  },
  {
   "file": "truck/tt3d_ep08.mp4",
@@ -1604,7 +1607,7 @@
   "status": "scheduled",
   "format": "3d_lesson",
   "duration": 337.2,
-  "note": "Nov 15 3:00 PM: uploaded and scheduled Nov 16 9:30 AM (wzJiaHEj6tY; dialog read: 'set to public on November 16, 2026 at 9:30 AM'; title, description, made for kids and custom thumbnail read back on the Details page). Owner Nov 15 2:50 PM: decide yourself and upload. This file is the zool_ep09b re-render: all six answer signs whole. STILL IN IT: quiz check on the lion's face at 5:16, ? badge over QUIZ TIME!, only a ray of the sun at 2:32. DECISION: when the slices zool_ep09q + zool_ep09s are DONE (about 3-4 AM Nov 16) and the spliced file passes the frame look before 9:30 AM, upload the spliced file on the same slot and set wzJiaHEj6tY to Private (not deleted). If not ready, wzJiaHEj6tY goes out.",
+  "note": "Nov 15 2:53 PM: uploaded and scheduled Nov 16 9:30 AM (wzJiaHEj6tY; dialog read: 'set to public on November 16, 2026 at 9:30 AM'; title, description, made for kids and custom thumbnail read back on the Details page). Owner Nov 15 2:50 PM: decide yourself and upload. This file is the zool_ep09b re-render: all six answer signs whole. STILL IN IT: quiz check on the lion's face at 5:16, ? badge over QUIZ TIME!, only a ray of the sun at 2:32. DECISION: when the slices zool_ep09q + zool_ep09s are DONE (about 3-4 AM Nov 16) and the spliced file passes the frame look before 9:30 AM, upload the spliced file on the same slot and set wzJiaHEj6tY to Private (not deleted). If not ready, wzJiaHEj6tY goes out. Studio 3:10 PM: Scheduled, Nov 16, 2026, 9:30 AM.",
   "video_id": "wzJiaHEj6tY",
   "thumb_set": true
  },

@@ -947,5 +947,101 @@
    "summer_fox"
   ],
   "new_song": true
+ },
+ {
+  "id": "zool_ep13",
+  "places": [
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "river",
+    "morning"
+   ],
+   [
+    "river",
+    "morning"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "fox",
+   "hippo",
+   "horse",
+   "rhino"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep14",
+  "places": [
+   [
+    "beach",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "morning"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "mountain",
+    "noon"
+   ],
+   [
+    "farm",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "bear",
+   "elephant",
+   "horse",
+   "pig"
+  ],
+  "new_song": true
  }
 ]

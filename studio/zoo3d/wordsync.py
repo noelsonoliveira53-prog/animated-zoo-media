@@ -19,7 +19,8 @@ EXTRA = {"milo": "M AY L OW", "milo's": "M AY L OW Z", "joey": "JH OW IY", "clop
          "spotty": "S P AA T IY", "bluebird": "B L UW B ER D", "zzz": "Z IY", "shh": "SH", "ahh": "AA", "moo": "M UW", "munches": "M AH N CH IH Z",
          "snooze": "S N UW Z", "sunscreen": "S AH N S K R IY N", "sunburn": "S AH N B ER N", "panda's": "P AE N D AH Z", "zebra's": "Z IY B R AH Z",
          "giraffe's": "JH ER AE F S", "tiger's": "T AY G ER Z", "hippo's": "HH IH P OW Z", "lion's": "L AY AH N Z", "elephant's": "EH L AH F AH N T S",
-         "bear's": "B EH R Z", "cow's": "K AW Z", "pig's": "P IH G Z", "monkey's": "M AH NG K IY Z", "fox's": "F AA K S IH Z", "mama's": "M AA M AH Z"}
+         "bear's": "B EH R Z", "cow's": "K AW Z", "pig's": "P IH G Z", "monkey's": "M AH NG K IY Z", "fox's": "F AA K S IH Z", "mama's": "M AA M AH Z",
+         "peekaboo": "P IY K AH B UW", "yip": "Y IH P", "kits": "K IH T S"}
 L2P = {"a": "AE", "b": "B", "c": "K", "d": "D", "e": "EH", "f": "F", "g": "G", "h": "HH", "i": "IH", "j": "JH", "k": "K", "l": "L", "m": "M", "n": "N",
        "o": "AA", "p": "P", "q": "K", "r": "R", "s": "S", "t": "T", "u": "AH", "v": "V", "w": "W", "x": "K S", "y": "IY", "z": "Z"}
 

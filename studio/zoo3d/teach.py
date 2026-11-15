@@ -183,6 +183,15 @@ def build(spec):
                 if right: o["win"] = round(t_ans - (t_ask + (0.0 if key == "a" else 0.45)), 3)
                 add("sign", "sign_" + key, t_ask + (0.0 if key == "a" else 0.45), t_ans + (ch.get("hold", 3.0) if right else 0.0), o)
             add("dots", "dots", q_end + 0.2, t_ans, {})
+            # Nov 15 frame check (zool_ep09 "It is the giraffe!", zool_ep10 "It is the cow!"): a close-up while the answer signs
+            # are still up cuts the signs at the edge of the picture. Every line that starts while the signs are visible is
+            # shown on the teaching shot, so the signs, the confetti on the right one and both faces stay in the picture.
+            t_end = t_ans + ch.get("hold", 3.0)
+            for k_ in range(nl):
+                ls_ = seg["_lt"][k_][0] - s0
+                if t_ask - 0.01 <= ls_ < t_end and shots[k_] not in (None, "teach"):
+                    print(f"  note: {seg['name']} line {k_} shot {shots[k_]} -> teach (answer signs are on screen)")
+                    shots[k_] = "teach"
         for ex in seg.get("exhibits", []):
             on = ref(seg, ex["on"], s0); off = ref(seg, ex["off"], s0) if ex.get("off") else None
             at_ = POS[ex.get("at", "ex")] if isinstance(ex.get("at", "ex"), str) else ex["at"]

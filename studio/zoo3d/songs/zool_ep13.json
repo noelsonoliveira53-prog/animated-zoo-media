@@ -1,0 +1,1147 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Hippo eyes, ears and nostrils are on top of the head, so it can hear, see and breathe while most of its body is underwater (San Diego Zoo, zoo.sandiegozoo.org/animals/hippo); nostrils close before it goes under and the ears fold into a recess to close underwater (San Diego Zoo Wildlife Alliance Library fact sheet 'Hippopotamus', Physical Characteristics, read Nov 15 2026).\nMature hippos can stay under water for 5 minutes; hippos do not really swim, they move forward by punting off the river bottom; the herd leaves the water shortly before dark to graze (SDZWA Library fact sheet 'Hippopotamus', Behavior & Ecology, read Nov 15 2026). Diet: grasses and other vegetation near rivers (same fact sheet, summary).\nWhite rhino: poor eyesight, good sense of hearing, good sense of smell; the second largest land mammal, only surpassed in size by the elephant (SDZWA Library fact sheet 'White Rhinoceros', Physical Characteristics, read Nov 15 2026).\nRhino horn is made mainly of keratin, a protein also found in human hair and fingernails, and grows by around 2 cm each year (Save the Rhino International, 'What is rhino horn made of?', read Nov 15 2026).\nRed foxes can hear the low-frequency sounds of small animals digging under the ground, leaves or snow; they stalk and pounce on prey; the tail is used for balance, warmth and signaling; adults have a dozen calls; young are called kits (Missouri Department of Conservation, 'What Red Foxes Say and Do', read Nov 15 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about super senses!\nHow do animals see, hear and smell?\nThree animal friends will show us. Count them with me. One, two, three!\nGet your eyes, ears and nose ready. Let's go!\nWhich animal can hide in the water, and still see, hear and breathe?\nIs it the hippo? Or is it the horse?\nIt is the hippo!\nHere is the fun fact. A hippo's eyes, ears and nose are all on the top of its head.\nSo a hippo can stay in the water, with just its eyes and nose peeking out. Peekaboo!\nTwo eyes, two ears, and a nose with two holes. Let's count. One, two, three!\nWhat happens when the hippo goes all the way under the water? Hmm.\nIts nose closes tight, and its ears fold down. No water gets in!\nA big hippo can stay under the water for about five minutes!\nAnd here is a surprise. Hippos do not really swim. They push off the bottom of the river, and bounce along!\nWhen the sun goes down, the hippo comes out to munch on grass. Munch, munch, munch!\nSay it with me. Eyes, ears and nose on top!\nCan you peek like a hippo? Hide down low, then peek your eyes out. Peekaboo!\nNow close your nose, like a hippo going under. Hold it! And let go!\nQuick check! Can a hippo close its nose under the water? Yes, or no?\nYes! Its nose closes tight. Great job!\nWho has a big horn on its nose?\nIs it the cow? Or is it the rhino?\nIt is the rhino!\nHere is the fun fact. A rhino cannot see very well.\nBut a rhino has super ears, and a super nose! It can hear and smell very, very well.\nNow look at the rhino's horn. What do you think it is made of?\nThe same stuff as your fingernails! Look at your fingernails. Tap, tap, tap!\nA rhino's horn keeps growing a little bit every year, just like your nails.\nA rhino's skin is thick, with deep folds. Like a big, gray coat!\nAnd a rhino is very, very big. The white rhino is the second biggest animal on land.\nWho is the biggest? The elephant! Only the elephant is bigger than the white rhino.\nA rhino has a wide, flat lip, for munching on grass. Munch, munch!\nSay it with me. A rhino has a super nose!\nCan you sniff like a rhino? Sniff, sniff, sniff!\nNow put your hands by your ears, and listen like a rhino. Listen!\nQuick check! A rhino's horn is made of the same stuff as what? Your nails? Or wood?\nYour nails! Tap, tap, tap. Super thinking!\nWho can hear a tiny mouse digging under the snow?\nIs it the fox? Or is it the pig?\nIt is the fox!\nHere is the fun fact. A fox has super ears! It can hear tiny animals digging under the ground, under the leaves, or under the snow.\nLook at those big, pointy ears. They listen, listen, listen.\nThe fox hears a tiny sound under the snow. What does it do next? Hmm.\nIt sneaks up, jumps high, and pounces! Boing!\nNow look at the fox's big, bushy tail.\nThe tail helps the fox balance, and it keeps the fox warm.\nA grown-up fox can make about twelve different calls. Wow, that is a lot!\nBaby foxes are called kits.\nKits grow up in a cozy den, and the den has a back door too!\nSay it with me. A fox has super ears!\nCan you pounce like a fox? Crouch down low. And jump! Boing!\nNow listen, listen, like a fox. What can you hear?\nQuick check! What helps the fox keep warm? Its tail? Or its ears?\nIts tail! A big, bushy tail. You remembered!\nWow! We met three friends with super senses. Now it is quiz time!\nGet ready. Think hard!\nWho has its eyes, ears and nose on the top of its head?\nThe hippo! Yes!\nWhose horn is made of the same stuff as your nails?\nThe rhino! That's right!\nWho can hear a tiny mouse under the snow?\nThe fox! You remembered!\nYou learned so many new things today.\nPeek like a hippo. Sniff like a rhino. And pounce like a fox!\nWhich super sense is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 346.81,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 747,
+  "words": 747,
+  "pause_onsets_checked": 61,
+  "onset_err_mean_ms": 26.2,
+  "onset_err_max_ms": 80.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Super Senses! Animal Eyes, Ears and Noses for Kids",
+  "card": "Super Senses!",
+  "thumb_text": "PEEKABOO!",
+  "description": "Super senses! Pick your answer with Milo the bluebird, then find out how three animals see, hear and smell: a hippo has its eyes, ears and nose on top of its head so it can peek out of the water, a rhino cannot see very well but hears and smells super well, and a fox can hear tiny animals digging under the snow.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal senses for kids",
+   "hippo facts for kids",
+   "rhino facts for kids",
+   "fox facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_hippo_peek",
+   "title": "Why Are a Hippo's Eyes on Top of Its Head?",
+   "l1": "WHO CAN",
+   "l2": "PEEKABOO?",
+   "thumb_text": "ONLY EYES!",
+   "thumb_line": [
+    4,
+    0.7
+   ],
+   "seg": "hippo",
+   "start": 21.376,
+   "end": 114.558,
+   "seconds": 93.2
+  },
+  {
+   "id": "zs90_rhino_horn",
+   "title": "What Is a Rhino's Horn Made Of? Rhino Facts",
+   "l1": "WHAT IS THE",
+   "l2": "HORN MADE OF?",
+   "thumb_text": "TAP TAP!",
+   "thumb_line": [
+    6,
+    0.7
+   ],
+   "seg": "rhino",
+   "start": 114.558,
+   "end": 206.906,
+   "seconds": 92.3
+  },
+  {
+   "id": "zs90_fox_ears",
+   "title": "A Fox Can Hear a Mouse Under the Snow!",
+   "l1": "WHO HAS",
+   "l2": "SUPER EARS?",
+   "thumb_text": "BOING!",
+   "thumb_line": [
+    4,
+    0.5
+   ],
+   "seg": "fox",
+   "start": 206.906,
+   "end": 294.648,
+   "seconds": 87.7
+  }
+ ],
+ "job": {
+  "id": "zool_ep13",
+  "title": "Super Senses!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 53,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "rhino",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "rhino"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "fox",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "fox"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "horse",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "horse",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "hippo",
+     "rhino",
+     "fox"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "hippo"
+    ]
+   },
+   {
+    "from": "rhino",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "rhino",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "rhino"
+    ]
+   },
+   {
+    "from": "fox",
+    "biome": "night_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "fox",
+    "biome": "night_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "fox"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "desert",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "hippo",
+     "rhino",
+     "fox"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "river",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "hippo",
+     "rhino",
+     "fox"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 1094,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "vista"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SUPER SENSES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 15.337,
+      "dur": 6.139,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "hippo",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:hippo",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "PEEKABOO!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.995,
+      "dur": 14.244000000000002
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 5.279,
+      "dur": 8.686,
+      "spin": 0,
+      "opts": {
+       "text": "HIPPO",
+       "color": "#1479d6",
+       "win": 6.286
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.729,
+      "dur": 5.836,
+      "spin": 0,
+      "opts": {
+       "text": "HORSE",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.815,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 80.458,
+      "dur": 10.275,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 8.275
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 80.908,
+      "dur": 7.825,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 84.983,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       -0.45,
+       -1.1,
+       3.1
+      ],
+      "delay": 18.197,
+      "dur": 8.042,
+      "spin": 0,
+      "opts": {
+       "color": "#3db8ff",
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 18.197,
+      "dur": 14.055,
+      "spin": 0,
+      "opts": {
+       "text": "ON TOP!",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 21.049,
+      "dur": 27.847,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.45,
+       -1.3,
+       2.2
+      ],
+      "delay": 30.419,
+      "dur": 1.833,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        -4.28,
+        0.55
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 36.097,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.0
+      ],
+      "delay": 47.092,
+      "dur": 1.804,
+      "spin": 0,
+      "opts": {
+       "text": "5 MINUTES",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "grass",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 59.407,
+      "dur": 7.775,
+      "spin": 0,
+      "opts": {
+       "s": 1.3
+      }
+     }
+    ]
+   },
+   {
+    "section": "rhino",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:rhino",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SUPER NOSE!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 9.553,
+      "dur": 12.503
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.003,
+      "dur": 6.21,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.453,
+      "dur": 8.16,
+      "spin": 0,
+      "opts": {
+       "text": "RHINO",
+       "color": "#e85d00",
+       "win": 5.76
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.463,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 78.899,
+      "dur": 11.435,
+      "spin": 0,
+      "opts": {
+       "text": "NAILS",
+       "color": "#1479d6",
+       "win": 9.435
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 79.349,
+      "dur": 8.985,
+      "spin": 0,
+      "opts": {
+       "text": "WOOD",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 84.584,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "cross",
+      "at": [
+       1.9,
+       -1.3,
+       3.0
+      ],
+      "delay": 13.522,
+      "dur": 1.733,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "rings",
+      "at": [
+       0.25,
+       -1.0,
+       2.05
+      ],
+      "delay": 18.965,
+      "dur": 3.091,
+      "spin": 0,
+      "opts": {
+       "reach": 2.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 19.525,
+      "dur": 2.531,
+      "spin": 0,
+      "opts": {
+       "text": "SNIFF!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.508,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "magnifier",
+      "at": [
+       2.4,
+       -1.1,
+       2.4
+      ],
+      "delay": 29.558,
+      "dur": 9.956,
+      "spin": 0,
+      "opts": {
+       "s": 1.0,
+       "fill": "#efe2d0",
+       "label": "NAILS"
+      }
+     }
+    ]
+   },
+   {
+    "section": "fox",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:fox",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SUPER EARS!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.504,
+      "dur": 16.092
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.83,
+      "dur": 8.674,
+      "spin": 0,
+      "opts": {
+       "text": "FOX",
+       "color": "#1479d6",
+       "win": 6.274
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.28,
+      "dur": 5.824,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.354,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.231,
+      "dur": 10.363,
+      "spin": 0,
+      "opts": {
+       "text": "TAIL",
+       "color": "#1479d6",
+       "win": 8.363
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.681,
+      "dur": 7.913,
+      "spin": 0,
+      "opts": {
+       "text": "EARS",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.844,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "snowflake",
+      "at": [
+       2.3,
+       -1.1,
+       3.0
+      ],
+      "delay": 20.731,
+      "dur": 5.865,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "leaves",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 19.291,
+      "dur": 7.305,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rings",
+      "at": [
+       0.25,
+       -1.0,
+       2.05
+      ],
+      "delay": 24.322,
+      "dur": 2.274,
+      "spin": 0,
+      "opts": {
+       "reach": 2.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 31.071,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 35.621,
+      "dur": 2.322,
+      "spin": 0,
+      "opts": {
+       "text": "BOING!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "snowflake",
+      "at": [
+       2.3,
+       -1.1,
+       3.0
+      ],
+      "delay": 44.218,
+      "dur": 1.292,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       2.3,
+       -1.2,
+       3.0
+      ],
+      "delay": 46.95,
+      "dur": 4.121,
+      "spin": 0,
+      "opts": {
+       "text": "12",
+       "s": 1.1,
+       "color": "#3db8ff"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:hippo",
+     "wide",
+     "close:rhino",
+     "wide",
+     "close:fox"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 7.458,
+      "dur": 6.658,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.2999999999999998,
+       0.29999999999999993,
+       2.35
+      ],
+      "delay": 14.366,
+      "dur": 2.103,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 16.319,
+      "dur": 6.048,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.3,
+       0.29999999999999993,
+       2.35
+      ],
+      "delay": 22.617,
+      "dur": 2.124,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 24.591,
+      "dur": 5.495,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.0999999999999996,
+       -0.8,
+       2.35
+      ],
+      "delay": 30.336,
+      "dur": 2.141,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep13",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep13_timing.json",
+  "audio": "zool_ep13_song.wav"
+ }
+}

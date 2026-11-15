@@ -1,0 +1,967 @@
+{
+ "id": "zool_ep14",
+ "title": "Animal Babies!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 59,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "bear",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "bear"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "horse",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "horse"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "pig",
+   "char": "animal",
+   "spot": "back",
+   "opts": {
+    "kind": "pig",
+    "scale": 1.0
+   }
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "beach",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "show": [
+    "bear",
+    "horse",
+    "elephant"
+   ]
+  },
+  {
+   "from": "bear",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "none"
+   ]
+  },
+  {
+   "from": "bear",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 2,
+   "show": [
+    "bear"
+   ]
+  },
+  {
+   "from": "horse",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "none"
+   ]
+  },
+  {
+   "from": "horse",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 2,
+   "show": [
+    "horse"
+   ]
+  },
+  {
+   "from": "elephant",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "none"
+   ]
+  },
+  {
+   "from": "elephant",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 2,
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "mountain",
+   "tod": "noon",
+   "formation": "arc",
+   "shot": "vista",
+   "show": [
+    "bear",
+    "horse",
+    "elephant"
+   ]
+  },
+  {
+   "from": "goodbye",
+   "biome": "farm",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "dolly",
+   "show": [
+    "bear",
+    "horse",
+    "elephant"
+   ]
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 974,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "wide",
+    "vista"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "ANIMAL BABIES!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "delay": 15.429,
+     "dur": 5.463,
+     "spin": 0,
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0,
+      "times": [
+       0.0,
+       0.3,
+       -3.66
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "section": "bear",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:bear",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "CUB!",
+     "color": "#3db8ff",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 13.74,
+     "dur": 11.270999999999999
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 4.817,
+     "dur": 8.663,
+     "spin": 0,
+     "opts": {
+      "text": "BEAR",
+      "color": "#1479d6",
+      "win": 6.263
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 5.267,
+     "dur": 5.813,
+     "spin": 0,
+     "opts": {
+      "text": "PIG",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 7.33,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 74.405,
+     "dur": 9.982,
+     "spin": 0,
+     "opts": {
+      "text": "A DEN",
+      "color": "#1479d6",
+      "win": 7.982
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 74.855,
+     "dur": 7.532,
+     "spin": 0,
+     "opts": {
+      "text": "A NEST",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 78.637,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "den",
+     "at": [
+      2.75,
+      -0.2,
+      0.0
+     ],
+     "delay": 18.699,
+     "dur": 17.041,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      3.0
+     ],
+     "delay": 19.909,
+     "dur": 5.102,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 28.057,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "delay": 34.417,
+     "dur": 4.389,
+     "spin": 0,
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "leaves",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 49.193,
+     "dur": 8.478,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "horse",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:horse",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "FOAL!",
+     "color": "#ff7a00",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 14.763,
+     "dur": 12.863000000000001
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 5.71,
+     "dur": 8.673,
+     "spin": 0,
+     "opts": {
+      "text": "HORSE",
+      "color": "#1479d6",
+      "win": 6.273
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 6.16,
+     "dur": 5.823,
+     "spin": 0,
+     "opts": {
+      "text": "PIG",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 8.233,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 75.695,
+     "dur": 10.561,
+     "spin": 0,
+     "opts": {
+      "text": "1 HOUR",
+      "color": "#1479d6",
+      "win": 8.561
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 76.145,
+     "dur": 8.111,
+     "spin": 0,
+     "opts": {
+      "text": "1 WEEK",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 80.506,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 20.042,
+     "dur": 7.584,
+     "spin": 0,
+     "opts": {
+      "text": "1 HOUR",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 30.617,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "milk",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 34.567,
+     "dur": 8.558,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "delay": 50.419,
+     "dur": 4.254,
+     "spin": 0,
+     "opts": {
+      "s": 1.2
+     }
+    }
+   ]
+  },
+  {
+   "section": "elephant",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "CALF!",
+     "color": "#8e5bd8",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 14.528,
+     "dur": 13.427999999999999
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 4.65,
+     "dur": 8.908,
+     "spin": 0,
+     "opts": {
+      "text": "ELEPHANT",
+      "color": "#1479d6",
+      "win": 6.508
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 5.1,
+     "dur": 6.058,
+     "spin": 0,
+     "opts": {
+      "text": "PIG",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 7.408,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 79.847,
+     "dur": 9.364,
+     "spin": 0,
+     "opts": {
+      "text": "MAMA",
+      "color": "#1479d6"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 80.297,
+     "dur": 10.914,
+     "spin": 0,
+     "opts": {
+      "text": "FAMILY",
+      "color": "#e85d00",
+      "win": 8.914
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 85.461,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "pool",
+     "at": [
+      2.4,
+      -0.9,
+      0.0
+     ],
+     "delay": 22.452,
+     "dur": 12.185,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 37.541,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "delay": 40.971,
+     "dur": 9.584,
+     "spin": 0,
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 53.055,
+     "dur": 2.67,
+     "spin": 0,
+     "opts": {
+      "text": "15 MINUTES",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "milk",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 58.785,
+     "dur": 5.456,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "wide",
+    "close:host",
+    "wide",
+    "close:bear",
+    "wide",
+    "close:horse",
+    "wide",
+    "close:elephant"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 6.65,
+     "dur": 6.403,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      -1.2999999999999998,
+      0.29999999999999993,
+      2.35
+     ],
+     "delay": 13.304,
+     "dur": 1.938,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 15.092,
+     "dur": 5.268,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      3.3,
+      0.29999999999999993,
+      2.35
+     ],
+     "delay": 20.61,
+     "dur": 2.074,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 22.534,
+     "dur": 5.901,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      -3.0999999999999996,
+      -0.8,
+      2.35
+     ],
+     "delay": 28.686,
+     "dur": 2.287,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "zool_ep14",
+ "res": "3840x2160",
+ "samples": 16,
+ "step": 1,
+ "hold_shots": true,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "zool_ep14_timing.json",
+ "audio": "zool_ep14_song.wav"
+}

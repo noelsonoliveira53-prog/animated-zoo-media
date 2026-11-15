@@ -38,3 +38,5 @@
 | 2026-11-15 | zoo3d_ep13.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-15 | zool_ep09.mp4 | 3d_lesson | FAIL | banned word in title/description: blood | - | when the answer line is a close-up, the winning answer sign is half out of the picture (giraffe, 0:30): keep the teach shot for the answer or hide the sign in close-ups |
 | 2026-11-15 | zool_ep09.mp4 | 3d_lesson | PASS | - | - | - |
+| 2026-11-15 | zool_ep08.mp4 | 3d_lesson | PASS | - | - | - |
+| 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | - |

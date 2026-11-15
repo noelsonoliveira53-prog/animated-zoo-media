@@ -1,5 +1,18 @@
 # Views check log (newest first)
 
+## 2026-11-15, 6:50 AM ET (The Animated Zoo only; Studio Content list views, lifetime + Analytics overview)
+Analytics overview: **30.4K views in the last 28 days**, 7,406 views in the last 48 hours, 145.4 watch hours, 68 subscribers (+68). Top content (28 days):
+Camel Humps 4.8K, Octopus 4.0K, Where Is My Mama? 3.8K. 92% of views come from Suggested videos. NOT read this run: impressions, CTR and average view
+duration per video (the Advanced-mode table was not opened), so this check compares views only.
+Views since the Nov 14 6:50 AM read (Content list): Ants 762 -> 1,311 (+549) · Octopus 3,574 -> 3,997 (+423) · Camel 4,538 -> 4,826 (+288) · Snail 721 -> 973 (+252) ·
+T. Rex Never Met Stegosaurus 745 -> 891 (+146) · Lion song-cut Short 184 -> 323 (+139) · Where Is My Mama? 3,816 -> 3,853 (+37). Other values today: T. Rex Tiny Arms 1,017,
+Meerkats 1,135, Pteranodon 553, Animal Sounds 758, Amazing Animal Bodies 678, Savanna 604, What Do Animals Eat 578, Milo Had a Zoo 173, Backyard Bugs 105.
+Newest song-cut Shorts: What Do Giraffes Eat 69, What Do Elephants Eat 33, Peekaboo Baby Animals 9 (Nov 14), Where Does a Hippo Live 3 (Nov 14, 40% viewed in its first 12 h).
+Newest long-form: Head, Shoulders, Knees and Paws 37, Zoo Freeze Dance 28, Count 10 Zoo Animals 9, Peekaboo Penguin 6, Who's Hiding 7.
+What's winning: the same old fact-surprise Shorts still bring most of the growth; new song-cut Shorts and new songs get very little. No v3 lesson is public yet
+(first one, zool_ep08, goes public Nov 15 1:30 PM), so lesson-vs-song numbers for the new format start with the Nov 16 check.
+Adjustment: Shorts slots go to lesson Shorts (one sourced fact each, 90 s) as soon as they pass; song cuts only fill a slot when no lesson Short is ready.
+
 ## 2026-11-14, 6:50 AM ET re-read (Studio refreshed; The Animated Zoo only, lifetime)
 Totals: **26,724 views (+4,258 vs the stale overnight read of 22,466)**, 349,661 impressions (+17,224), 2.3% CTR, 0:25 average view, 21.8% viewed, 202 likes (+28).
 Per-video list: Command Center analytics/animated-zoo-2026-11-14 (version 2).

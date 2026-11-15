@@ -1,5 +1,5 @@
 {
- "id": "zool_ep12",
+ "id": "zool_ep12a",
  "title": "Where Do Animals Live?",
  "channel": "zoo",
  "set": "zooworld",
@@ -492,7 +492,7 @@
    "shots": [
     "teach",
     "teach",
-    "close:monkey",
+    "teach",
     "exhibit",
     "exhibit",
     "teach",

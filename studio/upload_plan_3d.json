@@ -1286,10 +1286,12 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep08.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 333.3,
-  "note": "format v3 approved by Noelson Nov 14 11:00 PM; review.py PASS Nov 14"
+  "note": "format v3 approved by Noelson Nov 14 11:00 PM; review.py PASS Nov 14; review.py PASS again Nov 15 7:05 AM; scheduled Nov 15 ~7:08 AM ET for 1:30 PM (daily run), custom thumbnail confirmed in the dialog",
+  "video_id": "ulm1vcaY7ZM",
+  "thumb_set": true
  },
  {
   "file": "truck/tt3d_ep07.mp4",
@@ -1457,10 +1459,10 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "hold_fix",
   "format": "3d_lesson",
   "duration": 339.9,
-  "note": "format v3 approved Nov 14; review.py PASS Nov 15 1:21 AM; frames of every example and answer sign looked at"
+  "note": "format v3 approved Nov 14; review.py PASS Nov 15 1:21 AM; frames of every example and answer sign looked at; Nov 15 daily run frame check: STRIPES/SPOTS answer signs cut by the close-up answer shots (0:31 tiger, 3:28 cow). HELD. Re-render job zool_ep10a (test stills looked at) queued on the PC."
  },
  {
   "file": "truck/tt3d_ep08.mp4",
@@ -1600,9 +1602,10 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "hold_fix",
   "format": "3d_lesson",
-  "duration": 337.2
+  "duration": 337.2,
+  "note": "; Nov 15 daily run: HELD (not uploaded): answer signs cut by the close-up answer shots (giraffe 0:30, also elephant and lion answers). Re-render job zool_ep09b (fix_sign_shots.py, test stills looked at) queued on the PC; refinish from out/zool_ep09b, frame check, then upload on the Nov 16 9:30 AM slot."
  },
  {
   "file": "truck/tt3d_ep09.mp4",

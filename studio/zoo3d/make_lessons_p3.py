@@ -152,7 +152,7 @@ L.append({
 def champ_visits(name, n=2): return [{"show": ["none"]}, {"line": n, "show": [name]}]
 
 L.append({
- "id": "zool_ep09", "thumb_at": ["giraffe", 5, 0.85], "seed": 37, "title": "Animal Champions for Kids! Tallest, Biggest, Loudest", "card": "Animal Champions!", "thumb_text": "WHO WINS?",
+ "id": "zool_ep09", "thumb_at": ["giraffe", 6, 0.97], "seed": 37, "title": "Animal Champions for Kids! Tallest, Biggest, Loudest", "card": "Animal Champions!", "thumb_text": "WHO WINS?",
  "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet three animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars and cools down with its big ears, and a lion's roar can be heard from up to five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
  "tags": ["biggest animals for kids", "tallest animal", "animal records for kids"] + TAGS,
  "cast": ["giraffe", "elephant", "lion"],

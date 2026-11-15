@@ -21,3 +21,4 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 - Log every defect in `docs/IMPROVE.md` the same day and name it as fixed in the next video's spec; a defect counts as fixed only after a frame shows it fixed.
 - When the owner says a scheduled or published video is wrong: set it to Private (do not delete), fix the cause in the engine, check every other video for the same cause, re-render, upload the fixed one on the same slot.
 - Never run `git pull`, `git stash` or a rebase while an encode is writing a file inside the repo.
+- After copying any file to the PC, read it back and compare it with the local file before a render depends on it; give every copy a new staged file name (a re-used staged path delivered the old content on Nov 15).

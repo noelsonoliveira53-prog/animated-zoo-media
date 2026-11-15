@@ -1652,7 +1652,7 @@
   "replaced_video": "BKfS-luRPeo (set to Private: outro captions said four/foe for foal)",
   "video_id": "tt34irM1y7o",
   "thumb_set": true,
-  "note": "Nov 14 11:40 PM, Noelson: \"the babies inside the animals is strange ... cancel and upload the fixed one\". YouTube video tt34irM1y7o set to PRIVATE (schedule removed) Nov 14 11:46 PM, verified after reload. Cause: 10 animals on 6 formation places in the 13y render. Fixed render = PC job zoo3d_ep13z (native 4K). When finished: finish.py, review, look at every group scene, upload as a NEW video scheduled Nov 17 4:00 PM, then record the new video id here; the old private video stays private (not deleted).",
+  "note": "Nov 14 11:40 PM, Noelson: \"the babies inside the animals is strange ... cancel and upload the fixed one\". YouTube video tt34irM1y7o set to PRIVATE (schedule removed) Nov 14 11:46 PM, verified after reload. Cause: 10 animals on 6 formation places in the 13y render. Fixed render = PC job zoo3d_ep13za (native 4K). (Job zoo3d_ep13z finished 2:18 AM Nov 15 but was rendered with the OLD engine: the engine.py copy had not reached the PC; caught on the frame check, never encoded or uploaded.) When finished: finish.py, review, look at every group scene, upload as a NEW video scheduled Nov 17 4:00 PM, then record the new video id here; the old private video stays private (not deleted).",
   "old_video_id": "tt34irM1y7o"
  },
  {

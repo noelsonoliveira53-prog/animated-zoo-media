@@ -377,3 +377,15 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     from Nov 17). Upload cap per run 6 -> 9. The fixed zoo3d_ep13 goes to Nov 17 3:30 PM (not 4:00 PM).
   * Noelson 1:22 AM: use the task-observer skill, "learn all improvement that works and perfect them next time". -> CLAUDE.md
     "## Working preferences" in the repo root (15 rules) and a line in docs/DAILY_RUN.md: read it first, add one line per run.
+- Nov 15, 2:35-3:00 AM (the first "fixed" baby render was NOT fixed; caught before upload):
+  * PC job zoo3d_ep13z DONE 2:18:43 AM (3840x2160, 4,080 frames). Frame check of 31 frames: babies STILL inside their parents.
+    Cause: C:\...\ZooBlender\zoo3d\engine.py on the PC was the 6:20 PM version (27,147 bytes, no _formation_spots). The 12:27 AM
+    device_commit_files call had reported "written", but it re-used the staged path /mnt/user-data/outputs/ZooBlender/v3/zoo3d/engine.py
+    from the 6:20 PM copy and the PC received the OLD content. Nothing from 13z was encoded to the repo or uploaded (finish.py killed).
+  * RULE (also in CLAUDE.md): every copy to the PC gets a NEW staged file name, and is read back (device_stage_files) and compared by
+    md5 before a render depends on it. Done now: engine.py 2e32bf750e73 and teachprops.py cdcbb249c531 on the PC = local (read back).
+    Side finding: the PC's teachprops.py had also been the 6:20 PM version (sign width cap 3.0 instead of 2.8) for zool_ep08a, zool_ep10
+    and zool_ep09; the frames of ep08 and ep10 that were looked at show every sign inside the picture.
+  * Queue now: zool_ep09 is rendering (started ~2:19 AM, old engine: fine for lessons). zool_ep11a and zool_ep12 marked DONE (skipped)
+    and re-queued as zool_ep11b and zool_ep12a so that the next scan takes zoo3d_ep13za (the real fix) first, then 11b, 12a.
+  * zoo3d_ep13.mp4 stays "hold_fix"; old video tt34irM1y7o stays Private. Upload slot for the fix: Nov 17 3:30 PM.

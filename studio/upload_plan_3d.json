@@ -1631,12 +1631,11 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep09.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "to_upload",
   "format": "3d_lesson",
   "duration": 337.2,
-  "note": "Nov 15 2:53 PM: uploaded and scheduled Nov 16 9:30 AM (wzJiaHEj6tY; dialog read: 'set to public on November 16, 2026 at 9:30 AM'; title, description, made for kids and custom thumbnail read back on the Details page). Owner Nov 15 2:50 PM: decide yourself and upload. This file is the zool_ep09b re-render: all six answer signs whole. STILL IN IT: quiz check on the lion's face at 5:16, ? badge over QUIZ TIME!, only a ray of the sun at 2:32. DECISION: when the slices zool_ep09q + zool_ep09s are DONE (about 3-4 AM Nov 16) and the spliced file passes the frame look before 9:30 AM, upload the spliced file on the same slot and set wzJiaHEj6tY to Private (not deleted). If not ready, wzJiaHEj6tY goes out. Studio 3:10 PM: Scheduled, Nov 16, 2026, 9:30 AM.",
-  "video_id": "wzJiaHEj6tY",
-  "thumb_set": true
+  "old_video_id": "wzJiaHEj6tY",
+  "note": "Nov 16 4:45 AM: this file is the SPLICED version (zool_ep09b raw + slices zool_ep09q [6913,7635) and zool_ep09s [3448,3789), stray QUIZ TIME! word covered in frames 7635-7646). Frames looked at: six answer reveals whole, sun whole at 2:26-2:36, quiz word alone, ? badge alone, three checks beside the heads, seams. The OLD upload wzJiaHEj6tY (scheduled Nov 16 9:30 AM, old quiz layout) is still scheduled until this file's upload is confirmed; then it is set to Private."
  },
  {
   "file": "zool_ep12.mp4",

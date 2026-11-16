@@ -55,3 +55,4 @@
 | 2026-11-16 | shorts3d/zs90_bear_cub.mp4 | lesson_fact_short_90 | PASS | - | - | lesson Short titles ask the question the fact answers |
 | 2026-11-16 | shorts3d/zs3d_baby_action.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-16 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-16 | cartoon/zc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | - | - |

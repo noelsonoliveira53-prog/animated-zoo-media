@@ -475,3 +475,7 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   leaves first; read back = local). teach.py: same two hello rules (not run since the edit). The local 12b raw was deleted to free disk
   (re-stage the three parts from out\zool_ep12b for the splice).
   PC order from here: zool_ep13 (frame 1,897 of 8,324 at 9:54 PM), zool_ep14, then slices 09q, 09s, 10q, 12h.
+- Nov 16, 12:27-1:10 AM ET (check-in): zool_ep13 DONE on the PC 12:16 AM (8,323 frames) -> zool_ep13.mp4 (AV1 4K, 346.9 s, 90.4 MB), review.py
+  PASS; frames looked at (see the plan note). Uploaded from commit 1c867bf and SCHEDULED Nov 17 9:30 AM: tXURpJDJE04 (date picker read
+  "Nov 17, 2026" before the click; dialog + Details page read back). Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 4 (this session).
+  PC 1:06 AM: zool_ep14 is rendering (started about 12:16 AM); the slices 09q, 09s, 10q, 12h follow.

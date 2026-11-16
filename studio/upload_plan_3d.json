@@ -1781,9 +1781,12 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep13.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
-  "duration": 346.8
+  "duration": 346.8,
+  "video_id": "tXURpJDJE04",
+  "thumb_set": true,
+  "note": "Nov 16 1:05 AM: finished from the patched zool_ep13 render (review.py PASS). Looked at: 18 raw + 6 final frames of the six answer reveals (every winning sign whole), the quiz (word alone, ? badge alone, three checks beside the heads, faces clear), 27 example/hello/goodbye frames (no face behind a prop). Thumbnail PEEKABOO! looked at (words in the sky). Known and left in: the hello count line (0:19-0:21) uses the vista shot that cuts Milo at the bottom (fixed in teach.py for new lessons). Uploaded and scheduled Nov 17 9:30 AM (tXURpJDJE04; dialog read: 'set to public on November 17, 2026 at 9:30 AM'; Details page read back)."
  },
  {
   "file": "truck/tt3d_ep10.mp4",

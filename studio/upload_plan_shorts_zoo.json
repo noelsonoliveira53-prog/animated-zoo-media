@@ -628,7 +628,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "rendering",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -636,7 +636,8 @@
   "thumb_text": "SO LONG!",
   "watermark": "top",
   "date": "2026-11-19",
-  "time": "7:30 PM"
+  "time": "7:30 PM",
+  "seconds": 86.2
  },
  {
   "file": "cartoon/zc_ep02_short2.mp4",
@@ -655,7 +656,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "rendering",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -663,7 +664,8 @@
   "thumb_text": "NOT A STRAW!",
   "watermark": "top",
   "date": "2026-11-20",
-  "time": "11:30 AM"
+  "time": "11:30 AM",
+  "seconds": 89.1
  },
  {
   "file": "cartoon/zc_ep02_short3.mp4",

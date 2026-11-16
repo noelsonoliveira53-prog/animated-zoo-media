@@ -2044,10 +2044,13 @@
   "thumb": "brand/zoo/thumb_zc_ep01.jpg",
   "thumb_text": "NOT WATER?!",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
+  "video_id": "xW4MrQA6ZH8",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  }
 ]

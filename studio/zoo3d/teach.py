@@ -148,9 +148,13 @@ def build(spec):
                 elif kind == "teach": shots[k] = "teach"
                 else: shots[k] = ("wide", "close:host", "orbit", "low", "vista", "close:host", "high", "dolly")[(k - a) % 8]
         if kind != "teach":   # group scenes: a line that brings in an example is shown wide, so the example is in the picture
+            # ... and so is every later line while it stays up (Nov 15: the "vista" line after the 1-2-3 count cut Milo at the bottom of
+            # the picture in every hello; zool_ep09 0:16, zool_ep12 0:17)
             for e_ in seg.get("exhibits", []):
                 k_ = e_["on"][0] if isinstance(e_["on"], list) else int(e_["on"])
-                if not seg["_lt"][k_][2].get("shot"): shots[k_] = "wide"
+                f_ = e_.get("off"); k1_ = nl - 1 if f_ is None else (f_[0] if isinstance(f_, list) else int(f_))
+                for q_ in range(k_, min(k1_, nl - 1) + 1):
+                    if not seg["_lt"][q_][2].get("shot"): shots[q_] = "wide"
         d = {"section": seg["name"], "shots": shots, "energy": seg.get("energy", 0.3 if kind == "teach" else 0.6), "wave": 0 if kind == "teach" else 1,
              "jump": seg.get("jump", 0.0 if kind == "teach" else 0.2), "group": False, "props": []}
         if seg.get("jumpers"): d["jumpers"] = seg["jumpers"]
@@ -202,6 +206,10 @@ def build(spec):
             if ex.get("times"): o["times"] = [round(ref(seg, r, s0) - on, 3) for r in ex["times"]]
             if ex.get("leave"): o["leave"] = round(ref(seg, ex["leave"], s0) - on, 3)
             add(ex["prop"], ex.get("at", "ex"), on, off, o)
+        if kind != "teach":   # group scenes: in the wide shot the 1-2-3 count stands on the 3D word (zool_ep12 still): the word leaves first
+            cn_ = [p_["delay"] for p_ in P if p_.get("type") == "teach" and p_["name"] == "count"]
+            for p_ in P:
+                if cn_ and p_.get("type") == "text" and "dur" not in p_: p_["dur"] = round(max(1.0, min(cn_) - p_.get("delay", 0) - 0.15), 3)
         if kind == "teach":
             # Nov 15 frame check (sun at 2:32 of zool_ep09b, 2:23 of zool_ep08): a close-up while a high example (z >= 3.0: sun,
             # count badges) is up cuts it at the top of the picture. Close-up lines that overlap one use the teaching shot.

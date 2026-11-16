@@ -222,7 +222,7 @@
     "close:host",
     "orbit",
     "wide",
-    "vista"
+    "wide"
    ],
    "energy": 0.7,
    "wave": 1,
@@ -235,7 +235,8 @@
      "color": "#ffb627",
      "at": "top",
      "size": 0.7,
-     "delay": 1.0
+     "delay": 1.0,
+     "dur": 14.279
     },
     {
      "type": "teach",
@@ -1016,5 +1017,5 @@
  "punch": false,
  "timing_file": "zool_ep14_timing.json",
  "audio": "zool_ep14_song.wav",
- "layout_fix": "2026-11-15"
+ "layout_fix": "2026-11-15 + hello count wide"
 }

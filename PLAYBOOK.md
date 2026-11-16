@@ -467,3 +467,11 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   Studio list 6:48 PM: 8IgNBQcHiZw and wzJiaHEj6tY read Scheduled Nov 16; "Who Am I?" and the 4 PM song read Public.
   Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 3 (this session). DECISION: zool_ep12 goes on Nov 16 5:30 AM (last free
   lesson slot of Nov 16) when it passes the frame look tonight; zool_ep13/14 are for Nov 17.
+- Nov 15, 9:22-10:05 PM ET (check-in): zool_ep12b DONE on the PC 9:10 PM (8,080 frames) -> zool_ep12.mp4 (336.7 s, 86.6 MB). 18 raw frames of
+  the six answer reveals, 9 quiz frames and 27 example/hello/goodbye frames looked at. Reveals and quiz are right (checks beside the heads).
+  NOT UPLOADED: the HOT thermometer's sign covers the bear's face in the hello for 11 s. DECISION: hold_fix, Nov 17 1:30 PM; Nov 16 5:30 AM
+  stays empty. Slice zool_ep12h [0,496) on the PC (md5 4ba8efc4ab10, read back = local); stills of the corrected hello looked at (four
+  faces visible, word alone, then 1-2-3 alone). zool_ep14.json on the PC patched again before its render (hello count line wide, word
+  leaves first; read back = local). teach.py: same two hello rules (not run since the edit). The local 12b raw was deleted to free disk
+  (re-stage the three parts from out\zool_ep12b for the splice).
+  PC order from here: zool_ep13 (frame 1,897 of 8,324 at 9:54 PM), zool_ep14, then slices 09q, 09s, 10q, 12h.

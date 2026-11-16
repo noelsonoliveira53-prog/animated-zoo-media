@@ -1562,6 +1562,31 @@
   "thumb_set": true
  },
  {
+  "file": "zool_ep12.mp4",
+  "title": "Where Do Animals Live? Animal Homes for Kids with Milo",
+  "description": "Where do animals live? Travel with Milo the bluebird to the hot desert, the snowy Arctic, the rainy jungle and the mountains. Is this the animal's home, yes or no? Find the real home of the arctic fox, the monkey and the bear, and see how each one lives there.\nAn interactive animal homes lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nArctic foxes live on the Arctic tundra; their coat is white in winter and turns brown or gray in summer for camouflage (Britannica; Columbus Zoo).\nAn arctic fox wraps its fluffy tail around its body like a blanket to sleep, and thick fur on its feet works like built-in snow boots; it lives within the Arctic Circle and can dig a snow den and stay in it for up to two weeks (National Geographic Kids, 'Arctic Fox').\nMost monkeys live in trees; monkey groups are called troops and travel together by day to find food; monkeys eat fruits, leaves, nuts and seeds; some New World monkeys, such as spider monkeys, can grip with their tails (San Diego Zoo, 'Monkey').\nIn fall bears eat and drink nearly nonstop (hyperphagia); most bears den in winter, cubs are born in the den, and bears leave the den in spring to look for food (U.S. National Park Service, 'When Bears Prepare For Winter').",
+  "tags": [
+   "animal homes for kids",
+   "where do animals live",
+   "animal habitats for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-17",
+  "time": "1:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep12.png",
+  "made_for_kids": true,
+  "status": "hold_fix",
+  "format": "3d_lesson",
+  "duration": 336.7,
+  "note": "Nov 15 10 PM: finished from the patched zool_ep12b render (review not the issue: frames looked at). All six answer reveals and the quiz are right. HELD: in the hello (0:09-0:20) the HOT thermometer stands in front of the bear and its sign covers the bear's face; in the count shot (0:17) Milo is cut at the bottom. Slice job zool_ep12h (frames [0,496): bear moved out from behind, count line wide, word leaves before the 1-2-3) is on the PC and runs after zool_ep14 and the 09/10 slices (about 4:30 AM Nov 16). Then: splice_slices.py <12b raw> <out> <12h raw>:0, finish.py with jobs/zool_ep12b.json --date 2026-11-17 --time \"1:30 PM\", look at the hello frames, review.py, upload. The 12b raw (559.7 MB, 3 parts) is on the PC in out\\zool_ep12b. Nov 16 5:30 AM stays empty (decision: no weak video in the slot)."
+ },
+ {
   "file": "zool_ep11.mp4",
   "title": "Yes or No? Animal Quiz for Kids with Milo",
   "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a polar bear swim? Can a horse sleep standing up? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy, quick checks and a recap at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nA polar bear's skin is black (Polar Bears International); its hair is made of clear, hollow tubes, and its fat can be 2 to 4 inches thick (San Diego Zoo, 'Polar bear').\nPolar bears paddle with their broad front feet and can swim more than 60 miles without rest (San Diego Zoo, 'Polar bear'); their back legs steer like rudders; the paws are as big as dinner plates (Polar Bears International).\nHorses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).\nA healthy foal stands within one hour of birth and nurses within two (Cornell University College of Veterinary Medicine).\nA giraffe has seven neck vertebrae, the same number as a human and almost every other mammal; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo).\nA giraffe's tongue can be up to 21 inches long (National Geographic Kids, 'Giraffe').",

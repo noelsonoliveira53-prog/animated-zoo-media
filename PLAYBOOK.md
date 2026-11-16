@@ -500,3 +500,25 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     |x| <= 2.9; teach.py NOT changed yet). Shorts tab read 5:33 AM: three Nov 16 Shorts read Scheduled (times not read).
   * NOT done here: zool_ep14 (DONE on the PC, 3 parts in out\zool_ep14) is not finished or checked; Nov 17 5:30 AM lesson slot is empty;
     Nov 17 5:30 PM is for zool_ep14. teach.py's Nov 15-16 rules have not run on a new lesson yet.
+- Nov 16, 6:44 AM-9:40 AM ET (daily run):
+  * Views (Studio Advanced analytics, lifetime): 32,766 views, 371,491 impressions, 2.2% CTR. Ants +186, Octopus +155, Lion song-cut Short +119,
+    Snail +109, Camel +87 since Nov 15. First v3 lesson "Who Am I?" 5 views (Content list); its CTR/retention not in the table yet.
+    docs/ANALYTICS.md, Command Center analytics/animated-zoo-2026-11-16.
+  * Uploads (4 of 9, all with custom thumbnails seen as data: img, "Video scheduled" dialog read, list rows read Scheduled):
+    zool_ep14 "Baby Animals for Kids!" Jxf5Dgz4btk Nov 17 5:30 PM (finished here: 339.7 s AV1 4K, 67 raw + 8 final frames looked at,
+    thumbnail redone as WINTER DEN! because FIRST STEPS! sat on the bear-and-den frame); Shorts zs90_bear_cub 3e6ZuMoRujM Nov 17 7:30 AM (new cut from
+    zool_ep14, 86.6 s), zs90_zebra_stripes aNdFX35OUMU Nov 17 11:30 AM, zs90_tiger_skin 8egrAUdIMVY Nov 17 7:30 PM. Song-cut zs3d_sleep_zebra
+    taken off Nov 17 7:30 AM (status spare_song_cut).
+  * New lessons zool_ep15-18 (make_lessons_p5.py; facts read Nov 16 at SDZWA Library fact sheets and Primate Info Net): ep15 What Do Animals Eat
+    (panda, koala, zebra; 328 s), ep16 Amazing Animal Feet (polar bear, tiger, hippo; 334 s), ep17 Whose Tail Is This? (lion, monkey, giraffe; 327 s),
+    ep18 Hot or Cold? (elephant, koala, tiger; 331 s). teach.py: no FAIL line, 100% words aligned. 6-10 test stills each looked at, fixes stilled again.
+    Jobs PATCHED after teach.py (not re-voiced): hello places (variety), 3D word on at the fact line, PADDLES! sign -> WIDE FEET!, ep17 tail props +
+    flies at z 1.6 with leave 3.3 s, ep18 tiger sits in the pool (visit place z -0.45) on lines 3-4. Variety recorded. teachprops.py ("tail") copied
+    to the PC zoo3d folder; all 13 files read back, md5 = local.
+  * PC queue 9:35 AM: zool_ep15 rendering (started about 7:45 AM), then ep16, ep17, ep18 (about 3 h each). Slots: Nov 18 9:30 AM ep16, 1:30 PM ep15,
+    5:30 AM ep17 (Nov 18 5:30 PM stays empty: zool_ep01 is at 4:00 PM), Nov 19 ep18. ep17 is the first render with the tail prop: look at its tail
+    and flies frames. Every one still needs finish.py, the frame look, review.py and its Shorts.
+  * NOT done: no new song queued. zoo3d_ep19y (Good Morning, Farm! at native 4K, re-routed places) failed its stills: the horse is half out of the
+    picture in its own verse and missing from the bridge and outro shots (close:<id> shots did not take effect in the 4-character song).
+    jobs/zoo3d_ep19y.json is in the repo, not on the PC. Nov 17 5:30 AM lesson slot is still empty.
+

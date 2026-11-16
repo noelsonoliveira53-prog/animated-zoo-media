@@ -57,3 +57,4 @@ Every review and every views check adds one concrete thing to do better. Before 
 - 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_zebra_stripes.mp4)
 - 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_tiger_skin.mp4)
 - 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_bear_cub.mp4)
+- 2026-11-16: Song zoo3d_ep19y: with 4 characters the verse shot keeps Milo in the middle and the verse animal at the frame edge (horse, verse 2), and the bridge/outro shots leave the horse out; a 'close:<id>' location shot did not change it. Fix the song shot plan before the next song render (why: test stills 500/1130/1330/2640 of zoo3d_ep19y, Nov 16)

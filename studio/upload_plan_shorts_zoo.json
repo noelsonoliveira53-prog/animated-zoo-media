@@ -259,12 +259,13 @@
   "description": "Milo had a zoo, E-I-E-I-O! And at the zoo he had a lion: roar here, roar there!\nA short animal sounds sing-along for kids to the Old MacDonald tune. From \"Milo Had a Zoo!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "spare_song_cut",
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_milo_lion.png",
   "note": "moved from Nov 16 11:30 (fact-surprise Short took the slot); retitle to the fact pattern before upload",
   "thumb_text": "WHO IS NEXT?",
-  "watermark": "top"
+  "watermark": "top",
+  "note_moved": "slot 2026-11-19 7:30 AM given to the cartoon Short cartoon/zc_ep01_short2.mp4 (Shorts come from lessons and stories, not from songs)"
  },
  {
   "file": "shorts3d/zs3d_knees_paws.mp4",
@@ -275,11 +276,11 @@
   "description": "Shake your head like a lion and flap your ears like an elephant! A short action song for kids with Milo.\nMove along to \"Head, Shoulders, Knees and Paws!\" on The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "spare_song_cut",
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_knees_paws.png",
   "thumb_text": "COPY ME!",
-  "note_moved": "moved from 2026-11-19 11:30 AM on Nov 14: lesson Shorts take the slots first",
+  "note_moved": "slot 2026-11-20 7:30 AM given to the cartoon Short cartoon/zc_ep01_short3.mp4 (Shorts come from lessons and stories, not from songs)",
   "watermark": "top"
  },
  {
@@ -547,5 +548,61 @@
   "video_id": "1Jbwfw5xDYY",
   "thumb_set": true,
   "scheduled_on": "2026-11-16"
+ },
+ {
+  "file": "cartoon/zc_ep01_short2.mp4",
+  "title": "How Much Can a Thirsty Camel Drink?",
+  "description": "How much can a thirsty camel drink? Find out with Milo the bluebird, Mama camel and baby Sandy: a thirsty camel can drink thirty gallons of water in only thirteen minutes, and then go a week or more without a drink. A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump? Baby Camel Story with Milo\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); National Geographic (Arabian camel).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "baby camel",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "cartoon_short_90",
+  "from": "zc_ep01",
+  "seconds": 88.1,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep01_short2.jpg",
+  "thumb_text": "30 GALLONS?!",
+  "watermark": "top",
+  "date": "2026-11-19",
+  "time": "7:30 AM",
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
+ },
+ {
+  "file": "cartoon/zc_ep01_short3.mp4",
+  "title": "How Do Camels Keep Sand Out of Their Eyes?",
+  "description": "How do camels keep sand out of their eyes? Find out with Milo the bluebird and baby Sandy: camels have two rows of long eyelashes, a nose that can close, and big wide feet for walking on soft sand. A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump? Baby Camel Story with Milo\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); National Geographic Kids (Bactrian camel).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "baby camel",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "made_for_kids": true,
+  "status": "rendering",
+  "format": "cartoon_short_90",
+  "from": "zc_ep01",
+  "seconds": 87.9,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep01_short3.jpg",
+  "thumb_text": "BLINK, BLINK!",
+  "watermark": "top",
+  "date": "2026-11-20",
+  "time": "7:30 AM",
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
  }
 ]

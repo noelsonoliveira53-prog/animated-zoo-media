@@ -544,7 +544,7 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     killed for memory on 4K; the fade now works only on the mark's own rectangle cut from the video.
   * NOT done: no lesson has been finished with hide windows from a real job yet; nobody has chosen windows for zool_ep15-18.
 
-## Cartoon pipeline (Nov 16, 2026) - TEST, nothing uploaded, waiting for Noelson's approval
+## Cartoon pipeline (Nov 16, 2026) - APPROVED by Noelson Nov 16, 3:36 PM ("cartoon formats are approved, build and post")
 - Why: his brief of Nov 16 (three pillars: songs 3D, adventure stories and fact lessons cartoon, Shorts cartoon). Findings, style bible and
   content plan: `docs/cartoon/findings.html`, `bible.html`, `plan.html` (built by the three build_*.py files next to them).
 - Engine: `studio/cartoon/toon.py` (HyperFrames: HTML + SVG + GSAP, 24 fps, 4K), art in `art.py` (Milo, camels, desert) and `art2.py`
@@ -564,4 +564,9 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   episode while that episode is rendering: both write the same `proj_l/index.html`.
 - Voices: Kokoro (sing.py) per character from EP["cast"], pitched with WORLD (`toon.shift`); sung refrains from `sing.build`. Nobody has
   listened to them: they were checked by word alignment (every word placed, also on the pitched voices) and loudness only.
+- Posting a cartoon video: the long ones are re-encoded to 4K AV1 for the repo (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
+  about 72 MB, 20-25 min each on 2 cores), then `toon.py --check4k`, `watermark.py check`, `review.py cartoon/<id>.mp4` (PASS), frames looked at, commit, push, Studio ("Posting" above). Shorts go into `cartoon/` as rendered (about 50 MB).
+- New episodes start from `kit.py` (cameras for 16:9 and 9:16, `WV` = a 9:16 view that holds the named characters whole, words with their 9:16 place, props with a 9:16 place) and set `"nest": True` in EP.
+  Write every part 83-90 s long so each part plus its hook is a Short of 85-95 s. A Short is `{"part": n, "extra_first": [hook shot], "extra_last": [...]}`; its title band is two lines of at most 15 and 10 letters.
+- 9:16 stills: `studio/cartoon/stills.sh <id> <short index | L> <sheet.jpg> [cols] [width]` = `toon.py <id> --short <n> --plan`, then `--stills` at t1-0.3 of every shot from `<short id>_timing.json`, then `sheet.py out/<id>/proj_p sheet.jpg 8 300`. Never while a render of the same episode runs.
 - Not built: the closing "next adventure" picture, a Short cut from the adventure, voices for Poppy, Tula, Clover and Hazel, the playlists.

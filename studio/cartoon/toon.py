@@ -511,7 +511,19 @@ def mix_audio(film, total, ep):
     return np.clip(m, -1, 1)
 
 
+def need_4k(path, portrait):
+    """Noelson, Nov 16: 4K is the minimum for every video on the channel. A finished cartoon file that is not 3840x2160 (2160x3840 for a Short) is refused."""
+    r = subprocess.run(["ffprobe", "-v", "error", "-select_streams", "v:0", "-show_entries", "stream=width,height", "-of", "csv=p=0", path], capture_output=True, text=True).stdout.strip()
+    want = "2160,3840" if portrait else "3840,2160"
+    if r != want:
+        bad = path.replace(".mp4", "_NOT_4K.mp4"); os.replace(path, bad); sys.exit(f"NOT 4K: {bad} is {r.replace(',', 'x')}, it must be {want.replace(',', 'x')}. Not a finished file.")
+    print("4K", r.replace(",", "x"), path)
+
+
 def main():
+    if len(sys.argv) > 2 and sys.argv[1] == "--check4k":
+        for f in sys.argv[2:]: need_4k(f, "short" in os.path.basename(f))
+        return
     mod = importlib.import_module("episodes." + sys.argv[1]); ep = mod.EP; short = arg("--short")
     shots = [dict(s) for s in mod.SHOTS]; portrait = short is not None; band = None; sid = ep["id"]
     if portrait:
@@ -547,6 +559,7 @@ def main():
     a_in = ["-i", wav] if not arg("--from") else ["-ss", arg("--from"), "-to", arg("--to"), "-i", wav]
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent] + a_in + ["-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000",
                     "-c:a", "aac", "-b:a", "192k", "-shortest", "-movflags", "+faststart", final], check=True)
+    if "--draft" not in sys.argv: need_4k(final, portrait)
     print("FILM", final, round(total, 1), "s")
 
 

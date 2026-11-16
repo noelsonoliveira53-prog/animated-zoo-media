@@ -43,7 +43,7 @@ STAGES = {
     "zoo_eve": [("mama", "elephant", 1560, 932, .9, True), ("tumble", "tumble", 700, 940, .6), ("milo", "milo", 300, 420, .7, False, True)],
 }
 K = Kit(STAGES); P, C, V, WV = K.P, K.C, K.V, K.WV
-HUG = [("mama", "elephant", 1560, 944, .9, True), ("tumble", "tumble", 760, 940, .6)]      # Mama a little nearer the camera: her trunk is drawn over Tumble, not behind him
+HUG = [("mama", "elephant", 1560, 944, .9, True), ("tumble", "tumble", 760, 940, .6)]      # her trunk rests on the top of his head (-68): lower (-60) it covered his eye in the first render      # Mama a little nearer the camera: her trunk is drawn over Tumble, not behind him
 WIDE = (960, 540, 1920)
 E = art2.ELE; INK = art.INK; SUN = art.SUN
 TP = "392 -430"       # the trunk's pivot
@@ -331,19 +331,19 @@ SHOTS = [
     S("zoo_eve", (1150, 620, 1100), "Tumble is tired. He comes close to Mama.", part=3, tag="tired", actors=HUG, pcam=HUGP, pcam2=HUGP, fx=[("face", 0.05, "tumble", "sleepy"), ("lookat", "w:close", "mama", 6)],
       words=[("w:tired.", "YAWN", .2, .2, 1.0, "", (.3, .31))]),
     S("zoo_eve", (1150, 620, 1100), "Mama reaches out her trunk, and strokes him gently.", part=3, tag="strokes", actors=HUG, pcam=HUGP, pcam2=HUGP,
-      fx=[("trunk", "w:reaches", "mama", -60, .7), ("to", "w:strokes", "#{p}mama-trunk", {"rotation": -52, "duration": .4, "yoyo": True, "repeat": 5}, "Mama strokes Tumble"), ("face", "w:gently.", "tumble", "happy")],
+      fx=[("trunk", "w:reaches", "mama", -74, .7), ("to", "w:strokes", "#{p}mama-trunk", {"rotation": -65, "duration": .4, "yoyo": True, "repeat": 5}, "Mama strokes Tumble"), ("face", "w:gently.", "tumble", "happy")],
       words=[("w:gently.", "GENTLY", .2, .2, 1.0, "pill", (.3, .31))]),
     S("paper_pink", (960, 520, 1500), "Elephants stroke each other with their trunks.", part=3, tag="board: stroke", actors=[("a", "elephant", 1330, 950, .75, True), ("b", "tumble", 600, 950, .62)], pcam=(960, 480, 2400),
       props=[prop("h1", art2.heart, 960, 380, 1.3, True)], fx=[("trunk", 0.2, "a", -35, .6), ("trunk", 0.2, "b", -40, .6), ("show", "w:trunks.", "h1")],
       words=[("w:stroke", "STROKE", .5, .12, 1.1, "", (.5, .31))]),
     S("zoo_eve", (1150, 620, 1100), "It is like a hug. A trunk hug!", part=3, tag="trunk hug", actors=HUG, pcam=HUGP, pcam2=HUGP, props=[prop("h1", art2.heart, 1010, 430, 1.2, True), prop("h2", art2.heart, 1140, 370, .8, True)],
-      fx=[("to", 0, "#{p}mama-trunk", {"rotation": -60, "svgOrigin": TP, "duration": .01}), ("show", "w:hug.", "h1"), ("show", "w:trunk", "h2"), ("face", 0.02, "tumble", "happy")],
+      fx=[("to", 0, "#{p}mama-trunk", {"rotation": -68, "svgOrigin": TP, "duration": .01}), ("show", "w:hug.", "h1"), ("show", "w:trunk", "h2"), ("face", 0.02, "tumble", "happy")],
       words=[("w:trunk", "TRUNK HUG!", .32, .2, .9, "sun", (.5, .29), .9)]),
     S("zoo_eve", say="Can you give yourself a big hug? Squeeze!", part=3, q=True, tag="hug along", hide=["tumble", "mama"],
       fx=[("to", "w:Squeeze!", "#{p}milo-body", {"scaleX": .9, "scaleY": 1.06, "svgOrigin": "0 0", "duration": .3, "yoyo": True, "repeat": 3}, "Milo hugs himself")],
       words=[("w:Squeeze!", "SQUEEZE!", .76, .22, 1.0, "sun", (.5, .31))], **MILO("zoo_eve")),
     S("zoo_eve", C("zoo_eve", "tumble", "head", 900, 60, 20, HUG), "Tumble feels warm and happy.", part=3, tag="happy", actors=HUG, pcam=V("zoo_eve", "tumble", "head", 1100, 60, 40, HUG),
-      props=[prop("h1", art2.heart, 880, 500, .8, True)], fx=[("to", 0, "#{p}mama-trunk", {"rotation": -60, "svgOrigin": TP, "duration": .01}), ("face", 0.02, "tumble", "happy"), ("show", "w:happy.", "h1")]),
+      props=[prop("h1", art2.heart, 880, 500, .8, True)], fx=[("to", 0, "#{p}mama-trunk", {"rotation": -68, "svgOrigin": TP, "duration": .01}), ("face", 0.02, "tumble", "happy"), ("show", "w:happy.", "h1")]),
     S("paper_pink", JCAM, "Five, snorkel. Six, hug. Six trunk jobs!", part=3, tag="board: jobs 5 6", pcam=JPCAM, props=jobs((0, 1, 2, 3), (4, 5)),
       fx=[("show", "w:Five,", "j4"), ("show", "w:Six,", "j5")], words=[("w:Five,", "5", .73, .22, 1.5, "sun", (.5, .565), 1.1), ("w:Six,", "6", .885, .22, 1.5, "sun", (.78, .565), 1.1)]),
     S("zoo_eve", say="One nose, six jobs. Wow!", part=3, tag="wow", hide=["tumble", "mama"], fx=[("hop", "w:Wow!", "milo", 2)], words=[("w:Wow!", "WOW!", .76, .22, 1.3, "sun", (.5, .31))], **MILO("zoo_eve")),
@@ -366,9 +366,9 @@ SHOTS = [
     S("paper_pink", JCAM, "Smell, grab, drink,", part=4, tag="board: count 1", pcam=JPCAM, props=jobs((), (0, 1, 2)), fx=[("show", "w:Smell,", "j0"), ("show", "w:grab,", "j1"), ("show", "w:drink,", "j2")]),
     S("paper_pink", JCAM, "spray, snorkel, hug!", part=4, tag="board: count 2", pcam=JPCAM, props=jobs((0, 1, 2), (3, 4, 5)), fx=[("show", "w:spray,", "j3"), ("show", "w:snorkel,", "j4"), ("show", "w:hug!", "j5")]),
     S("zoo_eve", (1150, 620, 1200), "Good night, Tumble. Good night, Mama.", part=4, tag="good night", actors=HUG, pcam=HUGP, pcam2=HUGP, props=[prop("h1", art2.heart, 1010, 440, 1.0, True)],
-      fx=[("to", 0, "#{p}mama-trunk", {"rotation": -60, "svgOrigin": TP, "duration": .01}), ("face", 0.02, "tumble", "sleepy"), ("show", "w:Mama.", "h1")]),
+      fx=[("to", 0, "#{p}mama-trunk", {"rotation": -68, "svgOrigin": TP, "duration": .01}), ("face", 0.02, "tumble", "sleepy"), ("show", "w:Mama.", "h1")]),
     S("zoo_eve", WIDE, "Thank you for learning with me, friends. See you at the zoo!", part=4, tag="goodbye", cam2=(960, 520, 2050), actors=HUG + [("milo", "milo", 300, 420, .7, False, True)], pcam=HUGP, pcam2=HUGP,
-      words=[("w:See", "SEE YOU AT THE ZOO!", .45, .2, 1.05, "pill", (.5, .31), .62)], fx=[("to", 0, "#{p}mama-trunk", {"rotation": -60, "svgOrigin": TP, "duration": .01}), ("hop", "w:zoo!", "milo", 2)]),
+      words=[("w:See", "SEE YOU AT THE ZOO!", .6, .17, .95, "pill", (.5, .31), .62)], fx=[("to", 0, "#{p}mama-trunk", {"rotation": -68, "svgOrigin": TP, "duration": .01}), ("hop", "w:zoo!", "milo", 2)]),
 ]
 
 

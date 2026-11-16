@@ -628,7 +628,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -637,7 +637,10 @@
   "watermark": "top",
   "date": "2026-11-19",
   "time": "7:30 PM",
-  "seconds": 86.2
+  "seconds": 86.2,
+  "video_id": "9Y5wSB_HOzg",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  },
  {
   "file": "cartoon/zc_ep02_short2.mp4",

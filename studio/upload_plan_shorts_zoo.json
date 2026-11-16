@@ -200,7 +200,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_mama_giraffe.png",
   "thumb_text": "HELLO, MAMA!",
-  "note_moved": "moved from 2026-11-17 11:30 AM on Nov 14: lesson Shorts take the slots first"
+  "note_moved": "moved from 2026-11-17 11:30 AM on Nov 14: lesson Shorts take the slots first",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs3d_sleep_action.mp4",
@@ -215,7 +216,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_sleep_action.png",
   "thumb_text": "STAND STILL!",
-  "note_moved": "moved from 2026-11-17 7:30 PM on Nov 15: lesson Shorts take the slots first"
+  "note_moved": "moved from 2026-11-17 7:30 PM on Nov 15: lesson Shorts take the slots first",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs3d_baby_action.mp4",
@@ -229,7 +231,8 @@
   "status": "to_upload",
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_baby_action.png",
-  "thumb_text": "BIG VOICE!"
+  "thumb_text": "BIG VOICE!",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs3d_count123.mp4",
@@ -244,7 +247,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_count123.png",
   "thumb_text": "HOW MANY?",
-  "note_moved": "moved from 2026-11-18 11:30 AM on Nov 14: lesson Shorts take the slots first"
+  "note_moved": "moved from 2026-11-18 11:30 AM on Nov 14: lesson Shorts take the slots first",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs3d_milo_lion.mp4",
@@ -259,7 +263,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_milo_lion.png",
   "note": "moved from Nov 16 11:30 (fact-surprise Short took the slot); retitle to the fact pattern before upload",
-  "thumb_text": "WHO IS NEXT?"
+  "thumb_text": "WHO IS NEXT?",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs3d_knees_paws.mp4",
@@ -274,7 +279,8 @@
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_knees_paws.png",
   "thumb_text": "COPY ME!",
-  "note_moved": "moved from 2026-11-19 11:30 AM on Nov 14: lesson Shorts take the slots first"
+  "note_moved": "moved from 2026-11-19 11:30 AM on Nov 14: lesson Shorts take the slots first",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs4k_zebra_flies.mp4",
@@ -424,7 +430,8 @@
   "thumb_text": "SQUISHY BATH!",
   "note": "format v3 approved by Noelson Nov 14 11:00 PM; re-cut with larger captions; from lesson zool_ep08 (publishes Nov 15)",
   "date": "2026-11-18",
-  "time": "11:30 AM"
+  "time": "11:30 AM",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs90_koala_notbear.mp4",
@@ -450,7 +457,8 @@
   "thumb_text": "POUCH BABY!",
   "note": "format v3 approved by Noelson Nov 14 11:00 PM; re-cut with larger captions; from lesson zool_ep08 (publishes Nov 15)",
   "date": "2026-11-19",
-  "time": "11:30 AM"
+  "time": "11:30 AM",
+  "watermark": "top"
  },
  {
   "file": "shorts3d/zs90_tiger_skin.mp4",

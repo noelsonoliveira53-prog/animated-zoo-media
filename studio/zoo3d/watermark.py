@@ -103,6 +103,10 @@ def apply(src, out, pos="tl"):
     else:
         enc = ["-c:v", "libx264", "-preset", "medium", "-crf", "18", "-maxrate", "40M", "-bufsize", "80M", "-pix_fmt", "yuv420p"]
     subprocess.run(base + enc + ["-movflags", "+faststart", out], check=True)
+    if codec == "av1" and os.path.getsize(out) < 0.92 * os.path.getsize(src):
+        # the encoder undershot (zoo3d_ep18, Nov 16: 73 MB -> 62 MB): once more, aimed at the source's size (never over 94 MB)
+        vb2 = min(int(vb * os.path.getsize(src) / os.path.getsize(out)), int(((94 * 8 * 1e6) / dur - 192e3) * 0.96))
+        enc[enc.index("-b:v") + 1] = str(vb2); subprocess.run(base + enc + ["-movflags", "+faststart", out], check=True)
     if os.path.getsize(out) >= 95e6 and codec != "av1":
         enc[enc.index("-crf") + 1] = "23"; enc[enc.index("-maxrate") + 1] = "8M"; enc[enc.index("-bufsize") + 1] = "16M"
         subprocess.run(base + enc + ["-movflags", "+faststart", out], check=True)

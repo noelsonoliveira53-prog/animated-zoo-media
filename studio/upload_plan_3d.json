@@ -1987,6 +1987,7 @@
   "made_for_kids": true,
   "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 160.0
+  "duration": 160.0,
+  "watermark": "tl"
  }
 ]

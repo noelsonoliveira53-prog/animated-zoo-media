@@ -522,3 +522,18 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     picture in its own verse and missing from the bridge and outro shots (close:<id> shots did not take effect in the 4-character song).
     jobs/zoo3d_ep19y.json is in the repo, not on the PC. Nov 17 5:30 AM lesson slot is still empty.
 
+
+### Nov 16, 10 AM: channel watermark (Noelson: "include watermark on all videos on upload with the channel characteristics")
+  * YouTube's own channel watermark is not available on made-for-kids videos (support.google.com/youtube/answer/10456525, read
+    Nov 16), so the mark is burned in: Milo's channel picture (brand/avatar.png) in a white ring + "The Animated Zoo" in Baloo 2
+    ExtraBold, 88% opacity. `studio/zoo3d/watermark.py` (build / still / apply / check / corner).
+  * finish.py: top left on every episode (job "watermark_pos": "tr" for top right), stops if the mark is not in the output.
+    lesson_shorts.py: centred above the Short's title. review.py fails a video without the mark. Thumbnails: no mark.
+    Tested: finish.py's filter graph on 6 s of 4K (AV1 10-bit, sound kept, mark found, both corners); lesson_shorts.make() on a
+    16 s cut (mark found). A full finish.py run with the mark has NOT happened yet: zool_ep15-18 will be the first.
+  * Waiting files re-encoded with the mark (frames looked at, sound stream present): Shorts zs3d_baby_action, mama_giraffe,
+    milo_lion, count123, knees_paws, sleep_action, zs90_pig_mud, zs90_koala_notbear; song zoo3d_ep17 (corner sheet: nothing
+    under the mark). review PASS read for zs3d_baby_action and zs90_pig_mud.
+  * NOT marked: everything already uploaded or scheduled (through Nov 17, plus zool_ep01 on Nov 18) and the held zs4k_* Shorts.
+  * Top right is where the answer sign's check mark sits (WHITE sign, zool_ep12 1:43), so top left is the default. For every new
+    lesson LOOK at `watermark.py corner <file> <sheet.jpg>` before uploading.

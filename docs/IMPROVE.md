@@ -47,3 +47,4 @@ Every review and every views check adds one concrete thing to do better. Before 
 - 2026-11-16: hello count line wide with the word gone before the 1-2-3 (teach.py rule, first render with it is zool_ep14); no animal close-up while a low example is up (magnifier 2:32) (why: review of zool_ep13.mp4)
 - 2026-11-16: a quiz slice's frame_range ends 12 frames into the next section (no cover patch needed); low examples in animal close-ups (cars 2:11, ruler 0:47) (why: review of zool_ep09.mp4)
 - 2026-11-16: a quiz slice's frame_range ends 12 frames into the next section (no cover patch needed); striped sock and ball inside the picture in the hello close-up (why: review of zool_ep10.mp4)
+- 2026-11-16: hello 0:16-0:20: the blank edges of the HOT and COLD sign plates touch the left/right frame edge (words whole); next lesson: side props of a group scene at |x| <= 2.9 (why: review of zool_ep12.mp4)

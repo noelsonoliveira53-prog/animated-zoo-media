@@ -1660,10 +1660,9 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep12.png",
   "made_for_kids": true,
-  "status": "hold_fix",
+  "status": "to_upload",
   "format": "3d_lesson",
-  "duration": 336.7,
-  "note": "Nov 15 10 PM: finished from the patched zool_ep12b render (review not the issue: frames looked at). All six answer reveals and the quiz are right. HELD: in the hello (0:09-0:20) the HOT thermometer stands in front of the bear and its sign covers the bear's face; in the count shot (0:17) Milo is cut at the bottom. Slice job zool_ep12h (frames [0,496): bear moved out from behind, count line wide, word leaves before the 1-2-3) is on the PC and runs after zool_ep14 and the 09/10 slices (about 4:30 AM Nov 16). Then: splice_slices.py <12b raw> <out> <12h raw>:0, finish.py with jobs/zool_ep12b.json --date 2026-11-17 --time \"1:30 PM\", look at the hello frames, review.py, upload. The 12b raw (559.7 MB, 3 parts) is on the PC in out\\zool_ep12b. Nov 16 5:30 AM stays empty (decision: no weak video in the slot)."
+  "duration": 336.7
  },
  {
   "file": "truck/tt3d_ep09.mp4",

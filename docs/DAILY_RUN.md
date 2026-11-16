@@ -14,10 +14,18 @@ written, rendered, titled and uploaded.
 
 ## Standing rules from Noelson
 
-**CARTOON FORMATS ARE NOT APPROVED YET (Nov 16).** Noelson decided on three pillars: songs stay 3D; adventure stories and fact lessons move to
-cartoon (`studio/cartoon/`). Three test videos exist in `studio/cartoon/out/` (zc_ep01, zc_ep01_short1, za_ep01). They are for him to watch.
-Do NOT upload or schedule anything from `studio/cartoon/out/` and do not add them to any upload plan until a note here says he approved the
-format. Until then the daily run keeps producing and scheduling exactly as before (3D lessons, lesson Shorts, songs).
+**CARTOON FORMATS APPROVED (Noelson, Nov 16, 3:36 PM: "cartoon formats are approved, build and post").** Three pillars: songs stay 3D;
+adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Cartoon pipeline"); Shorts are cartoon and vertical.
+- Posting: cartoon videos are plan entries like any other (`upload_plan_3d.json` formats `cartoon_adventure`, `cartoon_lesson`;
+  `upload_plan_shorts_zoo.json` format `cartoon_short_90`), files under `cartoon/`, thumbnails `brand/zoo/thumb_<id>.jpg`. Same review gate,
+  same Studio recipe. Slots: adventures 5:30 AM and 1:30 PM, fact lessons 9:30 AM and 5:30 PM, Shorts 7:30 AM / 11:30 AM / 7:30 PM, song 3:30 PM.
+  A slot with no cartoon video ready keeps a 3D lesson; a slot never stays empty.
+- Upload file: the engine's 4K H.264 is over GitHub's 100 MB, so a long video is uploaded as 4K AV1 made from it
+  (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
+  about 25 minutes; write it outside the repo and move it in). A Short's H.264 is under 100 MB and goes up as it is.
+- Building: next episodes come from `docs/cartoon/build_plan.py` (THEMES), in the order of the themes; one new cartoon video a day at least,
+  following PLAYBOOK "Cartoon pipeline" step by step (facts read that day, plan check, a still of EVERY shot looked at, render, pace check,
+  watermark check, 4K check, frames of the finished file looked at, thumbnail). Never skip the stills.
 1. VARIETY (Nov 13): no two episodes may look the same, even when YouTube Studio suggests repeating a topic. Topics and
    title patterns may repeat; pictures, places and casts may not. New jobs use set "zooworld"; routes come from
    `python3 studio/zoo3d/variety.py suggest`; new songs/lessons get a fresh cast (17 animals in chars/animal.py);

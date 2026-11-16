@@ -196,11 +196,11 @@
   "description": "Peekaboo, baby giraffe! Mama giraffe is very tall, so look up high and wave hello with Milo the bluebird.\nA short baby animals song for kids about giraffes from The Animated Zoo. Ages 2-6.\n\nBe kind to every animal.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "channel": "animated-zoo",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "spare_song_cut",
   "format": "3d_short_cut",
   "thumb": "brand/zoo/shorts/thumb_zs3d_mama_giraffe.png",
   "thumb_text": "HELLO, MAMA!",
-  "note_moved": "moved from 2026-11-17 11:30 AM on Nov 14: lesson Shorts take the slots first",
+  "note_moved": "Nov 16: its Nov 18 7:30 PM slot went to the first cartoon Short (Shorts come from lessons and stories, not songs)",
   "watermark": "top"
  },
  {
@@ -515,5 +515,34 @@
   "time": "7:30 AM",
   "video_id": "3e6ZuMoRujM",
   "thumb_set": true
+ },
+ {
+  "file": "cartoon/zc_ep01_short1.mp4",
+  "title": "Why Does This Baby Camel Have No Hump?",
+  "description": "Why does this baby camel have no hump? Find out with Milo the bluebird and baby Sandy: a camel's hump is full of fat, not water, and a calf's hump grows as she grows up. A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump? Baby Camel Story with Milo\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); National Geographic (Arabian camel).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "camel hump",
+   "baby camel",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "cartoon_short_90",
+  "from": "zc_ep01",
+  "seconds": 87.7,
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep01_short1.jpg",
+  "thumb_text": "WHERE IS IT?",
+  "watermark": "top",
+  "date": "2026-11-18",
+  "time": "7:30 PM",
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
  }
 ]

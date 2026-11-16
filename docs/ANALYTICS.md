@@ -1,5 +1,14 @@
 # Views check log (newest first)
 
+## 2026-11-16, 8:40 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
+Totals: **32,766 views**, 371,491 impressions, 2.2% CTR, 0:25 average view, 23.8% viewed, 254 likes. Per-video list: Command Center analytics/animated-zoo-2026-11-16.
+Since the Nov 15 read: Ants 1,311 -> 1,497 (+186) · Octopus 3,997 -> 4,152 (+155) · Lion song-cut Short 323 -> 442 (+119, 119.7% viewed) · Snail 973 -> 1,082 (+109) ·
+Camel 4,826 -> 4,913 (+87) · Where Is My Mama? 3,853 -> 3,882 (+29). Fact Shorts hold 66-138% viewed; 3D songs 12-22% viewed (0:20-0:37); 2D lessons 8.6-14.4% viewed but the longest
+average views (Ocean & Ice 0:44, Treetop 0:39). Content list: first v3 lesson "Who Am I?" (public Nov 15 1:30 PM) 5 views; Nov 15 song 9; Nov 13-14 songs 6-11.
+NOT read: Who Am I? and the Nov 14-15 uploads are not in the lifetime table yet, so their impressions, CTR and retention are unknown; lesson-vs-song for v3 waits for Nov 17.
+What's winning: unchanged: fact-surprise Shorts bring most of the daily growth; the song-cut Lion Short is the one song cut still growing. New long videos start slowly (5-11 views in their first day).
+Adjustment: lesson Shorts (one sourced fact, a question title) keep the Shorts slots; each lesson Short's title asks the question its fact answers (the pattern of the top 9 Shorts).
+
 ## 2026-11-15, 6:50 AM ET (The Animated Zoo only; Studio Content list views, lifetime + Analytics overview)
 Analytics overview: **30.4K views in the last 28 days**, 7,406 views in the last 48 hours, 145.4 watch hours, 68 subscribers (+68). Top content (28 days):
 Camel Humps 4.8K, Octopus 4.0K, Where Is My Mama? 3.8K. 92% of views come from Suggested videos. NOT read this run: impressions, CTR and average view

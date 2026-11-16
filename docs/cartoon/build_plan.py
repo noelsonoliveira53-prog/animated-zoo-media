@@ -118,6 +118,9 @@ for t in THEMES:
 
 CSS = open(os.path.join(HERE, "plan.css")).read()
 body = open(os.path.join(HERE, "plan_body.html")).read()
+import json
+ST = json.load(open(os.path.join(HERE, "status.json")))          # what exists today, written after the checks ran
+for k, v in ST.items(): body = body.replace("{{" + k + "}}", v)
 page = body.replace("{{CSS}}", CSS).replace("{{THEMES}}", "".join(theme_html(t, k + 1) for k, t in enumerate(THEMES))).replace(
     "{{TOC}}", "".join(f'<a href="#{t["key"]}">{e(t["name"])}</a>' for t in THEMES))
 open(os.path.join(HERE, "plan.html"), "w").write(page); print("plan.html", len(page), "bytes;", n_adv, "adventures,", n_les, "lessons,", n_song, "songs,", n_sh, "Shorts")

@@ -13,6 +13,11 @@ Load the `youtube-network-channels` skill (the channel rulebook) at the start of
 written, rendered, titled and uploaded.
 
 ## Standing rules from Noelson
+
+**CARTOON FORMATS ARE NOT APPROVED YET (Nov 16).** Noelson decided on three pillars: songs stay 3D; adventure stories and fact lessons move to
+cartoon (`studio/cartoon/`). Three test videos exist in `studio/cartoon/out/` (zc_ep01, zc_ep01_short1, za_ep01). They are for him to watch.
+Do NOT upload or schedule anything from `studio/cartoon/out/` and do not add them to any upload plan until a note here says he approved the
+format. Until then the daily run keeps producing and scheduling exactly as before (3D lessons, lesson Shorts, songs).
 1. VARIETY (Nov 13): no two episodes may look the same, even when YouTube Studio suggests repeating a topic. Topics and
    title patterns may repeat; pictures, places and casts may not. New jobs use set "zooworld"; routes come from
    `python3 studio/zoo3d/variety.py suggest`; new songs/lessons get a fresh cast (17 animals in chars/animal.py);

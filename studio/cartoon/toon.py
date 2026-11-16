@@ -113,7 +113,9 @@ def voice_lines(ep, shots):
         if s["say"]:
             spoken = s.get("speak") or s["say"]; c = cast.get(s["who"], {}); v = c.get("voice", v0_); sp = c.get("speed", sp0)
             a = sing.say(spoken, v, sp).astype(np.float32); al, got, n = wordsync.align(a, spoken); miss += n - got; tot += n
-            a = shift(a, c.get("pitch", 0), c.get("formant", 1.0))
+            if c.get("pitch") or c.get("formant", 1.0) != 1.0:
+                a = shift(a, c.get("pitch", 0), c.get("formant", 1.0)); pk = float(np.abs(a).max())
+                if pk > .9: a = a * (.9 / pk)          # a pitched voice can peak above full scale: bring the whole line down, never clip it
             toks = s["say"].split()
             if len(al) != len(toks):        # "speak" differs from the caption text: spread the times over the caption's words
                 d = len(a) / SR; al = [(d * k / len(toks), d * (k + 1) / len(toks)) for k in range(len(toks))]
@@ -539,7 +541,7 @@ def main():
     cmd = ["hyperframes", "render", "-f", str(FPS), "-q", "standard", "--crf", "17", "-o", silent, "--quiet"]
     if "--draft" not in sys.argv: cmd += ["--resolution", res_flag]
     if arg("--from"): cmd += ["--start", arg("--from"), "--end", arg("--to")]
-    subprocess.run(cmd, cwd=proj, env=env, check=True)
+    if "--audio" not in sys.argv: subprocess.run(cmd, cwd=proj, env=env, check=True)      # --audio: new sound on the picture that is already rendered
     final = os.path.join(out, sid + ("_draft" if "--draft" in sys.argv else "") + ".mp4")
     a_in = ["-i", wav] if not arg("--from") else ["-ss", arg("--from"), "-to", arg("--to"), "-i", wav]
     subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", silent] + a_in + ["-map", "0:v", "-map", "1:a", "-c:v", "copy", "-af", "loudnorm=I=-14:TP=-1.5:LRA=11", "-ar", "48000",

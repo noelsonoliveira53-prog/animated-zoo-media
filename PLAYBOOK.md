@@ -543,3 +543,23 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     zool_ep11 (frames: up, fading, away, back) and in finish.py's filter graph on 6 s. A looped-picture version of the fade was
     killed for memory on 4K; the fade now works only on the mark's own rectangle cut from the video.
   * NOT done: no lesson has been finished with hide windows from a real job yet; nobody has chosen windows for zool_ep15-18.
+
+## Cartoon pipeline (Nov 16, 2026) - TEST, nothing uploaded, waiting for Noelson's approval
+- Why: his brief of Nov 16 (three pillars: songs 3D, adventure stories and fact lessons cartoon, Shorts cartoon). Findings, style bible and
+  content plan: `docs/cartoon/findings.html`, `bible.html`, `plan.html` (built by the three build_*.py files next to them).
+- Engine: `studio/cartoon/toon.py` (HyperFrames: HTML + SVG + GSAP, 24 fps, 4K), art in `art.py` (Milo, camels, desert) and `art2.py`
+  (elephants, Mango, Poppy, Clover, Hazel, Tula, savanna, jungle, ocean, Arctic, farm, night forest). One episode = one file in `episodes/`.
+- Order of work for one episode:
+  1. read the facts at their sources, write them into the episode file's docstring;
+  2. `python3 toon.py <id> --plan` until "fails" is empty;
+  3. `python3 toon.py <id> --stills <t1,t2,...>` for the end of EVERY shot, `python3 sheet.py out/<id>/proj_l sheet.jpg 6 480`, look, fix, again;
+     the same with `--short 0` and `proj_p` for the 9:16 version;
+  4. `python3 toon.py <id>` and `python3 toon.py <id> --short 0` (render); `--audio` puts new sound on a picture that is already rendered;
+  5. `python3 pace_check.py out/<id>/<id>.mp4 --max 8`, `python3 ../zoo3d/watermark.py check <file>` and `corner <file> <sheet.jpg>`;
+     frames of the finished file at the end of every shot, looked at;
+  6. `python3 thumb.py <id>` (refuses more than 3 words or a word of the title).
+- Measured on the session's machine (2 cores): zc_ep01 (304.7 s) rendered in 37 min, its Short (87.7 s) in 13 min. Never run stills for an
+  episode while that episode is rendering: both write the same `proj_l/index.html`.
+- Voices: Kokoro (sing.py) per character from EP["cast"], pitched with WORLD (`toon.shift`); sung refrains from `sing.build`. Nobody has
+  listened to them: they were checked by word alignment (every word placed, also on the pitched voices) and loudness only.
+- Not built: the closing "next adventure" picture, a Short cut from the adventure, voices for Poppy, Tula, Clover and Hazel, the playlists.

@@ -2052,5 +2052,32 @@
   "video_id": "xW4MrQA6ZH8",
   "thumb_set": true,
   "scheduled_on": "2026-11-16"
+ },
+ {
+  "file": "cartoon/zc_ep02.mp4",
+  "title": "What Can an Elephant's Trunk Do?",
+  "description": "What can an elephant's trunk do? Is it a nose, a hand or a shower? Milo the bluebird visits baby elephant Tumble and his mama to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a trunk is a nose and an upper lip, that it can smell, grab, drink, spray and work like a snorkel, that the water does not go all the way up like a straw, and that there are no bones inside.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "elephant trunk",
+   "baby elephant",
+   "savanna animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "date": "2026-11-19",
+  "time": "9:30 AM",
+  "thumb": "brand/zoo/thumb_zc_ep02.jpg",
+  "thumb_text": "ONE NOSE?!",
+  "made_for_kids": true,
+  "status": "rendering",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "second cartoon fact lesson (elephant trunk); fact lesson slot 9:30 AM"
  }
 ]

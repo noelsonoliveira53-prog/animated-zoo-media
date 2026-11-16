@@ -1631,11 +1631,13 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zool_ep09.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 337.2,
   "old_video_id": "wzJiaHEj6tY",
-  "note": "Nov 16 4:45 AM: this file is the SPLICED version (zool_ep09b raw + slices zool_ep09q [6913,7635) and zool_ep09s [3448,3789), stray QUIZ TIME! word covered in frames 7635-7646). Frames looked at: six answer reveals whole, sun whole at 2:26-2:36, quiz word alone, ? badge alone, three checks beside the heads, seams. The OLD upload wzJiaHEj6tY (scheduled Nov 16 9:30 AM, old quiz layout) is still scheduled until this file's upload is confirmed; then it is set to Private."
+  "note": "Nov 16 4:50 AM: the SPLICED version (quiz checks beside the heads, ? badge and QUIZ TIME! apart, sun whole at 2:26-2:36; six answer reveals whole) is uploaded and scheduled Nov 16 9:30 AM: WDlKaVPnu-4 (dialog read 'set to public on November 16, 2026 at 9:30 AM'; Details page read back; Studio list 4:58 AM: Scheduled). The old upload wzJiaHEj6tY was set to Private at 4:58 AM (list read back: Private). Not deleted.",
+  "video_id": "WDlKaVPnu-4",
+  "thumb_set": true
  },
  {
   "file": "zool_ep12.mp4",

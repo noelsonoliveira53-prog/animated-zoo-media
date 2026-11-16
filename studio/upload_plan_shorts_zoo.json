@@ -533,7 +533,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep01",
   "seconds": 87.7,
@@ -543,6 +543,9 @@
   "watermark": "top",
   "date": "2026-11-18",
   "time": "7:30 PM",
-  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
+  "video_id": "1Jbwfw5xDYY",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  }
 ]

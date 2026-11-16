@@ -492,3 +492,11 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Studio: after midnight the schedule date picker defaults to TOMORROW. For a same-day slot open the calendar (real click on the date
     box, wait 2 s, read the day cell's position by script) and click today's cell. A click on a stale position hit "Save or publish" and
     armed "Publish" (Public): nothing was published (the button was read before every click). ALWAYS read the button text before clicking it.
+  * 5:31 AM: old zool_ep10 upload 8IgNBQcHiZw set to Private (list read: Private; F2TrIgZA3HY read Scheduled Nov 16 first).
+  * zool_ep12: spliced (12h at 0, --cover 496:9:1300:150:1350:270), finish.py from the spliced raw, 27 final frames + thumbnail looked at
+    (hello: four faces clear, word then 1-2-3; six answer reveals whole; three quiz checks beside the heads), review PASS, uploaded from
+    commit 6cad283, SCHEDULED Nov 17 1:30 PM: luS9bWs3hG8 (dialog + Details page read back; list row still "Pending" at 5:51 AM).
+    Left in and logged: HOT/COLD sign plates' blank edges touch the frame edge at 0:16-0:20 (next lesson: group-scene side props at
+    |x| <= 2.9; teach.py NOT changed yet). Shorts tab read 5:33 AM: three Nov 16 Shorts read Scheduled (times not read).
+  * NOT done here: zool_ep14 (DONE on the PC, 3 parts in out\zool_ep14) is not finished or checked; Nov 17 5:30 AM lesson slot is empty;
+    Nov 17 5:30 PM is for zool_ep14. teach.py's Nov 15-16 rules have not run on a new lesson yet.

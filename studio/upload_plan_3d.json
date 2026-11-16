@@ -1660,9 +1660,13 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep12.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
-  "duration": 336.7
+  "duration": 336.7,
+  "video_id": "luS9bWs3hG8",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16",
+  "note": "Nov 16 5:50 AM: SPLICED version (hello re-rendered as slice zool_ep12h: bear's face clear of the HOT sign, word gone before the 1-2-3) uploaded and scheduled Nov 17 1:30 PM: luS9bWs3hG8 (dialog read 'set to public on November 17, 2026 at 1:30 PM'; Details page read back: title, description 1524 chars, made for kids, file zool_ep12.mp4). The list row still read 'Pending' (processing) at 5:51 AM: read it again as 'Scheduled'. Frames looked at: 9 of the hello, 6 answer reveals, 3 quiz checks, quiz question, thumbnail. Left in: at 0:16-0:20 the blank edges of the HOT and COLD sign plates touch the frame edge (words whole); arrow top 2:09 and snowflake top 0:48 cut (IMPROVE.md)."
  },
  {
   "file": "truck/tt3d_ep09.mp4",

@@ -1,0 +1,730 @@
+{
+ "id": "zool_ep17",
+ "thumb_at": [
+  "giraffe",
+  4,
+  0.6
+ ],
+ "seed": 71,
+ "title": "Whose Tail Is This? Animal Tails for Kids with Milo",
+ "card": "Whose Tail?",
+ "thumb_text": "SWISH SWISH!",
+ "description": "Whose tail is this? Guess with Milo the bluebird, then find out what each tail can do: a lion's tail ends in a dark tuft like a paintbrush, a spider monkey's tail works like a third hand and even has lines like a fingerprint, and a giraffe's tail swats away buzzy flies.\nAn interactive animal guessing lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal tails for kids",
+  "lion facts for kids",
+  "spider monkey facts for kids",
+  "giraffe facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "lion",
+  "monkey",
+  "giraffe"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  },
+  {
+   "id": "koala",
+   "kind": "koala"
+  }
+ ],
+ "facts": [
+  "Lion: a tuft covers a horny spur at the tip of the tail; tail just over half head-body length; large, padded feet; claws retractable and protected in a fleshy sheath; the mane covers head, neck, chest, elbows and sometimes belly (SDZWA Library fact sheet 'Lions', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/lions/characteristics, read Nov 16 2026).",
+  "Black spider monkey: a prehensile tail, a 'third hand' to grasp branches; the tail supports the entire weight of the monkey while both hands are free to forage; on the underside of the tip of the tail there is a patch of skin with lines like a fingerprint; diet primarily fruits, occasionally leaves, flowers and insects (Wisconsin National Primate Research Center, Primate Info Net fact sheet 'Black spider monkey', primate.wisc.edu, read Nov 16 2026).",
+  "Giraffe: long, black hair on the tail, used as an insect-swatter; tail 76-110 cm; long prehensile tongue, 50 cm (20 in); large hooved feet (SDZWA Library fact sheet 'Giraffes', Physical Characteristics, read Nov 16 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "desert",
+   "tod": "morning",
+   "word": "WHOSE TAIL?",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about animal tails!",
+    "What can a tail do?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Get your guessing ready. Let's go!"
+   ]
+  },
+  {
+   "name": "lion",
+   "biome": "savanna",
+   "tod": "morning",
+   "word": "TUFT!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "lion"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "LION",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "A TUFT",
+     "b": "A BOW",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "tuft"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "PAINTBRUSH!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "tail",
+     "at": [
+      2.45,
+      -0.8,
+      0.0
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "kind": "lion",
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "half"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "HALF AS LONG",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "mane"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "BIG MANE!",
+      "color": "#ffb627"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Whose tail has a fluffy tuft, at the very end?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the lion's tail? Or is it the pig's tail?",
+     "pause": 3.2
+    },
+    "It is the lion!",
+    "Here is the fun fact. A lion's tail ends in a tuft of dark hair, like a paintbrush. Look, at the very tip!",
+    "Swish, swish! Can you see the tuft? It is dark and fluffy.",
+    {
+     "t": "How long is a lion's tail? Hmm.",
+     "pause": 2.4
+    },
+    "A little more than half as long as the lion's body! That is a long tail. Long, long, long!",
+    [
+     "Swish, swish goes the long tail.",
+     "close:lion"
+    ],
+    "A lion has big, soft, padded feet. Pat, pat, pat!",
+    "And its claws hide away inside, until it needs them. Peekaboo, claws!",
+    "A grown-up boy lion has a big, fluffy mane.",
+    "The mane covers his head, his neck and his chest. What a big hairdo!",
+    [
+     "Say it with me. A lion's tail has a tuft!",
+     "close:host"
+    ],
+    "Can you swish like a lion's tail? Swish, swish, swish! Side to side!",
+    "Now shake your mane, like a lion. Shake, shake!",
+    {
+     "t": "Quick check! What is at the end of a lion's tail? A tuft? Or a bow?",
+     "pause": 3.2
+    },
+    "A tuft! Like a paintbrush. Great job!"
+   ],
+   "short": {
+    "id": "zs90_lion_tuft",
+    "title": "Why Does a Lion's Tail Look Like a Paintbrush?",
+    "l1": "WHOSE",
+    "l2": "TAIL?",
+    "thumb_text": "TUFT!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "monkey",
+   "biome": "mountain",
+   "tod": "noon",
+   "word": "THIRD HAND!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "monkey"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "MONKEY",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "HOLD ON",
+     "b": "FLY",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "hand"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "THIRD HAND!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "tail",
+     "at": [
+      2.45,
+      -0.8,
+      0.0
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "kind": "monkey",
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "whole"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "HOLDS ON!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "fingerprint",
+     "at": [
+      2.3,
+      -1.2,
+      2.2
+     ],
+     "on": [
+      8,
+      "fingerprint"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "fruit"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "FRUIT!",
+      "color": "#ff7a00"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Whose tail can hold on to a branch, like a hand?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the spider monkey's tail? Or is it the cow's tail?",
+     "pause": 3.2
+    },
+    "It is the spider monkey!",
+    "Here is the fun fact. A spider monkey's tail works like a third hand!",
+    "It wraps its tail around a branch, and holds on tight.",
+    {
+     "t": "Can the tail hold up the whole monkey? Hmm.",
+     "pause": 2.4
+    },
+    "Yes! The tail can hold the whole monkey, so both hands are free to pick food.",
+    [
+     "Hanging on by its tail. Wow!",
+     "close:monkey"
+    ],
+    "And here is a surprise. The tip of its tail has little lines underneath, like a fingerprint!",
+    "Look at your fingertip. Can you see little lines? A spider monkey has them on its tail!",
+    "What does a spider monkey eat? Mostly fruit! Yum!",
+    "It also eats some leaves, flowers, and bugs.",
+    [
+     "Say it with me. A spider monkey's tail can hold on!",
+     "close:host"
+    ],
+    "Can you be a spider monkey? Reach up high, and swing, swing, swing!",
+    "Now look at your fingertips, and find the little lines.",
+    {
+     "t": "Quick check! What can a spider monkey's tail do? Hold on? Or fly?",
+     "pause": 3.2
+    },
+    "Hold on! Like a third hand. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_monkey_tail",
+    "title": "This Monkey's Tail Works Like a Hand!",
+    "l1": "WHOSE",
+    "l2": "TAIL?",
+    "thumb_text": "HOLD ON!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "giraffe",
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "word": "SWISH!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "giraffe"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "GIRAFFE",
+    "b": "KOALA",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "FLIES",
+     "b": "SNOW",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "flies",
+     "at": [
+      2.6,
+      -1.0,
+      1.6
+     ],
+     "on": [
+      4,
+      "swishes"
+     ],
+     "off": [
+      5
+     ],
+     "leave": [
+      4,
+      "flies",
+      1
+     ],
+     "opts": {
+      "n": 4
+     }
+    },
+    {
+     "prop": "tail",
+     "at": [
+      2.45,
+      -0.8,
+      0.0
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "kind": "giraffe",
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "tall"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "AS TALL AS YOU!",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      9,
+      "leaves"
+     ],
+     "off": [
+      11
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "t": "Whose long tail swats away buzzy flies?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the giraffe's tail? Or is it the koala's tail?",
+     "pause": 3.2
+    },
+    "It is the giraffe!",
+    "Here is the fun fact. A giraffe's tail has long, black hair at the end.",
+    "It swishes its tail, to swat away buzzy flies. Swish! Bye-bye, flies!",
+    {
+     "t": "How long is a giraffe's tail? Hmm.",
+     "pause": 2.4
+    },
+    "It can be about as long as you are tall! Stand up tall, and see!",
+    [
+     "Swish, swish, goes the long tail.",
+     "close:giraffe"
+    ],
+    "Now here is a giraffe surprise. A giraffe has a very long tongue!",
+    "Its tongue is about as long as your arm. It wraps around the leaves, and pulls them off.",
+    "A giraffe has big feet, with hooves.",
+    "Clip, clop! Big hooves, at the end of very long legs. Clip, clop, clip, clop!",
+    [
+     "Say it with me. A giraffe's tail swats flies!",
+     "close:host"
+    ],
+    "Can you swish like a giraffe's tail? Swish, swish! Bye-bye, flies!",
+    "Now stick out your tongue, and reach for a leaf. Slurp!",
+    {
+     "t": "Quick check! What does a giraffe's tail swat away? Flies? Or snowflakes?",
+     "pause": 3.2
+    },
+    "Flies! Swish, swish. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_giraffe_tail",
+    "title": "What Does a Giraffe Do With Its Tail?",
+    "l1": "WHOSE",
+    "l2": "TAIL?",
+    "thumb_text": "BYE FLIES!",
+    "thumb_line": [
+     4,
+     0.5
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "night_meadow",
+   "tod": "golden",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three friends with amazing tails. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Whose tail ends in a tuft, like a paintbrush?",
+     "The lion! Yes!",
+     "lion"
+    ],
+    [
+     "Whose tail works like a third hand?",
+     "The spider monkey! That's right!",
+     "monkey"
+    ],
+    [
+     "Whose tail swats away buzzy flies?",
+     "The giraffe! You remembered!",
+     "giraffe"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "beach",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Swish like a lion. Swing like a monkey. And swat flies like a giraffe!",
+    "Which tail is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "no animal close-up while an example is on screen: every example of a part leaves before the close:<animal> line (7) and before close:host (12) (open note: cars at 2:11 and ruler at 0:47 of zool_ep09, magnifier at 2:32 of zool_ep13)",
+  "high examples kept low: snowflake z 2.7, sun z 2.8, badge z 2.9 (snowflake top cut at 0:48 and arrow cut at 2:09 of zool_ep12)",
+  "hello: only the 1-2-3 count in the group scene, at x=-0.75 (side props |x| <= 2.9, HOT/COLD plates at the frame edge in zool_ep12); the hello count line is wide and the word leaves first (teach.py rule)",
+  "quiz checks beside the head, QUIZ TIME word gone before the ? badge (teach.py rules of Nov 15, first lessons written with them from the start)",
+  "picture: new teaching examples on screen (bamboo grove, eucalyptus branch, 5-toe and 4-toe counts, bump magnifier, fingerprint card, buzzing flies, hot and cold thermometers) and new casts per lesson",
+  "teaching: every part has a body action kids copy (grip, paddle, swish, flap, stretch) and one number they can count or compare (14 hours, 1 gallon, 5 toes, 4 toes, as long as a crayon)"
+ ],
+ "version": 3
+}

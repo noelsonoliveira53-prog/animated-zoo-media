@@ -1043,5 +1043,202 @@
    "pig"
   ],
   "new_song": true
+ },
+ {
+  "id": "zool_ep15",
+  "places": [
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "morning"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "desert",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "koala",
+   "panda",
+   "pig",
+   "zebra"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep16",
+  "places": [
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "arctic",
+    "morning"
+   ],
+   [
+    "arctic",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "golden"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "beach",
+    "noon"
+   ],
+   [
+    "farm",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "hippo",
+   "pig",
+   "polar_bear",
+   "tiger"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep17",
+  "places": [
+   [
+    "desert",
+    "morning"
+   ],
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "mountain",
+    "noon"
+   ],
+   [
+    "mountain",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "golden"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "beach",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "giraffe",
+   "koala",
+   "lion",
+   "monkey",
+   "pig"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zool_ep18",
+  "places": [
+   [
+    "farm",
+    "noon"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "autumn_forest",
+    "morning"
+   ],
+   [
+    "autumn_forest",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "golden"
+   ],
+   [
+    "bamboo",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "cow",
+   "elephant",
+   "koala",
+   "pig",
+   "tiger"
+  ],
+  "new_song": true
  }
 ]

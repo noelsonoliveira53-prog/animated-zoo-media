@@ -310,6 +310,32 @@ def build(L, name, at, **o):
         for sx in (-1, 1):
             L.sphere("lobe", 0.3 * s, (sx * 0.22 * s, 0, 0.14 * s), m=m, parent=root, segs=24)
         L.cone("tip", 0.44 * s, 0, 0.62 * s, (0, 0, -0.22 * s), (1, 0.62, 1), m, root, rot=(math.pi, 0, 0), verts=32)
+    elif name == "tail":          # a big tail to look at (the animals' own tails are too small to see): kind lion|monkey|giraffe
+        kind = o.get("kind", "lion")
+        fur = _m(L, {"lion": "#f0ad3c", "monkey": "#8a5a3a", "giraffe": "#f8c64e"}[kind], 0.6, 0.2)
+        dark = _m(L, {"lion": "#6a3a16", "monkey": "#5a3622", "giraffe": "#2a2420"}[kind], 0.7, 0.1)
+        if kind == "monkey":      # tail coiled around a branch, holding on
+            L.cylinder("branch", 0.13 * s, 2.6 * s, (0, 0.1, 2.4 * s), m=_m(L, "#8a5a36", 0.7, 0.1), parent=root, rot=(0, math.pi / 2, 0), verts=16)
+            for k in range(3):
+                L.sphere("leaf", 0.22 * s, ((-1.1 + 1.1 * k) * s, 0.05, 2.62 * s), (1.3, 0.3, 0.6), _m(L, "#57b86a", 0.45, 0.4), root, 12)
+            pts = [(0.0, 0.2 + 0.11 * k) for k in range(18)]                         # straight part, from the bottom up
+            pts += [(0.24 * math.sin(a), 2.4 + 0.24 * math.cos(a + math.pi)) for a in [j * 0.4 for j in range(1, 17)]]   # coil
+            for k, (x, z) in enumerate(pts):
+                L.sphere("ts", 0.085 * s, (x * s, -0.12 if k >= 18 and (k // 4) % 2 else 0.0, z * s), (1, 1, 1), fur, root, 12)
+            L.sphere("tip", 0.07 * s, (0.0, -0.13, (2.16) * s), (1.3, 0.6, 0.9), _m(L, "#f2d2a9", 0.6, 0.2), root, 12)   # bare fingerprint patch
+        else:                     # lion: long tail with a dark tuft like a paintbrush; giraffe: long black hair (fly swatter)
+            n = 22
+            for k in range(n):
+                u = k / (n - 1)
+                L.sphere("ts", (0.11 - 0.04 * u) * s, ((0.55 * math.sin(u * 2.6)) * s, 0, (2.6 - 2.0 * u) * s), (1, 1, 1), fur, root, 12)
+            ex_, ez = 0.55 * math.sin(2.6) * s, 0.6 * s
+            if kind == "lion":
+                L.sphere("tuft", 0.28 * s, (ex_, 0, ez - 0.18 * s), (1, 1, 1.5), dark, root, 18)
+            else:
+                for j in range(9):
+                    L.cone("hair", 0.05 * s, 0.0, 0.9 * s, (ex_ + (j - 4) * 0.045 * s, 0, ez - 0.45 * s), m=dark, parent=root,
+                           rot=(math.pi, (j - 4) * 0.06, 0), verts=6)
+            L.sphere("base", 0.16 * s, (0, 0, 2.62 * s), (1, 1, 1), fur, root, 14)
     else:
         L.sphere("unknown", 0.4, (0, 0, 0.4), m=_m(L, "#ff00ff"), parent=root)
     try: _detail(L, name, root, P, o)      # second pass: the small things that make a prop read as a real object

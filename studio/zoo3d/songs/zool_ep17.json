@@ -1,0 +1,1070 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Lion: a tuft covers a horny spur at the tip of the tail; tail just over half head-body length; large, padded feet; claws retractable and protected in a fleshy sheath; the mane covers head, neck, chest, elbows and sometimes belly (SDZWA Library fact sheet 'Lions', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/lions/characteristics, read Nov 16 2026).\nBlack spider monkey: a prehensile tail, a 'third hand' to grasp branches; the tail supports the entire weight of the monkey while both hands are free to forage; on the underside of the tip of the tail there is a patch of skin with lines like a fingerprint; diet primarily fruits, occasionally leaves, flowers and insects (Wisconsin National Primate Research Center, Primate Info Net fact sheet 'Black spider monkey', primate.wisc.edu, read Nov 16 2026).\nGiraffe: long, black hair on the tail, used as an insect-swatter; tail 76-110 cm; long prehensile tongue, 50 cm (20 in); large hooved feet (SDZWA Library fact sheet 'Giraffes', Physical Characteristics, read Nov 16 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about animal tails!\nWhat can a tail do?\nThree animal friends will show us. Count them with me. One, two, three!\nGet your guessing ready. Let's go!\nWhose tail has a fluffy tuft, at the very end?\nIs it the lion's tail? Or is it the pig's tail?\nIt is the lion!\nHere is the fun fact. A lion's tail ends in a tuft of dark hair, like a paintbrush. Look, at the very tip!\nSwish, swish! Can you see the tuft? It is dark and fluffy.\nHow long is a lion's tail? Hmm.\nA little more than half as long as the lion's body! That is a long tail. Long, long, long!\nSwish, swish goes the long tail.\nA lion has big, soft, padded feet. Pat, pat, pat!\nAnd its claws hide away inside, until it needs them. Peekaboo, claws!\nA grown-up boy lion has a big, fluffy mane.\nThe mane covers his head, his neck and his chest. What a big hairdo!\nSay it with me. A lion's tail has a tuft!\nCan you swish like a lion's tail? Swish, swish, swish! Side to side!\nNow shake your mane, like a lion. Shake, shake!\nQuick check! What is at the end of a lion's tail? A tuft? Or a bow?\nA tuft! Like a paintbrush. Great job!\nWhose tail can hold on to a branch, like a hand?\nIs it the spider monkey's tail? Or is it the cow's tail?\nIt is the spider monkey!\nHere is the fun fact. A spider monkey's tail works like a third hand!\nIt wraps its tail around a branch, and holds on tight.\nCan the tail hold up the whole monkey? Hmm.\nYes! The tail can hold the whole monkey, so both hands are free to pick food.\nHanging on by its tail. Wow!\nAnd here is a surprise. The tip of its tail has little lines underneath, like a fingerprint!\nLook at your fingertip. Can you see little lines? A spider monkey has them on its tail!\nWhat does a spider monkey eat? Mostly fruit! Yum!\nIt also eats some leaves, flowers, and bugs.\nSay it with me. A spider monkey's tail can hold on!\nCan you be a spider monkey? Reach up high, and swing, swing, swing!\nNow look at your fingertips, and find the little lines.\nQuick check! What can a spider monkey's tail do? Hold on? Or fly?\nHold on! Like a third hand. You remembered!\nWhose long tail swats away buzzy flies?\nIs it the giraffe's tail? Or is it the koala's tail?\nIt is the giraffe!\nHere is the fun fact. A giraffe's tail has long, black hair at the end.\nIt swishes its tail, to swat away buzzy flies. Swish! Bye-bye, flies!\nHow long is a giraffe's tail? Hmm.\nIt can be about as long as you are tall! Stand up tall, and see!\nSwish, swish, goes the long tail.\nNow here is a giraffe surprise. A giraffe has a very long tongue!\nIts tongue is about as long as your arm. It wraps around the leaves, and pulls them off.\nA giraffe has big feet, with hooves.\nClip, clop! Big hooves, at the end of very long legs. Clip, clop, clip, clop!\nSay it with me. A giraffe's tail swats flies!\nCan you swish like a giraffe's tail? Swish, swish! Bye-bye, flies!\nNow stick out your tongue, and reach for a leaf. Slurp!\nQuick check! What does a giraffe's tail swat away? Flies? Or snowflakes?\nFlies! Swish, swish. Super thinking!\nWow! We met three friends with amazing tails. Now it is quiz time!\nGet ready. Think hard!\nWhose tail ends in a tuft, like a paintbrush?\nThe lion! Yes!\nWhose tail works like a third hand?\nThe spider monkey! That's right!\nWhose tail swats away buzzy flies?\nThe giraffe! You remembered!\nYou learned so many new things today.\nSwish like a lion. Swing like a monkey. And swat flies like a giraffe!\nWhich tail is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 327.45,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 687,
+  "words": 687,
+  "pause_onsets_checked": 50,
+  "onset_err_mean_ms": 26.6,
+  "onset_err_max_ms": 120.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Whose Tail Is This? Animal Tails for Kids with Milo",
+  "card": "Whose Tail?",
+  "thumb_text": "SWISH SWISH!",
+  "description": "Whose tail is this? Guess with Milo the bluebird, then find out what each tail can do: a lion's tail ends in a dark tuft like a paintbrush, a spider monkey's tail works like a third hand and even has lines like a fingerprint, and a giraffe's tail swats away buzzy flies.\nAn interactive animal guessing lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "tags": [
+   "animal tails for kids",
+   "lion facts for kids",
+   "spider monkey facts for kids",
+   "giraffe facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_lion_tuft",
+   "title": "Why Does a Lion's Tail Look Like a Paintbrush?",
+   "l1": "WHOSE",
+   "l2": "TAIL?",
+   "thumb_text": "TUFT!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "lion",
+   "start": 19.405,
+   "end": 105.865,
+   "seconds": 86.5
+  },
+  {
+   "id": "zs90_monkey_tail",
+   "title": "This Monkey's Tail Works Like a Hand!",
+   "l1": "WHOSE",
+   "l2": "TAIL?",
+   "thumb_text": "HOLD ON!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "monkey",
+   "start": 105.865,
+   "end": 191.138,
+   "seconds": 85.3
+  },
+  {
+   "id": "zs90_giraffe_tail",
+   "title": "What Does a Giraffe Do With Its Tail?",
+   "l1": "WHOSE",
+   "l2": "TAIL?",
+   "thumb_text": "BYE FLIES!",
+   "thumb_line": [
+    4,
+    0.5
+   ],
+   "seg": "giraffe",
+   "start": 191.138,
+   "end": 276.46,
+   "seconds": 85.3
+  }
+ ],
+ "job": {
+  "id": "zool_ep17",
+  "title": "Whose Tail?",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 71,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "monkey",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "monkey"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cow",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "koala",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "desert",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "lion",
+     "monkey",
+     "giraffe"
+    ]
+   },
+   {
+    "from": "lion",
+    "biome": "savanna",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "lion",
+    "biome": "savanna",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "lion"
+    ]
+   },
+   {
+    "from": "monkey",
+    "biome": "mountain",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "monkey",
+    "biome": "mountain",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "monkey"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "giraffe"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "night_meadow",
+    "tod": "golden",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "lion",
+     "monkey",
+     "giraffe"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "beach",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "lion",
+     "monkey",
+     "giraffe"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 5108,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "WHOSE TAIL?",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 13.258
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 14.408,
+      "dur": 5.097,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "lion",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:lion",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TUFT!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.146,
+      "dur": 14.524000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.896,
+      "dur": 9.28,
+      "spin": 0,
+      "opts": {
+       "text": "LION",
+       "color": "#1479d6",
+       "win": 6.88
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.346,
+      "dur": 6.43,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.026,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.319,
+      "dur": 10.109,
+      "spin": 0,
+      "opts": {
+       "text": "A TUFT",
+       "color": "#1479d6",
+       "win": 8.109
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.769,
+      "dur": 7.659,
+      "spin": 0,
+      "opts": {
+       "text": "A BOW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.679,
+      "dur": 3.749,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 16.086,
+      "dur": 9.584,
+      "spin": 0,
+      "opts": {
+       "text": "PAINTBRUSH!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 27.903,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 31.583,
+      "dur": 6.227,
+      "spin": 0,
+      "opts": {
+       "text": "HALF AS LONG",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 52.861,
+      "dur": 6.16,
+      "spin": 0,
+      "opts": {
+       "text": "BIG MANE!",
+       "color": "#ffb627"
+      }
+     }
+    ]
+   },
+   {
+    "section": "monkey",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:monkey",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "THIRD HAND!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 12.118,
+      "dur": 10.743999999999998
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.745,
+      "dur": 9.953,
+      "spin": 0,
+      "opts": {
+       "text": "MONKEY",
+       "color": "#1479d6",
+       "win": 7.553
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.195,
+      "dur": 7.103,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.548,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 72.971,
+      "dur": 10.245,
+      "spin": 0,
+      "opts": {
+       "text": "HOLD ON",
+       "color": "#1479d6",
+       "win": 8.245
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 73.421,
+      "dur": 7.795,
+      "spin": 0,
+      "opts": {
+       "text": "FLY",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 77.466,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 17.535,
+      "dur": 5.327,
+      "spin": 0,
+      "opts": {
+       "text": "THIRD HAND!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.708,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 30.288,
+      "dur": 3.994,
+      "spin": 0,
+      "opts": {
+       "text": "HOLDS ON!",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "fingerprint",
+      "at": [
+       2.3,
+       -1.2,
+       2.2
+      ],
+      "delay": 42.141,
+      "dur": 7.863,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 51.904,
+      "dur": 5.6,
+      "spin": 0,
+      "opts": {
+       "text": "FRUIT!",
+       "color": "#ff7a00"
+      }
+     }
+    ]
+   },
+   {
+    "section": "giraffe",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:giraffe",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.179,
+      "dur": 13.004
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.563,
+      "dur": 9.696,
+      "spin": 0,
+      "opts": {
+       "text": "GIRAFFE",
+       "color": "#1479d6",
+       "win": 7.296
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.013,
+      "dur": 6.846,
+      "spin": 0,
+      "opts": {
+       "text": "KOALA",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.109,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 72.762,
+      "dur": 10.73,
+      "spin": 0,
+      "opts": {
+       "text": "FLIES",
+       "color": "#1479d6",
+       "win": 8.73
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 73.212,
+      "dur": 8.28,
+      "spin": 0,
+      "opts": {
+       "text": "SNOW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 77.742,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "flies",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 18.203,
+      "dur": 5.98,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "leave": -7.344
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 26.631,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 30.881,
+      "dur": 3.182,
+      "spin": 0,
+      "opts": {
+       "text": "AS TALL AS YOU!",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "leaves",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 45.498,
+      "dur": 5.445,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:lion",
+     "wide",
+     "close:monkey",
+     "wide",
+     "close:giraffe"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 6.226
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 7.376,
+      "dur": 5.799,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 13.425,
+      "dur": 1.809,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 15.285,
+      "dur": 5.01,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       2.1999999999999997
+      ],
+      "delay": 20.545,
+      "dur": 2.354,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 22.95,
+      "dur": 5.294,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       3.3499999999999996
+      ],
+      "delay": 28.494,
+      "dur": 2.273,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep17",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep17_timing.json",
+  "audio": "zool_ep17_song.wav"
+ }
+}

@@ -479,3 +479,16 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   PASS; frames looked at (see the plan note). Uploaded from commit 1c867bf and SCHEDULED Nov 17 9:30 AM: tXURpJDJE04 (date picker read
   "Nov 17, 2026" before the click; dialog + Details page read back). Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 4 (this session).
   PC 1:06 AM: zool_ep14 is rendering (started about 12:16 AM); the slices 09q, 09s, 10q, 12h follow.
+- Nov 16, 3:50-5:30 AM ET (check-in): PC: zool_ep14 DONE 3:15 AM (3 parts, NOT finished here: for the daily run, Nov 17 5:30 PM slot;
+  its job has the quiz fix and the hello count fix); slices zool_ep09q/09s DONE 3:47 AM, zool_ep10q 4:11 AM, zool_ep12h 4:25 AM.
+  * splice_slices.py rewritten (first version killed for memory on 4K): every piece its own ffmpeg, joined by stream copy; new `--cover`
+    for the 7 frames after a quiz/hello slice where the old frames still show the section word shrinking away. NEXT TIME make the slice's
+    frame_range end 12 frames into the next section instead.
+  * zool_ep09: spliced (09q at 6913, 09s at 3448, --cover 7635:12:1480:220:900:260 done by hand), slice frames + all four seams + 18 final
+    frames looked at, review PASS, uploaded from commit 34dd853, SCHEDULED Nov 16 9:30 AM: WDlKaVPnu-4 (list read: Scheduled). Old
+    wzJiaHEj6tY set to Private (list read: Private).
+  * zool_ep10: spliced (10q at 6898, --cover 7611:9:1500:260:820:170), 12 slice frames + seams + 15 final frames looked at, review PASS,
+    uploaded from commit da02215, SCHEDULED Nov 16 1:30 PM: F2TrIgZA3HY (dialog + Details page read back).
+  * Studio: after midnight the schedule date picker defaults to TOMORROW. For a same-day slot open the calendar (real click on the date
+    box, wait 2 s, read the day cell's position by script) and click today's cell. A click on a stale position hit "Save or publish" and
+    armed "Publish" (Public): nothing was published (the button was read before every click). ALWAYS read the button text before clicking it.

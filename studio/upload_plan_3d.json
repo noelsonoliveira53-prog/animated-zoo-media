@@ -1459,11 +1459,13 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep10.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 339.9,
   "old_video_id": "8IgNBQcHiZw",
-  "note": "Nov 16 5:20 AM: this file is the SPLICED version (zool_ep10a raw + quiz slice zool_ep10q [6898,7611), stray QUIZ TIME! word covered in frames 7611-7619). Frames looked at: six answer reveals whole, quiz word alone, ? badge alone, three checks beside the heads, seams. The OLD upload 8IgNBQcHiZw (scheduled Nov 16 1:30 PM) stays scheduled until this file's upload is confirmed; then it is set to Private."
+  "note": "Nov 16 5:23 AM: the SPLICED version (quiz checks beside the heads, ? badge and QUIZ TIME! apart; six answer reveals whole) is uploaded and scheduled Nov 16 1:30 PM: F2TrIgZA3HY (dialog read 'set to public on November 16, 2026 at 1:30 PM'; Details page read back). The old upload 8IgNBQcHiZw is set to Private once F2TrIgZA3HY reads Scheduled in the list.",
+  "video_id": "F2TrIgZA3HY",
+  "thumb_set": true
  },
  {
   "file": "truck/tt3d_ep08.mp4",

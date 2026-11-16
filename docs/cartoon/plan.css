@@ -1,0 +1,36 @@
+/* layout: one reading column (max 1040px); formats as spec cards, the content block as five theme sections with episode cards, checks and numbers in tables */
+:root { --bg:#f6f9fd; --card:#ffffff; --fg:#14213d; --mut:#55617a; --line:#d9e2ef; --accent:#1f6fd6; --sun:#ffd23f; --sunink:#402010; --read:#12805a; --readbg:#e3f5ee; --todo:#8a5a00; --todobg:#fff1cf;
+  --disp:"Baloo 2","Nunito",system-ui,sans-serif; --body:"Nunito",system-ui,-apple-system,"Segoe UI",sans-serif }
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#0f1626; --card:#172036; --fg:#eef3fb; --mut:#aab6cc; --line:#2a3653; --accent:#6aa8ff; --sun:#ffd23f; --sunink:#402010;
+  --read:#6fdcb0; --readbg:#12382c; --todo:#ffd27a; --todobg:#3d2f10; color-scheme: dark } }
+:root[data-theme="dark"] { --bg:#0f1626; --card:#172036; --fg:#eef3fb; --mut:#aab6cc; --line:#2a3653; --accent:#6aa8ff; --sun:#ffd23f; --sunink:#402010;
+  --read:#6fdcb0; --readbg:#12382c; --todo:#ffd27a; --todobg:#3d2f10; color-scheme: dark }
+body { background:var(--bg); color:var(--fg); font:16px/1.55 var(--body); padding-left:max(16px, env(safe-area-inset-left, 0px)); padding-right:max(16px, env(safe-area-inset-right, 0px)); padding-block:28px 56px }
+main { max-width:1040px; margin:0 auto; display:flex; flex-direction:column; gap:38px }
+h1 { font:800 clamp(30px,5vw,44px)/1.05 var(--disp); margin:0; text-wrap:balance }
+h2 { font:800 26px/1.15 var(--disp); margin:0; text-wrap:balance }
+h3 { font:800 19px/1.2 var(--disp); margin:10px 0 0 }
+h4 { font:800 17px/1.25 var(--disp); margin:0; text-wrap:balance }
+p { margin:0; max-width:70ch } .lead { font-size:18px; color:var(--mut) } .src { font-size:13.5px; color:var(--mut) }
+a { color:var(--accent) }
+section { display:flex; flex-direction:column; gap:12px; min-width:0 }
+.eyebrow { font:800 12.5px/1 var(--body); letter-spacing:.08em; text-transform:uppercase; color:var(--accent) }
+.tw { overflow-x:auto; border:1px solid var(--line); border-radius:10px; background:var(--card) }
+table { border-collapse:collapse; width:100%; font-size:14.5px; font-variant-numeric:tabular-nums }
+th,td { padding:8px 12px; text-align:left; border-bottom:1px solid var(--line); vertical-align:top } tr:last-child td { border-bottom:0 }
+th { font-weight:800; font-size:12.5px; letter-spacing:.04em; text-transform:uppercase; color:var(--mut); white-space:nowrap } .n { text-align:right; white-space:nowrap }
+.grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(280px,1fr)); gap:14px } .grid.two { grid-template-columns:repeat(auto-fit,minmax(300px,1fr)) }
+.ep, .spec { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 16px; display:flex; flex-direction:column; gap:8px; min-width:0; font-size:14.5px }
+.plot { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:4px } .th { color:var(--mut) } .th b, .ep p b { color:var(--fg) }
+.st { font-weight:800; color:var(--read) }
+.fs { display:flex; flex-direction:column; gap:5px }
+.f { font-size:13.5px; line-height:1.4 } .f b { display:inline-block; font-size:11px; letter-spacing:.05em; text-transform:uppercase; border-radius:4px; padding:1px 6px; margin-right:6px }
+.f.r b { background:var(--readbg); color:var(--read) } .f.v b { background:var(--todobg); color:var(--todo) }
+.spec ul, .list { margin:0; padding-left:20px; display:flex; flex-direction:column; gap:5px }
+.beats { display:flex; flex-wrap:wrap; gap:6px; margin:0; padding:0; list-style:none; counter-reset:b }
+.beats li { counter-increment:b; background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:3px 12px 3px 8px; font-size:13.5px; font-weight:600 }
+.beats li::before { content:counter(b); display:inline-block; width:18px; height:18px; line-height:18px; text-align:center; border-radius:50%; background:var(--sun); color:var(--sunink); font-weight:800; font-size:12px; margin-right:7px }
+.toc { display:flex; flex-wrap:wrap; gap:8px } .toc a { text-decoration:none; font-weight:800; font-size:14px; border:1px solid var(--line); background:var(--card); border-radius:999px; padding:5px 14px }
+.toc a:hover, .toc a:focus-visible { border-color:var(--accent); outline:none }
+.note { border-left:4px solid var(--sun); padding:2px 0 2px 14px; color:var(--mut) } .note b { color:var(--fg) }
+.theme { border-top:2px solid var(--line); padding-top:26px }

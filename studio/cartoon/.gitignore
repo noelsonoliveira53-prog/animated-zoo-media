@@ -4,3 +4,5 @@ out/*/*_silent.mp4
 out/*/*.wav
 out/*/*.mp4
 __pycache__/
+out/*/work-*/
+out/*/.*/

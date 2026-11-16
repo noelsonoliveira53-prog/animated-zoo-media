@@ -263,3 +263,16 @@ SHORT1_TAGS = ["hook: the hump", "hook: no hump", "two camels", "Sandy close", "
                "say it", "board: the hump grows"]
 SHORTS = [{"id": "zc_ep01_short1", "title": "Why Does This Baby Camel Have No Hump?", "band": ("WHAT IS INSIDE", "THE HUMP?"), "thumb_text": "NO HUMP?!",
            "shots": [next(i for i, s in enumerate(SHOTS) if s["tag"] == t) for t in SHORT1_TAGS]}]
+
+# thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
+THUMBS = {
+    "zc_ep01": {"place": "dunes", "cam": (960, 540, 1920),
+                "actors": [("calf", 350, 1010, .88, False, 'gsap.set("#P-neck",{rotation:-12,svgOrigin:"190 -330"});')],
+                "props": [(art.hump_cutaway, 1330, 965, 1.7), (art.water_drop, 1700, 250, 1.5), (art.cross, 1700, 250, 1.5)],
+                "words": [("NOT WATER?!", 600, 125, 168, "sun")]},
+    "zc_ep01_short1": {"place": "dunes", "cam": (1050, 480, 1450),
+                       "actors": [("calf", 960, 900, 1.0, False, 'gsap.set("#P-neck",{rotation:-10,svgOrigin:"190 -330"});')],
+                       "props": [(lambda p: art.arrow(p, 870, 250, 945, 395), 0, 0, 1)],
+                       "words": [("WHERE IS IT?", 540, 330, 165, "sun"), ("?", 330, 600, 330, "")]},
+}
+SHORTS[0]["thumb_text"] = "WHERE IS IT?"; EP["thumb_text"] = "NOT WATER?!"

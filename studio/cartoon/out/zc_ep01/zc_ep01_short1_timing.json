@@ -493,7 +493,10 @@
    ],
    "part": 0,
    "q": true,
-   "tag": "hook: the hump"
+   "tag": "hook: the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -556,7 +559,10 @@
    ],
    "part": 0,
    "q": false,
-   "tag": "hook: no hump"
+   "tag": "hook: no hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -609,7 +615,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "two camels"
+   "tag": "two camels",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -677,7 +686,10 @@
    ],
    "part": 1,
    "q": true,
-   "tag": "Sandy close"
+   "tag": "Sandy close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -725,7 +737,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "Mama close"
+   "tag": "Mama close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -768,7 +783,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "tall and small"
+   "tag": "tall and small",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -811,7 +829,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "close to Mama"
+   "tag": "close to Mama",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -859,7 +880,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "they hum"
+   "tag": "they hum",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -902,7 +926,10 @@
    ],
    "part": 1,
    "q": true,
-   "tag": "hum along"
+   "tag": "hum along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -970,7 +997,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "the hump"
+   "tag": "the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -1043,7 +1073,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "the tuft"
+   "tag": "the tuft",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -1106,7 +1139,10 @@
    ],
    "part": 1,
    "q": true,
-   "tag": "Sandy wonders"
+   "tag": "Sandy wonders",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -1174,7 +1210,10 @@
    ],
    "part": 1,
    "q": true,
-   "tag": "question 1"
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1237,7 +1276,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "board: inside the hump"
+   "tag": "board: inside the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1275,7 +1317,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "board: not water"
+   "tag": "board: not water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper_pink",
@@ -1323,7 +1368,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "board: lunch box"
+   "tag": "board: lunch box",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper_pink",
@@ -1391,7 +1439,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "board: energy"
+   "tag": "board: energy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1449,7 +1500,10 @@
    ],
    "part": 1,
    "q": false,
-   "tag": "board: 80 pounds"
+   "tag": "board: 80 pounds",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1517,7 +1571,10 @@
    ],
    "part": 2,
    "q": false,
-   "tag": "board: tall hump"
+   "tag": "board: tall hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1595,7 +1652,10 @@
    ],
    "part": 2,
    "q": false,
-   "tag": "board: using the fat"
+   "tag": "board: using the fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper",
@@ -1653,7 +1713,10 @@
    ],
    "part": 2,
    "q": false,
-   "tag": "board: flop"
+   "tag": "board: flop",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper_blue",
@@ -1716,7 +1779,10 @@
    ],
    "part": 2,
    "q": false,
-   "tag": "board: full or empty"
+   "tag": "board: full or empty",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "dunes",
@@ -1764,7 +1830,10 @@
    ],
    "part": 1,
    "q": true,
-   "tag": "say it"
+   "tag": "say it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   },
   {
    "place": "paper_pink",
@@ -1822,7 +1891,10 @@
    ],
    "part": 4,
    "q": false,
-   "tag": "board: the hump grows"
+   "tag": "board: the hump grows",
+   "who": "milo",
+   "beat": "",
+   "sung": false
   }
  ]
 }

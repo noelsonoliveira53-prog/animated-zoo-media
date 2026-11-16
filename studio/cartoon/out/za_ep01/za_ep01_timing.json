@@ -1,0 +1,6311 @@
+{
+ "id": "za_ep01",
+ "total": 304.35120833333366,
+ "plan": {
+  "length": 304.4,
+  "shots": 76,
+  "visual_changes": 272,
+  "mean_gap": 1.12,
+  "longest_gap": 5.67,
+  "longest_gap_at": 200.7,
+  "over_6s": [],
+  "places": [
+   "zoo",
+   "savanna",
+   "river",
+   "jungle",
+   "bigtree",
+   "canopy",
+   "dune_eve",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 82.2,
+  "first_words_at": 0.42,
+  "shot_mean": 4.0,
+  "beats": {
+   "hook": 1,
+   "goal": 1,
+   "song": 3,
+   "obstacle1": 8,
+   "fact": 3,
+   "obstacle2": 15,
+   "obstacle3": 8,
+   "low": 7,
+   "solution": 5,
+   "ending": 15
+  },
+  "fails": [],
+  "words_placed": "700/700"
+ },
+ "events": [
+  [
+   0.3,
+   "new place",
+   "the zoo gate hook: no present"
+  ],
+  [
+   2.73,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   3.56,
+   "word",
+   "NO PRESENT?"
+  ],
+  [
+   4.89,
+   "new shot",
+   "the zoo gate hook: Milo"
+  ],
+  [
+   6.61,
+   "action",
+   "milo hops"
+  ],
+  [
+   8.29,
+   "new shot",
+   "the zoo gate zoo wide"
+  ],
+  [
+   8.92,
+   "word",
+   "TUMBLE"
+  ],
+  [
+   11.91,
+   "word",
+   "MAMA"
+  ],
+  [
+   12.82,
+   "new shot",
+   "the zoo gate Mama close"
+  ],
+  [
+   15.98,
+   "action",
+   "mama nods"
+  ],
+  [
+   15.98,
+   "word",
+   "HAPPY BIRTHDAY!"
+  ],
+  [
+   17.92,
+   "new shot",
+   "the zoo gate Mama is kind"
+  ],
+  [
+   18.66,
+   "word",
+   "BIG"
+  ],
+  [
+   19.4,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   20.14,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   20.14,
+   "word",
+   "KIND"
+  ],
+  [
+   21.13,
+   "new shot",
+   "the zoo gate goal: the fruit"
+  ],
+  [
+   21.23,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   22.51,
+   "picture",
+   "th"
+  ],
+  [
+   25.52,
+   "new shot",
+   "the zoo gate Milo knows"
+  ],
+  [
+   27.45,
+   "word",
+   "FAR AWAY"
+  ],
+  [
+   30.91,
+   "new shot",
+   "the zoo gate how"
+  ],
+  [
+   30.93,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   31.11,
+   "action",
+   "tumble looks"
+  ],
+  [
+   33.34,
+   "new shot",
+   "the zoo gate the map"
+  ],
+  [
+   34.67,
+   "action",
+   "milo hops"
+  ],
+  [
+   36.01,
+   "new place",
+   "the picture board board: the way"
+  ],
+  [
+   36.94,
+   "action",
+   "the river on the map"
+  ],
+  [
+   36.94,
+   "word",
+   "RIVER"
+  ],
+  [
+   38.12,
+   "action",
+   "the tree on the map"
+  ],
+  [
+   38.12,
+   "word",
+   "TREE"
+  ],
+  [
+   39.5,
+   "action",
+   "the hill on the map"
+  ],
+  [
+   39.5,
+   "word",
+   "HILL"
+  ],
+  [
+   40.3,
+   "new place",
+   "the zoo gate let's go"
+  ],
+  [
+   40.4,
+   "action",
+   "milo flies"
+  ],
+  [
+   40.77,
+   "action",
+   "tumble hops"
+  ],
+  [
+   44.97,
+   "new place",
+   "the sunny savanna song: off we go"
+  ],
+  [
+   45.09,
+   "word",
+   "FRIENDS HELP FRIENDS"
+  ],
+  [
+   45.17,
+   "action",
+   "milo flies"
+  ],
+  [
+   45.17,
+   "action",
+   "tumble walks"
+  ],
+  [
+   46.76,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   47.87,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   49.53,
+   "word",
+   "STEP BY STEP"
+  ],
+  [
+   51.2,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   52.31,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   53.98,
+   "new place",
+   "the wide river river wide"
+  ],
+  [
+   57.18,
+   "word",
+   "RIVER"
+  ],
+  [
+   58.78,
+   "new shot",
+   "the wide river too deep"
+  ],
+  [
+   58.88,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   59.08,
+   "action",
+   "tumble looks"
+  ],
+  [
+   61.43,
+   "new shot",
+   "the wide river question: jump or trunk"
+  ],
+  [
+   63.55,
+   "sign",
+   "JUMP"
+  ],
+  [
+   63.9,
+   "sign",
+   "TRUNK"
+  ],
+  [
+   66.0,
+   "thinking dot",
+   "1"
+  ],
+  [
+   66.94,
+   "thinking dot",
+   "2"
+  ],
+  [
+   67.88,
+   "thinking dot",
+   "3"
+  ],
+  [
+   68.5,
+   "answer",
+   "TRUNK"
+  ],
+  [
+   68.98,
+   "new shot",
+   "the wide river I know"
+  ],
+  [
+   69.03,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   69.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   69.59,
+   "action",
+   "tumble hops"
+  ],
+  [
+   70.57,
+   "new shot",
+   "the wide river into the water"
+  ],
+  [
+   70.67,
+   "action",
+   "tumble walks"
+  ],
+  [
+   71.77,
+   "action",
+   "the water gets deeper"
+  ],
+  [
+   72.78,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   74.7,
+   "new shot",
+   "the wide river snorkel"
+  ],
+  [
+   74.8,
+   "action",
+   "tumble walks"
+  ],
+  [
+   74.99,
+   "action",
+   "only the trunk is above the water"
+  ],
+  [
+   77.1,
+   "word",
+   "SNORKEL!"
+  ],
+  [
+   78.27,
+   "new place",
+   "the picture board (blue) fact: the snorkel trunk"
+  ],
+  [
+   79.96,
+   "word",
+   "TRUNK"
+  ],
+  [
+   80.74,
+   "word",
+   "= SNORKEL"
+  ],
+  [
+   82.89,
+   "new place",
+   "the sunny savanna question: arm up"
+  ],
+  [
+   83.98,
+   "action",
+   "milo hops"
+  ],
+  [
+   83.98,
+   "picture",
+   "ar"
+  ],
+  [
+   83.98,
+   "word",
+   "UP!"
+  ],
+  [
+   87.35,
+   "new shot",
+   "the sunny savanna across"
+  ],
+  [
+   87.37,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   87.4,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   87.47,
+   "word",
+   "TRUNKS UP!"
+  ],
+  [
+   88.03,
+   "action",
+   "tumble hops"
+  ],
+  [
+   89.11,
+   "new shot",
+   "the sunny savanna hooray"
+  ],
+  [
+   89.24,
+   "action",
+   "milo hops"
+  ],
+  [
+   92.08,
+   "new place",
+   "the green jungle jungle wide"
+  ],
+  [
+   92.18,
+   "action",
+   "tumble walks"
+  ],
+  [
+   94.66,
+   "new shot",
+   "the green jungle jungle look"
+  ],
+  [
+   94.86,
+   "action",
+   "tumble looks"
+  ],
+  [
+   95.76,
+   "word",
+   "TALL"
+  ],
+  [
+   97.47,
+   "word",
+   "BIG"
+  ],
+  [
+   98.37,
+   "new place",
+   "the tallest tree the tree, tilt up"
+  ],
+  [
+   103.69,
+   "new shot",
+   "the tallest tree stretch"
+  ],
+  [
+   105.23,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   106.26,
+   "new shot",
+   "the tallest tree too high"
+  ],
+  [
+   107.16,
+   "picture",
+   "ar"
+  ],
+  [
+   107.47,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   107.47,
+   "word",
+   "TOO HIGH!"
+  ],
+  [
+   108.15,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   108.55,
+   "new shot",
+   "the tallest tree Milo tries"
+  ],
+  [
+   111.12,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   111.38,
+   "action",
+   "Milo pulls and pulls"
+  ],
+  [
+   113.28,
+   "action",
+   "Mango drops down on her tail"
+  ],
+  [
+   113.28,
+   "new place",
+   "the treetops Mango appears"
+  ],
+  [
+   114.75,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   116.51,
+   "new shot",
+   "the treetops Mango hangs"
+  ],
+  [
+   117.06,
+   "word",
+   "MANGO"
+  ],
+  [
+   121.25,
+   "picture",
+   "ar"
+  ],
+  [
+   122.16,
+   "new shot",
+   "the treetops Mango loves fruit"
+  ],
+  [
+   122.85,
+   "picture",
+   "fr"
+  ],
+  [
+   124.27,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   125.5,
+   "new place",
+   "the picture board (pink) fact: the tail"
+  ],
+  [
+   126.79,
+   "picture",
+   "ar"
+  ],
+  [
+   126.79,
+   "word",
+   "TAIL"
+  ],
+  [
+   128.99,
+   "word",
+   "EXTRA HAND!"
+  ],
+  [
+   130.44,
+   "new place",
+   "the treetops Mango swings"
+  ],
+  [
+   130.95,
+   "action",
+   "Mango swings along the branch"
+  ],
+  [
+   132.51,
+   "new shot",
+   "the treetops picks the fruit"
+  ],
+  [
+   135.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   135.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   136.45,
+   "action",
+   "the fruit comes off the branch"
+  ],
+  [
+   137.83,
+   "new shot",
+   "the treetops count the hands"
+  ],
+  [
+   140.3,
+   "word",
+   "1"
+  ],
+  [
+   140.65,
+   "word",
+   "2"
+  ],
+  [
+   141.69,
+   "word",
+   "+ 1 TAIL"
+  ],
+  [
+   142.6,
+   "new place",
+   "the tallest tree the gift"
+  ],
+  [
+   142.65,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   144.41,
+   "action",
+   "the fruit goes to Tumble"
+  ],
+  [
+   144.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   146.42,
+   "new shot",
+   "the tallest tree thank you"
+  ],
+  [
+   146.44,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   146.55,
+   "action",
+   "tumble hops"
+  ],
+  [
+   149.25,
+   "new shot",
+   "the tallest tree yes please"
+  ],
+  [
+   149.38,
+   "action",
+   "mango hops"
+  ],
+  [
+   150.5,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   150.5,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   151.69,
+   "new place",
+   "the big sandy hill hill wide"
+  ],
+  [
+   154.88,
+   "new shot",
+   "the big sandy hill feet sink"
+  ],
+  [
+   155.4,
+   "action",
+   "Tumble sinks"
+  ],
+  [
+   155.4,
+   "word",
+   "SINK!"
+  ],
+  [
+   156.5,
+   "action",
+   "Tumble sinks"
+  ],
+  [
+   159.11,
+   "action",
+   "his feet are in the sand"
+  ],
+  [
+   160.52,
+   "new shot",
+   "the big sandy hill so heavy"
+  ],
+  [
+   160.57,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   164.18,
+   "new shot",
+   "the big sandy hill the sun goes down"
+  ],
+  [
+   164.38,
+   "action",
+   "the sun sinks"
+  ],
+  [
+   165.09,
+   "word",
+   "HURRY!"
+  ],
+  [
+   166.86,
+   "action",
+   "Sandy walks in"
+  ],
+  [
+   166.86,
+   "new shot",
+   "the big sandy hill Sandy comes"
+  ],
+  [
+   168.19,
+   "word",
+   "SANDY"
+  ],
+  [
+   168.98,
+   "action",
+   "sandy nods"
+  ],
+  [
+   170.58,
+   "new place",
+   "the picture board (blue) fact: wide feet"
+  ],
+  [
+   171.38,
+   "word",
+   "WIDE FEET"
+  ],
+  [
+   172.1,
+   "action",
+   "the foot spreads out"
+  ],
+  [
+   173.49,
+   "word",
+   "NO SINKING!"
+  ],
+  [
+   175.3,
+   "new place",
+   "the big sandy hill fruit on Sandy"
+  ],
+  [
+   175.43,
+   "action",
+   "the fruit goes on Sandy's back"
+  ],
+  [
+   176.57,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   179.24,
+   "new shot",
+   "the big sandy hill thank you Sandy"
+  ],
+  [
+   179.26,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   179.36,
+   "action",
+   "tumble hops"
+  ],
+  [
+   181.7,
+   "new shot",
+   "the big sandy hill up the hill"
+  ],
+  [
+   181.8,
+   "action",
+   "mango walks"
+  ],
+  [
+   181.8,
+   "action",
+   "milo flies"
+  ],
+  [
+   181.8,
+   "action",
+   "sandy walks"
+  ],
+  [
+   181.8,
+   "action",
+   "tumble walks"
+  ],
+  [
+   184.54,
+   "new shot",
+   "the big sandy hill bump"
+  ],
+  [
+   185.98,
+   "action",
+   "a bump"
+  ],
+  [
+   185.98,
+   "action",
+   "the fruit jumps off"
+  ],
+  [
+   185.98,
+   "word",
+   "BUMP!"
+  ],
+  [
+   186.96,
+   "new shot",
+   "the big sandy hill the fruit rolls"
+  ],
+  [
+   187.06,
+   "action",
+   "the fruit rolls down the hill"
+  ],
+  [
+   191.47,
+   "action",
+   "splat"
+  ],
+  [
+   191.47,
+   "new shot",
+   "the big sandy hill splat"
+  ],
+  [
+   191.65,
+   "word",
+   "SPLAT!"
+  ],
+  [
+   193.8,
+   "new shot",
+   "the big sandy hill Tumble is sad"
+  ],
+  [
+   193.82,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   196.64,
+   "new shot",
+   "the big sandy hill friends come close"
+  ],
+  [
+   196.66,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   198.79,
+   "action",
+   "Mango comes close"
+  ],
+  [
+   198.79,
+   "action",
+   "Sandy comes close"
+  ],
+  [
+   200.67,
+   "new shot",
+   "the big sandy hill question: what could help"
+  ],
+  [
+   206.34,
+   "new shot",
+   "the big sandy hill we are here"
+  ],
+  [
+   206.36,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   209.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   209.4,
+   "word",
+   "WE ARE HERE"
+  ],
+  [
+   210.63,
+   "new shot",
+   "the big sandy hill something inside"
+  ],
+  [
+   212.06,
+   "action",
+   "the seed shines"
+  ],
+  [
+   213.79,
+   "new shot",
+   "the big sandy hill a seed"
+  ],
+  [
+   214.29,
+   "picture",
+   "seed"
+  ],
+  [
+   214.29,
+   "word",
+   "A SEED!"
+  ],
+  [
+   215.86,
+   "action",
+   "sandy nods"
+  ],
+  [
+   217.55,
+   "new shot",
+   "the big sandy hill Tumble's idea"
+  ],
+  [
+   217.57,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   217.74,
+   "picture",
+   "th"
+  ],
+  [
+   218.16,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   219.74,
+   "action",
+   "tumble hops"
+  ],
+  [
+   221.29,
+   "new shot",
+   "the big sandy hill wonderful idea"
+  ],
+  [
+   221.6,
+   "action",
+   "milo hops"
+  ],
+  [
+   223.94,
+   "new shot",
+   "the big sandy hill picks up the seed"
+  ],
+  [
+   224.04,
+   "action",
+   "tumble looks"
+  ],
+  [
+   226.37,
+   "action",
+   "the seed is lifted"
+  ],
+  [
+   226.37,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   228.16,
+   "word",
+   "GENTLY"
+  ],
+  [
+   229.26,
+   "new shot",
+   "the big sandy hill song: home we go"
+  ],
+  [
+   229.38,
+   "word",
+   "FRIENDS HELP FRIENDS"
+  ],
+  [
+   229.46,
+   "action",
+   "mango walks"
+  ],
+  [
+   229.46,
+   "action",
+   "milo flies"
+  ],
+  [
+   229.46,
+   "action",
+   "sandy walks"
+  ],
+  [
+   229.46,
+   "action",
+   "tumble walks"
+  ],
+  [
+   231.04,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   232.15,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   233.82,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   233.82,
+   "word",
+   "HOME WE GO!"
+  ],
+  [
+   235.77,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   238.27,
+   "new place",
+   "the zoo at sunset zoo at sunset"
+  ],
+  [
+   241.88,
+   "new shot",
+   "the zoo at sunset digs a hole"
+  ],
+  [
+   242.08,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   242.68,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   242.78,
+   "picture",
+   "hole"
+  ],
+  [
+   244.15,
+   "new shot",
+   "the zoo at sunset the seed goes in"
+  ],
+  [
+   244.25,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   244.74,
+   "action",
+   "the seed drops into the hole"
+  ],
+  [
+   246.75,
+   "action",
+   "sandy nods"
+  ],
+  [
+   248.3,
+   "new shot",
+   "the zoo at sunset sprays water"
+  ],
+  [
+   248.4,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   248.96,
+   "picture",
+   "spray"
+  ],
+  [
+   250.62,
+   "word",
+   "WHOOSH!"
+  ],
+  [
+   251.58,
+   "action",
+   "Mama walks in"
+  ],
+  [
+   251.58,
+   "new shot",
+   "the zoo at sunset Mama comes"
+  ],
+  [
+   253.94,
+   "new shot",
+   "the zoo at sunset happy birthday"
+  ],
+  [
+   254.07,
+   "action",
+   "tumble hops"
+  ],
+  [
+   255.77,
+   "picture",
+   "spr"
+  ],
+  [
+   257.1,
+   "action",
+   "the little tree grows"
+  ],
+  [
+   259.45,
+   "new shot",
+   "the zoo at sunset friends cheer"
+  ],
+  [
+   259.58,
+   "action",
+   "mango hops"
+  ],
+  [
+   259.58,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   259.58,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   260.6,
+   "action",
+   "sandy hops"
+  ],
+  [
+   261.88,
+   "new shot",
+   "the zoo at sunset the best present"
+  ],
+  [
+   262.9,
+   "action",
+   "mama nods"
+  ],
+  [
+   263.65,
+   "action",
+   "blink"
+  ],
+  [
+   265.45,
+   "new shot",
+   "the zoo at sunset trunk hug"
+  ],
+  [
+   266.01,
+   "action",
+   "mama looks"
+  ],
+  [
+   266.01,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   268.29,
+   "picture",
+   "h1"
+  ],
+  [
+   269.71,
+   "picture",
+   "h2"
+  ],
+  [
+   269.71,
+   "word",
+   "TRUNK HUG"
+  ],
+  [
+   270.6,
+   "new shot",
+   "the zoo at sunset I love you"
+  ],
+  [
+   270.62,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   270.84,
+   "action",
+   "blink"
+  ],
+  [
+   272.18,
+   "new shot",
+   "the zoo at sunset I love you too"
+  ],
+  [
+   273.03,
+   "action",
+   "mama nods"
+  ],
+  [
+   275.16,
+   "new shot",
+   "the zoo at sunset the little tree"
+  ],
+  [
+   277.23,
+   "action",
+   "the little tree grows tall"
+  ],
+  [
+   277.23,
+   "word",
+   "ONE DAY..."
+  ],
+  [
+   278.7,
+   "new shot",
+   "the zoo at sunset the lesson"
+  ],
+  [
+   279.85,
+   "word",
+   "WITH FRIENDS"
+  ],
+  [
+   282.88,
+   "new shot",
+   "the zoo at sunset question: who"
+  ],
+  [
+   286.13,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   286.48,
+   "sign",
+   "MANGO"
+  ],
+  [
+   288.25,
+   "thinking dot",
+   "1"
+  ],
+  [
+   289.19,
+   "thinking dot",
+   "2"
+  ],
+  [
+   290.13,
+   "thinking dot",
+   "3"
+  ],
+  [
+   290.75,
+   "answer",
+   "TUMBLE"
+  ],
+  [
+   291.23,
+   "new shot",
+   "the zoo at sunset song: adventure day"
+  ],
+  [
+   292.23,
+   "action",
+   "tumble hops"
+  ],
+  [
+   293.43,
+   "action",
+   "mango hops"
+  ],
+  [
+   294.63,
+   "action",
+   "sandy hops"
+  ],
+  [
+   296.63,
+   "action",
+   "tumble hops"
+  ],
+  [
+   297.83,
+   "action",
+   "mango hops"
+  ],
+  [
+   300.24,
+   "new shot",
+   "the zoo at sunset goodbye"
+  ],
+  [
+   301.06,
+   "action",
+   "milo hops"
+  ],
+  [
+   301.06,
+   "word",
+   "SEE YOU SOON!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "zoo",
+   "say": "Today is Mama's birthday. And Tumble has no present!",
+   "t0": 0.3,
+   "t1": 4.892083333333334,
+   "v0": 0.42,
+   "dur": 4.0720833333333335,
+   "words": [
+    [
+     "Today",
+     0.01,
+     0.51
+    ],
+    [
+     "is",
+     0.51,
+     0.7
+    ],
+    [
+     "Mama's",
+     0.7,
+     1.26
+    ],
+    [
+     "birthday.",
+     1.26,
+     1.96
+    ],
+    [
+     "And",
+     2.31,
+     2.47
+    ],
+    [
+     "Tumble",
+     2.47,
+     2.9
+    ],
+    [
+     "has",
+     2.9,
+     3.14
+    ],
+    [
+     "no",
+     3.14,
+     3.37
+    ],
+    [
+     "present!",
+     3.37,
+     4.07
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: no present",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "I'm Milo! Come on a big adventure with us!",
+   "t0": 4.892083333333334,
+   "t1": 8.287208333333334,
+   "v0": 5.012083333333334,
+   "dur": 2.875125,
+   "words": [
+    [
+     "I'm",
+     0.0,
+     0.32
+    ],
+    [
+     "Milo!",
+     0.32,
+     0.94
+    ],
+    [
+     "Come",
+     1.22,
+     1.46
+    ],
+    [
+     "on",
+     1.46,
+     1.57
+    ],
+    [
+     "a",
+     1.57,
+     1.6
+    ],
+    [
+     "big",
+     1.6,
+     1.85
+    ],
+    [
+     "adventure",
+     1.85,
+     2.33
+    ],
+    [
+     "with",
+     2.33,
+     2.48
+    ],
+    [
+     "us!",
+     2.48,
+     2.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "This is Tumble, the baby elephant, and this is his mama.",
+   "t0": 8.287208333333334,
+   "t1": 12.81825,
+   "v0": 8.407208333333333,
+   "dur": 4.011041666666666,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.28
+    ],
+    [
+     "is",
+     0.28,
+     0.51
+    ],
+    [
+     "Tumble,",
+     0.51,
+     1.1
+    ],
+    [
+     "the",
+     1.29,
+     1.38
+    ],
+    [
+     "baby",
+     1.38,
+     1.83
+    ],
+    [
+     "elephant,",
+     1.83,
+     2.48
+    ],
+    [
+     "and",
+     2.6,
+     2.8
+    ],
+    [
+     "this",
+     2.8,
+     3.07
+    ],
+    [
+     "is",
+     3.07,
+     3.28
+    ],
+    [
+     "his",
+     3.28,
+     3.5
+    ],
+    [
+     "mama.",
+     3.5,
+     4.01
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "zoo wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Mama Elephant is one year older today. Happy birthday, Mama!",
+   "t0": 12.81825,
+   "t1": 17.918916666666664,
+   "v0": 12.93825,
+   "dur": 4.580666666666667,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.37
+    ],
+    [
+     "Elephant",
+     0.37,
+     1.09
+    ],
+    [
+     "is",
+     1.09,
+     1.29
+    ],
+    [
+     "one",
+     1.29,
+     1.58
+    ],
+    [
+     "year",
+     1.58,
+     1.76
+    ],
+    [
+     "older",
+     1.76,
+     2.01
+    ],
+    [
+     "today.",
+     2.01,
+     2.53
+    ],
+    [
+     "Happy",
+     3.04,
+     3.41
+    ],
+    [
+     "birthday,",
+     3.41,
+     4.04
+    ],
+    [
+     "Mama!",
+     4.04,
+     4.58
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Mama is big, and gentle, and kind.",
+   "t0": 17.918916666666664,
+   "t1": 21.12658333333333,
+   "v0": 18.038916666666665,
+   "dur": 2.687666666666667,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.39
+    ],
+    [
+     "is",
+     0.39,
+     0.62
+    ],
+    [
+     "big,",
+     0.62,
+     1.03
+    ],
+    [
+     "and",
+     1.03,
+     1.36
+    ],
+    [
+     "gentle,",
+     1.36,
+     1.94
+    ],
+    [
+     "and",
+     1.94,
+     2.1
+    ],
+    [
+     "kind.",
+     2.1,
+     2.688
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama is kind",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Mama loves sweet, golden fruit. I want to find her the biggest one!",
+   "t0": 21.12658333333333,
+   "t1": 25.51641666666666,
+   "v0": 21.24658333333333,
+   "dur": 3.8698333333333332,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.38
+    ],
+    [
+     "loves",
+     0.38,
+     0.75
+    ],
+    [
+     "sweet,",
+     0.75,
+     1.26
+    ],
+    [
+     "golden",
+     1.26,
+     1.69
+    ],
+    [
+     "fruit.",
+     1.69,
+     2.31
+    ],
+    [
+     "I",
+     2.31,
+     2.42
+    ],
+    [
+     "want",
+     2.42,
+     2.65
+    ],
+    [
+     "to",
+     2.65,
+     2.71
+    ],
+    [
+     "find",
+     2.71,
+     3.0
+    ],
+    [
+     "her",
+     3.0,
+     3.08
+    ],
+    [
+     "the",
+     3.08,
+     3.17
+    ],
+    [
+     "biggest",
+     3.17,
+     3.57
+    ],
+    [
+     "one!",
+     3.57,
+     3.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goal: the fruit",
+   "who": "tumble",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "The best golden fruit grows far away, at the top of the tallest tree.",
+   "t0": 25.51641666666666,
+   "t1": 30.914666666666662,
+   "v0": 25.636416666666662,
+   "dur": 4.87825,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.13
+    ],
+    [
+     "best",
+     0.13,
+     0.58
+    ],
+    [
+     "golden",
+     0.58,
+     1.05
+    ],
+    [
+     "fruit",
+     1.05,
+     1.36
+    ],
+    [
+     "grows",
+     1.36,
+     1.81
+    ],
+    [
+     "far",
+     1.81,
+     2.14
+    ],
+    [
+     "away,",
+     2.14,
+     2.64
+    ],
+    [
+     "at",
+     3.02,
+     3.13
+    ],
+    [
+     "the",
+     3.13,
+     3.21
+    ],
+    [
+     "top",
+     3.21,
+     3.62
+    ],
+    [
+     "of",
+     3.62,
+     3.75
+    ],
+    [
+     "the",
+     3.75,
+     3.83
+    ],
+    [
+     "tallest",
+     3.83,
+     4.41
+    ],
+    [
+     "tree.",
+     4.41,
+     4.878
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo knows",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "So far? How will we get there, Milo?",
+   "t0": 30.914666666666662,
+   "t1": 33.33808333333333,
+   "v0": 31.034666666666663,
+   "dur": 1.9034166666666668,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.24
+    ],
+    [
+     "far?",
+     0.24,
+     0.6
+    ],
+    [
+     "How",
+     0.6,
+     0.78
+    ],
+    [
+     "will",
+     0.78,
+     0.87
+    ],
+    [
+     "we",
+     0.87,
+     0.98
+    ],
+    [
+     "get",
+     0.98,
+     1.16
+    ],
+    [
+     "there,",
+     1.16,
+     1.34
+    ],
+    [
+     "Milo?",
+     1.34,
+     1.9
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "how",
+   "who": "tumble",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "I know the way. Look at my map!",
+   "t0": 33.33808333333333,
+   "t1": 36.01262499999999,
+   "v0": 33.45808333333333,
+   "dur": 2.154541666666667,
+   "words": [
+    [
+     "I",
+     0.11,
+     0.2
+    ],
+    [
+     "know",
+     0.2,
+     0.45
+    ],
+    [
+     "the",
+     0.45,
+     0.56
+    ],
+    [
+     "way.",
+     0.56,
+     0.98
+    ],
+    [
+     "Look",
+     1.21,
+     1.38
+    ],
+    [
+     "at",
+     1.38,
+     1.44
+    ],
+    [
+     "my",
+     1.44,
+     1.64
+    ],
+    [
+     "map!",
+     1.64,
+     2.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the map",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "We must cross a river, climb a tree, and walk over a hill.",
+   "t0": 36.01262499999999,
+   "t1": 40.295374999999986,
+   "v0": 36.13262499999999,
+   "dur": 3.76275,
+   "words": [
+    [
+     "We",
+     0.0,
+     0.14
+    ],
+    [
+     "must",
+     0.14,
+     0.39
+    ],
+    [
+     "cross",
+     0.39,
+     0.75
+    ],
+    [
+     "a",
+     0.75,
+     0.81
+    ],
+    [
+     "river,",
+     0.81,
+     1.32
+    ],
+    [
+     "climb",
+     1.58,
+     1.94
+    ],
+    [
+     "a",
+     1.94,
+     1.99
+    ],
+    [
+     "tree,",
+     1.99,
+     2.57
+    ],
+    [
+     "and",
+     2.57,
+     2.86
+    ],
+    [
+     "walk",
+     2.86,
+     3.12
+    ],
+    [
+     "over",
+     3.12,
+     3.34
+    ],
+    [
+     "a",
+     3.34,
+     3.37
+    ],
+    [
+     "hill.",
+     3.37,
+     3.76
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "board: the way",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Let's go, Tumble! We must be back before the sun goes down.",
+   "t0": 40.295374999999986,
+   "t1": 44.970624999999984,
+   "v0": 40.41537499999998,
+   "dur": 4.15525,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.35
+    ],
+    [
+     "go,",
+     0.35,
+     0.77
+    ],
+    [
+     "Tumble!",
+     0.77,
+     1.42
+    ],
+    [
+     "We",
+     1.79,
+     1.89
+    ],
+    [
+     "must",
+     1.89,
+     2.11
+    ],
+    [
+     "be",
+     2.11,
+     2.23
+    ],
+    [
+     "back",
+     2.23,
+     2.61
+    ],
+    [
+     "before",
+     2.61,
+     2.87
+    ],
+    [
+     "the",
+     2.87,
+     2.95
+    ],
+    [
+     "sun",
+     2.95,
+     3.3
+    ],
+    [
+     "goes",
+     3.3,
+     3.63
+    ],
+    [
+     "down.",
+     3.63,
+     4.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "let's go",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Friends help friends, come along with me! Step by step, what will we see?",
+   "t0": 44.970624999999984,
+   "t1": 53.97949999999998,
+   "v0": 45.09062499999998,
+   "dur": 8.888875,
+   "words": [
+    [
+     "Friends",
+     0.0,
+     0.511
+    ],
+    [
+     "help",
+     0.556,
+     1.067
+    ],
+    [
+     "friends,",
+     1.111,
+     1.622
+    ],
+    [
+     "come",
+     1.667,
+     1.922
+    ],
+    [
+     "along",
+     1.944,
+     2.456
+    ],
+    [
+     "with",
+     2.5,
+     2.756
+    ],
+    [
+     "me!",
+     2.778,
+     3.8
+    ],
+    [
+     "Step",
+     4.444,
+     4.956
+    ],
+    [
+     "by",
+     5.0,
+     5.511
+    ],
+    [
+     "step,",
+     5.556,
+     6.067
+    ],
+    [
+     "what",
+     6.111,
+     6.367
+    ],
+    [
+     "will",
+     6.389,
+     6.644
+    ],
+    [
+     "we",
+     6.667,
+     7.178
+    ],
+    [
+     "see?",
+     7.222,
+     8.244
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: off we go",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "river",
+   "say": "They walk and walk. Then, oh! A wide river is in the way.",
+   "t0": 53.97949999999998,
+   "t1": 58.78237499999997,
+   "v0": 54.09949999999998,
+   "dur": 4.282875,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.18
+    ],
+    [
+     "walk",
+     0.18,
+     0.57
+    ],
+    [
+     "and",
+     0.57,
+     0.69
+    ],
+    [
+     "walk.",
+     0.69,
+     1.18
+    ],
+    [
+     "Then,",
+     1.54,
+     1.95
+    ],
+    [
+     "oh!",
+     1.95,
+     2.31
+    ],
+    [
+     "A",
+     2.5,
+     2.56
+    ],
+    [
+     "wide",
+     2.56,
+     3.08
+    ],
+    [
+     "river",
+     3.08,
+     3.42
+    ],
+    [
+     "is",
+     3.42,
+     3.61
+    ],
+    [
+     "in",
+     3.61,
+     3.73
+    ],
+    [
+     "the",
+     3.73,
+     3.81
+    ],
+    [
+     "way.",
+     3.81,
+     4.28
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "river wide",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "It is too deep! I can not jump across.",
+   "t0": 58.78237499999997,
+   "t1": 61.4282083333333,
+   "v0": 58.90237499999997,
+   "dur": 2.1258333333333335,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.13
+    ],
+    [
+     "is",
+     0.13,
+     0.27
+    ],
+    [
+     "too",
+     0.27,
+     0.49
+    ],
+    [
+     "deep!",
+     0.49,
+     0.83
+    ],
+    [
+     "I",
+     0.83,
+     0.93
+    ],
+    [
+     "can",
+     0.93,
+     1.07
+    ],
+    [
+     "not",
+     1.07,
+     1.25
+    ],
+    [
+     "jump",
+     1.25,
+     1.47
+    ],
+    [
+     "across.",
+     1.47,
+     2.126
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "too deep",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Hmm. What can Tumble do? Jump over, or use his trunk?",
+   "t0": 61.4282083333333,
+   "t1": 68.98262499999997,
+   "v0": 61.5482083333333,
+   "dur": 3.834416666666667,
+   "words": [
+    [
+     "Hmm.",
+     0.01,
+     0.37
+    ],
+    [
+     "What",
+     0.37,
+     0.56
+    ],
+    [
+     "can",
+     0.56,
+     0.74
+    ],
+    [
+     "Tumble",
+     0.74,
+     1.21
+    ],
+    [
+     "do?",
+     1.21,
+     1.56
+    ],
+    [
+     "Jump",
+     2.0,
+     2.33
+    ],
+    [
+     "over,",
+     2.33,
+     2.82
+    ],
+    [
+     "or",
+     2.82,
+     2.91
+    ],
+    [
+     "use",
+     2.91,
+     3.12
+    ],
+    [
+     "his",
+     3.12,
+     3.32
+    ],
+    [
+     "trunk?",
+     3.32,
+     3.83
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: jump or trunk",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "I know! My trunk!",
+   "t0": 68.98262499999997,
+   "t1": 70.56912499999999,
+   "v0": 69.10262499999997,
+   "dur": 1.0665,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.11
+    ],
+    [
+     "know!",
+     0.11,
+     0.31
+    ],
+    [
+     "My",
+     0.31,
+     0.49
+    ],
+    [
+     "trunk!",
+     0.49,
+     1.067
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I know",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Tumble walks into the water, and lifts his trunk up high.",
+   "t0": 70.56912499999999,
+   "t1": 74.701375,
+   "v0": 70.68912499999999,
+   "dur": 3.61225,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.43
+    ],
+    [
+     "walks",
+     0.43,
+     0.82
+    ],
+    [
+     "into",
+     0.82,
+     0.99
+    ],
+    [
+     "the",
+     0.99,
+     1.08
+    ],
+    [
+     "water,",
+     1.08,
+     1.64
+    ],
+    [
+     "and",
+     1.94,
+     2.09
+    ],
+    [
+     "lifts",
+     2.09,
+     2.42
+    ],
+    [
+     "his",
+     2.42,
+     2.6
+    ],
+    [
+     "trunk",
+     2.6,
+     2.94
+    ],
+    [
+     "up",
+     2.94,
+     3.1
+    ],
+    [
+     "high.",
+     3.1,
+     3.61
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "into the water",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "He breathes through his trunk, just like a snorkel!",
+   "t0": 74.701375,
+   "t1": 78.27233333333334,
+   "v0": 74.821375,
+   "dur": 3.0509583333333334,
+   "words": [
+    [
+     "He",
+     0.02,
+     0.17
+    ],
+    [
+     "breathes",
+     0.17,
+     0.67
+    ],
+    [
+     "through",
+     0.67,
+     0.85
+    ],
+    [
+     "his",
+     0.85,
+     1.04
+    ],
+    [
+     "trunk,",
+     1.04,
+     1.57
+    ],
+    [
+     "just",
+     1.81,
+     2.09
+    ],
+    [
+     "like",
+     2.09,
+     2.25
+    ],
+    [
+     "a",
+     2.25,
+     2.28
+    ],
+    [
+     "snorkel!",
+     2.28,
+     3.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "snorkel",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "An elephant can use its trunk like a snorkel in deep water.",
+   "t0": 78.27233333333334,
+   "t1": 82.88608333333335,
+   "v0": 78.39233333333334,
+   "dur": 4.09375,
+   "words": [
+    [
+     "An",
+     0.0,
+     0.12
+    ],
+    [
+     "elephant",
+     0.12,
+     0.88
+    ],
+    [
+     "can",
+     1.01,
+     1.19
+    ],
+    [
+     "use",
+     1.19,
+     1.39
+    ],
+    [
+     "its",
+     1.39,
+     1.57
+    ],
+    [
+     "trunk",
+     1.57,
+     2.13
+    ],
+    [
+     "like",
+     2.13,
+     2.31
+    ],
+    [
+     "a",
+     2.31,
+     2.35
+    ],
+    [
+     "snorkel",
+     2.35,
+     3.07
+    ],
+    [
+     "in",
+     3.07,
+     3.3
+    ],
+    [
+     "deep",
+     3.3,
+     3.6
+    ],
+    [
+     "water.",
+     3.6,
+     4.09
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: the snorkel trunk",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can you lift your arm up high, like a trunk? Up, up, up!",
+   "t0": 82.88608333333335,
+   "t1": 87.34554166666669,
+   "v0": 83.00608333333335,
+   "dur": 3.9394583333333335,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.37
+    ],
+    [
+     "lift",
+     0.37,
+     0.63
+    ],
+    [
+     "your",
+     0.63,
+     0.76
+    ],
+    [
+     "arm",
+     0.76,
+     0.97
+    ],
+    [
+     "up",
+     0.97,
+     1.11
+    ],
+    [
+     "high,",
+     1.11,
+     1.54
+    ],
+    [
+     "like",
+     1.54,
+     1.74
+    ],
+    [
+     "a",
+     1.74,
+     1.78
+    ],
+    [
+     "trunk?",
+     1.78,
+     2.35
+    ],
+    [
+     "Up,",
+     2.81,
+     3.22
+    ],
+    [
+     "up,",
+     3.22,
+     3.56
+    ],
+    [
+     "up!",
+     3.56,
+     3.939
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: arm up",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Trunks up! I did it!",
+   "t0": 87.34554166666669,
+   "t1": 89.1129166666667,
+   "v0": 87.4655416666667,
+   "dur": 1.247375,
+   "words": [
+    [
+     "Trunks",
+     0.0,
+     0.36
+    ],
+    [
+     "up!",
+     0.36,
+     0.56
+    ],
+    [
+     "I",
+     0.56,
+     0.7
+    ],
+    [
+     "did",
+     0.7,
+     0.93
+    ],
+    [
+     "it!",
+     0.93,
+     1.22
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "across",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Hooray, Tumble! You are so brave.",
+   "t0": 89.1129166666667,
+   "t1": 92.07595833333339,
+   "v0": 89.23291666666671,
+   "dur": 2.443041666666667,
+   "words": [
+    [
+     "Hooray,",
+     0.01,
+     0.49
+    ],
+    [
+     "Tumble!",
+     0.49,
+     1.02
+    ],
+    [
+     "You",
+     1.3,
+     1.39
+    ],
+    [
+     "are",
+     1.39,
+     1.46
+    ],
+    [
+     "so",
+     1.46,
+     1.72
+    ],
+    [
+     "brave.",
+     1.72,
+     2.44
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hooray",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Into the green jungle they go.",
+   "t0": 92.07595833333339,
+   "t1": 94.66237500000007,
+   "v0": 92.1959583333334,
+   "dur": 2.0664166666666666,
+   "words": [
+    [
+     "Into",
+     0.01,
+     0.27
+    ],
+    [
+     "the",
+     0.27,
+     0.37
+    ],
+    [
+     "green",
+     0.37,
+     0.91
+    ],
+    [
+     "jungle",
+     0.91,
+     1.42
+    ],
+    [
+     "they",
+     1.42,
+     1.58
+    ],
+    [
+     "go.",
+     1.58,
+     2.066
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "jungle wide",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "The trees are so tall. The leaves are so big!",
+   "t0": 94.66237500000007,
+   "t1": 98.37458333333342,
+   "v0": 94.78237500000007,
+   "dur": 3.1922083333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "trees",
+     0.12,
+     0.61
+    ],
+    [
+     "are",
+     0.61,
+     0.69
+    ],
+    [
+     "so",
+     0.69,
+     0.98
+    ],
+    [
+     "tall.",
+     0.98,
+     1.53
+    ],
+    [
+     "The",
+     1.81,
+     1.91
+    ],
+    [
+     "leaves",
+     1.91,
+     2.37
+    ],
+    [
+     "are",
+     2.37,
+     2.44
+    ],
+    [
+     "so",
+     2.44,
+     2.69
+    ],
+    [
+     "big!",
+     2.69,
+     3.19
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "jungle look",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "There it is! The tallest tree. And the golden fruit, at the very top.",
+   "t0": 98.37458333333342,
+   "t1": 103.68620833333343,
+   "v0": 98.49458333333342,
+   "dur": 4.791625,
+   "words": [
+    [
+     "There",
+     0.0,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.41
+    ],
+    [
+     "is!",
+     0.41,
+     0.85
+    ],
+    [
+     "The",
+     0.85,
+     0.99
+    ],
+    [
+     "tallest",
+     0.99,
+     1.53
+    ],
+    [
+     "tree.",
+     1.53,
+     1.99
+    ],
+    [
+     "And",
+     2.45,
+     2.57
+    ],
+    [
+     "the",
+     2.57,
+     2.63
+    ],
+    [
+     "golden",
+     2.63,
+     3.11
+    ],
+    [
+     "fruit,",
+     3.11,
+     3.61
+    ],
+    [
+     "at",
+     3.61,
+     3.76
+    ],
+    [
+     "the",
+     3.76,
+     3.84
+    ],
+    [
+     "very",
+     3.84,
+     4.23
+    ],
+    [
+     "top.",
+     4.23,
+     4.79
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the tree, tilt up",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "I will reach it with my trunk. Stretch!",
+   "t0": 103.68620833333343,
+   "t1": 106.2611250000001,
+   "v0": 103.80620833333343,
+   "dur": 2.0549166666666667,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.11
+    ],
+    [
+     "will",
+     0.11,
+     0.23
+    ],
+    [
+     "reach",
+     0.23,
+     0.54
+    ],
+    [
+     "it",
+     0.54,
+     0.64
+    ],
+    [
+     "with",
+     0.64,
+     0.76
+    ],
+    [
+     "my",
+     0.76,
+     0.93
+    ],
+    [
+     "trunk.",
+     0.93,
+     1.42
+    ],
+    [
+     "Stretch!",
+     1.42,
+     2.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "stretch",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "But the fruit is much too high.",
+   "t0": 106.2611250000001,
+   "t1": 108.55225000000011,
+   "v0": 106.38112500000011,
+   "dur": 1.771125,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.15
+    ],
+    [
+     "the",
+     0.15,
+     0.22
+    ],
+    [
+     "fruit",
+     0.22,
+     0.64
+    ],
+    [
+     "is",
+     0.64,
+     0.78
+    ],
+    [
+     "much",
+     0.78,
+     1.09
+    ],
+    [
+     "too",
+     1.09,
+     1.27
+    ],
+    [
+     "high.",
+     1.27,
+     1.77
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "too high",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "I can fly up here. But the fruit is too heavy for a little bird!",
+   "t0": 108.55225000000011,
+   "t1": 113.27941666666679,
+   "v0": 108.67225000000012,
+   "dur": 4.207166666666667,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.15
+    ],
+    [
+     "can",
+     0.15,
+     0.36
+    ],
+    [
+     "fly",
+     0.36,
+     0.79
+    ],
+    [
+     "up",
+     0.79,
+     0.99
+    ],
+    [
+     "here.",
+     0.99,
+     1.36
+    ],
+    [
+     "But",
+     1.72,
+     1.85
+    ],
+    [
+     "the",
+     1.85,
+     1.92
+    ],
+    [
+     "fruit",
+     1.92,
+     2.27
+    ],
+    [
+     "is",
+     2.27,
+     2.45
+    ],
+    [
+     "too",
+     2.45,
+     2.71
+    ],
+    [
+     "heavy",
+     2.71,
+     3.16
+    ],
+    [
+     "for",
+     3.16,
+     3.38
+    ],
+    [
+     "a",
+     3.38,
+     3.42
+    ],
+    [
+     "little",
+     3.42,
+     3.71
+    ],
+    [
+     "bird!",
+     3.71,
+     4.207
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo tries",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Hello down there! Do you need a hand? Or a tail?",
+   "t0": 113.27941666666679,
+   "t1": 116.51270833333346,
+   "v0": 113.3994166666668,
+   "dur": 2.7132916666666667,
+   "words": [
+    [
+     "Hello",
+     0.01,
+     0.31
+    ],
+    [
+     "down",
+     0.31,
+     0.59
+    ],
+    [
+     "there!",
+     0.59,
+     0.83
+    ],
+    [
+     "Do",
+     1.03,
+     1.09
+    ],
+    [
+     "you",
+     1.09,
+     1.17
+    ],
+    [
+     "need",
+     1.17,
+     1.32
+    ],
+    [
+     "a",
+     1.32,
+     1.35
+    ],
+    [
+     "hand?",
+     1.35,
+     1.88
+    ],
+    [
+     "Or",
+     2.04,
+     2.18
+    ],
+    [
+     "a",
+     2.18,
+     2.21
+    ],
+    [
+     "tail?",
+     2.21,
+     2.71
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango appears",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "It is Mango, the spider monkey! She hangs upside down by her tail.",
+   "t0": 116.51270833333346,
+   "t1": 122.15508333333348,
+   "v0": 116.63270833333347,
+   "dur": 5.122375,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.21
+    ],
+    [
+     "is",
+     0.21,
+     0.43
+    ],
+    [
+     "Mango,",
+     0.43,
+     1.18
+    ],
+    [
+     "the",
+     1.18,
+     1.26
+    ],
+    [
+     "spider",
+     1.26,
+     1.76
+    ],
+    [
+     "monkey!",
+     1.76,
+     2.34
+    ],
+    [
+     "She",
+     2.84,
+     2.98
+    ],
+    [
+     "hangs",
+     2.98,
+     3.39
+    ],
+    [
+     "upside",
+     3.39,
+     3.91
+    ],
+    [
+     "down",
+     3.91,
+     4.25
+    ],
+    [
+     "by",
+     4.25,
+     4.46
+    ],
+    [
+     "her",
+     4.46,
+     4.62
+    ],
+    [
+     "tail.",
+     4.62,
+     5.12
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango hangs",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "I know all about fruit. Fruit is what I eat the most!",
+   "t0": 122.15508333333348,
+   "t1": 125.49800000000016,
+   "v0": 122.27508333333348,
+   "dur": 2.8229166666666665,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.09
+    ],
+    [
+     "know",
+     0.09,
+     0.23
+    ],
+    [
+     "all",
+     0.23,
+     0.36
+    ],
+    [
+     "about",
+     0.36,
+     0.57
+    ],
+    [
+     "fruit.",
+     0.57,
+     1.0
+    ],
+    [
+     "Fruit",
+     1.3,
+     1.63
+    ],
+    [
+     "is",
+     1.63,
+     1.75
+    ],
+    [
+     "what",
+     1.75,
+     1.87
+    ],
+    [
+     "I",
+     1.87,
+     1.99
+    ],
+    [
+     "eat",
+     1.99,
+     2.21
+    ],
+    [
+     "the",
+     2.21,
+     2.29
+    ],
+    [
+     "most!",
+     2.29,
+     2.82
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango loves fruit",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "A spider monkey's tail can hold on, just like an extra hand.",
+   "t0": 125.49800000000016,
+   "t1": 130.44466666666685,
+   "v0": 125.61800000000017,
+   "dur": 4.426666666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.07
+    ],
+    [
+     "spider",
+     0.07,
+     0.64
+    ],
+    [
+     "monkey's",
+     0.64,
+     1.17
+    ],
+    [
+     "tail",
+     1.17,
+     1.57
+    ],
+    [
+     "can",
+     1.57,
+     1.73
+    ],
+    [
+     "hold",
+     1.73,
+     2.11
+    ],
+    [
+     "on,",
+     2.11,
+     2.47
+    ],
+    [
+     "just",
+     2.84,
+     3.11
+    ],
+    [
+     "like",
+     3.11,
+     3.29
+    ],
+    [
+     "an",
+     3.29,
+     3.37
+    ],
+    [
+     "extra",
+     3.37,
+     3.86
+    ],
+    [
+     "hand.",
+     3.86,
+     4.427
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: the tail",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Swing-a-ding! Here I go!",
+   "t0": 130.44466666666685,
+   "t1": 132.5118750000002,
+   "v0": 130.56466666666685,
+   "dur": 1.5472083333333333,
+   "words": [
+    [
+     "Swing-a-ding!",
+     0.0,
+     0.387
+    ],
+    [
+     "Here",
+     0.387,
+     0.774
+    ],
+    [
+     "I",
+     0.774,
+     1.16
+    ],
+    [
+     "go!",
+     1.16,
+     1.547
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango swings",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Mango holds the branch with her tail, and picks the fruit with both hands.",
+   "t0": 132.5118750000002,
+   "t1": 137.83383333333356,
+   "v0": 132.6318750000002,
+   "dur": 4.801958333333333,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.57
+    ],
+    [
+     "holds",
+     0.57,
+     1.02
+    ],
+    [
+     "the",
+     1.02,
+     1.12
+    ],
+    [
+     "branch",
+     1.12,
+     1.57
+    ],
+    [
+     "with",
+     1.57,
+     1.69
+    ],
+    [
+     "her",
+     1.69,
+     1.79
+    ],
+    [
+     "tail,",
+     1.79,
+     2.32
+    ],
+    [
+     "and",
+     2.71,
+     2.88
+    ],
+    [
+     "picks",
+     2.88,
+     3.23
+    ],
+    [
+     "the",
+     3.23,
+     3.32
+    ],
+    [
+     "fruit",
+     3.32,
+     3.64
+    ],
+    [
+     "with",
+     3.64,
+     3.82
+    ],
+    [
+     "both",
+     3.82,
+     4.17
+    ],
+    [
+     "hands.",
+     4.17,
+     4.8
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "picks the fruit",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "How many hands does Mango use? One, two. And one tail!",
+   "t0": 137.83383333333356,
+   "t1": 142.60245833333357,
+   "v0": 137.95383333333356,
+   "dur": 4.248625,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.14
+    ],
+    [
+     "many",
+     0.14,
+     0.33
+    ],
+    [
+     "hands",
+     0.33,
+     0.78
+    ],
+    [
+     "does",
+     0.78,
+     1.01
+    ],
+    [
+     "Mango",
+     1.01,
+     1.42
+    ],
+    [
+     "use?",
+     1.42,
+     1.96
+    ],
+    [
+     "One,",
+     2.35,
+     2.7
+    ],
+    [
+     "two.",
+     2.7,
+     3.18
+    ],
+    [
+     "And",
+     3.36,
+     3.51
+    ],
+    [
+     "one",
+     3.51,
+     3.74
+    ],
+    [
+     "tail!",
+     3.74,
+     4.249
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count the hands",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Here you go, Tumble. One golden fruit for your mama!",
+   "t0": 142.60245833333357,
+   "t1": 146.41875000000024,
+   "v0": 142.72245833333358,
+   "dur": 3.296291666666667,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.16
+    ],
+    [
+     "you",
+     0.16,
+     0.31
+    ],
+    [
+     "go,",
+     0.31,
+     0.69
+    ],
+    [
+     "Tumble.",
+     0.79,
+     1.25
+    ],
+    [
+     "One",
+     1.69,
+     1.93
+    ],
+    [
+     "golden",
+     1.93,
+     2.3
+    ],
+    [
+     "fruit",
+     2.3,
+     2.57
+    ],
+    [
+     "for",
+     2.57,
+     2.67
+    ],
+    [
+     "your",
+     2.67,
+     2.8
+    ],
+    [
+     "mama!",
+     2.8,
+     3.296
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the gift",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Thank you, Mango! Will you come to the party?",
+   "t0": 146.41875000000024,
+   "t1": 149.2543333333336,
+   "v0": 146.53875000000025,
+   "dur": 2.3155833333333335,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.29
+    ],
+    [
+     "you,",
+     0.29,
+     0.42
+    ],
+    [
+     "Mango!",
+     0.42,
+     0.93
+    ],
+    [
+     "Will",
+     0.93,
+     1.13
+    ],
+    [
+     "you",
+     1.13,
+     1.22
+    ],
+    [
+     "come",
+     1.22,
+     1.46
+    ],
+    [
+     "to",
+     1.46,
+     1.57
+    ],
+    [
+     "the",
+     1.57,
+     1.64
+    ],
+    [
+     "party?",
+     1.64,
+     2.31
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "thank you",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Yes, please! I love a party.",
+   "t0": 149.2543333333336,
+   "t1": 151.69100000000026,
+   "v0": 149.3743333333336,
+   "dur": 1.9166666666666667,
+   "words": [
+    [
+     "Yes,",
+     0.01,
+     0.26
+    ],
+    [
+     "please!",
+     0.26,
+     0.77
+    ],
+    [
+     "I",
+     1.04,
+     1.13
+    ],
+    [
+     "love",
+     1.13,
+     1.33
+    ],
+    [
+     "a",
+     1.33,
+     1.39
+    ],
+    [
+     "party.",
+     1.39,
+     1.917
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "yes please",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "The way home goes over a big, sandy hill.",
+   "t0": 151.69100000000026,
+   "t1": 154.8752083333336,
+   "v0": 151.81100000000026,
+   "dur": 2.6642083333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "way",
+     0.09,
+     0.29
+    ],
+    [
+     "home",
+     0.29,
+     0.62
+    ],
+    [
+     "goes",
+     0.62,
+     0.92
+    ],
+    [
+     "over",
+     0.92,
+     1.15
+    ],
+    [
+     "a",
+     1.15,
+     1.19
+    ],
+    [
+     "big,",
+     1.19,
+     1.76
+    ],
+    [
+     "sandy",
+     1.76,
+     2.25
+    ],
+    [
+     "hill.",
+     2.25,
+     2.66
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hill wide",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Step, sink. Step, sink. Tumble's heavy feet sink into the soft sand.",
+   "t0": 154.8752083333336,
+   "t1": 160.5183333333336,
+   "v0": 154.9952083333336,
+   "dur": 5.123125,
+   "words": [
+    [
+     "Step,",
+     0.01,
+     0.4
+    ],
+    [
+     "sink.",
+     0.4,
+     0.87
+    ],
+    [
+     "Step,",
+     1.12,
+     1.5
+    ],
+    [
+     "sink.",
+     1.5,
+     2.01
+    ],
+    [
+     "Tumble's",
+     2.36,
+     2.84
+    ],
+    [
+     "heavy",
+     2.84,
+     3.2
+    ],
+    [
+     "feet",
+     3.2,
+     3.53
+    ],
+    [
+     "sink",
+     3.53,
+     3.87
+    ],
+    [
+     "into",
+     3.87,
+     4.03
+    ],
+    [
+     "the",
+     4.03,
+     4.11
+    ],
+    [
+     "soft",
+     4.11,
+     4.57
+    ],
+    [
+     "sand.",
+     4.57,
+     5.12
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "feet sink",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Puff, puff. The fruit is so heavy, and the hill is so high.",
+   "t0": 160.5183333333336,
+   "t1": 164.1824583333336,
+   "v0": 160.6383333333336,
+   "dur": 3.144125,
+   "words": [
+    [
+     "Puff,",
+     0.0,
+     0.22
+    ],
+    [
+     "puff.",
+     0.22,
+     0.68
+    ],
+    [
+     "The",
+     0.68,
+     0.79
+    ],
+    [
+     "fruit",
+     0.79,
+     1.03
+    ],
+    [
+     "is",
+     1.03,
+     1.11
+    ],
+    [
+     "so",
+     1.11,
+     1.35
+    ],
+    [
+     "heavy,",
+     1.35,
+     1.79
+    ],
+    [
+     "and",
+     1.79,
+     1.93
+    ],
+    [
+     "the",
+     1.93,
+     1.99
+    ],
+    [
+     "hill",
+     1.99,
+     2.23
+    ],
+    [
+     "is",
+     2.23,
+     2.33
+    ],
+    [
+     "so",
+     2.33,
+     2.59
+    ],
+    [
+     "high.",
+     2.59,
+     3.14
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "so heavy",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "And look! The sun is going down.",
+   "t0": 164.1824583333336,
+   "t1": 166.85941666666696,
+   "v0": 164.30245833333362,
+   "dur": 2.1569583333333333,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.19
+    ],
+    [
+     "look!",
+     0.19,
+     0.59
+    ],
+    [
+     "The",
+     0.59,
+     0.79
+    ],
+    [
+     "sun",
+     0.79,
+     1.11
+    ],
+    [
+     "is",
+     1.11,
+     1.24
+    ],
+    [
+     "going",
+     1.24,
+     1.61
+    ],
+    [
+     "down.",
+     1.61,
+     2.157
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the sun goes down",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Hello, friends! I am Sandy. Sand is easy for me!",
+   "t0": 166.85941666666696,
+   "t1": 170.58045833333364,
+   "v0": 166.97941666666696,
+   "dur": 3.201041666666667,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.35
+    ],
+    [
+     "friends!",
+     0.35,
+     0.99
+    ],
+    [
+     "I",
+     0.99,
+     1.1
+    ],
+    [
+     "am",
+     1.1,
+     1.21
+    ],
+    [
+     "Sandy.",
+     1.21,
+     1.81
+    ],
+    [
+     "Sand",
+     2.0,
+     2.34
+    ],
+    [
+     "is",
+     2.34,
+     2.45
+    ],
+    [
+     "easy",
+     2.45,
+     2.77
+    ],
+    [
+     "for",
+     2.77,
+     2.92
+    ],
+    [
+     "me!",
+     2.92,
+     3.2
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy comes",
+   "who": "sandy",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A camel's wide feet spread out, so they do not sink in the sand.",
+   "t0": 170.58045833333364,
+   "t1": 175.3017500000003,
+   "v0": 170.70045833333364,
+   "dur": 4.201291666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.09
+    ],
+    [
+     "camel's",
+     0.09,
+     0.68
+    ],
+    [
+     "wide",
+     0.68,
+     1.09
+    ],
+    [
+     "feet",
+     1.09,
+     1.4
+    ],
+    [
+     "spread",
+     1.4,
+     1.73
+    ],
+    [
+     "out,",
+     1.73,
+     2.07
+    ],
+    [
+     "so",
+     2.4,
+     2.55
+    ],
+    [
+     "they",
+     2.55,
+     2.67
+    ],
+    [
+     "do",
+     2.67,
+     2.79
+    ],
+    [
+     "not",
+     2.79,
+     3.08
+    ],
+    [
+     "sink",
+     3.08,
+     3.46
+    ],
+    [
+     "in",
+     3.46,
+     3.57
+    ],
+    [
+     "the",
+     3.57,
+     3.63
+    ],
+    [
+     "sand.",
+     3.63,
+     4.2
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: wide feet",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Put the fruit on my back, Tumble. Step, step, step!",
+   "t0": 175.3017500000003,
+   "t1": 179.2357500000003,
+   "v0": 175.42175000000032,
+   "dur": 3.414,
+   "words": [
+    [
+     "Put",
+     0.01,
+     0.18
+    ],
+    [
+     "the",
+     0.18,
+     0.26
+    ],
+    [
+     "fruit",
+     0.26,
+     0.52
+    ],
+    [
+     "on",
+     0.52,
+     0.61
+    ],
+    [
+     "my",
+     0.61,
+     0.77
+    ],
+    [
+     "back,",
+     0.77,
+     1.15
+    ],
+    [
+     "Tumble.",
+     1.15,
+     1.7
+    ],
+    [
+     "Step,",
+     2.14,
+     2.55
+    ],
+    [
+     "step,",
+     2.55,
+     2.92
+    ],
+    [
+     "step!",
+     2.92,
+     3.41
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fruit on Sandy",
+   "who": "sandy",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Thank you, Sandy! You are a good friend.",
+   "t0": 179.2357500000003,
+   "t1": 181.70008333333365,
+   "v0": 179.3557500000003,
+   "dur": 1.9443333333333332,
+   "words": [
+    [
+     "Thank",
+     0.0,
+     0.22
+    ],
+    [
+     "you,",
+     0.22,
+     0.32
+    ],
+    [
+     "Sandy!",
+     0.32,
+     0.9
+    ],
+    [
+     "You",
+     0.9,
+     1.03
+    ],
+    [
+     "are",
+     1.03,
+     1.13
+    ],
+    [
+     "a",
+     1.13,
+     1.16
+    ],
+    [
+     "good",
+     1.16,
+     1.37
+    ],
+    [
+     "friend.",
+     1.37,
+     1.94
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "thank you Sandy",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Up the hill they go, all together.",
+   "t0": 181.70008333333365,
+   "t1": 184.540791666667,
+   "v0": 181.82008333333366,
+   "dur": 2.320708333333333,
+   "words": [
+    [
+     "Up",
+     0.04,
+     0.25
+    ],
+    [
+     "the",
+     0.25,
+     0.34
+    ],
+    [
+     "hill",
+     0.34,
+     0.66
+    ],
+    [
+     "they",
+     0.66,
+     0.82
+    ],
+    [
+     "go,",
+     0.82,
+     1.31
+    ],
+    [
+     "all",
+     1.49,
+     1.68
+    ],
+    [
+     "together.",
+     1.68,
+     2.32
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "up the hill",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "But at the top of the hill, bump!",
+   "t0": 184.540791666667,
+   "t1": 186.960166666667,
+   "v0": 184.660791666667,
+   "dur": 1.899375,
+   "words": [
+    [
+     "But",
+     0.06,
+     0.24
+    ],
+    [
+     "at",
+     0.24,
+     0.34
+    ],
+    [
+     "the",
+     0.34,
+     0.42
+    ],
+    [
+     "top",
+     0.42,
+     0.75
+    ],
+    [
+     "of",
+     0.75,
+     0.83
+    ],
+    [
+     "the",
+     0.83,
+     0.9
+    ],
+    [
+     "hill,",
+     0.9,
+     1.32
+    ],
+    [
+     "bump!",
+     1.32,
+     1.899
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "bump",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "The golden fruit rolls away. Down, down, down the hill.",
+   "t0": 186.960166666667,
+   "t1": 191.46675000000033,
+   "v0": 187.080166666667,
+   "dur": 3.9865833333333334,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "golden",
+     0.1,
+     0.6
+    ],
+    [
+     "fruit",
+     0.6,
+     0.96
+    ],
+    [
+     "rolls",
+     0.96,
+     1.29
+    ],
+    [
+     "away.",
+     1.29,
+     1.76
+    ],
+    [
+     "Down,",
+     2.14,
+     2.69
+    ],
+    [
+     "down,",
+     2.69,
+     3.24
+    ],
+    [
+     "down",
+     3.24,
+     3.44
+    ],
+    [
+     "the",
+     3.44,
+     3.5
+    ],
+    [
+     "hill.",
+     3.5,
+     3.987
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the fruit rolls",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Splat. The fruit is squashed.",
+   "t0": 191.46675000000033,
+   "t1": 193.79554166666702,
+   "v0": 191.58675000000034,
+   "dur": 1.8087916666666666,
+   "words": [
+    [
+     "Splat.",
+     0.06,
+     0.57
+    ],
+    [
+     "The",
+     0.57,
+     0.72
+    ],
+    [
+     "fruit",
+     0.72,
+     0.97
+    ],
+    [
+     "is",
+     0.97,
+     1.06
+    ],
+    [
+     "squashed.",
+     1.06,
+     1.809
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "splat",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Oh no. Now I have no present for Mama.",
+   "t0": 193.79554166666702,
+   "t1": 196.64262500000035,
+   "v0": 193.91554166666702,
+   "dur": 2.3270833333333334,
+   "words": [
+    [
+     "Oh",
+     0.01,
+     0.13
+    ],
+    [
+     "no.",
+     0.13,
+     0.61
+    ],
+    [
+     "Now",
+     0.61,
+     0.83
+    ],
+    [
+     "I",
+     0.83,
+     0.89
+    ],
+    [
+     "have",
+     0.89,
+     1.08
+    ],
+    [
+     "no",
+     1.08,
+     1.23
+    ],
+    [
+     "present",
+     1.23,
+     1.61
+    ],
+    [
+     "for",
+     1.61,
+     1.74
+    ],
+    [
+     "Mama.",
+     1.74,
+     2.327
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble is sad",
+   "who": "tumble",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Tumble feels very sad. His friends come close.",
+   "t0": 196.64262500000035,
+   "t1": 200.6718333333337,
+   "v0": 196.76262500000036,
+   "dur": 3.5092083333333335,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.39
+    ],
+    [
+     "feels",
+     0.39,
+     0.8
+    ],
+    [
+     "very",
+     0.8,
+     1.17
+    ],
+    [
+     "sad.",
+     1.17,
+     1.71
+    ],
+    [
+     "His",
+     2.03,
+     2.27
+    ],
+    [
+     "friends",
+     2.27,
+     2.65
+    ],
+    [
+     "come",
+     2.65,
+     2.91
+    ],
+    [
+     "close.",
+     2.91,
+     3.509
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "friends come close",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Tumble is sad. What could help him feel better?",
+   "t0": 200.6718333333337,
+   "t1": 206.33691666666704,
+   "v0": 200.7918333333337,
+   "dur": 2.9450833333333333,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.45
+    ],
+    [
+     "is",
+     0.45,
+     0.61
+    ],
+    [
+     "sad.",
+     0.61,
+     1.17
+    ],
+    [
+     "What",
+     1.5,
+     1.64
+    ],
+    [
+     "could",
+     1.64,
+     1.76
+    ],
+    [
+     "help",
+     1.76,
+     1.99
+    ],
+    [
+     "him",
+     1.99,
+     2.12
+    ],
+    [
+     "feel",
+     2.12,
+     2.43
+    ],
+    [
+     "better?",
+     2.43,
+     2.94
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: what could help",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "It is okay to feel sad, Tumble. We are here with you.",
+   "t0": 206.33691666666704,
+   "t1": 210.62829166666705,
+   "v0": 206.45691666666704,
+   "dur": 3.771375,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.39
+    ],
+    [
+     "okay",
+     0.39,
+     0.81
+    ],
+    [
+     "to",
+     0.81,
+     0.91
+    ],
+    [
+     "feel",
+     0.91,
+     1.18
+    ],
+    [
+     "sad,",
+     1.18,
+     1.81
+    ],
+    [
+     "Tumble.",
+     1.81,
+     2.34
+    ],
+    [
+     "We",
+     2.73,
+     2.87
+    ],
+    [
+     "are",
+     2.87,
+     2.94
+    ],
+    [
+     "here",
+     2.94,
+     3.24
+    ],
+    [
+     "with",
+     3.24,
+     3.44
+    ],
+    [
+     "you.",
+     3.44,
+     3.77
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "we are here",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Look, Tumble! There is something inside the fruit.",
+   "t0": 210.62829166666705,
+   "t1": 213.79270833333374,
+   "v0": 210.74829166666706,
+   "dur": 2.644416666666667,
+   "words": [
+    [
+     "Look,",
+     0.01,
+     0.27
+    ],
+    [
+     "Tumble!",
+     0.27,
+     0.77
+    ],
+    [
+     "There",
+     1.09,
+     1.24
+    ],
+    [
+     "is",
+     1.24,
+     1.31
+    ],
+    [
+     "something",
+     1.31,
+     1.69
+    ],
+    [
+     "inside",
+     1.69,
+     2.1
+    ],
+    [
+     "the",
+     2.1,
+     2.16
+    ],
+    [
+     "fruit.",
+     2.16,
+     2.64
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "something inside",
+   "who": "mango",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "It is a seed! A seed can grow into a new tree.",
+   "t0": 213.79270833333374,
+   "t1": 217.55220833333374,
+   "v0": 213.91270833333374,
+   "dur": 3.2395,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.17
+    ],
+    [
+     "is",
+     0.17,
+     0.33
+    ],
+    [
+     "a",
+     0.33,
+     0.38
+    ],
+    [
+     "seed!",
+     0.38,
+     0.97
+    ],
+    [
+     "A",
+     1.32,
+     1.37
+    ],
+    [
+     "seed",
+     1.37,
+     1.73
+    ],
+    [
+     "can",
+     1.73,
+     1.95
+    ],
+    [
+     "grow",
+     1.95,
+     2.25
+    ],
+    [
+     "into",
+     2.25,
+     2.49
+    ],
+    [
+     "a",
+     2.49,
+     2.53
+    ],
+    [
+     "new",
+     2.53,
+     2.75
+    ],
+    [
+     "tree.",
+     2.75,
+     3.24
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a seed",
+   "who": "sandy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "A tree with golden fruit, for Mama, every single year!",
+   "t0": 217.55220833333374,
+   "t1": 221.28783333333374,
+   "v0": 217.67220833333374,
+   "dur": 3.215625,
+   "words": [
+    [
+     "A",
+     0.0,
+     0.07
+    ],
+    [
+     "tree",
+     0.07,
+     0.33
+    ],
+    [
+     "with",
+     0.33,
+     0.49
+    ],
+    [
+     "golden",
+     0.49,
+     0.88
+    ],
+    [
+     "fruit,",
+     0.88,
+     1.25
+    ],
+    [
+     "for",
+     1.25,
+     1.45
+    ],
+    [
+     "Mama,",
+     1.45,
+     2.07
+    ],
+    [
+     "every",
+     2.07,
+     2.33
+    ],
+    [
+     "single",
+     2.33,
+     2.75
+    ],
+    [
+     "year!",
+     2.75,
+     3.216
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble's idea",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "What a wonderful idea, Tumble!",
+   "t0": 221.28783333333374,
+   "t1": 223.93895833333374,
+   "v0": 221.40783333333374,
+   "dur": 2.131125,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.15
+    ],
+    [
+     "a",
+     0.15,
+     0.19
+    ],
+    [
+     "wonderful",
+     0.19,
+     0.8
+    ],
+    [
+     "idea,",
+     0.8,
+     1.39
+    ],
+    [
+     "Tumble!",
+     1.58,
+     2.13
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "wonderful idea",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Tumble picks up the tiny seed with the tip of his trunk. So gently!",
+   "t0": 223.93895833333374,
+   "t1": 229.2565416666671,
+   "v0": 224.05895833333375,
+   "dur": 4.797583333333334,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.43
+    ],
+    [
+     "picks",
+     0.43,
+     0.75
+    ],
+    [
+     "up",
+     0.75,
+     0.92
+    ],
+    [
+     "the",
+     0.92,
+     1.01
+    ],
+    [
+     "tiny",
+     1.01,
+     1.59
+    ],
+    [
+     "seed",
+     1.59,
+     2.08
+    ],
+    [
+     "with",
+     2.08,
+     2.22
+    ],
+    [
+     "the",
+     2.22,
+     2.31
+    ],
+    [
+     "tip",
+     2.31,
+     2.6
+    ],
+    [
+     "of",
+     2.6,
+     2.67
+    ],
+    [
+     "his",
+     2.67,
+     2.86
+    ],
+    [
+     "trunk.",
+     2.86,
+     3.37
+    ],
+    [
+     "So",
+     3.82,
+     4.1
+    ],
+    [
+     "gently!",
+     4.1,
+     4.798
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "picks up the seed",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Friends help friends, come along with me! Home we go, as happy as can be!",
+   "t0": 229.2565416666671,
+   "t1": 238.2654166666671,
+   "v0": 229.3765416666671,
+   "dur": 8.888875,
+   "words": [
+    [
+     "Friends",
+     0.0,
+     0.511
+    ],
+    [
+     "help",
+     0.556,
+     1.067
+    ],
+    [
+     "friends,",
+     1.111,
+     1.622
+    ],
+    [
+     "come",
+     1.667,
+     1.922
+    ],
+    [
+     "along",
+     1.944,
+     2.456
+    ],
+    [
+     "with",
+     2.5,
+     2.756
+    ],
+    [
+     "me!",
+     2.778,
+     3.8
+    ],
+    [
+     "Home",
+     4.444,
+     4.956
+    ],
+    [
+     "we",
+     5.0,
+     5.511
+    ],
+    [
+     "go,",
+     5.556,
+     6.067
+    ],
+    [
+     "as",
+     6.111,
+     6.367
+    ],
+    [
+     "happy",
+     6.389,
+     6.644
+    ],
+    [
+     "as",
+     6.667,
+     6.922
+    ],
+    [
+     "can",
+     6.944,
+     7.2
+    ],
+    [
+     "be!",
+     7.222,
+     8.244
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: home we go",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Back at the zoo, the sun is low and golden.",
+   "t0": 238.2654166666671,
+   "t1": 241.8817916666671,
+   "v0": 238.3854166666671,
+   "dur": 3.096375,
+   "words": [
+    [
+     "Back",
+     0.0,
+     0.36
+    ],
+    [
+     "at",
+     0.36,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.5
+    ],
+    [
+     "zoo,",
+     0.5,
+     0.96
+    ],
+    [
+     "the",
+     1.18,
+     1.27
+    ],
+    [
+     "sun",
+     1.27,
+     1.59
+    ],
+    [
+     "is",
+     1.59,
+     1.77
+    ],
+    [
+     "low",
+     1.77,
+     2.25
+    ],
+    [
+     "and",
+     2.25,
+     2.45
+    ],
+    [
+     "golden.",
+     2.45,
+     3.096
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "zoo at sunset",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Tumble digs a little hole.",
+   "t0": 241.8817916666671,
+   "t1": 244.14829166666712,
+   "v0": 242.00179166666712,
+   "dur": 1.7465,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.43
+    ],
+    [
+     "digs",
+     0.43,
+     0.94
+    ],
+    [
+     "a",
+     0.94,
+     0.99
+    ],
+    [
+     "little",
+     0.99,
+     1.2
+    ],
+    [
+     "hole.",
+     1.2,
+     1.746
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "digs a hole",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mango drops in the seed. Sandy pats the sand.",
+   "t0": 244.14829166666712,
+   "t1": 248.2959583333338,
+   "v0": 244.26829166666712,
+   "dur": 3.627666666666667,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.47
+    ],
+    [
+     "drops",
+     0.47,
+     0.91
+    ],
+    [
+     "in",
+     0.91,
+     1.01
+    ],
+    [
+     "the",
+     1.01,
+     1.08
+    ],
+    [
+     "seed.",
+     1.08,
+     1.67
+    ],
+    [
+     "Sandy",
+     2.04,
+     2.48
+    ],
+    [
+     "pats",
+     2.48,
+     2.95
+    ],
+    [
+     "the",
+     2.95,
+     3.04
+    ],
+    [
+     "sand.",
+     3.04,
+     3.628
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the seed goes in",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "And Tumble sprays it with water. Whoosh!",
+   "t0": 248.2959583333338,
+   "t1": 251.58495833333382,
+   "v0": 248.4159583333338,
+   "dur": 2.769,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.21
+    ],
+    [
+     "Tumble",
+     0.21,
+     0.54
+    ],
+    [
+     "sprays",
+     0.54,
+     1.02
+    ],
+    [
+     "it",
+     1.02,
+     1.13
+    ],
+    [
+     "with",
+     1.13,
+     1.29
+    ],
+    [
+     "water.",
+     1.29,
+     1.83
+    ],
+    [
+     "Whoosh!",
+     2.2,
+     2.769
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "sprays water",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Tumble! What are you making?",
+   "t0": 251.58495833333382,
+   "t1": 253.93529166666715,
+   "v0": 251.70495833333382,
+   "dur": 1.8303333333333334,
+   "words": [
+    [
+     "Tumble!",
+     0.06,
+     0.6
+    ],
+    [
+     "What",
+     0.6,
+     0.87
+    ],
+    [
+     "are",
+     0.87,
+     0.9
+    ],
+    [
+     "you",
+     0.9,
+     1.07
+    ],
+    [
+     "making?",
+     1.07,
+     1.83
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama comes",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Happy birthday, Mama! It is a fruit tree. It will grow and grow, just for you.",
+   "t0": 253.93529166666715,
+   "t1": 259.4466250000005,
+   "v0": 254.05529166666716,
+   "dur": 4.991333333333333,
+   "words": [
+    [
+     "Happy",
+     0.01,
+     0.29
+    ],
+    [
+     "birthday,",
+     0.29,
+     0.75
+    ],
+    [
+     "Mama!",
+     0.75,
+     1.32
+    ],
+    [
+     "It",
+     1.32,
+     1.4
+    ],
+    [
+     "is",
+     1.4,
+     1.68
+    ],
+    [
+     "a",
+     1.68,
+     1.71
+    ],
+    [
+     "fruit",
+     1.71,
+     2.06
+    ],
+    [
+     "tree.",
+     2.06,
+     2.77
+    ],
+    [
+     "It",
+     2.77,
+     2.88
+    ],
+    [
+     "will",
+     2.88,
+     3.04
+    ],
+    [
+     "grow",
+     3.04,
+     3.57
+    ],
+    [
+     "and",
+     3.57,
+     3.73
+    ],
+    [
+     "grow,",
+     3.73,
+     4.14
+    ],
+    [
+     "just",
+     4.14,
+     4.48
+    ],
+    [
+     "for",
+     4.48,
+     4.6
+    ],
+    [
+     "you.",
+     4.6,
+     4.99
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "happy birthday",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Happy birthday, Mama Elephant!",
+   "t0": 259.4466250000005,
+   "t1": 261.88129166666715,
+   "v0": 259.5666250000005,
+   "dur": 1.9146666666666667,
+   "words": [
+    [
+     "Happy",
+     0.01,
+     0.28
+    ],
+    [
+     "birthday,",
+     0.28,
+     0.83
+    ],
+    [
+     "Mama",
+     1.03,
+     1.35
+    ],
+    [
+     "Elephant!",
+     1.35,
+     1.91
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "friends cheer",
+   "who": "mango",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Oh, Tumble. This is the best present of all.",
+   "t0": 261.88129166666715,
+   "t1": 265.4536666666671,
+   "v0": 262.00129166666716,
+   "dur": 3.052375,
+   "words": [
+    [
+     "Oh,",
+     0.2,
+     0.35
+    ],
+    [
+     "Tumble.",
+     0.35,
+     0.9
+    ],
+    [
+     "This",
+     0.9,
+     1.39
+    ],
+    [
+     "is",
+     1.39,
+     1.55
+    ],
+    [
+     "the",
+     1.55,
+     1.65
+    ],
+    [
+     "best",
+     1.65,
+     2.06
+    ],
+    [
+     "present",
+     2.06,
+     2.53
+    ],
+    [
+     "of",
+     2.53,
+     2.63
+    ],
+    [
+     "all.",
+     2.63,
+     3.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the best present",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mama wraps her trunk around Tumble. A big, warm trunk hug.",
+   "t0": 265.4536666666671,
+   "t1": 270.5986666666671,
+   "v0": 265.5736666666671,
+   "dur": 4.625,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.44
+    ],
+    [
+     "wraps",
+     0.44,
+     0.81
+    ],
+    [
+     "her",
+     0.81,
+     0.89
+    ],
+    [
+     "trunk",
+     0.89,
+     1.32
+    ],
+    [
+     "around",
+     1.32,
+     1.62
+    ],
+    [
+     "Tumble.",
+     1.62,
+     2.14
+    ],
+    [
+     "A",
+     2.64,
+     2.72
+    ],
+    [
+     "big,",
+     2.72,
+     3.3
+    ],
+    [
+     "warm",
+     3.3,
+     3.76
+    ],
+    [
+     "trunk",
+     3.76,
+     4.14
+    ],
+    [
+     "hug.",
+     4.14,
+     4.62
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "trunk hug",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "I love you, Mama.",
+   "t0": 270.5986666666671,
+   "t1": 272.17966666666706,
+   "v0": 270.7186666666671,
+   "dur": 1.061,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.12
+    ],
+    [
+     "love",
+     0.12,
+     0.39
+    ],
+    [
+     "you,",
+     0.39,
+     0.51
+    ],
+    [
+     "Mama.",
+     0.51,
+     1.06
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I love you",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "I love you too, my little Tumble.",
+   "t0": 272.17966666666706,
+   "t1": 275.1587500000004,
+   "v0": 272.29966666666706,
+   "dur": 2.4590833333333335,
+   "words": [
+    [
+     "I",
+     0.02,
+     0.24
+    ],
+    [
+     "love",
+     0.24,
+     0.56
+    ],
+    [
+     "you",
+     0.56,
+     0.73
+    ],
+    [
+     "too,",
+     0.73,
+     1.16
+    ],
+    [
+     "my",
+     1.16,
+     1.43
+    ],
+    [
+     "little",
+     1.43,
+     1.72
+    ],
+    [
+     "Tumble.",
+     1.72,
+     2.459
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I love you too",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "One day, this little tree will be as tall as Mama.",
+   "t0": 275.1587500000004,
+   "t1": 278.70329166666704,
+   "v0": 275.2787500000004,
+   "dur": 3.0245416666666665,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.29
+    ],
+    [
+     "day,",
+     0.29,
+     0.65
+    ],
+    [
+     "this",
+     0.65,
+     1.02
+    ],
+    [
+     "little",
+     1.02,
+     1.22
+    ],
+    [
+     "tree",
+     1.22,
+     1.52
+    ],
+    [
+     "will",
+     1.52,
+     1.65
+    ],
+    [
+     "be",
+     1.65,
+     1.81
+    ],
+    [
+     "as",
+     1.81,
+     1.95
+    ],
+    [
+     "tall",
+     1.95,
+     2.37
+    ],
+    [
+     "as",
+     2.37,
+     2.53
+    ],
+    [
+     "Mama.",
+     2.53,
+     3.02
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the little tree",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "A present made with friends is the best present of all.",
+   "t0": 278.70329166666704,
+   "t1": 282.8805000000004,
+   "v0": 278.82329166666705,
+   "dur": 3.657208333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.11
+    ],
+    [
+     "present",
+     0.11,
+     0.62
+    ],
+    [
+     "made",
+     0.62,
+     0.86
+    ],
+    [
+     "with",
+     0.86,
+     1.03
+    ],
+    [
+     "friends",
+     1.03,
+     1.67
+    ],
+    [
+     "is",
+     1.95,
+     2.14
+    ],
+    [
+     "the",
+     2.14,
+     2.24
+    ],
+    [
+     "best",
+     2.24,
+     2.74
+    ],
+    [
+     "present",
+     2.74,
+     3.19
+    ],
+    [
+     "of",
+     3.19,
+     3.29
+    ],
+    [
+     "all.",
+     3.29,
+     3.657
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Do you remember? Who used a trunk like a snorkel? Tumble, or Mango?",
+   "t0": 282.8805000000004,
+   "t1": 291.231291666667,
+   "v0": 283.0005000000004,
+   "dur": 4.630791666666667,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.22
+    ],
+    [
+     "remember?",
+     0.22,
+     0.81
+    ],
+    [
+     "Who",
+     0.98,
+     1.06
+    ],
+    [
+     "used",
+     1.06,
+     1.35
+    ],
+    [
+     "a",
+     1.35,
+     1.39
+    ],
+    [
+     "trunk",
+     1.39,
+     1.78
+    ],
+    [
+     "like",
+     1.78,
+     1.97
+    ],
+    [
+     "a",
+     1.97,
+     2.0
+    ],
+    [
+     "snorkel?",
+     2.0,
+     2.74
+    ],
+    [
+     "Tumble,",
+     3.13,
+     3.76
+    ],
+    [
+     "or",
+     3.76,
+     3.99
+    ],
+    [
+     "Mango?",
+     3.99,
+     4.63
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: who",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Friends help friends, hooray, hooray! What a big adventure day!",
+   "t0": 291.231291666667,
+   "t1": 300.240166666667,
+   "v0": 291.351291666667,
+   "dur": 8.888875,
+   "words": [
+    [
+     "Friends",
+     0.0,
+     0.511
+    ],
+    [
+     "help",
+     0.556,
+     1.067
+    ],
+    [
+     "friends,",
+     1.111,
+     1.622
+    ],
+    [
+     "hooray,",
+     1.667,
+     2.178
+    ],
+    [
+     "hooray!",
+     2.222,
+     3.244
+    ],
+    [
+     "What",
+     4.444,
+     4.956
+    ],
+    [
+     "a",
+     5.0,
+     5.256
+    ],
+    [
+     "big",
+     5.278,
+     5.533
+    ],
+    [
+     "adventure",
+     5.556,
+     6.322
+    ],
+    [
+     "day!",
+     6.389,
+     7.667
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: adventure day",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "See you on the next adventure, friends!",
+   "t0": 300.240166666667,
+   "t1": 303.15120833333367,
+   "v0": 300.360166666667,
+   "dur": 2.3910416666666667,
+   "words": [
+    [
+     "See",
+     0.01,
+     0.28
+    ],
+    [
+     "you",
+     0.28,
+     0.47
+    ],
+    [
+     "on",
+     0.47,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.7
+    ],
+    [
+     "next",
+     0.7,
+     1.05
+    ],
+    [
+     "adventure,",
+     1.05,
+     1.75
+    ],
+    [
+     "friends!",
+     1.75,
+     2.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  }
+ ]
+}

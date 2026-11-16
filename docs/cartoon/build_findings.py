@@ -111,6 +111,16 @@ figure {{ margin:0; display:flex; flex-direction:column; gap:6px }} figcaption {
 <li><b>Change the picture every 4 to 6 seconds, never longer than 8.</b><span>A new place, a camera move, a close-up, a cutaway, a diagram, a comparison or an on-screen word. At least 6 places per explainer; a change every 2 to 3 seconds in a Short. The pace check rejects any stretch over 8 seconds.</span></li>
 <li><b>Show the fact, not the speaker.</b><span>Every fact line gets its own picture of exactly that thing, in sync with the words. (At 4:03 of Animal Champions the spots are spoken and never shown.)</span></li>
 </ol></section>
+
+<section><h2>How the five rules read in each pillar</h2>
+<p>Added the same day, after the channel grew to three pillars: music, stories and adventures, animal facts.</p>
+<div class="tw"><table><thead><tr><th>Rule</th><th>Music (3D)</th><th>Stories and adventures (cartoon)</th><th>Animal facts (cartoon)</th></tr></thead><tbody>
+<tr><td>1. Open on what the child wants to know</td><td>The first line of the song is the character's wish.</td><td>The problem and the feeling in the first 5 seconds ("Tumble has no present!").</td><td>The question in the first 5 seconds, the animal on screen.</td></tr>
+<tr><td>2. One true surprise</td><td>One fact in the chorus is enough.</td><td>2 or 3 true facts, and each one solves a problem in the plot.</td><td>One fact carries the lesson and the title says it.</td></tr>
+<tr><td>3. A baby, a mama or a friend, and a feeling</td><td>One character, one feeling, a small journey.</td><td>A goal, three obstacles, a low moment, an answer the friends find, a warm ending.</td><td>A baby animal goes to find out with Milo.</td></tr>
+<tr><td>4. Keep the picture changing</td><td>Already does: a change every 1.1 s in the winner.</td><td>Something new every 4 to 6 seconds, at least 6 places.</td><td>Something new every 4 to 6 seconds, at least 6 places; every 2 to 3 seconds in a Short.</td></tr>
+<tr><td>5. Show it</td><td>The pictures follow the words of the song.</td><td>Faces act the feeling; each fact gets a picture board.</td><td>Every fact line has its own picture.</td></tr>
+</tbody></table></div></section>
 <p class="src">Not measured: per-second retention curves (Studio shows them as a chart only), and anything about viewers' ages. Data files: docs/analysis in the repo. Pace check: studio/cartoon/pace_check.py.</p>
 </main>
 <script>

@@ -19,7 +19,7 @@ import numpy as np, soundfile as sf
 
 HERE = os.path.dirname(os.path.abspath(__file__)); STUDIO = os.path.dirname(HERE); REPO = os.path.dirname(STUDIO)
 sys.path.insert(0, HERE); sys.path.insert(0, os.path.join(STUDIO, "sing")); sys.path.insert(0, os.path.join(STUDIO, "zoo3d"))
-import art
+import art, art2
 SR = 24000; FPS = 24
 CHROME = "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
 GAP = 0.32          # silence between two lines
@@ -30,9 +30,14 @@ MAXGAP = 6.0        # plan gate: no stretch without a visual change longer than 
 def arg(k, d=None): return sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
 
 
-def shot(place, cam, say="", fx=(), pcam=None, cam2=None, pcam2=None, trans="cut", pause=0.0, who="milo", props=(), part=0, actors=None, q=False, hide=(), fly=None, tag="", speak=None):
+def shot(place, cam, say="", fx=(), pcam=None, cam2=None, pcam2=None, trans="cut", pause=0.0, who="milo", props=(), part=0, actors=None, q=False, hide=(), fly=None, tag="", speak=None,
+         beat="", sing=None, move=None):
+    """who: the one who speaks the line (their voice from EP["cast"], their mouth moves when they are in the picture).
+    beat: the story beat this shot belongs to (hook, goal, obstacle1..3, low, solution, ending, fact, song) - the story gate counts them.
+    sing: a sung line instead of a spoken one: {"lines": [{"text", "notes"}], "bpm", "chords", ...} (sing.py); the caption follows the sung words.
+    move: {actor: (x, y, scale[, flip])} - where an actor of the stage stands in this shot."""
     return dict(place=place, cam=cam, say=say, fx=list(fx), pcam=pcam, cam2=cam2, pcam2=pcam2, trans=trans, pause=pause, who=who, props=list(props), part=part,
-                actors=actors, q=q, hide=list(hide), fly=fly, tag=tag, speak=speak)
+                actors=actors, q=q, hide=list(hide), fly=fly, tag=tag, speak=speak, beat=beat, sing=sing, move=move or {})
 
 
 # ------------------------------------------------------------------ sound
@@ -71,14 +76,44 @@ def music(total, bpm=96):
 
 
 # ------------------------------------------------------------------ voice + timing
+def shift(a, semis=0.0, formant=1.0):
+    """A character's own voice from one of the engine's voices: the pitch moved by semitones, the mouth made smaller (formant > 1) or bigger. Same length."""
+    if not semis and formant == 1.0: return a
+    import sing, pyworld as pw
+    h = hashlib.md5(a.tobytes() + f"{semis}|{formant}".encode()).hexdigest()[:16]; f = os.path.join(sing.CACHE, f"sh_{h}.npy")
+    if os.path.exists(f): return np.load(f)
+    x = a.astype(np.float64); f0, t = pw.harvest(x, SR, f0_floor=70, f0_ceil=700, frame_period=5.0); sp = pw.cheaptrick(x, f0, t, SR); ap = pw.d4c(x, f0, t, SR)
+    if formant != 1.0:
+        fr = np.arange(sp.shape[1]); src = np.clip(fr / formant, 0, sp.shape[1] - 1); sp = np.array([np.interp(src, fr, row) for row in sp])
+    y = pw.synthesize(f0 * 2 ** (semis / 12), np.ascontiguousarray(sp), np.ascontiguousarray(ap), SR, frame_period=5.0)[:len(a)].astype(np.float32)
+    y *= float(np.sqrt(np.mean(a ** 2)) / (np.sqrt(np.mean(y ** 2)) + 1e-9)); np.save(f, y); return y
+
+
+def sung(ep, s):
+    """A sung line (sing.py): the vocal with its own little band; returns (mix, vocal, words)."""
+    import sing
+    sp = dict(s["sing"]); lines = sp.pop("lines"); c = ep.get("cast", {}).get(s["who"], {})
+    spec = {"bpm": sp.get("bpm", 108), "voice": sp.get("voice", c.get("voice", ep.get("voice", "af_heart"))), "formant": sp.get("formant", 1.1), "chords": sp.get("chords", "C G Am F"),
+            "style": sp.get("style", "pop"), "intro_bars": 0, "outro_bars": sp.get("outro_bars", 1), "parts": [{"section": "refrain", "who": "host", "group": sp.get("group", True), "lines": lines}]}
+    h = hashlib.md5(json.dumps(spec, sort_keys=True).encode()).hexdigest()[:12]; d = os.path.join(sing.CACHE, "refrain_" + h)
+    if not os.path.exists(os.path.join(d, "timing.json")): sing.build(spec, d)
+    tm = json.load(open(os.path.join(d, "timing.json"))); mix, _ = sf.read(os.path.join(d, "song.wav")); voc, _ = sf.read(os.path.join(d, "vocal.wav"))
+    return mix.astype(np.float32), voc.astype(np.float32), [(w["w"], round(w["start"], 3), round(w["end"], 3)) for w in tm["words"]]
+
+
 def voice_lines(ep, shots):
     import sing, wordsync
-    v = ep.get("voice", "af_heart"); sp = ep.get("speed", 0.9); t = ep.get("lead_in", 0.4); miss = 0; tot = 0; GAP_ = ep.get("gap", GAP)
+    v0_ = ep.get("voice", "af_heart"); sp0 = ep.get("speed", 0.9); t = ep.get("lead_in", 0.4); miss = 0; tot = 0; GAP_ = ep.get("gap", GAP); cast = ep.get("cast", {})
     for s in shots:
-        s["t0"] = t
+        s["t0"] = t; s["sung"] = False
+        if s.get("sing"):
+            mix, voc, words = sung(ep, s); s["say"] = " ".join(w[0] for w in words); s["audio"] = mix * .9; s["dur"] = len(mix) / SR; s["words"] = words; s["sung"] = True
+            hop = SR // 12; env = np.array([np.sqrt(np.mean(voc[i:i + hop] ** 2)) for i in range(0, len(voc) - hop, hop)]); env = np.clip(env / (np.percentile(env, 92) + 1e-6), 0, 1)
+            s["env"] = [round(float(x), 2) for x in env]; s["v0"] = t + LEAD; t = s["v0"] + s["dur"] + s["pause"]; s["t1"] = t; continue
         if s["say"]:
-            spoken = s.get("speak") or s["say"]
+            spoken = s.get("speak") or s["say"]; c = cast.get(s["who"], {}); v = c.get("voice", v0_); sp = c.get("speed", sp0)
             a = sing.say(spoken, v, sp).astype(np.float32); al, got, n = wordsync.align(a, spoken); miss += n - got; tot += n
+            a = shift(a, c.get("pitch", 0), c.get("formant", 1.0))
             toks = s["say"].split()
             if len(al) != len(toks):        # "speak" differs from the caption text: spread the times over the caption's words
                 d = len(a) / SR; al = [(d * k / len(toks), d * (k + 1) / len(toks)) for k in range(len(toks))]
@@ -139,7 +174,12 @@ class Film:
     def __init__(self, ep, stages, shots, portrait=False):
         self.ep, self.stages, self.shots, self.portrait = ep, stages, shots, portrait
         self.VW, self.VH = (1080, 1920) if portrait else (1920, 1080)
-        self.js = []; self.hud = []; self.events = []; self.snd = []; self.uid = 0; self.rnd = random.Random(7)
+        self.js = []; self.hud = []; self.events = []; self.snd = []; self.uid = 0; self.rnd = random.Random(7); self.kinds = {}
+
+    CAMEL_RIG = {"neck": "190 -330", "tail": "-232 -340", "ear": "284 -640", "legs": {"fl": 160, "bl": -138, "fl2": 118, "bl2": -178}, "hip": -262, "jaw": ("rot", 9, "372 -560"), "eyes": ["eye"], "brows": []}
+
+    def rig(self, pid):
+        k = self.kinds.get(pid, "camel"); return art2.RIGS.get(k, self.CAMEL_RIG)
 
     # camera: a landscape rect is (cx, cy, w); a portrait rect is (cx, cy, h)
     def cam_t(self, r):
@@ -152,11 +192,16 @@ class Film:
 
     def actor_svg(self, i, a):
         aid, kind, x, y, sc = a[:5]; flip = len(a) > 5 and a[5]; pid = f"s{i}_{aid}"
+        self.kinds[pid] = kind
         if kind == "milo": inner = art.milo(pid)
         elif kind == "calf": inner = art.camel(pid, 0, calf=True)
         elif kind == "camel": inner = art.camel(pid, 1)
         elif kind == "bactrian": inner = art.camel(pid, 2, c=art.CAMEL_B, wool=True)
+        elif kind in art2.RIGS: inner = art2.RIGS[kind]["build"](pid)
         else: raise KeyError(kind)
+        if self.ep.get("kind") == "story":      # the part the engine moves carries a plain translate; the size and the mirror sit inside it.
+            # (GSAP's x and y on a scaled SVG group are measured from the group's bounding box, so a tween to x = 300 on "translate(250 500) scale(.78)" stops at 257.)
+            return f'<g id="{pid}_w" transform="translate({x} {y})"><g transform="scale({-sc if flip else sc} {sc})">{inner}</g></g>'
         return f'<g id="{pid}_w" transform="translate({x} {y}) scale({-sc if flip else sc} {sc})">{inner}</g>'
 
     def idle(self, i, a, s, fly):
@@ -173,6 +218,21 @@ class Film:
                 js.append(f'tl.fromTo("#{p}-wr",{{rotation:8,svgOrigin:"96 -182"}},{{rotation:-46,duration:.11,yoyo:true,repeat:{m},ease:"sine.inOut"}},{t0:.2f});')
             js.append(f'tl.to("#{p}-scarf",{{rotation:9,svgOrigin:"48 -50",duration:.6,yoyo:true,repeat:{max(1, int(d / .6) | 1)},ease:"sine.inOut"}},{t0:.2f});')
             eyes = [f"{p}-eyeL", f"{p}-eyeR"]
+        elif kind in art2.RIGS:
+            R = art2.RIGS[kind]; busy = busy or any(f[0] in ("face",) and f[2] == aid and False for f in s["fx"])
+            js.append(f'tl.to("#{p}",{{scaleY:1.014,svgOrigin:"0 0",duration:.8,yoyo:true,repeat:{max(1, int(d / .8) | 1)},ease:"sine.inOut"}},{t0:.2f});')
+            if R.get("tail"): js.append(f'tl.fromTo("#{p}-tail",{{rotation:-6,svgOrigin:"{R["tail"]}"}},{{rotation:8,duration:.7,yoyo:true,repeat:{max(1, int(d / .7) | 1)},ease:"sine.inOut"}},{t0:.2f});')
+            if R.get("ear") and not any(f[0] == "face" and f[2] == aid for f in s["fx"]):
+                tt = t0 + r.uniform(.5, 1.4)
+                while tt < s["t1"] - .5: js.append(f'tl.to("#{p}-ear",{{rotation:-9,svgOrigin:"{R["ear"]}",duration:.14,yoyo:true,repeat:3}},{tt:.2f});'); tt += r.uniform(2.0, 3.6)
+            if R.get("neck") and not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.2,svgOrigin:"{R["neck"]}"}},{{rotation:1.8,duration:1.2,yoyo:true,repeat:{max(1, int(d / 1.2) | 1)},ease:"sine.inOut"}},{t0:.2f});')
+            if kind == "monkey_hang": js.append(f'tl.fromTo("#{p}-swing",{{rotation:-5,svgOrigin:"0 0"}},{{rotation:5,duration:1.0,yoyo:true,repeat:{max(1, int(d / 1.0) | 1)},ease:"sine.inOut"}},{t0:.2f});')
+            eyes = [f"{p}-{e}" for e in R["eyes"]]
+            tb = t0 + r.uniform(.5, 1.8)
+            while tb < s["t1"] - .3:
+                for e in eyes: js.append(f'tl.set("#{e}-lid",{{opacity:1}},{tb:.2f});tl.set("#{e}-lid",{{opacity:0}},{tb + .13:.2f});')
+                tb += r.uniform(1.9, 3.6)
+            return "".join(js)
         else:
             js.append(f'tl.to("#{p}",{{scaleY:1.012,svgOrigin:"0 0",duration:.9,yoyo:true,repeat:{max(1, int(d / .9) | 1)},ease:"sine.inOut"}},{t0:.2f});')
             js.append(f'tl.fromTo("#{p}-tail",{{rotation:-7,svgOrigin:"-232 -340"}},{{rotation:9,duration:.7,yoyo:true,repeat:{max(1, int(d / .7) | 1)},ease:"sine.inOut"}},{t0:.2f});')
@@ -189,7 +249,15 @@ class Film:
 
     def talk(self, i, s, who):
         if not s["env"]: return ""
-        p = f"s{i}_{who}"; js = []; v0 = s["v0"]; last = -1
+        p = f"s{i}_{who}"; js = []; v0 = s["v0"]; last = -1; kind = self.kinds.get(p, "milo")
+        if kind != "milo":          # the jaw drops with the voice (hidden when the mouth is shut)
+            R = self.rig(p); jw = R["jaw"]
+            for k, e in enumerate(s["env"]):
+                o = 0 if e < .12 else round(.35 + e * .65, 2)
+                if o != last:
+                    js.append(f'tl.set("#{p}-jaw",{{rotation:{o * jw[1]:.1f},svgOrigin:"{jw[2]}"}},{v0 + k / 12:.3f});' if jw[0] == "rot" else f'tl.set("#{p}-jaw",{{opacity:{1 if o else 0},y:{o * jw[1]:.1f}}},{v0 + k / 12:.3f});'); last = o
+            js.append(f'tl.set("#{p}-jaw",{{rotation:0,svgOrigin:"{jw[2]}"}},{v0 + s["dur"] + .02:.3f});' if jw[0] == "rot" else f'tl.set("#{p}-jaw",{{opacity:0,y:0}},{v0 + s["dur"] + .02:.3f});')
+            return "".join(js)
         for k, e in enumerate(s["env"]):
             o = 0 if e < .12 else round(6 + e * 22)
             if o != last: js.append(f'tl.set("#{p}-beak",{{y:{o}}},{v0 + k / 12:.3f});'); last = o
@@ -259,9 +327,9 @@ class Film:
             t = when(s, f[1]); n = f[3] if len(f) > 3 else 1
             self.add(f'tl.to("#{P(f[2])}",{{y:"-=70",duration:.2,yoyo:true,repeat:{2 * n - 1},ease:"power2.out"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} hops"); self.snd.append((t, "boing"))
         elif k == "nod":
-            t = when(s, f[1]); self.add(f'tl.to("#{P(f[2])}-neck",{{rotation:14,svgOrigin:"190 -330",duration:.22,yoyo:true,repeat:3,ease:"sine.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} nods")
+            t = when(s, f[1]); self.add(f'tl.to("#{P(f[2])}-neck",{{rotation:{14 if self.kinds.get(P(f[2]), "camel") not in art2.RIGS else 9},svgOrigin:"{self.rig(P(f[2]))["neck"]}",duration:.22,yoyo:true,repeat:3,ease:"sine.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} nods")
         elif k == "lookat":         # a camel turns its head: up (-) or down (+) degrees, and holds
-            t = when(s, f[1]); self.add(f'tl.to("#{P(f[2])}-neck",{{rotation:{f[3]},svgOrigin:"190 -330",duration:.5,ease:"power2.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} looks")
+            t = when(s, f[1]); self.add(f'tl.to("#{P(f[2])}-neck",{{rotation:{f[3]},svgOrigin:"{self.rig(P(f[2]))["neck"]}",duration:.5,ease:"power2.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} looks")
         elif k == "chew":
             t = when(s, f[1]); d = f[3]; self.add(f'tl.to("#{P(f[2])}-jaw",{{rotation:9,x:6,svgOrigin:"372 -560",duration:.17,yoyo:true,repeat:{int(d / .17) | 1},ease:"sine.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} chews")
         elif k == "drink":
@@ -277,8 +345,12 @@ class Film:
         elif k == "walk":
             t = when(s, f[1]); dx, d = f[3], f[4]; n = int(d / .3) | 1
             self.add(f'tl.to("#{P(f[2])}_w",{{x:"+={dx}",duration:{d},ease:"none"}},{t:.2f});')
-            for leg, ox, ph in (("fl", 160, 1), ("bl", -138, -1), ("fl2", 118, -1), ("bl2", -178, 1)):
-                self.add(f'tl.fromTo("#{P(f[2])}-{leg}",{{rotation:{-13 * ph},svgOrigin:"{ox} -262"}},{{rotation:{13 * ph},duration:.3,yoyo:true,repeat:{n},ease:"sine.inOut"}},{t:.2f});'
+            R = self.rig(P(f[2])); LG = R.get("legs") or {}
+            if not LG: self.add(f'tl.to("#{P(f[2])}",{{y:"-=26",duration:.15,yoyo:true,repeat:{int(d / .15) | 1},ease:"sine.inOut"}},{t:.2f});')      # no legs to swing: a bouncy walk
+            for leg, ph in (("fl", 1), ("bl", -1), ("fl2", -1), ("bl2", 1)):
+                if leg not in LG: continue
+                ox = LG[leg]
+                self.add(f'tl.fromTo("#{P(f[2])}-{leg}",{{rotation:{-13 * ph},svgOrigin:"{ox} {R["hip"]}"}},{{rotation:{13 * ph},duration:.3,yoyo:true,repeat:{n},ease:"sine.inOut"}},{t:.2f});'
                          f'tl.to("#{P(f[2])}-{leg}",{{rotation:0,duration:.15}},{t + d:.2f});')
             self.ev(t, "action", f"{f[2]} walks")
         elif k == "fly":            # Milo flies to a new spot in the shot
@@ -292,6 +364,26 @@ class Film:
         elif k == "fromto":
             t = when(s, f[1]); self.add(f'tl.fromTo("{f[2].replace("{p}", f"s{i}_")}",{json.dumps(f[3])},{json.dumps(f[4])},{t:.2f});')
             if len(f) > 5 and f[5]: self.ev(t, "action", f[5])
+        elif k == "face":           # how a character feels: ("face", at, who, "sad" | "happy" | "wow" | "sleepy")
+            t = when(s, f[1]); p = P(f[2]); kind = self.kinds.get(p, "camel"); R = self.rig(p); mood = f[3]; br = R.get("brows", [])
+            tilt = {"sad": 16, "happy": 0, "wow": 0, "sleepy": 6}[mood]; lift = {"sad": -4, "happy": 0, "wow": -14, "sleepy": 6}[mood]
+            for b in br:
+                sign = 1 if b.endswith("R") else -1            # the inner end of the brow goes up when worried
+                self.add(f'tl.to("#{p}-{b}",{{rotation:{sign * tilt},y:{lift},transformOrigin:"50% 50%",duration:.25}},{t:.2f});')
+            if kind in art2.RIGS:
+                self.add(f'tl.set("#{p}-smile",{{opacity:{0 if mood == "sad" else 1}}},{t:.2f});tl.set("#{p}-frown",{{opacity:{1 if mood == "sad" else 0}}},{t:.2f});')
+                if R.get("ear"): self.add(f'tl.to("#{p}-ear",{{rotation:{ {"sad": 12, "happy": 0, "wow": -10, "sleepy": 8}[mood] },svgOrigin:"{R["ear"]}",duration:.35}},{t:.2f});')
+                if R.get("neck") and mood in ("sad", "sleepy", "happy"): self.add(f'tl.to("#{p}-neck",{{rotation:{ {"sad": 9, "sleepy": 7, "happy": 0}[mood] },svgOrigin:"{R["neck"]}",duration:.4,ease:"power2.inOut"}},{t:.2f});')
+            elif kind == "milo": self.add(f'tl.to("#{p}-body",{{scaleY:{ {"sad": .95, "happy": 1, "wow": 1.05, "sleepy": .96}[mood] },svgOrigin:"0 0",duration:.3}},{t:.2f});')
+            else: self.add(f'tl.to("#{p}-neck",{{rotation:{ {"sad": 14, "happy": 0, "wow": -8, "sleepy": 12}[mood] },svgOrigin:"190 -330",duration:.4,ease:"power2.inOut"}},{t:.2f});')
+            for e in R.get("eyes", []) if kind != "milo" else ["eyeL", "eyeR"]:
+                if mood == "wow": self.add(f'tl.to("#{p}-{e}",{{scale:1.14,transformOrigin:"50% 50%",duration:.15,yoyo:true,repeat:1,repeatDelay:.6}},{t:.2f});')
+            self.ev(t, "action", f"{f[2]} looks {mood}")
+        elif k == "trunk":          # the elephant's trunk turns: ("trunk", at, who, degrees[, seconds])  -100 = straight up (the snorkel), -40 = a reach
+            t = when(s, f[1]); p = P(f[2]); self.add(f'tl.to("#{p}-trunk",{{rotation:{f[3]},svgOrigin:"{self.rig(p)["trunk"]}",duration:{f[4] if len(f) > 4 else .5},ease:"power2.inOut"}},{t:.2f});'); self.ev(t, "action", f"{f[2]}'s trunk moves")
+        elif k == "arm":            # the monkey's arm: ("arm", at, who, "l" | "r", degrees)
+            t = when(s, f[1]); p = P(f[2]); ox = -58 if f[3] == "l" else 58
+            self.add(f'tl.to("#{p}-a{f[3]}",{{rotation:{f[4]},svgOrigin:"{ox} -206",duration:.35,ease:"back.out(1.6)"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} moves an arm")
         elif k == "snd": self.snd.append((when(s, f[1]), f[2]))
         else: raise KeyError(k)
 
@@ -316,10 +408,16 @@ class Film:
             self.stage_html[i] = []; p = f"s{i}"; far, mid, near = art.BG[s["place"]](p)
             actors = s["actors"] if s["actors"] is not None else self.stages.get(s["place"], [])
             actors = [a for a in actors if a[0] not in s["hide"]]
+            actors = [((a[0], a[1]) + tuple(s["move"][a[0]]) + tuple(a[len(s["move"][a[0]]) + 2:])) if a[0] in s.get("move", {}) else a for a in actors]
             fly = s["fly"] if s["fly"] is not None else [a[0] for a in actors if a[1] == "milo" and (len(a) > 6 and a[6])]
             asvg = "".join(self.actor_svg(i, a) for a in sorted(actors, key=lambda a: a[3]))
             def _pp(pr): return pr[6] if (self.portrait and len(pr) > 6 and pr[6]) else (pr[2], pr[3], pr[4] if len(pr) > 4 else 1)   # a prop may sit elsewhere in the 9:16 picture
-            psvg = "".join(f'<g id="{p}_{pr[0]}_w" transform="translate({_pp(pr)[0]} {_pp(pr)[1]}) scale({_pp(pr)[2]})" opacity="{0 if (len(pr) > 5 and pr[5] == "hidden") else 1}">{pr[1](f"{p}_{pr[0]}") if callable(pr[1]) else pr[1]}</g>' for pr in s["props"])
+            story = self.ep.get("kind") == "story"
+            def _pw(pr):
+                x_, y_, sc_ = _pp(pr); op = 0 if (len(pr) > 5 and pr[5] == "hidden") else 1; inner = pr[1](f"{p}_{pr[0]}") if callable(pr[1]) else pr[1]
+                if story: return f'<g id="{p}_{pr[0]}_w" transform="translate({x_} {y_})" opacity="{op}"><g transform="scale({sc_})">{inner}</g></g>'
+                return f'<g id="{p}_{pr[0]}_w" transform="translate({x_} {y_}) scale({sc_})" opacity="{op}">{inner}</g>'
+            psvg = "".join(_pw(pr) for pr in s["props"])
             c0 = (s["pcam"] if self.portrait else s["cam"]); c1 = (s["pcam2"] if self.portrait else s["cam2"])
             if self.portrait and c0 is None: c0 = (s["cam"][0], s["cam"][1], s["cam"][2] * 9 / 16 * 1.5); c1 = None
             if c1 is None: c1 = (c0[0], c0[1] - (6 if i % 2 else -6), c0[2] * (.93 if i % 2 == 0 else 1.07))        # every shot drifts a little: slow push in or pull out
@@ -382,8 +480,17 @@ def plan_gate(film, total, ep):
         if len(real) < 6: fails.append(f"only {len(real)} places (need 6)")
         if total < 300: fails.append(f"only {total:.0f} s long (need 300)")
         if total > 390: fails.append(f"{total:.0f} s long (at most 390)")
-        if qg and max(qg) > 60: fails.append(f"{max(qg):.0f} s without a question to the viewer (about every 45 s)")
-        if film.shots[0]["v0"] > 1.0 or not film.shots[0]["q"]: fails.append("the first shot must be the hook question, spoken in the first 5 seconds")
+        if ep.get("kind") == "story":
+            beats = [s.get("beat", "") for s in film.shots]; res["beats"] = {b: beats.count(b) for b in dict.fromkeys(beats) if b}
+            for b in ("hook", "goal", "obstacle1", "obstacle2", "obstacle3", "low", "solution", "ending"):
+                if b not in beats: fails.append(f"the story has no '{b}' beat")
+            if beats.count("fact") < 2: fails.append(f"only {beats.count('fact')} animal facts shown (2 or 3)")
+            if not any(s.get("sung") for s in film.shots): fails.append("no song moment")
+            if film.shots[0]["v0"] > 1.0 or film.shots[0].get("beat") != "hook": fails.append("the first shot must be the hook, spoken in the first 5 seconds")
+            if beats and "ending" in beats and "low" in beats and not (beats.index("low") < beats.index("solution") < len(beats) - beats[::-1].index("ending")): fails.append("the beats are out of order (low moment, then the solution, then the ending)")
+        else:
+            if qg and max(qg) > 60: fails.append(f"{max(qg):.0f} s without a question to the viewer (about every 45 s)")
+            if film.shots[0]["v0"] > 1.0 or not film.shots[0]["q"]: fails.append("the first shot must be the hook question, spoken in the first 5 seconds")
     res["fails"] = fails
     return res, ev
 
@@ -392,7 +499,7 @@ def mix_audio(film, total, ep):
     m = np.zeros(int(SR * (total + .5)), np.float32); env = np.full(len(m), 1.0, np.float32)
     for s in film.shots:
         if s["audio"] is not None:
-            a0 = int(s["v0"] * SR); m[a0:a0 + len(s["audio"])] += s["audio"] * 0.95; env[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 0.42
+            a0 = int(s["v0"] * SR); m[a0:a0 + len(s["audio"])] += s["audio"][:len(m) - a0] * 0.95; env[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 0.0 if s.get("sung") else 0.42
     env = np.convolve(env, np.ones(3600) / 3600, mode="same")
     mu = music(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 1.0, (len(mu) - np.arange(len(mu))) / SR / 2.0)); n = min(len(m), len(mu))
     m[:n] += mu[:n] * env[:n] * fade[:n] * ep.get("music", 0.5)
@@ -415,7 +522,7 @@ def main():
     res, ev = plan_gate(film, total, ep); res["words_placed"] = f"{tot - miss}/{tot}"
     if miss: res["fails"].append(f"word sync: {miss} of {tot} words could not be placed from the audio")
     json.dump({"id": sid, "total": total, "plan": res, "events": ev,
-               "shots": [{k: s[k] for k in ("place", "say", "t0", "t1", "v0", "dur", "words", "part", "q", "tag")} for s in shots]}, open(os.path.join(out, sid + "_timing.json"), "w"), indent=1)
+               "shots": [{k: s.get(k) for k in ("place", "say", "t0", "t1", "v0", "dur", "words", "part", "q", "tag", "who", "beat", "sung")} for s in shots]}, open(os.path.join(out, sid + "_timing.json"), "w"), indent=1)
     print(json.dumps(res, indent=1))
     if "--plan" in sys.argv: sys.exit(1 if res["fails"] else 0)
     for f, d in ((os.path.join(STUDIO, "vendor/package/dist/gsap.min.js"), "gsap.min.js"), (os.path.join(STUDIO, "vendor/f/package/files/baloo-2-latin-800-normal.woff2"), "baloo.woff2"),

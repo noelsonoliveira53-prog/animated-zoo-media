@@ -6,13 +6,15 @@ The mark: the channel's own picture (brand/avatar.png: Milo on yellow) in a whit
 
   python3 watermark.py build                               -> brand/zoo/watermark.png (16:9, drawn for 3840x2160) and watermark_short.png (9:16, for 2160x3840)
   python3 watermark.py still <video> <seconds> <out.png>   -> one frame with the mark, to look at before an encode
-  python3 watermark.py apply <in.mp4> <out.mp4> [tl|tr]    -> re-encode a finished file that has no mark yet (sound copied)
-  python3 watermark.py check <video> [tl|tr]               -> "MARK yes/no": is the mark in the picture? (review.py fails a video without it)
-  python3 watermark.py corner <video> <out.jpg> [tl|tr]    -> the mark's corner every 5 s on one sheet: LOOK at it (no face, sign or word under the mark)
+  python3 watermark.py apply <in.mp4> <out.mp4> [tl|tr] [--hide 300-312,340-350]   -> re-encode a finished file that has no mark yet (sound copied)
+  python3 watermark.py check <video> [tl|tr] [--hide ...]  -> "MARK yes/no": is the mark in the picture? (review.py fails a video without it)
+  python3 watermark.py corner <video> <out.jpg> [tl|tr] [--hide ...]   -> the mark's corner every 5 s on one sheet, with times: LOOK at it
 
 finish.py and lesson_shorts.py call chain() so every new video and Short gets the mark when it is finished.
 16:9: top left ("tl", default), 40 px from the edges at 4K, 136 px high (6% of the picture): above the answer signs (they start 8% from
-the top), away from the captions (bottom). If the corner sheet shows a face or a sign under it, set the job's "watermark_pos": "tr".
+the top), away from the captions (bottom). The corner sheet of zool_ep11 (Nov 16) showed the giraffe's face under the mark in its close-ups
+(5:05, 5:25, 5:45) and the top of the YES sign (0:10-0:25): for such a video set the job's "watermark_pos": "tr" if that corner is
+free for the whole video, or "watermark_hide": [[from, to], ...] (seconds): the mark fades away for those moments.
 9:16: centred in the free band above the Short's title. Thumbnails stay without the mark."""
 import os, sys, subprocess, json
 
@@ -66,17 +68,38 @@ def place(kind, W, pos="tl"):
     """(scale, x, y, w, h) of the mark on a picture W wide (numbers, in that picture's pixels)."""
     from PIL import Image
     full = 2160 if kind == "short" else 3840; k = W / full
-    mw, mh = Image.open(wm_file(kind)).size; mw, mh = int(round(mw * k)), int(round(mh * k))
-    if kind == "short": return k, (W - mw) // 2, int(round(SHORT_Y * k)), mw, mh
-    x = int(round(MX * k)) if pos != "tr" else W - mw - int(round(MX * k))
-    return k, x, int(round(MY * k)), mw, mh
+    ev = lambda v: int(round(v / 2)) * 2                         # even numbers: the mark's rectangle is cut out of a 4:2:0 picture
+    mw, mh = Image.open(wm_file(kind)).size
+    if kind == "short": mw, mh = int(round(mw * k)), int(round(mh * k)); return k, (W - mw) // 2, int(round(SHORT_Y * k)), mw, mh   # as the Nov 16 Shorts were marked
+    mw, mh = ev(mw * k), ev(mh * k)
+    x = ev(MX * k) if pos != "tr" else W - mw - ev(MX * k)
+    return k, x, ev(MY * k), mw, mh
 
 
-def chain(src_label, out_label, kind, wm_input=1, W=None, pos="tl"):
-    """filter_complex piece: lays the mark (ffmpeg input number wm_input) on [src_label] -> [out_label]."""
+def parse_hide(h):
+    """"[[300, 312.5], ...]" (job / plan) or "300-312.5,340-350" (command line) -> [(300.0, 312.5), ...]"""
+    if not h: return []
+    if isinstance(h, str): h = [x.split("-") for x in h.split(",") if x.strip()]
+    return sorted((float(a), float(b)) for a, b in h)
+
+
+def wm_in(kind, hide=None):
+    """ffmpeg input arguments for the mark (always the still picture; a looped picture stream ran ffmpeg out of memory on 4K, Nov 16)."""
+    return ["-i", wm_file(kind)]
+
+
+def chain(src_label, out_label, kind, wm_input=1, W=None, pos="tl", hide=None):
+    """filter_complex piece: lays the mark (ffmpeg input number wm_input, opened with wm_in()) on [src_label] -> [out_label].
+    hide: seconds of the finished video where the mark fades away (0.3 s) because a face, an answer sign or a word is in its corner.
+    With hide, only the mark's own rectangle is worked on: it is cut out of the picture, marked, mixed with the unmarked cut by
+    time, and laid back (every stream comes from the video itself, so nothing queues up)."""
     k, x, y, mw, mh = place(kind, W or (2160 if kind == "short" else 3840), pos)
-    return (f"[{wm_input}:v]scale={mw}:{mh}:flags=lanczos,format=rgba,colorchannelmixer=aa={OPACITY}[zwm];"
-            f"[{src_label}][zwm]overlay={x}:{y}:format=auto[{out_label}]")
+    hide = parse_hide(hide)
+    wm = f"[{wm_input}:v]scale={mw}:{mh}:flags=lanczos,format=rgba,colorchannelmixer=aa={OPACITY}[zwm];"
+    if not hide: return wm + f"[{src_label}][zwm]overlay={x}:{y}:format=auto[{out_label}]"
+    f = "*".join(f"(clip(({a:.2f}-T)/0.3,0,1)+clip((T-{b:.2f})/0.3,0,1))" for a, b in hide)       # 1 = mark up, 0 = mark away
+    return (wm + f"[{src_label}]split[zm0][zm1];[zm1]crop={mw}:{mh}:{x}:{y},split[zc0][zc1];[zc1][zwm]overlay=0:0:format=auto[zcm];"
+            f"[zc0][zcm]blend=all_expr='A+(B-A)*{f}'[zcb];[zm0][zcb]overlay={x}:{y}:format=auto[{out_label}]")
 
 
 def probe(p):
@@ -87,16 +110,16 @@ def probe(p):
 
 def still(video, t, out, pos="tl"):
     w, h, *_ = probe(video); k = kind_of(w, h)
-    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", video, "-i", wm_file(k), "-filter_complex", chain("0:v", "v", k, 1, w, pos),
+    subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-ss", str(t), "-i", video] + wm_in(k) + ["-filter_complex", chain("0:v", "v", k, 1, w, pos),
                     "-map", "[v]", "-frames:v", "1", out], check=True)
 
 
-def apply(src, out, pos="tl"):
+def apply(src, out, pos="tl", hide=None):
     """A finished file without the mark -> the same picture with it. One more encode, at the source's bitrate (4K AV1 for the long
     videos) or crf 18 (x264 Shorts); the sound is copied untouched."""
     w, h, codec, dur, br = probe(src); k = kind_of(w, h)
     assert not has_mark(src, pos), f"{src} already has the mark"
-    base = ["ffmpeg", "-y", "-loglevel", "error", "-i", src, "-i", wm_file(k), "-filter_complex", chain("0:v", "v", k, 1, w, pos), "-map", "[v]", "-map", "0:a?", "-c:a", "copy"]
+    base = ["ffmpeg", "-y", "-loglevel", "error", "-i", src] + wm_in(k, hide) + ["-filter_complex", chain("0:v", "v", k, 1, w, pos, hide), "-map", "[v]", "-map", "0:a?", "-c:a", "copy"]
     if codec == "av1":
         vb = min(int(br - 192e3), int(((94 * 8 * 1e6) / dur - 192e3) * 0.96))
         enc = ["-c:v", "libsvtav1", "-preset", "9", "-b:v", str(vb), "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le"]
@@ -112,11 +135,11 @@ def apply(src, out, pos="tl"):
         subprocess.run(base + enc + ["-movflags", "+faststart", out], check=True)
     assert os.path.getsize(out) < 100e6, f"{out} is over 100 MB"
     w2, h2, _, d2, _ = probe(out); assert (w2, h2) == (w, h) and abs(d2 - dur) < 0.2, f"{out}: {w2}x{h2} {d2} s, source {w}x{h} {dur} s"
-    assert has_mark(out, pos), f"{out}: the mark is not in the picture"
+    assert has_mark(out, pos, hide=hide), f"{out}: the mark is not in the picture"
     print(f"WATERMARKED {out}: {w2}x{h2}, {d2:.1f} s, {os.path.getsize(out) / 1e6:.1f} MB")
 
 
-def has_mark(video, pos="tl", verbose=False):
+def has_mark(video, pos="tl", verbose=False, hide=None):
     """Is the mark in the picture? Looks at 5 frames: where the mark's letters are white the picture must be bright, where their
     outline is dark brown it must be dark, and the disc's yellow must be yellow. True when 4 of 5 frames agree."""
     from PIL import Image
@@ -126,9 +149,11 @@ def has_mark(video, pos="tl", verbose=False):
     white = [(i, j) for j in range(0, mh, 2) for i in range(0, mw, 2) if px[i, j][3] > 250 and min(px[i, j][:3]) > 245 and i > mh]
     brown = [(i, j) for j in range(0, mh, 2) for i in range(0, mw, 2) if px[i, j][3] > 250 and max(px[i, j][:3]) < 80 and i > mh]
     yel = [(i, j) for j in range(0, mh, 2) for i in range(0, mh, 2) if px[i, j][3] > 250 and px[i, j][0] > 230 and px[i, j][2] < 110]
-    hits = 0
+    hits = 0; hide = parse_hide(hide)
+    free = [t / 2 for t in range(4, int(dur * 2) - 4) if not any(a - 1 <= t / 2 <= b + 1 for a, b in hide)]      # seconds where the mark must be up
     for f in (0.12, 0.3, 0.5, 0.7, 0.88):
-        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{dur * f:.2f}", "-i", video, "-frames:v", "1", "-vf", f"crop={mw}:{mh}:{x}:{y}",
+        tt = min(free, key=lambda t: abs(t - dur * f)) if free else dur * f
+        raw = subprocess.run(["ffmpeg", "-loglevel", "error", "-ss", f"{tt:.2f}", "-i", video, "-frames:v", "1", "-vf", f"crop={mw}:{mh}:{x}:{y}",
                               "-f", "image2pipe", "-vcodec", "png", "-"], capture_output=True).stdout
         if not raw: continue
         fp = Image.open(io.BytesIO(raw)).convert("RGB").load()
@@ -136,26 +161,34 @@ def has_mark(video, pos="tl", verbose=False):
         a = sum(lum(fp[i, j]) for i, j in white) / max(1, len(white)); b = sum(lum(fp[i, j]) for i, j in brown) / max(1, len(brown))
         yy = [fp[i, j] for i, j in yel]; c = sum(1 for q in yy if q[0] > 190 and q[1] > 150 and q[2] < 150) / max(1, len(yy))
         ok = a > 205 and b < 125 and c > 0.8; hits += ok
-        if verbose: print(f"  {dur * f:6.1f} s: letters {a:.0f}, outline {b:.0f}, yellow {c:.2f} -> {'mark' if ok else 'no mark'}")
+        if verbose: print(f"  {tt:6.1f} s: letters {a:.0f}, outline {b:.0f}, yellow {c:.2f} -> {'mark' if ok else 'no mark'}")
     return hits >= 4
 
 
-def corner(video, out, pos="tl", step=5.0):
-    """One sheet with the mark's corner every 5 s (the mark laid on if the video has none yet), to LOOK at: nothing that matters
-    (a face, an answer sign, a 3D word, an example) may sit under the mark."""
+def corner(video, out, pos="tl", step=5.0, hide=None):
+    """One sheet with the mark's corner every 5 s, each picture with its time (the mark laid on if the video has none yet), to LOOK
+    at: nothing that matters (a face, an answer sign, a 3D word, an example) may sit under the mark. Where something does, either
+    the other corner is free for the whole video ("watermark_pos": "tr") or the mark fades away there ("watermark_hide": [[from, to]])."""
     w, h, _, dur, _ = probe(video); k = kind_of(w, h); sc, x, y, mw, mh = place(k, w, pos)
     cw, chh = min(w, int(mw * 1.45)), int(mh * 2.6); cx = max(0, min(w - cw, x - int(mw * 0.2))); n = int(dur // step) + 1; cols = 5; rows = -(-n // cols)
-    marked = has_mark(video, pos)
-    pre = "[0:v]null[m]" if marked else chain("0:v", "m", k, 1, w, pos)
-    fc = f"{pre};[m]fps=1/{step},crop={cw}:{chh}:{cx}:0,scale=560:-1,tile={cols}x{rows}:padding=4:color=white[v]"
-    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", video] + ([] if marked else ["-i", wm_file(k)]) + ["-filter_complex", fc, "-map", "[v]", "-frames:v", "1", "-q:v", "3", out]
-    subprocess.run(cmd, check=True); print(f"corner sheet: {out} ({n} frames, one every {step:g} s, row by row; the video {'has' if marked else 'has NOT'} the mark)")
+    marked = has_mark(video, pos, hide=hide)
+    pre = "[0:v]null[m]" if marked else chain("0:v", "m", k, 1, w, pos, hide)
+    fc = (f"{pre};[m]fps=1/{step},crop={cw}:{chh}:{cx}:0,scale=560:-1,"
+          f"drawtext=fontfile={FONT}:text='%{{pts\\:hms}}':x=w-tw-8:y=h-th-6:fontsize=22:fontcolor=white:borderw=3:bordercolor=black,"
+          f"tile={cols}x{rows}:padding=4:color=white[v]")
+    cmd = ["ffmpeg", "-y", "-loglevel", "error", "-i", video] + ([] if marked else wm_in(k, hide)) + ["-filter_complex", fc, "-map", "[v]", "-frames:v", "1", "-q:v", "3", out]
+    subprocess.run(cmd, check=True); print(f"corner sheet: {out} (one picture every {step:g} s, row by row; the video {'has' if marked else 'has NOT'} the mark)")
+
+
+def opt(a, k):
+    return a[a.index(k) + 1] if k in a else None
 
 
 if __name__ == "__main__":
-    c = sys.argv[1]; a = sys.argv[2:]
+    c = sys.argv[1]; a = sys.argv[2:]; hd = opt(a, "--hide")
+    if hd: i = a.index("--hide"); del a[i:i + 2]
     if c == "build": build()
     elif c == "still": still(a[0], a[1], a[2], *(a[3:4]))
-    elif c == "apply": apply(a[0], a[1], *(a[2:3]))
-    elif c == "check": r = has_mark(a[0], *(a[1:2]), verbose=True); print("MARK", "yes" if r else "no", a[0]); sys.exit(0 if r else 1)
-    elif c == "corner": corner(a[0], a[1], *(a[2:3]))
+    elif c == "apply": apply(a[0], a[1], *(a[2:3]), hide=hd)
+    elif c == "check": r = has_mark(a[0], *(a[1:2]), verbose=True, hide=hd); print("MARK", "yes" if r else "no", a[0]); sys.exit(0 if r else 1)
+    elif c == "corner": corner(a[0], a[1], *(a[2:3]), hide=hd)

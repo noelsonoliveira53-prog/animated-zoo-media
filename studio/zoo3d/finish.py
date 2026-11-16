@@ -159,9 +159,9 @@ def main():
         # channel watermark (Noelson, Nov 16: on every video; YouTube's own watermark is not shown on made-for-kids videos):
         # laid on after the lyrics, top left (job "watermark_pos": "tr" = top right when the top left corner is in use)
         import watermark
-        wpos = job.get("watermark_pos", "tl")
-        fc = f"[0:v]{vf}[zsub];" + watermark.chain("zsub", "v", "wide", 1, 3840, wpos)
-        enc_in = ["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", watermark.wm_file("wide"), "-filter_complex", fc, "-map", "[v]", "-map", "0:a"]
+        wpos = job.get("watermark_pos", "tl"); whide = job.get("watermark_hide")    # "watermark_hide": [[from s, to s], ...]: the mark fades away there
+        fc = f"[0:v]{vf}[zsub];" + watermark.chain("zsub", "v", "wide", 1, 3840, wpos, whide)
+        enc_in = ["ffmpeg", "-y", "-loglevel", "error", "-i", raw] + watermark.wm_in("wide", whide) + ["-filter_complex", fc, "-map", "[v]", "-map", "0:a"]
         subprocess.run(enc_in + ["-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                         "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
         print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")
@@ -173,7 +173,7 @@ def main():
             subprocess.run(enc_in + ["-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                             "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
             if os.path.getsize(out) >= 99.5e6: sys.exit("QUALITY GATE: 4K file still over 100 MB")
-        if not watermark.has_mark(out, wpos): sys.exit("QUALITY GATE: the channel watermark is not in the picture")
+        if not watermark.has_mark(out, wpos, hide=whide): sys.exit("QUALITY GATE: the channel watermark is not in the picture")
     # thumbnail: the thumb frame + big words (job "thumb_align": 7 = top left (default), 1 = bottom left when a face is top left:
     # COUNT THE BONES! sat on the giraffe's eyes in zool_ep11, Nov 15)
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
@@ -221,6 +221,7 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
              "time": arg("--time", SLOT.get(ch, "2:00 PM")), "thumb": os.path.relpath(tdst, repo), "made_for_kids": True,
              "status": ("hold_review" if song.get("lesson_version", 0) >= 3 and not os.path.exists(os.path.join(HERE, "LESSON_V3_APPROVED")) else "to_upload"), "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1),
              "watermark": job.get("watermark_pos", "tl")}
+    if job.get("watermark_hide"): entry["watermark_hide"] = job["watermark_hide"]
     plan = [p for p in plan if p["file"] != rel] + [entry]
     plan.sort(key=lambda p: (p["date"], p["time"]))
     json.dump(plan, open(plan_p, "w"), indent=1)

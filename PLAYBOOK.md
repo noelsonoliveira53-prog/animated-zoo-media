@@ -537,3 +537,9 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * NOT marked: everything already uploaded or scheduled (through Nov 17, plus zool_ep01 on Nov 18) and the held zs4k_* Shorts.
   * Top right is where the answer sign's check mark sits (WHITE sign, zool_ep12 1:43), so top left is the default. For every new
     lesson LOOK at `watermark.py corner <file> <sheet.jpg>` before uploading.
+  * Corner sheets of two whole lessons (mark laid on for the look only; both are scheduled without it): zool_ep14 nothing under
+    the mark; zool_ep11 the giraffe's face in its close-ups (5:05, 5:25, 5:45) and the top of the YES sign (0:10-0:25). So a
+    lesson can need job "watermark_hide": [[from, to], ...]: the mark fades away (0.3 s) for those moments. Tested on 32 s of
+    zool_ep11 (frames: up, fading, away, back) and in finish.py's filter graph on 6 s. A looped-picture version of the fade was
+    killed for memory on 4K; the fade now works only on the mark's own rectangle cut from the video.
+  * NOT done: no lesson has been finished with hide windows from a real job yet; nobody has chosen windows for zool_ep15-18.

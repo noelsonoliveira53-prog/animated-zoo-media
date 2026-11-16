@@ -108,7 +108,7 @@ def review(fname):
         # channel watermark (Noelson, Nov 16: on every video that is uploaded)
         import watermark
         _wp = entry.get("watermark") if entry.get("watermark") in ("tl", "tr") else "tl"
-        if not watermark.has_mark(path, _wp): fails.append("the channel watermark is not in the picture: finish it again, or `python3 studio/zoo3d/watermark.py apply <in> <out>` for a finished file")
+        if not watermark.has_mark(path, _wp, hide=entry.get("watermark_hide")): fails.append("the channel watermark is not in the picture: finish it again, or `python3 studio/zoo3d/watermark.py apply <in> <out>` for a finished file")
         os.makedirs(os.path.join(HERE, "finished"), exist_ok=True)
         sheet = os.path.join(HERE, "finished", "review_" + os.path.splitext(os.path.basename(fname))[0] + ".png")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", f"fps=12/{dur:.2f},scale=480:-1,tile=4x3", "-frames:v", "1", sheet])

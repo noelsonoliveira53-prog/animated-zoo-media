@@ -180,8 +180,13 @@ written, rendered, titled and uploaded.
    - A finished file from before Nov 16 that is still waiting: `python3 studio/zoo3d/watermark.py apply <in.mp4> <out.mp4>`,
      then replace the file (same name) and set the plan entry's "watermark".
    - review.py FAILS a video without the mark (`watermark.py check <file>`). Never upload around it.
-   - LOOK: `python3 studio/zoo3d/watermark.py corner <file> <sheet.jpg>` shows the mark's corner every 5 s. No face, answer sign,
-     3D word or example may sit under the mark; if one does, finish again with "watermark_pos": "tr" and look at that corner.
+   - LOOK at every new episode: `python3 studio/zoo3d/watermark.py corner <file> <sheet.jpg>` shows the mark's corner every 5 s
+     with the time. No face, answer sign, 3D word or example may sit under the mark (zool_ep11's sheet, Nov 16: the giraffe's face
+     in its close-ups at 5:05, 5:25, 5:45 and the top of the YES sign at 0:10-0:25; zool_ep14, zoo3d_ep17, zoo3d_ep18: nothing).
+     If something does: put "watermark_hide": [[from s, to s], ...] into the job (the mark fades away for those moments; take each
+     window from the shot's start to its end in the job's timing, not from the 5 s sheet alone) or "watermark_pos": "tr" when the
+     top right is free for the whole video (it is where the answer sign's check mark sits), then finish again and look again.
+     To see it before the 25-minute encode: `watermark.py corner <file> <sheet.jpg> --hide 300-312,340-350` on an unmarked file.
    - Videos that were already uploaded or scheduled before Nov 16 10 AM have no mark and are not replaced for it.
 3. THUMBNAILS ARE MANDATORY (Noelson, Nov 14: "ensure the new posts are activating with YouTube skills to ensure personalized
    thumbnails are being applied to all videos upon posting"). Every upload, episode AND Short, gets its own custom thumbnail:

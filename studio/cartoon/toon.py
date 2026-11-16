@@ -168,8 +168,8 @@ html,body{width:VWpx;height:VHpx;overflow:hidden;background:#fff}
 #wm{position:absolute;opacity:.88}
 #qcount{position:absolute;opacity:0;transform:translate(-50%,-50%);font-size:230px;color:#ffd23f;-webkit-text-stroke:20px #402010;paint-order:stroke fill;line-height:1}
 #band{position:absolute;left:0;right:0;top:0;text-align:center}
-#band .l1{position:absolute;left:0;right:0;top:206px;font-size:104px;color:#fff;-webkit-text-stroke:16px #402010;paint-order:stroke fill;line-height:1}
-#band .l2{position:absolute;left:0;right:0;top:310px;font-size:150px;color:#ffd23f;-webkit-text-stroke:20px #402010;paint-order:stroke fill;line-height:1}
+#band .l1{position:absolute;left:0;right:0;top:206px;white-space:nowrap;font-size:104px;color:#fff;-webkit-text-stroke:16px #402010;paint-order:stroke fill;line-height:1}
+#band .l2{position:absolute;left:0;right:0;top:310px;white-space:nowrap;font-size:150px;color:#ffd23f;-webkit-text-stroke:20px #402010;paint-order:stroke fill;line-height:1}
 """
 
 
@@ -202,7 +202,7 @@ class Film:
         elif kind == "bactrian": inner = art.camel(pid, 2, c=art.CAMEL_B, wool=True)
         elif kind in art2.RIGS: inner = art2.RIGS[kind]["build"](pid)
         else: raise KeyError(kind)
-        if self.ep.get("kind") == "story":      # the part the engine moves carries a plain translate; the size and the mirror sit inside it.
+        if self.ep.get("kind") == "story" or self.ep.get("nest"):      # the part the engine moves carries a plain translate; the size and the mirror sit inside it.
             # (GSAP's x and y on a scaled SVG group are measured from the group's bounding box, so a tween to x = 300 on "translate(250 500) scale(.78)" stops at 257.)
             return f'<g id="{pid}_w" transform="translate({x} {y})"><g transform="scale({-sc if flip else sc} {sc})">{inner}</g></g>'
         return f'<g id="{pid}_w" transform="translate({x} {y}) scale({-sc if flip else sc} {sc})">{inner}</g>'
@@ -288,7 +288,7 @@ class Film:
 
     def signs(self, i, s, at, options, correct, reveal_at):
         t = when(s, at); tr = when(s, reveal_at); self.uid += 1; u = self.uid
-        if self.portrait: pos = [(540, 520), (540, 675)]; dp = (540, 800)      # right under the title band, above the animals
+        if self.portrait: pos = [(540, 570), (540, 725)]; dp = (540, 850)      # right under the title band, above the animals
         else: pos = [(600, 178), (1320, 178)]; dp = (960, 180)
         for k, o in enumerate(options):
             self.hud.append(f'<div class="sign {"ab"[k]}" id="sg{u}_{k}" style="left:{pos[k][0]}px;top:{pos[k][1]}px">{o}<svg class="ck" id="ck{u}_{k}" viewBox="-80 -80 160 160">{art.tick("x")}</svg></div>')
@@ -415,7 +415,7 @@ class Film:
             fly = s["fly"] if s["fly"] is not None else [a[0] for a in actors if a[1] == "milo" and (len(a) > 6 and a[6])]
             asvg = "".join(self.actor_svg(i, a) for a in sorted(actors, key=lambda a: a[3]))
             def _pp(pr): return pr[6] if (self.portrait and len(pr) > 6 and pr[6]) else (pr[2], pr[3], pr[4] if len(pr) > 4 else 1)   # a prop may sit elsewhere in the 9:16 picture
-            story = self.ep.get("kind") == "story"
+            story = self.ep.get("kind") == "story" or self.ep.get("nest")      # "nest": a lesson built with the translate-only wrappers (every episode after zc_ep01)
             def _pw(pr):
                 x_, y_, sc_ = _pp(pr); op = 0 if (len(pr) > 5 and pr[5] == "hidden") else 1; inner = pr[1](f"{p}_{pr[0]}") if callable(pr[1]) else pr[1]
                 if story: return f'<g id="{p}_{pr[0]}_w" transform="translate({x_} {y_})" opacity="{op}"><g transform="scale({sc_})">{inner}</g></g>'
@@ -531,6 +531,7 @@ def main():
         for s in sp.get("extra_first", []): shots.insert(0, dict(s))
         for s in sp.get("extra_last", []): shots.append(dict(s))
         shots[0]["trans"] = "cut"; band = sp["band"]; sid = sp["id"]
+        if len(band[0]) > 15 or len(band[1]) > 10: sys.exit(f"the Short's title band is too long for two lines (15 and 10 letters at most): {band}")      # a third line sat on the picture's words (Nov 16)
     out = os.path.join(HERE, "out", ep["id"]); proj = os.path.join(out, "proj_" + ("p" if portrait else "l")); os.makedirs(os.path.join(proj, "assets"), exist_ok=True)
     total, miss, tot = voice_lines(ep, shots); total += ep.get("tail", 0.6) if not portrait else 0.4
     film = Film(ep, mod.STAGES, shots, portrait); html = film.build_html(total, band)

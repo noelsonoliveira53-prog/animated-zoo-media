@@ -77,10 +77,14 @@ def S(place, cam, say="", words=(), fx=(), pcam=None, **kw):
     return shot(place, cam, say, fx=out, pcam=pcam, **kw)
 
 
+def W(c, k=1.05): return (c[0], c[1], round(c[2] * k))      # the end of a slow pull-out: a wide 9:16 view only gets wider, so nobody slides out of the frame
+
+
 def prop(name, fn, x, y, s=1.0, hidden=False, p=None): return (name, fn, x, y, s, "hidden" if hidden else "", p)   # p=(x, y, s): where it sits in the 9:16 picture
 
 
 TWO = (1215, 570, 1460); TWOP = (1230, 480, 2560)
+DRK = (1180, 500, 1700); OAS = (800, 310, 2400); WND = (1205, 380, 2400); GOB = (1251, 461, 1700); EYE = (960, 560, 2300)      # 9:16 at the oasis: Mama drinking with sky above for the count and the jug; Mama and Sandy whole
 SHOTS = [
     # ---------------------------------------------------------------- HOOK (the question, the animal, in the first 5 seconds)
     S("dunes", C("dunes", "mama", "hump", 1000, 60, 10), "What is inside a camel's hump?", q=True, tag="hook: the hump", pcam=V("dunes", "mama", "hump", 1400, 120),
@@ -143,7 +147,7 @@ SHOTS = [
     S("dunes", (1070, 565, 1800), "Let's say it together. Fat, not water!", part=1, q=True, tag="say it", pcam=TWOP, words=[("w:Fat,", "FAT, NOT WATER!", .46, .2, 1.0, "sun", (.5, .32), .8)],
       fx=[("hop", "w:Fat,", "calf"), ("hop", "w:not", "mama")]),
     # ---------------------------------------------------------------- PART 2: food, the hump and water
-    S("trail", WIDE, "Mama and Sandy walk down the rocky trail.", part=2, trans="iris", tag="trail wide", cam2=(1060, 560, 1740),
+    S("trail", WIDE, "Mama and Sandy walk down the rocky trail.", part=2, trans="iris", tag="trail wide", cam2=(1060, 560, 1740), pcam=(1195, 282, 2400), pcam2=(1195, 282, 2400),
       props=[prop("bush", lambda p: art._thorn(p, 0, 0), 1700, 905, 1.5)], fx=[("fromto", 0, "#{p}mama_w", {"x": 880}, {"x": 1180, "duration": 3.2, "ease": "none"}), ("fromto", 0, "#{p}calf_w", {"x": 330}, {"x": 590, "duration": 3.2, "ease": "none"}),
                                                            ("walk", 0, "mama", 0, 3.2), ("walk", 0, "calf", 0, 3.2)]),
     S("trail", (1660, 760, 760), "Look! A thorny bush. Those thorns are sharp.", part=2, tag="the bush", props=[prop("bush", lambda p: art._thorn(p, 0, 0), 1700, 905, 1.5)],
@@ -164,81 +168,81 @@ SHOTS = [
       words=[("w:Flop!", "FLOP!", .24, .2, 1.7, "sun", (.3, .3), 1.0)], fx=[("to", 0, "#{p}cam-hump", {"rotation": 10, "scaleY": .9, "svgOrigin": "0 -372", "duration": .01}), ("droop", "w:leans", "cam", 30), ("snd", "w:Flop!", "boing")]),
     S("paper_blue", PAPER, "A tall hump is full. A floppy hump is empty.", part=2, tag="board: full or empty", actors=[("a", "camel", 520, 900, .78), ("b", "camel", 1300, 900, .78)], pcam=(640, 583, 1300), pcam2=(1420, 583, 1300),
       words=[("w:full.", "FULL", .25, .13, 1.3, "sun", (.36, .3), 1.1), ("w:empty.", "EMPTY", .68, .13, 1.3, "", (1.42, .3), 1.1)], fx=[("to", 0, "#{p}b-hump", {"rotation": 30, "scaleY": .72, "scaleX": .94, "svgOrigin": "0 -372", "duration": .01})]),
-    S("trail", (960, 470, 1920), "Mama just had a big lunch. Is her hump tall, or floppy?", part=2, q=True, tag="question 2", pause=3.4,
+    S("trail", (960, 470, 1920), "Mama just had a big lunch. Is her hump tall, or floppy?", part=2, q=True, tag="question 2", pause=3.4, pcam=(1170, 255, 2500), pcam2=W((1170, 255, 2500)),
       fx=[("signs", "w:tall,", ["TALL", "FLOPPY"], 0, "wait:3.0"), ("hop", "wait:3.05", "mama")]),
-    S("trail", C("trail", "mama", "hump", 1000, 60, 20), "Tall! Mama's hump is full of fat.", part=2, tag="tall!", words=[("w:Tall!", "TALL!", .2, .26, 1.6, "sun")], fx=[("hop", "w:Tall!", "mama")]),
-    S("oasis", WIDE, "Now they find a pool of cool water. Splash!", part=2, trans="iris", tag="oasis wide", cam2=(1000, 580, 1700), words=[("w:Splash!", "SPLASH!", .5, .2, 1.3, "sun")],
+    S("trail", C("trail", "mama", "hump", 1000, 60, 20), "Tall! Mama's hump is full of fat.", part=2, tag="tall!", pcam=(1340, 470, 1560), pcam2=W((1340, 470, 1560)), words=[("w:Tall!", "TALL!", .2, .26, 1.6, "sun")], fx=[("hop", "w:Tall!", "mama")]),
+    S("oasis", WIDE, "Now they find a pool of cool water. Splash!", part=2, trans="iris", tag="oasis wide", cam2=(1000, 580, 1700), pcam=OAS, pcam2=OAS, words=[("w:Splash!", "SPLASH!", .5, .2, 1.3, "sun")],
       fx=[("to", "w:Splash!", "#{p}rip", {"scale": 1.3, "transformOrigin": "50% 50%", "duration": .5, "yoyo": True, "repeat": 3}, "the water ripples")]),
-    S("oasis", (1130, 640, 1100), "Camels do not keep water in the hump. They drink it!", part=2, tag="Mama drinks", hide=["milo", "calf"], words=[("w:drink", "DRINK!", .22, .16, 1.3, "sun")],
+    S("oasis", (1130, 640, 1100), "Camels do not keep water in the hump. They drink it!", part=2, tag="Mama drinks", hide=["milo", "calf"], pcam=DRK, pcam2=W(DRK), words=[("w:drink", "DRINK!", .22, .16, 1.3, "sun")],
       fx=[("drink", "w:They", "mama", 3.0, 100)]),
-    S("oasis", (1150, 640, 1000), "A thirsty camel can drink thirty gallons of water,", part=2, tag="30 gallons", hide=["milo"], props=[prop("jug", art.jug, 1575, 524, 1.3, True)],
+    S("oasis", (1150, 640, 1000), "A thirsty camel can drink thirty gallons of water,", part=2, tag="30 gallons", hide=["milo"], pcam=DRK, pcam2=W(DRK), props=[prop("jug", art.jug, 1575, 524, 1.3, True, p=(1500, 470, 2.0))],
       fx=[("to", 0, "#{p}mama-neck", {"rotation": 100, "svgOrigin": "190 -330", "duration": .01}), ("show", "w:thirty", "jug"), ("count", "w:thirty", 30, 1.5, {"x": 1300, "y": 112})],
-      words=[("e:gallons", "GALLONS", .72, .4, 1.0, "pill")]),
-    S("oasis", (1200, 660, 900), "in only thirteen minutes! Gulp, gulp, gulp.", part=2, tag="13 minutes", hide=["milo"], props=[prop("clock", art.clock, 1500, 560, .75)],
+      words=[("e:gallons", "GALLONS", .72, .4, 1.0, "pill", (.5, .31), .8)]),
+    S("oasis", (1200, 660, 900), "in only thirteen minutes! Gulp, gulp, gulp.", part=2, tag="13 minutes", hide=["milo"], pcam=DRK, pcam2=W(DRK), props=[prop("clock", art.clock, 1500, 560, .75, p=(1520, 470, .75))],
       fx=[("to", 0, "#{p}mama-neck", {"rotation": 100, "svgOrigin": "190 -330", "duration": .01}), ("to", "w:thirteen", "#{p}clock-min", {"rotation": 78, "svgOrigin": "0 0", "duration": 1.2}, "the clock hand moves 13 minutes"),
           ("to", "w:Gulp,", "#{p}mama", {"y": "+=10", "duration": .2, "yoyo": True, "repeat": 5}, "gulp")], words=[("w:thirteen", "13 MINUTES", .3, .16, 1.0, "sun")]),
-    S("paper_blue", PAPER, "After that, a camel can go a week or more without a drink.", part=2, tag="board: a week", props=[prop("wk", art.week, 960, 640, 1.5)],
+    S("paper_blue", PAPER, "After that, a camel can go a week or more without a drink.", part=2, tag="board: a week", pcam=(960, 440, 2700), props=[prop("wk", art.week, 960, 640, 1.5, p=(960, 640, 1.3))],
       fx=[("fromto", "w:week", ".{p}wk-d", {"opacity": .25}, {"opacity": 1, "duration": .2, "stagger": .22}, "seven days light up"), ("count", "w:week", 7, 1.4, {"x": 960, "y": 300})],
-      words=[("e:week", "DAYS", .5, .74, 1.2, "pill")]),
-    S("oasis", C("oasis", "calf", "head", 900, 40, 150), "Drink up, little Sandy!", part=2, tag="Sandy drinks", fx=[("drink", 0.2, "calf", 2.4, 96)]),
-    S("oasis", (640, 700, 1000), "Let's count Sandy's sips. One, two, three!", part=2, q=True, tag="count the sips",
+      words=[("e:week", "DAYS", .5, .74, 1.2, "pill", (.5, .68))]),
+    S("oasis", C("oasis", "calf", "head", 900, 40, 150), "Drink up, little Sandy!", part=2, tag="Sandy drinks", pcam=(480, 742, 900), fx=[("drink", 0.2, "calf", 2.4, 96)]),
+    S("oasis", (640, 700, 1000), "Let's count Sandy's sips. One, two, three!", part=2, q=True, tag="count the sips", pcam=(480, 742, 900),
       fx=[("to", 0, "#{p}calf-neck", {"rotation": 96, "svgOrigin": "190 -330", "duration": .01}), ("to", "w:One,", "#{p}calf", {"y": "+=8", "duration": .15, "yoyo": True, "repeat": 1}, "sip"),
           ("to", "w:two,", "#{p}calf", {"y": "+=8", "duration": .15, "yoyo": True, "repeat": 1}, "sip"), ("to", "w:three!", "#{p}calf", {"y": "+=8", "duration": .15, "yoyo": True, "repeat": 1}, "sip")],
-      words=[("w:One,", "1", .2, .22, 2.0, "sun"), ("w:two,", "2", .36, .22, 2.0, "sun"), ("w:three!", "3", .52, .22, 2.0, "sun")]),
-    S("oasis", (820, 600, 1500), "Ahh! That feels good.", part=2, tag="after the drink", hide=["milo"], fx=[("hop", "w:good.", "calf"), ("nod", "w:Ahh!", "mama")], words=[("w:Ahh!", "AHH!", .42, .16, 1.3, "sun")]),
+      words=[("w:One,", "1", .2, .22, 2.0, "sun", (.28, .34), 1.5), ("w:two,", "2", .36, .22, 2.0, "sun", (.5, .34), 1.5), ("w:three!", "3", .52, .22, 2.0, "sun", (.72, .34), 1.5)]),
+    S("oasis", (820, 600, 1500), "Ahh! That feels good.", part=2, tag="after the drink", hide=["milo"], pcam=OAS, pcam2=OAS, fx=[("hop", "w:good.", "calf"), ("nod", "w:Ahh!", "mama")], words=[("w:Ahh!", "AHH!", .42, .16, 1.3, "sun")]),
     # ---------------------------------------------------------------- PART 3: sand, snow and cousins
-    S("wind", WIDE, "Whoosh! The wind is blowing the sand around.", part=3, trans="iris", tag="windy wide", props=[prop("puff", art.sand_puffs, 960, 520, 1.0)], words=[("w:Whoosh!", "WHOOSH!", .5, .2, 1.4, "")],
+    S("wind", WIDE, "Whoosh! The wind is blowing the sand around.", part=3, trans="iris", tag="windy wide", pcam=WND, pcam2=W(WND), props=[prop("puff", art.sand_puffs, 960, 520, 1.0)], words=[("w:Whoosh!", "WHOOSH!", .5, .2, 1.4, "")],
       fx=[("fromto", 0, "#{p}gust", {"x": -260}, {"x": 320, "duration": 4.0, "ease": "none"}, ""), ("fromto", 0, "#{p}puff_w", {"x": 700}, {"x": 1300, "duration": 4.0, "ease": "none"}, ""), ("snd", 0.1, "whoosh")]),
-    S("wind", C("wind", "milo", "body", 820), "Sand in the air tickles my eyes!", part=3, tag="Milo blinks", props=[prop("puff", art.sand_puffs, 400, 400, .6)],
+    S("wind", C("wind", "milo", "body", 820), "Sand in the air tickles my eyes!", part=3, tag="Milo blinks", pcam=V("wind", "milo", "body", 1100), props=[prop("puff", art.sand_puffs, 400, 400, .6)],
       fx=[("fromto", 0, "#{p}puff_w", {"x": 200}, {"x": 560, "duration": 3.4, "ease": "none"}, ""), ("fromto", "w:tickles", "#{p}milo-eyeL-lid,#{p}milo-eyeR-lid", {"opacity": 1}, {"opacity": 0, "duration": .01, "delay": .5}, "Milo shuts his eyes")]),
     S("wind", C("wind", "mama", "head", 900, -80, 60), "But camels are ready for a sandy day.", part=3, tag="Mama calm", props=[prop("puff", art.sand_puffs, 1500, 300, .7)],
       fx=[("fromto", 0, "#{p}puff_w", {"x": 1300}, {"x": 1700, "duration": 3.4, "ease": "none"}, ""), ("nod", "w:ready", "mama")]),
-    S("paper", (960, 520, 1500), "They have two rows of long eyelashes.", part=3, tag="board: the eye", props=[prop("eye", art.big_eye, 960, 600, 1.15)],
-      words=[("w:two", "1", .12, .22, 1.8, "sun"), ("w:rows", "2", .12, .46, 1.8, "sun"), ("w:long", "EYELASHES", .78, .14, 1.0, "pill")],
+    S("paper", (960, 520, 1500), "They have two rows of long eyelashes.", part=3, tag="board: the eye", pcam=EYE, props=[prop("eye", art.big_eye, 960, 600, 1.15)],
+      words=[("w:two", "1", .12, .22, 1.8, "sun", (.14, .37), 1.2), ("w:rows", "2", .12, .46, 1.8, "sun", (.14, .45), 1.2), ("w:long", "EYELASHES", .78, .14, 1.0, "pill", (.56, .315), .8)],
       fx=[("to", "w:two", ".{p}eye-row0", {"stroke": "#e63946", "duration": .2, "yoyo": True, "repeat": 3}, "the first row lights up"), ("to", "w:rows", ".{p}eye-row1", {"stroke": "#e63946", "duration": .2, "yoyo": True, "repeat": 3}, "the second row lights up")]),
-    S("paper", (960, 560, 1280), "The eyelashes keep sand out of their eyes. Blink, blink!", part=3, tag="board: blink", props=[prop("eye", art.big_eye, 960, 600, 1.15), prop("puff", art.sand_puffs, 500, 300, .5)],
+    S("paper", (960, 560, 1280), "The eyelashes keep sand out of their eyes. Blink, blink!", part=3, tag="board: blink", pcam=EYE, props=[prop("eye", art.big_eye, 960, 600, 1.15), prop("puff", art.sand_puffs, 500, 300, .5)],
       fx=[("fromto", 0, "#{p}puff_w", {"x": 300}, {"x": 700, "duration": 3.0, "ease": "none"}, ""), ("blinkslow", "w:Blink,", "eye", 2)], words=[("w:Blink,", "BLINK!", .2, .19, 1.2, "sun")]),
     S("wind", C("wind", "calf", "head", 760, -20, 20), "Can you blink like a camel? Blink, blink, blink!", part=3, q=True, tag="blink along", fx=[("blinkslow", "w:Blink,", "calf-eye", 3)],
       words=[("w:Blink,", "BLINK", .22, .2, 1.3, "sun")]),
-    S("paper_pink", (960, 540, 1500), "And look at this nose. A camel can close its nose!", part=3, tag="board: the nose", props=[prop("nose", art.big_nose, 960, 620, 1.05)],
+    S("paper_pink", (960, 540, 1500), "And look at this nose. A camel can close its nose!", part=3, tag="board: the nose", pcam=(960, 560, 1700), props=[prop("nose", art.big_nose, 960, 620, 1.05)],
       words=[("w:close", "CLOSE!", .5, .15, 1.3, "sun")], fx=[("to", "w:close", "#{p}nose-nl,#{p}nose-nr", {"scaleY": .08, "transformOrigin": "50% 50%", "duration": .35}, "the nostrils shut")]),
-    S("paper_pink", (960, 560, 1280), "Open. Closed. Open. Closed! No sand gets in.", part=3, tag="board: open, closed", props=[prop("nose", art.big_nose, 960, 600, 1.2)],
+    S("paper_pink", (960, 560, 1280), "Open. Closed. Open. Closed! No sand gets in.", part=3, tag="board: open, closed", pcam=(960, 560, 1900), props=[prop("nose", art.big_nose, 960, 600, 1.2)],
       fx=[("to", "w:Closed.", "#{p}nose-nl,#{p}nose-nr", {"scaleY": .08, "transformOrigin": "50% 50%", "duration": .2}, "shut"), ("to", "w:Open.:2", "#{p}nose-nl,#{p}nose-nr", {"scaleY": 1, "duration": .2}, "open"),
           ("to", "w:Closed!:2", "#{p}nose-nl,#{p}nose-nr", {"scaleY": .08, "duration": .2}, "shut")],
-      words=[("w:Open.", "OPEN", .2, .14, 1.2, ""), ("w:Closed.", "CLOSED", .78, .14, 1.2, "sun")]),
+      words=[("w:Open.", "OPEN", .2, .14, 1.2, "", (.27, .31), .85), ("w:Closed.", "CLOSED", .78, .14, 1.2, "sun", (.7, .31), .85)]),
     S("paper_blue", (960, 540, 1500), "Camels have big, wide feet too.", part=3, tag="board: the foot", props=[prop("foot", lambda p: art.footprint(p), 960, 620, 3.0)], words=[("w:wide", "WIDE FEET", .5, .16, 1.2, "sun")],
       fx=[("fromto", 0, "#{p}foot_w", {"scale": 1.2, "transformOrigin": "50% 50%"}, {"scale": 3.0, "duration": .5, "ease": "back.out(2)"}, "the foot appears")]),
-    S("paper_blue", (960, 560, 1300), "Each foot spreads out when it steps down.", part=3, tag="board: the foot spreads", props=[prop("foot", lambda p: art.footprint(p), 960, 620, 3.0)],
+    S("paper_blue", (960, 560, 1300), "Each foot spreads out when it steps down.", part=3, tag="board: the foot spreads", pcam=(960, 600, 1900), props=[prop("foot", lambda p: art.footprint(p), 960, 620, 3.0)],
       words=[("w:spreads", "SPREAD!", .5, .14, 1.3, "pill")],
       fx=[("fromto", "w:spreads", "#{p}foot", {"scaleX": .62, "transformOrigin": "50% 50%"}, {"scaleX": 1.12, "duration": .5, "ease": "back.out(3)"}, "the foot spreads"), ("snd", "w:steps", "boing")]),
-    S("wind", (1100, 640, 1500), "That helps them walk on soft sand. Step, step, step!", part=3, tag="walking on sand", hide=["milo"], fx=[("walk", 0.1, "mama", 140, 3.6), ("walk", 0.1, "calf", 140, 3.6)],
+    S("wind", (1100, 640, 1500), "That helps them walk on soft sand. Step, step, step!", part=3, tag="walking on sand", hide=["milo"], pcam=(1290, 480, 2600), pcam2=(1290, 480, 2600), fx=[("walk", 0.1, "mama", 140, 3.6), ("walk", 0.1, "calf", 140, 3.6)],
       words=[("w:Step,", "STEP!", .2, .2, 1.2, "sun")]),
-    S("wind", C("wind", "calf", "body", 1000, 40, 10), "No sinking for Sandy!", part=3, tag="Sandy's feet", hide=["milo"], words=[("w:No", "NO SINKING!", .26, .14, 1.0, "pill")], fx=[("hop", "w:Sandy!", "calf")]),
-    S("gobi", WIDE, "Far, far away, it is cold and snowy.", part=3, trans="iris", tag="Gobi wide", props=[prop("snow", art.snow, 0, 0, 1.0)], words=[("w:cold", "BRRR!", .52, .13, 1.4, "")],
+    S("wind", C("wind", "calf", "body", 1000, 40, 10), "No sinking for Sandy!", part=3, tag="Sandy's feet", hide=["milo"], pcam=(720, 693, 1250), words=[("w:No", "NO SINKING!", .26, .14, 1.0, "pill", (.5, .29), .85)], fx=[("hop", "w:Sandy!", "calf")]),
+    S("gobi", WIDE, "Far, far away, it is cold and snowy.", part=3, trans="iris", tag="Gobi wide", pcam=GOB, pcam2=W(GOB), props=[prop("snow", art.snow, 0, 0, 1.0)], words=[("w:cold", "BRRR!", .52, .13, 1.4, "")],
       fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 160, "duration": 4.0, "ease": "none"}, "")]),
-    S("gobi", C("gobi", "bac", "body", 1300, 40, -120), "Sandy's cousins live here. Look closely at this camel's back!", part=3, tag="the cousin", props=[prop("snow", art.snow, 0, 0, 1.0)],
+    S("gobi", C("gobi", "bac", "body", 1300, 40, -120), "Sandy's cousins live here. Look closely at this camel's back!", part=3, tag="the cousin", pcam=GOB, pcam2=W(GOB), props=[prop("snow", art.snow, 0, 0, 1.0)],
       fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 220, "duration": 5.0, "ease": "none"}, ""), ("nod", "w:Look", "bac")]),
-    S("gobi", C("gobi", "bac", "hump", 1000, 0, 20), "One hump, two humps! This camel has two.", part=3, q=True, tag="count the humps", props=[prop("snow", art.snow, 0, 0, 1.0)],
-      words=[("w:One", "1", .41, .2, 1.8, "sun"), ("w:two", "2", .59, .2, 1.8, "sun")], fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 220, "duration": 5.0, "ease": "none"}, "")]),
-    S("paper_blue", PAPER, "Some camels have one hump. Some camels have two.", part=3, tag="board: one or two", actors=[("a", "camel", 520, 900, .78), ("b", "bactrian", 1320, 900, .78)],
-      words=[("w:one", "1 HUMP", .25, .12, 1.3, "sun"), ("w:two.", "2 HUMPS", .7, .12, 1.3, "")]),
+    S("gobi", C("gobi", "bac", "hump", 1000, 0, 20), "One hump, two humps! This camel has two.", part=3, q=True, tag="count the humps", pcam=GOB, pcam2=W(GOB), props=[prop("snow", art.snow, 0, 0, 1.0)],
+      words=[("w:One", "1", .41, .2, 1.8, "sun", (.3, .36), 1.3), ("w:two", "2", .59, .2, 1.8, "sun", (.54, .36), 1.3)], fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 220, "duration": 5.0, "ease": "none"}, "")]),
+    S("paper_blue", PAPER, "Some camels have one hump. Some camels have two.", part=3, tag="board: one or two", actors=[("a", "camel", 520, 900, .78), ("b", "bactrian", 1320, 900, .78)], pcam=(640, 583, 1300), pcam2=(1440, 583, 1300),
+      words=[("w:one", "1 HUMP", .25, .12, 1.3, "sun", (.36, .3), 1.0), ("w:two.", "2 HUMPS", .7, .12, 1.3, "", (1.45, .3), 1.0)]),
     S("gobi", C("gobi", "bac", "head", 900, -100, 60), "Long eyelashes keep out the snow and ice, too.", part=3, tag="cousin close", props=[prop("snow", art.snow, 0, 0, 1.0)],
-      fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 220, "duration": 5.0, "ease": "none"}, ""), ("blinkslow", "w:eyelashes", "bac-eye", 2)], words=[("w:snow", "SNOW", .22, .2, 1.3, "")]),
-    S("gobi", (960, 480, 1920), "How many humps does Sandy's mama have? One, or two?", part=3, q=True, tag="question 3", pause=3.4, props=[prop("snow", art.snow, 0, 0, 1.0)],
+      fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 220, "duration": 5.0, "ease": "none"}, ""), ("blinkslow", "w:eyelashes", "bac-eye", 2)], words=[("w:snow", "SNOW", .22, .2, 1.3, "", (.3, .29))]),
+    S("gobi", (960, 480, 1920), "How many humps does Sandy's mama have? One, or two?", part=3, q=True, tag="question 3", pause=3.4, pcam=GOB, pcam2=W(GOB), props=[prop("snow", art.snow, 0, 0, 1.0)],
       fx=[("fromto", 0, "#{p}snow_w", {"y": -200}, {"y": 320, "duration": 9.0, "ease": "none"}, ""), ("signs", "w:One,", ["ONE", "TWO"], 0, "wait:3.0")]),
-    S("dunes", C("dunes", "mama", "hump", 1100, 60, 20), "One! Mama has one big hump.", part=3, tag="one hump", hide=["calf"], words=[("w:One!", "1", .2, .28, 2.4, "sun")], fx=[("hop", "w:One!", "mama")]),
+    S("dunes", C("dunes", "mama", "hump", 1100, 60, 20), "One! Mama has one big hump.", part=3, tag="one hump", hide=["calf"], pcam=(1465, 473, 1600), pcam2=W((1465, 473, 1600)), words=[("w:One!", "1", .2, .28, 2.4, "sun", (.2, .42), 1.4)], fx=[("hop", "w:One!", "mama")]),
     # ---------------------------------------------------------------- QUIZ + RECAP
     S("night", WIDE, "The sun goes down. Time to remember what we learned!", part=4, trans="iris", tag="night wide", cam2=(1000, 560, 1760),
       fx=[("to", 0, ".{p}star", {"opacity": .2, "duration": .5, "yoyo": True, "repeat": 9, "stagger": {"each": .05, "from": "random"}}, "the stars twinkle")], words=[("w:remember", "QUIZ TIME!", .5, .2, 1.3, "sun")]),
-    S("night", (960, 520, 1920), "What is inside a camel's hump? Water, or fat?", part=4, q=True, tag="quiz 1", pause=3.2, fx=[("signs", "w:Water,", ["WATER", "FAT"], 1, "wait:2.8")]),
-    S("paper", (960, 520, 1500), "Fat! It is the camel's lunch box.", part=4, tag="board: fat again", props=[prop("cut", art.hump_cutaway, 700, 880, 1.25), prop("lb", art.lunchbox, 1400, 780, 1.4, True)],
+    S("night", (960, 520, 1920), "What is inside a camel's hump? Water, or fat?", part=4, q=True, tag="quiz 1", pause=3.2, pcam=(963, 179, 2800), fx=[("signs", "w:Water,", ["WATER", "FAT"], 1, "wait:2.8")]),
+    S("paper", (960, 520, 1500), "Fat! It is the camel's lunch box.", part=4, tag="board: fat again", pcam=(960, 560, 2100), props=[prop("cut", art.hump_cutaway, 700, 880, 1.25, p=(760, 880, 1.25)), prop("lb", art.lunchbox, 1400, 780, 1.4, True, p=(1330, 860, 1.2))],
       words=[("w:Fat!", "FAT!", .5, .12, 1.6, "sun")], fx=[("show", "w:lunch", "lb")]),
     S("night", (960, 520, 1920), "Was baby Sandy born with a hump? Yes, or no?", part=4, q=True, tag="quiz 2", pause=3.2, fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:2.8")]),
     S("night", C("night", "calf", "back", 760, 30, -30), "No! Just a little curly tuft.", part=4, tag="the tuft again", hide=["milo"], words=[("w:No!", "NO!", .22, .22, 1.6, "sun")],
       props=[prop("ar", lambda p: art.arrow(p, 540, 520, 660, 630), 0, 0, 1, True)], fx=[("show", "w:curly", "ar")]),
-    S("paper_blue", (960, 520, 1560), "How do camels keep sand out of their eyes?", part=4, q=True, tag="quiz 3", pause=1.6, props=[prop("eye", art.big_eye, 960, 620, 1.05)],
-      words=[("end+0.3", "?", .86, .2, 2.4, "sun")]),
-    S("paper_blue", (960, 560, 1300), "With two rows of long eyelashes!", part=4, tag="board: lashes again", props=[prop("eye", art.big_eye, 960, 620, 1.05)],
+    S("paper_blue", (960, 520, 1560), "How do camels keep sand out of their eyes?", part=4, q=True, tag="quiz 3", pause=1.6, pcam=EYE, props=[prop("eye", art.big_eye, 960, 620, 1.05)],
+      words=[("end+0.3", "?", .86, .2, 2.4, "sun", (.8, .33), 1.4)]),
+    S("paper_blue", (960, 560, 1300), "With two rows of long eyelashes!", part=4, tag="board: lashes again", pcam=EYE, props=[prop("eye", art.big_eye, 960, 620, 1.05)],
       fx=[("blinkslow", "w:two", "eye", 2)], words=[("w:two", "2 ROWS", .5, .1, 1.3, "sun")]),
     S("paper_pink", (960, 520, 1560), "As Sandy grows up, her hump will grow too.", part=4, tag="board: the hump grows", actors=[("c", "camel", 900, 930, 1.0)], pcam=(1020, 520, 1700),
       fx=[("grow", 0.2, "c", .8)], words=[("w:grow", "GROW!", .24, .2, 1.3, "sun", (.3, .3))]),
@@ -264,6 +268,29 @@ SHORT1_TAGS = ["hook: the hump", "hook: no hump", "two camels", "Sandy close", "
 SHORTS = [{"id": "zc_ep01_short1", "title": "Why Does This Baby Camel Have No Hump?", "band": ("WHAT IS INSIDE", "THE HUMP?"), "thumb_text": "NO HUMP?!",
            "shots": [next(i for i, s in enumerate(SHOTS) if s["tag"] == t) for t in SHORT1_TAGS]}]
 
+
+
+def T(src, **kw):
+    """A copy of a shot of the lesson (by its tag), with changes, for a Short's first or last shots."""
+    d = dict(next(x for x in SHOTS if x["tag"] == src)); d.update(kw); return d
+
+
+# Short 2: part 2 whole (food, the hump, water) + its own hook + the lesson's quiz on the hump
+SHORTS.append({"id": "zc_ep01_short2", "title": "How Much Can a Thirsty Camel Drink?", "band": ("HOW MUCH CAN", "IT DRINK?"), "thumb_text": "30 GALLONS?!", "part": 2,
+               "extra_first": [S("oasis", (1130, 640, 1100), "How much water can a thirsty camel drink?", part=2, q=True, tag="hook: how much", hide=["milo", "calf"], pcam=DRK, pcam2=W(DRK),
+                                 words=[("w:much", "?", .2, .3, 3.2, "sun", (.24, .36))], fx=[("drink", "w:thirsty", "mama", 2.0, 100)])],
+               "extra_last": [T("quiz 1", trans="iris", hide=["milo"], pcam=(1136, 400, 2400), pcam2=(1136, 400, 2400)), T("board: fat again")]})
+# Short 3: part 3 whole (sand, eyelashes, nose, feet, two humps) + the question first and the answer again at the end
+SHORTS.append({"id": "zc_ep01_short3", "title": "How Do Camels Keep Sand Out of Their Eyes?", "band": ("HOW DO CAMELS", "STOP SAND?"), "thumb_text": "BLINK, BLINK!", "part": 3,
+               "extra_first": [T("quiz 3", pause=0.5, part=3, tag="hook: sand in the eyes")],
+               "extra_last": [S("wind", C("wind", "milo", "body", 820), "So, how do camels keep the sand out?", part=3, q=True, tag="ask again", pause=1.2, trans="iris", pcam=V("wind", "milo", "body", 900),
+                                words=[("end+0.2", "?", .76, .3, 2.6, "sun", (.74, .4))]),
+                              T("board: lashes again", part=3),
+                              S("paper_pink", (960, 560, 1280), "And a nose that can close!", part=3, tag="board: nose again", pcam=(960, 560, 1900), props=[prop("nose", art.big_nose, 960, 600, 1.2)],
+                                words=[("w:close!", "CLOSE!", .5, .14, 1.3, "sun")], fx=[("to", "w:close!", "#{p}nose-nl,#{p}nose-nr", {"scaleY": .08, "transformOrigin": "50% 50%", "duration": .3}, "the nostrils shut")]),
+                              S("wind", C("wind", "calf", "head", 760, -20, 20), "Blink, blink! Bye-bye, sand!", part=3, tag="bye sand", pcam=V("wind", "calf", "head", 940, -20, 60),
+                                fx=[("blinkslow", "w:Blink,", "calf-eye", 2), ("hop", "w:Bye-bye,", "calf")], words=[("w:Bye-bye,", "BYE, SAND!", .24, .2, 1.1, "sun", (.5, .3))])]})
+
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
 THUMBS = {
     "zc_ep01": {"place": "dunes", "cam": (960, 540, 1920),
@@ -274,5 +301,12 @@ THUMBS = {
                        "actors": [("calf", 960, 900, 1.0, False, 'gsap.set("#P-neck",{rotation:-10,svgOrigin:"190 -330"});')],
                        "props": [(lambda p: art.arrow(p, 870, 250, 945, 395), 0, 0, 1)],
                        "words": [("WHERE IS IT?", 540, 330, 165, "sun"), ("?", 330, 600, 330, "")]},
+    "zc_ep01_short2": {"place": "oasis", "cam": (1180, 500, 1700),
+                       "actors": [("camel", 1000, 880, .9, False, 'gsap.set("#P-neck",{rotation:100,svgOrigin:"190 -330"});')],
+                       "props": [(art.jug, 1540, 600, 2.2)],
+                       "words": [("30", 540, 380, 330, "sun"), ("GALLONS?!", 540, 600, 140, "")]},
+    "zc_ep01_short3": {"place": "paper_blue", "cam": (960, 540, 1900),
+                       "props": [(art.big_eye, 960, 740, 1.3), (art.sand_puffs, 620, 420, .9)],
+                       "words": [("BLINK,", 470, 420, 190, "sun"), ("BLINK!", 620, 620, 190, "")]},
 }
 SHORTS[0]["thumb_text"] = "WHERE IS IT?"; EP["thumb_text"] = "NOT WATER?!"

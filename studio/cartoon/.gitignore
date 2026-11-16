@@ -6,3 +6,4 @@ out/*/*.mp4
 __pycache__/
 out/*/work-*/
 out/*/.*/
+render_s*.log

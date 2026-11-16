@@ -56,3 +56,4 @@
 | 2026-11-16 | shorts3d/zs3d_baby_action.mp4 | 3d_short_cut | PASS | - | - | - |
 | 2026-11-16 | shorts3d/zs90_pig_mud.mp4 | lesson_fact_short_90 | PASS | - | - | - |
 | 2026-11-16 | cartoon/zc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-16 | cartoon/za_ep01.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

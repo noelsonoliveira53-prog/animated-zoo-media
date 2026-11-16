@@ -483,7 +483,7 @@
  {
   "file": "shorts3d/zs90_bear_cub.mp4",
   "title": "Where Are Bear Cubs Born? Baby Animals with Milo",
-  "description": "Where Are Bear Cubs Born? Baby Animals with Milo A quick animal fact for kids with Milo the bluebird, from the lesson \u201cBaby Animals for Kids! How Animal Babies Grow with Milo\u201d.\nBlack bear cubs are born in the middle of the winter denning period (mid-January to early February), in their mothers' dens; they are born tiny, helpless and hairless, weighing less than half a pound, and stay with their mother for about 18 months; curved claws help black bears climb trees to search for food; 85% of a Great Smoky Mountains black bear's diet is berries and nuts (National Park Service, 'Black Bears', nps.gov/subjects/bears/black-bears.htm, read Nov 15 2026).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
+  "description": "Where are bear cubs born? Guess the baby with Milo the bluebird! A quick animal fact for kids from the lesson \u201cBaby Animals for Kids! How Animal Babies Grow with Milo\u201d.\nBlack bear cubs are born in the middle of the winter denning period, in their mothers' dens; they are born tiny and hairless and stay with their mother for about 18 months (National Park Service, 'Black Bears').\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.",
   "tags": [
    "baby animals for kids",
    "animal babies",
@@ -495,7 +495,7 @@
    "preschool learning"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep14",
   "seconds": 86.56,
@@ -504,6 +504,8 @@
   "thumb_text": "WINTER DEN!",
   "note": "interactive-lesson prototype: do not upload until Noelson approves the new format",
   "date": "2026-11-17",
-  "time": "7:30 AM"
+  "time": "7:30 AM",
+  "video_id": "3e6ZuMoRujM",
+  "thumb_set": true
  }
 ]

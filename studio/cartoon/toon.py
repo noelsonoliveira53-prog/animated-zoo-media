@@ -534,6 +534,7 @@ def main():
         if len(band[0]) > 15 or len(band[1]) > 10: sys.exit(f"the Short's title band is too long for two lines (15 and 10 letters at most): {band}")      # a third line sat on the picture's words (Nov 16)
     out = os.path.join(HERE, "out", ep["id"]); proj = os.path.join(out, "proj_" + ("p" if portrait else "l")); os.makedirs(os.path.join(proj, "assets"), exist_ok=True)
     total, miss, tot = voice_lines(ep, shots); total += ep.get("tail", 0.6) if not portrait else 0.4
+    shots[0]["t0"] = 0.0      # the first shot owns the lead-in too: until Nov 16 the first 0.3 s of every video had no camera at all (the whole stage, or its left half in a Short), then jumped to the framing
     film = Film(ep, mod.STAGES, shots, portrait); html = film.build_html(total, band)
     res, ev = plan_gate(film, total, ep); res["words_placed"] = f"{tot - miss}/{tot}"
     if miss: res["fails"].append(f"word sync: {miss} of {tot} words could not be placed from the audio")

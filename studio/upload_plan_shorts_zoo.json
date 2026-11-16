@@ -659,7 +659,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "rendering",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -668,7 +668,8 @@
   "watermark": "top",
   "date": "2026-11-20",
   "time": "11:30 AM",
-  "seconds": 89.1
+  "seconds": 89.1,
+  "note": "being rendered again with the first-frame camera fix; do not upload the file of commit 3ad6389"
  },
  {
   "file": "cartoon/zc_ep02_short3.mp4",

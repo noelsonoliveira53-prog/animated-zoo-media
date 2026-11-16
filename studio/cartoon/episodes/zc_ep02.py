@@ -385,7 +385,7 @@ SHORTS = [
     {"id": "zc_ep02_short3", "title": "Can an Elephant Breathe Under Water?", "band": ("WHERE DID", "TUMBLE GO?"), "thumb_text": "PEEKABOO!", "part": 3,
      "extra_first": [S("river", (1167, 720, 1000), "Can an elephant breathe under the water?", part=3, q=True, tag="hook: under the water", actors=[("tumble", "tumble", 900, 1263, .62)], pcam=(1167, 640, 1300), props=RV(),
                        fx=[("to", 0, "#{p}tumble-trunk", UP), ("to", 0.2, "#{p}tumble_w", {"y": "-=14", "duration": .6, "yoyo": True, "repeat": 5}, "the tip of a trunk bobs on the water")],
-                       words=[("w:breathe", "?", .26, .26, 2.6, "sun", (.5, .34), 1.6)])]},
+                       words=[(0.0, "?", .26, .26, 2.6, "sun", (.5, .34), 1.6)])]},
 ]
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark

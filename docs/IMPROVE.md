@@ -54,3 +54,6 @@ Every review and every views check adds one concrete thing to do better. Before 
 - 2026-11-16: The animals' own tails are too small to teach with (lion, monkey, giraffe tails hardly visible). New teachprops 'tail' (lion tuft, monkey tail coiled on a branch, giraffe hair) stands beside the animal in zool_ep17; a spec 'leave' given as a number is read as a line REF by teach.py (flies vanished at once): write leave as [line, word] (why: test stills of zool_ep17 Nov 16)
 - 2026-11-16: An example cued on the LAST word of a line (bamboo, pool, sun) appears only as the line ends; cue examples on an early word of the line. zool_ep14 hello 0:09: the elephant is cut by the left edge while the reveal shot moves in (whole by 0:14) (why: test stills of zool_ep15/16/18 and raw frame 9 s of zool_ep14)
 - 2026-11-16: cue every example on an early word of its line so it is up while it is named (why: review of zool_ep14.mp4)
+- 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_zebra_stripes.mp4)
+- 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_tiger_skin.mp4)
+- 2026-11-16: lesson Short titles ask the question the fact answers (why: review of shorts3d/zs90_bear_cub.mp4)

@@ -45,3 +45,4 @@
 | 2026-11-15 | zool_ep10.mp4 | 3d_lesson | PASS | - | - | quiz check beside the head and QUIZ TIME word clear of the ? badge (slice zool_ep10q); striped sock and ball inside the picture in the hello close-up |
 | 2026-11-15 | shorts3d/zs90_tiger_skin.mp4 | lesson_fact_short_90 | PASS | - | - | - |
 | 2026-11-15 | zool_ep11.mp4 | 3d_lesson | PASS | - | - | neck-bones board title inside the picture for the whole exhibit shot; plate visible on snow |
+| 2026-11-16 | zool_ep13.mp4 | 3d_lesson | PASS | - | - | hello count line wide with the word gone before the 1-2-3 (teach.py rule, first render with it is zool_ep14); no animal close-up while a low example is up (magnifier 2:32) |

@@ -1939,7 +1939,8 @@
   "format": "3d_singalong",
   "duration": 160.0,
   "note": "native 4K test (a4k2) - awaiting Noelson approval before any upload moved to Nov 19 (zool_ep01 lesson takes Nov 18, song/lesson alternation)",
-  "res": "3840x2160"
+  "res": "3840x2160",
+  "watermark": "tl"
  },
  {
   "file": "zool_ep03.mp4",

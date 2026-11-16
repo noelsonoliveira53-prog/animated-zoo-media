@@ -532,8 +532,8 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     Tested: finish.py's filter graph on 6 s of 4K (AV1 10-bit, sound kept, mark found, both corners); lesson_shorts.make() on a
     16 s cut (mark found). A full finish.py run with the mark has NOT happened yet: zool_ep15-18 will be the first.
   * Waiting files re-encoded with the mark (frames looked at, sound stream present): Shorts zs3d_baby_action, mama_giraffe,
-    milo_lion, count123, knees_paws, sleep_action, zs90_pig_mud, zs90_koala_notbear; song zoo3d_ep17 (corner sheet: nothing
-    under the mark). review PASS read for zs3d_baby_action and zs90_pig_mud.
+    milo_lion, count123, knees_paws, sleep_action, zs90_pig_mud, zs90_koala_notbear; songs zoo3d_ep17 and zoo3d_ep18 (held; corner
+    sheets: nothing under the mark; ep18 encoded twice because the first pass undershot, 73 -> 62 MB, now 69.8 MB). review PASS read for zs3d_baby_action and zs90_pig_mud.
   * NOT marked: everything already uploaded or scheduled (through Nov 17, plus zool_ep01 on Nov 18) and the held zs4k_* Shorts.
   * Top right is where the answer sign's check mark sits (WHITE sign, zool_ep12 1:43), so top left is the default. For every new
     lesson LOOK at `watermark.py corner <file> <sheet.jpg>` before uploading.

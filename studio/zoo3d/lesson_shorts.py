@@ -10,6 +10,7 @@ the question as a big title on top, the spoken line as a caption underneath. No 
 Writes <repo>/shorts3d/<short id>.mp4 and adds/updates studio/upload_plan_shorts_zoo.json entries with status "hold_review".
 """
 import json, os, sys, subprocess, textwrap
+import watermark
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 FONT = os.path.join(HERE, "fonts", "Baloo2-ExtraBold.ttf")
@@ -46,16 +47,18 @@ def make(raw, sid, sh, outdir):
           f"drawbox=x=0:y=1163:w=2160:h=12:color=white@0.9:t=fill,drawbox=x=0:y=2525:w=2160:h=12:color=white@0.9:t=fill,"
           f"drawtext=fontfile={FONT}:text='{l1}':fontsize={s1}:fontcolor=white:borderw=18:bordercolor=0x402010:x=(w-tw)/2:y=470,"
           f"drawtext=fontfile={FONT}:text='{l2}':fontsize={s2}:fontcolor=0xFFD23F:borderw=22:bordercolor=0x402010:x=(w-tw)/2:y=710,"
-          f"subtitles={ass}:fontsdir={os.path.join(HERE, 'fonts')},"
-          f"fade=t=in:st=0:d=0.25,fade=t=out:st={d - 0.35}:d=0.35,format=yuv420p[v];"
+          f"subtitles={ass}:fontsdir={os.path.join(HERE, 'fonts')}[zsub];"
+          + watermark.chain("zsub", "zwmd", "short", 2, 2160) +      # channel watermark above the title (Noelson, Nov 16: on every video)
+          f";[zwmd]fade=t=in:st=0:d=0.25,fade=t=out:st={d - 0.35}:d=0.35,format=yuv420p[v];"
           f"[1:a]afade=t=in:st=0:d=0.25,afade=t=out:st={d - 0.5}:d=0.5,loudnorm=I=-16:TP=-1.5[au]")
     cmd = ["ffmpeg", "-v", "error", "-y", "-ss", str(a), "-t", str(d), "-i", raw, "-ss", str(a), "-t", str(d), "-i", os.path.join(HERE, "jobs", f"{sid}_song.wav"),
-           "-filter_complex", fc, "-map", "[v]", "-map", "[au]", "-r", "24", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "40M", "-bufsize", "80M",
+           "-i", watermark.wm_file("short"), "-filter_complex", fc, "-map", "[v]", "-map", "[au]", "-r", "24", "-c:v", "libx264", "-preset", "medium", "-crf", "19", "-maxrate", "40M", "-bufsize", "80M",
            "-c:a", "aac", "-b:a", "192k", "-ar", "48000", "-movflags", "+faststart", out]
     if not THUMBS_ONLY: subprocess.run(cmd, check=True)
     if os.path.getsize(out) > 95e6:             # files are fetched from GitHub for the upload: 100 MB is the limit there
         cmd[cmd.index("-crf") + 1] = "23"; cmd[cmd.index("-maxrate") + 1] = "8M"; cmd[cmd.index("-bufsize") + 1] = "16M"; subprocess.run(cmd, check=True)
     assert os.path.getsize(out) < 100e6, f"{out} is over 100 MB"
+    if not THUMBS_ONLY: assert watermark.has_mark(out), f"{out}: the channel watermark is not in the picture"
     # custom thumbnail (Noelson, Nov 14: every video gets its own thumbnail when it is posted): the moment the example is on
     # screen, same layout as the Short, its own 3 words (never the title's words), no captions. 1080x1920 PNG.
     tdir = os.path.join(REPO, "brand", "zoo", "shorts"); os.makedirs(tdir, exist_ok=True)
@@ -97,7 +100,7 @@ def main():
         desc = f"{sh['title']} A quick animal fact for kids with Milo the bluebird, from the lesson “{song['meta']['title']}”.\n{fact}\n\n{BOILER}"
         ent = {"file": rel, "title": sh["title"], "description": desc, "tags": song["meta"].get("tags", [])[:8], "made_for_kids": True,
                "status": "hold_review", "format": "lesson_fact_short_90" if V3 else "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
-               "thumb": os.path.relpath(thumb, REPO), "thumb_text": sh.get("thumb_text", ""),
+               "thumb": os.path.relpath(thumb, REPO), "thumb_text": sh.get("thumb_text", ""), "watermark": "top",
                "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"}
         old = next((e for e in items if e.get("file") == rel), None)
         if old: old.update(ent)

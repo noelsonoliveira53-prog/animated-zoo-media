@@ -14,6 +14,7 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 - Lessons are interactive: questions with answer signs and thinking time, on-screen examples of the exact thing being discussed, every word in sync with the voice. Never just a character moving to narration.
 - Render everything in native 4K.
 - Every video and every Short gets its own custom thumbnail that shows the example, with 3 words at most and none of the title's words.
+- Every video and every Short is uploaded with the channel watermark in the picture (Milo's channel picture + "The Animated Zoo", `studio/zoo3d/watermark.py`); look at the mark's corner sheet: nothing that matters sits under it. Thumbnails carry no mark.
 - Daily grid (ET): lessons 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM; Shorts 7:30 AM, 11:30 AM, 7:30 PM; song 3:30 PM. Always schedule, never publish immediately.
 - Nothing in a new format is uploaded until the owner has watched one full video of it and approved it.
 - Before rendering, look at test stills of every example, every answer sign, every quiz answer close-up and every group scene: no character stands inside another, no sign or check mark covers a face or hides behind a character, nothing is cut by the frame or by the Short's crop, each example is the right size next to the animal.

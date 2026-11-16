@@ -105,6 +105,10 @@ def review(fname):
             m = re.search(r"mean_volume: (-?[0-9.]+)", vol)
             if m and float(m.group(1)) < -45: fails.append(f"audio is almost silent (mean {m.group(1)} dB)")
         if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo}-{hi} s for {fmt} (KID-04)")
+        # channel watermark (Noelson, Nov 16: on every video that is uploaded)
+        import watermark
+        _wp = entry.get("watermark") if entry.get("watermark") in ("tl", "tr") else "tl"
+        if not watermark.has_mark(path, _wp): fails.append("the channel watermark is not in the picture: finish it again, or `python3 studio/zoo3d/watermark.py apply <in> <out>` for a finished file")
         os.makedirs(os.path.join(HERE, "finished"), exist_ok=True)
         sheet = os.path.join(HERE, "finished", "review_" + os.path.splitext(os.path.basename(fname))[0] + ".png")
         subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", path, "-vf", f"fps=12/{dur:.2f},scale=480:-1,tile=4x3", "-frames:v", "1", sheet])

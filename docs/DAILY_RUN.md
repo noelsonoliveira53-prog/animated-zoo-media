@@ -171,6 +171,18 @@ written, rendered, titled and uploaded.
    lessons with lesson_shorts.py (format approved Nov 14 11:00 PM; lesson Shorts take the slots first): 85-95 s each, one whole lesson part per Short (rule 5
    LENGTHS; the older 15-60 s cuts are no longer made), and never two Shorts from the same episode on the same day. Check each
    new Short has sound.
+   WATERMARK IS MANDATORY (Noelson, Nov 16: "include watermark on all videos on upload with the channel characteristics"). Every
+   upload, episode AND Short, carries the channel mark in the picture: Milo's channel picture in a white ring + "The Animated Zoo"
+   (brand/zoo/watermark.png, watermark_short.png; built by `python3 studio/zoo3d/watermark.py build`). YouTube's own channel
+   watermark is not shown on made-for-kids videos, so it is burned in:
+   - finish.py lays it on every episode (top left; job "watermark_pos": "tr" = top right) and lesson_shorts.py on every Short
+     (centred above the title). Both stop if the mark is not in the finished picture. Thumbnails stay without the mark.
+   - A finished file from before Nov 16 that is still waiting: `python3 studio/zoo3d/watermark.py apply <in.mp4> <out.mp4>`,
+     then replace the file (same name) and set the plan entry's "watermark".
+   - review.py FAILS a video without the mark (`watermark.py check <file>`). Never upload around it.
+   - LOOK: `python3 studio/zoo3d/watermark.py corner <file> <sheet.jpg>` shows the mark's corner every 5 s. No face, answer sign,
+     3D word or example may sit under the mark; if one does, finish again with "watermark_pos": "tr" and look at that corner.
+   - Videos that were already uploaded or scheduled before Nov 16 10 AM have no mark and are not replaced for it.
 3. THUMBNAILS ARE MANDATORY (Noelson, Nov 14: "ensure the new posts are activating with YouTube skills to ensure personalized
    thumbnails are being applied to all videos upon posting"). Every upload, episode AND Short, gets its own custom thumbnail:
    - The file comes from the plan entry's "thumb" (episodes: brand/zoo/thumb_<id>.png from finish.py; Shorts:

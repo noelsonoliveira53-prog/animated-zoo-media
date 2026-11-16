@@ -156,7 +156,13 @@ def main():
             vf = f"subtitles={sub}:fontsdir={FONT_DIR}"
         else:
             vf = f"scale=3840:2160:flags=lanczos,unsharp=5:5:0.5:5:5:0.0,subtitles={sub}:fontsdir={FONT_DIR}"
-        subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
+        # channel watermark (Noelson, Nov 16: on every video; YouTube's own watermark is not shown on made-for-kids videos):
+        # laid on after the lyrics, top left (job "watermark_pos": "tr" = top right when the top left corner is in use)
+        import watermark
+        wpos = job.get("watermark_pos", "tl")
+        fc = f"[0:v]{vf}[zsub];" + watermark.chain("zsub", "v", "wide", 1, 3840, wpos)
+        enc_in = ["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-i", watermark.wm_file("wide"), "-filter_complex", fc, "-map", "[v]", "-map", "0:a"]
+        subprocess.run(enc_in + ["-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                         "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
         print("4K AV1", round(os.path.getsize(out) / 1e6, 1), "MB, video", vb // 1000, "kbps")
         # quality gate: every published episode must be 3840x2160 and under 100 MB (GitHub raw upload limit)
@@ -164,9 +170,10 @@ def main():
         if wh != "3840,2160": sys.exit(f"QUALITY GATE: output is {wh}, expected 3840,2160")
         if os.path.getsize(out) >= 99.5e6:   # re-encode tighter once
             vb = int(vb * 0.9)
-            subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", raw, "-vf", vf, "-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
+            subprocess.run(enc_in + ["-c:v", "libsvtav1", "-preset", arg("--preset", "9"), "-b:v", str(vb),
                             "-svtav1-params", "tune=0", "-g", "240", "-pix_fmt", "yuv420p10le", "-af", LOUD, "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", out], check=True)
             if os.path.getsize(out) >= 99.5e6: sys.exit("QUALITY GATE: 4K file still over 100 MB")
+        if not watermark.has_mark(out, wpos): sys.exit("QUALITY GATE: the channel watermark is not in the picture")
     # thumbnail: the thumb frame + big words (job "thumb_align": 7 = top left (default), 1 = bottom left when a face is top left:
     # COUNT THE BONES! sat on the giraffe's eyes in zool_ep11, Nov 15)
     tf = job.get("thumb_frame", 120) / timing.get("fps", 24)
@@ -212,7 +219,8 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
     desc = meta["description"].rstrip() + "\n\n" + song.get("desc_header", "LYRICS") + "\n" + "\n".join(seen[:40])
     entry = {"file": rel, "title": meta["title"], "description": desc, "tags": meta.get("tags", []), "date": date,
              "time": arg("--time", SLOT.get(ch, "2:00 PM")), "thumb": os.path.relpath(tdst, repo), "made_for_kids": True,
-             "status": ("hold_review" if song.get("lesson_version", 0) >= 3 and not os.path.exists(os.path.join(HERE, "LESSON_V3_APPROVED")) else "to_upload"), "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1)}
+             "status": ("hold_review" if song.get("lesson_version", 0) >= 3 and not os.path.exists(os.path.join(HERE, "LESSON_V3_APPROVED")) else "to_upload"), "format": song.get("format", "3d_singalong"), "duration": round(timing["duration"], 1),
+             "watermark": job.get("watermark_pos", "tl")}
     plan = [p for p in plan if p["file"] != rel] + [entry]
     plan.sort(key=lambda p: (p["date"], p["time"]))
     json.dump(plan, open(plan_p, "w"), indent=1)

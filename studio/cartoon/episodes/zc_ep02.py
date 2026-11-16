@@ -387,3 +387,24 @@ SHORTS = [
                        fx=[("to", 0, "#{p}tumble-trunk", UP), ("to", 0.2, "#{p}tumble_w", {"y": "-=14", "duration": .6, "yoyo": True, "repeat": 5}, "the tip of a trunk bobs on the water")],
                        words=[("w:breathe", "?", .26, .26, 2.6, "sun", (.5, .34), 1.6)])]},
 ]
+
+# thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
+_UPJS = 'gsap.set("#P-trunk",{rotation:-160,scaleY:1.35,svgOrigin:"392 -430"});'
+THUMBS = {
+    "zc_ep02": {"place": "savanna", "cam": (960, 540, 1920),
+                "actors": [("tumble", 420, 1040, 1.25, False, 'gsap.set("#P-trunk",{rotation:-70,svgOrigin:"392 -430"});')],
+                "props": [(art2.fruit, 1335, 470, .95), (lambda p: art.water_drop(p, .8), 1610, 640, 1.0), (art2.heart, 1420, 850, 2.2)],
+                "words": [("ONE NOSE?!", 1300, 170, 200, "sun")]},
+    "zc_ep02_short1": {"place": "savanna", "cam": (835, 640, 840),
+                       "actors": [("tumble", 560, 936, .6, False, 'gsap.set("#P-trunk",{rotation:-62,scaleY:1.25,svgOrigin:"392 -430"});')],
+                       "props": [(lambda p: art.arrow(p, 800, 830, 1015, 800), 0, 0, 1)],
+                       "words": [("SO LONG!", 540, 440, 210, "sun")]},
+    "zc_ep02_short2": {"place": "river", "cam": (1230, 480, 1700),
+                       "actors": [("elephant", 1500, 905, .8, True, 'gsap.set("#P-trunk",{scaleY:1.38,svgOrigin:"392 -430"});')],
+                       "props": [(water, 960, 850, 1.0), (cup, 905, 720, 1.3), (crossx, 905, 600, 1.1)],
+                       "words": [("NOT A", 540, 340, 170, ""), ("STRAW!", 540, 520, 200, "sun")]},
+    "zc_ep02_short3": {"place": "river", "cam": (1167, 640, 1300),
+                       "actors": [("tumble", 900, 1263, .62, False, _UPJS)],
+                       "props": [(water, 960, 850, 1.0), (lambda p: art.arrow(p, 1330, 600, 1215, 770), 0, 0, 1)],
+                       "words": [("PEEKABOO!", 540, 520, 170, "sun")]},
+}

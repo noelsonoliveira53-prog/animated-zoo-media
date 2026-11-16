@@ -1,11 +1,11 @@
 {
  "id": "za_ep01",
- "total": 304.35120833333366,
+ "total": 304.471166666667,
  "plan": {
-  "length": 304.4,
-  "shots": 76,
-  "visual_changes": 272,
-  "mean_gap": 1.12,
+  "length": 304.5,
+  "shots": 77,
+  "visual_changes": 277,
+  "mean_gap": 1.1,
   "longest_gap": 5.67,
   "longest_gap_at": 200.7,
   "over_6s": [],
@@ -27,11 +27,11 @@
   "questions": 5,
   "longest_without_question": 82.2,
   "first_words_at": 0.42,
-  "shot_mean": 4.0,
+  "shot_mean": 3.95,
   "beats": {
    "hook": 1,
    "goal": 1,
-   "song": 3,
+   "song": 4,
    "obstacle1": 8,
    "fact": 3,
    "obstacle2": 15,
@@ -1362,7 +1362,7 @@
   [
    291.23,
    "new shot",
-   "the zoo at sunset song: adventure day"
+   "the zoo at sunset song: hooray"
   ],
   [
    292.23,
@@ -1370,37 +1370,62 @@
    "tumble hops"
   ],
   [
+   293.02,
+   "word",
+   "HOORAY!"
+  ],
+  [
    293.43,
    "action",
    "mango hops"
   ],
   [
-   294.63,
+   294.43,
    "action",
    "sandy hops"
   ],
   [
-   296.63,
+   295.8,
+   "new shot",
+   "the zoo at sunset song: adventure day"
+  ],
+  [
+   296.4,
    "action",
    "tumble hops"
   ],
   [
-   297.83,
-   "action",
-   "mango hops"
+   296.75,
+   "picture",
+   "h1"
   ],
   [
-   300.24,
+   297.4,
+   "action",
+   "mama nods"
+  ],
+  [
+   297.86,
+   "picture",
+   "h2"
+  ],
+  [
+   298.8,
+   "action",
+   "tumble hops"
+  ],
+  [
+   300.36,
    "new shot",
    "the zoo at sunset goodbye"
   ],
   [
-   301.06,
+   301.18,
    "action",
    "milo hops"
   ],
   [
-   301.06,
+   301.18,
    "word",
    "SEE YOU SOON!"
   ]
@@ -6192,11 +6217,11 @@
   },
   {
    "place": "zoo_eve",
-   "say": "Friends help friends, hooray, hooray! What a big adventure day!",
+   "say": "Friends help friends, hooray, hooray!",
    "t0": 291.231291666667,
-   "t1": 300.240166666667,
+   "t1": 295.79570833333366,
    "v0": 291.351291666667,
-   "dur": 8.888875,
+   "dur": 4.444416666666666,
    "words": [
     [
      "Friends",
@@ -6222,31 +6247,47 @@
      "hooray!",
      2.222,
      3.244
-    ],
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "What a big adventure day!",
+   "t0": 295.79570833333366,
+   "t1": 300.3601250000003,
+   "v0": 295.91570833333367,
+   "dur": 4.444416666666666,
+   "words": [
     [
      "What",
-     4.444,
-     4.956
+     0.0,
+     0.511
     ],
     [
      "a",
-     5.0,
-     5.256
+     0.556,
+     0.811
     ],
     [
      "big",
-     5.278,
-     5.533
+     0.833,
+     1.089
     ],
     [
      "adventure",
-     5.556,
-     6.322
+     1.111,
+     1.878
     ],
     [
      "day!",
-     6.389,
-     7.667
+     1.944,
+     3.222
     ]
    ],
    "part": 0,
@@ -6259,9 +6300,9 @@
   {
    "place": "zoo_eve",
    "say": "See you on the next adventure, friends!",
-   "t0": 300.240166666667,
-   "t1": 303.15120833333367,
-   "v0": 300.360166666667,
+   "t0": 300.3601250000003,
+   "t1": 303.271166666667,
+   "v0": 300.4801250000003,
    "dur": 2.3910416666666667,
    "words": [
     [

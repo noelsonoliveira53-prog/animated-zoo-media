@@ -558,7 +558,9 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   5. `python3 pace_check.py out/<id>/<id>.mp4 --max 8`, `python3 ../zoo3d/watermark.py check <file>` and `corner <file> <sheet.jpg>`;
      frames of the finished file at the end of every shot, looked at;
   6. `python3 thumb.py <id>` (refuses more than 3 words or a word of the title).
-- Measured on the session's machine (2 cores): zc_ep01 (304.7 s) rendered in 37 min, its Short (87.7 s) in 13 min. Never run stills for an
+- Measured on the session's machine (2 cores): zc_ep01 (304.7 s) rendered in 37 min, za_ep01 (304.5 s) in 33 min, the Short (87.7 s) in 13 min.
+  A changed ending can be rendered alone: `--from <keyframe time> --to <end>`, then join with the first part cut at that keyframe
+  (`-video_track_timescale 12288` on the new part first, or the joined file's clock is wrong). Never run stills for an
   episode while that episode is rendering: both write the same `proj_l/index.html`.
 - Voices: Kokoro (sing.py) per character from EP["cast"], pitched with WORLD (`toon.shift`); sung refrains from `sing.build`. Nobody has
   listened to them: they were checked by word alignment (every word placed, also on the pitched voices) and loudness only.

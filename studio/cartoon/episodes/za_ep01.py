@@ -78,8 +78,9 @@ SING_GO = dict(REFRAIN, lines=[{"text": "Friends help friends, come along with m
                                {"text": "Step by step, what will we see?", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
 SING_HOME = dict(REFRAIN, lines=[{"text": "Friends help friends, come along with me!", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
                                  {"text": "Home we go, as happy as can be!", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:.5 E4:.5 C4:2", "rest": 1}])
-SING_END = dict(REFRAIN, lines=[{"text": "Friends help friends, hooray, hooray!", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2},
-                                {"text": "What a big adventure day!", "notes": "F4:1 F4:.5 F4:.5 E4:.5,D4:.5,E4:.5 C4:2.5", "rest": 2}])
+# the ending song line, in two shots (one long wide shot was 8.8 s without a visual change in the finished file: over the 8 s gate)
+SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "Friends help friends, hooray, hooray!", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "What a big adventure day!", "notes": "F4:1 F4:.5 F4:.5 E4:.5,D4:.5,E4:.5 C4:2.5", "rest": 2}])
 
 # stages used for one or two shots
 IN_WATER = [("tumble", "tumble", 620, 1012, .62), ("milo", "milo", 1480, 660, .7, True, True)]
@@ -266,10 +267,13 @@ SHOTS = [
       words=[("w:tall", "ONE DAY...", .26, .2, 1.0, "pill")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 760, 0, 0), "A present made with friends is the best present of all.", beat="ending", tag="the lesson", hide=["mama", "tumble", "sandy", "mango"],
       words=[("w:friends", "WITH FRIENDS", .74, .26, .85, "pill")]),
-    S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "Do you remember? Who used a trunk like a snorkel? Tumble, or Mango?", q=True, beat="ending", tag="question: who", pause=3.2, hide=["mama", "tumble", "sandy", "mango"],
+    S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "Do you remember? Who used a trunk like a snorkel? Tumble, or Mango?", q=True, beat="ending", tag="question: who", pause=3.2, hide=["mama", "tumble", "sandy", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60),
       fx=[("signs", "w:Tumble,", ["TUMBLE", "MANGO"], 0, "wait:2.8")]),
-    S("zoo_eve", WIDE, who="milo", sing=SING_END, beat="song", tag="song: adventure day", cam2=(980, 560, 1880), props=[prop("spr", art2.sprout, 1114, 950, .8)],
-      fx=[("hop", 1.0, "tumble"), ("hop", 2.2, "mango"), ("hop", 3.4, "sandy"), ("hop", 5.4, "tumble"), ("hop", 6.6, "mango", 2)]),
+    S("zoo_eve", WIDE, who="milo", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880), props=[prop("spr", art2.sprout, 1114, 950, .8)],
+      fx=[("hop", 1.0, "tumble"), ("hop", 2.2, "mango"), ("hop", 3.2, "sandy")], words=[("w:hooray,", "HOORAY!", .18, .3, 1.05, "sun")]),
+    S("zoo_eve", (1240, 640, 1280), who="milo", sing=SING_END_B, beat="song", tag="song: adventure day", cam2=(1240, 620, 1200), hide=["milo", "sandy", "mango"],
+      props=[prop("spr", art2.sprout, 1114, 950, .8), prop("h1", lambda p: art2.heart(p), 1150, 440, .9, True), prop("h2", lambda p: art2.heart(p, "#ff9ab8"), 1050, 390, .6, True)],
+      fx=[("hop", 0.6, "tumble"), ("nod", 1.6, "mama"), ("show", "w:big", "h1"), ("show", "w:day!", "h2"), ("hop", 3.0, "tumble")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 0, 0), "See you on the next adventure, friends!", beat="ending", tag="goodbye", hide=["mama", "sandy"], fx=[("hop", "w:next", "milo")],
       words=[("w:next", "SEE YOU SOON!", .74, .2, .9, "pill")]),
 ]

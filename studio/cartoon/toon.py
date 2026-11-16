@@ -116,6 +116,7 @@ def voice_lines(ep, shots):
             if c.get("pitch") or c.get("formant", 1.0) != 1.0:
                 a = shift(a, c.get("pitch", 0), c.get("formant", 1.0)); pk = float(np.abs(a).max())
                 if pk > .9: a = a * (.9 / pk)          # a pitched voice can peak above full scale: bring the whole line down, never clip it
+            if c.get("gain"): a = a * c["gain"]        # the voices of the cast at the same loudness as the storyteller
             toks = s["say"].split()
             if len(al) != len(toks):        # "speak" differs from the caption text: spread the times over the caption's words
                 d = len(a) / SR; al = [(d * k / len(toks), d * (k + 1) / len(toks)) for k in range(len(toks))]

@@ -9,12 +9,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 THEMES = [
  dict(key="savanna", name="Savanna week", friend="Tumble the baby elephant", place="the sunny savanna",
   adv=[("Baby Elephant's Birthday Surprise for Mama", "Tumble has no present for Mama. He sets off with Milo for the golden fruit at the top of the tallest tree.|A river, a tall tree and a sandy hill are in the way. Mango and Sandy help. Then the fruit rolls away and goes splat.|The friends find the seed inside and plant a fruit tree for Mama. A trunk hug.",
-        "R: a trunk works like a snorkel in deep water (WWF). R: a spider monkey's tail holds on like a fifth limb (Nat Geo Kids). R: a camel's wide feet do not sink in sand (San Diego Zoo).", "Tumble holds the golden fruit up to Mama, both smiling. Words: FOR MAMA!", "built as the test episode"),
+        "R: a trunk works like a snorkel in deep water (WWF). R: a spider monkey's tail holds on like a fifth limb (Nat Geo Kids). R: a camel's wide feet do not sink in sand (San Diego Zoo).", "Tumble holds the golden fruit up to Mama, both smiling. Words: BEST GIFT EVER!", "built as the test episode"),
        ("Tumble and the Big Muddy Puddle", "Photo day at the zoo. Tumble wants to stay clean, but the sun is very hot.|He tries a leaf hat, a fan and the shade. Each one helps for a moment, then he is hot again.|Mama shows him the mud. Everybody ends up muddy, cool and laughing in the photo.",
         "V: elephants cover themselves in mud and dust, which shields their skin from the sun. R: ear flapping cools an elephant on warm days (San Diego Zoo).", "A muddy, grinning Tumble with one clean eye. Words: MUD DAY!", ""),
        ("Tumble Shares the Last Drink", "It has not rained and the water hole is low. Tumble finds one small pool.|Three little birds are thirsty too. The pool is too deep in a crack for their beaks.|Tumble sucks the water up with his trunk and squirts a drink for each friend. Then the rain comes.",
         "R: elephants suck water up their trunks, then blow it into their mouths (WWF). R: they can smell water far away (WWF).", "Tumble squirts an arc of water to three birds. Words: SQUIRT!", "")],
-  les=[("Why Do Elephants Have Such Big Ears?", "Milo's mission: find out what the giant ears are for. Guess first: hearing, flying, or cooling?", "R: an elephant's ears work like a radiator; flapping cools the body (San Diego Zoo).", "One huge ear fills half the picture, a tiny Milo beside it. Words: SO BIG?!"),
+  les=[("Why Do Elephants Have Such Big Ears?", "Milo's mission: find out what the giant ears are for. Guess first: hearing, flying, or cooling?", "R: an elephant's ears work like a radiator; flapping cools the body (San Diego Zoo).", "One huge ear fills half the picture, a tiny Milo beside it. Words: LIKE A FAN?!"),
        ("What Can an Elephant's Trunk Do?", "Milo counts the jobs of one nose with Tumble: smell, grab, drink, spray, snorkel, hug.", "R: smelling, grabbing, snorkel, drinking (WWF). R: strong enough for a log, gentle enough for one straw; used in greeting and caressing (San Diego Zoo).", "A trunk holding one tiny straw. Words: ONE NOSE?!"),
        ("Who Looks After a Baby Elephant?", "Milo meets Tumble's family: Mama, and the herd around a calf.", "R: a calf drinks its mother's milk with its mouth (San Diego Zoo). V: other females in the herd help look after calves.", "Tumble under Mama, two more elephants close by. Words: WHOLE FAMILY!")],
   songs=[("Trunks Up! (Tumble's Song)", "Tumble", "proud to try", "Three tries with his trunk: a leaf, a splash, a hug.", "Trunks up, trunks up, I can try!"),
@@ -27,11 +27,11 @@ THEMES = [
   adv=[("Mango and the Wobbly Vine Bridge", "A picnic waits on the other side of a little stream. The only way is a low, wobbly vine bridge.|Tumble is too nervous to step on it. Mango runs across too fast and the picnic basket tips.|Mango slows down, holds on with her tail and walks beside Tumble, one step at a time.",
         "R: the tail grasps like a fifth limb (Nat Geo Kids). R: spider monkeys have no thumbs (Nat Geo Kids).", "Mango holds a vine with her tail and Tumble's trunk with her hand. Words: HOLD ON!", ""),
        ("Who Took Mango's Breakfast?", "Mango's fruit is gone from her branch. She is sure somebody took it.|The friends follow three clues: a peel, a trail of drips, a happy hum.|The fruit had rolled down to a baby tapir, who thought it was a gift. Mango shares the rest.",
-        "R: fruit is the main part of a spider monkey's diet (Nat Geo Kids). V: one true fact about the animal who found the fruit.", "Mango with a magnifying glass over a banana peel. Words: WHO DID IT?", ""),
+        "R: fruit is the main part of a spider monkey's diet (Nat Geo Kids). V: one true fact about the animal who found the fruit.", "Mango with a magnifying glass over a banana peel. Words: A MYSTERY!", ""),
        ("The Rainy Day Umbrella", "Rain starts on the way to Mango's tree house. Milo's feathers are soaked.|A small leaf, a flower, a hat of moss: each one is too small.|Together they carry one giant leaf, and all four fit under it.",
         "V: how much rain a rainforest gets. V: one animal that shelters under leaves.", "Four friends under one giant leaf in the rain. Words: ROOM FOR ALL!", "")],
   les=[("Why Do Monkeys Have Long Tails?", "Milo's mission: is a tail a toy, a scarf or a hand?", "R: prehensile tail, a fifth limb; they hang upside down from it (Nat Geo Kids).", "Mango upside down, her tail in the middle of the picture. Words: EXTRA HAND?!"),
-       ("What Does a Monkey Eat All Day?", "Milo follows Mango from breakfast to dinner.", "R: fruit is the main part of the diet (Nat Geo Kids). V: what else they eat.", "Mango behind a pile of fruit. Words: ALL DAY?!"),
+       ("What Does a Monkey Eat All Day?", "Milo follows Mango from breakfast to dinner.", "R: fruit is the main part of the diet (Nat Geo Kids). V: what else they eat.", "Mango behind a pile of fruit. Words: SO MUCH FRUIT!"),
        ("Who Lives at the Top of the Jungle?", "Milo flies up the tallest tree, floor by floor.", "V: the layers of a rainforest and one animal for each.", "A tree cut in four floors with an animal on each. Words: WAY UP HIGH!")],
   songs=[("Swing-a-Ding (Mango's Song)", "Mango", "joy of moving", "Branch to branch across the jungle to a friend.", "Swing-a-ding, swing-a-ding, here I go!"),
          ("Rain on the Leaves", "Mango and Milo", "calm and cosy", "The rain comes, they wait under a leaf, the sun returns.", "Drip, drop, drip, we are dry in here.")],
@@ -45,10 +45,10 @@ THEMES = [
        ("The Long Walk to the Oasis", "A little tree at the zoo is thirsty and the watering can is empty.|The oasis is far. Milo gets tired, Tumble gets hot, the sand is soft.|Sandy carries the water all the way, step by step. The tree drinks.",
         "R: a thirsty camel can drink 30 gallons in 13 minutes (National Geographic). R: a camel can go a week or more without water (San Diego Zoo).", "Sandy carries two water jugs up a dune. Words: SO FAR!", ""),
        ("Sandy's First Night Away", "Sandy is invited to a sleepover at the zoo, away from Mama for the first time.|The bed is too soft, the night is too quiet, and she misses Mama's hum.|Her friends hum with her until she sleeps. In the morning Mama is at the gate.",
-        "R: mothers and their newborns hum to each other (San Diego Zoo).", "Sandy under a blanket with a little moon, friends around her. Words: GOOD NIGHT!", "")],
+        "R: mothers and their newborns hum to each other (San Diego Zoo).", "Sandy under a blanket with a little moon, friends around her. Words: SWEET DREAMS!", "")],
   les=[("What Is Inside a Camel's Hump?", "Milo and baby Sandy find out why Mama has a hump and Sandy has none.", "R: fat, not water; a hump droops when the fat is used; a calf has a tuft, no hump (San Diego Zoo). R: 80 pounds of fat (National Geographic).", "A hump cut open, full of round yellow fat. Words: NOT WATER?!"),
        ("Why Do Camels Have Long Eyelashes?", "Milo's mission on a windy day: how does Sandy keep the sand out?", "R: double rows of extra-long eyelashes; nostrils close (San Diego Zoo).", "One giant camel eye with two rows of lashes. Words: TWO ROWS?!"),
-       ("One Hump or Two? Meet the Camels", "Milo visits Sandy's cousin in the snow.", "R: dromedary one hump, Bactrian two (San Diego Zoo). R: cold winters, snow (Nat Geo Kids).", "Two camels back to back, one hump and two. Words: 1 OR 2?")],
+       ("One Hump or Two? Meet the Camels", "Milo visits Sandy's cousin in the snow.", "R: dromedary one hump, Bactrian two (San Diego Zoo). R: cold winters, snow (Nat Geo Kids).", "Two camels back to back, one hump and two. Words: COUSINS?!")],
   songs=[("Step, Step, Step (Sandy's Song)", "Sandy", "patience", "A long walk over three dunes to the water.", "Step, step, step, I will get there."),
          ("Close to Mama (Desert Lullaby)", "Sandy and Mama", "safe and sleepy", "The sun goes down, the stars come out, Mama hums.", "Hmm, hmm, close to Mama.")],
   shorts=[("Why Does This Baby Camel Have No Hump?", "fact, from the hump lesson", "First frame: Sandy's flat back and a big question mark.", "Fat, not water. Her hump will grow."),
@@ -63,7 +63,7 @@ THEMES = [
        ("Poppy and the Dancing Sky", "The night sky is going to dance. Poppy wants to see it, but she always falls asleep first.|She tries counting stars, a song, a walk. Yawn.|Her friends take turns keeping watch and wake her gently when the lights come.",
         "V: the northern lights appear in the far north on dark, clear nights.", "Green lights in the sky over a sleepy cub. Words: WAKE UP!", "")],
   les=[("How Do Polar Bears Stay Warm?", "Milo's mission in the snow: what is under Poppy's coat?", "V: fat layer, two layers of fur.", "Poppy in the snow with a little thermometer. Words: NOT COLD?!"),
-       ("Is a Polar Bear Really White?", "Milo looks very closely at one hair.", "V: the hairs are clear and hollow; the skin under them is black.", "One polar bear hair under a magnifying glass. Words: NOT WHITE?!"),
+       ("Is a Polar Bear Really White?", "Milo looks very closely at one hair.", "V: the hairs are clear and hollow; the skin under them is black.", "One polar bear hair under a magnifying glass. Words: SEE-THROUGH?!"),
        ("Who Lives on the Ice?", "Milo meets Poppy's neighbours.", "V: seals, walruses and Arctic foxes live in the Arctic; penguins live in the far south.", "Poppy with a seal and a fox, and a crossed-out penguin shape. Words: NO PENGUINS?!")],
   songs=[("Brrr-illiant Day (Poppy's Song)", "Poppy", "brave enough to try", "From the top of the hill to the bottom, three tries.", "Brrr, brrr, brilliant day!"),
          ("Snowflakes Falling (Winter Lullaby)", "Poppy", "quiet wonder", "One snowflake falls on her nose, then many.", "Soft, soft, snowflakes fall.")],
@@ -73,17 +73,17 @@ THEMES = [
           ("Poppy's First Slide", "story moment, from the slide adventure", "First frame: Poppy's paws at the edge of the hill.", "She slides, and asks to go again.")]),
  dict(key="ocean", name="Ocean week", friend="Tula the sea turtle", place="the blue ocean",
   adv=[("Tula and the Slow, Slow Race", "The sea friends race to the big rock. Tula is the slowest and nobody wants her on their team.|The fast swimmers get tired, get tangled in seagrass and take a wrong turn.|Tula keeps her steady pace, shows the way and they all touch the rock together.",
-        "V: sea turtles swim long distances at a steady pace. V: green turtles eat seagrass.", "Tula swims past two puffing fish. Words: SLOW WINS?", ""),
+        "V: sea turtles swim long distances at a steady pace. V: green turtles eat seagrass.", "Tula swims past two puffing fish. Words: LAST IS FIRST?", ""),
        ("A New House for Little Crab", "Little Crab has grown, and his shell pinches.|One shell is too big, one too heavy, one already has somebody in it.|Tula carries shells from the deep until one fits just right.",
         "V: a hermit crab moves into a bigger shell as it grows.", "A tiny crab between a huge shell and a tiny one. Words: TOO SMALL!", ""),
        ("Milo and the Deep Blue Sea", "Milo wants to see where Tula lives, but birds cannot breathe under the water.|A leaf boat tips, a reed is too short, a jump is too splashy.|Tula comes up for air right beside him, and tells him the whole sea from the top.",
         "V: sea turtles breathe air and come up to the surface for it.", "Milo on a leaf boat, Tula's head just out of the water. Words: UP FOR AIR!", "")],
   les=[("How Do Sea Turtles Breathe?", "Milo's mission at the beach: does Tula have gills like a fish?", "V: lungs, not gills; they surface for air and can hold their breath a long time.", "Tula's nose above the water, bubbles below. Words: NO GILLS?!"),
        ("Can a Turtle Leave Its Shell?", "Milo knocks on Tula's shell.", "V: the shell is part of the skeleton, joined to the backbone and ribs.", "A shell with a little door drawn on it and a question mark. Words: STUCK ON?!"),
-       ("What Do Sea Turtles Eat?", "Lunch time under the sea with Tula.", "V: green turtles eat seagrass and algae.", "Tula with a mouthful of seagrass. Words: SEA SALAD!")],
+       ("What Do Sea Turtles Eat?", "Lunch time under the sea with Tula.", "V: green turtles eat seagrass and algae.", "Tula with a mouthful of seagrass. Words: GREEN LUNCH!")],
   songs=[("Slow and Steady (Tula's Song)", "Tula", "calm confidence", "Across the sea to the big rock, never hurrying.", "Slow and steady, here I go."),
          ("Goodnight, Blue Ocean (Lullaby)", "Tula", "sleepy and safe", "The water turns dark blue, the fish go quiet, Tula rests.", "Goodnight, goodnight, blue ocean.")],
-  shorts=[("Can a Turtle Leave Its Shell?", "fact, from the shell lesson", "First frame: a shell with a door and a question mark.", "No. The shell is part of her body."),
+  shorts=[("Is a Turtle Stuck in Its Shell?", "fact, from the shell lesson", "First frame: a shell with a door and a question mark.", "No. The shell is part of her body."),
           ("Does a Sea Turtle Breathe Water?", "fact, from the breathing lesson", "First frame: Tula under the water holding her breath, cheeks full.", "She swims up for air."),
           ("Why Does This Crab Change Houses?", "story moment, from the crab adventure", "First frame: a crab half out of a tiny shell.", "He grew. He needs a bigger one."),
           ("Slow Wins the Race?", "story moment, from the race adventure", "First frame: Tula far behind three fast fish.", "They all finish together.")]),
@@ -113,8 +113,15 @@ def theme_html(t, n):
 
 n_adv = sum(len(t["adv"]) for t in THEMES); n_les = sum(len(t["les"]) for t in THEMES); n_song = sum(len(t["songs"]) for t in THEMES); n_sh = sum(len(t["shorts"]) for t in THEMES)
 assert (n_adv, n_les, n_song, n_sh) == (15, 15, 10, 20), (n_adv, n_les, n_song, n_sh)
+import re
+titles = []
 for t in THEMES:
-    for a in t["adv"] + t["les"] + t["songs"] + t["shorts"]: assert len(a[0]) <= 60, (len(a[0]), a[0])
+    for a in t["adv"] + t["les"] + t["songs"] + t["shorts"]:
+        assert len(a[0]) <= 60, (len(a[0]), a[0]); titles.append(a[0].lower())
+    for a in t["adv"] + t["les"]:          # the thumbnail's words: 3 at most, none of the title's
+        w = re.findall(r"[a-z']+", a[3].split("Words:")[1].lower()); tw = set(re.findall(r"[a-z']+", a[0].lower().replace("'s", "")))
+        assert len(w) <= 3 and not [x for x in w if x in tw], (a[0], w)
+assert len(titles) == len(set(titles)), [x for x in titles if titles.count(x) > 1]
 
 CSS = open(os.path.join(HERE, "plan.css")).read()
 body = open(os.path.join(HERE, "plan_body.html")).read()

@@ -1,0 +1,6 @@
+{
+ "STATUS_ADV": "Test episode built: \"Baby Elephant's Birthday Surprise for Mama\". RENDERING. Waiting for your approval.",
+ "STATUS_LESSON": "Test lesson rendered and checked: \"What Is Inside a Camel's Hump?\" (5:04, 3840x2160). Waiting for your approval.",
+ "STATUS_SHORT": "Test Short rendered and checked: \"Why Does This Baby Camel Have No Hump?\" (1:28, 2160x3840). Waiting for your approval.",
+ "RENDER_NOTE": "The 5:04 lesson rendered in 37 minutes and the 1:28 Short in 13 minutes on the machine this session runs on. Four long cartoon videos and three Shorts a day would be about 3 hours of rendering. Writing an episode, reading its facts and looking at a still of every shot took longer than the rendering, and whether that keeps pace with four a day has not been tried."
+}

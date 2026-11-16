@@ -16,10 +16,10 @@ import art, art2
 from toon import shot
 
 EP = {"id": "za_ep01", "kind": "story", "voice": "af_heart", "speed": 0.8, "gap": 0.4, "music": 0.5, "lead_in": 0.3, "tail": 1.2,
-      "cast": {"milo": {"voice": "af_heart", "speed": .8}, "tumble": {"voice": "am_puck", "speed": .85, "pitch": 5, "formant": 1.16},
-               "mango": {"voice": "af_bella", "speed": .95, "pitch": 2, "formant": 1.08}, "sandy": {"voice": "af_sarah", "speed": .82, "pitch": 3, "formant": 1.1},
-               "mama": {"voice": "bf_emma", "speed": .8}},
-      "title": "Baby Elephant's Birthday Surprise for Mama | Milo's Zoo Adventures", "thumb_text": "FOR MAMA!",
+      "cast": {"milo": {"voice": "af_heart", "speed": .8}, "tumble": {"voice": "am_puck", "speed": .85, "pitch": 5, "formant": 1.16, "gain": .66},
+               "mango": {"voice": "af_bella", "speed": .95, "pitch": 2, "formant": 1.08, "gain": .95}, "sandy": {"voice": "af_sarah", "speed": .82, "pitch": 3, "formant": 1.1, "gain": .88},
+               "mama": {"voice": "bf_emma", "speed": .8, "gain": .8}},      # gain: each voice measured against Milo's lines (RMS) on Nov 16
+      "title": "Baby Elephant's Birthday Surprise for Mama", "thumb_text": "BEST GIFT EVER!",
       "series": "Milo's Zoo Adventures",
       "description": ("It is Mama Elephant's birthday, and little Tumble has no present! Tumble and Milo the bluebird set off to find the golden fruit at the top of the "
                       "tallest tree. A wide river, a tall tree and a big sandy hill are in the way, and new friends Mango the spider monkey and Sandy the baby camel help. "

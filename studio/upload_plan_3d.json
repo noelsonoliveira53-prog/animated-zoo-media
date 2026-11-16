@@ -2014,11 +2014,14 @@
   "thumb": "brand/zoo/thumb_za_ep01.jpg",
   "thumb_text": "BEST GIFT EVER!",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")"
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
+  "video_id": "UAVL9LThIQE",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  },
  {
   "file": "cartoon/zc_ep01.mp4",

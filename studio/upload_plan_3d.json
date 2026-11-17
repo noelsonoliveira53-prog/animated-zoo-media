@@ -2082,11 +2082,14 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep17.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 160.0,
   "watermark": "tl",
-  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run."
+  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run.",
+  "video_id": "27dOgZh10N4",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "cartoon/za_ep02.mp4",

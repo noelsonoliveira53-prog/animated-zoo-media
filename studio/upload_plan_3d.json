@@ -2121,6 +2121,38 @@
   "note": "Reserved Nov 17 12:25 AM for the cartoon adventure za_ep02 (first draft, not rendered). If cartoon/za_ep02.mp4 does not exist when this slot is one day away, give the slot to a ready 3D lesson. Never upload an in_production entry."
  },
  {
+  "file": "zool_ep17.mp4",
+  "title": "Whose Tail Is This? Animal Tails for Kids with Milo",
+  "description": "Whose tail is this? Guess with Milo the bluebird, then find out what each tail can do: a lion's tail ends in a dark tuft like a paintbrush, a spider monkey's tail works like a third hand and even has lines like a fingerprint, and a giraffe's tail swats away buzzy flies.\nAn interactive animal guessing lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nLion: a tuft covers a horny spur at the tip of the tail; tail just over half head-body length; large, padded feet; claws retractable and protected in a fleshy sheath; the mane covers head, neck, chest, elbows and sometimes belly (SDZWA Library fact sheet 'Lions', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/lions/characteristics, read Nov 16 2026).\nBlack spider monkey: a prehensile tail, a 'third hand' to grasp branches; the tail supports the entire weight of the monkey while both hands are free to forage; on the underside of the tip of the tail there is a patch of skin with lines like a fingerprint; diet primarily fruits, occasionally leaves, flowers and insects (Wisconsin National Primate Research Center, Primate Info Net fact sheet 'Black spider monkey', primate.wisc.edu, read Nov 16 2026).\nGiraffe: long, black hair on the tail, used as an insect-swatter; tail 76-110 cm; long prehensile tongue, 50 cm (20 in); large hooved feet (SDZWA Library fact sheet 'Giraffes', Physical Characteristics, read Nov 16 2026).",
+  "tags": [
+   "animal tails for kids",
+   "lion facts for kids",
+   "spider monkey facts for kids",
+   "giraffe facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-19",
+  "time": "5:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep17.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_lesson",
+  "duration": 327.4,
+  "watermark": "tl",
+  "watermark_hide": [
+   [
+    303.5,
+    308.0
+   ]
+  ]
+ },
+ {
   "file": "cartoon/zc_ep02.mp4",
   "title": "What Can an Elephant's Trunk Do?",
   "description": "What can an elephant's trunk do? Is it a nose, a hand or a shower? Milo the bluebird visits baby elephant Tumble and his mama to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a trunk is a nose and an upper lip, that it can smell, grab, drink, spray and work like a snorkel, that the water does not go all the way up like a straw, and that there are no bones inside.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant).",
@@ -2175,5 +2207,31 @@
   "duration": 285.1,
   "res": "3840x2160",
   "note": "replaced by zool_ep08.mp4 (same lesson in format v3: 5:33, three 90-second parts). Never uploaded."
+ },
+ {
+  "file": "zool_ep18.mp4",
+  "title": "Hot or Cold? How Animals Stay Cool for Kids",
+  "description": "How do animals stay cool on a hot day? Pick your answer with Milo the bluebird, then find out: an elephant flaps its big ears and sprays water and mud on its wrinkly skin, a koala stretches out its arms and legs when it is hot and folds them in when it is cold, and a big tiger cools off by lying in a shady pool.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nAfrican elephant: large ear surface area with networks of vessels close to the skin surface allow heat to leave the body; flapping the ears dissipates a lot of body heat; wrinkles help the skin retain moisture, and water and mud adhere to wrinkly skin, which boosts evaporative cooling; elephants spray dust, grass and water on the body; they walk on tiptoes with large fat pads cushioning the feet; they may detect vibrations through their feet (SDZWA Library fact sheet 'African Elephants', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/african_elephant/characteristics, read Nov 16 2026).\nKoala: posture changes help with body temperature regulation; on hot days they extend their limbs, and in cold, wet, windy weather they fold their arms and legs in; arboreal, but must travel on the ground to move to another tree; males produce low-frequency bellows; koalas spend most of their time alone (SDZWA Library fact sheet 'Koala', Behavior & Ecology, read Nov 16 2026).\nTiger: larger subspecies often regulate body temperature by lying partially submerged in shaded pools; active both day and night; sounds include grunting, miaowing, woofing, growling, hissing and prusten or chuffing (gentle puffing); both sexes scent-mark their territories (SDZWA Library fact sheet 'Tiger', Behavior & Ecology, read Nov 16 2026). Stripes on body, limbs, head and tail (same library, Physical Characteristics, read Nov 16 2026).",
+  "tags": [
+   "how animals stay cool",
+   "elephant facts for kids",
+   "koala facts for kids",
+   "tiger facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-20",
+  "time": "1:30 PM",
+  "thumb": "brand/zoo/thumb_zool_ep18.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_lesson",
+  "duration": 330.8,
+  "watermark": "tl"
  }
 ]

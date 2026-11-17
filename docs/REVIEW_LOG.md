@@ -73,3 +73,10 @@
 | 2026-11-17 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | - | - |
 | 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | thumbnail text repeats the title's words ['panda']: the thumbnail should add a hook, not say the title again; word to check for distress/danger (KID-03): 'bite' | - |
 | 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | - |
+| 2026-11-17 | zool_ep17.mp4 | 3d_lesson | PASS | - | - | turn the answering animal toward the camera in quiz close-ups |
+| 2026-11-17 | zool_ep18.mp4 | 3d_lesson | FAIL | banned word in title/description: blood | word to check for distress/danger (KID-03): 'alone' | hello and goodbye words at z 3.15 (from zool_ep20) |
+| 2026-11-17 | zool_ep18.mp4 | 3d_lesson | PASS | - | word to check for distress/danger (KID-03): 'alone' | no blood/danger words in fact text (banned list) |
+| 2026-11-17 | shorts3d/zs90_polar_paws.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-17 | shorts3d/zs90_tiger_claws.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-17 | shorts3d/zs90_lion_tuft.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-17 | shorts3d/zs90_elephant_ears.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |

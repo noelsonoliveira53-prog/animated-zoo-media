@@ -85,3 +85,8 @@ Every review and every views check adds one concrete thing to do better. Before 
 - 2026-11-17: zool_ep16: the hello word AMAZING FEET! (0:12) and BYE-BYE! (5:24) are cut by the top of the picture in the wide shots, the same cause as zool_ep15 (group-scene words at z 3.6). teach.py now puts hello and goodbye words at z 3.15 (from zool_ep20; zool_ep19 was built before the hello change) (why: frames 12 s and 324 s of zool_ep16.mp4, Nov 17)
 - 2026-11-17: goodbye word at z 3.15 so BYE-BYE! stays in the picture (teach.py, from zool_ep19) (why: review of zool_ep15.mp4)
 - 2026-11-17: hello and goodbye words at z 3.15 (teach.py, from zool_ep20) (why: review of zool_ep16.mp4)
+- 2026-11-17: turn the answering animal toward the camera in quiz close-ups (why: review of zool_ep17.mp4)
+- 2026-11-17: hello and goodbye words at z 3.15 (from zool_ep20) (why: review of zool_ep18.mp4)
+- 2026-11-17: no blood/danger words in fact text (banned list) (why: review of zool_ep18.mp4)
+- 2026-11-17: zool_ep18 quiz: the tiger's answer close-up (5:03) shows it turned away again; same open defect as zool_ep14/15 (now seen in ep15, ep18 and ep22's stills) (why: frame 303 s of zool_ep18.mp4, Nov 17)
+- 2026-11-17: Lesson Short thumbnails: thumb_line [3, 0.7] lands before the example is up (tiger and elephant Shorts showed only the two characters); set each part's thumb_line on the line where its sign or prop is on screen and look at it (why: thumbnails of zs90_tiger_claws and zs90_elephant_ears, redone at lines 6, Nov 17)

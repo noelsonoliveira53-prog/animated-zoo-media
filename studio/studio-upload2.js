@@ -29,7 +29,7 @@ window.zsched = async () => { const d = document.querySelector('ytcp-uploads-dia
   const tu = d.querySelector('ytcp-thumbnail-uploader'); const imgs = [...tu.querySelectorAll('img')].map(i => (i.src || '').slice(0, 22) + ' ' + i.naturalWidth + 'x' + i.naturalHeight);
   if (!imgs.some(x => /^data:|^blob:/.test(x))) return { error: 'no thumbnail set', imgs };
   for (let i = 0; i < 3; i++) { d.querySelector('#next-button').click(); await sl(2000); }
-  const ex = d.querySelector('#second-container-expand-button'); if (ex) ex.click(); await sl(1200);
+  const ex = d.querySelector('#second-container-expand-button'); if (ex && d.querySelector('#done-button').innerText.trim() !== 'Schedule') ex.click(); await sl(1200);   // a Short's dialog can open with Schedule already expanded: a second click closed it and the button read "Publish" (Nov 16). Never click the button unless it reads Schedule
   const tr = d.querySelector('#datepicker-trigger').getBoundingClientRect();
   return { imgs, date: d.querySelector('#datepicker-trigger').innerText, time: (d.querySelector('ytcp-datetime-picker input') || {}).value, trig: [Math.round((tr.x + tr.width / 2) * 800 / innerWidth), Math.round((tr.y + tr.height / 2) * 800 / innerWidth)] }; };
 window.zdate = () => { const di = [...document.querySelectorAll('input')].filter(i => /202\d/.test(i.value)); if (di[0]) { di[0].focus(); di[0].select(); } return { n: di.length, v: di[0] && di[0].value, active: document.activeElement === di[0] }; };

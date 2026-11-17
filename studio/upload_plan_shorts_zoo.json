@@ -661,7 +661,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -671,7 +671,10 @@
   "date": "2026-11-20",
   "time": "11:30 AM",
   "seconds": 89.1,
-  "note": "rendered again Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS"
+  "note": "rendered again Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS",
+  "video_id": "0wwPKKeLFD4",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  },
  {
   "file": "cartoon/zc_ep02_short3.mp4",
@@ -690,7 +693,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -700,6 +703,9 @@
   "date": "2026-11-21",
   "time": "7:30 AM",
   "seconds": 86.5,
-  "note": "rendered Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS"
+  "note": "rendered Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS",
+  "video_id": "mATYaS3W7fE",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  }
 ]

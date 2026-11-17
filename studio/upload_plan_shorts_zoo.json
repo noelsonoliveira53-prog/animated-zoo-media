@@ -730,7 +730,7 @@
    "preschool learning"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep16",
   "seconds": 86.39,
@@ -740,7 +740,10 @@
   "watermark": "top",
   "note": "interactive-lesson prototype: do not upload until Noelson approves the new format Nov 17: cut from the lesson raw, frames + thumbnail looked at, review PASS; lesson Short format approved Nov 14.",
   "date": "2026-11-18",
-  "time": "7:30 AM"
+  "time": "7:30 AM",
+  "video_id": "btWYy6HeuS4",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs90_tiger_claws.mp4",

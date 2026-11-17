@@ -2082,12 +2082,12 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep17.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 130.5,
   "watermark": "tl",
-  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run. Nov 17: the scheduled upload 27dOgZh10N4 ended with 31.8 s of silence (song ends 128.1 s); file cut to 130.5 s (video copy, audio faded); 27dOgZh10N4 to be set Private and the fixed file uploaded on the same slot.",
-  "video_id": null,
+  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run. Nov 17: the scheduled upload 27dOgZh10N4 ended with 31.8 s of silence (song ends 128.1 s); file cut to 130.5 s (video copy, audio faded); 27dOgZh10N4 to be set Private and the fixed file uploaded on the same slot. 27dOgZh10N4 set Private 2:46 PM Nov 17 (Details page read: Visibility Private, \"Changes saved\").",
+  "video_id": "6eAr9x5Krfc",
   "scheduled_on": "2026-11-17",
   "thumb_set": true,
   "replaces": "27dOgZh10N4"
@@ -2145,7 +2145,7 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep17.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 327.4,
   "watermark": "tl",
@@ -2154,7 +2154,10 @@
     303.5,
     308.0
    ]
-  ]
+  ],
+  "video_id": "jkZ4ChFok3s",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep02.mp4",
@@ -2233,10 +2236,13 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep18.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 330.8,
-  "watermark": "tl"
+  "watermark": "tl",
+  "video_id": "wyrIjHDaGRc",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "zoo3d_ep20.mp4",

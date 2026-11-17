@@ -1,0 +1,72 @@
+{
+ "length": 302.9,
+ "shots": 77,
+ "visual_changes": 306,
+ "mean_gap": 0.99,
+ "longest_gap": 4.34,
+ "longest_gap_at": 117.2,
+ "over_6s": [],
+ "places": [
+  "zoo",
+  "savanna",
+  "jungle",
+  "canopy",
+  "bigtree",
+  "mudhole",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 7,
+ "longest_without_question": 55.0,
+ "first_words_at": 0.42,
+ "shot_mean": 3.93,
+ "beats": {
+  "hook": 1,
+  "goal": 1,
+  "song": 3,
+  "obstacle1": 10,
+  "obstacle2": 10,
+  "fact": 2,
+  "obstacle3": 7,
+  "low": 8,
+  "solution": 15,
+  "ending": 13
+ },
+ "fails": [],
+ "words_placed": "697/697",
+ "sync": {
+  "pauses_checked": 47,
+  "onset_err_mean_ms": 31.3,
+  "onset_err_max_ms": 140.0,
+  "suspect_words": [],
+  "cuts": 76,
+  "cuts_on_the_half_beat": 76,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+
+✗  Render failed
+
+   [assertSwiftShader] Chrome reported a non-SwiftShader WebGL backend. Distributed renders require pure-software GL for pixel-identical retries. Got vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)"; expected vendor="Google Inc. (Google)" renderer to contain "SwiftShader". Ensure Chrome was launched with --use-gl=swiftshader --use-angle=swiftshader and that the SwiftShader libraries are present in the runtime image.
+
+
+  This project pins hyperframes@0.8.231 (latest 0.9.63).
+  Bump it: npx hyperframes@latest upgrade --project
+
+Traceback (most recent call last):
+  File "/home/claude/animated-zoo-media/studio/cartoon/toon.py", line 659, in <module>
+    main()
+    ~~~~^^
+  File "/home/claude/animated-zoo-media/studio/cartoon/toon.py", line 649, in main
+    if "--audio" not in sys.argv: subprocess.run(cmd, cwd=proj, env=env, check=True)      # --audio: new sound on the picture that is already rendered
+                                  ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/lib/python3.13/subprocess.py", line 578, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['hyperframes', 'render', '-f', '24', '-q', 'standard', '--crf', '17', '-o', '/home/claude/animated-zoo-media/studio/cartoon/out/za_ep02/za_ep02_silent.mp4', '--quiet', '--resolution', 'landscape-4k', '--start', '0', '--end', '150']' returned non-zero exit status 1.

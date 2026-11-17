@@ -1,0 +1,1838 @@
+{
+ "id": "zc_ep02_short2",
+ "total": 89.09958333333337,
+ "plan": {
+  "length": 89.1,
+  "shots": 22,
+  "visual_changes": 87,
+  "mean_gap": 1.02,
+  "longest_gap": 3.85,
+  "longest_gap_at": 33.0,
+  "over_6s": [],
+  "places": [
+   "river"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 38.3,
+  "first_words_at": 0.42,
+  "shot_mean": 4.05,
+  "fails": [],
+  "words_placed": "204/204"
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the wide river hook: how to drink"
+  ],
+  [
+   0.1,
+   "action",
+   "Mama's trunk dips into the water"
+  ],
+  [
+   1.56,
+   "word",
+   "?"
+  ],
+  [
+   2.82,
+   "action",
+   "mama walks"
+  ],
+  [
+   2.82,
+   "action",
+   "tumble walks"
+  ],
+  [
+   2.82,
+   "new shot",
+   "the wide river river wide"
+  ],
+  [
+   3.77,
+   "word",
+   "HOT!"
+  ],
+  [
+   7.15,
+   "new shot",
+   "the wide river watch Mama"
+  ],
+  [
+   8.78,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   8.78,
+   "word",
+   "WATCH!"
+  ],
+  [
+   10.13,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   10.55,
+   "new shot",
+   "the wide river slurp"
+  ],
+  [
+   10.65,
+   "action",
+   "Mama's trunk dips into the water"
+  ],
+  [
+   10.65,
+   "action",
+   "mama looks"
+  ],
+  [
+   13.13,
+   "word",
+   "SLURP!"
+  ],
+  [
+   14.2,
+   "new shot",
+   "the wide river question 2"
+  ],
+  [
+   16.99,
+   "sign",
+   "YES"
+  ],
+  [
+   17.34,
+   "sign",
+   "NO"
+  ],
+  [
+   18.86,
+   "thinking dot",
+   "1"
+  ],
+  [
+   19.86,
+   "thinking dot",
+   "2"
+  ],
+  [
+   20.87,
+   "thinking dot",
+   "3"
+  ],
+  [
+   21.52,
+   "answer",
+   "NO"
+  ],
+  [
+   22.02,
+   "new place",
+   "the picture board (blue) board: part way"
+  ],
+  [
+   22.15,
+   "word",
+   "NO!"
+  ],
+  [
+   22.94,
+   "action",
+   "the water rises half way up"
+  ],
+  [
+   23.91,
+   "word",
+   "PART WAY"
+  ],
+  [
+   25.34,
+   "new place",
+   "the wide river curl"
+  ],
+  [
+   25.9,
+   "action",
+   "Mama curls her trunk to her mouth"
+  ],
+  [
+   27.96,
+   "new shot",
+   "the wide river glug"
+  ],
+  [
+   29.84,
+   "action",
+   "the water goes into her mouth"
+  ],
+  [
+   29.84,
+   "word",
+   "GLUG!"
+  ],
+  [
+   31.82,
+   "new place",
+   "the picture board board: not a straw"
+  ],
+  [
+   33.01,
+   "picture",
+   "x"
+  ],
+  [
+   33.01,
+   "word",
+   "NOT A STRAW"
+  ],
+  [
+   36.86,
+   "new place",
+   "the wide river Tumble's turn"
+  ],
+  [
+   39.24,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   40.02,
+   "word",
+   "SHORT"
+  ],
+  [
+   40.64,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   41.06,
+   "new shot",
+   "the wide river clumsy"
+  ],
+  [
+   42.54,
+   "action",
+   "Tumble's trunk wobbles"
+  ],
+  [
+   42.54,
+   "word",
+   "WOBBLE!"
+  ],
+  [
+   45.1,
+   "new shot",
+   "the wide river splash"
+  ],
+  [
+   45.29,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   45.7,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   45.7,
+   "picture",
+   "sp"
+  ],
+  [
+   45.7,
+   "word",
+   "SPLASH!"
+  ],
+  [
+   48.44,
+   "new shot",
+   "the wide river he learns"
+  ],
+  [
+   48.49,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   50.51,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   50.51,
+   "word",
+   "LITTLE BY LITTLE"
+  ],
+  [
+   51.44,
+   "action",
+   "tumble hops"
+  ],
+  [
+   51.44,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   52.52,
+   "new shot",
+   "the wide river slurp along"
+  ],
+  [
+   52.98,
+   "action",
+   "milo hops"
+  ],
+  [
+   52.98,
+   "word",
+   "SLURP!"
+  ],
+  [
+   56.25,
+   "new place",
+   "the picture board (pink) board: milk"
+  ],
+  [
+   57.89,
+   "action",
+   "he drinks with his mouth"
+  ],
+  [
+   59.55,
+   "picture",
+   "ar"
+  ],
+  [
+   59.55,
+   "word",
+   "MOUTH"
+  ],
+  [
+   60.49,
+   "new shot",
+   "the picture board (pink) board: not yet"
+  ],
+  [
+   61.66,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   61.66,
+   "word",
+   "NOT YET"
+  ],
+  [
+   62.97,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   63.4,
+   "new place",
+   "the wide river what next"
+  ],
+  [
+   63.5,
+   "action",
+   "Mama fills her trunk"
+  ],
+  [
+   66.02,
+   "word",
+   "?"
+  ],
+  [
+   67.34,
+   "new shot",
+   "the wide river shower"
+  ],
+  [
+   67.39,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   67.46,
+   "picture",
+   "sp"
+  ],
+  [
+   68.06,
+   "word",
+   "A SHOWER!"
+  ],
+  [
+   69.23,
+   "action",
+   "the water sprays"
+  ],
+  [
+   71.41,
+   "new shot",
+   "the wide river keep cool"
+  ],
+  [
+   72.53,
+   "action",
+   "mama looks happy"
+  ],
+  [
+   72.53,
+   "word",
+   "COOL!"
+  ],
+  [
+   76.02,
+   "new shot",
+   "the wide river Tumble sprays"
+  ],
+  [
+   78.15,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   78.99,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   78.99,
+   "picture",
+   "sp"
+  ],
+  [
+   78.99,
+   "word",
+   "SPRAY!"
+  ],
+  [
+   80.0,
+   "new shot",
+   "the wide river spray along"
+  ],
+  [
+   82.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   82.16,
+   "word",
+   "WHOOSH!"
+  ],
+  [
+   83.65,
+   "new place",
+   "the picture board (pink) board: jobs 3 4"
+  ],
+  [
+   84.41,
+   "picture",
+   "j3"
+  ],
+  [
+   84.41,
+   "word",
+   "4"
+  ],
+  [
+   86.04,
+   "picture",
+   "j2"
+  ],
+  [
+   86.04,
+   "word",
+   "3"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "river",
+   "say": "How does an elephant drink water?",
+   "t0": 0.0,
+   "t1": 2.821125,
+   "v0": 0.42,
+   "dur": 1.981125,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.28
+    ],
+    [
+     "does",
+     0.28,
+     0.46
+    ],
+    [
+     "an",
+     0.46,
+     0.54
+    ],
+    [
+     "elephant",
+     0.54,
+     1.14
+    ],
+    [
+     "drink",
+     1.14,
+     1.48
+    ],
+    [
+     "water?",
+     1.48,
+     1.98
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: how to drink",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Phew, it is hot! Tumble and Mama walk into the river.",
+   "t0": 2.821125,
+   "t1": 7.146875,
+   "v0": 2.941125,
+   "dur": 3.78575,
+   "words": [
+    [
+     "Phew,",
+     0.01,
+     0.46
+    ],
+    [
+     "it",
+     0.46,
+     0.66
+    ],
+    [
+     "is",
+     0.66,
+     0.83
+    ],
+    [
+     "hot!",
+     0.83,
+     1.37
+    ],
+    [
+     "Tumble",
+     1.67,
+     2.11
+    ],
+    [
+     "and",
+     2.11,
+     2.21
+    ],
+    [
+     "Mama",
+     2.21,
+     2.61
+    ],
+    [
+     "walk",
+     2.61,
+     3.0
+    ],
+    [
+     "into",
+     3.0,
+     3.18
+    ],
+    [
+     "the",
+     3.18,
+     3.28
+    ],
+    [
+     "river.",
+     3.28,
+     3.786
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "river wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Time for a drink. Watch Mama's trunk!",
+   "t0": 7.146875,
+   "t1": 10.546083333333334,
+   "v0": 7.266875,
+   "dur": 2.859208333333333,
+   "words": [
+    [
+     "Time",
+     0.0,
+     0.4
+    ],
+    [
+     "for",
+     0.4,
+     0.63
+    ],
+    [
+     "a",
+     0.63,
+     0.67
+    ],
+    [
+     "drink.",
+     0.67,
+     1.24
+    ],
+    [
+     "Watch",
+     1.51,
+     1.87
+    ],
+    [
+     "Mama's",
+     1.87,
+     2.33
+    ],
+    [
+     "trunk!",
+     2.33,
+     2.859
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "watch Mama",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "She sucks the water up into her trunk. Slurp!",
+   "t0": 10.546083333333334,
+   "t1": 14.1955,
+   "v0": 10.666083333333333,
+   "dur": 3.1094166666666667,
+   "words": [
+    [
+     "She",
+     0.06,
+     0.27
+    ],
+    [
+     "sucks",
+     0.27,
+     0.62
+    ],
+    [
+     "the",
+     0.62,
+     0.71
+    ],
+    [
+     "water",
+     0.71,
+     1.03
+    ],
+    [
+     "up",
+     1.03,
+     1.17
+    ],
+    [
+     "into",
+     1.17,
+     1.39
+    ],
+    [
+     "her",
+     1.39,
+     1.49
+    ],
+    [
+     "trunk.",
+     1.49,
+     2.04
+    ],
+    [
+     "Slurp!",
+     2.46,
+     3.109
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "slurp",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Does the water go all the way up her nose? Yes, or no?",
+   "t0": 14.1955,
+   "t1": 22.022875,
+   "v0": 14.315499999999998,
+   "dur": 3.887375,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.22
+    ],
+    [
+     "the",
+     0.22,
+     0.31
+    ],
+    [
+     "water",
+     0.31,
+     0.74
+    ],
+    [
+     "go",
+     0.74,
+     0.97
+    ],
+    [
+     "all",
+     0.97,
+     1.22
+    ],
+    [
+     "the",
+     1.22,
+     1.31
+    ],
+    [
+     "way",
+     1.31,
+     1.52
+    ],
+    [
+     "up",
+     1.52,
+     1.62
+    ],
+    [
+     "her",
+     1.62,
+     1.72
+    ],
+    [
+     "nose?",
+     1.72,
+     2.31
+    ],
+    [
+     "Yes,",
+     2.67,
+     3.29
+    ],
+    [
+     "or",
+     3.29,
+     3.48
+    ],
+    [
+     "no?",
+     3.48,
+     3.887
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "No! The water only goes part of the way up.",
+   "t0": 22.022875,
+   "t1": 25.339375,
+   "v0": 22.142875,
+   "dur": 2.7765,
+   "words": [
+    [
+     "No!",
+     0.01,
+     0.53
+    ],
+    [
+     "The",
+     0.71,
+     0.8
+    ],
+    [
+     "water",
+     0.8,
+     1.22
+    ],
+    [
+     "only",
+     1.22,
+     1.48
+    ],
+    [
+     "goes",
+     1.48,
+     1.77
+    ],
+    [
+     "part",
+     1.77,
+     2.03
+    ],
+    [
+     "of",
+     2.03,
+     2.11
+    ],
+    [
+     "the",
+     2.11,
+     2.19
+    ],
+    [
+     "way",
+     2.19,
+     2.46
+    ],
+    [
+     "up.",
+     2.46,
+     2.776
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: part way",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Then she curls her trunk to her mouth,",
+   "t0": 25.339375,
+   "t1": 27.958958333333335,
+   "v0": 25.459375,
+   "dur": 2.0795833333333333,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.23
+    ],
+    [
+     "she",
+     0.23,
+     0.44
+    ],
+    [
+     "curls",
+     0.44,
+     0.88
+    ],
+    [
+     "her",
+     0.88,
+     0.96
+    ],
+    [
+     "trunk",
+     0.96,
+     1.35
+    ],
+    [
+     "to",
+     1.35,
+     1.46
+    ],
+    [
+     "her",
+     1.46,
+     1.55
+    ],
+    [
+     "mouth,",
+     1.55,
+     2.08
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "curl",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "and blows the water in! Glug, glug, glug.",
+   "t0": 27.958958333333335,
+   "t1": 31.822416666666673,
+   "v0": 28.078958333333336,
+   "dur": 3.3234583333333334,
+   "words": [
+    [
+     "and",
+     0.0,
+     0.24
+    ],
+    [
+     "blows",
+     0.24,
+     0.6
+    ],
+    [
+     "the",
+     0.6,
+     0.68
+    ],
+    [
+     "water",
+     0.68,
+     1.04
+    ],
+    [
+     "in!",
+     1.04,
+     1.38
+    ],
+    [
+     "Glug,",
+     1.76,
+     2.22
+    ],
+    [
+     "glug,",
+     2.22,
+     2.72
+    ],
+    [
+     "glug.",
+     2.72,
+     3.32
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "glug",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "So a trunk is not like a straw. It carries the water to the mouth.",
+   "t0": 31.822416666666673,
+   "t1": 36.85775000000001,
+   "v0": 31.942416666666674,
+   "dur": 4.495333333333333,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.21
+    ],
+    [
+     "a",
+     0.21,
+     0.27
+    ],
+    [
+     "trunk",
+     0.27,
+     0.82
+    ],
+    [
+     "is",
+     0.82,
+     1.07
+    ],
+    [
+     "not",
+     1.07,
+     1.36
+    ],
+    [
+     "like",
+     1.36,
+     1.54
+    ],
+    [
+     "a",
+     1.54,
+     1.57
+    ],
+    [
+     "straw.",
+     1.57,
+     2.14
+    ],
+    [
+     "It",
+     2.63,
+     2.75
+    ],
+    [
+     "carries",
+     2.75,
+     3.2
+    ],
+    [
+     "the",
+     3.2,
+     3.29
+    ],
+    [
+     "water",
+     3.29,
+     3.76
+    ],
+    [
+     "to",
+     3.76,
+     3.88
+    ],
+    [
+     "the",
+     3.88,
+     3.96
+    ],
+    [
+     "mouth.",
+     3.96,
+     4.49
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: not a straw",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Now it is Tumble's turn. His trunk is still short.",
+   "t0": 36.85775000000001,
+   "t1": 41.064333333333344,
+   "v0": 36.97775000000001,
+   "dur": 3.6665833333333335,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.39
+    ],
+    [
+     "it",
+     0.39,
+     0.52
+    ],
+    [
+     "is",
+     0.52,
+     0.68
+    ],
+    [
+     "Tumble's",
+     0.68,
+     1.21
+    ],
+    [
+     "turn.",
+     1.21,
+     1.74
+    ],
+    [
+     "His",
+     2.08,
+     2.26
+    ],
+    [
+     "trunk",
+     2.26,
+     2.63
+    ],
+    [
+     "is",
+     2.63,
+     2.73
+    ],
+    [
+     "still",
+     2.73,
+     3.04
+    ],
+    [
+     "short.",
+     3.04,
+     3.667
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Tumble's turn",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Baby elephants are clumsy with their trunks at first.",
+   "t0": 41.064333333333344,
+   "t1": 45.10145833333334,
+   "v0": 41.18433333333334,
+   "dur": 3.497125,
+   "words": [
+    [
+     "Baby",
+     0.0,
+     0.46
+    ],
+    [
+     "elephants",
+     0.46,
+     1.17
+    ],
+    [
+     "are",
+     1.17,
+     1.36
+    ],
+    [
+     "clumsy",
+     1.36,
+     2.03
+    ],
+    [
+     "with",
+     2.03,
+     2.2
+    ],
+    [
+     "their",
+     2.2,
+     2.34
+    ],
+    [
+     "trunks",
+     2.34,
+     2.78
+    ],
+    [
+     "at",
+     2.78,
+     2.9
+    ],
+    [
+     "first.",
+     2.9,
+     3.497
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "clumsy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Oops! Splash! The water goes everywhere.",
+   "t0": 45.10145833333334,
+   "t1": 48.44170833333334,
+   "v0": 45.22145833333334,
+   "dur": 2.80025,
+   "words": [
+    [
+     "Oops!",
+     0.07,
+     0.48
+    ],
+    [
+     "Splash!",
+     0.48,
+     1.16
+    ],
+    [
+     "The",
+     1.16,
+     1.45
+    ],
+    [
+     "water",
+     1.45,
+     1.83
+    ],
+    [
+     "goes",
+     1.83,
+     2.14
+    ],
+    [
+     "everywhere.",
+     2.14,
+     2.8
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "splash",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "But Tumble keeps trying. Little by little, he learns.",
+   "t0": 48.44170833333334,
+   "t1": 52.5195,
+   "v0": 48.561708333333335,
+   "dur": 3.5377916666666667,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.16
+    ],
+    [
+     "Tumble",
+     0.16,
+     0.56
+    ],
+    [
+     "keeps",
+     0.56,
+     0.96
+    ],
+    [
+     "trying.",
+     0.96,
+     1.59
+    ],
+    [
+     "Little",
+     1.95,
+     2.18
+    ],
+    [
+     "by",
+     2.18,
+     2.41
+    ],
+    [
+     "little,",
+     2.41,
+     2.7
+    ],
+    [
+     "he",
+     2.7,
+     2.88
+    ],
+    [
+     "learns.",
+     2.88,
+     3.538
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "he learns",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Can you slurp like an elephant? Slurp, slurp!",
+   "t0": 52.5195,
+   "t1": 56.252125,
+   "v0": 52.6395,
+   "dur": 3.192625,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.34
+    ],
+    [
+     "slurp",
+     0.34,
+     0.77
+    ],
+    [
+     "like",
+     0.77,
+     0.95
+    ],
+    [
+     "an",
+     0.95,
+     1.03
+    ],
+    [
+     "elephant?",
+     1.03,
+     1.72
+    ],
+    [
+     "Slurp,",
+     2.02,
+     2.58
+    ],
+    [
+     "slurp!",
+     2.58,
+     3.19
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "slurp along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "A baby elephant drinks his mama's milk with his mouth.",
+   "t0": 56.252125,
+   "t1": 60.492,
+   "v0": 56.372125,
+   "dur": 3.699875,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.09
+    ],
+    [
+     "baby",
+     0.09,
+     0.61
+    ],
+    [
+     "elephant",
+     0.61,
+     1.31
+    ],
+    [
+     "drinks",
+     1.52,
+     1.82
+    ],
+    [
+     "his",
+     1.82,
+     1.97
+    ],
+    [
+     "mama's",
+     1.97,
+     2.52
+    ],
+    [
+     "milk",
+     2.52,
+     2.89
+    ],
+    [
+     "with",
+     2.89,
+     3.01
+    ],
+    [
+     "his",
+     3.01,
+     3.18
+    ],
+    [
+     "mouth.",
+     3.18,
+     3.7
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: milk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "So he does not need a long trunk yet.",
+   "t0": 60.492,
+   "t1": 63.39512499999999,
+   "v0": 60.611999999999995,
+   "dur": 2.363125,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.16
+    ],
+    [
+     "he",
+     0.16,
+     0.3
+    ],
+    [
+     "does",
+     0.3,
+     0.54
+    ],
+    [
+     "not",
+     0.54,
+     0.79
+    ],
+    [
+     "need",
+     0.79,
+     1.0
+    ],
+    [
+     "a",
+     1.0,
+     1.05
+    ],
+    [
+     "long",
+     1.05,
+     1.52
+    ],
+    [
+     "trunk",
+     1.52,
+     1.96
+    ],
+    [
+     "yet.",
+     1.96,
+     2.36
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: not yet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Now Mama fills her trunk again. What will she do?",
+   "t0": 63.39512499999999,
+   "t1": 67.34025,
+   "v0": 63.51512499999999,
+   "dur": 3.405125,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.35
+    ],
+    [
+     "Mama",
+     0.35,
+     0.83
+    ],
+    [
+     "fills",
+     0.83,
+     1.25
+    ],
+    [
+     "her",
+     1.25,
+     1.34
+    ],
+    [
+     "trunk",
+     1.34,
+     1.65
+    ],
+    [
+     "again.",
+     1.65,
+     2.1
+    ],
+    [
+     "What",
+     2.5,
+     2.66
+    ],
+    [
+     "will",
+     2.66,
+     2.76
+    ],
+    [
+     "she",
+     2.76,
+     3.0
+    ],
+    [
+     "do?",
+     3.0,
+     3.4
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "what next",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Whoosh! A shower! She sprays water all over her back.",
+   "t0": 67.34025,
+   "t1": 71.41304166666667,
+   "v0": 67.46025,
+   "dur": 3.5327916666666668,
+   "words": [
+    [
+     "Whoosh!",
+     0.0,
+     0.49
+    ],
+    [
+     "A",
+     0.49,
+     0.6
+    ],
+    [
+     "shower!",
+     0.6,
+     1.29
+    ],
+    [
+     "She",
+     1.62,
+     1.77
+    ],
+    [
+     "sprays",
+     1.77,
+     2.22
+    ],
+    [
+     "water",
+     2.22,
+     2.57
+    ],
+    [
+     "all",
+     2.57,
+     2.78
+    ],
+    [
+     "over",
+     2.78,
+     2.94
+    ],
+    [
+     "her",
+     2.94,
+     3.06
+    ],
+    [
+     "back.",
+     3.06,
+     3.53
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "shower",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Elephants squirt cool water over their bodies to keep cool.",
+   "t0": 71.41304166666667,
+   "t1": 76.02454166666668,
+   "v0": 71.53304166666668,
+   "dur": 4.0715,
+   "words": [
+    [
+     "Elephants",
+     0.01,
+     0.62
+    ],
+    [
+     "squirt",
+     0.62,
+     1.0
+    ],
+    [
+     "cool",
+     1.0,
+     1.49
+    ],
+    [
+     "water",
+     1.88,
+     2.23
+    ],
+    [
+     "over",
+     2.23,
+     2.4
+    ],
+    [
+     "their",
+     2.4,
+     2.58
+    ],
+    [
+     "bodies",
+     2.58,
+     3.13
+    ],
+    [
+     "to",
+     3.13,
+     3.23
+    ],
+    [
+     "keep",
+     3.23,
+     3.54
+    ],
+    [
+     "cool.",
+     3.54,
+     4.07
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "keep cool",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Tumble wants a shower too. Ready, steady, spray!",
+   "t0": 76.02454166666668,
+   "t1": 79.99879166666669,
+   "v0": 76.14454166666668,
+   "dur": 3.43425,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.36
+    ],
+    [
+     "wants",
+     0.36,
+     0.63
+    ],
+    [
+     "a",
+     0.63,
+     0.67
+    ],
+    [
+     "shower",
+     0.67,
+     1.19
+    ],
+    [
+     "too.",
+     1.19,
+     1.64
+    ],
+    [
+     "Ready,",
+     2.01,
+     2.4
+    ],
+    [
+     "steady,",
+     2.4,
+     2.85
+    ],
+    [
+     "spray!",
+     2.85,
+     3.43
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Tumble sprays",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Can you spray like an elephant? Whoosh, whoosh!",
+   "t0": 79.99879166666669,
+   "t1": 83.6549166666667,
+   "v0": 80.1187916666667,
+   "dur": 3.116125,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.33
+    ],
+    [
+     "spray",
+     0.33,
+     0.74
+    ],
+    [
+     "like",
+     0.74,
+     0.94
+    ],
+    [
+     "an",
+     0.94,
+     1.02
+    ],
+    [
+     "elephant?",
+     1.02,
+     1.72
+    ],
+    [
+     "Whoosh,",
+     2.04,
+     2.49
+    ],
+    [
+     "whoosh!",
+     2.49,
+     3.116
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "spray along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Now we have four trunk jobs. Three, drink. Four, spray.",
+   "t0": 83.6549166666667,
+   "t1": 88.69958333333336,
+   "v0": 83.7749166666667,
+   "dur": 4.504666666666667,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.34
+    ],
+    [
+     "we",
+     0.34,
+     0.46
+    ],
+    [
+     "have",
+     0.46,
+     0.64
+    ],
+    [
+     "four",
+     0.64,
+     0.94
+    ],
+    [
+     "trunk",
+     0.94,
+     1.34
+    ],
+    [
+     "jobs.",
+     1.34,
+     1.98
+    ],
+    [
+     "Three,",
+     2.27,
+     2.64
+    ],
+    [
+     "drink.",
+     2.64,
+     3.15
+    ],
+    [
+     "Four,",
+     3.39,
+     3.81
+    ],
+    [
+     "spray.",
+     3.81,
+     4.5
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: jobs 3 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

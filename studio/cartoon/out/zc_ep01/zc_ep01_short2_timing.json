@@ -1,0 +1,1849 @@
+{
+ "id": "zc_ep01_short2",
+ "total": 88.12262500000004,
+ "plan": {
+  "length": 88.1,
+  "shots": 22,
+  "visual_changes": 101,
+  "mean_gap": 0.87,
+  "longest_gap": 3.59,
+  "longest_gap_at": 3.6,
+  "over_6s": [],
+  "places": [
+   "oasis",
+   "trail",
+   "night"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 5,
+  "longest_without_question": 33.2,
+  "first_words_at": 0.42,
+  "shot_mean": 4.01,
+  "fails": [],
+  "words_placed": "192/192"
+ },
+ "events": [
+  [
+   0.3,
+   "new place",
+   "the oasis hook: how much"
+  ],
+  [
+   0.6,
+   "word",
+   "?"
+  ],
+  [
+   1.58,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   3.57,
+   "action",
+   "calf walks"
+  ],
+  [
+   3.57,
+   "action",
+   "mama walks"
+  ],
+  [
+   3.57,
+   "new place",
+   "the rocky trail trail wide"
+  ],
+  [
+   7.16,
+   "new shot",
+   "the rocky trail the bush"
+  ],
+  [
+   7.7,
+   "word",
+   "THORNS"
+  ],
+  [
+   9.81,
+   "action",
+   "the bush shakes"
+  ],
+  [
+   10.86,
+   "new shot",
+   "the rocky trail Mama eats"
+  ],
+  [
+   11.91,
+   "word",
+   "TOUGH LIPS"
+  ],
+  [
+   13.15,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   13.7,
+   "action",
+   "mama chews"
+  ],
+  [
+   15.52,
+   "new shot",
+   "the rocky trail munch"
+  ],
+  [
+   15.62,
+   "action",
+   "mama chews"
+  ],
+  [
+   15.65,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   19.23,
+   "new shot",
+   "the rocky trail Sandy nibbles"
+  ],
+  [
+   19.43,
+   "action",
+   "calf bends down to drink"
+  ],
+  [
+   21.57,
+   "action",
+   "calf chews"
+  ],
+  [
+   21.57,
+   "word",
+   "NIBBLE!"
+  ],
+  [
+   22.95,
+   "action",
+   "the hump stands up"
+  ],
+  [
+   22.95,
+   "new place",
+   "the picture board board: tall hump"
+  ],
+  [
+   25.8,
+   "picture",
+   "ar"
+  ],
+  [
+   25.8,
+   "word",
+   "TALL"
+  ],
+  [
+   26.73,
+   "new shot",
+   "the picture board board: using the fat"
+  ],
+  [
+   27.34,
+   "word",
+   "NO FOOD"
+  ],
+  [
+   29.69,
+   "action",
+   "cam's hump leans over"
+  ],
+  [
+   29.69,
+   "action",
+   "the lunch box empties"
+  ],
+  [
+   31.12,
+   "new shot",
+   "the picture board board: flop"
+  ],
+  [
+   32.82,
+   "action",
+   "cam's hump leans over"
+  ],
+  [
+   34.01,
+   "word",
+   "FLOP!"
+  ],
+  [
+   35.04,
+   "new place",
+   "the picture board (blue) board: full or empty"
+  ],
+  [
+   36.12,
+   "word",
+   "FULL"
+  ],
+  [
+   37.95,
+   "word",
+   "EMPTY"
+  ],
+  [
+   39.01,
+   "new place",
+   "the rocky trail question 2"
+  ],
+  [
+   41.79,
+   "sign",
+   "TALL"
+  ],
+  [
+   42.14,
+   "sign",
+   "FLOPPY"
+  ],
+  [
+   43.81,
+   "thinking dot",
+   "1"
+  ],
+  [
+   44.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   45.82,
+   "thinking dot",
+   "3"
+  ],
+  [
+   46.47,
+   "answer",
+   "TALL"
+  ],
+  [
+   46.52,
+   "action",
+   "mama hops"
+  ],
+  [
+   46.97,
+   "new shot",
+   "the rocky trail tall!"
+  ],
+  [
+   47.09,
+   "action",
+   "mama hops"
+  ],
+  [
+   47.09,
+   "word",
+   "TALL!"
+  ],
+  [
+   49.78,
+   "new place",
+   "the oasis oasis wide"
+  ],
+  [
+   52.6,
+   "action",
+   "the water ripples"
+  ],
+  [
+   52.6,
+   "word",
+   "SPLASH!"
+  ],
+  [
+   53.73,
+   "new shot",
+   "the oasis Mama drinks"
+  ],
+  [
+   56.4,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   56.56,
+   "word",
+   "DRINK!"
+  ],
+  [
+   57.66,
+   "new shot",
+   "the oasis 30 gallons"
+  ],
+  [
+   59.63,
+   "picture",
+   "jug"
+  ],
+  [
+   59.73,
+   "count",
+   "3"
+  ],
+  [
+   59.89,
+   "count",
+   "6"
+  ],
+  [
+   60.04,
+   "count",
+   "9"
+  ],
+  [
+   60.2,
+   "count",
+   "12"
+  ],
+  [
+   60.36,
+   "count",
+   "15"
+  ],
+  [
+   60.51,
+   "count",
+   "18"
+  ],
+  [
+   60.55,
+   "word",
+   "GALLONS"
+  ],
+  [
+   60.67,
+   "count",
+   "21"
+  ],
+  [
+   60.82,
+   "count",
+   "24"
+  ],
+  [
+   60.98,
+   "count",
+   "27"
+  ],
+  [
+   61.13,
+   "count",
+   "30"
+  ],
+  [
+   61.58,
+   "new shot",
+   "the oasis 13 minutes"
+  ],
+  [
+   62.25,
+   "action",
+   "the clock hand moves 13 minutes"
+  ],
+  [
+   62.25,
+   "word",
+   "13 MINUTES"
+  ],
+  [
+   63.6,
+   "action",
+   "gulp"
+  ],
+  [
+   65.45,
+   "new place",
+   "the picture board (blue) board: a week"
+  ],
+  [
+   67.51,
+   "action",
+   "seven days light up"
+  ],
+  [
+   67.51,
+   "count",
+   "1"
+  ],
+  [
+   67.75,
+   "count",
+   "2"
+  ],
+  [
+   67.97,
+   "word",
+   "DAYS"
+  ],
+  [
+   67.98,
+   "count",
+   "3"
+  ],
+  [
+   68.21,
+   "count",
+   "4"
+  ],
+  [
+   68.45,
+   "count",
+   "5"
+  ],
+  [
+   68.68,
+   "count",
+   "6"
+  ],
+  [
+   68.91,
+   "count",
+   "7"
+  ],
+  [
+   70.17,
+   "new place",
+   "the oasis Sandy drinks"
+  ],
+  [
+   70.37,
+   "action",
+   "calf bends down to drink"
+  ],
+  [
+   72.24,
+   "new shot",
+   "the oasis count the sips"
+  ],
+  [
+   74.3,
+   "action",
+   "sip"
+  ],
+  [
+   74.3,
+   "word",
+   "1"
+  ],
+  [
+   74.62,
+   "action",
+   "sip"
+  ],
+  [
+   74.62,
+   "word",
+   "2"
+  ],
+  [
+   74.85,
+   "action",
+   "sip"
+  ],
+  [
+   74.85,
+   "word",
+   "3"
+  ],
+  [
+   75.82,
+   "new shot",
+   "the oasis after the drink"
+  ],
+  [
+   76.04,
+   "action",
+   "mama nods"
+  ],
+  [
+   76.04,
+   "word",
+   "AHH!"
+  ],
+  [
+   76.86,
+   "action",
+   "calf hops"
+  ],
+  [
+   77.72,
+   "new place",
+   "the desert at night quiz 1"
+  ],
+  [
+   79.96,
+   "sign",
+   "WATER"
+  ],
+  [
+   80.31,
+   "sign",
+   "FAT"
+  ],
+  [
+   81.78,
+   "thinking dot",
+   "1"
+  ],
+  [
+   82.72,
+   "thinking dot",
+   "2"
+  ],
+  [
+   83.66,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.28,
+   "answer",
+   "FAT"
+  ],
+  [
+   84.78,
+   "new place",
+   "the picture board board: fat again"
+  ],
+  [
+   84.91,
+   "word",
+   "FAT!"
+  ],
+  [
+   86.44,
+   "picture",
+   "lb"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "oasis",
+   "say": "How much water can a thirsty camel drink?",
+   "t0": 0.3,
+   "t1": 3.566125,
+   "v0": 0.42,
+   "dur": 2.726125,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "much",
+     0.18,
+     0.47
+    ],
+    [
+     "water",
+     0.47,
+     0.92
+    ],
+    [
+     "can",
+     0.92,
+     1.12
+    ],
+    [
+     "a",
+     1.12,
+     1.16
+    ],
+    [
+     "thirsty",
+     1.16,
+     1.77
+    ],
+    [
+     "camel",
+     1.77,
+     2.21
+    ],
+    [
+     "drink?",
+     2.21,
+     2.726
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: how much",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Mama and Sandy walk down the rocky trail.",
+   "t0": 3.566125,
+   "t1": 7.162416666666667,
+   "v0": 3.686125,
+   "dur": 3.0562916666666666,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.38
+    ],
+    [
+     "and",
+     0.38,
+     0.59
+    ],
+    [
+     "Sandy",
+     0.59,
+     1.18
+    ],
+    [
+     "walk",
+     1.5,
+     1.8
+    ],
+    [
+     "down",
+     1.8,
+     1.99
+    ],
+    [
+     "the",
+     1.99,
+     2.08
+    ],
+    [
+     "rocky",
+     2.08,
+     2.52
+    ],
+    [
+     "trail.",
+     2.52,
+     3.056
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "trail wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Look! A thorny bush. Those thorns are sharp.",
+   "t0": 7.162416666666667,
+   "t1": 10.858083333333335,
+   "v0": 7.282416666666667,
+   "dur": 3.155666666666667,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.39
+    ],
+    [
+     "A",
+     0.39,
+     0.42
+    ],
+    [
+     "thorny",
+     0.42,
+     0.91
+    ],
+    [
+     "bush.",
+     0.91,
+     1.4
+    ],
+    [
+     "Those",
+     1.67,
+     2.02
+    ],
+    [
+     "thorns",
+     2.02,
+     2.46
+    ],
+    [
+     "are",
+     2.46,
+     2.53
+    ],
+    [
+     "sharp.",
+     2.53,
+     3.156
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the bush",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "But camels have tough lips. Mama can eat thorny plants!",
+   "t0": 10.858083333333335,
+   "t1": 15.515791666666667,
+   "v0": 10.978083333333334,
+   "dur": 4.117708333333334,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.16
+    ],
+    [
+     "camels",
+     0.16,
+     0.7
+    ],
+    [
+     "have",
+     0.7,
+     0.93
+    ],
+    [
+     "tough",
+     0.93,
+     1.31
+    ],
+    [
+     "lips.",
+     1.31,
+     1.79
+    ],
+    [
+     "Mama",
+     2.17,
+     2.56
+    ],
+    [
+     "can",
+     2.56,
+     2.72
+    ],
+    [
+     "eat",
+     2.72,
+     3.02
+    ],
+    [
+     "thorny",
+     3.02,
+     3.46
+    ],
+    [
+     "plants!",
+     3.46,
+     4.118
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama eats",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Munch, munch, munch. Can you munch like Mama?",
+   "t0": 15.515791666666667,
+   "t1": 19.2335,
+   "v0": 15.635791666666666,
+   "dur": 3.1777083333333334,
+   "words": [
+    [
+     "Munch,",
+     0.01,
+     0.53
+    ],
+    [
+     "munch,",
+     0.53,
+     1.06
+    ],
+    [
+     "munch.",
+     1.06,
+     1.58
+    ],
+    [
+     "Can",
+     1.86,
+     2.01
+    ],
+    [
+     "you",
+     2.01,
+     2.12
+    ],
+    [
+     "munch",
+     2.12,
+     2.42
+    ],
+    [
+     "like",
+     2.42,
+     2.61
+    ],
+    [
+     "Mama?",
+     2.61,
+     3.178
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "munch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Sandy has a little snack too. Nibble, nibble.",
+   "t0": 19.2335,
+   "t1": 22.953125000000004,
+   "v0": 19.3535,
+   "dur": 3.179625,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.49
+    ],
+    [
+     "has",
+     0.49,
+     0.69
+    ],
+    [
+     "a",
+     0.69,
+     0.73
+    ],
+    [
+     "little",
+     0.73,
+     0.92
+    ],
+    [
+     "snack",
+     0.92,
+     1.38
+    ],
+    [
+     "too.",
+     1.38,
+     1.87
+    ],
+    [
+     "Nibble,",
+     2.22,
+     2.66
+    ],
+    [
+     "nibble.",
+     2.66,
+     3.18
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Sandy nibbles",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "When a camel eats a lot, her hump stands up tall.",
+   "t0": 22.953125000000004,
+   "t1": 26.73133333333334,
+   "v0": 23.073125000000005,
+   "dur": 3.238208333333333,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.13
+    ],
+    [
+     "a",
+     0.13,
+     0.18
+    ],
+    [
+     "camel",
+     0.18,
+     0.66
+    ],
+    [
+     "eats",
+     0.66,
+     0.94
+    ],
+    [
+     "a",
+     0.94,
+     0.97
+    ],
+    [
+     "lot,",
+     0.97,
+     1.48
+    ],
+    [
+     "her",
+     1.7,
+     1.83
+    ],
+    [
+     "hump",
+     1.83,
+     2.14
+    ],
+    [
+     "stands",
+     2.14,
+     2.58
+    ],
+    [
+     "up",
+     2.58,
+     2.73
+    ],
+    [
+     "tall.",
+     2.73,
+     3.238
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: tall hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "When there is no food for a long time, she uses the fat.",
+   "t0": 26.73133333333334,
+   "t1": 31.118041666666674,
+   "v0": 26.85133333333334,
+   "dur": 3.8467083333333334,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.15
+    ],
+    [
+     "there",
+     0.15,
+     0.31
+    ],
+    [
+     "is",
+     0.31,
+     0.49
+    ],
+    [
+     "no",
+     0.49,
+     0.77
+    ],
+    [
+     "food",
+     0.77,
+     1.19
+    ],
+    [
+     "for",
+     1.19,
+     1.41
+    ],
+    [
+     "a",
+     1.41,
+     1.45
+    ],
+    [
+     "long",
+     1.45,
+     1.81
+    ],
+    [
+     "time,",
+     1.81,
+     2.36
+    ],
+    [
+     "she",
+     2.66,
+     2.84
+    ],
+    [
+     "uses",
+     2.84,
+     3.2
+    ],
+    [
+     "the",
+     3.2,
+     3.33
+    ],
+    [
+     "fat.",
+     3.33,
+     3.847
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: using the fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Then the hump gets soft, and leans over. Flop!",
+   "t0": 31.118041666666674,
+   "t1": 35.03787500000001,
+   "v0": 31.238041666666675,
+   "dur": 3.3798333333333335,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.26
+    ],
+    [
+     "the",
+     0.26,
+     0.33
+    ],
+    [
+     "hump",
+     0.33,
+     0.64
+    ],
+    [
+     "gets",
+     0.64,
+     0.97
+    ],
+    [
+     "soft,",
+     0.97,
+     1.46
+    ],
+    [
+     "and",
+     1.46,
+     1.58
+    ],
+    [
+     "leans",
+     1.58,
+     1.91
+    ],
+    [
+     "over.",
+     1.91,
+     2.36
+    ],
+    [
+     "Flop!",
+     2.77,
+     3.38
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: flop",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A tall hump is full. A floppy hump is empty.",
+   "t0": 35.03787500000001,
+   "t1": 39.010125,
+   "v0": 35.157875000000004,
+   "dur": 3.43225,
+   "words": [
+    [
+     "A",
+     0.06,
+     0.12
+    ],
+    [
+     "tall",
+     0.12,
+     0.5
+    ],
+    [
+     "hump",
+     0.5,
+     0.78
+    ],
+    [
+     "is",
+     0.78,
+     0.96
+    ],
+    [
+     "full.",
+     0.96,
+     1.36
+    ],
+    [
+     "A",
+     1.74,
+     1.78
+    ],
+    [
+     "floppy",
+     1.78,
+     2.3
+    ],
+    [
+     "hump",
+     2.3,
+     2.62
+    ],
+    [
+     "is",
+     2.62,
+     2.79
+    ],
+    [
+     "empty.",
+     2.79,
+     3.43
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: full or empty",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Mama just had a big lunch. Is her hump tall, or floppy?",
+   "t0": 39.010125,
+   "t1": 46.97441666666666,
+   "v0": 39.130125,
+   "dur": 4.024291666666667,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.43
+    ],
+    [
+     "just",
+     0.43,
+     0.73
+    ],
+    [
+     "had",
+     0.73,
+     0.91
+    ],
+    [
+     "a",
+     0.91,
+     0.96
+    ],
+    [
+     "big",
+     0.96,
+     1.26
+    ],
+    [
+     "lunch.",
+     1.26,
+     1.78
+    ],
+    [
+     "Is",
+     2.18,
+     2.3
+    ],
+    [
+     "her",
+     2.3,
+     2.38
+    ],
+    [
+     "hump",
+     2.38,
+     2.66
+    ],
+    [
+     "tall,",
+     2.66,
+     3.2
+    ],
+    [
+     "or",
+     3.2,
+     3.31
+    ],
+    [
+     "floppy?",
+     3.31,
+     4.02
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Tall! Mama's hump is full of fat.",
+   "t0": 46.97441666666666,
+   "t1": 49.77795833333333,
+   "v0": 47.09441666666666,
+   "dur": 2.263541666666667,
+   "words": [
+    [
+     "Tall!",
+     0.0,
+     0.47
+    ],
+    [
+     "Mama's",
+     0.62,
+     1.07
+    ],
+    [
+     "hump",
+     1.07,
+     1.31
+    ],
+    [
+     "is",
+     1.31,
+     1.49
+    ],
+    [
+     "full",
+     1.49,
+     1.67
+    ],
+    [
+     "of",
+     1.67,
+     1.74
+    ],
+    [
+     "fat.",
+     1.74,
+     2.26
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "tall!",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Now they find a pool of cool water. Splash!",
+   "t0": 49.77795833333333,
+   "t1": 53.729749999999996,
+   "v0": 49.89795833333333,
+   "dur": 3.411791666666667,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.35
+    ],
+    [
+     "they",
+     0.35,
+     0.48
+    ],
+    [
+     "find",
+     0.48,
+     0.75
+    ],
+    [
+     "a",
+     0.75,
+     0.78
+    ],
+    [
+     "pool",
+     0.78,
+     1.25
+    ],
+    [
+     "of",
+     1.25,
+     1.36
+    ],
+    [
+     "cool",
+     1.36,
+     1.7
+    ],
+    [
+     "water.",
+     1.7,
+     2.18
+    ],
+    [
+     "Splash!",
+     2.7,
+     3.41
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "oasis wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Camels do not keep water in the hump. They drink it!",
+   "t0": 53.729749999999996,
+   "t1": 57.66104166666666,
+   "v0": 53.84974999999999,
+   "dur": 3.3912916666666666,
+   "words": [
+    [
+     "Camels",
+     0.0,
+     0.53
+    ],
+    [
+     "do",
+     0.53,
+     0.67
+    ],
+    [
+     "not",
+     0.67,
+     0.9
+    ],
+    [
+     "keep",
+     0.9,
+     1.21
+    ],
+    [
+     "water",
+     1.21,
+     1.62
+    ],
+    [
+     "in",
+     1.62,
+     1.72
+    ],
+    [
+     "the",
+     1.72,
+     1.78
+    ],
+    [
+     "hump.",
+     1.78,
+     2.25
+    ],
+    [
+     "They",
+     2.55,
+     2.71
+    ],
+    [
+     "drink",
+     2.71,
+     3.08
+    ],
+    [
+     "it!",
+     3.08,
+     3.39
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama drinks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "A thirsty camel can drink thirty gallons of water,",
+   "t0": 57.66104166666666,
+   "t1": 61.57787499999999,
+   "v0": 57.78104166666666,
+   "dur": 3.3768333333333334,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "thirsty",
+     0.06,
+     0.68
+    ],
+    [
+     "camel",
+     0.68,
+     1.25
+    ],
+    [
+     "can",
+     1.41,
+     1.57
+    ],
+    [
+     "drink",
+     1.57,
+     1.85
+    ],
+    [
+     "thirty",
+     1.85,
+     2.24
+    ],
+    [
+     "gallons",
+     2.24,
+     2.77
+    ],
+    [
+     "of",
+     2.77,
+     2.88
+    ],
+    [
+     "water,",
+     2.88,
+     3.377
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "30 gallons",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "in only thirteen minutes! Gulp, gulp, gulp.",
+   "t0": 61.57787499999999,
+   "t1": 65.45341666666666,
+   "v0": 61.69787499999999,
+   "dur": 3.335541666666667,
+   "words": [
+    [
+     "in",
+     0.0,
+     0.21
+    ],
+    [
+     "only",
+     0.21,
+     0.55
+    ],
+    [
+     "thirteen",
+     0.55,
+     1.06
+    ],
+    [
+     "minutes!",
+     1.06,
+     1.58
+    ],
+    [
+     "Gulp,",
+     1.9,
+     2.34
+    ],
+    [
+     "gulp,",
+     2.34,
+     2.82
+    ],
+    [
+     "gulp.",
+     2.82,
+     3.33
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "13 minutes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "After that, a camel can go a week or more without a drink.",
+   "t0": 65.45341666666666,
+   "t1": 70.1665,
+   "v0": 65.57341666666666,
+   "dur": 4.1730833333333335,
+   "words": [
+    [
+     "After",
+     0.01,
+     0.38
+    ],
+    [
+     "that,",
+     0.38,
+     0.98
+    ],
+    [
+     "a",
+     0.98,
+     1.03
+    ],
+    [
+     "camel",
+     1.03,
+     1.56
+    ],
+    [
+     "can",
+     1.56,
+     1.73
+    ],
+    [
+     "go",
+     1.73,
+     1.91
+    ],
+    [
+     "a",
+     1.91,
+     1.94
+    ],
+    [
+     "week",
+     1.94,
+     2.4
+    ],
+    [
+     "or",
+     2.4,
+     2.63
+    ],
+    [
+     "more",
+     2.63,
+     3.06
+    ],
+    [
+     "without",
+     3.29,
+     3.58
+    ],
+    [
+     "a",
+     3.58,
+     3.63
+    ],
+    [
+     "drink.",
+     3.63,
+     4.17
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: a week",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Drink up, little Sandy!",
+   "t0": 70.1665,
+   "t1": 72.240125,
+   "v0": 70.2865,
+   "dur": 1.533625,
+   "words": [
+    [
+     "Drink",
+     0.01,
+     0.4
+    ],
+    [
+     "up,",
+     0.4,
+     0.67
+    ],
+    [
+     "little",
+     0.67,
+     0.86
+    ],
+    [
+     "Sandy!",
+     0.86,
+     1.53
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Sandy drinks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Let's count Sandy's sips. One, two, three!",
+   "t0": 72.240125,
+   "t1": 75.82054166666668,
+   "v0": 72.36012500000001,
+   "dur": 3.0404166666666668,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.32
+    ],
+    [
+     "count",
+     0.32,
+     0.62
+    ],
+    [
+     "Sandy's",
+     0.62,
+     1.06
+    ],
+    [
+     "sips.",
+     1.06,
+     1.62
+    ],
+    [
+     "One,",
+     1.94,
+     2.26
+    ],
+    [
+     "two,",
+     2.26,
+     2.49
+    ],
+    [
+     "three!",
+     2.49,
+     3.04
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the sips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Ahh! That feels good.",
+   "t0": 75.82054166666668,
+   "t1": 77.72008333333336,
+   "v0": 75.94054166666669,
+   "dur": 1.3595416666666666,
+   "words": [
+    [
+     "Ahh!",
+     0.1,
+     0.38
+    ],
+    [
+     "That",
+     0.38,
+     0.61
+    ],
+    [
+     "feels",
+     0.61,
+     0.92
+    ],
+    [
+     "good.",
+     0.92,
+     1.36
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "after the drink",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "night",
+   "say": "What is inside a camel's hump? Water, or fat?",
+   "t0": 77.72008333333336,
+   "t1": 84.7849166666667,
+   "v0": 77.84008333333337,
+   "dur": 3.3248333333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.36
+    ],
+    [
+     "inside",
+     0.36,
+     0.81
+    ],
+    [
+     "a",
+     0.81,
+     0.85
+    ],
+    [
+     "camel's",
+     0.85,
+     1.4
+    ],
+    [
+     "hump?",
+     1.4,
+     1.79
+    ],
+    [
+     "Water,",
+     2.12,
+     2.62
+    ],
+    [
+     "or",
+     2.62,
+     2.74
+    ],
+    [
+     "fat?",
+     2.74,
+     3.32
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Fat! It is the camel's lunch box.",
+   "t0": 84.7849166666667,
+   "t1": 87.72262500000004,
+   "v0": 84.90491666666671,
+   "dur": 2.3977083333333336,
+   "words": [
+    [
+     "Fat!",
+     0.01,
+     0.49
+    ],
+    [
+     "It",
+     0.65,
+     0.79
+    ],
+    [
+     "is",
+     0.79,
+     0.94
+    ],
+    [
+     "the",
+     0.94,
+     1.01
+    ],
+    [
+     "camel's",
+     1.01,
+     1.54
+    ],
+    [
+     "lunch",
+     1.54,
+     1.85
+    ],
+    [
+     "box.",
+     1.85,
+     2.398
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "board: fat again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

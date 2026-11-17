@@ -1,0 +1,1777 @@
+{
+ "id": "zc_ep01_short3",
+ "total": 87.8988333333334,
+ "plan": {
+  "length": 87.9,
+  "shots": 24,
+  "visual_changes": 83,
+  "mean_gap": 1.06,
+  "longest_gap": 3.25,
+  "longest_gap_at": 4.0,
+  "over_6s": [],
+  "places": [
+   "wind",
+   "gobi",
+   "dunes"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 33.2,
+  "first_words_at": 0.42,
+  "shot_mean": 3.66,
+  "fails": [],
+  "words_placed": "189/189"
+ },
+ "events": [
+  [
+   0.3,
+   "new place",
+   "the picture board (blue) hook: sand in the eyes"
+  ],
+  [
+   3.27,
+   "word",
+   "?"
+  ],
+  [
+   3.89,
+   "new place",
+   "the windy dunes windy wide"
+  ],
+  [
+   4.02,
+   "word",
+   "WHOOSH!"
+  ],
+  [
+   7.27,
+   "new shot",
+   "the windy dunes Milo blinks"
+  ],
+  [
+   8.32,
+   "action",
+   "Milo shuts his eyes"
+  ],
+  [
+   10.01,
+   "new shot",
+   "the windy dunes Mama calm"
+  ],
+  [
+   11.04,
+   "action",
+   "mama nods"
+  ],
+  [
+   12.93,
+   "new place",
+   "the picture board board: the eye"
+  ],
+  [
+   13.41,
+   "action",
+   "the first row lights up"
+  ],
+  [
+   13.41,
+   "word",
+   "1"
+  ],
+  [
+   13.69,
+   "action",
+   "the second row lights up"
+  ],
+  [
+   13.69,
+   "word",
+   "2"
+  ],
+  [
+   14.21,
+   "word",
+   "EYELASHES"
+  ],
+  [
+   15.87,
+   "new shot",
+   "the picture board board: blink"
+  ],
+  [
+   18.88,
+   "action",
+   "blink"
+  ],
+  [
+   18.88,
+   "word",
+   "BLINK!"
+  ],
+  [
+   19.58,
+   "action",
+   "blink"
+  ],
+  [
+   20.4,
+   "new place",
+   "the windy dunes blink along"
+  ],
+  [
+   20.86,
+   "action",
+   "blink"
+  ],
+  [
+   20.86,
+   "word",
+   "BLINK"
+  ],
+  [
+   21.56,
+   "action",
+   "blink"
+  ],
+  [
+   22.26,
+   "action",
+   "blink"
+  ],
+  [
+   24.29,
+   "new place",
+   "the picture board (pink) board: the nose"
+  ],
+  [
+   26.72,
+   "action",
+   "the nostrils shut"
+  ],
+  [
+   26.72,
+   "word",
+   "CLOSE!"
+  ],
+  [
+   28.37,
+   "new shot",
+   "the picture board (pink) board: open, closed"
+  ],
+  [
+   28.52,
+   "word",
+   "OPEN"
+  ],
+  [
+   29.03,
+   "action",
+   "shut"
+  ],
+  [
+   29.03,
+   "word",
+   "CLOSED"
+  ],
+  [
+   29.74,
+   "action",
+   "open"
+  ],
+  [
+   30.15,
+   "action",
+   "shut"
+  ],
+  [
+   32.81,
+   "action",
+   "the foot appears"
+  ],
+  [
+   32.81,
+   "new place",
+   "the picture board (blue) board: the foot"
+  ],
+  [
+   33.97,
+   "word",
+   "WIDE FEET"
+  ],
+  [
+   35.67,
+   "new shot",
+   "the picture board (blue) board: the foot spreads"
+  ],
+  [
+   36.44,
+   "action",
+   "the foot spreads"
+  ],
+  [
+   36.44,
+   "word",
+   "SPREAD!"
+  ],
+  [
+   38.65,
+   "new place",
+   "the windy dunes walking on sand"
+  ],
+  [
+   38.75,
+   "action",
+   "calf walks"
+  ],
+  [
+   38.75,
+   "action",
+   "mama walks"
+  ],
+  [
+   41.31,
+   "word",
+   "STEP!"
+  ],
+  [
+   43.15,
+   "new shot",
+   "the windy dunes Sandy's feet"
+  ],
+  [
+   43.27,
+   "word",
+   "NO SINKING!"
+  ],
+  [
+   44.17,
+   "action",
+   "calf hops"
+  ],
+  [
+   45.24,
+   "new place",
+   "the snowy Gobi Gobi wide"
+  ],
+  [
+   46.97,
+   "word",
+   "BRRR!"
+  ],
+  [
+   48.73,
+   "new shot",
+   "the snowy Gobi the cousin"
+  ],
+  [
+   51.18,
+   "action",
+   "bac nods"
+  ],
+  [
+   53.63,
+   "new shot",
+   "the snowy Gobi count the humps"
+  ],
+  [
+   53.76,
+   "word",
+   "1"
+  ],
+  [
+   54.45,
+   "word",
+   "2"
+  ],
+  [
+   57.25,
+   "new place",
+   "the picture board (blue) board: one or two"
+  ],
+  [
+   58.39,
+   "word",
+   "1 HUMP"
+  ],
+  [
+   60.44,
+   "word",
+   "2 HUMPS"
+  ],
+  [
+   61.35,
+   "new place",
+   "the snowy Gobi cousin close"
+  ],
+  [
+   61.84,
+   "action",
+   "blink"
+  ],
+  [
+   62.54,
+   "action",
+   "blink"
+  ],
+  [
+   63.03,
+   "word",
+   "SNOW"
+  ],
+  [
+   65.04,
+   "new shot",
+   "the snowy Gobi question 3"
+  ],
+  [
+   67.77,
+   "sign",
+   "ONE"
+  ],
+  [
+   68.12,
+   "sign",
+   "TWO"
+  ],
+  [
+   69.6,
+   "thinking dot",
+   "1"
+  ],
+  [
+   70.6,
+   "thinking dot",
+   "2"
+  ],
+  [
+   71.61,
+   "thinking dot",
+   "3"
+  ],
+  [
+   72.26,
+   "answer",
+   "ONE"
+  ],
+  [
+   72.76,
+   "new place",
+   "the dunes at sunrise one hump"
+  ],
+  [
+   72.9,
+   "action",
+   "mama hops"
+  ],
+  [
+   72.9,
+   "word",
+   "1"
+  ],
+  [
+   75.43,
+   "new place",
+   "the windy dunes ask again"
+  ],
+  [
+   78.4,
+   "word",
+   "?"
+  ],
+  [
+   79.82,
+   "new place",
+   "the picture board (blue) board: lashes again"
+  ],
+  [
+   80.12,
+   "action",
+   "blink"
+  ],
+  [
+   80.12,
+   "word",
+   "2 ROWS"
+  ],
+  [
+   80.82,
+   "action",
+   "blink"
+  ],
+  [
+   82.59,
+   "new place",
+   "the picture board (pink) board: nose again"
+  ],
+  [
+   83.77,
+   "action",
+   "the nostrils shut"
+  ],
+  [
+   83.77,
+   "word",
+   "CLOSE!"
+  ],
+  [
+   84.89,
+   "new place",
+   "the windy dunes bye sand"
+  ],
+  [
+   85.01,
+   "action",
+   "blink"
+  ],
+  [
+   85.71,
+   "action",
+   "blink"
+  ],
+  [
+   86.06,
+   "action",
+   "calf hops"
+  ],
+  [
+   86.06,
+   "word",
+   "BYE, SAND!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper_blue",
+   "say": "How do camels keep sand out of their eyes?",
+   "t0": 0.3,
+   "t1": 3.891958333333333,
+   "v0": 0.42,
+   "dur": 2.5519583333333333,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.22
+    ],
+    [
+     "do",
+     0.22,
+     0.37
+    ],
+    [
+     "camels",
+     0.37,
+     0.97
+    ],
+    [
+     "keep",
+     0.97,
+     1.23
+    ],
+    [
+     "sand",
+     1.23,
+     1.65
+    ],
+    [
+     "out",
+     1.65,
+     1.75
+    ],
+    [
+     "of",
+     1.75,
+     1.82
+    ],
+    [
+     "their",
+     1.82,
+     2.02
+    ],
+    [
+     "eyes?",
+     2.02,
+     2.55
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: sand in the eyes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "Whoosh! The wind is blowing the sand around.",
+   "t0": 3.891958333333333,
+   "t1": 7.266916666666667,
+   "v0": 4.011958333333333,
+   "dur": 2.8349583333333332,
+   "words": [
+    [
+     "Whoosh!",
+     0.01,
+     0.59
+    ],
+    [
+     "The",
+     0.59,
+     0.87
+    ],
+    [
+     "wind",
+     0.87,
+     1.24
+    ],
+    [
+     "is",
+     1.24,
+     1.37
+    ],
+    [
+     "blowing",
+     1.37,
+     1.79
+    ],
+    [
+     "the",
+     1.79,
+     1.85
+    ],
+    [
+     "sand",
+     1.85,
+     2.25
+    ],
+    [
+     "around.",
+     2.25,
+     2.83
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "windy wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "Sand in the air tickles my eyes!",
+   "t0": 7.266916666666667,
+   "t1": 10.008958333333334,
+   "v0": 7.386916666666667,
+   "dur": 2.2020416666666667,
+   "words": [
+    [
+     "Sand",
+     0.01,
+     0.42
+    ],
+    [
+     "in",
+     0.42,
+     0.52
+    ],
+    [
+     "the",
+     0.52,
+     0.67
+    ],
+    [
+     "air",
+     0.67,
+     0.93
+    ],
+    [
+     "tickles",
+     0.93,
+     1.41
+    ],
+    [
+     "my",
+     1.41,
+     1.77
+    ],
+    [
+     "eyes!",
+     1.77,
+     2.2
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Milo blinks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "But camels are ready for a sandy day.",
+   "t0": 10.008958333333334,
+   "t1": 12.931791666666667,
+   "v0": 10.128958333333333,
+   "dur": 2.382833333333333,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.12
+    ],
+    [
+     "camels",
+     0.12,
+     0.78
+    ],
+    [
+     "are",
+     0.78,
+     0.91
+    ],
+    [
+     "ready",
+     0.91,
+     1.26
+    ],
+    [
+     "for",
+     1.26,
+     1.48
+    ],
+    [
+     "a",
+     1.48,
+     1.51
+    ],
+    [
+     "sandy",
+     1.51,
+     2.01
+    ],
+    [
+     "day.",
+     2.01,
+     2.38
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Mama calm",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "They have two rows of long eyelashes.",
+   "t0": 12.931791666666667,
+   "t1": 15.87025,
+   "v0": 13.051791666666666,
+   "dur": 2.398458333333333,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.11
+    ],
+    [
+     "have",
+     0.11,
+     0.36
+    ],
+    [
+     "two",
+     0.36,
+     0.64
+    ],
+    [
+     "rows",
+     0.64,
+     1.05
+    ],
+    [
+     "of",
+     1.05,
+     1.16
+    ],
+    [
+     "long",
+     1.16,
+     1.52
+    ],
+    [
+     "eyelashes.",
+     1.52,
+     2.398
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: the eye",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The eyelashes keep sand out of their eyes. Blink, blink!",
+   "t0": 15.87025,
+   "t1": 20.397041666666667,
+   "v0": 15.99025,
+   "dur": 3.9867916666666665,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "eyelashes",
+     0.18,
+     0.94
+    ],
+    [
+     "keep",
+     0.94,
+     1.19
+    ],
+    [
+     "sand",
+     1.19,
+     1.62
+    ],
+    [
+     "out",
+     1.62,
+     1.72
+    ],
+    [
+     "of",
+     1.72,
+     1.79
+    ],
+    [
+     "their",
+     1.79,
+     1.98
+    ],
+    [
+     "eyes.",
+     1.98,
+     2.52
+    ],
+    [
+     "Blink,",
+     2.89,
+     3.39
+    ],
+    [
+     "blink!",
+     3.39,
+     3.987
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: blink",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "Can you blink like a camel? Blink, blink, blink!",
+   "t0": 20.397041666666667,
+   "t1": 24.293958333333336,
+   "v0": 20.517041666666668,
+   "dur": 3.3569166666666668,
+   "words": [
+    [
+     "Can",
+     0.07,
+     0.21
+    ],
+    [
+     "you",
+     0.21,
+     0.34
+    ],
+    [
+     "blink",
+     0.34,
+     0.63
+    ],
+    [
+     "like",
+     0.63,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.86
+    ],
+    [
+     "camel?",
+     0.86,
+     1.46
+    ],
+    [
+     "Blink,",
+     1.83,
+     2.34
+    ],
+    [
+     "blink,",
+     2.34,
+     2.81
+    ],
+    [
+     "blink!",
+     2.81,
+     3.357
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "blink along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "And look at this nose. A camel can close its nose!",
+   "t0": 24.293958333333336,
+   "t1": 28.366166666666672,
+   "v0": 24.413958333333337,
+   "dur": 3.532208333333333,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.2
+    ],
+    [
+     "look",
+     0.2,
+     0.38
+    ],
+    [
+     "at",
+     0.38,
+     0.46
+    ],
+    [
+     "this",
+     0.46,
+     0.69
+    ],
+    [
+     "nose.",
+     0.69,
+     1.24
+    ],
+    [
+     "A",
+     1.58,
+     1.64
+    ],
+    [
+     "camel",
+     1.64,
+     2.12
+    ],
+    [
+     "can",
+     2.12,
+     2.31
+    ],
+    [
+     "close",
+     2.31,
+     2.71
+    ],
+    [
+     "its",
+     2.71,
+     2.89
+    ],
+    [
+     "nose!",
+     2.89,
+     3.53
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: the nose",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Open. Closed. Open. Closed! No sand gets in.",
+   "t0": 28.366166666666672,
+   "t1": 32.80637500000001,
+   "v0": 28.486166666666673,
+   "dur": 3.9002083333333335,
+   "words": [
+    [
+     "Open.",
+     0.03,
+     0.54
+    ],
+    [
+     "Closed.",
+     0.54,
+     1.25
+    ],
+    [
+     "Open.",
+     1.25,
+     1.66
+    ],
+    [
+     "Closed!",
+     1.66,
+     2.32
+    ],
+    [
+     "No",
+     2.61,
+     2.81
+    ],
+    [
+     "sand",
+     2.81,
+     3.24
+    ],
+    [
+     "gets",
+     3.24,
+     3.56
+    ],
+    [
+     "in.",
+     3.56,
+     3.9
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: open, closed",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Camels have big, wide feet too.",
+   "t0": 32.80637500000001,
+   "t1": 35.67437500000001,
+   "v0": 32.92637500000001,
+   "dur": 2.328,
+   "words": [
+    [
+     "Camels",
+     0.0,
+     0.47
+    ],
+    [
+     "have",
+     0.47,
+     0.71
+    ],
+    [
+     "big,",
+     0.71,
+     1.04
+    ],
+    [
+     "wide",
+     1.04,
+     1.54
+    ],
+    [
+     "feet",
+     1.54,
+     1.82
+    ],
+    [
+     "too.",
+     1.82,
+     2.328
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: the foot",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Each foot spreads out when it steps down.",
+   "t0": 35.67437500000001,
+   "t1": 38.64800000000001,
+   "v0": 35.79437500000001,
+   "dur": 2.433625,
+   "words": [
+    [
+     "Each",
+     0.0,
+     0.34
+    ],
+    [
+     "foot",
+     0.34,
+     0.65
+    ],
+    [
+     "spreads",
+     0.65,
+     1.1
+    ],
+    [
+     "out",
+     1.1,
+     1.33
+    ],
+    [
+     "when",
+     1.33,
+     1.44
+    ],
+    [
+     "it",
+     1.44,
+     1.52
+    ],
+    [
+     "steps",
+     1.52,
+     1.92
+    ],
+    [
+     "down.",
+     1.92,
+     2.43
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: the foot spreads",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "That helps them walk on soft sand. Step, step, step!",
+   "t0": 38.64800000000001,
+   "t1": 43.14566666666668,
+   "v0": 38.76800000000001,
+   "dur": 3.957666666666667,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.25
+    ],
+    [
+     "helps",
+     0.25,
+     0.53
+    ],
+    [
+     "them",
+     0.53,
+     0.75
+    ],
+    [
+     "walk",
+     0.75,
+     1.05
+    ],
+    [
+     "on",
+     1.05,
+     1.21
+    ],
+    [
+     "soft",
+     1.21,
+     1.62
+    ],
+    [
+     "sand.",
+     1.62,
+     2.12
+    ],
+    [
+     "Step,",
+     2.54,
+     3.08
+    ],
+    [
+     "step,",
+     3.08,
+     3.43
+    ],
+    [
+     "step!",
+     3.43,
+     3.958
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "walking on sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "No sinking for Sandy!",
+   "t0": 43.14566666666668,
+   "t1": 45.23658333333334,
+   "v0": 43.265666666666675,
+   "dur": 1.5509166666666667,
+   "words": [
+    [
+     "No",
+     0.0,
+     0.28
+    ],
+    [
+     "sinking",
+     0.28,
+     0.76
+    ],
+    [
+     "for",
+     0.76,
+     0.9
+    ],
+    [
+     "Sandy!",
+     0.9,
+     1.55
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Sandy's feet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Far, far away, it is cold and snowy.",
+   "t0": 45.23658333333334,
+   "t1": 48.73183333333334,
+   "v0": 45.35658333333334,
+   "dur": 2.95525,
+   "words": [
+    [
+     "Far,",
+     0.01,
+     0.4
+    ],
+    [
+     "far",
+     0.4,
+     0.75
+    ],
+    [
+     "away,",
+     0.75,
+     1.16
+    ],
+    [
+     "it",
+     1.41,
+     1.5
+    ],
+    [
+     "is",
+     1.5,
+     1.61
+    ],
+    [
+     "cold",
+     1.61,
+     2.21
+    ],
+    [
+     "and",
+     2.21,
+     2.33
+    ],
+    [
+     "snowy.",
+     2.33,
+     2.95
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Gobi wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Sandy's cousins live here. Look closely at this camel's back!",
+   "t0": 48.73183333333334,
+   "t1": 53.62829166666668,
+   "v0": 48.85183333333334,
+   "dur": 4.356458333333333,
+   "words": [
+    [
+     "Sandy's",
+     0.01,
+     0.61
+    ],
+    [
+     "cousins",
+     0.61,
+     1.16
+    ],
+    [
+     "live",
+     1.16,
+     1.56
+    ],
+    [
+     "here.",
+     1.56,
+     1.96
+    ],
+    [
+     "Look",
+     2.33,
+     2.51
+    ],
+    [
+     "closely",
+     2.51,
+     3.08
+    ],
+    [
+     "at",
+     3.08,
+     3.16
+    ],
+    [
+     "this",
+     3.16,
+     3.31
+    ],
+    [
+     "camel's",
+     3.31,
+     3.88
+    ],
+    [
+     "back!",
+     3.88,
+     4.356
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the cousin",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "One hump, two humps! This camel has two.",
+   "t0": 53.62829166666668,
+   "t1": 57.25200000000001,
+   "v0": 53.748291666666674,
+   "dur": 3.0837083333333335,
+   "words": [
+    [
+     "One",
+     0.01,
+     0.3
+    ],
+    [
+     "hump,",
+     0.3,
+     0.7
+    ],
+    [
+     "two",
+     0.7,
+     0.93
+    ],
+    [
+     "humps!",
+     0.93,
+     1.41
+    ],
+    [
+     "This",
+     1.41,
+     1.85
+    ],
+    [
+     "camel",
+     1.85,
+     2.32
+    ],
+    [
+     "has",
+     2.32,
+     2.62
+    ],
+    [
+     "two.",
+     2.62,
+     3.08
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count the humps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Some camels have one hump. Some camels have two.",
+   "t0": 57.25200000000001,
+   "t1": 61.35045833333334,
+   "v0": 57.37200000000001,
+   "dur": 3.5584583333333333,
+   "words": [
+    [
+     "Some",
+     0.01,
+     0.3
+    ],
+    [
+     "camels",
+     0.3,
+     0.79
+    ],
+    [
+     "have",
+     0.79,
+     1.02
+    ],
+    [
+     "one",
+     1.02,
+     1.25
+    ],
+    [
+     "hump.",
+     1.25,
+     1.68
+    ],
+    [
+     "Some",
+     2.0,
+     2.27
+    ],
+    [
+     "camels",
+     2.27,
+     2.79
+    ],
+    [
+     "have",
+     2.79,
+     3.07
+    ],
+    [
+     "two.",
+     3.07,
+     3.558
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: one or two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Long eyelashes keep out the snow and ice, too.",
+   "t0": 61.35045833333334,
+   "t1": 65.03879166666668,
+   "v0": 61.47045833333334,
+   "dur": 3.1483333333333334,
+   "words": [
+    [
+     "Long",
+     0.01,
+     0.37
+    ],
+    [
+     "eyelashes",
+     0.37,
+     1.11
+    ],
+    [
+     "keep",
+     1.11,
+     1.36
+    ],
+    [
+     "out",
+     1.36,
+     1.49
+    ],
+    [
+     "the",
+     1.49,
+     1.56
+    ],
+    [
+     "snow",
+     1.56,
+     2.03
+    ],
+    [
+     "and",
+     2.03,
+     2.18
+    ],
+    [
+     "ice,",
+     2.18,
+     2.6
+    ],
+    [
+     "too.",
+     2.69,
+     3.148
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "cousin close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "How many humps does Sandy's mama have? One, or two?",
+   "t0": 65.03879166666668,
+   "t1": 72.76483333333336,
+   "v0": 65.15879166666669,
+   "dur": 3.7860416666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.14
+    ],
+    [
+     "many",
+     0.14,
+     0.33
+    ],
+    [
+     "humps",
+     0.33,
+     0.73
+    ],
+    [
+     "does",
+     0.73,
+     0.91
+    ],
+    [
+     "Sandy's",
+     0.91,
+     1.49
+    ],
+    [
+     "mama",
+     1.49,
+     1.78
+    ],
+    [
+     "have?",
+     1.78,
+     2.26
+    ],
+    [
+     "One,",
+     2.61,
+     3.06
+    ],
+    [
+     "or",
+     3.06,
+     3.3
+    ],
+    [
+     "two?",
+     3.3,
+     3.786
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "One! Mama has one big hump.",
+   "t0": 72.76483333333336,
+   "t1": 75.42904166666669,
+   "v0": 72.88483333333336,
+   "dur": 2.1242083333333333,
+   "words": [
+    [
+     "One!",
+     0.02,
+     0.46
+    ],
+    [
+     "Mama",
+     0.6,
+     0.95
+    ],
+    [
+     "has",
+     0.95,
+     1.21
+    ],
+    [
+     "one",
+     1.21,
+     1.47
+    ],
+    [
+     "big",
+     1.47,
+     1.67
+    ],
+    [
+     "hump.",
+     1.67,
+     2.12
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "one hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "So, how do camels keep the sand out?",
+   "t0": 75.42904166666669,
+   "t1": 79.8154166666667,
+   "v0": 75.5490416666667,
+   "dur": 2.646375,
+   "words": [
+    [
+     "So,",
+     0.01,
+     0.54
+    ],
+    [
+     "how",
+     0.54,
+     0.77
+    ],
+    [
+     "do",
+     0.77,
+     0.94
+    ],
+    [
+     "camels",
+     0.94,
+     1.52
+    ],
+    [
+     "keep",
+     1.52,
+     1.79
+    ],
+    [
+     "the",
+     1.79,
+     1.86
+    ],
+    [
+     "sand",
+     1.86,
+     2.26
+    ],
+    [
+     "out?",
+     2.26,
+     2.646
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "ask again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "With two rows of long eyelashes!",
+   "t0": 79.8154166666667,
+   "t1": 82.58758333333338,
+   "v0": 79.93541666666671,
+   "dur": 2.2321666666666666,
+   "words": [
+    [
+     "With",
+     0.0,
+     0.18
+    ],
+    [
+     "two",
+     0.18,
+     0.46
+    ],
+    [
+     "rows",
+     0.46,
+     0.88
+    ],
+    [
+     "of",
+     0.88,
+     1.0
+    ],
+    [
+     "long",
+     1.0,
+     1.36
+    ],
+    [
+     "eyelashes!",
+     1.36,
+     2.23
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: lashes again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "And a nose that can close!",
+   "t0": 82.58758333333338,
+   "t1": 84.88508333333338,
+   "v0": 82.70758333333339,
+   "dur": 1.7575,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.16
+    ],
+    [
+     "a",
+     0.16,
+     0.2
+    ],
+    [
+     "nose",
+     0.2,
+     0.72
+    ],
+    [
+     "that",
+     0.72,
+     0.86
+    ],
+    [
+     "can",
+     0.86,
+     1.06
+    ],
+    [
+     "close!",
+     1.06,
+     1.758
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: nose again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "wind",
+   "say": "Blink, blink! Bye-bye, sand!",
+   "t0": 84.88508333333338,
+   "t1": 87.4988333333334,
+   "v0": 85.00508333333339,
+   "dur": 2.07375,
+   "words": [
+    [
+     "Blink,",
+     0.0,
+     0.42
+    ],
+    [
+     "blink!",
+     0.42,
+     0.82
+    ],
+    [
+     "Bye-bye,",
+     1.05,
+     1.45
+    ],
+    [
+     "sand!",
+     1.45,
+     2.07
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "bye sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

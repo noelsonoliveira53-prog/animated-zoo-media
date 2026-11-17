@@ -534,7 +534,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep01",
   "seconds": 91.9,
@@ -546,7 +546,10 @@
   "time": "7:30 PM",
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
   "note_fix": "Fixed file (the hums are sung music now), rendered Nov 16 evening; replaces the upload 1Jbwfw5xDYY, which stays Private (not deleted). Same slot.",
-  "replaced_video_id": "1Jbwfw5xDYY"
+  "replaced_video_id": "1Jbwfw5xDYY",
+  "video_id": "52oYu9SobqY",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  },
  {
   "file": "cartoon/zc_ep01_short2.mp4",

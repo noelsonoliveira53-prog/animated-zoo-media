@@ -12,3 +12,7 @@ studio/zoo3d/jobs/zt_test*
 studio/zoo3d/jobs/aa_t*
 studio/zoo3d/songs/zt_test.json
 shorts3d/*.ass
+
+# multilingual packages: the big files are built, not stored (video is cartoon/<id>.mp4, audio is rebuilt by studio/multilang/build.py)
+packages/*/video/
+packages/*/audio/

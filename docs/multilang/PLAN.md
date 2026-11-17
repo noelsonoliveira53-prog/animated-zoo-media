@@ -2,7 +2,7 @@
 
 Owner's brief: Nov 16, 8:46 PM (`docs/multilang/BRIEF.md`). English (original), Spanish es-419, Portuguese pt-BR on ONE video of the existing channel. No language channels, no duplicate uploads, nothing public without the owner's approval.
 
-Status: PLAN. Nothing in the production or upload path has been changed for this yet.
+Status (Nov 16, 9:40 PM): steps 2 and 3 are built. `studio/multilang/build.py zc_ep02` wrote `packages/zc_ep02/` (three tracks, three caption files, three metadata files, three thumbnails, `validation-report.json` with 31 of 31 checks passed, `upload-manifest.json` as a dry run). The English production and upload path is unchanged. Nothing has been attached to any video. Waiting for the owner to hear the Spanish and Portuguese tracks.
 
 ## What exists today (inspected Nov 16)
 

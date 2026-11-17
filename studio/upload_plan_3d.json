@@ -2044,14 +2044,15 @@
   "thumb": "brand/zoo/thumb_zc_ep01.jpg",
   "thumb_text": "NOT WATER?!",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_fix",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
   "video_id": "xW4MrQA6ZH8",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "note_fix": "Set to Private in Studio on Nov 16 after the owner said the parts where the animals sing have issues (7:19 PM). Not deleted. The humming is being rebuilt as real sung music; the fixed file goes up on the same slot as a new upload. Do not make this video public."
  },
  {
   "file": "cartoon/zc_ep02.mp4",
@@ -2074,10 +2075,13 @@
   "thumb": "brand/zoo/thumb_zc_ep02.jpg",
   "thumb_text": "ONE NOSE?!",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "second cartoon fact lesson (elephant trunk); fact lesson slot 9:30 AM"
+  "note": "second cartoon fact lesson (elephant trunk); fact lesson slot 9:30 AM",
+  "video_id": "-1K86tqYuAY",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-16"
  }
 ]

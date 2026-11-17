@@ -534,7 +534,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_fix",
   "format": "cartoon_short_90",
   "from": "zc_ep01",
   "seconds": 87.7,
@@ -547,7 +547,8 @@
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
   "video_id": "1Jbwfw5xDYY",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "note_fix": "Set to Private in Studio on Nov 16 after the owner said the parts where the animals sing have issues (7:19 PM). Not deleted. The humming is being rebuilt as real sung music; the fixed file goes up on the same slot as a new upload. Do not make this video public."
  },
  {
   "file": "cartoon/zc_ep01_short2.mp4",

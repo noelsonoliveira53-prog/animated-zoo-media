@@ -106,6 +106,12 @@ def review(fname):
             vol = subprocess.run(["ffmpeg", "-v", "info", "-t", "60", "-i", path, "-vn", "-af", "volumedetect", "-f", "null", "-"], capture_output=True, text=True).stderr
             m = re.search(r"mean_volume: (-?[0-9.]+)", vol)
             if m and float(m.group(1)) < -45: fails.append(f"audio is almost silent (mean {m.group(1)} dB)")
+            # Nov 17: zoo3d_ep17 (scheduled) ended with 31.8 s of silence: the song engine's music stopped at 128 s of a 160 s render
+            sil = subprocess.run(["ffmpeg", "-v", "info", "-ss", str(max(0.0, dur - 40)), "-i", path, "-vn", "-af", "silencedetect=noise=-45dB:d=3", "-f", "null", "-"], capture_output=True, text=True).stderr
+            ends_ = re.findall(r"silence_end: (-?[0-9.]+) \| silence_duration: ([0-9.]+)", sil)
+            win_ = min(40.0, dur)
+            if ends_ and float(ends_[-1][0]) >= win_ - 0.6 and float(ends_[-1][1]) > 4:
+                fails.append(f"the last {float(ends_[-1][1]):.1f} s are silent: cut the file after the last sung or spoken line")
         if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo}-{hi} s for {fmt} (KID-04)")
         # channel watermark (Noelson, Nov 16: on every video that is uploaded)
         import watermark

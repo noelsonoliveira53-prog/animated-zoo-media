@@ -2082,14 +2082,15 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep17.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "to_upload",
   "format": "3d_singalong",
-  "duration": 160.0,
+  "duration": 130.5,
   "watermark": "tl",
-  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run.",
-  "video_id": "27dOgZh10N4",
+  "note": " Moved Nov 21 -> Nov 19 3:30 PM (empty song slot), Nov 17 daily run. Nov 17: the scheduled upload 27dOgZh10N4 ended with 31.8 s of silence (song ends 128.1 s); file cut to 130.5 s (video copy, audio faded); 27dOgZh10N4 to be set Private and the fixed file uploaded on the same slot.",
+  "video_id": null,
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "replaces": "27dOgZh10N4"
  },
  {
   "file": "cartoon/za_ep02.mp4",
@@ -2233,5 +2234,29 @@
   "format": "3d_lesson",
   "duration": 330.8,
   "watermark": "tl"
+ },
+ {
+  "file": "zoo3d_ep20.mp4",
+  "title": "Trunks Up! Elephant Song for Kids with Milo",
+  "description": "Trunks up! Sing and move with Milo the bluebird and the elephant: reach up high, pick up a leaf, splash in the water and flap your ears.\nAn elephant song for kids about what a trunk can do. Reach, splash and stomp along. Ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nLYRICS\nTrunks up, trunks up, reach up high!\nWave hello to the big blue sky!\nStomp, stomp, stomp, and sing with me,\nAn elephant's trunk is handy as can be!\nThe elephant has a long, long nose,\nUp it reaches, down it goes!\nIt picks up a leaf from off the ground,\nIt grabs and holds what it has found!\nWhat can it do? What can it do?\nLift your arm and try it too!\nThe elephant drinks, slurp, slurp, slurp,\nIt sucks the water up, up, up!\nThen swoosh! A shower in the sun,\nSplashing water is so much fun!\nReach like an elephant! (Reach, reach, reach!)\nSplash like an elephant! (Splash, splash, splash!)\nFlap your ears! (Flap, flap, flap!)\nNow give yourself a great big clap!\nThe elephant flaps its ears to cool,\nFlap, flap, flap by the water pool!\nIt rolls in the mud on a sunny day,\nThe mud keeps the hot, hot sun away!\nStomp, stomp, stomp, we sang with glee,\nTrunks up high! Bye-bye, friends!",
+  "tags": [
+   "elephant song for kids",
+   "elephant trunk song",
+   "animal song for kids",
+   "action song for kids",
+   "kids songs",
+   "preschool learning song",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-20",
+  "time": "3:30 PM",
+  "thumb": "brand/zoo/thumb_zoo3d_ep20.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 138.5,
+  "watermark": "tl",
+  "note": " Nov 17: the song ends at 135.6 s; the last 21.5 s of near-silence cut off (video stream copy, audio faded 136.8-138.5 s)."
  }
 ]

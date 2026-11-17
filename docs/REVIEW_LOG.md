@@ -80,3 +80,7 @@
 | 2026-11-17 | shorts3d/zs90_tiger_claws.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
 | 2026-11-17 | shorts3d/zs90_lion_tuft.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
 | 2026-11-17 | shorts3d/zs90_elephant_ears.mp4 | lesson_fact_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-17 | zoo3d_ep20.mp4 | 3d_singalong | PASS | - | - | song duo verses: no side shot from behind |
+| 2026-11-17 | zoo3d_ep20.mp4 | 3d_singalong | PASS | - | - | - |
+| 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | - |
+| 2026-11-17 | zoo3d_ep20.mp4 | 3d_singalong | PASS | - | - | songs are cut after the last sung line (review.py fails a silent tail) |

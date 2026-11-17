@@ -59,9 +59,7 @@ def sfx(name):
     if name == "boing":
         t = np.arange(int(SR * .3)) / SR; f = 300 + 500 * np.exp(-t * 9)
         return (.22 * np.sin(2 * np.pi * np.cumsum(f) / SR) * np.exp(-t * 7)).astype(np.float32)
-    if name == "hum":      # the mama and her calf hum to each other (a soft low tone, two notes)
-        a = np.concatenate([tone(196, .55, .2, 1.6), tone(233, .7, .2, 1.4)]); n = len(a); e = np.minimum(1, np.arange(n) / (SR * .08))
-        return (a * e).astype(np.float32)
+    if name == "hum": raise KeyError('the "hum" beep was removed on Nov 16 (two sine notes, G and B flat, over a loop in C major): use a sung shot with sing={"hum": True, ...}')
     raise KeyError(name)
 
 
@@ -95,9 +93,13 @@ def sung(ep, s):
     sp = dict(s["sing"]); lines = sp.pop("lines"); c = ep.get("cast", {}).get(s["who"], {})
     spec = {"bpm": sp.get("bpm", 108), "voice": sp.get("voice", c.get("voice", ep.get("voice", "af_heart"))), "formant": sp.get("formant", 1.1), "chords": sp.get("chords", "C G Am F"),
             "style": sp.get("style", "pop"), "intro_bars": 0, "outro_bars": sp.get("outro_bars", 1), "parts": [{"section": "refrain", "who": "host", "group": sp.get("group", True), "lines": lines}]}
+    if sp.get("hum"): spec["parts"][0]["hum"] = True; spec["parts"][0]["formant"] = spec["formant"]      # a hum: "mmm" on the notes in that voice (sing.hum_word), no words
+    for k in ("band", "level"):
+        if k in sp: spec[k] = sp[k]
     h = hashlib.md5(json.dumps(spec, sort_keys=True).encode()).hexdigest()[:12]; d = os.path.join(sing.CACHE, "refrain_" + h)
     if not os.path.exists(os.path.join(d, "timing.json")): sing.build(spec, d)
     tm = json.load(open(os.path.join(d, "timing.json"))); mix, _ = sf.read(os.path.join(d, "song.wav")); voc, _ = sf.read(os.path.join(d, "vocal.wav"))
+    if sp.get("hum"): n = int(SR * .25); mix[-n:] *= np.linspace(1, 0, n) ** 1.5      # the music box rings out instead of being cut at the bar line
     return mix.astype(np.float32), voc.astype(np.float32), [(w["w"], round(w["start"], 3), round(w["end"], 3)) for w in tm["words"]]
 
 
@@ -209,7 +211,7 @@ class Film:
 
     def idle(self, i, a, s, fly):
         aid, kind = a[0], a[1]; p = f"s{i}_{aid}"; t0, d = s["t0"], s["t1"] - s["t0"]; r = self.rnd; js = []
-        busy = any((f[0] in ("drink", "lookat", "nod") and f[2] == aid) or (f[0] in ("to", "fromto") and f"{aid}-neck" in f[2]) for f in s["fx"])   # the head is acting: no idle sway on top of it
+        busy = any((f[0] in ("drink", "lookat", "nod", "sleep") and f[2] == aid) or (f[0] in ("to", "fromto") and f"{aid}-neck" in f[2]) for f in s["fx"])   # the head is acting: no idle sway on top of it
         n = max(1, int(d / .5) | 1)
         if kind == "milo":
             js.append(f'tl.to("#{p}-body",{{scaleY:1.035,scaleX:.98,svgOrigin:"0 0",duration:.42,yoyo:true,repeat:{n},ease:"sine.inOut"}},{t0:.2f});')
@@ -244,8 +246,9 @@ class Film:
                 js.append(f'tl.to("#{p}-ear",{{rotation:-18,svgOrigin:"284 -640",duration:.09,yoyo:true,repeat:3}},{tt:.2f});'); tt += r.uniform(2.2, 4.0)
             if not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.5,svgOrigin:"190 -330"}},{{rotation:2,duration:1.3,yoyo:true,repeat:{max(1, int(d / 1.3) | 1)},ease:"sine.inOut"}},{t0:.2f});')
             eyes = [f"{p}-eye"]
+        asleep = min([when(s, f[1]) for f in s["fx"] if f[0] == "sleep" and f[2] == aid] or [1e9])      # after ("sleep", at, who) the eyes stay shut
         tb = t0 + r.uniform(.5, 1.8)
-        while tb < s["t1"] - .3:
+        while tb < min(s["t1"] - .3, asleep - 1.2):
             for e in eyes: js.append(f'tl.set("#{e}-lid",{{opacity:1}},{tb:.2f});tl.set("#{e}-lid",{{opacity:0}},{tb + .13:.2f});')
             tb += r.uniform(1.9, 3.6)
         return "".join(js)
@@ -387,6 +390,10 @@ class Film:
         elif k == "arm":            # the monkey's arm: ("arm", at, who, "l" | "r", degrees)
             t = when(s, f[1]); p = P(f[2]); ox = -58 if f[3] == "l" else 58
             self.add(f'tl.to("#{p}-a{f[3]}",{{rotation:{f[4]},svgOrigin:"{ox} -206",duration:.35,ease:"back.out(1.6)"}},{t:.2f});'); self.ev(t, "action", f"{f[2]} moves an arm")
+        elif k == "sleep":          # a camel falls asleep: one slow blink, then the eyes stay shut and the head sinks a little ("sleep", at, who)
+            t = when(s, f[1]); p = P(f[2])
+            self.add(f'tl.set("#{p}-eye-lid",{{opacity:1}},{t - .9:.2f});tl.set("#{p}-eye-lid",{{opacity:0}},{t - .5:.2f});tl.set("#{p}-eye-lid",{{opacity:1}},{t:.2f});'
+                     f'tl.to("#{p}-neck",{{rotation:9,svgOrigin:"190 -330",duration:1.2,ease:"sine.inOut"}},{t:.2f});'); self.ev(t - .9, "action", f"{f[2]} blinks slowly"); self.ev(t, "action", f"{f[2]} falls asleep")
         elif k == "snd": self.snd.append((when(s, f[1]), f[2]))
         else: raise KeyError(k)
 

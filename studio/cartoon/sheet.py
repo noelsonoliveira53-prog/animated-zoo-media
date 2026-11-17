@@ -1,7 +1,7 @@
 """Tile the newest `toon.py --stills` frames into one sheet to look at: python3 sheet.py <proj dir> <out.jpg> [cols] [width]"""
 import sys, glob, os, subprocess, re
 proj, out = sys.argv[1], sys.argv[2]; cols = int(sys.argv[3]) if len(sys.argv) > 3 else 3; w = int(sys.argv[4]) if len(sys.argv) > 4 else 960
-d = max(glob.glob(os.path.join(proj, ".hyperframes/artifacts/snapshots/*/")), key=lambda x: max(os.path.getmtime(f) for f in glob.glob(x + "*")))
+d = max([x for x in glob.glob(os.path.join(proj, ".hyperframes/artifacts/snapshots/*/")) if glob.glob(x + "*")], key=lambda x: max(os.path.getmtime(f) for f in glob.glob(x + "*")))      # an emptied folder is skipped
 fr = sorted(glob.glob(d + "frame-*.png"))
 keep = [f for f in fr if not re.search(r"at-\d+\.\d{3}s", f)] or fr
 ins = []; fc = ""

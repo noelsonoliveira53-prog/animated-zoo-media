@@ -116,6 +116,38 @@ def sing_word(word, notes, beat, voice, formant, legato=0.92):
     return y
 
 
+def hum_word(notes, beat, voice, formant=1.0, legato=0.95):
+    """A closed-mouth hum ("mmm") in the voice's own colour, held on the notes.
+    The "m" of the voice (the frames of "mama" with the least sound above 700 Hz) gives the colour; the notes give the pitch.
+    Each note starts softly again, so three notes are heard as "mm, mm, mmm"."""
+    a = say("Mmm, mama, mmm.", voice)
+    f0, t = pw.harvest(a, SR, f0_floor=70, f0_ceil=700, frame_period=5.0)
+    sp = pw.cheaptrick(a, f0, t, SR); ap = pw.d4c(a, f0, t, SR)
+    fr = np.linspace(0, SR / 2, sp.shape[1]); lo = sp[:, (fr > 80) & (fr < 500)].sum(1); hi = sp[:, (fr > 700) & (fr < 4000)].sum(1)
+    v = f0 > 0; e = lo + hi; cand = np.where(v & (e > np.percentile(e[v], 30)))[0]
+    pick = cand[np.argsort((hi / (lo + 1e-12))[cand])[:max(8, len(cand) // 4)]]
+    col = np.exp(np.mean(np.log(sp[pick] + 1e-16), 0)); apm = np.mean(ap[pick], 0)
+    col = col * 10 ** (np.clip((fr - 500) / 1000, 0, 1) * 0.7)      # +7 dB above 1.5 kHz: a hum that only lives below 700 Hz is lost on a phone's speaker
+    if formant != 1.0:
+        k = np.arange(len(col)); col = np.interp(np.clip(k / formant, 0, len(col) - 1), k, col)
+    total = sum(d for _, d in notes) * beat; m = max(8, int(total * legato / 0.005))
+    edges = (np.cumsum([0] + [d for _, d in notes]) / sum(d for _, d in notes) * m).astype(int)
+    contour = np.zeros(m)
+    for k, (p, _) in enumerate(notes): contour[edges[k]:edges[k + 1]] = hz(p)[0]
+    lc = np.log(contour); kern = np.hanning(13); kern /= kern.sum(); lc = np.convolve(np.pad(lc, 6, mode="edge"), kern, mode="valid")
+    tt = np.arange(m) * 0.005; rng = np.random.default_rng(len(notes) * 7 + int(hz(notes[0][0])[1]))
+    drift = np.convolve(rng.standard_normal(m + 80), np.hanning(81) / np.hanning(81).sum(), mode="valid")[:m] * 0.012      # a living voice is never dead straight
+    f0n = np.exp(lc + 0.011 * np.sin(2 * np.pi * 5.2 * tt) * np.clip((tt - 0.3) / 0.25, 0, 1) + drift)
+    y = pw.synthesize(f0n, np.ascontiguousarray(np.tile(col, (m, 1))), np.ascontiguousarray(np.tile(apm, (m, 1))), SR, frame_period=5.0)
+    g = np.ones(len(y))
+    for k in range(len(notes)):          # every note: a soft start, a little swell, a dip before the next one
+        a0 = int(edges[k] * 0.005 * SR); a1 = int(edges[k + 1] * 0.005 * SR); n = max(1, a1 - a0); x = np.arange(n) / SR; d = n / SR
+        g[a0:a1] = np.minimum(1, (0.0 if k == 0 else 0.3) + x / 0.09) * (0.86 + 0.14 * np.sin(np.pi * np.clip(x / d, 0, 1))) * np.minimum(1, 0.3 + (d - x) / 0.07)
+    rel = min(len(y), int(0.22 * SR)); g[len(y) - rel:] *= np.linspace(1, 0, rel) ** 1.5
+    y = y * g[:len(y)]
+    return y / (np.abs(y).max() + 1e-9) * 0.5
+
+
 # ---------------------------------------------------------------- backing track
 def osc(f, d, kind="tri", sr=SR):
     t = np.arange(int(d * sr)) / sr
@@ -203,10 +235,11 @@ def backing(total_s, bpm, chords, style, melody_events, seed=1):
                     x = osc(mf(nn), beat * 4, "sine") * env(int(beat * 4 * SR), a=0.6, r=1.0) * 0.06
                     add(B, x, at)
     # melody doubled by a friendly bell/whistle lead so kids hear the tune
-    for (at, d, f) in melody_events:
+    for ev_ in melody_events:
+        at, d, f = ev_[:3]; lead = ev_[3] if len(ev_) > 3 else 1.0      # a 4th value: how loud the bells play this note (a bar the band plays alone)
         n = int(d * 0.9 * SR)
         tt = np.arange(n) / SR
-        x = (np.sin(2 * np.pi * f * 2 * tt) + 0.3 * np.sin(2 * np.pi * f * 4 * tt)) * np.exp(-tt * 3.5) * 0.07
+        x = (np.sin(2 * np.pi * f * 2 * tt) + 0.3 * np.sin(2 * np.pi * f * 4 * tt)) * np.exp(-tt * 3.5) * 0.07 * lead
         add(B, x, at)
     return B
 
@@ -238,8 +271,12 @@ def build(spec, outdir):
                     notes = parse_notes(nt)
                     dur = sum(d for _, d in notes) * beat
                     clean = re.sub(r"[^A-Za-z']", "", w)
+                    if not clean and not nt.startswith("R"):          # "~": the band plays these notes alone (the bells carry the tune, nobody sings)
+                        a2 = t
+                        for p, d in notes:
+                            mel.append((a2, d * beat, hz(p)[0], 3.2)); a2 += d * beat
                     if clean and not nt.startswith("R"):
-                        y = sing_word(clean, notes, beat, part.get("voice", voice), part.get("formant", formant))
+                        y = hum_word(notes, beat, part.get("voice", voice), part.get("formant", formant)) if part.get("hum") else sing_word(clean, notes, beat, part.get("voice", voice), part.get("formant", formant))
                         add(V, y * 0.85, t)
                         if part.get("group"):
                             for k, (dt, st) in enumerate([(0.012, 1.004), (0.021, 0.996)]):
@@ -262,8 +299,8 @@ def build(spec, outdir):
     bk = backing(total, bpm, spec.get("chords", "C G Am F"), spec.get("style", "pop"), mel)[: int(total * SR)]
     # gentle compression-ish limiter on vocal, mix
     vocal = np.tanh(vocal * 1.6) / 1.6
-    mix = vocal * 1.0 + bk * (0.55 if spec.get("style") == "lullaby" else 0.75)
-    mix /= max(1e-6, np.abs(mix).max()) / 0.89
+    mix = vocal * 1.0 + bk * spec.get("band", 0.55 if spec.get("style") == "lullaby" else 0.75)
+    mix /= max(1e-6, np.abs(mix).max()) / (0.89 * spec.get("level", 1.0))      # "level": a hum is softer than a song
     sf.write(f"{outdir}/song.wav", mix, SR)
     sf.write(f"{outdir}/vocal.wav", vocal / max(1e-6, np.abs(vocal).max()) * 0.9, SR)
     sf.write(f"{outdir}/backing.wav", bk / max(1e-6, np.abs(bk).max()) * 0.9, SR)

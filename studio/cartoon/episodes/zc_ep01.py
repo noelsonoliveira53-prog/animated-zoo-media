@@ -84,6 +84,14 @@ def prop(name, fn, x, y, s=1.0, hidden=False, p=None): return (name, fn, x, y, s
 
 
 TWO = (1215, 570, 1460); TWOP = (1230, 480, 2560)
+# The camels' hums: "mmm" sung on notes by the voice itself (sing.hum_word) with a soft music box, in C like the show's loop, at the loop's speed.
+# Mama low (sol do mi), Sandy high, ending on Mama's last note (do' sol mi); the lullaby is Mama's tune and its way home (mi re do), slower.
+SCL = C("dunes", "calf", "head", 600, -150, -65); SCLP = (725, 636, 1300)      # Sandy's close-up while she hums: Mama's tail stays outside
+HUM = {"hum": True, "bpm": 96, "chords": "C C", "style": "lullaby", "outro_bars": 0, "group": False, "level": 0.3}
+HUM_MAMA = dict(HUM, voice="bf_emma", formant=1.0, lines=[{"text": "Mmm, mmm, mmm.", "notes": "G3:1 C4:1 E4:2"}])
+HUM_SANDY = dict(HUM, voice="af_sarah", formant=1.15, level=0.27, lines=[{"text": "Mmm, mmm, mmm.", "notes": "C5:1 G4:1 E4:2"}])
+HUM_ALL = dict(HUM, voice="af_sarah", formant=1.15, group=True, level=0.3, lines=[{"text": "Mmm, mmm, mmm!", "notes": "C5:1 G4:1 E4:2"}])
+HUM_LULLABY = dict(HUM, bpm=72, voice="bf_emma", formant=1.0, level=0.26, lines=[{"text": "Mmm, mmm, mmm.", "notes": "G3:1 C4:1 E4:2"}, {"text": "Mmm, mmm, mmm.", "notes": "E4:1 D4:1 C4:2"}])
 DRK = (1180, 500, 1700); OAS = (800, 310, 2400); WND = (1205, 380, 2400); GOB = (1251, 461, 1700); EYE = (960, 560, 2300)      # 9:16 at the oasis: Mama drinking with sky above for the count and the jug; Mama and Sandy whole
 SHOTS = [
     # ---------------------------------------------------------------- HOOK (the question, the animal, in the first 5 seconds)
@@ -114,12 +122,23 @@ SHOTS = [
     S("dunes", WIDE, "Step, step, step! Off they go.", part=1, tag="they walk", pcam=(1150, 520, 1900), cam2=(1080, 560, 1840),
       fx=[("walk", 0.1, "mama", 110, 3.0), ("walk", 0.1, "calf", 110, 3.0)]),
     S("dunes", C("dunes", "calf", "body", 900, 120, -40), "Sandy stays close to her mama.", part=1, tag="close to Mama", pcam=V("dunes", "calf", "body", 1200, 150, -60), fx=[("hop", "w:close", "calf")]),
-    S("dunes", (1340, 450, 1180), "Mama and Sandy hum to each other.", part=1, tag="they hum", pcam=(1480, 400, 1700),
-      props=[prop("n1", lambda p: art.note(p), 1500, 250, 1.3, True), prop("n2", lambda p: art.note(p, "#58b9e8"), 1120, 420, 1.0, True)],
-      fx=[("show", "w:hum", "n1"), ("show", "e:hum", "n2"), ("snd", "w:hum", "hum"), ("lookat", "w:hum", "mama", 14), ("lookat", "w:hum", "calf", -14),
-          ("to", "w:hum", "#{p}n1_w,#{p}n2_w", {"y": "-=60", "duration": 1.4, "ease": "sine.out"})]),
-    S("dunes", C("dunes", "calf", "head", 760, -20, 20), "Can you hum like a camel?", part=1, q=True, tag="hum along", pause=1.3, pcam=V("dunes", "calf", "head", 940, -20, 60),
-      props=[prop("n1", lambda p: art.note(p, "#ffd23f"), 1180, 400, 1.0, True)], fx=[("show", "end", "n1"), ("snd", "end+0.2", "hum"), ("to", "end", "#{p}n1_w", {"y": "-=70", "rotation": 12, "duration": 1.3})]),
+    S("dunes", TWO, "Mama and Sandy hum to each other.", part=1, tag="they hum", hide=["milo"], pcam=TWOP, pcam2=W(TWOP),
+      fx=[("lookat", "w:hum", "mama", 14), ("lookat", "w:hum", "calf", -14)]),
+    # the hums are music now (Noelson, Nov 16: the parts where the animals sing had issues - it was a two-note beep). Mama hums low, Sandy answers high, then everybody hums.
+    S("dunes", C("dunes", "mama", "head", 900, -70, 10), part=1, tag="Mama hums", who="", sing=HUM_MAMA, pcam=V("dunes", "mama", "head", 1100, -60, 40),
+      props=[prop("n1", lambda p: art.note(p), 1900, 300, 1.1, True, p=(1790, 180, 1.0)), prop("n2", lambda p: art.note(p, "#58b9e8"), 1990, 330, .9, True, p=(1890, 250, .9))],
+      fx=[("lookat", 0, "mama", 14), ("show", 0.15, "n1", None, False), ("show", 1.4, "n2", None, False), ("to", 0.15, "#{p}n1_w", {"y": "-=60", "x": "+=30", "rotation": 10, "duration": 2.3, "ease": "sine.out"}),
+          ("to", 1.4, "#{p}n2_w", {"y": "-=50", "x": "+=20", "rotation": -12, "duration": 1.2, "ease": "sine.out"})]),
+    S("dunes", SCL, part=1, tag="Sandy hums", who="", sing=HUM_SANDY, hide=["milo"], cam2=SCL, pcam=SCLP, pcam2=SCLP,      # held still: with the slow drift Mama's tail swings into the close-up
+      props=[prop("n1", lambda p: art.note(p, "#58b9e8"), 770, 450, .7, True), prop("n2", lambda p: art.note(p, "#ff9ab8"), 945, 430, .55, True)],
+      fx=[("lookat", 0, "calf", -14), ("show", 0.15, "n1", None, False), ("show", 1.4, "n2", None, False), ("to", 0.15, "#{p}n1_w", {"y": "-=25", "x": "-=10", "rotation": -10, "duration": 2.3, "ease": "sine.out"}),
+          ("to", 1.4, "#{p}n2_w", {"y": "-=20", "x": "+=8", "rotation": 10, "duration": 1.2, "ease": "sine.out"})]),
+    S("dunes", C("dunes", "milo", "body", 820, 60, -20), "Can you hum like a camel?", part=1, q=True, tag="hum along", pcam=V("dunes", "milo", "body", 860, -60, 70)),
+    S("dunes", TWO, part=1, tag="everybody hums", who="", sing=HUM_ALL, pause=0.3, hide=["milo"], pcam=TWOP, pcam2=W(TWOP), words=[(0.1, "YOUR TURN!", .4, .1, .8, "pill", (.5, .33))],
+      props=[prop("n1", lambda p: art.note(p), 1620, 340, 1.3, True, p=(1640, 250, 2.0)), prop("n2", lambda p: art.note(p, "#58b9e8"), 1030, 480, 1.0, True, p=(1040, 420, 1.7)),
+             prop("n3", lambda p: art.note(p, "#59c36a"), 1180, 420, .9, True, p=(1230, 250, 1.6))],
+      fx=[("lookat", 0, "mama", 14), ("lookat", 0, "calf", -14), ("show", 0.15, "n1", None, False), ("show", 0.75, "n2", None, False), ("show", 1.4, "n3", None, False),
+          ("to", 0.15, "#{p}n1_w,#{p}n2_w,#{p}n3_w", {"y": "-=50", "duration": 2.4, "ease": "sine.out"})]),
     S("dunes", C("dunes", "mama", "hump", 1000, 60, 20), "Now look at Mama's back. She has a big, tall hump!", part=1, tag="the hump", hide=["calf"], pcam=V("dunes", "mama", "hump", 1500, 110),
       words=[("w:hump!", "HUMP", .2, .2, 1.6, "sun", (.3, .33))], props=[prop("ar", lambda p: art.arrow(p, 1310, 170, 1380, 285), 0, 0, 1, True)], fx=[("show", "w:big,", "ar")]),
     S("dunes", C("dunes", "calf", "back", 700, 20, -30), "But Sandy has no hump. Just a little tuft of curly hair.", part=1, tag="the tuft", hide=["milo"], pcam=V("dunes", "calf", "back", 880, 30, -40),
@@ -254,15 +273,18 @@ SHOTS = [
     S("paper_blue", (960, 520, 1500), "Two. A baby camel has no hump yet.", part=4, tag="recap 2", actors=[("c", "calf", 1150, 900, .8)], words=[("w:Two.", "2", .14, .26, 2.4, "sun"), ("w:no", "NO HUMP YET", .26, .64, .95, "pill")]),
     S("paper_pink", (960, 520, 1500), "Three. A camel can close its nose!", part=4, tag="recap 3", props=[prop("nose", art.big_nose, 1220, 600, 1.0)], words=[("w:Three.", "3", .14, .26, 2.4, "sun")],
       fx=[("to", "w:close", "#{p}nose-nl,#{p}nose-nr", {"scaleY": .08, "transformOrigin": "50% 50%", "duration": .3}, "the nostrils shut")]),
-    S("night", (1180, 540, 1480), "Mama hums a sleepy song for Sandy.", part=4, tag="lullaby", hide=["milo"],
-      props=[prop("n1", lambda p: art.note(p, "#ffd97a"), 1330, 310, 1.2, True), prop("n2", lambda p: art.note(p, "#ff9ab8"), 1000, 380, 1.0, True)],
-      fx=[("show", "w:hums", "n1"), ("show", "w:sleepy", "n2"), ("snd", "w:hums", "hum"), ("lookat", 0.3, "mama", 16), ("to", "w:hums", "#{p}n1_w,#{p}n2_w", {"y": "-=70", "duration": 1.6, "ease": "sine.out"})]),
+    S("night", (1180, 540, 1480), "Mama hums a sleepy song for Sandy.", part=4, tag="lullaby", hide=["milo"], fx=[("lookat", 0.3, "mama", 16)]),
+    S("night", (1180, 540, 1480), part=4, tag="lullaby song", who="", sing=HUM_LULLABY, pause=0.4, hide=["milo"], cam2=(1160, 570, 1300),
+      props=[prop("n1", lambda p: art.note(p, "#ffd97a"), 1330, 310, 1.2, True), prop("n2", lambda p: art.note(p, "#ff9ab8"), 1180, 360, 1.0, True), prop("n3", lambda p: art.note(p, "#bfe3ff"), 1040, 400, .9, True)],
+      fx=[("lookat", 0, "mama", 16), ("show", 0.2, "n1", None, False), ("show", 1.9, "n2", None, False), ("sleep", 3.5, "calf"), ("show", 4.4, "n3", None, False),
+          ("to", 0.2, "#{p}n1_w", {"y": "-=110", "duration": 3.0, "ease": "sine.out"}), ("to", 1.9, "#{p}n2_w", {"y": "-=100", "duration": 3.0, "ease": "sine.out"}),
+          ("to", 4.4, "#{p}n3_w", {"y": "-=90", "duration": 2.4, "ease": "sine.out"})]),
     S("night", C("night", "milo", "body", 820, 20, -20), "Good night, Sandy. Good night, Mama.", part=4, tag="good night", hide=["mama", "calf"]),
     S("night", WIDE, "Thank you for learning with me, friends. See you at the zoo!", part=4, tag="goodbye", cam2=(960, 520, 2050), words=[("w:See", "SEE YOU AT THE ZOO!", .5, .2, 1.05, "pill")],
       fx=[("to", 0, ".{p}star", {"opacity": .2, "duration": .5, "yoyo": True, "repeat": 9, "stagger": {"each": .05, "from": "random"}}, ""), ("hop", "w:zoo!", "milo", 2)]),
 ]
 
-SHORT1_TAGS = ["hook: the hump", "hook: no hump", "two camels", "Sandy close", "Mama close", "tall and small", "close to Mama", "they hum", "hum along", "the hump", "the tuft", "Sandy wonders", "question 1",
+SHORT1_TAGS = ["hook: the hump", "hook: no hump", "two camels", "Sandy close", "Mama close", "tall and small", "they hum", "Mama hums", "Sandy hums", "hum along", "everybody hums", "the hump", "the tuft", "Sandy wonders", "question 1",
                "board: inside the hump", "board: not water", "board: lunch box", "board: energy", "board: 80 pounds", "board: tall hump", "board: using the fat", "board: flop", "board: full or empty",
                "say it", "board: the hump grows"]
 SHORTS = [{"id": "zc_ep01_short1", "title": "Why Does This Baby Camel Have No Hump?", "band": ("WHAT IS INSIDE", "THE HUMP?"), "thumb_text": "NO HUMP?!",

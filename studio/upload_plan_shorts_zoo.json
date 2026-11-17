@@ -660,7 +660,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "rendering",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -670,7 +670,7 @@
   "date": "2026-11-20",
   "time": "11:30 AM",
   "seconds": 89.1,
-  "note": "being rendered again with the first-frame camera fix; do not upload the file of commit 3ad6389"
+  "note": "rendered again Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS"
  },
  {
   "file": "cartoon/zc_ep02_short3.mp4",
@@ -689,7 +689,7 @@
    "The Animated Zoo"
   ],
   "made_for_kids": true,
-  "status": "rendering",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep02",
   "res": "2160x3840",
@@ -697,6 +697,8 @@
   "thumb_text": "PEEKABOO!",
   "watermark": "top",
   "date": "2026-11-21",
-  "time": "7:30 AM"
+  "time": "7:30 AM",
+  "seconds": 86.5,
+  "note": "rendered Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS"
  }
 ]

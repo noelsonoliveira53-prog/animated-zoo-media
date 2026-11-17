@@ -84,3 +84,4 @@
 | 2026-11-17 | zoo3d_ep20.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | - |
 | 2026-11-17 | zoo3d_ep20.mp4 | 3d_singalong | PASS | - | - | songs are cut after the last sung line (review.py fails a silent tail) |
+| 2026-11-17 | cartoon/za_ep02.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

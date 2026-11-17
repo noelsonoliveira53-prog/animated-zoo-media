@@ -2115,11 +2115,11 @@
   "thumb": "brand/zoo/thumb_za_ep02.jpg",
   "thumb_text": "SPLASH TIME!",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Reserved Nov 17 12:25 AM for the cartoon adventure za_ep02 (first draft, not rendered). If cartoon/za_ep02.mp4 does not exist when this slot is one day away, give the slot to a ready 3D lesson. Never upload an in_production entry."
+  "note": "Finished Nov 17 (cloud run): 4K AV1 302.9 s, stills of every shot and frames of the finished file looked at, review PASS. Slot Nov 19 5:30 AM ET. Cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")."
  },
  {
   "file": "zool_ep17.mp4",

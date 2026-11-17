@@ -492,8 +492,8 @@
  "plan": {
   "length": 302.9,
   "shots": 77,
-  "visual_changes": 304,
-  "mean_gap": 1.0,
+  "visual_changes": 306,
+  "mean_gap": 0.99,
   "longest_gap": 4.34,
   "longest_gap_at": 117.2,
   "over_6s": [],
@@ -791,22 +791,22 @@
    "SHOE"
   ],
   [
-   55.36,
+   55.23,
    "thinking dot",
    "1"
   ],
   [
-   56.3,
+   55.9,
    "thinking dot",
    "2"
   ],
   [
-   57.24,
+   56.57,
    "thinking dot",
    "3"
   ],
   [
-   57.86,
+   57.06,
    "answer",
    "HAT"
   ],
@@ -926,22 +926,22 @@
    "NO"
   ],
   [
-   80.83,
+   80.69,
    "thinking dot",
    "1"
   ],
   [
-   81.7,
+   81.3,
    "thinking dot",
    "2"
   ],
   [
-   82.57,
+   81.91,
    "thinking dot",
    "3"
   ],
   [
-   83.16,
+   82.36,
    "answer",
    "NO"
   ],
@@ -1164,6 +1164,11 @@
    125.49,
    "action",
    "mango moves an arm"
+  ],
+  [
+   127.03,
+   "picture",
+   "ar"
   ],
   [
    127.03,
@@ -1413,7 +1418,7 @@
   [
    182.19,
    "action",
-   "Mama walks into the mud"
+   "Mama steps into the mud"
   ],
   [
    182.19,
@@ -1422,13 +1427,13 @@
   ],
   [
    182.24,
-   "picture",
-   "sp"
+   "word",
+   "SPLASH!"
   ],
   [
-   182.24,
-   "word",
-   "SPLOSH!"
+   182.69,
+   "picture",
+   "sp"
   ],
   [
    184.38,
@@ -1604,6 +1609,11 @@
    211.75,
    "picture",
    "sp"
+  ],
+  [
+   211.75,
+   "picture",
+   "sq"
   ],
   [
    211.8,
@@ -1936,22 +1946,22 @@
    "MUD"
   ],
   [
-   276.39,
+   276.25,
    "thinking dot",
    "1"
   ],
   [
-   277.33,
+   276.93,
    "thinking dot",
    "2"
   ],
   [
-   278.27,
+   277.6,
    "thinking dot",
    "3"
   ],
   [
-   278.89,
+   278.09,
    "answer",
    "MUD"
   ],
@@ -1971,22 +1981,22 @@
    "TAIL"
   ],
   [
-   284.76,
+   284.63,
    "thinking dot",
    "1"
   ],
   [
-   285.7,
+   285.3,
    "thinking dot",
    "2"
   ],
   [
-   286.64,
+   285.98,
    "thinking dot",
    "3"
   ],
   [
-   287.26,
+   286.46,
    "answer",
    "EARS"
   ],
@@ -5080,14 +5090,14 @@
   },
   {
    "place": "mudhole",
-   "say": "Splosh! What is that sound?",
+   "say": "Splash! What is that sound?",
    "t0": 182.1875,
    "t1": 184.375,
    "v0": 182.23141666666695,
    "dur": 1.8316666666666668,
    "words": [
     [
-     "Splosh!",
+     "Splash!",
      0.01,
      0.68
     ],

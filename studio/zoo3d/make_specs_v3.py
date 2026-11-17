@@ -210,6 +210,136 @@ We sang it loud to start the day!
 
 [Outro - quick and happy]
 Moo! Oink! Neigh! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep20", bpm=118, key="F Major", seed=920, flavor="tuba, marimba and hand-drum hooks",
+      title="Trunks Up! Elephant Song for Kids with Milo", card="Trunks Up!", thumb="SPLASH!",
+      cast=["elephant", "hippo", "zebra", "rhino"],
+      route=[("chorus1", "river", "morning"), ("verse1", "jungle", "noon"), ("chorus2", "beach", "noon"),
+             ("verse2", "river", "golden"), ("bridge1", "mountain", "morning"), ("chorus3", "savanna", "sunset")],
+      verses=[["elephant"], ["elephant"], ["elephant"]],
+      words=["TRUNKS UP!", "GRAB!", "REACH!", "SPLASH!", "FLAP!", "MUD!", "TRUNKS UP!"],
+      # facts read Nov 16 2026 11:58 PM ET: San Diego Zoo (trunk used like hands: grab, hold, pick up, reach; "spray themselves with water or roll in
+      # the mud or dust for protection from the sun"; "ear flapping behavior cools their large bodies on warm days"); WWF (trunks "suck up water for drinking")
+      desc="Trunks up! Sing and move with Milo the bluebird and the elephant: reach up high, pick up a leaf, splash in the water and flap your ears.\n"
+           "An elephant song for kids about what a trunk can do. Reach, splash and stomp along. Ages 2-6.",
+      tags=["elephant song for kids", "elephant trunk song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, and sing with me,
+An elephant's trunk is handy as can be!
+
+[Verse 1 - light and bouncy]
+The elephant has a long, long nose,
+Up it reaches, down it goes!
+It picks up a leaf from off the ground,
+It grabs and holds what it has found!
+
+[Pre-Chorus - build up, rising drums]
+What can it do? What can it do?
+Lift your arm and try it too!
+
+[Chorus - full band, group vocals]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, and sing with me,
+An elephant's trunk is handy as can be!
+
+[Verse 2 - light and bouncy]
+The elephant drinks, slurp, slurp, slurp,
+It sucks the water up, up, up!
+Then swoosh! A shower in the sun,
+Splashing water is so much fun!
+
+[Bridge - claps and stomps, call and response]
+Reach like an elephant! (Reach, reach, reach!)
+Splash like an elephant! (Splash, splash, splash!)
+Flap your ears! (Flap, flap, flap!)
+Now give yourself a great big clap!
+
+[Verse 3 - light and bouncy]
+The elephant flaps its ears to cool,
+Flap, flap, flap by the water pool!
+It rolls in the mud on a sunny day,
+The mud keeps the hot, hot sun away!
+
+[Pre-Chorus - build up, rising drums]
+What can it do? What can it do?
+Lift your arm and try it too!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, we sang with glee,
+An elephant's trunk is handy as can be!
+
+[Outro - quick and happy]
+Trunks up high! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep21", bpm=126, key="A Major", seed=921, flavor="steel drum, ukulele and shaker hooks",
+      title="Swing-a-Ding! Monkey Song for Kids with Milo", card="Swing-a-Ding!", thumb="UPSIDE DOWN!",
+      cast=["monkey", "lion", "panda", "fox"],
+      route=[("chorus1", "jungle", "morning"), ("verse1", "bamboo", "noon"), ("chorus2", "jungle", "noon"),
+             ("verse2", "mountain", "golden"), ("bridge1", "beach", "morning"), ("chorus3", "jungle", "sunset")],
+      verses=[["monkey"], ["monkey"], ["monkey"]],
+      words=["SWING!", "HOOK HANDS!", "SWING-A-DING!", "UPSIDE DOWN!", "REACH!", "YUM, FRUIT!", "SWING-A-DING!"],
+      # facts read Nov 16 2026 11:58 PM ET, National Geographic Kids, spider monkey: "long, thin arms with hooklike hands that allow them to swing
+      # through the trees"; prehensile tail "used like a fifth limb"; "hang upside down from their tails with their arms and legs dangling";
+      # fruit "makes up the main part of its diet"; "most of the daylight hours climbing and swinging through the high canopy"
+      desc="Swing-a-ding! Swing along with Milo the bluebird and the spider monkey: long arms, hook hands, a tail that holds on like an extra hand, "
+           "and fruit for lunch.\nA monkey song for kids. Reach, swing and hang your arms down low. Ages 2-6.",
+      tags=["monkey song for kids", "spider monkey song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+Swing your arms and sing with me,
+The monkey swings from tree to tree!
+
+[Verse 1 - light and bouncy]
+The spider monkey's arms are long,
+Reach and swing and sing along!
+Hands like hooks, they hold on tight,
+Swinging left and swinging right!
+
+[Pre-Chorus - build up, rising drums]
+Who can swing? Who can swing?
+Reach up high and swing-a-ding!
+
+[Chorus - full band, group vocals]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+Swing your arms and sing with me,
+The monkey swings from tree to tree!
+
+[Verse 2 - light and bouncy]
+The monkey's tail can hold on, too,
+Just like an extra hand would do!
+It hangs by its tail with its arms down low,
+Upside down, hello, hello!
+
+[Bridge - claps and stomps, call and response]
+Reach like a monkey! (Reach, reach, reach!)
+Swing like a monkey! (Swing, swing, swing!)
+Hang your arms down! (Low, low, low!)
+Now wiggle and giggle and off we go!
+
+[Verse 3 - light and bouncy]
+The monkey looks for fruit all day,
+Yum, yum, fruit along the way!
+It climbs and swings in the trees up high,
+Under the leaves and the big blue sky!
+
+[Pre-Chorus - build up, rising drums]
+Who can swing? Who can swing?
+Reach up high and swing-a-ding!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+We swung our arms and sang with glee,
+The monkey swings from tree to tree!
+
+[Outro - quick and happy]
+Swing-a-ding! Bye-bye, friends!"""),
 ]
 
 COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5", "#ffb627"]
@@ -246,7 +376,9 @@ def build(s):
 
 
 if __name__ == "__main__":
+    only = sys.argv[1:]          # ids to build; without ids every song is built again (and moved to the end of the variety ledger)
     for s in SONGS:
+        if only and s["id"] not in only: continue
         spec = build(s)
         why = variety.check(spec["job"])
         if why: sys.exit(f"{s['id']} repeats: {why}")

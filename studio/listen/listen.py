@@ -1,12 +1,15 @@
 #!/usr/bin/env python3
 """Machine listening for a finished sound or video file: what an ear would notice first, measured, plus a picture to LOOK at.
 
-    python3 studio/listen/listen.py <file.wav|mp3|mp4> [--from 49 --to 60] [--key C] [--bpm 96] [--out dir] [--name label]
+    python3 studio/listen/listen.py <file.wav|mp3|mp4> [--from 49 --to 60] [--key C] [--bpm 96] [--out dir] [--name label] [--music-only]
+                                                                                   --music-only: the file has no speaking voice (a song's backing, a music track): judge everything
     python3 studio/listen/listen.py --episode <cartoon id> [--from .. --to ..]     the episode's MUSIC without the speaking voice (music bed, effects, hums and songs),
                                                                                    rebuilt from the engine: the exact way to check notes, clashes and the beat of our own videos
 
-A speaking voice also holds tones (every long vowel), so in a finished mix the faint findings are often the voice; the loud ones are real.
-For our own cartoon videos use --episode: it listens to the music alone.
+A speaking voice also holds tones (every long vowel) and is not in any key. In a finished mix the tool leaves out held tones that have two or more overtones
+(voice-like) and anything shorter than 0.6 s, and judges only long, loud, pure tones (a beep, a held note); clashes are judged only with --episode. For our own cartoon videos --episode listens to the music alone
+and every finding counts. Tested Nov 16: on two finished Shorts the first version called 13 spoken p/t/k sounds "clicks" and vowels "LOUD tones outside the key";
+both were the voice. The click check now wants one single jump with a calm wave around it.
 
 It writes <out>/<label>_listen.json and <out>/<label>_listen.png and prints the findings. It does not judge taste: whether a tune is
 pretty or a voice is warm stays with a person. What it does find:
@@ -79,7 +82,7 @@ def held_tones(S, fr, lo=70, hi=2100, min_s=0.25):
             ov = min(a["start"] + a["seconds"], b["start"] + b["seconds"]) - max(a["start"], b["start"])
             if ov < 0.6 * a["seconds"]: continue
             k = a["hz"] / b["hz"]
-            if 1.9 < k < 12.5 and abs(1200 * np.log2(k / round(k))) < 28 and b["db"] > a["db"] - 4: a["overtone_of"] = b["note"]; break
+            if 1.9 < k < 12.5 and abs(1200 * np.log2(k / round(k))) < 28 and b["db"] > a["db"] - 4: a["overtone_of"] = b["note"]; b["overtones"] = b.get("overtones", 0) + 1; break
     return tones
 
 
@@ -113,9 +116,11 @@ def tempo(S, bpm=None):
 
 
 def clicks(x):
-    d = np.abs(np.diff(x)); k = 240; loc = np.sqrt(np.convolve(d ** 2, np.ones(k) / k, "same")) + 1e-6; idx = np.where((d > 0.12) & (d > 9 * loc))[0]; out = []
-    for i in idx:
-        if not out or i - out[-1] > SR * 0.05: out.append(int(i))
+    """A click is ONE jump in the wave with a calm wave right before and after it (a hard cut). A spoken p, t or k is a burst of many jumps: not a click."""
+    d = np.abs(np.diff(x)); cand = np.where(d > 0.1)[0]; out = []
+    for i in cand:
+        near = np.concatenate([d[max(0, i - 72):max(0, i - 1)], d[i + 2:i + 73]])
+        if len(near) and (near > 0.35 * d[i]).sum() <= 1 and d[i] > 12 * (np.median(near) + 1e-4) and (not out or i - out[-1] > SR * 0.05): out.append(int(i))
     return [round(i / SR, 3) for i in out]
 
 
@@ -159,22 +164,31 @@ def picture(x, S, fr, tones, bad, clk, sil, out, title, scale):
     ax[2].set_xlabel("seconds   (red line: click, orange: silence)"); fig.tight_layout(); fig.savefig(out, dpi=100); plt.close(fig)
 
 
-def listen(path, a=None, b=None, key=None, bpm=None, out=None, name=None):
-    x = load(path, a, b); S, fr = stft(x); tones = held_tones(S, fr); own = [z for z in tones if not z["overtone_of"]]; heard, _ = best_key(tones)
+def listen(path, a=None, b=None, key=None, bpm=None, out=None, name=None, music_only=False):
+    """music_only: the file has no speaking voice (an episode's music stem): every held tone is judged.
+    Otherwise a held tone with two or more overtones is taken as a VOICE (a long vowel has many overtones; the plucked and bell notes of the music have one)
+    and is counted, not judged: a speaking voice is not in any key."""
+    x = load(path, a, b); S, fr = stft(x); tones = held_tones(S, fr); every = [z for z in tones if not z["overtone_of"]]; heard, _ = best_key([z for z in tones if music_only or z.get("overtones", 0) < 2])
+    # with a speaking voice in the file only a LONG, LOUD, PURE tone is judged (a beep or a held instrument note): vowels are shorter and rich in overtones.
+    # Tested Nov 16 on two narrated Shorts: judging every held tone gave dozens of false "wrong notes" and "clashes", all of them the voice.
+    own = [z for z in every if music_only or (z["seconds"] >= 0.6 and z.get("overtones", 0) <= 1)]; voice_like = len(every) - len(own)
     scale = scale_of(key) if key else (scale_of(heard["key"].replace(" major", "").replace(" minor", "m")) if heard else None)
     loud = max([z["db"] for z in own] or [0]); bad = [z for z in own if scale is not None and z["pc"] not in scale and abs(z["cents"]) <= 35 and z["db"] > loud - 26]
+    if not music_only: bad = [z for z in bad if z["db"] > -12]
     sour = [z for z in own if abs(z["cents"]) > 35 and z["db"] > loud - 20]; cl = []
-    for i, p in enumerate(own):
+    for i, p in enumerate(own if music_only else []):
         for q in own[i + 1:]:
             ov = min(p["start"] + p["seconds"], q["start"] + q["seconds"]) - max(p["start"], q["start"])
             if ov >= 0.2 and (p["pc"] - q["pc"]) % 12 in (1, 11) and abs(p["db"] - q["db"]) < 15 and max(p["db"], q["db"]) > loud - 24:
                 cl.append({"at": round(max(p["start"], q["start"]), 2), "seconds": round(ov, 2), "notes": f'{p["note"]} + {q["note"]}'})
-    clk = clicks(x); sil = silences(x); lv = loudness(path, a, b); P = np.abs(np.fft.rfft(x)) ** 2; ff = np.fft.rfftfreq(len(x), 1 / SR); tot = P[ff > 30].sum() + 1e-12
+    clk = clicks(x) if music_only else []; sil = silences(x)      # a spoken s, t or k makes the same single jumps as a click at this sample rate (tested Nov 16): clicks are judged only without a speaking voice; lv = loudness(path, a, b); P = np.abs(np.fft.rfft(x)) ** 2; ff = np.fft.rfftfreq(len(x), 1 / SR); tot = P[ff > 30].sum() + 1e-12
+    lv = loudness(path, a, b); P = np.abs(np.fft.rfft(x)) ** 2; ff = np.fft.rfftfreq(len(x), 1 / SR); tot = P[ff > 30].sum() + 1e-12
     w = SR; sec = [20 * np.log10(np.sqrt(np.mean(x[i:i + w] ** 2)) + 1e-9) for i in range(0, max(1, len(x) - w + 1), w)]
     rep = {"file": path, "from": a, "to": b, "seconds": round(len(x) / SR, 2), "expected_key": key, "key_heard": heard,
-           "held_tones": len(own), "tones_outside_the_key": [{k: z[k] for k in ("start", "seconds", "note", "hz", "db")} for z in bad],
+           "held_tones": len(own), "voice_like_tones_not_judged": voice_like, "tones_outside_the_key": [{k: z[k] for k in ("start", "seconds", "note", "hz", "db")} for z in bad],
            "tones_between_two_notes": [{k: z[k] for k in ("start", "seconds", "note", "cents", "db")} for z in sour], "clashes_a_semitone_apart": cl,
            "beat": tempo(S, bpm), "clicks_at": clk, "silences": sil,
+           "judged": "everything (no speaking voice in the file)" if music_only else "level, silences, tempo, balance, and long loud pure tones only; NOT judged because a voice is speaking: short tones, clashes, clicks (use --episode, or --music-only for a file without speech)",
            "level": dict(lv, clipped_samples=int((np.abs(x) >= 0.999).sum()), quietest_second_db=round(min(sec), 1), loudest_second_db=round(max(sec), 1)),
            "balance": {"share_a_phone_speaker_plays_above_300hz": round(float(P[ff > 300].sum() / tot), 2), "share_below_120hz": round(float(P[(ff > 30) & (ff < 120)].sum() / tot), 2), "share_above_4khz": round(float(P[ff > 4000].sum() / tot), 2)},
            "tones": [{k: z[k] for k in ("start", "seconds", "note", "cents", "db")} for z in own][:400],
@@ -202,10 +216,11 @@ def main():
     f = lambda v: float(v) if v is not None else None; sung = []
     if "--episode" in sys.argv:
         out = arg("--out") or os.path.join(os.path.dirname(os.path.abspath(__file__)), "out"); path, sung, bpm = episode_stem(arg("--episode"), out)
-        r = listen(path, f(arg("--from")), f(arg("--to")), arg("--key", "C"), f(arg("--bpm", bpm)), out, arg("--name"))
+        r = listen(path, f(arg("--from")), f(arg("--to")), arg("--key", "C"), f(arg("--bpm", bpm)), out, arg("--name"), music_only=True)
         for a, b, tag in sung: print(f'  sung or hummed: {tag}  {a}-{b} s: ' + " ".join(z["note"] + (f'({z["cents"]:+d}c)' if abs(z["cents"]) > 12 else "") for z in r["tones"] if a - 0.1 <= z["start"] + (r["from"] or 0) < b and z["db"] > -14))
-    else: r = listen(sys.argv[1], f(arg("--from")), f(arg("--to")), arg("--key"), f(arg("--bpm")), arg("--out"), arg("--name"))
-    print(f'{r["seconds"]} s   key heard: {r["key_heard"]}   expected: {r["expected_key"]}   held tones: {r["held_tones"]}')
+    else: r = listen(sys.argv[1], f(arg("--from")), f(arg("--to")), arg("--key"), f(arg("--bpm")), arg("--out"), arg("--name"), music_only="--music-only" in sys.argv)
+    print("  judged:", r["judged"])
+    print(f'{r["seconds"]} s   key heard: {r["key_heard"]}   expected: {r["expected_key"]}   held tones judged: {r["held_tones"]}   voice-like tones left out: {r["voice_like_tones_not_judged"]}')
     for z in r["tones_outside_the_key"]: print(f'  OUTSIDE THE KEY  {z["start"]:7.2f} s  {z["note"]:4s} for {z["seconds"]} s  ({z["db"]} dB, {"LOUD" if z["db"] > -12 else "faint"})')
     for z in r["clashes_a_semitone_apart"]: print(f'  CLASH            {z["at"]:7.2f} s  {z["notes"]} together for {z["seconds"]} s')
     for z in r["tones_between_two_notes"][:12]: print(f'  BETWEEN NOTES    {z["start"]:7.2f} s  {z["note"]} {z["cents"]:+d} cents for {z["seconds"]} s')

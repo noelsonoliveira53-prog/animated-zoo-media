@@ -1,0 +1,710 @@
+{
+ "id": "zool_ep20",
+ "thumb_at": [
+  "arctic_fox",
+  3,
+  0.7
+ ],
+ "seed": 73,
+ "title": "Ready for Winter! Animal Coats and Dens for Kids",
+ "card": "Ready for Winter!",
+ "thumb_text": "BRRR!",
+ "description": "How do animals get ready for winter? Pick your answer with Milo the bluebird, then find out: an arctic fox grows a thick white coat and furry paws for the snow, a polar bear's white-looking fur covers black skin and a thick layer of fat, and a brown bear digs a den and can stay inside for up to seven months.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animals in winter for kids",
+  "arctic fox facts for kids",
+  "polar bear facts for kids",
+  "brown bear facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "arctic_fox",
+  "polar_bear",
+  "bear"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  }
+ ],
+ "facts": [
+  "Arctic fox: the white phase has a thick, white coat during the colder, winter months; in summer the coat ranges from gray to brown on the back; paws are sheathed in dense fur during the winter; dense, bushy coat; long, fluffy tail (SeaWorld Parks & Entertainment animal info 'Arctic Fox', seaworld.org/animals/facts/mammals/arctic-fox, read Nov 17 2026).",
+  "Polar bear: hair is see-through with no pigment, so it looks white; black nose, skin and claws; covered with fur except for the nose; subcutaneous fat 5-10 cm thick in adults; ears relatively small; tail 7-12 cm; even foot pads may be furred during winter (SDZWA Library fact sheet 'Polar Bear', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/polarbear/characteristics, read Nov 17 2026). Thick fat layer and fur to stay warm in extreme Arctic temperatures (fact sheet summary page, read Nov 17 2026).",
+  "Brown bear: in cold climates undergo winter dormancy; farthest north habitats up to 7 months; dens in dug earth have a tunnel about 4 feet long leading to a chamber 5 feet in diameter; dens are excavated as early as September or immediately before use in November; often stand while stopped; relies mainly on a sense of smell (SDZWA Library fact sheet 'Brown Bear', Behavior & Ecology, ielc.libguides.com/sdzg/factsheets/brownbear/behavior, read Nov 17 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "word": "READY FOR WINTER!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about how animals get ready for winter!",
+    "Coats, fat and cozy dens. Who does what?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Put on your warm coat. Let's go!"
+   ]
+  },
+  {
+   "name": "arctic_fox",
+   "biome": "arctic",
+   "tod": "morning",
+   "word": "WHITE COAT!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "arctic_fox"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ARCTIC FOX",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "WHITE",
+     "b": "PURPLE",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      2.7
+     ],
+     "on": [
+      3,
+      "winter"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "summer"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "GRAY AND BROWN",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "paws"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "FURRY PAWS!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "tail"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "FLUFFY TAIL!",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who grows a thick, white coat for the snowy winter?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the arctic fox? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the arctic fox!",
+    "Here is the fun fact. In winter, this arctic fox has a thick, white coat.",
+    "White, like the snow all around it. Fluffy and warm! Can you spot it in the snow?",
+    {
+     "t": "What color is its coat in summer, when the snow is gone? Hmm.",
+     "pause": 2.4
+    },
+    "In summer, its coat turns gray and brown on its back!",
+    [
+     "Look at that fluffy, white fox!",
+     "close:arctic_fox"
+    ],
+    "In winter, its paws are covered in thick fur too. Furry paws, like warm boots!",
+    "Furry paws, on the cold, cold snow. Tip, tap, tip, tap.",
+    "And it has a long, fluffy tail. So bushy, and so soft!",
+    "White coat, furry paws, and a fluffy tail. This fox is ready for winter!",
+    [
+     "Say it with me. An arctic fox has a white winter coat!",
+     "close:host"
+    ],
+    "Can you tiptoe like a fox on the snow? Tip, tap, tip, tap!",
+    "Now wag a big, fluffy tail. Swish, swish!",
+    {
+     "t": "Quick check! What color is the arctic fox's winter coat? White? Or purple?",
+     "pause": 3.2
+    },
+    "White! Like the snow. Great job!"
+   ],
+   "short": {
+    "id": "zs90_fox_coat",
+    "title": "Why Is This Arctic Fox White? Arctic Fox Facts",
+    "l1": "WHY IS IT",
+    "l2": "WHITE?",
+    "thumb_text": "SNOW COAT!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "golden",
+   "word": "BLACK SKIN!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "polar_bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "POLAR BEAR",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "magnifier",
+     "at": [
+      2.3,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      3,
+      "fur"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.0,
+      "fill": "#3a3a44",
+      "label": "BLACK SKIN"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "fat"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "THICK FAT!",
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      2.7
+     ],
+     "on": [
+      8,
+      "cold"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "ears"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "SMALL EARS",
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has fur that looks white, with black skin underneath?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the polar bear? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the polar bear!",
+    "Here is the fun fact. Under its fur, a polar bear's skin is black!",
+    "Its fur looks white, but each hair is see-through, like glass. Wow! Isn't that amazing?",
+    {
+     "t": "What else keeps a polar bear warm, under its skin? Hmm.",
+     "pause": 2.4
+    },
+    "A thick layer of fat! Up to four inches thick. Warm and cozy!",
+    [
+     "Look at that big, fluffy bear!",
+     "close:polar_bear"
+    ],
+    "Thick fur and thick fat keep it warm, in the freezing cold Arctic.",
+    "Fur everywhere, except its nose. Its nose is black, too! Black nose, black skin!",
+    "A polar bear has small ears, and a short little tail.",
+    "Small ears, a short tail, and a big, fluffy body! What a bear!",
+    [
+     "Say it with me. A polar bear has black skin!",
+     "close:host"
+    ],
+    "Can you hug yourself, warm and cozy like a polar bear? Squeeze!",
+    "Now touch your nose. Boop! A polar bear's nose is black.",
+    {
+     "t": "Quick check! Is a polar bear's skin black? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! Black skin, under white-looking fur. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_polar_skin",
+    "title": "What Color Is a Polar Bear's Skin? Polar Bear Facts",
+    "l1": "WHAT IS",
+    "l2": "UNDER THE FUR?",
+    "thumb_text": "SEE THROUGH!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "bear",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "word": "COZY DEN!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "BROWN BEAR",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "A DEN",
+     "b": "A TREE",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "den",
+     "at": "ex",
+     "on": [
+      3,
+      "brown"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      6,
+      "seven"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "7",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "digs"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "DIG DIG!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "nose"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "SNIFF!",
+      "color": "#3cc45a"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who sleeps in a cozy den, all winter long?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the brown bear? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the brown bear!",
+    "Here is the fun fact. In cold places, a brown bear spends the winter in a den.",
+    "A den is a cozy room, under the ground. Snug and safe!",
+    {
+     "t": "How long can a brown bear stay in its den? Hmm.",
+     "pause": 2.4
+    },
+    "In the coldest places, up to seven months! That is most of the year.",
+    [
+     "Look at that sleepy brown bear!",
+     "close:bear"
+    ],
+    "A brown bear digs its own den. A tunnel, then a round room at the end.",
+    "Some bears start digging their den in September! Dig, dig, dig!",
+    "A brown bear uses its nose to learn about the world around it. Sniff, sniff!",
+    "And a brown bear often stands up tall, on its back legs, to look around.",
+    [
+     "Say it with me. A brown bear sleeps in a den!",
+     "close:host"
+    ],
+    "Can you dig like a bear? Dig, dig, dig, with both paws!",
+    "Now curl up in your den, and take a little nap. Shh.",
+    {
+     "t": "Quick check! Where does a brown bear spend the winter? In a den? Or up a tree?",
+     "pause": 3.2
+    },
+    "In a den! Cozy and snug. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_bear_den",
+    "title": "Where Does a Brown Bear Sleep in Winter?",
+    "l1": "WHERE IN",
+    "l2": "WINTER?",
+    "thumb_text": "DIG DIG!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three friends who are ready for winter. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who grows a white coat for the snow?",
+     "The arctic fox! Yes!",
+     "arctic_fox"
+    ],
+    [
+     "Who has black skin under its fur?",
+     "The polar bear! That's right!",
+     "polar_bear"
+    ],
+    [
+     "Who sleeps in a den all winter?",
+     "The brown bear! You remembered!",
+     "bear"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "mountain",
+   "tod": "morning",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "A white coat like a fox. Thick fat like a polar bear. And a cozy den like a brown bear!",
+    "What do you wear when it is cold outside?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "every example cued on an early word of its line, so it is on screen while it is named (open note of Nov 16: bamboo, pool, sun appeared only as their line ended)",
+  "goodbye word at z 3.15 (teach.py), so BYE-BYE! stays inside the picture in the goodbye wide shot (cut at 5:10-5:19 of zool_ep15)",
+  "no animal close-up while an example is on screen (asserted); signs at x 1.95; a count of 2 at x 1.35 inside the Shorts-safe area",
+  "picture: new casts per lesson (rhino, giraffe, hippo), new places for the hello (autumn forest) and goodbye (farm)",
+  "teaching: every part has a body action kids copy (finger horns, giraffe tongue, hippo mouth) and one number to count or compare (2 horns, 20 inches, 165 pounds, a foot and a half)"
+ ],
+ "version": 3
+}

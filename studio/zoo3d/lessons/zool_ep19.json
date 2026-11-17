@@ -1,0 +1,715 @@
+{
+ "id": "zool_ep19",
+ "thumb_at": [
+  "hippo",
+  4,
+  0.6
+ ],
+ "seed": 71,
+ "title": "Horns, Tongues and Teeth! Animal Heads for Kids",
+ "card": "Animal Heads!",
+ "thumb_text": "OPEN WIDE!",
+ "description": "Who has two horns on its nose? Who has a tongue as long as twenty inches? Pick your answer with Milo the bluebird, then find out: a rhino's two horns keep growing all its life, a giraffe grabs leaves with its long tongue and chews its cud, and a hippo opens its mouth super wide and keeps its eyes, ears and nose on top of its head.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal heads for kids",
+  "rhino facts for kids",
+  "giraffe facts for kids",
+  "hippo facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "rhino",
+  "giraffe",
+  "hippo"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  }
+ ],
+ "facts": [
+  "White rhino: two horns on the rostrum, one in front of the other; composed of keratin (not true horns); grow continually throughout life; upper lip broad, flat, specialized to help secure grass; poor eyesight; good sense of smell; second-largest land mammal, only surpassed in size by elephant; skin very thick with deep folds (SDZWA Library fact sheet 'White Rhinoceros', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/whiterhino/characteristics, read Nov 17 2026).",
+  "Giraffe: long prehensile tongue, 50 cm (20 in); ossicones bony in adults, soft and cartilaginous in calves, present at birth; individuals can be recognized by their unique markings (SDZWA Library fact sheet 'Giraffe', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/giraffes/characteristics, read Nov 17 2026).",
+  "Giraffe: long, prehensile, sticky tongue enables a giraffe to feed on hard-to-reach leaves; strip leaves between lower teeth and hardened upper dental pad; consume 34-75 kg (75-165 lbs) of browse per day; food quickly swallowed, later regurgitated and chewed more thoroughly ('chewing cud'); must spread forelegs wide or kneel to drink (SDZWA Library fact sheet 'Giraffe', Diet & Feeding, ielc.libguides.com/sdzg/factsheets/giraffes/diet, read Nov 17 2026).",
+  "Hippo: jaws hinged far to the back, allowing an enormous gape of 150 degrees (humans have only 45); canines and incisors enormously enlarged and continuously growing; male canines can grow to 50 cm (1.5 ft); incisors used for digging; eyes slightly periscoped and aligned on top of head along with ears and nostrils; nostrils close before submersion; ears fold into a recessed area to close underwater (SDZWA Library fact sheet 'Hippopotamus', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/hippopotamus/characteristics, read Nov 17 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "word": "ANIMAL HEADS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about amazing animal heads!",
+    "Horns, tongues and teeth. Who has what?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Are you ready? Let's go!"
+   ]
+  },
+  {
+   "name": "rhino",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "word": "TWO HORNS!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "rhino"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "RHINO",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "2 HORNS",
+     "b": "10 HORNS",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      1.35,
+      -1.3,
+      2.2
+     ],
+     "on": [
+      4,
+      "one"
+     ],
+     "off": [
+      5
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ]
+     ],
+     "opts": {
+      "n": 2,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "horns"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "KEEP GROWING!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "grass",
+     "at": "ex",
+     "on": [
+      8,
+      "wide"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "smell"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "SNIFF SNIFF!",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has two horns on its nose, one in front of the other?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the rhino? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the rhino!",
+    "Here is the fun fact. A rhino has two horns. A big one in front, and a smaller one behind it.",
+    "Let's count the horns. One, two!",
+    {
+     "t": "Do a rhino's horns ever stop growing? Hmm.",
+     "pause": 2.4
+    },
+    "No! A rhino's horns keep growing, all its life. They are made of something called keratin.",
+    [
+     "Look at those two horns!",
+     "close:rhino"
+    ],
+    "A rhino has a wide, flat top lip. It helps the rhino hold the grass it eats.",
+    "Munch, munch, munch! A big rhino eats lots and lots of grass.",
+    "A rhino cannot see very well. But it has a great sense of smell! Sniff, sniff.",
+    "And a rhino is big! On land, only the elephant is bigger.",
+    [
+     "Say it with me. A rhino has two horns!",
+     "close:host"
+    ],
+    "Can you make rhino horns? Put one finger on your nose, and one finger just above it!",
+    "Now sniff like a rhino. Sniff, sniff, sniff!",
+    {
+     "t": "Quick check! How many horns does this rhino have? Two? Or ten?",
+     "pause": 3.2
+    },
+    "Two! One, two. Great job!"
+   ],
+   "short": {
+    "id": "zs90_rhino_horns",
+    "title": "How Many Horns Does a Rhino Have? Rhino Facts",
+    "l1": "HOW MANY",
+    "l2": "HORNS?",
+    "thumb_text": "COUNT THEM!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "giraffe",
+   "biome": "savanna",
+   "tod": "golden",
+   "word": "LONG TONGUE!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "giraffe"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "GIRAFFE",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "LONG",
+     "b": "SHORT",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "tongue"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "20 INCHES!",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      6,
+      "holds"
+     ],
+     "off": [
+      7
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      8,
+      "lots"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "165",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "top"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "OSSICONES",
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has a long tongue, for grabbing leaves up high?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the giraffe? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the giraffe!",
+    "Here is the fun fact. A giraffe's tongue is about twenty inches long!",
+    "Twenty inches! A giraffe's tongue is long, and sticky too.",
+    {
+     "t": "How does a giraffe pull the leaves off a branch? Hmm.",
+     "pause": 2.4
+    },
+    "It holds the branch with its long tongue, then strips off the leaves, with its bottom teeth and a hard pad on top!",
+    [
+     "Look how high a giraffe can reach!",
+     "close:giraffe"
+    ],
+    "A giraffe eats lots of leaves and twigs. Up to one hundred sixty-five pounds, in one day!",
+    "Later, it brings the food back up, and chews it again. That is called chewing its cud! Chew, chew.",
+    "On top of its head, a giraffe has bumps called ossicones. They look like little horns.",
+    "A baby giraffe has them when it is born, and they are soft!",
+    [
+     "Say it with me. A giraffe has a long tongue!",
+     "close:host"
+    ],
+    "Can you stick out your tongue like a giraffe? Reach, reach, for the leaves!",
+    "Now chew, chew, chew, like a giraffe chewing its cud.",
+    {
+     "t": "Quick check! Is a giraffe's tongue long? Or short?",
+     "pause": 3.2
+    },
+    "Long! About twenty inches long. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_giraffe_tongue",
+    "title": "How Long Is a Giraffe's Tongue? Giraffe Facts",
+    "l1": "WHOSE",
+    "l2": "TONGUE?",
+    "thumb_text": "REACH UP!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "hippo",
+   "biome": "river",
+   "tod": "morning",
+   "word": "BIG MOUTH!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "hippo"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "HIPPO",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "ON TOP",
+     "b": "ON FEET",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "open"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "SUPER WIDE!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "front"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "KEEP GROWING!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      8,
+      "longest"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "1.5 FT",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "eyes"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "ON TOP!",
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who can open its mouth really, really wide?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the hippo? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the hippo!",
+    "Here is the fun fact. A hippo can open its mouth super wide. Much, much wider than you can!",
+    "Can you open wide like a hippo? Open, open, wide!",
+    {
+     "t": "Do a hippo's big teeth ever stop growing? Hmm.",
+     "pause": 2.4
+    },
+    "No! A hippo's big front teeth keep growing, all its life.",
+    [
+     "Wow, what a big mouth!",
+     "close:hippo"
+    ],
+    "A daddy hippo's longest teeth can grow about a foot and a half long!",
+    "And a hippo uses its front teeth to dig. Dig, dig, dig!",
+    "A hippo's eyes, ears and nose are all on the top of its head.",
+    "So it can sit in the water, and still look and listen. When it goes under, its nose closes up tight!",
+    [
+     "Say it with me. A hippo has a big, wide mouth!",
+     "close:host"
+    ],
+    "Open wide like a hippo one more time. Big, big mouth!",
+    "Now pinch your nose shut, like a hippo going under the water. Blub, blub!",
+    {
+     "t": "Quick check! Where are a hippo's eyes? On top of its head? Or on its feet?",
+     "pause": 3.2
+    },
+    "On top of its head! Peekaboo! Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_hippo_mouth",
+    "title": "How Wide Can a Hippo Open Its Mouth? Hippo Facts",
+    "l1": "HOW WIDE",
+    "l2": "CAN IT OPEN?",
+    "thumb_text": "SO BIG!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three amazing animal heads. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who has two horns on its nose?",
+     "The rhino! Yes!",
+     "rhino"
+    ],
+    [
+     "Who grabs leaves with a long, long tongue?",
+     "The giraffe! That's right!",
+     "giraffe"
+    ],
+    [
+     "Who can open its mouth super wide?",
+     "The hippo! You remembered!",
+     "hippo"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "farm",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Two horns like a rhino. A long tongue like a giraffe. And a big mouth like a hippo!",
+    "Which animal head is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "every example cued on an early word of its line, so it is on screen while it is named (open note of Nov 16: bamboo, pool, sun appeared only as their line ended)",
+  "goodbye word at z 3.15 (teach.py), so BYE-BYE! stays inside the picture in the goodbye wide shot (cut at 5:10-5:19 of zool_ep15)",
+  "no animal close-up while an example is on screen (asserted); signs at x 1.95; a count of 2 at x 1.35 inside the Shorts-safe area",
+  "picture: new casts per lesson (rhino, giraffe, hippo), new places for the hello (autumn forest) and goodbye (farm)",
+  "teaching: every part has a body action kids copy (finger horns, giraffe tongue, hippo mouth) and one number to count or compare (2 horns, 20 inches, 165 pounds, a foot and a half)"
+ ],
+ "version": 3
+}

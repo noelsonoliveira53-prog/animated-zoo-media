@@ -81,6 +81,7 @@ def review(fname):
     same = [e for e in allp if e is not entry and e["title"].strip().lower() == title.strip().lower() and e.get("status") != "dropped"]
     if same: fails.append("title repeats another video on this channel (META-02)")
     if "AI tools" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the AI-disclosure boilerplate (META-03)")
+    if re.search(r"[<>]", title + desc): fails.append("'<' or '>' in the title or description: YouTube Studio refuses it (zool_ep15's upload stopped on '>90%', Nov 17)")
     first2 = desc.split("\n")[:2]
     if len(" ".join(first2)) < 80: warns.append("first 2 description lines are short; make them searchable")
     # KID-01

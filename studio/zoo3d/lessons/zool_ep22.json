@@ -1,0 +1,702 @@
+{
+ "id": "zool_ep22",
+ "thumb_at": [
+  "koala",
+  3,
+  0.7
+ ],
+ "seed": 83,
+ "title": "Sleepy Animals for Kids! Who Rests the Most?",
+ "card": "Sleepy Animals!",
+ "thumb_text": "SHH!",
+ "description": "Which animals rest the most? Pick your answer with Milo the bluebird, then find out: a koala sits or sleeps about 20 hours a day, a lion may rest up to 20 hours a day and is busiest at night, and a sleeping polar bear's heart slows down to about 8 to 10 beats a minute.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "sleepy animals for kids",
+  "koala facts for kids",
+  "lion facts for kids",
+  "polar bear facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "koala",
+  "lion",
+  "polar_bear"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  }
+ ],
+ "facts": [
+  "Koala: an adult spends about 19-20 hours/day sitting, sleeping; low energy lifestyle is necessary for an animal that specializes on such a low energy diet; most often described as nocturnal, with some activities during the day; nighttime tree for feeding often not the same tree used in day for resting; eucalyptus branches grow out at sharp angles, which helps koalas wedge themselves in (SDZWA Library fact sheet 'Koala', Behavior & Ecology, ielc.libguides.com/sdzg/factsheets/koala/behavior, read Nov 17 2026).",
+  "Lion: may rest up to 20-21 hours per day, on average; peak activity after 5 pm and before 8 am; hunt actively at night; active early and late in the day and at night to avoid the heat of the day; grooming and social licking strengthen the social bonds between pride members; groom and play around dawn and especially in the evening (SDZWA Library fact sheet 'Lion', Behavior & Ecology, ielc.libguides.com/sdzg/factsheets/lions/behavior, read Nov 17 2026).",
+  "Polar bear: sleeping heart rate can fall as low as 8-10 beats/minute; in summer and autumn, bears forced onto land dig sleeping pits and temporary dens (SDZWA Library fact sheet 'Polar Bear', Behavior & Ecology, ielc.libguides.com/sdzg/factsheets/polarbear/behavior, read Nov 17 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "river",
+   "tod": "golden",
+   "word": "SLEEPY ANIMALS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about sleepy animals!",
+    "Who rests the most? Let's find out!",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Stretch and yawn. Let's go!"
+   ]
+  },
+  {
+   "name": "koala",
+   "biome": "bamboo",
+   "tod": "noon",
+   "word": "20 HOURS!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "koala"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "KOALA",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "SLEEPING",
+     "b": "RUNNING",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "zzz",
+     "at": [
+      2.2,
+      -1.2,
+      2.6
+     ],
+     "on": [
+      3,
+      "sleeps"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      6,
+      "leaves"
+     ],
+     "off": [
+      7
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "branches"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "SNUG FIT!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "often"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "NIGHT TIME",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who sits and sleeps in a tree, for most of the day?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the koala? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the koala!",
+    "Here is the fun fact. A koala sits or sleeps for about twenty hours a day!",
+    "Twenty hours! That is almost the whole day. Shh.",
+    {
+     "t": "Why does a koala rest so much? Hmm.",
+     "pause": 2.4
+    },
+    "Its food is eucalyptus leaves, and they do not give it much energy. So it rests a lot!",
+    [
+     "Look at that sleepy koala.",
+     "close:koala"
+    ],
+    "Eucalyptus branches grow out at sharp angles. A koala tucks itself in, nice and snug.",
+    "Snug and safe, high in the tree. Sweet dreams, little koala!",
+    "Koalas often do their eating at night.",
+    "It may eat in one tree at night, and rest in a different tree in the day!",
+    [
+     "Say it with me. A koala rests about twenty hours a day!",
+     "close:host"
+    ],
+    "Can you hug a tree like a koala? Hold on tight, and close your eyes.",
+    "Now yawn a big, sleepy koala yawn. Yawn! Shh.",
+    {
+     "t": "Quick check! What does a koala do most of the day? Sleeping? Or running?",
+     "pause": 3.2
+    },
+    "Sleeping! Shh. Great job!"
+   ],
+   "short": {
+    "id": "zs90_koala_sleep",
+    "title": "How Long Does a Koala Sleep? Koala Facts for Kids",
+    "l1": "HOW LONG",
+    "l2": "DOES IT REST?",
+    "thumb_text": "ZZZ!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "lion",
+   "biome": "desert",
+   "tod": "sunset",
+   "word": "NAP TIME!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "lion"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "LION",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "AT NIGHT",
+     "b": "AT LUNCH",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "zzz",
+     "at": [
+      2.2,
+      -1.2,
+      2.6
+     ],
+     "on": [
+      3,
+      "rest"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.3,
+      -1.1,
+      2.8
+     ],
+     "on": [
+      6,
+      "late"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "hunting"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "NIGHT TIME",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "lick"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "LICK LICK!",
+      "color": "#ff7a00"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Which big cat may rest for up to twenty hours a day?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the lion? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the lion!",
+    "Here is the fun fact. A lion may rest for up to twenty hours a day!",
+    "Lying in the shade, taking a long, long nap. Yawn! Shh, let it sleep.",
+    {
+     "t": "When is a lion the busiest? Hmm.",
+     "pause": 2.4
+    },
+    "Early and late in the day, and at night! That way it stays out of the heat of the day.",
+    [
+     "Look at that big, sleepy lion.",
+     "close:lion"
+    ],
+    "Lions do their hunting at night, when it is cooler.",
+    "In the early morning and in the evening, lions are busy and awake. Up and about!",
+    "Lion friends lick each other, to groom. Lick, lick!",
+    "Grooming helps the lions in a family stay close friends. So sweet! Lick, lick, lick!",
+    [
+     "Say it with me. A lion rests most of the day!",
+     "close:host"
+    ],
+    "Can you stretch like a lion after a nap? Big stretch, and a big yawn!",
+    "Now lick your paw, like a lion grooming. Lick, lick! Nice and clean!",
+    {
+     "t": "Quick check! When is a lion busy? At night? Or at lunch time?",
+     "pause": 3.2
+    },
+    "At night! And early and late in the day. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_lion_rest",
+    "title": "How Long Can a Lion Nap? Lion Facts for Kids",
+    "l1": "HOW LONG",
+    "l2": "CAN IT NAP?",
+    "thumb_text": "YAWN!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "noon",
+   "word": "SLOW HEART!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "polar_bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "POLAR BEAR",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "SLOWER",
+     "b": "FASTER",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "heart",
+     "at": [
+      2.3,
+      -1.1,
+      2.4
+     ],
+     "on": [
+      3,
+      "heart"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      6,
+      "eight"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "8",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "summer"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "SLEEPING PIT",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      2.2,
+      -1.2,
+      2.6
+     ],
+     "on": [
+      10,
+      "sleeps"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Whose heart beats very, very slowly when it sleeps?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the polar bear? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the polar bear!",
+    "Here is the fun fact. When a polar bear sleeps, its heart slows way down!",
+    "Put your hand on your heart. Can you feel it go thump, thump?",
+    {
+     "t": "How slow can a sleeping polar bear's heart go? Hmm.",
+     "pause": 2.4
+    },
+    "As slow as eight to ten beats in a whole minute! Thump. Thump. Thump.",
+    [
+     "Look at that big, white bear.",
+     "close:polar_bear"
+    ],
+    "In summer and fall, some polar bears on land dig a sleeping pit.",
+    "Dig, dig, dig, then curl up inside. A cozy bed in the ground!",
+    "A polar bear sleeps, and its heart goes slow and steady.",
+    "Slow and steady, while it dreams. Shh! Sleep tight, polar bear.",
+    [
+     "Say it with me. A sleeping polar bear has a slow heart!",
+     "close:host"
+    ],
+    "Can you dig a sleeping pit like a polar bear? Dig, dig, dig!",
+    "Now curl up, and breathe slow and steady. In, and out.",
+    {
+     "t": "Quick check! When a polar bear sleeps, does its heart go slower? Or faster?",
+     "pause": 3.2
+    },
+    "Slower! Thump. Thump. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_polar_heart",
+    "title": "How Slow Is a Sleeping Polar Bear's Heart?",
+    "l1": "HOW SLOW",
+    "l2": "IS ITS HEART?",
+    "thumb_text": "THUMP THUMP!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "autumn_forest",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three sleepy friends. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who sits or sleeps about twenty hours a day, in a tree?",
+     "The koala! Yes!",
+     "koala"
+    ],
+    [
+     "Who hunts at night and naps in the day?",
+     "The lion! That's right!",
+     "lion"
+    ],
+    [
+     "Whose heart goes slow when it sleeps?",
+     "The polar bear! You remembered!",
+     "polar_bear"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Snug like a koala. Stretch like a lion. And slow and steady like a polar bear!",
+    "How do you like to rest?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "every example cued on an early word of its line, so it is on screen while it is named (open note of Nov 16: bamboo, pool, sun appeared only as their line ended)",
+  "goodbye word at z 3.15 (teach.py), so BYE-BYE! stays inside the picture in the goodbye wide shot (cut at 5:10-5:19 of zool_ep15)",
+  "no animal close-up while an example is on screen (asserted); signs at x 1.95; a count of 2 at x 1.35 inside the Shorts-safe area",
+  "picture: new casts per lesson (rhino, giraffe, hippo), new places for the hello (autumn forest) and goodbye (farm)",
+  "teaching: every part has a body action kids copy (finger horns, giraffe tongue, hippo mouth) and one number to count or compare (2 horns, 20 inches, 165 pounds, a foot and a half)"
+ ],
+ "version": 3
+}

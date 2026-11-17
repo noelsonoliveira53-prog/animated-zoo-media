@@ -12,8 +12,11 @@ PT = {"milo": {"head": (0, -185), "body": (0, -150), "top": (0, -360), "feet": (
       "monkey": {"head": (0, -296), "body": (0, -150), "top": (0, -410), "feet": (0, 0), "all": (0, -200)},
       "calf": {"head": (379, -690), "body": (0, -353), "top": (379, -760), "feet": (0, 0), "all": (90, -400), "back": (0, -470)}}
 PT["elephant_hat"] = PT["elephant"]
+PT["elephant_mud"] = PT["elephant"]; PT["tumble_mud"] = PT["tumble"]
+PT["monkey_hang"] = {"head": (0, 446), "body": (0, 300), "top": (0, 0), "feet": (0, 560), "all": (0, 290)}
 # how far a character reaches around its feet (left, right, up), in its own units: for 9:16 views that must hold it whole
 BOX = {"milo": (-150, 150, -380), "tumble": (-320, 590, -650), "elephant": (-320, 540, -660), "elephant_hat": (-320, 540, -800), "monkey": (-170, 170, -420), "calf": (-240, 470, -780), "camel": (-340, 490, -660)}
+BOX["elephant_mud"] = BOX["elephant"]; BOX["tumble_mud"] = BOX["tumble"]
 
 
 def W(c, k=1.05): return (c[0], c[1], round(c[2] * k))      # the end of a slow pull-out: a wide view only gets wider, so nobody slides out of the frame

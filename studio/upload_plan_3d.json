@@ -2084,5 +2084,34 @@
   "video_id": "-1K86tqYuAY",
   "thumb_set": true,
   "scheduled_on": "2026-11-16"
+ },
+ {
+  "file": "cartoon/za_ep02.mp4",
+  "title": "Baby Elephant Tumble and the Big Muddy Puddle",
+  "description": "It is photo day at the zoo, and baby elephant Tumble wants to stay clean. But the sun is so hot! A leaf hat, a fan and the shade each help for a moment. Then Tumble finds a big muddy puddle, and Mama shows him what elephants do on a hot day. A gentle animal adventure for ages 2-6 about trying, staying cool and having fun, with questions to answer and a song to sing along.\nKids see how an elephant flaps its big ears to cool down, and how mud protects an elephant's skin from the sun.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "baby elephant",
+   "elephant story for kids",
+   "animal stories for kids",
+   "muddy puddle",
+   "kids adventure cartoon",
+   "why elephants roll in mud",
+   "spider monkey",
+   "hot day story for kids",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "date": "2026-11-19",
+  "time": "5:30 AM",
+  "thumb": "brand/zoo/thumb_za_ep02.jpg",
+  "thumb_text": "SPLASH TIME!",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 12:25 AM for the cartoon adventure za_ep02 (first draft, not rendered). If cartoon/za_ep02.mp4 does not exist when this slot is one day away, give the slot to a ready 3D lesson. Never upload an in_production entry."
  }
 ]

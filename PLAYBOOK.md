@@ -579,3 +579,15 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   Write every part 83-90 s long so each part plus its hook is a Short of 85-95 s. A Short is `{"part": n, "extra_first": [hook shot], "extra_last": [...]}`; its title band is two lines of at most 15 and 10 letters.
 - 9:16 stills: `studio/cartoon/stills.sh <id> <short index | L> <sheet.jpg> [cols] [width]` = `toon.py <id> --short <n> --plan`, then `--stills` at t1-0.3 of every shot from `<short id>_timing.json`, then `sheet.py out/<id>/proj_p sheet.jpg 8 300`. Never while a render of the same episode runs.
 - Not built: the closing "next adventure" picture, a Short cut from the adventure, voices for Poppy, Tula, Clover and Hazel, the playlists.
+
+### Nov 17, 12:30 AM: no overnight loop (Noelson: "save credits and keep production on schedule so schedule items for the night instead")
+  * The night's work is scheduled tasks at fixed times, not a session that keeps waking itself. One cartoon run tonight (1:00 AM, `docs/CARTOON_RUN.md`); everything else is the 6:31 AM daily run.
+  * FOR THE 6:31 AM RUN, songs: `zoo3d_ep20` Trunks Up! (elephant) and `zoo3d_ep21` Swing-a-Ding! (spider monkey) were written with `make_specs_v3.py zoo3d_ep20 zoo3d_ep21`
+    (facts read Nov 16 11:58 PM, quotes in the file) and their `.song.json` copied to the PC at 11:55 PM (read back, same md5; worker was IDLE). Collect them from `songs_out`
+    (step B.2: timing, routes.py, variety, test stills, job to the PC). `make_specs_v3.py` now builds only the ids it is given.
+  * FOR THE 6:31 AM RUN, uploads: nothing was uploaded after 11:19 PM. Ready and not uploaded: Shorts zs3d_baby_action (Nov 18 7:30 AM), zs90_pig_mud (Nov 18 11:30 AM),
+    zs90_koala_notbear (Nov 19 11:30 AM), song zoo3d_ep17 (Nov 21 3:30 PM). Count of the last 24 hours at 11:52 PM: 18 (the oldest four fall out at 12:53, 4:56, 5:25 and 5:51 AM).
+  * Cartoon adventure za_ep02 (Tumble and the Big Muddy Puddle): first draft, plan check passes, NO stills looked at. Slot Nov 19 5:30 AM reserved as "in_production" in upload_plan_3d.json.
+    New: `studio/cartoon/art3.py` (mud hole and props), muddy elephants `tumble_mud` / `elephant_mud` (clean ones unchanged by hash), kit.py knows the new kinds.
+  * This workspace: the paused channels' folders are left out of the working copy (sparse checkout; they stay in git) because the disk allowance was down to 989 MB.
+  * PC and 2D: the PC cannot render cartoons yet (Node.js is not installed there; a download needs the owner's yes). Cartoons are rendered in the cloud; the PC renders the 3D songs and lessons.

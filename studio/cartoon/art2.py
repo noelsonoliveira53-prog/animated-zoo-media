@@ -30,7 +30,10 @@ def _mouth(pid, x, y, w, ln, wd=7):
 
 
 # ================================================================== elephant
-def elephant(pid, calf=False, c=ELE, hat=False):
+MUD = ("#8a5a2c", "#6f4520", "#b07a42")      # wet mud: fill, dark, shine
+
+
+def elephant(pid, calf=False, c=ELE, hat=False, mud=False):
     """An elephant, side view. calf=True: Tumble (big head, short trunk, a tuft of hair, no tusks). Parts: -neck (the whole head), -trunk (lifts: a snorkel,
     a reach, a hug), -ear (flaps, droops), -jaw (talks), -eye, -brow, -smile / -frown, -tail, -fl -bl -fl2 -bl2 (legs)."""
     ln = c["line"]; L = .8 if calf else 1.0; HK = 1.2 if calf else 1.0
@@ -39,7 +42,10 @@ def elephant(pid, calf=False, c=ELE, hat=False):
         col = c["far"] if far else c["fill"]; h = 250 * L
         sh = f'<rect x="{x - 52}" y="-250" width="104" height="{h:.0f}" rx="42"/>'
         nails = "" if far else "".join(f'<path d="M{x - 34 + k * 26} {h - 252:.0f} q11 -22 22 0Z" fill="{c["nail"]}"/>' for k in range(3))
-        return f'<g id="{pid}-{name}">{_ol(sh, ln)}<rect x="{x - 52}" y="-250" width="104" height="{h:.0f}" rx="42" fill="{col}"/>{nails}</g>'
+        sock = "" if (not mud or far) else (f'<clipPath id="{pid}-{name}c"><rect x="{x - 60}" y="{h - 250 - 96:.0f}" width="120" height="110"/></clipPath>'
+                                            f'<g class="mud"><rect x="{x - 52}" y="-250" width="104" height="{h:.0f}" rx="42" fill="{MUD[0]}" clip-path="url(#{pid}-{name}c)"/>'
+                                            f'<circle cx="{x - 24}" cy="{h - 250 - 98:.0f}" r="20" fill="{MUD[0]}"/><circle cx="{x + 22}" cy="{h - 250 - 94:.0f}" r="26" fill="{MUD[0]}"/></g>')
+        return f'<g id="{pid}-{name}">{_ol(sh, ln)}<rect x="{x - 52}" y="-250" width="104" height="{h:.0f}" rx="42" fill="{col}"/>{nails}{sock}</g>'
     lift = 250 * (1 - L)
     far_legs = leg(-196, True, "bl2") + leg(96, True, "fl2"); near_legs = leg(-140, False, "bl") + leg(150, False, "fl")
     body = _ol('<ellipse cx="-14" cy="-340" rx="262" ry="172"/>', ln) + f'<ellipse cx="-14" cy="-340" rx="262" ry="172" fill="{c["fill"]}"/>'
@@ -48,13 +54,21 @@ def elephant(pid, calf=False, c=ELE, hat=False):
     tail = (f'<g id="{pid}-tail"><path d="M-268 -390 q-46 60 -30 150" stroke="{ln}" stroke-width="30" fill="none" stroke-linecap="round"/>'
             f'<path d="M-268 -390 q-46 60 -30 150" stroke="{c["fill"]}" stroke-width="14" fill="none" stroke-linecap="round"/><ellipse cx="-298" cy="-232" rx="15" ry="24" fill="{ln}"/></g>')
     tl = 0.72 if calf else 1.0                                 # the calf's trunk is short
+    mud_t = "" if not mud else f'<g class="mud"><circle cx="452" cy="{-430 + 214 * tl:.0f}" r="24" fill="{MUD[0]}"/><circle cx="470" cy="{-430 + 150 * tl:.0f}" r="13" fill="{MUD[0]}"/></g>'
+    mud_b = "" if not mud else (f'<clipPath id="{pid}-bc"><ellipse cx="-14" cy="-340" rx="262" ry="172"/></clipPath><g class="mud" clip-path="url(#{pid}-bc)">'
+                                f'<path d="M-300 -262 q45 -44 96 -10 q50 34 104 -16 q54 -44 112 4 q48 34 96 -22 q44 -34 92 4 L300 -150 L-300 -150Z" fill="{MUD[0]}"/>'
+                                f'<path d="M-300 -206 q60 -30 130 -6 q70 24 150 -8 q80 -30 220 6 L300 -150 L-300 -150Z" fill="{MUD[1]}" opacity=".55"/>'
+                                f'<ellipse cx="-150" cy="-410" rx="62" ry="42" fill="{MUD[0]}"/><ellipse cx="-36" cy="-462" rx="40" ry="24" fill="{MUD[0]}"/><circle cx="-86" cy="-338" r="17" fill="{MUD[0]}"/>'
+                                f'<circle cx="66" cy="-376" r="23" fill="{MUD[0]}"/><circle cx="118" cy="-330" r="11" fill="{MUD[0]}"/><ellipse cx="-164" cy="-424" rx="26" ry="11" fill="{MUD[2]}" opacity=".8"/></g>')
+    mud_e = "" if not mud else f'<g class="mud"><ellipse cx="176" cy="-474" rx="46" ry="34" fill="{MUD[0]}"/><circle cx="214" cy="-400" r="15" fill="{MUD[0]}"/><ellipse cx="166" cy="-484" rx="18" ry="8" fill="{MUD[2]}" opacity=".8"/></g>'
+    mud_h = "" if not mud else f'<g class="mud"><ellipse cx="318" cy="-590" rx="62" ry="26" fill="{MUD[0]}"/><circle cx="396" cy="-552" r="13" fill="{MUD[0]}"/><ellipse cx="300" cy="-384" rx="22" ry="15" fill="{MUD[0]}"/></g>'
     trunk_d = f"M392 -430 C{470} {-430 + 20 * tl:.0f} {486} {-430 + 150 * tl:.0f} {448} {-430 + 232 * tl:.0f} C{430} {-430 + 276 * tl:.0f} {456} {-430 + 302 * tl:.0f} {492} {-430 + 284 * tl:.0f}"
     wr = "".join(f'<path d="M{438 + dx} {-430 + dy * tl:.0f} q22 8 44 -2" stroke="{c["shade"]}" stroke-width="7" fill="none" stroke-linecap="round" opacity=".8"/>' for dx, dy in ((14, 70), (12, 120), (0, 170)))
     trunk = (f'<g id="{pid}-trunk"><path d="{trunk_d}" stroke="{ln}" stroke-width="86" fill="none" stroke-linecap="round"/>'
-             f'<path d="{trunk_d}" stroke="{c["fill"]}" stroke-width="68" fill="none" stroke-linecap="round"/>{wr}</g>')
+             f'<path d="{trunk_d}" stroke="{c["fill"]}" stroke-width="68" fill="none" stroke-linecap="round"/>{wr}{mud_t}</g>')
     ear_sh = '<path d="M250 -590 C120 -640 60 -540 84 -430 C100 -340 180 -290 262 -330 C300 -420 300 -520 250 -590Z"/>'
     ear = (f'<g id="{pid}-ear">{_ol(ear_sh, ln)}<g fill="{c["fill"]}">{ear_sh}</g>'
-           f'<path d="M240 -560 C150 -590 108 -520 124 -436 C136 -372 190 -338 244 -360 C270 -430 270 -500 240 -560Z" fill="{c["ear"]}"/></g>')
+           f'<path d="M240 -560 C150 -590 108 -520 124 -436 C136 -372 190 -338 244 -360 C270 -430 270 -500 240 -560Z" fill="{c["ear"]}"/>{mud_e}</g>')
     tusk = "" if calf else f'<path d="M372 -372 q54 26 92 -22 q-8 66 -76 66 q-22 0 -32 -18Z" fill="#fffdf4" stroke="{ln}" stroke-width="7" stroke-linejoin="round"/>'
     tuft = "" if not calf else "".join(f'<path d="M{286 + k * 16} -596 q-6 -30 {10 + k * 6} -40" stroke="{ln}" stroke-width="8" fill="none" stroke-linecap="round"/>' for k in range(3))
     hat_s = "" if not hat else (f'<g id="{pid}-hat"><path d="M254 -604 L312 -760 L370 -596Z" fill="#ff7aa2" stroke="{ln}" stroke-width="8" stroke-linejoin="round"/><circle cx="312" cy="-766" r="20" fill="{SUN}" stroke="{ln}" stroke-width="7"/>'
@@ -62,13 +76,13 @@ def elephant(pid, calf=False, c=ELE, hat=False):
     head_sh = '<circle cx="300" cy="-470" r="140"/>'
     hs0, hs1 = (f'<g transform="translate(200 -420) scale({HK}) translate(-200 420)">', '</g>')
     neck = (f'<g id="{pid}-neck">' + hs0 + _ol(head_sh, ln) + f'<circle cx="300" cy="-470" r="140" fill="{c["fill"]}"/>'
-            f'<ellipse cx="330" cy="-560" rx="70" ry="24" fill="{c["light"]}" opacity=".5"/>' + trunk +
+            f'<ellipse cx="330" cy="-560" rx="70" ry="24" fill="{c["light"]}" opacity=".5"/>' + mud_h + trunk +
             f'<g id="{pid}-jaw" opacity="0"><path d="M316 -372 q36 34 76 2 q-4 46 -40 46 q-30 0 -36 -48Z" fill="#c9667d" stroke="{ln}" stroke-width="7" stroke-linejoin="round"/></g>'
             f'<path d="M300 -396 q60 44 110 2 l0 -46 l-110 0Z" fill="{c["fill"]}"/>' + _mouth(pid, 356, -384, 76, ln) + tusk + ear
             + eye(f"{pid}-eye", 352, -486, 34 if calf else 30, lashes=0 if calf else 1, lid=c["fill"]) + _brow(pid, 352, -536, 62, ln)
             + f'<ellipse cx="398" cy="-436" rx="20" ry="12" fill="#ff8fb1" opacity=".6"/>' + tuft + hat_s + hs1 + '</g>')
     sh = '<ellipse cx="0" cy="4" rx="280" ry="20" fill="#000" opacity=".13"/>'
-    return f'<g id="{pid}">{sh}<g id="{pid}-all" transform="translate(0 {lift:.0f})">{tail}<g>{far_legs}</g>{body}{shade}{near_legs}{neck}</g></g>'
+    return f'<g id="{pid}">{sh}<g id="{pid}-all" transform="translate(0 {lift:.0f})">{tail}<g>{far_legs}</g>{body}{shade}{mud_b}{near_legs}{neck}</g></g>'
 
 
 # ================================================================== spider monkey
@@ -217,6 +231,8 @@ RIGS = {
     "elephant": dict(build=lambda p: elephant(p), **_quad("200 -420", "-268 -390", "250 -590", {"fl": 150, "bl": -140, "fl2": 96, "bl2": -196}, -250, ("y", 16)), eyes=["eye"], brows=["brow"], trunk="392 -430"),
     "elephant_hat": dict(build=lambda p: elephant(p, hat=True), **_quad("200 -420", "-268 -390", "250 -590", {"fl": 150, "bl": -140, "fl2": 96, "bl2": -196}, -250, ("y", 16)), eyes=["eye"], brows=["brow"], trunk="392 -430"),
     "tumble": dict(build=lambda p: elephant(p, calf=True), **_quad("200 -420", "-268 -390", "250 -590", {"fl": 150, "bl": -140, "fl2": 96, "bl2": -196}, -250, ("y", 16)), eyes=["eye"], brows=["brow"], trunk="392 -430"),
+    "elephant_mud": dict(build=lambda p: elephant(p, mud=True), **_quad("200 -420", "-268 -390", "250 -590", {"fl": 150, "bl": -140, "fl2": 96, "bl2": -196}, -250, ("y", 16)), eyes=["eye"], brows=["brow"], trunk="392 -430"),
+    "tumble_mud": dict(build=lambda p: elephant(p, calf=True, mud=True), **_quad("200 -420", "-268 -390", "250 -590", {"fl": 150, "bl": -140, "fl2": 96, "bl2": -196}, -250, ("y", 16)), eyes=["eye"], brows=["brow"], trunk="392 -430"),
     "monkey": dict(build=lambda p: monkey(p), neck=None, tail="40 -80", ear=None, legs=None, hip=0, jaw=("y", 12), eyes=["eyeL", "eyeR"], brows=["browL", "browR"]),
     "monkey_hang": dict(build=lambda p: monkey(p, hang=True), neck=None, tail=None, ear=None, legs=None, hip=0, jaw=("y", 12), eyes=["eyeL", "eyeR"], brows=["browL", "browR"]),
     "bear": dict(build=lambda p: bear(p), **_quad("120 -250", "-214 -250", "150 -402", {"fl": 140, "bl": -106, "fl2": 96, "bl2": -150}, -150, ("y", 12)), eyes=["eye"], brows=["brow"]),

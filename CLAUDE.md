@@ -38,3 +38,4 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 - When only the picture of a built lesson changes (a prop, a visit, a word's timing), patch jobs/<id>.json and the spec together and re-check with stills; re-running teach.py re-voices and moves part lengths (a Short fell from 84.7 to 83.8 s on Nov 16).
 - Never run `git pull`, `git stash` or a rebase while an encode is writing a file inside the repo.
 - After copying any file to the PC, read it back and compare it with the local file before a render depends on it; give every copy a new staged file name (a re-used staged path delivered the old content on Nov 15).
+- A title or description never contains '<' or '>': Studio refuses it (zool_ep15, Nov 17) and review.py fails it.

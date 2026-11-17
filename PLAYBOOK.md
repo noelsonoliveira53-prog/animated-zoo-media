@@ -591,3 +591,23 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     New: `studio/cartoon/art3.py` (mud hole and props), muddy elephants `tumble_mud` / `elephant_mud` (clean ones unchanged by hash), kit.py knows the new kinds.
   * This workspace: the paused channels' folders are left out of the working copy (sparse checkout; they stay in git) because the disk allowance was down to 989 MB.
   * PC and 2D: the PC cannot render cartoons yet (Node.js is not installed there; a download needs the owner's yes). Cartoons are rendered in the cloud; the PC renders the 3D songs and lessons.
+
+- Nov 17, 6:42 AM ET- (daily run, part 1):
+  * Views (Studio Advanced analytics, lifetime, 7:30 AM): 34,661 views (+1,895 since Nov 16 8:40 AM), 393,680 impressions, 2.1% CTR. Lion song-cut Short +150, Ants +140,
+    Octopus +128, Snail +115, Camel +83. v3 lessons 3-9 views after 1-2 days, songs 4-12 (Content list). docs/ANALYTICS.md, Command Center analytics/animated-zoo-2026-11-17.
+  * PC at 6:42 AM: IDLE. zool_ep15-18 DONE Nov 16 (3 parts each). The worker had rendered zoo3d_ep20/ep21 on its own from the song engine's default jobs (1920x1080,
+    no scene plan): NOT usable. 4K job zoo3d_ep20y (routes.py, variety OK and recorded, 'side' shots -> dolly/wide, verse words removed after stills showed the cast from
+    behind and GRAB! cut) sent at 7:24 AM, read back same md5; rendering at 3.72 s/frame (3,840 frames). zoo3d_ep21 has no 4K job yet.
+  * Finished: zool_ep15 (90.4 MB AV1 4K, 328 s; thumbnail redone on the bamboo frame, job thumb_frame 912), zool_ep16 (89.7 MB, 333.6 s). Both: review PASS, answer
+    reveals + goodbye frames looked at, watermark corner sheet looked at (nothing under the mark), listen.py: no clicks/silences, -15.5 LUFS (measured, not heard).
+  * Uploaded (custom thumbnails, "Video processing/scheduled" dialog read): zool_ep15 ShDmhyJuoeM Nov 18 1:30 PM; zool_ep16 0NqRykGsKwY Nov 19 1:30 PM; Shorts
+    zs90_pig_mud IV3TzHjRQMM Nov 18 11:30 AM, zs90_koala_notbear jGkxqn4Dyvc Nov 19 11:30 AM; song zoo3d_ep17 27dOgZh10N4 moved to Nov 19 3:30 PM (thumbnail redone:
+    PANDA! sat on the panda's face; variety recorded). Count of the last 24 h after these: 20 (commit log). The oldest four fall out at 2:33 PM.
+  * Studio refuses '<' or '>' in a description (zool_ep15's facts had '>90%'): review.py now fails it.
+  * New lessons zool_ep19-22 (make_lessons_p6.py, facts read Nov 17), no FAIL line, 100% words aligned, 10 stills each looked at; late-cued signs moved to early words
+    in the jobs (den, magnifier, CHEW CHEW!, COZY NEST, HELLO SNIFF!, 25, NIGHT TIME x2, sun, SLEEPING PIT). All four on the PC (read back: same md5; the wav files come
+    back 5.8 KB larger from the bridge but decode to identical audio). Queue: zoo3d_ep20y, then the four lessons (about 3 h each).
+  * Defects logged in docs/IMPROVE.md: hello/goodbye words cut by the frame top (teach.py now z 3.15 for both; ep19/ep20 jobs patched), quiz answer close-ups that turn an
+    animal away (zebra ep15, polar bear ep22 stills: still open), song 'side' shots.
+  * zool_ep17: watermark corner sheet showed the giraffe's face under the mark at 5:10 -> job watermark_hide [[303.5, 308.0]]; the first finish with the hide window was
+    killed for memory (ran next to bpy); finishing again alone. zool_ep18 finish and four Shorts (polar_paws, tiger_claws, lion_tuft, elephant_ears) queued after it.

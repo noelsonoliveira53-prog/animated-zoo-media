@@ -33,15 +33,7 @@ def english(eid):
 
 def bed_and_voice(film, shots, total, ep):
     """toon.mix_audio taken apart: the voice alone, and the bed (music ducked under the ENGLISH lines + every sound effect). The bed is the same for every language."""
-    n = int(SR * (total + .5)); voice = np.zeros(n, np.float32); env = np.full(n, 1.0, np.float32)
-    for s in shots:
-        if s["audio"] is not None:
-            a0 = int(s["v0"] * SR); voice[a0:a0 + len(s["audio"])] += s["audio"][:n - a0] * 0.95; env[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 0.0 if s.get("sung") else 0.42
-    env = np.convolve(env, np.ones(3600) / 3600, mode="same")
-    mu = toon.music(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 1.0, (len(mu) - np.arange(len(mu))) / SR / 2.0)); k = min(n, len(mu))
-    bed = np.zeros(n, np.float32); bed[:k] += mu[:k] * env[:k] * fade[:k] * ep.get("music", 0.5)
-    for t, name in film.snd:
-        x = toon.sfx(name) * (0.5 if name in ("pop", "tick") else 0.7); a0 = int(max(0, t) * SR); bed[a0:a0 + len(x)] += x[:n - a0]
+    voice, bed = toon.mix_parts(film, total, ep)      # the engine itself gives the two parts (voice; music + effects)
     same = bool(np.allclose(np.clip(voice + bed, -1, 1), toon.mix_audio(film, total, ep), atol=1e-5))
     return voice, bed, same
 

@@ -1,6 +1,8 @@
 {
  "id": "zc_ep01",
  "total": 318.6830833333337,
+ "bpm": 96,
+ "beats": [],
  "plan": {
   "length": 318.7,
   "shots": 86,
@@ -28,7 +30,17 @@
   "first_words_at": 0.42,
   "shot_mean": 3.71,
   "fails": [],
-  "words_placed": "687/687"
+  "words_placed": "687/687",
+  "sync": {
+   "pauses_checked": 52,
+   "onset_err_mean_ms": 24.4,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 85,
+   "cuts_on_the_half_beat": 8,
+   "songs_entering_on_a_beat": "0/4",
+   "process": "first cartoon process"
+  }
  },
  "events": [
   [

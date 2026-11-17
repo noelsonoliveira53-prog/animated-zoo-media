@@ -24,6 +24,10 @@ SR = 24000; FPS = 24
 CHROME = "/opt/pw-browsers/chromium_headless_shell-1243/chrome-headless-shell-linux64/chrome-headless-shell"
 GAP = 0.32          # silence between two lines
 LEAD = 0.12         # the picture cuts a moment before the voice
+BPM = 96; BEAT = 60 / BPM      # the tempo of the 3D lessons' music (zoo3d/lesson.py). With EP["beat"] the cartoon follows the 3D process for music and sync:
+#   the 3D lessons' own music bed lowered under the voice the same way, every cut on the music's half-beat grid, sung shots entering on a beat,
+#   the characters' idle motion in tempo, the mouth read from the voice at every frame, and the word-sync checks of teach.py (pauses, suspect words).
+SYNC = {}
 MAXGAP = 6.0        # plan gate: no stretch without a visual change longer than this
 
 
@@ -106,15 +110,22 @@ def sung(ep, s):
 def voice_lines(ep, shots):
     import sing, wordsync
     v0_ = ep.get("voice", "af_heart"); sp0 = ep.get("speed", 0.9); t = ep.get("lead_in", 0.4); miss = 0; tot = 0; GAP_ = ep.get("gap", GAP); cast = ep.get("cast", {})
+    beat = bool(ep.get("beat")); hz = FPS if beat else 12; SYNC.clear(); SYNC.update(onset=[], suspect=[], unaligned=[], sung_on_beat=[], cuts=0, cuts_on_grid=0)
     for s in shots:
         s["t0"] = t; s["sung"] = False
         if s.get("sing"):
             mix, voc, words = sung(ep, s); s["say"] = " ".join(w[0] for w in words); s["audio"] = mix * .9; s["dur"] = len(mix) / SR; s["words"] = words; s["sung"] = True
-            hop = SR // 12; env = np.array([np.sqrt(np.mean(voc[i:i + hop] ** 2)) for i in range(0, len(voc) - hop, hop)]); env = np.clip(env / (np.percentile(env, 92) + 1e-6), 0, 1)
-            s["env"] = [round(float(x), 2) for x in env]; s["v0"] = t + LEAD; t = s["v0"] + s["dur"] + s["pause"]; s["t1"] = t; continue
+            hop = SR // hz; env = np.array([np.sqrt(np.mean(voc[i:i + hop] ** 2)) for i in range(0, len(voc) - hop, hop)]); env = np.clip(env / (np.percentile(env, 92) + 1e-6), 0, 1)
+            s["env"] = [round(float(x), 2) for x in env]; s["env_hz"] = hz; s["v0"] = t + LEAD
+            if beat: s["v0"] = math.ceil(s["v0"] / BEAT - 1e-6) * BEAT; SYNC["sung_on_beat"].append(round(s["v0"] / BEAT, 3))      # the song comes in on a beat of the show's music, like a 3D song line
+            t = s["v0"] + s["dur"] + s["pause"]; s["t1"] = t; continue
         if s["say"]:
             spoken = s.get("speak") or s["say"]; c = cast.get(s["who"], {}); v = c.get("voice", v0_); sp = c.get("speed", sp0)
             a = sing.say(spoken, v, sp).astype(np.float32); al, got, n = wordsync.align(a, spoken); miss += n - got; tot += n
+            SYNC["onset"] += wordsync.onset_errors(a, al)          # teach.py's checks: after every pause the next word must start where the sound really comes back,
+            if got < n: SYNC["unaligned"].append(spoken)
+            for w_, (ws_, we_) in zip(spoken.split(), al):         # and a word that takes far too long was probably mispronounced by the voice
+                if we_ - ws_ > max(0.95, 0.2 * len(wordsync.norm(w_))): SYNC["suspect"].append(f"{w_} ({we_ - ws_:.1f} s) in: {spoken}")
             if c.get("pitch") or c.get("formant", 1.0) != 1.0:
                 a = shift(a, c.get("pitch", 0), c.get("formant", 1.0)); pk = float(np.abs(a).max())
                 if pk > .9: a = a * (.9 / pk)          # a pitched voice can peak above full scale: bring the whole line down, never clip it
@@ -123,12 +134,18 @@ def voice_lines(ep, shots):
             if len(al) != len(toks):        # "speak" differs from the caption text: spread the times over the caption's words
                 d = len(a) / SR; al = [(d * k / len(toks), d * (k + 1) / len(toks)) for k in range(len(toks))]
             s["audio"] = a; s["dur"] = len(a) / SR; s["words"] = [(toks[k], round(al[k][0], 3), round(al[k][1], 3)) for k in range(len(toks))]
-            hop = SR // 12; env = np.array([np.sqrt(np.mean(a[i:i + hop] ** 2)) for i in range(0, len(a) - hop, hop)]); env = np.clip(env / (np.percentile(env, 92) + 1e-6), 0, 1)
-            s["env"] = [round(float(x), 2) for x in env]
+            hop = SR // hz; env = np.array([np.sqrt(np.mean(a[i:i + hop] ** 2)) for i in range(0, len(a) - hop, hop)]); env = np.clip(env / (np.percentile(env, 92) + 1e-6), 0, 1)
+            s["env"] = [round(float(x), 2) for x in env]; s["env_hz"] = hz
             s["v0"] = t + LEAD; t = s["v0"] + s["dur"] + GAP_ + s["pause"]
         else:
             s["audio"] = None; s["dur"] = 0; s["words"] = []; s["env"] = []; s["v0"] = t; t += max(0.6, s["pause"])
         s["t1"] = t
+    if beat:        # 3D "cut_mode: beat": every cut sits on the music (its half-beat grid), inside the silence before the line; the voice does not move
+        g = BEAT / 2
+        for i in range(1, len(shots)):
+            s = shots[i]; p = shots[i - 1]; lo = max(s["t0"] - 0.24, p["v0"] + p["dur"] + 0.06); hi = (s["v0"] - 0.04) if s["dur"] else s["t0"] + 0.08
+            c = [k * g for k in range(int(lo / g), int(hi / g) + 2) if lo <= k * g <= hi]; SYNC["cuts"] += 1
+            if c: s["t0"] = min(c, key=lambda x: abs(x - s["t0"])); p["t1"] = s["t0"]; SYNC["cuts_on_grid"] += 1
     return t, miss, tot
 
 
@@ -213,6 +230,8 @@ class Film:
         aid, kind = a[0], a[1]; p = f"s{i}_{aid}"; t0, d = s["t0"], s["t1"] - s["t0"]; r = self.rnd; js = []
         busy = any((f[0] in ("drink", "lookat", "nod", "sleep") and f[2] == aid) or (f[0] in ("to", "fromto") and f"{aid}-neck" in f[2]) for f in s["fx"])   # the head is acting: no idle sway on top of it
         n = max(1, int(d / .5) | 1)
+        if self.ep.get("beat"):         # breathing, tails and heads move in the music's tempo and start on its grid (3D: every character moves to "beat" and "bar")
+            return self.idle_beat(i, a, s, fly, busy)
         if kind == "milo":
             js.append(f'tl.to("#{p}-body",{{scaleY:1.035,scaleX:.98,svgOrigin:"0 0",duration:.42,yoyo:true,repeat:{n},ease:"sine.inOut"}},{t0:.2f});')
             if fly:
@@ -253,20 +272,58 @@ class Film:
             tb += r.uniform(1.9, 3.6)
         return "".join(js)
 
+    def idle_beat(self, i, a, s, fly, busy):
+        """idle() in the music's tempo: one breath a beat, a tail swing a beat, a head sway every two beats, all starting on the music's half-beat grid."""
+        aid, kind = a[0], a[1]; p = f"s{i}_{aid}"; g = BEAT / 2; t0 = math.ceil(s["t0"] / g - 1e-6) * g; d = max(g, s["t1"] - t0); r = self.rnd; js = []
+        R = lambda x: max(1, int(d / x) | 1)
+        if kind == "milo":
+            js.append(f'tl.to("#{p}-body",{{scaleY:1.035,scaleX:.98,svgOrigin:"0 0",duration:{g:.4f},yoyo:true,repeat:{R(g)},ease:"sine.inOut"}},{t0:.3f});')
+            if fly:
+                m = max(1, int(d / .11) | 1)
+                js.append(f'tl.set("#{p}-shadow",{{opacity:0}},0);tl.set("#{p}-legs",{{y:-14}},0);')
+                js.append(f'tl.fromTo("#{p}",{{y:10}},{{y:-22,duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+                js.append(f'tl.fromTo("#{p}-wl",{{rotation:-8,svgOrigin:"-96 -182"}},{{rotation:46,duration:.11,yoyo:true,repeat:{m},ease:"sine.inOut"}},{t0:.3f});')
+                js.append(f'tl.fromTo("#{p}-wr",{{rotation:8,svgOrigin:"96 -182"}},{{rotation:-46,duration:.11,yoyo:true,repeat:{m},ease:"sine.inOut"}},{t0:.3f});')
+            js.append(f'tl.to("#{p}-scarf",{{rotation:9,svgOrigin:"48 -50",duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            eyes = [f"{p}-eyeL", f"{p}-eyeR"]
+        elif kind in art2.RIGS:
+            G = art2.RIGS[kind]
+            js.append(f'tl.to("#{p}",{{scaleY:1.014,svgOrigin:"0 0",duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            if G.get("tail"): js.append(f'tl.fromTo("#{p}-tail",{{rotation:-6,svgOrigin:"{G["tail"]}"}},{{rotation:8,duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            if G.get("ear") and not any(f[0] == "face" and f[2] == aid for f in s["fx"]):
+                tt = t0 + BEAT * r.choice((1, 2))
+                while tt < s["t1"] - .5: js.append(f'tl.to("#{p}-ear",{{rotation:-9,svgOrigin:"{G["ear"]}",duration:.14,yoyo:true,repeat:3}},{tt:.3f});'); tt += BEAT * r.choice((4, 5, 6))
+            if G.get("neck") and not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.2,svgOrigin:"{G["neck"]}"}},{{rotation:1.8,duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            if kind == "monkey_hang": js.append(f'tl.fromTo("#{p}-swing",{{rotation:-5,svgOrigin:"0 0"}},{{rotation:5,duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            eyes = [f"{p}-{e}" for e in G["eyes"]]
+        else:
+            js.append(f'tl.to("#{p}",{{scaleY:1.012,svgOrigin:"0 0",duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            js.append(f'tl.fromTo("#{p}-tail",{{rotation:-7,svgOrigin:"-232 -340"}},{{rotation:9,duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            tt = t0 + BEAT * r.choice((1, 2))
+            while tt < s["t1"] - .5: js.append(f'tl.to("#{p}-ear",{{rotation:-18,svgOrigin:"284 -640",duration:.09,yoyo:true,repeat:3}},{tt:.3f});'); tt += BEAT * r.choice((4, 5, 6))
+            if not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.5,svgOrigin:"190 -330"}},{{rotation:2,duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            eyes = [f"{p}-eye"]
+        asleep = min([when(s, f[1]) for f in s["fx"] if f[0] == "sleep" and f[2] == aid] or [1e9])
+        tb = t0 + BEAT * r.choice((1, 2, 3))
+        while tb < min(s["t1"] - .3, asleep - 1.2):
+            for e in eyes: js.append(f'tl.set("#{e}-lid",{{opacity:1}},{tb:.3f});tl.set("#{e}-lid",{{opacity:0}},{tb + .13:.3f});')
+            tb += BEAT * r.choice((3, 4, 5, 6))
+        return "".join(js)
+
     def talk(self, i, s, who):
         if not s["env"]: return ""
-        p = f"s{i}_{who}"; js = []; v0 = s["v0"]; last = -1; kind = self.kinds.get(p, "milo")
+        p = f"s{i}_{who}"; js = []; v0 = s["v0"]; last = -1; kind = self.kinds.get(p, "milo"); hz = s.get("env_hz", 12)
         if kind != "milo":          # the jaw drops with the voice (hidden when the mouth is shut)
             R = self.rig(p); jw = R["jaw"]
             for k, e in enumerate(s["env"]):
                 o = 0 if e < .12 else round(.35 + e * .65, 2)
                 if o != last:
-                    js.append(f'tl.set("#{p}-jaw",{{rotation:{o * jw[1]:.1f},svgOrigin:"{jw[2]}"}},{v0 + k / 12:.3f});' if jw[0] == "rot" else f'tl.set("#{p}-jaw",{{opacity:{1 if o else 0},y:{o * jw[1]:.1f}}},{v0 + k / 12:.3f});'); last = o
+                    js.append(f'tl.set("#{p}-jaw",{{rotation:{o * jw[1]:.1f},svgOrigin:"{jw[2]}"}},{v0 + k / hz:.3f});' if jw[0] == "rot" else f'tl.set("#{p}-jaw",{{opacity:{1 if o else 0},y:{o * jw[1]:.1f}}},{v0 + k / hz:.3f});'); last = o
             js.append(f'tl.set("#{p}-jaw",{{rotation:0,svgOrigin:"{jw[2]}"}},{v0 + s["dur"] + .02:.3f});' if jw[0] == "rot" else f'tl.set("#{p}-jaw",{{opacity:0,y:0}},{v0 + s["dur"] + .02:.3f});')
             return "".join(js)
         for k, e in enumerate(s["env"]):
             o = 0 if e < .12 else round(6 + e * 22)
-            if o != last: js.append(f'tl.set("#{p}-beak",{{y:{o}}},{v0 + k / 12:.3f});'); last = o
+            if o != last: js.append(f'tl.set("#{p}-beak",{{y:{o}}},{v0 + k / hz:.3f});'); last = o
         js.append(f'tl.set("#{p}-beak",{{y:0}},{v0 + s["dur"] + .02:.3f});')
         ups = [w for w in s["words"] if w[0].endswith("?")]
         if ups: js.append(f'tl.to("#{p}-browL,#{p}-browR",{{y:-12,duration:.18,yoyo:true,repeat:1,repeatDelay:.5}},{v0 + ups[0][1]:.2f});')
@@ -505,17 +562,37 @@ def plan_gate(film, total, ep):
     return res, ev
 
 
-def mix_audio(film, total, ep):
-    m = np.zeros(int(SR * (total + .5)), np.float32); env = np.full(len(m), 1.0, np.float32)
+def bed3d(total):
+    """The 3D lessons' own music (zoo3d/lesson.py: the plucked arpeggio C - G - Am - F with a bass note on every bar, 96 bpm)."""
+    import lesson as LS
+    assert LS.BPM == BPM, "the cartoon's tempo must be the 3D lessons' tempo"
+    return LS.music(total).astype(np.float32)
+
+
+def mix_parts(film, total, ep):
+    """The film's sound in two parts: the voice lines (spoken and sung), and the bed (music + sound effects)."""
+    n = int(SR * (total + .5)); voice = np.zeros(n, np.float32); env = np.full(n, 1.0, np.float32); talk = np.zeros(n, np.float32); song = np.zeros(n, np.float32)
     for s in film.shots:
         if s["audio"] is not None:
-            a0 = int(s["v0"] * SR); m[a0:a0 + len(s["audio"])] += s["audio"][:len(m) - a0] * 0.95; env[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 0.0 if s.get("sung") else 0.42
-    env = np.convolve(env, np.ones(3600) / 3600, mode="same")
-    mu = music(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 1.0, (len(mu) - np.arange(len(mu))) / SR / 2.0)); n = min(len(m), len(mu))
-    m[:n] += mu[:n] * env[:n] * fade[:n] * ep.get("music", 0.5)
+            a0 = int(s["v0"] * SR); voice[a0:a0 + len(s["audio"])] += s["audio"][:n - a0] * 0.95; env[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 0.0 if s.get("sung") else 0.42
+            (song if s.get("sung") else talk)[max(0, a0 - 2400):a0 + len(s["audio"]) + 2400] = 1.0
+    bed = np.zeros(n, np.float32)
+    if ep.get("beat"):      # the 3D lesson's bed and its way of lowering it (teach.py): 0.42 in the open, 0.12 under the voice, moving over a quarter second; silent under a song, which brings its own band
+        k = int(SR * 0.25); tk = np.convolve(talk, np.ones(k) / k, mode="same"); sg = np.convolve(song, np.ones(3600) / 3600, mode="same")
+        mu = bed3d(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 0.5, (len(mu) - np.arange(len(mu))) / SR / 1.5)); m = min(n, len(mu))
+        bed[:m] += mu[:m] * (0.42 - 0.3 * tk[:m]) * (1 - np.clip(sg[:m], 0, 1)) * fade[:m] * ep.get("music_gain", 1.0)
+    else:
+        env = np.convolve(env, np.ones(3600) / 3600, mode="same")
+        mu = music(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 1.0, (len(mu) - np.arange(len(mu))) / SR / 2.0)); m = min(n, len(mu))
+        bed[:m] += mu[:m] * env[:m] * fade[:m] * ep.get("music", 0.5)
     for t, name in film.snd:
-        x = sfx(name) * (0.5 if name in ("pop", "tick") else 0.7); a0 = int(max(0, t) * SR); m[a0:a0 + len(x)] += x[:len(m) - a0]
-    return np.clip(m, -1, 1)
+        x = sfx(name) * (0.5 if name in ("pop", "tick") else 0.7); a0 = int(max(0, t) * SR); bed[a0:a0 + len(x)] += x[:n - a0]
+    return voice, bed
+
+
+def mix_audio(film, total, ep):
+    voice, bed = mix_parts(film, total, ep)
+    return np.clip(voice + bed, -1, 1)
 
 
 def need_4k(path, portrait):
@@ -532,6 +609,7 @@ def main():
         for f in sys.argv[2:]: need_4k(f, "short" in os.path.basename(f))
         return
     mod = importlib.import_module("episodes." + sys.argv[1]); ep = mod.EP; short = arg("--short")
+    if os.environ.get("TOON_BEAT"): ep = dict(ep, beat=True)      # a trial of the 3D music-and-sync process on an older episode (its own file stays as it was rendered)
     shots = [dict(s) for s in mod.SHOTS]; portrait = short is not None; band = None; sid = ep["id"]
     if portrait:
         sp = mod.SHORTS[int(short)]; shots = [dict(s) for s in mod.SHOTS if s["part"] == sp["part"]] if "part" in sp else [dict(mod.SHOTS[k]) for k in sp["shots"]]
@@ -545,7 +623,12 @@ def main():
     film = Film(ep, mod.STAGES, shots, portrait); html = film.build_html(total, band)
     res, ev = plan_gate(film, total, ep); res["words_placed"] = f"{tot - miss}/{tot}"
     if miss: res["fails"].append(f"word sync: {miss} of {tot} words could not be placed from the audio")
-    json.dump({"id": sid, "total": total, "plan": res, "events": ev,
+    on = SYNC.get("onset") or [0]; g = BEAT / 2; cuts = [s["t0"] for s in shots[1:]]
+    res["sync"] = {"pauses_checked": len(SYNC.get("onset", [])), "onset_err_mean_ms": round(1000 * float(np.mean(on)), 1), "onset_err_max_ms": round(1000 * float(max(on)), 1),
+                   "suspect_words": SYNC.get("suspect", []), "cuts": len(cuts), "cuts_on_the_half_beat": sum(1 for c in cuts if abs(c / g - round(c / g)) * g < 0.021),
+                   "songs_entering_on_a_beat": f'{sum(1 for x in SYNC.get("sung_on_beat", []) if abs(x - round(x)) < 0.01)}/{sum(1 for s in shots if s.get("sung"))}', "process": "3D (beat)" if ep.get("beat") else "first cartoon process"}
+    if ep.get("beat") and SYNC.get("suspect"): res["fails"].append("check the pronunciation: " + "; ".join(SYNC["suspect"]))
+    json.dump({"id": sid, "total": total, "bpm": BPM, "beats": [round(k * BEAT, 4) for k in range(int(total / BEAT) + 1)] if ep.get("beat") else [], "plan": res, "events": ev,
                "shots": [{k: s.get(k) for k in ("place", "say", "t0", "t1", "v0", "dur", "words", "part", "q", "tag", "who", "beat", "sung")} for s in shots]}, open(os.path.join(out, sid + "_timing.json"), "w"), indent=1)
     print(json.dumps(res, indent=1))
     if "--plan" in sys.argv: sys.exit(1 if res["fails"] else 0)

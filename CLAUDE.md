@@ -28,6 +28,7 @@ Learned from the owner's corrections (Nov 14-15, 2026). One rule per topic; repl
 - Cartoon Shorts: every shot of a Short has its own 9:16 camera (`pcam`, and `pcam2` for wide views so the slow zoom never cuts a character); the title band is two lines of at most 15 and 10 letters; a lesson's parts are written 83-90 s long so part + hook is a Short of 85-95 s.
 - A walk-in is `move` (where the actor starts) + `("walk", at, who, dx, seconds)`; a `fromto` on x together with a walk of 0 leaves the actor at the start (seen in zc_ep02's stills, Nov 16).
 - In toon.py a group the engine moves carries only a translate; its size and its mirror go on a group inside it (GSAP measures x and y of a scaled SVG group from its bounding box: a tween to x = 300 stopped at 257).
+- An animal that sings, hums or calls gets its own sung shot after the line that names it: written notes in C (the show loop's key) with its own soft band, `sing={"hum": True, ...}` for a hum; never a sound effect on top of the narration (owner, Nov 16: the camels' two-note beep).
 - A cue on a word that is said twice needs its number ("w:Closed!:2"); punctuation does not tell the two apart.
 - A thumbnail's words are checked against the title by `thumb.py`; it refuses a word the title already has.
 - I cannot listen: voices, songs and music are checked by word alignment and loudness only. Say so every time and leave the judgement of how they sound to the owner.

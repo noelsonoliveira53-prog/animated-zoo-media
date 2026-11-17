@@ -558,6 +558,7 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   5. `python3 pace_check.py out/<id>/<id>.mp4 --max 8`, `python3 ../zoo3d/watermark.py check <file>` and `corner <file> <sheet.jpg>`;
      frames of the finished file at the end of every shot, looked at;
   6. `python3 thumb.py <id>` (refuses more than 3 words or a word of the title).
+- Hums and songs inside a cartoon (Nov 16, after the owner's note on the camel lesson): a shot with `sing={...}` is sung by sing.py and the show's loop is silent while it plays. `"hum": True` makes the voice hum "mmm" on the notes (sing.hum_word: the "m" of that Kokoro voice gives the colour, the notes give the pitch); `"level"` sets how loud (0.26-0.3 puts a hum at the narration's level, -21 dBFS); `"style": "lullaby"` is the soft music box; a word written `~` is played by the bells alone. Write the notes in C. Give the shot `who=""` so no mouth opens for a hum. `("sleep", at, who)` shuts a camel's eyes for the rest of the shot. Check by numbers (pitch of each note, level against the narration) and send the owner the sound: nobody here can listen.
 - Measured on the session's machine (2 cores): zc_ep01 (304.7 s) rendered in 37 min, za_ep01 (304.5 s) in 33 min, the Short (87.7 s) in 13 min.
   A changed ending can be rendered alone: `--from <keyframe time> --to <end>`, then join with the first part cut at that keyframe
   (`-video_track_timescale 12288` on the new part first, or the joined file's clock is wrong). Never run stills for an

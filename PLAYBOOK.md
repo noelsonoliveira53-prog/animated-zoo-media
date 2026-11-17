@@ -611,3 +611,6 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     animal away (zebra ep15, polar bear ep22 stills: still open), song 'side' shots.
   * zool_ep17: watermark corner sheet showed the giraffe's face under the mark at 5:10 -> job watermark_hide [[303.5, 308.0]]; the first finish with the hide window was
     killed for memory (ran next to bpy); finishing again alone. zool_ep18 finish and four Shorts (polar_paws, tiger_claws, lion_tuft, elephant_ears) queued after it.
+  * 11:25 AM: zool_ep17 and zool_ep18 finished and checked (see commit f17e182); four lesson Shorts cut and checked (polar_paws, tiger_claws, lion_tuft, elephant_ears).
+    The Shorts' song tracks on the PC are Opus inside .wav names (2.5 MB); lesson_shorts.py reads them fine. Waiting for upload room: 20 in the last 24 h until 2:33 PM.
+    To upload at 2:40 PM, soonest first: zs90_polar_paws (Nov 18 7:30 AM), zool_ep17 (Nov 19 5:30 PM), zool_ep18 (Nov 20 1:30 PM), zs90_tiger_claws, zs90_lion_tuft, zs90_elephant_ears.

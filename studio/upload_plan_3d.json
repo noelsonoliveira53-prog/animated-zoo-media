@@ -2044,15 +2044,13 @@
   "thumb": "brand/zoo/thumb_zc_ep01.jpg",
   "thumb_text": "NOT WATER?!",
   "made_for_kids": true,
-  "status": "hold_fix",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
-  "video_id": "xW4MrQA6ZH8",
-  "thumb_set": true,
-  "scheduled_on": "2026-11-16",
-  "note_fix": "Set to Private in Studio on Nov 16 after the owner said the parts where the animals sing have issues (7:19 PM). Not deleted. The humming is being rebuilt as real sung music; the fixed file goes up on the same slot as a new upload. Do not make this video public."
+  "note_fix": "Fixed file (the hums are sung music now), rendered Nov 16 evening; replaces the upload xW4MrQA6ZH8, which stays Private (not deleted). Same slot.",
+  "replaced_video_id": "xW4MrQA6ZH8"
  },
  {
   "file": "cartoon/zc_ep02.mp4",

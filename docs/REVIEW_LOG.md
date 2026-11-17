@@ -70,3 +70,6 @@
 | 2026-11-16 | cartoon/zc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-17 | zool_ep15.mp4 | 3d_lesson | PASS | - | word to check for distress/danger (KID-03): 'bite' | goodbye word at z 3.15 so BYE-BYE! stays in the picture (teach.py, from zool_ep19) |
 | 2026-11-17 | zool_ep16.mp4 | 3d_lesson | PASS | - | - | hello and goodbye words at z 3.15 (teach.py, from zool_ep20) |
+| 2026-11-17 | shorts3d/zs90_koala_notbear.mp4 | lesson_fact_short_90 | PASS | - | - | - |
+| 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | FAIL | episode is not recorded in the variety ledger | thumbnail text repeats the title's words ['panda']: the thumbnail should add a hook, not say the title again; word to check for distress/danger (KID-03): 'bite' | - |
+| 2026-11-17 | zoo3d_ep17.mp4 | 3d_singalong | PASS | - | word to check for distress/danger (KID-03): 'bite' | - |

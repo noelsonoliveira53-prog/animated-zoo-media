@@ -2029,10 +2029,13 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep16.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 333.6,
-  "watermark": "tl"
+  "watermark": "tl",
+  "video_id": "0NqRykGsKwY",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "zoo3d_ep18.mp4",

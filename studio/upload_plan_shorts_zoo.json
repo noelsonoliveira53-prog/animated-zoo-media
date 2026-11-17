@@ -422,7 +422,7 @@
    "animals for toddlers"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep08",
   "seconds": 89.16,
@@ -432,7 +432,10 @@
   "note": "format v3 approved by Noelson Nov 14 11:00 PM; re-cut with larger captions; from lesson zool_ep08 (publishes Nov 15)",
   "date": "2026-11-18",
   "time": "11:30 AM",
-  "watermark": "top"
+  "watermark": "top",
+  "video_id": "IV3TzHjRQMM",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs90_koala_notbear.mp4",
@@ -449,7 +452,7 @@
    "animals for toddlers"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep08",
   "seconds": 89.37,
@@ -459,7 +462,10 @@
   "note": "format v3 approved by Noelson Nov 14 11:00 PM; re-cut with larger captions; from lesson zool_ep08 (publishes Nov 15)",
   "date": "2026-11-19",
   "time": "11:30 AM",
-  "watermark": "top"
+  "watermark": "top",
+  "video_id": "jGkxqn4Dyvc",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs90_tiger_skin.mp4",

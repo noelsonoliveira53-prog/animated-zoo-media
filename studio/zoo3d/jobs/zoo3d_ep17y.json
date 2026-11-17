@@ -207,7 +207,7 @@
   "energy": 0.6,
   "wave": 1
  },
- "thumb_frame": 96,
+ "thumb_frame": 192,
  "direct": [
   {
    "section": "chorus1",
@@ -435,5 +435,6 @@
   "one animal per verse scene (show)",
   "outro gets 2 extra places ('after')",
   "new place every scene, 9 biomes"
- ]
+ ],
+ "thumb_align": 3
 }

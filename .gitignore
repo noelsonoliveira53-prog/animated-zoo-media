@@ -16,3 +16,6 @@ shorts3d/*.ass
 # multilingual packages: the big files are built, not stored (video is cartoon/<id>.mp4, audio is rebuilt by studio/multilang/build.py)
 packages/*/video/
 packages/*/audio/
+
+# listen.py scratch output
+studio/listen/out/

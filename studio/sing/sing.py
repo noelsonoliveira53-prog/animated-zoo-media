@@ -145,6 +145,11 @@ def hum_word(notes, beat, voice, formant=1.0, legato=0.95):
         g[a0:a1] = np.minimum(1, (0.0 if k == 0 else 0.3) + x / 0.09) * (0.86 + 0.14 * np.sin(np.pi * np.clip(x / d, 0, 1))) * np.minimum(1, 0.3 + (d - x) / 0.07)
     rel = min(len(y), int(0.22 * SR)); g[len(y) - rel:] *= np.linspace(1, 0, rel) ** 1.5
     y = y * g[:len(y)]
+    # every note equally loud: a low note sits under the voice's strong region and came out about 8 dB weaker than the others
+    # (listen.py on the camel lesson, Nov 16: Mama's G3 at -10 dB against C4 at -3 and E4 at -1)
+    lv = [float(np.sqrt(np.mean(y[int(edges[k] * 0.005 * SR):int(edges[k + 1] * 0.005 * SR)] ** 2)) + 1e-9) for k in range(len(notes))]; ref = float(np.median(lv)); eq = np.ones(len(y))
+    for k in range(len(notes)): eq[int(edges[k] * 0.005 * SR):int(edges[k + 1] * 0.005 * SR)] = min(2.8, max(0.36, ref / lv[k]))
+    eq = np.convolve(np.pad(eq, 480, mode="edge"), np.hanning(961) / np.hanning(961).sum(), mode="valid")[:len(y)]; y = y * eq
     return y / (np.abs(y).max() + 1e-9) * 0.5
 
 

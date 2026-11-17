@@ -2115,11 +2115,14 @@
   "thumb": "brand/zoo/thumb_za_ep02.jpg",
   "thumb_text": "SPLASH TIME!",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Finished Nov 17 (cloud run): 4K AV1 302.9 s, stills of every shot and frames of the finished file looked at, review PASS. Slot Nov 19 5:30 AM ET. Cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")."
+  "note": "Scheduled Nov 17 (cloud cartoon run): Studio row reads \"Scheduled Nov 19, 2026\", dialog said public on November 19, 2026 at 5:30 AM; made for kids, custom thumbnail. 4K AV1 302.9 s, stills of every shot and frames of the finished file looked at, review PASS. Cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\").",
+  "video_id": "GxNV3lIIkyA",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-17"
  },
  {
   "file": "zool_ep17.mp4",

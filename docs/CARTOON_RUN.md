@@ -17,9 +17,8 @@ Renders and encodes: ONE at a time, started as a tracked background command, nev
 6. Record: `studio/upload_plan_3d.json` (status, video_id), `docs/cartoon/status.json`, defects in `docs/IMPROVE.md`, a run note in `PLAYBOOK.md`; commit and push.
 If a step cannot be finished: leave the entry un-uploaded, write exactly what was and was not done, commit, stop. Never upload a file whose stills or frames were not looked at.
 
-## za_ep02 "Baby Elephant Tumble and the Big Muddy Puddle" (state: Nov 17, 12:25 AM)
-- `episodes/za_ep02.py`: first draft, 77 shots, `"beat": True`. Plan check PASSES (302.9 s: only 2.9 s over the minimum, so a cut line needs a new one; no gap over 4.4 s; 697/697 words placed; 76/76 cuts on the half-beat; 3/3 songs on a beat; no suspect word).
-- NOT done: no still of any shot has been looked at. Every position is a first guess. New art never seen in a picture: `art3.py` (mud hole place, camera, leaf, fan, wind, hot sun, heat, sweat, shade, splash, mud spot, photo frame, ear board) and the muddy elephants (`tumble_mud`, `elephant_mud` in `art2.py`; the clean elephants are drawn exactly as before, checked by hash).
-- Look closely at: the leaf hat on Tumble's head (`LEAF_ON`), the fan at Mango's hand, where the tree and its shade are in "bigtree", feet and `mud_front` in the mud hole, the mud layer fading in on "Splash!" (`NOMUD` + `.mud`), the photo board (frame over three actors), words on faces, the two question shots' signs.
-- Facts were read at San Diego Zoo on Nov 16 at 11:58 PM (quotes in the file's header). A line that is changed must stay inside those quotes.
-- Slot: Nov 19, 5:30 AM ET (adventure slot; reserved in `studio/upload_plan_3d.json` as "in_production"). No Short is cut from it yet (its 9:16 cameras are not written), so 9:16 stills do not apply to this run.
+## za_ep02 "Baby Elephant Tumble and the Big Muddy Puddle" (state: Nov 17, 3:05 PM ET)
+- DONE: stills of every shot looked at and fixed, rendered in 4K, every check of steps 3 and 4 passed, scheduled for Nov 19 5:30 AM ET (GxNV3lIIkyA). Run note in PLAYBOOK.md, defects in docs/IMPROVE.md.
+- Long renders on this machine: `tmux new-session -d -s render "python3 toon.py <id> > out/<id>/render.log 2>&1; echo EXIT \$? >> out/<id>/render.log"`, then read the log until EXIT 0 (a watched background command ends after 30 min; `--from/--to` fails with assertSwiftShader).
+- Answer signs: reveal at least 1 s before the shot ends (pause 3.2 with "wait:2.0"), and look at the reveal frames of the finished file.
+- Not built: a Short from it (its 9:16 cameras are not written), the closing "next adventure" picture.

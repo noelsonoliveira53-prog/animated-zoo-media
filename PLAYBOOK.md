@@ -138,6 +138,7 @@ Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosau
 (feathers!), Parasaurolophus, Diplodocus, Spinosaurus. Wild: firefly, grasshopper, caterpillar, dragonfly, worm.
 
 ## Upload limit (learned Nov 3, 2026)
+- Nov 16, 2026 (owner, 11:09 PM): only The Animated Zoo uploads now, so the whole allowance is its own: up to 20 uploads in any 24 hours, no lower cap per run or per session. Count the last 24 hours in the commit log before uploading (docs/DAILY_RUN.md, C). On Nov 16 a session held two finished Shorts back and wrote "at the daily cap" from an estimate; the commit log showed 16 uploads, 4 were free. The older caps below (15, 5, 6, 9 per run) are history.
 - Phone-unverified channels hit "Daily upload limit reached" — and the cap is **account-wide** across all Brand Accounts (~20 uploads in 24h hit it).
 - A blocked upload saves nothing (no draft). Window is rolling 24h from each upload.
 - Fix: phone-verify each channel at youtube.com/verify (also unlocks custom thumbnails). Until then, spread uploads ≤ ~20/day and upload the soonest slots first.

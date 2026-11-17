@@ -172,7 +172,11 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
 4. If nothing is available for tomorrow's 4:00 PM slot and the month's Vids allowance has 140 s or more, make one full Vids
    episode (RUNBOOK). Never more than one a day. If Vids shows a limit, terms or sign-in page: skip Vids and report it.
 
-## C. Posting (HARD CAP 9 uploads per run since Nov 15: the grid is 8 a day; stop on "Daily upload limit reached")
+## C. Posting (up to 20 uploads in any 24 hours, all for The Animated Zoo; no lower cap per run since Nov 16 11:09 PM; stop on "Daily upload limit reached")
+Owner, Nov 16: "daily cap should not be a thing since now we upload only the animated zoo ... should be 20 a day". Before uploading, COUNT the uploads of the last 24 hours
+(`git log --since="24 hours ago" --format="%ad %s" --date=format:%H:%M | grep -i scheduled`, every session's uploads are committed there) and use what is left of 20. Never write
+"at the cap" without that count. The 20 is our own observation of Nov 3 (the limit was hit at about 20 in 24 hours, when the channels were not phone-verified); YouTube Help gives no
+number ("Limits may vary by country/region or channel history"), and the channel has Advanced features since then, so the real limit may be higher: it is only known when the message appears.
 1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
    at 3:30 PM ET (full Vids episodes 12:00 PM); the LESSONS = every "to_upload" 3d_lesson entry with lesson_version 3, each at
    the date and time in its plan entry (rule 5 THE DAILY GRID: 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM). Schedule each for its own

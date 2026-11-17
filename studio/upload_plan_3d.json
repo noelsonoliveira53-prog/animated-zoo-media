@@ -2262,10 +2262,13 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep20.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_singalong",
   "duration": 138.5,
   "watermark": "tl",
-  "note": " Nov 17: the song ends at 135.6 s; the last 21.5 s of near-silence cut off (video stream copy, audio faded 136.8-138.5 s)."
+  "note": " Nov 17: the song ends at 135.6 s; the last 21.5 s of near-silence cut off (video stream copy, audio faded 136.8-138.5 s).",
+  "video_id": "FUveI9NKAC4",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  }
 ]

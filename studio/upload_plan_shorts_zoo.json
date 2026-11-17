@@ -760,7 +760,7 @@
    "preschool learning"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep16",
   "seconds": 87.25,
@@ -770,7 +770,10 @@
   "watermark": "top",
   "note": "interactive-lesson prototype: do not upload until Noelson approves the new format Nov 17: cut from the lesson raw, frames + thumbnail looked at, review PASS; lesson Short format approved Nov 14.",
   "date": "2026-11-20",
-  "time": "7:30 PM"
+  "time": "7:30 PM",
+  "video_id": "xyTtEONlhKg",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs90_lion_tuft.mp4",
@@ -787,7 +790,7 @@
    "preschool learning"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep17",
   "seconds": 86.46,
@@ -797,7 +800,10 @@
   "watermark": "top",
   "note": "interactive-lesson prototype: do not upload until Noelson approves the new format Nov 17: cut from the lesson raw, frames + thumbnail looked at, review PASS; lesson Short format approved Nov 14.",
   "date": "2026-11-21",
-  "time": "11:30 AM"
+  "time": "11:30 AM",
+  "video_id": "J32cKF1dCnY",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  },
  {
   "file": "shorts3d/zs90_elephant_ears.mp4",
@@ -814,7 +820,7 @@
    "preschool learning"
   ],
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "lesson_fact_short_90",
   "from": "zool_ep18",
   "seconds": 86.27,
@@ -824,6 +830,9 @@
   "watermark": "top",
   "note": "interactive-lesson prototype: do not upload until Noelson approves the new format Nov 17: cut from the lesson raw, frames + thumbnail looked at, review PASS; lesson Short format approved Nov 14.",
   "date": "2026-11-21",
-  "time": "7:30 PM"
+  "time": "7:30 PM",
+  "video_id": "s1F3xrNm2iY",
+  "scheduled_on": "2026-11-17",
+  "thumb_set": true
  }
 ]

@@ -621,3 +621,10 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * AV1 4K 68 MB (17 min), thumbnail SPLASH TIME! (muddy Tumble, splash moved off his trunk), review PASS, contact sheet looked at. Upload with the helpers typed into the page (Studio's Trusted Types refuse eval of the fetched studio-upload2.js: paste its functions as code). Made for kids, custom thumbnail, date typed, time typed, button read Schedule; Studio: "will be set to public on November 19, 2026 at 5:30 AM".
   * Uploads in the commit log for the 24 h before this one: 16; this is the 17th. The six items the morning run listed for 2:40 PM (zs90_polar_paws, zool_ep17, zool_ep18, three Shorts) had no upload commit when this run pushed.
   * This machine: a part render (--from/--to) fails (assertSwiftShader), and a watched background command ends after 30 min, so the whole film was rendered inside tmux (docs/IMPROVE.md). Not built: a Short from za_ep02 (no 9:16 cameras), the closing 'next adventure' picture.
+  * Afternoon uploads (all custom thumbnails, confirmation dialog read): zs90_polar_paws btWYy6HeuS4 Nov 18 7:30 AM; 27dOgZh10N4 set Private (Details page
+    read "Visibility Private", "Changes saved") and the cut zoo3d_ep17 uploaded on its slot as 6eAr9x5Krfc Nov 19 3:30 PM; zool_ep17 jkZ4ChFok3s Nov 19 5:30 PM;
+    zool_ep18 wyrIjHDaGRc Nov 20 1:30 PM; zoo3d_ep20 FUveI9NKAC4 Nov 20 3:30 PM; zs90_tiger_claws xyTtEONlhKg Nov 20 7:30 PM; zs90_lion_tuft J32cKF1dCnY Nov 21 11:30 AM;
+    zs90_elephant_ears s1F3xrNm2iY Nov 21 7:30 PM. Another session scheduled za_ep02 GxNV3lIIkyA (Nov 19 5:30 AM) at 2:46 PM. Count of the last 24 h at 5:05 PM: 20.
+  * Commit times: this session's commits are in UTC, the cartoon session's in ET; git log --since compares absolute times, so the count is right, only the printed hours differ.
+  * PC at 5:05 PM: zool_ep19 and zool_ep20 DONE (raws in out\), zool_ep21 rendering, zool_ep22 queued. None of them finished or checked here yet: next run.
+  * Open slots after this run: Nov 20 5:30 AM / 9:30 AM / 5:30 PM lessons (zool_ep19/20 for them), Nov 21 lessons and song, Nov 22+.

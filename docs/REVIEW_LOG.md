@@ -68,3 +68,4 @@
 | 2026-11-16 | cartoon/zc_ep01.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
 | 2026-11-16 | cartoon/zc_ep01.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
 | 2026-11-16 | cartoon/zc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-17 | zool_ep15.mp4 | 3d_lesson | PASS | - | word to check for distress/danger (KID-03): 'bite' | goodbye word at z 3.15 so BYE-BYE! stays in the picture (teach.py, from zool_ep19) |

@@ -169,7 +169,7 @@ def build(spec):
                 if at[0] + w_ / 2 + 0.24 > 3.7 or at[0] - w_ / 2 < -4.0: PROBLEMS.append(f"sign '{tx}' in {seg['name']} reaches x={at[0] + w_ / 2 + 0.24:.2f}: outside the Shorts-safe area (3.7)")
 
         if seg.get("word"):
-            pr = {"type": "text", "text": seg["word"], "color": LS.COLORS[i % len(LS.COLORS)], "at": list(POS["top"]) if kind == "teach" else "top",
+            pr = {"type": "text", "text": seg["word"], "color": LS.COLORS[i % len(LS.COLORS)], "at": list(POS["top"]) if kind == "teach" else ([0.0, 0.5, 3.15] if kind in ("outro", "intro") else "top"),   # Nov 17: BYE-BYE! at z 3.6 was cut by the frame top in zool_ep15's goodbye wide shot
                   "size": seg.get("word_size", 0.62 if kind == "teach" else 0.7), "delay": 1.0}
             if seg.get("word_on"): pr["delay"] = ref(seg, seg["word_on"], s0)
             if seg.get("word_off"): pr["dur"] = max(1.0, ref(seg, seg["word_off"], s0) - pr["delay"])

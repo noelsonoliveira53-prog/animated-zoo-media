@@ -1,5 +1,14 @@
 # Views check log (newest first)
 
+## 2026-11-17, 7:30 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
+Totals: **34,661 views (+1,895 since Nov 16 8:40 AM)**, 393,680 impressions (+22,189), 2.1% CTR, 0:25 average view, 24.3% viewed, 263 likes.
+Since Nov 16: Lion song-cut Short 442 -> 592 (+150, 134.3% viewed) · Ants 1,497 -> 1,637 (+140) · Octopus 4,152 -> 4,280 (+128) · Snail 1,082 -> 1,197 (+115) ·
+Camel 4,913 -> 4,996 (+83) · Where Is My Mama? 3,882 -> 3,904 (+22). T. Rex Tiny Arms reads 1,801 (1,017 in the Nov 15 Content list).
+Content list (views, not in the lifetime table yet): v3 lessons Who Am I? 9 (2 days), Animal Champions 5, Stripes or Spots 3, Yes or No 4 (Nov 16); songs Where Do Animals Live 12 (Nov 15), How Do Animals Sleep 4 (Nov 16).
+NOT read: impressions, CTR and retention of the Nov 15-16 lessons and songs (not in the table yet).
+What's winning: unchanged: old fact-surprise Shorts and the one song-cut Short with a question title ("What Does the Lion Say?") bring nearly all growth; new long videos get 3-12 views in their first 1-2 days, lessons and songs alike.
+Adjustment: none to the grid; the lesson Shorts (question titles) keep all three Shorts slots, and the first cartoon lesson/Shorts (public from Nov 18) are the next comparison.
+
 ## 2026-11-16, 8:40 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
 Totals: **32,766 views**, 371,491 impressions, 2.2% CTR, 0:25 average view, 23.8% viewed, 254 likes. Per-video list: Command Center analytics/animated-zoo-2026-11-16.
 Since the Nov 15 read: Ants 1,311 -> 1,497 (+186) · Octopus 3,997 -> 4,152 (+155) · Lion song-cut Short 323 -> 442 (+119, 119.7% viewed) · Snail 973 -> 1,082 (+109) ·

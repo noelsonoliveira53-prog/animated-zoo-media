@@ -1312,5 +1312,69 @@
    "panda"
   ],
   "new_song": true
+ },
+ {
+  "id": "zoo3d_ep20y",
+  "places": [
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "river",
+    "morning"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "beach",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "golden"
+   ],
+   [
+    "river",
+    "morning"
+   ],
+   [
+    "river",
+    "morning"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "hippo",
+   "rhino",
+   "zebra"
+  ],
+  "new_song": true
  }
 ]

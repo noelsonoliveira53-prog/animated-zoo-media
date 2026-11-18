@@ -76,12 +76,12 @@ def prop(name, fn, x, y, s=1.0, hidden=False): return (name, fn, x, y, s, "hidde
 # Nov 17 2026 (owner: Milo's sung voice "sounds robotic"): nobody sings. The tune is played by the bells and the soft band; the rhyme is SAID by Milo and shown on screen.
 REFRAIN = {"bpm": 108, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}
 SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
+                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "A4:1 A4:1 G4:1 F4:.5 F4:.5 E4:1 C4:2", "rest": 1}])
 SING_HOME = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                                 {"text": "~ ~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:.5 E4:.5 C4:2", "rest": 1}])
+                                 {"text": "~ ~ ~ ~ ~ ~ ~ ~", "notes": "A4:1 A4:1 G4:1 F4:.5 F4:.5 E4:.5 E4:.5 C4:2", "rest": 1}])
 # the ending song line, in two shots (one long wide shot was 8.8 s without a visual change in the finished file: over the 8 s gate)
 SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
-SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5 E4:.5,D4:.5,E4:.5 C4:2.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "A4:1 A4:.5 A4:.5 G4:.5,F4:.5,D4:.5 C4:2.5", "rest": 2}])
 TB = lambda b: round(0.12 + b * 60 / 108, 2)      # seconds into a tune shot of beat b of its tune
 
 # stages used for one or two shots

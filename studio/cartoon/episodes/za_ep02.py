@@ -60,9 +60,9 @@ LEAF_ON = (908, 571)      # where the leaf hat lies on Tumble's head in the jung
 # Nov 17 2026 (owner: Milo's sung voice "sounds robotic"): nobody sings. The tune is played by the bells and the soft band; the rhyme is SAID by Milo and shown on screen.
 REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
 SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
+                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "A4:1 A4:1 G4:1 F4:.5 F4:.5 E4:1 C4:2", "rest": 1}])
 SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
-SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "A4:1 A4:.5 A4:.5,G4:.5 F4:.5,D4:.5 C4:2.5", "rest": 2}])
 TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
 
 SHOTS = [

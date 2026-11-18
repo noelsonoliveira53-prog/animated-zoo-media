@@ -245,6 +245,7 @@ def backing(total_s, bpm, chords, style, melody_events, seed=1):
         n = int(d * 0.9 * SR)
         tt = np.arange(n) / SR
         x = (np.sin(2 * np.pi * f * 2 * tt) + 0.3 * np.sin(2 * np.pi * f * 4 * tt)) * np.exp(-tt * 3.5) * 0.07 * lead
+        nr = min(n, int(0.045 * SR)); x[-nr:] *= 0.5 * (1 + np.cos(np.linspace(0, np.pi, nr)))      # the bell is let go, not cut: a short note stopped at a third of its level was a click (listen.py, Nov 17: za_ep01 51.45 s, za_ep02 42.16 s)
         add(B, x, at)
     return B
 

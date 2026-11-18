@@ -100,10 +100,11 @@ def sung(ep, s):
     if sp.get("hum"): spec["parts"][0]["hum"] = True; spec["parts"][0]["formant"] = spec["formant"]      # a hum: "mmm" on the notes in that voice (sing.hum_word), no words
     for k in ("band", "level"):
         if k in sp: spec[k] = sp[k]
+    spec["build"] = 2      # part of the cache name: 2 = bells with a release (Nov 17); raise it when sing.py's sound changes, or the old sound comes back from the cache
     h = hashlib.md5(json.dumps(spec, sort_keys=True).encode()).hexdigest()[:12]; d = os.path.join(sing.CACHE, "refrain_" + h)
     if not os.path.exists(os.path.join(d, "timing.json")): sing.build(spec, d)
     tm = json.load(open(os.path.join(d, "timing.json"))); mix, _ = sf.read(os.path.join(d, "song.wav")); voc, _ = sf.read(os.path.join(d, "vocal.wav"))
-    if sp.get("hum"): n = int(SR * .25); mix[-n:] *= np.linspace(1, 0, n) ** 1.5      # the music box rings out instead of being cut at the bar line
+    n = int(SR * .25); mix[-n:] *= np.linspace(1, 0, n) ** 1.5      # the music box rings out instead of being cut at the bar line (every tune, not only the old hums)
     return mix.astype(np.float32), voc.astype(np.float32), [(w["w"], round(w["start"], 3), round(w["end"], 3)) for w in tm["words"]]
 
 

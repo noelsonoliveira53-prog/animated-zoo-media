@@ -1,0 +1,2070 @@
+{
+ "id": "zc_ep06_short3",
+ "total": 86.61745833333337,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25
+ ],
+ "plan": {
+  "length": 86.6,
+  "shots": 23,
+  "visual_changes": 106,
+  "mean_gap": 0.82,
+  "longest_gap": 4.03,
+  "longest_gap_at": 2.6,
+  "over_6s": [],
+  "places": [
+   "figtree",
+   "bigtree",
+   "canopy",
+   "blossom",
+   "jungle",
+   "canopy_eve"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 28.8,
+  "first_words_at": 0.42,
+  "shot_mean": 3.77,
+  "fails": [],
+  "words_placed": "197/197",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 47.9,
+   "onset_err_max_ms": 240.0,
+   "suspect_words": [],
+   "cuts": 22,
+   "cuts_on_the_half_beat": 22,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the picture board hook: where do seeds go"
+  ],
+  [
+   0.78,
+   "action",
+   "the seeds light up"
+  ],
+  [
+   1.8,
+   "word",
+   "?"
+  ],
+  [
+   2.5,
+   "new place",
+   "the fruit tree afternoon"
+  ],
+  [
+   2.6,
+   "action",
+   "f4 walks"
+  ],
+  [
+   2.6,
+   "action",
+   "f5 walks"
+  ],
+  [
+   2.6,
+   "action",
+   "mango walks"
+  ],
+  [
+   6.63,
+   "word",
+   "MORE FRUIT!"
+  ],
+  [
+   7.81,
+   "new place",
+   "the tallest tree high up"
+  ],
+  [
+   10.44,
+   "picture",
+   "ar"
+  ],
+  [
+   10.44,
+   "word",
+   "UP HIGH"
+  ],
+  [
+   11.18,
+   "action",
+   "mango hops"
+  ],
+  [
+   12.5,
+   "new place",
+   "the fruit tree looking for food"
+  ],
+  [
+   12.6,
+   "action",
+   "mango walks"
+  ],
+  [
+   13.73,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   13.73,
+   "word",
+   "LOOK!"
+  ],
+  [
+   15.0,
+   "new shot",
+   "the fruit tree stretch"
+  ],
+  [
+   17.48,
+   "action",
+   "Milo stretches up"
+  ],
+  [
+   17.48,
+   "word",
+   "STRETCH!"
+  ],
+  [
+   18.44,
+   "new shot",
+   "the fruit tree dinner"
+  ],
+  [
+   18.72,
+   "word",
+   "DINNER!"
+  ],
+  [
+   19.93,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   20.3,
+   "action",
+   "Mango lifts her arm"
+  ],
+  [
+   22.5,
+   "new shot",
+   "the fruit tree gulp"
+  ],
+  [
+   22.73,
+   "action",
+   "Mango puts it in her mouth"
+  ],
+  [
+   22.73,
+   "word",
+   "GULP!"
+  ],
+  [
+   23.33,
+   "action",
+   "Mango munches"
+  ],
+  [
+   23.33,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   25.0,
+   "new place",
+   "the picture board board: seeds inside"
+  ],
+  [
+   25.63,
+   "action",
+   "the seeds light up"
+  ],
+  [
+   25.63,
+   "word",
+   "SEEDS"
+  ],
+  [
+   27.5,
+   "new place",
+   "the fruit tree your seeds"
+  ],
+  [
+   28.53,
+   "action",
+   "milo hops"
+  ],
+  [
+   28.53,
+   "word",
+   "SEEDS?"
+  ],
+  [
+   31.25,
+   "new shot",
+   "the fruit tree off she goes"
+  ],
+  [
+   31.35,
+   "action",
+   "mango walks"
+  ],
+  [
+   32.8,
+   "word",
+   "FAR AWAY!"
+  ],
+  [
+   34.38,
+   "new place",
+   "the treetops tree to tree"
+  ],
+  [
+   34.48,
+   "action",
+   "mango walks"
+  ],
+  [
+   35.39,
+   "word",
+   "TO TREE!"
+  ],
+  [
+   37.5,
+   "new place",
+   "the flower tree question 3"
+  ],
+  [
+   39.66,
+   "sign",
+   "NEAR"
+  ],
+  [
+   40.01,
+   "sign",
+   "FAR"
+  ],
+  [
+   42.21,
+   "thinking dot",
+   "1"
+  ],
+  [
+   42.88,
+   "thinking dot",
+   "2"
+  ],
+  [
+   43.56,
+   "thinking dot",
+   "3"
+  ],
+  [
+   44.04,
+   "answer",
+   "FAR"
+  ],
+  [
+   44.09,
+   "action",
+   "mango hops"
+  ],
+  [
+   45.31,
+   "new place",
+   "the green jungle plop"
+  ],
+  [
+   45.47,
+   "word",
+   "FAR!"
+  ],
+  [
+   48.9,
+   "action",
+   "a seed lands"
+  ],
+  [
+   48.9,
+   "action",
+   "a seed lands"
+  ],
+  [
+   48.9,
+   "action",
+   "a seed lands"
+  ],
+  [
+   48.9,
+   "word",
+   "PLOP!"
+  ],
+  [
+   50.62,
+   "new place",
+   "the picture board (pink) board: spread"
+  ],
+  [
+   51.93,
+   "picture",
+   "a0"
+  ],
+  [
+   51.93,
+   "picture",
+   "s0"
+  ],
+  [
+   51.93,
+   "word",
+   "SPREAD!"
+  ],
+  [
+   53.09,
+   "picture",
+   "a1"
+  ],
+  [
+   53.09,
+   "picture",
+   "s1"
+  ],
+  [
+   53.71,
+   "picture",
+   "a2"
+  ],
+  [
+   53.71,
+   "picture",
+   "s2"
+  ],
+  [
+   55.0,
+   "new shot",
+   "the picture board (pink) board: everywhere"
+  ],
+  [
+   55.65,
+   "action",
+   "a seed hops"
+  ],
+  [
+   56.67,
+   "action",
+   "a seed hops"
+  ],
+  [
+   57.29,
+   "picture",
+   "s3"
+  ],
+  [
+   57.29,
+   "picture",
+   "s4"
+  ],
+  [
+   57.29,
+   "picture",
+   "s5"
+  ],
+  [
+   57.77,
+   "picture",
+   "s6"
+  ],
+  [
+   57.77,
+   "picture",
+   "s7"
+  ],
+  [
+   57.77,
+   "picture",
+   "s8"
+  ],
+  [
+   57.77,
+   "word",
+   "EVERYWHERE!"
+  ],
+  [
+   58.75,
+   "new place",
+   "the green jungle a baby tree"
+  ],
+  [
+   61.63,
+   "picture",
+   "sp"
+  ],
+  [
+   61.98,
+   "word",
+   "A BABY TREE!"
+  ],
+  [
+   63.44,
+   "new shot",
+   "the green jungle the forest grows"
+  ],
+  [
+   64.13,
+   "picture",
+   "p0"
+  ],
+  [
+   64.13,
+   "word",
+   "THANK YOU, MANGO!"
+  ],
+  [
+   64.65,
+   "picture",
+   "p2"
+  ],
+  [
+   65.43,
+   "picture",
+   "h"
+  ],
+  [
+   66.25,
+   "new shot",
+   "the green jungle grow"
+  ],
+  [
+   68.68,
+   "action",
+   "Milo grows tall"
+  ],
+  [
+   68.68,
+   "word",
+   "UP, UP, UP!"
+  ],
+  [
+   69.69,
+   "new place",
+   "the treetops at sunset sunset"
+  ],
+  [
+   69.79,
+   "action",
+   "f1 walks"
+  ],
+  [
+   69.79,
+   "action",
+   "f2 walks"
+  ],
+  [
+   69.79,
+   "action",
+   "f3 walks"
+  ],
+  [
+   69.79,
+   "action",
+   "f4 walks"
+  ],
+  [
+   69.79,
+   "action",
+   "f5 walks"
+  ],
+  [
+   69.79,
+   "action",
+   "mango walks"
+  ],
+  [
+   70.07,
+   "word",
+   "SUNSET"
+  ],
+  [
+   73.44,
+   "new shot",
+   "the treetops at sunset together"
+  ],
+  [
+   75.19,
+   "picture",
+   "h1"
+  ],
+  [
+   75.19,
+   "word",
+   "TOGETHER"
+  ],
+  [
+   75.68,
+   "picture",
+   "h2"
+  ],
+  [
+   76.56,
+   "new shot",
+   "the treetops at sunset full"
+  ],
+  [
+   76.61,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   77.87,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   77.87,
+   "word",
+   "FULL!"
+  ],
+  [
+   80.0,
+   "new shot",
+   "the treetops at sunset busy day"
+  ],
+  [
+   80.05,
+   "action",
+   "mango looks sleepy"
+  ],
+  [
+   80.32,
+   "word",
+   "BUSY DAY!"
+  ],
+  [
+   81.63,
+   "action",
+   "mango hops"
+  ],
+  [
+   82.5,
+   "new shot",
+   "the treetops at sunset wow"
+  ],
+  [
+   85.31,
+   "action",
+   "milo hops"
+  ],
+  [
+   85.31,
+   "word",
+   "WOW!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "paper",
+   "say": "Where do the seeds in a fruit go?",
+   "t0": 0.0,
+   "t1": 2.5,
+   "v0": 0.42,
+   "dur": 1.8759166666666667,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.14
+    ],
+    [
+     "do",
+     0.14,
+     0.28
+    ],
+    [
+     "the",
+     0.28,
+     0.36
+    ],
+    [
+     "seeds",
+     0.36,
+     0.89
+    ],
+    [
+     "in",
+     0.89,
+     0.97
+    ],
+    [
+     "a",
+     0.97,
+     1.01
+    ],
+    [
+     "fruit",
+     1.01,
+     1.38
+    ],
+    [
+     "go?",
+     1.38,
+     1.876
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: where do seeds go",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "In the afternoon, Mango's little group finds one more fruit tree.",
+   "t0": 2.5,
+   "t1": 7.8125,
+   "v0": 2.835916666666667,
+   "dur": 4.625041666666666,
+   "words": [
+    [
+     "In",
+     0.01,
+     0.15
+    ],
+    [
+     "the",
+     0.15,
+     0.27
+    ],
+    [
+     "afternoon,",
+     0.27,
+     1.17
+    ],
+    [
+     "Mango's",
+     1.56,
+     2.13
+    ],
+    [
+     "little",
+     2.13,
+     2.34
+    ],
+    [
+     "group",
+     2.34,
+     2.78
+    ],
+    [
+     "finds",
+     2.78,
+     3.28
+    ],
+    [
+     "one",
+     3.28,
+     3.55
+    ],
+    [
+     "more",
+     3.55,
+     3.79
+    ],
+    [
+     "fruit",
+     3.79,
+     4.14
+    ],
+    [
+     "tree.",
+     4.14,
+     4.62
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "afternoon",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Spider monkeys spend most of the day high up in the treetops.",
+   "t0": 7.8125,
+   "t1": 12.5,
+   "v0": 8.000958333333333,
+   "dur": 4.007125,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.53
+    ],
+    [
+     "monkeys",
+     0.53,
+     1.27
+    ],
+    [
+     "spend",
+     1.43,
+     1.74
+    ],
+    [
+     "most",
+     1.74,
+     2.05
+    ],
+    [
+     "of",
+     2.05,
+     2.11
+    ],
+    [
+     "the",
+     2.11,
+     2.19
+    ],
+    [
+     "day",
+     2.19,
+     2.44
+    ],
+    [
+     "high",
+     2.44,
+     2.84
+    ],
+    [
+     "up",
+     2.84,
+     3.01
+    ],
+    [
+     "in",
+     3.01,
+     3.11
+    ],
+    [
+     "the",
+     3.11,
+     3.18
+    ],
+    [
+     "treetops.",
+     3.18,
+     4.007
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "high up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "They climb, and they look for food.",
+   "t0": 12.5,
+   "t1": 15.0,
+   "v0": 12.548083333333333,
+   "dur": 2.11025,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.19
+    ],
+    [
+     "climb,",
+     0.19,
+     0.93
+    ],
+    [
+     "and",
+     0.93,
+     1.07
+    ],
+    [
+     "they",
+     1.07,
+     1.18
+    ],
+    [
+     "look",
+     1.18,
+     1.38
+    ],
+    [
+     "for",
+     1.38,
+     1.52
+    ],
+    [
+     "food.",
+     1.52,
+     2.11
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "looking for food",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Can you reach up high, like Mango? Stretch!",
+   "t0": 15.0,
+   "t1": 18.4375,
+   "v0": 15.198333333333332,
+   "dur": 2.97225,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.38
+    ],
+    [
+     "reach",
+     0.38,
+     0.64
+    ],
+    [
+     "up",
+     0.64,
+     0.78
+    ],
+    [
+     "high,",
+     0.78,
+     1.15
+    ],
+    [
+     "like",
+     1.15,
+     1.33
+    ],
+    [
+     "Mango?",
+     1.33,
+     1.92
+    ],
+    [
+     "Stretch!",
+     2.28,
+     2.97
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "stretch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Dinner time! Mango picks one more golden fruit.",
+   "t0": 18.4375,
+   "t1": 22.5,
+   "v0": 18.710583333333336,
+   "dur": 3.449375,
+   "words": [
+    [
+     "Dinner",
+     0.01,
+     0.32
+    ],
+    [
+     "time!",
+     0.32,
+     0.86
+    ],
+    [
+     "Mango",
+     1.22,
+     1.59
+    ],
+    [
+     "picks",
+     1.59,
+     1.92
+    ],
+    [
+     "one",
+     1.92,
+     2.18
+    ],
+    [
+     "more",
+     2.18,
+     2.4
+    ],
+    [
+     "golden",
+     2.4,
+     2.88
+    ],
+    [
+     "fruit.",
+     2.88,
+     3.449
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "dinner",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Gulp! She swallows the fruit,",
+   "t0": 22.5,
+   "t1": 25.0,
+   "v0": 22.69995833333334,
+   "dur": 1.9910833333333333,
+   "words": [
+    [
+     "Gulp!",
+     0.03,
+     0.63
+    ],
+    [
+     "She",
+     0.63,
+     0.8
+    ],
+    [
+     "swallows",
+     0.8,
+     1.34
+    ],
+    [
+     "the",
+     1.34,
+     1.42
+    ],
+    [
+     "fruit,",
+     1.42,
+     1.99
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "gulp",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "and the little seeds inside it, too.",
+   "t0": 25.0,
+   "t1": 27.5,
+   "v0": 25.231041666666673,
+   "dur": 2.038375,
+   "words": [
+    [
+     "and",
+     0.01,
+     0.11
+    ],
+    [
+     "the",
+     0.11,
+     0.17
+    ],
+    [
+     "little",
+     0.17,
+     0.4
+    ],
+    [
+     "seeds",
+     0.4,
+     0.85
+    ],
+    [
+     "inside",
+     0.85,
+     1.38
+    ],
+    [
+     "it,",
+     1.38,
+     1.53
+    ],
+    [
+     "too.",
+     1.53,
+     2.038
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: seeds inside",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Have you seen the seeds inside a fruit?",
+   "t0": 27.5,
+   "t1": 31.25,
+   "v0": 27.809416666666674,
+   "dur": 2.322583333333333,
+   "words": [
+    [
+     "Have",
+     0.01,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.34
+    ],
+    [
+     "seen",
+     0.34,
+     0.65
+    ],
+    [
+     "the",
+     0.65,
+     0.72
+    ],
+    [
+     "seeds",
+     0.72,
+     1.31
+    ],
+    [
+     "inside",
+     1.31,
+     1.72
+    ],
+    [
+     "a",
+     1.72,
+     1.76
+    ],
+    [
+     "fruit?",
+     1.76,
+     2.32
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "your seeds",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Then off she goes. Far, far away!",
+   "t0": 31.25,
+   "t1": 34.375,
+   "v0": 31.472000000000012,
+   "dur": 2.6424166666666666,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.19
+    ],
+    [
+     "off",
+     0.19,
+     0.38
+    ],
+    [
+     "she",
+     0.38,
+     0.56
+    ],
+    [
+     "goes.",
+     0.56,
+     1.12
+    ],
+    [
+     "Far,",
+     1.33,
+     1.75
+    ],
+    [
+     "far",
+     1.75,
+     2.13
+    ],
+    [
+     "away!",
+     2.13,
+     2.64
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "off she goes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "She walks from tree, to tree, to tree.",
+   "t0": 34.375,
+   "t1": 37.5,
+   "v0": 34.65441666666668,
+   "dur": 2.610875,
+   "words": [
+    [
+     "She",
+     0.03,
+     0.2
+    ],
+    [
+     "walks",
+     0.2,
+     0.55
+    ],
+    [
+     "from",
+     0.55,
+     0.74
+    ],
+    [
+     "tree,",
+     0.74,
+     1.26
+    ],
+    [
+     "to",
+     1.42,
+     1.55
+    ],
+    [
+     "tree,",
+     1.55,
+     1.92
+    ],
+    [
+     "to",
+     1.92,
+     2.05
+    ],
+    [
+     "tree.",
+     2.05,
+     2.61
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "tree to tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Where will the seeds land? Near the fruit tree, or far away?",
+   "t0": 37.5,
+   "t1": 45.3125,
+   "v0": 37.805291666666676,
+   "dur": 3.917291666666667,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.27
+    ],
+    [
+     "will",
+     0.27,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.51
+    ],
+    [
+     "seeds",
+     0.51,
+     0.96
+    ],
+    [
+     "land?",
+     0.96,
+     1.47
+    ],
+    [
+     "Near",
+     1.85,
+     2.06
+    ],
+    [
+     "the",
+     2.06,
+     2.15
+    ],
+    [
+     "fruit",
+     2.15,
+     2.42
+    ],
+    [
+     "tree,",
+     2.42,
+     2.96
+    ],
+    [
+     "or",
+     2.96,
+     3.06
+    ],
+    [
+     "far",
+     3.06,
+     3.44
+    ],
+    [
+     "away?",
+     3.44,
+     3.917
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Far away! Later, the seeds drop to the ground. Plop, plop, plop!",
+   "t0": 45.3125,
+   "t1": 50.625,
+   "v0": 45.46258333333334,
+   "dur": 4.945875,
+   "words": [
+    [
+     "Far",
+     0.01,
+     0.39
+    ],
+    [
+     "away!",
+     0.39,
+     0.85
+    ],
+    [
+     "Later,",
+     0.85,
+     1.34
+    ],
+    [
+     "the",
+     1.34,
+     1.45
+    ],
+    [
+     "seeds",
+     1.45,
+     1.95
+    ],
+    [
+     "drop",
+     1.95,
+     2.24
+    ],
+    [
+     "to",
+     2.24,
+     2.36
+    ],
+    [
+     "the",
+     2.36,
+     2.44
+    ],
+    [
+     "ground.",
+     2.44,
+     2.94
+    ],
+    [
+     "Plop,",
+     3.44,
+     3.91
+    ],
+    [
+     "plop,",
+     3.91,
+     4.4
+    ],
+    [
+     "plop!",
+     4.4,
+     4.946
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "plop",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Spider monkeys spread seeds all around the rainforest.",
+   "t0": 50.625,
+   "t1": 55.0,
+   "v0": 50.94845833333334,
+   "dur": 3.685875,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.47
+    ],
+    [
+     "monkeys",
+     0.47,
+     0.98
+    ],
+    [
+     "spread",
+     0.98,
+     1.4
+    ],
+    [
+     "seeds",
+     1.4,
+     2.0
+    ],
+    [
+     "all",
+     2.14,
+     2.44
+    ],
+    [
+     "around",
+     2.44,
+     2.69
+    ],
+    [
+     "the",
+     2.69,
+     2.76
+    ],
+    [
+     "rainforest.",
+     2.76,
+     3.686
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: spread",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "A seed here. A seed there. Seeds everywhere!",
+   "t0": 55.0,
+   "t1": 58.75,
+   "v0": 55.174333333333344,
+   "dur": 3.3335416666666666,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "seed",
+     0.08,
+     0.48
+    ],
+    [
+     "here.",
+     0.48,
+     0.88
+    ],
+    [
+     "A",
+     1.03,
+     1.09
+    ],
+    [
+     "seed",
+     1.09,
+     1.5
+    ],
+    [
+     "there.",
+     1.5,
+     1.85
+    ],
+    [
+     "Seeds",
+     2.12,
+     2.6
+    ],
+    [
+     "everywhere!",
+     2.6,
+     3.33
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: everywhere",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "And in the ground, a seed can grow. Look, a baby tree!",
+   "t0": 58.75,
+   "t1": 63.4375,
+   "v0": 59.04787500000001,
+   "dur": 3.932875,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.19
+    ],
+    [
+     "in",
+     0.19,
+     0.28
+    ],
+    [
+     "the",
+     0.28,
+     0.37
+    ],
+    [
+     "ground,",
+     0.37,
+     0.98
+    ],
+    [
+     "a",
+     0.98,
+     1.02
+    ],
+    [
+     "seed",
+     1.02,
+     1.44
+    ],
+    [
+     "can",
+     1.44,
+     1.66
+    ],
+    [
+     "grow.",
+     1.66,
+     2.15
+    ],
+    [
+     "Look,",
+     2.58,
+     2.85
+    ],
+    [
+     "a",
+     2.85,
+     2.93
+    ],
+    [
+     "baby",
+     2.93,
+     3.39
+    ],
+    [
+     "tree!",
+     3.39,
+     3.93
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "a baby tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "So Mango helps the rainforest grow.",
+   "t0": 63.4375,
+   "t1": 66.25,
+   "v0": 63.520750000000014,
+   "dur": 2.385125,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.16
+    ],
+    [
+     "Mango",
+     0.16,
+     0.61
+    ],
+    [
+     "helps",
+     0.61,
+     1.03
+    ],
+    [
+     "the",
+     1.03,
+     1.13
+    ],
+    [
+     "rainforest",
+     1.13,
+     1.91
+    ],
+    [
+     "grow.",
+     1.91,
+     2.38
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the forest grows",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Can you grow like a little tree? Up, up, up!",
+   "t0": 66.25,
+   "t1": 69.6875,
+   "v0": 66.44587500000002,
+   "dur": 2.97725,
+   "words": [
+    [
+     "Can",
+     0.07,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.38
+    ],
+    [
+     "grow",
+     0.38,
+     0.59
+    ],
+    [
+     "like",
+     0.59,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.86
+    ],
+    [
+     "little",
+     0.86,
+     1.06
+    ],
+    [
+     "tree?",
+     1.06,
+     1.63
+    ],
+    [
+     "Up,",
+     2.23,
+     2.34
+    ],
+    [
+     "up,",
+     2.34,
+     2.56
+    ],
+    [
+     "up!",
+     2.56,
+     2.977
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "grow",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "The sun goes down. The little groups come back.",
+   "t0": 69.6875,
+   "t1": 73.4375,
+   "v0": 69.96312500000002,
+   "dur": 3.0355416666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "sun",
+     0.11,
+     0.5
+    ],
+    [
+     "goes",
+     0.5,
+     0.81
+    ],
+    [
+     "down.",
+     0.81,
+     1.31
+    ],
+    [
+     "The",
+     1.59,
+     1.67
+    ],
+    [
+     "little",
+     1.67,
+     1.91
+    ],
+    [
+     "groups",
+     1.91,
+     2.32
+    ],
+    [
+     "come",
+     2.32,
+     2.58
+    ],
+    [
+     "back.",
+     2.58,
+     3.03
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "sunset",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "At night, the big group is together again.",
+   "t0": 73.4375,
+   "t1": 76.5625,
+   "v0": 73.53866666666669,
+   "dur": 2.648083333333333,
+   "words": [
+    [
+     "At",
+     0.0,
+     0.2
+    ],
+    [
+     "night,",
+     0.2,
+     0.69
+    ],
+    [
+     "the",
+     0.69,
+     0.85
+    ],
+    [
+     "big",
+     0.85,
+     1.16
+    ],
+    [
+     "group",
+     1.16,
+     1.47
+    ],
+    [
+     "is",
+     1.47,
+     1.65
+    ],
+    [
+     "together",
+     1.65,
+     2.14
+    ],
+    [
+     "again.",
+     2.14,
+     2.648
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "together",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Mango's tummy is full. No more rumble!",
+   "t0": 76.5625,
+   "t1": 80.0,
+   "v0": 76.72675000000002,
+   "dur": 2.8709166666666666,
+   "words": [
+    [
+     "Mango's",
+     0.01,
+     0.58
+    ],
+    [
+     "tummy",
+     0.58,
+     0.95
+    ],
+    [
+     "is",
+     0.95,
+     1.14
+    ],
+    [
+     "full.",
+     1.14,
+     1.55
+    ],
+    [
+     "No",
+     1.9,
+     2.09
+    ],
+    [
+     "more",
+     2.09,
+     2.32
+    ],
+    [
+     "rumble!",
+     2.32,
+     2.87
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "full",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "What a busy day of eating, Mango!",
+   "t0": 80.0,
+   "t1": 82.5,
+   "v0": 80.1376666666667,
+   "dur": 2.089958333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.13
+    ],
+    [
+     "a",
+     0.13,
+     0.18
+    ],
+    [
+     "busy",
+     0.18,
+     0.57
+    ],
+    [
+     "day",
+     0.57,
+     0.8
+    ],
+    [
+     "of",
+     0.8,
+     0.89
+    ],
+    [
+     "eating,",
+     0.89,
+     1.49
+    ],
+    [
+     "Mango!",
+     1.49,
+     2.09
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "busy day",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Fruit all day, and seeds on the way. Wow!",
+   "t0": 82.5,
+   "t1": 86.21745833333337,
+   "v0": 82.76762500000004,
+   "dur": 3.0298333333333334,
+   "words": [
+    [
+     "Fruit",
+     0.01,
+     0.33
+    ],
+    [
+     "all",
+     0.33,
+     0.53
+    ],
+    [
+     "day,",
+     0.53,
+     0.89
+    ],
+    [
+     "and",
+     0.89,
+     1.04
+    ],
+    [
+     "seeds",
+     1.04,
+     1.48
+    ],
+    [
+     "on",
+     1.48,
+     1.6
+    ],
+    [
+     "the",
+     1.6,
+     1.68
+    ],
+    [
+     "way.",
+     1.68,
+     2.08
+    ],
+    [
+     "Wow!",
+     2.54,
+     3.03
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "wow",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

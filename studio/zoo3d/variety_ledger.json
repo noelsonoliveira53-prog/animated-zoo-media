@@ -1637,5 +1637,69 @@
    "polar_bear"
   ],
   "new_song": true
+ },
+ {
+  "id": "zoo3d_ep21y",
+  "places": [
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "mountain",
+    "golden"
+   ],
+   [
+    "beach",
+    "morning"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ],
+   [
+    "jungle",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "fox",
+   "lion",
+   "monkey",
+   "panda"
+  ],
+  "new_song": true
  }
 ]

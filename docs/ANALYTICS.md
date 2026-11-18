@@ -1,5 +1,14 @@
 # Views check log (newest first)
 
+## 2026-11-18, 6:55 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
+Totals: **36,394 views (+1,733 since Nov 17 7:30 AM)**, 419,809 impressions (+26,129), 2.0% CTR, 0:25 average view, 24.6% viewed, 273 likes.
+Since Nov 17: Lion song-cut Short 592 -> 823 (+231, 149.8% viewed) · T. Rex Tiny Arms 1,801 -> 2,002 (+201) · Ants 1,637 -> 1,819 (+182) · Octopus 4,280 -> 4,456 (+176) ·
+Camel 4,996 -> 5,113 (+117) · Snail 1,197 -> 1,298 (+101) · Where Is My Mama? 3,904 -> 3,925 (+21). Per-video list: Command Center analytics/animated-zoo-2026-11-18.
+Content list (Videos tab): first cartoon adventure "Baby Elephant's Birthday Surprise for Mama" public 5:30 AM today, 1 view at 6:55 AM; v3 lessons: Where Do Animals Live? 12 (1 day), Super Senses! 7, Baby Animals 3, Who Am I? 9 (3 days), Yes or No 4, Animal Champions 5, Stripes or Spots 3; songs 2-16.
+NOT read: impressions, CTR and retention of anything public since Nov 15 (not in the lifetime table yet); the Shorts tab of the Content list.
+What's winning: unchanged: old fact-surprise Shorts and the question-title Lion Short bring nearly all growth; new long videos (lessons and songs alike) get 2-16 views in their first days.
+Adjustment: none to the grid; the first cartoon videos (adventure today 5:30 AM, camel lesson 9:30 AM, camel Short 7:30 PM) are the comparison for the Nov 19-20 checks.
+
 ## 2026-11-17, 7:30 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
 Totals: **34,661 views (+1,895 since Nov 16 8:40 AM)**, 393,680 impressions (+22,189), 2.1% CTR, 0:25 average view, 24.3% viewed, 263 likes.
 Since Nov 16: Lion song-cut Short 442 -> 592 (+150, 134.3% viewed) · Ants 1,497 -> 1,637 (+140) · Octopus 4,152 -> 4,280 (+128) · Snail 1,082 -> 1,197 (+115) ·

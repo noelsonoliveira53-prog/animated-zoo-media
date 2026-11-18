@@ -625,6 +625,7 @@ def main():
     if miss: res["fails"].append(f"word sync: {miss} of {tot} words could not be placed from the audio")
     voiced = [s.get("tag") or "?" for s in shots if s.get("sing") and (s["sing"].get("hum") or any(any(ch.isalpha() for ch in ln["text"]) for ln in s["sing"]["lines"]))]
     if voiced: res["fails"].append("a voice is synthesized onto notes (owner, Nov 17: it sounds robotic; the tune is played by instruments, text of '~' only): " + ", ".join(voiced))
+    if voiced and "--plan" not in sys.argv and not arg("--stills"): sys.exit("NOT RENDERED: " + res["fails"][-1])      # no render and no sound file with a sung or hummed voice
     on = SYNC.get("onset") or [0]; g = BEAT / 2; cuts = [s["t0"] for s in shots[1:]]
     res["sync"] = {"pauses_checked": len(SYNC.get("onset", [])), "onset_err_mean_ms": round(1000 * float(np.mean(on)), 1), "onset_err_max_ms": round(1000 * float(max(on)), 1),
                    "suspect_words": SYNC.get("suspect", []), "cuts": len(cuts), "cuts_on_the_half_beat": sum(1 for c in cuts if abs(c / g - round(c / g)) * g < 0.021),

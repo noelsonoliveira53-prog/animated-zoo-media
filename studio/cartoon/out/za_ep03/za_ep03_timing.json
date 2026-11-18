@@ -534,7 +534,7 @@
  "plan": {
   "length": 329.1,
   "shots": 78,
-  "visual_changes": 378,
+  "visual_changes": 379,
   "mean_gap": 0.87,
   "longest_gap": 4.59,
   "longest_gap_at": 83.2,
@@ -835,6 +835,11 @@
    56.25,
    "new shot",
    "the dry water hole question: yes or no"
+  ],
+  [
+   57.21,
+   "word",
+   "ANY WATER?"
   ],
   [
    59.01,

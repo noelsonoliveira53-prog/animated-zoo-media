@@ -90,7 +90,7 @@ def SQ(name, who, h, hidden=True):
 REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
 SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
                                {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
-SING_TY = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~ ~", "notes": "E4:.5 G4:.5 C5:1 A4:1 G4:1 E4:.5,C4:1.5", "rest": 2}])       # the birds' thank-you tune
+SING_TY = dict(REFRAIN, chords="C C", lines=[{"text": "~ ~ ~ ~ ~ ~", "notes": "E4:.5 G4:.5 C5:1 A4:1 G4:1 E4:.5,C4:1.5", "rest": 2}])       # the birds' thank-you tune
 SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
 SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
 TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
@@ -128,7 +128,7 @@ SHOTS = [
     S("dryhole", C("dryhole", "tumble", "head", 800, -40, 10), "Oh no. The water is all gone.", who="tumble", beat="obstacle1", tag="all gone", hide=["milo"],
       fx=[("face", 0.02, "tumble", "sad")]),
     S("dryhole", C("dryhole", "milo", "body", 820, 20, -70), "Is there any water in the water hole? Yes, or no?", q=True, beat="obstacle1", tag="question: yes or no", pause=3.2, hide=["tumble"],
-      fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:2.0")]),
+      fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:2.0")], words=[("w:water", "ANY WATER?", .81, .72, .7, "pill")]),
     S("dryhole", C("dryhole", "tumble", "all", 1000, 60, -40), "My mouth is so dry, Milo. What can I do?", who="tumble", beat="obstacle1", tag="what can I do", hide=["milo"],
       fx=[("face", 0.02, "tumble", "sad"), ("trunk", "w:What", "tumble", -20, .4), ("trunk", "e:do?", "tumble", 0, .4)]),
     S("dryhole", C("dryhole", "milo", "body", 780, 70, 0), "Tumble, you have a super nose. Your trunk!", beat="obstacle1", tag="Milo: your trunk", hide=["tumble"],
@@ -224,7 +224,7 @@ SHOTS = [
     # ------------------------------------------------------------ SOLUTION: Tumble chooses to share, and the birds see the rain coming
     S("rocks", C("rocks", "tumble", "head", 800, -40, 10), "I know. Friends help friends. I will share!", who="tumble", beat="solution", tag="I will share", hide=["milo"] + BIRDS, props=[POOL(170)],
       fx=[("face", 0.02, "tumble", "sad"), ("face", "w:Friends", "tumble", "happy"), ("hop", "w:share!", "tumble")], words=[("w:share!", "SHARE!", .26, .2, 1.1, "sun")]),
-    S("rocks", (970, 720, 1400), "Tumble lifts his trunk. Open your beaks, little birds!", beat="solution", tag="open your beaks", hide=["milo"], props=[POOL(170)],
+    S("rocks", (990, 720, 1480), cam2=(990, 720, 1440), say="Tumble lifts his trunk. Open your beaks, little birds!", beat="solution", tag="open your beaks", hide=["milo"], props=[POOL(170)],
       fx=[("trunk", "w:lifts", "tumble", -40, .5), BEAK("w:Open", "pip"), BEAK("w:Open", "kiki"), BEAK("w:Open", "bo")], words=[("w:Open", "OPEN WIDE!", .72, .25, .9, "pill")]),
     S("rocks", (990, 720, 1480), cam2=(990, 720, 1440), say="Squirt! A drink for Pip.", beat="solution", tag="a drink for Pip", hide=["milo"], props=[POOL(170), SQ("sq", "pip", 110)],
       fx=[TRUNK(-40), BEAK(0, "pip", 20, .01), ("show", "w:Squirt!", "sq"), ("snd", "w:Squirt!", "whoosh"), ("hop", "w:Pip.", "pip")],
@@ -305,11 +305,11 @@ SHOTS = [
 
 # thumbnail (thumb.py): the example in the picture (Tumble squirts a drink to three little birds), 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "za_ep03": {"place": "rocks", "cam": (960, 640, 1500),
+    "za_ep03": {"place": "rocks", "cam": (990, 660, 1480),
                 "actors": [("tumble", 520, 960, .62, False, 'gsap.set("#P-trunk",{rotation:-40,svgOrigin:"392 -430"});'),
-                           ("bird_pip", 1200, 930, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["pip"]}"}});'),
-                           ("bird_kiki", 1370, 940, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["kiki"]}"}});'),
-                           ("bird_bo", 1540, 930, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["bo"]}"}});')],
+                           ("bird_pip", 1180, 930, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["pip"]}"}});'),
+                           ("bird_kiki", 1380, 940, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["kiki"]}"}});'),
+                           ("bird_bo", 1600, 934, .5, True, f'gsap.set("#P-jaw",{{rotation:20,svgOrigin:"{JAW["bo"]}"}});')],
                 "props": [(lambda p: A.pool(p, 58), 866, 1056, 1.0), (SQ("sq", "bo", 190)[1], SQ_FROM[0], SQ_FROM[1], 1.0)],
-                "words": [("SQUIRT!", 1180, 330, 190, "sun")]},
+                "words": [("SQUIRT!", 1130, 300, 200, "sun")]},
 }

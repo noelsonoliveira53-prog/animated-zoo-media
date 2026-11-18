@@ -1129,8 +1129,11 @@
  },
  {
   "file": "cartoon/zc_ep06_short3.mp4",
+  "video_id": "E2YEoz8ngaA",
+  "thumb_set": true,
+  "uploaded_note": "Nov 18 daily run about 3:03 PM ET: Studio dialog 'Video scheduled ... public on November 25, 2026 at 7:30 PM', made for kids, custom thumbnail",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep06",
   "res": "2160x3840",

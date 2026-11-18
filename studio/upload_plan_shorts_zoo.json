@@ -937,7 +937,7 @@
  {
   "file": "cartoon/zc_ep04_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep04",
   "res": "2160x3840",
@@ -945,12 +945,28 @@
   "watermark": "top",
   "date": "2026-11-22",
   "time": "11:30 AM",
-  "note": "Taken over Nov 18 1:25 PM ET by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, unfinished_first: no file, no run note, no commit since the Nov 17 reservation). Never upload an in_production entry."
+  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it.",
+  "title": "Why Is a Spider Monkey's Tail So Long?",
+  "description": "Why is a spider monkey's tail so long? It is longer than her body, and it can grab and hold on, just like an extra hand! Count with Milo the bluebird: two hands, two feet and one tail. A quick animal fact for kids from the lesson “Why Do Monkeys Have Long Tails?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "monkey tail",
+   "monkey tail",
+   "animal facts for kids",
+   "shorts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "EXTRA HAND!",
+  "seconds": 88.1
  },
  {
   "file": "cartoon/zc_ep04_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep04",
   "res": "2160x3840",
@@ -958,12 +974,28 @@
   "watermark": "top",
   "date": "2026-11-23",
   "time": "11:30 AM",
-  "note": "Taken over Nov 18 1:25 PM ET by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, unfinished_first: no file, no run note, no commit since the Nov 17 reservation). Never upload an in_production entry."
+  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it.",
+  "title": "Why Does This Monkey Hang Upside Down?",
+  "description": "Why does Mango the spider monkey hang upside down? Her tail can hold up her whole body, so both hands are free to pick fruit! And that is how the spider monkey got its name. A quick animal fact for kids from the lesson “Why Do Monkeys Have Long Tails?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "monkey tail",
+   "monkey tail",
+   "animal facts for kids",
+   "shorts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "SNACK TIME!",
+  "seconds": 87.3
  },
  {
   "file": "cartoon/zc_ep04_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep04",
   "res": "2160x3840",
@@ -971,7 +1003,23 @@
   "watermark": "top",
   "date": "2026-11-24",
   "time": "11:30 AM",
-  "note": "Taken over Nov 18 1:25 PM ET by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, unfinished_first: no file, no run note, no commit since the Nov 17 reservation). Never upload an in_production entry."
+  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it.",
+  "title": "What Is Under a Monkey's Tail Tip?",
+  "description": "What is under the tip of a spider monkey's tail? Little lines, just like the lines on your fingertip, and every monkey has its own! Plus four long fingers that hook, and a baby that holds on to its mama's tail. A quick animal fact for kids from the lesson “Why Do Monkeys Have Long Tails?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "monkey tail",
+   "monkey tail",
+   "animal facts for kids",
+   "shorts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "LIKE YOURS!",
+  "seconds": 86.5
  },
  {
   "file": "cartoon/zc_ep05_short1.mp4",

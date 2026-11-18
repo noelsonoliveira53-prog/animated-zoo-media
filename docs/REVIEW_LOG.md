@@ -118,3 +118,7 @@
 | 2026-11-18 | zool_ep22.mp4 | 3d_lesson | PASS | - | word to check for distress/danger (KID-03): 'hunt'; word to check for distress/danger (KID-03): 'hunts' | zool_ep22: recap close-up (310.2-315.9 s) put the koala under the mark; four lessons in a row had it: make teach.py fade the mark for the hello and recap close-ups by itself |
 | 2026-11-18 | zoo3d_ep21.mp4 | 3d_singalong | PASS | - | - | Song close group shots put the monkey's and lion's heads at both top corners (tops of heads under the mark, eyes below it): next song keeps close group shots lower or the job fades the mark for the choruses |
 | 2026-11-18 | zoo3d_ep21.mp4 | 3d_singalong | PASS | - | - | zoo3d_ep21z: text props at z 3.0 clear Milo in wide shots, still cut at the top in close shots and half behind his crest in the low bridge shot (REACH!): engine should hide song text in close and low shots |
+| 2026-11-18 | cartoon/zc_ep04_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-18 | cartoon/zc_ep04_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-18 | cartoon/zc_ep04_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-18 | cartoon/zc_ep04.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

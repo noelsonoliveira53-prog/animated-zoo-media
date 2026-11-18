@@ -1,0 +1,89 @@
+{
+ "length": 308.9,
+ "shots": 82,
+ "visual_changes": 300,
+ "mean_gap": 1.03,
+ "longest_gap": 3.73,
+ "longest_gap_at": 122.8,
+ "over_6s": [],
+ "places": [
+  "canopy",
+  "zoo",
+  "figtree",
+  "bigtree",
+  "blossom",
+  "canopy_eve"
+ ],
+ "picture_boards": [
+  "paper_pink",
+  "paper",
+  "paper_blue"
+ ],
+ "questions": 26,
+ "longest_without_question": 30.0,
+ "first_words_at": 0.42,
+ "shot_mean": 3.77,
+ "fails": [],
+ "words_placed": "679/679",
+ "sync": {
+  "pauses_checked": 55,
+  "onset_err_mean_ms": 30.4,
+  "onset_err_max_ms": 90.0,
+  "suspect_words": [],
+  "cuts": 81,
+  "cuts_on_the_half_beat": 81,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (259ms)
+[initSession:screenshot] GSAP proxy flush complete (262ms)
+[Browser:WARN] GSAP target #s1c1,#s1c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20c1,#s20c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s24c1,#s24c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s25c1,#s25c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s32c1,#s32c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s42c1,#s42c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s42_mango-tail not found. https://gsap.com
+[Browser:WARN] GSAP target #s46c1,#s46c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s49c1,#s49c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s50c1,#s50c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s54c1,#s54c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s55c1,#s55c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s57c1,#s57c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s58c1,#s58c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s59c1,#s59c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s61c1,#s61c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s63c1,#s63c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s64c1,#s64c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s68c1,#s68c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s75c1,#s75c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s77c1,#s77c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s78c1,#s78c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s79c1,#s79c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (973ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (979ms)
+[initSession:screenshot] applyVideoMetadataHints complete (979ms)
+[initSession:screenshot] media + fonts + tailwind ready (983ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (1011ms)
+
+  This project pins hyperframes@0.8.231 (latest 0.9.67).
+  Bump it: npx hyperframes@latest upgrade --project
+
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep04/zc_ep04.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep04/zc_ep04.mp4 308.9 s
+EXIT 0

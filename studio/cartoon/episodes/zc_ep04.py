@@ -353,13 +353,13 @@ SHORTS = [
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "zc_ep04": {"place": "canopy", "cam": (HX, 560, 1150), "actors": [("monkey_hangfruit", HX - 200, HY, .8, False, "")],
+    "zc_ep04": {"place": "canopy", "cam": (HX, 640, 1150), "actors": [("monkey_hangfruit", HX - 200, HY, .8, False, "")],
                 "props": [],
                 "words": [("EXTRA", 1420, 520, 200, ""), ("HAND?!", 1420, 740, 230, "sun")]},
     "zc_ep04_short1": {"place": "canopy", "cam": (HX, 560, 900), "actors": [("monkey_hang", HX, HY, HS, False, "")],
                        "props": [],
                        "words": [("EXTRA", 540, 300, 190, ""), ("HAND!", 540, 480, 210, "sun")]},
-    "zc_ep04_short2": {"place": "figtree", "cam": (HX, 600, 800), "actors": [("monkey_hangfruit", HX, HY, HS, False, "")],
+    "zc_ep04_short2": {"place": "figtree", "cam": (HX, 540, 800), "actors": [("monkey_hangfruit", HX, HY, HS, False, "")],
                        "props": [],
                        "words": [("SNACK", 540, 300, 190, ""), ("TIME!", 540, 480, 210, "sun")]},
     "zc_ep04_short3": {"place": "paper", "cam": (960, 600, 1300), "actors": [],

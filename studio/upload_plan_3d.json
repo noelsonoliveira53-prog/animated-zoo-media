@@ -2356,11 +2356,27 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zc_ep04.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Taken over Nov 18 1:25 PM ET by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, unfinished_first: no file, no run note, no commit since the Nov 17 reservation). Never upload an in_production entry."
+  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it.",
+  "description": "Why do monkeys have long tails? Is a tail a toy, a scarf, or a hand? Milo the bluebird visits Mango the spider monkey in the rainforest treetops to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a spider monkey's tail is longer than its body, that it can grab and hold on like an extra hand, that it can hold up the monkey's whole body so both hands are free to pick fruit, why it is called a spider monkey, that the tip of the tail has little lines like a fingertip, different for every monkey, and that a baby spider monkey wraps its tiny tail around its mother's tail.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "monkey tail",
+   "why do monkeys have tails",
+   "rainforest animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "EXTRA HAND?!",
+  "seconds": 308.9
  },
  {
   "file": "cartoon/zc_ep03.mp4",

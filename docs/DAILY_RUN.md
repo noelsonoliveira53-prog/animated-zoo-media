@@ -41,7 +41,7 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
   must give live = [] with rows_read above 0. Right after Studio's "Video scheduled / Video processing" dialog: write video_id and status
   "scheduled" into the plan and commit and push BEFORE the next upload (an upload that is not recorded is the one that gets uploaded again).
   A fix of a live video is the only second upload: `upload_guard.py <file> --replace <old id>`, upload on the same slot, then the old video:
-  Private and renamed "OLD (replaced): <title>" in one save, its id moved to "replaced_video_ids". Never delete (Noelson decides deletions).
+  Private and renamed "OLD (replaced): <title>" in one save, its id moved to "replaced_video_ids". Old copies are deleted only with Noelson there to say yes to the list (Nov 17 11:37 PM he had all twelve Private copies removed); this unattended run never deletes: it names the Private copies in its report.
 1. VARIETY (Nov 13): no two episodes may look the same, even when YouTube Studio suggests repeating a topic. Topics and
    title patterns may repeat; pictures, places and casts may not. New jobs use set "zooworld"; routes come from
    `python3 studio/zoo3d/variety.py suggest`; new songs/lessons get a fresh cast (17 animals in chars/animal.py);

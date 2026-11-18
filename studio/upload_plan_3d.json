@@ -916,7 +916,11 @@
   "status": "scheduled",
   "format": "3d_singalong",
   "duration": 170.0,
-  "video_id": "_7LdrJ4mExM"
+  "video_id": "_7LdrJ4mExM",
+  "deleted_video_ids": [
+   "l9LM5GQI0kM"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "truck/tt3d_ep05.mp4",
@@ -1465,7 +1469,11 @@
   "old_video_id": "8IgNBQcHiZw",
   "note": "Nov 16: spliced version F2TrIgZA3HY reads Scheduled Nov 16 in the Studio list; old upload 8IgNBQcHiZw set to Private 5:31 AM (list read back: Private), not deleted.",
   "video_id": "F2TrIgZA3HY",
-  "thumb_set": true
+  "thumb_set": true,
+  "deleted_video_ids": [
+   "8IgNBQcHiZw"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "truck/tt3d_ep08.mp4",
@@ -1638,7 +1646,11 @@
   "old_video_id": "wzJiaHEj6tY",
   "note": "Nov 16 4:50 AM: the SPLICED version (quiz checks beside the heads, ? badge and QUIZ TIME! apart, sun whole at 2:26-2:36; six answer reveals whole) is uploaded and scheduled Nov 16 9:30 AM: WDlKaVPnu-4 (dialog read 'set to public on November 16, 2026 at 9:30 AM'; Details page read back; Studio list 4:55 AM: Scheduled). The old upload wzJiaHEj6tY was set to Private at 4:56 AM (list read back: Private). Not deleted.",
   "video_id": "WDlKaVPnu-4",
-  "thumb_set": true
+  "thumb_set": true,
+  "deleted_video_ids": [
+   "wzJiaHEj6tY"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "zool_ep12.mp4",
@@ -1740,7 +1752,12 @@
   "old_video_id": "tt34irM1y7o",
   "note": "FIXED render (PC job zoo3d_ep13za, native 4K, Nov 15 6:46 AM): babies stand beside their parents; 32 frames of the raw looked at before encoding. Replaces YouTube video tt34irM1y7o, which is PRIVATE since Nov 14 11:46 PM (keep it private, do not delete, do not re-schedule it). Upload THIS file as a NEW video and schedule it Nov 17 3:30 PM ET. Before uploading, check in Studio that no other \"Baby Animal Names\" video is already scheduled.; Nov 15 daily run: review.py PASS (after ledger 13y->13za), uploaded as a NEW video lHrOXq1Ccvo, scheduled Nov 17 3:30 PM (dialog confirmed), custom thumbnail confirmed",
   "video_id": "lHrOXq1Ccvo",
-  "thumb_set": true
+  "thumb_set": true,
+  "deleted_video_ids": [
+   "BKfS-luRPeo",
+   "tt34irM1y7o"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "zool_ep14.mp4",
@@ -1954,7 +1971,11 @@
   "scheduled_on": "2026-11-17",
   "replaced_video_ids": [
    "UAVL9LThIQE"
-  ]
+  ],
+  "deleted_video_ids": [
+   "UAVL9LThIQE"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "moon/mb3d_ep10.mp4",
@@ -2013,7 +2034,12 @@
   "replaced_video_ids": [
    "xW4MrQA6ZH8",
    "Ge-YyiXyX6U"
-  ]
+  ],
+  "deleted_video_ids": [
+   "Ge-YyiXyX6U",
+   "xW4MrQA6ZH8"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "zool_ep16.mp4",
@@ -2097,7 +2123,11 @@
   "video_id": "6eAr9x5Krfc",
   "scheduled_on": "2026-11-17",
   "thumb_set": true,
-  "replaces": "27dOgZh10N4"
+  "replaces": "27dOgZh10N4",
+  "deleted_video_ids": [
+   "27dOgZh10N4"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "cartoon/za_ep02.mp4",
@@ -2132,7 +2162,11 @@
   "scheduled_on": "2026-11-17",
   "replaced_video_ids": [
    "GxNV3lIIkyA"
-  ]
+  ],
+  "deleted_video_ids": [
+   "GxNV3lIIkyA"
+  ],
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
  },
  {
   "file": "zool_ep17.mp4",

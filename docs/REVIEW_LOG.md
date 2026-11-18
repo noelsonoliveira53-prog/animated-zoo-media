@@ -102,3 +102,5 @@
 | 2026-11-18 | cartoon/zc_ep05_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-18 | cartoon/zc_ep05_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-18 | cartoon/zc_ep05_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-18 | cartoon/zc_ep06.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-18 | cartoon/zc_ep06.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

@@ -962,7 +962,7 @@
  {
   "file": "cartoon/zc_ep05_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep05",
   "res": "2160x3840",
@@ -986,12 +986,13 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "ALL FAT!"
+  "thumb_text": "ALL FAT!",
+  "seconds": 86.9
  },
  {
   "file": "cartoon/zc_ep05_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep05",
   "res": "2160x3840",
@@ -1015,12 +1016,13 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "TALL OR FLOPPY?"
+  "thumb_text": "TALL OR FLOPPY?",
+  "seconds": 88.7
  },
  {
   "file": "cartoon/zc_ep05_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep05",
   "res": "2160x3840",
@@ -1044,7 +1046,8 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "CURLY TUFT!"
+  "thumb_text": "CURLY TUFT!",
+  "seconds": 87.2
  },
  {
   "file": "cartoon/zc_ep06_short1.mp4",

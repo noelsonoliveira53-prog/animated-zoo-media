@@ -1,0 +1,477 @@
+START lesson Wed Nov 18 02:15:43 UTC 2026
+{
+ "length": 321.7,
+ "shots": 86,
+ "visual_changes": 323,
+ "mean_gap": 1.0,
+ "longest_gap": 3.74,
+ "longest_gap_at": 90.0,
+ "over_6s": [],
+ "places": [
+  "dunes",
+  "zoo",
+  "trail",
+  "oasis",
+  "wind",
+  "night"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper",
+  "paper_pink"
+ ],
+ "questions": 22,
+ "longest_without_question": 29.7,
+ "first_words_at": 0.42,
+ "shot_mean": 3.74,
+ "fails": [],
+ "words_placed": "715/715",
+ "sync": {
+  "pauses_checked": 58,
+  "onset_err_mean_ms": 26.9,
+  "onset_err_max_ms": 110.0,
+  "suspect_words": [],
+  "cuts": 85,
+  "cuts_on_the_half_beat": 85,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (280ms)
+[initSession:screenshot] GSAP proxy flush complete (282ms)
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s17c1,#s17c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s19c1,#s19c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20c1,#s20c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s35c1,#s35c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s37c1,#s37c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s38c1,#s38c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s38_gust not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s39c1,#s39c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s40c1,#s40c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s41c1,#s41c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s42c1,#s42c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s43c1,#s43c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s44c1,#s44c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s45c1,#s45c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s46c1,#s46c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s47c1,#s47c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s48c1,#s48c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s50c1,#s50c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s55c1,#s55c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s58c1,#s58c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s59c1,#s59c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s62c1,#s62c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s63c1,#s63c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s72c1,#s72c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s73c1,#s73c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s74c1,#s74c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s77c1,#s77c2 not found. https://gsap.com
+[Browser:WARN] GSAP target .s77_star not found. https://gsap.com
+[Browser:WARN] GSAP target #s78c1,#s78c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s79c1,#s79c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s80c1,#s80c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s81c1,#s81c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s82c1,#s82c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s83c1,#s83c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s84c1,#s84c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s85c1,#s85c2 not found. https://gsap.com
+[Browser:WARN] GSAP target .s85_star not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (1145ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1150ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1151ms)
+[initSession:screenshot] media + fonts + tailwind ready (1154ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (1185ms)
+[Browser:WARN] GSAP target  not found. https://gsap.com
+
+  This project pins hyperframes@0.8.231 (latest 0.9.65).
+  Bump it: npx hyperframes@latest upgrade --project
+
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05.mp4 321.7 s
+EXIT lesson 0 Wed Nov 18 02:51:08 UTC 2026
+START short 0 Wed Nov 18 02:51:08 UTC 2026
+{
+ "length": 86.8,
+ "shots": 24,
+ "visual_changes": 102,
+ "mean_gap": 0.85,
+ "longest_gap": 3.67,
+ "longest_gap_at": 76.9,
+ "over_6s": [],
+ "places": [
+  "dunes",
+  "trail",
+  "oasis"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper",
+  "paper_pink"
+ ],
+ "questions": 8,
+ "longest_without_question": 26.6,
+ "first_words_at": 0.42,
+ "shot_mean": 3.62,
+ "fails": [],
+ "words_placed": "211/211",
+ "sync": {
+  "pauses_checked": 17,
+  "onset_err_mean_ms": 31.2,
+  "onset_err_max_ms": 110.0,
+  "suspect_words": [],
+  "cuts": 23,
+  "cuts_on_the_half_beat": 23,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (193ms)
+[initSession:screenshot] GSAP proxy flush complete (197ms)
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s15c1,#s15c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (536ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (542ms)
+[initSession:screenshot] applyVideoMetadataHints complete (542ms)
+[initSession:screenshot] media + fonts + tailwind ready (548ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (564ms)
+4K 2160x3840 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short1.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short1.mp4 86.8 s
+EXIT short 0 0 Wed Nov 18 03:05:24 UTC 2026
+START short 1 Wed Nov 18 03:05:24 UTC 2026
+{
+ "length": 88.6,
+ "shots": 23,
+ "visual_changes": 79,
+ "mean_gap": 1.12,
+ "longest_gap": 3.75,
+ "longest_gap_at": 2.8,
+ "over_6s": [],
+ "places": [
+  "trail",
+  "wind"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_pink",
+  "paper_blue"
+ ],
+ "questions": 6,
+ "longest_without_question": 26.2,
+ "first_words_at": 0.42,
+ "shot_mean": 3.85,
+ "fails": [],
+ "words_placed": "207/207",
+ "sync": {
+  "pauses_checked": 17,
+  "onset_err_mean_ms": 30.6,
+  "onset_err_max_ms": 90.0,
+  "suspect_words": [],
+  "cuts": 22,
+  "cuts_on_the_half_beat": 22,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (268ms)
+[initSession:screenshot] GSAP proxy flush complete (274ms)
+[Browser:WARN] GSAP target #s0c1,#s0c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9_gust not found. https://gsap.com
+[Browser:WARN] GSAP target  not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s15c1,#s15c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s17c1,#s17c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s19c1,#s19c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (633ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (637ms)
+[initSession:screenshot] applyVideoMetadataHints complete (637ms)
+[initSession:screenshot] media + fonts + tailwind ready (643ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (658ms)
+[Browser:WARN] GSAP target  not found. https://gsap.com
+4K 2160x3840 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short2.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short2.mp4 88.6 s
+EXIT short 1 0 Wed Nov 18 03:15:41 UTC 2026
+START short 2 Wed Nov 18 03:15:41 UTC 2026
+{
+ "length": 87.2,
+ "shots": 26,
+ "visual_changes": 92,
+ "mean_gap": 0.95,
+ "longest_gap": 3.55,
+ "longest_gap_at": 26.8,
+ "over_6s": [],
+ "places": [
+  "dunes"
+ ],
+ "picture_boards": [
+  "paper_pink",
+  "paper_blue",
+  "paper"
+ ],
+ "questions": 6,
+ "longest_without_question": 26.2,
+ "first_words_at": 0.42,
+ "shot_mean": 3.35,
+ "fails": [],
+ "words_placed": "185/185",
+ "sync": {
+  "pauses_checked": 14,
+  "onset_err_mean_ms": 19.3,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 25,
+  "cuts_on_the_half_beat": 25,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (1ms)
+[initSession:screenshot] page.goto complete (314ms)
+[initSession:screenshot] GSAP proxy flush complete (322ms)
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (691ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (695ms)
+[initSession:screenshot] applyVideoMetadataHints complete (695ms)
+[initSession:screenshot] media + fonts + tailwind ready (700ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (716ms)
+4K 2160x3840 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short3.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short3.mp4 87.2 s
+EXIT short 2 0 Wed Nov 18 03:25:29 UTC 2026
+START av1 Wed Nov 18 03:25:29 UTC 2026
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:	SVT-AV1 Encoder Lib v1.7.0
+Svt[info]: SVT [build]  :	GCC 13.2.0	 64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Number of logical cores available: 2
+Svt[info]: Number of PPCS 59
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx2]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile	tier (auto)	level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator 		: 3840 / 2160 / 24 / 1
+Svt[info]: SVT [config]: bit-depth / color format 					: 10 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct 					: 9 / VQ / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type 			: 240 / 16 / key frame
+Svt[info]: SVT [config]: BRC mode / target bitrate (kbps)				: VBR / 2150 
+Svt[info]: -------------------------------------------
+EXIT av1 0 Wed Nov 18 03:46:45 UTC 2026
+ALLDONE
+START short 2 again Wed Nov 18 03:47:02 UTC 2026
+{
+ "length": 87.2,
+ "shots": 26,
+ "visual_changes": 92,
+ "mean_gap": 0.95,
+ "longest_gap": 3.55,
+ "longest_gap_at": 26.8,
+ "over_6s": [],
+ "places": [
+  "dunes"
+ ],
+ "picture_boards": [
+  "paper_pink",
+  "paper_blue",
+  "paper"
+ ],
+ "questions": 6,
+ "longest_without_question": 26.2,
+ "first_words_at": 0.42,
+ "shot_mean": 3.35,
+ "fails": [],
+ "words_placed": "185/185",
+ "sync": {
+  "pauses_checked": 14,
+  "onset_err_mean_ms": 19.3,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 25,
+  "cuts_on_the_half_beat": 25,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (259ms)
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] GSAP proxy flush complete (534ms)
+[initSession:screenshot] pollHfReady complete (555ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (564ms)
+[initSession:screenshot] applyVideoMetadataHints complete (564ms)
+[initSession:screenshot] media + fonts + tailwind ready (570ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (594ms)
+START short 2 again (second start) Wed Nov 18 03:55:07 UTC 2026
+{
+ "length": 87.2,
+ "shots": 26,
+ "visual_changes": 92,
+ "mean_gap": 0.95,
+ "longest_gap": 3.55,
+ "longest_gap_at": 26.8,
+ "over_6s": [],
+ "places": [
+  "dunes"
+ ],
+ "picture_boards": [
+  "paper_pink",
+  "paper_blue",
+  "paper"
+ ],
+ "questions": 6,
+ "longest_without_question": 26.2,
+ "first_words_at": 0.42,
+ "shot_mean": 3.35,
+ "fails": [],
+ "words_placed": "185/185",
+ "sync": {
+  "pauses_checked": 14,
+  "onset_err_mean_ms": 19.3,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 25,
+  "cuts_on_the_half_beat": 25,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (1ms)
+[initSession:screenshot] page.goto complete (219ms)
+[initSession:screenshot] GSAP proxy flush complete (231ms)
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (537ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (541ms)
+[initSession:screenshot] applyVideoMetadataHints complete (541ms)
+[initSession:screenshot] media + fonts + tailwind ready (545ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (559ms)
+4K 2160x3840 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short3.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep05/zc_ep05_short3.mp4 87.2 s
+EXIT short 2 again 0 Wed Nov 18 04:03:41 UTC 2026
+START av1 short 1 Wed Nov 18 04:03:41 UTC 2026
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:	SVT-AV1 Encoder Lib v1.7.0
+Svt[info]: SVT [build]  :	GCC 13.2.0	 64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Number of logical cores available: 2
+Svt[info]: Number of PPCS 59
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx2]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile	tier (auto)	level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator 		: 2160 / 3840 / 24 / 1
+Svt[info]: SVT [config]: bit-depth / color format 					: 10 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct 					: 9 / VQ / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type 			: 240 / 16 / key frame
+Svt[info]: SVT [config]: BRC mode / target bitrate (kbps)				: VBR / 2150 
+Svt[info]: -------------------------------------------
+EXIT av1 short 1 0 Wed Nov 18 04:10:06 UTC 2026
+START av1 short 2 Wed Nov 18 04:10:06 UTC 2026
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:	SVT-AV1 Encoder Lib v1.7.0
+Svt[info]: SVT [build]  :	GCC 13.2.0	 64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Number of logical cores available: 2
+Svt[info]: Number of PPCS 59
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx2]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile	tier (auto)	level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator 		: 2160 / 3840 / 24 / 1
+Svt[info]: SVT [config]: bit-depth / color format 					: 10 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct 					: 9 / VQ / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type 			: 240 / 16 / key frame
+Svt[info]: SVT [config]: BRC mode / target bitrate (kbps)				: VBR / 2150 
+Svt[info]: -------------------------------------------
+EXIT av1 short 2 0 Wed Nov 18 04:16:28 UTC 2026
+START av1 short 3 Wed Nov 18 04:16:28 UTC 2026
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [version]:	SVT-AV1 Encoder Lib v1.7.0
+Svt[info]: SVT [build]  :	GCC 13.2.0	 64 bit
+Svt[info]: -------------------------------------------
+Svt[info]: Number of logical cores available: 2
+Svt[info]: Number of PPCS 59
+Svt[info]: [asm level on system : up to avx512]
+Svt[info]: [asm level selected : up to avx2]
+Svt[info]: -------------------------------------------
+Svt[info]: SVT [config]: main profile	tier (auto)	level (auto)
+Svt[info]: SVT [config]: width / height / fps numerator / fps denominator 		: 2160 / 3840 / 24 / 1
+Svt[info]: SVT [config]: bit-depth / color format 					: 10 / YUV420
+Svt[info]: SVT [config]: preset / tune / pred struct 					: 9 / VQ / random access
+Svt[info]: SVT [config]: gop size / mini-gop size / key-frame type 			: 240 / 16 / key frame
+Svt[info]: SVT [config]: BRC mode / target bitrate (kbps)				: VBR / 2150 
+Svt[info]: -------------------------------------------
+EXIT av1 short 3 0 Wed Nov 18 04:21:50 UTC 2026
+ENCODESDONE

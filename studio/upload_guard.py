@@ -56,7 +56,22 @@ def same_topic(a, b):
 def uploads_24h():
     try:
         log = subprocess.run(["git", "-C", REPO, "log", "--since=24 hours ago", "--format=%s"], capture_output=True, text=True).stdout
-        return sum(len(set(re.findall(r"\(([\w-]{11})[),;]", ln))) for ln in log.splitlines() if re.search(r"scheduled|uploads|re-uploaded", ln, re.I) and not ln.startswith("Merge"))
+        by_msg = sum(len(set(re.findall(r"\(([\w-]{11})[),;]", ln))) for ln in log.splitlines() if re.search(r"scheduled|uploads|re-uploaded", ln, re.I) and not ln.startswith("Merge"))
+        # Nov 18: a commit whose message does not say "scheduled" can still record uploads (the Nov 17 morning five sat in a
+        # "Four new lessons" commit). Also count the video ids ADDED to the plans in the last 24 hours; take the larger number.
+        cut = datetime.datetime.now(datetime.timezone.utc) - datetime.timedelta(hours=24); base = ""
+        for ln in subprocess.run(["git", "-C", REPO, "log", "--first-parent", "-400", "--format=%H %aI"], capture_output=True, text=True).stdout.splitlines():
+            h, d = ln.split(" ", 1)
+            if datetime.datetime.fromisoformat(d) < cut: base = h; break
+        ids = lambda txt: set(re.findall(r'"video_id": "([\w-]{11})"', txt))
+        added = set(); removed = set()
+        for f in ("studio/upload_plan_3d.json", "studio/upload_plan_shorts_zoo.json"):
+            old_t = subprocess.run(["git", "-C", REPO, "show", f"{base}:{f}"], capture_output=True, text=True).stdout if base else ""
+            if not base: continue
+            diff = subprocess.run(["git", "-C", REPO, "log", "-p", "--format=", f"{base}..HEAD", "--", f], capture_output=True, text=True).stdout
+            added |= set(re.findall(r'^\+\s*"video_id": "([\w-]{11})"', diff, re.M)) - ids(old_t)   # every id written since, also ids later replaced and deleted
+        if not base: print("   NOTE: no commit older than 24 hours in this clone (shallow): run git fetch --deepen=60, the count below is the commit-message count only", file=sys.stderr)
+        return max(by_msg, len(added))
     except Exception: return None
 
 

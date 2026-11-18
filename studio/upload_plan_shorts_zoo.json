@@ -551,12 +551,16 @@
   "watermark": "top",
   "date": "2026-11-18",
   "time": "7:30 PM",
-  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\") | Nov 17 9:00 PM: re-uploaded with the hums played by bells and soft band (owner: no voice on notes); 52oYu9SobqY set to Private.",
   "note_fix": "Fixed file (the hums are sung music now), rendered Nov 16 evening; replaces the upload 1Jbwfw5xDYY, which stays Private (not deleted). Same slot.",
   "replaced_video_id": "1Jbwfw5xDYY",
-  "video_id": "52oYu9SobqY",
+  "video_id": "LUviDteBBX8",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-17",
+  "replaced_video_ids": [
+   "1Jbwfw5xDYY",
+   "52oYu9SobqY"
+  ]
  },
  {
   "file": "cartoon/zc_ep01_short2.mp4",

@@ -23,9 +23,25 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
 - Upload file: the engine's 4K H.264 is over GitHub's 100 MB, so a long video is uploaded as 4K AV1 made from it
   (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
   about 25 minutes; write it outside the repo and move it in). A Short's H.264 is under 100 MB and goes up as it is.
-- Building: next episodes come from `docs/cartoon/build_plan.py` (THEMES), in the order of the themes; one new cartoon video a day at least,
-  following PLAYBOOK "Cartoon pipeline" step by step (facts read that day, plan check, a still of EVERY shot looked at, render, pace check,
-  watermark check, 4K check, frames of the finished file looked at, thumbnail). Never skip the stills.
+- Building (Noelson, Nov 17 10:42 PM: "ensure there is a continuous production of 2D videos ... looks like the 3D videos are the only ones
+  self-uploading, update this workflow"): cartoon videos are built by TWO OWN scheduled tasks every day, not by this run: "Animated Zoo
+  cartoon lesson + 3 Shorts" (1:17 PM ET) and "Animated Zoo cartoon adventure" (7:23 PM ET). Each asks `python3 studio/upload_guard.py --next
+  lesson|adventure` for its title (first THEMES title of `docs/cartoon/build_plan.py` with no plan entry), id and slots, reserves them as
+  "in_production", builds by `docs/CARTOON_RUN.md` and leaves the checked files "to_upload" with a run note in `docs/cartoon/runs/<id>.md`.
+  THIS run's part: (1) section C uploads every cartoon "to_upload" entry; (2) fold new run notes from `docs/cartoon/runs/` into PLAYBOOK.md and
+  their defects into docs/IMPROVE.md; (3) an "in_production" cartoon entry whose slot is less than 36 hours away and whose run note shows no
+  finished file: the slot keeps a 3D lesson (write one for it today) and the cartoon entry is moved to the next free slot of
+  `upload_guard.py --next`; (4) if `list_triggers` shows one of the two build tasks disabled or failing twice in a row, tell Noelson.
+  3D lessons are written ONLY for lesson slots of the next two days that hold no plan entry (cartoon entries count, "in_production" included):
+  with one cartoon lesson and one adventure a day that is normally the 1:30 PM and 5:30 PM slots, two 3D lessons a day instead of four.
+- NEVER UPLOAD A VIDEO TWICE (Noelson, Nov 17 10:42 PM: "create a process to check if the video is already uploaded and not upload twice").
+  One live video per file, per title, per slot. At the START of the run: `python3 studio/upload_guard.py --audit` (fix every FAIL line before
+  anything is uploaded; a "SAME TOPIC" pair of lessons or stories: hold the newer one, never upload both). Before EVERY upload:
+  `python3 studio/upload_guard.py <plan file>` must print OK TO UPLOAD, and on Studio's content list `zlive("<title>")` (studio/studio-upload2.js)
+  must give live = [] with rows_read above 0. Right after Studio's "Video scheduled / Video processing" dialog: write video_id and status
+  "scheduled" into the plan and commit and push BEFORE the next upload (an upload that is not recorded is the one that gets uploaded again).
+  A fix of a live video is the only second upload: `upload_guard.py <file> --replace <old id>`, upload on the same slot, then the old video:
+  Private and renamed "OLD (replaced): <title>" in one save, its id moved to "replaced_video_ids". Never delete (Noelson decides deletions).
 1. VARIETY (Nov 13): no two episodes may look the same, even when YouTube Studio suggests repeating a topic. Topics and
    title patterns may repeat; pictures, places and casts may not. New jobs use set "zooworld"; routes come from
    `python3 studio/zoo3d/variety.py suggest`; new songs/lessons get a fresh cast (17 animals in chars/animal.py);
@@ -177,6 +193,10 @@ Owner, Nov 16: "daily cap should not be a thing since now we upload only the ani
 (`git log --since="24 hours ago" --format="%ad %s" --date=format:%H:%M | grep -i scheduled`, every session's uploads are committed there) and use what is left of 20. Never write
 "at the cap" without that count. The 20 is our own observation of Nov 3 (the limit was hit at about 20 in 24 hours, when the channels were not phone-verified); YouTube Help gives no
 number ("Limits may vary by country/region or channel history"), and the channel has Advanced features since then, so the real limit may be higher: it is only known when the message appears.
+0. Guard first (standing rule "NEVER UPLOAD A VIDEO TWICE"): `upload_guard.py --audit`, then `upload_guard.py <file>` and `zlive` before each upload.
+   CARTOON ENTRIES ARE UPLOADED BY THIS RUN: every "to_upload" entry with format cartoon_adventure or cartoon_lesson in studio/upload_plan_3d.json and
+   every "to_upload" cartoon_short_90 in studio/upload_plan_shorts_zoo.json, WHATEVER ITS DATE (they are scheduled days ahead), soonest slot first, each on
+   the date and time in its entry, after review.py PASS and a look at its contact sheet. They come before 3D lessons when the allowance is short.
 1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
    at 3:30 PM ET (full Vids episodes 12:00 PM); the LESSONS = every "to_upload" 3d_lesson entry with lesson_version 3, each at
    the date and time in its plan entry (rule 5 THE DAILY GRID: 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM). Schedule each for its own

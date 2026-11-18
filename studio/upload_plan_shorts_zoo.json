@@ -959,7 +959,7 @@
  {
   "file": "cartoon/zc_ep06_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep06",
   "res": "2160x3840",
@@ -967,12 +967,28 @@
   "watermark": "top",
   "date": "2026-11-25",
   "time": "7:30 AM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Built Nov 18 (session 014CFVfXACLiRmiF48DuuKcR): 9:16 stills of every shot, frames of the finished file (first frame and answer reveal included), 4K, pace, watermark, listen.py and review.py passed. NOT uploaded: the daily run schedules it.",
+  "title": "How Does a Spider Monkey Pick the Best Fruit?",
+  "description": "Which fruit will Mango pick, the green one or the golden one? Spider monkeys see colors very well, and that helps them pick the best fruit. Count ten bites with Milo the bluebird: about eight out of ten are fruit! A quick animal fact for kids from the lesson \u201cWhat Does a Monkey Eat All Day?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Geoffroy's black-handed spider monkey); National Geographic (spider monkeys); IFAW (spider monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "what do monkeys eat",
+   "rainforest animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "GREEN OR GOLDEN?",
+  "seconds": 87.0
  },
  {
   "file": "cartoon/zc_ep06_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep06",
   "res": "2160x3840",
@@ -980,12 +996,28 @@
   "watermark": "top",
   "date": "2026-11-25",
   "time": "11:30 AM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Built Nov 18 (session 014CFVfXACLiRmiF48DuuKcR): 9:16 stills of every shot, frames of the finished file (first frame and answer reveal included), 4K, pace, watermark, listen.py and review.py passed. NOT uploaded: the daily run schedules it.",
+  "title": "Do Spider Monkeys Eat Flowers and Bugs?",
+  "description": "Do spider monkeys eat flowers and bugs? Yes! When there is no fruit, Mango the spider monkey eats flowers, young leaves, seeds, bark and small insects, and the big group splits into smaller groups to find food. A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWhat Does a Monkey Eat All Day?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Geoffroy's black-handed spider monkey); National Geographic (spider monkeys); IFAW (spider monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "what do monkeys eat",
+   "rainforest animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "LUNCH TIME!",
+  "seconds": 87.9
  },
  {
   "file": "cartoon/zc_ep06_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep06",
   "res": "2160x3840",
@@ -993,6 +1025,22 @@
   "watermark": "top",
   "date": "2026-11-25",
   "time": "7:30 PM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Built Nov 18 (session 014CFVfXACLiRmiF48DuuKcR): 9:16 stills of every shot, frames of the finished file (first frame and answer reveal included), 4K, pace, watermark, listen.py and review.py passed. NOT uploaded: the daily run schedules it.",
+  "title": "How Do Spider Monkeys Help the Rainforest Grow?",
+  "description": "Where do the seeds in a fruit go? Mango the spider monkey swallows the fruit and its little seeds, walks far away, and plop: the seeds land in a new place. Spider monkeys spread seeds all around the rainforest. A quick animal fact for kids with Milo the bluebird, from the lesson \u201cWhat Does a Monkey Eat All Day?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Geoffroy's black-handed spider monkey); National Geographic (spider monkeys); IFAW (spider monkeys).",
+  "tags": [
+   "monkey",
+   "monkeys for kids",
+   "spider monkey",
+   "what do monkeys eat",
+   "rainforest animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "PLOP, PLOP!",
+  "seconds": 86.6
  }
 ]

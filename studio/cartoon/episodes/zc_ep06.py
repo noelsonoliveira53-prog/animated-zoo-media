@@ -121,7 +121,7 @@ GP = (1445, 248, 1150)       # 9:16: Mango's three after the big group splits
 GPL = (475, 248, 1150)       # 9:16: the other three
 P6 = (972, 96, 2100)       # 9:16: all six on the branch (the three treetop places of this episode have sky up to y = -1900)
 G3 = (1445, 300, 900); G3P = GP
-GALL = (960, 330, 1600)
+GALL = (960, 330, 1600); GALL2 = (960, 330, 1690)      # the group shots only pull out: with the default slow push-in the outer monkeys were cut by the frame in the first render
 
 SHOTS = [
     # ---------------------------------------------------------------- HOOK
@@ -243,13 +243,13 @@ SHOTS = [
       fx=[("show", "w:seeds,", "j3"), ("show", "w:bark,", "j4"), ("show", "w:bugs.", "j5")], words=[("w:Six", "6 FOODS", .5, .14, 1.3, "sun", (.5, .33), 1.0)]),
     S("blossom", MC, "What a big menu for one little monkey!", part=2, tag="big menu", hide=["milo"], pcam=MP, fx=[("hop", "w:big", "mango"), ("face", 0.05, "mango", "happy"), ("arm", "w:one", "mango", "r", -60)],
       words=[("w:big", "BIG MENU!", .2, .3, 1.0, "sun", (.5, .33), .9)]),
-    S("blossom", GALL, "And Mango does not look for food alone.", part=2, tag="not alone", hide=["milo"], actors=group(), pcam=P6, pcam2=P6,
+    S("blossom", GALL, "And Mango does not look for food alone.", part=2, tag="not alone", cam2=GALL2, hide=["milo"], actors=group(), pcam=P6, pcam2=P6,
       fx=[("hop", "w:alone.", "f4"), ("hop", "w:alone.", "f5")], words=[("w:alone.", "FRIENDS!", .5, .13, 1.1, "sun", (.5, .33), .9)]),
-    S("blossom", GALL, "Spider monkeys live in a big group.", part=2, tag="a big group", actors=group(), pcam=P6, pcam2=P6,
+    S("blossom", GALL, "Spider monkeys live in a big group.", part=2, tag="a big group", cam2=GALL2, actors=group(), pcam=P6, pcam2=P6,
       fx=[("hop", "w:big", "f1"), ("hop", "w:big", "f3"), ("hop", "w:big", "mango")], words=[("w:big", "BIG GROUP", .5, .13, 1.1, "pill", (.5, .33), .9)]),
-    S("blossom", GALL, "To find food, the big group splits into smaller groups.", part=2, tag="smaller groups", actors=group(), pcam=P6, pcam2=GP,
+    S("blossom", GALL, "To find food, the big group splits into smaller groups.", part=2, tag="smaller groups", cam2=GALL2, actors=group(), pcam=P6, pcam2=GP,
       fx=[("walk", "w:splits", k, -200 if n < 3 else 200, 1.8) for n, k in enumerate(GID)], words=[("w:smaller", "SMALLER GROUPS", .5, .13, .9, "sun", (.9, .487), .38)]),
-    S("blossom", GALL, "Three here, and three over there.", part=2, tag="three and three", actors=group(GX1), pcam=GPL, pcam2=GP,
+    S("blossom", GALL, "Three here, and three over there.", part=2, tag="three and three", cam2=GALL2, actors=group(GX1), pcam=GPL, pcam2=GP,
       fx=[("hop", "w:here,", "f1"), ("hop", "w:here,", "f2"), ("hop", "w:here,", "f3"), ("hop", "w:there.", "mango"), ("hop", "w:there.", "f4"), ("hop", "w:there.", "f5")],
       words=[("w:here,", "3", .197, .14, 1.6, "sun", (.5, .33), 1.2), ("w:there.", "3", .803, .14, 1.6, "sun", (2.0, .33), 1.2)]),
     S("blossom", G3, "Count Mango's little group with me. One, two, three!", part=2, q=True, tag="count the group", actors=group(GX1, (3, 4, 5)), pcam=G3P, pcam2=G3P,
@@ -258,12 +258,12 @@ SHOTS = [
     S("blossom", say="Who do you eat lunch with?", part=2, q=True, tag="your lunch", hide=["mango"], pause=1.5, fx=[("hop", "w:Who", "milo")],
       words=[("w:lunch", "WHO?", .76, .22, 1.2, "sun", (.5, .33))], **MILO("canopy")),
     # ---------------------------------------------------------------- PART 3: dinner - the seeds travel
-    S("figtree", GALL, "In the afternoon, Mango's little group finds one more fruit tree.", part=3, trans="iris", tag="afternoon", actors=group(GX1, (3, 4, 5)), pcam=G3P, pcam2=G3P,
+    S("figtree", GALL, "In the afternoon, Mango's little group finds one more fruit tree.", part=3, trans="iris", tag="afternoon", cam2=GALL2, actors=group(GX1, (3, 4, 5)), pcam=G3P, pcam2=G3P,
       move={"mango": (GX1[3] - 300, MY, GS), "f4": (GX1[4] - 300, MY, GS), "f5": (GX1[5] - 300, MY, GS)},
       fx=[("walk", 0.1, k, 300, 2.6) for k in ("mango", "f4", "f5")], words=[("w:fruit", "MORE FRUIT!", .32, .2, 1.0, "sun", (.5, .33), .9)]),
     S("bigtree", (1000, -60, 3300), "Spider monkeys spend most of the day high up in the treetops.", part=3, trans="iris", tag="high up", cam2=(1000, -200, 2600), pcam=(950, -690, 2000), pcam2=(950, -700, 1800),
       props=[prop("ar", lambda p: art.arrow(p, 620, 500, 620, -400), 0, 0, 1, True)], fx=[("show", "w:high", "ar"), ("hop", "w:treetops.", "mango")],
-      words=[("w:high", "UP HIGH", .31, .53, .8, "sun", (.5, .33), .9)]),
+      words=[("w:high", "UP HIGH", .24, .5, .8, "sun", (.5, .33), .9)]),
     S("figtree", MC, "They climb, and they look for food.", part=3, tag="looking for food", hide=["milo"], pcam=MPW, pcam2=MPW, move={"mango": (MX - 160, MY, MS)},
       fx=[("walk", 0.1, "mango", 160, 1.6), ("face", "w:look", "mango", "wow")], words=[("w:look", "LOOK!", .82, .3, 1.0, "sun", (.5, .33), .9)]),
     S("figtree", say="Can you reach up high, like Mango? Stretch!", part=3, q=True, tag="stretch", hide=["mango"],
@@ -311,9 +311,9 @@ SHOTS = [
       fx=[("show", "w:helps", "p0"), ("show", "w:rainforest", "p2"), ("show", "w:grow.", "h")], words=[("w:helps", "THANK YOU, MANGO!", .5, .12, .85, "pill", (.5, .33), .62)]),
     S("jungle", say="Can you grow like a little tree? Up, up, up!", part=3, q=True, tag="grow", fx=[("to", "w:Up,", "#{p}milo-body", {"scaleY": 1.16, "scaleX": .95, "svgOrigin": "0 0", "duration": .35, "yoyo": True, "repeat": 5}, "Milo grows tall")],
       words=[("w:Up,", "UP, UP, UP!", .76, .22, .9, "sun", (.5, .33), .85)], **MILO("jungle")),
-    S("canopy_eve", GALL, "The sun goes down. The little groups come back.", part=3, trans="iris", tag="sunset", actors=group(GX1), pcam=P6, pcam2=P6,
+    S("canopy_eve", GALL, "The sun goes down. The little groups come back.", part=3, trans="iris", tag="sunset", cam2=GALL2, actors=group(GX1), pcam=P6, pcam2=P6,
       fx=[("walk", 0.1, k, 200 if n < 3 else -200, 2.4) for n, k in enumerate(GID)], words=[("w:sun", "SUNSET", .5, .13, 1.1, "sun", (.5, .33), .9)]),
-    S("canopy_eve", GALL, "At night, the big group is together again.", part=3, tag="together", actors=group(), pcam=P6, pcam2=P6,
+    S("canopy_eve", GALL, "At night, the big group is together again.", part=3, tag="together", cam2=GALL2, actors=group(), pcam=P6, pcam2=P6,
       props=[prop("h1", art2.heart, 770, 150, 1.0, True), prop("h2", art2.heart, 1150, 110, 1.3, True)],
       fx=[("show", "w:together", "h1"), ("show", "w:again.", "h2")], words=[("w:together", "TOGETHER", .5, .7, 1.1, "pill", (.5, .33), .9)]),
     S("canopy_eve", MH, "Mango's tummy is full. No more rumble!", part=3, tag="full", hide=["milo"], pcam=MPH, fx=[("face", 0.05, "mango", "happy"), ("arm", "w:full.", "mango", "l", 34)],
@@ -333,7 +333,7 @@ SHOTS = [
       words=[("end+0.3", "?", .78, .3, 2.4, "sun", (.5, .33), 1.5)]),
     S("paper", (960, 540, 1300), "Seeds! Mango spreads them far away.", part=4, tag="board: seeds again", pcam=(960, 440, 1500), props=[prop("fo", A.fruit_open, 960, 640, 2.3, p=(960, 660, 2.1))],
       words=[("w:Seeds!", "SEEDS!", .5, .17, 1.2, "sun", (.5, .33), 1.0)]),
-    S("canopy_eve", GALL, "Good night, Mango. Good night, friends.", part=4, tag="good night", actors=group(), pcam=GP, props=[prop("h1", art2.heart, 960, 130, 1.2, True)],
+    S("canopy_eve", GALL, "Good night, Mango. Good night, friends.", part=4, tag="good night", cam2=GALL2, actors=group(), pcam=GP, props=[prop("h1", art2.heart, 960, 130, 1.2, True)],
       fx=[("show", "w:friends.", "h1")] + [("face", 0.05, k, "sleepy") for k in GID]),
     S("canopy_eve", MW, "Thank you for learning with me, friends. See you at the zoo!", part=4, tag="goodbye", cam2=(960, 380, 1900), pcam=MPW,
       words=[("w:See", "SEE YOU AT THE ZOO!", .5, .62, .95, "pill", (.5, .33), .62)], fx=[("hop", "w:zoo!", "milo", 2), ("arm", "w:See", "mango", "r", -70)]),
@@ -359,11 +359,11 @@ _UP = 'gsap.set("#P-ar",{rotation:-80,svgOrigin:"58 -206"});'
 _UPL = 'gsap.set("#P-al",{rotation:80,svgOrigin:"-58 -206"});'
 THUMBS = {
     "zc_ep06": {"place": "figtree", "cam": (960, 330, 1150), "actors": [("monkey", 760, 520, 1.15, False, _UP)],
-                "props": [(art2.fruit, 760 + 242, 520 - 276, .64), (art2.fruit, 1330, 470, .5), (A.leaf1, 1450, 330, .9), (A.flower, 1300, 250, .5)],
+                "props": [(art2.fruit, 760 + 242, 520 - 276, .64), (A.leaf1, 1450, 330, .9), (A.flower, 1300, 250, .5)],
                 "words": [("YUM,", 1420, 640, 190, ""), ("FRUIT!", 1420, 840, 230, "sun")]},
-    "zc_ep06_short1": {"place": "figtree", "cam": (MX, 230, 800), "actors": [("monkey", MX, MY, MS, False, "")],
+    "zc_ep06_short1": {"place": "figtree", "cam": (MX, 200, 900), "actors": [("monkey", MX, MY, MS, False, "")],
                        "props": [(hang(A.green_fruit), MX - 200, 262, .34), (hang(art2.fruit), MX + 200, 262, .34)],
-                       "words": [("GREEN", 290, 560, 150, ""), ("OR", 540, 430, 120, ""), ("GOLDEN?", 720, 560, 150, "sun")]},
+                       "words": [("GREEN", 540, 300, 180, ""), ("OR", 540, 455, 120, ""), ("GOLDEN?", 540, 610, 180, "sun")]},
     "zc_ep06_short2": {"place": "blossom", "cam": (MX, 230, 800), "actors": [("monkey", MX, MY, MS, False, _UP)],
                        "props": [(A.flower, MX + 130, 283, .3)],
                        "words": [("LUNCH", 540, 420, 190, ""), ("TIME!", 540, 610, 210, "sun")]},

@@ -1,0 +1,589 @@
+{
+ "file": "studio/cartoon/out/zc_ep06/zc_ep06_short3.mp4",
+ "from": null,
+ "to": null,
+ "seconds": 86.53,
+ "expected_key": "C",
+ "key_heard": {
+  "key": "C major",
+  "fit": 0.85
+ },
+ "held_tones": 78,
+ "voice_like_tones_not_judged": 462,
+ "tones_outside_the_key": [],
+ "tones_between_two_notes": [],
+ "clashes_a_semitone_apart": [],
+ "beat": {
+  "heard_bpm": 60.1,
+  "expected_bpm": 96.0,
+  "attacks_on_the_half_beat_grid": 0.36,
+  "by_chance": 0.29,
+  "heard_against_expected": 0.835
+ },
+ "clicks_at": [],
+ "silences": [],
+ "judged": "level, silences, tempo, balance, and long loud pure tones only; NOT judged because a voice is speaking: short tones, clashes, clicks (use --episode, or --music-only for a file without speech)",
+ "level": {
+  "lufs": -15.3,
+  "range_lu": 2.1,
+  "true_peak_db": -1.4,
+  "clipped_samples": 0,
+  "quietest_second_db": -22.3,
+  "loudest_second_db": -12.0
+ },
+ "balance": {
+  "share_a_phone_speaker_plays_above_300hz": 0.51,
+  "share_below_120hz": 0.02,
+  "share_above_4khz": 0.06
+ },
+ "tones": [
+  {
+   "start": 1.66,
+   "seconds": 0.6,
+   "note": "D5",
+   "cents": 22,
+   "db": -20.1
+  },
+  {
+   "start": 1.75,
+   "seconds": 0.73,
+   "note": "C5",
+   "cents": 1,
+   "db": -21.5
+  },
+  {
+   "start": 1.88,
+   "seconds": 0.64,
+   "note": "G4",
+   "cents": 4,
+   "db": -19.6
+  },
+  {
+   "start": 3.67,
+   "seconds": 0.64,
+   "note": "G4",
+   "cents": 0,
+   "db": -21.9
+  },
+  {
+   "start": 6.57,
+   "seconds": 0.68,
+   "note": "A4",
+   "cents": -1,
+   "db": -19.2
+  },
+  {
+   "start": 7.04,
+   "seconds": 0.68,
+   "note": "E4",
+   "cents": 0,
+   "db": -18.5
+  },
+  {
+   "start": 8.58,
+   "seconds": 0.94,
+   "note": "F4",
+   "cents": 0,
+   "db": -20.5
+  },
+  {
+   "start": 11.14,
+   "seconds": 0.9,
+   "note": "G4",
+   "cents": 0,
+   "db": -25.7
+  },
+  {
+   "start": 11.73,
+   "seconds": 0.73,
+   "note": "C5",
+   "cents": 0,
+   "db": -15.6
+  },
+  {
+   "start": 14.25,
+   "seconds": 0.73,
+   "note": "B4",
+   "cents": 0,
+   "db": -17.9
+  },
+  {
+   "start": 14.42,
+   "seconds": 0.81,
+   "note": "G4",
+   "cents": 0,
+   "db": -17.4
+  },
+  {
+   "start": 16.73,
+   "seconds": 0.77,
+   "note": "A4",
+   "cents": 0,
+   "db": -21.4
+  },
+  {
+   "start": 17.71,
+   "seconds": 1.15,
+   "note": "F4",
+   "cents": 0,
+   "db": -19.5
+  },
+  {
+   "start": 18.01,
+   "seconds": 0.68,
+   "note": "C4",
+   "cents": -1,
+   "db": -13.8
+  },
+  {
+   "start": 19.24,
+   "seconds": 0.6,
+   "note": "C4",
+   "cents": 0,
+   "db": -28.8
+  },
+  {
+   "start": 19.24,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": 0,
+   "db": -21.9
+  },
+  {
+   "start": 21.76,
+   "seconds": 0.6,
+   "note": "E4",
+   "cents": 0,
+   "db": -25.9
+  },
+  {
+   "start": 21.76,
+   "seconds": 0.73,
+   "note": "C5",
+   "cents": 0,
+   "db": -17.7
+  },
+  {
+   "start": 21.8,
+   "seconds": 0.64,
+   "note": "G4",
+   "cents": 0,
+   "db": -15.1
+  },
+  {
+   "start": 22.7,
+   "seconds": 0.64,
+   "note": "G4",
+   "cents": 0,
+   "db": -22.3
+  },
+  {
+   "start": 24.36,
+   "seconds": 0.6,
+   "note": "B4",
+   "cents": 0,
+   "db": -18.4
+  },
+  {
+   "start": 24.58,
+   "seconds": 0.64,
+   "note": "G4",
+   "cents": 0,
+   "db": -13.2
+  },
+  {
+   "start": 27.05,
+   "seconds": 0.77,
+   "note": "E4",
+   "cents": 0,
+   "db": -15.1
+  },
+  {
+   "start": 29.23,
+   "seconds": 0.64,
+   "note": "A4",
+   "cents": 0,
+   "db": -19.5
+  },
+  {
+   "start": 29.31,
+   "seconds": 1.15,
+   "note": "F4",
+   "cents": -1,
+   "db": -21.7
+  },
+  {
+   "start": 30.21,
+   "seconds": 1.28,
+   "note": "G4",
+   "cents": 0,
+   "db": -14.2
+  },
+  {
+   "start": 30.51,
+   "seconds": 0.9,
+   "note": "E4",
+   "cents": 0,
+   "db": -14.6
+  },
+  {
+   "start": 30.81,
+   "seconds": 0.6,
+   "note": "C5",
+   "cents": 0,
+   "db": -10.4
+  },
+  {
+   "start": 32.98,
+   "seconds": 0.6,
+   "note": "D5",
+   "cents": -15,
+   "db": -16.1
+  },
+  {
+   "start": 33.62,
+   "seconds": 1.15,
+   "note": "G4",
+   "cents": 0,
+   "db": -18.8
+  },
+  {
+   "start": 33.79,
+   "seconds": 0.9,
+   "note": "D4",
+   "cents": 1,
+   "db": -17.3
+  },
+  {
+   "start": 36.86,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": -1,
+   "db": -19.7
+  },
+  {
+   "start": 36.91,
+   "seconds": 0.81,
+   "note": "E4",
+   "cents": 0,
+   "db": -16.2
+  },
+  {
+   "start": 37.42,
+   "seconds": 0.64,
+   "note": "F4",
+   "cents": -1,
+   "db": -19.2
+  },
+  {
+   "start": 38.61,
+   "seconds": 0.98,
+   "note": "F4",
+   "cents": 0,
+   "db": -24.1
+  },
+  {
+   "start": 38.95,
+   "seconds": 0.6,
+   "note": "C4",
+   "cents": -1,
+   "db": -22.0
+  },
+  {
+   "start": 38.95,
+   "seconds": 0.68,
+   "note": "A4",
+   "cents": 0,
+   "db": -26.5
+  },
+  {
+   "start": 41.43,
+   "seconds": 0.94,
+   "note": "E4",
+   "cents": 0,
+   "db": -16.2
+  },
+  {
+   "start": 41.43,
+   "seconds": 1.02,
+   "note": "C5",
+   "cents": 0,
+   "db": -15.7
+  },
+  {
+   "start": 42.41,
+   "seconds": 0.98,
+   "note": "G2",
+   "cents": -2,
+   "db": -13.4
+  },
+  {
+   "start": 42.71,
+   "seconds": 1.54,
+   "note": "G4",
+   "cents": 0,
+   "db": -13.1
+  },
+  {
+   "start": 43.31,
+   "seconds": 0.68,
+   "note": "B4",
+   "cents": 0,
+   "db": -11.5
+  },
+  {
+   "start": 44.29,
+   "seconds": 0.68,
+   "note": "B4",
+   "cents": 0,
+   "db": -11.5
+  },
+  {
+   "start": 44.29,
+   "seconds": 1.28,
+   "note": "G4",
+   "cents": 0,
+   "db": -19.2
+  },
+  {
+   "start": 48.04,
+   "seconds": 0.77,
+   "note": "C4",
+   "cents": -1,
+   "db": -23.9
+  },
+  {
+   "start": 48.3,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": 0,
+   "db": -21.6
+  },
+  {
+   "start": 50.22,
+   "seconds": 0.81,
+   "note": "G4",
+   "cents": 0,
+   "db": -15.7
+  },
+  {
+   "start": 51.8,
+   "seconds": 0.64,
+   "note": "C5",
+   "cents": 1,
+   "db": -17.7
+  },
+  {
+   "start": 54.14,
+   "seconds": 1.02,
+   "note": "G4",
+   "cents": 0,
+   "db": -23.2
+  },
+  {
+   "start": 54.23,
+   "seconds": 0.77,
+   "note": "B4",
+   "cents": 0,
+   "db": -17.6
+  },
+  {
+   "start": 56.75,
+   "seconds": 0.73,
+   "note": "A4",
+   "cents": 0,
+   "db": -17.7
+  },
+  {
+   "start": 58.2,
+   "seconds": 0.94,
+   "note": "A4",
+   "cents": 0,
+   "db": -16.5
+  },
+  {
+   "start": 60.71,
+   "seconds": 0.9,
+   "note": "C5",
+   "cents": 0,
+   "db": -19.1
+  },
+  {
+   "start": 60.84,
+   "seconds": 1.15,
+   "note": "E4",
+   "cents": 0,
+   "db": -25.6
+  },
+  {
+   "start": 62.63,
+   "seconds": 0.9,
+   "note": "G4",
+   "cents": 0,
+   "db": -16.0
+  },
+  {
+   "start": 63.79,
+   "seconds": 0.77,
+   "note": "D4",
+   "cents": 3,
+   "db": -19.3
+  },
+  {
+   "start": 64.9,
+   "seconds": 0.6,
+   "note": "A2",
+   "cents": -2,
+   "db": -19.7
+  },
+  {
+   "start": 65.19,
+   "seconds": 0.9,
+   "note": "E4",
+   "cents": 0,
+   "db": -23.1
+  },
+  {
+   "start": 65.58,
+   "seconds": 0.94,
+   "note": "C4",
+   "cents": -1,
+   "db": -19.9
+  },
+  {
+   "start": 65.83,
+   "seconds": 0.68,
+   "note": "A4",
+   "cents": 0,
+   "db": -13.3
+  },
+  {
+   "start": 68.52,
+   "seconds": 0.94,
+   "note": "F4",
+   "cents": -1,
+   "db": -22.9
+  },
+  {
+   "start": 69.29,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": 0,
+   "db": -12.4
+  },
+  {
+   "start": 70.83,
+   "seconds": 0.73,
+   "note": "C5",
+   "cents": 0,
+   "db": -21.8
+  },
+  {
+   "start": 70.91,
+   "seconds": 0.81,
+   "note": "E4",
+   "cents": 0,
+   "db": -27.1
+  },
+  {
+   "start": 72.7,
+   "seconds": 0.81,
+   "note": "G4",
+   "cents": 0,
+   "db": -16.7
+  },
+  {
+   "start": 73.0,
+   "seconds": 0.6,
+   "note": "D4",
+   "cents": 0,
+   "db": -12.8
+  },
+  {
+   "start": 75.86,
+   "seconds": 0.81,
+   "note": "A4",
+   "cents": 0,
+   "db": -17.5
+  },
+  {
+   "start": 75.86,
+   "seconds": 0.85,
+   "note": "C4",
+   "cents": -1,
+   "db": -24.0
+  },
+  {
+   "start": 77.4,
+   "seconds": 0.64,
+   "note": "F2",
+   "cents": -2,
+   "db": -19.9
+  },
+  {
+   "start": 77.7,
+   "seconds": 0.81,
+   "note": "F4",
+   "cents": -1,
+   "db": -23.3
+  },
+  {
+   "start": 79.27,
+   "seconds": 0.68,
+   "note": "A4",
+   "cents": 0,
+   "db": -16.9
+  },
+  {
+   "start": 79.27,
+   "seconds": 0.9,
+   "note": "C4",
+   "cents": -1,
+   "db": -23.7
+  },
+  {
+   "start": 81.83,
+   "seconds": 0.64,
+   "note": "C5",
+   "cents": 0,
+   "db": -19.0
+  },
+  {
+   "start": 84.35,
+   "seconds": 0.64,
+   "note": "B4",
+   "cents": 0,
+   "db": -24.6
+  },
+  {
+   "start": 84.57,
+   "seconds": 0.73,
+   "note": "G4",
+   "cents": 0,
+   "db": -20.3
+  },
+  {
+   "start": 85.55,
+   "seconds": 0.85,
+   "note": "E4",
+   "cents": 0,
+   "db": -24.6
+  },
+  {
+   "start": 85.59,
+   "seconds": 0.81,
+   "note": "C4",
+   "cents": -1,
+   "db": -19.8
+  },
+  {
+   "start": 85.8,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": 0,
+   "db": -14.6
+  }
+ ],
+ "not_judged": "whether it sounds pleasant, whether a voice is warm or a word is said right: a person listens for that",
+ "picture": "studio/cartoon/out/zc_ep06/zc_ep06_short3_final_listen.png"
+}

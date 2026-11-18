@@ -1,0 +1,7156 @@
+{
+ "id": "za_ep03",
+ "total": 315.98604166666667,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625
+ ],
+ "plan": {
+  "length": 316.0,
+  "shots": 75,
+  "visual_changes": 365,
+  "mean_gap": 0.87,
+  "longest_gap": 4.59,
+  "longest_gap_at": 78.2,
+  "over_6s": [],
+  "places": [
+   "zoo",
+   "savanna",
+   "dryhole",
+   "bigtree",
+   "rocks",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper_blue"
+  ],
+  "questions": 8,
+  "longest_without_question": 70.0,
+  "first_words_at": 0.42,
+  "shot_mean": 4.21,
+  "beats": {
+   "hook": 1,
+   "goal": 1,
+   "song": 4,
+   "obstacle1": 9,
+   "fact": 3,
+   "obstacle2": 11,
+   "obstacle3": 9,
+   "low": 6,
+   "solution": 16,
+   "ending": 9
+  },
+  "fails": [],
+  "words_placed": "683/683",
+  "sync": {
+   "pauses_checked": 47,
+   "onset_err_mean_ms": 27.4,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 74,
+   "cuts_on_the_half_beat": 74,
+   "songs_entering_on_a_beat": "4/4",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the zoo gate hook: no rain, so thirsty"
+  ],
+  [
+   0.72,
+   "word",
+   "NO RAIN!"
+  ],
+  [
+   1.62,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   3.93,
+   "word",
+   "SO THIRSTY!"
+  ],
+  [
+   5.0,
+   "new shot",
+   "the zoo gate hook: Milo"
+  ],
+  [
+   6.7,
+   "action",
+   "milo hops"
+  ],
+  [
+   9.06,
+   "new shot",
+   "the zoo gate zoo wide"
+  ],
+  [
+   9.71,
+   "word",
+   "TUMBLE"
+  ],
+  [
+   12.86,
+   "word",
+   "MAMA"
+  ],
+  [
+   13.75,
+   "new shot",
+   "the zoo gate Mama: we need the rain"
+  ],
+  [
+   16.57,
+   "action",
+   "mama nods"
+  ],
+  [
+   17.0,
+   "word",
+   "WE NEED RAIN"
+  ],
+  [
+   17.81,
+   "new shot",
+   "the zoo gate goal: find water"
+  ],
+  [
+   17.91,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   19.64,
+   "action",
+   "tumble hops"
+  ],
+  [
+   19.89,
+   "word",
+   "A BIG DRINK!"
+  ],
+  [
+   21.25,
+   "new shot",
+   "the zoo gate Milo: where is the water"
+  ],
+  [
+   21.69,
+   "word",
+   "WHERE?"
+  ],
+  [
+   22.2,
+   "picture",
+   "wd"
+  ],
+  [
+   24.69,
+   "new shot",
+   "the zoo gate Mama: follow your nose"
+  ],
+  [
+   24.78,
+   "action",
+   "mama nods"
+  ],
+  [
+   25.4,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   25.4,
+   "word",
+   "FOLLOW YOUR NOSE"
+  ],
+  [
+   26.42,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   28.44,
+   "new shot",
+   "the zoo gate off they go"
+  ],
+  [
+   28.54,
+   "action",
+   "milo flies"
+  ],
+  [
+   28.54,
+   "action",
+   "tumble walks"
+  ],
+  [
+   31.25,
+   "new place",
+   "the sunny savanna song: off we go"
+  ],
+  [
+   31.45,
+   "action",
+   "milo flies"
+  ],
+  [
+   31.45,
+   "action",
+   "tumble walks"
+  ],
+  [
+   31.88,
+   "word",
+   "FRIENDS HELP FRIENDS"
+  ],
+  [
+   33.75,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   35.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   36.88,
+   "word",
+   "STEP BY STEP"
+  ],
+  [
+   38.75,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   40.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   41.88,
+   "new place",
+   "the dry water hole the water hole"
+  ],
+  [
+   41.98,
+   "action",
+   "tumble walks"
+  ],
+  [
+   42.6,
+   "word",
+   "WATER HOLE"
+  ],
+  [
+   43.73,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   45.94,
+   "new shot",
+   "the dry water hole dry mud"
+  ],
+  [
+   46.09,
+   "picture",
+   "x"
+  ],
+  [
+   47.51,
+   "word",
+   "ALL DRY!"
+  ],
+  [
+   49.38,
+   "new shot",
+   "the dry water hole all gone"
+  ],
+  [
+   49.4,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   51.25,
+   "new shot",
+   "the dry water hole question: yes or no"
+  ],
+  [
+   54.01,
+   "sign",
+   "YES"
+  ],
+  [
+   54.36,
+   "sign",
+   "NO"
+  ],
+  [
+   55.64,
+   "thinking dot",
+   "1"
+  ],
+  [
+   56.31,
+   "thinking dot",
+   "2"
+  ],
+  [
+   56.98,
+   "thinking dot",
+   "3"
+  ],
+  [
+   57.47,
+   "answer",
+   "NO"
+  ],
+  [
+   58.75,
+   "new shot",
+   "the dry water hole what can I do"
+  ],
+  [
+   58.77,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   60.65,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   61.46,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   61.88,
+   "new shot",
+   "the dry water hole Milo: your trunk"
+  ],
+  [
+   62.79,
+   "action",
+   "milo hops"
+  ],
+  [
+   62.79,
+   "word",
+   "SUPER NOSE!"
+  ],
+  [
+   65.0,
+   "new place",
+   "the picture board (pink) fact: smells water far away"
+  ],
+  [
+   65.1,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   66.22,
+   "picture",
+   "s1"
+  ],
+  [
+   66.22,
+   "word",
+   "SMELLS WATER"
+  ],
+  [
+   67.04,
+   "picture",
+   "s2"
+  ],
+  [
+   67.37,
+   "picture",
+   "s3"
+  ],
+  [
+   68.41,
+   "word",
+   "FAR AWAY"
+  ],
+  [
+   70.31,
+   "new place",
+   "the dry water hole I smell water"
+  ],
+  [
+   70.33,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   70.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   70.44,
+   "word",
+   "SNIFF!"
+  ],
+  [
+   71.37,
+   "picture",
+   "s1"
+  ],
+  [
+   72.19,
+   "action",
+   "tumble hops"
+  ],
+  [
+   72.19,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   73.12,
+   "new shot",
+   "the dry water hole question: sniff"
+  ],
+  [
+   73.69,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.69,
+   "word",
+   "SNIFF, SNIFF!"
+  ],
+  [
+   76.88,
+   "new place",
+   "the sunny savanna follows his nose"
+  ],
+  [
+   76.97,
+   "action",
+   "milo flies"
+  ],
+  [
+   76.97,
+   "action",
+   "tumble walks"
+  ],
+  [
+   78.22,
+   "word",
+   "THIS WAY!"
+  ],
+  [
+   82.81,
+   "new place",
+   "the tallest tree cheep"
+  ],
+  [
+   82.91,
+   "action",
+   "tumble walks"
+  ],
+  [
+   85.58,
+   "action",
+   "bo hops"
+  ],
+  [
+   85.58,
+   "action",
+   "kiki hops"
+  ],
+  [
+   85.58,
+   "action",
+   "pip hops"
+  ],
+  [
+   85.58,
+   "word",
+   "CHEEP!"
+  ],
+  [
+   87.19,
+   "new shot",
+   "the tallest tree Pip, Kiki and Bo"
+  ],
+  [
+   88.8,
+   "action",
+   "pip hops"
+  ],
+  [
+   88.8,
+   "word",
+   "PIP"
+  ],
+  [
+   89.08,
+   "action",
+   "kiki hops"
+  ],
+  [
+   89.08,
+   "word",
+   "KIKI"
+  ],
+  [
+   89.66,
+   "action",
+   "bo hops"
+  ],
+  [
+   89.66,
+   "word",
+   "BO"
+  ],
+  [
+   90.62,
+   "new shot",
+   "the tallest tree Pip: thirsty too"
+  ],
+  [
+   90.64,
+   "action",
+   "pip looks sad"
+  ],
+  [
+   90.91,
+   "word",
+   "THIRSTY, TOO"
+  ],
+  [
+   93.75,
+   "new shot",
+   "the tallest tree Kiki: tired wings"
+  ],
+  [
+   93.77,
+   "action",
+   "kiki looks sad"
+  ],
+  [
+   94.16,
+   "action",
+   "Kiki lifts a wing"
+  ],
+  [
+   96.88,
+   "new shot",
+   "the tallest tree come with me"
+  ],
+  [
+   96.89,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   97.77,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   99.08,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   99.38,
+   "new shot",
+   "the tallest tree too slow"
+  ],
+  [
+   99.47,
+   "action",
+   "tumble walks"
+  ],
+  [
+   101.41,
+   "action",
+   "bo hops"
+  ],
+  [
+   101.41,
+   "action",
+   "kiki hops"
+  ],
+  [
+   101.41,
+   "action",
+   "pip hops"
+  ],
+  [
+   103.9,
+   "action",
+   "pip looks sad"
+  ],
+  [
+   103.9,
+   "word",
+   "TOO SLOW!"
+  ],
+  [
+   105.0,
+   "new shot",
+   "the tallest tree question: ride or stay"
+  ],
+  [
+   107.86,
+   "sign",
+   "RIDE"
+  ],
+  [
+   108.21,
+   "sign",
+   "STAY"
+  ],
+  [
+   110.41,
+   "thinking dot",
+   "1"
+  ],
+  [
+   111.09,
+   "thinking dot",
+   "2"
+  ],
+  [
+   111.76,
+   "thinking dot",
+   "3"
+  ],
+  [
+   112.25,
+   "answer",
+   "RIDE"
+  ],
+  [
+   113.44,
+   "new shot",
+   "the tallest tree hop on my back"
+  ],
+  [
+   113.46,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   114.06,
+   "action",
+   "tumble hops"
+  ],
+  [
+   114.06,
+   "word",
+   "HOP ON!"
+  ],
+  [
+   115.94,
+   "new shot",
+   "the tallest tree three birds on one elephant"
+  ],
+  [
+   116.18,
+   "action",
+   "Bo hops on"
+  ],
+  [
+   116.18,
+   "action",
+   "Kiki hops on"
+  ],
+  [
+   116.18,
+   "action",
+   "Pip hops on"
+  ],
+  [
+   117.58,
+   "word",
+   "3 BIRDS!"
+  ],
+  [
+   119.69,
+   "new shot",
+   "the tallest tree Bo: a good seat"
+  ],
+  [
+   119.71,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   119.92,
+   "action",
+   "bo hops"
+  ],
+  [
+   122.81,
+   "new shot",
+   "the tallest tree off they go again"
+  ],
+  [
+   122.91,
+   "action",
+   "bo walks"
+  ],
+  [
+   122.91,
+   "action",
+   "kiki walks"
+  ],
+  [
+   122.91,
+   "action",
+   "pip walks"
+  ],
+  [
+   122.91,
+   "action",
+   "tumble walks"
+  ],
+  [
+   124.27,
+   "word",
+   "SNIFF!"
+  ],
+  [
+   125.94,
+   "new place",
+   "the rocks the rocks"
+  ],
+  [
+   126.04,
+   "action",
+   "bo walks"
+  ],
+  [
+   126.04,
+   "action",
+   "kiki walks"
+  ],
+  [
+   126.04,
+   "action",
+   "pip walks"
+  ],
+  [
+   126.04,
+   "action",
+   "tumble walks"
+  ],
+  [
+   128.2,
+   "word",
+   "BIG ROCKS"
+  ],
+  [
+   130.62,
+   "new shot",
+   "the rocks one small pool"
+  ],
+  [
+   131.75,
+   "picture",
+   "ar"
+  ],
+  [
+   132.57,
+   "word",
+   "ONE SMALL POOL"
+  ],
+  [
+   134.38,
+   "new shot",
+   "the rocks Pip: me first"
+  ],
+  [
+   134.7,
+   "action",
+   "pip hops"
+  ],
+  [
+   135.35,
+   "action",
+   "pip hops"
+  ],
+  [
+   136.88,
+   "new shot",
+   "the rocks too deep"
+  ],
+  [
+   137.49,
+   "action",
+   "Pip leans down"
+  ],
+  [
+   137.85,
+   "action",
+   "pip opens its beak"
+  ],
+  [
+   138.74,
+   "action",
+   "pip looks sad"
+  ],
+  [
+   139.56,
+   "picture",
+   "ar"
+  ],
+  [
+   139.56,
+   "word",
+   "TOO DEEP!"
+  ],
+  [
+   141.56,
+   "new shot",
+   "the rocks Kiki: cannot reach"
+  ],
+  [
+   141.58,
+   "action",
+   "kiki looks sad"
+  ],
+  [
+   143.5,
+   "action",
+   "Kiki stands on tiptoes"
+  ],
+  [
+   144.69,
+   "new shot",
+   "the rocks Bo: so close"
+  ],
+  [
+   144.71,
+   "action",
+   "bo looks sad"
+  ],
+  [
+   144.92,
+   "word",
+   "SO CLOSE..."
+  ],
+  [
+   147.5,
+   "new shot",
+   "the rocks question: Tumble or Pip"
+  ],
+  [
+   150.71,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   151.06,
+   "sign",
+   "PIP"
+  ],
+  [
+   152.59,
+   "thinking dot",
+   "1"
+  ],
+  [
+   153.27,
+   "thinking dot",
+   "2"
+  ],
+  [
+   153.94,
+   "thinking dot",
+   "3"
+  ],
+  [
+   154.43,
+   "answer",
+   "TUMBLE"
+  ],
+  [
+   155.62,
+   "new shot",
+   "the rocks my trunk is long"
+  ],
+  [
+   155.65,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   156.01,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   156.41,
+   "word",
+   "LONG TRUNK!"
+  ],
+  [
+   156.77,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   157.81,
+   "new shot",
+   "the rocks slurp"
+  ],
+  [
+   158.5,
+   "action",
+   "Tumble's trunk reaches down"
+  ],
+  [
+   158.5,
+   "action",
+   "tumble looks"
+  ],
+  [
+   160.16,
+   "action",
+   "the water goes up the trunk"
+  ],
+  [
+   160.16,
+   "word",
+   "SLURP!"
+  ],
+  [
+   162.5,
+   "new place",
+   "the picture board (blue) fact: sucks up, blows in"
+  ],
+  [
+   162.6,
+   "action",
+   "the trunk dips into the water"
+  ],
+  [
+   163.57,
+   "picture",
+   "n1"
+  ],
+  [
+   163.57,
+   "word",
+   "SUCK UP"
+  ],
+  [
+   165.74,
+   "action",
+   "the trunk comes up"
+  ],
+  [
+   165.74,
+   "picture",
+   "n2"
+  ],
+  [
+   166.08,
+   "action",
+   "the water goes into the mouth"
+  ],
+  [
+   166.08,
+   "picture",
+   "ar"
+  ],
+  [
+   166.08,
+   "word",
+   "BLOW IN"
+  ],
+  [
+   168.44,
+   "new place",
+   "the rocks the pool is empty"
+  ],
+  [
+   170.05,
+   "word",
+   "EMPTY!"
+  ],
+  [
+   171.5,
+   "word",
+   "THE LAST DRINK"
+  ],
+  [
+   172.81,
+   "new shot",
+   "the rocks one trunkful"
+  ],
+  [
+   174.38,
+   "picture",
+   "wd"
+  ],
+  [
+   174.38,
+   "word",
+   "ONE TRUNKFUL"
+  ],
+  [
+   175.3,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   177.5,
+   "new shot",
+   "the rocks the birds look up"
+  ],
+  [
+   177.52,
+   "action",
+   "bo looks sad"
+  ],
+  [
+   177.52,
+   "action",
+   "kiki looks sad"
+  ],
+  [
+   177.52,
+   "action",
+   "pip looks sad"
+  ],
+  [
+   178.96,
+   "action",
+   "the birds look up"
+  ],
+  [
+   181.88,
+   "new shot",
+   "the rocks if I drink it all"
+  ],
+  [
+   181.9,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   182.95,
+   "action",
+   "tumble looks"
+  ],
+  [
+   184.69,
+   "new shot",
+   "the rocks I do not know"
+  ],
+  [
+   184.71,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   185.81,
+   "action",
+   "blink"
+  ],
+  [
+   186.88,
+   "new shot",
+   "the rocks question: drink or share"
+  ],
+  [
+   188.78,
+   "sign",
+   "DRINK"
+  ],
+  [
+   189.13,
+   "sign",
+   "SHARE"
+  ],
+  [
+   190.55,
+   "thinking dot",
+   "1"
+  ],
+  [
+   191.22,
+   "thinking dot",
+   "2"
+  ],
+  [
+   191.9,
+   "thinking dot",
+   "3"
+  ],
+  [
+   192.38,
+   "answer",
+   "SHARE"
+  ],
+  [
+   193.44,
+   "new shot",
+   "the rocks I will share"
+  ],
+  [
+   193.46,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   194.16,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   195.39,
+   "action",
+   "tumble hops"
+  ],
+  [
+   195.39,
+   "word",
+   "SHARE!"
+  ],
+  [
+   196.25,
+   "new shot",
+   "the rocks open your beaks"
+  ],
+  [
+   196.96,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   198.38,
+   "action",
+   "bo opens its beak"
+  ],
+  [
+   198.38,
+   "action",
+   "kiki opens its beak"
+  ],
+  [
+   198.38,
+   "action",
+   "pip opens its beak"
+  ],
+  [
+   198.38,
+   "word",
+   "OPEN WIDE!"
+  ],
+  [
+   200.31,
+   "action",
+   "pip opens its beak"
+  ],
+  [
+   200.31,
+   "new shot",
+   "the rocks a drink for Pip"
+  ],
+  [
+   200.66,
+   "picture",
+   "sq"
+  ],
+  [
+   200.66,
+   "word",
+   "SQUIRT!"
+  ],
+  [
+   201.84,
+   "action",
+   "pip hops"
+  ],
+  [
+   201.84,
+   "word",
+   "1"
+  ],
+  [
+   202.5,
+   "action",
+   "kiki opens its beak"
+  ],
+  [
+   202.5,
+   "new shot",
+   "the rocks a drink for Kiki"
+  ],
+  [
+   202.85,
+   "picture",
+   "sq"
+  ],
+  [
+   202.85,
+   "word",
+   "SQUIRT!"
+  ],
+  [
+   204.02,
+   "action",
+   "kiki hops"
+  ],
+  [
+   204.02,
+   "word",
+   "2"
+  ],
+  [
+   205.0,
+   "action",
+   "bo opens its beak"
+  ],
+  [
+   205.0,
+   "new shot",
+   "the rocks a drink for Bo"
+  ],
+  [
+   205.17,
+   "picture",
+   "sq"
+  ],
+  [
+   205.17,
+   "word",
+   "SQUIRT!"
+  ],
+  [
+   206.5,
+   "action",
+   "bo hops"
+  ],
+  [
+   206.5,
+   "word",
+   "3"
+  ],
+  [
+   207.19,
+   "new shot",
+   "the rocks three drops for Tumble"
+  ],
+  [
+   208.17,
+   "picture",
+   "dr"
+  ],
+  [
+   209.18,
+   "action",
+   "three drops go into his mouth"
+  ],
+  [
+   209.18,
+   "word",
+   "DRIP!"
+  ],
+  [
+   210.51,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   212.5,
+   "new shot",
+   "the rocks question: count the birds"
+  ],
+  [
+   215.68,
+   "count",
+   "1"
+  ],
+  [
+   216.22,
+   "action",
+   "milo hops"
+  ],
+  [
+   216.33,
+   "count",
+   "2"
+  ],
+  [
+   216.98,
+   "count",
+   "3"
+  ],
+  [
+   217.19,
+   "new shot",
+   "the rocks happy inside"
+  ],
+  [
+   217.21,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   219.64,
+   "action",
+   "blink"
+  ],
+  [
+   219.64,
+   "picture",
+   "h1"
+  ],
+  [
+   220.94,
+   "new shot",
+   "the rocks song: thank you, Tumble"
+  ],
+  [
+   221.25,
+   "action",
+   "bo hops"
+  ],
+  [
+   221.25,
+   "action",
+   "kiki hops"
+  ],
+  [
+   221.25,
+   "action",
+   "pip hops"
+  ],
+  [
+   221.25,
+   "word",
+   "TWEET!"
+  ],
+  [
+   222.5,
+   "action",
+   "bo flaps its wings"
+  ],
+  [
+   222.5,
+   "action",
+   "kiki flaps its wings"
+  ],
+  [
+   222.5,
+   "action",
+   "pip flaps its wings"
+  ],
+  [
+   222.5,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   226.25,
+   "new shot",
+   "the rocks Kiki flies up"
+  ],
+  [
+   226.35,
+   "action",
+   "kiki flaps its wings"
+  ],
+  [
+   227.02,
+   "action",
+   "Kiki flies up"
+  ],
+  [
+   228.08,
+   "action",
+   "kiki looks wow"
+  ],
+  [
+   229.38,
+   "action",
+   "the clouds come"
+  ],
+  [
+   229.38,
+   "new shot",
+   "the rocks clouds"
+  ],
+  [
+   231.35,
+   "word",
+   "RAIN CLOUDS!"
+  ],
+  [
+   232.81,
+   "new shot",
+   "the rocks Bo: rain is coming"
+  ],
+  [
+   232.83,
+   "action",
+   "bo looks wow"
+  ],
+  [
+   233.08,
+   "action",
+   "bo hops"
+  ],
+  [
+   233.08,
+   "action",
+   "bo hops"
+  ],
+  [
+   235.31,
+   "new shot",
+   "the rocks the rain"
+  ],
+  [
+   235.33,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   236.4,
+   "action",
+   "tumble hops"
+  ],
+  [
+   236.4,
+   "word",
+   "RAIN!"
+  ],
+  [
+   237.27,
+   "action",
+   "pip hops"
+  ],
+  [
+   237.57,
+   "action",
+   "kiki hops"
+  ],
+  [
+   237.93,
+   "action",
+   "bo hops"
+  ],
+  [
+   238.75,
+   "new shot",
+   "the rocks the pool fills up"
+  ],
+  [
+   239.74,
+   "action",
+   "the pool fills up"
+  ],
+  [
+   242.36,
+   "word",
+   "FULL!"
+  ],
+  [
+   243.12,
+   "new shot",
+   "the rocks the big drink"
+  ],
+  [
+   243.15,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   244.24,
+   "action",
+   "Tumble's trunk reaches down"
+  ],
+  [
+   244.24,
+   "action",
+   "tumble looks"
+  ],
+  [
+   245.24,
+   "word",
+   "SLURP!"
+  ],
+  [
+   246.25,
+   "new shot",
+   "the rocks glug"
+  ],
+  [
+   246.27,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   248.32,
+   "action",
+   "blink"
+  ],
+  [
+   248.32,
+   "action",
+   "the water goes into his mouth"
+  ],
+  [
+   248.32,
+   "word",
+   "GLUG!"
+  ],
+  [
+   249.02,
+   "action",
+   "blink"
+  ],
+  [
+   250.31,
+   "new shot",
+   "the rocks fact: squirt to keep cool"
+  ],
+  [
+   250.33,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   250.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   251.11,
+   "picture",
+   "sp"
+  ],
+  [
+   251.11,
+   "word",
+   "SQUIRT!"
+  ],
+  [
+   253.35,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   253.35,
+   "word",
+   "= COOL!"
+  ],
+  [
+   254.06,
+   "new shot",
+   "the rocks the birds splash"
+  ],
+  [
+   254.54,
+   "action",
+   "pip flaps its wings"
+  ],
+  [
+   254.94,
+   "action",
+   "kiki hops"
+  ],
+  [
+   254.94,
+   "picture",
+   "r2"
+  ],
+  [
+   256.7,
+   "action",
+   "pip hops"
+  ],
+  [
+   256.7,
+   "picture",
+   "r1"
+  ],
+  [
+   256.7,
+   "word",
+   "SPLASH!"
+  ],
+  [
+   257.91,
+   "action",
+   "bo hops"
+  ],
+  [
+   257.91,
+   "picture",
+   "r3"
+  ],
+  [
+   259.06,
+   "new place",
+   "the zoo at sunset back at the zoo"
+  ],
+  [
+   259.16,
+   "action",
+   "bo walks"
+  ],
+  [
+   259.16,
+   "action",
+   "kiki walks"
+  ],
+  [
+   259.16,
+   "action",
+   "pip walks"
+  ],
+  [
+   259.16,
+   "action",
+   "tumble walks"
+  ],
+  [
+   261.91,
+   "word",
+   "HOME!"
+  ],
+  [
+   263.44,
+   "new shot",
+   "the zoo at sunset three new friends"
+  ],
+  [
+   263.46,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   265.68,
+   "action",
+   "pip hops"
+  ],
+  [
+   265.92,
+   "action",
+   "kiki hops"
+  ],
+  [
+   266.04,
+   "action",
+   "bo hops"
+  ],
+  [
+   266.88,
+   "new shot",
+   "the zoo at sunset Pip: his last drink"
+  ],
+  [
+   268.23,
+   "action",
+   "pip hops"
+  ],
+  [
+   269.38,
+   "new shot",
+   "the zoo at sunset Mama: so proud"
+  ],
+  [
+   269.88,
+   "action",
+   "mama nods"
+  ],
+  [
+   272.79,
+   "action",
+   "blink"
+  ],
+  [
+   272.79,
+   "word",
+   "SO PROUD!"
+  ],
+  [
+   274.06,
+   "new shot",
+   "the zoo at sunset trunk hug"
+  ],
+  [
+   274.66,
+   "action",
+   "mama looks"
+  ],
+  [
+   274.66,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   276.94,
+   "picture",
+   "h1"
+  ],
+  [
+   278.36,
+   "picture",
+   "h2"
+  ],
+  [
+   279.06,
+   "new shot",
+   "the zoo at sunset the lesson"
+  ],
+  [
+   279.6,
+   "word",
+   "SHARING IS KIND"
+  ],
+  [
+   282.5,
+   "new shot",
+   "the zoo at sunset question: trunk or tail"
+  ],
+  [
+   286.85,
+   "sign",
+   "TRUNK"
+  ],
+  [
+   287.2,
+   "sign",
+   "TAIL"
+  ],
+  [
+   288.91,
+   "thinking dot",
+   "1"
+  ],
+  [
+   289.58,
+   "thinking dot",
+   "2"
+  ],
+  [
+   290.26,
+   "thinking dot",
+   "3"
+  ],
+  [
+   290.74,
+   "answer",
+   "TRUNK"
+  ],
+  [
+   291.88,
+   "new shot",
+   "the zoo at sunset question: mouth or ear"
+  ],
+  [
+   295.3,
+   "sign",
+   "MOUTH"
+  ],
+  [
+   295.65,
+   "sign",
+   "EAR"
+  ],
+  [
+   297.68,
+   "thinking dot",
+   "1"
+  ],
+  [
+   298.35,
+   "thinking dot",
+   "2"
+  ],
+  [
+   299.02,
+   "thinking dot",
+   "3"
+  ],
+  [
+   299.51,
+   "answer",
+   "MOUTH"
+  ],
+  [
+   300.94,
+   "new shot",
+   "the zoo at sunset song: hooray"
+  ],
+  [
+   301.94,
+   "action",
+   "bo hops"
+  ],
+  [
+   301.94,
+   "action",
+   "kiki hops"
+  ],
+  [
+   301.94,
+   "action",
+   "pip hops"
+  ],
+  [
+   301.94,
+   "action",
+   "tumble hops"
+  ],
+  [
+   303.12,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   304.14,
+   "action",
+   "mama nods"
+  ],
+  [
+   306.56,
+   "new shot",
+   "the zoo at sunset song: rainy happy day"
+  ],
+  [
+   307.81,
+   "picture",
+   "h1"
+  ],
+  [
+   308.16,
+   "action",
+   "mama nods"
+  ],
+  [
+   309.06,
+   "picture",
+   "h2"
+  ],
+  [
+   309.56,
+   "action",
+   "bo flaps its wings"
+  ],
+  [
+   309.56,
+   "action",
+   "kiki flaps its wings"
+  ],
+  [
+   309.56,
+   "action",
+   "pip flaps its wings"
+  ],
+  [
+   311.88,
+   "new shot",
+   "the zoo at sunset goodbye"
+  ],
+  [
+   312.69,
+   "action",
+   "milo hops"
+  ],
+  [
+   312.69,
+   "word",
+   "SEE YOU SOON!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "zoo",
+   "say": "No rain for days and days! And Tumble is so, so thirsty.",
+   "t0": 0.0,
+   "t1": 5.0,
+   "v0": 0.42,
+   "dur": 4.240125,
+   "words": [
+    [
+     "No",
+     0.01,
+     0.3
+    ],
+    [
+     "rain",
+     0.3,
+     0.6
+    ],
+    [
+     "for",
+     0.6,
+     0.75
+    ],
+    [
+     "days",
+     0.75,
+     1.2
+    ],
+    [
+     "and",
+     1.2,
+     1.33
+    ],
+    [
+     "days!",
+     1.33,
+     1.87
+    ],
+    [
+     "And",
+     2.27,
+     2.42
+    ],
+    [
+     "Tumble",
+     2.42,
+     2.86
+    ],
+    [
+     "is",
+     2.86,
+     2.96
+    ],
+    [
+     "so,",
+     2.96,
+     3.32
+    ],
+    [
+     "so",
+     3.32,
+     3.51
+    ],
+    [
+     "thirsty.",
+     3.51,
+     4.24
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: no rain, so thirsty",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "I'm Milo! Can you help Tumble find a drink of water?",
+   "t0": 5.0,
+   "t1": 9.0625,
+   "v0": 5.180125,
+   "dur": 3.498666666666667,
+   "words": [
+    [
+     "I'm",
+     0.0,
+     0.33
+    ],
+    [
+     "Milo!",
+     0.33,
+     0.94
+    ],
+    [
+     "Can",
+     1.27,
+     1.42
+    ],
+    [
+     "you",
+     1.42,
+     1.52
+    ],
+    [
+     "help",
+     1.52,
+     1.81
+    ],
+    [
+     "Tumble",
+     1.81,
+     2.18
+    ],
+    [
+     "find",
+     2.18,
+     2.52
+    ],
+    [
+     "a",
+     2.52,
+     2.56
+    ],
+    [
+     "drink",
+     2.56,
+     2.85
+    ],
+    [
+     "of",
+     2.85,
+     2.97
+    ],
+    [
+     "water?",
+     2.97,
+     3.499
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "This is Tumble, the baby elephant. And this is his mama.",
+   "t0": 9.0625,
+   "t1": 13.75,
+   "v0": 9.198791666666667,
+   "dur": 4.240166666666667,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.28
+    ],
+    [
+     "is",
+     0.28,
+     0.51
+    ],
+    [
+     "Tumble,",
+     0.51,
+     1.2
+    ],
+    [
+     "the",
+     1.2,
+     1.28
+    ],
+    [
+     "baby",
+     1.28,
+     1.74
+    ],
+    [
+     "elephant.",
+     1.74,
+     2.41
+    ],
+    [
+     "And",
+     2.77,
+     2.96
+    ],
+    [
+     "this",
+     2.96,
+     3.22
+    ],
+    [
+     "is",
+     3.22,
+     3.44
+    ],
+    [
+     "his",
+     3.44,
+     3.66
+    ],
+    [
+     "mama.",
+     3.66,
+     4.24
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "zoo wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "The water hole is dry, little one. We need the rain.",
+   "t0": 13.75,
+   "t1": 17.8125,
+   "v0": 13.958958333333333,
+   "dur": 3.661625,
+   "words": [
+    [
+     "The",
+     0.01,
+     0.17
+    ],
+    [
+     "water",
+     0.17,
+     0.56
+    ],
+    [
+     "hole",
+     0.56,
+     0.97
+    ],
+    [
+     "is",
+     0.97,
+     1.14
+    ],
+    [
+     "dry,",
+     1.14,
+     1.62
+    ],
+    [
+     "little",
+     1.62,
+     1.91
+    ],
+    [
+     "one.",
+     1.91,
+     2.26
+    ],
+    [
+     "We",
+     2.61,
+     2.73
+    ],
+    [
+     "need",
+     2.73,
+     2.95
+    ],
+    [
+     "the",
+     2.95,
+     3.04
+    ],
+    [
+     "rain.",
+     3.04,
+     3.66
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: we need the rain",
+   "who": "mama",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "I will find water, Mama. One big, cool drink!",
+   "t0": 17.8125,
+   "t1": 21.25,
+   "v0": 18.140583333333332,
+   "dur": 2.87225,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.11
+    ],
+    [
+     "will",
+     0.11,
+     0.24
+    ],
+    [
+     "find",
+     0.24,
+     0.55
+    ],
+    [
+     "water,",
+     0.55,
+     0.87
+    ],
+    [
+     "Mama.",
+     0.87,
+     1.29
+    ],
+    [
+     "One",
+     1.5,
+     1.75
+    ],
+    [
+     "big,",
+     1.75,
+     2.04
+    ],
+    [
+     "cool",
+     2.04,
+     2.36
+    ],
+    [
+     "drink!",
+     2.36,
+     2.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goal: find water",
+   "who": "tumble",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "But where is the water, when there is no rain?",
+   "t0": 21.25,
+   "t1": 24.6875,
+   "v0": 21.532833333333333,
+   "dur": 2.7060833333333334,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.16
+    ],
+    [
+     "where",
+     0.16,
+     0.42
+    ],
+    [
+     "is",
+     0.42,
+     0.58
+    ],
+    [
+     "the",
+     0.58,
+     0.67
+    ],
+    [
+     "water,",
+     0.67,
+     1.24
+    ],
+    [
+     "when",
+     1.43,
+     1.6
+    ],
+    [
+     "there",
+     1.6,
+     1.73
+    ],
+    [
+     "is",
+     1.73,
+     1.88
+    ],
+    [
+     "no",
+     1.88,
+     2.09
+    ],
+    [
+     "rain?",
+     2.09,
+     2.706
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: where is the water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Follow your nose, Tumble. And stay close to Milo.",
+   "t0": 24.6875,
+   "t1": 28.4375,
+   "v0": 24.758916666666664,
+   "dur": 3.473708333333333,
+   "words": [
+    [
+     "Follow",
+     0.02,
+     0.42
+    ],
+    [
+     "your",
+     0.42,
+     0.64
+    ],
+    [
+     "nose,",
+     0.64,
+     1.08
+    ],
+    [
+     "Tumble.",
+     1.08,
+     1.66
+    ],
+    [
+     "And",
+     1.84,
+     1.98
+    ],
+    [
+     "stay",
+     1.98,
+     2.3
+    ],
+    [
+     "close",
+     2.3,
+     2.7
+    ],
+    [
+     "to",
+     2.7,
+     2.82
+    ],
+    [
+     "Milo.",
+     2.82,
+     3.47
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: follow your nose",
+   "who": "mama",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Off they go, to look for water.",
+   "t0": 28.4375,
+   "t1": 31.25,
+   "v0": 28.752625,
+   "dur": 2.2162916666666668,
+   "words": [
+    [
+     "Off",
+     0.19,
+     0.35
+    ],
+    [
+     "they",
+     0.35,
+     0.5
+    ],
+    [
+     "go,",
+     0.5,
+     0.97
+    ],
+    [
+     "to",
+     1.15,
+     1.27
+    ],
+    [
+     "look",
+     1.27,
+     1.48
+    ],
+    [
+     "for",
+     1.48,
+     1.63
+    ],
+    [
+     "water.",
+     1.63,
+     2.216
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "off they go",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Friends help friends, come along with me! Step by step, what will we see?",
+   "t0": 31.25,
+   "t1": 41.875,
+   "v0": 31.875,
+   "dur": 10.0,
+   "words": [
+    [
+     "Friends",
+     0.0,
+     0.575
+    ],
+    [
+     "help",
+     0.625,
+     1.2
+    ],
+    [
+     "friends,",
+     1.25,
+     1.825
+    ],
+    [
+     "come",
+     1.875,
+     2.163
+    ],
+    [
+     "along",
+     2.188,
+     2.763
+    ],
+    [
+     "with",
+     2.812,
+     3.1
+    ],
+    [
+     "me!",
+     3.125,
+     4.275
+    ],
+    [
+     "Step",
+     5.0,
+     5.575
+    ],
+    [
+     "by",
+     5.625,
+     6.2
+    ],
+    [
+     "step,",
+     6.25,
+     6.825
+    ],
+    [
+     "what",
+     6.875,
+     7.162
+    ],
+    [
+     "will",
+     7.188,
+     7.475
+    ],
+    [
+     "we",
+     7.5,
+     8.075
+    ],
+    [
+     "see?",
+     8.125,
+     9.275
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: off we go",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "dryhole",
+   "say": "Here is the water hole. But, oh! Where is the water?",
+   "t0": 41.875,
+   "t1": 45.9375,
+   "v0": 41.995,
+   "dur": 3.523625,
+   "words": [
+    [
+     "Here",
+     0.08,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.53
+    ],
+    [
+     "the",
+     0.53,
+     0.61
+    ],
+    [
+     "water",
+     0.61,
+     0.94
+    ],
+    [
+     "hole.",
+     0.94,
+     1.4
+    ],
+    [
+     "But,",
+     1.74,
+     1.93
+    ],
+    [
+     "oh!",
+     1.93,
+     2.33
+    ],
+    [
+     "Where",
+     2.5,
+     2.71
+    ],
+    [
+     "is",
+     2.71,
+     2.85
+    ],
+    [
+     "the",
+     2.85,
+     2.94
+    ],
+    [
+     "water?",
+     2.94,
+     3.52
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the water hole",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "No water. Only dry, cracked mud.",
+   "t0": 45.9375,
+   "t1": 49.375,
+   "v0": 46.038624999999996,
+   "dur": 2.8682083333333335,
+   "words": [
+    [
+     "No",
+     0.05,
+     0.34
+    ],
+    [
+     "water.",
+     0.34,
+     0.87
+    ],
+    [
+     "Only",
+     1.17,
+     1.47
+    ],
+    [
+     "dry,",
+     1.47,
+     1.93
+    ],
+    [
+     "cracked",
+     1.93,
+     2.47
+    ],
+    [
+     "mud.",
+     2.47,
+     2.868
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "dry mud",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "Oh no. The water is all gone.",
+   "t0": 49.375,
+   "t1": 51.25,
+   "v0": 49.42683333333333,
+   "dur": 1.6540416666666666,
+   "words": [
+    [
+     "Oh",
+     0.01,
+     0.11
+    ],
+    [
+     "no.",
+     0.11,
+     0.45
+    ],
+    [
+     "The",
+     0.45,
+     0.58
+    ],
+    [
+     "water",
+     0.58,
+     0.89
+    ],
+    [
+     "is",
+     0.89,
+     1.02
+    ],
+    [
+     "all",
+     1.02,
+     1.14
+    ],
+    [
+     "gone.",
+     1.14,
+     1.65
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "all gone",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "Is there any water in the water hole? Yes, or no?",
+   "t0": 51.25,
+   "t1": 58.75,
+   "v0": 51.60087499999999,
+   "dur": 3.549125,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.2
+    ],
+    [
+     "there",
+     0.2,
+     0.38
+    ],
+    [
+     "any",
+     0.38,
+     0.61
+    ],
+    [
+     "water",
+     0.61,
+     1.08
+    ],
+    [
+     "in",
+     1.08,
+     1.2
+    ],
+    [
+     "the",
+     1.2,
+     1.28
+    ],
+    [
+     "water",
+     1.28,
+     1.61
+    ],
+    [
+     "hole?",
+     1.61,
+     2.01
+    ],
+    [
+     "Yes,",
+     2.41,
+     2.95
+    ],
+    [
+     "or",
+     2.95,
+     3.13
+    ],
+    [
+     "no?",
+     3.13,
+     3.549
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: yes or no",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "My mouth is so dry, Milo. What can I do?",
+   "t0": 58.75,
+   "t1": 61.875,
+   "v0": 58.86999999999999,
+   "dur": 2.59425,
+   "words": [
+    [
+     "My",
+     0.0,
+     0.17
+    ],
+    [
+     "mouth",
+     0.17,
+     0.51
+    ],
+    [
+     "is",
+     0.51,
+     0.58
+    ],
+    [
+     "so",
+     0.58,
+     0.77
+    ],
+    [
+     "dry,",
+     0.77,
+     1.11
+    ],
+    [
+     "Milo.",
+     1.11,
+     1.63
+    ],
+    [
+     "What",
+     1.78,
+     1.9
+    ],
+    [
+     "can",
+     1.9,
+     2.04
+    ],
+    [
+     "I",
+     2.04,
+     2.15
+    ],
+    [
+     "do?",
+     2.15,
+     2.59
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "what can I do",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "Tumble, you have a super nose. Your trunk!",
+   "t0": 61.875,
+   "t1": 65.0,
+   "v0": 61.98424999999999,
+   "dur": 2.7767916666666665,
+   "words": [
+    [
+     "Tumble,",
+     0.0,
+     0.44
+    ],
+    [
+     "you",
+     0.44,
+     0.6
+    ],
+    [
+     "have",
+     0.6,
+     0.78
+    ],
+    [
+     "a",
+     0.78,
+     0.81
+    ],
+    [
+     "super",
+     0.81,
+     1.2
+    ],
+    [
+     "nose.",
+     1.2,
+     1.79
+    ],
+    [
+     "Your",
+     2.01,
+     2.19
+    ],
+    [
+     "trunk!",
+     2.19,
+     2.777
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: your trunk",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "An elephant can smell water with its trunk, from far, far away.",
+   "t0": 65.0,
+   "t1": 70.3125,
+   "v0": 65.28104166666667,
+   "dur": 4.629833333333333,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.11
+    ],
+    [
+     "elephant",
+     0.11,
+     0.76
+    ],
+    [
+     "can",
+     0.76,
+     0.94
+    ],
+    [
+     "smell",
+     0.94,
+     1.33
+    ],
+    [
+     "water",
+     1.33,
+     1.76
+    ],
+    [
+     "with",
+     1.76,
+     1.91
+    ],
+    [
+     "its",
+     1.91,
+     2.09
+    ],
+    [
+     "trunk,",
+     2.09,
+     2.62
+    ],
+    [
+     "from",
+     2.93,
+     3.13
+    ],
+    [
+     "far,",
+     3.13,
+     3.82
+    ],
+    [
+     "far",
+     3.82,
+     4.16
+    ],
+    [
+     "away.",
+     4.16,
+     4.63
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: smells water far away",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "Sniff, sniff, sniff. I smell water! This way!",
+   "t0": 70.3125,
+   "t1": 73.125,
+   "v0": 70.43087500000001,
+   "dur": 2.378041666666667,
+   "words": [
+    [
+     "Sniff,",
+     0.01,
+     0.29
+    ],
+    [
+     "sniff,",
+     0.29,
+     0.59
+    ],
+    [
+     "sniff.",
+     0.59,
+     0.94
+    ],
+    [
+     "I",
+     0.94,
+     1.07
+    ],
+    [
+     "smell",
+     1.07,
+     1.44
+    ],
+    [
+     "water!",
+     1.44,
+     1.76
+    ],
+    [
+     "This",
+     1.76,
+     1.98
+    ],
+    [
+     "way!",
+     1.98,
+     2.378
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I smell water",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dryhole",
+   "say": "Can you sniff like Tumble? Sniff, sniff, sniff!",
+   "t0": 73.125,
+   "t1": 76.875,
+   "v0": 73.32891666666669,
+   "dur": 3.3584583333333335,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.23
+    ],
+    [
+     "you",
+     0.23,
+     0.36
+    ],
+    [
+     "sniff",
+     0.36,
+     0.71
+    ],
+    [
+     "like",
+     0.71,
+     0.89
+    ],
+    [
+     "Tumble?",
+     0.89,
+     1.51
+    ],
+    [
+     "Sniff,",
+     1.86,
+     2.39
+    ],
+    [
+     "sniff,",
+     2.39,
+     2.76
+    ],
+    [
+     "sniff!",
+     2.76,
+     3.358
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sniff",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble follows his nose. Over the hill, and past the tall, dry grass.",
+   "t0": 76.875,
+   "t1": 82.8125,
+   "v0": 77.20737500000003,
+   "dur": 5.262666666666667,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.36
+    ],
+    [
+     "follows",
+     0.36,
+     0.86
+    ],
+    [
+     "his",
+     0.86,
+     1.01
+    ],
+    [
+     "nose.",
+     1.01,
+     1.64
+    ],
+    [
+     "Over",
+     2.08,
+     2.35
+    ],
+    [
+     "the",
+     2.35,
+     2.43
+    ],
+    [
+     "hill,",
+     2.43,
+     2.91
+    ],
+    [
+     "and",
+     3.04,
+     3.21
+    ],
+    [
+     "past",
+     3.21,
+     3.61
+    ],
+    [
+     "the",
+     3.61,
+     3.68
+    ],
+    [
+     "tall,",
+     3.68,
+     4.17
+    ],
+    [
+     "dry",
+     4.17,
+     4.58
+    ],
+    [
+     "grass.",
+     4.58,
+     5.26
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "follows his nose",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Under the big tree, somebody calls. Cheep, cheep, cheep!",
+   "t0": 82.8125,
+   "t1": 87.1875,
+   "v0": 82.9900416666667,
+   "dur": 3.9593333333333334,
+   "words": [
+    [
+     "Under",
+     0.03,
+     0.31
+    ],
+    [
+     "the",
+     0.31,
+     0.42
+    ],
+    [
+     "big",
+     0.42,
+     0.64
+    ],
+    [
+     "tree,",
+     0.64,
+     1.14
+    ],
+    [
+     "somebody",
+     1.14,
+     1.57
+    ],
+    [
+     "calls.",
+     1.57,
+     2.18
+    ],
+    [
+     "Cheep,",
+     2.59,
+     3.03
+    ],
+    [
+     "cheep,",
+     3.03,
+     3.41
+    ],
+    [
+     "cheep!",
+     3.41,
+     3.959
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "cheep",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Three little birds! Pip, Kiki and Bo.",
+   "t0": 87.1875,
+   "t1": 90.625,
+   "v0": 87.46937500000004,
+   "dur": 2.6807083333333335,
+   "words": [
+    [
+     "Three",
+     0.02,
+     0.36
+    ],
+    [
+     "little",
+     0.36,
+     0.56
+    ],
+    [
+     "birds!",
+     0.56,
+     1.16
+    ],
+    [
+     "Pip,",
+     1.33,
+     1.61
+    ],
+    [
+     "Kiki",
+     1.61,
+     2.04
+    ],
+    [
+     "and",
+     2.04,
+     2.19
+    ],
+    [
+     "Bo.",
+     2.19,
+     2.68
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Pip, Kiki and Bo",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "We are thirsty, too. Our puddle is all dry.",
+   "t0": 90.625,
+   "t1": 93.75,
+   "v0": 90.67008333333338,
+   "dur": 2.732291666666667,
+   "words": [
+    [
+     "We",
+     0.0,
+     0.16
+    ],
+    [
+     "are",
+     0.16,
+     0.24
+    ],
+    [
+     "thirsty,",
+     0.24,
+     0.8
+    ],
+    [
+     "too.",
+     0.8,
+     1.34
+    ],
+    [
+     "Our",
+     1.34,
+     1.47
+    ],
+    [
+     "puddle",
+     1.47,
+     1.85
+    ],
+    [
+     "is",
+     1.85,
+     2.02
+    ],
+    [
+     "all",
+     2.02,
+     2.22
+    ],
+    [
+     "dry.",
+     2.22,
+     2.73
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Pip: thirsty too",
+   "who": "pip",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "And our wings are too tired to fly far.",
+   "t0": 93.75,
+   "t1": 96.875,
+   "v0": 93.92237500000006,
+   "dur": 2.59925,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.14
+    ],
+    [
+     "our",
+     0.14,
+     0.24
+    ],
+    [
+     "wings",
+     0.24,
+     0.79
+    ],
+    [
+     "are",
+     0.79,
+     0.92
+    ],
+    [
+     "too",
+     0.92,
+     1.21
+    ],
+    [
+     "tired",
+     1.21,
+     1.68
+    ],
+    [
+     "to",
+     1.68,
+     1.76
+    ],
+    [
+     "fly",
+     1.76,
+     2.09
+    ],
+    [
+     "far.",
+     2.09,
+     2.599
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Kiki: tired wings",
+   "who": "kiki",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Come with me! My nose can find water.",
+   "t0": 96.875,
+   "t1": 99.375,
+   "v0": 97.04162500000007,
+   "dur": 2.036208333333333,
+   "words": [
+    [
+     "Come",
+     0.0,
+     0.2
+    ],
+    [
+     "with",
+     0.2,
+     0.34
+    ],
+    [
+     "me!",
+     0.34,
+     0.55
+    ],
+    [
+     "My",
+     0.55,
+     0.73
+    ],
+    [
+     "nose",
+     0.73,
+     1.02
+    ],
+    [
+     "can",
+     1.02,
+     1.18
+    ],
+    [
+     "find",
+     1.18,
+     1.51
+    ],
+    [
+     "water.",
+     1.51,
+     2.036
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "come with me",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Tumble walks on. The birds hop after him. Hop, hop, hop. Too slow!",
+   "t0": 99.375,
+   "t1": 105.0,
+   "v0": 99.59783333333341,
+   "dur": 5.178958333333333,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.37
+    ],
+    [
+     "walks",
+     0.37,
+     0.77
+    ],
+    [
+     "on.",
+     0.77,
+     1.16
+    ],
+    [
+     "The",
+     1.31,
+     1.4
+    ],
+    [
+     "birds",
+     1.4,
+     1.81
+    ],
+    [
+     "hop",
+     1.81,
+     2.06
+    ],
+    [
+     "after",
+     2.06,
+     2.37
+    ],
+    [
+     "him.",
+     2.37,
+     2.68
+    ],
+    [
+     "Hop,",
+     3.22,
+     3.58
+    ],
+    [
+     "hop,",
+     3.58,
+     3.94
+    ],
+    [
+     "hop.",
+     3.94,
+     4.3
+    ],
+    [
+     "Too",
+     4.3,
+     4.57
+    ],
+    [
+     "slow!",
+     4.57,
+     5.179
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "too slow",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "How can three little birds come along? Ride on Tumble, or stay here?",
+   "t0": 105.0,
+   "t1": 113.4375,
+   "v0": 105.29679166666675,
+   "dur": 4.628791666666666,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.22
+    ],
+    [
+     "can",
+     0.22,
+     0.45
+    ],
+    [
+     "three",
+     0.45,
+     0.77
+    ],
+    [
+     "little",
+     0.77,
+     0.97
+    ],
+    [
+     "birds",
+     0.97,
+     1.38
+    ],
+    [
+     "come",
+     1.38,
+     1.57
+    ],
+    [
+     "along?",
+     1.57,
+     2.09
+    ],
+    [
+     "Ride",
+     2.56,
+     2.86
+    ],
+    [
+     "on",
+     2.86,
+     3.05
+    ],
+    [
+     "Tumble,",
+     3.05,
+     3.73
+    ],
+    [
+     "or",
+     3.73,
+     3.84
+    ],
+    [
+     "stay",
+     3.84,
+     4.21
+    ],
+    [
+     "here?",
+     4.21,
+     4.629
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: ride or stay",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "I know! Hop on my back, little birds!",
+   "t0": 113.4375,
+   "t1": 115.9375,
+   "v0": 113.64558333333343,
+   "dur": 2.008166666666667,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.12
+    ],
+    [
+     "know!",
+     0.12,
+     0.41
+    ],
+    [
+     "Hop",
+     0.41,
+     0.71
+    ],
+    [
+     "on",
+     0.71,
+     0.79
+    ],
+    [
+     "my",
+     0.79,
+     0.93
+    ],
+    [
+     "back,",
+     0.93,
+     1.26
+    ],
+    [
+     "little",
+     1.26,
+     1.43
+    ],
+    [
+     "birds!",
+     1.43,
+     2.008
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hop on my back",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Hop, hop, hop! Three birds on one elephant.",
+   "t0": 115.9375,
+   "t1": 119.6875,
+   "v0": 116.17375000000011,
+   "dur": 3.1654583333333335,
+   "words": [
+    [
+     "Hop,",
+     0.01,
+     0.4
+    ],
+    [
+     "hop,",
+     0.4,
+     0.75
+    ],
+    [
+     "hop!",
+     0.75,
+     1.17
+    ],
+    [
+     "Three",
+     1.41,
+     1.71
+    ],
+    [
+     "birds",
+     1.71,
+     2.13
+    ],
+    [
+     "on",
+     2.13,
+     2.23
+    ],
+    [
+     "one",
+     2.23,
+     2.45
+    ],
+    [
+     "elephant.",
+     2.45,
+     3.16
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "three birds on one elephant",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Thank you, Tumble! This is a very good seat.",
+   "t0": 119.6875,
+   "t1": 122.8125,
+   "v0": 119.85920833333346,
+   "dur": 2.49075,
+   "words": [
+    [
+     "Thank",
+     0.06,
+     0.36
+    ],
+    [
+     "you,",
+     0.36,
+     0.53
+    ],
+    [
+     "Tumble!",
+     0.53,
+     0.98
+    ],
+    [
+     "This",
+     0.98,
+     1.18
+    ],
+    [
+     "is",
+     1.18,
+     1.3
+    ],
+    [
+     "a",
+     1.3,
+     1.36
+    ],
+    [
+     "very",
+     1.36,
+     1.68
+    ],
+    [
+     "good",
+     1.68,
+     1.91
+    ],
+    [
+     "seat.",
+     1.91,
+     2.49
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Bo: a good seat",
+   "who": "bo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "And off they go. Sniff, sniff, sniff.",
+   "t0": 122.8125,
+   "t1": 125.9375,
+   "v0": 122.86995833333347,
+   "dur": 2.729416666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.22
+    ],
+    [
+     "off",
+     0.22,
+     0.47
+    ],
+    [
+     "they",
+     0.47,
+     0.63
+    ],
+    [
+     "go.",
+     0.63,
+     1.1
+    ],
+    [
+     "Sniff,",
+     1.4,
+     1.77
+    ],
+    [
+     "sniff,",
+     1.77,
+     2.15
+    ],
+    [
+     "sniff.",
+     2.15,
+     2.729
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "off they go again",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "The smell stops at a pile of big rocks. Is the water here?",
+   "t0": 125.9375,
+   "t1": 130.625,
+   "v0": 126.11937500000015,
+   "dur": 4.177375,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "smell",
+     0.1,
+     0.56
+    ],
+    [
+     "stops",
+     0.56,
+     1.02
+    ],
+    [
+     "at",
+     1.02,
+     1.15
+    ],
+    [
+     "a",
+     1.15,
+     1.2
+    ],
+    [
+     "pile",
+     1.2,
+     1.7
+    ],
+    [
+     "of",
+     1.7,
+     1.81
+    ],
+    [
+     "big",
+     1.81,
+     2.08
+    ],
+    [
+     "rocks.",
+     2.08,
+     2.63
+    ],
+    [
+     "Is",
+     3.03,
+     3.22
+    ],
+    [
+     "the",
+     3.22,
+     3.31
+    ],
+    [
+     "water",
+     3.31,
+     3.74
+    ],
+    [
+     "here?",
+     3.74,
+     4.177
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the rocks",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Look! Down in a crack, one small pool of water.",
+   "t0": 130.625,
+   "t1": 134.375,
+   "v0": 130.81675000000016,
+   "dur": 3.367125,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.45
+    ],
+    [
+     "Down",
+     0.45,
+     0.81
+    ],
+    [
+     "in",
+     0.81,
+     0.88
+    ],
+    [
+     "a",
+     0.88,
+     0.93
+    ],
+    [
+     "crack,",
+     0.93,
+     1.51
+    ],
+    [
+     "one",
+     1.75,
+     2.01
+    ],
+    [
+     "small",
+     2.01,
+     2.37
+    ],
+    [
+     "pool",
+     2.37,
+     2.75
+    ],
+    [
+     "of",
+     2.75,
+     2.87
+    ],
+    [
+     "water.",
+     2.87,
+     3.367
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "one small pool",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Water! Me first, me first!",
+   "t0": 134.375,
+   "t1": 136.875,
+   "v0": 134.70387500000015,
+   "dur": 1.933875,
+   "words": [
+    [
+     "Water!",
+     0.0,
+     0.47
+    ],
+    [
+     "Me",
+     0.47,
+     0.65
+    ],
+    [
+     "first,",
+     0.65,
+     1.12
+    ],
+    [
+     "me",
+     1.12,
+     1.25
+    ],
+    [
+     "first!",
+     1.25,
+     1.93
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Pip: me first",
+   "who": "pip",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Pip leans down. But the pool is too deep for a little beak.",
+   "t0": 136.875,
+   "t1": 141.5625,
+   "v0": 137.15775000000016,
+   "dur": 3.9471666666666665,
+   "words": [
+    [
+     "Pip",
+     0.02,
+     0.33
+    ],
+    [
+     "leans",
+     0.33,
+     0.69
+    ],
+    [
+     "down.",
+     0.69,
+     1.22
+    ],
+    [
+     "But",
+     1.58,
+     1.71
+    ],
+    [
+     "the",
+     1.71,
+     1.79
+    ],
+    [
+     "pool",
+     1.79,
+     2.2
+    ],
+    [
+     "is",
+     2.2,
+     2.4
+    ],
+    [
+     "too",
+     2.4,
+     2.66
+    ],
+    [
+     "deep",
+     2.66,
+     2.99
+    ],
+    [
+     "for",
+     2.99,
+     3.2
+    ],
+    [
+     "a",
+     3.2,
+     3.25
+    ],
+    [
+     "little",
+     3.25,
+     3.48
+    ],
+    [
+     "beak.",
+     3.48,
+     3.947
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "too deep",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "I cannot reach it. Not even on my tiptoes!",
+   "t0": 141.5625,
+   "t1": 144.6875,
+   "v0": 141.62491666666685,
+   "dur": 2.7521666666666667,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.11
+    ],
+    [
+     "cannot",
+     0.11,
+     0.53
+    ],
+    [
+     "reach",
+     0.53,
+     0.83
+    ],
+    [
+     "it.",
+     0.83,
+     1.19
+    ],
+    [
+     "Not",
+     1.19,
+     1.44
+    ],
+    [
+     "even",
+     1.44,
+     1.63
+    ],
+    [
+     "on",
+     1.63,
+     1.73
+    ],
+    [
+     "my",
+     1.73,
+     1.88
+    ],
+    [
+     "tiptoes!",
+     1.88,
+     2.75
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Kiki: cannot reach",
+   "who": "kiki",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "So close. But we cannot get a drink.",
+   "t0": 144.6875,
+   "t1": 147.5,
+   "v0": 144.8970833333335,
+   "dur": 2.1730833333333335,
+   "words": [
+    [
+     "So",
+     0.02,
+     0.28
+    ],
+    [
+     "close.",
+     0.28,
+     0.74
+    ],
+    [
+     "But",
+     0.74,
+     0.86
+    ],
+    [
+     "we",
+     0.86,
+     0.97
+    ],
+    [
+     "cannot",
+     0.97,
+     1.33
+    ],
+    [
+     "get",
+     1.33,
+     1.47
+    ],
+    [
+     "a",
+     1.47,
+     1.52
+    ],
+    [
+     "drink.",
+     1.52,
+     2.17
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Bo: so close",
+   "who": "bo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Who has a long, long nose to reach the water? Tumble, or Pip?",
+   "t0": 147.5,
+   "t1": 155.625,
+   "v0": 147.59016666666685,
+   "dur": 4.517125,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.12
+    ],
+    [
+     "has",
+     0.12,
+     0.33
+    ],
+    [
+     "a",
+     0.33,
+     0.38
+    ],
+    [
+     "long,",
+     0.38,
+     0.97
+    ],
+    [
+     "long",
+     0.97,
+     1.36
+    ],
+    [
+     "nose",
+     1.36,
+     1.73
+    ],
+    [
+     "to",
+     1.73,
+     1.82
+    ],
+    [
+     "reach",
+     1.82,
+     2.11
+    ],
+    [
+     "the",
+     2.11,
+     2.2
+    ],
+    [
+     "water?",
+     2.2,
+     2.66
+    ],
+    [
+     "Tumble,",
+     3.12,
+     3.83
+    ],
+    [
+     "or",
+     3.83,
+     4.03
+    ],
+    [
+     "Pip?",
+     4.03,
+     4.517
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: Tumble or Pip",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "My trunk is long. I can reach!",
+   "t0": 155.625,
+   "t1": 157.8125,
+   "v0": 155.82729166666684,
+   "dur": 1.7196666666666667,
+   "words": [
+    [
+     "My",
+     0.01,
+     0.18
+    ],
+    [
+     "trunk",
+     0.18,
+     0.47
+    ],
+    [
+     "is",
+     0.47,
+     0.58
+    ],
+    [
+     "long.",
+     0.58,
+     0.94
+    ],
+    [
+     "I",
+     0.94,
+     1.08
+    ],
+    [
+     "can",
+     1.08,
+     1.26
+    ],
+    [
+     "reach!",
+     1.26,
+     1.72
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "my trunk is long",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Tumble dips his trunk in. Slurp! He sucks the water up.",
+   "t0": 157.8125,
+   "t1": 162.5,
+   "v0": 158.0669583333335,
+   "dur": 4.182833333333333,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.43
+    ],
+    [
+     "dips",
+     0.43,
+     0.72
+    ],
+    [
+     "his",
+     0.72,
+     0.9
+    ],
+    [
+     "trunk",
+     0.9,
+     1.25
+    ],
+    [
+     "in.",
+     1.25,
+     1.66
+    ],
+    [
+     "Slurp!",
+     2.09,
+     2.72
+    ],
+    [
+     "He",
+     2.9,
+     3.04
+    ],
+    [
+     "sucks",
+     3.04,
+     3.42
+    ],
+    [
+     "the",
+     3.42,
+     3.5
+    ],
+    [
+     "water",
+     3.5,
+     3.85
+    ],
+    [
+     "up.",
+     3.85,
+     4.18
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "slurp",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "An elephant sucks water up its trunk. Then it blows the water into its mouth.",
+   "t0": 162.5,
+   "t1": 168.4375,
+   "v0": 162.76979166666683,
+   "dur": 5.322666666666667,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.13
+    ],
+    [
+     "elephant",
+     0.13,
+     0.8
+    ],
+    [
+     "sucks",
+     0.8,
+     1.3
+    ],
+    [
+     "water",
+     1.3,
+     1.67
+    ],
+    [
+     "up",
+     1.67,
+     1.79
+    ],
+    [
+     "its",
+     1.79,
+     1.97
+    ],
+    [
+     "trunk.",
+     1.97,
+     2.5
+    ],
+    [
+     "Then",
+     2.97,
+     3.18
+    ],
+    [
+     "it",
+     3.18,
+     3.31
+    ],
+    [
+     "blows",
+     3.31,
+     3.83
+    ],
+    [
+     "the",
+     3.83,
+     3.91
+    ],
+    [
+     "water",
+     3.91,
+     4.31
+    ],
+    [
+     "into",
+     4.31,
+     4.58
+    ],
+    [
+     "its",
+     4.58,
+     4.78
+    ],
+    [
+     "mouth.",
+     4.78,
+     5.32
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: sucks up, blows in",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "But now the little pool is empty. That was the last drink.",
+   "t0": 168.4375,
+   "t1": 172.8125,
+   "v0": 168.6124583333335,
+   "dur": 3.8210416666666664,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.09
+    ],
+    [
+     "now",
+     0.09,
+     0.48
+    ],
+    [
+     "the",
+     0.48,
+     0.59
+    ],
+    [
+     "little",
+     0.59,
+     0.84
+    ],
+    [
+     "pool",
+     0.84,
+     1.26
+    ],
+    [
+     "is",
+     1.26,
+     1.44
+    ],
+    [
+     "empty.",
+     1.44,
+     2.03
+    ],
+    [
+     "That",
+     2.4,
+     2.64
+    ],
+    [
+     "was",
+     2.64,
+     2.81
+    ],
+    [
+     "the",
+     2.81,
+     2.89
+    ],
+    [
+     "last",
+     2.89,
+     3.35
+    ],
+    [
+     "drink.",
+     3.35,
+     3.82
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the pool is empty",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "The water is in Tumble's trunk. And Tumble is so, so thirsty.",
+   "t0": 172.8125,
+   "t1": 177.5,
+   "v0": 172.9535000000002,
+   "dur": 4.3355,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "water",
+     0.12,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.78
+    ],
+    [
+     "in",
+     0.78,
+     0.92
+    ],
+    [
+     "Tumble's",
+     0.92,
+     1.43
+    ],
+    [
+     "trunk.",
+     1.43,
+     1.96
+    ],
+    [
+     "And",
+     2.35,
+     2.5
+    ],
+    [
+     "Tumble",
+     2.5,
+     2.88
+    ],
+    [
+     "is",
+     2.88,
+     3.0
+    ],
+    [
+     "so,",
+     3.0,
+     3.38
+    ],
+    [
+     "so",
+     3.38,
+     3.58
+    ],
+    [
+     "thirsty.",
+     3.58,
+     4.33
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "one trunkful",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Three little birds look up at him. They are thirsty, too.",
+   "t0": 177.5,
+   "t1": 181.875,
+   "v0": 177.8090000000002,
+   "dur": 3.692625,
+   "words": [
+    [
+     "Three",
+     0.0,
+     0.37
+    ],
+    [
+     "little",
+     0.37,
+     0.63
+    ],
+    [
+     "birds",
+     0.63,
+     1.15
+    ],
+    [
+     "look",
+     1.15,
+     1.32
+    ],
+    [
+     "up",
+     1.32,
+     1.49
+    ],
+    [
+     "at",
+     1.49,
+     1.62
+    ],
+    [
+     "him.",
+     1.62,
+     1.88
+    ],
+    [
+     "They",
+     2.24,
+     2.38
+    ],
+    [
+     "are",
+     2.38,
+     2.44
+    ],
+    [
+     "thirsty,",
+     2.44,
+     3.18
+    ],
+    [
+     "too.",
+     3.18,
+     3.69
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the birds look up",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "If I drink it all, my friends get nothing.",
+   "t0": 181.875,
+   "t1": 184.6875,
+   "v0": 182.0216250000002,
+   "dur": 2.196083333333333,
+   "words": [
+    [
+     "If",
+     0.0,
+     0.14
+    ],
+    [
+     "I",
+     0.14,
+     0.26
+    ],
+    [
+     "drink",
+     0.26,
+     0.52
+    ],
+    [
+     "it",
+     0.52,
+     0.61
+    ],
+    [
+     "all,",
+     0.61,
+     0.93
+    ],
+    [
+     "my",
+     0.93,
+     1.11
+    ],
+    [
+     "friends",
+     1.11,
+     1.47
+    ],
+    [
+     "get",
+     1.47,
+     1.63
+    ],
+    [
+     "nothing.",
+     1.63,
+     2.196
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "if I drink it all",
+   "who": "tumble",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Oh, Milo. I do not know what to do.",
+   "t0": 184.6875,
+   "t1": 186.875,
+   "v0": 184.73770833333353,
+   "dur": 1.9581666666666666,
+   "words": [
+    [
+     "Oh,",
+     0.0,
+     0.17
+    ],
+    [
+     "Milo.",
+     0.17,
+     0.71
+    ],
+    [
+     "I",
+     0.71,
+     0.8
+    ],
+    [
+     "do",
+     0.8,
+     0.9
+    ],
+    [
+     "not",
+     0.9,
+     1.07
+    ],
+    [
+     "know",
+     1.07,
+     1.19
+    ],
+    [
+     "what",
+     1.19,
+     1.37
+    ],
+    [
+     "to",
+     1.37,
+     1.48
+    ],
+    [
+     "do.",
+     1.48,
+     1.75
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I do not know",
+   "who": "tumble",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "What should Tumble do? Drink it all, or share?",
+   "t0": 186.875,
+   "t1": 193.4375,
+   "v0": 187.2158750000002,
+   "dur": 2.848625,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.22
+    ],
+    [
+     "should",
+     0.22,
+     0.38
+    ],
+    [
+     "Tumble",
+     0.38,
+     0.84
+    ],
+    [
+     "do?",
+     0.84,
+     1.24
+    ],
+    [
+     "Drink",
+     1.56,
+     1.8
+    ],
+    [
+     "it",
+     1.8,
+     1.9
+    ],
+    [
+     "all,",
+     1.9,
+     2.19
+    ],
+    [
+     "or",
+     2.19,
+     2.29
+    ],
+    [
+     "share?",
+     2.29,
+     2.849
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: drink or share",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "I know. Friends help friends. I will share!",
+   "t0": 193.4375,
+   "t1": 196.25,
+   "v0": 193.7845000000002,
+   "dur": 2.1555,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.11
+    ],
+    [
+     "know.",
+     0.11,
+     0.38
+    ],
+    [
+     "Friends",
+     0.38,
+     0.7
+    ],
+    [
+     "help",
+     0.7,
+     0.88
+    ],
+    [
+     "friends.",
+     0.88,
+     1.34
+    ],
+    [
+     "I",
+     1.34,
+     1.45
+    ],
+    [
+     "will",
+     1.45,
+     1.61
+    ],
+    [
+     "share!",
+     1.61,
+     2.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "I will share",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Tumble lifts his trunk. Open your beaks, little birds!",
+   "t0": 196.25,
+   "t1": 200.3125,
+   "v0": 196.4600000000002,
+   "dur": 3.671666666666667,
+   "words": [
+    [
+     "Tumble",
+     0.01,
+     0.5
+    ],
+    [
+     "lifts",
+     0.5,
+     0.83
+    ],
+    [
+     "his",
+     0.83,
+     1.01
+    ],
+    [
+     "trunk.",
+     1.01,
+     1.53
+    ],
+    [
+     "Open",
+     1.92,
+     2.25
+    ],
+    [
+     "your",
+     2.25,
+     2.4
+    ],
+    [
+     "beaks,",
+     2.4,
+     2.88
+    ],
+    [
+     "little",
+     2.88,
+     3.08
+    ],
+    [
+     "birds!",
+     3.08,
+     3.67
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "open your beaks",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Squirt! A drink for Pip.",
+   "t0": 200.3125,
+   "t1": 202.5,
+   "v0": 200.6516666666669,
+   "dur": 1.66675,
+   "words": [
+    [
+     "Squirt!",
+     0.01,
+     0.66
+    ],
+    [
+     "A",
+     0.66,
+     0.73
+    ],
+    [
+     "drink",
+     0.73,
+     1.03
+    ],
+    [
+     "for",
+     1.03,
+     1.19
+    ],
+    [
+     "Pip.",
+     1.19,
+     1.667
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a drink for Pip",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Squirt! A drink for Kiki.",
+   "t0": 202.5,
+   "t1": 205.0,
+   "v0": 202.83841666666692,
+   "dur": 1.79825,
+   "words": [
+    [
+     "Squirt!",
+     0.01,
+     0.66
+    ],
+    [
+     "A",
+     0.66,
+     0.73
+    ],
+    [
+     "drink",
+     0.73,
+     1.03
+    ],
+    [
+     "for",
+     1.03,
+     1.18
+    ],
+    [
+     "Kiki.",
+     1.18,
+     1.798
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a drink for Kiki",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Squirt! And a drink for Bo.",
+   "t0": 205.0,
+   "t1": 207.1875,
+   "v0": 205.15666666666692,
+   "dur": 1.852625,
+   "words": [
+    [
+     "Squirt!",
+     0.01,
+     0.64
+    ],
+    [
+     "And",
+     0.64,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.87
+    ],
+    [
+     "drink",
+     0.87,
+     1.17
+    ],
+    [
+     "for",
+     1.17,
+     1.34
+    ],
+    [
+     "Bo.",
+     1.34,
+     1.85
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a drink for Bo",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "And the last three drops? Drip, drip, drip. Those are for Tumble.",
+   "t0": 207.1875,
+   "t1": 212.5,
+   "v0": 207.52929166666692,
+   "dur": 4.635833333333333,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.17
+    ],
+    [
+     "the",
+     0.17,
+     0.23
+    ],
+    [
+     "last",
+     0.23,
+     0.64
+    ],
+    [
+     "three",
+     0.64,
+     0.84
+    ],
+    [
+     "drops?",
+     0.84,
+     1.44
+    ],
+    [
+     "Drip,",
+     1.65,
+     2.02
+    ],
+    [
+     "drip,",
+     2.02,
+     2.49
+    ],
+    [
+     "drip.",
+     2.49,
+     2.98
+    ],
+    [
+     "Those",
+     2.98,
+     3.75
+    ],
+    [
+     "are",
+     3.75,
+     3.85
+    ],
+    [
+     "for",
+     3.85,
+     4.02
+    ],
+    [
+     "Tumble.",
+     4.02,
+     4.636
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "three drops for Tumble",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "How many birds got a drink? Count with me! One, two, three!",
+   "t0": 212.5,
+   "t1": 217.1875,
+   "v0": 212.68512500000026,
+   "dur": 4.109458333333333,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.16
+    ],
+    [
+     "many",
+     0.16,
+     0.37
+    ],
+    [
+     "birds",
+     0.37,
+     0.81
+    ],
+    [
+     "got",
+     0.81,
+     1.04
+    ],
+    [
+     "a",
+     1.04,
+     1.09
+    ],
+    [
+     "drink?",
+     1.09,
+     1.66
+    ],
+    [
+     "Count",
+     1.85,
+     2.16
+    ],
+    [
+     "with",
+     2.16,
+     2.32
+    ],
+    [
+     "me!",
+     2.32,
+     2.64
+    ],
+    [
+     "One,",
+     2.99,
+     3.26
+    ],
+    [
+     "two,",
+     3.26,
+     3.53
+    ],
+    [
+     "three!",
+     3.53,
+     4.109
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: count the birds",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "It was only a tiny sip. But I feel so happy inside.",
+   "t0": 217.1875,
+   "t1": 220.9375,
+   "v0": 217.3145833333336,
+   "dur": 3.3934583333333332,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.11
+    ],
+    [
+     "was",
+     0.11,
+     0.27
+    ],
+    [
+     "only",
+     0.27,
+     0.56
+    ],
+    [
+     "a",
+     0.56,
+     0.6
+    ],
+    [
+     "tiny",
+     0.6,
+     1.04
+    ],
+    [
+     "sip.",
+     1.04,
+     1.47
+    ],
+    [
+     "But",
+     1.47,
+     1.74
+    ],
+    [
+     "I",
+     1.74,
+     1.84
+    ],
+    [
+     "feel",
+     1.84,
+     2.05
+    ],
+    [
+     "so",
+     2.05,
+     2.33
+    ],
+    [
+     "happy",
+     2.33,
+     2.69
+    ],
+    [
+     "inside.",
+     2.69,
+     3.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "happy inside",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Tweet, tweet, tweet! Thank you, Tumble!",
+   "t0": 220.9375,
+   "t1": 226.25,
+   "v0": 221.25,
+   "dur": 5.0,
+   "words": [
+    [
+     "Tweet,",
+     0.0,
+     0.288
+    ],
+    [
+     "tweet,",
+     0.312,
+     0.6
+    ],
+    [
+     "tweet!",
+     0.625,
+     1.2
+    ],
+    [
+     "Thank",
+     1.25,
+     1.825
+    ],
+    [
+     "you,",
+     1.875,
+     2.45
+    ],
+    [
+     "Tumble!",
+     2.5,
+     3.65
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: thank you, Tumble",
+   "who": "pip",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "rocks",
+   "say": "Now we can fly again. And look what I see!",
+   "t0": 226.25,
+   "t1": 229.375,
+   "v0": 226.37,
+   "dur": 2.5961666666666665,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.33
+    ],
+    [
+     "we",
+     0.33,
+     0.48
+    ],
+    [
+     "can",
+     0.48,
+     0.65
+    ],
+    [
+     "fly",
+     0.65,
+     1.0
+    ],
+    [
+     "again.",
+     1.0,
+     1.44
+    ],
+    [
+     "And",
+     1.57,
+     1.71
+    ],
+    [
+     "look",
+     1.71,
+     1.93
+    ],
+    [
+     "what",
+     1.93,
+     2.02
+    ],
+    [
+     "I",
+     2.02,
+     2.12
+    ],
+    [
+     "see!",
+     2.12,
+     2.596
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Kiki flies up",
+   "who": "kiki",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Up in the sky, big gray clouds are coming.",
+   "t0": 229.375,
+   "t1": 232.8125,
+   "v0": 229.4861666666667,
+   "dur": 3.0528333333333335,
+   "words": [
+    [
+     "Up",
+     0.01,
+     0.22
+    ],
+    [
+     "in",
+     0.22,
+     0.34
+    ],
+    [
+     "the",
+     0.34,
+     0.4
+    ],
+    [
+     "sky,",
+     0.4,
+     1.03
+    ],
+    [
+     "big",
+     1.29,
+     1.57
+    ],
+    [
+     "gray",
+     1.57,
+     1.86
+    ],
+    [
+     "clouds",
+     1.86,
+     2.4
+    ],
+    [
+     "are",
+     2.4,
+     2.49
+    ],
+    [
+     "coming.",
+     2.49,
+     3.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "clouds",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Rain is coming, Tumble! Rain!",
+   "t0": 232.8125,
+   "t1": 235.3125,
+   "v0": 233.05900000000003,
+   "dur": 2.021375,
+   "words": [
+    [
+     "Rain",
+     0.02,
+     0.36
+    ],
+    [
+     "is",
+     0.36,
+     0.52
+    ],
+    [
+     "coming,",
+     0.52,
+     0.9
+    ],
+    [
+     "Tumble!",
+     0.9,
+     1.34
+    ],
+    [
+     "Rain!",
+     1.34,
+     2.02
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Bo: rain is coming",
+   "who": "bo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Drip. Drop. Splash! Down comes the rain.",
+   "t0": 235.3125,
+   "t1": 238.75,
+   "v0": 235.60037500000004,
+   "dur": 2.8797083333333333,
+   "words": [
+    [
+     "Drip.",
+     0.01,
+     0.4
+    ],
+    [
+     "Drop.",
+     0.4,
+     0.8
+    ],
+    [
+     "Splash!",
+     0.8,
+     1.49
+    ],
+    [
+     "Down",
+     1.67,
+     1.97
+    ],
+    [
+     "comes",
+     1.97,
+     2.23
+    ],
+    [
+     "the",
+     2.23,
+     2.33
+    ],
+    [
+     "rain.",
+     2.33,
+     2.88
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the rain",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "The little pool fills up. Up, up, up, to the very top.",
+   "t0": 238.75,
+   "t1": 243.125,
+   "v0": 239.00008333333338,
+   "dur": 3.9431666666666665,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "little",
+     0.12,
+     0.37
+    ],
+    [
+     "pool",
+     0.37,
+     0.74
+    ],
+    [
+     "fills",
+     0.74,
+     1.18
+    ],
+    [
+     "up.",
+     1.18,
+     1.51
+    ],
+    [
+     "Up,",
+     1.93,
+     2.19
+    ],
+    [
+     "up,",
+     2.19,
+     2.47
+    ],
+    [
+     "up,",
+     2.47,
+     2.72
+    ],
+    [
+     "to",
+     2.72,
+     2.92
+    ],
+    [
+     "the",
+     2.92,
+     2.99
+    ],
+    [
+     "very",
+     2.99,
+     3.36
+    ],
+    [
+     "top.",
+     3.36,
+     3.94
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the pool fills up",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Now I can have my big, cool drink. Slurp!",
+   "t0": 243.125,
+   "t1": 246.25,
+   "v0": 243.46325000000004,
+   "dur": 2.3808333333333334,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.23
+    ],
+    [
+     "I",
+     0.23,
+     0.3
+    ],
+    [
+     "can",
+     0.3,
+     0.43
+    ],
+    [
+     "have",
+     0.43,
+     0.6
+    ],
+    [
+     "my",
+     0.6,
+     0.78
+    ],
+    [
+     "big,",
+     0.78,
+     1.01
+    ],
+    [
+     "cool",
+     1.01,
+     1.31
+    ],
+    [
+     "drink.",
+     1.31,
+     1.78
+    ],
+    [
+     "Slurp!",
+     1.78,
+     2.38
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the big drink",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Tumble drinks and drinks. Glug, glug, glug.",
+   "t0": 246.25,
+   "t1": 250.3125,
+   "v0": 246.36408333333338,
+   "dur": 3.543458333333333,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.4
+    ],
+    [
+     "drinks",
+     0.4,
+     0.84
+    ],
+    [
+     "and",
+     0.84,
+     0.98
+    ],
+    [
+     "drinks.",
+     0.98,
+     1.56
+    ],
+    [
+     "Glug,",
+     1.96,
+     2.44
+    ],
+    [
+     "glug,",
+     2.44,
+     2.96
+    ],
+    [
+     "glug.",
+     2.96,
+     3.54
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "glug",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Elephants squirt water over their bodies to keep cool.",
+   "t0": 250.3125,
+   "t1": 254.0625,
+   "v0": 250.4275416666667,
+   "dur": 3.4658333333333333,
+   "words": [
+    [
+     "Elephants",
+     0.05,
+     0.68
+    ],
+    [
+     "squirt",
+     0.68,
+     1.04
+    ],
+    [
+     "water",
+     1.04,
+     1.51
+    ],
+    [
+     "over",
+     1.51,
+     1.7
+    ],
+    [
+     "their",
+     1.7,
+     1.89
+    ],
+    [
+     "bodies",
+     1.89,
+     2.5
+    ],
+    [
+     "to",
+     2.5,
+     2.62
+    ],
+    [
+     "keep",
+     2.62,
+     2.92
+    ],
+    [
+     "cool.",
+     2.92,
+     3.466
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: squirt to keep cool",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "The birds splash in the puddles. Splish, splash, splosh!",
+   "t0": 254.0625,
+   "t1": 259.0625,
+   "v0": 254.41337500000006,
+   "dur": 4.261416666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.13
+    ],
+    [
+     "birds",
+     0.13,
+     0.53
+    ],
+    [
+     "splash",
+     0.53,
+     1.04
+    ],
+    [
+     "in",
+     1.04,
+     1.13
+    ],
+    [
+     "the",
+     1.13,
+     1.21
+    ],
+    [
+     "puddles.",
+     1.21,
+     1.89
+    ],
+    [
+     "Splish,",
+     2.29,
+     2.9
+    ],
+    [
+     "splash,",
+     2.9,
+     3.5
+    ],
+    [
+     "splosh!",
+     3.5,
+     4.26
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the birds splash",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Back at the zoo, the rain has stopped. And Mama is waiting.",
+   "t0": 259.0625,
+   "t1": 263.4375,
+   "v0": 259.19479166666673,
+   "dur": 3.9975,
+   "words": [
+    [
+     "Back",
+     0.0,
+     0.36
+    ],
+    [
+     "at",
+     0.36,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.5
+    ],
+    [
+     "zoo,",
+     0.5,
+     0.94
+    ],
+    [
+     "the",
+     0.94,
+     1.07
+    ],
+    [
+     "rain",
+     1.07,
+     1.45
+    ],
+    [
+     "has",
+     1.45,
+     1.61
+    ],
+    [
+     "stopped.",
+     1.61,
+     2.22
+    ],
+    [
+     "And",
+     2.59,
+     2.72
+    ],
+    [
+     "Mama",
+     2.72,
+     3.23
+    ],
+    [
+     "is",
+     3.23,
+     3.44
+    ],
+    [
+     "waiting.",
+     3.44,
+     3.998
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "back at the zoo",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mama! I found water. And I found three new friends!",
+   "t0": 263.4375,
+   "t1": 266.875,
+   "v0": 263.7122916666667,
+   "dur": 2.9912083333333332,
+   "words": [
+    [
+     "Mama!",
+     0.01,
+     0.42
+    ],
+    [
+     "I",
+     0.42,
+     0.54
+    ],
+    [
+     "found",
+     0.54,
+     0.84
+    ],
+    [
+     "water.",
+     0.84,
+     1.39
+    ],
+    [
+     "And",
+     1.39,
+     1.55
+    ],
+    [
+     "I",
+     1.55,
+     1.63
+    ],
+    [
+     "found",
+     1.63,
+     1.97
+    ],
+    [
+     "three",
+     1.97,
+     2.21
+    ],
+    [
+     "new",
+     2.21,
+     2.33
+    ],
+    [
+     "friends!",
+     2.33,
+     2.99
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "three new friends",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Tumble gave us his last drink!",
+   "t0": 266.875,
+   "t1": 269.375,
+   "v0": 267.22350000000006,
+   "dur": 1.9143333333333334,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.36
+    ],
+    [
+     "gave",
+     0.36,
+     0.65
+    ],
+    [
+     "us",
+     0.65,
+     0.82
+    ],
+    [
+     "his",
+     0.82,
+     1.01
+    ],
+    [
+     "last",
+     1.01,
+     1.41
+    ],
+    [
+     "drink!",
+     1.41,
+     1.91
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Pip: his last drink",
+   "who": "pip",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "You shared, even when you were thirsty. I am so proud of you.",
+   "t0": 269.375,
+   "t1": 274.0625,
+   "v0": 269.6578333333334,
+   "dur": 4.042041666666667,
+   "words": [
+    [
+     "You",
+     0.02,
+     0.22
+    ],
+    [
+     "shared,",
+     0.22,
+     0.74
+    ],
+    [
+     "even",
+     0.74,
+     1.13
+    ],
+    [
+     "when",
+     1.13,
+     1.32
+    ],
+    [
+     "you",
+     1.32,
+     1.43
+    ],
+    [
+     "were",
+     1.43,
+     1.5
+    ],
+    [
+     "thirsty.",
+     1.5,
+     2.32
+    ],
+    [
+     "I",
+     2.59,
+     2.71
+    ],
+    [
+     "am",
+     2.71,
+     2.84
+    ],
+    [
+     "so",
+     2.84,
+     3.13
+    ],
+    [
+     "proud",
+     3.13,
+     3.59
+    ],
+    [
+     "of",
+     3.59,
+     3.71
+    ],
+    [
+     "you.",
+     3.71,
+     4.04
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: so proud",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mama wraps her trunk around Tumble. A big, warm trunk hug.",
+   "t0": 274.0625,
+   "t1": 279.0625,
+   "v0": 274.219875,
+   "dur": 4.625,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.44
+    ],
+    [
+     "wraps",
+     0.44,
+     0.81
+    ],
+    [
+     "her",
+     0.81,
+     0.89
+    ],
+    [
+     "trunk",
+     0.89,
+     1.32
+    ],
+    [
+     "around",
+     1.32,
+     1.62
+    ],
+    [
+     "Tumble.",
+     1.62,
+     2.14
+    ],
+    [
+     "A",
+     2.64,
+     2.72
+    ],
+    [
+     "big,",
+     2.72,
+     3.3
+    ],
+    [
+     "warm",
+     3.3,
+     3.76
+    ],
+    [
+     "trunk",
+     3.76,
+     4.14
+    ],
+    [
+     "hug.",
+     4.14,
+     4.62
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "trunk hug",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "When we share, everybody feels good inside.",
+   "t0": 279.0625,
+   "t1": 282.5,
+   "v0": 279.364875,
+   "dur": 2.8851666666666667,
+   "words": [
+    [
+     "When",
+     0.01,
+     0.13
+    ],
+    [
+     "we",
+     0.13,
+     0.24
+    ],
+    [
+     "share,",
+     0.24,
+     0.74
+    ],
+    [
+     "everybody",
+     1.01,
+     1.59
+    ],
+    [
+     "feels",
+     1.59,
+     1.97
+    ],
+    [
+     "good",
+     1.97,
+     2.18
+    ],
+    [
+     "inside.",
+     2.18,
+     2.88
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Do you remember? What does an elephant use to smell water? Its trunk, or its tail?",
+   "t0": 282.5,
+   "t1": 291.875,
+   "v0": 282.77004166666666,
+   "dur": 5.652541666666667,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.07
+    ],
+    [
+     "you",
+     0.07,
+     0.21
+    ],
+    [
+     "remember?",
+     0.21,
+     0.84
+    ],
+    [
+     "What",
+     1.09,
+     1.2
+    ],
+    [
+     "does",
+     1.2,
+     1.36
+    ],
+    [
+     "an",
+     1.36,
+     1.44
+    ],
+    [
+     "elephant",
+     1.44,
+     2.01
+    ],
+    [
+     "use",
+     2.01,
+     2.34
+    ],
+    [
+     "to",
+     2.34,
+     2.45
+    ],
+    [
+     "smell",
+     2.45,
+     2.87
+    ],
+    [
+     "water?",
+     2.87,
+     3.38
+    ],
+    [
+     "Its",
+     3.86,
+     4.08
+    ],
+    [
+     "trunk,",
+     4.08,
+     4.74
+    ],
+    [
+     "or",
+     4.74,
+     4.96
+    ],
+    [
+     "its",
+     4.96,
+     5.17
+    ],
+    [
+     "tail?",
+     5.17,
+     5.65
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: trunk or tail",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "And where does an elephant blow the water? Into its mouth, or into its ear?",
+   "t0": 291.875,
+   "t1": 300.9375,
+   "v0": 292.1425833333333,
+   "dur": 5.047583333333334,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.18
+    ],
+    [
+     "where",
+     0.18,
+     0.31
+    ],
+    [
+     "does",
+     0.31,
+     0.5
+    ],
+    [
+     "an",
+     0.5,
+     0.57
+    ],
+    [
+     "elephant",
+     0.57,
+     1.2
+    ],
+    [
+     "blow",
+     1.2,
+     1.53
+    ],
+    [
+     "the",
+     1.53,
+     1.64
+    ],
+    [
+     "water?",
+     1.64,
+     2.19
+    ],
+    [
+     "Into",
+     2.69,
+     2.96
+    ],
+    [
+     "its",
+     2.96,
+     3.16
+    ],
+    [
+     "mouth,",
+     3.16,
+     3.83
+    ],
+    [
+     "or",
+     3.83,
+     4.07
+    ],
+    [
+     "into",
+     4.07,
+     4.38
+    ],
+    [
+     "its",
+     4.38,
+     4.59
+    ],
+    [
+     "ear?",
+     4.59,
+     5.048
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: mouth or ear",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Friends help friends, hooray, hooray!",
+   "t0": 300.9375,
+   "t1": 306.5625,
+   "v0": 301.25,
+   "dur": 5.0,
+   "words": [
+    [
+     "Friends",
+     0.0,
+     0.575
+    ],
+    [
+     "help",
+     0.625,
+     1.2
+    ],
+    [
+     "friends,",
+     1.25,
+     1.825
+    ],
+    [
+     "hooray,",
+     1.875,
+     2.45
+    ],
+    [
+     "hooray!",
+     2.5,
+     3.65
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "What a rainy, happy day!",
+   "t0": 306.5625,
+   "t1": 311.875,
+   "v0": 306.875,
+   "dur": 5.0,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.575
+    ],
+    [
+     "a",
+     0.625,
+     0.913
+    ],
+    [
+     "rainy,",
+     0.938,
+     1.513
+    ],
+    [
+     "happy",
+     1.562,
+     2.138
+    ],
+    [
+     "day!",
+     2.188,
+     3.625
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "song: rainy happy day",
+   "who": "milo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "See you on the next adventure, friends!",
+   "t0": 311.875,
+   "t1": 314.7860416666667,
+   "v0": 311.995,
+   "dur": 2.3910416666666667,
+   "words": [
+    [
+     "See",
+     0.01,
+     0.28
+    ],
+    [
+     "you",
+     0.28,
+     0.47
+    ],
+    [
+     "on",
+     0.47,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.7
+    ],
+    [
+     "next",
+     0.7,
+     1.05
+    ],
+    [
+     "adventure,",
+     1.05,
+     1.75
+    ],
+    [
+     "friends!",
+     1.75,
+     2.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  }
+ ]
+}

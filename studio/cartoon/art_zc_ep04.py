@@ -124,7 +124,7 @@ def tails_hug(pid):
     big = "M-520 -60 C-260 -160 -60 60 200 -20 C340 -64 460 -40 540 40"
     small = "M-300 200 C-240 120 -180 40 -120 -10 C-90 -40 -40 -60 -30 -20 C-20 20 -80 40 -60 -10 C-40 -70 10 -60 20 -20 C30 20 -20 30 -10 -10"
     return (f'<g id="{pid}">{_limb(big, 60)}<g id="{pid}-baby">{_limb(small, 22, dict(MON, fur="#b07a52"))}</g>'
-            f'<g transform="translate(-300 200)"><circle r="54" fill="#b07a52" stroke="{MON["line"]}" stroke-width="8"/></g></g>')
+            '</g>')
 
 
 def tail_up(pid, h=440):

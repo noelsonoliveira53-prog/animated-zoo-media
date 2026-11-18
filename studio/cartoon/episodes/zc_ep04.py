@@ -73,10 +73,10 @@ HC = (HX, 610, 1000)                 # hanging, whole: the branch near the top o
 HH = (HX, 700, 680)                  # her face, close (upside down)
 HT = (HX, 470, 560)                  # the tail round the branch, close
 HQ = (HX, 540, 1400)                 # a question: room above the branch for the two answer signs
-HP = (HX, 560, 1100)                 # 9:16: hanging, whole, under the title
+HP = (HX, 600, 1150)                 # 9:16: hanging, whole, under the title
 HPQ = (HX, 520, 1250)                # 9:16: a question (signs at 30-38 % of the height: above the branch)
 HPH = (HX, 640, 820)                 # 9:16: close
-HPT = (HX, 520, 700)                 # 9:16: the tail, close
+HPT = (HX, 600, 900)                 # 9:16: the tail, close
 
 
 def DANGLE(at, who="mango", deg=160):
@@ -96,6 +96,7 @@ SQUEEZE = lambda at: ("to", at, "#{p}mango-tail", {"scale": 1.06, "transformOrig
 
 # ------------------------------------------------------------------ boards
 BRD = (960, 540, 1500); BRDP = (960, 480, 1700)
+BHP = (960, 350, 2000)      # 9:16 of a board with Mango hanging from a branch at y = 300: the branch under the words, her head above the caption
 # the tail against her body: Mango standing on the board, her own tail hidden, the measured tail from her hip
 TM = (760, 860, 1.0)
 def MEASURE(tail_hidden=False, lb_hidden=False, lt_hidden=False):
@@ -104,18 +105,18 @@ def MEASURE(tail_hidden=False, lb_hidden=False, lt_hidden=False):
             prop("lt", lambda p: A.level(p, 560), 960, TM[1] - 640, 1.0, lt_hidden, p=(960, TM[1] - 640, 1.0))]
 MEASURE_ACT = [("m", "monkey", *TM)]
 HIDE_TAIL = ("to", 0, "#{p}m-tail", {"opacity": 0, "duration": .01}, "")
-MCAM = (980, 560, 1500); MPC = (980, 520, 1700)
+MCAM = (980, 560, 1500); MPC = (980, 360, 2000)       # 9:16: the red line below the two answer signs, the feet above the caption
 
 # two hands, two feet and a tail: Mango big on the board, a number at each
 CM = (960, 820, 1.25)
-BX = [(690, 690), (1230, 690), (790, 900), (1130, 900), (1360, 430)]      # left hand, right hand, left foot, right foot, tail
-BXP = [(640, 690), (1280, 690), (760, 900), (1160, 900), (1260, 380)]
-CCAM = (980, 600, 1560); CPC = (980, 600, 1800)
+BX = [(690, 680), (1230, 680), (740, 830), (1180, 830), (1360, 430)]      # left hand, right hand, left foot, right foot, tail
+BXP = [(640, 680), (1280, 680), (720, 830), (1200, 830), (1260, 380)]
+CCAM = (980, 600, 1560); CPC = (980, 500, 1900)
 def BADGES(shown, new=()): return [prop(f"b{k}", A.badge(k + 1), *BX[k], 1.0, k in new, p=(*BXP[k], 1.0)) for k in range(5) if k in shown or k in new]
 
 # the tail tips
 TIPS = [(520, 560), (960, 560), (1400, 560)]
-TIPSP = [(960, 380), (960, 720), (960, 1060)]
+TIPSP = [(960, 420), (960, 690), (960, 960)]
 
 SHOTS = [
     # ---------------------------------------------------------------- HOOK
@@ -134,7 +135,7 @@ SHOTS = [
       fx=[("hop", "w:Mango.", "mango"), ("arm", "w:spider", "mango", "r", -60)]),
     # ---------------------------------------------------------------- PART 1: a long tail that grabs
     S("canopy", (MX + 60, 262, 800), "Hello, Mango! Look behind her. What a long tail!", part=1, tag="a long tail", hide=["milo"], pcam=MPW, pcam2=MPW,
-      props=[prop("ar", lambda p: art.arrow(p, MX + 330, 90, MX + 190, 200), 0, 0, 1, True)],
+      props=[prop("ar", lambda p: art.arrow(p, MX + 330, 90, MX + 190, 200), 0, 0, 1, True, p=(-120, 60, 1))],
       fx=[("show", "w:long", "ar"), ("to", "w:long", "#{p}mango-tail", {"rotation": 14, "svgOrigin": "40 -80", "duration": .25, "yoyo": True, "repeat": 5}, "Mango wiggles her tail")],
       words=[("w:long", "LONG TAIL!", .22, .3, 1.0, "sun", (.5, .33), .9)]),
     S("canopy", MC, "It curls, and wiggles, and swishes!", part=1, tag="curls and wiggles", hide=["milo"], pcam=MPW, pcam2=MPW,
@@ -149,7 +150,7 @@ SHOTS = [
       props=MEASURE(True, True, True), fx=[HIDE_TAIL, ("show", "w:body.", "lb"), ("hop", "w:tall.", "m")], words=[("w:body.", "BODY", .14, .3, 1.0, "pill", (.3, .33), .8)]),
     S("paper", MCAM, "And this is her tail, stretched out next to her.", part=1, tag="board: her tail", pcam=MPC, actors=MEASURE_ACT,
       props=MEASURE(True, False, True), fx=[HIDE_TAIL, ("show", "w:tail,", "tl"), ("show", "w:stretched", "lt")],
-      words=[("w:tail,", "TAIL", .86, .2, 1.0, "sun", (.7, .33), .8)]),
+      words=[("w:tail,", "TAIL", .86, .2, 1.0, "sun", (.8, .5), .8)]),
     S("paper", MCAM, "Which one is longer? Her body, or her tail?", part=1, q=True, tag="question 1", pause=3.2, pcam=MPC, actors=MEASURE_ACT,
       props=MEASURE(), fx=[HIDE_TAIL, ("signs", "w:body,", ["BODY", "TAIL"], 1, "wait:2.0")]),
     S("paper", MCAM, "Her tail! A spider monkey's tail is longer than its body.", part=1, tag="board: longer", pcam=MPC, actors=MEASURE_ACT,
@@ -163,32 +164,32 @@ SHOTS = [
     S("canopy", HC, "She wraps it around the branch, and down she goes!", part=1, tag="she swings down", actors=HANG(), pcam=HP,
       fx=[DROP("w:down"), ("face", "w:goes!", "mango", "happy")], words=[("w:goes!", "WHEE!", .2, .3, 1.1, "sun", (.5, .33), .9)]),
     S("canopy", HT, "Her tail holds on tight. Squeeze!", part=1, tag="squeeze", actors=HANG(), pcam=HPT,
-      props=[prop("ar", lambda p: art.arrow(p, HX - 260, 320, HX - 80, 430), 0, 0, 1, True, p=(-60, 0, 1))], fx=[("show", "w:tail", "ar"), SQUEEZE("w:Squeeze!")],
-      words=[("w:Squeeze!", "SQUEEZE!", .75, .22, 1.0, "sun", (.5, .33), .85)]),
-    S("paper_blue", BRD, "A spider monkey's tail can grab, and hold on.", part=1, tag="board: grab", pcam=BRDP,
+      props=[prop("ar", lambda p: art.arrow(p, HX + 180, 560, HX + 10, 470), 0, 0, 1, True, p=(-60, 0, 1))], fx=[("show", "w:tail", "ar"), SQUEEZE("w:Squeeze!")],
+      words=[("w:Squeeze!", "SQUEEZE!", .22, .55, 1.0, "sun", (.5, .33), .85)]),
+    S("paper_blue", BRD, "A spider monkey's tail can grab, and hold on.", part=1, tag="board: grab", pcam=BHP,
       actors=[("m", "monkey_hang", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0)),
                                                         prop("ar", lambda p: art.arrow(p, 620, 470, 880, 330), 0, 0, 1, True, p=(120, 60, 1))],
       fx=[("show", "w:grab,", "ar")], words=[("w:grab,", "GRAB!", .2, .62, 1.2, "sun", (.5, .33), 1.0), ("w:hold", "HOLD ON!", .8, .62, 1.0, "pill", (.5, .42), .9)]),
     S("canopy", HT, "Round and round the branch it goes.", part=1, tag="round and round", actors=HANG(), pcam=HPT, fx=[SQUEEZE("w:Round")],
       words=[("w:round", "ROUND AND ROUND", .5, .2, .8, "sun", (.5, .33), .7)]),
-    S("paper_blue", BRD, "It holds on, just like an extra hand!", part=1, tag="board: extra hand", pcam=BRDP,
-      actors=[("m", "monkey_hang", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0)), prop("hd", A.hand_big, 1420, 640, .62, True, p=(960, 1040, .5))],
+    S("paper_blue", BRD, "It holds on, just like an extra hand!", part=1, tag="board: extra hand", pcam=BHP,
+      actors=[("m", "monkey_hang", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0)), prop("hd", A.hand_big, 1420, 640, .62, True, p=(1250, 700, .45))],
       fx=[("show", "w:extra", "hd")], words=[("w:extra", "EXTRA HAND!", .22, .62, 1.0, "sun", (.5, .33), .9)]),
     S("canopy", say="Can you grab with your hand? Squeeze, squeeze!", part=1, q=True, tag="your hand", hide=["mango"], fx=[("hop", "w:Squeeze,", "milo", 2)],
       words=[("w:Squeeze,", "SQUEEZE!", .76, .22, 1.0, "sun", (.5, .33))], **MILO("canopy")),
     S("paper_pink", CCAM, "Let's count what Mango can hold on with.", part=1, q=True, tag="board: let's count", pcam=CPC, actors=[("m", "monkey", *CM)],
-      words=[("w:count", "LET'S COUNT!", .5, .12, 1.0, "sun", (.5, .2), .9)]),
+      words=[("w:count", "LET'S COUNT!", .5, .12, 1.0, "sun", (.5, .33), .9)]),
     S("paper_pink", CCAM, "One hand, two hands,", part=1, tag="board: hands", pcam=CPC, actors=[("m", "monkey", *CM)], props=BADGES((), (0, 1)),
       fx=[("show", "w:One", "b0"), ("show", "w:two", "b1"), ("arm", "w:One", "m", "l", 20), ("arm", "w:two", "m", "r", -20)]),
     S("paper_pink", CCAM, "one foot, two feet,", part=1, tag="board: feet", pcam=CPC, actors=[("m", "monkey", *CM)], props=BADGES((0, 1), (2, 3)),
       fx=[("show", "w:one", "b2"), ("show", "w:two", "b3"), ("hop", "w:feet,", "m")]),
     S("paper_pink", CCAM, "and her long tail. Five!", part=1, tag="board: five", pcam=CPC, actors=[("m", "monkey", *CM)], props=BADGES((0, 1, 2, 3), (4,)),
       fx=[("show", "w:tail.", "b4"), ("to", "w:tail.", "#{p}m-tail", {"rotation": 12, "svgOrigin": "40 -80", "duration": .25, "yoyo": True, "repeat": 3}, "")],
-      words=[("w:Five!", "5!", .5, .12, 1.4, "sun", (.5, .2), 1.3)]),
+      words=[("w:Five!", "5!", .5, .12, 1.4, "sun", (.5, .33), 1.3)]),
     S("canopy", HQ, "How many can Mango hold on with? Four, or five?", part=1, q=True, tag="question 2", pause=3.2, actors=HANG(), pcam=HPQ,
       fx=[("signs", "w:Four,", ["4", "5"], 1, "wait:2.0"), SQUEEZE("wait:2.05")]),
     S("paper_pink", CCAM, "Five! Two hands, two feet, and one tail.", part=1, tag="board: five again", pcam=CPC, actors=[("m", "monkey", *CM)], props=BADGES(range(5)),
-      fx=[("hop", "w:Five!", "m")], words=[("w:Five!", "FIVE!", .5, .12, 1.2, "sun", (.5, .2), 1.0)]),
+      fx=[("hop", "w:Five!", "m")], words=[("w:Five!", "FIVE!", .5, .12, 1.2, "sun", (.5, .33), 1.0)]),
     S("canopy", HC, "Mango has five ways to hold on!", part=1, tag="five ways", actors=HANG(), pcam=HP, fx=[SQUEEZE("w:five"), ("face", "w:hold", "mango", "happy")],
       words=[("w:five", "5 WAYS!", .22, .3, 1.1, "sun", (.5, .33), .9)]),
     S("canopy", say="How many hands do you have? Show me!", part=1, q=True, tag="your hands", hide=["mango"], pause=1.0, fx=[("hop", "w:Show", "milo")],
@@ -198,10 +199,10 @@ SHOTS = [
       words=[("w:fruit.", "FRUIT!", .8, .56, 1.2, "sun", (.5, .33))]),
     S("figtree", HC, "Mango hangs upside down, just by her tail!", part=2, tag="upside down", actors=HANG(), pcam=HP,
       fx=[DROP(0.05), ("face", "w:upside", "mango", "happy")], words=[("w:upside", "UPSIDE DOWN!", .22, .3, .85, "sun", (.5, .33), .8)]),
-    S("bigtree", (960, -60, 2860), "Spider monkeys spend most of the day high up in the treetops.", part=2, trans="iris", tag="high up", cam2=(980, -200, 2500), pcam=(950, -690, 2000), pcam2=(950, -700, 1800),
+    S("bigtree", (960, -60, 2860), "Spider monkeys spend most of the day high up in the treetops.", part=2, trans="iris", tag="high up", cam2=(980, -200, 2500), pcam=(950, -500, 2000), pcam2=(950, -510, 1800),
       actors=[("mango", "monkey_hang", 900, -515, .7)], props=[prop("ar", lambda p: art.arrow(p, 620, 500, 620, -400), 0, 0, 1, True)], fx=[("show", "w:high", "ar")],
       words=[("w:high", "UP HIGH", .24, .5, .8, "sun", (.5, .33), .9)]),
-    S("canopy", (960, 560, 1500), "They climb, and swing, from branch to branch.", part=2, trans="iris", tag="swing along", actors=HANG(x=600), pcam=(1000, 520, 1300), pcam2=(1250, 520, 1300),
+    S("canopy", (960, 560, 1500), "They climb, and swing, from branch to branch.", part=2, trans="iris", tag="swing along", actors=HANG(x=600), pcam=(1150, 520, 1500), pcam2=(1150, 520, 1500),
       fx=[("to", "w:swing,", "#{p}mango_w", {"x": 1350, "duration": 2.4, "ease": "power1.inOut"}, "Mango swings along the branch"),
           ("to", "w:swing,", "#{p}mango-swing", {"rotation": -16, "svgOrigin": "0 0", "duration": .6, "yoyo": True, "repeat": 3}, "")],
       words=[("w:swing,", "SWING!", .8, .3, 1.1, "sun", (.5, .33), .9)]),
@@ -210,16 +211,16 @@ SHOTS = [
       words=[("w:play!", "PLAY TIME!", .22, .3, 1.0, "sun", (.5, .33), .9)]),
     S("canopy", say="What do you like to play?", part=2, q=True, tag="your play", hide=["mango"], pause=1.2, fx=[("hop", "w:play?", "milo")],
       words=[("w:play?", "PLAY!", .76, .22, 1.2, "sun", (.5, .33))], **MILO("canopy")),
-    S("paper_blue", BRD, "A spider monkey's tail can hold up its whole body.", part=2, tag="board: whole body", pcam=BRDP,
+    S("paper_blue", BRD, "A spider monkey's tail can hold up its whole body.", part=2, tag="board: whole body", pcam=BHP,
       actors=[("m", "monkey_hang", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0)),
                                                         prop("ar", lambda p: art.arrow(p, 620, 470, 880, 330), 0, 0, 1, True, p=(120, 60, 1))],
       fx=[("show", "w:tail", "ar"), ("to", "w:whole", "#{p}m", {"scale": 1.05, "svgOrigin": "0 300", "duration": .25, "yoyo": True, "repeat": 3}, "")],
-      words=[("w:whole", "WHOLE BODY!", .76, .62, 1.0, "sun", (.5, .33), .9)]),
+      words=[("w:whole", "WHOLE BODY!", .78, .3, .85, "sun", (.5, .33), .9)]),
     S("canopy", say="Can you tilt your head, like Mango? Tilt!", part=2, q=True, tag="tilt", hide=["mango"],
       fx=[("to", "w:Tilt!", "#{p}milo", {"rotation": -20, "svgOrigin": "0 -150", "duration": .35, "yoyo": True, "repeat": 3}, "Milo tilts his head")],
       words=[("w:Tilt!", "TILT!", .76, .22, 1.1, "sun", (.5, .33))], **MILO("canopy")),
     S("figtree", HH, "Now both of her hands are free. What will she do?", part=2, q=True, tag="hands free", trans="iris", actors=HANG(), pcam=HPH, pause=.8,
-      fx=[("face", "w:free.", "mango", "wow")], words=[("w:free.", "HANDS FREE!", .5, .14, .9, "sun", (.5, .33), .8)]),
+      fx=[("face", "w:free.", "mango", "wow")], words=[("w:free.", "HANDS FREE!", .2, .45, .7, "sun", (.5, .36), .8)]),
     S("figtree", HQ, "Can Mango pick fruit while she hangs? Yes, or no?", part=2, q=True, tag="question 3", pause=3.2, actors=HANG(), pcam=HPQ,
       props=[prop("f1", art2.fruit, HX - 230, 610, .4), prop("f2", art2.fruit, HX + 230, 610, .4)],
       fx=[("signs", "w:Yes,", ["YES", "NO"], 0, "wait:2.0"), SQUEEZE("wait:2.05")]),
@@ -227,28 +228,28 @@ SHOTS = [
       fx=[("face", 0.05, "mango", "happy")], words=[("w:One", "1", .3, .3, 1.4, "sun", (.3, .36), 1.1), ("w:two", "2", .7, .3, 1.4, "sun", (.7, .36), 1.1)]),
     S("figtree", say="Count the fruits with me. One, two!", part=2, q=True, tag="count the fruits", hide=["mango"], fx=[("hop", "w:One,", "milo"), ("hop", "w:two!", "milo")],
       words=[("w:One,", "1", .66, .22, 1.3, "sun", (.38, .33)), ("w:two!", "2", .86, .22, 1.3, "sun", (.62, .33))], **MILO("canopy")),
-    S("paper", BRD, "Her tail holds on, so her hands can pick, and eat.", part=2, tag="board: tail holds, hands eat", pcam=BRDP,
+    S("paper", BRD, "Her tail holds on, so her hands can pick, and eat.", part=2, tag="board: tail holds, hands eat", pcam=BHP,
       actors=[("m", "monkey_hangfruit", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0))],
-      fx=[SQUEEZE("w:holds")], words=[("w:tail", "TAIL: HOLD", .2, .7, .8, "pill", (.5, .25), .7), ("w:hands", "HANDS: EAT", .8, .7, .8, "sun", (.5, .9), .7)]),
+      fx=[SQUEEZE("w:holds")], words=[("w:tail", "TAIL: HOLD", .2, .55, .8, "pill", (.5, .33), .7), ("w:hands", "HANDS: EAT", .8, .55, .8, "sun", (.5, .40), .7)]),
     S("figtree", HC, "Two hands for fruit, and one tail to hold on.", part=2, tag="two hands one tail", actors=HANG("monkey_hangfruit"), pcam=HP, fx=[SQUEEZE("w:tail")],
-      words=[("w:Two", "2 HANDS", .25, .3, .9, "sun", (.5, .33), .8), ("w:tail", "1 TAIL", .75, .3, .9, "pill", (.5, .42), .8)]),
+      words=[("w:Two", "2 HANDS", .25, .3, .9, "sun", (.28, .31), .6), ("w:tail", "1 TAIL", .75, .3, .9, "pill", (.74, .31), .6)]),
     S("figtree", HH, "Munch, munch! A snack, upside down!", part=2, tag="munch", actors=HANG("monkey_hangfruit"), pcam=HPH,
-      fx=[MUNCH("w:Munch,", n=13), ("face", "w:snack,", "mango", "happy")], words=[("w:Munch,", "MUNCH!", .5, .14, 1.0, "sun", (.5, .33), .8)]),
+      fx=[MUNCH("w:Munch,", n=13), ("face", "w:snack,", "mango", "happy")], words=[("w:Munch,", "MUNCH!", .2, .45, .9, "sun", (.5, .28), .8)]),
     S("figtree", say="Pretend to munch a fruit with me. Yum!", part=2, q=True, tag="pretend to munch", hide=["mango"], fx=[("hop", "w:Yum!", "milo", 2)],
       words=[("w:Yum!", "YUM!", .76, .22, 1.2, "sun", (.5, .33))], **MILO("canopy")),
     S("paper", BRD, "Do you know why she is called a spider monkey?", part=2, q=True, tag="board: why spider", pcam=BRDP, pause=.8,
       props=[prop("q", lambda p: f'<g id="{p}"><text x="0" y="60" text-anchor="middle" font-family="Baloo, sans-serif" font-weight="800" font-size="300" fill="{art.SUN}" stroke="{INK}" stroke-width="14" paint-order="stroke fill">?</text></g>', 960, 560, 1.0, p=(960, 600, 1.0))],
-      words=[("w:spider", "SPIDER?", .5, .16, 1.2, "sun", (.5, .25), 1.0)]),
+      words=[("w:spider", "SPIDER?", .5, .16, 1.2, "sun", (.5, .33), 1.0)]),
     S("figtree", HC, "When she hangs, her long arms and legs dangle down.", part=2, tag="dangle", actors=HANG(), pcam=HP,
       fx=DANGLE("w:dangle"), words=[("w:dangle", "DANGLE!", .22, .3, 1.0, "sun", (.5, .33), .9)]),
     S("figtree", HH, "Hello, upside-down Mango!", part=2, tag="hello upside down", actors=HANG(), pcam=HPH, fx=DANGLE(0.01) + [("face", "w:Hello,", "mango", "happy")],
-      words=[("w:Hello,", "HELLO!", .5, .14, 1.1, "sun", (.5, .33), .9)]),
-    S("paper_blue", BRD, "Long arms, long legs, a little bit like a spider!", part=2, tag="board: like a spider", pcam=BRDP,
-      actors=[("m", "monkey_hang", 600, 280, .85)], props=[prop("br", lambda p: A.branch(p, 800), 600, 280, 1.0, p=(960, 260, 1.0)), prop("sp", A.spider, 1300, 600, 1.4, True, p=(960, 980, 1.1))],
-      fx=DANGLE(0.05, "m") + [("show", "w:spider!", "sp")], words=[("w:spider!", "LIKE A SPIDER!", .5, .14, .9, "sun", (.5, .2), .8)]),
-    S("paper_blue", BRD, "That is how the spider monkey got its name!", part=2, tag="board: the name", pcam=BRDP,
-      actors=[("m", "monkey_hang", 600, 280, .85)], props=[prop("br", lambda p: A.branch(p, 800), 600, 280, 1.0, p=(960, 260, 1.0)), prop("sp", A.spider, 1300, 600, 1.4, p=(960, 980, 1.1))],
-      fx=DANGLE(0.01, "m"), words=[("w:name!", "SPIDER MONKEY!", .5, .14, .9, "sun", (.5, .2), .8)]),
+      words=[("w:Hello,", "HELLO!", .2, .45, 1.0, "sun", (.5, .36), .9)]),
+    S("paper_blue", BRD, "Long arms, long legs, a little bit like a spider!", part=2, tag="board: like a spider", pcam=(800, 450, 1700),
+      actors=[("m", "monkey_hang", 600, 280, .85)], props=[prop("br", lambda p: A.branch(p, 800), 600, 280, 1.0, p=(600, 280, 1.0)), prop("sp", A.spider, 1300, 600, 1.4, True, p=(940, 800, .9))],
+      fx=DANGLE(0.05, "m") + [("show", "w:spider!", "sp")], words=[("w:spider!", "LIKE A SPIDER!", .5, .14, .9, "sun", (.5, .33), .8)]),
+    S("paper_blue", BRD, "That is how the spider monkey got its name!", part=2, tag="board: the name", pcam=(800, 450, 1700),
+      actors=[("m", "monkey_hang", 600, 280, .85)], props=[prop("br", lambda p: A.branch(p, 800), 600, 280, 1.0, p=(600, 280, 1.0)), prop("sp", A.spider, 1300, 600, 1.4, p=(940, 800, .9))],
+      fx=DANGLE(0.01, "m"), words=[("w:name!", "SPIDER MONKEY!", .5, .14, .9, "sun", (.5, .33), .8)]),
     S("figtree", say="Can you wiggle your arms like a spider monkey?", part=2, q=True, tag="wiggle your arms", hide=["mango"], pause=.6,
       fx=[("to", "w:wiggle", "#{p}milo-wl,#{p}milo-wr", {"rotation": 30, "duration": .18, "yoyo": True, "repeat": 7}, "Milo flaps his wings")],
       words=[("w:wiggle", "WIGGLE!", .76, .22, 1.1, "sun", (.5, .33))], **MILO("canopy")),
@@ -257,55 +258,55 @@ SHOTS = [
       actors=HANG(x=HX - 500), fx=[("to", 0.1, "#{p}mango_w", {"x": HX, "duration": 2.6, "ease": "power1.inOut"}, "Mango swings along the branch")],
       words=[("w:flowers.", "FLOWERS!", .8, .62, 1.1, "sun", (.5, .33))]),
     S("blossom", HT, "Look closely at the very tip of her tail.", part=3, q=True, tag="the tip", actors=HANG(), pcam=HPT,
-      props=[prop("ar", lambda p: art.arrow(p, HX - 260, 320, HX - 80, 430), 0, 0, 1, True, p=(-60, 0, 1))], fx=[("show", "w:tip", "ar")],
-      words=[("w:tip", "THE TIP!", .75, .22, 1.0, "sun", (.5, .33), .85)]),
+      props=[prop("ar", lambda p: art.arrow(p, HX + 180, 560, HX + 10, 470), 0, 0, 1, True, p=(-60, 0, 1))], fx=[("show", "w:tip", "ar")],
+      words=[("w:tip", "THE TIP!", .22, .55, 1.0, "sun", (.5, .33), .85)]),
     S("paper", BRD, "Under the tip, there are little lines.", part=3, tag="board: little lines", pcam=BRDP, props=[prop("tt", A.tail_tip(0), 900, 560, 1.3, p=(900, 600, 1.2))],
       fx=[("to", "w:lines.", "#{p}tt-pad", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 5}, "the little lines glow")],
-      words=[("w:lines.", "LITTLE LINES", .5, .14, 1.0, "sun", (.5, .25), .85)]),
+      words=[("w:lines.", "LITTLE LINES", .5, .14, 1.0, "sun", (.5, .33), .85)]),
     S("paper_pink", BRD, "Now look at your fingertip. You have little lines, too!", part=3, q=True, tag="board: your fingertip", pcam=BRDP, pause=.6,
-      props=[prop("fg", A.fingertip, 960, 600, 1.0, p=(960, 640, 1.0))], words=[("w:fingertip.", "YOUR FINGER!", .5, .14, 1.0, "sun", (.5, .25), .85)]),
+      props=[prop("fg", A.fingertip, 960, 600, 1.0, p=(960, 640, 1.0))], words=[("w:fingertip.", "YOUR FINGER!", .5, .14, 1.0, "sun", (.5, .33), .85)]),
     S("blossom", say="Your little lines are only yours!", part=3, tag="only yours", hide=["mango"], fx=[("hop", "w:only", "milo")],
       words=[("w:yours!", "ONLY YOURS!", .76, .22, .9, "sun", (.5, .33), .85)], **MILO("canopy")),
-    S("paper", (960, 560, 1700), "Here are three spider monkey tails. One, two, three.", part=3, tag="board: three tails", pcam=(960, 560, 1700),
-      props=[prop(f"t{k}", A.tail_tip(k), *TIPS[k], .7, True, p=(*TIPSP[k], .6)) for k in range(3)],
-      fx=[("show", "w:One,", "t0"), ("show", "w:two,", "t1"), ("show", "w:three.", "t2")], words=[("w:three", "3 TAILS", .5, .12, 1.0, "sun", (.5, .18), .9)]),
-    S("paper", BRD, "Every spider monkey has its own lines. Look, all different!", part=3, tag="board: all different", pcam=(960, 560, 1700),
-      props=[prop(f"t{k}", A.tail_tip(k), *TIPS[k], .7, p=(*TIPSP[k], .6)) for k in range(3)],
-      fx=[("to", "w:own", "#{p}t0-pad,#{p}t1-pad,#{p}t2-pad", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 3}, "the three sets of lines glow")], words=[("w:different!", "ALL DIFFERENT!", .5, .12, .9, "sun", (.5, .18), .8)]),
-    S("paper", (960, 560, 1700), "Are Mango's lines the same as her friend's? Yes, or no?", part=3, q=True, tag="question 4", pause=3.2, pcam=(960, 560, 1700),
-      props=[prop("t0", A.tail_tip(0), 640, 640, .8, p=(960, 720, .6)), prop("t1", A.tail_tip(1), 1280, 640, .8, p=(960, 1060, .6))],
+    S("paper", (960, 560, 1700), "Here are three spider monkey tails. One, two, three.", part=3, tag="board: three tails", pcam=(960, 640, 1900),
+      props=[prop(f"t{k}", A.tail_tip(k), *TIPS[k], .7, True, p=(*TIPSP[k], .42)) for k in range(3)],
+      fx=[("show", "w:One,", "t0"), ("show", "w:two,", "t1"), ("show", "w:three.", "t2")], words=[("w:three", "3 TAILS", .5, .12, 1.0, "sun", (.5, .33), .9)]),
+    S("paper", (960, 560, 1700), "Every spider monkey has its own lines. Look, all different!", part=3, tag="board: all different", pcam=(960, 640, 1900),
+      props=[prop(f"t{k}", A.tail_tip(k), *TIPS[k], .7, p=(*TIPSP[k], .42)) for k in range(3)],
+      fx=[("to", "w:own", "#{p}t0-pad,#{p}t1-pad,#{p}t2-pad", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 3}, "the three sets of lines glow")], words=[("w:different!", "ALL DIFFERENT!", .5, .12, .9, "sun", (.5, .33), .8)]),
+    S("paper", (960, 560, 1700), "Are Mango's lines the same as her friend's? Yes, or no?", part=3, q=True, tag="question 4", pause=3.2, pcam=(960, 640, 1900),
+      props=[prop("t0", A.tail_tip(0), 640, 640, .8, p=(960, 640, .5)), prop("t1", A.tail_tip(1), 1280, 640, .8, p=(960, 980, .5))],
       fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:2.0")]),
     S("blossom", HC, "No! Mango's lines are only Mango's.", part=3, tag="only Mango's", actors=HANG(), pcam=HP,
       fx=[("face", 0.05, "mango", "happy"), SQUEEZE("w:only")], words=[("w:only", "ONLY MANGO'S!", .5, .14, .85, "sun", (.5, .33), .75)]),
     S("paper", BRD, "And the little lines help her tail hold on tight.", part=3, tag="board: lines grip", pcam=BRDP,
-      props=[prop("br", lambda p: A.branch(p, 900), 960, 300, 1.0, p=(960, 300, 1.0)), prop("tt", A.tail_tip(0), 900, 560, 1.0, p=(900, 600, 1.0))],
+      props=[prop("br", lambda p: A.branch(p, 900), 960, 300, 1.0, p=(960, 380, 1.0)), prop("tt", A.tail_tip(0), 900, 560, 1.0, p=(900, 680, .9))],
       fx=[("to", "w:tight.", "#{p}tt_w", {"y": "-=60", "duration": .4, "yoyo": True, "repeat": 1}, "the tail tip presses up on the branch")],
-      words=[("w:tight.", "HOLD TIGHT!", .5, .8, 1.0, "sun", (.5, .9), .85)]),
+      words=[("w:tight.", "HOLD TIGHT!", .5, .8, 1.0, "sun", (.5, .33), .85)]),
     S("blossom", HT, "Her tail holds the branch, tight, tight, tight!", part=3, tag="tight tight", actors=HANG(), pcam=HPT, fx=[SQUEEZE("w:tight,")],
-      words=[("w:tight,", "TIGHT!", .75, .22, 1.1, "sun", (.5, .33), .9)]),
+      words=[("w:tight,", "TIGHT!", .22, .55, 1.1, "sun", (.5, .33), .9)]),
     S("paper_blue", BRD, "Her hands are good at holding, too. Four long fingers!", part=3, tag="board: four fingers", pcam=BRDP,
-      props=[prop("hd", A.hand_big, 960, 640, 1.2, p=(960, 700, 1.1))] + [prop(f"n{k}", A.badge(k + 1), 960 + (-66 + 44 * k) * 1.2 + 24, 640 - 330, .55, True, p=(960 + (-66 + 44 * k) * 1.1 + 22, 700 - 305, .5)) for k in range(4)],
+      props=[prop("hd", A.hand_big, 960, 640, 1.2, p=(960, 700, 1.1))] + [prop(f"n{k}", A.badge(k + 1), round(960 + (k - 1.5) * 140), 230, .8, True, p=(round(960 + (k - 1.5) * 130), 310, .75)) for k in range(4)],
       fx=[("show", "w:Four", "n0"), ("show", "w:Four", "n1", None, False), ("show", "w:long", "n2"), ("show", "w:fingers!", "n3")],
-      words=[("w:Four", "4 FINGERS", .2, .3, 1.0, "sun", (.5, .2), .8)]),
+      words=[("w:Four", "4 FINGERS", .2, .55, 1.0, "sun", (.5, .29), .8)]),
     S("paper_blue", BRD, "They hook onto a branch. Hook!", part=3, tag="board: hook", pcam=BRDP,
-      props=[prop("br", lambda p: A.branch(p, 900), 960, 360, 1.0, p=(960, 380, 1.0)), prop("hd", A.hand_big, 960, 640, 1.2, p=(960, 700, 1.1))],
+      props=[prop("br", lambda p: A.branch(p, 900), 960, 420, 1.0, p=(960, 440, 1.0)), prop("hd", A.hand_big, 960, 640, 1.2, p=(960, 700, 1.1))],
       fx=[("to", "w:hook", "#{p}hd-f", {"scaleY": .55, "svgOrigin": "0 -60", "duration": .4, "ease": "back.out(1.6)"}, "the fingers hook")],
-      words=[("w:Hook!", "HOOK!", .8, .3, 1.2, "sun", (.5, .2), 1.0)]),
+      words=[("w:Hook!", "HOOK!", .8, .7, 1.2, "sun", (.5, .33), 1.0)]),
     S("blossom", say="Can you make a hook with your fingers? Hook!", part=3, q=True, tag="make a hook", hide=["mango"], pause=.6, fx=[("hop", "w:Hook!", "milo")],
       words=[("w:Hook!", "HOOK!", .76, .22, 1.2, "sun", (.5, .33))], **MILO("canopy")),
     S("blossom", HC, "Hands that hook, and a tail that grabs. Just right for the treetops!", part=3, tag="just right", actors=HANG("monkey_hangfruit"), pcam=HP,
       fx=[SQUEEZE("w:grabs."), ("face", "w:right", "mango", "happy")], words=[("w:right", "JUST RIGHT!", .5, .14, .9, "sun", (.5, .33), .8)]),
-    S("canopy_eve", MW, "Look who is here! Mango's friend Coco, and her baby.", part=3, trans="iris", tag="Coco and baby", hide=["milo"], pcam=(1000, 300, 1150),
+    S("canopy_eve", (1020, 320, 1300), "Look who is here! Mango's friend Coco, and her baby.", part=3, trans="iris", tag="Coco and baby", hide=["milo"], pcam=(1180, 300, 1150),
       actors=[("mango", "monkey", 700, MY, MS), ("coco", "monkey_c", 1150, MY, MS), ("baby", "monkey_b", 1330, MY, .3)],
-      fx=[("hop", "w:Coco,", "coco"), ("hop", "w:baby.", "baby")], words=[("w:baby.", "A BABY!", .8, .56, 1.1, "sun", (.5, .33))]),
+      fx=[("hop", "w:Coco,", "coco"), ("hop", "w:baby.", "baby")], words=[("w:baby.", "A BABY!", .5, .15, 1.1, "sun", (.5, .33))]),
     S("paper_pink", BRD, "The baby wraps its tiny tail around its mama's tail.", part=3, tag="board: tails hold", pcam=BRDP,
       props=[prop("th", A.tails_hug, 960, 560, 1.0, p=(960, 620, .8))],
       fx=[("fromto", "w:wraps", "#{p}th-baby", {"opacity": 0}, {"opacity": 1, "duration": .5}, "the tiny tail wraps around")],
-      words=[("w:tiny", "TINY TAIL", .3, .78, 1.0, "sun", (.5, .25), .8), ("w:mama's", "MAMA", .82, .3, 1.0, "pill", (.5, .85), .8)]),
+      words=[("w:tiny", "TINY TAIL", .25, .3, 1.0, "sun", (.35, .33), .8), ("w:mama's", "MAMA", .82, .3, 1.0, "pill", (.7, .40), .8)]),
     S("canopy_eve", (1240, 300, 760), "That helps the baby feel safe and snug.", part=3, tag="safe and snug", hide=["milo"], pcam=(1240, 280, 900),
       actors=[("mango", "monkey", 700, MY, MS), ("coco", "monkey_c", 1150, MY, MS), ("baby", "monkey_b", 1330, MY, .3)],
-      props=[prop("h1", art2.heart, 1240, 110, 1.0, True)], fx=[("show", "w:safe", "h1"), ("face", 0.05, "baby", "happy"), ("face", 0.05, "coco", "happy")],
-      words=[("w:snug.", "SAFE AND SNUG", .5, .86, .8, "pill", (.5, .25), .7)]),
+      props=[prop("h1", art2.heart, 1430, 230, 1.0, True)], fx=[("show", "w:safe", "h1"), ("face", 0.05, "baby", "happy"), ("face", 0.05, "coco", "happy")],
+      words=[("w:snug.", "SAFE AND SNUG", .5, .07, .8, "pill", (.5, .33), .7)]),
     S("canopy_eve", say="Hold on tight, little baby!", part=3, tag="hold on baby", hide=["mango"], fx=[("hop", "w:baby!", "milo")],
       words=[("w:tight,", "HOLD ON!", .76, .22, 1.0, "sun", (.5, .33))], **MILO("canopy")),
     S("canopy_eve", say="Who do you hold hands with?", part=3, q=True, tag="hold hands", hide=["mango"], pause=1.2, fx=[("hop", "w:hold", "milo")],
@@ -322,14 +323,14 @@ SHOTS = [
       props=MEASURE(), fx=[HIDE_TAIL, ("signs", "w:body,", ["BODY", "TAIL"], 1, "wait:2.0")]),
     S("canopy_eve", HQ, "What can her tail do? Hold on, or sing?", part=4, q=True, tag="quiz 2", pause=3.2, actors=HANG(), pcam=HPQ,
       fx=[("signs", "w:Hold", ["HOLD ON", "SING"], 0, "wait:2.0"), SQUEEZE("wait:2.05")]),
-    S("paper_blue", BRD, "Hold on! Just like an extra hand.", part=4, tag="board: extra hand again", pcam=BRDP,
+    S("paper_blue", BRD, "Hold on! Just like an extra hand.", part=4, tag="board: extra hand again", pcam=BHP,
       actors=[("m", "monkey_hangfruit", 960, 300, .95)], props=[prop("br", A.branch, 960, 300, 1.0, p=(960, 300, 1.0))],
       words=[("w:Hold", "HOLD ON!", .22, .62, 1.0, "sun", (.5, .33), .9)]),
     S("paper", BRD, "What is under the tip of her tail?", part=4, q=True, tag="quiz 3", pause=1.6, pcam=BRDP,
-      props=[prop("tt", A.tail_tip(0), 900, 560, 1.3, p=(900, 600, 1.2))], words=[("end+0.3", "?", .82, .3, 2.4, "sun", (.5, .25), 1.5)]),
+      props=[prop("tt", A.tail_tip(0), 900, 560, 1.3, p=(900, 600, 1.2))], words=[("end+0.3", "?", .82, .3, 2.4, "sun", (.5, .33), 1.5)]),
     S("paper_pink", BRD, "Little lines, just like your fingertip!", part=4, tag="board: lines again", pcam=BRDP,
       props=[prop("tt", A.tail_tip(0), 640, 560, .9, p=(960, 560, .7)), prop("fg", A.fingertip, 1320, 600, .8, p=(960, 1080, .6))],
-      words=[("w:Little", "LITTLE LINES!", .5, .12, 1.0, "sun", (.5, .2), .85)]),
+      words=[("w:Little", "LITTLE LINES!", .5, .12, 1.0, "sun", (.5, .33), .85)]),
     S("canopy_eve", HC, "Good night, Mango. Hold on tight!", part=4, tag="good night", actors=HANG(), pcam=HP, props=[prop("h1", art2.heart, HX + 200, 560, 1.0, True)],
       fx=[("show", "w:tight!", "h1"), ("face", 0.05, "mango", "sleepy")]),
     S("canopy_eve", MW, "Thank you for learning with me, friends. See you at the zoo!", part=4, tag="goodbye", cam2=(960, 380, 1900), pcam=MPW,
@@ -347,7 +348,7 @@ SHORTS = [
                        fx=[("face", 0.05, "mango", "happy")], words=[("w:down?", "?", .2, .3, 2.6, "sun", (.22, .36), 1.4)])]},
     {"id": "zc_ep04_short3", "title": "What Is Under a Monkey's Tail Tip?", "band": ("LITTLE", "LINES?"), "thumb_text": "LIKE YOURS!", "part": 3,
      "extra_first": [S("paper", BRD, "What is hiding under a monkey's tail?", part=3, q=True, tag="hook: hiding under", pcam=BRDP,
-                       props=[prop("tt", A.tail_tip(0), 900, 560, 1.3, p=(900, 600, 1.2))], words=[("w:tail?", "?", .82, .3, 2.6, "sun", (.5, .25), 1.5)])]},
+                       props=[prop("tt", A.tail_tip(0), 900, 560, 1.3, p=(900, 600, 1.2))], words=[("w:tail?", "?", .82, .3, 2.6, "sun", (.5, .33), 1.5)])]},
 ]
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark

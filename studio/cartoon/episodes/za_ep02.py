@@ -57,11 +57,13 @@ NOMUD = lambda who="tumble": ("to", 0, "#{p}" + who + " .mud", {"opacity": 0, "d
 ARM_UP = ("to", 0, "#{p}mango-ar", {"rotation": -80, "svgOrigin": "58 -206", "duration": .01}, "")      # Mango holds the fan up: her right hand is then at (642, 795) on the "bigtree" stage
 LEAF_ON = (908, 571)      # where the leaf hat lies on Tumble's head in the jungle (stem at the back of the head)
 
-REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0}       # the show loop's key and the music bed's tempo
-SING_GO = dict(REFRAIN, lines=[{"text": "Friends help friends, come along with me!", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                               {"text": "Step by step, what will we see?", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
-SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "Friends help friends, hooray, hooray!", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
-SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "What a muddy, happy day!", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+# Nov 17 2026 (owner: Milo's sung voice "sounds robotic"): nobody sings. The tune is played by the bells and the soft band; the rhyme is SAID by Milo and shown on screen.
+REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
+SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
+                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
+SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
 
 SHOTS = [
     # ------------------------------------------------------------ HOOK: the feeling and the problem in the first 5 seconds
@@ -84,9 +86,9 @@ SHOTS = [
       fx=[("nod", "w:Have", "mama"), ("trunk", "w:stay", "mama", -30, .4), ("trunk", "e:sun!", "mama", 0, .4)]),
     S("zoo", (744, 600, 1400), "Off they go, to find a cool place.", tag="off they go", hide=["mama"], move={"milo": (260, 570, .78)},
       fx=[("walk", 0.1, "tumble", 260, 3.0), ("fly", 0.1, "milo", 480, 610, 3.0)]),
-    S("savanna", WIDE, trans="iris", who="milo", sing=SING_GO, beat="song", tag="song: off we go", props=[SUN_S()],
-      fx=[SPIN, ("walk", 0.2, "tumble", 360, 8.6), ("fly", 0.2, "milo", 400, 500, 8.6), ("trunk", "w:come", "tumble", -60, .4), ("trunk", "w:me!", "tumble", 0, .4), ("trunk", "w:what", "tumble", -60, .4), ("trunk", "w:see?", "tumble", 0, .4)],
-      move={"tumble": (240, 930, .62), "milo": (150, 480, .8)}, words=[("w:Friends", "FRIENDS HELP FRIENDS", .42, .15, .6, "pill"), ("w:Step", "STEP BY STEP", .5, .32, .8, "sun")]),
+    S("savanna", WIDE, trans="iris", who="", sing=SING_GO, beat="song", tag="song: off we go", props=[SUN_S()],
+      fx=[SPIN, ("walk", 0.2, "tumble", 360, 8.6), ("fly", 0.2, "milo", 400, 500, 8.6), ("trunk", TB(3), "tumble", -60, .4), ("trunk", TB(5), "tumble", 0, .4), ("trunk", TB(11), "tumble", -60, .4), ("trunk", TB(13), "tumble", 0, .4)],
+      move={"tumble": (240, 930, .62), "milo": (150, 480, .8)}, words=[(TB(0), "FRIENDS HELP FRIENDS", .42, .15, .6, "pill"), (TB(8), "STEP BY STEP", .5, .32, .8, "sun")]),
     # ------------------------------------------------------------ OBSTACLE 1: the sun on his head (a leaf hat is too small)
     S("savanna", (1150, 480, 1500), "The sun shines down on the wide savanna.", beat="obstacle1", tag="the hot sun", hide=["tumble", "milo"], cam2=(1250, 420, 1300), props=[SUN_S(), prop("ht", art3.heat, 1100, 520, 1.0, True)],
       fx=[SPIN, ("show", "w:down", "ht")], words=[("w:sun", "HOT SUN", .3, .2, 1.0, "sun")]),
@@ -247,11 +249,13 @@ SHOTS = [
       hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:fan,", ["FAN", "MUD"], 1, "wait:2.0")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "And what does an elephant flap to cool down? Its ears, or its tail?", q=True, beat="ending", tag="question: ears or tail", pause=3.2,
       hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:ears,", ["EARS", "TAIL"], 0, "wait:2.0")]),
-    S("zoo_eve", WIDE, who="milo", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
-      fx=[("hop", 1.0, "tumble"), ("hop", 2.2, "mango"), ("nod", 3.2, "mama")], words=[("w:hooray,", "HOORAY!", .72, .2, 1.05, "sun")]),
-    S("zoo_eve", (1145, 620, 1500), who="milo", sing=SING_END_B, beat="song", tag="song: muddy happy day", cam2=(1145, 620, 1420), hide=["milo", "mango"],
+    S("zoo_eve", (980, 560, 1880), "Friends help friends. Hooray, hooray! What a muddy, happy day!", beat="ending", tag="the rhyme", cam2=(1000, 560, 1780),
+      fx=[("hop", "w:Hooray,", "milo"), ("hop", "w:hooray!", "tumble"), ("hop", "w:muddy,", "mango")]),
+    S("zoo_eve", WIDE, who="", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
+      fx=[("hop", 1.0, "tumble"), ("hop", 2.2, "mango"), ("nod", 3.2, "mama")], words=[(TB(3), "HOORAY!", .72, .2, 1.05, "sun")]),
+    S("zoo_eve", (1145, 620, 1500), who="", sing=SING_END_B, beat="song", tag="song: muddy happy day", cam2=(1145, 620, 1420), hide=["milo", "mango"],
       props=[prop("h1", lambda p: art2.heart(p), 1020, 430, .9, True), prop("h2", lambda p: art2.heart(p, "#ff9ab8"), 940, 380, .6, True)],
-      fx=[("hop", 0.6, "tumble"), ("nod", 1.6, "mama"), ("show", "w:muddy,", "h1"), ("show", "w:day!", "h2"), ("hop", 3.0, "tumble")]),
+      fx=[("hop", 0.6, "tumble"), ("nod", 1.6, "mama"), ("show", TB(1.5), "h1"), ("show", TB(3.5), "h2"), ("hop", 3.0, "tumble")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 0, 0), "See you on the next adventure, friends!", beat="ending", tag="goodbye", hide=["mama", "mango"], fx=[("hop", "w:next", "milo")],
       words=[("w:next", "SEE YOU SOON!", .74, .2, .9, "pill")]),
 ]

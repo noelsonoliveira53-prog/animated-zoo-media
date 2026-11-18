@@ -1,6 +1,8 @@
 {
  "id": "zc_ep01_short1",
  "total": 91.92804166666673,
+ "bpm": 96,
+ "beats": [],
  "plan": {
   "length": 91.9,
   "shots": 26,
@@ -22,7 +24,17 @@
   "first_words_at": 0.42,
   "shot_mean": 3.54,
   "fails": [],
-  "words_placed": "206/206"
+  "words_placed": "206/206",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 28.1,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 25,
+   "cuts_on_the_half_beat": 2,
+   "songs_entering_on_a_beat": "0/3",
+   "process": "first cartoon process"
+  }
  },
  "events": [
   [
@@ -891,28 +903,12 @@
   },
   {
    "place": "dunes",
-   "say": "Mmm, mmm, mmm.",
+   "say": "",
    "t0": 22.978541666666672,
    "t1": 25.598541666666673,
    "v0": 23.098541666666673,
    "dur": 2.5,
-   "words": [
-    [
-     "Mmm,",
-     0.0,
-     0.575
-    ],
-    [
-     "mmm,",
-     0.625,
-     1.2
-    ],
-    [
-     "mmm.",
-     1.25,
-     2.4
-    ]
-   ],
+   "words": [],
    "part": 1,
    "q": false,
    "tag": "Mama hums",
@@ -922,28 +918,12 @@
   },
   {
    "place": "dunes",
-   "say": "Mmm, mmm, mmm.",
+   "say": "",
    "t0": 25.598541666666673,
    "t1": 28.218541666666674,
    "v0": 25.718541666666674,
    "dur": 2.5,
-   "words": [
-    [
-     "Mmm,",
-     0.0,
-     0.575
-    ],
-    [
-     "mmm,",
-     0.625,
-     1.2
-    ],
-    [
-     "mmm.",
-     1.25,
-     2.4
-    ]
-   ],
+   "words": [],
    "part": 1,
    "q": false,
    "tag": "Sandy hums",
@@ -999,28 +979,12 @@
   },
   {
    "place": "dunes",
-   "say": "Mmm, mmm, mmm!",
+   "say": "",
    "t0": 30.34891666666668,
    "t1": 33.26891666666668,
    "v0": 30.46891666666668,
    "dur": 2.5,
-   "words": [
-    [
-     "Mmm,",
-     0.0,
-     0.575
-    ],
-    [
-     "mmm,",
-     0.625,
-     1.2
-    ],
-    [
-     "mmm!",
-     1.25,
-     2.4
-    ]
-   ],
+   "words": [],
    "part": 1,
    "q": false,
    "tag": "everybody hums",

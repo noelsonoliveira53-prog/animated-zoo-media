@@ -87,11 +87,12 @@ TWO = (1215, 570, 1460); TWOP = (1230, 480, 2560)
 # The camels' hums: "mmm" sung on notes by the voice itself (sing.hum_word) with a soft music box, in C like the show's loop, at the loop's speed.
 # Mama low (sol do mi), Sandy high, ending on Mama's last note (do' sol mi); the lullaby is Mama's tune and its way home (mi re do), slower.
 SCL = C("dunes", "calf", "head", 600, -150, -65); SCLP = (725, 636, 1300)      # Sandy's close-up while she hums: Mama's tail stays outside
-HUM = {"hum": True, "bpm": 96, "chords": "C C", "style": "lullaby", "outro_bars": 0, "group": False, "level": 0.3}
-HUM_MAMA = dict(HUM, voice="bf_emma", formant=1.0, lines=[{"text": "Mmm, mmm, mmm.", "notes": "G3:1 C4:1 E4:2"}])
-HUM_SANDY = dict(HUM, voice="af_sarah", formant=1.15, level=0.27, lines=[{"text": "Mmm, mmm, mmm.", "notes": "C5:1 G4:1 E4:2"}])
-HUM_ALL = dict(HUM, voice="af_sarah", formant=1.15, group=True, level=0.3, lines=[{"text": "Mmm, mmm, mmm!", "notes": "C5:1 G4:1 E4:2"}])
-HUM_LULLABY = dict(HUM, bpm=72, voice="bf_emma", formant=1.0, level=0.26, lines=[{"text": "Mmm, mmm, mmm.", "notes": "G3:1 C4:1 E4:2"}, {"text": "Mmm, mmm, mmm.", "notes": "E4:1 D4:1 C4:2"}])
+# Nov 17 2026 (owner: no voice synthesized onto notes, it sounds robotic): the hums are played by the bells and the soft band; nobody's voice is on the notes.
+HUM = {"bpm": 96, "chords": "C C", "style": "lullaby", "outro_bars": 0, "group": False, "level": 0.3}
+HUM_MAMA = dict(HUM, lines=[{"text": "~ ~ ~", "notes": "G3:1 C4:1 E4:2"}])
+HUM_SANDY = dict(HUM, level=0.27, lines=[{"text": "~ ~ ~", "notes": "C5:1 G4:1 E4:2"}])
+HUM_ALL = dict(HUM, lines=[{"text": "~ ~ ~", "notes": "C5:1 G4:1 E4:2"}])
+HUM_LULLABY = dict(HUM, bpm=72, level=0.26, lines=[{"text": "~ ~ ~", "notes": "G3:1 C4:1 E4:2"}, {"text": "~ ~ ~", "notes": "E4:1 D4:1 C4:2"}])
 DRK = (1180, 500, 1700); OAS = (800, 310, 2400); WND = (1205, 380, 2400); GOB = (1251, 461, 1700); EYE = (960, 560, 2300)      # 9:16 at the oasis: Mama drinking with sky above for the count and the jug; Mama and Sandy whole
 SHOTS = [
     # ---------------------------------------------------------------- HOOK (the question, the animal, in the first 5 seconds)

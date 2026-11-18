@@ -623,6 +623,8 @@ def main():
     film = Film(ep, mod.STAGES, shots, portrait); html = film.build_html(total, band)
     res, ev = plan_gate(film, total, ep); res["words_placed"] = f"{tot - miss}/{tot}"
     if miss: res["fails"].append(f"word sync: {miss} of {tot} words could not be placed from the audio")
+    voiced = [s.get("tag") or "?" for s in shots if s.get("sing") and (s["sing"].get("hum") or any(any(ch.isalpha() for ch in ln["text"]) for ln in s["sing"]["lines"]))]
+    if voiced: res["fails"].append("a voice is synthesized onto notes (owner, Nov 17: it sounds robotic; the tune is played by instruments, text of '~' only): " + ", ".join(voiced))
     on = SYNC.get("onset") or [0]; g = BEAT / 2; cuts = [s["t0"] for s in shots[1:]]
     res["sync"] = {"pauses_checked": len(SYNC.get("onset", [])), "onset_err_mean_ms": round(1000 * float(np.mean(on)), 1), "onset_err_max_ms": round(1000 * float(max(on)), 1),
                    "suspect_words": SYNC.get("suspect", []), "cuts": len(cuts), "cuts_on_the_half_beat": sum(1 for c in cuts if abs(c / g - round(c / g)) * g < 0.021),
@@ -642,6 +644,7 @@ def main():
         r = subprocess.run(["hyperframes", "snapshot", "--at", arg("--stills"), "--json"], cwd=proj, env=env, capture_output=True, text=True)
         print(r.stdout[-1500:], r.stderr[-800:]); return
     wav = os.path.join(out, sid + ".wav"); sf.write(wav, mix_audio(film, total, ep), SR)
+    if "--wav" in sys.argv: print("WAV", wav, round(total, 2), "s"); return      # the sound alone (to put new sound on a finished file whose picture does not change)
     silent = os.path.join(out, sid + "_silent.mp4"); res_flag = "portrait-4k" if portrait else "landscape-4k"
     cmd = ["hyperframes", "render", "-f", str(FPS), "-q", "standard", "--crf", "17", "-o", silent, "--quiet"]
     if "--draft" not in sys.argv: cmd += ["--resolution", res_flag]

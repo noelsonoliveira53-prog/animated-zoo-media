@@ -78,9 +78,15 @@ def review(fname):
         if len(tw) > 3: fails.append(f"thumbnail text has {len(tw)} words (max 3): '{tt}'")
         rep = [w for w in tw if w not in stop and w in re.findall(r"[a-z0-9']+", title.lower())]
         if rep: warns.append(f"thumbnail text repeats the title's words {rep}: the thumbnail should add a hook, not say the title again")
-    same = [e for e in allp if e is not entry and e["title"].strip().lower() == title.strip().lower() and e.get("status") != "dropped"]
+    same = [e for e in allp if e is not entry and e.get("title", "").strip().lower() == title.strip().lower() and e.get("status") != "dropped"]
     if same: fails.append("title repeats another video on this channel (META-02)")
     if "AI tools" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the AI-disclosure boilerplate (META-03)")
+    if fmt.startswith("cartoon"):      # owner, Nov 17 8:25 PM: no voice synthesized onto notes in a cartoon (Milo's sung line in za_ep02 "sounds robotic")
+        _ep = os.path.join(HERE, "..", "cartoon", "episodes", re.sub(r"_short\d+$", "", os.path.splitext(os.path.basename(entry.get("file", "")))[0]) + ".py")
+        if os.path.exists(_ep):
+            _src = open(_ep).read()
+            if re.search(r'"hum":\s*True', _src) or any(re.search(r"[A-Za-z]", t) for t in re.findall(r'\{"text":\s*"([^"]*)",\s*"notes"', _src)):
+                fails.append("the episode has a sung or hummed voice (a `sing` line with words, or \"hum\": True): the tune must be played by instruments (CLAUDE.md, Nov 17)")
     if re.search(r"[<>]", title + desc): fails.append("'<' or '>' in the title or description: YouTube Studio refuses it (zool_ep15's upload stopped on '>90%', Nov 17)")
     first2 = desc.split("\n")[:2]
     if len(" ".join(first2)) < 80: warns.append("first 2 description lines are short; make them searchable")

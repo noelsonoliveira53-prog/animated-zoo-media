@@ -261,7 +261,7 @@ SHOTS = [
     S("figtree", GALL, "In the afternoon, Mango's little group finds one more fruit tree.", part=3, trans="iris", tag="afternoon", cam2=GALL2, actors=group(GX1, (3, 4, 5)), pcam=G3P, pcam2=G3P,
       move={"mango": (GX1[3] - 300, MY, GS), "f4": (GX1[4] - 300, MY, GS), "f5": (GX1[5] - 300, MY, GS)},
       fx=[("walk", 0.1, k, 300, 2.6) for k in ("mango", "f4", "f5")], words=[("w:fruit", "MORE FRUIT!", .32, .2, 1.0, "sun", (.5, .33), .9)]),
-    S("bigtree", (1000, -60, 3300), "Spider monkeys spend most of the day high up in the treetops.", part=3, trans="iris", tag="high up", cam2=(1000, -200, 2600), pcam=(950, -690, 2000), pcam2=(950, -700, 1800),
+    S("bigtree", (960, -60, 2860), "Spider monkeys spend most of the day high up in the treetops.", part=3, trans="iris", tag="high up", cam2=(980, -200, 2500), pcam=(950, -690, 2000), pcam2=(950, -700, 1800),
       props=[prop("ar", lambda p: art.arrow(p, 620, 500, 620, -400), 0, 0, 1, True)], fx=[("show", "w:high", "ar"), ("hop", "w:treetops.", "mango")],
       words=[("w:high", "UP HIGH", .24, .5, .8, "sun", (.5, .33), .9)]),
     S("figtree", MC, "They climb, and they look for food.", part=3, tag="looking for food", hide=["milo"], pcam=MPW, pcam2=MPW, move={"mango": (MX - 160, MY, MS)},

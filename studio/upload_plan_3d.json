@@ -2534,6 +2534,9 @@
  },
  {
   "file": "zool_ep21.mp4",
+  "video_id": "QUYq7rvwy2A",
+  "thumb_set": true,
+  "uploaded_note": "Nov 18 daily run about 3:15 PM ET: Studio dialog 'public on November 23, 2026 at 1:30 PM', made for kids, custom thumbnail",
   "title": "Farm Animal Facts for Kids! Cow, Horse and Pig",
   "description": "Who has a stomach with four parts? Who can sleep standing up? Pick your answer with Milo the bluebird, then find out: a cow chews its cud for a big part of every day, a horse can lock its legs and nap standing up, and a pig digs with its snout to loosen the dirt and cool down.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nRuminant stomachs have four compartments: the rumen, the reticulum, the omasum and the abomasum; cows may spend 35 to 40 percent of each day ruminating (cud chewing); a cow's salivary glands can make and add 50 to 80 quarts of saliva to the rumen daily; the rumen can hold 25 gallons or more (University of Minnesota Extension, 'The ruminant digestive system', extension.umn.edu/dairy-nutrition/ruminant-digestive-system, read Nov 17 2026).\nHorses: the stay apparatus, a complex arrangement of muscles, tendons and ligaments, keeps the legs steady with little effort; in the shoulder a bony groove locks the biceps tendon in place; standing sleep is restful, but horses do lie down for their deepest sleep periods (Kentucky Equine Research, 'Asleep Standing Up: How Do Horses Do That?', ker.com, read Nov 17 2026).\nPigs: the nose serves important functions besides smell; pigs root in soil to obtain iron; older pigs check out a new pig by using their noses to investigate; pigs use their snout to loosen up the dirt and use this newly tilled soil to cool down; sows root to gather materials to build nests (Rutgers 4-H Animal Science, 'Don't Root for That! Why All Aren't Fans of Swine Rooting Behavior', 4hanimalscience.rutgers.edu, read Nov 17 2026).",
   "tags": [
@@ -2553,7 +2556,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep21.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 325.1,
   "watermark": "tl",

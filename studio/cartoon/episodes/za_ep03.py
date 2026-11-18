@@ -86,12 +86,14 @@ def SQ(name, who, h, hidden=True):
     bx, by = P("rocks", who, "beak"); return prop(name, lambda p: A.squirt(p, bx - SQ_FROM[0] + 6, by - SQ_FROM[1] + 8, h), SQ_FROM[0], SQ_FROM[1], 1.0, hidden)
 
 
-REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0}       # the show loop's key and the music bed's tempo
-SING_GO = dict(REFRAIN, lines=[{"text": "Friends help friends, come along with me!", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                               {"text": "Step by step, what will we see?", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
-SING_TY = dict(REFRAIN, chords="C G", lines=[{"text": "Tweet, tweet, tweet! Thank you, Tumble!", "notes": "E4:.5 G4:.5 C5:1 A4:1 G4:1 E4:.5,C4:1.5", "rest": 2}])
-SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "Friends help friends, hooray, hooray!", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
-SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "What a rainy, happy day!", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+# Owner, Nov 17 8:25 PM: no voice is synthesized onto notes. Nobody sings: the rhyme is SAID in a spoken shot, then the tune is played by the bells and the soft band.
+REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
+SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
+                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
+SING_TY = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~ ~", "notes": "E4:.5 G4:.5 C5:1 A4:1 G4:1 E4:.5,C4:1.5", "rest": 2}])       # the birds' thank-you tune
+SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
 
 SHOTS = [
     # ------------------------------------------------------------ HOOK: the feeling and the problem in the first 5 seconds
@@ -112,9 +114,12 @@ SHOTS = [
       fx=[("nod", "w:Follow", "mama"), ("trunk", "w:nose,", "mama", -30, .4), ("trunk", "e:Tumble.", "mama", 0, .4)], words=[("w:nose,", "FOLLOW YOUR NOSE", .3, .18, .62, "pill")]),
     S("zoo", (744, 600, 1400), "Off they go, to look for water.", tag="off they go", hide=["mama"], move={"milo": (260, 570, .78)},
       fx=[("walk", 0.1, "tumble", 260, 3.0), ("fly", 0.1, "milo", 480, 610, 3.0)]),
-    S("savanna", WIDE, trans="iris", who="milo", sing=SING_GO, beat="song", tag="song: off we go", props=[SUN_S()],
-      fx=[SPIN, ("walk", 0.2, "tumble", 360, 8.6), ("fly", 0.2, "milo", 400, 500, 8.6), ("trunk", "w:come", "tumble", -60, .4), ("trunk", "w:me!", "tumble", 0, .4), ("trunk", "w:what", "tumble", -60, .4), ("trunk", "w:see?", "tumble", 0, .4)],
-      move={"tumble": (240, 930, .62), "milo": (150, 480, .8)}, words=[("w:Friends", "FRIENDS HELP FRIENDS", .42, .15, .6, "pill"), ("w:Step", "STEP BY STEP", .5, .32, .8, "sun")]),
+    S("savanna", (560, 640, 1300), "Friends help friends, come along with me! Step by step, what will we see?", trans="iris", tag="the walking rhyme", cam2=(600, 640, 1240), props=[SUN_S()],
+      move={"tumble": (240, 930, .62), "milo": (860, 640, .8)}, fx=[SPIN, ("hop", "w:come", "milo"), ("trunk", "w:Step", "tumble", -50, .4), ("trunk", "w:what", "tumble", 0, .4)],
+      words=[("w:Friends", "FRIENDS HELP FRIENDS", .4, .15, .62, "pill")]),
+    S("savanna", WIDE, who="", sing=SING_GO, beat="song", tag="song: off we go", props=[SUN_S()],
+      fx=[SPIN, ("walk", 0.2, "tumble", 360, 8.6), ("fly", 0.2, "milo", 400, 500, 8.6), ("trunk", TB(3), "tumble", -60, .4), ("trunk", TB(5), "tumble", 0, .4), ("trunk", TB(11), "tumble", -60, .4), ("trunk", TB(13), "tumble", 0, .4)],
+      move={"tumble": (240, 930, .62), "milo": (150, 480, .8)}, words=[(TB(0), "FRIENDS HELP FRIENDS", .52, .1, .6, "pill"), (TB(8), "STEP BY STEP", .5, .32, .8, "sun")]),
     # ------------------------------------------------------------ OBSTACLE 1: the water hole is dry (Tumble's own nose finds the way)
     S("dryhole", WIDE, "Here is the water hole. But, oh! Where is the water?", trans="iris", beat="obstacle1", tag="the water hole", cam2=(1000, 560, 1800),
       move={"tumble": (220, 930, .6)}, fx=[("walk", 0.1, "tumble", 210, 2.6), ("face", "w:But,", "tumble", "wow")], words=[("w:water", "WATER HOLE", .36, .2, .9, "pill")]),
@@ -238,9 +243,11 @@ SHOTS = [
       fx=[("count", "w:One,", 3, 1.3, {"x": 1420, "y": 420}), ("hop", "w:three!", "milo")]),
     S("rocks", C("rocks", "tumble", "head", 800, -40, 10), "It was only a tiny sip. But I feel so happy inside.", who="tumble", beat="solution", tag="happy inside", hide=["milo"] + BIRDS,
       props=[POOL(170), prop("h1", lambda p: art2.heart(p), 560, 560, .9, True)], fx=[("face", 0.02, "tumble", "happy"), ("show", "w:happy", "h1"), ("blinkslow", "w:happy", "tumble-eye", 1)]),
-    S("rocks", (1390, 760, 1040), who="pip", sing=SING_TY, beat="song", tag="song: thank you, Tumble", hide=["tumble", "milo"], props=[POOL(170)],
-      fx=[("hop", "w:Tweet,", "pip"), ("hop", "w:tweet,", "kiki"), ("hop", "w:tweet!", "bo"), WING("w:Thank", "pip", 11), WING("w:Thank", "kiki", 11), WING("w:Thank", "bo", 11)],
-      words=[("w:Tweet,", "TWEET!", .2, .3, .9, "sun"), ("w:Thank", "THANK YOU!", .76, .24, .9, "pill")]),
+    S("rocks", C("rocks", "pip", "head", 760, -60, 20), "Tweet, tweet, tweet! Thank you, Tumble!", who="pip", beat="solution", tag="Pip: thank you", hide=["tumble", "milo", "kiki", "bo"],
+      fx=[("hop", "w:Thank", "pip")], words=[("w:Thank", "THANK YOU!", .72, .2, .85, "pill")]),
+    S("rocks", (1390, 760, 1040), who="", sing=SING_TY, beat="song", tag="song: the birds' thank-you tune", hide=["tumble", "milo"], props=[POOL(170)],
+      fx=[("hop", TB(0), "pip"), ("hop", TB(.5), "kiki"), ("hop", TB(1), "bo"), WING(TB(2), "pip", 11), WING(TB(2), "kiki", 11), WING(TB(2), "bo", 11)],
+      words=[(TB(0), "TWEET!", .2, .3, .9, "sun"), (TB(2), "THANK YOU!", .76, .24, .9, "pill")]),
     S("rocks", C("rocks", "kiki", "all", 900, -40, -120), "Now we can fly again. And look what I see!", who="kiki", beat="solution", tag="Kiki flies up", hide=["tumble", "milo", "pip", "bo"],
       fx=[WING(0.1, "kiki", 31), ("to", "w:fly", "#{p}kiki_w", {"y": "-=170", "duration": 1.0, "ease": "power1.out"}, "Kiki flies up"), ("face", "w:look", "kiki", "wow")]),
     S("rocks", (1100, 380, 1700), "Up in the sky, big gray clouds are coming.", beat="solution", tag="clouds", hide=only("rocks"), cam2=(1040, 400, 1800), props=CLOUDS(),
@@ -285,11 +292,13 @@ SHOTS = [
       hide=["mama", "tumble"] + BIRDS, cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:trunk,", ["TRUNK", "TAIL"], 0, "wait:2.0")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "And where does an elephant blow the water? Into its mouth, or into its ear?", q=True, beat="ending", tag="question: mouth or ear", pause=3.2,
       hide=["mama", "tumble"] + BIRDS, cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:mouth,", ["MOUTH", "EAR"], 0, "wait:2.0")]),
-    S("zoo_eve", WIDE, who="milo", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
-      fx=[("hop", 1.0, "tumble"), ("hop", 1.0, "pip"), ("hop", 1.0, "kiki"), ("hop", 1.0, "bo"), ("nod", 3.2, "mama")], words=[("w:hooray,", "HOORAY!", .5, .2, 1.05, "sun")]),
-    S("zoo_eve", (1145, 620, 1500), who="milo", sing=SING_END_B, beat="song", tag="song: rainy happy day", cam2=(1145, 620, 1420), hide=["milo"],
+    S("zoo_eve", (980, 560, 1880), "Friends help friends. Hooray, hooray! What a rainy, happy day!", beat="ending", tag="the rhyme", cam2=(1000, 560, 1780),
+      fx=[("hop", "w:Hooray,", "milo"), ("hop", "w:hooray!", "tumble"), ("nod", "w:rainy,", "mama")], words=[("w:Friends", "FRIENDS HELP FRIENDS", .5, .15, .6, "pill")]),
+    S("zoo_eve", WIDE, who="", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
+      fx=[("hop", 1.0, "tumble"), ("hop", 1.0, "pip"), ("hop", 1.0, "kiki"), ("hop", 1.0, "bo"), ("nod", 3.2, "mama")], words=[(TB(3), "HOORAY!", .5, .2, 1.05, "sun")]),
+    S("zoo_eve", (1145, 620, 1500), who="", sing=SING_END_B, beat="song", tag="song: rainy happy day", cam2=(1145, 620, 1420), hide=["milo"],
       props=[prop("h1", lambda p: art2.heart(p), 1010, 370, .9, True), prop("h2", lambda p: art2.heart(p, "#ff9ab8"), 930, 320, .6, True)],
-      fx=[("nod", 1.6, "mama"), ("show", "w:rainy,", "h1"), ("show", "w:day!", "h2"), WING(3.0, "pip", 9), WING(3.0, "kiki", 9), WING(3.0, "bo", 9)]),
+      fx=[("nod", 1.6, "mama"), ("show", TB(1.5), "h1"), ("show", TB(3.5), "h2"), WING(3.0, "pip", 9), WING(3.0, "kiki", 9), WING(3.0, "bo", 9)]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 0, 0), "See you on the next adventure, friends!", beat="ending", tag="goodbye", hide=["mama", "tumble"] + BIRDS, fx=[("hop", "w:next", "milo")],
       words=[("w:next", "SEE YOU SOON!", .78, .17, .72, "pill")]),
 ]

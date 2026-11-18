@@ -1018,5 +1018,15 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep19_timing.json",
- "audio": "zool_ep19_song.wav"
+ "audio": "zool_ep19_song.wav",
+ "watermark_hide": [
+  [
+   3.5,
+   7.6
+  ],
+  [
+   317.7,
+   324.4
+  ]
+ ]
 }

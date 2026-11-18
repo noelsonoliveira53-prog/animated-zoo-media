@@ -2396,6 +2396,9 @@
  },
  {
   "file": "zool_ep19.mp4",
+  "video_id": "3D6N_xhfn1w",
+  "thumb_set": true,
+  "uploaded_note": "Nov 18 daily run about 3:08 PM ET: Studio dialog 'public on November 21, 2026 at 1:30 PM', made for kids, custom thumbnail",
   "title": "Horns, Tongues and Teeth! Animal Heads for Kids",
   "description": "Who has two horns on its nose? Who has a tongue as long as twenty inches? Pick your answer with Milo the bluebird, then find out: a rhino's two horns keep growing all its life, a giraffe grabs leaves with its long tongue and chews its cud, and a hippo opens its mouth super wide and keeps its eyes, ears and nose on top of its head.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nWhite rhino: two horns on the rostrum, one in front of the other; composed of keratin (not true horns); grow continually throughout life; upper lip broad, flat, specialized to help secure grass; poor eyesight; good sense of smell; second-largest land mammal, only surpassed in size by elephant; skin very thick with deep folds (SDZWA Library fact sheet 'White Rhinoceros', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/whiterhino/characteristics, read Nov 17 2026).\nGiraffe: long prehensile tongue, 50 cm (20 in); ossicones bony in adults, soft and cartilaginous in calves, present at birth; individuals can be recognized by their unique markings (SDZWA Library fact sheet 'Giraffe', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/giraffes/characteristics, read Nov 17 2026).\nGiraffe: long, prehensile, sticky tongue enables a giraffe to feed on hard-to-reach leaves; strip leaves between lower teeth and hardened upper dental pad; consume 34-75 kg (75-165 lbs) of browse per day; food quickly swallowed, later regurgitated and chewed more thoroughly ('chewing cud'); must spread forelegs wide or kneel to drink (SDZWA Library fact sheet 'Giraffe', Diet & Feeding, ielc.libguides.com/sdzg/factsheets/giraffes/diet, read Nov 17 2026).\nHippo: jaws hinged far to the back, allowing an enormous gape of 150 degrees (humans have only 45); canines and incisors enormously enlarged and continuously growing; male canines can grow to 50 cm (1.5 ft); incisors used for digging; eyes slightly periscoped and aligned on top of head along with ears and nostrils; nostrils close before submersion; ears fold into a recessed area to close underwater (SDZWA Library fact sheet 'Hippopotamus', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/hippopotamus/characteristics, read Nov 17 2026).",
   "tags": [
@@ -2415,7 +2418,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep19.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 336.0,
   "watermark": "tl",

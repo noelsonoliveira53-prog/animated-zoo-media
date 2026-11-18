@@ -2322,5 +2322,18 @@
   "res": "3840x2160",
   "watermark": "tl",
   "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+ },
+ {
+  "file": "cartoon/za_ep03.mp4",
+  "title": "Baby Elephant Tumble Shares the Last Drink",
+  "date": "2026-11-20",
+  "time": "5:30 AM",
+  "thumb": "brand/zoo/thumb_za_ep03.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 8:30 PM ET by the za_ep03 night run (session 014CFVfX9koYwbB4TL5GQUx5). Never upload an in_production entry."
  }
 ]

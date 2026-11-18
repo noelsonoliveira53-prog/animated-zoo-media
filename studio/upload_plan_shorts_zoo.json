@@ -970,7 +970,23 @@
   "watermark": "top",
   "date": "2026-11-22",
   "time": "7:30 PM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Short 1 of the cartoon lesson zc_ep05 (part 1 whole + its hook), built Nov 18; run note docs/cartoon/runs/zc_ep05.md. The daily run schedules a to_upload entry.",
+  "title": "Is a Camel's Hump Full of Water?",
+  "description": "Is a camel's hump full of water? No! Look inside with Milo the bluebird, baby camel Sandy and her mama: a camel's hump is full of fat. The fat is food saved for later, like a backpack full of snacks, and it gives the camel energy. And water? A camel drinks it, up to 32 gallons at one time, and then it can go a week or more without water. A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "camel hump",
+   "what is inside a camel's hump",
+   "baby camel",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "ALL FAT!"
  },
  {
   "file": "cartoon/zc_ep05_short2.mp4",
@@ -983,7 +999,23 @@
   "watermark": "top",
   "date": "2026-11-23",
   "time": "7:30 PM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Short 2 of the cartoon lesson zc_ep05 (part 2 whole + its hook), built Nov 18; run note docs/cartoon/runs/zc_ep05.md. The daily run schedules a to_upload entry.",
+  "title": "Why Does a Camel's Hump Flop Over?",
+  "description": "Why does a camel's hump flop over? Find out with Milo the bluebird, baby camel Sandy and her mama: a hump can change its size. When a camel eats a lot, the hump is big and tall. When there is not much food, the camel's body uses the fat in the hump, and the hump gets smaller and leans over. Then the camel eats, and the hump sits up tall again! A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "camel hump",
+   "why does a camel's hump flop",
+   "baby camel",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "TALL OR FLOPPY?"
  },
  {
   "file": "cartoon/zc_ep05_short3.mp4",
@@ -996,7 +1028,23 @@
   "watermark": "top",
   "date": "2026-11-24",
   "time": "7:30 PM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Short 3 of the cartoon lesson zc_ep05 (part 3 whole + its hook), built Nov 18; run note docs/cartoon/runs/zc_ep05.md. The daily run schedules a to_upload entry.",
+  "title": "Was a Baby Camel Born with a Hump?",
+  "description": "Was a baby camel born with a hump? No! Meet baby camel Sandy with Milo the bluebird: a baby camel is born with no hump, just a little bump with a tuft of curly hair that shows where the hump will grow. Half an hour after she is born she can walk beside her mama, she drinks her mama's milk, and mother and baby hum to each other. A quick animal fact for kids from the lesson \u201cWhat Is Inside a Camel's Hump?\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet).",
+  "tags": [
+   "baby camel",
+   "camel calf",
+   "camels for kids",
+   "camel hump",
+   "baby animals for kids",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "CURLY TUFT!"
  },
  {
   "file": "cartoon/zc_ep06_short1.mp4",

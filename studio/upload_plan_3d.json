@@ -2337,7 +2337,23 @@
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "cartoon fact lesson (camel hump: fat not water, tall or floppy, a calf has no hump), built Nov 18 in session 014CFVfW1MkPtZxDNFc2sgYy; run note docs/cartoon/runs/zc_ep05.md. The lesson build does not upload: the daily run schedules a to_upload entry.",
+  "description": "What is inside a camel's hump? Is it water, or is it fat? And why does baby camel Sandy have no hump at all? Milo the bluebird visits Sandy and her mama in the desert to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a camel's hump stores fat, not water, that the fat is food saved for later, that a hump stands tall when a camel eats a lot and leans over when food is hard to find, and that a baby camel is born with no hump, just a little tuft of curly hair.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet).",
+  "tags": [
+   "camel",
+   "camels for kids",
+   "camel hump",
+   "baby camel",
+   "what is inside a camel's hump",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "WATER OR FAT?",
+  "seconds": 321.7
  },
  {
   "file": "cartoon/zc_ep06.mp4",

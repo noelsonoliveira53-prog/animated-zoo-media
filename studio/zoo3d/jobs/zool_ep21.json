@@ -1020,5 +1020,11 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep21_timing.json",
- "audio": "zool_ep21_song.wav"
+ "audio": "zool_ep21_song.wav",
+ "watermark_hide": [
+  [
+   309.3,
+   313.6
+  ]
+ ]
 }

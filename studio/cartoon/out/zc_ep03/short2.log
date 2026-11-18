@@ -1,0 +1,52 @@
+{
+ "length": 88.0,
+ "shots": 23,
+ "visual_changes": 88,
+ "mean_gap": 1.0,
+ "longest_gap": 4.62,
+ "longest_gap_at": 72.3,
+ "over_6s": [],
+ "places": [
+  "river",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 6,
+ "longest_without_question": 23.4,
+ "first_words_at": 0.42,
+ "shot_mean": 3.83,
+ "fails": [],
+ "words_placed": "183/183",
+ "sync": {
+  "pauses_checked": 19,
+  "onset_err_mean_ms": 30.5,
+  "onset_err_max_ms": 100.0,
+  "suspect_words": [],
+  "cuts": 22,
+  "cuts_on_the_half_beat": 22,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (222ms)
+[initSession:screenshot] GSAP proxy flush complete (228ms)
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (546ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (550ms)
+[initSession:screenshot] applyVideoMetadataHints complete (551ms)
+[initSession:screenshot] media + fonts + tailwind ready (554ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (574ms)
+4K 2160x3840 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep03/zc_ep03_short3.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep03/zc_ep03_short3.mp4 88.0 s
+EXIT 0

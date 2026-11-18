@@ -1,6 +1,6 @@
 {
  "id": "za_ep02",
- "total": 302.86104166666667,
+ "total": 307.86104166666667,
  "bpm": 96,
  "beats": [
   0.0,
@@ -487,12 +487,20 @@
   300.625,
   301.25,
   301.875,
-  302.5
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5
  ],
  "plan": {
-  "length": 302.9,
-  "shots": 77,
-  "visual_changes": 306,
+  "length": 307.9,
+  "shots": 78,
+  "visual_changes": 310,
   "mean_gap": 0.99,
   "longest_gap": 4.34,
   "longest_gap_at": 117.2,
@@ -513,7 +521,7 @@
   "questions": 7,
   "longest_without_question": 55.0,
   "first_words_at": 0.42,
-  "shot_mean": 3.93,
+  "shot_mean": 3.95,
   "beats": {
    "hook": 1,
    "goal": 1,
@@ -524,17 +532,17 @@
    "obstacle3": 7,
    "low": 8,
    "solution": 15,
-   "ending": 13
+   "ending": 14
   },
   "fails": [],
-  "words_placed": "697/697",
+  "words_placed": "707/707",
   "sync": {
-   "pauses_checked": 47,
-   "onset_err_mean_ms": 31.3,
+   "pauses_checked": 49,
+   "onset_err_mean_ms": 32.2,
    "onset_err_max_ms": 140.0,
    "suspect_words": [],
-   "cuts": 76,
-   "cuts_on_the_half_beat": 76,
+   "cuts": 77,
+   "cuts_on_the_half_beat": 77,
    "songs_entering_on_a_beat": "3/3",
    "process": "3D (beat)"
   }
@@ -706,6 +714,11 @@
    "the sunny savanna song: off we go"
   ],
   [
+   34.49,
+   "word",
+   "FRIENDS HELP FRIENDS"
+  ],
+  [
    34.58,
    "action",
    "milo flies"
@@ -716,32 +729,27 @@
    "tumble walks"
   ],
   [
-   35.0,
-   "word",
-   "FRIENDS HELP FRIENDS"
-  ],
-  [
-   36.88,
+   36.38,
    "action",
    "tumble's trunk moves"
   ],
   [
-   38.12,
+   37.62,
    "action",
    "tumble's trunk moves"
   ],
   [
-   40.0,
+   39.49,
    "word",
    "STEP BY STEP"
   ],
   [
-   41.88,
+   41.38,
    "action",
    "tumble's trunk moves"
   ],
   [
-   43.12,
+   42.62,
    "action",
    "tumble's trunk moves"
   ],
@@ -2003,70 +2011,90 @@
   [
    287.81,
    "new shot",
-   "the zoo at sunset song: hooray"
+   "the zoo at sunset the rhyme"
   ],
   [
-   288.81,
-   "action",
-   "tumble hops"
-  ],
-  [
-   290.0,
-   "word",
-   "HOORAY!"
-  ],
-  [
-   290.01,
-   "action",
-   "mango hops"
-  ],
-  [
-   291.01,
-   "action",
-   "mama nods"
-  ],
-  [
-   293.44,
-   "new shot",
-   "the zoo at sunset song: muddy happy day"
-  ],
-  [
-   294.04,
-   "action",
-   "tumble hops"
-  ],
-  [
-   294.69,
-   "picture",
-   "h1"
-  ],
-  [
-   295.04,
-   "action",
-   "mama nods"
-  ],
-  [
-   295.94,
-   "picture",
-   "h2"
-  ],
-  [
-   296.44,
-   "action",
-   "tumble hops"
-  ],
-  [
-   298.75,
-   "new shot",
-   "the zoo at sunset goodbye"
-  ],
-  [
-   299.57,
+   289.48,
    "action",
    "milo hops"
   ],
   [
-   299.57,
+   289.48,
+   "action",
+   "tumble hops"
+  ],
+  [
+   290.9,
+   "action",
+   "mango hops"
+  ],
+  [
+   292.5,
+   "new shot",
+   "the zoo at sunset song: hooray"
+  ],
+  [
+   293.5,
+   "action",
+   "tumble hops"
+  ],
+  [
+   294.5,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   294.7,
+   "action",
+   "mango hops"
+  ],
+  [
+   295.7,
+   "action",
+   "mama nods"
+  ],
+  [
+   298.44,
+   "new shot",
+   "the zoo at sunset song: muddy happy day"
+  ],
+  [
+   299.04,
+   "action",
+   "tumble hops"
+  ],
+  [
+   299.5,
+   "picture",
+   "h1"
+  ],
+  [
+   300.04,
+   "action",
+   "mama nods"
+  ],
+  [
+   300.75,
+   "picture",
+   "h2"
+  ],
+  [
+   301.44,
+   "action",
+   "tumble hops"
+  ],
+  [
+   303.75,
+   "new shot",
+   "the zoo at sunset goodbye"
+  ],
+  [
+   304.57,
+   "action",
+   "milo hops"
+  ],
+  [
+   304.57,
    "word",
    "SEE YOU SOON!"
   ]
@@ -2703,87 +2731,16 @@
   },
   {
    "place": "savanna",
-   "say": "Friends help friends, come along with me! Step by step, what will we see?",
+   "say": "",
    "t0": 34.375,
    "t1": 45.0,
    "v0": 35.0,
    "dur": 10.0,
-   "words": [
-    [
-     "Friends",
-     0.0,
-     0.575
-    ],
-    [
-     "help",
-     0.625,
-     1.2
-    ],
-    [
-     "friends,",
-     1.25,
-     1.825
-    ],
-    [
-     "come",
-     1.875,
-     2.163
-    ],
-    [
-     "along",
-     2.188,
-     2.763
-    ],
-    [
-     "with",
-     2.812,
-     3.1
-    ],
-    [
-     "me!",
-     3.125,
-     4.275
-    ],
-    [
-     "Step",
-     5.0,
-     5.575
-    ],
-    [
-     "by",
-     5.625,
-     6.2
-    ],
-    [
-     "step,",
-     6.25,
-     6.825
-    ],
-    [
-     "what",
-     6.875,
-     7.162
-    ],
-    [
-     "will",
-     7.188,
-     7.475
-    ],
-    [
-     "we",
-     7.5,
-     8.075
-    ],
-    [
-     "see?",
-     8.125,
-     9.275
-    ]
-   ],
+   "words": [],
    "part": 0,
    "q": false,
    "tag": "song: off we go",
-   "who": "milo",
+   "who": "",
    "beat": "song",
    "sung": true
   },
@@ -6778,92 +6735,106 @@
   },
   {
    "place": "zoo_eve",
-   "say": "Friends help friends, hooray, hooray!",
+   "say": "Friends help friends. Hooray, hooray! What a muddy, happy day!",
    "t0": 287.8125,
-   "t1": 293.4375,
-   "v0": 288.125,
-   "dur": 5.0,
+   "t1": 292.5,
+   "v0": 287.8632500000003,
+   "dur": 4.310583333333334,
    "words": [
     [
      "Friends",
-     0.0,
-     0.575
+     0.01,
+     0.45
     ],
     [
      "help",
-     0.625,
-     1.2
+     0.45,
+     0.67
     ],
     [
-     "friends,",
-     1.25,
-     1.825
+     "friends.",
+     0.67,
+     1.33
     ],
     [
-     "hooray,",
-     1.875,
-     2.45
+     "Hooray,",
+     1.62,
+     2.08
     ],
     [
      "hooray!",
-     2.5,
-     3.65
+     2.08,
+     2.7
+    ],
+    [
+     "What",
+     2.9,
+     3.01
+    ],
+    [
+     "a",
+     3.01,
+     3.04
+    ],
+    [
+     "muddy,",
+     3.04,
+     3.42
+    ],
+    [
+     "happy",
+     3.42,
+     3.86
+    ],
+    [
+     "day!",
+     3.86,
+     4.31
     ]
    ],
    "part": 0,
    "q": false,
-   "tag": "song: hooray",
+   "tag": "the rhyme",
    "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "",
+   "t0": 292.5,
+   "t1": 298.4375,
+   "v0": 293.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
    "beat": "song",
    "sung": true
   },
   {
    "place": "zoo_eve",
-   "say": "What a muddy, happy day!",
-   "t0": 293.4375,
-   "t1": 298.75,
-   "v0": 293.75,
+   "say": "",
+   "t0": 298.4375,
+   "t1": 303.75,
+   "v0": 298.75,
    "dur": 5.0,
-   "words": [
-    [
-     "What",
-     0.0,
-     0.575
-    ],
-    [
-     "a",
-     0.625,
-     0.913
-    ],
-    [
-     "muddy,",
-     0.938,
-     1.513
-    ],
-    [
-     "happy",
-     1.562,
-     2.138
-    ],
-    [
-     "day!",
-     2.188,
-     3.625
-    ]
-   ],
+   "words": [],
    "part": 0,
    "q": false,
    "tag": "song: muddy happy day",
-   "who": "milo",
+   "who": "",
    "beat": "song",
    "sung": true
   },
   {
    "place": "zoo_eve",
    "say": "See you on the next adventure, friends!",
-   "t0": 298.75,
-   "t1": 301.6610416666667,
-   "v0": 298.87,
+   "t0": 303.75,
+   "t1": 306.6610416666667,
+   "v0": 303.87,
    "dur": 2.3910416666666667,
    "words": [
     [

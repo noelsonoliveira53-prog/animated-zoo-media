@@ -1,10 +1,12 @@
 {
  "id": "za_ep01",
- "total": 304.471166666667,
+ "total": 309.35041666666694,
+ "bpm": 96,
+ "beats": [],
  "plan": {
-  "length": 304.5,
-  "shots": 77,
-  "visual_changes": 277,
+  "length": 309.4,
+  "shots": 78,
+  "visual_changes": 281,
   "mean_gap": 1.1,
   "longest_gap": 5.67,
   "longest_gap_at": 200.7,
@@ -27,7 +29,7 @@
   "questions": 5,
   "longest_without_question": 82.2,
   "first_words_at": 0.42,
-  "shot_mean": 3.95,
+  "shot_mean": 3.97,
   "beats": {
    "hook": 1,
    "goal": 1,
@@ -38,14 +40,24 @@
    "obstacle3": 8,
    "low": 7,
    "solution": 5,
-   "ending": 15
+   "ending": 16
   },
   "fails": [],
-  "words_placed": "700/700"
+  "words_placed": "710/710",
+  "sync": {
+   "pauses_checked": 52,
+   "onset_err_mean_ms": 27.3,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 77,
+   "cuts_on_the_half_beat": 12,
+   "songs_entering_on_a_beat": "0/4",
+   "process": "first cartoon process"
+  }
  },
  "events": [
   [
-   0.3,
+   0.0,
    "new place",
    "the zoo gate hook: no present"
   ],
@@ -1085,12 +1097,12 @@
    "tumble walks"
   ],
   [
-   231.04,
+   231.05,
    "action",
    "tumble's trunk moves"
   ],
   [
-   232.15,
+   232.16,
    "action",
    "tumble's trunk moves"
   ],
@@ -1105,7 +1117,7 @@
    "HOME WE GO!"
   ],
   [
-   235.77,
+   235.49,
    "action",
    "mango moves an arm"
   ],
@@ -1362,70 +1374,90 @@
   [
    291.23,
    "new shot",
-   "the zoo at sunset song: hooray"
+   "the zoo at sunset the rhyme"
   ],
   [
-   292.23,
-   "action",
-   "tumble hops"
-  ],
-  [
-   293.02,
-   "word",
-   "HOORAY!"
-  ],
-  [
-   293.43,
-   "action",
-   "mango hops"
-  ],
-  [
-   294.43,
-   "action",
-   "sandy hops"
-  ],
-  [
-   295.8,
-   "new shot",
-   "the zoo at sunset song: adventure day"
-  ],
-  [
-   296.4,
-   "action",
-   "tumble hops"
-  ],
-  [
-   296.75,
-   "picture",
-   "h1"
-  ],
-  [
-   297.4,
-   "action",
-   "mama nods"
-  ],
-  [
-   297.86,
-   "picture",
-   "h2"
-  ],
-  [
-   298.8,
-   "action",
-   "tumble hops"
-  ],
-  [
-   300.36,
-   "new shot",
-   "the zoo at sunset goodbye"
-  ],
-  [
-   301.18,
+   293.0,
    "action",
    "milo hops"
   ],
   [
-   301.18,
+   293.0,
+   "action",
+   "tumble hops"
+  ],
+  [
+   294.77,
+   "action",
+   "mango hops"
+  ],
+  [
+   296.11,
+   "new shot",
+   "the zoo at sunset song: hooray"
+  ],
+  [
+   297.11,
+   "action",
+   "tumble hops"
+  ],
+  [
+   297.9,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   298.31,
+   "action",
+   "mango hops"
+  ],
+  [
+   299.31,
+   "action",
+   "sandy hops"
+  ],
+  [
+   300.67,
+   "new shot",
+   "the zoo at sunset song: adventure day"
+  ],
+  [
+   301.27,
+   "action",
+   "tumble hops"
+  ],
+  [
+   301.9,
+   "picture",
+   "h1"
+  ],
+  [
+   302.27,
+   "action",
+   "mama nods"
+  ],
+  [
+   302.73,
+   "picture",
+   "h2"
+  ],
+  [
+   303.67,
+   "action",
+   "tumble hops"
+  ],
+  [
+   305.24,
+   "new shot",
+   "the zoo at sunset goodbye"
+  ],
+  [
+   306.06,
+   "action",
+   "milo hops"
+  ],
+  [
+   306.06,
    "word",
    "SEE YOU SOON!"
   ]
@@ -1434,7 +1466,7 @@
   {
    "place": "zoo",
    "say": "Today is Mama's birthday. And Tumble has no present!",
-   "t0": 0.3,
+   "t0": 0.0,
    "t1": 4.892083333333334,
    "v0": 0.42,
    "dur": 4.0720833333333335,
@@ -2179,87 +2211,16 @@
   },
   {
    "place": "savanna",
-   "say": "Friends help friends, come along with me! Step by step, what will we see?",
+   "say": "",
    "t0": 44.970624999999984,
    "t1": 53.97949999999998,
    "v0": 45.09062499999998,
    "dur": 8.888875,
-   "words": [
-    [
-     "Friends",
-     0.0,
-     0.511
-    ],
-    [
-     "help",
-     0.556,
-     1.067
-    ],
-    [
-     "friends,",
-     1.111,
-     1.622
-    ],
-    [
-     "come",
-     1.667,
-     1.922
-    ],
-    [
-     "along",
-     1.944,
-     2.456
-    ],
-    [
-     "with",
-     2.5,
-     2.756
-    ],
-    [
-     "me!",
-     2.778,
-     3.8
-    ],
-    [
-     "Step",
-     4.444,
-     4.956
-    ],
-    [
-     "by",
-     5.0,
-     5.511
-    ],
-    [
-     "step,",
-     5.556,
-     6.067
-    ],
-    [
-     "what",
-     6.111,
-     6.367
-    ],
-    [
-     "will",
-     6.389,
-     6.644
-    ],
-    [
-     "we",
-     6.667,
-     7.178
-    ],
-    [
-     "see?",
-     7.222,
-     8.244
-    ]
-   ],
+   "words": [],
    "part": 0,
    "q": false,
    "tag": "song: off we go",
-   "who": "milo",
+   "who": "",
    "beat": "song",
    "sung": true
   },
@@ -5292,92 +5253,16 @@
   },
   {
    "place": "dune_eve",
-   "say": "Friends help friends, come along with me! Home we go, as happy as can be!",
+   "say": "",
    "t0": 229.2565416666671,
    "t1": 238.2654166666671,
    "v0": 229.3765416666671,
    "dur": 8.888875,
-   "words": [
-    [
-     "Friends",
-     0.0,
-     0.511
-    ],
-    [
-     "help",
-     0.556,
-     1.067
-    ],
-    [
-     "friends,",
-     1.111,
-     1.622
-    ],
-    [
-     "come",
-     1.667,
-     1.922
-    ],
-    [
-     "along",
-     1.944,
-     2.456
-    ],
-    [
-     "with",
-     2.5,
-     2.756
-    ],
-    [
-     "me!",
-     2.778,
-     3.8
-    ],
-    [
-     "Home",
-     4.444,
-     4.956
-    ],
-    [
-     "we",
-     5.0,
-     5.511
-    ],
-    [
-     "go,",
-     5.556,
-     6.067
-    ],
-    [
-     "as",
-     6.111,
-     6.367
-    ],
-    [
-     "happy",
-     6.389,
-     6.644
-    ],
-    [
-     "as",
-     6.667,
-     6.922
-    ],
-    [
-     "can",
-     6.944,
-     7.2
-    ],
-    [
-     "be!",
-     7.222,
-     8.244
-    ]
-   ],
+   "words": [],
    "part": 0,
    "q": false,
    "tag": "song: home we go",
-   "who": "milo",
+   "who": "",
    "beat": "song",
    "sung": true
   },
@@ -6217,92 +6102,106 @@
   },
   {
    "place": "zoo_eve",
-   "say": "Friends help friends, hooray, hooray!",
+   "say": "Friends help friends. Hooray, hooray! What a big adventure day!",
    "t0": 291.231291666667,
-   "t1": 295.79570833333366,
+   "t1": 296.11054166666696,
    "v0": 291.351291666667,
-   "dur": 4.444416666666666,
+   "dur": 4.35925,
    "words": [
     [
      "Friends",
-     0.0,
-     0.511
+     0.01,
+     0.47
     ],
     [
      "help",
-     0.556,
-     1.067
+     0.47,
+     0.71
     ],
     [
-     "friends,",
-     1.111,
-     1.622
+     "friends.",
+     0.71,
+     1.38
     ],
     [
-     "hooray,",
-     1.667,
-     2.178
+     "Hooray,",
+     1.65,
+     2.15
     ],
     [
      "hooray!",
-     2.222,
-     3.244
+     2.15,
+     2.76
+    ],
+    [
+     "What",
+     3.0,
+     3.1
+    ],
+    [
+     "a",
+     3.1,
+     3.15
+    ],
+    [
+     "big",
+     3.15,
+     3.42
+    ],
+    [
+     "adventure",
+     3.42,
+     3.96
+    ],
+    [
+     "day!",
+     3.96,
+     4.359
     ]
    ],
    "part": 0,
    "q": false,
-   "tag": "song: hooray",
+   "tag": "the rhyme",
    "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "",
+   "t0": 296.11054166666696,
+   "t1": 300.6749583333336,
+   "v0": 296.23054166666697,
+   "dur": 4.444416666666666,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
    "beat": "song",
    "sung": true
   },
   {
    "place": "zoo_eve",
-   "say": "What a big adventure day!",
-   "t0": 295.79570833333366,
-   "t1": 300.3601250000003,
-   "v0": 295.91570833333367,
+   "say": "",
+   "t0": 300.6749583333336,
+   "t1": 305.2393750000003,
+   "v0": 300.7949583333336,
    "dur": 4.444416666666666,
-   "words": [
-    [
-     "What",
-     0.0,
-     0.511
-    ],
-    [
-     "a",
-     0.556,
-     0.811
-    ],
-    [
-     "big",
-     0.833,
-     1.089
-    ],
-    [
-     "adventure",
-     1.111,
-     1.878
-    ],
-    [
-     "day!",
-     1.944,
-     3.222
-    ]
-   ],
+   "words": [],
    "part": 0,
    "q": false,
    "tag": "song: adventure day",
-   "who": "milo",
+   "who": "",
    "beat": "song",
    "sung": true
   },
   {
    "place": "zoo_eve",
    "say": "See you on the next adventure, friends!",
-   "t0": 300.3601250000003,
-   "t1": 303.271166666667,
-   "v0": 300.4801250000003,
+   "t0": 305.2393750000003,
+   "t1": 308.15041666666696,
+   "v0": 305.3593750000003,
    "dur": 2.3910416666666667,
    "words": [
     [

@@ -2495,6 +2495,9 @@
  },
  {
   "file": "zool_ep20.mp4",
+  "video_id": "6ymc_29VVdQ",
+  "thumb_set": true,
+  "uploaded_note": "Nov 18 daily run about 3:11 PM ET: Studio dialog 'public on November 22, 2026 at 1:30 PM', made for kids, custom thumbnail",
   "title": "Ready for Winter! Animal Coats and Dens for Kids",
   "description": "How do animals get ready for winter? Pick your answer with Milo the bluebird, then find out: an arctic fox grows a thick white coat and furry paws for the snow, a polar bear's white-looking fur covers black skin and a thick layer of fat, and a brown bear digs a den and can stay inside for up to seven months.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nIN THIS LESSON\nArctic fox: the white phase has a thick, white coat during the colder, winter months; in summer the coat ranges from gray to brown on the back; paws are sheathed in dense fur during the winter; dense, bushy coat; long, fluffy tail (SeaWorld Parks & Entertainment animal info 'Arctic Fox', seaworld.org/animals/facts/mammals/arctic-fox, read Nov 17 2026).\nPolar bear: hair is see-through with no pigment, so it looks white; black nose, skin and claws; covered with fur except for the nose; subcutaneous fat 5-10 cm thick in adults; ears relatively small; tail 7-12 cm; even foot pads may be furred during winter (SDZWA Library fact sheet 'Polar Bear', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/polarbear/characteristics, read Nov 17 2026). Thick fat layer and fur to stay warm in extreme Arctic temperatures (fact sheet summary page, read Nov 17 2026).\nBrown bear: in cold climates undergo winter dormancy; farthest north habitats up to 7 months; dens in dug earth have a tunnel about 4 feet long leading to a chamber 5 feet in diameter; dens are excavated as early as September or immediately before use in November; often stand while stopped; relies mainly on a sense of smell (SDZWA Library fact sheet 'Brown Bear', Behavior & Ecology, ielc.libguides.com/sdzg/factsheets/brownbear/behavior, read Nov 17 2026).",
   "tags": [
@@ -2514,7 +2517,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep20.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "3d_lesson",
   "duration": 338.1,
   "watermark": "tl",

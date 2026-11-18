@@ -1,6 +1,6 @@
 # za_ep03 "Baby Elephant Tumble Shares the Last Drink" - run note (scheduled night run, session 014CFVfX9koYwbB4TL5GQUx5)
 
-Nov 17, 8:05 PM - 11:40 PM ET. One adventure, written, built and checked in this run.
+Nov 17, 8:05 PM - 11:45 PM ET. One adventure, written, built and checked in this run. UPLOADED BY ANOTHER SESSION, not by this run (see "Upload" below).
 
 - Slot: Nov 20 5:30 AM ET was free; reserved first (commit c6fb5c5), the entry is in `studio/upload_plan_3d.json`.
 - Facts read at the source Nov 17, 8:35 PM ET (WWF "Unforgettable elephant facts", San Diego Zoo elephant page); the sentences are quoted in the episode file's header. Three facts are shown: an elephant smells water from far away with its trunk; it sucks water up its trunk, then blows it into its mouth; elephants squirt water over their bodies to keep cool. Nothing else is said as an animal fact; the three birds are story birds of no named kind.
@@ -13,6 +13,10 @@ Nov 17, 8:05 PM - 11:40 PM ET. One adventure, written, built and checked in this
 - Voices by level (active RMS): Milo -19.4 dB, Mama -19.7, Tumble -19.6; the birds were 1.5 to 3.7 dB quieter and were raised (gain 1.1 / .95 / .9).
 - The new sound was put on the finished picture (`toon.py --audio`, timing file identical, then video copied from the AV1 file and audio from the new mix), so the AV1 picture is the second render unchanged.
 - AV1 4K 74 MB, thumbnail SQUIRT! (Tumble squirts a drink to the three birds; looked at twice), review.py PASS, contact sheet written.
+
+Upload: this run did NOT upload. While it waited for the 24-hour allowance (20 of 20 until 11:19 PM) and for 20 quiet minutes after the other session's 10:59 PM upload commit, session 014CFVfVuQKcnZwKkabBsmrF (a) changed two tunes' notes in the episode file (no E over the F bar: second line of the walking tune, the last tune), built the sound again and put it on the same picture (commit 2707ee3), and (b) uploaded and scheduled the file: CQudy3aNW84, Nov 20 5:30 AM ET, made for kids, custom thumbnail (commit 1106cb2). `upload_guard.py` then said DO NOT UPLOAD here, and nothing was armed or clicked in Studio by this run.
+Checked by this run afterwards: the pushed file has the same picture as the file this run looked at (video stream md5 ebe2b01a... equal), 3840x2160 AV1, 329.1 s; music alone: no clicks, no clash inside a tune (left: the bed's E-over-F, the 0.26 s of crossing hop effects at 273.96 s); file: -15.5 LUFS, true peak -1.4 dB, no silences. Studio's content list, read at 11:40 PM (read only): one row with this title, CQudy3aNW84, date column "Nov 20, 2026 Scheduled", visibility column "Pending" (not "Scheduled": to be read again by the daily run). The time 5:30 AM is not shown on the list and was not read by this run.
+Not recorded by this run (left to the daily run, as docs/CARTOON_RUN.md says for parallel builds): docs/cartoon/status.json, docs/IMPROVE.md, PLAYBOOK.md.
 
 NOT checked by anyone's ears: the three new bird voices (Kokoro voices raised 4 to 6 semitones: they may sound thin or squeaky), how "Pip", "Kiki", "Bo", "Slurp", "Squirt" and "Glug" are pronounced, the birds' thank-you tune and the two closing tunes in the "lullaby" band, the three quick hop sounds at 4:34.
 Not built: a Short from it (no 9:16 cameras), the closing "next adventure" picture.

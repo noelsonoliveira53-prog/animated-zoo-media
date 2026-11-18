@@ -2360,7 +2360,7 @@
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Taken over Nov 18 1:25 PM ET by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, unfinished_first: no file, no run note, no commit since the Nov 17 reservation). Never upload an in_production entry."
  },
  {
   "file": "cartoon/zc_ep03.mp4",

@@ -842,7 +842,7 @@
  {
   "file": "cartoon/zc_ep03_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep03",
   "res": "2160x3840",
@@ -850,12 +850,26 @@
   "watermark": "top",
   "date": "2026-11-22",
   "time": "7:30 AM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Part 1 of zc_ep03 plus its hook, framed again for 9:16. Built and checked Nov 17-18 (4K, pace, watermark, frames, listen.py, AV1, thumbnail). The daily run schedules it.",
+  "title": "How Big Are an Elephant's Ears?",
+  "description": "How Big Are an Elephant's Ears? A one-and-a-half-minute animal fact from \"Why Do Elephants Have Such Big Ears?\" with Milo the bluebird and baby elephant Tumble, for ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "animal facts for kids",
+   "shorts",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "AFRICA?!",
+  "seconds": 86.7
  },
  {
   "file": "cartoon/zc_ep03_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep03",
   "res": "2160x3840",
@@ -863,12 +877,26 @@
   "watermark": "top",
   "date": "2026-11-23",
   "time": "7:30 AM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Part 2 of zc_ep03 plus its hook, framed again for 9:16. Built and checked Nov 17-18 (4K, pace, watermark, frames, listen.py, AV1, thumbnail). The daily run schedules it.",
+  "title": "Why Do Elephants Flap Their Ears?",
+  "description": "Why Do Elephants Flap Their Ears? A one-and-a-half-minute animal fact from \"Why Do Elephants Have Such Big Ears?\" with Milo the bluebird and baby elephant Tumble, for ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "animal facts for kids",
+   "shorts",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "SO COOL!",
+  "seconds": 89.3
  },
  {
   "file": "cartoon/zc_ep03_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep03",
   "res": "2160x3840",
@@ -876,7 +904,21 @@
   "watermark": "top",
   "date": "2026-11-24",
   "time": "7:30 AM",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Part 3 of zc_ep03 plus its hook, framed again for 9:16. Built and checked Nov 17-18 (4K, pace, watermark, frames, listen.py, AV1, thumbnail). The daily run schedules it.",
+  "title": "Can a Baby Elephant Swim?",
+  "description": "Can a Baby Elephant Swim? A one-and-a-half-minute animal fact from \"Why Do Elephants Have Such Big Ears?\" with Milo the bluebird and baby elephant Tumble, for ages 2-6.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant); WWF (10 most-asked elephant questions).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "animal facts for kids",
+   "shorts",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "SPLASH!",
+  "seconds": 88.0
  },
  {
   "file": "cartoon/zc_ep04_short1.mp4",

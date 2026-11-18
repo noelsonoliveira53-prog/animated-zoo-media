@@ -2282,11 +2282,27 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep03.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+  "note": "Built and checked Nov 17-18 (session 014CFVfWvFD9K7nwhpnS93u1): 4K, pace, watermark + corner sheet, frames incl. every answer reveal, listen.py, AV1, thumbnail looked at. Run note docs/cartoon/runs/zc_ep03.md. The daily run schedules it on its slot.",
+  "description": "Why do elephants have such big ears? Are they for flying, or for keeping cool? Milo the bluebird visits baby elephant Tumble and his mama to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that African elephants have large ears shaped like Africa, that Asian elephants have smaller ears, that flapping their ears cools an elephant's big body on warm days, and that elephants also drink and swim to cool off.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant); WWF (10 most-asked elephant questions).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "elephant ears",
+   "baby elephant",
+   "why do elephants have big ears",
+   "savanna animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "LIKE A FAN?!",
+  "seconds": 323.5
  },
  {
   "file": "cartoon/zc_ep04.mp4",

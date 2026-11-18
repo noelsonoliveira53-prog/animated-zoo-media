@@ -2001,12 +2001,16 @@
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
+  "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\") | Nov 17 9:00 PM: re-uploaded with the hums played by bells and soft band (owner: no voice on notes); Ge-YyiXyX6U set to Private.",
   "note_fix": "Fixed file (the hums are sung music now), rendered Nov 16 evening; replaces the upload xW4MrQA6ZH8, which stays Private (not deleted). Same slot.",
   "replaced_video_id": "xW4MrQA6ZH8",
-  "video_id": "Ge-YyiXyX6U",
+  "video_id": "bNiddYe1v70",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-17",
+  "replaced_video_ids": [
+   "xW4MrQA6ZH8",
+   "Ge-YyiXyX6U"
+  ]
  },
  {
   "file": "zool_ep16.mp4",

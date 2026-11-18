@@ -22,3 +22,16 @@ If a step cannot be finished: leave the entry un-uploaded, write exactly what wa
 - Long renders on this machine: `tmux new-session -d -s render "python3 toon.py <id> > out/<id>/render.log 2>&1; echo EXIT \$? >> out/<id>/render.log"`, then read the log until EXIT 0 (a watched background command ends after 30 min; `--from/--to` fails with assertSwiftShader).
 - Answer signs: reveal at least 1 s before the shot ends (pause 3.2 with "wait:2.0"), and look at the reveal frames of the finished file.
 - Not built: a Short from it (its 9:16 cameras are not written), the closing "next adventure" picture.
+
+## Several cartoon builds at the same time (Nov 17 evening: za_ep03 and the lessons zc_ep03, zc_ep04, zc_ep05, zc_ep06)
+Each build is its own session with its own copy of the repo. So that their pushes do not collide:
+- A build writes ONLY: `studio/cartoon/episodes/<id>.py`, a new art file `studio/cartoon/art_<id>.py` (register new places and kinds from there, the way `art3.py` does; never change how an existing character, prop or place is drawn), `studio/cartoon/out/<id>/` (timing files and logs), `cartoon/<id>*.mp4`, its thumbnails under `brand/zoo/`, its OWN entries in the two upload plans (already there as "in_production": change only those blocks), and its run note `docs/cartoon/runs/<id>.md` (what was done, what was not checked, defects found). Not PLAYBOOK.md, not docs/IMPROVE.md, not docs/cartoon/status.json: the daily run folds the run notes in.
+- An engine bug that blocks the build (`toon.py`, `kit.py`, `thumb.py`): the smallest fix, described in the run note. Old episodes must still pass their plan check.
+- Before pushing, with no render or encode running: `git pull --rebase origin main`, then push; on a conflict keep both sides.
+- A lesson build does NOT upload. It leaves every finished and checked file with status "to_upload" (title, description, tags, thumb, thumb_text, seconds filled in); the 6:31 AM daily run schedules them soonest first as the 20-per-24-hours allowance frees.
+
+## A fact lesson and its three Shorts
+Model: `episodes/zc_ep02.py` (three parts with `part=1|2|3`, `SHORTS`, `THUMBS`, a 9:16 camera `pcam` on every shot, `pcam2` for wide views, the two-line title band) plus `"beat": True` in EP as in `episodes/za_ep02.py`.
+- Lesson: at least 5:00, three parts written 83-90 s each so part + hook is a Short of 85-95 s; questions with answer signs and thinking time (reveal at least 1 s before the shot ends), on-screen examples of the exact thing, every word in sync.
+- Stills of EVERY shot twice: `./stills.sh <id> L sheet.jpg 8 300` (16:9) and `./stills.sh <id> 0|1|2 sheet.jpg 8 300` (9:16), again after each fix.
+- Render the lesson (`python3 toon.py <id>`), then each Short (`python3 toon.py <id> --short 0`, then 1, then 2), one at a time. Every finished file: `--check4k` (3840x2160, Shorts 2160x3840), pace check, watermark check and corner sheet, frames looked at, listen.py, AV1 encode into `cartoon/`, its own thumbnail (`thumb.py`; 3 words at most, none of its title's words), review.py.

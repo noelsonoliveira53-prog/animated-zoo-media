@@ -2270,5 +2270,57 @@
   "video_id": "FUveI9NKAC4",
   "scheduled_on": "2026-11-17",
   "thumb_set": true
+ },
+ {
+  "file": "cartoon/zc_ep03.mp4",
+  "title": "Why Do Elephants Have Such Big Ears?",
+  "date": "2026-11-20",
+  "time": "9:30 AM",
+  "thumb": "brand/zoo/thumb_zc_ep03.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+ },
+ {
+  "file": "cartoon/zc_ep04.mp4",
+  "title": "Why Do Monkeys Have Long Tails?",
+  "date": "2026-11-20",
+  "time": "5:30 PM",
+  "thumb": "brand/zoo/thumb_zc_ep04.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+ },
+ {
+  "file": "cartoon/zc_ep05.mp4",
+  "title": "What Is Inside a Camel's Hump?",
+  "date": "2026-11-21",
+  "time": "9:30 AM",
+  "thumb": "brand/zoo/thumb_zc_ep05.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
+ },
+ {
+  "file": "cartoon/zc_ep06.mp4",
+  "title": "What Does a Monkey Eat All Day?",
+  "date": "2026-11-21",
+  "time": "5:30 PM",
+  "thumb": "brand/zoo/thumb_zc_ep06.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Reserved Nov 17 7:45 PM for a cartoon build that runs tonight. Never upload an in_production entry. When the file is finished and checked the build sets status to_upload (title, description, tags, thumb filled in); the daily run schedules it. If the file does not exist one day before the slot, give the slot to a ready video."
  }
 ]

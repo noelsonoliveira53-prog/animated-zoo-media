@@ -2367,11 +2367,11 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep05.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "hold_review",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "cartoon fact lesson (camel hump: fat not water, tall or floppy, a calf has no hump), built Nov 18 in session 014CFVfW1MkPtZxDNFc2sgYy; run note docs/cartoon/runs/zc_ep05.md. The lesson build does not upload: the daily run schedules a to_upload entry.",
+  "note": "cartoon fact lesson (camel hump: fat not water, tall or floppy, a calf has no hump), built Nov 18 in session 014CFVfW1MkPtZxDNFc2sgYy; run note docs/cartoon/runs/zc_ep05.md. The lesson build does not upload: the daily run schedules a to_upload entry. | Nov 18 daily run: HELD, same topic as the live zc_ep01 'What Is Inside a Camel's Hump? Baby Camel Story with Milo' (bNiddYe1v70); upload_guard refuses it. Never upload both (Noelson, Nov 17). Slot freed.",
   "description": "What is inside a camel's hump? Is it water, or is it fat? And why does baby camel Sandy have no hump at all? Milo the bluebird visits Sandy and her mama in the desert to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a camel's hump stores fat, not water, that the fat is food saved for later, that a hump stands tall when a camel eats a lot and leans over when food is hard to find, and that a baby camel is born with no hump, just a little tuft of curly hair.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet).",
   "tags": [
    "camel",

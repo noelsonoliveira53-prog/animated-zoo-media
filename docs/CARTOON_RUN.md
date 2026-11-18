@@ -3,6 +3,9 @@
 Rules: `CLAUDE.md` (every line applies). Engine notes: `PLAYBOOK.md`, section "Cartoon" (search "kit.py", "stills.sh", "Studio upload"). Decide and act; nobody answers questions at night.
 Never: passwords, purchases, new accounts or terms, deleting a video, CAPTCHAs, "Publish" (always Schedule). Stop all Studio work by 6:15 AM ET: the daily run uses the same browser at 6:31 AM.
 
+## STOP: no sung or hummed voice (owner, Nov 17 8:25 PM)
+Milo's sung line in za_ep02 "sounds robotic". From now on no cartoon shot has a voice synthesized onto notes: no lyrics in a `sing` line, no `"hum": True`. A song moment = one ordinary spoken shot where the character SAYS the rhyme, then one `sing` shot where only instruments play the tune: `{"text": "~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 D4:2"}` (one `~` per note group; bpm 96, chords in C), words on screen with numeric times (`("words", 0.4, ...)` style cues, not `w:`), nobody's mouth moving. The models za_ep01.py, za_ep02.py and zc_ep01.py still show sung and hummed lines until they are fixed tonight: do NOT copy those lines. A build that already wrote a sung or hummed line changes it before its plan check and never renders it.
+
 ## Setup (fresh session)
 `bash studio/zoo3d/setup.sh` (voice model), `which hyperframes` (else `npm i -g hyperframes@0.8.231`), `python3 -c "import pyworld, pocketsphinx, kokoro_onnx, soundfile"` (else pip install with `--break-system-packages`).
 HyperFrames refuses to start under 1 GB of free disk (`df -h .`). If needed: `git sparse-checkout set --no-cone '/*' '!/truck/' '!/moon/' '!/bloop/' '!/gizmo/' '!/fruity/' '!/space/' '!/wild/'` (they stay in git).

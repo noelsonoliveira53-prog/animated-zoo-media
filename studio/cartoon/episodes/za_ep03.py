@@ -89,10 +89,10 @@ def SQ(name, who, h, hidden=True):
 # Owner, Nov 17 8:25 PM: no voice is synthesized onto notes. Nobody sings: the rhyme is SAID in a spoken shot, then the tune is played by the bells and the soft band.
 REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
 SING_GO = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5 A4:.5,G4:.5 E4:.5 D4:2", "rest": 1},
-                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "F4:1 F4:1 E4:1 D4:.5 D4:.5 E4:1 C4:2", "rest": 1}])
+                               {"text": "~ ~ ~ ~ ~ ~ ~", "notes": "A4:1 A4:1 G4:1 F4:.5 F4:.5 E4:1 C4:2", "rest": 1}])
 SING_TY = dict(REFRAIN, chords="C C", lines=[{"text": "~ ~ ~ ~ ~ ~", "notes": "E4:.5 G4:.5 C5:1 A4:1 G4:1 E4:.5,C4:1.5", "rest": 2}])       # the birds' thank-you tune
 SING_END_A = dict(REFRAIN, chords="C G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 G4:.5,A4:.5 G4:.5,E4:1.5", "rest": 2}])
-SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "F4:1 F4:.5 F4:.5,E4:.5 D4:.5,E4:.5 C4:2.5", "rest": 2}])
+SING_END_B = dict(REFRAIN, chords="F C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "A4:1 A4:.5 A4:.5,G4:.5 F4:.5,D4:.5 C4:2.5", "rest": 2}])
 TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
 
 SHOTS = [

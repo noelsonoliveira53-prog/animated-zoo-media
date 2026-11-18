@@ -1,0 +1,78 @@
+{
+ "length": 309.4,
+ "shots": 78,
+ "visual_changes": 281,
+ "mean_gap": 1.1,
+ "longest_gap": 5.67,
+ "longest_gap_at": 200.7,
+ "over_6s": [],
+ "places": [
+  "zoo",
+  "savanna",
+  "river",
+  "jungle",
+  "bigtree",
+  "canopy",
+  "dune_eve",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 5,
+ "longest_without_question": 82.2,
+ "first_words_at": 0.42,
+ "shot_mean": 3.97,
+ "beats": {
+  "hook": 1,
+  "goal": 1,
+  "song": 4,
+  "obstacle1": 8,
+  "fact": 3,
+  "obstacle2": 15,
+  "obstacle3": 8,
+  "low": 7,
+  "solution": 5,
+  "ending": 16
+ },
+ "fails": [],
+ "words_placed": "710/710",
+ "sync": {
+  "pauses_checked": 52,
+  "onset_err_mean_ms": 27.3,
+  "onset_err_max_ms": 100.0,
+  "suspect_words": [],
+  "cuts": 77,
+  "cuts_on_the_half_beat": 12,
+  "songs_entering_on_a_beat": "0/4",
+  "process": "first cartoon process"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, llvmpipe (LLVM 20.1.2 256 bits), OpenGL ES 3.2)")
+[BrowserManager] Browser launched (HeadlessChrome/153.0.8010.12, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (222ms)
+[initSession:screenshot] GSAP proxy flush complete (227ms)
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s18c1,#s18c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s24c1,#s24c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s25c1,#s25c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s26c1,#s26c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s31c1,#s31c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s35c1,#s35c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s37c1,#s37c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s41_sun not found. https://gsap.com
+[Browser:WARN] GSAP target #s43c1,#s43c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (989ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (995ms)
+[initSession:screenshot] applyVideoMetadataHints complete (996ms)
+[initSession:screenshot] media + fonts + tailwind ready (1000ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (1032ms)

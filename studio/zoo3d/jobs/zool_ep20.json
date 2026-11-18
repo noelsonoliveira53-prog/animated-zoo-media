@@ -1012,5 +1012,15 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep20_timing.json",
- "audio": "zool_ep20_song.wav"
+ "audio": "zool_ep20_song.wav",
+ "watermark_hide": [
+  [
+   3.5,
+   8.0
+  ],
+  [
+   319.2,
+   326.1
+  ]
+ ]
 }

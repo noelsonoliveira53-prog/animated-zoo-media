@@ -113,3 +113,4 @@
 | 2026-11-18 | cartoon/zc_ep03_short3.mp4 | cartoon_short_90 | PASS | - | - | Nov 18 daily run gate |
 | 2026-11-18 | zool_ep19.mp4 | 3d_lesson | PASS | - | - | Song text props in close shots sat above the frame (z 3.15); zoo3d_ep21y puts them at z 2.75 and double-spaces multiword words (UPSIDEDOWN! read as one word in a still) |
 | 2026-11-18 | zool_ep19.mp4 | 3d_lesson | PASS | - | - | zool_ep19: hello and recap close-ups put the rhino's face under the mark (3.8-7.6 s, 318-324 s): watermark_hide added and finished again; teach.py should set watermark_hide for close-ups of the corner side by itself |
+| 2026-11-18 | zool_ep20.mp4 | 3d_lesson | PASS | - | - | zool_ep20: hello and recap close-ups put the arctic fox / polar bear under the mark again (3.8-7.4 s, 319.6-325.7 s); hide windows were set from the raw's corner sheet BEFORE the finish, so one encode instead of two |

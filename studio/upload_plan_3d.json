@@ -2387,11 +2387,14 @@
   "thumb": "brand/zoo/thumb_za_ep03.jpg",
   "thumb_text": "SQUIRT!",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
   "seconds": 329.1,
-  "note": "Finished Nov 17 night (za_ep03 run, session 014CFVfX9koYwbB4TL5GQUx5): 4K AV1 329.1 s, stills of every shot and frames of the finished file looked at. Cartoon format approved by Noelson Nov 16 3:36 PM."
+  "note": "Finished Nov 17 night (za_ep03 run, session 014CFVfX9koYwbB4TL5GQUx5): 4K AV1 329.1 s, stills of every shot and frames of the finished file looked at. Cartoon format approved by Noelson Nov 16 3:36 PM. Scheduled Nov 18 12:35 AM ET: Studio dialog said public on November 20, 2026 at 5:30 AM; made for kids, custom thumbnail; upload_guard OK and no row with this title on the content list before the upload.",
+  "video_id": "CQudy3aNW84",
+  "thumb_set": true,
+  "scheduled_on": "2026-11-18"
  }
 ]

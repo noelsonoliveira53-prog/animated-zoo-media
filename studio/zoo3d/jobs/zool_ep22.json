@@ -1008,5 +1008,11 @@
  "follow_singer": false,
  "punch": false,
  "timing_file": "zool_ep22_timing.json",
- "audio": "zool_ep22_song.wav"
+ "audio": "zool_ep22_song.wav",
+ "watermark_hide": [
+  [
+   309.8,
+   316.3
+  ]
+ ]
 }

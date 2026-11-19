@@ -2744,11 +2744,11 @@
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep06.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 18 11:25 PM - Nov 19 ~1:30 AM ET by the one-off catch-up adventure build (session_014CFVfY5CjW7SrstcCSCaxt): 4K AV1 313.0 s; stills of every shot (start and end, four rounds of fixes) and 85 frames of the finished AV1 file (every shot end, every answer reveal at +0.15 and +0.9 s, the middle of both rhyme shots and both tune shots) looked at; pace, watermark and corner sheet, listen.py, review.py PASS. Run note docs/cartoon/runs/za_ep06.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. New character: Puff the little white bat (no voice).",
+  "note": "Built Nov 18 11:25 PM - Nov 19 ~1:30 AM ET by the one-off catch-up adventure build (session_014CFVfY5CjW7SrstcCSCaxt): 4K AV1 313.0 s; stills of every shot (start and end, four rounds of fixes) and 85 frames of the finished AV1 file (every shot end, every answer reveal at +0.15 and +0.9 s, the middle of both rhyme shots and both tune shots) looked at; pace, watermark and corner sheet, listen.py, review.py PASS. Run note docs/cartoon/runs/za_ep06.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. New character: Puff the little white bat (no voice). | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 23, 2026 at 5:30 AM', custom thumbnail, made for kids.",
   "description": "Drip, drop! Rain starts on the way to Mango's tree house, and Milo's feathers get soggy. A little leaf, a pink flower and a hat of moss: each one is too small. Then the friends see little bats, dry inside a leaf tent. What can Mango, Tumble and Milo find that is big enough for everyone? A gentle animal adventure for ages 2-6 about working together and making room for a new friend, with questions to answer, friends to count and a tune to clap along to.\nKids see how much it can rain in a rainforest, how some little bats snip and fold a big leaf into a tent that keeps the rain off, and where most rainforest animals live.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (rainforest habitat); Smithsonian Institution and COTERC (tent-making bats).",
   "tags": [
    "rain story for kids",
@@ -2767,7 +2767,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "ROOM FOR ALL!",
-  "seconds": 313.0
+  "seconds": 313.0,
+  "video_id": "BzCIUSW0f8I",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep08.mp4",

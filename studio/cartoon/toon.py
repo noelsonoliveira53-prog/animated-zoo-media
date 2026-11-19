@@ -375,7 +375,7 @@ class Film:
         if self.portrait: x, y = 540, 760
         self.hud.append(f'<div id="qcount" class="qc{u}" style="left:{x}px;top:{y}px"></div>')
         for k in range(1, n + 1):
-            tk = t + dur * (k - 1) / max(1, n - 1)
+            tk = min(t + dur * (k - 1) / max(1, n - 1), s["t1"] - .15)      # never after the shot ends: a number set after its hide stayed on screen for the rest of the film (za_ep06 stills, Nov 19)
             self.add(f'tl.set(".qc{u}",{{opacity:1,innerText:"{k}{suffix}"}},{tk:.3f});tl.fromTo(".qc{u}",{{scale:1.25}},{{scale:1,duration:{min(.18, dur / n * .8):.3f}}},{tk:.3f});')
             if n <= 8 or k % max(1, n // 8) == 0: self.ev(tk, "count", str(k)); self.snd.append((tk, "tick"))
         self.add(f'tl.set(".qc{u}",{{opacity:0}},{s["t1"] - .05:.2f});')

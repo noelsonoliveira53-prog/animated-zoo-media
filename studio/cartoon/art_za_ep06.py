@@ -121,14 +121,15 @@ def moss_hat(pid):
 def leaf_tent(pid, n=3):
     """A big leaf folded down like a tent (cut and folded by little bats), hanging under a branch, with n little white bats hanging inside.
     (0, 0) is where the leaf's stem meets the branch; the tent is about 520 wide and 300 tall."""
-    bats = "".join(f'<g transform="translate({x} 40) scale(.26)">{bat(pid + "b" + str(k), hang=True)}</g>' for k, x in enumerate((-90, 0, 90)[:n]))
+    # the bats hang inside, under the fold: drawn BEFORE the leaf, so only their heads peek out below its edge (they hang upside down)
+    bats = "".join(f'<g transform="translate({x} {y}) scale(.32)">{bat(pid + "b" + str(k), hang=True)}</g>' for k, (x, y) in enumerate(((-84, 196), (0, 214), (84, 196))[:n]))
     leaf = (f'<path d="M0 0 C-80 10 -230 60 -260 250 C-150 220 -60 236 0 280 C60 236 150 220 260 250 C230 60 80 10 0 0Z" fill="{LEAF[0]}" stroke="{LEAF[1]}" stroke-width="9" stroke-linejoin="round"/>'
             f'<path d="M0 0 L0 270" stroke="{LEAF[1]}" stroke-width="8"/>'
             + "".join(f'<path d="M0 {y} q{s * 60} 20 {s * 150} {60 + y * .3:.0f}" stroke="{LEAF[1]}" stroke-width="5" fill="none" opacity=".7"/>' for y in (60, 120, 180) for s in (-1, 1))
             + f'<path d="M-30 30 C-100 60 -170 110 -200 190" stroke="{LEAF[2]}" stroke-width="10" fill="none" stroke-linecap="round" opacity=".7"/>')
     # the inside under the tent is darker, so the bats show
     inside = '<path d="M-150 250 C-100 150 100 150 150 250 C80 236 -80 236 -150 250Z" fill="#1f5a32"/>'
-    return f'<g id="{pid}"><path d="M0 0 v-30" stroke="{LEAF[1]}" stroke-width="12"/>{leaf}{inside}{bats}</g>'
+    return f'<g id="{pid}"><path d="M0 0 v-30" stroke="{LEAF[1]}" stroke-width="12"/>{inside}{bats}{leaf}</g>'
 
 
 def giant_leaf(pid, w=1150):

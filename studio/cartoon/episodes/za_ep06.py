@@ -49,11 +49,11 @@ EP = {"id": "za_ep06", "kind": "story", "nest": True, "beat": True, "voice": "af
                "friendship story for kids", "kids adventure cartoon", "counting friends", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}
 
 STAGES = {
-    "jungle": [("tumble", "tumble", 300, 930, .6), ("mango", "monkey", 1220, 934, .56), ("milo", "milo", 860, 500, .72, False, True)],
-    "meadow": [("tumble", "tumble", 240, 880, .6), ("mango", "monkey", 900, 884, .56), ("milo", "milo", 640, 380, .7, False, True)],
-    "mossy": [("tumble", "tumble", 130, 930, .6), ("mango", "monkey", 760, 934, .55), ("milo", "milo", 1040, 520, .7, False, True)],
+    "jungle": [("tumble", "tumble", 380, 930, .6), ("mango", "monkey", 1220, 934, .56), ("milo", "milo", 860, 500, .72, False, True)],
+    "meadow": [("tumble", "tumble", 240, 880, .6), ("mango", "monkey", 900, 884, .56), ("milo", "milo", 640, 430, .7, False, True)],
+    "mossy": [("tumble", "tumble", 230, 930, .6), ("mango", "monkey", 760, 934, .55), ("milo", "milo", 1040, 520, .7, False, True)],
     "bigtree": [("tumble", "tumble", 260, 930, .6), ("mango", "monkey", 820, 934, .55), ("milo", "milo", 560, 520, .7, False, True)],
-    "treehouse": [("tumble", "tumble", 220, 930, .6), ("mango", "monkey", 820, 934, .55), ("milo", "milo", 520, 470, .7, False, True), ("puff", "bat", 960, 560, .34)],
+    "treehouse": [("tumble", "tumble", 300, 930, .6), ("mango", "monkey", 820, 934, .55), ("milo", "milo", 900, 420, .7, False, True), ("puff", "bat", 700, 600, .34)],
     "canopy": [("mango", "monkey_hang", 900, 446, .6), ("milo", "milo", 1460, 290, .7, False, True)],
     "zoo_eve": [("mango", "monkey", 300, 940, .55), ("tumble", "tumble", 660, 940, .6), ("mama", "elephant", 1540, 932, .9, True), ("milo", "milo", 330, 420, .68, False, True)],
 }
@@ -69,7 +69,7 @@ def RS(place, cam, say="", rain=True, holes=(), props=(), fx=(), **kw):
     """A rainy shot: the rain under every other prop, the gray light over all of them."""
     if not rain: return S(place, cam, say, props=list(props), fx=list(fx), **kw)
     return S(place, cam, say, props=RAIN(holes) + list(props) + [TINT()], fx=[RAINFX] + list(fx), **kw)
-CLOUDS = lambda: [prop("c1", A3.cloud, 1560, 170, 1.1), prop("c2", A3.cloud, 520, 150, 1.2)]
+CLOUDS = lambda: [prop("c1", A3.cloud, 1560, 170, 1.1), prop("c2", A3.cloud, 260, 100, 1.0)]
 
 # ------------------------------------------------------------------ the giant leaf: carried over the four friends
 TU_L = (360, 930, .6)                                # Tumble under the leaf
@@ -79,14 +79,14 @@ def GL(tx, ty=930, hidden=False): x, y = TIP(tx, ty); return prop("gl", lambda p
 def HOLE(tx, ty=930):
     x, y = TIP(tx, ty); rim = y + 10 - 250; return [(x - LEAF_W / 2 + 40, rim + 10), (x + LEAF_W / 2 - 40, rim + 10), (x + LEAF_W / 2 - 40, 1200), (x - LEAF_W / 2 + 40, 1200)]
 TRUNK_UP = lambda at=0.02, d=.01: ("trunk", at, "tumble", -100, d)
-UNDER = lambda tx=360: [("tumble", "tumble", tx, 930, .6), ("mango", "monkey", tx + 720, 934, .55), ("milo", "milo", tx + 230, 560, .62, False, True),
-                        ("puff", "bat_hang", tx + 560, TIP(tx)[1] + 10 - 262, .32)]
+UNDER = lambda tx=360: [("tumble", "tumble", tx, 930, .6), ("mango", "monkey", tx + 720, 934, .55), ("milo", "milo", tx + 590, 620, .62, False, True),
+                        ("puff", "bat_hang", tx + 830, TIP(tx)[1] + 10 - 250, .32)]
 
 # ------------------------------------------------------------------ hats on heads (the wearer stands still: no hop, no flying bob)
 def HAT(name, fn, place, who, s, dy=0, hidden=True, stage=None):
     x, y = P(place, who, "top", 0, dy, stage=stage); return prop(name, fn, x, y, s, hidden)
 MILO_GND = {"milo": (620, 930, .72)}        # Milo standing on the ground in the jungle hat shots
-GND_J = [("tumble", "tumble", 300, 930, .6), ("mango", "monkey", 1220, 934, .56), ("milo", "milo", 620, 930, .72)]
+GND_J = [("tumble", "tumble", 380, 930, .6), ("mango", "monkey", 1220, 934, .56), ("milo", "milo", 620, 930, .72)]
 
 # Owner, Nov 17 8:25 PM: no voice is synthesized onto notes. Nobody sings: the rhyme is SAID in a spoken shot, then the tune is played by the bells and the soft band.
 REFRAIN = {"bpm": 96, "chords": "C G F C", "outro_bars": 0, "style": "lullaby"}       # the show loop's key and the music bed's tempo
@@ -95,6 +95,7 @@ SING_DRIP = dict(REFRAIN, lines=[{"text": "~ ~ ~ ~ ~ ~ ~", "notes": "E4:1 G4:1 E
 SING_END = dict(REFRAIN, chords="G C", lines=[{"text": "~ ~ ~ ~ ~", "notes": "D4:1 G4:1 B4:1 A4:.5,B4:.5 C5:2", "rest": 2}])
 TB = lambda b: round(0.12 + b * 60 / 96, 2)      # seconds into a tune shot of beat b of its tune
 
+CNT_DROPS, CNT_LIFT, CNT_FOUR = .64, .64, 1.2     # seconds from "One" to the last number, read from the timing file
 MCL = lambda place, dx=0, dy=-70, w=820: C(place, "milo", "body", w, dx, dy)          # Milo asks a question: low in the frame, under the signs
 SHAKE = lambda at, who="milo": ("to", at, "#{p}" + who, {"rotation": 8, "svgOrigin": "0 -150", "duration": .09, "yoyo": True, "repeat": 7, "ease": "sine.inOut"}, f"{who} shakes himself")
 FLAP = lambda at, n=9: ("to", at, "#{p}puff-wl,#{p}puff-wr", {"scaleY": .55, "transformOrigin": "50% 50%", "duration": .12, "yoyo": True, "repeat": n, "ease": "sine.inOut"}, "Puff flaps her wings")
@@ -104,11 +105,11 @@ def DRIPS(name, x, y, at, n=3, dy=120, gap=.35, s=.22):
     fx = []
     for k in range(n):
         t = at if isinstance(at, (int, float)) else at
-        fx.append(("fromto", at, f"#{{p}}{name}{k}_w", {"opacity": 0, "y": y}, {"opacity": 1, "y": y + dy, "duration": .5, "delay": k * gap, "ease": "power1.in", "repeat": 2, "repeatDelay": .6}, "a drop falls" if k == 0 else ""))
+        fx.append(("fromto", at, f"#{{p}}{name}{k}_w", {"opacity": 1, "y": y}, {"opacity": 0, "y": y + dy, "duration": .6, "delay": k * gap, "ease": "power1.in", "repeat": 2, "repeatDelay": .5, "immediateRender": False}, "a drop falls" if k == 0 else ""))
     return ps, fx
 
-d1p, d1f = DRIPS("dm", *P("jungle", "milo", "body", 40, 40), 0.1, 3, 110)                 # drops falling off soggy Milo in the hook
-d2p, d2f = DRIPS("dk", *P("meadow", "mango", "head", 0, -40), "w:Drip!", 3, 90)          # drops through the flower hat onto Mango's nose
+d1p, d1f = DRIPS("dm", *P("jungle", "milo", "body", 150, 0), 0.1, 3, 110)                 # drops falling off soggy Milo in the hook
+d2p, d2f = DRIPS("dk", *P("meadow", "mango", "head", 120, -20), "w:Drip!", 3, 110)          # drops through the flower hat onto Mango's nose
 TENT_X, TENT_Y = 1060, 300                                                              # the leaf tent hangs under a low branch of the big tree
 TENT = lambda hidden=False: prop("lt", A.leaf_tent, TENT_X, TENT_Y, .9, hidden)
 BRANCH = lambda: prop("br", lambda p: f'<g id="{p}"><path d="M0 0 C120 -10 220 -6 300 -20" stroke="#8a6238" stroke-width="44" stroke-linecap="round"/><path d="M10 10 C120 4 220 8 300 -6" stroke="#735029" stroke-width="16" stroke-linecap="round" opacity=".7"/></g>', TENT_X - 20, TENT_Y - 26, 1.0)
@@ -143,20 +144,20 @@ SHOTS = [
       fx=[("fromto", 0.05, "#{p}cup-lv", {"scaleY": 0, "svgOrigin": "0 10"}, {"scaleY": 0, "duration": .01}, ""), ("show", "w:rains", "rd"),
           ("fromto", "w:rains", "#{p}rd_w", {"y": 380}, {"y": 640, "duration": .6, "repeat": 3, "ease": "power1.in"}, "rain falls into the cup"),
           ("to", "w:inch", "#{p}cup-lv", {"scaleY": 1.15, "svgOrigin": "0 10", "duration": 1.4, "ease": "power1.inOut"}, "the cup fills past the line")],
-      words=[("w:inch", "MORE THAN 1 INCH", .76, .52, .55, "pill"), ("w:every", "EVERY DAY!", .25, .2, .85, "sun")]),
+      words=[("w:inch", "MORE THAN 1 INCH", .76, .52, .55, "pill"), ("w:every", "EVERY DAY!", .22, .45, .85, "sun")]),
     # ------------------------------------------------------------ OBSTACLE 1: a small leaf is only big enough for Milo
     RS("jungle", C("jungle", "mango", "all", 860, -60, -60), "Here's a leaf! You try it first, Milo.", who="mango", beat="obstacle1", tag="Mango: a leaf", hide=["tumble", "milo"],
        props=[prop("sl", A.small_leaf, *P("jungle", "mango", "head", 120, 60), .45, True)], fx=[("show", "w:leaf!", "sl"), ("arm", "w:leaf!", "mango", "r", -60)],
        words=[("w:leaf!", "A LEAF!", .26, .2, .9, "sun")]),
     RS("jungle", C("jungle", "milo", "body", 760, 0, -10, stage=GND_J), "Ooh, nice and dry! Now you, Tumble.", tag="Milo under the leaf", actors=GND_J, fly=[], hide=["tumble", "mango"],
-       props=[HAT("sl", A.small_leaf, "jungle", "milo", .5, 40, False, stage=GND_J)], fx=[("face", 0.02, "milo", "happy")], words=[("w:dry!", "DRY!", .74, .24, 1.0, "sun")]),
+       props=[prop("sl", A.small_leaf, P("jungle", "milo", "top", -105, 40, stage=GND_J)[0], P("jungle", "milo", "top", -105, 40, stage=GND_J)[1], .5)], fx=[("face", 0.02, "milo", "happy")], words=[("w:dry!", "DRY!", .74, .24, 1.0, "sun")]),
     RS("jungle", C("jungle", "tumble", "head", 860, -40, 20), "Hmm. The leaf is too small for my big head!", who="tumble", beat="obstacle1", tag="Tumble: too small", hide=["mango", "milo"],
        props=[HAT("sl", A.small_leaf, "jungle", "tumble", .42, 30, False)], fx=[("face", 0.02, "tumble", "wow"), ("face", "w:small", "tumble", "sad")],
        words=[("w:small", "TOO SMALL!", .74, .2, .85, "pill")]),
     RS("jungle", MCL("jungle", 30), "Is the leaf big, or small?", q=True, beat="obstacle1", tag="question: big or small", pause=3.2, hide=["tumble", "mango"],
        fx=[("signs", "w:big,", ["BIG", "SMALL"], 1, "wait:1.8")]),
-    RS("jungle", (744, 600, 1400), "On they go, through the rainy jungle. Squish, squash, go Tumble's feet.", tag="on they go", move={"tumble": (200, 930, .6), "mango": (720, 934, .56), "milo": (500, 515, .72)},
-       fx=[("walk", 0.1, "tumble", 380, 3.4), ("walk", 0.1, "mango", 420, 3.4), ("fly", 0.1, "milo", 760, 480, 3.4)], words=[("w:Squish,", "SQUISH!", .3, .22, .9, "sun"), ("w:squash,", "SQUASH!", .62, .22, .9, "sun")]),
+    RS("jungle", (744, 600, 1400), "On they go, through the rainy jungle. Squish, squash, go Tumble's feet.", tag="on they go", move={"tumble": (320, 930, .6), "mango": (840, 934, .56), "milo": (500, 515, .72)},
+       fx=[("walk", 0.1, "tumble", 300, 3.4), ("walk", 0.1, "mango", 320, 3.4), ("fly", 0.1, "milo", 760, 480, 3.4)], words=[("w:Squish,", "SQUISH!", .18, .25, .9, "sun"), ("w:squash,", "SQUASH!", .82, .25, .9, "sun")]),
     # ------------------------------------------------------------ OBSTACLE 2: a flower hat lets the rain through
     RS("meadow", (960, 560, 1800), "In the meadow, big pink flowers grow.", trans="iris", beat="obstacle2", tag="the meadow", cam2=(980, 560, 1720),
        props=CLOUDS() + [prop("fp", A.flower_plant, 1420, 900, 1.0)], fx=[("hop", "w:flowers", "mango")], words=[("w:flowers", "PINK FLOWERS", .74, .18, .8, "pill")]),
@@ -169,24 +170,24 @@ SHOTS = [
     RS("meadow", C("meadow", "tumble", "head", 860, -40, 20), "And a flower is much too small for an elephant!", who="tumble", beat="obstacle2", tag="Tumble: too small for me", hide=["mango", "milo"],
        props=CLOUDS(), fx=[("face", 0.02, "tumble", "happy"), ("trunk", "w:elephant!", "tumble", -40, .4)], words=[("w:small", "MUCH TOO SMALL", .74, .2, .65, "pill")]),
     RS("meadow", MCL("meadow", 20), "Can an elephant fit under a flower? Yes, or no?", q=True, beat="obstacle2", tag="question: elephant under a flower", pause=3.2, hide=["tumble", "mango"],
-       props=CLOUDS(), fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:1.8")]),
+       fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:1.8")]),
     # ------------------------------------------------------------ OBSTACLE 3: a moss hat is soggy and drippy
     RS("mossy", (900, 600, 1800), "By the little stream, there is an old log, with soft green moss.", trans="iris", beat="obstacle3", tag="the mossy log", cam2=(900, 600, 1700),
        fx=[("hop", "w:moss.", "mango")], words=[("w:moss.", "SOFT MOSS", .4, .2, .85, "pill")]),
     RS("mossy", C("mossy", "mango", "all", 800, 40, -60), "Moss is soft, like a hat. I'll make one for Milo!", who="mango", beat="obstacle3", tag="Mango: a moss hat", hide=["tumble", "milo"],
        props=[prop("mh", A.moss_hat, *P("mossy", "mango", "head", 150, 70), .4, True)], fx=[("arm", "w:soft,", "mango", "r", -50), ("show", "w:hat.", "mh"), ("hop", "w:Milo!", "mango")],
        words=[("w:hat.", "MOSS HAT", .74, .2, .85, "sun")]),
-    RS("mossy", C("mossy", "milo", "body", 700, 0, -20, stage=[("milo", "milo", 1040, 930, .72)]), "Milo puts on the moss hat. Squish! Water drips out.", beat="obstacle3", tag="moss hat squish",
-       actors=[("milo", "milo", 1040, 930, .72)], fly=[],
-       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 1040, 930, .72)])] + DRIPS("dh", 1040, 640, "w:Squish!", 3, 140)[0],
-       fx=DRIPS("dh", 1040, 640, "w:Squish!", 3, 140)[1] + [("face", "w:Squish!", "milo", "wow"), ("to", "w:Squish!", "#{p}mh_w", {"scaleY": .8, "duration": .15, "yoyo": True, "repeat": 1}, "the moss squishes")],
+    RS("mossy", C("mossy", "milo", "body", 700, 0, -20, stage=[("milo", "milo", 600, 930, .72)]), "Milo puts on the moss hat. Squish! Water drips out.", beat="obstacle3", tag="moss hat squish",
+       actors=[("milo", "milo", 600, 930, .72)], fly=[],
+       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 600, 930, .72)])] + DRIPS("dh", 700, 700, "w:Squish!", 3, 140)[0],
+       fx=DRIPS("dh", 700, 700, "w:Squish!", 3, 140)[1] + [("face", "w:Squish!", "milo", "wow"), ("to", "w:Squish!", "#{p}mh_w", {"scaleY": .8, "duration": .15, "yoyo": True, "repeat": 1}, "the moss squishes")],
        words=[("w:Squish!", "SQUISH!", .76, .22, 1.0, "sun")]),
-    RS("mossy", C("mossy", "milo", "body", 760, 0, -20, stage=[("milo", "milo", 1040, 930, .72)]), "Oh! It's soggy and drippy, just like me!", tag="Milo: soggy like me", actors=[("milo", "milo", 1040, 930, .72)], fly=[],
-       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 1040, 930, .72)])], fx=[("face", 0.02, "milo", "happy")], words=[("w:soggy", "SOGGY HAT", .26, .22, .8, "pill")]),
-    RS("mossy", (1040, 700, 900), "How many drops fall from the hat? Count with me! One, two, three!", q=True, beat="obstacle3", tag="question: count the drops", actors=[("milo", "milo", 1040, 930, .72)], fly=[],
-       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 1040, 930, .72)])] + [prop(f"cd{k}", lambda p: A.drip(p, .3), 1000 + k * 40, 660, 1.0, True) for k in range(3)],
-       fx=[("count", "w:One,", 3, 1.3, {"x": 1420, "y": 400})] + [("fromto", f"w:{w}", f"#{{p}}cd{k}_w", {"opacity": 1, "y": 660}, {"y": 900, "duration": .6, "ease": "power1.in"}, "a drop falls")
-                                                                     for k, w in enumerate(("One,", "two,", "three!"))]),
+    RS("mossy", C("mossy", "milo", "body", 760, 0, -20, stage=[("milo", "milo", 600, 930, .72)]), "Oh! It's soggy and drippy, just like me!", tag="Milo: soggy like me", actors=[("milo", "milo", 600, 930, .72)], fly=[],
+       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 600, 930, .72)])], fx=[("face", 0.02, "milo", "happy")], words=[("w:soggy", "SOGGY HAT", .26, .22, .8, "pill")]),
+    RS("mossy", (640, 700, 900), "How many drops fall from the hat? Count with me! One. Two. Three!", q=True, beat="obstacle3", tag="question: count the drops", actors=[("milo", "milo", 600, 930, .72)], fly=[],
+       props=[HAT("mh", A.moss_hat, "mossy", "milo", .48, 30, False, stage=[("milo", "milo", 600, 930, .72)])] + [prop(f"cd{k}", lambda p: A.drip(p, .3), 690 + k * 36, 690, 1.0, True) for k in range(3)],
+       fx=[("count", "w:One.", 3, CNT_DROPS, {"x": 1420, "y": 400})] + [("fromto", f"w:{w}", f"#{{p}}cd{k}_w", {"opacity": 1, "y": 690}, {"y": 930, "opacity": 0, "duration": .7, "ease": "power1.in", "immediateRender": False}, "a drop falls")
+                                                                     for k, w in enumerate(("One.", "Two.", "Three!"))]),
     # ------------------------------------------------------------ LOW MOMENT: everything is too small (gentle: nobody cries)
     RS("bigtree", WIDE, "The friends rest under the big tree. Still wet, and the tree house is far away.", trans="iris", beat="low", tag="under the big tree", cam2=(1000, 560, 1800),
        props=[BRANCH(), TENT()], fx=[("to", "w:rest", "#{p}tumble", {"y": 30, "duration": .6}, "Tumble sits down"), ("face", "w:wet,", "tumble", "sad"), ("face", "w:wet,", "mango", "sad")],
@@ -200,7 +201,7 @@ SHOTS = [
     RS("bigtree", MCL("bigtree", 20), "What do we need now? Something small, or something big?", q=True, beat="low", tag="question: small or big", pause=3.2, hide=["tumble", "mango"],
        fx=[("signs", "w:small,", ["SMALL", "BIG"], 1, "wait:1.8")]),
     # ------------------------------------------------------------ SOLUTION: the leaf tent gives Mango the idea, and they lift a giant leaf together
-    RS("bigtree", C("bigtree", "mango", "all", 900, 120, -80), "Look! Little white bats, under that leaf!", who="mango", beat="solution", tag="Mango: little bats", hide=["tumble", "milo"],
+    RS("bigtree", (960, 580, 1400), "Look! Little white bats, under that leaf!", who="mango", beat="solution", tag="Mango: little bats", hide=["tumble", "milo"],
        props=[BRANCH(), TENT()], fx=[("face", 0.02, "mango", "wow"), ("arm", "w:Look!", "mango", "r", -140)], words=[("w:bats,", "LITTLE BATS!", .72, .7, .8, "sun")]),
     RS("bigtree", (TENT_X, TENT_Y + 140, 900), "The bats fold the leaf down, like a tent. Inside, they stay nice and dry.", beat="solution", tag="the leaf tent close", hide=only("bigtree"),
        props=[BRANCH(), TENT()], fx=[("to", "w:fold", "#{p}lt_w", {"rotation": 3, "duration": .5, "yoyo": True, "repeat": 3, "ease": "sine.inOut"}, "the tent sways")],
@@ -213,12 +214,12 @@ SHOTS = [
       words=[("w:snip", "SNIP, FOLD!", .29, .2, .8, "sun"), ("w:off!", "NO RAIN INSIDE", .74, .8, .62, "pill")]),
     RS("bigtree", C("bigtree", "mango", "all", 860, 60, -70), "A leaf tent! That's it! We need a leaf. A giant one!", who="mango", beat="solution", tag="Mango: a giant leaf", hide=["tumble", "milo"],
        fx=[("face", 0.02, "mango", "happy"), ("hop", "w:it!", "mango"), ("arm", "w:giant", "mango", "r", -160), ("arm", "w:giant", "mango", "l", 160)], words=[("w:giant", "A GIANT LEAF!", .26, .2, .8, "sun")]),
-    RS("bigtree", (TENT_X, TENT_Y + 260, 900), "A little bat named Puff peeks out, and smiles.", beat="solution", tag="Puff peeks out", hide=only("bigtree"),
-       actors=[("puff", "bat_hang", TENT_X + 150, TENT_Y + 230, .42)], props=[BRANCH(), TENT()],
-       fx=[("fromto", 0.02, "#{p}puff_w", {"x": TENT_X + 40, "opacity": 0}, {"x": TENT_X + 40, "opacity": 0, "duration": .01}, ""),
-           ("to", "w:peeks", "#{p}puff_w", {"x": TENT_X + 150, "opacity": 1, "duration": .6, "ease": "back.out(1.6)"}, "Puff peeks out"), ("face", "w:smiles.", "puff", "happy")],
-       words=[("w:Puff", "PUFF", .74, .25, 1.0, "pill")]),
-    RS("bigtree", (900, 720, 1500), "And there, on the ground! A giant leaf has fallen down.", beat="solution", tag="the fallen giant leaf", hide=["milo"], move={"mango": (1360, 934, .55), "tumble": (60, 930, .6)},
+    RS("bigtree", (TENT_X + 60, TENT_Y + 150, 1000), "A little bat named Puff peeks out, and smiles.", beat="solution", tag="Puff peeks out", hide=only("bigtree"),
+       actors=[("puff", "bat_hang", TENT_X + 270, TENT_Y - 36, .42)], props=[BRANCH(), TENT()],
+       fx=[("fromto", 0.02, "#{p}puff_w", {"x": TENT_X + 60, "opacity": 0}, {"x": TENT_X + 60, "opacity": 0, "duration": .01}, ""),
+           ("to", "w:peeks", "#{p}puff_w", {"x": TENT_X + 270, "opacity": 1, "duration": .7, "ease": "power1.out"}, "Puff peeks out"), ("face", "w:smiles.", "puff", "happy")],
+       words=[("w:Puff", "PUFF", .2, .3, 1.0, "pill")]),
+    RS("bigtree", (900, 720, 1500), "And there, on the ground! A giant leaf has fallen down.", beat="solution", tag="the fallen giant leaf", hide=["milo", "tumble"], move={"mango": (1360, 934, .55)},
        props=[FLAT(True)], fx=[("show", "w:giant", "lf"), ("hop", "w:ground!", "mango")], words=[("w:giant", "SO BIG!", .5, .2, 1.0, "sun")]),
     RS("bigtree", (980, 760, 1300), "Mango pulls and pulls. But it is too heavy for one little monkey.", beat="solution", tag="too heavy for one", hide=["milo", "tumble"], move={"mango": (1360, 934, .55)},
        props=[FLAT()], fx=[("arm", "w:pulls", "mango", "l", 70), ("to", "w:pulls", "#{p}mango_w", {"x": 1330, "duration": .3, "yoyo": True, "repeat": 5}, "Mango pulls"),
@@ -228,50 +229,51 @@ SHOTS = [
        fx=[("face", 0.02, "tumble", "happy"), ("trunk", "w:trunk.", "tumble", -60, .4)], words=[("w:together!", "TOGETHER!", .74, .2, .85, "sun")]),
     RS("bigtree", MCL("bigtree", 20), "What can good friends do? Work alone, or work together?", q=True, beat="solution", tag="question: alone or together", pause=3.2, hide=["tumble", "mango"],
        fx=[("signs", "w:alone,", ["ALONE", "TOGETHER"], 1, "wait:1.8")]),
-    RS("bigtree", (900, 560, 1700), "Count with me! One, two, three, lift! Up goes the giant leaf.", q=True, beat="solution", tag="question: count, lift", actors=UNDER(360)[:3],
+    RS("bigtree", (900, 500, 1700), "Count with me! One. Two. Three. Lift! Up goes the giant leaf.", q=True, beat="solution", tag="question: count, lift", actors=UNDER(360)[:3],
        props=[FLAT(), GL(360, hidden=True)],
-       fx=[("count", "w:One,", 3, 1.2, {"x": 960, "y": 120}), ("hide", "w:lift!", "lf"), ("show", "w:lift!", "gl"), ("trunk", "w:lift!", "tumble", -100, .4),
-           ("arm", "w:lift!", "mango", "r", -160), ("hop", "w:Up", "milo")], words=[("w:lift!", "LIFT!", .82, .5, 1.0, "sun")]),
-    RS("bigtree", (900, 560, 1700), "It's a big green umbrella! Mango, Tumble and Milo all fit underneath.", beat="solution", tag="under the umbrella", actors=UNDER(360)[:3], holes=[HOLE(360)],
+       fx=[("count", "w:One.", 3, CNT_LIFT, {"x": 1560, "y": 300}), ("hide", "w:Lift!", "lf"), ("show", "w:Lift!", "gl"), ("trunk", "w:Lift!", "tumble", -100, .4),
+           ("arm", "w:Lift!", "mango", "r", -160), ("hop", "w:Up", "milo")], words=[("w:Lift!", "LIFT!", .84, .55, 1.0, "sun")]),
+    RS("bigtree", (900, 500, 1700), "It's a big green umbrella! Mango, Tumble and Milo all fit underneath.", beat="solution", tag="under the umbrella", actors=UNDER(360)[:3], holes=[HOLE(360)],
        props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("face", "w:umbrella!", "mango", "happy"), ("face", "w:umbrella!", "tumble", "happy"), ("face", "w:Milo", "milo", "happy")],
-       words=[("w:umbrella!", "UMBRELLA!", .5, .9, .9, "sun")]),
-    RS("bigtree", (920, 520, 1500), "Puff flies over. Is there room for one more?", beat="solution", tag="Puff: room for one more?", actors=UNDER(360)[:3] + [("puff", "bat", 1500, 600, .34)], holes=[HOLE(360)],
-       props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), FLAP("w:Puff", 15), ("to", "w:flies", "#{p}puff_w", {"x": 1100, "y": 420, "duration": 1.4, "ease": "power1.inOut"}, "Puff flies under the leaf")],
+       words=[("w:umbrella!", "UMBRELLA!", .84, .5, .8, "sun")]),
+    RS("bigtree", (920, 480, 1600), "Puff flies over. Is there room for one more?", beat="solution", tag="Puff: room for one more?", actors=UNDER(360)[:3] + [("puff", "bat", 1500, 600, .34)], holes=[HOLE(360)],
+       props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), FLAP("w:Puff", 15), ("to", "w:flies", "#{p}puff_w", {"x": 1190, "y": 440, "duration": 1.4, "ease": "power1.inOut"}, "Puff flies under the leaf")],
        words=[("w:more?", "ONE MORE?", .8, .2, .85, "pill")]),
     RS("bigtree", C("bigtree", "mango", "head", 760, 0, 20, stage=UNDER(360)), "Of course, Puff! There is room for all!", who="mango", beat="solution", tag="Mango: room for all", actors=UNDER(360)[1:2], holes=[HOLE(360)],
        props=[GL(360)], fx=[("arm", 0.02, "mango", "r", -160), ("face", 0.02, "mango", "happy"), ("arm", "w:room", "mango", "l", 120)], words=[("w:all!", "ROOM FOR ALL!", .28, .22, .75, "sun")]),
-    RS("bigtree", (920, 600, 1500), "How many friends are under the leaf? Count with me! One, two, three, four!", q=True, beat="solution", tag="question: count four friends", actors=UNDER(360), holes=[HOLE(360)],
-       props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("count", "w:One,", 4, 1.8, {"x": 1560, "y": 760}),
-                           ("hop", "w:One,", "milo"), ("nod", "w:two,", "tumble"), ("to", "w:three,", "#{p}mango-tail", {"rotation": 12, "svgOrigin": "40 -80", "duration": .25, "yoyo": True, "repeat": 3}, "Mango swishes her tail"), FLAP("w:four!", 5)]),
+    RS("bigtree", (920, 500, 1600), "How many friends are under the leaf? Count with me! One. Two. Three. Four!", q=True, beat="solution", tag="question: count four friends", actors=UNDER(360), holes=[HOLE(360)],
+       props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("count", "w:One.", 4, CNT_FOUR, {"x": 1560, "y": 300}),
+                           ("hop", "w:One.", "milo"), ("nod", "w:Two.", "tumble"), ("to", "w:Three.", "#{p}mango-tail", {"rotation": 12, "svgOrigin": "40 -80", "duration": .25, "yoyo": True, "repeat": 3}, "Mango swishes her tail"), FLAP("w:Four!", 5)]),
     # ------------------------------------------------------------ SONG MOMENT: the rhyme SAID, then the tune on instruments while they walk under the leaf
-    RS("bigtree", (900, 600, 1500), "Drip, drop, drip, drop, hear the rain. Under our leaf, we're dry again!", who="mango", beat="solution", tag="the rain rhyme", actors=UNDER(360), holes=[HOLE(360)],
+    RS("bigtree", (900, 500, 1600), "Drip, drop, drip, drop, hear the rain. Under our leaf, we're dry again!", who="mango", beat="solution", tag="the rain rhyme", actors=UNDER(360), holes=[HOLE(360)],
        props=[GL(360)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("face", 0.02, "mango", "happy"), ("arm", "w:dry", "mango", "l", 120)],
-       words=[("w:Drip,", "DRIP, DROP!", .5, .9, .8, "sun"), ("w:dry", "DRY AGAIN!", .82, .55, .75, "pill")]),
-    RS("jungle", (960, 600, 1700), who="", sing=SING_DRIP, beat="song", tag="song: under our leaf", actors=UNDER(100), holes=[HOLE(100)], trans="iris",
-       props=[GL(100)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("walk", TB(0), "tumble", 600, 9.6), ("walk", TB(0), "mango", 600, 9.6), ("to", TB(0), "#{p}milo_w", {"x": "+=600", "duration": 9.6, "ease": "none"}, ""),
-                            ("to", TB(0), "#{p}puff_w,#{p}gl_w,#{p}rn-hole", {"x": "+=600", "duration": 9.6, "ease": "none"}, "they walk under the leaf")],
-       words=[(TB(0), "DRIP, DROP!", .5, .14, .8, "sun"), (TB(8), "DRY AGAIN!", .5, .14, .8, "pill")]),
+       words=[("w:Drip,", "DRIP, DROP!", .78, .4, .75, "sun"), ("w:dry", "DRY AGAIN!", .8, .56, .7, "pill")]),
+    RS("jungle", (760, 500, 1600), who="", sing=SING_DRIP, beat="song", tag="song: under our leaf", actors=UNDER(240), holes=[HOLE(240)], trans="iris", cam2=(1240, 500, 1600),
+       props=[GL(240)], fx=[TRUNK_UP(), ("arm", 0.02, "mango", "r", -160), ("walk", TB(0), "tumble", 480, 9.6), ("walk", TB(0), "mango", 480, 9.6), ("to", TB(0), "#{p}milo_w", {"x": "+=480", "duration": 9.6, "ease": "none"}, ""),
+                            ("to", TB(0), "#{p}puff_w,#{p}gl_w,#{p}rn-hole", {"x": "+=480", "duration": 9.6, "ease": "none"}, "they walk under the leaf"),
+                            ("word", TB(0), "DRIP, DROP!", {"x": 760, "y": 196, "size": 87, "cls": "sun", "hold": 4.6})],
+       words=[(TB(8), "DRY AGAIN!", .8, .14, .8, "pill")]),
     # ------------------------------------------------------------ WARM ENDING: the tree house, the rain stops, a rainbow, fruit, thank-yous, home to Mama
     S("treehouse", (960, 560, 1800), "Here is Mango's tree house! And look, the rain has stopped.", trans="iris", beat="ending", tag="the tree house, the rain stops", cam2=(980, 560, 1720),
-      props=[prop("sun", A.sun_peek, 380, 140, .7, True), prop("rb", A.rainbow, 760, 620, .8, True)],
+      props=[prop("sun", A.sun_peek, 1760, 120, .6, True), prop("rb", A.rainbow, 300, 460, .5, True)],
       fx=[("show", "w:look,", "sun"), ("show", "w:stopped.", "rb"), ("to", "w:look,", "#{p}sun-r", {"rotation": 60, "svgOrigin": "0 0", "duration": 3, "ease": "none"}, ""), ("hop", "w:tree", "mango"), FLAP("w:stopped.", 5)],
       words=[("w:stopped.", "NO MORE RAIN!", .76, .17, .75, "sun")]),
     S("treehouse", C("treehouse", "milo", "body", 760, 0, -10), "A rainbow! And my feathers are drying in the sun.", tag="Milo: a rainbow", hide=["tumble", "mango", "puff"],
-      props=[prop("rb", A.rainbow, 760, 620, .8)], fx=[("face", 0.02, "milo", "happy"), SHAKE("w:feathers"), ("hop", "e:sun.", "milo")], words=[("w:rainbow!", "RAINBOW!", .26, .2, .9, "sun")]),
-    S("treehouse", (1300, 480, 1500), "Up, up goes Mango, all the way to the top of the trees.", tag="Mango climbs", hide=["milo", "puff"], move={"mango": (1150, 934, .55)},
+      props=[prop("rb", A.rainbow, P("treehouse", "milo", "body", -320)[0], P("treehouse", "milo", "body", 0, 130)[1], .22)], fx=[("face", 0.02, "milo", "happy"), SHAKE("w:feathers"), ("hop", "e:sun.", "milo")], words=[("w:rainbow!", "RAINBOW!", .26, .2, .9, "sun")]),
+    S("treehouse", (1250, 560, 1500), "Up, up goes Mango, all the way to the top of the trees.", tag="Mango climbs", cam2=(1300, 440, 1500), hide=["milo", "puff", "tumble"], move={"mango": (1150, 934, .55)},
       fx=[("to", "w:Up,", "#{p}mango_w", {"y": 330, "duration": 1.6, "ease": "power1.in"}, "Mango climbs up the ladder"), ("arm", "w:Up,", "mango", "r", -160)], words=[("w:top", "UP, UP!", .2, .2, .9, "sun")]),
-    S("canopy", (900, 600, 1300), "Way up high is the canopy. Most animals in the rainforest live up here, in the canopy!", trans="iris", beat="fact", tag="fact: most animals live in the canopy",
+    S("canopy", (900, 600, 1300), "Way up high is the canopy. Most animals in the rainforest live up here, in the canopy!", trans="iris", beat="fact", tag="fact: most animals live in the canopy", hide=["milo"],
       props=[prop("ar", lambda p: art.arrow(p, 620, 330, 800, 410), 0, 0, 1, True)],
       fx=[("show", "w:canopy.", "ar"), ("to", "w:animals", "#{p}mango-swing", {"rotation": 10, "svgOrigin": "0 0", "duration": .5, "yoyo": True, "repeat": 3}, "Mango swings")],
-      words=[("w:canopy.", "THE CANOPY", .26, .2, .8, "pill"), ("w:Most", "MOST ANIMALS", .76, .6, .75, "sun")]),
-    S("treehouse", (700, 640, 1500), "Mango brings fruit for everyone. A tree house party!", beat="ending", tag="fruit party", hide=["puff"],
+      words=[("w:canopy.", "THE CANOPY", .26, .2, .8, "pill"), ("w:Most", "MOST ANIMALS", .78, .8, .75, "sun")]),
+    S("treehouse", (700, 640, 1500), "Mango brings fruit for everyone. A tree house party!", beat="ending", tag="fruit party", hide=["puff", "milo"],
       props=[prop("f1", A4.fruit, 560, 900, .36, True), prop("f2", A4.fruit, 660, 920, .36, True), prop("f3", A4.fruit, 760, 900, .36, True)],
-      fx=[("show", "w:fruit", "f1"), ("show", "w:fruit", "f2"), ("show", "w:fruit", "f3"), ("hop", "w:party!", "mango"), ("hop", "w:party!", "tumble")], words=[("w:party!", "PARTY!", .3, .2, 1.0, "sun")]),
+      fx=[("show", "w:fruit", "f1"), ("show", "w:fruit", "f2"), ("show", "w:fruit", "f3"), ("hop", "w:party!", "mango"), ("hop", "w:party!", "tumble")], words=[("w:party!", "PARTY!", .72, .2, 1.0, "sun")]),
     S("treehouse", C("treehouse", "tumble", "head", 860, -40, 20), "Thank you for the umbrella idea, Mango.", who="tumble", beat="ending", tag="Tumble: thank you", hide=["mango", "milo", "puff"],
       fx=[("face", 0.02, "tumble", "happy"), ("trunk", "w:umbrella", "tumble", -50, .4), ("trunk", "e:Mango.", "tumble", 0, .4)]),
     S("treehouse", C("treehouse", "mango", "head", 800, 0, 30), "We did it together. And Puff showed us the way!", who="mango", beat="ending", tag="Mango: together, and Puff", hide=["tumble", "milo", "puff"],
       props=[prop("h1", lambda p: art2.heart(p), *P("treehouse", "mango", "top", 170, 30), .6, True)], fx=[("face", 0.02, "mango", "happy"), ("show", "w:together.", "h1")]),
-    S("treehouse", C("treehouse", "puff", "all", 760, 0, 0), "Thank you, Puff! See you soon!", tag="Milo: thank you Puff", hide=["tumble", "mango"],
+    S("treehouse", C("treehouse", "puff", "all", 760, 0, 0), "Thank you, Puff! See you soon!", tag="Milo: thank you Puff", hide=["tumble", "mango", "milo"],
       fx=[FLAP(0.2, 15), ("face", 0.02, "puff", "happy")], words=[("w:Puff!", "BYE, PUFF!", .74, .22, .85, "sun")]),
     S("zoo_eve", WIDE, "Back at the zoo, the sky is pink. And Mama is waiting.", trans="iris", beat="ending", tag="back at the zoo", cam2=(1000, 560, 1800),
       move={"tumble": (300, 940, .6), "mango": (-60, 940, .55)}, fx=[("walk", 0.1, "tumble", 360, 3.2), ("walk", 0.1, "mango", 360, 3.2)], words=[("w:Mama", "HOME!", .5, .16, 1.0, "sun")]),
@@ -305,8 +307,8 @@ THUMBS = {
     "za_ep06": {"place": "bigtree", "cam": (920, 600, 1500),
                 "actors": [("tumble", 360, 930, .6, False, 'gsap.set("#P-trunk",{rotation:-100,svgOrigin:"392 -430"});'),
                            ("monkey", 1080, 934, .55, False, 'gsap.set("#P-ar",{rotation:-160,svgOrigin:"58 -206"});'),
-                           ("milo", 590, 560, .62, False, ''),
-                           ("bat_hang", 920, TIP(360)[1] + 10 - 262, .32, False, '')],
+                           ("milo", 950, 620, .62, False, ''),
+                           ("bat_hang", 1190, TIP(360)[1] + 10 - 250, .32, False, '')],
                 "props": [(lambda p: A.rain_dry(p, [HOLE(360)]), -500, -700, 1.0), (lambda p: A.giant_leaf(p, LEAF_W), TIP(360)[0], TIP(360)[1] + 10, 1.0), (A3.tint, 0, 0, 1.0)],
                 "words": [("ROOM FOR ALL!", 1400, 230, 170, "sun")]},
 }

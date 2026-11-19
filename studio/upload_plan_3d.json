@@ -2650,10 +2650,29 @@
   "date": "2026-11-21",
   "time": "5:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 18 7:30 PM ET by the scheduled adventure build, session 014CFVfXybtf4CPK8u8DhnD3."
+  "note": "Built Nov 18 7:30-10:20 PM ET by the scheduled adventure build (session 014CFVfXybtf4CPK8u8DhnD3): 4K AV1 321.6 s; stills of every shot (end and start) and frames of the finished AV1 file (every shot end, every answer reveal, the rhymes and tunes) looked at; pace, watermark and corner sheet, listen.py, review.py PASS. Run note docs/cartoon/runs/za_ep04.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM.",
+  "description": "It is picnic day! Mango the spider monkey fills a basket with fruit, but the picnic spot is on the other side of a little stream. The only way over is a low vine bridge that goes wiggle, wobble. Baby elephant Tumble is not sure, Mango runs too fast, and the basket tips. How will the friends get across together? A gentle animal adventure for ages 2-6 about slowing down and helping a friend, with questions to answer, steps to count and a tune to clap along to.\nKids see how a spider monkey's tail can hold up her whole body, how it can grab like an extra hand, and how her long arms and hook-like hands swing through the trees.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys).",
+  "tags": [
+   "spider monkey",
+   "monkey story for kids",
+   "baby elephant",
+   "animal stories for kids",
+   "friendship story for kids",
+   "kids adventure cartoon",
+   "monkey tail",
+   "picnic story for kids",
+   "counting steps",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb": "brand/zoo/thumb_za_ep04.jpg",
+  "thumb_text": "HOLD ON!",
+  "seconds": 321.6
  }
 ]

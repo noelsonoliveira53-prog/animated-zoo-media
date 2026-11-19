@@ -1219,7 +1219,7 @@
  {
   "file": "cartoon/zc_ep07_short1.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",
@@ -1227,7 +1227,7 @@
   "watermark": "top",
   "date": "2026-11-26",
   "time": "11:30 AM",
-  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 22 7:30 PM (elephant Short that day).",
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 22 7:30 PM (elephant Short that day). | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 26, 2026 at 11:30 AM', custom thumbnail, made for kids.",
   "seconds": 91.1,
   "title": "What Does a Baby Elephant Drink?",
   "description": "What does a baby elephant drink, water or milk? And does Tumble drink with his trunk or with his mouth? Answer along with Milo the bluebird: a baby elephant drinks its mama's milk with its mouth, because its trunk is still short and wobbly. A quick animal fact for kids from the lesson “Who Looks After a Baby Elephant?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSeaWorld (elephant care of young); San Diego Zoo Wildlife Alliance (elephant).",
@@ -1244,7 +1244,10 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "MOUTH OR TRUNK?"
+  "thumb_text": "MOUTH OR TRUNK?",
+  "video_id": "aXYL9kYmsL4",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep07_short2.mp4",

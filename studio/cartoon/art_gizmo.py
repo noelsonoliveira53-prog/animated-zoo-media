@@ -223,7 +223,7 @@ def seed_open(pid):
             f'<g id="{pid}-food"><path d="M-180 14 C-190 -100 -60 -132 20 -108 C30 -40 20 40 0 104 C-110 90 -176 70 -180 14Z" fill="#f3e3b0" stroke="#d1b87a" stroke-width="6"/>'
             f'<path d="M30 -106 C130 -76 200 -40 190 40 C180 112 70 120 10 104 C40 40 46 -40 30 -106Z" fill="#f6e8bf" stroke="#d1b87a" stroke-width="6"/>'
             f'<ellipse cx="-100" cy="-20" rx="40" ry="18" fill="#fff6d8" opacity=".8"/></g>'
-            f'<g id="{pid}-baby"><g id="{pid}-broot"><path d="M14 0 C16 30 8 60 -6 86" stroke="#f2f0d8" stroke-width="20" fill="none" stroke-linecap="round"/><path d="M14 0 C16 30 8 60 -6 86" stroke="#c9d89a" stroke-width="8" fill="none" stroke-linecap="round"/></g>'
+            f'<g id="{pid}-baby"><g id="{pid}-broot"><path d="M14 0 C16 30 8 60 -6 86" stroke="#7a5a2a" stroke-width="22" fill="none" stroke-linecap="round"/><path d="M14 0 C16 30 8 60 -6 86" stroke="#f4ead0" stroke-width="10" fill="none" stroke-linecap="round"/></g>'
             f'<g id="{pid}-bshoot"><path d="M14 0 C14 -30 20 -52 26 -66" stroke="{GREEN[1]}" stroke-width="14" fill="none" stroke-linecap="round"/>'
             f'<ellipse cx="6" cy="-74" rx="24" ry="12" fill="{GREEN[0]}" stroke="{GREEN[1]}" stroke-width="5" transform="rotate(-30 6 -74)"/><ellipse cx="44" cy="-76" rx="24" ry="12" fill="{GREEN[0]}" stroke="{GREEN[1]}" stroke-width="5" transform="rotate(30 44 -76)"/></g></g></g>')
 

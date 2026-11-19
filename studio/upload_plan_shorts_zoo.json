@@ -1309,7 +1309,7 @@
  {
   "file": "cartoon/zc_ep08_short1.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep08",
   "res": "2160x3840",
@@ -1317,7 +1317,7 @@
   "watermark": "top",
   "date": "2026-11-26",
   "time": "7:30 AM",
-  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 26, 2026 at 7:30 AM', custom thumbnail, made for kids.",
   "title": "Who Lives on the Rainforest Floor?",
   "description": "Who lives way down on the dark forest floor? Sniff, sniff! It is a giant anteater. Milo the bluebird learns that the forest floor is the darkest layer of the rainforest, because the leaves up high block the sunlight, and that anteaters smell ants with their super nose. A quick animal fact for kids from the lesson “Who Lives at the Top of the Jungle?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Tropical Research Institute (rainforest layers); National Geographic Education (rain forest); TIME for Kids (jungle layers); SeaWorld (giant anteater).",
   "tags": [
@@ -1330,7 +1330,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "SNIFF, SNIFF!",
-  "seconds": 90.1
+  "seconds": 90.1,
+  "video_id": "35lIdFvap8U",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep08_short2.mp4",

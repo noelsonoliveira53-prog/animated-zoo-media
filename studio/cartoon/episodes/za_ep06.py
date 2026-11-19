@@ -304,11 +304,11 @@ SHOTS = [
 
 # thumbnail (thumb.py): the example in the picture (four friends under one giant leaf in the rain), 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "za_ep06": {"place": "bigtree", "cam": (920, 600, 1500),
+    "za_ep06": {"place": "bigtree", "cam": (960, 450, 1760),
                 "actors": [("tumble", 360, 930, .6, False, 'gsap.set("#P-trunk",{rotation:-100,svgOrigin:"392 -430"});'),
-                           ("monkey", 1080, 934, .55, False, 'gsap.set("#P-ar",{rotation:-160,svgOrigin:"58 -206"});'),
-                           ("milo", 950, 620, .62, False, ''),
-                           ("bat_hang", 1190, TIP(360)[1] + 10 - 250, .32, False, '')],
+                           ("monkey", 1130, 934, .55, False, 'gsap.set("#P-ar",{rotation:-160,svgOrigin:"58 -206"});'),
+                           ("milo", 910, 930, .62, False, ''),
+                           ("bat_hang", 1190, TIP(360)[1] + 10 - 250, .34, False, '')],
                 "props": [(lambda p: A.rain_dry(p, [HOLE(360)]), -500, -700, 1.0), (lambda p: A.giant_leaf(p, LEAF_W), TIP(360)[0], TIP(360)[1] + 10, 1.0), (A3.tint, 0, 0, 1.0)],
-                "words": [("ROOM FOR ALL!", 1400, 230, 170, "sun")]},
+                "words": [("ROOM FOR ALL!", 960, 112, 150, "sun", -2)]},
 }

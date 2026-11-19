@@ -401,7 +401,10 @@ def apply(f):
     set_location(loc_at(t))
     for ch in cast.values():
         ch.pose(f, t, state_for(ch, f, t))
+    _shot_now = str(cut_at(t)[0])
+    _txt_off = any(_shot_now.startswith(h) for h in job.get("text_hide_shots", []))   # song words fixed in the world are cut by the frame in close shots and sit behind Milo's crest in low ones (zoo3d_ep20/21): such shots hide them
     for o, t0, t1, bs, spin in props:
+        if _txt_off and o.name.startswith("PropText"): o.scale = (0, 0, 0); o.hide_render = True; continue
         if t < t0 or t > t1 + 0.4: s = 0.0
         elif t < t0 + 0.45: x = (t - t0) / 0.45; s = 1 + math.sin(x * math.pi) * 0.25 if x > 0.6 else L.smoothstep(x / 0.6) * 1.1
         elif t > t1: s = 1 - L.smoothstep((t - t1) / 0.4)

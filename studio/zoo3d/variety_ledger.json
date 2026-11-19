@@ -1703,7 +1703,7 @@
   "new_song": true
  },
  {
-  "id": "zoo3d_ep22",
+  "id": "zoo3d_ep22y",
   "places": [
    [
     "savanna",
@@ -1718,12 +1718,40 @@
     "noon"
    ],
    [
+    "savanna",
+    "noon"
+   ],
+   [
     "river",
     "golden"
    ],
    [
     "spring_meadow",
     "morning"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ],
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "savanna",
+    "sunset"
    ],
    [
     "savanna",

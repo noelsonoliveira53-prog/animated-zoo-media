@@ -24,8 +24,8 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
   (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
   about 25 minutes; write it outside the repo and move it in). A Short's H.264 is under 100 MB and goes up as it is.
 - Building (Noelson, Nov 17 10:42 PM: "ensure there is a continuous production of 2D videos ... looks like the 3D videos are the only ones
-  self-uploading, update this workflow"): cartoon videos are built by TWO OWN scheduled tasks every day, not by this run: "Animated Zoo
-  cartoon lesson + 3 Shorts" (1:17 PM ET) and "Animated Zoo cartoon adventure" (7:23 PM ET). Each asks `python3 studio/upload_guard.py --next
+  self-uploading, update this workflow"): cartoon videos are built by FOUR OWN scheduled tasks every day, not by this run: "Animated Zoo
+  cartoon lesson + 3 Shorts" (1:47 AM and 1:17 PM ET) and "Animated Zoo cartoon adventure" (8:43 AM and 7:23 PM ET). Each asks `python3 studio/upload_guard.py --next
   lesson|adventure` for its title (first THEMES title of `docs/cartoon/build_plan.py` with no plan entry), id and slots, reserves them as
   "in_production", builds by `docs/CARTOON_RUN.md` and leaves the checked files "to_upload" with a run note in `docs/cartoon/runs/<id>.md`.
   THIS run's part: (1) section C uploads every cartoon "to_upload" entry; (2) fold new run notes from `docs/cartoon/runs/` into PLAYBOOK.md and

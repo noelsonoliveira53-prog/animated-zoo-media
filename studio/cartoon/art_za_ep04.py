@@ -3,8 +3,8 @@ the bridge itself (a prop, so it can wobble), the picnic basket and blanket, and
 the same drawing as art2.monkey(), only the tail goes up and curls round the bridge's rope).
 Same hand as art.py / art2.py: flat fills, one warm dark outline. Nothing here changes an existing character, prop or place.
 
-Stage numbers: feet on y = 930 on both banks and on the bridge deck. The stream runs between x = 680 and x = 1260; the bridge is placed at
-(970, 930) and is 700 wide; its rope (drawn in the place, behind the actors) is at y = 760, the height of Mango's curled tail tip at scale .55."""
+Stage numbers: feet on y = 930 on both banks and on the bridge deck. The stream runs between x = 820 and x = 1340; the bridge is placed at
+(1080, 930) and is 640 wide; its rope (drawn in the place, behind the actors) is at y = 760, the height of Mango's curled tail tip at scale .55."""
 import art, art2, kit
 from art import INK, SUN
 
@@ -12,7 +12,7 @@ MON = art2.MON
 WATER = "#58b9e8"; WATER_L = "#bfe6fb"; WATER_D = "#3f9fd0"
 WOOD = ("#b07a42", "#8a5a2c", "#d29a5c")
 VINE = ("#4f9e4c", "#2f7a3a")
-DECK_Y = 930; ROPE_Y = 760; BX0, BX1 = 620, 1320      # the bridge from post to post
+DECK_Y = 930; ROPE_Y = 760; BX0, BX1 = 760, 1400      # the bridge from post to post
 
 
 def _limb(d, w=30, c=MON):
@@ -51,23 +51,23 @@ def bg_stream(p):
     """The little stream in the jungle: two grassy banks, clear water between them, and the low vine bridge's two posts and rope.
     The deck of the bridge is a prop (bridge()), so it can wobble; the posts and the rope stay still."""
     far, mid, _ = art2.bg_jungle(p)
-    water = (f'<path d="M680 900 C710 1000 690 1100 640 1980 L1300 1980 C1250 1100 1230 1000 1260 900Z" fill="{WATER}"/>'
-             f'<path d="M720 960 C770 1100 750 1300 710 1980 L820 1980 C820 1300 820 1100 770 960Z" fill="{WATER_D}" opacity=".35"/>'
+    water = (f'<path d="M820 900 C850 1000 830 1100 780 1980 L1380 1980 C1330 1100 1310 1000 1340 900Z" fill="{WATER}"/>'
+             f'<path d="M860 960 C910 1100 890 1300 850 1980 L960 1980 C960 1300 960 1100 910 960Z" fill="{WATER_D}" opacity=".35"/>'
              + "".join(f'<path id="{p}w{k}" d="M{x} {y} q24 -12 48 0 q24 12 48 0" stroke="{WATER_L}" stroke-width="8" fill="none" stroke-linecap="round"/>'
-                       for k, (x, y) in enumerate(((800, 990), (1060, 1030), (900, 1110), (1120, 1180), (760, 1250), (1000, 1300)))))
-    stones = "".join(f'<ellipse cx="{x}" cy="{y}" rx="{r}" ry="{r * .55:.0f}" fill="#9aa3a8" stroke="#6d777c" stroke-width="6"/>' for x, y, r in ((720, 1180, 30), (1220, 1120, 28), (1200, 1330, 36)))
+                       for k, (x, y) in enumerate(((920, 990), (1160, 1030), (1020, 1110), (1200, 1180), (880, 1250), (1100, 1300)))))
+    stones = "".join(f'<ellipse cx="{x}" cy="{y}" rx="{r}" ry="{r * .55:.0f}" fill="#9aa3a8" stroke="#6d777c" stroke-width="6"/>' for x, y, r in ((860, 1180, 30), (1300, 1120, 28), (1280, 1330, 36)))
     post = lambda x: (f'<rect x="{x - 22}" y="{ROPE_Y - 40}" width="44" height="{DECK_Y - ROPE_Y + 70}" rx="14" fill="{WOOD[0]}" stroke="{INK}" stroke-width="8"/>'
                       f'<circle cx="{x}" cy="{ROPE_Y - 40}" r="26" fill="{WOOD[2]}" stroke="{INK}" stroke-width="8"/>')
-    rope = (f'<path d="M{BX0} {ROPE_Y} Q970 {ROPE_Y + 14} {BX1} {ROPE_Y}" stroke="{VINE[1]}" stroke-width="24" fill="none" stroke-linecap="round"/>'
-            f'<path d="M{BX0} {ROPE_Y} Q970 {ROPE_Y + 14} {BX1} {ROPE_Y}" stroke="{VINE[0]}" stroke-width="12" fill="none" stroke-linecap="round"/>'
+    rope = (f'<path d="M{BX0} {ROPE_Y} Q1080 {ROPE_Y + 14} {BX1} {ROPE_Y}" stroke="{VINE[1]}" stroke-width="24" fill="none" stroke-linecap="round"/>'
+            f'<path d="M{BX0} {ROPE_Y} Q1080 {ROPE_Y + 14} {BX1} {ROPE_Y}" stroke="{VINE[0]}" stroke-width="12" fill="none" stroke-linecap="round"/>'
             + "".join(f'<path d="M{x} {ROPE_Y + 6} q-10 30 4 56" stroke="{VINE[0]}" stroke-width="7" fill="none" stroke-linecap="round"/>'
-                      f'<path d="M{x + 4} {ROPE_Y + 60} c-24 -8 -30 14 -10 20 c16 4 22 -12 10 -20Z" fill="#57c078"/>' for x in (700, 860, 1080, 1240)))
+                      f'<path d="M{x + 4} {ROPE_Y + 60} c-24 -8 -30 14 -10 20 c16 4 22 -12 10 -20Z" fill="#57c078"/>' for x in (840, 1000, 1180, 1330)))
     # the picnic spot on the far bank: a little blanket and a flag
-    spot = ('<path d="M1600 960 L1860 950 L1900 1010 L1580 1022Z" fill="#ff6f6f" stroke="#a83a3a" stroke-width="7" stroke-linejoin="round"/>'
-            + "".join(f'<path d="M{1600 + k * 60} 958 L{1585 + k * 76} 1020" stroke="#fff" stroke-width="10" opacity=".8"/>' for k in range(1, 5))
-            + f'<rect x="1806" y="820" width="10" height="150" fill="{WOOD[1]}"/><path d="M1816 824 L1890 846 L1816 870Z" fill="{SUN}" stroke="{INK}" stroke-width="5" stroke-linejoin="round"/>')
+    spot = ('<path d="M1500 960 L1760 950 L1800 1010 L1480 1022Z" fill="#ff6f6f" stroke="#a83a3a" stroke-width="7" stroke-linejoin="round"/>'
+            + "".join(f'<path d="M{1500 + k * 60} 958 L{1485 + k * 76} 1020" stroke="#fff" stroke-width="10" opacity=".8"/>' for k in range(1, 5))
+            + f'<rect x="1706" y="820" width="10" height="150" fill="{WOOD[1]}"/><path d="M1716 824 L1790 846 L1716 870Z" fill="{SUN}" stroke="{INK}" stroke-width="5" stroke-linejoin="round"/>')
     near = ('<rect x="-500" y="850" width="2920" height="1200" fill="#4aa85a"/><path d="M-500 870 C300 836 900 860 1400 846 S2100 850 2420 862 L2420 900 L-500 900Z" fill="#4aa85a"/>'
-            + water + stones + _bank_edge(680, 1) + _bank_edge(1260, -1)
+            + water + stones + _bank_edge(820, 1) + _bank_edge(1340, -1)
             + art2._leaf(-40, 900, 1.5, -40, "#2f8a4c") + art2._leaf(60, 930, 1.3, -80, "#3f9e5c") + art2._leaf(2020, 930, 1.5, -130, "#2f8a4c")
             + "".join(f'<circle cx="{x}" cy="{y}" r="12" fill="{c}"/><circle cx="{x}" cy="{y}" r="5" fill="#fff6c0"/>' for x, y, c in ((260, 1000, "#ff7aa2"), (420, 1080, "#ffb347"), (1520, 1060, "#ff7aa2"), (1720, 1100, "#fff")))
             + post(BX0) + post(BX1) + rope + spot)
@@ -82,7 +82,7 @@ def bg_meadow(p):
     mid = ('<path d="M-500 700 C200 660 800 690 1300 672 S2100 676 2420 700 L2420 900 L-500 900Z" fill="#7ccf6e"/>'
            f'<path d="M-500 760 C200 744 700 770 1200 750 S2000 752 2420 770 L2420 800 C1900 790 1300 800 800 796 S-100 786 -500 800Z" fill="{WATER}"/>'
            f'<path d="M100 772 q30 -10 60 0 M700 778 q30 -10 60 0 M1500 770 q30 -10 60 0" stroke="{WATER_L}" stroke-width="7" fill="none" stroke-linecap="round"/>'
-           + art2._leaf(1500, 760, .9, -120, "#3f9e5c") + art2._leaf(300, 740, .8, -60, "#3f9e5c"))
+           + art2._leaf(1760, 760, .9, -120, "#3f9e5c") + art2._leaf(300, 740, .8, -60, "#3f9e5c"))
     near = ('<rect x="-500" y="840" width="2920" height="1200" fill="#6cc463"/><path d="M-500 860 C300 826 900 850 1400 836 S2100 840 2420 852 L2420 900 L-500 900Z" fill="#6cc463"/>'
             + "".join(f'<g transform="translate({x} {y})"><path d="M0 0 v-30" stroke="#3f9e5c" stroke-width="6"/>' + "".join(f'<circle cx="{12 * dx}" cy="{-30 + 12 * dy}" r="10" fill="{c}"/>' for dx, dy in ((1, 0), (-1, 0), (0, 1), (0, -1))) + f'<circle cx="0" cy="-30" r="8" fill="#fff6c0"/></g>'
                       for x, y, c in ((120, 990, "#ff7aa2"), (380, 1100, "#fff"), (1700, 1000, "#ffb347"), (1880, 1110, "#ff7aa2"), (1460, 1130, "#fff"), (240, 1180, "#ffb347")))
@@ -96,14 +96,14 @@ art.PLACE.update({"stream": "the stream with the vine bridge", "meadow": "the pi
 
 # ------------------------------------------------------------------ props
 def bridge(pid):
-    """The deck of the low vine bridge, placed at (970, 930): wooden planks tied with vines, its top edge at y = 0 (the actors' feet).
+    """The deck of the low vine bridge, placed at (1080, 930): wooden planks tied with vines, its top edge at y = 0 (the actors' feet).
     -deck is the planks: a little rotation and y on it make the wobble."""
     w = (BX1 - BX0) / 2; planks = []
     x = -w + 10
     while x < w - 30:
         planks.append(f'<rect x="{x:.0f}" y="0" width="44" height="30" rx="6" fill="{WOOD[0] if len(planks) % 2 else WOOD[2]}" stroke="{INK}" stroke-width="6"/>'); x += 52
     ties = (f'<path d="M{-w} 6 L{w} 6" stroke="{VINE[1]}" stroke-width="14" stroke-linecap="round"/><path d="M{-w} 24 L{w} 24" stroke="{VINE[1]}" stroke-width="10" stroke-linecap="round"/>')
-    hang = "".join(f'<path d="M{x} 30 q8 30 -4 52" stroke="{VINE[0]}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M{x - 4} 80 c-22 -6 -26 14 -8 18 c14 4 20 -10 8 -18Z" fill="#57c078"/>' for x in (-260, -100, 70, 230))
+    hang = "".join(f'<path d="M{x} 30 q8 30 -4 52" stroke="{VINE[0]}" stroke-width="7" fill="none" stroke-linecap="round"/><path d="M{x - 4} 80 c-22 -6 -26 14 -8 18 c14 4 20 -10 8 -18Z" fill="#57c078"/>' for x in (-240, -90, 60, 220))
     return f'<g id="{pid}"><g id="{pid}-deck">{ties}{"".join(planks)}{hang}</g></g>'
 
 

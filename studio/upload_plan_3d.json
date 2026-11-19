@@ -2683,11 +2683,11 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep07.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 21 9:30 AM, a day with two elephant Shorts.",
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 21 9:30 AM, a day with two elephant Shorts. | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 25, 2026 at 9:30 AM', custom thumbnail, made for kids.",
   "seconds": 320.7,
   "description": "Who looks after a baby elephant? Only Mama, or lots of elephants? Milo the bluebird visits baby elephant Tumble and his family to find out! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a baby elephant stays close to its mama and drinks her milk with its mouth, that a young elephant's trunk is wobbly at first, that a herd is a family of mothers, aunts, sisters and their babies who help look after the little ones, that a newborn calf stands up within minutes, and that the oldest female leads the herd to water and food.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant); SeaWorld (elephant care of young); National Geographic (elephant nannies); Maryland Zoo (African elephant).",
   "tags": [
@@ -2703,7 +2703,10 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "WHOLE FAMILY!"
+  "thumb_text": "WHOLE FAMILY!",
+  "video_id": "DTHR8ud-J34",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/za_ep05.mp4",

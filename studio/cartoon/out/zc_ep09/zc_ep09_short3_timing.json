@@ -1,0 +1,1829 @@
+{
+ "id": "zc_ep09_short3",
+ "total": 88.28833333333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125
+ ],
+ "plan": {
+  "length": 88.3,
+  "shots": 22,
+  "visual_changes": 93,
+  "mean_gap": 0.95,
+  "longest_gap": 3.64,
+  "longest_gap_at": 0.4,
+  "over_6s": [],
+  "places": [
+   "oasis",
+   "zoo",
+   "dunes"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 9,
+  "longest_without_question": 18.1,
+  "first_words_at": 0.42,
+  "shot_mean": 4.01,
+  "fails": [],
+  "words_placed": "165/165",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 28.2,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the oasis hook: chewing again"
+  ],
+  [
+   0.2,
+   "action",
+   "mama chews"
+  ],
+  [
+   0.42,
+   "word",
+   "?"
+  ],
+  [
+   4.06,
+   "action",
+   "Milo flies in"
+  ],
+  [
+   4.06,
+   "new shot",
+   "the oasis oasis wide"
+  ],
+  [
+   6.54,
+   "word",
+   "A NEW PLANT"
+  ],
+  [
+   7.81,
+   "new shot",
+   "the oasis salty leaves"
+  ],
+  [
+   10.43,
+   "action",
+   "the salt sparkles"
+  ],
+  [
+   10.43,
+   "word",
+   "SALTY!"
+  ],
+  [
+   11.56,
+   "new place",
+   "the picture board board: saltbush"
+  ],
+  [
+   12.04,
+   "action",
+   "the salt sparkles"
+  ],
+  [
+   13.46,
+   "word",
+   "SALTBUSH"
+  ],
+  [
+   14.69,
+   "new shot",
+   "the picture board question 4a"
+  ],
+  [
+   15.52,
+   "sign",
+   "SALTY"
+  ],
+  [
+   15.87,
+   "sign",
+   "SWEET"
+  ],
+  [
+   17.44,
+   "thinking dot",
+   "1"
+  ],
+  [
+   18.11,
+   "thinking dot",
+   "2"
+  ],
+  [
+   18.78,
+   "thinking dot",
+   "3"
+  ],
+  [
+   19.27,
+   "answer",
+   "SALTY"
+  ],
+  [
+   19.32,
+   "action",
+   "the salt sparkles"
+  ],
+  [
+   20.62,
+   "new place",
+   "the oasis question 4"
+  ],
+  [
+   23.12,
+   "sign",
+   "YES"
+  ],
+  [
+   23.47,
+   "sign",
+   "NO"
+  ],
+  [
+   24.67,
+   "thinking dot",
+   "1"
+  ],
+  [
+   25.35,
+   "thinking dot",
+   "2"
+  ],
+  [
+   26.02,
+   "thinking dot",
+   "3"
+  ],
+  [
+   26.51,
+   "answer",
+   "YES"
+  ],
+  [
+   26.56,
+   "action",
+   "sandy hops"
+  ],
+  [
+   27.81,
+   "new shot",
+   "the oasis Sandy eats saltbush"
+  ],
+  [
+   27.96,
+   "word",
+   "YES!"
+  ],
+  [
+   28.93,
+   "action",
+   "sandy chews"
+  ],
+  [
+   31.56,
+   "new shot",
+   "the oasis salty snack"
+  ],
+  [
+   31.9,
+   "action",
+   "sandy chews"
+  ],
+  [
+   33.78,
+   "word",
+   "SNACK!"
+  ],
+  [
+   35.31,
+   "new place",
+   "the picture board board: salt matters"
+  ],
+  [
+   36.71,
+   "action",
+   "the salt sparkles"
+  ],
+  [
+   36.71,
+   "word",
+   "SALT!"
+  ],
+  [
+   38.44,
+   "new place",
+   "the oasis say saltbush"
+  ],
+  [
+   40.42,
+   "action",
+   "milo hops"
+  ],
+  [
+   40.42,
+   "word",
+   "SALT, BUSH!"
+  ],
+  [
+   40.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   41.56,
+   "new shot",
+   "the oasis Mama chews again"
+  ],
+  [
+   44.96,
+   "action",
+   "mama chews"
+  ],
+  [
+   45.35,
+   "word",
+   "CHEW AGAIN!"
+  ],
+  [
+   46.25,
+   "new place",
+   "the picture board (blue) board: chew it again"
+  ],
+  [
+   47.61,
+   "action",
+   "the arrow goes round"
+  ],
+  [
+   47.61,
+   "picture",
+   "lp"
+  ],
+  [
+   48.62,
+   "action",
+   "cm chews"
+  ],
+  [
+   48.93,
+   "word",
+   "AGAIN!"
+  ],
+  [
+   49.69,
+   "new shot",
+   "the picture board (blue) board: chew some more"
+  ],
+  [
+   50.02,
+   "action",
+   "cm chews"
+  ],
+  [
+   50.02,
+   "word",
+   "CHEW!"
+  ],
+  [
+   51.31,
+   "action",
+   "the arrow goes round"
+  ],
+  [
+   52.81,
+   "new shot",
+   "the picture board (blue) board: chew swallow again"
+  ],
+  [
+   53.04,
+   "action",
+   "cm chews"
+  ],
+  [
+   53.47,
+   "action",
+   "down"
+  ],
+  [
+   53.47,
+   "word",
+   "GULP!"
+  ],
+  [
+   54.63,
+   "action",
+   "and up"
+  ],
+  [
+   55.59,
+   "action",
+   "cm chews"
+  ],
+  [
+   56.56,
+   "new place",
+   "the oasis say chew again"
+  ],
+  [
+   57.29,
+   "action",
+   "sandy hops"
+  ],
+  [
+   58.73,
+   "action",
+   "mama chews"
+  ],
+  [
+   58.73,
+   "word",
+   "CHEW IT AGAIN!"
+  ],
+  [
+   60.0,
+   "new shot",
+   "the oasis question 5"
+  ],
+  [
+   61.44,
+   "sign",
+   "YES"
+  ],
+  [
+   61.79,
+   "sign",
+   "NO"
+  ],
+  [
+   63.81,
+   "thinking dot",
+   "1"
+  ],
+  [
+   64.48,
+   "thinking dot",
+   "2"
+  ],
+  [
+   65.15,
+   "thinking dot",
+   "3"
+  ],
+  [
+   65.64,
+   "answer",
+   "YES"
+  ],
+  [
+   65.69,
+   "action",
+   "mama chews"
+  ],
+  [
+   66.88,
+   "new shot",
+   "the oasis chew"
+  ],
+  [
+   67.41,
+   "action",
+   "milo hops"
+  ],
+  [
+   67.41,
+   "word",
+   "CHEW, CHEW!"
+  ],
+  [
+   70.0,
+   "new place",
+   "the zoo gate hay at the zoo"
+  ],
+  [
+   72.07,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   72.07,
+   "picture",
+   "hy"
+  ],
+  [
+   72.07,
+   "word",
+   "HAY!"
+  ],
+  [
+   72.81,
+   "new shot",
+   "the zoo gate Mama eats hay"
+  ],
+  [
+   73.46,
+   "action",
+   "mama chews"
+  ],
+  [
+   74.85,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   76.25,
+   "new shot",
+   "the zoo gate munch hay"
+  ],
+  [
+   76.96,
+   "action",
+   "milo hops"
+  ],
+  [
+   76.96,
+   "word",
+   "MUNCH, MUNCH!"
+  ],
+  [
+   79.38,
+   "new place",
+   "the picture board (blue) board: everything"
+  ],
+  [
+   79.73,
+   "picture",
+   "f0"
+  ],
+  [
+   80.32,
+   "picture",
+   "f1"
+  ],
+  [
+   81.04,
+   "picture",
+   "f2"
+  ],
+  [
+   81.73,
+   "picture",
+   "f3"
+  ],
+  [
+   82.39,
+   "picture",
+   "f4"
+  ],
+  [
+   83.75,
+   "new place",
+   "the dunes at sunrise your pick"
+  ],
+  [
+   84.04,
+   "action",
+   "milo hops"
+  ],
+  [
+   85.4,
+   "word",
+   "WHICH ONE?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "oasis",
+   "say": "Why is this camel chewing, and chewing, and chewing?",
+   "t0": 0.0,
+   "t1": 4.0625,
+   "v0": 0.42,
+   "dur": 3.3247916666666666,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.3
+    ],
+    [
+     "is",
+     0.3,
+     0.5
+    ],
+    [
+     "this",
+     0.5,
+     0.69
+    ],
+    [
+     "camel",
+     0.69,
+     1.1
+    ],
+    [
+     "chewing,",
+     1.1,
+     1.69
+    ],
+    [
+     "and",
+     1.97,
+     2.12
+    ],
+    [
+     "chewing,",
+     2.12,
+     2.6
+    ],
+    [
+     "and",
+     2.6,
+     2.74
+    ],
+    [
+     "chewing?",
+     2.74,
+     3.32
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: chewing again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "At the oasis, Sandy finds a different plant.",
+   "t0": 4.0625,
+   "t1": 7.8125,
+   "v0": 4.284791666666667,
+   "dur": 3.0890833333333334,
+   "words": [
+    [
+     "At",
+     0.01,
+     0.15
+    ],
+    [
+     "the",
+     0.15,
+     0.3
+    ],
+    [
+     "oasis,",
+     0.3,
+     1.1
+    ],
+    [
+     "Sandy",
+     1.34,
+     1.82
+    ],
+    [
+     "finds",
+     1.82,
+     2.22
+    ],
+    [
+     "a",
+     2.22,
+     2.26
+    ],
+    [
+     "different",
+     2.26,
+     2.6
+    ],
+    [
+     "plant.",
+     2.6,
+     3.089
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "oasis wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Sandy sniffs the leaves. They taste salty!",
+   "t0": 7.8125,
+   "t1": 11.5625,
+   "v0": 7.913875,
+   "dur": 3.1893333333333334,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.51
+    ],
+    [
+     "sniffs",
+     0.51,
+     0.97
+    ],
+    [
+     "the",
+     0.97,
+     1.08
+    ],
+    [
+     "leaves.",
+     1.08,
+     1.68
+    ],
+    [
+     "They",
+     1.93,
+     2.07
+    ],
+    [
+     "taste",
+     2.07,
+     2.52
+    ],
+    [
+     "salty!",
+     2.52,
+     3.189
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "salty leaves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "It is a salty plant, called saltbush.",
+   "t0": 11.5625,
+   "t1": 14.6875,
+   "v0": 11.643208333333332,
+   "dur": 2.5969583333333333,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.37
+    ],
+    [
+     "a",
+     0.37,
+     0.4
+    ],
+    [
+     "salty",
+     0.4,
+     0.93
+    ],
+    [
+     "plant,",
+     0.93,
+     1.58
+    ],
+    [
+     "called",
+     1.58,
+     1.82
+    ],
+    [
+     "saltbush.",
+     1.82,
+     2.597
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: saltbush",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Is saltbush salty, or sweet?",
+   "t0": 14.6875,
+   "t1": 20.625,
+   "v0": 14.780166666666664,
+   "dur": 2.1696666666666666,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.18
+    ],
+    [
+     "saltbush",
+     0.18,
+     0.74
+    ],
+    [
+     "salty,",
+     0.74,
+     1.47
+    ],
+    [
+     "or",
+     1.47,
+     1.59
+    ],
+    [
+     "sweet?",
+     1.59,
+     2.17
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 4a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Can camels eat salty plants? Yes, or no?",
+   "t0": 20.625,
+   "t1": 27.8125,
+   "v0": 20.689833333333333,
+   "dur": 3.4971666666666668,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.24
+    ],
+    [
+     "camels",
+     0.24,
+     0.76
+    ],
+    [
+     "eat",
+     0.76,
+     1.0
+    ],
+    [
+     "salty",
+     1.0,
+     1.48
+    ],
+    [
+     "plants?",
+     1.48,
+     2.11
+    ],
+    [
+     "Yes,",
+     2.43,
+     2.89
+    ],
+    [
+     "or",
+     2.89,
+     3.08
+    ],
+    [
+     "no?",
+     3.08,
+     3.497
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Yes! Sandy nibbles the salty leaves. Munch!",
+   "t0": 27.8125,
+   "t1": 31.5625,
+   "v0": 27.927,
+   "dur": 3.430041666666667,
+   "words": [
+    [
+     "Yes!",
+     0.03,
+     0.57
+    ],
+    [
+     "Sandy",
+     0.57,
+     1.0
+    ],
+    [
+     "nibbles",
+     1.0,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.46
+    ],
+    [
+     "salty",
+     1.46,
+     1.97
+    ],
+    [
+     "leaves.",
+     1.97,
+     2.54
+    ],
+    [
+     "Munch!",
+     2.9,
+     3.43
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Sandy eats saltbush",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Munch, munch. A salty snack for Sandy!",
+   "t0": 31.5625,
+   "t1": 35.3125,
+   "v0": 31.89704166666667,
+   "dur": 3.118625,
+   "words": [
+    [
+     "Munch,",
+     0.0,
+     0.51
+    ],
+    [
+     "munch.",
+     0.51,
+     1.01
+    ],
+    [
+     "A",
+     1.32,
+     1.37
+    ],
+    [
+     "salty",
+     1.37,
+     1.88
+    ],
+    [
+     "snack",
+     1.88,
+     2.32
+    ],
+    [
+     "for",
+     2.32,
+     2.46
+    ],
+    [
+     "Sandy!",
+     2.46,
+     3.119
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "salty snack",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Salt is very important for camels.",
+   "t0": 35.3125,
+   "t1": 38.4375,
+   "v0": 35.55566666666667,
+   "dur": 2.594,
+   "words": [
+    [
+     "Salt",
+     0.01,
+     0.48
+    ],
+    [
+     "is",
+     0.48,
+     0.71
+    ],
+    [
+     "very",
+     0.71,
+     1.15
+    ],
+    [
+     "important",
+     1.15,
+     1.73
+    ],
+    [
+     "for",
+     1.73,
+     1.86
+    ],
+    [
+     "camels.",
+     1.86,
+     2.59
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: salt matters",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Can you say saltbush? Salt, bush!",
+   "t0": 38.4375,
+   "t1": 41.5625,
+   "v0": 38.68966666666667,
+   "dur": 2.6083333333333334,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.36
+    ],
+    [
+     "say",
+     0.36,
+     0.63
+    ],
+    [
+     "saltbush?",
+     0.63,
+     1.42
+    ],
+    [
+     "Salt,",
+     1.73,
+     2.06
+    ],
+    [
+     "bush!",
+     2.06,
+     2.608
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say saltbush",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "After lunch, Mama rests. But look, she is chewing again!",
+   "t0": 41.5625,
+   "t1": 46.25,
+   "v0": 41.838,
+   "dur": 4.003875,
+   "words": [
+    [
+     "After",
+     0.0,
+     0.4
+    ],
+    [
+     "lunch,",
+     0.4,
+     0.86
+    ],
+    [
+     "Mama",
+     0.86,
+     1.22
+    ],
+    [
+     "rests.",
+     1.22,
+     1.86
+    ],
+    [
+     "But",
+     2.26,
+     2.41
+    ],
+    [
+     "look,",
+     2.41,
+     2.83
+    ],
+    [
+     "she",
+     2.83,
+     3.0
+    ],
+    [
+     "is",
+     3.0,
+     3.12
+    ],
+    [
+     "chewing",
+     3.12,
+     3.51
+    ],
+    [
+     "again!",
+     3.51,
+     4.0
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Mama chews again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Camels bring their food back up, and chew it again!",
+   "t0": 46.25,
+   "t1": 49.6875,
+   "v0": 46.381875,
+   "dur": 3.038,
+   "words": [
+    [
+     "Camels",
+     0.0,
+     0.53
+    ],
+    [
+     "bring",
+     0.53,
+     0.77
+    ],
+    [
+     "their",
+     0.77,
+     0.89
+    ],
+    [
+     "food",
+     0.89,
+     1.23
+    ],
+    [
+     "back",
+     1.23,
+     1.55
+    ],
+    [
+     "up,",
+     1.55,
+     1.86
+    ],
+    [
+     "and",
+     2.1,
+     2.24
+    ],
+    [
+     "chew",
+     2.24,
+     2.48
+    ],
+    [
+     "it",
+     2.48,
+     2.55
+    ],
+    [
+     "again!",
+     2.55,
+     3.038
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: chew it again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Chew, chew, chew. Then chew some more!",
+   "t0": 49.6875,
+   "t1": 52.8125,
+   "v0": 49.959875,
+   "dur": 2.5227083333333336,
+   "words": [
+    [
+     "Chew,",
+     0.06,
+     0.35
+    ],
+    [
+     "chew,",
+     0.35,
+     0.65
+    ],
+    [
+     "chew.",
+     0.65,
+     1.08
+    ],
+    [
+     "Then",
+     1.35,
+     1.63
+    ],
+    [
+     "chew",
+     1.63,
+     1.83
+    ],
+    [
+     "some",
+     1.83,
+     2.07
+    ],
+    [
+     "more!",
+     2.07,
+     2.52
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: chew some more",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Chew. Swallow. Then up it comes, to chew again!",
+   "t0": 52.8125,
+   "t1": 56.5625,
+   "v0": 53.02258333333333,
+   "dur": 3.0814166666666667,
+   "words": [
+    [
+     "Chew.",
+     0.02,
+     0.45
+    ],
+    [
+     "Swallow.",
+     0.45,
+     1.14
+    ],
+    [
+     "Then",
+     1.47,
+     1.61
+    ],
+    [
+     "up",
+     1.61,
+     1.73
+    ],
+    [
+     "it",
+     1.73,
+     1.82
+    ],
+    [
+     "comes,",
+     1.82,
+     2.23
+    ],
+    [
+     "to",
+     2.23,
+     2.33
+    ],
+    [
+     "chew",
+     2.33,
+     2.57
+    ],
+    [
+     "again!",
+     2.57,
+     3.08
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: chew swallow again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Let's say it together. Camels chew it again!",
+   "t0": 56.5625,
+   "t1": 60.0,
+   "v0": 56.644,
+   "dur": 2.8842083333333335,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.34
+    ],
+    [
+     "say",
+     0.34,
+     0.55
+    ],
+    [
+     "it",
+     0.55,
+     0.65
+    ],
+    [
+     "together.",
+     0.65,
+     1.2
+    ],
+    [
+     "Camels",
+     1.52,
+     2.09
+    ],
+    [
+     "chew",
+     2.09,
+     2.29
+    ],
+    [
+     "it",
+     2.29,
+     2.36
+    ],
+    [
+     "again!",
+     2.36,
+     2.88
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say chew again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Does a camel chew its food again? Yes, or no?",
+   "t0": 60.0,
+   "t1": 66.875,
+   "v0": 60.06820833333333,
+   "dur": 3.252875,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.18
+    ],
+    [
+     "a",
+     0.18,
+     0.23
+    ],
+    [
+     "camel",
+     0.23,
+     0.69
+    ],
+    [
+     "chew",
+     0.69,
+     0.96
+    ],
+    [
+     "its",
+     0.96,
+     1.14
+    ],
+    [
+     "food",
+     1.14,
+     1.37
+    ],
+    [
+     "again?",
+     1.37,
+     1.83
+    ],
+    [
+     "Yes,",
+     2.19,
+     2.66
+    ],
+    [
+     "or",
+     2.66,
+     2.84
+    ],
+    [
+     "no?",
+     2.84,
+     3.25
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 5",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Let's chew like a camel. Chew, chew, chew!",
+   "t0": 66.875,
+   "t1": 70.0,
+   "v0": 67.06108333333334,
+   "dur": 2.6872083333333334,
+   "words": [
+    [
+     "Let's",
+     0.0,
+     0.35
+    ],
+    [
+     "chew",
+     0.35,
+     0.5
+    ],
+    [
+     "like",
+     0.5,
+     0.66
+    ],
+    [
+     "a",
+     0.66,
+     0.71
+    ],
+    [
+     "camel.",
+     0.71,
+     1.29
+    ],
+    [
+     "Chew,",
+     1.59,
+     1.9
+    ],
+    [
+     "chew,",
+     1.9,
+     2.2
+    ],
+    [
+     "chew!",
+     2.2,
+     2.687
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "chew",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "And at the zoo, camels eat hay!",
+   "t0": 70.0,
+   "t1": 72.8125,
+   "v0": 70.28829166666668,
+   "dur": 2.2174583333333335,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.19
+    ],
+    [
+     "at",
+     0.19,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "zoo,",
+     0.36,
+     0.89
+    ],
+    [
+     "camels",
+     1.05,
+     1.59
+    ],
+    [
+     "eat",
+     1.59,
+     1.78
+    ],
+    [
+     "hay!",
+     1.78,
+     2.217
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "hay at the zoo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Mama munches the hay. Munch, munch!",
+   "t0": 72.8125,
+   "t1": 76.25,
+   "v0": 73.04575000000003,
+   "dur": 2.823375,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.41
+    ],
+    [
+     "munches",
+     0.41,
+     0.92
+    ],
+    [
+     "the",
+     0.92,
+     1.0
+    ],
+    [
+     "hay.",
+     1.0,
+     1.44
+    ],
+    [
+     "Munch,",
+     1.8,
+     2.25
+    ],
+    [
+     "munch!",
+     2.25,
+     2.82
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Mama eats hay",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Pretend to munch some hay. Munch, munch!",
+   "t0": 76.25,
+   "t1": 79.375,
+   "v0": 76.40912500000003,
+   "dur": 2.761625,
+   "words": [
+    [
+     "Pretend",
+     0.0,
+     0.46
+    ],
+    [
+     "to",
+     0.46,
+     0.55
+    ],
+    [
+     "munch",
+     0.55,
+     0.77
+    ],
+    [
+     "some",
+     0.77,
+     0.96
+    ],
+    [
+     "hay.",
+     0.96,
+     1.39
+    ],
+    [
+     "Munch,",
+     1.73,
+     2.18
+    ],
+    [
+     "munch!",
+     2.18,
+     2.76
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "munch hay",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Grass, leaves, twigs, thorns, and salty plants!",
+   "t0": 79.375,
+   "t1": 83.75,
+   "v0": 79.71075000000003,
+   "dur": 3.7752083333333335,
+   "words": [
+    [
+     "Grass,",
+     0.02,
+     0.61
+    ],
+    [
+     "leaves,",
+     0.61,
+     1.33
+    ],
+    [
+     "twigs,",
+     1.33,
+     1.92
+    ],
+    [
+     "thorns,",
+     2.02,
+     2.55
+    ],
+    [
+     "and",
+     2.55,
+     2.68
+    ],
+    [
+     "salty",
+     2.68,
+     3.16
+    ],
+    [
+     "plants!",
+     3.16,
+     3.77
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: everything",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Which camel lunch would you pick?",
+   "t0": 83.75,
+   "t1": 87.88833333333338,
+   "v0": 84.02595833333338,
+   "dur": 1.842375,
+   "words": [
+    [
+     "Which",
+     0.01,
+     0.26
+    ],
+    [
+     "camel",
+     0.26,
+     0.73
+    ],
+    [
+     "lunch",
+     0.73,
+     1.11
+    ],
+    [
+     "would",
+     1.11,
+     1.25
+    ],
+    [
+     "you",
+     1.25,
+     1.37
+    ],
+    [
+     "pick?",
+     1.37,
+     1.84
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "your pick",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

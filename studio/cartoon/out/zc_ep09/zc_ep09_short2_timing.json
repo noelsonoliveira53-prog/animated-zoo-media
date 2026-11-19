@@ -1,0 +1,1901 @@
+{
+ "id": "zc_ep09_short2",
+ "total": 88.28237500000004,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125
+ ],
+ "plan": {
+  "length": 88.3,
+  "shots": 21,
+  "visual_changes": 86,
+  "mean_gap": 1.03,
+  "longest_gap": 3.56,
+  "longest_gap_at": 76.4,
+  "over_6s": [],
+  "places": [
+   "trail"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 7,
+  "longest_without_question": 20.8,
+  "first_words_at": 0.42,
+  "shot_mean": 4.2,
+  "fails": [],
+  "words_placed": "190/190",
+  "sync": {
+   "pauses_checked": 18,
+   "onset_err_mean_ms": 28.9,
+   "onset_err_max_ms": 140.0,
+   "suspect_words": [],
+   "cuts": 20,
+   "cuts_on_the_half_beat": 20,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the rocky trail hook: thorny lunch"
+  ],
+  [
+   0.3,
+   "action",
+   "mama chews"
+  ],
+  [
+   0.43,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "the rocky trail thorny bush wide"
+  ],
+  [
+   6.22,
+   "word",
+   "THORNS!"
+  ],
+  [
+   7.19,
+   "new place",
+   "the picture board board: pointy thorns"
+  ],
+  [
+   8.93,
+   "action",
+   "the branch wiggles"
+  ],
+  [
+   8.93,
+   "word",
+   "POINTY!"
+  ],
+  [
+   12.19,
+   "new place",
+   "the rocky trail question 2"
+  ],
+  [
+   14.96,
+   "sign",
+   "YES"
+  ],
+  [
+   15.31,
+   "sign",
+   "NO"
+  ],
+  [
+   16.5,
+   "thinking dot",
+   "1"
+  ],
+  [
+   17.17,
+   "thinking dot",
+   "2"
+  ],
+  [
+   17.84,
+   "thinking dot",
+   "3"
+  ],
+  [
+   18.33,
+   "answer",
+   "YES"
+  ],
+  [
+   18.38,
+   "action",
+   "mama hops"
+  ],
+  [
+   19.69,
+   "new shot",
+   "the rocky trail Mama eats thorns"
+  ],
+  [
+   20.3,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   20.68,
+   "action",
+   "mama chews"
+  ],
+  [
+   24.06,
+   "new place",
+   "the picture board board: tough lips"
+  ],
+  [
+   25.89,
+   "action",
+   "the left half of the lip wiggles"
+  ],
+  [
+   25.89,
+   "action",
+   "the right half wiggles on its own"
+  ],
+  [
+   25.89,
+   "word",
+   "TOUGH LIPS"
+  ],
+  [
+   27.19,
+   "new shot",
+   "the picture board board: split lip"
+  ],
+  [
+   29.17,
+   "picture",
+   "ar"
+  ],
+  [
+   29.71,
+   "word",
+   "2 HALVES"
+  ],
+  [
+   30.62,
+   "new shot",
+   "the picture board board: count halves"
+  ],
+  [
+   30.78,
+   "action",
+   "the left half"
+  ],
+  [
+   30.78,
+   "word",
+   "1"
+  ],
+  [
+   31.44,
+   "action",
+   "the right half"
+  ],
+  [
+   31.44,
+   "word",
+   "2"
+  ],
+  [
+   33.75,
+   "new shot",
+   "the picture board board: each half moves"
+  ],
+  [
+   36.19,
+   "action",
+   "the left half of the lip wiggles"
+  ],
+  [
+   36.19,
+   "action",
+   "the right half wiggles on its own"
+  ],
+  [
+   36.19,
+   "word",
+   "WIGGLE!"
+  ],
+  [
+   37.5,
+   "new place",
+   "the rocky trail wiggle"
+  ],
+  [
+   38.18,
+   "action",
+   "milo hops"
+  ],
+  [
+   38.18,
+   "word",
+   "WIGGLE, WIGGLE!"
+  ],
+  [
+   40.94,
+   "new place",
+   "the picture board board: bendy lips"
+  ],
+  [
+   42.3,
+   "action",
+   "the left half of the lip wiggles"
+  ],
+  [
+   42.3,
+   "action",
+   "the right half wiggles on its own"
+  ],
+  [
+   42.3,
+   "word",
+   "BENDY!"
+  ],
+  [
+   43.4,
+   "action",
+   "the lips pick up the leaf"
+  ],
+  [
+   45.0,
+   "new place",
+   "the picture board (pink) board: little bumps"
+  ],
+  [
+   47.68,
+   "action",
+   "the little bumps light up"
+  ],
+  [
+   47.68,
+   "word",
+   "LITTLE BUMPS"
+  ],
+  [
+   48.44,
+   "new shot",
+   "the picture board (pink) board: count bumps"
+  ],
+  [
+   50.39,
+   "word",
+   "1"
+  ],
+  [
+   50.68,
+   "word",
+   "2"
+  ],
+  [
+   50.96,
+   "word",
+   "3"
+  ],
+  [
+   51.3,
+   "word",
+   "4"
+  ],
+  [
+   52.19,
+   "new shot",
+   "the picture board (pink) board: like fingernails"
+  ],
+  [
+   53.02,
+   "action",
+   "the little bumps light up"
+  ],
+  [
+   53.02,
+   "word",
+   "HARD!"
+  ],
+  [
+   54.11,
+   "picture",
+   "ft"
+  ],
+  [
+   55.31,
+   "new place",
+   "the rocky trail tap"
+  ],
+  [
+   55.63,
+   "action",
+   "milo hops"
+  ],
+  [
+   55.63,
+   "action",
+   "milo hops"
+  ],
+  [
+   55.63,
+   "word",
+   "TAP, TAP!"
+  ],
+  [
+   59.06,
+   "new place",
+   "the picture board (pink) board: down to the tummy"
+  ],
+  [
+   60.05,
+   "action",
+   "the little bumps light up"
+  ],
+  [
+   60.8,
+   "action",
+   "the arrow shows the way down"
+  ],
+  [
+   60.8,
+   "word",
+   "DOWN!"
+  ],
+  [
+   62.5,
+   "new shot",
+   "the picture board (pink) board: all point down"
+  ],
+  [
+   63.73,
+   "action",
+   "the little bumps light up"
+  ],
+  [
+   65.4,
+   "action",
+   "the arrow shows the way down"
+  ],
+  [
+   65.4,
+   "word",
+   "DOWN, DOWN!"
+  ],
+  [
+   67.5,
+   "new shot",
+   "the picture board (pink) question 3"
+  ],
+  [
+   69.98,
+   "sign",
+   "NOSE"
+  ],
+  [
+   70.33,
+   "sign",
+   "TUMMY"
+  ],
+  [
+   72.66,
+   "thinking dot",
+   "1"
+  ],
+  [
+   73.33,
+   "thinking dot",
+   "2"
+  ],
+  [
+   74.0,
+   "thinking dot",
+   "3"
+  ],
+  [
+   74.49,
+   "answer",
+   "TUMMY"
+  ],
+  [
+   74.54,
+   "action",
+   "the arrow shows the way down"
+  ],
+  [
+   75.62,
+   "new place",
+   "the rocky trail Mama munches"
+  ],
+  [
+   75.72,
+   "action",
+   "mama chews"
+  ],
+  [
+   76.44,
+   "word",
+   "TUMMY!"
+  ],
+  [
+   80.0,
+   "new shot",
+   "the rocky trail Sandy tries thorns"
+  ],
+  [
+   81.64,
+   "action",
+   "sandy chews"
+  ],
+  [
+   82.86,
+   "word",
+   "CRUNCH!"
+  ],
+  [
+   83.75,
+   "new place",
+   "the picture board board: lips and bumps"
+  ],
+  [
+   84.35,
+   "action",
+   "the left half of the lip wiggles"
+  ],
+  [
+   84.35,
+   "action",
+   "the right half wiggles on its own"
+  ],
+  [
+   85.34,
+   "action",
+   "the little bumps light up"
+  ],
+  [
+   86.91,
+   "word",
+   "THORNS, YUM!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "trail",
+   "say": "How can a camel munch a prickly, thorny plant?",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 3.082666666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.23
+    ],
+    [
+     "can",
+     0.23,
+     0.36
+    ],
+    [
+     "a",
+     0.36,
+     0.42
+    ],
+    [
+     "camel",
+     0.42,
+     0.89
+    ],
+    [
+     "munch",
+     0.89,
+     1.24
+    ],
+    [
+     "a",
+     1.24,
+     1.29
+    ],
+    [
+     "prickly,",
+     1.29,
+     2.1
+    ],
+    [
+     "thorny",
+     2.1,
+     2.48
+    ],
+    [
+     "plant?",
+     2.48,
+     3.08
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: thorny lunch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Look at this bush. It is covered in thorns!",
+   "t0": 3.75,
+   "t1": 7.1875,
+   "v0": 4.042666666666666,
+   "dur": 2.9495,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.26
+    ],
+    [
+     "at",
+     0.26,
+     0.34
+    ],
+    [
+     "this",
+     0.34,
+     0.56
+    ],
+    [
+     "bush.",
+     0.56,
+     1.09
+    ],
+    [
+     "It",
+     1.38,
+     1.48
+    ],
+    [
+     "is",
+     1.48,
+     1.61
+    ],
+    [
+     "covered",
+     1.61,
+     2.01
+    ],
+    [
+     "in",
+     2.01,
+     2.18
+    ],
+    [
+     "thorns!",
+     2.18,
+     2.95
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "thorny bush wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Thorns are hard and pointy. Many animals cannot eat them.",
+   "t0": 7.1875,
+   "t1": 12.1875,
+   "v0": 7.532166666666666,
+   "dur": 4.439375,
+   "words": [
+    [
+     "Thorns",
+     0.01,
+     0.58
+    ],
+    [
+     "are",
+     0.58,
+     0.69
+    ],
+    [
+     "hard",
+     0.69,
+     1.24
+    ],
+    [
+     "and",
+     1.24,
+     1.4
+    ],
+    [
+     "pointy.",
+     1.4,
+     2.07
+    ],
+    [
+     "Many",
+     2.54,
+     2.9
+    ],
+    [
+     "animals",
+     2.9,
+     3.47
+    ],
+    [
+     "cannot",
+     3.47,
+     3.94
+    ],
+    [
+     "eat",
+     3.94,
+     4.14
+    ],
+    [
+     "them.",
+     4.14,
+     4.439
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: pointy thorns",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Can a camel eat thorny plants? Yes, or no?",
+   "t0": 12.1875,
+   "t1": 19.6875,
+   "v0": 12.511541666666666,
+   "dur": 3.500125,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.19
+    ],
+    [
+     "a",
+     0.19,
+     0.24
+    ],
+    [
+     "camel",
+     0.24,
+     0.76
+    ],
+    [
+     "eat",
+     0.76,
+     1.04
+    ],
+    [
+     "thorny",
+     1.04,
+     1.49
+    ],
+    [
+     "plants?",
+     1.49,
+     2.12
+    ],
+    [
+     "Yes,",
+     2.45,
+     2.91
+    ],
+    [
+     "or",
+     2.91,
+     3.08
+    ],
+    [
+     "no?",
+     3.08,
+     3.5
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Yes! Mama munches the thorny plant. Munch, munch!",
+   "t0": 19.6875,
+   "t1": 24.0625,
+   "v0": 19.75166666666667,
+   "dur": 3.9252083333333334,
+   "words": [
+    [
+     "Yes!",
+     0.03,
+     0.55
+    ],
+    [
+     "Mama",
+     0.55,
+     0.93
+    ],
+    [
+     "munches",
+     0.93,
+     1.39
+    ],
+    [
+     "the",
+     1.39,
+     1.48
+    ],
+    [
+     "thorny",
+     1.48,
+     1.9
+    ],
+    [
+     "plant.",
+     1.9,
+     2.47
+    ],
+    [
+     "Munch,",
+     2.83,
+     3.36
+    ],
+    [
+     "munch!",
+     3.36,
+     3.92
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama eats thorns",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "How? Camels have big, tough lips.",
+   "t0": 24.0625,
+   "t1": 27.1875,
+   "v0": 24.216875000000005,
+   "dur": 2.472125,
+   "words": [
+    [
+     "How?",
+     0.01,
+     0.5
+    ],
+    [
+     "Camels",
+     0.65,
+     1.14
+    ],
+    [
+     "have",
+     1.14,
+     1.37
+    ],
+    [
+     "big,",
+     1.37,
+     1.67
+    ],
+    [
+     "tough",
+     1.67,
+     2.0
+    ],
+    [
+     "lips.",
+     2.0,
+     2.47
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: tough lips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Look closely. The top lip is split in two!",
+   "t0": 27.1875,
+   "t1": 30.625,
+   "v0": 27.22900000000001,
+   "dur": 3.009875,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.27
+    ],
+    [
+     "closely.",
+     0.27,
+     1.13
+    ],
+    [
+     "The",
+     1.13,
+     1.32
+    ],
+    [
+     "top",
+     1.32,
+     1.66
+    ],
+    [
+     "lip",
+     1.66,
+     1.85
+    ],
+    [
+     "is",
+     1.85,
+     1.94
+    ],
+    [
+     "split",
+     1.94,
+     2.32
+    ],
+    [
+     "in",
+     2.32,
+     2.48
+    ],
+    [
+     "two!",
+     2.48,
+     3.01
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: split lip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "One half, two halves. Count them with me!",
+   "t0": 30.625,
+   "t1": 33.75,
+   "v0": 30.778875000000014,
+   "dur": 2.69325,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.3
+    ],
+    [
+     "half,",
+     0.3,
+     0.66
+    ],
+    [
+     "two",
+     0.66,
+     0.87
+    ],
+    [
+     "halves.",
+     0.87,
+     1.44
+    ],
+    [
+     "Count",
+     1.7,
+     2.0
+    ],
+    [
+     "them",
+     2.0,
+     2.15
+    ],
+    [
+     "with",
+     2.15,
+     2.3
+    ],
+    [
+     "me!",
+     2.3,
+     2.69
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: count halves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Each half can move on its own. Wiggle, wiggle!",
+   "t0": 33.75,
+   "t1": 37.5,
+   "v0": 34.01212500000001,
+   "dur": 3.273416666666667,
+   "words": [
+    [
+     "Each",
+     0.0,
+     0.25
+    ],
+    [
+     "half",
+     0.25,
+     0.55
+    ],
+    [
+     "can",
+     0.55,
+     0.74
+    ],
+    [
+     "move",
+     0.74,
+     1.02
+    ],
+    [
+     "on",
+     1.02,
+     1.14
+    ],
+    [
+     "its",
+     1.14,
+     1.32
+    ],
+    [
+     "own.",
+     1.32,
+     1.75
+    ],
+    [
+     "Wiggle,",
+     2.18,
+     2.76
+    ],
+    [
+     "wiggle!",
+     2.76,
+     3.27
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: each half moves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Can you wiggle your lips? Wiggle, wiggle!",
+   "t0": 37.5,
+   "t1": 40.9375,
+   "v0": 37.82554166666668,
+   "dur": 2.6523333333333334,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.35
+    ],
+    [
+     "wiggle",
+     0.35,
+     0.66
+    ],
+    [
+     "your",
+     0.66,
+     0.82
+    ],
+    [
+     "lips?",
+     0.82,
+     1.31
+    ],
+    [
+     "Wiggle,",
+     1.63,
+     2.12
+    ],
+    [
+     "wiggle!",
+     2.12,
+     2.65
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "wiggle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The lips are tough, but bendy. They pick at the little leaves.",
+   "t0": 40.9375,
+   "t1": 45.0,
+   "v0": 41.01787500000001,
+   "dur": 3.7377083333333334,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "lips",
+     0.12,
+     0.5
+    ],
+    [
+     "are",
+     0.5,
+     0.6
+    ],
+    [
+     "tough,",
+     0.6,
+     1.12
+    ],
+    [
+     "but",
+     1.12,
+     1.28
+    ],
+    [
+     "bendy.",
+     1.28,
+     1.89
+    ],
+    [
+     "They",
+     2.24,
+     2.38
+    ],
+    [
+     "pick",
+     2.38,
+     2.64
+    ],
+    [
+     "at",
+     2.64,
+     2.72
+    ],
+    [
+     "the",
+     2.72,
+     2.79
+    ],
+    [
+     "little",
+     2.79,
+     3.06
+    ],
+    [
+     "leaves.",
+     3.06,
+     3.738
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: bendy lips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Inside the mouth, there are lots of little bumps.",
+   "t0": 45.0,
+   "t1": 48.4375,
+   "v0": 45.29558333333334,
+   "dur": 2.935416666666667,
+   "words": [
+    [
+     "Inside",
+     0.01,
+     0.57
+    ],
+    [
+     "the",
+     0.57,
+     0.64
+    ],
+    [
+     "mouth,",
+     0.64,
+     1.14
+    ],
+    [
+     "there",
+     1.38,
+     1.59
+    ],
+    [
+     "are",
+     1.59,
+     1.62
+    ],
+    [
+     "lots",
+     1.62,
+     2.09
+    ],
+    [
+     "of",
+     2.09,
+     2.18
+    ],
+    [
+     "little",
+     2.18,
+     2.38
+    ],
+    [
+     "bumps.",
+     2.38,
+     2.93
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: little bumps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Count some bumps with me. One, two, three, four!",
+   "t0": 48.4375,
+   "t1": 52.1875,
+   "v0": 48.77100000000001,
+   "dur": 3.0989166666666668,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.3
+    ],
+    [
+     "some",
+     0.3,
+     0.47
+    ],
+    [
+     "bumps",
+     0.47,
+     0.77
+    ],
+    [
+     "with",
+     0.77,
+     0.93
+    ],
+    [
+     "me.",
+     0.93,
+     1.27
+    ],
+    [
+     "One,",
+     1.62,
+     1.91
+    ],
+    [
+     "two,",
+     1.91,
+     2.19
+    ],
+    [
+     "three,",
+     2.19,
+     2.53
+    ],
+    [
+     "four!",
+     2.53,
+     3.099
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: count bumps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The bumps are hard, like your fingernails.",
+   "t0": 52.1875,
+   "t1": 55.3125,
+   "v0": 52.409916666666675,
+   "dur": 2.682,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.13
+    ],
+    [
+     "bumps",
+     0.13,
+     0.55
+    ],
+    [
+     "are",
+     0.55,
+     0.61
+    ],
+    [
+     "hard,",
+     0.61,
+     1.21
+    ],
+    [
+     "like",
+     1.44,
+     1.61
+    ],
+    [
+     "your",
+     1.61,
+     1.7
+    ],
+    [
+     "fingernails.",
+     1.7,
+     2.68
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: like fingernails",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Tap your fingernails. Tap, tap! So hard!",
+   "t0": 55.3125,
+   "t1": 59.0625,
+   "v0": 55.631916666666676,
+   "dur": 3.136416666666667,
+   "words": [
+    [
+     "Tap",
+     0.0,
+     0.31
+    ],
+    [
+     "your",
+     0.31,
+     0.41
+    ],
+    [
+     "fingernails.",
+     0.41,
+     1.28
+    ],
+    [
+     "Tap,",
+     1.53,
+     1.84
+    ],
+    [
+     "tap!",
+     1.84,
+     2.26
+    ],
+    [
+     "So",
+     2.26,
+     2.57
+    ],
+    [
+     "hard!",
+     2.57,
+     3.136
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "tap",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The bumps help push the food down, to the tummy.",
+   "t0": 59.0625,
+   "t1": 62.5,
+   "v0": 59.308333333333344,
+   "dur": 2.9345416666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.13
+    ],
+    [
+     "bumps",
+     0.13,
+     0.48
+    ],
+    [
+     "help",
+     0.48,
+     0.74
+    ],
+    [
+     "push",
+     0.74,
+     1.07
+    ],
+    [
+     "the",
+     1.07,
+     1.16
+    ],
+    [
+     "food",
+     1.16,
+     1.49
+    ],
+    [
+     "down,",
+     1.49,
+     1.97
+    ],
+    [
+     "to",
+     2.16,
+     2.29
+    ],
+    [
+     "the",
+     2.29,
+     2.37
+    ],
+    [
+     "tummy.",
+     2.37,
+     2.93
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: down to the tummy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Every little bump points the same way. Down, down, down!",
+   "t0": 62.5,
+   "t1": 67.5,
+   "v0": 62.78287500000001,
+   "dur": 4.330166666666667,
+   "words": [
+    [
+     "Every",
+     0.07,
+     0.37
+    ],
+    [
+     "little",
+     0.37,
+     0.62
+    ],
+    [
+     "bump",
+     0.62,
+     0.95
+    ],
+    [
+     "points",
+     0.95,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.45
+    ],
+    [
+     "same",
+     1.45,
+     1.85
+    ],
+    [
+     "way.",
+     1.85,
+     2.17
+    ],
+    [
+     "Down,",
+     2.62,
+     3.2
+    ],
+    [
+     "down,",
+     3.2,
+     3.76
+    ],
+    [
+     "down!",
+     3.76,
+     4.33
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: all point down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Where do the bumps push the food? Up to the nose, or down to the tummy?",
+   "t0": 67.5,
+   "t1": 75.625,
+   "v0": 67.65304166666668,
+   "dur": 4.516416666666666,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.21
+    ],
+    [
+     "do",
+     0.21,
+     0.35
+    ],
+    [
+     "the",
+     0.35,
+     0.44
+    ],
+    [
+     "bumps",
+     0.44,
+     0.87
+    ],
+    [
+     "push",
+     0.87,
+     1.23
+    ],
+    [
+     "the",
+     1.23,
+     1.3
+    ],
+    [
+     "food?",
+     1.3,
+     1.86
+    ],
+    [
+     "Up",
+     2.33,
+     2.48
+    ],
+    [
+     "to",
+     2.48,
+     2.6
+    ],
+    [
+     "the",
+     2.6,
+     2.68
+    ],
+    [
+     "nose,",
+     2.68,
+     3.28
+    ],
+    [
+     "or",
+     3.28,
+     3.46
+    ],
+    [
+     "down",
+     3.46,
+     3.79
+    ],
+    [
+     "to",
+     3.79,
+     3.87
+    ],
+    [
+     "the",
+     3.87,
+     3.96
+    ],
+    [
+     "tummy?",
+     3.96,
+     4.516
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Down to the tummy! So Mama can eat thorny plants.",
+   "t0": 75.625,
+   "t1": 80.0,
+   "v0": 75.90945833333336,
+   "dur": 3.634375,
+   "words": [
+    [
+     "Down",
+     0.01,
+     0.36
+    ],
+    [
+     "to",
+     0.36,
+     0.44
+    ],
+    [
+     "the",
+     0.44,
+     0.53
+    ],
+    [
+     "tummy!",
+     0.53,
+     1.1
+    ],
+    [
+     "So",
+     1.44,
+     1.61
+    ],
+    [
+     "Mama",
+     1.61,
+     2.02
+    ],
+    [
+     "can",
+     2.02,
+     2.18
+    ],
+    [
+     "eat",
+     2.18,
+     2.45
+    ],
+    [
+     "thorny",
+     2.45,
+     2.97
+    ],
+    [
+     "plants.",
+     2.97,
+     3.63
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama munches",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Sandy tries a little thorny twig, too. Crunch!",
+   "t0": 80.0,
+   "t1": 83.75,
+   "v0": 80.08383333333337,
+   "dur": 3.400166666666667,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.51
+    ],
+    [
+     "tries",
+     0.51,
+     0.89
+    ],
+    [
+     "a",
+     0.89,
+     0.93
+    ],
+    [
+     "little",
+     0.93,
+     1.14
+    ],
+    [
+     "thorny",
+     1.14,
+     1.56
+    ],
+    [
+     "twig,",
+     1.56,
+     1.96
+    ],
+    [
+     "too.",
+     1.96,
+     2.49
+    ],
+    [
+     "Crunch!",
+     2.78,
+     3.4
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Sandy tries thorns",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Tough lips, and hard little bumps. Thorns, yum!",
+   "t0": 83.75,
+   "t1": 87.88237500000004,
+   "v0": 84.02400000000004,
+   "dur": 3.438375,
+   "words": [
+    [
+     "Tough",
+     0.0,
+     0.33
+    ],
+    [
+     "lips,",
+     0.33,
+     0.74
+    ],
+    [
+     "and",
+     0.74,
+     0.85
+    ],
+    [
+     "hard",
+     0.85,
+     1.14
+    ],
+    [
+     "little",
+     1.14,
+     1.32
+    ],
+    [
+     "bumps.",
+     1.32,
+     1.85
+    ],
+    [
+     "Thorns,",
+     2.22,
+     2.89
+    ],
+    [
+     "yum!",
+     2.89,
+     3.438
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: lips and bumps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

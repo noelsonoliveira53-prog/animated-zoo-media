@@ -1,5 +1,15 @@
 # Views check log (newest first)
 
+## 2026-11-19, 7:00 AM ET (The Animated Zoo only; Studio Analytics overview + Earn tab + Content list)
+Totals: **37.8K views lifetime** (36,394 on Nov 18 6:55 AM), 172.5 h watch time lifetime, 86 subscribers. Last 7 days (Nov 12-18): 19.4K views, 69.9 h, +42 subs.
+Last 28 days: 37.7K views, 172.0 h, +85 subs; traffic 91% Suggested videos. Top 28 days: Camel Humps (Short) 5.2K, Octopus 3 Hearts 4.5K, Where Is My Mama? 3.9K.
+Earn tab (data as of Nov 14): 86 subs, 71 qualified watch hours (365 d), 11K qualified Shorts views (90 d). Logged in docs/YPP_PROGRESS.md.
+Content list, first cartoon videos after 1-2 days: adventure "Baby Elephant's Birthday Surprise for Mama" 9 views, cartoon story-lesson "What Is Inside a Camel's Hump?" 6;
+3D lessons the same days: What Do Animals Eat? 5, Baby Animals 7, Where Do Animals Live? 14; Forest Animals 5 Facts 4; song Baby Animal Names 4.
+NOT read: impressions, CTR, retention and per-video watch time (the new Analytics hub shows them only per video; not opened this run); Shorts tab views.
+What's winning: unchanged: fact-surprise Shorts and the question-title Lion Short bring nearly all views; new long videos of every kind get 4-14 views in their first two days, so the cartoon vs 3D comparison has no signal yet.
+Adjustment: none to the grid. YPP: long-form watch hours are the binding constraint (71 of 4,000), so the compilation engine matters most once 6 cartoon episodes of one theme are public.
+
 ## 2026-11-18, 6:55 AM ET (The Animated Zoo only; Studio Advanced analytics, lifetime + Content list)
 Totals: **36,394 views (+1,733 since Nov 17 7:30 AM)**, 419,809 impressions (+26,129), 2.0% CTR, 0:25 average view, 24.6% viewed, 273 likes.
 Since Nov 17: Lion song-cut Short 592 -> 823 (+231, 149.8% viewed) · T. Rex Tiny Arms 1,801 -> 2,002 (+201) · Ants 1,637 -> 1,819 (+182) · Octopus 4,280 -> 4,456 (+176) ·

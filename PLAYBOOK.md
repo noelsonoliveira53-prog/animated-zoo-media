@@ -691,3 +691,10 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Compilations: not started. Public cartoon episodes on one theme (elephant/Tumble) reach 6 on Nov 25 (za_ep01, za_ep02, zc_ep02, za_ep03, zc_ep03, zc_ep07); the first compilation can be built from then.
   * Build tasks: all four enabled; their last runs SUCCEEDED (list_triggers).
   * Nothing was set Private or replaced; no old copies to report.
+  * Afternoon (to 12:20 PM ET): song zoo3d_ep22 rendered (7:38-11:30 AM PC clock), first finish looked at: song words huge across the animals' heads in the two 'high' shots and the
+    giraffe's face under a top-left mark. Fixed: slices zoo3d_ep22s1/s2 (frames 2730-2790, 2958-3018) re-rendered with "high" in text_hide_shots and spliced (3492 frames), mark top right
+    with hide windows over the zebra close-ups, finished again: review.py PASS, contact sheet, thumbnail and crops of the mark corner looked at; listen.py on the file (D major, no clicks,
+    -13.5 LUFS, a 1 s quiet break at 15.5-16.5 s inside the song; measured, not heard). Description uses the new fact-checked line (another session's no-AI rule, owner Nov 19 10:32 AM).
+    New: `engine.py --cuts` prints the camera plan (shot names and frames) for slice re-renders.
+  * Left "to_upload" for the Nov 20 6:31 AM run (24-hour window full until 3:00 PM ET today; the 3D cap allows the song only after 5:17 PM ET, when the Nov 18 3D uploads leave the window):
+    za_ep07 Sandy and the Flying Scarf (Nov 21 5:30 AM, built by the 8:43 AM task, not gated by this run), zoo3d_ep22 (Nov 22 3:30 PM), zc_ep07_short3 (Nov 28 7:30 AM).

@@ -2844,5 +2844,59 @@
   ],
   "thumb_text": "GOT IT!",
   "seconds": 319.9
+ },
+ {
+  "file": "zoo3d_ep22.mp4",
+  "title": "Stretch Up Tall! Giraffe Song for Kids with Milo",
+  "description": "Stretch up tall! Sing and stretch with Milo the bluebird and the giraffe, the tallest animal in the world: long legs, a long neck, a long tongue for leaves at the very top of the trees, and spots that are all its own.\nA giraffe song for kids. Stretch up, tiptoe and reach along. Ages 2-6.\n\nFacts from National Geographic and Britannica Kids (giraffe pages).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nLYRICS\nStretch up tall, stretch up tall!\nThe giraffe is the tallest of all!\nReach your arms up, one, two, three,\nStretch up tall and sing with me!\nLong, long legs and a long, long neck,\nUp to the treetops, let's go check!\nHigher than the zebra, higher than the tree,\nThe tallest animal, look and see!\nWho is tall? Who is tall?\nStretch up high, the tallest of all!\nLeaves at the top, way up high,\nMunch, munch, munch, up near the sky!\nOut comes a tongue, so long, so long,\nIt picks the leaves and sings along!\nStretch your neck! (Stretch, stretch, stretch!)\nUp on tiptoe! (Up, up, up!)\nReach for the leaves! (Munch, munch, munch!)\nNow wiggle and giggle and stretch so much!\nLook at the spots, brown and bright,\nBig ones, small ones, left and right!\nNo two giraffes have spots the same,\nSpotty patterns, what a fun game!\nWe reached up high, one, two, three,\nStretch up tall! Bye-bye, friends!",
+  "tags": [
+   "giraffe song for kids",
+   "tall animals song",
+   "animal song for kids",
+   "action song for kids",
+   "kids songs",
+   "preschool learning song",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "date": "2026-11-22",
+  "time": "3:30 PM",
+  "thumb": "brand/zoo/thumb_zoo3d_ep22.png",
+  "made_for_kids": true,
+  "status": "to_upload",
+  "format": "3d_singalong",
+  "duration": 145.5,
+  "watermark": "tr",
+  "watermark_hide": [
+   [
+    32.4,
+    40.0
+   ],
+   [
+    42.0,
+    44.0
+   ],
+   [
+    52.0,
+    54.0
+   ],
+   [
+    96.4,
+    105.9
+   ],
+   [
+    112.5,
+    114.0
+   ],
+   [
+    121.5,
+    123.5
+   ],
+   [
+    129.6,
+    140.0
+   ]
+  ],
+  "note": "Nov 19 daily run: written, sung, rendered (job zoo3d_ep22y) and finished today; two 'high' shots (114-116 s, 123.5-125.5 s) re-rendered as slices zoo3d_ep22s1/s2 without the song words (they crossed the animals' heads) and spliced (3492 frames kept); mark top right with hide windows over the zebra close-ups (crops of the final file at 0/10/35/50/95/120/135 s looked at: nothing under the mark); review.py PASS, contact sheet and thumbnail LONG NECK! looked at; listen.py on the file: D major as the song engine wrote it, no clicks, -13.5 LUFS, 1 clipped sample, a 1 s quiet break at 15.5-16.5 s inside the song (measured, not heard). 3D cap: upload only when no 3D upload is in the last 24 h (the Nov 18 3D uploads leave the window at 5:17 PM ET Nov 19)."
  }
 ]

@@ -318,6 +318,9 @@ for _n, (_t, _i) in enumerate(_LOC_T):
     if _near: cuts[_near[0]] = (_t, cuts[_near[0]][1], cuts[_near[0]][2])
     else: cuts.append((_t, LOCS[_i].get("shot", _alt[_n % len(_alt)]), _d))
     cuts.sort(key=lambda c: c[0])
+if opt("cuts"):   # print the camera plan and stop (find a shot's frames for a slice re-render)
+    for _c in cuts: print("CUT", round(_c[0], 3), int(round(_c[0] * 24)), _c[1], _c[2].get("section"), flush=True)
+    sys.exit(0)
 _PROP_BASE = [(o, tuple(o.location)) for o, *_ in props]
 _loc_now = [None]
 

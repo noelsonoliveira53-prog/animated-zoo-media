@@ -1252,7 +1252,7 @@
  {
   "file": "cartoon/zc_ep07_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",
@@ -1260,7 +1260,7 @@
   "watermark": "top",
   "date": "2026-11-27",
   "time": "7:30 AM",
-  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 23 7:30 PM (elephant Short that day).",
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 23 7:30 PM (elephant Short that day). | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 27, 2026 at 7:30 AM', custom thumbnail, made for kids.",
   "seconds": 90.9,
   "title": "Who Helps Look After Tumble?",
   "description": "Who helps Mama look after baby Tumble? Meet Auntie and big sister! In an elephant herd, aunties and sisters greet the baby, watch him, help him and play with him, like babysitters. Count the helpers with Milo the bluebird. A quick animal fact for kids from the lesson “Who Looks After a Baby Elephant?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic (elephant nannies); Maryland Zoo (African elephant); SeaWorld (elephant care of young); San Diego Zoo Wildlife Alliance (elephant).",
@@ -1277,7 +1277,10 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "BIG HELPERS!"
+  "thumb_text": "BIG HELPERS!",
+  "video_id": "7f5tgx5y8b0",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep07_short3.mp4",

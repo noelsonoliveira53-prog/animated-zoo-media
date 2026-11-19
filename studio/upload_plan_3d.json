@@ -2718,11 +2718,11 @@
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep05.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 18 11:18 PM - Nov 19 1:30 AM ET by the one-off catch-up adventure build (session_014CFVfVfpWnyGfoZGyRpN4s): 4K AV1 358.4 s; stills of every shot (start and end) and 90 frames of the rendered file (every shot end, every answer reveal, rhymes and tunes) looked at; pace, watermark and corner sheet, listen.py, review.py. Run note docs/cartoon/runs/za_ep05.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 22 5:30 AM, a day with a spider monkey Short.",
+  "note": "Built Nov 18 11:18 PM - Nov 19 1:30 AM ET by the one-off catch-up adventure build (session_014CFVfVfpWnyGfoZGyRpN4s): 4K AV1 358.4 s; stills of every shot (start and end) and 90 frames of the rendered file (every shot end, every answer reveal, rhymes and tunes) looked at; pace, watermark and corner sheet, listen.py, review.py. Run note docs/cartoon/runs/za_ep05.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 22 5:30 AM, a day with a spider monkey Short. | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 27, 2026 at 5:30 AM', custom thumbnail, made for kids.",
   "description": "Mango the spider monkey wakes up hungry, but her breakfast is gone from her branch! Who took it? Mango, baby elephant Tumble and Milo the bluebird follow the clues: a banana peel, a trail of sticky drips, and a happy little tune coming from a bush. Who is hiding in the leaves? A gentle animal mystery for ages 2-6 about not guessing, asking kindly and sharing, with questions to answer, drips to count and a tune to clap along to.\nKids learn that fruit is a spider monkey's main food, that baby tapirs have stripes and spots like a little watermelon that help them blend in, and that a tapir's bendy snout can smell and grab food.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Baird's tapir); Dublin Zoo (tapir).",
   "tags": [
    "spider monkey",
@@ -2741,7 +2741,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "A MYSTERY!",
-  "seconds": 358.4
+  "seconds": 358.4,
+  "video_id": "MrmVrrNAm3o",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/za_ep06.mp4",

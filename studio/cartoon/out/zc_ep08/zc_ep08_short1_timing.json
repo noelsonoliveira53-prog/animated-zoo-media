@@ -1,0 +1,1987 @@
+{
+ "id": "zc_ep08_short1",
+ "total": 90.09462500000005,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0
+ ],
+ "plan": {
+  "length": 90.1,
+  "shots": 22,
+  "visual_changes": 92,
+  "mean_gap": 0.98,
+  "longest_gap": 3.32,
+  "longest_gap_at": 0.4,
+  "over_6s": [],
+  "places": [
+   "floor",
+   "canopy"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 9,
+  "longest_without_question": 26.9,
+  "first_words_at": 0.42,
+  "shot_mean": 4.1,
+  "fails": [],
+  "words_placed": "197/197",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 31.9,
+   "onset_err_max_ms": 140.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the forest floor hook: who lives down here"
+  ],
+  [
+   0.3,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   0.43,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new place",
+   "the picture board (blue) board: layers"
+  ],
+  [
+   5.09,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   5.09,
+   "word",
+   "LAYERS"
+  ],
+  [
+   6.35,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   8.12,
+   "new shot",
+   "the picture board (blue) board: count four"
+  ],
+  [
+   10.19,
+   "action",
+   "a layer appears"
+  ],
+  [
+   10.49,
+   "action",
+   "a layer appears"
+  ],
+  [
+   10.82,
+   "action",
+   "a layer appears"
+  ],
+  [
+   11.12,
+   "action",
+   "a layer appears"
+  ],
+  [
+   11.68,
+   "word",
+   "4"
+  ],
+  [
+   11.88,
+   "new shot",
+   "the picture board (blue) board: four layers"
+  ],
+  [
+   12.24,
+   "word",
+   "4 LAYERS"
+  ],
+  [
+   14.72,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   15.24,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   16.25,
+   "new place",
+   "the treetops your house"
+  ],
+  [
+   16.39,
+   "action",
+   "milo hops"
+  ],
+  [
+   16.77,
+   "word",
+   "HOW MANY?"
+  ],
+  [
+   19.69,
+   "new place",
+   "the forest floor floor wide"
+  ],
+  [
+   21.27,
+   "word",
+   "THE FOREST FLOOR"
+  ],
+  [
+   22.75,
+   "action",
+   "milo flies"
+  ],
+  [
+   24.69,
+   "new shot",
+   "the forest floor dark here"
+  ],
+  [
+   25.31,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   25.31,
+   "word",
+   "DARK!"
+  ],
+  [
+   27.81,
+   "new shot",
+   "the forest floor crunch"
+  ],
+  [
+   30.1,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.1,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.1,
+   "word",
+   "CRUNCH!"
+  ],
+  [
+   31.56,
+   "new place",
+   "the picture board board: leaf roof"
+  ],
+  [
+   31.93,
+   "action",
+   "the leaf roof wiggles"
+  ],
+  [
+   32.95,
+   "action",
+   "the light gets thin"
+  ],
+  [
+   32.95,
+   "word",
+   "NO SUN!"
+  ],
+  [
+   34.38,
+   "new shot",
+   "the picture board board: darkest"
+  ],
+  [
+   36.5,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   36.5,
+   "word",
+   "DARKEST!"
+  ],
+  [
+   38.44,
+   "new place",
+   "the forest floor squint"
+  ],
+  [
+   38.9,
+   "action",
+   "Milo squints"
+  ],
+  [
+   38.9,
+   "word",
+   "SQUINT!"
+  ],
+  [
+   41.88,
+   "new shot",
+   "the forest floor who is that"
+  ],
+  [
+   41.98,
+   "action",
+   "ant walks"
+  ],
+  [
+   42.0,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   43.0,
+   "word",
+   "WHO?"
+  ],
+  [
+   44.06,
+   "new shot",
+   "the forest floor an anteater"
+  ],
+  [
+   44.54,
+   "word",
+   "ANTEATER"
+  ],
+  [
+   46.01,
+   "picture",
+   "ar"
+  ],
+  [
+   46.77,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   47.81,
+   "new shot",
+   "the forest floor question 1"
+  ],
+  [
+   50.35,
+   "sign",
+   "TREES"
+  ],
+  [
+   50.7,
+   "sign",
+   "GROUND"
+  ],
+  [
+   53.32,
+   "thinking dot",
+   "1"
+  ],
+  [
+   53.99,
+   "thinking dot",
+   "2"
+  ],
+  [
+   54.67,
+   "thinking dot",
+   "3"
+  ],
+  [
+   55.15,
+   "answer",
+   "GROUND"
+  ],
+  [
+   55.2,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   56.25,
+   "new shot",
+   "the forest floor on the ground"
+  ],
+  [
+   56.35,
+   "action",
+   "ant walks"
+  ],
+  [
+   56.83,
+   "word",
+   "GROUND!"
+  ],
+  [
+   57.9,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   60.0,
+   "new shot",
+   "the forest floor tongue"
+  ],
+  [
+   61.36,
+   "word",
+   "LONG TONGUE"
+  ],
+  [
+   62.51,
+   "action",
+   "its long tongue flicks"
+  ],
+  [
+   63.75,
+   "new place",
+   "the picture board board: on the ground"
+  ],
+  [
+   65.34,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   65.34,
+   "word",
+   "ON THE GROUND"
+  ],
+  [
+   66.74,
+   "picture",
+   "x"
+  ],
+  [
+   68.12,
+   "new place",
+   "the picture board (pink) board: super nose"
+  ],
+  [
+   70.1,
+   "picture",
+   "nw"
+  ],
+  [
+   70.1,
+   "word",
+   "SUPER NOSE!"
+  ],
+  [
+   70.46,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   71.25,
+   "new shot",
+   "the picture board (pink) board: ants"
+  ],
+  [
+   71.57,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   72.76,
+   "picture",
+   "a0"
+  ],
+  [
+   72.76,
+   "picture",
+   "a1"
+  ],
+  [
+   72.76,
+   "picture",
+   "a2"
+  ],
+  [
+   72.76,
+   "word",
+   "ANTS!"
+  ],
+  [
+   73.52,
+   "action",
+   "its long tongue flicks"
+  ],
+  [
+   74.69,
+   "new place",
+   "the forest floor question 1b"
+  ],
+  [
+   77.87,
+   "sign",
+   "YES"
+  ],
+  [
+   78.22,
+   "sign",
+   "NO"
+  ],
+  [
+   79.43,
+   "thinking dot",
+   "1"
+  ],
+  [
+   80.1,
+   "thinking dot",
+   "2"
+  ],
+  [
+   80.77,
+   "thinking dot",
+   "3"
+  ],
+  [
+   81.26,
+   "answer",
+   "YES"
+  ],
+  [
+   81.31,
+   "action",
+   "the anteater sniffs"
+  ],
+  [
+   82.5,
+   "new shot",
+   "the forest floor sniff"
+  ],
+  [
+   83.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   83.03,
+   "word",
+   "SNIFF, SNIFF!"
+  ],
+  [
+   86.25,
+   "new place",
+   "the picture board (blue) board: floor one"
+  ],
+  [
+   87.38,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   88.14,
+   "picture",
+   "i3"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "floor",
+   "say": "Who lives way down, on the dark forest floor?",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.9582083333333333,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.16
+    ],
+    [
+     "lives",
+     0.16,
+     0.45
+    ],
+    [
+     "way",
+     0.45,
+     0.69
+    ],
+    [
+     "down,",
+     0.69,
+     1.23
+    ],
+    [
+     "on",
+     1.46,
+     1.57
+    ],
+    [
+     "the",
+     1.57,
+     1.65
+    ],
+    [
+     "dark",
+     1.65,
+     1.96
+    ],
+    [
+     "forest",
+     1.96,
+     2.47
+    ],
+    [
+     "floor?",
+     2.47,
+     2.958
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: who lives down here",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A rainforest has layers, like the floors of a house.",
+   "t0": 3.75,
+   "t1": 8.125,
+   "v0": 3.9182083333333333,
+   "dur": 3.7120416666666665,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.12
+    ],
+    [
+     "rainforest",
+     0.12,
+     0.97
+    ],
+    [
+     "has",
+     0.97,
+     1.17
+    ],
+    [
+     "layers,",
+     1.17,
+     1.83
+    ],
+    [
+     "like",
+     2.14,
+     2.35
+    ],
+    [
+     "the",
+     2.35,
+     2.43
+    ],
+    [
+     "floors",
+     2.43,
+     2.96
+    ],
+    [
+     "of",
+     2.96,
+     3.05
+    ],
+    [
+     "a",
+     3.05,
+     3.09
+    ],
+    [
+     "house.",
+     3.09,
+     3.71
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: layers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Let's count them from the bottom. One, two, three, four!",
+   "t0": 8.125,
+   "t1": 11.875,
+   "v0": 8.17025,
+   "dur": 3.5148333333333333,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.32
+    ],
+    [
+     "count",
+     0.32,
+     0.62
+    ],
+    [
+     "them",
+     0.62,
+     0.75
+    ],
+    [
+     "from",
+     0.75,
+     0.91
+    ],
+    [
+     "the",
+     0.91,
+     0.99
+    ],
+    [
+     "bottom.",
+     0.99,
+     1.6
+    ],
+    [
+     "One,",
+     2.02,
+     2.32
+    ],
+    [
+     "two,",
+     2.32,
+     2.65
+    ],
+    [
+     "three,",
+     2.65,
+     2.95
+    ],
+    [
+     "four!",
+     2.95,
+     3.51
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: count four",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Four layers! Four floors, from the ground to the sky.",
+   "t0": 11.875,
+   "t1": 16.25,
+   "v0": 12.225083333333332,
+   "dur": 3.611,
+   "words": [
+    [
+     "Four",
+     0.01,
+     0.32
+    ],
+    [
+     "layers!",
+     0.32,
+     1.02
+    ],
+    [
+     "Four",
+     1.26,
+     1.57
+    ],
+    [
+     "floors,",
+     1.57,
+     2.24
+    ],
+    [
+     "from",
+     2.24,
+     2.41
+    ],
+    [
+     "the",
+     2.41,
+     2.49
+    ],
+    [
+     "ground",
+     2.49,
+     2.87
+    ],
+    [
+     "to",
+     2.87,
+     2.93
+    ],
+    [
+     "the",
+     2.93,
+     3.01
+    ],
+    [
+     "sky.",
+     3.01,
+     3.61
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: four layers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "How many floors does your house have?",
+   "t0": 16.25,
+   "t1": 19.6875,
+   "v0": 16.376083333333334,
+   "dur": 2.0792083333333333,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.17
+    ],
+    [
+     "many",
+     0.17,
+     0.39
+    ],
+    [
+     "floors",
+     0.39,
+     0.99
+    ],
+    [
+     "does",
+     0.99,
+     1.18
+    ],
+    [
+     "your",
+     1.18,
+     1.27
+    ],
+    [
+     "house",
+     1.27,
+     1.62
+    ],
+    [
+     "have?",
+     1.62,
+     2.079
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your house",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Floor number one is the forest floor. Down, down, down!",
+   "t0": 19.6875,
+   "t1": 24.6875,
+   "v0": 19.99529166666667,
+   "dur": 4.414333333333333,
+   "words": [
+    [
+     "Floor",
+     0.01,
+     0.31
+    ],
+    [
+     "number",
+     0.31,
+     0.58
+    ],
+    [
+     "one",
+     0.58,
+     0.96
+    ],
+    [
+     "is",
+     0.96,
+     1.19
+    ],
+    [
+     "the",
+     1.19,
+     1.27
+    ],
+    [
+     "forest",
+     1.27,
+     1.82
+    ],
+    [
+     "floor.",
+     1.82,
+     2.25
+    ],
+    [
+     "Down,",
+     2.75,
+     3.28
+    ],
+    [
+     "down,",
+     3.28,
+     3.87
+    ],
+    [
+     "down!",
+     3.87,
+     4.41
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "floor wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "It is dark down here. Can you see?",
+   "t0": 24.6875,
+   "t1": 27.8125,
+   "v0": 24.949625000000008,
+   "dur": 2.393625,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.18
+    ],
+    [
+     "is",
+     0.18,
+     0.36
+    ],
+    [
+     "dark",
+     0.36,
+     0.72
+    ],
+    [
+     "down",
+     0.72,
+     0.98
+    ],
+    [
+     "here.",
+     0.98,
+     1.31
+    ],
+    [
+     "Can",
+     1.53,
+     1.72
+    ],
+    [
+     "you",
+     1.72,
+     1.84
+    ],
+    [
+     "see?",
+     1.84,
+     2.39
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "dark here",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Fallen leaves cover the ground. Crunch, crunch!",
+   "t0": 27.8125,
+   "t1": 31.5625,
+   "v0": 27.88325000000001,
+   "dur": 3.3850416666666665,
+   "words": [
+    [
+     "Fallen",
+     0.03,
+     0.49
+    ],
+    [
+     "leaves",
+     0.49,
+     0.91
+    ],
+    [
+     "cover",
+     0.91,
+     1.22
+    ],
+    [
+     "the",
+     1.22,
+     1.32
+    ],
+    [
+     "ground.",
+     1.32,
+     1.87
+    ],
+    [
+     "Crunch,",
+     2.22,
+     2.78
+    ],
+    [
+     "crunch!",
+     2.78,
+     3.38
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "crunch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The leaves up high block the sunlight.",
+   "t0": 31.5625,
+   "t1": 34.375,
+   "v0": 31.80829166666668,
+   "dur": 2.327541666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "leaves",
+     0.12,
+     0.59
+    ],
+    [
+     "up",
+     0.59,
+     0.76
+    ],
+    [
+     "high",
+     0.76,
+     1.14
+    ],
+    [
+     "block",
+     1.14,
+     1.49
+    ],
+    [
+     "the",
+     1.49,
+     1.56
+    ],
+    [
+     "sunlight.",
+     1.56,
+     2.328
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: leaf roof",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "So the forest floor is the darkest layer of all.",
+   "t0": 34.375,
+   "t1": 38.4375,
+   "v0": 34.675833333333344,
+   "dur": 3.3145416666666665,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.25
+    ],
+    [
+     "forest",
+     0.25,
+     0.84
+    ],
+    [
+     "floor",
+     0.84,
+     1.36
+    ],
+    [
+     "is",
+     1.59,
+     1.73
+    ],
+    [
+     "the",
+     1.73,
+     1.82
+    ],
+    [
+     "darkest",
+     1.82,
+     2.46
+    ],
+    [
+     "layer",
+     2.46,
+     2.88
+    ],
+    [
+     "of",
+     2.88,
+     2.98
+    ],
+    [
+     "all.",
+     2.98,
+     3.31
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: darkest",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Let's squint, to see in the dark. Squint!",
+   "t0": 38.4375,
+   "t1": 41.875,
+   "v0": 38.53037500000001,
+   "dur": 2.906041666666667,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.37
+    ],
+    [
+     "squint,",
+     0.37,
+     0.82
+    ],
+    [
+     "to",
+     0.82,
+     0.94
+    ],
+    [
+     "see",
+     0.94,
+     1.19
+    ],
+    [
+     "in",
+     1.19,
+     1.28
+    ],
+    [
+     "the",
+     1.28,
+     1.36
+    ],
+    [
+     "dark.",
+     1.36,
+     1.9
+    ],
+    [
+     "Squint!",
+     2.21,
+     2.906
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "squint",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Sniff, sniff! Who is that?",
+   "t0": 41.875,
+   "t1": 44.0625,
+   "v0": 41.97641666666667,
+   "dur": 1.7562916666666666,
+   "words": [
+    [
+     "Sniff,",
+     0.02,
+     0.39
+    ],
+    [
+     "sniff!",
+     0.39,
+     0.8
+    ],
+    [
+     "Who",
+     1.02,
+     1.2
+    ],
+    [
+     "is",
+     1.2,
+     1.35
+    ],
+    [
+     "that?",
+     1.35,
+     1.756
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "who is that",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "It's an anteater! Look at its long, long nose.",
+   "t0": 44.0625,
+   "t1": 47.8125,
+   "v0": 44.27270833333334,
+   "dur": 3.1170416666666667,
+   "words": [
+    [
+     "It's",
+     0.01,
+     0.19
+    ],
+    [
+     "an",
+     0.19,
+     0.27
+    ],
+    [
+     "anteater!",
+     0.27,
+     1.02
+    ],
+    [
+     "Look",
+     1.33,
+     1.5
+    ],
+    [
+     "at",
+     1.5,
+     1.56
+    ],
+    [
+     "its",
+     1.56,
+     1.74
+    ],
+    [
+     "long,",
+     1.74,
+     2.17
+    ],
+    [
+     "long",
+     2.17,
+     2.5
+    ],
+    [
+     "nose.",
+     2.5,
+     3.117
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "an anteater",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Where does the anteater look for food? Up in the trees, or down on the ground?",
+   "t0": 47.8125,
+   "t1": 56.25,
+   "v0": 47.929750000000006,
+   "dur": 4.90475,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.13
+    ],
+    [
+     "does",
+     0.13,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.43
+    ],
+    [
+     "anteater",
+     0.43,
+     1.02
+    ],
+    [
+     "look",
+     1.02,
+     1.25
+    ],
+    [
+     "for",
+     1.25,
+     1.39
+    ],
+    [
+     "food?",
+     1.39,
+     1.96
+    ],
+    [
+     "Up",
+     2.42,
+     2.62
+    ],
+    [
+     "in",
+     2.62,
+     2.73
+    ],
+    [
+     "the",
+     2.73,
+     2.8
+    ],
+    [
+     "trees,",
+     2.8,
+     3.51
+    ],
+    [
+     "or",
+     3.51,
+     3.71
+    ],
+    [
+     "down",
+     3.71,
+     4.11
+    ],
+    [
+     "on",
+     4.11,
+     4.23
+    ],
+    [
+     "the",
+     4.23,
+     4.3
+    ],
+    [
+     "ground?",
+     4.3,
+     4.9
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "On the ground! It sniffs through the fallen leaves.",
+   "t0": 56.25,
+   "t1": 60.0,
+   "v0": 56.57450000000001,
+   "dur": 3.0799583333333334,
+   "words": [
+    [
+     "On",
+     0.0,
+     0.19
+    ],
+    [
+     "the",
+     0.19,
+     0.26
+    ],
+    [
+     "ground!",
+     0.26,
+     0.94
+    ],
+    [
+     "It",
+     1.21,
+     1.33
+    ],
+    [
+     "sniffs",
+     1.33,
+     1.75
+    ],
+    [
+     "through",
+     1.75,
+     1.93
+    ],
+    [
+     "the",
+     1.93,
+     2.01
+    ],
+    [
+     "fallen",
+     2.01,
+     2.45
+    ],
+    [
+     "leaves.",
+     2.45,
+     3.08
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "on the ground",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "It has a long, long tongue, too. Flick, flick!",
+   "t0": 60.0,
+   "t1": 63.75,
+   "v0": 60.19445833333334,
+   "dur": 3.225125,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.1
+    ],
+    [
+     "has",
+     0.1,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.36
+    ],
+    [
+     "long,",
+     0.36,
+     0.86
+    ],
+    [
+     "long",
+     0.86,
+     1.17
+    ],
+    [
+     "tongue,",
+     1.17,
+     1.54
+    ],
+    [
+     "too.",
+     1.54,
+     1.98
+    ],
+    [
+     "Flick,",
+     2.32,
+     2.69
+    ],
+    [
+     "flick!",
+     2.69,
+     3.22
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "tongue",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Anteaters live on the ground. They do not climb up high.",
+   "t0": 63.75,
+   "t1": 68.125,
+   "v0": 63.959583333333335,
+   "dur": 3.782208333333333,
+   "words": [
+    [
+     "Anteaters",
+     0.0,
+     0.8
+    ],
+    [
+     "live",
+     0.8,
+     1.19
+    ],
+    [
+     "on",
+     1.19,
+     1.31
+    ],
+    [
+     "the",
+     1.31,
+     1.38
+    ],
+    [
+     "ground.",
+     1.38,
+     2.01
+    ],
+    [
+     "They",
+     2.33,
+     2.41
+    ],
+    [
+     "do",
+     2.41,
+     2.54
+    ],
+    [
+     "not",
+     2.54,
+     2.78
+    ],
+    [
+     "climb",
+     2.78,
+     3.15
+    ],
+    [
+     "up",
+     3.15,
+     3.3
+    ],
+    [
+     "high.",
+     3.3,
+     3.78
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: on the ground",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Anteaters find food with their super nose.",
+   "t0": 68.125,
+   "t1": 71.25,
+   "v0": 68.28179166666668,
+   "dur": 2.7419166666666666,
+   "words": [
+    [
+     "Anteaters",
+     0.01,
+     0.75
+    ],
+    [
+     "find",
+     0.75,
+     1.02
+    ],
+    [
+     "food",
+     1.02,
+     1.54
+    ],
+    [
+     "with",
+     1.54,
+     1.68
+    ],
+    [
+     "their",
+     1.68,
+     1.82
+    ],
+    [
+     "super",
+     1.82,
+     2.18
+    ],
+    [
+     "nose.",
+     2.18,
+     2.74
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: super nose",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Sniff! They smell ants, and gobble them up.",
+   "t0": 71.25,
+   "t1": 74.6875,
+   "v0": 71.56370833333335,
+   "dur": 2.8060416666666668,
+   "words": [
+    [
+     "Sniff!",
+     0.01,
+     0.62
+    ],
+    [
+     "They",
+     0.62,
+     0.8
+    ],
+    [
+     "smell",
+     0.8,
+     1.2
+    ],
+    [
+     "ants,",
+     1.2,
+     1.7
+    ],
+    [
+     "and",
+     1.7,
+     1.96
+    ],
+    [
+     "gobble",
+     1.96,
+     2.37
+    ],
+    [
+     "them",
+     2.37,
+     2.51
+    ],
+    [
+     "up.",
+     2.51,
+     2.806
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: ants",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Can an anteater smell ants with its nose? Yes, or no?",
+   "t0": 74.6875,
+   "t1": 82.5,
+   "v0": 74.90975000000003,
+   "dur": 4.029791666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.16
+    ],
+    [
+     "an",
+     0.16,
+     0.24
+    ],
+    [
+     "anteater",
+     0.24,
+     0.89
+    ],
+    [
+     "smell",
+     0.89,
+     1.35
+    ],
+    [
+     "ants",
+     1.35,
+     1.71
+    ],
+    [
+     "with",
+     1.71,
+     1.84
+    ],
+    [
+     "its",
+     1.84,
+     2.01
+    ],
+    [
+     "nose?",
+     2.01,
+     2.56
+    ],
+    [
+     "Yes,",
+     2.96,
+     3.44
+    ],
+    [
+     "or",
+     3.44,
+     3.62
+    ],
+    [
+     "no?",
+     3.62,
+     4.03
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "floor",
+   "say": "Can you sniff like an anteater? Sniff, sniff!",
+   "t0": 82.5,
+   "t1": 86.25,
+   "v0": 82.67954166666671,
+   "dur": 3.1879166666666667,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.23
+    ],
+    [
+     "you",
+     0.23,
+     0.35
+    ],
+    [
+     "sniff",
+     0.35,
+     0.76
+    ],
+    [
+     "like",
+     0.76,
+     0.95
+    ],
+    [
+     "an",
+     0.95,
+     1.03
+    ],
+    [
+     "anteater?",
+     1.03,
+     1.79
+    ],
+    [
+     "Sniff,",
+     2.11,
+     2.57
+    ],
+    [
+     "sniff!",
+     2.57,
+     3.188
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "sniff",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "That is floor number one. The forest floor!",
+   "t0": 86.25,
+   "t1": 89.69462500000004,
+   "v0": 86.40745833333338,
+   "dur": 2.867166666666667,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.24
+    ],
+    [
+     "is",
+     0.24,
+     0.43
+    ],
+    [
+     "floor",
+     0.43,
+     0.68
+    ],
+    [
+     "number",
+     0.68,
+     0.97
+    ],
+    [
+     "one.",
+     0.97,
+     1.41
+    ],
+    [
+     "The",
+     1.67,
+     1.73
+    ],
+    [
+     "forest",
+     1.73,
+     2.33
+    ],
+    [
+     "floor!",
+     2.33,
+     2.867
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: floor one",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

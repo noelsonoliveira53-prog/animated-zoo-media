@@ -1,0 +1,1914 @@
+{
+ "id": "zc_ep08_short3",
+ "total": 87.21220833333335,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875
+ ],
+ "plan": {
+  "length": 87.2,
+  "shots": 21,
+  "visual_changes": 96,
+  "mean_gap": 0.91,
+  "longest_gap": 4.49,
+  "longest_gap_at": 82.7,
+  "over_6s": [],
+  "places": [
+   "emergent"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 10,
+  "longest_without_question": 23.8,
+  "first_words_at": 0.42,
+  "shot_mean": 4.15,
+  "fails": [],
+  "words_placed": "183/183",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 36.9,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 20,
+   "cuts_on_the_half_beat": 20,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the emergent layer hook: above the treetops"
+  ],
+  [
+   0.3,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   1.32,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "action",
+   "Milo flies up out of the treetops"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the emergent layer emergent wide"
+  ],
+  [
+   6.24,
+   "word",
+   "THE EMERGENT LAYER"
+  ],
+  [
+   7.81,
+   "new shot",
+   "the emergent layer taller trees"
+  ],
+  [
+   8.51,
+   "picture",
+   "a0"
+  ],
+  [
+   9.49,
+   "picture",
+   "a1"
+  ],
+  [
+   9.49,
+   "word",
+   "TALLER!"
+  ],
+  [
+   11.56,
+   "new place",
+   "the picture board board: one tall tree"
+  ],
+  [
+   11.63,
+   "action",
+   "a tree bobs"
+  ],
+  [
+   11.63,
+   "action",
+   "a tree bobs"
+  ],
+  [
+   12.18,
+   "action",
+   "a tree bobs"
+  ],
+  [
+   13.84,
+   "action",
+   "the tall tree grows up"
+  ],
+  [
+   13.84,
+   "word",
+   "SO TALL!"
+  ],
+  [
+   15.62,
+   "new shot",
+   "the picture board board: count trees"
+  ],
+  [
+   17.71,
+   "word",
+   "1"
+  ],
+  [
+   17.97,
+   "word",
+   "2"
+  ],
+  [
+   18.24,
+   "word",
+   "3"
+  ],
+  [
+   19.06,
+   "new place",
+   "the emergent layer question 4"
+  ],
+  [
+   19.69,
+   "sign",
+   "DARK"
+  ],
+  [
+   20.04,
+   "sign",
+   "SUNNY"
+  ],
+  [
+   21.81,
+   "thinking dot",
+   "1"
+  ],
+  [
+   22.49,
+   "thinking dot",
+   "2"
+  ],
+  [
+   23.16,
+   "thinking dot",
+   "3"
+  ],
+  [
+   23.65,
+   "answer",
+   "SUNNY"
+  ],
+  [
+   23.7,
+   "action",
+   "milo hops"
+  ],
+  [
+   25.0,
+   "new shot",
+   "the emergent layer sunniest"
+  ],
+  [
+   26.15,
+   "action",
+   "the sun shines"
+  ],
+  [
+   26.15,
+   "word",
+   "THE SUNNIEST!"
+  ],
+  [
+   28.12,
+   "new shot",
+   "the emergent layer shade your eyes"
+  ],
+  [
+   28.21,
+   "action",
+   "Milo shades his eyes"
+  ],
+  [
+   28.21,
+   "word",
+   "SHADE YOUR EYES!"
+  ],
+  [
+   30.02,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.62,
+   "new shot",
+   "the emergent layer who is coming"
+  ],
+  [
+   32.45,
+   "word",
+   "?"
+  ],
+  [
+   33.36,
+   "action",
+   "a big bird flies in"
+  ],
+  [
+   33.36,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   35.0,
+   "new shot",
+   "the emergent layer a harpy eagle"
+  ],
+  [
+   35.05,
+   "action",
+   "eagle looks happy"
+  ],
+  [
+   35.2,
+   "word",
+   "HARPY EAGLE"
+  ],
+  [
+   37.32,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   38.44,
+   "new shot",
+   "the emergent layer big wings"
+  ],
+  [
+   38.78,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   41.27,
+   "word",
+   "BIG WINGS!"
+  ],
+  [
+   42.81,
+   "new shot",
+   "the emergent layer look down"
+  ],
+  [
+   43.19,
+   "picture",
+   "ar"
+  ],
+  [
+   44.94,
+   "word",
+   "FAR BELOW!"
+  ],
+  [
+   46.56,
+   "new place",
+   "the picture board (blue) board: fly or glide"
+  ],
+  [
+   48.09,
+   "action",
+   "the eagle flies to the other tree"
+  ],
+  [
+   48.09,
+   "picture",
+   "ar"
+  ],
+  [
+   48.09,
+   "word",
+   "FLY!"
+  ],
+  [
+   49.12,
+   "word",
+   "GLIDE!"
+  ],
+  [
+   51.56,
+   "new place",
+   "the emergent layer butterflies"
+  ],
+  [
+   51.61,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   51.61,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   51.61,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   51.84,
+   "word",
+   "BUTTERFLIES"
+  ],
+  [
+   54.38,
+   "new shot",
+   "the emergent layer count butterflies"
+  ],
+  [
+   56.01,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   56.01,
+   "picture",
+   "b0"
+  ],
+  [
+   56.28,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   56.28,
+   "picture",
+   "b1"
+  ],
+  [
+   56.54,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   56.54,
+   "picture",
+   "b2"
+  ],
+  [
+   56.54,
+   "word",
+   "3"
+  ],
+  [
+   57.5,
+   "new shot",
+   "the emergent layer flutter"
+  ],
+  [
+   57.55,
+   "action",
+   "a butterfly flutters"
+  ],
+  [
+   57.95,
+   "action",
+   "milo hops"
+  ],
+  [
+   57.95,
+   "word",
+   "FLUTTER!"
+  ],
+  [
+   62.19,
+   "new shot",
+   "the emergent layer question 5"
+  ],
+  [
+   64.48,
+   "sign",
+   "ANTEATER"
+  ],
+  [
+   64.83,
+   "sign",
+   "EAGLE"
+  ],
+  [
+   66.58,
+   "thinking dot",
+   "1"
+  ],
+  [
+   67.25,
+   "thinking dot",
+   "2"
+  ],
+  [
+   67.92,
+   "thinking dot",
+   "3"
+  ],
+  [
+   68.41,
+   "answer",
+   "EAGLE"
+  ],
+  [
+   68.46,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   69.69,
+   "new shot",
+   "the emergent layer the eagle"
+  ],
+  [
+   70.08,
+   "action",
+   "the eagle flaps"
+  ],
+  [
+   70.08,
+   "word",
+   "EAGLE!"
+  ],
+  [
+   74.06,
+   "new place",
+   "the picture board (blue) board: count down"
+  ],
+  [
+   75.94,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   76.22,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   76.55,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   76.86,
+   "action",
+   "the layer lights up"
+  ],
+  [
+   77.5,
+   "new shot",
+   "the picture board (blue) board: everyone has a home"
+  ],
+  [
+   77.84,
+   "action",
+   "the eagle picture"
+  ],
+  [
+   78.37,
+   "action",
+   "the macaw picture"
+  ],
+  [
+   78.93,
+   "action",
+   "the frog picture"
+  ],
+  [
+   79.58,
+   "action",
+   "the anteater picture"
+  ],
+  [
+   80.69,
+   "word",
+   "A HOME FOR ALL!"
+  ],
+  [
+   82.19,
+   "new place",
+   "the emergent layer your floor"
+  ],
+  [
+   82.38,
+   "action",
+   "milo hops"
+  ],
+  [
+   82.72,
+   "word",
+   "WHICH FLOOR?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "emergent",
+   "say": "What lives up above the treetops?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 2.1293333333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "lives",
+     0.21,
+     0.71
+    ],
+    [
+     "up",
+     0.71,
+     0.9
+    ],
+    [
+     "above",
+     0.9,
+     1.18
+    ],
+    [
+     "the",
+     1.18,
+     1.27
+    ],
+    [
+     "treetops?",
+     1.27,
+     2.129
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: above the treetops",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Now, the very top! Floor number four: the emergent layer.",
+   "t0": 2.8125,
+   "t1": 7.8125,
+   "v0": 3.0893333333333333,
+   "dur": 4.236583333333333,
+   "words": [
+    [
+     "Now,",
+     0.0,
+     0.44
+    ],
+    [
+     "the",
+     0.44,
+     0.54
+    ],
+    [
+     "very",
+     0.54,
+     0.86
+    ],
+    [
+     "top!",
+     0.86,
+     1.42
+    ],
+    [
+     "Floor",
+     1.79,
+     2.05
+    ],
+    [
+     "number",
+     2.05,
+     2.32
+    ],
+    [
+     "four:",
+     2.32,
+     2.86
+    ],
+    [
+     "the",
+     3.02,
+     3.15
+    ],
+    [
+     "emergent",
+     3.15,
+     3.74
+    ],
+    [
+     "layer.",
+     3.74,
+     4.237
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "emergent wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Look! A few trees grow taller than all the rest.",
+   "t0": 7.8125,
+   "t1": 11.5625,
+   "v0": 7.865916666666666,
+   "dur": 3.204833333333333,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.43
+    ],
+    [
+     "A",
+     0.59,
+     0.64
+    ],
+    [
+     "few",
+     0.64,
+     0.89
+    ],
+    [
+     "trees",
+     0.89,
+     1.37
+    ],
+    [
+     "grow",
+     1.37,
+     1.62
+    ],
+    [
+     "taller",
+     1.62,
+     2.18
+    ],
+    [
+     "than",
+     2.18,
+     2.34
+    ],
+    [
+     "all",
+     2.34,
+     2.54
+    ],
+    [
+     "the",
+     2.54,
+     2.65
+    ],
+    [
+     "rest.",
+     2.65,
+     3.2
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "taller trees",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Short, short, short, and one tall tree sticks up!",
+   "t0": 11.5625,
+   "t1": 15.625,
+   "v0": 11.61075,
+   "dur": 3.5264166666666665,
+   "words": [
+    [
+     "Short,",
+     0.02,
+     0.57
+    ],
+    [
+     "short,",
+     0.57,
+     1.05
+    ],
+    [
+     "short,",
+     1.05,
+     1.59
+    ],
+    [
+     "and",
+     1.8,
+     1.96
+    ],
+    [
+     "one",
+     1.96,
+     2.23
+    ],
+    [
+     "tall",
+     2.23,
+     2.54
+    ],
+    [
+     "tree",
+     2.54,
+     2.82
+    ],
+    [
+     "sticks",
+     2.82,
+     3.19
+    ],
+    [
+     "up!",
+     3.19,
+     3.526
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: one tall tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Count the short trees with me. One, two, three!",
+   "t0": 15.625,
+   "t1": 19.0625,
+   "v0": 15.677166666666665,
+   "dur": 3.1522916666666667,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.37
+    ],
+    [
+     "short",
+     0.37,
+     0.73
+    ],
+    [
+     "trees",
+     0.73,
+     1.14
+    ],
+    [
+     "with",
+     1.14,
+     1.31
+    ],
+    [
+     "me.",
+     1.31,
+     1.63
+    ],
+    [
+     "One,",
+     2.03,
+     2.29
+    ],
+    [
+     "two,",
+     2.29,
+     2.56
+    ],
+    [
+     "three!",
+     2.56,
+     3.15
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "board: count trees",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Is it dark up here, or sunny?",
+   "t0": 19.0625,
+   "t1": 25.0,
+   "v0": 19.369458333333334,
+   "dur": 1.9572916666666667,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.32
+    ],
+    [
+     "dark",
+     0.32,
+     0.66
+    ],
+    [
+     "up",
+     0.66,
+     0.82
+    ],
+    [
+     "here,",
+     0.82,
+     1.24
+    ],
+    [
+     "or",
+     1.24,
+     1.41
+    ],
+    [
+     "sunny?",
+     1.41,
+     1.957
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Sunny! It is the sunniest layer of all.",
+   "t0": 25.0,
+   "t1": 28.125,
+   "v0": 25.066750000000003,
+   "dur": 2.578666666666667,
+   "words": [
+    [
+     "Sunny!",
+     0.0,
+     0.59
+    ],
+    [
+     "It",
+     0.73,
+     0.84
+    ],
+    [
+     "is",
+     0.84,
+     0.99
+    ],
+    [
+     "the",
+     0.99,
+     1.08
+    ],
+    [
+     "sunniest",
+     1.08,
+     1.73
+    ],
+    [
+     "layer",
+     1.73,
+     2.15
+    ],
+    [
+     "of",
+     2.15,
+     2.26
+    ],
+    [
+     "all.",
+     2.26,
+     2.579
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "sunniest",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Shade your eyes from the sun, like this!",
+   "t0": 28.125,
+   "t1": 30.625,
+   "v0": 28.185416666666672,
+   "dur": 2.2138333333333335,
+   "words": [
+    [
+     "Shade",
+     0.02,
+     0.34
+    ],
+    [
+     "your",
+     0.34,
+     0.49
+    ],
+    [
+     "eyes",
+     0.49,
+     0.86
+    ],
+    [
+     "from",
+     0.86,
+     1.01
+    ],
+    [
+     "the",
+     1.01,
+     1.09
+    ],
+    [
+     "sun,",
+     1.09,
+     1.59
+    ],
+    [
+     "like",
+     1.59,
+     1.83
+    ],
+    [
+     "this!",
+     1.83,
+     2.21
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "shade your eyes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Who lives up here, at the very top? Look who is coming!",
+   "t0": 30.625,
+   "t1": 35.0,
+   "v0": 30.93925000000001,
+   "dur": 3.5637083333333335,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.21
+    ],
+    [
+     "lives",
+     0.21,
+     0.5
+    ],
+    [
+     "up",
+     0.5,
+     0.67
+    ],
+    [
+     "here,",
+     0.67,
+     1.0
+    ],
+    [
+     "at",
+     1.0,
+     1.12
+    ],
+    [
+     "the",
+     1.12,
+     1.19
+    ],
+    [
+     "very",
+     1.19,
+     1.51
+    ],
+    [
+     "top?",
+     1.51,
+     2.06
+    ],
+    [
+     "Look",
+     2.42,
+     2.68
+    ],
+    [
+     "who",
+     2.68,
+     2.81
+    ],
+    [
+     "is",
+     2.81,
+     2.96
+    ],
+    [
+     "coming!",
+     2.96,
+     3.56
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "who is coming",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "A harpy eagle! It is a very big bird.",
+   "t0": 35.0,
+   "t1": 38.4375,
+   "v0": 35.04295833333334,
+   "dur": 3.183125,
+   "words": [
+    [
+     "A",
+     0.06,
+     0.16
+    ],
+    [
+     "harpy",
+     0.16,
+     0.73
+    ],
+    [
+     "eagle!",
+     0.73,
+     1.23
+    ],
+    [
+     "It",
+     1.6,
+     1.67
+    ],
+    [
+     "is",
+     1.67,
+     1.8
+    ],
+    [
+     "a",
+     1.8,
+     1.84
+    ],
+    [
+     "very",
+     1.84,
+     2.28
+    ],
+    [
+     "big",
+     2.28,
+     2.61
+    ],
+    [
+     "bird.",
+     2.61,
+     3.18
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "a harpy eagle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Flap, flap, flap! Look at its big, wide wings.",
+   "t0": 38.4375,
+   "t1": 42.8125,
+   "v0": 38.766083333333334,
+   "dur": 3.58125,
+   "words": [
+    [
+     "Flap,",
+     0.01,
+     0.43
+    ],
+    [
+     "flap,",
+     0.43,
+     0.83
+    ],
+    [
+     "flap!",
+     0.83,
+     1.31
+    ],
+    [
+     "Look",
+     1.64,
+     1.84
+    ],
+    [
+     "at",
+     1.84,
+     1.94
+    ],
+    [
+     "its",
+     1.94,
+     2.12
+    ],
+    [
+     "big,",
+     2.12,
+     2.5
+    ],
+    [
+     "wide",
+     2.5,
+     2.95
+    ],
+    [
+     "wings.",
+     2.95,
+     3.58
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "big wings",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Look down! The forest floor is far, far below.",
+   "t0": 42.8125,
+   "t1": 46.5625,
+   "v0": 42.88733333333333,
+   "dur": 3.338416666666667,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.3
+    ],
+    [
+     "down!",
+     0.3,
+     0.79
+    ],
+    [
+     "The",
+     0.99,
+     1.07
+    ],
+    [
+     "forest",
+     1.07,
+     1.55
+    ],
+    [
+     "floor",
+     1.55,
+     1.82
+    ],
+    [
+     "is",
+     1.82,
+     2.05
+    ],
+    [
+     "far,",
+     2.05,
+     2.43
+    ],
+    [
+     "far",
+     2.43,
+     2.79
+    ],
+    [
+     "below.",
+     2.79,
+     3.338
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "look down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Many animals up here fly, or glide, from tree to tree.",
+   "t0": 46.5625,
+   "t1": 51.5625,
+   "v0": 46.76575,
+   "dur": 4.318875,
+   "words": [
+    [
+     "Many",
+     0.01,
+     0.34
+    ],
+    [
+     "animals",
+     0.34,
+     0.93
+    ],
+    [
+     "up",
+     0.93,
+     1.1
+    ],
+    [
+     "here",
+     1.1,
+     1.32
+    ],
+    [
+     "fly,",
+     1.32,
+     1.96
+    ],
+    [
+     "or",
+     2.24,
+     2.35
+    ],
+    [
+     "glide,",
+     2.35,
+     3.02
+    ],
+    [
+     "from",
+     3.22,
+     3.41
+    ],
+    [
+     "tree",
+     3.41,
+     3.71
+    ],
+    [
+     "to",
+     3.71,
+     3.82
+    ],
+    [
+     "tree.",
+     3.82,
+     4.319
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: fly or glide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "And butterflies flutter up here, too.",
+   "t0": 51.5625,
+   "t1": 54.375,
+   "v0": 51.624624999999995,
+   "dur": 2.2558333333333334,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.22
+    ],
+    [
+     "butterflies",
+     0.22,
+     1.01
+    ],
+    [
+     "flutter",
+     1.01,
+     1.4
+    ],
+    [
+     "up",
+     1.4,
+     1.52
+    ],
+    [
+     "here,",
+     1.52,
+     1.78
+    ],
+    [
+     "too.",
+     1.78,
+     2.256
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "butterflies",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Count the butterflies. One, two, three!",
+   "t0": 54.375,
+   "t1": 57.5,
+   "v0": 54.42045833333333,
+   "dur": 2.6645,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.38
+    ],
+    [
+     "butterflies.",
+     0.38,
+     1.33
+    ],
+    [
+     "One,",
+     1.59,
+     1.86
+    ],
+    [
+     "two,",
+     1.86,
+     2.12
+    ],
+    [
+     "three!",
+     2.12,
+     2.66
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count butterflies",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Can you flutter like a butterfly? Flutter, flutter!",
+   "t0": 57.5,
+   "t1": 62.1875,
+   "v0": 57.624958333333325,
+   "dur": 3.4593333333333334,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.33
+    ],
+    [
+     "flutter",
+     0.33,
+     0.84
+    ],
+    [
+     "like",
+     0.84,
+     1.03
+    ],
+    [
+     "a",
+     1.03,
+     1.07
+    ],
+    [
+     "butterfly?",
+     1.07,
+     1.97
+    ],
+    [
+     "Flutter,",
+     2.28,
+     2.78
+    ],
+    [
+     "flutter!",
+     2.78,
+     3.459
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "flutter",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Who lives at the very top? The anteater, or the eagle?",
+   "t0": 62.1875,
+   "t1": 69.6875,
+   "v0": 62.424291666666655,
+   "dur": 3.66525,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.23
+    ],
+    [
+     "lives",
+     0.23,
+     0.57
+    ],
+    [
+     "at",
+     0.57,
+     0.65
+    ],
+    [
+     "the",
+     0.65,
+     0.72
+    ],
+    [
+     "very",
+     0.72,
+     1.03
+    ],
+    [
+     "top?",
+     1.03,
+     1.6
+    ],
+    [
+     "The",
+     1.92,
+     2.06
+    ],
+    [
+     "anteater,",
+     2.06,
+     2.81
+    ],
+    [
+     "or",
+     2.81,
+     2.96
+    ],
+    [
+     "the",
+     2.96,
+     3.27
+    ],
+    [
+     "eagle?",
+     3.27,
+     3.66
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 5",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "The eagle! The anteater stays down on the forest floor.",
+   "t0": 69.6875,
+   "t1": 74.0625,
+   "v0": 69.82954166666666,
+   "dur": 3.8259166666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.25
+    ],
+    [
+     "eagle!",
+     0.25,
+     0.72
+    ],
+    [
+     "The",
+     1.02,
+     1.16
+    ],
+    [
+     "anteater",
+     1.16,
+     1.72
+    ],
+    [
+     "stays",
+     1.72,
+     2.22
+    ],
+    [
+     "down",
+     2.22,
+     2.55
+    ],
+    [
+     "on",
+     2.55,
+     2.7
+    ],
+    [
+     "the",
+     2.7,
+     2.76
+    ],
+    [
+     "forest",
+     2.76,
+     3.32
+    ],
+    [
+     "floor.",
+     3.32,
+     3.826
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the eagle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Let's fly back down. Four, three, two, one!",
+   "t0": 74.0625,
+   "t1": 77.5,
+   "v0": 74.19545833333333,
+   "dur": 3.0805,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.35
+    ],
+    [
+     "fly",
+     0.35,
+     0.64
+    ],
+    [
+     "back",
+     0.64,
+     0.95
+    ],
+    [
+     "down.",
+     0.95,
+     1.45
+    ],
+    [
+     "Four,",
+     1.74,
+     2.02
+    ],
+    [
+     "three,",
+     2.02,
+     2.35
+    ],
+    [
+     "two,",
+     2.35,
+     2.66
+    ],
+    [
+     "one!",
+     2.66,
+     3.08
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "board: count down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Eagle, macaw, frog and anteater. Everyone has a home!",
+   "t0": 77.5,
+   "t1": 82.1875,
+   "v0": 77.81595833333334,
+   "dur": 4.020625,
+   "words": [
+    [
+     "Eagle,",
+     0.02,
+     0.55
+    ],
+    [
+     "macaw,",
+     0.55,
+     1.11
+    ],
+    [
+     "frog",
+     1.11,
+     1.67
+    ],
+    [
+     "and",
+     1.67,
+     1.76
+    ],
+    [
+     "anteater.",
+     1.76,
+     2.41
+    ],
+    [
+     "Everyone",
+     2.87,
+     3.29
+    ],
+    [
+     "has",
+     3.29,
+     3.47
+    ],
+    [
+     "a",
+     3.47,
+     3.5
+    ],
+    [
+     "home!",
+     3.5,
+     4.02
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: everyone has a home",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "emergent",
+   "say": "Which floor would you like to live on?",
+   "t0": 82.1875,
+   "t1": 86.81220833333334,
+   "v0": 82.37658333333334,
+   "dur": 2.015625,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.34
+    ],
+    [
+     "floor",
+     0.34,
+     0.78
+    ],
+    [
+     "would",
+     0.78,
+     0.93
+    ],
+    [
+     "you",
+     0.93,
+     1.04
+    ],
+    [
+     "like",
+     1.04,
+     1.26
+    ],
+    [
+     "to",
+     1.26,
+     1.39
+    ],
+    [
+     "live",
+     1.39,
+     1.64
+    ],
+    [
+     "on?",
+     1.64,
+     2.016
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "your floor",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

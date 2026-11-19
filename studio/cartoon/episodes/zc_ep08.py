@@ -139,7 +139,7 @@ SHOTS = [
     S("canopy", say="How many floors does your house have?", part=1, q=True, tag="your house", hide=["mango"], pause=1.0, fx=[("hop", "w:How", "milo")],
       words=[("w:floors", "HOW MANY?", .74, .2, .9, "sun", (.5, .33), .85)], **MILO("canopy")),
     S("floor", AW, "Floor number one is the forest floor. Down, down, down!", part=1, trans="iris", tag="floor wide", hide=["ant"], pcam=(700, 600, 1500), pcam2=(700, 640, 1600),
-      move={"milo": (420, 300, .72, False)}, fly=["milo"], fx=[("fly", "w:Down,", "milo", 420, 860, 2.2)], words=[("w:forest", "THE FOREST FLOOR", .5, .14, .9, "sun", (.5, .33), .75)]),
+      move={"milo": (760, 560, .72, False)}, fly=["milo"], fx=[("fly", "w:Down,", "milo", 600, 860, 2.2)], words=[("w:forest", "THE FOREST FLOOR", .5, .14, .9, "sun", (.5, .33), .75)]),
     S("floor", C("floor", "milo", "body", 900), "It is dark down here. Can you see?", part=1, q=True, tag="dark here", hide=["ant"], pcam=V("floor", "milo", "body", 1000),
       fx=[("face", "w:dark", "milo", "wow")], words=[("w:dark", "DARK!", .74, .24, 1.1, "", (.5, .33), .9)]),
     S("floor", (700, 860, 1100), "Fallen leaves cover the ground. Crunch, crunch!", part=1, tag="crunch", hide=["ant"], pcam=(560, 760, 1100), move={"milo": (560, 905, .72)},
@@ -346,11 +346,11 @@ SHORTS = [
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "zc_ep08": {"place": "paper_blue", "cam": (1060, 560, 1800), "actors": [],
-                "props": [(A.layer_tree, 700, 560, .9), (A.icon(A.eagle_icon), 1260, 560 - 315 * .9 - 10, .8), (A.icon(A.anteater_icon), 1260, 560 + 315 * .9 + 10, .8)],
-                "words": [("WAY UP", 1560, 420, 170, ""), ("HIGH!", 1560, 640, 230, "sun")]},
+    "zc_ep08": {"place": "paper_blue", "cam": (1150, 560, 2300), "actors": [],
+                "props": [(A.layer_tree, 820, 560, .9), (A.icon(A.eagle_icon), 1460, 560 - 315 * .9, .8), (A.icon(A.anteater_icon), 1460, 560 + 315 * .9, .8)],
+                "words": [("WAY UP", 1600, 450, 140, ""), ("HIGH!", 1600, 640, 190, "sun")]},
     "zc_ep08_short1": {"place": "floor", "cam": (1080, 640, 1100), "actors": [("anteater", AX, AY, AS, False, 'gsap.set("#P-jaw",{opacity:1});')],
-                       "props": [(A.nose_waves, 1430, 640, 1.0)],
+                       "props": [(A.nose_waves, 1330, 640, .8)],
                        "words": [("SNIFF,", 540, 420, 190, ""), ("SNIFF!", 540, 620, 210, "sun")]},
     "zc_ep08_short2": {"place": "understory", "cam": (FX, 520, 760), "actors": [("frog", FX, FY, FS, False, "")],
                        "props": [], "words": [("BIG", 540, 400, 200, ""), ("LEAVES!", 540, 600, 200, "sun")]},

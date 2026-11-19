@@ -1,0 +1,1123 @@
+{
+ "id": "gzx_ep02",
+ "title": "Where Rain Comes From!",
+ "channel": "gizmo",
+ "set": "gizmoworld",
+ "set_opts": {},
+ "seed": 92,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "gizmo",
+   "spot": "center"
+  },
+  {
+   "id": "pal",
+   "spot": "s1",
+   "yaw": 0.22,
+   "char": "gizmo",
+   "opts": {
+    "variant": "mini",
+    "color": "#ff5fa2",
+    "scale": 0.6
+   }
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "beach",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "vapor",
+   "biome": "river",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "vapor",
+   "biome": "beach",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 11,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "clouds",
+   "biome": "mountain",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "clouds",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 9,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "rain",
+   "biome": "river",
+   "tod": "morning",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "rain",
+   "biome": "farm",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 9,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "beach",
+   "tod": "golden",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "goodbye",
+   "biome": "autumn_forest",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "dolly",
+   "show": [
+    "pal"
+   ]
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 5091,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "wide",
+    "wide"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "RAIN!",
+     "color": "#ffb627",
+     "at": [
+      0.0,
+      0.5,
+      3.15
+     ],
+     "size": 0.7,
+     "delay": 1.0,
+     "dur": 13.061
+    },
+    {
+     "type": "teach",
+     "name": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "delay": 14.211,
+     "dur": 4.335,
+     "spin": 0,
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0,
+      "times": [
+       0.0,
+       0.23,
+       -2.77
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "section": "vapor",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "VAPOR!",
+     "color": "#3db8ff",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 3.052,
+     "dur": 8.748,
+     "spin": 0,
+     "opts": {
+      "text": "THE SEA",
+      "color": "#1479d6",
+      "win": 6.348
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 3.502,
+     "dur": 5.898,
+     "spin": 0,
+     "opts": {
+      "text": "THE MOON",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 5.65,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 75.135,
+     "dur": 7.196,
+     "spin": 0,
+     "opts": {
+      "text": "YES",
+      "color": "#1479d6"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 75.585,
+     "dur": 8.746,
+     "spin": 0,
+     "opts": {
+      "text": "NO",
+      "color": "#e85d00",
+      "win": 6.746
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 78.581,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "puddle",
+     "at": [
+      2.45,
+      -0.9,
+      0.0
+     ],
+     "delay": 16.687,
+     "dur": 9.363,
+     "spin": 0,
+     "opts": {
+      "s": 0.85,
+      "shrink": 9.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sun",
+     "at": [
+      2.6,
+      -1.1,
+      3.0
+     ],
+     "delay": 15.787,
+     "dur": 10.263,
+     "spin": 0,
+     "opts": {
+      "s": 0.8
+     }
+    },
+    {
+     "type": "teach",
+     "name": "vapor",
+     "at": [
+      2.45,
+      -0.9,
+      0.2
+     ],
+     "delay": 19.807,
+     "dur": 6.243,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 27.967,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "vapor",
+     "at": [
+      2.45,
+      -0.9,
+      0.2
+     ],
+     "delay": 34.507,
+     "dur": 3.101,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "puddle",
+     "at": [
+      2.45,
+      -0.9,
+      0.0
+     ],
+     "delay": 34.507,
+     "dur": 3.101,
+     "spin": 0,
+     "opts": {
+      "s": 0.6,
+      "shrink": 60.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 40.37,
+     "dur": 12.411,
+     "spin": 0,
+     "opts": {
+      "text": "WATER VAPOR",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "vapor",
+     "at": [
+      2.45,
+      -0.9,
+      0.0
+     ],
+     "delay": 53.671,
+     "dur": 6.223,
+     "spin": 0,
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "pool",
+     "at": [
+      2.45,
+      -0.9,
+      0.0
+     ],
+     "delay": 56.308,
+     "dur": 3.586,
+     "spin": 0,
+     "opts": {
+      "s": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "section": "clouds",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "CLOUDS!",
+     "color": "#ff7a00",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 3.563,
+     "dur": 9.042,
+     "spin": 0,
+     "opts": {
+      "text": "COLDER",
+      "color": "#1479d6",
+      "win": 6.642
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 4.013,
+     "dur": 6.192,
+     "spin": 0,
+     "opts": {
+      "text": "WARMER",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 6.455,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 74.434,
+     "dur": 10.633,
+     "spin": 0,
+     "opts": {
+      "text": "WATER",
+      "color": "#1479d6",
+      "win": 8.633
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 74.884,
+     "dur": 8.183,
+     "spin": 0,
+     "opts": {
+      "text": "SAND",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 79.317,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "thermo",
+     "at": [
+      2.55,
+      -0.6,
+      0.3
+     ],
+     "delay": 15.101,
+     "dur": 6.625,
+     "spin": 0,
+     "opts": {
+      "hot": false
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 25.792,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "dust",
+     "at": [
+      2.45,
+      -0.9,
+      2.1
+     ],
+     "delay": 28.892,
+     "dur": 12.552,
+     "spin": 0,
+     "opts": {
+      "s": 1.1,
+      "grow": 1.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "cloud",
+     "at": [
+      2.45,
+      -0.9,
+      2.4
+     ],
+     "delay": 44.004,
+     "dur": 6.343,
+     "spin": 0,
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 48.473,
+     "dur": 1.874,
+     "spin": 0,
+     "opts": {
+      "text": "CONDENSATION",
+      "color": "#3561d9"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "cloud",
+     "at": [
+      2.45,
+      -0.9,
+      2.4
+     ],
+     "delay": 51.267,
+     "dur": 8.26,
+     "spin": 0,
+     "opts": {
+      "s": 1.0
+     }
+    }
+   ]
+  },
+  {
+   "section": "rain",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "RAIN!",
+     "color": "#8e5bd8",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 4.0,
+     "dur": 8.614,
+     "spin": 0,
+     "opts": {
+      "text": "HEAVY",
+      "color": "#1479d6",
+      "win": 6.214
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 4.45,
+     "dur": 5.764,
+     "spin": 0,
+     "opts": {
+      "text": "SLEEPY",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 6.464,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 75.343,
+     "dur": 8.617,
+     "spin": 0,
+     "opts": {
+      "text": "TEARDROP",
+      "color": "#1479d6"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 75.793,
+     "dur": 10.167,
+     "spin": 0,
+     "opts": {
+      "text": "BUN",
+      "color": "#e85d00",
+      "win": 8.167
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 80.21,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "cloud",
+     "at": [
+      2.45,
+      -0.9,
+      2.7
+     ],
+     "delay": 14.4,
+     "dur": 12.596,
+     "spin": 0,
+     "opts": {
+      "s": 1.0,
+      "grey": true,
+      "rain": true
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 29.645,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "drops",
+     "at": [
+      2.45,
+      -0.9,
+      2.0
+     ],
+     "delay": 32.705,
+     "dur": 5.984,
+     "spin": 0,
+     "opts": {
+      "kinds": [
+       "round",
+       "bun"
+      ],
+      "s": 1.0,
+      "times": [
+       0.0,
+       3.13
+      ]
+     }
+    },
+    {
+     "type": "teach",
+     "name": "drops",
+     "at": [
+      2.45,
+      -0.9,
+      2.0
+     ],
+     "delay": 39.079,
+     "dur": 1.932,
+     "spin": 0,
+     "opts": {
+      "kinds": [
+       "tear"
+      ],
+      "s": 1.1
+     }
+    },
+    {
+     "type": "teach",
+     "name": "river",
+     "at": [
+      2.3,
+      -0.7,
+      0.0
+     ],
+     "delay": 41.851,
+     "dur": 6.24,
+     "spin": 0,
+     "opts": {
+      "s": 0.85
+     }
+    },
+    {
+     "type": "teach",
+     "name": "cycle",
+     "at": [
+      2.45,
+      -0.9,
+      2.1
+     ],
+     "delay": 50.481,
+     "dur": 10.406,
+     "spin": 0,
+     "opts": {
+      "s": 1.05
+     }
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#3cc45a",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0,
+     "dur": 5.478
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 6.478,
+     "dur": 10.85,
+     "spin": 0,
+     "opts": {
+      "text": "THE SUN",
+      "color": "#1479d6",
+      "win": 8.85
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 6.928,
+     "dur": 8.4,
+     "spin": 0,
+     "opts": {
+      "text": "THE WIND",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 11.578,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 17.336,
+     "dur": 10.646,
+     "spin": 0,
+     "opts": {
+      "text": "WATER",
+      "color": "#1479d6",
+      "win": 8.646
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 17.786,
+     "dur": 8.196,
+     "spin": 0,
+     "opts": {
+      "text": "COTTON",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 22.232,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 28.851,
+     "dur": 12.546,
+     "spin": 0,
+     "opts": {
+      "text": "RAIN",
+      "color": "#1479d6",
+      "win": 10.546
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 29.301,
+     "dur": 10.096,
+     "spin": 0,
+     "opts": {
+      "text": "FLY AWAY",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 35.647,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ff6fb5",
+     "at": [
+      0.0,
+      0.5,
+      3.15
+     ],
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "gzx_ep02",
+ "res": "3840x2160",
+ "samples": 16,
+ "step": 1,
+ "hold_shots": true,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "gzx_ep02_timing.json",
+ "audio": "gzx_ep02_song.wav"
+}

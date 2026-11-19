@@ -39,7 +39,7 @@ def load():
 def norm(t): return re.sub(r"\s+", " ", re.sub(r"^old \(replaced\): ", "", (t or "").strip().lower()))
 def live(e): return bool(e.get("video_id")) and e.get("status") in LIVE
 def is_short(e): return "short" in e["_plan"] or "short" in (e.get("format") or "")
-def is_talk(e): return (e.get("format") or "") in ("3d_lesson", "3d_lesson_v3", "cartoon_lesson", "cartoon_adventure")      # lessons and stories: a topic is told once (a song on the same animal is not a repeat)
+def is_talk(e): return (e.get("format") or "") in ("3d_lesson", "3d_lesson_v3", "cartoon_lesson", "cartoon_adventure", "gizmo_explainer")      # lessons, stories and Gizmo explainers: a topic is told once (a song on the same animal is not a repeat)
 def today(): return datetime.datetime.now(__import__("zoneinfo").ZoneInfo("America/New_York")).date()
 
 

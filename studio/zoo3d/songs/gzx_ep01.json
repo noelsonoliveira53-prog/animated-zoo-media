@@ -1,0 +1,1212 @@
+{
+ "kind": "lesson",
+ "format": "gizmo_explainer",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "NASA, 'What Is a Rocket? (Grades K-4)', nasa.gov/learning-resources/for-kids-and-students/what-is-a-rocket-grades-k-4 (read Nov 19 2026): 'Most rocket engines turn the fuel into hot gas.' 'The engine pushes the gas out its back.' 'The gas makes the rocket move forward.' 'for every action, there is an equal and opposite reaction.' 'The rocket pushes the exhaust backward.' 'The exhaust makes the rocket move forward.' 'A rocket engine doesn't need air.' 'It carries with it everything it needs.' 'A rocket engine works in space, where there is no air.'\nNASA, 'What Is a Rocket? (Grades 5-8)', nasa.gov/learning-resources/for-kids-and-students/what-is-a-rocket-grades-5-8 (read Nov 19 2026): 'A jet engine requires oxygen from the air to work.' 'A rocket engine carries everything it needs.'\nNASA Glenn Research Center, 'Practical Rocketry', grc.nasa.gov/www/K-12/rocket/TRCRocket/practical_rocketry.html (read Nov 19 2026): 'for burning to take place, an oxidizer (oxygen) must be present.' 'they must carry oxygen with them into space, where there is no air.' 'When the large rocket was exhausted, the rocket casing was dropped behind and the remaining rocket fired.' 'Much higher altitudes were achieved by this method.' 'Today this technique of building a rocket is called staging.' 'Thanks to staging, it has become possible not only to reach outer space but the Moon and other planets too.' 'the heavier the rocket, the more the thrust needed to get it off the ground.'",
+ "script": "Hello, friends! I am Gizmo the robot.\nToday we are finding out how rockets fly!\nMy little helper bot is here too. Hello, little bot!\nWe have three big questions. Count them with me. One, two, three!\nReady? Let's find out!\nWhat pushes a rocket up, up into the sky?\nIs it hot gas? Or is it the wind?\nIt is hot gas!\nHere is how it works. A rocket engine turns its fuel into hot gas.\nThe engine pushes the gas out of its back. Whoosh! And the gas pushes the rocket the other way.\nSo which way does the rocket go? Hmm.\nThe gas goes down, so the rocket goes up!\nWhoosh, the gas goes down. Zoom, the rocket goes up!\nUp, up, up it goes!\nScientists have a rule about pushes.\nFor every push, there is a push back, just as big, the other way!\nA big push down makes a big push up!\nThe rocket pushes the gas backward. The gas pushes the rocket forward.\nA push, and a push back. That is how a rocket moves!\nSay it with me. The gas goes down, the rocket goes up!\nCan you press your hands together? Push! Can you feel them push back?\nPush, and push back. Now let your hands rest.\nQuick check! The gas goes down. Which way does the rocket go? Up? Or down?\nUp! Great thinking!\nCan a rocket work in space, where there is no air?\nIs it yes? Or is it no?\nYes, it can!\nEven way up in space!\nHere is the fun fact. A rocket engine does not need air.\nIt carries everything it needs, right inside the rocket!\nWhat does a rocket carry? Hmm.\nIts fuel, and its very own oxygen! The fuel needs oxygen to work.\nFuel and oxygen, packed in two big tanks.\nReady for the trip to space!\nAn airplane's jet engine is different.\nA jet engine takes the oxygen it needs from the air around it.\nBut up in space, there is no air at all.\nIn space, there is nothing for an engine to push against, either.\nSo a rocket brings its own oxygen along. Smart rocket!\nSay it with me. A rocket carries its own oxygen!\nCan you take a big breath of air, like a jet engine? Breathe in!\nAnd breathe out, nice and slow. Ahh.\nQuick check! Does a rocket need air from outside to work? Yes? Or no?\nNo! It brings its own oxygen. You remembered!\nWhy do some big rockets drop parts as they fly?\nTo get lighter? Or to get heavier?\nTo get lighter!\nHere is the fun fact. Big rockets are built in parts, called stages, stacked one on top of another.\nLet's count the stages. One, two, three!\nThree stages, stacked up tall!\nWhat happens when the bottom stage uses up its fuel? Hmm.\nIt drops away, and the next stage takes over!\nBye-bye, stage one! Now the rocket is lighter.\nA heavier rocket needs a bigger push to fly.\nSo dropping the empty part helps the rocket go much higher.\nLighter means it can climb higher, and higher!\nThis idea is called staging. It helps rockets reach space, and even the Moon!\nUp, up, and away. All the way to space!\nSay it with me. Rockets drop stages to get lighter!\nCan you stack your fists, one on top of the other, like rocket stages?\nNow take the bottom one away. Bye-bye, stage one!\nQuick check! After a stage drops away, is the rocket lighter? Or heavier?\nLighter! Super thinking!\nWow! We found out so much today. Now it is quiz time!\nGet ready. Think hard!\nQuestion one. What does a rocket engine push out of its back? Hot gas? Or water?\nHot gas! Yes!\nQuestion two. Does a rocket carry its own oxygen? Yes? Or no?\nYes! That's right!\nQuestion three. When a stage drops away, is the rocket lighter? Or heavier?\nLighter! You remembered!\nYou found out so much today.\nThe gas goes down, and the rocket goes up. It carries its own oxygen. And it drops stages to get lighter!\nWhat would you like to find out next?\nThank you for exploring with me. Bye-bye, friends! See you next time!",
+ "duration": 341.75,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 709,
+  "words": 709,
+  "pause_onsets_checked": 61,
+  "onset_err_mean_ms": 35.9,
+  "onset_err_max_ms": 380.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "How Do Rockets Fly? Science for Kids with Gizmo",
+  "card": "How Rockets Fly!",
+  "thumb_text": "UP, UP, AWAY!",
+  "description": "How do rockets fly? Find out with Gizmo the robot: a rocket engine turns its fuel into hot gas and pushes it out the back, and the gas pushes the rocket the other way. A rocket carries its own oxygen, so it works in space, and big rockets drop empty stages to get lighter.\nA science explainer for kids ages 4-8, with questions to answer, things to copy, quick checks and a quiz at the end.\n\nWhere the facts come from (read Nov 19, 2026): NASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "how do rockets fly",
+   "rockets for kids",
+   "rocket science for kids",
+   "space for kids",
+   "science for kids",
+   "how things work for kids",
+   "STEM for kids",
+   "science explainer",
+   "Gizmo Explains",
+   "Gizmo the robot"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "gzs_rocket_push",
+   "title": "What Pushes a Rocket Up? Science for Kids",
+   "l1": "WHAT PUSHES",
+   "l2": "A ROCKET UP?",
+   "thumb_text": "WHOOSH!",
+   "thumb_line": [
+    4,
+    0.6
+   ],
+   "fact": "A rocket engine turns its fuel into hot gas and pushes it out the back; the gas pushes the rocket the other way (NASA, What Is a Rocket?).",
+   "seg": "push",
+   "start": 18.413,
+   "end": 104.292,
+   "seconds": 85.9
+  },
+  {
+   "id": "gzs_rocket_space",
+   "title": "Can a Rocket Work in Space? Science for Kids",
+   "l1": "CAN IT WORK",
+   "l2": "IN SPACE?",
+   "thumb_text": "NO AIR!",
+   "thumb_line": [
+    5,
+    0.6
+   ],
+   "fact": "A rocket engine does not need air: it carries everything it needs, its fuel and its own oxygen (NASA, What Is a Rocket?; NASA Glenn, Practical Rocketry).",
+   "seg": "space",
+   "start": 104.292,
+   "end": 191.603,
+   "seconds": 87.3
+  },
+  {
+   "id": "gzs_rocket_stages",
+   "title": "Why Do Big Rockets Drop Parts? Science for Kids",
+   "l1": "WHY DROP",
+   "l2": "PARTS?",
+   "thumb_text": "BYE-BYE!",
+   "thumb_line": [
+    7,
+    0.7
+   ],
+   "fact": "Big rockets are built in stages; an empty stage is dropped behind and the next one fires, and this staging helps rockets reach space (NASA Glenn, Practical Rocketry).",
+   "seg": "stages",
+   "start": 191.603,
+   "end": 279.297,
+   "seconds": 87.7
+  }
+ ],
+ "job": {
+  "id": "gzx_ep01",
+  "title": "How Rockets Fly!",
+  "channel": "gizmo",
+  "set": "gizmoworld",
+  "set_opts": {},
+  "seed": 91,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "spot": "s1",
+    "yaw": 0.22,
+    "char": "gizmo",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "spring_meadow",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "push",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "push",
+    "biome": "lab",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 9,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "space",
+    "biome": "lab",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "space",
+    "biome": "beach",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 10,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "stages",
+    "biome": "mountain",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "stages",
+    "biome": "night_meadow",
+    "tod": "night",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 12,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "night_meadow",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "pal"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 956,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "ROCKETS!",
+      "color": "#ffb627",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 13.028
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 14.178,
+      "dur": 4.335,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.23,
+        -2.77
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "push",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "PUSH!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.661,
+      "dur": 8.628,
+      "spin": 0,
+      "opts": {
+       "text": "HOT GAS",
+       "color": "#1479d6",
+       "win": 6.228
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.111,
+      "dur": 5.778,
+      "spin": 0,
+      "opts": {
+       "text": "WIND",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.139,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.291,
+      "dur": 11.01,
+      "spin": 0,
+      "opts": {
+       "text": "UP",
+       "color": "#1479d6",
+       "win": 9.01
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.741,
+      "dur": 8.56,
+      "spin": 0,
+      "opts": {
+       "text": "DOWN",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.551,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 13.611,
+      "dur": 10.609,
+      "spin": 0,
+      "opts": {
+       "gas": true,
+       "s": 0.72
+      }
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       1.45,
+       -1.0,
+       2.55
+      ],
+      "delay": 21.64,
+      "dur": 2.58,
+      "spin": 0,
+      "opts": {
+       "up": true,
+       "color": "#3cc45a",
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       1.45,
+       -1.0,
+       0.35
+      ],
+      "delay": 18.41,
+      "dur": 5.81,
+      "spin": 0,
+      "opts": {
+       "color": "#ff7a00",
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 26.679,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 29.829,
+      "dur": 7.717,
+      "spin": 0,
+      "opts": {
+       "gas": true,
+       "s": 0.72
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 40.381,
+      "dur": 9.454,
+      "spin": 0,
+      "opts": {
+       "text": "PUSH BACK!",
+       "color": "#3561d9"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 49.845,
+      "dur": 9.261,
+      "spin": 0,
+      "opts": {
+       "gas": true,
+       "s": 0.72
+      }
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       1.45,
+       -1.0,
+       0.35
+      ],
+      "delay": 50.845,
+      "dur": 8.261,
+      "spin": 0,
+      "opts": {
+       "color": "#ff7a00",
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       1.45,
+       -1.0,
+       2.55
+      ],
+      "delay": 53.645,
+      "dur": 5.461,
+      "spin": 0,
+      "opts": {
+       "up": true,
+       "color": "#3cc45a",
+       "s": 1.2
+      }
+     }
+    ]
+   },
+   {
+    "section": "space",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "NO AIR!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.985,
+      "dur": 8.183,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#1479d6",
+       "win": 5.783
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.435,
+      "dur": 5.333,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.018,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.28,
+      "dur": 8.586,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.73,
+      "dur": 10.136,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e85d00",
+       "win": 8.136
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.116,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 15.341,
+      "dur": 2.738,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "tanks",
+      "at": [
+       2.45,
+       -0.6,
+       0.0
+      ],
+      "delay": 18.079,
+      "dur": 4.22,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 24.207,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "tanks",
+      "at": [
+       2.45,
+       -0.6,
+       0.0
+      ],
+      "delay": 27.457,
+      "dur": 9.312,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "jet",
+      "at": [
+       2.4,
+       -0.6,
+       0.0
+      ],
+      "delay": 39.178,
+      "dur": 7.881,
+      "spin": 0,
+      "opts": {
+       "s": 0.85
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 47.349,
+      "dur": 12.217,
+      "spin": 0,
+      "opts": {
+       "text": "NO AIR",
+       "color": "#1d3a8a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "tanks",
+      "at": [
+       2.45,
+       -0.6,
+       0.0
+      ],
+      "delay": 55.486,
+      "dur": 4.08,
+      "spin": 0,
+      "opts": {
+       "s": 0.75
+      }
+     }
+    ]
+   },
+   {
+    "section": "stages",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STAGES!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.01,
+      "dur": 8.324,
+      "spin": 0,
+      "opts": {
+       "text": "LIGHTER",
+       "color": "#1479d6",
+       "win": 5.924
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.46,
+      "dur": 5.474,
+      "spin": 0,
+      "opts": {
+       "text": "HEAVIER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.184,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 76.364,
+      "dur": 10.496,
+      "spin": 0,
+      "opts": {
+       "text": "LIGHTER",
+       "color": "#1479d6",
+       "win": 8.496
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 76.814,
+      "dur": 8.046,
+      "spin": 0,
+      "opts": {
+       "text": "HEAVIER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 81.11,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 15.653,
+      "dur": 9.785,
+      "spin": 0,
+      "opts": {
+       "stages": 3,
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 29.112,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rocket",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 32.272,
+      "dur": 7.312,
+      "spin": 0,
+      "opts": {
+       "stages": 3,
+       "s": 0.8,
+       "leave": 0.37
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 39.524,
+      "dur": 11.282,
+      "spin": 0,
+      "opts": {
+       "text": "BIG PUSH",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 51.936,
+      "dur": 8.345,
+      "spin": 0,
+      "opts": {
+       "text": "STAGING",
+       "color": "#3561d9"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0,
+      "dur": 5.478
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 6.478,
+      "dur": 11.415,
+      "spin": 0,
+      "opts": {
+       "text": "HOT GAS",
+       "color": "#1479d6",
+       "win": 9.415
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 6.928,
+      "dur": 8.965,
+      "spin": 0,
+      "opts": {
+       "text": "WATER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 12.143,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 18.063,
+      "dur": 10.721,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#1479d6",
+       "win": 8.721
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 18.513,
+      "dur": 8.271,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 23.034,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 28.767,
+      "dur": 10.892,
+      "spin": 0,
+      "opts": {
+       "text": "LIGHTER",
+       "color": "#1479d6",
+       "win": 8.892
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 29.217,
+      "dur": 8.442,
+      "spin": 0,
+      "opts": {
+       "text": "HEAVIER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 33.909,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "gzx_ep01",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "gzx_ep01_timing.json",
+  "audio": "gzx_ep01_song.wav"
+ }
+}

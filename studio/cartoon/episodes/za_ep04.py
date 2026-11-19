@@ -99,7 +99,7 @@ SHOTS = [
     S("jungle", C("jungle", "tumble", "head", 900, -60, 20), "A picnic with my friends! Yummy! Let's go!", who="tumble", beat="goal", tag="goal: Tumble", hide=["mango", "milo"],
       fx=[("face", 0.1, "tumble", "happy"), ("hop", "w:Yummy!", "tumble"), ("trunk", "w:Let's", "tumble", -60, .4)], words=[("w:Yummy!", "YUMMY!", .25, .19, .9, "sun")]),
     S("jungle", MCL("jungle", 30), "What do we need for a picnic? A basket, or a bed?", q=True, beat="goal", tag="question: basket or bed", pause=3.2, hide=["tumble", "mango"],
-      fx=[("signs", "w:basket,", ["BASKET", "BED"], 0, "wait:2.0")]),
+      fx=[("signs", "w:basket,", ["BASKET", "BED"], 0, "wait:1.8")]),
     # ------------------------------------------------------------ the fruit: Mango hangs by her tail (fact: the tail holds her whole body, her hands are free)
     S("bigtree", WIDE, "The best fruit grows high up in the big tree. Up goes Mango!", trans="iris", tag="the big tree", cam2=(1000, 560, 1800), props=[BK(270, 930, .5, 0)],
       fx=[("to", "w:Up", "#{p}mango_w", {"y": 330, "x": 1240, "duration": 1.2, "ease": "power1.in"}, "Mango climbs up"), ("hop", "w:fruit", "tumble")],
@@ -150,7 +150,7 @@ SHOTS = [
     S("stream", C("stream", "tumble", "head", 860, -40, 20), "Oh! It wiggles! I'm not sure about this, Mango.", who="tumble", beat="obstacle1", tag="Tumble: not sure", hide=["mango", "milo"], props=[BR(), BK_ON(120)],
       fx=[("face", 0.02, "tumble", "sad"), ("trunk", "w:wiggles!", "tumble", 20, .3), ("trunk", "e:Mango.", "tumble", 0, .4)], words=[("w:sure", "NOT SURE...", .74, .2, .75, "pill")]),
     S("stream", MCL("stream", 20), "Is the bridge still, or is it wobbly?", q=True, beat="obstacle1", tag="question: still or wobbly", pause=3.2, hide=["tumble", "mango"], props=[BR()],
-      fx=[("signs", "w:still,", ["STILL", "WOBBLY"], 1, "wait:2.0")]),
+      fx=[("signs", "w:still,", ["STILL", "WOBBLY"], 1, "wait:1.8")]),
     # ------------------------------------------------------------ OBSTACLE 2: Mango runs on too fast, and the basket tips
     S("stream", C("stream", "mango", "all", 800, 40, -80), "Watch me, Tumble! I'll take the basket over. Here I go!", who="mango", beat="obstacle2", tag="Mango: watch me", hide=["tumble", "milo"], props=[BR()],
       fx=[("hop", "w:Watch", "mango"), ("face", 0.02, "mango", "happy"), ("hop", "w:go!", "mango")], words=[("w:go!", "ZOOM!", .74, .25, 1.0, "sun")]),
@@ -182,7 +182,7 @@ SHOTS = [
     S("stream", (980, 560, 1500), "Milo flies over. Easy for a bird! But elephants cannot fly.", beat="obstacle3", tag="Milo flies over", hide=["mango", "tumble"], props=[BR()],
       move={"milo": (500, 520, .7)}, fx=[("fly", "w:Milo", "milo", 1500, 500, 1.6), ("hop", "w:bird!", "milo"), ("hop", "w:elephants", "milo")], words=[("w:Easy", "EASY!", .55, .2, .9, "sun")]),
     S("stream", MCL("stream", 20), "Can an elephant fly? Yes, or no?", q=True, beat="obstacle3", tag="question: can an elephant fly", pause=3.2, hide=["tumble", "mango"], props=[BR()],
-      fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:2.0")]),
+      fx=[("signs", "w:Yes,", ["YES", "NO"], 1, "wait:1.8")]),
     # ------------------------------------------------------------ LOW MOMENT: Tumble sits down; maybe no picnic (gentle: nobody cries)
     S("stream", (360, 800, 1200), "Tumble sits down by the stream. Maybe there will be no picnic today.", beat="low", tag="Tumble sits down", hide=["milo"], move={"mango": (640, 940, .55)}, props=[BR(), BK_ON(120, 948)],
       fx=[("to", "w:sits", "#{p}tumble", {"y": 30, "duration": .6}, "Tumble sits down"), ("face", "w:sits", "tumble", "sad"), ("face", "w:Maybe", "mango", "sad")], words=[("w:picnic", "NO PICNIC?", .8, .14, .9, "pill")]),
@@ -194,7 +194,7 @@ SHOTS = [
     S("stream", C("stream", "mango", "head", 760, 0, 20), "No, Tumble. A picnic is no fun without you.", who="mango", beat="low", tag="Mango: no fun without you", hide=["tumble", "milo"], props=[BR()],
       fx=[("face", 0.02, "mango", "sad"), ("face", "w:picnic", "mango", "happy")], words=[("w:fun", "NO FUN ALONE", .74, .22, .7, "pill")]),
     S("stream", MCL("stream", 20), "What can good friends do? Go alone, or help?", q=True, beat="low", tag="question: alone or help", pause=3.2, hide=["tumble", "mango"], props=[BR()],
-      fx=[("signs", "w:alone,", ["ALONE", "HELP"], 1, "wait:2.0")]),
+      fx=[("signs", "w:alone,", ["ALONE", "HELP"], 1, "wait:1.8")]),
     # ------------------------------------------------------------ SOLUTION: Mango works it out herself
     S("stream", C("stream", "mango", "head", 760, 0, 20), "Hmm. I went too fast. And I did not hold on.", who="mango", beat="solution", tag="Mango thinks", hide=["tumble", "milo"], props=[BR()],
       fx=[("face", 0.02, "mango", "sad"), ("arm", "w:Hmm.", "mango", "r", -150), ("arm", "w:did", "mango", "r", 0)], words=[("w:Hmm.", "HMM...", .74, .22, .9, "pill")]),
@@ -251,9 +251,9 @@ SHOTS = [
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 130, 0), "When a friend feels wobbly, we can slow down, and go together.", beat="ending", tag="the lesson", hide=["mama", "tumble", "mango"],
       fx=[("hop", "w:together.", "milo")], words=[("w:slow", "SLOW DOWN", .73, .16, .75, "pill"), ("w:together.", "TOGETHER", .73, .3, .75, "sun")]),
     S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "Do you remember? What did Mango hold the vine with? Her tail, or her ear?", q=True, beat="ending", tag="question: tail or ear", pause=3.2,
-      hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:tail,", ["TAIL", "EAR"], 0, "wait:2.0")]),
-    S("zoo_eve", C("zoo_eve", "milo", "body", 900, 40, 0), "And how did they cross the bridge? Fast, or slow?", q=True, beat="ending", tag="question: fast or slow", pause=3.2,
-      hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("signs", "w:Fast,", ["FAST", "SLOW"], 1, "wait:2.0")]),
+      hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 830, 40, -60), fx=[("hop", "w:remember?", "milo"), ("signs", "w:tail,", ["TAIL", "EAR"], 0, "wait:1.8")]),
+    S("zoo_eve", C("zoo_eve", "milo", "body", 1080, -160, -40), "And how did they cross the bridge? Fast, or slow?", q=True, beat="ending", tag="question: fast or slow", pause=3.2,
+      hide=["mama", "tumble", "mango"], cam2=C("zoo_eve", "milo", "body", 1000, -160, -80), fx=[("hop", "w:bridge?", "milo"), ("signs", "w:Fast,", ["FAST", "SLOW"], 1, "wait:1.8")]),
     S("zoo_eve", (980, 560, 1880), "One step, two steps, slow and steady. Hooray, hooray, the picnic was ready!", beat="ending", tag="the closing rhyme", cam2=(1000, 560, 1780),
       fx=[("hop", "w:Hooray,", "milo"), ("hop", "w:hooray,", "tumble"), ("hop", "w:picnic", "mango"), ("nod", "w:ready!", "mama")], words=[("w:slow", "SLOW AND STEADY", .5, .15, .6, "pill")]),
     S("zoo_eve", WIDE, who="", sing=SING_END_A, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
@@ -267,9 +267,9 @@ SHOTS = [
 
 # thumbnail (thumb.py): the example in the picture (Mango holds the rope with her tail and Tumble's trunk with her hand), 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "za_ep04": {"place": "stream", "cam": (900, 700, 1200),
+    "za_ep04": {"place": "stream", "cam": (930, 690, 1100),
                 "actors": [("tumble", 600, 930, .6, False, ''),
                            ("monkey_grip", 1000, 934, .55, False, 'gsap.set("#P-al",{rotation:60,svgOrigin:"-58 -206"});')],
-                "props": [(A.bridge, 970, 930, 1.0)],
-                "words": [("HOLD ON!", 1200, 330, 190, "sun")]},
+                "props": [(A.bridge, 1080, 930, 1.0)],
+                "words": [("HOLD ON!", 1380, 250, 200, "sun")]},
 }

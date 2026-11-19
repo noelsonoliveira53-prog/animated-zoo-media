@@ -2687,5 +2687,18 @@
   "res": "3840x2160",
   "watermark": "tl",
   "note": "Claimed Nov 18 11:16 PM ET by the one-off catch-up lesson build (session_014CFVfUhnJESbmSWZXuhZ9t); in production, NOT uploaded."
+ },
+ {
+  "file": "cartoon/za_ep05.mp4",
+  "title": "Who Took Mango's Breakfast?",
+  "date": "2026-11-22",
+  "time": "5:30 AM",
+  "thumb": "brand/zoo/thumb_za_ep05.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 18 11:30 PM ET by the one-off catch-up adventure build (session_014CFVfVfpWnyGfoZGyRpN4s); in production, NOT uploaded."
  }
 ]

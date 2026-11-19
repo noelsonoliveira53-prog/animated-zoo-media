@@ -252,6 +252,7 @@ class Film:
                 while tt < s["t1"] - .5: js.append(f'tl.to("#{p}-ear",{{rotation:-9,svgOrigin:"{R["ear"]}",duration:.14,yoyo:true,repeat:3}},{tt:.2f});'); tt += r.uniform(2.0, 3.6)
             if R.get("neck") and not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.2,svgOrigin:"{R["neck"]}"}},{{rotation:1.8,duration:1.2,yoyo:true,repeat:{max(1, int(d / 1.2) | 1)},ease:"sine.inOut"}},{t0:.2f});')
             if kind == "monkey_hang": js.append(f'tl.fromTo("#{p}-swing",{{rotation:-5,svgOrigin:"0 0"}},{{rotation:5,duration:1.0,yoyo:true,repeat:{max(1, int(d / 1.0) | 1)},ease:"sine.inOut"}},{t0:.2f});')
+            if R.get("hover"): js.append(f'tl.fromTo("#{p}-hover",{{y:0}},{{y:{-R["hover"]},duration:1.25,yoyo:true,repeat:{max(1, int(d / 1.25) | 1)},ease:"sine.inOut"}},{t0:.2f});')
             eyes = [f"{p}-{e}" for e in R["eyes"]]
             tb = t0 + r.uniform(.5, 1.8)
             while tb < s["t1"] - .3:
@@ -296,6 +297,7 @@ class Film:
                 while tt < s["t1"] - .5: js.append(f'tl.to("#{p}-ear",{{rotation:-9,svgOrigin:"{G["ear"]}",duration:.14,yoyo:true,repeat:3}},{tt:.3f});'); tt += BEAT * r.choice((4, 5, 6))
             if G.get("neck") and not busy: js.append(f'tl.fromTo("#{p}-neck",{{rotation:-1.2,svgOrigin:"{G["neck"]}"}},{{rotation:1.8,duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')
             if kind == "monkey_hang": js.append(f'tl.fromTo("#{p}-swing",{{rotation:-5,svgOrigin:"0 0"}},{{rotation:5,duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')
+            if G.get("hover"): js.append(f'tl.fromTo("#{p}-hover",{{y:0}},{{y:{-G["hover"]},duration:{2 * BEAT:.4f},yoyo:true,repeat:{R(2 * BEAT)},ease:"sine.inOut"}},{t0:.3f});')      # a rig that floats (Gizmo, Nov 19): a slow bob, two beats up, two down
             eyes = [f"{p}-{e}" for e in G["eyes"]]
         else:
             js.append(f'tl.to("#{p}",{{scaleY:1.012,svgOrigin:"0 0",duration:{BEAT:.4f},yoyo:true,repeat:{R(BEAT)},ease:"sine.inOut"}},{t0:.3f});')
@@ -519,6 +521,11 @@ class Film:
         else: css = css.replace("CAPL", "150").replace("CAPB", "44").replace("CAPS", "62").replace("CAPO", "12").replace("SIGNS", "96")
         if self.portrait: wm = '<img id="wm" src="assets/watermark_short.png" style="left:273px;top:116px;width:533px;height:85px">'
         else: wm = '<img id="wm" src="assets/watermark.png" style="left:20px;top:18px;width:387px;height:68px">'
+        if self.ep.get("wm"):       # another channel's mark: its own width (the page is half the 4K size, as watermark.place() lays it on a finished file)
+            from PIL import Image
+            mw, mh = Image.open(os.path.join(REPO, self.ep["wm"], "watermark_short.png" if self.portrait else "watermark.png")).size
+            wm = (f'<img id="wm" src="assets/watermark_short.png" style="left:{(1080 - mw / 2) / 2:.1f}px;top:116px;width:{mw / 2:.1f}px;height:{mh / 2:.1f}px">' if self.portrait
+                  else f'<img id="wm" src="assets/watermark.png" style="left:20px;top:18px;width:{mw / 2:.1f}px;height:{mh / 2:.1f}px">')
         band = ""
         if self.portrait and title_band: band = f'<div id="band"><div class="l1">{title_band[0]}</div><div class="l2">{title_band[1]}</div></div>'
         return f"""<!doctype html><html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width={VW}, height={VH}"/><script src="assets/gsap.min.js"></script>
@@ -637,7 +644,7 @@ def main():
     print(json.dumps(res, indent=1))
     if "--plan" in sys.argv: sys.exit(1 if res["fails"] else 0)
     for f, d in ((os.path.join(STUDIO, "vendor/package/dist/gsap.min.js"), "gsap.min.js"), (os.path.join(STUDIO, "vendor/f/package/files/baloo-2-latin-800-normal.woff2"), "baloo.woff2"),
-                 (os.path.join(REPO, "brand/zoo/watermark.png"), "watermark.png"), (os.path.join(REPO, "brand/zoo/watermark_short.png"), "watermark_short.png")):
+                 (os.path.join(REPO, ep.get("wm", "brand/zoo") + "/watermark.png"), "watermark.png"), (os.path.join(REPO, ep.get("wm", "brand/zoo") + "/watermark_short.png"), "watermark_short.png")):      # EP["wm"]: another channel's mark (Gizmo: "brand/gizmo")
         shutil.copy(f, os.path.join(proj, "assets", d))
     for f in ("hyperframes.json", "meta.json", "package.json"): shutil.copy(os.path.join(STUDIO, "base", f), os.path.join(proj, f))
     open(os.path.join(proj, "index.html"), "w").write(html)

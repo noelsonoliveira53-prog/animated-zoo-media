@@ -14,10 +14,11 @@ if (!window.__origClick) {
   };
 }
 window.__RAW = () => 'https://raw.githubusercontent.com/noelsonoliveira53-prog/animated-zoo-media/' + window.__SHA + '/';
+// zlive(title): run it on /videos/upload for long videos AND after navigating to /videos/short for Shorts (the in-page Shorts chip did not switch the list, Nov 19).
 // zlive(title): the rows of Studio's content list that carry this title, with their visibility. RUN IT ON THE CONTENT LIST BEFORE ARMING A FILE (owner, Nov 17: never upload a video twice).
 // live = rows that are Scheduled or Public. A new video needs live = []. A replacement needs live = [the one old id]; after it, live = [the new id] and the old row reads Private.
 window.zlive = (title) => { const norm = x => (x || '').replace(/\s+/g, ' ').trim().toLowerCase().replace(/^old \(replaced\): /, ''); const rows = [...document.querySelectorAll('ytcp-video-row')].map(r => { const a = r.querySelector('a#video-title') || r.querySelector('a[href*="/video/"]'); return { id: ((a && a.href || '').split('/video/')[1] || '').split('/')[0], title: (a && a.innerText || '').trim(), vis: ((r.querySelector('.tablecell-visibility') || {}).innerText || '').replace(/\s+/g, ' ').trim(), date: ((r.querySelector('.tablecell-date') || {}).innerText || '').replace(/\s+/g, ' ').trim() }; });
-  const same = rows.filter(r => norm(r.title) === norm(title)); return { rows_read: rows.length, same, live: same.filter(r => /Scheduled|Public/.test(r.vis)).map(r => r.id) }; };
+  const same = rows.filter(r => norm(r.title) === norm(title)); return { rows_read: rows.length, same, live: same.filter(r => /Scheduled|Public|Pending|Processing|Draft/.test(r.vis))   /* a row still processing reads Pending (Nov 19): it is live */.map(r => r.id) }; };
 window.armFile = async (path, name, type) => { const r = await fetch(window.__RAW() + path); if (!r.ok) return 'HTTP ' + r.status; const b = await r.blob(); window.__q.push(new File([b], name, { type })); return b.size; };
 window.zmeta = async (file) => { const r = await fetch(window.__RAW() + 'studio/' + (file.includes('short') ? 'upload_plan_shorts_zoo.json' : 'upload_plan_3d.json')); const p = await r.json(); const items = Array.isArray(p) ? p : (p.videos || p.items); return items.find(e => e.file === file); };
 window.zfill = async (file) => { const m = await window.zmeta(file); const T = m.title, D = m.description; const d = document.querySelector('ytcp-uploads-dialog');

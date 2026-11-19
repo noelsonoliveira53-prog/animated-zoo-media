@@ -1,0 +1,7 @@
+  judged: level, silences, tempo, balance, and long loud pure tones only; NOT judged because a voice is speaking: short tones, clashes, clicks (use --episode, or --music-only for a file without speech)
+321.62 s   key heard: {'key': 'C major', 'fit': 0.87}   expected: C   held tones judged: 295   voice-like tones left out: 1363
+  beat: {'heard_bpm': np.float64(63.4), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.35, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.881)}
+  clicks at: []  silences: []
+  level: {'lufs': -15.1, 'range_lu': 3.7, 'true_peak_db': -1.4, 'clipped_samples': 0, 'quietest_second_db': np.float64(-21.9), 'loudest_second_db': np.float64(-10.1)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.54, 'share_below_120hz': 0.01, 'share_above_4khz': 0.04}
+  picture: /home/claude/animated-zoo-media/studio/cartoon/out/za_ep04/za_ep04_listen.png

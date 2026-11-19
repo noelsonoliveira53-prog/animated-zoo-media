@@ -1,0 +1,19 @@
+  sung or hummed: song: step by step  210.0-220.0 s: 
+  sung or hummed: song: hooray  303.75-308.75 s: 
+  sung or hummed: song: side by side  309.38-314.38 s: 
+  judged: everything (no speaking voice in the file)
+322.1 s   key heard: {'key': 'C major', 'fit': 0.96}   expected: C   held tones judged: 762   voice-like tones left out: 0
+  CLASH              27.39 s  E4 + F2 together for 0.55 s
+  CLASH              27.39 s  E4 + F3 together for 0.55 s
+  CLASH              37.42 s  E4 + F2 together for 0.3 s
+  CLASH             107.39 s  E4 + F2 together for 0.6 s
+  CLASH             127.40 s  E4 + F2 together for 0.55 s
+  CLASH             157.40 s  E4 + F2 together for 0.38 s
+  CLASH             257.37 s  E4 + F3 together for 0.6 s
+  CLASH             257.41 s  E4 + F2 together for 0.26 s
+  CLASH             287.40 s  E4 + F2 together for 0.55 s
+  beat: {'heard_bpm': np.float64(63.9), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.77, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.888)}
+  clicks at: []  silences: []
+  level: {'lufs': -23.3, 'range_lu': 20.3, 'true_peak_db': -2.4, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-12.8)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.75, 'share_below_120hz': 0.02, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep04_music_stem_listen.png

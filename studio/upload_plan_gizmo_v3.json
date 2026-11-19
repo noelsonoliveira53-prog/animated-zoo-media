@@ -1,3 +1,54 @@
 [
- {"file": "gizmo/live_songs_before_v3", "status": "published", "format": "3d_singalong", "note": "The nine videos on Gizmo Explains on Nov 19 2026 (read in Studio Nov 19 morning): songs and one 5-fact video. Listed so the guard knows their titles; never re-uploaded.", "titles": ["How Do Magnets Work? Science Song for Kids with Gizmo", "Why Is There Day and Night? Science Song for Kids with Gizmo", "Meet Your 5 Senses! Body Song for Kids with Gizmo", "Gizmo Makes a Rainbow! Science Song for Kids", "Why Is the Sky Blue? Science Song for Kids with Gizmo", "Sink or Float? Science Song for Kids with Gizmo the Robot", "Weather Song for Kids! Sunny, Rainy, Windy with Gizmo", "The Planets Song for Kids! 8 Planets with Gizmo the Robot", "Planets for Kids! 5 Space Surprises with Gizmo"], "video_ids": ["BS_8eEOu5k0", "aRNY0kmHsls", "sTpGdlzH2BM", "qJ5hnGSX8jw", "QHslAPdRRFk", "vqGEuVjyLZA", "cbOHkcFNEnI", "QitKjetUYqU", "sdc0QSxW6Xg"]}
+ {
+  "file": "gizmo/live_songs_before_v3",
+  "status": "published",
+  "format": "3d_singalong",
+  "note": "The nine videos on Gizmo Explains on Nov 19 2026 (read in Studio Nov 19 morning): songs and one 5-fact video. Listed so the guard knows their titles; never re-uploaded.",
+  "titles": [
+   "How Do Magnets Work? Science Song for Kids with Gizmo",
+   "Why Is There Day and Night? Science Song for Kids with Gizmo",
+   "Meet Your 5 Senses! Body Song for Kids with Gizmo",
+   "Gizmo Makes a Rainbow! Science Song for Kids",
+   "Why Is the Sky Blue? Science Song for Kids with Gizmo",
+   "Sink or Float? Science Song for Kids with Gizmo the Robot",
+   "Weather Song for Kids! Sunny, Rainy, Windy with Gizmo",
+   "The Planets Song for Kids! 8 Planets with Gizmo the Robot",
+   "Planets for Kids! 5 Space Surprises with Gizmo"
+  ],
+  "video_ids": [
+   "BS_8eEOu5k0",
+   "aRNY0kmHsls",
+   "sTpGdlzH2BM",
+   "qJ5hnGSX8jw",
+   "QHslAPdRRFk",
+   "vqGEuVjyLZA",
+   "cbOHkcFNEnI",
+   "QitKjetUYqU",
+   "sdc0QSxW6Xg"
+  ]
+ },
+ {
+  "file": "cartoon/gc_ep01.mp4",
+  "channel": "gizmo",
+  "title": "How Does a Seed Grow Into a Plant?",
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "cartoon test, waiting for Noelson's verdict. Claimed Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off cartoon test build of Gizmo Explains, Noelson Nov 19 12:37 AM 'create a cartoon version of that and let's test it'). Topic: the third of docs/GIZMO_RUN.md 'Topics' (the first two, rockets and rain, are left to tonight's two 3D explainers). Never uploaded until Noelson has watched it and said yes."
+ },
+ {
+  "file": "cartoon/gc_ep01_short1.mp4",
+  "channel": "gizmo",
+  "title": "What Is Inside a Seed?",
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "cartoon test, waiting for Noelson's verdict. Claimed Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off cartoon test build of Gizmo Explains, Noelson Nov 19 12:37 AM 'create a cartoon version of that and let's test it'). Topic: the third of docs/GIZMO_RUN.md 'Topics' (the first two, rockets and rain, are left to tonight's two 3D explainers). Never uploaded until Noelson has watched it and said yes."
+ }
 ]

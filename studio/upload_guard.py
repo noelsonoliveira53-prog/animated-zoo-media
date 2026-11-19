@@ -139,12 +139,29 @@ def themes():
     ns = {}; exec(compile(ast.Module([node], []), "themes", "exec"), ns); return ns["THEMES"]
 
 
-def free_slots(es, kind, n, start):
+ANIMALS = set("lion elephant giraffe zebra hippo tiger bear panda monkey fox koala horse pig cow rhino camel octopus penguin flamingo meerkat snail ant "
+              "owl frog tapir bat anteater macaw eagle dinosaur rex shark whale dolphin turtle sloth kangaroo seal duck chicken sheep goat rabbit".split())
+NAMES = {"mango": "monkey", "tumble": "elephant", "sandy": "camel", "jungle": "rainforest", "rainforest": "rainforest", "dino": "dinosaur"}
+
+
+def animals(t):
+    """The animals (and the rainforest topic) a title is about: Mango in the title = monkey, Tumble = elephant (owner's rule: never two uploads on one animal or topic in a day)."""
+    w = {re.sub(r"'s$", "", x) for x in re.findall(r"[a-z']+", norm(t))}; w |= {re.sub(r"s$", "", x) for x in w}
+    return {NAMES.get(x, x) for x in w if x in ANIMALS or x in NAMES}
+
+
+def free_slots(es, kind, n, start, title=None, avoid_days=()):
+    """Free slots of a kind from start on. With a title: skip days that already carry an upload on the same animal/topic, and give each slot its own day
+    (three Shorts of one lesson never share a day, and never the lesson's own day: avoid_days)."""
     taken = {(e.get("date"), e.get("time")) for e in es if e.get("date") and is_short(e) == (kind == "short") and e.get("status") in LIVE + ("to_upload", "in_production")}
+    mine = animals(title) if title else set()
+    busy = {e.get("date") for e in es if mine and e.get("date") and e.get("status") in LIVE + ("to_upload", "in_production") and animals(e.get("title")) & mine}
     out = []; d = start
     while len(out) < n:
-        for t in SLOTS[kind]:
-            if (d.isoformat(), t) not in taken and len(out) < n: out.append({"date": d.isoformat(), "time": t})
+        day = d.isoformat()
+        if not (title and (day in busy or day in avoid_days)):
+            for t in SLOTS[kind]:
+                if (day, t) not in taken and len(out) < n and not (title and any(o["date"] == day for o in out)): out.append({"date": day, "time": t})
         d += datetime.timedelta(days=1)
     return out
 
@@ -159,8 +176,10 @@ def nxt(kind):
     pre = "zc_ep" if kind == "lesson" else "za_ep"
     nums = [int(m.group(1)) for e in es for m in [re.search(pre + r"(\d+)", e["file"])] if m] + [int(m.group(1)) for f in os.listdir(os.path.join(HERE, "cartoon/episodes")) for m in [re.match(pre + r"(\d+)\.py", f)] if m]
     start = today() + datetime.timedelta(days=2)
-    out = {"kind": kind, "id": f"{pre}{max(nums + [0]) + 1:02d}", "slot": free_slots(es, kind, 1, start)[0]}
-    if kind == "lesson": out["short_slots"] = free_slots(es, "short", 3, start + datetime.timedelta(days=1))
+    ttl = pick[1][0] if pick else None
+    out = {"kind": kind, "id": f"{pre}{max(nums + [0]) + 1:02d}", "slot": free_slots(es, kind, 1, start, ttl)[0]}
+    if kind == "lesson": out["short_slots"] = free_slots(es, "short", 3, start + datetime.timedelta(days=1), ttl or "", (out["slot"]["date"],))
+    if ttl: out["same_day_rule"] = f"slots skip days that already carry {sorted(animals(ttl)) or 'nothing named in the title'}; each Short on its own day, not the lesson's day"
     fmt = "cartoon_lesson" if kind == "lesson" else "cartoon_adventure"; lv = [o for o in es if live(o) and is_talk(o)]
     out["unfinished_first"] = [{"file": e["file"], "title": e.get("title"), "slot": f'{e.get("date")} {e.get("time")}'} for e in es if e.get("format") == fmt and e.get("status") == "in_production"
                                and not any(same_topic(e.get("title"), o.get("title")) for o in lv)]      # finish these before starting a new title (docs/cartoon/runs/<id>.md says where each stopped); a repeat of a live topic is not finished, it is held

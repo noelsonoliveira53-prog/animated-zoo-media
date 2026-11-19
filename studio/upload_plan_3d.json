@@ -2776,11 +2776,11 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep08.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 22, 2026 at 9:30 AM', custom thumbnail, made for kids.",
   "description": "Who lives at the top of the jungle? Milo the bluebird flies up the rainforest, floor by floor, with Mango the spider monkey: from the dark forest floor to the sunny treetops! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a rainforest has four layers (the forest floor, the understory, the canopy and the emergent layer), that the forest floor is the darkest layer, where anteaters sniff out ants, that understory plants have big leaves and tree frogs like the wet air, that spider monkeys and macaws pick fruit in the canopy, and that the emergent layer is the sunniest, where harpy eagles and butterflies fly.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Tropical Research Institute (rainforest layers); National Geographic Education (rain forest); TIME for Kids (jungle layers); SeaWorld (giant anteater).",
   "tags": [
    "rainforest layers",
@@ -2797,6 +2797,9 @@
    "The Animated Zoo"
   ],
   "thumb_text": "WAY UP HIGH!",
-  "seconds": 318.8
+  "seconds": 318.8,
+  "video_id": "YWVWVgrELdI",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  }
 ]

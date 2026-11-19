@@ -1,0 +1,49 @@
+{
+ "length": 358.4,
+ "shots": 69,
+ "visual_changes": 375,
+ "mean_gap": 0.96,
+ "longest_gap": 5.25,
+ "longest_gap_at": 141.3,
+ "over_6s": [],
+ "places": [
+  "canopy",
+  "bigtree",
+  "jungle",
+  "stream",
+  "hollow",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 10,
+ "longest_without_question": 62.8,
+ "first_words_at": 0.42,
+ "shot_mean": 5.19,
+ "beats": {
+  "hook": 1,
+  "goal": 5,
+  "fact": 4,
+  "obstacle1": 8,
+  "song": 3,
+  "obstacle2": 7,
+  "obstacle3": 5,
+  "low": 3,
+  "solution": 14,
+  "ending": 13
+ },
+ "fails": [],
+ "words_placed": "783/783",
+ "sync": {
+  "pauses_checked": 66,
+  "onset_err_mean_ms": 25.6,
+  "onset_err_max_ms": 90.0,
+  "suspect_words": [],
+  "cuts": 68,
+  "cuts_on_the_half_beat": 68,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}

@@ -1,0 +1,23 @@
+  sung or hummed: song: the clue tune  94.38-104.38 s: G3 C3 E3 E5 G5 E5 G5 G3 B3 D4 F3 C4 A3 G5 E3 G3 C3
+  sung or hummed: song: the happy hum  190.0-195.0 s: 
+  sung or hummed: song: the sharing tune  300.0-310.0 s: 
+  judged: everything (no speaking voice in the file)
+358.91 s   key heard: {'key': 'C major', 'fit': 0.93}   expected: C   held tones judged: 887   voice-like tones left out: 0
+  CLASH               7.42 s  E4 + F2 together for 0.3 s
+  CLASH              37.42 s  E4 + F2 together for 0.3 s
+  CLASH              37.76 s  F2 + E4 together for 0.26 s
+  CLASH              57.39 s  E4 + F4 together for 0.64 s
+  CLASH              57.43 s  E4 + F2 together for 0.6 s
+  CLASH             137.43 s  E4 + F2 together for 0.55 s
+  CLASH             147.41 s  E4 + F2 together for 0.3 s
+  CLASH             147.41 s  E4 + F4 together for 0.3 s
+  CLASH             183.64 s  B4 + C6 together for 0.25 s
+  CLASH             207.40 s  E4 + F2 together for 0.56 s
+  CLASH             267.39 s  E4 + F2 together for 0.51 s
+  CLASH             357.42 s  E4 + F2 together for 0.3 s
+  CLASH             357.76 s  F2 + E4 together for 0.26 s
+  beat: {'heard_bpm': np.float64(95.4), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.76, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.994)}
+  clicks at: []  silences: []
+  level: {'lufs': -23.5, 'range_lu': 20.4, 'true_peak_db': -2.4, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.6)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.74, 'share_below_120hz': 0.02, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep05_music_stem_listen.png

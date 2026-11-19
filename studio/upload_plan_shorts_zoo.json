@@ -1001,7 +1001,7 @@
  {
   "file": "cartoon/zc_ep04_short3.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep04",
   "res": "2160x3840",
@@ -1009,7 +1009,7 @@
   "watermark": "top",
   "date": "2026-11-24",
   "time": "11:30 AM",
-  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 18 by the daily lesson build (session 014CFVfYDQcBBoZDKLmprW8F, took over the unfinished Nov 17 reservation): stills of every shot (16:9 and 9:16), frames of the finished file (answer reveals included), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep04.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 24, 2026 at 11:30 AM', custom thumbnail, made for kids.",
   "title": "What Is Under a Monkey's Tail Tip?",
   "description": "What is under the tip of a spider monkey's tail? Little lines, just like the lines on your fingertip, and every monkey has its own! Plus four long fingers that hook, and a baby that holds on to its mama's tail. A quick animal fact for kids from the lesson “Why Do Monkeys Have Long Tails?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys).",
   "tags": [
@@ -1025,7 +1025,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "LIKE YOURS!",
-  "seconds": 86.5
+  "seconds": 86.5,
+  "video_id": "VJLdIpc6DUM",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep05_short1.mp4",

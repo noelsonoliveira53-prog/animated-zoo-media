@@ -2633,7 +2633,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep22.png",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "hold_3d_cap",
   "format": "3d_lesson",
   "duration": 327.2,
   "watermark": "tl",
@@ -2642,7 +2642,8 @@
     309.8,
     316.3
    ]
-  ]
+  ],
+  "note": "Nov 19 daily run: hold_3d_cap (90-day plan, Nov 18: no new 3D lessons uploaded; it is not on YouTube)."
  },
  {
   "file": "cartoon/za_ep04.mp4",

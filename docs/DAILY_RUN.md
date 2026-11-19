@@ -14,6 +14,11 @@ written, rendered, titled and uploaded.
 
 ## Standing rules from Noelson
 
+**90-DAY PLAN (Noelson, Nov 18, 2026): `docs/GROWTH_90D.md`.** It overrides the older rules below wherever they differ: at most ONE 3D upload a
+day (the 3:30 PM song); no new 3D lessons, unuploaded ones `hold_3d_cap`; a long slot with no cartoon video ready STAYS EMPTY (no 3D lesson fills it);
+compilations every 2 days once Noelson approves the first; Earn-tab progress in `docs/YPP_PROGRESS.md` every run; Monday weekly review
+(`docs/REVIEW_WEEKLY.md`), monthly review on the 1st.
+
 **CARTOON FORMATS APPROVED (Noelson, Nov 16, 3:36 PM: "cartoon formats are approved, build and post").** Three pillars: songs stay 3D;
 adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Cartoon pipeline"); Shorts are cartoon and vertical.
 - Posting: cartoon videos are plan entries like any other (`upload_plan_3d.json` formats `cartoon_adventure`, `cartoon_lesson`;

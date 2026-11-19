@@ -20,6 +20,8 @@ import json, os, re, sys, ast, datetime, subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(HERE)
 PLANS = ["upload_plan_3d.json", "upload_plan_shorts_zoo.json"]
+if "--channel" in sys.argv and sys.argv[sys.argv.index("--channel") + 1] == "gizmo":      # Gizmo Explains (owner, Nov 19 2026): its own plan; every check is per channel
+    PLANS = ["upload_plan_gizmo_v3.json"]; sys.argv[sys.argv.index("--channel"):sys.argv.index("--channel") + 2] = []
 LIVE = ("scheduled", "published", "public")
 NEVER = ("hold_review", "hold_fix", "hold_fact_check", "in_production", "paused_channel", "rendering_variety", "rejected", "dropped", "private", "spare_song_cut")
 STOP = set("a an the and or of to in on at for with by from is are do does did can what why how who whose where when which this that it its his her "

@@ -12,8 +12,8 @@
  ],
  "picture_boards": [
   "paper_pink",
-  "paper",
-  "paper_blue"
+  "paper_blue",
+  "paper"
  ],
  "questions": 8,
  "longest_without_question": 20.3,

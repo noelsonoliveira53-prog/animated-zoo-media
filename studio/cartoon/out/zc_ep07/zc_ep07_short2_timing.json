@@ -164,8 +164,8 @@
   ],
   "picture_boards": [
    "paper_pink",
-   "paper",
-   "paper_blue"
+   "paper_blue",
+   "paper"
   ],
   "questions": 8,
   "longest_without_question": 20.3,
@@ -206,9 +206,9 @@
    "the tallest tree bigtree wide"
   ],
   [
-   3.23,
+   3.21,
    "action",
-   "tumble walks"
+   "tumble hops"
   ],
   [
    5.79,
@@ -337,13 +337,13 @@
   ],
   [
    28.44,
-   "new shot",
-   "the tallest tree count the three"
+   "new place",
+   "the picture board (blue) count the three"
   ],
   [
    29.9,
    "action",
-   "sister hops"
+   "big sister hops"
   ],
   [
    29.9,
@@ -353,7 +353,7 @@
   [
    30.14,
    "action",
-   "tumble hops"
+   "Tumble hops"
   ],
   [
    30.14,
@@ -363,7 +363,7 @@
   [
    30.38,
    "action",
-   "auntie nods"
+   "Auntie hops"
   ],
   [
    30.38,
@@ -372,7 +372,7 @@
   ],
   [
    31.25,
-   "new shot",
+   "new place",
    "the tallest tree Auntie's trunk"
   ],
   [
@@ -558,7 +558,7 @@
   [
    66.25,
    "new place",
-   "the tallest tree question 5"
+   "the picture board (blue) question 5"
   ],
   [
    68.41,
@@ -593,7 +593,7 @@
   [
    73.12,
    "new shot",
-   "the tallest tree answer 5"
+   "the picture board (blue) answer 5"
   ],
   [
    73.29,
@@ -603,16 +603,16 @@
   [
    73.82,
    "action",
-   "auntie nods"
+   "Auntie hops"
   ],
   [
    74.63,
    "action",
-   "sister hops"
+   "big sister hops"
   ],
   [
    75.62,
-   "new place",
+   "new shot",
    "the picture board (blue) board: stood up"
   ],
   [
@@ -1060,7 +1060,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "Let's count them. One, two, three!",
    "t0": 28.4375,
    "t1": 31.25,
@@ -1594,7 +1594,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "How many helpers are with Tumble? One, or two?",
    "t0": 66.25,
    "t1": 73.125,
@@ -1655,7 +1655,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "Two! Auntie and big sister.",
    "t0": 73.125,
    "t1": 75.625,

@@ -530,7 +530,7 @@
    "savanna",
    "zoo",
    "bigtree",
-   "jungle",
+   "jungle_path",
    "river",
    "zoo_eve"
   ],
@@ -1128,9 +1128,9 @@
    "the tallest tree bigtree wide"
   ],
   [
-   110.72,
+   110.73,
    "action",
-   "tumble walks"
+   "tumble hops"
   ],
   [
    113.31,
@@ -1259,13 +1259,13 @@
   ],
   [
    135.94,
-   "new shot",
-   "the tallest tree count the three"
+   "new place",
+   "the picture board (blue) count the three"
   ],
   [
    137.42,
    "action",
-   "sister hops"
+   "big sister hops"
   ],
   [
    137.42,
@@ -1275,7 +1275,7 @@
   [
    137.66,
    "action",
-   "tumble hops"
+   "Tumble hops"
   ],
   [
    137.66,
@@ -1285,7 +1285,7 @@
   [
    137.9,
    "action",
-   "auntie nods"
+   "Auntie hops"
   ],
   [
    137.9,
@@ -1294,7 +1294,7 @@
   ],
   [
    138.75,
-   "new shot",
+   "new place",
    "the tallest tree Auntie's trunk"
   ],
   [
@@ -1480,7 +1480,7 @@
   [
    173.75,
    "new place",
-   "the tallest tree question 5"
+   "the picture board (blue) question 5"
   ],
   [
    175.93,
@@ -1515,7 +1515,7 @@
   [
    180.62,
    "new shot",
-   "the tallest tree answer 5"
+   "the picture board (blue) answer 5"
   ],
   [
    180.81,
@@ -1525,16 +1525,16 @@
   [
    181.34,
    "action",
-   "auntie nods"
+   "Auntie hops"
   ],
   [
    182.15,
    "action",
-   "sister hops"
+   "big sister hops"
   ],
   [
    183.12,
-   "new place",
+   "new shot",
    "the picture board (blue) board: stood up"
   ],
   [
@@ -1605,7 +1605,7 @@
   [
    197.81,
    "new place",
-   "the green jungle jungle wide"
+   "the jungle path jungle wide"
   ],
   [
    198.5,
@@ -1620,7 +1620,7 @@
   [
    202.19,
    "new shot",
-   "the green jungle Grandma leads"
+   "the jungle path Grandma leads"
   ],
   [
    203.52,
@@ -1650,7 +1650,7 @@
   [
    209.38,
    "new place",
-   "the green jungle question 6"
+   "the jungle path question 6"
   ],
   [
    210.82,
@@ -1685,7 +1685,7 @@
   [
    215.94,
    "new shot",
-   "the green jungle answer 6"
+   "the jungle path answer 6"
   ],
   [
    216.02,
@@ -1700,7 +1700,7 @@
   [
    219.06,
    "new shot",
-   "the green jungle to water and food"
+   "the jungle path to water and food"
   ],
   [
    219.16,
@@ -1730,7 +1730,7 @@
   [
    222.19,
    "new shot",
-   "the green jungle follow the leader"
+   "the jungle path follow the leader"
   ],
   [
    222.29,
@@ -1755,7 +1755,7 @@
   [
    225.31,
    "new shot",
-   "the green jungle walk and stop"
+   "the jungle path walk and stop"
   ],
   [
    227.11,
@@ -1780,7 +1780,7 @@
   [
    229.38,
    "new shot",
-   "the green jungle march along"
+   "the jungle path march along"
   ],
   [
    231.61,
@@ -4094,7 +4094,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "Let's count them. One, two, three!",
    "t0": 135.9375,
    "t1": 138.75,
@@ -4628,7 +4628,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "How many helpers are with Tumble? One, or two?",
    "t0": 173.75,
    "t1": 180.625,
@@ -4689,7 +4689,7 @@
    "sung": false
   },
   {
-   "place": "bigtree",
+   "place": "paper_blue",
    "say": "Two! Auntie and big sister.",
    "t0": 180.625,
    "t1": 183.125,
@@ -4984,7 +4984,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Meet Grandma. She is the oldest elephant in the herd.",
    "t0": 197.8125,
    "t1": 202.1875,
@@ -5050,7 +5050,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma is the leader of the herd.",
    "t0": 202.1875,
    "t1": 205.0,
@@ -5167,7 +5167,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Who leads the herd? Tumble, or Grandma?",
    "t0": 209.375,
    "t1": 215.9375,
@@ -5218,7 +5218,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma! Everyone follows Grandma.",
    "t0": 215.9375,
    "t1": 219.0625,
@@ -5254,7 +5254,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma leads the herd to water and food.",
    "t0": 219.0625,
    "t1": 222.1875,
@@ -5310,7 +5310,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Follow the leader! Step, step, step.",
    "t0": 222.1875,
    "t1": 225.3125,
@@ -5356,7 +5356,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma decides when to walk, and when to stop.",
    "t0": 225.3125,
    "t1": 229.375,
@@ -5417,7 +5417,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Can you march like an elephant? Stomp, stomp, stomp!",
    "t0": 229.375,
    "t1": 233.75,

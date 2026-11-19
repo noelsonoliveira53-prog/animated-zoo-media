@@ -39,3 +39,14 @@ def star(pid, col="#ffd23f"):
     import math
     pts = " ".join(f"{(60 if k % 2 == 0 else 26) * math.sin(math.pi * k / 5):.0f},{-(60 if k % 2 == 0 else 26) * math.cos(math.pi * k / 5):.0f}" for k in range(10))
     return f'<g id="{pid}"><polygon points="{pts}" fill="{col}" stroke="{INK}" stroke-width="9" stroke-linejoin="round"/></g>'
+
+
+# ------------------------------------------------------------------ places
+def bg_jungle_path(p):
+    """The green jungle with more sky above its trees (art2.bg_jungle stops at y = -900): for the tall 9:16 views of the whole herd walking."""
+    far, mid, near = art2.bg_jungle(p)
+    return '<rect x="-500" y="-1900" width="2920" height="1010" fill="#bff0d4"/>' + far, mid, near
+
+
+art.BG.update({"jungle_path": bg_jungle_path})
+art.PLACE.update({"jungle_path": "the jungle path"})

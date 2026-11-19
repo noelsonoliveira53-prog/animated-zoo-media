@@ -49,38 +49,39 @@ EP = {"id": "zc_ep07", "nest": True, "beat": True, "voice": "af_heart", "speed":
 STAGES = {
     "zoo": [("milo", "milo", 960, 940, 1.1, False, False)],
     "savanna": [("mama", "elephant", 1560, 930, .9, True), ("tumble", "tumble", 560, 936, .6), ("milo", "milo", 230, 490, .78, False, True)],
-    "bigtree": [("auntie", "auntie", 1640, 930, .8, True), ("tumble", "tumble", 860, 936, .6), ("sister", "sister", 260, 934, .62), ("milo", "milo", 300, 400, .75, False, True)],
-    "jungle": [("grandma", "grandma", 1340, 930, .62), ("mama", "elephant", 760, 930, .6), ("tumble", "tumble", 330, 936, .42), ("milo", "milo", 380, 470, .78, False, True)],
+    "bigtree": [("auntie", "auntie", 1640, 930, .8, True), ("tumble", "tumble", 860, 936, .6), ("sister", "sister", 300, 934, .58), ("milo", "milo", 300, 400, .75, False, True)],
+    "jungle_path": [("grandma", "grandma", 1340, 930, .62), ("mama", "elephant", 760, 930, .6), ("tumble", "tumble", 330, 936, .42), ("milo", "milo", 380, 470, .78, False, True)],
     "river": [("grandma", "grandma", 1500, 905, .8, True), ("tumble", "tumble", 560, 905, .55), ("milo", "milo", 300, 400, .7, False, True)],
     "zoo_eve": [("mama", "elephant", 1560, 944, .9, True), ("tumble", "tumble", 760, 940, .6), ("milo", "milo", 300, 420, .7, False, True)],
 }
 K = Kit(STAGES); P, C, V, WV = K.P, K.C, K.V, K.WV
+WV2 = lambda place, whos, floor=.68, pad=.06, **kw: WV(place, whos, floor=floor, pad=pad, **kw)      # 9:16: feet above the caption, a little room at the sides
 WIDE = (960, 540, 1920); INK = art.INK
-CLOSE = {"tumble": (900, 936, .6)}                       # Tumble right next to Mama
+CLOSE = {"tumble": (790, 936, .6)}                       # Tumble right next to Mama
 TC = C("savanna", "tumble", "head", 880, 0, 20); TV = V("savanna", "tumble", "head", 1000, -30, 40)
 MC = C("savanna", "mama", "head", 960, 100, 70); MV = V("savanna", "mama", "head", 1150, 80, 60)
-_TS = [("tumble", "tumble", 900, 936, .6)]
+_TS = [("tumble", "tumble", 790, 936, .6)]
 TC2 = C("savanna", "tumble", "head", 880, 0, 20, stage=_TS); TV2 = V("savanna", "tumble", "head", 1000, -30, 40, stage=_TS)
 SAV2 = (1110, 560, 1640); SAVQ = (1110, 520, 1700)
-SAVP = WV("savanna", ["tumble", "mama"], stage=[("mama", "elephant", 1560, 930, .9, True), ("tumble", "tumble", 900, 936, .6)])
+SAVP = WV2("savanna", ["tumble", "mama"], stage=[("mama", "elephant", 1560, 930, .9, True), ("tumble", "tumble", 790, 936, .6)])
 MILO = lambda place, w=760: dict(cam=C(place, "milo", "body", w), pcam=V(place, "milo", "body", 900))
 WOB = lambda at, who="tumble", n=7: ("to", at, "#{p}" + who + "-trunk", {"rotation": 16, "svgOrigin": TP, "duration": .2, "yoyo": True, "repeat": n, "ease": "sine.inOut"}, f"{who}'s trunk wobbles")
 TRUNK_TO = lambda at, who, deg, d=.5: ("trunk", at, who, deg, d)
 
 # the bigtree herd: Auntie, Tumble, big sister
 BT = STAGES["bigtree"]
-BTP = WV("bigtree", ["tumble", "auntie"], pad=.03); BSP = WV("bigtree", ["sister", "tumble"], pad=.03)
+BTP = WV2("bigtree", ["tumble", "auntie"]); BSP = WV2("bigtree", ["sister", "tumble"], stage=[("sister", "sister", 320, 934, .58), ("tumble", "tumble", 900, 936, .6)])
 AC = C("bigtree", "auntie", "head", 900, 100, 60); AV = V("bigtree", "auntie", "head", 1150, 80, 60)
 SC = C("bigtree", "sister", "head", 820, -40, 40); SV = V("bigtree", "sister", "head", 1050, -40, 60)
 BTC = C("bigtree", "tumble", "head", 880, 0, 20); BTV = V("bigtree", "tumble", "head", 1000, -30, 40)
 TWO = (1250, 600, 1300)                                   # Tumble and Auntie's trunks meeting
-BQ = (960, 520, 2000)                                     # the three, low in the picture: room for the signs
+BQ = (960, 500, 2100)                                     # the three, low in the picture: room for the signs
 # the jungle walk: Grandma in front, Mama, Tumble
-JP = WV("jungle", ["tumble", "grandma"], pad=.02)
-GC = C("jungle", "grandma", "head", 900, -60, 60); GV = V("jungle", "grandma", "head", 1100, -60, 70)
+JP = WV2("jungle_path", ["tumble", "grandma"])
+GC = C("jungle_path", "grandma", "head", 900, -60, 60); GV = V("jungle_path", "grandma", "head", 1100, -60, 70)
 # the river
 RGC = C("river", "grandma", "head", 900, 100, 60); RGV = V("river", "grandma", "head", 1150, 80, 60)
-RP = WV("river", ["tumble", "grandma"], pad=.03)
+RP = WV("river", ["tumble", "grandma"], floor=.62, pad=.05)
 HUG = [("mama", "elephant", 1560, 944, .9, True), ("tumble", "tumble", 760, 940, .6)]
 HUGP = (1208, 400, 2600)
 
@@ -96,9 +97,11 @@ def ele(kind, flip=False):
 
 
 FAM = ["grandma", "mama", "auntie", "sister", "tumble"]
-FX = [200, 590, 980, 1340, 1650]; FS = [.42, .42, .4, .34, .28]; FY = 800
-FP = [(640, 640, .36), (1150, 640, .36), (560, 1150, .33), (930, 1150, .29), (1270, 1150, .24)]
-FCAM = (925, 560, 2150); FPCAM = (930, 560, 2050)
+FS = [.41, .41, .39, .33, .27]; FY = 900; _x = 0; FX = []
+for _s in FS: FX.append(round(_x + 320 * _s)); _x += 860 * _s + 10
+FX = [x + round(960 - _x / 2) for x in FX]
+FP = [(640, 480, .36), (1150, 480, .36), (560, 900, .33), (930, 900, .29), (1270, 900, .24)]
+FCAM = (960, 600, 1960); FPCAM = (930, 560, 2050)
 
 
 def family(shown=(0, 1, 2, 3, 4), new=()):
@@ -109,13 +112,16 @@ def family(shown=(0, 1, 2, 3, 4), new=()):
 MT = ("t", "tumble", 760, 1000, .95)
 MOUTH = (760 + round(387 * .95), 1000 - round(327 * .95))          # (1128, 689)
 MCAM = (1000, 560, 1700); MPCAM = (980, 640, 1900)
-MILKP = lambda hidden=False: prop("mk", A.milk, 1500, 520, .9, hidden, p=(1240, 330, .7))
-ARR = lambda hidden=True: prop("ar", lambda p: art.arrow(p, 1430, 610, MOUTH[0] + 50, MOUTH[1] - 10), 0, 0, 1, hidden)
+MILKP = lambda hidden=False: prop("mk", A.milk, 1500, 520, .9, hidden, p=(1360, 560, .6))
+ARR = lambda hidden=True: prop("ar", lambda p: art.arrow(p, 1430, 610, MOUTH[0] + 50, MOUTH[1] - 10), 0, 0, 1, hidden, p=(-40, 10, 1))
 
 # the newborn board: little Tumble wobbles, then stands; Mama and Auntie beside him
 NB = [prop("nm", ele("mama", True), 1450, 860, .5, p=(1250, 900, .42)), prop("na", ele("auntie"), 470, 860, .5, p=(670, 900, .42))]
-NT = lambda: prop("nt", ele("tumble"), 960, 880, .42, p=(960, 1350, .36))
+NT = lambda: prop("nt", ele("tumble"), 960, 880, .42, p=(960, 1180, .36))
 NCAM = (960, 560, 1900); NPCAM = (960, 760, 1900)
+# Auntie, Tumble and big sister on a board (in 9:16: the two big ones on top, Tumble under them)
+THREE = lambda: [prop("hs", ele("sister"), 470, 880, .5, p=(700, 900, .4)), prop("ht", ele("tumble"), 960, 890, .4, p=(960, 1180, .36)), prop("ha", ele("auntie", True), 1500, 870, .55, p=(1220, 900, .42))]
+THC = (980, 600, 1800); THP = (960, 760, 1900)
 
 SHOTS = [
     # ---------------------------------------------------------------- HOOK
@@ -135,7 +141,7 @@ SHOTS = [
     S("savanna", MC, "Who looks after Tumble? Mama does, every day!", part=1, tag="Mama looks after him", hide=["milo", "tumble"], pcam=MV,
       fx=[("nod", "w:Mama", "mama")], words=[("w:Mama", "MAMA!", .8, .16, 1.2, "sun", (.5, .31))]),
     S("savanna", SAV2, "Tumble walks over and stays close to Mama.", part=1, tag="close to Mama", hide=["milo"], pcam=SAVP, pcam2=W(SAVP),
-      fx=[("walk", 0.1, "tumble", 340, 2.4), ("face", "w:close", "tumble", "happy")], words=[("w:close", "CLOSE!", .3, .2, 1.1, "sun", (.5, .31))]),
+      fx=[("walk", 0.1, "tumble", 230, 2.4), ("face", "w:close", "tumble", "happy")], words=[("w:close", "CLOSE!", .3, .2, 1.1, "sun", (.5, .31))]),
     S("paper_pink", (960, 560, 1700), "Baby elephants stick close to their mamas.", part=1, tag="board: stick close",
       props=[prop("bm", ele("mama", True), 1240, 860, .62, p=(1120, 900, .55)), prop("bt", ele("tumble"), 640, 870, .44, p=(760, 900, .38))], pcam=(960, 640, 1900),
       fx=[("to", "w:close", "#{p}bt_w", {"x": "+=110", "duration": .8, "ease": "power2.out"}, "little Tumble moves close to Mama")],
@@ -154,13 +160,13 @@ SHOTS = [
     S("paper_blue", (960, 560, 1700), "Water, or milk? What do you think?", part=1, q=True, tag="question 2", pause=3.2, actors=[MT], pcam=MPCAM,
       fx=[("signs", "w:Water,", ["WATER", "MILK"], 1, "wait:2.0")]),
     S("paper_blue", MCAM, "Milk! Tumble drinks his mama's milk.", part=1, tag="board: milk", actors=[MT], props=[MILKP(True)], pcam=MPCAM,
-      fx=[("show", "w:Milk!", "mk"), ("face", "w:drinks", "t", "happy")], words=[("w:Milk!", "MILK!", .22, .2, 1.3, "sun", (.5, .36), 1.0)]),
+      fx=[("show", "w:Milk!", "mk"), ("face", "w:drinks", "t", "happy")], words=[("w:Milk!", "MILK!", .3, .2, 1.3, "sun", (.5, .36), 1.0)]),
     S("paper_blue", (960, 560, 1700), "Does he drink it with his trunk, or with his mouth?", part=1, q=True, tag="question 3", pause=3.2, actors=[MT], pcam=MPCAM,
       fx=[("signs", "w:trunk,", ["TRUNK", "MOUTH"], 1, "wait:2.0"), WOB("w:trunk,", "t", 3)]),
     S("paper_blue", MCAM, "With his mouth! A baby elephant drinks milk with its mouth.", part=1, tag="board: mouth", actors=[MT], props=[MILKP(), ARR()], pcam=MPCAM,
-      fx=[("show", "w:mouth!", "ar")], words=[("w:mouth!", "MOUTH!", .22, .2, 1.3, "sun", (.5, .36), 1.0)]),
+      fx=[("show", "w:mouth!", "ar")], words=[("w:mouth!", "MOUTH!", .3, .2, 1.3, "sun", (.5, .36), 1.0)]),
     S("paper_blue", MCAM, "So he does not need a long trunk yet.", part=1, tag="board: not yet", actors=[MT], props=[MILKP(), ARR(False)], pcam=MPCAM,
-      fx=[WOB("w:trunk", "t", 5)], words=[("w:yet.", "NOT YET!", .22, .2, 1.2, "pill", (.5, .36), 1.0)]),
+      fx=[WOB("w:trunk", "t", 5)], words=[("w:yet.", "NOT YET!", .3, .2, 1.2, "pill", (.5, .36), 1.0)]),
     S("savanna", TC, "Tumble's trunk is short and wobbly. Wiggle, wobble!", part=1, tag="wobbly trunk", hide=["milo", "mama"], pcam=TV,
       fx=[WOB("w:wobbly.", n=11), ("face", "w:Wiggle,", "tumble", "happy")], words=[("w:Wiggle,", "WOBBLE!", .82, .2, 1.1, "sun", (.5, .31))]),
     S("savanna", (760, 600, 1200), "Is Tumble's trunk long, or short?", part=1, q=True, tag="question 3b", pause=3.2, hide=["milo", "mama"], pcam=(700, 626, 1200),
@@ -168,11 +174,11 @@ SHOTS = [
     S("savanna", TC, "Short! Short and wobbly, for now.", part=1, tag="answer 3b", hide=["milo", "mama"], pcam=TV,
       fx=[WOB("w:wobbly,", n=5), ("face", 0.05, "tumble", "happy")], words=[("w:Short!", "SHORT!", .82, .2, 1.2, "sun", (.5, .31))]),
     S("paper", (960, 560, 1500), "At first, a calf is clumsy with its trunk.", part=1, tag="board: clumsy", actors=[("t", "tumble", 800, 1000, .9)], pcam=(980, 640, 1800),
-      fx=[WOB("w:clumsy", "t", 9)], words=[("w:clumsy", "CLUMSY!", .2, .2, 1.2, "", (.5, .36), 1.0)]),
+      fx=[WOB("w:clumsy", "t", 9)], words=[("w:clumsy", "CLUMSY!", .3, .2, 1.2, "", (.5, .36), 1.0)]),
     S("paper", (960, 560, 1500), "But it learns to use its trunk as it grows.", part=1, tag="board: learns",
       props=[prop("gt", ele("tumble"), 900, 960, .7, p=(960, 1000, .62))], pcam=(980, 640, 1800),
       fx=[("to", "w:grows.", "#{p}gt_w", {"scale": 1.15, "transformOrigin": "50% 100%", "duration": .8, "ease": "power1.out"}, "little Tumble grows")],
-      words=[("w:learns", "LEARNS!", .2, .2, 1.2, "sun", (.5, .36), 1.0)]),
+      words=[("w:learns", "LEARNS!", .32, .2, 1.2, "sun", (.5, .36), 1.0)]),
     S("savanna", say="Can you wiggle your arm like a wobbly trunk? Wiggle, wiggle!", part=1, q=True, tag="wiggle along", hide=["tumble", "mama"],
       fx=[("hop", "w:Wiggle,", "milo", 2)], words=[("w:Wiggle,", "WIGGLE!", .76, .22, 1.0, "sun", (.5, .31))], **MILO("savanna")),
     S("savanna", SAV2, "Tumble drinks Mama's milk many times a day.", part=1, tag="many times", hide=["milo"], move=CLOSE, pcam=SAVP,
@@ -182,7 +188,7 @@ SHOTS = [
       fx=[("nod", "w:after", "mama"), ("face", "w:only", "tumble", "wow")], words=[("w:only", "ONLY MAMA?", .5, .2, 1.0, "sun", (.5, .31), .8)]),
     # ---------------------------------------------------------------- PART 2: the helpers
     S("bigtree", WIDE, "Here comes Tumble's family. This is the herd!", part=2, trans="iris", tag="bigtree wide", cam2=(1000, 560, 1840), pcam=BTP, pcam2=W(BTP), hide=["milo"],
-      move={"tumble": (700, 936, .6)}, fx=[("walk", 0.1, "tumble", 160, 2.0), ("hop", "w:herd!", "sister")], words=[("w:herd!", "THE HERD", .5, .16, 1.2, "sun", (.5, .31))]),
+      fx=[("hop", "w:Here", "tumble"), ("hop", "w:herd!", "sister")], words=[("w:herd!", "THE HERD", .5, .16, 1.2, "sun", (.5, .31))]),
     S("paper_pink", FCAM, "A herd is a family: mamas, aunties, big sisters and babies.", part=2, tag="board: a family", pcam=FPCAM, props=family((), (1, 2, 3, 4)),
       fx=[("show", "w:mamas,", "f1"), ("show", "w:aunties,", "f2"), ("show", "w:sisters", "f3"), ("show", "w:babies.", "f4")],
       words=[("w:family", "FAMILY", .5, .14, 1.2, "sun", (.5, .27), 1.0)]),
@@ -190,13 +196,14 @@ SHOTS = [
       fx=[("nod", "w:Hello,", "auntie")], words=[("w:Auntie.", "AUNTIE", .8, .16, 1.1, "pill", (.5, .31))]),
     S("bigtree", SC, "And this is Tumble's big sister.", part=2, tag="big sister", hide=["milo", "tumble", "auntie"], pcam=SV,
       fx=[("hop", "w:sister.", "sister")], words=[("w:big", "BIG SISTER", .25, .2, 1.0, "pill", (.5, .31), .8)]),
-    S("bigtree", BQ, "Who is the smallest elephant here? Tumble, or Auntie?", part=2, q=True, tag="question 4a", pause=3.2, hide=["milo"], pcam=W(BTP, 1.6),
+    S("bigtree", (1250, 540, 1700), "Who is the smallest elephant here? Tumble, or Auntie?", part=2, q=True, tag="question 4a", pause=3.2, hide=["milo", "sister"], pcam=BTP,
       fx=[("signs", "w:Tumble,", ["TUMBLE", "AUNTIE"], 0, "wait:2.0")]),
     S("bigtree", BTC, "Tumble! He is the baby of the herd.", part=2, tag="answer 4a", hide=["milo", "auntie", "sister"], pcam=BTV,
       fx=[("hop", "w:Tumble!", "tumble"), ("face", 0.05, "tumble", "happy")], words=[("w:baby", "THE BABY", .82, .2, 1.1, "pill", (.5, .31))]),
-    S("bigtree", BQ, "Let's count them. One, two, three!", part=2, q=True, tag="count the three", hide=["milo"], pcam=W(BTP, 1.6),
-      fx=[("hop", "w:One,", "sister"), ("hop", "w:two,", "tumble"), ("nod", "w:three!", "auntie")],
-      words=[("w:One,", "1", .2, .26, 1.4, "sun", (.25, .3), 1.0), ("w:two,", "2", .45, .26, 1.4, "sun", (.5, .3), 1.0), ("w:three!", "3", .8, .26, 1.4, "sun", (.75, .3), 1.0)]),
+    S("paper_blue", THC, "Let's count them. One, two, three!", part=2, q=True, tag="count the three", props=THREE(), pcam=THP,
+      fx=[("to", "w:One,", "#{p}hs_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 1}, "big sister hops"), ("to", "w:two,", "#{p}ht_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 1}, "Tumble hops"),
+          ("to", "w:three!", "#{p}ha_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 1}, "Auntie hops")],
+      words=[("w:One,", "1", .3, .22, 1.4, "sun", (.3, .36), 1.0), ("w:two,", "2", .5, .22, 1.4, "sun", (.5, .36), 1.0), ("w:three!", "3", .78, .22, 1.4, "sun", (.7, .36), 1.0)]),
     S("bigtree", TWO, "Auntie says hello. She touches Tumble with her trunk.", part=2, tag="Auntie's trunk", hide=["milo", "sister"], pcam=BTP,
       fx=[TRUNK_TO("w:touches", "auntie", -40, .6), ("face", "w:trunk.", "tumble", "happy")], words=[("w:hello.", "HELLO!", .5, .16, 1.1, "sun", (.5, .31))]),
     S("bigtree", (1250, 560, 1500), "Does Auntie say hello with her trunk, or with her tail?", part=2, q=True, tag="question 4", pause=3.2, hide=["milo", "sister"], pcam=W(BTP, 1.08),
@@ -206,23 +213,24 @@ SHOTS = [
     S("bigtree", say="Can you wave hello like a trunk? Hello, hello!", part=2, q=True, tag="wave along", hide=["tumble", "auntie", "sister"],
       fx=[("hop", "w:Hello,", "milo", 2)], words=[("w:wave", "WAVE!", .76, .22, 1.1, "sun", (.5, .31))], **MILO("bigtree")),
     S("bigtree", (620, 600, 1300), "Big sister plays with Tumble. Push, push, play!", part=2, tag="sister plays", hide=["milo", "auntie"], pcam=BSP,
-      move={"tumble": (760, 936, .6)}, fx=[("walk", 0.1, "sister", 60, 1.0), ("hop", "w:Push,", "tumble"), ("hop", "w:play!", "sister"), ("face", "w:play!", "tumble", "happy")],
+      move={"tumble": (900, 936, .6)}, fx=[("walk", 0.1, "sister", 40, 1.0), ("hop", "w:Push,", "tumble"), ("hop", "w:play!", "sister"), ("face", "w:play!", "tumble", "happy")],
       words=[("w:play!", "PLAY!", .5, .16, 1.2, "sun", (.5, .31))]),
     S("paper", (960, 560, 1800), "Helpers like Auntie and big sister are like babysitters.", part=2, tag="board: babysitters",
-      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1250, .3))],
+      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1120, .3))],
       pcam=(960, 700, 2000), words=[("w:Helpers", "HELPERS!", .5, .16, 1.2, "sun", (.5, .27), 1.0)]),
     S("paper", (960, 560, 1800), "They watch Tumble, they help him, and they play with him.", part=2, tag="board: watch help play",
-      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1250, .3))],
+      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1120, .3))],
       pcam=(960, 700, 2000), fx=[("to", "w:play", "#{p}bt_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 3}, "little Tumble hops")],
-      words=[("w:watch", "WATCH", .2, .16, 1.0, "pill", (.5, .2), .8), ("w:help", "HELP", .5, .16, 1.0, "pill", (.5, .27), .8), ("w:play", "PLAY", .8, .16, 1.0, "sun", (.5, .34), .8)]),
+      words=[("w:watch", "WATCH", .2, .16, 1.0, "pill", (.24, .34), .6), ("w:help", "HELP", .5, .16, 1.0, "pill", (.5, .34), .6), ("w:play", "PLAY", .8, .16, 1.0, "sun", (.76, .34), .6)]),
     S("savanna", MC, "And Mama can eat her grass. Munch, munch!", part=2, trans="iris", tag="Mama eats", hide=["milo", "tumble"], pcam=MV,
       props=[prop("gr", A.grass, 1110, 830, .8)],
       fx=[TRUNK_TO(0.2, "mama", -30, .5), ("to", "w:eat", "#{p}gr_w", {"x": 1250, "y": 600, "scale": .3, "opacity": 0, "transformOrigin": "50% 50%", "duration": .6, "ease": "power2.in"}, "Mama eats the grass"),
           TRUNK_TO("w:Munch,", "mama", 0, .5)], words=[("w:Munch,", "MUNCH!", .8, .16, 1.2, "sun", (.5, .31))]),
-    S("bigtree", BQ, "How many helpers are with Tumble? One, or two?", part=2, q=True, tag="question 5", pause=3.2, hide=["milo"], trans="iris", pcam=W(BTP, 1.6),
+    S("paper_blue", THC, "How many helpers are with Tumble? One, or two?", part=2, q=True, tag="question 5", pause=3.2, trans="iris", props=THREE(), pcam=THP,
       fx=[("signs", "w:One,", ["ONE", "TWO"], 1, "wait:2.0")]),
-    S("bigtree", (960, 560, 1920), "Two! Auntie and big sister.", part=2, tag="answer 5", hide=["milo"], pcam=W(BTP, 1.6),
-      fx=[("nod", "w:Auntie", "auntie"), ("hop", "w:sister.", "sister")], words=[("w:Two!", "2 HELPERS", .5, .16, 1.1, "sun", (.5, .3), .8)]),
+    S("paper_blue", THC, "Two! Auntie and big sister.", part=2, tag="answer 5", props=THREE(), pcam=THP,
+      fx=[("to", "w:Auntie", "#{p}ha_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 1}, "Auntie hops"), ("to", "w:sister.", "#{p}hs_w", {"y": "-=50", "duration": .2, "yoyo": True, "repeat": 1}, "big sister hops")],
+      words=[("w:Two!", "2 HELPERS", .5, .16, 1.1, "sun", (.5, .34), .8)]),
     S("paper_blue", NCAM, "When Tumble was born, he stood up in just minutes.", part=2, tag="board: stood up", props=NB + [NT()], pcam=NPCAM,
       fx=[("fromto", 0.1, "#{p}nt_w", {"rotation": -8, "transformOrigin": "50% 100%"}, {"rotation": 8, "duration": .3, "yoyo": True, "repeat": 5, "ease": "sine.inOut"}, "little Tumble wobbles"),
           ("to", "w:stood", "#{p}nt_w", {"rotation": 0, "duration": .3}, "Tumble stands")], words=[("w:minutes.", "UP!", .5, .16, 1.4, "sun", (.5, .27), 1.0)]),
@@ -231,31 +239,31 @@ SHOTS = [
       words=[("w:helped", "HELP!", .5, .16, 1.3, "sun", (.5, .27), 1.0)]),
     S("bigtree", say="Can you stand up tall like Tumble? Stand up, stand tall!", part=2, q=True, tag="stand along", hide=["tumble", "auntie", "sister"],
       fx=[("hop", "w:Stand:2", "milo", 2)], words=[("w:tall", "STAND UP!", .76, .22, 1.0, "sun", (.5, .31), .8)], **MILO("bigtree")),
-    S("bigtree", (960, 560, 1920), "Lots of helpers! But who leads the whole herd?", part=2, q=True, tag="who leads", hide=["milo"], pcam=W(BTP, 1.6),
+    S("bigtree", (1250, 540, 1700), "Lots of helpers! But who leads the whole herd?", part=2, q=True, tag="who leads", hide=["milo", "sister"], pcam=BTP,
       fx=[("face", "w:leads", "tumble", "wow")], words=[("w:leads", "WHO LEADS?", .5, .16, 1.0, "sun", (.5, .3), .8)]),
     # ---------------------------------------------------------------- PART 3: Grandma leads
-    S("jungle", WIDE, "Meet Grandma. She is the oldest elephant in the herd.", part=3, trans="iris", tag="jungle wide", cam2=(1000, 560, 1840), pcam=JP, pcam2=W(JP), hide=["milo"],
+    S("jungle_path", WIDE, "Meet Grandma. She is the oldest elephant in the herd.", part=3, trans="iris", tag="jungle wide", cam2=(1000, 560, 1840), pcam=JP, pcam2=W(JP), hide=["milo"],
       fx=[("nod", "w:Grandma.", "grandma")], words=[("w:oldest", "OLDEST", .7, .16, 1.1, "pill", (.5, .3))]),
-    S("jungle", GC, "Grandma is the leader of the herd.", part=3, tag="Grandma leads", hide=["milo", "mama", "tumble"], pcam=GV,
-      props=[prop("st", A.star, *P("jungle", "grandma", "top", 0, -90), 1.0, True)], fx=[("show", "w:leader", "st")], words=[("w:leader", "LEADER", .2, .16, 1.2, "sun", (.5, .31))]),
+    S("jungle_path", GC, "Grandma is the leader of the herd.", part=3, tag="Grandma leads", hide=["milo", "mama", "tumble"], pcam=GV,
+      props=[prop("st", A.star, *P("jungle_path", "grandma", "top", 200, 20), 1.0, True, p=(1690, 560, .8))], fx=[("show", "w:leader", "st")], words=[("w:leader", "LEADER", .32, .2, 1.2, "sun", (.5, .31))]),
     S("paper_pink", (960, 560, 1500), "The leader is the oldest female. She knows the most.", part=3, tag="board: oldest female",
       props=[prop("gg", ele("grandma"), 860, 900, .7, p=(900, 1000, .6)), prop("st", A.star, 1180, 330, 1.0, True, p=(1150, 420, .8))], pcam=(960, 700, 1900),
-      fx=[("show", "w:knows", "st")], words=[("w:oldest", "OLDEST", .2, .18, 1.2, "pill", (.5, .27), 1.0)]),
-    S("jungle", (960, 520, 2000), "Who leads the herd? Tumble, or Grandma?", part=3, q=True, tag="question 6", pause=3.2, hide=["milo"], pcam=W(JP, 1.1),
+      fx=[("show", "w:knows", "st")], words=[("w:oldest", "OLDEST", .3, .2, 1.2, "pill", (.5, .27), 1.0)]),
+    S("jungle_path", (960, 520, 2000), "Who leads the herd? Tumble, or Grandma?", part=3, q=True, tag="question 6", pause=3.2, hide=["milo"], pcam=W(JP, 1.1),
       fx=[("signs", "w:Tumble,", ["TUMBLE", "GRANDMA"], 1, "wait:2.0")]),
-    S("jungle", GC, "Grandma! Everyone follows Grandma.", part=3, tag="answer 6", hide=["milo", "mama", "tumble"], pcam=GV,
-      fx=[("nod", "w:Grandma!", "grandma")], words=[("w:Grandma!", "GRANDMA!", .2, .16, 1.2, "sun", (.5, .31))]),
-    S("jungle", WIDE, "Grandma leads the herd to water and food.", part=3, tag="to water and food", cam2=(1160, 560, 1920), hide=["milo"], pcam=JP, pcam2=W(JP, 1.12),
+    S("jungle_path", GC, "Grandma! Everyone follows Grandma.", part=3, tag="answer 6", hide=["milo", "mama", "tumble"], pcam=GV,
+      fx=[("nod", "w:Grandma!", "grandma")], words=[("w:Grandma!", "GRANDMA!", .32, .2, 1.2, "sun", (.5, .31))]),
+    S("jungle_path", WIDE, "Grandma leads the herd to water and food.", part=3, tag="to water and food", cam2=(1160, 560, 1920), hide=["milo"], pcam=JP, pcam2=W(JP, 1.12),
       move={"grandma": (1140, 930, .62), "mama": (560, 930, .6), "tumble": (130, 936, .42)},
       fx=[("walk", 0.1, "grandma", 320, 3.2), ("walk", 0.1, "mama", 320, 3.2), ("walk", 0.1, "tumble", 320, 3.2)],
       words=[("w:water", "WATER", .3, .16, 1.0, "pill", (.3, .3), .8), ("w:food.", "FOOD", .7, .16, 1.0, "sun", (.7, .3), .8)]),
-    S("jungle", (1100, 600, 1500), "Follow the leader! Step, step, step.", part=3, tag="follow the leader", hide=["milo", "grandma"], pcam=WV("jungle", ["tumble", "mama"], pad=.03),
+    S("jungle_path", (1100, 600, 1500), "Follow the leader! Step, step, step.", part=3, tag="follow the leader", hide=["milo", "grandma"], pcam=WV2("jungle_path", ["tumble", "mama"], stage=[("mama", "elephant", 960, 930, .6), ("tumble", "tumble", 530, 936, .42)], pad=.1),
       move={"mama": (900, 930, .6), "tumble": (470, 936, .42)},
       fx=[("walk", 0.1, "mama", 120, 2.6), ("walk", 0.1, "tumble", 120, 2.6), ("hop", "w:Step,", "tumble")], words=[("w:Follow", "FOLLOW!", .5, .16, 1.2, "sun", (.5, .31))]),
-    S("jungle", GC, "Grandma decides when to walk, and when to stop.", part=3, tag="walk and stop", hide=["milo", "mama", "tumble"], pcam=GV,
-      fx=[("nod", "w:walk,", "grandma"), ("blinkslow", "w:stop.", "grandma-eye", 1)], words=[("w:walk,", "WALK", .2, .16, 1.0, "pill", (.5, .27), .9), ("w:stop.", "STOP", .2, .3, 1.0, "sun", (.5, .35), .9)]),
-    S("jungle", say="Can you march like an elephant? Stomp, stomp, stomp!", part=3, q=True, tag="march along", hide=["tumble", "mama", "grandma"],
-      fx=[("hop", "w:Stomp,", "milo", 3)], words=[("w:Stomp,", "STOMP!", .76, .22, 1.1, "sun", (.5, .31))], **MILO("jungle")),
+    S("jungle_path", GC, "Grandma decides when to walk, and when to stop.", part=3, tag="walk and stop", hide=["milo", "mama", "tumble"], pcam=GV,
+      fx=[("nod", "w:walk,", "grandma"), ("blinkslow", "w:stop.", "grandma-eye", 1)], words=[("w:walk,", "WALK", .3, .2, 1.0, "pill", (.3, .34), .9), ("w:stop.", "STOP", .3, .32, 1.0, "sun", (.7, .34), .9)]),
+    S("jungle_path", say="Can you march like an elephant? Stomp, stomp, stomp!", part=3, q=True, tag="march along", hide=["tumble", "mama", "grandma"],
+      fx=[("hop", "w:Stomp,", "milo", 3)], words=[("w:Stomp,", "STOMP!", .76, .22, 1.1, "sun", (.5, .31))], **MILO("jungle_path")),
     S("river", WIDE, "Here is the river. Grandma knew the way!", part=3, trans="iris", tag="river wide", cam2=(1000, 560, 1780), pcam=RP, pcam2=W(RP), props=RV(), hide=["milo"],
       move={"tumble": (300, 905, .55), "grandma": (1760, 905, .8, True)}, fx=[("walk", 0, "tumble", 260, 3.0), ("walk", 0, "grandma", -260, 3.0)], words=[("w:river.", "RIVER", .5, .16, 1.3, "sun")]),
     S("river", (1180, 660, 1000), "Grandma has a long, cool drink. Slurp!", part=3, tag="Grandma drinks", hide=["milo", "tumble"], pcam=RGV, props=RV(),
@@ -275,7 +283,7 @@ SHOTS = [
     S("zoo_eve", WIDE, "The sun goes down. Grandma says it is time to rest.", part=3, trans="iris", tag="evening wide", cam2=(1000, 560, 1780), pcam=WV("zoo_eve", ["tumble", "mama"], floor=.7),
       pcam2=W(WV("zoo_eve", ["tumble", "mama"], floor=.7)), hide=["milo"], move={"tumble": (440, 940, .6)}, fx=[("walk", 0, "tumble", 320, 3.0)], words=[("w:rest.", "REST", .5, .16, 1.2, "sun")]),
     S("zoo_eve", (1150, 620, 1100), "Tumble rests close to Mama. Cozy and happy!", part=3, tag="cozy", actors=HUG, pcam=HUGP, pcam2=HUGP,
-      fx=[("face", "w:rests", "tumble", "sleepy"), ("trunk", "w:Mama.", "mama", -30, .6)], words=[("w:Cozy", "COZY!", .2, .2, 1.1, "sun", (.3, .31))]),
+      fx=[("face", "w:rests", "tumble", "sleepy"), ("trunk", "w:Mama.", "mama", -68, .6)], words=[("w:Cozy", "COZY!", .2, .2, 1.1, "sun", (.3, .31))]),
     S("zoo_eve", (960, 520, 1920), "Who looks after Tumble? Only Mama, or the whole family?", part=3, q=True, tag="question 7", pause=3.2, actors=HUG + [("milo", "milo", 300, 420, .7, False, True)], pcam=HUGP, pcam2=HUGP,
       fx=[("signs", "w:Only", ["MAMA", "FAMILY"], 1, "wait:2.0")]),
     S("paper_pink", FCAM, "The whole family! Mama, Auntie, big sister and Grandma.", part=3, tag="board: whole family", pcam=FPCAM, props=family(),
@@ -288,17 +296,17 @@ SHOTS = [
     S("paper_blue", (960, 560, 1700), "How does Tumble drink his milk? With his trunk, or his mouth?", part=4, q=True, tag="quiz 1", pause=3.2, actors=[MT], pcam=MPCAM,
       fx=[("signs", "w:trunk,", ["TRUNK", "MOUTH"], 1, "wait:2.0")]),
     S("paper_blue", MCAM, "With his mouth!", part=4, tag="board: mouth again", actors=[MT], props=[MILKP(), ARR(False)], pcam=MPCAM,
-      words=[("w:mouth!", "MOUTH!", .22, .2, 1.3, "sun", (.5, .36), 1.0)]),
+      words=[("w:mouth!", "MOUTH!", .3, .2, 1.3, "sun", (.5, .36), 1.0)]),
     S("paper_pink", (960, 560, 1500), "Who leads the herd? Tumble, or Grandma?", part=4, q=True, tag="quiz 2", pause=3.2,
       props=[prop("gg", ele("grandma"), 1250, 940, .55, p=(1180, 1000, .45)), prop("tt", ele("tumble"), 600, 950, .42, p=(700, 1000, .34))], pcam=(960, 700, 1900),
       fx=[("signs", "w:Tumble,", ["TUMBLE", "GRANDMA"], 1, "wait:2.0")]),
     S("paper_pink", (960, 560, 1500), "Grandma, the oldest!", part=4, tag="board: Grandma again",
       props=[prop("gg", ele("grandma"), 860, 900, .7, p=(900, 1000, .6)), prop("st", A.star, 1180, 330, 1.0, p=(1150, 420, .8))], pcam=(960, 700, 1900),
-      words=[("w:Grandma,", "GRANDMA!", .2, .18, 1.1, "sun", (.5, .27), 1.0)]),
+      words=[("w:Grandma,", "GRANDMA!", .32, .2, 1.1, "sun", (.5, .27), 1.0)]),
     S("paper", (960, 560, 1800), "And who helps Mama look after Tumble?", part=4, q=True, tag="quiz 3", pause=1.6,
-      props=[prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1250, .3))], pcam=(960, 700, 2000), words=[("end+0.3", "?", .5, .2, 2.2, "sun", (.5, .3), 1.5)]),
+      props=[prop("bt", ele("tumble"), 820, 960, .62, p=(880, 1150, .55))], pcam=(960, 700, 2000), words=[("end+0.3", "?", .5, .2, 2.2, "sun", (.5, .3), 1.5)]),
     S("paper", (960, 560, 1800), "Auntie and big sister, the helpers!", part=4, tag="board: helpers again",
-      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1250, .3))],
+      props=[prop("ba", ele("auntie", True), 1350, 860, .55, p=(1180, 860, .45)), prop("bs", ele("sister"), 520, 870, .45, p=(700, 880, .38)), prop("bt", ele("tumble"), 920, 880, .32, p=(940, 1120, .3))],
       pcam=(960, 700, 2000), words=[("w:helpers!", "HELPERS!", .5, .16, 1.2, "sun", (.5, .27), 1.0)]),
     S("zoo_eve", (1150, 620, 1200), "Good night, Tumble. Good night, Mama.", part=4, tag="good night", actors=HUG, pcam=HUGP, pcam2=HUGP, props=[prop("h1", art2.heart, 1010, 440, 1.0, True)],
       fx=[("face", 0.02, "tumble", "sleepy"), ("show", "w:Mama.", "h1")]),
@@ -307,6 +315,7 @@ SHOTS = [
 ]
 for _s in SHOTS:        # a picture board never drifts closer in 9:16: it only pulls out a little (zc_ep06)
     if _s["place"].startswith("paper") and _s["pcam"] and not _s["pcam2"]: _s["pcam2"] = W(_s["pcam"], 1.04)
+    if _s["place"].startswith("paper") and not _s["cam2"]: _s["cam2"] = W(_s["cam"], 1.04)      # and in 16:9 (the five in a row were cut by the default push-in)
 
 
 def T(src, **kw):
@@ -321,7 +330,7 @@ SHORTS = [
      "extra_first": [S("bigtree", TWO, "Who helps Mama look after Tumble?", part=2, q=True, tag="hook: who helps", hide=["milo", "sister"], pcam=BTP,
                        fx=[TRUNK_TO("w:helps", "auntie", -40, .6)], words=[("w:Tumble?", "?", .5, .2, 2.6, "sun", (.5, .33), 1.6)])]},
     {"id": "zc_ep07_short3", "title": "Who Leads an Elephant Herd?", "band": ("WHO LEADS", "THE HERD?"), "thumb_text": "FOLLOW GRANDMA!", "part": 3,
-     "extra_first": [S("jungle", (960, 520, 2000), "Who leads an elephant herd?", part=3, q=True, tag="hook: who leads", hide=["milo"], pcam=W(JP, 1.1),
+     "extra_first": [S("jungle_path", (960, 520, 2000), "Who leads an elephant herd?", part=3, q=True, tag="hook: who leads", hide=["milo"], pcam=W(JP, 1.1),
                        fx=[("nod", "w:leads", "grandma")], words=[("w:herd?", "?", .5, .2, 2.6, "sun", (.5, .33), 1.6)])]},
 ]
 for _sh in SHORTS: _sh["band"] = tuple(_sh["band"])
@@ -339,7 +348,7 @@ THUMBS = {
                        "actors": [("auntie", 1640, 930, .8, True, 'gsap.set("#P-trunk",{rotation:-40,svgOrigin:"392 -430"});'), ("tumble", 860, 936, .6, False, "")],
                        "props": [(art2.heart, 1240, 520, .9)],
                        "words": [("BIG", 540, 330, 170, ""), ("HELPERS!", 540, 500, 190, "sun")]},
-    "zc_ep07_short3": {"place": "jungle", "cam": JP,
+    "zc_ep07_short3": {"place": "jungle_path", "cam": JP,
                        "actors": [("grandma", 1340, 930, .62, False, ""), ("elephant", 760, 930, .6, False, ""), ("tumble", 330, 936, .42, False, "")],
                        "props": [(A.star, 1530, 420, 1.0)],
                        "words": [("FOLLOW", 540, 320, 170, ""), ("GRANDMA!", 540, 490, 170, "sun")]},

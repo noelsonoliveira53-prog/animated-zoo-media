@@ -134,6 +134,11 @@
    "notes": "E4 + F2"
   },
   {
+   "at": 137.39,
+   "seconds": 0.42,
+   "notes": "E4 + F2"
+  },
+  {
    "at": 147.41,
    "seconds": 0.3,
    "notes": "E4 + F2"
@@ -307,13 +312,13 @@
  "level": {
   "lufs": -32.3,
   "range_lu": 10.4,
-  "true_peak_db": -9.9,
+  "true_peak_db": -10.2,
   "clipped_samples": 0,
   "quietest_second_db": -40.1,
   "loudest_second_db": -23.6
  },
  "balance": {
-  "share_a_phone_speaker_plays_above_300hz": 0.67,
+  "share_a_phone_speaker_plays_above_300hz": 0.66,
   "share_below_120hz": 0.11,
   "share_above_4khz": 0.0
  },
@@ -2049,10 +2054,10 @@
   },
   {
    "start": 107.99,
-   "seconds": 2.86,
+   "seconds": 2.69,
    "note": "C4",
    "cents": -1,
-   "db": -18.2
+   "db": -16.9
   },
   {
    "start": 108.33,
@@ -2091,17 +2096,17 @@
   },
   {
    "start": 110.21,
-   "seconds": 2.3,
+   "seconds": 0.6,
    "note": "G4",
    "cents": 0,
-   "db": -18.5
+   "db": -8.5
   },
   {
    "start": 110.51,
-   "seconds": 0.9,
+   "seconds": 0.38,
    "note": "E4",
    "cents": 0,
-   "db": -19.1
+   "db": -13.1
   },
   {
    "start": 110.81,
@@ -2109,6 +2114,20 @@
    "note": "C5",
    "cents": 0,
    "db": -19.5
+  },
+  {
+   "start": 110.93,
+   "seconds": 1.58,
+   "note": "G4",
+   "cents": 0,
+   "db": -19.3
+  },
+  {
+   "start": 110.98,
+   "seconds": 0.43,
+   "note": "E4",
+   "cents": 0,
+   "db": -25.4
   },
   {
    "start": 111.45,
@@ -2469,10 +2488,10 @@
   },
   {
    "start": 135.21,
-   "seconds": 2.35,
+   "seconds": 2.6,
    "note": "E4",
    "cents": 0,
-   "db": -17.3
+   "db": -17.4
   },
   {
    "start": 135.51,
@@ -2483,10 +2502,10 @@
   },
   {
    "start": 135.81,
-   "seconds": 1.71,
+   "seconds": 1.66,
    "note": "A4",
    "cents": 0,
-   "db": -17.3
+   "db": -18.2
   },
   {
    "start": 136.45,
@@ -2500,14 +2519,7 @@
    "seconds": 0.98,
    "note": "F2",
    "cents": -1,
-   "db": -19.1
-  },
-  {
-   "start": 137.43,
-   "seconds": 0.38,
-   "note": "F4",
-   "cents": 1,
-   "db": -13.2
+   "db": -19.4
   },
   {
    "start": 138.03,
@@ -3110,13 +3122,6 @@
    "note": "D4",
    "cents": 0,
    "db": -11.0
-  },
-  {
-   "start": 173.31,
-   "seconds": 1.66,
-   "note": "B4",
-   "cents": 0,
-   "db": -18.5
   }
  ],
  "not_judged": "whether it sounds pleasant, whether a voice is warm or a word is said right: a person listens for that",

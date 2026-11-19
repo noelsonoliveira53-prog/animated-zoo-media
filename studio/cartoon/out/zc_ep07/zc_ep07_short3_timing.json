@@ -157,7 +157,7 @@
   "longest_gap_at": 81.7,
   "over_6s": [],
   "places": [
-   "jungle",
+   "jungle_path",
    "river",
    "zoo_eve"
   ],
@@ -185,7 +185,7 @@
   [
    0.0,
    "new place",
-   "the green jungle hook: who leads"
+   "the jungle path hook: who leads"
   ],
   [
    0.59,
@@ -200,7 +200,7 @@
   [
    2.5,
    "new shot",
-   "the green jungle jungle wide"
+   "the jungle path jungle wide"
   ],
   [
    2.96,
@@ -215,7 +215,7 @@
   [
    6.56,
    "new shot",
-   "the green jungle Grandma leads"
+   "the jungle path Grandma leads"
   ],
   [
    7.98,
@@ -245,7 +245,7 @@
   [
    13.75,
    "new place",
-   "the green jungle question 6"
+   "the jungle path question 6"
   ],
   [
    15.28,
@@ -280,7 +280,7 @@
   [
    20.31,
    "new shot",
-   "the green jungle answer 6"
+   "the jungle path answer 6"
   ],
   [
    20.48,
@@ -295,7 +295,7 @@
   [
    23.44,
    "new shot",
-   "the green jungle to water and food"
+   "the jungle path to water and food"
   ],
   [
    23.54,
@@ -325,7 +325,7 @@
   [
    26.88,
    "new shot",
-   "the green jungle follow the leader"
+   "the jungle path follow the leader"
   ],
   [
    26.98,
@@ -350,7 +350,7 @@
   [
    30.0,
    "new shot",
-   "the green jungle walk and stop"
+   "the jungle path walk and stop"
   ],
   [
    31.57,
@@ -375,7 +375,7 @@
   [
    33.75,
    "new shot",
-   "the green jungle march along"
+   "the jungle path march along"
   ],
   [
    36.07,
@@ -630,7 +630,7 @@
  ],
  "shots": [
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Who leads an elephant herd?",
    "t0": 0.0,
    "t1": 2.5,
@@ -671,7 +671,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Meet Grandma. She is the oldest elephant in the herd.",
    "t0": 2.5,
    "t1": 6.5625,
@@ -737,7 +737,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma is the leader of the herd.",
    "t0": 6.5625,
    "t1": 9.375,
@@ -854,7 +854,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Who leads the herd? Tumble, or Grandma?",
    "t0": 13.75,
    "t1": 20.3125,
@@ -905,7 +905,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma! Everyone follows Grandma.",
    "t0": 20.3125,
    "t1": 23.4375,
@@ -941,7 +941,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma leads the herd to water and food.",
    "t0": 23.4375,
    "t1": 26.875,
@@ -997,7 +997,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Follow the leader! Step, step, step.",
    "t0": 26.875,
    "t1": 30.0,
@@ -1043,7 +1043,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Grandma decides when to walk, and when to stop.",
    "t0": 30.0,
    "t1": 33.75,
@@ -1104,7 +1104,7 @@
    "sung": false
   },
   {
-   "place": "jungle",
+   "place": "jungle_path",
    "say": "Can you march like an elephant? Stomp, stomp, stomp!",
    "t0": 33.75,
    "t1": 38.125,

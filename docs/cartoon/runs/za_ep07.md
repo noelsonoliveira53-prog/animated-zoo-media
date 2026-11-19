@@ -26,3 +26,4 @@ Defects for docs/IMPROVE.md (the daily run folds this in):
 - Milo's eyes kept shut need a prop over them (the engine's idle blink sets the lids open again); `art_za_ep07.shut_eyes` does it.
 - The night place's lamp sits under the captions in Milo's night close-ups (bottom left); small, kept.
 - The BUSH sign comes within about 10 px of Milo's crest at 293.4 s; nothing covered, kept.
+- Description: written with the old AI line; the owner's rule of Nov 19 10:32 AM (no AI mention, end with the fact-check line) reached this build through another session's commit 04b568e, which changed the line in the episode file. The plan entry carries the new line ("Every fact is checked against trusted sources ..."), no "AI"; review.py was run again with the new check: PASS; upload_guard OK TO UPLOAD again.

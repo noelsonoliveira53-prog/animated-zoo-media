@@ -2695,11 +2695,30 @@
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep05.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 18 11:30 PM ET by the one-off catch-up adventure build (session_014CFVfVfpWnyGfoZGyRpN4s); in production, NOT uploaded."
+  "note": "Built Nov 18 11:18 PM - Nov 19 1:30 AM ET by the one-off catch-up adventure build (session_014CFVfVfpWnyGfoZGyRpN4s): 4K AV1 358.4 s; stills of every shot (start and end) and 90 frames of the rendered file (every shot end, every answer reveal, rhymes and tunes) looked at; pace, watermark and corner sheet, listen.py, review.py. Run note docs/cartoon/runs/za_ep05.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM.",
+  "description": "Mango the spider monkey wakes up hungry, but her breakfast is gone from her branch! Who took it? Mango, baby elephant Tumble and Milo the bluebird follow the clues: a banana peel, a trail of sticky drips, and a happy little tune coming from a bush. Who is hiding in the leaves? A gentle animal mystery for ages 2-6 about not guessing, asking kindly and sharing, with questions to answer, drips to count and a tune to clap along to.\nKids learn that fruit is a spider monkey's main food, that baby tapirs have stripes and spots like a little watermelon that help them blend in, and that a tapir's bendy snout can smell and grab food.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Baird's tapir); Dublin Zoo (tapir).",
+  "tags": [
+   "spider monkey",
+   "baby tapir",
+   "monkey story for kids",
+   "baby elephant",
+   "animal stories for kids",
+   "mystery story for kids",
+   "sharing story for kids",
+   "kids adventure cartoon",
+   "tapir facts for kids",
+   "counting for kids",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "A MYSTERY!",
+  "seconds": 358.4
  },
  {
   "file": "cartoon/za_ep06.mp4",

@@ -1,0 +1,7525 @@
+{
+ "id": "za_ep05",
+ "total": 358.4088333333331,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5,
+  353.125,
+  353.75,
+  354.375,
+  355.0,
+  355.625,
+  356.25,
+  356.875,
+  357.5,
+  358.125
+ ],
+ "plan": {
+  "length": 358.4,
+  "shots": 69,
+  "visual_changes": 375,
+  "mean_gap": 0.96,
+  "longest_gap": 5.25,
+  "longest_gap_at": 141.3,
+  "over_6s": [],
+  "places": [
+   "canopy",
+   "bigtree",
+   "jungle",
+   "stream",
+   "hollow",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 10,
+  "longest_without_question": 62.8,
+  "first_words_at": 0.42,
+  "shot_mean": 5.19,
+  "beats": {
+   "hook": 1,
+   "goal": 5,
+   "fact": 4,
+   "obstacle1": 8,
+   "song": 3,
+   "obstacle2": 7,
+   "obstacle3": 5,
+   "low": 3,
+   "solution": 14,
+   "ending": 13
+  },
+  "fails": [],
+  "words_placed": "783/783",
+  "sync": {
+   "pauses_checked": 66,
+   "onset_err_mean_ms": 25.6,
+   "onset_err_max_ms": 90.0,
+   "suspect_words": [],
+   "cuts": 68,
+   "cuts_on_the_half_beat": 68,
+   "songs_entering_on_a_beat": "3/3",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the treetops hook: breakfast gone"
+  ],
+  [
+   0.02,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   1.13,
+   "picture",
+   "tb"
+  ],
+  [
+   1.69,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   1.69,
+   "word",
+   "GONE!"
+  ],
+  [
+   2.38,
+   "action",
+   "mango hops"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the treetops hook: Milo"
+  ],
+  [
+   5.61,
+   "word",
+   "WHERE IS IT?"
+  ],
+  [
+   6.99,
+   "action",
+   "milo hops"
+  ],
+  [
+   8.12,
+   "new shot",
+   "the treetops canopy: the leaf was here"
+  ],
+  [
+   8.87,
+   "action",
+   "mango swishes her tail"
+  ],
+  [
+   8.87,
+   "word",
+   "MANGO"
+  ],
+  [
+   12.38,
+   "picture",
+   "lf"
+  ],
+  [
+   13.6,
+   "picture",
+   "ar"
+  ],
+  [
+   15.62,
+   "new shot",
+   "the treetops the breakfast: count"
+  ],
+  [
+   15.73,
+   "count",
+   "1"
+  ],
+  [
+   16.03,
+   "count",
+   "2"
+  ],
+  [
+   16.33,
+   "count",
+   "3"
+  ],
+  [
+   17.75,
+   "action",
+   "the banana wiggles"
+  ],
+  [
+   17.75,
+   "word",
+   "BANANA!"
+  ],
+  [
+   19.69,
+   "new place",
+   "the tallest tree Mango swings down"
+  ],
+  [
+   19.74,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   20.48,
+   "action",
+   "Mango swings down"
+  ],
+  [
+   21.84,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   22.59,
+   "action",
+   "tumble hops"
+  ],
+  [
+   22.59,
+   "word",
+   "TUMBLE"
+  ],
+  [
+   25.0,
+   "new shot",
+   "the tallest tree Mango: somebody took it"
+  ],
+  [
+   25.02,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   25.87,
+   "picture",
+   "tb"
+  ],
+  [
+   28.07,
+   "action",
+   "mango hops"
+  ],
+  [
+   28.07,
+   "word",
+   "SOMEBODY?"
+  ],
+  [
+   28.75,
+   "new shot",
+   "the tallest tree Tumble: let's find it"
+  ],
+  [
+   28.77,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   30.75,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   30.75,
+   "word",
+   "CLUES!"
+  ],
+  [
+   31.79,
+   "action",
+   "tumble hops"
+  ],
+  [
+   32.81,
+   "new shot",
+   "the tallest tree question: fruit or fish"
+  ],
+  [
+   35.18,
+   "sign",
+   "FRUIT"
+  ],
+  [
+   35.53,
+   "sign",
+   "FISH"
+  ],
+  [
+   36.91,
+   "thinking dot",
+   "1"
+  ],
+  [
+   37.52,
+   "thinking dot",
+   "2"
+  ],
+  [
+   38.12,
+   "thinking dot",
+   "3"
+  ],
+  [
+   38.58,
+   "answer",
+   "FRUIT"
+  ],
+  [
+   40.0,
+   "new place",
+   "the picture board (blue) fact: fruit is the main food"
+  ],
+  [
+   42.37,
+   "action",
+   "m moves an arm"
+  ],
+  [
+   42.7,
+   "picture",
+   "f1"
+  ],
+  [
+   42.7,
+   "picture",
+   "f2"
+  ],
+  [
+   42.7,
+   "word",
+   "FRUIT!"
+  ],
+  [
+   43.63,
+   "picture",
+   "f3"
+  ],
+  [
+   44.35,
+   "picture",
+   "bn"
+  ],
+  [
+   44.35,
+   "word",
+   "MAIN FOOD"
+  ],
+  [
+   44.76,
+   "action",
+   "m hops"
+  ],
+  [
+   45.62,
+   "new place",
+   "the tallest tree Mango: detective"
+  ],
+  [
+   45.65,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   46.09,
+   "word",
+   "DETECTIVE!"
+  ],
+  [
+   47.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   49.11,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   49.62,
+   "action",
+   "mango hops"
+  ],
+  [
+   50.62,
+   "new shot",
+   "the tallest tree looking low"
+  ],
+  [
+   51.23,
+   "action",
+   "Mango leans down"
+  ],
+  [
+   51.23,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   53.08,
+   "picture",
+   "pl"
+  ],
+  [
+   54.38,
+   "new shot",
+   "the tallest tree question: peel or leaf"
+  ],
+  [
+   55.48,
+   "sign",
+   "PEEL"
+  ],
+  [
+   55.83,
+   "sign",
+   "LEAF"
+  ],
+  [
+   57.42,
+   "thinking dot",
+   "1"
+  ],
+  [
+   58.02,
+   "thinking dot",
+   "2"
+  ],
+  [
+   58.63,
+   "thinking dot",
+   "3"
+  ],
+  [
+   59.08,
+   "answer",
+   "PEEL"
+  ],
+  [
+   60.62,
+   "new shot",
+   "the tallest tree the peel close"
+  ],
+  [
+   61.17,
+   "word",
+   "A PEEL!"
+  ],
+  [
+   62.18,
+   "action",
+   "the peel wiggles"
+  ],
+  [
+   64.69,
+   "new shot",
+   "the tallest tree Mango: did you?"
+  ],
+  [
+   64.71,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   64.89,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   66.18,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   67.19,
+   "new shot",
+   "the tallest tree Tumble: not me"
+  ],
+  [
+   67.21,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   67.46,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   67.46,
+   "word",
+   "NOT ME!"
+  ],
+  [
+   68.92,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   70.31,
+   "new shot",
+   "the tallest tree Mango: sorry, no guessing"
+  ],
+  [
+   70.33,
+   "action",
+   "mango looks sad"
+  ],
+  [
+   72.25,
+   "word",
+   "NO GUESSING"
+  ],
+  [
+   72.5,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   73.44,
+   "new shot",
+   "the tallest tree the drips start"
+  ],
+  [
+   73.57,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   73.92,
+   "picture",
+   "dr"
+  ],
+  [
+   73.92,
+   "word",
+   "DRIPS!"
+  ],
+  [
+   77.27,
+   "action",
+   "mango hops"
+  ],
+  [
+   77.5,
+   "new shot",
+   "the tallest tree Tumble: this way"
+  ],
+  [
+   77.52,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   80.08,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   80.08,
+   "word",
+   "THIS WAY!"
+  ],
+  [
+   80.94,
+   "new place",
+   "the green jungle follow the trail"
+  ],
+  [
+   81.04,
+   "action",
+   "mango walks"
+  ],
+  [
+   81.04,
+   "action",
+   "milo flies"
+  ],
+  [
+   81.04,
+   "action",
+   "tumble walks"
+  ],
+  [
+   84.69,
+   "new shot",
+   "the green jungle question: count the drips"
+  ],
+  [
+   87.78,
+   "count",
+   "1"
+  ],
+  [
+   88.1,
+   "count",
+   "2"
+  ],
+  [
+   88.41,
+   "count",
+   "3"
+  ],
+  [
+   88.72,
+   "count",
+   "4"
+  ],
+  [
+   89.03,
+   "count",
+   "5"
+  ],
+  [
+   90.0,
+   "new shot",
+   "the green jungle the clue rhyme"
+  ],
+  [
+   90.7,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   90.7,
+   "word",
+   "LOOK LOW"
+  ],
+  [
+   91.46,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   91.46,
+   "word",
+   "LOOK HIGH"
+  ],
+  [
+   92.45,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   93.22,
+   "action",
+   "mango hops"
+  ],
+  [
+   94.06,
+   "new shot",
+   "the green jungle song: the clue tune"
+  ],
+  [
+   94.18,
+   "action",
+   "mango walks"
+  ],
+  [
+   94.18,
+   "action",
+   "milo flies"
+  ],
+  [
+   94.18,
+   "action",
+   "tumble walks"
+  ],
+  [
+   94.18,
+   "word",
+   "TIPTOE..."
+  ],
+  [
+   95.43,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   97.93,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   99.18,
+   "word",
+   "CLUES!"
+  ],
+  [
+   99.81,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   101.68,
+   "action",
+   "mango hops"
+  ],
+  [
+   104.38,
+   "new place",
+   "the stream with the vine bridge the trail stops"
+  ],
+  [
+   108.12,
+   "action",
+   "mango looks sad"
+  ],
+  [
+   108.12,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   108.12,
+   "word",
+   "NO MORE DRIPS"
+  ],
+  [
+   109.06,
+   "new shot",
+   "the stream with the vine bridge Tumble: where did it go"
+  ],
+  [
+   109.08,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   110.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   110.66,
+   "word",
+   "WHERE?"
+  ],
+  [
+   111.56,
+   "new shot",
+   "the stream with the vine bridge Milo sees more drips"
+  ],
+  [
+   112.1,
+   "action",
+   "milo flies"
+  ],
+  [
+   115.3,
+   "picture",
+   "dr"
+  ],
+  [
+   116.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   116.26,
+   "word",
+   "OVER HERE!"
+  ],
+  [
+   117.19,
+   "new shot",
+   "the stream with the vine bridge question: jump or bridge"
+  ],
+  [
+   120.07,
+   "sign",
+   "JUMP"
+  ],
+  [
+   120.42,
+   "sign",
+   "BRIDGE"
+  ],
+  [
+   122.09,
+   "thinking dot",
+   "1"
+  ],
+  [
+   122.69,
+   "thinking dot",
+   "2"
+  ],
+  [
+   123.3,
+   "thinking dot",
+   "3"
+  ],
+  [
+   123.75,
+   "answer",
+   "BRIDGE"
+  ],
+  [
+   125.31,
+   "new shot",
+   "the stream with the vine bridge Mango: slow and steady"
+  ],
+  [
+   125.33,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   125.76,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   127.71,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   127.71,
+   "word",
+   "SLOW AND STEADY"
+  ],
+  [
+   129.19,
+   "action",
+   "mango hops"
+  ],
+  [
+   130.0,
+   "new shot",
+   "the stream with the vine bridge crossing"
+  ],
+  [
+   130.05,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   130.3,
+   "action",
+   "mango walks"
+  ],
+  [
+   130.3,
+   "action",
+   "tumble walks"
+  ],
+  [
+   131.81,
+   "action",
+   "mango swishes her tail"
+  ],
+  [
+   134.88,
+   "word",
+   "STEP, STEP!"
+  ],
+  [
+   136.88,
+   "new shot",
+   "the stream with the vine bridge drips again"
+  ],
+  [
+   136.9,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   137.65,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   138.07,
+   "action",
+   "mango hops"
+  ],
+  [
+   138.07,
+   "word",
+   "DRIPS!"
+  ],
+  [
+   141.25,
+   "new place",
+   "the sunny hollow at the bottom of the hill the hollow and the bush"
+  ],
+  [
+   141.35,
+   "action",
+   "tumble walks"
+  ],
+  [
+   146.6,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   146.6,
+   "word",
+   "A BIG BUSH"
+  ],
+  [
+   147.5,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Tumble: I'll look"
+  ],
+  [
+   147.52,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   148.68,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   149.38,
+   "new shot",
+   "the sunny hollow at the bottom of the hill only leaves"
+  ],
+  [
+   150.11,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   150.11,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   152.23,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   152.23,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   152.23,
+   "word",
+   "ONLY LEAVES"
+  ],
+  [
+   154.69,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango calls"
+  ],
+  [
+   154.71,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   154.8,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   154.8,
+   "word",
+   "HELLO?"
+  ],
+  [
+   156.66,
+   "action",
+   "mango hops"
+  ],
+  [
+   156.66,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   157.19,
+   "new shot",
+   "the sunny hollow at the bottom of the hill nobody comes out"
+  ],
+  [
+   157.59,
+   "action",
+   "the bush is still"
+  ],
+  [
+   160.19,
+   "word",
+   "SO STILL..."
+  ],
+  [
+   160.94,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango sits down"
+  ],
+  [
+   161.75,
+   "action",
+   "Mango sits down"
+  ],
+  [
+   161.75,
+   "action",
+   "mango looks sad"
+  ],
+  [
+   164.49,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   164.49,
+   "word",
+   "SO HUNGRY"
+  ],
+  [
+   167.19,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango: I don't know"
+  ],
+  [
+   167.21,
+   "action",
+   "mango looks sad"
+  ],
+  [
+   169.32,
+   "action",
+   "blink"
+  ],
+  [
+   169.32,
+   "action",
+   "blink"
+  ],
+  [
+   170.31,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Tumble sits close"
+  ],
+  [
+   170.36,
+   "action",
+   "mango looks sad"
+  ],
+  [
+   170.98,
+   "action",
+   "Tumble sits down"
+  ],
+  [
+   172.21,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   172.92,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   173.75,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango: let's listen"
+  ],
+  [
+   173.77,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   173.97,
+   "action",
+   "mango hops"
+  ],
+  [
+   177.4,
+   "word",
+   "LISTEN!"
+  ],
+  [
+   178.01,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   178.75,
+   "new shot",
+   "the sunny hollow at the bottom of the hill question: be quiet"
+  ],
+  [
+   179.76,
+   "sign",
+   "LOUD"
+  ],
+  [
+   180.11,
+   "sign",
+   "QUIET"
+  ],
+  [
+   182.09,
+   "thinking dot",
+   "1"
+  ],
+  [
+   182.7,
+   "thinking dot",
+   "2"
+  ],
+  [
+   183.31,
+   "thinking dot",
+   "3"
+  ],
+  [
+   183.76,
+   "answer",
+   "QUIET"
+  ],
+  [
+   185.31,
+   "new shot",
+   "the sunny hollow at the bottom of the hill the hum is named"
+  ],
+  [
+   185.37,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   187.44,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   187.44,
+   "word",
+   "HUM, HUM!"
+  ],
+  [
+   187.86,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   189.69,
+   "new shot",
+   "the sunny hollow at the bottom of the hill song: the happy hum"
+  ],
+  [
+   189.81,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   189.81,
+   "picture",
+   "n1"
+  ],
+  [
+   190.75,
+   "picture",
+   "n2"
+  ],
+  [
+   191.69,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   191.69,
+   "picture",
+   "n3"
+  ],
+  [
+   195.0,
+   "new shot",
+   "the sunny hollow at the bottom of the hill question: bush or sky"
+  ],
+  [
+   197.2,
+   "sign",
+   "BUSH"
+  ],
+  [
+   197.55,
+   "sign",
+   "SKY"
+  ],
+  [
+   198.98,
+   "thinking dot",
+   "1"
+  ],
+  [
+   199.58,
+   "thinking dot",
+   "2"
+  ],
+  [
+   200.19,
+   "thinking dot",
+   "3"
+  ],
+  [
+   200.64,
+   "answer",
+   "BUSH"
+  ],
+  [
+   202.19,
+   "new shot",
+   "the sunny hollow at the bottom of the hill stripes and spots in the leaves"
+  ],
+  [
+   202.64,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   205.92,
+   "picture",
+   "pk"
+  ],
+  [
+   205.92,
+   "word",
+   "STRIPES!"
+  ],
+  [
+   206.75,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   206.75,
+   "word",
+   "SPOTS!"
+  ],
+  [
+   207.81,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango asks kindly"
+  ],
+  [
+   207.83,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   209.03,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   209.03,
+   "word",
+   "PLEASE?"
+  ],
+  [
+   210.16,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   210.94,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Dot steps out"
+  ],
+  [
+   211.31,
+   "action",
+   "dot walks"
+  ],
+  [
+   211.31,
+   "action",
+   "the bush rustles"
+  ],
+  [
+   213.86,
+   "action",
+   "dot hops"
+  ],
+  [
+   213.86,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   213.86,
+   "word",
+   "DOT!"
+  ],
+  [
+   214.69,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Dot: hello"
+  ],
+  [
+   214.71,
+   "action",
+   "dot looks happy"
+  ],
+  [
+   217.12,
+   "action",
+   "dot's snout sniffs"
+  ],
+  [
+   217.43,
+   "action",
+   "dot hops"
+  ],
+  [
+   217.43,
+   "word",
+   "A PRESENT?"
+  ],
+  [
+   218.44,
+   "new place",
+   "the picture board (pink) fact: stripes and spots"
+  ],
+  [
+   220.28,
+   "picture",
+   "sp"
+  ],
+  [
+   220.28,
+   "word",
+   "STRIPES + SPOTS"
+  ],
+  [
+   222.33,
+   "action",
+   "d hops"
+  ],
+  [
+   224.86,
+   "word",
+   "BLEND IN"
+  ],
+  [
+   226.27,
+   "picture",
+   "lv"
+  ],
+  [
+   228.75,
+   "new place",
+   "the sunny hollow at the bottom of the hill Mango asks Dot"
+  ],
+  [
+   228.77,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   230.1,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   231.69,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   232.5,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Dot: sniff sniff"
+  ],
+  [
+   232.52,
+   "action",
+   "dot looks happy"
+  ],
+  [
+   233.18,
+   "action",
+   "dot's snout sniffs"
+  ],
+  [
+   233.18,
+   "word",
+   "SNIFF, SNIFF!"
+  ],
+  [
+   236.55,
+   "action",
+   "dot hops"
+  ],
+  [
+   237.19,
+   "new place",
+   "the picture board (blue) fact: the bendy snout"
+  ],
+  [
+   238.08,
+   "picture",
+   "ar"
+  ],
+  [
+   241.42,
+   "word",
+   "BENDY SNOUT"
+  ],
+  [
+   242.36,
+   "action",
+   "d's snout sniffs"
+  ],
+  [
+   243.4,
+   "action",
+   "the snout grabs"
+  ],
+  [
+   243.4,
+   "word",
+   "GRAB!"
+  ],
+  [
+   244.69,
+   "new place",
+   "the sunny hollow at the bottom of the hill question: nose or tail"
+  ],
+  [
+   247.18,
+   "sign",
+   "NOSE"
+  ],
+  [
+   247.53,
+   "sign",
+   "TAIL"
+  ],
+  [
+   249.23,
+   "thinking dot",
+   "1"
+  ],
+  [
+   249.84,
+   "thinking dot",
+   "2"
+  ],
+  [
+   250.44,
+   "thinking dot",
+   "3"
+  ],
+  [
+   250.9,
+   "answer",
+   "NOSE"
+  ],
+  [
+   252.19,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Dot: sorry"
+  ],
+  [
+   252.21,
+   "action",
+   "dot looks sad"
+  ],
+  [
+   254.93,
+   "action",
+   "blink"
+  ],
+  [
+   256.25,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango: that's okay"
+  ],
+  [
+   256.27,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   256.63,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   256.63,
+   "word",
+   "IT'S OKAY!"
+  ],
+  [
+   259.42,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   261.21,
+   "action",
+   "mango swishes her tail"
+  ],
+  [
+   261.88,
+   "new shot",
+   "the sunny hollow at the bottom of the hill nobody took it"
+  ],
+  [
+   262.06,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   263.89,
+   "action",
+   "a fruit rolls"
+  ],
+  [
+   263.89,
+   "picture",
+   "f1"
+  ],
+  [
+   263.89,
+   "word",
+   "IT ROLLED!"
+  ],
+  [
+   265.52,
+   "action",
+   "mango hops"
+  ],
+  [
+   267.0,
+   "action",
+   "dot hops"
+  ],
+  [
+   267.81,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Mango: let's share"
+  ],
+  [
+   267.83,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   269.58,
+   "action",
+   "mango hops"
+  ],
+  [
+   270.1,
+   "action",
+   "mango hops"
+  ],
+  [
+   270.1,
+   "word",
+   "LET'S SHARE!"
+  ],
+  [
+   270.94,
+   "new shot",
+   "the sunny hollow at the bottom of the hill question: count the shared fruit"
+  ],
+  [
+   271.4,
+   "action",
+   "a fruit for Dot"
+  ],
+  [
+   272.39,
+   "action",
+   "a fruit for Tumble"
+  ],
+  [
+   273.46,
+   "action",
+   "a fruit for Mango"
+  ],
+  [
+   275.75,
+   "count",
+   "1"
+  ],
+  [
+   276.05,
+   "count",
+   "2"
+  ],
+  [
+   276.33,
+   "action",
+   "dot hops"
+  ],
+  [
+   276.35,
+   "count",
+   "3"
+  ],
+  [
+   277.19,
+   "new shot",
+   "the sunny hollow at the bottom of the hill Dot's mama"
+  ],
+  [
+   277.83,
+   "action",
+   "tmama walks"
+  ],
+  [
+   279.83,
+   "action",
+   "dot hops"
+  ],
+  [
+   281.38,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   281.38,
+   "word",
+   "NO STRIPES!"
+  ],
+  [
+   283.44,
+   "new place",
+   "the picture board (blue) fact: the coat fades"
+  ],
+  [
+   284.75,
+   "picture",
+   "ar"
+  ],
+  [
+   287.01,
+   "word",
+   "FADE AWAY"
+  ],
+  [
+   289.62,
+   "action",
+   "d hops"
+  ],
+  [
+   289.62,
+   "action",
+   "mm nods"
+  ],
+  [
+   290.62,
+   "new place",
+   "the sunny hollow at the bottom of the hill Dot's mama: thank you"
+  ],
+  [
+   290.64,
+   "action",
+   "tmama looks happy"
+  ],
+  [
+   291.87,
+   "action",
+   "tmama nods"
+  ],
+  [
+   295.0,
+   "new shot",
+   "the sunny hollow at the bottom of the hill the sharing rhyme"
+  ],
+  [
+   295.09,
+   "word",
+   "SHARE!"
+  ],
+  [
+   295.36,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   296.1,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   296.94,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   298.94,
+   "action",
+   "mango hops"
+  ],
+  [
+   299.38,
+   "new shot",
+   "the sunny hollow at the bottom of the hill song: the sharing tune"
+  ],
+  [
+   299.5,
+   "action",
+   "mango hops"
+  ],
+  [
+   299.5,
+   "word",
+   "SHARE A LITTLE"
+  ],
+  [
+   300.75,
+   "action",
+   "dot hops"
+  ],
+  [
+   302.0,
+   "action",
+   "tumble hops"
+  ],
+  [
+   303.25,
+   "action",
+   "mango swishes her tail"
+  ],
+  [
+   304.5,
+   "action",
+   "tmama nods"
+  ],
+  [
+   304.5,
+   "word",
+   "SHARE A LOT!"
+  ],
+  [
+   305.75,
+   "action",
+   "dot hops"
+  ],
+  [
+   307.0,
+   "action",
+   "mango hops"
+  ],
+  [
+   310.0,
+   "new place",
+   "the zoo at sunset back at the zoo"
+  ],
+  [
+   310.1,
+   "action",
+   "mango walks"
+  ],
+  [
+   310.1,
+   "action",
+   "tumble walks"
+  ],
+  [
+   314.12,
+   "word",
+   "HOME!"
+  ],
+  [
+   315.94,
+   "new shot",
+   "the zoo at sunset Tumble tells Mama"
+  ],
+  [
+   315.96,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   316.59,
+   "action",
+   "tumble hops"
+  ],
+  [
+   318.62,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   318.62,
+   "word",
+   "BABY TAPIR"
+  ],
+  [
+   320.31,
+   "new shot",
+   "the zoo at sunset Mango: listen and ask"
+  ],
+  [
+   320.33,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   323.19,
+   "action",
+   "mango nods"
+  ],
+  [
+   323.93,
+   "action",
+   "mango swishes her tail"
+  ],
+  [
+   323.93,
+   "word",
+   "ASK KINDLY"
+  ],
+  [
+   324.69,
+   "new shot",
+   "the zoo at sunset Mama: kind friends share"
+  ],
+  [
+   324.99,
+   "action",
+   "mama nods"
+  ],
+  [
+   327.43,
+   "action",
+   "blink"
+  ],
+  [
+   327.43,
+   "word",
+   "SHARE!"
+  ],
+  [
+   328.12,
+   "new shot",
+   "the zoo at sunset the lesson"
+  ],
+  [
+   331.15,
+   "word",
+   "LOOK"
+  ],
+  [
+   331.58,
+   "word",
+   "LISTEN"
+  ],
+  [
+   332.27,
+   "word",
+   "ASK"
+  ],
+  [
+   332.67,
+   "action",
+   "milo hops"
+  ],
+  [
+   333.75,
+   "new shot",
+   "the zoo at sunset question: spots or feathers"
+  ],
+  [
+   334.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   337.65,
+   "sign",
+   "SPOTS"
+  ],
+  [
+   338.0,
+   "sign",
+   "FEATHERS"
+  ],
+  [
+   340.6,
+   "thinking dot",
+   "1"
+  ],
+  [
+   341.21,
+   "thinking dot",
+   "2"
+  ],
+  [
+   341.81,
+   "thinking dot",
+   "3"
+  ],
+  [
+   342.27,
+   "answer",
+   "SPOTS"
+  ],
+  [
+   343.75,
+   "new shot",
+   "the zoo at sunset question: fruit or rocks"
+  ],
+  [
+   345.7,
+   "action",
+   "milo hops"
+  ],
+  [
+   346.49,
+   "sign",
+   "FRUIT"
+  ],
+  [
+   346.84,
+   "sign",
+   "ROCKS"
+  ],
+  [
+   348.37,
+   "thinking dot",
+   "1"
+  ],
+  [
+   348.98,
+   "thinking dot",
+   "2"
+  ],
+  [
+   349.58,
+   "thinking dot",
+   "3"
+  ],
+  [
+   350.04,
+   "answer",
+   "FRUIT"
+  ],
+  [
+   351.56,
+   "new shot",
+   "the zoo at sunset goodbye: next adventure"
+  ],
+  [
+   351.64,
+   "action",
+   "milo hops"
+  ],
+  [
+   351.64,
+   "word",
+   "NEXT TIME!"
+  ],
+  [
+   354.62,
+   "word",
+   "SEE YOU SOON!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "canopy",
+   "say": "Oh no! My breakfast is gone! Who took it?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.4255416666666667,
+   "words": [
+    [
+     "Oh",
+     0.01,
+     0.13
+    ],
+    [
+     "no!",
+     0.13,
+     0.51
+    ],
+    [
+     "My",
+     0.51,
+     0.71
+    ],
+    [
+     "breakfast",
+     0.71,
+     1.18
+    ],
+    [
+     "is",
+     1.18,
+     1.27
+    ],
+    [
+     "gone!",
+     1.27,
+     1.71
+    ],
+    [
+     "Who",
+     1.85,
+     1.96
+    ],
+    [
+     "took",
+     1.96,
+     2.2
+    ],
+    [
+     "it?",
+     2.2,
+     2.4
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: breakfast gone",
+   "who": "mango",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "I'm Milo! Mango can't find her breakfast. Can you help us look?",
+   "t0": 3.125,
+   "t1": 8.125,
+   "v0": 3.3655416666666667,
+   "dur": 4.5224166666666665,
+   "words": [
+    [
+     "I'm",
+     0.01,
+     0.3
+    ],
+    [
+     "Milo!",
+     0.3,
+     0.94
+    ],
+    [
+     "Mango",
+     1.14,
+     1.59
+    ],
+    [
+     "can't",
+     1.59,
+     1.91
+    ],
+    [
+     "find",
+     1.91,
+     2.14
+    ],
+    [
+     "her",
+     2.14,
+     2.24
+    ],
+    [
+     "breakfast.",
+     2.24,
+     3.0
+    ],
+    [
+     "Can",
+     3.39,
+     3.52
+    ],
+    [
+     "you",
+     3.52,
+     3.62
+    ],
+    [
+     "help",
+     3.62,
+     3.91
+    ],
+    [
+     "us",
+     3.91,
+     4.09
+    ],
+    [
+     "look?",
+     4.09,
+     4.52
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "This is Mango, the spider monkey. This morning, her breakfast was right here, on a big leaf.",
+   "t0": 8.125,
+   "t1": 15.625,
+   "v0": 8.407958333333333,
+   "dur": 6.788833333333334,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.46
+    ],
+    [
+     "Mango,",
+     0.46,
+     1.24
+    ],
+    [
+     "the",
+     1.24,
+     1.32
+    ],
+    [
+     "spider",
+     1.32,
+     1.83
+    ],
+    [
+     "monkey.",
+     1.83,
+     2.42
+    ],
+    [
+     "This",
+     3.07,
+     3.33
+    ],
+    [
+     "morning,",
+     3.33,
+     3.81
+    ],
+    [
+     "her",
+     3.81,
+     3.97
+    ],
+    [
+     "breakfast",
+     3.97,
+     4.7
+    ],
+    [
+     "was",
+     4.7,
+     4.86
+    ],
+    [
+     "right",
+     4.86,
+     5.19
+    ],
+    [
+     "here,",
+     5.19,
+     5.74
+    ],
+    [
+     "on",
+     5.74,
+     5.88
+    ],
+    [
+     "a",
+     5.88,
+     5.93
+    ],
+    [
+     "big",
+     5.93,
+     6.28
+    ],
+    [
+     "leaf.",
+     6.28,
+     6.789
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "canopy: the leaf was here",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Three golden fruits, and one yellow banana. Yummy!",
+   "t0": 15.625,
+   "t1": 19.6875,
+   "v0": 15.716791666666666,
+   "dur": 3.768875,
+   "words": [
+    [
+     "Three",
+     0.01,
+     0.39
+    ],
+    [
+     "golden",
+     0.39,
+     0.8
+    ],
+    [
+     "fruits,",
+     0.8,
+     1.26
+    ],
+    [
+     "and",
+     1.26,
+     1.43
+    ],
+    [
+     "one",
+     1.43,
+     1.71
+    ],
+    [
+     "yellow",
+     1.71,
+     2.03
+    ],
+    [
+     "banana.",
+     2.03,
+     2.63
+    ],
+    [
+     "Yummy!",
+     3.26,
+     3.769
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the breakfast: count",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Mango swings down, to find her friend Tumble, the baby elephant.",
+   "t0": 19.6875,
+   "t1": 25.0,
+   "v0": 20.005666666666666,
+   "dur": 4.605208333333334,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.47
+    ],
+    [
+     "swings",
+     0.47,
+     0.99
+    ],
+    [
+     "down,",
+     0.99,
+     1.52
+    ],
+    [
+     "to",
+     1.73,
+     1.83
+    ],
+    [
+     "find",
+     1.83,
+     2.15
+    ],
+    [
+     "her",
+     2.15,
+     2.24
+    ],
+    [
+     "friend",
+     2.24,
+     2.58
+    ],
+    [
+     "Tumble,",
+     2.58,
+     3.13
+    ],
+    [
+     "the",
+     3.34,
+     3.44
+    ],
+    [
+     "baby",
+     3.44,
+     3.93
+    ],
+    [
+     "elephant.",
+     3.93,
+     4.6
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango swings down",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Tumble! My breakfast is gone. Somebody took it, I'm sure!",
+   "t0": 25.0,
+   "t1": 28.75,
+   "v0": 25.130875,
+   "dur": 3.39,
+   "words": [
+    [
+     "Tumble!",
+     0.01,
+     0.44
+    ],
+    [
+     "My",
+     0.59,
+     0.74
+    ],
+    [
+     "breakfast",
+     0.74,
+     1.23
+    ],
+    [
+     "is",
+     1.23,
+     1.33
+    ],
+    [
+     "gone.",
+     1.33,
+     1.8
+    ],
+    [
+     "Somebody",
+     2.15,
+     2.47
+    ],
+    [
+     "took",
+     2.47,
+     2.72
+    ],
+    [
+     "it,",
+     2.72,
+     2.8
+    ],
+    [
+     "I'm",
+     2.8,
+     2.94
+    ],
+    [
+     "sure!",
+     2.94,
+     3.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: somebody took it",
+   "who": "mango",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Don't worry, Mango. Let's look for clues, and find it together!",
+   "t0": 28.75,
+   "t1": 32.8125,
+   "v0": 29.040875,
+   "dur": 3.319125,
+   "words": [
+    [
+     "Don't",
+     0.01,
+     0.21
+    ],
+    [
+     "worry,",
+     0.21,
+     0.49
+    ],
+    [
+     "Mango.",
+     0.49,
+     1.13
+    ],
+    [
+     "Let's",
+     1.13,
+     1.38
+    ],
+    [
+     "look",
+     1.38,
+     1.57
+    ],
+    [
+     "for",
+     1.57,
+     1.71
+    ],
+    [
+     "clues,",
+     1.71,
+     2.27
+    ],
+    [
+     "and",
+     2.27,
+     2.37
+    ],
+    [
+     "find",
+     2.37,
+     2.67
+    ],
+    [
+     "it",
+     2.67,
+     2.75
+    ],
+    [
+     "together!",
+     2.75,
+     3.319
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: let's find it",
+   "who": "tumble",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "What does Mango eat for breakfast? Fruit, or fish?",
+   "t0": 32.8125,
+   "t1": 40.0,
+   "v0": 32.879999999999995,
+   "dur": 3.5770416666666667,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.36
+    ],
+    [
+     "Mango",
+     0.36,
+     0.85
+    ],
+    [
+     "eat",
+     0.85,
+     1.13
+    ],
+    [
+     "for",
+     1.13,
+     1.29
+    ],
+    [
+     "breakfast?",
+     1.29,
+     2.03
+    ],
+    [
+     "Fruit,",
+     2.3,
+     2.84
+    ],
+    [
+     "or",
+     2.84,
+     2.98
+    ],
+    [
+     "fish?",
+     2.98,
+     3.577
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: fruit or fish",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "In the daytime, spider monkeys look for fruit. Fruit is their main food!",
+   "t0": 40.0,
+   "t1": 45.625,
+   "v0": 40.17704166666666,
+   "dur": 5.133083333333333,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.24
+    ],
+    [
+     "daytime,",
+     0.24,
+     0.95
+    ],
+    [
+     "spider",
+     1.12,
+     1.64
+    ],
+    [
+     "monkeys",
+     1.64,
+     2.19
+    ],
+    [
+     "look",
+     2.19,
+     2.38
+    ],
+    [
+     "for",
+     2.38,
+     2.52
+    ],
+    [
+     "fruit.",
+     2.52,
+     3.05
+    ],
+    [
+     "Fruit",
+     3.45,
+     3.84
+    ],
+    [
+     "is",
+     3.84,
+     4.0
+    ],
+    [
+     "their",
+     4.0,
+     4.17
+    ],
+    [
+     "main",
+     4.17,
+     4.58
+    ],
+    [
+     "food!",
+     4.58,
+     5.13
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: fruit is the main food",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "I'll be a detective! I have my magnifying glass. Let's look for clues!",
+   "t0": 45.625,
+   "t1": 50.625,
+   "v0": 45.83012499999999,
+   "dur": 4.383333333333334,
+   "words": [
+    [
+     "I'll",
+     0.01,
+     0.1
+    ],
+    [
+     "be",
+     0.1,
+     0.23
+    ],
+    [
+     "a",
+     0.23,
+     0.26
+    ],
+    [
+     "detective!",
+     0.26,
+     0.97
+    ],
+    [
+     "I",
+     1.31,
+     1.39
+    ],
+    [
+     "have",
+     1.39,
+     1.58
+    ],
+    [
+     "my",
+     1.58,
+     1.73
+    ],
+    [
+     "magnifying",
+     1.73,
+     2.48
+    ],
+    [
+     "glass.",
+     2.48,
+     2.89
+    ],
+    [
+     "Let's",
+     3.28,
+     3.51
+    ],
+    [
+     "look",
+     3.51,
+     3.67
+    ],
+    [
+     "for",
+     3.67,
+     3.79
+    ],
+    [
+     "clues!",
+     3.79,
+     4.38
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: detective",
+   "who": "mango",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Mango looks down low. What is that, by the tree?",
+   "t0": 50.625,
+   "t1": 54.375,
+   "v0": 50.73345833333332,
+   "dur": 3.3870416666666667,
+   "words": [
+    [
+     "Mango",
+     0.01,
+     0.5
+    ],
+    [
+     "looks",
+     0.5,
+     0.84
+    ],
+    [
+     "down",
+     0.84,
+     1.19
+    ],
+    [
+     "low.",
+     1.19,
+     1.63
+    ],
+    [
+     "What",
+     2.02,
+     2.17
+    ],
+    [
+     "is",
+     2.17,
+     2.35
+    ],
+    [
+     "that,",
+     2.35,
+     2.62
+    ],
+    [
+     "by",
+     2.62,
+     2.78
+    ],
+    [
+     "the",
+     2.78,
+     2.86
+    ],
+    [
+     "tree?",
+     2.86,
+     3.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "looking low",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Is it a banana peel, or a leaf?",
+   "t0": 54.375,
+   "t1": 60.625,
+   "v0": 54.64049999999998,
+   "dur": 2.322416666666667,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.19
+    ],
+    [
+     "it",
+     0.19,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.32
+    ],
+    [
+     "banana",
+     0.32,
+     0.84
+    ],
+    [
+     "peel,",
+     0.84,
+     1.39
+    ],
+    [
+     "or",
+     1.54,
+     1.73
+    ],
+    [
+     "a",
+     1.73,
+     1.78
+    ],
+    [
+     "leaf?",
+     1.78,
+     2.32
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: peel or leaf",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "A banana peel! And it's empty. Somebody ate my banana!",
+   "t0": 60.625,
+   "t1": 64.6875,
+   "v0": 60.68291666666665,
+   "dur": 3.6786666666666665,
+   "words": [
+    [
+     "A",
+     0.02,
+     0.06
+    ],
+    [
+     "banana",
+     0.06,
+     0.49
+    ],
+    [
+     "peel!",
+     0.49,
+     0.94
+    ],
+    [
+     "And",
+     1.28,
+     1.37
+    ],
+    [
+     "it's",
+     1.37,
+     1.5
+    ],
+    [
+     "empty.",
+     1.5,
+     2.05
+    ],
+    [
+     "Somebody",
+     2.33,
+     2.73
+    ],
+    [
+     "ate",
+     2.73,
+     2.93
+    ],
+    [
+     "my",
+     2.93,
+     3.14
+    ],
+    [
+     "banana!",
+     3.14,
+     3.679
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the peel close",
+   "who": "mango",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Tumble! Did you eat my banana?",
+   "t0": 64.6875,
+   "t1": 67.1875,
+   "v0": 64.88158333333332,
+   "dur": 1.8373333333333333,
+   "words": [
+    [
+     "Tumble!",
+     0.01,
+     0.44
+    ],
+    [
+     "Did",
+     0.68,
+     0.86
+    ],
+    [
+     "you",
+     0.86,
+     0.95
+    ],
+    [
+     "eat",
+     0.95,
+     1.12
+    ],
+    [
+     "my",
+     1.12,
+     1.3
+    ],
+    [
+     "banana?",
+     1.3,
+     1.837
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: did you?",
+   "who": "mango",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Not me, Mango! I was with my mama all morning.",
+   "t0": 67.1875,
+   "t1": 70.3125,
+   "v0": 67.23891666666667,
+   "dur": 2.855,
+   "words": [
+    [
+     "Not",
+     0.01,
+     0.22
+    ],
+    [
+     "me,",
+     0.22,
+     0.38
+    ],
+    [
+     "Mango!",
+     0.38,
+     1.03
+    ],
+    [
+     "I",
+     1.03,
+     1.15
+    ],
+    [
+     "was",
+     1.15,
+     1.38
+    ],
+    [
+     "with",
+     1.38,
+     1.52
+    ],
+    [
+     "my",
+     1.52,
+     1.68
+    ],
+    [
+     "mama",
+     1.68,
+     2.03
+    ],
+    [
+     "all",
+     2.03,
+     2.23
+    ],
+    [
+     "morning.",
+     2.23,
+     2.85
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: not me",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Sorry, Tumble. I should not guess like that.",
+   "t0": 70.3125,
+   "t1": 73.4375,
+   "v0": 70.61391666666668,
+   "dur": 2.4332083333333334,
+   "words": [
+    [
+     "Sorry,",
+     0.1,
+     0.48
+    ],
+    [
+     "Tumble.",
+     0.48,
+     0.96
+    ],
+    [
+     "I",
+     1.27,
+     1.33
+    ],
+    [
+     "should",
+     1.33,
+     1.48
+    ],
+    [
+     "not",
+     1.48,
+     1.64
+    ],
+    [
+     "guess",
+     1.64,
+     1.89
+    ],
+    [
+     "like",
+     1.89,
+     2.07
+    ],
+    [
+     "that.",
+     2.07,
+     2.43
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: sorry, no guessing",
+   "who": "mango",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Look! Sticky drips, on the ground. Drip, drip, drip!",
+   "t0": 73.4375,
+   "t1": 77.5,
+   "v0": 73.56712500000003,
+   "dur": 3.69925,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.35
+    ],
+    [
+     "Sticky",
+     0.35,
+     0.76
+    ],
+    [
+     "drips,",
+     0.76,
+     1.19
+    ],
+    [
+     "on",
+     1.19,
+     1.33
+    ],
+    [
+     "the",
+     1.33,
+     1.41
+    ],
+    [
+     "ground.",
+     1.41,
+     2.02
+    ],
+    [
+     "Drip,",
+     2.44,
+     2.82
+    ],
+    [
+     "drip,",
+     2.82,
+     3.23
+    ],
+    [
+     "drip!",
+     3.23,
+     3.699
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the drips start",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Sticky drips, from a juicy fruit! They go this way.",
+   "t0": 77.5,
+   "t1": 80.9375,
+   "v0": 77.78637500000005,
+   "dur": 2.7477916666666666,
+   "words": [
+    [
+     "Sticky",
+     0.01,
+     0.32
+    ],
+    [
+     "drips,",
+     0.32,
+     0.7
+    ],
+    [
+     "from",
+     0.7,
+     0.86
+    ],
+    [
+     "a",
+     0.86,
+     0.9
+    ],
+    [
+     "juicy",
+     0.9,
+     1.29
+    ],
+    [
+     "fruit!",
+     1.29,
+     1.73
+    ],
+    [
+     "They",
+     1.73,
+     1.85
+    ],
+    [
+     "go",
+     1.85,
+     2.09
+    ],
+    [
+     "this",
+     2.09,
+     2.29
+    ],
+    [
+     "way.",
+     2.29,
+     2.748
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: this way",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "The friends follow the trail, through the green jungle.",
+   "t0": 80.9375,
+   "t1": 84.6875,
+   "v0": 81.05416666666673,
+   "dur": 3.2884583333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "friends",
+     0.1,
+     0.61
+    ],
+    [
+     "follow",
+     0.61,
+     0.98
+    ],
+    [
+     "the",
+     0.98,
+     1.08
+    ],
+    [
+     "trail,",
+     1.08,
+     1.66
+    ],
+    [
+     "through",
+     1.95,
+     2.17
+    ],
+    [
+     "the",
+     2.17,
+     2.25
+    ],
+    [
+     "green",
+     2.25,
+     2.69
+    ],
+    [
+     "jungle.",
+     2.69,
+     3.288
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "follow the trail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "How many drips can you see? Count with me! One, two, three, four, five!",
+   "t0": 84.6875,
+   "t1": 90.0,
+   "v0": 84.86262500000008,
+   "dur": 4.802583333333334,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.16
+    ],
+    [
+     "many",
+     0.16,
+     0.37
+    ],
+    [
+     "drips",
+     0.37,
+     0.73
+    ],
+    [
+     "can",
+     0.73,
+     0.88
+    ],
+    [
+     "you",
+     0.88,
+     0.98
+    ],
+    [
+     "see?",
+     0.98,
+     1.43
+    ],
+    [
+     "Count",
+     1.66,
+     1.99
+    ],
+    [
+     "with",
+     1.99,
+     2.15
+    ],
+    [
+     "me!",
+     2.15,
+     2.49
+    ],
+    [
+     "One,",
+     2.92,
+     3.18
+    ],
+    [
+     "two,",
+     3.18,
+     3.48
+    ],
+    [
+     "three,",
+     3.48,
+     3.77
+    ],
+    [
+     "four,",
+     3.77,
+     4.17
+    ],
+    [
+     "five!",
+     4.17,
+     4.8
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: count the drips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Look down low, and look up high. We will find it, you and I!",
+   "t0": 90.0,
+   "t1": 94.0625,
+   "v0": 90.18520833333342,
+   "dur": 3.3854166666666665,
+   "words": [
+    [
+     "Look",
+     0.02,
+     0.21
+    ],
+    [
+     "down",
+     0.21,
+     0.51
+    ],
+    [
+     "low,",
+     0.51,
+     0.86
+    ],
+    [
+     "and",
+     0.86,
+     0.96
+    ],
+    [
+     "look",
+     0.96,
+     1.14
+    ],
+    [
+     "up",
+     1.14,
+     1.27
+    ],
+    [
+     "high.",
+     1.27,
+     1.7
+    ],
+    [
+     "We",
+     2.09,
+     2.16
+    ],
+    [
+     "will",
+     2.16,
+     2.26
+    ],
+    [
+     "find",
+     2.26,
+     2.6
+    ],
+    [
+     "it,",
+     2.6,
+     2.78
+    ],
+    [
+     "you",
+     2.78,
+     2.92
+    ],
+    [
+     "and",
+     2.92,
+     3.03
+    ],
+    [
+     "I!",
+     3.03,
+     3.385
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the clue rhyme",
+   "who": "mango",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "",
+   "t0": 94.0625,
+   "t1": 104.375,
+   "v0": 94.375,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: the clue tune",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "stream",
+   "say": "Oh no! The drips go to the stream. And there, the trail stops!",
+   "t0": 104.375,
+   "t1": 109.0625,
+   "v0": 104.495,
+   "dur": 4.311833333333333,
+   "words": [
+    [
+     "Oh",
+     0.02,
+     0.23
+    ],
+    [
+     "no!",
+     0.23,
+     0.73
+    ],
+    [
+     "The",
+     0.73,
+     0.81
+    ],
+    [
+     "drips",
+     0.81,
+     1.22
+    ],
+    [
+     "go",
+     1.22,
+     1.37
+    ],
+    [
+     "to",
+     1.37,
+     1.45
+    ],
+    [
+     "the",
+     1.45,
+     1.53
+    ],
+    [
+     "stream.",
+     1.53,
+     2.18
+    ],
+    [
+     "And",
+     2.61,
+     2.76
+    ],
+    [
+     "there,",
+     2.76,
+     3.07
+    ],
+    [
+     "the",
+     3.07,
+     3.19
+    ],
+    [
+     "trail",
+     3.19,
+     3.63
+    ],
+    [
+     "stops!",
+     3.63,
+     4.31
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the trail stops",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "The trail is gone. Where did it go?",
+   "t0": 109.0625,
+   "t1": 111.5625,
+   "v0": 109.32683333333335,
+   "dur": 1.7870416666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.06
+    ],
+    [
+     "trail",
+     0.06,
+     0.42
+    ],
+    [
+     "is",
+     0.42,
+     0.56
+    ],
+    [
+     "gone.",
+     0.56,
+     0.98
+    ],
+    [
+     "Where",
+     0.98,
+     1.11
+    ],
+    [
+     "did",
+     1.11,
+     1.24
+    ],
+    [
+     "it",
+     1.24,
+     1.33
+    ],
+    [
+     "go?",
+     1.33,
+     1.787
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: where did it go",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "Milo flies up high, over the water. Look, more drips, on the other side!",
+   "t0": 111.5625,
+   "t1": 117.1875,
+   "v0": 111.63387500000003,
+   "dur": 5.193208333333334,
+   "words": [
+    [
+     "Milo",
+     0.0,
+     0.47
+    ],
+    [
+     "flies",
+     0.47,
+     0.99
+    ],
+    [
+     "up",
+     0.99,
+     1.15
+    ],
+    [
+     "high,",
+     1.15,
+     1.63
+    ],
+    [
+     "over",
+     1.63,
+     1.84
+    ],
+    [
+     "the",
+     1.84,
+     1.93
+    ],
+    [
+     "water.",
+     1.93,
+     2.44
+    ],
+    [
+     "Look,",
+     3.01,
+     3.39
+    ],
+    [
+     "more",
+     3.39,
+     3.67
+    ],
+    [
+     "drips,",
+     3.67,
+     4.2
+    ],
+    [
+     "on",
+     4.2,
+     4.32
+    ],
+    [
+     "the",
+     4.32,
+     4.45
+    ],
+    [
+     "other",
+     4.45,
+     4.63
+    ],
+    [
+     "side!",
+     4.63,
+     5.19
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo sees more drips",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "How can Tumble and Mango get across? Jump, or the bridge?",
+   "t0": 117.1875,
+   "t1": 125.3125,
+   "v0": 117.34708333333337,
+   "dur": 4.286416666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.22
+    ],
+    [
+     "can",
+     0.22,
+     0.45
+    ],
+    [
+     "Tumble",
+     0.45,
+     0.9
+    ],
+    [
+     "and",
+     0.9,
+     1.01
+    ],
+    [
+     "Mango",
+     1.01,
+     1.46
+    ],
+    [
+     "get",
+     1.46,
+     1.61
+    ],
+    [
+     "across?",
+     1.61,
+     2.27
+    ],
+    [
+     "Jump,",
+     2.72,
+     3.38
+    ],
+    [
+     "or",
+     3.38,
+     3.57
+    ],
+    [
+     "the",
+     3.57,
+     3.68
+    ],
+    [
+     "bridge?",
+     3.68,
+     4.286
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: jump or bridge",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "The vine bridge! Remember, Tumble? Slow and steady, side by side.",
+   "t0": 125.3125,
+   "t1": 130.0,
+   "v0": 125.35350000000005,
+   "dur": 4.33825,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.07
+    ],
+    [
+     "vine",
+     0.07,
+     0.41
+    ],
+    [
+     "bridge!",
+     0.41,
+     0.89
+    ],
+    [
+     "Remember,",
+     1.13,
+     1.5
+    ],
+    [
+     "Tumble?",
+     1.5,
+     1.99
+    ],
+    [
+     "Slow",
+     2.36,
+     2.71
+    ],
+    [
+     "and",
+     2.71,
+     2.82
+    ],
+    [
+     "steady,",
+     2.82,
+     3.27
+    ],
+    [
+     "side",
+     3.27,
+     3.66
+    ],
+    [
+     "by",
+     3.66,
+     3.84
+    ],
+    [
+     "side.",
+     3.84,
+     4.338
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: slow and steady",
+   "who": "mango",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "Mango holds the vine with her tail, and Tumble's trunk with her hand. Step, step, step.",
+   "t0": 130.0,
+   "t1": 136.875,
+   "v0": 130.21175000000005,
+   "dur": 6.35575,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.5
+    ],
+    [
+     "holds",
+     0.5,
+     0.87
+    ],
+    [
+     "the",
+     0.87,
+     0.97
+    ],
+    [
+     "vine",
+     0.97,
+     1.36
+    ],
+    [
+     "with",
+     1.36,
+     1.5
+    ],
+    [
+     "her",
+     1.5,
+     1.6
+    ],
+    [
+     "tail,",
+     1.6,
+     2.13
+    ],
+    [
+     "and",
+     2.31,
+     2.48
+    ],
+    [
+     "Tumble's",
+     2.48,
+     2.98
+    ],
+    [
+     "trunk",
+     2.98,
+     3.35
+    ],
+    [
+     "with",
+     3.35,
+     3.47
+    ],
+    [
+     "her",
+     3.47,
+     3.56
+    ],
+    [
+     "hand.",
+     3.56,
+     4.08
+    ],
+    [
+     "Step,",
+     4.67,
+     5.3
+    ],
+    [
+     "step,",
+     5.3,
+     5.77
+    ],
+    [
+     "step.",
+     5.77,
+     6.356
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "crossing",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "stream",
+   "say": "And there are the drips again! The trail goes on, down the path.",
+   "t0": 136.875,
+   "t1": 141.25,
+   "v0": 137.08750000000006,
+   "dur": 3.99475,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.21
+    ],
+    [
+     "there",
+     0.21,
+     0.36
+    ],
+    [
+     "are",
+     0.36,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.56
+    ],
+    [
+     "drips",
+     0.56,
+     0.98
+    ],
+    [
+     "again!",
+     0.98,
+     1.46
+    ],
+    [
+     "The",
+     1.85,
+     1.92
+    ],
+    [
+     "trail",
+     1.92,
+     2.34
+    ],
+    [
+     "goes",
+     2.34,
+     2.68
+    ],
+    [
+     "on,",
+     2.68,
+     3.08
+    ],
+    [
+     "down",
+     3.08,
+     3.37
+    ],
+    [
+     "the",
+     3.37,
+     3.43
+    ],
+    [
+     "path.",
+     3.43,
+     3.99
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "drips again",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Down, down the path, to a sunny hollow. The drips stop, right by a big bush.",
+   "t0": 141.25,
+   "t1": 147.5,
+   "v0": 141.60225000000008,
+   "dur": 5.542041666666667,
+   "words": [
+    [
+     "Down,",
+     0.01,
+     0.53
+    ],
+    [
+     "down",
+     0.53,
+     0.73
+    ],
+    [
+     "the",
+     0.73,
+     0.8
+    ],
+    [
+     "path,",
+     0.8,
+     1.31
+    ],
+    [
+     "to",
+     1.31,
+     1.48
+    ],
+    [
+     "a",
+     1.48,
+     1.53
+    ],
+    [
+     "sunny",
+     1.53,
+     1.92
+    ],
+    [
+     "hollow.",
+     1.92,
+     2.53
+    ],
+    [
+     "The",
+     3.13,
+     3.21
+    ],
+    [
+     "drips",
+     3.21,
+     3.58
+    ],
+    [
+     "stop,",
+     3.58,
+     4.18
+    ],
+    [
+     "right",
+     4.18,
+     4.5
+    ],
+    [
+     "by",
+     4.5,
+     4.63
+    ],
+    [
+     "a",
+     4.63,
+     4.73
+    ],
+    [
+     "big",
+     4.73,
+     5.0
+    ],
+    [
+     "bush.",
+     5.0,
+     5.54
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the hollow and the bush",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "I'll look inside with my trunk.",
+   "t0": 147.5,
+   "t1": 149.375,
+   "v0": 147.66429166666677,
+   "dur": 1.5371666666666666,
+   "words": [
+    [
+     "I'll",
+     0.0,
+     0.16
+    ],
+    [
+     "look",
+     0.16,
+     0.33
+    ],
+    [
+     "inside",
+     0.33,
+     0.73
+    ],
+    [
+     "with",
+     0.73,
+     0.85
+    ],
+    [
+     "my",
+     0.85,
+     1.02
+    ],
+    [
+     "trunk.",
+     1.02,
+     1.537
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: I'll look",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Tumble pokes his trunk in the leaves. Only leaves, and more leaves!",
+   "t0": 149.375,
+   "t1": 154.6875,
+   "v0": 149.72145833333346,
+   "dur": 4.547291666666666,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.39
+    ],
+    [
+     "pokes",
+     0.39,
+     0.7
+    ],
+    [
+     "his",
+     0.7,
+     0.87
+    ],
+    [
+     "trunk",
+     0.87,
+     1.25
+    ],
+    [
+     "in",
+     1.25,
+     1.34
+    ],
+    [
+     "the",
+     1.34,
+     1.42
+    ],
+    [
+     "leaves.",
+     1.42,
+     2.06
+    ],
+    [
+     "Only",
+     2.51,
+     2.87
+    ],
+    [
+     "leaves,",
+     2.87,
+     3.47
+    ],
+    [
+     "and",
+     3.47,
+     3.63
+    ],
+    [
+     "more",
+     3.63,
+     3.85
+    ],
+    [
+     "leaves!",
+     3.85,
+     4.547
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "only leaves",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Hello? Who has my breakfast? Come out!",
+   "t0": 154.6875,
+   "t1": 157.1875,
+   "v0": 154.78875000000014,
+   "dur": 2.2184166666666667,
+   "words": [
+    [
+     "Hello?",
+     0.01,
+     0.55
+    ],
+    [
+     "Who",
+     0.55,
+     0.69
+    ],
+    [
+     "has",
+     0.69,
+     0.84
+    ],
+    [
+     "my",
+     0.84,
+     0.98
+    ],
+    [
+     "breakfast?",
+     0.98,
+     1.58
+    ],
+    [
+     "Come",
+     1.58,
+     1.87
+    ],
+    [
+     "out!",
+     1.87,
+     2.218
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango calls",
+   "who": "mango",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "But nobody comes out. The bush is very still.",
+   "t0": 157.1875,
+   "t1": 160.9375,
+   "v0": 157.5271666666668,
+   "dur": 3.2212083333333332,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.09
+    ],
+    [
+     "nobody",
+     0.09,
+     0.64
+    ],
+    [
+     "comes",
+     0.64,
+     1.0
+    ],
+    [
+     "out.",
+     1.0,
+     1.37
+    ],
+    [
+     "The",
+     1.64,
+     1.74
+    ],
+    [
+     "bush",
+     1.74,
+     2.11
+    ],
+    [
+     "is",
+     2.11,
+     2.3
+    ],
+    [
+     "very",
+     2.3,
+     2.66
+    ],
+    [
+     "still.",
+     2.66,
+     3.22
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "nobody comes out",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Mango sits down on the grass. Her tummy is empty, and the clues are all gone.",
+   "t0": 160.9375,
+   "t1": 167.1875,
+   "v0": 161.26837500000013,
+   "dur": 5.469916666666666,
+   "words": [
+    [
+     "Mango",
+     0.01,
+     0.48
+    ],
+    [
+     "sits",
+     0.48,
+     0.87
+    ],
+    [
+     "down",
+     0.87,
+     1.16
+    ],
+    [
+     "on",
+     1.16,
+     1.28
+    ],
+    [
+     "the",
+     1.28,
+     1.35
+    ],
+    [
+     "grass.",
+     1.35,
+     2.02
+    ],
+    [
+     "Her",
+     2.48,
+     2.59
+    ],
+    [
+     "tummy",
+     2.59,
+     3.02
+    ],
+    [
+     "is",
+     3.02,
+     3.22
+    ],
+    [
+     "empty,",
+     3.22,
+     3.77
+    ],
+    [
+     "and",
+     3.77,
+     4.07
+    ],
+    [
+     "the",
+     4.07,
+     4.13
+    ],
+    [
+     "clues",
+     4.13,
+     4.59
+    ],
+    [
+     "are",
+     4.59,
+     4.69
+    ],
+    [
+     "all",
+     4.69,
+     4.91
+    ],
+    [
+     "gone.",
+     4.91,
+     5.47
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango sits down",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "My breakfast is gone. And I don't know who took it.",
+   "t0": 167.1875,
+   "t1": 170.3125,
+   "v0": 167.25829166666682,
+   "dur": 2.8160833333333333,
+   "words": [
+    [
+     "My",
+     0.01,
+     0.18
+    ],
+    [
+     "breakfast",
+     0.18,
+     0.76
+    ],
+    [
+     "is",
+     0.76,
+     0.9
+    ],
+    [
+     "gone.",
+     0.9,
+     1.4
+    ],
+    [
+     "And",
+     1.74,
+     1.83
+    ],
+    [
+     "I",
+     1.83,
+     1.9
+    ],
+    [
+     "don't",
+     1.9,
+     2.06
+    ],
+    [
+     "know",
+     2.06,
+     2.21
+    ],
+    [
+     "who",
+     2.21,
+     2.31
+    ],
+    [
+     "took",
+     2.31,
+     2.57
+    ],
+    [
+     "it.",
+     2.57,
+     2.816
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: I don't know",
+   "who": "mango",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Tumble sits next to her, close and warm.",
+   "t0": 170.3125,
+   "t1": 173.75,
+   "v0": 170.59437500000016,
+   "dur": 2.8369166666666668,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.39
+    ],
+    [
+     "sits",
+     0.39,
+     0.73
+    ],
+    [
+     "next",
+     0.73,
+     0.98
+    ],
+    [
+     "to",
+     0.98,
+     1.07
+    ],
+    [
+     "her,",
+     1.07,
+     1.36
+    ],
+    [
+     "close",
+     1.62,
+     2.09
+    ],
+    [
+     "and",
+     2.09,
+     2.33
+    ],
+    [
+     "warm.",
+     2.33,
+     2.837
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble sits close",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Wait. We looked with our eyes. Now, let's be quiet, and listen with our ears!",
+   "t0": 173.75,
+   "t1": 178.75,
+   "v0": 173.95129166666683,
+   "dur": 4.550125,
+   "words": [
+    [
+     "Wait.",
+     0.02,
+     0.49
+    ],
+    [
+     "We",
+     0.49,
+     0.63
+    ],
+    [
+     "looked",
+     0.63,
+     0.85
+    ],
+    [
+     "with",
+     0.85,
+     0.96
+    ],
+    [
+     "our",
+     0.96,
+     1.11
+    ],
+    [
+     "eyes.",
+     1.11,
+     1.59
+    ],
+    [
+     "Now,",
+     2.11,
+     2.44
+    ],
+    [
+     "let's",
+     2.44,
+     2.69
+    ],
+    [
+     "be",
+     2.69,
+     2.79
+    ],
+    [
+     "quiet,",
+     2.79,
+     3.32
+    ],
+    [
+     "and",
+     3.32,
+     3.45
+    ],
+    [
+     "listen",
+     3.45,
+     3.8
+    ],
+    [
+     "with",
+     3.8,
+     3.94
+    ],
+    [
+     "our",
+     3.94,
+     4.06
+    ],
+    [
+     "ears!",
+     4.06,
+     4.55
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: let's listen",
+   "who": "mango",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Can you be very quiet, and listen with us?",
+   "t0": 178.75,
+   "t1": 185.3125,
+   "v0": 179.02141666666685,
+   "dur": 2.6199166666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.3
+    ],
+    [
+     "be",
+     0.3,
+     0.42
+    ],
+    [
+     "very",
+     0.42,
+     0.74
+    ],
+    [
+     "quiet,",
+     0.74,
+     1.53
+    ],
+    [
+     "and",
+     1.53,
+     1.67
+    ],
+    [
+     "listen",
+     1.67,
+     2.04
+    ],
+    [
+     "with",
+     2.04,
+     2.21
+    ],
+    [
+     "us?",
+     2.21,
+     2.62
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: be quiet",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Listen! Somebody in the bush is humming a happy little tune.",
+   "t0": 185.3125,
+   "t1": 189.6875,
+   "v0": 185.3613333333335,
+   "dur": 3.78725,
+   "words": [
+    [
+     "Listen!",
+     0.01,
+     0.62
+    ],
+    [
+     "Somebody",
+     0.84,
+     1.35
+    ],
+    [
+     "in",
+     1.35,
+     1.44
+    ],
+    [
+     "the",
+     1.44,
+     1.52
+    ],
+    [
+     "bush",
+     1.52,
+     1.91
+    ],
+    [
+     "is",
+     1.91,
+     2.08
+    ],
+    [
+     "humming",
+     2.08,
+     2.47
+    ],
+    [
+     "a",
+     2.47,
+     2.5
+    ],
+    [
+     "happy",
+     2.5,
+     3.0
+    ],
+    [
+     "little",
+     3.0,
+     3.24
+    ],
+    [
+     "tune.",
+     3.24,
+     3.787
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the hum is named",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "",
+   "t0": 189.6875,
+   "t1": 195.0,
+   "v0": 190.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: the happy hum",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "hollow",
+   "say": "Where is the tune coming from? The bush, or the sky?",
+   "t0": 195.0,
+   "t1": 202.1875,
+   "v0": 195.12,
+   "dur": 3.401666666666667,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.52
+    ],
+    [
+     "tune",
+     0.52,
+     0.97
+    ],
+    [
+     "coming",
+     0.97,
+     1.34
+    ],
+    [
+     "from?",
+     1.34,
+     1.68
+    ],
+    [
+     "The",
+     1.99,
+     2.08
+    ],
+    [
+     "bush,",
+     2.08,
+     2.51
+    ],
+    [
+     "or",
+     2.51,
+     2.7
+    ],
+    [
+     "the",
+     2.7,
+     2.79
+    ],
+    [
+     "sky?",
+     2.79,
+     3.4
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: bush or sky",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Mango looks closely, with her magnifying glass. Stripes, and spots!",
+   "t0": 202.1875,
+   "t1": 207.8125,
+   "v0": 202.24166666666667,
+   "dur": 5.204916666666667,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.4
+    ],
+    [
+     "looks",
+     0.4,
+     0.7
+    ],
+    [
+     "closely,",
+     0.7,
+     1.43
+    ],
+    [
+     "with",
+     1.43,
+     1.56
+    ],
+    [
+     "her",
+     1.56,
+     1.66
+    ],
+    [
+     "magnifying",
+     1.66,
+     2.64
+    ],
+    [
+     "glass.",
+     2.64,
+     3.22
+    ],
+    [
+     "Stripes,",
+     3.68,
+     4.33
+    ],
+    [
+     "and",
+     4.33,
+     4.51
+    ],
+    [
+     "spots!",
+     4.51,
+     5.2
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "stripes and spots in the leaves",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Hello in there. Please come out. I won't be cross.",
+   "t0": 207.8125,
+   "t1": 210.9375,
+   "v0": 207.96658333333335,
+   "dur": 2.755875,
+   "words": [
+    [
+     "Hello",
+     0.01,
+     0.32
+    ],
+    [
+     "in",
+     0.32,
+     0.48
+    ],
+    [
+     "there.",
+     0.48,
+     0.81
+    ],
+    [
+     "Please",
+     1.06,
+     1.42
+    ],
+    [
+     "come",
+     1.42,
+     1.6
+    ],
+    [
+     "out.",
+     1.6,
+     1.88
+    ],
+    [
+     "I",
+     1.88,
+     1.95
+    ],
+    [
+     "won't",
+     1.95,
+     2.11
+    ],
+    [
+     "be",
+     2.11,
+     2.19
+    ],
+    [
+     "cross.",
+     2.19,
+     2.756
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango asks kindly",
+   "who": "mango",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Out steps a baby tapir! Her name is Dot.",
+   "t0": 210.9375,
+   "t1": 214.6875,
+   "v0": 211.24245833333336,
+   "dur": 3.1862083333333335,
+   "words": [
+    [
+     "Out",
+     0.07,
+     0.34
+    ],
+    [
+     "steps",
+     0.34,
+     0.69
+    ],
+    [
+     "a",
+     0.69,
+     0.74
+    ],
+    [
+     "baby",
+     0.74,
+     1.11
+    ],
+    [
+     "tapir!",
+     1.11,
+     1.73
+    ],
+    [
+     "Her",
+     2.01,
+     2.13
+    ],
+    [
+     "name",
+     2.13,
+     2.45
+    ],
+    [
+     "is",
+     2.45,
+     2.62
+    ],
+    [
+     "Dot.",
+     2.62,
+     3.186
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot steps out",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Hello! I'm Dot. Mmm, that was a yummy present!",
+   "t0": 214.6875,
+   "t1": 218.4375,
+   "v0": 214.9486666666667,
+   "dur": 3.022375,
+   "words": [
+    [
+     "Hello!",
+     0.01,
+     0.41
+    ],
+    [
+     "I'm",
+     0.41,
+     0.61
+    ],
+    [
+     "Dot.",
+     0.61,
+     1.09
+    ],
+    [
+     "Mmm,",
+     1.34,
+     1.82
+    ],
+    [
+     "that",
+     1.82,
+     1.98
+    ],
+    [
+     "was",
+     1.98,
+     2.13
+    ],
+    [
+     "a",
+     2.13,
+     2.17
+    ],
+    [
+     "yummy",
+     2.17,
+     2.48
+    ],
+    [
+     "present!",
+     2.48,
+     3.02
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot: hello",
+   "who": "dot",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Baby tapirs have white stripes and spots, like a little watermelon. They help a baby blend in, with the leaves and the spots of sunlight.",
+   "t0": 218.4375,
+   "t1": 228.75,
+   "v0": 218.49104166666672,
+   "dur": 10.007375,
+   "words": [
+    [
+     "Baby",
+     0.0,
+     0.45
+    ],
+    [
+     "tapirs",
+     0.45,
+     1.09
+    ],
+    [
+     "have",
+     1.09,
+     1.39
+    ],
+    [
+     "white",
+     1.39,
+     1.79
+    ],
+    [
+     "stripes",
+     1.79,
+     2.36
+    ],
+    [
+     "and",
+     2.36,
+     2.49
+    ],
+    [
+     "spots,",
+     2.49,
+     3.24
+    ],
+    [
+     "like",
+     3.41,
+     3.57
+    ],
+    [
+     "a",
+     3.57,
+     3.62
+    ],
+    [
+     "little",
+     3.62,
+     3.84
+    ],
+    [
+     "watermelon.",
+     3.84,
+     4.67
+    ],
+    [
+     "They",
+     5.37,
+     5.49
+    ],
+    [
+     "help",
+     5.49,
+     5.79
+    ],
+    [
+     "a",
+     5.79,
+     5.86
+    ],
+    [
+     "baby",
+     5.86,
+     6.37
+    ],
+    [
+     "blend",
+     6.37,
+     6.82
+    ],
+    [
+     "in,",
+     6.82,
+     7.19
+    ],
+    [
+     "with",
+     7.51,
+     7.64
+    ],
+    [
+     "the",
+     7.64,
+     7.78
+    ],
+    [
+     "leaves",
+     7.78,
+     8.46
+    ],
+    [
+     "and",
+     8.46,
+     8.6
+    ],
+    [
+     "the",
+     8.6,
+     8.66
+    ],
+    [
+     "spots",
+     8.66,
+     9.2
+    ],
+    [
+     "of",
+     9.2,
+     9.27
+    ],
+    [
+     "sunlight.",
+     9.27,
+     10.007
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: stripes and spots",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Dot, did you find three golden fruits, and a banana?",
+   "t0": 228.75,
+   "t1": 232.5,
+   "v0": 229.01841666666672,
+   "dur": 3.192875,
+   "words": [
+    [
+     "Dot,",
+     0.01,
+     0.55
+    ],
+    [
+     "did",
+     0.55,
+     0.69
+    ],
+    [
+     "you",
+     0.69,
+     0.77
+    ],
+    [
+     "find",
+     0.77,
+     1.08
+    ],
+    [
+     "three",
+     1.08,
+     1.36
+    ],
+    [
+     "golden",
+     1.36,
+     1.77
+    ],
+    [
+     "fruits,",
+     1.77,
+     2.25
+    ],
+    [
+     "and",
+     2.5,
+     2.64
+    ],
+    [
+     "a",
+     2.64,
+     2.67
+    ],
+    [
+     "banana?",
+     2.67,
+     3.19
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango asks Dot",
+   "who": "mango",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Yes! Sniff, sniff! My nose smelled them rolling down the path, right to me!",
+   "t0": 232.5,
+   "t1": 237.1875,
+   "v0": 232.73129166666672,
+   "dur": 4.110833333333333,
+   "words": [
+    [
+     "Yes!",
+     0.0,
+     0.45
+    ],
+    [
+     "Sniff,",
+     0.45,
+     0.72
+    ],
+    [
+     "sniff!",
+     0.72,
+     1.17
+    ],
+    [
+     "My",
+     1.49,
+     1.66
+    ],
+    [
+     "nose",
+     1.66,
+     1.94
+    ],
+    [
+     "smelled",
+     1.94,
+     2.27
+    ],
+    [
+     "them",
+     2.27,
+     2.42
+    ],
+    [
+     "rolling",
+     2.42,
+     2.75
+    ],
+    [
+     "down",
+     2.75,
+     2.94
+    ],
+    [
+     "the",
+     2.94,
+     3.0
+    ],
+    [
+     "path,",
+     3.0,
+     3.44
+    ],
+    [
+     "right",
+     3.44,
+     3.71
+    ],
+    [
+     "to",
+     3.71,
+     3.82
+    ],
+    [
+     "me!",
+     3.82,
+     4.11
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot: sniff sniff",
+   "who": "dot",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A tapir's snout is its nose and upper lip, together. It bends, it smells, and it grabs food!",
+   "t0": 237.1875,
+   "t1": 244.6875,
+   "v0": 237.36212500000008,
+   "dur": 7.008708333333334,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "tapir's",
+     0.08,
+     0.72
+    ],
+    [
+     "snout",
+     0.72,
+     1.16
+    ],
+    [
+     "is",
+     1.16,
+     1.31
+    ],
+    [
+     "its",
+     1.31,
+     1.49
+    ],
+    [
+     "nose",
+     1.49,
+     2.05
+    ],
+    [
+     "and",
+     2.05,
+     2.18
+    ],
+    [
+     "upper",
+     2.18,
+     2.44
+    ],
+    [
+     "lip,",
+     2.44,
+     2.72
+    ],
+    [
+     "together.",
+     2.72,
+     3.3
+    ],
+    [
+     "It",
+     3.92,
+     4.06
+    ],
+    [
+     "bends,",
+     4.06,
+     4.75
+    ],
+    [
+     "it",
+     4.85,
+     5.0
+    ],
+    [
+     "smells,",
+     5.0,
+     5.83
+    ],
+    [
+     "and",
+     5.83,
+     5.97
+    ],
+    [
+     "it",
+     5.97,
+     6.04
+    ],
+    [
+     "grabs",
+     6.04,
+     6.53
+    ],
+    [
+     "food!",
+     6.53,
+     7.009
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: the bendy snout",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "What did Dot use to find the fruit? Her nose, or her tail?",
+   "t0": 244.6875,
+   "t1": 252.1875,
+   "v0": 244.89083333333343,
+   "dur": 3.8844583333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.18
+    ],
+    [
+     "did",
+     0.18,
+     0.32
+    ],
+    [
+     "Dot",
+     0.32,
+     0.61
+    ],
+    [
+     "use",
+     0.61,
+     0.84
+    ],
+    [
+     "to",
+     0.84,
+     0.92
+    ],
+    [
+     "find",
+     0.92,
+     1.21
+    ],
+    [
+     "the",
+     1.21,
+     1.27
+    ],
+    [
+     "fruit?",
+     1.27,
+     1.79
+    ],
+    [
+     "Her",
+     2.13,
+     2.29
+    ],
+    [
+     "nose,",
+     2.29,
+     2.98
+    ],
+    [
+     "or",
+     2.98,
+     3.17
+    ],
+    [
+     "her",
+     3.17,
+     3.36
+    ],
+    [
+     "tail?",
+     3.36,
+     3.88
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: nose or tail",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "I ate the banana. Was it yours? I'm sorry, Mango.",
+   "t0": 252.1875,
+   "t1": 256.25,
+   "v0": 252.49529166666676,
+   "dur": 3.370416666666667,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.15
+    ],
+    [
+     "ate",
+     0.15,
+     0.41
+    ],
+    [
+     "the",
+     0.41,
+     0.52
+    ],
+    [
+     "banana.",
+     0.52,
+     1.04
+    ],
+    [
+     "Was",
+     1.21,
+     1.38
+    ],
+    [
+     "it",
+     1.38,
+     1.47
+    ],
+    [
+     "yours?",
+     1.47,
+     2.13
+    ],
+    [
+     "I'm",
+     2.27,
+     2.43
+    ],
+    [
+     "sorry,",
+     2.43,
+     2.8
+    ],
+    [
+     "Mango.",
+     2.8,
+     3.37
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot: sorry",
+   "who": "dot",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "That's okay, Dot. You didn't know! My fruit rolled off my branch, all the way to you.",
+   "t0": 256.25,
+   "t1": 261.875,
+   "v0": 256.3857083333334,
+   "dur": 5.150166666666666,
+   "words": [
+    [
+     "That's",
+     0.0,
+     0.24
+    ],
+    [
+     "okay,",
+     0.24,
+     0.61
+    ],
+    [
+     "Dot.",
+     0.61,
+     1.07
+    ],
+    [
+     "You",
+     1.35,
+     1.46
+    ],
+    [
+     "didn't",
+     1.46,
+     1.67
+    ],
+    [
+     "know!",
+     1.67,
+     2.07
+    ],
+    [
+     "My",
+     2.59,
+     2.73
+    ],
+    [
+     "fruit",
+     2.73,
+     3.03
+    ],
+    [
+     "rolled",
+     3.03,
+     3.3
+    ],
+    [
+     "off",
+     3.3,
+     3.47
+    ],
+    [
+     "my",
+     3.47,
+     3.63
+    ],
+    [
+     "branch,",
+     3.63,
+     4.15
+    ],
+    [
+     "all",
+     4.15,
+     4.38
+    ],
+    [
+     "the",
+     4.38,
+     4.44
+    ],
+    [
+     "way",
+     4.44,
+     4.66
+    ],
+    [
+     "to",
+     4.66,
+     4.82
+    ],
+    [
+     "you.",
+     4.82,
+     5.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: that's okay",
+   "who": "mango",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Nobody took it. It just rolled away! Mango laughs, and Dot laughs too.",
+   "t0": 261.875,
+   "t1": 267.8125,
+   "v0": 262.05587500000007,
+   "dur": 5.410291666666667,
+   "words": [
+    [
+     "Nobody",
+     0.0,
+     0.6
+    ],
+    [
+     "took",
+     0.6,
+     0.9
+    ],
+    [
+     "it.",
+     0.9,
+     1.18
+    ],
+    [
+     "It",
+     1.4,
+     1.54
+    ],
+    [
+     "just",
+     1.54,
+     1.83
+    ],
+    [
+     "rolled",
+     1.83,
+     2.12
+    ],
+    [
+     "away!",
+     2.12,
+     2.65
+    ],
+    [
+     "Mango",
+     3.06,
+     3.46
+    ],
+    [
+     "laughs,",
+     3.46,
+     4.03
+    ],
+    [
+     "and",
+     4.03,
+     4.19
+    ],
+    [
+     "Dot",
+     4.19,
+     4.49
+    ],
+    [
+     "laughs",
+     4.49,
+     4.94
+    ],
+    [
+     "too.",
+     4.94,
+     5.41
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "nobody took it",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "There are still three fruits. I know! Let's share!",
+   "t0": 267.8125,
+   "t1": 270.9375,
+   "v0": 267.98616666666675,
+   "dur": 2.4757083333333334,
+   "words": [
+    [
+     "There",
+     0.0,
+     0.1
+    ],
+    [
+     "are",
+     0.1,
+     0.18
+    ],
+    [
+     "still",
+     0.18,
+     0.47
+    ],
+    [
+     "three",
+     0.47,
+     0.73
+    ],
+    [
+     "fruits.",
+     0.73,
+     1.21
+    ],
+    [
+     "I",
+     1.51,
+     1.59
+    ],
+    [
+     "know!",
+     1.59,
+     1.8
+    ],
+    [
+     "Let's",
+     1.8,
+     2.11
+    ],
+    [
+     "share!",
+     2.11,
+     2.476
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: let's share",
+   "who": "mango",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "One for Dot, one for Tumble, and one for Mango. Count with me! One, two, three!",
+   "t0": 270.9375,
+   "t1": 277.1875,
+   "v0": 270.98187500000006,
+   "dur": 5.924,
+   "words": [
+    [
+     "One",
+     0.01,
+     0.26
+    ],
+    [
+     "for",
+     0.26,
+     0.42
+    ],
+    [
+     "Dot,",
+     0.42,
+     1.04
+    ],
+    [
+     "one",
+     1.04,
+     1.26
+    ],
+    [
+     "for",
+     1.26,
+     1.41
+    ],
+    [
+     "Tumble,",
+     1.41,
+     1.99
+    ],
+    [
+     "and",
+     1.99,
+     2.14
+    ],
+    [
+     "one",
+     2.14,
+     2.34
+    ],
+    [
+     "for",
+     2.34,
+     2.48
+    ],
+    [
+     "Mango.",
+     2.48,
+     3.08
+    ],
+    [
+     "Count",
+     3.56,
+     3.91
+    ],
+    [
+     "with",
+     3.91,
+     4.09
+    ],
+    [
+     "me!",
+     4.09,
+     4.45
+    ],
+    [
+     "One,",
+     4.77,
+     5.05
+    ],
+    [
+     "two,",
+     5.05,
+     5.35
+    ],
+    [
+     "three!",
+     5.35,
+     5.92
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: count the shared fruit",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Then, out from the pool, comes Dot's mama. She has no stripes or spots at all!",
+   "t0": 277.1875,
+   "t1": 283.4375,
+   "v0": 277.425875,
+   "dur": 5.674708333333333,
+   "words": [
+    [
+     "Then,",
+     0.0,
+     0.4
+    ],
+    [
+     "out",
+     0.4,
+     0.59
+    ],
+    [
+     "from",
+     0.59,
+     0.82
+    ],
+    [
+     "the",
+     0.82,
+     0.89
+    ],
+    [
+     "pool,",
+     0.89,
+     1.44
+    ],
+    [
+     "comes",
+     1.56,
+     1.91
+    ],
+    [
+     "Dot's",
+     1.91,
+     2.4
+    ],
+    [
+     "mama.",
+     2.4,
+     2.8
+    ],
+    [
+     "She",
+     3.45,
+     3.61
+    ],
+    [
+     "has",
+     3.61,
+     3.75
+    ],
+    [
+     "no",
+     3.75,
+     3.95
+    ],
+    [
+     "stripes",
+     3.95,
+     4.57
+    ],
+    [
+     "or",
+     4.57,
+     4.68
+    ],
+    [
+     "spots",
+     4.68,
+     5.2
+    ],
+    [
+     "at",
+     5.2,
+     5.35
+    ],
+    [
+     "all!",
+     5.35,
+     5.67
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot's mama",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "When a baby tapir grows up, her stripes and spots fade away. Then she looks just like her mama!",
+   "t0": 283.4375,
+   "t1": 290.625,
+   "v0": 283.62058333333334,
+   "dur": 6.582,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.12
+    ],
+    [
+     "a",
+     0.12,
+     0.17
+    ],
+    [
+     "baby",
+     0.17,
+     0.62
+    ],
+    [
+     "tapir",
+     0.62,
+     1.13
+    ],
+    [
+     "grows",
+     1.13,
+     1.51
+    ],
+    [
+     "up,",
+     1.51,
+     1.93
+    ],
+    [
+     "her",
+     1.93,
+     2.06
+    ],
+    [
+     "stripes",
+     2.06,
+     2.66
+    ],
+    [
+     "and",
+     2.66,
+     2.78
+    ],
+    [
+     "spots",
+     2.78,
+     3.39
+    ],
+    [
+     "fade",
+     3.39,
+     3.64
+    ],
+    [
+     "away.",
+     3.64,
+     4.17
+    ],
+    [
+     "Then",
+     4.74,
+     4.98
+    ],
+    [
+     "she",
+     4.98,
+     5.18
+    ],
+    [
+     "looks",
+     5.18,
+     5.54
+    ],
+    [
+     "just",
+     5.54,
+     5.74
+    ],
+    [
+     "like",
+     5.74,
+     5.91
+    ],
+    [
+     "her",
+     5.91,
+     6.0
+    ],
+    [
+     "mama!",
+     6.0,
+     6.58
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: the coat fades",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Thank you for being so kind to Dot. Please come and play again!",
+   "t0": 290.625,
+   "t1": 295.0,
+   "v0": 290.7225833333333,
+   "dur": 3.823125,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.34
+    ],
+    [
+     "you",
+     0.34,
+     0.46
+    ],
+    [
+     "for",
+     0.46,
+     0.6
+    ],
+    [
+     "being",
+     0.6,
+     0.84
+    ],
+    [
+     "so",
+     0.84,
+     1.15
+    ],
+    [
+     "kind",
+     1.15,
+     1.45
+    ],
+    [
+     "to",
+     1.45,
+     1.52
+    ],
+    [
+     "Dot.",
+     1.52,
+     2.08
+    ],
+    [
+     "Please",
+     2.44,
+     2.76
+    ],
+    [
+     "come",
+     2.76,
+     2.99
+    ],
+    [
+     "and",
+     2.99,
+     3.11
+    ],
+    [
+     "play",
+     3.11,
+     3.37
+    ],
+    [
+     "again!",
+     3.37,
+     3.82
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Dot's mama: thank you",
+   "who": "tmama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "Share a little, share a lot. Friends are the best breakfast we've got!",
+   "t0": 295.0,
+   "t1": 299.375,
+   "v0": 295.0657083333333,
+   "dur": 3.8742916666666667,
+   "words": [
+    [
+     "Share",
+     0.02,
+     0.26
+    ],
+    [
+     "a",
+     0.26,
+     0.29
+    ],
+    [
+     "little,",
+     0.29,
+     0.73
+    ],
+    [
+     "share",
+     0.73,
+     0.99
+    ],
+    [
+     "a",
+     0.99,
+     1.03
+    ],
+    [
+     "lot.",
+     1.03,
+     1.47
+    ],
+    [
+     "Friends",
+     1.87,
+     2.25
+    ],
+    [
+     "are",
+     2.25,
+     2.31
+    ],
+    [
+     "the",
+     2.31,
+     2.42
+    ],
+    [
+     "best",
+     2.42,
+     2.72
+    ],
+    [
+     "breakfast",
+     2.72,
+     3.25
+    ],
+    [
+     "we've",
+     3.25,
+     3.45
+    ],
+    [
+     "got!",
+     3.45,
+     3.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the sharing rhyme",
+   "who": "mango",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hollow",
+   "say": "",
+   "t0": 299.375,
+   "t1": 310.0,
+   "v0": 300.0,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: the sharing tune",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "In the evening, Tumble and Mango walk back to the zoo. And Mama is waiting.",
+   "t0": 310.0,
+   "t1": 315.9375,
+   "v0": 310.12,
+   "dur": 5.371833333333333,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.34
+    ],
+    [
+     "evening,",
+     0.34,
+     1.05
+    ],
+    [
+     "Tumble",
+     1.05,
+     1.44
+    ],
+    [
+     "and",
+     1.44,
+     1.55
+    ],
+    [
+     "Mango",
+     1.55,
+     2.03
+    ],
+    [
+     "walk",
+     2.03,
+     2.4
+    ],
+    [
+     "back",
+     2.4,
+     2.7
+    ],
+    [
+     "to",
+     2.7,
+     2.84
+    ],
+    [
+     "the",
+     2.84,
+     2.93
+    ],
+    [
+     "zoo.",
+     2.93,
+     3.4
+    ],
+    [
+     "And",
+     3.87,
+     4.0
+    ],
+    [
+     "Mama",
+     4.0,
+     4.58
+    ],
+    [
+     "is",
+     4.58,
+     4.8
+    ],
+    [
+     "waiting.",
+     4.8,
+     5.37
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "back at the zoo",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mama! We found Mango's breakfast. A baby tapir found it first!",
+   "t0": 315.9375,
+   "t1": 320.3125,
+   "v0": 316.0118333333333,
+   "dur": 4.033166666666666,
+   "words": [
+    [
+     "Mama!",
+     0.01,
+     0.45
+    ],
+    [
+     "We",
+     0.45,
+     0.58
+    ],
+    [
+     "found",
+     0.58,
+     0.88
+    ],
+    [
+     "Mango's",
+     0.88,
+     1.34
+    ],
+    [
+     "breakfast.",
+     1.34,
+     2.15
+    ],
+    [
+     "A",
+     2.15,
+     2.23
+    ],
+    [
+     "baby",
+     2.23,
+     2.61
+    ],
+    [
+     "tapir",
+     2.61,
+     2.99
+    ],
+    [
+     "found",
+     2.99,
+     3.3
+    ],
+    [
+     "it",
+     3.3,
+     3.39
+    ],
+    [
+     "first!",
+     3.39,
+     4.03
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble tells Mama",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "I didn't need to guess who took it. I just needed to listen, and ask.",
+   "t0": 320.3125,
+   "t1": 324.6875,
+   "v0": 320.56499999999994,
+   "dur": 3.8930833333333332,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.1
+    ],
+    [
+     "didn't",
+     0.1,
+     0.33
+    ],
+    [
+     "need",
+     0.33,
+     0.53
+    ],
+    [
+     "to",
+     0.53,
+     0.6
+    ],
+    [
+     "guess",
+     0.6,
+     0.91
+    ],
+    [
+     "who",
+     0.91,
+     1.01
+    ],
+    [
+     "took",
+     1.01,
+     1.27
+    ],
+    [
+     "it.",
+     1.27,
+     1.5
+    ],
+    [
+     "I",
+     1.92,
+     2.02
+    ],
+    [
+     "just",
+     2.02,
+     2.27
+    ],
+    [
+     "needed",
+     2.27,
+     2.55
+    ],
+    [
+     "to",
+     2.55,
+     2.63
+    ],
+    [
+     "listen,",
+     2.63,
+     3.18
+    ],
+    [
+     "and",
+     3.18,
+     3.37
+    ],
+    [
+     "ask.",
+     3.37,
+     3.89
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mango: listen and ask",
+   "who": "mango",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Well done, both of you. Kind friends share.",
+   "t0": 324.6875,
+   "t1": 328.125,
+   "v0": 324.97808333333325,
+   "dur": 2.969375,
+   "words": [
+    [
+     "Well",
+     0.01,
+     0.3
+    ],
+    [
+     "done,",
+     0.3,
+     0.67
+    ],
+    [
+     "both",
+     0.67,
+     1.02
+    ],
+    [
+     "of",
+     1.02,
+     1.12
+    ],
+    [
+     "you.",
+     1.12,
+     1.41
+    ],
+    [
+     "Kind",
+     1.6,
+     2.0
+    ],
+    [
+     "friends",
+     2.0,
+     2.45
+    ],
+    [
+     "share.",
+     2.45,
+     2.969
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: kind friends share",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "When something goes missing, don't guess. Look, listen, and ask kindly.",
+   "t0": 328.125,
+   "t1": 333.75,
+   "v0": 328.46745833333324,
+   "dur": 4.907916666666667,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "something",
+     0.14,
+     0.57
+    ],
+    [
+     "goes",
+     0.57,
+     0.86
+    ],
+    [
+     "missing,",
+     0.86,
+     1.4
+    ],
+    [
+     "don't",
+     1.4,
+     1.64
+    ],
+    [
+     "guess.",
+     1.64,
+     2.15
+    ],
+    [
+     "Look,",
+     2.68,
+     3.11
+    ],
+    [
+     "listen,",
+     3.11,
+     3.63
+    ],
+    [
+     "and",
+     3.63,
+     3.8
+    ],
+    [
+     "ask",
+     3.8,
+     4.2
+    ],
+    [
+     "kindly.",
+     4.2,
+     4.908
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Do you remember? What does a baby tapir have on her coat? Stripes and spots, or feathers?",
+   "t0": 333.75,
+   "t1": 343.75,
+   "v0": 333.8953749999999,
+   "dur": 6.251041666666667,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.07
+    ],
+    [
+     "you",
+     0.07,
+     0.22
+    ],
+    [
+     "remember?",
+     0.22,
+     0.85
+    ],
+    [
+     "What",
+     1.1,
+     1.21
+    ],
+    [
+     "does",
+     1.21,
+     1.35
+    ],
+    [
+     "a",
+     1.35,
+     1.39
+    ],
+    [
+     "baby",
+     1.39,
+     1.78
+    ],
+    [
+     "tapir",
+     1.78,
+     2.29
+    ],
+    [
+     "have",
+     2.29,
+     2.57
+    ],
+    [
+     "on",
+     2.57,
+     2.66
+    ],
+    [
+     "her",
+     2.66,
+     2.76
+    ],
+    [
+     "coat?",
+     2.76,
+     3.3
+    ],
+    [
+     "Stripes",
+     3.75,
+     4.42
+    ],
+    [
+     "and",
+     4.42,
+     4.62
+    ],
+    [
+     "spots,",
+     4.62,
+     5.37
+    ],
+    [
+     "or",
+     5.37,
+     5.5
+    ],
+    [
+     "feathers?",
+     5.5,
+     6.25
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: spots or feathers",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "And what is a spider monkey's main food? Fruit, or rocks?",
+   "t0": 343.75,
+   "t1": 351.5625,
+   "v0": 343.8664166666665,
+   "dur": 4.0492083333333335,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.21
+    ],
+    [
+     "what",
+     0.21,
+     0.39
+    ],
+    [
+     "is",
+     0.39,
+     0.52
+    ],
+    [
+     "a",
+     0.52,
+     0.55
+    ],
+    [
+     "spider",
+     0.55,
+     1.05
+    ],
+    [
+     "monkey's",
+     1.05,
+     1.57
+    ],
+    [
+     "main",
+     1.57,
+     1.83
+    ],
+    [
+     "food?",
+     1.83,
+     2.29
+    ],
+    [
+     "Fruit,",
+     2.62,
+     3.16
+    ],
+    [
+     "or",
+     3.16,
+     3.34
+    ],
+    [
+     "rocks?",
+     3.34,
+     4.049
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: fruit or rocks",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Next time: the rainy day umbrella! See you on the next adventure, friends!",
+   "t0": 351.5625,
+   "t1": 357.20883333333313,
+   "v0": 351.63562499999983,
+   "dur": 5.173208333333333,
+   "words": [
+    [
+     "Next",
+     0.0,
+     0.38
+    ],
+    [
+     "time:",
+     0.38,
+     0.77
+    ],
+    [
+     "the",
+     0.77,
+     1.09
+    ],
+    [
+     "rainy",
+     1.09,
+     1.51
+    ],
+    [
+     "day",
+     1.51,
+     1.78
+    ],
+    [
+     "umbrella!",
+     1.78,
+     2.52
+    ],
+    [
+     "See",
+     2.98,
+     3.2
+    ],
+    [
+     "you",
+     3.2,
+     3.41
+    ],
+    [
+     "on",
+     3.41,
+     3.56
+    ],
+    [
+     "the",
+     3.56,
+     3.63
+    ],
+    [
+     "next",
+     3.63,
+     3.95
+    ],
+    [
+     "adventure,",
+     3.95,
+     4.51
+    ],
+    [
+     "friends!",
+     4.51,
+     5.17
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: next adventure",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  }
+ ]
+}

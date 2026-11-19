@@ -284,7 +284,7 @@ SHOTS = [
 # thumbnail (thumb.py): the example in the picture (Mango's magnifying glass over the banana peel), 3 words at most, none of the title's words, no watermark
 THUMBS = {
     "za_ep05": {"place": "bigtree", "cam": (980, 760, 1100),
-                "actors": [("monkey_glass", 1120, 934, .7, False, 'gsap.set("#P-ar",{rotation:-60,svgOrigin:"58 -206"});')],
-                "props": [(A.peel, 860, 990, .8)],
-                "words": [("A MYSTERY!", 760, 470, 190, "sun")]},
+                "actors": [("monkey", 1200, 934, .7, False, 'gsap.set("#P-al",{rotation:45,svgOrigin:"-58 -206"});')],
+                "props": [(A.peel, 860, 990, .8), (A.glass, 740, 1120, 1.4)],
+                "words": [("A MYSTERY!", 640, 200, 190, "sun")]},
 }

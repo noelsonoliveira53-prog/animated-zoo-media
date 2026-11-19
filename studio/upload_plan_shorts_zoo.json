@@ -1403,7 +1403,7 @@
  {
   "file": "cartoon/zc_ep09_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep09",
   "res": "2160x3840",
@@ -1411,12 +1411,25 @@
   "watermark": "top",
   "date": "2026-11-26",
   "time": "7:30 PM",
-  "note": "Claimed Nov 19 1:25 PM ET by session_014CFVfYJyTj4rc8TGoYFmDc (scheduled 1:17 PM lesson build): in_production."
+  "note": "Built Nov 19 (session_014CFVfYJyTj4rc8TGoYFmDc, scheduled 1:17 PM lesson build): facts read today; stills of every shot (start and end) in 16:9 and 9:16; frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep09.md. NOT uploaded: the daily run schedules it.",
+  "title": "What Does a Baby Camel Eat?",
+  "description": "What does a camel eat in the dry desert? Munch, munch! Milo the bluebird watches Sandy the baby camel find lunch: grass, leaves and little twigs. Camels take just a few leaves from each plant, then walk on to the next one, and they spend their days eating. A quick animal fact for kids from the lesson “What Do Camels Eat in the Desert?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel; camel diet fact sheet); SeaWorld (dromedary camel).",
+  "tags": [
+   "what do camels eat",
+   "baby camel",
+   "camel for kids",
+   "desert animals for kids",
+   "animal facts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "MUNCH, MUNCH!",
+  "seconds": 88.3
  },
  {
   "file": "cartoon/zc_ep09_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep09",
   "res": "2160x3840",
@@ -1424,12 +1437,25 @@
   "watermark": "top",
   "date": "2026-11-27",
   "time": "11:30 AM",
-  "note": "Claimed Nov 19 1:25 PM ET by session_014CFVfYJyTj4rc8TGoYFmDc (scheduled 1:17 PM lesson build): in_production."
+  "note": "Built Nov 19 (session_014CFVfYJyTj4rc8TGoYFmDc, scheduled 1:17 PM lesson build): facts read today; stills of every shot (start and end) in 16:9 and 9:16; frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep09.md. NOT uploaded: the daily run schedules it.",
+  "title": "How Can Camels Eat Thorny Plants?",
+  "description": "How can a camel eat a prickly, thorny plant? Milo the bluebird finds out: camels have big, tough lips, the top lip is split in two and each half wiggles on its own, and hard little bumps inside the mouth help push the food down to the tummy. A quick animal fact for kids from the lesson “What Do Camels Eat in the Desert?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel; camel diet fact sheet); National Geographic (how camels eat; Arabian camel); SeaWorld (dromedary camel).",
+  "tags": [
+   "camel lips",
+   "camels eat thorns",
+   "camel for kids",
+   "desert animals for kids",
+   "animal facts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "TOUGH LIPS!",
+  "seconds": 88.3
  },
  {
   "file": "cartoon/zc_ep09_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep09",
   "res": "2160x3840",
@@ -1437,6 +1463,19 @@
   "watermark": "top",
   "date": "2026-11-28",
   "time": "11:30 AM",
-  "note": "Claimed Nov 19 1:25 PM ET by session_014CFVfYJyTj4rc8TGoYFmDc (scheduled 1:17 PM lesson build): in_production."
+  "note": "Built Nov 19 (session_014CFVfYJyTj4rc8TGoYFmDc, scheduled 1:17 PM lesson build): facts read today; stills of every shot (start and end) in 16:9 and 9:16; frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep09.md. NOT uploaded: the daily run schedules it.",
+  "title": "Why Do Camels Chew Their Food Again?",
+  "description": "Why is this camel chewing, and chewing? Camels bring their food back up and chew it again! Milo the bluebird also sees Sandy the baby camel nibble a salty plant called saltbush (salt is very important for camels) and learns that at the zoo, camels eat hay. A quick animal fact for kids from the lesson “What Do Camels Eat in the Desert?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel; camel diet fact sheet).",
+  "tags": [
+   "camel chewing",
+   "saltbush",
+   "camel for kids",
+   "desert animals for kids",
+   "animal facts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "SALTY SNACK!",
+  "seconds": 88.3
  }
 ]

@@ -2906,10 +2906,26 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zc_ep09.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 19 1:25 PM ET by session_014CFVfYJyTj4rc8TGoYFmDc (scheduled 1:17 PM lesson build): in_production."
+  "note": "Built Nov 19 (session_014CFVfYJyTj4rc8TGoYFmDc, scheduled 1:17 PM lesson build): facts read today; stills of every shot (start and end) in 16:9 and 9:16; frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep09.md. NOT uploaded: the daily run schedules it.",
+  "description": "What do camels eat in the desert, where so few plants grow? Milo the bluebird looks for lunch with Sandy the baby camel and her mama! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that camels eat desert plants (grass, leaves and twigs), that a camel takes just a few leaves from each plant and walks on, that camels can eat thorny plants with their big, tough lips, that a camel's top lip is split in two and each half moves on its own, that hard little bumps inside the mouth push the food down, that camels can eat salty plants, and that camels chew their food again.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel; camel diet fact sheet); National Geographic (how camels eat; Arabian camel); SeaWorld (dromedary camel).",
+  "tags": [
+   "what do camels eat",
+   "camel",
+   "camels for kids",
+   "baby camel",
+   "camel lips",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "THORNS? YUM!",
+  "seconds": 315.4
  }
 ]

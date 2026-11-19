@@ -151,3 +151,7 @@
 | 2026-11-19 | zoo3d_ep22.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-19 | cartoon/gc_ep01.mp4 | cartoon_lesson | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves; no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
 | 2026-11-19 | cartoon/gc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |
+| 2026-11-19 | cartoon/zc_ep09.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-19 | cartoon/zc_ep09_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-19 | cartoon/zc_ep09_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-19 | cartoon/zc_ep09_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

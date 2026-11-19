@@ -1701,5 +1701,41 @@
    "panda"
   ],
   "new_song": true
+ },
+ {
+  "id": "zoo3d_ep22",
+  "places": [
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "desert",
+    "noon"
+   ],
+   [
+    "savanna",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "giraffe",
+   "horse",
+   "rhino",
+   "zebra"
+  ],
+  "new_song": true
  }
 ]

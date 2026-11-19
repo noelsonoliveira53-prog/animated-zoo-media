@@ -340,6 +340,75 @@ The monkey swings from tree to tree!
 
 [Outro - quick and happy]
 Swing-a-ding! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep22", bpm=120, key="D Major", seed=922, flavor="xylophone, kalimba and bright brass hooks",
+      title="Stretch Up Tall! Giraffe Song for Kids with Milo", card="Stretch Up Tall!", thumb="LONG NECK!",
+      cast=["giraffe", "zebra", "rhino", "horse"],
+      route=[("chorus1", "savanna", "morning"), ("verse1", "desert", "noon"), ("chorus2", "savanna", "noon"),
+             ("verse2", "river", "golden"), ("bridge1", "spring_meadow", "morning"), ("chorus3", "savanna", "sunset")],
+      verses=[["giraffe"], ["giraffe"], ["giraffe"]],
+      words=["STRETCH!", "SO TALL!", "STRETCH UP TALL!", "LONG TONGUE!", "TIPTOE!", "MY OWN SPOTS!", "STRETCH UP TALL!"],
+      # facts read Nov 19 2026 7:25 AM ET: National Geographic (animals/mammals/facts/giraffe): "Giraffes are the world's tallest mammals,
+      # thanks to their towering legs and long necks"; "browse on leaves and buds in treetops that few other animals can reach";
+      # "The 21-inch tongue helps them pluck tasty morsels from branches"; "no two individuals have exactly the same pattern".
+      # Britannica Kids (giraffe): "The giraffe is the tallest living animal"; "They can reach leaves at the top of trees";
+      # "Their tongues are more than 18 inches (45 centimeters) long".
+      desc="Stretch up tall! Sing and stretch with Milo the bluebird and the giraffe, the tallest animal in the world: long legs, a long neck, "
+           "a long tongue for leaves at the very top of the trees, and spots that are all its own.\nA giraffe song for kids. Stretch up, tiptoe and reach along. Ages 2-6.\n\n"
+           "Facts from National Geographic and Britannica Kids (giraffe pages).",
+      tags=["giraffe song for kids", "tall animals song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+Reach your arms up, one, two, three,
+Stretch up tall and sing with me!
+
+[Verse 1 - light and bouncy]
+Long, long legs and a long, long neck,
+Up to the treetops, let's go check!
+Higher than the zebra, higher than the tree,
+The tallest animal, look and see!
+
+[Pre-Chorus - build up, rising drums]
+Who is tall? Who is tall?
+Stretch up high, the tallest of all!
+
+[Chorus - full band, group vocals]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+Reach your arms up, one, two, three,
+Stretch up tall and sing with me!
+
+[Verse 2 - light and bouncy]
+Leaves at the top, way up high,
+Munch, munch, munch, up near the sky!
+Out comes a tongue, so long, so long,
+It picks the leaves and sings along!
+
+[Bridge - claps and stomps, call and response]
+Stretch your neck! (Stretch, stretch, stretch!)
+Up on tiptoe! (Up, up, up!)
+Reach for the leaves! (Munch, munch, munch!)
+Now wiggle and giggle and stretch so much!
+
+[Verse 3 - light and bouncy]
+Look at the spots, brown and bright,
+Big ones, small ones, left and right!
+No two giraffes have spots the same,
+Spotty patterns, what a fun game!
+
+[Pre-Chorus - build up, rising drums]
+Who is tall? Who is tall?
+Stretch up high, the tallest of all!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+We reached up high, one, two, three,
+Stretch up tall and sing with me!
+
+[Outro - quick and happy]
+Stretch up tall! Bye-bye, friends!"""),
 ]
 
 COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5", "#ffb627"]

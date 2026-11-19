@@ -159,6 +159,7 @@ def main():
         # channel watermark (Noelson, Nov 16: on every video; YouTube's own watermark is not shown on made-for-kids videos):
         # laid on after the lyrics, top left (job "watermark_pos": "tr" = top right when the top left corner is in use)
         import watermark
+        watermark.use(ch)      # Gizmo Explains gets its own mark (zoo: unchanged)
         wpos = job.get("watermark_pos", "tl"); whide = job.get("watermark_hide")    # "watermark_hide": [[from s, to s], ...]: the mark fades away there
         fc = f"[0:v]{vf}[zsub];" + watermark.chain("zsub", "v", "wide", 1, 3840, wpos, whide)
         enc_in = ["ffmpeg", "-y", "-loglevel", "error", "-i", raw] + watermark.wm_in("wide", whide) + ["-filter_complex", fc, "-map", "[v]", "-map", "0:a"]
@@ -199,7 +200,7 @@ Dialogue: 0,0:00:00.00,0:00:10.00,T,,0,0,0,,{words}
     subprocess.run(["cp", out, dst], check=True)
     tdst = os.path.join(repo, "brand", folder if folder != "." else "zoo", f"thumb_{jid_pub}.png")
     subprocess.run(["cp", thumb, tdst], check=True)
-    plan_p = os.path.join(repo, "studio", "upload_plan_3d.json")
+    plan_p = os.path.join(repo, "studio", "upload_plan_gizmo_v3.json" if ch == "gizmo" else "upload_plan_3d.json")   # Gizmo: its own plan (docs/GIZMO_RUN.md)
     plan = json.load(open(plan_p)) if os.path.exists(plan_p) else []
     rel = f"{folder}/{jid_pub}.mp4" if folder != "." else f"{jid_pub}.mp4"
     date = arg("--date")

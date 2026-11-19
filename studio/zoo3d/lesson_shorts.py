@@ -16,6 +16,9 @@ HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.pat
 FONT = os.path.join(HERE, "fonts", "Baloo2-ExtraBold.ttf")
 BOILER = ("The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
           "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
+GZ_BOILER = ("Gizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. "
+             "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
+CH = "zoo"     # set from the lesson's job: "gizmo" -> Gizmo's mark, brand/gizmo/shorts, gizmo/shorts, studio/upload_plan_gizmo_v3.json
 
 
 def arg(k, d=None): return sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
@@ -61,7 +64,7 @@ def make(raw, sid, sh, outdir):
     if not THUMBS_ONLY: assert watermark.has_mark(out), f"{out}: the channel watermark is not in the picture"
     # custom thumbnail (Noelson, Nov 14: every video gets its own thumbnail when it is posted): the moment the example is on
     # screen, same layout as the Short, its own 3 words (never the title's words), no captions. 1080x1920 PNG.
-    tdir = os.path.join(REPO, "brand", "zoo", "shorts"); os.makedirs(tdir, exist_ok=True)
+    tdir = os.path.join(REPO, "brand", "gizmo" if CH == "gizmo" else "zoo", "shorts"); os.makedirs(tdir, exist_ok=True)
     thumb = os.path.join(tdir, "thumb_" + sh["id"] + ".png")
     tt = sh.get("thumb_text", "").replace("'", "\u2019").replace(":", "\\:"); st = min(330, int(1900 / max(1, len(tt) * 0.62)))
     tfc = (f"[0:v]split[a][b];[a]scale=-2:3840,crop=2160:3840,boxblur=40:4,eq=brightness=-0.12:saturation=1.2[bg];"
@@ -83,13 +86,15 @@ THUMBS_ONLY = "--thumbs-only" in sys.argv      # redo only the thumbnails of Sho
 
 
 def main():
-    global V3
+    global V3, CH
     raw, sid = sys.argv[1], sys.argv[2]
     song = json.load(open(os.path.join(HERE, "songs", f"{sid}.json")))
     V3 = song.get("lesson_version", 0) >= 3
-    outdir = arg("--out", os.path.join(REPO, "shorts3d")); os.makedirs(outdir, exist_ok=True)
+    CH = song.get("job", {}).get("channel", "zoo"); GZ = CH == "gizmo"
+    if GZ: watermark.use("gizmo")
+    outdir = arg("--out", os.path.join(REPO, "gizmo", "shorts") if GZ else os.path.join(REPO, "shorts3d")); os.makedirs(outdir, exist_ok=True)
     only = arg("--only")
-    planp = os.path.join(REPO, "studio", "upload_plan_shorts_zoo.json")
+    planp = os.path.join(REPO, "studio", "upload_plan_gizmo_v3.json" if GZ else "upload_plan_shorts_zoo.json")
     plan = json.load(open(planp)) if os.path.exists(planp) else []
     items = plan if isinstance(plan, list) else (plan.get("items") or plan.get("shorts") or [])
     for sh in song.get("shorts", []):
@@ -97,9 +102,10 @@ def main():
         out, d, thumb = make(raw, sid, sh, outdir)
         rel = os.path.relpath(out, REPO)
         fact = next((x for x in song.get("lyrics", "").split("\n") if sh["seg"].replace("_", " ").split()[-1] in x.lower()), "")
-        desc = f"{sh['title']} A quick animal fact for kids with Milo the bluebird, from the lesson “{song['meta']['title']}”.\n{fact}\n\n{BOILER}"
+        if GZ: desc = f"{sh['title']} A quick science explainer for kids with Gizmo the robot, from the video “{song['meta']['title']}”.\n{sh.get('fact', fact)}\n\n{GZ_BOILER}"
+        else: desc = f"{sh['title']} A quick animal fact for kids with Milo the bluebird, from the lesson “{song['meta']['title']}”.\n{fact}\n\n{BOILER}"
         ent = {"file": rel, "title": sh["title"], "description": desc, "tags": song["meta"].get("tags", [])[:8], "made_for_kids": True,
-               "status": "hold_review", "format": "lesson_fact_short_90" if V3 else "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
+               "status": "hold_review", "format": ("gizmo_short_90" if GZ else "lesson_fact_short_90") if V3 else "lesson_fact_short_4k", "from": sid, "seconds": d, "res": "2160x3840",
                "thumb": os.path.relpath(thumb, REPO), "thumb_text": sh.get("thumb_text", ""), "watermark": "top",
                "note": "interactive-lesson prototype: do not upload until Noelson approves the new format"}
         old = next((e for e in items if e.get("file") == rel), None)

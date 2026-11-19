@@ -9,6 +9,7 @@ Interactive pieces: sign (answer choice; "win": seconds after which it is marked
 qbox (mystery box), badge (clue number), count (things that appear one by one on "times"), check / cross.
 Examples: flies, mud, sun, snowflake, leaves, plate, pool, house2, ruler, cars, rings, town, swatch, fingerprint, magnifier,
 butter, sock, ball, zzz, bones, thermo, bamboo, den, notree, heart, arrow.
+Gizmo Explains (Nov 19): rocket (stages, gas, drop), tanks, jet, cloud (grey, rain), vapor, puddle (shrink), dust, drops (round|bun|tear), cycle, river.
 """
 import math, os
 import bpy
@@ -336,6 +337,107 @@ def build(L, name, at, **o):
                     L.cone("hair", 0.05 * s, 0.0, 0.9 * s, (ex_ + (j - 4) * 0.045 * s, 0, ez - 0.45 * s), m=dark, parent=root,
                            rot=(math.pi, (j - 4) * 0.06, 0), verts=6)
             L.sphere("base", 0.16 * s, (0, 0, 2.62 * s), (1, 1, 1), fur, root, 14)
+    # ---------------- Gizmo Explains science examples (Nov 19 2026): rockets and the water cycle. Each one SHOWS the idea being explained.
+    elif name == "rocket":        # a toy-like rocket on its pad; opts: stages (1 or 3), gas (puffs of hot gas pushed out the back, no fire),
+        st_ = o.get("stages", 1)  # drop: seconds after which the bottom stage falls away (staging), labels: stage numbers
+        body = _m(L, "#f4f6fb", 0.3, 0.8); red = _m(L, "#f0443a", 0.35, 0.6); blue = _m(L, "#3561d9", 0.35, 0.6); win = _m(L, "#5ff3ff", 0.1, 0.9, 0.6)
+        P["parts"] = []; z = (1.3 if o.get("gas") else 0.35) * s     # with gas the rocket is flying: up off the ground, the gas trails below it
+        if not o.get("gas"): L.cylinder("pad", 0.85 * s, 0.12 * s, (0, 0, 0.06 * s), m=_m(L, "#8a94a8", 0.6, 0.2), parent=root, verts=40)
+        for k in range(st_):
+            e = L.empty("stage", (0, 0, 0), root); h = (1.0 if st_ > 1 else 2.1) * s
+            L.cylinder("tube", 0.36 * s, h, (0, 0, z + h / 2), m=body, parent=e, verts=40)
+            L.torus("band", 0.365 * s, 0.035 * s, (0, 0, z + h - 0.05 * s), m=(blue if k % 2 == 0 else red), parent=e)
+            if k == 0:
+                for a in range(3):
+                    ang = a * math.tau / 3 + math.pi / 2
+                    L.cube("fin", 1, (math.cos(ang) * 0.42 * s, math.sin(ang) * 0.42 * s, z + 0.3 * s), (0.36 * s, 0.07 * s, 0.6 * s), red, e, rot=(0, 0, ang), bevel=0.02)
+                L.cone("nozzle", 0.24 * s, 0.3 * s, 0.25 * s, (0, 0, z - 0.1 * s), m=_m(L, "#5a6070", 0.4, 0.4), parent=e, verts=32)
+            if st_ > 1 and o.get("labels", True):
+                _txt(L, str(k + 1), 0.42 * s, (0, -0.4 * s, z + h / 2 - 0.14 * s), "#3561d9", e, extrude=0.03, emit=0.2)
+            P["parts"].append((e, z)); z += h
+        top = L.empty("top", (0, 0, 0), root)
+        L.cone("nose", 0.36 * s, 0.0, 0.8 * s, (0, 0, z + 0.4 * s), m=red, parent=top, verts=40)
+        if st_ == 1:
+            L.cylinder("window", 0.17 * s, 0.06, (0, -0.35 * s, z - 0.55 * s), m=win, parent=top, rot=(math.pi / 2, 0, 0), verts=32)
+            L.torus("wrim", 0.17 * s, 0.03 * s, (0, -0.37 * s, z - 0.55 * s), m=blue, parent=top, rot=(math.pi / 2, 0, 0))
+        P["top"] = top
+        if o.get("gas"):          # soft grey-white puffs leaving the nozzle downward
+            gm = _m(L, "#e9edf5", 0.9, 0.0, 0.15)
+            P["gas"] = [L.sphere("gas", 0.22 * s, (0, 0, 0.2 * s), m=gm, parent=root, segs=18) for _ in range(9)]
+            P["gas_z"] = 1.1 * s
+    elif name == "tanks":         # what a rocket carries inside: its fuel and its own oxygen (labels)
+        for k, (lab, col) in enumerate(o.get("labels", [("FUEL", "#ff7a00"), ("OXYGEN", "#3db8ff")])):
+            x = (k - 0.5) * 1.3 * s
+            L.cylinder("tank", 0.5 * s, 1.5 * s, (x, 0, 0.85 * s), m=_m(L, col, 0.35, 0.7), parent=root, verts=40)
+            for zz in (0.1, 1.6):
+                L.sphere("cap", 0.5 * s, (x, 0, zz * s), (1, 1, 0.45), _m(L, col, 0.35, 0.7), root, 32)
+            L.cube("label", 1, (x, -0.5 * s, 0.9 * s), (1.16 * s, 0.03, 0.46 * s), _m(L, "#ffffff", 0.6, 0.1), root, bevel=0.02)
+            _txt(L, lab, (0.34 if len(lab) <= 4 else 0.24) * s, (x, -0.54 * s, 0.8 * s), "#173a63", root, extrude=0.03, emit=0.1)
+    elif name == "jet":           # a little airplane: its jet engines take in air from around them
+        wm = _m(L, "#f4f6fb", 0.3, 0.8); bl = _m(L, "#3561d9", 0.35, 0.6)
+        L.cylinder("fuse", 0.26 * s, 2.4 * s, (0, 0, 1.0 * s), m=wm, parent=root, rot=(0, math.pi / 2, 0), verts=32)
+        L.sphere("nosej", 0.26 * s, (1.2 * s, 0, 1.0 * s), (1.4, 1, 1), wm, root, 24)
+        L.cube("wing", 1, (0.1 * s, 0, 0.95 * s), (0.7 * s, 1.5 * s, 0.07 * s), bl, root, bevel=0.03)
+        root.rotation_euler.z = 0.45
+        L.cube("tailf", 1, (-1.1 * s, 0, 1.35 * s), (0.4 * s, 0.06 * s, 0.6 * s), bl, root, bevel=0.03)
+        for k in range(5):
+            L.cylinder("winj", 0.06 * s, 0.03, ((0.75 - 0.3 * k) * s, -0.26 * s, 1.08 * s), m=_m(L, "#5ff3ff", 0.1, 0.9, 0.5), parent=root, rot=(math.pi / 2, 0, 0), verts=16)
+        L.cylinder("engine", 0.17 * s, 0.6 * s, (0.15 * s, -0.55 * s, 0.78 * s), m=_m(L, "#8a94a8", 0.4, 0.5), parent=root, rot=(0, math.pi / 2, 0), verts=24)
+        P["air"] = [L.sphere("air", 0.07 * s, (0, 0, 0), m=_m(L, "#bfe9ff", 0.2, 0.6, 0.6), parent=root, segs=12) for _ in range(6)]
+        P["air_at"] = (0.15 * s, -0.55 * s, 0.78 * s)
+    elif name == "cloud":         # puffy cloud; opts: grey (a rain cloud), rain (drops fall from it), s
+        cm = _m(L, "#8e9bb0" if o.get("grey") else "#ffffff", 0.85, 0.1, 0.12)
+        for dx, dz, r in ((-0.75, 0.0, 0.48), (-0.25, 0.25, 0.62), (0.35, 0.2, 0.58), (0.85, -0.02, 0.45), (0.05, -0.12, 0.5)):
+            L.sphere("puff", r * s, (dx * s, 0, dz * s), (1, 0.75, 0.9), cm, root, 24)
+        if o.get("rain"):
+            dm = _m(L, "#39a7ee", 0.1, 0.9, 0.35)
+            P["rain"] = []
+            for k in range(9):
+                d = L.empty("rd", ((-0.8 + 0.2 * k) * s, -0.1, -0.5 * s), root)
+                L.sphere("drop", 0.07 * s, (0, 0, 0), (1, 1, 1.0), dm, d, 14)
+                P["rain"].append(d)
+    elif name == "vapor":         # invisible water vapor drawn as faint dots rising from the water
+        vm = _m(L, "#dff4ff", 0.3, 0.3, 0.6, 0.55)
+        P["vap"] = [L.sphere("vap", 0.08 * s, (0, 0, 0), m=vm, parent=root, segs=12) for _ in range(14)]
+    elif name == "puddle":        # a puddle that gets smaller while the sun warms it (opts: shrink = seconds to shrink to 30%)
+        P["pud"] = L.cylinder("water", 1.0 * s, 0.05, (0, 0, 0.03), (1.3, 0.8, 1), m=_m(L, "#39a7ee", 0.05, 1.0, 0.15), parent=root, verts=48)
+        L.cylinder("ground", 1.6 * s, 0.03, (0, 0, 0.0), (1.3, 0.8, 1), m=_m(L, "#b9915e", 0.9, 0.0), parent=root, verts=48)
+    elif name == "dust":          # a tiny speck of dust; water vapor gathers on it and becomes a droplet (magnified view)
+        L.torus("lensr", 1.0 * s, 0.07 * s, (0, 0, 0), m=_m(L, "#3561d9", 0.3, 0.6), parent=root, rot=(math.pi / 2, 0, 0))
+        L.cylinder("lens", 0.98 * s, 0.02, (0, 0.06, 0), m=_m(L, "#eaf6ff", 0.2, 0.3, 0.2), parent=root, rot=(math.pi / 2, 0, 0), verts=48)
+        L.sphere("speck", 0.16 * s, (0, -0.05, 0), (1.2, 0.8, 1), _m(L, "#8a5a36", 0.9, 0.0), root, 16)
+        P["coat"] = L.sphere("coat", 0.2 * s, (0, -0.06, 0), m=_m(L, "#39a7ee", 0.05, 1.0, 0.35, 0.8), parent=root, segs=24)
+        P["vin"] = [L.sphere("vin", 0.05 * s, (0, -0.07, 0), m=_m(L, "#bfe9ff", 0.3, 0.4, 0.6), parent=root, segs=10) for _ in range(8)]
+    elif name == "drops":         # raindrop shapes side by side: kinds round | bun | tear (the tear gets a cross: real drops are not tear-shaped)
+        dm = _m(L, "#39a7ee", 0.05, 1.0, 0.3)
+        kinds = o.get("kinds", ["round", "bun"]); P["items"] = []
+        for k, kd in enumerate(kinds):
+            e = L.empty("dropi", ((k - (len(kinds) - 1) / 2) * 1.25 * s, 0, 0), root)
+            if kd == "round": L.sphere("d", 0.3 * s, (0, 0, 0), (1, 1, 1), dm, e, 32)
+            elif kd == "bun":
+                L.sphere("d", 0.48 * s, (0, 0, 0.0), (1.15, 1.15, 0.62), dm, e, 32)
+                L.cylinder("flat", 0.43 * s, 0.03, (0, 0, -0.27 * s), m=dm, parent=e, verts=32)
+            else:
+                L.sphere("d", 0.32 * s, (0, 0, 0), (1, 1, 1), dm, e, 32)
+                L.cone("tip", 0.3 * s, 0.0, 0.55 * s, (0, 0, 0.38 * s), m=dm, parent=e, verts=32)
+                _cross(L, e, (0, -0.4, 0.15 * s), 0.7 * s)
+            P["items"].append(e)
+    elif name == "cycle":         # the water cycle: sun, cloud, rain and sea on a ring of arrows that turns
+        ring = L.empty("ring", (0, 0, 0), root); P["ring"] = ring; am = _m(L, "#5ff3ff", 0.3, 0.6, 0.5)
+        L.torus("loop", 1.15 * s, 0.05 * s, (0, 0, 0), m=am, parent=ring, rot=(math.pi / 2, 0, 0))
+        for k in range(4):
+            a = k * math.tau / 4 + 0.4
+            L.cone("head", 0.16 * s, 0, 0.32 * s, (math.cos(a) * 1.15 * s, -0.02, math.sin(a) * 1.15 * s), m=am, parent=ring, rot=(0, -a, 0), verts=16)
+        sm = _m(L, "#ffcf33", 0.3, 0.5, 1.4); L.sphere("sun", 0.26 * s, (0.75 * s, -0.1, 0.75 * s), m=sm, parent=root, segs=24)
+        cw = _m(L, "#ffffff", 0.85, 0.1, 0.15)
+        for dx, r in ((-0.95, 0.2), (-0.7, 0.27), (-0.45, 0.2)): L.sphere("c", r * s, (dx * s, -0.1, 0.72 * s), (1, 0.7, 0.85), cw, root, 16)
+        dm = _m(L, "#39a7ee", 0.1, 0.9, 0.35)
+        for dx in (-0.85, -0.65, -0.5): L.sphere("r", 0.06 * s, (dx * s, -0.1, 0.25 * s), (1, 1, 1.3), dm, root, 10)
+        L.sphere("sea", 0.55 * s, (0.1 * s, -0.1, -0.75 * s), (1.5, 0.4, 0.45), _m(L, "#2a7fd6", 0.1, 0.9, 0.2), root, 24)
+    elif name == "river":         # rain water running downhill to the sea (blue dots flow along a hill)
+        L.cube("hill", 1, (0, 0.1, 0.45 * s), (2.6 * s, 0.4, 0.9 * s), _m(L, "#6fc06a", 0.8, 0.1), root, rot=(0, math.radians(17), 0), bevel=0.08)
+        L.sphere("sea", 0.7 * s, (1.6 * s, -0.05, 0.08), (1.4, 0.6, 0.12), _m(L, "#2a7fd6", 0.1, 0.9, 0.2), root, 24)
+        P["flow"] = [L.sphere("flow", 0.08 * s, (0, -0.25, 0), m=_m(L, "#39a7ee", 0.1, 0.9, 0.4), parent=root, segs=12) for _ in range(8)]
     else:
         L.sphere("unknown", 0.4, (0, 0, 0.4), m=_m(L, "#ff00ff"), parent=root)
     try: _detail(L, name, root, P, o)      # second pass: the small things that make a prop read as a real object
@@ -654,3 +756,45 @@ def animate(root, tr, dur, st):
         if "cross" in P: c = _pop((tr - o.get("cross_at", 0.8)) / 0.3); P["cross"].scale = (c, c, c)
     elif name == "arrow":
         root.location.z += 0.0   # bobbing is done through the engine's own wobble
+    elif name == "rocket":
+        drop = o.get("drop", o.get("leave")); s_ = o.get("s", 1.0)
+        if drop is not None and "parts" in P and len(P["parts"]) > 1:
+            u = max(0.0, tr - drop); e0 = P["parts"][0][0]
+            e0.location.z = -2.2 * u * u; e0.location.x = -0.35 * u * u
+            sc = max(0.0, 1 - u / 1.4); e0.scale = (sc, sc, sc)
+        for k, g in enumerate(P.get("gas", [])):
+            ph = (tr * 0.9 + k / len(P["gas"])) % 1.0
+            g.location = (0.3 * math.sin(k * 2.1) * ph * s_, -0.1 * ph, P["gas_z"] - 1.0 * ph * s_)
+            sc = (0.5 + 1.6 * ph) * (1.0 if ph < 0.85 else (1 - ph) / 0.15); g.scale = (sc, sc, sc * 0.8)
+    elif name == "jet":
+        ax, ay, az = P["air_at"]; s_ = o.get("s", 1.0)
+        for k, a_ in enumerate(P["air"]):
+            ph = (tr * 0.8 + k / len(P["air"])) % 1.0
+            a_.location = (ax + (1.4 - 1.1 * ph) * s_, ay, az + 0.12 * math.sin(k * 1.7) * s_); sc = 1.0 if ph < 0.9 else (1 - ph) * 10; a_.scale = (sc, sc, sc)
+    elif name == "cloud":
+        for k, d in enumerate(P.get("rain", [])):
+            ph = (tr * 1.1 + (k * 0.37) % 1.0) % 1.0; d.location.z = (-0.5 - 1.6 * ph) * o.get("s", 1.0); sc = 1.0 if ph < 0.9 else (1 - ph) * 10; d.scale = (sc, sc, sc)
+    elif name == "vapor":
+        s_ = o.get("s", 1.0)
+        for k, v in enumerate(P["vap"]):
+            ph = (tr * 0.35 + k / len(P["vap"])) % 1.0
+            v.location = ((((k * 0.61) % 1.0) - 0.5) * 1.6 * s_ + 0.12 * math.sin(tr * 2 + k) * s_, 0, ph * 2.4 * s_)
+            sc = (0.6 + 0.8 * ph) * (1.0 if ph < 0.8 else (1 - ph) * 5); v.scale = (sc, sc, sc)
+    elif name == "puddle":
+        u = min(1.0, tr / max(0.5, o.get("shrink", 6.0))); sc = 1.0 - 0.7 * u; P["pud"].scale = (1.3 * sc, 0.8 * sc, 1)
+    elif name == "dust":
+        g = o.get("grow", 1.5); u = min(1.0, max(0.0, (tr - g) / 3.0)); sc = 1.0 + 1.6 * u; P["coat"].scale = (sc, sc, sc)
+        for k, v in enumerate(P["vin"]):
+            a = k * math.tau / len(P["vin"]); ph = (tr * 0.6 + k / len(P["vin"])) % 1.0; r = (0.9 - 0.6 * ph) * o.get("s", 1.0)
+            v.location = (math.cos(a) * r, -0.07, math.sin(a) * r); vs = 1.0 if tr > 0.3 else 0.0; v.scale = (vs, vs, vs)
+    elif name == "drops":
+        times = o.get("times") or [k * 0.9 for k in range(len(P["items"]))]
+        for k, e in enumerate(P["items"]):
+            c = _pop((tr - (times[k] if k < len(times) else times[-1])) / 0.3); e.scale = (c, c, c)
+    elif name == "cycle":
+        P["ring"].rotation_euler.y = -tr * 0.5
+    elif name == "river":
+        s_ = o.get("s", 1.0)
+        for k, f_ in enumerate(P["flow"]):
+            ph = (tr * 0.45 + k / len(P["flow"])) % 1.0; x = (-1.2 + 2.6 * ph) * s_
+            f_.location = (x, -0.25, max(0.1 * s_, 0.98 * s_ - 0.306 * x) if x < 1.3 * s_ else 0.1 * s_); f_.scale = (1, 1, 1) if ph < 0.97 else (0, 0, 0)

@@ -4,7 +4,7 @@ characteristics"). YouTube's own channel watermark (Studio > Customization > Bra
 The mark: the channel's own picture (brand/avatar.png: Milo on yellow) in a white ring + the channel name in the channel font
 (Baloo 2 ExtraBold, white with the captions' dark-brown outline), at 88% opacity.
 
-  python3 watermark.py build                               -> brand/zoo/watermark.png (16:9, drawn for 3840x2160) and watermark_short.png (9:16, for 2160x3840)
+  python3 watermark.py build [gizmo]                       -> brand/zoo/watermark.png (gizmo: brand/gizmo/...) (16:9, drawn for 3840x2160) and watermark_short.png (9:16, for 2160x3840)
   python3 watermark.py still <video> <seconds> <out.png>   -> one frame with the mark, to look at before an encode
   python3 watermark.py apply <in.mp4> <out.mp4> [tl|tr] [--hide 300-312,340-350]   -> re-encode a finished file that has no mark yet (sound copied)
   python3 watermark.py check <video> [tl|tr] [--hide ...]  -> "MARK yes/no": is the mark in the picture? (review.py fails a video without it)
@@ -22,6 +22,20 @@ HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.pat
 FONT = os.path.join(HERE, "fonts", "Baloo2-ExtraBold.ttf")
 WM = os.path.join(REPO, "brand", "zoo", "watermark.png"); WM_SHORT = os.path.join(REPO, "brand", "zoo", "watermark_short.png")
 NAME = "The Animated Zoo"
+CHANNEL = "zoo"
+AVATAR, AV_CROP = os.path.join(REPO, "brand", "avatar.png"), (70, 110, 710, 750)
+# Gizmo Explains (Nov 19 2026, docs/GIZMO_RUN.md): the same mark with Gizmo's channel picture (brand/gizmo/avatar.jpg, read from the
+# channel page Nov 19) and "Gizmo Explains"; files brand/gizmo/watermark.png, watermark_short.png. Zoo calls are unchanged.
+CHANNELS = {"gizmo": {"name": "Gizmo Explains", "avatar": os.path.join(REPO, "brand", "gizmo", "avatar.jpg"), "crop": (22, 18, 170, 166),
+                      "wm": os.path.join(REPO, "brand", "gizmo", "watermark.png"), "wm_short": os.path.join(REPO, "brand", "gizmo", "watermark_short.png")}}
+
+
+def use(channel):
+    """Switch the mark to another channel's (only "gizmo" besides the default "zoo")."""
+    global WM, WM_SHORT, NAME, CHANNEL, AVATAR, AV_CROP
+    if channel in (None, "", "zoo"): return
+    c = CHANNELS[channel]; CHANNEL = channel
+    WM, WM_SHORT, NAME, AVATAR, AV_CROP = c["wm"], c["wm_short"], c["name"], c["avatar"], c["crop"]
 OPACITY = 0.88
 MX, MY, SHORT_Y = 40, 36, 232          # margins of the 16:9 mark at 3840x2160; top of the 9:16 mark at 2160x3840
 
@@ -29,7 +43,7 @@ MX, MY, SHORT_Y = 40, 36, 232          # margins of the 16:9 mark at 3840x2160; 
 def build_one(path, badge, font_px, gap, ring, outline):
     from PIL import Image, ImageDraw, ImageFont, ImageFilter
     S = 3                                                       # draw 3x and scale down: clean edges
-    av = Image.open(os.path.join(REPO, "brand", "avatar.png")).convert("RGB").crop((70, 110, 710, 750))   # Milo fills the disc
+    av = Image.open(AVATAR).convert("RGB").crop(AV_CROP)   # Milo (or Gizmo) fills the disc
     D = badge * S; r = ring * S
     disc = av.resize((D - 2 * r, D - 2 * r), Image.LANCZOS)
     mask = Image.new("L", disc.size, 0); ImageDraw.Draw(mask).ellipse([0, 0, disc.size[0] - 1, disc.size[1] - 1], fill=255)
@@ -148,7 +162,10 @@ def has_mark(video, pos="tl", verbose=False, hide=None):
     m = Image.open(wm_file(k)).convert("RGBA").resize((mw, mh), Image.LANCZOS); px = m.load()
     white = [(i, j) for j in range(0, mh, 2) for i in range(0, mw, 2) if px[i, j][3] > 250 and min(px[i, j][:3]) > 245 and i > mh]
     brown = [(i, j) for j in range(0, mh, 2) for i in range(0, mw, 2) if px[i, j][3] > 250 and max(px[i, j][:3]) < 80 and i > mh]
-    yel = [(i, j) for j in range(0, mh, 2) for i in range(0, mh, 2) if px[i, j][3] > 250 and px[i, j][0] > 230 and px[i, j][2] < 110]
+    if CHANNEL == "gizmo":    # Gizmo's picture is on blue: the disc's blue must be blue
+        yel = [(i, j) for j in range(0, mh, 2) for i in range(0, mh, 2) if px[i, j][3] > 250 and px[i, j][2] > 150 and px[i, j][0] < 90]
+    else:
+        yel = [(i, j) for j in range(0, mh, 2) for i in range(0, mh, 2) if px[i, j][3] > 250 and px[i, j][0] > 230 and px[i, j][2] < 110]
     hits = 0; hide = parse_hide(hide)
     free = [t / 2 for t in range(4, int(dur * 2) - 4) if not any(a - 1 <= t / 2 <= b + 1 for a, b in hide)]      # seconds where the mark must be up
     for f in (0.12, 0.3, 0.5, 0.7, 0.88):
@@ -159,7 +176,9 @@ def has_mark(video, pos="tl", verbose=False, hide=None):
         fp = Image.open(io.BytesIO(raw)).convert("RGB").load()
         lum = lambda c: 0.299 * c[0] + 0.587 * c[1] + 0.114 * c[2]
         a = sum(lum(fp[i, j]) for i, j in white) / max(1, len(white)); b = sum(lum(fp[i, j]) for i, j in brown) / max(1, len(brown))
-        yy = [fp[i, j] for i, j in yel]; c = sum(1 for q in yy if q[0] > 190 and q[1] > 150 and q[2] < 150) / max(1, len(yy))
+        yy = [fp[i, j] for i, j in yel]
+        if CHANNEL == "gizmo": c = sum(1 for q in yy if q[2] > 130 and q[0] < 110 and q[2] > q[0] + 60) / max(1, len(yy))
+        else: c = sum(1 for q in yy if q[0] > 190 and q[1] > 150 and q[2] < 150) / max(1, len(yy))
         ok = a > 205 and b < 125 and c > 0.8; hits += ok
         if verbose: print(f"  {tt:6.1f} s: letters {a:.0f}, outline {b:.0f}, yellow {c:.2f} -> {'mark' if ok else 'no mark'}")
     return hits >= 4
@@ -187,6 +206,9 @@ def opt(a, k):
 if __name__ == "__main__":
     c = sys.argv[1]; a = sys.argv[2:]; hd = opt(a, "--hide")
     if hd: i = a.index("--hide"); del a[i:i + 2]
+    chn = opt(a, "--channel")                     # --channel gizmo: Gizmo Explains' mark
+    if chn: i = a.index("--channel"); del a[i:i + 2]; use(chn)
+    if c == "build" and a: use(a[0])              # watermark.py build gizmo
     if c == "build": build()
     elif c == "still": still(a[0], a[1], a[2], *(a[3:4]))
     elif c == "apply": apply(a[0], a[1], *(a[2:3]), hide=hd)

@@ -18,7 +18,7 @@ BANNED = ["cocomelon", "bluey", "peppa", "paw patrol", "disney", "pixar", "pokem
 DISTRESS = ["lost", "cry", "cries", "crying", "scared", "afraid", "hurt", "trapped", "stuck", "danger", "dangerous", "alone", "help me",
             "bite", "bites", "attack", "hunt", "hunts", "dead", "die", "sad", "tears", "monster", "fight"]
 CTA = ["subscribe", "like this video", "hit the bell", "smash", "comment below", "click"]
-RANGE = {"3d_singalong": (120, 200), "3d_singalong_vids_hook": (120, 200), "vids_full": (120, 200), "3d_lesson": (270, 390), "3d_short_cut": (15, 60),
+RANGE = {"gizmo_explainer": (300, 390), "gizmo_short_90": (85, 95), "3d_singalong": (120, 200), "3d_singalong_vids_hook": (120, 200), "vids_full": (120, 200), "3d_lesson": (270, 390), "3d_short_cut": (15, 60),
          "3d_lesson_v3": (300, 390), "lesson_fact_short_90": (85, 95),
          "cartoon_lesson": (300, 390), "cartoon_adventure": (300, 390), "cartoon_short_90": (85, 95)}   # cartoon formats approved by Noelson Nov 16 3:36 PM   # Noelson, Nov 14 5:12 PM: lessons at least 5 minutes, Shorts a minute and a half
 arg = lambda k, d=None: sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d
@@ -41,12 +41,13 @@ def probe(path):
     j = json.loads(o); return j["streams"][0]["width"], j["streams"][0]["height"], float(j["format"]["duration"])
 
 def review(fname):
-    plans = [("studio/upload_plan_3d.json", "ep"), ("studio/upload_plan_shorts_zoo.json", "short")]
+    plans = [("studio/upload_plan_3d.json", "ep"), ("studio/upload_plan_shorts_zoo.json", "short"), ("studio/upload_plan_gizmo_v3.json", "gizmo")]   # gizmo: Gizmo Explains (Nov 19)
+    gz = False
     entry = allp = None
     for pp, _ in plans:
         d = json.load(open(os.path.join(REPO, pp))); L = d if isinstance(d, list) else next(v for v in d.values() if isinstance(v, list))
         for e in L:
-            if e.get("file") == fname: entry, allp = e, L
+            if e.get("file") == fname: entry, allp = e, L; gz = pp.endswith("gizmo_v3.json")
     if not entry: sys.exit(f"{fname} is not in an upload plan")
     fails, warns = [], []
     title, desc, fmt = entry["title"], entry.get("description", ""), entry.get("format", "3d_singalong")
@@ -82,6 +83,7 @@ def review(fname):
     if same: fails.append("title repeats another video on this channel (META-02)")
     if "checked against trusted sources" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the boilerplate line 'Every fact is checked against trusted sources and every script is reviewed for kid safety' (META-03)")
     if re.search(r"\bAI\b", title + desc): fails.append("title or description mentions AI: the channels carry no AI line (owner, Nov 19 10:32 AM)")
+    if gz and "Gizmo Explains makes gentle" not in desc: fails.append("description is missing the Gizmo Explains boilerplate (docs/GIZMO_RUN.md)")
     if fmt.startswith("cartoon"):      # owner, Nov 17 8:25 PM: no voice synthesized onto notes in a cartoon (Milo's sung line in za_ep02 "sounds robotic")
         _ep = os.path.join(HERE, "..", "cartoon", "episodes", re.sub(r"_short\d+$", "", os.path.splitext(os.path.basename(entry.get("file", "")))[0]) + ".py")
         if os.path.exists(_ep):
@@ -101,7 +103,7 @@ def review(fname):
         w, h, dur = probe(path); lo, hi = RANGE.get(fmt, (15, 400))
         _v3 = os.path.exists(_sj) and json.load(open(_sj)).get("lesson_version", 0) >= 3
         if fmt == "3d_lesson" and _v3: lo, hi = RANGE["3d_lesson_v3"]
-        if fmt in ("lesson_fact_short_90", "cartoon_short_90") and (w, h) != (2160, 3840): fails.append(f"lesson Short is {w}x{h}, expected 2160x3840 (4K vertical)")
+        if fmt in ("lesson_fact_short_90", "cartoon_short_90", "gizmo_short_90") and (w, h) != (2160, 3840): fails.append(f"lesson Short is {w}x{h}, expected 2160x3840 (4K vertical)")
         if fmt == "lesson_fact_short_4k": warns.append("this Short is from the old 30-second lesson cut; new lesson Shorts are 85-95 s (format lesson_fact_short_90)")
         if _v3 and os.path.exists(os.path.join(HERE, "jobs", os.path.splitext(os.path.basename(fname))[0] + "_problems.json")):
             for pr in json.load(open(os.path.join(HERE, "jobs", os.path.splitext(os.path.basename(fname))[0] + "_problems.json"))): fails.append("teach.py: " + pr)
@@ -122,6 +124,7 @@ def review(fname):
         if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo}-{hi} s for {fmt} (KID-04)")
         # channel watermark (Noelson, Nov 16: on every video that is uploaded)
         import watermark
+        if gz: watermark.use("gizmo")      # Gizmo Explains' own mark
         _wp = entry.get("watermark") if entry.get("watermark") in ("tl", "tr") else "tl"
         if not watermark.has_mark(path, _wp, hide=entry.get("watermark_hide")): fails.append("the channel watermark is not in the picture: finish it again, or `python3 studio/zoo3d/watermark.py apply <in> <out>` for a finished file")
         os.makedirs(os.path.join(HERE, "finished"), exist_ok=True)

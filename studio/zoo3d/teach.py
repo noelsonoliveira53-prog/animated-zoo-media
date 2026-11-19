@@ -33,6 +33,13 @@ POS = {"ex": (2.55, -0.5, 0.0), "ex_front": (2.2, -1.5, 0.0), "ex_hi": (2.6, -1.
 SIGN_COL = {"a": "#1479d6", "b": "#e85d00"}
 ARC = [(-2.3, 1.2), (2.3, 1.2), (-4.1, 0.1), (4.1, 0.1), (-0.9, 2.9), (1.2, 3.0)]     # engine "arc" slots (quiz)
 TALL = {"giraffe": 3.8}
+# Gizmo Explains (Nov 19 2026, docs/GIZMO_RUN.md "Engine"): spec "channel": "gizmo" -> host Gizmo (chars/gizmo.py), his helper bots as the
+# cast, the "gizmoworld" set (biome "lab" = his science lab, other biomes = outdoor places), Gizmo's boilerplate and plan format.
+# A spec without "channel" (every Zoo lesson) builds exactly what it built before.
+GZ_CAST = {"pal": {"char": "gizmo", "opts": {"variant": "mini", "color": "#ff5fa2", "scale": 0.6}},
+           "pal2": {"char": "gizmo", "opts": {"variant": "mini", "color": "#3cc45a", "scale": 0.6}}}
+GZ_BOILER = ("Gizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. "
+             "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
 
 
 def _norm(w): return re.sub(r"\W", "", w.lower())
@@ -40,6 +47,7 @@ def _norm(w): return re.sub(r"\W", "", w.lower())
 
 def build(spec):
     sid = spec["id"]; voice = spec.get("voice", "af_heart"); speed = spec.get("speed", 0.84)
+    CH = spec.get("channel", "zoo"); GZ = CH == "gizmo"
     assert len(spec["title"]) <= 60, "title over 60 characters"
     mains = list(spec["cast"]); extras = spec.get("extras", [])
     # ---- expand quiz segments into lines
@@ -104,9 +112,10 @@ def build(spec):
     json.dump(timing, open(os.path.join(HERE, "jobs", f"{sid}_timing.json"), "w"))
 
     # ---- cast
-    cast = [{"id": "host", "char": "milo", "spot": "center"}]
+    cast = [{"id": "host", "char": "gizmo" if GZ else "milo", "spot": "center"}]
     for i, kind in enumerate(mains):
-        cast.append({"id": kind, "char": "animal", "spot": LS.SPOTS[i % 6][0], "opts": {"kind": kind}, "yaw": LS.SPOTS[i % 6][1]})
+        if GZ: cast.append(dict({"id": kind, "spot": LS.SPOTS[i % 6][0], "yaw": LS.SPOTS[i % 6][1]}, **GZ_CAST[kind]))
+        else: cast.append({"id": kind, "char": "animal", "spot": LS.SPOTS[i % 6][0], "opts": {"kind": kind}, "yaw": LS.SPOTS[i % 6][1]})
     for e in extras:
         cast.append({"id": e["id"], "char": "animal", "spot": "back", "opts": {"kind": e["kind"], "scale": e.get("scale", 1.0)}})
 
@@ -251,20 +260,20 @@ def build(spec):
     if spec.get("thumb_at"):   # ["segment", line, 0..1]: the thumbnail shows a teaching moment (animal + example), not the hello
         sg = next(g for g in spec["segments"] if g["name"] == spec["thumb_at"][0]); a0, b0, _ = sg["_lt"][spec["thumb_at"][1]]
         thumb = int((a0 + (b0 - a0) * spec["thumb_at"][2]) * FPS)
-    job = {"id": sid, "title": spec.get("card", spec["title"]), "channel": "zoo", "set": "zooworld", "set_opts": {}, "seed": spec.get("seed", 5),
+    job = {"id": sid, "title": spec.get("card", spec["title"]), "channel": CH, "set": "gizmoworld" if GZ else "zooworld", "set_opts": {}, "seed": spec.get("seed", 5),
            "new_song": True, "kind": "lesson", "cast": cast, "locations": locs, "intro_shot": "reveal", "intro": {"energy": 0.6, "wave": 1},
            "thumb_frame": thumb, "direct": direct, "song": sid, "res": spec.get("res", "3840x2160"),
            "samples": spec.get("samples", 16), "step": 1, "hold_shots": True, "cut_mode": "beat", "follow_singer": False, "punch": False,
            "timing_file": f"{sid}_timing.json", "audio": f"{sid}_song.wav"}
     json.dump(job, open(os.path.join(HERE, "jobs", f"{sid}.json"), "w"), indent=1)
-    song = {"kind": "lesson", "format": "3d_lesson", "lesson_version": 3 if V3 else 2, "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
+    song = {"kind": "lesson", "format": "gizmo_explainer" if GZ else "3d_lesson", "lesson_version": 3 if V3 else 2, "desc_header": "IN THIS LESSON", "lyrics": "\n".join(spec.get("facts", [])),
             "script": "\n".join(l["text"] for l in lines), "duration": dur, "bpm": BPM,
             "sync": {"method": "forced alignment of every line (PocketSphinx)", "aligned": SYNC["aligned"], "words": SYNC["words"],
                      "pause_onsets_checked": len(SYNC["onset_err"]), "onset_err_mean_ms": round(1000 * float(np.mean(SYNC["onset_err"] or [0])), 1),
                      "onset_err_max_ms": round(1000 * float(max(SYNC["onset_err"] or [0])), 1), "unaligned_lines": SYNC["unaligned_lines"],
                      "suspect_words": SYNC.get("suspect", [])},
             "meta": {"title": spec["title"], "card": spec.get("card", spec["title"]), "thumb_text": spec.get("thumb_text", ""),
-                     "description": spec["description"].rstrip() + "\n\n" + LS.BOILER, "tags": spec.get("tags", [])}, "shorts": shorts, "job": job}
+                     "description": spec["description"].rstrip() + "\n\n" + (GZ_BOILER if GZ else LS.BOILER), "tags": spec.get("tags", [])}, "shorts": shorts, "job": job}
     json.dump(song, open(os.path.join(HERE, "songs", f"{sid}.json"), "w"), indent=1)
     print(f"OK {sid}: {dur:.0f} s ({int(dur // 60)}:{int(dur % 60):02d}), {wc} words, {len(lines)} lines, {len(locs)} visits, "
           f"{sum(len(x['props']) for x in direct)} teaching props, {len(shorts)} shorts")

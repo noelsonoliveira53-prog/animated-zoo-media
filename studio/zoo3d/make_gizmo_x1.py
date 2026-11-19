@@ -91,13 +91,13 @@ ROCKET = {
      "Up! Great thinking!"],
    {"a": "HOT GAS", "b": "WIND", "right": "a", "ask": [1], "answer": [2], "hold": 2.4},
    {"a": "UP", "b": "DOWN", "right": "a", "ask": [15], "answer": [16], "hold": 2.0},
-   [{"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [3, "rocket"], "off": [5], "opts": {"gas": True, "s": 0.72}},
+   [{"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [3, "rocket"], "off": [5], "opts": {"gas": True, "s": 0.85}},
     {"prop": "arrow", "at": [1.45, -1.0, 2.55], "on": [4, "pushes", 1], "off": [5], "opts": UPA},
     {"prop": "arrow", "at": [1.45, -1.0, 0.35], "on": [4, "gas"], "off": [5], "opts": DNA},
     {"prop": "dots", "at": "dots", "on": [5, "end"], "off": [6]},
-    {"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [6, "gas"], "off": [7], "opts": {"gas": True, "s": 0.72}},
+    {"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [6, "gas"], "off": [7], "opts": {"gas": True, "s": 0.85}},
     {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [8, "rule"], "off": [10], "opts": {"text": "PUSH BACK!", "color": "#3561d9"}},
-    {"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [10, "rocket"], "off": [12], "opts": {"gas": True, "s": 0.72}},
+    {"prop": "rocket", "at": [2.55, -0.5, 0.0], "on": [10, "rocket"], "off": [12], "opts": {"gas": True, "s": 0.85}},
     {"prop": "arrow", "at": [1.45, -1.0, 0.35], "on": [10, "gas"], "off": [12], "opts": DNA},
     {"prop": "arrow", "at": [1.45, -1.0, 2.55], "on": [10, "forward"], "off": [12], "opts": UPA}],
    {"id": "gzs_rocket_push", "title": "What Pushes a Rocket Up? Science for Kids", "l1": "WHAT PUSHES", "l2": "A ROCKET UP?", "thumb_text": "WHOOSH!", "thumb_line": [4, 0.6],
@@ -126,7 +126,7 @@ ROCKET = {
     {"prop": "tanks", "at": [2.45, -0.6, 0.0], "on": [4, "carries"], "off": [5], "opts": {"s": 0.9}},
     {"prop": "dots", "at": "dots", "on": [5, "end"], "off": [6]},
     {"prop": "tanks", "at": [2.45, -0.6, 0.0], "on": [6, "fuel"], "off": [7], "opts": {"s": 0.9}},
-    {"prop": "jet", "at": [2.4, -0.6, 0.0], "on": [8, "airplane's"], "off": [10], "opts": {"s": 0.85}},
+    {"prop": "jet", "at": [2.4, -0.6, 0.7], "on": [8, "airplane's"], "off": [10], "opts": {"s": 1.1}},
     {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [10, "space"], "off": [12], "opts": {"text": "NO AIR", "color": "#1d3a8a"}},
     {"prop": "tanks", "at": [2.45, -0.6, 0.0], "on": [11, "brings"], "off": [12], "opts": {"s": 0.75}}],
    {"id": "gzs_rocket_space", "title": "Can a Rocket Work in Space? Science for Kids", "l1": "CAN IT WORK", "l2": "IN SPACE?", "thumb_text": "NO AIR!", "thumb_line": [4, 0.6],
@@ -226,13 +226,13 @@ RAIN = {
      "No! It is invisible. Great job!"],
    {"a": "THE SEA", "b": "THE MOON", "right": "a", "ask": [1], "answer": [2], "hold": 2.4},
    {"a": "YES", "b": "NO", "right": "b", "ask": [15], "answer": [16], "hold": 2.0},
-   [{"prop": "puddle", "at": [2.45, -0.9, 0.0], "on": [3, "water"], "off": [5], "opts": {"s": 0.85, "shrink": 9.0}},
+   [{"prop": "puddle", "at": [2.45, -0.9, 0.0], "on": [3, "water"], "off": [5], "opts": {"s": 1.2, "shrink": 12.0}},
     {"prop": "sun", "at": [2.6, -1.1, 3.0], "on": [3, "sun"], "off": [5], "opts": {"s": 0.8}},
     {"prop": "vapor", "at": [2.45, -0.9, 0.2], "on": [3, "vapor"], "off": [5], "opts": {"s": 0.9}},
     {"prop": "dots", "at": "dots", "on": [5, "end"], "off": [6]},
-    {"prop": "vapor", "at": [2.45, -0.9, 0.2], "on": [6, "dots"], "off": [7], "opts": {"s": 0.9}},
-    {"prop": "puddle", "at": [2.45, -0.9, 0.0], "on": [6, "dots"], "off": [7], "opts": {"s": 0.6, "shrink": 60.0}},
-    {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [8, "floats"], "off": [10], "opts": {"text": "WATER VAPOR", "color": "#3db8ff"}},
+    {"prop": "vapor", "at": [2.45, -0.9, 0.2], "on": [6, "invisible"], "off": [7], "opts": {"s": 0.9}},
+    {"prop": "puddle", "at": [2.45, -0.9, 0.0], "on": [6, "invisible"], "off": [7], "opts": {"s": 0.85, "shrink": 60.0}},
+    {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [8, "floats"], "off": [10], "opts": {"text": "WATER VAPOR", "color": "#1d3a8a"}},
     {"prop": "vapor", "at": [2.45, -0.9, 0.0], "on": [10, "everywhere"], "off": [12], "opts": {"s": 1.0}},
     {"prop": "pool", "at": [2.45, -0.9, 0.0], "on": [11, "sea"], "off": [12], "opts": {"s": 0.75}}],
    {"id": "gzs_rain_vapor", "title": "Can You See Water Vapor? Science for Kids", "l1": "CAN YOU SEE", "l2": "WATER VAPOR?", "thumb_text": "INVISIBLE!", "thumb_line": [4, 0.6],
@@ -257,12 +257,12 @@ RAIN = {
      "Tiny drops of water! You got it!"],
    {"a": "COLDER", "b": "WARMER", "right": "a", "ask": [1], "answer": [2], "hold": 2.4},
    {"a": "WATER", "b": "SAND", "right": "a", "ask": [15], "answer": [16], "hold": 2.0},
-   [{"prop": "thermo", "at": [2.55, -0.6, 0.3], "on": [3, "cold"], "off": [5], "opts": {"hot": False}},
+   [{"prop": "thermo", "at": [2.55, -0.6, 0.3], "on": [3, "high"], "off": [5], "opts": {"hot": False}},
     {"prop": "dots", "at": "dots", "on": [5, "end"], "off": [6]},
     {"prop": "dust", "at": [2.45, -0.9, 2.1], "on": [6, "speck"], "off": [8], "opts": {"s": 1.1, "grow": 1.0}},
-    {"prop": "cloud", "at": [2.45, -0.9, 2.4], "on": [8, "cloud"], "off": [10], "opts": {"s": 1.0}},
-    {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [9, "condensation"], "off": [10], "opts": {"text": "CONDENSATION", "color": "#3561d9"}},
-    {"prop": "cloud", "at": [2.45, -0.9, 2.4], "on": [10, "cloud"], "off": [12], "opts": {"s": 1.0}}],
+    {"prop": "cloud", "at": [2.45, -0.9, 1.7], "on": [8, "tiny"], "off": [10], "opts": {"s": 1.0}},
+    {"prop": "sign", "at": [1.95, -1.3, 3.3], "on": [9, "change"], "off": [10], "opts": {"text": "CONDENSATION", "color": "#3561d9"}},
+    {"prop": "cloud", "at": [2.45, -0.9, 1.7], "on": [10, "cloud"], "off": [12], "opts": {"s": 1.0}}],
    {"id": "gzs_rain_clouds", "title": "How Does a Cloud Form? Science for Kids", "l1": "HOW DOES A", "l2": "CLOUD FORM?", "thumb_text": "TINY DROPS!", "thumb_line": [6, 0.7],
     "fact": "Cold air high up turns water vapor back into tiny drops of water, which gather on specks of dust or pollen; condensation makes clouds (USGS, The Water Cycle for Kids; NOAA SciJinks, What Causes Rain?)."}),
   teach("rain", "river", "morning", "RAIN!", [
@@ -287,8 +287,8 @@ RAIN = {
    {"a": "TEARDROP", "b": "BUN", "right": "b", "ask": [15], "answer": [16], "hold": 2.0},
    [{"prop": "cloud", "at": [2.45, -0.9, 2.7], "on": [3, "water"], "off": [5], "opts": {"s": 1.0, "grey": True, "rain": True}},
     {"prop": "dots", "at": "dots", "on": [5, "end"], "off": [6]},
-    {"prop": "drops", "at": [2.45, -0.9, 2.0], "on": [6, "small"], "off": [7], "opts": {"kinds": ["round", "bun"], "s": 1.0}, "times": [[6, "small"], [6, "bigger"]]},
-    {"prop": "drops", "at": [2.45, -0.9, 2.0], "on": [7, "teardrop"], "off": [8], "opts": {"kinds": ["tear"], "s": 1.1}},
+    {"prop": "drops", "at": [2.0, -0.9, 2.0], "on": [6, "small"], "off": [7], "opts": {"kinds": ["round", "bun"], "s": 1.4}, "times": [[6, "small"], [6, "bigger"]]},
+    {"prop": "drops", "at": [2.45, -0.9, 2.0], "on": [7, "teardrop"], "off": [8], "opts": {"kinds": ["tear"], "s": 1.5}},
     {"prop": "river", "at": [2.3, -0.7, 0.0], "on": [8, "ground"], "off": [10], "opts": {"s": 0.85}},
     {"prop": "cycle", "at": [2.45, -0.9, 2.1], "on": [10, "around"], "off": [12], "opts": {"s": 1.05}}],
    {"id": "gzs_rain_drops", "title": "What Shape Is a Raindrop? Science for Kids", "l1": "WHAT SHAPE", "l2": "IS A RAINDROP?", "thumb_text": "LIKE A BUN!", "thumb_line": [6, 0.8],
@@ -324,8 +324,19 @@ def visit(spec, segname, line, biome, tod):
     seg["visits"] = [dict(P), {"line": line, "show": ["pal"], "biome": biome, "tod": tod}]
 
 
+def shots(spec, segname, sh):
+    """Give group-scene lines their own cameras: the default close:host / low shots cut the 3D word (BYE-BYE!) at the frame top (stills Nov 19)."""
+    seg = next(g for g in spec["segments"] if g["name"] == segname)
+    seg["lines"] = [([l if isinstance(l, str) else l[0], c] if c else l) for l, c in zip(seg["lines"], sh)]
+
+
+for _sp in (ROCKET, RAIN):
+    shots(_sp, "hello", ["wide", "orbit", "dolly", None, None]); shots(_sp, "goodbye", ["wide", "orbit", "dolly", "wide"])
+
 visit(ROCKET, "push", 9, "lab", "noon")
 visit(ROCKET, "space", 10, "beach", "noon")
+# stills Nov 19: "up in space, there is no air" was said on the beach; the part goes back to the lab (its window onto space) for it
+next(g for g in ROCKET["segments"] if g["name"] == "space")["visits"].append({"line": 12, "show": ["pal"], "biome": "lab", "tod": "noon"})
 visit(ROCKET, "stages", 12, "night_meadow", "night")
 visit(RAIN, "vapor", 11, "beach", "noon")
 visit(RAIN, "clouds", 9, "spring_meadow", "noon")

@@ -397,8 +397,8 @@ def build(L, name, at, **o):
                 L.sphere("drop", 0.07 * s, (0, 0, 0), (1, 1, 1.0), dm, d, 14)
                 P["rain"].append(d)
     elif name == "vapor":         # invisible water vapor drawn as faint dots rising from the water
-        vm = _m(L, "#dff4ff", 0.3, 0.3, 0.6, 0.55)
-        P["vap"] = [L.sphere("vap", 0.08 * s, (0, 0, 0), m=vm, parent=root, segs=12) for _ in range(14)]
+        vm = _m(L, "#5fd0ff", 0.3, 0.3, 0.9, 0.85)      # stills Nov 19: pale dots vanished against the sky
+        P["vap"] = [L.sphere("vap", 0.11 * s, (0, 0, 0), m=vm, parent=root, segs=12) for _ in range(14)]
     elif name == "puddle":        # a puddle that gets smaller while the sun warms it (opts: shrink = seconds to shrink to 30%)
         P["pud"] = L.cylinder("water", 1.0 * s, 0.05, (0, 0, 0.03), (1.3, 0.8, 1), m=_m(L, "#39a7ee", 0.05, 1.0, 0.15), parent=root, verts=48)
         L.cylinder("ground", 1.6 * s, 0.03, (0, 0, 0.0), (1.3, 0.8, 1), m=_m(L, "#b9915e", 0.9, 0.0), parent=root, verts=48)
@@ -760,8 +760,11 @@ def animate(root, tr, dur, st):
         drop = o.get("drop", o.get("leave")); s_ = o.get("s", 1.0)
         if drop is not None and "parts" in P and len(P["parts"]) > 1:
             u = max(0.0, tr - drop); e0 = P["parts"][0][0]
-            e0.location.z = -2.2 * u * u; e0.location.x = -0.35 * u * u
+            e0.location.z = -0.6 * u * u; e0.location.x = -0.5 * u * u
             sc = max(0.0, 1 - u / 1.4); e0.scale = (sc, sc, sc)
+            rise = 0.9 * min(u, 1.2) * s_     # the rest of the rocket flies on, up (stills Nov 19: it hung in the air above the pad)
+            for e_, _z in P["parts"][1:]: e_.location.z = rise
+            P["top"].location.z = rise
         for k, g in enumerate(P.get("gas", [])):
             ph = (tr * 0.9 + k / len(P["gas"])) % 1.0
             g.location = (0.3 * math.sin(k * 2.1) * ph * s_, -0.1 * ph, P["gas_z"] - 1.0 * ph * s_)

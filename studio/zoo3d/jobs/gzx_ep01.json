@@ -83,6 +83,18 @@
    ]
   },
   {
+   "from": "space",
+   "biome": "lab",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ],
+   "line": 12
+  },
+  {
    "from": "stages",
    "biome": "mountain",
    "tod": "golden",
@@ -138,8 +150,8 @@
    "section": "hello",
    "shots": [
     "wide",
-    "close:host",
     "orbit",
+    "dolly",
     "wide",
     "wide"
    ],
@@ -330,7 +342,7 @@
      "spin": 0,
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -392,7 +404,7 @@
      "spin": 0,
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -424,7 +436,7 @@
      "spin": 0,
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -659,13 +671,13 @@
      "at": [
       2.4,
       -0.6,
-      0.0
+      0.7
      ],
      "delay": 39.178,
      "dur": 7.881,
      "spin": 0,
      "opts": {
-      "s": 0.85
+      "s": 1.1
      }
     },
     {
@@ -1087,9 +1099,9 @@
    "section": "goodbye",
    "shots": [
     "wide",
-    "close:host",
     "orbit",
-    "low"
+    "dolly",
+    "wide"
    ],
    "energy": 0.6,
    "wave": 1,

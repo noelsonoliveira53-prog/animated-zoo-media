@@ -48,9 +48,18 @@
    "tod": "morning",
    "word": "RAIN!",
    "lines": [
-    "Hello, friends! I am Gizmo the robot.",
-    "Today we are finding out where rain comes from!",
-    "My little helper bot is here too. Hello, little bot!",
+    [
+     "Hello, friends! I am Gizmo the robot.",
+     "wide"
+    ],
+    [
+     "Today we are finding out where rain comes from!",
+     "orbit"
+    ],
+    [
+     "My little helper bot is here too. Hello, little bot!",
+     "dolly"
+    ],
     "We have three big questions. Count them with me. One, two, three!",
     "Ready? Let's find out!"
    ],
@@ -189,8 +198,8 @@
       5
      ],
      "opts": {
-      "s": 0.85,
-      "shrink": 9.0
+      "s": 1.2,
+      "shrink": 12.0
      }
     },
     {
@@ -249,7 +258,7 @@
      ],
      "on": [
       6,
-      "dots"
+      "invisible"
      ],
      "off": [
       7
@@ -267,13 +276,13 @@
      ],
      "on": [
       6,
-      "dots"
+      "invisible"
      ],
      "off": [
       7
      ],
      "opts": {
-      "s": 0.6,
+      "s": 0.85,
       "shrink": 60.0
      }
     },
@@ -293,7 +302,7 @@
      ],
      "opts": {
       "text": "WATER VAPOR",
-      "color": "#3db8ff"
+      "color": "#1d3a8a"
      }
     },
     {
@@ -441,7 +450,7 @@
      ],
      "on": [
       3,
-      "cold"
+      "high"
      ],
      "off": [
       5
@@ -485,11 +494,11 @@
      "at": [
       2.45,
       -0.9,
-      2.4
+      1.7
      ],
      "on": [
       9,
-      "cloud"
+      "tiny"
      ],
      "off": [
       11
@@ -507,7 +516,7 @@
      ],
      "on": [
       10,
-      "condensation"
+      "change"
      ],
      "off": [
       11
@@ -522,7 +531,7 @@
      "at": [
       2.45,
       -0.9,
-      2.4
+      1.7
      ],
      "on": [
       11,
@@ -670,7 +679,7 @@
     {
      "prop": "drops",
      "at": [
-      2.45,
+      2.0,
       -0.9,
       2.0
      ],
@@ -686,7 +695,7 @@
        "round",
        "bun"
       ],
-      "s": 1.0
+      "s": 1.4
      },
      "times": [
       [
@@ -717,7 +726,7 @@
       "kinds": [
        "tear"
       ],
-      "s": 1.1
+      "s": 1.5
      }
     },
     {
@@ -851,10 +860,22 @@
    "tod": "sunset",
    "word": "BYE-BYE!",
    "lines": [
-    "You found out so much today.",
-    "The sun lifts water up as vapor. Cold air makes clouds. And heavy drops fall down as rain!",
-    "What would you like to find out next?",
-    "Thank you for exploring with me. Bye-bye, friends! See you next time!"
+    [
+     "You found out so much today.",
+     "wide"
+    ],
+    [
+     "The sun lifts water up as vapor. Cold air makes clouds. And heavy drops fall down as rain!",
+     "orbit"
+    ],
+    [
+     "What would you like to find out next?",
+     "dolly"
+    ],
+    [
+     "Thank you for exploring with me. Bye-bye, friends! See you next time!",
+     "wide"
+    ]
    ]
   }
  ]

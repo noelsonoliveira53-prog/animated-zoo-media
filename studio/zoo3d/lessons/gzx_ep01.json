@@ -49,9 +49,18 @@
    "tod": "morning",
    "word": "ROCKETS!",
    "lines": [
-    "Hello, friends! I am Gizmo the robot.",
-    "Today we are finding out how rockets fly!",
-    "My little helper bot is here too. Hello, little bot!",
+    [
+     "Hello, friends! I am Gizmo the robot.",
+     "wide"
+    ],
+    [
+     "Today we are finding out how rockets fly!",
+     "orbit"
+    ],
+    [
+     "My little helper bot is here too. Hello, little bot!",
+     "dolly"
+    ],
     "We have three big questions. Count them with me. One, two, three!",
     "Ready? Let's find out!"
    ],
@@ -192,7 +201,7 @@
      ],
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -262,7 +271,7 @@
      ],
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -300,7 +309,7 @@
      ],
      "opts": {
       "gas": true,
-      "s": 0.72
+      "s": 0.85
      }
     },
     {
@@ -374,6 +383,14 @@
       "pal"
      ],
      "biome": "beach",
+     "tod": "noon"
+    },
+    {
+     "line": 12,
+     "show": [
+      "pal"
+     ],
+     "biome": "lab",
      "tod": "noon"
     }
    ],
@@ -514,7 +531,7 @@
      "at": [
       2.4,
       -0.6,
-      0.0
+      0.7
      ],
      "on": [
       10,
@@ -524,7 +541,7 @@
       12
      ],
      "opts": {
-      "s": 0.85
+      "s": 1.1
      }
     },
     {
@@ -851,10 +868,22 @@
    "tod": "sunset",
    "word": "BYE-BYE!",
    "lines": [
-    "You found out so much today.",
-    "The gas goes down, and the rocket goes up. It carries its own oxygen. And it drops stages to get lighter!",
-    "What would you like to find out next?",
-    "Thank you for exploring with me. Bye-bye, friends! See you next time!"
+    [
+     "You found out so much today.",
+     "wide"
+    ],
+    [
+     "The gas goes down, and the rocket goes up. It carries its own oxygen. And it drops stages to get lighter!",
+     "orbit"
+    ],
+    [
+     "What would you like to find out next?",
+     "dolly"
+    ],
+    [
+     "Thank you for exploring with me. Bye-bye, friends! See you next time!",
+     "wide"
+    ]
    ]
   }
  ]

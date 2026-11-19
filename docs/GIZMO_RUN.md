@@ -54,3 +54,18 @@ The 3D lesson tools (`studio/zoo3d/teach.py`, `lesson_shorts.py`, `teachprops.py
 the host is Milo and the cast are animals. The first Gizmo build adds a channel switch (`"channel": "gizmo"` in the spec: host char gizmo,
 Gizmo's lab and outdoor sets, science example props, Gizmo watermark, `gizmo/` output folder) without changing anything a Zoo spec
 produces (prove it: a Zoo spec's job JSON is byte-identical before and after). The PC renders the 3D jobs (worker, Blender) as for the Zoo.
+
+### Engine, built Nov 19 (first explainers gzx_ep01, gzx_ep02)
+
+- Spec `"channel": "gizmo"` (see `studio/zoo3d/make_gizmo_x1.py`): host `gizmo`, cast `["pal"]` (pink mini helper bot; `pal2` green), set
+  `gizmoworld` (`"biome": "lab"` = his science lab, any other biome = a Zoo World place), job `"channel": "gizmo"`, song format `gizmo_explainer`,
+  Gizmo boilerplate. finish.py -> `gizmo/<id>.mp4`, `brand/gizmo/thumb_<id>.png`, plan `studio/upload_plan_gizmo_v3.json`, Gizmo's mark;
+  lesson_shorts.py -> `gizmo/shorts/`, `brand/gizmo/shorts/`, same plan, format `gizmo_short_90`; review.py reads that plan and checks Gizmo's mark
+  and boilerplate; `watermark.py <cmd> ... --channel gizmo` (`build gizmo` made `brand/gizmo/watermark*.png` from the channel picture
+  `brand/gizmo/avatar.jpg`, read from the channel page Nov 19). A Zoo spec builds a byte-identical job (proved on zool_ep22, run note).
+- Science props in teachprops.py: rocket (gas, stages, drop), tanks, jet, cloud (grey, rain), vapor, puddle (shrink), dust, drops, cycle, river.
+- The quiz is a teach part with three answer-sign rounds (`checks`), not the Zoo's arc quiz.
+- Stills: `python3 studio/zoo3d/stills_by_place.py <id> <tag> seg:line:frac ...` (one place at a time: the local software render stalls on the
+  lab when all places are in one scene).
+- Audio for the PC: `jobs/audio_gizmo/<id>_song.flac` (the .wav files are not in git); copy it to the PC as `<id>_song.wav` (decoded) with the job
+  and timing, read back and compare, as for the Zoo.

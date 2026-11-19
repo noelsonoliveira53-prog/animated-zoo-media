@@ -657,3 +657,9 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Studio in fewer clicks (worked five times tonight): the Create button, its "Upload videos" item, "Select files" (#select-files-button) and the thumbnail's "Upload file" BUTTON can all be clicked by script with the file interception in place; the date and time still need typed keys, and Schedule (#done-button) still needs a real click (a scripted click does nothing). The pane flips between 800x600 and 800x892: set the viewport again and take a screenshot before every real click.
   * Waiting for the 24-hour window, for the Nov 19 6:31 AM run: zc_ep04_short3 (Nov 24 11:30 AM) and zool_ep22 (Nov 24 1:30 PM), both checked and to_upload.
   * Uploads today: 14 (5 morning, 5 afternoon, 4 evening). Nothing was set Private or replaced; no old copies to report.
+
+- Cartoon builds folded in on Nov 19 (daily run): za_ep04 "Mango and the Wobbly Vine Bridge" (321.6 s), za_ep05 "Who Took Mango's Breakfast?" (358.4 s, new Dot the baby tapir),
+  za_ep06 "The Rainy Day Umbrella" (313.0 s, new Puff the little white bat, silent), zc_ep07 "Who Looks After a Baby Elephant?" (320.7 s + Shorts 91.1/90.9/89.6 s),
+  zc_ep08 "Who Lives at the Top of the Jungle?" (318.8 s + Shorts 90.1/87.7/87.2 s; new anteater, tree frog, macaw, harpy eagle). Run notes in docs/cartoon/runs/; their defects are in
+  docs/IMPROVE.md (2026-11-19). Engine changes in those builds: toon.py `count` clamps the last number to its shot; sheet.py accepts a single still. Not built in any of them: a Short
+  from an adventure, a closing "next adventure" picture. New characters (Dot, Puff, the four rainforest animals) are a first look for the owner; nobody has listened to any voice or tune.

@@ -9,7 +9,7 @@ Channel: Gizmo Explains, @GizmoExplainsHQ, channel id UCJaMYOrKCEA54kaOMyYNiKQ, 
 silver robot with a screen face and an antenna that lights up when he has an idea (3D: `studio/zoo3d/chars/gizmo.py`; flat cartoon:
 `studio/cartoon/gizmo/gizmo_flat.svg.part`). Brand: background #1d3a8a to #3561d9, text white, accent #5ff3ff.
 
-Done Nov 19, 12:50 AM: new channel description and banner (`brand/gizmo/banner.png`, safe area checked in Studio's crop view), both read
+Done Nov 19 (about 10 AM ET): new channel description and banner (`brand/gizmo/banner.png`, safe area checked in Studio's crop view), both read
 back after a reload of the customization page.
 
 ## What the channel posts

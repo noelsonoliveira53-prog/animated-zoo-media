@@ -47,7 +47,7 @@ EP = {"id": "zc_ep04", "nest": True, "beat": True, "voice": "af_heart", "speed":
                       "monkey's whole body so both hands are free to pick fruit, why it is called a spider monkey, that the tip of the tail has little lines like a fingertip, "
                       "different for every monkey, and that a baby spider monkey wraps its tiny tail around its mother's tail.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys); "
                       "Wisconsin National Primate Research Center, Primate Info Net (black spider monkey); San Diego Zoo (monkeys)."),
       "tags": ["monkey", "monkeys for kids", "spider monkey", "monkey tail", "why do monkeys have tails", "rainforest animals for kids", "animal facts for kids",

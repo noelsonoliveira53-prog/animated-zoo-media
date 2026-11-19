@@ -246,7 +246,7 @@ def pet(k, x, y, h):
 THUMB_KEYS = {"mb_ep11_train": ["mb2_engine", "mb2_sleepcar", "mb2_caboose", "mb2_station"]}  # the bridge scene is a wide panorama, skip it on the thumb
 pos4 = [(-60, 300, 420), (190, 330, 400), (440, 330, 400), (680, 300, 420)]
 pos = [(-40, 300, 400), (160, 350, 360), (360, 310, 390), (560, 350, 360), (760, 320, 380)]
-Bp = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+Bp = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 plan = []
 for s in shorts:
     b = [x["say"] for x in s["beats"]]

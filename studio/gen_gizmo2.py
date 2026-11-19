@@ -166,7 +166,7 @@ EPS = [
 ]
 
 BOILER = ("Gizmo the little robot loves to ask \"How does that work?\" Simple, true science for curious kids ages 4-8. New videos every day! "
-          "Characters and visuals are animated with the help of AI tools and every script is reviewed for kid safety.")
+          "Every fact is checked against trusted sources and every script is reviewed for kid safety.")
 TAGS = "#ScienceForKids #HowThingsWork #KidsLearning #STEMforKids"
 
 plan = []

@@ -246,7 +246,7 @@ number ("Limits may vary by country/region or channel history"), and the channel
      picking, pick the frame closest to the thumb and record it.
    - Record the result in the plan entry: "thumb_set": true | "frame_only" | false, and report every false to Noelson.
    Then the rest of the PLAYBOOK.md Studio recipe: MP4 from raw GitHub, Made for kids = yes, title 60 characters or less,
-   first 2 description lines searchable, AI-disclosure boilerplate, SCHEDULE (never publish now). Passed slot: next free day.
+   first 2 description lines searchable, fact-checked boilerplate (no AI line), SCHEDULE (never publish now). Passed slot: next free day.
 4. Mark each upload "scheduled" with its video id, commit, push, and set it in the Command Center "videos" collection.
 
 ## D. Leave YouTube Studio on The Animated Zoo.

@@ -36,7 +36,7 @@ EP = {"id": "za_ep03", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "A gentle animal adventure for ages 2-6 about sharing and helping friends, with questions to answer and a song to sing along.\n"
                       "Kids see how an elephant smells water from far away, how it sucks water up its trunk and blows it into its mouth, and how it squirts water to keep cool.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant)."),
       "tags": ["baby elephant", "elephant story for kids", "animal stories for kids", "sharing story for kids", "kids adventure cartoon", "how elephants drink water", "elephant trunk",
                "little birds", "rain story for kids", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

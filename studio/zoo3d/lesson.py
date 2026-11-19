@@ -23,7 +23,7 @@ SR, FPS, BPM = sing.SR, 24, 96
 GAP, SEG_GAP, LEAD = 0.8, 1.4, 0.5
 THINK, DO = 2.0, 2.6     # quiet time after a question / after "Can you ...?" so little viewers can answer and copy
 BOILER = ("The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-          "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.")
+          "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
 SPOTS = [("s1", 0.22), ("s2", -0.22), ("s3", 0.38), ("s4", -0.38), ("s5", -0.1), ("s6", 0.1)]
 COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5"]
 

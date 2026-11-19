@@ -40,7 +40,7 @@ EP = {"id": "za_ep04", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "with questions to answer, steps to count and a tune to clap along to.\n"
                       "Kids see how a spider monkey's tail can hold up her whole body, how it can grab like an extra hand, and how her long arms and hook-like hands swing through the trees.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); National Geographic (spider monkeys)."),
       "tags": ["spider monkey", "monkey story for kids", "baby elephant", "animal stories for kids", "friendship story for kids", "kids adventure cartoon", "monkey tail",
                "picnic story for kids", "counting steps", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

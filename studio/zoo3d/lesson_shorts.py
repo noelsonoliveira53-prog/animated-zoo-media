@@ -15,7 +15,7 @@ import watermark
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.abspath(os.path.join(HERE, "..", ".."))
 FONT = os.path.join(HERE, "fonts", "Baloo2-ExtraBold.ttf")
 BOILER = ("The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-          "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.")
+          "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
 
 
 def arg(k, d=None): return sys.argv[sys.argv.index(k) + 1] if k in sys.argv else d

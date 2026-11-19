@@ -70,7 +70,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Welcome to Tiny Truck Town! Join Bolt the little tow truck as he meets fire engines, diggers, garbage trucks, trains and the friendly people who drive them. Short, gentle videos that teach toddlers and preschoolers what each vehicle does, with lots of counting, colors and "vroom!" along the way.
   >
-  > New Shorts and 5-minute videos every day. Made for ages 2-6. Characters are animated with the help of AI tools and every script is reviewed for kid safety.
+  > New Shorts and 5-minute videos every day. Made for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety.
 
 ### Bloop's Color Lab (@BloopsColorLab)
 
@@ -88,7 +88,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Hi, I'm Bloop! I'm a wobbly jelly blob who changes color. In my lab we learn colors, shapes, counting to 20, the ABCs, sorting and patterns, one small idea at a time, with bright pictures and lots of the repetition little learners love.
   >
-  > New videos every day. Made for ages 1-5. Characters are animated with the help of AI tools and every script is reviewed for kid safety.
+  > New videos every day. Made for ages 1-5. Every fact is checked against trusted sources and every script is reviewed for kid safety.
 
 ### Fruity Friends (@FruityFriendsHQ)
 
@@ -106,7 +106,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Pip the strawberry and Kiko the broccoli make healthy habits fun! Brushing teeth, washing hands, trying new foods, drinking water, bedtime routines, saying please and thank you, and sharing with friends.
   >
-  > New videos every day. Made for ages 2-6. Characters are animated with the help of AI tools and every script is reviewed for kid safety.
+  > New videos every day. Made for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety.
 
 ### Gizmo Explains (@GizmoExplainsHQ)
 
@@ -124,7 +124,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Gizmo the little robot loves to ask "How does that work?" Together we find out where rain comes from, how rainbows happen, why magnets stick, how rockets fly and how seeds grow. Simple, true science for curious kids.
   >
-  > New videos every day. Made for ages 4-8. Characters are animated with the help of AI tools and every script is reviewed for kid safety.
+  > New videos every day. Made for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety.
 
 ### Moonbeam Bedtime (@MoonbeamBedtimeHQ)
 
@@ -142,7 +142,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Snuggle up with Luna the sleepy owl for gentle bedtime stories and wind-down songs. Calm little adventures with a kind lesson, soft voices and dreamy pictures. No scary parts, just a cozy way to say goodnight.
   >
-  > New stories every day. Made for ages 2-7. Characters are animated with the help of AI tools and every script is reviewed for kid safety.
+  > New stories every day. Made for ages 2-7. Every fact is checked against trusted sources and every script is reviewed for kid safety.
 
 ### Calm Pup TV (@CalmPupDogTV)
 
@@ -159,7 +159,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Calming TV for dogs. Soft piano music over sunny meadows, gardens and parks to help your dog relax while you're out. Every video has its own original track, gently looped, with peaceful scenery that changes every few minutes.
   >
-  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Music is composed for each video with AI and gently looped; scenery is licensed stock footage.
+  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Every video has its own original track, gently looped, over licensed scenery.
 
 ### Rainy Window Dog TV (@RainyWindowDogTV)
 
@@ -176,7 +176,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Cozy rain on the window, misty forests and warm cabin scenes with soft ambient music, made to help dogs settle on stormy days and when they're home alone. Every video has its own original track and changing scenery.
   >
-  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Music is composed for each video with AI and gently looped; scenery is licensed stock footage.
+  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Every video has its own original track, gently looped, over licensed scenery.
 
 ### Beach Paws TV (@BeachPawsTV)
 
@@ -193,7 +193,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Slow waves, palm trees and warm sunsets with gentle acoustic guitar. Relaxing beach TV to keep dogs calm while they're home alone. Every video has its own original track and changing scenery.
   >
-  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Music is composed for each video with AI and gently looped; scenery is licensed stock footage.
+  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Every video has its own original track, gently looped, over licensed scenery.
 
 ### Forest Fetch TV (@ForestFetchTV)
 
@@ -210,7 +210,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Squirrels, birds, deer and sunny forest trails with harp and flute music. Gentle stimulation for bored or curious dogs, without loud or sudden sounds. Every video has its own original track and changing scenery.
   >
-  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Music is composed for each video with AI and gently looped; scenery is licensed stock footage.
+  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Every video has its own original track, gently looped, over licensed scenery.
 
 ### Sleepy Pup Lullabies (@SleepyPupLullabies)
 
@@ -227,7 +227,7 @@ After week 4: kids channels post 4 Shorts + 1 long video daily; Dog TV posts eve
 
   > Very slow lullabies, starry skies and moonlit lakes for a peaceful night. Great for bedtime and for noisy evenings like storms or fireworks. Every video has its own original track and calm, slow scenery.
   >
-  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Music is composed for each video with AI and gently looped; scenery is licensed stock footage.
+  > Tip: keep the volume low and comfortable. New 1, 3 and 5 hour videos every week. Every video has its own original track, gently looped, over licensed scenery.
 
 ## Writing rules
 
@@ -241,10 +241,10 @@ Descriptions end with the channel boilerplate:
 
 - kids: "{name} makes gentle, colorful videos for little learners. New videos every day!
 
-Made with care for ages {audience_short}. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+Made with care for ages {audience_short}. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 - dogtv: "{name}: calming TV for dogs. Leave this on while you're out to help your dog relax.
 
-Music is an original track composed for this video with AI and gently looped. Scenery is licensed stock footage. Turn the volume to a low, comfortable level."
+Music is an original track made for this video and gently looped. Scenery is licensed stock footage. Turn the volume to a low, comfortable level."
 
 Banned in titles and descriptions: cocomelon, bluey, peppa, paw patrol, disney, pixar, pokemon, minecraft, spiderman, spider-man, elsa, mickey, sesame, blippi, ms rachel, baby shark, pinkfong, you won't believe, gone wrong, scary, died, blood, kill.
 
@@ -265,7 +265,7 @@ Banned in titles and descriptions: cocomelon, bluey, peppa, paw patrol, disney, 
 - **DOG-06 Not Made for Kids**: Dog TV is for dogs and their owners, so it is declared not Made for Kids.
 - **META-01 Clean title**: Title is 70 characters or less, has at most one ALL-CAPS word (short ones like ABC are fine), and no other brands' names or misleading claims.
 - **META-02 Unique title**: No title repeats on the same channel within 90 days.
-- **META-03 Disclosure in description**: Description includes the channel boilerplate and says when music or visuals were made with AI.
+- **META-03 Boilerplate in description**: Description ends with the channel boilerplate ("Every fact is checked against trusted sources and every script is reviewed for kid safety"); no title or description mentions AI (owner, Nov 19 2026).
 - **OPS-01 Failures retried**: A failed job is retried up to 2 more times (10 min, then 45 min later), then raised as an incident.
 - **OPS-02 Upload verified**: Within 2 hours of publish time, the manager confirms the video exists, finished processing, and went public.
 - **OPS-03 Channel sign-in healthy**: Each channel's YouTube sign-in token refreshes successfully.
@@ -275,5 +275,5 @@ Banned in titles and descriptions: cocomelon, bluey, peppa, paw patrol, disney, 
 
 - Kids: `selfDeclaredMadeForKids: true`, category 24 (Entertainment), Gizmo Explains uses 27 (Education).
 - Dog TV: `selfDeclaredMadeForKids: false`, category 15 (Pets & Animals).
-- `containsSyntheticMedia: false` (animated/stock content is not photorealistic AI); still disclose AI use in the description.
+- `containsSyntheticMedia: false` (animated/stock content is not photorealistic); descriptions carry no AI line (owner, Nov 19).
 - Upload private with `publishAt` set to the slot time. Custom thumbnails need a phone-verified channel.

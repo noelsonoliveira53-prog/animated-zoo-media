@@ -17,7 +17,7 @@ STYLE = ("high-energy modern sing-along pop for families, {bpm} bpm, bright majo
          "band and group vocals, short claps-and-stomps breakdown, final chorus modulates up a whole step with the biggest "
          "energy, vocals start right away on the first beat with the chorus, no instrumental intro, short punchy ending")
 BOILER = ("The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-          "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.")
+          "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
 SPOTS = [("s1", 0.22), ("s2", -0.22), ("s3", 0.38), ("s4", -0.38), ("s5", -0.1), ("s6", 0.1)]
 T = lambda text, color, size=0.7, **k: dict({"type": "text", "text": text, "color": color, "at": "top", "size": size}, **k)
 

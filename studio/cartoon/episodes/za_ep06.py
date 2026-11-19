@@ -43,7 +43,7 @@ EP = {"id": "za_ep06", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "Kids see how much it can rain in a rainforest, how some little bats snip and fold a big leaf into a tent that keeps the rain off, "
                       "and where most rainforest animals live.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nNational Geographic Kids (rainforest habitat); Smithsonian Institution and COTERC (tent-making bats)."),
       "tags": ["rain story for kids", "rainy day cartoon", "spider monkey", "baby elephant", "tent-making bat", "animal stories for kids", "rainforest for kids",
                "friendship story for kids", "kids adventure cartoon", "counting friends", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

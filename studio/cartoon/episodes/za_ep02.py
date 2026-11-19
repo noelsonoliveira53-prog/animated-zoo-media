@@ -27,7 +27,7 @@ EP = {"id": "za_ep02", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "A gentle animal adventure for ages 2-6 about trying, staying cool and having fun, with questions to answer and a song to sing along.\n"
                       "Kids see how an elephant flaps its big ears to cool down, and how mud protects an elephant's skin from the sun.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant)."),
       "tags": ["baby elephant", "elephant story for kids", "animal stories for kids", "muddy puddle", "kids adventure cartoon", "why elephants roll in mud", "spider monkey",
                "hot day story for kids", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

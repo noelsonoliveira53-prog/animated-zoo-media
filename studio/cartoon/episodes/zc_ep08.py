@@ -42,7 +42,7 @@ EP = {"id": "zc_ep08", "nest": True, "beat": True, "voice": "af_heart", "speed":
                       "layer, where anteaters sniff out ants, that understory plants have big leaves and tree frogs like the wet air, that spider monkeys and macaws pick fruit "
                       "in the canopy, and that the emergent layer is the sunniest, where harpy eagles and butterflies fly.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSmithsonian Tropical Research Institute (rainforest layers); National Geographic Education (rain forest); "
                       "TIME for Kids (jungle layers); SeaWorld (giant anteater)."),
       "tags": ["rainforest layers", "rainforest animals for kids", "layers of the rainforest", "jungle animals", "harpy eagle", "tree frog", "anteater", "animal facts for kids",

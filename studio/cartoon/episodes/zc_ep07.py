@@ -40,7 +40,7 @@ EP = {"id": "zc_ep07", "nest": True, "beat": True, "voice": "af_heart", "speed":
                       "that a herd is a family of mothers, aunts, sisters and their babies who help look after the little ones, that a newborn calf stands up within minutes, "
                       "and that the oldest female leads the herd to water and food.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant); SeaWorld (elephant care of young); "
                       "National Geographic (elephant nannies); Maryland Zoo (African elephant)."),
       "tags": ["elephant", "elephants for kids", "baby elephant", "elephant family", "elephant herd", "savanna animals for kids", "animal facts for kids",

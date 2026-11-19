@@ -141,8 +141,8 @@ one Blender episode with a 10 s Vids hook (4:00 PM), one Zoo Short (11:00 AM), a
 even if it ends well. That rules out the "Where is my mama / Help! ... stuck" idea from earlier today (the queue items "Help! Baby Elephant
 Is Stuck in the Mud!" are cancelled). Keep the curiosity pull with PLAYFUL framings instead: hide-and-seek, peekaboo, guessing games,
 "Who is hiding?", "What's in the box?", "Whose tail is this?". Everyone is happy and safe the whole time; nobody is lost.
-Also META-03: every description ends with the AI disclosure: "The Animated Zoo makes gentle, colorful videos for little learners. New videos
-every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+Also META-03: every description ends with the channel boilerplate (no AI line, owner Nov 19): "The Animated Zoo makes gentle, colorful videos for little learners. New videos
+every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 
 **Songs v2 (sound like the Lyria song, but made by our ACE-Step engine on the PC):** what makes the Google song feel dynamic is contrast and lift,
 not a different genre. Every new song spec now uses:

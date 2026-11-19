@@ -27,7 +27,7 @@ back after a reload of the customization page.
 - Writing: warm, simple words, short sentences, one true idea per video, questions to the viewer; no danger, fear, anyone hurt, lost,
   crying or trapped, nothing unsafe a child could copy (no fire, electricity at home, chemicals, climbing), no calls to action aimed at kids.
   Description ends with the channel boilerplate: "Gizmo Explains makes gentle, colorful videos for little learners. New videos every day!
-  Made with care for ages 4-8. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+  Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 
 ## Topics
 

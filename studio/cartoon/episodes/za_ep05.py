@@ -41,7 +41,7 @@ EP = {"id": "za_ep05", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "Kids learn that fruit is a spider monkey's main food, that baby tapirs have stripes and spots like a little watermelon that help them blend in, "
                       "and that a tapir's bendy snout can smell and grab food.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Baird's tapir); Dublin Zoo (tapir)."),
       "tags": ["spider monkey", "baby tapir", "monkey story for kids", "baby elephant", "animal stories for kids", "mystery story for kids", "sharing story for kids",
                "kids adventure cartoon", "tapir facts for kids", "counting for kids", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

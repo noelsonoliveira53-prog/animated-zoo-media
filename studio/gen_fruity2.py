@@ -238,7 +238,7 @@ def pet(k, x, y, h):
 
 
 pos = [(-40, 300, 400), (160, 350, 360), (360, 310, 390), (560, 350, 360), (760, 320, 380)]
-B = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+B = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 plan = []
 for s, (d, tm) in zip(out, DATES):
     b = [x["say"] for x in s["beats"]]

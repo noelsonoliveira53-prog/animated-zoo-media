@@ -39,7 +39,7 @@ EP = {"id": "za_ep07", "kind": "story", "nest": True, "beat": True, "voice": "af
                       "Kids see how camels have two rows of long eyelashes that help keep sand out of their eyes, how a camel can close its nose, "
                       "and how a camel's wide feet spread out to walk on sand.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); National Geographic Kids (Bactrian camel)."),
       "tags": ["baby camel", "camel for kids", "desert animals for kids", "camel eyelashes", "windy day story", "animal stories for kids", "friendship story for kids",
                "kids adventure cartoon", "desert for kids", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

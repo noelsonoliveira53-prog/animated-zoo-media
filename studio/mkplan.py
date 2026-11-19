@@ -21,7 +21,7 @@ def pet(k, x, y, h):
 os.makedirs(f"brand/{cfg['prefix']}", exist_ok=True)
 pos = [(-40, 300, 400), (160, 350, 360), (360, 310, 390), (560, 350, 360), (760, 320, 380)]
 dates = ["2026-11-04", "2026-11-06", "2026-11-08", "2026-11-10", "2026-11-11"]
-B = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing."
+B = f"{cfg['name']} makes gentle, colorful videos for little learners. New videos every day! Made with care for ages {cfg['aud']}. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 plan = []
 for i, s in enumerate(json.load(open(cfg["shorts"]))):
     b = [x["say"] for x in s["beats"]]

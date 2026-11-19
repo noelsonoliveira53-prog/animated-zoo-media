@@ -37,7 +37,7 @@ EP = {"id": "zc_ep06", "nest": True, "beat": True, "voice": "af_heart", "speed":
                       "Kids learn that fruit is the main food of a spider monkey, that spider monkeys see colors well and pick the best fruit, that they also eat "
                       "flowers, leaves, seeds, bark and small insects, that the big group splits into smaller groups to find food, and that spider monkeys spread seeds around the rainforest.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nNational Geographic Kids (spider monkey); Los Angeles Zoo (Geoffroy's black-handed spider monkey); "
                       "National Geographic (spider monkeys); IFAW (spider monkeys)."),
       "tags": ["monkey", "monkeys for kids", "spider monkey", "what do monkeys eat", "rainforest animals for kids", "animal facts for kids", "learning videos for toddlers", "preschool",

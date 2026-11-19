@@ -40,7 +40,7 @@ EP = {"id": "zc_ep05", "nest": True, "beat": True, "voice": "af_heart", "speed":
                       "Kids learn that a camel's hump stores fat, not water, that the fat is food saved for later, that a hump stands tall when a camel eats a lot "
                       "and leans over when food is hard to find, and that a baby camel is born with no hump, just a little tuft of curly hair.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); Encyclopaedia Britannica (Do Camels Store Water in Their Humps?); PBS Nature (Camel Fact Sheet)."),
       "tags": ["camel", "camels for kids", "camel hump", "baby camel", "what is inside a camel's hump", "desert animals for kids", "animal facts for kids", "learning videos for toddlers",
                "preschool", "Milo the bluebird", "The Animated Zoo"]}

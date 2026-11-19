@@ -29,7 +29,7 @@ EP = {"id": "zc_ep02", "nest": True, "voice": "af_heart", "speed": 0.8, "gap": 0
                       "Kids learn that a trunk is a nose and an upper lip, that it can smell, grab, drink, spray and work like a snorkel, "
                       "that the water does not go all the way up like a straw, and that there are no bones inside.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant)."),
       "tags": ["elephant", "elephants for kids", "elephant trunk", "baby elephant", "savanna animals for kids", "animal facts for kids", "learning videos for toddlers", "preschool",
                "Milo the bluebird", "The Animated Zoo"]}

@@ -26,7 +26,7 @@ EP = {"id": "za_ep01", "kind": "story", "voice": "af_heart", "speed": 0.8, "gap"
                       "A gentle animal adventure for ages 2-6 about kindness, courage and friendship, with a song to sing along.\n"
                       "Kids see how an elephant can use its trunk like a snorkel, how a spider monkey holds on with its tail, and why a camel's wide feet do not sink in sand.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nWWF (elephants); National Geographic Kids (spider monkey); San Diego Zoo Wildlife Alliance (camel, elephant)."),
       "tags": ["baby elephant", "elephant story for kids", "animal stories for kids", "bedtime story animals", "kids adventure cartoon", "spider monkey", "baby camel",
                "friendship story for kids", "preschool", "toddlers", "Milo the bluebird", "The Animated Zoo"]}

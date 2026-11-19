@@ -28,7 +28,7 @@ EP = {"id": "zc_ep01", "voice": "af_heart", "speed": 0.8, "gap": 0.42, "music": 
                       "Kids learn that a camel's hump is full of fat, why a hump can stand tall or flop over, how much a camel can drink, "
                       "how long eyelashes and closing noses keep sand out, and why some camels have two humps.\n\n"
                       "The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
-                      "Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\n"
+                      "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\n"
                       "WHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); National Geographic (Arabian camel); National Geographic Kids (Bactrian camel)."),
       "tags": ["camel", "camels for kids", "camel hump", "baby camel", "desert animals for kids", "animal facts for kids", "learning videos for toddlers", "preschool", "Milo the bluebird", "The Animated Zoo"]}
 

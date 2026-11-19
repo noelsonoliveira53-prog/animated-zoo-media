@@ -80,7 +80,8 @@ def review(fname):
         if rep: warns.append(f"thumbnail text repeats the title's words {rep}: the thumbnail should add a hook, not say the title again")
     same = [e for e in allp if e is not entry and e.get("title", "").strip().lower() == title.strip().lower() and e.get("status") != "dropped"]
     if same: fails.append("title repeats another video on this channel (META-02)")
-    if "AI tools" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the AI-disclosure boilerplate (META-03)")
+    if "checked against trusted sources" not in desc or "reviewed for kid safety" not in desc: fails.append("description is missing the boilerplate line 'Every fact is checked against trusted sources and every script is reviewed for kid safety' (META-03)")
+    if re.search(r"\bAI\b", title + desc): fails.append("title or description mentions AI: the channels carry no AI line (owner, Nov 19 10:32 AM)")
     if fmt.startswith("cartoon"):      # owner, Nov 17 8:25 PM: no voice synthesized onto notes in a cartoon (Milo's sung line in za_ep02 "sounds robotic")
         _ep = os.path.join(HERE, "..", "cartoon", "episodes", re.sub(r"_short\d+$", "", os.path.splitext(os.path.basename(entry.get("file", "")))[0]) + ".py")
         if os.path.exists(_ep):

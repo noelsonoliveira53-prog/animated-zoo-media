@@ -60,7 +60,7 @@ coloring books, library licensing after 100 episodes, song distribution dependin
 
 ## YPP checklist
 Noelson only: 2-Step Verification; AdSense for YouTube; accepting the YPP base terms in Studio > Earn. Never done by a run.
-Daily run checks: no strikes or open claims; Advanced features on; Made for kids = yes and AI disclosed on every upload; no reused or near-identical content;
+Daily run checks: no strikes or open claims; Advanced features on; Made for kids = yes and the fact-checked boilerplate (no AI line) on every upload; no reused or near-identical content;
 Earn-tab progress logged in docs/YPP_PROGRESS.md; notify Noelson the same day both thresholds of one route are met.
 If rejected: appeal within 21 days or reapply after 30 days.
 

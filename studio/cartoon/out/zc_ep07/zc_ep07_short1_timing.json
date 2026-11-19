@@ -1,0 +1,1932 @@
+{
+ "id": "zc_ep07_short1",
+ "total": 91.05408333333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625
+ ],
+ "plan": {
+  "length": 91.1,
+  "shots": 22,
+  "visual_changes": 96,
+  "mean_gap": 0.95,
+  "longest_gap": 4.24,
+  "longest_gap_at": 78.3,
+  "over_6s": [],
+  "places": [
+   "savanna"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper_blue",
+   "paper"
+  ],
+  "questions": 9,
+  "longest_without_question": 18.4,
+  "first_words_at": 0.42,
+  "shot_mean": 4.14,
+  "fails": [],
+  "words_placed": "182/182",
+  "sync": {
+   "pauses_checked": 13,
+   "onset_err_mean_ms": 23.8,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: what drink"
+  ],
+  [
+   0.05,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   1.92,
+   "action",
+   "tumble's trunk wobbles"
+  ],
+  [
+   1.92,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the sunny savanna Mama looks after him"
+  ],
+  [
+   4.61,
+   "action",
+   "mama nods"
+  ],
+  [
+   4.61,
+   "word",
+   "MAMA!"
+  ],
+  [
+   6.56,
+   "new shot",
+   "the sunny savanna close to Mama"
+  ],
+  [
+   6.66,
+   "action",
+   "tumble walks"
+  ],
+  [
+   8.61,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   8.61,
+   "word",
+   "CLOSE!"
+  ],
+  [
+   10.0,
+   "new place",
+   "the picture board (pink) board: stick close"
+  ],
+  [
+   11.52,
+   "action",
+   "little Tumble moves close to Mama"
+  ],
+  [
+   11.52,
+   "word",
+   "CLOSE TO MAMA"
+  ],
+  [
+   13.12,
+   "new place",
+   "the sunny savanna question 1"
+  ],
+  [
+   14.61,
+   "sign",
+   "FAR"
+  ],
+  [
+   14.96,
+   "sign",
+   "CLOSE"
+  ],
+  [
+   16.98,
+   "thinking dot",
+   "1"
+  ],
+  [
+   17.65,
+   "thinking dot",
+   "2"
+  ],
+  [
+   18.32,
+   "thinking dot",
+   "3"
+  ],
+  [
+   18.81,
+   "answer",
+   "CLOSE"
+  ],
+  [
+   20.0,
+   "new shot",
+   "the sunny savanna answer 1"
+  ],
+  [
+   20.28,
+   "action",
+   "mama nods"
+  ],
+  [
+   20.28,
+   "action",
+   "tumble hops"
+  ],
+  [
+   20.28,
+   "word",
+   "CLOSE!"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the sunny savanna Mama's trunk"
+  ],
+  [
+   23.82,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   25.06,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   25.9,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   25.9,
+   "word",
+   "AGAIN!"
+  ],
+  [
+   26.5,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   27.5,
+   "new shot",
+   "the sunny savanna hug along"
+  ],
+  [
+   28.86,
+   "word",
+   "HUG!"
+  ],
+  [
+   29.58,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.62,
+   "new shot",
+   "the sunny savanna hungry"
+  ],
+  [
+   30.68,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   33.91,
+   "word",
+   "DRINK?"
+  ],
+  [
+   34.69,
+   "new place",
+   "the picture board (blue) question 2"
+  ],
+  [
+   35.04,
+   "sign",
+   "WATER"
+  ],
+  [
+   35.39,
+   "sign",
+   "MILK"
+  ],
+  [
+   37.94,
+   "thinking dot",
+   "1"
+  ],
+  [
+   38.61,
+   "thinking dot",
+   "2"
+  ],
+  [
+   39.28,
+   "thinking dot",
+   "3"
+  ],
+  [
+   39.77,
+   "answer",
+   "MILK"
+  ],
+  [
+   40.94,
+   "new shot",
+   "the picture board (blue) board: milk"
+  ],
+  [
+   41.2,
+   "picture",
+   "mk"
+  ],
+  [
+   41.2,
+   "word",
+   "MILK!"
+  ],
+  [
+   42.28,
+   "action",
+   "t looks happy"
+  ],
+  [
+   44.06,
+   "new shot",
+   "the picture board (blue) question 3"
+  ],
+  [
+   45.26,
+   "action",
+   "t's trunk wobbles"
+  ],
+  [
+   45.26,
+   "sign",
+   "TRUNK"
+  ],
+  [
+   45.61,
+   "sign",
+   "MOUTH"
+  ],
+  [
+   47.52,
+   "thinking dot",
+   "1"
+  ],
+  [
+   48.19,
+   "thinking dot",
+   "2"
+  ],
+  [
+   48.86,
+   "thinking dot",
+   "3"
+  ],
+  [
+   49.35,
+   "answer",
+   "MOUTH"
+  ],
+  [
+   50.62,
+   "new shot",
+   "the picture board (blue) board: mouth"
+  ],
+  [
+   51.16,
+   "picture",
+   "ar"
+  ],
+  [
+   51.16,
+   "word",
+   "MOUTH!"
+  ],
+  [
+   55.0,
+   "new shot",
+   "the picture board (blue) board: not yet"
+  ],
+  [
+   56.81,
+   "action",
+   "t's trunk wobbles"
+  ],
+  [
+   57.25,
+   "word",
+   "NOT YET!"
+  ],
+  [
+   58.12,
+   "new place",
+   "the sunny savanna wobbly trunk"
+  ],
+  [
+   59.85,
+   "action",
+   "tumble's trunk wobbles"
+  ],
+  [
+   60.93,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   60.93,
+   "word",
+   "WOBBLE!"
+  ],
+  [
+   62.5,
+   "new shot",
+   "the sunny savanna question 3b"
+  ],
+  [
+   63.64,
+   "sign",
+   "LONG"
+  ],
+  [
+   63.99,
+   "sign",
+   "SHORT"
+  ],
+  [
+   65.36,
+   "thinking dot",
+   "1"
+  ],
+  [
+   66.03,
+   "thinking dot",
+   "2"
+  ],
+  [
+   66.7,
+   "thinking dot",
+   "3"
+  ],
+  [
+   67.19,
+   "answer",
+   "SHORT"
+  ],
+  [
+   67.24,
+   "action",
+   "tumble's trunk wobbles"
+  ],
+  [
+   68.44,
+   "new shot",
+   "the sunny savanna answer 3b"
+  ],
+  [
+   68.49,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   68.62,
+   "word",
+   "SHORT!"
+  ],
+  [
+   69.75,
+   "action",
+   "tumble's trunk wobbles"
+  ],
+  [
+   71.25,
+   "new place",
+   "the picture board board: clumsy"
+  ],
+  [
+   72.75,
+   "action",
+   "t's trunk wobbles"
+  ],
+  [
+   72.75,
+   "word",
+   "CLUMSY!"
+  ],
+  [
+   74.69,
+   "new shot",
+   "the picture board board: learns"
+  ],
+  [
+   74.93,
+   "word",
+   "LEARNS!"
+  ],
+  [
+   76.72,
+   "action",
+   "little Tumble grows"
+  ],
+  [
+   77.81,
+   "new place",
+   "the sunny savanna wiggle along"
+  ],
+  [
+   78.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   78.26,
+   "word",
+   "WIGGLE!"
+  ],
+  [
+   82.5,
+   "new shot",
+   "the sunny savanna many times"
+  ],
+  [
+   84.67,
+   "picture",
+   "m1"
+  ],
+  [
+   84.67,
+   "word",
+   "MANY TIMES"
+  ],
+  [
+   85.03,
+   "picture",
+   "m2"
+  ],
+  [
+   85.56,
+   "picture",
+   "m3"
+  ],
+  [
+   86.25,
+   "new shot",
+   "the sunny savanna only Mama"
+  ],
+  [
+   87.22,
+   "action",
+   "mama nods"
+  ],
+  [
+   89.48,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   89.48,
+   "word",
+   "ONLY MAMA?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "What does a baby elephant drink?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 1.9677083333333334,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.2
+    ],
+    [
+     "does",
+     0.2,
+     0.35
+    ],
+    [
+     "a",
+     0.35,
+     0.4
+    ],
+    [
+     "baby",
+     0.4,
+     0.95
+    ],
+    [
+     "elephant",
+     0.95,
+     1.5
+    ],
+    [
+     "drink?",
+     1.5,
+     1.968
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: what drink",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Who looks after Tumble? Mama does, every day!",
+   "t0": 2.8125,
+   "t1": 6.5625,
+   "v0": 2.9277083333333334,
+   "dur": 3.3702083333333333,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.18
+    ],
+    [
+     "looks",
+     0.18,
+     0.4
+    ],
+    [
+     "after",
+     0.4,
+     0.72
+    ],
+    [
+     "Tumble?",
+     0.72,
+     1.3
+    ],
+    [
+     "Mama",
+     1.68,
+     2.07
+    ],
+    [
+     "does,",
+     2.07,
+     2.52
+    ],
+    [
+     "every",
+     2.52,
+     2.93
+    ],
+    [
+     "day!",
+     2.93,
+     3.37
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Mama looks after him",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble walks over and stays close to Mama.",
+   "t0": 6.5625,
+   "t1": 10.0,
+   "v0": 6.837916666666667,
+   "dur": 2.785,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.4
+    ],
+    [
+     "walks",
+     0.4,
+     0.81
+    ],
+    [
+     "over",
+     0.81,
+     1.23
+    ],
+    [
+     "and",
+     1.23,
+     1.41
+    ],
+    [
+     "stays",
+     1.41,
+     1.77
+    ],
+    [
+     "close",
+     1.77,
+     2.15
+    ],
+    [
+     "to",
+     2.15,
+     2.28
+    ],
+    [
+     "Mama.",
+     2.28,
+     2.78
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "close to Mama",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Baby elephants stick close to their mamas.",
+   "t0": 10.0,
+   "t1": 13.125,
+   "v0": 10.162916666666666,
+   "dur": 2.62375,
+   "words": [
+    [
+     "Baby",
+     0.0,
+     0.44
+    ],
+    [
+     "elephants",
+     0.44,
+     1.09
+    ],
+    [
+     "stick",
+     1.09,
+     1.36
+    ],
+    [
+     "close",
+     1.36,
+     1.72
+    ],
+    [
+     "to",
+     1.72,
+     1.82
+    ],
+    [
+     "their",
+     1.82,
+     1.95
+    ],
+    [
+     "mamas.",
+     1.95,
+     2.62
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: stick close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Where is Tumble? Far away, or close to Mama?",
+   "t0": 13.125,
+   "t1": 20.0,
+   "v0": 13.326666666666664,
+   "dur": 3.163625,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.36
+    ],
+    [
+     "Tumble?",
+     0.36,
+     0.95
+    ],
+    [
+     "Far",
+     1.28,
+     1.61
+    ],
+    [
+     "away,",
+     1.61,
+     2.04
+    ],
+    [
+     "or",
+     2.04,
+     2.18
+    ],
+    [
+     "close",
+     2.18,
+     2.54
+    ],
+    [
+     "to",
+     2.54,
+     2.66
+    ],
+    [
+     "Mama?",
+     2.66,
+     3.16
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Close to Mama! Close, close, close.",
+   "t0": 20.0,
+   "t1": 23.125,
+   "v0": 20.230291666666666,
+   "dur": 2.6545,
+   "words": [
+    [
+     "Close",
+     0.05,
+     0.45
+    ],
+    [
+     "to",
+     0.45,
+     0.56
+    ],
+    [
+     "Mama!",
+     0.56,
+     1.02
+    ],
+    [
+     "Close,",
+     1.39,
+     1.74
+    ],
+    [
+     "close,",
+     1.74,
+     2.09
+    ],
+    [
+     "close.",
+     2.09,
+     2.65
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "answer 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Mama touches Tumble with her trunk, again and again.",
+   "t0": 23.125,
+   "t1": 27.5,
+   "v0": 23.424791666666668,
+   "dur": 3.597208333333333,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.4
+    ],
+    [
+     "touches",
+     0.4,
+     0.93
+    ],
+    [
+     "Tumble",
+     0.93,
+     1.39
+    ],
+    [
+     "with",
+     1.39,
+     1.54
+    ],
+    [
+     "her",
+     1.54,
+     1.64
+    ],
+    [
+     "trunk,",
+     1.64,
+     2.18
+    ],
+    [
+     "again",
+     2.48,
+     2.93
+    ],
+    [
+     "and",
+     2.93,
+     3.08
+    ],
+    [
+     "again.",
+     3.08,
+     3.597
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Mama's trunk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can you give yourself a big hug? Squeeze!",
+   "t0": 27.5,
+   "t1": 30.625,
+   "v0": 27.562000000000005,
+   "dur": 2.7464166666666667,
+   "words": [
+    [
+     "Can",
+     0.04,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "give",
+     0.34,
+     0.53
+    ],
+    [
+     "yourself",
+     0.53,
+     0.96
+    ],
+    [
+     "a",
+     0.96,
+     1.01
+    ],
+    [
+     "big",
+     1.01,
+     1.3
+    ],
+    [
+     "hug?",
+     1.3,
+     1.71
+    ],
+    [
+     "Squeeze!",
+     2.02,
+     2.746
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hug along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble is hungry. What does a baby elephant drink?",
+   "t0": 30.625,
+   "t1": 34.6875,
+   "v0": 30.848416666666676,
+   "dur": 3.614625,
+   "words": [
+    [
+     "Tumble",
+     0.01,
+     0.45
+    ],
+    [
+     "is",
+     0.45,
+     0.66
+    ],
+    [
+     "hungry.",
+     0.66,
+     1.33
+    ],
+    [
+     "What",
+     1.69,
+     1.81
+    ],
+    [
+     "does",
+     1.81,
+     1.95
+    ],
+    [
+     "a",
+     1.95,
+     2.0
+    ],
+    [
+     "baby",
+     2.0,
+     2.55
+    ],
+    [
+     "elephant",
+     2.55,
+     3.06
+    ],
+    [
+     "drink?",
+     3.06,
+     3.61
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hungry",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Water, or milk? What do you think?",
+   "t0": 34.6875,
+   "t1": 40.9375,
+   "v0": 35.003041666666675,
+   "dur": 2.4479583333333332,
+   "words": [
+    [
+     "Water,",
+     0.04,
+     0.62
+    ],
+    [
+     "or",
+     0.62,
+     0.8
+    ],
+    [
+     "milk?",
+     0.8,
+     1.33
+    ],
+    [
+     "What",
+     1.61,
+     1.74
+    ],
+    [
+     "do",
+     1.74,
+     1.84
+    ],
+    [
+     "you",
+     1.84,
+     1.94
+    ],
+    [
+     "think?",
+     1.94,
+     2.448
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Milk! Tumble drinks his mama's milk.",
+   "t0": 40.9375,
+   "t1": 44.0625,
+   "v0": 41.19100000000001,
+   "dur": 2.5236666666666667,
+   "words": [
+    [
+     "Milk!",
+     0.01,
+     0.57
+    ],
+    [
+     "Tumble",
+     0.7,
+     1.09
+    ],
+    [
+     "drinks",
+     1.09,
+     1.4
+    ],
+    [
+     "his",
+     1.4,
+     1.56
+    ],
+    [
+     "mama's",
+     1.56,
+     2.07
+    ],
+    [
+     "milk.",
+     2.07,
+     2.52
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: milk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Does he drink it with his trunk, or with his mouth?",
+   "t0": 44.0625,
+   "t1": 50.625,
+   "v0": 44.25466666666667,
+   "dur": 2.775,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.2
+    ],
+    [
+     "he",
+     0.2,
+     0.31
+    ],
+    [
+     "drink",
+     0.31,
+     0.6
+    ],
+    [
+     "it",
+     0.6,
+     0.7
+    ],
+    [
+     "with",
+     0.7,
+     0.83
+    ],
+    [
+     "his",
+     0.83,
+     1.01
+    ],
+    [
+     "trunk,",
+     1.01,
+     1.54
+    ],
+    [
+     "or",
+     1.72,
+     1.91
+    ],
+    [
+     "with",
+     1.91,
+     2.05
+    ],
+    [
+     "his",
+     2.05,
+     2.22
+    ],
+    [
+     "mouth?",
+     2.22,
+     2.77
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "With his mouth! A baby elephant drinks milk with its mouth.",
+   "t0": 50.625,
+   "t1": 55.0,
+   "v0": 50.76966666666667,
+   "dur": 3.976916666666667,
+   "words": [
+    [
+     "With",
+     0.0,
+     0.17
+    ],
+    [
+     "his",
+     0.17,
+     0.39
+    ],
+    [
+     "mouth!",
+     0.39,
+     0.95
+    ],
+    [
+     "A",
+     1.28,
+     1.35
+    ],
+    [
+     "baby",
+     1.35,
+     1.83
+    ],
+    [
+     "elephant",
+     1.83,
+     2.39
+    ],
+    [
+     "drinks",
+     2.39,
+     2.78
+    ],
+    [
+     "milk",
+     2.78,
+     3.12
+    ],
+    [
+     "with",
+     3.12,
+     3.25
+    ],
+    [
+     "its",
+     3.25,
+     3.41
+    ],
+    [
+     "mouth.",
+     3.41,
+     3.977
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: mouth",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "So he does not need a long trunk yet.",
+   "t0": 55.0,
+   "t1": 58.125,
+   "v0": 55.28658333333334,
+   "dur": 2.363125,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.16
+    ],
+    [
+     "he",
+     0.16,
+     0.3
+    ],
+    [
+     "does",
+     0.3,
+     0.54
+    ],
+    [
+     "not",
+     0.54,
+     0.79
+    ],
+    [
+     "need",
+     0.79,
+     1.0
+    ],
+    [
+     "a",
+     1.0,
+     1.05
+    ],
+    [
+     "long",
+     1.05,
+     1.52
+    ],
+    [
+     "trunk",
+     1.52,
+     1.96
+    ],
+    [
+     "yet.",
+     1.96,
+     2.36
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: not yet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble's trunk is short and wobbly. Wiggle, wobble!",
+   "t0": 58.125,
+   "t1": 62.5,
+   "v0": 58.189708333333336,
+   "dur": 3.8898333333333333,
+   "words": [
+    [
+     "Tumble's",
+     0.0,
+     0.5
+    ],
+    [
+     "trunk",
+     0.5,
+     0.84
+    ],
+    [
+     "is",
+     0.84,
+     0.96
+    ],
+    [
+     "short",
+     0.96,
+     1.48
+    ],
+    [
+     "and",
+     1.48,
+     1.66
+    ],
+    [
+     "wobbly.",
+     1.66,
+     2.26
+    ],
+    [
+     "Wiggle,",
+     2.74,
+     3.31
+    ],
+    [
+     "wobble!",
+     3.31,
+     3.89
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "wobbly trunk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Is Tumble's trunk long, or short?",
+   "t0": 62.5,
+   "t1": 68.4375,
+   "v0": 62.61954166666667,
+   "dur": 2.249458333333333,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.19
+    ],
+    [
+     "Tumble's",
+     0.19,
+     0.7
+    ],
+    [
+     "trunk",
+     0.7,
+     1.02
+    ],
+    [
+     "long,",
+     1.02,
+     1.54
+    ],
+    [
+     "or",
+     1.54,
+     1.68
+    ],
+    [
+     "short?",
+     1.68,
+     2.249
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Short! Short and wobbly, for now.",
+   "t0": 68.4375,
+   "t1": 71.25,
+   "v0": 68.60900000000001,
+   "dur": 2.1751666666666667,
+   "words": [
+    [
+     "Short!",
+     0.01,
+     0.66
+    ],
+    [
+     "Short",
+     0.66,
+     1.01
+    ],
+    [
+     "and",
+     1.01,
+     1.14
+    ],
+    [
+     "wobbly,",
+     1.14,
+     1.62
+    ],
+    [
+     "for",
+     1.62,
+     1.76
+    ],
+    [
+     "now.",
+     1.76,
+     2.17
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "answer 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "At first, a calf is clumsy with its trunk.",
+   "t0": 71.25,
+   "t1": 74.6875,
+   "v0": 71.32416666666668,
+   "dur": 2.869291666666667,
+   "words": [
+    [
+     "At",
+     0.01,
+     0.2
+    ],
+    [
+     "first,",
+     0.2,
+     0.74
+    ],
+    [
+     "a",
+     0.85,
+     0.91
+    ],
+    [
+     "calf",
+     0.91,
+     1.3
+    ],
+    [
+     "is",
+     1.3,
+     1.43
+    ],
+    [
+     "clumsy",
+     1.43,
+     2.0
+    ],
+    [
+     "with",
+     2.0,
+     2.16
+    ],
+    [
+     "its",
+     2.16,
+     2.34
+    ],
+    [
+     "trunk.",
+     2.34,
+     2.869
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: clumsy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "But it learns to use its trunk as it grows.",
+   "t0": 74.6875,
+   "t1": 77.8125,
+   "v0": 74.73345833333336,
+   "dur": 2.643875,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.09
+    ],
+    [
+     "it",
+     0.09,
+     0.2
+    ],
+    [
+     "learns",
+     0.2,
+     0.71
+    ],
+    [
+     "to",
+     0.71,
+     0.84
+    ],
+    [
+     "use",
+     0.84,
+     1.09
+    ],
+    [
+     "its",
+     1.09,
+     1.27
+    ],
+    [
+     "trunk",
+     1.27,
+     1.72
+    ],
+    [
+     "as",
+     1.72,
+     1.92
+    ],
+    [
+     "it",
+     1.92,
+     1.99
+    ],
+    [
+     "grows.",
+     1.99,
+     2.64
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: learns",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can you wiggle your arm like a wobbly trunk? Wiggle, wiggle!",
+   "t0": 77.8125,
+   "t1": 82.5,
+   "v0": 77.91733333333336,
+   "dur": 4.303041666666667,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.34
+    ],
+    [
+     "wiggle",
+     0.34,
+     0.67
+    ],
+    [
+     "your",
+     0.67,
+     0.87
+    ],
+    [
+     "arm",
+     0.87,
+     1.25
+    ],
+    [
+     "like",
+     1.25,
+     1.47
+    ],
+    [
+     "a",
+     1.47,
+     1.52
+    ],
+    [
+     "wobbly",
+     1.52,
+     2.06
+    ],
+    [
+     "trunk?",
+     2.06,
+     2.63
+    ],
+    [
+     "Wiggle,",
+     3.05,
+     3.58
+    ],
+    [
+     "wiggle!",
+     3.75,
+     4.3
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "wiggle along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble drinks Mama's milk many times a day.",
+   "t0": 82.5,
+   "t1": 86.25,
+   "v0": 82.76037500000004,
+   "dur": 3.15825,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.42
+    ],
+    [
+     "drinks",
+     0.42,
+     0.79
+    ],
+    [
+     "Mama's",
+     0.79,
+     1.32
+    ],
+    [
+     "milk",
+     1.32,
+     1.73
+    ],
+    [
+     "many",
+     1.91,
+     2.27
+    ],
+    [
+     "times",
+     2.27,
+     2.76
+    ],
+    [
+     "a",
+     2.76,
+     2.8
+    ],
+    [
+     "day.",
+     2.8,
+     3.158
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "many times",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Mama looks after Tumble. But is Mama the only one?",
+   "t0": 86.25,
+   "t1": 90.65408333333338,
+   "v0": 86.45862500000004,
+   "dur": 3.7754583333333334,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.46
+    ],
+    [
+     "looks",
+     0.46,
+     0.76
+    ],
+    [
+     "after",
+     0.76,
+     1.14
+    ],
+    [
+     "Tumble.",
+     1.14,
+     1.71
+    ],
+    [
+     "But",
+     2.09,
+     2.22
+    ],
+    [
+     "is",
+     2.22,
+     2.42
+    ],
+    [
+     "Mama",
+     2.42,
+     2.85
+    ],
+    [
+     "the",
+     2.85,
+     3.02
+    ],
+    [
+     "only",
+     3.02,
+     3.4
+    ],
+    [
+     "one?",
+     3.4,
+     3.77
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "only Mama",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

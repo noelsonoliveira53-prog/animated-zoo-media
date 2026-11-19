@@ -1,0 +1,1855 @@
+{
+ "id": "zc_ep07_short3",
+ "total": 89.55400000000004,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375
+ ],
+ "plan": {
+  "length": 89.6,
+  "shots": 22,
+  "visual_changes": 89,
+  "mean_gap": 1.01,
+  "longest_gap": 4.6,
+  "longest_gap_at": 81.7,
+  "over_6s": [],
+  "places": [
+   "jungle",
+   "river",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper_pink"
+  ],
+  "questions": 6,
+  "longest_without_question": 20.0,
+  "first_words_at": 0.42,
+  "shot_mean": 4.07,
+  "fails": [],
+  "words_placed": "174/174",
+  "sync": {
+   "pauses_checked": 21,
+   "onset_err_mean_ms": 18.1,
+   "onset_err_max_ms": 40.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the green jungle hook: who leads"
+  ],
+  [
+   0.59,
+   "action",
+   "grandma nods"
+  ],
+  [
+   1.56,
+   "word",
+   "?"
+  ],
+  [
+   2.5,
+   "new shot",
+   "the green jungle jungle wide"
+  ],
+  [
+   2.96,
+   "action",
+   "grandma nods"
+  ],
+  [
+   4.49,
+   "word",
+   "OLDEST"
+  ],
+  [
+   6.56,
+   "new shot",
+   "the green jungle Grandma leads"
+  ],
+  [
+   7.98,
+   "picture",
+   "st"
+  ],
+  [
+   7.98,
+   "word",
+   "LEADER"
+  ],
+  [
+   9.38,
+   "new place",
+   "the picture board (pink) board: oldest female"
+  ],
+  [
+   10.7,
+   "word",
+   "OLDEST"
+  ],
+  [
+   12.32,
+   "picture",
+   "st"
+  ],
+  [
+   13.75,
+   "new place",
+   "the green jungle question 6"
+  ],
+  [
+   15.28,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   15.63,
+   "sign",
+   "GRANDMA"
+  ],
+  [
+   17.22,
+   "thinking dot",
+   "1"
+  ],
+  [
+   17.89,
+   "thinking dot",
+   "2"
+  ],
+  [
+   18.57,
+   "thinking dot",
+   "3"
+  ],
+  [
+   19.05,
+   "answer",
+   "GRANDMA"
+  ],
+  [
+   20.31,
+   "new shot",
+   "the green jungle answer 6"
+  ],
+  [
+   20.48,
+   "action",
+   "grandma nods"
+  ],
+  [
+   20.48,
+   "word",
+   "GRANDMA!"
+  ],
+  [
+   23.44,
+   "new shot",
+   "the green jungle to water and food"
+  ],
+  [
+   23.54,
+   "action",
+   "grandma walks"
+  ],
+  [
+   23.54,
+   "action",
+   "mama walks"
+  ],
+  [
+   23.54,
+   "action",
+   "tumble walks"
+  ],
+  [
+   25.26,
+   "word",
+   "WATER"
+  ],
+  [
+   25.86,
+   "word",
+   "FOOD"
+  ],
+  [
+   26.88,
+   "new shot",
+   "the green jungle follow the leader"
+  ],
+  [
+   26.98,
+   "action",
+   "mama walks"
+  ],
+  [
+   26.98,
+   "action",
+   "tumble walks"
+  ],
+  [
+   26.99,
+   "word",
+   "FOLLOW!"
+  ],
+  [
+   28.26,
+   "action",
+   "tumble hops"
+  ],
+  [
+   30.0,
+   "new shot",
+   "the green jungle walk and stop"
+  ],
+  [
+   31.57,
+   "action",
+   "grandma nods"
+  ],
+  [
+   31.57,
+   "word",
+   "WALK"
+  ],
+  [
+   32.82,
+   "action",
+   "blink"
+  ],
+  [
+   32.82,
+   "word",
+   "STOP"
+  ],
+  [
+   33.75,
+   "new shot",
+   "the green jungle march along"
+  ],
+  [
+   36.07,
+   "action",
+   "milo hops"
+  ],
+  [
+   36.07,
+   "word",
+   "STOMP!"
+  ],
+  [
+   38.12,
+   "action",
+   "grandma walks"
+  ],
+  [
+   38.12,
+   "action",
+   "tumble walks"
+  ],
+  [
+   38.12,
+   "new place",
+   "the wide river river wide"
+  ],
+  [
+   39.06,
+   "word",
+   "RIVER"
+  ],
+  [
+   41.25,
+   "new shot",
+   "the wide river Grandma drinks"
+  ],
+  [
+   41.35,
+   "action",
+   "Grandma's trunk dips into the water"
+  ],
+  [
+   44.25,
+   "word",
+   "SLURP!"
+  ],
+  [
+   45.31,
+   "new place",
+   "the picture board (pink) count the family"
+  ],
+  [
+   48.6,
+   "word",
+   "?"
+  ],
+  [
+   49.69,
+   "new shot",
+   "the picture board (pink) board: five"
+  ],
+  [
+   49.74,
+   "action",
+   "elephant 1 hops"
+  ],
+  [
+   49.74,
+   "word",
+   "1"
+  ],
+  [
+   50.04,
+   "action",
+   "elephant 2 hops"
+  ],
+  [
+   50.04,
+   "word",
+   "2"
+  ],
+  [
+   50.32,
+   "action",
+   "elephant 3 hops"
+  ],
+  [
+   50.32,
+   "word",
+   "3"
+  ],
+  [
+   50.59,
+   "action",
+   "elephant 4 hops"
+  ],
+  [
+   50.59,
+   "word",
+   "4"
+  ],
+  [
+   50.88,
+   "action",
+   "elephant 5 hops"
+  ],
+  [
+   50.88,
+   "word",
+   "5"
+  ],
+  [
+   51.88,
+   "new shot",
+   "the picture board (pink) board: five names"
+  ],
+  [
+   52.04,
+   "word",
+   "5!"
+  ],
+  [
+   56.25,
+   "new place",
+   "the wide river rumble"
+  ],
+  [
+   58.09,
+   "action",
+   "blink"
+  ],
+  [
+   60.66,
+   "action",
+   "grandma nods"
+  ],
+  [
+   60.66,
+   "word",
+   "OKAY!"
+  ],
+  [
+   61.56,
+   "new shot",
+   "the wide river rumble along"
+  ],
+  [
+   62.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   62.81,
+   "word",
+   "RUMBLE!"
+  ],
+  [
+   65.31,
+   "action",
+   "tumble walks"
+  ],
+  [
+   65.31,
+   "new place",
+   "the zoo at sunset evening wide"
+  ],
+  [
+   68.73,
+   "word",
+   "REST"
+  ],
+  [
+   69.69,
+   "new shot",
+   "the zoo at sunset cozy"
+  ],
+  [
+   70.26,
+   "action",
+   "tumble looks sleepy"
+  ],
+  [
+   71.07,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   71.94,
+   "word",
+   "COZY!"
+  ],
+  [
+   73.44,
+   "new shot",
+   "the zoo at sunset question 7"
+  ],
+  [
+   75.52,
+   "sign",
+   "MAMA"
+  ],
+  [
+   75.87,
+   "sign",
+   "FAMILY"
+  ],
+  [
+   78.3,
+   "thinking dot",
+   "1"
+  ],
+  [
+   78.97,
+   "thinking dot",
+   "2"
+  ],
+  [
+   79.65,
+   "thinking dot",
+   "3"
+  ],
+  [
+   80.13,
+   "answer",
+   "FAMILY"
+  ],
+  [
+   81.25,
+   "new place",
+   "the picture board (pink) board: whole family"
+  ],
+  [
+   81.65,
+   "word",
+   "WHOLE FAMILY!"
+  ],
+  [
+   86.25,
+   "new place",
+   "the zoo at sunset wow"
+  ],
+  [
+   88.21,
+   "action",
+   "milo hops"
+  ],
+  [
+   88.21,
+   "word",
+   "WOW!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "jungle",
+   "say": "Who leads an elephant herd?",
+   "t0": 0.0,
+   "t1": 2.5,
+   "v0": 0.42,
+   "dur": 1.6389166666666666,
+   "words": [
+    [
+     "Who",
+     0.04,
+     0.17
+    ],
+    [
+     "leads",
+     0.17,
+     0.47
+    ],
+    [
+     "an",
+     0.47,
+     0.55
+    ],
+    [
+     "elephant",
+     0.55,
+     1.14
+    ],
+    [
+     "herd?",
+     1.14,
+     1.639
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: who leads",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Meet Grandma. She is the oldest elephant in the herd.",
+   "t0": 2.5,
+   "t1": 6.5625,
+   "v0": 2.5989166666666668,
+   "dur": 3.7310833333333333,
+   "words": [
+    [
+     "Meet",
+     0.01,
+     0.36
+    ],
+    [
+     "Grandma.",
+     0.36,
+     1.08
+    ],
+    [
+     "She",
+     1.43,
+     1.63
+    ],
+    [
+     "is",
+     1.63,
+     1.76
+    ],
+    [
+     "the",
+     1.76,
+     1.89
+    ],
+    [
+     "oldest",
+     1.89,
+     2.43
+    ],
+    [
+     "elephant",
+     2.43,
+     2.99
+    ],
+    [
+     "in",
+     2.99,
+     3.09
+    ],
+    [
+     "the",
+     3.09,
+     3.16
+    ],
+    [
+     "herd.",
+     3.16,
+     3.73
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "jungle wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Grandma is the leader of the herd.",
+   "t0": 6.5625,
+   "t1": 9.375,
+   "v0": 6.87,
+   "dur": 2.31125,
+   "words": [
+    [
+     "Grandma",
+     0.01,
+     0.71
+    ],
+    [
+     "is",
+     0.86,
+     1.02
+    ],
+    [
+     "the",
+     1.02,
+     1.11
+    ],
+    [
+     "leader",
+     1.11,
+     1.57
+    ],
+    [
+     "of",
+     1.57,
+     1.7
+    ],
+    [
+     "the",
+     1.7,
+     1.78
+    ],
+    [
+     "herd.",
+     1.78,
+     2.31
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Grandma leads",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The leader is the oldest female. She knows the most.",
+   "t0": 9.375,
+   "t1": 13.75,
+   "v0": 9.72125,
+   "dur": 3.6597916666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "leader",
+     0.12,
+     0.63
+    ],
+    [
+     "is",
+     0.63,
+     0.82
+    ],
+    [
+     "the",
+     0.82,
+     0.98
+    ],
+    [
+     "oldest",
+     0.98,
+     1.54
+    ],
+    [
+     "female.",
+     1.54,
+     2.09
+    ],
+    [
+     "She",
+     2.43,
+     2.6
+    ],
+    [
+     "knows",
+     2.6,
+     2.98
+    ],
+    [
+     "the",
+     2.98,
+     3.06
+    ],
+    [
+     "most.",
+     3.06,
+     3.66
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: oldest female",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Who leads the herd? Tumble, or Grandma?",
+   "t0": 13.75,
+   "t1": 20.3125,
+   "v0": 13.921041666666666,
+   "dur": 2.8109583333333332,
+   "words": [
+    [
+     "Who",
+     0.04,
+     0.18
+    ],
+    [
+     "leads",
+     0.18,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.58
+    ],
+    [
+     "herd?",
+     0.58,
+     1.07
+    ],
+    [
+     "Tumble,",
+     1.36,
+     1.91
+    ],
+    [
+     "or",
+     1.91,
+     2.03
+    ],
+    [
+     "Grandma?",
+     2.03,
+     2.81
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 6",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Grandma! Everyone follows Grandma.",
+   "t0": 20.3125,
+   "t1": 23.4375,
+   "v0": 20.472,
+   "dur": 2.710166666666667,
+   "words": [
+    [
+     "Grandma!",
+     0.01,
+     0.58
+    ],
+    [
+     "Everyone",
+     1.07,
+     1.5
+    ],
+    [
+     "follows",
+     1.5,
+     2.02
+    ],
+    [
+     "Grandma.",
+     2.02,
+     2.71
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "answer 6",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Grandma leads the herd to water and food.",
+   "t0": 23.4375,
+   "t1": 26.875,
+   "v0": 23.72216666666667,
+   "dur": 2.6919583333333335,
+   "words": [
+    [
+     "Grandma",
+     0.01,
+     0.6
+    ],
+    [
+     "leads",
+     0.6,
+     1.02
+    ],
+    [
+     "the",
+     1.02,
+     1.09
+    ],
+    [
+     "herd",
+     1.09,
+     1.43
+    ],
+    [
+     "to",
+     1.43,
+     1.54
+    ],
+    [
+     "water",
+     1.54,
+     2.0
+    ],
+    [
+     "and",
+     2.0,
+     2.14
+    ],
+    [
+     "food.",
+     2.14,
+     2.69
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "to water and food",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Follow the leader! Step, step, step.",
+   "t0": 26.875,
+   "t1": 30.0,
+   "v0": 26.954125000000005,
+   "dur": 2.5773333333333333,
+   "words": [
+    [
+     "Follow",
+     0.04,
+     0.44
+    ],
+    [
+     "the",
+     0.44,
+     0.53
+    ],
+    [
+     "leader!",
+     0.53,
+     1.07
+    ],
+    [
+     "Step,",
+     1.31,
+     1.67
+    ],
+    [
+     "step,",
+     1.67,
+     2.05
+    ],
+    [
+     "step.",
+     2.05,
+     2.577
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "follow the leader",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Grandma decides when to walk, and when to stop.",
+   "t0": 30.0,
+   "t1": 33.75,
+   "v0": 30.07145833333334,
+   "dur": 3.369625,
+   "words": [
+    [
+     "Grandma",
+     0.02,
+     0.6
+    ],
+    [
+     "decides",
+     0.6,
+     1.2
+    ],
+    [
+     "when",
+     1.2,
+     1.38
+    ],
+    [
+     "to",
+     1.38,
+     1.5
+    ],
+    [
+     "walk,",
+     1.5,
+     2.02
+    ],
+    [
+     "and",
+     2.31,
+     2.43
+    ],
+    [
+     "when",
+     2.43,
+     2.65
+    ],
+    [
+     "to",
+     2.65,
+     2.75
+    ],
+    [
+     "stop.",
+     2.75,
+     3.37
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "walk and stop",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Can you march like an elephant? Stomp, stomp, stomp!",
+   "t0": 33.75,
+   "t1": 38.125,
+   "v0": 33.98108333333334,
+   "dur": 3.869625,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.21
+    ],
+    [
+     "you",
+     0.21,
+     0.34
+    ],
+    [
+     "march",
+     0.34,
+     0.75
+    ],
+    [
+     "like",
+     0.75,
+     0.94
+    ],
+    [
+     "an",
+     0.94,
+     1.02
+    ],
+    [
+     "elephant?",
+     1.02,
+     1.7
+    ],
+    [
+     "Stomp,",
+     2.09,
+     2.73
+    ],
+    [
+     "stomp,",
+     2.73,
+     3.22
+    ],
+    [
+     "stomp!",
+     3.22,
+     3.87
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "march along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Here is the river. Grandma knew the way!",
+   "t0": 38.125,
+   "t1": 41.25,
+   "v0": 38.390708333333336,
+   "dur": 2.66075,
+   "words": [
+    [
+     "Here",
+     0.09,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.67
+    ],
+    [
+     "river.",
+     0.67,
+     1.17
+    ],
+    [
+     "Grandma",
+     1.5,
+     2.01
+    ],
+    [
+     "knew",
+     2.01,
+     2.16
+    ],
+    [
+     "the",
+     2.16,
+     2.25
+    ],
+    [
+     "way!",
+     2.25,
+     2.66
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "river wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Grandma has a long, cool drink. Slurp!",
+   "t0": 41.25,
+   "t1": 45.3125,
+   "v0": 41.591458333333335,
+   "dur": 3.2699166666666666,
+   "words": [
+    [
+     "Grandma",
+     0.03,
+     0.58
+    ],
+    [
+     "has",
+     0.58,
+     0.81
+    ],
+    [
+     "a",
+     0.81,
+     0.85
+    ],
+    [
+     "long,",
+     0.85,
+     1.41
+    ],
+    [
+     "cool",
+     1.41,
+     1.78
+    ],
+    [
+     "drink.",
+     1.78,
+     2.26
+    ],
+    [
+     "Slurp!",
+     2.66,
+     3.27
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Grandma drinks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "How many elephants are in Tumble's family? Let's count!",
+   "t0": 45.3125,
+   "t1": 49.6875,
+   "v0": 45.401375,
+   "dur": 3.7881666666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.4
+    ],
+    [
+     "elephants",
+     0.4,
+     1.06
+    ],
+    [
+     "are",
+     1.06,
+     1.18
+    ],
+    [
+     "in",
+     1.18,
+     1.32
+    ],
+    [
+     "Tumble's",
+     1.32,
+     1.83
+    ],
+    [
+     "family?",
+     1.83,
+     2.44
+    ],
+    [
+     "Let's",
+     2.86,
+     3.2
+    ],
+    [
+     "count!",
+     3.2,
+     3.788
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count the family",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "One, two, three, four, five!",
+   "t0": 49.6875,
+   "t1": 51.875,
+   "v0": 49.72954166666667,
+   "dur": 1.7559583333333333,
+   "words": [
+    [
+     "One,",
+     0.01,
+     0.31
+    ],
+    [
+     "two,",
+     0.31,
+     0.59
+    ],
+    [
+     "three,",
+     0.59,
+     0.86
+    ],
+    [
+     "four,",
+     0.86,
+     1.15
+    ],
+    [
+     "five!",
+     1.15,
+     1.756
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: five",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Five! Grandma, Mama, Auntie, big sister and Tumble.",
+   "t0": 51.875,
+   "t1": 56.25,
+   "v0": 52.0255,
+   "dur": 3.979875,
+   "words": [
+    [
+     "Five!",
+     0.01,
+     0.64
+    ],
+    [
+     "Grandma,",
+     0.76,
+     1.27
+    ],
+    [
+     "Mama,",
+     1.27,
+     1.76
+    ],
+    [
+     "Auntie,",
+     2.02,
+     2.63
+    ],
+    [
+     "big",
+     2.63,
+     2.83
+    ],
+    [
+     "sister",
+     2.83,
+     3.35
+    ],
+    [
+     "and",
+     3.35,
+     3.48
+    ],
+    [
+     "Tumble.",
+     3.48,
+     3.98
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: five names",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Elephants can make a low rumble. It means: everything is okay.",
+   "t0": 56.25,
+   "t1": 61.5625,
+   "v0": 56.545375,
+   "dur": 4.758375,
+   "words": [
+    [
+     "Elephants",
+     0.09,
+     0.71
+    ],
+    [
+     "can",
+     0.71,
+     0.86
+    ],
+    [
+     "make",
+     0.86,
+     1.04
+    ],
+    [
+     "a",
+     1.04,
+     1.09
+    ],
+    [
+     "low",
+     1.09,
+     1.54
+    ],
+    [
+     "rumble.",
+     1.54,
+     2.08
+    ],
+    [
+     "It",
+     2.55,
+     2.63
+    ],
+    [
+     "means:",
+     2.63,
+     3.17
+    ],
+    [
+     "everything",
+     3.43,
+     3.96
+    ],
+    [
+     "is",
+     3.96,
+     4.11
+    ],
+    [
+     "okay.",
+     4.11,
+     4.758
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "rumble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Can you make a low rumble? Rumble, rumble!",
+   "t0": 61.5625,
+   "t1": 65.3125,
+   "v0": 61.84375,
+   "dur": 3.224083333333333,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.21
+    ],
+    [
+     "you",
+     0.21,
+     0.34
+    ],
+    [
+     "make",
+     0.34,
+     0.52
+    ],
+    [
+     "a",
+     0.52,
+     0.69
+    ],
+    [
+     "low",
+     0.69,
+     0.97
+    ],
+    [
+     "rumble?",
+     0.97,
+     1.56
+    ],
+    [
+     "Rumble,",
+     1.96,
+     2.64
+    ],
+    [
+     "rumble!",
+     2.64,
+     3.22
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "rumble along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "The sun goes down. Grandma says it is time to rest.",
+   "t0": 65.3125,
+   "t1": 69.6875,
+   "v0": 65.60783333333335,
+   "dur": 3.706166666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "sun",
+     0.09,
+     0.48
+    ],
+    [
+     "goes",
+     0.48,
+     0.79
+    ],
+    [
+     "down.",
+     0.79,
+     1.26
+    ],
+    [
+     "Grandma",
+     1.64,
+     2.18
+    ],
+    [
+     "says",
+     2.18,
+     2.46
+    ],
+    [
+     "it",
+     2.46,
+     2.52
+    ],
+    [
+     "is",
+     2.52,
+     2.65
+    ],
+    [
+     "time",
+     2.65,
+     3.01
+    ],
+    [
+     "to",
+     3.01,
+     3.12
+    ],
+    [
+     "rest.",
+     3.12,
+     3.706
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "evening wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Tumble rests close to Mama. Cozy and happy!",
+   "t0": 69.6875,
+   "t1": 73.4375,
+   "v0": 69.85400000000001,
+   "dur": 3.342791666666667,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.41
+    ],
+    [
+     "rests",
+     0.41,
+     0.76
+    ],
+    [
+     "close",
+     0.76,
+     1.11
+    ],
+    [
+     "to",
+     1.11,
+     1.22
+    ],
+    [
+     "Mama.",
+     1.22,
+     1.67
+    ],
+    [
+     "Cozy",
+     2.09,
+     2.62
+    ],
+    [
+     "and",
+     2.62,
+     2.72
+    ],
+    [
+     "happy!",
+     2.72,
+     3.34
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "cozy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Who looks after Tumble? Only Mama, or the whole family?",
+   "t0": 73.4375,
+   "t1": 81.25,
+   "v0": 73.73679166666669,
+   "dur": 4.075833333333334,
+   "words": [
+    [
+     "Who",
+     0.04,
+     0.18
+    ],
+    [
+     "looks",
+     0.18,
+     0.41
+    ],
+    [
+     "after",
+     0.41,
+     0.71
+    ],
+    [
+     "Tumble?",
+     0.71,
+     1.31
+    ],
+    [
+     "Only",
+     1.78,
+     2.13
+    ],
+    [
+     "Mama,",
+     2.13,
+     2.67
+    ],
+    [
+     "or",
+     2.83,
+     2.95
+    ],
+    [
+     "the",
+     2.95,
+     3.04
+    ],
+    [
+     "whole",
+     3.04,
+     3.33
+    ],
+    [
+     "family?",
+     3.33,
+     4.076
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 7",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The whole family! Mama, Auntie, big sister and Grandma.",
+   "t0": 81.25,
+   "t1": 86.25,
+   "v0": 81.55262500000003,
+   "dur": 4.414125,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "whole",
+     0.1,
+     0.37
+    ],
+    [
+     "family!",
+     0.37,
+     1.08
+    ],
+    [
+     "Mama,",
+     1.49,
+     2.01
+    ],
+    [
+     "Auntie,",
+     2.01,
+     2.7
+    ],
+    [
+     "big",
+     2.7,
+     3.01
+    ],
+    [
+     "sister",
+     3.01,
+     3.59
+    ],
+    [
+     "and",
+     3.59,
+     3.73
+    ],
+    [
+     "Grandma.",
+     3.73,
+     4.41
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: whole family",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Big family, big love. Wow!",
+   "t0": 86.25,
+   "t1": 89.15400000000004,
+   "v0": 86.50675000000004,
+   "dur": 2.22725,
+   "words": [
+    [
+     "Big",
+     0.01,
+     0.24
+    ],
+    [
+     "family,",
+     0.24,
+     0.8
+    ],
+    [
+     "big",
+     0.8,
+     1.08
+    ],
+    [
+     "love.",
+     1.08,
+     1.51
+    ],
+    [
+     "Wow!",
+     1.7,
+     2.227
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "wow",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

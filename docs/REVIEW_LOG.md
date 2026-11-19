@@ -134,3 +134,15 @@
 | 2026-11-19 | cartoon/zc_ep08_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-19 | cartoon/zc_ep08_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-19 | cartoon/zc_ep08_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-19 | cartoon/zc_ep08.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/za_ep06.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep08_short2.mp4 | cartoon_short_90 | PASS | - | - | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep04_short3.mp4 | cartoon_short_90 | PASS | - | - | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep08_short3.mp4 | cartoon_short_90 | PASS | - | - | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep07.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/za_ep04.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep08_short1.mp4 | cartoon_short_90 | PASS | - | - | Nov 19 daily-run gate |
+| 2026-11-19 | cartoon/zc_ep07_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-19 | cartoon/za_ep05.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-19 | cartoon/zc_ep07_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-19 | cartoon/zc_ep07_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

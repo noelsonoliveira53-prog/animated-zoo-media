@@ -1332,7 +1332,7 @@
  {
   "file": "cartoon/zc_ep08_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep08",
   "res": "2160x3840",
@@ -1340,7 +1340,7 @@
   "watermark": "top",
   "date": "2026-11-23",
   "time": "7:30 PM",
-  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 26 11:30 AM (three Shorts of one episode on one day).",
+  "note": "Built Nov 19 (session_014CFVfYijTj4rc8TGoYFmDc, scheduled 1:47 AM lesson build): stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py passed; run note docs/cartoon/runs/zc_ep08.md. NOT uploaded: the daily run schedules it. | Nov 19 daily run: moved so no two uploads share an animal or topic on one day (90-day plan variety guard): was Nov 26 11:30 AM (three Shorts of one episode on one day). | Nov 19 daily run: review.py PASS, contact sheet and thumbnail looked at, upload_guard OK TO UPLOAD, zlive [] (rows_read > 0); Studio: 'will be set to public on November 23, 2026 at 7:30 PM', custom thumbnail, made for kids.",
   "title": "Who Lives in the Middle of the Rainforest?",
   "description": "Who lives in the middle of the rainforest? Milo the bluebird meets a little tree frog on a big leaf in the shady understory, where the wet air keeps its skin wet, then Mango the spider monkey and a macaw picking fruit in the canopy, the roof of leaves. A quick animal fact for kids from the lesson “Who Lives at the Top of the Jungle?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSmithsonian Tropical Research Institute (rainforest layers); National Geographic Education (rain forest); TIME for Kids (jungle layers); SeaWorld (giant anteater).",
   "tags": [
@@ -1354,7 +1354,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "BIG LEAVES!",
-  "seconds": 87.7
+  "seconds": 87.7,
+  "video_id": "vMSzqSRHf98",
+  "scheduled_on": "2026-11-19",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep08_short3.mp4",

@@ -7,6 +7,7 @@ studio/zoo3d/finished/zoo3d_ep1[2-9]*.mp4
 studio/sing/cache/
 studio/zoo3d/out/
 studio/zoo3d/jobs/*_song.wav
+studio/zoo3d/jobs/*_song.flac
 studio/zoo3d/finished/zool_*.mp4
 studio/zoo3d/jobs/zt_test*
 studio/zoo3d/jobs/aa_t*

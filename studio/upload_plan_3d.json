@@ -2898,5 +2898,18 @@
    ]
   ],
   "note": "Nov 19 daily run: written, sung, rendered (job zoo3d_ep22y) and finished today; two 'high' shots (114-116 s, 123.5-125.5 s) re-rendered as slices zoo3d_ep22s1/s2 without the song words (they crossed the animals' heads) and spliced (3492 frames kept); mark top right with hide windows over the zebra close-ups (crops of the final file at 0/10/35/50/95/120/135 s looked at: nothing under the mark); review.py PASS, contact sheet and thumbnail LONG NECK! looked at; listen.py on the file: D major as the song engine wrote it, no clicks, -13.5 LUFS, 1 clipped sample, a 1 s quiet break at 15.5-16.5 s inside the song (measured, not heard). 3D cap: upload only when no 3D upload is in the last 24 h (the Nov 18 3D uploads leave the window at 5:17 PM ET Nov 19)."
+ },
+ {
+  "file": "cartoon/zc_ep09.mp4",
+  "title": "What Do Camels Eat in the Desert?",
+  "date": "2026-11-22",
+  "time": "5:30 PM",
+  "thumb": "brand/zoo/thumb_zc_ep09.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 19 1:25 PM ET by session_014CFVfYJyTj4rc8TGoYFmDc (scheduled 1:17 PM lesson build): in_production."
  }
 ]

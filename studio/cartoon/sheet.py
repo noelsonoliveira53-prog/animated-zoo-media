@@ -11,5 +11,6 @@ for k, f in enumerate(keep):
 import PIL.Image as I
 iw, ih = I.open(keep[0]).size; h = round(w * ih / iw / 2) * 2
 lay = "|".join(f"{(k % cols) * w}_{(k // cols) * h}" for k in range(len(keep)))
-fc += "".join(f"[s{k}]" for k in range(len(keep))) + f"xstack=inputs={len(keep)}:layout={lay}:fill=white[v]"
+if len(keep) == 1: fc = fc.replace("[s0];", "[v]")       # one still: xstack needs two inputs (open since za_ep03, fixed in zc_ep08)
+else: fc += "".join(f"[s{k}]" for k in range(len(keep))) + f"xstack=inputs={len(keep)}:layout={lay}:fill=white[v]"
 subprocess.run(["ffmpeg", "-y", "-loglevel", "error"] + ins + ["-filter_complex", fc, "-map", "[v]", "-frames:v", "1", "-q:v", "3", out], check=True); print(out, len(keep))

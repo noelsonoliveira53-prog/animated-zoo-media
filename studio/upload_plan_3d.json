@@ -2674,5 +2674,18 @@
   "thumb": "brand/zoo/thumb_za_ep04.jpg",
   "thumb_text": "HOLD ON!",
   "seconds": 321.6
+ },
+ {
+  "file": "cartoon/zc_ep07.mp4",
+  "title": "Who Looks After a Baby Elephant?",
+  "date": "2026-11-21",
+  "time": "9:30 AM",
+  "thumb": "brand/zoo/thumb_zc_ep07.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 18 11:16 PM ET by the one-off catch-up lesson build (session_014CFVfUhnJESbmSWZXuhZ9t); in production, NOT uploaded."
  }
 ]

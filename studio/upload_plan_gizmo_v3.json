@@ -31,25 +31,55 @@
   "file": "cartoon/gc_ep01.mp4",
   "channel": "gizmo",
   "title": "How Does a Seed Grow Into a Plant?",
-  "status": "in_production",
+  "status": "hold_review",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
-  "note": "cartoon test, waiting for Noelson's verdict. Claimed Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off cartoon test build of Gizmo Explains, Noelson Nov 19 12:37 AM 'create a cartoon version of that and let's test it'). Topic: the third of docs/GIZMO_RUN.md 'Topics' (the first two, rockets and rain, are left to tonight's two 3D explainers). Never uploaded until Noelson has watched it and said yes."
+  "note": "cartoon test, waiting for Noelson's verdict. Built Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off test, Noelson Nov 19 12:37 AM: 'create a cartoon version of that and let's test it'). A new format for this channel: never uploaded until Noelson has watched it and said yes. Run note docs/gizmo/runs/gc_ep01.md.",
+  "description": "How does a tiny seed grow into a big plant? Gizmo the robot opens a seed in his lab, watches it wake up under the ground and follows it all the way to a flower. A gentle science lesson for ages 4-8 with questions to answer, things to count and a quiz at the end.\nKids learn the three parts of a seed (a tiny baby plant, its food and the seed coat), that a seed needs water, air and the right warmth to start growing, that the root comes out first and grows down while the shoot grows up, that leaves make the plant's food with sunlight, air and water, that roots take in water, and that flowers help plants make new seeds.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nScience News Explores (how a seed grows into a plant); Australian Academy of Science, Curious (how plants germinate); Britannica (germination); United States Botanic Garden (flower to seed).",
+  "tags": [
+   "how does a seed grow",
+   "seed to plant for kids",
+   "parts of a seed",
+   "plant life cycle for kids",
+   "germination for kids",
+   "science for kids",
+   "how plants grow",
+   "roots and shoots",
+   "Gizmo Explains",
+   "Gizmo the robot",
+   "preschool science",
+   "kindergarten science"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep01.jpg",
+  "thumb_text": "ROOT FIRST!",
+  "seconds": 309.8
  },
  {
   "file": "cartoon/gc_ep01_short1.mp4",
   "channel": "gizmo",
   "title": "What Is Inside a Seed?",
-  "status": "in_production",
+  "status": "hold_review",
   "format": "cartoon_short_90",
   "res": "2160x3840",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
-  "note": "cartoon test, waiting for Noelson's verdict. Claimed Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off cartoon test build of Gizmo Explains, Noelson Nov 19 12:37 AM 'create a cartoon version of that and let's test it'). Topic: the third of docs/GIZMO_RUN.md 'Topics' (the first two, rockets and rain, are left to tonight's two 3D explainers). Never uploaded until Noelson has watched it and said yes."
+  "note": "cartoon test, waiting for Noelson's verdict. Built Nov 19 by session_014CFVfWXNYNsprEv7qN3bvz (one-off test, Noelson Nov 19 12:37 AM: 'create a cartoon version of that and let's test it'). A new format for this channel: never uploaded until Noelson has watched it and said yes. Run note docs/gizmo/runs/gc_ep01.md.",
+  "description": "What is inside a tiny seed? Gizmo the robot looks closer and opens one: a tiny baby plant, its food and the seed coat that keeps it safe! A gentle science Short for ages 4-8 with questions to answer and parts to count.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nScience News Explores (how a seed grows into a plant); Australian Academy of Science, Curious (how plants germinate).",
+  "tags": [
+   "what is inside a seed",
+   "parts of a seed",
+   "seed coat",
+   "science for kids",
+   "Gizmo Explains",
+   "shorts"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep01_short1.jpg",
+  "thumb_text": "BABY PLANT!",
+  "seconds": 87.3
  },
  {
   "file": "gizmo/gzx_ep01.mp4",
@@ -112,7 +142,7 @@
  {
   "file": "gizmo/shorts/gzs_rocket_push.mp4",
   "title": "What Pushes a Rocket Up? Science for Kids",
-  "description": "What Pushes a Rocket Up? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cHow Do Rockets Fly? Science for Kids with Gizmo\u201d.\nA rocket engine turns its fuel into hot gas and pushes it out the back; the gas pushes the rocket the other way (NASA, What Is a Rocket?).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "What Pushes a Rocket Up? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “How Do Rockets Fly? Science for Kids with Gizmo”.\nA rocket engine turns its fuel into hot gas and pushes it out the back; the gas pushes the rocket the other way (NASA, What Is a Rocket?).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "how do rockets fly",
    "rockets for kids",
@@ -140,7 +170,7 @@
  {
   "file": "gizmo/shorts/gzs_rocket_space.mp4",
   "title": "Can a Rocket Work in Space? Science for Kids",
-  "description": "Can a Rocket Work in Space? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cHow Do Rockets Fly? Science for Kids with Gizmo\u201d.\nA rocket engine does not need air: it carries everything it needs, its fuel and its own oxygen (NASA, What Is a Rocket?; NASA Glenn, Practical Rocketry).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "Can a Rocket Work in Space? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “How Do Rockets Fly? Science for Kids with Gizmo”.\nA rocket engine does not need air: it carries everything it needs, its fuel and its own oxygen (NASA, What Is a Rocket?; NASA Glenn, Practical Rocketry).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "how do rockets fly",
    "rockets for kids",
@@ -168,7 +198,7 @@
  {
   "file": "gizmo/shorts/gzs_rocket_stages.mp4",
   "title": "Why Do Big Rockets Drop Parts? Science for Kids",
-  "description": "Why Do Big Rockets Drop Parts? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cHow Do Rockets Fly? Science for Kids with Gizmo\u201d.\nBig rockets are built in stages; an empty stage is dropped behind and the next one fires, and this staging helps rockets reach space (NASA Glenn, Practical Rocketry).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "Why Do Big Rockets Drop Parts? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “How Do Rockets Fly? Science for Kids with Gizmo”.\nBig rockets are built in stages; an empty stage is dropped behind and the next one fires, and this staging helps rockets reach space (NASA Glenn, Practical Rocketry).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "how do rockets fly",
    "rockets for kids",
@@ -196,7 +226,7 @@
  {
   "file": "gizmo/shorts/gzs_rain_vapor.mp4",
   "title": "Can You See Water Vapor? Science for Kids",
-  "description": "Can You See Water Vapor? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cWhere Does Rain Come From? Science for Kids with Gizmo\u201d.\nThe sun warms water and turns some of it into invisible water vapor, which floats high into the air (USGS, The Water Cycle for Kids).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "Can You See Water Vapor? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “Where Does Rain Come From? Science for Kids with Gizmo”.\nThe sun warms water and turns some of it into invisible water vapor, which floats high into the air (USGS, The Water Cycle for Kids).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "where does rain come from",
    "water cycle for kids",
@@ -224,7 +254,7 @@
  {
   "file": "gizmo/shorts/gzs_rain_clouds.mp4",
   "title": "How Does a Cloud Form? Science for Kids",
-  "description": "How Does a Cloud Form? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cWhere Does Rain Come From? Science for Kids with Gizmo\u201d.\nCold air high up turns water vapor back into tiny drops of water, which gather on specks of dust or pollen; condensation makes clouds (USGS, The Water Cycle for Kids; NOAA SciJinks, What Causes Rain?).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "How Does a Cloud Form? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “Where Does Rain Come From? Science for Kids with Gizmo”.\nCold air high up turns water vapor back into tiny drops of water, which gather on specks of dust or pollen; condensation makes clouds (USGS, The Water Cycle for Kids; NOAA SciJinks, What Causes Rain?).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "where does rain come from",
    "water cycle for kids",
@@ -252,7 +282,7 @@
  {
   "file": "gizmo/shorts/gzs_rain_drops.mp4",
   "title": "What Shape Is a Raindrop? Science for Kids",
-  "description": "What Shape Is a Raindrop? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video \u201cWhere Does Rain Come From? Science for Kids with Gizmo\u201d.\nCloud drops grow until they are too heavy and fall as rain; small raindrops are round and bigger ones are shaped like a hamburger bun (NOAA SciJinks; USGS Water Science School).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "description": "What Shape Is a Raindrop? Science for Kids A quick science explainer for kids with Gizmo the robot, from the video “Where Does Rain Come From? Science for Kids with Gizmo”.\nCloud drops grow until they are too heavy and fall as rain; small raindrops are round and bigger ones are shaped like a hamburger bun (NOAA SciJinks; USGS Water Science School).\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
   "tags": [
    "where does rain come from",
    "water cycle for kids",

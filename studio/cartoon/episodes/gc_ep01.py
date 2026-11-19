@@ -326,10 +326,10 @@ SHORTS = [
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "gc_ep01": {"place": "gsoil", "cam": (1080, 470, 1300), "actors": [("gizmo", 560, 360, .55, False, 'gsap.set("#P-glow",{opacity:1});gsap.set("#P-jaw",{opacity:1});')],
-                "props": [(lambda p: G.growth(p), RX, RY, 1.0)],
-                "words": [("ROOT", 1560, 300, 170, ""), ("FIRST!", 1560, 480, 190, "sun")]},
+    "gc_ep01": {"place": "gsoil", "cam": (1000, 500, 1400), "actors": [("gizmo", 540, 385, .38, False, 'gsap.set("#P-glow",{opacity:1});gsap.set("#P-jaw",{opacity:1});')],
+                "props": [(lambda p: G.growth(p), RX, RY - 80, 1.0), (lambda p: G.arrow(p, RX + 210, RY + 40, RX + 50, RY + 150), 0, 0, 1)],
+                "words": [("ROOT", 1560, 560, 170, ""), ("FIRST!", 1560, 740, 190, "sun")]},
     "gc_ep01_short1": {"place": "paper_gz", "cam": (960, 560, 1500), "actors": [],
-                       "props": [(G.seed_open, 960, 640, 1.6)],
-                       "words": [("BABY", 540, 380, 200, ""), ("PLANT!", 540, 1260, 200, "sun")]},
+                       "props": [(G.seed_open, 960, 700, 1.45)],
+                       "words": [("BABY", 540, 420, 210, ""), ("PLANT!", 540, 1580, 210, "sun")]},
 }

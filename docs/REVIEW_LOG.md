@@ -149,3 +149,5 @@
 | 2026-11-19 | zoo3d_ep22.mp4 | 3d_singalong | PASS | - | - | Song words hidden in close, low and dolly shots (text_hide_shots) and placed right of the tallest animal |
 | 2026-11-19 | zoo3d_ep22.mp4 | 3d_singalong | PASS | - | - | - |
 | 2026-11-19 | zoo3d_ep22.mp4 | 3d_singalong | PASS | - | - | - |
+| 2026-11-19 | cartoon/gc_ep01.mp4 | cartoon_lesson | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves; no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-19 | cartoon/gc_ep01_short1.mp4 | cartoon_short_90 | PASS | - | NOT APPROVED YET (status hold_review): this result is a quality check only; do not upload until Noelson approves | - |

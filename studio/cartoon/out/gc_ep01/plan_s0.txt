@@ -1,0 +1,32 @@
+{
+ "length": 87.3,
+ "shots": 19,
+ "visual_changes": 83,
+ "mean_gap": 1.05,
+ "longest_gap": 3.37,
+ "longest_gap_at": 11.3,
+ "over_6s": [],
+ "places": [
+  "gbench",
+  "glab"
+ ],
+ "picture_boards": [
+  "paper_gz"
+ ],
+ "questions": 7,
+ "longest_without_question": 23.1,
+ "first_words_at": 0.42,
+ "shot_mean": 4.6,
+ "fails": [],
+ "words_placed": "192/192",
+ "sync": {
+  "pauses_checked": 17,
+  "onset_err_mean_ms": 27.6,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 18,
+  "cuts_on_the_half_beat": 18,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}

@@ -151,8 +151,8 @@
  "plan": {
   "length": 89.6,
   "shots": 22,
-  "visual_changes": 89,
-  "mean_gap": 1.01,
+  "visual_changes": 90,
+  "mean_gap": 1.0,
   "longest_gap": 4.6,
   "longest_gap_at": 81.7,
   "over_6s": [],
@@ -162,7 +162,8 @@
    "zoo_eve"
   ],
   "picture_boards": [
-   "paper_pink"
+   "paper_pink",
+   "paper"
   ],
   "questions": 6,
   "longest_without_question": 20.0,
@@ -424,17 +425,22 @@
   ],
   [
    45.31,
-   "new place",
-   "the picture board (pink) count the family"
+   "new shot",
+   "the wide river count the family"
+  ],
+  [
+   48.6,
+   "action",
+   "milo hops"
   ],
   [
    48.6,
    "word",
-   "?"
+   "COUNT!"
   ],
   [
    49.69,
-   "new shot",
+   "new place",
    "the picture board (pink) board: five"
   ],
   [
@@ -489,8 +495,8 @@
   ],
   [
    51.88,
-   "new shot",
-   "the picture board (pink) board: five names"
+   "new place",
+   "the picture board board: five names"
   ],
   [
    52.04,
@@ -1272,7 +1278,7 @@
    "sung": false
   },
   {
-   "place": "paper_pink",
+   "place": "river",
    "say": "How many elephants are in Tumble's family? Let's count!",
    "t0": 45.3125,
    "t1": 49.6875,
@@ -1374,7 +1380,7 @@
    "sung": false
   },
   {
-   "place": "paper_pink",
+   "place": "paper",
    "say": "Five! Grandma, Mama, Auntie, big sister and Tumble.",
    "t0": 51.875,
    "t1": 56.25,

@@ -1,8 +1,8 @@
 {
  "length": 320.7,
  "shots": 79,
- "visual_changes": 325,
- "mean_gap": 0.99,
+ "visual_changes": 326,
+ "mean_gap": 0.98,
  "longest_gap": 4.68,
  "longest_gap_at": 277.2,
  "over_6s": [],

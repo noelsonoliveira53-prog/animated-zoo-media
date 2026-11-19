@@ -1216,7 +1216,7 @@
  {
   "file": "cartoon/zc_ep07_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",
@@ -1224,12 +1224,29 @@
   "watermark": "top",
   "date": "2026-11-22",
   "time": "7:30 PM",
-  "note": "Claimed Nov 18 11:16 PM ET by the one-off catch-up lesson build (session_014CFVfUhnJESbmSWZXuhZ9t); in production, NOT uploaded."
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it.",
+  "seconds": 91.1,
+  "title": "What Does a Baby Elephant Drink?",
+  "description": "What does a baby elephant drink, water or milk? And does Tumble drink with his trunk or with his mouth? Answer along with Milo the bluebird: a baby elephant drinks its mama's milk with its mouth, because its trunk is still short and wobbly. A quick animal fact for kids from the lesson “Who Looks After a Baby Elephant?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSeaWorld (elephant care of young); San Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "elephant family",
+   "elephant herd",
+   "savanna animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "MOUTH OR TRUNK?"
  },
  {
   "file": "cartoon/zc_ep07_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",
@@ -1237,12 +1254,29 @@
   "watermark": "top",
   "date": "2026-11-23",
   "time": "7:30 PM",
-  "note": "Claimed Nov 18 11:16 PM ET by the one-off catch-up lesson build (session_014CFVfUhnJESbmSWZXuhZ9t); in production, NOT uploaded."
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it.",
+  "seconds": 90.9,
+  "title": "Who Helps Look After Tumble?",
+  "description": "Who helps Mama look after baby Tumble? Meet Auntie and big sister! In an elephant herd, aunties and sisters greet the baby, watch him, help him and play with him, like babysitters. Count the helpers with Milo the bluebird. A quick animal fact for kids from the lesson “Who Looks After a Baby Elephant?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic (elephant nannies); Maryland Zoo (African elephant); SeaWorld (elephant care of young); San Diego Zoo Wildlife Alliance (elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "elephant family",
+   "elephant herd",
+   "savanna animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "BIG HELPERS!"
  },
  {
   "file": "cartoon/zc_ep07_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",
@@ -1250,7 +1284,24 @@
   "watermark": "top",
   "date": "2026-11-24",
   "time": "7:30 PM",
-  "note": "Claimed Nov 18 11:16 PM ET by the one-off catch-up lesson build (session_014CFVfUhnJESbmSWZXuhZ9t); in production, NOT uploaded."
+  "note": "Built Nov 19 (catch-up lesson build, session_014CFVfUhnJESbmSWZXuhZ9t): stills of every shot (16:9 and 9:16), frames of the finished file (first frame, end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py and review.py; run note docs/cartoon/runs/zc_ep07.md. NOT uploaded: the daily run schedules it.",
+  "seconds": 89.6,
+  "title": "Who Leads an Elephant Herd?",
+  "description": "Who leads an elephant herd? Tumble, or Grandma? The leader is the oldest female: she leads the family to water and food and says when to rest. Follow the leader and count the family with Milo the bluebird. A quick animal fact for kids from the lesson “Who Looks After a Baby Elephant?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Characters and visuals are animated with the help of AI tools and reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (elephant); Maryland Zoo (African elephant).",
+  "tags": [
+   "elephant",
+   "elephants for kids",
+   "baby elephant",
+   "elephant family",
+   "elephant herd",
+   "savanna animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "FOLLOW GRANDMA!"
  },
  {
   "file": "cartoon/zc_ep08_short1.mp4",

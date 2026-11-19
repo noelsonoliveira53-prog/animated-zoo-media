@@ -663,3 +663,31 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   zc_ep08 "Who Lives at the Top of the Jungle?" (318.8 s + Shorts 90.1/87.7/87.2 s; new anteater, tree frog, macaw, harpy eagle). Run notes in docs/cartoon/runs/; their defects are in
   docs/IMPROVE.md (2026-11-19). Engine changes in those builds: toon.py `count` clamps the last number to its shot; sheet.py accepts a single still. Not built in any of them: a Short
   from an adventure, a closing "next adventure" picture. New characters (Dot, Puff, the four rainforest animals) are a first look for the owner; nobody has listened to any voice or tune.
+
+- Run note Nov 19, daily run (6:44 AM ET -, session_014CFVfXFKfcn1cjbe4ipD7a), first run under the 90-day plan:
+  * 90-day plan read with the Claude Docs connector and saved as docs/GROWTH_90D.md, linked from docs/DAILY_RUN.md (it overrides the older rules there).
+  * 3D cap: zool_ep22 (3D lesson, to_upload, not on YouTube) set hold_3d_cap. No 3D lesson job was queued on the PC (jobs folder read; the worker was IDLE).
+  * Guard: `upload_guard.py --audit` 0 failures, 0 topic pairs at the start and after the uploads (117 live ids).
+  * Views / YPP: Analytics lifetime 37.8K views, 172.5 h, 86 subs; last 7 days 19.4K views, 69.9 h, +42 subs; Earn tab (data as of Nov 14) 86 subs, 71 qualified h, 11K Shorts views.
+    First line of docs/YPP_PROGRESS.md: 53.8 h/day needed to Jan 31; even all watch time (10 h/day) is below it. docs/ANALYTICS.md entry. NOT read: per-video impressions/CTR/retention.
+  * Same-day topic rule: the builds had put a Mango adventure on the monkey song + monkey lesson day, an elephant lesson and elephant Shorts on elephant-Short days, and three zc_ep08 Shorts on one day.
+    8 entries moved before upload (za_ep04 -> Nov 26 5:30 AM, za_ep05 -> Nov 27 5:30 AM, zc_ep07 -> Nov 25 9:30 AM, zc_ep07 Shorts -> Nov 26 11:30 AM / Nov 27 7:30 AM / Nov 28 7:30 AM,
+    zc_ep08_short2 -> Nov 23 7:30 PM, zc_ep08_short3 -> Nov 24 7:30 PM). Cause fixed: `upload_guard.py --next` now skips days that carry the title's animal (Mango = monkey,
+    Tumble = elephant, Sandy = camel) and gives each Short its own day. The next THEMES lesson (camel eyelashes) repeated the live zc_ep01 part 3: replaced by "What Do Camels Eat in the Desert?".
+  * Uploaded (review.py PASS for all 12, contact sheets and thumbnails looked at, upload_guard OK TO UPLOAD, zlive [] on the content list, Studio dialog read, recorded and pushed one by one):
+    zc_ep08 YWVWVgrELdI Nov 22 9:30 AM; za_ep06 BzCIUSW0f8I Nov 23 5:30 AM; zc_ep08_short2 vMSzqSRHf98 Nov 23 7:30 PM; zc_ep04_short3 VJLdIpc6DUM Nov 24 11:30 AM;
+    zc_ep08_short3 gEASfQ_Onl0 Nov 24 7:30 PM; zc_ep07 DTHR8ud-J34 Nov 25 9:30 AM; za_ep04 kHGre2aHQfY Nov 26 5:30 AM; zc_ep08_short1 35lIdFvap8U Nov 26 7:30 AM;
+    zc_ep07_short1 aXYL9kYmsL4 Nov 26 11:30 AM; za_ep05 MrmVrrNAm3o Nov 27 5:30 AM; zc_ep07_short2 7f5tgx5y8b0 Nov 27 7:30 AM. All custom thumbnails, made for kids.
+    Waiting for the 24-hour window (20 of 20 at 8:40 AM ET): zc_ep07_short3 (Nov 28 7:30 AM, to_upload).
+  * Studio, learned: in this pane the in-page tab switch (Videos -> Shorts chip) does NOT change the list: the Shorts-tab zlive of the first Shorts read the Videos list.
+    Checked afterwards on /videos/short (navigated): every Short uploaded today is there exactly once. Read the Shorts list by navigating to /videos/short (then paste the helpers again).
+    A row still "Pending" (processing) is not counted by the stock zlive(): count Pending as live. Opening the upload dialog works by script alone (menu item click + #select-files-button);
+    the thumbnail "Upload file" button works by script; the date picker needs a real click (often two) and picking the day in the calendar is surer than typing the date.
+  * Song: zoo3d_ep22 "Stretch Up Tall! Giraffe Song for Kids with Milo" (giraffe, zebra, rhino, horse; facts read today at National Geographic and Britannica Kids) written, sung by the
+    PC's song engine, timing rebuilt (sung lyrics differ in the bridge and the coda; 0 bad lines), tail cut at 145.5 s, 4K job zoo3d_ep22y with the new `text_hide_shots` (song words
+    hidden in close, low and dolly shots, placed right of the giraffe) after three rounds of test stills; rendering on the PC since 7:38 AM (3.9 s/frame). The song engine's default
+    1080p job zoo3d_ep22 started by itself first and was stopped with out\zoo3d_ep22\STOP (it will fail its third try and stay undone; it is not a video to use).
+  * Song slots Nov 22-25 3:30 PM were empty at the start; zoo3d_ep18 stays hold_review (Noelson's approval), zoo3d_ep08 hold_fact_check.
+  * Compilations: not started. Public cartoon episodes on one theme (elephant/Tumble) reach 6 on Nov 25 (za_ep01, za_ep02, zc_ep02, za_ep03, zc_ep03, zc_ep07); the first compilation can be built from then.
+  * Build tasks: all four enabled; their last runs SUCCEEDED (list_triggers).
+  * Nothing was set Private or replaced; no old copies to report.

@@ -1,0 +1,102 @@
+{
+ "file": "../cartoon/out/zintro/zintro.mp4",
+ "from": null,
+ "to": null,
+ "seconds": 8.53,
+ "expected_key": null,
+ "key_heard": {
+  "key": "E minor",
+  "fit": 0.89
+ },
+ "held_tones": 9,
+ "voice_like_tones_not_judged": 10,
+ "tones_outside_the_key": [],
+ "tones_between_two_notes": [],
+ "clashes_a_semitone_apart": [],
+ "beat": {
+  "heard_bpm": 95.6
+ },
+ "clicks_at": [],
+ "silences": [],
+ "judged": "level, silences, tempo, balance, and long loud pure tones only; NOT judged because a voice is speaking: short tones, clashes, clicks (use --episode, or --music-only for a file without speech)",
+ "level": {
+  "lufs": -14.6,
+  "range_lu": 5.3,
+  "true_peak_db": -1.5,
+  "clipped_samples": 0,
+  "quietest_second_db": -25.5,
+  "loudest_second_db": -12.4
+ },
+ "balance": {
+  "share_a_phone_speaker_plays_above_300hz": 0.78,
+  "share_below_120hz": 0.0,
+  "share_above_4khz": 0.0
+ },
+ "tones": [
+  {
+   "start": 0.47,
+   "seconds": 0.68,
+   "note": "C5",
+   "cents": 0,
+   "db": -4.5
+  },
+  {
+   "start": 0.77,
+   "seconds": 2.18,
+   "note": "E3",
+   "cents": 1,
+   "db": -9.9
+  },
+  {
+   "start": 1.11,
+   "seconds": 0.68,
+   "note": "E5",
+   "cents": 0,
+   "db": -4.7
+  },
+  {
+   "start": 1.45,
+   "seconds": 2.56,
+   "note": "G5",
+   "cents": 0,
+   "db": -7.3
+  },
+  {
+   "start": 3.2,
+   "seconds": 2.26,
+   "note": "B3",
+   "cents": 0,
+   "db": -10.8
+  },
+  {
+   "start": 3.2,
+   "seconds": 2.26,
+   "note": "D4",
+   "cents": 0,
+   "db": -10.8
+  },
+  {
+   "start": 3.33,
+   "seconds": 0.98,
+   "note": "B5",
+   "cents": 0,
+   "db": -6.8
+  },
+  {
+   "start": 6.87,
+   "seconds": 0.6,
+   "note": "A4",
+   "cents": 0,
+   "db": -25.8
+  },
+  {
+   "start": 7.08,
+   "seconds": 0.64,
+   "note": "E4",
+   "cents": 0,
+   "db": -19.9
+  }
+ ],
+ "not_judged": "whether it sounds pleasant, whether a voice is warm or a word is said right: a person listens for that",
+ "picture": "/home/claude/animated-zoo-media/studio/cartoon/out/zintro/zintro_listen.png"
+}

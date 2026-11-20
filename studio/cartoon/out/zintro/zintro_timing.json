@@ -1,0 +1,169 @@
+{
+ "id": "zintro",
+ "total": 8.552166666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125
+ ],
+ "plan": {
+  "length": 8.6,
+  "shots": 2,
+  "visual_changes": 13,
+  "mean_gap": 0.66,
+  "longest_gap": 2.37,
+  "longest_gap_at": 3.2,
+  "over_6s": [],
+  "places": [
+   "intro_gate"
+  ],
+  "picture_boards": [],
+  "questions": 0,
+  "longest_without_question": 8.6,
+  "first_words_at": 0.62,
+  "shot_mean": 4.28,
+  "fails": [
+   "only 1 places (need 6)",
+   "only 9 s long (need 300)",
+   "the first shot must be the hook question, spoken in the first 5 seconds"
+  ],
+  "words_placed": "3/3",
+  "sync": {
+   "pauses_checked": 0,
+   "onset_err_mean_ms": 0.0,
+   "onset_err_max_ms": 0.0,
+   "suspect_words": [],
+   "cuts": 1,
+   "cuts_on_the_half_beat": 1,
+   "songs_entering_on_a_beat": "1/1",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the zoo gate (main intro) INTRO: the gate"
+  ],
+  [
+   0.12,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   0.74,
+   "action",
+   "mango pops up"
+  ],
+  [
+   1.37,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   2.0,
+   "action",
+   "tula pops up"
+  ],
+  [
+   2.62,
+   "action",
+   "Milo flies in and lands on the gate"
+  ],
+  [
+   3.25,
+   "word",
+   "THE ANIMATED ZOO"
+  ],
+  [
+   5.62,
+   "new shot",
+   "the zoo gate (main intro) INTRO: Milo says the name"
+  ],
+  [
+   5.92,
+   "action",
+   "mango hops"
+  ],
+  [
+   5.92,
+   "action",
+   "tumble hops"
+  ],
+  [
+   6.65,
+   "action",
+   "milo hops"
+  ],
+  [
+   6.65,
+   "action",
+   "sandy hops"
+  ],
+  [
+   6.65,
+   "action",
+   "tula hops"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 0.0,
+   "t1": 5.625,
+   "v0": 0.625,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "The Animated Zoo!",
+   "t0": 5.625,
+   "t1": 7.5521666666666665,
+   "v0": 5.745,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

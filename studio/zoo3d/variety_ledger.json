@@ -1765,5 +1765,41 @@
    "zebra"
   ],
   "new_song": true
+ },
+ {
+  "id": "zoo3d_ep23",
+  "places": [
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "noon"
+   ],
+   [
+    "jungle",
+    "golden"
+   ],
+   [
+    "river",
+    "noon"
+   ],
+   [
+    "beach",
+    "morning"
+   ],
+   [
+    "mountain",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "bear",
+   "hippo",
+   "koala",
+   "tiger"
+  ],
+  "new_song": true
  }
 ]

@@ -409,6 +409,73 @@ Stretch up tall and sing with me!
 
 [Outro - quick and happy]
 Stretch up tall! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep23", bpm=116, key="G Major", seed=923, flavor="marimba, bongos and bright trumpet hooks",
+      title="Stripes and Splashes! Tiger Song for Kids with Milo", card="Stripes and Splashes!", thumb="BIG CAT!",
+      cast=["tiger", "hippo", "bear", "koala"],
+      route=[("chorus1", "night_meadow", "golden"), ("verse1", "autumn_forest", "noon"), ("chorus2", "jungle", "golden"),
+             ("verse2", "river", "noon"), ("bridge1", "beach", "morning"), ("chorus3", "mountain", "sunset")],
+      verses=[["tiger"], ["tiger"], ["tiger"]],
+      words=["STRIPES!", "BIG CAT!", "STRIPES AND SPLASHES!", "SPLASH!", "SWIM!", "MAMA!", "STRIPES AND SPLASHES!"],
+      # facts read Nov 20 2026 7:35 AM ET: National Geographic Kids (animals/mammals/facts/tiger): "the tiger is the largest wild cat in the world";
+      # "coat of reddish-orange with dark stripes"; "No two tigers have the exact same stripes."; "tigers seem to enjoy water and swim well".
+      # Smithsonian's National Zoo (animals/tiger): "reddish-orange coats with prominent black stripes"; "no two tigers have the exact same markings";
+      # "Tigers are adept swimmers"; "Cubs stay with their mothers until they learn to hunt successfully, usually at about 18 to 24 months old."
+      desc="Stripes and splashes! Sing and splash with Milo the bluebird and the tiger, the biggest wild cat in the world: an orange coat with dark stripes, "
+           "stripes that are all its own, a big cat that loves the water, and cubs that stay close to Mama.\nA tiger song for kids. Roar, swim and splash along. Ages 2-6.\n\n"
+           "Facts from National Geographic Kids and Smithsonian's National Zoo (tiger pages).",
+      tags=["tiger song for kids", "big cat song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+Orange and stripy, one, two, three,
+Splash in the water, sing with me!
+
+[Verse 1 - light and bouncy]
+Orange coat and stripes so dark,
+Padding softly through the park!
+Bigger than the house cat, big as can be,
+The biggest wild cat, look and see!
+
+[Pre-Chorus - build up, rising drums]
+Who is big? Who is big?
+The tiger cat is really big!
+
+[Chorus - full band, group vocals]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+Orange and stripy, one, two, three,
+Splash in the water, sing with me!
+
+[Verse 2 - light and bouncy]
+Most cats stay away from the rain,
+But tigers jump in again and again!
+Paddle, paddle, swim so well,
+Splishy, splashy, tiger swell!
+
+[Bridge - claps and stomps, call and response]
+Paddle your paws! (Paddle, paddle!)
+Make a splash! (Splash, splash, splash!)
+Swish your tail! (Swish, swish, swish!)
+Now shake off the water, quick as a flash!
+
+[Verse 3 - light and bouncy]
+Look at the stripes, every one,
+No two tigers have the same, what fun!
+Little cubs stay close to Mama, you see,
+Snuggled up as cozy as can be!
+
+[Pre-Chorus - build up, rising drums]
+Who is big? Who is big?
+The tiger cat is really big!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+We splashed and sang, one, two, three,
+Stripes and splashes, sing with me!
+
+[Outro - quick and happy]
+Stripes and splashes! Bye-bye, friends!"""),
 ]
 
 COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5", "#ffb627"]

@@ -9,3 +9,4 @@ includes Shorts and private/unlisted views, so it is shown only as an upper boun
 | Run date | Earn data as of | Subs | Qualified hours (365 d) | Shorts views (90 d) | Days to Jan 31 | Required h/day | 7-day avg h/day (qualified) | Analytics 7 d (all watch time, views, subs) | Flag |
 |---|---|---|---|---|---|---|---|---|---|
 | 2026-11-19 | Nov 14, 2026 | 86 | 71 | 11K | 73 | 53.8 | not computable yet (first reading) | 69.9 h (<= 10.0 h/day), 19.4K views, +42 subs (Nov 12-18) | BELOW RATE: even all watch time (10 h/day) is under a fifth of the 53.8 h/day the hours route needs |
+| 2026-11-20 | Nov 15, 2026 | 91 | 72 | 11K | 72 | 54.6 | 1.0 (71 -> 72 h between the Earn readings of Nov 14 and Nov 15; one day apart, not yet 7) | 72.7 h (<= 10.4 h/day), 18.6K views, +41 subs (Nov 13-19) | BELOW RATE: qualified hours grow about 1 h/day against 54.6 h/day needed; even all watch time (10.4 h/day) is under a fifth of it. Shorts route: 11K of 10M |

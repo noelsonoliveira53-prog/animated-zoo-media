@@ -698,3 +698,30 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
     New: `engine.py --cuts` prints the camera plan (shot names and frames) for slice re-renders.
   * Left "to_upload" for the Nov 20 6:31 AM run (24-hour window full until 3:00 PM ET today; the 3D cap allows the song only after 5:17 PM ET, when the Nov 18 3D uploads leave the window):
     za_ep07 Sandy and the Flying Scarf (Nov 21 5:30 AM, built by the 8:43 AM task, not gated by this run), zoo3d_ep22 (Nov 22 3:30 PM), zc_ep07_short3 (Nov 28 7:30 AM).
+
+- Cartoon builds folded in on Nov 20 (daily run): za_ep07 "Sandy and the Flying Scarf" (319.9 s), za_ep08 "The Long Walk to the Oasis" (308.3 s), zc_ep09 "What Do Camels Eat in the Desert?"
+  (315.4 s + Shorts 88.3 s each), zc_ep10 "One Hump or Two? Meet the Camels" (315.7 s + Shorts 90.2/88.2/89.0 s). Run notes in docs/cartoon/runs/; their defects are in docs/IMPROVE.md (2026-11-20).
+  Nobody has listened to their voices or tunes (listen.py measures, it does not hear). Not built in any of them: a Short from an adventure, a closing "next adventure" picture.
+
+- Run note Nov 20, daily run (6:47 AM ET -, session_014CFVfXDjuuz64TBr7e8VQV):
+  * Guard: `upload_guard.py --audit` 0 failures, 0 topic pairs at the start (117 live ids) and after the uploads (129).
+  * Views / YPP: Analytics 7 days (Nov 13-19) 18.6K views, 72.7 h, +41 subs, 91 subscribers; Earn tab (data as of Nov 15) 91 subs, 72 qualified h, 11K Shorts views.
+    docs/YPP_PROGRESS.md: 54.6 h/day needed to Jan 31; qualified hours grew 1 h between the Nov 14 and Nov 15 readings. NOT read: per-video impressions, CTR, retention. Command Center not written this run.
+  * Uploaded, all 12 "to_upload" entries (review.py PASS for each, contact sheets looked at: nothing below the quality bar; the blue discs in three Shorts' sheets are the iris wipe;
+    upload_guard OK TO UPLOAD; zlive [] with 30 rows read, long videos on /videos/upload, Shorts on /videos/short; Studio's dialog read; recorded, committed and pushed one by one):
+    za_ep07 KAfMlniFKhA Nov 21 5:30 AM; zc_ep09 ABrZY1ekpVM Nov 22 5:30 PM; zc_ep10 T-hSQaRrjJE Nov 23 9:30 AM; za_ep08 fmx-h1JkpUw Nov 24 5:30 AM;
+    song zoo3d_ep22 Dfe5da7DJS0 Nov 22 3:30 PM (the day's one 3D upload; no 3D upload in the 24 h before it by the commit log);
+    Shorts zc_ep09_short1 ai-WKw6--sI Nov 26 7:30 PM, zc_ep09_short2 PH3W4FAnxJU Nov 27 11:30 AM, zc_ep07_short3 WbRXJjPyrdg Nov 28 7:30 AM, zc_ep09_short3 5MGJ3wn7A5s Nov 28 11:30 AM,
+    zc_ep10_short1 SaEGZ8C9RkA Nov 29 7:30 AM, zc_ep10_short2 DVpKv4ECFGA Nov 30 7:30 AM, zc_ep10_short3 -vsqJwlQm0M Dec 1 7:30 AM. All custom thumbnails (a data: image in the uploader before Next), made for kids.
+    Count by the commit log: 11 of 20 at the start; the Nov 19 morning uploads left the window during the run.
+  * Studio, learned: the whole dialog up to the Schedule panel runs by script in one call (zlive, armFile, Create -> "Upload videos" -> #select-files-button, zfill, the thumbnail's
+    "Upload file" button by script, zsched). The date picker needs a real click and opened on the first click 10 times of 12; check it with a SCREENSHOT before typing (a DOM check
+    said "closed" while it was open, and "open" once when it was not): when it was closed, the typed date went nowhere and the date stayed Nov 21; zread() before Schedule caught it.
+    The description of that upload (zc_ep09_short2) was read back on its Details page afterwards: 724 characters, unchanged.
+  * review.py `--note` writes the note into docs/IMPROVE.md: the gate note must be a real "do better next time" line (my 12 placeholder notes were removed again).
+  * upload_guard.py: `--next` now counts a THEMES title's friend animal (The Long Walk to the Oasis = camel), the cause of za_ep08 landing on the camel-lesson day; `crab` added.
+  * 3D cap: no 3D lesson is to_upload or in_production (zool_ep22 stays hold_3d_cap); the 3D lessons already scheduled stay (e.g. zool_ep20 Nov 22 1:30 PM).
+  * Compilations: not started; no theme has 6 public cartoon episodes yet (elephant/Tumble reaches 6 on Nov 25).
+  * Build tasks: all four Zoo builds enabled, last runs SUCCEEDED (list_triggers). The Gizmo task's run note (Nov 20) says it could not reach the PC render folder twice (docs/IMPROVE.md): that is the Gizmo task's, not changed here.
+  * Nothing was set Private or replaced; no old copies to report. CLAUDE.md: no line changed.
+  * Open slots after this run (long): Nov 21 9:30 AM / 1:30 PM; Nov 22 5:30 AM; Nov 23 1:30 PM / 5:30 PM; Nov 24 9:30 AM / 5:30 PM ... (filled by the daily builds; empty slots stay empty).

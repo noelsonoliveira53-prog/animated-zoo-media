@@ -140,14 +140,18 @@ def themes():
 
 
 ANIMALS = set("lion elephant giraffe zebra hippo tiger bear panda monkey fox koala horse pig cow rhino camel octopus penguin flamingo meerkat snail ant "
-              "owl frog tapir bat anteater macaw eagle dinosaur rex shark whale dolphin turtle sloth kangaroo seal duck chicken sheep goat rabbit".split())
+              "owl frog tapir bat crab anteater macaw eagle dinosaur rex shark whale dolphin turtle sloth kangaroo seal duck chicken sheep goat rabbit".split())
 NAMES = {"mango": "monkey", "tumble": "elephant", "sandy": "camel", "jungle": "rainforest", "rainforest": "rainforest", "dino": "dinosaur"}
 
 
 def animals(t):
     """The animals (and the rainforest topic) a title is about: Mango in the title = monkey, Tumble = elephant (owner's rule: never two uploads on one animal or topic in a day)."""
     w = {re.sub(r"'s$", "", x) for x in re.findall(r"[a-z']+", norm(t))}; w |= {re.sub(r"s$", "", x) for x in w}
-    return {NAMES.get(x, x) for x in w if x in ANIMALS or x in NAMES}
+    a = {NAMES.get(x, x) for x in w if x in ANIMALS or x in NAMES}
+    try: fr = {norm(i[0]): th["friend"] for th in themes() for k in ("adv", "les") for i in th.get(k, [])}
+    except Exception: fr = {}
+    if norm(t) in fr and fr[norm(t)] != t: a |= animals(fr[norm(t)])     # a THEMES title counts its friend (za_ep08 "The Long Walk to the Oasis" = Sandy = camel, Nov 20)
+    return a
 
 
 def free_slots(es, kind, n, start, title=None, avoid_days=()):

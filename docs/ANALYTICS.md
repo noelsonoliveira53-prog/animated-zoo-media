@@ -1,5 +1,14 @@
 # Views check log (newest first)
 
+## 2026-11-20, 7:15 AM ET (The Animated Zoo only; Studio Analytics overview + Earn tab)
+Last 7 days (Nov 13-19): 18.6K views, 72.7 h watch time, +41 subs; total subscribers 91. Last 28 days (Oct 23-Nov 19): 40.6K views, 187.7 h, +91 subs; traffic 91% Suggested videos.
+Top 28 days: Camel Humps Are Full of Fat, Not Water! 5.4K, An Octopus Has 3 Hearts! 4.7K, Where Is My Mama? 3.9K. Last 48 h: 5,256 views; most watched now: T. Rex Tiny Arms, T. Rex Never Met Stegosaurus, What Does the Lion Say?
+Newest upload in the overview: "Baby Elephant Tumble Shares the Last Drink" (za_ep03), 2 views in its first 1 h 29 min.
+Earn tab (data as of Nov 15): 91 subs, 72 qualified watch hours (365 d), 11K qualified Shorts views (90 d). Logged in docs/YPP_PROGRESS.md.
+NOT read: impressions, CTR, AVD / % viewed, retention, likes per video (the hub shows them per video only; not opened this run).
+What's winning: unchanged from Nov 19: fact Shorts with a surprise or question title carry the views; the cartoon long videos have no per-video signal yet.
+Adjustment: none to the grid (the weekly review on Monday Nov 23 decides slot moves).
+
 ## 2026-11-19, 7:00 AM ET (The Animated Zoo only; Studio Analytics overview + Earn tab + Content list)
 Totals: **37.8K views lifetime** (36,394 on Nov 18 6:55 AM), 172.5 h watch time lifetime, 86 subscribers. Last 7 days (Nov 12-18): 19.4K views, 69.9 h, +42 subs.
 Last 28 days: 37.7K views, 172.0 h, +85 subs; traffic 91% Suggested videos. Top 28 days: Camel Humps (Short) 5.2K, Octopus 3 Hearts 4.5K, Where Is My Mama? 3.9K.

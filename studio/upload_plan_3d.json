@@ -2966,10 +2966,28 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep10.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 20 1:50 AM ET by the scheduled 1:47 AM lesson build (session_014CFVfWzLWjjXdMstD7F8d5). In production."
+  "note": "Built Nov 20 by the scheduled 1:47 AM lesson build (session_014CFVfWzLWjjXdMstD7F8d5): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (middle and end of every shot, every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep10.md. NOT uploaded: the daily run schedules it.",
+  "description": "One hump or two? Milo the bluebird flies far away to the snowy Gobi Desert to meet Sandy the baby camel's two-humped camel cousin! A gentle animal lesson for ages 2-6 with questions to answer, things to count and a quiz at the end.\nKids learn that a camel with one hump is a dromedary and a camel with two humps is a Bactrian camel (two humps, like the letter B), that dromedaries are taller and live in hot, dry deserts, that Bactrian camels live in the rocky Gobi Desert, where winters are very cold and snowy, and that Bactrian camels grow a thick, shaggy coat for winter and shed it in big patches in spring.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Kids (Bactrian camel); National Geographic (Bactrian camel); San Diego Zoo Wildlife Alliance Library (camels fact sheet); Lincoln Park Zoo, Denver Zoo and Brookfield Zoo (Bactrian camel); Oakland Zoo and Sydney Zoo (dromedary camel); PBS Nature (camel fact sheet).",
+  "tags": [
+   "one hump or two",
+   "bactrian camel",
+   "dromedary",
+   "camels for kids",
+   "two humps",
+   "baby camel",
+   "Gobi desert",
+   "desert animals for kids",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "COUSINS?!",
+  "seconds": 315.7
  }
 ]

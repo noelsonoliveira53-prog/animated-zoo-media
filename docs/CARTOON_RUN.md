@@ -21,8 +21,13 @@ Evidence: `drafts/growth_test_2026-11/01_audit.md` (lessons lose 61-68% of viewe
 5. **Each Short** opens on its own mystery (the part's first shot), never on a greeting.
 
 ## MAIN INTRO in every new long 2D episode (owner, Nov 20 2026 12:44 PM: "create a main intro for the animated zoo that will be repeated on every episode ... just for future ones")
-`studio/cartoon/intro.py`: the same two shots every time (about 7 s): the dressed-up zoo gate, the friends pop up on the beat while the bells play the
-two-bar Animated Zoo jingle, Milo lands on the arch, "THE ANIMATED ZOO" lands on the path; then Milo says "The Animated Zoo!" and everyone hops.
+`studio/cartoon/intro.py` (made richer on the owner's ask, Nov 20 12:56 PM: "more sophisticated with more details and effects"): the same four shots
+every time (about 15 s), one four-bar tune on bells + the light pop band (C, G, F-C), a cut on each bar line:
+1. the morning sky (turning sun rays, twinkling stars), camera glides down to the gate; 2. the dressed-up gate: the friends pop up on the beat in
+puffs of stars, bunting and balloons bounce in tempo, Milo swoops in with a sparkle trail and lands on the arch; 3. the logo card: turning
+sunburst, badge with a spinning star, THE, rainbow ANIMATED dropping letter by letter, ZOO slamming in with a ding, bear ears on the O's,
+confetti burst, a shine along the letters, Milo flies onto the badge, the friends pop up; 4. Milo says "The Animated Zoo!", the friends hop after
+the line (silently: no sound effect on a spoken word), confetti rains. Never in a 9:16 Short, so it has no 9:16 framing.
 - In the episode file: `from intro import INTRO_STAGES, intro_shots`, `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` in SHOTS
   RIGHT AFTER the hook shots (the episode still opens on its promise). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
 - Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Episodes already built are not changed.

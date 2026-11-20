@@ -281,6 +281,7 @@ SHOTS = [
     S("paper_blue", BOARD, "Next time on Guess With Milo: whose ears are these? Bye-bye, friends!", part=4, tag="next: whose ears", pcam=BOARDP,
       props=[prop("qm", A.qmark, 960, 520, 1.25, p=(960, 560, 1.5))], fx=[PULSE("w:ears", "#{p}qm_w", 1.15, 2)],
       words=[("w:ears", "WHOSE EARS?", .5, .14, 1.1, "sun", (.5, .3), .9), ("w:Bye-bye,", "BYE-BYE!", .5, .74, 1.0, "pill", (.5, .7), .8)]),
+    *intro_shots(),      # the main intro again as the last shots (owner, Nov 20 4:50 PM: at the beginning and at the end of every new long video)
 ]
 for _s in SHOTS:        # a picture board never drifts closer: it only pulls out a little (16:9 and 9:16)
     if _s["place"].startswith("paper") and _s["pcam"] and not _s["pcam2"]: _s["pcam2"] = W(_s["pcam"], 1.04)

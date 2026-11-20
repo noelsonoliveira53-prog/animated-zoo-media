@@ -19,6 +19,20 @@ The picture is rendered once, in English timing. A language is a voice, a transl
 6. `python3 studio/multilang/build.py <episode>` writes `packages/<episode>/` and prints READY or NOT READY. Read `validation-report.json`: every check, and the list of what no machine checked.
 7. Send the owner the track to hear, with the picture. A track goes on YouTube only after a human has listened to it.
 
+## Stories with a cast, the main intro, tunes (added Nov 20 2026 with za_ep09, the first adventure in three languages)
+
+- **A voice per character.** A story's characters keep, in every language, their English offsets from Milo (pitch, formant, speed, loudness): `build.voice_for`.
+  A character whose English voice is a male voice (Tumble: `am_puck`) takes the language's `voice_m` (`pm_alex`, `em_alex`), brought to the English
+  voice's height by `pitch_m` (measured, in `languages.json`) before the character's own offset is added. Each line is made as loud as the same
+  character's English line.
+- **"=" keeps the English recording.** A line that is only `=` in the adaptation is not spoken again: the English audio is used as it is. Used for the
+  main intro's "The Animated Zoo!" (the channel's name; the logo on screen says it in English). The owner decides whether Milo says it in each language.
+- **Tunes played by instruments** (a `sing=` shot whose lines are only `~`: the song moments, the main intro's timing shots) are music: they go into every
+  language's track unchanged. A sung line with WORDS is still refused (lyrics have to be adapted to the same notes first).
+- **The main intro's score** is part of toon.py's own bed, so every language has it without anything being done.
+- **English fields the episode file does not carry** (`educational_topic`, `parent_summary`, hashtags): `studio/cartoon/episodes/lang/<episode>.en.json`.
+- To hear a language over the picture: `ffmpeg -i cartoon/<id>.mp4 -i packages/<id>/audio/track-<code>.wav -map 0:v -map 1:a -vf scale=1280:-2 -c:v libx264 -preset veryfast -crf 23 -c:a aac <out>.mp4`.
+
 ## What the builder keeps the same in every language
 
 The picture, the music and every sound effect: the bed is taken from `toon.py`'s own mix (the report checks that voice + bed reproduces the film's English sound sample for sample), with the music lowered under the ENGLISH lines' positions, so it is the same file in all languages.

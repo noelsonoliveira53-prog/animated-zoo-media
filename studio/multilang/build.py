@@ -38,8 +38,17 @@ def bed_and_voice(film, shots, total, ep):
     return voice, bed, same
 
 
+def voice_for(L, c, ep):
+    """The language's voice for one character. c: the character's English cast entry ({} = Milo / the narrator).
+    A character keeps its own offsets from Milo (higher pitch, smaller head); a male English voice (am_, bm_) takes the language's "voice_m"."""
+    if not c or c.get("voice", ep.get("voice")) == ep.get("voice") and not c.get("pitch") and c.get("formant", 1.0) == 1.0: return L
+    male = c.get("voice", "af")[1] == "m" and "voice_m" in L
+    return dict(L, voice=L["voice_m"] if male else L["voice"], pitch=(L.get("pitch_m", 0) if male else L.get("pitch", 0)) + c.get("pitch", 0),
+                formant=c.get("formant", 1.0) if c.get("formant", 1.0) != 1.0 else L.get("formant", 1.0))
+
+
 def say(text, L, speed):
-    """One line in a language's voice, at Milo's pitch. Cached like sing.say."""
+    """One line in a language's voice, at the character's pitch. Cached like sing.say."""
     h = hashlib.md5(f"{text}|{L['voice']}|{speed:.3f}|{L['tts_lang']}|{L.get('pitch', 0)}|{L.get('formant', 1.0)}".encode()).hexdigest()[:16]; p = os.path.join(sing.CACHE, f"ml_{h}.npy")
     if os.path.exists(p): return np.load(p)
     a, sr = sing.kokoro().create(text, voice=L["voice"], speed=speed, lang=L["tts_lang"]); assert sr == SR
@@ -57,17 +66,21 @@ def fit(lines, shots, L, ep):
     """Every line into its English line's slot (the line's time + the pause after it). A line that is too long is spoken a little faster, never faster than max_speed, never cut."""
     base = ep.get("speed", 0.9); mx = CONF["fit"]["max_speed"]; endgap = CONF["fit"]["min_end_gap_s"]; spoken = [s for s in shots if s["audio"] is not None and not s.get("sung")]
     assert len(lines) == len(spoken), f"{len(lines)} lines for {len(spoken)} spoken shots"
-    target = float(np.median([active_rms(s["audio"]) for s in spoken])); out = []
+    cast = ep.get("cast", {}); out = []
     for s, text in zip(spoken, lines):
-        slot = s["t1"] - s["v0"] - endgap; sp = base; a = say(text, L, sp)
+        slot = s["t1"] - s["v0"] - endgap; c = cast.get(s.get("who") or "", {})
+        if text.strip() == "=":       # the line stays in English (the channel's name in the main intro): the English recording itself
+            out.append({"tag": s["tag"], "v0": round(s["v0"], 3), "text": s["say"], "english": s["say"], "speed": c.get("speed", base), "seconds": round(s["dur"], 2), "slot": round(slot, 2),
+                        "english_seconds": round(s["dur"], 2), "fits": True, "over": 0.0, "audio": s["audio"], "kept_english": True}); continue
+        V = voice_for(L, c, ep); sp0 = c.get("speed", base); sp = sp0; a = say(text, V, sp)
         for _ in range(3):
             d = len(a) / SR
             if d <= slot or sp >= mx: break
-            sp = min(mx, round(sp * d / slot * 1.02 + 0.005, 2)); a = say(text, L, sp)
-        d = len(a) / SR; g = min(2.0, max(0.5, target / (active_rms(a) + 1e-9))); a = a * g; pk = float(np.abs(a).max())
+            sp = min(mx, round(sp * d / slot * 1.02 + 0.005, 2)); a = say(text, V, sp)
+        d = len(a) / SR; g = min(2.0, max(0.5, active_rms(s["audio"]) / (active_rms(a) + 1e-9))); a = a * g; pk = float(np.abs(a).max())      # as loud as the same character's English line
         if pk > .9: a = a * (.9 / pk)
-        out.append({"tag": s["tag"], "v0": round(s["v0"], 3), "text": text, "english": s["say"], "speed": sp, "seconds": round(d, 2), "slot": round(slot, 2), "english_seconds": round(s["dur"], 2),
-                    "fits": d <= slot, "over": round(max(0.0, d - slot), 2), "audio": a})
+        out.append({"tag": s["tag"], "v0": round(s["v0"], 3), "text": text, "english": s["say"], "speed": sp, "base_speed": sp0, "seconds": round(d, 2), "slot": round(slot, 2), "english_seconds": round(s["dur"], 2),
+                    "fits": d <= slot, "over": round(max(0.0, d - slot), 2), "audio": a, "who": s.get("who") or "milo", "voice": V["voice"]})
     return out
 
 
@@ -173,12 +186,18 @@ def main():
     check("timing of this build equals the rendered master", abs(total - vdur) < 0.08, f"build {total:.3f} s, master video {vdur:.3f} s")
     check("music and effects bed is toon.py's own (voice + bed reproduces the film's English mix sample for sample)", same, "np.allclose with toon.mix_audio")
     codes = [c for c in CONF["languages"] if c != default and os.path.exists(os.path.join(CART, "episodes", "lang", f"{eid}.{c}.json"))]
-    if codes and any(s.get("sung") for s in shots): sys.exit("this episode has sung shots: songs in other languages are not built yet (lyrics adapted to the same notes), see docs/multilang/ADD_A_LANGUAGE.md")
+    worded = [s["tag"] for s in shots if s.get("sung") and any(any(ch.isalpha() for ch in ln["text"]) for ln in s["sing"]["lines"])]
+    if codes and worded: sys.exit(f"this episode has sung lines with words ({worded}): songs in other languages are not built yet (lyrics adapted to the same notes), see docs/multilang/ADD_A_LANGUAGE.md")
+    tunes = np.zeros(n, np.float32)      # tunes played by instruments (sing lines of "~" only: the song moments, the main intro's timing shots): music, the same in every language
+    for s in shots:
+        if s.get("sung") and s["audio"] is not None: a0 = int(s["v0"] * SR); tunes[a0:a0 + len(s["audio"])] += s["audio"][:n - a0] * 0.95
+    voice_en_spoken = voice_en - tunes; bed_ml = bed + tunes
     tr = {c: json.load(open(os.path.join(CART, "episodes", "lang", f"{eid}.{c}.json"), encoding="utf-8")) for c in codes}
     fitted = {c: fit(tr[c]["lines"], shots, CONF["languages"][c], ep) for c in codes}
     for c in codes:
         bad = [f for f in fitted[c] if not f["fits"]]; fast = [f for f in fitted[c] if f["speed"] > ep.get("speed", 0.9) + 1e-6]
-        print(f"{c}: {len(fitted[c])} lines, {len(fast)} spoken faster than {ep.get('speed')}, {len(bad)} do not fit")
+        fast = [f for f in fitted[c] if f["speed"] > f.get("base_speed", f["speed"]) + 1e-6]
+        print(f"{c}: {len(fitted[c])} lines, {len(fast)} spoken faster than the English pace, {sum(1 for f in fitted[c] if f.get('kept_english'))} kept in English, {len(bad)} do not fit")
         for f in bad: print(f"   TOO LONG by {f['over']} s ({f['seconds']} s in a slot of {f['slot']} s, English {f['english_seconds']} s): {f['text']}   <- {f['english']}")
     if "--fit" in sys.argv: return
     pk = os.path.join(REPO, "packages", eid)
@@ -194,7 +213,7 @@ def main():
         wav48(v, os.path.join(pk, "audio", f"narration-{c}.wav"), vdur, False)
         if c == default:        # the English track is the master's own sound, not a new mix
             subprocess.run(["ffmpeg", "-y", "-loglevel", "error", "-i", master, "-vn", "-af", f"apad=whole_dur={vdur:.4f}", "-t", f"{vdur:.4f}", "-ar", "48000", "-ac", "1", "-c:a", "pcm_s16le", os.path.join(pk, "audio", f"track-{c}.wav")], check=True); exact(os.path.join(pk, "audio", f"track-{c}.wav"), vdur)
-        else: wav48(np.clip(v + bed, -1, 1), os.path.join(pk, "audio", f"track-{c}.wav"), vdur, True)
+        else: wav48(np.clip(v + bed_ml, -1, 1), os.path.join(pk, "audio", f"track-{c}.wav"), vdur, True)
     # ---- captions
     cues = {default: cues_english(shots)}
     for c in codes: cues[c] = cues_fitted(fitted[c])
@@ -205,9 +224,9 @@ def main():
     T0 = mod.THUMBS[eid]; metas = {}
     for c in [default] + codes:
         if c == default:
-            m = {"localized_title": ep["title"], "localized_description": ep["description"], "educational_topic": "An elephant's trunk: what it is and six things it does",
-                 "parent_summary": "A 5-minute lesson with Milo the bluebird. Your child learns that a trunk is a nose and an upper lip, and six things an elephant does with it: smell, grab, drink, spray, breathe under water and hug. Questions with thinking time and a recap at the end. Nothing scary.",
-                 "primary_keywords": ep["tags"][:3], "secondary_keywords": ep["tags"][3:], "hashtags": ["#elephants", "#animalsforkids", "#learning"], "thumb_text": ep["thumb_text"]}
+            enp = os.path.join(CART, "episodes", "lang", f"{eid}.en.json"); enm = json.load(open(enp, encoding="utf-8"))["metadata"] if os.path.exists(enp) else {}      # the English fields the episode file does not carry
+            m = {"localized_title": ep["title"], "localized_description": ep["description"], "educational_topic": enm.get("educational_topic", ""), "parent_summary": enm.get("parent_summary", ""),
+                 "primary_keywords": ep["tags"][:3], "secondary_keywords": ep["tags"][3:], "hashtags": enm.get("hashtags", []), "thumb_text": ep["thumb_text"]}
         else: m = dict(tr[c]["metadata"])
         tj = os.path.join(pk, "thumbnails", f"thumbnail-{c}.jpg"); w0 = T0["words"][0]; k = min(1.0, len(w0[0]) / max(1, len(m["thumb_text"])))        # longer words are set a little smaller, so they stay where the English words are
         t = dict(T0); t["words"] = [(m["thumb_text"], w0[1], w0[2], round(w0[3] * k)) + tuple(w0[4:])]
@@ -227,17 +246,18 @@ def main():
     for c in [default] + codes:
         tp = os.path.join(pk, "audio", f"track-{c}.wav"); a, sr = sf.read(tp); d = len(a) / sr; v = voices[c]
         lufs = subprocess.run(["ffmpeg", "-hide_banner", "-nostats", "-i", tp, "-af", "ebur128", "-f", "null", "-"], capture_output=True, text=True).stderr; I = float(re.findall(r"I:\s+(-?[\d.]+) LUFS", lufs)[-1])
+        v = voice_en_spoken if c == default else v      # the spoken voice alone (instrument tunes are music)
         sp = np.abs(v) > 0.01; vr = 20 * np.log10(np.sqrt(np.mean(v[sp] ** 2))); br = 20 * np.log10(np.sqrt(np.mean(bed[sp] ** 2)) + 1e-9)
         info = {"track": f"audio/track-{c}.wav", "seconds": round(d, 3), "loudness_lufs": I, "peak": round(float(np.abs(a).max()), 3), "voice_over_bed_db": round(float(vr - br), 1), "longest_stretch_without_voice_s": round(longest_silence(v), 2)}
         check(f"{c}: track is as long as the video", abs(d - vdur) < 0.05, f"{d:.3f} s against {vdur:.3f} s")
         check(f"{c}: track is not clipped", float(np.abs(a).max()) < 0.999, f"peak {info['peak']}")
         check(f"{c}: the voice is well above the music", vr - br >= 10, f"voice {vr - br:.1f} dB above the music and effects while it speaks")
         if c != default:
-            F = fitted[c]; bad = [f for f in F if not f["fits"]]; info.update(lines=len(F), lines_spoken_faster=sum(1 for f in F if f["speed"] > ep.get("speed", 0.9) + 1e-6), fastest_speed=max(f["speed"] for f in F),
+            F = fitted[c]; bad = [f for f in F if not f["fits"]]; info.update(lines=len(F), lines_spoken_faster=sum(1 for f in F if f["speed"] > f.get("base_speed", f["speed"]) + 1e-6), fastest_speed=max(f["speed"] for f in F), lines_kept_in_english=sum(1 for f in F if f.get("kept_english")),
                                                                        mean_seconds_against_english=round(float(np.mean([f["seconds"] / f["english_seconds"] for f in F])), 2))
             check(f"{c}: every line ends inside its slot (no clipped sentence, no line running into the next)", not bad, f"{len(F) - len(bad)} of {len(F)} fit" + ("; too long: " + " | ".join(f["text"] for f in bad) if bad else ""))
-            check(f"{c}: no long silence the English does not have", info["longest_stretch_without_voice_s"] <= longest_silence(voice_en) + 0.8, f"{info['longest_stretch_without_voice_s']} s (English {longest_silence(voice_en):.2f} s)")
-            info["translator_notes"] = tr[c].get("translator_notes", []); info["line_table"] = [{k: f[k] for k in ("v0", "seconds", "slot", "speed", "text", "english")} for f in F]
+            check(f"{c}: no long silence the English does not have", info["longest_stretch_without_voice_s"] <= longest_silence(voice_en_spoken) + 0.8, f"{info['longest_stretch_without_voice_s']} s (English {longest_silence(voice_en_spoken):.2f} s)")
+            info["translator_notes"] = tr[c].get("translator_notes", []); info["line_table"] = [{k: f.get(k) for k in ("v0", "who", "voice", "seconds", "slot", "speed", "text", "english")} for f in F]
         q, nobom = read_srt(os.path.join(pk, "captions", f"captions-{c}.srt")); order = all(q[k][0] < q[k][1] and (k == 0 or q[k - 1][1] <= q[k][0] + 1e-6) for k in range(len(q)))
         starts = [s["v0"] + (s["words"][0][1] if c == default and s["words"] else 0) for s in spoken]; off = max(min(abs(cu[0] - st) for cu in q) for st in starts)
         rows = max(len(r) for cu in q for r in cu[2].split("\n")); info.update(captions=f"captions/captions-{c}.srt", cues=len(q), longest_caption_row=rows)
@@ -247,7 +267,7 @@ def main():
     rep["not_checked_by_machine"] = ["how the voices sound and whether each word is pronounced right (nobody here can listen): one human listen per language",
                                      "regional vocabulary and age fit were checked by reading every line, not by a native speaker",
                                      "the picture's own words (caption line, big words, answer signs) are English in every language in this test"]
-    rep["facts"] = "The English script's facts were read at their sources on Nov 16 (see the episode file's header); the adaptations state the same facts, line for line."
+    rep["facts"] = "The English script's facts were read at their sources on the day the script was written (see the episode file's header); the adaptations state the same facts, line for line."
     rep["ready"] = all(c["pass"] for c in rep["checks"])
     json.dump(rep, open(os.path.join(pk, "validation-report.json"), "w", encoding="utf-8"), indent=1, ensure_ascii=False)
     # ---- dry-run manifest: what would be sent to YouTube, in order. Nothing is sent by this script.

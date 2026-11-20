@@ -1,0 +1,1789 @@
+{
+ "id": "zc_ep11_short2",
+ "total": 90.52391666666672,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0
+ ],
+ "plan": {
+  "length": 90.5,
+  "shots": 18,
+  "visual_changes": 72,
+  "mean_gap": 1.26,
+  "longest_gap": 3.8,
+  "longest_gap_at": 6.8,
+  "over_6s": [],
+  "places": [
+   "sandtrail",
+   "savanna",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 10,
+  "longest_without_question": 16.2,
+  "first_words_at": 0.42,
+  "shot_mean": 5.03,
+  "fails": [],
+  "words_placed": "190/190",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 23.3,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sandy path hook: two halves"
+  ],
+  [
+   2.28,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "the sandy path print 2"
+  ],
+  [
+   6.82,
+   "word",
+   "2"
+  ],
+  [
+   10.62,
+   "new shot",
+   "the sandy path question 2a"
+  ],
+  [
+   11.16,
+   "sign",
+   "ZEBRA"
+  ],
+  [
+   11.51,
+   "sign",
+   "GIRAFFE"
+  ],
+  [
+   14.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   14.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.4,
+   "thinking dot",
+   "3"
+  ],
+  [
+   15.89,
+   "answer",
+   "GIRAFFE"
+  ],
+  [
+   17.19,
+   "new place",
+   "the sunny savanna the giraffe walks in"
+  ],
+  [
+   17.32,
+   "action",
+   "gir walks"
+  ],
+  [
+   18.63,
+   "word",
+   "GIRAFFE!"
+  ],
+  [
+   20.31,
+   "new place",
+   "the picture board board: two hooves"
+  ],
+  [
+   23.49,
+   "word",
+   "2 HOOVES"
+  ],
+  [
+   25.0,
+   "new shot",
+   "the picture board board: count hooves"
+  ],
+  [
+   26.76,
+   "word",
+   "1"
+  ],
+  [
+   27.05,
+   "word",
+   "2"
+  ],
+  [
+   28.12,
+   "new place",
+   "the picture board (blue) board: dinner plate"
+  ],
+  [
+   28.91,
+   "word",
+   "BIG!"
+  ],
+  [
+   31.56,
+   "new place",
+   "the sunny savanna how does it walk"
+  ],
+  [
+   34.78,
+   "action",
+   "gir looks"
+  ],
+  [
+   34.78,
+   "word",
+   "?"
+  ],
+  [
+   38.12,
+   "new shot",
+   "the sunny savanna legs: one side, then the other"
+  ],
+  [
+   40.63,
+   "action",
+   "the giraffe's near legs step together"
+  ],
+  [
+   40.63,
+   "picture",
+   "a1"
+  ],
+  [
+   40.63,
+   "word",
+   "THIS SIDE!"
+  ],
+  [
+   42.95,
+   "action",
+   "the giraffe's far legs step together"
+  ],
+  [
+   42.95,
+   "word",
+   "THAT SIDE!"
+  ],
+  [
+   44.06,
+   "new shot",
+   "the sunny savanna pace walk"
+  ],
+  [
+   44.65,
+   "action",
+   "the giraffe's near legs step together"
+  ],
+  [
+   44.65,
+   "word",
+   "THIS SIDE!"
+  ],
+  [
+   45.22,
+   "action",
+   "the giraffe's near legs step together"
+  ],
+  [
+   46.26,
+   "action",
+   "the giraffe's far legs step together"
+  ],
+  [
+   46.26,
+   "word",
+   "THAT SIDE!"
+  ],
+  [
+   46.9,
+   "action",
+   "the giraffe's far legs step together"
+  ],
+  [
+   48.12,
+   "new shot",
+   "the sunny savanna legs do not bump"
+  ],
+  [
+   49.15,
+   "action",
+   "the giraffe's near legs step together"
+  ],
+  [
+   50.24,
+   "action",
+   "the giraffe's far legs step together"
+  ],
+  [
+   51.39,
+   "word",
+   "NO BUMP!"
+  ],
+  [
+   52.19,
+   "new shot",
+   "the sunny savanna baby giraffe stands"
+  ],
+  [
+   52.57,
+   "word",
+   "BABY!"
+  ],
+  [
+   53.79,
+   "action",
+   "the baby giraffe stands up"
+  ],
+  [
+   54.57,
+   "action",
+   "calf walks"
+  ],
+  [
+   56.81,
+   "action",
+   "gir nods"
+  ],
+  [
+   57.81,
+   "new shot",
+   "the sunny savanna wobble wobble"
+  ],
+  [
+   57.91,
+   "action",
+   "the baby giraffe wobbles"
+  ],
+  [
+   57.91,
+   "word",
+   "WOBBLE!"
+  ],
+  [
+   60.31,
+   "new place",
+   "the zoo gate stand tall"
+  ],
+  [
+   62.76,
+   "action",
+   "milo hops"
+  ],
+  [
+   62.76,
+   "word",
+   "STRETCH!"
+  ],
+  [
+   66.25,
+   "new place",
+   "the sunny savanna say it: two hooves"
+  ],
+  [
+   66.42,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   68.9,
+   "action",
+   "gir nods"
+  ],
+  [
+   70.31,
+   "new place",
+   "the zoo gate walk like a giraffe"
+  ],
+  [
+   72.37,
+   "action",
+   "milo hops"
+  ],
+  [
+   72.37,
+   "word",
+   "THIS SIDE!"
+  ],
+  [
+   73.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   74.0,
+   "action",
+   "milo hops"
+  ],
+  [
+   74.63,
+   "action",
+   "milo hops"
+  ],
+  [
+   78.12,
+   "new place",
+   "the picture board (pink) question 2b"
+  ],
+  [
+   81.54,
+   "sign",
+   "TWO"
+  ],
+  [
+   81.89,
+   "sign",
+   "TEN"
+  ],
+  [
+   82.65,
+   "word",
+   "?"
+  ],
+  [
+   83.14,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.48,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.97,
+   "answer",
+   "TWO"
+  ],
+  [
+   86.25,
+   "new place",
+   "the sunny savanna super thinking"
+  ],
+  [
+   86.4,
+   "word",
+   "TWO!"
+  ],
+  [
+   88.64,
+   "action",
+   "the giraffe's near legs step together"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "sandtrail",
+   "say": "A footprint with two halves! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 3.0560416666666668,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "footprint",
+     0.08,
+     0.66
+    ],
+    [
+     "with",
+     0.66,
+     0.82
+    ],
+    [
+     "two",
+     0.82,
+     1.01
+    ],
+    [
+     "halves!",
+     1.01,
+     1.6
+    ],
+    [
+     "Guess",
+     1.86,
+     2.2
+    ],
+    [
+     "with",
+     2.2,
+     2.36
+    ],
+    [
+     "Milo!",
+     2.36,
+     3.056
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: two halves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Here is another footprint. Look! It has two halves, side by side. Whose foot made it?",
+   "t0": 3.75,
+   "t1": 10.625,
+   "v0": 4.016041666666666,
+   "dur": 6.11625,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.31
+    ],
+    [
+     "is",
+     0.31,
+     0.44
+    ],
+    [
+     "another",
+     0.44,
+     0.78
+    ],
+    [
+     "footprint.",
+     0.78,
+     1.52
+    ],
+    [
+     "Look!",
+     1.92,
+     2.31
+    ],
+    [
+     "It",
+     2.48,
+     2.58
+    ],
+    [
+     "has",
+     2.58,
+     2.8
+    ],
+    [
+     "two",
+     2.8,
+     3.04
+    ],
+    [
+     "halves,",
+     3.04,
+     3.52
+    ],
+    [
+     "side",
+     3.52,
+     3.99
+    ],
+    [
+     "by",
+     3.99,
+     4.24
+    ],
+    [
+     "side.",
+     4.24,
+     4.82
+    ],
+    [
+     "Whose",
+     5.11,
+     5.36
+    ],
+    [
+     "foot",
+     5.36,
+     5.57
+    ],
+    [
+     "made",
+     5.57,
+     5.84
+    ],
+    [
+     "it?",
+     5.84,
+     6.116
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "print 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Is it the zebra? Or is it the giraffe?",
+   "t0": 10.625,
+   "t1": 17.1875,
+   "v0": 10.672291666666666,
+   "dur": 2.898,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.28
+    ],
+    [
+     "it",
+     0.28,
+     0.38
+    ],
+    [
+     "the",
+     0.38,
+     0.49
+    ],
+    [
+     "zebra?",
+     0.49,
+     1.16
+    ],
+    [
+     "Or",
+     1.45,
+     1.68
+    ],
+    [
+     "is",
+     1.68,
+     1.88
+    ],
+    [
+     "it",
+     1.88,
+     1.99
+    ],
+    [
+     "the",
+     1.99,
+     2.08
+    ],
+    [
+     "giraffe?",
+     2.08,
+     2.898
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "It is the giraffe!",
+   "t0": 17.1875,
+   "t1": 20.3125,
+   "v0": 17.310291666666668,
+   "dur": 1.3212916666666668,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.19
+    ],
+    [
+     "is",
+     0.19,
+     0.41
+    ],
+    [
+     "the",
+     0.41,
+     0.5
+    ],
+    [
+     "giraffe!",
+     0.5,
+     1.32
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the giraffe walks in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here is the fun fact. A giraffe has two hooves on each foot!",
+   "t0": 20.3125,
+   "t1": 25.0,
+   "v0": 20.371583333333337,
+   "dur": 4.2095416666666665,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.33
+    ],
+    [
+     "is",
+     0.33,
+     0.48
+    ],
+    [
+     "the",
+     0.48,
+     0.56
+    ],
+    [
+     "fun",
+     0.56,
+     0.96
+    ],
+    [
+     "fact.",
+     0.96,
+     1.56
+    ],
+    [
+     "A",
+     1.93,
+     2.0
+    ],
+    [
+     "giraffe",
+     2.0,
+     2.61
+    ],
+    [
+     "has",
+     2.61,
+     2.84
+    ],
+    [
+     "two",
+     2.84,
+     3.12
+    ],
+    [
+     "hooves",
+     3.12,
+     3.43
+    ],
+    [
+     "on",
+     3.43,
+     3.52
+    ],
+    [
+     "each",
+     3.52,
+     3.77
+    ],
+    [
+     "foot!",
+     3.77,
+     4.21
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: two hooves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Count the hooves with me. One, two!",
+   "t0": 25.0,
+   "t1": 28.125,
+   "v0": 25.121125000000006,
+   "dur": 2.519625,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.31
+    ],
+    [
+     "the",
+     0.31,
+     0.39
+    ],
+    [
+     "hooves",
+     0.39,
+     0.82
+    ],
+    [
+     "with",
+     0.82,
+     0.97
+    ],
+    [
+     "me.",
+     0.97,
+     1.32
+    ],
+    [
+     "One,",
+     1.64,
+     1.93
+    ],
+    [
+     "two!",
+     1.93,
+     2.52
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: count hooves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "And its feet are big! As big as a dinner plate.",
+   "t0": 28.125,
+   "t1": 31.5625,
+   "v0": 28.18075000000001,
+   "dur": 3.1595416666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.19
+    ],
+    [
+     "its",
+     0.19,
+     0.4
+    ],
+    [
+     "feet",
+     0.4,
+     0.62
+    ],
+    [
+     "are",
+     0.62,
+     0.73
+    ],
+    [
+     "big!",
+     0.73,
+     1.21
+    ],
+    [
+     "As",
+     1.53,
+     1.77
+    ],
+    [
+     "big",
+     1.77,
+     2.11
+    ],
+    [
+     "as",
+     2.11,
+     2.23
+    ],
+    [
+     "a",
+     2.23,
+     2.28
+    ],
+    [
+     "dinner",
+     2.28,
+     2.6
+    ],
+    [
+     "plate.",
+     2.6,
+     3.16
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: dinner plate",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "How does a giraffe walk, on such long legs?",
+   "t0": 31.5625,
+   "t1": 38.125,
+   "v0": 31.88029166666668,
+   "dur": 2.896916666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.32
+    ],
+    [
+     "a",
+     0.32,
+     0.37
+    ],
+    [
+     "giraffe",
+     0.37,
+     0.97
+    ],
+    [
+     "walk,",
+     0.97,
+     1.46
+    ],
+    [
+     "on",
+     1.58,
+     1.73
+    ],
+    [
+     "such",
+     1.73,
+     2.02
+    ],
+    [
+     "long",
+     2.02,
+     2.36
+    ],
+    [
+     "legs?",
+     2.36,
+     2.897
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "how does it walk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "It moves the two legs on one side together. Then the two legs on the other side!",
+   "t0": 38.125,
+   "t1": 44.0625,
+   "v0": 38.31720833333335,
+   "dur": 5.425291666666666,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.15
+    ],
+    [
+     "moves",
+     0.15,
+     0.6
+    ],
+    [
+     "the",
+     0.6,
+     0.7
+    ],
+    [
+     "two",
+     0.7,
+     1.03
+    ],
+    [
+     "legs",
+     1.03,
+     1.47
+    ],
+    [
+     "on",
+     1.47,
+     1.61
+    ],
+    [
+     "one",
+     1.61,
+     1.92
+    ],
+    [
+     "side",
+     1.92,
+     2.31
+    ],
+    [
+     "together.",
+     2.31,
+     2.87
+    ],
+    [
+     "Then",
+     3.35,
+     3.58
+    ],
+    [
+     "the",
+     3.58,
+     3.66
+    ],
+    [
+     "two",
+     3.66,
+     3.99
+    ],
+    [
+     "legs",
+     3.99,
+     4.38
+    ],
+    [
+     "on",
+     4.38,
+     4.5
+    ],
+    [
+     "the",
+     4.5,
+     4.63
+    ],
+    [
+     "other",
+     4.63,
+     4.84
+    ],
+    [
+     "side!",
+     4.84,
+     5.42
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "legs: one side, then the other",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Look! This side, this side. That side, that side!",
+   "t0": 44.0625,
+   "t1": 48.125,
+   "v0": 44.28250000000001,
+   "dur": 3.3962916666666665,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.37
+    ],
+    [
+     "This",
+     0.37,
+     0.6
+    ],
+    [
+     "side,",
+     0.6,
+     0.94
+    ],
+    [
+     "this",
+     0.94,
+     1.11
+    ],
+    [
+     "side.",
+     1.11,
+     1.63
+    ],
+    [
+     "That",
+     1.98,
+     2.21
+    ],
+    [
+     "side,",
+     2.21,
+     2.62
+    ],
+    [
+     "that",
+     2.62,
+     2.84
+    ],
+    [
+     "side!",
+     2.84,
+     3.396
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "pace walk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "That way, its front legs and its back legs do not bump!",
+   "t0": 48.125,
+   "t1": 52.1875,
+   "v0": 48.21879166666668,
+   "dur": 3.5934166666666667,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.26
+    ],
+    [
+     "way,",
+     0.26,
+     0.73
+    ],
+    [
+     "its",
+     0.73,
+     0.93
+    ],
+    [
+     "front",
+     0.93,
+     1.2
+    ],
+    [
+     "legs",
+     1.2,
+     1.72
+    ],
+    [
+     "and",
+     1.72,
+     1.87
+    ],
+    [
+     "its",
+     1.87,
+     2.02
+    ],
+    [
+     "back",
+     2.02,
+     2.36
+    ],
+    [
+     "legs",
+     2.36,
+     2.76
+    ],
+    [
+     "do",
+     2.76,
+     2.91
+    ],
+    [
+     "not",
+     2.91,
+     3.17
+    ],
+    [
+     "bump!",
+     3.17,
+     3.59
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "legs do not bump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "And a baby giraffe can stand up and walk, about an hour after it is born!",
+   "t0": 52.1875,
+   "t1": 57.8125,
+   "v0": 52.35220833333335,
+   "dur": 4.99725,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.17
+    ],
+    [
+     "a",
+     0.17,
+     0.22
+    ],
+    [
+     "baby",
+     0.22,
+     0.68
+    ],
+    [
+     "giraffe",
+     0.68,
+     1.24
+    ],
+    [
+     "can",
+     1.24,
+     1.44
+    ],
+    [
+     "stand",
+     1.44,
+     1.91
+    ],
+    [
+     "up",
+     1.91,
+     2.1
+    ],
+    [
+     "and",
+     2.1,
+     2.22
+    ],
+    [
+     "walk,",
+     2.22,
+     2.76
+    ],
+    [
+     "about",
+     3.11,
+     3.36
+    ],
+    [
+     "an",
+     3.36,
+     3.44
+    ],
+    [
+     "hour",
+     3.44,
+     3.84
+    ],
+    [
+     "after",
+     3.84,
+     4.22
+    ],
+    [
+     "it",
+     4.22,
+     4.3
+    ],
+    [
+     "is",
+     4.3,
+     4.46
+    ],
+    [
+     "born!",
+     4.46,
+     4.997
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "baby giraffe stands",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Wobble, wobble, up it goes!",
+   "t0": 57.8125,
+   "t1": 60.3125,
+   "v0": 57.88945833333335,
+   "dur": 2.0420416666666665,
+   "words": [
+    [
+     "Wobble,",
+     0.02,
+     0.74
+    ],
+    [
+     "wobble,",
+     0.74,
+     1.18
+    ],
+    [
+     "up",
+     1.18,
+     1.38
+    ],
+    [
+     "it",
+     1.38,
+     1.49
+    ],
+    [
+     "goes!",
+     1.49,
+     2.02
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "wobble wobble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Stand up tall, like a giraffe. Stretch!",
+   "t0": 60.3125,
+   "t1": 66.25,
+   "v0": 60.47150000000002,
+   "dur": 2.9957083333333334,
+   "words": [
+    [
+     "Stand",
+     0.01,
+     0.42
+    ],
+    [
+     "up",
+     0.42,
+     0.55
+    ],
+    [
+     "tall,",
+     0.55,
+     0.99
+    ],
+    [
+     "like",
+     0.99,
+     1.19
+    ],
+    [
+     "a",
+     1.19,
+     1.23
+    ],
+    [
+     "giraffe.",
+     1.23,
+     1.99
+    ],
+    [
+     "Stretch!",
+     2.29,
+     2.996
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "stand tall",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Say it with me. A giraffe has two hooves on each foot!",
+   "t0": 66.25,
+   "t1": 70.3125,
+   "v0": 66.40720833333336,
+   "dur": 3.5777916666666667,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.39
+    ],
+    [
+     "with",
+     0.39,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.93
+    ],
+    [
+     "A",
+     1.32,
+     1.39
+    ],
+    [
+     "giraffe",
+     1.39,
+     1.99
+    ],
+    [
+     "has",
+     1.99,
+     2.22
+    ],
+    [
+     "two",
+     2.22,
+     2.49
+    ],
+    [
+     "hooves",
+     2.49,
+     2.78
+    ],
+    [
+     "on",
+     2.78,
+     2.88
+    ],
+    [
+     "each",
+     2.88,
+     3.12
+    ],
+    [
+     "foot!",
+     3.12,
+     3.578
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: two hooves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you walk like a giraffe? This side, this side. That side, that side!",
+   "t0": 70.3125,
+   "t1": 78.125,
+   "v0": 70.52500000000003,
+   "dur": 4.836041666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.15
+    ],
+    [
+     "you",
+     0.15,
+     0.28
+    ],
+    [
+     "walk",
+     0.28,
+     0.6
+    ],
+    [
+     "like",
+     0.6,
+     0.77
+    ],
+    [
+     "a",
+     0.77,
+     0.8
+    ],
+    [
+     "giraffe?",
+     0.8,
+     1.57
+    ],
+    [
+     "This",
+     1.84,
+     2.13
+    ],
+    [
+     "side,",
+     2.13,
+     2.5
+    ],
+    [
+     "this",
+     2.5,
+     2.68
+    ],
+    [
+     "side.",
+     2.68,
+     3.17
+    ],
+    [
+     "That",
+     3.47,
+     3.69
+    ],
+    [
+     "side,",
+     3.69,
+     4.1
+    ],
+    [
+     "that",
+     4.1,
+     4.29
+    ],
+    [
+     "side!",
+     4.29,
+     4.836
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "walk like a giraffe",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Quick check! How many hooves are on each giraffe foot? Two, or ten?",
+   "t0": 78.125,
+   "t1": 86.25,
+   "v0": 78.3010416666667,
+   "dur": 4.348875,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.21
+    ],
+    [
+     "check!",
+     0.21,
+     0.63
+    ],
+    [
+     "How",
+     0.63,
+     0.81
+    ],
+    [
+     "many",
+     0.81,
+     1.03
+    ],
+    [
+     "hooves",
+     1.03,
+     1.37
+    ],
+    [
+     "are",
+     1.37,
+     1.43
+    ],
+    [
+     "on",
+     1.43,
+     1.57
+    ],
+    [
+     "each",
+     1.57,
+     1.86
+    ],
+    [
+     "giraffe",
+     1.86,
+     2.35
+    ],
+    [
+     "foot?",
+     2.35,
+     2.84
+    ],
+    [
+     "Two,",
+     3.24,
+     3.63
+    ],
+    [
+     "or",
+     3.63,
+     3.83
+    ],
+    [
+     "ten?",
+     3.83,
+     4.349
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Two! Two hooves on every foot. Super thinking!",
+   "t0": 86.25,
+   "t1": 90.12391666666672,
+   "v0": 86.38991666666672,
+   "dur": 3.314,
+   "words": [
+    [
+     "Two!",
+     0.01,
+     0.39
+    ],
+    [
+     "Two",
+     0.39,
+     0.69
+    ],
+    [
+     "hooves",
+     0.69,
+     1.05
+    ],
+    [
+     "on",
+     1.05,
+     1.16
+    ],
+    [
+     "every",
+     1.16,
+     1.44
+    ],
+    [
+     "foot.",
+     1.44,
+     1.93
+    ],
+    [
+     "Super",
+     2.25,
+     2.64
+    ],
+    [
+     "thinking!",
+     2.64,
+     3.31
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super thinking",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

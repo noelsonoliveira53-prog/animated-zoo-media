@@ -1,0 +1,78 @@
+{
+ "length": 348.1,
+ "shots": 67,
+ "visual_changes": 276,
+ "mean_gap": 1.26,
+ "longest_gap": 4.28,
+ "longest_gap_at": 61.6,
+ "over_6s": [],
+ "places": [
+  "sandtrail",
+  "intro_gate",
+  "intro_logo",
+  "river",
+  "zoo",
+  "savanna",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 34,
+ "longest_without_question": 20.6,
+ "first_words_at": 0.42,
+ "shot_mean": 5.2,
+ "fails": [],
+ "words_placed": "669/669",
+ "sync": {
+  "pauses_checked": 64,
+  "onset_err_mean_ms": 27.2,
+  "onset_err_max_ms": 80.0,
+  "suspect_words": [],
+  "cuts": 66,
+  "cuts_on_the_half_beat": 66,
+  "songs_entering_on_a_beat": "3/3",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (207ms)
+[Browser:WARN] GSAP target #s5c1,#s5c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s16c1,#s16c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s17c1,#s17c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s28c1,#s28c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s29c1,#s29c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s39c1,#s39c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s44c1,#s44c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s45c1,#s45c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s48c1,#s48c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s50c1,#s50c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s52c1,#s52c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s55c1,#s55c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s66c1,#s66c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] GSAP proxy flush complete (850ms)
+[initSession:screenshot] pollHfReady complete (874ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (878ms)
+[initSession:screenshot] applyVideoMetadataHints complete (878ms)
+[initSession:screenshot] media + fonts + tailwind ready (885ms)
+[initSession:screenshot] static-frame dedup: 9/9 predicted frame(s) reusable (outcome=verified, runs=1/1, screenshots=8, seeks=9, elapsedMs=1551) (3209ms)
+[static-dedup] reused 9/8355 frame(s) (0%), est. ~1737ms saved (avg 193ms/frame)
+
+  This project pins hyperframes@0.8.231 (latest 0.9.72).
+  Bump it: npx hyperframes@latest upgrade --project
+
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep11/zc_ep11.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/zc_ep11/zc_ep11.mp4 348.1 s
+EXIT 0

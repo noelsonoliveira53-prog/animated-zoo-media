@@ -30,16 +30,25 @@ kick, ding = tubular bell, confetti = celesta, ears = wood blocks), no synthetic
 then a master. The tune shots keep `sing` for their timing with `"mute": True`; the first shot carries `score` / `score_shots` (toon.mix_parts
 mixes it, dips it under Milo's line and holds the lesson bed back). Real mallets, timpani, toms, crash and brass have overtones listen.py reads as
 clashes: check `listen.py --episode` after every change (rounds 1-11 on Nov 20 removed each one; the reasons are in the comments).
-PICTURE:
-1. the morning sky (turning sun rays, twinkling stars), camera glides down to the gate; 2. the dressed-up gate: the friends pop up on the beat in
-puffs of stars, bunting and balloons bounce in tempo, Milo swoops in with a sparkle trail and lands on the arch; 3. the logo card: turning
-sunburst, badge with a spinning star, THE, rainbow ANIMATED dropping letter by letter, ZOO slamming in with a ding, bear ears on the O's,
-confetti burst, a shine along the letters, Milo flies onto the badge, the friends pop up; 4. Milo says "The Animated Zoo!", the friends hop after
-the line (silently: no sound effect on a spoken word), confetti rains. Never in a 9:16 Short, so it has no 9:16 framing.
-Details added Nov 20 (owner: "include more details"): drifting clouds, a flock of birds and a far-off hot-air balloon in the sky; bubbles and two
-butterflies at the gate and a star burst where Milo lands; light rings pulsing from the badge, a rainbow drawn on behind the logo (in the backdrop,
-behind the friends, its feet behind the hill), letters that squash as they land, a sparkle burst on the bear ears, balloons rising at the sides, a
-star burst on the last chord. Every hit lands on its note (TB = half a beat after the cut).
+PICTURE (round 3, owner Nov 20 4:20 PM: "improve on that animation, bring more items to make a viral entry"; the music was approved as it is
+and was not touched): the WHOLE cast is in the intro: Milo, Tumble, Mango, Sandy, Tula, Poppy, Clover, Hazel.
+1. the sky: a smiling sun that blinks and winks, turning rays, clouds, far birds, a hot-air balloon; Milo flies across with a sparkle trail and
+does a roll; the camera glides down. 2. the gate: the seven friends pop up one per half beat in puffs of stars and hop to the beat, Tumble
+lifts his trunk, Mango throws his arms out, Sandy nods, flowers pop up, bunting / balloons / bubbles / butterflies, Milo swoops in and lands on
+the arch, a star grows out of the gate and fills the picture (the wipe into the logo, on the cymbal roll). 3. the logo, out of the flash:
+turning sunburst, badge with a spinning star and light rings, THE, rainbow ANIMATED letter by letter, ZOO slams in and its O's bounce, a
+rainbow draws on behind, six fireworks, confetti, a shine along the letters, Milo flies in with a roll and lands on the badge, the friends pop
+up along the bottom and hop, the letters do a wave. 4. Milo says "The Animated Zoo!" and each word of the logo lights up and jumps as he says
+it (the shot has `nocap`: the logo is the caption); on the last chord everyone jumps, trunk and arms go up, Milo flips, fireworks, confetti.
+Never in a 9:16 Short, so it has no 9:16 framing. Rules the stills taught (Nov 20):
+  - nothing is drawn behind the logo's letters (the bear ears behind ZOO looked like "3 dots" to the owner);
+  - props are drawn IN FRONT of the actors: anything that drifts (confetti, confetti rain, bubbles, far birds, the sun, clouds) is drawn in the
+    backdrop instead (`bg_intro` / `bg_logo`), so it never crosses a face (a confetti piece sat on Milo's eye in the last frame);
+  - the friends' places come from the rigs' measured outlines (comment at INTRO_STAGES): no friend stands inside another, none at the frame edge;
+  - a run along a word (`stagger`) with a return puts `repeat` / `yoyo` INSIDE the stagger object; at the top level GSAP plays the whole run and
+    then runs it backwards, so the letters came down late and in reverse order;
+  - Mango's arms straight up (160) hide behind his head: out and up is 105;
+  - a `fromTo` draws its start state from the first frame: a burst that must stay unseen until its moment sits in a hidden wrapper.
 - In the episode file: `from intro import INTRO_STAGES, intro_shots`, `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` in SHOTS
   RIGHT AFTER the hook shots (the episode still opens on its promise). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
 - Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Episodes already built are not changed.

@@ -459,7 +459,7 @@ class Film:
         else: raise KeyError(k)
 
     def captions(self, i, s):
-        if not s["words"]: return
+        if not s["words"] or s.get("nocap"): return      # "nocap": the picture itself shows the words in sync (the main intro's logo)
         words = s["words"]; mx = 5 if self.portrait else 9; chunks = []; cur = []
         for w in words:
             cur.append(w)

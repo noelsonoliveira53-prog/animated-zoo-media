@@ -31,10 +31,10 @@
  "plan": {
   "length": 14.8,
   "shots": 4,
-  "visual_changes": 33,
-  "mean_gap": 0.45,
-  "longest_gap": 3.44,
-  "longest_gap_at": 0.0,
+  "visual_changes": 73,
+  "mean_gap": 0.2,
+  "longest_gap": 2.64,
+  "longest_gap_at": 0.8,
   "over_6s": [],
   "places": [
    "intro_gate",
@@ -71,7 +71,7 @@
   [
    0.0,
    "action",
-   "birds fly across"
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
   ],
   [
    0.0,
@@ -84,6 +84,16 @@
    "the zoo gate (main intro) INTRO 1: the sky"
   ],
   [
+   0.05,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   0.8,
+   "action",
+   "Milo does a roll"
+  ],
+  [
    3.44,
    "new shot",
    "the zoo gate (main intro) INTRO 2: the gate"
@@ -92,6 +102,11 @@
    3.63,
    "action",
    "tumble pops up"
+  ],
+  [
+   3.91,
+   "action",
+   "a flower pops up"
   ],
   [
    3.94,
@@ -112,6 +127,56 @@
    4.57,
    "action",
    "tula pops up"
+  ],
+  [
+   4.88,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   5.0,
+   "action",
+   "sandy nods"
+  ],
+  [
+   5.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   5.19,
+   "action",
+   "clover pops up"
+  ],
+  [
+   5.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   5.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   5.51,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   5.78,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   6.25,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   6.56,
+   "action",
+   "out of the flash"
   ],
   [
    6.56,
@@ -186,22 +251,47 @@
   [
    8.75,
    "action",
+   "a firework"
+  ],
+  [
+   8.75,
+   "action",
    "the rainbow draws on"
+  ],
+  [
+   8.91,
+   "action",
+   "a firework"
   ],
   [
    9.06,
    "action",
-   "bear ears pop onto the O's"
+   "confetti"
+  ],
+  [
+   9.06,
+   "action",
+   "the O's bounce"
   ],
   [
    9.16,
    "action",
-   "bear ears pop onto the O's"
+   "the O's bounce"
   ],
   [
    9.37,
    "action",
    "Milo flies onto the badge"
+  ],
+  [
+   9.49,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   9.69,
+   "action",
+   "a firework"
   ],
   [
    9.88,
@@ -214,9 +304,24 @@
    "sandy pops up"
   ],
   [
-   10.51,
+   10.31,
+   "action",
+   "a firework"
+  ],
+  [
+   10.5,
    "action",
    "mango pops up"
+  ],
+  [
+   10.5,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   10.82,
+   "action",
+   "clover pops up"
   ],
   [
    10.82,
@@ -224,9 +329,104 @@
    "tula pops up"
   ],
   [
+   10.94,
+   "action",
+   "a firework"
+  ],
+  [
+   11.13,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   11.25,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   11.41,
+   "action",
+   "a firework"
+  ],
+  [
+   11.88,
+   "action",
+   "a firework"
+  ],
+  [
    11.88,
    "new shot",
    "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   11.99,
+   "action",
+   "T word lights up"
+  ],
+  [
+   12.02,
+   "action",
+   "a firework"
+  ],
+  [
+   12.17,
+   "action",
+   "A word lights up"
+  ],
+  [
+   12.89,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   13.38,
+   "action",
+   "Milo flips"
+  ],
+  [
+   13.38,
+   "action",
+   "a firework"
+  ],
+  [
+   13.38,
+   "action",
+   "confetti"
+  ],
+  [
+   13.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.38,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   13.5,
+   "action",
+   "a firework"
+  ],
+  [
+   13.68,
+   "action",
+   "a firework"
+  ],
+  [
+   13.68,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   13.8,
+   "action",
+   "a firework"
   ]
  ],
  "shots": [

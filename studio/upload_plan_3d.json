@@ -3035,5 +3035,18 @@
   ],
   "thumb_text": "SWEET DREAMS!",
   "seconds": 309.4
+ },
+ {
+  "file": "cartoon/zc_ep11.mp4",
+  "title": "Whose Feet Are These? Guess With Milo",
+  "date": "2026-11-23",
+  "time": "5:30 PM",
+  "thumb": "brand/zoo/thumb_zc_ep11.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 20 1:23 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): in_production, not uploaded"
  }
 ]

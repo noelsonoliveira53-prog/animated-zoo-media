@@ -6,7 +6,8 @@ import art, art2, kit
 from kit import Kit
 from intro import INTRO_STAGES, intro_shots
 
-EP = {"id": "zintro", "nest": True, "beat": True, "voice": "af_heart", "speed": 0.8, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0,
+EP = {"id": "zintro", "nest": True, "beat": True, "voice": "af_heart", "speed": 0.8, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 0.0, "intro": False,      # tail 0: the last shot holds one second by itself (intro.py pause=1.0); "intro": False: this IS the intro, the plan check does not ask for it twice
+     
       "title": "The Animated Zoo (main intro)", "thumb_text": "", "series": "", "description": "", "tags": []}
 STAGES = dict(INTRO_STAGES)
 K = Kit(STAGES)

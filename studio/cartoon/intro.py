@@ -456,7 +456,8 @@ def intro_shots():
                *_float_bubbles("ubl", .2, 2.8), *_float_bubbles("ubr", .5, 2.8),
                *[("fromto", 0, f"#{{p}}rn-r{k}", {"y": 0, "rotation": 0}, {"y": 1500, "rotation": 260 * (1 if k % 2 else -1), "duration": round(2.6 + (k % 5) * .25, 2), "ease": "none"}, "")
                  for k in range(len(RAIN))]]
-    name = S(L, (960, 540, 1880), "The Animated Zoo!", tag="INTRO 4: Milo says the name", cam2=(960, 540, 1850),
+    # pause=1.0: the finish (jump, flip, fireworks, the last chord) plays out before the episode's next shot; without it the next shot cut in 0.4 s after the line (za_ep09 stills, Nov 20)
+    name = S(L, (960, 540, 1880), "The Animated Zoo!", tag="INTRO 4: Milo says the name", cam2=(960, 540, 1850), pause=1.0,
              props=[prop("rg", rings, 960, 326), *_fw_props(6), prop("logo", logo, 960, 590, .8), prop("pfb", puff, 960, 326, hidden=True)], fx=name_fx)
     name["nocap"] = True      # the logo's own words light up in sync with the voice (toon.captions skips the shot)
     sky["score"] = "score_intro:score"; sky["score_shots"] = 4      # the intro's music: one score on recorded instruments across the four shots

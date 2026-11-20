@@ -23,7 +23,7 @@ from kit import S, prop
 
 BPM = 96
 B = 60 / BPM
-TB = lambda b: round(0.12 + b * B, 3)          # seconds into a tune shot of beat b (the tune enters 0.12 s after the cut)
+TB = lambda b: round(0.3125 + b * B, 3)        # seconds into a tune shot of beat b: the tune (and the score, score_intro.py) enters half a beat after the cut
 INK = "#2a1a4a"
 FRIENDS = ["tumble", "mango", "sandy", "tula"]
 
@@ -50,6 +50,8 @@ def bg_logo(p):
     wedges = "".join(f'<path d="M0 0 L{2600 * math.cos(math.radians(a)):.0f} {2600 * math.sin(math.radians(a)):.0f} '
                      f'L{2600 * math.cos(math.radians(a + 9)):.0f} {2600 * math.sin(math.radians(a + 9)):.0f}Z" fill="#ffffff" opacity=".13"/>' for a in range(0, 360, 18))
     far += f'<g transform="translate(960 470)"><g id="{p}_burst">{wedges}</g></g>'
+    far += f'<g transform="translate(960 960)">' + "".join(f'<path id="{p}_rb-a{k}" d="M{-r} 0 A{r} {r} 0 0 1 {r} 0" stroke="{c}" stroke-width="26" fill="none" opacity=".9" '
+                                                        f'stroke-dasharray="{math.pi * r:.0f}" stroke-dashoffset="{math.pi * r:.0f}"/>' for k, (r, c) in enumerate(zip(RB_R, RB))) + '</g>'      # drawn on in the logo shot, behind the friends; its feet go behind the hill
     near = ('<path d="M-500 930 C200 860 700 900 1200 870 S2000 880 2420 920 L2420 2000 L-500 2000Z" fill="#7cc95e"/>'
             '<path d="M-500 960 C300 900 900 950 1400 915 S2100 930 2420 960 L2420 2000 L-500 2000Z" fill="#6bbd50"/>'
             + "".join(f'<circle cx="{x}" cy="{y}" r="9" fill="{c}"/><circle cx="{x + 16}" cy="{y + 6}" r="7" fill="#fff"/>'
@@ -141,8 +143,89 @@ def rain(q):
                    for k, (x, y, c, rect) in enumerate(RAIN))
 
 
+CLOUDS = [(1250, 120, 1.0), (1650, 260, .7), (380, 330, .6)]
+def clouds(q):
+    one = lambda s: (f'<g transform="scale({s})"><ellipse cx="0" cy="0" rx="120" ry="48" fill="#fff"/><ellipse cx="-60" cy="-26" rx="62" ry="50" fill="#fff"/>'
+                     f'<ellipse cx="40" cy="-40" rx="70" ry="58" fill="#fff"/><ellipse cx="0" cy="18" rx="130" ry="22" fill="#e3f2ff"/></g>')
+    return "".join(f'<g transform="translate({x} {y})"><g id="{q}-c{k}" opacity=".95">{one(sc)}</g></g>' for k, (x, y, sc) in enumerate(CLOUDS))
+
+
+def birds(q):
+    """Three little birds far away, flapping (two curves each)."""
+    out = ""
+    for k, (x, y, s) in enumerate(((0, 0, 1), (70, 34, .8), (-56, 46, .7))):
+        out += (f'<g transform="translate({x} {y}) scale({s})"><g id="{q}-b{k}"><path d="M-26 0 Q-13 -16 0 0 Q13 -16 26 0" stroke="{INK}" stroke-width="6" '
+                f'fill="none" stroke-linecap="round" opacity=".7"/></g></g>')
+    return out
+
+
+def hotair(q):
+    """A striped hot-air balloon far off (small, slow)."""
+    cols = ["#ff7aa2", art.SUN, art.MILO_BLUE, "#5cc473", "#ff7aa2"]
+    stripes = "".join(f'<path d="M{-60 + 24 * k} -40 Q{-62 + 24 * k + 12} 60 {-24 + 12 * k} 70 L{-12 + 12 * k} 70 Q{-40 + 24 * k + 12} 60 {-36 + 24 * k} -40Z" fill="{c}"/>' for k, c in enumerate(cols))
+    return (f'<g id="{q}-g"><clipPath id="{q}-cl"><ellipse cx="0" cy="0" rx="62" ry="74"/></clipPath><ellipse cx="0" cy="0" rx="62" ry="74" fill="{art.SUN}"/>'
+            f'<g clip-path="url(#{q}-cl)">{stripes}</g><ellipse cx="-20" cy="-30" rx="12" ry="20" fill="#fff" opacity=".45"/>'
+            f'<path d="M-22 70 L-14 100 M22 70 L14 100" stroke="#8a5a2b" stroke-width="4"/><rect x="-18" y="100" width="36" height="26" rx="6" fill="#b5793f"/></g>')
+
+
+BUB = [(-30, 0, 34), (40, -90, 24), (-50, -170, 20), (20, -230, 30), (55, -40, 17), (-40, -300, 22)]
+def bubbles(q):
+    return "".join(f'<g transform="translate({x} {y})"><g id="{q}-u{k}"><circle r="{r}" fill="#ffffff" opacity=".34" stroke="#ffffff" stroke-width="4" stroke-opacity=".95"/>'
+                   f'<ellipse cx="{-r * .35:.0f}" cy="{-r * .38:.0f}" rx="{r * .28:.0f}" ry="{r * .18:.0f}" fill="#fff" opacity=".8"/></g></g>' for k, (x, y, r) in enumerate(BUB))
+
+
+def butterfly(q, c1="#ff7aa2", c2=art.SUN):
+    return (f'<g id="{q}-f"><g id="{q}-wl"><ellipse cx="-16" cy="-8" rx="17" ry="13" fill="{c1}"/><ellipse cx="-12" cy="10" rx="11" ry="9" fill="{c2}"/></g>'
+            f'<g id="{q}-wr"><ellipse cx="16" cy="-8" rx="17" ry="13" fill="{c1}"/><ellipse cx="12" cy="10" rx="11" ry="9" fill="{c2}"/></g>'
+            f'<rect x="-3" y="-14" width="6" height="30" rx="3" fill="{INK}"/></g>')
+
+
+def rings(q):
+    return "".join(f'<circle id="{q}-r{k}" r="112" fill="none" stroke="#ffffff" stroke-width="10" opacity="0"/>' for k in range(3))
+
+
+RB = ["#ff4d6d", "#ff8a1f", "#ffd23f", "#4cc95a", "#2fb5ff", "#9b5cff"]
+RB_R = [560 - 26 * k for k in range(6)]
+def rainbow(q):
+    arcs = "".join(f'<path id="{q}-a{k}" d="M{-r} 0 A{r} {r} 0 0 1 {r} 0" stroke="{c}" stroke-width="26" fill="none" opacity=".85" '
+                   f'stroke-dasharray="{math.pi * r:.0f}" stroke-dashoffset="{math.pi * r:.0f}"/>' for k, (r, c) in enumerate(zip(RB_R, RB)))
+    puffs = "".join(f'<g transform="translate({sx * 500} 6)"><ellipse cx="0" cy="0" rx="110" ry="46" fill="#fff"/><ellipse cx="-40" cy="-30" rx="56" ry="44" fill="#fff"/>'
+                    f'<ellipse cx="38" cy="-34" rx="62" ry="50" fill="#fff"/></g>' for sx in (-1, 1))
+    return f'{arcs}<g id="{q}-feet" opacity="0">{puffs}</g>'
+
+
+RISE = [(150, 0, "#ff7aa2"), (1760, 60, art.SUN), (300, 120, art.MILO_BLUE), (1640, 180, "#5cc473")]
+def rising(q):
+    return "".join(f'<g transform="translate({x} {960 + y})"><g id="{q}-l{k}"><path d="M0 52 q-8 50 6 110" stroke="#fff" stroke-width="3" fill="none"/>'
+                   f'<ellipse rx="40" ry="50" fill="{c}"/><ellipse cx="-12" cy="-18" rx="9" ry="14" fill="#fff" opacity=".5"/><path d="M-6 48 l6 9 l6 -9Z" fill="{c}"/></g></g>'
+                   for k, (x, y, c) in enumerate(RISE))
+
+
+def _float_bubbles(name, at, dur):
+    return [("fromto", round(at + .13 * k, 3), f"#{{p}}{name}-u{k}", {"y": 120, "x": 0, "opacity": 0}, {"y": -420 - 40 * k, "opacity": 1, "duration": dur, "ease": "sine.out"}, "")
+            for k in range(len(BUB))] + [("fromto", round(at + .13 * k, 3), f"#{{p}}{name}-u{k}", {"x": -14}, {"x": 14, "duration": .55, "yoyo": True, "repeat": 5, "ease": "sine.inOut"}, "")
+            for k in range(len(BUB))]
+
+
+def _flutter(name, at, dur, path):
+    (x0, y0), (x1, y1) = path; reps = int(dur / .12)
+    return [("fromto", at, f"#{{p}}{name}-wl", {"scaleX": 1, "transformOrigin": "100% 50%"}, {"scaleX": .25, "duration": .12, "yoyo": True, "repeat": reps, "ease": "sine.inOut"}, ""),
+            ("fromto", at, f"#{{p}}{name}-wr", {"scaleX": 1, "transformOrigin": "0% 50%"}, {"scaleX": .25, "duration": .12, "yoyo": True, "repeat": reps, "ease": "sine.inOut"}, ""),
+            ("fromto", at, f"#{{p}}{name}_w", {"x": x0, "y": y0}, {"x": x1, "y": y1, "duration": dur, "ease": "sine.inOut"}, ""),
+            ("fromto", at, f"#{{p}}{name}-f", {"y": 0}, {"y": -26, "duration": .45, "yoyo": True, "repeat": int(dur / .45), "ease": "sine.inOut"}, "")]
+
+
+def _rings(at, n, until):
+    out = []
+    for k in range(n):
+        t = round(at + k * B * 2 / n, 3)
+        out.append(("fromto", t, f"#{{p}}rg-r{k}", {"scale": 1, "opacity": .75, "transformOrigin": "50% 50%"},
+                    {"scale": 2.1, "opacity": 0, "duration": B * 2, "repeat": max(0, int((until - t) / (B * 2)) - 1), "ease": "power1.out"}, ""))
+    return out
+
+
 # ---------------------------------------------------------------- the tune: four bars in C, chord tones or a whole step from them (CLAUDE.md)
-BAND = {"bpm": BPM, "outro_bars": 0, "style": "pop", "band": .62}
+BAND = {"bpm": BPM, "outro_bars": 0, "style": "pop", "band": .62, "mute": True}      # the tune gives the timing; the music is the score on recorded instruments (score_intro.py)
 TUNE1 = dict(BAND, chords="C", lines=[{"text": "~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 C5:1", "rest": 0}])
 TUNE2 = dict(BAND, chords="G", lines=[{"text": "~ ~ ~ ~ ~", "notes": "D5:.5 B4:.5 G4:.5 B4:.5 D5:2", "rest": 0}])
 TUNE3 = dict(BAND, chords="F C", lines=[{"text": "~ ~ ~ ~ ~ ~ ~ ~ ~", "notes": "A4:1 C5:1 F5:1 C5:1 E5:.5 D5:.5 C5:.5 D5:.5 C5:1", "rest": 1}])
@@ -176,52 +259,82 @@ def _bounce(sel, at, beats, amp):
     return ("fromto", round(at, 3), sel, {"y": 0}, {"y": amp, "duration": B / 2, "yoyo": True, "repeat": 2 * beats - 1, "ease": "sine.inOut"}, "")
 
 
+def _rainbow_fx(at, draw=True):
+    out = []
+    for k, r in enumerate(RB_R):
+        L = round(math.pi * r)
+        out.append(("fromto", round(at + .06 * k, 3) if draw else at, f"#{{p}}rb-a{k}", {"strokeDashoffset": L if draw else 0}, {"strokeDashoffset": 0, "duration": .7 if draw else .01, "ease": "power2.out"}, "the rainbow draws on" if k == 0 and draw else ""))
+    return out
+
+
 def intro_shots():
     gx, gy = _POS["intro_gate"]["milo"]; lx, ly = _POS["intro_logo"]["milo"]
+    # every picture hit lands on its note in the score (score_intro.py): a bounce reaches the ground ~0.18 s after it starts, a pop ~0.12 s
+    LAND, POP = .18, .12
     sky = S("intro_gate", (700, 170, 1100), who="", sing=TUNE1, beat="song", tag="INTRO 1: the sky", trans="iris", cam2=(960, 470, 1760),
-            hide=["milo", *FRIENDS], props=[prop("rays", rays, 250, 200), prop("spk", sparkles, 0, 0)],
+            hide=["milo", *FRIENDS], props=[prop("cl", clouds, 0, 0), prop("ha", hotair, 1560, 360, .8), prop("rays", rays, 250, 200), prop("spk", sparkles, 0, 0), prop("bd", birds, 300, 250, 1.9)],
             fx=[("fromto", 0, "#{p}rays-r", {"rotation": 0, "svgOrigin": "0 0"}, {"rotation": 28, "duration": 2.6, "ease": "none"}, "the sun's rays turn"),
-                *_twinkle(0.05, len(SPARKLES), 2.5)])
+                *_twinkle(0.05, len(SPARKLES), 2.5),
+                *[("fromto", 0, f"#{{p}}cl-c{k}", {"x": 0}, {"x": 70 + 30 * k, "duration": 3.4, "ease": "none"}, "") for k in range(len(CLOUDS))],
+                ("fromto", 0, "#{p}bd_w", {"x": 260, "y": 280}, {"x": 1240, "y": 150, "duration": 3.4, "ease": "none"}, "birds fly across"),
+                *[("fromto", .07 * k, f"#{{p}}bd-b{k}", {"scaleY": 1, "transformOrigin": "50% 100%"}, {"scaleY": -.6, "duration": .16, "yoyo": True, "repeat": 19, "ease": "sine.inOut"}, "") for k in range(3)],
+                ("fromto", 0, "#{p}ha-g", {"y": 30, "rotation": -3, "transformOrigin": "50% 0%"}, {"y": -30, "rotation": 3, "duration": 3.4, "ease": "sine.inOut"}, "a hot-air balloon rises far away")])
     gate_fx = []
     for k, w in enumerate(FRIENDS):
-        gate_fx += _pop(TB(k * .5), "intro_gate", w) + _puff_fx(round(TB(k * .5) + .25, 3), f"pf{k}")
+        gate_fx += _pop(round(TB(k * .5) - POP, 3), "intro_gate", w) + _puff_fx(TB(k * .5), f"pf{k}")
     gate_fx += [("fromto", TB(1), "#{p}milo_w", {"x": -220, "y": 140}, {"x": gx, "y": gy, "duration": round(TB(3.2) - TB(1), 3), "ease": "power2.out"}, "Milo swoops in and lands on the arch"),
-                ("snd", TB(1), "whoosh"),
                 *[("fromto", round(TB(1) + .3 * (k + 1), 3), f"#{{p}}tr-t{k}", {"opacity": 0, "scale": .2, "transformOrigin": "50% 50%"},
                    {"opacity": 1, "scale": 1, "rotation": 90, "duration": .22, "yoyo": True, "repeat": 1}, "") for k in range(len(TRAIL))],
-                _bounce("#{p}flags", 0, 4, 7), _bounce("#{p}balloons", B / 4, 3, -10)]
+                *_puff_fx(TB(3.2), "pfm"),
+                _bounce("#{p}flags", 0, 4, 7), _bounce("#{p}balloons", B / 4, 3, -10),
+                *_float_bubbles("ubl", .1, 2.8), *_float_bubbles("ubr", .4, 2.8),
+                *_flutter("bf1", 0, 3.3, ((210, 700), (520, 560))), *_flutter("bf2", 0, 3.3, ((1780, 700), (1560, 470)))]
     gate = S("intro_gate", (960, 560, 1920), who="", sing=TUNE2, beat="song", tag="INTRO 2: the gate", cam2=(960, 540, 1840),
-             props=[prop(f"pf{k}", puff, _POS["intro_gate"][w][0], _POS["intro_gate"][w][1] - 40, hidden=True) for k, w in enumerate(FRIENDS)] + [prop("tr", trail, 0, 0)],
+             props=[prop("ubl", bubbles, 90, 960), prop("ubr", bubbles, 1835, 960), prop("bf1", butterfly, 0, 0), prop("bf2", lambda q: butterfly(q, art.MILO_BLUE, "#b48cff"), 0, 0)]
+                   + [prop(f"pf{k}", puff, _POS["intro_gate"][w][0], _POS["intro_gate"][w][1] - 40, hidden=True) for k, w in enumerate(FRIENDS)]
+                   + [prop("pfm", puff, gx, gy - 60, hidden=True), prop("tr", trail, 0, 0)],
              fx=gate_fx)
     gate["move"] = {"milo": (-220, 140, .62)}      # Milo starts off-screen up left (he swoops in)
+    Z = TB(3)                # ZOO lands on the timpani + brass + cymbal; the ding, the confetti and the bear ears half a beat later
     lfx = [("fromto", 0, "#{p}burst", {"rotation": 0, "svgOrigin": "0 0"}, {"rotation": 22, "duration": 5.6, "ease": "none"}, "the sunburst turns"),
-           ("fromto", TB(0), "#{p}logo-badge", {"scale": 0, "transformOrigin": "50% 50%"}, {"scale": 1, "duration": .5, "ease": "back.out(2.2)"}, "the badge pops"),
+           ("fromto", round(TB(0) - POP, 3), "#{p}logo-badge", {"scale": 0, "transformOrigin": "50% 50%"}, {"scale": 1, "duration": .5, "ease": "back.out(2.2)"}, "the badge pops"),
            ("fromto", TB(0), "#{p}logo-star", {"rotation": -180, "svgOrigin": "0 0"}, {"rotation": 0, "duration": 1.2, "ease": "back.out(1.4)"}, ""),
-           *[("fromto", round(TB(.5) + .08 * k, 3), f"#{{p}}logo-t{k}", {"y": -260, "opacity": 0}, {"y": 0, "opacity": 1, "duration": .35, "ease": "back.out(2)"}, "") for k in range(3)],
-           *[("fromto", round(TB(1) + k * B / 4, 3), f"#{{p}}logo-a{k}", {"y": -700, "rotation": -18 + 5 * k, "opacity": 0, "transformOrigin": "50% 100%"},
+           *_rings(TB(.5), 3, 5.6),
+           *[("fromto", round(TB(.5) + k * B / 8 - .15, 3), f"#{{p}}logo-t{k}", {"y": -260, "opacity": 0}, {"y": 0, "opacity": 1, "duration": .35, "ease": "back.out(2)"}, "") for k in range(3)],
+           *[("fromto", round(TB(1) + k * B / 4 - LAND, 3), f"#{{p}}logo-a{k}", {"y": -700, "rotation": -18 + 5 * k, "opacity": 0, "transformOrigin": "50% 100%"},
               {"y": 0, "rotation": 0, "opacity": 1, "duration": .5, "ease": "bounce.out"}, "a letter drops in") for k in range(8)],
-           *[("fromto", TB(3), f"#{{p}}logo-z{k}", {"scale": 2.6, "opacity": 0, "transformOrigin": "50% 50%"}, {"scale": 1, "opacity": 1, "duration": .3, "ease": "power3.in"}, "ZOO slams in") for k in range(3)],
-           ("snd", round(TB(3) + .3, 3), "ding"),
+           *[("fromto", round(TB(1) + k * B / 4, 3), f"#{{p}}logo-a{k}", {"scaleX": 1.2, "scaleY": .76}, {"scaleX": 1, "scaleY": 1, "duration": .32, "ease": "back.out(3)"}, "") for k in range(8)],
+           *[("fromto", round(Z - .3, 3), f"#{{p}}logo-z{k}", {"scale": 2.6, "opacity": 0, "transformOrigin": "50% 50%"}, {"scale": 1, "opacity": 1, "duration": .3, "ease": "power3.in"}, "ZOO slams in") for k in range(3)],
+           *[("fromto", Z, f"#{{p}}logo-z{k}", {"scaleX": 1.16, "scaleY": .8}, {"scaleX": 1, "scaleY": 1, "duration": .35, "ease": "elastic.out(1, .4)"}, "") for k in range(3)],
+           *_rainbow_fx(Z),
            *[("fromto", round(TB(3.5) + .1 * j, 3), f"#{{p}}logo-ear{j}", {"opacity": 0, "y": 40}, {"opacity": 1, "y": 0, "duration": .3, "ease": "back.out(3)"}, "bear ears pop onto the O's") for j in range(2)],
-           *[("fromto", round(TB(3) + .3, 3), f"#{{p}}cf-c{k}", {"x": 0, "y": 0, "rotation": 0, "scale": .3, "opacity": 1},
+           *_puff_fx(TB(3.5), "pfe"),
+           *[("fromto", TB(3.5), f"#{{p}}cf-c{k}", {"x": 0, "y": 0, "rotation": 0, "scale": .3, "opacity": 1},
               {"x": round(dx), "y": round(dy), "rotation": round(rot), "scale": 1, "duration": .9, "ease": "power3.out"}, "") for k, (dx, dy, _, _, rot) in enumerate(CONF)],
-           *[("to", round(TB(3) + 1.2, 3), f"#{{p}}cf-c{k}", {"y": "+=640", "rotation": f"+={round(rot)}", "duration": 2.4, "ease": "power1.in"}, "") for k, (_, _, _, _, rot) in enumerate(CONF)],
+           *[("to", round(TB(3.5) + .9, 3), f"#{{p}}cf-c{k}", {"y": "+=640", "rotation": f"+={round(rot)}", "duration": 2.4, "ease": "power1.in"}, "") for k, (_, _, _, _, rot) in enumerate(CONF)],
            *[("fromto", round(TB(4.5) + .07 * k, 3), f"#{{p}}logo-a{k}h", {"opacity": 0}, {"opacity": .85, "duration": .12, "yoyo": True, "repeat": 1}, "") for k in range(8)],
            *[("fromto", round(TB(4.5) + .56 + .07 * k, 3), f"#{{p}}logo-z{k}h", {"opacity": 0}, {"opacity": .85, "duration": .12, "yoyo": True, "repeat": 1}, "") for k in range(3)],
            ("fromto", TB(4), "#{p}milo_w", {"x": 2140, "y": 160}, {"x": lx, "y": ly, "duration": round(TB(5.6) - TB(4), 3), "ease": "power2.out"}, "Milo flies onto the badge"),
-           ("snd", TB(4), "whoosh"),
-           *[f for k, w in enumerate(["tumble", "sandy", "mango", "tula"]) for f in _pop(round(TB(5) + k * B / 2, 3), "intro_logo", w)],
+           *[f for k, w in enumerate(["tumble", "sandy", "mango", "tula"]) for f in _pop(round(TB(5) + k * B / 2 - POP, 3), "intro_logo", w)],
+           *[("fromto", round(.2 + .35 * k, 3), f"#{{p}}rs-l{k}", {"y": 0, "x": 0}, {"y": -1250, "x": 40 * (1 if k % 2 else -1), "duration": 4.8, "ease": "none"}, "") for k in range(len(RISE))],
+           *_float_bubbles("ubl", 1.0, 3.2), *_float_bubbles("ubr", 1.6, 3.2),
            *_twinkle(TB(4), 6, 5.4)]
     logo_shot = S("intro_logo", (960, 540, 1920), who="", sing=TUNE3, beat="song", tag="INTRO 3: the logo", cam2=(960, 540, 1880),
-                  props=[prop("spk", sparkles, 0, 120), prop("logo", logo, 960, 590, .8), prop("cf", confetti, 960, 640)], fx=lfx)
+                  props=[prop("rs", rising, 0, 0), prop("rg", rings, 960, 326), prop("spk", sparkles, 0, 120), prop("logo", logo, 960, 590, .8),
+                         prop("pfe", puff, 960, 690, hidden=True), prop("cf", confetti, 960, 640), prop("ubl", bubbles, 85, 960), prop("ubr", bubbles, 1840, 960)], fx=lfx)
     logo_shot["move"] = {"milo": (2140, 160, .46), **{w: (_POS["intro_logo"][w][0], 1500, _SC["intro_logo"][w]) for w in FRIENDS}}
     name_fx = [("fromto", 0, "#{p}burst", {"rotation": 22, "svgOrigin": "0 0"}, {"rotation": 30, "duration": 2.4, "ease": "none"}, ""),
+               *_rainbow_fx(0, draw=False), *_rings(0, 3, 3.0),
                *[("to", "end", f"#{{p}}{w}", {"y": "-=60", "duration": .2, "yoyo": True, "repeat": 1, "ease": "power2.out"}, "") for w in FRIENDS],
                ("to", "end", "#{p}milo", {"y": "-=40", "duration": .2, "yoyo": True, "repeat": 1}, ""),
+               *_puff_fx("end", "pfb"),
                *[("fromto", 0, f"#{{p}}logo-ear{j}", {"opacity": 1}, {"opacity": 1, "duration": .01}, "") for j in range(2)],
                ("fromto", 0, "#{p}logo-star", {"rotation": 0, "svgOrigin": "0 0"}, {"rotation": 72, "duration": 1.2, "ease": "power2.inOut"}, ""),
+               *_float_bubbles("ubl", .2, 2.8), *_float_bubbles("ubr", .5, 2.8),
                *[("fromto", 0, f"#{{p}}rn-r{k}", {"y": 0, "rotation": 0}, {"y": 1500, "rotation": 260 * (1 if k % 2 else -1), "duration": round(2.6 + (k % 5) * .25, 2), "ease": "none"}, "")
                  for k in range(len(RAIN))]]
     name = S("intro_logo", (960, 540, 1880), "The Animated Zoo!", tag="INTRO 4: Milo says the name", cam2=(960, 540, 1840),
-             props=[prop("logo", logo, 960, 590, .8), prop("rn", rain, 0, 0)], fx=name_fx)
+             props=[prop("rg", rings, 960, 326), prop("logo", logo, 960, 590, .8), prop("pfb", puff, 960, 326, hidden=True),
+                    prop("rn", rain, 0, 0), prop("ubl", bubbles, 85, 960), prop("ubr", bubbles, 1840, 960)], fx=name_fx)
+    sky["score"] = "score_intro:score"; sky["score_shots"] = 4      # the intro's music: one score on recorded instruments across the four shots
     return [sky, gate, logo_shot, name]

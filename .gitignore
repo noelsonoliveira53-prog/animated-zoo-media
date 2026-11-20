@@ -20,3 +20,6 @@ packages/*/audio/
 
 # listen.py scratch output
 studio/listen/out/
+
+# the recorded-instrument SoundFont (32 MB): sf2render.py fetches it from github.com/mrbumpy409/GeneralUser-GS when missing
+studio/sing/sf2/*.sf2

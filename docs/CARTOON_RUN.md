@@ -22,12 +22,24 @@ Evidence: `drafts/growth_test_2026-11/01_audit.md` (lessons lose 61-68% of viewe
 
 ## MAIN INTRO in every new long 2D episode (owner, Nov 20 2026 12:44 PM: "create a main intro for the animated zoo that will be repeated on every episode ... just for future ones")
 `studio/cartoon/intro.py` (made richer on the owner's ask, Nov 20 12:56 PM: "more sophisticated with more details and effects"): the same four shots
-every time (about 15 s), one four-bar tune on bells + the light pop band (C, G, F-C), a cut on each bar line:
+every time (about 15 s), a cut on each bar line. MUSIC (owner, Nov 20 3:52 PM: "now it sounds like artificial music"): one continuous score
+on RECORDED instruments (`studio/cartoon/score_intro.py` -> `studio/sing/sf2render.py`, GeneralUser GS SoundFont, licence free for commercial
+music): flute + bells carry the tune (C E G C | D B G B D | A C F C E D C D C), nylon guitar, pizzicato, acoustic bass, strings, light kit with
+tambourine and shaker; every picture hit has its own instrument (pops = marimba, swoops = harp, letters = xylophone run, ZOO = brass + low piano +
+kick, ding = tubular bell, confetti = celesta, ears = wood blocks), no synthetic sound effects; each group has its own room, EQ, compression,
+then a master. The tune shots keep `sing` for their timing with `"mute": True`; the first shot carries `score` / `score_shots` (toon.mix_parts
+mixes it, dips it under Milo's line and holds the lesson bed back). Real mallets, timpani, toms, crash and brass have overtones listen.py reads as
+clashes: check `listen.py --episode` after every change (rounds 1-11 on Nov 20 removed each one; the reasons are in the comments).
+PICTURE:
 1. the morning sky (turning sun rays, twinkling stars), camera glides down to the gate; 2. the dressed-up gate: the friends pop up on the beat in
 puffs of stars, bunting and balloons bounce in tempo, Milo swoops in with a sparkle trail and lands on the arch; 3. the logo card: turning
 sunburst, badge with a spinning star, THE, rainbow ANIMATED dropping letter by letter, ZOO slamming in with a ding, bear ears on the O's,
 confetti burst, a shine along the letters, Milo flies onto the badge, the friends pop up; 4. Milo says "The Animated Zoo!", the friends hop after
 the line (silently: no sound effect on a spoken word), confetti rains. Never in a 9:16 Short, so it has no 9:16 framing.
+Details added Nov 20 (owner: "include more details"): drifting clouds, a flock of birds and a far-off hot-air balloon in the sky; bubbles and two
+butterflies at the gate and a star burst where Milo lands; light rings pulsing from the badge, a rainbow drawn on behind the logo (in the backdrop,
+behind the friends, its feet behind the hill), letters that squash as they land, a sparkle burst on the bear ears, balloons rising at the sides, a
+star burst on the last chord. Every hit lands on its note (TB = half a beat after the cut).
 - In the episode file: `from intro import INTRO_STAGES, intro_shots`, `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` in SHOTS
   RIGHT AFTER the hook shots (the episode still opens on its promise). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
 - Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Episodes already built are not changed.

@@ -105,6 +105,7 @@ def sung(ep, s):
     if not os.path.exists(os.path.join(d, "timing.json")): sing.build(spec, d)
     tm = json.load(open(os.path.join(d, "timing.json"))); mix, _ = sf.read(os.path.join(d, "song.wav")); voc, _ = sf.read(os.path.join(d, "vocal.wav"))
     n = int(SR * .25); mix[-n:] *= np.linspace(1, 0, n) ** 1.5      # the music box rings out instead of being cut at the bar line (every tune, not only the old hums)
+    if s["sing"].get("mute"): mix = np.zeros_like(mix)      # the shot keeps the tune's timing, a score (shot "score") plays the music instead (main intro, Nov 20)
     return mix.astype(np.float32), voc.astype(np.float32), [(w["w"], round(w["start"], 3), round(w["end"], 3)) for w in tm["words"]]
 
 
@@ -593,6 +594,15 @@ def mix_parts(film, total, ep):
         env = np.convolve(env, np.ones(3600) / 3600, mode="same")
         mu = music(total + .5); fade = np.minimum(1, np.minimum(np.arange(len(mu)) / SR / 1.0, (len(mu) - np.arange(len(mu))) / SR / 2.0)); m = min(n, len(mu))
         bed[:m] += mu[:m] * env[:m] * fade[:m] * ep.get("music", 0.5)
+    for i, s in enumerate(film.shots):      # a score played on recorded instruments across several shots (score_intro.py); the lesson bed steps aside, the score dips under the voice
+        if not s.get("score"): continue
+        import importlib
+        mod, fn = s["score"].split(":"); sc, a0s, a1s = getattr(importlib.import_module(mod), fn)(film.shots[i:i + s.get("score_shots", 1)])
+        a0 = int(a0s * SR); a1 = min(n, int(a1s * SR)); k = int(SR * .25)
+        duck = 1 - 0.5 * np.clip(np.convolve(talk, np.ones(k) / k, mode="same"), 0, 1)
+        hold = np.ones(n, np.float32); fi = int(SR * .3); hold[a0:a1] = 0
+        hold[max(0, a0 - fi):a0] = np.linspace(1, 0, a0 - max(0, a0 - fi)); hold[a1:min(n, a1 + fi)] = np.linspace(0, 1, min(n, a1 + fi) - a1)
+        bed *= hold; m = min(len(sc), n - a0); bed[a0:a0 + m] += sc[:m] * duck[a0:a0 + m] * s.get("score_gain", 1.0)
     for t, name in film.snd:
         x = sfx(name) * (0.5 if name in ("pop", "tick") else 0.7); a0 = int(max(0, t) * SR); bed[a0:a0 + len(x)] += x[:n - a0]
     return voice, bed

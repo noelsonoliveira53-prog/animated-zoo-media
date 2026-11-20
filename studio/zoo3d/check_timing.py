@@ -1,6 +1,6 @@
 """Flag lyric lines whose words weren't actually sung at that time (vs the transcription)."""
 import json, sys, re
-sys.path.insert(0, '/root/zoo/blender/zoo3d'); from timing_lib import norm
+import os; sys.path.insert(0, os.path.dirname(os.path.abspath(__file__))); from timing_lib import norm
 t = json.load(open(sys.argv[1])); tx = json.load(open(sys.argv[2]))['words']
 bad = 0
 for l in t['lines']:

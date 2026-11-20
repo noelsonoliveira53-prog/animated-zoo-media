@@ -725,3 +725,11 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Build tasks: all four Zoo builds enabled, last runs SUCCEEDED (list_triggers). The Gizmo task's run note (Nov 20) says it could not reach the PC render folder twice (docs/IMPROVE.md): that is the Gizmo task's, not changed here.
   * Nothing was set Private or replaced; no old copies to report. CLAUDE.md: no line changed.
   * Open slots after this run (long): Nov 21 9:30 AM / 1:30 PM; Nov 22 5:30 AM; Nov 23 1:30 PM / 5:30 PM; Nov 24 9:30 AM / 5:30 PM ... (filled by the daily builds; empty slots stay empty).
+  * Song (step B, the day's one 3D video): zoo3d_ep23 "Stripes and Splashes! Tiger Song for Kids with Milo" (tiger, hippo, bear, koala; facts read today at National Geographic Kids
+    and Smithsonian's National Zoo, quotes in make_specs_v3.py) written, sung by the PC's song engine (07:26-07:32 AM), timing built here (215/215 words, check_timing 0 bad lines),
+    tail cut at 152 s with a 1.9 s fade, 4K job zoo3d_ep23y (routes.py, 13 places, side -> dolly; variety OK and recorded), three rounds of 640x360 test stills looked at
+    (studio/zoo3d/finished/ep23_stills*.jpg; fixes in docs/IMPROVE.md). PC copies read back (job and timing same md5; flac decodes to identical audio). RENDERING on the PC since
+    7:50 AM PC clock (3,649 frames). FOR THE NOV 21 RUN: finish it (finish.py with jobs/zoo3d_ep23y.json), corner sheet, frames, listen.py, review.py, thumbnail; slot Nov 23 3:30 PM.
+    Nov 22 has zoo3d_ep22 (giraffe) at 3:30 PM; song slots Nov 24 onward are empty.
+  * PC worker: zoo3d_ep22's 1080p default job had looped since Nov 19 (561 failed renders); cancelled with out\zoo3d_ep22\DONE (docs/IMPROVE.md).
+  * check_timing.py imports timing_lib from its own folder (it pointed at /root/zoo/...).

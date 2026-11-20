@@ -1767,7 +1767,7 @@
   "new_song": true
  },
  {
-  "id": "zoo3d_ep23",
+  "id": "zoo3d_ep23y",
   "places": [
    [
     "night_meadow",
@@ -1776,6 +1776,10 @@
    [
     "autumn_forest",
     "noon"
+   ],
+   [
+    "jungle",
+    "golden"
    ],
    [
     "jungle",
@@ -1792,6 +1796,30 @@
    [
     "mountain",
     "sunset"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "autumn_forest",
+    "noon"
+   ],
+   [
+    "jungle",
+    "golden"
+   ],
+   [
+    "jungle",
+    "golden"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ],
+   [
+    "night_meadow",
+    "golden"
    ]
   ],
   "cast": [

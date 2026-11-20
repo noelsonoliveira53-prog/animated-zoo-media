@@ -724,7 +724,7 @@ Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they a
   * Compilations: not started; no theme has 6 public cartoon episodes yet (elephant/Tumble reaches 6 on Nov 25).
   * Build tasks: all four Zoo builds enabled, last runs SUCCEEDED (list_triggers). The Gizmo task's run note (Nov 20) says it could not reach the PC render folder twice (docs/IMPROVE.md): that is the Gizmo task's, not changed here.
   * Nothing was set Private or replaced; no old copies to report. CLAUDE.md: no line changed.
-  * Open slots after this run (long): Nov 21 9:30 AM / 1:30 PM; Nov 22 5:30 AM; Nov 23 1:30 PM / 5:30 PM; Nov 24 9:30 AM / 5:30 PM ... (filled by the daily builds; empty slots stay empty).
+  * Empty long slots after this run (plan read at 7:15 AM): Nov 21 9:30 AM; Nov 22 5:30 AM; Nov 23 5:30 PM (3:30 PM: zoo3d_ep23 rendering); Nov 24 9:30 AM, 1:30 PM, 5:30 PM and the song; Nov 25-27 three long slots and the song each. The daily builds fill them; an empty slot stays empty.
   * Song (step B, the day's one 3D video): zoo3d_ep23 "Stripes and Splashes! Tiger Song for Kids with Milo" (tiger, hippo, bear, koala; facts read today at National Geographic Kids
     and Smithsonian's National Zoo, quotes in make_specs_v3.py) written, sung by the PC's song engine (07:26-07:32 AM), timing built here (215/215 words, check_timing 0 bad lines),
     tail cut at 152 s with a 1.9 s fade, 4K job zoo3d_ep23y (routes.py, 13 places, side -> dolly; variety OK and recorded), three rounds of 640x360 test stills looked at

@@ -6,6 +6,31 @@ Never: passwords, purchases, new accounts or terms, deleting a video, CAPTCHAs, 
 ## STOP: no sung or hummed voice (owner, Nov 17 8:25 PM)
 Milo's sung line in za_ep02 "sounds robotic". From now on no cartoon shot has a voice synthesized onto notes: no lyrics in a `sing` line, no `"hum": True`. A song moment = one ordinary spoken shot where the character SAYS the rhyme, then one `sing` shot where only instruments play the tune: `{"text": "~ ~ ~ ~", "notes": "C4:1 E4:1 G4:1 D4:2"}` (one `~` per note group; bpm 96, chords in C), words on screen with numeric times (`("words", 0.4, ...)` style cues, not `w:`), nobody's mouth moving. The models za_ep01.py, za_ep02.py and zc_ep01.py are fixed (Nov 17 11 PM): their `SING_*` and `HUM_*` lines are the pattern. A tune's notes over a chord are that chord's notes or a whole step from them (E over the F bar clashed). Run `python3 ../listen/listen.py --episode <id>` BEFORE rendering: no click, no CLASH line inside a tune shot (the bed's own E over F every 10 s is the 3D lessons' bed, logged in docs/IMPROVE.md). A build that already wrote a sung or hummed line changes it before its plan check and never renders it.
 
+## VIRAL PACKAGING: every new 2D lesson, adventure and Short (owner approved Nov 20 2026, 10:37 AM: "implement the changes proposed to make those videos viral starting today")
+Evidence: `drafts/growth_test_2026-11/01_audit.md` (lessons lose 61-68% of viewers in the first 10 s; every lesson so far opened with a greeting).
+1. **Cold open.** Shot 1 shows the episode's promise (the mystery, the problem, the example) from the first frame, and the first spoken line asks
+   or shows the title's question within 0-3 s. Never open on "Hi, friends! I'm Milo..." or a channel greeting. Milo says his name AFTER the hook
+   (around 0:08-0:12), once. The first answer signs or the first obstacle are on screen by 0:20.
+2. **Title.** The promise in the first 40 characters, as the question a child would ask ("Whose Feet Are These?", "Why Do Camels Have Humps?");
+   a series name last if there is one ("Guess With Milo"); no "for Kids!" filler, no "5 Fun Facts", under 60 characters, no '<' '>' and no "AI".
+3. **Thumbnail.** ONE big object (the mystery or the animal doing the action) filling about half the frame, high-contrast background,
+   Milo only where he adds meaning (looking, pointing, guessing), 1-2 words (3 at most), none of the title's words (`thumb.py`). It shows the
+   same picture as the first shot, so the click leads straight to what was promised. Check it at 168x94 px.
+4. **Answering room.** Every question is followed by 4 s of thinking time with the answer signs on screen; every action line ("Can you...")
+   gets about 3 s to do it. No sound effect on a spoken word; the music bed ducked under every line.
+5. **Each Short** opens on its own mystery (the part's first shot), never on a greeting.
+
+## Guess With Milo (2D series, owner Nov 20 2026: "Guess With Milo should be always 2d not 3d; 3d is only for viral songs")
+A Guess With Milo episode is a `cartoon_lesson` (5:00-6:30, three parts of 83-90 s, three Shorts) with this shape:
+- Cold open on ONE mystery clue (a footprint, two ears in the grass, a wobbling egg). The first line asks "Who ...?". The words "Guess With Milo" are said once after the hook.
+- Each part: its own clue on the board → two answer signs → 4 s thinking time → the animal walks in on "It is the ...!" (the reveal) → the
+  fact with an on-screen example → a "Hmm." question with thinking time → one copy-me action → "Say it with me" → a quick check with answer signs.
+- Quiz with all three animals, then a recap of the three clues; the closing picture names the next Guess With Milo.
+- Title "Whose/Who ... ? Guess With Milo"; Shorts' title band "WHOSE" / "FOOT?" style (two lines, at most 15 and 10 letters).
+- The titles are queued in `docs/cartoon/build_plan.py` (theme "guess"), so `upload_guard.py --next lesson` hands them out first.
+- It is the approved 2D fact-lesson format with a new opening and series name, so it posts like any cartoon lesson. Send the owner the first
+  finished episode's file and link in the run report.
+
 ## Setup (fresh session)
 `bash studio/zoo3d/setup.sh` (voice model), `which hyperframes` (else `npm i -g hyperframes@0.8.231`), `python3 -c "import pyworld, pocketsphinx, kokoro_onnx, soundfile"` (else pip install with `--break-system-packages`).
 HyperFrames refuses to start under 1 GB of free disk (`df -h .`). If needed: `git sparse-checkout set --no-cone '/*' '!/truck/' '!/moon/' '!/bloop/' '!/gizmo/' '!/fruity/' '!/space/' '!/wild/'` (they stay in git).

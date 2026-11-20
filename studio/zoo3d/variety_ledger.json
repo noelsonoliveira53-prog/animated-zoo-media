@@ -1829,5 +1829,77 @@
    "tiger"
   ],
   "new_song": true
+ },
+ {
+  "id": "zoo3d_ep25",
+  "places": [
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "bamboo",
+    "golden"
+   ],
+   [
+    "savanna",
+    "morning"
+   ],
+   [
+    "jungle",
+    "noon"
+   ],
+   [
+    "beach",
+    "golden"
+   ],
+   [
+    "savanna",
+    "sunset"
+   ]
+  ],
+  "cast": [
+   "elephant",
+   "giraffe",
+   "koala",
+   "panda"
+  ],
+  "new_song": true
+ },
+ {
+  "id": "zoo3d_ep24",
+  "places": [
+   [
+    "spring_meadow",
+    "morning"
+   ],
+   [
+    "bamboo",
+    "noon"
+   ],
+   [
+    "river",
+    "golden"
+   ],
+   [
+    "arctic",
+    "noon"
+   ],
+   [
+    "jungle",
+    "morning"
+   ],
+   [
+    "night_meadow",
+    "golden"
+   ]
+  ],
+  "cast": [
+   "koala",
+   "panda",
+   "polar_bear",
+   "tiger"
+  ],
+  "new_song": true
  }
 ]

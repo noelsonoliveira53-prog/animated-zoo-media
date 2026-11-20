@@ -476,6 +476,148 @@ Stripes and splashes, sing with me!
 
 [Outro - quick and happy]
 Stripes and splashes! Bye-bye, friends!"""),
+
+ # SING WITH MILO (owner, Nov 20 2026: viral-song series; question chorus answered in every verse, first frame = the mystery on beat 1,
+ # title promise first, "Sing With Milo" last). Built from the channel's best long video (Where Is My Mama?: 31.3 h, 41% of long-form hours).
+ dict(id="zoo3d_ep24", bpm=112, key="C Major", seed=924, flavor="glockenspiel, ukulele and soft handclap hooks",
+      title="Whose Baby Is This? Sing With Milo", card="Whose Baby?", thumb="PEEKABOO!",
+      cast=["panda", "koala", "polar_bear", "tiger"],
+      route=[("chorus1", "spring_meadow", "morning"), ("verse1", "bamboo", "noon"), ("chorus2", "river", "golden"),
+             ("verse2", "arctic", "noon"), ("bridge1", "jungle", "morning"), ("chorus3", "night_meadow", "golden")],
+      verses=[["panda"], ["koala", "polar_bear"], ["tiger"]],
+      words=["WHOSE BABY?", "PANDA!", "PEEKABOO!", "KOALA!", "PEEK!", "TIGER CUB!", "WHOSE BABY?"],
+      # facts read Nov 20 2026 10:50 AM ET, San Diego Zoo Wildlife Alliance Library fact sheets: Giant Panda (Reproduction): at birth "pink skin with
+      # short white hairs"; "By 30 days, have full adult coloration"; newborns "May weigh 0.1% of mother's weight". Koala (Reproduction): joey "about
+      # 2 cm (.8 in) long" at birth; "Develops in pouch for 6 months"; after leaving the pouch "young rides on mother's back". Polar Bear (Reproduction):
+      # "Litters of two are the most common" (about 70% of births); cubs "May remain with mother until 2.5 years of age".
+      # Smithsonian's National Zoo (animals/tiger), read Nov 20 11:05 AM: "Cubs stay with their mothers until they learn to hunt successfully" (about 18 to 24 months).
+      desc="Whose baby is this? Peekaboo! Sing along with Milo the bluebird and guess each baby before Mama comes: a panda cub born pink and tiny, "
+           "a koala joey that rides on Mama's back, polar bear cubs that often come in twos, and tiger cubs that stay close to Mama for a long time.\n"
+           "A guess-the-baby animal song for kids. Peek, guess and sing along. Ages 2-6.\n\n"
+           "Facts from the San Diego Zoo Wildlife Alliance Library (giant panda, koala and polar bear fact sheets) and Smithsonian's National Zoo (tiger).",
+      tags=["whose baby is this", "baby animals song", "guess the animal song", "peekaboo song for kids", "animal song for kids", "kids songs",
+            "preschool learning song", "Sing With Milo", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+Guess the baby, one, two, three,
+Whose baby is this? Sing with me!
+
+[Verse 1 - light and bouncy]
+Tiny and pink, a baby so small,
+Now black and white, the cutest of all!
+Mama is munching bamboo, look, it's true,
+Baby panda, peekaboo!
+
+[Pre-Chorus - build up, rising drums]
+Who is it? Who is it?
+Peek and guess, then shout it!
+
+[Chorus - full band, group vocals]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+Guess the baby, one, two, three,
+Whose baby is this? Sing with me!
+
+[Verse 2 - light and bouncy]
+Fuzzy ears, a ride up high,
+On Mama's back, way up to the sky!
+Snowy and white, two cubs in a row,
+Koala joey, polar bear cubs, hello!
+
+[Bridge - claps and stomps, call and response]
+Peek and hide! (Peekaboo!)
+Peek and hide! (Peekaboo!)
+Cover your eyes! (One, two, three!)
+Open them wide, and what do you see?
+
+[Verse 3 - light and bouncy]
+Orange and stripy, a baby cat,
+Next to Mama, how about that!
+Close to Mama the whole year through,
+Tiger cub, peekaboo!
+
+[Pre-Chorus - build up, rising drums]
+Who is it? Who is it?
+Peek and guess, then shout it!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+We guessed them all, one, two, three,
+Whose baby is this? Sing with me!
+
+[Outro - quick and happy]
+Peekaboo! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep25", bpm=118, key="F Major", seed=925, flavor="marimba, woodblock crunch hits and bright kazoo hooks",
+      title="Crunch, Crunch! Who's Munching? Sing With Milo", card="Who's Munching?", thumb="YUM YUM!",
+      cast=["panda", "giraffe", "koala", "elephant"],
+      route=[("chorus1", "bamboo", "noon"), ("verse1", "bamboo", "golden"), ("chorus2", "savanna", "morning"),
+             ("verse2", "jungle", "noon"), ("bridge1", "beach", "golden"), ("chorus3", "savanna", "sunset")],
+      verses=[["panda"], ["giraffe", "koala"], ["elephant"]],
+      words=["CRUNCH, CRUNCH!", "BAMBOO!", "WHO'S MUNCHING?", "LEAVES!", "MUNCH!", "GRASS!", "LUNCH IS FUN!"],
+      # facts read Nov 20 2026 10:50 AM ET, San Diego Zoo Wildlife Alliance Library fact sheets: Giant Panda (Diet): "Over 98% of diet is bamboo";
+      # grasp stems "between the palm and a thumb-like digit". Giraffe (Diet): "Acacia spp. are favored"; "Long, prehensile, sticky tongue enables a
+      # giraffe to feed on hard-to-reach leaves". Koala (Diet): "feeding almost exclusively on leaves of Eucalyptus". African Elephant (Diet): savanna
+      # elephants "switch to growing grasses"; "wrap trunk around branches and grass tufts".
+      desc="Crunch, crunch! Who's munching? Sing along with Milo the bluebird and guess who is eating lunch: a panda crunching bamboo, a giraffe with a "
+           "long sticky tongue reaching acacia leaves, a koala nibbling eucalyptus leaves, and an elephant wrapping its trunk around the grass.\n"
+           "A guess-who's-eating animal song for kids. Crunch, munch and sing along. Ages 2-6.\n\n"
+           "Facts from the San Diego Zoo Wildlife Alliance Library (giant panda, giraffe, koala and African elephant diet fact sheets).",
+      tags=["what do animals eat song", "guess the animal song", "panda bamboo song", "animal song for kids", "kids songs", "preschool learning song",
+            "Sing With Milo", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! What's for lunch?
+Guess who's eating, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Verse 1 - light and bouncy]
+Black and white, sitting in the shade,
+Holding bamboo, a lunch parade!
+Bamboo, bamboo, all day long,
+The panda crunches to our song!
+
+[Pre-Chorus - build up, rising drums]
+Who's that? Who's that?
+Listen to the munching, who is that?
+
+[Chorus - full band, group vocals]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! What's for lunch?
+Guess who's eating, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Verse 2 - light and bouncy]
+A long, long tongue up in the tree,
+The giraffe picks leaves, one, two, three!
+Up in a tree, a koala, too,
+Nibbles leaves, the whole day through!
+
+[Bridge - claps and stomps, call and response]
+Munch with your hands! (Munch, munch!)
+Crunch like a panda! (Crunch, crunch!)
+Stretch like a giraffe! (Reach, reach, reach!)
+Now pat your tummy, lunch for each!
+
+[Verse 3 - light and bouncy]
+Big gray trunk wraps the grass so green,
+The biggest lunch you've ever seen!
+Swish and pull and into the mouth,
+The elephant munches north and south!
+
+[Pre-Chorus - build up, rising drums]
+Who's that? Who's that?
+Listen to the munching, who is that?
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! Lunch is fun!
+We guessed them all, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Outro - quick and happy]
+Crunch, crunch! Bye-bye, friends!"""),
 ]
 
 COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5", "#ffb627"]

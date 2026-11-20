@@ -19,6 +19,17 @@ day (the 3:30 PM song); no new 3D lessons, unuploaded ones `hold_3d_cap`; a long
 compilations every 2 days once Noelson approves the first; Earn-tab progress in `docs/YPP_PROGRESS.md` every run; Monday weekly review
 (`docs/REVIEW_WEEKLY.md`), monthly review on the 1st.
 
+**VIRAL PACKAGING + SING WITH MILO (Noelson, Nov 20 2026, 10:37 AM: "Aproved for your changes ... 3d is only for viral songs ... implement the changes
+proposed to make those videos viral starting today").** 3D is ONLY for songs; every lesson, Guess With Milo episode, adventure and Short is 2D.
+- Every new 2D episode follows `docs/CARTOON_RUN.md` "VIRAL PACKAGING" (cold open on the promise, no greeting first, question titles, one-object thumbnails).
+- Songs: the next two 3:30 PM songs are the Sing With Milo specs already written (facts read Nov 20): **zoo3d_ep25 "Crunch, Crunch! Who's Munching? Sing With
+  Milo" on Mon Nov 24**, **zoo3d_ep24 "Whose Baby Is This? Sing With Milo" on Wed Nov 26** (in this order: the variety ledger recorded ep25 first). Build them
+  before writing any new song (songs/<id>.json, jobs/<id>.song.json exist; sing, time, routes.py, job with `text_hide_shots`, stills, PC render, finish).
+  Every NEW song after them: a question chorus answered in every verse (the Where Is My Mama? shape), the first frame and first sung line on beat 1 show the
+  mystery, title = the question first and "Sing With Milo" last when it is a guessing song, thumbnail one object + Milo where he adds meaning, 1-2 words.
+- Test reading: `drafts/growth_test_2026-11/05_scorecard.csv` gets day-7 numbers for Crunch (Dec 1), Whose Feet Are These? (Nov 30), Whose Baby (Dec 3)
+  and Whose Ears (its day 7) during the daily run's analytics step.
+
 **CARTOON FORMATS APPROVED (Noelson, Nov 16, 3:36 PM: "cartoon formats are approved, build and post").** Three pillars: songs stay 3D;
 adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Cartoon pipeline"); Shorts are cartoon and vertical.
 - Posting: cartoon videos are plan entries like any other (`upload_plan_3d.json` formats `cartoon_adventure`, `cartoon_lesson`;

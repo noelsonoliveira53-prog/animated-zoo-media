@@ -83,3 +83,14 @@ scheduled, which is why the test starts Nov 23. The day-7 readings fall on Nov 3
 ## Reading the test
 After seven days for each episode, fill in `05_scorecard.csv`. Compare each with the same-length videos in `data/` and with the other test
 format. With under 1,000 impressions an episode's CTR and retention are noise: wait to day 14 before calling it.
+
+## UPDATE Nov 20 2026, 10:40 AM: owner's decision, plan as implemented
+Owner: "Aproved for your changes. Guess with Milo should be always 2d not 3d, 3d is only for viral songs. Implement the changes proposed to make
+those videos viral starting today." What changed against the plan above:
+- **Guess With Milo is 2D** (cartoon lessons, `studio/cartoon/toon.py`), queued first in `docs/cartoon/build_plan.py`: Whose Feet Are These? (claimed by
+  the next lesson build for **Sun Nov 23, 5:30 PM**; Shorts Nov 27, 28, 29), then Whose Ears Are These?, then Whose Egg Is This?. The 3D pilot spec in
+  `pilot/` stays a reference for the words and beats.
+- **Sing With Milo songs** are written (`studio/zoo3d/make_specs_v3.py`, facts read Nov 20): Crunch, Crunch! Who's Munching? (zoo3d_ep25) on
+  **Mon Nov 24, 3:30 PM**, Whose Baby Is This? (zoo3d_ep24) on **Wed Nov 26, 3:30 PM**. The Nov 23 3:30 PM slot already holds the tiger song.
+  Whose Baby uses panda, koala, polar bear and tiger cubs (the variety check needed two cast changes against Crunch).
+- The cold open, question titles and one-object thumbnails apply to every new 2D episode (`docs/CARTOON_RUN.md` "VIRAL PACKAGING").

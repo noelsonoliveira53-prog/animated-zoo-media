@@ -55,6 +55,18 @@ THEMES = [
           ("How Much Can a Camel Drink?", "fact, from the hump lesson", "First frame: Mama's nose in the water and a counter at 0.", "30 gallons in 13 minutes."),
           ("Can You Close Your Nose?", "fact, from the eyelashes lesson", "First frame: a camel nose, very close.", "A camel can. No sand gets in."),
           ("Catch Milo's Scarf!", "story moment, from the scarf adventure", "First frame: the red scarf flying away.", "Sandy walks through the wind and brings it back.")]),
+ dict(key="guess", name="Guess With Milo (owner, Nov 20 2026: always 2D)", friend="Milo and the zoo friends", place="the zoo trail",
+  adv=[],
+  les=[("Whose Feet Are These? Guess With Milo", "GUESS WITH MILO format (docs/CARTOON_RUN.md 'Guess With Milo'): cold open on ONE giant footprint in the sand, first line 'Look! A giant footprint in the sand! Who made it?', Milo says his name after the hook. Three parts, each opening on its own print with two answer signs and 4 s thinking time BEFORE the animal walks in: elephant (tiptoes, soft cushion, toenails), giraffe (two hooves on each foot, walks both legs of one side together), zebra (one toe inside one hoof, hoof keeps growing). Quiz, then the footprint trail recap. Full draft script and shot plan: drafts/growth_test_2026-11/pilot/ (written for 3D; port the words and beats, not the 3D props).",
+        "R (read Nov 19, read again on the build day): elephant walks 'on tiptoes', fat pads 'cushion bottoms of feet', savanna '4 to 5 nails on forefeet' (SDZWA Library, African Elephant). R: giraffe 'two weight-bearing hooves on each foot', feet '12 inches (30.5 cm) across' (Live Science); 'Alternate moving the two right limbs together and then the two left' (SDZWA Library, Giraffe behavior). R: zebra 'Single toe at terminus of each limb', 'Hooves enclose and protect the toe', hoof 'grows continually' (SDZWA Library, Plains Zebra).",
+        "One giant footprint in the sand fills half the picture, Milo leaning over it with a wing at his beak, a big yellow question mark. Words: WHO?"),
+       ("Whose Ears Are These? Guess With Milo", "GUESS WITH MILO format: cold open on two ears poking out of tall grass, each turning a different way; first line 'Look! Two ears in the grass, and they're turning different ways! Who is it?'. Three parts, each starting with an ear silhouette and two answer signs before the animal appears: rhino, fox, koala (or the three whose ear facts the build day's sources confirm). Listening action: cup your hands behind your ears. Quiz, recap.",
+        "V: a rhino can turn each ear a different way (the channel's most re-watched Short; read again at the source). V: one true ear fact each for the fox and the koala, read on the build day; a line comes out if the source does not say it.",
+        "Two big grey ears turning opposite ways above tall grass, the animal hidden, Milo cupping a wing to his ear. Words: LISTEN!"),
+       ("Whose Egg Is This? Guess With Milo", "GUESS WITH MILO format: cold open on ONE big egg in a nest wobbling, a tiny crack on the first word; first line 'Look! An egg is wobbling! Who is inside?'. Three parts, each a different egg (size, colour, place) with two answer signs before it hatches and the mama comes: ostrich, sea turtle, penguin (or the three whose egg facts the build day's sources confirm). Gentle hatch, every baby safe with its family. Quiz, recap.",
+        "V: one true egg fact each (size, where it is laid, who keeps it warm), read on the build day at a zoo or Nat Geo page; a line comes out if the source does not say it.",
+        "One big cream egg with a tiny crack in a sandy nest, Milo peeking from behind it. Words: CRACK!")],
+  songs=[], shorts=[]),
  dict(key="arctic", name="Arctic week", friend="Poppy the polar bear cub", place="the snowy Arctic",
   adv=[("Poppy's First Slide on the Ice", "All the friends slide down the snowy hill. Poppy watches from the top. She is too shy to try.|She tries sitting, then holding Milo's wing, and stops each time.|Her friends slide beside her, slowly. At the bottom she asks to go again.",
         "V: polar bear paws are very wide and help them walk on snow and ice. V: the bumps on their paw pads grip the ice.", "Poppy at the top of a snow hill, friends waving below. Words: YOU CAN!", ""),
@@ -112,7 +124,7 @@ def theme_html(t, n):
 
 
 n_adv = sum(len(t["adv"]) for t in THEMES); n_les = sum(len(t["les"]) for t in THEMES); n_song = sum(len(t["songs"]) for t in THEMES); n_sh = sum(len(t["shorts"]) for t in THEMES)
-assert (n_adv, n_les, n_song, n_sh) == (15, 15, 10, 20), (n_adv, n_les, n_song, n_sh)
+assert (n_adv, n_les, n_song, n_sh) == (15, 18, 10, 20), (n_adv, n_les, n_song, n_sh)
 import re
 titles = []
 for t in THEMES:

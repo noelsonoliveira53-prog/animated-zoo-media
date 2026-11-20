@@ -219,7 +219,7 @@ SHOTS = [
                                                      prop("f2", lambda p: art.footprint(p), 1360, 800, .6, True), prop("f3", lambda p: art.footprint(p), 1540, 740, .6, True)],
       fx=[("to", "w:heavy", "#{p}bp", {"y": -10, "duration": .25, "yoyo": True, "repeat": 3}, "the big load"),
           ("show", "w:walk", "f1"), ("show", "w:long", "f2"), ("show", "w:way", "f3"), ("nod", "w:day.", "mama")],
-      words=[("w:heavy", "HEAVY LOADS", .26, .14, .8, "sun"), ("w:long", "A LONG WAY", .76, .3, .7, "pill")]),
+      words=[("w:heavy", "HEAVY LOADS", .34, .24, .8, "sun"), ("w:long", "A LONG WAY", .76, .3, .7, "pill")]),
     S("dune_eve", (1000, 640, 1700), "Milo hops on top. Tumble walks beside her. Step, step, step, slow and steady.", beat="solution", tag="step step step",
       actors=[("tumble", "tumble", 420, 935, .6)] + EVE_RIDE, props=[PACK(1000)],
       fx=[("walk", "w:Tumble", "tumble", 420, 4.0), ("walk", "w:Tumble", "sandy", 420, 4.0), CARRY("w:Tumble", 420, 4.0, ("pk", "milo")), ("hop", "w:hops", "milo")],
@@ -232,7 +232,7 @@ SHOTS = [
       props=[prop("wk", art.week, 960, 600, 1.15), prop("dr", lambda p: art.water_drop(p), 960, 330, .9)],
       fx=[("fromto", "w:week", ".{p}wk-d", {"opacity": .25}, {"opacity": 1, "duration": .2, "stagger": .22}, "seven days, one by one"),
           ("to", "w:more", "#{p}dr_w", {"scale": 1.1, "duration": .2, "yoyo": True, "repeat": 3}, "")],
-      words=[("w:week", "1 WEEK", .2, .16, 1.0, "sun"), ("w:more", "OR MORE!", .8, .16, .8, "pill")]),
+      words=[("w:week", "1 WEEK", .3, .26, 1.0, "sun"), ("w:more", "OR MORE!", .8, .16, .8, "pill")]),
     S("dune_eve", C("dune_eve", "milo", "body", 640, 0, -10, stage=EVE_RIDE), "Wow! A whole week!", tag="Milo: a whole week", actors=EVE_RIDE, props=[PACK(1000)],
       fx=[("face", 0.02, "milo", "wow"), ("hop", "w:week!", "milo")], words=[("w:week!", "WOW!", .74, .2, 1.0, "sun")]),
     S("dune_eve", MCL("dune_eve", 0, -40, 760, stage=EVE_RIDE), "Can a camel go a week without water? Yes, or no?", q=True, beat="solution", tag="question: a week yes or no", pause=3.2,
@@ -294,8 +294,8 @@ SHOTS = [
 
 # thumbnail (thumb.py): the example in the picture (Sandy carrying the two jugs over a dune, Milo on top), 3 words at most, none of the title's words, no watermark
 THUMBS = {
-    "za_ep08": {"place": "dune_eve", "cam": (1080, 600, 1300),
-                "actors": [("calf", 1000, 935, .62, False, ''), ("milo", 1000 - round(30 * .62), 935 - round(470 * .62) - 30, .44, False, '')],
+    "za_ep08": {"place": "dune_eve", "cam": (1000, 600, 1300),
+                "actors": [("calf", 1000, 935, .62, False, ''), ("milo", 1000 - round(30 * .62), 935 - round(470 * .62) - 14, .44, False, '')],
                 "props": [(A.pack, 1000, 935 - round(470 * .62) + 6, .56)],
-                "words": [("STEP BY STEP", 1420, 160, 150, "sun", -4)]},
+                "words": [("STEP BY STEP", 1340, 160, 150, "sun", -4)]},
 }

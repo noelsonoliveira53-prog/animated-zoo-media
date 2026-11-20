@@ -2935,10 +2935,28 @@
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep08.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 19 7:30 PM ET by the scheduled 7:23 PM adventure build (session_014CFVfVMWgZfzs5B9ii9nEG). Slot Nov 24 5:30 AM, not the Nov 22 5:30 AM upload_guard --next printed: Sandy is a camel and Nov 22 carries the camel lesson zc_ep09 (one animal per day)."
+  "note": "Built Nov 19 by the scheduled 7:23 PM adventure build (session_014CFVfVMWgZfzs5B9ii9nEG): 4K AV1 308.3 s; stills of every shot (start and end, three rounds of fixes, then the changed shots at start, middle and end) and frames of the finished files (every shot end and middle, every answer reveal, both rhyme shots and both tune shots) looked at; rendered twice (render 1 had the words 1 WEEK and HEAVY LOADS under the mark); pace, watermark and corner sheet, listen.py, review.py. Slot Nov 24 5:30 AM, not the Nov 22 5:30 AM upload_guard --next printed: Sandy is a camel and Nov 22 carries the camel lesson zc_ep09. Run note docs/cartoon/runs/za_ep08.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it.",
+  "description": "Oh no! The little tree in the zoo garden is droopy and thirsty, and the watering can is empty. Milo the bluebird, Sandy the baby camel and Tumble the baby elephant set off across the desert to bring back water. Tired wings, a hot sun, soft sand and heavy jugs! Who can carry the water all the way home? A gentle animal adventure for ages 2-6 about helping friends, with questions to answer, a count-along and a tune to clap along to.\nKids see how a very thirsty camel can drink 30 gallons of water in only 13 minutes, how grown-up camels can carry big, heavy loads and walk a long way, and how a camel can go a week or more without water.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic (Arabian camel); San Diego Zoo Wildlife Alliance (camel); World Wildlife Fund (camels).",
+  "tags": [
+   "baby camel",
+   "camel for kids",
+   "desert animals for kids",
+   "how much water does a camel drink",
+   "oasis",
+   "baby elephant",
+   "animal stories for kids",
+   "friendship story for kids",
+   "kids adventure cartoon",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "STEP BY STEP",
+  "seconds": 308.3
  }
 ]

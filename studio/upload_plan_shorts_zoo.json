@@ -1285,7 +1285,10 @@
  {
   "file": "cartoon/zc_ep07_short3.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
+  "video_id": "WbRXJjPyrdg",
+  "thumb_set": true,
+  "uploaded_by": "daily run Nov 20 (review.py PASS, contact sheet looked at, upload_guard OK, zlive [] , Studio dialog read)",
   "format": "cartoon_short_90",
   "from": "zc_ep07",
   "res": "2160x3840",

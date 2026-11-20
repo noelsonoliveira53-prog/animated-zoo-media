@@ -32,7 +32,20 @@ def kokoro():
     return K
 
 
+# Heteronyms the voice model gets wrong (owner, Nov 20 2026: "Where does the camel live?" was read /laɪv/, like "five"). In the channel's
+# scripts "live"/"lives" is the verb (/lɪv/, /lɪvz/) except before the few nouns below ("a live show") and "lives" after a possessive or a
+# number ("nine lives", "their lives"). Only the sound changes: captions, timing words and titles keep the real spelling.
+_LIVE_ADJ_NOUNS = r"(?:show|shows|music|stream|streams|concert|concerts|video|videos|broadcast|event|events|wire|wires|bait|action)"
+_LIVES_NOUN_BEFORE = r"(?:my|your|his|her|its|our|their|nine|two|three|four|five|six|seven|eight|ten|many|whole)"
+
+def fix_pron(text):
+    t = re.sub(r"\b([Ll])ive\b(?!\s+" + _LIVE_ADJ_NOUNS + r"\b)", lambda m: m.group(1) + "iv", text)
+    t = re.sub(r"\b(" + _LIVES_NOUN_BEFORE + r")\s+livs\b", r"\1 lives", re.sub(r"\b([Ll])ives\b", lambda m: m.group(1) + "ivs", t), flags=re.I)
+    return t
+
+
 def say(text, voice, speed=1.0):
+    text = fix_pron(text)
     os.makedirs(CACHE, exist_ok=True)
     h = hashlib.md5(f"{text}|{voice}|{speed}".encode()).hexdigest()[:16]
     p = f"{CACHE}/{h}.npy"

@@ -121,7 +121,18 @@ def review(fname):
             win_ = min(40.0, dur)
             if ends_ and float(ends_[-1][0]) >= win_ - 0.6 and float(ends_[-1][1]) > 4:
                 fails.append(f"the last {float(ends_[-1][1]):.1f} s are silent: cut the file after the last sung or spoken line")
-        if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo}-{hi} s for {fmt} (KID-04)")
+        # the main intro at the beginning and at the end of every NEW long video of The Animated Zoo (owner, Nov 20 2026 4:50 PM; studio/bookends.py).
+        # Not a fix of a video that is already live (the entry has a video id), not Gizmo, not a Short. The length rule is for the video's own
+        # content: a song may be 30 s longer with them; a cartoon's own content stays 5:00 or more and the whole file 6:30 or less.
+        if not gz and fmt in ("3d_singalong", "cartoon_lesson", "cartoon_adventure") and not entry.get("video_id") and not entry.get("replaced_video_ids") and entry.get("bookends") is not False:
+            sys.path.insert(0, os.path.dirname(HERE)); import bookends
+            _b, _e = bookends.check(path); _id = bookends.dur(bookends.INTRO)
+            if not (_b and _e): fails.append(f"the main intro is not at the {'beginning' if not _b else ''}{' and ' if not _b and not _e else ''}{'end' if not _e else ''} of the video "
+                                             "(every new long video carries it at both ends: 2D `*intro_shots()` after the hook and as the last shots; 3D songs: finish.py)")
+            else:
+                if fmt == "3d_singalong": hi += 2 * _id
+                else: lo += 2 * _id
+        if not lo <= dur <= hi: fails.append(f"length {dur:.0f} s is outside {lo:.0f}-{hi:.0f} s for {fmt} (KID-04)")
         # channel watermark (Noelson, Nov 16: on every video that is uploaded)
         import watermark
         if gz: watermark.use("gizmo")      # Gizmo Explains' own mark

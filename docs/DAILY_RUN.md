@@ -192,6 +192,12 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
 
 ## B. Production
 1. Collect finished renders from the PC (Documents\ZooBlender\out) and finish them to 4K with finish.py, one encode at a time.
+   MAIN INTRO AT BOTH ENDS (owner, Nov 20 2026 4:50 PM: "at the beginning and at the end" of every new long video, 2D and 3D): finish.py lays
+   `cartoon/zintro.mp4` before a song (0:00) and after it, in the same encode (The Animated Zoo's songs only; `--nobookends` or job
+   "bookends": false ONLY for a fix of a video that is already live). The plan entry gets "bookends": true, the file's whole length and the
+   watermark's hide windows on the file's clock. A 2D episode carries it in its own shots (docs/CARTOON_RUN.md MAIN INTRO). review.py FAILS a
+   new long video without it at both ends: a "to_upload" file that fails is finished again (3D) or re-rendered (2D), never uploaded as it is.
+   A finished 3D song whose raw render is gone: `python3 studio/bookends.py add <file> <out>` (one more encode), then review.py.
    Jobs whose id ends in w or x are re-renders: finish them with their own job file (they publish under the song id and
    replace the old file). A folder with a DONE marker but no <id>_raw.mp4 is a cancelled job. Never use the old savanna raws
    in out\zoo3d_ep14, ep15, ep16. If status.txt has not changed for over 2 hours while it says RENDERING, the worker is

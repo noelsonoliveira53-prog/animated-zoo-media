@@ -31,6 +31,7 @@ import art_zc_ep05 as A5
 import art_zc_ep07 as AZ7
 import kit
 from kit import Kit, S, prop
+from intro import INTRO_STAGES, intro_shots      # the main intro, right after the hook and as the last shots (owner, Nov 20 4:50 PM: at the beginning and at the end)
 
 EP = {"id": "za_ep09", "kind": "story", "nest": True, "beat": True, "voice": "af_heart", "speed": 0.8, "gap": 0.4, "music": 0.5, "lead_in": 0.3, "tail": 1.2,
       "cast": {"milo": {"voice": "af_heart", "speed": .8}, "sandy": {"voice": "af_sarah", "speed": .82, "pitch": 3, "formant": 1.1, "gain": .88},
@@ -55,6 +56,7 @@ STAGES = {
     "zoo_night": [("tumble", "tumble", 300, 940, .58), ("sandy", "calf", 900, 940, .52), ("milo", "milo", 1440, 600, .68, False, True)],
     "night": [("mama", "camel", 760, 905, .95)],
     "zoo": [("mama", "camel", 1400, 905, .8, True), ("sandy", "calf", 560, 935, .52), ("tumble", "tumble", 140, 935, .56), ("milo", "milo", 1000, 430, .68, False, True)],
+    **INTRO_STAGES,
 }
 K = Kit(STAGES); P, C, V, WV = K.P, K.C, K.V, K.WV
 WIDE = (960, 540, 1920)
@@ -88,7 +90,8 @@ SHOTS = [
     S("dunes", C("dunes", "milo", "body", 1000, 60, 60), "A sleepover! Sandy, you are invited to a sleepover at the zoo!", beat="hook", tag="hook: the sleepover card",
       hide=["mama", "sandy"], props=[CARD(970, 340)], fx=[("face", 0.02, "milo", "wow"), ("hop", "w:sleepover!", "milo"), ("to", "w:invited", "#{p}cd_w", {"rotation": 8, "duration": .2, "yoyo": True, "repeat": 3}, "the card wiggles")],
       words=[("w:sleepover!", "SLEEPOVER!", .64, .2, 1.0, "sun")]),
-    S("dunes", WIDE, "Hello, I'm Milo! This is Sandy the baby camel, and her Mama, in the sandy desert.", tag="dunes wide: Milo, Sandy, Mama", cam2=(980, 560, 1820),
+    *intro_shots(),      # the main intro, right after the hook
+    S("dunes", WIDE, "Hello, I'm Milo! This is Sandy the baby camel, and her Mama, in the sandy desert.", trans="iris", tag="dunes wide: Milo, Sandy, Mama", cam2=(980, 560, 1820),
       props=[CARD(970, 340)], fx=[("hop", "w:Hello,", "milo"), ("hop", "w:Sandy", "sandy"), ("nod", "w:Mama,", "mama")],
       words=[("w:Sandy", "SANDY", .33, .36, .7, "pill"), ("w:Mama,", "MAMA", .7, .3, .7, "pill")]),
     S("dunes", C("dunes", "sandy", "head", 820, -40, 30), "A sleepover? My very first night away from Mama!", who="sandy", beat="goal", tag="Sandy: my first night away", hide=["mama", "milo"],
@@ -250,6 +253,7 @@ SHOTS = [
       fx=[("hop", 1.0, "sandy"), ("trunk", 2.0, "tumble", -90, .4), ("hop", 2.2, "milo")], words=[(TB(3), "HOORAY!", .76, .16, 1.0, "sun")]),
     S("zoo", C("zoo", "milo", "body", 900, 0, 0), "Next time: Poppy's first slide on the ice! See you on the next adventure, friends!", beat="ending", tag="goodbye: next adventure", hide=["tumble", "sandy", "mama"],
       fx=[("hop", "w:next", "milo")], words=[("w:Next", "NEXT TIME!", .8, .2, .66, "sun"), ("w:See", "SEE YOU SOON!", .8, .33, .56, "pill")]),
+    *intro_shots(),      # and again as the last shots: the video ends on the logo with the whole cast
 ]
 
 # thumbnail (thumb.py): the example in the picture (Sandy under a starry blanket in the straw, friends beside her, the moon in the window), 3 words at most, none of the title's words, no watermark

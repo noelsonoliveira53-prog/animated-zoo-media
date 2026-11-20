@@ -538,6 +538,9 @@ class Film:
 tl.to({{}},{{duration:.01}},{total - .01:.3f});window.__timelines["main"]=tl;tl.seek(0);</script></body></html>"""
 
 
+PRE_INTRO = {f"za_ep{k:02d}" for k in range(1, 9)} | {f"zc_ep{k:02d}" for k in range(1, 11)}      # live (scheduled or public) before the main intro existed: a fix re-render keeps them without it
+
+
 def plan_gate(film, total, ep):
     ev = sorted(film.events); ts = [e[0] for e in ev] + [total]; gaps = [(ts[k], ts[k + 1]) for k in range(len(ts) - 1)]
     worst = max(gaps, key=lambda g: g[1] - g[0]); over = [g for g in gaps if g[1] - g[0] > MAXGAP]
@@ -552,16 +555,26 @@ def plan_gate(film, total, ep):
            "questions": len(qs), "longest_without_question": round(max(qg), 1) if qg else None, "first_words_at": round(film.shots[0]["v0"], 2), "shot_mean": round(total / max(1, cuts), 2)}
     fails = []
     if over: fails.append(f"{len(over)} stretches over {MAXGAP:g} s without a visual change: {res['over_6s']}")
+    # the main intro (intro.py) at the beginning (right after the hook) AND as the last shots of every new long episode (owner, Nov 20 2026 4:50 PM:
+    # "at the beginning and at the end"). Episodes that were live before that stay as they are (PRE_INTRO); EP "intro": False = a preview or a test.
+    ix = [k for k, s in enumerate(film.shots) if (s.get("tag") or "").startswith("INTRO 1")]; n_in = sum(1 for s in film.shots if (s.get("tag") or "").startswith("INTRO"))
+    t_intro = sum(film.shots[k + 1]["t0"] - s["t0"] if k + 1 < len(film.shots) else total - s["t0"] for k, s in enumerate(film.shots) if (s.get("tag") or "").startswith("INTRO"))
+    res["main_intro"] = {"at": [round(film.shots[k]["t0"], 1) for k in ix], "seconds": round(t_intro, 1)}
+    if not film.portrait and ep.get("intro", True) and ep.get("id") not in PRE_INTRO:
+        if len(ix) != 2 or n_in != 8: fails.append(f"the main intro is in the episode {len(ix)} time(s): it goes right after the hook AND as the last shots (`*intro_shots()` twice, docs/CARTOON_RUN.md MAIN INTRO)")
+        else:
+            if ix[0] == 0 or film.shots[ix[0]]["t0"] > 30: fails.append(f"the first main intro starts at {film.shots[ix[0]]['t0']:.0f} s: it goes right after the hook (the hook first, then the intro, inside the first 30 s)")
+            if ix[1] != len(film.shots) - 4: fails.append("the second main intro must be the LAST four shots of the episode (after the goodbye)")
     if not film.portrait:
         if len(real) < 6: fails.append(f"only {len(real)} places (need 6)")
-        if total < 300: fails.append(f"only {total:.0f} s long (need 300)")
-        if total > 390: fails.append(f"{total:.0f} s long (at most 390)")
+        if total - t_intro < 300: fails.append(f"only {total - t_intro:.0f} s of its own content ({total:.0f} s with the main intro; need 300 without it)")
+        if total > 390: fails.append(f"{total:.0f} s long (at most 390, the main intro included)")
         if ep.get("kind") == "story":
             beats = [s.get("beat", "") for s in film.shots]; res["beats"] = {b: beats.count(b) for b in dict.fromkeys(beats) if b}
             for b in ("hook", "goal", "obstacle1", "obstacle2", "obstacle3", "low", "solution", "ending"):
                 if b not in beats: fails.append(f"the story has no '{b}' beat")
             if beats.count("fact") < 2: fails.append(f"only {beats.count('fact')} animal facts shown (2 or 3)")
-            if not any(s.get("sung") for s in film.shots): fails.append("no song moment")
+            if not any(s.get("sung") for s in film.shots if not (s.get("tag") or "").startswith("INTRO")): fails.append("no song moment")
             if film.shots[0]["v0"] > 1.0 or film.shots[0].get("beat") != "hook": fails.append("the first shot must be the hook, spoken in the first 5 seconds")
             if beats and "ending" in beats and "low" in beats and not (beats.index("low") < beats.index("solution") < len(beats) - beats[::-1].index("ending")): fails.append("the beats are out of order (low moment, then the solution, then the ending)")
         else:

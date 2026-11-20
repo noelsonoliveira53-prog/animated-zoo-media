@@ -49,9 +49,17 @@ Never in a 9:16 Short, so it has no 9:16 framing. Rules the stills taught (Nov 2
     then runs it backwards, so the letters came down late and in reverse order;
   - Mango's arms straight up (160) hide behind his head: out and up is 105;
   - a `fromTo` draws its start state from the first frame: a burst that must stay unseen until its moment sits in a hidden wrapper.
-- In the episode file: `from intro import INTRO_STAGES, intro_shots`, `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` in SHOTS
-  RIGHT AFTER the hook shots (the episode still opens on its promise). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
-- Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Episodes already built are not changed.
+- AT THE BEGINNING AND AT THE END (owner, Nov 20 4:50 PM: "let's include that at the end of every long version new video we upload in 2D and 3D
+  as well"; 4:51 PM: "at the beginning and at the end"). In the episode file: `from intro import INTRO_STAGES, intro_shots`,
+  `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` TWICE in SHOTS: RIGHT AFTER the hook shots (the episode still
+  opens on its promise; the intro starts inside the first 30 s; the shot after it gets `trans="iris"`) and again as the LAST four shots, after
+  the goodbye (the video ends on the logo with the whole cast). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
+- The plan check (`toon.py <id> --plan`) fails an episode that has it in one place only, or not last, and counts the length without it: the
+  episode's own content is 300 s or more, the whole file 390 s or less (the two intros are about 30 s). `plan["main_intro"]` shows where they are.
+  Episodes that were live before it existed (toon.PRE_INTRO: za_ep01-08, zc_ep01-10) keep their file: a fix re-render stays without it.
+- The gate before upload: `review.py` fails a new long video (cartoon lesson, adventure, 3D song) whose file does not carry it at both ends
+  (`python3 studio/bookends.py check <file>` looks for the logo card in the first 75 s and at the very end).
+- Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Not on Gizmo Explains or any other channel.
 - Preview alone: `python3 toon.py zintro`. Never edit the intro inside one episode: change `intro.py`, so every episode keeps the same intro.
 
 ## Guess With Milo (2D series, owner Nov 20 2026: "Guess With Milo should be always 2d not 3d; 3d is only for viral songs")

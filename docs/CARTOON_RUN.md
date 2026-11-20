@@ -20,6 +20,14 @@ Evidence: `drafts/growth_test_2026-11/01_audit.md` (lessons lose 61-68% of viewe
    gets about 3 s to do it. No sound effect on a spoken word; the music bed ducked under every line.
 5. **Each Short** opens on its own mystery (the part's first shot), never on a greeting.
 
+## MAIN INTRO in every new long 2D episode (owner, Nov 20 2026 12:44 PM: "create a main intro for the animated zoo that will be repeated on every episode ... just for future ones")
+`studio/cartoon/intro.py`: the same two shots every time (about 7 s): the dressed-up zoo gate, the friends pop up on the beat while the bells play the
+two-bar Animated Zoo jingle, Milo lands on the arch, "THE ANIMATED ZOO" lands on the path; then Milo says "The Animated Zoo!" and everyone hops.
+- In the episode file: `from intro import INTRO_STAGES, intro_shots`, `STAGES = {..., **INTRO_STAGES}` before `Kit(STAGES)`, and `*intro_shots()` in SHOTS
+  RIGHT AFTER the hook shots (the episode still opens on its promise). It replaces the old "Welcome to The Animated Zoo, friends!" gate shot.
+- Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Episodes already built are not changed.
+- Preview alone: `python3 toon.py zintro`. Never edit the intro inside one episode: change `intro.py`, so every episode keeps the same intro.
+
 ## Guess With Milo (2D series, owner Nov 20 2026: "Guess With Milo should be always 2d not 3d; 3d is only for viral songs")
 A Guess With Milo episode is a `cartoon_lesson` (5:00-6:30, three parts of 83-90 s, three Shorts) with this shape:
 - Cold open on ONE mystery clue (a footprint, two ears in the grass, a wobbling egg). The first line asks "Who ...?". The words "Guess With Milo" are said once after the hook.

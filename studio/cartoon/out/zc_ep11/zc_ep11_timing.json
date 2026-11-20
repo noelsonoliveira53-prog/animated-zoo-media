@@ -1,6 +1,6 @@
 {
  "id": "zc_ep11",
- "total": 348.0837083333334,
+ "total": 363.92716666666666,
  "bpm": 96,
  "beats": [
   0.0,
@@ -559,15 +559,41 @@
   345.625,
   346.25,
   346.875,
-  347.5
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5,
+  353.125,
+  353.75,
+  354.375,
+  355.0,
+  355.625,
+  356.25,
+  356.875,
+  357.5,
+  358.125,
+  358.75,
+  359.375,
+  360.0,
+  360.625,
+  361.25,
+  361.875,
+  362.5,
+  363.125,
+  363.75
  ],
  "plan": {
-  "length": 348.1,
-  "shots": 67,
-  "visual_changes": 280,
-  "mean_gap": 1.24,
-  "longest_gap": 4.28,
-  "longest_gap_at": 61.6,
+  "length": 363.9,
+  "shots": 71,
+  "visual_changes": 396,
+  "mean_gap": 0.92,
+  "longest_gap": 4.51,
+  "longest_gap_at": 244.9,
   "over_6s": [],
   "places": [
    "sandtrail",
@@ -584,19 +610,26 @@
    "paper_pink"
   ],
   "questions": 34,
-  "longest_without_question": 20.6,
+  "longest_without_question": 30.2,
   "first_words_at": 0.42,
-  "shot_mean": 5.2,
+  "shot_mean": 5.13,
+  "main_intro": {
+   "at": [
+    12.2,
+    348.1
+   ],
+   "seconds": 30.2
+  },
   "fails": [],
-  "words_placed": "669/669",
+  "words_placed": "672/672",
   "sync": {
    "pauses_checked": 64,
    "onset_err_mean_ms": 27.2,
    "onset_err_max_ms": 80.0,
    "suspect_words": [],
-   "cuts": 66,
-   "cuts_on_the_half_beat": 66,
-   "songs_entering_on_a_beat": "3/3",
+   "cuts": 70,
+   "cuts_on_the_half_beat": 70,
+   "songs_entering_on_a_beat": "6/6",
    "process": "3D (beat)"
   }
  },
@@ -664,6 +697,16 @@
   [
    12.19,
    "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   12.19,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   12.19,
+   "action",
    "the sun's rays turn"
   ],
   [
@@ -672,34 +715,99 @@
    "the zoo gate (main intro) INTRO 1: the sky"
   ],
   [
+   12.24,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   12.99,
+   "action",
+   "Milo does a roll"
+  ],
+  [
    15.31,
    "new shot",
    "the zoo gate (main intro) INTRO 2: the gate"
   ],
   [
-   15.43,
+   15.5,
    "action",
    "tumble pops up"
   ],
   [
-   15.74,
+   15.78,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   15.82,
    "action",
    "mango pops up"
   ],
   [
-   16.06,
-   "action",
-   "Milo swoops in and lands on the arch"
-  ],
-  [
-   16.06,
+   16.13,
    "action",
    "sandy pops up"
   ],
   [
-   16.37,
+   16.25,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   16.44,
    "action",
    "tula pops up"
+  ],
+  [
+   16.75,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   16.87,
+   "action",
+   "sandy nods"
+  ],
+  [
+   16.87,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   17.07,
+   "action",
+   "clover pops up"
+  ],
+  [
+   17.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   17.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   17.38,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   17.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   18.12,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   18.44,
+   "action",
+   "out of the flash"
   ],
   [
    18.44,
@@ -712,99 +820,169 @@
    "the logo (main intro) INTRO 3: the logo"
   ],
   [
-   18.56,
+   18.63,
    "action",
    "the badge pops"
   ],
   [
-   19.18,
+   19.2,
    "action",
    "a letter drops in"
   ],
   [
-   19.34,
+   19.35,
    "action",
    "a letter drops in"
   ],
   [
-   19.5,
+   19.51,
    "action",
    "a letter drops in"
   ],
   [
-   19.65,
+   19.66,
    "action",
    "a letter drops in"
   ],
   [
-   19.81,
+   19.82,
    "action",
    "a letter drops in"
   ],
   [
-   19.96,
+   19.98,
    "action",
    "a letter drops in"
   ],
   [
-   20.12,
+   20.13,
    "action",
    "a letter drops in"
   ],
   [
-   20.28,
+   20.29,
    "action",
    "a letter drops in"
   ],
   [
-   20.43,
+   20.33,
    "action",
    "ZOO slams in"
   ],
   [
-   20.43,
+   20.33,
    "action",
    "ZOO slams in"
   ],
   [
-   20.43,
+   20.33,
    "action",
    "ZOO slams in"
   ],
   [
-   20.75,
+   20.63,
    "action",
-   "bear ears pop onto the O's"
+   "a firework"
   ],
   [
-   20.85,
+   20.63,
    "action",
-   "bear ears pop onto the O's"
+   "the rainbow draws on"
   ],
   [
-   21.06,
+   20.79,
+   "action",
+   "a firework"
+  ],
+  [
+   20.94,
+   "action",
+   "confetti"
+  ],
+  [
+   20.94,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   21.04,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   21.25,
    "action",
    "Milo flies onto the badge"
   ],
   [
-   21.68,
+   21.37,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   21.56,
+   "action",
+   "a firework"
+  ],
+  [
+   21.76,
    "action",
    "tumble pops up"
   ],
   [
-   22.0,
+   22.07,
    "action",
    "sandy pops up"
   ],
   [
-   22.31,
+   22.19,
+   "action",
+   "a firework"
+  ],
+  [
+   22.38,
    "action",
    "mango pops up"
   ],
   [
-   22.62,
+   22.38,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   22.69,
+   "action",
+   "clover pops up"
+  ],
+  [
+   22.69,
    "action",
    "tula pops up"
+  ],
+  [
+   22.81,
+   "action",
+   "a firework"
+  ],
+  [
+   23.01,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   23.13,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   23.28,
+   "action",
+   "a firework"
+  ],
+  [
+   23.75,
+   "action",
+   "a firework"
   ],
   [
    23.75,
@@ -812,1194 +990,1629 @@
    "the logo (main intro) INTRO 4: Milo says the name"
   ],
   [
-   25.62,
+   23.87,
+   "action",
+   "T word lights up"
+  ],
+  [
+   23.89,
+   "action",
+   "a firework"
+  ],
+  [
+   24.05,
+   "action",
+   "A word lights up"
+  ],
+  [
+   24.77,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   25.26,
+   "action",
+   "Milo flips"
+  ],
+  [
+   25.26,
+   "action",
+   "a firework"
+  ],
+  [
+   25.26,
+   "action",
+   "confetti"
+  ],
+  [
+   25.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   25.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   25.26,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   25.38,
+   "action",
+   "a firework"
+  ],
+  [
+   25.56,
+   "action",
+   "a firework"
+  ],
+  [
+   25.56,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   25.68,
+   "action",
+   "a firework"
+  ],
+  [
+   26.56,
    "new place",
    "the sandy path follow the prints"
   ],
   [
-   29.32,
+   30.32,
    "word",
    "READY?"
   ],
   [
-   30.36,
+   31.36,
    "action",
    "milo flies"
   ],
   [
-   31.88,
+   32.81,
    "new shot",
    "the sandy path print 1"
   ],
   [
-   33.81,
+   34.81,
    "word",
    "BIG!"
   ],
   [
-   34.38,
+   35.38,
    "word",
    "ROUND!"
   ],
   [
-   36.56,
+   37.81,
    "new shot",
    "the sandy path question 1a"
   ],
   [
-   37.35,
+   38.35,
    "sign",
    "ELEPHANT"
   ],
   [
-   37.7,
+   38.7,
    "sign",
    "LION"
   ],
   [
-   40.09,
+   41.09,
    "thinking dot",
    "1"
   ],
   [
-   40.77,
+   41.77,
    "thinking dot",
    "2"
   ],
   [
-   41.44,
+   42.44,
    "thinking dot",
    "3"
   ],
   [
-   41.93,
+   42.93,
    "answer",
    "ELEPHANT"
   ],
   [
-   43.12,
+   44.06,
    "new shot",
    "the sandy path the elephant walks in"
   ],
   [
-   43.36,
+   44.36,
    "action",
    "ele walks"
   ],
   [
-   44.76,
+   45.76,
    "word",
    "ELEPHANT!"
   ],
   [
-   46.25,
+   47.19,
    "new place",
    "the picture board board: tiptoes"
   ],
   [
-   49.75,
+   50.75,
    "word",
    "TIPTOES!"
   ],
   [
-   50.94,
+   51.88,
    "new shot",
    "the picture board board: cushion"
   ],
   [
-   53.28,
+   54.28,
    "action",
    "the cushion squishes"
   ],
   [
-   53.28,
+   54.28,
    "word",
    "CUSHION"
   ],
   [
-   54.58,
+   55.58,
    "action",
    "the cushion squishes"
   ],
   [
-   55.94,
+   56.88,
    "new place",
    "the wide river why a cushion"
   ],
   [
-   58.29,
+   59.29,
    "action",
    "ele looks"
   ],
   [
-   58.29,
+   59.29,
    "word",
    "?"
   ],
   [
-   61.56,
+   62.5,
    "new place",
    "the picture board (blue) board: soaks up the bump"
   ],
   [
-   65.84,
+   66.84,
    "action",
    "the cushion squishes"
   ],
   [
-   66.92,
+   67.92,
    "action",
    "the cushion squishes"
   ],
   [
-   66.92,
+   67.92,
    "word",
    "SQUISH!"
   ],
   [
-   67.81,
+   69.06,
    "new place",
    "the sandy path step step"
   ],
   [
-   70.41,
+   71.41,
    "action",
    "ele walks"
   ],
   [
-   70.41,
+   71.41,
    "word",
    "STEP, STEP!"
   ],
   [
-   71.56,
+   72.81,
    "new place",
    "the picture board (pink) board: count nails"
   ],
   [
-   75.36,
+   76.36,
    "word",
    "1"
   ],
   [
-   75.62,
+   76.62,
    "word",
    "2"
   ],
   [
-   75.93,
+   76.93,
    "word",
    "3"
   ],
   [
-   76.29,
+   77.29,
    "word",
    "4"
   ],
   [
-   76.68,
+   77.68,
    "word",
    "5"
   ],
   [
-   77.5,
+   78.75,
    "new shot",
    "the picture board (pink) board: four or five"
   ],
   [
-   78.97,
+   79.97,
    "word",
    "4"
   ],
   [
-   81.66,
+   82.66,
    "word",
    "5"
   ],
   [
-   82.81,
+   83.75,
    "new place",
    "the sandy path rumbles"
   ],
   [
-   84.97,
+   85.97,
    "picture",
    "rb"
   ],
   [
-   84.97,
+   85.97,
    "word",
    "RUMBLE!"
   ],
   [
-   87.81,
+   89.06,
    "new place",
    "the zoo gate hand on the floor"
   ],
   [
-   89.38,
+   90.38,
    "word",
    "HAND DOWN!"
   ],
   [
-   90.7,
+   91.7,
    "action",
    "milo hops"
   ],
   [
-   94.69,
+   95.62,
    "new place",
    "the wide river say it: tiptoes"
   ],
   [
-   94.76,
+   95.76,
    "word",
    "SAY IT!"
   ],
   [
-   97.45,
+   98.45,
    "action",
    "ele nods"
   ],
   [
-   98.75,
+   99.69,
    "new place",
    "the zoo gate tiptoe"
   ],
   [
-   101.7,
+   102.7,
    "action",
    "milo hops"
   ],
   [
-   101.7,
+   102.7,
    "word",
    "TIP, TIP!"
   ],
   [
-   102.5,
+   103.5,
    "action",
    "milo hops"
   ],
   [
-   105.94,
+   106.88,
    "new place",
    "the picture board (blue) question 1b"
   ],
   [
-   109.66,
+   110.66,
    "sign",
    "CUSHION"
   ],
   [
-   110.01,
+   111.01,
    "sign",
    "WHEEL"
   ],
   [
-   111.12,
+   112.12,
    "word",
    "?"
   ],
   [
-   111.61,
+   112.61,
    "thinking dot",
    "1"
   ],
   [
-   112.04,
+   113.04,
    "action",
    "the cushion squishes"
   ],
   [
-   112.28,
+   113.28,
    "thinking dot",
    "2"
   ],
   [
-   112.95,
+   113.95,
    "thinking dot",
    "3"
   ],
   [
-   113.44,
+   114.44,
    "answer",
    "CUSHION"
   ],
   [
-   113.49,
+   114.49,
    "action",
    "the cushion squishes"
   ],
   [
-   114.69,
+   115.62,
    "new place",
    "the wide river great job 1"
   ],
   [
-   116.17,
+   117.17,
    "action",
    "ele walks"
   ],
   [
-   116.17,
+   117.17,
    "word",
    "SQUISH!"
   ],
   [
-   118.44,
+   119.38,
    "new place",
    "the sandy path print 2"
   ],
   [
-   121.46,
+   122.46,
    "word",
    "2"
   ],
   [
-   125.0,
+   126.25,
    "new shot",
    "the sandy path question 2a"
   ],
   [
-   125.81,
+   126.81,
    "sign",
    "ZEBRA"
   ],
   [
-   126.16,
+   127.16,
    "sign",
    "GIRAFFE"
   ],
   [
-   128.7,
+   129.7,
    "thinking dot",
    "1"
   ],
   [
-   129.37,
+   130.37,
    "thinking dot",
    "2"
   ],
   [
-   130.05,
+   131.05,
    "thinking dot",
    "3"
   ],
   [
-   130.53,
+   131.53,
    "answer",
    "GIRAFFE"
   ],
   [
-   131.88,
+   132.81,
    "new place",
    "the sunny savanna the giraffe walks in"
   ],
   [
-   131.96,
+   132.96,
    "action",
    "gir walks"
   ],
   [
-   133.27,
+   134.27,
    "word",
    "GIRAFFE!"
   ],
   [
-   134.69,
+   135.94,
    "new place",
    "the picture board board: two hooves"
   ],
   [
-   138.13,
+   139.13,
    "word",
    "2 HOOVES"
   ],
   [
-   139.69,
+   140.62,
    "new shot",
    "the picture board board: count hooves"
   ],
   [
-   141.4,
+   142.4,
    "word",
    "1"
   ],
   [
-   141.69,
+   142.69,
    "word",
    "2"
   ],
   [
-   142.5,
+   143.75,
    "new place",
    "the picture board (blue) board: dinner plate"
   ],
   [
-   143.55,
+   144.55,
    "word",
    "BIG!"
   ],
   [
-   146.25,
+   147.19,
    "new place",
    "the sunny savanna how does it walk"
   ],
   [
-   149.42,
+   150.42,
    "action",
    "gir looks"
   ],
   [
-   149.42,
+   150.42,
    "word",
    "?"
   ],
   [
-   152.81,
+   153.75,
    "new shot",
    "the sunny savanna legs: one side, then the other"
   ],
   [
-   155.27,
+   156.27,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   155.27,
+   156.27,
    "picture",
    "a1"
   ],
   [
-   155.27,
+   156.27,
    "word",
    "THIS SIDE!"
   ],
   [
-   157.59,
+   158.59,
    "action",
    "the giraffe's far legs step together"
   ],
   [
-   157.59,
+   158.59,
    "word",
    "THAT SIDE!"
   ],
   [
-   158.75,
+   159.69,
    "new shot",
    "the sunny savanna pace walk"
   ],
   [
-   159.3,
+   160.3,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   159.3,
+   160.3,
    "word",
    "THIS SIDE!"
   ],
   [
-   159.87,
+   160.87,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   160.91,
+   161.91,
    "action",
    "the giraffe's far legs step together"
   ],
   [
-   160.91,
+   161.91,
    "word",
    "THAT SIDE!"
   ],
   [
-   161.55,
+   162.55,
    "action",
    "the giraffe's far legs step together"
   ],
   [
-   162.81,
+   163.75,
    "new shot",
    "the sunny savanna legs do not bump"
   ],
   [
-   163.79,
+   164.79,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   164.88,
+   165.88,
    "action",
    "the giraffe's far legs step together"
   ],
   [
-   166.03,
+   167.03,
    "word",
    "NO BUMP!"
   ],
   [
-   166.88,
+   167.81,
    "new shot",
    "the sunny savanna baby giraffe stands"
   ],
   [
-   167.21,
+   168.21,
    "word",
    "BABY!"
   ],
   [
-   168.43,
+   169.43,
    "action",
    "the baby giraffe stands up"
   ],
   [
-   169.21,
+   170.21,
    "action",
    "calf walks"
   ],
   [
-   171.45,
+   172.45,
    "action",
    "gir nods"
   ],
   [
-   172.19,
+   173.44,
    "new shot",
    "the sunny savanna wobble wobble"
   ],
   [
-   172.55,
+   173.55,
    "action",
    "the baby giraffe wobbles"
   ],
   [
-   172.55,
+   173.55,
    "word",
    "WOBBLE!"
   ],
   [
-   175.0,
+   175.94,
    "new place",
    "the zoo gate stand tall"
   ],
   [
-   177.4,
+   178.4,
    "action",
    "milo hops"
   ],
   [
-   177.4,
+   178.4,
    "word",
    "STRETCH!"
   ],
   [
-   180.94,
+   181.88,
    "new place",
    "the sunny savanna say it: two hooves"
   ],
   [
-   181.06,
+   182.06,
    "word",
    "SAY IT!"
   ],
   [
-   183.54,
+   184.54,
    "action",
    "gir nods"
   ],
   [
-   185.0,
+   185.94,
    "new place",
    "the zoo gate walk like a giraffe"
   ],
   [
-   187.01,
+   188.01,
    "action",
    "milo hops"
   ],
   [
-   187.01,
+   188.01,
    "word",
    "THIS SIDE!"
   ],
   [
-   187.67,
+   188.67,
    "action",
    "milo hops"
   ],
   [
-   188.64,
+   189.64,
    "action",
    "milo hops"
   ],
   [
-   189.27,
+   190.27,
    "action",
    "milo hops"
   ],
   [
-   192.81,
+   193.75,
    "new place",
    "the picture board (pink) question 2b"
   ],
   [
-   196.18,
+   197.18,
    "sign",
    "TWO"
   ],
   [
-   196.53,
+   197.53,
    "sign",
    "TEN"
   ],
   [
-   197.29,
+   198.29,
    "word",
    "?"
   ],
   [
-   197.78,
+   198.78,
    "thinking dot",
    "1"
   ],
   [
-   198.45,
+   199.45,
    "thinking dot",
    "2"
   ],
   [
-   199.13,
+   200.13,
    "thinking dot",
    "3"
   ],
   [
-   199.61,
+   200.61,
    "answer",
    "TWO"
   ],
   [
-   200.94,
+   201.88,
    "new place",
    "the sunny savanna super thinking"
   ],
   [
-   201.04,
+   202.04,
    "word",
    "TWO!"
   ],
   [
-   203.28,
+   204.28,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   204.69,
+   205.62,
    "new place",
    "the sandy path print 3"
   ],
   [
-   207.33,
+   208.33,
    "word",
    "1"
   ],
   [
-   210.94,
+   211.88,
    "new shot",
    "the sandy path question 3a"
   ],
   [
-   211.64,
+   212.64,
    "sign",
    "ELEPHANT"
   ],
   [
-   211.99,
+   212.99,
    "sign",
    "ZEBRA"
   ],
   [
-   214.43,
+   215.43,
    "thinking dot",
    "1"
   ],
   [
-   215.1,
+   216.1,
    "thinking dot",
    "2"
   ],
   [
-   215.78,
+   216.78,
    "thinking dot",
    "3"
   ],
   [
-   216.26,
+   217.26,
    "answer",
    "ZEBRA"
   ],
   [
-   217.5,
+   218.44,
    "new place",
    "the wide river the zebra walks in"
   ],
   [
-   217.69,
+   218.69,
    "action",
    "zeb walks"
   ],
   [
-   218.93,
+   219.93,
    "word",
    "ZEBRA!"
   ],
   [
-   220.62,
+   221.56,
    "new place",
    "the picture board board: one toe"
   ],
   [
-   224.37,
+   225.37,
    "word",
    "1 TOE"
   ],
   [
-   226.25,
+   227.19,
    "new shot",
    "the picture board board: count one toe"
   ],
   [
-   227.64,
+   228.64,
    "word",
    "1"
   ],
   [
-   230.94,
+   231.88,
    "new place",
    "the zoo gate one finger"
   ],
   [
-   233.97,
+   234.97,
    "action",
    "milo hops"
   ],
   [
-   233.97,
+   234.97,
    "word",
    "ONE!"
   ],
   [
-   237.19,
+   238.12,
    "new place",
    "the wide river the hard part"
   ],
   [
-   239.83,
+   240.83,
    "word",
    "?"
   ],
   [
-   243.12,
+   244.06,
    "new place",
    "the picture board (blue) board: the hoof"
   ],
   [
-   243.87,
+   244.87,
    "word",
    "HOOF!"
   ],
   [
-   248.12,
+   249.38,
    "new place",
    "the wide river clip clop"
   ],
   [
-   250.31,
+   251.31,
    "action",
    "zeb walks"
   ],
   [
-   250.31,
+   251.31,
    "word",
    "CLIP, CLOP!"
   ],
   [
-   252.5,
+   253.44,
    "new place",
    "the picture board (blue) board: hoof grows"
   ],
   [
-   253.84,
+   254.84,
    "action",
    "the hoof grows"
   ],
   [
-   253.84,
+   254.84,
    "word",
    "IT GROWS!"
   ],
   [
-   257.81,
+   258.75,
    "new place",
    "the wide river count four hooves"
   ],
   [
-   260.97,
+   261.97,
    "word",
    "1"
   ],
   [
-   261.21,
+   262.21,
    "word",
    "2"
   ],
   [
-   261.51,
+   262.51,
    "word",
    "3"
   ],
   [
-   261.76,
+   262.76,
    "word",
    "4"
   ],
   [
-   262.81,
+   263.75,
    "new place",
    "the picture board (pink) board: own stripes"
   ],
   [
-   264.91,
+   265.91,
    "action",
    "z1 nods"
   ],
   [
-   264.91,
+   265.91,
    "word",
    "ALL DIFFERENT!"
   ],
   [
-   267.65,
+   268.65,
    "action",
    "z2 nods"
   ],
   [
-   268.44,
+   269.69,
    "new place",
    "the wide river say it: one toe"
   ],
   [
-   268.79,
+   269.79,
    "word",
    "SAY IT!"
   ],
   [
-   271.39,
+   272.39,
    "action",
    "zeb nods"
   ],
   [
-   272.19,
+   273.12,
    "new place",
    "the zoo gate trot like a zebra"
   ],
   [
-   274.3,
+   275.3,
    "action",
    "milo hops"
   ],
   [
-   274.3,
+   275.3,
    "word",
    "CLIP, CLOP!"
   ],
   [
-   275.23,
+   276.23,
    "action",
    "milo hops"
   ],
   [
-   278.75,
+   279.69,
    "new place",
    "the picture board question 3b"
   ],
   [
-   282.12,
+   283.12,
    "sign",
    "ONE"
   ],
   [
-   282.47,
+   283.47,
    "sign",
    "FIVE"
   ],
   [
-   283.47,
+   284.47,
    "word",
    "?"
   ],
   [
-   283.96,
+   284.96,
    "thinking dot",
    "1"
   ],
   [
-   284.63,
+   285.63,
    "thinking dot",
    "2"
   ],
   [
-   285.3,
+   286.3,
    "thinking dot",
    "3"
   ],
   [
-   285.79,
+   286.79,
    "answer",
    "ONE"
   ],
   [
-   286.88,
+   288.12,
    "new place",
    "the wide river you remembered"
   ],
   [
-   287.21,
+   288.21,
    "word",
    "ONE!"
   ],
   [
-   289.87,
+   290.87,
    "action",
    "zeb nods"
   ],
   [
-   290.94,
+   291.88,
    "new place",
    "the zoo at sunset quiz time"
   ],
   [
-   294.11,
+   295.11,
    "action",
    "milo hops"
   ],
   [
-   294.11,
+   295.11,
    "word",
    "QUIZ TIME!"
   ],
   [
-   295.31,
+   296.25,
    "new place",
    "the sandy path quiz 1"
   ],
   [
-   297.8,
+   298.8,
    "sign",
    "GIRAFFE"
   ],
   [
-   298.15,
+   299.15,
    "sign",
    "ELEPHANT"
   ],
   [
-   300.16,
+   301.16,
    "thinking dot",
    "1"
   ],
   [
-   300.83,
+   301.83,
    "thinking dot",
    "2"
   ],
   [
-   301.51,
+   302.51,
    "thinking dot",
    "3"
   ],
   [
-   301.99,
+   302.99,
    "answer",
    "GIRAFFE"
   ],
   [
-   303.12,
+   304.06,
    "new place",
    "the sunny savanna quiz 1: giraffe"
   ],
   [
-   303.53,
+   304.53,
    "action",
    "the giraffe's near legs step together"
   ],
   [
-   303.53,
+   304.53,
    "word",
    "GIRAFFE!"
   ],
   [
-   306.25,
+   307.19,
    "new place",
    "the sandy path quiz 2"
   ],
   [
-   308.96,
+   309.96,
    "sign",
    "ELEPHANT"
   ],
   [
-   309.31,
+   310.31,
    "sign",
    "ZEBRA"
   ],
   [
-   311.27,
+   312.27,
    "thinking dot",
    "1"
   ],
   [
-   311.94,
+   312.94,
    "thinking dot",
    "2"
   ],
   [
-   312.61,
+   313.61,
    "thinking dot",
    "3"
   ],
   [
-   313.1,
+   314.1,
    "answer",
    "ZEBRA"
   ],
   [
-   314.38,
+   315.31,
    "new place",
    "the wide river quiz 2: zebra"
   ],
   [
-   314.62,
+   315.62,
    "action",
    "zeb nods"
   ],
   [
-   314.62,
+   315.62,
    "word",
    "ZEBRA!"
   ],
   [
-   317.19,
+   318.12,
    "new place",
    "the sandy path quiz 3"
   ],
   [
-   319.85,
+   320.85,
    "sign",
    "LION"
   ],
   [
-   320.2,
+   321.2,
    "sign",
    "ELEPHANT"
   ],
   [
-   322.24,
+   323.24,
    "thinking dot",
    "1"
   ],
   [
-   322.91,
+   323.91,
    "thinking dot",
    "2"
   ],
   [
-   323.59,
+   324.59,
    "thinking dot",
    "3"
   ],
   [
-   324.07,
+   325.07,
    "answer",
    "ELEPHANT"
   ],
   [
-   325.31,
+   326.25,
    "new place",
    "the wide river quiz 3: elephant"
   ],
   [
-   325.7,
+   326.7,
    "action",
    "ele nods"
   ],
   [
-   325.7,
+   326.7,
    "word",
    "ELEPHANT!"
   ],
   [
-   329.06,
+   330.0,
    "new place",
    "the sandy path the footprint trail"
   ],
   [
-   331.83,
+   332.83,
    "action",
    "milo hops"
   ],
   [
-   331.83,
+   332.83,
    "word",
    "YOU DID IT!"
   ],
   [
-   332.5,
+   333.75,
    "new place",
    "the zoo at sunset all three moves"
   ],
   [
-   332.81,
+   333.81,
    "action",
    "milo hops"
   ],
   [
-   335.3,
+   336.3,
    "action",
    "milo hops"
   ],
   [
-   336.11,
+   337.11,
    "action",
    "milo hops"
   ],
   [
-   338.33,
+   339.33,
    "action",
    "milo hops"
   ],
   [
-   338.33,
+   339.33,
    "word",
    "CLIP, CLOP!"
   ],
   [
-   341.56,
+   342.5,
    "new place",
    "the picture board (blue) next: whose ears"
   ],
   [
-   344.04,
+   345.04,
    "word",
    "WHOSE EARS?"
   ],
   [
-   345.54,
+   346.54,
    "word",
    "BYE-BYE!"
+  ],
+  [
+   348.12,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   348.12,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   348.12,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   348.12,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   348.18,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   348.93,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   351.56,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   351.75,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   352.03,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   352.07,
+   "action",
+   "mango pops up"
+  ],
+  [
+   352.38,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   352.5,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   352.69,
+   "action",
+   "tula pops up"
+  ],
+  [
+   353.0,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   353.12,
+   "action",
+   "sandy nods"
+  ],
+  [
+   353.12,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   353.32,
+   "action",
+   "clover pops up"
+  ],
+  [
+   353.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   353.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   353.63,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   353.91,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   354.37,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   354.69,
+   "action",
+   "out of the flash"
+  ],
+  [
+   354.69,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   354.69,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   354.88,
+   "action",
+   "the badge pops"
+  ],
+  [
+   355.45,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.6,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.91,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.23,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.54,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.88,
+   "action",
+   "a firework"
+  ],
+  [
+   356.88,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   357.04,
+   "action",
+   "a firework"
+  ],
+  [
+   357.19,
+   "action",
+   "confetti"
+  ],
+  [
+   357.19,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   357.29,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   357.5,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   357.62,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   357.81,
+   "action",
+   "a firework"
+  ],
+  [
+   358.01,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   358.32,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   358.44,
+   "action",
+   "a firework"
+  ],
+  [
+   358.63,
+   "action",
+   "mango pops up"
+  ],
+  [
+   358.63,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   358.94,
+   "action",
+   "clover pops up"
+  ],
+  [
+   358.94,
+   "action",
+   "tula pops up"
+  ],
+  [
+   359.06,
+   "action",
+   "a firework"
+  ],
+  [
+   359.26,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   359.38,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   359.53,
+   "action",
+   "a firework"
+  ],
+  [
+   360.0,
+   "action",
+   "a firework"
+  ],
+  [
+   360.0,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   360.12,
+   "action",
+   "T word lights up"
+  ],
+  [
+   360.14,
+   "action",
+   "a firework"
+  ],
+  [
+   360.3,
+   "action",
+   "A word lights up"
+  ],
+  [
+   361.02,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   361.51,
+   "action",
+   "Milo flips"
+  ],
+  [
+   361.51,
+   "action",
+   "a firework"
+  ],
+  [
+   361.51,
+   "action",
+   "confetti"
+  ],
+  [
+   361.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   361.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   361.51,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   361.63,
+   "action",
+   "a firework"
+  ],
+  [
+   361.81,
+   "action",
+   "a firework"
+  ],
+  [
+   361.81,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   361.93,
+   "action",
+   "a firework"
   ]
  ],
  "shots": [
@@ -2240,7 +2853,7 @@
    "place": "intro_logo",
    "say": "The Animated Zoo!",
    "t0": 23.75,
-   "t1": 25.625,
+   "t1": 26.5625,
    "v0": 23.87,
    "dur": 1.3871666666666667,
    "words": [
@@ -2270,9 +2883,9 @@
   {
    "place": "sandtrail",
    "say": "Look closely at each footprint, and say your guess. Ready? Let's follow the footprints!",
-   "t0": 25.625,
-   "t1": 31.875,
-   "v0": 25.79716666666667,
+   "t0": 26.5625,
+   "t1": 32.8125,
+   "v0": 26.79716666666667,
    "dur": 5.753,
    "words": [
     [
@@ -2356,9 +2969,9 @@
   {
    "place": "sandtrail",
    "say": "Here is a footprint. It is big, and round. Whose foot made it?",
-   "t0": 31.875,
-   "t1": 36.5625,
-   "v0": 32.09016666666667,
+   "t0": 32.8125,
+   "t1": 37.8125,
+   "v0": 33.09016666666667,
    "dur": 4.224083333333334,
    "words": [
     [
@@ -2437,9 +3050,9 @@
   {
    "place": "sandtrail",
    "say": "Is it the elephant? Or is it the lion?",
-   "t0": 36.5625,
-   "t1": 43.125,
-   "v0": 36.85425,
+   "t0": 37.8125,
+   "t1": 44.0625,
+   "v0": 37.85425,
    "dur": 2.7507916666666667,
    "words": [
     [
@@ -2498,9 +3111,9 @@
   {
    "place": "sandtrail",
    "say": "It is the elephant!",
-   "t0": 43.125,
-   "t1": 46.25,
-   "v0": 43.34504166666667,
+   "t0": 44.0625,
+   "t1": 47.1875,
+   "v0": 44.34504166666667,
    "dur": 1.4125833333333333,
    "words": [
     [
@@ -2534,9 +3147,9 @@
   {
    "place": "paper",
    "say": "Here is the fun fact. An elephant walks on its tiptoes!",
-   "t0": 46.25,
-   "t1": 50.9375,
-   "v0": 46.497625,
+   "t0": 47.1875,
+   "t1": 51.875,
+   "v0": 47.497625,
    "dur": 4.1015,
    "words": [
     [
@@ -2605,9 +3218,9 @@
   {
    "place": "paper",
    "say": "Under its toes is a big, soft cushion. Like a squishy pillow!",
-   "t0": 50.9375,
-   "t1": 55.9375,
-   "v0": 51.139125,
+   "t0": 51.875,
+   "t1": 56.875,
+   "v0": 52.139125,
    "dur": 4.511,
    "words": [
     [
@@ -2681,9 +3294,9 @@
   {
    "place": "river",
    "say": "Why does an elephant need a cushion?",
-   "t0": 55.9375,
-   "t1": 61.5625,
-   "v0": 56.190125,
+   "t0": 56.875,
+   "t1": 62.5,
+   "v0": 57.190125,
    "dur": 2.1006666666666667,
    "words": [
     [
@@ -2732,9 +3345,9 @@
   {
    "place": "paper_blue",
    "say": "The cushion soaks up the bump, when a big, heavy elephant steps down. Squish!",
-   "t0": 61.5625,
-   "t1": 67.8125,
-   "v0": 61.83079166666667,
+   "t0": 62.5,
+   "t1": 69.0625,
+   "v0": 62.83079166666667,
    "dur": 5.74,
    "words": [
     [
@@ -2818,9 +3431,9 @@
   {
    "place": "sandtrail",
    "say": "Look at those big, round feet. Step, step!",
-   "t0": 67.8125,
-   "t1": 71.5625,
-   "v0": 68.11079166666667,
+   "t0": 69.0625,
+   "t1": 72.8125,
+   "v0": 69.11079166666667,
    "dur": 3.2607083333333335,
    "words": [
     [
@@ -2874,9 +3487,9 @@
   {
    "place": "paper_pink",
    "say": "Elephants have toenails, too! Let's count them. One, two, three, four, five!",
-   "t0": 71.5625,
-   "t1": 77.5,
-   "v0": 71.9115,
+   "t0": 72.8125,
+   "t1": 78.75,
+   "v0": 72.9115,
    "dur": 5.3735,
    "words": [
     [
@@ -2950,9 +3563,9 @@
   {
    "place": "paper_pink",
    "say": "Some elephants have four nails on a front foot. Some have five!",
-   "t0": 77.5,
-   "t1": 82.8125,
-   "v0": 77.825,
+   "t0": 78.75,
+   "t1": 83.75,
+   "v0": 78.825,
    "dur": 4.513083333333333,
    "words": [
     [
@@ -3026,9 +3639,9 @@
   {
    "place": "sandtrail",
    "say": "Elephants may even feel tiny rumbles in the ground, with their feet!",
-   "t0": 82.8125,
-   "t1": 87.8125,
-   "v0": 82.87808333333334,
+   "t0": 83.75,
+   "t1": 89.0625,
+   "v0": 83.87808333333334,
    "dur": 4.711875,
    "words": [
     [
@@ -3102,9 +3715,9 @@
   {
    "place": "zoo",
    "say": "Put your hand flat on the floor. What can you feel?",
-   "t0": 87.8125,
-   "t1": 94.6875,
-   "v0": 88.12995833333335,
+   "t0": 89.0625,
+   "t1": 95.625,
+   "v0": 89.12995833333335,
    "dur": 3.0858333333333334,
    "words": [
     [
@@ -3173,9 +3786,9 @@
   {
    "place": "river",
    "say": "Say it with me. An elephant walks on its tiptoes!",
-   "t0": 94.6875,
-   "t1": 98.75,
-   "v0": 94.7557916666667,
+   "t0": 95.625,
+   "t1": 99.6875,
+   "v0": 95.7557916666667,
    "dur": 3.544625,
    "words": [
     [
@@ -3239,9 +3852,9 @@
   {
    "place": "zoo",
    "say": "Can you walk on your tiptoes, like an elephant? Tip, tip, tiptoe!",
-   "t0": 98.75,
-   "t1": 105.9375,
-   "v0": 98.8404166666667,
+   "t0": 99.6875,
+   "t1": 106.875,
+   "v0": 99.8404166666667,
    "dur": 4.410958333333333,
    "words": [
     [
@@ -3315,9 +3928,9 @@
   {
    "place": "paper_blue",
    "say": "Quick check! What is under an elephant's toes? A soft cushion, or a wheel?",
-   "t0": 105.9375,
-   "t1": 114.6875,
-   "v0": 106.19137500000004,
+   "t0": 106.875,
+   "t1": 115.625,
+   "v0": 107.19137500000004,
    "dur": 4.928833333333333,
    "words": [
     [
@@ -3401,9 +4014,9 @@
   {
    "place": "river",
    "say": "A soft cushion! Squish, squish. Great job!",
-   "t0": 114.6875,
-   "t1": 118.4375,
-   "v0": 114.86020833333338,
+   "t0": 115.625,
+   "t1": 119.375,
+   "v0": 115.86020833333338,
    "dur": 3.258625,
    "words": [
     [
@@ -3452,9 +4065,9 @@
   {
    "place": "sandtrail",
    "say": "Here is another footprint. Look! It has two halves, side by side. Whose foot made it?",
-   "t0": 118.4375,
-   "t1": 125.0,
-   "v0": 118.65883333333338,
+   "t0": 119.375,
+   "t1": 126.25,
+   "v0": 119.65883333333338,
    "dur": 6.11625,
    "words": [
     [
@@ -3548,9 +4161,9 @@
   {
    "place": "sandtrail",
    "say": "Is it the zebra? Or is it the giraffe?",
-   "t0": 125.0,
-   "t1": 131.875,
-   "v0": 125.31508333333338,
+   "t0": 126.25,
+   "t1": 132.8125,
+   "v0": 126.31508333333338,
    "dur": 2.898,
    "words": [
     [
@@ -3609,9 +4222,9 @@
   {
    "place": "savanna",
    "say": "It is the giraffe!",
-   "t0": 131.875,
-   "t1": 134.6875,
-   "v0": 131.95308333333335,
+   "t0": 132.8125,
+   "t1": 135.9375,
+   "v0": 132.95308333333335,
    "dur": 1.3212916666666668,
    "words": [
     [
@@ -3645,9 +4258,9 @@
   {
    "place": "paper",
    "say": "Here is the fun fact. A giraffe has two hooves on each foot!",
-   "t0": 134.6875,
-   "t1": 139.6875,
-   "v0": 135.014375,
+   "t0": 135.9375,
+   "t1": 140.625,
+   "v0": 136.014375,
    "dur": 4.2095416666666665,
    "words": [
     [
@@ -3726,9 +4339,9 @@
   {
    "place": "paper",
    "say": "Count the hooves with me. One, two!",
-   "t0": 139.6875,
-   "t1": 142.5,
-   "v0": 139.76391666666666,
+   "t0": 140.625,
+   "t1": 143.75,
+   "v0": 140.76391666666666,
    "dur": 2.519625,
    "words": [
     [
@@ -3777,9 +4390,9 @@
   {
    "place": "paper_blue",
    "say": "And its feet are big! As big as a dinner plate.",
-   "t0": 142.5,
-   "t1": 146.25,
-   "v0": 142.82354166666664,
+   "t0": 143.75,
+   "t1": 147.1875,
+   "v0": 143.82354166666664,
    "dur": 3.1595416666666667,
    "words": [
     [
@@ -3848,9 +4461,9 @@
   {
    "place": "savanna",
    "say": "How does a giraffe walk, on such long legs?",
-   "t0": 146.25,
-   "t1": 152.8125,
-   "v0": 146.5230833333333,
+   "t0": 147.1875,
+   "t1": 153.75,
+   "v0": 147.5230833333333,
    "dur": 2.896916666666667,
    "words": [
     [
@@ -3909,9 +4522,9 @@
   {
    "place": "savanna",
    "say": "It moves the two legs on one side together. Then the two legs on the other side!",
-   "t0": 152.8125,
-   "t1": 158.75,
-   "v0": 152.95999999999995,
+   "t0": 153.75,
+   "t1": 159.6875,
+   "v0": 153.95999999999995,
    "dur": 5.425291666666666,
    "words": [
     [
@@ -4010,9 +4623,9 @@
   {
    "place": "savanna",
    "say": "Look! This side, this side. That side, that side!",
-   "t0": 158.75,
-   "t1": 162.8125,
-   "v0": 158.9252916666666,
+   "t0": 159.6875,
+   "t1": 163.75,
+   "v0": 159.9252916666666,
    "dur": 3.3962916666666665,
    "words": [
     [
@@ -4071,9 +4684,9 @@
   {
    "place": "savanna",
    "say": "That way, its front legs and its back legs do not bump!",
-   "t0": 162.8125,
-   "t1": 166.875,
-   "v0": 162.86158333333324,
+   "t0": 163.75,
+   "t1": 167.8125,
+   "v0": 163.86158333333324,
    "dur": 3.5934166666666667,
    "words": [
     [
@@ -4147,9 +4760,9 @@
   {
    "place": "savanna",
    "say": "And a baby giraffe can stand up and walk, about an hour after it is born!",
-   "t0": 166.875,
-   "t1": 172.1875,
-   "v0": 166.9949999999999,
+   "t0": 167.8125,
+   "t1": 173.4375,
+   "v0": 167.9949999999999,
    "dur": 4.99725,
    "words": [
     [
@@ -4243,9 +4856,9 @@
   {
    "place": "savanna",
    "say": "Wobble, wobble, up it goes!",
-   "t0": 172.1875,
-   "t1": 175.0,
-   "v0": 172.5322499999999,
+   "t0": 173.4375,
+   "t1": 175.9375,
+   "v0": 173.5322499999999,
    "dur": 2.0420416666666665,
    "words": [
     [
@@ -4284,9 +4897,9 @@
   {
    "place": "zoo",
    "say": "Stand up tall, like a giraffe. Stretch!",
-   "t0": 175.0,
-   "t1": 180.9375,
-   "v0": 175.11429166666656,
+   "t0": 175.9375,
+   "t1": 181.875,
+   "v0": 176.11429166666656,
    "dur": 2.9957083333333334,
    "words": [
     [
@@ -4335,9 +4948,9 @@
   {
    "place": "savanna",
    "say": "Say it with me. A giraffe has two hooves on each foot!",
-   "t0": 180.9375,
-   "t1": 185.0,
-   "v0": 181.0499999999999,
+   "t0": 181.875,
+   "t1": 185.9375,
+   "v0": 182.0499999999999,
    "dur": 3.5777916666666667,
    "words": [
     [
@@ -4411,9 +5024,9 @@
   {
    "place": "zoo",
    "say": "Can you walk like a giraffe? This side, this side. That side, that side!",
-   "t0": 185.0,
-   "t1": 192.8125,
-   "v0": 185.16779166666655,
+   "t0": 185.9375,
+   "t1": 193.75,
+   "v0": 186.16779166666655,
    "dur": 4.836041666666667,
    "words": [
     [
@@ -4497,9 +5110,9 @@
   {
    "place": "paper_pink",
    "say": "Quick check! How many hooves are on each giraffe foot? Two, or ten?",
-   "t0": 192.8125,
-   "t1": 200.9375,
-   "v0": 192.9438333333332,
+   "t0": 193.75,
+   "t1": 201.875,
+   "v0": 193.9438333333332,
    "dur": 4.348875,
    "words": [
     [
@@ -4578,9 +5191,9 @@
   {
    "place": "savanna",
    "say": "Two! Two hooves on every foot. Super thinking!",
-   "t0": 200.9375,
-   "t1": 204.6875,
-   "v0": 201.03270833333318,
+   "t0": 201.875,
+   "t1": 205.625,
+   "v0": 202.03270833333318,
    "dur": 3.314,
    "words": [
     [
@@ -4634,9 +5247,9 @@
   {
    "place": "sandtrail",
    "say": "Here is the last footprint. It is one smooth, round print. Whose foot made it?",
-   "t0": 204.6875,
-   "t1": 210.9375,
-   "v0": 204.88670833333316,
+   "t0": 205.625,
+   "t1": 211.875,
+   "v0": 205.88670833333316,
    "dur": 5.71,
    "words": [
     [
@@ -4725,9 +5338,9 @@
   {
    "place": "sandtrail",
    "say": "Is it the elephant? Or is it the zebra?",
-   "t0": 210.9375,
-   "t1": 217.5,
-   "v0": 211.13670833333316,
+   "t0": 211.875,
+   "t1": 218.4375,
+   "v0": 212.13670833333316,
    "dur": 2.805125,
    "words": [
     [
@@ -4786,9 +5399,9 @@
   {
    "place": "river",
    "say": "It is the zebra!",
-   "t0": 217.5,
-   "t1": 220.625,
-   "v0": 217.68183333333315,
+   "t0": 218.4375,
+   "t1": 221.5625,
+   "v0": 218.68183333333315,
    "dur": 1.2524583333333332,
    "words": [
     [
@@ -4822,9 +5435,9 @@
   {
    "place": "paper",
    "say": "Here is the fun fact. A zebra walks on just one toe, on each foot!",
-   "t0": 220.625,
-   "t1": 226.25,
-   "v0": 220.67429166666645,
+   "t0": 221.5625,
+   "t1": 227.1875,
+   "v0": 221.67429166666645,
    "dur": 5.0834166666666665,
    "words": [
     [
@@ -4913,9 +5526,9 @@
   {
    "place": "paper",
    "say": "Let's count the toes on one zebra foot. One! Just one!",
-   "t0": 226.25,
-   "t1": 230.9375,
-   "v0": 226.2977083333331,
+   "t0": 227.1875,
+   "t1": 231.875,
+   "v0": 227.2977083333331,
    "dur": 4.173291666666667,
    "words": [
     [
@@ -4984,9 +5597,9 @@
   {
    "place": "zoo",
    "say": "Hold up one finger, for one zebra toe. One!",
-   "t0": 230.9375,
-   "t1": 237.1875,
-   "v0": 231.01099999999977,
+   "t0": 231.875,
+   "t1": 238.125,
+   "v0": 232.01099999999977,
    "dur": 3.3845833333333335,
    "words": [
     [
@@ -5045,9 +5658,9 @@
   {
    "place": "river",
    "say": "So what is that hard part, at the bottom?",
-   "t0": 237.1875,
-   "t1": 243.125,
-   "v0": 237.3355833333331,
+   "t0": 238.125,
+   "t1": 244.0625,
+   "v0": 238.3355833333331,
    "dur": 2.4955833333333333,
    "words": [
     [
@@ -5106,9 +5719,9 @@
   {
    "place": "paper_blue",
    "say": "It is a hoof! The hoof wraps around the toe, and keeps it safe.",
-   "t0": 243.125,
-   "t1": 248.125,
-   "v0": 243.37116666666643,
+   "t0": 244.0625,
+   "t1": 249.375,
+   "v0": 244.37116666666643,
    "dur": 4.552791666666667,
    "words": [
     [
@@ -5192,9 +5805,9 @@
   {
    "place": "river",
    "say": "Look at those strong hooves. Clip, clop, clip, clop!",
-   "t0": 248.125,
-   "t1": 252.5,
-   "v0": 248.4639583333331,
+   "t0": 249.375,
+   "t1": 253.4375,
+   "v0": 249.4639583333331,
    "dur": 3.681583333333333,
    "words": [
     [
@@ -5253,9 +5866,9 @@
   {
    "place": "paper_blue",
    "say": "A hoof keeps on growing, all the time. A little like your fingernails!",
-   "t0": 252.5,
-   "t1": 257.8125,
-   "v0": 252.6855416666664,
+   "t0": 253.4375,
+   "t1": 258.75,
+   "v0": 253.6855416666664,
    "dur": 4.855208333333334,
    "words": [
     [
@@ -5334,9 +5947,9 @@
   {
    "place": "river",
    "say": "Four legs, four hooves! Count with me. One, two, three, four!",
-   "t0": 257.8125,
-   "t1": 262.8125,
-   "v0": 258.08074999999974,
+   "t0": 258.75,
+   "t1": 263.75,
+   "v0": 259.08074999999974,
    "dur": 4.248125,
    "words": [
     [
@@ -5405,9 +6018,9 @@
   {
    "place": "paper_pink",
    "say": "And every zebra has its very own stripes. No two zebras are the same!",
-   "t0": 262.8125,
-   "t1": 268.4375,
-   "v0": 262.8688749999998,
+   "t0": 263.75,
+   "t1": 269.6875,
+   "v0": 263.8688749999998,
    "dur": 5.375625,
    "words": [
     [
@@ -5491,9 +6104,9 @@
   {
    "place": "river",
    "say": "Say it with me. A zebra walks on one toe!",
-   "t0": 268.4375,
-   "t1": 272.1875,
-   "v0": 268.7844999999998,
+   "t0": 269.6875,
+   "t1": 273.125,
+   "v0": 269.7844999999998,
    "dur": 3.1078333333333332,
    "words": [
     [
@@ -5557,9 +6170,9 @@
   {
    "place": "zoo",
    "say": "Can you trot like a zebra? Clip, clop, clip, clop!",
-   "t0": 272.1875,
-   "t1": 278.75,
-   "v0": 272.4323333333332,
+   "t0": 273.125,
+   "t1": 279.6875,
+   "v0": 273.4323333333332,
    "dur": 3.652833333333333,
    "words": [
     [
@@ -5623,9 +6236,9 @@
   {
    "place": "paper",
    "say": "Quick check! How many toes are on each zebra foot? One, or five?",
-   "t0": 278.75,
-   "t1": 286.875,
-   "v0": 279.0251666666665,
+   "t0": 279.6875,
+   "t1": 288.125,
+   "v0": 280.0251666666665,
    "dur": 4.443375,
    "words": [
     [
@@ -5704,9 +6317,9 @@
   {
    "place": "river",
    "say": "One! One toe, inside one hoof. You remembered!",
-   "t0": 286.875,
-   "t1": 290.9375,
-   "v0": 287.2085416666665,
+   "t0": 288.125,
+   "t1": 291.875,
+   "v0": 288.2085416666665,
    "dur": 3.353125,
    "words": [
     [
@@ -5760,9 +6373,9 @@
   {
    "place": "zoo_eve",
    "say": "Three footprints, and three friends! Now it is quiz time!",
-   "t0": 290.9375,
-   "t1": 295.3125,
-   "v0": 291.1016666666665,
+   "t0": 291.875,
+   "t1": 296.25,
+   "v0": 292.1016666666665,
    "dur": 3.941875,
    "words": [
     [
@@ -5826,9 +6439,9 @@
   {
    "place": "sandtrail",
    "say": "Whose footprint has two halves? The giraffe's, or the elephant's?",
-   "t0": 295.3125,
-   "t1": 303.125,
-   "v0": 295.5835416666665,
+   "t0": 296.25,
+   "t1": 304.0625,
+   "v0": 296.5835416666665,
    "dur": 4.089458333333333,
    "words": [
     [
@@ -5892,9 +6505,9 @@
   {
    "place": "savanna",
    "say": "The giraffe! Two hooves on each foot.",
-   "t0": 303.125,
-   "t1": 306.25,
-   "v0": 303.41299999999984,
+   "t0": 304.0625,
+   "t1": 307.1875,
+   "v0": 304.41299999999984,
    "dur": 2.3520416666666666,
    "words": [
     [
@@ -5943,9 +6556,9 @@
   {
    "place": "sandtrail",
    "say": "Whose footprint is one smooth hoof? The elephant's, or the zebra's?",
-   "t0": 306.25,
-   "t1": 314.375,
-   "v0": 306.3050416666665,
+   "t0": 307.1875,
+   "t1": 315.3125,
+   "v0": 307.3050416666665,
    "dur": 4.474458333333334,
    "words": [
     [
@@ -6014,9 +6627,9 @@
   {
    "place": "river",
    "say": "The zebra! One toe, one hoof.",
-   "t0": 314.375,
-   "t1": 317.1875,
-   "v0": 314.5194999999999,
+   "t0": 315.3125,
+   "t1": 318.125,
+   "v0": 315.5194999999999,
    "dur": 2.31025,
    "words": [
     [
@@ -6060,9 +6673,9 @@
   {
    "place": "sandtrail",
    "say": "Whose footprint is big and round? The lion's, or the elephant's?",
-   "t0": 317.1875,
-   "t1": 325.3125,
-   "v0": 317.3697499999999,
+   "t0": 318.125,
+   "t1": 326.25,
+   "v0": 318.3697499999999,
    "dur": 4.385166666666667,
    "words": [
     [
@@ -6131,9 +6744,9 @@
   {
    "place": "river",
    "say": "The elephant! On its soft, squishy tiptoes.",
-   "t0": 325.3125,
-   "t1": 329.0625,
-   "v0": 325.4949166666666,
+   "t0": 326.25,
+   "t1": 330.0,
+   "v0": 326.4949166666666,
    "dur": 3.298,
    "words": [
     [
@@ -6182,9 +6795,9 @@
   {
    "place": "sandtrail",
    "say": "Look at our footprint trail! You guessed them all!",
-   "t0": 329.0625,
-   "t1": 332.5,
-   "v0": 329.3329166666666,
+   "t0": 330.0,
+   "t1": 333.75,
+   "v0": 330.3329166666666,
    "dur": 2.929333333333333,
    "words": [
     [
@@ -6243,9 +6856,9 @@
   {
    "place": "zoo_eve",
    "say": "Tiptoe like an elephant. Walk this side, that side, like a giraffe. And trot like a zebra!",
-   "t0": 332.5,
-   "t1": 341.5625,
-   "v0": 332.80224999999996,
+   "t0": 333.75,
+   "t1": 342.5,
+   "v0": 333.80224999999996,
    "dur": 6.800041666666667,
    "words": [
     [
@@ -6344,9 +6957,9 @@
   {
    "place": "paper_blue",
    "say": "Next time on Guess With Milo: whose ears are these? Bye-bye, friends!",
-   "t0": 341.5625,
-   "t1": 347.0837083333334,
-   "v0": 341.7422916666667,
+   "t0": 342.5,
+   "t1": 348.125,
+   "v0": 342.7422916666667,
    "dur": 4.9214166666666666,
    "words": [
     [
@@ -6413,6 +7026,82 @@
    "part": 4,
    "q": false,
    "tag": "next: whose ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 348.125,
+   "t1": 351.5625,
+   "v0": 348.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 351.5625,
+   "t1": 354.6875,
+   "v0": 351.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 354.6875,
+   "t1": 360.0,
+   "v0": 355.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 360.0,
+   "t1": 362.92716666666666,
+   "v0": 360.12,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
    "who": "milo",
    "beat": "",
    "sung": false

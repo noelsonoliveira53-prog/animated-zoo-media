@@ -288,7 +288,7 @@ def intro_shots():
                 *_puff_fx(TB(3.2), "pfm"),
                 _bounce("#{p}flags", 0, 4, 7), _bounce("#{p}balloons", B / 4, 3, -10),
                 *_float_bubbles("ubl", .1, 2.8), *_float_bubbles("ubr", .4, 2.8),
-                *_flutter("bf1", 0, 3.3, ((210, 700), (520, 560))), *_flutter("bf2", 0, 3.3, ((1780, 700), (1560, 470)))]
+                *_flutter("bf1", 0, 3.3, ((150, 520), (540, 420))), *_flutter("bf2", 0, 3.3, ((1840, 660), (1790, 290)))]
     gate = S("intro_gate", (960, 560, 1920), who="", sing=TUNE2, beat="song", tag="INTRO 2: the gate", cam2=(960, 540, 1840),
              props=[prop("ubl", bubbles, 90, 960), prop("ubr", bubbles, 1835, 960), prop("bf1", butterfly, 0, 0), prop("bf2", lambda q: butterfly(q, art.MILO_BLUE, "#b48cff"), 0, 0)]
                    + [prop(f"pf{k}", puff, _POS["intro_gate"][w][0], _POS["intro_gate"][w][1] - 40, hidden=True) for k, w in enumerate(FRIENDS)]

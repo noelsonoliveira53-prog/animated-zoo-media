@@ -3004,5 +3004,18 @@
   ],
   "thumb_text": "COUSINS?!",
   "seconds": 315.7
+ },
+ {
+  "file": "cartoon/za_ep09.mp4",
+  "title": "Sandy's First Night Away",
+  "date": "2026-11-25",
+  "time": "5:30 AM",
+  "thumb": "brand/zoo/thumb_za_ep09.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 20 by the scheduled 8:43 AM adventure build (session_014CFVfZNKfSGaLEqqFxRY2D)."
  }
 ]

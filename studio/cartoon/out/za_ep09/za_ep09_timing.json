@@ -1,6 +1,6 @@
 {
  "id": "za_ep09",
- "total": 309.3843333333333,
+ "total": 336.8571666666666,
  "bpm": 96,
  "beats": [
   0.0,
@@ -498,18 +498,63 @@
   307.5,
   308.125,
   308.75,
-  309.375
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25
  ],
  "plan": {
-  "length": 309.4,
-  "shots": 55,
-  "visual_changes": 313,
-  "mean_gap": 0.99,
-  "longest_gap": 5.38,
-  "longest_gap_at": 170.0,
+  "length": 336.9,
+  "shots": 63,
+  "visual_changes": 459,
+  "mean_gap": 0.73,
+  "longest_gap": 5.37,
+  "longest_gap_at": 183.5,
   "over_6s": [],
   "places": [
    "dunes",
+   "intro_gate",
+   "intro_logo",
    "zoo_eve",
    "barn",
    "zoo_night",
@@ -522,11 +567,19 @@
    "paper_blue"
   ],
   "questions": 13,
-  "longest_without_question": 40.3,
+  "longest_without_question": 41.5,
   "first_words_at": 0.42,
-  "shot_mean": 5.63,
+  "shot_mean": 5.35,
+  "main_intro": {
+   "at": [
+    5.3,
+    321.9
+   ],
+   "seconds": 28.4
+  },
   "beats": {
    "hook": 1,
+   "song": 8,
    "goal": 9,
    "fact": 3,
    "obstacle1": 6,
@@ -534,19 +587,18 @@
    "obstacle3": 4,
    "low": 4,
    "solution": 5,
-   "song": 2,
    "ending": 13
   },
   "fails": [],
-  "words_placed": "652/652",
+  "words_placed": "658/658",
   "sync": {
    "pauses_checked": 53,
    "onset_err_mean_ms": 23.8,
    "onset_err_max_ms": 90.0,
    "suspect_words": [],
-   "cuts": 54,
-   "cuts_on_the_half_beat": 54,
-   "songs_entering_on_a_beat": "2/2",
+   "cuts": 62,
+   "cuts_on_the_half_beat": 62,
+   "songs_entering_on_a_beat": "8/8",
    "process": "3D (beat)"
   }
  },
@@ -578,1543 +630,2273 @@
   ],
   [
    5.31,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   5.31,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   5.31,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   5.31,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   5.36,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   6.11,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   8.44,
    "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   8.63,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   8.91,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   8.94,
+   "action",
+   "mango pops up"
+  ],
+  [
+   9.26,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   9.38,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   9.57,
+   "action",
+   "tula pops up"
+  ],
+  [
+   9.88,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   10.0,
+   "action",
+   "sandy nods"
+  ],
+  [
+   10.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   10.19,
+   "action",
+   "clover pops up"
+  ],
+  [
+   10.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   10.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   10.51,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   10.78,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   11.25,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   11.56,
+   "action",
+   "out of the flash"
+  ],
+  [
+   11.56,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   11.56,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   11.75,
+   "action",
+   "the badge pops"
+  ],
+  [
+   12.32,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   12.48,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   12.63,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   12.79,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   12.95,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.1,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.41,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   13.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   13.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   13.75,
+   "action",
+   "a firework"
+  ],
+  [
+   13.75,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   13.91,
+   "action",
+   "a firework"
+  ],
+  [
+   14.06,
+   "action",
+   "confetti"
+  ],
+  [
+   14.06,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   14.16,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   14.37,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   14.49,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   14.69,
+   "action",
+   "a firework"
+  ],
+  [
+   14.88,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   15.19,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   15.31,
+   "action",
+   "a firework"
+  ],
+  [
+   15.5,
+   "action",
+   "mango pops up"
+  ],
+  [
+   15.5,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   15.82,
+   "action",
+   "clover pops up"
+  ],
+  [
+   15.82,
+   "action",
+   "tula pops up"
+  ],
+  [
+   15.94,
+   "action",
+   "a firework"
+  ],
+  [
+   16.13,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   16.25,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   16.41,
+   "action",
+   "a firework"
+  ],
+  [
+   16.88,
+   "action",
+   "a firework"
+  ],
+  [
+   16.88,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   17.0,
+   "action",
+   "T word lights up"
+  ],
+  [
+   17.02,
+   "action",
+   "a firework"
+  ],
+  [
+   17.18,
+   "action",
+   "A word lights up"
+  ],
+  [
+   17.89,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   18.38,
+   "action",
+   "Milo flips"
+  ],
+  [
+   18.38,
+   "action",
+   "a firework"
+  ],
+  [
+   18.38,
+   "action",
+   "confetti"
+  ],
+  [
+   18.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   18.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   18.38,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   18.5,
+   "action",
+   "a firework"
+  ],
+  [
+   18.68,
+   "action",
+   "a firework"
+  ],
+  [
+   18.68,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   18.75,
+   "new place",
    "the dunes at sunrise dunes wide: Milo, Sandy, Mama"
   ],
   [
-   5.48,
+   18.8,
+   "action",
+   "a firework"
+  ],
+  [
+   18.91,
    "action",
    "milo hops"
   ],
   [
-   7.84,
+   21.27,
    "action",
    "sandy hops"
   ],
   [
-   7.84,
+   21.27,
    "word",
    "SANDY"
   ],
   [
-   9.74,
+   23.17,
    "action",
    "mama nods"
   ],
   [
-   9.74,
+   23.17,
    "word",
    "MAMA"
   ],
   [
-   12.19,
+   25.62,
    "new shot",
    "the dunes at sunrise Sandy: my first night away"
   ],
   [
-   12.21,
+   25.64,
    "action",
    "sandy looks wow"
   ],
   [
-   14.05,
+   27.48,
    "word",
    "FIRST NIGHT!"
   ],
   [
-   15.12,
+   28.55,
    "action",
    "sandy looks"
   ],
   [
-   15.94,
+   29.38,
    "new shot",
    "the dunes at sunrise Mama: at the gate in the morning"
   ],
   [
-   17.07,
+   30.51,
    "action",
    "mama looks"
   ],
   [
-   17.07,
+   30.51,
    "picture",
    "h1"
   ],
   [
-   18.82,
+   32.26,
    "picture",
    "h2"
   ],
   [
-   20.38,
+   33.82,
    "action",
    "mama looks"
   ],
   [
-   21.97,
+   35.41,
    "action",
    "sandy nods"
   ],
   [
-   21.97,
+   35.41,
    "word",
    "IN THE MORNING"
   ],
   [
-   22.81,
+   36.25,
    "new shot",
    "the dunes at sunrise question: zoo or home"
   ],
   [
-   25.24,
+   38.68,
    "sign",
    "THE ZOO"
   ],
   [
-   25.59,
+   39.03,
    "sign",
    "HOME"
   ],
   [
-   26.97,
+   40.41,
    "thinking dot",
    "1"
   ],
   [
-   27.58,
+   41.01,
    "thinking dot",
    "2"
   ],
   [
-   28.19,
+   41.62,
    "thinking dot",
    "3"
   ],
   [
-   28.64,
+   42.07,
    "answer",
    "THE ZOO"
   ],
   [
-   30.0,
+   43.44,
    "new shot",
    "the dunes at sunrise walking beside Mama"
   ],
   [
-   30.1,
+   43.54,
    "action",
    "mama walks"
   ],
   [
-   30.1,
+   43.54,
    "action",
    "sandy walks"
   ],
   [
-   32.29,
+   45.72,
    "word",
    "STEP, STEP!"
   ],
   [
-   35.31,
+   48.75,
    "new place",
    "the picture board fact: walks at half an hour old"
   ],
   [
-   36.89,
+   50.32,
    "action",
    "mama walks"
   ],
   [
-   36.89,
+   50.32,
    "action",
    "sandy walks"
   ],
   [
-   39.5,
+   52.93,
    "action",
    "half the clock lights up"
   ],
   [
-   39.5,
+   52.93,
    "action",
    "the minute hand goes half way"
   ],
   [
-   39.5,
+   52.93,
    "word",
    "HALF AN HOUR"
   ],
   [
-   41.25,
+   54.69,
    "new place",
    "the dunes at sunrise question: walk soon yes or no"
   ],
   [
-   43.59,
+   57.03,
    "action",
    "sandy nods"
   ],
   [
-   44.55,
+   57.99,
    "sign",
    "YES"
   ],
   [
-   44.9,
+   58.34,
    "sign",
    "NO"
   ],
   [
-   46.21,
+   59.65,
    "thinking dot",
    "1"
   ],
   [
-   46.82,
+   60.26,
    "thinking dot",
    "2"
   ],
   [
-   47.43,
+   60.86,
    "thinking dot",
    "3"
   ],
   [
-   47.88,
+   61.32,
    "answer",
    "YES"
   ],
   [
-   49.38,
+   62.81,
    "new place",
    "the zoo at sunset zoo at sunset: Tumble waits"
   ],
   [
-   50.31,
+   63.75,
    "action",
    "tumble's trunk moves"
   ],
   [
-   52.9,
+   66.34,
    "action",
    "milo hops"
   ],
   [
-   52.9,
+   66.34,
    "action",
    "sandy hops"
   ],
   [
-   52.9,
+   66.34,
    "word",
    "HOORAY!"
   ],
   [
-   55.0,
+   68.44,
    "new shot",
    "the zoo at sunset Tumble: play, supper, barn"
   ],
   [
-   55.02,
+   68.46,
    "action",
    "tumble looks happy"
   ],
   [
-   56.27,
+   69.7,
    "action",
    "tumble's trunk moves"
   ],
   [
-   58.6,
+   72.03,
    "action",
    "tumble's trunk moves"
   ],
   [
-   58.6,
+   72.03,
    "word",
    "COZY BARN!"
   ],
   [
-   59.38,
+   72.81,
    "new shot",
    "the zoo at sunset Sandy: bye-bye, Mama"
   ],
   [
-   59.4,
+   72.83,
    "action",
    "sandy looks happy"
   ],
   [
-   59.65,
+   73.08,
    "action",
    "sandy nods"
   ],
   [
-   59.65,
+   73.08,
    "word",
    "BYE-BYE!"
   ],
   [
-   60.87,
+   74.3,
    "action",
    "mama nods"
   ],
   [
-   62.19,
+   75.62,
    "new shot",
    "the zoo at sunset play and supper"
   ],
   [
-   62.82,
+   76.25,
    "action",
    "milo hops"
   ],
   [
-   63.32,
+   76.75,
    "action",
    "tumble's trunk moves"
   ],
   [
-   65.67,
+   79.1,
    "action",
    "sandy chews"
   ],
   [
-   65.67,
+   79.1,
    "action",
    "tumble's trunk moves"
   ],
   [
-   65.67,
+   79.1,
    "word",
    "MUNCH, MUNCH!"
   ],
   [
-   67.19,
+   80.62,
    "new place",
    "the sleepover barn at night the barn: the fluffy bed"
   ],
   [
-   67.23,
+   80.67,
    "word",
    "BEDTIME!"
   ],
   [
-   71.03,
+   84.47,
    "action",
    "the bed puffs"
   ],
   [
-   71.03,
+   84.47,
    "action",
    "tumble's trunk moves"
   ],
   [
-   72.81,
+   86.25,
    "new shot",
    "the sleepover barn at night Sandy: too soft"
   ],
   [
-   72.83,
+   86.27,
    "action",
    "sandy looks wow"
   ],
   [
-   73.17,
+   86.61,
    "action",
    "Sandy wobbles"
   ],
   [
-   75.27,
+   88.71,
    "word",
    "TOO SOFT!"
   ],
   [
-   76.26,
+   89.7,
    "action",
    "Sandy sinks"
   ],
   [
-   76.26,
+   89.7,
    "action",
    "the bed squashes"
   ],
   [
-   78.12,
+   91.56,
    "new shot",
    "the sleepover barn at night question: soft or hard"
   ],
   [
-   79.71,
+   93.14,
    "sign",
    "TOO SOFT"
   ],
   [
-   80.06,
+   93.49,
    "sign",
    "TOO HARD"
   ],
   [
-   81.7,
+   95.13,
    "thinking dot",
    "1"
   ],
   [
-   82.31,
+   95.74,
    "thinking dot",
    "2"
   ],
   [
-   82.91,
+   96.35,
    "thinking dot",
    "3"
   ],
   [
-   83.37,
+   96.8,
    "answer",
    "TOO SOFT"
   ],
   [
-   84.69,
+   98.12,
    "new shot",
    "the sleepover barn at night Sandy: I kneel on the sand"
   ],
   [
-   84.71,
+   98.14,
    "action",
    "sandy looks happy"
   ],
   [
-   85.73,
+   99.16,
    "action",
    "sandy looks"
   ],
   [
-   85.73,
+   99.16,
    "word",
    "KNEEL DOWN"
   ],
   [
-   87.82,
+   101.25,
    "action",
    "sandy looks"
   ],
   [
-   88.75,
+   102.19,
    "new place",
    "the picture board (pink) fact: tough knees"
   ],
   [
-   91.09,
+   104.53,
    "picture",
    "rg"
   ],
   [
-   91.09,
+   104.53,
    "word",
    "TOUGH KNEES"
   ],
   [
-   92.54,
+   105.98,
    "action",
    "the ring pulses"
   ],
   [
-   93.29,
+   106.73,
    "word",
    "HOT SAND"
   ],
   [
-   94.69,
+   108.12,
    "new place",
    "the sleepover barn at night question: knees or ears"
   ],
   [
-   94.71,
+   108.14,
    "action",
    "tumble looks happy"
   ],
   [
-   97.88,
+   111.32,
    "sign",
    "KNEES"
   ],
   [
-   98.23,
+   111.67,
    "sign",
    "EARS"
   ],
   [
-   99.98,
+   113.41,
    "thinking dot",
    "1"
   ],
   [
-   100.58,
+   114.02,
    "thinking dot",
    "2"
   ],
   [
-   101.19,
+   114.63,
    "thinking dot",
    "3"
   ],
   [
-   101.64,
+   115.08,
    "answer",
    "KNEES"
   ],
   [
-   103.12,
+   116.56,
    "new shot",
    "the sleepover barn at night Sandy kneels in the straw"
   ],
   [
-   105.72,
+   119.16,
    "action",
    "Sandy kneels down"
   ],
   [
-   107.99,
+   121.43,
    "action",
    "sandy looks happy"
   ],
   [
-   108.69,
+   122.13,
    "action",
    "milo hops"
   ],
   [
-   108.69,
+   122.13,
    "word",
    "JUST RIGHT!"
   ],
   [
-   109.38,
+   122.81,
    "new shot",
    "the sleepover barn at night Sandy: so quiet"
   ],
   [
-   109.39,
+   122.83,
    "action",
    "sandy looks sad"
   ],
   [
-   110.51,
+   123.95,
    "word",
    "SO QUIET..."
   ],
   [
-   113.43,
+   126.87,
    "action",
    "sandy looks"
   ],
   [
-   114.38,
+   127.81,
    "new shot",
    "the sleepover barn at night Milo: look at the stars"
   ],
   [
-   114.39,
+   127.83,
    "action",
    "milo looks happy"
   ],
   [
-   114.62,
+   128.05,
    "action",
    "milo hops"
   ],
   [
-   116.92,
+   130.35,
    "action",
    "milo hops"
   ],
   [
-   116.92,
+   130.35,
    "word",
    "STARS!"
   ],
   [
-   118.12,
+   131.56,
    "new place",
    "the zoo garden at night the zoo garden at night"
   ],
   [
-   119.55,
+   132.99,
    "action",
    "sandy looks"
   ],
   [
-   119.55,
+   132.99,
    "word",
    "THE MOON"
   ],
   [
-   121.84,
+   135.28,
    "action",
    "tumble's trunk moves"
   ],
   [
-   122.91,
+   136.35,
    "action",
    "the stars twinkle"
   ],
   [
-   124.06,
+   137.5,
    "new shot",
    "the zoo garden at night question: count the stars"
   ],
   [
-   127.55,
+   140.98,
    "count",
    "1"
   ],
   [
-   127.55,
+   140.98,
    "picture",
    "b0"
   ],
   [
-   127.86,
+   141.29,
    "picture",
    "b1"
   ],
   [
-   127.89,
+   141.32,
    "count",
    "2"
   ],
   [
-   128.2,
+   141.63,
    "picture",
    "b2"
   ],
   [
-   128.22,
+   141.66,
    "count",
    "3"
   ],
   [
-   128.51,
+   141.94,
    "picture",
    "b3"
   ],
   [
-   128.56,
+   142.0,
    "count",
    "4"
   ],
   [
-   128.9,
+   142.33,
    "count",
    "5"
   ],
   [
-   128.9,
+   142.33,
    "picture",
    "b4"
   ],
   [
-   130.94,
+   144.38,
    "new shot",
    "the zoo garden at night be quiet along"
   ],
   [
-   130.96,
+   144.4,
    "action",
    "tumble looks happy"
   ],
   [
-   131.06,
+   144.5,
    "action",
    "tumble's trunk moves"
   ],
   [
-   131.06,
+   144.5,
    "word",
    "HUSH, HUSH!"
   ],
   [
-   131.35,
+   144.79,
    "action",
    "tumble's trunk moves"
   ],
   [
-   132.35,
+   145.79,
    "action",
    "tumble's trunk moves"
   ],
   [
-   135.0,
+   148.44,
    "new shot",
    "the zoo garden at night Sandy: still wide awake"
   ],
   [
-   135.02,
+   148.46,
    "action",
    "sandy looks"
   ],
   [
-   136.79,
+   150.23,
    "action",
    "sandy looks"
   ],
   [
-   137.83,
+   151.27,
    "action",
    "sandy looks wow"
   ],
   [
-   137.83,
+   151.27,
    "word",
    "WIDE AWAKE!"
   ],
   [
-   138.75,
+   152.19,
    "new shot",
    "the zoo garden at night question: day or night"
   ],
   [
-   139.23,
+   152.66,
    "action",
    "tumble's trunk moves"
   ],
   [
-   139.23,
+   152.66,
    "sign",
    "DAY"
   ],
   [
-   139.58,
+   153.01,
    "sign",
    "NIGHT"
   ],
   [
-   140.8,
+   154.23,
    "thinking dot",
    "1"
   ],
   [
-   141.4,
+   154.84,
    "thinking dot",
    "2"
   ],
   [
-   142.01,
+   155.45,
    "thinking dot",
    "3"
   ],
   [
-   142.46,
+   155.9,
    "answer",
    "NIGHT"
   ],
   [
-   143.75,
+   157.19,
    "new place",
    "the sleepover barn at night back in bed, eyes open"
   ],
   [
-   143.77,
+   157.21,
    "action",
    "tumble looks sleepy"
   ],
   [
-   148.16,
+   161.6,
    "action",
    "sandy looks sad"
   ],
   [
-   148.16,
+   161.6,
    "word",
    "EYES OPEN"
   ],
   [
-   149.06,
+   162.5,
    "new shot",
    "the sleepover barn at night Sandy: I miss Mama's hum"
   ],
   [
-   149.08,
+   162.52,
    "action",
    "sandy looks sad"
   ],
   [
-   152.09,
+   165.53,
    "action",
    "sandy looks"
   ],
   [
-   152.8,
+   166.24,
    "word",
    "MAMA'S HUM"
   ],
   [
-   153.44,
+   166.88,
    "new place",
    "the desert at night Mama under the moon"
   ],
   [
-   156.63,
+   170.07,
    "action",
    "mama looks"
   ],
   [
-   157.21,
+   170.65,
    "word",
    "THE SAME MOON"
   ],
   [
-   158.75,
+   172.19,
    "new place",
    "the picture board (blue) fact: mamas and babies hum"
   ],
   [
-   158.85,
+   172.29,
    "action",
    "mama looks"
   ],
   [
-   158.85,
+   172.29,
    "action",
    "sandy looks"
   ],
   [
-   161.0,
+   174.44,
    "action",
    "the notes float up"
   ],
   [
-   161.0,
+   174.44,
    "picture",
    "nt"
   ],
   [
-   161.0,
+   174.44,
    "word",
    "HUM, HUM!"
   ],
   [
-   162.19,
+   175.62,
    "new place",
    "the desert at night question: hum or roar"
   ],
   [
-   165.1,
+   178.54,
    "sign",
    "HUM"
   ],
   [
-   165.45,
+   178.89,
    "sign",
    "ROAR"
   ],
   [
-   166.87,
+   180.31,
    "thinking dot",
    "1"
   ],
   [
-   167.48,
+   180.91,
    "thinking dot",
    "2"
   ],
   [
-   168.09,
+   181.52,
    "thinking dot",
    "3"
   ],
   [
-   168.54,
+   181.97,
    "answer",
    "HUM"
   ],
   [
-   170.0,
+   183.44,
    "new place",
    "the sleepover barn at night the quiet dark barn"
   ],
   [
-   170.02,
+   183.46,
    "action",
    "sandy looks sad"
   ],
   [
-   175.4,
+   188.83,
    "action",
    "milo looks sad"
   ],
   [
-   175.4,
+   188.83,
    "word",
    "A LITTLE SAD"
   ],
   [
-   176.25,
+   189.69,
    "new shot",
    "the sleepover barn at night Sandy: too little"
   ],
   [
-   176.27,
+   189.71,
    "action",
    "sandy looks sad"
   ],
   [
-   177.41,
+   190.85,
    "action",
    "sandy looks"
   ],
   [
-   179.06,
+   192.5,
    "new shot",
    "the sleepover barn at night Tumble: we are right here"
   ],
   [
-   179.08,
+   192.52,
    "action",
    "tumble looks happy"
   ],
   [
-   180.71,
+   194.14,
    "action",
    "tumble's trunk moves"
   ],
   [
-   180.71,
+   194.14,
    "word",
    "RIGHT HERE"
   ],
   [
-   181.88,
+   195.31,
    "new shot",
    "the sleepover barn at night question: friends help yes or no"
   ],
   [
-   184.76,
+   198.19,
    "sign",
    "YES"
   ],
   [
-   185.11,
+   198.54,
    "sign",
    "NO"
   ],
   [
-   186.32,
+   199.76,
    "thinking dot",
    "1"
   ],
   [
-   186.93,
+   200.36,
    "thinking dot",
    "2"
   ],
   [
-   187.54,
+   200.97,
    "thinking dot",
    "3"
   ],
   [
-   187.99,
+   201.42,
    "answer",
    "YES"
   ],
   [
-   189.38,
+   202.81,
    "new shot",
    "the sleepover barn at night Sandy: I know!"
   ],
   [
-   189.4,
+   202.83,
    "action",
    "sandy looks happy"
   ],
   [
-   189.78,
+   203.21,
    "action",
    "sandy looks"
   ],
   [
-   189.78,
+   203.21,
    "word",
    "I KNOW!"
   ],
   [
-   193.14,
+   206.57,
    "action",
    "sandy looks"
   ],
   [
-   194.69,
+   208.12,
    "new shot",
    "the sleepover barn at night the friends snuggle up"
   ],
   [
-   194.9,
+   208.34,
    "action",
    "milo hops"
   ],
   [
-   196.76,
+   210.2,
    "action",
    "tumble walks"
   ],
   [
-   197.24,
+   210.68,
    "action",
    "milo flies"
   ],
   [
-   197.68,
+   211.12,
    "word",
    "SNUGGLE UP"
   ],
   [
-   199.38,
+   212.81,
    "new shot",
    "the sleepover barn at night the moon rhyme"
   ],
   [
-   199.4,
+   212.83,
    "action",
    "sandy looks happy"
   ],
   [
-   199.48,
+   212.91,
    "action",
    "sandy looks"
   ],
   [
-   199.48,
+   212.91,
    "word",
    "MOON IS ROUND"
   ],
   [
-   201.89,
+   215.32,
    "action",
    "sandy looks"
   ],
   [
-   201.89,
+   215.32,
    "action",
    "tumble looks sleepy"
   ],
   [
-   201.89,
+   215.32,
    "word",
    "SLEEP TIGHT!"
   ],
   [
-   204.06,
+   217.5,
    "new shot",
    "the sleepover barn at night song: moon is round"
   ],
   [
-   204.18,
+   217.62,
    "action",
    "the notes float up"
   ],
   [
-   204.18,
+   217.62,
    "picture",
    "nt"
   ],
   [
-   204.18,
+   217.62,
    "word",
    "MOON IS ROUND"
   ],
   [
-   206.68,
+   220.12,
    "action",
    "milo looks sleepy"
   ],
   [
-   207.93,
+   221.37,
    "action",
    "sandy looks sleepy"
   ],
   [
-   209.18,
+   222.62,
    "word",
    "SLEEP TIGHT"
   ],
   [
-   210.78,
+   224.22,
    "action",
    "sandy blinks slowly"
   ],
   [
-   211.68,
+   225.12,
    "action",
    "sandy falls asleep"
   ],
   [
-   214.07,
+   227.82,
    "action",
    "sandy blinks slowly"
   ],
   [
-   214.38,
+   228.12,
    "new shot",
    "the sleepover barn at night Sandy asleep: sweet dreams"
   ],
   [
-   214.4,
+   228.15,
    "action",
    "tumble looks sleepy"
   ],
   [
-   214.97,
+   228.72,
    "action",
    "sandy falls asleep"
   ],
   [
-   219.93,
+   233.68,
    "picture",
    "zz"
   ],
   [
-   220.94,
+   234.69,
    "word",
    "SWEET DREAMS!"
   ],
   [
-   222.19,
+   235.94,
    "new shot",
    "the sleepover barn at night question: tune or drum"
   ],
   [
-   224.6,
+   238.35,
    "sign",
    "MAMA'S TUNE"
   ],
   [
-   224.95,
+   238.7,
    "sign",
    "A DRUM"
   ],
   [
-   227.46,
+   241.21,
    "thinking dot",
    "1"
   ],
   [
-   228.06,
+   241.81,
    "thinking dot",
    "2"
   ],
   [
-   228.67,
+   242.42,
    "thinking dot",
    "3"
   ],
   [
-   229.12,
+   242.87,
    "answer",
    "MAMA'S TUNE"
   ],
   [
-   230.62,
+   244.38,
    "new place",
    "the zoo gate morning: Mama at the gate"
   ],
   [
-   230.72,
+   244.47,
    "action",
    "sandy walks"
   ],
   [
-   230.72,
+   244.47,
    "action",
    "tumble walks"
   ],
   [
-   230.94,
+   244.69,
    "word",
    "GOOD MORNING!"
   ],
   [
-   234.14,
+   247.89,
    "action",
    "mama nods"
   ],
   [
-   235.0,
+   248.75,
    "new shot",
    "the zoo gate Sandy tells Mama"
   ],
   [
-   235.02,
+   248.77,
    "action",
    "sandy looks happy"
   ],
   [
-   235.21,
+   248.96,
    "action",
    "sandy hops"
   ],
   [
-   236.51,
+   250.26,
    "word",
    "ALL NIGHT!"
   ],
   [
-   238.2,
+   251.95,
    "action",
    "sandy nods"
   ],
   [
-   239.38,
+   253.12,
    "new shot",
    "the zoo gate Mama and Sandy nose to nose"
   ],
   [
-   239.47,
+   253.22,
    "action",
    "mama looks"
   ],
   [
-   240.54,
+   254.29,
    "action",
    "sandy looks"
   ],
   [
-   240.98,
+   254.73,
    "action",
    "the notes float up"
   ],
   [
-   240.98,
+   254.73,
    "picture",
    "nt"
   ],
   [
-   241.22,
+   254.97,
    "word",
    "HELLO, MAMA!"
   ],
   [
-   242.06,
+   255.81,
    "picture",
    "h1"
   ],
   [
-   242.52,
+   256.27,
    "picture",
    "h2"
   ],
   [
-   243.44,
+   257.19,
    "new shot",
    "the zoo gate walking home side by side"
   ],
   [
-   243.54,
+   257.29,
    "action",
    "mama walks"
   ],
   [
-   243.54,
+   257.29,
    "action",
    "sandy walks"
   ],
   [
-   245.49,
+   259.24,
    "word",
    "TOGETHER"
   ],
   [
-   248.12,
+   261.88,
    "new shot",
    "the zoo gate question: Mama or Milo"
   ],
   [
-   249.05,
+   262.8,
    "action",
    "mama nods"
   ],
   [
-   249.93,
+   263.68,
    "sign",
    "MAMA"
   ],
   [
-   250.28,
+   264.03,
    "sign",
    "MILO"
   ],
   [
-   251.83,
+   265.58,
    "thinking dot",
    "1"
   ],
   [
-   252.44,
+   266.19,
    "thinking dot",
    "2"
   ],
   [
-   253.04,
+   266.79,
    "thinking dot",
    "3"
   ],
   [
-   253.5,
+   267.25,
    "answer",
    "MAMA"
   ],
   [
-   255.0,
+   268.75,
    "new shot",
    "the zoo gate Milo: thank you"
   ],
   [
-   255.02,
+   268.77,
    "action",
    "milo looks happy"
   ],
   [
-   255.11,
+   268.86,
    "word",
    "THANK YOU!"
   ],
   [
-   255.76,
+   269.51,
    "action",
    "milo hops"
   ],
   [
-   257.5,
+   271.25,
    "new shot",
    "the zoo gate Tumble: come again"
   ],
   [
-   257.52,
+   271.27,
    "action",
    "tumble looks happy"
   ],
   [
-   258.18,
+   271.93,
    "action",
    "tumble's trunk moves"
   ],
   [
-   258.18,
+   271.93,
    "word",
    "COME AGAIN!"
   ],
   [
-   260.62,
+   274.38,
    "new shot",
    "the zoo gate Sandy: thank you"
   ],
   [
-   260.64,
+   274.39,
    "action",
    "sandy looks happy"
   ],
   [
-   261.16,
+   274.91,
    "action",
    "sandy nods"
   ],
   [
-   263.73,
+   277.48,
    "word",
    "SO COZY!"
   ],
   [
-   264.69,
+   278.44,
    "new shot",
    "the zoo gate the lesson"
   ],
   [
-   265.11,
+   278.86,
    "action",
    "milo hops"
   ],
   [
-   266.16,
+   279.91,
    "action",
    "sandy nods"
   ],
   [
-   266.16,
+   279.91,
    "word",
    "A SONG FROM HOME"
   ],
   [
-   266.84,
+   280.59,
    "action",
    "mama nods"
   ],
   [
-   268.9,
+   282.65,
    "action",
    "tumble's trunk moves"
   ],
   [
-   269.62,
+   283.37,
    "action",
    "sandy hops"
   ],
   [
-   270.62,
+   284.38,
    "new shot",
    "the zoo gate question: half an hour or a year"
   ],
   [
-   270.91,
+   284.66,
    "action",
    "milo hops"
   ],
   [
-   275.52,
+   289.27,
    "sign",
    "HALF AN HOUR"
   ],
   [
-   275.87,
+   289.62,
    "sign",
    "ONE YEAR"
   ],
   [
-   278.55,
+   292.3,
    "thinking dot",
    "1"
   ],
   [
-   279.15,
+   292.9,
    "thinking dot",
    "2"
   ],
   [
-   279.76,
+   293.51,
    "thinking dot",
    "3"
   ],
   [
-   280.21,
+   293.96,
    "answer",
    "HALF AN HOUR"
   ],
   [
-   281.56,
+   295.31,
    "new shot",
    "the zoo gate question: tough skin or feathers"
   ],
   [
-   283.0,
+   296.75,
    "action",
    "sandy nods"
   ],
   [
-   285.25,
+   299.0,
    "sign",
    "TOUGH SKIN"
   ],
   [
-   285.6,
+   299.35,
    "sign",
    "FEATHERS"
   ],
   [
-   288.04,
+   301.79,
    "thinking dot",
    "1"
   ],
   [
-   288.65,
+   302.4,
    "thinking dot",
    "2"
   ],
   [
-   289.25,
+   303.0,
    "thinking dot",
    "3"
   ],
   [
-   289.71,
+   303.46,
    "answer",
    "TOUGH SKIN"
   ],
   [
-   291.25,
+   305.0,
    "new shot",
    "the zoo gate the closing rhyme"
   ],
   [
-   291.32,
+   305.07,
    "action",
    "milo hops"
   ],
   [
-   291.32,
+   305.07,
    "word",
    "MOON IS ROUND"
   ],
   [
-   292.99,
+   306.74,
    "action",
    "sandy nods"
   ],
   [
-   294.38,
+   308.13,
    "action",
    "tumble's trunk moves"
   ],
   [
-   295.33,
+   309.08,
    "action",
    "mama nods"
   ],
   [
-   296.25,
+   310.0,
    "new shot",
    "the zoo gate song: hooray"
   ],
   [
-   297.25,
+   311.0,
    "action",
    "sandy hops"
   ],
   [
-   298.25,
+   312.0,
    "action",
    "tumble's trunk moves"
   ],
   [
-   298.25,
+   312.0,
    "word",
    "HOORAY!"
   ],
   [
-   298.45,
+   312.2,
    "action",
    "milo hops"
   ],
   [
-   301.88,
+   315.62,
    "new shot",
    "the zoo gate goodbye: next adventure"
   ],
   [
-   302.0,
+   315.75,
    "action",
    "milo hops"
   ],
   [
-   302.0,
+   315.75,
    "word",
    "NEXT TIME!"
   ],
   [
-   305.56,
+   319.31,
    "word",
    "SEE YOU SOON!"
+  ],
+  [
+   321.88,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   321.88,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   321.88,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   321.88,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   321.93,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   322.68,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   325.31,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   325.5,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   325.78,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   325.82,
+   "action",
+   "mango pops up"
+  ],
+  [
+   326.13,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   326.25,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   326.44,
+   "action",
+   "tula pops up"
+  ],
+  [
+   326.75,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   326.87,
+   "action",
+   "sandy nods"
+  ],
+  [
+   326.87,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   327.07,
+   "action",
+   "clover pops up"
+  ],
+  [
+   327.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   327.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   327.38,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   327.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   328.12,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   328.44,
+   "action",
+   "out of the flash"
+  ],
+  [
+   328.44,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   328.44,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   328.63,
+   "action",
+   "the badge pops"
+  ],
+  [
+   329.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   329.35,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   329.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   329.66,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   329.82,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   329.98,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   330.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   330.29,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   330.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   330.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   330.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   330.63,
+   "action",
+   "a firework"
+  ],
+  [
+   330.63,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   330.79,
+   "action",
+   "a firework"
+  ],
+  [
+   330.94,
+   "action",
+   "confetti"
+  ],
+  [
+   330.94,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   331.04,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   331.25,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   331.37,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   331.56,
+   "action",
+   "a firework"
+  ],
+  [
+   331.76,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   332.07,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   332.19,
+   "action",
+   "a firework"
+  ],
+  [
+   332.38,
+   "action",
+   "mango pops up"
+  ],
+  [
+   332.38,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   332.69,
+   "action",
+   "clover pops up"
+  ],
+  [
+   332.69,
+   "action",
+   "tula pops up"
+  ],
+  [
+   332.81,
+   "action",
+   "a firework"
+  ],
+  [
+   333.01,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   333.13,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   333.28,
+   "action",
+   "a firework"
+  ],
+  [
+   333.75,
+   "action",
+   "a firework"
+  ],
+  [
+   333.75,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   333.87,
+   "action",
+   "T word lights up"
+  ],
+  [
+   333.89,
+   "action",
+   "a firework"
+  ],
+  [
+   334.05,
+   "action",
+   "A word lights up"
+  ],
+  [
+   334.77,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   335.26,
+   "action",
+   "Milo flips"
+  ],
+  [
+   335.26,
+   "action",
+   "a firework"
+  ],
+  [
+   335.26,
+   "action",
+   "confetti"
+  ],
+  [
+   335.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   335.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   335.26,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   335.38,
+   "action",
+   "a firework"
+  ],
+  [
+   335.56,
+   "action",
+   "a firework"
+  ],
+  [
+   335.56,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   335.68,
+   "action",
+   "a firework"
   ]
  ],
  "shots": [
@@ -2195,11 +2977,87 @@
    "sung": false
   },
   {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 5.3125,
+   "t1": 8.4375,
+   "v0": 5.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 8.4375,
+   "t1": 11.5625,
+   "v0": 8.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 11.5625,
+   "t1": 16.875,
+   "v0": 11.875,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 16.875,
+   "t1": 18.75,
+   "v0": 16.995,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
    "place": "dunes",
    "say": "Hello, I'm Milo! This is Sandy the baby camel, and her Mama, in the sandy desert.",
-   "t0": 5.3125,
-   "t1": 12.1875,
-   "v0": 5.467958333333334,
+   "t0": 18.75,
+   "t1": 25.625,
+   "v0": 18.902166666666666,
    "dur": 6.338208333333333,
    "words": [
     [
@@ -2293,9 +3151,9 @@
   {
    "place": "dunes",
    "say": "A sleepover? My very first night away from Mama!",
-   "t0": 12.1875,
-   "t1": 15.9375,
-   "v0": 12.326166666666666,
+   "t0": 25.625,
+   "t1": 29.375,
+   "v0": 25.760375,
    "dur": 3.277416666666667,
    "words": [
     [
@@ -2354,9 +3212,9 @@
   {
    "place": "dunes",
    "say": "Mama camel nuzzles Sandy. Have fun, little one. I will be at the zoo gate in the morning.",
-   "t0": 15.9375,
-   "t1": 22.8125,
-   "v0": 16.123583333333332,
+   "t0": 29.375,
+   "t1": 36.25,
+   "v0": 29.557791666666667,
    "dur": 6.399583333333333,
    "words": [
     [
@@ -2460,9 +3318,9 @@
   {
    "place": "dunes",
    "say": "Where will Sandy sleep tonight? At the zoo, or at home?",
-   "t0": 22.8125,
-   "t1": 30.0,
-   "v0": 23.043166666666664,
+   "t0": 36.25,
+   "t1": 43.4375,
+   "v0": 36.477374999999995,
    "dur": 3.4763333333333333,
    "words": [
     [
@@ -2531,9 +3389,9 @@
   {
    "place": "dunes",
    "say": "Sandy walks beside Mama, step, step, step, all the way to the zoo.",
-   "t0": 30.0,
-   "t1": 35.3125,
-   "v0": 30.239499999999996,
+   "t0": 43.4375,
+   "t1": 48.75,
+   "v0": 43.67370833333333,
    "dur": 4.79825,
    "words": [
     [
@@ -2612,9 +3470,9 @@
   {
    "place": "paper",
    "say": "A baby camel can walk beside its mama, when it is only half an hour old!",
-   "t0": 35.3125,
-   "t1": 41.25,
-   "v0": 35.55774999999999,
+   "t0": 48.75,
+   "t1": 54.6875,
+   "v0": 48.99195833333333,
    "dur": 5.224541666666667,
    "words": [
     [
@@ -2708,9 +3566,9 @@
   {
    "place": "dunes",
    "say": "Can a baby camel walk, soon after it is born? Yes, or no?",
-   "t0": 41.25,
-   "t1": 49.375,
-   "v0": 41.302291666666655,
+   "t0": 54.6875,
+   "t1": 62.8125,
+   "v0": 54.73649999999999,
    "dur": 4.458583333333333,
    "words": [
     [
@@ -2789,9 +3647,9 @@
   {
    "place": "zoo_eve",
    "say": "At the zoo, Tumble the baby elephant is waiting. Hooray, a sleepover!",
-   "t0": 49.375,
-   "t1": 55.0,
-   "v0": 49.48087499999998,
+   "t0": 62.8125,
+   "t1": 68.4375,
+   "v0": 62.91508333333333,
    "dur": 5.096875,
    "words": [
     [
@@ -2865,9 +3723,9 @@
   {
    "place": "zoo_eve",
    "say": "Hi, Sandy! We can play, and have supper, and sleep in the cozy barn!",
-   "t0": 55.0,
-   "t1": 59.375,
-   "v0": 55.09774999999998,
+   "t0": 68.4375,
+   "t1": 72.8125,
+   "v0": 68.53195833333334,
    "dur": 4.029208333333333,
    "words": [
     [
@@ -2951,9 +3809,9 @@
   {
    "place": "zoo_eve",
    "say": "Bye-bye, Mama! See you in the morning!",
-   "t0": 59.375,
-   "t1": 62.1875,
-   "v0": 59.6469583333333,
+   "t0": 72.8125,
+   "t1": 75.625,
+   "v0": 73.08116666666668,
    "dur": 2.259,
    "words": [
     [
@@ -3002,9 +3860,9 @@
   {
    "place": "zoo_eve",
    "say": "They play hide and seek, and eat a yummy supper. Munch, munch!",
-   "t0": 62.1875,
-   "t1": 67.1875,
-   "v0": 62.4259583333333,
+   "t0": 75.625,
+   "t1": 80.625,
+   "v0": 75.86016666666669,
    "dur": 4.28825,
    "words": [
     [
@@ -3078,9 +3936,9 @@
   {
    "place": "barn",
    "say": "Bedtime! In the cozy barn, Tumble has a big, fluffy bed for Sandy.",
-   "t0": 67.1875,
-   "t1": 72.8125,
-   "v0": 67.23420833333331,
+   "t0": 80.625,
+   "t1": 86.25,
+   "v0": 80.6684166666667,
    "dur": 5.40825,
    "words": [
     [
@@ -3159,9 +4017,9 @@
   {
    "place": "barn",
    "say": "Wobble, wobble! Oh, this bed is too soft! I sink down, down, down!",
-   "t0": 72.8125,
-   "t1": 78.125,
-   "v0": 73.16245833333332,
+   "t0": 86.25,
+   "t1": 91.5625,
+   "v0": 86.5966666666667,
    "dur": 4.693,
    "words": [
     [
@@ -3240,9 +4098,9 @@
   {
    "place": "barn",
    "say": "Is the fluffy bed too soft, or too hard?",
-   "t0": 78.125,
-   "t1": 84.6875,
-   "v0": 78.37545833333333,
+   "t0": 91.5625,
+   "t1": 98.125,
+   "v0": 91.80966666666671,
    "dur": 2.870375,
    "words": [
     [
@@ -3301,9 +4159,9 @@
   {
    "place": "barn",
    "say": "At home, I kneel down on the warm sand, knees first.",
-   "t0": 84.6875,
-   "t1": 88.75,
-   "v0": 84.96583333333334,
+   "t0": 98.125,
+   "t1": 102.1875,
+   "v0": 98.40004166666672,
    "dur": 3.3654166666666665,
    "words": [
     [
@@ -3372,9 +4230,9 @@
   {
    "place": "paper_pink",
    "say": "Camels have thick, tough skin on their knees, so they can kneel down on hot sand.",
-   "t0": 88.75,
-   "t1": 94.6875,
-   "v0": 88.85125000000001,
+   "t0": 102.1875,
+   "t1": 108.125,
+   "v0": 102.2854583333334,
    "dur": 5.390041666666667,
    "words": [
     [
@@ -3468,9 +4326,9 @@
   {
    "place": "barn",
    "say": "Where do camels have tough, thick skin? On their knees, or on their ears?",
-   "t0": 94.6875,
-   "t1": 103.125,
-   "v0": 94.76129166666668,
+   "t0": 108.125,
+   "t1": 116.5625,
+   "v0": 108.19550000000007,
    "dur": 4.7636666666666665,
    "words": [
     [
@@ -3554,9 +4412,9 @@
   {
    "place": "barn",
    "say": "Tumble brings soft straw. Sandy kneels down, knees first. Ahh, just right!",
-   "t0": 103.125,
-   "t1": 109.375,
-   "v0": 103.24495833333336,
+   "t0": 116.5625,
+   "t1": 122.8125,
+   "v0": 116.67916666666675,
    "dur": 5.858583333333334,
    "words": [
     [
@@ -3630,9 +4488,9 @@
   {
    "place": "barn",
    "say": "But now it is so quiet. At home, the desert wind goes whoosh.",
-   "t0": 109.375,
-   "t1": 114.375,
-   "v0": 109.6235416666667,
+   "t0": 122.8125,
+   "t1": 127.8125,
+   "v0": 123.05775000000008,
    "dur": 4.322625,
    "words": [
     [
@@ -3711,9 +4569,9 @@
   {
    "place": "barn",
    "say": "I know! Let's tiptoe outside, and look at the stars!",
-   "t0": 114.375,
-   "t1": 118.125,
-   "v0": 114.46616666666671,
+   "t0": 127.8125,
+   "t1": 131.5625,
+   "v0": 127.9003750000001,
    "dur": 3.2270416666666666,
    "words": [
     [
@@ -3777,9 +4635,9 @@
   {
    "place": "zoo_night",
    "say": "In the zoo garden, the moon is round and bright, and the sky is full of stars.",
-   "t0": 118.125,
-   "t1": 124.0625,
-   "v0": 118.21320833333338,
+   "t0": 131.5625,
+   "t1": 137.5,
+   "v0": 131.64741666666677,
    "dur": 5.476,
    "words": [
     [
@@ -3878,9 +4736,9 @@
   {
    "place": "zoo_night",
    "say": "How many big stars can you see? Count with me! One, two, three, four, five!",
-   "t0": 124.0625,
-   "t1": 130.9375,
-   "v0": 124.2092083333334,
+   "t0": 137.5,
+   "t1": 144.375,
+   "v0": 137.64341666666678,
    "dur": 5.323958333333334,
    "words": [
     [
@@ -3969,9 +4827,9 @@
   {
    "place": "zoo_night",
    "say": "Hush, hush! Can you be very quiet, like the night?",
-   "t0": 130.9375,
-   "t1": 135.0,
-   "v0": 131.05316666666673,
+   "t0": 144.375,
+   "t1": 148.4375,
+   "v0": 144.48737500000013,
    "dur": 2.478666666666667,
    "words": [
     [
@@ -4035,9 +4893,9 @@
   {
    "place": "zoo_night",
    "say": "The stars are so pretty. But I am still wide awake.",
-   "t0": 135.0,
-   "t1": 138.75,
-   "v0": 135.0518333333334,
+   "t0": 148.4375,
+   "t1": 152.1875,
+   "v0": 148.4860416666668,
    "dur": 3.2736666666666667,
    "words": [
     [
@@ -4106,9 +4964,9 @@
   {
    "place": "zoo_night",
    "say": "Is it day, or night?",
-   "t0": 138.75,
-   "t1": 143.75,
-   "v0": 138.84550000000007,
+   "t0": 152.1875,
+   "t1": 157.1875,
+   "v0": 152.27970833333347,
    "dur": 1.49875,
    "words": [
     [
@@ -4147,9 +5005,9 @@
   {
    "place": "barn",
    "say": "Back in the barn, Sandy lies in the straw. Her eyes stay open.",
-   "t0": 143.75,
-   "t1": 149.0625,
-   "v0": 144.06425000000007,
+   "t0": 157.1875,
+   "t1": 162.5,
+   "v0": 157.49845833333347,
    "dur": 4.627291666666666,
    "words": [
     [
@@ -4228,9 +5086,9 @@
   {
    "place": "barn",
    "say": "At home, Mama hums to me every night. I miss Mama's hum.",
-   "t0": 149.0625,
-   "t1": 153.4375,
-   "v0": 149.21154166666676,
+   "t0": 162.5,
+   "t1": 166.875,
+   "v0": 162.64575000000016,
    "dur": 4.013166666666667,
    "words": [
     [
@@ -4304,9 +5162,9 @@
   {
    "place": "night",
    "say": "Far away in the desert, Mama camel looks up at the same big moon.",
-   "t0": 153.4375,
-   "t1": 158.75,
-   "v0": 153.74470833333345,
+   "t0": 166.875,
+   "t1": 172.1875,
+   "v0": 167.17891666666685,
    "dur": 4.689791666666666,
    "words": [
     [
@@ -4390,9 +5248,9 @@
   {
    "place": "paper_blue",
    "say": "Camel mamas and their babies hum to each other!",
-   "t0": 158.75,
-   "t1": 162.1875,
-   "v0": 158.95450000000014,
+   "t0": 172.1875,
+   "t1": 175.625,
+   "v0": 172.38870833333354,
    "dur": 2.9890416666666666,
    "words": [
     [
@@ -4451,9 +5309,9 @@
   {
    "place": "night",
    "say": "What do camel mamas and babies do? Hum, or roar?",
-   "t0": 162.1875,
-   "t1": 170.0,
-   "v0": 162.46354166666683,
+   "t0": 175.625,
+   "t1": 183.4375,
+   "v0": 175.89775000000023,
    "dur": 3.956375,
    "words": [
     [
@@ -4517,9 +5375,9 @@
   {
    "place": "barn",
    "say": "The barn is quiet and dark, and Mama is far away. Sandy feels a little sad.",
-   "t0": 170.0,
-   "t1": 176.25,
-   "v0": 170.13991666666683,
+   "t0": 183.4375,
+   "t1": 189.6875,
+   "v0": 183.57412500000024,
    "dur": 5.823333333333333,
    "words": [
     [
@@ -4613,9 +5471,9 @@
   {
    "place": "barn",
    "say": "Maybe I am too little for a sleepover.",
-   "t0": 176.25,
-   "t1": 179.0625,
-   "v0": 176.48325000000017,
+   "t0": 189.6875,
+   "t1": 192.5,
+   "v0": 189.91745833333357,
    "dur": 2.1865,
    "words": [
     [
@@ -4669,9 +5527,9 @@
   {
    "place": "barn",
    "say": "Don't worry, Sandy. We are right here with you.",
-   "t0": 179.0625,
-   "t1": 181.875,
-   "v0": 179.18975000000017,
+   "t0": 192.5,
+   "t1": 195.3125,
+   "v0": 192.62395833333358,
    "dur": 2.2909166666666665,
    "words": [
     [
@@ -4730,9 +5588,9 @@
   {
    "place": "barn",
    "say": "Can good friends help Sandy feel better? Yes, or no?",
-   "t0": 181.875,
-   "t1": 189.375,
-   "v0": 182.00066666666686,
+   "t0": 195.3125,
+   "t1": 202.8125,
+   "v0": 195.43487500000026,
    "dur": 3.86825,
    "words": [
     [
@@ -4796,9 +5654,9 @@
   {
    "place": "barn",
    "say": "I know! I can teach you Mama's hum. Then a little bit of home is here with us!",
-   "t0": 189.375,
-   "t1": 194.6875,
-   "v0": 189.58891666666685,
+   "t0": 202.8125,
+   "t1": 208.125,
+   "v0": 203.02312500000025,
    "dur": 4.794666666666667,
    "words": [
     [
@@ -4902,9 +5760,9 @@
   {
    "place": "barn",
    "say": "Yes! Teach us, Sandy! Tumble and Milo snuggle up close.",
-   "t0": 194.6875,
-   "t1": 199.375,
-   "v0": 194.90358333333353,
+   "t0": 208.125,
+   "t1": 212.8125,
+   "v0": 208.33779166666693,
    "dur": 4.043666666666667,
    "words": [
     [
@@ -4968,9 +5826,9 @@
   {
    "place": "barn",
    "say": "Moon is round, stars are bright. Close your eyes, and sleep tight!",
-   "t0": 199.375,
-   "t1": 204.0625,
-   "v0": 199.4672500000002,
+   "t0": 212.8125,
+   "t1": 217.5,
+   "v0": 212.9014583333336,
    "dur": 4.32075,
    "words": [
     [
@@ -5044,9 +5902,9 @@
   {
    "place": "barn",
    "say": "",
-   "t0": 204.0625,
-   "t1": 214.375,
-   "v0": 204.375,
+   "t0": 217.5,
+   "t1": 228.125,
+   "v0": 218.125,
    "dur": 10.0,
    "words": [],
    "part": 0,
@@ -5059,9 +5917,9 @@
   {
    "place": "barn",
    "say": "Her friends hum Mama's tune with her, soft and slow. And Sandy falls fast asleep. Sweet dreams!",
-   "t0": 214.375,
-   "t1": 222.1875,
-   "v0": 214.495,
+   "t0": 228.125,
+   "t1": 235.9375,
+   "v0": 228.245,
    "dur": 7.513166666666667,
    "words": [
     [
@@ -5160,9 +6018,9 @@
   {
    "place": "barn",
    "say": "What helped Sandy fall asleep? Mama's tune, or a loud drum?",
-   "t0": 222.1875,
-   "t1": 230.625,
-   "v0": 222.5281666666667,
+   "t0": 235.9375,
+   "t1": 244.375,
+   "v0": 236.2781666666667,
    "dur": 4.47675,
    "words": [
     [
@@ -5231,9 +6089,9 @@
   {
    "place": "zoo",
    "say": "Good morning! The sun is up. And look who is at the zoo gate!",
-   "t0": 230.625,
-   "t1": 235.0,
-   "v0": 230.7249166666667,
+   "t0": 244.375,
+   "t1": 248.75,
+   "v0": 244.4749166666667,
    "dur": 3.958375,
    "words": [
     [
@@ -5317,9 +6175,9 @@
   {
    "place": "zoo",
    "say": "Mama! I slept all night! My friends hummed your tune with me.",
-   "t0": 235.0,
-   "t1": 239.375,
-   "v0": 235.2032916666667,
+   "t0": 248.75,
+   "t1": 253.125,
+   "v0": 248.9532916666667,
    "dur": 3.7487083333333335,
    "words": [
     [
@@ -5393,9 +6251,9 @@
   {
    "place": "zoo",
    "say": "Mama camel and Sandy hum hello, nose to nose.",
-   "t0": 239.375,
-   "t1": 243.4375,
-   "v0": 239.47200000000004,
+   "t0": 253.125,
+   "t1": 257.1875,
+   "v0": 253.22200000000004,
    "dur": 3.656458333333333,
    "words": [
     [
@@ -5454,9 +6312,9 @@
   {
    "place": "zoo",
    "say": "Then Mama and Sandy walk home together, side by side.",
-   "t0": 243.4375,
-   "t1": 248.125,
-   "v0": 243.64845833333337,
+   "t0": 257.1875,
+   "t1": 261.875,
+   "v0": 257.39845833333334,
    "dur": 4.016041666666666,
    "words": [
     [
@@ -5520,9 +6378,9 @@
   {
    "place": "zoo",
    "say": "Who was waiting at the gate? Mama, or Milo?",
-   "t0": 248.125,
-   "t1": 255.0,
-   "v0": 248.18450000000004,
+   "t0": 261.875,
+   "t1": 268.75,
+   "v0": 261.93449999999996,
    "dur": 3.1925416666666666,
    "words": [
     [
@@ -5581,9 +6439,9 @@
   {
    "place": "zoo",
    "say": "Thank you for the sleepover, Sandy!",
-   "t0": 255.0,
-   "t1": 257.5,
-   "v0": 255.0970416666667,
+   "t0": 268.75,
+   "t1": 271.25,
+   "v0": 268.8470416666666,
    "dur": 2.15525,
    "words": [
     [
@@ -5627,9 +6485,9 @@
   {
    "place": "zoo",
    "say": "Come again soon! Our barn is your barn too.",
-   "t0": 257.5,
-   "t1": 260.625,
-   "v0": 257.7722916666667,
+   "t0": 271.25,
+   "t1": 274.375,
+   "v0": 271.5222916666666,
    "dur": 2.4185833333333333,
    "words": [
     [
@@ -5688,9 +6546,9 @@
   {
    "place": "zoo",
    "say": "Thank you, friends! You made my first night away so cozy.",
-   "t0": 260.625,
-   "t1": 264.6875,
-   "v0": 260.71087500000004,
+   "t0": 274.375,
+   "t1": 278.4375,
+   "v0": 274.46087499999993,
    "dur": 3.616375,
    "words": [
     [
@@ -5759,9 +6617,9 @@
   {
    "place": "zoo",
    "say": "When you miss someone, a song from home can come with you. And good friends help, too.",
-   "t0": 264.6875,
-   "t1": 270.625,
-   "v0": 264.84725000000003,
+   "t0": 278.4375,
+   "t1": 284.375,
+   "v0": 278.5972499999999,
    "dur": 5.312583333333333,
    "words": [
     [
@@ -5860,9 +6718,9 @@
   {
    "place": "zoo",
    "say": "Do you remember? When can a baby camel walk beside its mama? At half an hour old, or at one year old?",
-   "t0": 270.625,
-   "t1": 281.5625,
-   "v0": 270.67983333333336,
+   "t0": 284.375,
+   "t1": 295.3125,
+   "v0": 284.42983333333325,
    "dur": 7.414375,
    "words": [
     [
@@ -5986,9 +6844,9 @@
   {
    "place": "zoo",
    "say": "And what keeps a camel's knees safe on hot sand? Tough skin, or soft feathers?",
-   "t0": 281.5625,
-   "t1": 291.25,
-   "v0": 281.81420833333334,
+   "t0": 295.3125,
+   "t1": 305.0,
+   "v0": 295.5642083333332,
    "dur": 5.773041666666667,
    "words": [
     [
@@ -6077,9 +6935,9 @@
   {
    "place": "zoo",
    "say": "Moon is round, stars are bright. Close your eyes, and sleep tight!",
-   "t0": 291.25,
-   "t1": 296.25,
-   "v0": 291.30724999999995,
+   "t0": 305.0,
+   "t1": 310.0,
+   "v0": 305.05724999999984,
    "dur": 4.559291666666667,
    "words": [
     [
@@ -6153,9 +7011,9 @@
   {
    "place": "zoo",
    "say": "",
-   "t0": 296.25,
-   "t1": 301.875,
-   "v0": 296.875,
+   "t0": 310.0,
+   "t1": 315.625,
+   "v0": 310.625,
    "dur": 5.0,
    "words": [],
    "part": 0,
@@ -6168,9 +7026,9 @@
   {
    "place": "zoo",
    "say": "Next time: Poppy's first slide on the ice! See you on the next adventure, friends!",
-   "t0": 301.875,
-   "t1": 308.1843333333333,
-   "v0": 301.995,
+   "t0": 315.625,
+   "t1": 321.875,
+   "v0": 315.745,
    "dur": 5.789333333333333,
    "words": [
     [
@@ -6254,6 +7112,82 @@
    "tag": "goodbye: next adventure",
    "who": "milo",
    "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 321.875,
+   "t1": 325.3125,
+   "v0": 322.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 325.3125,
+   "t1": 328.4375,
+   "v0": 325.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 328.4375,
+   "t1": 333.75,
+   "v0": 328.75,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 333.75,
+   "t1": 335.6571666666666,
+   "v0": 333.87,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
    "sung": false
   }
  ]

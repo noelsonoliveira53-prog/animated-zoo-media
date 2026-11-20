@@ -171,3 +171,7 @@
 | 2026-11-20 | cartoon/zc_ep10_short2.mp4 | cartoon_short_90 | PASS | - | - | Daily run Nov 20 gate before upload |
 | 2026-11-20 | cartoon/zc_ep10_short3.mp4 | cartoon_short_90 | PASS | - | - | Daily run Nov 20 gate before upload |
 | 2026-11-20 | zoo3d_ep22.mp4 | 3d_singalong | PASS | - | - | Daily run Nov 20 gate before upload |
+| 2026-11-20 | cartoon/zc_ep11.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-20 | cartoon/zc_ep11_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-20 | cartoon/zc_ep11_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-20 | cartoon/zc_ep11_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

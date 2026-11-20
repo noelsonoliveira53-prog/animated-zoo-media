@@ -251,7 +251,7 @@ SHOTS = [
       words=[("w:Say", "SAY IT!", .3, .32, 1.1, "sun", (.5, .34), .9)]),
     S("zoo", say="Can you trot like a zebra? Clip, clop, clip, clop!", part=3, q=True, tag="trot like a zebra", pause=2.4,
       fx=[("hop", "w:Clip,:1", "milo"), ("hop", "w:clip,:2", "milo")], words=[("w:Clip,:1", "CLIP, CLOP!", .72, .3, .8, "sun", (.5, .33), .8)], **MILO("zoo", 940)),
-    S("paper", BOARD, "Quick check! How many toes are on each zebra foot? One, or five?", part=3, q=True, tag="question 3b", cam2=(960, 560, 1280), pause=3.2, pcam=BOARDP,
+    S("paper", BOARD, "Quick check! How many toes are on each zebra foot? One, or five?", part=3, q=True, tag="question 3b", cam2=(960, 560, 1280), pause=3.2, pcam=BOARDP, pcam2=(960, 380, 1450),
       props=[ZFC("zf", 960, 810, 1.05, p=(960, 800, 1.4))], fx=[PULSE("w:toes", "#{p}zf_w", 1.08), PULSE("w:foot?", "#{p}zf-hoof", 1.1), PULSE("wait:0.6", "#{p}zf-toe", 1.15), ("signs", "w:One,", ["ONE", "FIVE"], 0, "wait:2.0"), PULSE("wait:2.05", "#{p}zf-toe", 1.2, 2), ("word", "e:five?", "?", {"x": 1380, "y": 600, "size": 200, "cls": "sun", "p": {"x": 1250, "y": 560, "size": 170}})]),
     S("river", ZB, "One! One toe, inside one hoof. You remembered!", part=3, tag="you remembered", hide=["milo"], actors=ZEB, pcam=ZBP, cam2=W(ZB), fx=[("nod", "w:remembered!", "zeb")],
       words=[("w:One!:1", "ONE!", .27, .34, 1.3, "sun", (.5, .34), 1.0)]),

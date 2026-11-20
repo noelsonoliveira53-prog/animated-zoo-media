@@ -3043,10 +3043,27 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zc_ep11.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 20 1:23 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): in_production, not uploaded"
+  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it.",
+  "description": "Look! A giant footprint in the sand. Who made it? Follow the footprints with Milo the bluebird and guess the animal before it walks in! A gentle guessing game for ages 2-6 with answer signs, thinking time, things to count, moves to copy and a quiz at the end.\nKids learn that an elephant walks on its tiptoes, on a big, soft cushion that soaks up the bump of each step, and that some elephants have four toenails on a front foot and some have five; that a giraffe has two hooves on each foot, feet as big as a dinner plate, and walks by moving the two legs on one side together; and that a zebra walks on one toe on each foot, inside one hoof that keeps growing, and that every zebra has its own stripes.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance Library (African elephant, giraffe and plains zebra fact sheets); San Diego Zoo Wildlife Alliance (giraffe); Live Science (giraffe facts).",
+  "tags": [
+   "whose feet are these",
+   "guess with milo",
+   "guess the animal",
+   "animal footprints for kids",
+   "elephant feet",
+   "giraffe hooves",
+   "zebra hooves",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "WHO?",
+  "seconds": 348.1
  }
 ]

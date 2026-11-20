@@ -7,9 +7,10 @@ import random
 import art, art2, kit
 from art import INK, CAMEL_B
 
-SHAG = "#8a5c34"; SHAG_L = "#a6774a"; SHAG_D = "#5e3a1c"
+SHAG = "#9a6a40"; SHAG_L = "#b48455"; SHAG_D = "#5e3a1c"
 # where the winter patches sit on the camel (its own units: facing right, feet at 0), and how big each is
-PATCHES = [(-112, -500, 1.0), (98, -506, 1.0), (-176, -350, 1.15), (-30, -330, 1.25), (126, -344, 1.05), (-92, -246, .95), (64, -244, .95), (210, -318, .8)]
+PATCHES = [(-112, -478, .72), (98, -484, .72), (-170, -352, .85), (-40, -334, .95), (112, -346, .85), (-90, -256, .75), (60, -254, .75), (206, -322, .65)]
+LAND = [-420, 330, -330, -40, 420, -240, 250, 520]        # where each patch lands on the ground when it falls (x in the camel's units): beside the legs, spread out to count
 
 
 def _patch(pid, x, y, s, seed, cls=""):
@@ -23,7 +24,7 @@ def _patch(pid, x, y, s, seed, cls=""):
     d = top + fr + "Z"
     strands = "".join(f'<path d="M{r.uniform(-w * .6, w * .6):.0f} {-h * r.uniform(.2, .55):.0f} q{r.uniform(-14, 14):.0f} 22 {r.uniform(-8, 8):.0f} 44" stroke="{SHAG_L}" stroke-width="{8 * s:.0f}" fill="none" stroke-linecap="round"/>'
                       for _ in range(3))
-    return (f'<g transform="translate({x} {y})"><g class="{cls}" id="{pid}"><path d="{d}" fill="{SHAG_D}" stroke="{SHAG_D}" stroke-width="16" stroke-linejoin="round"/>'
+    return (f'<g transform="translate({x} {y})"><g class="{cls}" id="{pid}"><path d="{d}" fill="{SHAG_D}" stroke="{SHAG_D}" stroke-width="10" stroke-linejoin="round"/>'
             f'<path d="{d}" fill="{SHAG}"/>{strands}</g></g>')
 
 
@@ -82,6 +83,20 @@ def flower_disc(pid, s=1.0):
 def hair_clump(pid, s=1.0):
     """A loose patch of shed camel hair lying on the ground."""
     return f'<g id="{pid}" transform="scale({s})">{_patch(pid + "c", 0, 0, 1.1, 7)}</g>'
+
+
+def rocks(pid, s=1.0):
+    """A few grey boulders with a little snow on top (the Gobi is a rocky desert)."""
+    b = [(-120, 0, 120, 90), (60, 10, 150, 110), (220, 0, 90, 70), (-20, 30, 80, 55)]
+    body = "".join(f'<ellipse cx="{x}" cy="{y - h * .6:.0f}" rx="{w}" ry="{h}" fill="#8f97a8" stroke="{INK}" stroke-width="10"/>'
+                   f'<path d="M{x - w * .7:.0f} {y - h * 1.2:.0f} Q{x} {y - h * 1.75:.0f} {x + w * .7:.0f} {y - h * 1.2:.0f} Q{x} {y - h * 1.35:.0f} {x - w * .7:.0f} {y - h * 1.2:.0f}Z" fill="#fff"/>'
+                   for x, y, w, h in b)
+    return f'<g id="{pid}" transform="scale({s})"><ellipse cx="40" cy="20" rx="320" ry="26" fill="#000" opacity=".12"/>{body}</g>'
+
+
+def bactrian_short(pid):
+    """The cousin on the comparison boards: drawn a little shorter and wider than the dromedary (Denver Zoo: "shorter and heavier"; SDZWA: dromedaries have longer legs)."""
+    return f'<g transform="scale(1.1 0.88)">{bactrian_winter(pid)}</g>'
 
 
 def height_line(pid, w=360, col="#ff5a5f"):

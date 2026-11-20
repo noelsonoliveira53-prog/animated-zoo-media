@@ -1432,7 +1432,10 @@
  {
   "file": "cartoon/zc_ep09_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
+  "video_id": "PH3W4FAnxJU",
+  "thumb_set": true,
+  "uploaded_by": "daily run Nov 20 (review.py PASS, contact sheet looked at, upload_guard OK, zlive [] , Studio dialog read)",
   "format": "cartoon_short_90",
   "from": "zc_ep09",
   "res": "2160x3840",

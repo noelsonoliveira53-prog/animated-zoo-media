@@ -1,0 +1,8002 @@
+{
+ "id": "za_ep13",
+ "total": 339.7321666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375
+ ],
+ "plan": {
+  "length": 339.7,
+  "shots": 66,
+  "visual_changes": 572,
+  "mean_gap": 0.59,
+  "longest_gap": 4.38,
+  "longest_gap_at": 105.1,
+  "over_6s": [],
+  "places": [
+   "shore",
+   "intro_gate",
+   "intro_logo",
+   "shellbed",
+   "rocks",
+   "kelp",
+   "deep",
+   "shore_eve"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 13,
+  "longest_without_question": 41.6,
+  "first_words_at": 0.42,
+  "shot_mean": 5.15,
+  "main_intro": {
+   "at": [
+    5.9,
+    324.1
+   ],
+   "seconds": 30.0
+  },
+  "beats": {
+   "hook": 1,
+   "song": 8,
+   "goal": 6,
+   "fact": 6,
+   "obstacle1": 5,
+   "obstacle2": 6,
+   "obstacle3": 5,
+   "low": 3,
+   "solution": 14,
+   "ending": 10
+  },
+  "fails": [],
+  "words_placed": "696/696",
+  "sync": {
+   "pauses_checked": 46,
+   "onset_err_mean_ms": 24.1,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 65,
+   "cuts_on_the_half_beat": 65,
+   "songs_entering_on_a_beat": "8/8",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the shallow water hook: the shell is too small"
+  ],
+  [
+   0.02,
+   "action",
+   "crab looks wow"
+  ],
+  [
+   0.3,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   1.25,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   3.1,
+   "picture",
+   "ar"
+  ],
+  [
+   4.0,
+   "action",
+   "the little shell blinks"
+  ],
+  [
+   4.51,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   4.51,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   4.82,
+   "word",
+   "TOO SMALL!"
+  ],
+  [
+   5.94,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   5.94,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   5.94,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   5.94,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   5.99,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   6.74,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   9.06,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   9.25,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   9.53,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   9.57,
+   "action",
+   "mango pops up"
+  ],
+  [
+   9.88,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   10.0,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   10.19,
+   "action",
+   "tula pops up"
+  ],
+  [
+   10.5,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   10.62,
+   "action",
+   "sandy nods"
+  ],
+  [
+   10.62,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   10.82,
+   "action",
+   "clover pops up"
+  ],
+  [
+   10.94,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   10.94,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   11.13,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   11.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   11.87,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   12.19,
+   "action",
+   "out of the flash"
+  ],
+  [
+   12.19,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   12.19,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   12.38,
+   "action",
+   "the badge pops"
+  ],
+  [
+   12.95,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.1,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.41,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.73,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.04,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   14.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   14.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   14.38,
+   "action",
+   "a firework"
+  ],
+  [
+   14.38,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   14.54,
+   "action",
+   "a firework"
+  ],
+  [
+   14.69,
+   "action",
+   "confetti"
+  ],
+  [
+   14.69,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   14.79,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   15.0,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   15.12,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   15.31,
+   "action",
+   "a firework"
+  ],
+  [
+   15.51,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   15.82,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   15.94,
+   "action",
+   "a firework"
+  ],
+  [
+   16.13,
+   "action",
+   "mango pops up"
+  ],
+  [
+   16.13,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   16.44,
+   "action",
+   "clover pops up"
+  ],
+  [
+   16.44,
+   "action",
+   "tula pops up"
+  ],
+  [
+   16.56,
+   "action",
+   "a firework"
+  ],
+  [
+   16.76,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   16.88,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   17.03,
+   "action",
+   "a firework"
+  ],
+  [
+   17.5,
+   "action",
+   "a firework"
+  ],
+  [
+   17.5,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   17.62,
+   "action",
+   "T word lights up"
+  ],
+  [
+   17.64,
+   "action",
+   "a firework"
+  ],
+  [
+   17.8,
+   "action",
+   "A word lights up"
+  ],
+  [
+   18.52,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   19.01,
+   "action",
+   "Milo flips"
+  ],
+  [
+   19.01,
+   "action",
+   "a firework"
+  ],
+  [
+   19.01,
+   "action",
+   "confetti"
+  ],
+  [
+   19.01,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.01,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.01,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   19.13,
+   "action",
+   "a firework"
+  ],
+  [
+   19.31,
+   "action",
+   "a firework"
+  ],
+  [
+   19.31,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   19.43,
+   "action",
+   "a firework"
+  ],
+  [
+   20.31,
+   "new place",
+   "the shallow water shore wide: Milo on his rock"
+  ],
+  [
+   20.54,
+   "action",
+   "milo hops"
+  ],
+  [
+   24.64,
+   "action",
+   "milo hops"
+  ],
+  [
+   25.09,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   25.09,
+   "word",
+   "LITTLE CRAB"
+  ],
+  [
+   26.25,
+   "new shot",
+   "the shallow water Little Crab: my shell is too tight"
+  ],
+  [
+   26.27,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   26.46,
+   "action",
+   "crab hops"
+  ],
+  [
+   27.82,
+   "action",
+   "the little shell blinks"
+  ],
+  [
+   28.49,
+   "word",
+   "TOO TIGHT!"
+  ],
+  [
+   29.62,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   30.31,
+   "new place",
+   "the picture board fact: hermit crabs live in empty snail shells"
+  ],
+  [
+   31.85,
+   "action",
+   "the empty shell blinks"
+  ],
+  [
+   31.85,
+   "word",
+   "EMPTY SHELL"
+  ],
+  [
+   33.83,
+   "picture",
+   "ar"
+  ],
+  [
+   34.66,
+   "action",
+   "a hermit crab in its shell"
+  ],
+  [
+   34.66,
+   "word",
+   "A HOUSE!"
+  ],
+  [
+   35.26,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   35.62,
+   "new shot",
+   "the picture board question: shell or nest"
+  ],
+  [
+   36.02,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   37.83,
+   "sign",
+   "SHELL"
+  ],
+  [
+   38.18,
+   "sign",
+   "NEST"
+  ],
+  [
+   39.84,
+   "thinking dot",
+   "1"
+  ],
+  [
+   40.45,
+   "thinking dot",
+   "2"
+  ],
+  [
+   41.05,
+   "thinking dot",
+   "3"
+  ],
+  [
+   41.51,
+   "answer",
+   "SHELL"
+  ],
+  [
+   42.81,
+   "new place",
+   "the picture board (blue) fact: a growing hermit crab needs a bigger shell"
+  ],
+  [
+   42.83,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   44.2,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   44.2,
+   "word",
+   "IT GROWS"
+  ],
+  [
+   45.59,
+   "picture",
+   "ar"
+  ],
+  [
+   45.87,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   45.87,
+   "picture",
+   "bs"
+  ],
+  [
+   45.87,
+   "word",
+   "A BIGGER SHELL"
+  ],
+  [
+   46.93,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   47.81,
+   "new shot",
+   "the picture board (blue) question: bigger shell or hat"
+  ],
+  [
+   48.21,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   50.58,
+   "sign",
+   "BIGGER SHELL"
+  ],
+  [
+   50.93,
+   "sign",
+   "HAT"
+  ],
+  [
+   52.72,
+   "thinking dot",
+   "1"
+  ],
+  [
+   53.33,
+   "thinking dot",
+   "2"
+  ],
+  [
+   53.94,
+   "thinking dot",
+   "3"
+  ],
+  [
+   54.39,
+   "answer",
+   "BIGGER SHELL"
+  ],
+  [
+   55.94,
+   "new place",
+   "the shallow water Tula arrives"
+  ],
+  [
+   55.96,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   56.01,
+   "word",
+   "GOOD MORNING!"
+  ],
+  [
+   56.04,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   56.04,
+   "action",
+   "tula moves"
+  ],
+  [
+   58.0,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   59.06,
+   "new shot",
+   "the shallow water Little Crab: I need a new house"
+  ],
+  [
+   59.08,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   59.68,
+   "action",
+   "crab hops"
+  ],
+  [
+   59.68,
+   "word",
+   "A NEW HOUSE!"
+  ],
+  [
+   61.36,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   61.97,
+   "action",
+   "crab hops"
+  ],
+  [
+   62.81,
+   "new shot",
+   "the shallow water Tula: I will come with you"
+  ],
+  [
+   62.83,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   63.78,
+   "action",
+   "tula nods"
+  ],
+  [
+   63.78,
+   "word",
+   "LET'S LOOK!"
+  ],
+  [
+   65.05,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   66.25,
+   "new shot",
+   "the shallow water Milo: just right"
+  ],
+  [
+   66.27,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   66.49,
+   "action",
+   "milo hops"
+  ],
+  [
+   69.22,
+   "action",
+   "milo hops"
+  ],
+  [
+   71.29,
+   "word",
+   "JUST RIGHT!"
+  ],
+  [
+   71.53,
+   "action",
+   "milo hops"
+  ],
+  [
+   72.19,
+   "new place",
+   "the shell bed the huge shell"
+  ],
+  [
+   72.29,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   72.29,
+   "action",
+   "crab walks"
+  ],
+  [
+   72.29,
+   "action",
+   "tula moves"
+  ],
+  [
+   74.92,
+   "action",
+   "crab looks wow"
+  ],
+  [
+   74.92,
+   "word",
+   "WOW!"
+  ],
+  [
+   75.9,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   75.9,
+   "word",
+   "HUGE!"
+  ],
+  [
+   76.88,
+   "new shot",
+   "the shell bed Little Crab: so much room"
+  ],
+  [
+   76.89,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   77.53,
+   "action",
+   "crab hops"
+  ],
+  [
+   77.53,
+   "word",
+   "SO MUCH ROOM!"
+  ],
+  [
+   78.3,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   79.38,
+   "new shot",
+   "the shell bed he climbs in: too big"
+  ],
+  [
+   79.47,
+   "action",
+   "crab walks"
+  ],
+  [
+   80.58,
+   "action",
+   "Little Crab climbs into the shell"
+  ],
+  [
+   81.58,
+   "picture",
+   "bp"
+  ],
+  [
+   81.58,
+   "word",
+   "WHERE IS HE?"
+  ],
+  [
+   82.01,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   82.01,
+   "action",
+   "two eyes look out"
+  ],
+  [
+   83.71,
+   "word",
+   "TOO BIG!"
+  ],
+  [
+   84.69,
+   "new shot",
+   "the shell bed Little Crab: I slide all around"
+  ],
+  [
+   84.89,
+   "action",
+   "he slides around inside"
+  ],
+  [
+   84.89,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   85.6,
+   "word",
+   "WOBBLY!"
+  ],
+  [
+   86.71,
+   "word",
+   "WHEEE!"
+  ],
+  [
+   88.12,
+   "new shot",
+   "the shell bed question: huge shell yes or no"
+  ],
+  [
+   88.42,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   90.51,
+   "sign",
+   "YES"
+  ],
+  [
+   90.86,
+   "sign",
+   "NO"
+  ],
+  [
+   92.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   92.65,
+   "thinking dot",
+   "2"
+  ],
+  [
+   93.25,
+   "thinking dot",
+   "3"
+  ],
+  [
+   93.71,
+   "answer",
+   "NO"
+  ],
+  [
+   95.0,
+   "new place",
+   "the big rocks the shiny shell by the rocks"
+  ],
+  [
+   95.1,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   95.1,
+   "action",
+   "crab walks"
+  ],
+  [
+   95.1,
+   "action",
+   "tula moves"
+  ],
+  [
+   95.96,
+   "action",
+   "the shell sparkles"
+  ],
+  [
+   95.96,
+   "picture",
+   "sp"
+  ],
+  [
+   95.96,
+   "word",
+   "SHINY!"
+  ],
+  [
+   100.21,
+   "word",
+   "SO PRETTY"
+  ],
+  [
+   101.25,
+   "new shot",
+   "the big rocks Little Crab: just my size"
+  ],
+  [
+   101.27,
+   "action",
+   "crab looks wow"
+  ],
+  [
+   101.55,
+   "action",
+   "crab hops"
+  ],
+  [
+   102.13,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   103.13,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   103.13,
+   "word",
+   "MY SIZE!"
+  ],
+  [
+   104.38,
+   "new shot",
+   "the big rocks he pulls: too heavy"
+  ],
+  [
+   104.39,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   105.12,
+   "action",
+   "Little Crab pulls"
+  ],
+  [
+   105.12,
+   "action",
+   "he pulls hard"
+  ],
+  [
+   105.12,
+   "picture",
+   "pl"
+  ],
+  [
+   105.12,
+   "word",
+   "PULL!"
+  ],
+  [
+   109.5,
+   "action",
+   "crab looks wow"
+  ],
+  [
+   109.5,
+   "word",
+   "TOO HEAVY!"
+  ],
+  [
+   110.31,
+   "new shot",
+   "the big rocks Little Crab: I cannot carry it"
+  ],
+  [
+   110.33,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   110.52,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   110.52,
+   "word",
+   "PHEW!"
+  ],
+  [
+   111.39,
+   "action",
+   "crab nods"
+  ],
+  [
+   112.81,
+   "new shot",
+   "the big rocks question: too heavy or too small"
+  ],
+  [
+   112.83,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   113.21,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   115.99,
+   "sign",
+   "TOO HEAVY"
+  ],
+  [
+   116.34,
+   "sign",
+   "TOO SMALL"
+  ],
+  [
+   118.03,
+   "thinking dot",
+   "1"
+  ],
+  [
+   118.64,
+   "thinking dot",
+   "2"
+  ],
+  [
+   119.25,
+   "thinking dot",
+   "3"
+  ],
+  [
+   119.7,
+   "answer",
+   "TOO HEAVY"
+  ],
+  [
+   121.25,
+   "new shot",
+   "the big rocks copy me: pull"
+  ],
+  [
+   121.67,
+   "action",
+   "Little Crab pulls"
+  ],
+  [
+   121.67,
+   "word",
+   "PULL!"
+  ],
+  [
+   125.2,
+   "action",
+   "pull again"
+  ],
+  [
+   125.2,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   126.8,
+   "action",
+   "crab nods"
+  ],
+  [
+   127.81,
+   "new place",
+   "the kelp forest the shell under the kelp"
+  ],
+  [
+   127.91,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   127.91,
+   "action",
+   "crab walks"
+  ],
+  [
+   127.91,
+   "action",
+   "tula moves"
+  ],
+  [
+   129.36,
+   "word",
+   "THE KELP"
+  ],
+  [
+   131.2,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   131.52,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   131.52,
+   "word",
+   "JUST RIGHT?"
+  ],
+  [
+   132.5,
+   "new shot",
+   "the kelp forest Little Crab: knock, knock"
+  ],
+  [
+   132.52,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   132.75,
+   "action",
+   "tap, tap"
+  ],
+  [
+   132.75,
+   "word",
+   "KNOCK, KNOCK!"
+  ],
+  [
+   133.73,
+   "action",
+   "crab looks"
+  ],
+  [
+   135.0,
+   "new shot",
+   "the kelp forest a snail peeks out"
+  ],
+  [
+   135.63,
+   "action",
+   "a snail peeks out"
+  ],
+  [
+   135.63,
+   "word",
+   "PEEK!"
+  ],
+  [
+   137.17,
+   "action",
+   "the snail nods"
+  ],
+  [
+   137.17,
+   "word",
+   "A SNAIL!"
+  ],
+  [
+   139.06,
+   "new shot",
+   "the kelp forest Little Crab: this house is yours"
+  ],
+  [
+   139.08,
+   "action",
+   "crab looks wow"
+  ],
+  [
+   139.68,
+   "action",
+   "crab nods"
+  ],
+  [
+   139.68,
+   "word",
+   "SORRY, SNAIL!"
+  ],
+  [
+   140.5,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   140.5,
+   "action",
+   "crab walks"
+  ],
+  [
+   141.88,
+   "new shot",
+   "the kelp forest question: the snail's shell yes or no"
+  ],
+  [
+   142.28,
+   "action",
+   "the snail nods"
+  ],
+  [
+   144.67,
+   "sign",
+   "YES"
+  ],
+  [
+   145.02,
+   "sign",
+   "NO"
+  ],
+  [
+   146.27,
+   "thinking dot",
+   "1"
+  ],
+  [
+   146.87,
+   "thinking dot",
+   "2"
+  ],
+  [
+   147.48,
+   "thinking dot",
+   "3"
+  ],
+  [
+   147.93,
+   "answer",
+   "NO"
+  ],
+  [
+   149.38,
+   "new shot",
+   "the kelp forest Little Crab sits down"
+  ],
+  [
+   149.4,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   149.4,
+   "action",
+   "tula looks sad"
+  ],
+  [
+   149.54,
+   "word",
+   "THREE SHELLS"
+  ],
+  [
+   150.71,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   150.71,
+   "word",
+   "NOT ONE!"
+  ],
+  [
+   152.89,
+   "action",
+   "Little Crab sits down"
+  ],
+  [
+   154.69,
+   "new shot",
+   "the kelp forest Little Crab: maybe there is no shell for me"
+  ],
+  [
+   154.71,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   154.83,
+   "word",
+   "TOO BIG"
+  ],
+  [
+   155.55,
+   "word",
+   "TOO HEAVY"
+  ],
+  [
+   157.27,
+   "action",
+   "crab nods"
+  ],
+  [
+   157.27,
+   "word",
+   "NO SHELL?"
+  ],
+  [
+   159.06,
+   "new shot",
+   "the kelp forest question: sad or happy"
+  ],
+  [
+   159.08,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   159.56,
+   "action",
+   "crab nods"
+  ],
+  [
+   161.08,
+   "sign",
+   "SAD"
+  ],
+  [
+   161.43,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   162.81,
+   "thinking dot",
+   "1"
+  ],
+  [
+   163.41,
+   "thinking dot",
+   "2"
+  ],
+  [
+   164.02,
+   "thinking dot",
+   "3"
+  ],
+  [
+   164.47,
+   "answer",
+   "SAD"
+  ],
+  [
+   165.94,
+   "new shot",
+   "the kelp forest Little Crab has an idea"
+  ],
+  [
+   165.96,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   167.01,
+   "action",
+   "crab looks"
+  ],
+  [
+   167.75,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   169.3,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   169.3,
+   "picture",
+   "tb"
+  ],
+  [
+   169.3,
+   "word",
+   "AN IDEA!"
+  ],
+  [
+   169.97,
+   "action",
+   "crab hops"
+  ],
+  [
+   170.31,
+   "new shot",
+   "the kelp forest Little Crab: I know what I need"
+  ],
+  [
+   170.33,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   170.84,
+   "word",
+   "I KNOW!"
+  ],
+  [
+   171.33,
+   "action",
+   "crab hops"
+  ],
+  [
+   171.85,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   173.37,
+   "action",
+   "crab nods"
+  ],
+  [
+   173.37,
+   "word",
+   "AND EMPTY"
+  ],
+  [
+   174.06,
+   "new shot",
+   "the kelp forest Little Crab asks Tula"
+  ],
+  [
+   174.08,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   174.08,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   175.07,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   175.07,
+   "word",
+   "DIVE DEEP!"
+  ],
+  [
+   176.05,
+   "action",
+   "tula nods"
+  ],
+  [
+   177.19,
+   "action",
+   "crab hops"
+  ],
+  [
+   177.77,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   177.77,
+   "word",
+   "ONE BY ONE"
+  ],
+  [
+   178.75,
+   "new place",
+   "the deep blue water Tula dives into the deep"
+  ],
+  [
+   178.77,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   178.85,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   178.85,
+   "action",
+   "tula swims"
+  ],
+  [
+   179.03,
+   "word",
+   "DOWN, DOWN, DOWN"
+  ],
+  [
+   181.68,
+   "word",
+   "THE DEEP"
+  ],
+  [
+   183.42,
+   "action",
+   "tula looks"
+  ],
+  [
+   183.87,
+   "word",
+   "EMPTY SHELLS!"
+  ],
+  [
+   185.31,
+   "new shot",
+   "the deep blue water Tula picks three shells"
+  ],
+  [
+   185.33,
+   "action",
+   "tula looks"
+  ],
+  [
+   185.33,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   185.43,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   185.43,
+   "word",
+   "THIS ONE!"
+  ],
+  [
+   186.22,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   187.02,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   188.1,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   189.02,
+   "action",
+   "tula nods"
+  ],
+  [
+   189.02,
+   "word",
+   "TRY THEM ALL!"
+  ],
+  [
+   190.31,
+   "new place",
+   "the picture board (pink) fact: the soft back part fits inside the shell"
+  ],
+  [
+   190.66,
+   "action",
+   "the soft back part blinks"
+  ],
+  [
+   193.01,
+   "word",
+   "SOFT"
+  ],
+  [
+   194.36,
+   "picture",
+   "gs"
+  ],
+  [
+   194.67,
+   "word",
+   "INSIDE THE SHELL"
+  ],
+  [
+   195.22,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   195.94,
+   "new shot",
+   "the picture board (pink) question: back part or claws"
+  ],
+  [
+   196.34,
+   "action",
+   "the soft back part blinks"
+  ],
+  [
+   198.95,
+   "sign",
+   "BACK PART"
+  ],
+  [
+   199.3,
+   "sign",
+   "CLAWS"
+  ],
+  [
+   200.06,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   201.21,
+   "thinking dot",
+   "1"
+  ],
+  [
+   201.82,
+   "thinking dot",
+   "2"
+  ],
+  [
+   202.43,
+   "thinking dot",
+   "3"
+  ],
+  [
+   202.88,
+   "answer",
+   "BACK PART"
+  ],
+  [
+   204.38,
+   "new place",
+   "the shallow water count the three shells"
+  ],
+  [
+   204.4,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   204.47,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   204.47,
+   "action",
+   "tula moves"
+  ],
+  [
+   205.72,
+   "word",
+   "SHELLS!"
+  ],
+  [
+   208.87,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   208.87,
+   "count",
+   "1"
+  ],
+  [
+   209.17,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   209.18,
+   "count",
+   "2"
+  ],
+  [
+   209.49,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   209.49,
+   "count",
+   "3"
+  ],
+  [
+   211.25,
+   "new shot",
+   "the shallow water Little Crab: tap, tap, tap"
+  ],
+  [
+   211.27,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   213.12,
+   "action",
+   "tap, tap"
+  ],
+  [
+   213.12,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   213.12,
+   "word",
+   "TAP, TAP, TAP"
+  ],
+  [
+   214.38,
+   "new shot",
+   "the shallow water too small, too big"
+  ],
+  [
+   214.4,
+   "action",
+   "crab looks sad"
+  ],
+  [
+   214.83,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   214.83,
+   "action",
+   "the white shell blinks"
+  ],
+  [
+   215.95,
+   "action",
+   "crab nods"
+  ],
+  [
+   215.95,
+   "word",
+   "TOO SMALL"
+  ],
+  [
+   216.68,
+   "action",
+   "the red shell blinks"
+  ],
+  [
+   216.68,
+   "action",
+   "the shell wobbles"
+  ],
+  [
+   217.65,
+   "action",
+   "crab nods"
+  ],
+  [
+   217.65,
+   "word",
+   "TOO BIG"
+  ],
+  [
+   218.44,
+   "new shot",
+   "the shallow water he slips into the golden shell"
+  ],
+  [
+   218.54,
+   "action",
+   "crab walks"
+  ],
+  [
+   218.77,
+   "action",
+   "the golden shell blinks"
+  ],
+  [
+   218.77,
+   "word",
+   "THE GOLDEN SHELL"
+  ],
+  [
+   220.73,
+   "action",
+   "Little Crab slips out of the old shell"
+  ],
+  [
+   220.73,
+   "picture",
+   "old"
+  ],
+  [
+   221.17,
+   "action",
+   "Little Crab is in the golden shell"
+  ],
+  [
+   221.86,
+   "action",
+   "he hops"
+  ],
+  [
+   222.19,
+   "new shot",
+   "the shallow water Little Crab: it fits"
+  ],
+  [
+   222.21,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   222.51,
+   "action",
+   "crab hops"
+  ],
+  [
+   222.51,
+   "word",
+   "IT FITS!"
+  ],
+  [
+   222.92,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   223.42,
+   "picture",
+   "sp"
+  ],
+  [
+   223.71,
+   "action",
+   "crab hops"
+  ],
+  [
+   224.69,
+   "new shot",
+   "the shallow water the golden shell is just right"
+  ],
+  [
+   224.71,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   224.71,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   224.74,
+   "action",
+   "crab hops"
+  ],
+  [
+   224.74,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   225.55,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   226.51,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   229.16,
+   "action",
+   "crab hops"
+  ],
+  [
+   229.16,
+   "word",
+   "JUST RIGHT!"
+  ],
+  [
+   230.0,
+   "new shot",
+   "the shallow water question: golden or white"
+  ],
+  [
+   230.02,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   230.4,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   232.23,
+   "sign",
+   "GOLDEN"
+  ],
+  [
+   232.58,
+   "sign",
+   "WHITE"
+  ],
+  [
+   234.77,
+   "thinking dot",
+   "1"
+  ],
+  [
+   235.38,
+   "thinking dot",
+   "2"
+  ],
+  [
+   235.98,
+   "thinking dot",
+   "3"
+  ],
+  [
+   236.44,
+   "answer",
+   "GOLDEN"
+  ],
+  [
+   237.81,
+   "new shot",
+   "the shallow water the new house rhyme"
+  ],
+  [
+   237.83,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   237.83,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   238.05,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   238.05,
+   "word",
+   "NOT TOO BIG, NOT TOO SMALL"
+  ],
+  [
+   239.41,
+   "action",
+   "crab hops"
+  ],
+  [
+   240.04,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   240.04,
+   "word",
+   "BEST OF ALL!"
+  ],
+  [
+   241.15,
+   "action",
+   "crab hops"
+  ],
+  [
+   241.88,
+   "new shot",
+   "the shallow water song: my new house"
+  ],
+  [
+   241.9,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   241.9,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   242.0,
+   "action",
+   "Little Crab waves to the beat"
+  ],
+  [
+   242.0,
+   "action",
+   "Tula paddles to the beat"
+  ],
+  [
+   242.0,
+   "action",
+   "bubbles float up"
+  ],
+  [
+   242.0,
+   "word",
+   "NOT TOO BIG, NOT TOO SMALL"
+  ],
+  [
+   243.25,
+   "action",
+   "crab hops"
+  ],
+  [
+   244.5,
+   "action",
+   "tula nods"
+  ],
+  [
+   245.75,
+   "action",
+   "crab hops"
+  ],
+  [
+   247.0,
+   "action",
+   "tula nods"
+  ],
+  [
+   247.0,
+   "word",
+   "BEST OF ALL!"
+  ],
+  [
+   248.25,
+   "action",
+   "crab hops"
+  ],
+  [
+   249.5,
+   "action",
+   "tula nods"
+  ],
+  [
+   250.75,
+   "action",
+   "crab hops"
+  ],
+  [
+   252.5,
+   "new shot",
+   "the shallow water question: did he find a shell yes or no"
+  ],
+  [
+   252.8,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   252.9,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   255.18,
+   "sign",
+   "YES"
+  ],
+  [
+   255.53,
+   "sign",
+   "NO"
+  ],
+  [
+   256.8,
+   "thinking dot",
+   "1"
+  ],
+  [
+   257.41,
+   "thinking dot",
+   "2"
+  ],
+  [
+   258.02,
+   "thinking dot",
+   "3"
+  ],
+  [
+   258.47,
+   "answer",
+   "YES"
+  ],
+  [
+   260.0,
+   "new place",
+   "the shallow water in the evening evening in the shallow water"
+  ],
+  [
+   260.02,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   260.02,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   260.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   261.68,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   262.59,
+   "word",
+   "GOLDEN WATER"
+  ],
+  [
+   264.5,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   264.5,
+   "word",
+   "COZY!"
+  ],
+  [
+   266.56,
+   "new shot",
+   "the shallow water in the evening Little Crab: thank you"
+  ],
+  [
+   266.58,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   266.72,
+   "action",
+   "crab hops"
+  ],
+  [
+   266.72,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   267.8,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   269.38,
+   "new shot",
+   "the shallow water in the evening Tula: clever Little Crab"
+  ],
+  [
+   269.39,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   270.68,
+   "action",
+   "tula nods"
+  ],
+  [
+   271.55,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   271.55,
+   "word",
+   "CLEVER CRAB!"
+  ],
+  [
+   273.44,
+   "new shot",
+   "the shallow water in the evening Little Crab: I can wiggle"
+  ],
+  [
+   273.46,
+   "action",
+   "crab looks happy"
+  ],
+  [
+   273.67,
+   "action",
+   "crab hops"
+  ],
+  [
+   275.39,
+   "action",
+   "crab wiggles"
+  ],
+  [
+   275.39,
+   "word",
+   "WIGGLE, WIGGLE!"
+  ],
+  [
+   277.19,
+   "new shot",
+   "the shallow water in the evening a tiny crab moves into the old shell"
+  ],
+  [
+   277.94,
+   "action",
+   "the old shell blinks"
+  ],
+  [
+   279.36,
+   "action",
+   "a tiny crab is in the old blue shell"
+  ],
+  [
+   279.36,
+   "word",
+   "A TINY CRAB!"
+  ],
+  [
+   280.29,
+   "action",
+   "tiny hops"
+  ],
+  [
+   281.44,
+   "action",
+   "the tiny crab waves"
+  ],
+  [
+   281.98,
+   "action",
+   "tiny hops"
+  ],
+  [
+   281.98,
+   "word",
+   "HER HOUSE"
+  ],
+  [
+   283.12,
+   "new shot",
+   "the shallow water in the evening the lesson"
+  ],
+  [
+   284.7,
+   "action",
+   "milo hops"
+  ],
+  [
+   284.7,
+   "word",
+   "TRY AGAIN!"
+  ],
+  [
+   286.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   288.52,
+   "action",
+   "milo hops"
+  ],
+  [
+   289.38,
+   "new shot",
+   "the shallow water in the evening question: empty shells or trees"
+  ],
+  [
+   290.62,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   292.57,
+   "sign",
+   "EMPTY SHELLS"
+  ],
+  [
+   292.92,
+   "sign",
+   "TREES"
+  ],
+  [
+   295.15,
+   "thinking dot",
+   "1"
+  ],
+  [
+   295.76,
+   "thinking dot",
+   "2"
+  ],
+  [
+   296.37,
+   "thinking dot",
+   "3"
+  ],
+  [
+   296.82,
+   "answer",
+   "EMPTY SHELLS"
+  ],
+  [
+   298.12,
+   "new shot",
+   "the shallow water in the evening question: bigger or smaller shell"
+  ],
+  [
+   299.5,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   300.55,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   301.76,
+   "sign",
+   "BIGGER"
+  ],
+  [
+   302.11,
+   "sign",
+   "SMALLER"
+  ],
+  [
+   304.41,
+   "thinking dot",
+   "1"
+  ],
+  [
+   305.02,
+   "thinking dot",
+   "2"
+  ],
+  [
+   305.62,
+   "thinking dot",
+   "3"
+  ],
+  [
+   306.08,
+   "answer",
+   "BIGGER"
+  ],
+  [
+   307.5,
+   "new shot",
+   "the shallow water in the evening the closing rhyme"
+  ],
+  [
+   307.68,
+   "action",
+   "milo hops"
+  ],
+  [
+   307.68,
+   "word",
+   "NOT TOO BIG, NOT TOO SMALL"
+  ],
+  [
+   308.83,
+   "action",
+   "Little Crab waves his claw"
+  ],
+  [
+   310.37,
+   "action",
+   "milo hops"
+  ],
+  [
+   310.37,
+   "word",
+   "BEST OF ALL!"
+  ],
+  [
+   311.46,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   311.94,
+   "action",
+   "tiny hops"
+  ],
+  [
+   312.81,
+   "new shot",
+   "the shallow water in the evening song: hooray"
+  ],
+  [
+   312.91,
+   "action",
+   "bubbles float up"
+  ],
+  [
+   313.01,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   313.81,
+   "action",
+   "crab hops"
+  ],
+  [
+   314.41,
+   "action",
+   "tula nods"
+  ],
+  [
+   314.81,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   315.01,
+   "action",
+   "tiny hops"
+  ],
+  [
+   318.12,
+   "new shot",
+   "the shallow water in the evening goodbye: next adventure"
+  ],
+  [
+   318.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   318.25,
+   "word",
+   "NEXT TIME!"
+  ],
+  [
+   321.66,
+   "word",
+   "SEE YOU SOON!"
+  ],
+  [
+   324.06,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   324.06,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   324.06,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   324.06,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   324.11,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   324.86,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   327.19,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   327.38,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   327.66,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   327.69,
+   "action",
+   "mango pops up"
+  ],
+  [
+   328.01,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   328.13,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   328.32,
+   "action",
+   "tula pops up"
+  ],
+  [
+   328.63,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   328.75,
+   "action",
+   "sandy nods"
+  ],
+  [
+   328.75,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   328.94,
+   "action",
+   "clover pops up"
+  ],
+  [
+   329.06,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   329.06,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   329.26,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   329.53,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   330.0,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   330.31,
+   "action",
+   "out of the flash"
+  ],
+  [
+   330.31,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   330.31,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   330.5,
+   "action",
+   "the badge pops"
+  ],
+  [
+   331.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.23,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.54,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.7,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.85,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   332.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   332.16,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   332.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   332.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   332.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   332.5,
+   "action",
+   "a firework"
+  ],
+  [
+   332.5,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   332.66,
+   "action",
+   "a firework"
+  ],
+  [
+   332.81,
+   "action",
+   "confetti"
+  ],
+  [
+   332.81,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   332.91,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   333.12,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   333.24,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   333.44,
+   "action",
+   "a firework"
+  ],
+  [
+   333.63,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   333.94,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   334.06,
+   "action",
+   "a firework"
+  ],
+  [
+   334.25,
+   "action",
+   "mango pops up"
+  ],
+  [
+   334.25,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   334.57,
+   "action",
+   "clover pops up"
+  ],
+  [
+   334.57,
+   "action",
+   "tula pops up"
+  ],
+  [
+   334.69,
+   "action",
+   "a firework"
+  ],
+  [
+   334.88,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   335.0,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   335.16,
+   "action",
+   "a firework"
+  ],
+  [
+   335.62,
+   "action",
+   "a firework"
+  ],
+  [
+   335.62,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   335.75,
+   "action",
+   "T word lights up"
+  ],
+  [
+   335.76,
+   "action",
+   "a firework"
+  ],
+  [
+   335.93,
+   "action",
+   "A word lights up"
+  ],
+  [
+   336.64,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   337.13,
+   "action",
+   "Milo flips"
+  ],
+  [
+   337.13,
+   "action",
+   "a firework"
+  ],
+  [
+   337.13,
+   "action",
+   "confetti"
+  ],
+  [
+   337.13,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   337.13,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   337.13,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   337.25,
+   "action",
+   "a firework"
+  ],
+  [
+   337.43,
+   "action",
+   "a firework"
+  ],
+  [
+   337.43,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   337.55,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "shore",
+   "say": "Can Little Crab find a shell that fits? Look! His shell is much too small!",
+   "t0": 0.0,
+   "t1": 5.9375,
+   "v0": 0.42,
+   "dur": 5.154125,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.2
+    ],
+    [
+     "Little",
+     0.2,
+     0.38
+    ],
+    [
+     "Crab",
+     0.38,
+     0.83
+    ],
+    [
+     "find",
+     0.83,
+     1.07
+    ],
+    [
+     "a",
+     1.07,
+     1.1
+    ],
+    [
+     "shell",
+     1.1,
+     1.47
+    ],
+    [
+     "that",
+     1.47,
+     1.67
+    ],
+    [
+     "fits?",
+     1.67,
+     2.29
+    ],
+    [
+     "Look!",
+     2.68,
+     3.15
+    ],
+    [
+     "His",
+     3.44,
+     3.58
+    ],
+    [
+     "shell",
+     3.58,
+     3.93
+    ],
+    [
+     "is",
+     3.93,
+     4.09
+    ],
+    [
+     "much",
+     4.09,
+     4.4
+    ],
+    [
+     "too",
+     4.4,
+     4.6
+    ],
+    [
+     "small!",
+     4.6,
+     5.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: the shell is too small",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 5.9375,
+   "t1": 9.0625,
+   "v0": 6.25,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 9.0625,
+   "t1": 12.1875,
+   "v0": 9.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 12.1875,
+   "t1": 17.5,
+   "v0": 12.5,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 17.5,
+   "t1": 20.3125,
+   "v0": 17.62,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Hello, I'm Milo! Down in the shallow water lives my friend, Little Crab.",
+   "t0": 20.3125,
+   "t1": 26.25,
+   "v0": 20.527166666666666,
+   "dur": 5.309625,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.62
+    ],
+    [
+     "I'm",
+     0.76,
+     1.02
+    ],
+    [
+     "Milo!",
+     1.02,
+     1.62
+    ],
+    [
+     "Down",
+     2.12,
+     2.46
+    ],
+    [
+     "in",
+     2.46,
+     2.55
+    ],
+    [
+     "the",
+     2.55,
+     2.61
+    ],
+    [
+     "shallow",
+     2.61,
+     3.14
+    ],
+    [
+     "water",
+     3.14,
+     3.59
+    ],
+    [
+     "lives",
+     3.59,
+     3.92
+    ],
+    [
+     "my",
+     3.92,
+     4.11
+    ],
+    [
+     "friend,",
+     4.11,
+     4.56
+    ],
+    [
+     "Little",
+     4.56,
+     4.74
+    ],
+    [
+     "Crab.",
+     4.74,
+     5.31
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "shore wide: Milo on his rock",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "I grew, and I grew! Now my shell is too tight. I can hardly wiggle!",
+   "t0": 26.25,
+   "t1": 30.3125,
+   "v0": 26.356791666666666,
+   "dur": 3.6472083333333334,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.1
+    ],
+    [
+     "grew,",
+     0.1,
+     0.44
+    ],
+    [
+     "and",
+     0.44,
+     0.56
+    ],
+    [
+     "I",
+     0.56,
+     0.66
+    ],
+    [
+     "grew!",
+     0.66,
+     1.09
+    ],
+    [
+     "Now",
+     1.09,
+     1.31
+    ],
+    [
+     "my",
+     1.31,
+     1.46
+    ],
+    [
+     "shell",
+     1.46,
+     1.77
+    ],
+    [
+     "is",
+     1.77,
+     1.91
+    ],
+    [
+     "too",
+     1.91,
+     2.13
+    ],
+    [
+     "tight.",
+     2.13,
+     2.68
+    ],
+    [
+     "I",
+     2.68,
+     2.76
+    ],
+    [
+     "can",
+     2.76,
+     2.9
+    ],
+    [
+     "hardly",
+     2.9,
+     3.26
+    ],
+    [
+     "wiggle!",
+     3.26,
+     3.647
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: my shell is too tight",
+   "who": "crab",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Hermit crabs live in empty snail shells. The shell is their house!",
+   "t0": 30.3125,
+   "t1": 35.625,
+   "v0": 30.523999999999997,
+   "dur": 4.740625,
+   "words": [
+    [
+     "Hermit",
+     0.0,
+     0.35
+    ],
+    [
+     "crabs",
+     0.35,
+     0.87
+    ],
+    [
+     "live",
+     0.87,
+     1.18
+    ],
+    [
+     "in",
+     1.18,
+     1.33
+    ],
+    [
+     "empty",
+     1.33,
+     1.81
+    ],
+    [
+     "snail",
+     1.81,
+     2.27
+    ],
+    [
+     "shells.",
+     2.27,
+     2.9
+    ],
+    [
+     "The",
+     3.31,
+     3.4
+    ],
+    [
+     "shell",
+     3.4,
+     3.81
+    ],
+    [
+     "is",
+     3.81,
+     3.98
+    ],
+    [
+     "their",
+     3.98,
+     4.14
+    ],
+    [
+     "house!",
+     4.14,
+     4.74
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: hermit crabs live in empty snail shells",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Where does a hermit crab live? In a shell, or in a nest?",
+   "t0": 35.625,
+   "t1": 42.8125,
+   "v0": 35.78462499999999,
+   "dur": 3.601208333333333,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.31
+    ],
+    [
+     "hermit",
+     0.31,
+     0.72
+    ],
+    [
+     "crab",
+     0.72,
+     1.1
+    ],
+    [
+     "live?",
+     1.1,
+     1.55
+    ],
+    [
+     "In",
+     1.9,
+     2.01
+    ],
+    [
+     "a",
+     2.01,
+     2.05
+    ],
+    [
+     "shell,",
+     2.05,
+     2.66
+    ],
+    [
+     "or",
+     2.66,
+     2.88
+    ],
+    [
+     "in",
+     2.88,
+     2.99
+    ],
+    [
+     "a",
+     2.99,
+     3.03
+    ],
+    [
+     "nest?",
+     3.03,
+     3.6
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: shell or nest",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "As a hermit crab grows, it must find a bigger shell, and move in.",
+   "t0": 42.8125,
+   "t1": 47.8125,
+   "v0": 43.10583333333332,
+   "dur": 4.498083333333334,
+   "words": [
+    [
+     "As",
+     0.01,
+     0.22
+    ],
+    [
+     "a",
+     0.22,
+     0.26
+    ],
+    [
+     "hermit",
+     0.26,
+     0.7
+    ],
+    [
+     "crab",
+     0.7,
+     1.09
+    ],
+    [
+     "grows,",
+     1.09,
+     1.72
+    ],
+    [
+     "it",
+     2.07,
+     2.2
+    ],
+    [
+     "must",
+     2.2,
+     2.48
+    ],
+    [
+     "find",
+     2.48,
+     2.73
+    ],
+    [
+     "a",
+     2.73,
+     2.76
+    ],
+    [
+     "bigger",
+     2.76,
+     3.08
+    ],
+    [
+     "shell,",
+     3.08,
+     3.68
+    ],
+    [
+     "and",
+     3.68,
+     3.82
+    ],
+    [
+     "move",
+     3.82,
+     4.13
+    ],
+    [
+     "in.",
+     4.13,
+     4.498
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: a growing hermit crab needs a bigger shell",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "What does a growing hermit crab need? A bigger shell, or a hat?",
+   "t0": 47.8125,
+   "t1": 55.9375,
+   "v0": 48.12391666666665,
+   "dur": 4.146625,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.16
+    ],
+    [
+     "does",
+     0.16,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.35
+    ],
+    [
+     "growing",
+     0.35,
+     0.81
+    ],
+    [
+     "hermit",
+     0.81,
+     1.17
+    ],
+    [
+     "crab",
+     1.17,
+     1.57
+    ],
+    [
+     "need?",
+     1.57,
+     1.97
+    ],
+    [
+     "A",
+     2.39,
+     2.46
+    ],
+    [
+     "bigger",
+     2.46,
+     2.82
+    ],
+    [
+     "shell,",
+     2.82,
+     3.34
+    ],
+    [
+     "or",
+     3.34,
+     3.56
+    ],
+    [
+     "a",
+     3.56,
+     3.59
+    ],
+    [
+     "hat?",
+     3.59,
+     4.147
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: bigger shell or hat",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Good morning, Little Crab! Why do you wiggle so?",
+   "t0": 55.9375,
+   "t1": 59.0625,
+   "v0": 55.99054166666665,
+   "dur": 2.818375,
+   "words": [
+    [
+     "Good",
+     0.02,
+     0.25
+    ],
+    [
+     "morning,",
+     0.25,
+     0.71
+    ],
+    [
+     "Little",
+     0.71,
+     0.99
+    ],
+    [
+     "Crab!",
+     0.99,
+     1.48
+    ],
+    [
+     "Why",
+     1.48,
+     1.77
+    ],
+    [
+     "do",
+     1.77,
+     1.88
+    ],
+    [
+     "you",
+     1.88,
+     2.01
+    ],
+    [
+     "wiggle",
+     2.01,
+     2.28
+    ],
+    [
+     "so?",
+     2.28,
+     2.818
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula arrives",
+   "who": "tula",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "I need a new house, Tula. A shell that fits just right!",
+   "t0": 59.0625,
+   "t1": 62.8125,
+   "v0": 59.32891666666665,
+   "dur": 3.047125,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.1
+    ],
+    [
+     "need",
+     0.1,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.35
+    ],
+    [
+     "new",
+     0.35,
+     0.53
+    ],
+    [
+     "house,",
+     0.53,
+     0.9
+    ],
+    [
+     "Tula.",
+     0.9,
+     1.4
+    ],
+    [
+     "A",
+     1.52,
+     1.57
+    ],
+    [
+     "shell",
+     1.57,
+     1.88
+    ],
+    [
+     "that",
+     1.88,
+     2.03
+    ],
+    [
+     "fits",
+     2.03,
+     2.36
+    ],
+    [
+     "just",
+     2.36,
+     2.64
+    ],
+    [
+     "right!",
+     2.64,
+     3.047
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: I need a new house",
+   "who": "crab",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Then let's go and look for one. I will come with you!",
+   "t0": 62.8125,
+   "t1": 66.25,
+   "v0": 62.89604166666665,
+   "dur": 3.054375,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.29
+    ],
+    [
+     "let's",
+     0.29,
+     0.54
+    ],
+    [
+     "go",
+     0.54,
+     0.74
+    ],
+    [
+     "and",
+     0.74,
+     0.88
+    ],
+    [
+     "look",
+     0.88,
+     1.05
+    ],
+    [
+     "for",
+     1.05,
+     1.3
+    ],
+    [
+     "one.",
+     1.3,
+     1.66
+    ],
+    [
+     "I",
+     1.85,
+     2.0
+    ],
+    [
+     "will",
+     2.0,
+     2.15
+    ],
+    [
+     "come",
+     2.15,
+     2.46
+    ],
+    [
+     "with",
+     2.46,
+     2.67
+    ],
+    [
+     "you!",
+     2.67,
+     3.05
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: I will come with you",
+   "who": "tula",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Find a shell that is not too big, and not too small. A shell that fits just right!",
+   "t0": 66.25,
+   "t1": 72.1875,
+   "v0": 66.47041666666665,
+   "dur": 5.515208333333334,
+   "words": [
+    [
+     "Find",
+     0.02,
+     0.32
+    ],
+    [
+     "a",
+     0.32,
+     0.35
+    ],
+    [
+     "shell",
+     0.35,
+     0.78
+    ],
+    [
+     "that",
+     0.78,
+     0.92
+    ],
+    [
+     "is",
+     0.92,
+     1.06
+    ],
+    [
+     "not",
+     1.06,
+     1.37
+    ],
+    [
+     "too",
+     1.37,
+     1.58
+    ],
+    [
+     "big,",
+     1.58,
+     2.13
+    ],
+    [
+     "and",
+     2.13,
+     2.28
+    ],
+    [
+     "not",
+     2.28,
+     2.55
+    ],
+    [
+     "too",
+     2.55,
+     2.75
+    ],
+    [
+     "small.",
+     2.75,
+     3.29
+    ],
+    [
+     "A",
+     3.88,
+     3.93
+    ],
+    [
+     "shell",
+     3.93,
+     4.32
+    ],
+    [
+     "that",
+     4.32,
+     4.49
+    ],
+    [
+     "fits",
+     4.49,
+     4.82
+    ],
+    [
+     "just",
+     4.82,
+     5.06
+    ],
+    [
+     "right!",
+     5.06,
+     5.51
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: just right",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shellbed",
+   "say": "First, they find a great big shell. Wow! It is huge!",
+   "t0": 72.1875,
+   "t1": 76.875,
+   "v0": 72.505625,
+   "dur": 3.9832916666666667,
+   "words": [
+    [
+     "First,",
+     0.01,
+     0.45
+    ],
+    [
+     "they",
+     0.45,
+     0.56
+    ],
+    [
+     "find",
+     0.56,
+     0.8
+    ],
+    [
+     "a",
+     0.8,
+     0.84
+    ],
+    [
+     "great",
+     0.84,
+     1.22
+    ],
+    [
+     "big",
+     1.22,
+     1.46
+    ],
+    [
+     "shell.",
+     1.46,
+     1.95
+    ],
+    [
+     "Wow!",
+     2.41,
+     2.91
+    ],
+    [
+     "It",
+     2.91,
+     3.01
+    ],
+    [
+     "is",
+     3.01,
+     3.39
+    ],
+    [
+     "huge!",
+     3.39,
+     3.98
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the huge shell",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shellbed",
+   "say": "So much room! I will try it on.",
+   "t0": 76.875,
+   "t1": 79.375,
+   "v0": 77.00891666666668,
+   "dur": 2.075625,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.25
+    ],
+    [
+     "much",
+     0.25,
+     0.52
+    ],
+    [
+     "room!",
+     0.52,
+     0.9
+    ],
+    [
+     "I",
+     0.99,
+     1.12
+    ],
+    [
+     "will",
+     1.12,
+     1.29
+    ],
+    [
+     "try",
+     1.29,
+     1.59
+    ],
+    [
+     "it",
+     1.59,
+     1.73
+    ],
+    [
+     "on.",
+     1.73,
+     2.076
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: so much room",
+   "who": "crab",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shellbed",
+   "say": "Little Crab climbs in. But where did he go? The shell is much too big!",
+   "t0": 79.375,
+   "t1": 84.6875,
+   "v0": 79.60454166666669,
+   "dur": 4.745333333333333,
+   "words": [
+    [
+     "Little",
+     0.01,
+     0.27
+    ],
+    [
+     "Crab",
+     0.27,
+     0.7
+    ],
+    [
+     "climbs",
+     0.7,
+     1.22
+    ],
+    [
+     "in.",
+     1.22,
+     1.57
+    ],
+    [
+     "But",
+     1.82,
+     1.98
+    ],
+    [
+     "where",
+     1.98,
+     2.19
+    ],
+    [
+     "did",
+     2.19,
+     2.3
+    ],
+    [
+     "he",
+     2.3,
+     2.41
+    ],
+    [
+     "go?",
+     2.41,
+     2.86
+    ],
+    [
+     "The",
+     3.16,
+     3.23
+    ],
+    [
+     "shell",
+     3.23,
+     3.62
+    ],
+    [
+     "is",
+     3.62,
+     3.8
+    ],
+    [
+     "much",
+     3.8,
+     4.11
+    ],
+    [
+     "too",
+     4.11,
+     4.29
+    ],
+    [
+     "big!",
+     4.29,
+     4.74
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "he climbs in: too big",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shellbed",
+   "say": "Hello? It is wobbly in here. I slide all around!",
+   "t0": 84.6875,
+   "t1": 88.125,
+   "v0": 84.86987500000004,
+   "dur": 2.9749583333333334,
+   "words": [
+    [
+     "Hello?",
+     0.01,
+     0.47
+    ],
+    [
+     "It",
+     0.47,
+     0.6
+    ],
+    [
+     "is",
+     0.6,
+     0.73
+    ],
+    [
+     "wobbly",
+     0.73,
+     1.19
+    ],
+    [
+     "in",
+     1.19,
+     1.29
+    ],
+    [
+     "here.",
+     1.29,
+     1.64
+    ],
+    [
+     "I",
+     1.75,
+     1.84
+    ],
+    [
+     "slide",
+     1.84,
+     2.29
+    ],
+    [
+     "all",
+     2.29,
+     2.49
+    ],
+    [
+     "around!",
+     2.49,
+     2.97
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: I slide all around",
+   "who": "crab",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shellbed",
+   "say": "Is the huge shell just right? Yes, or no?",
+   "t0": 88.125,
+   "t1": 95.0,
+   "v0": 88.36483333333338,
+   "dur": 3.2228333333333334,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.22
+    ],
+    [
+     "the",
+     0.22,
+     0.32
+    ],
+    [
+     "huge",
+     0.32,
+     0.71
+    ],
+    [
+     "shell",
+     0.71,
+     1.1
+    ],
+    [
+     "just",
+     1.1,
+     1.41
+    ],
+    [
+     "right?",
+     1.41,
+     1.83
+    ],
+    [
+     "Yes,",
+     2.15,
+     2.62
+    ],
+    [
+     "or",
+     2.62,
+     2.8
+    ],
+    [
+     "no?",
+     2.8,
+     3.22
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: huge shell yes or no",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Next, a shiny shell sits by the big rocks. It is thick, and very pretty.",
+   "t0": 95.0,
+   "t1": 101.25,
+   "v0": 95.30766666666672,
+   "dur": 5.509416666666667,
+   "words": [
+    [
+     "Next,",
+     0.01,
+     0.6
+    ],
+    [
+     "a",
+     0.6,
+     0.65
+    ],
+    [
+     "shiny",
+     0.65,
+     1.14
+    ],
+    [
+     "shell",
+     1.14,
+     1.52
+    ],
+    [
+     "sits",
+     1.52,
+     1.86
+    ],
+    [
+     "by",
+     1.86,
+     2.03
+    ],
+    [
+     "the",
+     2.03,
+     2.12
+    ],
+    [
+     "big",
+     2.12,
+     2.36
+    ],
+    [
+     "rocks.",
+     2.36,
+     2.92
+    ],
+    [
+     "It",
+     3.38,
+     3.49
+    ],
+    [
+     "is",
+     3.49,
+     3.74
+    ],
+    [
+     "thick,",
+     3.74,
+     4.21
+    ],
+    [
+     "and",
+     4.32,
+     4.53
+    ],
+    [
+     "very",
+     4.53,
+     4.9
+    ],
+    [
+     "pretty.",
+     4.9,
+     5.509
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the shiny shell by the rocks",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Ooh, shiny! And this one is just my size.",
+   "t0": 101.25,
+   "t1": 104.375,
+   "v0": 101.3370833333334,
+   "dur": 2.567625,
+   "words": [
+    [
+     "Ooh,",
+     0.01,
+     0.21
+    ],
+    [
+     "shiny!",
+     0.21,
+     0.79
+    ],
+    [
+     "And",
+     0.79,
+     0.98
+    ],
+    [
+     "this",
+     0.98,
+     1.16
+    ],
+    [
+     "one",
+     1.16,
+     1.37
+    ],
+    [
+     "is",
+     1.37,
+     1.52
+    ],
+    [
+     "just",
+     1.52,
+     1.79
+    ],
+    [
+     "my",
+     1.79,
+     1.95
+    ],
+    [
+     "size.",
+     1.95,
+     2.568
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: just my size",
+   "who": "crab",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Little Crab pulls, and pulls. But the shell will not move. It is much too heavy!",
+   "t0": 104.375,
+   "t1": 110.3125,
+   "v0": 104.42470833333341,
+   "dur": 5.575833333333334,
+   "words": [
+    [
+     "Little",
+     0.01,
+     0.23
+    ],
+    [
+     "Crab",
+     0.23,
+     0.7
+    ],
+    [
+     "pulls,",
+     0.7,
+     1.24
+    ],
+    [
+     "and",
+     1.24,
+     1.4
+    ],
+    [
+     "pulls.",
+     1.4,
+     2.03
+    ],
+    [
+     "But",
+     2.49,
+     2.62
+    ],
+    [
+     "the",
+     2.62,
+     2.69
+    ],
+    [
+     "shell",
+     2.69,
+     3.08
+    ],
+    [
+     "will",
+     3.08,
+     3.21
+    ],
+    [
+     "not",
+     3.21,
+     3.5
+    ],
+    [
+     "move.",
+     3.5,
+     4.07
+    ],
+    [
+     "It",
+     4.34,
+     4.48
+    ],
+    [
+     "is",
+     4.48,
+     4.62
+    ],
+    [
+     "much",
+     4.62,
+     4.92
+    ],
+    [
+     "too",
+     4.92,
+     5.08
+    ],
+    [
+     "heavy!",
+     5.08,
+     5.576
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "he pulls: too heavy",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Phew! I cannot carry this house.",
+   "t0": 110.3125,
+   "t1": 112.8125,
+   "v0": 110.52054166666676,
+   "dur": 1.8914166666666667,
+   "words": [
+    [
+     "Phew!",
+     0.0,
+     0.35
+    ],
+    [
+     "I",
+     0.35,
+     0.48
+    ],
+    [
+     "cannot",
+     0.48,
+     0.87
+    ],
+    [
+     "carry",
+     0.87,
+     1.19
+    ],
+    [
+     "this",
+     1.19,
+     1.39
+    ],
+    [
+     "house.",
+     1.39,
+     1.89
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: I cannot carry it",
+   "who": "crab",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Why can't Little Crab take the shiny shell? Too heavy, or too small?",
+   "t0": 112.8125,
+   "t1": 121.25,
+   "v0": 112.93195833333344,
+   "dur": 4.647541666666666,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.25
+    ],
+    [
+     "can't",
+     0.25,
+     0.57
+    ],
+    [
+     "Little",
+     0.57,
+     0.74
+    ],
+    [
+     "Crab",
+     0.74,
+     1.17
+    ],
+    [
+     "take",
+     1.17,
+     1.4
+    ],
+    [
+     "the",
+     1.4,
+     1.48
+    ],
+    [
+     "shiny",
+     1.48,
+     1.95
+    ],
+    [
+     "shell?",
+     1.95,
+     2.44
+    ],
+    [
+     "Too",
+     2.85,
+     3.06
+    ],
+    [
+     "heavy,",
+     3.06,
+     3.69
+    ],
+    [
+     "or",
+     3.69,
+     3.84
+    ],
+    [
+     "too",
+     3.84,
+     4.08
+    ],
+    [
+     "small?",
+     4.08,
+     4.648
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: too heavy or too small",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Can you pull, like Little Crab? Pull, pull, pull!",
+   "t0": 121.25,
+   "t1": 127.8125,
+   "v0": 121.29950000000012,
+   "dur": 3.2815,
+   "words": [
+    [
+     "Can",
+     0.07,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.37
+    ],
+    [
+     "pull,",
+     0.37,
+     0.75
+    ],
+    [
+     "like",
+     0.75,
+     0.94
+    ],
+    [
+     "Little",
+     0.94,
+     1.1
+    ],
+    [
+     "Crab?",
+     1.1,
+     1.62
+    ],
+    [
+     "Pull,",
+     2.0,
+     2.31
+    ],
+    [
+     "pull,",
+     2.31,
+     2.7
+    ],
+    [
+     "pull!",
+     2.7,
+     3.28
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: pull",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Then, under the green kelp, they see a shell that looks just right.",
+   "t0": 127.8125,
+   "t1": 132.5,
+   "v0": 128.1010000000001,
+   "dur": 4.120916666666667,
+   "words": [
+    [
+     "Then,",
+     0.0,
+     0.51
+    ],
+    [
+     "under",
+     0.51,
+     0.74
+    ],
+    [
+     "the",
+     0.74,
+     0.84
+    ],
+    [
+     "green",
+     0.84,
+     1.26
+    ],
+    [
+     "kelp,",
+     1.26,
+     1.72
+    ],
+    [
+     "they",
+     2.09,
+     2.24
+    ],
+    [
+     "see",
+     2.24,
+     2.51
+    ],
+    [
+     "a",
+     2.51,
+     2.54
+    ],
+    [
+     "shell",
+     2.54,
+     2.93
+    ],
+    [
+     "that",
+     2.93,
+     3.1
+    ],
+    [
+     "looks",
+     3.1,
+     3.42
+    ],
+    [
+     "just",
+     3.42,
+     3.67
+    ],
+    [
+     "right.",
+     3.67,
+     4.12
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the shell under the kelp",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Knock, knock! Is anybody home?",
+   "t0": 132.5,
+   "t1": 135.0,
+   "v0": 132.74191666666678,
+   "dur": 1.931625,
+   "words": [
+    [
+     "Knock,",
+     0.01,
+     0.37
+    ],
+    [
+     "knock!",
+     0.37,
+     0.82
+    ],
+    [
+     "Is",
+     0.82,
+     0.99
+    ],
+    [
+     "anybody",
+     0.99,
+     1.47
+    ],
+    [
+     "home?",
+     1.47,
+     1.93
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: knock, knock",
+   "who": "crab",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Two little eyes peek out. A snail lives in this shell!",
+   "t0": 135.0,
+   "t1": 139.0625,
+   "v0": 135.1935416666668,
+   "dur": 3.6508333333333334,
+   "words": [
+    [
+     "Two",
+     0.0,
+     0.18
+    ],
+    [
+     "little",
+     0.18,
+     0.44
+    ],
+    [
+     "eyes",
+     0.44,
+     0.84
+    ],
+    [
+     "peek",
+     0.84,
+     1.15
+    ],
+    [
+     "out.",
+     1.15,
+     1.59
+    ],
+    [
+     "A",
+     1.93,
+     1.98
+    ],
+    [
+     "snail",
+     1.98,
+     2.57
+    ],
+    [
+     "lives",
+     2.57,
+     2.94
+    ],
+    [
+     "in",
+     2.94,
+     3.04
+    ],
+    [
+     "this",
+     3.04,
+     3.15
+    ],
+    [
+     "shell!",
+     3.15,
+     3.65
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a snail peeks out",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Oh! Sorry, Snail. This house is yours.",
+   "t0": 139.0625,
+   "t1": 141.875,
+   "v0": 139.36437500000014,
+   "dur": 2.264625,
+   "words": [
+    [
+     "Oh!",
+     0.0,
+     0.32
+    ],
+    [
+     "Sorry,",
+     0.32,
+     0.75
+    ],
+    [
+     "Snail.",
+     0.75,
+     1.14
+    ],
+    [
+     "This",
+     1.14,
+     1.31
+    ],
+    [
+     "house",
+     1.31,
+     1.64
+    ],
+    [
+     "is",
+     1.64,
+     1.78
+    ],
+    [
+     "yours.",
+     1.78,
+     2.26
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: this house is yours",
+   "who": "crab",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Can Little Crab take the snail's shell? Yes, or no?",
+   "t0": 141.875,
+   "t1": 149.375,
+   "v0": 142.14900000000014,
+   "dur": 3.66275,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.23
+    ],
+    [
+     "Little",
+     0.23,
+     0.43
+    ],
+    [
+     "Crab",
+     0.43,
+     0.85
+    ],
+    [
+     "take",
+     0.85,
+     1.09
+    ],
+    [
+     "the",
+     1.09,
+     1.16
+    ],
+    [
+     "snail's",
+     1.16,
+     1.65
+    ],
+    [
+     "shell?",
+     1.65,
+     2.1
+    ],
+    [
+     "Yes,",
+     2.52,
+     3.05
+    ],
+    [
+     "or",
+     3.05,
+     3.24
+    ],
+    [
+     "no?",
+     3.24,
+     3.66
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: the snail's shell yes or no",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Three shells, and not one is right. Little Crab sits down on the sand.",
+   "t0": 149.375,
+   "t1": 154.6875,
+   "v0": 149.53175000000013,
+   "dur": 4.782291666666667,
+   "words": [
+    [
+     "Three",
+     0.01,
+     0.35
+    ],
+    [
+     "shells,",
+     0.35,
+     1.0
+    ],
+    [
+     "and",
+     1.0,
+     1.18
+    ],
+    [
+     "not",
+     1.18,
+     1.45
+    ],
+    [
+     "one",
+     1.45,
+     1.63
+    ],
+    [
+     "is",
+     1.63,
+     1.78
+    ],
+    [
+     "right.",
+     1.78,
+     2.27
+    ],
+    [
+     "Little",
+     2.72,
+     2.91
+    ],
+    [
+     "Crab",
+     2.91,
+     3.36
+    ],
+    [
+     "sits",
+     3.36,
+     3.73
+    ],
+    [
+     "down",
+     3.73,
+     4.01
+    ],
+    [
+     "on",
+     4.01,
+     4.12
+    ],
+    [
+     "the",
+     4.12,
+     4.19
+    ],
+    [
+     "sand.",
+     4.19,
+     4.78
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab sits down",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Too big. Too heavy. And somebody is home. Maybe there is no shell for me.",
+   "t0": 154.6875,
+   "t1": 159.0625,
+   "v0": 154.83404166666682,
+   "dur": 3.8529166666666668,
+   "words": [
+    [
+     "Too",
+     0.0,
+     0.17
+    ],
+    [
+     "big.",
+     0.17,
+     0.47
+    ],
+    [
+     "Too",
+     0.47,
+     0.72
+    ],
+    [
+     "heavy.",
+     0.72,
+     1.1
+    ],
+    [
+     "And",
+     1.1,
+     1.23
+    ],
+    [
+     "somebody",
+     1.23,
+     1.71
+    ],
+    [
+     "is",
+     1.71,
+     1.85
+    ],
+    [
+     "home.",
+     1.85,
+     2.23
+    ],
+    [
+     "Maybe",
+     2.44,
+     2.71
+    ],
+    [
+     "there",
+     2.71,
+     2.87
+    ],
+    [
+     "is",
+     2.87,
+     3.0
+    ],
+    [
+     "no",
+     3.0,
+     3.18
+    ],
+    [
+     "shell",
+     3.18,
+     3.48
+    ],
+    [
+     "for",
+     3.48,
+     3.63
+    ],
+    [
+     "me.",
+     3.63,
+     3.85
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: maybe there is no shell for me",
+   "who": "crab",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "How does Little Crab feel now? Sad, or happy?",
+   "t0": 159.0625,
+   "t1": 165.9375,
+   "v0": 159.2069583333335,
+   "dur": 3.146875,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.33
+    ],
+    [
+     "Little",
+     0.33,
+     0.5
+    ],
+    [
+     "Crab",
+     0.5,
+     0.89
+    ],
+    [
+     "feel",
+     0.89,
+     1.15
+    ],
+    [
+     "now?",
+     1.15,
+     1.56
+    ],
+    [
+     "Sad,",
+     1.87,
+     2.41
+    ],
+    [
+     "or",
+     2.41,
+     2.54
+    ],
+    [
+     "happy?",
+     2.54,
+     3.147
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sad or happy",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Then Little Crab looks at his two claws. And he has an idea!",
+   "t0": 165.9375,
+   "t1": 170.3125,
+   "v0": 166.07383333333348,
+   "dur": 3.8956666666666666,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.24
+    ],
+    [
+     "Little",
+     0.24,
+     0.44
+    ],
+    [
+     "Crab",
+     0.44,
+     0.94
+    ],
+    [
+     "looks",
+     0.94,
+     1.22
+    ],
+    [
+     "at",
+     1.22,
+     1.28
+    ],
+    [
+     "his",
+     1.28,
+     1.44
+    ],
+    [
+     "two",
+     1.44,
+     1.68
+    ],
+    [
+     "claws.",
+     1.68,
+     2.34
+    ],
+    [
+     "And",
+     2.71,
+     2.84
+    ],
+    [
+     "he",
+     2.84,
+     2.92
+    ],
+    [
+     "has",
+     2.92,
+     3.14
+    ],
+    [
+     "an",
+     3.14,
+     3.23
+    ],
+    [
+     "idea!",
+     3.23,
+     3.896
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab has an idea",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Now I know what I need! Not too big, not too heavy, and empty.",
+   "t0": 170.3125,
+   "t1": 174.0625,
+   "v0": 170.48950000000016,
+   "dur": 3.338416666666667,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.26
+    ],
+    [
+     "I",
+     0.26,
+     0.35
+    ],
+    [
+     "know",
+     0.35,
+     0.58
+    ],
+    [
+     "what",
+     0.58,
+     0.74
+    ],
+    [
+     "I",
+     0.74,
+     0.84
+    ],
+    [
+     "need!",
+     0.84,
+     1.36
+    ],
+    [
+     "Not",
+     1.36,
+     1.57
+    ],
+    [
+     "too",
+     1.57,
+     1.75
+    ],
+    [
+     "big,",
+     1.75,
+     2.06
+    ],
+    [
+     "not",
+     2.06,
+     2.25
+    ],
+    [
+     "too",
+     2.25,
+     2.41
+    ],
+    [
+     "heavy,",
+     2.41,
+     2.77
+    ],
+    [
+     "and",
+     2.77,
+     2.88
+    ],
+    [
+     "empty.",
+     2.88,
+     3.338
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: I know what I need",
+   "who": "crab",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Tula, you can dive deep! Will you bring me shells? I will try them, one by one.",
+   "t0": 174.0625,
+   "t1": 178.75,
+   "v0": 174.34791666666683,
+   "dur": 4.138833333333333,
+   "words": [
+    [
+     "Tula,",
+     0.0,
+     0.41
+    ],
+    [
+     "you",
+     0.41,
+     0.55
+    ],
+    [
+     "can",
+     0.55,
+     0.72
+    ],
+    [
+     "dive",
+     0.72,
+     1.04
+    ],
+    [
+     "deep!",
+     1.04,
+     1.47
+    ],
+    [
+     "Will",
+     1.47,
+     1.59
+    ],
+    [
+     "you",
+     1.59,
+     1.7
+    ],
+    [
+     "bring",
+     1.7,
+     1.88
+    ],
+    [
+     "me",
+     1.88,
+     1.98
+    ],
+    [
+     "shells?",
+     1.98,
+     2.6
+    ],
+    [
+     "I",
+     2.6,
+     2.69
+    ],
+    [
+     "will",
+     2.69,
+     2.84
+    ],
+    [
+     "try",
+     2.84,
+     3.18
+    ],
+    [
+     "them,",
+     3.18,
+     3.42
+    ],
+    [
+     "one",
+     3.42,
+     3.64
+    ],
+    [
+     "by",
+     3.64,
+     3.85
+    ],
+    [
+     "one.",
+     3.85,
+     4.139
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab asks Tula",
+   "who": "crab",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "deep",
+   "say": "Down, down, down goes Tula, into the deep blue water. So many empty shells!",
+   "t0": 178.75,
+   "t1": 185.3125,
+   "v0": 179.00675000000018,
+   "dur": 5.869,
+   "words": [
+    [
+     "Down,",
+     0.02,
+     0.55
+    ],
+    [
+     "down,",
+     0.55,
+     1.2
+    ],
+    [
+     "down",
+     1.2,
+     1.47
+    ],
+    [
+     "goes",
+     1.47,
+     1.77
+    ],
+    [
+     "Tula,",
+     1.77,
+     2.34
+    ],
+    [
+     "into",
+     2.34,
+     2.57
+    ],
+    [
+     "the",
+     2.57,
+     2.67
+    ],
+    [
+     "deep",
+     2.67,
+     3.09
+    ],
+    [
+     "blue",
+     3.09,
+     3.39
+    ],
+    [
+     "water.",
+     3.39,
+     3.88
+    ],
+    [
+     "So",
+     4.41,
+     4.57
+    ],
+    [
+     "many",
+     4.57,
+     4.86
+    ],
+    [
+     "empty",
+     4.86,
+     5.22
+    ],
+    [
+     "shells!",
+     5.22,
+     5.869
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula dives into the deep",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "deep",
+   "say": "This one, and this one, and this one. Little Crab can try them all!",
+   "t0": 185.3125,
+   "t1": 190.3125,
+   "v0": 185.3957500000002,
+   "dur": 4.622625,
+   "words": [
+    [
+     "This",
+     0.03,
+     0.36
+    ],
+    [
+     "one,",
+     0.36,
+     0.67
+    ],
+    [
+     "and",
+     0.67,
+     0.82
+    ],
+    [
+     "this",
+     0.82,
+     1.06
+    ],
+    [
+     "one,",
+     1.06,
+     1.38
+    ],
+    [
+     "and",
+     1.38,
+     1.62
+    ],
+    [
+     "this",
+     1.62,
+     1.86
+    ],
+    [
+     "one.",
+     1.86,
+     2.22
+    ],
+    [
+     "Little",
+     2.7,
+     2.97
+    ],
+    [
+     "Crab",
+     2.97,
+     3.41
+    ],
+    [
+     "can",
+     3.41,
+     3.62
+    ],
+    [
+     "try",
+     3.62,
+     3.98
+    ],
+    [
+     "them",
+     3.98,
+     4.14
+    ],
+    [
+     "all!",
+     4.14,
+     4.62
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula picks three shells",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The back part of a hermit crab's body is soft. It fits inside the shell.",
+   "t0": 190.3125,
+   "t1": 195.9375,
+   "v0": 190.5383750000002,
+   "dur": 5.159458333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "back",
+     0.12,
+     0.44
+    ],
+    [
+     "part",
+     0.44,
+     0.83
+    ],
+    [
+     "of",
+     0.83,
+     0.94
+    ],
+    [
+     "a",
+     0.94,
+     0.97
+    ],
+    [
+     "hermit",
+     0.97,
+     1.39
+    ],
+    [
+     "crab's",
+     1.39,
+     1.83
+    ],
+    [
+     "body",
+     1.83,
+     2.38
+    ],
+    [
+     "is",
+     2.38,
+     2.47
+    ],
+    [
+     "soft.",
+     2.47,
+     3.18
+    ],
+    [
+     "It",
+     3.68,
+     3.82
+    ],
+    [
+     "fits",
+     3.82,
+     4.13
+    ],
+    [
+     "inside",
+     4.13,
+     4.61
+    ],
+    [
+     "the",
+     4.61,
+     4.68
+    ],
+    [
+     "shell.",
+     4.68,
+     5.159
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: the soft back part fits inside the shell",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Which part of a hermit crab is soft? The back part, or the claws?",
+   "t0": 195.9375,
+   "t1": 204.375,
+   "v0": 196.21783333333354,
+   "dur": 4.541458333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.25
+    ],
+    [
+     "part",
+     0.25,
+     0.49
+    ],
+    [
+     "of",
+     0.49,
+     0.57
+    ],
+    [
+     "a",
+     0.57,
+     0.61
+    ],
+    [
+     "hermit",
+     0.61,
+     1.02
+    ],
+    [
+     "crab",
+     1.02,
+     1.45
+    ],
+    [
+     "is",
+     1.45,
+     1.57
+    ],
+    [
+     "soft?",
+     1.57,
+     2.23
+    ],
+    [
+     "The",
+     2.61,
+     2.73
+    ],
+    [
+     "back",
+     2.73,
+     3.1
+    ],
+    [
+     "part,",
+     3.1,
+     3.62
+    ],
+    [
+     "or",
+     3.62,
+     3.75
+    ],
+    [
+     "the",
+     3.75,
+     3.84
+    ],
+    [
+     "claws?",
+     3.84,
+     4.54
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: back part or claws",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Tula comes back with shells for Little Crab. Let's count them! One, two, three!",
+   "t0": 204.375,
+   "t1": 211.25,
+   "v0": 204.47929166666688,
+   "dur": 5.558208333333333,
+   "words": [
+    [
+     "Tula",
+     0.02,
+     0.47
+    ],
+    [
+     "comes",
+     0.47,
+     0.79
+    ],
+    [
+     "back",
+     0.79,
+     1.12
+    ],
+    [
+     "with",
+     1.12,
+     1.24
+    ],
+    [
+     "shells",
+     1.24,
+     1.74
+    ],
+    [
+     "for",
+     1.74,
+     1.84
+    ],
+    [
+     "Little",
+     1.84,
+     2.05
+    ],
+    [
+     "Crab.",
+     2.05,
+     2.57
+    ],
+    [
+     "Let's",
+     3.0,
+     3.25
+    ],
+    [
+     "count",
+     3.25,
+     3.66
+    ],
+    [
+     "them!",
+     3.66,
+     3.98
+    ],
+    [
+     "One,",
+     4.39,
+     4.69
+    ],
+    [
+     "two,",
+     4.69,
+     5.01
+    ],
+    [
+     "three!",
+     5.01,
+     5.558
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count the three shells",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Let me check with my claws. Tap, tap, tap.",
+   "t0": 211.25,
+   "t1": 214.375,
+   "v0": 211.55750000000023,
+   "dur": 2.63775,
+   "words": [
+    [
+     "Let",
+     0.0,
+     0.14
+    ],
+    [
+     "me",
+     0.14,
+     0.26
+    ],
+    [
+     "check",
+     0.26,
+     0.58
+    ],
+    [
+     "with",
+     0.58,
+     0.7
+    ],
+    [
+     "my",
+     0.7,
+     0.87
+    ],
+    [
+     "claws.",
+     0.87,
+     1.56
+    ],
+    [
+     "Tap,",
+     1.56,
+     1.86
+    ],
+    [
+     "tap,",
+     1.86,
+     2.23
+    ],
+    [
+     "tap.",
+     2.23,
+     2.638
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: tap, tap, tap",
+   "who": "crab",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "The white shell? Too small. The red shell? Too big.",
+   "t0": 214.375,
+   "t1": 218.4375,
+   "v0": 214.71525000000025,
+   "dur": 3.321458333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "white",
+     0.11,
+     0.48
+    ],
+    [
+     "shell?",
+     0.48,
+     0.87
+    ],
+    [
+     "Too",
+     1.02,
+     1.23
+    ],
+    [
+     "small.",
+     1.23,
+     1.76
+    ],
+    [
+     "The",
+     1.88,
+     1.96
+    ],
+    [
+     "red",
+     1.96,
+     2.2
+    ],
+    [
+     "shell?",
+     2.2,
+     2.62
+    ],
+    [
+     "Too",
+     2.62,
+     2.93
+    ],
+    [
+     "big.",
+     2.93,
+     3.32
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "too small, too big",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "And the golden shell? Little Crab slips inside.",
+   "t0": 218.4375,
+   "t1": 222.1875,
+   "v0": 218.5567083333336,
+   "dur": 3.308125,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.15
+    ],
+    [
+     "the",
+     0.15,
+     0.21
+    ],
+    [
+     "golden",
+     0.21,
+     0.68
+    ],
+    [
+     "shell?",
+     0.68,
+     1.18
+    ],
+    [
+     "Little",
+     1.53,
+     1.73
+    ],
+    [
+     "Crab",
+     1.73,
+     2.17
+    ],
+    [
+     "slips",
+     2.17,
+     2.61
+    ],
+    [
+     "inside.",
+     2.61,
+     3.308
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "he slips into the golden shell",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "It fits! It fits just right!",
+   "t0": 222.1875,
+   "t1": 224.6875,
+   "v0": 222.3848333333336,
+   "dur": 1.8271666666666666,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.13
+    ],
+    [
+     "fits!",
+     0.13,
+     0.54
+    ],
+    [
+     "It",
+     0.54,
+     0.71
+    ],
+    [
+     "fits",
+     0.71,
+     1.04
+    ],
+    [
+     "just",
+     1.04,
+     1.33
+    ],
+    [
+     "right!",
+     1.33,
+     1.827
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: it fits",
+   "who": "crab",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Hooray! The golden shell is not too big, not too heavy, and it is empty.",
+   "t0": 224.6875,
+   "t1": 230.0,
+   "v0": 224.73200000000028,
+   "dur": 4.9671666666666665,
+   "words": [
+    [
+     "Hooray!",
+     0.01,
+     0.73
+    ],
+    [
+     "The",
+     0.73,
+     0.82
+    ],
+    [
+     "golden",
+     0.82,
+     1.21
+    ],
+    [
+     "shell",
+     1.21,
+     1.61
+    ],
+    [
+     "is",
+     1.61,
+     1.78
+    ],
+    [
+     "not",
+     1.78,
+     2.06
+    ],
+    [
+     "too",
+     2.06,
+     2.25
+    ],
+    [
+     "big,",
+     2.25,
+     2.65
+    ],
+    [
+     "not",
+     2.96,
+     3.21
+    ],
+    [
+     "too",
+     3.21,
+     3.39
+    ],
+    [
+     "heavy,",
+     3.39,
+     3.98
+    ],
+    [
+     "and",
+     3.98,
+     4.14
+    ],
+    [
+     "it",
+     4.14,
+     4.25
+    ],
+    [
+     "is",
+     4.25,
+     4.43
+    ],
+    [
+     "empty.",
+     4.43,
+     4.967
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the golden shell is just right",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Which shell fits just right? The golden shell, or the white shell?",
+   "t0": 230.0,
+   "t1": 237.8125,
+   "v0": 230.21916666666695,
+   "dur": 4.098625,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.18
+    ],
+    [
+     "shell",
+     0.18,
+     0.5
+    ],
+    [
+     "fits",
+     0.5,
+     0.86
+    ],
+    [
+     "just",
+     0.86,
+     1.11
+    ],
+    [
+     "right?",
+     1.11,
+     1.54
+    ],
+    [
+     "The",
+     1.93,
+     2.01
+    ],
+    [
+     "golden",
+     2.01,
+     2.46
+    ],
+    [
+     "shell,",
+     2.46,
+     3.06
+    ],
+    [
+     "or",
+     3.06,
+     3.15
+    ],
+    [
+     "the",
+     3.15,
+     3.25
+    ],
+    [
+     "white",
+     3.25,
+     3.6
+    ],
+    [
+     "shell?",
+     3.6,
+     4.099
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: golden or white",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Not too big, and not too small. My new house is best of all!",
+   "t0": 237.8125,
+   "t1": 241.875,
+   "v0": 238.03779166666695,
+   "dur": 3.38475,
+   "words": [
+    [
+     "Not",
+     0.01,
+     0.26
+    ],
+    [
+     "too",
+     0.26,
+     0.51
+    ],
+    [
+     "big,",
+     0.51,
+     0.84
+    ],
+    [
+     "and",
+     0.84,
+     0.93
+    ],
+    [
+     "not",
+     0.93,
+     1.16
+    ],
+    [
+     "too",
+     1.16,
+     1.37
+    ],
+    [
+     "small.",
+     1.37,
+     2.0
+    ],
+    [
+     "My",
+     2.0,
+     2.13
+    ],
+    [
+     "new",
+     2.13,
+     2.28
+    ],
+    [
+     "house",
+     2.28,
+     2.58
+    ],
+    [
+     "is",
+     2.58,
+     2.71
+    ],
+    [
+     "best",
+     2.71,
+     3.0
+    ],
+    [
+     "of",
+     3.0,
+     3.11
+    ],
+    [
+     "all!",
+     3.11,
+     3.38
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the new house rhyme",
+   "who": "crab",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "",
+   "t0": 241.875,
+   "t1": 252.5,
+   "v0": 242.5,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: my new house",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "shore",
+   "say": "Did Little Crab find a shell that fits? Yes, or no?",
+   "t0": 252.5,
+   "t1": 260.0,
+   "v0": 252.62,
+   "dur": 3.73075,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.16
+    ],
+    [
+     "Little",
+     0.16,
+     0.37
+    ],
+    [
+     "Crab",
+     0.37,
+     0.82
+    ],
+    [
+     "find",
+     0.82,
+     1.05
+    ],
+    [
+     "a",
+     1.05,
+     1.08
+    ],
+    [
+     "shell",
+     1.08,
+     1.44
+    ],
+    [
+     "that",
+     1.44,
+     1.63
+    ],
+    [
+     "fits?",
+     1.63,
+     2.19
+    ],
+    [
+     "Yes,",
+     2.56,
+     3.11
+    ],
+    [
+     "or",
+     3.11,
+     3.32
+    ],
+    [
+     "no?",
+     3.32,
+     3.73
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did he find a shell yes or no",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "The sun goes down, and the water turns gold. Little Crab is cozy in his new house.",
+   "t0": 260.0,
+   "t1": 266.5625,
+   "v0": 260.07075,
+   "dur": 6.128125,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "sun",
+     0.09,
+     0.49
+    ],
+    [
+     "goes",
+     0.49,
+     0.8
+    ],
+    [
+     "down,",
+     0.8,
+     1.33
+    ],
+    [
+     "and",
+     1.33,
+     1.55
+    ],
+    [
+     "the",
+     1.55,
+     1.61
+    ],
+    [
+     "water",
+     1.61,
+     2.06
+    ],
+    [
+     "turns",
+     2.06,
+     2.52
+    ],
+    [
+     "gold.",
+     2.52,
+     3.04
+    ],
+    [
+     "Little",
+     3.57,
+     3.78
+    ],
+    [
+     "Crab",
+     3.78,
+     4.25
+    ],
+    [
+     "is",
+     4.25,
+     4.43
+    ],
+    [
+     "cozy",
+     4.43,
+     5.12
+    ],
+    [
+     "in",
+     5.12,
+     5.22
+    ],
+    [
+     "his",
+     5.22,
+     5.38
+    ],
+    [
+     "new",
+     5.38,
+     5.56
+    ],
+    [
+     "house.",
+     5.56,
+     6.128
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "evening in the shallow water",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Thank you, Tula! You carried every shell.",
+   "t0": 266.5625,
+   "t1": 269.375,
+   "v0": 266.71887499999997,
+   "dur": 2.2075,
+   "words": [
+    [
+     "Thank",
+     0.0,
+     0.23
+    ],
+    [
+     "you,",
+     0.23,
+     0.36
+    ],
+    [
+     "Tula!",
+     0.36,
+     0.91
+    ],
+    [
+     "You",
+     0.91,
+     1.08
+    ],
+    [
+     "carried",
+     1.08,
+     1.44
+    ],
+    [
+     "every",
+     1.44,
+     1.73
+    ],
+    [
+     "shell.",
+     1.73,
+     2.208
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: thank you",
+   "who": "crab",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "And you knew just what you needed. Clever Little Crab!",
+   "t0": 269.375,
+   "t1": 273.4375,
+   "v0": 269.44637499999993,
+   "dur": 3.5791666666666666,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.23
+    ],
+    [
+     "you",
+     0.23,
+     0.35
+    ],
+    [
+     "knew",
+     0.35,
+     0.57
+    ],
+    [
+     "just",
+     0.57,
+     0.89
+    ],
+    [
+     "what",
+     0.89,
+     1.14
+    ],
+    [
+     "you",
+     1.14,
+     1.23
+    ],
+    [
+     "needed.",
+     1.23,
+     1.82
+    ],
+    [
+     "Clever",
+     2.1,
+     2.51
+    ],
+    [
+     "Little",
+     2.51,
+     2.85
+    ],
+    [
+     "Crab!",
+     2.85,
+     3.579
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: clever Little Crab",
+   "who": "tula",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "I love my new house. I can wiggle, and wiggle, and wiggle!",
+   "t0": 273.4375,
+   "t1": 277.1875,
+   "v0": 273.54554166666657,
+   "dur": 3.2972083333333333,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.12
+    ],
+    [
+     "love",
+     0.12,
+     0.41
+    ],
+    [
+     "my",
+     0.41,
+     0.6
+    ],
+    [
+     "new",
+     0.6,
+     0.78
+    ],
+    [
+     "house.",
+     0.78,
+     1.33
+    ],
+    [
+     "I",
+     1.51,
+     1.58
+    ],
+    [
+     "can",
+     1.58,
+     1.84
+    ],
+    [
+     "wiggle,",
+     1.84,
+     2.18
+    ],
+    [
+     "and",
+     2.18,
+     2.34
+    ],
+    [
+     "wiggle,",
+     2.34,
+     2.76
+    ],
+    [
+     "and",
+     2.76,
+     2.88
+    ],
+    [
+     "wiggle!",
+     2.88,
+     3.297
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Little Crab: I can wiggle",
+   "who": "crab",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "And look at the old blue shell. A tiny crab moves in. Now it is her house!",
+   "t0": 277.1875,
+   "t1": 283.125,
+   "v0": 277.3627499999999,
+   "dur": 5.307958333333334,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.19
+    ],
+    [
+     "look",
+     0.19,
+     0.38
+    ],
+    [
+     "at",
+     0.38,
+     0.45
+    ],
+    [
+     "the",
+     0.45,
+     0.58
+    ],
+    [
+     "old",
+     0.58,
+     0.84
+    ],
+    [
+     "blue",
+     0.84,
+     1.09
+    ],
+    [
+     "shell.",
+     1.09,
+     1.59
+    ],
+    [
+     "A",
+     1.93,
+     2.0
+    ],
+    [
+     "tiny",
+     2.0,
+     2.48
+    ],
+    [
+     "crab",
+     2.48,
+     2.93
+    ],
+    [
+     "moves",
+     2.93,
+     3.3
+    ],
+    [
+     "in.",
+     3.3,
+     3.64
+    ],
+    [
+     "Now",
+     4.08,
+     4.39
+    ],
+    [
+     "it",
+     4.39,
+     4.49
+    ],
+    [
+     "is",
+     4.49,
+     4.62
+    ],
+    [
+     "her",
+     4.62,
+     4.7
+    ],
+    [
+     "house!",
+     4.7,
+     5.308
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a tiny crab moves into the old shell",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "When something does not fit, try again. One by one, you will find what is just right.",
+   "t0": 283.125,
+   "t1": 289.375,
+   "v0": 283.1907083333332,
+   "dur": 5.831791666666667,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.13
+    ],
+    [
+     "something",
+     0.13,
+     0.57
+    ],
+    [
+     "does",
+     0.57,
+     0.75
+    ],
+    [
+     "not",
+     0.75,
+     1.01
+    ],
+    [
+     "fit,",
+     1.01,
+     1.51
+    ],
+    [
+     "try",
+     1.51,
+     1.95
+    ],
+    [
+     "again.",
+     1.95,
+     2.43
+    ],
+    [
+     "One",
+     3.06,
+     3.34
+    ],
+    [
+     "by",
+     3.34,
+     3.57
+    ],
+    [
+     "one,",
+     3.57,
+     4.15
+    ],
+    [
+     "you",
+     4.15,
+     4.25
+    ],
+    [
+     "will",
+     4.25,
+     4.34
+    ],
+    [
+     "find",
+     4.34,
+     4.76
+    ],
+    [
+     "what",
+     4.76,
+     4.9
+    ],
+    [
+     "is",
+     4.9,
+     5.06
+    ],
+    [
+     "just",
+     5.06,
+     5.33
+    ],
+    [
+     "right.",
+     5.33,
+     5.83
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Do you remember? Where do hermit crabs live? In empty shells, or in trees?",
+   "t0": 289.375,
+   "t1": 298.125,
+   "v0": 289.54249999999985,
+   "dur": 5.155916666666666,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.21
+    ],
+    [
+     "remember?",
+     0.21,
+     0.84
+    ],
+    [
+     "Where",
+     1.08,
+     1.19
+    ],
+    [
+     "do",
+     1.19,
+     1.34
+    ],
+    [
+     "hermit",
+     1.34,
+     1.68
+    ],
+    [
+     "crabs",
+     1.68,
+     2.17
+    ],
+    [
+     "live?",
+     2.17,
+     2.6
+    ],
+    [
+     "In",
+     2.92,
+     3.03
+    ],
+    [
+     "empty",
+     3.03,
+     3.48
+    ],
+    [
+     "shells,",
+     3.48,
+     4.11
+    ],
+    [
+     "or",
+     4.11,
+     4.3
+    ],
+    [
+     "in",
+     4.3,
+     4.46
+    ],
+    [
+     "trees?",
+     4.46,
+     5.156
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: empty shells or trees",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "And when a hermit crab grows, what does it find? A bigger shell, or a smaller shell?",
+   "t0": 298.125,
+   "t1": 307.5,
+   "v0": 298.4184166666665,
+   "dur": 5.53925,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.16
+    ],
+    [
+     "when",
+     0.16,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.31
+    ],
+    [
+     "hermit",
+     0.31,
+     0.74
+    ],
+    [
+     "crab",
+     0.74,
+     1.08
+    ],
+    [
+     "grows,",
+     1.08,
+     1.72
+    ],
+    [
+     "what",
+     1.72,
+     1.9
+    ],
+    [
+     "does",
+     1.9,
+     2.05
+    ],
+    [
+     "it",
+     2.05,
+     2.13
+    ],
+    [
+     "find?",
+     2.13,
+     2.71
+    ],
+    [
+     "A",
+     3.28,
+     3.34
+    ],
+    [
+     "bigger",
+     3.34,
+     3.73
+    ],
+    [
+     "shell,",
+     3.73,
+     4.26
+    ],
+    [
+     "or",
+     4.26,
+     4.51
+    ],
+    [
+     "a",
+     4.51,
+     4.54
+    ],
+    [
+     "smaller",
+     4.54,
+     5.05
+    ],
+    [
+     "shell?",
+     5.05,
+     5.539
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: bigger or smaller shell",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Not too big, and not too small. A cozy house is best of all!",
+   "t0": 307.5,
+   "t1": 312.8125,
+   "v0": 307.6776666666664,
+   "dur": 4.591916666666667,
+   "words": [
+    [
+     "Not",
+     0.0,
+     0.35
+    ],
+    [
+     "too",
+     0.35,
+     0.58
+    ],
+    [
+     "big,",
+     0.58,
+     0.96
+    ],
+    [
+     "and",
+     0.96,
+     1.15
+    ],
+    [
+     "not",
+     1.15,
+     1.43
+    ],
+    [
+     "too",
+     1.43,
+     1.63
+    ],
+    [
+     "small.",
+     1.63,
+     2.16
+    ],
+    [
+     "A",
+     2.64,
+     2.69
+    ],
+    [
+     "cozy",
+     2.69,
+     3.26
+    ],
+    [
+     "house",
+     3.26,
+     3.63
+    ],
+    [
+     "is",
+     3.63,
+     3.78
+    ],
+    [
+     "best",
+     3.78,
+     4.16
+    ],
+    [
+     "of",
+     4.16,
+     4.26
+    ],
+    [
+     "all!",
+     4.26,
+     4.59
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the closing rhyme",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "",
+   "t0": 312.8125,
+   "t1": 318.125,
+   "v0": 313.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "shore_eve",
+   "say": "Next time: Poppy and the Dancing Sky! See you on the next adventure, friends!",
+   "t0": 318.125,
+   "t1": 324.0625,
+   "v0": 318.245,
+   "dur": 5.608625,
+   "words": [
+    [
+     "Next",
+     0.0,
+     0.37
+    ],
+    [
+     "time:",
+     0.37,
+     0.81
+    ],
+    [
+     "Poppy",
+     1.08,
+     1.64
+    ],
+    [
+     "and",
+     1.64,
+     1.76
+    ],
+    [
+     "the",
+     1.76,
+     1.82
+    ],
+    [
+     "Dancing",
+     1.82,
+     2.39
+    ],
+    [
+     "Sky!",
+     2.39,
+     2.97
+    ],
+    [
+     "See",
+     3.41,
+     3.66
+    ],
+    [
+     "you",
+     3.66,
+     3.86
+    ],
+    [
+     "on",
+     3.86,
+     4.0
+    ],
+    [
+     "the",
+     4.0,
+     4.07
+    ],
+    [
+     "next",
+     4.07,
+     4.39
+    ],
+    [
+     "adventure,",
+     4.39,
+     4.95
+    ],
+    [
+     "friends!",
+     4.95,
+     5.609
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: next adventure",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 324.0625,
+   "t1": 327.1875,
+   "v0": 324.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 327.1875,
+   "t1": 330.3125,
+   "v0": 327.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 330.3125,
+   "t1": 335.625,
+   "v0": 330.625,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 335.625,
+   "t1": 338.5321666666666,
+   "v0": 335.745,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

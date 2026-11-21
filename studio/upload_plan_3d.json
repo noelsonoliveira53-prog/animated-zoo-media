@@ -3465,12 +3465,30 @@
   "date": "2026-11-24",
   "time": "5:30 PM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 21 1:25 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE). In production: nothing built yet.",
-  "theme_title": "How Do Polar Bears Stay Warm?"
+  "note": "Built Nov 21 by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep13.md. Arctic week, fact lesson 1 (2D); new props (coat cut-away, fat ruler, paw sole, snow den, sea). NOT uploaded: the daily run schedules it.",
+  "theme_title": "How Do Polar Bears Stay Warm?",
+  "thumb": "brand/zoo/thumb_zc_ep13.jpg",
+  "description": "How does a polar bear stay warm in the snow and the icy water? Find Poppy the polar bear cub's three warm secrets with Milo the bluebird! A gentle animal lesson for ages 2-6 with questions to answer, things to count, moves to copy and a quiz at the end.\nKids learn that under its skin a polar bear has a thick layer of fat, up to four inches thick, that keeps it warm in the cold water and helps it float; that it has two layers of fur, a soft, thick undercoat and long guard hairs on top that work like a raincoat; and that it has fur on the bottoms of its feet, a cozy den in the snow for the cubs, and is so warm that it sometimes cools off in the chilly water.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (polar bear) and its Library fact sheet (polar bear); National Geographic Education (Animals 101: Polar Bears); SeaWorld (polar bear); Lincoln Park Zoo (polar bear adaptations).",
+  "tags": [
+   "how do polar bears stay warm",
+   "polar bear facts for kids",
+   "polar bear",
+   "arctic animals for kids",
+   "polar bear fur",
+   "polar bear fat",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "NOT COLD?!",
+  "seconds": 359.0,
+  "bookends": true
  },
  {
   "file": "cartoon/za_ep13.mp4",

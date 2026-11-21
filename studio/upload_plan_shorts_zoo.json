@@ -1804,5 +1804,44 @@
   ],
   "thumb_text": "CLIP CLOP!",
   "seconds": 91.0
+ },
+ {
+  "file": "cartoon/zc_ep12_short1.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep12",
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep12_short1.jpg",
+  "watermark": "top",
+  "date": "2026-11-29",
+  "time": "7:30 PM",
+  "note": "CLAIMED Nov 21 1:55 AM ET by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): in production, not uploaded."
+ },
+ {
+  "file": "cartoon/zc_ep12_short2.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep12",
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep12_short2.jpg",
+  "watermark": "top",
+  "date": "2026-11-30",
+  "time": "11:30 AM",
+  "note": "CLAIMED Nov 21 1:55 AM ET by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): in production, not uploaded."
+ },
+ {
+  "file": "cartoon/zc_ep12_short3.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep12",
+  "res": "2160x3840",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep12_short3.jpg",
+  "watermark": "top",
+  "date": "2026-12-01",
+  "time": "11:30 AM",
+  "note": "CLAIMED Nov 21 1:55 AM ET by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): in production, not uploaded."
  }
 ]

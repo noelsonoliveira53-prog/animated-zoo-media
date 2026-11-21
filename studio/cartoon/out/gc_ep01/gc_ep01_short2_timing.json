@@ -1,0 +1,1924 @@
+{
+ "id": "gc_ep01_short2",
+ "total": 87.73670833333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5
+ ],
+ "plan": {
+  "length": 87.7,
+  "shots": 20,
+  "visual_changes": 94,
+  "mean_gap": 0.93,
+  "longest_gap": 3.52,
+  "longest_gap_at": 53.7,
+  "over_6s": [],
+  "places": [
+   "gsoil",
+   "gwindow",
+   "glab"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 8,
+  "longest_without_question": 22.2,
+  "first_words_at": 0.42,
+  "shot_mean": 4.39,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "189/189",
+  "sync": {
+   "pauses_checked": 13,
+   "onset_err_mean_ms": 26.9,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 19,
+   "cuts_on_the_half_beat": 19,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "under the ground (cutaway) hook: wake up a seed"
+  ],
+  [
+   0.3,
+   "action",
+   "a part lights up"
+  ],
+  [
+   0.57,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new place",
+   "the sunny lab window window wide"
+  ],
+  [
+   6.08,
+   "word",
+   "?"
+  ],
+  [
+   6.88,
+   "new shot",
+   "the sunny lab window water"
+  ],
+  [
+   7.62,
+   "action",
+   "Gizmo tips the can"
+  ],
+  [
+   7.62,
+   "word",
+   "WATER"
+  ],
+  [
+   8.4,
+   "action",
+   "water pours"
+  ],
+  [
+   10.0,
+   "new place",
+   "the picture board (blueprint) question 2b"
+  ],
+  [
+   11.88,
+   "sign",
+   "DRY"
+  ],
+  [
+   12.23,
+   "sign",
+   "WATER"
+  ],
+  [
+   14.54,
+   "thinking dot",
+   "1"
+  ],
+  [
+   15.21,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.88,
+   "thinking dot",
+   "3"
+  ],
+  [
+   16.37,
+   "answer",
+   "WATER"
+  ],
+  [
+   16.42,
+   "action",
+   "a part lights up"
+  ],
+  [
+   17.5,
+   "new shot",
+   "the picture board (blueprint) water wins"
+  ],
+  [
+   18.5,
+   "action",
+   "a part lights up"
+  ],
+  [
+   18.5,
+   "word",
+   "WATER!"
+  ],
+  [
+   21.56,
+   "new shot",
+   "the picture board (blueprint) soaks up"
+  ],
+  [
+   22.28,
+   "picture",
+   "d0"
+  ],
+  [
+   22.87,
+   "picture",
+   "d1"
+  ],
+  [
+   23.75,
+   "action",
+   "the seed drinks"
+  ],
+  [
+   23.75,
+   "picture",
+   "d2"
+  ],
+  [
+   23.75,
+   "word",
+   "SLURP!"
+  ],
+  [
+   24.69,
+   "new shot",
+   "the picture board (blueprint) air"
+  ],
+  [
+   25.35,
+   "action",
+   "the air drifts"
+  ],
+  [
+   25.35,
+   "picture",
+   "pf"
+  ],
+  [
+   25.35,
+   "word",
+   "AIR"
+  ],
+  [
+   28.44,
+   "new shot",
+   "the picture board (blueprint) warmth"
+  ],
+  [
+   29.61,
+   "action",
+   "the sun shines"
+  ],
+  [
+   29.61,
+   "picture",
+   "sun"
+  ],
+  [
+   29.61,
+   "word",
+   "WARM"
+  ],
+  [
+   32.19,
+   "new place",
+   "the sunny lab window count needs"
+  ],
+  [
+   34.63,
+   "word",
+   "WATER"
+  ],
+  [
+   34.87,
+   "word",
+   "AIR"
+  ],
+  [
+   35.15,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   35.15,
+   "word",
+   "WARM"
+  ],
+  [
+   35.94,
+   "new place",
+   "the picture board (blueprint) needs recap"
+  ],
+  [
+   36.25,
+   "action",
+   "a part lights up"
+  ],
+  [
+   36.9,
+   "action",
+   "a part lights up"
+  ],
+  [
+   37.55,
+   "action",
+   "a part lights up"
+  ],
+  [
+   39.97,
+   "word",
+   "WAKE UP!"
+  ],
+  [
+   40.94,
+   "new place",
+   "under the ground (cutaway) question 3"
+  ],
+  [
+   43.7,
+   "sign",
+   "YES"
+  ],
+  [
+   44.05,
+   "sign",
+   "NO"
+  ],
+  [
+   45.51,
+   "thinking dot",
+   "1"
+  ],
+  [
+   46.18,
+   "thinking dot",
+   "2"
+  ],
+  [
+   46.86,
+   "thinking dot",
+   "3"
+  ],
+  [
+   47.34,
+   "answer",
+   "NO"
+  ],
+  [
+   48.44,
+   "new shot",
+   "under the ground (cutaway) in the dark"
+  ],
+  [
+   51.22,
+   "action",
+   "a part lights up"
+  ],
+  [
+   51.22,
+   "word",
+   "IN THE DARK"
+  ],
+  [
+   53.12,
+   "new shot",
+   "under the ground (cutaway) idea"
+  ],
+  [
+   53.67,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   53.67,
+   "word",
+   "AN IDEA!"
+  ],
+  [
+   57.19,
+   "new shot",
+   "under the ground (cutaway) coat opens"
+  ],
+  [
+   57.45,
+   "action",
+   "the coat cracks"
+  ],
+  [
+   57.45,
+   "word",
+   "POP!"
+  ],
+  [
+   60.22,
+   "action",
+   "a part lights up"
+  ],
+  [
+   61.25,
+   "action",
+   "it appears"
+  ],
+  [
+   61.25,
+   "new shot",
+   "under the ground (cutaway) question 4"
+  ],
+  [
+   63.24,
+   "sign",
+   "ROOT"
+  ],
+  [
+   63.59,
+   "sign",
+   "LEAVES"
+  ],
+  [
+   65.16,
+   "thinking dot",
+   "1"
+  ],
+  [
+   65.83,
+   "thinking dot",
+   "2"
+  ],
+  [
+   66.5,
+   "thinking dot",
+   "3"
+  ],
+  [
+   66.99,
+   "answer",
+   "ROOT"
+  ],
+  [
+   68.12,
+   "action",
+   "it appears"
+  ],
+  [
+   68.12,
+   "new shot",
+   "under the ground (cutaway) root grows down"
+  ],
+  [
+   69.57,
+   "action",
+   "the root grows down"
+  ],
+  [
+   69.93,
+   "word",
+   "DOWN!"
+  ],
+  [
+   71.88,
+   "action",
+   "it appears"
+  ],
+  [
+   71.88,
+   "new shot",
+   "under the ground (cutaway) shoot grows up"
+  ],
+  [
+   72.3,
+   "action",
+   "the shoot grows up"
+  ],
+  [
+   73.06,
+   "word",
+   "UP!"
+  ],
+  [
+   74.75,
+   "action",
+   "two little leaves"
+  ],
+  [
+   75.62,
+   "new place",
+   "Gizmo's lab down and up"
+  ],
+  [
+   75.78,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   75.78,
+   "word",
+   "DOWN!"
+  ],
+  [
+   78.0,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   78.0,
+   "word",
+   "UP!"
+  ],
+  [
+   79.69,
+   "new shot",
+   "Gizmo's lab say it"
+  ],
+  [
+   81.46,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   81.46,
+   "word",
+   "ROOT, DOWN!"
+  ],
+  [
+   82.23,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   82.23,
+   "word",
+   "SHOOT, UP!"
+  ],
+  [
+   83.12,
+   "action",
+   "it appears"
+  ],
+  [
+   83.12,
+   "new place",
+   "under the ground (cutaway) growing"
+  ],
+  [
+   83.47,
+   "action",
+   "a part lights up"
+  ],
+  [
+   84.76,
+   "action",
+   "a part lights up"
+  ],
+  [
+   86.34,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   86.34,
+   "word",
+   "IT GROWS!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gsoil",
+   "say": "What wakes up a seed, under the ground?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.3245,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.15
+    ],
+    [
+     "wakes",
+     0.15,
+     0.49
+    ],
+    [
+     "up",
+     0.49,
+     0.65
+    ],
+    [
+     "a",
+     0.65,
+     0.68
+    ],
+    [
+     "seed,",
+     0.68,
+     1.33
+    ],
+    [
+     "under",
+     1.33,
+     1.55
+    ],
+    [
+     "the",
+     1.55,
+     1.66
+    ],
+    [
+     "ground?",
+     1.66,
+     2.32
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: wake up a seed",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Now let's help our seed wake up. What does it need?",
+   "t0": 3.125,
+   "t1": 6.875,
+   "v0": 3.2845,
+   "dur": 3.3749166666666666,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.29
+    ],
+    [
+     "let's",
+     0.29,
+     0.59
+    ],
+    [
+     "help",
+     0.59,
+     0.87
+    ],
+    [
+     "our",
+     0.87,
+     0.98
+    ],
+    [
+     "seed",
+     0.98,
+     1.33
+    ],
+    [
+     "wake",
+     1.33,
+     1.65
+    ],
+    [
+     "up.",
+     1.65,
+     2.06
+    ],
+    [
+     "What",
+     2.34,
+     2.54
+    ],
+    [
+     "does",
+     2.54,
+     2.71
+    ],
+    [
+     "it",
+     2.71,
+     2.8
+    ],
+    [
+     "need?",
+     2.8,
+     3.37
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "window wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "First, water! Drip, drop, drip.",
+   "t0": 6.875,
+   "t1": 10.0,
+   "v0": 7.199416666666667,
+   "dur": 2.398083333333333,
+   "words": [
+    [
+     "First,",
+     0.0,
+     0.42
+    ],
+    [
+     "water!",
+     0.42,
+     0.95
+    ],
+    [
+     "Drip,",
+     1.2,
+     1.5
+    ],
+    [
+     "drop,",
+     1.5,
+     1.9
+    ],
+    [
+     "drip.",
+     1.9,
+     2.398
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Which seed will grow? The dry seed, or the seed with water?",
+   "t0": 10.0,
+   "t1": 17.5,
+   "v0": 10.1375,
+   "dur": 3.912166666666667,
+   "words": [
+    [
+     "Which",
+     0.01,
+     0.2
+    ],
+    [
+     "seed",
+     0.2,
+     0.5
+    ],
+    [
+     "will",
+     0.5,
+     0.72
+    ],
+    [
+     "grow?",
+     0.72,
+     1.23
+    ],
+    [
+     "The",
+     1.66,
+     1.74
+    ],
+    [
+     "dry",
+     1.74,
+     2.09
+    ],
+    [
+     "seed,",
+     2.09,
+     2.63
+    ],
+    [
+     "or",
+     2.63,
+     2.76
+    ],
+    [
+     "the",
+     2.76,
+     2.87
+    ],
+    [
+     "seed",
+     2.87,
+     3.22
+    ],
+    [
+     "with",
+     3.22,
+     3.42
+    ],
+    [
+     "water?",
+     3.42,
+     3.91
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The seed with water! Seeds need water to grow.",
+   "t0": 17.5,
+   "t1": 21.5625,
+   "v0": 17.78966666666667,
+   "dur": 3.3764166666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "seed",
+     0.09,
+     0.5
+    ],
+    [
+     "with",
+     0.5,
+     0.71
+    ],
+    [
+     "water!",
+     0.71,
+     1.26
+    ],
+    [
+     "Seeds",
+     1.6,
+     2.07
+    ],
+    [
+     "need",
+     2.07,
+     2.35
+    ],
+    [
+     "water",
+     2.35,
+     2.74
+    ],
+    [
+     "to",
+     2.74,
+     2.86
+    ],
+    [
+     "grow.",
+     2.86,
+     3.376
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "water wins",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The seed soaks up the water. Slurp!",
+   "t0": 21.5625,
+   "t1": 24.6875,
+   "v0": 21.70608333333334,
+   "dur": 2.6517916666666665,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.13
+    ],
+    [
+     "seed",
+     0.13,
+     0.57
+    ],
+    [
+     "soaks",
+     0.57,
+     0.93
+    ],
+    [
+     "up",
+     0.93,
+     1.07
+    ],
+    [
+     "the",
+     1.07,
+     1.16
+    ],
+    [
+     "water.",
+     1.16,
+     1.78
+    ],
+    [
+     "Slurp!",
+     2.04,
+     2.65
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "soaks up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Second, air! A seed needs air to grow.",
+   "t0": 24.6875,
+   "t1": 28.4375,
+   "v0": 24.89787500000001,
+   "dur": 3.046666666666667,
+   "words": [
+    [
+     "Second,",
+     0.0,
+     0.45
+    ],
+    [
+     "air!",
+     0.45,
+     0.92
+    ],
+    [
+     "A",
+     1.23,
+     1.3
+    ],
+    [
+     "seed",
+     1.3,
+     1.74
+    ],
+    [
+     "needs",
+     1.74,
+     2.11
+    ],
+    [
+     "air",
+     2.11,
+     2.33
+    ],
+    [
+     "to",
+     2.33,
+     2.46
+    ],
+    [
+     "grow.",
+     2.46,
+     3.047
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "air",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Third, just the right warmth. Not too cold!",
+   "t0": 28.4375,
+   "t1": 32.1875,
+   "v0": 28.48454166666668,
+   "dur": 3.22675,
+   "words": [
+    [
+     "Third,",
+     0.01,
+     0.51
+    ],
+    [
+     "just",
+     0.51,
+     0.77
+    ],
+    [
+     "the",
+     0.77,
+     0.84
+    ],
+    [
+     "right",
+     0.84,
+     1.13
+    ],
+    [
+     "warmth.",
+     1.13,
+     1.76
+    ],
+    [
+     "Not",
+     1.99,
+     2.28
+    ],
+    [
+     "too",
+     2.28,
+     2.55
+    ],
+    [
+     "cold!",
+     2.55,
+     3.227
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "warmth",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Water, air, and warmth. Count them! One, two, three!",
+   "t0": 32.1875,
+   "t1": 35.9375,
+   "v0": 32.251291666666674,
+   "dur": 3.4495,
+   "words": [
+    [
+     "Water,",
+     0.01,
+     0.56
+    ],
+    [
+     "air,",
+     0.56,
+     0.88
+    ],
+    [
+     "and",
+     0.88,
+     1.06
+    ],
+    [
+     "warmth.",
+     1.06,
+     1.55
+    ],
+    [
+     "Count",
+     1.55,
+     1.91
+    ],
+    [
+     "them!",
+     1.91,
+     2.38
+    ],
+    [
+     "One,",
+     2.38,
+     2.62
+    ],
+    [
+     "two,",
+     2.62,
+     2.9
+    ],
+    [
+     "three!",
+     2.9,
+     3.45
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count needs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Water, air, and warmth. That is what a seed needs to wake up!",
+   "t0": 35.9375,
+   "t1": 40.9375,
+   "v0": 36.240791666666674,
+   "dur": 4.380958333333333,
+   "words": [
+    [
+     "Water,",
+     0.01,
+     0.66
+    ],
+    [
+     "air,",
+     0.66,
+     1.04
+    ],
+    [
+     "and",
+     1.04,
+     1.31
+    ],
+    [
+     "warmth.",
+     1.31,
+     1.84
+    ],
+    [
+     "That",
+     2.28,
+     2.49
+    ],
+    [
+     "is",
+     2.49,
+     2.63
+    ],
+    [
+     "what",
+     2.63,
+     2.79
+    ],
+    [
+     "a",
+     2.79,
+     2.83
+    ],
+    [
+     "seed",
+     2.83,
+     3.33
+    ],
+    [
+     "needs",
+     3.33,
+     3.64
+    ],
+    [
+     "to",
+     3.64,
+     3.73
+    ],
+    [
+     "wake",
+     3.73,
+     4.05
+    ],
+    [
+     "up!",
+     4.05,
+     4.38
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "needs recap",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Does a seed need light to start growing? Yes, or no?",
+   "t0": 40.9375,
+   "t1": 48.4375,
+   "v0": 41.161750000000005,
+   "dur": 3.8630833333333334,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.16
+    ],
+    [
+     "a",
+     0.16,
+     0.2
+    ],
+    [
+     "seed",
+     0.2,
+     0.61
+    ],
+    [
+     "need",
+     0.61,
+     0.87
+    ],
+    [
+     "light",
+     0.87,
+     1.12
+    ],
+    [
+     "to",
+     1.12,
+     1.22
+    ],
+    [
+     "start",
+     1.22,
+     1.56
+    ],
+    [
+     "growing?",
+     1.56,
+     2.14
+    ],
+    [
+     "Yes,",
+     2.54,
+     3.06
+    ],
+    [
+     "or",
+     3.06,
+     3.36
+    ],
+    [
+     "no?",
+     3.36,
+     3.86
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "No! Most seeds start to grow in the dark, under the ground.",
+   "t0": 48.4375,
+   "t1": 53.125,
+   "v0": 48.76483333333334,
+   "dur": 3.887625,
+   "words": [
+    [
+     "No!",
+     0.0,
+     0.71
+    ],
+    [
+     "Most",
+     0.71,
+     0.99
+    ],
+    [
+     "seeds",
+     0.99,
+     1.47
+    ],
+    [
+     "start",
+     1.47,
+     1.76
+    ],
+    [
+     "to",
+     1.76,
+     1.86
+    ],
+    [
+     "grow",
+     1.86,
+     2.29
+    ],
+    [
+     "in",
+     2.29,
+     2.38
+    ],
+    [
+     "the",
+     2.38,
+     2.46
+    ],
+    [
+     "dark,",
+     2.46,
+     2.93
+    ],
+    [
+     "under",
+     2.93,
+     3.13
+    ],
+    [
+     "the",
+     3.13,
+     3.23
+    ],
+    [
+     "ground.",
+     3.23,
+     3.888
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "in the dark",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "I have an idea! Let's watch our seed under the ground.",
+   "t0": 53.125,
+   "t1": 57.1875,
+   "v0": 53.19245833333334,
+   "dur": 3.7165,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.13
+    ],
+    [
+     "have",
+     0.13,
+     0.36
+    ],
+    [
+     "an",
+     0.36,
+     0.48
+    ],
+    [
+     "idea!",
+     0.48,
+     1.25
+    ],
+    [
+     "Let's",
+     1.65,
+     1.89
+    ],
+    [
+     "watch",
+     1.89,
+     2.31
+    ],
+    [
+     "our",
+     2.31,
+     2.42
+    ],
+    [
+     "seed",
+     2.42,
+     2.85
+    ],
+    [
+     "under",
+     2.85,
+     3.02
+    ],
+    [
+     "the",
+     3.02,
+     3.11
+    ],
+    [
+     "ground.",
+     3.11,
+     3.716
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "idea",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Pop! The seed coat opens. Something is coming out.",
+   "t0": 57.1875,
+   "t1": 61.25,
+   "v0": 57.448958333333344,
+   "dur": 3.529916666666667,
+   "words": [
+    [
+     "Pop!",
+     0.0,
+     0.37
+    ],
+    [
+     "The",
+     0.37,
+     0.48
+    ],
+    [
+     "seed",
+     0.48,
+     0.81
+    ],
+    [
+     "coat",
+     0.81,
+     1.13
+    ],
+    [
+     "opens.",
+     1.13,
+     1.8
+    ],
+    [
+     "Something",
+     2.13,
+     2.64
+    ],
+    [
+     "is",
+     2.64,
+     2.77
+    ],
+    [
+     "coming",
+     2.77,
+     3.17
+    ],
+    [
+     "out.",
+     3.17,
+     3.53
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "coat opens",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Which comes out first? The root, or the leaves?",
+   "t0": 61.25,
+   "t1": 68.125,
+   "v0": 61.51887500000001,
+   "dur": 3.1495,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.24
+    ],
+    [
+     "comes",
+     0.24,
+     0.56
+    ],
+    [
+     "out",
+     0.56,
+     0.75
+    ],
+    [
+     "first?",
+     0.75,
+     1.35
+    ],
+    [
+     "The",
+     1.6,
+     1.72
+    ],
+    [
+     "root,",
+     1.72,
+     2.14
+    ],
+    [
+     "or",
+     2.14,
+     2.28
+    ],
+    [
+     "the",
+     2.28,
+     2.39
+    ],
+    [
+     "leaves?",
+     2.39,
+     3.15
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "The root! The root grows down, down, down.",
+   "t0": 68.125,
+   "t1": 71.875,
+   "v0": 68.40837500000002,
+   "dur": 3.0273333333333334,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "root!",
+     0.09,
+     0.82
+    ],
+    [
+     "The",
+     0.82,
+     0.9
+    ],
+    [
+     "root",
+     0.9,
+     1.16
+    ],
+    [
+     "grows",
+     1.16,
+     1.52
+    ],
+    [
+     "down,",
+     1.52,
+     1.98
+    ],
+    [
+     "down,",
+     1.98,
+     2.49
+    ],
+    [
+     "down.",
+     2.49,
+     3.027
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "root grows down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Then the shoot grows up, up, up, toward the light.",
+   "t0": 71.875,
+   "t1": 75.625,
+   "v0": 71.97570833333336,
+   "dur": 3.267125,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.26
+    ],
+    [
+     "the",
+     0.26,
+     0.32
+    ],
+    [
+     "shoot",
+     0.32,
+     0.69
+    ],
+    [
+     "grows",
+     0.69,
+     1.08
+    ],
+    [
+     "up,",
+     1.08,
+     1.68
+    ],
+    [
+     "up,",
+     1.68,
+     2.0
+    ],
+    [
+     "up,",
+     2.0,
+     2.34
+    ],
+    [
+     "toward",
+     2.34,
+     2.7
+    ],
+    [
+     "the",
+     2.7,
+     2.77
+    ],
+    [
+     "light.",
+     2.77,
+     3.267
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "shoot grows up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Point down, like a root! Now reach up, like a shoot!",
+   "t0": 75.625,
+   "t1": 79.6875,
+   "v0": 75.78283333333336,
+   "dur": 3.57975,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.31
+    ],
+    [
+     "down,",
+     0.31,
+     0.82
+    ],
+    [
+     "like",
+     0.82,
+     0.99
+    ],
+    [
+     "a",
+     0.99,
+     1.03
+    ],
+    [
+     "root!",
+     1.03,
+     1.57
+    ],
+    [
+     "Now",
+     1.99,
+     2.22
+    ],
+    [
+     "reach",
+     2.22,
+     2.55
+    ],
+    [
+     "up,",
+     2.55,
+     2.78
+    ],
+    [
+     "like",
+     2.78,
+     2.97
+    ],
+    [
+     "a",
+     2.97,
+     3.01
+    ],
+    [
+     "shoot!",
+     3.01,
+     3.58
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "down and up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Let's say it together. Root, down! Shoot, up!",
+   "t0": 79.6875,
+   "t1": 83.125,
+   "v0": 79.90258333333337,
+   "dur": 3.0137916666666666,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.32
+    ],
+    [
+     "say",
+     0.32,
+     0.49
+    ],
+    [
+     "it",
+     0.49,
+     0.61
+    ],
+    [
+     "together.",
+     0.61,
+     1.15
+    ],
+    [
+     "Root,",
+     1.56,
+     1.82
+    ],
+    [
+     "down!",
+     1.82,
+     2.33
+    ],
+    [
+     "Shoot,",
+     2.33,
+     2.69
+    ],
+    [
+     "up!",
+     2.69,
+     3.01
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Root goes down. Shoot goes up. Our seed is growing!",
+   "t0": 83.125,
+   "t1": 87.33670833333338,
+   "v0": 83.45637500000004,
+   "dur": 3.4603333333333333,
+   "words": [
+    [
+     "Root",
+     0.01,
+     0.29
+    ],
+    [
+     "goes",
+     0.29,
+     0.63
+    ],
+    [
+     "down.",
+     0.63,
+     1.3
+    ],
+    [
+     "Shoot",
+     1.3,
+     1.61
+    ],
+    [
+     "goes",
+     1.61,
+     1.96
+    ],
+    [
+     "up.",
+     1.96,
+     2.21
+    ],
+    [
+     "Our",
+     2.21,
+     2.41
+    ],
+    [
+     "seed",
+     2.41,
+     2.76
+    ],
+    [
+     "is",
+     2.76,
+     2.88
+    ],
+    [
+     "growing!",
+     2.88,
+     3.46
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "growing",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

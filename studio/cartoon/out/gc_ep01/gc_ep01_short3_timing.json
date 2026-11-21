@@ -1,0 +1,1944 @@
+{
+ "id": "gc_ep01_short3",
+ "total": 87.54637500000004,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5
+ ],
+ "plan": {
+  "length": 87.5,
+  "shots": 20,
+  "visual_changes": 100,
+  "mean_gap": 0.88,
+  "longest_gap": 4.56,
+  "longest_gap_at": 42.0,
+  "over_6s": [],
+  "places": [
+   "ggarden",
+   "gsoil",
+   "gmeadow"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 8,
+  "longest_without_question": 19.1,
+  "first_words_at": 0.42,
+  "shot_mean": 4.38,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "187/187",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 32.9,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 19,
+   "cuts_on_the_half_beat": 19,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "Gizmo's garden hook: how a plant eats"
+  ],
+  [
+   0.3,
+   "action",
+   "a part lights up"
+  ],
+  [
+   1.32,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "Gizmo's garden garden wide"
+  ],
+  [
+   4.32,
+   "action",
+   "the shoot pokes out"
+  ],
+  [
+   5.96,
+   "action",
+   "it appears"
+  ],
+  [
+   5.96,
+   "word",
+   "HELLO, SUN!"
+  ],
+  [
+   6.88,
+   "new shot",
+   "Gizmo's garden seed leaves"
+  ],
+  [
+   7.92,
+   "word",
+   "SEED LEAVES"
+  ],
+  [
+   8.26,
+   "action",
+   "the seed leaves open"
+  ],
+  [
+   10.94,
+   "new place",
+   "the picture board (blueprint) leaf kitchen"
+  ],
+  [
+   12.46,
+   "word",
+   "A KITCHEN!"
+  ],
+  [
+   13.89,
+   "action",
+   "food appears on the leaf"
+  ],
+  [
+   15.62,
+   "new shot",
+   "the picture board (blueprint) sun air water"
+  ],
+  [
+   16.24,
+   "picture",
+   "sun"
+  ],
+  [
+   17.23,
+   "picture",
+   "pf"
+  ],
+  [
+   17.9,
+   "picture",
+   "dr"
+  ],
+  [
+   18.33,
+   "action",
+   "food appears"
+  ],
+  [
+   18.33,
+   "word",
+   "FOOD!"
+  ],
+  [
+   19.06,
+   "new place",
+   "Gizmo's garden question 5"
+  ],
+  [
+   21.67,
+   "sign",
+   "MAKES IT"
+  ],
+  [
+   22.02,
+   "sign",
+   "A SHOP"
+  ],
+  [
+   23.77,
+   "thinking dot",
+   "1"
+  ],
+  [
+   24.44,
+   "thinking dot",
+   "2"
+  ],
+  [
+   25.12,
+   "thinking dot",
+   "3"
+  ],
+  [
+   25.6,
+   "answer",
+   "MAKES IT"
+  ],
+  [
+   25.65,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   26.88,
+   "new shot",
+   "Gizmo's garden clever plant"
+  ],
+  [
+   27.95,
+   "action",
+   "a part lights up"
+  ],
+  [
+   29.79,
+   "word",
+   "CLEVER!"
+  ],
+  [
+   31.25,
+   "action",
+   "it appears"
+  ],
+  [
+   31.25,
+   "new place",
+   "under the ground (cutaway) roots drink"
+  ],
+  [
+   31.57,
+   "action",
+   "a part lights up"
+  ],
+  [
+   33.09,
+   "picture",
+   "w0"
+  ],
+  [
+   33.09,
+   "word",
+   "WATER IN!"
+  ],
+  [
+   33.84,
+   "picture",
+   "w1"
+  ],
+  [
+   34.69,
+   "action",
+   "it appears"
+  ],
+  [
+   34.69,
+   "new shot",
+   "under the ground (cutaway) water goes up"
+  ],
+  [
+   35.51,
+   "action",
+   "a drop travels up the plant"
+  ],
+  [
+   35.81,
+   "word",
+   "UP IT GOES!"
+  ],
+  [
+   37.81,
+   "action",
+   "it appears"
+  ],
+  [
+   37.81,
+   "new shot",
+   "under the ground (cutaway) name the parts"
+  ],
+  [
+   39.51,
+   "action",
+   "a part lights up"
+  ],
+  [
+   39.51,
+   "word",
+   "ROOT"
+  ],
+  [
+   39.88,
+   "action",
+   "a part lights up"
+  ],
+  [
+   39.88,
+   "word",
+   "STEM"
+  ],
+  [
+   40.45,
+   "action",
+   "a part lights up"
+  ],
+  [
+   40.45,
+   "word",
+   "LEAVES"
+  ],
+  [
+   41.56,
+   "new place",
+   "Gizmo's garden slurp"
+  ],
+  [
+   42.0,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   42.0,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   42.0,
+   "word",
+   "SLURP!"
+  ],
+  [
+   46.56,
+   "new place",
+   "the flower meadow meadow taller"
+  ],
+  [
+   48.94,
+   "action",
+   "it appears"
+  ],
+  [
+   48.94,
+   "action",
+   "the plant grows taller"
+  ],
+  [
+   48.94,
+   "word",
+   "TALLER!"
+  ],
+  [
+   50.94,
+   "action",
+   "it appears"
+  ],
+  [
+   50.94,
+   "new shot",
+   "the flower meadow flower opens"
+  ],
+  [
+   51.58,
+   "action",
+   "the flower opens"
+  ],
+  [
+   53.06,
+   "word",
+   "HELLO!"
+  ],
+  [
+   54.69,
+   "action",
+   "it appears"
+  ],
+  [
+   54.69,
+   "action",
+   "it appears"
+  ],
+  [
+   54.69,
+   "new shot",
+   "the flower meadow flowers make seeds"
+  ],
+  [
+   56.37,
+   "action",
+   "a part lights up"
+  ],
+  [
+   56.37,
+   "word",
+   "NEW SEEDS!"
+  ],
+  [
+   57.5,
+   "action",
+   "it appears"
+  ],
+  [
+   57.5,
+   "action",
+   "it appears"
+  ],
+  [
+   57.5,
+   "new shot",
+   "the flower meadow count seeds"
+  ],
+  [
+   59.49,
+   "picture",
+   "s0"
+  ],
+  [
+   59.72,
+   "picture",
+   "s1"
+  ],
+  [
+   60.0,
+   "picture",
+   "s2"
+  ],
+  [
+   60.0,
+   "word",
+   "3"
+  ],
+  [
+   60.94,
+   "new place",
+   "the picture board (blueprint) cycle"
+  ],
+  [
+   61.12,
+   "action",
+   "a part lights up"
+  ],
+  [
+   62.07,
+   "action",
+   "a part lights up"
+  ],
+  [
+   62.74,
+   "action",
+   "a part lights up"
+  ],
+  [
+   63.77,
+   "action",
+   "a part lights up"
+  ],
+  [
+   63.77,
+   "action",
+   "a part lights up"
+  ],
+  [
+   63.77,
+   "word",
+   "ROUND!"
+  ],
+  [
+   65.31,
+   "action",
+   "it appears"
+  ],
+  [
+   65.31,
+   "action",
+   "it appears"
+  ],
+  [
+   65.31,
+   "new place",
+   "the flower meadow question 6"
+  ],
+  [
+   67.97,
+   "sign",
+   "FLOWER"
+  ],
+  [
+   68.32,
+   "sign",
+   "ROCK"
+  ],
+  [
+   70.1,
+   "thinking dot",
+   "1"
+  ],
+  [
+   70.78,
+   "thinking dot",
+   "2"
+  ],
+  [
+   71.45,
+   "thinking dot",
+   "3"
+  ],
+  [
+   71.94,
+   "answer",
+   "FLOWER"
+  ],
+  [
+   73.12,
+   "action",
+   "it appears"
+  ],
+  [
+   73.12,
+   "action",
+   "it appears"
+  ],
+  [
+   73.12,
+   "new shot",
+   "the flower meadow flower answer"
+  ],
+  [
+   73.42,
+   "action",
+   "a part lights up"
+  ],
+  [
+   73.42,
+   "word",
+   "A FLOWER!"
+  ],
+  [
+   76.88,
+   "new shot",
+   "the flower meadow stretch"
+  ],
+  [
+   76.97,
+   "action",
+   "Gizmo opens his arms wide"
+  ],
+  [
+   77.92,
+   "word",
+   "STRETCH!"
+  ],
+  [
+   81.56,
+   "new shot",
+   "the flower meadow shine"
+  ],
+  [
+   81.7,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   84.6,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   84.6,
+   "word",
+   "SHINE!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "ggarden",
+   "say": "How does a plant eat, with no mouth?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.2794166666666666,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.17
+    ],
+    [
+     "does",
+     0.17,
+     0.3
+    ],
+    [
+     "a",
+     0.3,
+     0.35
+    ],
+    [
+     "plant",
+     0.35,
+     0.9
+    ],
+    [
+     "eat,",
+     0.9,
+     1.23
+    ],
+    [
+     "with",
+     1.23,
+     1.43
+    ],
+    [
+     "no",
+     1.43,
+     1.63
+    ],
+    [
+     "mouth?",
+     1.63,
+     2.279
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: how a plant eats",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ggarden",
+   "say": "Look! Our shoot pokes out of the soil, into the sun.",
+   "t0": 3.125,
+   "t1": 6.875,
+   "v0": 3.2394166666666666,
+   "dur": 3.279,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.55
+    ],
+    [
+     "Our",
+     0.55,
+     0.72
+    ],
+    [
+     "shoot",
+     0.72,
+     1.08
+    ],
+    [
+     "pokes",
+     1.08,
+     1.43
+    ],
+    [
+     "out",
+     1.43,
+     1.53
+    ],
+    [
+     "of",
+     1.53,
+     1.62
+    ],
+    [
+     "the",
+     1.62,
+     1.69
+    ],
+    [
+     "soil,",
+     1.69,
+     2.35
+    ],
+    [
+     "into",
+     2.35,
+     2.59
+    ],
+    [
+     "the",
+     2.59,
+     2.72
+    ],
+    [
+     "sun.",
+     2.72,
+     3.279
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "garden wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ggarden",
+   "say": "Two little seed leaves open, and they start making food.",
+   "t0": 6.875,
+   "t1": 10.9375,
+   "v0": 7.058416666666667,
+   "dur": 3.6155416666666667,
+   "words": [
+    [
+     "Two",
+     0.0,
+     0.18
+    ],
+    [
+     "little",
+     0.18,
+     0.4
+    ],
+    [
+     "seed",
+     0.4,
+     0.86
+    ],
+    [
+     "leaves",
+     0.86,
+     1.2
+    ],
+    [
+     "open,",
+     1.2,
+     1.76
+    ],
+    [
+     "and",
+     2.08,
+     2.21
+    ],
+    [
+     "they",
+     2.21,
+     2.31
+    ],
+    [
+     "start",
+     2.31,
+     2.65
+    ],
+    [
+     "making",
+     2.65,
+     2.99
+    ],
+    [
+     "food.",
+     2.99,
+     3.61
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "seed leaves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A leaf is like a little kitchen. It makes food for the plant!",
+   "t0": 10.9375,
+   "t1": 15.625,
+   "v0": 11.213958333333332,
+   "dur": 4.032125,
+   "words": [
+    [
+     "A",
+     0.0,
+     0.1
+    ],
+    [
+     "leaf",
+     0.1,
+     0.58
+    ],
+    [
+     "is",
+     0.58,
+     0.73
+    ],
+    [
+     "like",
+     0.73,
+     0.95
+    ],
+    [
+     "a",
+     0.95,
+     0.99
+    ],
+    [
+     "little",
+     0.99,
+     1.25
+    ],
+    [
+     "kitchen.",
+     1.25,
+     1.89
+    ],
+    [
+     "It",
+     2.27,
+     2.37
+    ],
+    [
+     "makes",
+     2.37,
+     2.68
+    ],
+    [
+     "food",
+     2.68,
+     3.14
+    ],
+    [
+     "for",
+     3.14,
+     3.29
+    ],
+    [
+     "the",
+     3.29,
+     3.38
+    ],
+    [
+     "plant!",
+     3.38,
+     4.03
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "leaf kitchen",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It uses sunlight, air, and water to make it.",
+   "t0": 15.625,
+   "t1": 19.0625,
+   "v0": 15.78608333333333,
+   "dur": 3.07,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.12
+    ],
+    [
+     "uses",
+     0.12,
+     0.45
+    ],
+    [
+     "sunlight,",
+     0.45,
+     1.12
+    ],
+    [
+     "air,",
+     1.44,
+     1.91
+    ],
+    [
+     "and",
+     1.91,
+     2.11
+    ],
+    [
+     "water",
+     2.11,
+     2.42
+    ],
+    [
+     "to",
+     2.42,
+     2.54
+    ],
+    [
+     "make",
+     2.54,
+     2.86
+    ],
+    [
+     "it.",
+     2.86,
+     3.02
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "sun air water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ggarden",
+   "say": "Where does a plant get its food? It makes it, or from a shop?",
+   "t0": 19.0625,
+   "t1": 26.875,
+   "v0": 19.396083333333333,
+   "dur": 3.886125,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.15
+    ],
+    [
+     "does",
+     0.15,
+     0.29
+    ],
+    [
+     "a",
+     0.29,
+     0.35
+    ],
+    [
+     "plant",
+     0.35,
+     0.79
+    ],
+    [
+     "get",
+     0.79,
+     0.97
+    ],
+    [
+     "its",
+     0.97,
+     1.12
+    ],
+    [
+     "food?",
+     1.12,
+     1.74
+    ],
+    [
+     "It",
+     2.16,
+     2.27
+    ],
+    [
+     "makes",
+     2.27,
+     2.64
+    ],
+    [
+     "it,",
+     2.64,
+     2.78
+    ],
+    [
+     "or",
+     2.78,
+     3.0
+    ],
+    [
+     "from",
+     3.0,
+     3.2
+    ],
+    [
+     "a",
+     3.2,
+     3.23
+    ],
+    [
+     "shop?",
+     3.23,
+     3.886
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 5",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ggarden",
+   "say": "It makes it, with its leaves and sunlight. Clever plant!",
+   "t0": 26.875,
+   "t1": 31.25,
+   "v0": 27.022208333333335,
+   "dur": 3.7579583333333333,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.11
+    ],
+    [
+     "makes",
+     0.11,
+     0.46
+    ],
+    [
+     "it,",
+     0.46,
+     0.56
+    ],
+    [
+     "with",
+     0.56,
+     0.76
+    ],
+    [
+     "its",
+     0.76,
+     0.93
+    ],
+    [
+     "leaves",
+     0.93,
+     1.54
+    ],
+    [
+     "and",
+     1.54,
+     1.66
+    ],
+    [
+     "sunlight.",
+     1.66,
+     2.38
+    ],
+    [
+     "Clever",
+     2.77,
+     3.14
+    ],
+    [
+     "plant!",
+     3.14,
+     3.758
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "clever plant",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "And the roots? They take in water from the soil.",
+   "t0": 31.25,
+   "t1": 34.6875,
+   "v0": 31.320166666666672,
+   "dur": 3.1630833333333332,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.19
+    ],
+    [
+     "the",
+     0.19,
+     0.25
+    ],
+    [
+     "roots?",
+     0.25,
+     0.91
+    ],
+    [
+     "They",
+     1.17,
+     1.35
+    ],
+    [
+     "take",
+     1.35,
+     1.66
+    ],
+    [
+     "in",
+     1.66,
+     1.77
+    ],
+    [
+     "water",
+     1.77,
+     2.22
+    ],
+    [
+     "from",
+     2.22,
+     2.45
+    ],
+    [
+     "the",
+     2.45,
+     2.52
+    ],
+    [
+     "soil.",
+     2.52,
+     3.16
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "roots drink",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "The water goes up, all through the plant.",
+   "t0": 34.6875,
+   "t1": 37.8125,
+   "v0": 35.023250000000004,
+   "dur": 2.527416666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "water",
+     0.09,
+     0.49
+    ],
+    [
+     "goes",
+     0.49,
+     0.79
+    ],
+    [
+     "up,",
+     0.79,
+     1.3
+    ],
+    [
+     "all",
+     1.3,
+     1.54
+    ],
+    [
+     "through",
+     1.54,
+     1.84
+    ],
+    [
+     "the",
+     1.84,
+     1.92
+    ],
+    [
+     "plant.",
+     1.92,
+     2.527
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "water goes up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsoil",
+   "say": "Let's name the parts. Root! Stem! Leaves!",
+   "t0": 37.8125,
+   "t1": 41.5625,
+   "v0": 38.09066666666667,
+   "dur": 3.0978333333333334,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.31
+    ],
+    [
+     "name",
+     0.31,
+     0.55
+    ],
+    [
+     "the",
+     0.55,
+     0.63
+    ],
+    [
+     "parts.",
+     0.63,
+     1.19
+    ],
+    [
+     "Root!",
+     1.42,
+     1.79
+    ],
+    [
+     "Stem!",
+     1.79,
+     2.36
+    ],
+    [
+     "Leaves!",
+     2.36,
+     3.098
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "name the parts",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ggarden",
+   "say": "Can you slurp like a thirsty root? Slurp, slurp!",
+   "t0": 41.5625,
+   "t1": 46.5625,
+   "v0": 41.728500000000004,
+   "dur": 3.379583333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.27
+    ],
+    [
+     "slurp",
+     0.27,
+     0.7
+    ],
+    [
+     "like",
+     0.7,
+     0.88
+    ],
+    [
+     "a",
+     0.88,
+     0.94
+    ],
+    [
+     "thirsty",
+     0.94,
+     1.5
+    ],
+    [
+     "root?",
+     1.5,
+     1.91
+    ],
+    [
+     "Slurp,",
+     2.22,
+     2.72
+    ],
+    [
+     "slurp!",
+     2.72,
+     3.38
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "slurp",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Days go by. The plant grows taller, with more leaves.",
+   "t0": 46.5625,
+   "t1": 50.9375,
+   "v0": 46.64808333333334,
+   "dur": 3.997708333333333,
+   "words": [
+    [
+     "Days",
+     0.01,
+     0.4
+    ],
+    [
+     "go",
+     0.4,
+     0.6
+    ],
+    [
+     "by.",
+     0.6,
+     1.07
+    ],
+    [
+     "The",
+     1.46,
+     1.54
+    ],
+    [
+     "plant",
+     1.54,
+     1.94
+    ],
+    [
+     "grows",
+     1.94,
+     2.29
+    ],
+    [
+     "taller,",
+     2.29,
+     2.84
+    ],
+    [
+     "with",
+     2.84,
+     3.03
+    ],
+    [
+     "more",
+     3.03,
+     3.28
+    ],
+    [
+     "leaves.",
+     3.28,
+     3.998
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "meadow taller",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Then, a flower opens! Hello, flower!",
+   "t0": 50.9375,
+   "t1": 54.6875,
+   "v0": 51.185791666666674,
+   "dur": 3.007791666666667,
+   "words": [
+    [
+     "Then,",
+     0.0,
+     0.35
+    ],
+    [
+     "a",
+     0.35,
+     0.39
+    ],
+    [
+     "flower",
+     0.39,
+     0.91
+    ],
+    [
+     "opens!",
+     0.91,
+     1.58
+    ],
+    [
+     "Hello,",
+     1.87,
+     2.3
+    ],
+    [
+     "flower!",
+     2.3,
+     3.008
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "flower opens",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Flowers help plants make new seeds.",
+   "t0": 54.6875,
+   "t1": 57.5,
+   "v0": 54.73358333333334,
+   "dur": 2.35625,
+   "words": [
+    [
+     "Flowers",
+     0.0,
+     0.51
+    ],
+    [
+     "help",
+     0.51,
+     0.77
+    ],
+    [
+     "plants",
+     0.77,
+     1.18
+    ],
+    [
+     "make",
+     1.18,
+     1.41
+    ],
+    [
+     "new",
+     1.41,
+     1.64
+    ],
+    [
+     "seeds.",
+     1.64,
+     2.356
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "flowers make seeds",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Count the new seeds with me. One, two, three!",
+   "t0": 57.5,
+   "t1": 60.9375,
+   "v0": 57.629833333333345,
+   "dur": 2.947,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.25
+    ],
+    [
+     "the",
+     0.25,
+     0.32
+    ],
+    [
+     "new",
+     0.32,
+     0.51
+    ],
+    [
+     "seeds",
+     0.51,
+     0.96
+    ],
+    [
+     "with",
+     0.96,
+     1.16
+    ],
+    [
+     "me.",
+     1.16,
+     1.46
+    ],
+    [
+     "One,",
+     1.86,
+     2.09
+    ],
+    [
+     "two,",
+     2.09,
+     2.37
+    ],
+    [
+     "three!",
+     2.37,
+     2.947
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count seeds",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "New seeds can grow into new plants. Round and round!",
+   "t0": 60.9375,
+   "t1": 65.3125,
+   "v0": 61.116833333333346,
+   "dur": 3.925375,
+   "words": [
+    [
+     "New",
+     0.0,
+     0.22
+    ],
+    [
+     "seeds",
+     0.22,
+     0.73
+    ],
+    [
+     "can",
+     0.73,
+     0.95
+    ],
+    [
+     "grow",
+     0.95,
+     1.26
+    ],
+    [
+     "into",
+     1.26,
+     1.43
+    ],
+    [
+     "new",
+     1.43,
+     1.62
+    ],
+    [
+     "plants.",
+     1.62,
+     2.29
+    ],
+    [
+     "Round",
+     2.65,
+     3.15
+    ],
+    [
+     "and",
+     3.15,
+     3.28
+    ],
+    [
+     "round!",
+     3.28,
+     3.92
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "cycle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "What helps a plant make new seeds? A flower, or a rock?",
+   "t0": 65.3125,
+   "t1": 73.125,
+   "v0": 65.58220833333336,
+   "dur": 4.03325,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.17
+    ],
+    [
+     "helps",
+     0.17,
+     0.44
+    ],
+    [
+     "a",
+     0.44,
+     0.49
+    ],
+    [
+     "plant",
+     0.49,
+     0.87
+    ],
+    [
+     "make",
+     0.87,
+     1.06
+    ],
+    [
+     "new",
+     1.06,
+     1.25
+    ],
+    [
+     "seeds?",
+     1.25,
+     1.95
+    ],
+    [
+     "A",
+     2.34,
+     2.39
+    ],
+    [
+     "flower,",
+     2.39,
+     3.14
+    ],
+    [
+     "or",
+     3.14,
+     3.38
+    ],
+    [
+     "a",
+     3.38,
+     3.41
+    ],
+    [
+     "rock?",
+     3.41,
+     4.03
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 6",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "A flower! It helps the plant make new seeds.",
+   "t0": 73.125,
+   "t1": 76.875,
+   "v0": 73.35545833333336,
+   "dur": 3.0692916666666665,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "flower!",
+     0.06,
+     1.0
+    ],
+    [
+     "It",
+     1.0,
+     1.13
+    ],
+    [
+     "helps",
+     1.13,
+     1.44
+    ],
+    [
+     "the",
+     1.44,
+     1.53
+    ],
+    [
+     "plant",
+     1.53,
+     1.91
+    ],
+    [
+     "make",
+     1.91,
+     2.11
+    ],
+    [
+     "new",
+     2.11,
+     2.32
+    ],
+    [
+     "seeds.",
+     2.32,
+     3.069
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "flower answer",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Stretch your arms wide, like big green leaves!",
+   "t0": 76.875,
+   "t1": 81.5625,
+   "v0": 76.96475000000004,
+   "dur": 3.1995416666666667,
+   "words": [
+    [
+     "Stretch",
+     0.01,
+     0.39
+    ],
+    [
+     "your",
+     0.39,
+     0.54
+    ],
+    [
+     "arms",
+     0.54,
+     0.96
+    ],
+    [
+     "wide,",
+     0.96,
+     1.71
+    ],
+    [
+     "like",
+     1.71,
+     1.92
+    ],
+    [
+     "big",
+     1.92,
+     2.21
+    ],
+    [
+     "green",
+     2.21,
+     2.55
+    ],
+    [
+     "leaves!",
+     2.55,
+     3.2
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "stretch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gmeadow",
+   "say": "Wiggle your fingers, like warm sunshine. Shine, shine!",
+   "t0": 81.5625,
+   "t1": 87.14637500000003,
+   "v0": 81.7042916666667,
+   "dur": 4.022083333333334,
+   "words": [
+    [
+     "Wiggle",
+     0.0,
+     0.36
+    ],
+    [
+     "your",
+     0.36,
+     0.53
+    ],
+    [
+     "fingers,",
+     0.53,
+     1.13
+    ],
+    [
+     "like",
+     1.13,
+     1.34
+    ],
+    [
+     "warm",
+     1.34,
+     1.73
+    ],
+    [
+     "sunshine.",
+     1.73,
+     2.51
+    ],
+    [
+     "Shine,",
+     2.9,
+     3.39
+    ],
+    [
+     "shine!",
+     3.39,
+     4.02
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "shine",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

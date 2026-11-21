@@ -259,7 +259,8 @@ def main():
             check(f"{c}: no long silence the English does not have", info["longest_stretch_without_voice_s"] <= longest_silence(voice_en_spoken) + 0.8, f"{info['longest_stretch_without_voice_s']} s (English {longest_silence(voice_en_spoken):.2f} s)")
             info["translator_notes"] = tr[c].get("translator_notes", []); info["line_table"] = [{k: f.get(k) for k in ("v0", "who", "voice", "seconds", "slot", "speed", "text", "english")} for f in F]
         q, nobom = read_srt(os.path.join(pk, "captions", f"captions-{c}.srt")); order = all(q[k][0] < q[k][1] and (k == 0 or q[k - 1][1] <= q[k][0] + 1e-6) for k in range(len(q)))
-        starts = [s["v0"] + (s["words"][0][1] if c == default and s["words"] else 0) for s in spoken]; off = max(min(abs(cu[0] - st) for cu in q) for st in starts)
+        worded = [s for s in spoken if s["words"]]      # a tune played by instruments ("~" only: a song moment, the main intro's timing shots) has no words and no caption
+        starts = [s["v0"] + (s["words"][0][1] if c == default else 0) for s in worded]; off = max(min(abs(cu[0] - st) for cu in q) for st in starts)
         rows = max(len(r) for cu in q for r in cu[2].split("\n")); info.update(captions=f"captions/captions-{c}.srt", cues=len(q), longest_caption_row=rows)
         check(f"{c}: captions are UTF-8, in order, and every line's first caption starts with its voice", nobom and order and off < 0.06, f"{len(q)} cues, largest start difference {off * 1000:.0f} ms, longest row {rows} letters")
         rep["languages"][c] = info

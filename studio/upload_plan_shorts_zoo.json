@@ -11,7 +11,10 @@
   "status": "scheduled",
   "format": "3d_short_test",
   "thumb": null,
-  "video_id": "z_UeONqpcQ0"
+  "video_id": "z_UeONqpcQ0",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_giraffe_eat.mp4",
@@ -25,7 +28,10 @@
   "status": "scheduled",
   "format": "3d_short_test",
   "thumb": null,
-  "video_id": "9WvKWgo0qi4"
+  "video_id": "9WvKWgo0qi4",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_elephant_eat.mp4",
@@ -39,7 +45,10 @@
   "status": "scheduled",
   "format": "3d_short_test",
   "thumb": null,
-  "video_id": "PpzAEHzEtQg"
+  "video_id": "PpzAEHzEtQg",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_mama_hook.mp4",
@@ -56,7 +65,10 @@
   "video_id": "LQYmUf0PMgg",
   "thumb_text": "WHO IS HIDING?",
   "thumb_set": false,
-  "thumb_note": "already public when thumbnails became mandatory (Nov 14); file is ready, set it if Noelson says so"
+  "thumb_note": "already public when thumbnails became mandatory (Nov 14); file is ready, set it if Noelson says so",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_home_hippo.mp4",
@@ -73,7 +85,10 @@
   "video_id": "bxGO367Jkgo",
   "scheduled_on": "2026-11-14",
   "thumb_text": "SPLASH SPLASH!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_sleep_giraffe.mp4",
@@ -90,7 +105,10 @@
   "video_id": "i4rqbji991k",
   "scheduled_on": "2026-11-14",
   "thumb_text": "NO PILLOW!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_mama_elephant.mp4",
@@ -106,7 +124,10 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_mama_elephant.png",
   "video_id": "l2wpBUcjXC4",
   "thumb_text": "FOUND YOU!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_baby_cub.mp4",
@@ -123,7 +144,10 @@
   "video_id": "pc0zAY86lcE",
   "scheduled_on": "2026-11-14",
   "thumb_text": "TINY ROAR!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_home_action.mp4",
@@ -140,7 +164,10 @@
   "video_id": "Cq7yX_gDLzk",
   "scheduled_on": "2026-11-14",
   "thumb_text": "TWIG BY TWIG!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_lion_sleep.mp4",
@@ -156,7 +183,10 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_lion_sleep.png",
   "video_id": "qo1yYmWfPbo",
   "thumb_text": "BIG YAWN!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_baby_foal.mp4",
@@ -172,7 +202,10 @@
   "thumb": "brand/zoo/shorts/thumb_zs3d_baby_foal.png",
   "video_id": "1hWZMJUm1eA",
   "thumb_text": "LITTLE STRIPES!",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs3d_sleep_zebra.mp4",
@@ -406,7 +439,10 @@
   "date": "2026-11-17",
   "time": "11:30 AM",
   "video_id": "aNdFX35OUMU",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_pig_mud.mp4",
@@ -436,7 +472,10 @@
   "watermark": "top",
   "video_id": "IV3TzHjRQMM",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_koala_notbear.mp4",
@@ -466,7 +505,10 @@
   "watermark": "top",
   "video_id": "jGkxqn4Dyvc",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_tiger_skin.mp4",
@@ -494,7 +536,10 @@
   "date": "2026-11-17",
   "time": "7:30 PM",
   "video_id": "8egrAUdIMVY",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_bear_cub.mp4",
@@ -522,7 +567,10 @@
   "date": "2026-11-17",
   "time": "7:30 AM",
   "video_id": "3e6ZuMoRujM",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep01_short1.mp4",
@@ -565,7 +613,10 @@
    "1Jbwfw5xDYY",
    "52oYu9SobqY"
   ],
-  "deleted_on": "2026-11-17 (owner: remove all videos set private)"
+  "deleted_on": "2026-11-17 (owner: remove all videos set private)",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep01_short2.mp4",
@@ -596,7 +647,10 @@
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
   "video_id": "9d7ygtHY-DE",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep01_short3.mp4",
@@ -627,7 +681,10 @@
   "note": "cartoon format approved by Noelson Nov 16 3:36 PM (\"cartoon formats are approved, build and post\")",
   "video_id": "HKkWsJSdmFU",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep02_short1.mp4",
@@ -658,7 +715,10 @@
   "seconds": 86.2,
   "video_id": "9Y5wSB_HOzg",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep02_short2.mp4",
@@ -690,7 +750,10 @@
   "note": "rendered again Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS",
   "video_id": "0wwPKKeLFD4",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep02_short3.mp4",
@@ -722,7 +785,10 @@
   "note": "rendered Nov 16 with the first-frame camera fix; frames looked at (first frame included), 4K, watermark, pace and review.py PASS",
   "video_id": "mATYaS3W7fE",
   "thumb_set": true,
-  "scheduled_on": "2026-11-16"
+  "scheduled_on": "2026-11-16",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_polar_paws.mp4",
@@ -752,7 +818,10 @@
   "time": "7:30 AM",
   "video_id": "btWYy6HeuS4",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_tiger_claws.mp4",
@@ -782,7 +851,10 @@
   "time": "7:30 PM",
   "video_id": "xyTtEONlhKg",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_lion_tuft.mp4",
@@ -812,7 +884,10 @@
   "time": "11:30 AM",
   "video_id": "J32cKF1dCnY",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "shorts3d/zs90_elephant_ears.mp4",
@@ -842,7 +917,10 @@
   "time": "7:30 PM",
   "video_id": "s1F3xrNm2iY",
   "scheduled_on": "2026-11-17",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep03_short1.mp4",
@@ -872,7 +950,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "AFRICA?!",
-  "seconds": 86.7
+  "seconds": 86.7,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep03_short2.mp4",
@@ -902,7 +983,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "SO COOL!",
-  "seconds": 89.3
+  "seconds": 89.3,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep03_short3.mp4",
@@ -932,7 +1016,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "SPLASH!",
-  "seconds": 88.0
+  "seconds": 88.0,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep04_short1.mp4",
@@ -964,7 +1051,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "EXTRA HAND!",
-  "seconds": 88.1
+  "seconds": 88.1,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep04_short2.mp4",
@@ -996,7 +1086,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "SNACK TIME!",
-  "seconds": 87.3
+  "seconds": 87.3,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep04_short3.mp4",
@@ -1028,7 +1121,10 @@
   "seconds": 86.5,
   "video_id": "VJLdIpc6DUM",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep05_short1.mp4",
@@ -1150,7 +1246,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "GREEN OR GOLDEN?",
-  "seconds": 87.0
+  "seconds": 87.0,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep06_short2.mp4",
@@ -1182,7 +1281,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "LUNCH TIME!",
-  "seconds": 87.9
+  "seconds": 87.9,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep06_short3.mp4",
@@ -1214,7 +1316,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "PLOP, PLOP!",
-  "seconds": 86.6
+  "seconds": 86.6,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep07_short1.mp4",
@@ -1247,7 +1352,10 @@
   "thumb_text": "MOUTH OR TRUNK?",
   "video_id": "aXYL9kYmsL4",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep07_short2.mp4",
@@ -1280,7 +1388,10 @@
   "thumb_text": "BIG HELPERS!",
   "video_id": "7f5tgx5y8b0",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep07_short3.mp4",
@@ -1313,7 +1424,10 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ],
-  "thumb_text": "FOLLOW GRANDMA!"
+  "thumb_text": "FOLLOW GRANDMA!",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep08_short1.mp4",
@@ -1342,7 +1456,10 @@
   "seconds": 90.1,
   "video_id": "35lIdFvap8U",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep08_short2.mp4",
@@ -1372,7 +1489,10 @@
   "seconds": 87.7,
   "video_id": "vMSzqSRHf98",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep08_short3.mp4",
@@ -1401,7 +1521,10 @@
   "seconds": 87.2,
   "video_id": "gEASfQ_Onl0",
   "scheduled_on": "2026-11-19",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep09_short1.mp4",
@@ -1430,7 +1553,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "MUNCH, MUNCH!",
-  "seconds": 88.3
+  "seconds": 88.3,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep09_short2.mp4",
@@ -1459,7 +1585,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "TOUGH LIPS!",
-  "seconds": 88.3
+  "seconds": 88.3,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep09_short3.mp4",
@@ -1488,7 +1617,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "SALTY SNACK!",
-  "seconds": 88.3
+  "seconds": 88.3,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep10_short1.mp4",
@@ -1518,6 +1650,9 @@
    "animal facts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
+  ],
+  "playlists": [
+   "shorts"
   ]
  },
  {
@@ -1548,6 +1683,9 @@
    "animal facts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
+  ],
+  "playlists": [
+   "shorts"
   ]
  },
  {
@@ -1578,6 +1716,9 @@
    "animal facts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
+  ],
+  "playlists": [
+   "shorts"
   ]
  },
  {

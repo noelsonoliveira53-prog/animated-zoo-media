@@ -219,6 +219,10 @@ number ("Limits may vary by country/region or channel history"), and the channel
    CARTOON ENTRIES ARE UPLOADED BY THIS RUN: every "to_upload" entry with format cartoon_adventure or cartoon_lesson in studio/upload_plan_3d.json and
    every "to_upload" cartoon_short_90 in studio/upload_plan_shorts_zoo.json, WHATEVER ITS DATE (they are scheduled days ahead), soonest slot first, each on
    the date and time in its entry, after review.py PASS and a look at its contact sheet. They come before 3D lessons when the allowance is short.
+   PLAYLISTS (owner, Nov 20: "Start to create playlist on YouTube and organizing the channel better"; docs/PLAYLISTS.md): every upload of The Animated Zoo goes into its
+   playlists the same day. `python3 studio/playlists.py <plan file>` prints them; tick them in the upload dialog's "Playlists" field or afterwards with "Add to playlist" on the
+   content list; then `python3 studio/playlists.py --done <plan file>`. `python3 studio/playlists.py --todo` is empty at the end of the run. Never tick a playlist box that shows a
+   DASH (it adds the videos already in a second time). Gizmo Explains has no playlists here.
 1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
    at 3:30 PM ET (full Vids episodes 12:00 PM); the LESSONS = every "to_upload" 3d_lesson entry with lesson_version 3, each at
    the date and time in its plan entry (rule 5 THE DAILY GRID: 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM). Schedule each for its own

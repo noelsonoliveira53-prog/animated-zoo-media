@@ -1,0 +1,60 @@
+{
+ "length": 367.2,
+ "shots": 66,
+ "visual_changes": 555,
+ "mean_gap": 0.66,
+ "longest_gap": 5.32,
+ "longest_gap_at": 250.3,
+ "over_6s": [],
+ "places": [
+  "ocean",
+  "intro_gate",
+  "intro_logo",
+  "sea_start",
+  "meadow",
+  "fork",
+  "reef",
+  "bigrock",
+  "bigrock_eve"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue"
+ ],
+ "questions": 13,
+ "longest_without_question": 52.2,
+ "first_words_at": 0.42,
+ "shot_mean": 5.56,
+ "main_intro": {
+  "at": [
+   6.9,
+   351.6
+  ],
+  "seconds": 30.4
+ },
+ "beats": {
+  "hook": 1,
+  "song": 8,
+  "goal": 8,
+  "obstacle1": 5,
+  "fact": 5,
+  "obstacle2": 4,
+  "obstacle3": 5,
+  "low": 4,
+  "solution": 16,
+  "ending": 8
+ },
+ "fails": [],
+ "words_placed": "732/732",
+ "sync": {
+  "pauses_checked": 56,
+  "onset_err_mean_ms": 29.1,
+  "onset_err_max_ms": 70.0,
+  "suspect_words": [],
+  "cuts": 65,
+  "cuts_on_the_half_beat": 65,
+  "songs_entering_on_a_beat": "8/8",
+  "process": "3D (beat)"
+ }
+}
+EXIT 0

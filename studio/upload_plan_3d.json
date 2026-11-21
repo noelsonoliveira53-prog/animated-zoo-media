@@ -3264,7 +3264,12 @@
   "seconds": 338.5,
   "bookends": true,
   "video_id": "A5m8e3iU7Ng",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "every",
+   "adventures",
+   "camels"
+  ]
  },
  {
   "file": "cartoon/zc_ep11.mp4",
@@ -3297,7 +3302,12 @@
   "seconds": 363.96,
   "bookends": true,
   "video_id": "DtDeV72SupE",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "every",
+   "facts",
+   "guess"
+  ]
  },
  {
   "file": "cartoon/za_ep10.mp4",
@@ -3369,6 +3379,11 @@
   "thumb_text": "LISTEN!",
   "seconds": 364.0,
   "video_id": "iIijZuowyxY",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "every",
+   "facts",
+   "guess"
+  ]
  }
 ]

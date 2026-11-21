@@ -1749,7 +1749,10 @@
   "thumb_text": "SQUISH!",
   "seconds": 90.6,
   "video_id": "cOJ1A-iTWgE",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep11_short2.mp4",
@@ -1779,7 +1782,10 @@
   "thumb_text": "HALVES?",
   "seconds": 90.5,
   "video_id": "nCNT0b9on5Y",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep11_short3.mp4",
@@ -1809,7 +1815,10 @@
   "thumb_text": "CLIP CLOP!",
   "seconds": 91.0,
   "video_id": "TcBuC7wxUvQ",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep12_short1.mp4",
@@ -1839,7 +1848,10 @@
    "The Animated Zoo"
   ],
   "video_id": "kDAwvjVtFkw",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep12_short2.mp4",
@@ -1869,7 +1881,10 @@
    "The Animated Zoo"
   ],
   "video_id": "6fPEEjJgLZw",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep12_short3.mp4",
@@ -1899,6 +1914,9 @@
    "The Animated Zoo"
   ],
   "video_id": "Ig2NIeeqqXA",
-  "thumb_set": true
+  "thumb_set": true,
+  "playlists": [
+   "shorts"
+  ]
  }
 ]

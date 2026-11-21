@@ -37,7 +37,13 @@ back after a reload of the customization page.
   [Until Nov 21 11:27 AM this was a 3D explainer; see 2D ONLY above.]
 - Slots (ET): explainer 2:10 PM; its Shorts on the next days at 8:10 AM, 12:10 PM and 7:10 PM, each on its own day. Always scheduled, never published
   at once. `python3 studio/upload_guard.py --next explainer --channel gizmo` prints the topic, the id (gc_epNN), the slots, what waits and what is missing.
-- No main intro (it says "The Animated Zoo"), no playlists yet, no song: a voice only speaks.
+- Main intro: Gizmo has his own (owner, Nov 21 12:01 PM: "create an intro for the gizmo explain as well"): `studio/cartoon/intro_gizmo.py`
+  (four shots, about 15 s: the idea, the things he explains, the logo, "Gizmo Explains!"), its music `studio/cartoon/score_gzintro.py` (his own tune
+  on recorded instruments, C | F | G C), preview `python3 toon.py gzintro`. It was sent to him on Nov 21 to watch and to hear. UNTIL HE SAYS YES it
+  is in no episode: an episode sets `"intro": False` in its EP (the plan check then asks for no intro). After his yes: `*gz_intro_shots()` right
+  after the hook and again as the last four shots, with `**GZ_INTRO_STAGES` in STAGES and `"intro"` left out of the EP (the plan check then asks for
+  both, as it does for the Zoo). Never the Zoo's `intro_shots()` on Gizmo, never an intro in a Short. Change the intro in intro_gizmo.py only.
+- No playlists yet, no song: a voice only speaks.
 - Every rule of CLAUDE.md "Working preferences" applies to Gizmo too: 4K native, watermark (Gizmo's channel picture + "Gizmo Explains",
   not Milo), custom thumbnail with at most 3 words and none of the title's words, facts read at the source the same day (line taken out
   if the source cannot be read), stills before the render, frames after, listen.py, review.py, no voice sung or hummed onto notes,
@@ -59,7 +65,7 @@ with these differences:
 2. Facts: read each at its source today, quotes at the top of the episode file; a line whose source cannot be read is taken out. Nothing a child
    could copy unsafely (no fire, electricity at home, chemicals, climbing).
 3. Episode: `EP["wm"] = "brand/gizmo"` (Gizmo's mark), `"beat": True`, Gizmo's rig and places from `art_gizmo.py` (new props go into that file or an
-   `art_gc_epNN.py`), voice `am_michael`, no `intro_shots()`, no tune shot unless instruments play it. Gizmo's arms stay between -50 and -85 degrees
+   `art_gc_epNN.py`), voice `am_michael`, `"intro": False` until the owner has approved Gizmo's own intro (see "Main intro" above; never the Zoo's `intro_shots()`), no tune shot unless instruments play it. Gizmo's arms stay between -50 and -85 degrees
    (a hand raised higher disappears behind his head); a camera on Gizmo frames the whole robot ("all"), or his antenna is cut; 9:16 words at or
    below 0.35 of the view (higher they sit on the title band).
 4. Packaging as docs/CARTOON_RUN.md "VIRAL PACKAGING" with Gizmo in Milo's place: opens on its promise, Gizmo's name after the hook, a question

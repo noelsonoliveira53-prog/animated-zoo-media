@@ -151,7 +151,7 @@ SHOTS = [
     S("gbench", C("gbench", "gizmo", "body", 900, 160), "But a seed is alive! Something is waiting inside.", part=1, tag="alive", pcam=V("gbench", "gizmo", "body", 1000, 100),
       fx=[("face", "w:alive!", "gizmo", "wow"), HOP("w:alive!")],
       words=[("w:alive!", "ALIVE!", .76, .18, 1.1, "sun", (.76, .4), .8)]),
-    S("paper_gz", BOARD, "What do you think is inside a seed? A baby plant, or a little stone?", part=1, q=True, tag="question 1", pause=3.2, pcam=PBOARD,
+    S("paper_gz", BOARD, "What do you think is inside a seed? A baby plant, or a little stone?", part=1, q=True, tag="question 1", pause=3.2, pcam=PBOARD, cam2=(960, 520, 1360),      # a slow push-in on the seed (Nov 21: the signs and words wobble now, pace_check no longer counts them, and this board stood 10.2 s "without a visual change")
       props=[prop("sd", G.seed, 960, 640, 1.6, p=(960, 600, 1.3))], fx=[("signs", "w:baby", ["PLANT", "STONE"], 0, "wait:2.0"), PULSE("wait:2.05", "#{p}sd_w", 3)]),
     S("paper_gz", SOW, "A tiny baby plant! Let's open the seed and look.", part=1, tag="open the seed", pcam=PBOARD, props=[prop("sd", G.seed, *SO, p=SOP)] + sopen(True),
       fx=[("hide", "w:open", "sd"), ("show", "w:open", "so"), PULSE("w:look.", "#{p}so-baby", 3, 1.25)], words=[("w:baby", "A BABY PLANT!", .5, .12, .9, "sun", (.5, .26), .8)]),

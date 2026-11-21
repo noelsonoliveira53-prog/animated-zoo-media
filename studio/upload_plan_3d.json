@@ -3239,11 +3239,11 @@
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep09.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 20 by the scheduled 8:43 AM adventure build (session_014CFVfZNKfSGaLEqqFxRY2D): 4K AV1 309.4 s; facts read Nov 20 at San Diego Zoo Wildlife Alliance, PBS Nature and Oakland Zoo; stills of every shot (start and end, three full rounds plus four rounds of the changed shots) and frames of the finished render (middle and end of every shot, every answer reveal, the rhyme and tune shots) and of the AV1 file looked at; pace, watermark and corner sheet, listen.py (measures, does not hear), review.py. Run note docs/cartoon/runs/za_ep09.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it. | Nov 20 6:55 PM: rendered again with the main intro at the beginning (after the hook, 5.3 s) and at the end (322.5 s) (owner, Nov 20 4:50 PM): 4K AV1 338.5 s, 77 MB; the episode's own shots are unchanged. Checked on the new file: plan check (no fails, 62/62 cuts on the half-beat), --check4k, bookends.py (beginning yes, end yes), pace_check --max 8 (0 stretches), watermark.py (mark yes), listen.py on the film (no clicks, no silences, -15.5 LUFS; it measures, it does not hear), frames of the upload file at both joins and at the end looked at (hook, intro, first story shot, 'See you soon', intro, logo card with the whole cast). NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 20 by the scheduled 8:43 AM adventure build (session_014CFVfZNKfSGaLEqqFxRY2D): 4K AV1 309.4 s; facts read Nov 20 at San Diego Zoo Wildlife Alliance, PBS Nature and Oakland Zoo; stills of every shot (start and end, three full rounds plus four rounds of the changed shots) and frames of the finished render (middle and end of every shot, every answer reveal, the rhyme and tune shots) and of the AV1 file looked at; pace, watermark and corner sheet, listen.py (measures, does not hear), review.py. Run note docs/cartoon/runs/za_ep09.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it. | Nov 20 6:55 PM: rendered again with the main intro at the beginning (after the hook, 5.3 s) and at the end (322.5 s) (owner, Nov 20 4:50 PM): 4K AV1 338.5 s, 77 MB; the episode's own shots are unchanged. Checked on the new file: plan check (no fails, 62/62 cuts on the half-beat), --check4k, bookends.py (beginning yes, end yes), pace_check --max 8 (0 stretches), watermark.py (mark yes), listen.py on the film (no clicks, no silences, -15.5 LUFS; it measures, it does not hear), frames of the upload file at both joins and at the end looked at (hook, intro, first story shot, 'See you soon', intro, logo card with the whole cast). NOT uploaded: the daily run schedules it. | Nov 21 daily run: SCHEDULED November 25, 2026 5:30 AM ET (A5m8e3iU7Ng), made for kids, custom thumbnail (data: image in the uploader before Next); Studio's dialog read.",
   "description": "A sleepover at the zoo! Sandy the baby camel spends her very first night away from Mama, with Milo the bluebird and Tumble the baby elephant. But the fluffy bed is too soft, the night is too quiet, and Sandy misses Mama's hum. How can her friends help her fall asleep? A gentle bedtime adventure for ages 2-6 about friendship and feeling at home, with questions to answer, a star count and a soft lullaby tune.\nKids see how camel mamas and their babies hum to each other, how a baby camel can walk beside its mama when it is only half an hour old, and how camels have thick, tough skin on their knees, so they can kneel down on hot sand.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (camel); PBS Nature (camel fact sheet); Oakland Zoo (dromedary camel).",
   "tags": [
    "baby camel",
@@ -3262,7 +3262,9 @@
   ],
   "thumb_text": "SWEET DREAMS!",
   "seconds": 338.5,
-  "bookends": true
+  "bookends": true,
+  "video_id": "A5m8e3iU7Ng",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep11.mp4",

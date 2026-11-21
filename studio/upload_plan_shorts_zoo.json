@@ -1754,7 +1754,7 @@
  {
   "file": "cartoon/zc_ep11_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep11",
   "res": "2160x3840",
@@ -1762,7 +1762,7 @@
   "watermark": "top",
   "date": "2026-11-28",
   "time": "7:30 PM",
-  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it. | Nov 21 daily run: SCHEDULED November 28, 2026 7:30 PM ET (nCNT0b9on5Y), made for kids, custom thumbnail (data: image in the uploader before Next); Studio's dialog read.",
   "title": "Whose Feet Have Two Hooves? Guess With Milo",
   "description": "Whose footprint has two halves? Guess with Milo the bluebird! It is the giraffe: a giraffe has two hooves on each foot, and its feet are as big as a dinner plate. It walks by moving the two legs on one side together, then the two legs on the other side, so its legs do not bump. And a baby giraffe can stand up and walk about an hour after it is born! A quick animal guessing game for kids from the lesson \u201cWhose Feet Are These? Guess With Milo\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance Library (giraffe fact sheet); San Diego Zoo Wildlife Alliance (giraffe); Live Science (giraffe facts).",
   "tags": [
@@ -1777,7 +1777,9 @@
    "shorts"
   ],
   "thumb_text": "HALVES?",
-  "seconds": 90.5
+  "seconds": 90.5,
+  "video_id": "nCNT0b9on5Y",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep11_short3.mp4",

@@ -39,10 +39,16 @@ back after a reload of the customization page.
   at once. `python3 studio/upload_guard.py --next explainer --channel gizmo` prints the topic, the id (gc_epNN), the slots, what waits and what is missing.
 - Main intro: Gizmo has his own (owner, Nov 21 12:01 PM: "create an intro for the gizmo explain as well"): `studio/cartoon/intro_gizmo.py`
   (four shots, about 15 s: the idea, the things he explains, the logo, "Gizmo Explains!"), its music `studio/cartoon/score_gzintro.py` (his own tune
-  on recorded instruments, C | F | G C), preview `python3 toon.py gzintro`. It was sent to him on Nov 21 to watch and to hear. UNTIL HE SAYS YES it
-  is in no episode: an episode sets `"intro": False` in its EP (the plan check then asks for no intro). After his yes: `*gz_intro_shots()` right
-  after the hook and again as the last four shots, with `**GZ_INTRO_STAGES` in STAGES and `"intro"` left out of the EP (the plan check then asks for
-  both, as it does for the Zoo). Never the Zoo's `intro_shots()` on Gizmo, never an intro in a Short. Change the intro in intro_gizmo.py only.
+  on recorded instruments, C | F | G C), preview `python3 toon.py gzintro`. APPROVED by him on Nov 21 at 12:18 PM, picture and music ("amazing emplement on every new video and update the worflows"): every new long
+  Gizmo cartoon carries `*gz_intro_shots()` right after the hook (the episode still opens on its promise) and again as the last four shots, with
+  `**GZ_INTRO_STAGES` in STAGES and no `"intro"` key in the EP. The plan check fails an episode that has it once, not last, or that carries the
+  Zoo's intro; `review.py` fails a long Gizmo cartoon whose file does not show it at both ends (`python3 studio/bookends.py check <file> --channel gizmo`,
+  against `cartoon/gzintro.mp4`). Its own content stays 5:00 or more, the whole file 6:30 or less. Never in a Short. Never the Zoo's `intro_shots()`
+  on Gizmo. Change the intro in intro_gizmo.py only (its music is approved: picture changes do not touch score_gzintro.py), then render
+  `toon.py gzintro` again and replace `cartoon/gzintro.mp4`.
+  Explainers built before the approval have no intro and are not uploaded as they are: gc_ep01 (it also opens with a greeting: give it an opening
+  on its promise, the first line asks the title's question) and gc_ep02 if the noon build of Nov 21 finished it without one. Add the intro in both
+  places, look at the stills of the changed shots, render again, run every check again. Their Shorts are not touched.
 - No playlists yet, no song: a voice only speaks.
 - Every rule of CLAUDE.md "Working preferences" applies to Gizmo too: 4K native, watermark (Gizmo's channel picture + "Gizmo Explains",
   not Milo), custom thumbnail with at most 3 words and none of the title's words, facts read at the source the same day (line taken out
@@ -65,7 +71,7 @@ with these differences:
 2. Facts: read each at its source today, quotes at the top of the episode file; a line whose source cannot be read is taken out. Nothing a child
    could copy unsafely (no fire, electricity at home, chemicals, climbing).
 3. Episode: `EP["wm"] = "brand/gizmo"` (Gizmo's mark), `"beat": True`, Gizmo's rig and places from `art_gizmo.py` (new props go into that file or an
-   `art_gc_epNN.py`), voice `am_michael`, `"intro": False` until the owner has approved Gizmo's own intro (see "Main intro" above; never the Zoo's `intro_shots()`), no tune shot unless instruments play it. Gizmo's arms stay between -50 and -85 degrees
+   `art_gc_epNN.py`), voice `am_michael`, Gizmo's main intro after the hook and as the last four shots (see "Main intro" above; never the Zoo's `intro_shots()`), no tune shot unless instruments play it. Gizmo's arms stay between -50 and -85 degrees
    (a hand raised higher disappears behind his head); a camera on Gizmo frames the whole robot ("all"), or his antenna is cut; 9:16 words at or
    below 0.35 of the view (higher they sit on the title band).
 4. Packaging as docs/CARTOON_RUN.md "VIRAL PACKAGING" with Gizmo in Milo's place: opens on its promise, Gizmo's name after the hook, a question
@@ -73,7 +79,7 @@ with these differences:
    of the title's words (`brand/gizmo/thumb_<id>.jpg`). Description: where the facts come from, then the Gizmo boilerplate below; never "AI".
 5. Checks, none skipped: plan check, `listen.py --episode <id>` before the render, a still of EVERY shot in 16:9 and again in 9:16 looked at (and
    again after each fix), 4K render as a tracked background command, then on every finished file `--check4k`, `pace_check.py --max 8`,
-   `watermark.py check <file> --channel gizmo` and its corner sheet looked at, frames of the finished file (every answer reveal), listen.py on the
+   `watermark.py check <file> --channel gizmo` and its corner sheet looked at, `bookends.py check <file> --channel gizmo` on the explainer, frames of the finished file (every answer reveal), listen.py on the
    file with its picture looked at (it measures, it does not hear), AV1 encode of the explainer, `review.py` PASS.
 6. Finish: the entries get the status `--next` printed as "finish_as" ("hold_review" until the owner's yes, then "to_upload"), title, description,
    tags, thumb, thumb_text, seconds; run note `docs/gizmo/runs/<id>.md` (what was looked at, what was not checked, every defect); commit, push.

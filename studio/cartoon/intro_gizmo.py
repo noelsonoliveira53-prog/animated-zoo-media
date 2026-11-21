@@ -11,8 +11,8 @@ B G D G D | C G E C), its own picture, Gizmo's blues (#1d3a8a, #3561d9) with the
      confetti (behind everything), Gizmo flies in beside the name and waves, the seven things pop up along the bottom, the letters do a wave.
   4. THE NAME. Gizmo says "Gizmo Explains!" and each word of the logo lights up and jumps as he says it (no caption: the logo is the caption);
      on the last chord everything jumps, his arms go up and his bulb flashes.
-STATUS: A PREVIEW until the owner has watched and HEARD it (CLAUDE.md: a new kind of sound is sent to him before it is used in a video). It is
-in no episode yet. After his yes it goes, like the Zoo's, right after the hook and as the last four shots of every new long Gizmo cartoon:
+APPROVED by the owner, picture and music, on Nov 21 2026 at 12:18 PM ("amazing emplement on every new video and update the worflows"; he had been
+sent the preview cartoon/gzintro.mp4). It goes, like the Zoo's, right after the hook and as the last four shots of every new long Gizmo cartoon:
     from intro_gizmo import GZ_INTRO_STAGES, gz_intro_shots
     STAGES = {..., **GZ_INTRO_STAGES}          # before Kit(STAGES)
     SHOTS = [<hook shots>, *gz_intro_shots(), <the rest>, *gz_intro_shots()]

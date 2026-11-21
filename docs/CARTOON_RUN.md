@@ -59,7 +59,7 @@ Never in a 9:16 Short, so it has no 9:16 framing. Rules the stills taught (Nov 2
   Episodes that were live before it existed (toon.PRE_INTRO: za_ep01-08, zc_ep01-10) keep their file: a fix re-render stays without it.
 - The gate before upload: `review.py` fails a new long video (cartoon lesson, adventure, 3D song) whose file does not carry it at both ends
   (`python3 studio/bookends.py check <file>` looks for the logo card in the first 75 s and at the very end).
-- Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Not on Gizmo Explains (it has its own intro, `intro_gizmo.py`, docs/GIZMO_RUN.md) or any other channel.
+- Not in the Shorts (the intro shots carry no `part`, so `--short` leaves them out). Not on Gizmo Explains (it has its own intro in every new long video since Nov 21 12:18 PM: `intro_gizmo.py`, docs/GIZMO_RUN.md) or any other channel.
 - Preview alone: `python3 toon.py zintro`. Never edit the intro inside one episode: change `intro.py`, so every episode keeps the same intro.
 
 ## Guess With Milo (2D series, owner Nov 20 2026: "Guess With Milo should be always 2d not 3d; 3d is only for viral songs")

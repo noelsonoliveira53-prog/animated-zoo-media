@@ -1784,7 +1784,7 @@
  {
   "file": "cartoon/zc_ep11_short3.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep11",
   "res": "2160x3840",
@@ -1792,7 +1792,7 @@
   "watermark": "top",
   "date": "2026-11-29",
   "time": "11:30 AM",
-  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it. | Nov 21 daily run: SCHEDULED November 29, 2026 11:30 AM ET (TcBuC7wxUvQ), made for kids, custom thumbnail (data: image in the uploader before Next); Studio's dialog read.",
   "title": "Who Walks on Just One Toe? Guess With Milo",
   "description": "Who walks on just one toe? Guess with Milo the bluebird! One smooth, round footprint belongs to the zebra. A zebra walks on one toe on each foot, inside one hard hoof that wraps around the toe and keeps it safe. A hoof keeps on growing, a little like your fingernails, and every zebra has its very own stripes! A quick animal guessing game for kids from the lesson \u201cWhose Feet Are These? Guess With Milo\u201d.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance Library (plains zebra fact sheet).",
   "tags": [
@@ -1807,7 +1807,9 @@
    "shorts"
   ],
   "thumb_text": "CLIP CLOP!",
-  "seconds": 91.0
+  "seconds": 91.0,
+  "video_id": "TcBuC7wxUvQ",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep12_short1.mp4",

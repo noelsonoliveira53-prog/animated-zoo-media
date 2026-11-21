@@ -1,0 +1,95 @@
+{
+ "length": 336.6,
+ "shots": 62,
+ "visual_changes": 471,
+ "mean_gap": 0.71,
+ "longest_gap": 4.62,
+ "longest_gap_at": 285.6,
+ "over_6s": [],
+ "places": [
+  "snowhill",
+  "intro_gate",
+  "intro_logo",
+  "arctic",
+  "hilltop",
+  "snowbottom",
+  "hillmid",
+  "arctic_eve"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue"
+ ],
+ "questions": 13,
+ "longest_without_question": 55.3,
+ "first_words_at": 0.42,
+ "shot_mean": 5.43,
+ "main_intro": {
+  "at": [
+   5.6,
+   320.6
+  ],
+  "seconds": 30.7
+ },
+ "beats": {
+  "hook": 1,
+  "song": 8,
+  "goal": 9,
+  "fact": 2,
+  "obstacle1": 4,
+  "obstacle2": 5,
+  "obstacle3": 3,
+  "low": 4,
+  "solution": 14,
+  "ending": 10
+ },
+ "fails": [],
+ "words_placed": "664/664",
+ "sync": {
+  "pauses_checked": 48,
+  "onset_err_mean_ms": 29.4,
+  "onset_err_max_ms": 310.0,
+  "suspect_words": [],
+  "cuts": 61,
+  "cuts_on_the_half_beat": 61,
+  "songs_entering_on_a_beat": "8/8",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (493ms)
+[Browser:WARN] GSAP target #s3c1,#s3c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s5c1,#s5c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s32c1,#s32c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s49c1,#s49c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s50c1,#s50c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s51c1,#s51c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s52c1,#s52c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s53c1,#s53c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s54c1,#s54c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s55c1,#s55c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s56c1,#s56c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s57c1,#s57c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s60c1,#s60c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s61c1,#s61c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] GSAP proxy flush complete (2014ms)
+[initSession:screenshot] pollHfReady complete (2071ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (2094ms)
+[initSession:screenshot] applyVideoMetadataHints complete (2094ms)
+[initSession:screenshot] media + fonts + tailwind ready (2109ms)
+[initSession:screenshot] static-frame dedup: disabled (eligible) (2167ms)
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/za_ep10/za_ep10.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/za_ep10/za_ep10.mp4 336.6 s
+EXIT 0

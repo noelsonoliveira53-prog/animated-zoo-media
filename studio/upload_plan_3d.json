@@ -3293,15 +3293,40 @@
  },
  {
   "file": "cartoon/za_ep10.mp4",
-  "title": "Poppy's First Slide on the Ice",
+  "title": "Can Poppy Slide Down the Snowy Hill?",
   "date": "2026-11-22",
   "time": "5:30 AM",
   "thumb": "brand/zoo/thumb_za_ep10.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 20 by the scheduled adventure build (session_014CFVfVK6aBg9HTcMb58Fge). Title from upload_guard --next adventure; may change to a viral-packaging question title before upload."
+  "note": "Built Nov 20 by the scheduled adventure build (session_014CFVfVK6aBg9HTcMb58Fge): 4K AV1 336.6 s (305.9 s own content + the main intro at the beginning and at the end), 80 MB; facts read Nov 20 at PBS Nature, San Diego Zoo Wildlife Alliance Library and Science News Explores; stills of every shot (start and end) and of the changed shots in nine rounds, frames of the finished render (middle and end of every shot, every answer reveal, the rhyme and tune shots) and of the AV1 file looked at; pace (render 2; render 1 had 8.5 s without change and was re-rendered), watermark and corner sheet, bookends, listen.py (measures, does not hear), review.py. Title renamed from the THEMES title (theme_title) to a question title (viral packaging, Nov 20). Run note docs/cartoon/runs/za_ep10.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it.",
+  "theme_title": "Poppy's First Slide on the Ice",
+  "description": "Can Poppy slide down the big snowy hill? Everybody is sliding, but Poppy the polar bear cub stays at the top: she feels shy. Milo the bluebird and Tumble the baby elephant wait with her, until Poppy finds her very own way down. A gentle Arctic adventure for ages 2-6 about trying something new a little bit at a time, with questions to answer, a count-along and a snowy tune.\nKids see how polar bears have big, wide paws that spread out their weight on snow and ice, how tiny bumps on their paw pads help them grip the snow, and how fur on the bottoms of their paws keeps them warm.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nPBS Nature (polar bear fact sheet); San Diego Zoo Wildlife Alliance Library (polar bear fact sheet); Science News Explores (polar bear paws).",
+  "tags": [
+   "polar bear for kids",
+   "polar bear cub",
+   "polar bear paws",
+   "arctic animals for kids",
+   "snow day",
+   "sliding",
+   "baby elephant",
+   "animal stories for kids",
+   "friendship story for kids",
+   "kids adventure cartoon",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "WHEE!",
+  "seconds": 336.6,
+  "bookends": true,
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  }
 ]

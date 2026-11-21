@@ -171,7 +171,7 @@ def free_slots(es, kind, n, start, title=None, avoid_days=()):
 
 
 def nxt(kind):
-    es = load(); have = [e.get("title") or "" for e in es if e.get("status") not in ("dropped", "rejected")]
+    es = load(); have = [x for e in es if e.get("status") not in ("dropped", "rejected") for x in (e.get("title") or "", e.get("theme_title") or "") if x]   # theme_title: the THEMES title a build renamed (viral packaging, za_ep10)
     key = "les" if kind == "lesson" else "adv"; pick = None
     for t in themes():
         for item in t[key]:

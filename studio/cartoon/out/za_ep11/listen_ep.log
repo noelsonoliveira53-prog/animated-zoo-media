@@ -1,0 +1,22 @@
+  sung or hummed: INTRO 1: the sky  6.88-9.38 s: G2(-13c) G5 C6 G3 G4
+  sung or hummed: INTRO 2: the gate  10.0-12.5 s: G4 G2 B3 G2 D4 B4 D5 D3 D2 B3 G2 D5(+21c) D5 D2 D2
+  sung or hummed: INTRO 3: the logo  13.12-18.12 s: F2(+17c) C5 G3(+17c) C3 C6 F5 F2(+16c) C5 E5 C3 C6 D5 G4 G3 C5 E4 C3 C5 G2(-15c)
+  sung or hummed: song: cozy nest  240.62-250.62 s: 
+  sung or hummed: song: hooray  310.62-315.62 s: 
+  sung or hummed: INTRO 1: the sky  321.88-324.38 s: 
+  sung or hummed: INTRO 2: the gate  325.0-327.5 s: 
+  sung or hummed: INTRO 3: the logo  328.12-333.12 s: 
+  judged: everything (no speaking voice in the file)
+337.73 s   key heard: {'key': 'C major', 'fit': 0.93}   expected: C   held tones judged: 995   voice-like tones left out: 0
+  CLASH              57.43 s  E4 + F2 together for 0.3 s
+  CLASH             167.42 s  E4 + F2 together for 0.3 s
+  CLASH             167.42 s  E4 + F4 together for 0.3 s
+  CLASH             167.77 s  F2 + E4 together for 0.26 s
+  CLASH             217.43 s  E4 + F2 together for 0.55 s
+  CLASH             233.69 s  B4 + C6 together for 0.25 s
+  beat: {'heard_bpm': np.float64(95.3), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.75, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.993)}
+  clicks at: []  silences: []
+  level: {'lufs': -21.1, 'range_lu': 21.9, 'true_peak_db': -1.7, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.1)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.77, 'share_below_120hz': 0.07, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep11_music_stem_listen.png
+EXIT 0

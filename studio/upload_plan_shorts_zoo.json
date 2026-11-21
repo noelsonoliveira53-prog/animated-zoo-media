@@ -1844,7 +1844,7 @@
  {
   "file": "cartoon/zc_ep12_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep12",
   "res": "2160x3840",
@@ -1852,7 +1852,7 @@
   "watermark": "top",
   "date": "2026-11-30",
   "time": "11:30 AM",
-  "note": "Built Nov 21 by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep12.md. Second Guess With Milo episode (2D): new rhino and fennec fox drawings. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 21 by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep12.md. Second Guess With Milo episode (2D): new rhino and fennec fox drawings. NOT uploaded: the daily run schedules it. | Nov 21 daily run: SCHEDULED November 30, 2026 11:30 AM ET (6fPEEjJgLZw), made for kids, custom thumbnail (data: image in the uploader before Next); Studio's dialog read.",
   "title": "Who Has Giant Ears? Guess With Milo",
   "thumb_text": "DIG DIG!",
   "seconds": 89.2,
@@ -1867,7 +1867,9 @@
    "shorts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "video_id": "6fPEEjJgLZw",
+  "thumb_set": true
  },
  {
   "file": "cartoon/zc_ep12_short3.mp4",

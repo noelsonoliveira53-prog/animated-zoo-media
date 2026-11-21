@@ -27,7 +27,8 @@ written, rendered, titled and uploaded.
   They go back on the schedule only if he says so. Their playlists keep them (a private video does not show in a public playlist).
 - Section A and the reviews: songs and 3D lessons stay in the numbers as what came before; the pillars that are compared and that get slots are 2D adventures,
   2D fact lessons with Guess With Milo, and compilations. The main-intro retention test is read on the 2D videos.
-- Gizmo Explains is another channel: `docs/GIZMO_RUN.md` and its scheduled task are unchanged.
+- Gizmo Explains is 2D only too since Nov 21 11:27 AM (owner: "chaneg gizmo as well"): `docs/GIZMO_RUN.md`; its scheduled task builds a cartoon explainer and three Shorts a day and uploads nothing until he has approved the format.
+- Slots fill a day sooner since Nov 21: `upload_guard.py --next` also hands out TOMORROW's afternoon slots (adventure 1:30 PM and 3:30 PM, lesson 5:30 PM), because this run uploads at 6:31 AM what was built the day before; it builds the theme that reaches the earliest free slot (the day rule: one animal or topic a day) and rests a theme after two builds in a row. A slot nobody can reach under the day rule stays empty: more themes with other friends (Clover, Hazel) fill more of a day.
 
 **90-DAY PLAN (Noelson, Nov 18, 2026): `docs/GROWTH_90D.md`.** It overrides the older rules below wherever they differ: at most ONE 3D upload a
 day (the 3:30 PM song) [superseded Nov 20 11:13 PM: NO 3D upload at all, see 2D ONLY above]; no new 3D lessons, unuploaded ones `hold_3d_cap`; a long slot with no cartoon video ready STAYS EMPTY (no 3D lesson fills it);

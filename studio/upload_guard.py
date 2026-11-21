@@ -225,13 +225,16 @@ def nxt(kind):
     if GIZMO: return nxt_gizmo()
     es = load(); have = [x for e in es if e.get("status") not in ("dropped", "rejected") for x in (e.get("title") or "", e.get("theme_title") or "") if x]   # theme_title: the THEMES title a build renamed (viral packaging, za_ep10)
     key = "les" if kind == "lesson" else "adv"; pick = None; start = today() + datetime.timedelta(days=2); soon = today() + datetime.timedelta(days=1)
-    for t in themes():      # the first free title of EACH theme; the one that reaches the earliest slot is built (Nov 21 2026: the first free title alone was a third Poppy
+    pre = "zc_ep" if kind == "lesson" else "za_ep"; ths = themes()
+    def theme_name(e): return next((t["name"] for t in ths if {norm(e.get("title")), norm(e.get("theme_title"))} & {norm(i[0]) for i in t[key]}), None)
+    last2 = [theme_name(e) for e in sorted([e for e in es if re.search(pre + r"\d+\.mp4$", e["file"]) and e.get("status") not in ("dropped", "rejected")], key=lambda e: int(re.search(pre + r"(\d+)", e["file"]).group(1)))[-2:]]
+    tired = last2[0] if len(last2) == 2 and last2[0] and last2[0] == last2[1] else None      # the theme of the two newest builds of this kind waits a turn (daily run, Nov 21: two Guess With Milo lessons and six such Shorts in a row)
+    for t in ths:      # the first free title of EACH theme; the one that reaches the earliest slot is built (Nov 21 2026: the first free title alone was a third Poppy
         for item in t[key]:      # story, the day rule pushed it two days out and tomorrow's free afternoon slots stayed empty while an ocean story could take one); a tie keeps the THEMES order
             if not any(norm(h) == norm(item[0]) or norm(h).startswith(norm(item[0])) or same_topic(h, item[0]) for h in have):
-                sl = free_slots(es, kind, 1, start, item[0], soon=soon)[0]; k = (sl["date"], SLOTS[kind].index(sl["time"]))
+                sl = free_slots(es, kind, 1, start, item[0], soon=soon)[0]; k = (t["name"] == tired, sl["date"], SLOTS[kind].index(sl["time"]))
                 if pick is None or k < pick[2]: pick = (t, item, k, sl)
                 break
-    pre = "zc_ep" if kind == "lesson" else "za_ep"
     nums = [int(m.group(1)) for e in es for m in [re.search(pre + r"(\d+)", e["file"])] if m] + [int(m.group(1)) for f in os.listdir(os.path.join(HERE, "cartoon/episodes")) for m in [re.match(pre + r"(\d+)\.py", f)] if m]
     ttl = pick[1][0] if pick else None
     out = {"kind": kind, "id": f"{pre}{max(nums + [0]) + 1:02d}", "slot": pick[3] if pick else free_slots(es, kind, 1, start, None, soon=soon)[0]}

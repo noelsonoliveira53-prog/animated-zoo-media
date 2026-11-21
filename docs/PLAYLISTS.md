@@ -51,5 +51,6 @@ In the bulk "Add to playlist" dialog a box with a DASH means "some of the ticked
 
 "Show Home Tab" was OFF: visitors landed on the Videos tab and saw no shelves. It is ON now, with 12 sections (the maximum):
 For You, Videos, Posts (empty), Collaborations (empty), Sing With Milo, Milo's Zoo Adventures, Animal Facts with Milo, Learn About Animals with Milo, Guess With Milo, Short videos, Baby Animals for Kids, Created playlists.
+Read on the public channel page the same evening (youtube.com/@TheAnimatedZoo, Home selected): For You, Videos, Sing With Milo, Milo's Zoo Adventures, Animal Facts with Milo, Learn About Animals with Milo, Guess With Milo, Shorts, Baby Animals for Kids, Playlists (the two empty sections do not show).
 A section's menu only removes it and a new section lands at the bottom: to move one up, remove the ones that must sit below it and add them again.
 Not changed: the channel description (it still says "ages 3-8" and "5-minute zoo adventures every Monday, Wednesday and Friday"; the playlists say 2-6 and the grid is daily), the banner, the picture, the trailer spots. The owner decides those.

@@ -254,4 +254,5 @@ def gz_intro_shots():
              props=[prop("spk", sparkles, 0, 300), prop("logo", logo, *LOGO), *_icon_props(POS3, .86), prop("pfb", puff, LX, round(LY - 615 * LS), hidden=True)], fx=name_fx)
     name["nocap"] = True      # the logo's own words light up in sync with the voice
     idea["score"] = "score_gzintro:score"; idea["score_shots"] = 4      # the intro's music: one score on recorded instruments across the four shots
+    idea["score_gain"] = 0.75      # the same music 2.5 dB lower inside an episode: in gc_ep01 it sat 6.4 dB above the lesson, the Zoo's intro sits 3.9 dB above its story (za_ep11), measured Nov 21
     return [idea, things, logo_shot, name]

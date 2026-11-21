@@ -1,0 +1,21 @@
+  sung or hummed: INTRO 1: the sky  7.5-10.0 s: G2 G5 C6 C6 G3 G4
+  sung or hummed: INTRO 2: the gate  10.62-13.12 s: D3(+15c) G2 B3 G2 D4 B4 D5 D3 D2 G2(+18c) D5 D5 D2 G2 D5(+16c) D2
+  sung or hummed: INTRO 3: the logo  13.75-18.75 s: C3 F2(+14c) F4 G3(+17c) F5 F2(+13c) F2(+18c) E5 C3 D5 G4 E4 C5 G3(+13c) G2(-21c) C4 G2
+  sung or hummed: song: slow and steady  265.62-275.62 s: 
+  sung or hummed: song: hooray  340.62-345.62 s: 
+  sung or hummed: INTRO 1: the sky  351.88-354.38 s: 
+  sung or hummed: INTRO 2: the gate  355.0-357.5 s: 
+  sung or hummed: INTRO 3: the logo  358.12-363.12 s: 
+  judged: everything (no speaking voice in the file)
+367.73 s   key heard: {'key': 'C major', 'fit': 0.95}   expected: C   held tones judged: 1057   voice-like tones left out: 0
+  CLASH              57.43 s  E4 + F2 together for 0.55 s
+  CLASH             107.39 s  E4 + F2 together for 0.55 s
+  CLASH             117.42 s  E4 + F2 together for 0.3 s
+  CLASH             237.40 s  E4 + F2 together for 0.6 s
+  CLASH             297.39 s  E4 + F3 together for 0.55 s
+  CLASH             297.43 s  E4 + F2 together for 0.47 s
+  beat: {'heard_bpm': np.float64(95.3), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.77, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.993)}
+  clicks at: []  silences: []
+  level: {'lufs': -21.4, 'range_lu': 21.5, 'true_peak_db': -1.7, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.2)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.76, 'share_below_120hz': 0.08, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep12_music_stem_listen.png

@@ -273,7 +273,7 @@ SHOTS = [
 # thumbnail (thumb.py): the promise of the first shot: Milo shivering beside a cozy Poppy; 1 word, none of the title's words, no watermark
 THUMBS = {
     "za_ep11": {"place": "arctic", "cam": (1000, 640, 1100),
-                "actors": [("milo", 800, 905, .8, False, ''), ("bear", 1260, 905, .72, True, '')],
-                "props": [(A.shiver, 800, 905 - 120, .8), (A.breath, 880, 700, 1.0)],
+                "actors": [("milo", 760, 935, .95, False, ''), ("bear", 1400, 930, .64, True, '')],
+                "props": [(A.shiver, 760, 935 - 143, .72)],
                 "words": [("BRRR!", 1080, 230, 200, "sun", -6)]},
 }

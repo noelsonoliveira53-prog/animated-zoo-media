@@ -1,0 +1,1033 @@
+{
+ "id": "zool_ep08",
+ "thumb_at": [
+  "zebra",
+  9,
+  0.8
+ ],
+ "seed": 31,
+ "title": "Who Am I? Animal Guessing Game for Kids with Milo",
+ "card": "Who Am I?",
+ "thumb_text": "3 CLUES!",
+ "description": "Who am I? Play the animal guessing game with Milo the bluebird! Listen to three clues, guess the animal, then see why each fact is true: zebra stripes keep flies away and no two zebras match, pigs roll in mud to keep cool and dig with a strong snout, and a koala is not a bear but carries her joey in a pouch.\nAn interactive animal guessing game for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal guessing game for kids",
+  "who am i animals",
+  "guess the animal",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "zebra",
+  "pig",
+  "koala"
+ ],
+ "extras": [
+  {
+   "id": "horse",
+   "kind": "horse"
+  },
+  {
+   "id": "bear",
+   "kind": "bear"
+  },
+  {
+   "id": "joey",
+   "kind": "koala",
+   "scale": 0.36
+  }
+ ],
+ "facts": [
+  "A zebra's stripes make it hard for biting flies to land: horses in striped coats got far fewer fly landings (Caro et al., University of Bristol / UC Davis, PLOS ONE 2019).",
+  "Each zebra's stripes are unique, like a human fingerprint; foals can stand and walk soon after birth; zebras eat mostly grass (Live Science, 'Zebra Facts').",
+  "Pigs' sweat glands do little to cool them, so they wallow in mud; mud also protects their skin from sunburn (Britannica Kids, 'pig'; Bracke 2011, Applied Animal Behaviour Science).",
+  "Pigs root for food with their snouts and have a good sense of smell; piglets are born with a well-developed sense of smell (Britannica Kids, 'pig').",
+  "A koala is a marsupial, not a bear; its baby is called a joey and grows in the mother's pouch (San Diego Zoo; Australian Koala Foundation).",
+  "Koalas eat mainly eucalyptus (gum) leaves and sleep 18 to 22 hours a day (Australian Koala Foundation, savethekoala.com)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "beach",
+   "tod": "morning",
+   "show": [
+    "none"
+   ],
+   "word": "WHO AM I?",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": [
+      -2.9,
+      0.2,
+      0
+     ],
+     "on": [
+      2
+     ]
+    },
+    {
+     "prop": "qbox",
+     "at": [
+      2.9,
+      0.2,
+      0
+     ],
+     "on": [
+      2,
+      "friends"
+     ],
+     "opts": {
+      "color": "#e85d8a"
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      -0.7,
+      -1.6,
+      3.5
+     ],
+     "on": [
+      3,
+      "three"
+     ],
+     "opts": {
+      "n": 3,
+      "gap": 0.45
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are going to play a guessing game!",
+    "Three animal friends are hiding.",
+    "I will give you three clues. Then you guess who it is.",
+    "Put on your thinking cap. Are you ready? Let's play!"
+   ]
+  },
+  {
+   "name": "zebra",
+   "biome": "savanna",
+   "tod": "noon",
+   "word": "ZEBRA!",
+   "word_on": [
+    4,
+    "zebra"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "zebra"
+     ]
+    },
+    {
+     "line": 7,
+     "show": [
+      "zebra",
+      "horse"
+     ]
+    },
+    {
+     "line": 10,
+     "show": [
+      "zebra"
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      16
+     ],
+     "answer": [
+      17
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "flies",
+     "at": [
+      2.55,
+      -1.2,
+      2.4
+     ],
+     "on": [
+      7,
+      "flies"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "n": 5
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      0.5,
+      -1.3,
+      3.0
+     ],
+     "on": [
+      8,
+      "one"
+     ],
+     "off": [
+      9
+     ],
+     "times": [
+      [
+       8,
+       "one"
+      ],
+      [
+       8,
+       "two"
+      ],
+      [
+       8,
+       "three"
+      ],
+      [
+       8,
+       "four"
+      ],
+      [
+       8,
+       "five"
+      ]
+     ],
+     "opts": {
+      "n": 5,
+      "dx": 0.33,
+      "s": 0.55
+     }
+    },
+    {
+     "prop": "flies",
+     "at": [
+      -0.45,
+      -1.1,
+      2.5
+     ],
+     "on": [
+      9
+     ],
+     "off": [
+      10
+     ],
+     "leave": [
+      9,
+      "mix"
+     ],
+     "opts": {
+      "n": 4
+     }
+    },
+    {
+     "prop": "fingerprint",
+     "at": [
+      2.3,
+      -1.1,
+      2.4
+     ],
+     "on": [
+      11,
+      "fingerprint"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "grass",
+     "at": "ex",
+     "on": [
+      13,
+      "grass"
+     ],
+     "off": [
+      14
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend looks like a horse.",
+    "Clue two. This friend has black and white stripes.",
+    {
+     "t": "Clue three. This friend lives on the sunny, grassy savanna. Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the zebra! Great guessing!",
+     "close:zebra"
+    ],
+    {
+     "t": "But why does a zebra wear stripes? What do you think?",
+     "pause": 2.6
+    },
+    "Here is the fun fact. A zebra's stripes help keep the pesky flies away!",
+    [
+     "Look. The flies land on the plain brown horse.",
+     "exhibit"
+    ],
+    [
+     "Let's count the flies on the horse. One, two, three, four, five!",
+     "exhibit"
+    ],
+    [
+     "But on the stripy zebra? The stripes mix the flies up. They cannot land!",
+     "exhibit"
+    ],
+    [
+     "And here is one more thing. Every zebra has its own stripes.",
+     "close:zebra"
+    ],
+    "No two zebras are the same. The stripes are like your fingerprint!",
+    "A baby zebra is called a foal. It can stand up and walk soon after it is born!",
+    [
+     "What does a zebra eat? Grass, grass, and more grass!",
+     "exhibit"
+    ],
+    [
+     "Say it with me. Stripes keep the flies away!",
+     "close:host"
+    ],
+    "Can you gallop like a zebra? Clip, clop, clip, clop!",
+    {
+     "t": "Quick check! Do the stripes keep the flies away? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! Stripes keep the flies away. You are so clever!"
+   ],
+   "short": {
+    "id": "zs90_zebra_stripes",
+    "title": "Why Do Zebras Have Stripes? Guess the Animal!",
+    "l1": "GUESS WHO?",
+    "l2": "3 CLUES!",
+    "thumb_text": "NO BUZZING!",
+    "thumb_line": [
+     7,
+     0.8
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "pig",
+   "biome": "farm",
+   "tod": "morning",
+   "word": "PIG!",
+   "word_on": [
+    4,
+    "pig"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "pig"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "pig"
+     ],
+     "place": {
+      "pig": [
+       2.45,
+       -0.5,
+       0.0
+      ]
+     }
+    },
+    {
+     "line": 9,
+     "show": [
+      "pig"
+     ]
+    }
+   ],
+   "checks": [
+    {
+     "a": "COOL",
+     "b": "WARM",
+     "right": "a",
+     "ask": [
+      16
+     ],
+     "answer": [
+      17
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.3,
+      -1.1,
+      3.75
+     ],
+     "on": [
+      5,
+      "hot"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "s": 1.25
+     }
+    },
+    {
+     "prop": "mud",
+     "at": "ex",
+     "on": [
+      6,
+      "mud"
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "snout"
+     ],
+     "off": [
+      13
+     ],
+     "opts": {
+      "text": "SNOUT",
+      "color": "#e85d8a"
+     }
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend is pink, with a curly tail.",
+    "Clue two. This friend lives on the farm.",
+    {
+     "t": "Clue three. This friend says oink, oink! Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the pig! You got it!",
+     "close:pig"
+    ],
+    {
+     "t": "What does a pig do on a hot, sunny day? What do you think?",
+     "pause": 2.6
+    },
+    [
+     "Here is the fun fact. Pigs roll in the mud to keep cool!",
+     "exhibit"
+    ],
+    "When you are hot, you sweat. But a pig cannot sweat much.",
+    [
+     "So the pig rolls in cool, squishy mud. The mud even stops sunburn, like sunscreen!",
+     "exhibit"
+    ],
+    [
+     "Now look at that nose! A pig's nose is called a snout.",
+     "close:pig"
+    ],
+    "The snout is super strong. A pig uses it to dig in the ground for yummy food.",
+    "And the snout can smell very, very well. Sniff, sniff, sniff!",
+    "Baby pigs are called piglets. Even a tiny piglet has a super nose!",
+    "A pig loves a mud bath, just like you love a cool bath on a hot day!",
+    [
+     "Say it with me. Pigs roll in mud to keep cool!",
+     "close:host"
+    ],
+    "Can you roll your arms like a pig in the mud? Roll, roll, roll!",
+    {
+     "t": "Quick check! Why does a pig roll in the mud? To keep cool? Or to keep warm?",
+     "pause": 3.2
+    },
+    "To keep cool! Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_pig_mud",
+    "title": "Why Do Pigs Roll in Mud? Guess the Animal!",
+    "l1": "GUESS WHO?",
+    "l2": "OINK OINK!",
+    "thumb_text": "SQUISHY BATH!",
+    "thumb_line": [
+     8,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "koala",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "word": "KOALA!",
+   "word_on": [
+    4,
+    "koala"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 4,
+     "show": [
+      "koala"
+     ]
+    },
+    {
+     "line": 7,
+     "show": [
+      "koala",
+      "bear"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "koala",
+      "joey"
+     ],
+     "place": {
+      "joey": [
+       -0.45,
+       -1.15,
+       0.5
+      ]
+     }
+    },
+    {
+     "line": 10,
+     "show": [
+      "koala"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "A BEAR",
+    "b": "NOT A BEAR",
+    "right": "b",
+    "ask": [
+     5
+    ],
+    "answer": [
+     6
+    ],
+    "hold": 2.2
+   },
+   "checks": [
+    {
+     "a": "A CUB",
+     "b": "A JOEY",
+     "right": "b",
+     "ask": [
+      16
+     ],
+     "answer": [
+      17
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "qbox",
+     "at": "mid",
+     "on": [
+      0
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "badge",
+     "at": [
+      1.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      1
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "1",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      2
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "2",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      3.2,
+      -1.2,
+      3.75
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "3",
+      "s": 1.1,
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      4
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "cross",
+     "at": [
+      2.55,
+      -1.4,
+      3.35
+     ],
+     "on": [
+      7,
+      "no"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "heart",
+     "at": [
+      1.3,
+      -1.0,
+      2.5
+     ],
+     "on": [
+      8,
+      "baby"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      10,
+      "leaves"
+     ],
+     "off": [
+      12
+     ]
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      0.45,
+      -1.0,
+      2.5
+     ],
+     "on": [
+      11,
+      "sleeper"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.2,
+      "color": "#2459b8"
+     }
+    }
+   ],
+   "lines": [
+    "Guess who! Here are three clues.",
+    "Clue one. This friend is gray and fluffy, with a big black nose.",
+    "Clue two. This friend loves to hug a tree.",
+    {
+     "t": "Clue three. This friend munches on green leaves. Who is it?",
+     "pause": 3.2
+    },
+    [
+     "It is the koala! Well done!",
+     "close:koala"
+    ],
+    {
+     "t": "Now, a tricky question. Is a koala a bear?",
+     "pause": 3.2
+    },
+    "No! Here is the fun fact. A koala is not a bear!",
+    [
+     "Look. This is a bear. A bear has no pouch.",
+     "exhibit"
+    ],
+    [
+     "But a mama koala has a pouch on her tummy, like a cozy pocket. Her baby rides inside!",
+     "teach"
+    ],
+    [
+     "A baby koala is called a joey.",
+     "close:koala"
+    ],
+    "What does a koala eat? Leaves! Leaves from the gum tree. Munch, munch, munch!",
+    "And a koala is a super sleeper. It sleeps almost all day long!",
+    "A koala eats leaves, sleeps, eats more leaves, and sleeps again. What a cozy life!",
+    "Koalas live far away, in a country called Australia.",
+    [
+     "Say it with me. A koala is not a bear!",
+     "close:host"
+    ],
+    "Can you hug yourself, like a koala hugs a tree? Squeeze!",
+    {
+     "t": "Quick check! What is a baby koala called? A cub? Or a joey?",
+     "pause": 3.2
+    },
+    "A joey! You remembered!"
+   ],
+   "short": {
+    "id": "zs90_koala_notbear",
+    "title": "Is a Koala a Bear? Guess the Animal with Milo",
+    "l1": "GUESS WHO?",
+    "l2": "SO FLUFFY!",
+    "thumb_text": "POUCH BABY!",
+    "thumb_line": [
+     8,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "mountain",
+   "tod": "sunset",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! You guessed all three friends. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Whose stripes keep the flies away?",
+     "The zebra! Yes!",
+     "zebra"
+    ],
+    [
+     "Who rolls in the mud to keep cool?",
+     "The pig! That's right!",
+     "pig"
+    ],
+    [
+     "Who is not a bear, and rides in a pouch as a baby?",
+     "The koala! Good job!",
+     "koala"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "beach",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Gallop like a zebra. Roll like a pig. And hug like a koala!",
+    "Which friend was the hardest to guess?",
+    "Thank you for playing with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "format v3 (Noelson, Nov 14 5:12 PM): lesson at least 5:00, every part is one complete 85-95 s mini-lesson that becomes a 90-second Short",
+  "deeper parts: a 'why?' or second question round, one more sourced fact with its own example, and a quick check with answer signs at the end of each part",
+  "picture fixes from the review of the first render: flies half the size, dinner plate paw-sized, answer signs and Milo moved inside the centre 3:2 so the Shorts never cut them",
+  "new on-screen examples: grass patch with daisies, milk bottle and glass, SNOUT / TROOP / SNOW BOOTS word signs, fly count, second counting rounds",
+  "interactive lesson v2 base: answer signs + thinking timer, calm cast, one continuous teaching shot per idea, native 4K, every word placed from the audio"
+ ],
+ "version": 3
+}

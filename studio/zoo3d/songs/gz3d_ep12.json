@@ -1,0 +1,301 @@
+{
+ "style": "upbeat preschool kids electro pop sing-along, cheerful playful male vocal, clear diction, bright synths, bleepy robot sounds, handclaps, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nShadow, shadow, follow me!\nWhere I go, my shadow will be!\nLight shines bright, I block the way,\nThat's how shadows come to play!\n\n[Verse 1]\nWhen light shines on me, guess what I see?\nA dark shape on the ground, it's me!\nLight can't go through me, so it's true,\nA shadow forms behind me too!\n\n[Chorus]\nShadow, shadow, follow me!\nWhere I go, my shadow will be!\nLight shines bright, I block the way,\nThat's how shadows come to play!\n\n[Verse 2]\nIn the morning, shadows are long,\nAt noon they're short, now sing along!\nIn the evening, long again,\nStretching out from you and friends!\n\n[Bridge]\nWave your arms, your shadow waves too!\nJump up high, it jumps with you!\nMake a bunny with your hands,\nShadow puppets, shadow bands!\n\n[Verse 3]\nMove the light and watch it change,\nBig and small, it rearranges!\nNo light at all? No shadow there,\nLight makes shadows everywhere!\n\n[Chorus]\nShadow, shadow, follow me!\nWhere I go, my shadow will be!\nLight shines bright, I block the way,\nThat's how shadows come to play!\n\n[Outro]\nShadow, shadow! Bye-bye, friends!",
+ "duration": 165,
+ "bpm": 118,
+ "key": "E Major",
+ "seed": 1009,
+ "who_map": {},
+ "meta": {
+  "title": "What Is a Shadow? Science Song for Kids with Gizmo",
+  "card": "What Is a Shadow?",
+  "thumb_text": "FOLLOW ME!",
+  "description": "What is a shadow? Gizmo the robot explains that light can't pass through us, so a dark shape forms behind us. Shadows are long in the morning and evening and short at noon, and with no light there's no shadow.\nKids wave and jump with their shadows and make a shadow bunny. Ages 3-6.",
+  "tags": [
+   "shadow song for kids",
+   "what is a shadow",
+   "light and shadow",
+   "science song for kids",
+   "STEM for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "gz3d_ep12",
+  "title": "What Is a Shadow?",
+  "channel": "gizmo",
+  "set": "sciencelab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "char": "gizmo",
+    "spot": "left",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    },
+    "yaw": 0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "close:host",
+     "wide",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SHADOWS!",
+      "color": "#3b3b5c",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "lightbulb",
+      "at": [
+       -3.0,
+       1.4,
+       3.6
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "lightbulb",
+      "at": [
+       -3.0,
+       1.4,
+       3.6
+      ],
+      "word": "light"
+     },
+     {
+      "type": "text",
+      "text": "BLOCK THE LIGHT!",
+      "color": "#3b3b5c",
+      "at": "top",
+      "size": 0.5,
+      "word": "through"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FOLLOW ME!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "wide",
+     "close:host",
+     "close:pal",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "LONG!",
+      "color": "#ff8a1f",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "long,"
+     },
+     {
+      "type": "text",
+      "text": "SHORT!",
+      "color": "#3b8be0",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "short,"
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       0,
+       1.9,
+       3.6
+      ],
+      "word": "noon",
+      "opts": {
+       "size": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "WAVE!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Wave"
+     },
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#e53935",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Jump"
+     },
+     {
+      "type": "text",
+      "text": "BUNNY!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "bunny"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:pal"
+    ],
+    "energy": 0.9,
+    "jump": 0.2,
+    "props": [
+     {
+      "type": "text",
+      "text": "NO LIGHT = NO SHADOW",
+      "color": "#3b3b5c",
+      "at": "top",
+      "size": 0.42,
+      "word": "No"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SHADOWS!",
+      "color": "#3b3b5c",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "gz3d_ep12",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

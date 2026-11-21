@@ -1,0 +1,1339 @@
+{
+ "episode": "za_ep09",
+ "master": {
+  "file": "cartoon/za_ep09.mp4",
+  "size": "3840x2160",
+  "seconds": 338.5
+ },
+ "checks": [
+  {
+   "check": "timing of this build equals the rendered master",
+   "pass": true,
+   "detail": "build 338.482 s, master video 338.500 s"
+  },
+  {
+   "check": "music and effects bed is toon.py's own (voice + bed reproduces the film's English mix sample for sample)",
+   "pass": true,
+   "detail": "np.allclose with toon.mix_audio"
+  },
+  {
+   "check": "en: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "en: title is clean",
+   "pass": true,
+   "detail": "24 characters: Sandy's First Night Away"
+  },
+  {
+   "check": "en: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "SWEET DREAMS!"
+  },
+  {
+   "check": "en: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "es-419: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "es-419: title is clean",
+   "pass": true,
+   "detail": "39 characters: La primera noche de Sandy fuera de casa"
+  },
+  {
+   "check": "es-419: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "¡DULCES SUEÑOS!"
+  },
+  {
+   "check": "es-419: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "pt-BR: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "pt-BR: title is clean",
+   "pass": true,
+   "detail": "38 characters: A Primeira Noite da Sandy Fora de Casa"
+  },
+  {
+   "check": "pt-BR: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "BONS SONHOS!"
+  },
+  {
+   "check": "pt-BR: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "en: track is as long as the video",
+   "pass": true,
+   "detail": "338.500 s against 338.500 s"
+  },
+  {
+   "check": "en: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.855"
+  },
+  {
+   "check": "en: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 14.5 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "en: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "115 cues, largest start difference 0 ms, longest row 42 letters"
+  },
+  {
+   "check": "es-419: track is as long as the video",
+   "pass": true,
+   "detail": "338.500 s against 338.500 s"
+  },
+  {
+   "check": "es-419: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.842"
+  },
+  {
+   "check": "es-419: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 14.3 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "es-419: every line ends inside its slot (no clipped sentence, no line running into the next)",
+   "pass": true,
+   "detail": "55 of 55 fit"
+  },
+  {
+   "check": "es-419: no long silence the English does not have",
+   "pass": true,
+   "detail": "12.32 s (English 12.37 s)"
+  },
+  {
+   "check": "es-419: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "64 cues, largest start difference 0 ms, longest row 49 letters"
+  },
+  {
+   "check": "pt-BR: track is as long as the video",
+   "pass": true,
+   "detail": "338.500 s against 338.500 s"
+  },
+  {
+   "check": "pt-BR: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.842"
+  },
+  {
+   "check": "pt-BR: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 14.1 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "pt-BR: every line ends inside its slot (no clipped sentence, no line running into the next)",
+   "pass": true,
+   "detail": "55 of 55 fit"
+  },
+  {
+   "check": "pt-BR: no long silence the English does not have",
+   "pass": true,
+   "detail": "12.65 s (English 12.37 s)"
+  },
+  {
+   "check": "pt-BR: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "62 cues, largest start difference 0 ms, longest row 44 letters"
+  },
+  {
+   "check": "one master video, one YouTube video",
+   "pass": true,
+   "detail": "episode-master-2160p.mp4"
+  }
+ ],
+ "languages": {
+  "en": {
+   "track": "audio/track-en.wav",
+   "seconds": 338.5,
+   "loudness_lufs": -15.5,
+   "peak": 0.855,
+   "voice_over_bed_db": 14.5,
+   "longest_stretch_without_voice_s": 12.37,
+   "captions": "captions/captions-en.srt",
+   "cues": 115,
+   "longest_caption_row": 42
+  },
+  "es-419": {
+   "track": "audio/track-es-419.wav",
+   "seconds": 338.5,
+   "loudness_lufs": -15.9,
+   "peak": 0.842,
+   "voice_over_bed_db": 14.3,
+   "longest_stretch_without_voice_s": 12.32,
+   "lines": 55,
+   "lines_spoken_faster": 23,
+   "fastest_speed": 1.0,
+   "lines_kept_in_english": 2,
+   "mean_seconds_against_english": 1.02,
+   "translator_notes": [
+    "'=' on a line (the two intro lines, 'The Animated Zoo!') keeps the ENGLISH recording: it is the channel's name and the logo on screen says it in English. Say if Milo should say it in Spanish ('¡El Zoo Animado!').",
+    "'Mamá' for 'Mama'; Sandy, Tumble, Milo and Poppy are unchanged. Sandy is 'la camellita' (she).",
+    "Camel 'hum': 'tararear' / 'tarareo', and 'la canción de Mamá' for the tune. Neutral Latin American words: 'pijamada', 'granero', 'de puntitas', 'calladito'.",
+    "The lullaby rhyme is adapted: 'Luna redonda, estrellas a brillar. Cierra los ojos, vamos a soñar.' (brillar / soñar).",
+    "'primero las rodillas' is said once (line 20). Line 42 says 'en la puerta' without 'del zoológico' (4.2 s).",
+    "The star count is spoken inside the English line's time: the numbers in the picture light up on the ENGLISH words' times.",
+    "Words in the picture (SLEEPOVER!, the answer signs, the logo) are English: one picture for every language (docs/multilang/PLAN.md, decision 1)."
+   ],
+   "line_table": [
+    {
+     "v0": 0.42,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.8,
+     "slot": 4.81,
+     "speed": 0.8,
+     "text": "¡Una pijamada! Sandy, ¡estás invitada a dormir en el zoológico!",
+     "english": "A sleepover! Sandy, you are invited to a sleepover at the zoo!"
+    },
+    {
+     "v0": 16.995,
+     "who": null,
+     "voice": null,
+     "seconds": 1.39,
+     "slot": 2.61,
+     "speed": 0.8,
+     "text": "The Animated Zoo!",
+     "english": "The Animated Zoo!"
+    },
+    {
+     "v0": 19.902,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.31,
+     "slot": 6.58,
+     "speed": 0.8,
+     "text": "¡Hola, soy Milo! Ella es Sandy, la camellita bebé, y su Mamá, en el desierto.",
+     "english": "Hello, I'm Milo! This is Sandy the baby camel, and her Mama, in the sandy desert."
+    },
+    {
+     "v0": 26.76,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 3.03,
+     "slot": 3.47,
+     "speed": 0.82,
+     "text": "¿Una pijamada? ¡Mi primera noche lejos de Mamá!",
+     "english": "A sleepover? My very first night away from Mama!"
+    },
+    {
+     "v0": 30.558,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 6.03,
+     "slot": 6.55,
+     "speed": 0.93,
+     "text": "Mamá camella acaricia a Sandy. Diviértete, pequeña. En la mañana te espero en la puerta del zoológico.",
+     "english": "Mama camel nuzzles Sandy. Have fun, little one. I will be at the zoo gate in the morning."
+    },
+    {
+     "v0": 37.477,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.71,
+     "slot": 6.82,
+     "speed": 0.8,
+     "text": "¿Dónde va a dormir Sandy esta noche? ¿En el zoológico, o en casa?",
+     "english": "Where will Sandy sleep tonight? At the zoo, or at home?"
+    },
+    {
+     "v0": 44.674,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.61,
+     "slot": 4.93,
+     "speed": 0.8,
+     "text": "Sandy camina junto a Mamá, paso, paso, paso, hasta el zoológico.",
+     "english": "Sandy walks beside Mama, step, step, step, all the way to the zoo."
+    },
+    {
+     "v0": 49.992,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.51,
+     "slot": 5.55,
+     "speed": 0.8,
+     "text": "¡Un camellito bebé puede caminar junto a su mamá con solo media hora de nacido!",
+     "english": "A baby camel can walk beside its mama, when it is only half an hour old!"
+    },
+    {
+     "v0": 55.736,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.03,
+     "slot": 7.93,
+     "speed": 0.8,
+     "text": "¿Un camellito puede caminar poco después de nacer? ¿Sí, o no?",
+     "english": "Can a baby camel walk, soon after it is born? Yes, or no?"
+    },
+    {
+     "v0": 63.915,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.08,
+     "slot": 5.38,
+     "speed": 0.8,
+     "text": "En el zoológico espera Tumble, el elefantito. ¡Viva, una pijamada!",
+     "english": "At the zoo, Tumble the baby elephant is waiting. Hooray, a sleepover!"
+    },
+    {
+     "v0": 69.532,
+     "who": "tumble",
+     "voice": "em_alex",
+     "seconds": 3.76,
+     "slot": 4.14,
+     "speed": 0.85,
+     "text": "¡Hola, Sandy! ¡Vamos a jugar, a cenar y a dormir en el granero!",
+     "english": "Hi, Sandy! We can play, and have supper, and sleep in the cozy barn!"
+    },
+    {
+     "v0": 74.081,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 2.31,
+     "slot": 2.4,
+     "speed": 0.82,
+     "text": "¡Adiós, Mamá! ¡Nos vemos en la mañana!",
+     "english": "Bye-bye, Mama! See you in the morning!"
+    },
+    {
+     "v0": 76.86,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.3,
+     "slot": 4.62,
+     "speed": 0.8,
+     "text": "Juegan a las escondidas y comen una cena rica. ¡Ñam, ñam!",
+     "english": "They play hide and seek, and eat a yummy supper. Munch, munch!"
+    },
+    {
+     "v0": 81.668,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.67,
+     "slot": 5.75,
+     "speed": 0.8,
+     "text": "¡Hora de dormir! En el granero, Tumble tiene una cama grande y esponjosa para Sandy.",
+     "english": "Bedtime! In the cozy barn, Tumble has a big, fluffy bed for Sandy."
+    },
+    {
+     "v0": 87.597,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 3.96,
+     "slot": 4.82,
+     "speed": 0.82,
+     "text": "¡Se mueve, se mueve! ¡Ay, esta cama es muy blanda! ¡Me hundo, hundo, hundo!",
+     "english": "Wobble, wobble! Oh, this bed is too soft! I sink down, down, down!"
+    },
+    {
+     "v0": 92.81,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 3.28,
+     "slot": 6.17,
+     "speed": 0.8,
+     "text": "¿La cama esponjosa es muy blanda, o muy dura?",
+     "english": "Is the fluffy bed too soft, or too hard?"
+    },
+    {
+     "v0": 99.4,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 2.57,
+     "slot": 3.64,
+     "speed": 0.82,
+     "text": "En casa, me arrodillo en la arena tibia.",
+     "english": "At home, I kneel down on the warm sand, knees first."
+    },
+    {
+     "v0": 103.285,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.36,
+     "slot": 5.7,
+     "speed": 0.9,
+     "text": "Los camellos tienen piel gruesa y dura en las rodillas, para arrodillarse en la arena caliente.",
+     "english": "Camels have thick, tough skin on their knees, so they can kneel down on hot sand."
+    },
+    {
+     "v0": 109.196,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.75,
+     "slot": 8.22,
+     "speed": 0.8,
+     "text": "¿Dónde tienen los camellos la piel gruesa y dura? ¿En las rodillas, o en las orejas?",
+     "english": "Where do camels have tough, thick skin? On their knees, or on their ears?"
+    },
+    {
+     "v0": 117.679,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.72,
+     "slot": 5.99,
+     "speed": 0.8,
+     "text": "Tumble trae paja suave. Sandy se arrodilla, primero las rodillas. ¡Ahh, perfecto!",
+     "english": "Tumble brings soft straw. Sandy kneels down, knees first. Ahh, just right!"
+    },
+    {
+     "v0": 124.058,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 4.6,
+     "slot": 4.61,
+     "speed": 0.93,
+     "text": "Pero ahora hay mucho silencio. En casa, el viento del desierto hace fuuush.",
+     "english": "But now it is so quiet. At home, the desert wind goes whoosh."
+    },
+    {
+     "v0": 128.9,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 3.11,
+     "slot": 3.52,
+     "speed": 0.84,
+     "text": "¡Ya sé! ¡Salgamos de puntitas a ver las estrellas!",
+     "english": "I know! Let's tiptoe outside, and look at the stars!"
+    },
+    {
+     "v0": 132.647,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.38,
+     "slot": 5.71,
+     "speed": 0.89,
+     "text": "En el jardín del zoológico, la luna está redonda y brillante, y el cielo, lleno de estrellas.",
+     "english": "In the zoo garden, the moon is round and bright, and the sky is full of stars."
+    },
+    {
+     "v0": 138.643,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.56,
+     "slot": 6.59,
+     "speed": 0.8,
+     "text": "¿Cuántas estrellas grandes ves? ¡Cuenta conmigo! ¡Uno, dos, tres, cuatro, cinco!",
+     "english": "How many big stars can you see? Count with me! One, two, three, four, five!"
+    },
+    {
+     "v0": 145.487,
+     "who": "tumble",
+     "voice": "em_alex",
+     "seconds": 3.73,
+     "slot": 3.81,
+     "speed": 0.91,
+     "text": "¡Shhh! ¿Puedes estar muy calladito, como la noche?",
+     "english": "Hush, hush! Can you be very quiet, like the night?"
+    },
+    {
+     "v0": 149.486,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 3.43,
+     "slot": 3.56,
+     "speed": 0.9,
+     "text": "Las estrellas son muy lindas. Pero sigo bien despierta.",
+     "english": "The stars are so pretty. But I am still wide awake."
+    },
+    {
+     "v0": 153.28,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 1.8,
+     "slot": 5.08,
+     "speed": 0.8,
+     "text": "¿Es de día, o de noche?",
+     "english": "Is it day, or night?"
+    },
+    {
+     "v0": 158.498,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.61,
+     "slot": 4.86,
+     "speed": 0.92,
+     "text": "De vuelta en el granero, Sandy se acuesta en la paja. Sus ojos siguen abiertos.",
+     "english": "Back in the barn, Sandy lies in the straw. Her eyes stay open."
+    },
+    {
+     "v0": 163.646,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 4.22,
+     "slot": 4.4,
+     "speed": 0.85,
+     "text": "En casa, Mamá me tararea cada noche. Extraño el tarareo de Mamá.",
+     "english": "At home, Mama hums to me every night. I miss Mama's hum."
+    },
+    {
+     "v0": 168.179,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.6,
+     "slot": 4.87,
+     "speed": 0.8,
+     "text": "Lejos, en el desierto, Mamá camella mira la misma luna grande.",
+     "english": "Far away in the desert, Mama camel looks up at the same big moon."
+    },
+    {
+     "v0": 173.389,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 2.79,
+     "slot": 3.09,
+     "speed": 0.83,
+     "text": "¡Las mamás camello y sus bebés se tararean!",
+     "english": "Camel mamas and their babies hum to each other!"
+    },
+    {
+     "v0": 176.898,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.24,
+     "slot": 7.4,
+     "speed": 0.8,
+     "text": "¿Qué hacen las mamás camello y sus bebés? ¿Tararean, o rugen?",
+     "english": "What do camel mamas and babies do? Hum, or roar?"
+    },
+    {
+     "v0": 184.574,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.6,
+     "slot": 5.97,
+     "speed": 0.86,
+     "text": "El granero está callado y oscuro, y Mamá está lejos. Sandy se siente un poquito triste.",
+     "english": "The barn is quiet and dark, and Mama is far away. Sandy feels a little sad."
+    },
+    {
+     "v0": 190.917,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 2.31,
+     "slot": 2.44,
+     "speed": 0.86,
+     "text": "¿Seré muy pequeña para una pijamada?",
+     "english": "Maybe I am too little for a sleepover."
+    },
+    {
+     "v0": 193.624,
+     "who": "tumble",
+     "voice": "em_alex",
+     "seconds": 2.45,
+     "slot": 2.55,
+     "speed": 0.94,
+     "text": "Tranquila, Sandy. Estamos aquí contigo.",
+     "english": "Don't worry, Sandy. We are right here with you."
+    },
+    {
+     "v0": 196.435,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.54,
+     "slot": 7.24,
+     "speed": 0.8,
+     "text": "¿Los buenos amigos pueden ayudar a Sandy a sentirse mejor? ¿Sí, o no?",
+     "english": "Can good friends help Sandy feel better? Yes, or no?"
+    },
+    {
+     "v0": 204.023,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 4.86,
+     "slot": 4.96,
+     "speed": 0.84,
+     "text": "¡Ya sé! Les enseño el tarareo de Mamá. ¡Así, un pedacito de casa está aquí!",
+     "english": "I know! I can teach you Mama's hum. Then a little bit of home is here with us!"
+    },
+    {
+     "v0": 209.338,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.09,
+     "slot": 4.33,
+     "speed": 0.8,
+     "text": "¡Sí! ¡Enséñanos, Sandy! Tumble y Milo se acurrucan cerquita.",
+     "english": "Yes! Teach us, Sandy! Tumble and Milo snuggle up close."
+    },
+    {
+     "v0": 213.901,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 4.41,
+     "slot": 4.46,
+     "speed": 0.91,
+     "text": "Luna redonda, estrellas a brillar. Cierra los ojos, vamos a soñar.",
+     "english": "Moon is round, stars are bright. Close your eyes, and sleep tight!"
+    },
+    {
+     "v0": 228.87,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 7.33,
+     "slot": 7.61,
+     "speed": 0.8,
+     "text": "Sus amigos tararean la canción de Mamá, suave y despacito. Y Sandy se queda dormida. ¡Dulces sueños!",
+     "english": "Her friends hum Mama's tune with her, soft and slow. And Sandy falls fast asleep. Sweet dreams!"
+    },
+    {
+     "v0": 236.903,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.12,
+     "slot": 8.02,
+     "speed": 0.8,
+     "text": "¿Qué ayudó a Sandy a dormirse? ¿La canción de Mamá, o un tambor ruidoso?",
+     "english": "What helped Sandy fall asleep? Mama's tune, or a loud drum?"
+    },
+    {
+     "v0": 245.1,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 3.81,
+     "slot": 4.2,
+     "speed": 0.8,
+     "text": "¡Buenos días! Salió el sol. ¡Y mira quién está en la puerta!",
+     "english": "Good morning! The sun is up. And look who is at the zoo gate!"
+    },
+    {
+     "v0": 249.578,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 4.08,
+     "slot": 4.09,
+     "speed": 0.92,
+     "text": "¡Mamá! ¡Dormí toda la noche! Mis amigos tararearon tu canción conmigo.",
+     "english": "Mama! I slept all night! My friends hummed your tune with me."
+    },
+    {
+     "v0": 253.847,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 3.68,
+     "slot": 3.89,
+     "speed": 0.84,
+     "text": "Mamá camella y Sandy se tararean hola, nariz con nariz.",
+     "english": "Mama camel and Sandy hum hello, nose to nose."
+    },
+    {
+     "v0": 258.023,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 3.55,
+     "slot": 4.4,
+     "speed": 0.8,
+     "text": "Luego, Mamá y Sandy caminan a casa, lado a lado.",
+     "english": "Then Mama and Sandy walk home together, side by side."
+    },
+    {
+     "v0": 262.559,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 2.93,
+     "slot": 6.74,
+     "speed": 0.8,
+     "text": "¿Quién esperaba en la puerta? ¿Mamá, o Milo?",
+     "english": "Who was waiting at the gate? Mama, or Milo?"
+    },
+    {
+     "v0": 269.472,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 2.14,
+     "slot": 2.32,
+     "speed": 0.84,
+     "text": "¡Gracias por la pijamada, Sandy!",
+     "english": "Thank you for the sleepover, Sandy!"
+    },
+    {
+     "v0": 272.147,
+     "who": "tumble",
+     "voice": "em_alex",
+     "seconds": 2.71,
+     "slot": 2.77,
+     "speed": 0.94,
+     "text": "¡Vuelve pronto! Nuestro granero también es tuyo.",
+     "english": "Come again soon! Our barn is your barn too."
+    },
+    {
+     "v0": 275.086,
+     "who": "sandy",
+     "voice": "ef_dora",
+     "seconds": 3.76,
+     "slot": 3.9,
+     "speed": 0.85,
+     "text": "¡Gracias, amigos! Mi primera noche fuera fue muy acogedora.",
+     "english": "Thank you, friends! You made my first night away so cozy."
+    },
+    {
+     "v0": 279.222,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.68,
+     "slot": 5.7,
+     "speed": 1.0,
+     "text": "Cuando extrañas a alguien, una canción de casa puede ir contigo. Y los buenos amigos también ayudan.",
+     "english": "When you miss someone, a song from home can come with you. And good friends help, too."
+    },
+    {
+     "v0": 285.055,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 6.81,
+     "slot": 10.8,
+     "speed": 0.8,
+     "text": "¿Te acuerdas? ¿Cuándo puede un camellito caminar junto a su mamá? ¿Con media hora de nacido, o con un año?",
+     "english": "Do you remember? When can a baby camel walk beside its mama? At half an hour old, or at one year old?"
+    },
+    {
+     "v0": 296.189,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 6.05,
+     "slot": 9.36,
+     "speed": 0.8,
+     "text": "¿Y qué protege las rodillas del camello en la arena caliente? ¿Piel dura, o plumas suaves?",
+     "english": "And what keeps a camel's knees safe on hot sand? Tough skin, or soft feathers?"
+    },
+    {
+     "v0": 305.682,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 4.53,
+     "slot": 4.86,
+     "speed": 0.87,
+     "text": "Luna redonda, estrellas a brillar. Cierra los ojos, vamos a soñar.",
+     "english": "Moon is round, stars are bright. Close your eyes, and sleep tight!"
+    },
+    {
+     "v0": 316.37,
+     "who": "milo",
+     "voice": "ef_dora",
+     "seconds": 5.83,
+     "slot": 6.05,
+     "speed": 1.0,
+     "text": "La próxima vez: ¡Poppy se desliza en el hielo por primera vez! ¡Nos vemos en la próxima aventura, amigos!",
+     "english": "Next time: Poppy's first slide on the ice! See you on the next adventure, friends!"
+    },
+    {
+     "v0": 334.495,
+     "who": null,
+     "voice": null,
+     "seconds": 1.39,
+     "slot": 2.71,
+     "speed": 0.8,
+     "text": "The Animated Zoo!",
+     "english": "The Animated Zoo!"
+    }
+   ],
+   "captions": "captions/captions-es-419.srt",
+   "cues": 64,
+   "longest_caption_row": 49
+  },
+  "pt-BR": {
+   "track": "audio/track-pt-BR.wav",
+   "seconds": 338.5,
+   "loudness_lufs": -15.8,
+   "peak": 0.842,
+   "voice_over_bed_db": 14.1,
+   "longest_stretch_without_voice_s": 12.65,
+   "lines": 55,
+   "lines_spoken_faster": 16,
+   "fastest_speed": 1.0,
+   "lines_kept_in_english": 2,
+   "mean_seconds_against_english": 1.01,
+   "translator_notes": [
+    "'=' on a line (the two intro lines, 'The Animated Zoo!') keeps the ENGLISH recording: it is the channel's name and the logo on screen says it in English. Say if Milo should say it in Portuguese ('O Zoológico Animado!').",
+    "'Mamãe' for 'Mama' (as in zc_ep02); Sandy, Tumble, Milo and Poppy are unchanged. Sandy is 'a camelinha' (she), so 'Obrigada', 'acordada', 'pequena'.",
+    "Camel 'hum': 'cantarolar' (the verb) and 'cantiga' (the tune). The fact line says 'cantarolam um pro outro' (spoken Brazilian 'pro').",
+    "The lullaby rhyme is adapted, not translated: 'Lua redonda, estrelas a brilhar. Feche os olhos, vamos sonhar!' (brilhar / sonhar).",
+    "'knees first' is said once (line 20), not twice: line 17 has 3.6 s. Milo's thank-you avoids 'obrigado/obrigada' ('Adorei a festa do pijama').",
+    "The star count 'Um, dois, três, quatro, cinco' is spoken inside the English line's time: the numbers in the picture light up on the ENGLISH words' times, so they may be a beat off.",
+    "Words in the picture (SLEEPOVER!, the answer signs, the logo) are English: one picture for every language (docs/multilang/PLAN.md, decision 1)."
+   ],
+   "line_table": [
+    {
+     "v0": 0.42,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.94,
+     "slot": 4.81,
+     "speed": 0.8,
+     "text": "Festa do pijama! Sandy, você vai dormir no zoológico!",
+     "english": "A sleepover! Sandy, you are invited to a sleepover at the zoo!"
+    },
+    {
+     "v0": 16.995,
+     "who": null,
+     "voice": null,
+     "seconds": 1.39,
+     "slot": 2.61,
+     "speed": 0.8,
+     "text": "The Animated Zoo!",
+     "english": "The Animated Zoo!"
+    },
+    {
+     "v0": 19.902,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.3,
+     "slot": 6.58,
+     "speed": 0.8,
+     "text": "Oi, eu sou o Milo! Esta é a Sandy, a camelinha, e a Mamãe dela, lá no deserto.",
+     "english": "Hello, I'm Milo! This is Sandy the baby camel, and her Mama, in the sandy desert."
+    },
+    {
+     "v0": 26.76,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 3.16,
+     "slot": 3.47,
+     "speed": 0.82,
+     "text": "Dormir fora? Minha primeira noite longe da Mamãe!",
+     "english": "A sleepover? My very first night away from Mama!"
+    },
+    {
+     "v0": 30.558,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.76,
+     "slot": 6.55,
+     "speed": 0.8,
+     "text": "A Mamãe faz um carinho na Sandy. Divirta-se, filhinha! De manhã, te espero no portão.",
+     "english": "Mama camel nuzzles Sandy. Have fun, little one. I will be at the zoo gate in the morning."
+    },
+    {
+     "v0": 37.477,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.29,
+     "slot": 6.82,
+     "speed": 0.8,
+     "text": "Onde a Sandy vai dormir hoje? No zoológico, ou em casa?",
+     "english": "Where will Sandy sleep tonight? At the zoo, or at home?"
+    },
+    {
+     "v0": 44.674,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.69,
+     "slot": 4.93,
+     "speed": 0.8,
+     "text": "A Sandy anda ao lado da Mamãe, passo, passo, passo, até o zoológico.",
+     "english": "Sandy walks beside Mama, step, step, step, all the way to the zoo."
+    },
+    {
+     "v0": 49.992,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.84,
+     "slot": 5.55,
+     "speed": 0.8,
+     "text": "Um camelinho bebê já anda ao lado da mamãe com só meia hora de vida!",
+     "english": "A baby camel can walk beside its mama, when it is only half an hour old!"
+    },
+    {
+     "v0": 55.736,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.1,
+     "slot": 7.93,
+     "speed": 0.8,
+     "text": "Um camelinho consegue andar logo depois de nascer? Sim, ou não?",
+     "english": "Can a baby camel walk, soon after it is born? Yes, or no?"
+    },
+    {
+     "v0": 63.915,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.85,
+     "slot": 5.38,
+     "speed": 0.8,
+     "text": "No zoológico, o elefantinho Tumble espera. Oba, festa do pijama!",
+     "english": "At the zoo, Tumble the baby elephant is waiting. Hooray, a sleepover!"
+    },
+    {
+     "v0": 69.532,
+     "who": "tumble",
+     "voice": "pm_alex",
+     "seconds": 4.04,
+     "slot": 4.14,
+     "speed": 0.85,
+     "text": "Oi, Sandy! Vamos brincar, jantar e dormir no celeiro quentinho!",
+     "english": "Hi, Sandy! We can play, and have supper, and sleep in the cozy barn!"
+    },
+    {
+     "v0": 74.081,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 1.98,
+     "slot": 2.4,
+     "speed": 0.82,
+     "text": "Tchau, Mamãe! Até de manhã!",
+     "english": "Bye-bye, Mama! See you in the morning!"
+    },
+    {
+     "v0": 76.86,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.43,
+     "slot": 4.62,
+     "speed": 0.88,
+     "text": "Eles brincam de esconde-esconde e comem um jantar gostoso. Nham, nham!",
+     "english": "They play hide and seek, and eat a yummy supper. Munch, munch!"
+    },
+    {
+     "v0": 81.668,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.43,
+     "slot": 5.75,
+     "speed": 0.8,
+     "text": "Hora de dormir! No celeiro, o Tumble tem uma cama grande e fofinha para a Sandy.",
+     "english": "Bedtime! In the cozy barn, Tumble has a big, fluffy bed for Sandy."
+    },
+    {
+     "v0": 87.597,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 4.44,
+     "slot": 4.82,
+     "speed": 0.82,
+     "text": "Balança, balança! Ai, esta cama é mole demais! Eu afundo, fundo, fundo!",
+     "english": "Wobble, wobble! Oh, this bed is too soft! I sink down, down, down!"
+    },
+    {
+     "v0": 92.81,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.33,
+     "slot": 6.17,
+     "speed": 0.8,
+     "text": "A cama fofinha é mole demais, ou dura demais?",
+     "english": "Is the fluffy bed too soft, or too hard?"
+    },
+    {
+     "v0": 99.4,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 2.9,
+     "slot": 3.64,
+     "speed": 0.82,
+     "text": "Em casa, eu me ajoelho na areia quentinha.",
+     "english": "At home, I kneel down on the warm sand, knees first."
+    },
+    {
+     "v0": 103.285,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.21,
+     "slot": 5.7,
+     "speed": 0.83,
+     "text": "Os camelos têm uma pele grossa e forte nos joelhos, para se ajoelhar na areia quente.",
+     "english": "Camels have thick, tough skin on their knees, so they can kneel down on hot sand."
+    },
+    {
+     "v0": 109.196,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.25,
+     "slot": 8.22,
+     "speed": 0.8,
+     "text": "Onde os camelos têm a pele grossa e forte? Nos joelhos, ou nas orelhas?",
+     "english": "Where do camels have tough, thick skin? On their knees, or on their ears?"
+    },
+    {
+     "v0": 117.679,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.79,
+     "slot": 5.99,
+     "speed": 0.8,
+     "text": "O Tumble traz palha macia. A Sandy se ajoelha, primeiro os joelhos. Ahh, perfeito!",
+     "english": "Tumble brings soft straw. Sandy kneels down, knees first. Ahh, just right!"
+    },
+    {
+     "v0": 124.058,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 4.6,
+     "slot": 4.61,
+     "speed": 0.82,
+     "text": "Mas agora está tão quieto. Em casa, o vento do deserto faz vuuush.",
+     "english": "But now it is so quiet. At home, the desert wind goes whoosh."
+    },
+    {
+     "v0": 128.9,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.33,
+     "slot": 3.52,
+     "speed": 1.0,
+     "text": "Já sei! Vamos lá fora, na pontinha dos pés, ver as estrelas!",
+     "english": "I know! Let's tiptoe outside, and look at the stars!"
+    },
+    {
+     "v0": 132.647,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.13,
+     "slot": 5.71,
+     "speed": 0.8,
+     "text": "No jardim do zoo, a lua está redonda e brilhante, e o céu, cheio de estrelas.",
+     "english": "In the zoo garden, the moon is round and bright, and the sky is full of stars."
+    },
+    {
+     "v0": 138.643,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.49,
+     "slot": 6.59,
+     "speed": 0.8,
+     "text": "Quantas estrelas grandes você vê? Conte comigo! Um, dois, três, quatro, cinco!",
+     "english": "How many big stars can you see? Count with me! One, two, three, four, five!"
+    },
+    {
+     "v0": 145.487,
+     "who": "tumble",
+     "voice": "pm_alex",
+     "seconds": 3.64,
+     "slot": 3.81,
+     "speed": 0.95,
+     "text": "Shhh! Você consegue ficar bem quietinho, como a noite?",
+     "english": "Hush, hush! Can you be very quiet, like the night?"
+    },
+    {
+     "v0": 149.486,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 3.53,
+     "slot": 3.56,
+     "speed": 0.82,
+     "text": "As estrelas são lindas. Mas eu ainda estou acordada.",
+     "english": "The stars are so pretty. But I am still wide awake."
+    },
+    {
+     "v0": 153.28,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 1.8,
+     "slot": 5.08,
+     "speed": 0.8,
+     "text": "É dia, ou é noite?",
+     "english": "Is it day, or night?"
+    },
+    {
+     "v0": 158.498,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.5,
+     "slot": 4.86,
+     "speed": 0.93,
+     "text": "De volta ao celeiro, a Sandy deita na palha. Os olhos continuam abertos.",
+     "english": "Back in the barn, Sandy lies in the straw. Her eyes stay open."
+    },
+    {
+     "v0": 163.646,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 4.25,
+     "slot": 4.4,
+     "speed": 0.82,
+     "text": "Em casa, a Mamãe cantarola para mim toda noite. Que saudade!",
+     "english": "At home, Mama hums to me every night. I miss Mama's hum."
+    },
+    {
+     "v0": 168.179,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.37,
+     "slot": 4.87,
+     "speed": 0.83,
+     "text": "Lá longe, no deserto, a Mamãe camelo olha para a mesma lua grande.",
+     "english": "Far away in the desert, Mama camel looks up at the same big moon."
+    },
+    {
+     "v0": 173.389,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 2.79,
+     "slot": 3.09,
+     "speed": 0.9,
+     "text": "A mamãe camelo e o bebê cantarolam um pro outro!",
+     "english": "Camel mamas and their babies hum to each other!"
+    },
+    {
+     "v0": 176.898,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.14,
+     "slot": 7.4,
+     "speed": 0.8,
+     "text": "O que a mamãe camelo e o bebê fazem? Cantarolam, ou rugem?",
+     "english": "What do camel mamas and babies do? Hum, or roar?"
+    },
+    {
+     "v0": 184.574,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.56,
+     "slot": 5.97,
+     "speed": 0.86,
+     "text": "O celeiro está quieto e escuro, e a Mamãe está longe. A Sandy fica um pouquinho triste.",
+     "english": "The barn is quiet and dark, and Mama is far away. Sandy feels a little sad."
+    },
+    {
+     "v0": 190.917,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 2.05,
+     "slot": 2.44,
+     "speed": 0.82,
+     "text": "Será que sou pequena demais?",
+     "english": "Maybe I am too little for a sleepover."
+    },
+    {
+     "v0": 193.624,
+     "who": "tumble",
+     "voice": "pm_alex",
+     "seconds": 2.39,
+     "slot": 2.55,
+     "speed": 0.85,
+     "text": "Calma, Sandy. Estamos aqui com você.",
+     "english": "Don't worry, Sandy. We are right here with you."
+    },
+    {
+     "v0": 196.435,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.87,
+     "slot": 7.24,
+     "speed": 0.8,
+     "text": "Bons amigos podem ajudar a Sandy a se sentir melhor? Sim, ou não?",
+     "english": "Can good friends help Sandy feel better? Yes, or no?"
+    },
+    {
+     "v0": 204.023,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 4.7,
+     "slot": 4.96,
+     "speed": 0.88,
+     "text": "Já sei! Eu ensino a cantiga da Mamãe. Assim, um pedacinho de casa fica aqui!",
+     "english": "I know! I can teach you Mama's hum. Then a little bit of home is here with us!"
+    },
+    {
+     "v0": 209.338,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.09,
+     "slot": 4.33,
+     "speed": 0.8,
+     "text": "Isso! Ensina, Sandy! O Tumble e o Milo chegam bem pertinho.",
+     "english": "Yes! Teach us, Sandy! Tumble and Milo snuggle up close."
+    },
+    {
+     "v0": 213.901,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 3.95,
+     "slot": 4.46,
+     "speed": 0.82,
+     "text": "Lua redonda, estrelas a brilhar. Feche os olhos, vamos sonhar!",
+     "english": "Moon is round, stars are bright. Close your eyes, and sleep tight!"
+    },
+    {
+     "v0": 228.87,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 6.51,
+     "slot": 7.61,
+     "speed": 0.8,
+     "text": "Os amigos cantarolam a cantiga da Mamãe, bem devagar. E a Sandy dorme, dorme. Bons sonhos!",
+     "english": "Her friends hum Mama's tune with her, soft and slow. And Sandy falls fast asleep. Sweet dreams!"
+    },
+    {
+     "v0": 236.903,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.94,
+     "slot": 8.02,
+     "speed": 0.8,
+     "text": "O que ajudou a Sandy a dormir? A cantiga da Mamãe, ou um tambor bem alto?",
+     "english": "What helped Sandy fall asleep? Mama's tune, or a loud drum?"
+    },
+    {
+     "v0": 245.1,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.89,
+     "slot": 4.2,
+     "speed": 0.88,
+     "text": "Bom dia! O sol nasceu. E olha quem está no portão do zoológico!",
+     "english": "Good morning! The sun is up. And look who is at the zoo gate!"
+    },
+    {
+     "v0": 249.578,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 4.0,
+     "slot": 4.09,
+     "speed": 0.86,
+     "text": "Mamãe! Dormi a noite toda! Meus amigos cantaram sua cantiga.",
+     "english": "Mama! I slept all night! My friends hummed your tune with me."
+    },
+    {
+     "v0": 253.847,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.72,
+     "slot": 3.89,
+     "speed": 0.85,
+     "text": "A Mamãe camelo e a Sandy cantarolam um oi, nariz com nariz.",
+     "english": "Mama camel and Sandy hum hello, nose to nose."
+    },
+    {
+     "v0": 258.023,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.14,
+     "slot": 4.4,
+     "speed": 0.8,
+     "text": "Depois, a Mamãe e a Sandy voltam para casa, lado a lado.",
+     "english": "Then Mama and Sandy walk home together, side by side."
+    },
+    {
+     "v0": 262.559,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 3.48,
+     "slot": 6.74,
+     "speed": 0.8,
+     "text": "Quem estava esperando no portão? A Mamãe, ou o Milo?",
+     "english": "Who was waiting at the gate? Mama, or Milo?"
+    },
+    {
+     "v0": 269.472,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 2.12,
+     "slot": 2.32,
+     "speed": 0.88,
+     "text": "Adorei a festa do pijama, Sandy!",
+     "english": "Thank you for the sleepover, Sandy!"
+    },
+    {
+     "v0": 272.147,
+     "who": "tumble",
+     "voice": "pm_alex",
+     "seconds": 2.71,
+     "slot": 2.77,
+     "speed": 0.85,
+     "text": "Volte sempre! Nosso celeiro também é seu.",
+     "english": "Come again soon! Our barn is your barn too."
+    },
+    {
+     "v0": 275.086,
+     "who": "sandy",
+     "voice": "pf_dora",
+     "seconds": 3.76,
+     "slot": 3.9,
+     "speed": 0.89,
+     "text": "Obrigada, amigos! Minha primeira noite fora foi tão gostosa.",
+     "english": "Thank you, friends! You made my first night away so cozy."
+    },
+    {
+     "v0": 279.222,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.07,
+     "slot": 5.7,
+     "speed": 0.85,
+     "text": "Na hora da saudade, uma cantiga de casa vai com você. E bons amigos ajudam.",
+     "english": "When you miss someone, a song from home can come with you. And good friends help, too."
+    },
+    {
+     "v0": 285.055,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 6.23,
+     "slot": 10.8,
+     "speed": 0.8,
+     "text": "Você lembra? Quando um camelinho já anda ao lado da mamãe? Com meia hora de vida, ou com um ano?",
+     "english": "Do you remember? When can a baby camel walk beside its mama? At half an hour old, or at one year old?"
+    },
+    {
+     "v0": 296.189,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.9,
+     "slot": 9.36,
+     "speed": 0.8,
+     "text": "E o que protege os joelhos do camelo na areia quente? Pele grossa, ou penas macias?",
+     "english": "And what keeps a camel's knees safe on hot sand? Tough skin, or soft feathers?"
+    },
+    {
+     "v0": 305.682,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 4.3,
+     "slot": 4.86,
+     "speed": 0.8,
+     "text": "Lua redonda, estrelas a brilhar. Feche os olhos, vamos sonhar!",
+     "english": "Moon is round, stars are bright. Close your eyes, and sleep tight!"
+    },
+    {
+     "v0": 316.37,
+     "who": "milo",
+     "voice": "pf_dora",
+     "seconds": 5.54,
+     "slot": 6.05,
+     "speed": 0.88,
+     "text": "Na próxima: a Poppy escorrega no gelo pela primeira vez! Até a próxima aventura, amigos!",
+     "english": "Next time: Poppy's first slide on the ice! See you on the next adventure, friends!"
+    },
+    {
+     "v0": 334.495,
+     "who": null,
+     "voice": null,
+     "seconds": 1.39,
+     "slot": 2.71,
+     "speed": 0.8,
+     "text": "The Animated Zoo!",
+     "english": "The Animated Zoo!"
+    }
+   ],
+   "captions": "captions/captions-pt-BR.srt",
+   "cues": 62,
+   "longest_caption_row": 44
+  }
+ },
+ "not_checked_by_machine": [
+  "how the voices sound and whether each word is pronounced right (nobody here can listen): one human listen per language",
+  "regional vocabulary and age fit were checked by reading every line, not by a native speaker",
+  "the picture's own words (caption line, big words, answer signs) are English in every language in this test"
+ ],
+ "facts": "The English script's facts were read at their sources on the day the script was written (see the episode file's header); the adaptations state the same facts, line for line.",
+ "ready": true
+}

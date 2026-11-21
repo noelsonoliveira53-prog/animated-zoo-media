@@ -1,0 +1,658 @@
+[
+ {
+  "id": "bl2_orange_mix",
+  "animal": "bl2_mix_orange",
+  "title": "Red and Yellow Make Orange!",
+  "thumb": "MAGIC MIX!",
+  "top": "ORANGE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "What happens when red paint and yellow paint swirl together? Let's mix them and see!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "One red drop, plus one yellow drop. Swirl, swirl, swirl... it's orange! Red and yellow make orange.",
+    "act": "fx+badge:ORANGE!"
+   },
+   {
+    "say": "This is my friend Orange! Orange is a warm, bright, happy color. Can you say orange? Orange is a happy color.",
+    "act": "zoom"
+   },
+   {
+    "say": "An orange is orange. A crunchy carrot is orange. A big round pumpkin is orange, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you find something orange near you? Point to it! Red and yellow make orange. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_count_ducks",
+  "animal": "bl2_n7",
+  "title": "Let's Count Seven Little Ducks!",
+  "thumb": "7 DUCKS!",
+  "top": "SEVEN",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Quack, quack! Some little ducks waddled into my lab. How many ducks are there?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Let's count them together. One, two, three, four, five, six, seven! Seven little ducks.",
+    "act": "fx+badge:7 DUCKS!"
+   },
+   {
+    "say": "This is the number seven. Seven comes right after six. Can you say seven? Ducks love to splash and paddle in the pond.",
+    "act": "zoom"
+   },
+   {
+    "say": "Look at my counting frame. Five dots on the top, and two more on the bottom. That makes seven!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you hold up seven fingers? Five on one hand, and two more! Quack, quack! See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_cube",
+  "animal": "bl2_cube",
+  "title": "A Cube Has Six Square Sides!",
+  "thumb": "6 SIDES!",
+  "top": "CUBE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Gift boxes and toy blocks can have the very same shape. Do you know what it's called?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a cube! Look at this side. It's a square. Every side of a cube is a square.",
+    "act": "fx+badge:CUBE!"
+   },
+   {
+    "say": "A cube has six flat sides. Flat sides help cubes stack up tall without rolling away. Count with me: one, two, three, four, five, six!",
+    "act": "zoom"
+   },
+   {
+    "say": "A gift box can be a cube. A little toy block is a cube, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you find something shaped like a cube at home? Cube! Can you say it? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_bigsmall",
+  "animal": "bl2_bigsmall",
+  "title": "Big and Small: Fun Opposites!",
+  "thumb": "BIG & SMALL",
+  "top": "BIG & SMALL",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "One jelly friend is super big, and one jelly friend is super small. Can you spot them?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "This purple friend is big! Big body, and a big shiny star. Big, big, big!",
+    "act": "fx+badge:BIG!"
+   },
+   {
+    "say": "Big and small are opposites. Opposites are as different as can be. One is big, and one is small.",
+    "act": "zoom"
+   },
+   {
+    "say": "This yellow friend is small. Small body, and a small little star. Small, small, small!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you stretch up big and tall? Now curl up small, like a little ball! Big and small. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_purple_mix",
+  "animal": "bl2_mix_purple",
+  "title": "Red and Blue Make Purple!",
+  "thumb": "MAGIC MIX!",
+  "top": "PURPLE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Red and blue are best friends. What new color do they make when they mix?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "One red drop, plus one blue drop. Swirl, swirl, swirl... it's purple! Red and blue make purple.",
+    "act": "fx+badge:PURPLE!"
+   },
+   {
+    "say": "This is my friend Purple! Purple is the color of grapes and pretty flowers. Can you say purple? Purple is so pretty.",
+    "act": "zoom"
+   },
+   {
+    "say": "Grapes can be purple. An eggplant is purple. This little flower is purple, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you find something purple near you? Point to it! Red and blue make purple. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_ten",
+  "animal": "bl2_n10",
+  "title": "Count to Ten With Bloop!",
+  "thumb": "1 TO 10!",
+  "top": "TEN",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Wiggle your fingers! How many fingers do you have? Let's count all the way to ten!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Count my jelly friends with me. One, two, three, four, five, six, seven, eight, nine, ten!",
+    "act": "fx+badge:10!"
+   },
+   {
+    "say": "Ten! Ten is a big number. Ten comes right after nine. Can you say ten? One, two, three, four, five, six, seven, eight, nine, ten!",
+    "act": "zoom"
+   },
+   {
+    "say": "Look at my counting frame. Five dots on top, and five on the bottom. Every box is full!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "You have ten fingers and ten toes. Wiggle them all! Ten, ten, ten! See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_rainbow",
+  "animal": "bl2_rainbow",
+  "title": "Rainbow Colors in Order!",
+  "thumb": "RAINBOW!",
+  "top": "RAINBOW",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "A rainbow always has its colors in the very same order. Can you name them with me?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Red, orange, yellow, green, blue and purple! Red is always on the top of the rainbow.",
+    "act": "fx+badge:IN ORDER!"
+   },
+   {
+    "say": "Rainbows can appear when the sun shines while it rains. Sunshine, plus raindrops, makes a rainbow! The sun needs to be behind you to see it.",
+    "act": "zoom"
+   },
+   {
+    "say": "Twinkle, twinkle! A rainbow is a big, bright, beautiful arch high in the sky.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Let's say the order one more time. Red, orange, yellow, green, blue, purple! See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_sphere",
+  "animal": "bl2_sphere",
+  "title": "A Sphere Is Round Like a Ball!",
+  "thumb": "ROUND!",
+  "top": "SPHERE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "This shape is round all the way around, and it loves to roll. What shape is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a sphere! A sphere is round everywhere, with no corners and no flat sides at all.",
+    "act": "fx+badge:SPHERE!"
+   },
+   {
+    "say": "Give a sphere a little push, and it rolls, and rolls, and rolls! Round and round it goes, and it never gets stuck on a corner.",
+    "act": "zoom"
+   },
+   {
+    "say": "A beach ball is a sphere. A juicy orange is a sphere, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you roll your arms round and round like a rolling ball? Sphere! Can you say it? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_pattern",
+  "animal": "bl2_pattern_ab",
+  "title": "What Comes Next? Color Pattern Fun!",
+  "thumb": "WHAT'S NEXT?",
+  "top": "PATTERNS",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Red, blue, red, blue, red... Can you guess which color comes next?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Blue! Red, blue, red, blue, red, blue. The two colors take turns, again and again.",
+    "act": "fx+badge:BLUE!"
+   },
+   {
+    "say": "When something repeats like that, we call it a pattern. Can you say pattern? A pattern goes the same way, over and over, like a song we sing again and again.",
+    "act": "zoom"
+   },
+   {
+    "say": "Look up high! Yellow, green, yellow, green, yellow, green. That's another pattern!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you make a pattern with your body? Clap, stomp, clap, stomp, clap, stomp! See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_updown",
+  "animal": "bl2_updown",
+  "title": "Up and Down: Fun Opposites!",
+  "thumb": "UP & DOWN",
+  "top": "UP & DOWN",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "A balloon floats way up high, and a ball rolls down low. Which way is up?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Up! The red balloon floats up, up, up, toward the sky.",
+    "act": "fx+badge:UP!"
+   },
+   {
+    "say": "Up and down are opposites. Up is high, near the sky. Down is low, near the floor. Up, up, up! Down, down, down!",
+    "act": "zoom"
+   },
+   {
+    "say": "Down! When you drop a ball, it falls down, down, down, all the way to the floor.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Reach your hands up high! Now put your hands down low! Up and down, up and down. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_green_hunt",
+  "animal": "bl2_hunt_green",
+  "title": "Can You Spot Green Things?",
+  "thumb": "GREEN HUNT!",
+  "top": "GREEN",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Grab your magnifying glass! Today we're going on a hunt for things that are green.",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "I spy a green leaf, and a little green frog. Ribbit, ribbit!",
+    "act": "fx+badge:GREEN!"
+   },
+   {
+    "say": "Green is the color of grass and trees. There is lots of green outside! Green leaves, green grass, green bushes and tall green trees. Let's keep hunting!",
+    "act": "zoom"
+   },
+   {
+    "say": "More green things! A crunchy green apple, and a wiggly green caterpillar.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you find something green near you? Point to it! Green, green, green! See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_cone",
+  "animal": "bl2_cone",
+  "title": "Pointy Top, Round Bottom: A Cone!",
+  "thumb": "CONE!",
+  "top": "CONE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "This shape has a pointy top and a round bottom. Do you know its name?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a cone! The bottom is a circle, and the top comes to a point.",
+    "act": "fx+badge:CONE!"
+   },
+   {
+    "say": "Lay a cone on its side and give it a push. It rolls around in a circle! Round and round!",
+    "act": "zoom"
+   },
+   {
+    "say": "An ice cream cone is a cone. An orange traffic cone is a cone, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you make a pointy cone hat with your hands on your head? Cone! Can you say it? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_lightdark",
+  "animal": "bl2_ld_blue",
+  "title": "Light Blue and Dark Blue!",
+  "thumb": "LIGHT & DARK",
+  "top": "BLUE",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Did you know blue can be light, and blue can be dark? Let's take a look!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Look at my blue colors. They start light and pale, and get darker, and darker, and darker!",
+    "act": "fx+badge:SHADES!"
+   },
+   {
+    "say": "Mix a little white paint into blue, and it gets lighter. Mix in black, and it gets darker. Light, lighter, dark, darker!",
+    "act": "zoom"
+   },
+   {
+    "say": "The sky in the daytime is light blue. The sky at night is dark blue!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you say light blue? Now say dark blue! Great job, color friend. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_sort",
+  "animal": "bl2_sort_color",
+  "title": "Let's Sort by Color With Bloop!",
+  "thumb": "SORT IT!",
+  "top": "SORTING",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "My red things and blue things got all mixed up. Can you help me sort them?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Red things go in the red basket. A red apple, a red heart, and a red ball!",
+    "act": "fx+badge:RED!"
+   },
+   {
+    "say": "Sorting means putting things that are the same together. Same color, same basket! Let's sort by color!",
+    "act": "zoom"
+   },
+   {
+    "say": "Blue things go in the blue basket. A blue ball, a blue star, and a blue fish!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Red with red, blue with blue. We sorted them all! Thank you for helping. See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_sizes",
+  "animal": "bl2_sizes",
+  "title": "Small, Medium and Big!",
+  "thumb": "WHICH IS BIG?",
+  "top": "SIZES",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "Three jelly friends, in three different sizes. Can you find the biggest one?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Small, medium, big! Look at their stars. A small star, a medium star, and a big star.",
+    "act": "fx+badge:BIG!"
+   },
+   {
+    "say": "The big friend is the biggest. The small friend is the smallest. Medium is in the middle! Small, medium, big. Can you say it?",
+    "act": "zoom"
+   },
+   {
+    "say": "Party hats! A small hat, a medium hat, and a big hat. Every hat fits just right.",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you make yourself small, then medium, then big, big, big? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "bl2_cylinder",
+  "animal": "bl2_cylinder",
+  "title": "A Cylinder Has Two Circles!",
+  "thumb": "2 CIRCLES!",
+  "top": "CYLINDER",
+  "bg": [
+   "#fff3fb",
+   "#e9f6ff"
+  ],
+  "floor": "#f3edff",
+  "sources": [
+   "Early learning: colors, shapes and counting (preschool curriculum basics)"
+  ],
+  "beats": [
+   {
+    "say": "It looks like a can, with a circle on each end. What shape is it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bloop, the wobbly jelly blob. Welcome to my lab!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's a cylinder! There's a circle on the top, and a circle on the bottom.",
+    "act": "fx+badge:2 CIRCLES!"
+   },
+   {
+    "say": "A cylinder can stand up tall, or lie down on its side and roll. Stand it up, or lay it down. Roll, roll, roll! A cylinder is easy to roll.",
+    "act": "zoom"
+   },
+   {
+    "say": "A toy drum is a cylinder. A cup can be a cylinder, too!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you roll like a cylinder? Roll, roll, roll! Cylinder! Can you say it? See you in the lab!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

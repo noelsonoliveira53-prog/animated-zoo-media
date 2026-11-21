@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep08_garden",
+ "title": "The Garden at Night 🐌 Calm Bedtime Story with Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the quiet garden at night.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_snail",
+   "lines": [
+    [
+     "Here's a little clue: she moves very slowly, and she carries a shell on her back. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Snail.",
+     "enter"
+    ],
+    [
+     "This is Snail. Can you whisper snail? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A snail carries her shell everywhere. It's her own little house.",
+     "fx+bob"
+    ],
+    [
+     "Snails like to come out at night, when the garden is cool and damp.",
+     "bob"
+    ],
+    [
+     "Can you move your hand very, very slowly, like a snail? Slow, slow, slow.",
+     "bob"
+    ],
+    [
+     "What does a snail carry on her back?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Her shell. Her own little house.",
+     "fx2+badge:SNAIL"
+    ],
+    [
+     "Let's say it softly together: Snail.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Snail.",
+     "zoom"
+    ],
+    [
+     "Snail leaves a shiny, silver trail as she glides through the garden.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Snail. Slow and sleepy.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_moth",
+   "lines": [
+    [
+     "Here's a little clue: it has soft, fuzzy wings, and it flutters at night. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Moth.",
+     "enter"
+    ],
+    [
+     "This is Moth. Can you whisper moth? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Most moths flutter around at night, while we're asleep.",
+     "fx+bob"
+    ],
+    [
+     "Moths have feathery antennae that help them smell sweet flowers.",
+     "bob"
+    ],
+    [
+     "Can you flutter your hands softly, like little moth wings?",
+     "bob"
+    ],
+    [
+     "When do most moths fly?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "At night, under the moon and stars.",
+     "fx2+badge:MOTH"
+    ],
+    [
+     "Let's say it softly together: Moth.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Moth.",
+     "zoom"
+    ],
+    [
+     "Moth flutters slowly past the glowing moon.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Moth. Flutter softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_frog",
+   "lines": [
+    [
+     "Here's a little clue: he's green, he hops, and he says ribbit. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Frog.",
+     "enter"
+    ],
+    [
+     "This is Frog. Can you whisper frog? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Many frogs sing at night, to say hello to each other.",
+     "fx+bob"
+    ],
+    [
+     "Frogs have long, sticky tongues for catching tiny bugs.",
+     "bob"
+    ],
+    [
+     "Can you sing a very quiet ribbit? Ribbit, ribbit.",
+     "bob"
+    ],
+    [
+     "When do many frogs sing?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "At night. Ribbit, ribbit, in the dark.",
+     "fx2+badge:FROG"
+    ],
+    [
+     "Let's say it softly together: Frog.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Frog.",
+     "zoom"
+    ],
+    [
+     "Frog sits on his lily pad, and his song gets softer and softer.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Frog. Ribbit.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_ladybug",
+   "lines": [
+    [
+     "Here's a little clue: she's red, with little black spots. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Ladybug.",
+     "enter"
+    ],
+    [
+     "This is Ladybug. Can you whisper ladybug? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Ladybugs have wings hiding under their red, spotty shell.",
+     "fx+bob"
+    ],
+    [
+     "In winter, lots of ladybugs snuggle together to stay warm.",
+     "bob"
+    ],
+    [
+     "Can you count her spots with me? One, two, three, four, five, six.",
+     "bob"
+    ],
+    [
+     "Where are a ladybug's wings?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Hiding under her red, spotty shell.",
+     "fx2+badge:LADYBUG"
+    ],
+    [
+     "Let's say it softly together: Ladybug.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Ladybug.",
+     "zoom"
+    ],
+    [
+     "Ladybug tucks in her wings and rests on a soft green leaf.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Ladybug. Sweet dreams.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_tulip",
+   "lines": [
+    [
+     "Here's a little clue: it's pink, it grows in the garden, and it has soft petals. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Tulip.",
+     "enter"
+    ],
+    [
+     "This is Tulip. Can you whisper tulip? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Some flowers, like tulips, close their petals at night.",
+     "fx+bob"
+    ],
+    [
+     "In the morning, when the sun comes up, they open again.",
+     "bob"
+    ],
+    [
+     "Can you close your hands slowly, like a flower closing its petals?",
+     "bob"
+    ],
+    [
+     "What do tulips do at night?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They close their petals, like they're going to sleep.",
+     "fx2+badge:TULIP"
+    ],
+    [
+     "Let's say it softly together: Tulip.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Tulip.",
+     "zoom"
+    ],
+    [
+     "Tulip folds her petals and sways softly in the breeze.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Tulip. See you in the morning.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Snail. Slow and sleepy.",
+   "@mb2_snail"
+  ],
+  [
+   "Goodnight, Moth. Flutter softly.",
+   "@mb2_moth"
+  ],
+  [
+   "Goodnight, Frog. Ribbit.",
+   "@mb2_frog"
+  ],
+  [
+   "Goodnight, Ladybug. Sweet dreams.",
+   "@mb2_ladybug"
+  ],
+  [
+   "Goodnight, Tulip. See you in the morning.",
+   "@mb2_tulip"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Snail, Moth, Frog, Ladybug, and Tulip. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

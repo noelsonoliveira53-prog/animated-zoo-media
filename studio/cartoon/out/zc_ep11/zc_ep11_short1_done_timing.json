@@ -1,0 +1,1658 @@
+{
+ "id": "zc_ep11_short1",
+ "total": 90.59666666666669,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0
+ ],
+ "plan": {
+  "length": 90.6,
+  "shots": 17,
+  "visual_changes": 65,
+  "mean_gap": 1.39,
+  "longest_gap": 4.06,
+  "longest_gap_at": 33.4,
+  "over_6s": [],
+  "places": [
+   "sandtrail",
+   "river",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 9,
+  "longest_without_question": 19.1,
+  "first_words_at": 0.42,
+  "shot_mean": 5.33,
+  "fails": [],
+  "words_placed": "174/174",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 27.6,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sandy path hook: giant print"
+  ],
+  [
+   2.0,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new shot",
+   "the sandy path print 1"
+  ],
+  [
+   5.47,
+   "word",
+   "BIG!"
+  ],
+  [
+   6.04,
+   "word",
+   "ROUND!"
+  ],
+  [
+   8.44,
+   "new shot",
+   "the sandy path question 1a"
+  ],
+  [
+   9.01,
+   "sign",
+   "ELEPHANT"
+  ],
+  [
+   9.36,
+   "sign",
+   "LION"
+  ],
+  [
+   11.75,
+   "thinking dot",
+   "1"
+  ],
+  [
+   12.42,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.1,
+   "thinking dot",
+   "3"
+  ],
+  [
+   13.58,
+   "answer",
+   "ELEPHANT"
+  ],
+  [
+   14.69,
+   "new shot",
+   "the sandy path the elephant walks in"
+  ],
+  [
+   15.01,
+   "action",
+   "ele walks"
+  ],
+  [
+   16.41,
+   "word",
+   "ELEPHANT!"
+  ],
+  [
+   17.81,
+   "new place",
+   "the picture board board: tiptoes"
+  ],
+  [
+   21.41,
+   "word",
+   "TIPTOES!"
+  ],
+  [
+   22.5,
+   "new shot",
+   "the picture board board: cushion"
+  ],
+  [
+   24.94,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   24.94,
+   "word",
+   "CUSHION"
+  ],
+  [
+   26.24,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   27.5,
+   "new place",
+   "the wide river why a cushion"
+  ],
+  [
+   29.95,
+   "action",
+   "ele looks"
+  ],
+  [
+   29.95,
+   "word",
+   "?"
+  ],
+  [
+   33.44,
+   "new place",
+   "the picture board (blue) board: soaks up the bump"
+  ],
+  [
+   37.5,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   38.58,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   38.58,
+   "word",
+   "SQUISH!"
+  ],
+  [
+   39.69,
+   "new place",
+   "the sandy path step step"
+  ],
+  [
+   42.07,
+   "action",
+   "ele walks"
+  ],
+  [
+   42.07,
+   "word",
+   "STEP, STEP!"
+  ],
+  [
+   43.44,
+   "new place",
+   "the picture board (pink) board: count nails"
+  ],
+  [
+   47.02,
+   "word",
+   "1"
+  ],
+  [
+   47.28,
+   "word",
+   "2"
+  ],
+  [
+   47.59,
+   "word",
+   "3"
+  ],
+  [
+   47.95,
+   "word",
+   "4"
+  ],
+  [
+   48.34,
+   "word",
+   "5"
+  ],
+  [
+   49.38,
+   "new shot",
+   "the picture board (pink) board: four or five"
+  ],
+  [
+   50.62,
+   "word",
+   "4"
+  ],
+  [
+   53.31,
+   "word",
+   "5"
+  ],
+  [
+   54.38,
+   "new place",
+   "the sandy path rumbles"
+  ],
+  [
+   56.63,
+   "picture",
+   "rb"
+  ],
+  [
+   56.63,
+   "word",
+   "RUMBLE!"
+  ],
+  [
+   59.69,
+   "new place",
+   "the zoo gate hand on the floor"
+  ],
+  [
+   61.04,
+   "word",
+   "HAND DOWN!"
+  ],
+  [
+   62.36,
+   "action",
+   "milo hops"
+  ],
+  [
+   66.25,
+   "new place",
+   "the wide river say it: tiptoes"
+  ],
+  [
+   66.41,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   69.1,
+   "action",
+   "ele nods"
+  ],
+  [
+   70.31,
+   "new place",
+   "the zoo gate tiptoe"
+  ],
+  [
+   73.36,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.36,
+   "word",
+   "TIP, TIP!"
+  ],
+  [
+   74.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   77.5,
+   "new place",
+   "the picture board (blue) question 1b"
+  ],
+  [
+   81.32,
+   "sign",
+   "CUSHION"
+  ],
+  [
+   81.67,
+   "sign",
+   "WHEEL"
+  ],
+  [
+   83.26,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.7,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   83.94,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.61,
+   "thinking dot",
+   "3"
+  ],
+  [
+   85.1,
+   "answer",
+   "CUSHION"
+  ],
+  [
+   85.15,
+   "action",
+   "the cushion squishes"
+  ],
+  [
+   86.25,
+   "new place",
+   "the wide river great job 1"
+  ],
+  [
+   87.83,
+   "action",
+   "ele walks"
+  ],
+  [
+   87.83,
+   "word",
+   "SQUISH!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "sandtrail",
+   "say": "A giant footprint! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.788,
+   "words": [
+    [
+     "A",
+     0.03,
+     0.1
+    ],
+    [
+     "giant",
+     0.1,
+     0.62
+    ],
+    [
+     "footprint!",
+     0.62,
+     1.34
+    ],
+    [
+     "Guess",
+     1.58,
+     1.93
+    ],
+    [
+     "with",
+     1.93,
+     2.08
+    ],
+    [
+     "Milo!",
+     2.08,
+     2.788
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: giant print",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Here is a footprint. It is big, and round. Whose foot made it?",
+   "t0": 3.4375,
+   "t1": 8.4375,
+   "v0": 3.7479999999999998,
+   "dur": 4.224083333333334,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.3
+    ],
+    [
+     "is",
+     0.3,
+     0.4
+    ],
+    [
+     "a",
+     0.4,
+     0.44
+    ],
+    [
+     "footprint.",
+     0.44,
+     1.18
+    ],
+    [
+     "It",
+     1.41,
+     1.54
+    ],
+    [
+     "is",
+     1.54,
+     1.72
+    ],
+    [
+     "big,",
+     1.72,
+     2.13
+    ],
+    [
+     "and",
+     2.13,
+     2.29
+    ],
+    [
+     "round.",
+     2.29,
+     2.86
+    ],
+    [
+     "Whose",
+     3.2,
+     3.46
+    ],
+    [
+     "foot",
+     3.46,
+     3.66
+    ],
+    [
+     "made",
+     3.66,
+     3.93
+    ],
+    [
+     "it?",
+     3.93,
+     4.22
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "print 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Is it the elephant? Or is it the lion?",
+   "t0": 8.4375,
+   "t1": 14.6875,
+   "v0": 8.512083333333333,
+   "dur": 2.7507916666666667,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.23
+    ],
+    [
+     "it",
+     0.23,
+     0.35
+    ],
+    [
+     "the",
+     0.35,
+     0.5
+    ],
+    [
+     "elephant?",
+     0.5,
+     1.21
+    ],
+    [
+     "Or",
+     1.45,
+     1.66
+    ],
+    [
+     "is",
+     1.66,
+     1.83
+    ],
+    [
+     "it",
+     1.83,
+     1.94
+    ],
+    [
+     "the",
+     1.94,
+     2.03
+    ],
+    [
+     "lion?",
+     2.03,
+     2.75
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "It is the elephant!",
+   "t0": 14.6875,
+   "t1": 17.8125,
+   "v0": 15.002874999999998,
+   "dur": 1.4125833333333333,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.23
+    ],
+    [
+     "is",
+     0.23,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.7
+    ],
+    [
+     "elephant!",
+     0.7,
+     1.41
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the elephant walks in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here is the fun fact. An elephant walks on its tiptoes!",
+   "t0": 17.8125,
+   "t1": 22.5,
+   "v0": 18.155458333333332,
+   "dur": 4.1015,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.58
+    ],
+    [
+     "fun",
+     0.58,
+     0.97
+    ],
+    [
+     "fact.",
+     0.97,
+     1.58
+    ],
+    [
+     "An",
+     1.89,
+     2.02
+    ],
+    [
+     "elephant",
+     2.02,
+     2.62
+    ],
+    [
+     "walks",
+     2.62,
+     3.01
+    ],
+    [
+     "on",
+     3.01,
+     3.09
+    ],
+    [
+     "its",
+     3.09,
+     3.25
+    ],
+    [
+     "tiptoes!",
+     3.25,
+     4.1
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: tiptoes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Under its toes is a big, soft cushion. Like a squishy pillow!",
+   "t0": 22.5,
+   "t1": 27.5,
+   "v0": 22.796958333333333,
+   "dur": 4.511,
+   "words": [
+    [
+     "Under",
+     0.01,
+     0.28
+    ],
+    [
+     "its",
+     0.28,
+     0.47
+    ],
+    [
+     "toes",
+     0.47,
+     0.98
+    ],
+    [
+     "is",
+     0.98,
+     1.14
+    ],
+    [
+     "a",
+     1.14,
+     1.19
+    ],
+    [
+     "big,",
+     1.19,
+     1.63
+    ],
+    [
+     "soft",
+     1.63,
+     2.14
+    ],
+    [
+     "cushion.",
+     2.14,
+     2.76
+    ],
+    [
+     "Like",
+     3.21,
+     3.41
+    ],
+    [
+     "a",
+     3.41,
+     3.44
+    ],
+    [
+     "squishy",
+     3.44,
+     3.96
+    ],
+    [
+     "pillow!",
+     3.96,
+     4.51
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: cushion",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Why does an elephant need a cushion?",
+   "t0": 27.5,
+   "t1": 33.4375,
+   "v0": 27.847958333333334,
+   "dur": 2.1006666666666667,
+   "words": [
+    [
+     "Why",
+     0.02,
+     0.33
+    ],
+    [
+     "does",
+     0.33,
+     0.5
+    ],
+    [
+     "an",
+     0.5,
+     0.57
+    ],
+    [
+     "elephant",
+     0.57,
+     1.24
+    ],
+    [
+     "need",
+     1.24,
+     1.41
+    ],
+    [
+     "a",
+     1.41,
+     1.45
+    ],
+    [
+     "cushion?",
+     1.45,
+     2.1
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "why a cushion",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "The cushion soaks up the bump, when a big, heavy elephant steps down. Squish!",
+   "t0": 33.4375,
+   "t1": 39.6875,
+   "v0": 33.488625,
+   "dur": 5.74,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "cushion",
+     0.11,
+     0.66
+    ],
+    [
+     "soaks",
+     0.66,
+     1.13
+    ],
+    [
+     "up",
+     1.13,
+     1.27
+    ],
+    [
+     "the",
+     1.27,
+     1.36
+    ],
+    [
+     "bump,",
+     1.36,
+     1.79
+    ],
+    [
+     "when",
+     2.03,
+     2.16
+    ],
+    [
+     "a",
+     2.16,
+     2.21
+    ],
+    [
+     "big,",
+     2.21,
+     2.64
+    ],
+    [
+     "heavy",
+     2.64,
+     3.05
+    ],
+    [
+     "elephant",
+     3.05,
+     3.6
+    ],
+    [
+     "steps",
+     3.6,
+     4.01
+    ],
+    [
+     "down.",
+     4.01,
+     4.53
+    ],
+    [
+     "Squish!",
+     5.09,
+     5.74
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: soaks up the bump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Look at those big, round feet. Step, step!",
+   "t0": 39.6875,
+   "t1": 43.4375,
+   "v0": 39.768625,
+   "dur": 3.2607083333333335,
+   "words": [
+    [
+     "Look",
+     0.02,
+     0.26
+    ],
+    [
+     "at",
+     0.26,
+     0.34
+    ],
+    [
+     "those",
+     0.34,
+     0.65
+    ],
+    [
+     "big,",
+     0.65,
+     1.0
+    ],
+    [
+     "round",
+     1.0,
+     1.47
+    ],
+    [
+     "feet.",
+     1.47,
+     1.98
+    ],
+    [
+     "Step,",
+     2.3,
+     2.71
+    ],
+    [
+     "step!",
+     2.71,
+     3.26
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "step step",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Elephants have toenails, too! Let's count them. One, two, three, four, five!",
+   "t0": 43.4375,
+   "t1": 49.375,
+   "v0": 43.56933333333333,
+   "dur": 5.3735,
+   "words": [
+    [
+     "Elephants",
+     0.06,
+     0.57
+    ],
+    [
+     "have",
+     0.57,
+     0.77
+    ],
+    [
+     "toenails,",
+     0.77,
+     1.45
+    ],
+    [
+     "too!",
+     1.45,
+     1.88
+    ],
+    [
+     "Let's",
+     2.05,
+     2.31
+    ],
+    [
+     "count",
+     2.31,
+     2.65
+    ],
+    [
+     "them.",
+     2.65,
+     2.92
+    ],
+    [
+     "One,",
+     3.45,
+     3.71
+    ],
+    [
+     "two,",
+     3.71,
+     4.02
+    ],
+    [
+     "three,",
+     4.02,
+     4.38
+    ],
+    [
+     "four,",
+     4.38,
+     4.77
+    ],
+    [
+     "five!",
+     4.77,
+     5.37
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: count nails",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Some elephants have four nails on a front foot. Some have five!",
+   "t0": 49.375,
+   "t1": 54.375,
+   "v0": 49.48283333333333,
+   "dur": 4.513083333333333,
+   "words": [
+    [
+     "Some",
+     0.01,
+     0.28
+    ],
+    [
+     "elephants",
+     0.28,
+     0.89
+    ],
+    [
+     "have",
+     0.89,
+     1.14
+    ],
+    [
+     "four",
+     1.14,
+     1.5
+    ],
+    [
+     "nails",
+     1.5,
+     2.0
+    ],
+    [
+     "on",
+     2.0,
+     2.1
+    ],
+    [
+     "a",
+     2.1,
+     2.13
+    ],
+    [
+     "front",
+     2.13,
+     2.44
+    ],
+    [
+     "foot.",
+     2.44,
+     2.91
+    ],
+    [
+     "Some",
+     3.34,
+     3.6
+    ],
+    [
+     "have",
+     3.6,
+     3.83
+    ],
+    [
+     "five!",
+     3.83,
+     4.51
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: four or five",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Elephants may even feel tiny rumbles in the ground, with their feet!",
+   "t0": 54.375,
+   "t1": 59.6875,
+   "v0": 54.535916666666665,
+   "dur": 4.711875,
+   "words": [
+    [
+     "Elephants",
+     0.01,
+     0.68
+    ],
+    [
+     "may",
+     0.68,
+     0.83
+    ],
+    [
+     "even",
+     0.83,
+     1.15
+    ],
+    [
+     "feel",
+     1.15,
+     1.49
+    ],
+    [
+     "tiny",
+     1.49,
+     2.09
+    ],
+    [
+     "rumbles",
+     2.09,
+     2.67
+    ],
+    [
+     "in",
+     2.67,
+     2.76
+    ],
+    [
+     "the",
+     2.76,
+     2.83
+    ],
+    [
+     "ground,",
+     2.83,
+     3.48
+    ],
+    [
+     "with",
+     3.84,
+     3.99
+    ],
+    [
+     "their",
+     3.99,
+     4.17
+    ],
+    [
+     "feet!",
+     4.17,
+     4.71
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "rumbles",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Put your hand flat on the floor. What can you feel?",
+   "t0": 59.6875,
+   "t1": 66.25,
+   "v0": 59.787791666666664,
+   "dur": 3.0858333333333334,
+   "words": [
+    [
+     "Put",
+     0.0,
+     0.15
+    ],
+    [
+     "your",
+     0.15,
+     0.24
+    ],
+    [
+     "hand",
+     0.24,
+     0.59
+    ],
+    [
+     "flat",
+     0.59,
+     1.06
+    ],
+    [
+     "on",
+     1.06,
+     1.19
+    ],
+    [
+     "the",
+     1.19,
+     1.25
+    ],
+    [
+     "floor.",
+     1.25,
+     1.79
+    ],
+    [
+     "What",
+     2.16,
+     2.32
+    ],
+    [
+     "can",
+     2.32,
+     2.45
+    ],
+    [
+     "you",
+     2.45,
+     2.57
+    ],
+    [
+     "feel?",
+     2.57,
+     3.086
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hand on the floor",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Say it with me. An elephant walks on its tiptoes!",
+   "t0": 66.25,
+   "t1": 70.3125,
+   "v0": 66.413625,
+   "dur": 3.544625,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.95
+    ],
+    [
+     "An",
+     1.27,
+     1.4
+    ],
+    [
+     "elephant",
+     1.4,
+     2.06
+    ],
+    [
+     "walks",
+     2.06,
+     2.44
+    ],
+    [
+     "on",
+     2.44,
+     2.52
+    ],
+    [
+     "its",
+     2.52,
+     2.69
+    ],
+    [
+     "tiptoes!",
+     2.69,
+     3.54
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: tiptoes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you walk on your tiptoes, like an elephant? Tip, tip, tiptoe!",
+   "t0": 70.3125,
+   "t1": 77.5,
+   "v0": 70.49825,
+   "dur": 4.410958333333333,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.35
+    ],
+    [
+     "walk",
+     0.35,
+     0.6
+    ],
+    [
+     "on",
+     0.6,
+     0.68
+    ],
+    [
+     "your",
+     0.68,
+     0.79
+    ],
+    [
+     "tiptoes,",
+     0.79,
+     1.49
+    ],
+    [
+     "like",
+     1.49,
+     1.66
+    ],
+    [
+     "an",
+     1.66,
+     1.75
+    ],
+    [
+     "elephant?",
+     1.75,
+     2.43
+    ],
+    [
+     "Tip,",
+     2.86,
+     3.32
+    ],
+    [
+     "tip,",
+     3.32,
+     3.66
+    ],
+    [
+     "tiptoe!",
+     3.66,
+     4.41
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "tiptoe",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Quick check! What is under an elephant's toes? A soft cushion, or a wheel?",
+   "t0": 77.5,
+   "t1": 86.25,
+   "v0": 77.84920833333335,
+   "dur": 4.928833333333333,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.25
+    ],
+    [
+     "check!",
+     0.25,
+     0.69
+    ],
+    [
+     "What",
+     0.69,
+     0.91
+    ],
+    [
+     "is",
+     0.91,
+     1.02
+    ],
+    [
+     "under",
+     1.02,
+     1.19
+    ],
+    [
+     "an",
+     1.19,
+     1.26
+    ],
+    [
+     "elephant's",
+     1.26,
+     1.83
+    ],
+    [
+     "toes?",
+     1.83,
+     2.47
+    ],
+    [
+     "A",
+     2.92,
+     2.97
+    ],
+    [
+     "soft",
+     2.97,
+     3.47
+    ],
+    [
+     "cushion,",
+     3.47,
+     4.05
+    ],
+    [
+     "or",
+     4.05,
+     4.34
+    ],
+    [
+     "a",
+     4.34,
+     4.37
+    ],
+    [
+     "wheel?",
+     4.37,
+     4.929
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "A soft cushion! Squish, squish. Great job!",
+   "t0": 86.25,
+   "t1": 90.19666666666669,
+   "v0": 86.51804166666669,
+   "dur": 3.258625,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.09
+    ],
+    [
+     "soft",
+     0.09,
+     0.58
+    ],
+    [
+     "cushion!",
+     0.58,
+     1.14
+    ],
+    [
+     "Squish,",
+     1.31,
+     1.69
+    ],
+    [
+     "squish.",
+     1.69,
+     2.28
+    ],
+    [
+     "Great",
+     2.28,
+     2.69
+    ],
+    [
+     "job!",
+     2.69,
+     3.259
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "great job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

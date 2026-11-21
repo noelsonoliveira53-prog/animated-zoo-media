@@ -1,0 +1,314 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nPolice car, police car, wee-oo, wee-oo!\nOfficer Blue is here for you!\nLights go flash and siren sings,\nKeeping us safe is a helpful thing!\n\n[Verse 1]\nRed light, blue light, flashing bright,\nPolice car zooming day and night!\nWhen you're lost and need a hand,\nFind a helper, they understand!\n\n[Chorus]\nPolice car, police car, wee-oo, wee-oo!\nOfficer Blue is here for you!\nLights go flash and siren sings,\nKeeping us safe is a helpful thing!\n\n[Verse 2]\nStop at the corner, look both ways,\nHold a grown-up's hand, that's what Blue says!\nCross with the green light, walk, don't run,\nSafety rules can be lots of fun!\n\n[Bridge]\nLook to the left, look to the right!\nLook to the left, all clear? Alright!\nHold a hand and walk across,\nOfficer Blue gives a big thumbs-up!\n\n[Verse 3]\nFire trucks, ambulances, police cars too,\nCommunity helpers, they help you!\nWave hello when they drive by,\nThank you, helpers, wave up high!\n\n[Chorus]\nPolice car, police car, wee-oo, wee-oo!\nOfficer Blue is here for you!\nLights go flash and siren sings,\nKeeping us safe is a helpful thing!\n\n[Outro]\nWee-oo, wee-oo! Bye-bye, trucks!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 712,
+ "who_map": {},
+ "meta": {
+  "title": "Police Car Song! Road Safety for Kids | Tiny Truck Town",
+  "card": "Police Car Song!",
+  "thumb_text": "WEE-OO!",
+  "description": "Wee-oo, wee-oo! Officer Blue the police car keeps Tiny Truck Town safe. Kids learn to find a helper when they're lost, look both ways, hold a grown-up's hand and cross with the green light.\nA fun road safety song about community helpers. Ages 2-5.",
+  "tags": [
+   "police car song",
+   "road safety song",
+   "community helpers",
+   "look both ways song",
+   "trucks for kids",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep09",
+  "title": "Police Car Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "WEE-OO!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": [
+       -3.0,
+       1.4,
+       3.6
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": [
+       -3.0,
+       1.4,
+       3.6
+      ],
+      "word": "light,"
+     },
+     {
+      "type": "text",
+      "text": "FIND A HELPER!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.55,
+      "word": "helper,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "WEE-OO!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "LOOK BOTH WAYS!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.55,
+      "word": "look"
+     },
+     {
+      "type": "text",
+      "text": "WALK!",
+      "color": "#2fb54a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "walk,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "LEFT!",
+      "color": "#3b8be0",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "left,"
+     },
+     {
+      "type": "text",
+      "text": "RIGHT!",
+      "color": "#e8302a",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "right!"
+     },
+     {
+      "type": "text",
+      "text": "THUMBS UP!",
+      "color": "#ffc107",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "thumbs-up!"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "THANK YOU!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.7,
+      "word": "Thank"
+     },
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": [
+       3.0,
+       1.0,
+       3.6
+      ],
+      "word": "helpers,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "WEE-OO!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep09",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

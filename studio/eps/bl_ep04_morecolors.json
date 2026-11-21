@@ -1,0 +1,285 @@
+{
+ "id": "bl_ep04_morecolors",
+ "title": "More Colors for Kids! Purple, Pink, Brown and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're meeting five more color friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "purple",
+   "lines": [
+    [
+     "Here's a clue: it's the color of grapes! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Purple!",
+     "enter"
+    ],
+    [
+     "This is Purple! Can you say purple?",
+     "zoom"
+    ],
+    [
+     "Grapes are purple. Plums can be purple too!",
+     "fx+bob"
+    ],
+    [
+     "Can you pick pretend grapes? Pick, pick!",
+     "wiggle"
+    ],
+    [
+     "Can you guess which two colors mix to make purple?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Red and blue! Mix them, and you get purple.",
+     "fx+badge:RED + BLUE!"
+    ],
+    [
+     "Let's say it together: PURPLE!",
+     "zoom"
+    ],
+    [
+     "Purple is a fancy, fun color.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Purple!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "pink",
+   "lines": [
+    [
+     "Here's a clue: it's the color of many flowers! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Pink!",
+     "enter"
+    ],
+    [
+     "This is Pink! Can you say pink?",
+     "zoom"
+    ],
+    [
+     "Flowers and cupcakes can be pink!",
+     "fx+bob"
+    ],
+    [
+     "Can you smell a pretend flower? Sniff!",
+     "wiggle"
+    ],
+    [
+     "Can you guess which two colors mix to make pink?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Red and white! Mix them, and you get pink.",
+     "fx+badge:RED + WHITE!"
+    ],
+    [
+     "Let's say it together: PINK!",
+     "zoom"
+    ],
+    [
+     "Pink is soft and sweet.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pink!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "brown",
+   "lines": [
+    [
+     "Here's a clue: it's the color of tree trunks and teddy bears! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Brown!",
+     "enter"
+    ],
+    [
+     "This is Brown! Can you say brown?",
+     "zoom"
+    ],
+    [
+     "Teddy bears and tree trunks are brown!",
+     "fx+bob"
+    ],
+    [
+     "Can you give a teddy bear hug?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What color is a tree trunk?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Brown! Strong, brown tree trunks.",
+     "fx+badge:BROWN!"
+    ],
+    [
+     "Let's say it together: BROWN!",
+     "zoom"
+    ],
+    [
+     "Lots of dirt and wood is brown.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Brown!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gray",
+   "lines": [
+    [
+     "Here's a clue: it's the color of rainy clouds and elephants! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Gray!",
+     "enter"
+    ],
+    [
+     "This is Gray! Can you say gray?",
+     "zoom"
+    ],
+    [
+     "Rain clouds and rocks are gray!",
+     "fx+bob"
+    ],
+    [
+     "Can you stomp like a big gray elephant?",
+     "wiggle"
+    ],
+    [
+     "Can you guess which two colors mix to make gray?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Black and white! Mix them, and you get gray.",
+     "fx+badge:BLACK + WHITE!"
+    ],
+    [
+     "Let's say it together: GRAY!",
+     "zoom"
+    ],
+    [
+     "Gray is quiet and calm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Gray!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "black",
+   "lines": [
+    [
+     "Here's a clue: it's the color of the night sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Black!",
+     "enter"
+    ],
+    [
+     "This is Black! Can you say black?",
+     "zoom"
+    ],
+    [
+     "Tires are black. Some piano keys are black!",
+     "fx+bob"
+    ],
+    [
+     "Can you play a pretend piano? Plink, plink!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What color are car tires?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Black! Round black tires.",
+     "fx+badge:BLACK!"
+    ],
+    [
+     "Let's say it together: BLACK!",
+     "zoom"
+    ],
+    [
+     "Black makes bright colors stand out.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Black!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great colors! Let's remember.",
+   "@title"
+  ],
+  [
+   "Purple, like grapes.",
+   "@purple"
+  ],
+  [
+   "Pink, like flowers.",
+   "@pink"
+  ],
+  [
+   "Brown, like a teddy bear.",
+   "@brown"
+  ],
+  [
+   "Gray, like rain clouds.",
+   "@gray"
+  ],
+  [
+   "And black, like tires!",
+   "@black"
+  ]
+ ],
+ "outro": [
+  [
+   "Which color was your favorite today? Keep looking for colors and shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

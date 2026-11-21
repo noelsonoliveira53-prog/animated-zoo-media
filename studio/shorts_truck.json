@@ -1,0 +1,209 @@
+[
+ {
+  "id": "tt_firetruck",
+  "animal": "firetruck",
+  "title": "Why Are Fire Trucks So Long?",
+  "thumb": "SO LONG!",
+  "top": "FIRE TRUCK",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "U.S. Fire Administration (FEMA): fire apparatus",
+   "NFPA Kids"
+  ],
+  "beats": [
+   {
+    "say": "Fire trucks are some of the longest trucks in town. Why so long?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A fire truck carries long ladders on top. Some ladders can reach as high as a ten-story building!",
+    "act": "fx2+badge:SUPER TALL LADDER!"
+   },
+   {
+    "say": "It also carries hoses, and lots and lots of water to spray.",
+    "act": "fx2off+fx+zoom"
+   },
+   {
+    "say": "Firefighters use it to help keep everyone safe.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "Can you climb a pretend ladder? Up, up, up! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt_excavator",
+  "animal": "excavator",
+  "title": "Excavators Can Spin All the Way Around!",
+  "thumb": "SPIN!",
+  "top": "EXCAVATOR",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Construction equipment manufacturers' kids guides",
+   "OSHA: excavation equipment basics"
+  ],
+  "beats": [
+   {
+    "say": "This digger can turn all the way around without moving its wheels. How?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "An excavator's cab sits on a turntable, so it can spin all the way around!",
+    "act": "fx+badge:SPINS AROUND!"
+   },
+   {
+    "say": "Its long arm has a big bucket at the end for digging.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "And it rolls on tracks, so it won't get stuck in the mud.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you spin around slowly like an excavator? Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt_schoolbus",
+  "animal": "schoolbus",
+  "title": "Why Are School Buses Yellow?",
+  "thumb": "YELLOW!",
+  "top": "SCHOOL BUS",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "U.S. National Highway Traffic Safety Administration: school bus safety"
+  ],
+  "beats": [
+   {
+    "say": "School buses are almost always yellow. Can you guess why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Yellow is super easy to see, even far away and on cloudy days.",
+    "act": "fx2+badge:EASY TO SEE!"
+   },
+   {
+    "say": "When the bus stops, a little stop sign swings out to tell cars to wait.",
+    "act": "fx2off+fx+zoom"
+   },
+   {
+    "say": "Then kids can get on and off the bus safely.",
+    "act": "fxoff+bob"
+   },
+   {
+    "say": "Can you make a stop sign with your hand? Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "tt_mixer",
+  "animal": "mixer",
+  "title": "Why Does the Cement Mixer Keep Spinning?",
+  "thumb": "SPIN SPIN!",
+  "top": "CEMENT MIXER",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Portland Cement Association: how concrete is made"
+  ],
+  "beats": [
+   {
+    "say": "The cement mixer's big drum spins and spins. Why doesn't it stop?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Inside is wet concrete. Spinning keeps it mixed, so it doesn't get hard too soon.",
+    "act": "fx+badge:KEEP SPINNING!"
+   },
+   {
+    "say": "When it gets to the building spot, the concrete slides out of a chute.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "Concrete dries hard to make sidewalks and roads.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you spin your arms like a mixer drum? Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "tt_train",
+  "animal": "train",
+  "title": "Some Trains Have More Than 100 Cars!",
+  "thumb": "100 CARS!",
+  "top": "TRAIN",
+  "bg": [
+   "#7fd3ff",
+   "#c9f0ff"
+  ],
+  "floor": "#78909c",
+  "sources": [
+   "Association of American Railroads: freight rail facts"
+  ],
+  "beats": [
+   {
+    "say": "Some trains are so long, you could count cars for a long, long time. How many?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Bolt, the little tow truck. Let's roll!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Some freight trains pull more than one hundred cars!",
+    "act": "fx+badge:100+ CARS!"
+   },
+   {
+    "say": "The engine is at the front. It pulls all the cars along the tracks.",
+    "act": "zoom"
+   },
+   {
+    "say": "Train wheels roll on two strong metal rails. Choo choo!",
+    "act": "fxoff+fx2+bob"
+   },
+   {
+    "say": "Can you count train cars with me? One, two, three! Be kind and wave hello! See you in Tiny Truck Town!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

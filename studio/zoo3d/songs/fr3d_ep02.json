@@ -1,0 +1,696 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, xylophone, handclaps, bouncy bass, major key, catchy repetitive counting chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nOne, two, three, four, five,\nCount the fruits and come alive!\nYummy, yummy, in my tummy,\nCount with me, one to five!\n\n[Verse 1]\nOne red apple, round and sweet,\nCrunch, crunch, crunch, a healthy treat!\nTwo yellow bananas, peel them slow,\nOne, two bananas, here we go!\n\n[Chorus]\nOne, two, three, four, five,\nCount the fruits and come alive!\nYummy, yummy, in my tummy,\nCount with me, one to five!\n\n[Verse 2]\nThree orange oranges, juicy and bright,\nSqueeze them up and take a bite!\nFour purple grapes, so small and round,\nOne, two, three, four, all found!\n\n[Bridge]\nClap one time, clap!\nStomp two times, stomp, stomp!\nJump three times, jump, jump, jump!\nSpin around and count again!\n\n[Verse 3]\nFive red strawberries in a bowl,\nSeeds on the outside, count them all!\nOne, two, three, four, five,\nFruits and colors, high five!\n\n[Chorus]\nOne, two, three, four, five,\nCount the fruits and come alive!\nYummy, yummy, in my tummy,\nCount with me, one to five!\n\n[Outro]\nFive yummy fruits! See you tomorrow!",
+ "duration": 160,
+ "bpm": 118,
+ "key": "C Major",
+ "seed": 21,
+ "who_map": {},
+ "meta": {
+  "title": "Fruit Counting Song for Kids! Count 1 to 5 with Pipkiko",
+  "card": "Count the Fruits!",
+  "thumb_text": "COUNT 1 TO 5!",
+  "description": "The Fruit Counting Song for kids! Count from 1 to 5 with Pipkiko and the Fruity Friends: apples, bananas, oranges, grapes and strawberries.\nKids practice counting, fruit names and colors, then clap, stomp, jump and spin along. Ages 2-5.",
+  "tags": [
+   "counting song",
+   "count to 5",
+   "fruit song for kids",
+   "numbers song",
+   "learn to count",
+   "kids songs",
+   "nursery rhymes",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep02",
+  "title": "Count the Fruits!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "low",
+     "close:host"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "COUNT TO 5!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 1,
+       "text": "1",
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 2,
+       "text": "2",
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.0,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 3,
+       "text": "3",
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 4,
+       "text": "4",
+       "color": "#2fb59a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "five",
+      "at": [
+       2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 5,
+       "text": "5",
+       "color": "#3b8be0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:apple",
+     "wide",
+     "close:banana",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "word": "apple",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "opts": {
+       "kind": "apple"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.6,
+       0.8,
+       4.6
+      ],
+      "opts": {
+       "text": "1",
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "banana_hand",
+      "word": "bananas",
+      "at": "right"
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       2.6,
+       0.8,
+       4.6
+      ],
+      "opts": {
+       "text": "2",
+       "color": "#ffc107"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "COUNT TO 5!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 1,
+       "text": "1",
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 2,
+       "text": "2",
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.0,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 3,
+       "text": "3",
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 4,
+       "text": "4",
+       "color": "#2fb59a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "five",
+      "at": [
+       2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 5,
+       "text": "5",
+       "color": "#3b8be0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:orange",
+     "wide",
+     "close:grape",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "word": "oranges",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "opts": {
+       "kind": "orange"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       -2.6,
+       0.8,
+       4.6
+      ],
+      "opts": {
+       "text": "3",
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "word": "grapes",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "opts": {
+       "kind": "grape"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "nth": 0,
+      "at": [
+       2.6,
+       0.8,
+       4.6
+      ],
+      "opts": {
+       "text": "4",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#ff5c8a",
+      "word": "clap",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#ff9416",
+      "word": "stomp",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#3cc45a",
+      "word": "jump",
+      "at": [
+       -1.3,
+       0.6,
+       4.3
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "SPIN!",
+      "color": "#3f8cff",
+      "word": "spin",
+      "at": [
+       1.3,
+       0.6,
+       4.3
+      ],
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "word": "strawberries",
+      "at": [
+       0.0,
+       0.9,
+       3.4
+      ],
+      "opts": {
+       "kind": "strawberry"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "basket",
+      "at": "left",
+      "delay": 2
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 1,
+       "text": "1",
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 2,
+       "text": "2",
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.0,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 3,
+       "text": "3",
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 4,
+       "text": "4",
+       "color": "#2fb59a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "five",
+      "at": [
+       2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 5,
+       "text": "5",
+       "color": "#3b8be0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "COUNT TO 5!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 1,
+       "text": "1",
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 2,
+       "text": "2",
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.0,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 3,
+       "text": "3",
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       1.3,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 4,
+       "text": "4",
+       "color": "#2fb59a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "five",
+      "at": [
+       2.6,
+       0.6,
+       4.2
+      ],
+      "opts": {
+       "n": 5,
+       "text": "5",
+       "color": "#3b8be0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SEE YOU TOMORROW!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.5
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right"
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep02",
+  "res": "1280x720",
+  "step": 2
+ }
+}

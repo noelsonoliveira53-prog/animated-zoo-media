@@ -1,0 +1,1089 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "At least 98% of a giant panda's diet is bamboo; active for roughly 14 hours per day, spending most of this time foraging; grasps bamboo with the front feet, between palm and thumb-like digit (SDZWA Library fact sheet 'Giant Panda', Diet & Feeding, ielc.libguides.com/sdzg/factsheets/giantpanda/diet, read Nov 16 2026).\nGiant panda: unique thumb-like digit (modified sesamoid bone), enlarged and covered in a tough pad; large, flat molars for grinding bamboo; strong jaw bones and chewing muscles give a bite force higher than any other bear (SDZWA Library fact sheet 'Giant Panda', Physical Characteristics, read Nov 16 2026).\nKoalas feed almost exclusively on leaves of Eucalyptus; smell plays a role in identifying preferred species; koalas rarely drink in the wild and produce dry pellets (water conservation) (SDZWA Library fact sheet 'Koala', Diet & Feeding, read Nov 16 2026).\nAn adult koala spends about 19-20 hours a day sitting or sleeping; a low-energy lifestyle is necessary for an animal that specializes on such a low-energy diet (SDZWA Library fact sheet 'Koala', Behavior & Ecology, read Nov 16 2026).\nPlains zebras primarily consume grasses (more than 90% of diet), about 50 grass species; incisor teeth crop grasses, cheek teeth grind the food; they immerse their lips below the water surface to drink and may take in more than 4 liters (1 gallon) in a single bout (SDZWA Library fact sheet 'Plains Zebra', Diet & Feeding, read Nov 16 2026).\nPlains zebras form large herds of several hundred; social grooming: they clean one another's coat and mane (SDZWA Library fact sheet 'Plains Zebra', Behavior & Ecology, read Nov 16 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about what animals eat!\nWhat is on the menu today?\nThree animal friends will show us. Count them with me. One, two, three!\nAre you hungry for fun facts? Let's go!\nWho eats bamboo, almost all day long?\nIs it the panda? Or is it the zebra?\nIt is the panda!\nHere is the fun fact. Almost all of a panda's food is bamboo!\nBamboo leaves, bamboo stems, and yummy bamboo shoots. Crunch, crunch!\nHow does a panda hold its bamboo? Hmm.\nWith its front paws! A panda has a special bump, like a thumb, to grip the bamboo.\nLook! It holds the bamboo tight, and munches away.\nBamboo is tough. So a panda has big, flat back teeth, to grind it up.\nAnd strong chewing muscles. A panda's bite is stronger than any other bear's!\nA panda is busy for about fourteen hours a day, and spends most of that time finding food and eating.\nThat is a lot of munching! Munch, munch, munch!\nSay it with me. A panda eats bamboo!\nCan you hold bamboo like a panda? Hold it tight, and munch, munch!\nNow grind it up with your back teeth. Chomp, chomp!\nQuick check! What does a panda eat the most? Bamboo? Or fish?\nBamboo! Crunch, crunch. Great job!\nWho eats the leaves of a tree called eucalyptus?\nIs it the koala? Or is it the pig?\nIt is the koala!\nHere is the fun fact. A koala eats almost only eucalyptus leaves.\nEucalyptus leaves, every single day. Nibble, nibble!\nHow does a koala find the leaves it likes best? Hmm.\nIt sniffs them! A koala uses its nose, to find its favorite leaves. Sniff, sniff!\nLook at that big, round nose!\nAnd here is a surprise. A koala hardly ever drinks water!\nIts body is very, very good at saving water. Clever koala!\nEucalyptus leaves do not give a koala much energy. So a koala rests a lot.\nA koala sits or sleeps for about twenty hours a day! Shh.\nSay it with me. A koala eats eucalyptus leaves!\nCan you sniff like a koala? Sniff, sniff! Which leaf smells the best?\nNow hug a tree, and take a little nap. Shh.\nQuick check! What does a koala eat? Leaves? Or fish?\nLeaves! Eucalyptus leaves. You remembered!\nWho eats grass, and has black and white stripes?\nIs it the zebra? Or is it the pig?\nIt is the zebra!\nHere is the fun fact. Grass is almost all of a zebra's food!\nZebras eat about fifty different kinds of grass. Munch, munch!\nHow does a zebra eat the grass? Hmm.\nIts front teeth cut the grass. Snip, snip! And its back teeth grind it up.\nLook at the zebra, munching away.\nWhen a zebra is thirsty, it puts its lips under the water, to drink.\nA zebra can drink more than one gallon of water, at one time! Gulp, gulp!\nZebras live together in big, big herds. Some herds have hundreds of zebras!\nAnd zebra friends help keep each other clean. They use their teeth, to clean each other's coat and mane. Scratch, scratch!\nSay it with me. A zebra eats grass!\nCan you snip like a zebra? Snip, snip, snip, with your front teeth!\nNow drink like a zebra. Gulp, gulp, gulp!\nQuick check! What does a zebra eat? Grass? Or bamboo?\nGrass! Munch, munch. Super thinking!\nWow! We met three hungry friends. Now it is quiz time!\nGet ready. Think hard!\nWho grips bamboo with a bump like a thumb?\nThe panda! Yes!\nWho sniffs out its favorite eucalyptus leaves?\nThe koala! That's right!\nWho snips grass with its front teeth?\nThe zebra! You remembered!\nYou learned so many new things today.\nMunch like a panda. Sniff like a koala. And snip like a zebra!\nWhat is your favorite food?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 328.0,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 660,
+  "words": 660,
+  "pause_onsets_checked": 54,
+  "onset_err_mean_ms": 24.8,
+  "onset_err_max_ms": 90.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "What Do Animals Eat? Bamboo, Leaves and Grass",
+  "card": "Yummy Food!",
+  "thumb_text": "YUM YUM!",
+  "description": "What do animals eat? Pick your answer with Milo the bluebird, then find out: a panda's food is almost all bamboo and it grips the stems with a special thumb-like bump, a koala eats almost only eucalyptus leaves and sniffs out its favorites, and a zebra snips grass with its front teeth and can drink more than a gallon of water at one time.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "what do animals eat",
+   "panda facts for kids",
+   "koala facts for kids",
+   "zebra facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_panda_bamboo",
+   "title": "What Does a Panda Eat All Day? Panda Facts",
+   "l1": "WHAT DOES",
+   "l2": "IT EAT?",
+   "thumb_text": "CRUNCH!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "panda",
+   "start": 20.084,
+   "end": 106.317,
+   "seconds": 86.2
+  },
+  {
+   "id": "zs90_koala_leaves",
+   "title": "What Does a Koala Eat? Koala Facts for Kids",
+   "l1": "WHO EATS",
+   "l2": "THESE LEAVES?",
+   "thumb_text": "SNIFF SNIFF!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "koala",
+   "start": 106.317,
+   "end": 192.773,
+   "seconds": 86.5
+  },
+  {
+   "id": "zs90_zebra_grass",
+   "title": "How Does a Zebra Eat and Drink? Zebra Facts",
+   "l1": "WHO EATS",
+   "l2": "GRASS?",
+   "thumb_text": "SNIP SNIP!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "zebra",
+   "start": 192.773,
+   "end": 278.572,
+   "seconds": 85.8
+  }
+ ],
+ "job": {
+  "id": "zool_ep15",
+  "title": "Yummy Food!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 61,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "panda",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "panda"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "koala"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cow",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "beach",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "panda",
+     "koala",
+     "zebra"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "panda",
+    "biome": "bamboo",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "panda"
+    ]
+   },
+   {
+    "from": "koala",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "koala",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "koala"
+    ]
+   },
+   {
+    "from": "zebra",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "zebra",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "zebra"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "panda",
+     "koala",
+     "zebra"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "desert",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "panda",
+     "koala",
+     "zebra"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 841,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "YUMMY FOOD!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 13.572
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 14.722,
+      "dur": 5.462,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "panda",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:panda",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BAMBOO!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.311,
+      "dur": 11.668
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.546,
+      "dur": 8.805,
+      "spin": 0,
+      "opts": {
+       "text": "PANDA",
+       "color": "#1479d6",
+       "win": 6.405
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.996,
+      "dur": 5.955,
+      "spin": 0,
+      "opts": {
+       "text": "ZEBRA",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.201,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.773,
+      "dur": 9.775,
+      "spin": 0,
+      "opts": {
+       "text": "BAMBOO",
+       "color": "#1479d6",
+       "win": 7.775
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.223,
+      "dur": 7.325,
+      "spin": 0,
+      "opts": {
+       "text": "FISH",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.798,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "bamboo",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 15.075,
+      "dur": 6.904,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 24.58,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 31.01,
+      "dur": 2.653,
+      "spin": 0,
+      "opts": {
+       "text": "LIKE A THUMB!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 41.12,
+      "dur": 7.632,
+      "spin": 0,
+      "opts": {
+       "text": "FLAT TEETH",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       2.3,
+       -1.2,
+       2.9
+      ],
+      "delay": 50.302,
+      "dur": 9.781,
+      "spin": 0,
+      "opts": {
+       "text": "14",
+       "s": 1.1,
+       "color": "#ffb627"
+      }
+     }
+    ]
+   },
+   {
+    "section": "koala",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:koala",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "LEAVES!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.836,
+      "dur": 11.731
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.034,
+      "dur": 8.812,
+      "spin": 0,
+      "opts": {
+       "text": "KOALA",
+       "color": "#1479d6",
+       "win": 6.412
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.484,
+      "dur": 5.962,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.696,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.829,
+      "dur": 9.451,
+      "spin": 0,
+      "opts": {
+       "text": "LEAVES",
+       "color": "#1479d6",
+       "win": 7.451
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.279,
+      "dur": 7.001,
+      "spin": 0,
+      "opts": {
+       "text": "FISH",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.53,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "leaves",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 16.676,
+      "dur": 5.891,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.867,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 29.057,
+      "dur": 6.553,
+      "spin": 0,
+      "opts": {
+       "text": "SNIFF!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 41.249,
+      "dur": 6.642,
+      "spin": 0,
+      "opts": {
+       "text": "HARDLY EVER!",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "zzz",
+      "at": [
+       2.2,
+       -1.2,
+       2.6
+      ],
+      "delay": 52.531,
+      "dur": 6.476,
+      "spin": 0,
+      "opts": {
+       "s": 1.1
+      }
+     }
+    ]
+   },
+   {
+    "section": "zebra",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:zebra",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "GRASS!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.417,
+      "dur": 11.154000000000002
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.749,
+      "dur": 8.738,
+      "spin": 0,
+      "opts": {
+       "text": "ZEBRA",
+       "color": "#1479d6",
+       "win": 6.338
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.199,
+      "dur": 5.888,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.337,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.703,
+      "dur": 9.417,
+      "spin": 0,
+      "opts": {
+       "text": "GRASS",
+       "color": "#1479d6",
+       "win": 7.417
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.153,
+      "dur": 6.967,
+      "spin": 0,
+      "opts": {
+       "text": "BAMBOO",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.37,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "grass",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 13.572,
+      "dur": 7.999,
+      "spin": 0,
+      "opts": {
+       "s": 1.3
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 23.9,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 27.15,
+      "dur": 5.497,
+      "spin": 0,
+      "opts": {
+       "text": "SNIP SNIP!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 38.322,
+      "dur": 7.819,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 41.875,
+      "dur": 4.266,
+      "spin": 0,
+      "opts": {
+       "text": "1 GALLON",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:panda",
+     "wide",
+     "close:koala",
+     "wide",
+     "close:zebra"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 5.413
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.563,
+      "dur": 5.322,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 12.135,
+      "dur": 1.831,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 14.015,
+      "dur": 5.959,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       2.1999999999999997
+      ],
+      "delay": 20.224,
+      "dur": 2.012,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 22.287,
+      "dur": 5.079,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       2.1999999999999997
+      ],
+      "delay": 27.616,
+      "dur": 2.366,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep15",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep15_timing.json",
+  "audio": "zool_ep15_song.wav"
+ }
+}

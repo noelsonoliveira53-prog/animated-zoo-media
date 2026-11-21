@@ -1,0 +1,26 @@
+  sung or hummed: song: moon is round  204.38-214.38 s: 
+  sung or hummed: song: hooray  296.88-301.88 s: 
+  judged: everything (no speaking voice in the file)
+309.88 s   key heard: {'key': 'C major', 'fit': 0.95}   expected: C   held tones judged: 664   voice-like tones left out: 0
+  CLASH              27.39 s  E4 + F2 together for 0.6 s
+  CLASH              47.40 s  E4 + F2 together for 0.43 s
+  CLASH              77.40 s  E4 + F2 together for 0.55 s
+  CLASH             117.38 s  E4 + F3 together for 0.34 s
+  CLASH             117.42 s  E4 + F2 together for 0.3 s
+  CLASH             167.42 s  E4 + F2 together for 0.31 s
+  CLASH             167.77 s  F2 + E4 together for 0.26 s
+  CLASH             187.39 s  E4 + F2 together for 0.52 s
+  CLASH             227.37 s  E4 + F2 together for 0.34 s
+  CLASH             227.41 s  E4 + F4 together for 0.3 s
+  CLASH             227.75 s  F2 + E4 together for 0.26 s
+  CLASH             227.75 s  F4 + E4 together for 0.26 s
+  CLASH             247.42 s  E4 + F2 together for 0.31 s
+  CLASH             247.77 s  F2 + E4 together for 0.26 s
+  CLASH             253.35 s  B4 + C6 together for 0.26 s
+  CLASH             287.40 s  E4 + F2 together for 0.6 s
+  CLASH             307.41 s  E4 + F2 together for 0.3 s
+  beat: {'heard_bpm': np.float64(95.5), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.76, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.995)}
+  clicks at: []  silences: []
+  level: {'lufs': -24.8, 'range_lu': 17.7, 'true_peak_db': -2.4, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.1)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.73, 'share_below_120hz': 0.03, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep09_music_stem_listen.png

@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep04_science",
+ "title": "Everyday Science for Kids! Magnets, Light, Shadows and Sound with Gizmo",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to explore everyday science.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz_magnet",
+   "lines": [
+    [
+     "Here's a clue: it can stick to the fridge! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Magnet!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Magnets have an invisible pull.",
+     "fx+bob"
+    ],
+    [
+     "They pull on some metals, like iron!",
+     "bob"
+    ],
+    [
+     "Can you pretend your hands are magnets? Pull together, click!",
+     "wiggle"
+    ],
+    [
+     "Will a magnet pull a paper clip?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Yes! Paper clips have metal in them.",
+     "fx2+badge:CLICK!"
+    ],
+    [
+     "Let's say it together: MAGNET!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MAGNET!",
+     "zoom"
+    ],
+    [
+     "Magnets won't stick to wood or plastic.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_bulb",
+   "lines": [
+    [
+     "Here's a clue: it lights up a dark room! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Light Bulb!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Electricity flows through wires to the bulb.",
+     "fx+bob"
+    ],
+    [
+     "Inside, the electricity makes light!",
+     "bob"
+    ],
+    [
+     "Can you flick a pretend light switch? On! Off!",
+     "wiggle"
+    ],
+    [
+     "What makes a light bulb glow?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Electricity!",
+     "fx2+badge:LIGHTS ON!"
+    ],
+    [
+     "Let's say it together: LIGHT BULB!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LIGHT BULB!",
+     "zoom"
+    ],
+    [
+     "Always ask a grown-up for help with plugs.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_ice",
+   "lines": [
+    [
+     "Here's a clue: it's cold, hard, and slippery! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Melting Ice!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Ice is frozen water.",
+     "fx+bob"
+    ],
+    [
+     "When ice gets warm, it melts back into water!",
+     "bob"
+    ],
+    [
+     "Can you melt slowly, like an ice cube, down to the floor?",
+     "wiggle"
+    ],
+    [
+     "What makes ice melt?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Warmth! Like the sun.",
+     "fx2+badge:MELT!"
+    ],
+    [
+     "Let's say it together: MELTING ICE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MELTING ICE!",
+     "zoom"
+    ],
+    [
+     "Put water in the freezer, and it turns back into ice!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_shadow",
+   "lines": [
+    [
+     "Here's a clue: it follows you on a sunny day! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Shadow!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Light travels in straight lines.",
+     "fx+bob"
+    ],
+    [
+     "When you block the light, you make a dark shape. That's your shadow!",
+     "bob"
+    ],
+    [
+     "Can you make a shadow puppet with your hands?",
+     "wiggle"
+    ],
+    [
+     "What do we need to make a shadow?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Light, and something to block it!",
+     "fx2+badge:SHADOW!"
+    ],
+    [
+     "Let's say it together: SHADOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SHADOW!",
+     "zoom"
+    ],
+    [
+     "In the morning, shadows are long!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_sound",
+   "lines": [
+    [
+     "Here's a clue: you hear it with your ears! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Sound!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Sound happens when things shake, or vibrate.",
+     "fx+bob"
+    ],
+    [
+     "The shaking wiggles the air, and the wiggles reach your ears!",
+     "bob"
+    ],
+    [
+     "Can you hum and touch your throat? Feel it buzz!",
+     "wiggle"
+    ],
+    [
+     "How does sound travel?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Through wiggly air waves!",
+     "fx2+badge:BUZZ!"
+    ],
+    [
+     "Let's say it together: SOUND!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SOUND!",
+     "zoom"
+    ],
+    [
+     "Loud sounds have big waves. Quiet sounds have small waves.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Magnets pull on metal.",
+   "@gz_magnet"
+  ],
+  [
+   "Electricity lights the bulb.",
+   "@gz_bulb"
+  ],
+  [
+   "Warmth melts ice.",
+   "@gz_ice"
+  ],
+  [
+   "Blocking light makes a shadow.",
+   "@gz_shadow"
+  ],
+  [
+   "And sound is wiggly air!",
+   "@gz_sound"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

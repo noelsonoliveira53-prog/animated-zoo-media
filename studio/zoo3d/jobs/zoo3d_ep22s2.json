@@ -1,0 +1,431 @@
+{
+ "id": "zoo3d_ep22s2",
+ "title": "Stretch Up Tall!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 22,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "giraffe",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "giraffe"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "zebra",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "zebra"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "rhino",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "rhino"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "horse",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "horse"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "verses": [
+  [
+   "giraffe"
+  ],
+  [
+   "giraffe"
+  ],
+  [
+   "giraffe"
+  ]
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "savanna",
+   "tod": "morning",
+   "formation": "line"
+  },
+  {
+   "from": "verse1",
+   "biome": "desert",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "giraffe"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus1",
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "river",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "giraffe"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "bridge1",
+   "biome": "savanna",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "desert",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "giraffe"
+   ]
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "line"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:giraffe",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRETCH!",
+     "color": "#ffb627",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:giraffe",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SO  TALL!",
+     "color": "#3db8ff",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:horse",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRETCH  UP  TALL!",
+     "color": "#ff7a00",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:giraffe",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "LONG  TONGUE!",
+     "color": "#8e5bd8",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:giraffe",
+    "close:zebra",
+    "close:rhino",
+    "close:horse",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "TIPTOE!",
+     "color": "#3cc45a",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:giraffe",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "MY  OWN  SPOTS!",
+     "color": "#ff6fb5",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRETCH  UP  TALL!",
+     "color": "#ffb627",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": [
+      2.3,
+      0.5,
+      2.9
+     ],
+     "size": 0.5
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep22",
+ "res": "3840x2160",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "samples": 16,
+ "timing_file": "zoo3d_ep22_timing.json",
+ "audio": "zoo3d_ep22y_song.flac",
+ "text_hide_shots": [
+  "close",
+  "low",
+  "dolly",
+  "high"
+ ],
+ "frame_range": [
+  2958,
+  3018
+ ]
+}

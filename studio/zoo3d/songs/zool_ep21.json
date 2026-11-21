@@ -1,0 +1,1110 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Ruminant stomachs have four compartments: the rumen, the reticulum, the omasum and the abomasum; cows may spend 35 to 40 percent of each day ruminating (cud chewing); a cow's salivary glands can make and add 50 to 80 quarts of saliva to the rumen daily; the rumen can hold 25 gallons or more (University of Minnesota Extension, 'The ruminant digestive system', extension.umn.edu/dairy-nutrition/ruminant-digestive-system, read Nov 17 2026).\nHorses: the stay apparatus, a complex arrangement of muscles, tendons and ligaments, keeps the legs steady with little effort; in the shoulder a bony groove locks the biceps tendon in place; standing sleep is restful, but horses do lie down for their deepest sleep periods (Kentucky Equine Research, 'Asleep Standing Up: How Do Horses Do That?', ker.com, read Nov 17 2026).\nPigs: the nose serves important functions besides smell; pigs root in soil to obtain iron; older pigs check out a new pig by using their noses to investigate; pigs use their snout to loosen up the dirt and use this newly tilled soil to cool down; sows root to gather materials to build nests (Rutgers 4-H Animal Science, 'Don't Root for That! Why All Aren't Fans of Swine Rooting Behavior', 4hanimalscience.rutgers.edu, read Nov 17 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about farm animals!\nA cow, a horse and a pig. What can they do?\nThree animal friends will show us. Count them with me. One, two, three!\nPut on your farm boots. Let's go!\nWho has a tummy with four parts?\nIs it the cow? Or is it the lion?\nIt is the cow!\nHere is the fun fact. A cow's stomach has four parts! Four parts, all in one tummy.\nLet's count them. One, two, three, four!\nWhat does a cow do with its food after it swallows? Hmm.\nIt brings the food back up, and chews it again! That is called chewing its cud.\nLook at the cow, chewing away.\nGrass goes down, comes back up, and gets chewed again. Chew, chew, chew! Down, up, and chew again.\nA cow chews its cud for a big part of every day. Lots and lots of chewing!\nThe biggest part of a cow's stomach can hold twenty-five gallons or more!\nThat is a lot of room for grass. Wow! A big, big tummy!\nSay it with me. A cow's tummy has four parts!\nCan you chew like a cow? Chew, chew, chew, nice and slow. Chew, chew.\nNow say it like a cow. Moo! Moo! One more time. Moo!\nQuick check! How many parts does a cow's stomach have? Four? Or one?\nFour! One, two, three, four. Great job!\nWho can take a nap, standing up?\nIs it the horse? Or is it the monkey?\nIt is the horse!\nHere is the fun fact. A horse can sleep, standing up on its four legs!\nStanding still, eyes closed, taking a nap. Shh. Quiet, everyone.\nHow does a horse stay up while it sleeps? Hmm.\nIts legs can lock in place, so it stays steady without falling over!\nLook at the horse, standing tall.\nBut for its deepest sleep, a horse lies down on the ground. Down it goes!\nLying down, all snug. Sweet dreams, horse! Night, night!\nMuscles and strong bands in its legs hold the legs steady, with very little work.\nSo a horse can rest, and still stand tall. Clever horse! Neigh!\nSay it with me. A horse can sleep standing up!\nCan you stand still like a sleeping horse? Stand tall, and lock your legs. Shh.\nNow gallop like a horse. Clip, clop, clip, clop! Clip, clop, clip, clop!\nQuick check! Can a horse nap standing up? Yes, or no?\nYes! A horse can nap standing up. You remembered!\nWho digs in the dirt with its nose?\nIs it the pig? Or is it the lion?\nIt is the pig!\nHere is the fun fact. A pig digs with its snout! Its snout is its nose.\nDigging with your nose is called rooting. Root, root, root! Dig, dig, dig!\nWhy does a pig dig up the dirt? Hmm.\nTo cool down! A pig loosens the dirt with its snout, and the soft, cool dirt helps it cool off.\nLook at that round, pink snout!\nPigs use their noses to say hello, too. When a new pig comes, the other pigs sniff to check it out!\nSniff, sniff! Hello, new friend! Nice to meet you!\nA mother pig digs with her snout, to gather things for a cozy nest.\nA snout for smelling, for digging, and for saying hello. What a busy nose!\nSay it with me. A pig digs with its snout!\nCan you wiggle your nose like a pig? Wiggle, wiggle!\nNow say it like a pig. Oink, oink! Oink, oink, oink!\nQuick check! What does a pig dig with? Its snout? Or its tail?\nIts snout! Root, root. Super thinking!\nWow! We met three farm friends. Now it is quiz time!\nGet ready. Think hard!\nWho chews its cud with a four-part tummy?\nThe cow! Yes!\nWho can nap standing up?\nThe horse! That's right!\nWho digs in the dirt with its snout?\nThe pig! You remembered!\nYou learned so many new things today.\nChew like a cow. Nap like a horse. And dig like a pig!\nWhich farm friend is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 325.12,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 701,
+  "words": 701,
+  "pause_onsets_checked": 59,
+  "onset_err_mean_ms": 25.3,
+  "onset_err_max_ms": 120.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Farm Animal Facts for Kids! Cow, Horse and Pig",
+  "card": "Farm Friends!",
+  "thumb_text": "CHEW CHEW!",
+  "description": "Who has a stomach with four parts? Who can sleep standing up? Pick your answer with Milo the bluebird, then find out: a cow chews its cud for a big part of every day, a horse can lock its legs and nap standing up, and a pig digs with its snout to loosen the dirt and cool down.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "farm animals for kids",
+   "cow facts for kids",
+   "horse facts for kids",
+   "pig facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_cow_stomach",
+   "title": "How Many Parts Does a Cow's Tummy Have?",
+   "l1": "HOW MANY",
+   "l2": "PARTS?",
+   "thumb_text": "1 2 3 4!",
+   "thumb_line": [
+    4,
+    0.6
+   ],
+   "seg": "cow",
+   "start": 21.167,
+   "end": 106.488,
+   "seconds": 85.3
+  },
+  {
+   "id": "zs90_horse_sleep",
+   "title": "Can a Horse Sleep Standing Up? Horse Facts",
+   "l1": "HOW DOES",
+   "l2": "IT NAP?",
+   "thumb_text": "SHH!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "horse",
+   "start": 106.488,
+   "end": 192.543,
+   "seconds": 86.1
+  },
+  {
+   "id": "zs90_pig_snout",
+   "title": "Why Does a Pig Dig with Its Nose? Pig Facts",
+   "l1": "WHY DOES",
+   "l2": "IT DIG?",
+   "thumb_text": "ROOT ROOT!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "pig",
+   "start": 192.543,
+   "end": 278.111,
+   "seconds": 85.6
+  }
+ ],
+ "job": {
+  "id": "zool_ep21",
+  "title": "Farm Friends!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 79,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "cow"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "horse",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "horse"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "pig"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "lion",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "monkey",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "monkey",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "beach",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "cow",
+     "horse",
+     "pig"
+    ]
+   },
+   {
+    "from": "cow",
+    "biome": "farm",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "cow",
+    "biome": "farm",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "cow"
+    ]
+   },
+   {
+    "from": "horse",
+    "biome": "mountain",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "horse",
+    "biome": "mountain",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "horse"
+    ]
+   },
+   {
+    "from": "pig",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "pig",
+    "biome": "spring_meadow",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "pig"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "night_meadow",
+    "tod": "golden",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "cow",
+     "horse",
+     "pig"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "farm",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "cow",
+     "horse",
+     "pig"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 972,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FARM FRIENDS!",
+      "color": "#ffb627",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 14.999
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 16.149,
+      "dur": 5.118,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "cow",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:cow",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FOUR PARTS!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.994,
+      "dur": 9.705000000000002
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.94,
+      "dur": 8.649,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#1479d6",
+       "win": 6.249
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.39,
+      "dur": 5.799,
+      "spin": 0,
+      "opts": {
+       "text": "LION",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.439,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 73.263,
+      "dur": 10.169,
+      "spin": 0,
+      "opts": {
+       "text": "4 PARTS",
+       "color": "#1479d6",
+       "win": 8.169
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 73.713,
+      "dur": 7.719,
+      "spin": 0,
+      "opts": {
+       "text": "1 PART",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 77.682,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.05,
+       -1.3,
+       2.2
+      ],
+      "delay": 18.583,
+      "dur": 2.116,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "dx": 0.55,
+       "s": 0.9,
+       "times": [
+        0.0,
+        0.25,
+        0.49,
+        0.72
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 23.963,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 31.033,
+      "dur": 1.258,
+      "spin": 0,
+      "opts": {
+       "text": "CHEW CHEW!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "grass",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 34.63,
+      "dur": 13.302,
+      "spin": 0,
+      "opts": {
+       "s": 1.3
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       2.3,
+       -1.2,
+       2.9
+      ],
+      "delay": 51.112,
+      "dur": 6.537,
+      "spin": 0,
+      "opts": {
+       "text": "25",
+       "s": 1.1,
+       "color": "#ffb627"
+      }
+     }
+    ]
+   },
+   {
+    "section": "horse",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:horse",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STAND UP NAP!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.119,
+      "dur": 11.024000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 2.97,
+      "dur": 8.785,
+      "spin": 0,
+      "opts": {
+       "text": "HORSE",
+       "color": "#1479d6",
+       "win": 6.385
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.42,
+      "dur": 5.935,
+      "spin": 0,
+      "opts": {
+       "text": "MONKEY",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.605,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.285,
+      "dur": 9.742,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 7.342
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.735,
+      "dur": 6.892,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 77.877,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "zzz",
+      "at": [
+       2.2,
+       -1.2,
+       2.6
+      ],
+      "delay": 13.529,
+      "dur": 8.614,
+      "spin": 0,
+      "opts": {
+       "s": 1.1
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 24.733,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 28.563,
+      "dur": 4.179,
+      "spin": 0,
+      "opts": {
+       "text": "LOCKED LEGS!",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 35.766,
+      "dur": 10.057,
+      "spin": 0,
+      "opts": {
+       "text": "LIE DOWN",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 47.693,
+      "dur": 8.756,
+      "spin": 0,
+      "opts": {
+       "text": "STEADY!",
+       "color": "#ff7a00"
+      }
+     }
+    ]
+   },
+   {
+    "section": "pig",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:pig",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SNOUT!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.117,
+      "dur": 11.686
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.143,
+      "dur": 8.586,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#1479d6",
+       "win": 6.186
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.593,
+      "dur": 5.736,
+      "spin": 0,
+      "opts": {
+       "text": "LION",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.579,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.073,
+      "dur": 9.718,
+      "spin": 0,
+      "opts": {
+       "text": "SNOUT",
+       "color": "#1479d6",
+       "win": 7.718
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.523,
+      "dur": 7.268,
+      "spin": 0,
+      "opts": {
+       "text": "TAIL",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.041,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 13.567,
+      "dur": 9.236,
+      "spin": 0,
+      "opts": {
+       "text": "DIG DIG!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.111,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "mud",
+      "at": [
+       2.3,
+       -0.9,
+       0.0
+      ],
+      "delay": 30.541,
+      "dur": 4.787,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 43.155,
+      "dur": 5.81,
+      "spin": 0,
+      "opts": {
+       "text": "HELLO SNIFF!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 52.635,
+      "dur": 6.878,
+      "spin": 0,
+      "opts": {
+       "text": "COZY NEST",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:cow",
+     "wide",
+     "close:horse",
+     "wide",
+     "close:pig"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 5.288
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.438,
+      "dur": 5.368,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 12.056,
+      "dur": 1.783,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 13.889,
+      "dur": 4.551,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       2.1999999999999997
+      ],
+      "delay": 18.69,
+      "dur": 1.874,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 20.614,
+      "dur": 5.048,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       2.1999999999999997
+      ],
+      "delay": 25.912,
+      "dur": 2.132,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep21",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep21_timing.json",
+  "audio": "zool_ep21_song.wav"
+ }
+}

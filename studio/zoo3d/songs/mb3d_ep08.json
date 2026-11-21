@@ -1,0 +1,253 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nSleepy little ducky, splash, splash, splash,\nBath time bubbles, a gentle wash,\nWarm and cozy, dry and clean,\nOff to bed to sweetly dream.\n\n[Verse 1]\nBubbles floating, round and light,\nDucky paddles left and right,\nWash your toes and wash your nose,\nSoft and slow the water flows.\n\n[Chorus]\nSleepy little ducky, splash, splash, splash,\nBath time bubbles, a gentle wash,\nWarm and cozy, dry and clean,\nOff to bed to sweetly dream.\n\n[Verse 2]\nFluffy towel, wrap you tight,\nBrush your teeth, so clean and bright,\nPajamas on, so soft and new,\nBunny and lamb are sleepy too.\n\n[Bridge]\nBreathe in slowly, like a bubble grows,\nBreathe out softly, gently goes,\nOne more yawn and one more sigh,\nClose your eyes, the moon is high.\n\n[Verse 3]\nA little story, a goodnight kiss,\nSnuggle deep in sleepy bliss,\nDucky's dreaming on the shelf,\nTime to dream now, like yourself.\n\n[Chorus]\nSleepy little ducky, splash, splash, splash,\nBath time bubbles, a gentle wash,\nWarm and cozy, dry and clean,\nOff to bed to sweetly dream.\n\n[Outro]\nGoodnight, little ducky. Goodnight.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 606,
+ "who_map": {},
+ "meta": {
+  "title": "Sleepy Little Ducky \ud83c\udf19 Bath and Bedtime Lullaby | Moonbeam",
+  "card": "Sleepy Little Ducky",
+  "thumb_text": "SLEEPY LITTLE DUCKY",
+  "description": "A gentle bath and bedtime lullaby. Luna, Bunny and Lamb float bubbles with a sleepy rubber ducky, wrap up in a fluffy towel, brush their teeth, put on pajamas and hear a little story.\nA slow breathing break helps little ones wind down for sleep. For babies and toddlers.",
+  "tags": [
+   "bedtime lullaby",
+   "bath time song",
+   "lullaby for babies",
+   "bedtime routine song",
+   "sleep music for kids",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep08",
+  "title": "Sleepy Little Ducky",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Sleepy Little Ducky",
+      "color": "#ffd88a",
+      "at": "top",
+      "size": 0.5
+     },
+     {
+      "type": "set_prop",
+      "name": "duck",
+      "at": "right",
+      "delay": 2
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bubbles",
+      "at": "left",
+      "word": "Bubbles"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "duck",
+      "at": "right",
+      "word": "ducky,"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "toothbrush",
+      "at": "left",
+      "word": "teeth,"
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "sleepy"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "breathe"
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "word": "moon"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "book",
+      "at": "left",
+      "word": "story,"
+     },
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "dreaming"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "Goodnight,"
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

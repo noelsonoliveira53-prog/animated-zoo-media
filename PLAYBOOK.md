@@ -1,0 +1,745 @@
+# The Animated Zoo: production playbook
+
+Channel: **The Animated Zoo** (@TheAnimatedZoo, UC1YuY8nqnViTtm85qxE_M1w). Host: **Milo the bluebird**.
+Audience: kids 3–8. Channel and every video are set **made for kids**.
+
+## Posting cadence (keep to this)
+- **4 Shorts a day** at **7:30 AM, 11:00 AM, 3:00 PM and 7:00 PM ET**.
+- **1 five-minute episode a day** at **5:00 PM ET**.
+- This is Noelson's chosen volume. Keep every video different: a new animal or a NEW fact
+  (never re-upload the same script). Near-identical mass uploads risk YouTube's
+  "repetitious content" rule, which is the main risk to the channel.
+- Every upload is scheduled ahead in Studio, so posting doesn't need the PC to be on.
+- Keep at least 2 days of videos scheduled ahead.
+
+## Kids-safety rules (non-negotiable)
+- Facts only from zoo / science sources (San Diego Zoo, Smithsonian's National Zoo, NOAA, NASA,
+  Natural History Museum). If unsure, cut the line. Hedge guesses ("scientists think").
+- No scary words (kill, attack, deadly, blood-and-guts, monster), no predation detail,
+  no brands or toys, no "subscribe" nagging, no requests for kids' names, ages or comments.
+- Calm pacing (TTS speed 0.85 for long-form), music ducked under voice, loudness -16 LUFS.
+- All art is original (`studio/art.py`, `studio/art2.py`). Never draw known characters.
+- Every video ends with the kindness rule: "Be kind to every animal."
+
+## Animation quality layer (`studio/fx.py`)
+Every video gets: dark sticker outline + ground shadow, eye blinks, breathing/idle sway,
+Milo's beak moving while he talks, slow camera push-in, bounce/slide-in entrances with squash,
+confetti + camera punch on reveals, twinkling sparkles, birds flying across, circle-wipe
+transitions between animals (episodes), and bouncy captions. GSAP gotcha: never combine
+`rotation` with `svgOrigin` in the same tween as `x` on `#animal`; it leaves an offset.
+Any new art must keep `<g id="animal">` and dark pupils `fill="#1a1a2e"` so blinks work.
+
+## Formats
+- **Short** (1080x1920, ~25 s): hook question → Milo flies in → 3 facts → move-along ask → sign-off.
+  Defined in `studio/shorts2.json` / `studio/episodes.json`, built with `build.py <id>`.
+- **Episode** (1920x1080, ~5 min): intro + count-along → 5 animals × (clue + guess pause, fact,
+  move-along, question + think pause, reveal, say-it-together, fact, bye) → recap → outro.
+  Defined in `studio/eps/*.json`, built with `long.py eps/<id>.json`.
+
+## Build environment
+```
+npm i -g hyperframes@0.8.231 && pip install kokoro-onnx soundfile numpy --break-system-packages
+cd studio && mkdir -p vendor && cd vendor && npm pack gsap@3.15.0 @fontsource/baloo-2@5.1.1 \
+  && tar xzf gsap-3.15.0.tgz && mkdir f && tar xzf fontsource-baloo-2-5.1.1.tgz -C f && cd ..
+export HYPERFRAMES_BROWSER_PATH=$(node -e "console.log(require('playwright').chromium.executablePath())")
+./night.sh s_<animal> ep04_<theme>     # renders, then pushes MP4s to this repo
+```
+`night.sh` expects the repo at /home/claude/animated-zoo-media and the builder in /root/zoo;
+adjust the two paths if running elsewhere.
+
+## Posting (YouTube Studio in the browser on Noelson's PC)
+YouTube's API isn't reachable from the cloud workspace, so uploads go through Studio:
+1. Open `studio.youtube.com/channel/UC1YuY8nqnViTtm85qxE_M1w/videos/upload?d=ud`.
+2. In the page, fetch `https://raw.githubusercontent.com/noelsonoliveira53-prog/animated-zoo-media/main/<file>.mp4`
+   into a File and intercept `HTMLInputElement.prototype.click` for file inputs (see `studio/studio-upload.js`).
+3. Click **Select files** (it's at about (400, 547) in an 800x892 view).
+4. Fill title + description (execCommand insertText into `#textbox`), tick made-for-kids,
+   click `#next-button` ×3, click `#second-container-expand-button` (Schedule), and set the TIME
+   by script first (`ytcp-datetime-picker input`, insertText "7:30 AM", then dispatch input/change).
+   The DATE needs real input: click the date trigger at about (150, 489) in an 800x892 view, take a
+   screenshot to confirm the calendar is open, triple-click the date box at (150, 482), type e.g.
+   "Nov 5, 2026", press Enter. Verify `#datepicker-trigger` text and the time value by script, then
+   click `#done-button`. Confirm with a zoom on (140,220)-(660,380): "Video scheduled ... on <date> at <time>".
+   (Clicking calendar day cells is unreliable, so don't.)
+   If execCommand returns false (browser pane hidden / page not focused), click the title box once with a
+   real click first, then rerun the fill script. If Studio opens on another channel, switch to
+   @TheAnimatedZoo via the account menu > Switch account. Schedule panel shows GMT-0500 = ET.
+   **If the browser pane is hidden on the PC** (document.hasFocus() is false), execCommand does nothing.
+   Then set the title and description by writing `textContent` on each `#textbox` and dispatching an
+   `input` InputEvent. Set the date and time with real input only: click the date trigger (150, 489),
+   take a screenshot (the calendar must be open), triple-click the date text (120, 483), type, press Enter,
+   click empty space (680, 420) to close the calendar. For the TIME, the reliable way is: by script run
+   `ti=document.querySelector('ytcp-uploads-dialog ytcp-datetime-picker input'); ti.focus(); ti.select()`,
+   then type "3:00 PM" with real keystrokes and press Enter.
+   If #done-button click by script does nothing, wait until the header stops saying "Saving..." and click
+   the Schedule button for real at about (731, 810).
+   Read back `#datepicker-trigger` and the time value by script before clicking `#done-button`, because a
+   wrong value silently schedules for 12:00 AM. To fix a scheduled time later: open /video/<id>/edit, open
+   Visibility, retype the time the same way, click Done, then click `#save`.
+   Other channels: Studio only opens the channel that is active in the channel switcher. Switch with
+   youtube.com/channel_switcher (click the channel's ytd-account-item-renderer), and switch back to
+   The Animated Zoo when done, or the nightly task's Zoo URLs show "Oops".
+   Nov 4 run (hidden pane, 800x892 emulated): after the 3 Nexts, really click the Schedule header (540, 583); if the calendar
+   doesn't open, click the date box (150, 496). Then by script focus+select the calendar's date input (value contains the year),
+   type "Nov 7, 2026" + Enter; focus+select the time input by script, type + Enter; read back; real-click Schedule (731, 808).
+   Do NOT use studio-upload.js `fill()` for scheduled posts: it clicks PUBLIC and publishes immediately.
+5. Episodes: also set the thumbnail from `brand/thumb_<id>.png` via `ytcp-thumbnail-uploader input#file-loader`.
+   **Verified channels (Nov 7, 2026, Noelson): The Animated Zoo, Bloop's Color Lab and Gizmo Explains are phone-verified.**
+   On those three, EVERY upload gets the full package before scheduling: custom thumbnail `brand/<channel>/thumb_<id>.png`
+   (1280x720, under 2 MB), title, searchable description, made for kids. Do it in the upload dialog's Details step:
+   `armThumb(path)` (same File + `HTMLInputElement.prototype.click` interception as the MP4), scroll `ytcp-thumbnail-uploader`
+   into view, then REAL-click its "Upload file" tile (the tile's left third). Setting files on input#file-loader by script does
+   nothing. Confirm an `img` with a `data:` src appears in the uploader before clicking Next. If it was missed, fix it after
+   scheduling on /video/<id>/edit (same click, then click `ytcp-button#save`; "Changes saved" toast).
+   Tiny Truck Town, Fruity Friends and Moonbeam Bedtime are NOT verified: "Upload file" opens "verify your phone number";
+   cancel it and schedule without a custom thumbnail.
+   Channel switching (Nov 7): if youtube.com/channel_switcher clicks stop sticking, use Studio's own avatar menu >
+   Switch account (avatar at about (758, 32) on a desktop-size pane), then pick the channel. That always worked.
+   Nov 7 run (focused pane): execCommand worked; after "Select files" the date input in the open calendar has no offsetParent, so find it
+   with `[...document.querySelectorAll('input')].filter(i=>/202\d/.test(i.value))` (no visibility filter), focus+select, type, Enter.
+
+## Animal library
+Drawn: giraffe, penguin, elephant, lion, zebra, hippo, monkey, flamingo, kangaroo, octopus,
+sea turtle, polar bear, owl, panda, koala, sloth, red panda, meerkat, sea otter, gorilla, rhino, harbor seal, camel, ostrich.
+Fact-highlight variants (Shorts): `gorillanose` (ring on nose), `rhinoears` (sound waves at ears).
+Next to draw: tiger (gentle), peacock, armadillo, toucan, chameleon, bison.
+Episodes made: ep01 savanna, ep02 ocean & ice, ep03 treetops, ep04 amazing animal bodies, ep05 baby animals, ep06 sunny desert (camel, meerkat, ostrich, kangaroo, lion).
+Shorts made: panda, kangaroo, sloth, zebra, hippo, lion, flamingo, polar bear, turtle, octopus, monkey, koala, red panda, owl, meerkat, sea otter, camel, gorilla, ostrich, rhino.
+Note: the seal pup (`#fx` in SEAL) sits partly past x 1080, so it suits episodes; reposition it before using it in a Short. SLOTH now also has a baby sloth in `#fx2`.
+
+## Schedule so far
+See `studio/upload_plan.json`.
+
+## Sister channels (same engine, pick with `CHANNEL=space|dino|wild`)
+Settings live in `studio/channel.py`. Each channel keeps the same safety rules and its own art, so no
+video is reused across channels. New channels follow the network ramp in `docs/CHANNELS.md` (week 1:
+1 Short/day + an episode every 2 days; week 2: 2 Shorts + 1 episode daily; week 3: 3 + 1; week 4 on: 4 + 1).
+Never start a new channel at full speed. Keep 2 hours between uploads on one channel.
+Slot offsets so channels don't post at the same minute: Space +50 min, Dino +60, Wild +70
+(on the network's Shorts 07:30 / 11:30 / 15:30 / 18:30 and episode 13:30 ET slots).
+Handles: @SpaceKidsAcademy and @DinoWorldKids belong to other people; use the HQ versions.
+Writing voice for these three channels: `docs/voice.md`.
+
+| Channel | Host | Voice | Art | Shorts / episodes | Repo folder |
+|---|---|---|---|---|---|
+| Space Kids Academy | Nova the robot | af_nova | `art_space.py` | `shorts_space.json`, `eps/sp_*.json` | `space/` |
+| Dino World Kids | Dash the baby dino | af_sky | `art_dino.py` | `shorts_dino.json`, `eps/dn_*.json` | `dino/` |
+| WildKids Discovery | Pip the mouse explorer | bf_emma | `art_wild.py` | `shorts_wild.json`, `eps/wk_*.json` | `wild/` |
+
+Build: `CHANNEL=dino SUBDIR=dino bash night.sh dn_trex dn_ep01_dinos` (anything with `ep0` goes to long.py).
+Brand assets: `python3 brand2.py` writes `brand/<channel>/banner, avatar, thumb_<episode>` HTML (screenshot to PNG).
+Fact sources: NASA (space); Natural History Museum London and Smithsonian NMNH (dinosaurs);
+Smithsonian, NHM and USDA (bugs). Dino scripts say "scientists think" for anything still debated,
+and remind kids that birds are living dinosaurs. Bug scripts end with "Be gentle with every bug."
+
+Drawn so far. Space: Mercury, Venus, Moon, Mars, Jupiter, Saturn, Sun. Dino: T. rex, Triceratops,
+Stegosaurus, Brachiosaurus, Pteranodon. Wild: ladybug, honeybee, butterfly, ant, snail.
+Next ideas. Space: Uranus, Neptune, comets, astronauts, rockets. Dino: Ankylosaurus, Velociraptor
+(feathers!), Parasaurolophus, Diplodocus, Spinosaurus. Wild: firefly, grasshopper, caterpillar, dragonfly, worm.
+
+## Upload limit (learned Nov 3, 2026)
+- Nov 16, 2026 (owner, 11:09 PM): only The Animated Zoo uploads now, so the whole allowance is its own: up to 20 uploads in any 24 hours, no lower cap per run or per session. Count the last 24 hours in the commit log before uploading (docs/DAILY_RUN.md, C). On Nov 16 a session held two finished Shorts back and wrote "at the daily cap" from an estimate; the commit log showed 16 uploads, 4 were free. The older caps below (15, 5, 6, 9 per run) are history.
+- Phone-unverified channels hit "Daily upload limit reached" — and the cap is **account-wide** across all Brand Accounts (~20 uploads in 24h hit it).
+- A blocked upload saves nothing (no draft). Window is rolling 24h from each upload.
+- Fix: phone-verify each channel at youtube.com/verify (also unlocks custom thumbnails). Until then, spread uploads ≤ ~20/day and upload the soonest slots first.
+- Render queue: `studio/queue.txt` + `studio/runq.sh` — each run pops one chunk (<2h) and logs to night_q.log.
+- Container clock is America/New_York.
+
+## Upload cap (Nov 3, 2026)
+- Hard cap: **max 15 uploads per morning run** across the 5 new kids channels (YouTube allows ~20 per rolling 24h account-wide; the Animated Zoo nightly batch needs the rest).
+- Soonest slots first; anything over the cap waits for the next day's run (plans are scheduled ahead, so nothing airs late).
+- Descriptions: first 2 lines = searchable phrase + subjects (yt-seo query test); titles ≤ 60 chars (yt-package).
+
+## Duplicate guard (Nov 4, 2026)
+- Before uploading on a channel, check its Studio Shorts/Videos tabs (or the Command Center status) as well as the plan file: Nov 3 scheduled all 5 Tiny Truck Town Shorts without marking the plan, and the Nov 4 run re-uploaded tt_firetruck. The duplicate (1VDyCj71-hA) was set to Private; delete it in Studio when convenient.
+- After switching channels, the first Studio load returns 403 "Oops"; just load it again (sometimes 2-3 times).
+
+## Strategy change: episodes only (Nov 4, 2026, Noelson's call)
+- **No more Shorts** on the 5 kids channels (Tiny Truck Town, Bloop's Color Lab, Fruity Friends, Moonbeam Bedtime, Gizmo Explains).
+  The 15 Shorts already scheduled in Studio stay and air as planned; every other unposted Short is marked `"status": "dropped"` in the old plans — never upload those.
+- **One episode per channel per day** at each channel's slot: Truck 1:40 PM, Bloop 1:50 PM, Gizmo 2:10 PM, Fruity 2:20 PM, Moonbeam 7:00 PM ET.
+- The only plan to upload from is `studio/upload_plan_episodes.json` (sorted by date). Stock runs through Nov 15.
+- Upload budget: **5 uploads per morning run** (one per channel, the soonest `to_upload` episode for each). Never more. That keeps the account far under YouTube's ~20/24h cap with room for The Animated Zoo.
+- The render queue holds episodes only (`studio/queue.txt`); Shorts generators are retired for these channels.
+
+## Strategy change 2: Blender 3D sing-alongs only (Nov 4, 2026, 10:30 AM)
+- **All 2D production is stopped.** Every unposted 2D episode is `"status": "paused_2d"`; never upload those. Render queue is empty.
+- From now on every video is a **Blender 3D**, informational **sing-along** episode built to go viral. One per channel per day once the pipeline is producing.
+- Rendering happens on Noelson's PC (RTX 4060 Ti) through the ZooBlender render worker. Jobs go into Documents\ZooBlender\jobs and finished videos land in Documents\ZooBlender\out.
+- Only upload from `studio/upload_plan_3d.json`. Until it has `to_upload` entries, the morning run uploads nothing and only checks analytics.
+
+## 3D pipeline location (Nov 4, 2026)
+- Code: `studio/zoo3d/` (engine.py, lib.py, chars/, sets/, songs/, jobs/, finish.py, worker.py, setup.sh) and `studio/sing/sing.py`.
+- Daily runbook: `studio/zoo3d/DAILY_3D.md`. Contract: `studio/zoo3d/API.md`. Viral rules: `docs/STRATEGY_3D.md`.
+- Episode 1 for all six channels: tt3d_ep01 (Fire Truck Song), bl3d_ep01 (Colors Song), fr3d_ep01 (Yummy Fruits Song),
+  mb3d_ep01 (Time for Bed, Sleepyhead), gz3d_ep01 (The Planets Song), zoo3d_ep01 (Savanna Animals Song).
+- PC worker: Documents\ZooBlender\START_RENDER_WORKER.bat runs zoo3d\worker.py inside Blender 5.4 (portable copy in Downloads),
+  renders EEVEE frames, and assembles the MP4 with ffmpeg. Its log is worker.log and its status is status.txt.
+
+## Views check recipe (Nov 5, 2026)
+- Per channel: switch with youtube.com/channel_switcher, then open
+  `studio.youtube.com/channel/<id>/analytics/tab-content/period-default/explore?entity_type=CHANNEL&entity_id=<id>&time_period=lifetime&explore_type=TABLE_AND_CHART&metric=VIEWS&granularity=DAY&t_metrics=VIEWS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS&t_metrics=VIDEO_THUMBNAIL_IMPRESSIONS_VTR&t_metrics=AVERAGE_WATCH_TIME&t_metrics=AVERAGE_WATCH_PERCENTAGE&t_metrics=RATINGS_LIKES&dimension=VIDEO&o_column=VIEWS&o_direction=ANALYTICS_ORDER_DIRECTION_DESC`
+  (reload once or twice on "Oops"), and read the `yta-explore-table-row` cells. The views cell has the share glued on ("35748.3%" = 357 views, 48.3%).
+- In the hidden browser pane the channel switcher list doesn't render until a screenshot is taken; take one, then click the
+  `ytd-account-item-renderer` by script. Reset the 800x892 viewport emulation to desktop before switching, or the switcher stays blank.
+
+## Video quality standard (Nov 6, 2026, Noelson: "make the upscaling standard for every video")
+EVERY episode published from now on is 4K. No exceptions, no 1080p uploads.
+1. Render: Blender EEVEE at native 1920x1080, every frame (job "res": "1920x1080", "step": 1). align.py sets these by default.
+2. Finish: `studio/zoo3d/finish.py` ALWAYS upscales to 3840x2160 (lanczos + light unsharp), burns the karaoke lyrics at 4K,
+   and encodes AV1 10-bit (SVT-AV1, tune VQ) with the bitrate sized to land under 100 MB (GitHub raw limit), AAC 192k audio.
+3. Quality gate (built into finish.py): the output must probe 3840x2160 and be under 100 MB, or finish.py exits with an error
+   and the episode must NOT be uploaded. The old 1080p --hd path is disabled.
+4. Upload: in YouTube Studio the uploader should see "4K" processing; YouTube serves 2160p/1440p/VP9-AV1 streams for 4K uploads.
+5. Thumbnails stay 1280x720 PNG (YouTube's thumbnail spec).
+Episodes uploaded before this rule (Nov 5–6 batch, 1080p H.264) stay as they are unless Noelson asks to replace them.
+
+## Schedule buffer rule (Noelson, Nov 8, 2026) — the schedule is ALWAYS filled
+- Every channel keeps at least 3 days of episodes uploaded and scheduled in YouTube Studio ahead of today. Every production check uploads the soonest `to_upload` entries (within the ~20/24h account cap) until that buffer is met.
+- Format changes never empty a slot. New formats (2D/3D hybrid, new worlds, lessons) are tested on extra renders only; the classic 3D sing-along keeps rendering daily as the default. If a new-format episode is held or rejected, a classic episode takes that date (as zoo3d_ep06c did for Nov 11).
+- If a render fails or its timing is broken, re-render it or fill the slot with the next finished episode for that channel. A missing slot is worse than a late fix.
+
+## Packaging rules (yt-package check, Nov 9, 2026)
+- Thumbnail text: 3 words max and it must NOT repeat the title's words (the title says the topic, the thumbnail adds the hook: "ALL RED!", "STICK OR NOT?", "1 TO 10!"). Set `meta.thumb_text` that way in every new song spec; lint with `python3 /root/.claude/skills/yt-package/title.py --title "..." --thumb "..."`.
+- Custom thumbnails only show on Zoo, Bloop and Gizmo (phone-verified). To redo a thumbnail after finishing: `studio/zoo3d/rethumb.py` (crops out the burned-in lyrics).
+- Before every finish: `studio/zoo3d/check_timing.py <timing.json> <words_tx.json>`; skipped verses or garbled/wrong-fact singing → rebuild timing or re-sing; never publish a wrong fact.
+
+## Run notes (Nov 9, 2026)
+- `fetch(raw).blob()` on a 90 MB MP4 sometimes throws "Failed to fetch" in the hidden pane; reading `r.body.getReader()` chunks into a File worked every time.
+- Install the `HTMLInputElement.prototype.click` intercept BEFORE clicking "Select files", and make it swallow every file-input click, so a failed fetch never opens a native picker on the PC.
+- Studio avatar menu > Switch account: the submenu opens slowly; wait ~2 s and screenshot before clicking a channel, or the click lands on the account under the cursor (it switched to Rainy Window Dog TV twice).
+- The Schedule button usually needs two real clicks at (720, 535) in an 800x600 frame (first one blurs the time field). Confirm via the "Video processing ... set to public on <date> at <time>" dialog.
+
+## Zoo Shorts test (Noelson approved Nov 9, 2026)
+- The Nov 4 "no Shorts" rule is lifted for **The Animated Zoo only**, as a test after "Why Are Flamingos Pink?" went 85 -> 1,825 views in a day.
+- One Short a day at **11:00 AM ET**, made from finished 3D songs: `studio/zoo3d/make_short.sh <song.mp4> <start> <end> "<LINE1>" "<LINE2>" shorts3d/<id>.mp4`
+  (vertical 1080x1920, blurred background, 4:3 song crop with the burned lyrics, question title on top, loudness -16 LUFS). Find clean cut points by OCR'ing the
+  burned lyrics (1 fps strips + tesseract) because job timing files don't match the published edit.
+- Pick one animal + one true fact or sound per Short, 13-20 s, title "What/Why ... ? <Verb> Along with Milo!" (60 chars max). Made for kids, scheduled, never published now.
+  Studio preselects PUBLIC for Shorts: always open Schedule and confirm the button reads "Schedule" before clicking it.
+- Plan file: `studio/upload_plan_shorts_zoo.json`. These count toward the account's ~20 uploads/24h, so they come after the 6 daily episodes.
+- Tiny Truck Town duplicate 1VDyCj71-hA was deleted Nov 9 (Noelson approved).
+
+## Nov 13, 2026 run notes
+- **Missed runs:** no morning runs happened Nov 10-12, so Truck/Fruity/Moonbeam slots on those days stayed empty. Backlogs were re-dated to one per day
+  from Nov 14 (`planned_date` keeps the old date). If a run is missed again, upload the soonest `to_upload` per channel on the next free day.
+- **Holds:** `"status": "hold_fact_check"` in upload_plan_3d.json means never upload until fixed (zoo3d_ep08: hippo "purple" line).
+- **Upload recipe that worked (PC browser pane, hidden):** Studio tab (not fronted is fine for script steps) -> `?d=ud` -> one script that fetches the plan
+  JSON from raw GitHub, arms the MP4, clicks `#select-files-button`, fills title/description (execCommand with textContent fallback), ticks made for kids.
+  Thumbnail (verified channels): arm the PNG, then scroll `ytcp-thumbnail-uploader` into view; it has zero size until the video finishes uploading, so
+  scroll the dialog once with the mouse and retry, then real-click "Upload file" at about (122, 328) in an 800x600 view and check for a `data:` img.
+  Then Next x3 by script, expand Schedule, real-click the date box (144, 388), focus+select the date input by script, type "Nov 13, 2026" + Enter,
+  focus+select the time input, type "1:40 PM" + Enter, read both back, real-click Schedule (720, 535).
+- **Channel switch:** youtube.com/channel_switcher, take a screenshot (renders the list), click the `ytd-account-item-renderer` by script, then load
+  Studio twice (first load is a 403 "Oops").
+- **Google Vids:** see docs/GOOGLE_VIDS.md. Noelson's PC browser pane is signed in to vids.google.com. Free plan = about 10 AI clips a month.
+- **Zoo-only mode (Nov 13, evening):** other 5 channels paused (plan status "paused_channel").
+- **PC render state (Nov 13):** zoo3d_ep11-13 (v1 songs) are already RENDERED in Documents\ZooBlender\out (since Nov 10) and only need
+  finish.py (4K) + upload: Zoo stock for Nov 15-17. Note: the cloud box has 2 cores, so a full 4K finish takes about an hour per episode;
+  do one per run. zoo3d_ep14-16 (songs v2 + editing v2) were copied to ZooBlender\jobs for the worker to make songs; next runs build
+  timing/job files and queue the renders. ZooBlender\zoo3d\engine.py now = repo engine.py (PC version merged with the v2 cut logic).
+
+### Nov 13 (night) variety re-renders
+- PC queue (worker, alphabetical): zoo3d_ep12w (rendering, ~35 min each), ep13w, ep14w, ep15w, ep16w. Old savanna jobs zoo3d_ep15/ep16 have STOP files; zoo3d_ep14/ep15 savanna raws exist but must not be used.
+- Finish each with `python3 finish.py <ZooBlender/out/<id>w/<id>w_raw.mp4> jobs/<id>w.json --date <plan date> --time "4:00 PM" --nopush --preset 10`; it publishes as <id>.mp4 and sets to_upload.
+- Plan dates: ep12 Nov 16, ep13 Nov 17 (status rendering_variety until finished); ep14-16 get the next free days.
+- Nov 13 (late): zoo3d_ep12.mp4 is now the new-places render (to_upload, Nov 16). Songs v3 (studio/zoo3d/make_specs_v3.py): ep17 panda/tiger/monkey/koala/fox, ep18 polar bear/arctic fox/bear/horse, ep19 cow/pig/horse; their .song.json files are on the PC. When songs_out/<id> is done, build timing + jobs/<id>.json from the spec's "job" block (already zooworld + locations) and send it to the PC.
+- The daily task's model could not be changed from a session (device-bound task): Noelson switches it to Fable in the task's settings.
+- Nov 13 (night 2): finer scene plans. PC queue is now zoo3d_ep14x, ep15x, ep16x (the ep14w/15w/16w jobs are cancelled with DONE markers and have no usable video; zoo3d_ep13w is finished on the PC and needs finish.py -> zoo3d_ep13.mp4, Nov 17). Finish <id>x jobs like <id>w jobs (they publish under the song id). For ep17-19: when songs_out has the song, build timing, write jobs/<id>.json from the spec's "job", run routes.py on it, variety check, test 2 stills, send to the PC.
+- Nov 13 (night 3): zoo3d_ep13.mp4 is the new-places render (to_upload, Nov 17). PC WORKER STUCK since 18:14 PC time: after Blender crashed on zoo3d_ep14w (access violation), the next Blender (zoo3d_ep15w) hung before its first frame and the old worker has no timeout. A new worker.py with a watchdog is on the PC but only loads when the worker restarts (Noelson: close the worker window, run START_RENDER_WORKER.bat). If status.txt still says "RENDERING zoo3d_ep15w 2026-11-13 18:14", tell Noelson; nothing renders until then. After the restart the queue is zoo3d_ep14x, 15x, 16x, and the ep17-19 songs.
+- Nov 14: uploads to the PC over about 3 MB time out. Song/lesson audio goes up as Opus (`ffmpeg -i x.wav -c:a libopus -b:a 72k -f ogg`) saved under the name `<id>_song.wav`; the PC's ffmpeg reads it by content. zool_ep01 (first lesson) is on the PC this way. The daily task now just points at docs/DAILY_RUN.md.
+- Nov 14 (03:10 UTC): TWO SESSIONS ARE WORKING ON THIS REPO AND PC. Always `git pull --rebase` before editing and before pushing. Variety fix: `variety.py check` now compares a recorded episode with the ones BEFORE it in the ledger (ep17 was failing only because the forest lesson zool_ep01 was recorded after it). Ledger order = posting order: ... ep16x, ep17, ep18, ep19, zool_ep01. zoo3d_ep17 is OK to send to the PC. ep14x was interrupted at frame 1605 by a worker restart (it resumes); a4k_zoo3d_ep18 (native 4K test) renders first because of its name.
+- Nov 14: SILENT-VIDEO BUG found and fixed before upload. Re-render jobs (<id>w, <id>x, a4k_*) were assembled without sound because the worker looked for <jobid>_song.wav. zoo3d_ep12.mp4 and zoo3d_ep13.mp4 now have their songs muxed in (video untouched). On the PC, copies named zoo3d_ep14x/15x/16x_song.wav and a4k_zoo3d_ep18_song.wav are in jobs\, the new worker.py falls back to job["audio"] (loads at the next worker restart), finish.py refuses or repairs a silent raw, and review.py fails a video with no or near-silent audio. Shorts are now 3 a day (8 new cuts added); upload cap per run is 6.
+- Nov 14 (daily run, ~04:00 UTC): ep12 and ep13 HELD at the quality gate even after the audio fix: their contact sheets are below docs/quality_baseline (ep12: 8 of 12 frames in one night meadow; both: crowd line-ups, 6-7 scenes, a 50 s static outro with mis-heard captions). Re-renders zoo3d_ep12y and zoo3d_ep13y are on the PC (jobs + <id>y_song.wav = the songs_out mp3); they render right after a4k_zoo3d_ep18 (alphabetical). 13 scenes each: routes.py plus 2 extra outro places ("line" index inside outro1), shows fixed by hand (ep13: verse2 second half giraffe+giraffe_calf, verse3 hippo+hippo_calf; routes.py's word match picked the elephant 'calf' for "a giraffe is a calf too"), and bare-animal shot names replaced with close:<id> (a bare 'giraffe' shot became an empty wide shot of the field). Test stills checked. Finish: `python3 finish.py <ZooBlender/out/zoo3d_ep12y/zoo3d_ep12y_raw.mp4> jobs/zoo3d_ep12y.json --date 2026-11-16 --time "4:00 PM" --nopush --preset 10` (ep13y: Nov 17), confirm the output has audio, review, then upload. Plan status for both is rendering_variety until then. Ledger: 12w/13w entries replaced by 12y/13y.
+- Nov 14 (daily run): 4 Shorts scheduled: bxGO367Jkgo (Nov 14 6:30 PM), i4rqbji991k (Nov 15 7:30 AM), pc0zAY86lcE (Nov 15 6:30 PM), Cq7yX_gDLzk (Nov 16 7:30 AM). The scheduled task's own rule caps a run at 4 uploads; DAILY_RUN.md now says 6 (changed Nov 14 by another session) - the scheduled run keeps to 4 until Noelson confirms. Upload flow that worked in the hidden pane: arm via getReader, #select-files-button, textContent fallback for title/description, made-for-kids radio, 3x #next-button by script, #second-container-expand-button by script (a real click on the Schedule header only selects text), real-click date box (144,388), focus+select the input whose value has the year, type date + Enter, focus+select the time input, type + Enter, read back, real-click Schedule (720,535) twice.
+- Nov 14 (daily run, 6:45-9:00 AM ET): Studio refreshed: 26,724 views (+4,258), mostly old fact Shorts. 6 uploads: ep12 ssAP26fD0hI (Nov 16 4 PM), ep13 tt34irM1y7o (Nov 17 4 PM), lesson zool_ep01 U0f336VeEjM (Nov 18 4 PM), Shorts qo1yYmWfPbo (Nov 16 11:30, Lions Sleep) and 1hWZMJUm1eA (Nov 16 6:30, Baby Zebra Foal). BKfS-luRPeo = first ep13 upload with mis-heard outro captions ("four"/"foe"), now Private; Noelson may delete it. finish.py clean_extra now also matches captions across two lyric lines.
+  PC worker: it looped forever on the cancelled zoo3d_ep16 (STOP file, no DONE: exit code 3 every minute, status stuck on RENDERING). A DONE marker in out\zoo3d_ep16 fixed it. Worker bug: the idle reset `fails = {k: v for k, v in fails.items() if v < 3}` forgets failed jobs, so a job that always fails is retried forever; give cancelled jobs a DONE marker.
+  New: zoo3d_ep17y (16 scenes, 9 places, engine.py "after" key = seconds into a section, so long outros get extra places) rendered in 30 min; finished as zoo3d_ep17.mp4 for Nov 21 (cast = zool_ep01's, so never post it next to the forest lesson). zool_ep02 "Amazing Animal Noses" (elephant, rhino, pig, bear, cow; facts sourced in the spec) is on the PC. Raws waiting for the 4K finish: zoo3d_ep14x, ep15x, ep16x (Nov 19/20/22 candidates; ep18 native-4K test is hold_review, moved to Nov 19).
+  Upload notes: the raw GitHub CDN serves stale files for a few minutes after a push (even with ?query); fetch from the commit SHA (raw.githubusercontent.com/<owner>/<repo>/<sha>/<path>). In the hidden pane, take a screenshot before reading element rects (they are 0x0 until it renders) and split long scripts (45 s tool timeout). Studio video edit: Visibility at page (1168,685) with a 1400x900 viewport.
+  Shorts plan Nov 17 has two cuts from the OLD ep12 render (sleep_zebra, sleep_action, same episode, same day): re-cut them from the new ep12 with fact titles before uploading.
+
+### Nov 14 (noon, production session): TEACHING FIRST + interactive lessons v2
+- Noelson (12:01-12:10 ET): shift from music-only to teaching videos: 1 music video + 4 teaching lessons a day, Shorts only from
+  lessons, everything native 4K, 5 prototypes for his review, current videos and schedule stay, nothing new uploads before he
+  approves. Lessons must be interactive and in-depth with examples on screen; music videos keep their style. See docs/DAILY_RUN.md rule 5.
+- New files: `studio/zoo3d/teach.py` (lesson builder v2), `teachprops.py` (answer signs, thinking dots, mystery box, counters and
+  ~25 example props), `make_lessons_p2.py` (5 prototype specs zool_ep03..07), `lesson_shorts.py` (4K vertical fact Shorts from the
+  lesson RAW with their own captions), `teach_stills.py` (local test stills). Engine additions: prop type "teach" with per-frame
+  animation, shots "teach"/"exhibit", formation "teach", location "place" (exact spot for one cast member), job "hold_shots"
+  (same framing over several lines = one continuous shot), directive "jumpers", location key "shot" no longer makes a new set.
+  New look-alike kinds in chars/animal.py: pink_cub (newborn panda), summer_fox, cat. PC copy: zoo3d\engine.py, teachprops.py,
+  chars\animal.py, fonts\Baloo2-ExtraBold.ttf (all sent Nov 14 12:36 ET).
+- Measured on the PC (jobs aa_t16 / aa_t32, same 72 frames at 3840x2160): 16 samples = 1.35 s/frame, 32 samples = 1.97 s/frame,
+  PSNR 45 dB, no visible difference. Lessons use 16 samples. The 4K song test used 32 (1.7 s/frame); songs can drop to 16 too.
+- Background processes started with nohup/& die when the turn ends in this container: run long encodes with the Bash tool's
+  run_in_background (finish.py was killed this way once).
+
+### Nov 14 (1:30 PM): thumbnails on every upload, Shorts included
+- Noelson: "ensure the new posts are activating with YouTube skills to ensure personalized thumbnails are being applied to all
+  videos upon posting". Audit in Studio: the 5 scheduled episodes (Nov 14-18) all show their custom thumbnail. The Animated Zoo
+  CAN take custom thumbnails on Shorts: a Short's Details page has the same `ytcp-thumbnail-uploader input#file-loader`
+  ("up to 2160 by 3840 pixels (9:16 ratio)", under 50 MB). The 7 scheduled Shorts (Nov 14 6:30 PM - Nov 16 6:30 PM) now have theirs
+  (plan "thumb_set": true); the 7 to_upload Shorts have a thumbnail file in brand/zoo/shorts/ and get it at upload.
+- Recipe that worked (hidden pane): open studio.youtube.com/video/<id>/edit, wait 8 s, one script: fetch the PNG from
+  raw.githubusercontent.com/<owner>/<repo>/<commit sha>/<path>, `new File`, DataTransfer into
+  `ytcp-thumbnail-uploader input#file-loader`, dispatch `change`, wait until an `ytcp-thumbnail-uploader img` has a `data:` src.
+  Then `find` "Save" and REAL-click the button ref (a scripted `#save.click()` saved only sometimes). Success = toast
+  "Changes saved" and the uploader img becomes `.../vi/<id>/sddefault.jpg?v=...` (an auto frame is `vi_webp/<id>/sd2.webp`).
+  Never navigate away before the toast: the change is silently dropped.
+- Shorts thumbnails: `studio/zoo3d/short_thumb.py` (existing cuts) and `lesson_shorts.py` (lesson Shorts) write 1080x1920 PNGs with
+  their own 3 words; text sits at the top of the picture area so YouTube's 3:2 crop keeps it.
+
+### Nov 14 (3:30-3:55 PM): plan confirmed, word sync, enriched props, raw size limit
+- Noelson 3:28 PM: "Keep that as the new plan" + use the youtube-network-channels skill on every new video + "graphics improved
+  and enriched with details and all words in sync" + "don't make assumptions, say only what is delivered" (DAILY_RUN rule 5).
+- Word sync: `studio/zoo3d/wordsync.py` force-aligns every spoken line (PocketSphinx, pip, no network). All 5 prototype lessons:
+  605/605, 609/609, 540/540, 567/567, 568/568 words aligned; at pauses the next word starts 23-34 ms (mean) from the measured sound
+  onset. Before this, word times were estimated from word length (the counting props could be ~0.4 s off).
+- The check also caught two mispronunciations: the Kokoro voice spelled out "Shh." (S-H-H) and "Brrr" (B-R-R-R). wordsync.SAY now
+  gives the voice "Shush" / "Burr" while captions keep the written word. teach.py prints CHECK PRONUNCIATION for any word that
+  takes far too long.
+- teachprops.py got a detail pass (`_detail`): confetti burst on the right answer, sparkles around the mystery box and check marks,
+  house with shutters/flower box/chimney smoke/bushes/path, numbered ruler, cars with lamps/bumpers/hubcaps, smiling sun, pool with
+  stones/lily pads/reeds, mud with bubbles and grass, den with stone arch, town with road and trees, fork and spoon by the plate.
+  `prop_gallery.py` renders all props on one sheet for a quick check.
+- zool_ep03 rendered (285 s, 4K) but its raw is 515 MB: over the 400 MB per-file fetch limit. worker.py now has split_big
+  (pieces of ~230 MB, lossless); it needs START_RENDER_WORKER.bat restarted once (asked Noelson 3:36 PM).
+- The first renders (zool_ep03 done, zool_ep04..07 queued) were made before word sync and the detail pass: zool_ep04..07 cancelled
+  (DONE markers / STOP), replaced by zool_ep03b..07b (same lessons, song id zool_epNN, new timing + audio + props) queued 3:49 PM.
+  A stopped job keeps being retried by the worker until it has a DONE marker: write DONE, not only STOP.
+- Nov 14, 5:15-6:30 PM (lesson format v3; Noelson 5:12 PM: "adjust the shorts to be a minute and half long and long videos to
+  be minimum 5 minutes long. Perfect the process and the prompt here to adjust to that and the quality improvement process going"):
+  * New specs `studio/zoo3d/make_lessons_p3.py` -> lessons/zool_ep08..12.json ("version": 3): hello, 3 parts of 85-95 s, quiz,
+    goodbye. Built: zool_ep08 333.3 s (parts as Shorts 88.2/89.2/89.4 s), ep09 337.2 (88.6/91.3/88.7), ep10 339.9 (88.0/88.6/87.2),
+    ep11 350.9 (89.0/88.8/88.8), ep12 336.7 (88.4/87.7/88.9). Word sync 732/732, 709/709, 709/709, 741/741, 718/718.
+    Casts: 08 zebra pig koala; 09 giraffe elephant lion; 10 tiger panda cow; 11 polar_bear horse giraffe; 12 arctic_fox monkey bear.
+  * Code: teach.py ("checks" = extra question rounds, board cleared before each, Shorts = whole part, FAIL lines + jobs/<id>_problems.json),
+    teachprops.py (sign width cap 2.8, flies fs 0.5, plate r 0.4, new props grass + milk), engine.py (teach formation: Milo x -2.8,
+    animal x -0.45), lesson_shorts.py (v3: 85-95 s, crop = centre 90% of the width, 100 MB guard, format lesson_fact_short_90),
+    review.py (v3 lesson 300-390 s, lesson Shorts 85-95 s and 2160x3840, teach.py problems fail the video), finish.py (v3 lessons are
+    written as hold_review until the file studio/zoo3d/LESSON_V3_APPROVED exists).
+  * PC at 6:16 PM: zool_ep03b at frame 6,319 of 6,842 (log). zool_ep04b..07b CANCELLED (DONE markers written 6:20 PM). engine.py and
+    teachprops.py copied to Documents\ZooBlender\zoo3d. zool_ep08 job + timing + audio (Opus 58k as _song.wav) on the PC; timing +
+    audio for zool_ep09..12 are on the PC, their job files go up after their test stills are looked at.
+  * 6:38-7:10 PM: test stills looked at for all five lessons (out/chk_ep08/09/11/12.png, out/zool_ep10_sheet.png). Fixed from them:
+    answer signs x 2.2 -> 1.95 and width cap 3.0 -> 2.8 (NOT A BEAR badge was at 92.5% of the width), Short crop 3:2 -> centre 90%,
+    ep08 fly count was above the exhibit shot (moved to z=3.0; exhibit shots end near z=3.7, teach shots show z=4.2), ep12 snowflake/sun
+    lowered for the same reason, ep10 sign text BLACK+WHITE, ep11 plate r 0.22, ep09 arrow over the giraffe's water.
+    NOT re-checked with a still after the last change: ep11 plate at r=0.22, ep12 snowflake/sun, ep09 arrow, ep10 BLACK+WHITE sign.
+    Open: the giraffe does not bend down while Milo says it bends to drink (no such animation); only 4 of the 5 flies were visible
+    in the counted frame; the plate is white on snow.
+  * PC queue at 7:06 PM: zool_ep03b DONE 6:32 PM (raw 531.7 MB + 3 parts; old 4:45 format, not finished into a video: superseded).
+    zool_ep08 was stopped at 6:38 PM (STOP + DONE) and replaced by job zool_ep08a (same lesson, song id zool_ep08, fly count fix):
+    frame 1,102 of 8,000 at 7:06 PM, no errors in the log, worker's own estimate ~151 min left. Then zool_ep09, 10, 11, 12 (all job
+    files on the PC). Finish 08a with `finish.py <raw> jobs/zool_ep08a.json` (publishes as zool_ep08.mp4).
+  * Variety ledger: entries zool_ep03..07 (never published) replaced by zool_ep08..12.
+  * Daily-run scheduled task prompt updated (lengths, nine-step quality loop, hold_review, reporting rule). docs/DAILY_RUN.md rule 4
+    "THE QUALITY LOOP FOR EVERY NEW LESSON" and rule 5 "LENGTHS".
+  * Old prototypes (zool_ep03.mp4, zool_ep03b when it finishes, shorts3d/zs4k_*.mp4) stay hold_review: under 5:00 / 30-second Shorts.
+  * Finish a v3 lesson: stage out\<id>\<id>_raw.partNN.mp4, concat -c copy, `python3 finish.py <raw> jobs/<id>.json --date <d> --time
+    "1:30 PM" --nopush --preset 10` (run_in_background), `review.py <id>.mp4 --job jobs/<id>.json`, `lesson_shorts.py <raw> <id>`.
+- Nov 14, 9:50-11:00 PM (first v3 lesson finished): job zool_ep08a DONE on the PC 9:38:46 PM (2 h 59 m 51 s, 8,000 frames, 1.30 s/frame).
+  Raw staged in 3 parts, joined: 3840x2160, 333.3 s. finish.py -> zool_ep08.mp4 (AV1 4K, 90.5 MB, 333.4 s, hold_review, Nov 20 1:30 PM
+  placeholder date), thumbnail brand/zoo/thumb_zool_ep08.png. review.py PASS (after the superseded zool_ep03.mp4 plan entry was set to
+  "dropped": same title). lesson_shorts.py -> shorts3d/zs90_zebra_stripes.mp4 88.2 s 70.7 MB, zs90_pig_mud.mp4 89.2 s 81.8 MB,
+  zs90_koala_notbear.mp4 89.4 s 78.5 MB (2160x3840, hold_review, review.py PASS each). Encoding the lesson and the 3 Shorts together
+  took about 50 minutes on this 2-core container.
+  Frames looked at: 14 of the lesson (flies, fly count, all answer signs, mud, SNOUT, joey, leaves), 7 of the Shorts, 3 thumbnails.
+  Defects found: sun above the pig cut at the top of the exhibit shot (2:23); Short thumbnails first landed on Milo's close-up (redone
+  with "thumb_line"); Short captions small (164 pt from the next cut). zool_ep09 was rendering next on the PC (not checked after 9:38 PM).
+- Nov 14 11:00 PM - Nov 15 12:35 AM:
+  * Noelson 11:00 PM: "1: approved" (lesson format v3), "2: yes" (re-cut the zool_ep08 Shorts with larger captions), "3: leave songs
+    duration according to each necessity you judge". Done: studio/zoo3d/LESSON_V3_APPROVED, zool_ep08.mp4 to_upload Nov 15 1:30 PM,
+    the 3 Shorts re-cut (captions 164 pt) to_upload Nov 17/18/19 11:30 AM (three song Shorts moved to later slots), DAILY_RUN rule 5
+    and C.1, daily task prompt. NOT decided: the slots for lessons 2-4 a day (one lesson a day at 1:30 PM until he answers).
+  * TRAP: `git pull --rebase --autostash` while ffmpeg was still writing a tracked file (shorts3d/zs90_pig_mud.mp4) replaced the
+    half-written file: "moov atom not found". Re-cut with --only. Never run git stash/pull while an encode writes into the repo.
+  * Noelson 11:40 PM: "Animal baby episode is sloppy, the babies inside the animals is strange, fix that one; the already uploaded
+    episode cancel and upload the fixed one". = zoo3d_ep13 "Baby Animal Names!" (video tt34irM1y7o, was scheduled Nov 17 4:00 PM).
+    Cause: the 13y re-render has 10 animals on formations with 6 places; engine.set_location wrapped around (slots[k % 6]) and put each
+    baby ON its parent in all 8 group scenes. A scan of every zoo job found no other job with more animals than places.
+    Fix: engine._formation_spots (every character gets its own free, visible spot; babies beside their parents; lessons unchanged).
+    Checked on 6 test stills of the group scenes (out/zoo3d_ep13z/sheet4.png): all 10 characters separate.
+    YouTube: tt34irM1y7o set to PRIVATE, schedule removed (11:46 PM, "Changes saved", Private after reload). Not deleted.
+    PC: engine.py copied; job zoo3d_ep13z (native 4K, 16 samples, song zoo3d_ep13). To render it before the next lesson, zool_ep11 was
+    marked DONE (skipped) and re-queued as zool_ep11a. Order after zool_ep10: zoo3d_ep13z, zool_ep09, zool_ep11a, zool_ep12.
+    Plan: zoo3d_ep13.mp4 = "hold_fix". The Shorts zs3d_baby_cub / baby_foal / baby_action were looked at (6 frames each): no baby
+    inside a parent in them (two come from the first render, baby_foal shows only single animals); left as they are.
+    TO DO when zoo3d_ep13z is DONE: finish.py <raw> jobs/zoo3d_ep13z.json --date 2026-11-17 --time "4:00 PM" --nopush --preset 10,
+    review.py, look at every group scene, upload as a NEW video with its thumbnail, schedule Nov 17 4:00 PM, record the new id.
+- Nov 15, 1:00-1:30 AM:
+  * zool_ep10 DONE on the PC 12:48:16 AM (8,158 frames). Raw joined 3840x2160 339.9 s -> zool_ep10.mp4 (AV1 4K, 90.3 MB, 340.0 s),
+    to_upload Nov 16 1:30 PM, review.py PASS, 18 frames looked at (every answer sign inside the 5%-95% lines, magnifier, cub on the
+    table, bamboo, fingerprint, counts, grass, milk). Weak spots logged: "tall grass" only reaches the tiger's feet; jungle backdrop
+    reads as a flat green wall.
+  * The PC took zoo3d_ep13z right after zool_ep10 (frames folder present at 1:01 AM), as planned.
+  * Noelson 1:08 AM: "Fit four" -> THE DAILY GRID in docs/DAILY_RUN.md rule 5 (lessons 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM; Shorts
+    7:30 AM, 11:30 AM, 7:30 PM; song 3:30 PM). Not-yet-uploaded plan items moved (songs 4:00 -> 3:30 PM, evening Shorts 6:30 -> 7:30 PM
+    from Nov 17). Upload cap per run 6 -> 9. The fixed zoo3d_ep13 goes to Nov 17 3:30 PM (not 4:00 PM).
+  * Noelson 1:22 AM: use the task-observer skill, "learn all improvement that works and perfect them next time". -> CLAUDE.md
+    "## Working preferences" in the repo root (15 rules) and a line in docs/DAILY_RUN.md: read it first, add one line per run.
+- Nov 15, 2:35-3:00 AM (the first "fixed" baby render was NOT fixed; caught before upload):
+  * PC job zoo3d_ep13z DONE 2:18:43 AM (3840x2160, 4,080 frames). Frame check of 31 frames: babies STILL inside their parents.
+    Cause: C:\...\ZooBlender\zoo3d\engine.py on the PC was the 6:20 PM version (27,147 bytes, no _formation_spots). The 12:27 AM
+    device_commit_files call had reported "written", but it re-used the staged path /mnt/user-data/outputs/ZooBlender/v3/zoo3d/engine.py
+    from the 6:20 PM copy and the PC received the OLD content. Nothing from 13z was encoded to the repo or uploaded (finish.py killed).
+  * RULE (also in CLAUDE.md): every copy to the PC gets a NEW staged file name, and is read back (device_stage_files) and compared by
+    md5 before a render depends on it. Done now: engine.py 2e32bf750e73 and teachprops.py cdcbb249c531 on the PC = local (read back).
+    Side finding: the PC's teachprops.py had also been the 6:20 PM version (sign width cap 3.0 instead of 2.8) for zool_ep08a, zool_ep10
+    and zool_ep09; the frames of ep08 and ep10 that were looked at show every sign inside the picture.
+  * Queue now: zool_ep09 is rendering (started ~2:19 AM, old engine: fine for lessons). zool_ep11a and zool_ep12 marked DONE (skipped)
+    and re-queued as zool_ep11b and zool_ep12a so that the next scan takes zoo3d_ep13za (the real fix) first, then 11b, 12a.
+  * zoo3d_ep13.mp4 stays "hold_fix"; old video tt34irM1y7o stays Private. Upload slot for the fix: Nov 17 3:30 PM.
+- Nov 15, 7:15-7:45 AM (check-in session):
+  * zoo3d_ep13za (the real fix) DONE on the PC 6:46 AM: raw 3840x2160, 4,080 frames. 32 frames of the RAW looked at before encoding:
+    in every group scene each baby stands beside or in front of its parent, none inside. finish.py -> zoo3d_ep13.mp4 (AV1 4K, 170.1 s,
+    90.1 MB), thumbnail brand/zoo/thumb_zoo3d_ep13.png, review.py PASS. Plan: to_upload Nov 17 3:30 PM as a NEW video (old tt34irM1y7o
+    stays Private). Ledger entry zoo3d_ep13y renamed zoo3d_ep13za (same episode).
+  * zool_ep09 DONE on the PC 5:15 AM: raw 3840x2160, 8,092 frames -> zool_ep09.mp4 (AV1 4K, 337.2 s, 86.7 MB), to_upload Nov 16 9:30 AM,
+    review.py PASS after one fix: the description contained the banned word "blood" (elephant-ears fact) -> reworded in the spec, the
+    song json and the plan. 18 frames looked at: every answer sign inside the 5%-95% lines; the giraffe's water arrow, the 1-2-3 count,
+    the four cars and the 5 MILES town are in the picture. Defect logged: at 0:30 the winning GIRAFFE sign is half cut in the close-up.
+  * Not uploaded by this session: the daily run started 6:31 AM and may be in YouTube Studio.
+- Nov 15, 8:05 AM (check-in session, after pulling the daily run's commit 10e9f17): the daily run is still running (trigger last_run
+  PENDING), so this session did NOT open YouTube Studio. zoo3d_ep13.mp4 (fixed) is "to_upload" Nov 17 3:30 PM for whichever session
+  uploads first; check Studio for an existing scheduled "Baby Animal Names" before uploading. zool_ep09 / zool_ep10 are "hold_fix" by the
+  daily run (answer signs cut in close-up answer shots; re-renders zool_ep09b / zool_ep10a queued). A check-in at 10:30 AM verifies.
+- Nov 15, 6:43-9:00 AM ET (daily run):
+  * Views (Studio Content list + overview): 30.4K views / 28 days, 7,406 / 48 h, 68 subs. Fact Shorts still lead (Ants +549, Octopus +423,
+    Camel +288 since Nov 14); new song-cut Shorts 3-69. Impressions/CTR/AVD per video NOT read. docs/ANALYTICS.md, Command Center
+    analytics/animated-zoo-2026-11-15 + ops/status v31.
+  * Uploads (2 of 9): zool_ep08 "Who Am I?" ulm1vcaY7ZM, Nov 15 1:30 PM; zoo3d_ep13 fixed "Baby Animal Names!" lHrOXq1Ccvo, Nov 17 3:30 PM
+    (new video; tt34irM1y7o and BKfS-luRPeo stay Private). Both: review.py PASS, custom thumbnail seen as data: img, "scheduled" dialog read.
+  * HELD: zool_ep09 and zool_ep10. Frame check of the reveal moments: when an answer line is a close-up, the answer signs (still up for the
+    "hold") are cut by the right edge (ep09 0:30 GIRAFFE, ep10 0:31 STRIPES, 3:28 SPOTS). Same pattern found in the specs of zool_ep12 (monkey)
+    and in zool_ep11's hello (YES/NO signs cut in a vista shot, missing in the close:host reveal).
+    Fix: teach.py forces the 'teach' shot on every line that starts while answer signs are up; studio/zoo3d/fix_sign_shots.py patches an
+    existing job without re-voicing. Re-render jobs (test stills looked at for every changed line): zool_ep09b, zool_ep10a, zool_ep11c
+    (hello lines 3-6 'wide' + YES/NO signs at z 3.95), zool_ep12b. zool_ep11b was stopped at 8:54 AM (STOP+DONE), zool_ep12a skipped (DONE).
+  * New lessons (make_lessons_p4.py, facts read Nov 15 at SDZWA Library fact sheets, Save the Rhino, Missouri Dept. of Conservation, NPS,
+    eXtension Horses): zool_ep13 "Super Senses!" (hippo, rhino, fox; 347 s, parts 93.2/92.3/87.7) and zool_ep14 "Baby Animals" (bear+cub,
+    horse+foal, elephant+calf; 340 s, parts 86.6/88.5/93.0). teach.py: no FAIL line, 747/747 and 753/753 words aligned. Test stills looked
+    at (9 + 4 frames ep14, 9 ep13). Variety OK, recorded. Jobs + timing + audio (Opus 56k as _song.wav) on the PC, md5 read back.
+    Only TWO new lessons were written this run (the run asks for four).
+  * PC queue at 8:55 AM (worker picks alphabetically): zool_ep09b rendering, then zool_ep10a, zool_ep11c, zool_ep12b, zool_ep13, zool_ep14
+    (about 3 h each). Finish 09b/10a/11c/12b with their own job file (they publish as zool_ep09/10/11/12.mp4); frame-check every reveal.
+  * Next slots: Nov 16 9:30 AM zool_ep09 (from 09b), 1:30 PM zool_ep10 (from 10a); Nov 17 lessons from 11c/12b; Nov 18 from ep13/ep14.
+  * wordsync.EXTRA: peekaboo, yip, kits. Note: a pgrep -f loop matches its own bash command line; don't wait with "while pgrep -f".
+- Nov 15, 12:05-2:30 PM ET (check-in session; the daily run ended 8:57 AM):
+  * Studio (read only): lHrOXq1Ccvo "Baby Animal Names" is Scheduled Nov 17, 2026 3:30 PM, made for kids; tt34irM1y7o and BKfS-luRPeo are
+    Private. Nothing was changed in Studio.
+  * zool_ep09b DONE on the PC 11:51 AM (8,092 frames, 3 parts joined) -> zool_ep09.mp4 (AV1 4K, 337.2 s, 87.0 MB), review.py PASS,
+    plan "to_upload" Nov 16 9:30 AM. 30 raw frames + 6 final frames of the six answer reveals looked at: every winning sign is whole.
+    finish.py had put WHO WINS? back over the giraffe's eyes (old thumb_frame 1143): thumbnail restored from git, thumb_frame now 1265.
+  * FOUND in the same look (34 more raw frames) and ALSO in zool_ep08 "Who Am I?" (public since 1:30 PM today, same frames checked in the
+    final file): (1) quiz: the green check covers the answering animal's face in the close-up (lion 5:16 of ep09, koala 5:12 of ep08);
+    (2) quiz: the "?" badge covers the middle of QUIZ TIME!; (3) the 3D word's end is behind a wide top sign; (4) a close-up while the sun
+    example is up shows only a ray of it (2:32 ep09, 2:23 ep08). zool_ep08 was NOT touched (the owner approved that video; his call).
+  * Fix: studio/zoo3d/fix_layout.py patches a job without re-voicing; teach.py does the same for new lessons (teach.py was NOT run
+    after the edit: the next lesson build is its first test). Stills looked at for every quiz answer of ep09/10/11/12/13/14's
+    back-left animal and for all three answers of every one of the six lessons: faces clear, checks at least 95% visible
+    (the elephant's check touches the edge of its ear; Milo's head touches the edge of the polar bear's and the bear's check).
+  * PC: zool_ep11c.json, zool_ep12b.json, zool_ep13.json and zool_ep14.json REPLACED with the patched jobs before they start (md5
+    57d116cfedd7, a5960e53a901, 8ca68f1b9e6d, dcf737b3e12b; each read back = local; jobs/ in the repo holds the same files). New slice jobs (render only
+    a frame range; they run after zool_ep14, about 3-4 AM Nov 16): zool_ep09q [6913,7635) quiz, zool_ep09s [3448,3789) sun line,
+    zool_ep10q [6898,7611) quiz (read back = local). zool_ep10a was already rendering with the old layout (frame 6,545 of 8,159 at 2:20 PM).
+  * To use a slice: stage out\<slice>\<slice>_raw.mp4 and the full raw, then
+    `python3 splice_slices.py <full raw> <out raw> <09q raw>:6913 <09s raw>:3448` (checks the frame count; tested on a small copy),
+    then finish.py with the ORIGINAL job (jobs/zool_ep09b.json / zool_ep10a.json), look at the quiz frames, review.py.
+  * Still stills: one Blender at a time, at most 10 stills per run (two at once: out of memory, one run was killed).
+  * Next: zool_ep10a ends about 3:00 PM (finish as it is for Nov 16 1:30 PM, slice later); zool_ep11c about 6 PM, zool_ep12b about 9 PM,
+    zool_ep13 about midnight, zool_ep14 about 3 AM, then the three slices. zool_ep11/12/13/14 need no slice.
+- Nov 15, 2:50-3:05 PM ET: Noelson: "Make the decision yourself and start uploading, don't ask me every time" -> CLAUDE.md rule. zool_ep09.mp4
+  uploaded from commit 04a418c and SCHEDULED Nov 16 9:30 AM: wzJiaHEj6tY (thumbnail attached in the dialog, data: img seen; Details page read
+  back: title, 1,637-character description, made for kids, custom thumbnail; visibility showed "Pending" while 4K was processing).
+  Decisions taken: (1) lessons are uploaded as soon as they pass the frame look; (2) a spliced, checked file replaces an uploaded one on the
+  same slot (old one Private) only before its publish time; (3) the public zool_ep08 stays as it is.
+- Nov 15, 3:08-3:50 PM ET (check-in): Studio: wzJiaHEj6tY (zool_ep09) reads Scheduled, Nov 16, 2026, 9:30 AM.
+  zool_ep10a DONE on the PC 3:00 PM (8,158 frames, 3 parts joined) -> zool_ep10.mp4 (AV1 4K, 340.0 s, 90.3 MB), review.py PASS; 18 raw and
+  6 final frames of the six answer reveals looked at (every winning sign whole), 18 frames of examples and quiz. Thumbnail LOOK CLOSE!
+  looked at (words in the sky). Uploaded from commit 03ae1df and SCHEDULED Nov 16 1:30 PM: 8IgNBQcHiZw (dialog and Details page read back,
+  thumbnail attached). Old quiz layout still in it (check on the cow's face 5:15); slice zool_ep10q replaces it if ready in time.
+  The Short zs90_tiger_skin was cut from the OLD zool_ep10 render (frames looked at: the answer is a close-up, no sign in the picture):
+  re-cut from the zool_ep10a raw with lesson_shorts.py --only.
+- Nov 15, 6:15-6:50 PM ET (check-in): zool_ep11c DONE on the PC 6:12 PM (8,420 frames) -> zool_ep11.mp4 (AV1 4K, 350.9 s, 88.0 MB), review.py
+  PASS. First lesson rendered with fix_layout.py: quiz word, "?" badge and the three checks looked at in raw frames (faces clear; the giraffe's
+  check touches the left edge at 5:22). Thumbnail: COUNT THE BONES! was on the giraffe's eyes -> words at the bottom (job "thumb_align": 1,
+  new option in finish.py). Uploaded from commit 019fc27 and SCHEDULED Nov 16 5:30 PM: mdOiBUzxczo (dialog + Details page read back).
+  Studio list 6:48 PM: 8IgNBQcHiZw and wzJiaHEj6tY read Scheduled Nov 16; "Who Am I?" and the 4 PM song read Public.
+  Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 3 (this session). DECISION: zool_ep12 goes on Nov 16 5:30 AM (last free
+  lesson slot of Nov 16) when it passes the frame look tonight; zool_ep13/14 are for Nov 17.
+- Nov 15, 9:22-10:05 PM ET (check-in): zool_ep12b DONE on the PC 9:10 PM (8,080 frames) -> zool_ep12.mp4 (336.7 s, 86.6 MB). 18 raw frames of
+  the six answer reveals, 9 quiz frames and 27 example/hello/goodbye frames looked at. Reveals and quiz are right (checks beside the heads).
+  NOT UPLOADED: the HOT thermometer's sign covers the bear's face in the hello for 11 s. DECISION: hold_fix, Nov 17 1:30 PM; Nov 16 5:30 AM
+  stays empty. Slice zool_ep12h [0,496) on the PC (md5 4ba8efc4ab10, read back = local); stills of the corrected hello looked at (four
+  faces visible, word alone, then 1-2-3 alone). zool_ep14.json on the PC patched again before its render (hello count line wide, word
+  leaves first; read back = local). teach.py: same two hello rules (not run since the edit). The local 12b raw was deleted to free disk
+  (re-stage the three parts from out\zool_ep12b for the splice).
+  PC order from here: zool_ep13 (frame 1,897 of 8,324 at 9:54 PM), zool_ep14, then slices 09q, 09s, 10q, 12h.
+- Nov 16, 12:27-1:10 AM ET (check-in): zool_ep13 DONE on the PC 12:16 AM (8,323 frames) -> zool_ep13.mp4 (AV1 4K, 346.9 s, 90.4 MB), review.py
+  PASS; frames looked at (see the plan note). Uploaded from commit 1c867bf and SCHEDULED Nov 17 9:30 AM: tXURpJDJE04 (date picker read
+  "Nov 17, 2026" before the click; dialog + Details page read back). Uploads on the channel since 7 AM Nov 15: 2 (daily run) + 4 (this session).
+  PC 1:06 AM: zool_ep14 is rendering (started about 12:16 AM); the slices 09q, 09s, 10q, 12h follow.
+- Nov 16, 3:50-5:30 AM ET (check-in): PC: zool_ep14 DONE 3:15 AM (3 parts, NOT finished here: for the daily run, Nov 17 5:30 PM slot;
+  its job has the quiz fix and the hello count fix); slices zool_ep09q/09s DONE 3:47 AM, zool_ep10q 4:11 AM, zool_ep12h 4:25 AM.
+  * splice_slices.py rewritten (first version killed for memory on 4K): every piece its own ffmpeg, joined by stream copy; new `--cover`
+    for the 7 frames after a quiz/hello slice where the old frames still show the section word shrinking away. NEXT TIME make the slice's
+    frame_range end 12 frames into the next section instead.
+  * zool_ep09: spliced (09q at 6913, 09s at 3448, --cover 7635:12:1480:220:900:260 done by hand), slice frames + all four seams + 18 final
+    frames looked at, review PASS, uploaded from commit 34dd853, SCHEDULED Nov 16 9:30 AM: WDlKaVPnu-4 (list read: Scheduled). Old
+    wzJiaHEj6tY set to Private (list read: Private).
+  * zool_ep10: spliced (10q at 6898, --cover 7611:9:1500:260:820:170), 12 slice frames + seams + 15 final frames looked at, review PASS,
+    uploaded from commit da02215, SCHEDULED Nov 16 1:30 PM: F2TrIgZA3HY (dialog + Details page read back).
+  * Studio: after midnight the schedule date picker defaults to TOMORROW. For a same-day slot open the calendar (real click on the date
+    box, wait 2 s, read the day cell's position by script) and click today's cell. A click on a stale position hit "Save or publish" and
+    armed "Publish" (Public): nothing was published (the button was read before every click). ALWAYS read the button text before clicking it.
+  * 5:31 AM: old zool_ep10 upload 8IgNBQcHiZw set to Private (list read: Private; F2TrIgZA3HY read Scheduled Nov 16 first).
+  * zool_ep12: spliced (12h at 0, --cover 496:9:1300:150:1350:270), finish.py from the spliced raw, 27 final frames + thumbnail looked at
+    (hello: four faces clear, word then 1-2-3; six answer reveals whole; three quiz checks beside the heads), review PASS, uploaded from
+    commit 6cad283, SCHEDULED Nov 17 1:30 PM: luS9bWs3hG8 (dialog + Details page read back; list row read "Scheduled ; Nov 17, 2026" at 5:58 AM).
+    Left in and logged: HOT/COLD sign plates' blank edges touch the frame edge at 0:16-0:20 (next lesson: group-scene side props at
+    |x| <= 2.9; teach.py NOT changed yet). Shorts tab read 5:33 AM: three Nov 16 Shorts read Scheduled (times not read).
+  * NOT done here: zool_ep14 (DONE on the PC, 3 parts in out\zool_ep14) is not finished or checked; Nov 17 5:30 AM lesson slot is empty;
+    Nov 17 5:30 PM is for zool_ep14. teach.py's Nov 15-16 rules have not run on a new lesson yet.
+- Nov 16, 6:44 AM-9:40 AM ET (daily run):
+  * Views (Studio Advanced analytics, lifetime): 32,766 views, 371,491 impressions, 2.2% CTR. Ants +186, Octopus +155, Lion song-cut Short +119,
+    Snail +109, Camel +87 since Nov 15. First v3 lesson "Who Am I?" 5 views (Content list); its CTR/retention not in the table yet.
+    docs/ANALYTICS.md, Command Center analytics/animated-zoo-2026-11-16.
+  * Uploads (4 of 9, all with custom thumbnails seen as data: img, "Video scheduled" dialog read, list rows read Scheduled):
+    zool_ep14 "Baby Animals for Kids!" Jxf5Dgz4btk Nov 17 5:30 PM (finished here: 339.7 s AV1 4K, 67 raw + 8 final frames looked at,
+    thumbnail redone as WINTER DEN! because FIRST STEPS! sat on the bear-and-den frame); Shorts zs90_bear_cub 3e6ZuMoRujM Nov 17 7:30 AM (new cut from
+    zool_ep14, 86.6 s), zs90_zebra_stripes aNdFX35OUMU Nov 17 11:30 AM, zs90_tiger_skin 8egrAUdIMVY Nov 17 7:30 PM. Song-cut zs3d_sleep_zebra
+    taken off Nov 17 7:30 AM (status spare_song_cut).
+  * New lessons zool_ep15-18 (make_lessons_p5.py; facts read Nov 16 at SDZWA Library fact sheets and Primate Info Net): ep15 What Do Animals Eat
+    (panda, koala, zebra; 328 s), ep16 Amazing Animal Feet (polar bear, tiger, hippo; 334 s), ep17 Whose Tail Is This? (lion, monkey, giraffe; 327 s),
+    ep18 Hot or Cold? (elephant, koala, tiger; 331 s). teach.py: no FAIL line, 100% words aligned. 6-10 test stills each looked at, fixes stilled again.
+    Jobs PATCHED after teach.py (not re-voiced): hello places (variety), 3D word on at the fact line, PADDLES! sign -> WIDE FEET!, ep17 tail props +
+    flies at z 1.6 with leave 3.3 s, ep18 tiger sits in the pool (visit place z -0.45) on lines 3-4. Variety recorded. teachprops.py ("tail") copied
+    to the PC zoo3d folder; all 13 files read back, md5 = local.
+  * PC queue 9:35 AM: zool_ep15 rendering (started about 7:45 AM), then ep16, ep17, ep18 (about 3 h each). Slots: Nov 18 9:30 AM ep16, 1:30 PM ep15,
+    5:30 AM ep17 (Nov 18 5:30 PM stays empty: zool_ep01 is at 4:00 PM), Nov 19 ep18. ep17 is the first render with the tail prop: look at its tail
+    and flies frames. Every one still needs finish.py, the frame look, review.py and its Shorts.
+  * NOT done: no new song queued. zoo3d_ep19y (Good Morning, Farm! at native 4K, re-routed places) failed its stills: the horse is half out of the
+    picture in its own verse and missing from the bridge and outro shots (close:<id> shots did not take effect in the 4-character song).
+    jobs/zoo3d_ep19y.json is in the repo, not on the PC. Nov 17 5:30 AM lesson slot is still empty.
+
+
+### Nov 16, 10 AM: channel watermark (Noelson: "include watermark on all videos on upload with the channel characteristics")
+  * YouTube's own channel watermark is not available on made-for-kids videos (support.google.com/youtube/answer/10456525, read
+    Nov 16), so the mark is burned in: Milo's channel picture (brand/avatar.png) in a white ring + "The Animated Zoo" in Baloo 2
+    ExtraBold, 88% opacity. `studio/zoo3d/watermark.py` (build / still / apply / check / corner).
+  * finish.py: top left on every episode (job "watermark_pos": "tr" for top right), stops if the mark is not in the output.
+    lesson_shorts.py: centred above the Short's title. review.py fails a video without the mark. Thumbnails: no mark.
+    Tested: finish.py's filter graph on 6 s of 4K (AV1 10-bit, sound kept, mark found, both corners); lesson_shorts.make() on a
+    16 s cut (mark found). A full finish.py run with the mark has NOT happened yet: zool_ep15-18 will be the first.
+  * Waiting files re-encoded with the mark (frames looked at, sound stream present): Shorts zs3d_baby_action, mama_giraffe,
+    milo_lion, count123, knees_paws, sleep_action, zs90_pig_mud, zs90_koala_notbear; songs zoo3d_ep17 and zoo3d_ep18 (held; corner
+    sheets: nothing under the mark; ep18 encoded twice because the first pass undershot, 73 -> 62 MB, now 69.8 MB). review PASS read for zs3d_baby_action and zs90_pig_mud.
+  * NOT marked: everything already uploaded or scheduled (through Nov 17, plus zool_ep01 on Nov 18) and the held zs4k_* Shorts.
+  * Top right is where the answer sign's check mark sits (WHITE sign, zool_ep12 1:43), so top left is the default. For every new
+    lesson LOOK at `watermark.py corner <file> <sheet.jpg>` before uploading.
+  * Corner sheets of two whole lessons (mark laid on for the look only; both are scheduled without it): zool_ep14 nothing under
+    the mark; zool_ep11 the giraffe's face in its close-ups (5:05, 5:25, 5:45) and the top of the YES sign (0:10-0:25). So a
+    lesson can need job "watermark_hide": [[from, to], ...]: the mark fades away (0.3 s) for those moments. Tested on 32 s of
+    zool_ep11 (frames: up, fading, away, back) and in finish.py's filter graph on 6 s. A looped-picture version of the fade was
+    killed for memory on 4K; the fade now works only on the mark's own rectangle cut from the video.
+  * NOT done: no lesson has been finished with hide windows from a real job yet; nobody has chosen windows for zool_ep15-18.
+
+## Cartoon pipeline (Nov 16, 2026) - APPROVED by Noelson Nov 16, 3:36 PM ("cartoon formats are approved, build and post")
+- Why: his brief of Nov 16 (three pillars: songs 3D, adventure stories and fact lessons cartoon, Shorts cartoon). Findings, style bible and
+  content plan: `docs/cartoon/findings.html`, `bible.html`, `plan.html` (built by the three build_*.py files next to them).
+- Engine: `studio/cartoon/toon.py` (HyperFrames: HTML + SVG + GSAP, 24 fps, 4K), art in `art.py` (Milo, camels, desert) and `art2.py`
+  (elephants, Mango, Poppy, Clover, Hazel, Tula, savanna, jungle, ocean, Arctic, farm, night forest). One episode = one file in `episodes/`.
+- Order of work for one episode:
+  1. read the facts at their sources, write them into the episode file's docstring;
+  2. `python3 toon.py <id> --plan` until "fails" is empty;
+  3. `python3 toon.py <id> --stills <t1,t2,...>` for the end of EVERY shot, `python3 sheet.py out/<id>/proj_l sheet.jpg 6 480`, look, fix, again;
+     the same with `--short 0` and `proj_p` for the 9:16 version;
+  4. `python3 toon.py <id>` and `python3 toon.py <id> --short 0` (render); `--audio` puts new sound on a picture that is already rendered;
+  5. `python3 pace_check.py out/<id>/<id>.mp4 --max 8`, `python3 ../zoo3d/watermark.py check <file>` and `corner <file> <sheet.jpg>`;
+     frames of the finished file at the end of every shot, looked at;
+  6. `python3 thumb.py <id>` (refuses more than 3 words or a word of the title).
+- Hums and songs inside a cartoon (Nov 16, after the owner's note on the camel lesson): a shot with `sing={...}` is sung by sing.py and the show's loop is silent while it plays. `"hum": True` makes the voice hum "mmm" on the notes (sing.hum_word: the "m" of that Kokoro voice gives the colour, the notes give the pitch); `"level"` sets how loud (0.26-0.3 puts a hum at the narration's level, -21 dBFS); `"style": "lullaby"` is the soft music box; a word written `~` is played by the bells alone. Write the notes in C. Give the shot `who=""` so no mouth opens for a hum. `("sleep", at, who)` shuts a camel's eyes for the rest of the shot. Check by numbers (pitch of each note, level against the narration) and send the owner the sound: nobody here can listen.
+- Listening, limits found the same night: with a speaking voice in the file the tool judges only level, silences, tempo, balance and long loud pure tones (a beep); short tones, clashes and clicks are judged only on music without speech (`--episode <id>`, or `--music-only` for a music file), because vowels read as "wrong notes" and spoken s/t/k as "clicks" (two narrated Shorts gave dozens of false findings before this). Known and harmless in the first cartoon loop: E4 over F for 0.3 s at every A minor to F change (an F major 7 colour), reported as a clash.
+- Listening (Nov 16): `python3 studio/listen/listen.py --episode <id> [--from a --to b]` rebuilds the episode's music without the speaking voice and reports held tones, tones outside the key of C, semitone clashes, the tempo it hears and the share of attacks on the half-beat grid, clicks, silences, level; `listen.py <file> --key C --bpm 96` does the same on any finished file (there the faint findings are often the speaking voice, the LOUD ones are real). It writes `<name>_listen.json` and `<name>_listen.png` (spectrogram with red bars on out-of-key tones, pitch classes, level): read the picture. Proof on the first camel upload, 47-58 s: it marked A#3 (233 Hz) for 0.81 s at 51.05 s and 54.3 s as the loudest held tones and outside the key, which was the beep the owner heard. On the fixed lesson's music: no tone outside the key, tempo heard 95.5, hums read as written (Sandy C5 G4 E4), and Mama's first hum note G3 about 8 dB weaker than her other two (open, see IMPROVE).
+- Music and sync like the 3D videos (Nov 16, owner: "implement on the 2D videos same process [as] the 3D for the music and sync"): `EP["beat"] = True`. What it switches on in toon.py: `bed3d` (zoo3d/lesson.py's music, 96 bpm, with teach.py's ducking 0.42 -> 0.12 under the voice), cuts snapped to the half-beat inside the silence before each line (the voice does not move), sung shots start on a beat, `idle_beat` (breath and tail one beat, head two beats, starting on the grid), mouth envelope at 24 per second, `sync` in the plan output. `TOON_BEAT=1 python3 toon.py <old id> --plan` tries it on an older episode without changing its file (it overwrites out/<id>/<id>_timing.json: run the plan again without it afterwards). Camel lesson measured both ways: cuts on the half-beat 8 of 85 -> 85 of 85, hums entering on a beat 0 of 4 -> 4 of 4, length 318.7 -> 320.3 s, voice 15 dB over the music.
+- Multilingual (owner's brief Nov 16, `docs/multilang/`): one picture, extra voice tracks fitted into the English lines' slots. `python3 studio/multilang/build.py <id> --fit` lists lines that are too long, `build.py <id>` writes `packages/<id>/` and READY or NOT READY. Translations are `studio/cartoon/episodes/lang/<id>.<code>.json`. It uploads nothing; a track goes on YouTube only after the owner has heard it and said yes. Run it as a tracked background command (10 minutes the first time, the voices are cached after that).
+- Starting a render (Nov 16, three Shorts lost this way): a render started with `nohup ... &` inside a shell call is cancelled the moment that shell call returns if HyperFrames is already drawing ("render_cancelled_parent_exited" in the log, also with setsid and stdin from /dev/null). Start every render as a tracked background command of the session (it reports when it ends), one at a time, or make sure the shell call returns within 2-3 s, before the voice lines are built. HyperFrames also refuses to start with less than 1 GB free: delete `<id>_silent.mp4` of finished films first.
+- Measured on the session's machine (2 cores): zc_ep01 (304.7 s) rendered in 37 min, za_ep01 (304.5 s) in 33 min, the Short (87.7 s) in 13 min.
+  A changed ending can be rendered alone: `--from <keyframe time> --to <end>`, then join with the first part cut at that keyframe
+  (`-video_track_timescale 12288` on the new part first, or the joined file's clock is wrong). Never run stills for an
+  episode while that episode is rendering: both write the same `proj_l/index.html`.
+- Voices: Kokoro (sing.py) per character from EP["cast"], pitched with WORLD (`toon.shift`); sung refrains from `sing.build`. Nobody has
+  listened to them: they were checked by word alignment (every word placed, also on the pitched voices) and loudness only.
+- Posting a cartoon video: the long ones are re-encoded to 4K AV1 for the repo (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
+  about 72 MB, 20-25 min each on 2 cores), then `toon.py --check4k`, `watermark.py check`, `review.py cartoon/<id>.mp4` (PASS), frames looked at, commit, push, Studio ("Posting" above). Shorts go into `cartoon/` as rendered (about 50 MB).
+- Studio in fewer steps: `studio/studio-upload2.js` (armFile, zfill reads title, description, thumbnail, date and time from the plan file at the pushed commit, zthumb, zsched, zdate, ztime, zread, zdone).
+  Five cartoon uploads were scheduled with it on Nov 16; the real clicks that stay are Select files, the thumbnail's Upload file tile, the date trigger, the typed date and time, and Schedule.
+- New episodes start from `kit.py` (cameras for 16:9 and 9:16, `WV` = a 9:16 view that holds the named characters whole, words with their 9:16 place, props with a 9:16 place) and set `"nest": True` in EP.
+  Write every part 83-90 s long so each part plus its hook is a Short of 85-95 s. A Short is `{"part": n, "extra_first": [hook shot], "extra_last": [...]}`; its title band is two lines of at most 15 and 10 letters.
+- 9:16 stills: `studio/cartoon/stills.sh <id> <short index | L> <sheet.jpg> [cols] [width]` = `toon.py <id> --short <n> --plan`, then `--stills` at t1-0.3 of every shot from `<short id>_timing.json`, then `sheet.py out/<id>/proj_p sheet.jpg 8 300`. Never while a render of the same episode runs.
+- Not built: the closing "next adventure" picture, a Short cut from the adventure, voices for Poppy, Tula, Clover and Hazel, the playlists.
+
+### Nov 17, 12:30 AM: no overnight loop (Noelson: "save credits and keep production on schedule so schedule items for the night instead")
+  * The night's work is scheduled tasks at fixed times, not a session that keeps waking itself. One cartoon run tonight (1:00 AM, `docs/CARTOON_RUN.md`); everything else is the 6:31 AM daily run.
+  * FOR THE 6:31 AM RUN, songs: `zoo3d_ep20` Trunks Up! (elephant) and `zoo3d_ep21` Swing-a-Ding! (spider monkey) were written with `make_specs_v3.py zoo3d_ep20 zoo3d_ep21`
+    (facts read Nov 16 11:58 PM, quotes in the file) and their `.song.json` copied to the PC at 11:55 PM (read back, same md5; worker was IDLE). Collect them from `songs_out`
+    (step B.2: timing, routes.py, variety, test stills, job to the PC). `make_specs_v3.py` now builds only the ids it is given.
+  * FOR THE 6:31 AM RUN, uploads: nothing was uploaded after 11:19 PM. Ready and not uploaded: Shorts zs3d_baby_action (Nov 18 7:30 AM), zs90_pig_mud (Nov 18 11:30 AM),
+    zs90_koala_notbear (Nov 19 11:30 AM), song zoo3d_ep17 (Nov 21 3:30 PM). Count of the last 24 hours at 11:52 PM: 18 (the oldest four fall out at 12:53, 4:56, 5:25 and 5:51 AM).
+  * Cartoon adventure za_ep02 (Tumble and the Big Muddy Puddle): first draft, plan check passes, NO stills looked at. Slot Nov 19 5:30 AM reserved as "in_production" in upload_plan_3d.json.
+    New: `studio/cartoon/art3.py` (mud hole and props), muddy elephants `tumble_mud` / `elephant_mud` (clean ones unchanged by hash), kit.py knows the new kinds.
+  * This workspace: the paused channels' folders are left out of the working copy (sparse checkout; they stay in git) because the disk allowance was down to 989 MB.
+  * PC and 2D: the PC cannot render cartoons yet (Node.js is not installed there; a download needs the owner's yes). Cartoons are rendered in the cloud; the PC renders the 3D songs and lessons.
+
+- Nov 17, 6:42 AM ET- (daily run, part 1):
+  * Views (Studio Advanced analytics, lifetime, 7:30 AM): 34,661 views (+1,895 since Nov 16 8:40 AM), 393,680 impressions, 2.1% CTR. Lion song-cut Short +150, Ants +140,
+    Octopus +128, Snail +115, Camel +83. v3 lessons 3-9 views after 1-2 days, songs 4-12 (Content list). docs/ANALYTICS.md, Command Center analytics/animated-zoo-2026-11-17.
+  * PC at 6:42 AM: IDLE. zool_ep15-18 DONE Nov 16 (3 parts each). The worker had rendered zoo3d_ep20/ep21 on its own from the song engine's default jobs (1920x1080,
+    no scene plan): NOT usable. 4K job zoo3d_ep20y (routes.py, variety OK and recorded, 'side' shots -> dolly/wide, verse words removed after stills showed the cast from
+    behind and GRAB! cut) sent at 7:24 AM, read back same md5; rendering at 3.72 s/frame (3,840 frames). zoo3d_ep21 has no 4K job yet.
+  * Finished: zool_ep15 (90.4 MB AV1 4K, 328 s; thumbnail redone on the bamboo frame, job thumb_frame 912), zool_ep16 (89.7 MB, 333.6 s). Both: review PASS, answer
+    reveals + goodbye frames looked at, watermark corner sheet looked at (nothing under the mark), listen.py: no clicks/silences, -15.5 LUFS (measured, not heard).
+  * Uploaded (custom thumbnails, "Video processing/scheduled" dialog read): zool_ep15 ShDmhyJuoeM Nov 18 1:30 PM; zool_ep16 0NqRykGsKwY Nov 19 1:30 PM; Shorts
+    zs90_pig_mud IV3TzHjRQMM Nov 18 11:30 AM, zs90_koala_notbear jGkxqn4Dyvc Nov 19 11:30 AM; song zoo3d_ep17 27dOgZh10N4 moved to Nov 19 3:30 PM (thumbnail redone:
+    PANDA! sat on the panda's face; variety recorded). Count of the last 24 h after these: 20 (commit log). The oldest four fall out at 2:33 PM.
+  * Studio refuses '<' or '>' in a description (zool_ep15's facts had '>90%'): review.py now fails it.
+  * New lessons zool_ep19-22 (make_lessons_p6.py, facts read Nov 17), no FAIL line, 100% words aligned, 10 stills each looked at; late-cued signs moved to early words
+    in the jobs (den, magnifier, CHEW CHEW!, COZY NEST, HELLO SNIFF!, 25, NIGHT TIME x2, sun, SLEEPING PIT). All four on the PC (read back: same md5; the wav files come
+    back 5.8 KB larger from the bridge but decode to identical audio). Queue: zoo3d_ep20y, then the four lessons (about 3 h each).
+  * Defects logged in docs/IMPROVE.md: hello/goodbye words cut by the frame top (teach.py now z 3.15 for both; ep19/ep20 jobs patched), quiz answer close-ups that turn an
+    animal away (zebra ep15, polar bear ep22 stills: still open), song 'side' shots.
+  * zool_ep17: watermark corner sheet showed the giraffe's face under the mark at 5:10 -> job watermark_hide [[303.5, 308.0]]; the first finish with the hide window was
+    killed for memory (ran next to bpy); finishing again alone. zool_ep18 finish and four Shorts (polar_paws, tiger_claws, lion_tuft, elephant_ears) queued after it.
+  * 11:25 AM: zool_ep17 and zool_ep18 finished and checked (see commit f17e182); four lesson Shorts cut and checked (polar_paws, tiger_claws, lion_tuft, elephant_ears).
+    The Shorts' song tracks on the PC are Opus inside .wav names (2.5 MB); lesson_shorts.py reads them fine. Waiting for upload room: 20 in the last 24 h until 2:33 PM.
+    To upload at 2:40 PM, soonest first: zs90_polar_paws (Nov 18 7:30 AM), zool_ep17 (Nov 19 5:30 PM), zool_ep18 (Nov 20 1:30 PM), zs90_tiger_claws, zs90_lion_tuft, zs90_elephant_ears.
+- Run note Nov 17, cartoon run (scheduled task, 12:39-3:05 PM ET): za_ep02 "Baby Elephant Tumble and the Big Muddy Puddle" finished and SCHEDULED for Nov 19 5:30 AM ET (GxNV3lIIkyA).
+  * Stills of all 77 shots looked at in three rounds (sheets of 16 at 480 px, doubtful and touching shots at 960 px), about 40 fixes in the episode file (list in docs/IMPROVE.md); plan check passes (302.9 s, 76/76 cuts on the half-beat, 3/3 songs on a beat, 697/697 words).
+  * Rendered twice in 4K (29 min each): the first file's frames showed the answer check marks for only 0.1-0.3 s, so the reveals moved to wait:2.0 and Milo sits lower under the signs; second file: --check4k, pace_check (0 stretches over 8 s, longest 6.8 s), watermark check, corner sheet, 83 frames (every shot end and the four reveals) looked at.
+  * Sound: listen.py --episode (music alone): key C, nothing outside the key, no clicks or silences, tempo 95.2; six E4-over-F moments of 0.3-0.55 s (the known F major 7 colour of the bed); closing songs read again with --from 286 --to 300. Finished file: -15.4 LUFS, peak -1.3 dB, no silences. Measured, not heard: Tumble's, Mango's and Mama's voices, the refrains and the pronunciation are for the owner's ears.
+  * AV1 4K 68 MB (17 min), thumbnail SPLASH TIME! (muddy Tumble, splash moved off his trunk), review PASS, contact sheet looked at. Upload with the helpers typed into the page (Studio's Trusted Types refuse eval of the fetched studio-upload2.js: paste its functions as code). Made for kids, custom thumbnail, date typed, time typed, button read Schedule; Studio: "will be set to public on November 19, 2026 at 5:30 AM".
+  * Uploads in the commit log for the 24 h before this one: 16; this is the 17th. The six items the morning run listed for 2:40 PM (zs90_polar_paws, zool_ep17, zool_ep18, three Shorts) had no upload commit when this run pushed.
+  * This machine: a part render (--from/--to) fails (assertSwiftShader), and a watched background command ends after 30 min, so the whole film was rendered inside tmux (docs/IMPROVE.md). Not built: a Short from za_ep02 (no 9:16 cameras), the closing 'next adventure' picture.
+  * Afternoon uploads (all custom thumbnails, confirmation dialog read): zs90_polar_paws btWYy6HeuS4 Nov 18 7:30 AM; 27dOgZh10N4 set Private (Details page
+    read "Visibility Private", "Changes saved") and the cut zoo3d_ep17 uploaded on its slot as 6eAr9x5Krfc Nov 19 3:30 PM; zool_ep17 jkZ4ChFok3s Nov 19 5:30 PM;
+    zool_ep18 wyrIjHDaGRc Nov 20 1:30 PM; zoo3d_ep20 FUveI9NKAC4 Nov 20 3:30 PM; zs90_tiger_claws xyTtEONlhKg Nov 20 7:30 PM; zs90_lion_tuft J32cKF1dCnY Nov 21 11:30 AM;
+    zs90_elephant_ears s1F3xrNm2iY Nov 21 7:30 PM. Another session scheduled za_ep02 GxNV3lIIkyA (Nov 19 5:30 AM) at 2:46 PM. Count of the last 24 h at 5:05 PM: 20.
+  * Commit times: this session's commits are in UTC, the cartoon session's in ET; git log --since compares absolute times, so the count is right, only the printed hours differ.
+  * PC at 5:05 PM: zool_ep19 and zool_ep20 DONE (raws in out\), zool_ep21 rendering, zool_ep22 queued. None of them finished or checked here yet: next run.
+  * Open slots after this run: Nov 20 5:30 AM / 9:30 AM / 5:30 PM lessons (zool_ep19/20 for them), Nov 21 lessons and song, Nov 22+.
+
+- Run note Nov 17, 8:25 PM - 11:30 PM (this session; the owner's report on Milo's robotic singing and his 10:42 PM message):
+  * Uploaded tonight (4): zc_ep01 bNiddYe1v70 (Nov 18 9:30 AM), zc_ep01_short1 LUviDteBBX8 (Nov 18 7:30 PM), za_ep02 hAV7FdAsjKY (Nov 19 5:30 AM), za_ep01 m_avJSjZmMY (Nov 18 5:30 AM). All four read "Scheduled" with their dates on Studio's content list after the uploads (before 11:10 PM). Old uploads Private: Ge-YyiXyX6U, 52oYu9SobqY, GxNV3lIIkyA, UAVL9LThIQE.
+  * Checked on za_ep01 (309.4 s) and za_ep02 (307.9 s): 4K AV1, plan check, pace check (0 stretches over 8 s), watermark check and corner sheet looked at, frames of the finished files looked at (every answer reveal, the spoken rhyme, the tune shots), listen.py on the music stem (0 clicks, no clash inside a tune) and on the file (no silences, -15.3 / -15.4 LUFS) with its pictures looked at, review PASS. Not checked: how it sounds to a person. The picture frames were looked at on the first re-render; the final files carry the same picture with the corrected sound (frame counts 7425 and 7389, unchanged).
+  * Sound-only fix of a rendered cartoon: `toon.py <id> --plan` (timeline must not move: compare the timing file's shots), `toon.py <id> --wav`, then put the wav on the picture with the ffmpeg line of toon.py (`-c:v copy`, loudnorm -14). 2 minutes instead of 55.
+  * New tools and rules: `studio/upload_guard.py` (check, --replace, --audit, --next), `zlive()` and the Schedule-button read in `studio/studio-upload2.js` (the content list is not readable behind the upload dialog: run zlive BEFORE opening it), CLAUDE.md (four lines changed or added), docs/DAILY_RUN.md (cartoon uploads, guard, 3D lessons only for slots without a cartoon), docs/CARTOON_RUN.md ("The two daily builds").
+  * Scheduled tasks: "Animated Zoo cartoon lesson + 3 Shorts (daily build)" 1:17 PM ET (trig_01NVv8nA6bjQD2ixbhUAPScd), "Animated Zoo cartoon adventure (daily build)" 7:23 PM ET (trig_01Cck6a6FVXKZ1uviXgPK6wg); the daily run's prompt now uploads cartoon entries and runs the guard.
+  * Tonight's five one-off builds, as read in the commit log at 11:10 PM: zc_ep03 finished (lesson + 3 Shorts "to_upload"), zc_ep06 Shorts "to_upload" and its lesson rendering again, za_ep03 changed to instrument tunes (not finished), zc_ep04 no commit seen yet, zc_ep05 is the duplicate topic (held by the guard). None of them was looked at by this session.
+  * Also uploaded: za_ep03 CQudy3aNW84 (Nov 20 5:30 AM), 11:20 PM, after its tunes got the corrected notes and bells (new sound on the same picture). Studio's dialog said "public on November 20, 2026 at 5:30 AM"; the PC did not answer for a few minutes at 11:21 PM (three tries), then came back: za_ep03's row reads "Scheduled Nov 20, 2026". Then zc_ep03 UiNte2k1GQw (Nov 20 9:30 AM), 11:24 PM; dialog "public on November 20, 2026 at 9:30 AM", its row read "Pending" (processing) right after: the morning run reads it again. Waiting as "to_upload": zc_ep03's three Shorts (Nov 22/23/24 7:30 AM) and zc_ep06's three Shorts (Nov 25).
+  * Uploads in the last 24 hours by the commit log at 11:25 PM: 20 (the next ones fall out of the window from 8:07 AM). The morning run counts again before uploading.
+  * 11:37 PM, owner: remove every video that was set Private. All 12 old copies deleted after his yes to the list (ids in docs/IMPROVE.md and as "deleted_video_ids" in the plans). The channel has no Private video now. How: content list, filter Visibility: Private, select all, More actions, Delete forever, tick the box, Delete forever; "Deleting videos" stays on screen for about a minute.
+
+- Run note Nov 18, daily run (6:42 AM ET -, session 014CFVfUgSw4t5jzfxC5ELd6):
+  * Guard: `upload_guard.py --audit` found one SAME TOPIC pair: zc_ep05 "What Is Inside a Camel's Hump?" (to_upload) vs the live zc_ep01 camel-hump lesson. zc_ep05 and its three Shorts set to hold_review (never upload both); audit then 0 pairs. Its slots (Nov 21 9:30 AM; Shorts Nov 22/23/24 7:30 PM) are free.
+  * Views (Studio Advanced analytics lifetime, 6:55 AM): 36,394 views (+1,733), 419,809 impressions, 2.0% CTR. Lion question Short +231, T. Rex Tiny Arms +201, Ants +182, Octopus +176. First cartoon adventure public 5:30 AM (1 view at 6:55). docs/ANALYTICS.md, Command Center analytics/animated-zoo-2026-11-18.
+  * Cartoon uploads (review.py PASS, contact sheets looked at, frames scanned for the iris wipe and the empty seeds board, thumbnails looked at, upload_guard OK, zlive [] on Videos and Shorts tabs; each recorded and pushed right after Studio's dialog): zc_ep06 Wk-VzEcNJb0 Nov 21 5:30 PM; zc_ep03_short1 SUeis3qZyy4 Nov 22 7:30 AM; zc_ep03_short2 KDBVRW-Riyk Nov 23 7:30 AM; zc_ep03_short3 yRELDoeotyo Nov 24 7:30 AM. All custom thumbnails, made for kids.
+  * Upload count, read again from the plan diffs: the Nov 17 morning uploads were committed 8:07 AM (zool_ep15), 8:15 AM (zool_ep16, pig, koala) and 8:19 AM ET (zoo3d_ep17), so in the rolling 24 hours my uploads at about 8:12 and 8:14 AM made 21 and 22 (20 again from 8:15 AM). Studio showed no limit message. upload_guard.py now counts the video ids written into the plans since the last commit older than 24 hours (it needs history: this workspace was a shallow clone and the count could not see back; `git fetch --deepen=60` first) and takes the larger of that and the old message count: 19 at 8:36 AM, which is right.
+  * PC: zool_ep19-22 raws were DONE (Nov 17 evening). Finished here: zool_ep19 (Nov 21 1:30 PM) and zool_ep20 (Nov 22 1:30 PM), each 4K AV1, review PASS, quiz reveals and corner sheet looked at. Both needed watermark_hide for the hello and recap close-ups (animal face under the mark at 3.8-7.6 s and about 318-326 s); for ep20 the windows were taken from a corner sheet of the UNMARKED raw before the finish (one encode). zool_ep21 (Nov 23 1:30 PM, hide 309.3-313.6 s) and zool_ep22 (Nov 24 1:30 PM, hide 309.8-316.3 s) finished the same way, review PASS, quiz reveals, thumbnails and corner sheets looked at. All four 'to_upload'; they wait for upload room. Known and left: quiz answer close-ups turn the neighbour animal away / cut it at the edge (open defect). Not cut: their lesson Shorts (Shorts slots are filled to Nov 25 by cartoon Shorts, except Nov 22-24 7:30 PM).
+  * Song: zoo3d_ep21 Swing-a-Ding! 4K job zoo3d_ep21y sent to the PC 7:27 AM (rendering at 7:38 AM): timing from the ACE-Step words with "swing a ding" merged into one token (7 bad lines -> 1, a transcription error), silent tail 128.5-160 s cut (duration 131 s, fade from 128.5), routes.py plan with every 'side' changed to 'dolly', text props at z 2.75 (were cut by the frame top at 3.15 in close shots), multiword props double-spaced (UPSIDE DOWN read as one word), variety OK and recorded; two rounds of test stills looked at (640x360 Cycles). Slot: Nov 21 3:30 PM when finished.
+  * zc_ep04 (Why Do Monkeys Have Long Tails?, Nov 20 5:30 PM) is still in_production with no run note and no file: the 1:17 PM build should finish it first (unfinished_first). Tomorrow's run: if it is still not finished, its slot gets zool_ep22 (rendered, not finished).
+  * Afternoon (2:57-3:10 PM ET, after the Nov 17 afternoon uploads left the window; upload_guard 15 -> 20, zlive [] each): zc_ep06_short2 PEVtO0LC9Xc Nov 25 11:30 AM; zc_ep06_short3 E2YEoz8ngaA Nov 25 7:30 PM; zool_ep19 3D6N_xhfn1w Nov 21 1:30 PM; zool_ep20 6ymc_29VVdQ Nov 22 1:30 PM; zool_ep21 QUYq7rvwy2A Nov 23 1:30 PM. Custom thumbnails (Studio showed each image before Next), made for kids, dialogs read.
+  * In this pane Studio's Create menu sometimes closes on the click on "Upload videos": opening the menu with a real click and then clicking the item by script (`tp-yt-paper-item` with "Upload videos") worked every time. After the first upload the page keeps the helper functions (Studio is one page), so arm -> menu -> Select files repeats without pasting them again.
+  * Song zoo3d_ep21 (Swing-a-Ding!, re-render job zoo3d_ep21z with text props at z 3.0) finished for Nov 21 3:30 PM: review PASS, contact sheet and thumbnail looked at, listen.py on the file (key heard A major = the song engine's key, no clicks, -13.9 LUFS, 26 clipped samples). Open: REACH! half behind Milo's crest in the low bridge shot, BYE-BYE! cut at the top of the last close shot (engine should hide song words in close and low shots).
+  * listen.py on zool_ep19-22 (run after the uploads of 19-21, before 22): no clicks, no silences, -15.4/-15.5 LUFS, key C; pictures looked at. Measured, not heard.
+  * Left for 5:06 PM (window): zool_ep22 (Nov 24 1:30 PM) and zoo3d_ep21 (Nov 21 3:30 PM). zc_ep04 is being built by the 1:17 PM lesson task (stills done at 2:50 PM by its commits).
+  * Evening (5:13-5:20 PM ET, after the Nov 17 evening uploads left the window): the 1:17 PM build had finished zc_ep04 (lesson + 3 Shorts, to_upload). Review PASS for all four, contact sheets and thumbnails looked at here, upload_guard OK, zlive [] (Shorts tab checked with a live control Short). Scheduled: zc_ep04 xu8F0XyIayY Nov 20 5:30 PM; song zoo3d_ep21 us_-LLwbflM Nov 21 3:30 PM; zc_ep04_short1 I7EAa_nB_fg Nov 22 11:30 AM; zc_ep04_short2 -fCLctL1HfI Nov 23 11:30 AM. Count 20 of 20 at 5:20 PM.
+  * Studio in fewer clicks (worked five times tonight): the Create button, its "Upload videos" item, "Select files" (#select-files-button) and the thumbnail's "Upload file" BUTTON can all be clicked by script with the file interception in place; the date and time still need typed keys, and Schedule (#done-button) still needs a real click (a scripted click does nothing). The pane flips between 800x600 and 800x892: set the viewport again and take a screenshot before every real click.
+  * Waiting for the 24-hour window, for the Nov 19 6:31 AM run: zc_ep04_short3 (Nov 24 11:30 AM) and zool_ep22 (Nov 24 1:30 PM), both checked and to_upload.
+  * Uploads today: 14 (5 morning, 5 afternoon, 4 evening). Nothing was set Private or replaced; no old copies to report.
+
+- Cartoon builds folded in on Nov 19 (daily run): za_ep04 "Mango and the Wobbly Vine Bridge" (321.6 s), za_ep05 "Who Took Mango's Breakfast?" (358.4 s, new Dot the baby tapir),
+  za_ep06 "The Rainy Day Umbrella" (313.0 s, new Puff the little white bat, silent), zc_ep07 "Who Looks After a Baby Elephant?" (320.7 s + Shorts 91.1/90.9/89.6 s),
+  zc_ep08 "Who Lives at the Top of the Jungle?" (318.8 s + Shorts 90.1/87.7/87.2 s; new anteater, tree frog, macaw, harpy eagle). Run notes in docs/cartoon/runs/; their defects are in
+  docs/IMPROVE.md (2026-11-19). Engine changes in those builds: toon.py `count` clamps the last number to its shot; sheet.py accepts a single still. Not built in any of them: a Short
+  from an adventure, a closing "next adventure" picture. New characters (Dot, Puff, the four rainforest animals) are a first look for the owner; nobody has listened to any voice or tune.
+
+- Run note Nov 19, daily run (6:44 AM ET -, session_014CFVfXFKfcn1cjbe4ipD7a), first run under the 90-day plan:
+  * 90-day plan read with the Claude Docs connector and saved as docs/GROWTH_90D.md, linked from docs/DAILY_RUN.md (it overrides the older rules there).
+  * 3D cap: zool_ep22 (3D lesson, to_upload, not on YouTube) set hold_3d_cap. No 3D lesson job was queued on the PC (jobs folder read; the worker was IDLE).
+  * Guard: `upload_guard.py --audit` 0 failures, 0 topic pairs at the start and after the uploads (117 live ids).
+  * Views / YPP: Analytics lifetime 37.8K views, 172.5 h, 86 subs; last 7 days 19.4K views, 69.9 h, +42 subs; Earn tab (data as of Nov 14) 86 subs, 71 qualified h, 11K Shorts views.
+    First line of docs/YPP_PROGRESS.md: 53.8 h/day needed to Jan 31; even all watch time (10 h/day) is below it. docs/ANALYTICS.md entry. NOT read: per-video impressions/CTR/retention.
+  * Same-day topic rule: the builds had put a Mango adventure on the monkey song + monkey lesson day, an elephant lesson and elephant Shorts on elephant-Short days, and three zc_ep08 Shorts on one day.
+    8 entries moved before upload (za_ep04 -> Nov 26 5:30 AM, za_ep05 -> Nov 27 5:30 AM, zc_ep07 -> Nov 25 9:30 AM, zc_ep07 Shorts -> Nov 26 11:30 AM / Nov 27 7:30 AM / Nov 28 7:30 AM,
+    zc_ep08_short2 -> Nov 23 7:30 PM, zc_ep08_short3 -> Nov 24 7:30 PM). Cause fixed: `upload_guard.py --next` now skips days that carry the title's animal (Mango = monkey,
+    Tumble = elephant, Sandy = camel) and gives each Short its own day. The next THEMES lesson (camel eyelashes) repeated the live zc_ep01 part 3: replaced by "What Do Camels Eat in the Desert?".
+  * Uploaded (review.py PASS for all 12, contact sheets and thumbnails looked at, upload_guard OK TO UPLOAD, zlive [] on the content list, Studio dialog read, recorded and pushed one by one):
+    zc_ep08 YWVWVgrELdI Nov 22 9:30 AM; za_ep06 BzCIUSW0f8I Nov 23 5:30 AM; zc_ep08_short2 vMSzqSRHf98 Nov 23 7:30 PM; zc_ep04_short3 VJLdIpc6DUM Nov 24 11:30 AM;
+    zc_ep08_short3 gEASfQ_Onl0 Nov 24 7:30 PM; zc_ep07 DTHR8ud-J34 Nov 25 9:30 AM; za_ep04 kHGre2aHQfY Nov 26 5:30 AM; zc_ep08_short1 35lIdFvap8U Nov 26 7:30 AM;
+    zc_ep07_short1 aXYL9kYmsL4 Nov 26 11:30 AM; za_ep05 MrmVrrNAm3o Nov 27 5:30 AM; zc_ep07_short2 7f5tgx5y8b0 Nov 27 7:30 AM. All custom thumbnails, made for kids.
+    Waiting for the 24-hour window (20 of 20 at 8:40 AM ET): zc_ep07_short3 (Nov 28 7:30 AM, to_upload).
+  * Studio, learned: in this pane the in-page tab switch (Videos -> Shorts chip) does NOT change the list: the Shorts-tab zlive of the first Shorts read the Videos list.
+    Checked afterwards on /videos/short (navigated): every Short uploaded today is there exactly once. Read the Shorts list by navigating to /videos/short (then paste the helpers again).
+    A row still "Pending" (processing) is not counted by the stock zlive(): count Pending as live. Opening the upload dialog works by script alone (menu item click + #select-files-button);
+    the thumbnail "Upload file" button works by script; the date picker needs a real click (often two) and picking the day in the calendar is surer than typing the date.
+  * Song: zoo3d_ep22 "Stretch Up Tall! Giraffe Song for Kids with Milo" (giraffe, zebra, rhino, horse; facts read today at National Geographic and Britannica Kids) written, sung by the
+    PC's song engine, timing rebuilt (sung lyrics differ in the bridge and the coda; 0 bad lines), tail cut at 145.5 s, 4K job zoo3d_ep22y with the new `text_hide_shots` (song words
+    hidden in close, low and dolly shots, placed right of the giraffe) after three rounds of test stills; rendering on the PC since 7:38 AM (3.9 s/frame). The song engine's default
+    1080p job zoo3d_ep22 started by itself first and was stopped with out\zoo3d_ep22\STOP (it will fail its third try and stay undone; it is not a video to use).
+  * Song slots Nov 22-25 3:30 PM were empty at the start; zoo3d_ep18 stays hold_review (Noelson's approval), zoo3d_ep08 hold_fact_check.
+  * Compilations: not started. Public cartoon episodes on one theme (elephant/Tumble) reach 6 on Nov 25 (za_ep01, za_ep02, zc_ep02, za_ep03, zc_ep03, zc_ep07); the first compilation can be built from then.
+  * Build tasks: all four enabled; their last runs SUCCEEDED (list_triggers).
+  * Nothing was set Private or replaced; no old copies to report.
+  * Afternoon (to 12:20 PM ET): song zoo3d_ep22 rendered (7:38-11:30 AM PC clock), first finish looked at: song words huge across the animals' heads in the two 'high' shots and the
+    giraffe's face under a top-left mark. Fixed: slices zoo3d_ep22s1/s2 (frames 2730-2790, 2958-3018) re-rendered with "high" in text_hide_shots and spliced (3492 frames), mark top right
+    with hide windows over the zebra close-ups, finished again: review.py PASS, contact sheet, thumbnail and crops of the mark corner looked at; listen.py on the file (D major, no clicks,
+    -13.5 LUFS, a 1 s quiet break at 15.5-16.5 s inside the song; measured, not heard). Description uses the new fact-checked line (another session's no-AI rule, owner Nov 19 10:32 AM).
+    New: `engine.py --cuts` prints the camera plan (shot names and frames) for slice re-renders.
+  * Left "to_upload" for the Nov 20 6:31 AM run (24-hour window full until 3:00 PM ET today; the 3D cap allows the song only after 5:17 PM ET, when the Nov 18 3D uploads leave the window):
+    za_ep07 Sandy and the Flying Scarf (Nov 21 5:30 AM, built by the 8:43 AM task, not gated by this run), zoo3d_ep22 (Nov 22 3:30 PM), zc_ep07_short3 (Nov 28 7:30 AM).
+
+- Cartoon builds folded in on Nov 20 (daily run): za_ep07 "Sandy and the Flying Scarf" (319.9 s), za_ep08 "The Long Walk to the Oasis" (308.3 s), zc_ep09 "What Do Camels Eat in the Desert?"
+  (315.4 s + Shorts 88.3 s each), zc_ep10 "One Hump or Two? Meet the Camels" (315.7 s + Shorts 90.2/88.2/89.0 s). Run notes in docs/cartoon/runs/; their defects are in docs/IMPROVE.md (2026-11-20).
+  Nobody has listened to their voices or tunes (listen.py measures, it does not hear). Not built in any of them: a Short from an adventure, a closing "next adventure" picture.
+
+- Run note Nov 20, daily run (6:47 AM ET -, session_014CFVfXDjuuz64TBr7e8VQV):
+  * Guard: `upload_guard.py --audit` 0 failures, 0 topic pairs at the start (117 live ids) and after the uploads (129).
+  * Views / YPP: Analytics 7 days (Nov 13-19) 18.6K views, 72.7 h, +41 subs, 91 subscribers; Earn tab (data as of Nov 15) 91 subs, 72 qualified h, 11K Shorts views.
+    docs/YPP_PROGRESS.md: 54.6 h/day needed to Jan 31; qualified hours grew 1 h between the Nov 14 and Nov 15 readings. NOT read: per-video impressions, CTR, retention. Command Center not written this run.
+  * Uploaded, all 12 "to_upload" entries (review.py PASS for each, contact sheets looked at: nothing below the quality bar; the blue discs in three Shorts' sheets are the iris wipe;
+    upload_guard OK TO UPLOAD; zlive [] with 30 rows read, long videos on /videos/upload, Shorts on /videos/short; Studio's dialog read; recorded, committed and pushed one by one):
+    za_ep07 KAfMlniFKhA Nov 21 5:30 AM; zc_ep09 ABrZY1ekpVM Nov 22 5:30 PM; zc_ep10 T-hSQaRrjJE Nov 23 9:30 AM; za_ep08 fmx-h1JkpUw Nov 24 5:30 AM;
+    song zoo3d_ep22 Dfe5da7DJS0 Nov 22 3:30 PM (the day's one 3D upload; no 3D upload in the 24 h before it by the commit log);
+    Shorts zc_ep09_short1 ai-WKw6--sI Nov 26 7:30 PM, zc_ep09_short2 PH3W4FAnxJU Nov 27 11:30 AM, zc_ep07_short3 WbRXJjPyrdg Nov 28 7:30 AM, zc_ep09_short3 5MGJ3wn7A5s Nov 28 11:30 AM,
+    zc_ep10_short1 SaEGZ8C9RkA Nov 29 7:30 AM, zc_ep10_short2 DVpKv4ECFGA Nov 30 7:30 AM, zc_ep10_short3 -vsqJwlQm0M Dec 1 7:30 AM. All custom thumbnails (a data: image in the uploader before Next), made for kids.
+    Count by the commit log: 11 of 20 at the start; the Nov 19 morning uploads left the window during the run.
+  * Studio, learned: the whole dialog up to the Schedule panel runs by script in one call (zlive, armFile, Create -> "Upload videos" -> #select-files-button, zfill, the thumbnail's
+    "Upload file" button by script, zsched). The date picker needs a real click and opened on the first click 10 times of 12; check it with a SCREENSHOT before typing (a DOM check
+    said "closed" while it was open, and "open" once when it was not): when it was closed, the typed date went nowhere and the date stayed Nov 21; zread() before Schedule caught it.
+    The description of that upload (zc_ep09_short2) was read back on its Details page afterwards: 724 characters, unchanged.
+  * review.py `--note` writes the note into docs/IMPROVE.md: the gate note must be a real "do better next time" line (my 12 placeholder notes were removed again).
+  * upload_guard.py: `--next` now counts a THEMES title's friend animal (The Long Walk to the Oasis = camel), the cause of za_ep08 landing on the camel-lesson day; `crab` added.
+  * 3D cap: no 3D lesson is to_upload or in_production (zool_ep22 stays hold_3d_cap); the 3D lessons already scheduled stay (e.g. zool_ep20 Nov 22 1:30 PM).
+  * Compilations: not started; no theme has 6 public cartoon episodes yet (elephant/Tumble reaches 6 on Nov 25).
+  * Build tasks: all four Zoo builds enabled, last runs SUCCEEDED (list_triggers). The Gizmo task's run note (Nov 20) says it could not reach the PC render folder twice (docs/IMPROVE.md): that is the Gizmo task's, not changed here.
+  * Nothing was set Private or replaced; no old copies to report. CLAUDE.md: no line changed.
+  * Empty long slots after this run (plan read at 7:15 AM): Nov 21 9:30 AM; Nov 22 5:30 AM; Nov 23 5:30 PM (3:30 PM: zoo3d_ep23 rendering); Nov 24 9:30 AM, 1:30 PM, 5:30 PM and the song; Nov 25-27 three long slots and the song each. The daily builds fill them; an empty slot stays empty.
+  * Song (step B, the day's one 3D video): zoo3d_ep23 "Stripes and Splashes! Tiger Song for Kids with Milo" (tiger, hippo, bear, koala; facts read today at National Geographic Kids
+    and Smithsonian's National Zoo, quotes in make_specs_v3.py) written, sung by the PC's song engine (07:26-07:32 AM), timing built here (215/215 words, check_timing 0 bad lines),
+    tail cut at 152 s with a 1.9 s fade, 4K job zoo3d_ep23y (routes.py, 13 places, side -> dolly; variety OK and recorded), three rounds of 640x360 test stills looked at
+    (studio/zoo3d/finished/ep23_stills*.jpg; fixes in docs/IMPROVE.md). PC copies read back (job and timing same md5; flac decodes to identical audio). RENDERING on the PC since
+    7:50 AM PC clock (3,649 frames). FOR THE NOV 21 RUN: finish it (finish.py with jobs/zoo3d_ep23y.json), corner sheet, frames, listen.py, review.py, thumbnail; slot Nov 23 3:30 PM.
+    Nov 22 has zoo3d_ep22 (giraffe) at 3:30 PM; song slots Nov 24 onward are empty.
+  * PC worker: zoo3d_ep22's 1080p default job had looped since Nov 19 (561 failed renders); cancelled with out\zoo3d_ep22\DONE (docs/IMPROVE.md).
+  * check_timing.py imports timing_lib from its own folder (it pointed at /root/zoo/...).
+
+- Nov 20, 11:13 PM to Nov 21, 12:00 AM (owner in the chat: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton model we have"): THE ANIMATED ZOO IS 2D ONLY.
+  * Rules: CLAUDE.md "2D only", "Daily grid", "Cartoon production never stops"; docs/DAILY_RUN.md "2D ONLY" at the top of the standing rules; docs/GROWTH_90D.md; docs/CARTOON_RUN.md "The daily builds".
+  * Guard: `upload_guard.py` refuses every 3D format for the Zoo (with --replace too), its audit fails a 3D entry that is "to_upload" or "in_production", and `--next adventure` hands out 5:30 AM, 1:30 PM and 3:30 PM (3:30 PM was the song's).
+  * Scheduled tasks: the 6:31 AM daily run's prompt was rewritten (no 3D at all, five builds, the new grid; its name is now "Animated Zoo daily run (views, 2D uploads, YPP tracking, reviews)"); a third adventure build was created, "Animated Zoo cartoon adventure (daily build, afternoon)", every day 3:07 PM ET (trig_01BWFXZ2v2Ac4mT7YzGLgUmC). The four older build prompts still say "four builds"; they read CLAUDE.md, which says five.
+  * Studio, read back on the Private filter after the change (Videos: exactly 5 rows, Shorts: exactly 2 rows): set from Scheduled to Private, NOT deleted, titles unchanged: zoo3d_ep21 us_-LLwbflM "Swing-a-Ding! Monkey Song" (was Nov 21 3:30 PM), zoo3d_ep22 Dfe5da7DJS0 "Stretch Up Tall! Giraffe Song" (Nov 22 3:30 PM), zool_ep19 3D6N_xhfn1w "Horns, Tongues and Teeth!" (Nov 21 1:30 PM), zool_ep20 6ymc_29VVdQ "Ready for Winter!" (Nov 22 1:30 PM), zool_ep21 QUYq7rvwy2A "Farm Animal Facts" (Nov 23 1:30 PM), zs90_lion_tuft J32cKF1dCnY (Nov 21 11:30 AM), zs90_elephant_ears s1F3xrNm2iY (Nov 21 7:30 PM). Plan status "hold_2d_only". THESE SEVEN ARE NOT "OLD (replaced)" COPIES: they have no replacement, they are not renamed and they are not on any list to delete.
+  * NOT done and not to be done by a run: finishing zoo3d_ep23y (rendered on the PC Nov 20), building zoo3d_ep24 / ep25, any 3D lesson. Nothing on the PC was touched or deleted. Public 3D videos (songs, lessons, Shorts) were left exactly as they are.
+  * Slots now empty because of the hold, and not filled tonight (no cartoon was ready for them; `--next` starts two days ahead): Nov 21 1:30 PM and 3:30 PM, Nov 22 3:30 PM, Nov 23 3:30 PM unless a build takes them; `--next adventure` now gives Nov 22 1:30 PM first.
+  * Gizmo Explains: not changed (another channel, 3D explainers by its own rule).
+  * The bulk edit (Content list: tick rows, Edit, Visibility, "Private" is the default, Update videos, tick "I understand", Update videos) worked by script on the Videos tab in seconds ("5 of 5 videos successfully updated"). On the Shorts tab the confirm dialog stayed on screen and the bar read "Update will begin in a few moments" for over a minute while the Browser pane was hidden; the update did go through (read after a reload on the Private filter). Do not click the dialog a second time: reload and read the Private filter.

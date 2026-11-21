@@ -1,0 +1,9 @@
+# built by toon.py: the HyperFrames projects, stills and renders (the finished test files are attached by name when they are small enough)
+out/*/proj_*/
+out/*/*_silent.mp4
+out/*/*.wav
+out/*/*.mp4
+__pycache__/
+out/*/work-*/
+out/*/.*/
+render_s*.log

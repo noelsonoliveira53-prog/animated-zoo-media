@@ -1,0 +1,2134 @@
+{
+ "id": "zc_ep05_short1",
+ "total": 86.84383333333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25
+ ],
+ "plan": {
+  "length": 86.8,
+  "shots": 24,
+  "visual_changes": 102,
+  "mean_gap": 0.85,
+  "longest_gap": 3.67,
+  "longest_gap_at": 76.9,
+  "over_6s": [],
+  "places": [
+   "dunes",
+   "trail",
+   "oasis"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 8,
+  "longest_without_question": 26.6,
+  "first_words_at": 0.42,
+  "shot_mean": 3.62,
+  "fails": [],
+  "words_placed": "211/211",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 31.2,
+   "onset_err_max_ms": 110.0,
+   "suspect_words": [],
+   "cuts": 23,
+   "cuts_on_the_half_beat": 23,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the dunes at sunrise hook: the hump"
+  ],
+  [
+   0.8,
+   "word",
+   "?"
+  ],
+  [
+   1.96,
+   "action",
+   "mama hops"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the dunes at sunrise the hump"
+  ],
+  [
+   3.31,
+   "picture",
+   "ar"
+  ],
+  [
+   3.62,
+   "word",
+   "HUMP"
+  ],
+  [
+   5.62,
+   "new shot",
+   "the dunes at sunrise like a hill"
+  ],
+  [
+   6.16,
+   "action",
+   "mama nods"
+  ],
+  [
+   8.09,
+   "word",
+   "LIKE A HILL"
+  ],
+  [
+   9.38,
+   "new shot",
+   "the dunes at sunrise one hump"
+  ],
+  [
+   11.63,
+   "action",
+   "mama hops"
+  ],
+  [
+   11.63,
+   "word",
+   "1"
+  ],
+  [
+   12.5,
+   "new place",
+   "the picture board (blue) board: one or two"
+  ],
+  [
+   13.63,
+   "word",
+   "1 HUMP"
+  ],
+  [
+   15.68,
+   "word",
+   "2 HUMPS"
+  ],
+  [
+   16.56,
+   "new place",
+   "the dunes at sunrise make a hump"
+  ],
+  [
+   18.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   18.81,
+   "word",
+   "UP AND OVER!"
+  ],
+  [
+   20.31,
+   "new shot",
+   "the dunes at sunrise Sandy wonders"
+  ],
+  [
+   20.51,
+   "action",
+   "calf looks"
+  ],
+  [
+   22.35,
+   "word",
+   "?"
+  ],
+  [
+   23.75,
+   "new place",
+   "the picture board (blue) board: water?"
+  ],
+  [
+   24.63,
+   "picture",
+   "jug"
+  ],
+  [
+   24.63,
+   "word",
+   "WATER?"
+  ],
+  [
+   27.19,
+   "new shot",
+   "the picture board (blue) board: fat?"
+  ],
+  [
+   28.32,
+   "picture",
+   "fb"
+  ],
+  [
+   28.32,
+   "word",
+   "FAT?"
+  ],
+  [
+   29.06,
+   "new place",
+   "the dunes at sunrise question 1"
+  ],
+  [
+   30.79,
+   "sign",
+   "WATER"
+  ],
+  [
+   31.14,
+   "sign",
+   "FAT"
+  ],
+  [
+   33.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   34.05,
+   "thinking dot",
+   "2"
+  ],
+  [
+   35.05,
+   "thinking dot",
+   "3"
+  ],
+  [
+   35.71,
+   "answer",
+   "FAT"
+  ],
+  [
+   35.76,
+   "action",
+   "calf hops"
+  ],
+  [
+   37.19,
+   "action",
+   "the hump opens"
+  ],
+  [
+   37.19,
+   "new place",
+   "the picture board board: inside the hump"
+  ],
+  [
+   37.77,
+   "word",
+   "FAT!"
+  ],
+  [
+   39.4,
+   "action",
+   "the fat wobbles"
+  ],
+  [
+   40.62,
+   "new shot",
+   "the picture board board: not water"
+  ],
+  [
+   40.73,
+   "picture",
+   "drop"
+  ],
+  [
+   41.04,
+   "picture",
+   "x"
+  ],
+  [
+   41.63,
+   "word",
+   "NOT WATER!"
+  ],
+  [
+   42.5,
+   "new place",
+   "the dunes at sunrise say it"
+  ],
+  [
+   43.85,
+   "action",
+   "milo hops"
+  ],
+  [
+   43.85,
+   "word",
+   "FAT, NOT WATER!"
+  ],
+  [
+   45.31,
+   "new place",
+   "the picture board (pink) board: saved for later"
+  ],
+  [
+   46.21,
+   "picture",
+   "ar"
+  ],
+  [
+   46.86,
+   "word",
+   "FOR LATER"
+  ],
+  [
+   48.44,
+   "new shot",
+   "the picture board (pink) board: backpack"
+  ],
+  [
+   49.1,
+   "picture",
+   "bp"
+  ],
+  [
+   50.02,
+   "word",
+   "SNACKS!"
+  ],
+  [
+   51.25,
+   "new place",
+   "the picture board board: the fat feeds her"
+  ],
+  [
+   52.0,
+   "action",
+   "the backpack wiggles"
+  ],
+  [
+   53.62,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   53.62,
+   "word",
+   "FOOD INSIDE"
+  ],
+  [
+   55.0,
+   "new shot",
+   "the picture board board: energy"
+  ],
+  [
+   56.74,
+   "action",
+   "cam hops"
+  ],
+  [
+   56.74,
+   "picture",
+   "b1"
+  ],
+  [
+   56.74,
+   "word",
+   "ENERGY!"
+  ],
+  [
+   57.35,
+   "picture",
+   "b2"
+  ],
+  [
+   57.81,
+   "action",
+   "calf walks"
+  ],
+  [
+   57.81,
+   "action",
+   "mama walks"
+  ],
+  [
+   57.81,
+   "new place",
+   "the rocky trail trail walk"
+  ],
+  [
+   58.54,
+   "word",
+   "WALK!"
+  ],
+  [
+   60.62,
+   "new place",
+   "the oasis Mama drinks"
+  ],
+  [
+   61.75,
+   "action",
+   "mama bends down to drink"
+  ],
+  [
+   63.02,
+   "word",
+   "SLURP!"
+  ],
+  [
+   64.06,
+   "new shot",
+   "the oasis 32 gallons"
+  ],
+  [
+   66.48,
+   "picture",
+   "jug"
+  ],
+  [
+   66.63,
+   "count",
+   "4"
+  ],
+  [
+   66.82,
+   "count",
+   "8"
+  ],
+  [
+   67.01,
+   "count",
+   "12"
+  ],
+  [
+   67.21,
+   "count",
+   "16"
+  ],
+  [
+   67.4,
+   "count",
+   "20"
+  ],
+  [
+   67.59,
+   "count",
+   "24"
+  ],
+  [
+   67.77,
+   "word",
+   "GALLONS"
+  ],
+  [
+   67.79,
+   "count",
+   "28"
+  ],
+  [
+   67.98,
+   "count",
+   "32"
+  ],
+  [
+   69.06,
+   "new shot",
+   "the oasis drink along"
+  ],
+  [
+   69.28,
+   "action",
+   "milo hops"
+  ],
+  [
+   69.28,
+   "word",
+   "GLUG!"
+  ],
+  [
+   72.81,
+   "new place",
+   "the picture board (blue) board: a week"
+  ],
+  [
+   74.34,
+   "action",
+   "seven days light up"
+  ],
+  [
+   74.34,
+   "count",
+   "1"
+  ],
+  [
+   74.58,
+   "count",
+   "2"
+  ],
+  [
+   74.81,
+   "count",
+   "3"
+  ],
+  [
+   74.97,
+   "word",
+   "DAYS"
+  ],
+  [
+   75.04,
+   "count",
+   "4"
+  ],
+  [
+   75.28,
+   "count",
+   "5"
+  ],
+  [
+   75.51,
+   "count",
+   "6"
+  ],
+  [
+   75.74,
+   "count",
+   "7"
+  ],
+  [
+   76.88,
+   "new place",
+   "the oasis count the sips"
+  ],
+  [
+   80.55,
+   "action",
+   "sip"
+  ],
+  [
+   80.55,
+   "word",
+   "1"
+  ],
+  [
+   80.86,
+   "action",
+   "sip"
+  ],
+  [
+   80.86,
+   "word",
+   "2"
+  ],
+  [
+   81.13,
+   "action",
+   "sip"
+  ],
+  [
+   81.13,
+   "word",
+   "3"
+  ],
+  [
+   82.19,
+   "new shot",
+   "the oasis so: fat"
+  ],
+  [
+   85.48,
+   "action",
+   "mama hops"
+  ],
+  [
+   85.48,
+   "word",
+   "FAT!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "dunes",
+   "say": "What is inside a camel's hump?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 1.96375,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "is",
+     0.21,
+     0.38
+    ],
+    [
+     "inside",
+     0.38,
+     0.96
+    ],
+    [
+     "a",
+     0.96,
+     0.99
+    ],
+    [
+     "camel's",
+     0.99,
+     1.54
+    ],
+    [
+     "hump?",
+     1.54,
+     1.96
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Look at the big hump on Mama's back.",
+   "t0": 2.8125,
+   "t1": 5.625,
+   "v0": 2.92375,
+   "dur": 2.2645833333333334,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.26
+    ],
+    [
+     "at",
+     0.26,
+     0.32
+    ],
+    [
+     "the",
+     0.32,
+     0.39
+    ],
+    [
+     "big",
+     0.39,
+     0.7
+    ],
+    [
+     "hump",
+     0.7,
+     1.05
+    ],
+    [
+     "on",
+     1.05,
+     1.24
+    ],
+    [
+     "Mama's",
+     1.24,
+     1.79
+    ],
+    [
+     "back.",
+     1.79,
+     2.26
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "It is tall and round, like a little hill of sand.",
+   "t0": 5.625,
+   "t1": 9.375,
+   "v0": 5.7283333333333335,
+   "dur": 3.3274583333333334,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.43
+    ],
+    [
+     "tall",
+     0.43,
+     0.94
+    ],
+    [
+     "and",
+     0.94,
+     1.11
+    ],
+    [
+     "round,",
+     1.11,
+     1.66
+    ],
+    [
+     "like",
+     1.97,
+     2.12
+    ],
+    [
+     "a",
+     2.12,
+     2.16
+    ],
+    [
+     "little",
+     2.16,
+     2.36
+    ],
+    [
+     "hill",
+     2.36,
+     2.66
+    ],
+    [
+     "of",
+     2.66,
+     2.73
+    ],
+    [
+     "sand.",
+     2.73,
+     3.327
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "like a hill",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "How many humps does Mama have? One!",
+   "t0": 9.375,
+   "t1": 12.5,
+   "v0": 9.595791666666667,
+   "dur": 2.4747916666666665,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.35
+    ],
+    [
+     "humps",
+     0.35,
+     0.72
+    ],
+    [
+     "does",
+     0.72,
+     0.95
+    ],
+    [
+     "Mama",
+     0.95,
+     1.25
+    ],
+    [
+     "have?",
+     1.25,
+     1.81
+    ],
+    [
+     "One!",
+     2.03,
+     2.47
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "one hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Some camels have one hump. Some camels have two.",
+   "t0": 12.5,
+   "t1": 16.5625,
+   "v0": 12.610583333333333,
+   "dur": 3.5584583333333333,
+   "words": [
+    [
+     "Some",
+     0.01,
+     0.3
+    ],
+    [
+     "camels",
+     0.3,
+     0.79
+    ],
+    [
+     "have",
+     0.79,
+     1.02
+    ],
+    [
+     "one",
+     1.02,
+     1.25
+    ],
+    [
+     "hump.",
+     1.25,
+     1.68
+    ],
+    [
+     "Some",
+     2.0,
+     2.27
+    ],
+    [
+     "camels",
+     2.27,
+     2.79
+    ],
+    [
+     "have",
+     2.79,
+     3.07
+    ],
+    [
+     "two.",
+     3.07,
+     3.558
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: one or two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Can you make a hump with your arms? Up, and over!",
+   "t0": 16.5625,
+   "t1": 20.3125,
+   "v0": 16.709041666666668,
+   "dur": 3.204625,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.36
+    ],
+    [
+     "make",
+     0.36,
+     0.53
+    ],
+    [
+     "a",
+     0.53,
+     0.57
+    ],
+    [
+     "hump",
+     0.57,
+     0.87
+    ],
+    [
+     "with",
+     0.87,
+     0.99
+    ],
+    [
+     "your",
+     0.99,
+     1.13
+    ],
+    [
+     "arms?",
+     1.13,
+     1.74
+    ],
+    [
+     "Up,",
+     2.1,
+     2.39
+    ],
+    [
+     "and",
+     2.39,
+     2.63
+    ],
+    [
+     "over!",
+     2.63,
+     3.2
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "make a hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Sandy looks up at the hump. What is in there?",
+   "t0": 20.3125,
+   "t1": 23.75,
+   "v0": 20.45366666666667,
+   "dur": 2.866833333333333,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.53
+    ],
+    [
+     "looks",
+     0.53,
+     0.81
+    ],
+    [
+     "up",
+     0.81,
+     0.94
+    ],
+    [
+     "at",
+     0.94,
+     1.03
+    ],
+    [
+     "the",
+     1.03,
+     1.09
+    ],
+    [
+     "hump.",
+     1.09,
+     1.55
+    ],
+    [
+     "What",
+     1.9,
+     2.08
+    ],
+    [
+     "is",
+     2.08,
+     2.25
+    ],
+    [
+     "in",
+     2.25,
+     2.46
+    ],
+    [
+     "there?",
+     2.46,
+     2.867
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "Sandy wonders",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Is it full of water, like a big water bottle?",
+   "t0": 23.75,
+   "t1": 27.1875,
+   "v0": 23.860500000000005,
+   "dur": 3.0225833333333334,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.34
+    ],
+    [
+     "full",
+     0.34,
+     0.64
+    ],
+    [
+     "of",
+     0.64,
+     0.77
+    ],
+    [
+     "water,",
+     0.77,
+     1.33
+    ],
+    [
+     "like",
+     1.59,
+     1.77
+    ],
+    [
+     "a",
+     1.77,
+     1.81
+    ],
+    [
+     "big",
+     1.81,
+     2.19
+    ],
+    [
+     "water",
+     2.19,
+     2.48
+    ],
+    [
+     "bottle?",
+     2.48,
+     3.02
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: water?",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Or is it full of fat?",
+   "t0": 27.1875,
+   "t1": 29.0625,
+   "v0": 27.42308333333334,
+   "dur": 1.4475833333333334,
+   "words": [
+    [
+     "Or",
+     0.01,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.44
+    ],
+    [
+     "it",
+     0.44,
+     0.56
+    ],
+    [
+     "full",
+     0.56,
+     0.84
+    ],
+    [
+     "of",
+     0.84,
+     0.9
+    ],
+    [
+     "fat?",
+     0.9,
+     1.448
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: fat?",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "What do you think? Is it water, or is it fat?",
+   "t0": 29.0625,
+   "t1": 37.1875,
+   "v0": 29.41066666666668,
+   "dur": 2.974458333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.16
+    ],
+    [
+     "do",
+     0.16,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.35
+    ],
+    [
+     "think?",
+     0.35,
+     0.86
+    ],
+    [
+     "Is",
+     1.14,
+     1.29
+    ],
+    [
+     "it",
+     1.29,
+     1.38
+    ],
+    [
+     "water,",
+     1.38,
+     1.94
+    ],
+    [
+     "or",
+     1.94,
+     2.15
+    ],
+    [
+     "is",
+     2.15,
+     2.3
+    ],
+    [
+     "it",
+     2.3,
+     2.41
+    ],
+    [
+     "fat?",
+     2.41,
+     2.97
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "It is fat! A camel's hump is full of fat.",
+   "t0": 37.1875,
+   "t1": 40.625,
+   "v0": 37.32512500000001,
+   "dur": 2.8522916666666664,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.19
+    ],
+    [
+     "is",
+     0.19,
+     0.44
+    ],
+    [
+     "fat!",
+     0.44,
+     0.85
+    ],
+    [
+     "A",
+     1.08,
+     1.13
+    ],
+    [
+     "camel's",
+     1.13,
+     1.66
+    ],
+    [
+     "hump",
+     1.66,
+     1.9
+    ],
+    [
+     "is",
+     1.9,
+     2.07
+    ],
+    [
+     "full",
+     2.07,
+     2.27
+    ],
+    [
+     "of",
+     2.27,
+     2.34
+    ],
+    [
+     "fat.",
+     2.34,
+     2.85
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: inside the hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Not water. Fat!",
+   "t0": 40.625,
+   "t1": 42.5,
+   "v0": 40.71741666666667,
+   "dur": 1.472375,
+   "words": [
+    [
+     "Not",
+     0.01,
+     0.32
+    ],
+    [
+     "water.",
+     0.32,
+     0.91
+    ],
+    [
+     "Fat!",
+     0.91,
+     1.47
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: not water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Say it with me. Fat, not water!",
+   "t0": 42.5,
+   "t1": 45.3125,
+   "v0": 42.72979166666667,
+   "dur": 2.297125,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.92
+    ],
+    [
+     "Fat,",
+     1.12,
+     1.5
+    ],
+    [
+     "not",
+     1.5,
+     1.71
+    ],
+    [
+     "water!",
+     1.71,
+     2.297
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The fat is food, saved for later.",
+   "t0": 45.3125,
+   "t1": 48.4375,
+   "v0": 45.56691666666667,
+   "dur": 2.403125,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "fat",
+     0.11,
+     0.44
+    ],
+    [
+     "is",
+     0.44,
+     0.64
+    ],
+    [
+     "food,",
+     0.64,
+     1.11
+    ],
+    [
+     "saved",
+     1.29,
+     1.76
+    ],
+    [
+     "for",
+     1.76,
+     1.89
+    ],
+    [
+     "later.",
+     1.89,
+     2.4
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: saved for later",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "It is like a backpack full of snacks.",
+   "t0": 48.4375,
+   "t1": 51.25,
+   "v0": 48.51004166666667,
+   "dur": 2.251125,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.08
+    ],
+    [
+     "is",
+     0.08,
+     0.37
+    ],
+    [
+     "like",
+     0.37,
+     0.54
+    ],
+    [
+     "a",
+     0.54,
+     0.59
+    ],
+    [
+     "backpack",
+     0.59,
+     1.24
+    ],
+    [
+     "full",
+     1.24,
+     1.45
+    ],
+    [
+     "of",
+     1.45,
+     1.51
+    ],
+    [
+     "snacks.",
+     1.51,
+     2.25
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: backpack",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "When a camel cannot find food, the fat feeds her.",
+   "t0": 51.25,
+   "t1": 55.0,
+   "v0": 51.301166666666674,
+   "dur": 3.36475,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "a",
+     0.14,
+     0.19
+    ],
+    [
+     "camel",
+     0.19,
+     0.7
+    ],
+    [
+     "cannot",
+     0.7,
+     1.12
+    ],
+    [
+     "find",
+     1.12,
+     1.43
+    ],
+    [
+     "food,",
+     1.43,
+     1.97
+    ],
+    [
+     "the",
+     2.23,
+     2.32
+    ],
+    [
+     "fat",
+     2.32,
+     2.69
+    ],
+    [
+     "feeds",
+     2.69,
+     3.13
+    ],
+    [
+     "her.",
+     3.13,
+     3.36
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: the fat feeds her",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The fat gives the camel energy.",
+   "t0": 55.0,
+   "t1": 57.8125,
+   "v0": 55.205916666666674,
+   "dur": 2.148875,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "fat",
+     0.11,
+     0.6
+    ],
+    [
+     "gives",
+     0.6,
+     0.95
+    ],
+    [
+     "the",
+     0.95,
+     1.03
+    ],
+    [
+     "camel",
+     1.03,
+     1.53
+    ],
+    [
+     "energy.",
+     1.53,
+     2.149
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: energy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Energy to walk, and walk, and walk!",
+   "t0": 57.8125,
+   "t1": 60.625,
+   "v0": 57.89479166666667,
+   "dur": 2.439208333333333,
+   "words": [
+    [
+     "Energy",
+     0.07,
+     0.51
+    ],
+    [
+     "to",
+     0.51,
+     0.65
+    ],
+    [
+     "walk,",
+     0.65,
+     1.13
+    ],
+    [
+     "and",
+     1.13,
+     1.41
+    ],
+    [
+     "walk,",
+     1.41,
+     1.78
+    ],
+    [
+     "and",
+     1.78,
+     1.99
+    ],
+    [
+     "walk!",
+     1.99,
+     2.439
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "trail walk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "And water? A camel drinks it. Slurp!",
+   "t0": 60.625,
+   "t1": 64.0625,
+   "v0": 60.874,
+   "dur": 2.787166666666667,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.23
+    ],
+    [
+     "water?",
+     0.23,
+     0.83
+    ],
+    [
+     "A",
+     0.83,
+     0.88
+    ],
+    [
+     "camel",
+     0.88,
+     1.33
+    ],
+    [
+     "drinks",
+     1.33,
+     1.68
+    ],
+    [
+     "it.",
+     1.68,
+     1.92
+    ],
+    [
+     "Slurp!",
+     2.15,
+     2.787
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Mama drinks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "A thirsty camel can drink up to thirty-two gallons at one time!",
+   "t0": 64.0625,
+   "t1": 69.0625,
+   "v0": 64.20116666666667,
+   "dur": 4.482208333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "thirsty",
+     0.06,
+     0.72
+    ],
+    [
+     "camel",
+     0.72,
+     1.3
+    ],
+    [
+     "can",
+     1.54,
+     1.73
+    ],
+    [
+     "drink",
+     1.73,
+     2.0
+    ],
+    [
+     "up",
+     2.0,
+     2.15
+    ],
+    [
+     "to",
+     2.15,
+     2.28
+    ],
+    [
+     "thirty-two",
+     2.28,
+     2.91
+    ],
+    [
+     "gallons",
+     2.91,
+     3.57
+    ],
+    [
+     "at",
+     3.57,
+     3.7
+    ],
+    [
+     "one",
+     3.7,
+     3.95
+    ],
+    [
+     "time!",
+     3.95,
+     4.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "32 gallons",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Glug, glug, glug! Can you drink like a camel?",
+   "t0": 69.0625,
+   "t1": 72.8125,
+   "v0": 69.223375,
+   "dur": 3.378791666666667,
+   "words": [
+    [
+     "Glug,",
+     0.06,
+     0.5
+    ],
+    [
+     "glug,",
+     0.5,
+     0.96
+    ],
+    [
+     "glug!",
+     0.96,
+     1.59
+    ],
+    [
+     "Can",
+     1.92,
+     2.07
+    ],
+    [
+     "you",
+     2.07,
+     2.2
+    ],
+    [
+     "drink",
+     2.2,
+     2.5
+    ],
+    [
+     "like",
+     2.5,
+     2.67
+    ],
+    [
+     "a",
+     2.67,
+     2.72
+    ],
+    [
+     "camel?",
+     2.72,
+     3.379
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "drink along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Then a camel can go a week or more without water.",
+   "t0": 72.8125,
+   "t1": 76.875,
+   "v0": 73.14216666666668,
+   "dur": 3.5360833333333335,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.15
+    ],
+    [
+     "a",
+     0.15,
+     0.2
+    ],
+    [
+     "camel",
+     0.2,
+     0.77
+    ],
+    [
+     "can",
+     0.77,
+     0.96
+    ],
+    [
+     "go",
+     0.96,
+     1.15
+    ],
+    [
+     "a",
+     1.15,
+     1.2
+    ],
+    [
+     "week",
+     1.2,
+     1.83
+    ],
+    [
+     "or",
+     1.83,
+     1.99
+    ],
+    [
+     "more",
+     1.99,
+     2.42
+    ],
+    [
+     "without",
+     2.64,
+     3.03
+    ],
+    [
+     "water.",
+     3.03,
+     3.536
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: a week",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Sandy has a drink, too. Let's count her sips. One, two, three!",
+   "t0": 76.875,
+   "t1": 82.1875,
+   "v0": 77.21825000000003,
+   "dur": 4.477333333333333,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.49
+    ],
+    [
+     "has",
+     0.49,
+     0.71
+    ],
+    [
+     "a",
+     0.71,
+     0.76
+    ],
+    [
+     "drink,",
+     0.76,
+     1.12
+    ],
+    [
+     "too.",
+     1.12,
+     1.56
+    ],
+    [
+     "Let's",
+     1.73,
+     2.0
+    ],
+    [
+     "count",
+     2.0,
+     2.28
+    ],
+    [
+     "her",
+     2.28,
+     2.38
+    ],
+    [
+     "sips.",
+     2.38,
+     2.93
+    ],
+    [
+     "One,",
+     3.33,
+     3.64
+    ],
+    [
+     "two,",
+     3.64,
+     3.91
+    ],
+    [
+     "three!",
+     3.91,
+     4.477
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "count the sips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "So the water is for drinking. And the hump is full of fat!",
+   "t0": 82.1875,
+   "t1": 86.44383333333337,
+   "v0": 82.23558333333337,
+   "dur": 3.78825,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.18
+    ],
+    [
+     "the",
+     0.18,
+     0.27
+    ],
+    [
+     "water",
+     0.27,
+     0.72
+    ],
+    [
+     "is",
+     0.72,
+     0.91
+    ],
+    [
+     "for",
+     0.91,
+     1.04
+    ],
+    [
+     "drinking.",
+     1.04,
+     1.73
+    ],
+    [
+     "And",
+     2.12,
+     2.24
+    ],
+    [
+     "the",
+     2.24,
+     2.3
+    ],
+    [
+     "hump",
+     2.3,
+     2.64
+    ],
+    [
+     "is",
+     2.64,
+     2.88
+    ],
+    [
+     "full",
+     2.88,
+     3.17
+    ],
+    [
+     "of",
+     3.17,
+     3.24
+    ],
+    [
+     "fat!",
+     3.24,
+     3.788
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "so: fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

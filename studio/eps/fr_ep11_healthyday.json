@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep11_healthyday",
+ "title": "A Healthy Day for Kids! Play, Sunscreen and More with Kiko",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're learning five habits for a happy, healthy day.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_play",
+   "lines": [
+    [
+     "Here's a clue: we run, jump, dance and have fun with our bodies! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Move and Play!",
+     "enter"
+    ],
+    [
+     "This is moving and playing! Can you say play?",
+     "zoom"
+    ],
+    [
+     "Moving your body makes your heart pump and your muscles strong.",
+     "fx+bob"
+    ],
+    [
+     "You can run, jump, dance, climb, or play catch with a ball!",
+     "bob"
+    ],
+    [
+     "Let's move! Jump, jump, jump! Now spin around! Now freeze!",
+     "wiggle"
+    ],
+    [
+     "How often should we move and play?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Every day! Little kids love to move a lot.",
+     "fx2+badge:PLAY!"
+    ],
+    [
+     "Let's say it together: PLAY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PLAY!",
+     "zoom"
+    ],
+    [
+     "After playing, drink some water and take a rest.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_sunscreen",
+   "lines": [
+    [
+     "Here's a clue: it's a cream we put on our skin before we play in the sun! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Sunscreen!",
+     "enter"
+    ],
+    [
+     "This is Sunscreen! Can you say sunscreen?",
+     "zoom"
+    ],
+    [
+     "Sunscreen helps protect your skin from the strong sunshine.",
+     "fx+bob"
+    ],
+    [
+     "A grown-up helps put it on before you go outside.",
+     "bob"
+    ],
+    [
+     "Can you pretend to rub on sunscreen? Nose, cheeks, arms and legs!",
+     "wiggle"
+    ],
+    [
+     "What else helps us in the sun?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A hat, sunglasses, and playing in the shade!",
+     "fx2+badge:SUNSCREEN!"
+    ],
+    [
+     "Let's say it together: SUNSCREEN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SUNSCREEN!",
+     "zoom"
+    ],
+    [
+     "After swimming, a grown-up puts on a little more sunscreen.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_sneeze",
+   "lines": [
+    [
+     "Here's a clue: ah, ah, ah-choo! Where should that sneeze go? Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Cover Your Sneeze!",
+     "enter"
+    ],
+    [
+     "This is covering your sneeze! Can you say elbow?",
+     "zoom"
+    ],
+    [
+     "When you sneeze or cough, cover it with your elbow or a tissue.",
+     "fx+bob"
+    ],
+    [
+     "That keeps germs from flying to your friends.",
+     "bob"
+    ],
+    [
+     "Can you do a pretend sneeze into your elbow? Ah, ah, ah-choo!",
+     "wiggle"
+    ],
+    [
+     "What do we do after we use a tissue?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Throw it away, and wash your hands!",
+     "fx2+badge:ELBOW!"
+    ],
+    [
+     "Let's say it together: ELBOW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ELBOW!",
+     "zoom"
+    ],
+    [
+     "Covering your sneeze is a kind way to help your friends stay well.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "water",
+   "lines": [
+    [
+     "Here's a clue: it's clear and cool, and it's the best drink when you're thirsty! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Drink Water!",
+     "enter"
+    ],
+    [
+     "This is drinking water! Can you say water?",
+     "zoom"
+    ],
+    [
+     "Water helps your whole body work, from your head to your toes.",
+     "fx+bob"
+    ],
+    [
+     "When you run and play, you get thirsty. That's your body asking for water!",
+     "bob"
+    ],
+    [
+     "Can you take a pretend sip? Glug, glug, glug! Ahh!",
+     "wiggle"
+    ],
+    [
+     "When should we drink water?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "When we're thirsty, at mealtime, and after we play!",
+     "fx2+badge:DRINK WATER!"
+    ],
+    [
+     "Let's say it together: WATER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WATER!",
+     "zoom"
+    ],
+    [
+     "A water bottle you can fill again is great to take along.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "sleep",
+   "lines": [
+    [
+     "Here's a clue: we put on pajamas, close our eyes, and dream! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Bedtime!",
+     "enter"
+    ],
+    [
+     "This is Bedtime! Can you say bedtime?",
+     "zoom"
+    ],
+    [
+     "Sleep helps your body grow and rest.",
+     "fx+bob"
+    ],
+    [
+     "Little kids need lots of sleep, even more than grown-ups!",
+     "bob"
+    ],
+    [
+     "Can you do a big pretend yawn and stretch? Yaaawn!",
+     "wiggle"
+    ],
+    [
+     "What helps us get ready for bed?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A bath, brushing teeth, a story, and a cozy, quiet room.",
+     "fx2+badge:BEDTIME!"
+    ],
+    [
+     "Let's say it together: BEDTIME!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BEDTIME!",
+     "zoom"
+    ],
+    [
+     "A good sleep helps you wake up ready to play.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Move and play every day.",
+   "@fr2_play"
+  ],
+  [
+   "Sunscreen before the sunshine.",
+   "@fr2_sunscreen"
+  ],
+  [
+   "Sneeze into your elbow.",
+   "@fr2_sneeze"
+  ],
+  [
+   "Drink water when you're thirsty.",
+   "@water"
+  ],
+  [
+   "And a cozy bedtime!",
+   "@sleep"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,5 @@
+episode,format,length,public date (ET),day-7 date,impressions (day 7),CTR % (day 7),still watching at 30 s % (day 7),average view duration (day 7),watch hours (day 7),compare with (same length),compare value,sample big enough? (impressions >= 1000),result
+Crunch Crunch! Who's Munching? Sing With Milo,3D song,~2:40,2026-11-24 3:30 PM,2026-12-01,,,,,,songs 2:41-3:01 (Where Is My Mama? 23% at 30 s / 2.9% CTR; Animal Sounds 19% / 1.9%; Milo Had a Zoo 32% / 6.1%),30 s median 23%,,
+Whose Feet Are These? Guess With Milo,2D cartoon lesson (Guess With Milo),5:00-6:30,2026-11-23 5:30 PM,2026-11-30,,,,,,2D lessons 4:58-5:20 (30 s 18-27%; AVD 0:26-0:45; CTR 1.4-3.5%),30 s median 23%; AVD median 0:33,,
+Whose Baby Is This? Sing With Milo,3D song,~2:40,2026-11-26 3:30 PM,2026-12-03,,,,,,Where Is My Mama? (0.26 watch h per 1000 impressions; 2.9% CTR),0.26 h per 1000 impr.,,
+Whose Ears Are These? Guess With Milo,2D cartoon lesson (Guess With Milo),5:00-6:30,next lesson slot after Nov 23 (set by the build),public date + 7,,,,,,2D lessons CTR median 2.8%; Who Am I? 9.9% on 111 impressions (too small),CTR 2.8%,,

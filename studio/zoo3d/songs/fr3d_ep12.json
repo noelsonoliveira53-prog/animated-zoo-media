@@ -1,0 +1,346 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nFrom a seed to an apple tree,\nGrow, grow, grow with me!\nSun and rain and lots of time,\nApples growing, sweet and fine!\n\n[Verse 1]\nPlant a little seed in the ground,\nPat the dirt down, round and round!\nWater drops and sunny rays,\nWait and wait for many days!\n\n[Chorus]\nFrom a seed to an apple tree,\nGrow, grow, grow with me!\nSun and rain and lots of time,\nApples growing, sweet and fine!\n\n[Verse 2]\nUp pops a sprout, tiny and green,\nThe smallest plant you've ever seen!\nIt grows a trunk and branches wide,\nWith leaves and flowers on every side!\n\n[Bridge]\nCrouch down low like a little seed,\nStretch up tall like a tree indeed!\nWave your arms like branches, sway,\nGrow, grow, grow every day!\n\n[Verse 3]\nFlowers turn to apples, red and round,\nPick them gently, don't drop them down!\nCrunch, crunch, an apple a day,\nNow plant the seeds and grow away!\n\n[Chorus]\nFrom a seed to an apple tree,\nGrow, grow, grow with me!\nSun and rain and lots of time,\nApples growing, sweet and fine!\n\n[Outro]\nGrow, grow, grow! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 922,
+ "who_map": {},
+ "meta": {
+  "title": "Seed to Apple Tree! Plant Life Cycle Song | Fruity Friends",
+  "card": "Seed to Apple Tree!",
+  "thumb_text": "TINY SEED!",
+  "description": "How does an apple grow? The Fruity Friends plant a seed, give it water and sunshine, watch a sprout grow into a tree with flowers, and pick the apples.\nKids crouch like a seed, stretch like a tree and sway like branches. A gentle first look at the plant life cycle. Ages 2-5.",
+  "tags": [
+   "plant life cycle song",
+   "how apples grow",
+   "seed to tree",
+   "science for toddlers",
+   "fruit song",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep12",
+  "title": "Seed to Apple Tree!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "SEED TO TREE!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.65
+     },
+     {
+      "type": "set_prop",
+      "name": "tree",
+      "at": [
+       0,
+       1.6,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "PLANT!",
+      "color": "#8a5a32",
+      "at": [
+       -2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.7,
+      "word": "Plant"
+     },
+     {
+      "type": "set_prop",
+      "name": "water_drop",
+      "at": [
+       2.6,
+       1.2,
+       3.4
+      ],
+      "word": "Water"
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       0,
+       2.0,
+       3.4
+      ],
+      "word": "sunny"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "GROW!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPROUT!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "sprout,"
+     },
+     {
+      "type": "set_prop",
+      "name": "tree",
+      "at": [
+       2.6,
+       1.2,
+       3.4
+      ],
+      "word": "trunk"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "CROUCH!",
+      "color": "#8a5a32",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Crouch"
+     },
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#3cc45a",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Stretch"
+     },
+     {
+      "type": "text",
+      "text": "SWAY!",
+      "color": "#ff8a1f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "sway,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "apples,",
+      "opts": {
+       "kind": "apple"
+      }
+     },
+     {
+      "type": "text",
+      "text": "CRUNCH!",
+      "color": "#e3262b",
+      "at": [
+       2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.7,
+      "word": "Crunch,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "GROW!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep12",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

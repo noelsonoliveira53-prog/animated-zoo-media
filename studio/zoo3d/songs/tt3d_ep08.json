@@ -1,0 +1,312 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nDig, lift, mix and build!\nConstruction trucks are very skilled!\nRumble, rumble, work all day,\nBuilding trucks are on their way!\n\n[Verse 1]\nThe digger digs a great big hole,\nScoop by scoop, that's the goal!\nDown goes the bucket, up comes the dirt,\nDigging, digging, hard at work!\n\n[Chorus]\nDig, lift, mix and build!\nConstruction trucks are very skilled!\nRumble, rumble, work all day,\nBuilding trucks are on their way!\n\n[Verse 2]\nThe crane lifts beams up to the sky,\nHigher, higher, way up high!\nThe cement mixer turns around,\nPour the cement on the ground!\n\n[Bridge]\nDig like a digger, scoop, scoop, scoop!\nLift like a crane, up, up, up!\nSpin like a mixer, round and round,\nStomp like a roller on the ground!\n\n[Verse 3]\nThe roller rolls the road out flat,\nSmooth and shiny, just like that!\nHard hats on and safety first,\nBuilding trucks are the very best!\n\n[Chorus]\nDig, lift, mix and build!\nConstruction trucks are very skilled!\nRumble, rumble, work all day,\nBuilding trucks are on their way!\n\n[Outro]\nDig, lift, build! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 612,
+ "who_map": {},
+ "meta": {
+  "title": "Construction Trucks Song! Dig, Lift, Mix | Tiny Truck Town",
+  "card": "Construction Trucks!",
+  "thumb_text": "DIG! LIFT! MIX!",
+  "description": "Meet the construction trucks! The digger digs a hole, the crane lifts beams up high, the cement mixer spins and the roller makes the road flat.\nKids scoop like a digger, lift like a crane, spin like a mixer and stomp like a roller. Hard hats on, safety first! Ages 2-5.",
+  "tags": [
+   "construction trucks song",
+   "digger song",
+   "crane song",
+   "cement mixer",
+   "trucks for kids",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep08",
+  "title": "Construction Trucks!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "DIG! LIFT! MIX!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "DIG!",
+      "color": "#ffc107",
+      "at": [
+       -2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "digs"
+     },
+     {
+      "type": "text",
+      "text": "SCOOP!",
+      "color": "#8a5a32",
+      "at": [
+       2.8,
+       1.6,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "scoop"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "RUMBLE!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "UP HIGH!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7,
+      "word": "higher,"
+     },
+     {
+      "type": "text",
+      "text": "ROUND!",
+      "color": "#9e9e9e",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "around,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "SCOOP!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "scoop,"
+     },
+     {
+      "type": "text",
+      "text": "UP!",
+      "color": "#3b8be0",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "up,"
+     },
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#e8302a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "stomp"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": [
+       -3.0,
+       1.0,
+       3.6
+      ],
+      "word": "hats"
+     },
+     {
+      "type": "set_prop",
+      "name": "cone",
+      "at": [
+       3.0,
+       0.4,
+       3.6
+      ],
+      "word": "safety"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BUILD!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

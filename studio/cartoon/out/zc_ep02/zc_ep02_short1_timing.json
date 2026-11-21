@@ -1,0 +1,1948 @@
+{
+ "id": "zc_ep02_short1",
+ "total": 86.23900000000005,
+ "plan": {
+  "length": 86.2,
+  "shots": 25,
+  "visual_changes": 102,
+  "mean_gap": 0.85,
+  "longest_gap": 3.59,
+  "longest_gap_at": 77.9,
+  "over_6s": [],
+  "places": [
+   "savanna",
+   "jungle",
+   "bigtree"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 26.3,
+  "first_words_at": 0.42,
+  "shot_mean": 3.45,
+  "fails": [],
+  "words_placed": "201/201"
+ },
+ "events": [
+  [
+   0.3,
+   "new place",
+   "the sunny savanna hook: the trunk"
+  ],
+  [
+   0.42,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   1.51,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   1.51,
+   "word",
+   "?"
+  ],
+  [
+   2.3,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   2.72,
+   "new shot",
+   "the sunny savanna the trunk"
+  ],
+  [
+   3.62,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   4.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   4.66,
+   "word",
+   "TRUNK"
+  ],
+  [
+   5.63,
+   "new place",
+   "the picture board board: a nose"
+  ],
+  [
+   6.54,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   6.54,
+   "picture",
+   "ar"
+  ],
+  [
+   6.54,
+   "word",
+   "NOSE"
+  ],
+  [
+   7.66,
+   "new shot",
+   "the picture board board: a lip"
+  ],
+  [
+   8.62,
+   "word",
+   "+ LIP"
+  ],
+  [
+   9.63,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   9.63,
+   "word",
+   "2 IN 1"
+  ],
+  [
+   10.43,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   10.86,
+   "new place",
+   "the sunny savanna touch your nose"
+  ],
+  [
+   12.58,
+   "action",
+   "milo hops"
+  ],
+  [
+   12.58,
+   "word",
+   "TOUCH!"
+  ],
+  [
+   15.02,
+   "new place",
+   "the picture board (blue) board: the tip"
+  ],
+  [
+   16.56,
+   "action",
+   "the two nostrils light up"
+  ],
+  [
+   16.56,
+   "word",
+   "2 HOLES"
+  ],
+  [
+   18.07,
+   "new shot",
+   "the picture board (blue) board: sniff"
+  ],
+  [
+   20.31,
+   "action",
+   "air goes into the nostrils"
+  ],
+  [
+   20.31,
+   "word",
+   "SNIFF!"
+  ],
+  [
+   21.9,
+   "new place",
+   "the sunny savanna Tumble sniffs"
+  ],
+  [
+   22.03,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   22.03,
+   "word",
+   "SNIFF!"
+  ],
+  [
+   23.59,
+   "picture",
+   "sc"
+  ],
+  [
+   24.54,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   25.4,
+   "new shot",
+   "the sunny savanna smell the food"
+  ],
+  [
+   25.5,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   27.6,
+   "word",
+   "SMELL"
+  ],
+  [
+   28.21,
+   "action",
+   "tumble nods"
+  ],
+  [
+   29.14,
+   "new place",
+   "the picture board (pink) board: far away"
+  ],
+  [
+   29.24,
+   "action",
+   "t's trunk moves"
+  ],
+  [
+   30.21,
+   "picture",
+   "s1"
+  ],
+  [
+   30.74,
+   "picture",
+   "s2"
+  ],
+  [
+   30.74,
+   "word",
+   "FAR AWAY"
+  ],
+  [
+   31.75,
+   "picture",
+   "s3"
+  ],
+  [
+   32.64,
+   "new place",
+   "the sunny savanna question 1"
+  ],
+  [
+   33.83,
+   "sign",
+   "NOSE"
+  ],
+  [
+   34.18,
+   "sign",
+   "TAIL"
+  ],
+  [
+   35.92,
+   "thinking dot",
+   "1"
+  ],
+  [
+   36.92,
+   "thinking dot",
+   "2"
+  ],
+  [
+   37.93,
+   "thinking dot",
+   "3"
+  ],
+  [
+   38.58,
+   "answer",
+   "NOSE"
+  ],
+  [
+   38.63,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   39.08,
+   "new shot",
+   "the sunny savanna a nose!"
+  ],
+  [
+   39.28,
+   "action",
+   "tumble hops"
+  ],
+  [
+   39.28,
+   "word",
+   "NOSE!"
+  ],
+  [
+   40.88,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   42.19,
+   "new place",
+   "the green jungle jungle wide"
+  ],
+  [
+   44.06,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   44.36,
+   "word",
+   "FRUIT!"
+  ],
+  [
+   45.44,
+   "new shot",
+   "the green jungle like a hand"
+  ],
+  [
+   45.67,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   46.49,
+   "word",
+   "HAND"
+  ],
+  [
+   48.01,
+   "new shot",
+   "the green jungle grab"
+  ],
+  [
+   48.48,
+   "action",
+   "Tumble picks the fruit"
+  ],
+  [
+   48.48,
+   "word",
+   "GRAB!"
+  ],
+  [
+   49.67,
+   "action",
+   "the trunk brings it to his mouth"
+  ],
+  [
+   51.12,
+   "new shot",
+   "the green jungle munch"
+  ],
+  [
+   51.17,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   51.22,
+   "action",
+   "Tumble munches"
+  ],
+  [
+   51.34,
+   "word",
+   "YUM!"
+  ],
+  [
+   54.62,
+   "action",
+   "mama walks"
+  ],
+  [
+   54.62,
+   "new place",
+   "the tallest tree bigtree wide"
+  ],
+  [
+   57.7,
+   "word",
+   "STRONG"
+  ],
+  [
+   58.72,
+   "new shot",
+   "the tallest tree the log"
+  ],
+  [
+   61.14,
+   "action",
+   "Mama lifts the log"
+  ],
+  [
+   61.14,
+   "word",
+   "UP!"
+  ],
+  [
+   62.46,
+   "new place",
+   "the picture board board: gentle"
+  ],
+  [
+   63.77,
+   "action",
+   "m looks"
+  ],
+  [
+   63.77,
+   "word",
+   "GENTLE"
+  ],
+  [
+   65.2,
+   "new shot",
+   "the picture board board: one straw"
+  ],
+  [
+   65.3,
+   "action",
+   "Mama's trunk reaches down"
+  ],
+  [
+   66.0,
+   "action",
+   "she picks up one straw"
+  ],
+  [
+   66.0,
+   "word",
+   "1 STRAW"
+  ],
+  [
+   68.23,
+   "new place",
+   "the tallest tree strong and gentle"
+  ],
+  [
+   68.57,
+   "word",
+   "STRONG"
+  ],
+  [
+   69.48,
+   "word",
+   "GENTLE"
+  ],
+  [
+   70.49,
+   "action",
+   "mama nods"
+  ],
+  [
+   71.72,
+   "new place",
+   "the picture board (blue) board: no bones"
+  ],
+  [
+   72.08,
+   "picture",
+   "x"
+  ],
+  [
+   72.08,
+   "word",
+   "NO BONES"
+  ],
+  [
+   74.46,
+   "new place",
+   "the green jungle bendy"
+  ],
+  [
+   75.4,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   75.4,
+   "word",
+   "THIS WAY"
+  ],
+  [
+   76.02,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   76.36,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   76.36,
+   "word",
+   "THAT WAY"
+  ],
+  [
+   77.42,
+   "new shot",
+   "the green jungle wiggle"
+  ],
+  [
+   77.89,
+   "action",
+   "milo hops"
+  ],
+  [
+   77.89,
+   "word",
+   "WIGGLE!"
+  ],
+  [
+   81.48,
+   "new place",
+   "the picture board (pink) board: jobs 1 2"
+  ],
+  [
+   81.99,
+   "picture",
+   "j1"
+  ],
+  [
+   81.99,
+   "word",
+   "2"
+  ],
+  [
+   83.49,
+   "picture",
+   "j0"
+  ],
+  [
+   83.49,
+   "word",
+   "1"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "What can an elephant's trunk do?",
+   "t0": 0.3,
+   "t1": 2.7158333333333333,
+   "v0": 0.42,
+   "dur": 1.8758333333333332,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.2
+    ],
+    [
+     "can",
+     0.2,
+     0.36
+    ],
+    [
+     "an",
+     0.36,
+     0.44
+    ],
+    [
+     "elephant's",
+     0.44,
+     1.09
+    ],
+    [
+     "trunk",
+     1.09,
+     1.48
+    ],
+    [
+     "do?",
+     1.48,
+     1.876
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: the trunk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Look at Tumble's long, bendy trunk.",
+   "t0": 2.7158333333333333,
+   "t1": 5.62775,
+   "v0": 2.8358333333333334,
+   "dur": 2.3719166666666665,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.2
+    ],
+    [
+     "at",
+     0.2,
+     0.28
+    ],
+    [
+     "Tumble's",
+     0.28,
+     0.78
+    ],
+    [
+     "long,",
+     0.78,
+     1.35
+    ],
+    [
+     "bendy",
+     1.35,
+     1.82
+    ],
+    [
+     "trunk.",
+     1.82,
+     2.37
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the trunk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "A trunk is a nose.",
+   "t0": 5.62775,
+   "t1": 7.662791666666666,
+   "v0": 5.74775,
+   "dur": 1.4950416666666666,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.13
+    ],
+    [
+     "trunk",
+     0.13,
+     0.59
+    ],
+    [
+     "is",
+     0.59,
+     0.75
+    ],
+    [
+     "a",
+     0.75,
+     0.79
+    ],
+    [
+     "nose.",
+     0.79,
+     1.49
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: a nose",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And it is an upper lip, too. All in one!",
+   "t0": 7.662791666666666,
+   "t1": 10.857249999999999,
+   "v0": 7.782791666666666,
+   "dur": 2.6544583333333334,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.25
+    ],
+    [
+     "it",
+     0.25,
+     0.37
+    ],
+    [
+     "is",
+     0.37,
+     0.5
+    ],
+    [
+     "an",
+     0.5,
+     0.59
+    ],
+    [
+     "upper",
+     0.59,
+     0.84
+    ],
+    [
+     "lip,",
+     0.84,
+     1.12
+    ],
+    [
+     "too.",
+     1.12,
+     1.58
+    ],
+    [
+     "All",
+     1.85,
+     2.13
+    ],
+    [
+     "in",
+     2.13,
+     2.27
+    ],
+    [
+     "one!",
+     2.27,
+     2.65
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: a lip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Where is your nose? Can you touch your nose?",
+   "t0": 10.857249999999999,
+   "t1": 15.017541666666665,
+   "v0": 10.977249999999998,
+   "dur": 2.6202916666666667,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.42
+    ],
+    [
+     "your",
+     0.42,
+     0.52
+    ],
+    [
+     "nose?",
+     0.52,
+     1.1
+    ],
+    [
+     "Can",
+     1.33,
+     1.49
+    ],
+    [
+     "you",
+     1.49,
+     1.6
+    ],
+    [
+     "touch",
+     1.6,
+     1.92
+    ],
+    [
+     "your",
+     1.92,
+     2.01
+    ],
+    [
+     "nose?",
+     2.01,
+     2.62
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "touch your nose",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "At the tip of the trunk are two little holes.",
+   "t0": 15.017541666666665,
+   "t1": 18.06833333333333,
+   "v0": 15.137541666666664,
+   "dur": 2.5107916666666665,
+   "words": [
+    [
+     "At",
+     0.01,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.24
+    ],
+    [
+     "tip",
+     0.24,
+     0.49
+    ],
+    [
+     "of",
+     0.49,
+     0.58
+    ],
+    [
+     "the",
+     0.58,
+     0.66
+    ],
+    [
+     "trunk",
+     0.66,
+     1.18
+    ],
+    [
+     "are",
+     1.31,
+     1.42
+    ],
+    [
+     "two",
+     1.42,
+     1.71
+    ],
+    [
+     "little",
+     1.71,
+     1.91
+    ],
+    [
+     "holes.",
+     1.91,
+     2.51
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: the tip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "An elephant breathes through them. Sniff, sniff!",
+   "t0": 18.06833333333333,
+   "t1": 21.901333333333334,
+   "v0": 18.188333333333333,
+   "dur": 3.293,
+   "words": [
+    [
+     "An",
+     0.0,
+     0.12
+    ],
+    [
+     "elephant",
+     0.12,
+     0.71
+    ],
+    [
+     "breathes",
+     0.71,
+     1.2
+    ],
+    [
+     "through",
+     1.2,
+     1.48
+    ],
+    [
+     "them.",
+     1.48,
+     1.77
+    ],
+    [
+     "Sniff,",
+     2.12,
+     2.62
+    ],
+    [
+     "sniff!",
+     2.62,
+     3.29
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: sniff",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Sniff, sniff! Tumble smells something yummy.",
+   "t0": 21.901333333333334,
+   "t1": 25.403333333333336,
+   "v0": 22.021333333333335,
+   "dur": 2.962,
+   "words": [
+    [
+     "Sniff,",
+     0.01,
+     0.43
+    ],
+    [
+     "sniff!",
+     0.43,
+     0.97
+    ],
+    [
+     "Tumble",
+     1.22,
+     1.57
+    ],
+    [
+     "smells",
+     1.57,
+     2.04
+    ],
+    [
+     "something",
+     2.04,
+     2.52
+    ],
+    [
+     "yummy.",
+     2.52,
+     2.96
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Tumble sniffs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "An elephant uses its trunk to smell its food.",
+   "t0": 25.403333333333336,
+   "t1": 29.140000000000004,
+   "v0": 25.523333333333337,
+   "dur": 3.1966666666666668,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.12
+    ],
+    [
+     "elephant",
+     0.12,
+     0.78
+    ],
+    [
+     "uses",
+     0.78,
+     1.26
+    ],
+    [
+     "its",
+     1.26,
+     1.47
+    ],
+    [
+     "trunk",
+     1.47,
+     1.97
+    ],
+    [
+     "to",
+     1.97,
+     2.08
+    ],
+    [
+     "smell",
+     2.08,
+     2.5
+    ],
+    [
+     "its",
+     2.5,
+     2.69
+    ],
+    [
+     "food.",
+     2.69,
+     3.197
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "smell the food",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "It can even smell water from far, far away!",
+   "t0": 29.140000000000004,
+   "t1": 32.63895833333334,
+   "v0": 29.260000000000005,
+   "dur": 2.9589583333333334,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.13
+    ],
+    [
+     "can",
+     0.13,
+     0.26
+    ],
+    [
+     "even",
+     0.26,
+     0.57
+    ],
+    [
+     "smell",
+     0.57,
+     0.95
+    ],
+    [
+     "water",
+     0.95,
+     1.26
+    ],
+    [
+     "from",
+     1.26,
+     1.48
+    ],
+    [
+     "far,",
+     1.48,
+     1.97
+    ],
+    [
+     "far",
+     2.17,
+     2.49
+    ],
+    [
+     "away!",
+     2.49,
+     2.959
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: far away",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "So, is a trunk a nose, or a tail?",
+   "t0": 32.63895833333334,
+   "t1": 39.08308333333334,
+   "v0": 32.75895833333334,
+   "dur": 2.504125,
+   "words": [
+    [
+     "So,",
+     0.01,
+     0.42
+    ],
+    [
+     "is",
+     0.42,
+     0.63
+    ],
+    [
+     "a",
+     0.63,
+     0.67
+    ],
+    [
+     "trunk",
+     0.67,
+     1.03
+    ],
+    [
+     "a",
+     1.03,
+     1.07
+    ],
+    [
+     "nose,",
+     1.07,
+     1.68
+    ],
+    [
+     "or",
+     1.68,
+     1.88
+    ],
+    [
+     "a",
+     1.88,
+     1.92
+    ],
+    [
+     "tail?",
+     1.92,
+     2.5
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "A nose! A very, very long nose.",
+   "t0": 39.08308333333334,
+   "t1": 42.19129166666667,
+   "v0": 39.20308333333334,
+   "dur": 2.568208333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "nose!",
+     0.08,
+     0.72
+    ],
+    [
+     "A",
+     0.84,
+     0.89
+    ],
+    [
+     "very,",
+     0.89,
+     1.36
+    ],
+    [
+     "very",
+     1.36,
+     1.68
+    ],
+    [
+     "long",
+     1.68,
+     2.02
+    ],
+    [
+     "nose.",
+     2.02,
+     2.568
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "a nose!",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Now Tumble is hungry. Look, a fruit!",
+   "t0": 42.19129166666667,
+   "t1": 45.441750000000006,
+   "v0": 42.31129166666667,
+   "dur": 2.7104583333333334,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.35
+    ],
+    [
+     "Tumble",
+     0.35,
+     0.74
+    ],
+    [
+     "is",
+     0.74,
+     0.89
+    ],
+    [
+     "hungry.",
+     0.89,
+     1.5
+    ],
+    [
+     "Look,",
+     1.75,
+     1.98
+    ],
+    [
+     "a",
+     1.98,
+     2.05
+    ],
+    [
+     "fruit!",
+     2.05,
+     2.71
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "jungle wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "A trunk is like a hand, too.",
+   "t0": 45.441750000000006,
+   "t1": 48.01320833333334,
+   "v0": 45.56175,
+   "dur": 2.031458333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.11
+    ],
+    [
+     "trunk",
+     0.11,
+     0.59
+    ],
+    [
+     "is",
+     0.59,
+     0.73
+    ],
+    [
+     "like",
+     0.73,
+     0.9
+    ],
+    [
+     "a",
+     0.9,
+     0.93
+    ],
+    [
+     "hand,",
+     0.93,
+     1.47
+    ],
+    [
+     "too.",
+     1.47,
+     2.03
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "like a hand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "It can grab, hold, pick up and reach.",
+   "t0": 48.01320833333334,
+   "t1": 51.12258333333334,
+   "v0": 48.133208333333336,
+   "dur": 2.569375,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.15
+    ],
+    [
+     "can",
+     0.15,
+     0.35
+    ],
+    [
+     "grab,",
+     0.35,
+     1.01
+    ],
+    [
+     "hold,",
+     1.01,
+     1.54
+    ],
+    [
+     "pick",
+     1.54,
+     1.79
+    ],
+    [
+     "up",
+     1.79,
+     1.95
+    ],
+    [
+     "and",
+     1.95,
+     2.09
+    ],
+    [
+     "reach.",
+     2.09,
+     2.569
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "grab",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Yum, yum, yum! Can you munch like Tumble?",
+   "t0": 51.12258333333334,
+   "t1": 54.622083333333336,
+   "v0": 51.242583333333336,
+   "dur": 2.9595,
+   "words": [
+    [
+     "Yum,",
+     0.1,
+     0.48
+    ],
+    [
+     "yum,",
+     0.48,
+     0.87
+    ],
+    [
+     "yum!",
+     1.03,
+     1.39
+    ],
+    [
+     "Can",
+     1.68,
+     1.82
+    ],
+    [
+     "you",
+     1.82,
+     1.92
+    ],
+    [
+     "munch",
+     1.92,
+     2.19
+    ],
+    [
+     "like",
+     2.19,
+     2.36
+    ],
+    [
+     "Tumble?",
+     2.36,
+     2.959
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "munch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Here comes Mama. Her trunk is very, very strong.",
+   "t0": 54.622083333333336,
+   "t1": 58.72054166666667,
+   "v0": 54.74208333333333,
+   "dur": 3.5584583333333333,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.24
+    ],
+    [
+     "comes",
+     0.24,
+     0.58
+    ],
+    [
+     "Mama.",
+     0.58,
+     1.03
+    ],
+    [
+     "Her",
+     1.47,
+     1.57
+    ],
+    [
+     "trunk",
+     1.57,
+     1.91
+    ],
+    [
+     "is",
+     1.91,
+     2.07
+    ],
+    [
+     "very,",
+     2.07,
+     2.6
+    ],
+    [
+     "very",
+     2.6,
+     2.96
+    ],
+    [
+     "strong.",
+     2.96,
+     3.558
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "bigtree wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "It can lift a big, heavy log. Up it goes!",
+   "t0": 58.72054166666667,
+   "t1": 62.455333333333336,
+   "v0": 58.84054166666667,
+   "dur": 3.1947916666666667,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.14
+    ],
+    [
+     "can",
+     0.14,
+     0.37
+    ],
+    [
+     "lift",
+     0.37,
+     0.68
+    ],
+    [
+     "a",
+     0.68,
+     0.73
+    ],
+    [
+     "big,",
+     0.73,
+     1.06
+    ],
+    [
+     "heavy",
+     1.06,
+     1.4
+    ],
+    [
+     "log.",
+     1.4,
+     1.91
+    ],
+    [
+     "Up",
+     2.3,
+     2.45
+    ],
+    [
+     "it",
+     2.45,
+     2.55
+    ],
+    [
+     "goes!",
+     2.55,
+     3.19
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the log",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And a trunk is very gentle, too.",
+   "t0": 62.455333333333336,
+   "t1": 65.203625,
+   "v0": 62.57533333333333,
+   "dur": 2.2082916666666668,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.17
+    ],
+    [
+     "a",
+     0.17,
+     0.22
+    ],
+    [
+     "trunk",
+     0.22,
+     0.68
+    ],
+    [
+     "is",
+     0.68,
+     0.87
+    ],
+    [
+     "very",
+     0.87,
+     1.19
+    ],
+    [
+     "gentle,",
+     1.19,
+     1.71
+    ],
+    [
+     "too.",
+     1.71,
+     2.208
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: gentle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "It can pick up one tiny piece of straw.",
+   "t0": 65.203625,
+   "t1": 68.22533333333334,
+   "v0": 65.323625,
+   "dur": 2.481708333333333,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.12
+    ],
+    [
+     "can",
+     0.12,
+     0.28
+    ],
+    [
+     "pick",
+     0.28,
+     0.49
+    ],
+    [
+     "up",
+     0.49,
+     0.68
+    ],
+    [
+     "one",
+     0.68,
+     1.05
+    ],
+    [
+     "tiny",
+     1.05,
+     1.53
+    ],
+    [
+     "piece",
+     1.53,
+     1.88
+    ],
+    [
+     "of",
+     1.88,
+     1.95
+    ],
+    [
+     "straw.",
+     1.95,
+     2.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: one straw",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "So strong, and so gentle. What a nose!",
+   "t0": 68.22533333333334,
+   "t1": 71.71525000000001,
+   "v0": 68.34533333333334,
+   "dur": 2.9499166666666667,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.22
+    ],
+    [
+     "strong,",
+     0.22,
+     0.81
+    ],
+    [
+     "and",
+     0.81,
+     0.95
+    ],
+    [
+     "so",
+     0.95,
+     1.13
+    ],
+    [
+     "gentle.",
+     1.13,
+     1.76
+    ],
+    [
+     "What",
+     2.14,
+     2.27
+    ],
+    [
+     "a",
+     2.27,
+     2.31
+    ],
+    [
+     "nose!",
+     2.31,
+     2.95
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "strong and gentle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "There are no bones inside a trunk.",
+   "t0": 71.71525000000001,
+   "t1": 74.45658333333336,
+   "v0": 71.83525000000002,
+   "dur": 2.2013333333333334,
+   "words": [
+    [
+     "There",
+     0.0,
+     0.19
+    ],
+    [
+     "are",
+     0.19,
+     0.24
+    ],
+    [
+     "no",
+     0.24,
+     0.51
+    ],
+    [
+     "bones",
+     0.51,
+     1.14
+    ],
+    [
+     "inside",
+     1.14,
+     1.61
+    ],
+    [
+     "a",
+     1.61,
+     1.65
+    ],
+    [
+     "trunk.",
+     1.65,
+     2.2
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: no bones",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "So it can bend this way, and that way!",
+   "t0": 74.45658333333336,
+   "t1": 77.41700000000003,
+   "v0": 74.57658333333336,
+   "dur": 2.4204166666666667,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.23
+    ],
+    [
+     "it",
+     0.23,
+     0.31
+    ],
+    [
+     "can",
+     0.31,
+     0.48
+    ],
+    [
+     "bend",
+     0.48,
+     0.82
+    ],
+    [
+     "this",
+     0.82,
+     1.05
+    ],
+    [
+     "way,",
+     1.05,
+     1.44
+    ],
+    [
+     "and",
+     1.6,
+     1.78
+    ],
+    [
+     "that",
+     1.78,
+     1.99
+    ],
+    [
+     "way!",
+     1.99,
+     2.42
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "bendy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Can you wiggle your arm like a trunk? Wiggle, wiggle!",
+   "t0": 77.41700000000003,
+   "t1": 81.47708333333337,
+   "v0": 77.53700000000003,
+   "dur": 3.5200833333333335,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.21
+    ],
+    [
+     "you",
+     0.21,
+     0.35
+    ],
+    [
+     "wiggle",
+     0.35,
+     0.69
+    ],
+    [
+     "your",
+     0.69,
+     0.89
+    ],
+    [
+     "arm",
+     0.89,
+     1.22
+    ],
+    [
+     "like",
+     1.22,
+     1.39
+    ],
+    [
+     "a",
+     1.39,
+     1.43
+    ],
+    [
+     "trunk?",
+     1.43,
+     1.99
+    ],
+    [
+     "Wiggle,",
+     2.34,
+     2.97
+    ],
+    [
+     "wiggle!",
+     2.97,
+     3.52
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "wiggle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "That is two trunk jobs. One, smell. Two, grab.",
+   "t0": 81.47708333333337,
+   "t1": 85.83900000000004,
+   "v0": 81.59708333333337,
+   "dur": 3.8219166666666666,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.24
+    ],
+    [
+     "is",
+     0.24,
+     0.39
+    ],
+    [
+     "two",
+     0.39,
+     0.61
+    ],
+    [
+     "trunk",
+     0.61,
+     0.97
+    ],
+    [
+     "jobs.",
+     0.97,
+     1.65
+    ],
+    [
+     "One,",
+     1.89,
+     2.18
+    ],
+    [
+     "smell.",
+     2.18,
+     2.75
+    ],
+    [
+     "Two,",
+     2.96,
+     3.23
+    ],
+    [
+     "grab.",
+     3.23,
+     3.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: jobs 1 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

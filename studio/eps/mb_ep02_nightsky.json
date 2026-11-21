@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep02_nightsky",
+ "title": "Goodnight Moon and Stars 🌙 Calm Night Sky Bedtime Story with Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the quiet night sky.",
+   ""
+  ],
+  [
+   "Let's take a slow, deep breath together. In, and out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb_sunset",
+   "lines": [
+    [
+     "Here's a little clue: the sun goes down, and the sky turns orange and pink. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Sunset.",
+     "enter"
+    ],
+    [
+     "This is Sunset. Can you whisper sunset?",
+     "zoom"
+    ],
+    [
+     "At sunset, the sun says goodbye for today.",
+     "fx+bob"
+    ],
+    [
+     "The sky turns orange, pink, and purple.",
+     "bob"
+    ],
+    [
+     "Can you stretch up high, then slowly come down, like the sun?",
+     "bob"
+    ],
+    [
+     "What colors are in a sunset?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Orange, pink, and purple.",
+     "fx2+badge:SUNSET"
+    ],
+    [
+     "Let's say it softly together: Sunset.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Sunset.",
+     "zoom"
+    ],
+    [
+     "Soon it will be night time.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Sun.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_moon",
+   "lines": [
+    [
+     "Here's a little clue: it glows in the night sky, round and bright. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Moon.",
+     "enter"
+    ],
+    [
+     "This is Moon. Can you whisper moon?",
+     "zoom"
+    ],
+    [
+     "The moon shines when the sun goes to sleep.",
+     "fx+bob"
+    ],
+    [
+     "Sometimes it's round, and sometimes it's a thin smile.",
+     "bob"
+    ],
+    [
+     "Can you make a big round moon with your arms? Slowly.",
+     "bob"
+    ],
+    [
+     "What shapes can the moon be?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A big round circle, or a thin crescent.",
+     "fx2+badge:MOON"
+    ],
+    [
+     "Let's say it softly together: Moon.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Moon.",
+     "zoom"
+    ],
+    [
+     "The moon watches over us all night.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Moon.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_stars",
+   "lines": [
+    [
+     "Here's a little clue: they twinkle, twinkle in the dark sky. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Stars.",
+     "enter"
+    ],
+    [
+     "This is Stars. Can you whisper stars?",
+     "zoom"
+    ],
+    [
+     "Stars are very, very far away.",
+     "fx+bob"
+    ],
+    [
+     "They twinkle like tiny lights.",
+     "bob"
+    ],
+    [
+     "Can you twinkle your fingers like little stars?",
+     "bob"
+    ],
+    [
+     "When can we see the stars?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "At night, when the sky is dark.",
+     "fx2+badge:STARS"
+    ],
+    [
+     "Let's say it softly together: Stars.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Stars.",
+     "zoom"
+    ],
+    [
+     "Stars make pictures in the sky.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Stars.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_cloud",
+   "lines": [
+    [
+     "Here's a little clue: it's soft and white, and it floats in the sky. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Cloud.",
+     "enter"
+    ],
+    [
+     "This is Cloud. Can you whisper cloud?",
+     "zoom"
+    ],
+    [
+     "Clouds are made of tiny drops of water.",
+     "fx+bob"
+    ],
+    [
+     "When they get heavy, they make gentle rain.",
+     "bob"
+    ],
+    [
+     "Can you float like a cloud? Sway, slowly, side to side.",
+     "bob"
+    ],
+    [
+     "What makes rain?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Clouds full of tiny water drops.",
+     "fx2+badge:CLOUD"
+    ],
+    [
+     "Let's say it softly together: Cloud.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Cloud.",
+     "zoom"
+    ],
+    [
+     "Cloud drifts by, quiet and slow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Cloud.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_firefly",
+   "lines": [
+    [
+     "Here's a little clue: it's a little bug that glows in the dark. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Firefly.",
+     "enter"
+    ],
+    [
+     "This is Firefly. Can you whisper firefly?",
+     "zoom"
+    ],
+    [
+     "Fireflies glow with a soft yellow light.",
+     "fx+bob"
+    ],
+    [
+     "They blink on and off, on and off.",
+     "bob"
+    ],
+    [
+     "Can you blink your eyes slowly, like a firefly? Blink, blink.",
+     "bob"
+    ],
+    [
+     "What makes a firefly special?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Its little glowing light.",
+     "fx2+badge:FIREFLY"
+    ],
+    [
+     "Let's say it softly together: Firefly.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Firefly.",
+     "zoom"
+    ],
+    [
+     "Fireflies dance softly in the night.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Firefly.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all our friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Sun.",
+   "@mb_sunset"
+  ],
+  [
+   "Goodnight, Moon.",
+   "@mb_moon"
+  ],
+  [
+   "Goodnight, Stars.",
+   "@mb_stars"
+  ],
+  [
+   "Goodnight, Cloud.",
+   "@mb_cloud"
+  ],
+  [
+   "Goodnight, Firefly.",
+   "@mb_firefly"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Sun, Moon, Stars, Cloud, and Firefly. Now close your eyes, and dream sweet dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

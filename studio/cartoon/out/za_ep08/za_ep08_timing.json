@@ -1,0 +1,6368 @@
+{
+ "id": "za_ep08",
+ "total": 308.3155833333333,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125
+ ],
+ "plan": {
+  "length": 308.3,
+  "shots": 60,
+  "visual_changes": 326,
+  "mean_gap": 0.95,
+  "longest_gap": 5.16,
+  "longest_gap_at": 179.4,
+  "over_6s": [],
+  "places": [
+   "zoo",
+   "dunes",
+   "trail",
+   "oasis",
+   "dune_eve",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 13,
+  "longest_without_question": 38.1,
+  "first_words_at": 0.42,
+  "shot_mean": 5.14,
+  "beats": {
+   "hook": 1,
+   "goal": 10,
+   "obstacle1": 4,
+   "obstacle2": 6,
+   "fact": 3,
+   "obstacle3": 4,
+   "low": 5,
+   "solution": 7,
+   "song": 2,
+   "ending": 13
+  },
+  "fails": [],
+  "words_placed": "645/645",
+  "sync": {
+   "pauses_checked": 54,
+   "onset_err_mean_ms": 27.8,
+   "onset_err_max_ms": 150.0,
+   "suspect_words": [],
+   "cuts": 59,
+   "cuts_on_the_half_beat": 59,
+   "songs_entering_on_a_beat": "2/2",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the zoo gate hook: the droopy tree"
+  ],
+  [
+   0.02,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   1.9,
+   "action",
+   "the leaves droop"
+  ],
+  [
+   3.18,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   3.18,
+   "word",
+   "THIRSTY!"
+  ],
+  [
+   4.38,
+   "new shot",
+   "the zoo gate zoo wide: Milo, Sandy, Tumble"
+  ],
+  [
+   4.53,
+   "action",
+   "milo hops"
+  ],
+  [
+   8.43,
+   "action",
+   "sandy hops"
+  ],
+  [
+   8.43,
+   "word",
+   "SANDY"
+  ],
+  [
+   10.51,
+   "action",
+   "tumble nods"
+  ],
+  [
+   10.51,
+   "word",
+   "TUMBLE"
+  ],
+  [
+   12.5,
+   "new shot",
+   "the zoo gate Tumble: the can is empty"
+  ],
+  [
+   12.52,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   12.92,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   13.42,
+   "action",
+   "the can tips: nothing"
+  ],
+  [
+   14.55,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   14.55,
+   "word",
+   "EMPTY!"
+  ],
+  [
+   15.62,
+   "new shot",
+   "the zoo gate Sandy: none left"
+  ],
+  [
+   15.64,
+   "action",
+   "sandy looks sad"
+  ],
+  [
+   15.86,
+   "action",
+   "sandy looks"
+  ],
+  [
+   18.26,
+   "action",
+   "sandy looks"
+  ],
+  [
+   18.26,
+   "word",
+   "NO WATER"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the zoo gate goal: to the oasis"
+  ],
+  [
+   19.39,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   19.7,
+   "word",
+   "TO THE OASIS!"
+  ],
+  [
+   22.46,
+   "action",
+   "sandy hops"
+  ],
+  [
+   24.11,
+   "action",
+   "sandy nods"
+  ],
+  [
+   25.0,
+   "new shot",
+   "the zoo gate Mama gives the jugs"
+  ],
+  [
+   26.09,
+   "action",
+   "mama looks"
+  ],
+  [
+   26.86,
+   "picture",
+   "pk"
+  ],
+  [
+   29.09,
+   "action",
+   "mama looks"
+  ],
+  [
+   29.44,
+   "action",
+   "mama nods"
+  ],
+  [
+   29.44,
+   "word",
+   "STAY TOGETHER"
+  ],
+  [
+   31.22,
+   "action",
+   "sandy nods"
+  ],
+  [
+   32.19,
+   "new shot",
+   "the zoo gate question: happy or thirsty"
+  ],
+  [
+   33.15,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   33.5,
+   "sign",
+   "THIRSTY"
+  ],
+  [
+   35.18,
+   "thinking dot",
+   "1"
+  ],
+  [
+   35.79,
+   "thinking dot",
+   "2"
+  ],
+  [
+   36.39,
+   "thinking dot",
+   "3"
+  ],
+  [
+   36.85,
+   "answer",
+   "THIRSTY"
+  ],
+  [
+   38.12,
+   "new shot",
+   "the zoo gate Tumble: bye, Mama"
+  ],
+  [
+   38.15,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   38.45,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   38.45,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   39.54,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   40.94,
+   "new place",
+   "the dunes at sunrise over the dunes"
+  ],
+  [
+   41.04,
+   "action",
+   "milo flies"
+  ],
+  [
+   41.04,
+   "action",
+   "sandy walks"
+  ],
+  [
+   41.04,
+   "action",
+   "tumble walks"
+  ],
+  [
+   41.53,
+   "word",
+   "OFF WE GO!"
+  ],
+  [
+   44.37,
+   "word",
+   "SO FAR!"
+  ],
+  [
+   45.94,
+   "new shot",
+   "the dunes at sunrise question: count the jugs"
+  ],
+  [
+   49.61,
+   "count",
+   "1"
+  ],
+  [
+   49.93,
+   "count",
+   "2"
+  ],
+  [
+   51.88,
+   "new shot",
+   "the dunes at sunrise Milo: tired wings"
+  ],
+  [
+   51.9,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   51.98,
+   "word",
+   "FLAP, FLAP!"
+  ],
+  [
+   53.41,
+   "action",
+   "milo flies"
+  ],
+  [
+   54.66,
+   "action",
+   "milo looks sleepy"
+  ],
+  [
+   54.66,
+   "word",
+   "TIRED!"
+  ],
+  [
+   55.62,
+   "new shot",
+   "the dunes at sunrise Sandy: rest on my back"
+  ],
+  [
+   55.65,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   56.39,
+   "action",
+   "sandy nods"
+  ],
+  [
+   56.39,
+   "word",
+   "HOP ON!"
+  ],
+  [
+   59.38,
+   "new shot",
+   "the dunes at sunrise Milo lands on Sandy"
+  ],
+  [
+   60.18,
+   "action",
+   "Milo lands on her back"
+  ],
+  [
+   62.76,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   63.41,
+   "word",
+   "AHH!"
+  ],
+  [
+   64.06,
+   "new shot",
+   "the dunes at sunrise question: Sandy or Tumble"
+  ],
+  [
+   66.25,
+   "sign",
+   "SANDY"
+  ],
+  [
+   66.6,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   68.16,
+   "thinking dot",
+   "1"
+  ],
+  [
+   68.76,
+   "thinking dot",
+   "2"
+  ],
+  [
+   69.37,
+   "thinking dot",
+   "3"
+  ],
+  [
+   69.82,
+   "answer",
+   "SANDY"
+  ],
+  [
+   71.25,
+   "new place",
+   "the rocky trail the hot rocky trail"
+  ],
+  [
+   71.35,
+   "action",
+   "sandy walks"
+  ],
+  [
+   71.35,
+   "action",
+   "tumble walks"
+  ],
+  [
+   73.21,
+   "picture",
+   "ht"
+  ],
+  [
+   73.21,
+   "word",
+   "HOT!"
+  ],
+  [
+   75.0,
+   "new shot",
+   "the rocky trail Tumble: so hot"
+  ],
+  [
+   75.02,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   75.95,
+   "picture",
+   "sw"
+  ],
+  [
+   75.95,
+   "word",
+   "SO HOT!"
+  ],
+  [
+   77.26,
+   "action",
+   "Tumble flaps his ears"
+  ],
+  [
+   79.06,
+   "new shot",
+   "the rocky trail Milo: rest in the shade"
+  ],
+  [
+   79.73,
+   "action",
+   "milo hops"
+  ],
+  [
+   80.44,
+   "word",
+   "SHADE!"
+  ],
+  [
+   81.33,
+   "action",
+   "sandy looks"
+  ],
+  [
+   82.19,
+   "new shot",
+   "the rocky trail resting in the shade"
+  ],
+  [
+   82.21,
+   "action",
+   "tumble looks sleepy"
+  ],
+  [
+   83.48,
+   "word",
+   "COOL SHADE"
+  ],
+  [
+   85.29,
+   "action",
+   "Tumble flaps his ears"
+  ],
+  [
+   87.48,
+   "action",
+   "milo hops"
+  ],
+  [
+   87.48,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   88.12,
+   "new shot",
+   "the rocky trail flap along"
+  ],
+  [
+   88.14,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   88.77,
+   "action",
+   "Tumble flaps his ears"
+  ],
+  [
+   88.77,
+   "word",
+   "FLAP, FLAP!"
+  ],
+  [
+   92.81,
+   "new shot",
+   "the rocky trail question: sun or shade"
+  ],
+  [
+   94.5,
+   "sign",
+   "SUN"
+  ],
+  [
+   94.85,
+   "sign",
+   "SHADE"
+  ],
+  [
+   96.44,
+   "thinking dot",
+   "1"
+  ],
+  [
+   97.05,
+   "thinking dot",
+   "2"
+  ],
+  [
+   97.65,
+   "thinking dot",
+   "3"
+  ],
+  [
+   98.11,
+   "answer",
+   "SHADE"
+  ],
+  [
+   99.38,
+   "new place",
+   "the oasis the oasis wide"
+  ],
+  [
+   99.87,
+   "action",
+   "milo hops"
+  ],
+  [
+   100.49,
+   "word",
+   "THE OASIS!"
+  ],
+  [
+   102.23,
+   "action",
+   "tumble hops"
+  ],
+  [
+   103.72,
+   "action",
+   "sandy nods"
+  ],
+  [
+   104.69,
+   "new shot",
+   "the oasis they drink"
+  ],
+  [
+   105.23,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   106.92,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   106.92,
+   "word",
+   "SLURP!"
+  ],
+  [
+   107.73,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   107.91,
+   "action",
+   "sandy bends down to drink"
+  ],
+  [
+   109.72,
+   "word",
+   "GULP, GULP!"
+  ],
+  [
+   110.62,
+   "new shot",
+   "the oasis Milo sips"
+  ],
+  [
+   112.34,
+   "action",
+   "Milo sips"
+  ],
+  [
+   112.34,
+   "word",
+   "SIP!"
+  ],
+  [
+   113.3,
+   "action",
+   "milo hops"
+  ],
+  [
+   115.94,
+   "new place",
+   "the picture board (blue) fact: thirty gallons in thirteen minutes"
+  ],
+  [
+   118.27,
+   "action",
+   "ten jugs"
+  ],
+  [
+   118.27,
+   "word",
+   "30 GALLONS"
+  ],
+  [
+   118.74,
+   "action",
+   "ten more"
+  ],
+  [
+   119.39,
+   "action",
+   "thirty jugs"
+  ],
+  [
+   120.81,
+   "action",
+   "the clock turns"
+  ],
+  [
+   120.81,
+   "picture",
+   "ck"
+  ],
+  [
+   120.81,
+   "word",
+   "13 MINUTES"
+  ],
+  [
+   122.19,
+   "new place",
+   "the oasis question: one or thirty jugs"
+  ],
+  [
+   123.98,
+   "sign",
+   "1 JUG"
+  ],
+  [
+   124.33,
+   "sign",
+   "30 JUGS"
+  ],
+  [
+   126.32,
+   "thinking dot",
+   "1"
+  ],
+  [
+   126.92,
+   "thinking dot",
+   "2"
+  ],
+  [
+   127.53,
+   "thinking dot",
+   "3"
+  ],
+  [
+   127.98,
+   "answer",
+   "30 JUGS"
+  ],
+  [
+   129.38,
+   "new shot",
+   "the oasis filling the jugs"
+  ],
+  [
+   129.61,
+   "action",
+   "water pours in"
+  ],
+  [
+   129.61,
+   "picture",
+   "fl"
+  ],
+  [
+   129.61,
+   "word",
+   "GLUG, GLUG!"
+  ],
+  [
+   134.29,
+   "action",
+   "milo hops"
+  ],
+  [
+   134.29,
+   "word",
+   "FULL!"
+  ],
+  [
+   135.31,
+   "new place",
+   "the big sandy hill the way back: soft sand"
+  ],
+  [
+   135.41,
+   "action",
+   "sandy walks"
+  ],
+  [
+   135.41,
+   "action",
+   "tumble walks"
+  ],
+  [
+   137.0,
+   "word",
+   "SOFT SAND"
+  ],
+  [
+   139.5,
+   "action",
+   "the jugs sway"
+  ],
+  [
+   139.5,
+   "word",
+   "HEAVY!"
+  ],
+  [
+   140.62,
+   "new shot",
+   "the big sandy hill Tumble: the jug wobbles"
+  ],
+  [
+   140.65,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   141.87,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   142.95,
+   "action",
+   "the jug wobbles"
+  ],
+  [
+   143.49,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   143.49,
+   "picture",
+   "sp"
+  ],
+  [
+   143.49,
+   "word",
+   "SPLISH!"
+  ],
+  [
+   144.38,
+   "new shot",
+   "the big sandy hill Milo: too heavy"
+  ],
+  [
+   144.4,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   146.07,
+   "action",
+   "Milo pulls"
+  ],
+  [
+   146.85,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   146.85,
+   "word",
+   "TOO HEAVY!"
+  ],
+  [
+   148.44,
+   "new shot",
+   "the big sandy hill question: heavy or light"
+  ],
+  [
+   149.52,
+   "sign",
+   "HEAVY"
+  ],
+  [
+   149.87,
+   "sign",
+   "LIGHT"
+  ],
+  [
+   151.23,
+   "thinking dot",
+   "1"
+  ],
+  [
+   151.83,
+   "thinking dot",
+   "2"
+  ],
+  [
+   152.44,
+   "thinking dot",
+   "3"
+  ],
+  [
+   152.89,
+   "answer",
+   "HEAVY"
+  ],
+  [
+   154.38,
+   "new shot",
+   "the big sandy hill sitting on the hill"
+  ],
+  [
+   154.67,
+   "action",
+   "Sandy settles"
+  ],
+  [
+   154.67,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   154.67,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   159.3,
+   "word",
+   "SO FAR..."
+  ],
+  [
+   160.62,
+   "new shot",
+   "the big sandy hill Milo: so heavy"
+  ],
+  [
+   160.65,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   164.71,
+   "word",
+   "SO HEAVY"
+  ],
+  [
+   165.62,
+   "new shot",
+   "the big sandy hill Tumble: maybe not today"
+  ],
+  [
+   165.65,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   167.21,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   168.44,
+   "new shot",
+   "the big sandy hill Sandy: let me think"
+  ],
+  [
+   168.46,
+   "action",
+   "sandy looks sad"
+  ],
+  [
+   171.07,
+   "action",
+   "sandy looks"
+  ],
+  [
+   171.07,
+   "word",
+   "HMM..."
+  ],
+  [
+   171.88,
+   "new shot",
+   "the big sandy hill question: Milo or Sandy"
+  ],
+  [
+   174.12,
+   "sign",
+   "MILO"
+  ],
+  [
+   174.47,
+   "sign",
+   "SANDY"
+  ],
+  [
+   176.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   176.64,
+   "thinking dot",
+   "2"
+  ],
+  [
+   177.25,
+   "thinking dot",
+   "3"
+  ],
+  [
+   177.7,
+   "answer",
+   "SANDY"
+  ],
+  [
+   179.06,
+   "new shot",
+   "the big sandy hill Sandy: I know!"
+  ],
+  [
+   179.08,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   179.44,
+   "action",
+   "sandy hops"
+  ],
+  [
+   179.44,
+   "word",
+   "I KNOW!"
+  ],
+  [
+   184.6,
+   "action",
+   "sandy nods"
+  ],
+  [
+   185.94,
+   "new place",
+   "the picture board fact: camels carry heavy loads"
+  ],
+  [
+   188.37,
+   "action",
+   "the big load"
+  ],
+  [
+   188.37,
+   "word",
+   "HEAVY LOADS"
+  ],
+  [
+   189.82,
+   "picture",
+   "f1"
+  ],
+  [
+   190.08,
+   "picture",
+   "f2"
+  ],
+  [
+   190.08,
+   "word",
+   "A LONG WAY"
+  ],
+  [
+   190.56,
+   "picture",
+   "f3"
+  ],
+  [
+   191.25,
+   "action",
+   "mama nods"
+  ],
+  [
+   191.88,
+   "new place",
+   "the big sandy hill step step step"
+  ],
+  [
+   192.71,
+   "action",
+   "milo hops"
+  ],
+  [
+   194.15,
+   "action",
+   "sandy walks"
+  ],
+  [
+   194.15,
+   "action",
+   "tumble walks"
+  ],
+  [
+   196.05,
+   "word",
+   "STEP, STEP!"
+  ],
+  [
+   198.32,
+   "word",
+   "SLOW AND STEADY"
+  ],
+  [
+   199.06,
+   "new shot",
+   "the big sandy hill Tumble: aren't you thirsty?"
+  ],
+  [
+   199.08,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   200.06,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   200.94,
+   "new shot",
+   "the big sandy hill Sandy: not yet"
+  ],
+  [
+   200.96,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   201.58,
+   "action",
+   "sandy nods"
+  ],
+  [
+   202.59,
+   "word",
+   "BIG DRINK!"
+  ],
+  [
+   204.38,
+   "new place",
+   "the picture board (pink) fact: a week without water"
+  ],
+  [
+   205.62,
+   "action",
+   "seven days, one by one"
+  ],
+  [
+   205.62,
+   "word",
+   "1 WEEK"
+  ],
+  [
+   206.4,
+   "word",
+   "OR MORE!"
+  ],
+  [
+   208.12,
+   "new place",
+   "the big sandy hill Milo: a whole week"
+  ],
+  [
+   208.15,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   209.23,
+   "action",
+   "milo hops"
+  ],
+  [
+   209.23,
+   "word",
+   "WOW!"
+  ],
+  [
+   210.0,
+   "new shot",
+   "the big sandy hill question: a week yes or no"
+  ],
+  [
+   212.7,
+   "sign",
+   "YES"
+  ],
+  [
+   213.05,
+   "sign",
+   "NO"
+  ],
+  [
+   214.26,
+   "thinking dot",
+   "1"
+  ],
+  [
+   214.86,
+   "thinking dot",
+   "2"
+  ],
+  [
+   215.47,
+   "thinking dot",
+   "3"
+  ],
+  [
+   215.92,
+   "answer",
+   "YES"
+  ],
+  [
+   217.19,
+   "new shot",
+   "the big sandy hill walk along"
+  ],
+  [
+   220.33,
+   "action",
+   "sandy walks"
+  ],
+  [
+   220.33,
+   "action",
+   "tumble walks"
+  ],
+  [
+   220.33,
+   "word",
+   "STEP, STEP!"
+  ],
+  [
+   221.88,
+   "new shot",
+   "the big sandy hill the step rhyme"
+  ],
+  [
+   221.9,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   222.2,
+   "action",
+   "sandy nods"
+  ],
+  [
+   222.2,
+   "word",
+   "STEP BY STEP"
+  ],
+  [
+   224.66,
+   "word",
+   "HERE COMES WATER!"
+  ],
+  [
+   225.14,
+   "action",
+   "milo hops"
+  ],
+  [
+   226.23,
+   "action",
+   "sandy nods"
+  ],
+  [
+   227.19,
+   "new shot",
+   "the big sandy hill song: step by step"
+  ],
+  [
+   227.31,
+   "action",
+   "sandy walks"
+  ],
+  [
+   227.31,
+   "action",
+   "tumble walks"
+  ],
+  [
+   227.31,
+   "word",
+   "STEP BY STEP!"
+  ],
+  [
+   229.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   232.31,
+   "word",
+   "SLOW AND STEADY!"
+  ],
+  [
+   234.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   237.5,
+   "new place",
+   "the zoo at sunset back at the zoo"
+  ],
+  [
+   237.6,
+   "action",
+   "sandy walks"
+  ],
+  [
+   237.6,
+   "action",
+   "tumble walks"
+  ],
+  [
+   238.17,
+   "word",
+   "HOME!"
+  ],
+  [
+   239.7,
+   "action",
+   "the leaves droop"
+  ],
+  [
+   240.62,
+   "new shot",
+   "the zoo at sunset Tumble waters the tree"
+  ],
+  [
+   241.19,
+   "action",
+   "the can tips"
+  ],
+  [
+   241.19,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   242.67,
+   "action",
+   "water pours"
+  ],
+  [
+   242.67,
+   "word",
+   "GLUG, GLUG!"
+  ],
+  [
+   245.94,
+   "new shot",
+   "the zoo at sunset the tree is happy"
+  ],
+  [
+   246.91,
+   "action",
+   "the droopy leaves go"
+  ],
+  [
+   246.91,
+   "action",
+   "the tree is green and happy"
+  ],
+  [
+   248.52,
+   "word",
+   "HAPPY TREE!"
+  ],
+  [
+   249.38,
+   "new shot",
+   "the zoo at sunset question: droopy or happy"
+  ],
+  [
+   251.46,
+   "sign",
+   "DROOPY"
+  ],
+  [
+   251.81,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   253.33,
+   "thinking dot",
+   "1"
+  ],
+  [
+   253.94,
+   "thinking dot",
+   "2"
+  ],
+  [
+   254.54,
+   "thinking dot",
+   "3"
+  ],
+  [
+   255.0,
+   "answer",
+   "HAPPY"
+  ],
+  [
+   256.25,
+   "new shot",
+   "the zoo at sunset Mama nuzzles Sandy"
+  ],
+  [
+   257.52,
+   "action",
+   "mama looks"
+  ],
+  [
+   257.52,
+   "action",
+   "sandy looks"
+  ],
+  [
+   257.52,
+   "picture",
+   "h1"
+  ],
+  [
+   259.52,
+   "picture",
+   "h2"
+  ],
+  [
+   259.52,
+   "word",
+   "SO PROUD!"
+  ],
+  [
+   260.62,
+   "new shot",
+   "the zoo at sunset Milo: thank you"
+  ],
+  [
+   260.64,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   263.62,
+   "action",
+   "milo hops"
+  ],
+  [
+   263.62,
+   "word",
+   "ALL THE WAY!"
+  ],
+  [
+   264.38,
+   "new shot",
+   "the zoo at sunset Tumble: together"
+  ],
+  [
+   264.39,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   265.21,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   266.25,
+   "new shot",
+   "the zoo at sunset Sandy: thank you"
+  ],
+  [
+   266.27,
+   "action",
+   "sandy looks happy"
+  ],
+  [
+   266.43,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   268.07,
+   "action",
+   "sandy nods"
+  ],
+  [
+   269.38,
+   "new shot",
+   "the zoo at sunset the lesson"
+  ],
+  [
+   269.72,
+   "action",
+   "milo hops"
+  ],
+  [
+   269.98,
+   "action",
+   "sandy nods"
+  ],
+  [
+   270.98,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   272.84,
+   "action",
+   "sandy hops"
+  ],
+  [
+   272.84,
+   "word",
+   "FRIENDS HELP"
+  ],
+  [
+   273.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   274.38,
+   "new shot",
+   "the zoo at sunset question: week or year"
+  ],
+  [
+   274.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   278.34,
+   "sign",
+   "A WEEK"
+  ],
+  [
+   278.69,
+   "sign",
+   "A YEAR"
+  ],
+  [
+   280.2,
+   "thinking dot",
+   "1"
+  ],
+  [
+   280.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   281.42,
+   "thinking dot",
+   "3"
+  ],
+  [
+   281.87,
+   "answer",
+   "A WEEK"
+  ],
+  [
+   283.12,
+   "new shot",
+   "the zoo at sunset question: who carried"
+  ],
+  [
+   284.57,
+   "action",
+   "sandy nods"
+  ],
+  [
+   285.32,
+   "sign",
+   "SANDY"
+  ],
+  [
+   285.67,
+   "sign",
+   "MILO"
+  ],
+  [
+   287.22,
+   "thinking dot",
+   "1"
+  ],
+  [
+   287.83,
+   "thinking dot",
+   "2"
+  ],
+  [
+   288.44,
+   "thinking dot",
+   "3"
+  ],
+  [
+   288.89,
+   "answer",
+   "SANDY"
+  ],
+  [
+   290.31,
+   "new shot",
+   "the zoo at sunset the closing rhyme"
+  ],
+  [
+   290.5,
+   "action",
+   "milo hops"
+  ],
+  [
+   290.5,
+   "word",
+   "STEP BY STEP"
+  ],
+  [
+   292.11,
+   "action",
+   "sandy nods"
+  ],
+  [
+   293.61,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   294.82,
+   "action",
+   "sandy hops"
+  ],
+  [
+   295.62,
+   "new shot",
+   "the zoo at sunset song: hooray"
+  ],
+  [
+   296.62,
+   "action",
+   "sandy hops"
+  ],
+  [
+   297.62,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   297.62,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   297.82,
+   "action",
+   "milo hops"
+  ],
+  [
+   301.25,
+   "new shot",
+   "the zoo at sunset goodbye: next adventure"
+  ],
+  [
+   301.37,
+   "action",
+   "milo hops"
+  ],
+  [
+   301.37,
+   "word",
+   "NEXT TIME!"
+  ],
+  [
+   304.53,
+   "word",
+   "SEE YOU SOON!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "zoo",
+   "say": "Oh no! Our little tree is droopy. It is so thirsty!",
+   "t0": 0.0,
+   "t1": 4.375,
+   "v0": 0.42,
+   "dur": 3.57925,
+   "words": [
+    [
+     "Oh",
+     0.08,
+     0.24
+    ],
+    [
+     "no!",
+     0.24,
+     0.6
+    ],
+    [
+     "Our",
+     0.6,
+     0.78
+    ],
+    [
+     "little",
+     0.78,
+     1.02
+    ],
+    [
+     "tree",
+     1.02,
+     1.33
+    ],
+    [
+     "is",
+     1.33,
+     1.48
+    ],
+    [
+     "droopy.",
+     1.48,
+     2.04
+    ],
+    [
+     "It",
+     2.36,
+     2.47
+    ],
+    [
+     "is",
+     2.47,
+     2.57
+    ],
+    [
+     "so",
+     2.57,
+     2.76
+    ],
+    [
+     "thirsty!",
+     2.76,
+     3.579
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: the droopy tree",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Hello, I'm Milo! This is our zoo garden, with Sandy the baby camel, and Tumble the baby elephant.",
+   "t0": 4.375,
+   "t1": 12.5,
+   "v0": 4.51925,
+   "dur": 7.685875,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.72
+    ],
+    [
+     "I'm",
+     0.72,
+     0.99
+    ],
+    [
+     "Milo!",
+     0.99,
+     1.62
+    ],
+    [
+     "This",
+     2.23,
+     2.47
+    ],
+    [
+     "is",
+     2.47,
+     2.63
+    ],
+    [
+     "our",
+     2.63,
+     2.75
+    ],
+    [
+     "zoo",
+     2.75,
+     3.08
+    ],
+    [
+     "garden,",
+     3.08,
+     3.78
+    ],
+    [
+     "with",
+     3.78,
+     3.91
+    ],
+    [
+     "Sandy",
+     3.91,
+     4.43
+    ],
+    [
+     "the",
+     4.43,
+     4.51
+    ],
+    [
+     "baby",
+     4.51,
+     4.9
+    ],
+    [
+     "camel,",
+     4.9,
+     5.48
+    ],
+    [
+     "and",
+     5.81,
+     5.99
+    ],
+    [
+     "Tumble",
+     5.99,
+     6.45
+    ],
+    [
+     "the",
+     6.45,
+     6.54
+    ],
+    [
+     "baby",
+     6.54,
+     6.98
+    ],
+    [
+     "elephant.",
+     6.98,
+     7.686
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "zoo wide: Milo, Sandy, Tumble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "I'll water it! Oh. The watering can is empty.",
+   "t0": 12.5,
+   "t1": 15.625,
+   "v0": 12.725125,
+   "dur": 2.430041666666667,
+   "words": [
+    [
+     "I'll",
+     0.0,
+     0.19
+    ],
+    [
+     "water",
+     0.19,
+     0.54
+    ],
+    [
+     "it!",
+     0.54,
+     0.69
+    ],
+    [
+     "Oh.",
+     0.69,
+     0.87
+    ],
+    [
+     "The",
+     0.87,
+     1.0
+    ],
+    [
+     "watering",
+     1.0,
+     1.43
+    ],
+    [
+     "can",
+     1.43,
+     1.65
+    ],
+    [
+     "is",
+     1.65,
+     1.82
+    ],
+    [
+     "empty.",
+     1.82,
+     2.43
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: the can is empty",
+   "who": "tumble",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Our tree needs water every day, and we have none left.",
+   "t0": 15.625,
+   "t1": 19.375,
+   "v0": 15.675166666666666,
+   "dur": 3.3250416666666665,
+   "words": [
+    [
+     "Our",
+     0.05,
+     0.18
+    ],
+    [
+     "tree",
+     0.18,
+     0.41
+    ],
+    [
+     "needs",
+     0.41,
+     0.72
+    ],
+    [
+     "water",
+     0.72,
+     1.12
+    ],
+    [
+     "every",
+     1.12,
+     1.43
+    ],
+    [
+     "day,",
+     1.43,
+     1.84
+    ],
+    [
+     "and",
+     2.14,
+     2.26
+    ],
+    [
+     "we",
+     2.26,
+     2.35
+    ],
+    [
+     "have",
+     2.35,
+     2.58
+    ],
+    [
+     "none",
+     2.58,
+     2.78
+    ],
+    [
+     "left.",
+     2.78,
+     3.32
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: none left",
+   "who": "sandy",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "The oasis has lots of water. Let's walk there, and bring some back for the tree!",
+   "t0": 19.375,
+   "t1": 25.0,
+   "v0": 19.520208333333333,
+   "dur": 5.108458333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "oasis",
+     0.18,
+     0.86
+    ],
+    [
+     "has",
+     0.86,
+     1.09
+    ],
+    [
+     "lots",
+     1.09,
+     1.44
+    ],
+    [
+     "of",
+     1.44,
+     1.54
+    ],
+    [
+     "water.",
+     1.54,
+     2.01
+    ],
+    [
+     "Let's",
+     2.68,
+     2.94
+    ],
+    [
+     "walk",
+     2.94,
+     3.19
+    ],
+    [
+     "there,",
+     3.19,
+     3.51
+    ],
+    [
+     "and",
+     3.51,
+     3.73
+    ],
+    [
+     "bring",
+     3.73,
+     3.92
+    ],
+    [
+     "some",
+     3.92,
+     4.11
+    ],
+    [
+     "back",
+     4.11,
+     4.39
+    ],
+    [
+     "for",
+     4.39,
+     4.5
+    ],
+    [
+     "the",
+     4.5,
+     4.59
+    ],
+    [
+     "tree!",
+     4.59,
+     5.108
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goal: to the oasis",
+   "who": "sandy",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Mama camel puts two little jugs on Sandy's back. Stay together, and be home by supper.",
+   "t0": 25.0,
+   "t1": 32.1875,
+   "v0": 25.148666666666667,
+   "dur": 6.675791666666667,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.37
+    ],
+    [
+     "camel",
+     0.37,
+     0.94
+    ],
+    [
+     "puts",
+     0.94,
+     1.25
+    ],
+    [
+     "two",
+     1.25,
+     1.48
+    ],
+    [
+     "little",
+     1.48,
+     1.71
+    ],
+    [
+     "jugs",
+     1.71,
+     2.22
+    ],
+    [
+     "on",
+     2.22,
+     2.38
+    ],
+    [
+     "Sandy's",
+     2.38,
+     2.96
+    ],
+    [
+     "back.",
+     2.96,
+     3.45
+    ],
+    [
+     "Stay",
+     3.94,
+     4.29
+    ],
+    [
+     "together,",
+     4.29,
+     4.87
+    ],
+    [
+     "and",
+     5.04,
+     5.29
+    ],
+    [
+     "be",
+     5.29,
+     5.41
+    ],
+    [
+     "home",
+     5.41,
+     5.85
+    ],
+    [
+     "by",
+     5.85,
+     6.07
+    ],
+    [
+     "supper.",
+     6.07,
+     6.676
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama gives the jugs",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Is the little tree happy, or thirsty?",
+   "t0": 32.1875,
+   "t1": 38.125,
+   "v0": 32.34445833333333,
+   "dur": 2.381083333333333,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.21
+    ],
+    [
+     "the",
+     0.21,
+     0.28
+    ],
+    [
+     "little",
+     0.28,
+     0.52
+    ],
+    [
+     "tree",
+     0.52,
+     0.81
+    ],
+    [
+     "happy,",
+     0.81,
+     1.49
+    ],
+    [
+     "or",
+     1.49,
+     1.63
+    ],
+    [
+     "thirsty?",
+     1.63,
+     2.38
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: happy or thirsty",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Bye, Mama camel! We'll be back by supper!",
+   "t0": 38.125,
+   "t1": 40.9375,
+   "v0": 38.445541666666664,
+   "dur": 2.1525,
+   "words": [
+    [
+     "Bye,",
+     0.0,
+     0.15
+    ],
+    [
+     "Mama",
+     0.15,
+     0.42
+    ],
+    [
+     "camel!",
+     0.42,
+     0.86
+    ],
+    [
+     "We'll",
+     0.86,
+     0.98
+    ],
+    [
+     "be",
+     0.98,
+     1.09
+    ],
+    [
+     "back",
+     1.09,
+     1.36
+    ],
+    [
+     "by",
+     1.36,
+     1.54
+    ],
+    [
+     "supper!",
+     1.54,
+     2.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: bye, Mama",
+   "who": "tumble",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Off they go, over the dunes. The oasis is far, far away.",
+   "t0": 40.9375,
+   "t1": 45.9375,
+   "v0": 41.118041666666656,
+   "dur": 4.594541666666666,
+   "words": [
+    [
+     "Off",
+     0.01,
+     0.26
+    ],
+    [
+     "they",
+     0.26,
+     0.41
+    ],
+    [
+     "go,",
+     0.41,
+     0.82
+    ],
+    [
+     "over",
+     0.82,
+     1.05
+    ],
+    [
+     "the",
+     1.05,
+     1.16
+    ],
+    [
+     "dunes.",
+     1.16,
+     1.81
+    ],
+    [
+     "The",
+     2.21,
+     2.36
+    ],
+    [
+     "oasis",
+     2.36,
+     3.03
+    ],
+    [
+     "is",
+     3.03,
+     3.25
+    ],
+    [
+     "far,",
+     3.25,
+     3.72
+    ],
+    [
+     "far",
+     3.72,
+     4.14
+    ],
+    [
+     "away.",
+     4.14,
+     4.59
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "over the dunes",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "How many jugs does Sandy carry? Count with me! One. Two!",
+   "t0": 45.9375,
+   "t1": 51.875,
+   "v0": 46.23258333333332,
+   "dur": 4.220458333333333,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.37
+    ],
+    [
+     "jugs",
+     0.37,
+     0.85
+    ],
+    [
+     "does",
+     0.85,
+     1.02
+    ],
+    [
+     "Sandy",
+     1.02,
+     1.48
+    ],
+    [
+     "carry?",
+     1.48,
+     2.05
+    ],
+    [
+     "Count",
+     2.33,
+     2.64
+    ],
+    [
+     "with",
+     2.64,
+     2.79
+    ],
+    [
+     "me!",
+     2.79,
+     3.11
+    ],
+    [
+     "One.",
+     3.38,
+     3.7
+    ],
+    [
+     "Two!",
+     3.7,
+     4.22
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: count the jugs",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Flap, flap, flap. Phew! My wings are tired.",
+   "t0": 51.875,
+   "t1": 55.625,
+   "v0": 51.973041666666646,
+   "dur": 3.328708333333333,
+   "words": [
+    [
+     "Flap,",
+     0.01,
+     0.43
+    ],
+    [
+     "flap,",
+     0.43,
+     0.83
+    ],
+    [
+     "flap.",
+     0.83,
+     1.44
+    ],
+    [
+     "Phew!",
+     1.44,
+     1.87
+    ],
+    [
+     "My",
+     2.06,
+     2.27
+    ],
+    [
+     "wings",
+     2.27,
+     2.61
+    ],
+    [
+     "are",
+     2.61,
+     2.69
+    ],
+    [
+     "tired.",
+     2.69,
+     3.329
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: tired wings",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Rest on my back, Milo! I can carry a little bird.",
+   "t0": 55.625,
+   "t1": 59.375,
+   "v0": 55.82174999999997,
+   "dur": 3.3537083333333335,
+   "words": [
+    [
+     "Rest",
+     0.01,
+     0.33
+    ],
+    [
+     "on",
+     0.33,
+     0.41
+    ],
+    [
+     "my",
+     0.41,
+     0.57
+    ],
+    [
+     "back,",
+     0.57,
+     1.02
+    ],
+    [
+     "Milo!",
+     1.02,
+     1.59
+    ],
+    [
+     "I",
+     2.0,
+     2.09
+    ],
+    [
+     "can",
+     2.09,
+     2.31
+    ],
+    [
+     "carry",
+     2.31,
+     2.61
+    ],
+    [
+     "a",
+     2.61,
+     2.65
+    ],
+    [
+     "little",
+     2.65,
+     2.87
+    ],
+    [
+     "bird.",
+     2.87,
+     3.35
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: rest on my back",
+   "who": "sandy",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Milo lands softly on Sandy's back. Ahh, that's better!",
+   "t0": 59.375,
+   "t1": 64.0625,
+   "v0": 59.695458333333306,
+   "dur": 4.131291666666667,
+   "words": [
+    [
+     "Milo",
+     0.0,
+     0.48
+    ],
+    [
+     "lands",
+     0.48,
+     0.81
+    ],
+    [
+     "softly",
+     0.81,
+     1.43
+    ],
+    [
+     "on",
+     1.43,
+     1.6
+    ],
+    [
+     "Sandy's",
+     1.6,
+     2.17
+    ],
+    [
+     "back.",
+     2.17,
+     2.64
+    ],
+    [
+     "Ahh,",
+     3.06,
+     3.33
+    ],
+    [
+     "that's",
+     3.33,
+     3.71
+    ],
+    [
+     "better!",
+     3.71,
+     4.13
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo lands on Sandy",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Who is carrying Milo now? Sandy, or Tumble?",
+   "t0": 64.0625,
+   "t1": 71.25,
+   "v0": 64.34674999999999,
+   "dur": 3.35725,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.16
+    ],
+    [
+     "is",
+     0.16,
+     0.29
+    ],
+    [
+     "carrying",
+     0.29,
+     0.78
+    ],
+    [
+     "Milo",
+     0.78,
+     1.17
+    ],
+    [
+     "now?",
+     1.17,
+     1.59
+    ],
+    [
+     "Sandy,",
+     1.9,
+     2.61
+    ],
+    [
+     "or",
+     2.61,
+     2.73
+    ],
+    [
+     "Tumble?",
+     2.73,
+     3.357
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: Sandy or Tumble",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "On the rocky trail, the sun is hot, hot, hot.",
+   "t0": 71.25,
+   "t1": 75.0,
+   "v0": 71.42399999999999,
+   "dur": 3.2490833333333335,
+   "words": [
+    [
+     "On",
+     0.03,
+     0.19
+    ],
+    [
+     "the",
+     0.19,
+     0.28
+    ],
+    [
+     "rocky",
+     0.28,
+     0.68
+    ],
+    [
+     "trail,",
+     0.68,
+     1.2
+    ],
+    [
+     "the",
+     1.31,
+     1.38
+    ],
+    [
+     "sun",
+     1.38,
+     1.66
+    ],
+    [
+     "is",
+     1.66,
+     1.79
+    ],
+    [
+     "hot,",
+     1.79,
+     2.33
+    ],
+    [
+     "hot,",
+     2.33,
+     2.76
+    ],
+    [
+     "hot.",
+     2.76,
+     3.249
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the hot rocky trail",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Phew! I'm so hot. My big ears go flap, flap, like fans!",
+   "t0": 75.0,
+   "t1": 79.0625,
+   "v0": 75.19308333333333,
+   "dur": 3.6654166666666668,
+   "words": [
+    [
+     "Phew!",
+     0.01,
+     0.32
+    ],
+    [
+     "I'm",
+     0.32,
+     0.49
+    ],
+    [
+     "so",
+     0.49,
+     0.76
+    ],
+    [
+     "hot.",
+     0.76,
+     1.18
+    ],
+    [
+     "My",
+     1.18,
+     1.4
+    ],
+    [
+     "big",
+     1.4,
+     1.63
+    ],
+    [
+     "ears",
+     1.63,
+     1.91
+    ],
+    [
+     "go",
+     1.91,
+     2.07
+    ],
+    [
+     "flap,",
+     2.07,
+     2.46
+    ],
+    [
+     "flap,",
+     2.46,
+     2.83
+    ],
+    [
+     "like",
+     2.83,
+     3.02
+    ],
+    [
+     "fans!",
+     3.02,
+     3.66
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: so hot",
+   "who": "tumble",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Let's rest in the shade of the big rock.",
+   "t0": 79.0625,
+   "t1": 82.1875,
+   "v0": 79.37850000000002,
+   "dur": 2.454125,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.35
+    ],
+    [
+     "rest",
+     0.35,
+     0.82
+    ],
+    [
+     "in",
+     0.82,
+     1.0
+    ],
+    [
+     "the",
+     1.0,
+     1.06
+    ],
+    [
+     "shade",
+     1.06,
+     1.46
+    ],
+    [
+     "of",
+     1.46,
+     1.55
+    ],
+    [
+     "the",
+     1.55,
+     1.64
+    ],
+    [
+     "big",
+     1.64,
+     1.95
+    ],
+    [
+     "rock.",
+     1.95,
+     2.45
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: rest in the shade",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "They sit down in the cool shade. Tumble flaps his ears, and soon he feels better.",
+   "t0": 82.1875,
+   "t1": 88.125,
+   "v0": 82.35262500000003,
+   "dur": 5.582666666666666,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.19
+    ],
+    [
+     "sit",
+     0.19,
+     0.48
+    ],
+    [
+     "down",
+     0.48,
+     0.93
+    ],
+    [
+     "in",
+     0.93,
+     1.05
+    ],
+    [
+     "the",
+     1.05,
+     1.13
+    ],
+    [
+     "cool",
+     1.13,
+     1.51
+    ],
+    [
+     "shade.",
+     1.51,
+     2.06
+    ],
+    [
+     "Tumble",
+     2.57,
+     2.94
+    ],
+    [
+     "flaps",
+     2.94,
+     3.4
+    ],
+    [
+     "his",
+     3.4,
+     3.54
+    ],
+    [
+     "ears,",
+     3.54,
+     4.1
+    ],
+    [
+     "and",
+     4.24,
+     4.4
+    ],
+    [
+     "soon",
+     4.4,
+     4.65
+    ],
+    [
+     "he",
+     4.65,
+     4.75
+    ],
+    [
+     "feels",
+     4.75,
+     5.13
+    ],
+    [
+     "better.",
+     5.13,
+     5.58
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "resting in the shade",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Can you flap your ears like Tumble? Flap, flap, flap!",
+   "t0": 88.125,
+   "t1": 92.8125,
+   "v0": 88.45529166666671,
+   "dur": 3.9102916666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.31
+    ],
+    [
+     "flap",
+     0.31,
+     0.64
+    ],
+    [
+     "your",
+     0.64,
+     0.75
+    ],
+    [
+     "ears",
+     0.75,
+     1.16
+    ],
+    [
+     "like",
+     1.16,
+     1.35
+    ],
+    [
+     "Tumble?",
+     1.35,
+     1.93
+    ],
+    [
+     "Flap,",
+     2.34,
+     2.82
+    ],
+    [
+     "flap,",
+     2.82,
+     3.31
+    ],
+    [
+     "flap!",
+     3.31,
+     3.91
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "flap along",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Where is it cool? In the sun, or in the shade?",
+   "t0": 92.8125,
+   "t1": 99.375,
+   "v0": 92.88558333333339,
+   "dur": 3.1020416666666666,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.4
+    ],
+    [
+     "it",
+     0.4,
+     0.52
+    ],
+    [
+     "cool?",
+     0.52,
+     1.02
+    ],
+    [
+     "In",
+     1.39,
+     1.54
+    ],
+    [
+     "the",
+     1.54,
+     1.61
+    ],
+    [
+     "sun,",
+     1.61,
+     2.15
+    ],
+    [
+     "or",
+     2.15,
+     2.32
+    ],
+    [
+     "in",
+     2.32,
+     2.42
+    ],
+    [
+     "the",
+     2.42,
+     2.48
+    ],
+    [
+     "shade?",
+     2.48,
+     3.1
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sun or shade",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "At last, the oasis! Cool blue water, and tall palm trees.",
+   "t0": 99.375,
+   "t1": 104.6875,
+   "v0": 99.70762500000006,
+   "dur": 4.622458333333333,
+   "words": [
+    [
+     "At",
+     0.01,
+     0.16
+    ],
+    [
+     "last,",
+     0.16,
+     0.61
+    ],
+    [
+     "the",
+     0.61,
+     0.78
+    ],
+    [
+     "oasis!",
+     0.78,
+     1.52
+    ],
+    [
+     "Cool",
+     1.95,
+     2.29
+    ],
+    [
+     "blue",
+     2.29,
+     2.52
+    ],
+    [
+     "water,",
+     2.52,
+     3.05
+    ],
+    [
+     "and",
+     3.05,
+     3.24
+    ],
+    [
+     "tall",
+     3.24,
+     3.61
+    ],
+    [
+     "palm",
+     3.61,
+     4.01
+    ],
+    [
+     "trees.",
+     4.01,
+     4.62
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the oasis wide",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Tumble drinks with his trunk. Slurp! And Sandy drinks, and drinks, and drinks.",
+   "t0": 104.6875,
+   "t1": 110.625,
+   "v0": 104.8500833333334,
+   "dur": 5.428083333333333,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.38
+    ],
+    [
+     "drinks",
+     0.38,
+     0.78
+    ],
+    [
+     "with",
+     0.78,
+     0.9
+    ],
+    [
+     "his",
+     0.9,
+     1.07
+    ],
+    [
+     "trunk.",
+     1.07,
+     1.62
+    ],
+    [
+     "Slurp!",
+     2.07,
+     2.62
+    ],
+    [
+     "And",
+     2.88,
+     3.06
+    ],
+    [
+     "Sandy",
+     3.06,
+     3.54
+    ],
+    [
+     "drinks,",
+     3.54,
+     4.01
+    ],
+    [
+     "and",
+     4.01,
+     4.19
+    ],
+    [
+     "drinks,",
+     4.19,
+     4.7
+    ],
+    [
+     "and",
+     4.7,
+     4.87
+    ],
+    [
+     "drinks.",
+     4.87,
+     5.428
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "they drink",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Milo has a tiny sip. A little bird needs only a little drink.",
+   "t0": 110.625,
+   "t1": 115.9375,
+   "v0": 110.79816666666675,
+   "dur": 4.692083333333334,
+   "words": [
+    [
+     "Milo",
+     0.01,
+     0.59
+    ],
+    [
+     "has",
+     0.59,
+     0.86
+    ],
+    [
+     "a",
+     0.86,
+     0.9
+    ],
+    [
+     "tiny",
+     0.9,
+     1.54
+    ],
+    [
+     "sip.",
+     1.54,
+     2.02
+    ],
+    [
+     "A",
+     2.45,
+     2.5
+    ],
+    [
+     "little",
+     2.5,
+     2.78
+    ],
+    [
+     "bird",
+     2.78,
+     3.16
+    ],
+    [
+     "needs",
+     3.16,
+     3.54
+    ],
+    [
+     "only",
+     3.54,
+     3.87
+    ],
+    [
+     "a",
+     3.87,
+     3.91
+    ],
+    [
+     "little",
+     3.91,
+     4.14
+    ],
+    [
+     "drink.",
+     4.14,
+     4.69
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo sips",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A very thirsty camel can drink thirty gallons of water, in only thirteen minutes!",
+   "t0": 115.9375,
+   "t1": 122.1875,
+   "v0": 116.01025000000008,
+   "dur": 5.907916666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.1
+    ],
+    [
+     "very",
+     0.1,
+     0.6
+    ],
+    [
+     "thirsty",
+     0.6,
+     1.2
+    ],
+    [
+     "camel",
+     1.2,
+     1.76
+    ],
+    [
+     "can",
+     1.76,
+     1.98
+    ],
+    [
+     "drink",
+     1.98,
+     2.26
+    ],
+    [
+     "thirty",
+     2.26,
+     2.73
+    ],
+    [
+     "gallons",
+     2.73,
+     3.27
+    ],
+    [
+     "of",
+     3.27,
+     3.38
+    ],
+    [
+     "water,",
+     3.38,
+     3.88
+    ],
+    [
+     "in",
+     4.31,
+     4.45
+    ],
+    [
+     "only",
+     4.45,
+     4.8
+    ],
+    [
+     "thirteen",
+     4.8,
+     5.37
+    ],
+    [
+     "minutes!",
+     5.37,
+     5.908
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: thirty gallons in thirteen minutes",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Which is more water? One jug, or thirty jugs?",
+   "t0": 122.1875,
+   "t1": 129.375,
+   "v0": 122.43816666666676,
+   "dur": 3.4249583333333335,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.21
+    ],
+    [
+     "is",
+     0.21,
+     0.36
+    ],
+    [
+     "more",
+     0.36,
+     0.58
+    ],
+    [
+     "water?",
+     0.58,
+     1.13
+    ],
+    [
+     "One",
+     1.54,
+     1.83
+    ],
+    [
+     "jug,",
+     1.83,
+     2.23
+    ],
+    [
+     "or",
+     2.23,
+     2.4
+    ],
+    [
+     "thirty",
+     2.4,
+     2.81
+    ],
+    [
+     "jugs?",
+     2.81,
+     3.42
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: one or thirty jugs",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "oasis",
+   "say": "Glug, glug! Milo helps fill the two little jugs, all the way to the top.",
+   "t0": 129.375,
+   "t1": 135.3125,
+   "v0": 129.5831250000001,
+   "dur": 5.254458333333333,
+   "words": [
+    [
+     "Glug,",
+     0.03,
+     0.53
+    ],
+    [
+     "glug!",
+     0.53,
+     1.13
+    ],
+    [
+     "Milo",
+     1.56,
+     2.0
+    ],
+    [
+     "helps",
+     2.0,
+     2.4
+    ],
+    [
+     "fill",
+     2.4,
+     2.58
+    ],
+    [
+     "the",
+     2.58,
+     2.67
+    ],
+    [
+     "two",
+     2.67,
+     2.91
+    ],
+    [
+     "little",
+     2.91,
+     3.13
+    ],
+    [
+     "jugs,",
+     3.13,
+     3.77
+    ],
+    [
+     "all",
+     3.97,
+     4.2
+    ],
+    [
+     "the",
+     4.2,
+     4.29
+    ],
+    [
+     "way",
+     4.29,
+     4.5
+    ],
+    [
+     "to",
+     4.5,
+     4.63
+    ],
+    [
+     "the",
+     4.63,
+     4.71
+    ],
+    [
+     "top.",
+     4.71,
+     5.25
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "filling the jugs",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "On the way back, the sand is soft and deep. And the jugs are heavy now.",
+   "t0": 135.3125,
+   "t1": 140.625,
+   "v0": 135.35758333333345,
+   "dur": 4.873125,
+   "words": [
+    [
+     "On",
+     0.0,
+     0.21
+    ],
+    [
+     "the",
+     0.21,
+     0.29
+    ],
+    [
+     "way",
+     0.29,
+     0.51
+    ],
+    [
+     "back,",
+     0.51,
+     1.0
+    ],
+    [
+     "the",
+     1.0,
+     1.11
+    ],
+    [
+     "sand",
+     1.11,
+     1.56
+    ],
+    [
+     "is",
+     1.56,
+     1.64
+    ],
+    [
+     "soft",
+     1.64,
+     2.29
+    ],
+    [
+     "and",
+     2.29,
+     2.48
+    ],
+    [
+     "deep.",
+     2.48,
+     2.9
+    ],
+    [
+     "And",
+     3.33,
+     3.44
+    ],
+    [
+     "the",
+     3.44,
+     3.51
+    ],
+    [
+     "jugs",
+     3.51,
+     4.05
+    ],
+    [
+     "are",
+     4.05,
+     4.14
+    ],
+    [
+     "heavy",
+     4.14,
+     4.47
+    ],
+    [
+     "now.",
+     4.47,
+     4.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the way back: soft sand",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "I'll carry a jug with my trunk! Oh, oh! It wobbles. Splish!",
+   "t0": 140.625,
+   "t1": 144.375,
+   "v0": 140.75070833333345,
+   "dur": 3.3345,
+   "words": [
+    [
+     "I'll",
+     0.0,
+     0.13
+    ],
+    [
+     "carry",
+     0.13,
+     0.44
+    ],
+    [
+     "a",
+     0.44,
+     0.49
+    ],
+    [
+     "jug",
+     0.49,
+     0.79
+    ],
+    [
+     "with",
+     0.79,
+     0.93
+    ],
+    [
+     "my",
+     0.93,
+     1.12
+    ],
+    [
+     "trunk!",
+     1.12,
+     1.72
+    ],
+    [
+     "Oh,",
+     1.72,
+     1.94
+    ],
+    [
+     "oh!",
+     1.94,
+     2.13
+    ],
+    [
+     "It",
+     2.13,
+     2.2
+    ],
+    [
+     "wobbles.",
+     2.2,
+     2.74
+    ],
+    [
+     "Splish!",
+     2.74,
+     3.33
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: the jug wobbles",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "I'll carry one! Ooh, it's too heavy for a little bird.",
+   "t0": 144.375,
+   "t1": 148.4375,
+   "v0": 144.60520833333345,
+   "dur": 3.473375,
+   "words": [
+    [
+     "I'll",
+     0.01,
+     0.23
+    ],
+    [
+     "carry",
+     0.23,
+     0.59
+    ],
+    [
+     "one!",
+     0.59,
+     1.05
+    ],
+    [
+     "Ooh,",
+     1.46,
+     1.8
+    ],
+    [
+     "it's",
+     1.8,
+     2.07
+    ],
+    [
+     "too",
+     2.07,
+     2.24
+    ],
+    [
+     "heavy",
+     2.24,
+     2.58
+    ],
+    [
+     "for",
+     2.58,
+     2.76
+    ],
+    [
+     "a",
+     2.76,
+     2.8
+    ],
+    [
+     "little",
+     2.8,
+     3.0
+    ],
+    [
+     "bird.",
+     3.0,
+     3.47
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: too heavy",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Is a full jug heavy, or light?",
+   "t0": 148.4375,
+   "t1": 154.375,
+   "v0": 148.59858333333347,
+   "dur": 2.1750416666666665,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.22
+    ],
+    [
+     "a",
+     0.22,
+     0.25
+    ],
+    [
+     "full",
+     0.25,
+     0.59
+    ],
+    [
+     "jug",
+     0.59,
+     0.92
+    ],
+    [
+     "heavy,",
+     0.92,
+     1.5
+    ],
+    [
+     "or",
+     1.5,
+     1.66
+    ],
+    [
+     "light?",
+     1.66,
+     2.17
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: heavy or light",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "They sit down on the sandy hill. The sun is low, and the zoo is still far away.",
+   "t0": 154.375,
+   "t1": 160.625,
+   "v0": 154.49362500000012,
+   "dur": 5.727833333333334,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.18
+    ],
+    [
+     "sit",
+     0.18,
+     0.48
+    ],
+    [
+     "down",
+     0.48,
+     0.83
+    ],
+    [
+     "on",
+     0.83,
+     0.97
+    ],
+    [
+     "the",
+     0.97,
+     1.04
+    ],
+    [
+     "sandy",
+     1.04,
+     1.52
+    ],
+    [
+     "hill.",
+     1.52,
+     1.92
+    ],
+    [
+     "The",
+     2.45,
+     2.52
+    ],
+    [
+     "sun",
+     2.52,
+     2.87
+    ],
+    [
+     "is",
+     2.87,
+     3.06
+    ],
+    [
+     "low,",
+     3.06,
+     3.6
+    ],
+    [
+     "and",
+     3.84,
+     3.96
+    ],
+    [
+     "the",
+     3.96,
+     4.02
+    ],
+    [
+     "zoo",
+     4.02,
+     4.39
+    ],
+    [
+     "is",
+     4.39,
+     4.5
+    ],
+    [
+     "still",
+     4.5,
+     4.81
+    ],
+    [
+     "far",
+     4.81,
+     5.26
+    ],
+    [
+     "away.",
+     5.26,
+     5.728
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "sitting on the hill",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Tumble is hot, my wings are tired, and the jugs are so heavy.",
+   "t0": 160.625,
+   "t1": 165.625,
+   "v0": 160.74145833333347,
+   "dur": 4.4635,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.4
+    ],
+    [
+     "is",
+     0.4,
+     0.56
+    ],
+    [
+     "hot,",
+     0.56,
+     1.09
+    ],
+    [
+     "my",
+     1.24,
+     1.48
+    ],
+    [
+     "wings",
+     1.48,
+     1.84
+    ],
+    [
+     "are",
+     1.84,
+     1.92
+    ],
+    [
+     "tired,",
+     1.92,
+     2.62
+    ],
+    [
+     "and",
+     2.91,
+     3.03
+    ],
+    [
+     "the",
+     3.03,
+     3.1
+    ],
+    [
+     "jugs",
+     3.1,
+     3.64
+    ],
+    [
+     "are",
+     3.64,
+     3.71
+    ],
+    [
+     "so",
+     3.71,
+     3.97
+    ],
+    [
+     "heavy.",
+     3.97,
+     4.46
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: so heavy",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Maybe our little tree can't have a drink today.",
+   "t0": 165.625,
+   "t1": 168.4375,
+   "v0": 165.7249583333335,
+   "dur": 2.329875,
+   "words": [
+    [
+     "Maybe",
+     0.0,
+     0.28
+    ],
+    [
+     "our",
+     0.28,
+     0.38
+    ],
+    [
+     "little",
+     0.38,
+     0.58
+    ],
+    [
+     "tree",
+     0.58,
+     0.95
+    ],
+    [
+     "can't",
+     0.95,
+     1.3
+    ],
+    [
+     "have",
+     1.3,
+     1.45
+    ],
+    [
+     "a",
+     1.45,
+     1.49
+    ],
+    [
+     "drink",
+     1.49,
+     1.76
+    ],
+    [
+     "today.",
+     1.76,
+     2.33
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: maybe not today",
+   "who": "tumble",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Don't worry, friends. We are together. Let me think.",
+   "t0": 168.4375,
+   "t1": 171.875,
+   "v0": 168.5748333333335,
+   "dur": 2.9618333333333333,
+   "words": [
+    [
+     "Don't",
+     0.03,
+     0.28
+    ],
+    [
+     "worry,",
+     0.28,
+     0.58
+    ],
+    [
+     "friends.",
+     0.58,
+     1.13
+    ],
+    [
+     "We",
+     1.13,
+     1.31
+    ],
+    [
+     "are",
+     1.31,
+     1.37
+    ],
+    [
+     "together.",
+     1.37,
+     1.88
+    ],
+    [
+     "Let",
+     2.24,
+     2.38
+    ],
+    [
+     "me",
+     2.38,
+     2.5
+    ],
+    [
+     "think.",
+     2.5,
+     2.96
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: let me think",
+   "who": "sandy",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Who can carry the heavy jugs? Milo, or Sandy?",
+   "t0": 171.875,
+   "t1": 179.0625,
+   "v0": 172.05666666666684,
+   "dur": 3.5272916666666667,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.15
+    ],
+    [
+     "can",
+     0.15,
+     0.34
+    ],
+    [
+     "carry",
+     0.34,
+     0.7
+    ],
+    [
+     "the",
+     0.7,
+     0.77
+    ],
+    [
+     "heavy",
+     0.77,
+     1.11
+    ],
+    [
+     "jugs?",
+     1.11,
+     1.73
+    ],
+    [
+     "Milo,",
+     2.06,
+     2.67
+    ],
+    [
+     "or",
+     2.67,
+     2.9
+    ],
+    [
+     "Sandy?",
+     2.9,
+     3.527
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: Milo or Sandy",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "I know! Camels are made for carrying, and for walking far. I can carry the jugs, step by step!",
+   "t0": 179.0625,
+   "t1": 185.9375,
+   "v0": 179.3039583333335,
+   "dur": 6.280166666666666,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.14
+    ],
+    [
+     "know!",
+     0.14,
+     0.54
+    ],
+    [
+     "Camels",
+     0.54,
+     1.11
+    ],
+    [
+     "are",
+     1.11,
+     1.16
+    ],
+    [
+     "made",
+     1.16,
+     1.44
+    ],
+    [
+     "for",
+     1.44,
+     1.59
+    ],
+    [
+     "carrying,",
+     1.59,
+     2.19
+    ],
+    [
+     "and",
+     2.19,
+     2.35
+    ],
+    [
+     "for",
+     2.35,
+     2.47
+    ],
+    [
+     "walking",
+     2.47,
+     2.91
+    ],
+    [
+     "far.",
+     2.91,
+     3.36
+    ],
+    [
+     "I",
+     4.04,
+     4.13
+    ],
+    [
+     "can",
+     4.13,
+     4.32
+    ],
+    [
+     "carry",
+     4.32,
+     4.63
+    ],
+    [
+     "the",
+     4.63,
+     4.71
+    ],
+    [
+     "jugs,",
+     4.71,
+     5.3
+    ],
+    [
+     "step",
+     5.3,
+     5.68
+    ],
+    [
+     "by",
+     5.68,
+     5.84
+    ],
+    [
+     "step!",
+     5.84,
+     6.28
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: I know!",
+   "who": "sandy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Grown-up camels can carry big, heavy loads, and walk a long way every day.",
+   "t0": 185.9375,
+   "t1": 191.875,
+   "v0": 186.10412500000018,
+   "dur": 5.535,
+   "words": [
+    [
+     "Grown-up",
+     0.02,
+     0.45
+    ],
+    [
+     "camels",
+     0.45,
+     1.04
+    ],
+    [
+     "can",
+     1.04,
+     1.23
+    ],
+    [
+     "carry",
+     1.23,
+     1.61
+    ],
+    [
+     "big,",
+     1.61,
+     2.03
+    ],
+    [
+     "heavy",
+     2.27,
+     2.58
+    ],
+    [
+     "loads,",
+     2.58,
+     3.2
+    ],
+    [
+     "and",
+     3.55,
+     3.72
+    ],
+    [
+     "walk",
+     3.72,
+     3.95
+    ],
+    [
+     "a",
+     3.95,
+     3.98
+    ],
+    [
+     "long",
+     3.98,
+     4.46
+    ],
+    [
+     "way",
+     4.46,
+     4.74
+    ],
+    [
+     "every",
+     4.74,
+     5.15
+    ],
+    [
+     "day.",
+     5.15,
+     5.53
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: camels carry heavy loads",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Milo hops on top. Tumble walks beside her. Step, step, step, slow and steady.",
+   "t0": 191.875,
+   "t1": 199.0625,
+   "v0": 192.1591250000002,
+   "dur": 6.731625,
+   "words": [
+    [
+     "Milo",
+     0.0,
+     0.55
+    ],
+    [
+     "hops",
+     0.55,
+     0.94
+    ],
+    [
+     "on",
+     0.94,
+     1.1
+    ],
+    [
+     "top.",
+     1.1,
+     1.62
+    ],
+    [
+     "Tumble",
+     1.99,
+     2.38
+    ],
+    [
+     "walks",
+     2.38,
+     2.73
+    ],
+    [
+     "beside",
+     2.73,
+     3.23
+    ],
+    [
+     "her.",
+     3.23,
+     3.49
+    ],
+    [
+     "Step,",
+     3.89,
+     4.43
+    ],
+    [
+     "step,",
+     4.43,
+     4.94
+    ],
+    [
+     "step,",
+     4.94,
+     5.49
+    ],
+    [
+     "slow",
+     5.49,
+     6.03
+    ],
+    [
+     "and",
+     6.03,
+     6.16
+    ],
+    [
+     "steady.",
+     6.16,
+     6.73
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "step step step",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Sandy, aren't you thirsty?",
+   "t0": 199.0625,
+   "t1": 200.9375,
+   "v0": 199.4107500000002,
+   "dur": 1.3395416666666666,
+   "words": [
+    [
+     "Sandy,",
+     0.02,
+     0.37
+    ],
+    [
+     "aren't",
+     0.37,
+     0.56
+    ],
+    [
+     "you",
+     0.56,
+     0.65
+    ],
+    [
+     "thirsty?",
+     0.65,
+     1.34
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: aren't you thirsty?",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Not yet! I had a big drink at the oasis.",
+   "t0": 200.9375,
+   "t1": 204.375,
+   "v0": 201.27029166666688,
+   "dur": 2.844,
+   "words": [
+    [
+     "Not",
+     0.01,
+     0.31
+    ],
+    [
+     "yet!",
+     0.31,
+     0.72
+    ],
+    [
+     "I",
+     1.02,
+     1.1
+    ],
+    [
+     "had",
+     1.1,
+     1.28
+    ],
+    [
+     "a",
+     1.28,
+     1.32
+    ],
+    [
+     "big",
+     1.32,
+     1.55
+    ],
+    [
+     "drink",
+     1.55,
+     1.85
+    ],
+    [
+     "at",
+     1.85,
+     1.93
+    ],
+    [
+     "the",
+     1.93,
+     2.08
+    ],
+    [
+     "oasis.",
+     2.08,
+     2.84
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: not yet",
+   "who": "sandy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "A camel can go a week or more without water!",
+   "t0": 204.375,
+   "t1": 208.125,
+   "v0": 204.63429166666688,
+   "dur": 3.1497916666666668,
+   "words": [
+    [
+     "A",
+     0.03,
+     0.08
+    ],
+    [
+     "camel",
+     0.08,
+     0.59
+    ],
+    [
+     "can",
+     0.59,
+     0.76
+    ],
+    [
+     "go",
+     0.76,
+     0.94
+    ],
+    [
+     "a",
+     0.94,
+     0.99
+    ],
+    [
+     "week",
+     0.99,
+     1.54
+    ],
+    [
+     "or",
+     1.68,
+     1.77
+    ],
+    [
+     "more",
+     1.77,
+     2.31
+    ],
+    [
+     "without",
+     2.31,
+     2.62
+    ],
+    [
+     "water!",
+     2.62,
+     3.15
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: a week without water",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Wow! A whole week!",
+   "t0": 208.125,
+   "t1": 210.0,
+   "v0": 208.30408333333355,
+   "dur": 1.43625,
+   "words": [
+    [
+     "Wow!",
+     0.1,
+     0.48
+    ],
+    [
+     "A",
+     0.48,
+     0.58
+    ],
+    [
+     "whole",
+     0.58,
+     0.93
+    ],
+    [
+     "week!",
+     0.93,
+     1.436
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: a whole week",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Can a camel go a week without water? Yes, or no?",
+   "t0": 210.0,
+   "t1": 217.1875,
+   "v0": 210.26033333333356,
+   "dur": 3.543041666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.12
+    ],
+    [
+     "a",
+     0.12,
+     0.17
+    ],
+    [
+     "camel",
+     0.17,
+     0.64
+    ],
+    [
+     "go",
+     0.64,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.85
+    ],
+    [
+     "week",
+     0.85,
+     1.18
+    ],
+    [
+     "without",
+     1.18,
+     1.5
+    ],
+    [
+     "water?",
+     1.5,
+     2.02
+    ],
+    [
+     "Yes,",
+     2.44,
+     2.98
+    ],
+    [
+     "or",
+     2.98,
+     3.14
+    ],
+    [
+     "no?",
+     3.14,
+     3.54
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: a week yes or no",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Can you walk slow and steady, like Sandy? Step, step, step!",
+   "t0": 217.1875,
+   "t1": 221.875,
+   "v0": 217.52337500000021,
+   "dur": 4.151041666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.32
+    ],
+    [
+     "walk",
+     0.32,
+     0.59
+    ],
+    [
+     "slow",
+     0.59,
+     1.02
+    ],
+    [
+     "and",
+     1.02,
+     1.15
+    ],
+    [
+     "steady,",
+     1.15,
+     1.55
+    ],
+    [
+     "like",
+     1.55,
+     1.76
+    ],
+    [
+     "Sandy?",
+     1.76,
+     2.42
+    ],
+    [
+     "Step,",
+     2.81,
+     3.23
+    ],
+    [
+     "step,",
+     3.23,
+     3.62
+    ],
+    [
+     "step!",
+     3.62,
+     4.15
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "walk along",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Step by step, slow and steady. Here comes water! Tree, get ready!",
+   "t0": 221.875,
+   "t1": 227.1875,
+   "v0": 222.19441666666688,
+   "dur": 4.495125,
+   "words": [
+    [
+     "Step",
+     0.01,
+     0.35
+    ],
+    [
+     "by",
+     0.35,
+     0.51
+    ],
+    [
+     "step,",
+     0.51,
+     0.91
+    ],
+    [
+     "slow",
+     0.91,
+     1.33
+    ],
+    [
+     "and",
+     1.33,
+     1.45
+    ],
+    [
+     "steady.",
+     1.45,
+     1.96
+    ],
+    [
+     "Here",
+     2.47,
+     2.68
+    ],
+    [
+     "comes",
+     2.68,
+     2.95
+    ],
+    [
+     "water!",
+     2.95,
+     3.54
+    ],
+    [
+     "Tree,",
+     3.54,
+     3.86
+    ],
+    [
+     "get",
+     3.86,
+     4.04
+    ],
+    [
+     "ready!",
+     4.04,
+     4.49
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the step rhyme",
+   "who": "sandy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "",
+   "t0": 227.1875,
+   "t1": 237.5,
+   "v0": 227.5,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: step by step",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Back at the zoo, the little tree is waiting.",
+   "t0": 237.5,
+   "t1": 240.625,
+   "v0": 237.62,
+   "dur": 2.6482916666666667,
+   "words": [
+    [
+     "Back",
+     0.0,
+     0.39
+    ],
+    [
+     "at",
+     0.39,
+     0.47
+    ],
+    [
+     "the",
+     0.47,
+     0.55
+    ],
+    [
+     "zoo,",
+     0.55,
+     1.05
+    ],
+    [
+     "the",
+     1.24,
+     1.34
+    ],
+    [
+     "little",
+     1.34,
+     1.57
+    ],
+    [
+     "tree",
+     1.57,
+     1.93
+    ],
+    [
+     "is",
+     1.93,
+     2.08
+    ],
+    [
+     "waiting.",
+     2.08,
+     2.648
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "back at the zoo",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Tumble pours the water. Glug, glug, glug! The little tree drinks.",
+   "t0": 240.625,
+   "t1": 245.9375,
+   "v0": 240.78829166666668,
+   "dur": 4.895875,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.4
+    ],
+    [
+     "pours",
+     0.4,
+     0.8
+    ],
+    [
+     "the",
+     0.8,
+     0.89
+    ],
+    [
+     "water.",
+     0.89,
+     1.44
+    ],
+    [
+     "Glug,",
+     1.88,
+     2.37
+    ],
+    [
+     "glug,",
+     2.37,
+     2.88
+    ],
+    [
+     "glug!",
+     2.88,
+     3.45
+    ],
+    [
+     "The",
+     3.45,
+     3.74
+    ],
+    [
+     "little",
+     3.74,
+     3.97
+    ],
+    [
+     "tree",
+     3.97,
+     4.28
+    ],
+    [
+     "drinks.",
+     4.28,
+     4.896
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble waters the tree",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Look! Its leaves stand up, green and happy!",
+   "t0": 245.9375,
+   "t1": 249.375,
+   "v0": 246.20416666666668,
+   "dur": 2.887583333333333,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.52
+    ],
+    [
+     "Its",
+     0.52,
+     0.71
+    ],
+    [
+     "leaves",
+     0.71,
+     1.06
+    ],
+    [
+     "stand",
+     1.06,
+     1.45
+    ],
+    [
+     "up,",
+     1.45,
+     1.67
+    ],
+    [
+     "green",
+     1.83,
+     2.22
+    ],
+    [
+     "and",
+     2.22,
+     2.32
+    ],
+    [
+     "happy!",
+     2.32,
+     2.888
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the tree is happy",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "How does the little tree look now? Droopy, or happy?",
+   "t0": 249.375,
+   "t1": 256.25,
+   "v0": 249.61175000000003,
+   "dur": 3.26325,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.21
+    ],
+    [
+     "does",
+     0.21,
+     0.35
+    ],
+    [
+     "the",
+     0.35,
+     0.42
+    ],
+    [
+     "little",
+     0.42,
+     0.6
+    ],
+    [
+     "tree",
+     0.6,
+     0.91
+    ],
+    [
+     "look",
+     0.91,
+     1.11
+    ],
+    [
+     "now?",
+     1.11,
+     1.52
+    ],
+    [
+     "Droopy,",
+     1.85,
+     2.45
+    ],
+    [
+     "or",
+     2.45,
+     2.61
+    ],
+    [
+     "happy?",
+     2.61,
+     3.26
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: droopy or happy",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Mama camel nuzzles Sandy. She is so proud of her.",
+   "t0": 256.25,
+   "t1": 260.625,
+   "v0": 256.595,
+   "dur": 3.6619166666666665,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.39
+    ],
+    [
+     "camel",
+     0.39,
+     0.92
+    ],
+    [
+     "nuzzles",
+     0.92,
+     1.45
+    ],
+    [
+     "Sandy.",
+     1.45,
+     2.07
+    ],
+    [
+     "She",
+     2.46,
+     2.62
+    ],
+    [
+     "is",
+     2.62,
+     2.7
+    ],
+    [
+     "so",
+     2.7,
+     2.92
+    ],
+    [
+     "proud",
+     2.92,
+     3.31
+    ],
+    [
+     "of",
+     3.31,
+     3.41
+    ],
+    [
+     "her.",
+     3.41,
+     3.66
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama nuzzles Sandy",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Thank you, Sandy. You carried the water all the way!",
+   "t0": 260.625,
+   "t1": 264.375,
+   "v0": 260.7769166666667,
+   "dur": 3.295,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.4
+    ],
+    [
+     "you,",
+     0.4,
+     0.51
+    ],
+    [
+     "Sandy.",
+     0.51,
+     1.12
+    ],
+    [
+     "You",
+     1.46,
+     1.56
+    ],
+    [
+     "carried",
+     1.56,
+     1.99
+    ],
+    [
+     "the",
+     1.99,
+     2.07
+    ],
+    [
+     "water",
+     2.07,
+     2.55
+    ],
+    [
+     "all",
+     2.55,
+     2.75
+    ],
+    [
+     "the",
+     2.75,
+     2.84
+    ],
+    [
+     "way!",
+     2.84,
+     3.29
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: thank you",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "And we all helped, together!",
+   "t0": 264.375,
+   "t1": 266.25,
+   "v0": 264.5919166666667,
+   "dur": 1.3075416666666666,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.1
+    ],
+    [
+     "we",
+     0.1,
+     0.21
+    ],
+    [
+     "all",
+     0.21,
+     0.34
+    ],
+    [
+     "helped,",
+     0.34,
+     0.62
+    ],
+    [
+     "together!",
+     0.62,
+     1.308
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: together",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Thank you for walking with me, Tumble and Milo!",
+   "t0": 266.25,
+   "t1": 269.375,
+   "v0": 266.41945833333335,
+   "dur": 2.7783333333333333,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.35
+    ],
+    [
+     "you",
+     0.35,
+     0.45
+    ],
+    [
+     "for",
+     0.45,
+     0.59
+    ],
+    [
+     "walking",
+     0.59,
+     0.97
+    ],
+    [
+     "with",
+     0.97,
+     1.14
+    ],
+    [
+     "me,",
+     1.14,
+     1.44
+    ],
+    [
+     "Tumble",
+     1.65,
+     2.07
+    ],
+    [
+     "and",
+     2.07,
+     2.18
+    ],
+    [
+     "Milo!",
+     2.18,
+     2.778
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Sandy: thank you",
+   "who": "sandy",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Little steps can go a long, long way, when friends help each other.",
+   "t0": 269.375,
+   "t1": 274.375,
+   "v0": 269.71779166666664,
+   "dur": 4.347958333333334,
+   "words": [
+    [
+     "Little",
+     0.0,
+     0.26
+    ],
+    [
+     "steps",
+     0.26,
+     0.81
+    ],
+    [
+     "can",
+     0.81,
+     1.0
+    ],
+    [
+     "go",
+     1.0,
+     1.21
+    ],
+    [
+     "a",
+     1.21,
+     1.26
+    ],
+    [
+     "long,",
+     1.26,
+     1.9
+    ],
+    [
+     "long",
+     1.9,
+     2.25
+    ],
+    [
+     "way,",
+     2.25,
+     2.64
+    ],
+    [
+     "when",
+     2.98,
+     3.12
+    ],
+    [
+     "friends",
+     3.12,
+     3.55
+    ],
+    [
+     "help",
+     3.55,
+     3.82
+    ],
+    [
+     "each",
+     3.82,
+     4.03
+    ],
+    [
+     "other.",
+     4.03,
+     4.348
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Do you remember? How long can a camel go without water? A week, or a year?",
+   "t0": 274.375,
+   "t1": 283.125,
+   "v0": 274.58574999999996,
+   "dur": 5.162916666666667,
+   "words": [
+    [
+     "Do",
+     0.03,
+     0.09
+    ],
+    [
+     "you",
+     0.09,
+     0.22
+    ],
+    [
+     "remember?",
+     0.22,
+     0.84
+    ],
+    [
+     "How",
+     1.13,
+     1.29
+    ],
+    [
+     "long",
+     1.29,
+     1.64
+    ],
+    [
+     "can",
+     1.64,
+     1.77
+    ],
+    [
+     "a",
+     1.77,
+     1.81
+    ],
+    [
+     "camel",
+     1.81,
+     2.27
+    ],
+    [
+     "go",
+     2.27,
+     2.41
+    ],
+    [
+     "without",
+     2.41,
+     2.78
+    ],
+    [
+     "water?",
+     2.78,
+     3.27
+    ],
+    [
+     "A",
+     3.67,
+     3.75
+    ],
+    [
+     "week,",
+     3.75,
+     4.35
+    ],
+    [
+     "or",
+     4.35,
+     4.55
+    ],
+    [
+     "a",
+     4.55,
+     4.58
+    ],
+    [
+     "year?",
+     4.58,
+     5.16
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: week or year",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Who carried the jugs home? Sandy, or Milo?",
+   "t0": 283.125,
+   "t1": 290.3125,
+   "v0": 283.4686666666666,
+   "dur": 3.3015833333333333,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.16
+    ],
+    [
+     "carried",
+     0.16,
+     0.57
+    ],
+    [
+     "the",
+     0.57,
+     0.64
+    ],
+    [
+     "jugs",
+     0.64,
+     1.1
+    ],
+    [
+     "home?",
+     1.1,
+     1.52
+    ],
+    [
+     "Sandy,",
+     1.85,
+     2.59
+    ],
+    [
+     "or",
+     2.59,
+     2.68
+    ],
+    [
+     "Milo?",
+     2.68,
+     3.3
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: who carried",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Step by step, slow and steady. Here comes water! Tree, get ready!",
+   "t0": 290.3125,
+   "t1": 295.625,
+   "v0": 290.4902499999999,
+   "dur": 4.7815,
+   "words": [
+    [
+     "Step",
+     0.01,
+     0.35
+    ],
+    [
+     "by",
+     0.35,
+     0.54
+    ],
+    [
+     "step,",
+     0.54,
+     0.99
+    ],
+    [
+     "slow",
+     0.99,
+     1.5
+    ],
+    [
+     "and",
+     1.5,
+     1.62
+    ],
+    [
+     "steady.",
+     1.62,
+     2.14
+    ],
+    [
+     "Here",
+     2.61,
+     2.82
+    ],
+    [
+     "comes",
+     2.82,
+     3.12
+    ],
+    [
+     "water!",
+     3.12,
+     3.78
+    ],
+    [
+     "Tree,",
+     3.78,
+     4.15
+    ],
+    [
+     "get",
+     4.15,
+     4.33
+    ],
+    [
+     "ready!",
+     4.33,
+     4.78
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the closing rhyme",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "",
+   "t0": 295.625,
+   "t1": 301.25,
+   "v0": 296.25,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Next time: Sandy's first night away! See you on the next adventure, friends!",
+   "t0": 301.25,
+   "t1": 307.1155833333333,
+   "v0": 301.37,
+   "dur": 5.345583333333333,
+   "words": [
+    [
+     "Next",
+     0.0,
+     0.39
+    ],
+    [
+     "time:",
+     0.39,
+     0.83
+    ],
+    [
+     "Sandy's",
+     1.09,
+     1.69
+    ],
+    [
+     "first",
+     1.69,
+     2.03
+    ],
+    [
+     "night",
+     2.03,
+     2.21
+    ],
+    [
+     "away!",
+     2.21,
+     2.72
+    ],
+    [
+     "See",
+     3.16,
+     3.39
+    ],
+    [
+     "you",
+     3.39,
+     3.61
+    ],
+    [
+     "on",
+     3.61,
+     3.74
+    ],
+    [
+     "the",
+     3.74,
+     3.82
+    ],
+    [
+     "next",
+     3.82,
+     4.14
+    ],
+    [
+     "adventure,",
+     4.14,
+     4.69
+    ],
+    [
+     "friends!",
+     4.69,
+     5.34
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: next adventure",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  }
+ ]
+}

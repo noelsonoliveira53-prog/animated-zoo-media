@@ -1,0 +1,235 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nPitter-patter, pitter-patter, rain is falling down,\nSoftly on the window, softly on the town,\nCozy in our blankets, warm inside our bed,\nListen to the raindrops, rest your sleepy head.\n\n[Verse 1]\nRaindrops on the rooftop, tap, tap, tap,\nBunny's getting sleepy, time to take a nap,\nLamb is snuggled close and Teddy's here too,\nThe rain is singing softly, just for you.\n\n[Chorus]\nPitter-patter, pitter-patter, rain is falling down,\nSoftly on the window, softly on the town,\nCozy in our blankets, warm inside our bed,\nListen to the raindrops, rest your sleepy head.\n\n[Verse 2]\nPuddles in the garden, flowers drinking deep,\nTrees are getting thirsty drinks before they sleep,\nClouds are slowly drifting, gray and soft and slow,\nTomorrow brings a rainbow, glowing as we go.\n\n[Bridge]\nBreathe in slowly, like the falling rain,\nBreathe out softly, once and once again,\nTap your fingers gently, tap, tap, tap,\nClose your eyes now, time to take a nap.\n\n[Verse 3]\nThe rain is getting quiet, softer than before,\nA gentle little whisper, tapping at the door,\nGoodnight little raindrops, goodnight sky so gray,\nWe'll see you in the morning on a brand new day.\n\n[Chorus]\nPitter-patter, pitter-patter, rain is falling down,\nSoftly on the window, softly on the town,\nCozy in our blankets, warm inside our bed,\nListen to the raindrops, rest your sleepy head.\n\n[Outro]\nPitter-patter. Goodnight.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 906,
+ "who_map": {},
+ "meta": {
+  "title": "Pitter-Patter Rain \ud83c\udf19 Sleepy Lullaby for Babies | Moonbeam",
+  "card": "Pitter-Patter Rain",
+  "thumb_text": "COZY RAINY NIGHT",
+  "description": "A soothing rainy-night lullaby. Luna, Bunny, Lamb and Teddy snuggle in their blankets and listen to the raindrops tapping on the window as the garden drinks and the clouds drift by.\nA slow breathing break helps little ones relax and fall asleep. For babies and toddlers.",
+  "tags": [
+   "rain lullaby",
+   "rain sounds for sleep",
+   "lullaby for babies",
+   "bedtime song",
+   "sleep music for kids",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep11",
+  "title": "Pitter-Patter Rain",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Pitter-Patter",
+      "color": "#bfd8ff",
+      "at": "top",
+      "size": 0.55
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "nap,"
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "left",
+      "word": "Teddy's"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "sleepy"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "word": "Clouds"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "Breathe"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "Goodnight"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "Goodnight."
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep11",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

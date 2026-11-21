@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep09_toys",
+ "title": "Toys Go to Sleep 🧸 Cozy Tidy-Up Bedtime Story with Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome back to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the toys in our playroom.",
+   ""
+  ],
+  [
+   "First, let's take a slow, deep breath together. Breathe in, and breathe out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in under your blanket, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin our story.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb2_blocks",
+   "lines": [
+    [
+     "Here's a little clue: they're square, colorful, and they stack up tall. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Blocks.",
+     "enter"
+    ],
+    [
+     "This is Blocks. Can you whisper blocks? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Blocks stack up, one on top of another.",
+     "fx+bob"
+    ],
+    [
+     "A wide block at the bottom helps the tower stand up tall.",
+     "bob"
+    ],
+    [
+     "Can you stack your fists, one on top of the other, slowly?",
+     "bob"
+    ],
+    [
+     "What do blocks like to do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Stack up, one on top of another.",
+     "fx2+badge:BLOCKS"
+    ],
+    [
+     "Let's say it softly together: Blocks.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Blocks.",
+     "zoom"
+    ],
+    [
+     "Now the blocks go back in their box, all in a neat little pile.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Blocks. Stack and sleep.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_doll",
+   "lines": [
+    [
+     "Here's a little clue: she's soft and floppy, with curly yarn hair. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Rag Doll.",
+     "enter"
+    ],
+    [
+     "This is Rag Doll. Can you whisper rag doll? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A rag doll is made of soft cloth, and she's very cuddly.",
+     "fx+bob"
+    ],
+    [
+     "Her floppy arms are just right for gentle hugs.",
+     "bob"
+    ],
+    [
+     "Can you let your arms go soft and floppy, like a rag doll? So relaxed.",
+     "bob"
+    ],
+    [
+     "What is a rag doll made of?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Soft cloth. Soft and cuddly.",
+     "fx2+badge:RAG DOLL"
+    ],
+    [
+     "Let's say it softly together: Rag Doll.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Rag Doll.",
+     "zoom"
+    ],
+    [
+     "Rag Doll lies down on her little pillow, all floppy and calm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Rag Doll. Rest your head.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_rockhorse",
+   "lines": [
+    [
+     "Here's a little clue: it's a wooden horse that rocks back and forth. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Rocking Horse.",
+     "enter"
+    ],
+    [
+     "This is Rocking Horse. Can you whisper rocking horse? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "A rocking horse sits on two curved rockers.",
+     "fx+bob"
+    ],
+    [
+     "The curved rockers let it rock gently, back and forth.",
+     "bob"
+    ],
+    [
+     "Can you rock your body gently, back and forth, back and forth?",
+     "bob"
+    ],
+    [
+     "How does a rocking horse move?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Back and forth, back and forth, gently.",
+     "fx2+badge:ROCKING HORSE"
+    ],
+    [
+     "Let's say it softly together: Rocking Horse.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Rocking Horse.",
+     "zoom"
+    ],
+    [
+     "Rocking Horse slows down, and down, until it's still and quiet.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Rocking Horse. Rock softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_boat",
+   "lines": [
+    [
+     "Here's a little clue: it has a sail, and it floats on the water. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Toy Boat.",
+     "enter"
+    ],
+    [
+     "This is Toy Boat. Can you whisper toy boat? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "Boats float on top of the water.",
+     "fx+bob"
+    ],
+    [
+     "The sail catches the wind to help the boat move along.",
+     "bob"
+    ],
+    [
+     "Can you blow a slow, gentle breath, like a breeze for the little sail?",
+     "bob"
+    ],
+    [
+     "What helps a sailboat move?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The wind, blowing on its sail.",
+     "fx2+badge:TOY BOAT"
+    ],
+    [
+     "Let's say it softly together: Toy Boat.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Toy Boat.",
+     "zoom"
+    ],
+    [
+     "Toy Boat drifts to the edge of the tub, ready to rest.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Toy Boat. Float softly.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb2_toybox",
+   "lines": [
+    [
+     "Here's a little clue: it's a big box where all the toys go at night. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Toy Box.",
+     "enter"
+    ],
+    [
+     "This is Toy Box. Can you whisper toy box? Nice and soft.",
+     "zoom"
+    ],
+    [
+     "When we put our toys away, they're easy to find tomorrow.",
+     "fx+bob"
+    ],
+    [
+     "Ball, teddy, blocks, all tucked in, safe and sound.",
+     "bob"
+    ],
+    [
+     "Can you pretend to put a toy away, gently, in the box?",
+     "bob"
+    ],
+    [
+     "Where do the toys sleep at night?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the toy box, all tucked in.",
+     "fx2+badge:TOY BOX"
+    ],
+    [
+     "Let's say it softly together: Toy Box.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly, like a little whisper: Toy Box.",
+     "zoom"
+    ],
+    [
+     "The lid closes softly. The playroom is tidy and quiet.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Toy Box. Goodnight, toys.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all of our sleepy friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Blocks. Stack and sleep.",
+   "@mb2_blocks"
+  ],
+  [
+   "Goodnight, Rag Doll. Rest your head.",
+   "@mb2_doll"
+  ],
+  [
+   "Goodnight, Rocking Horse. Rock softly.",
+   "@mb2_rockhorse"
+  ],
+  [
+   "Goodnight, Toy Boat. Float softly.",
+   "@mb2_boat"
+  ],
+  [
+   "Goodnight, Toy Box. Goodnight, toys.",
+   "@mb2_toybox"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Blocks, Rag Doll, Rocking Horse, Toy Boat, and Toy Box. Now close your eyes, and dream sweet, gentle dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

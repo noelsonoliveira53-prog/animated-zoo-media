@@ -1,0 +1,731 @@
+{
+ "id": "zool_ep21",
+ "thumb_at": [
+  "cow",
+  4,
+  0.6
+ ],
+ "seed": 79,
+ "title": "Farm Animal Facts for Kids! Cow, Horse and Pig",
+ "card": "Farm Friends!",
+ "thumb_text": "CHEW CHEW!",
+ "description": "Who has a stomach with four parts? Who can sleep standing up? Pick your answer with Milo the bluebird, then find out: a cow chews its cud for a big part of every day, a horse can lock its legs and nap standing up, and a pig digs with its snout to loosen the dirt and cool down.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "farm animals for kids",
+  "cow facts for kids",
+  "horse facts for kids",
+  "pig facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "cow",
+  "horse",
+  "pig"
+ ],
+ "extras": [
+  {
+   "id": "lion",
+   "kind": "lion"
+  },
+  {
+   "id": "monkey",
+   "kind": "monkey"
+  }
+ ],
+ "facts": [
+  "Ruminant stomachs have four compartments: the rumen, the reticulum, the omasum and the abomasum; cows may spend 35 to 40 percent of each day ruminating (cud chewing); a cow's salivary glands can make and add 50 to 80 quarts of saliva to the rumen daily; the rumen can hold 25 gallons or more (University of Minnesota Extension, 'The ruminant digestive system', extension.umn.edu/dairy-nutrition/ruminant-digestive-system, read Nov 17 2026).",
+  "Horses: the stay apparatus, a complex arrangement of muscles, tendons and ligaments, keeps the legs steady with little effort; in the shoulder a bony groove locks the biceps tendon in place; standing sleep is restful, but horses do lie down for their deepest sleep periods (Kentucky Equine Research, 'Asleep Standing Up: How Do Horses Do That?', ker.com, read Nov 17 2026).",
+  "Pigs: the nose serves important functions besides smell; pigs root in soil to obtain iron; older pigs check out a new pig by using their noses to investigate; pigs use their snout to loosen up the dirt and use this newly tilled soil to cool down; sows root to gather materials to build nests (Rutgers 4-H Animal Science, 'Don't Root for That! Why All Aren't Fans of Swine Rooting Behavior', 4hanimalscience.rutgers.edu, read Nov 17 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "beach",
+   "tod": "morning",
+   "word": "FARM FRIENDS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about farm animals!",
+    "A cow, a horse and a pig. What can they do?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Put on your farm boots. Let's go!"
+   ]
+  },
+  {
+   "name": "cow",
+   "biome": "farm",
+   "tod": "noon",
+   "word": "FOUR PARTS!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "cow"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "COW",
+    "b": "LION",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "4 PARTS",
+     "b": "1 PART",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      1.05,
+      -1.3,
+      2.2
+     ],
+     "on": [
+      4,
+      "one"
+     ],
+     "off": [
+      5
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ],
+      [
+       4,
+       "three"
+      ],
+      [
+       4,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4,
+      "dx": 0.55,
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "again"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "CHEW CHEW!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "grass",
+     "at": "ex",
+     "on": [
+      8,
+      "grass"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      10,
+      "biggest"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "25",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has a tummy with four parts?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the cow? Or is it the lion?",
+     "pause": 3.2
+    },
+    "It is the cow!",
+    "Here is the fun fact. A cow's stomach has four parts! Four parts, all in one tummy.",
+    "Let's count them. One, two, three, four!",
+    {
+     "t": "What does a cow do with its food after it swallows? Hmm.",
+     "pause": 2.4
+    },
+    "It brings the food back up, and chews it again! That is called chewing its cud.",
+    [
+     "Look at the cow, chewing away.",
+     "close:cow"
+    ],
+    "Grass goes down, comes back up, and gets chewed again. Chew, chew, chew! Down, up, and chew again.",
+    "A cow chews its cud for a big part of every day. Lots and lots of chewing!",
+    "The biggest part of a cow's stomach can hold twenty-five gallons or more!",
+    "That is a lot of room for grass. Wow! A big, big tummy!",
+    [
+     "Say it with me. A cow's tummy has four parts!",
+     "close:host"
+    ],
+    "Can you chew like a cow? Chew, chew, chew, nice and slow. Chew, chew.",
+    "Now say it like a cow. Moo! Moo! One more time. Moo!",
+    {
+     "t": "Quick check! How many parts does a cow's stomach have? Four? Or one?",
+     "pause": 3.2
+    },
+    "Four! One, two, three, four. Great job!"
+   ],
+   "short": {
+    "id": "zs90_cow_stomach",
+    "title": "How Many Parts Does a Cow's Tummy Have?",
+    "l1": "HOW MANY",
+    "l2": "PARTS?",
+    "thumb_text": "1 2 3 4!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "horse",
+   "biome": "mountain",
+   "tod": "morning",
+   "word": "STAND UP NAP!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "horse"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "HORSE",
+    "b": "MONKEY",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "zzz",
+     "at": [
+      2.2,
+      -1.2,
+      2.6
+     ],
+     "on": [
+      3,
+      "sleep"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "lock"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "LOCKED LEGS!",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "deepest"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "LIE DOWN",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "legs"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "STEADY!",
+      "color": "#ff7a00"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who can take a nap, standing up?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the horse? Or is it the monkey?",
+     "pause": 3.2
+    },
+    "It is the horse!",
+    "Here is the fun fact. A horse can sleep, standing up on its four legs!",
+    "Standing still, eyes closed, taking a nap. Shh. Quiet, everyone.",
+    {
+     "t": "How does a horse stay up while it sleeps? Hmm.",
+     "pause": 2.4
+    },
+    "Its legs can lock in place, so it stays steady without falling over!",
+    [
+     "Look at the horse, standing tall.",
+     "close:horse"
+    ],
+    "But for its deepest sleep, a horse lies down on the ground. Down it goes!",
+    "Lying down, all snug. Sweet dreams, horse! Night, night!",
+    "Muscles and strong bands in its legs hold the legs steady, with very little work.",
+    "So a horse can rest, and still stand tall. Clever horse! Neigh!",
+    [
+     "Say it with me. A horse can sleep standing up!",
+     "close:host"
+    ],
+    "Can you stand still like a sleeping horse? Stand tall, and lock your legs. Shh.",
+    "Now gallop like a horse. Clip, clop, clip, clop! Clip, clop, clip, clop!",
+    {
+     "t": "Quick check! Can a horse nap standing up? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! A horse can nap standing up. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_horse_sleep",
+    "title": "Can a Horse Sleep Standing Up? Horse Facts",
+    "l1": "HOW DOES",
+    "l2": "IT NAP?",
+    "thumb_text": "SHH!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "pig",
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "word": "SNOUT!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "pig"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "PIG",
+    "b": "LION",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "SNOUT",
+     "b": "TAIL",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "snout"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "DIG DIG!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "mud",
+     "at": [
+      2.3,
+      -0.9,
+      0.0
+     ],
+     "on": [
+      6,
+      "dirt"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "noses"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "HELLO SNIFF!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      10,
+      "mother"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "COZY NEST",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who digs in the dirt with its nose?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the pig? Or is it the lion?",
+     "pause": 3.2
+    },
+    "It is the pig!",
+    "Here is the fun fact. A pig digs with its snout! Its snout is its nose.",
+    "Digging with your nose is called rooting. Root, root, root! Dig, dig, dig!",
+    {
+     "t": "Why does a pig dig up the dirt? Hmm.",
+     "pause": 2.4
+    },
+    "To cool down! A pig loosens the dirt with its snout, and the soft, cool dirt helps it cool off.",
+    [
+     "Look at that round, pink snout!",
+     "close:pig"
+    ],
+    "Pigs use their noses to say hello, too. When a new pig comes, the other pigs sniff to check it out!",
+    "Sniff, sniff! Hello, new friend! Nice to meet you!",
+    "A mother pig digs with her snout, to gather things for a cozy nest.",
+    "A snout for smelling, for digging, and for saying hello. What a busy nose!",
+    [
+     "Say it with me. A pig digs with its snout!",
+     "close:host"
+    ],
+    "Can you wiggle your nose like a pig? Wiggle, wiggle!",
+    "Now say it like a pig. Oink, oink! Oink, oink, oink!",
+    {
+     "t": "Quick check! What does a pig dig with? Its snout? Or its tail?",
+     "pause": 3.2
+    },
+    "Its snout! Root, root. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_pig_snout",
+    "title": "Why Does a Pig Dig with Its Nose? Pig Facts",
+    "l1": "WHY DOES",
+    "l2": "IT DIG?",
+    "thumb_text": "ROOT ROOT!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "night_meadow",
+   "tod": "golden",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three farm friends. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who chews its cud with a four-part tummy?",
+     "The cow! Yes!",
+     "cow"
+    ],
+    [
+     "Who can nap standing up?",
+     "The horse! That's right!",
+     "horse"
+    ],
+    [
+     "Who digs in the dirt with its snout?",
+     "The pig! You remembered!",
+     "pig"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "farm",
+   "tod": "sunset",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Chew like a cow. Nap like a horse. And dig like a pig!",
+    "Which farm friend is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "every example cued on an early word of its line, so it is on screen while it is named (open note of Nov 16: bamboo, pool, sun appeared only as their line ended)",
+  "goodbye word at z 3.15 (teach.py), so BYE-BYE! stays inside the picture in the goodbye wide shot (cut at 5:10-5:19 of zool_ep15)",
+  "no animal close-up while an example is on screen (asserted); signs at x 1.95; a count of 2 at x 1.35 inside the Shorts-safe area",
+  "picture: new casts per lesson (rhino, giraffe, hippo), new places for the hello (autumn forest) and goodbye (farm)",
+  "teaching: every part has a body action kids copy (finger horns, giraffe tongue, hippo mouth) and one number to count or compare (2 horns, 20 inches, 165 pounds, a foot and a half)"
+ ],
+ "version": 3
+}

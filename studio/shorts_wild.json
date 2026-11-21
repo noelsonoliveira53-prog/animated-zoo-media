@@ -1,0 +1,169 @@
+[
+ {
+  "id": "wk_butterfly",
+  "animal": "butterfly",
+  "title": "Butterflies Taste With Their FEET!",
+  "thumb": "FEET?!",
+  "top": "BUTTERFLY",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Smithsonian Institution: Butterflies",
+   "Natural History Museum (London): Butterflies"
+  ],
+  "beats": [
+   {
+    "say": "You taste with your tongue. A butterfly tastes with its feet! Really?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip, your nature explorer. Let's go on a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Yes! Butterflies have tiny tasters on their feet.",
+    "act": "fx+badge:TASTY FEET!"
+   },
+   {
+    "say": "When a butterfly lands on a leaf, its feet tell it if the leaf is good.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "And every butterfly starts out as a little caterpillar!",
+    "act": "fx2+wiggle"
+   },
+   {
+    "say": "Can you flutter like a butterfly? Be gentle with every bug. See you outside, explorers!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "wk_bee",
+  "animal": "bee",
+  "title": "Honeybees DANCE to Talk to Friends!",
+  "thumb": "BEE DANCE!",
+  "top": "HONEYBEE",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "USDA Agricultural Research Service: Honey bees",
+   "Smithsonian Institution: Honey bees"
+  ],
+  "beats": [
+   {
+    "say": "How do bees tell their friends where the best flowers are? They dance!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip, your nature explorer. Let's go on a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A honeybee does a wiggly dance called the waggle dance.",
+    "act": "fx+badge:WAGGLE DANCE!"
+   },
+   {
+    "say": "The dance shows the other bees which way to fly to find the flowers.",
+    "act": "fxoff+wiggle"
+   },
+   {
+    "say": "And bees have five eyes! Two big ones, and three tiny ones on top.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Can you do a waggle dance? Be gentle with every bug. See you outside, explorers!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "wk_snail",
+  "animal": "snail",
+  "title": "Where Are a Snail's Eyes? Look Up!",
+  "thumb": "EYES UP HIGH",
+  "top": "SNAIL",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Garden snail"
+  ],
+  "beats": [
+   {
+    "say": "Your eyes are on your face. Where are a snail's eyes? Look up!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip, your nature explorer. Let's go on a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A garden snail's eyes sit at the tips of its long tentacles!",
+    "act": "fx2+badge:EYES ON TOP!"
+   },
+   {
+    "say": "It can pull them in and pop them back out. Peekaboo!",
+    "act": "fx2off+bob"
+   },
+   {
+    "say": "A snail slides on a slippery trail of slime. Slow and steady!",
+    "act": "fx+zoom"
+   },
+   {
+    "say": "Can you slide slowly like a snail? Be gentle with every bug. See you outside, explorers!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "wk_ant",
+  "animal": "ant",
+  "title": "Ants Can Carry Things Heavier Than Themselves!",
+  "thumb": "SO STRONG!",
+  "top": "ANT",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Smithsonian Institution: Ants",
+   "Natural History Museum (London): Ants"
+  ],
+  "beats": [
+   {
+    "say": "Could you carry a car? An ant can carry things much heavier than its own body!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip, your nature explorer. Let's go on a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Ants are tiny, but they are super strong!",
+    "act": "fx+badge:SUPER STRONG!"
+   },
+   {
+    "say": "An ant can lift a leaf or a crumb that is heavier than itself.",
+    "act": "hop"
+   },
+   {
+    "say": "And ants talk to each other with smells, and by touching their antennae.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Can you show me your strong muscles? Be gentle with every bug. See you outside, explorers!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

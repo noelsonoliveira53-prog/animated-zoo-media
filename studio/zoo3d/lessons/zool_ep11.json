@@ -1,0 +1,784 @@
+{
+ "id": "zool_ep11",
+ "thumb_at": [
+  "giraffe",
+  4,
+  0.97
+ ],
+ "seed": 43,
+ "title": "Yes or No? Animal Quiz for Kids with Milo",
+ "card": "Yes or No?",
+ "thumb_text": "COUNT THE BONES!",
+ "description": "Yes or no? Play the animal quiz with Milo the bluebird! Is a polar bear's skin white? Can a polar bear swim? Can a horse sleep standing up? Does a giraffe have the same number of neck bones as you? Pick your answer, then see the proof and count along.\nAn interactive yes-or-no animal quiz for kids ages 2-6, with thinking time, counting, actions to copy, quick checks and a recap at the end.",
+ "tags": [
+  "animal quiz for kids",
+  "yes or no quiz for kids",
+  "true or false animals",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "polar_bear",
+  "horse",
+  "giraffe"
+ ],
+ "extras": [
+  {
+   "id": "foal",
+   "kind": "horse",
+   "scale": 0.5
+  }
+ ],
+ "facts": [
+  "A polar bear's skin is black (Polar Bears International); its hair is made of clear, hollow tubes, and its fat can be 2 to 4 inches thick (San Diego Zoo, 'Polar bear').",
+  "Polar bears paddle with their broad front feet and can swim more than 60 miles without rest (San Diego Zoo, 'Polar bear'); their back legs steer like rudders; the paws are as big as dinner plates (Polar Bears International).",
+  "Horses can doze standing up because a 'stay apparatus' locks their legs; they lie down for deep (REM) sleep (PetMD; Merck Veterinary Manual).",
+  "A healthy foal stands within one hour of birth and nurses within two (Cornell University College of Veterinary Medicine).",
+  "A giraffe has seven neck vertebrae, the same number as a human and almost every other mammal; each can be about 10 inches (25 cm) long (Bristol Zoo; San Diego Zoo).",
+  "A giraffe's tongue can be up to 21 inches long (National Geographic Kids, 'Giraffe')."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "mountain",
+   "tod": "morning",
+   "word": "YES OR NO?",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      -2.5,
+      -1.9,
+      3.7
+     ],
+     "on": [
+      3,
+      "yes"
+     ],
+     "opts": {
+      "text": "YES",
+      "color": "#22a84a"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      2.5,
+      -1.9,
+      3.7
+     ],
+     "on": [
+      3,
+      "no"
+     ],
+     "opts": {
+      "text": "NO",
+      "color": "#e23b34"
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are playing Yes or No!",
+    "I will ask a question about an animal friend.",
+    "If you think yes, give a thumbs up. If you think no, shake your head.",
+    {
+     "t": "Let's practice. Yes or no. Am I a bluebird?",
+     "pause": 2.6
+    },
+    "Yes! I am Milo the bluebird! Good job.",
+    "Are you ready? Let's play!"
+   ]
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "noon",
+   "word": "BLACK SKIN!",
+   "word_on": [
+    2,
+    "black"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "polar_bear"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "polar_bear"
+     ],
+     "place": {
+      "polar_bear": [
+       2.3,
+       -0.45,
+       0.0
+      ]
+     }
+    },
+    {
+     "line": 13,
+     "show": [
+      "polar_bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      6
+     ],
+     "answer": [
+      7
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    },
+    {
+     "a": "WHITE",
+     "b": "BLACK",
+     "right": "b",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#3db8ff",
+      "b": "#2b2b33"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "magnifier",
+     "at": [
+      2.3,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      3
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "fill": "#17171c",
+      "hairs": 6,
+      "label": "SKIN",
+      "s": 1.05
+     }
+    },
+    {
+     "prop": "pool",
+     "at": "ex",
+     "on": [
+      7,
+      "swimmers"
+     ],
+     "off": [
+      13
+     ]
+    },
+    {
+     "prop": "plate",
+     "at": [
+      1.2,
+      -1.0,
+      0.0
+     ],
+     "on": [
+      9,
+      "dinner"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "r": 0.22
+     }
+    }
+   ],
+   "lines": [
+    "Here is the polar bear. Look at that white, fluffy fur.",
+    {
+     "t": "Yes or no. Is a polar bear's skin white?",
+     "pause": 3.2
+    },
+    "No! Here is the fun fact. Under the fur, a polar bear's skin is black!",
+    [
+     "Look closer. Black skin, hiding under all that fur.",
+     "exhibit"
+    ],
+    [
+     "And the fur is not really white. Each hair is clear, like glass!",
+     "exhibit"
+    ],
+    "Under the skin, there is a thick layer of fat. It keeps the polar bear warm in the icy cold.",
+    {
+     "t": "Next question. Yes or no. Can a polar bear swim?",
+     "pause": 3.2
+    },
+    "Yes! Polar bears are super swimmers!",
+    [
+     "Look at those big front paws. They work like paddles in the water.",
+     "exhibit"
+    ],
+    [
+     "Each paw is as big as a dinner plate!",
+     "exhibit"
+    ],
+    "A polar bear can swim a very, very long way, without stopping to rest!",
+    "Its back legs steer, like the rudder of a boat.",
+    "Brrr! The water is icy cold. But the polar bear stays warm.",
+    [
+     "Say it with me. Polar bear skin is black!",
+     "close:host"
+    ],
+    "Can you paddle your paws like a polar bear? Paddle, paddle, paddle!",
+    {
+     "t": "Quick check! What color is a polar bear's skin? White? Or black?",
+     "pause": 3.2
+    },
+    "Black! Black skin, under clear fur. Brilliant!",
+    "Clap your paws!"
+   ],
+   "short": {
+    "id": "zs90_polar_skin",
+    "title": "Polar Bear Skin Is Black! Yes or No Animal Quiz",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "thumb_text": "WHITE FUR?",
+    "thumb_line": [
+     3,
+     0.8
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "horse",
+   "biome": "farm",
+   "tod": "morning",
+   "word": "SLEEPS STANDING!",
+   "word_on": [
+    2,
+    "sleep"
+   ],
+   "word_off": [
+    6
+   ],
+   "visits": [
+    {
+     "show": [
+      "horse"
+     ]
+    },
+    {
+     "line": 8,
+     "show": [
+      "horse",
+      "foal"
+     ]
+    },
+    {
+     "line": 11,
+     "show": [
+      "horse"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "b",
+     "ask": [
+      11
+     ],
+     "answer": [
+      12
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    },
+    {
+     "a": "STANDS UP",
+     "b": "LIES DOWN",
+     "right": "b",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "zzz",
+     "at": [
+      0.6,
+      -1.0,
+      2.3
+     ],
+     "on": [
+      2,
+      "sleep"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.2,
+      "color": "#2459b8"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      3,
+      "end"
+     ],
+     "off": [
+      4
+     ]
+    },
+    {
+     "prop": "count",
+     "at": [
+      1.2,
+      -1.3,
+      3.2
+     ],
+     "on": [
+      5,
+      "one"
+     ],
+     "off": [
+      6
+     ],
+     "times": [
+      [
+       5,
+       "one"
+      ],
+      [
+       5,
+       "two"
+      ],
+      [
+       5,
+       "three"
+      ],
+      [
+       5,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4,
+      "dx": 0.7,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "heart",
+     "at": [
+      2.55,
+      -1.2,
+      2.2
+     ],
+     "on": [
+      8,
+      "foal"
+     ],
+     "off": [
+      11
+     ],
+     "opts": {
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Here is the horse. Clip, clop!",
+    {
+     "t": "Yes or no. Can a horse sleep standing up?",
+     "pause": 3.2
+    },
+    "Yes! Here is the fun fact. A horse can sleep standing up!",
+    {
+     "t": "But how can it sleep without falling over?",
+     "pause": 2.4
+    },
+    [
+     "Its legs lock in place, so it does not fall over.",
+     "exhibit"
+    ],
+    "You have two legs. A horse has four! One, two, three, four.",
+    [
+     "For a big, deep sleep, the horse lies down on the soft ground.",
+     "close:horse"
+    ],
+    "A horse does not sleep all night like you. It takes lots of tiny naps!",
+    [
+     "Now look, a baby horse! A baby horse is called a foal.",
+     "teach"
+    ],
+    "A foal can stand up on its wobbly legs when it is only one hour old!",
+    "The mama horse feeds her foal with her milk.",
+    {
+     "t": "Now you. Do you sleep standing up? Yes, or no?",
+     "pause": 3.2
+    },
+    "No! You sleep lying down, in your cozy bed. But a horse can do both!",
+    [
+     "Say it with me. Horses can sleep standing up!",
+     "close:host"
+    ],
+    "Can you stand very still and close your eyes? Shh. One, two, three.",
+    {
+     "t": "Quick check! For a big, deep sleep, does a horse stand up? Or lie down?",
+     "pause": 3.2
+    },
+    "It lies down! Good remembering!",
+    "Now wiggle and wake up. Good morning!"
+   ],
+   "short": {
+    "id": "zs90_horse_sleep",
+    "title": "Horses Can Sleep Standing Up! Yes or No Quiz",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "thumb_text": "TINY NAPS!",
+    "thumb_line": [
+     4,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "giraffe",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "show": [
+    "giraffe"
+   ],
+   "word": "7 NECK BONES!",
+   "word_on": [
+    2,
+    "seven"
+   ],
+   "word_off": [
+    5
+   ],
+   "choices": {
+    "a": "YES",
+    "b": "NO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4,
+    "colors": {
+     "a": "#22a84a",
+     "b": "#e23b34"
+    }
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      5
+     ],
+     "answer": [
+      6
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    },
+    {
+     "a": "5",
+     "b": "7",
+     "right": "b",
+     "ask": [
+      13
+     ],
+     "answer": [
+      14
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "bones",
+     "at": "ex",
+     "on": [
+      3
+     ],
+     "off": [
+      5
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ],
+      [
+       4,
+       "three"
+      ],
+      [
+       4,
+       "four"
+      ],
+      [
+       4,
+       "five"
+      ],
+      [
+       4,
+       "six"
+      ],
+      [
+       4,
+       "seven"
+      ]
+     ],
+     "opts": {
+      "n": 7
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      0.9,
+      -1.3,
+      3.75
+     ],
+     "on": [
+      8,
+      "one"
+     ],
+     "off": [
+      9
+     ],
+     "times": [
+      [
+       8,
+       "one"
+      ],
+      [
+       8,
+       "two"
+      ],
+      [
+       8,
+       "three"
+      ],
+      [
+       8,
+       "four"
+      ],
+      [
+       8,
+       "five"
+      ],
+      [
+       8,
+       "six"
+      ],
+      [
+       8,
+       "seven"
+      ]
+     ],
+     "opts": {
+      "n": 7,
+      "dx": 0.45,
+      "s": 0.7
+     }
+    }
+   ],
+   "lines": [
+    "Here is the giraffe. Look at that long, long neck!",
+    {
+     "t": "Yes or no. Does a giraffe have the same number of neck bones as you?",
+     "pause": 3.2
+    },
+    "Yes! Here is the fun fact. A giraffe has seven neck bones. And so do you!",
+    [
+     "The giraffe's neck bones are just much, much bigger. Each one is almost as long as a ruler!",
+     "exhibit"
+    ],
+    [
+     "Let's count them. One, two, three, four, five, six, seven!",
+     "exhibit"
+    ],
+    {
+     "t": "Next question. Yes or no. Does a tiny mouse have seven neck bones too?",
+     "pause": 3.2
+    },
+    "Yes! A mouse has seven. You have seven. And the giraffe has seven!",
+    "Almost every furry animal has seven neck bones. Big or small!",
+    "Let's count on your fingers. One, two, three, four, five, six, seven!",
+    [
+     "And the giraffe's tongue is long too. Even longer than a ruler!",
+     "close:giraffe"
+    ],
+    "It uses that long tongue to grab leaves from the tall, tall trees.",
+    [
+     "Say it with me. Seven neck bones, just like me!",
+     "close:host"
+    ],
+    "Can you touch your neck? Gently now. Nod your head. Yes, yes, yes!",
+    {
+     "t": "Quick check! How many neck bones does a giraffe have? Five? Or seven?",
+     "pause": 3.2
+    },
+    "Seven! Just like you!",
+    "Hold up seven fingers. Hooray!"
+   ],
+   "short": {
+    "id": "zs90_giraffe_neck",
+    "title": "A Giraffe Has 7 Neck Bones, Just Like You!",
+    "l1": "YES",
+    "l2": "OR NO?",
+    "thumb_text": "COUNT ALONG!",
+    "thumb_line": [
+     4,
+     0.97
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "sunset",
+   "word": "ONE MORE TIME!",
+   "lines": [
+    "Wow! What a great game. Let's play one more time, super fast!",
+    "Get ready!"
+   ],
+   "quiz": [
+    [
+     "Is a polar bear's skin white?",
+     "No! It is black!",
+     "polar_bear"
+    ],
+    [
+     "Can a horse sleep standing up?",
+     "Yes! It can!",
+     "horse"
+    ],
+    [
+     "Does a giraffe have seven neck bones, like you?",
+     "Yes! Seven, just like you!",
+     "giraffe"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "mountain",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Paddle like a polar bear. Stand still like a horse. And nod like a giraffe!",
+    "Which answer surprised you the most?",
+    {
+     "t": "One last question. Yes or no. Did you have fun today?",
+     "pause": 2.0
+    },
+    "Yes! Me too!",
+    "Thank you for playing with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "format v3 (Noelson, Nov 14 5:12 PM): lesson at least 5:00, every part is one complete 85-95 s mini-lesson that becomes a 90-second Short",
+  "deeper parts: a 'why?' or second question round, one more sourced fact with its own example, and a quick check with answer signs at the end of each part",
+  "picture fixes from the review of the first render: flies half the size, dinner plate paw-sized, answer signs and Milo moved inside the centre 3:2 so the Shorts never cut them",
+  "new on-screen examples: grass patch with daisies, milk bottle and glass, SNOUT / TROOP / SNOW BOOTS word signs, fly count, second counting rounds",
+  "interactive lesson v2 base: answer signs + thinking timer, calm cast, one continuous teaching shot per idea, native 4K, every word placed from the audio"
+ ],
+ "version": 3
+}

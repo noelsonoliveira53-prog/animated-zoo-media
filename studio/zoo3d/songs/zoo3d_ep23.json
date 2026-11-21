@@ -1,0 +1,346 @@
+{
+ "style": "high-energy modern sing-along pop for families, 116 bpm, bright major key, punchy drums and big handclaps, bouncy synth bass, marimba, bongos and bright trumpet hooks, warm friendly male lead vocal with a cheerful group chorus on every chorus, call-and-response, verses light and bouncy, pre-chorus builds with a rising snare roll, chorus explodes with full band and group vocals, short claps-and-stomps breakdown, final chorus modulates up a whole step with the biggest energy, vocals start right away on the first beat with the chorus, no instrumental intro, short punchy ending",
+ "lyrics": "[Chorus - full band, group vocals]\nStripes and splashes, here we go!\nThe tiger is the biggest cat we know!\nOrange and stripy, one, two, three,\nSplash in the water, sing with me!\n\n[Verse 1 - light and bouncy]\nOrange coat and stripes so dark,\nPadding softly through the park!\nBigger than the house cat, big as can be,\nThe biggest wild cat, look and see!\n\n[Pre-Chorus - build up, rising drums]\nWho is big? Who is big?\nThe tiger cat is really big!\n\n[Chorus - full band, group vocals]\nStripes and splashes, here we go!\nThe tiger is the biggest cat we know!\nOrange and stripy, one, two, three,\nSplash in the water, sing with me!\n\n[Verse 2 - light and bouncy]\nMost cats stay away from the rain,\nBut tigers jump in again and again!\nPaddle, paddle, swim so well,\nSplishy, splashy, tiger swell!\n\n[Bridge - claps and stomps, call and response]\nPaddle your paws! (Paddle, paddle!)\nMake a splash! (Splash, splash, splash!)\nSwish your tail! (Swish, swish, swish!)\nNow shake off the water, quick as a flash!\n\n[Verse 3 - light and bouncy]\nLook at the stripes, every one,\nNo two tigers have the same, what fun!\nLittle cubs stay close to Mama, you see,\nSnuggled up as cozy as can be!\n\n[Pre-Chorus - build up, rising drums]\nWho is big? Who is big?\nThe tiger cat is really big!\n\n[Final Chorus - key change up, biggest energy, everyone sings]\nStripes and splashes, here we go!\nThe tiger is the biggest cat we know!\nWe splashed and sang, one, two, three,\nStripes and splashes, sing with me!\n\n[Outro - quick and happy]\nStripes and splashes! Bye-bye, friends!",
+ "duration": 160,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 923,
+ "who_map": {},
+ "meta": {
+  "title": "Stripes and Splashes! Tiger Song for Kids with Milo",
+  "card": "Stripes and Splashes!",
+  "thumb_text": "BIG CAT!",
+  "description": "Stripes and splashes! Sing and splash with Milo the bluebird and the tiger, the biggest wild cat in the world: an orange coat with dark stripes, stripes that are all its own, a big cat that loves the water, and cubs that stay close to Mama.\nA tiger song for kids. Roar, swim and splash along. Ages 2-6.\n\nFacts from National Geographic Kids and Smithsonian's National Zoo (tiger pages).\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "tiger song for kids",
+   "big cat song",
+   "animal song for kids",
+   "action song for kids",
+   "kids songs",
+   "preschool learning song",
+   "The Animated Zoo",
+   "Milo"
+  ],
+  "song_v": "v3 new cast + places (Nov 13)"
+ },
+ "job": {
+  "id": "zoo3d_ep23",
+  "title": "Stripes and Splashes!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 23,
+  "new_song": true,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "bear",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "bear"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "koala"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "verses": [
+   [
+    "tiger"
+   ],
+   [
+    "tiger"
+   ],
+   [
+    "tiger"
+   ]
+  ],
+  "locations": [
+   {
+    "from": "chorus1",
+    "biome": "night_meadow",
+    "tod": "golden"
+   },
+   {
+    "from": "verse1",
+    "biome": "autumn_forest",
+    "tod": "noon",
+    "seed": 1
+   },
+   {
+    "from": "chorus2",
+    "biome": "jungle",
+    "tod": "golden",
+    "seed": 2
+   },
+   {
+    "from": "verse2",
+    "biome": "river",
+    "tod": "noon",
+    "seed": 3
+   },
+   {
+    "from": "bridge1",
+    "biome": "beach",
+    "tod": "morning",
+    "seed": 4
+   },
+   {
+    "from": "chorus3",
+    "biome": "mountain",
+    "tod": "sunset",
+    "seed": 5
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "close:tiger",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:tiger",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG CAT!",
+      "color": "#3db8ff",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus1",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "vista",
+     "close:host",
+     "orbit",
+     "close:koala",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES AND SPLASHES!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:tiger",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "SPLASH!",
+      "color": "#8e5bd8",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:tiger",
+     "close:hippo",
+     "close:bear",
+     "close:koala",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.5,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SWIM!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:tiger",
+     "wide",
+     "side"
+    ],
+    "energy": 0.75,
+    "wave": 0,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "MAMA!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "prechorus2",
+    "shots": [
+     "close:host",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": []
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host",
+     "high"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.4,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES AND SPLASHES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep23",
+  "res": "1920x1080",
+  "step": 1,
+  "cut_mode": "beat",
+  "cut_beats": {
+   "chorus": 4,
+   "bridge": 4,
+   "prechorus": 2
+  },
+  "follow_singer": true,
+  "punch": true
+ }
+}

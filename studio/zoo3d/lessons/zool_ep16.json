@@ -1,0 +1,722 @@
+{
+ "id": "zool_ep16",
+ "thumb_at": [
+  "polar_bear",
+  6,
+  0.6
+ ],
+ "seed": 67,
+ "title": "Amazing Animal Feet! Paws, Claws and Toes for Kids",
+ "card": "Amazing Feet!",
+ "thumb_text": "GRIP GRIP!",
+ "description": "Whose feet are these? Pick your answer with Milo the bluebird, then look closely: a polar bear has wide feet like paddles with tiny bumps that help it grip the ice, a tiger can pull its long claws in and out and can swim across big rivers, and a hippo spreads its four toes wide to walk on the soft river bottom.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal feet for kids",
+  "polar bear facts for kids",
+  "tiger facts for kids",
+  "hippo facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "polar_bear",
+  "tiger",
+  "hippo"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  }
+ ],
+ "facts": [
+  "Polar bear: wide, large, paddle-like feet; 5 toes on each foot; claws non-retractable, 5-7 cm long; soles of feet have small dermal bumps (papillae) that may help with traction on ice; even foot pads are furred in winter; covered with fur except for the nose; 5-10 cm of fat, and both fat and pelt provide insulation (SDZWA Library fact sheet 'Polar Bear', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/polarbear/characteristics, read Nov 16 2026).",
+  "Tiger: long, retractable claws on broad forepaws; large curved claws, 80-100 mm (3-4 in) long; dark stripes on body, limbs, head and tail provide camouflage in forests and grasslands (SDZWA Library fact sheet 'Tiger', Physical Characteristics, read Nov 16 2026).",
+  "Tigers can cross rivers 6-8 km (4-5 mi) wide (SDZWA Library fact sheet 'Tiger', Behavior & Ecology, read Nov 16 2026).",
+  "Hippo: four functional toes with wide splay; nail-like hooves on the ends of the toes; partial webbing on the feet; being able to splay the digits is a good adaptation for walking in water on soft river bottoms; mucous glands secrete a thick, oily red fluid that dries like lacquer and protects the thin skin against water loss, sunburn and infection (SDZWA Library fact sheet 'Hippopotamus', Physical Characteristics, read Nov 16 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "savanna",
+   "tod": "sunset",
+   "word": "AMAZING FEET!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about amazing animal feet!",
+    "Paws, claws and toes. How do animals use them?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Wiggle your toes. Let's go!"
+   ]
+  },
+  {
+   "name": "polar_bear",
+   "biome": "arctic",
+   "tod": "morning",
+   "word": "PADDLES!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "polar_bear"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "POLAR BEAR",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "BUMPS",
+     "b": "WHEELS",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "paddles"
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "text": "WIDE FEET!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      1.05,
+      -1.3,
+      2.2
+     ],
+     "on": [
+      4,
+      "one"
+     ],
+     "off": [
+      5
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ],
+      [
+       4,
+       "three"
+      ],
+      [
+       4,
+       "four"
+      ],
+      [
+       4,
+       "five"
+      ]
+     ],
+     "opts": {
+      "n": 5,
+      "dx": 0.45,
+      "s": 0.8
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "magnifier",
+     "at": [
+      2.3,
+      -1.1,
+      2.3
+     ],
+     "on": [
+      6,
+      "bumps"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "s": 1.0,
+      "fill": "#3a3a44",
+      "label": "BUMPS"
+     }
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      2.7
+     ],
+     "on": [
+      8,
+      "winter"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has big, furry feet, for walking on the snow and the ice?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the polar bear? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the polar bear!",
+    "Here is the fun fact. A polar bear has big, wide feet, like paddles!",
+    "Each foot has five toes. Let's count. One, two, three, four, five!",
+    {
+     "t": "How does a polar bear walk on slippery ice? Hmm.",
+     "pause": 2.4
+    },
+    "The bottoms of its feet have tiny bumps, that help it grip the ice!",
+    [
+     "Look at those big paws. Grip, grip, grip!",
+     "close:polar_bear"
+    ],
+    "And in winter, even the bottoms of its feet are furry!",
+    "Furry feet, like cozy slippers! Fuzzy, warm and snug.",
+    "A polar bear is covered with thick fur, everywhere except its nose.",
+    "Its claws cannot hide away, like a cat's claws. They are always out. Scritch, scratch!",
+    [
+     "Say it with me. A polar bear has big, furry feet!",
+     "close:host"
+    ],
+    "Can you walk like a polar bear? Big, wide steps. Stomp, stomp!",
+    "Now grip the ice with your toes. Grip, grip!",
+    {
+     "t": "Quick check! What helps a polar bear grip the ice? Tiny bumps? Or wheels?",
+     "pause": 3.2
+    },
+    "Tiny bumps! Grip, grip. Great job!"
+   ],
+   "short": {
+    "id": "zs90_polar_paws",
+    "title": "How Does a Polar Bear Walk on Ice? Polar Bear Feet",
+    "l1": "WHOSE",
+    "l2": "FEET?",
+    "thumb_text": "TINY BUMPS!",
+    "thumb_line": [
+     6,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "tiger",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "word": "CLAWS!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "tiger"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "TIGER",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.4,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "paws"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "BIG PAWS!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "pulls"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "IN AND OUT!",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "pool",
+     "at": [
+      2.4,
+      -0.9,
+      0.0
+     ],
+     "on": [
+      8,
+      "swim"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has big paws, with claws that can hide away?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the tiger? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the tiger!",
+    "Here is the fun fact. A tiger has big, wide front paws.",
+    "And long, curved claws. Each one is about as long as a crayon!",
+    {
+     "t": "Where do the tiger's claws go, when it walks? Hmm.",
+     "pause": 2.4
+    },
+    "It pulls them in, and hides them away! When it needs them, out they come!",
+    [
+     "Soft paws, and hidden claws.",
+     "close:tiger"
+    ],
+    "And a tiger can swim! Tigers can swim across rivers that are four or five miles wide.",
+    "Splash, splash! Paddle, paddle! What a strong swimmer!",
+    "Tigers have stripes on their legs, their heads and their tails, too.",
+    "A tiger's stripes help it hide, in the forest and in the tall grass. Can you find the stripes?",
+    [
+     "Say it with me. A tiger can hide its claws!",
+     "close:host"
+    ],
+    "Can you show tiger claws? Hide them in. Now out! In, and out!",
+    "Now paddle like a swimming tiger. Paddle, paddle, paddle!",
+    {
+     "t": "Quick check! Can a tiger swim? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! Tigers can swim across big rivers. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_tiger_claws",
+    "title": "Where Do a Tiger's Claws Go? Tiger Facts",
+    "l1": "WHERE DO",
+    "l2": "CLAWS GO?",
+    "thumb_text": "HIDDEN!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "hippo",
+   "biome": "river",
+   "tod": "noon",
+   "word": "FOUR TOES!",
+   "word_on": [
+    3
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "hippo"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "HIPPO",
+    "b": "COW",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "4 TOES",
+     "b": "10 TOES",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      1.2,
+      -1.3,
+      2.2
+     ],
+     "on": [
+      4,
+      "one"
+     ],
+     "off": [
+      5
+     ],
+     "times": [
+      [
+       4,
+       "one"
+      ],
+      [
+       4,
+       "two"
+      ],
+      [
+       4,
+       "three"
+      ],
+      [
+       4,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4,
+      "dx": 0.55,
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "spreads"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "WIDE TOES!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.3,
+      -1.1,
+      2.8
+     ],
+     "on": [
+      11,
+      "sun"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who walks along the bottom of the river?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the hippo? Or is it the cow?",
+     "pause": 3.2
+    },
+    "It is the hippo!",
+    "Here is the fun fact. A hippo has four toes on each foot. Four toes, on four big feet!",
+    "Let's count the toes. One, two, three, four!",
+    {
+     "t": "How does a hippo walk on the soft, squishy river bottom? Hmm.",
+     "pause": 2.4
+    },
+    "It spreads its toes out wide! Wide toes are great for walking on the soft river bottom.",
+    [
+     "Spread your fingers wide, like hippo toes!",
+     "close:hippo"
+    ],
+    "A hippo's feet have a little bit of webbing, between the toes.",
+    "And at the end of each toe is a little hoof, like a big toenail. A hoof, at the end of every toe!",
+    "A hippo's skin makes its own special oil. It dries like a shiny coat.",
+    "That oil helps protect the hippo's skin from the sun.",
+    [
+     "Say it with me. A hippo has four wide toes!",
+     "close:host"
+    ],
+    "Can you walk like a hippo? Spread your toes, and step, step, step!",
+    "Now walk slowly, along the river bottom. Bounce, bounce!",
+    {
+     "t": "Quick check! How many toes does a hippo have on each foot? Four? Or ten?",
+     "pause": 3.2
+    },
+    "Four! One, two, three, four. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_hippo_toes",
+    "title": "How Many Toes Does a Hippo Have? Hippo Facts",
+    "l1": "COUNT THE",
+    "l2": "TOES!",
+    "thumb_text": "1 2 3 4!",
+    "thumb_line": [
+     4,
+     0.8
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "beach",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three friends with amazing feet. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who has tiny bumps on its feet, to grip the ice?",
+     "The polar bear! Yes!",
+     "polar_bear"
+    ],
+    [
+     "Who can pull its claws in, and out?",
+     "The tiger! That's right!",
+     "tiger"
+    ],
+    [
+     "Who spreads four wide toes on the river bottom?",
+     "The hippo! You remembered!",
+     "hippo"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "farm",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Grip like a polar bear. Paddle like a tiger. And step like a hippo!",
+    "How many toes do you have?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "no animal close-up while an example is on screen: every example of a part leaves before the close:<animal> line (7) and before close:host (12) (open note: cars at 2:11 and ruler at 0:47 of zool_ep09, magnifier at 2:32 of zool_ep13)",
+  "high examples kept low: snowflake z 2.7, sun z 2.8, badge z 2.9 (snowflake top cut at 0:48 and arrow cut at 2:09 of zool_ep12)",
+  "hello: only the 1-2-3 count in the group scene, at x=-0.75 (side props |x| <= 2.9, HOT/COLD plates at the frame edge in zool_ep12); the hello count line is wide and the word leaves first (teach.py rule)",
+  "quiz checks beside the head, QUIZ TIME word gone before the ? badge (teach.py rules of Nov 15, first lessons written with them from the start)",
+  "picture: new teaching examples on screen (bamboo grove, eucalyptus branch, 5-toe and 4-toe counts, bump magnifier, fingerprint card, buzzing flies, hot and cold thermometers) and new casts per lesson",
+  "teaching: every part has a body action kids copy (grip, paddle, swish, flap, stretch) and one number they can count or compare (14 hours, 1 gallon, 5 toes, 4 toes, as long as a crayon)"
+ ],
+ "version": 3
+}

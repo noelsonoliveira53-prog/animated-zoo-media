@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep03_routine",
+ "title": "My Bedtime Routine 🛁 Bath, Pajamas, Story and Sleep with Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to our cozy bedtime routine.",
+   ""
+  ],
+  [
+   "Let's take a slow, deep breath together. In, and out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb_bath",
+   "lines": [
+    [
+     "Here's a little clue: there's warm water and lots of bubbles. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Bath Time.",
+     "enter"
+    ],
+    [
+     "This is Bath Time. Can you whisper bath time?",
+     "zoom"
+    ],
+    [
+     "A warm bath helps our body relax.",
+     "fx+bob"
+    ],
+    [
+     "Wash, wash, and rinse, rinse.",
+     "bob"
+    ],
+    [
+     "Can you pretend to pop the bubbles? Pop, pop, gently.",
+     "bob"
+    ],
+    [
+     "What helps us feel calm before bed?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A warm, cozy bath.",
+     "fx2+badge:BATH TIME"
+    ],
+    [
+     "Let's say it softly together: Bath Time.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Bath Time.",
+     "zoom"
+    ],
+    [
+     "Now we're clean and sleepy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, bubbles.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_pajamas",
+   "lines": [
+    [
+     "Here's a little clue: they're soft and comfy, and we wear them to bed. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Pajamas.",
+     "enter"
+    ],
+    [
+     "This is Pajamas. Can you whisper pajamas?",
+     "zoom"
+    ],
+    [
+     "Pajamas are soft and comfy.",
+     "fx+bob"
+    ],
+    [
+     "These ones have little stars on them!",
+     "bob"
+    ],
+    [
+     "Can you pretend to put your arms in your pajama sleeves?",
+     "bob"
+    ],
+    [
+     "When do we wear pajamas?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "At bedtime.",
+     "fx2+badge:PAJAMAS"
+    ],
+    [
+     "Let's say it softly together: Pajamas.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Pajamas.",
+     "zoom"
+    ],
+    [
+     "Cozy pajamas, ready for sleep.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "All snug in pajamas.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_book",
+   "lines": [
+    [
+     "Here's a little clue: it has pages, pictures, and words. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Story Time.",
+     "enter"
+    ],
+    [
+     "This is Story Time. Can you whisper story time?",
+     "zoom"
+    ],
+    [
+     "A bedtime story helps us feel calm.",
+     "fx+bob"
+    ],
+    [
+     "We can read it with someone we love.",
+     "bob"
+    ],
+    [
+     "Can you pretend to turn a page? Slowly.",
+     "bob"
+    ],
+    [
+     "Who can read you a story?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A grown-up who loves you.",
+     "fx2+badge:STORY TIME"
+    ],
+    [
+     "Let's say it softly together: Story Time.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Story Time.",
+     "zoom"
+    ],
+    [
+     "The story is almost done.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "The end, sweet dreams.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_teddy",
+   "lines": [
+    [
+     "Here's a little clue: he's soft and cuddly, and he loves hugs. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Teddy.",
+     "enter"
+    ],
+    [
+     "This is Teddy. Can you whisper teddy?",
+     "zoom"
+    ],
+    [
+     "A teddy bear is a cozy bedtime friend.",
+     "fx+bob"
+    ],
+    [
+     "Teddy keeps you company all night.",
+     "bob"
+    ],
+    [
+     "Can you give your teddy, or a pillow, a gentle hug?",
+     "bob"
+    ],
+    [
+     "What does teddy love most?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Soft, gentle hugs.",
+     "fx2+badge:TEDDY"
+    ],
+    [
+     "Let's say it softly together: Teddy.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Teddy.",
+     "zoom"
+    ],
+    [
+     "Teddy is snuggled in tight.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Teddy.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_nightlight",
+   "lines": [
+    [
+     "Here's a little clue: it glows softly in the dark room. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Night Light.",
+     "enter"
+    ],
+    [
+     "This is Night Light. Can you whisper night light?",
+     "zoom"
+    ],
+    [
+     "A night light glows soft and warm.",
+     "fx+bob"
+    ],
+    [
+     "It helps our room feel cozy.",
+     "bob"
+    ],
+    [
+     "Can you take a slow breath in, and a slow breath out?",
+     "bob"
+    ],
+    [
+     "What does a night light do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It glows softly while we sleep.",
+     "fx2+badge:NIGHT LIGHT"
+    ],
+    [
+     "Let's say it softly together: Night Light.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Night Light.",
+     "zoom"
+    ],
+    [
+     "The room is calm and quiet.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Glow softly, Night Light.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all our friends.",
+   "@title"
+  ],
+  [
+   "Bye-bye, bubbles.",
+   "@mb_bath"
+  ],
+  [
+   "All snug in pajamas.",
+   "@mb_pajamas"
+  ],
+  [
+   "The end, sweet dreams.",
+   "@mb_book"
+  ],
+  [
+   "Goodnight, Teddy.",
+   "@mb_teddy"
+  ],
+  [
+   "Glow softly, Night Light.",
+   "@mb_nightlight"
+  ]
+ ],
+ "outro": [
+  [
+   "Bath, pajamas, story, teddy, and a soft night light. Now close your eyes, and dream sweet dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

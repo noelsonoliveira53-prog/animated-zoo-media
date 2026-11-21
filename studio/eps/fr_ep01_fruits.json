@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep01_fruits",
+ "title": "Learn Fruits for Kids! Apple, Banana, Watermelon and More with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five fruity friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Healthy food and healthy habits help us grow big and strong.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "apple",
+   "lines": [
+    [
+     "Here's a clue: it's round and crunchy, and it can be red, green or yellow! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Apple!",
+     "enter"
+    ],
+    [
+     "This is Apple! Can you say apple?",
+     "zoom"
+    ],
+    [
+     "Apples grow on trees.",
+     "fx+bob"
+    ],
+    [
+     "Crunch, crunch! Apples are fun to bite.",
+     "bob"
+    ],
+    [
+     "Can you pretend to pick an apple from a tree? Reach up high!",
+     "wiggle"
+    ],
+    [
+     "What's hiding inside an apple?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little seeds! They make a star shape.",
+     "fx2+badge:APPLE!"
+    ],
+    [
+     "Let's say it together: APPLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: APPLE!",
+     "zoom"
+    ],
+    [
+     "Apples help keep your teeth and tummy happy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Apple!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "banana",
+   "lines": [
+    [
+     "Here's a clue: it's long and yellow, and you peel it! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Banana!",
+     "enter"
+    ],
+    [
+     "This is Banana! Can you say banana?",
+     "zoom"
+    ],
+    [
+     "Bananas grow in big bunches.",
+     "fx+bob"
+    ],
+    [
+     "Peel it down, down, down, and take a bite!",
+     "bob"
+    ],
+    [
+     "Can you pretend to peel a banana? Peel, peel, peel!",
+     "wiggle"
+    ],
+    [
+     "What color is a banana before it's ready?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Green! It turns yellow when it's ready.",
+     "fx2+badge:BANANA!"
+    ],
+    [
+     "Let's say it together: BANANA!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BANANA!",
+     "zoom"
+    ],
+    [
+     "Bananas give you energy to run and play.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Banana!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "orangefruit",
+   "lines": [
+    [
+     "Here's a clue: it's round, it's juicy, and it has the same name as its color! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Orange!",
+     "enter"
+    ],
+    [
+     "This is Orange! Can you say orange?",
+     "zoom"
+    ],
+    [
+     "Oranges are full of juicy pieces.",
+     "fx+bob"
+    ],
+    [
+     "Each little piece is called a segment.",
+     "bob"
+    ],
+    [
+     "Can you make a big round orange with your arms?",
+     "wiggle"
+    ],
+    [
+     "What's inside an orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Juicy slices! Like a little wheel.",
+     "fx2+badge:ORANGE!"
+    ],
+    [
+     "Let's say it together: ORANGE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ORANGE!",
+     "zoom"
+    ],
+    [
+     "Oranges help your body stay strong.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Orange!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "watermelon",
+   "lines": [
+    [
+     "Here's a clue: it's green outside and pink inside! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Watermelon!",
+     "enter"
+    ],
+    [
+     "This is Watermelon! Can you say watermelon?",
+     "zoom"
+    ],
+    [
+     "Watermelons are big and heavy.",
+     "fx+bob"
+    ],
+    [
+     "They are full of water. That's why they're so juicy!",
+     "bob"
+    ],
+    [
+     "Can you take a big pretend bite? Chomp!",
+     "wiggle"
+    ],
+    [
+     "What are the little black dots?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Seeds! Watermelons have lots of them.",
+     "fx2+badge:WATERMELON!"
+    ],
+    [
+     "Let's say it together: WATERMELON!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WATERMELON!",
+     "zoom"
+    ],
+    [
+     "Watermelon is a cool treat on a hot day.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Watermelon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "blueberry",
+   "lines": [
+    [
+     "Here's a clue: they're tiny, round and blue! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Blueberries!",
+     "enter"
+    ],
+    [
+     "This is Blueberries! Can you say blueberries?",
+     "zoom"
+    ],
+    [
+     "Blueberries grow on little bushes.",
+     "fx+bob"
+    ],
+    [
+     "They are small, so you can eat a handful!",
+     "bob"
+    ],
+    [
+     "Can you count three blueberries on your fingers? One, two, three!",
+     "wiggle"
+    ],
+    [
+     "What color are blueberries?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blue! Well, a little bit purple, too.",
+     "fx2+badge:BLUEBERRY!"
+    ],
+    [
+     "Let's say it together: BLUEBERRIES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BLUEBERRIES!",
+     "zoom"
+    ],
+    [
+     "Blueberries are tiny but very good for you.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Blueberries!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember.",
+   "@title"
+  ],
+  [
+   "Apple, crunchy and sweet.",
+   "@apple"
+  ],
+  [
+   "Banana, peel it down.",
+   "@banana"
+  ],
+  [
+   "Orange, juicy slices.",
+   "@orangefruit"
+  ],
+  [
+   "Watermelon, pink inside.",
+   "@watermelon"
+  ],
+  [
+   "And blueberries, tiny and blue!",
+   "@blueberry"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,385 @@
+{
+ "id": "zoo3d_ep20y",
+ "title": "Trunks Up!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 20,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "hippo",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "hippo"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "zebra",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "zebra"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "rhino",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "rhino"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "verses": [
+  [
+   "elephant"
+  ],
+  [
+   "elephant"
+  ],
+  [
+   "elephant"
+  ]
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "savanna",
+   "tod": "golden",
+   "formation": "line"
+  },
+  {
+   "from": "verse1",
+   "biome": "river",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus1",
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "river",
+   "tod": "noon",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "savanna",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "bridge1",
+   "biome": "beach",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "savanna",
+   "tod": "golden",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "elephant"
+   ]
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "river",
+   "tod": "morning",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "river",
+   "tod": "morning",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "savanna",
+   "tod": "sunset",
+   "formation": "line"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 1488,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:elephant",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "TRUNKS UP!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      3.15
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "wide"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": []
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:rhino",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "REACH!",
+     "color": "#ff7a00",
+     "at": [
+      0,
+      0.5,
+      3.15
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "wide"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": []
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:elephant",
+    "close:hippo",
+    "close:zebra",
+    "close:rhino",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "FLAP!",
+     "color": "#3cc45a",
+     "at": [
+      0,
+      0.5,
+      3.15
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "wide"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": []
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "TRUNKS UP!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      3.15
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      3.15
+     ],
+     "size": 0.6
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep20",
+ "res": "3840x2160",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "timing_file": "zoo3d_ep20_timing.json",
+ "audio": "zoo3d_ep20y_song.wav",
+ "samples": 16
+}

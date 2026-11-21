@@ -1,0 +1,285 @@
+{
+ "id": "ep0x_dinos",
+ "title": "Dinosaurs for Kids! 5 Dino Surprises with Milo",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're going way back in time to meet five amazing dinosaur friends.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's stomp, stomp, stomp back in time!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "trex",
+   "lines": [
+    [
+     "Here's our first friend. Here's a clue: it was huge, but it had super tiny arms! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: T. rex!",
+     "enter"
+    ],
+    [
+     "T. rex was one of the biggest dinosaurs that ever walked on land.",
+     "zoom+badge:SO BIG!"
+    ],
+    [
+     "Scientists think it had a super strong nose for smelling things far away.",
+     "fx2+bob"
+    ],
+    [
+     "Can you sniff, sniff, sniff like T. rex?",
+     "fx2off+wiggle"
+    ],
+    [
+     "Can you guess? Could T. rex reach its mouth with its arms?",
+     "q"
+    ],
+    [
+     "No! Its arms were too short. They were tiny!",
+     "fx+badge:TINY ARMS!"
+    ],
+    [
+     "Let's say it together: T. REX!",
+     "zoom"
+    ],
+    [
+     "T. rex lived about 66 million years ago.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, T. rex!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "triceratops",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it had three horns and a big frill on its head! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Triceratops!",
+     "enter"
+    ],
+    [
+     "Triceratops means three-horned face.",
+     "fx+badge:3 HORNS!"
+    ],
+    [
+     "It had a big bony frill around its neck, like a giant collar.",
+     "fxoff+zoom"
+    ],
+    [
+     "Can you make three horns with your fingers?",
+     "wiggle"
+    ],
+    [
+     "Can you guess what Triceratops liked to eat?",
+     "q"
+    ],
+    [
+     "Plants! Triceratops munched on leafy plants all day.",
+     "fx2+badge:PLANT EATER!"
+    ],
+    [
+     "Let's say it together: TRICERATOPS!",
+     "zoom"
+    ],
+    [
+     "Triceratops lived at the same time as T. rex.",
+     "fx2off+bob"
+    ],
+    [
+     "Bye-bye, Triceratops!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "stegosaurus",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it had big plates on its back and a spiky tail! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Stegosaurus!",
+     "enter"
+    ],
+    [
+     "Stegosaurus had big plates on its back, in two rows.",
+     "fx2+zoom"
+    ],
+    [
+     "Scientists think the plates helped it show off, or warm up in the sun.",
+     "fx2off+bob"
+    ],
+    [
+     "Can you make a spiky back? Stretch up tall!",
+     "wiggle"
+    ],
+    [
+     "Can you guess what its spiky tail is called?",
+     "q"
+    ],
+    [
+     "A thagomizer! What a funny word!",
+     "fx+badge:THAGOMIZER!"
+    ],
+    [
+     "Let's say it together: STEGOSAURUS!",
+     "zoom"
+    ],
+    [
+     "Stegosaurus lived long, long before T. rex. They never met!",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, Stegosaurus!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "brachiosaurus",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it had a super long neck and it was very, very tall! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Brachiosaurus!",
+     "enter"
+    ],
+    [
+     "Brachiosaurus was taller than a house!",
+     "fx+badge:SO TALL!"
+    ],
+    [
+     "Its front legs were longer than its back legs, like a giraffe.",
+     "fxoff+zoom"
+    ],
+    [
+     "Can you stretch up high, high, high?",
+     "bob"
+    ],
+    [
+     "Can you guess why it needed such a long neck?",
+     "q"
+    ],
+    [
+     "To reach the leaves at the very top of the trees! Munch, munch!",
+     "fx2+badge:TREETOP SNACKS!"
+    ],
+    [
+     "Let's say it together: BRACHIOSAURUS!",
+     "zoom"
+    ],
+    [
+     "Brachiosaurus only ate plants.",
+     "fx2off+bob"
+    ],
+    [
+     "Bye-bye, Brachiosaurus!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "pteranodon",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it flew in the sky with giant wings! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: Pteranodon!",
+     "enter"
+    ],
+    [
+     "Pteranodon had wings wider than a car!",
+     "zoom+badge:GIANT WINGS!"
+    ],
+    [
+     "It soared high above the sea.",
+     "fx2+bob"
+    ],
+    [
+     "Can you flap your arms like big wings? Flap, flap!",
+     "fx2off+wiggle"
+    ],
+    [
+     "Can you guess? Was Pteranodon a dinosaur?",
+     "q"
+    ],
+    [
+     "No! It was a flying reptile called a pterosaur. A dinosaur cousin!",
+     "badge:NOT A DINOSAUR!"
+    ],
+    [
+     "Let's say it together: PTERANODON!",
+     "zoom"
+    ],
+    [
+     "Its name means toothless wing, because it had no teeth.",
+     "bob"
+    ],
+    [
+     "Bye-bye, Pteranodon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a dino adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "T. rex had tiny arms.",
+   "@trex"
+  ],
+  [
+   "Triceratops had three horns.",
+   "@triceratops"
+  ],
+  [
+   "Stegosaurus had a spiky tail called a thagomizer.",
+   "@stegosaurus"
+  ],
+  [
+   "Brachiosaurus was taller than a house.",
+   "@brachiosaurus"
+  ],
+  [
+   "And Pteranodon was a flying reptile, not a dinosaur!",
+   "@pteranodon"
+  ]
+ ],
+ "outro": [
+  [
+   "Here's a secret: birds are living dinosaurs! So say hi to the birds outside. Be kind to every animal.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ]
+}

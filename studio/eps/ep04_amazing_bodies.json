@@ -1,0 +1,305 @@
+{
+ "title": "Amazing Animal Bodies!",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're looking at amazing animal bodies. Necks, ears, tails, paws and legs!",
+   ""
+  ],
+  [
+   "Can you count five animals with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Are you ready? Let's fly!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "giraffe",
+   "lines": [
+    [
+     "Here's our first animal. Here's a clue: it has a super long neck! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's fly up high to the giraffes!",
+     "enter"
+    ],
+    [
+     "Giraffes are the tallest animals in the world.",
+     "zoom"
+    ],
+    [
+     "Their long necks help them reach leaves at the tops of trees.",
+     "tongue"
+    ],
+    [
+     "Can you stretch up tall like a giraffe? Stretch, stretch!",
+     "bob"
+    ],
+    [
+     "Can you guess how many bones are in a giraffe's long neck?",
+     "q"
+    ],
+    [
+     "Seven! That's the same number of neck bones as you have!",
+     "badge:7 NECK BONES!"
+    ],
+    [
+     "Let's say it together: GIRAFFE!",
+     "zoom"
+    ],
+    [
+     "A giraffe's neck bones are just much, much bigger.",
+     "bob"
+    ],
+    [
+     "A baby giraffe is called a calf.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, giraffes!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "elephant",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has big floppy ears and a long trunk! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's stomp over to the elephants!",
+     "enter"
+    ],
+    [
+     "Elephants are the biggest animals on land.",
+     "zoom"
+    ],
+    [
+     "An elephant uses its trunk to smell, to drink, and to pick things up.",
+     "trunk"
+    ],
+    [
+     "Can you flap your arms like big elephant ears? Flap, flap!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why elephants flap their ears?",
+     "q"
+    ],
+    [
+     "To cool down! Flapping their big ears helps them stay cool on hot days.",
+     "badge:COOL EARS!"
+    ],
+    [
+     "Let's say it together: ELEPHANT!",
+     "zoom"
+    ],
+    [
+     "Their ears work a bit like a fan.",
+     "wiggle"
+    ],
+    [
+     "African elephants have the biggest ears of all.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, elephants!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "kangaroo",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it hops, and it carries its baby in a pouch! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's hop over to the kangaroos!",
+     "enter"
+    ],
+    [
+     "Kangaroos have big, strong back legs for hopping.",
+     "hop"
+    ],
+    [
+     "Kangaroos live in Australia.",
+     "bob"
+    ],
+    [
+     "Can you hop like a kangaroo? Hop, hop, hop!",
+     "hop"
+    ],
+    [
+     "Can you guess what a kangaroo uses like an extra leg?",
+     "q"
+    ],
+    [
+     "Its tail! When a kangaroo walks slowly, its strong tail works like a fifth leg.",
+     "badge:TAIL LEG!"
+    ],
+    [
+     "Let's say it together: KANGAROO!",
+     "zoom"
+    ],
+    [
+     "One, two, three, four, five legs! What a clever tail.",
+     "bob"
+    ],
+    [
+     "A kangaroo family group is called a mob.",
+     "zoom"
+    ],
+    [
+     "Bye-bye, kangaroos!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "polarbear",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has white fur, and it lives where it's icy and snowy! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's fly north to the polar bears! Brrr!",
+     "enter"
+    ],
+    [
+     "Polar bears live in the cold, snowy Arctic.",
+     "zoom"
+    ],
+    [
+     "They are big, strong swimmers, too.",
+     "bob"
+    ],
+    [
+     "Can you tiptoe like you're walking on ice? Careful, careful!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how polar bears walk on slippery snow?",
+     "q"
+    ],
+    [
+     "Their paws have tiny bumps, like the bottom of a sneaker! The bumps help them grip.",
+     "badge:BUMPY PAWS!"
+    ],
+    [
+     "Let's say it together: POLAR BEAR!",
+     "zoom"
+    ],
+    [
+     "Fur on their paws helps keep their feet warm, too.",
+     "bob"
+    ],
+    [
+     "Snuggly, cozy feet!",
+     "zoom"
+    ],
+    [
+     "Bye-bye, polar bears!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "flamingo",
+   "lines": [
+    [
+     "Our last animal! Here's a clue: it's pink, and it has long skinny legs! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's tiptoe to the pond to see the flamingos!",
+     "enter"
+    ],
+    [
+     "Flamingos eat with their heads upside down!",
+     "zoom"
+    ],
+    [
+     "They like to live together in big groups.",
+     "bob"
+    ],
+    [
+     "Can you stand on one leg like a flamingo? Wobble, wobble!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why flamingos stand on one leg?",
+     "q"
+    ],
+    [
+     "Scientists think it helps them rest, and save their energy!",
+     "badge:ONE LEG!"
+    ],
+    [
+     "Let's say it together: FLAMINGO!",
+     "zoom"
+    ],
+    [
+     "A flamingo can even sleep standing on one leg.",
+     "zzz"
+    ],
+    [
+     "What a good balancer!",
+     "zoom"
+    ],
+    [
+     "Bye-bye, flamingos!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What an amazing adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "Giraffes have seven neck bones, just like you.",
+   "@giraffe"
+  ],
+  [
+   "Elephants flap their ears to cool down.",
+   "@elephant"
+  ],
+  [
+   "Kangaroos use their tails like a fifth leg.",
+   "@kangaroo"
+  ],
+  [
+   "Polar bears have bumpy paws to grip the snow.",
+   "@polarbear"
+  ],
+  [
+   "And flamingos rest standing on one leg!",
+   "@flamingo"
+  ]
+ ],
+ "outro": [
+  [
+   "Which animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ],
+ "id": "ep04_amazing_bodies"
+}

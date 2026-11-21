@@ -1,0 +1,257 @@
+{
+ "style": "gentle bedtime lullaby for toddlers, soft warm female vocal, slow and calm, music box, soft piano, harp, light strings, dreamy, sleepy, clear gentle diction, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nRock-a-bye baby, on the treetop,\nWhen the wind blows, the cradle will rock,\nHush now, little one, snuggle in tight,\nRock-a-bye baby, sleep through the night.\n\n[Verse 1]\nThe moon is rising, silver and round,\nThe stars are twinkling without a sound,\nBunny is yawning, lamb is too,\nTeddy is sleepy, and so are you.\n\n[Chorus]\nRock-a-bye baby, on the treetop,\nWhen the wind blows, the cradle will rock,\nHush now, little one, snuggle in tight,\nRock-a-bye baby, sleep through the night.\n\n[Verse 2]\nGentle breezes whisper low,\nSwaying branches, soft and slow,\nOwl says hoo from the tall oak tree,\nClose your eyes and dream with me.\n\n[Bridge]\nBreathe in slowly, one, two, three,\nBreathe out softly, calm and free,\nWiggle your toes and let them rest,\nSnuggle down, you're the very best.\n\n[Verse 3]\nLuna is watching from up above,\nWrapping the world in a blanket of love,\nMorning will come with the shining sun,\nSleep now, sleep now, little one.\n\n[Chorus]\nRock-a-bye baby, on the treetop,\nWhen the wind blows, the cradle will rock,\nHush now, little one, snuggle in tight,\nRock-a-bye baby, sleep through the night.\n\n[Outro]\nRock-a-bye baby. Goodnight.",
+ "duration": 170,
+ "bpm": 72,
+ "key": "D Major",
+ "seed": 506,
+ "who_map": {},
+ "meta": {
+  "title": "Rock-a-bye Baby \ud83c\udf19 Lullaby for Babies & Kids | Moonbeam",
+  "card": "Rock-a-bye Baby",
+  "thumb_text": "ROCK-A-BYE BABY",
+  "description": "Rock-a-bye Baby, the classic lullaby with gentle new verses. Luna, Bunny, Lamb and Teddy get sleepy as the moon rises and the stars twinkle.\nSoft music box, harp and slow breathing to help little ones fall asleep. Ages 0-6.",
+  "tags": [
+   "rock a bye baby",
+   "lullaby for babies",
+   "nursery rhymes",
+   "bedtime song",
+   "sleep music for kids",
+   "baby sleep",
+   "lullabies",
+   "Moonbeam Bedtime",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "mb3d_ep07",
+  "title": "Rock-a-bye Baby",
+  "channel": "moon",
+  "set": "nightroom",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "luna",
+    "char": "luna",
+    "spot": "center",
+    "opts": {
+     "sleepy": 0.42,
+     "scale": 0.72,
+     "true_scale": 1.0
+    }
+   },
+   {
+    "id": "bunny",
+    "char": "sleepy",
+    "spot": "left",
+    "opts": {
+     "kind": "bunny",
+     "scale": 0.6,
+     "true_scale": 0.82
+    },
+    "yaw": 0.28
+   },
+   {
+    "id": "teddy",
+    "char": "sleepy",
+    "spot": "right",
+    "opts": {
+     "kind": "teddy",
+     "scale": 0.62,
+     "true_scale": 0.86
+    },
+    "yaw": -0.28
+   },
+   {
+    "id": "lamb",
+    "char": "sleepy",
+    "spot": "farleft",
+    "opts": {
+     "kind": "lamb",
+     "scale": 0.58,
+     "true_scale": 0.8,
+     "sleepy": 0.6
+    },
+    "yaw": 0.45
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:luna",
+     "orbit",
+     "close:luna"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Rock-a-bye Baby",
+      "color": "#ffd88a",
+      "at": "top",
+      "size": 0.55
+     },
+     {
+      "type": "set_prop",
+      "name": "moon",
+      "at": "top",
+      "delay": 2
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:luna",
+     "wide",
+     "close:luna",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "star",
+      "at": [
+       2.6,
+       2.0,
+       3.2
+      ],
+      "word": "stars",
+      "opts": {
+       "size": 0.4
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right",
+      "word": "yawning,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "cozy",
+     "close:luna",
+     "mobile",
+     "close:teddy"
+    ],
+    "energy": 0.35,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "snuggle"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:bunny",
+     "wide",
+     "close:bunny",
+     "close:luna"
+    ],
+    "energy": 0.3,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "left",
+      "word": "eyes"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "cozy"
+    ],
+    "energy": 0.3,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Breathe...",
+      "color": "#bfa8ff",
+      "at": "top",
+      "size": 0.6,
+      "word": "breathe"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:luna",
+     "close:teddy",
+     "bed",
+     "close:luna"
+    ],
+    "energy": 0.25,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": "right",
+      "word": "love,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:luna",
+     "orbit",
+     "wide"
+    ],
+    "energy": 0.4,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "Rock-a-bye Baby",
+      "color": "#ffd88a",
+      "at": "top",
+      "size": 0.55
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "window"
+    ],
+    "energy": 0.15,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "zzz",
+      "at": "right"
+     }
+    ]
+   }
+  ],
+  "song": "mb3d_ep07",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

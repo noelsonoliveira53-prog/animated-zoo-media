@@ -1,0 +1,1969 @@
+{
+ "id": "zc_ep10_short1",
+ "total": 90.22212500000003,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0
+ ],
+ "plan": {
+  "length": 90.2,
+  "shots": 24,
+  "visual_changes": 96,
+  "mean_gap": 0.94,
+  "longest_gap": 3.02,
+  "longest_gap_at": 83.9,
+  "over_6s": [],
+  "places": [
+   "gobi",
+   "dunes"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 10,
+  "longest_without_question": 21.2,
+  "first_words_at": 0.42,
+  "shot_mean": 3.76,
+  "fails": [],
+  "words_placed": "183/183",
+  "sync": {
+   "pauses_checked": 18,
+   "onset_err_mean_ms": 25.0,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 23,
+   "cuts_on_the_half_beat": 23,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "snow falls"
+  ],
+  [
+   0.0,
+   "new place",
+   "the snowy Gobi hook: one or two"
+  ],
+  [
+   0.42,
+   "word",
+   "?"
+  ],
+  [
+   1.37,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   2.27,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   3.44,
+   "new place",
+   "the dunes at sunrise Mama's back"
+  ],
+  [
+   5.5,
+   "word",
+   "COUNT!"
+  ],
+  [
+   6.88,
+   "new shot",
+   "the dunes at sunrise one hump"
+  ],
+  [
+   6.99,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   6.99,
+   "word",
+   "1"
+  ],
+  [
+   8.1,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   9.06,
+   "new place",
+   "the picture board board: dromedary"
+  ],
+  [
+   10.13,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   10.13,
+   "word",
+   "1"
+  ],
+  [
+   11.45,
+   "word",
+   "DROMEDARY"
+  ],
+  [
+   12.5,
+   "new shot",
+   "the picture board board: say dromedary"
+  ],
+  [
+   12.79,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   13.94,
+   "action",
+   "d1 nods"
+  ],
+  [
+   15.31,
+   "new place",
+   "the dunes at sunrise question 1a"
+  ],
+  [
+   16.83,
+   "sign",
+   "ONE"
+  ],
+  [
+   17.18,
+   "sign",
+   "TWO"
+  ],
+  [
+   18.94,
+   "thinking dot",
+   "1"
+  ],
+  [
+   19.62,
+   "thinking dot",
+   "2"
+  ],
+  [
+   20.29,
+   "thinking dot",
+   "3"
+  ],
+  [
+   20.78,
+   "answer",
+   "ONE"
+  ],
+  [
+   20.83,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   21.88,
+   "new shot",
+   "the dunes at sunrise Mama is a dromedary"
+  ],
+  [
+   22.2,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   23.38,
+   "word",
+   "DROMEDARY!"
+  ],
+  [
+   24.69,
+   "new shot",
+   "the dunes at sunrise fly away"
+  ],
+  [
+   25.36,
+   "action",
+   "milo flies"
+  ],
+  [
+   27.84,
+   "word",
+   "COUSIN!"
+  ],
+  [
+   28.75,
+   "action",
+   "Milo flies in"
+  ],
+  [
+   28.75,
+   "action",
+   "snow falls"
+  ],
+  [
+   28.75,
+   "new place",
+   "the snowy Gobi Gobi wide"
+  ],
+  [
+   29.85,
+   "word",
+   "BRRR!"
+  ],
+  [
+   31.54,
+   "word",
+   "THE GOBI"
+  ],
+  [
+   33.12,
+   "action",
+   "snow falls"
+  ],
+  [
+   33.12,
+   "new shot",
+   "the snowy Gobi the cousin"
+  ],
+  [
+   34.39,
+   "action",
+   "bac nods"
+  ],
+  [
+   36.56,
+   "action",
+   "snow falls"
+  ],
+  [
+   36.56,
+   "new shot",
+   "the snowy Gobi question 1"
+  ],
+  [
+   38.49,
+   "sign",
+   "ONE"
+  ],
+  [
+   38.84,
+   "sign",
+   "TWO"
+  ],
+  [
+   39.99,
+   "thinking dot",
+   "1"
+  ],
+  [
+   40.66,
+   "thinking dot",
+   "2"
+  ],
+  [
+   41.34,
+   "thinking dot",
+   "3"
+  ],
+  [
+   41.82,
+   "answer",
+   "TWO"
+  ],
+  [
+   41.87,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   43.12,
+   "action",
+   "snow falls"
+  ],
+  [
+   43.12,
+   "new shot",
+   "the snowy Gobi count two"
+  ],
+  [
+   43.71,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   43.71,
+   "word",
+   "1"
+  ],
+  [
+   44.29,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   44.29,
+   "word",
+   "2"
+  ],
+  [
+   45.31,
+   "new place",
+   "the picture board (blue) board: Bactrian"
+  ],
+  [
+   46.25,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   47.67,
+   "word",
+   "BACTRIAN"
+  ],
+  [
+   49.38,
+   "new shot",
+   "the picture board (blue) board: say Bactrian"
+  ],
+  [
+   49.5,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   50.56,
+   "action",
+   "b2 nods"
+  ],
+  [
+   51.88,
+   "new shot",
+   "the picture board (blue) board: letter B"
+  ],
+  [
+   53.92,
+   "action",
+   "the B turns: two bumps up"
+  ],
+  [
+   55.0,
+   "new shot",
+   "the picture board (blue) board: B for Bactrian"
+  ],
+  [
+   56.86,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   58.44,
+   "action",
+   "snow falls"
+  ],
+  [
+   58.44,
+   "new place",
+   "the snowy Gobi bump bump"
+  ],
+  [
+   60.54,
+   "action",
+   "milo hops"
+  ],
+  [
+   60.54,
+   "word",
+   "BUMP, BUMP!"
+  ],
+  [
+   61.88,
+   "new place",
+   "the picture board board: one and two"
+  ],
+  [
+   62.07,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   62.07,
+   "word",
+   "1"
+  ],
+  [
+   63.94,
+   "picture",
+   "b2"
+  ],
+  [
+   63.94,
+   "word",
+   "2"
+  ],
+  [
+   65.94,
+   "new shot",
+   "the picture board question 1b"
+  ],
+  [
+   68.18,
+   "sign",
+   "DROMEDARY"
+  ],
+  [
+   68.53,
+   "sign",
+   "BACTRIAN"
+  ],
+  [
+   70.54,
+   "thinking dot",
+   "1"
+  ],
+  [
+   71.21,
+   "thinking dot",
+   "2"
+  ],
+  [
+   71.88,
+   "thinking dot",
+   "3"
+  ],
+  [
+   72.37,
+   "answer",
+   "BACTRIAN"
+  ],
+  [
+   72.42,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   73.75,
+   "new shot",
+   "the picture board board: taller"
+  ],
+  [
+   76.24,
+   "picture",
+   "hl"
+  ],
+  [
+   76.24,
+   "word",
+   "TALLER!"
+  ],
+  [
+   77.19,
+   "new shot",
+   "the picture board board: longer legs"
+  ],
+  [
+   78.35,
+   "word",
+   "LONG LEGS"
+  ],
+  [
+   79.69,
+   "new shot",
+   "the picture board board: heavier"
+  ],
+  [
+   82.11,
+   "word",
+   "HEAVY!"
+  ],
+  [
+   83.12,
+   "new place",
+   "the dunes at sunrise stand tall"
+  ],
+  [
+   83.86,
+   "action",
+   "milo hops"
+  ],
+  [
+   83.86,
+   "word",
+   "TALL, TALL!"
+  ],
+  [
+   86.88,
+   "new place",
+   "the picture board (pink) board: now you know"
+  ],
+  [
+   87.09,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   87.91,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   89.0,
+   "word",
+   "YOU KNOW!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gobi",
+   "say": "Does a camel have one hump, or two humps?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.6081666666666665,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.17
+    ],
+    [
+     "a",
+     0.17,
+     0.21
+    ],
+    [
+     "camel",
+     0.21,
+     0.69
+    ],
+    [
+     "have",
+     0.69,
+     0.95
+    ],
+    [
+     "one",
+     0.95,
+     1.18
+    ],
+    [
+     "hump,",
+     1.18,
+     1.71
+    ],
+    [
+     "or",
+     1.71,
+     1.85
+    ],
+    [
+     "two",
+     1.85,
+     2.1
+    ],
+    [
+     "humps?",
+     2.1,
+     2.608
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: one or two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Look at Mama's back. Let's count her humps.",
+   "t0": 3.4375,
+   "t1": 6.875,
+   "v0": 3.5681666666666665,
+   "dur": 2.8709166666666666,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.3
+    ],
+    [
+     "at",
+     0.3,
+     0.36
+    ],
+    [
+     "Mama's",
+     0.36,
+     0.9
+    ],
+    [
+     "back.",
+     0.9,
+     1.39
+    ],
+    [
+     "Let's",
+     1.67,
+     1.93
+    ],
+    [
+     "count",
+     1.93,
+     2.23
+    ],
+    [
+     "her",
+     2.23,
+     2.32
+    ],
+    [
+     "humps.",
+     2.32,
+     2.87
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "Mama's back",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "One! Mama has one hump.",
+   "t0": 6.875,
+   "t1": 9.0625,
+   "v0": 6.979083333333333,
+   "dur": 1.8239166666666666,
+   "words": [
+    [
+     "One!",
+     0.01,
+     0.57
+    ],
+    [
+     "Mama",
+     0.57,
+     0.87
+    ],
+    [
+     "has",
+     0.87,
+     1.12
+    ],
+    [
+     "one",
+     1.12,
+     1.35
+    ],
+    [
+     "hump.",
+     1.35,
+     1.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "one hump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "A camel with one hump is called a dromedary.",
+   "t0": 9.0625,
+   "t1": 12.5,
+   "v0": 9.342999999999998,
+   "dur": 2.909291666666667,
+   "words": [
+    [
+     "A",
+     0.05,
+     0.09
+    ],
+    [
+     "camel",
+     0.09,
+     0.61
+    ],
+    [
+     "with",
+     0.61,
+     0.79
+    ],
+    [
+     "one",
+     0.79,
+     1.05
+    ],
+    [
+     "hump",
+     1.05,
+     1.48
+    ],
+    [
+     "is",
+     1.62,
+     1.76
+    ],
+    [
+     "called",
+     1.76,
+     2.06
+    ],
+    [
+     "a",
+     2.06,
+     2.11
+    ],
+    [
+     "dromedary.",
+     2.11,
+     2.909
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: dromedary",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Say it with me. Dromedary!",
+   "t0": 12.5,
+   "t1": 15.3125,
+   "v0": 12.792291666666664,
+   "dur": 2.048208333333333,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.36
+    ],
+    [
+     "it",
+     0.36,
+     0.44
+    ],
+    [
+     "with",
+     0.44,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.9
+    ],
+    [
+     "Dromedary!",
+     1.15,
+     2.048
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: say dromedary",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Does Sandy's mama have one hump, or two humps?",
+   "t0": 15.3125,
+   "t1": 21.875,
+   "v0": 15.380499999999996,
+   "dur": 3.07575,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.19
+    ],
+    [
+     "Sandy's",
+     0.19,
+     0.73
+    ],
+    [
+     "mama",
+     0.73,
+     1.14
+    ],
+    [
+     "have",
+     1.14,
+     1.45
+    ],
+    [
+     "one",
+     1.45,
+     1.66
+    ],
+    [
+     "hump,",
+     1.66,
+     2.19
+    ],
+    [
+     "or",
+     2.19,
+     2.33
+    ],
+    [
+     "two",
+     2.33,
+     2.57
+    ],
+    [
+     "humps?",
+     2.57,
+     3.076
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "One! Mama is a dromedary.",
+   "t0": 21.875,
+   "t1": 24.6875,
+   "v0": 22.19625,
+   "dur": 2.001916666666667,
+   "words": [
+    [
+     "One!",
+     0.0,
+     0.43
+    ],
+    [
+     "Mama",
+     0.62,
+     0.95
+    ],
+    [
+     "is",
+     0.95,
+     1.14
+    ],
+    [
+     "a",
+     1.14,
+     1.18
+    ],
+    [
+     "dromedary.",
+     1.18,
+     2.0
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Mama is a dromedary",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Now let's fly far away, to Sandy's camel cousin!",
+   "t0": 24.6875,
+   "t1": 28.75,
+   "v0": 24.738166666666668,
+   "dur": 3.68375,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.3
+    ],
+    [
+     "let's",
+     0.3,
+     0.62
+    ],
+    [
+     "fly",
+     0.62,
+     0.89
+    ],
+    [
+     "far",
+     0.89,
+     1.24
+    ],
+    [
+     "away,",
+     1.24,
+     1.71
+    ],
+    [
+     "to",
+     1.98,
+     2.09
+    ],
+    [
+     "Sandy's",
+     2.09,
+     2.66
+    ],
+    [
+     "camel",
+     2.66,
+     3.1
+    ],
+    [
+     "cousin!",
+     3.1,
+     3.68
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fly away",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Oh! It is so cold here. This is the Gobi Desert.",
+   "t0": 28.75,
+   "t1": 33.125,
+   "v0": 28.96191666666667,
+   "dur": 3.770875,
+   "words": [
+    [
+     "Oh!",
+     0.07,
+     0.41
+    ],
+    [
+     "It",
+     0.41,
+     0.54
+    ],
+    [
+     "is",
+     0.54,
+     0.63
+    ],
+    [
+     "so",
+     0.63,
+     0.89
+    ],
+    [
+     "cold",
+     0.89,
+     1.36
+    ],
+    [
+     "here.",
+     1.36,
+     1.71
+    ],
+    [
+     "This",
+     2.08,
+     2.3
+    ],
+    [
+     "is",
+     2.3,
+     2.5
+    ],
+    [
+     "the",
+     2.5,
+     2.58
+    ],
+    [
+     "Gobi",
+     2.58,
+     3.11
+    ],
+    [
+     "Desert.",
+     3.11,
+     3.77
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Gobi wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "And here is Sandy's cousin. Look at her back!",
+   "t0": 33.125,
+   "t1": 36.5625,
+   "v0": 33.27279166666667,
+   "dur": 2.9029583333333333,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.19
+    ],
+    [
+     "here",
+     0.19,
+     0.45
+    ],
+    [
+     "is",
+     0.45,
+     0.55
+    ],
+    [
+     "Sandy's",
+     0.55,
+     1.12
+    ],
+    [
+     "cousin.",
+     1.12,
+     1.72
+    ],
+    [
+     "Look",
+     2.05,
+     2.23
+    ],
+    [
+     "at",
+     2.23,
+     2.29
+    ],
+    [
+     "her",
+     2.29,
+     2.39
+    ],
+    [
+     "back!",
+     2.39,
+     2.9
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the cousin",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "How many humps does she have? One, or two?",
+   "t0": 36.5625,
+   "t1": 43.125,
+   "v0": 36.71575,
+   "dur": 2.786125,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.35
+    ],
+    [
+     "humps",
+     0.35,
+     0.72
+    ],
+    [
+     "does",
+     0.72,
+     0.84
+    ],
+    [
+     "she",
+     0.84,
+     1.0
+    ],
+    [
+     "have?",
+     1.0,
+     1.47
+    ],
+    [
+     "One,",
+     1.77,
+     2.15
+    ],
+    [
+     "or",
+     2.15,
+     2.3
+    ],
+    [
+     "two?",
+     2.3,
+     2.786
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Two! One hump, two humps.",
+   "t0": 43.125,
+   "t1": 45.3125,
+   "v0": 43.241875,
+   "dur": 1.7609583333333334,
+   "words": [
+    [
+     "Two!",
+     0.0,
+     0.47
+    ],
+    [
+     "One",
+     0.47,
+     0.74
+    ],
+    [
+     "hump,",
+     0.74,
+     1.05
+    ],
+    [
+     "two",
+     1.05,
+     1.23
+    ],
+    [
+     "humps.",
+     1.23,
+     1.76
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "count two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A camel with two humps is called a Bactrian camel.",
+   "t0": 45.3125,
+   "t1": 49.375,
+   "v0": 45.542833333333334,
+   "dur": 3.4077083333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.07
+    ],
+    [
+     "camel",
+     0.07,
+     0.53
+    ],
+    [
+     "with",
+     0.53,
+     0.71
+    ],
+    [
+     "two",
+     0.71,
+     0.96
+    ],
+    [
+     "humps",
+     0.96,
+     1.47
+    ],
+    [
+     "is",
+     1.65,
+     1.79
+    ],
+    [
+     "called",
+     1.79,
+     2.08
+    ],
+    [
+     "a",
+     2.08,
+     2.13
+    ],
+    [
+     "Bactrian",
+     2.13,
+     2.84
+    ],
+    [
+     "camel.",
+     2.84,
+     3.408
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: Bactrian",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Say it with me. Bactrian!",
+   "t0": 49.375,
+   "t1": 51.875,
+   "v0": 49.490541666666665,
+   "dur": 1.9289166666666666,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.37
+    ],
+    [
+     "it",
+     0.37,
+     0.45
+    ],
+    [
+     "with",
+     0.45,
+     0.61
+    ],
+    [
+     "me.",
+     0.61,
+     0.91
+    ],
+    [
+     "Bactrian!",
+     1.07,
+     1.929
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: say Bactrian",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Look at the letter B. It has two bumps!",
+   "t0": 51.875,
+   "t1": 55.0,
+   "v0": 51.95945833333333,
+   "dur": 2.55225,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.22
+    ],
+    [
+     "at",
+     0.22,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "letter",
+     0.36,
+     0.66
+    ],
+    [
+     "B.",
+     0.66,
+     1.07
+    ],
+    [
+     "It",
+     1.3,
+     1.4
+    ],
+    [
+     "has",
+     1.4,
+     1.7
+    ],
+    [
+     "two",
+     1.7,
+     1.96
+    ],
+    [
+     "bumps!",
+     1.96,
+     2.55
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: letter B",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "B for Bactrian. Two humps, like a B!",
+   "t0": 55.0,
+   "t1": 58.4375,
+   "v0": 55.05170833333333,
+   "dur": 3.0,
+   "words": [
+    [
+     "B",
+     0.0,
+     0.29
+    ],
+    [
+     "for",
+     0.29,
+     0.47
+    ],
+    [
+     "Bactrian.",
+     0.47,
+     1.29
+    ],
+    [
+     "Two",
+     1.57,
+     1.81
+    ],
+    [
+     "humps,",
+     1.81,
+     2.25
+    ],
+    [
+     "like",
+     2.25,
+     2.43
+    ],
+    [
+     "a",
+     2.43,
+     2.49
+    ],
+    [
+     "B!",
+     2.49,
+     3.0
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: B for Bactrian",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Make two humps with your hands. Bump, bump!",
+   "t0": 58.4375,
+   "t1": 61.875,
+   "v0": 58.59170833333333,
+   "dur": 2.942458333333333,
+   "words": [
+    [
+     "Make",
+     0.05,
+     0.29
+    ],
+    [
+     "two",
+     0.29,
+     0.53
+    ],
+    [
+     "humps",
+     0.53,
+     0.87
+    ],
+    [
+     "with",
+     0.87,
+     0.98
+    ],
+    [
+     "your",
+     0.98,
+     1.08
+    ],
+    [
+     "hands.",
+     1.08,
+     1.69
+    ],
+    [
+     "Bump,",
+     1.95,
+     2.4
+    ],
+    [
+     "bump!",
+     2.4,
+     2.94
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "bump bump",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "One hump, a dromedary. Two humps, a Bactrian!",
+   "t0": 61.875,
+   "t1": 65.9375,
+   "v0": 62.07416666666666,
+   "dur": 3.4119166666666665,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.31
+    ],
+    [
+     "hump,",
+     0.31,
+     0.71
+    ],
+    [
+     "a",
+     0.71,
+     0.76
+    ],
+    [
+     "dromedary.",
+     0.76,
+     1.56
+    ],
+    [
+     "Two",
+     1.87,
+     2.1
+    ],
+    [
+     "humps,",
+     2.1,
+     2.53
+    ],
+    [
+     "a",
+     2.53,
+     2.58
+    ],
+    [
+     "Bactrian!",
+     2.58,
+     3.41
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: one and two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Which camel has two humps? The dromedary, or the Bactrian?",
+   "t0": 65.9375,
+   "t1": 73.75,
+   "v0": 66.02608333333333,
+   "dur": 4.024791666666666,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.23
+    ],
+    [
+     "camel",
+     0.23,
+     0.69
+    ],
+    [
+     "has",
+     0.69,
+     0.95
+    ],
+    [
+     "two",
+     0.95,
+     1.2
+    ],
+    [
+     "humps?",
+     1.2,
+     1.74
+    ],
+    [
+     "The",
+     2.05,
+     2.15
+    ],
+    [
+     "dromedary,",
+     2.15,
+     2.99
+    ],
+    [
+     "or",
+     2.99,
+     3.12
+    ],
+    [
+     "the",
+     3.12,
+     3.22
+    ],
+    [
+     "Bactrian?",
+     3.22,
+     4.02
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The Bactrian! Look, the dromedary is taller.",
+   "t0": 73.75,
+   "t1": 77.1875,
+   "v0": 73.79087500000001,
+   "dur": 3.023375,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "Bactrian!",
+     0.11,
+     0.93
+    ],
+    [
+     "Look,",
+     1.16,
+     1.51
+    ],
+    [
+     "the",
+     1.51,
+     1.63
+    ],
+    [
+     "dromedary",
+     1.63,
+     2.29
+    ],
+    [
+     "is",
+     2.29,
+     2.45
+    ],
+    [
+     "taller.",
+     2.45,
+     3.02
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: taller",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Dromedaries have longer legs.",
+   "t0": 77.1875,
+   "t1": 79.6875,
+   "v0": 77.35425000000002,
+   "dur": 2.0214583333333334,
+   "words": [
+    [
+     "Dromedaries",
+     0.01,
+     0.72
+    ],
+    [
+     "have",
+     0.72,
+     1.0
+    ],
+    [
+     "longer",
+     1.0,
+     1.44
+    ],
+    [
+     "legs.",
+     1.44,
+     2.02
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: longer legs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Bactrian camels are shorter, and heavier.",
+   "t0": 79.6875,
+   "t1": 83.125,
+   "v0": 79.91570833333336,
+   "dur": 2.8230833333333334,
+   "words": [
+    [
+     "Bactrian",
+     0.0,
+     0.59
+    ],
+    [
+     "camels",
+     0.59,
+     1.16
+    ],
+    [
+     "are",
+     1.16,
+     1.25
+    ],
+    [
+     "shorter,",
+     1.25,
+     1.82
+    ],
+    [
+     "and",
+     2.05,
+     2.19
+    ],
+    [
+     "heavier.",
+     2.19,
+     2.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: heavier",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Stand up tall, like a dromedary. Tall, tall!",
+   "t0": 83.125,
+   "t1": 86.875,
+   "v0": 83.27879166666669,
+   "dur": 3.245375,
+   "words": [
+    [
+     "Stand",
+     0.01,
+     0.44
+    ],
+    [
+     "up",
+     0.44,
+     0.58
+    ],
+    [
+     "tall,",
+     0.58,
+     1.0
+    ],
+    [
+     "like",
+     1.0,
+     1.17
+    ],
+    [
+     "a",
+     1.17,
+     1.21
+    ],
+    [
+     "dromedary.",
+     1.21,
+     2.05
+    ],
+    [
+     "Tall,",
+     2.36,
+     2.73
+    ],
+    [
+     "tall!",
+     2.73,
+     3.24
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "stand tall",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "One hump, or two? Now you know!",
+   "t0": 86.875,
+   "t1": 89.82212500000003,
+   "v0": 87.0641666666667,
+   "dur": 2.3379583333333334,
+   "words": [
+    [
+     "One",
+     0.03,
+     0.31
+    ],
+    [
+     "hump,",
+     0.31,
+     0.68
+    ],
+    [
+     "or",
+     0.68,
+     0.85
+    ],
+    [
+     "two?",
+     0.85,
+     1.26
+    ],
+    [
+     "Now",
+     1.53,
+     1.77
+    ],
+    [
+     "you",
+     1.77,
+     1.94
+    ],
+    [
+     "know!",
+     1.94,
+     2.338
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: now you know",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

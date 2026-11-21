@@ -1,0 +1,2025 @@
+{
+ "id": "zc_ep06_short1",
+ "total": 87.00304166666672,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875
+ ],
+ "plan": {
+  "length": 87.0,
+  "shots": 25,
+  "visual_changes": 96,
+  "mean_gap": 0.91,
+  "longest_gap": 3.05,
+  "longest_gap_at": 54.5,
+  "over_6s": [],
+  "places": [
+   "figtree",
+   "canopy"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 7,
+  "longest_without_question": 28.8,
+  "first_words_at": 0.42,
+  "shot_mean": 3.48,
+  "fails": [],
+  "words_placed": "192/192",
+  "sync": {
+   "pauses_checked": 11,
+   "onset_err_mean_ms": 33.6,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 24,
+   "cuts_on_the_half_beat": 24,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the fruit tree hook: which fruit"
+  ],
+  [
+   0.05,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   0.2,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   1.49,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   1.49,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new place",
+   "the treetops rumble"
+  ],
+  [
+   5.74,
+   "action",
+   "Mango's tummy rumbles"
+  ],
+  [
+   5.74,
+   "word",
+   "RUMBLE!"
+  ],
+  [
+   7.19,
+   "new shot",
+   "the treetops your breakfast"
+  ],
+  [
+   7.96,
+   "word",
+   "BREAKFAST!"
+  ],
+  [
+   9.44,
+   "action",
+   "milo hops"
+  ],
+  [
+   12.19,
+   "new place",
+   "the fruit tree to the fruit tree"
+  ],
+  [
+   12.29,
+   "action",
+   "mango walks"
+  ],
+  [
+   15.3,
+   "word",
+   "FRUIT!"
+  ],
+  [
+   16.25,
+   "new place",
+   "the picture board board: in the day"
+  ],
+  [
+   18.42,
+   "picture",
+   "sun"
+  ],
+  [
+   18.77,
+   "word",
+   "IN THE DAY"
+  ],
+  [
+   19.69,
+   "new shot",
+   "the picture board board: main food"
+  ],
+  [
+   20.52,
+   "action",
+   "the fruit pulses"
+  ],
+  [
+   20.52,
+   "word",
+   "NUMBER 1"
+  ],
+  [
+   22.5,
+   "new place",
+   "the fruit tree green and golden"
+  ],
+  [
+   23.81,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   23.81,
+   "word",
+   "GREEN"
+  ],
+  [
+   25.53,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   25.53,
+   "word",
+   "GOLDEN"
+  ],
+  [
+   26.56,
+   "new shot",
+   "the fruit tree she looks"
+  ],
+  [
+   27.21,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   27.21,
+   "word",
+   "LOOK!"
+  ],
+  [
+   28.67,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   30.31,
+   "new place",
+   "the picture board (blue) board: colors"
+  ],
+  [
+   30.52,
+   "picture",
+   "c0"
+  ],
+  [
+   31.46,
+   "picture",
+   "c1"
+  ],
+  [
+   31.69,
+   "picture",
+   "c2"
+  ],
+  [
+   31.69,
+   "word",
+   "COLORS"
+  ],
+  [
+   32.62,
+   "picture",
+   "c3"
+  ],
+  [
+   33.44,
+   "new shot",
+   "the picture board (blue) board: the best fruit"
+  ],
+  [
+   34.83,
+   "picture",
+   "ok"
+  ],
+  [
+   34.83,
+   "word",
+   "THE BEST!"
+  ],
+  [
+   35.94,
+   "new place",
+   "the fruit tree your fruit"
+  ],
+  [
+   36.51,
+   "word",
+   "WHAT COLOR?"
+  ],
+  [
+   37.22,
+   "action",
+   "milo hops"
+  ],
+  [
+   39.69,
+   "new shot",
+   "the fruit tree question 1"
+  ],
+  [
+   41.98,
+   "sign",
+   "GREEN"
+  ],
+  [
+   42.33,
+   "sign",
+   "GOLDEN"
+  ],
+  [
+   44.41,
+   "thinking dot",
+   "1"
+  ],
+  [
+   45.08,
+   "thinking dot",
+   "2"
+  ],
+  [
+   45.75,
+   "thinking dot",
+   "3"
+  ],
+  [
+   46.24,
+   "answer",
+   "GOLDEN"
+  ],
+  [
+   46.29,
+   "action",
+   "Mango reaches for the golden fruit"
+  ],
+  [
+   47.5,
+   "new shot",
+   "the fruit tree the golden one"
+  ],
+  [
+   47.55,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   47.77,
+   "word",
+   "GOLDEN!"
+  ],
+  [
+   49.01,
+   "action",
+   "mango hops"
+  ],
+  [
+   50.62,
+   "new shot",
+   "the fruit tree not yet"
+  ],
+  [
+   50.96,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   52.14,
+   "word",
+   "NOT YET"
+  ],
+  [
+   53.75,
+   "new shot",
+   "the fruit tree munch"
+  ],
+  [
+   53.9,
+   "action",
+   "Mango munches"
+  ],
+  [
+   53.9,
+   "action",
+   "Mango puts it in her mouth"
+  ],
+  [
+   53.9,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   54.45,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   57.5,
+   "new place",
+   "the picture board (pink) board: ten bites"
+  ],
+  [
+   59.02,
+   "word",
+   "10 BITES"
+  ],
+  [
+   60.31,
+   "new shot",
+   "the picture board (pink) board: how many"
+  ],
+  [
+   60.39,
+   "word",
+   "HOW MANY?"
+  ],
+  [
+   63.44,
+   "new shot",
+   "the picture board (pink) board: count 1-4"
+  ],
+  [
+   63.52,
+   "picture",
+   "d0"
+  ],
+  [
+   63.89,
+   "picture",
+   "d1"
+  ],
+  [
+   64.19,
+   "picture",
+   "d2"
+  ],
+  [
+   64.49,
+   "picture",
+   "d3"
+  ],
+  [
+   65.31,
+   "new shot",
+   "the picture board (pink) board: count 5-8"
+  ],
+  [
+   65.59,
+   "picture",
+   "d4"
+  ],
+  [
+   65.99,
+   "picture",
+   "d5"
+  ],
+  [
+   66.37,
+   "picture",
+   "d6"
+  ],
+  [
+   66.85,
+   "picture",
+   "d7"
+  ],
+  [
+   67.3,
+   "word",
+   "8"
+  ],
+  [
+   67.5,
+   "new shot",
+   "the picture board (pink) board: eight of ten"
+  ],
+  [
+   68.21,
+   "word",
+   "8 OUT OF 10"
+  ],
+  [
+   70.31,
+   "new shot",
+   "the picture board (pink) board: the last two"
+  ],
+  [
+   71.21,
+   "word",
+   "+ 2"
+  ],
+  [
+   72.07,
+   "picture",
+   "d8"
+  ],
+  [
+   72.99,
+   "picture",
+   "d9"
+  ],
+  [
+   74.06,
+   "new shot",
+   "the picture board (pink) board: so much fruit"
+  ],
+  [
+   74.37,
+   "action",
+   "the fruit plates bob"
+  ],
+  [
+   75.99,
+   "action",
+   "more fruit plates bob"
+  ],
+  [
+   75.99,
+   "word",
+   "SO MUCH FRUIT!"
+  ],
+  [
+   77.19,
+   "new place",
+   "the fruit tree fruit first"
+  ],
+  [
+   77.24,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   79.11,
+   "action",
+   "mango hops"
+  ],
+  [
+   79.11,
+   "word",
+   "FRUIT FIRST!"
+  ],
+  [
+   80.62,
+   "new shot",
+   "the fruit tree rub your tummy"
+  ],
+  [
+   82.3,
+   "action",
+   "milo hops"
+  ],
+  [
+   82.3,
+   "word",
+   "YUM!"
+  ],
+  [
+   83.75,
+   "new place",
+   "the picture board (pink) board: food 1"
+  ],
+  [
+   84.86,
+   "picture",
+   "j0"
+  ],
+  [
+   84.86,
+   "word",
+   "1"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "figtree",
+   "say": "Which fruit is the best one for Mango?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.386458333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.33
+    ],
+    [
+     "fruit",
+     0.33,
+     0.73
+    ],
+    [
+     "is",
+     0.73,
+     0.97
+    ],
+    [
+     "the",
+     0.97,
+     1.07
+    ],
+    [
+     "best",
+     1.07,
+     1.45
+    ],
+    [
+     "one",
+     1.45,
+     1.61
+    ],
+    [
+     "for",
+     1.61,
+     1.75
+    ],
+    [
+     "Mango?",
+     1.75,
+     2.386
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: which fruit",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Good morning, Mango! Her tummy goes rumble, rumble.",
+   "t0": 3.125,
+   "t1": 7.1875,
+   "v0": 3.346458333333333,
+   "dur": 3.6162083333333332,
+   "words": [
+    [
+     "Good",
+     0.01,
+     0.17
+    ],
+    [
+     "morning,",
+     0.17,
+     0.59
+    ],
+    [
+     "Mango!",
+     0.59,
+     1.15
+    ],
+    [
+     "Her",
+     1.56,
+     1.65
+    ],
+    [
+     "tummy",
+     1.65,
+     2.05
+    ],
+    [
+     "goes",
+     2.05,
+     2.39
+    ],
+    [
+     "rumble,",
+     2.39,
+     3.06
+    ],
+    [
+     "rumble.",
+     3.06,
+     3.616
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "rumble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "It is breakfast time! What do you eat for breakfast?",
+   "t0": 7.1875,
+   "t1": 12.1875,
+   "v0": 7.502666666666666,
+   "dur": 3.4564166666666667,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.46
+    ],
+    [
+     "breakfast",
+     0.46,
+     1.07
+    ],
+    [
+     "time!",
+     1.07,
+     1.6
+    ],
+    [
+     "What",
+     1.94,
+     2.07
+    ],
+    [
+     "do",
+     2.07,
+     2.15
+    ],
+    [
+     "you",
+     2.15,
+     2.29
+    ],
+    [
+     "eat",
+     2.29,
+     2.5
+    ],
+    [
+     "for",
+     2.5,
+     2.66
+    ],
+    [
+     "breakfast?",
+     2.66,
+     3.456
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your breakfast",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Mango walks along the branch, to a tree full of fruit.",
+   "t0": 12.1875,
+   "t1": 16.25,
+   "v0": 12.299083333333332,
+   "dur": 3.5257916666666667,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.52
+    ],
+    [
+     "walks",
+     0.52,
+     0.94
+    ],
+    [
+     "along",
+     0.94,
+     1.29
+    ],
+    [
+     "the",
+     1.29,
+     1.37
+    ],
+    [
+     "branch,",
+     1.37,
+     1.91
+    ],
+    [
+     "to",
+     2.13,
+     2.29
+    ],
+    [
+     "a",
+     2.29,
+     2.36
+    ],
+    [
+     "tree",
+     2.36,
+     2.7
+    ],
+    [
+     "full",
+     2.7,
+     2.93
+    ],
+    [
+     "of",
+     2.93,
+     3.0
+    ],
+    [
+     "fruit.",
+     3.0,
+     3.526
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "to the fruit tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "A spider monkey looks for fruit during the day.",
+   "t0": 16.25,
+   "t1": 19.6875,
+   "v0": 16.364875,
+   "dur": 2.8342916666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.05
+    ],
+    [
+     "spider",
+     0.05,
+     0.61
+    ],
+    [
+     "monkey",
+     0.61,
+     1.23
+    ],
+    [
+     "looks",
+     1.35,
+     1.58
+    ],
+    [
+     "for",
+     1.58,
+     1.69
+    ],
+    [
+     "fruit",
+     1.69,
+     2.06
+    ],
+    [
+     "during",
+     2.06,
+     2.34
+    ],
+    [
+     "the",
+     2.34,
+     2.41
+    ],
+    [
+     "day.",
+     2.41,
+     2.83
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: in the day",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Fruit is the main part of what it eats.",
+   "t0": 19.6875,
+   "t1": 22.5,
+   "v0": 19.73916666666667,
+   "dur": 2.489875,
+   "words": [
+    [
+     "Fruit",
+     0.01,
+     0.5
+    ],
+    [
+     "is",
+     0.5,
+     0.69
+    ],
+    [
+     "the",
+     0.69,
+     0.78
+    ],
+    [
+     "main",
+     0.78,
+     1.2
+    ],
+    [
+     "part",
+     1.2,
+     1.64
+    ],
+    [
+     "of",
+     1.64,
+     1.78
+    ],
+    [
+     "what",
+     1.78,
+     1.9
+    ],
+    [
+     "it",
+     1.9,
+     2.01
+    ],
+    [
+     "eats.",
+     2.01,
+     2.49
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: main food",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Look! This fruit is green. And this fruit is golden.",
+   "t0": 22.5,
+   "t1": 26.5625,
+   "v0": 22.769041666666674,
+   "dur": 3.4736666666666665,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.38
+    ],
+    [
+     "This",
+     0.38,
+     0.65
+    ],
+    [
+     "fruit",
+     0.65,
+     0.89
+    ],
+    [
+     "is",
+     0.89,
+     1.04
+    ],
+    [
+     "green.",
+     1.04,
+     1.62
+    ],
+    [
+     "And",
+     1.97,
+     2.1
+    ],
+    [
+     "this",
+     2.1,
+     2.34
+    ],
+    [
+     "fruit",
+     2.34,
+     2.62
+    ],
+    [
+     "is",
+     2.62,
+     2.76
+    ],
+    [
+     "golden.",
+     2.76,
+     3.47
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "green and golden",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Mango looks, and looks, with her big brown eyes.",
+   "t0": 26.5625,
+   "t1": 30.3125,
+   "v0": 26.782708333333343,
+   "dur": 3.18625,
+   "words": [
+    [
+     "Mango",
+     0.01,
+     0.43
+    ],
+    [
+     "looks,",
+     0.43,
+     0.92
+    ],
+    [
+     "and",
+     0.92,
+     1.19
+    ],
+    [
+     "looks,",
+     1.19,
+     1.59
+    ],
+    [
+     "with",
+     1.59,
+     1.78
+    ],
+    [
+     "her",
+     1.78,
+     1.89
+    ],
+    [
+     "big",
+     1.89,
+     2.22
+    ],
+    [
+     "brown",
+     2.22,
+     2.62
+    ],
+    [
+     "eyes.",
+     2.62,
+     3.186
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "she looks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Spider monkeys see colors very well.",
+   "t0": 30.3125,
+   "t1": 33.4375,
+   "v0": 30.508958333333347,
+   "dur": 2.5100416666666665,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.47
+    ],
+    [
+     "monkeys",
+     0.47,
+     0.95
+    ],
+    [
+     "see",
+     0.95,
+     1.18
+    ],
+    [
+     "colors",
+     1.18,
+     1.73
+    ],
+    [
+     "very",
+     1.73,
+     2.11
+    ],
+    [
+     "well.",
+     2.11,
+     2.51
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: colors",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "That helps them pick the best fruit.",
+   "t0": 33.4375,
+   "t1": 35.9375,
+   "v0": 33.55900000000001,
+   "dur": 2.160083333333333,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.26
+    ],
+    [
+     "helps",
+     0.26,
+     0.63
+    ],
+    [
+     "them",
+     0.63,
+     0.9
+    ],
+    [
+     "pick",
+     0.9,
+     1.18
+    ],
+    [
+     "the",
+     1.18,
+     1.27
+    ],
+    [
+     "best",
+     1.27,
+     1.65
+    ],
+    [
+     "fruit.",
+     1.65,
+     2.16
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: the best fruit",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "What color is your favorite fruit?",
+   "t0": 35.9375,
+   "t1": 39.6875,
+   "v0": 36.25908333333334,
+   "dur": 2.0709583333333335,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.25
+    ],
+    [
+     "color",
+     0.25,
+     0.69
+    ],
+    [
+     "is",
+     0.69,
+     0.87
+    ],
+    [
+     "your",
+     0.87,
+     0.96
+    ],
+    [
+     "favorite",
+     0.96,
+     1.53
+    ],
+    [
+     "fruit?",
+     1.53,
+     2.07
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your fruit",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Which fruit will Mango pick? The green one, or the golden one?",
+   "t0": 39.6875,
+   "t1": 47.5,
+   "v0": 39.87004166666667,
+   "dur": 4.050208333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.24
+    ],
+    [
+     "fruit",
+     0.24,
+     0.5
+    ],
+    [
+     "will",
+     0.5,
+     0.65
+    ],
+    [
+     "Mango",
+     0.65,
+     1.14
+    ],
+    [
+     "pick?",
+     1.14,
+     1.63
+    ],
+    [
+     "The",
+     2.0,
+     2.11
+    ],
+    [
+     "green",
+     2.11,
+     2.53
+    ],
+    [
+     "one,",
+     2.53,
+     3.0
+    ],
+    [
+     "or",
+     3.0,
+     3.1
+    ],
+    [
+     "the",
+     3.1,
+     3.18
+    ],
+    [
+     "golden",
+     3.18,
+     3.7
+    ],
+    [
+     "one?",
+     3.7,
+     4.05
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "The golden one! Good choice, Mango.",
+   "t0": 47.5,
+   "t1": 50.625,
+   "v0": 47.660250000000005,
+   "dur": 2.6542083333333335,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "golden",
+     0.11,
+     0.6
+    ],
+    [
+     "one!",
+     0.6,
+     1.0
+    ],
+    [
+     "Good",
+     1.35,
+     1.55
+    ],
+    [
+     "choice,",
+     1.55,
+     2.03
+    ],
+    [
+     "Mango.",
+     2.03,
+     2.65
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the golden one",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "The green fruit can wait for another day.",
+   "t0": 50.625,
+   "t1": 53.75,
+   "v0": 50.85445833333334,
+   "dur": 2.4947083333333335,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "green",
+     0.11,
+     0.52
+    ],
+    [
+     "fruit",
+     0.52,
+     1.05
+    ],
+    [
+     "can",
+     1.05,
+     1.29
+    ],
+    [
+     "wait",
+     1.29,
+     1.57
+    ],
+    [
+     "for",
+     1.57,
+     1.74
+    ],
+    [
+     "another",
+     1.74,
+     2.06
+    ],
+    [
+     "day.",
+     2.06,
+     2.49
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "not yet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Munch, munch, munch! Can you munch like Mango?",
+   "t0": 53.75,
+   "t1": 57.5,
+   "v0": 53.889166666666675,
+   "dur": 3.166875,
+   "words": [
+    [
+     "Munch,",
+     0.01,
+     0.53
+    ],
+    [
+     "munch,",
+     0.53,
+     1.06
+    ],
+    [
+     "munch!",
+     1.06,
+     1.59
+    ],
+    [
+     "Can",
+     1.85,
+     2.0
+    ],
+    [
+     "you",
+     2.0,
+     2.1
+    ],
+    [
+     "munch",
+     2.1,
+     2.37
+    ],
+    [
+     "like",
+     2.37,
+     2.54
+    ],
+    [
+     "Mango?",
+     2.54,
+     3.167
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "munch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Imagine Mango takes ten bites.",
+   "t0": 57.5,
+   "t1": 60.3125,
+   "v0": 57.59604166666667,
+   "dur": 2.2419166666666666,
+   "words": [
+    [
+     "Imagine",
+     0.01,
+     0.6
+    ],
+    [
+     "Mango",
+     0.6,
+     1.04
+    ],
+    [
+     "takes",
+     1.04,
+     1.42
+    ],
+    [
+     "ten",
+     1.42,
+     1.73
+    ],
+    [
+     "bites.",
+     1.73,
+     2.24
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: ten bites",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "How many bites are fruit? Let's count!",
+   "t0": 60.3125,
+   "t1": 63.4375,
+   "v0": 60.37795833333334,
+   "dur": 2.5917916666666665,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "many",
+     0.18,
+     0.4
+    ],
+    [
+     "bites",
+     0.4,
+     0.74
+    ],
+    [
+     "are",
+     0.74,
+     0.81
+    ],
+    [
+     "fruit?",
+     0.81,
+     1.4
+    ],
+    [
+     "Let's",
+     1.66,
+     2.01
+    ],
+    [
+     "count!",
+     2.01,
+     2.59
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: how many",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "One, two, three, four,",
+   "t0": 63.4375,
+   "t1": 65.3125,
+   "v0": 63.509750000000004,
+   "dur": 1.5345416666666667,
+   "words": [
+    [
+     "One,",
+     0.01,
+     0.38
+    ],
+    [
+     "two,",
+     0.38,
+     0.68
+    ],
+    [
+     "three,",
+     0.68,
+     0.98
+    ],
+    [
+     "four,",
+     0.98,
+     1.53
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: count 1-4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "five, six, seven, eight!",
+   "t0": 65.3125,
+   "t1": 67.5,
+   "v0": 65.58429166666667,
+   "dur": 1.7179166666666668,
+   "words": [
+    [
+     "five,",
+     0.01,
+     0.41
+    ],
+    [
+     "six,",
+     0.41,
+     0.79
+    ],
+    [
+     "seven,",
+     0.79,
+     1.27
+    ],
+    [
+     "eight!",
+     1.27,
+     1.718
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: count 5-8",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "About eight bites out of ten are fruit!",
+   "t0": 67.5,
+   "t1": 70.3125,
+   "v0": 67.84220833333335,
+   "dur": 2.263333333333333,
+   "words": [
+    [
+     "About",
+     0.01,
+     0.37
+    ],
+    [
+     "eight",
+     0.37,
+     0.59
+    ],
+    [
+     "bites",
+     0.59,
+     0.95
+    ],
+    [
+     "out",
+     0.95,
+     1.04
+    ],
+    [
+     "of",
+     1.04,
+     1.13
+    ],
+    [
+     "ten",
+     1.13,
+     1.53
+    ],
+    [
+     "are",
+     1.53,
+     1.65
+    ],
+    [
+     "fruit!",
+     1.65,
+     2.26
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: eight of ten",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "And the last two? Some young leaves and flowers.",
+   "t0": 70.3125,
+   "t1": 74.0625,
+   "v0": 70.64554166666669,
+   "dur": 3.126708333333333,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.14
+    ],
+    [
+     "the",
+     0.14,
+     0.2
+    ],
+    [
+     "last",
+     0.2,
+     0.56
+    ],
+    [
+     "two?",
+     0.56,
+     0.95
+    ],
+    [
+     "Some",
+     1.24,
+     1.42
+    ],
+    [
+     "young",
+     1.42,
+     1.7
+    ],
+    [
+     "leaves",
+     1.7,
+     2.22
+    ],
+    [
+     "and",
+     2.22,
+     2.34
+    ],
+    [
+     "flowers.",
+     2.34,
+     3.127
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: the last two",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Fruit, fruit, fruit, and more fruit!",
+   "t0": 74.0625,
+   "t1": 77.1875,
+   "v0": 74.31225000000002,
+   "dur": 2.4593333333333334,
+   "words": [
+    [
+     "Fruit,",
+     0.06,
+     0.55
+    ],
+    [
+     "fruit,",
+     0.55,
+     1.12
+    ],
+    [
+     "fruit,",
+     1.12,
+     1.54
+    ],
+    [
+     "and",
+     1.54,
+     1.68
+    ],
+    [
+     "more",
+     1.68,
+     1.89
+    ],
+    [
+     "fruit!",
+     1.89,
+     2.459
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: so much fruit",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "So for a spider monkey, fruit comes first.",
+   "t0": 77.1875,
+   "t1": 80.625,
+   "v0": 77.31158333333336,
+   "dur": 2.9743333333333335,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.22
+    ],
+    [
+     "for",
+     0.22,
+     0.42
+    ],
+    [
+     "a",
+     0.42,
+     0.46
+    ],
+    [
+     "spider",
+     0.46,
+     0.96
+    ],
+    [
+     "monkey,",
+     0.96,
+     1.58
+    ],
+    [
+     "fruit",
+     1.8,
+     2.06
+    ],
+    [
+     "comes",
+     2.06,
+     2.4
+    ],
+    [
+     "first.",
+     2.4,
+     2.97
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fruit first",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Do you like fruit, too? Rub your tummy!",
+   "t0": 80.625,
+   "t1": 83.75,
+   "v0": 80.8259166666667,
+   "dur": 2.499041666666667,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.2
+    ],
+    [
+     "like",
+     0.2,
+     0.39
+    ],
+    [
+     "fruit,",
+     0.39,
+     0.71
+    ],
+    [
+     "too?",
+     0.71,
+     1.16
+    ],
+    [
+     "Rub",
+     1.47,
+     1.73
+    ],
+    [
+     "your",
+     1.73,
+     1.84
+    ],
+    [
+     "tummy!",
+     1.84,
+     2.499
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "rub your tummy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "That is food number one. Fruit!",
+   "t0": 83.75,
+   "t1": 86.60304166666671,
+   "v0": 83.86495833333338,
+   "dur": 2.3180833333333335,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.24
+    ],
+    [
+     "is",
+     0.24,
+     0.46
+    ],
+    [
+     "food",
+     0.46,
+     0.73
+    ],
+    [
+     "number",
+     0.73,
+     1.0
+    ],
+    [
+     "one.",
+     1.0,
+     1.43
+    ],
+    [
+     "Fruit!",
+     1.72,
+     2.318
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: food 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

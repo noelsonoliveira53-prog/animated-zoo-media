@@ -1,0 +1,1136 @@
+{
+ "id": "gzx_ep01",
+ "title": "How Rockets Fly!",
+ "channel": "gizmo",
+ "set": "gizmoworld",
+ "set_opts": {},
+ "seed": 91,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "gizmo",
+   "spot": "center"
+  },
+  {
+   "id": "pal",
+   "spot": "s1",
+   "yaw": 0.22,
+   "char": "gizmo",
+   "opts": {
+    "variant": "mini",
+    "color": "#ff5fa2",
+    "scale": 0.6
+   }
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "push",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "push",
+   "biome": "lab",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 9,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "space",
+   "biome": "lab",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "space",
+   "biome": "beach",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 10,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "space",
+   "biome": "lab",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ],
+   "line": 12
+  },
+  {
+   "from": "stages",
+   "biome": "mountain",
+   "tod": "golden",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "stages",
+   "biome": "night_meadow",
+   "tod": "night",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 12,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "pal"
+   ]
+  },
+  {
+   "from": "goodbye",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "dolly",
+   "show": [
+    "pal"
+   ]
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 956,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "orbit",
+    "dolly",
+    "wide",
+    "wide"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "ROCKETS!",
+     "color": "#ffb627",
+     "at": [
+      0.0,
+      0.5,
+      3.15
+     ],
+     "size": 0.7,
+     "delay": 1.0,
+     "dur": 13.028
+    },
+    {
+     "type": "teach",
+     "name": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "delay": 14.178,
+     "dur": 4.335,
+     "spin": 0,
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0,
+      "times": [
+       0.0,
+       0.23,
+       -2.77
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "section": "push",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "PUSH!",
+     "color": "#3db8ff",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 3.661,
+     "dur": 8.628,
+     "spin": 0,
+     "opts": {
+      "text": "HOT GAS",
+      "color": "#1479d6",
+      "win": 6.228
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 4.111,
+     "dur": 5.778,
+     "spin": 0,
+     "opts": {
+      "text": "WIND",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 6.139,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 74.291,
+     "dur": 11.01,
+     "spin": 0,
+     "opts": {
+      "text": "UP",
+      "color": "#1479d6",
+      "win": 9.01
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 74.741,
+     "dur": 8.56,
+     "spin": 0,
+     "opts": {
+      "text": "DOWN",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 79.551,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 13.611,
+     "dur": 10.609,
+     "spin": 0,
+     "opts": {
+      "gas": true,
+      "s": 0.85
+     }
+    },
+    {
+     "type": "teach",
+     "name": "arrow",
+     "at": [
+      1.45,
+      -1.0,
+      2.55
+     ],
+     "delay": 21.64,
+     "dur": 2.58,
+     "spin": 0,
+     "opts": {
+      "up": true,
+      "color": "#3cc45a",
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "arrow",
+     "at": [
+      1.45,
+      -1.0,
+      0.35
+     ],
+     "delay": 18.41,
+     "dur": 5.81,
+     "spin": 0,
+     "opts": {
+      "color": "#ff7a00",
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 26.679,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 29.829,
+     "dur": 7.717,
+     "spin": 0,
+     "opts": {
+      "gas": true,
+      "s": 0.85
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 40.381,
+     "dur": 9.454,
+     "spin": 0,
+     "opts": {
+      "text": "PUSH BACK!",
+      "color": "#3561d9"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 49.845,
+     "dur": 9.261,
+     "spin": 0,
+     "opts": {
+      "gas": true,
+      "s": 0.85
+     }
+    },
+    {
+     "type": "teach",
+     "name": "arrow",
+     "at": [
+      1.45,
+      -1.0,
+      0.35
+     ],
+     "delay": 50.845,
+     "dur": 8.261,
+     "spin": 0,
+     "opts": {
+      "color": "#ff7a00",
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "arrow",
+     "at": [
+      1.45,
+      -1.0,
+      2.55
+     ],
+     "delay": 53.645,
+     "dur": 5.461,
+     "spin": 0,
+     "opts": {
+      "up": true,
+      "color": "#3cc45a",
+      "s": 1.2
+     }
+    }
+   ]
+  },
+  {
+   "section": "space",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "NO AIR!",
+     "color": "#ff7a00",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 3.985,
+     "dur": 8.183,
+     "spin": 0,
+     "opts": {
+      "text": "YES",
+      "color": "#1479d6",
+      "win": 5.783
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 4.435,
+     "dur": 5.333,
+     "spin": 0,
+     "opts": {
+      "text": "NO",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 6.018,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 74.28,
+     "dur": 8.586,
+     "spin": 0,
+     "opts": {
+      "text": "YES",
+      "color": "#1479d6"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 74.73,
+     "dur": 10.136,
+     "spin": 0,
+     "opts": {
+      "text": "NO",
+      "color": "#e85d00",
+      "win": 8.136
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 79.116,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 15.341,
+     "dur": 2.738,
+     "spin": 0,
+     "opts": {
+      "s": 0.8
+     }
+    },
+    {
+     "type": "teach",
+     "name": "tanks",
+     "at": [
+      2.45,
+      -0.6,
+      0.0
+     ],
+     "delay": 18.079,
+     "dur": 4.22,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 24.207,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "tanks",
+     "at": [
+      2.45,
+      -0.6,
+      0.0
+     ],
+     "delay": 27.457,
+     "dur": 9.312,
+     "spin": 0,
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "jet",
+     "at": [
+      2.4,
+      -0.6,
+      0.7
+     ],
+     "delay": 39.178,
+     "dur": 7.881,
+     "spin": 0,
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 47.349,
+     "dur": 12.217,
+     "spin": 0,
+     "opts": {
+      "text": "NO AIR",
+      "color": "#1d3a8a"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "tanks",
+     "at": [
+      2.45,
+      -0.6,
+      0.0
+     ],
+     "delay": 55.486,
+     "dur": 4.08,
+     "spin": 0,
+     "opts": {
+      "s": 0.75
+     }
+    }
+   ]
+  },
+  {
+   "section": "stages",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "close:host",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "STAGES!",
+     "color": "#8e5bd8",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 4.01,
+     "dur": 8.324,
+     "spin": 0,
+     "opts": {
+      "text": "LIGHTER",
+      "color": "#1479d6",
+      "win": 5.924
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 4.46,
+     "dur": 5.474,
+     "spin": 0,
+     "opts": {
+      "text": "HEAVIER",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 6.184,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 76.364,
+     "dur": 10.496,
+     "spin": 0,
+     "opts": {
+      "text": "LIGHTER",
+      "color": "#1479d6",
+      "win": 8.496
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 76.814,
+     "dur": 8.046,
+     "spin": 0,
+     "opts": {
+      "text": "HEAVIER",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 81.11,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 15.653,
+     "dur": 9.785,
+     "spin": 0,
+     "opts": {
+      "stages": 3,
+      "s": 0.8
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 29.112,
+     "dur": 3.15,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "rocket",
+     "at": [
+      2.55,
+      -0.5,
+      0.0
+     ],
+     "delay": 32.272,
+     "dur": 7.312,
+     "spin": 0,
+     "opts": {
+      "stages": 3,
+      "s": 0.8,
+      "leave": 0.37
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 39.524,
+     "dur": 11.282,
+     "spin": 0,
+     "opts": {
+      "text": "BIG PUSH",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "delay": 51.936,
+     "dur": 8.345,
+     "spin": 0,
+     "opts": {
+      "text": "STAGING",
+      "color": "#3561d9"
+     }
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#3cc45a",
+     "at": [
+      -0.7,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 1.0,
+     "dur": 5.478
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 6.478,
+     "dur": 11.415,
+     "spin": 0,
+     "opts": {
+      "text": "HOT GAS",
+      "color": "#1479d6",
+      "win": 9.415
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 6.928,
+     "dur": 8.965,
+     "spin": 0,
+     "opts": {
+      "text": "WATER",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 12.143,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 18.063,
+     "dur": 10.721,
+     "spin": 0,
+     "opts": {
+      "text": "YES",
+      "color": "#1479d6",
+      "win": 8.721
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 18.513,
+     "dur": 8.271,
+     "spin": 0,
+     "opts": {
+      "text": "NO",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 23.034,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.7
+     ],
+     "delay": 28.767,
+     "dur": 10.892,
+     "spin": 0,
+     "opts": {
+      "text": "LIGHTER",
+      "color": "#1479d6",
+      "win": 8.892
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      2.55
+     ],
+     "delay": 29.217,
+     "dur": 8.442,
+     "spin": 0,
+     "opts": {
+      "text": "HEAVIER",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      1.95,
+      -1.3,
+      1.7
+     ],
+     "delay": 33.909,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "orbit",
+    "dolly",
+    "wide"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ff6fb5",
+     "at": [
+      0.0,
+      0.5,
+      3.15
+     ],
+     "size": 0.7,
+     "delay": 1.0
+    }
+   ]
+  }
+ ],
+ "song": "gzx_ep01",
+ "res": "3840x2160",
+ "samples": 16,
+ "step": 1,
+ "hold_shots": true,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "gzx_ep01_timing.json",
+ "audio": "gzx_ep01_song.wav"
+}

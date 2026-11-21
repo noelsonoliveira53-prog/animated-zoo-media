@@ -1,0 +1,1805 @@
+{
+ "id": "zc_ep10_short2",
+ "total": 88.20687500000003,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125
+ ],
+ "plan": {
+  "length": 88.2,
+  "shots": 22,
+  "visual_changes": 86,
+  "mean_gap": 1.03,
+  "longest_gap": 5.4,
+  "longest_gap_at": 82.8,
+  "over_6s": [],
+  "places": [
+   "gobi",
+   "dunes",
+   "trail"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 9,
+  "longest_without_question": 20.6,
+  "first_words_at": 0.42,
+  "shot_mean": 4.01,
+  "fails": [],
+  "words_placed": "167/167",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 30.6,
+   "onset_err_max_ms": 120.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "snow falls"
+  ],
+  [
+   0.0,
+   "new place",
+   "the snowy Gobi hook: camel in snow"
+  ],
+  [
+   1.28,
+   "word",
+   "?"
+  ],
+  [
+   4.06,
+   "new place",
+   "the dunes at sunrise hot desert wide"
+  ],
+  [
+   5.68,
+   "word",
+   "HOT AND DRY"
+  ],
+  [
+   7.81,
+   "action",
+   "the sun glows"
+  ],
+  [
+   7.81,
+   "new place",
+   "the rocky trail hot sand"
+  ],
+  [
+   7.99,
+   "word",
+   "HOT SUN"
+  ],
+  [
+   9.19,
+   "action",
+   "sandy walks"
+  ],
+  [
+   9.19,
+   "word",
+   "HOT SAND"
+  ],
+  [
+   10.94,
+   "new shot",
+   "the rocky trail fan yourself"
+  ],
+  [
+   13.07,
+   "action",
+   "milo hops"
+  ],
+  [
+   13.07,
+   "word",
+   "PHEW!"
+  ],
+  [
+   14.06,
+   "new place",
+   "the dunes at sunrise question 2a"
+  ],
+  [
+   15.37,
+   "sign",
+   "HOT"
+  ],
+  [
+   15.72,
+   "sign",
+   "COLD"
+  ],
+  [
+   17.11,
+   "thinking dot",
+   "1"
+  ],
+  [
+   17.78,
+   "thinking dot",
+   "2"
+  ],
+  [
+   18.46,
+   "thinking dot",
+   "3"
+  ],
+  [
+   18.94,
+   "answer",
+   "HOT"
+  ],
+  [
+   18.99,
+   "action",
+   "sandy hops"
+  ],
+  [
+   20.31,
+   "new place",
+   "the picture board board: hot deserts"
+  ],
+  [
+   20.37,
+   "word",
+   "HOT!"
+  ],
+  [
+   24.06,
+   "action",
+   "snow falls"
+  ],
+  [
+   24.06,
+   "new place",
+   "the snowy Gobi Gobi again"
+  ],
+  [
+   27.2,
+   "word",
+   "THE GOBI"
+  ],
+  [
+   28.75,
+   "action",
+   "snow falls"
+  ],
+  [
+   28.75,
+   "new shot",
+   "the snowy Gobi rocky"
+  ],
+  [
+   29.27,
+   "word",
+   "ROCKY!"
+  ],
+  [
+   31.56,
+   "action",
+   "snow falls"
+  ],
+  [
+   31.56,
+   "new shot",
+   "the snowy Gobi snowy mountains"
+  ],
+  [
+   32.2,
+   "word",
+   "MOUNTAINS"
+  ],
+  [
+   34.69,
+   "action",
+   "snow falls"
+  ],
+  [
+   34.69,
+   "new shot",
+   "the snowy Gobi say Gobi"
+  ],
+  [
+   36.21,
+   "action",
+   "milo hops"
+  ],
+  [
+   36.21,
+   "word",
+   "GOBI!"
+  ],
+  [
+   37.19,
+   "new place",
+   "the picture board (blue) board: very cold"
+  ],
+  [
+   39.57,
+   "action",
+   "the snowflake turns"
+  ],
+  [
+   39.57,
+   "word",
+   "COLD!"
+  ],
+  [
+   40.62,
+   "new shot",
+   "the picture board (blue) board: count snowflakes"
+  ],
+  [
+   42.72,
+   "word",
+   "1"
+  ],
+  [
+   43.01,
+   "word",
+   "2"
+  ],
+  [
+   43.29,
+   "word",
+   "3"
+  ],
+  [
+   44.38,
+   "action",
+   "snow falls"
+  ],
+  [
+   44.38,
+   "new place",
+   "the snowy Gobi snow"
+  ],
+  [
+   45.77,
+   "action",
+   "bac looks"
+  ],
+  [
+   45.77,
+   "word",
+   "SNOW!"
+  ],
+  [
+   46.88,
+   "action",
+   "snow falls"
+  ],
+  [
+   46.88,
+   "new shot",
+   "the snowy Gobi shiver"
+  ],
+  [
+   47.29,
+   "action",
+   "Milo shivers"
+  ],
+  [
+   48.84,
+   "word",
+   "BRRR!"
+  ],
+  [
+   50.31,
+   "action",
+   "snow falls"
+  ],
+  [
+   50.31,
+   "new shot",
+   "the snowy Gobi question 2"
+  ],
+  [
+   52.77,
+   "sign",
+   "YES"
+  ],
+  [
+   53.12,
+   "sign",
+   "NO"
+  ],
+  [
+   54.28,
+   "thinking dot",
+   "1"
+  ],
+  [
+   54.96,
+   "thinking dot",
+   "2"
+  ],
+  [
+   55.63,
+   "thinking dot",
+   "3"
+  ],
+  [
+   56.12,
+   "answer",
+   "YES"
+  ],
+  [
+   56.17,
+   "action",
+   "bac nods"
+  ],
+  [
+   57.19,
+   "action",
+   "snow falls"
+  ],
+  [
+   57.19,
+   "new shot",
+   "the snowy Gobi cold and snowy"
+  ],
+  [
+   59.06,
+   "word",
+   "SNOWY!"
+  ],
+  [
+   60.0,
+   "new place",
+   "the picture board (pink) board: hot summer"
+  ],
+  [
+   62.13,
+   "word",
+   "HOT!"
+  ],
+  [
+   63.12,
+   "new shot",
+   "the picture board (pink) board: cold and hot"
+  ],
+  [
+   63.22,
+   "picture",
+   "ic0"
+  ],
+  [
+   63.85,
+   "word",
+   "WINTER"
+  ],
+  [
+   64.7,
+   "picture",
+   "ic1"
+  ],
+  [
+   65.12,
+   "word",
+   "SUMMER"
+  ],
+  [
+   65.94,
+   "new place",
+   "the picture board question 2b"
+  ],
+  [
+   68.06,
+   "sign",
+   "DROMEDARY"
+  ],
+  [
+   68.41,
+   "sign",
+   "BACTRIAN"
+  ],
+  [
+   70.45,
+   "thinking dot",
+   "1"
+  ],
+  [
+   71.12,
+   "thinking dot",
+   "2"
+  ],
+  [
+   71.8,
+   "thinking dot",
+   "3"
+  ],
+  [
+   72.28,
+   "answer",
+   "BACTRIAN"
+  ],
+  [
+   72.33,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   73.44,
+   "action",
+   "snow falls"
+  ],
+  [
+   73.44,
+   "new place",
+   "the snowy Gobi the Bactrian"
+  ],
+  [
+   73.81,
+   "action",
+   "the hump bounces"
+  ],
+  [
+   73.81,
+   "word",
+   "BACTRIAN!"
+  ],
+  [
+   77.81,
+   "new place",
+   "the picture board (blue) board: point to snowflake"
+  ],
+  [
+   81.01,
+   "action",
+   "the snowflake picture"
+  ],
+  [
+   81.01,
+   "word",
+   "THERE!"
+  ],
+  [
+   82.81,
+   "new shot",
+   "the picture board (blue) board: who lives where"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gobi",
+   "say": "A camel in the snow? Where does this camel live?",
+   "t0": 0.0,
+   "t1": 4.0625,
+   "v0": 0.42,
+   "dur": 3.277375,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.09
+    ],
+    [
+     "camel",
+     0.09,
+     0.65
+    ],
+    [
+     "in",
+     0.65,
+     0.8
+    ],
+    [
+     "the",
+     0.8,
+     0.86
+    ],
+    [
+     "snow?",
+     0.86,
+     1.49
+    ],
+    [
+     "Where",
+     1.82,
+     1.92
+    ],
+    [
+     "does",
+     1.92,
+     2.08
+    ],
+    [
+     "this",
+     2.08,
+     2.26
+    ],
+    [
+     "camel",
+     2.26,
+     2.77
+    ],
+    [
+     "live?",
+     2.77,
+     3.277
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: camel in snow",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Mama and Sandy live in a hot, dry desert.",
+   "t0": 4.0625,
+   "t1": 7.8125,
+   "v0": 4.237375,
+   "dur": 3.106375,
+   "words": [
+    [
+     "Mama",
+     0.0,
+     0.35
+    ],
+    [
+     "and",
+     0.35,
+     0.5
+    ],
+    [
+     "Sandy",
+     0.5,
+     1.05
+    ],
+    [
+     "live",
+     1.05,
+     1.31
+    ],
+    [
+     "in",
+     1.31,
+     1.4
+    ],
+    [
+     "a",
+     1.4,
+     1.44
+    ],
+    [
+     "hot,",
+     1.44,
+     1.97
+    ],
+    [
+     "dry",
+     2.09,
+     2.47
+    ],
+    [
+     "desert.",
+     2.47,
+     3.106
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "hot desert wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "The sun is hot. The sand is hot, too!",
+   "t0": 7.8125,
+   "t1": 10.9375,
+   "v0": 7.88375,
+   "dur": 2.65675,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "sun",
+     0.11,
+     0.43
+    ],
+    [
+     "is",
+     0.43,
+     0.59
+    ],
+    [
+     "hot.",
+     0.59,
+     1.05
+    ],
+    [
+     "The",
+     1.23,
+     1.31
+    ],
+    [
+     "sand",
+     1.31,
+     1.69
+    ],
+    [
+     "is",
+     1.69,
+     1.81
+    ],
+    [
+     "hot,",
+     1.81,
+     2.17
+    ],
+    [
+     "too!",
+     2.17,
+     2.657
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "hot sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Fan yourself, like it is hot. Phew!",
+   "t0": 10.9375,
+   "t1": 14.0625,
+   "v0": 11.080499999999999,
+   "dur": 2.562625,
+   "words": [
+    [
+     "Fan",
+     0.02,
+     0.34
+    ],
+    [
+     "yourself,",
+     0.34,
+     0.91
+    ],
+    [
+     "like",
+     0.91,
+     1.1
+    ],
+    [
+     "it",
+     1.1,
+     1.18
+    ],
+    [
+     "is",
+     1.18,
+     1.32
+    ],
+    [
+     "hot.",
+     1.32,
+     1.79
+    ],
+    [
+     "Phew!",
+     1.99,
+     2.56
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "fan yourself",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Is Sandy's desert hot, or cold?",
+   "t0": 14.0625,
+   "t1": 20.3125,
+   "v0": 14.183124999999999,
+   "dur": 2.439,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.16
+    ],
+    [
+     "Sandy's",
+     0.16,
+     0.76
+    ],
+    [
+     "desert",
+     0.76,
+     1.19
+    ],
+    [
+     "hot,",
+     1.19,
+     1.71
+    ],
+    [
+     "or",
+     1.71,
+     1.83
+    ],
+    [
+     "cold?",
+     1.83,
+     2.439
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Hot! Dromedaries live in hot, dry deserts.",
+   "t0": 20.3125,
+   "t1": 24.0625,
+   "v0": 20.362125,
+   "dur": 3.2550833333333333,
+   "words": [
+    [
+     "Hot!",
+     0.01,
+     0.58
+    ],
+    [
+     "Dromedaries",
+     0.58,
+     1.23
+    ],
+    [
+     "live",
+     1.23,
+     1.42
+    ],
+    [
+     "in",
+     1.42,
+     1.52
+    ],
+    [
+     "hot,",
+     1.52,
+     1.99
+    ],
+    [
+     "dry",
+     2.17,
+     2.54
+    ],
+    [
+     "deserts.",
+     2.54,
+     3.25
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: hot deserts",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "But Sandy's cousin lives far away, in the Gobi Desert.",
+   "t0": 24.0625,
+   "t1": 28.75,
+   "v0": 24.157208333333333,
+   "dur": 4.182,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.12
+    ],
+    [
+     "Sandy's",
+     0.12,
+     0.7
+    ],
+    [
+     "cousin",
+     0.7,
+     1.22
+    ],
+    [
+     "lives",
+     1.22,
+     1.72
+    ],
+    [
+     "far",
+     1.72,
+     2.03
+    ],
+    [
+     "away,",
+     2.03,
+     2.52
+    ],
+    [
+     "in",
+     2.86,
+     2.97
+    ],
+    [
+     "the",
+     2.97,
+     3.04
+    ],
+    [
+     "Gobi",
+     3.04,
+     3.53
+    ],
+    [
+     "Desert.",
+     3.53,
+     4.18
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Gobi again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "It is a rocky desert, in Asia.",
+   "t0": 28.75,
+   "t1": 31.5625,
+   "v0": 28.879208333333334,
+   "dur": 2.2475416666666668,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.35
+    ],
+    [
+     "a",
+     0.35,
+     0.39
+    ],
+    [
+     "rocky",
+     0.39,
+     0.9
+    ],
+    [
+     "desert,",
+     0.9,
+     1.59
+    ],
+    [
+     "in",
+     1.59,
+     1.7
+    ],
+    [
+     "Asia.",
+     1.7,
+     2.248
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "rocky",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "There are big mountains, with snow on top.",
+   "t0": 31.5625,
+   "t1": 34.6875,
+   "v0": 31.666750000000004,
+   "dur": 2.796333333333333,
+   "words": [
+    [
+     "There",
+     0.0,
+     0.23
+    ],
+    [
+     "are",
+     0.23,
+     0.26
+    ],
+    [
+     "big",
+     0.26,
+     0.53
+    ],
+    [
+     "mountains,",
+     0.53,
+     1.29
+    ],
+    [
+     "with",
+     1.51,
+     1.67
+    ],
+    [
+     "snow",
+     1.67,
+     2.09
+    ],
+    [
+     "on",
+     2.09,
+     2.28
+    ],
+    [
+     "top.",
+     2.28,
+     2.796
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "snowy mountains",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Say it with me. Gobi!",
+   "t0": 34.6875,
+   "t1": 37.1875,
+   "v0": 35.003083333333336,
+   "dur": 1.894625,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.36
+    ],
+    [
+     "it",
+     0.36,
+     0.44
+    ],
+    [
+     "with",
+     0.44,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.94
+    ],
+    [
+     "Gobi!",
+     1.21,
+     1.89
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say Gobi",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "In winter, it gets very, very cold.",
+   "t0": 37.1875,
+   "t1": 40.625,
+   "v0": 37.43770833333333,
+   "dur": 2.77225,
+   "words": [
+    [
+     "In",
+     0.01,
+     0.18
+    ],
+    [
+     "winter,",
+     0.18,
+     0.73
+    ],
+    [
+     "it",
+     0.93,
+     1.05
+    ],
+    [
+     "gets",
+     1.05,
+     1.32
+    ],
+    [
+     "very,",
+     1.32,
+     1.78
+    ],
+    [
+     "very",
+     1.78,
+     2.13
+    ],
+    [
+     "cold.",
+     2.13,
+     2.77
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: very cold",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Count the snowflakes with me. One, two, three!",
+   "t0": 40.625,
+   "t1": 44.375,
+   "v0": 40.74995833333333,
+   "dur": 3.1272083333333334,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.35
+    ],
+    [
+     "snowflakes",
+     0.35,
+     1.1
+    ],
+    [
+     "with",
+     1.1,
+     1.25
+    ],
+    [
+     "me.",
+     1.25,
+     1.59
+    ],
+    [
+     "One,",
+     1.97,
+     2.26
+    ],
+    [
+     "two,",
+     2.26,
+     2.54
+    ],
+    [
+     "three!",
+     2.54,
+     3.127
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: count snowflakes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Look! In winter, there is snow!",
+   "t0": 44.375,
+   "t1": 46.875,
+   "v0": 44.41716666666667,
+   "dur": 1.9905,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.51
+    ],
+    [
+     "In",
+     0.51,
+     0.62
+    ],
+    [
+     "winter,",
+     0.62,
+     1.05
+    ],
+    [
+     "there",
+     1.05,
+     1.25
+    ],
+    [
+     "is",
+     1.25,
+     1.35
+    ],
+    [
+     "snow!",
+     1.35,
+     1.99
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "snow",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Can you shiver like Milo? Shiver, shiver!",
+   "t0": 46.875,
+   "t1": 50.3125,
+   "v0": 46.94766666666666,
+   "dur": 2.972375,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "shiver",
+     0.34,
+     0.7
+    ],
+    [
+     "like",
+     0.7,
+     0.93
+    ],
+    [
+     "Milo?",
+     0.93,
+     1.53
+    ],
+    [
+     "Shiver,",
+     1.89,
+     2.35
+    ],
+    [
+     "shiver!",
+     2.35,
+     2.97
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "shiver",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Is the Gobi cold in winter? Yes, or no?",
+   "t0": 50.3125,
+   "t1": 57.1875,
+   "v0": 50.46004166666666,
+   "dur": 3.3367916666666666,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.2
+    ],
+    [
+     "the",
+     0.2,
+     0.29
+    ],
+    [
+     "Gobi",
+     0.29,
+     0.82
+    ],
+    [
+     "cold",
+     0.82,
+     1.26
+    ],
+    [
+     "in",
+     1.26,
+     1.41
+    ],
+    [
+     "winter?",
+     1.41,
+     1.93
+    ],
+    [
+     "Yes,",
+     2.31,
+     2.76
+    ],
+    [
+     "or",
+     2.76,
+     2.93
+    ],
+    [
+     "no?",
+     2.93,
+     3.337
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "Yes! Very cold, and snowy.",
+   "t0": 57.1875,
+   "t1": 60.0,
+   "v0": 57.53683333333333,
+   "dur": 2.1159583333333334,
+   "words": [
+    [
+     "Yes!",
+     0.03,
+     0.55
+    ],
+    [
+     "Very",
+     0.66,
+     0.94
+    ],
+    [
+     "cold,",
+     0.94,
+     1.38
+    ],
+    [
+     "and",
+     1.38,
+     1.52
+    ],
+    [
+     "snowy.",
+     1.52,
+     2.116
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "cold and snowy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "But in summer, the Gobi gets hot!",
+   "t0": 60.0,
+   "t1": 63.125,
+   "v0": 60.19279166666666,
+   "dur": 2.4845,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.16
+    ],
+    [
+     "in",
+     0.16,
+     0.3
+    ],
+    [
+     "summer,",
+     0.3,
+     0.85
+    ],
+    [
+     "the",
+     1.05,
+     1.14
+    ],
+    [
+     "Gobi",
+     1.14,
+     1.67
+    ],
+    [
+     "gets",
+     1.67,
+     1.94
+    ],
+    [
+     "hot!",
+     1.94,
+     2.48
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: hot summer",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Cold in winter. Hot in summer!",
+   "t0": 63.125,
+   "t1": 65.9375,
+   "v0": 63.217291666666654,
+   "dur": 2.421666666666667,
+   "words": [
+    [
+     "Cold",
+     0.0,
+     0.46
+    ],
+    [
+     "in",
+     0.46,
+     0.63
+    ],
+    [
+     "winter.",
+     0.63,
+     1.14
+    ],
+    [
+     "Hot",
+     1.48,
+     1.75
+    ],
+    [
+     "in",
+     1.75,
+     1.9
+    ],
+    [
+     "summer!",
+     1.9,
+     2.42
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: cold and hot",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Who lives where it snows? The dromedary, or the Bactrian?",
+   "t0": 65.9375,
+   "t1": 73.4375,
+   "v0": 66.17895833333333,
+   "dur": 3.784708333333333,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.18
+    ],
+    [
+     "lives",
+     0.18,
+     0.53
+    ],
+    [
+     "where",
+     0.53,
+     0.69
+    ],
+    [
+     "it",
+     0.69,
+     0.8
+    ],
+    [
+     "snows?",
+     0.8,
+     1.45
+    ],
+    [
+     "The",
+     1.78,
+     1.88
+    ],
+    [
+     "dromedary,",
+     1.88,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     2.88
+    ],
+    [
+     "the",
+     2.88,
+     2.97
+    ],
+    [
+     "Bactrian?",
+     2.97,
+     3.78
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gobi",
+   "say": "The Bactrian! Sandy's cousin, in the snowy Gobi.",
+   "t0": 73.4375,
+   "t1": 77.8125,
+   "v0": 73.70366666666666,
+   "dur": 3.7179583333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "Bactrian!",
+     0.11,
+     0.91
+    ],
+    [
+     "Sandy's",
+     1.21,
+     1.75
+    ],
+    [
+     "cousin,",
+     1.75,
+     2.38
+    ],
+    [
+     "in",
+     2.38,
+     2.5
+    ],
+    [
+     "the",
+     2.5,
+     2.56
+    ],
+    [
+     "snowy",
+     2.56,
+     3.08
+    ],
+    [
+     "Gobi.",
+     3.08,
+     3.718
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the Bactrian",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Point to the snowflake! Where is the snowflake?",
+   "t0": 77.8125,
+   "t1": 82.8125,
+   "v0": 77.961625,
+   "dur": 3.0457083333333332,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.35
+    ],
+    [
+     "to",
+     0.35,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.51
+    ],
+    [
+     "snowflake!",
+     0.51,
+     1.41
+    ],
+    [
+     "Where",
+     1.69,
+     1.93
+    ],
+    [
+     "is",
+     1.93,
+     2.06
+    ],
+    [
+     "the",
+     2.06,
+     2.14
+    ],
+    [
+     "snowflake?",
+     2.14,
+     3.046
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: point to snowflake",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Hot deserts for dromedaries. Snowy winters for Bactrians!",
+   "t0": 82.8125,
+   "t1": 87.80687500000002,
+   "v0": 82.94733333333335,
+   "dur": 4.439541666666667,
+   "words": [
+    [
+     "Hot",
+     0.01,
+     0.35
+    ],
+    [
+     "deserts",
+     0.35,
+     0.93
+    ],
+    [
+     "for",
+     0.93,
+     1.06
+    ],
+    [
+     "dromedaries.",
+     1.06,
+     1.91
+    ],
+    [
+     "Snowy",
+     2.3,
+     2.8
+    ],
+    [
+     "winters",
+     2.8,
+     3.37
+    ],
+    [
+     "for",
+     3.37,
+     3.49
+    ],
+    [
+     "Bactrians!",
+     3.49,
+     4.44
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: who lives where",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

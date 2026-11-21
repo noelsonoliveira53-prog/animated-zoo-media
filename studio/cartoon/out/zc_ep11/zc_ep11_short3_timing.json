@@ -1,0 +1,1659 @@
+{
+ "id": "zc_ep11_short3",
+ "total": 90.95500000000006,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625
+ ],
+ "plan": {
+  "length": 91.0,
+  "shots": 17,
+  "visual_changes": 58,
+  "mean_gap": 1.57,
+  "longest_gap": 4.37,
+  "longest_gap_at": 43.4,
+  "over_6s": [],
+  "places": [
+   "sandtrail",
+   "river",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 10,
+  "longest_without_question": 20.9,
+  "first_words_at": 0.42,
+  "shot_mean": 5.35,
+  "fails": [],
+  "words_placed": "181/181",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 28.8,
+   "onset_err_max_ms": 80.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sandy path hook: one smooth print"
+  ],
+  [
+   2.77,
+   "word",
+   "?"
+  ],
+  [
+   4.38,
+   "new shot",
+   "the sandy path print 3"
+  ],
+  [
+   6.9,
+   "word",
+   "1"
+  ],
+  [
+   10.62,
+   "new shot",
+   "the sandy path question 3a"
+  ],
+  [
+   11.21,
+   "sign",
+   "ELEPHANT"
+  ],
+  [
+   11.56,
+   "sign",
+   "ZEBRA"
+  ],
+  [
+   14.0,
+   "thinking dot",
+   "1"
+  ],
+  [
+   14.68,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.35,
+   "thinking dot",
+   "3"
+  ],
+  [
+   15.84,
+   "answer",
+   "ZEBRA"
+  ],
+  [
+   17.19,
+   "new place",
+   "the wide river the zebra walks in"
+  ],
+  [
+   17.27,
+   "action",
+   "zeb walks"
+  ],
+  [
+   18.51,
+   "word",
+   "ZEBRA!"
+  ],
+  [
+   20.0,
+   "new place",
+   "the picture board board: one toe"
+  ],
+  [
+   23.95,
+   "word",
+   "1 TOE"
+  ],
+  [
+   25.62,
+   "new shot",
+   "the picture board board: count one toe"
+  ],
+  [
+   27.21,
+   "word",
+   "1"
+  ],
+  [
+   30.31,
+   "new place",
+   "the zoo gate one finger"
+  ],
+  [
+   33.54,
+   "action",
+   "milo hops"
+  ],
+  [
+   33.54,
+   "word",
+   "ONE!"
+  ],
+  [
+   36.56,
+   "new place",
+   "the wide river the hard part"
+  ],
+  [
+   39.4,
+   "word",
+   "?"
+  ],
+  [
+   42.81,
+   "new place",
+   "the picture board (blue) board: the hoof"
+  ],
+  [
+   43.44,
+   "word",
+   "HOOF!"
+  ],
+  [
+   47.81,
+   "new place",
+   "the wide river clip clop"
+  ],
+  [
+   49.89,
+   "action",
+   "zeb walks"
+  ],
+  [
+   49.89,
+   "word",
+   "CLIP, CLOP!"
+  ],
+  [
+   52.19,
+   "new place",
+   "the picture board (blue) board: hoof grows"
+  ],
+  [
+   53.41,
+   "action",
+   "the hoof grows"
+  ],
+  [
+   53.41,
+   "word",
+   "IT GROWS!"
+  ],
+  [
+   57.5,
+   "new place",
+   "the wide river count four hooves"
+  ],
+  [
+   60.54,
+   "word",
+   "1"
+  ],
+  [
+   60.78,
+   "word",
+   "2"
+  ],
+  [
+   61.08,
+   "word",
+   "3"
+  ],
+  [
+   61.33,
+   "word",
+   "4"
+  ],
+  [
+   62.19,
+   "new place",
+   "the picture board (pink) board: own stripes"
+  ],
+  [
+   64.48,
+   "action",
+   "z1 nods"
+  ],
+  [
+   64.48,
+   "word",
+   "ALL DIFFERENT!"
+  ],
+  [
+   67.22,
+   "action",
+   "z2 nods"
+  ],
+  [
+   68.12,
+   "new place",
+   "the wide river say it: one toe"
+  ],
+  [
+   68.37,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   70.97,
+   "action",
+   "zeb nods"
+  ],
+  [
+   71.88,
+   "new place",
+   "the zoo gate trot like a zebra"
+  ],
+  [
+   73.88,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.88,
+   "word",
+   "CLIP, CLOP!"
+  ],
+  [
+   74.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   78.44,
+   "new place",
+   "the picture board question 3b"
+  ],
+  [
+   81.69,
+   "sign",
+   "ONE"
+  ],
+  [
+   82.04,
+   "sign",
+   "FIVE"
+  ],
+  [
+   83.04,
+   "word",
+   "?"
+  ],
+  [
+   83.53,
+   "thinking dot",
+   "1"
+  ],
+  [
+   84.2,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.88,
+   "thinking dot",
+   "3"
+  ],
+  [
+   85.36,
+   "answer",
+   "ONE"
+  ],
+  [
+   86.56,
+   "new place",
+   "the wide river you remembered"
+  ],
+  [
+   86.78,
+   "word",
+   "ONE!"
+  ],
+  [
+   89.44,
+   "action",
+   "zeb nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "sandtrail",
+   "say": "One smooth, round footprint! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 4.375,
+   "v0": 0.42,
+   "dur": 3.5000416666666667,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.32
+    ],
+    [
+     "smooth,",
+     0.32,
+     0.93
+    ],
+    [
+     "round",
+     0.93,
+     1.27
+    ],
+    [
+     "footprint!",
+     1.27,
+     1.98
+    ],
+    [
+     "Guess",
+     2.35,
+     2.68
+    ],
+    [
+     "with",
+     2.68,
+     2.83
+    ],
+    [
+     "Milo!",
+     2.83,
+     3.5
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: one smooth print",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Here is the last footprint. It is one smooth, round print. Whose foot made it?",
+   "t0": 4.375,
+   "t1": 10.625,
+   "v0": 4.460041666666667,
+   "dur": 5.71,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "last",
+     0.59,
+     1.07
+    ],
+    [
+     "footprint.",
+     1.07,
+     1.77
+    ],
+    [
+     "It",
+     2.17,
+     2.29
+    ],
+    [
+     "is",
+     2.29,
+     2.44
+    ],
+    [
+     "one",
+     2.44,
+     2.75
+    ],
+    [
+     "smooth,",
+     2.75,
+     3.47
+    ],
+    [
+     "round",
+     3.47,
+     3.95
+    ],
+    [
+     "print.",
+     3.95,
+     4.4
+    ],
+    [
+     "Whose",
+     4.69,
+     4.96
+    ],
+    [
+     "foot",
+     4.96,
+     5.17
+    ],
+    [
+     "made",
+     5.17,
+     5.43
+    ],
+    [
+     "it?",
+     5.43,
+     5.71
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "print 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "sandtrail",
+   "say": "Is it the elephant? Or is it the zebra?",
+   "t0": 10.625,
+   "t1": 17.1875,
+   "v0": 10.710041666666665,
+   "dur": 2.805125,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.35
+    ],
+    [
+     "the",
+     0.35,
+     0.5
+    ],
+    [
+     "elephant?",
+     0.5,
+     1.21
+    ],
+    [
+     "Or",
+     1.46,
+     1.71
+    ],
+    [
+     "is",
+     1.71,
+     1.9
+    ],
+    [
+     "it",
+     1.9,
+     2.02
+    ],
+    [
+     "the",
+     2.02,
+     2.11
+    ],
+    [
+     "zebra?",
+     2.11,
+     2.8
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "It is the zebra!",
+   "t0": 17.1875,
+   "t1": 20.0,
+   "v0": 17.255166666666668,
+   "dur": 1.2524583333333332,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.21
+    ],
+    [
+     "is",
+     0.21,
+     0.47
+    ],
+    [
+     "the",
+     0.47,
+     0.56
+    ],
+    [
+     "zebra!",
+     0.56,
+     1.25
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the zebra walks in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here is the fun fact. A zebra walks on just one toe, on each foot!",
+   "t0": 20.0,
+   "t1": 25.625,
+   "v0": 20.247625000000003,
+   "dur": 5.0834166666666665,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.53
+    ],
+    [
+     "the",
+     0.53,
+     0.61
+    ],
+    [
+     "fun",
+     0.61,
+     1.01
+    ],
+    [
+     "fact.",
+     1.01,
+     1.64
+    ],
+    [
+     "A",
+     2.09,
+     2.16
+    ],
+    [
+     "zebra",
+     2.16,
+     2.66
+    ],
+    [
+     "walks",
+     2.66,
+     3.03
+    ],
+    [
+     "on",
+     3.03,
+     3.13
+    ],
+    [
+     "just",
+     3.13,
+     3.36
+    ],
+    [
+     "one",
+     3.36,
+     3.7
+    ],
+    [
+     "toe,",
+     3.7,
+     4.2
+    ],
+    [
+     "on",
+     4.2,
+     4.34
+    ],
+    [
+     "each",
+     4.34,
+     4.64
+    ],
+    [
+     "foot!",
+     4.64,
+     5.08
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: one toe",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Let's count the toes on one zebra foot. One! Just one!",
+   "t0": 25.625,
+   "t1": 30.3125,
+   "v0": 25.871041666666674,
+   "dur": 4.173291666666667,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.33
+    ],
+    [
+     "count",
+     0.33,
+     0.61
+    ],
+    [
+     "the",
+     0.61,
+     0.69
+    ],
+    [
+     "toes",
+     0.69,
+     1.18
+    ],
+    [
+     "on",
+     1.18,
+     1.34
+    ],
+    [
+     "one",
+     1.34,
+     1.61
+    ],
+    [
+     "zebra",
+     1.61,
+     2.0
+    ],
+    [
+     "foot.",
+     2.0,
+     2.46
+    ],
+    [
+     "One!",
+     2.86,
+     3.36
+    ],
+    [
+     "Just",
+     3.45,
+     3.77
+    ],
+    [
+     "one!",
+     3.77,
+     4.17
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "board: count one toe",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Hold up one finger, for one zebra toe. One!",
+   "t0": 30.3125,
+   "t1": 36.5625,
+   "v0": 30.584333333333344,
+   "dur": 3.3845833333333335,
+   "words": [
+    [
+     "Hold",
+     0.01,
+     0.31
+    ],
+    [
+     "up",
+     0.31,
+     0.48
+    ],
+    [
+     "one",
+     0.48,
+     0.68
+    ],
+    [
+     "finger,",
+     0.68,
+     1.2
+    ],
+    [
+     "for",
+     1.2,
+     1.36
+    ],
+    [
+     "one",
+     1.36,
+     1.6
+    ],
+    [
+     "zebra",
+     1.6,
+     2.02
+    ],
+    [
+     "toe.",
+     2.02,
+     2.5
+    ],
+    [
+     "One!",
+     2.96,
+     3.38
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "one finger",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "So what is that hard part, at the bottom?",
+   "t0": 36.5625,
+   "t1": 42.8125,
+   "v0": 36.90891666666668,
+   "dur": 2.4955833333333333,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.25
+    ],
+    [
+     "what",
+     0.25,
+     0.46
+    ],
+    [
+     "is",
+     0.46,
+     0.65
+    ],
+    [
+     "that",
+     0.65,
+     0.86
+    ],
+    [
+     "hard",
+     0.86,
+     1.24
+    ],
+    [
+     "part,",
+     1.24,
+     1.69
+    ],
+    [
+     "at",
+     1.69,
+     1.8
+    ],
+    [
+     "the",
+     1.8,
+     1.87
+    ],
+    [
+     "bottom?",
+     1.87,
+     2.49
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "the hard part",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "It is a hoof! The hoof wraps around the toe, and keeps it safe.",
+   "t0": 42.8125,
+   "t1": 47.8125,
+   "v0": 42.94450000000001,
+   "dur": 4.552791666666667,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.44
+    ],
+    [
+     "a",
+     0.44,
+     0.5
+    ],
+    [
+     "hoof!",
+     0.5,
+     1.08
+    ],
+    [
+     "The",
+     1.49,
+     1.6
+    ],
+    [
+     "hoof",
+     1.6,
+     1.96
+    ],
+    [
+     "wraps",
+     1.96,
+     2.41
+    ],
+    [
+     "around",
+     2.41,
+     2.69
+    ],
+    [
+     "the",
+     2.69,
+     2.76
+    ],
+    [
+     "toe,",
+     2.76,
+     3.27
+    ],
+    [
+     "and",
+     3.27,
+     3.48
+    ],
+    [
+     "keeps",
+     3.48,
+     3.84
+    ],
+    [
+     "it",
+     3.84,
+     3.97
+    ],
+    [
+     "safe.",
+     3.97,
+     4.55
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: the hoof",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Look at those strong hooves. Clip, clop, clip, clop!",
+   "t0": 47.8125,
+   "t1": 52.1875,
+   "v0": 48.037291666666675,
+   "dur": 3.681583333333333,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.26
+    ],
+    [
+     "at",
+     0.26,
+     0.33
+    ],
+    [
+     "those",
+     0.33,
+     0.53
+    ],
+    [
+     "strong",
+     0.53,
+     0.96
+    ],
+    [
+     "hooves.",
+     0.96,
+     1.53
+    ],
+    [
+     "Clip,",
+     1.85,
+     2.26
+    ],
+    [
+     "clop,",
+     2.26,
+     2.79
+    ],
+    [
+     "clip,",
+     2.79,
+     3.14
+    ],
+    [
+     "clop!",
+     3.14,
+     3.68
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "clip clop",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A hoof keeps on growing, all the time. A little like your fingernails!",
+   "t0": 52.1875,
+   "t1": 57.5,
+   "v0": 52.25887500000001,
+   "dur": 4.855208333333334,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.12
+    ],
+    [
+     "hoof",
+     0.12,
+     0.56
+    ],
+    [
+     "keeps",
+     0.56,
+     0.96
+    ],
+    [
+     "on",
+     0.96,
+     1.15
+    ],
+    [
+     "growing,",
+     1.15,
+     1.91
+    ],
+    [
+     "all",
+     1.91,
+     2.08
+    ],
+    [
+     "the",
+     2.08,
+     2.17
+    ],
+    [
+     "time.",
+     2.17,
+     2.7
+    ],
+    [
+     "A",
+     3.23,
+     3.29
+    ],
+    [
+     "little",
+     3.29,
+     3.55
+    ],
+    [
+     "like",
+     3.55,
+     3.75
+    ],
+    [
+     "your",
+     3.75,
+     3.84
+    ],
+    [
+     "fingernails!",
+     3.84,
+     4.85
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: hoof grows",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Four legs, four hooves! Count with me. One, two, three, four!",
+   "t0": 57.5,
+   "t1": 62.1875,
+   "v0": 57.65408333333334,
+   "dur": 4.248125,
+   "words": [
+    [
+     "Four",
+     0.01,
+     0.32
+    ],
+    [
+     "legs,",
+     0.32,
+     0.82
+    ],
+    [
+     "four",
+     0.82,
+     1.05
+    ],
+    [
+     "hooves!",
+     1.05,
+     1.59
+    ],
+    [
+     "Count",
+     1.72,
+     2.04
+    ],
+    [
+     "with",
+     2.04,
+     2.19
+    ],
+    [
+     "me.",
+     2.19,
+     2.48
+    ],
+    [
+     "One,",
+     2.89,
+     3.13
+    ],
+    [
+     "two,",
+     3.13,
+     3.43
+    ],
+    [
+     "three,",
+     3.43,
+     3.68
+    ],
+    [
+     "four!",
+     3.68,
+     4.248
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count four hooves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "And every zebra has its very own stripes. No two zebras are the same!",
+   "t0": 62.1875,
+   "t1": 68.125,
+   "v0": 62.44220833333334,
+   "dur": 5.375625,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.14
+    ],
+    [
+     "every",
+     0.14,
+     0.52
+    ],
+    [
+     "zebra",
+     0.52,
+     1.01
+    ],
+    [
+     "has",
+     1.01,
+     1.35
+    ],
+    [
+     "its",
+     1.35,
+     1.53
+    ],
+    [
+     "very",
+     1.53,
+     2.04
+    ],
+    [
+     "own",
+     2.04,
+     2.25
+    ],
+    [
+     "stripes.",
+     2.25,
+     2.96
+    ],
+    [
+     "No",
+     3.45,
+     3.7
+    ],
+    [
+     "two",
+     3.7,
+     3.98
+    ],
+    [
+     "zebras",
+     3.98,
+     4.58
+    ],
+    [
+     "are",
+     4.58,
+     4.68
+    ],
+    [
+     "the",
+     4.68,
+     4.78
+    ],
+    [
+     "same!",
+     4.78,
+     5.376
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: own stripes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "Say it with me. A zebra walks on one toe!",
+   "t0": 68.125,
+   "t1": 71.875,
+   "v0": 68.35783333333335,
+   "dur": 3.1078333333333332,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.93
+    ],
+    [
+     "A",
+     1.29,
+     1.34
+    ],
+    [
+     "zebra",
+     1.34,
+     1.83
+    ],
+    [
+     "walks",
+     1.83,
+     2.18
+    ],
+    [
+     "on",
+     2.18,
+     2.35
+    ],
+    [
+     "one",
+     2.35,
+     2.61
+    ],
+    [
+     "toe!",
+     2.61,
+     3.108
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it: one toe",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you trot like a zebra? Clip, clop, clip, clop!",
+   "t0": 71.875,
+   "t1": 78.4375,
+   "v0": 72.00566666666668,
+   "dur": 3.652833333333333,
+   "words": [
+    [
+     "Can",
+     0.04,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "trot",
+     0.34,
+     0.68
+    ],
+    [
+     "like",
+     0.68,
+     0.85
+    ],
+    [
+     "a",
+     0.85,
+     0.88
+    ],
+    [
+     "zebra?",
+     0.88,
+     1.48
+    ],
+    [
+     "Clip,",
+     1.87,
+     2.28
+    ],
+    [
+     "clop,",
+     2.28,
+     2.8
+    ],
+    [
+     "clip,",
+     2.8,
+     3.12
+    ],
+    [
+     "clop!",
+     3.12,
+     3.65
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "trot like a zebra",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Quick check! How many toes are on each zebra foot? One, or five?",
+   "t0": 78.4375,
+   "t1": 86.5625,
+   "v0": 78.59850000000003,
+   "dur": 4.443375,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.22
+    ],
+    [
+     "check!",
+     0.22,
+     0.63
+    ],
+    [
+     "How",
+     0.63,
+     0.8
+    ],
+    [
+     "many",
+     0.8,
+     1.01
+    ],
+    [
+     "toes",
+     1.01,
+     1.47
+    ],
+    [
+     "are",
+     1.47,
+     1.55
+    ],
+    [
+     "on",
+     1.55,
+     1.68
+    ],
+    [
+     "each",
+     1.68,
+     1.87
+    ],
+    [
+     "zebra",
+     1.87,
+     2.2
+    ],
+    [
+     "foot?",
+     2.2,
+     2.67
+    ],
+    [
+     "One,",
+     3.09,
+     3.57
+    ],
+    [
+     "or",
+     3.57,
+     3.77
+    ],
+    [
+     "five?",
+     3.77,
+     4.44
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "river",
+   "say": "One! One toe, inside one hoof. You remembered!",
+   "t0": 86.5625,
+   "t1": 90.55500000000005,
+   "v0": 86.78187500000004,
+   "dur": 3.353125,
+   "words": [
+    [
+     "One!",
+     0.0,
+     0.37
+    ],
+    [
+     "One",
+     0.37,
+     0.66
+    ],
+    [
+     "toe,",
+     0.66,
+     1.06
+    ],
+    [
+     "inside",
+     1.06,
+     1.57
+    ],
+    [
+     "one",
+     1.57,
+     1.79
+    ],
+    [
+     "hoof.",
+     1.79,
+     2.25
+    ],
+    [
+     "You",
+     2.54,
+     2.66
+    ],
+    [
+     "remembered!",
+     2.66,
+     3.35
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you remembered",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

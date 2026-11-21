@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep04_ocean",
+ "title": "Ocean Dreams 🐋 Calm Bedtime Story with Sea Animals and Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to sleepy friends under the sea.",
+   ""
+  ],
+  [
+   "Let's take a slow, deep breath together. In, and out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb_whale",
+   "lines": [
+    [
+     "Here's a little clue: it's very big, it lives in the sea, and it sings. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Whale.",
+     "enter"
+    ],
+    [
+     "This is Whale. Can you whisper whale?",
+     "zoom"
+    ],
+    [
+     "Whales are the biggest animals in the ocean.",
+     "fx+bob"
+    ],
+    [
+     "Some whales sing long, gentle songs.",
+     "bob"
+    ],
+    [
+     "Can you hum a soft whale song? Mmmmm.",
+     "bob"
+    ],
+    [
+     "Where do whales live?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the big, blue ocean.",
+     "fx2+badge:WHALE"
+    ],
+    [
+     "Let's say it softly together: Whale.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Whale.",
+     "zoom"
+    ],
+    [
+     "Whale floats in the calm, deep sea.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Whale.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_seahorse",
+   "lines": [
+    [
+     "Here's a little clue: it has a curly tail and swims standing up. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Seahorse.",
+     "enter"
+    ],
+    [
+     "This is Seahorse. Can you whisper seahorse?",
+     "zoom"
+    ],
+    [
+     "Seahorses hold onto seaweed with their tails.",
+     "fx+bob"
+    ],
+    [
+     "That way they don't float away while they rest.",
+     "bob"
+    ],
+    [
+     "Can you curl your hand like a seahorse tail?",
+     "bob"
+    ],
+    [
+     "What does a seahorse hold on to?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Seaweed, with its curly tail.",
+     "fx2+badge:SEAHORSE"
+    ],
+    [
+     "Let's say it softly together: Seahorse.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Seahorse.",
+     "zoom"
+    ],
+    [
+     "Seahorse sways with the gentle waves.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Seahorse.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_fish",
+   "lines": [
+    [
+     "Here's a little clue: it has fins and a tail, and it swims and swims. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Fish.",
+     "enter"
+    ],
+    [
+     "This is Fish. Can you whisper fish?",
+     "zoom"
+    ],
+    [
+     "Fish rest in the water, very still.",
+     "fx+bob"
+    ],
+    [
+     "Some fish rest near rocks and plants.",
+     "bob"
+    ],
+    [
+     "Can you swim your hands slowly, like a fish?",
+     "bob"
+    ],
+    [
+     "How do fish move?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "With their fins and tails.",
+     "fx2+badge:FISH"
+    ],
+    [
+     "Let's say it softly together: Fish.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Fish.",
+     "zoom"
+    ],
+    [
+     "Fish are resting in the quiet water.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Fish.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_turtle",
+   "lines": [
+    [
+     "Here's a little clue: it has a shell on its back and swims in the sea. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Sea Turtle.",
+     "enter"
+    ],
+    [
+     "This is Sea Turtle. Can you whisper sea turtle?",
+     "zoom"
+    ],
+    [
+     "Sea turtles carry their shell everywhere.",
+     "fx+bob"
+    ],
+    [
+     "They glide slowly through the water.",
+     "bob"
+    ],
+    [
+     "Can you move slowly, slowly, like a turtle?",
+     "bob"
+    ],
+    [
+     "What does a turtle carry on its back?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Its shell.",
+     "fx2+badge:SEA TURTLE"
+    ],
+    [
+     "Let's say it softly together: Sea Turtle.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Sea Turtle.",
+     "zoom"
+    ],
+    [
+     "Turtle rests on the soft, sandy bottom.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Turtle.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_jelly",
+   "lines": [
+    [
+     "Here's a little clue: it's soft and wiggly, with long, wavy tentacles. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Jellyfish.",
+     "enter"
+    ],
+    [
+     "This is Jellyfish. Can you whisper jellyfish?",
+     "zoom"
+    ],
+    [
+     "Jellyfish float gently in the sea.",
+     "fx+bob"
+    ],
+    [
+     "Some jellyfish even glow in the dark!",
+     "bob"
+    ],
+    [
+     "Can you float your arms like wavy tentacles?",
+     "bob"
+    ],
+    [
+     "How do jellyfish move?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They float and drift with the water.",
+     "fx2+badge:JELLYFISH"
+    ],
+    [
+     "Let's say it softly together: Jellyfish.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Jellyfish.",
+     "zoom"
+    ],
+    [
+     "Jellyfish glows softly in the deep.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Jellyfish.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all our friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Whale.",
+   "@mb_whale"
+  ],
+  [
+   "Goodnight, Seahorse.",
+   "@mb_seahorse"
+  ],
+  [
+   "Goodnight, Fish.",
+   "@mb_fish"
+  ],
+  [
+   "Goodnight, Turtle.",
+   "@mb_turtle"
+  ],
+  [
+   "Goodnight, Jellyfish.",
+   "@mb_jelly"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Whale, Seahorse, Fish, Turtle, and Jellyfish. Now close your eyes, and dream sweet dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

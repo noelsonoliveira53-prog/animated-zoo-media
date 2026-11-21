@@ -1,0 +1,877 @@
+{
+ "id": "zoo3d_ep01",
+ "channel": "zoo",
+ "set": "savanna",
+ "timing_file": "zoo3d_ep01_timing.json",
+ "audio": "zoo3d_ep01_song.wav",
+ "title": "Savanna Animals Song for Kids! Meet 5 Zoo Friends with Milo",
+ "seed": 11,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "lion",
+   "char": "animal",
+   "spot": "lion",
+   "opts": {
+    "kind": "lion"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "elephant",
+   "char": "animal",
+   "spot": "elephant",
+   "opts": {
+    "kind": "elephant"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "giraffe",
+   "char": "animal",
+   "spot": "giraffe",
+   "opts": {
+    "kind": "giraffe"
+   },
+   "yaw": -0.1
+  },
+  {
+   "id": "zebra",
+   "char": "animal",
+   "spot": "zebra",
+   "opts": {
+    "kind": "zebra"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "hippo",
+   "char": "animal",
+   "spot": "hippo",
+   "opts": {
+    "kind": "hippo"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.8,
+  "wave": 1
+ },
+ "thumb_frame": 420,
+ "direct": [
+  {
+   "section": "hook",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.8,
+   "wave": 1,
+   "jump": 0.3,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA!",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.0,
+     "delay": 4.0
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.0
+    }
+   ]
+  },
+  {
+   "section": "verse_lion",
+   "shots": [
+    "close:lion",
+    "close:host",
+    "close:lion",
+    "wide"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "opts": {
+      "text": "LION",
+      "size": 0.7
+     },
+     "at": [
+      -2.35,
+      -0.24999999999999997,
+      3.0
+     ],
+     "spin": 0.12
+    },
+    {
+     "type": "set_prop",
+     "name": "num",
+     "opts": {
+      "n": 1,
+      "color": "#ff9f1c",
+      "size": 0.7
+     },
+     "at": [
+      -3.5629999999999997,
+      -0.24999999999999997,
+      3.0
+     ],
+     "delay": 0.4,
+     "spin": 0.25
+    }
+   ]
+  },
+  {
+   "section": "fact_lion",
+   "shots": [
+    "close:lion"
+   ],
+   "energy": 0.4,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "heart",
+     "at": [
+      -1.05,
+      -0.30000000000000004,
+      2.6
+     ],
+     "spin": 0.2
+    },
+    {
+     "type": "text",
+     "text": "PRIDE",
+     "color": "#ff7a00",
+     "at": [
+      -3.6500000000000004,
+      -0.30000000000000004,
+      2.5
+     ],
+     "size": 0.45,
+     "delay": 1.2,
+     "spin": 0.15
+    }
+   ]
+  },
+  {
+   "section": "verse_elephant",
+   "shots": [
+    "close:elephant",
+    "wide",
+    "close:elephant",
+    "close:host"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "opts": {
+      "text": "ELEPHANT",
+      "size": 0.7
+     },
+     "at": [
+      -4.6,
+      0.9500000000000001,
+      3.0
+     ],
+     "spin": 0.12
+    },
+    {
+     "type": "set_prop",
+     "name": "num",
+     "opts": {
+      "n": 2,
+      "color": "#5c7cfa",
+      "size": 0.7
+     },
+     "at": [
+      -6.401,
+      0.9500000000000001,
+      3.0
+     ],
+     "delay": 0.4,
+     "spin": 0.25
+    }
+   ]
+  },
+  {
+   "section": "fact_elephant",
+   "shots": [
+    "close:elephant"
+   ],
+   "energy": 0.4,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -3.5999999999999996,
+      0.7000000000000001,
+      0.9
+     ],
+     "spin": 0.3
+    },
+    {
+     "type": "text",
+     "text": "TRUNK",
+     "color": "#4263eb",
+     "at": [
+      -5.85,
+      0.8,
+      2.55
+     ],
+     "size": 0.45,
+     "spin": 0.15
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "wide",
+    "orbit",
+    "close:host",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.3,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.0
+    }
+   ]
+  },
+  {
+   "section": "ask_lion",
+   "shots": [
+    "close:host"
+   ],
+   "energy": 0.8,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "?",
+     "color": "#ff9f1c",
+     "at": [
+      0.9,
+      -0.9,
+      3.0
+     ],
+     "size": 0.8,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "say_lion",
+   "shots": [
+    "close:lion"
+   ],
+   "energy": 1.0,
+   "jump": 0.35,
+   "wave": 1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "ROAR!",
+     "color": "#ff9f1c",
+     "at": [
+      -2.35,
+      -0.4,
+      2.9
+     ],
+     "size": 0.6,
+     "spin": 0.2
+    }
+   ]
+  },
+  {
+   "section": "ask_elephant",
+   "shots": [
+    "close:host"
+   ],
+   "energy": 0.8,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "?",
+     "color": "#5c7cfa",
+     "at": [
+      0.9,
+      -0.9,
+      3.0
+     ],
+     "size": 0.8,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "say_elephant",
+   "shots": [
+    "close:elephant"
+   ],
+   "energy": 1.0,
+   "jump": 0.35,
+   "wave": 1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "TOOT!",
+     "color": "#5c7cfa",
+     "at": [
+      -4.6,
+      0.8,
+      2.9
+     ],
+     "size": 0.6,
+     "spin": 0.2
+    }
+   ]
+  },
+  {
+   "section": "ask_giraffe",
+   "shots": [
+    "close:host"
+   ],
+   "energy": 0.8,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "?",
+     "color": "#f7b500",
+     "at": [
+      0.9,
+      -0.9,
+      3.0
+     ],
+     "size": 0.8,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "say_giraffe",
+   "shots": [
+    "giraffe"
+   ],
+   "energy": 1.0,
+   "jump": 0.35,
+   "wave": 1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "MUNCH!",
+     "color": "#f7b500",
+     "at": [
+      1.1,
+      2.8,
+      3.85
+     ],
+     "size": 0.6,
+     "spin": 0.2
+    }
+   ]
+  },
+  {
+   "section": "ask_zebra",
+   "shots": [
+    "close:host"
+   ],
+   "energy": 0.8,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "?",
+     "color": "#3d3d4e",
+     "at": [
+      0.9,
+      -0.9,
+      3.0
+     ],
+     "size": 0.8,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "say_zebra",
+   "shots": [
+    "close:zebra"
+   ],
+   "energy": 1.0,
+   "jump": 0.35,
+   "wave": 1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HEE-HAW!",
+     "color": "#3d3d4e",
+     "at": [
+      2.6,
+      -0.3,
+      2.9
+     ],
+     "size": 0.6,
+     "spin": 0.2
+    }
+   ]
+  },
+  {
+   "section": "ask_hippo",
+   "shots": [
+    "close:host"
+   ],
+   "energy": 0.8,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "?",
+     "color": "#b06ad9",
+     "at": [
+      0.9,
+      -0.9,
+      3.0
+     ],
+     "size": 0.8,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "say_hippo",
+   "shots": [
+    "close:hippo"
+   ],
+   "energy": 1.0,
+   "jump": 0.35,
+   "wave": 1,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HONK!",
+     "color": "#b06ad9",
+     "at": [
+      4.9,
+      0.8999999999999999,
+      2.9
+     ],
+     "size": 0.6,
+     "spin": 0.2
+    }
+   ]
+  },
+  {
+   "section": "verse_giraffe",
+   "shots": [
+    "giraffe",
+    "wide",
+    "giraffe",
+    "close:host"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "opts": {
+      "text": "GIRAFFE",
+      "size": 0.7
+     },
+     "at": [
+      1.1,
+      2.9499999999999997,
+      3.95
+     ],
+     "spin": 0.12
+    },
+    {
+     "type": "set_prop",
+     "name": "num",
+     "opts": {
+      "n": 3,
+      "color": "#f7b500",
+      "size": 0.7
+     },
+     "at": [
+      -0.5539999999999998,
+      2.9499999999999997,
+      3.95
+     ],
+     "delay": 0.4,
+     "spin": 0.25
+    }
+   ]
+  },
+  {
+   "section": "fact_giraffe",
+   "shots": [
+    "giraffe"
+   ],
+   "energy": 0.4,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "leaves",
+     "at": [
+      2.1,
+      2.5999999999999996,
+      2.85
+     ],
+     "spin": 0.2
+    },
+    {
+     "type": "text",
+     "text": "TALLEST!",
+     "color": "#f08c00",
+     "at": [
+      -0.2999999999999998,
+      2.8,
+      3.3
+     ],
+     "size": 0.42,
+     "delay": 0.6,
+     "spin": 0.15
+    }
+   ]
+  },
+  {
+   "section": "action",
+   "shots": [
+    "wide",
+    "low",
+    "close:host",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "jump": 0.5,
+   "wave": 1,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "STOMP!",
+     "color": "#4263eb",
+     "at": "left",
+     "size": 0.7,
+     "dur": 4.0
+    },
+    {
+     "type": "text",
+     "text": "STRETCH!",
+     "color": "#f08c00",
+     "at": "right",
+     "size": 0.6,
+     "delay": 4.1,
+     "dur": 4.0
+    },
+    {
+     "type": "text",
+     "text": "SWISH!",
+     "color": "#343a40",
+     "at": "top",
+     "size": 0.8,
+     "delay": 8.3,
+     "dur": 4.0
+    },
+    {
+     "type": "text",
+     "text": "CLAP!",
+     "color": "#e64980",
+     "at": "front",
+     "size": 0.7,
+     "delay": 12.4,
+     "dur": 4.0
+    }
+   ]
+  },
+  {
+   "section": "verse_zebra",
+   "shots": [
+    "close:zebra",
+    "close:host",
+    "close:zebra",
+    "wide"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "opts": {
+      "text": "ZEBRA",
+      "size": 0.7
+     },
+     "at": [
+      2.6,
+      -0.14999999999999997,
+      3.0
+     ],
+     "spin": 0.12
+    },
+    {
+     "type": "set_prop",
+     "name": "num",
+     "opts": {
+      "n": 4,
+      "color": "#3d3d4e",
+      "size": 0.7
+     },
+     "at": [
+      3.96,
+      -0.14999999999999997,
+      3.0
+     ],
+     "delay": 0.4,
+     "spin": 0.25
+    }
+   ]
+  },
+  {
+   "section": "fact_zebra",
+   "shots": [
+    "close:zebra"
+   ],
+   "energy": 0.4,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRIPES!",
+     "color": "#343a40",
+     "at": [
+      2.6,
+      -0.2,
+      3.0
+     ],
+     "size": 0.5,
+     "spin": 0.15
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "close:host",
+    "wide",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.3,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.0
+    }
+   ]
+  },
+  {
+   "section": "verse_hippo",
+   "shots": [
+    "close:hippo",
+    "pond",
+    "close:hippo",
+    "close:host"
+   ],
+   "energy": 0.75,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sign",
+     "opts": {
+      "text": "HIPPO",
+      "size": 0.7
+     },
+     "at": [
+      4.9,
+      1.0499999999999998,
+      3.0
+     ],
+     "spin": 0.12
+    },
+    {
+     "type": "set_prop",
+     "name": "num",
+     "opts": {
+      "n": 5,
+      "color": "#b06ad9",
+      "size": 0.7
+     },
+     "at": [
+      6.26,
+      1.0499999999999998,
+      3.0
+     ],
+     "delay": 0.4,
+     "spin": 0.25
+    }
+   ]
+  },
+  {
+   "section": "fact_hippo",
+   "shots": [
+    "close:hippo"
+   ],
+   "energy": 0.4,
+   "group": false,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "sun",
+     "at": [
+      3.7,
+      0.9999999999999999,
+      3.1
+     ],
+     "spin": 0.2
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      6.1000000000000005,
+      0.8999999999999999,
+      0.8
+     ],
+     "delay": 1.5,
+     "spin": 0.3
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.35,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.0
+    }
+   ]
+  },
+  {
+   "section": "chorus5",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.6,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SAVANNA!",
+     "color": "#ff8f00",
+     "at": "top",
+     "size": 1.1
+    },
+    {
+     "type": "set_prop",
+     "name": "sun",
+     "at": "right",
+     "delay": 0.5
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE BYE!",
+     "color": "#e64980",
+     "at": "top",
+     "size": 0.9,
+     "delay": 0.3
+    }
+   ]
+  }
+ ]
+}

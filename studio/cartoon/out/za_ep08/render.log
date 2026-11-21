@@ -1,0 +1,83 @@
+{
+ "length": 308.3,
+ "shots": 60,
+ "visual_changes": 326,
+ "mean_gap": 0.95,
+ "longest_gap": 5.16,
+ "longest_gap_at": 179.4,
+ "over_6s": [],
+ "places": [
+  "zoo",
+  "dunes",
+  "trail",
+  "oasis",
+  "dune_eve",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper",
+  "paper_pink"
+ ],
+ "questions": 13,
+ "longest_without_question": 38.1,
+ "first_words_at": 0.42,
+ "shot_mean": 5.14,
+ "beats": {
+  "hook": 1,
+  "goal": 10,
+  "obstacle1": 4,
+  "obstacle2": 6,
+  "fact": 3,
+  "obstacle3": 4,
+  "low": 5,
+  "solution": 7,
+  "song": 2,
+  "ending": 13
+ },
+ "fails": [],
+ "words_placed": "645/645",
+ "sync": {
+  "pauses_checked": 54,
+  "onset_err_mean_ms": 27.8,
+  "onset_err_max_ms": 150.0,
+  "suspect_words": [],
+  "cuts": 59,
+  "cuts_on_the_half_beat": 59,
+  "songs_entering_on_a_beat": "2/2",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (237ms)
+[initSession:screenshot] GSAP proxy flush complete (239ms)
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s40c1,#s40c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (1092ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1098ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1098ms)
+[initSession:screenshot] media + fonts + tailwind ready (1102ms)
+[initSession:screenshot] static-frame dedup: 17/17 predicted frame(s) reusable (outcome=verified, runs=1/1, screenshots=16, seeks=17, elapsedMs=3545) (5734ms)
+[WARN] [Render] sequential capture stalled; retrying on a fresh screenshot session {"renderJobId":"ac3870c4-3270-4a07-b713-a3c8d1ee5cbb","error":"[Render] Sequential screenshot capture stalled: no frame progress for 60000ms (stuck at frame 1240/7400 while capturing the frame). Chrome stopped answering. If another app is keeping the GPU or CPU busy (a 3D render, a game, another export), let it finish or render one job at a time, then retry."}
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (0ms)
+[initSession:screenshot] page.goto complete (244ms)
+[initSession:screenshot] GSAP proxy flush complete (245ms)
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s40c1,#s40c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (1061ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1066ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1066ms)
+[initSession:screenshot] media + fonts + tailwind ready (1069ms)
+[initSession:screenshot] static-frame dedup: 17/17 predicted frame(s) reusable (outcome=verified, runs=1/1, screenshots=16, seeks=17, elapsedMs=3898) (6165ms)
+[static-dedup] reused 17/7400 frame(s) (0%), est. ~4199ms saved (avg 247ms/frame)
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/za_ep08/za_ep08.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/za_ep08/za_ep08.mp4 308.3 s
+EXIT 0

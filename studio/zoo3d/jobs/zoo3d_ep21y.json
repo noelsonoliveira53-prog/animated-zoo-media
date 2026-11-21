@@ -1,0 +1,421 @@
+{
+ "id": "zoo3d_ep21y",
+ "title": "Swing-a-Ding!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 21,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "monkey",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "monkey"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "lion",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "lion"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "panda",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "panda"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "fox",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "fox"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "verses": [
+  [
+   "monkey"
+  ],
+  [
+   "monkey"
+  ],
+  [
+   "monkey"
+  ]
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "jungle",
+   "tod": "morning",
+   "formation": "line"
+  },
+  {
+   "from": "verse1",
+   "biome": "bamboo",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "monkey"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus1",
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "mountain",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "beach",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "monkey"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "bridge1",
+   "biome": "jungle",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "bamboo",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "monkey"
+   ]
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "jungle",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "jungle",
+   "tod": "sunset",
+   "formation": "line"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:monkey",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SWING!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:monkey",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HOOK  HANDS!",
+     "color": "#3db8ff",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:fox",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SWING-A-DING!",
+     "color": "#ff7a00",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:monkey",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "UPSIDE  DOWN!",
+     "color": "#8e5bd8",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:monkey",
+    "close:lion",
+    "close:panda",
+    "close:fox",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "REACH!",
+     "color": "#3cc45a",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:monkey",
+    "wide",
+    "dolly"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "YUM,  FRUIT!",
+     "color": "#ff6fb5",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SWING-A-DING!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": [
+      0,
+      0.5,
+      2.75
+     ],
+     "size": 0.6
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep21",
+ "res": "3840x2160",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "samples": 16,
+ "timing_file": "zoo3d_ep21_timing.json",
+ "audio": "zoo3d_ep21y_song.wav"
+}

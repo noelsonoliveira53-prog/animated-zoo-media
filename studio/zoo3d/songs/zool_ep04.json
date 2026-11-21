@@ -1,0 +1,969 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 2,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "The giraffe is the tallest living land animal, up to about 18 feet (5.5 m) (Bristol Zoo; San Diego Zoo).\nThe African elephant is the largest living land animal; a big male weighs about 6 tons, about as much as four cars (Smithsonian's National Zoo; WWF).\nThe tiger is the largest cat species, belongs to the same family as pet cats, and is a strong swimmer (WWF; Live Science).\nA lion's roar can be heard up to 5 miles (8 km) away; lions roar to mark their territory (National Geographic).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday is Animal Champions day!\nWe will find the tallest, the biggest, and the loudest animals.\nFour champions are here. Count them with me. One, two, three, four!\nAre you ready to meet the champions? Let's go!\nWho is the tallest animal in the whole world?\nIs it the elephant? Or is it the giraffe?\nIt is the giraffe!\nHere is the fun fact. The giraffe is the tallest animal on land.\nHow tall? Look! A giraffe can peek into an upstairs window.\nIts long neck helps it reach the leaves at the very top of the tree.\nEven a baby giraffe is tall. On the day it is born, it is as tall as a grown-up!\nAnd a giraffe's tongue is long too. As long as your arm!\nSay it with me. The giraffe is the tallest!\nCan you stretch up tall like a giraffe? Reach, reach, reach!\nSo tall!\nWho is the biggest animal that walks on land?\nIs it the elephant? Or is it the hippo?\nIt is the elephant!\nHere is the fun fact. The elephant is the biggest animal on land.\nHow heavy is an elephant? As heavy as four cars! Count them with me.\nOne, two, three, four!\nBig body, big ears, and a big, long trunk!\nThe trunk works like a hand and like a hose. It can pick up a tiny peanut, or spray a big shower!\nEven a baby elephant is heavy. It weighs as much as a big grown-up on the day it is born.\nSay it with me. The elephant is the biggest!\nCan you stomp like a big elephant? Stomp, stomp, stomp!\nWhat big stomps!\nWho is the biggest cat in the whole world?\nIs it the lion? Or is it the tiger?\nIt is the tiger!\nHere is the fun fact. The tiger is the biggest cat of all.\nLook at this little pet cat. The tiger is its giant cousin!\nAnd guess what? Most cats do not like water. But tigers love to swim!\nA tiger has soft, padded paws. So it can walk very, very quietly.\nAnd every tiger has its own stripes, like a name tag.\nSay it with me. The tiger is the biggest cat!\nCan you show me your tiger paws? Paws up! Rawr!\nWhat a great tiger!\nWho has the loudest roar of all the big cats?\nIs it the lion? Or is it the tiger?\nIt is the lion!\nHere is the fun fact. You can hear a lion's roar from five miles away!\nFive miles is a long, long way. Like the other side of town!\nWhy does a lion roar? To tell everyone, this is my home!\nA lion's roar is almost as loud as thunder. Boom!\nLions live in a family called a pride. The roar helps the family find each other.\nSay it with me. The lion has the loudest roar!\nCan you roar like a lion? One, two, three. Roar!\nWhat a mighty roar!\nWow! We met four animal champions. Now it is quiz time!\nGet ready. Think hard!\nWho can peek into an upstairs window?\nThe giraffe! Yes!\nWho is as heavy as four cars?\nThe elephant! That's right!\nWho is the giant cousin of a pet cat?\nThe tiger! Good job!\nWhose roar can you hear from five miles away?\nThe lion! You remembered!\nYou learned four new things today.\nStretch like a giraffe. Stomp like an elephant. Paws up like a tiger. And roar like a lion!\nWhich champion is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 281.64,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 609,
+  "words": 609,
+  "pause_onsets_checked": 41,
+  "onset_err_mean_ms": 27.8,
+  "onset_err_max_ms": 50.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Animal Champions for Kids! Tallest, Biggest, Loudest",
+  "card": "Animal Champions!",
+  "thumb_text": "WHO WINS?",
+  "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet four animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars, the tiger is the giant cousin of a pet cat, and a lion's roar can be heard from five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "biggest animals for kids",
+   "tallest animal",
+   "animal records for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs4k_giraffe_tallest",
+   "title": "A Giraffe Can Peek Into an Upstairs Window!",
+   "l1": "WHO IS THE",
+   "l2": "TALLEST?",
+   "to": 6,
+   "thumb_text": "SO TALL!",
+   "seg": "giraffe",
+   "start": 19.967,
+   "end": 46.66,
+   "seconds": 26.7
+  },
+  {
+   "id": "zs4k_elephant_cars",
+   "title": "An Elephant Is as Heavy as 4 Cars!",
+   "l1": "WHO IS THE",
+   "l2": "BIGGEST?",
+   "to": 7,
+   "thumb_text": "COUNT THEM!",
+   "seg": "elephant",
+   "start": 70.21,
+   "end": 98.357,
+   "seconds": 28.1
+  },
+  {
+   "id": "zs4k_tiger_bigcat",
+   "title": "The Tiger Is the Biggest Cat in the World!",
+   "l1": "BIGGEST",
+   "l2": "CAT?",
+   "to": 6,
+   "thumb_text": "GIANT KITTY!",
+   "seg": "tiger",
+   "start": 125.707,
+   "end": 151.352,
+   "seconds": 25.6
+  },
+  {
+   "id": "zs4k_lion_roar",
+   "title": "You Can Hear a Lion Roar From 5 Miles Away!",
+   "l1": "WHO IS THE",
+   "l2": "LOUDEST?",
+   "to": 6,
+   "thumb_text": "SO LOUD!",
+   "seg": "lion",
+   "start": 173.711,
+   "end": 200.164,
+   "seconds": 26.5
+  }
+ ],
+ "job": {
+  "id": "zool_ep04",
+  "title": "Animal Champions!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 37,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "s4",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": -0.38
+   },
+   {
+    "id": "cat",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cat",
+     "scale": 0.4
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "desert",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "giraffe",
+     "elephant",
+     "tiger",
+     "lion"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "savanna",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "savanna",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "giraffe"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "jungle",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "jungle",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "elephant"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "bamboo",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "bamboo",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "tiger"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "bamboo",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 4,
+    "show": [
+     "tiger",
+     "cat"
+    ]
+   },
+   {
+    "from": "lion",
+    "biome": "desert",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "lion",
+    "biome": "desert",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "lion"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "night_meadow",
+    "tod": "sunset",
+    "formation": "arc",
+    "shot": "dolly",
+    "show": [
+     "giraffe",
+     "elephant",
+     "tiger",
+     "lion"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "savanna",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "reveal",
+    "show": [
+     "giraffe",
+     "elephant",
+     "tiger",
+     "lion"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 978,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "vista"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "CHAMPIONS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -1.05,
+       -1.7,
+       3.55
+      ],
+      "delay": 13.707,
+      "dur": 5.96,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "times": [
+        0.0,
+        0.24,
+        0.54,
+        -2.89
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "giraffe",
+    "shots": [
+     "teach",
+     "teach",
+     "close:giraffe",
+     "teach",
+     "exhibit",
+     "teach",
+     "close:giraffe",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TALLEST!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.579
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.591,
+      "dur": 6.668,
+      "spin": 0,
+      "opts": {
+       "text": "ELEPHANT",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.041,
+      "dur": 8.618,
+      "spin": 0,
+      "opts": {
+       "text": "GIRAFFE",
+       "color": "#e85d00",
+       "win": 6.218
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.509,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "ruler",
+      "at": [
+       0.85,
+       -0.2,
+       0.0
+      ],
+      "delay": 14.935,
+      "dur": 35.008,
+      "spin": 0,
+      "opts": {
+       "mark": 3.75
+      }
+     },
+     {
+      "type": "teach",
+      "name": "house2",
+      "at": [
+       2.85,
+       -0.2,
+       0.0
+      ],
+      "delay": 18.187,
+      "dur": 31.756,
+      "spin": 0,
+      "opts": {
+       "h": 3.3
+      }
+     }
+    ]
+   },
+   {
+    "section": "elephant",
+    "shots": [
+     "teach",
+     "teach",
+     "close:elephant",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:elephant",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIGGEST!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.703
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.817,
+      "dur": 8.886,
+      "spin": 0,
+      "opts": {
+       "text": "ELEPHANT",
+       "color": "#1479d6",
+       "win": 6.486
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.267,
+      "dur": 6.036,
+      "spin": 0,
+      "opts": {
+       "text": "HIPPO",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.553,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "cars",
+      "at": [
+       2.75,
+       -0.7,
+       0.0
+      ],
+      "delay": 20.037,
+      "dur": 35.16,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "times": [
+        2.518,
+        2.808,
+        3.038,
+        3.288
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "tiger",
+    "shots": [
+     "teach",
+     "teach",
+     "close:tiger",
+     "teach",
+     "exhibit",
+     "exhibit",
+     "close:tiger",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIGGEST CAT!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.219
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.382,
+      "dur": 6.447,
+      "spin": 0,
+      "opts": {
+       "text": "LION",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.832,
+      "dur": 8.397,
+      "spin": 0,
+      "opts": {
+       "text": "TIGER",
+       "color": "#e85d00",
+       "win": 5.997
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.079,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "arrow",
+      "at": [
+       2.55,
+       -0.7,
+       1.35
+      ],
+      "delay": 16.866,
+      "dur": 3.732,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       1.0,
+       -1.0,
+       0.0
+      ],
+      "delay": 22.608,
+      "dur": 25.096,
+      "spin": 0,
+      "opts": {
+       "s": 0.55
+      }
+     }
+    ]
+   },
+   {
+    "section": "lion",
+    "shots": [
+     "teach",
+     "teach",
+     "close:lion",
+     "exhibit",
+     "exhibit",
+     "teach",
+     "close:lion",
+     "teach",
+     "close:host",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "LOUDEST!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.406
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.589,
+      "dur": 8.847,
+      "spin": 0,
+      "opts": {
+       "text": "LION",
+       "color": "#1479d6",
+       "win": 6.447
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       2.6,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.039,
+      "dur": 5.997,
+      "spin": 0,
+      "opts": {
+       "text": "TIGER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       2.6,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.286,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "rings",
+      "at": [
+       0.25,
+       -1.0,
+       2.05
+      ],
+      "delay": 14.727,
+      "dur": 7.598,
+      "spin": 0,
+      "opts": {
+       "reach": 2.5
+      }
+     },
+     {
+      "type": "teach",
+      "name": "town",
+      "at": [
+       3.2,
+       -0.7,
+       0.0
+      ],
+      "delay": 15.247,
+      "dur": 34.058,
+      "spin": 0,
+      "opts": {
+       "text": "5 MILES"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:giraffe",
+     "wide",
+     "close:elephant",
+     "wide",
+     "close:tiger",
+     "wide",
+     "close:lion"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.88,
+      "dur": 5.146,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.2999999999999998,
+       0.29999999999999993,
+       3.5
+      ],
+      "delay": 12.276,
+      "dur": 2.027,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 14.153,
+      "dur": 4.91,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.3,
+       0.29999999999999993,
+       2.35
+      ],
+      "delay": 19.312,
+      "dur": 2.209,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 21.372,
+      "dur": 5.338,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.0999999999999996,
+       -0.8,
+       2.35
+      ],
+      "delay": 26.96,
+      "dur": 2.208,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 29.018,
+      "dur": 5.633,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       5.1,
+       -0.8,
+       2.35
+      ],
+      "delay": 34.901,
+      "dur": 2.239,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep04",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep04_timing.json",
+  "audio": "zool_ep04_song.wav"
+ }
+}

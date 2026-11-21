@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep05_plants",
+ "title": "How Do Plants Grow? From Seed to Tree for Kids with Gizmo",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how plants grow.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz_seed",
+   "lines": [
+    [
+     "Here's a clue: it's tiny, and a plant grows from it! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Seed!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A seed has a baby plant inside.",
+     "fx+bob"
+    ],
+    [
+     "With water and warmth, it starts to grow!",
+     "bob"
+    ],
+    [
+     "Can you curl up small like a seed, and then grow tall?",
+     "wiggle"
+    ],
+    [
+     "What does a seed need to grow?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Water, warmth, and soil!",
+     "fx2+badge:SPROUT!"
+    ],
+    [
+     "Let's say it together: SEED!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SEED!",
+     "zoom"
+    ],
+    [
+     "The first little sprout pokes up out of the dirt.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_roots",
+   "lines": [
+    [
+     "Here's a clue: they grow under the ground! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Roots!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Roots grow down into the soil.",
+     "fx+bob"
+    ],
+    [
+     "They drink up water, like straws!",
+     "bob"
+    ],
+    [
+     "Can you stand strong, like roots holding a plant?",
+     "wiggle"
+    ],
+    [
+     "What do roots do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Drink water, and hold the plant in place!",
+     "fx2+badge:SLURP!"
+    ],
+    [
+     "Let's say it together: ROOTS!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ROOTS!",
+     "zoom"
+    ],
+    [
+     "Carrots are roots we can eat!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_leaf",
+   "lines": [
+    [
+     "Here's a clue: they're green, and they love sunshine! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Leaves!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Leaves catch sunlight.",
+     "fx+bob"
+    ],
+    [
+     "They use sunlight, air, and water to make food for the plant!",
+     "bob"
+    ],
+    [
+     "Can you open your hands wide, like leaves catching the sun?",
+     "wiggle"
+    ],
+    [
+     "What do leaves use to make food?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sunlight, air, and water!",
+     "fx2+badge:SUNSHINE FOOD!"
+    ],
+    [
+     "Let's say it together: LEAVES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LEAVES!",
+     "zoom"
+    ],
+    [
+     "Plants also give us fresh air to breathe.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_flower",
+   "lines": [
+    [
+     "Here's a clue: it's colorful, and bees love it! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Flower!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Flowers make a sweet juice called nectar.",
+     "fx+bob"
+    ],
+    [
+     "Bees visit, and help the flower make new seeds!",
+     "bob"
+    ],
+    [
+     "Can you buzz like a busy bee? Bzzzz!",
+     "wiggle"
+    ],
+    [
+     "Who helps flowers make seeds?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Bees and butterflies!",
+     "fx2+badge:BZZZ!"
+    ],
+    [
+     "Let's say it together: FLOWER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FLOWER!",
+     "zoom"
+    ],
+    [
+     "Then the seeds can grow into new plants.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz_tree",
+   "lines": [
+    [
+     "Here's a clue: it's tall, with a trunk and branches! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Tree!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A tree starts as a tiny seed.",
+     "fx+bob"
+    ],
+    [
+     "It grows a little bit every year, for many, many years!",
+     "bob"
+    ],
+    [
+     "Can you stretch up tall like a big tree?",
+     "wiggle"
+    ],
+    [
+     "Where does a tree come from?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A tiny seed!",
+     "fx2+badge:TALL TREE!"
+    ],
+    [
+     "Let's say it together: TREE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TREE!",
+     "zoom"
+    ],
+    [
+     "Some trees grow fruit, like apples!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "A seed needs water and warmth.",
+   "@gz_seed"
+  ],
+  [
+   "Roots drink water.",
+   "@gz_roots"
+  ],
+  [
+   "Leaves make food from sunlight.",
+   "@gz_leaf"
+  ],
+  [
+   "Flowers make new seeds.",
+   "@gz_flower"
+  ],
+  [
+   "And a tiny seed can grow into a tree!",
+   "@gz_tree"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,437 @@
+{
+ "style": "upbeat preschool kids electro pop sing-along, cheerful playful male vocal, clear diction, bright synths, bleepy robot sounds, handclaps, bouncy drums, major key, catchy repetitive chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nWhat's the weather, weather today?\nLook outside and you can say!\nSunny, rainy, windy, snow,\nWhat's the weather? Here we go!\n\n[Verse 1]\nSunny, sunny, the sun is out,\nWarm and bright, we run about!\nWear your hat and drink water too,\nThe sun gives light to me and you!\n\n[Verse 2]\nRainy, rainy, drip, drop, drip,\nClouds are full, the raindrops slip!\nBoots and umbrella, splash, hooray,\nRain helps flowers grow each day!\n\n[Chorus]\nWhat's the weather, weather today?\nLook outside and you can say!\nSunny, rainy, windy, snow,\nWhat's the weather? Here we go!\n\n[Verse 3]\nWindy, windy, whoosh, whoosh, whoosh,\nLeaves are dancing, see them go!\nWind is air that moves, you know,\nKites fly high when the wind blows!\n\n[Verse 4]\nSnowy, snowy, cold and white,\nSnowflakes falling, soft and light!\nEvery snowflake, tiny and new,\nIs made of ice, it's really true!\n\n[Bridge]\nSunny, stretch your arms up high!\nRainy, wiggle fingers, drip, drop, drip!\nWindy, sway from side to side!\nSnowy, shiver, brrr, and freeze!\n\n[Chorus]\nWhat's the weather, weather today?\nLook outside and you can say!\nSunny, rainy, windy, snow,\nWhat's the weather? Here we go!\n\n[Outro]\nSunny, rainy, windy, snow! Bye-bye, friends!",
+ "duration": 165,
+ "bpm": 118,
+ "key": "E Major",
+ "seed": 9,
+ "who_map": {},
+ "meta": {
+  "title": "Weather Song for Kids! Sunny, Rainy, Windy with Gizmo",
+  "card": "The Weather Song!",
+  "thumb_text": "WEATHER SONG!",
+  "description": "The Weather Song for kids! Sing along with Gizmo the robot and learn sunny, rainy, windy and snowy weather.\nKids learn simple weather facts (rain helps plants grow, wind is moving air, snowflakes are made of ice) and act out each kind of weather. Ages 2-6.",
+  "tags": [
+   "weather song",
+   "weather for kids",
+   "sunny rainy song",
+   "learn weather",
+   "science for kids",
+   "kids songs",
+   "nursery rhymes",
+   "Gizmo Explains",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "gz3d_ep02",
+  "title": "The Weather Song!",
+  "channel": "gizmo",
+  "set": "sciencelab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "char": "gizmo",
+    "spot": "left",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    },
+    "yaw": 0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "close:host",
+     "wide",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "WEATHER SONG",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "word": "sunny",
+      "at": [
+       -3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.7
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "raincloud",
+      "word": "rainy",
+      "at": [
+       3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.8
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "word": "sunny",
+      "at": [
+       0.0,
+       1.2,
+       3.4
+      ],
+      "opts": {
+       "size": 1.0
+      }
+     },
+     {
+      "type": "text",
+      "text": "SUNNY!",
+      "color": "#ffb627",
+      "word": "sunny",
+      "nth": 1,
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "wide",
+     "close:host",
+     "close:pal",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "raincloud",
+      "word": "rainy",
+      "at": [
+       0.0,
+       1.2,
+       3.4
+      ],
+      "opts": {
+       "size": 1.1
+      }
+     },
+     {
+      "type": "text",
+      "text": "RAINY!",
+      "color": "#3db8ff",
+      "word": "rainy",
+      "nth": 1,
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "word": "sunny",
+      "at": [
+       -3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.7
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "raincloud",
+      "word": "rainy",
+      "at": [
+       3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.8
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:pal"
+    ],
+    "energy": 0.9,
+    "jump": 0.2,
+    "props": [
+     {
+      "type": "text",
+      "text": "WINDY!",
+      "color": "#2fb59a",
+      "word": "windy",
+      "nth": 1,
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "rocket",
+      "word": "kites",
+      "at": [
+       2.8,
+       1.2,
+       3.6
+      ],
+      "opts": {
+       "size": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "verse4",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "props": [
+     {
+      "type": "text",
+      "text": "SNOWY!",
+      "color": "#9fd8ff",
+      "word": "snowy",
+      "nth": 1,
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "star",
+      "word": "snowflakes",
+      "at": [
+       -2.6,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "size": 0.5
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "star",
+      "word": "snowflake",
+      "at": [
+       2.6,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "size": 0.5
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#ffb627",
+      "word": "stretch",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "WIGGLE!",
+      "color": "#3db8ff",
+      "word": "wiggle",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "SWAY!",
+      "color": "#2fb59a",
+      "word": "sway",
+      "at": [
+       -1.3,
+       0.6,
+       4.3
+      ],
+      "size": 0.7
+     },
+     {
+      "type": "text",
+      "text": "BRRR!",
+      "color": "#9fd8ff",
+      "word": "brrr",
+      "at": [
+       1.3,
+       0.6,
+       4.3
+      ],
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "WEATHER SONG",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "word": "sunny",
+      "at": [
+       -3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.7
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "raincloud",
+      "word": "rainy",
+      "at": [
+       3.2,
+       1.0,
+       3.6
+      ],
+      "opts": {
+       "size": 0.8
+      }
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE BYE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       3.0,
+       1.2,
+       3.6
+      ],
+      "opts": {
+       "size": 0.6
+      }
+     }
+    ]
+   }
+  ],
+  "song": "gz3d_ep02",
+  "res": "1280x720",
+  "step": 2
+ }
+}

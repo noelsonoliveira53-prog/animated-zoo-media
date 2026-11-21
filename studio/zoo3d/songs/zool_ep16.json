@@ -1,0 +1,1078 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Polar bear: wide, large, paddle-like feet; 5 toes on each foot; claws non-retractable, 5-7 cm long; soles of feet have small dermal bumps (papillae) that may help with traction on ice; even foot pads are furred in winter; covered with fur except for the nose; 5-10 cm of fat, and both fat and pelt provide insulation (SDZWA Library fact sheet 'Polar Bear', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/polarbear/characteristics, read Nov 16 2026).\nTiger: long, retractable claws on broad forepaws; large curved claws, 80-100 mm (3-4 in) long; dark stripes on body, limbs, head and tail provide camouflage in forests and grasslands (SDZWA Library fact sheet 'Tiger', Physical Characteristics, read Nov 16 2026).\nTigers can cross rivers 6-8 km (4-5 mi) wide (SDZWA Library fact sheet 'Tiger', Behavior & Ecology, read Nov 16 2026).\nHippo: four functional toes with wide splay; nail-like hooves on the ends of the toes; partial webbing on the feet; being able to splay the digits is a good adaptation for walking in water on soft river bottoms; mucous glands secrete a thick, oily red fluid that dries like lacquer and protects the thin skin against water loss, sunburn and infection (SDZWA Library fact sheet 'Hippopotamus', Physical Characteristics, read Nov 16 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about amazing animal feet!\nPaws, claws and toes. How do animals use them?\nThree animal friends will show us. Count them with me. One, two, three!\nWiggle your toes. Let's go!\nWho has big, furry feet, for walking on the snow and the ice?\nIs it the polar bear? Or is it the pig?\nIt is the polar bear!\nHere is the fun fact. A polar bear has big, wide feet, like paddles!\nEach foot has five toes. Let's count. One, two, three, four, five!\nHow does a polar bear walk on slippery ice? Hmm.\nThe bottoms of its feet have tiny bumps, that help it grip the ice!\nLook at those big paws. Grip, grip, grip!\nAnd in winter, even the bottoms of its feet are furry!\nFurry feet, like cozy slippers! Fuzzy, warm and snug.\nA polar bear is covered with thick fur, everywhere except its nose.\nIts claws cannot hide away, like a cat's claws. They are always out. Scritch, scratch!\nSay it with me. A polar bear has big, furry feet!\nCan you walk like a polar bear? Big, wide steps. Stomp, stomp!\nNow grip the ice with your toes. Grip, grip!\nQuick check! What helps a polar bear grip the ice? Tiny bumps? Or wheels?\nTiny bumps! Grip, grip. Great job!\nWho has big paws, with claws that can hide away?\nIs it the tiger? Or is it the cow?\nIt is the tiger!\nHere is the fun fact. A tiger has big, wide front paws.\nAnd long, curved claws. Each one is about as long as a crayon!\nWhere do the tiger's claws go, when it walks? Hmm.\nIt pulls them in, and hides them away! When it needs them, out they come!\nSoft paws, and hidden claws.\nAnd a tiger can swim! Tigers can swim across rivers that are four or five miles wide.\nSplash, splash! Paddle, paddle! What a strong swimmer!\nTigers have stripes on their legs, their heads and their tails, too.\nA tiger's stripes help it hide, in the forest and in the tall grass. Can you find the stripes?\nSay it with me. A tiger can hide its claws!\nCan you show tiger claws? Hide them in. Now out! In, and out!\nNow paddle like a swimming tiger. Paddle, paddle, paddle!\nQuick check! Can a tiger swim? Yes, or no?\nYes! Tigers can swim across big rivers. You remembered!\nWho walks along the bottom of the river?\nIs it the hippo? Or is it the cow?\nIt is the hippo!\nHere is the fun fact. A hippo has four toes on each foot. Four toes, on four big feet!\nLet's count the toes. One, two, three, four!\nHow does a hippo walk on the soft, squishy river bottom? Hmm.\nIt spreads its toes out wide! Wide toes are great for walking on the soft river bottom.\nSpread your fingers wide, like hippo toes!\nA hippo's feet have a little bit of webbing, between the toes.\nAnd at the end of each toe is a little hoof, like a big toenail. A hoof, at the end of every toe!\nA hippo's skin makes its own special oil. It dries like a shiny coat.\nThat oil helps protect the hippo's skin from the sun.\nSay it with me. A hippo has four wide toes!\nCan you walk like a hippo? Spread your toes, and step, step, step!\nNow walk slowly, along the river bottom. Bounce, bounce!\nQuick check! How many toes does a hippo have on each foot? Four? Or ten?\nFour! One, two, three, four. Super thinking!\nWow! We met three friends with amazing feet. Now it is quiz time!\nGet ready. Think hard!\nWho has tiny bumps on its feet, to grip the ice?\nThe polar bear! Yes!\nWho can pull its claws in, and out?\nThe tiger! That's right!\nWho spreads four wide toes on the river bottom?\nThe hippo! You remembered!\nYou learned so many new things today.\nGrip like a polar bear. Paddle like a tiger. And step like a hippo!\nHow many toes do you have?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 333.59,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 704,
+  "words": 704,
+  "pause_onsets_checked": 55,
+  "onset_err_mean_ms": 32.5,
+  "onset_err_max_ms": 370.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Amazing Animal Feet! Paws, Claws and Toes for Kids",
+  "card": "Amazing Feet!",
+  "thumb_text": "GRIP GRIP!",
+  "description": "Whose feet are these? Pick your answer with Milo the bluebird, then look closely: a polar bear has wide feet like paddles with tiny bumps that help it grip the ice, a tiger can pull its long claws in and out and can swim across big rivers, and a hippo spreads its four toes wide to walk on the soft river bottom.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "animal feet for kids",
+   "polar bear facts for kids",
+   "tiger facts for kids",
+   "hippo facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_polar_paws",
+   "title": "How Does a Polar Bear Walk on Ice? Polar Bear Feet",
+   "l1": "WHOSE",
+   "l2": "FEET?",
+   "thumb_text": "TINY BUMPS!",
+   "thumb_line": [
+    6,
+    0.6
+   ],
+   "seg": "polar_bear",
+   "start": 21.989,
+   "end": 108.375,
+   "seconds": 86.4
+  },
+  {
+   "id": "zs90_tiger_claws",
+   "title": "Where Do a Tiger's Claws Go? Tiger Facts",
+   "l1": "WHERE DO",
+   "l2": "CLAWS GO?",
+   "thumb_text": "HIDDEN!",
+   "thumb_line": [
+    6,
+    0.75
+   ],
+   "seg": "tiger",
+   "start": 108.375,
+   "end": 195.62,
+   "seconds": 87.2
+  },
+  {
+   "id": "zs90_hippo_toes",
+   "title": "How Many Toes Does a Hippo Have? Hippo Facts",
+   "l1": "COUNT THE",
+   "l2": "TOES!",
+   "thumb_text": "1 2 3 4!",
+   "thumb_line": [
+    4,
+    0.8
+   ],
+   "seg": "hippo",
+   "start": 195.62,
+   "end": 282.721,
+   "seconds": 87.1
+  }
+ ],
+ "job": {
+  "id": "zool_ep16",
+  "title": "Amazing Feet!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 67,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "polar_bear",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "polar_bear"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cow",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "mountain",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "polar_bear",
+     "tiger",
+     "hippo"
+    ]
+   },
+   {
+    "from": "polar_bear",
+    "biome": "arctic",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "polar_bear",
+    "biome": "arctic",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "polar_bear"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "autumn_forest",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "autumn_forest",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "tiger"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "hippo"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "beach",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "polar_bear",
+     "tiger",
+     "hippo"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "farm",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "polar_bear",
+     "tiger",
+     "hippo"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 1325,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "AMAZING FEET!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 16.214
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 17.364,
+      "dur": 4.725,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "polar_bear",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:polar_bear",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "PADDLES!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.768,
+      "dur": 12.506
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.993,
+      "dur": 8.915,
+      "spin": 0,
+      "opts": {
+       "text": "POLAR BEAR",
+       "color": "#1479d6",
+       "win": 6.515
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.443,
+      "dur": 6.065,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.758,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 73.92,
+      "dur": 10.711,
+      "spin": 0,
+      "opts": {
+       "text": "BUMPS",
+       "color": "#1479d6",
+       "win": 8.711
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.37,
+      "dur": 8.261,
+      "spin": 0,
+      "opts": {
+       "text": "WHEELS",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.881,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 17.47,
+      "dur": 1.486,
+      "spin": 0,
+      "opts": {
+       "text": "PADDLES!",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.05,
+       -1.3,
+       2.2
+      ],
+      "delay": 21.666,
+      "dur": 2.608,
+      "spin": 0,
+      "opts": {
+       "n": 5,
+       "dx": 0.45,
+       "s": 0.8,
+       "times": [
+        0.0,
+        0.29,
+        0.57,
+        0.86,
+        -2.13
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 27.363,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "magnifier",
+      "at": [
+       2.3,
+       -1.1,
+       2.3
+      ],
+      "delay": 32.183,
+      "dur": 2.978,
+      "spin": 0,
+      "opts": {
+       "s": 1.0,
+       "fill": "#3a3a44",
+       "label": "BUMPS"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "snowflake",
+      "at": [
+       2.3,
+       -1.1,
+       2.7
+      ],
+      "delay": 38.812,
+      "dur": 8.393,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     }
+    ]
+   },
+   {
+    "section": "tiger",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:tiger",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLAWS!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.728,
+      "dur": 11.126
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.053,
+      "dur": 8.685,
+      "spin": 0,
+      "opts": {
+       "text": "TIGER",
+       "color": "#1479d6",
+       "win": 6.285
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.503,
+      "dur": 5.835,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.588,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.347,
+      "dur": 9.272,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#22a84a",
+       "win": 6.872
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.797,
+      "dur": 6.422,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e23b34"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.469,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 15.576,
+      "dur": 6.278,
+      "spin": 0,
+      "opts": {
+       "text": "BIG PAWS!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 24.944,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 28.124,
+      "dur": 4.943,
+      "spin": 0,
+      "opts": {
+       "text": "IN AND OUT!",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 36.509,
+      "dur": 10.084,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     }
+    ]
+   },
+   {
+    "section": "hippo",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:hippo",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FOUR TOES!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 9.838,
+      "dur": 11.953000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.196,
+      "dur": 8.612,
+      "spin": 0,
+      "opts": {
+       "text": "HIPPO",
+       "color": "#1479d6",
+       "win": 6.212
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.646,
+      "dur": 5.762,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.658,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.575,
+      "dur": 10.558,
+      "spin": 0,
+      "opts": {
+       "text": "4 TOES",
+       "color": "#1479d6",
+       "win": 8.558
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.025,
+      "dur": 8.108,
+      "spin": 0,
+      "opts": {
+       "text": "10 TOES",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.383,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.2,
+       -1.3,
+       2.2
+      ],
+      "delay": 19.608,
+      "dur": 2.183,
+      "spin": 0,
+      "opts": {
+       "n": 4,
+       "dx": 0.55,
+       "s": 0.9,
+       "times": [
+        0.0,
+        0.29,
+        0.57,
+        0.82
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.814,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 28.984,
+      "dur": 6.628,
+      "spin": 0,
+      "opts": {
+       "text": "WIDE TOES!",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sun",
+      "at": [
+       2.3,
+       -1.1,
+       2.8
+      ],
+      "delay": 57.771,
+      "dur": 1.294,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:polar_bear",
+     "wide",
+     "close:tiger",
+     "wide",
+     "close:hippo"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 6.175
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 7.325,
+      "dur": 6.031,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 13.606,
+      "dur": 2.064,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 15.721,
+      "dur": 5.122,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       2.1999999999999997
+      ],
+      "delay": 21.093,
+      "dur": 1.931,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 23.074,
+      "dur": 5.874,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       2.1999999999999997
+      ],
+      "delay": 29.199,
+      "dur": 2.336,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep16",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep16_timing.json",
+  "audio": "zool_ep16_song.wav"
+ }
+}

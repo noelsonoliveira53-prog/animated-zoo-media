@@ -1,0 +1,1104 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "White rhino: two horns on the rostrum, one in front of the other; composed of keratin (not true horns); grow continually throughout life; upper lip broad, flat, specialized to help secure grass; poor eyesight; good sense of smell; second-largest land mammal, only surpassed in size by elephant; skin very thick with deep folds (SDZWA Library fact sheet 'White Rhinoceros', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/whiterhino/characteristics, read Nov 17 2026).\nGiraffe: long prehensile tongue, 50 cm (20 in); ossicones bony in adults, soft and cartilaginous in calves, present at birth; individuals can be recognized by their unique markings (SDZWA Library fact sheet 'Giraffe', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/giraffes/characteristics, read Nov 17 2026).\nGiraffe: long, prehensile, sticky tongue enables a giraffe to feed on hard-to-reach leaves; strip leaves between lower teeth and hardened upper dental pad; consume 34-75 kg (75-165 lbs) of browse per day; food quickly swallowed, later regurgitated and chewed more thoroughly ('chewing cud'); must spread forelegs wide or kneel to drink (SDZWA Library fact sheet 'Giraffe', Diet & Feeding, ielc.libguides.com/sdzg/factsheets/giraffes/diet, read Nov 17 2026).\nHippo: jaws hinged far to the back, allowing an enormous gape of 150 degrees (humans have only 45); canines and incisors enormously enlarged and continuously growing; male canines can grow to 50 cm (1.5 ft); incisors used for digging; eyes slightly periscoped and aligned on top of head along with ears and nostrils; nostrils close before submersion; ears fold into a recessed area to close underwater (SDZWA Library fact sheet 'Hippopotamus', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/hippopotamus/characteristics, read Nov 17 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about amazing animal heads!\nHorns, tongues and teeth. Who has what?\nThree animal friends will show us. Count them with me. One, two, three!\nAre you ready? Let's go!\nWho has two horns on its nose, one in front of the other?\nIs it the rhino? Or is it the cow?\nIt is the rhino!\nHere is the fun fact. A rhino has two horns. A big one in front, and a smaller one behind it.\nLet's count the horns. One, two!\nDo a rhino's horns ever stop growing? Hmm.\nNo! A rhino's horns keep growing, all its life. They are made of something called keratin.\nLook at those two horns!\nA rhino has a wide, flat top lip. It helps the rhino hold the grass it eats.\nMunch, munch, munch! A big rhino eats lots and lots of grass.\nA rhino cannot see very well. But it has a great sense of smell! Sniff, sniff.\nAnd a rhino is big! On land, only the elephant is bigger.\nSay it with me. A rhino has two horns!\nCan you make rhino horns? Put one finger on your nose, and one finger just above it!\nNow sniff like a rhino. Sniff, sniff, sniff!\nQuick check! How many horns does this rhino have? Two? Or ten?\nTwo! One, two. Great job!\nWho has a long tongue, for grabbing leaves up high?\nIs it the giraffe? Or is it the pig?\nIt is the giraffe!\nHere is the fun fact. A giraffe's tongue is about twenty inches long!\nTwenty inches! A giraffe's tongue is long, and sticky too.\nHow does a giraffe pull the leaves off a branch? Hmm.\nIt holds the branch with its long tongue, then strips off the leaves, with its bottom teeth and a hard pad on top!\nLook how high a giraffe can reach!\nA giraffe eats lots of leaves and twigs. Up to one hundred sixty-five pounds, in one day!\nLater, it brings the food back up, and chews it again. That is called chewing its cud! Chew, chew.\nOn top of its head, a giraffe has bumps called ossicones. They look like little horns.\nA baby giraffe has them when it is born, and they are soft!\nSay it with me. A giraffe has a long tongue!\nCan you stick out your tongue like a giraffe? Reach, reach, for the leaves!\nNow chew, chew, chew, like a giraffe chewing its cud.\nQuick check! Is a giraffe's tongue long? Or short?\nLong! About twenty inches long. You remembered!\nWho can open its mouth really, really wide?\nIs it the hippo? Or is it the cow?\nIt is the hippo!\nHere is the fun fact. A hippo can open its mouth super wide. Much, much wider than you can!\nCan you open wide like a hippo? Open, open, wide!\nDo a hippo's big teeth ever stop growing? Hmm.\nNo! A hippo's big front teeth keep growing, all its life.\nWow, what a big mouth!\nA daddy hippo's longest teeth can grow about a foot and a half long!\nAnd a hippo uses its front teeth to dig. Dig, dig, dig!\nA hippo's eyes, ears and nose are all on the top of its head.\nSo it can sit in the water, and still look and listen. When it goes under, its nose closes up tight!\nSay it with me. A hippo has a big, wide mouth!\nOpen wide like a hippo one more time. Big, big mouth!\nNow pinch your nose shut, like a hippo going under the water. Blub, blub!\nQuick check! Where are a hippo's eyes? On top of its head? Or on its feet?\nOn top of its head! Peekaboo! Super thinking!\nWow! We met three amazing animal heads. Now it is quiz time!\nGet ready. Think hard!\nWho has two horns on its nose?\nThe rhino! Yes!\nWho grabs leaves with a long, long tongue?\nThe giraffe! That's right!\nWho can open its mouth super wide?\nThe hippo! You remembered!\nYou learned so many new things today.\nTwo horns like a rhino. A long tongue like a giraffe. And a big mouth like a hippo!\nWhich animal head is your favorite?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 335.96,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 720,
+  "words": 720,
+  "pause_onsets_checked": 63,
+  "onset_err_mean_ms": 22.5,
+  "onset_err_max_ms": 90.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Horns, Tongues and Teeth! Animal Heads for Kids",
+  "card": "Animal Heads!",
+  "thumb_text": "OPEN WIDE!",
+  "description": "Who has two horns on its nose? Who has a tongue as long as twenty inches? Pick your answer with Milo the bluebird, then find out: a rhino's two horns keep growing all its life, a giraffe grabs leaves with its long tongue and chews its cud, and a hippo opens its mouth super wide and keeps its eyes, ears and nose on top of its head.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "animal heads for kids",
+   "rhino facts for kids",
+   "giraffe facts for kids",
+   "hippo facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_rhino_horns",
+   "title": "How Many Horns Does a Rhino Have? Rhino Facts",
+   "l1": "HOW MANY",
+   "l2": "HORNS?",
+   "thumb_text": "COUNT THEM!",
+   "thumb_line": [
+    4,
+    0.6
+   ],
+   "seg": "rhino",
+   "start": 20.949,
+   "end": 107.633,
+   "seconds": 86.7
+  },
+  {
+   "id": "zs90_giraffe_tongue",
+   "title": "How Long Is a Giraffe's Tongue? Giraffe Facts",
+   "l1": "WHOSE",
+   "l2": "TONGUE?",
+   "thumb_text": "REACH UP!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "giraffe",
+   "start": 107.633,
+   "end": 197.42,
+   "seconds": 89.8
+  },
+  {
+   "id": "zs90_hippo_mouth",
+   "title": "How Wide Can a Hippo Open Its Mouth? Hippo Facts",
+   "l1": "HOW WIDE",
+   "l2": "CAN IT OPEN?",
+   "thumb_text": "SO BIG!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "hippo",
+   "start": 197.42,
+   "end": 284.804,
+   "seconds": 87.4
+  }
+ ],
+ "job": {
+  "id": "zool_ep19",
+  "title": "Animal Heads!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 71,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "rhino",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "rhino"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cow",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "rhino",
+     "giraffe",
+     "hippo"
+    ]
+   },
+   {
+    "from": "rhino",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "rhino",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "rhino"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "giraffe",
+    "biome": "savanna",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "giraffe"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "hippo",
+    "biome": "river",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "hippo"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "beach",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "rhino",
+     "giraffe",
+     "hippo"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "farm",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "rhino",
+     "giraffe",
+     "hippo"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 5259,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "ANIMAL HEADS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 15.316
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 16.466,
+      "dur": 4.583,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "rhino",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:rhino",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "TWO HORNS!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 12.538,
+      "dur": 10.382000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.426,
+      "dur": 8.683,
+      "spin": 0,
+      "opts": {
+       "text": "RHINO",
+       "color": "#1479d6",
+       "win": 6.283
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.876,
+      "dur": 5.833,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.959,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.46,
+      "dur": 10.012,
+      "spin": 0,
+      "opts": {
+       "text": "2 HORNS",
+       "color": "#1479d6",
+       "win": 8.012
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.91,
+      "dur": 7.562,
+      "spin": 0,
+      "opts": {
+       "text": "10 HORNS",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.722,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       1.35,
+       -1.3,
+       2.2
+      ],
+      "delay": 21.338,
+      "dur": 1.582,
+      "spin": 0,
+      "opts": {
+       "n": 2,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.27
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.808,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 30.108,
+      "dur": 5.364,
+      "spin": 0,
+      "opts": {
+       "text": "KEEP GROWING!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "grass",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 38.391,
+      "dur": 10.542,
+      "spin": 0,
+      "opts": {
+       "s": 1.3
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 52.013,
+      "dur": 7.715,
+      "spin": 0,
+      "opts": {
+       "text": "SNIFF SNIFF!",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "giraffe",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:giraffe",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "LONG TONGUE!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 12.269,
+      "dur": 9.520000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.068,
+      "dur": 8.675,
+      "spin": 0,
+      "opts": {
+       "text": "GIRAFFE",
+       "color": "#1479d6",
+       "win": 6.275
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.518,
+      "dur": 5.825,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.593,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 78.717,
+      "dur": 8.935,
+      "spin": 0,
+      "opts": {
+       "text": "LONG",
+       "color": "#1479d6",
+       "win": 6.935
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 79.167,
+      "dur": 6.485,
+      "spin": 0,
+      "opts": {
+       "text": "SHORT",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 81.902,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 14.699,
+      "dur": 7.09,
+      "spin": 0,
+      "opts": {
+       "text": "20 INCHES!",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 24.826,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "leaves",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 27.986,
+      "dur": 8.03,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       2.3,
+       -1.2,
+       2.9
+      ],
+      "delay": 39.695,
+      "dur": 12.77,
+      "spin": 0,
+      "opts": {
+       "text": "165",
+       "s": 1.1,
+       "color": "#ffb627"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 52.515,
+      "dur": 11.055,
+      "spin": 0,
+      "opts": {
+       "text": "OSSICONES",
+       "color": "#3db8ff"
+      }
+     }
+    ]
+   },
+   {
+    "section": "hippo",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:hippo",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BIG MOUTH!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.762,
+      "dur": 14.445
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.688,
+      "dur": 8.612,
+      "spin": 0,
+      "opts": {
+       "text": "HIPPO",
+       "color": "#1479d6",
+       "win": 6.212
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.138,
+      "dur": 5.762,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.15,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.784,
+      "dur": 10.307,
+      "spin": 0,
+      "opts": {
+       "text": "ON TOP",
+       "color": "#1479d6",
+       "win": 8.307
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.234,
+      "dur": 7.857,
+      "spin": 0,
+      "opts": {
+       "text": "ON FEET",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.341,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 14.192,
+      "dur": 12.015,
+      "spin": 0,
+      "opts": {
+       "text": "SUPER WIDE!",
+       "color": "#ff7a00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 29.295,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 33.765,
+      "dur": 3.13,
+      "spin": 0,
+      "opts": {
+       "text": "KEEP GROWING!",
+       "color": "#3cc45a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       2.3,
+       -1.2,
+       2.9
+      ],
+      "delay": 40.091,
+      "dur": 8.757,
+      "spin": 0,
+      "opts": {
+       "text": "1.5 FT",
+       "s": 1.1,
+       "color": "#ffb627"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 49.318,
+      "dur": 11.174,
+      "spin": 0,
+      "opts": {
+       "text": "ON TOP!",
+       "color": "#3db8ff"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:rhino",
+     "wide",
+     "close:giraffe",
+     "wide",
+     "close:hippo"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 6.034
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 7.184,
+      "dur": 4.953,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 12.387,
+      "dur": 1.849,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 14.286,
+      "dur": 5.495,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       3.3499999999999996
+      ],
+      "delay": 20.031,
+      "dur": 1.939,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 22.02,
+      "dur": 5.123,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       2.1999999999999997
+      ],
+      "delay": 27.393,
+      "dur": 2.336,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep19",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep19_timing.json",
+  "audio": "zool_ep19_song.wav"
+ }
+}

@@ -1,0 +1,336 @@
+[
+ {
+  "id": "zx_trex",
+  "animal": "trex",
+  "title": "Why Did T. Rex Have Such Tiny Arms?",
+  "thumb": "TINY ARMS!",
+  "top": "T. REX",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Tyrannosaurus rex",
+   "Smithsonian National Museum of Natural History: T. rex"
+  ],
+  "beats": [
+   {
+    "say": "T. rex was a giant dinosaur. But its arms were super tiny! Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly way back in time to the dinosaurs!",
+    "act": "milo_in"
+   },
+   {
+    "say": "T. rex's arms were so short, they couldn't even reach its mouth!",
+    "act": "fx+badge:TINY ARMS!"
+   },
+   {
+    "say": "Scientists are still finding out what those little arms were for. It's a dino mystery!",
+    "act": "fxoff+wiggle"
+   },
+   {
+    "say": "But T. rex had a super nose. Scientists think it could smell things far, far away.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Can you wiggle tiny T. rex arms? Be kind to every animal. See you at the zoo!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_stego",
+  "animal": "stegosaurus",
+  "title": "T. Rex Never Met Stegosaurus! Here's Why",
+  "thumb": "NEVER MET!",
+  "top": "STEGOSAURUS",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Stegosaurus",
+   "Smithsonian National Museum of Natural History: Stegosaurus"
+  ],
+  "beats": [
+   {
+    "say": "T. rex and Stegosaurus never met. Not even once! How come?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly way back in time to the dinosaurs!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Stegosaurus lived about 150 million years ago. T. rex came much, much later.",
+    "act": "badge:150 MILLION YEARS!"
+   },
+   {
+    "say": "So T. rex actually lived closer in time to us than to Stegosaurus! Wow!",
+    "act": "zoom"
+   },
+   {
+    "say": "Stegosaurus had big plates on its back, and a spiky tail called a thagomizer!",
+    "act": "fx+wiggle"
+   },
+   {
+    "say": "Can you say thagomizer? Be kind to every animal. See you at the zoo!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_brachio",
+  "animal": "brachiosaurus",
+  "title": "Brachiosaurus Was Taller Than a House!",
+  "thumb": "SO TALL!",
+  "top": "BRACHIOSAURUS",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Brachiosaurus"
+  ],
+  "beats": [
+   {
+    "say": "Can you reach the top of a tree? Brachiosaurus could! How?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly way back in time to the dinosaurs!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Brachiosaurus had a super long neck, and it was taller than a house!",
+    "act": "fx+badge:TALLER THAN A HOUSE!"
+   },
+   {
+    "say": "Its front legs were longer than its back legs, like a giraffe.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "It stretched up high to munch leaves at the very top of the trees.",
+    "act": "fx2+bob"
+   },
+   {
+    "say": "Can you stretch up tall like Brachiosaurus? Be kind to every animal. See you at the zoo!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_ptera",
+  "animal": "pteranodon",
+  "title": "Pteranodon Was NOT a Dinosaur!",
+  "thumb": "NOT A DINO?!",
+  "top": "PTERANODON",
+  "bg": [
+   "#ffcc9a",
+   "#fff4dc"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Pteranodon",
+   "Smithsonian National Museum of Natural History: Pterosaurs"
+  ],
+  "beats": [
+   {
+    "say": "It flew with giant wings in dinosaur times. But it was not a dinosaur! What was it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly way back in time to the dinosaurs!",
+    "act": "milo_in"
+   },
+   {
+    "say": "This is Pteranodon. It was a flying reptile called a pterosaur.",
+    "act": "badge:FLYING REPTILE!"
+   },
+   {
+    "say": "Its wings were wider than a car! It soared high over the sea.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Its name means toothless wing, because it had no teeth at all!",
+    "act": "fx2off+wiggle"
+   },
+   {
+    "say": "Can you flap your arms like giant wings? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_butterfly",
+  "animal": "butterfly",
+  "title": "Butterflies Taste With Their FEET!",
+  "thumb": "FEET?!",
+  "top": "BUTTERFLY",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Smithsonian Institution: Butterflies",
+   "Natural History Museum (London): Butterflies"
+  ],
+  "beats": [
+   {
+    "say": "You taste with your tongue. A butterfly tastes with its feet! Really?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the garden for a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Yes! Butterflies have tiny tasters on their feet.",
+    "act": "fx+badge:TASTY FEET!"
+   },
+   {
+    "say": "When a butterfly lands on a leaf, its feet tell it if the leaf is good.",
+    "act": "fxoff+zoom"
+   },
+   {
+    "say": "And every butterfly starts out as a little caterpillar!",
+    "act": "fx2+wiggle"
+   },
+   {
+    "say": "Can you flutter like a butterfly? Be kind to every animal. See you at the zoo!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_bee",
+  "animal": "bee",
+  "title": "Honeybees DANCE to Talk to Friends!",
+  "thumb": "BEE DANCE!",
+  "top": "HONEYBEE",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "USDA Agricultural Research Service: Honey bees",
+   "Smithsonian Institution: Honey bees"
+  ],
+  "beats": [
+   {
+    "say": "How do bees tell their friends where the best flowers are? They dance!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the garden for a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A honeybee does a wiggly dance called the waggle dance.",
+    "act": "fx+badge:WAGGLE DANCE!"
+   },
+   {
+    "say": "The dance shows the other bees which way to fly to find the flowers.",
+    "act": "fxoff+wiggle"
+   },
+   {
+    "say": "And bees have five eyes! Two big ones, and three tiny ones on top.",
+    "act": "fx2+zoom"
+   },
+   {
+    "say": "Can you do a waggle dance? Be kind to every animal. See you at the zoo!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_snail",
+  "animal": "snail",
+  "title": "Where Are a Snail's Eyes? Look Up!",
+  "thumb": "EYES UP HIGH",
+  "top": "SNAIL",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Natural History Museum (London): Garden snail"
+  ],
+  "beats": [
+   {
+    "say": "Your eyes are on your face. Where are a snail's eyes? Look up!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the garden for a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A garden snail's eyes sit at the tips of its long tentacles!",
+    "act": "fx2+badge:EYES ON TOP!"
+   },
+   {
+    "say": "It can pull them in and pop them back out. Peekaboo!",
+    "act": "fx2off+bob"
+   },
+   {
+    "say": "A snail slides on a slippery trail of slime. Slow and steady!",
+    "act": "fx+zoom"
+   },
+   {
+    "say": "Can you slide slowly like a snail? Be kind to every animal. See you at the zoo!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "zx_ant",
+  "animal": "ant",
+  "title": "Ants Can Carry Things Heavier Than Themselves!",
+  "thumb": "SO STRONG!",
+  "top": "ANT",
+  "bg": [
+   "#9fe3ff",
+   "#e3f7ff"
+  ],
+  "floor": "#558b2f",
+  "sources": [
+   "Smithsonian Institution: Ants",
+   "Natural History Museum (London): Ants"
+  ],
+  "beats": [
+   {
+    "say": "Could you carry a car? An ant can carry things much heavier than its own body!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the garden for a bug hunt!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Ants are tiny, but they are super strong!",
+    "act": "fx+badge:SUPER STRONG!"
+   },
+   {
+    "say": "An ant can lift a leaf or a crumb that is heavier than itself.",
+    "act": "hop"
+   },
+   {
+    "say": "And ants talk to each other with smells, and by touching their antennae.",
+    "act": "fxoff+fx2+zoom"
+   },
+   {
+    "say": "Can you show me your strong muscles? Be kind to every animal. See you at the zoo!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

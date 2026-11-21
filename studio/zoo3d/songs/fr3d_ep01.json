@@ -1,0 +1,302 @@
+{
+ "title": "Yummy Fruits Song (Eat Your Rainbow!)",
+ "bpm": 116,
+ "voice": "af_bella",
+ "formant": 1.12,
+ "chords": "C G Am F",
+ "style": "pop",
+ "intro_bars": 1,
+ "outro_bars": 1,
+ "parts": [
+  {
+   "section": "hook",
+   "who": "host",
+   "voice": "af_sky",
+   "speak": "Hi friends! I'm Pipkiko! Let's eat a rainbow of yummy fruits and crunchy veggies!",
+   "speed": 1.0
+  },
+  {
+   "section": "chorus1",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 C4:1 D4:1 E4:1,C4:1"
+    },
+    {
+     "text": "Red and orange, yellow, green, yum yum yum!",
+     "notes": "G4:1 G4:.5 A4:.5,G4:1 E4:.5,E4:.5 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Munch munch, crunch crunch, healthy and strong!",
+     "notes": "C4:1 C4:1 E4:1 E4:1 G4:.5,A4:.5 G4:1 E4:2"
+    },
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 D4:1 D4:1 D4:1,C4:1"
+    }
+   ]
+  },
+  {
+   "section": "verse_strawberry",
+   "who": "host",
+   "formant": 1.12,
+   "lines": [
+    {
+     "text": "I'm Pipkiko, a strawberry, red and sweet!",
+     "notes": "E4:1 G4:.5,G4:.5,A4:1 G4:.5 E4:.5,E4:.5,D4:.5 C4:1 D4:1 E4:1"
+    },
+    {
+     "text": "Tiny seeds on the outside, count them, wow!",
+     "notes": "E4:.5,E4:.5 G4:1 G4:.5 A4:.5 G4:.5,E4:.5 D4:1 E4:1 C4:2"
+    },
+    {
+     "text": "About two hundred seeds on every one!",
+     "notes": "C4:.5,D4:.5 E4:1 E4:.5,G4:.5 A4:1 G4:1 E4:.5,D4:.5 C4:2"
+    },
+    {
+     "text": "Strawberry, strawberry, yum yum yum!",
+     "notes": "G4:.5,E4:.5,E4:1 G4:.5,E4:.5,E4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "verse_apple",
+   "who": "apple",
+   "formant": 1.08,
+   "lines": [
+    {
+     "text": "Crunchy apple, shiny red, crunch crunch crunch!",
+     "notes": "E4:.5,G4:.5 G4:.5,E4:.5 A4:.5,G4:.5 E4:1 D4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Drop an apple in the water, look, it floats!",
+     "notes": "C4:1 D4:.5 E4:.5,E4:.5 G4:.5 G4:.5 A4:.5,G4:.5 E4:1 D4:.5 C4:2"
+    },
+    {
+     "text": "Apples float, they have lots of air inside!",
+     "notes": "E4:.5,E4:.5 G4:1 E4:.5 E4:.5 D4:1 C4:1 D4:1 E4:.5,C4:1.5"
+    },
+    {
+     "text": "Apple, apple, yum yum yum!",
+     "notes": "G4:1,E4:1 G4:1,E4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 C4:1 D4:1 E4:1,C4:1"
+    },
+    {
+     "text": "Red and orange, yellow, green, yum yum yum!",
+     "notes": "G4:1 G4:.5 A4:.5,G4:1 E4:.5,E4:.5 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Munch munch, crunch crunch, healthy and strong!",
+     "notes": "C4:1 C4:1 E4:1 E4:1 G4:.5,A4:.5 G4:1 E4:2"
+    },
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 D4:1 D4:1 D4:1,C4:1"
+    }
+   ]
+  },
+  {
+   "section": "fact",
+   "who": "host",
+   "voice": "af_sky",
+   "speak": "Always wash your fruits and veggies with water before you eat them!"
+  },
+  {
+   "section": "verse_banana",
+   "who": "banana",
+   "formant": 1.14,
+   "lines": [
+    {
+     "text": "Yellow banana, peel it down, peel peel peel!",
+     "notes": "E4:.5,G4:.5 A4:.5,G4:.5,E4:.5 G4:.5 E4:.5 D4:1 E4:1 D4:1 C4:1.5"
+    },
+    {
+     "text": "Bananas grow in bunches called a hand!",
+     "notes": "E4:.5,G4:.5,G4:.5 A4:1 G4:.5 E4:.5,E4:.5 D4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Each banana is a finger, one, two, three!",
+     "notes": "C4:.5 E4:.5,E4:.5,G4:.5 G4:.5 G4:.5 A4:.5,G4:.5 E4:1 D4:1 C4:2"
+    },
+    {
+     "text": "Banana, banana, yum yum yum!",
+     "notes": "G4:.5,E4:.5,E4:1 G4:.5,E4:.5,E4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "verse_carrot",
+   "who": "carrot",
+   "formant": 1.06,
+   "lines": [
+    {
+     "text": "Orange carrot, long and crunchy, munch munch munch!",
+     "notes": "G4:.5,E4:.5 G4:.5,E4:.5 A4:.5 G4:.5 E4:.5,D4:.5 C4:1 D4:1 E4:2"
+    },
+    {
+     "text": "Carrots grow down under the ground!",
+     "notes": "E4:.5,E4:.5 G4:1 A4:1 G4:.5,E4:.5 D4:1 C4:3"
+    },
+    {
+     "text": "Pull it up, pull it up, here it comes!",
+     "notes": "C4:.5 D4:.5 E4:1 C4:.5 D4:.5 E4:1 G4:1 A4:1 G4:2"
+    },
+    {
+     "text": "Carrot, carrot, yum yum yum!",
+     "notes": "G4:1,E4:1 G4:1,E4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 C4:1 D4:1 E4:1,C4:1"
+    },
+    {
+     "text": "Red and orange, yellow, green, yum yum yum!",
+     "notes": "G4:1 G4:.5 A4:.5,G4:1 E4:.5,E4:.5 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Munch munch, crunch crunch, healthy and strong!",
+     "notes": "C4:1 C4:1 E4:1 E4:1 G4:.5,A4:.5 G4:1 E4:2"
+    },
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 D4:1 D4:1 D4:1,C4:1"
+    }
+   ]
+  },
+  {
+   "section": "action",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Clap your hands, clap clap clap!",
+     "notes": "G4:1 E4:1 G4:2 E4:1 E4:1 C4:2"
+    },
+    {
+     "text": "Stomp your feet, stomp stomp stomp!",
+     "notes": "A4:1 G4:1 E4:2 D4:1 D4:1 D4:2"
+    },
+    {
+     "text": "Spin around and jump jump jump!",
+     "notes": "G4:1 E4:.5,G4:.5 A4:1 G4:1 G4:1 E4:3"
+    },
+    {
+     "text": "Wave hello to all your friends!",
+     "notes": "E4:1 G4:.5,E4:.5 D4:1 E4:1 D4:1 C4:3"
+    }
+   ]
+  },
+  {
+   "section": "verse_broccoli",
+   "who": "broccoli",
+   "formant": 1.1,
+   "lines": [
+    {
+     "text": "Green broccoli looks like a tiny tree!",
+     "notes": "G4:1 E4:.5,E4:.5,D4:.5 E4:.5 G4:.5 G4:.5 A4:.5,G4:.5 E4:3"
+    },
+    {
+     "text": "The little bumps are flowers you can eat!",
+     "notes": "C4:.5 D4:.5,E4:.5 E4:1 E4:.5 G4:.5,E4:.5 D4:.5 D4:1 C4:2.5"
+    },
+    {
+     "text": "Tiny trees, tiny trees, chomp chomp chomp!",
+     "notes": "E4:.5,G4:.5 G4:1 E4:.5,G4:.5 G4:1 A4:1 G4:1 E4:2"
+    },
+    {
+     "text": "Broccoli, broccoli, yum yum yum!",
+     "notes": "G4:.5,E4:.5,E4:1 G4:.5,E4:.5,E4:1 D4:1 E4:1 C4:2"
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 C4:1 D4:1 E4:1,C4:1"
+    },
+    {
+     "text": "Red and orange, yellow, green, yum yum yum!",
+     "notes": "G4:1 G4:.5 A4:.5,G4:1 E4:.5,E4:.5 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Munch munch, crunch crunch, healthy and strong!",
+     "notes": "C4:1 C4:1 E4:1 E4:1 G4:.5,A4:.5 G4:1 E4:2"
+    },
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 D4:1 D4:1 D4:1,C4:1"
+    }
+   ]
+  },
+  {
+   "section": "chorus_final",
+   "who": "all",
+   "group": true,
+   "formant": 1.1,
+   "lines": [
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 C4:1 D4:1 E4:1,C4:1"
+    },
+    {
+     "text": "Red and orange, yellow, green, yum yum yum!",
+     "notes": "G4:1 G4:.5 A4:.5,G4:1 E4:.5,E4:.5 D4:1 E4:1 D4:1 C4:1"
+    },
+    {
+     "text": "Munch munch, crunch crunch, healthy and strong!",
+     "notes": "C4:1 C4:1 E4:1 E4:1 G4:.5,A4:.5 G4:1 E4:2"
+    },
+    {
+     "text": "Yummy fruits, crunchy veggies, eat your rainbow!",
+     "notes": "G4:.5,G4:.5 E4:1 A4:.5,G4:.5 E4:1 D4:1 E4:1 E4:1,C4:1"
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "who": "host",
+   "voice": "af_sky",
+   "speak": "Yay! You ate your rainbow! Sing it again tomorrow! Bye bye!"
+  }
+ ],
+ "meta": {
+  "title": "Yummy Fruits Song for Kids! Eat Your Rainbow with Pipkiko",
+  "card": "Eat Your Rainbow!",
+  "thumb_text": "YUMMY FRUITS!",
+  "description": "The Yummy Fruits Song for kids! Sing along with Pipkiko the strawberry and her fruit and veggie friends: apple, banana, carrot and broccoli.\nKids learn fun true food facts, colors of the rainbow and to wash fruits and veggies before eating. Ages 2-6.",
+  "tags": [
+   "fruits song",
+   "fruit song for kids",
+   "healthy food song",
+   "eat your rainbow",
+   "vegetables song",
+   "kids songs",
+   "nursery rhymes",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ }
+}

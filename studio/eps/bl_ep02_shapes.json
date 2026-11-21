@@ -1,0 +1,285 @@
+{
+ "id": "bl_ep02_shapes",
+ "title": "Learn Shapes for Kids! Circle, Square, Triangle and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're meeting five shape friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "circle",
+   "lines": [
+    [
+     "Here's a clue: it's round, like a ball! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Circle!",
+     "enter"
+    ],
+    [
+     "This is Circle! A circle is round and round.",
+     "fx+zoom"
+    ],
+    [
+     "A circle has no corners at all.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you draw a big circle in the air?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is shaped like a circle?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A ball, and a clock!",
+     "fx+badge:ROUND!"
+    ],
+    [
+     "Let's say it together: CIRCLE!",
+     "zoom"
+    ],
+    [
+     "Wheels are circles, so they can roll.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Circle!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "square",
+   "lines": [
+    [
+     "Here's a clue: it has four sides, all the same! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Square!",
+     "enter"
+    ],
+    [
+     "This is Square! Let's count the corners.",
+     "fx+zoom"
+    ],
+    [
+     "One, two, three, four! A square has four sides that are all the same.",
+     "bob"
+    ],
+    [
+     "Can you draw a square in the air?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else can be a square?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A letter block!",
+     "fx+badge:4 SIDES!"
+    ],
+    [
+     "Let's say it together: SQUARE!",
+     "zoom"
+    ],
+    [
+     "Squares stack up nicely.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Square!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "triangle",
+   "lines": [
+    [
+     "Here's a clue: it looks like a slice of pizza! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Triangle!",
+     "enter"
+    ],
+    [
+     "This is Triangle! Let's count the corners.",
+     "fx+zoom"
+    ],
+    [
+     "One, two, three! A triangle has three sides and three corners.",
+     "bob"
+    ],
+    [
+     "Can you make a triangle with your fingers?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What snack can look like a triangle?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A slice of pizza!",
+     "fx+badge:3 SIDES!"
+    ],
+    [
+     "Let's say it together: TRIANGLE!",
+     "zoom"
+    ],
+    [
+     "Rooftops can look like triangles, too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Triangle!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "star",
+   "lines": [
+    [
+     "Here's a clue: it twinkles in the night sky! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Star!",
+     "enter"
+    ],
+    [
+     "This is Star! Let's count the points.",
+     "fx+zoom"
+    ],
+    [
+     "One, two, three, four, five! This star has five points.",
+     "bob"
+    ],
+    [
+     "Can you twinkle your fingers like stars?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Where can you see stars?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the night sky! Twinkle, twinkle!",
+     "fx+badge:5 POINTS!"
+    ],
+    [
+     "Let's say it together: STAR!",
+     "zoom"
+    ],
+    [
+     "Stars are fun to draw.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Star!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "heart",
+   "lines": [
+    [
+     "Here's a clue: it means love! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Heart!",
+     "enter"
+    ],
+    [
+     "This is Heart! A heart means love.",
+     "zoom"
+    ],
+    [
+     "You can make a heart with your hands!",
+     "fx+bob"
+    ],
+    [
+     "Can you give yourself a big hug?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What does a heart mean?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Love! Hearts show we care.",
+     "fx+badge:LOVE!"
+    ],
+    [
+     "Let's say it together: HEART!",
+     "zoom"
+    ],
+    [
+     "You can draw a heart for someone you love.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Heart!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great shapes! Let's remember.",
+   "@title"
+  ],
+  [
+   "A circle is round.",
+   "@circle"
+  ],
+  [
+   "A square has four sides.",
+   "@square"
+  ],
+  [
+   "A triangle has three sides.",
+   "@triangle"
+  ],
+  [
+   "A star has five points.",
+   "@star"
+  ],
+  [
+   "And a heart means love!",
+   "@heart"
+  ]
+ ],
+ "outro": [
+  [
+   "Which shape was your favorite? Keep looking for colors and shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

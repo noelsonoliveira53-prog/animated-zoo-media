@@ -1,0 +1,1953 @@
+{
+ "id": "zc_ep07_short2",
+ "total": 90.90154166666672,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625
+ ],
+ "plan": {
+  "length": 90.9,
+  "shots": 22,
+  "visual_changes": 99,
+  "mean_gap": 0.92,
+  "longest_gap": 4.27,
+  "longest_gap_at": 54.2,
+  "over_6s": [],
+  "places": [
+   "bigtree",
+   "savanna"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper_blue",
+   "paper"
+  ],
+  "questions": 8,
+  "longest_without_question": 20.3,
+  "first_words_at": 0.42,
+  "shot_mean": 4.13,
+  "fails": [],
+  "words_placed": "183/183",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 29.3,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the tallest tree hook: who helps"
+  ],
+  [
+   0.54,
+   "action",
+   "auntie's trunk moves"
+  ],
+  [
+   2.09,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the tallest tree bigtree wide"
+  ],
+  [
+   3.21,
+   "action",
+   "tumble hops"
+  ],
+  [
+   5.79,
+   "action",
+   "sister hops"
+  ],
+  [
+   5.79,
+   "word",
+   "THE HERD"
+  ],
+  [
+   6.56,
+   "new place",
+   "the picture board (pink) board: a family"
+  ],
+  [
+   7.61,
+   "word",
+   "FAMILY"
+  ],
+  [
+   8.75,
+   "picture",
+   "f1"
+  ],
+  [
+   9.61,
+   "picture",
+   "f2"
+  ],
+  [
+   10.57,
+   "picture",
+   "f3"
+  ],
+  [
+   11.38,
+   "picture",
+   "f4"
+  ],
+  [
+   12.5,
+   "new place",
+   "the tallest tree Auntie"
+  ],
+  [
+   13.03,
+   "word",
+   "AUNTIE"
+  ],
+  [
+   13.83,
+   "action",
+   "auntie nods"
+  ],
+  [
+   15.31,
+   "new shot",
+   "the tallest tree big sister"
+  ],
+  [
+   16.67,
+   "word",
+   "BIG SISTER"
+  ],
+  [
+   16.97,
+   "action",
+   "sister hops"
+  ],
+  [
+   17.81,
+   "new shot",
+   "the tallest tree question 4a"
+  ],
+  [
+   20.47,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   20.82,
+   "sign",
+   "AUNTIE"
+  ],
+  [
+   22.42,
+   "thinking dot",
+   "1"
+  ],
+  [
+   23.09,
+   "thinking dot",
+   "2"
+  ],
+  [
+   23.76,
+   "thinking dot",
+   "3"
+  ],
+  [
+   24.25,
+   "answer",
+   "TUMBLE"
+  ],
+  [
+   25.62,
+   "new shot",
+   "the tallest tree answer 4a"
+  ],
+  [
+   25.68,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   25.69,
+   "action",
+   "tumble hops"
+  ],
+  [
+   26.75,
+   "word",
+   "THE BABY"
+  ],
+  [
+   28.44,
+   "new place",
+   "the picture board (blue) count the three"
+  ],
+  [
+   29.9,
+   "action",
+   "big sister hops"
+  ],
+  [
+   29.9,
+   "word",
+   "1"
+  ],
+  [
+   30.14,
+   "action",
+   "Tumble hops"
+  ],
+  [
+   30.14,
+   "word",
+   "2"
+  ],
+  [
+   30.38,
+   "action",
+   "Auntie hops"
+  ],
+  [
+   30.38,
+   "word",
+   "3"
+  ],
+  [
+   31.25,
+   "new place",
+   "the tallest tree Auntie's trunk"
+  ],
+  [
+   32.3,
+   "word",
+   "HELLO!"
+  ],
+  [
+   33.4,
+   "action",
+   "auntie's trunk moves"
+  ],
+  [
+   34.62,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   35.62,
+   "new shot",
+   "the tallest tree question 4"
+  ],
+  [
+   37.29,
+   "sign",
+   "TRUNK"
+  ],
+  [
+   37.64,
+   "sign",
+   "TAIL"
+  ],
+  [
+   39.58,
+   "thinking dot",
+   "1"
+  ],
+  [
+   40.25,
+   "thinking dot",
+   "2"
+  ],
+  [
+   40.92,
+   "thinking dot",
+   "3"
+  ],
+  [
+   41.41,
+   "answer",
+   "TRUNK"
+  ],
+  [
+   42.5,
+   "new shot",
+   "the tallest tree answer 4"
+  ],
+  [
+   43.12,
+   "word",
+   "TRUNK!"
+  ],
+  [
+   43.86,
+   "action",
+   "auntie's trunk moves"
+  ],
+  [
+   43.86,
+   "action",
+   "auntie's trunk moves"
+  ],
+  [
+   44.57,
+   "action",
+   "tumble hops"
+  ],
+  [
+   45.94,
+   "new shot",
+   "the tallest tree wave along"
+  ],
+  [
+   46.5,
+   "word",
+   "WAVE!"
+  ],
+  [
+   46.83,
+   "action",
+   "milo hops"
+  ],
+  [
+   49.69,
+   "new shot",
+   "the tallest tree sister plays"
+  ],
+  [
+   49.79,
+   "action",
+   "sister walks"
+  ],
+  [
+   52.15,
+   "action",
+   "tumble hops"
+  ],
+  [
+   53.04,
+   "action",
+   "sister hops"
+  ],
+  [
+   53.04,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   53.04,
+   "word",
+   "PLAY!"
+  ],
+  [
+   54.06,
+   "new place",
+   "the picture board board: babysitters"
+  ],
+  [
+   54.17,
+   "word",
+   "HELPERS!"
+  ],
+  [
+   58.44,
+   "new shot",
+   "the picture board board: watch help play"
+  ],
+  [
+   58.95,
+   "word",
+   "WATCH"
+  ],
+  [
+   60.25,
+   "word",
+   "HELP"
+  ],
+  [
+   61.27,
+   "action",
+   "little Tumble hops"
+  ],
+  [
+   61.27,
+   "word",
+   "PLAY"
+  ],
+  [
+   62.5,
+   "new place",
+   "the sunny savanna Mama eats"
+  ],
+  [
+   62.7,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   63.37,
+   "action",
+   "Mama eats the grass"
+  ],
+  [
+   64.73,
+   "action",
+   "mama's trunk moves"
+  ],
+  [
+   64.73,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   66.25,
+   "new place",
+   "the picture board (blue) question 5"
+  ],
+  [
+   68.41,
+   "sign",
+   "ONE"
+  ],
+  [
+   68.76,
+   "sign",
+   "TWO"
+  ],
+  [
+   70.03,
+   "thinking dot",
+   "1"
+  ],
+  [
+   70.7,
+   "thinking dot",
+   "2"
+  ],
+  [
+   71.38,
+   "thinking dot",
+   "3"
+  ],
+  [
+   71.86,
+   "answer",
+   "TWO"
+  ],
+  [
+   73.12,
+   "new shot",
+   "the picture board (blue) answer 5"
+  ],
+  [
+   73.29,
+   "word",
+   "2 HELPERS"
+  ],
+  [
+   73.82,
+   "action",
+   "Auntie hops"
+  ],
+  [
+   74.63,
+   "action",
+   "big sister hops"
+  ],
+  [
+   75.62,
+   "new shot",
+   "the picture board (blue) board: stood up"
+  ],
+  [
+   75.72,
+   "action",
+   "little Tumble wobbles"
+  ],
+  [
+   77.57,
+   "action",
+   "Tumble stands"
+  ],
+  [
+   78.41,
+   "word",
+   "UP!"
+  ],
+  [
+   79.38,
+   "new shot",
+   "the picture board (blue) board: helped him up"
+  ],
+  [
+   79.51,
+   "action",
+   "Mama comes close"
+  ],
+  [
+   80.43,
+   "action",
+   "Auntie comes close"
+  ],
+  [
+   81.35,
+   "word",
+   "HELP!"
+  ],
+  [
+   82.5,
+   "new place",
+   "the tallest tree stand along"
+  ],
+  [
+   83.45,
+   "word",
+   "STAND UP!"
+  ],
+  [
+   84.98,
+   "action",
+   "milo hops"
+  ],
+  [
+   86.88,
+   "new shot",
+   "the tallest tree who leads"
+  ],
+  [
+   88.78,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   88.78,
+   "word",
+   "WHO LEADS?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "bigtree",
+   "say": "Who helps Mama look after Tumble?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.244875,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.12
+    ],
+    [
+     "helps",
+     0.12,
+     0.53
+    ],
+    [
+     "Mama",
+     0.53,
+     0.9
+    ],
+    [
+     "look",
+     0.9,
+     1.23
+    ],
+    [
+     "after",
+     1.23,
+     1.67
+    ],
+    [
+     "Tumble?",
+     1.67,
+     2.24
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: who helps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Here comes Tumble's family. This is the herd!",
+   "t0": 3.125,
+   "t1": 6.5625,
+   "v0": 3.204875,
+   "dur": 3.1532916666666666,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.28
+    ],
+    [
+     "comes",
+     0.28,
+     0.63
+    ],
+    [
+     "Tumble's",
+     0.63,
+     1.16
+    ],
+    [
+     "family.",
+     1.16,
+     1.77
+    ],
+    [
+     "This",
+     2.09,
+     2.33
+    ],
+    [
+     "is",
+     2.33,
+     2.5
+    ],
+    [
+     "the",
+     2.5,
+     2.59
+    ],
+    [
+     "herd!",
+     2.59,
+     3.15
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "bigtree wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "A herd is a family: mamas, aunties, big sisters and babies.",
+   "t0": 6.5625,
+   "t1": 12.5,
+   "v0": 6.898166666666667,
+   "dur": 5.136291666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "herd",
+     0.06,
+     0.53
+    ],
+    [
+     "is",
+     0.53,
+     0.68
+    ],
+    [
+     "a",
+     0.68,
+     0.71
+    ],
+    [
+     "family:",
+     0.71,
+     1.42
+    ],
+    [
+     "mamas,",
+     1.85,
+     2.56
+    ],
+    [
+     "aunties,",
+     2.71,
+     3.32
+    ],
+    [
+     "big",
+     3.32,
+     3.67
+    ],
+    [
+     "sisters",
+     3.67,
+     4.34
+    ],
+    [
+     "and",
+     4.34,
+     4.48
+    ],
+    [
+     "babies.",
+     4.48,
+     5.136
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: a family",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "This is Auntie. Hello, Auntie!",
+   "t0": 12.5,
+   "t1": 15.3125,
+   "v0": 12.574458333333332,
+   "dur": 2.2592916666666665,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.3
+    ],
+    [
+     "is",
+     0.3,
+     0.46
+    ],
+    [
+     "Auntie.",
+     0.46,
+     1.09
+    ],
+    [
+     "Hello,",
+     1.26,
+     1.66
+    ],
+    [
+     "Auntie!",
+     1.66,
+     2.259
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Auntie",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "And this is Tumble's big sister.",
+   "t0": 15.3125,
+   "t1": 17.8125,
+   "v0": 15.373749999999998,
+   "dur": 2.2500833333333334,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.19
+    ],
+    [
+     "this",
+     0.19,
+     0.48
+    ],
+    [
+     "is",
+     0.48,
+     0.73
+    ],
+    [
+     "Tumble's",
+     0.73,
+     1.3
+    ],
+    [
+     "big",
+     1.3,
+     1.6
+    ],
+    [
+     "sister.",
+     1.6,
+     2.25
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "big sister",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Who is the smallest elephant here? Tumble, or Auntie?",
+   "t0": 17.8125,
+   "t1": 25.625,
+   "v0": 18.163833333333333,
+   "dur": 3.76675,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.24
+    ],
+    [
+     "is",
+     0.24,
+     0.4
+    ],
+    [
+     "the",
+     0.4,
+     0.48
+    ],
+    [
+     "smallest",
+     0.48,
+     1.15
+    ],
+    [
+     "elephant",
+     1.15,
+     1.62
+    ],
+    [
+     "here?",
+     1.62,
+     1.96
+    ],
+    [
+     "Tumble,",
+     2.31,
+     2.89
+    ],
+    [
+     "or",
+     2.89,
+     3.13
+    ],
+    [
+     "Auntie?",
+     3.13,
+     3.767
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Tumble! He is the baby of the herd.",
+   "t0": 25.625,
+   "t1": 28.4375,
+   "v0": 25.670583333333333,
+   "dur": 2.332708333333333,
+   "words": [
+    [
+     "Tumble!",
+     0.02,
+     0.57
+    ],
+    [
+     "He",
+     0.69,
+     0.87
+    ],
+    [
+     "is",
+     0.87,
+     1.0
+    ],
+    [
+     "the",
+     1.0,
+     1.08
+    ],
+    [
+     "baby",
+     1.08,
+     1.56
+    ],
+    [
+     "of",
+     1.56,
+     1.66
+    ],
+    [
+     "the",
+     1.66,
+     1.76
+    ],
+    [
+     "herd.",
+     1.76,
+     2.33
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "answer 4a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Let's count them. One, two, three!",
+   "t0": 28.4375,
+   "t1": 31.25,
+   "v0": 28.54329166666667,
+   "dur": 2.421291666666667,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.36
+    ],
+    [
+     "count",
+     0.36,
+     0.74
+    ],
+    [
+     "them.",
+     0.74,
+     1.02
+    ],
+    [
+     "One,",
+     1.36,
+     1.6
+    ],
+    [
+     "two,",
+     1.6,
+     1.84
+    ],
+    [
+     "three!",
+     1.84,
+     2.42
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the three",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Auntie says hello. She touches Tumble with her trunk.",
+   "t0": 31.25,
+   "t1": 35.625,
+   "v0": 31.50458333333334,
+   "dur": 3.6769166666666666,
+   "words": [
+    [
+     "Auntie",
+     0.0,
+     0.46
+    ],
+    [
+     "says",
+     0.46,
+     0.8
+    ],
+    [
+     "hello.",
+     0.8,
+     1.36
+    ],
+    [
+     "She",
+     1.74,
+     1.9
+    ],
+    [
+     "touches",
+     1.9,
+     2.37
+    ],
+    [
+     "Tumble",
+     2.37,
+     2.86
+    ],
+    [
+     "with",
+     2.86,
+     3.01
+    ],
+    [
+     "her",
+     3.01,
+     3.12
+    ],
+    [
+     "trunk.",
+     3.12,
+     3.677
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Auntie's trunk",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Does Auntie say hello with her trunk, or with her tail?",
+   "t0": 35.625,
+   "t1": 42.5,
+   "v0": 35.721500000000006,
+   "dur": 3.367875,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.22
+    ],
+    [
+     "Auntie",
+     0.22,
+     0.61
+    ],
+    [
+     "say",
+     0.61,
+     0.87
+    ],
+    [
+     "hello",
+     0.87,
+     1.31
+    ],
+    [
+     "with",
+     1.31,
+     1.47
+    ],
+    [
+     "her",
+     1.47,
+     1.57
+    ],
+    [
+     "trunk,",
+     1.57,
+     2.11
+    ],
+    [
+     "or",
+     2.36,
+     2.58
+    ],
+    [
+     "with",
+     2.58,
+     2.75
+    ],
+    [
+     "her",
+     2.75,
+     2.85
+    ],
+    [
+     "tail?",
+     2.85,
+     3.368
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "With her trunk! Pat, pat. Hello, Tumble!",
+   "t0": 42.5,
+   "t1": 45.9375,
+   "v0": 42.829375000000006,
+   "dur": 2.779166666666667,
+   "words": [
+    [
+     "With",
+     0.01,
+     0.19
+    ],
+    [
+     "her",
+     0.19,
+     0.29
+    ],
+    [
+     "trunk!",
+     0.29,
+     0.84
+    ],
+    [
+     "Pat,",
+     1.03,
+     1.33
+    ],
+    [
+     "pat.",
+     1.33,
+     1.74
+    ],
+    [
+     "Hello,",
+     1.74,
+     2.16
+    ],
+    [
+     "Tumble!",
+     2.16,
+     2.779
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "answer 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Can you wave hello like a trunk? Hello, hello!",
+   "t0": 45.9375,
+   "t1": 49.6875,
+   "v0": 46.148541666666674,
+   "dur": 3.2075833333333335,
+   "words": [
+    [
+     "Can",
+     0.05,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.35
+    ],
+    [
+     "wave",
+     0.35,
+     0.68
+    ],
+    [
+     "hello",
+     0.68,
+     1.03
+    ],
+    [
+     "like",
+     1.03,
+     1.25
+    ],
+    [
+     "a",
+     1.25,
+     1.29
+    ],
+    [
+     "trunk?",
+     1.29,
+     1.87
+    ],
+    [
+     "Hello,",
+     2.17,
+     2.61
+    ],
+    [
+     "hello!",
+     2.61,
+     3.208
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "wave along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Big sister plays with Tumble. Push, push, play!",
+   "t0": 49.6875,
+   "t1": 54.0625,
+   "v0": 49.896125000000005,
+   "dur": 3.7271666666666667,
+   "words": [
+    [
+     "Big",
+     0.03,
+     0.29
+    ],
+    [
+     "sister",
+     0.29,
+     0.75
+    ],
+    [
+     "plays",
+     0.75,
+     1.19
+    ],
+    [
+     "with",
+     1.19,
+     1.33
+    ],
+    [
+     "Tumble.",
+     1.33,
+     1.87
+    ],
+    [
+     "Push,",
+     2.25,
+     2.71
+    ],
+    [
+     "push,",
+     2.71,
+     3.14
+    ],
+    [
+     "play!",
+     3.14,
+     3.727
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "sister plays",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Helpers like Auntie and big sister are like babysitters.",
+   "t0": 54.0625,
+   "t1": 58.4375,
+   "v0": 54.16329166666667,
+   "dur": 4.055458333333333,
+   "words": [
+    [
+     "Helpers",
+     0.01,
+     0.53
+    ],
+    [
+     "like",
+     0.53,
+     0.77
+    ],
+    [
+     "Auntie",
+     0.77,
+     1.44
+    ],
+    [
+     "and",
+     1.44,
+     1.61
+    ],
+    [
+     "big",
+     1.61,
+     1.84
+    ],
+    [
+     "sister",
+     1.84,
+     2.46
+    ],
+    [
+     "are",
+     2.7,
+     2.79
+    ],
+    [
+     "like",
+     2.79,
+     3.07
+    ],
+    [
+     "babysitters.",
+     3.07,
+     4.05
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: babysitters",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "They watch Tumble, they help him, and they play with him.",
+   "t0": 58.4375,
+   "t1": 62.5,
+   "v0": 58.758750000000006,
+   "dur": 3.31,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.19
+    ],
+    [
+     "watch",
+     0.19,
+     0.65
+    ],
+    [
+     "Tumble,",
+     0.65,
+     1.19
+    ],
+    [
+     "they",
+     1.34,
+     1.49
+    ],
+    [
+     "help",
+     1.49,
+     1.83
+    ],
+    [
+     "him,",
+     1.83,
+     2.17
+    ],
+    [
+     "and",
+     2.17,
+     2.38
+    ],
+    [
+     "they",
+     2.38,
+     2.51
+    ],
+    [
+     "play",
+     2.51,
+     2.84
+    ],
+    [
+     "with",
+     2.84,
+     3.01
+    ],
+    [
+     "him.",
+     3.01,
+     3.31
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: watch help play",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "And Mama can eat her grass. Munch, munch!",
+   "t0": 62.5,
+   "t1": 66.25,
+   "v0": 62.60875000000001,
+   "dur": 3.156041666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.17
+    ],
+    [
+     "Mama",
+     0.17,
+     0.58
+    ],
+    [
+     "can",
+     0.58,
+     0.76
+    ],
+    [
+     "eat",
+     0.76,
+     1.01
+    ],
+    [
+     "her",
+     1.01,
+     1.12
+    ],
+    [
+     "grass.",
+     1.12,
+     1.77
+    ],
+    [
+     "Munch,",
+     2.12,
+     2.58
+    ],
+    [
+     "munch!",
+     2.58,
+     3.156
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama eats",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "How many helpers are with Tumble? One, or two?",
+   "t0": 66.25,
+   "t1": 73.125,
+   "v0": 66.30479166666667,
+   "dur": 3.2369166666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.35
+    ],
+    [
+     "helpers",
+     0.35,
+     0.88
+    ],
+    [
+     "are",
+     0.88,
+     0.98
+    ],
+    [
+     "with",
+     0.98,
+     1.15
+    ],
+    [
+     "Tumble?",
+     1.15,
+     1.72
+    ],
+    [
+     "One,",
+     2.11,
+     2.54
+    ],
+    [
+     "or",
+     2.54,
+     2.75
+    ],
+    [
+     "two?",
+     2.75,
+     3.237
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Two! Auntie and big sister.",
+   "t0": 73.125,
+   "t1": 75.625,
+   "v0": 73.28170833333336,
+   "dur": 2.0082916666666666,
+   "words": [
+    [
+     "Two!",
+     0.01,
+     0.42
+    ],
+    [
+     "Auntie",
+     0.54,
+     1.0
+    ],
+    [
+     "and",
+     1.0,
+     1.15
+    ],
+    [
+     "big",
+     1.15,
+     1.35
+    ],
+    [
+     "sister.",
+     1.35,
+     2.008
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "answer 5",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "When Tumble was born, he stood up in just minutes.",
+   "t0": 75.625,
+   "t1": 79.375,
+   "v0": 75.83000000000003,
+   "dur": 3.1290833333333334,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.18
+    ],
+    [
+     "Tumble",
+     0.18,
+     0.61
+    ],
+    [
+     "was",
+     0.61,
+     0.81
+    ],
+    [
+     "born,",
+     0.81,
+     1.39
+    ],
+    [
+     "he",
+     1.6,
+     1.74
+    ],
+    [
+     "stood",
+     1.74,
+     2.0
+    ],
+    [
+     "up",
+     2.0,
+     2.18
+    ],
+    [
+     "in",
+     2.18,
+     2.31
+    ],
+    [
+     "just",
+     2.31,
+     2.58
+    ],
+    [
+     "minutes.",
+     2.58,
+     3.129
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: stood up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Mama and the other elephants helped him up.",
+   "t0": 79.375,
+   "t1": 82.5,
+   "v0": 79.49908333333336,
+   "dur": 2.6225,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.54
+    ],
+    [
+     "and",
+     0.54,
+     0.8
+    ],
+    [
+     "the",
+     0.8,
+     0.93
+    ],
+    [
+     "other",
+     0.93,
+     1.18
+    ],
+    [
+     "elephants",
+     1.18,
+     1.85
+    ],
+    [
+     "helped",
+     1.85,
+     2.19
+    ],
+    [
+     "him",
+     2.19,
+     2.31
+    ],
+    [
+     "up.",
+     2.31,
+     2.62
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: helped him up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Can you stand up tall like Tumble? Stand up, stand tall!",
+   "t0": 82.5,
+   "t1": 86.875,
+   "v0": 82.66158333333337,
+   "dur": 3.831875,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.18
+    ],
+    [
+     "you",
+     0.18,
+     0.28
+    ],
+    [
+     "stand",
+     0.28,
+     0.65
+    ],
+    [
+     "up",
+     0.65,
+     0.79
+    ],
+    [
+     "tall",
+     0.79,
+     1.17
+    ],
+    [
+     "like",
+     1.17,
+     1.35
+    ],
+    [
+     "Tumble?",
+     1.35,
+     1.93
+    ],
+    [
+     "Stand",
+     2.32,
+     2.72
+    ],
+    [
+     "up,",
+     2.72,
+     2.91
+    ],
+    [
+     "stand",
+     2.91,
+     3.35
+    ],
+    [
+     "tall!",
+     3.35,
+     3.83
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "stand along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Lots of helpers! But who leads the whole herd?",
+   "t0": 86.875,
+   "t1": 90.50154166666671,
+   "v0": 87.03345833333337,
+   "dur": 3.0480833333333335,
+   "words": [
+    [
+     "Lots",
+     0.01,
+     0.41
+    ],
+    [
+     "of",
+     0.41,
+     0.49
+    ],
+    [
+     "helpers!",
+     0.49,
+     1.2
+    ],
+    [
+     "But",
+     1.44,
+     1.59
+    ],
+    [
+     "who",
+     1.59,
+     1.75
+    ],
+    [
+     "leads",
+     1.75,
+     2.1
+    ],
+    [
+     "the",
+     2.1,
+     2.18
+    ],
+    [
+     "whole",
+     2.18,
+     2.49
+    ],
+    [
+     "herd?",
+     2.49,
+     3.048
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "who leads",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

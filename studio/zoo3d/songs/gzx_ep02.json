@@ -1,0 +1,1211 @@
+{
+ "kind": "lesson",
+ "format": "gizmo_explainer",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "USGS Water Science School, 'The Water Cycle for Kids', water.usgs.gov/edu/watercycle-kids-beg.html (read Nov 19 2026): 'The sun causes liquid water to evaporate, or turn from a liquid to a gas (water vapor).' 'The invisible water vapor floats high into the atmosphere' 'The colder temperatures high in the atmosphere cause the water vapor to turn back into tiny liquid water droplets' 'Condensation causes clouds to form.' 'When they get heavy enough, they fall to Earth as precipitation, such as rain and snow.' 'When rain hits the land or snow melts, it flows downhill over the landscape.' 'most of it ending up back in the oceans.' 'This process is always happening everywhere.'\nNOAA SciJinks, 'What Causes Rain?', scijinks.gov/rain (read Nov 19 2026): 'In order to condense, the water vapor must have a solid to glom onto.' 'This solid \"seed\" may be a speck of dust or pollen' 'with more water condensing onto other water droplets, the droplets grow.' 'When they get too heavy to stay suspended in the cloud ... they fall to Earth as rain.'\nUSGS Water Science School, 'Raindrops are Different Shapes' (Are raindrops shaped like teardrops?), usgs.gov/water-science-school/science/are-raindrops-shaped-teardrops (read Nov 19 2026): 'Small raindrops (radius < 1 millimeter (mm)) are spherical; larger ones assume a shape more like that of a hamburger bun.' 'The artistic representation of raindrop as presented by popular culture is that of a teardrop.'",
+ "script": "Hello, friends! I am Gizmo the robot.\nToday we are finding out where rain comes from!\nMy little helper bot is here too. Hello, little bot!\nWe have three big questions. Count them with me. One, two, three!\nReady? Let's find out!\nWhere does the water for rain come from?\nDoes it come from the sea? Or from the Moon?\nIt comes from the sea, and from lakes, and even from puddles!\nHere is the fun fact. The sun warms the water, and some of it turns into a gas, called water vapor.\nThis is called evaporation. Look! The puddle is getting smaller.\nCan we see water vapor? Hmm.\nNo! Water vapor is invisible. We drew it with little dots, so you can see where it goes.\nUp, up, it floats!\nThe water vapor floats high up into the air.\nThe sun's warmth helps water change, from a liquid, into a gas.\nLiquid water is like the water in a puddle. A gas is like the air.\nAnd this is happening everywhere, all the time!\nOver the sea, over the lakes, and over the puddles too.\nSay it with me. The sun turns water into vapor!\nCan you wiggle your fingers up high, like rising water vapor?\nUp, up, up! Now float your hands down, nice and slow.\nQuick check! Can you see water vapor? Yes? Or no?\nNo! It is invisible. Great job!\nHow does a cloud form, high up in the sky?\nDoes the water vapor get colder? Or warmer?\nIt gets colder!\nHere is the fun fact. High up in the sky, the air is cold.\nThe cold turns the water vapor back into tiny drops of liquid water.\nBut tiny drops need something to hold on to. What is it? Hmm.\nA speck of dust, or a bit of pollen! The water gathers on it.\nThe water vapor holds on to the speck, and turns into a tiny drop.\nThe tiny drop grows, and grows!\nLots and lots of tiny drops together make a cloud.\nThis change, from vapor back into water, is called condensation.\nPuff, puff! The cloud floats along, high in the sky.\nSo a cloud is made of water. Who knew?\nSay it with me. Cold air turns vapor into clouds!\nCan you make a cloud shape with your arms? Big and round!\nNow float like a cloud. Drift, drift, drift.\nQuick check! A cloud is made of tiny drops of what? Water? Or sand?\nTiny drops of water! You got it!\nWhat makes the drops in a cloud fall down as rain?\nDo they get too heavy? Or too sleepy?\nThey get too heavy!\nHere is the fun fact. More and more water gathers on the drops, and they grow bigger.\nWhen they get too heavy to float, they fall down as rain. Pitter, patter!\nDown, down, down they fall, all the way to the ground.\nWhat shape is a falling raindrop? Hmm.\nSmall raindrops are round, like a ball. Bigger ones look like a hamburger bun!\nNot like a teardrop at all!\nThe rain lands on the ground, and flows downhill.\nDown into streams and rivers, and back to the sea.\nThen the sun warms the water again, and around and around it goes!\nThis is called the water cycle. It is always happening, everywhere!\nAround and around, again and again!\nSay it with me. Heavy drops fall down as rain!\nCan you tap your fingers like falling rain? Pitter, patter!\nFaster, faster! Now slow, slow, and stop.\nQuick check! Is a big raindrop shaped like a teardrop? Or a hamburger bun?\nA hamburger bun! Super thinking!\nWow! We found out so much today. Now it is quiz time!\nGet ready. Think hard!\nQuestion one. What turns water into water vapor? The sun? Or the wind?\nThe sun! Yes!\nQuestion two. What is a cloud made of? Tiny drops of water? Or cotton?\nTiny drops of water! That's right!\nQuestion three. When cloud drops get too heavy, what happens? They fall as rain? Or they fly away?\nThey fall as rain! You remembered!\nYou found out so much today.\nThe sun lifts water up as vapor. Cold air makes clouds. And heavy drops fall down as rain!\nWhat would you like to find out next?\nThank you for exploring with me. Bye-bye, friends! See you next time!",
+ "duration": 342.65,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 726,
+  "words": 726,
+  "pause_onsets_checked": 54,
+  "onset_err_mean_ms": 28.7,
+  "onset_err_max_ms": 120.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Where Does Rain Come From? Science for Kids with Gizmo",
+  "card": "Where Rain Comes From!",
+  "thumb_text": "PITTER PATTER!",
+  "description": "Where does rain come from? Find out with Gizmo the robot: the sun warms water and turns some of it into invisible water vapor, cold air high up turns the vapor back into tiny drops that gather on specks of dust and make clouds, and drops that grow too heavy fall as rain. Small raindrops are round and bigger ones are shaped like a hamburger bun.\nA science explainer for kids ages 4-8, with questions to answer, things to copy, quick checks and a quiz at the end.\n\nWhere the facts come from (read Nov 19, 2026): USGS Water Science School, The Water Cycle for Kids and Are Raindrops Shaped Like Teardrops?; NOAA SciJinks, What Causes Rain?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "where does rain come from",
+   "water cycle for kids",
+   "rain for kids",
+   "clouds for kids",
+   "evaporation for kids",
+   "science for kids",
+   "how things work for kids",
+   "STEM for kids",
+   "Gizmo Explains",
+   "Gizmo the robot"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "gzs_rain_vapor",
+   "title": "Can You See Water Vapor? Science for Kids",
+   "l1": "CAN YOU SEE",
+   "l2": "WATER VAPOR?",
+   "thumb_text": "INVISIBLE!",
+   "thumb_line": [
+    4,
+    0.6
+   ],
+   "fact": "The sun warms water and turns some of it into invisible water vapor, which floats high into the air (USGS, The Water Cycle for Kids).",
+   "seg": "vapor",
+   "start": 18.446,
+   "end": 104.587,
+   "seconds": 86.1
+  },
+  {
+   "id": "gzs_rain_clouds",
+   "title": "How Does a Cloud Form? Science for Kids",
+   "l1": "HOW DOES A",
+   "l2": "CLOUD FORM?",
+   "thumb_text": "TINY DROPS!",
+   "thumb_line": [
+    6,
+    0.7
+   ],
+   "fact": "Cold air high up turns water vapor back into tiny drops of water, which gather on specks of dust or pollen; condensation makes clouds (USGS, The Water Cycle for Kids; NOAA SciJinks, What Causes Rain?).",
+   "seg": "clouds",
+   "start": 104.587,
+   "end": 191.198,
+   "seconds": 86.6
+  },
+  {
+   "id": "gzs_rain_drops",
+   "title": "What Shape Is a Raindrop? Science for Kids",
+   "l1": "WHAT SHAPE",
+   "l2": "IS A RAINDROP?",
+   "thumb_text": "LIKE A BUN!",
+   "thumb_line": [
+    7,
+    0.8
+   ],
+   "fact": "Cloud drops grow until they are too heavy and fall as rain; small raindrops are round and bigger ones are shaped like a hamburger bun (NOAA SciJinks; USGS Water Science School).",
+   "seg": "rain",
+   "start": 191.198,
+   "end": 278.609,
+   "seconds": 87.4
+  }
+ ],
+ "job": {
+  "id": "gzx_ep02",
+  "title": "Where Rain Comes From!",
+  "channel": "gizmo",
+  "set": "gizmoworld",
+  "set_opts": {},
+  "seed": 92,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "spot": "s1",
+    "yaw": 0.22,
+    "char": "gizmo",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "beach",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "vapor",
+    "biome": "river",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "vapor",
+    "biome": "beach",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 11,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "clouds",
+    "biome": "mountain",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "clouds",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 9,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "rain",
+    "biome": "river",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "rain",
+    "biome": "farm",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 9,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "beach",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "pal"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "autumn_forest",
+    "tod": "sunset",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "pal"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 5091,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "orbit",
+     "dolly",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "RAIN!",
+      "color": "#ffb627",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 13.061
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 14.211,
+      "dur": 4.335,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.23,
+        -2.77
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "vapor",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "VAPOR!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.052,
+      "dur": 8.748,
+      "spin": 0,
+      "opts": {
+       "text": "THE SEA",
+       "color": "#1479d6",
+       "win": 6.348
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.502,
+      "dur": 5.898,
+      "spin": 0,
+      "opts": {
+       "text": "THE MOON",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.65,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.135,
+      "dur": 7.196,
+      "spin": 0,
+      "opts": {
+       "text": "YES",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.585,
+      "dur": 8.746,
+      "spin": 0,
+      "opts": {
+       "text": "NO",
+       "color": "#e85d00",
+       "win": 6.746
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.581,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "puddle",
+      "at": [
+       2.45,
+       -0.9,
+       0.0
+      ],
+      "delay": 16.687,
+      "dur": 9.363,
+      "spin": 0,
+      "opts": {
+       "s": 1.2,
+       "shrink": 12.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sun",
+      "at": [
+       2.6,
+       -1.1,
+       3.0
+      ],
+      "delay": 15.787,
+      "dur": 10.263,
+      "spin": 0,
+      "opts": {
+       "s": 0.8
+      }
+     },
+     {
+      "type": "teach",
+      "name": "vapor",
+      "at": [
+       2.45,
+       -0.9,
+       0.2
+      ],
+      "delay": 19.807,
+      "dur": 6.243,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 27.967,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "vapor",
+      "at": [
+       2.45,
+       -0.9,
+       0.2
+      ],
+      "delay": 32.496,
+      "dur": 5.112,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "puddle",
+      "at": [
+       2.45,
+       -0.9,
+       0.0
+      ],
+      "delay": 32.496,
+      "dur": 5.112,
+      "spin": 0,
+      "opts": {
+       "s": 0.85,
+       "shrink": 60.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 40.37,
+      "dur": 12.411,
+      "spin": 0,
+      "opts": {
+       "text": "WATER VAPOR",
+       "color": "#1d3a8a"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "vapor",
+      "at": [
+       2.45,
+       -0.9,
+       0.0
+      ],
+      "delay": 53.671,
+      "dur": 6.223,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.45,
+       -0.9,
+       0.0
+      ],
+      "delay": 56.308,
+      "dur": 3.586,
+      "spin": 0,
+      "opts": {
+       "s": 0.75
+      }
+     }
+    ]
+   },
+   {
+    "section": "clouds",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLOUDS!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.563,
+      "dur": 9.042,
+      "spin": 0,
+      "opts": {
+       "text": "COLDER",
+       "color": "#1479d6",
+       "win": 6.642
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.013,
+      "dur": 6.192,
+      "spin": 0,
+      "opts": {
+       "text": "WARMER",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.455,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.434,
+      "dur": 10.633,
+      "spin": 0,
+      "opts": {
+       "text": "WATER",
+       "color": "#1479d6",
+       "win": 8.633
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.884,
+      "dur": 8.183,
+      "spin": 0,
+      "opts": {
+       "text": "SAND",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.317,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       2.55,
+       -0.6,
+       0.3
+      ],
+      "delay": 13.55,
+      "dur": 8.176,
+      "spin": 0,
+      "opts": {
+       "hot": false
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.792,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "dust",
+      "at": [
+       2.45,
+       -0.9,
+       2.1
+      ],
+      "delay": 28.892,
+      "dur": 12.552,
+      "spin": 0,
+      "opts": {
+       "s": 1.1,
+       "grow": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "cloud",
+      "at": [
+       2.45,
+       -0.9,
+       1.7
+      ],
+      "delay": 42.543,
+      "dur": 7.804,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 45.553,
+      "dur": 4.794,
+      "spin": 0,
+      "opts": {
+       "text": "CONDENSATION",
+       "color": "#3561d9"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "cloud",
+      "at": [
+       2.45,
+       -0.9,
+       1.7
+      ],
+      "delay": 51.267,
+      "dur": 8.26,
+      "spin": 0,
+      "opts": {
+       "s": 1.0
+      }
+     }
+    ]
+   },
+   {
+    "section": "rain",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "RAIN!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.0,
+      "dur": 8.614,
+      "spin": 0,
+      "opts": {
+       "text": "HEAVY",
+       "color": "#1479d6",
+       "win": 6.214
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 4.45,
+      "dur": 5.764,
+      "spin": 0,
+      "opts": {
+       "text": "SLEEPY",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 6.464,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.343,
+      "dur": 8.617,
+      "spin": 0,
+      "opts": {
+       "text": "TEARDROP",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 75.793,
+      "dur": 10.167,
+      "spin": 0,
+      "opts": {
+       "text": "BUN",
+       "color": "#e85d00",
+       "win": 8.167
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 80.21,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "cloud",
+      "at": [
+       2.45,
+       -0.9,
+       2.7
+      ],
+      "delay": 14.4,
+      "dur": 12.596,
+      "spin": 0,
+      "opts": {
+       "s": 1.0,
+       "grey": true,
+       "rain": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 29.645,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "drops",
+      "at": [
+       2.0,
+       -0.9,
+       2.0
+      ],
+      "delay": 32.705,
+      "dur": 5.984,
+      "spin": 0,
+      "opts": {
+       "kinds": [
+        "round",
+        "bun"
+       ],
+       "s": 1.4,
+       "times": [
+        0.0,
+        3.13
+       ]
+      }
+     },
+     {
+      "type": "teach",
+      "name": "drops",
+      "at": [
+       2.45,
+       -0.9,
+       2.0
+      ],
+      "delay": 39.079,
+      "dur": 1.932,
+      "spin": 0,
+      "opts": {
+       "kinds": [
+        "tear"
+       ],
+       "s": 1.5
+      }
+     },
+     {
+      "type": "teach",
+      "name": "river",
+      "at": [
+       2.3,
+       -0.7,
+       0.0
+      ],
+      "delay": 41.851,
+      "dur": 6.24,
+      "spin": 0,
+      "opts": {
+       "s": 0.85
+      }
+     },
+     {
+      "type": "teach",
+      "name": "cycle",
+      "at": [
+       2.45,
+       -0.9,
+       2.1
+      ],
+      "delay": 50.481,
+      "dur": 10.406,
+      "spin": 0,
+      "opts": {
+       "s": 1.05
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 1.0,
+      "dur": 5.478
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 6.478,
+      "dur": 10.85,
+      "spin": 0,
+      "opts": {
+       "text": "THE SUN",
+       "color": "#1479d6",
+       "win": 8.85
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 6.928,
+      "dur": 8.4,
+      "spin": 0,
+      "opts": {
+       "text": "THE WIND",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 11.578,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 17.336,
+      "dur": 10.646,
+      "spin": 0,
+      "opts": {
+       "text": "WATER",
+       "color": "#1479d6",
+       "win": 8.646
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 17.786,
+      "dur": 8.196,
+      "spin": 0,
+      "opts": {
+       "text": "COTTON",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 22.232,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 28.851,
+      "dur": 12.546,
+      "spin": 0,
+      "opts": {
+       "text": "RAIN",
+       "color": "#1479d6",
+       "win": 10.546
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 29.301,
+      "dur": 10.096,
+      "spin": 0,
+      "opts": {
+       "text": "FLY AWAY",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 35.647,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "orbit",
+     "dolly",
+     "wide"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": [
+       0.0,
+       0.5,
+       3.15
+      ],
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "gzx_ep02",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "gzx_ep02_timing.json",
+  "audio": "gzx_ep02_song.wav"
+ }
+}

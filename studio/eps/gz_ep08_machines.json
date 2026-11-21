@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep08_machines",
+ "title": "Simple Machines for Kids! Wheels, Levers and Ramps",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how simple machines help us.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_wheel",
+   "lines": [
+    [
+     "Here's a clue: it's round, and it goes round and round! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Wheel!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Dragging a heavy box is hard, because it rubs on the ground.",
+     "fx+bob"
+    ],
+    [
+     "Wheels roll instead of rubbing, so wagons, cars, and bikes move along easily!",
+     "bob"
+    ],
+    [
+     "Can you roll your arms round and round like a wheel?",
+     "wiggle"
+    ],
+    [
+     "Why are wheels so helpful?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "They roll, so things are easier to move!",
+     "fx2+badge:ROLL!"
+    ],
+    [
+     "Let's say it together: WHEEL!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WHEEL!",
+     "zoom"
+    ],
+    [
+     "Wheels are on wagons, strollers, trains, and even shopping carts.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_lever",
+   "lines": [
+    [
+     "Here's a clue: a seesaw is one, up and down! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Lever!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A lever is a long bar that rests on a point, called a fulcrum.",
+     "fx+bob"
+    ],
+    [
+     "Push down on one end, and the other end goes up! It helps you lift heavy things.",
+     "bob"
+    ],
+    [
+     "Can you be a seesaw? One arm up, one arm down!",
+     "wiggle"
+    ],
+    [
+     "What happens when you push down on a lever?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The other end goes up!",
+     "fx2+badge:LIFT!"
+    ],
+    [
+     "Let's say it together: LEVER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LEVER!",
+     "zoom"
+    ],
+    [
+     "A seesaw at the playground is a lever you can ride on!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_ramp",
+   "lines": [
+    [
+     "Here's a clue: it's a slope that goes up, like a little hill! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Ramp!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Lifting a heavy box straight up is really hard.",
+     "fx+bob"
+    ],
+    [
+     "A ramp is a longer path, but each push is smaller. So moving things up gets easier!",
+     "bob"
+    ],
+    [
+     "Can you walk your fingers up a pretend ramp, step, step, step?",
+     "wiggle"
+    ],
+    [
+     "Why do people use ramps?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Ramps make it easier to move things up high!",
+     "fx2+badge:EASY UP!"
+    ],
+    [
+     "Let's say it together: RAMP!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: RAMP!",
+     "zoom"
+    ],
+    [
+     "Ramps help wheelchairs, strollers, and delivery carts go up and down.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_pulley",
+   "lines": [
+    [
+     "Here's a clue: it's a wheel with a rope that helps lift things! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Pulley!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A pulley is a wheel with a rope going over the top.",
+     "fx+bob"
+    ],
+    [
+     "When you pull the rope down, the thing on the other end goes up! Pulling down is easier than lifting up.",
+     "bob"
+    ],
+    [
+     "Can you pull a pretend rope, hand over hand?",
+     "wiggle"
+    ],
+    [
+     "Which way do you pull to lift with a pulley?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Down! And the bucket goes up.",
+     "fx2+badge:PULL!"
+    ],
+    [
+     "Let's say it together: PULLEY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PULLEY!",
+     "zoom"
+    ],
+    [
+     "Flagpoles use a pulley to raise the flag to the very top.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_screw",
+   "lines": [
+    [
+     "Here's a clue: it twists, and it has a spiral around it! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Screw!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A screw is like a tiny ramp, wrapped around and around a pole.",
+     "fx+bob"
+    ],
+    [
+     "When you twist it, the spiral pulls the screw in, and it holds things together tight!",
+     "bob"
+    ],
+    [
+     "Can you twist your body around and around, like a screw?",
+     "wiggle"
+    ],
+    [
+     "What does a screw do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It twists in and holds things together!",
+     "fx2+badge:TWIST!"
+    ],
+    [
+     "Let's say it together: SCREW!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SCREW!",
+     "zoom"
+    ],
+    [
+     "Jar lids twist on the same way. That's a screw too!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Wheels roll.",
+   "@gz2_wheel"
+  ],
+  [
+   "Levers lift.",
+   "@gz2_lever"
+  ],
+  [
+   "Ramps make going up easier.",
+   "@gz2_ramp"
+  ],
+  [
+   "Pulleys lift when you pull down.",
+   "@gz2_pulley"
+  ],
+  [
+   "And screws twist in tight!",
+   "@gz2_screw"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

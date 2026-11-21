@@ -1,0 +1,285 @@
+{
+ "id": "ep0x_bugs",
+ "title": "Backyard Bugs for Kids! 5 Bug Surprises with Milo",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're going on a backyard bug hunt to meet five tiny friends.",
+   ""
+  ],
+  [
+   "Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Grab your magnifying glass. Let's explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "ladybug",
+   "lines": [
+    [
+     "Here's our first friend. Here's a clue: it's red with black spots! Can you guess?",
+     "q"
+    ],
+    [
+     "First stop: the ladybug!",
+     "enter"
+    ],
+    [
+     "Ladybugs have spots on their shiny wing covers.",
+     "zoom"
+    ],
+    [
+     "Different kinds of ladybugs have different numbers of spots.",
+     "bob"
+    ],
+    [
+     "Can you count the spots with me? One, two, three, four, five, six!",
+     "wiggle"
+    ],
+    [
+     "Can you guess why ladybugs are so bright?",
+     "q"
+    ],
+    [
+     "Their bright colors tell birds: I taste yucky, don't eat me!",
+     "fx+badge:BRIGHT = YUCKY!"
+    ],
+    [
+     "Let's say it together: LADYBUG!",
+     "zoom"
+    ],
+    [
+     "Ladybugs help gardens by protecting the plants.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, ladybug!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bee",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it buzzes and makes honey! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: the honeybee!",
+     "enter"
+    ],
+    [
+     "Honeybees make honey from the sweet nectar in flowers.",
+     "zoom+badge:HONEY MAKER!"
+    ],
+    [
+     "Their wings flap super fast. That's what makes the buzz!",
+     "bob"
+    ],
+    [
+     "Can you buzz like a bee? Bzzzz!",
+     "wiggle"
+    ],
+    [
+     "Can you guess how many eyes a bee has?",
+     "q"
+    ],
+    [
+     "Five! Two big eyes, and three tiny eyes on top of its head.",
+     "fx2+badge:5 EYES!"
+    ],
+    [
+     "Let's say it together: HONEYBEE!",
+     "zoom"
+    ],
+    [
+     "Bees do a waggle dance to show friends where the flowers are.",
+     "fx2off+fx+wiggle"
+    ],
+    [
+     "Bye-bye, honeybee!",
+     "fxoff+bob"
+    ]
+   ]
+  },
+  {
+   "key": "butterfly",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has big, colorful wings! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: the butterfly!",
+     "enter"
+    ],
+    [
+     "Butterflies drink sweet nectar with a long tongue, like a curly straw.",
+     "zoom"
+    ],
+    [
+     "Every butterfly starts out as a little caterpillar.",
+     "fx2+bob"
+    ],
+    [
+     "Can you flutter your arms like butterfly wings?",
+     "fx2off+wiggle"
+    ],
+    [
+     "Can you guess what a butterfly tastes with?",
+     "q"
+    ],
+    [
+     "Its feet! Butterflies have tiny tasters on their feet.",
+     "fx+badge:TASTY FEET!"
+    ],
+    [
+     "Let's say it together: BUTTERFLY!",
+     "zoom"
+    ],
+    [
+     "Butterflies love warm, sunny days.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, butterfly!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "ant",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's tiny, but super strong! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: the ant!",
+     "enter"
+    ],
+    [
+     "Ants live together in big groups called colonies.",
+     "zoom"
+    ],
+    [
+     "Ants talk with smells, and by touching their antennae.",
+     "fx2+bob"
+    ],
+    [
+     "Can you wiggle your fingers like ant antennae?",
+     "fx2off+wiggle"
+    ],
+    [
+     "Can you guess? Can an ant carry something heavier than itself?",
+     "q"
+    ],
+    [
+     "Yes! Ants can carry things much heavier than their own bodies.",
+     "fx+badge:SUPER STRONG!"
+    ],
+    [
+     "Let's say it together: ANT!",
+     "hop"
+    ],
+    [
+     "Ants work together as a team.",
+     "fxoff+bob"
+    ],
+    [
+     "Bye-bye, ant!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "snail",
+   "lines": [
+    [
+     "Who's last? Here's a clue: it carries its house on its back! Can you guess?",
+     "q"
+    ],
+    [
+     "Next stop: the snail!",
+     "enter"
+    ],
+    [
+     "A snail's shell is its home. It goes everywhere with it!",
+     "zoom"
+    ],
+    [
+     "Snails slide along on a slippery trail of slime.",
+     "fx+bob"
+    ],
+    [
+     "Can you move slowly, slowly, like a snail?",
+     "fxoff+wiggle"
+    ],
+    [
+     "Can you guess where a snail's eyes are?",
+     "q"
+    ],
+    [
+     "At the tips of its long tentacles! Way up high.",
+     "fx2+badge:EYES ON TOP!"
+    ],
+    [
+     "Let's say it together: SNAIL!",
+     "zoom"
+    ],
+    [
+     "When it's very dry, a snail can hide in its shell and rest for a long time.",
+     "fx2off+bob"
+    ],
+    [
+     "Bye-bye, snail!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a bug hunt! Let's remember.",
+   "@title"
+  ],
+  [
+   "Bright ladybugs tell birds they taste yucky.",
+   "@ladybug"
+  ],
+  [
+   "Honeybees have five eyes.",
+   "@bee"
+  ],
+  [
+   "Butterflies taste with their feet.",
+   "@butterfly"
+  ],
+  [
+   "Ants are super strong.",
+   "@ant"
+  ],
+  [
+   "And snails have eyes on their tentacles!",
+   "@snail"
+  ]
+ ],
+ "outro": [
+  [
+   "Which bug was your favorite? Look closely next time you're outside, and be kind to every animal, big and small.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ]
+}

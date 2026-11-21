@@ -1,0 +1,351 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nStripes and spots and fluffy manes,\nEvery animal looks different, not the same!\nLook so close, what do you see?\nAnimal patterns, one, two, three!\n\n[Verse 1]\nZebra has stripes, black and white,\nStripes on the left, stripes on the right!\nGiraffe has spots, brown and tan,\nCount the spots if you can!\n\n[Chorus]\nStripes and spots and fluffy manes,\nEvery animal looks different, not the same!\nLook so close, what do you see?\nAnimal patterns, one, two, three!\n\n[Verse 2]\nLion has a mane, big and round,\nShake it, shake it, all around!\nElephant has wrinkly skin,\nBig gray ears and a happy grin!\n\n[Bridge]\nWiggle like a zebra, stripe, stripe, stripe!\nStretch like a giraffe, way up high!\nShake like a lion, shake your mane,\nFlap your ears and do it again!\n\n[Verse 3]\nHippo is smooth and purple too,\nMilo has feathers, bright and blue!\nEvery friend is special, it's true,\nJust like me and just like you!\n\n[Chorus]\nStripes and spots and fluffy manes,\nEvery animal looks different, not the same!\nLook so close, what do you see?\nAnimal patterns, one, two, three!\n\n[Outro]\nStripes and spots! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 604,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Stripes and Spots! Animal Patterns Song for Kids with Milo",
+  "card": "Stripes and Spots!",
+  "thumb_text": "STRIPES & SPOTS!",
+  "description": "Stripes, spots and fluffy manes! Milo and the zoo friends look closely at animal patterns: the zebra's black and white stripes, the giraffe's spots, the lion's mane and the elephant's wrinkly skin.\nKids wiggle like a zebra, stretch like a giraffe and shake like a lion, and learn that every friend is special. Ages 2-5.",
+  "tags": [
+   "animal patterns song",
+   "zebra stripes",
+   "giraffe spots",
+   "animal song for kids",
+   "safari animals",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep08",
+  "title": "Stripes and Spots!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES & SPOTS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:zebra",
+     "giraffe",
+     "close:zebra",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "Zebra",
+      "opts": {
+       "text": "ZEBRA"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "Giraffe",
+      "opts": {
+       "text": "GIRAFFE"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "LOOK CLOSE!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:lion",
+     "close:elephant",
+     "close:lion",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "Lion",
+      "opts": {
+       "text": "LION"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "Elephant",
+      "opts": {
+       "text": "ELEPHANT"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "WIGGLE!",
+      "color": "#333333",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "wiggle"
+     },
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#ffb627",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "stretch"
+     },
+     {
+      "type": "text",
+      "text": "SHAKE!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "shake"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:hippo",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "word": "special,"
+     },
+     {
+      "type": "text",
+      "text": "SPECIAL!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.6,
+      "word": "true,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRIPES & SPOTS!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

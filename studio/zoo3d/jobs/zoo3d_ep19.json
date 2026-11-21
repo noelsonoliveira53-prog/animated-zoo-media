@@ -1,0 +1,375 @@
+{
+ "id": "zoo3d_ep19",
+ "title": "Good Morning, Farm!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 19,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "cow",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "cow"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "pig",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "pig"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "horse",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "horse"
+   },
+   "yaw": 0.38
+  }
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "farm",
+   "tod": "morning",
+   "formation": "line"
+  },
+  {
+   "from": "verse1",
+   "biome": "farm",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "cow"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "pig"
+   ]
+  },
+  {
+   "from": "prechorus1",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "river",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "spring_meadow",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "horse"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "farm",
+   "tod": "sunset",
+   "formation": "duo",
+   "shot": "side"
+  },
+  {
+   "from": "bridge1",
+   "biome": "farm",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "farm",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "duo",
+   "shot": "side"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "farm",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "farm",
+   "tod": "sunset",
+   "formation": "line"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:cow",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "MOO!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:cow",
+    "close:host",
+    "close:pig",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "MOO!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:horse",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "OINK!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:horse",
+    "close:host",
+    "close:host",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "NEIGH!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:cow",
+    "close:pig",
+    "close:horse",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "TWEET!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:cow",
+    "close:host",
+    "close:pig",
+    "close:host",
+    "close:horse",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HELLO!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "GOOD MORNING!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.8
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep19",
+ "res": "1920x1080",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "timing_file": "zoo3d_ep19_timing.json",
+ "audio": "zoo3d_ep19_song.wav"
+}

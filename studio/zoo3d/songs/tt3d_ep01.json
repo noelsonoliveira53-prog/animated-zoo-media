@@ -1,0 +1,412 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, siren synth, bouncy drums, major key, catchy repetitive chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Verse 1]\nUp, up, up goes the ladder,\nUp so high into the sky!\nCount the steps: one, two, three, four!\nFirefighters climb up high!\n\n[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Verse 2]\nHere's the hose, it's long and strong,\nWater from the hydrant comes along!\nSpray, spray, spray it high and low,\nWhoosh! The water starts to flow!\n\n[Bridge]\nClap, clap! Clap your hands with me!\nStomp, stomp! Stomp like a big truck!\nJump, jump! Jump up, one, two, three!\nHonk, honk! Beep, beep! Here we go!\n\n[Verse 3]\nSee the lights go flash, flash, flash,\nHear the siren: wee-oo, wee-oo!\nCars move over, make some room,\nFire truck's coming, zoom, zoom, zoom!\n\n[Verse 4]\nHelmets, boots and big strong coats,\nFirefighters stay safe and warm!\nThank you, thank you, brave and kind,\nFirefighters help all the time!\n\n[Chorus]\nFire truck, fire truck, big and red!\nLadder up and hoses spray!\nWee-oo, wee-oo, clear the way!\nFire truck, fire truck, saves the day!\n\n[Outro]\nWee-oo, wee-oo! Bye-bye, fire truck!",
+ "duration": 165,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 11,
+ "who_map": {},
+ "meta": {
+  "title": "Fire Truck Song for Kids! Wee-oo with Bolt the Fire Truck",
+  "card": "Fire Truck Song!",
+  "thumb_text": "FIRE TRUCK SONG!",
+  "description": "The Fire Truck Song for kids! Sing along with Bolt the fire truck and his truck friends in Tiny Truck Town.\nKids learn what fire trucks do: ladders, hoses, sirens and lights, and how firefighters stay safe. Count 1 to 4, then clap, stomp and jump along. Ages 2-6.",
+  "tags": [
+   "fire truck song",
+   "fire truck for kids",
+   "trucks for kids",
+   "kids songs",
+   "nursery rhymes",
+   "vehicle songs",
+   "wee-oo song",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep01_v3",
+  "title": "Fire Truck Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.8,
+   "jump": 0.3
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9
+     },
+     {
+      "type": "set_prop",
+      "name": "ladder",
+      "at": "far_left",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "low",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "ladder",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "one",
+      "at": [
+       -2.7,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 1,
+       "color": "#e8302a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "two",
+      "at": [
+       -0.9,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 2,
+       "color": "#ff9f1a"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "three",
+      "at": [
+       0.9,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 3,
+       "color": "#ffc107"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "number",
+      "word": "four",
+      "at": [
+       2.7,
+       1.6,
+       3.6
+      ],
+      "opts": {
+       "n": 4,
+       "color": "#2fb59a"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "low",
+     "close:host",
+     "wide",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9
+     },
+     {
+      "type": "set_prop",
+      "name": "hose",
+      "at": "far_left",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:host",
+     "street",
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "hose",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "set_prop",
+      "name": "hydrant",
+      "at": "right",
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "water",
+      "at": "top",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "close:police",
+     "close:dump",
+     "wide"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.45,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#ff5d9e",
+      "at": "far_left",
+      "size": 1.0,
+      "delay": 0.0
+     },
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#ff9f1a",
+      "at": "far_right",
+      "size": 1.0,
+      "delay": 4.14
+     },
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#2fb59a",
+      "at": "top",
+      "size": 1.1,
+      "delay": 8.28
+     },
+     {
+      "type": "text",
+      "text": "BEEP!",
+      "color": "#3b8be0",
+      "at": "front",
+      "size": 0.8,
+      "delay": 12.41
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "street",
+     "close:host"
+    ],
+    "energy": 0.65,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "left",
+      "delay": 0.2
+     },
+     {
+      "type": "text",
+      "text": "WEE-OO!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.9,
+      "delay": 4.14
+     },
+     {
+      "type": "set_prop",
+      "name": "cone",
+      "at": "right",
+      "delay": 8.28
+     }
+    ]
+   },
+   {
+    "section": "verse4",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": "left",
+      "delay": 0.3
+     },
+     {
+      "type": "text",
+      "text": "SAFE!",
+      "color": "#2fb59a",
+      "at": "right",
+      "size": 0.9,
+      "delay": 2.5
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.5,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIRE TRUCK SONG",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "siren",
+      "at": "far_left"
+     },
+     {
+      "type": "set_prop",
+      "name": "helmet",
+      "at": "far_right",
+      "delay": 4.14
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.5,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5d9e",
+      "at": "top",
+      "size": 1.0,
+      "delay": 0.3
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep01",
+  "res": "1280x720",
+  "step": 2
+ }
+}

@@ -1,0 +1,80 @@
+{
+ "length": 309.4,
+ "shots": 55,
+ "visual_changes": 313,
+ "mean_gap": 0.99,
+ "longest_gap": 5.38,
+ "longest_gap_at": 170.0,
+ "over_6s": [],
+ "places": [
+  "dunes",
+  "zoo_eve",
+  "barn",
+  "zoo_night",
+  "night",
+  "zoo"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_pink",
+  "paper_blue"
+ ],
+ "questions": 13,
+ "longest_without_question": 40.3,
+ "first_words_at": 0.42,
+ "shot_mean": 5.63,
+ "beats": {
+  "hook": 1,
+  "goal": 9,
+  "fact": 3,
+  "obstacle1": 6,
+  "obstacle2": 7,
+  "obstacle3": 4,
+  "low": 4,
+  "solution": 5,
+  "song": 2,
+  "ending": 13
+ },
+ "fails": [],
+ "words_placed": "652/652",
+ "sync": {
+  "pauses_checked": 53,
+  "onset_err_mean_ms": 23.8,
+  "onset_err_max_ms": 90.0,
+  "suspect_words": [],
+  "cuts": 54,
+  "cuts_on_the_half_beat": 54,
+  "songs_entering_on_a_beat": "2/2",
+  "process": "3D (beat)"
+ }
+}
+{
+  "ok": true,
+  "outputDir": "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d",
+  "frames": [
+    {
+      "path": "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/frame-00-at-158.45s.png",
+      "time": 158.45
+    },
+    {
+      "path": "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/frame-01-at-309.134s.png",
+      "time": 309.134
+    }
+  ],
+  "contactSheets": [
+    "/home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/contact-sheet.jpg"
+  ],
+  "_meta": {
+    "version": "0.8.231",
+    "latestVersion": "0.9.72",
+    "updateAvailable": true
+  }
+}
+ 8b (recorded-revision)
+   State: /home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/video-state.json
+
+◇  2 snapshots saved to /home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/frame-00-at-158.45s.png
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/frame-01-at-309.134s.png
+   /home/claude/animated-zoo-media/studio/cartoon/out/za_ep09/proj_l/.hyperframes/artifacts/snapshots/38753317-4178-4bf4-a572-436d386f800d/contact-sheet.jpg (grid view for AI review)
+

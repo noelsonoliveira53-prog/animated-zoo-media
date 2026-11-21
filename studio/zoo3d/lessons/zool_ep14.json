@@ -1,0 +1,697 @@
+{
+ "id": "zool_ep14",
+ "thumb_at": [
+  "bear",
+  3,
+  0.8
+ ],
+ "seed": 59,
+ "title": "Baby Animals for Kids! How Animal Babies Grow with Milo",
+ "card": "Animal Babies!",
+ "thumb_text": "WINTER DEN!",
+ "description": "How do baby animals grow? Guess the baby with Milo the bluebird, then find out: bear cubs are born in a den in the middle of winter, a foal usually stands up within an hour of being born, and a baby elephant cannot drink with its trunk yet, so it kneels down, while the whole family helps look after it.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "baby animals for kids",
+  "animal babies",
+  "bear cub facts",
+  "baby elephant for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "bear",
+  "horse",
+  "elephant"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cub",
+   "kind": "bear",
+   "scale": 0.45
+  },
+  {
+   "id": "foal",
+   "kind": "horse",
+   "scale": 0.5
+  },
+  {
+   "id": "calf",
+   "kind": "elephant",
+   "scale": 0.45
+  }
+ ],
+ "facts": [
+  "Black bear cubs are born in the middle of the winter denning period (mid-January to early February), in their mothers' dens; they are born tiny, helpless and hairless, weighing less than half a pound, and stay with their mother for about 18 months; curved claws help black bears climb trees to search for food; 85% of a Great Smoky Mountains black bear's diet is berries and nuts (National Park Service, 'Black Bears', nps.gov/subjects/bears/black-bears.htm, read Nov 15 2026).",
+  "A newborn foal usually stands within 1 hour after birth, typically after several failed attempts; as soon as it is steady, often within an hour, it tries to nurse; it walks and runs for the first time within 90 minutes; by the end of the third month foals spend 60 percent of their time with other foals (eXtension Horses, 'Care of the newborn foal', horses.extension.org, read Nov 15 2026).",
+  "African savanna elephant calves weigh about 90-120 kg at birth and can stand about 15 minutes after birth; calves rely on milk only for the first 3 months; they cannot use the trunk to drink until about 8-9 months and get down on their knees to drink until they have enough trunk control; full trunk coordination at 1 year; calves are looked after by their mothers and other adult and subadult females in the herd, and the helpers let the mother feed and rest (SDZWA Library fact sheet 'African Elephants', Reproduction & Development, read Nov 15 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "beach",
+   "tod": "morning",
+   "word": "ANIMAL BABIES!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about animal babies!",
+    "How do baby animals grow up?",
+    "Three animal families will show us. Count them with me. One, two, three!",
+    "Are you ready to guess the baby? Let's go!"
+   ]
+  },
+  {
+   "name": "bear",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "word": "CUB!",
+   "word_on": [
+    2,
+    "cub"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "bear",
+      "cub"
+     ],
+     "place": {
+      "cub": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "BEAR",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "A DEN",
+     "b": "A NEST",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "den",
+     "at": [
+      2.75,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      3,
+      "den"
+     ],
+     "off": [
+      7
+     ]
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      3.0
+     ],
+     "on": [
+      3,
+      "winter"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "on": [
+      6,
+      "mama"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      10,
+      "berries"
+     ],
+     "off": [
+      12
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "t": "Which baby is born in a cozy den, in the middle of winter?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it a baby bear? Or a baby pig?",
+     "pause": 3.2
+    },
+    "It is the baby bear! A baby bear is called a cub.",
+    "Here is the fun fact. A mama bear has her cubs in a den, in the middle of winter.",
+    "A newborn cub is tiny. It has no fur yet!",
+    {
+     "t": "How long does a little cub stay with its mama? Hmm.",
+     "pause": 2.4
+    },
+    "About a year and a half! That is a long, long time with mama.",
+    "That is even longer than one whole year!",
+    [
+     "Now look at the bear's paws. Its claws are curved.",
+     "close:bear"
+    ],
+    "Curved claws help a bear climb up trees, to look for food.",
+    "What does a bear eat? Some bears eat mostly berries and nuts! Yum, yum!",
+    "Black bears will eat almost anything! Berries, nuts, and lots more.",
+    [
+     "Say it with me. Bear cubs are born in a den!",
+     "close:host"
+    ],
+    "Can you climb like a bear? Reach up high, and climb, climb, climb!",
+    "Now curl up small, like a tiny cub in a cozy den. Snuggle, snuggle!",
+    {
+     "t": "Quick check! Where are bear cubs born? In a den? Or in a nest?",
+     "pause": 3.2
+    },
+    "In a den! Cozy and snug. Great job!"
+   ],
+   "short": {
+    "id": "zs90_bear_cub",
+    "title": "Where Are Bear Cubs Born? Baby Animals with Milo",
+    "l1": "GUESS THE",
+    "l2": "BABY!",
+    "thumb_text": "WINTER DEN!",
+    "thumb_line": [
+     3,
+     0.8
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "horse",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "word": "FOAL!",
+   "word_on": [
+    2,
+    "foal"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "horse",
+      "foal"
+     ],
+     "place": {
+      "foal": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "HORSE",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "1 HOUR",
+     "b": "1 WEEK",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "hour"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "1 HOUR",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "milk",
+     "at": "ex",
+     "on": [
+      6,
+      "milk"
+     ],
+     "off": [
+      8
+     ]
+    },
+    {
+     "prop": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "on": [
+      9,
+      "foals"
+     ],
+     "off": [
+      11
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Which baby can stand up on its legs less than one hour after it is born?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it a baby horse? Or a baby pig?",
+     "pause": 3.2
+    },
+    "It is the baby horse! A baby horse is called a foal.",
+    "Here is the fun fact. A foal usually stands up within one hour after it is born!",
+    "Wobble, wobble! It tries, and falls, and tries again. And up it goes!",
+    {
+     "t": "What does the foal do, as soon as it can stand? Hmm.",
+     "pause": 2.4
+    },
+    "It drinks mama's milk! Slurp, slurp.",
+    "And before it is two hours old, the foal walks, and even runs, for the very first time!",
+    [
+     "Wow! So many big steps on its very first day!",
+     "close:horse"
+    ],
+    "When it grows a bit bigger, the foal spends lots of time with other foals.",
+    "Just like you spend time with your friends!",
+    "Wobble, stand, drink, walk and run. All on its very first day!",
+    [
+     "Say it with me. A foal can stand up in one hour!",
+     "close:host"
+    ],
+    "Can you wobble like a foal? Wobble, and wobble. Now stand up tall!",
+    "Now gallop like a horse! Clip, clop, clip, clop!",
+    {
+     "t": "Quick check! How soon can a foal stand up? In one hour? Or in one week?",
+     "pause": 3.2
+    },
+    "In one hour! What a strong baby. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_foal_stand",
+    "title": "How Fast Can a Baby Horse Stand Up? Foal Facts",
+    "l1": "GUESS THE",
+    "l2": "BABY!",
+    "thumb_text": "WOBBLE WOBBLE!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "elephant",
+   "biome": "savanna",
+   "tod": "sunset",
+   "word": "CALF!",
+   "word_on": [
+    2,
+    "calf"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "elephant",
+      "calf"
+     ],
+     "place": {
+      "calf": [
+       0.75,
+       -1.0,
+       0.0
+      ]
+     }
+    }
+   ],
+   "choices": {
+    "a": "ELEPHANT",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "MAMA",
+     "b": "FAMILY",
+     "right": "b",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "pool",
+     "at": [
+      2.4,
+      -0.9,
+      0.0
+     ],
+     "on": [
+      4,
+      "water"
+     ],
+     "off": [
+      6
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      6,
+      "end"
+     ],
+     "off": [
+      7
+     ]
+    },
+    {
+     "prop": "heart",
+     "at": [
+      2.5,
+      -1.3,
+      2.4
+     ],
+     "on": [
+      7,
+      "family"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      9,
+      "fifteen"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "15 MINUTES",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "milk",
+     "at": "ex",
+     "on": [
+      10,
+      "milk"
+     ],
+     "off": [
+      12
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "t": "Which baby has a long trunk, but cannot drink with it yet?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it a baby elephant? Or a baby pig?",
+     "pause": 3.2
+    },
+    "It is the baby elephant! A baby elephant is called a calf.",
+    "Here is the fun fact. A baby elephant cannot drink water with its trunk yet!",
+    "So how does it drink water? It gets down on its knees, and drinks with its mouth. Slurp!",
+    "It takes many months to learn. By its first birthday, the calf can use its trunk really well!",
+    {
+     "t": "Who helps take care of the baby elephant? Hmm.",
+     "pause": 2.4
+    },
+    "The whole family! Mama, and the other girl elephants in the herd, all help.",
+    "The helpers look after the calf, so mama can eat and rest.",
+    "And a baby elephant can stand up about fifteen minutes after it is born!",
+    "For its first three months, the calf drinks only mama's milk.",
+    "So remember. A baby elephant kneels down to drink!",
+    [
+     "Say it with me. The whole family helps the baby elephant!",
+     "close:host"
+    ],
+    "Can you swing your arm like a trunk? Swing, swing, swing!",
+    "Now kneel down to drink, like a baby elephant. Slurp!",
+    {
+     "t": "Quick check! Who helps take care of a baby elephant? Only mama? Or the whole family?",
+     "pause": 3.2
+    },
+    "The whole family! Hooray for families!"
+   ],
+   "short": {
+    "id": "zs90_elephant_calf",
+    "title": "How Does a Baby Elephant Drink? Elephant Facts",
+    "l1": "GUESS THE",
+    "l2": "BABY!",
+    "thumb_text": "KNEEL DOWN!",
+    "thumb_line": [
+     4,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "mountain",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three animal babies. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Whose babies are born in a den, in the middle of winter?",
+     "The bear! Yes!",
+     "bear"
+    ],
+    [
+     "Whose baby stands up within one hour?",
+     "The horse! That's right!",
+     "horse"
+    ],
+    [
+     "Whose baby kneels down to drink with its mouth?",
+     "The elephant! You remembered!",
+     "elephant"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "farm",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Curl up like a cub. Wobble like a foal. And swing like a baby elephant!",
+    "Who helps take care of you?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "answer signs never cut by a close-up: no answer line is a close-up, and teach.py forces the teaching shot while signs are up (defect from the Nov 15 frame check of zool_ep09 and zool_ep10)",
+  "no jungle part: the flat green jungle backdrop (logged Nov 15) is avoided until the set is rebuilt",
+  "exhibit props at z <= 3.2 (sun cut at the top in zool_ep08)",
+  "picture: new places in the route (river, night meadow, bamboo) and a fresh cast (hippo, rhino, fox: the least-used animals in the variety ledger)",
+  "teaching: sense examples on screen (arrow to the top of the head, sound rings at the ears, magnifier on the horn, 5 MINUTES sign) and a body action in every part (peek, sniff, listen, pounce)"
+ ],
+ "version": 3
+}

@@ -1,0 +1,320 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nSweet or sour, crunchy or soft,\nTaste it, taste it, try a lot!\nYour tongue can tell you every one,\nTasting fruit is so much fun!\n\n[Verse 1]\nA lemon is sour, pucker your face,\nSour, sour, what a taste!\nA strawberry's sweet, mmm, so nice,\nSweet like candy, take a slice!\n\n[Chorus]\nSweet or sour, crunchy or soft,\nTaste it, taste it, try a lot!\nYour tongue can tell you every one,\nTasting fruit is so much fun!\n\n[Verse 2]\nAn apple goes crunch, crunch, crunch,\nA crunchy apple for my lunch!\nA banana is soft, squishy and smooth,\nSoft and yummy, makes me groove!\n\n[Bridge]\nPucker your lips for something sour!\nSmile big for sweet, it's tasting hour!\nCrunch your teeth and chomp, chomp, chomp,\nThen a soft and squishy stomp!\n\n[Verse 3]\nTry a new fruit, take a bite,\nMaybe you'll love it, that's alright!\nSweet, sour, crunchy, soft,\nFruity Friends will taste a lot!\n\n[Chorus]\nSweet or sour, crunchy or soft,\nTaste it, taste it, try a lot!\nYour tongue can tell you every one,\nTasting fruit is so much fun!\n\n[Outro]\nTaste it, taste it! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 1022,
+ "who_map": {},
+ "meta": {
+  "title": "Sweet or Sour? Fruit Tasting Song for Kids | Fruity Friends",
+  "card": "Sweet or Sour?",
+  "thumb_text": "PUCKER UP!",
+  "description": "Sweet, sour, crunchy or soft? The Fruity Friends taste a sour lemon, a sweet strawberry, a crunchy apple and a soft banana.\nKids pucker for sour, smile for sweet, chomp for crunchy, and learn it's fun to try a new fruit. Ages 2-5.",
+  "tags": [
+   "taste song for kids",
+   "sweet and sour",
+   "fruit song for kids",
+   "five senses",
+   "picky eaters",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep13",
+  "title": "Sweet or Sour?",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "TASTE IT!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "SOUR!",
+      "color": "#ffd83a",
+      "at": [
+       -2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.7,
+      "word": "sour,"
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "strawberry's",
+      "opts": {
+       "kind": "strawberry"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "YUM!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "apple",
+      "opts": {
+       "kind": "apple"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "banana",
+      "opts": {
+       "kind": "banana"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "PUCKER!",
+      "color": "#ffd83a",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Pucker"
+     },
+     {
+      "type": "text",
+      "text": "SMILE!",
+      "color": "#ff5c8a",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Smile"
+     },
+     {
+      "type": "text",
+      "text": "CHOMP!",
+      "color": "#e3262b",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "chomp,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "TRY IT!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "word": "Try"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "TASTE IT!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff5c8a",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep13",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

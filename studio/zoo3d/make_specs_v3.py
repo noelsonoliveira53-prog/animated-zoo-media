@@ -1,0 +1,665 @@
+"""Songs v3 (Nov 13, 2026): new-cast, multi-place Zoo songs that follow the VARIETY RULE.
+Each song is written for its own animals and its own route of places (sets/zooworld.py).
+
+  python3 make_specs_v3.py     -> songs/<id>.json + jobs/<id>.song.json, variety-checked and recorded in the ledger
+
+The spec holds the coarse route; once the song is sung and jobs/<id>_timing.json exists, run
+`python3 routes.py jobs/<id>.json` to turn it into the fine scene plan (each chorus, half-verse and bridge its own scene).
+To add a song: append a dict to SONGS (cast = animal kinds from chars/animal.py, route = [(section, biome, tod)]).
+"""
+import json, os, sys
+HERE = os.path.dirname(os.path.abspath(__file__)); sys.path.insert(0, HERE)
+import variety
+
+STYLE = ("high-energy modern sing-along pop for families, {bpm} bpm, bright major key, punchy drums and big handclaps, "
+         "bouncy synth bass, {flavor}, warm friendly male lead vocal with a cheerful group chorus on every chorus, "
+         "call-and-response, verses light and bouncy, pre-chorus builds with a rising snare roll, chorus explodes with full "
+         "band and group vocals, short claps-and-stomps breakdown, final chorus modulates up a whole step with the biggest "
+         "energy, vocals start right away on the first beat with the chorus, no instrumental intro, short punchy ending")
+BOILER = ("The Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. "
+          "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
+SPOTS = [("s1", 0.22), ("s2", -0.22), ("s3", 0.38), ("s4", -0.38), ("s5", -0.1), ("s6", 0.1)]
+T = lambda text, color, size=0.7, **k: dict({"type": "text", "text": text, "color": color, "at": "top", "size": size}, **k)
+
+SONGS = [
+ dict(id="zoo3d_ep17", bpm=122, key="G Major", seed=917, flavor="ukulele, marimba and bamboo flute hooks",
+      title="Panda Loves Bamboo! Forest Animals Song with Milo", card="Forest Friends!", thumb="PANDA!",
+      cast=["panda", "tiger", "monkey", "koala", "fox"],
+      route=[("chorus1", "bamboo", "morning"), ("verse1", "jungle", "noon"), ("chorus2", "bamboo", "noon"),
+             ("verse2", "autumn_forest", "golden"), ("bridge1", "jungle", "morning"), ("chorus3", "bamboo", "sunset")],
+      verses=[["panda", "tiger"], ["monkey", "koala"], ["fox", "host"]],
+      words=["CRUNCH!", "STRIPES!", "MUNCH!", "SWING!", "CLAP!", "FLUFFY!", "FOREST FRIENDS!"],
+      desc="Meet the forest friends with Milo the bluebird! The panda munches bamboo, the tiger shows its stripes, the monkey swings, "
+           "the koala naps in a tree and the fox has a fluffy tail.\nA forest animals song for kids: munch, swing and clap along. Ages 2-6.",
+      tags=["panda song for kids", "forest animals song", "animal song for kids", "bamboo song", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Panda, panda, munch, munch, munch!
+Bamboo breakfast, bamboo lunch!
+Forest friends, come sing with me,
+Clap your hands, one, two, three!
+
+[Verse 1 - light and bouncy]
+The panda is black and white,
+Eating bamboo, bite by bite!
+The tiger has stripes, orange and black,
+Stripes on its tail and stripes on its back!
+
+[Pre-Chorus - build up, rising drums]
+Who is next? Let's take a look,
+Peek around the forest nook!
+
+[Chorus - full band, group vocals]
+Panda, panda, munch, munch, munch!
+Bamboo breakfast, bamboo lunch!
+Forest friends, come sing with me,
+Clap your hands, one, two, three!
+
+[Verse 2 - light and bouncy]
+The monkey swings from tree to tree,
+Swing your arms and swing with me!
+The koala naps the day away,
+Leaves for dinner, every day!
+
+[Bridge - claps and stomps, call and response]
+Munch like a panda! (Munch, munch, munch!)
+Swing like a monkey! (Swing, swing, swing!)
+Stretch like a tiger! (Stretch up high!)
+Now wave your tail and say goodbye!
+
+[Verse 3 - light and bouncy]
+The fox has a tail so fluffy and red,
+It curls up warm when it goes to bed!
+Milo sings up in the tree,
+Forest friends, sing along with me!
+
+[Pre-Chorus - build up, rising drums]
+Who is next? Let's take a look,
+Peek around the forest nook!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Panda, panda, munch, munch, munch!
+Bamboo breakfast, bamboo lunch!
+Forest friends, we sang with glee,
+Clap your hands, one, two, three!
+
+[Outro - quick and happy]
+Munch, munch, munch! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep18", bpm=120, key="D Major", seed=918, flavor="sleigh bells, glockenspiel and pizzicato string hooks",
+      title="Fluffy Coats! Snowy Animals Song for Kids with Milo", card="Snowy Friends!", thumb="BRRR!",
+      cast=["polar_bear", "arctic_fox", "bear", "horse"],
+      route=[("chorus1", "arctic", "noon"), ("verse1", "arctic", "morning"), ("chorus2", "mountain", "morning"),
+             ("verse2", "autumn_forest", "golden"), ("bridge1", "arctic", "sunset"), ("chorus3", "arctic", "night")],
+      verses=[["polar_bear", "arctic_fox"], ["bear", "horse"], ["host", "polar_bear"]],
+      words=["BRRR!", "WHITE!", "FLUFFY!", "WARM!", "SHIVER!", "SNOW!", "FLUFFY COATS!"],
+      desc="Brrr, it's snowy! Milo the bluebird meets animals with fluffy coats: the polar bear and the arctic fox have white fur for the snow, "
+           "the brown bear has thick fur, and the horse grows a warm winter coat.\nA snowy animals song for kids: shiver, hug and stomp along. Ages 2-6.",
+      tags=["winter animals song", "snow song for kids", "polar bear song", "arctic animals for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Fluffy coats, fluffy coats,
+Keep us warm in the snow, snow, snow!
+Brrr, brrr, shake and spin,
+Fluffy coats, let's begin!
+
+[Verse 1 - light and bouncy]
+The polar bear has fur so white,
+It keeps him cozy day and night!
+The arctic fox is white as snow,
+Her fluffy tail is warm, you know!
+
+[Pre-Chorus - build up, rising drums]
+Rub your hands and stomp your feet,
+Warm up, warm up, to the beat!
+
+[Chorus - full band, group vocals]
+Fluffy coats, fluffy coats,
+Keep us warm in the snow, snow, snow!
+Brrr, brrr, shake and spin,
+Fluffy coats, let's begin!
+
+[Verse 2 - light and bouncy]
+The big brown bear has fur so thick,
+It keeps her warm, that is the trick!
+The horse grows a coat when the cold winds blow,
+A winter coat, from head to toe!
+
+[Bridge - claps and stomps, call and response]
+Shiver, shiver! (Brrr, brrr, brrr!)
+Give a hug! (Hug, hug, hug!)
+Stomp the snow! (Stomp, stomp, stomp!)
+Now spin around and off we go!
+
+[Verse 3 - light and bouncy]
+Milo fluffs his feathers blue,
+Feathers keep him cozy too!
+Put on your coat, your hat, your mitts,
+Now we are warm, just like this!
+
+[Pre-Chorus - build up, rising drums]
+Rub your hands and stomp your feet,
+Warm up, warm up, to the beat!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Fluffy coats, fluffy coats,
+Keep us warm in the snow, snow, snow!
+Brrr, brrr, we shook and spun,
+Fluffy coats, that was fun!
+
+[Outro - quick and happy]
+Stay warm! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep19", bpm=124, key="C Major", seed=919, flavor="banjo, fiddle and ukulele hooks",
+      title="Good Morning, Farm! Animal Sounds Song with Milo", card="Good Morning, Farm!", thumb="MOO!",
+      cast=["cow", "pig", "horse"],
+      route=[("chorus1", "farm", "morning"), ("verse1", "farm", "noon"), ("chorus2", "spring_meadow", "noon"),
+             ("verse2", "river", "golden"), ("bridge1", "spring_meadow", "morning"), ("chorus3", "farm", "sunset")],
+      verses=[["cow", "pig"], ["horse", "host"], ["cow", "pig", "horse"]],
+      words=["MOO!", "MOO!", "OINK!", "NEIGH!", "TWEET!", "HELLO!", "GOOD MORNING!"],
+      desc="Good morning, farm! Sing the animal sounds with Milo the bluebird: the cow says moo, the pig says oink, the horse says neigh "
+           "and Milo says tweet.\nA farm animal sounds song for kids: moo, oink and neigh along. Ages 2-6.",
+      tags=["farm animal sounds song", "farm song for kids", "animal sounds for kids", "moo oink neigh", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Good morning, farm! The sun is up!
+Moo and oink and clip, clip, clop!
+Every friend has a sound to say,
+Sing it loud to start the day!
+
+[Verse 1 - light and bouncy]
+The cow says moo, moo, moo,
+She eats green grass, chew, chew, chew!
+The pig says oink, oink, oink,
+He rolls in mud, boink, boink, boink!
+
+[Pre-Chorus - build up, rising drums]
+What do you hear? What do you hear?
+Cup your hands around your ear!
+
+[Chorus - full band, group vocals]
+Good morning, farm! The sun is up!
+Moo and oink and clip, clip, clop!
+Every friend has a sound to say,
+Sing it loud to start the day!
+
+[Verse 2 - light and bouncy]
+The horse says neigh, neigh, neigh,
+She trots around the field all day!
+Milo says tweet, tweet, tweet,
+He sings a song so soft and sweet!
+
+[Bridge - claps and stomps, call and response]
+Moo like a cow! (Moo, moo, moo!)
+Oink like a pig! (Oink, oink, oink!)
+Neigh like a horse! (Neigh, neigh, neigh!)
+Now tweet like Milo and shout hooray!
+
+[Verse 3 - light and bouncy]
+Moo and oink and neigh and tweet,
+Clap your hands and stomp your feet!
+Every sound is fun to do,
+The farm friends sing along with you!
+
+[Pre-Chorus - build up, rising drums]
+What do you hear? What do you hear?
+Cup your hands around your ear!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Good morning, farm! The sun is up!
+Moo and oink and clip, clip, clop!
+Every friend had a sound to say,
+We sang it loud to start the day!
+
+[Outro - quick and happy]
+Moo! Oink! Neigh! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep20", bpm=118, key="F Major", seed=920, flavor="tuba, marimba and hand-drum hooks",
+      title="Trunks Up! Elephant Song for Kids with Milo", card="Trunks Up!", thumb="SPLASH!",
+      cast=["elephant", "hippo", "zebra", "rhino"],
+      route=[("chorus1", "river", "morning"), ("verse1", "jungle", "noon"), ("chorus2", "beach", "noon"),
+             ("verse2", "river", "golden"), ("bridge1", "mountain", "morning"), ("chorus3", "savanna", "sunset")],
+      verses=[["elephant"], ["elephant"], ["elephant"]],
+      words=["TRUNKS UP!", "GRAB!", "REACH!", "SPLASH!", "FLAP!", "MUD!", "TRUNKS UP!"],
+      # facts read Nov 16 2026 11:58 PM ET: San Diego Zoo (trunk used like hands: grab, hold, pick up, reach; "spray themselves with water or roll in
+      # the mud or dust for protection from the sun"; "ear flapping behavior cools their large bodies on warm days"); WWF (trunks "suck up water for drinking")
+      desc="Trunks up! Sing and move with Milo the bluebird and the elephant: reach up high, pick up a leaf, splash in the water and flap your ears.\n"
+           "An elephant song for kids about what a trunk can do. Reach, splash and stomp along. Ages 2-6.",
+      tags=["elephant song for kids", "elephant trunk song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, and sing with me,
+An elephant's trunk is handy as can be!
+
+[Verse 1 - light and bouncy]
+The elephant has a long, long nose,
+Up it reaches, down it goes!
+It picks up a leaf from off the ground,
+It grabs and holds what it has found!
+
+[Pre-Chorus - build up, rising drums]
+What can it do? What can it do?
+Lift your arm and try it too!
+
+[Chorus - full band, group vocals]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, and sing with me,
+An elephant's trunk is handy as can be!
+
+[Verse 2 - light and bouncy]
+The elephant drinks, slurp, slurp, slurp,
+It sucks the water up, up, up!
+Then swoosh! A shower in the sun,
+Splashing water is so much fun!
+
+[Bridge - claps and stomps, call and response]
+Reach like an elephant! (Reach, reach, reach!)
+Splash like an elephant! (Splash, splash, splash!)
+Flap your ears! (Flap, flap, flap!)
+Now give yourself a great big clap!
+
+[Verse 3 - light and bouncy]
+The elephant flaps its ears to cool,
+Flap, flap, flap by the water pool!
+It rolls in the mud on a sunny day,
+The mud keeps the hot, hot sun away!
+
+[Pre-Chorus - build up, rising drums]
+What can it do? What can it do?
+Lift your arm and try it too!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Trunks up, trunks up, reach up high!
+Wave hello to the big blue sky!
+Stomp, stomp, stomp, we sang with glee,
+An elephant's trunk is handy as can be!
+
+[Outro - quick and happy]
+Trunks up high! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep21", bpm=126, key="A Major", seed=921, flavor="steel drum, ukulele and shaker hooks",
+      title="Swing-a-Ding! Monkey Song for Kids with Milo", card="Swing-a-Ding!", thumb="UPSIDE DOWN!",
+      cast=["monkey", "lion", "panda", "fox"],
+      route=[("chorus1", "jungle", "morning"), ("verse1", "bamboo", "noon"), ("chorus2", "jungle", "noon"),
+             ("verse2", "mountain", "golden"), ("bridge1", "beach", "morning"), ("chorus3", "jungle", "sunset")],
+      verses=[["monkey"], ["monkey"], ["monkey"]],
+      words=["SWING!", "HOOK HANDS!", "SWING-A-DING!", "UPSIDE DOWN!", "REACH!", "YUM, FRUIT!", "SWING-A-DING!"],
+      # facts read Nov 16 2026 11:58 PM ET, National Geographic Kids, spider monkey: "long, thin arms with hooklike hands that allow them to swing
+      # through the trees"; prehensile tail "used like a fifth limb"; "hang upside down from their tails with their arms and legs dangling";
+      # fruit "makes up the main part of its diet"; "most of the daylight hours climbing and swinging through the high canopy"
+      desc="Swing-a-ding! Swing along with Milo the bluebird and the spider monkey: long arms, hook hands, a tail that holds on like an extra hand, "
+           "and fruit for lunch.\nA monkey song for kids. Reach, swing and hang your arms down low. Ages 2-6.",
+      tags=["monkey song for kids", "spider monkey song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+Swing your arms and sing with me,
+The monkey swings from tree to tree!
+
+[Verse 1 - light and bouncy]
+The spider monkey's arms are long,
+Reach and swing and sing along!
+Hands like hooks, they hold on tight,
+Swinging left and swinging right!
+
+[Pre-Chorus - build up, rising drums]
+Who can swing? Who can swing?
+Reach up high and swing-a-ding!
+
+[Chorus - full band, group vocals]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+Swing your arms and sing with me,
+The monkey swings from tree to tree!
+
+[Verse 2 - light and bouncy]
+The monkey's tail can hold on, too,
+Just like an extra hand would do!
+It hangs by its tail with its arms down low,
+Upside down, hello, hello!
+
+[Bridge - claps and stomps, call and response]
+Reach like a monkey! (Reach, reach, reach!)
+Swing like a monkey! (Swing, swing, swing!)
+Hang your arms down! (Low, low, low!)
+Now wiggle and giggle and off we go!
+
+[Verse 3 - light and bouncy]
+The monkey looks for fruit all day,
+Yum, yum, fruit along the way!
+It climbs and swings in the trees up high,
+Under the leaves and the big blue sky!
+
+[Pre-Chorus - build up, rising drums]
+Who can swing? Who can swing?
+Reach up high and swing-a-ding!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Swing-a-ding, swing-a-ding, here I go!
+Up in the treetops, high and low!
+We swung our arms and sang with glee,
+The monkey swings from tree to tree!
+
+[Outro - quick and happy]
+Swing-a-ding! Bye-bye, friends!"""),
+
+ dict(id="zoo3d_ep22", bpm=120, key="D Major", seed=922, flavor="xylophone, kalimba and bright brass hooks",
+      title="Stretch Up Tall! Giraffe Song for Kids with Milo", card="Stretch Up Tall!", thumb="LONG NECK!",
+      cast=["giraffe", "zebra", "rhino", "horse"],
+      route=[("chorus1", "savanna", "morning"), ("verse1", "desert", "noon"), ("chorus2", "savanna", "noon"),
+             ("verse2", "river", "golden"), ("bridge1", "spring_meadow", "morning"), ("chorus3", "savanna", "sunset")],
+      verses=[["giraffe"], ["giraffe"], ["giraffe"]],
+      words=["STRETCH!", "SO TALL!", "STRETCH UP TALL!", "LONG TONGUE!", "TIPTOE!", "MY OWN SPOTS!", "STRETCH UP TALL!"],
+      # facts read Nov 19 2026 7:25 AM ET: National Geographic (animals/mammals/facts/giraffe): "Giraffes are the world's tallest mammals,
+      # thanks to their towering legs and long necks"; "browse on leaves and buds in treetops that few other animals can reach";
+      # "The 21-inch tongue helps them pluck tasty morsels from branches"; "no two individuals have exactly the same pattern".
+      # Britannica Kids (giraffe): "The giraffe is the tallest living animal"; "They can reach leaves at the top of trees";
+      # "Their tongues are more than 18 inches (45 centimeters) long".
+      desc="Stretch up tall! Sing and stretch with Milo the bluebird and the giraffe, the tallest animal in the world: long legs, a long neck, "
+           "a long tongue for leaves at the very top of the trees, and spots that are all its own.\nA giraffe song for kids. Stretch up, tiptoe and reach along. Ages 2-6.\n\n"
+           "Facts from National Geographic and Britannica Kids (giraffe pages).",
+      tags=["giraffe song for kids", "tall animals song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+Reach your arms up, one, two, three,
+Stretch up tall and sing with me!
+
+[Verse 1 - light and bouncy]
+Long, long legs and a long, long neck,
+Up to the treetops, let's go check!
+Higher than the zebra, higher than the tree,
+The tallest animal, look and see!
+
+[Pre-Chorus - build up, rising drums]
+Who is tall? Who is tall?
+Stretch up high, the tallest of all!
+
+[Chorus - full band, group vocals]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+Reach your arms up, one, two, three,
+Stretch up tall and sing with me!
+
+[Verse 2 - light and bouncy]
+Leaves at the top, way up high,
+Munch, munch, munch, up near the sky!
+Out comes a tongue, so long, so long,
+It picks the leaves and sings along!
+
+[Bridge - claps and stomps, call and response]
+Stretch your neck! (Stretch, stretch, stretch!)
+Up on tiptoe! (Up, up, up!)
+Reach for the leaves! (Munch, munch, munch!)
+Now wiggle and giggle and stretch so much!
+
+[Verse 3 - light and bouncy]
+Look at the spots, brown and bright,
+Big ones, small ones, left and right!
+No two giraffes have spots the same,
+Spotty patterns, what a fun game!
+
+[Pre-Chorus - build up, rising drums]
+Who is tall? Who is tall?
+Stretch up high, the tallest of all!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Stretch up tall, stretch up tall!
+The giraffe is the tallest of all!
+We reached up high, one, two, three,
+Stretch up tall and sing with me!
+
+[Outro - quick and happy]
+Stretch up tall! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep23", bpm=116, key="G Major", seed=923, flavor="marimba, bongos and bright trumpet hooks",
+      title="Stripes and Splashes! Tiger Song for Kids with Milo", card="Stripes and Splashes!", thumb="BIG CAT!",
+      cast=["tiger", "hippo", "bear", "koala"],
+      route=[("chorus1", "night_meadow", "golden"), ("verse1", "autumn_forest", "noon"), ("chorus2", "jungle", "golden"),
+             ("verse2", "river", "noon"), ("bridge1", "beach", "morning"), ("chorus3", "mountain", "sunset")],
+      verses=[["tiger"], ["tiger"], ["tiger"]],
+      words=["STRIPES!", "BIG CAT!", "STRIPES AND SPLASHES!", "SPLASH!", "SWIM!", "MAMA!", "STRIPES AND SPLASHES!"],
+      # facts read Nov 20 2026 7:35 AM ET: National Geographic Kids (animals/mammals/facts/tiger): "the tiger is the largest wild cat in the world";
+      # "coat of reddish-orange with dark stripes"; "No two tigers have the exact same stripes."; "tigers seem to enjoy water and swim well".
+      # Smithsonian's National Zoo (animals/tiger): "reddish-orange coats with prominent black stripes"; "no two tigers have the exact same markings";
+      # "Tigers are adept swimmers"; "Cubs stay with their mothers until they learn to hunt successfully, usually at about 18 to 24 months old."
+      desc="Stripes and splashes! Sing and splash with Milo the bluebird and the tiger, the biggest wild cat in the world: an orange coat with dark stripes, "
+           "stripes that are all its own, a big cat that loves the water, and cubs that stay close to Mama.\nA tiger song for kids. Roar, swim and splash along. Ages 2-6.\n\n"
+           "Facts from National Geographic Kids and Smithsonian's National Zoo (tiger pages).",
+      tags=["tiger song for kids", "big cat song", "animal song for kids", "action song for kids", "kids songs", "preschool learning song", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+Orange and stripy, one, two, three,
+Splash in the water, sing with me!
+
+[Verse 1 - light and bouncy]
+Orange coat and stripes so dark,
+Padding softly through the park!
+Bigger than the house cat, big as can be,
+The biggest wild cat, look and see!
+
+[Pre-Chorus - build up, rising drums]
+Who is big? Who is big?
+The tiger cat is really big!
+
+[Chorus - full band, group vocals]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+Orange and stripy, one, two, three,
+Splash in the water, sing with me!
+
+[Verse 2 - light and bouncy]
+Most cats stay away from the rain,
+But tigers jump in again and again!
+Paddle, paddle, swim so well,
+Splishy, splashy, tiger swell!
+
+[Bridge - claps and stomps, call and response]
+Paddle your paws! (Paddle, paddle!)
+Make a splash! (Splash, splash, splash!)
+Swish your tail! (Swish, swish, swish!)
+Now shake off the water, quick as a flash!
+
+[Verse 3 - light and bouncy]
+Look at the stripes, every one,
+No two tigers have the same, what fun!
+Little cubs stay close to Mama, you see,
+Snuggled up as cozy as can be!
+
+[Pre-Chorus - build up, rising drums]
+Who is big? Who is big?
+The tiger cat is really big!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Stripes and splashes, here we go!
+The tiger is the biggest cat we know!
+We splashed and sang, one, two, three,
+Stripes and splashes, sing with me!
+
+[Outro - quick and happy]
+Stripes and splashes! Bye-bye, friends!"""),
+
+ # SING WITH MILO (owner, Nov 20 2026: viral-song series; question chorus answered in every verse, first frame = the mystery on beat 1,
+ # title promise first, "Sing With Milo" last). Built from the channel's best long video (Where Is My Mama?: 31.3 h, 41% of long-form hours).
+ dict(id="zoo3d_ep24", bpm=112, key="C Major", seed=924, flavor="glockenspiel, ukulele and soft handclap hooks",
+      title="Whose Baby Is This? Sing With Milo", card="Whose Baby?", thumb="PEEKABOO!",
+      cast=["panda", "koala", "polar_bear", "tiger"],
+      route=[("chorus1", "spring_meadow", "morning"), ("verse1", "bamboo", "noon"), ("chorus2", "river", "golden"),
+             ("verse2", "arctic", "noon"), ("bridge1", "jungle", "morning"), ("chorus3", "night_meadow", "golden")],
+      verses=[["panda"], ["koala", "polar_bear"], ["tiger"]],
+      words=["WHOSE BABY?", "PANDA!", "PEEKABOO!", "KOALA!", "PEEK!", "TIGER CUB!", "WHOSE BABY?"],
+      # facts read Nov 20 2026 10:50 AM ET, San Diego Zoo Wildlife Alliance Library fact sheets: Giant Panda (Reproduction): at birth "pink skin with
+      # short white hairs"; "By 30 days, have full adult coloration"; newborns "May weigh 0.1% of mother's weight". Koala (Reproduction): joey "about
+      # 2 cm (.8 in) long" at birth; "Develops in pouch for 6 months"; after leaving the pouch "young rides on mother's back". Polar Bear (Reproduction):
+      # "Litters of two are the most common" (about 70% of births); cubs "May remain with mother until 2.5 years of age".
+      # Smithsonian's National Zoo (animals/tiger), read Nov 20 11:05 AM: "Cubs stay with their mothers until they learn to hunt successfully" (about 18 to 24 months).
+      desc="Whose baby is this? Peekaboo! Sing along with Milo the bluebird and guess each baby before Mama comes: a panda cub born pink and tiny, "
+           "a koala joey that rides on Mama's back, polar bear cubs that often come in twos, and tiger cubs that stay close to Mama for a long time.\n"
+           "A guess-the-baby animal song for kids. Peek, guess and sing along. Ages 2-6.\n\n"
+           "Facts from the San Diego Zoo Wildlife Alliance Library (giant panda, koala and polar bear fact sheets) and Smithsonian's National Zoo (tiger).",
+      tags=["whose baby is this", "baby animals song", "guess the animal song", "peekaboo song for kids", "animal song for kids", "kids songs",
+            "preschool learning song", "Sing With Milo", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+Guess the baby, one, two, three,
+Whose baby is this? Sing with me!
+
+[Verse 1 - light and bouncy]
+Tiny and pink, a baby so small,
+Now black and white, the cutest of all!
+Mama is munching bamboo, look, it's true,
+Baby panda, peekaboo!
+
+[Pre-Chorus - build up, rising drums]
+Who is it? Who is it?
+Peek and guess, then shout it!
+
+[Chorus - full band, group vocals]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+Guess the baby, one, two, three,
+Whose baby is this? Sing with me!
+
+[Verse 2 - light and bouncy]
+Fuzzy ears, a ride up high,
+On Mama's back, way up to the sky!
+Snowy and white, two cubs in a row,
+Koala joey, polar bear cubs, hello!
+
+[Bridge - claps and stomps, call and response]
+Peek and hide! (Peekaboo!)
+Peek and hide! (Peekaboo!)
+Cover your eyes! (One, two, three!)
+Open them wide, and what do you see?
+
+[Verse 3 - light and bouncy]
+Orange and stripy, a baby cat,
+Next to Mama, how about that!
+Close to Mama the whole year through,
+Tiger cub, peekaboo!
+
+[Pre-Chorus - build up, rising drums]
+Who is it? Who is it?
+Peek and guess, then shout it!
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Who's this baby, small and new?
+Peekaboo, peekaboo, I see you!
+We guessed them all, one, two, three,
+Whose baby is this? Sing with me!
+
+[Outro - quick and happy]
+Peekaboo! Bye-bye, friends!"""),
+ dict(id="zoo3d_ep25", bpm=118, key="F Major", seed=925, flavor="marimba, woodblock crunch hits and bright kazoo hooks",
+      title="Crunch, Crunch! Who's Munching? Sing With Milo", card="Who's Munching?", thumb="YUM YUM!",
+      cast=["panda", "giraffe", "koala", "elephant"],
+      route=[("chorus1", "bamboo", "noon"), ("verse1", "bamboo", "golden"), ("chorus2", "savanna", "morning"),
+             ("verse2", "jungle", "noon"), ("bridge1", "beach", "golden"), ("chorus3", "savanna", "sunset")],
+      verses=[["panda"], ["giraffe", "koala"], ["elephant"]],
+      words=["CRUNCH, CRUNCH!", "BAMBOO!", "WHO'S MUNCHING?", "LEAVES!", "MUNCH!", "GRASS!", "LUNCH IS FUN!"],
+      # facts read Nov 20 2026 10:50 AM ET, San Diego Zoo Wildlife Alliance Library fact sheets: Giant Panda (Diet): "Over 98% of diet is bamboo";
+      # grasp stems "between the palm and a thumb-like digit". Giraffe (Diet): "Acacia spp. are favored"; "Long, prehensile, sticky tongue enables a
+      # giraffe to feed on hard-to-reach leaves". Koala (Diet): "feeding almost exclusively on leaves of Eucalyptus". African Elephant (Diet): savanna
+      # elephants "switch to growing grasses"; "wrap trunk around branches and grass tufts".
+      desc="Crunch, crunch! Who's munching? Sing along with Milo the bluebird and guess who is eating lunch: a panda crunching bamboo, a giraffe with a "
+           "long sticky tongue reaching acacia leaves, a koala nibbling eucalyptus leaves, and an elephant wrapping its trunk around the grass.\n"
+           "A guess-who's-eating animal song for kids. Crunch, munch and sing along. Ages 2-6.\n\n"
+           "Facts from the San Diego Zoo Wildlife Alliance Library (giant panda, giraffe, koala and African elephant diet fact sheets).",
+      tags=["what do animals eat song", "guess the animal song", "panda bamboo song", "animal song for kids", "kids songs", "preschool learning song",
+            "Sing With Milo", "The Animated Zoo", "Milo"],
+      lyrics="""[Chorus - full band, group vocals]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! What's for lunch?
+Guess who's eating, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Verse 1 - light and bouncy]
+Black and white, sitting in the shade,
+Holding bamboo, a lunch parade!
+Bamboo, bamboo, all day long,
+The panda crunches to our song!
+
+[Pre-Chorus - build up, rising drums]
+Who's that? Who's that?
+Listen to the munching, who is that?
+
+[Chorus - full band, group vocals]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! What's for lunch?
+Guess who's eating, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Verse 2 - light and bouncy]
+A long, long tongue up in the tree,
+The giraffe picks leaves, one, two, three!
+Up in a tree, a koala, too,
+Nibbles leaves, the whole day through!
+
+[Bridge - claps and stomps, call and response]
+Munch with your hands! (Munch, munch!)
+Crunch like a panda! (Crunch, crunch!)
+Stretch like a giraffe! (Reach, reach, reach!)
+Now pat your tummy, lunch for each!
+
+[Verse 3 - light and bouncy]
+Big gray trunk wraps the grass so green,
+The biggest lunch you've ever seen!
+Swish and pull and into the mouth,
+The elephant munches north and south!
+
+[Pre-Chorus - build up, rising drums]
+Who's that? Who's that?
+Listen to the munching, who is that?
+
+[Final Chorus - key change up, biggest energy, everyone sings]
+Crunch, crunch! Who's that munching?
+Crunch, crunch! Lunch is fun!
+We guessed them all, one, two, three,
+Crunch, crunch, crunch! Sing with me!
+
+[Outro - quick and happy]
+Crunch, crunch! Bye-bye, friends!"""),
+]
+
+COLORS = ["#ffb627", "#3db8ff", "#ff7a00", "#8e5bd8", "#3cc45a", "#ff6fb5", "#ffb627"]
+
+
+def build(s):
+    assert len(s["title"]) <= 60, s["title"]
+    cast = [{"id": "host", "char": "milo", "spot": "center"}]
+    for k, kind in enumerate(s["cast"]):
+        cast.append({"id": kind, "char": "animal", "spot": SPOTS[k][0], "opts": {"kind": kind}, "yaw": SPOTS[k][1]})
+    closes = lambda who: [x for w in who for x in ("close:" + w, "wide" if w == who[-1] else "close:host")]
+    all_close = [f"close:{k}" for k in s["cast"]]
+    W = s["words"]
+    chorus = lambda i, shots: {"section": f"chorus{i}", "shots": shots, "energy": 1.0, "wave": 1, "jump": 0.4, "group": True}
+    verse = lambda i: {"section": f"verse{i}", "shots": closes(s["verses"][i - 1]) + ["side"], "energy": 0.75, "wave": 0, "jump": 0.15, "group": False}
+    pre = lambda i: {"section": f"prechorus{i}", "shots": ["close:host", "low"], "energy": 0.9, "wave": 1, "jump": 0.2, "group": True, "props": []}
+    direct = [dict(chorus(1, ["wide", "close:host", "orbit", all_close[0], "low"]), props=[T(W[0], COLORS[0])]),
+              dict(verse(1), props=[T(W[1], COLORS[1])]), pre(1),
+              dict(chorus(2, ["vista", "close:host", "orbit", all_close[-1], "low"]), props=[T(W[2], COLORS[2])]),
+              dict(verse(2), props=[T(W[3], COLORS[3])]),
+              {"section": "bridge1", "shots": ["wide", "low"] + all_close + ["orbit"], "energy": 1.0, "wave": 1, "jump": 0.5, "group": True, "props": [T(W[4], COLORS[4])]},
+              dict(verse(3), props=[T(W[5], COLORS[5])]), pre(2),
+              dict(chorus(3, ["orbit", "hero", "wide", "close:host", "high"]), props=[T(W[6], COLORS[6], 0.6)]),
+              {"section": "outro1", "shots": ["close:host", "wide"], "energy": 0.7, "wave": 1, "jump": 0.2, "group": True, "props": [T("BYE-BYE!", "#ffb627", 0.8)]}]
+    job = {"id": s["id"], "title": s["card"], "channel": "zoo", "set": "zooworld", "set_opts": {}, "seed": s["seed"] % 50, "new_song": True,
+           "cast": cast, "verses": s["verses"], "locations": [{"from": a, "biome": b, "tod": t, **({"seed": i} if i else {})} for i, (a, b, t) in enumerate(s["route"])],
+           "intro_shot": "orbit", "intro": {"energy": 0.6, "wave": 1}, "thumb_frame": 96, "direct": direct, "song": s["id"],
+           "res": "1920x1080", "step": 1, "cut_mode": "beat", "cut_beats": {"chorus": 4, "bridge": 4, "prechorus": 2}, "follow_singer": True, "punch": True}
+    spec = {"style": STYLE.format(bpm=s["bpm"], flavor=s["flavor"]), "lyrics": s["lyrics"], "duration": 160, "bpm": s["bpm"], "key": s["key"],
+            "seed": s["seed"], "who_map": {},
+            "meta": {"title": s["title"], "card": s["card"], "thumb_text": s["thumb"], "description": s["desc"] + "\n\n" + BOILER,
+                     "tags": s["tags"], "song_v": "v3 new cast + places (Nov 13)"}, "job": job}
+    return spec
+
+
+if __name__ == "__main__":
+    only = sys.argv[1:]          # ids to build; without ids every song is built again (and moved to the end of the variety ledger)
+    for s in SONGS:
+        if only and s["id"] not in only: continue
+        spec = build(s)
+        why = variety.check(spec["job"])
+        if why: sys.exit(f"{s['id']} repeats: {why}")
+        for p in (f"songs/{s['id']}.json", f"jobs/{s['id']}.song.json"):
+            json.dump(spec, open(os.path.join(HERE, p), "w"), indent=1)
+        variety.record(spec["job"]); print("OK", s["id"], s["title"], [l["biome"] for l in spec["job"]["locations"]])

@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep10_mealtime",
+ "title": "Mealtime Habits for Kids! Breakfast, Lunch and More with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're learning five fun habits for mealtime and snack time.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_breakfast",
+   "lines": [
+    [
+     "Here's a clue: it's the very first meal of the day, in the morning! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Breakfast!",
+     "enter"
+    ],
+    [
+     "This is Breakfast! Can you say breakfast?",
+     "zoom"
+    ],
+    [
+     "We sleep all night long. In the morning, breakfast gives us energy to play and learn.",
+     "fx+bob"
+    ],
+    [
+     "Breakfast can be oatmeal with berries, toast, eggs, yogurt or fruit.",
+     "bob"
+    ],
+    [
+     "Can you stretch and say good morning? Arms up, big smile! Good morning!",
+     "wiggle"
+    ],
+    [
+     "When do we eat breakfast?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the morning, after we wake up!",
+     "fx2+badge:BREAKFAST!"
+    ],
+    [
+     "Let's say it together: BREAKFAST!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BREAKFAST!",
+     "zoom"
+    ],
+    [
+     "Every family has its own favorite breakfast. What's yours?",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_washproduce",
+   "lines": [
+    [
+     "Here's a clue: we rinse fruits and veggies with water before we eat them! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Wash Your Food!",
+     "enter"
+    ],
+    [
+     "This is washing our food! Can you say wash?",
+     "zoom"
+    ],
+    [
+     "First, wash your hands. Then a grown-up helps rinse the fruits and veggies under running water.",
+     "fx+bob"
+    ],
+    [
+     "We rub them gently with our hands. Just water, no soap!",
+     "bob"
+    ],
+    [
+     "Can you pretend to rinse an apple? Rub, rub, rub, under the water!",
+     "wiggle"
+    ],
+    [
+     "Why do we wash fruits and veggies?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "To wash away dirt and germs, so they're clean and ready!",
+     "fx2+badge:WASH IT!"
+    ],
+    [
+     "Let's say it together: WASH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WASH!",
+     "zoom"
+    ],
+    [
+     "Clean food and clean hands make snack time even better.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_lunchbox",
+   "lines": [
+    [
+     "Here's a clue: we put yummy food in a box to take with us! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Pack a Lunch!",
+     "enter"
+    ],
+    [
+     "This is packing a lunch! Can you say lunch?",
+     "zoom"
+    ],
+    [
+     "A packed lunch can have a fruit, a veggie, a sandwich and water.",
+     "fx+bob"
+    ],
+    [
+     "A little cool pack helps keep the food fresh until lunchtime.",
+     "bob"
+    ],
+    [
+     "Can you help pack a pretend lunch? Apple in, carrots in, sandwich in, close the lid!",
+     "wiggle"
+    ],
+    [
+     "What's a good drink to pack?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Water! In a bottle you can fill again.",
+     "fx2+badge:LUNCH!"
+    ],
+    [
+     "Let's say it together: LUNCH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LUNCH!",
+     "zoom"
+    ],
+    [
+     "You can help choose what goes in your lunchbox. That's a fun job!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_trynew",
+   "lines": [
+    [
+     "Here's a clue: it's when we taste something we never tasted before! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Try New Foods!",
+     "enter"
+    ],
+    [
+     "This is trying new foods! Can you say try it?",
+     "zoom"
+    ],
+    [
+     "Trying a new food is like a little adventure for your mouth.",
+     "fx+bob"
+    ],
+    [
+     "Start with a tiny taste. Is it crunchy? Soft? Sweet? Sour?",
+     "bob"
+    ],
+    [
+     "Can you pretend to take a tiny taste? Nibble, nibble! Hmm!",
+     "wiggle"
+    ],
+    [
+     "What if you don't like it the first time?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "That's okay! Sometimes we like a food after trying it a few times.",
+     "fx2+badge:TRY IT!"
+    ],
+    [
+     "Let's say it together: TRY IT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TRY IT!",
+     "zoom"
+    ],
+    [
+     "Every tiny taste helps you learn about a new food.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_market",
+   "lines": [
+    [
+     "Here's a clue: it's a place outside where farmers sell the food they grew! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Farmers Market!",
+     "enter"
+    ],
+    [
+     "This is the farmers market! Can you say market?",
+     "zoom"
+    ],
+    [
+     "At the farmers market, farmers bring fruits and veggies from their farms.",
+     "fx+bob"
+    ],
+    [
+     "You can see what's growing right now, like apples in fall or berries in summer.",
+     "bob"
+    ],
+    [
+     "Can you carry a pretend basket? Pick a red one, a green one, an orange one!",
+     "wiggle"
+    ],
+    [
+     "What do we say to the farmer?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Hello, and thank you!",
+     "fx2+badge:MARKET!"
+    ],
+    [
+     "Let's say it together: MARKET!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MARKET!",
+     "zoom"
+    ],
+    [
+     "Bring a bag, and pick one new fruit or veggie to try.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Hooray! Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Breakfast, to start the day.",
+   "@fr2_breakfast"
+  ],
+  [
+   "Wash fruits and veggies with water.",
+   "@fr2_washproduce"
+  ],
+  [
+   "Pack a lunch to take along.",
+   "@fr2_lunchbox"
+  ],
+  [
+   "Try a tiny taste of something new.",
+   "@fr2_trynew"
+  ],
+  [
+   "And visit the farmers market!",
+   "@fr2_market"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

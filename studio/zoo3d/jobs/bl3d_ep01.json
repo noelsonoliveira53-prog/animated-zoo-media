@@ -1,0 +1,1238 @@
+{
+ "id": "bl3d_ep01",
+ "channel": "bloop",
+ "title": "Colors Song",
+ "set": "colorlab",
+ "timing_file": "bl3d_ep01_timing.json",
+ "audio": "bl3d_ep01_song.wav",
+ "cast": [
+  {
+   "id": "host",
+   "char": "bloop",
+   "spot": "center",
+   "opts": {
+    "color": "#9d6bff",
+    "color_schedule": [
+     [
+      0.0,
+      "#9d6bff"
+     ],
+     [
+      3.4,
+      "#ff6fb5"
+     ],
+     [
+      4.2,
+      "#3db8ff"
+     ],
+     [
+      5.0,
+      "#ffd21f"
+     ],
+     [
+      5.9,
+      "#9d6bff"
+     ],
+     [
+      8.276,
+      "#ff3b3b"
+     ],
+     [
+      16.552,
+      "#ffd21f"
+     ],
+     [
+      24.828,
+      "#9d6bff"
+     ],
+     [
+      30.517,
+      "#ff6fb5"
+     ],
+     [
+      31.034,
+      "#ff8a1f"
+     ],
+     [
+      31.552,
+      "#3db8ff"
+     ],
+     [
+      33.103,
+      "#ff3b3b"
+     ],
+     [
+      34.138,
+      "#ffd21f"
+     ],
+     [
+      34.655,
+      "#3ccf4e"
+     ],
+     [
+      35.69,
+      "#2f7bff"
+     ],
+     [
+      37.241,
+      "#9d6bff"
+     ],
+     [
+      42.579,
+      "#2f7bff"
+     ],
+     [
+      43.579,
+      "#ffd21f"
+     ],
+     [
+      44.579,
+      "#3ccf4e"
+     ],
+     [
+      47.576,
+      "#ff8a1f"
+     ],
+     [
+      55.862,
+      "#3ccf4e"
+     ],
+     [
+      64.138,
+      "#9d6bff"
+     ],
+     [
+      69.828,
+      "#ff6fb5"
+     ],
+     [
+      70.345,
+      "#ff8a1f"
+     ],
+     [
+      70.862,
+      "#3db8ff"
+     ],
+     [
+      72.414,
+      "#ff3b3b"
+     ],
+     [
+      73.448,
+      "#ffd21f"
+     ],
+     [
+      73.966,
+      "#3ccf4e"
+     ],
+     [
+      75.0,
+      "#2f7bff"
+     ],
+     [
+      76.552,
+      "#9d6bff"
+     ],
+     [
+      80.69,
+      "#ff6fb5"
+     ],
+     [
+      84.828,
+      "#ff8a1f"
+     ],
+     [
+      88.966,
+      "#3ccf4e"
+     ],
+     [
+      93.103,
+      "#ff3b3b"
+     ],
+     [
+      93.621,
+      "#ff8a1f"
+     ],
+     [
+      94.138,
+      "#ffd21f"
+     ],
+     [
+      94.655,
+      "#3ccf4e"
+     ],
+     [
+      95.172,
+      "#2f7bff"
+     ],
+     [
+      95.69,
+      "#9d5cff"
+     ],
+     [
+      96.207,
+      "#ff3b3b"
+     ],
+     [
+      96.724,
+      "#ff8a1f"
+     ],
+     [
+      97.241,
+      "#2f7bff"
+     ],
+     [
+      105.517,
+      "#9d5cff"
+     ],
+     [
+      113.793,
+      "#ff3b3b"
+     ],
+     [
+      114.31,
+      "#ff8a1f"
+     ],
+     [
+      114.828,
+      "#ffd21f"
+     ],
+     [
+      115.345,
+      "#3ccf4e"
+     ],
+     [
+      117.931,
+      "#2f7bff"
+     ],
+     [
+      118.966,
+      "#9d5cff"
+     ],
+     [
+      122.069,
+      "#ff3b3b"
+     ],
+     [
+      122.586,
+      "#ff8a1f"
+     ],
+     [
+      123.103,
+      "#ffd21f"
+     ],
+     [
+      123.621,
+      "#3ccf4e"
+     ],
+     [
+      124.138,
+      "#2f7bff"
+     ],
+     [
+      124.655,
+      "#9d5cff"
+     ],
+     [
+      125.172,
+      "#ff3b3b"
+     ],
+     [
+      125.69,
+      "#ff8a1f"
+     ],
+     [
+      126.207,
+      "#ff3b3b"
+     ],
+     [
+      126.724,
+      "#ff8a1f"
+     ],
+     [
+      127.241,
+      "#ffd21f"
+     ],
+     [
+      127.759,
+      "#3ccf4e"
+     ],
+     [
+      128.276,
+      "#2f7bff"
+     ],
+     [
+      128.793,
+      "#9d5cff"
+     ],
+     [
+      129.31,
+      "#ff3b3b"
+     ],
+     [
+      129.828,
+      "#ff8a1f"
+     ],
+     [
+      130.345,
+      "#9d6bff"
+     ],
+     [
+      136.034,
+      "#ff6fb5"
+     ],
+     [
+      136.552,
+      "#ff8a1f"
+     ],
+     [
+      137.069,
+      "#3db8ff"
+     ],
+     [
+      138.621,
+      "#ff3b3b"
+     ],
+     [
+      139.655,
+      "#ffd21f"
+     ],
+     [
+      140.172,
+      "#3ccf4e"
+     ],
+     [
+      141.207,
+      "#2f7bff"
+     ],
+     [
+      142.759,
+      "#9d6bff"
+     ],
+     [
+      152.586,
+      "#ff6fb5"
+     ],
+     [
+      153.103,
+      "#ff8a1f"
+     ],
+     [
+      153.621,
+      "#3db8ff"
+     ],
+     [
+      155.172,
+      "#ff3b3b"
+     ],
+     [
+      156.207,
+      "#ffd21f"
+     ],
+     [
+      156.724,
+      "#3ccf4e"
+     ],
+     [
+      157.759,
+      "#2f7bff"
+     ],
+     [
+      159.31,
+      "#9d6bff"
+     ],
+     [
+      160.862,
+      "#ff3b3b"
+     ],
+     [
+      161.121,
+      "#ff8a1f"
+     ],
+     [
+      161.379,
+      "#ffd21f"
+     ],
+     [
+      161.638,
+      "#3ccf4e"
+     ],
+     [
+      161.897,
+      "#2f7bff"
+     ],
+     [
+      162.155,
+      "#9d5cff"
+     ],
+     [
+      162.414,
+      "#ff3b3b"
+     ],
+     [
+      162.672,
+      "#ff8a1f"
+     ],
+     [
+      162.931,
+      "#ffd21f"
+     ],
+     [
+      163.19,
+      "#3ccf4e"
+     ],
+     [
+      163.448,
+      "#9d6bff"
+     ],
+     [
+      163.748,
+      "#ff6fb5"
+     ],
+     [
+      164.248,
+      "#ffd21f"
+     ],
+     [
+      164.748,
+      "#3db8ff"
+     ],
+     [
+      165.248,
+      "#9d6bff"
+     ]
+    ],
+    "scale": 1.15
+   }
+  },
+  {
+   "id": "star",
+   "char": "shape",
+   "spot": "left",
+   "opts": {
+    "shape": "star",
+    "color": "#ffd21f",
+    "scale": 0.85
+   },
+   "yaw": 0.25
+  },
+  {
+   "id": "heart",
+   "char": "shape",
+   "spot": "right",
+   "opts": {
+    "shape": "heart",
+    "color": "#ff4f7b",
+    "scale": 0.85
+   },
+   "yaw": -0.25
+  },
+  {
+   "id": "square",
+   "char": "shape",
+   "spot": "farleft",
+   "opts": {
+    "shape": "square",
+    "color": "#2f7bff",
+    "scale": 0.75
+   },
+   "yaw": 0.35
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 3695,
+ "direct": [
+  {
+   "section": "hook",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "rainbow",
+     "at": [
+      0,
+      0.6,
+      3.4
+     ],
+     "delay": 0.3
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:host",
+    "wide",
+    "close:host",
+    "close:star"
+   ],
+   "energy": 0.7,
+   "props": [
+    {
+     "type": "text",
+     "text": "RED",
+     "color": "#ff3b3b",
+     "at": [
+      -4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9
+    },
+    {
+     "type": "set_prop",
+     "name": "apple",
+     "at": [
+      -4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "red"
+     },
+     "delay": 0.4
+    },
+    {
+     "type": "text",
+     "text": "YELLOW",
+     "color": "#ffd21f",
+     "at": [
+      4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9,
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "banana",
+     "at": [
+      4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "yellow"
+     },
+     "delay": 8.68
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.3,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "COLORS!",
+     "color": "#9d6bff",
+     "at": "top",
+     "size": 1.0
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "red",
+      "size": 0.8
+     },
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "yellow",
+      "size": 0.8
+     },
+     "delay": 9.31
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "green",
+      "size": 0.8
+     },
+     "delay": 9.83
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "blue",
+      "size": 0.8
+     },
+     "delay": 10.86
+    }
+   ]
+  },
+  {
+   "section": "fact",
+   "shots": [
+    "mid"
+   ],
+   "energy": 0.35,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "bucket",
+     "at": [
+      -2.9,
+      -0.8,
+      1.0
+     ],
+     "opts": {
+      "color": "blue"
+     },
+     "delay": 1.1
+    },
+    {
+     "type": "set_prop",
+     "name": "bucket",
+     "at": [
+      2.9,
+      -0.8,
+      1.0
+     ],
+     "opts": {
+      "color": "yellow"
+     },
+     "delay": 2.1
+    },
+    {
+     "type": "text",
+     "text": "GREEN!",
+     "color": "#3ccf4e",
+     "at": [
+      0,
+      0.8,
+      2.95
+     ],
+     "size": 0.8,
+     "delay": 3.1
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:host",
+    "lab",
+    "close:host",
+    "close:heart"
+   ],
+   "energy": 0.7,
+   "props": [
+    {
+     "type": "text",
+     "text": "ORANGE",
+     "color": "#ff8a1f",
+     "at": [
+      -4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9
+    },
+    {
+     "type": "set_prop",
+     "name": "carrot",
+     "at": [
+      -4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "orange"
+     },
+     "delay": 0.4
+    },
+    {
+     "type": "text",
+     "text": "GREEN",
+     "color": "#3ccf4e",
+     "at": [
+      4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9,
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "leaf",
+     "at": [
+      4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "green"
+     },
+     "delay": 8.68
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "orbit",
+    "close:host",
+    "wide",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.3,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "COLORS!",
+     "color": "#9d6bff",
+     "at": "top",
+     "size": 1.0
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "red",
+      "size": 0.8
+     },
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "yellow",
+      "size": 0.8
+     },
+     "delay": 9.31
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "green",
+      "size": 0.8
+     },
+     "delay": 9.83
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "blue",
+      "size": 0.8
+     },
+     "delay": 10.86
+    }
+   ]
+  },
+  {
+   "section": "action",
+   "shots": [
+    "wide",
+    "low",
+    "close:host",
+    "wide"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.7,
+   "group": true,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "balloon",
+     "at": [
+      -4.2,
+      0.6,
+      3.0
+     ],
+     "opts": {
+      "color": "pink"
+     },
+     "delay": 0.0
+    },
+    {
+     "type": "set_prop",
+     "name": "balloon",
+     "at": [
+      4.2,
+      0.6,
+      3.0
+     ],
+     "opts": {
+      "color": "orange"
+     },
+     "delay": 4.14
+    },
+    {
+     "type": "set_prop",
+     "name": "balloon",
+     "at": [
+      -2.2,
+      1.2,
+      3.9
+     ],
+     "opts": {
+      "color": "green"
+     },
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "balloon",
+     "at": [
+      2.2,
+      1.2,
+      3.9
+     ],
+     "opts": {
+      "color": "blue"
+     },
+     "delay": 12.42
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:host",
+    "high",
+    "close:host",
+    "close:square"
+   ],
+   "energy": 0.7,
+   "props": [
+    {
+     "type": "text",
+     "text": "BLUE",
+     "color": "#2f7bff",
+     "at": [
+      -4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9
+    },
+    {
+     "type": "set_prop",
+     "name": "drop",
+     "at": [
+      -4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "blue"
+     },
+     "delay": 0.4
+    },
+    {
+     "type": "text",
+     "text": "PURPLE",
+     "color": "#9d5cff",
+     "at": [
+      4.4,
+      0.6,
+      3.8
+     ],
+     "size": 0.9,
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "grapes",
+     "at": [
+      4.4,
+      0.4,
+      2.6
+     ],
+     "opts": {
+      "color": "purple"
+     },
+     "delay": 8.68
+    }
+   ]
+  },
+  {
+   "section": "rainbow",
+   "shots": [
+    "wide",
+    "orbit",
+    "close:host",
+    "low"
+   ],
+   "energy": 0.85,
+   "group": true,
+   "wave": 1,
+   "props": [
+    {
+     "type": "set_prop",
+     "name": "rainbow",
+     "at": [
+      0,
+      0.8,
+      3.3
+     ]
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      -5.0,
+      -0.4,
+      2.0
+     ],
+     "opts": {
+      "color": "red"
+     },
+     "delay": 0.0
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      -3.4,
+      -0.4,
+      3.0
+     ],
+     "opts": {
+      "color": "orange"
+     },
+     "delay": 0.52
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      -1.7,
+      -0.4,
+      3.0
+     ],
+     "opts": {
+      "color": "yellow"
+     },
+     "delay": 1.03
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      1.7,
+      -0.4,
+      3.0
+     ],
+     "opts": {
+      "color": "green"
+     },
+     "delay": 1.55
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      3.4,
+      -0.4,
+      3.0
+     ],
+     "opts": {
+      "color": "blue"
+     },
+     "delay": 4.14
+    },
+    {
+     "type": "set_prop",
+     "name": "swatch",
+     "at": [
+      5.0,
+      -0.4,
+      2.0
+     ],
+     "opts": {
+      "color": "purple"
+     },
+     "delay": 5.17
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "low",
+    "close:host",
+    "wide",
+    "orbit"
+   ],
+   "energy": 0.95,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "COLORS!",
+     "color": "#9d6bff",
+     "at": "top",
+     "size": 1.0
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "red",
+      "size": 0.8
+     },
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "yellow",
+      "size": 0.8
+     },
+     "delay": 9.31
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "green",
+      "size": 0.8
+     },
+     "delay": 9.83
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "blue",
+      "size": 0.8
+     },
+     "delay": 10.86
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:host"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.6,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "COLORS!",
+     "color": "#9d6bff",
+     "at": "top",
+     "size": 1.0
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "red",
+      "size": 0.8
+     },
+     "delay": 8.28
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      4.6,
+      0.8,
+      3.5
+     ],
+     "opts": {
+      "color": "yellow",
+      "size": 0.8
+     },
+     "delay": 9.31
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      -5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "green",
+      "size": 0.8
+     },
+     "delay": 9.83
+    },
+    {
+     "type": "set_prop",
+     "name": "splash",
+     "at": [
+      5.8,
+      2.0,
+      2.3
+     ],
+     "opts": {
+      "color": "blue",
+      "size": 0.8
+     },
+     "delay": 10.86
+    },
+    {
+     "type": "set_prop",
+     "name": "rainbow",
+     "at": [
+      0,
+      1.4,
+      4.5
+     ],
+     "delay": 0.2
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 1.0,
+     "delay": 1.6
+    },
+    {
+     "type": "set_prop",
+     "name": "heart",
+     "at": [
+      -3.8,
+      0.2,
+      2.6
+     ],
+     "opts": {
+      "color": "pink"
+     },
+     "delay": 0.4
+    },
+    {
+     "type": "set_prop",
+     "name": "star",
+     "at": [
+      3.8,
+      0.2,
+      2.6
+     ],
+     "opts": {
+      "color": "yellow"
+     },
+     "delay": 0.4
+    }
+   ]
+  }
+ ]
+}

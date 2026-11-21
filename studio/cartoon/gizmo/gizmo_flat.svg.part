@@ -1,0 +1,35 @@
+<g id="gizmo">
+ <!-- jets -->
+ <path d="M-55 300 l18 70 l18 -70z" fill="#ffd23f" stroke="#e8a000" stroke-width="6"/>
+ <path d="M37 300 l18 70 l18 -70z" fill="#ffd23f" stroke="#e8a000" stroke-width="6"/>
+ <!-- hover ring -->
+ <ellipse cx="0" cy="285" rx="150" ry="38" fill="#f08a24" stroke="#1b2550" stroke-width="10"/>
+ <ellipse cx="0" cy="275" rx="120" ry="24" fill="#c9d3e6"/>
+ <!-- arms -->
+ <path d="M-120 120 C-190 110 -220 60 -235 10" stroke="#1b2550" stroke-width="30" fill="none" stroke-linecap="round"/>
+ <path d="M-120 120 C-190 110 -220 60 -235 10" stroke="#c9d3e6" stroke-width="16" fill="none" stroke-linecap="round"/>
+ <circle cx="-238" cy="0" r="34" fill="#f08a24" stroke="#1b2550" stroke-width="9"/>
+ <path d="M120 120 C190 130 220 175 240 215" stroke="#1b2550" stroke-width="30" fill="none" stroke-linecap="round"/>
+ <path d="M120 120 C190 130 220 175 240 215" stroke="#c9d3e6" stroke-width="16" fill="none" stroke-linecap="round"/>
+ <circle cx="244" cy="225" r="34" fill="#f08a24" stroke="#1b2550" stroke-width="9"/>
+ <!-- body -->
+ <path d="M-120 70 h240 q20 0 18 20 l-22 170 q-3 22 -25 22 h-182 q-22 0 -25 -22 l-22 -170 q-2 -20 18 -20z" fill="#e3e9f4" stroke="#1b2550" stroke-width="10"/>
+ <rect x="-62" y="130" width="124" height="56" rx="12" fill="#f08a24" stroke="#1b2550" stroke-width="8"/>
+ <path d="M0 140 l9 18 l20 2 l-15 13 l5 20 l-19 -11 l-19 11 l5 -20 l-15 -13 l20 -2z" fill="#9ff6ff" stroke="#1b2550" stroke-width="4"/>
+ <!-- antenna -->
+ <rect x="-8" y="-230" width="16" height="60" fill="#8b97b0" stroke="#1b2550" stroke-width="6"/>
+ <circle cx="0" cy="-245" r="30" fill="#5ff3ff" stroke="#1b2550" stroke-width="9"/>
+ <circle cx="-9" cy="-254" r="9" fill="#fff"/>
+ <!-- head -->
+ <rect x="-205" y="-120" width="40" height="120" rx="14" fill="#f08a24" stroke="#1b2550" stroke-width="9"/>
+ <rect x="165" y="-120" width="40" height="120" rx="14" fill="#f08a24" stroke="#1b2550" stroke-width="9"/>
+ <rect x="-150" y="-195" width="300" height="34" rx="12" fill="#f08a24" stroke="#1b2550" stroke-width="9"/>
+ <rect x="-175" y="-170" width="350" height="250" rx="34" fill="#e3e9f4" stroke="#1b2550" stroke-width="11"/>
+ <rect x="-145" y="-142" width="290" height="194" rx="24" fill="#16204a"/>
+ <ellipse cx="-58" cy="-62" rx="34" ry="42" fill="#9ff6ff"/>
+ <ellipse cx="58" cy="-62" rx="34" ry="42" fill="#9ff6ff"/>
+ <circle cx="-46" cy="-78" r="11" fill="#fff"/><circle cx="70" cy="-78" r="11" fill="#fff"/>
+ <path d="M-50 0 Q0 45 50 0 Z" fill="#9ff6ff"/>
+ <ellipse cx="-108" cy="-6" rx="20" ry="11" fill="#ff8fb1" opacity=".9"/>
+ <ellipse cx="108" cy="-6" rx="20" ry="11" fill="#ff8fb1" opacity=".9"/>
+</g>

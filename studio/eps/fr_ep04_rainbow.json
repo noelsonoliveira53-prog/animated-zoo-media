@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep04_rainbow",
+ "title": "Eat the Rainbow! Colorful Fruits and Veggies for Kids with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting a rainbow of foods.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Healthy food and healthy habits help us grow big and strong.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "apple",
+   "lines": [
+    [
+     "Here's a clue: it's round and crunchy, and it can be red, green or yellow! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Apple!",
+     "enter"
+    ],
+    [
+     "This is Apple! Can you say apple?",
+     "zoom"
+    ],
+    [
+     "Apples grow on trees.",
+     "fx+bob"
+    ],
+    [
+     "Crunch, crunch! Apples are fun to bite.",
+     "bob"
+    ],
+    [
+     "Can you pretend to pick an apple from a tree? Reach up high!",
+     "wiggle"
+    ],
+    [
+     "What's hiding inside an apple?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little seeds! They make a star shape.",
+     "fx2+badge:APPLE!"
+    ],
+    [
+     "Let's say it together: APPLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: APPLE!",
+     "zoom"
+    ],
+    [
+     "Apples help keep your teeth and tummy happy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Apple!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "carrot",
+   "lines": [
+    [
+     "Here's a clue: it's orange and crunchy, and it grows under the ground! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Carrot!",
+     "enter"
+    ],
+    [
+     "This is Carrot! Can you say carrot?",
+     "zoom"
+    ],
+    [
+     "Carrots grow down in the dirt.",
+     "fx+bob"
+    ],
+    [
+     "The green leaves stay on top, and the carrot hides below!",
+     "bob"
+    ],
+    [
+     "Can you pull a carrot out of the ground? Pull, pull, POP!",
+     "wiggle"
+    ],
+    [
+     "Are carrots always orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "No! Some are purple, yellow or white.",
+     "fx2+badge:CARROT!"
+    ],
+    [
+     "Let's say it together: CARROT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CARROT!",
+     "zoom"
+    ],
+    [
+     "Carrots help your eyes stay healthy.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Carrot!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "corn",
+   "lines": [
+    [
+     "Here's a clue: it's yellow, and it has lots of little bumps in rows! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Corn!",
+     "enter"
+    ],
+    [
+     "This is Corn! Can you say corn?",
+     "zoom"
+    ],
+    [
+     "Corn grows on tall plants.",
+     "fx+bob"
+    ],
+    [
+     "Each yellow bump is a kernel.",
+     "bob"
+    ],
+    [
+     "Can you grow tall like a corn plant? Stretch, stretch!",
+     "wiggle"
+    ],
+    [
+     "What are the yellow bumps called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Kernels! Lots and lots of kernels.",
+     "fx2+badge:CORN!"
+    ],
+    [
+     "Let's say it together: CORN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CORN!",
+     "zoom"
+    ],
+    [
+     "Corn is sweet and sunny yellow.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Corn!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "broccoli",
+   "lines": [
+    [
+     "Here's a clue: it looks like a tiny green tree! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Broccoli!",
+     "enter"
+    ],
+    [
+     "This is Broccoli! Can you say broccoli?",
+     "zoom"
+    ],
+    [
+     "Broccoli is a green vegetable.",
+     "fx+bob"
+    ],
+    [
+     "Each little bump is called a floret.",
+     "bob"
+    ],
+    [
+     "Can you stand tall like a broccoli tree? Arms up!",
+     "wiggle"
+    ],
+    [
+     "What does broccoli look like?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Little trees! You can be a giant!",
+     "fx2+badge:BROCCOLI!"
+    ],
+    [
+     "Let's say it together: BROCCOLI!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BROCCOLI!",
+     "zoom"
+    ],
+    [
+     "Broccoli helps you grow big and strong.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Broccoli!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "blueberry",
+   "lines": [
+    [
+     "Here's a clue: they're tiny, round and blue! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Blueberries!",
+     "enter"
+    ],
+    [
+     "This is Blueberries! Can you say blueberries?",
+     "zoom"
+    ],
+    [
+     "Blueberries grow on little bushes.",
+     "fx+bob"
+    ],
+    [
+     "They are small, so you can eat a handful!",
+     "bob"
+    ],
+    [
+     "Can you count three blueberries on your fingers? One, two, three!",
+     "wiggle"
+    ],
+    [
+     "What color are blueberries?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Blue! Well, a little bit purple, too.",
+     "fx2+badge:BLUEBERRY!"
+    ],
+    [
+     "Let's say it together: BLUEBERRIES!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BLUEBERRIES!",
+     "zoom"
+    ],
+    [
+     "Blueberries are tiny but very good for you.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Blueberries!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember.",
+   "@title"
+  ],
+  [
+   "Red, like an apple.",
+   "@apple"
+  ],
+  [
+   "Orange, like a carrot.",
+   "@carrot"
+  ],
+  [
+   "Yellow, like corn.",
+   "@corn"
+  ],
+  [
+   "Green, like broccoli.",
+   "@broccoli"
+  ],
+  [
+   "And blue, like blueberries!",
+   "@blueberry"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

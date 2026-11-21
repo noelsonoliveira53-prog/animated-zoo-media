@@ -1,0 +1,25 @@
+__pycache__/
+
+# finish.py scratch output (published copies live at the repo root)
+studio/zoo3d/finished/*.ass
+studio/zoo3d/finished/thumb_*.png
+studio/zoo3d/finished/zoo3d_ep1[2-9]*.mp4
+studio/sing/cache/
+studio/zoo3d/out/
+studio/zoo3d/jobs/*_song.wav
+studio/zoo3d/jobs/*_song.flac
+studio/zoo3d/finished/zool_*.mp4
+studio/zoo3d/jobs/zt_test*
+studio/zoo3d/jobs/aa_t*
+studio/zoo3d/songs/zt_test.json
+shorts3d/*.ass
+
+# multilingual packages: the big files are built, not stored (video is cartoon/<id>.mp4, audio is rebuilt by studio/multilang/build.py)
+packages/*/video/
+packages/*/audio/
+
+# listen.py scratch output
+studio/listen/out/
+
+# the recorded-instrument SoundFont (32 MB): sf2render.py fetches it from github.com/mrbumpy409/GeneralUser-GS when missing
+studio/sing/sf2/*.sf2

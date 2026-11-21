@@ -1,0 +1,1044 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "African elephant: large ear surface area with networks of vessels close to the skin surface allow heat to leave the body; flapping the ears dissipates a lot of body heat; wrinkles help the skin retain moisture, and water and mud adhere to wrinkly skin, which boosts evaporative cooling; elephants spray dust, grass and water on the body; they walk on tiptoes with large fat pads cushioning the feet; they may detect vibrations through their feet (SDZWA Library fact sheet 'African Elephants', Physical Characteristics, ielc.libguides.com/sdzg/factsheets/african_elephant/characteristics, read Nov 16 2026).\nKoala: posture changes help with body temperature regulation; on hot days they extend their limbs, and in cold, wet, windy weather they fold their arms and legs in; arboreal, but must travel on the ground to move to another tree; males produce low-frequency bellows; koalas spend most of their time alone (SDZWA Library fact sheet 'Koala', Behavior & Ecology, read Nov 16 2026).\nTiger: larger subspecies often regulate body temperature by lying partially submerged in shaded pools; active both day and night; sounds include grunting, miaowing, woofing, growling, hissing and prusten or chuffing (gentle puffing); both sexes scent-mark their territories (SDZWA Library fact sheet 'Tiger', Behavior & Ecology, read Nov 16 2026). Stripes on body, limbs, head and tail (same library, Physical Characteristics, read Nov 16 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about how animals stay cool!\nWhat do animals do on a hot, hot day?\nThree animal friends will show us. Count them with me. One, two, three!\nFan your face, and let's go!\nWho flaps big ears, to cool down?\nIs it the elephant? Or is it the pig?\nIt is the elephant!\nHere is the fun fact. An elephant's big ears help it cool down.\nThe elephant flaps its ears, and lets the heat out. Flap, flap! Flap, flap!\nWhat else helps an elephant cool down? Hmm.\nWater and mud! It sprays water and mud on its body. Splash!\nLook at its wrinkly skin.\nWater and mud stick to the wrinkles, and that helps the elephant stay cool. Nice and cool!\nAnd here is a surprise. Elephants walk on their tiptoes! A soft pad cushions each foot.\nAn elephant may even feel the ground rumble, through its feet!\nStomp, stomp! Can you feel it? Rumble, rumble!\nSay it with me. Elephants flap their ears to cool down!\nCan you flap like an elephant? Put your hands by your ears. Flap, flap!\nNow spray water like a trunk. Splash, splash!\nQuick check! What does an elephant flap, to cool down? Its ears? Or its feet?\nIts ears! Flap, flap. Great job!\nOn a hot day, who stretches out its arms and legs, to cool down?\nIs it the koala? Or is it the cow?\nIt is the koala!\nHere is the fun fact. On a hot day, a koala stretches out its arms and legs.\nStretch, stretch! That helps it cool down.\nWhat does a koala do on a cold, windy day? Hmm.\nIt folds its arms and legs in, and makes itself small. Snuggle!\nSnug as can be! A cozy, little ball of fur.\nA koala spends most of its time up in the trees.\nBut to get to another tree, it climbs down, and walks on the ground. Step, step, step!\nBoy koalas can make a very low, loud call. It is called a bellow!\nA koala mostly likes to be alone, up in its own tree.\nSay it with me. A koala stretches out when it is hot!\nCan you cool down like a koala? Stretch out your arms and legs!\nNow it is cold. Fold your arms and legs in. Snuggle!\nQuick check! On a hot day, what does a koala do? Stretch out? Or curl up?\nStretch out! You remembered!\nWhich big cat cools off, by lying in a shady pool of water?\nIs it the tiger? Or is it the pig?\nIt is the tiger!\nHere is the fun fact. On a hot day, big tigers often cool off by lying in a shady pool.\nJust part of the tiger is in the water. Ahh, nice and cool!\nIs a tiger busy in the day, or at night? Hmm.\nBoth! Tigers can be busy in the day, and at night too.\nA tiger can be awake any time.\nTigers make lots of sounds. Growls, and grunts, and even a miaow!\nOne gentle tiger sound is called chuffing. It is a soft, puffing sound. Puff, puff!\nEvery tiger has stripes on its body, its legs, its head and its tail.\nA tiger leaves its smell on trees, to say: this is my home!\nSay it with me. A tiger cools off in a shady pool!\nCan you lie down like a tiger in a cool pool? Ahh!\nNow chuff like a tiger. Puff, puff, puff!\nQuick check! Where does a big tiger cool off? In a shady pool? Or in the snow?\nIn a shady pool! Nice and cool. Super thinking!\nWow! We met three friends who know how to stay cool. Now it is quiz time!\nGet ready. Think hard!\nWho flaps big ears to cool down?\nThe elephant! Yes!\nWho stretches out its arms and legs on a hot day?\nThe koala! That's right!\nWho cools off in a shady pool?\nThe tiger! You remembered!\nYou learned so many new things today.\nFlap like an elephant. Stretch like a koala. And chuff like a tiger!\nHow do you cool down on a hot day?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 330.8,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 714,
+  "words": 714,
+  "pause_onsets_checked": 55,
+  "onset_err_mean_ms": 28.0,
+  "onset_err_max_ms": 110.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Hot or Cold? How Animals Stay Cool for Kids",
+  "card": "Hot or Cold?",
+  "thumb_text": "FLAP FLAP!",
+  "description": "How do animals stay cool on a hot day? Pick your answer with Milo the bluebird, then find out: an elephant flaps its big ears and sprays water and mud on its wrinkly skin, a koala stretches out its arms and legs when it is hot and folds them in when it is cold, and a big tiger cools off by lying in a shady pool.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "how animals stay cool",
+   "elephant facts for kids",
+   "koala facts for kids",
+   "tiger facts for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_elephant_ears",
+   "title": "Why Does an Elephant Flap Its Big Ears?",
+   "l1": "HOW DOES IT",
+   "l2": "COOL DOWN?",
+   "thumb_text": "COOL DOWN!",
+   "thumb_line": [
+    6,
+    0.7
+   ],
+   "seg": "elephant",
+   "start": 20.355,
+   "end": 106.622,
+   "seconds": 86.3
+  },
+  {
+   "id": "zs90_koala_stretch",
+   "title": "How Does a Koala Cool Down on a Hot Day?",
+   "l1": "HOT OR",
+   "l2": "COLD?",
+   "thumb_text": "STRETCH!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "koala",
+   "start": 106.622,
+   "end": 192.33,
+   "seconds": 85.7
+  },
+  {
+   "id": "zs90_tiger_pool",
+   "title": "How Does a Tiger Cool Off? Tiger Facts for Kids",
+   "l1": "HOW DOES IT",
+   "l2": "COOL OFF?",
+   "thumb_text": "AHH!",
+   "thumb_line": [
+    3,
+    0.7
+   ],
+   "seg": "tiger",
+   "start": 192.33,
+   "end": 279.904,
+   "seconds": 87.6
+  }
+ ],
+ "job": {
+  "id": "zool_ep18",
+  "title": "Hot or Cold?",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 73,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "koala",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "koala"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "tiger",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "tiger"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cow",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "cow",
+     "scale": 1.0
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "farm",
+    "tod": "noon",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "elephant",
+     "koala",
+     "tiger"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "desert",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "desert",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "elephant"
+    ]
+   },
+   {
+    "from": "koala",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "koala",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "koala"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "bamboo",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "tiger",
+    "biome": "bamboo",
+    "tod": "golden",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "tiger"
+    ]
+   },
+   {
+    "from": "quiz",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "elephant",
+     "koala",
+     "tiger"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "river",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "elephant",
+     "koala",
+     "tiger"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 975,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "HOT OR COLD?",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 14.684
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 15.834,
+      "dur": 4.621,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.28,
+        -3.48
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "elephant",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:elephant",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FLAP FLAP!",
+      "color": "#3db8ff",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 10.049,
+      "dur": 12.742
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 3.217,
+      "dur": 8.832,
+      "spin": 0,
+      "opts": {
+       "text": "ELEPHANT",
+       "color": "#1479d6",
+       "win": 6.432
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 3.667,
+      "dur": 5.982,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 5.899,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 73.685,
+      "dur": 10.843,
+      "spin": 0,
+      "opts": {
+       "text": "EARS",
+       "color": "#1479d6",
+       "win": 8.843
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.135,
+      "dur": 8.393,
+      "spin": 0,
+      "opts": {
+       "text": "FEET",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.778,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       2.4,
+       -1.1,
+       0.0
+      ],
+      "delay": 15.068,
+      "dur": 7.723,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 25.562,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 28.612,
+      "dur": 5.136,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 45.369,
+      "dur": 3.998,
+      "spin": 0,
+      "opts": {
+       "text": "TIPTOES!",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "koala",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:koala",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#ff7a00",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 12.077,
+      "dur": 10.943
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 5.306,
+      "dur": 8.781,
+      "spin": 0,
+      "opts": {
+       "text": "KOALA",
+       "color": "#1479d6",
+       "win": 6.381
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.756,
+      "dur": 5.931,
+      "spin": 0,
+      "opts": {
+       "text": "COW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.937,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.106,
+      "dur": 10.67,
+      "spin": 0,
+      "opts": {
+       "text": "STRETCH",
+       "color": "#1479d6",
+       "win": 8.67
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.556,
+      "dur": 8.22,
+      "spin": 0,
+      "opts": {
+       "text": "CURL UP",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.026,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       2.4,
+       -1.1,
+       0.0
+      ],
+      "delay": 15.577,
+      "dur": 7.443,
+      "spin": 0,
+      "opts": {
+       "hot": true
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 26.347,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "thermo",
+      "at": [
+       2.4,
+       -1.1,
+       0.0
+      ],
+      "delay": 29.507,
+      "dur": 5.093,
+      "spin": 0,
+      "opts": {
+       "hot": false
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 52.42,
+      "dur": 5.736,
+      "spin": 0,
+      "opts": {
+       "text": "BELLOW!",
+       "color": "#8e5bd8"
+      }
+     }
+    ]
+   },
+   {
+    "section": "tiger",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:tiger",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "COOL POOL!",
+      "color": "#8e5bd8",
+      "at": [
+       -0.7,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 11.586,
+      "dur": 13.069999999999999
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.884,
+      "dur": 8.712,
+      "spin": 0,
+      "opts": {
+       "text": "TIGER",
+       "color": "#1479d6",
+       "win": 6.312
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.334,
+      "dur": 5.862,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.446,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.195,
+      "dur": 10.829,
+      "spin": 0,
+      "opts": {
+       "text": "POOL",
+       "color": "#1479d6",
+       "win": 8.829
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.645,
+      "dur": 8.379,
+      "spin": 0,
+      "opts": {
+       "text": "SNOW",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 79.274,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 18.773,
+      "dur": 5.883,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 27.664,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 30.714,
+      "dur": 4.248,
+      "spin": 0,
+      "opts": {
+       "text": "DAY AND NIGHT",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 44.688,
+      "dur": 5.076,
+      "spin": 0,
+      "opts": {
+       "text": "PUFF PUFF!",
+       "color": "#ff7a00"
+      }
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:elephant",
+     "wide",
+     "close:koala",
+     "wide",
+     "close:tiger"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0,
+      "dur": 6.53
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 7.68,
+      "dur": 5.117,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -0.7999999999999998,
+       1.2,
+       2.4999999999999996
+      ],
+      "delay": 13.047,
+      "dur": 1.863,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 14.96,
+      "dur": 6.105,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       4.05,
+       1.2,
+       2.1999999999999997
+      ],
+      "delay": 21.315,
+      "dur": 2.012,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 23.378,
+      "dur": 4.895,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -5.85,
+       0.1,
+       2.1999999999999997
+      ],
+      "delay": 28.522,
+      "dur": 2.326,
+      "spin": 0,
+      "opts": {
+       "s": 0.6
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep18",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep18_timing.json",
+  "audio": "zool_ep18_song.wav"
+ }
+}

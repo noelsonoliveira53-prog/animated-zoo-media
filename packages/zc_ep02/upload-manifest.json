@@ -1,0 +1,55 @@
+{
+ "dry_run": true,
+ "sends_anything": false,
+ "channel": "The Animated Zoo (UC1YuY8nqnViTtm85qxE_M1w)",
+ "videos_created": 0,
+ "video": {
+  "existing_video_id": "-1K86tqYuAY",
+  "file": "video/episode-master-2160p.mp4",
+  "made_for_kids": true,
+  "video_language": "English",
+  "schedule": "2026-11-19 9:30 AM ET",
+  "visibility_now": "scheduled"
+ },
+ "steps": [
+  {
+   "step": 1,
+   "where": "Studio > Content > the video",
+   "action": "already uploaded once; no second upload"
+  },
+  {
+   "step": 2,
+   "where": "Studio > Languages",
+   "language": "English",
+   "action": "upload captions for the original language",
+   "captions": "captions/captions-en.srt"
+  },
+  {
+   "step": 3,
+   "where": "Studio > Languages > Add language",
+   "language": "Spanish (Latin America)",
+   "title": "¿Para qué sirve la trompa de un elefante?",
+   "description": "¿Para qué sirve la trompa de un elefante? ¿Es una nariz, una mano o una ducha? Milo, el pajarito azul, visita al elefante bebé Tumble y a su mamá para descubrirlo. Una lección tranquila de animales para niños de 2 a 6 años, con preguntas para responder, cosas para contar y un juego de repaso al final.\nLos niños aprenden que la trompa es nariz y labio de arriba, que sirve para oler, agarrar, beber, rociar agua y respirar como un esnórquel, que el agua no sube hasta arriba y que la trompa no tiene huesos.\n\nThe Animated Zoo hace videos tranquilos y coloridos para los más pequeños. Hecho con cariño para niños de 2 a 6 años. Los personajes y las imágenes se animan con ayuda de herramientas de IA y se revisan antes de publicar.\n\nDE DÓNDE VIENEN LOS DATOS\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant).",
+   "audio_track": "audio/track-es-419.wav",
+   "captions": "captions/captions-es-419.srt",
+   "thumbnail": "thumbnails/thumbnail-es-419.png",
+   "action": "add as DRAFT; the 'Publish' of the track waits for the owner's yes"
+  },
+  {
+   "step": 4,
+   "where": "Studio > Languages > Add language",
+   "language": "Portuguese (Brazil)",
+   "title": "Para que serve a tromba do elefante?",
+   "description": "Para que serve a tromba do elefante? É um nariz, uma mão ou um chuveiro? Milo, o passarinho azul, visita o elefante bebê Tumble e a mamãe dele para descobrir. Uma aula tranquila sobre animais para crianças de 2 a 6 anos, com perguntas para responder, coisas para contar e um joguinho de revisão no final.\nAs crianças aprendem que a tromba é nariz e lábio de cima, que ela serve para cheirar, pegar, beber, esguichar água e respirar como um snorkel, que a água não sobe até lá em cima e que a tromba não tem ossos.\n\nThe Animated Zoo faz vídeos tranquilos e coloridos para os pequenos. Feito com carinho para crianças de 2 a 6 anos. Os personagens e as imagens são animados com a ajuda de ferramentas de IA e revisados antes de publicar.\n\nDE ONDE VÊM AS INFORMAÇÕES\nWWF (Unforgettable elephant facts); San Diego Zoo Wildlife Alliance (elephant).",
+   "audio_track": "audio/track-pt-BR.wav",
+   "captions": "captions/captions-pt-BR.srt",
+   "thumbnail": "thumbnails/thumbnail-pt-BR.png",
+   "action": "add as DRAFT; the 'Publish' of the track waits for the owner's yes"
+  }
+ ],
+ "not_done_without_owner": [
+  "publishing any audio track",
+  "any change to a public video",
+  "deleting anything"
+ ]
+}

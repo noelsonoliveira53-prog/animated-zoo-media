@@ -1,0 +1,329 @@
+{
+ "id": "fr_ep07_sunny",
+ "title": "Sunny Fruits for Kids! Pineapple, Mango and More with Pip",
+ "intro": [
+  [
+   "Hi, friends! I'm Pip the strawberry, and this is my buddy Kiko the broccoli!",
+   ""
+  ],
+  [
+   "Welcome to Fruity Friends! Today we're meeting five sunny fruits, bright and sweet and a little bit sour.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Yummy food and healthy habits help us grow, play and learn every day.",
+   ""
+  ],
+  [
+   "Ready? Let's go to the kitchen and find out!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "fr2_pineapple",
+   "lines": [
+    [
+     "Here's a clue: it's spiky on top, bumpy outside, and sweet and yellow inside! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Pineapple!",
+     "enter"
+    ],
+    [
+     "This is Pineapple! Can you say pineapple?",
+     "zoom"
+    ],
+    [
+     "Pineapples do not grow on trees! They grow on a spiky plant, close to the ground.",
+     "fx+bob"
+    ],
+    [
+     "Each pineapple grows for a long, long time. More than a whole year!",
+     "bob"
+    ],
+    [
+     "Can you make spiky leaves on your head? Hands up, fingers out, like a pineapple crown!",
+     "wiggle"
+    ],
+    [
+     "What are the spiky leaves on top called?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The crown! Like a king or queen of fruits.",
+     "fx2+badge:PINEAPPLE!"
+    ],
+    [
+     "Let's say it together: PINEAPPLE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PINEAPPLE!",
+     "zoom"
+    ],
+    [
+     "Pineapple is sweet and tangy, and so sunny yellow inside.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pineapple!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_mango",
+   "lines": [
+    [
+     "Here's a clue: it's shaped like a big bean, and it can be green, yellow, orange and red! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Mango!",
+     "enter"
+    ],
+    [
+     "This is Mango! Can you say mango?",
+     "zoom"
+    ],
+    [
+     "Mangoes grow on big, tall trees where the weather is warm.",
+     "fx+bob"
+    ],
+    [
+     "Inside, a mango is soft, orange and very sweet.",
+     "bob"
+    ],
+    [
+     "Can you pretend to pick a mango from a tall tree? Reach up, up, up!",
+     "wiggle"
+    ],
+    [
+     "What's hiding in the middle of a mango?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "One big, flat seed! It's almost as big as your hand.",
+     "fx2+badge:MANGO!"
+    ],
+    [
+     "Let's say it together: MANGO!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: MANGO!",
+     "zoom"
+    ],
+    [
+     "Mangoes are sweet and soft, and they smell like sunshine.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Mango!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_lemon",
+   "lines": [
+    [
+     "Here's a clue: it's bright yellow, it grows on a tree, and it tastes very sour! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Lemon!",
+     "enter"
+    ],
+    [
+     "This is Lemon! Can you say lemon?",
+     "zoom"
+    ],
+    [
+     "Lemons grow on trees, and they are full of juice.",
+     "fx+bob"
+    ],
+    [
+     "Lemon juice is sour! It can make your face go squish, like this.",
+     "bob"
+    ],
+    [
+     "Can you make a silly sour face? Squeeze your eyes and pucker up!",
+     "wiggle"
+    ],
+    [
+     "How can we use a lemon?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Squeeze a little juice into water, or on fish, or into a yummy sauce!",
+     "fx2+badge:LEMON!"
+    ],
+    [
+     "Let's say it together: LEMON!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LEMON!",
+     "zoom"
+    ],
+    [
+     "Lemons are sour all by themselves, but a little squeeze adds a bright, fresh taste.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Lemon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "fr2_avocado",
+   "lines": [
+    [
+     "Here's a clue: it's bumpy and dark green outside, and soft and creamy inside! Can you guess?",
+     "q"
+    ],
+    [
+     "Now meet: Avocado!",
+     "enter"
+    ],
+    [
+     "This is Avocado! Can you say avocado?",
+     "zoom"
+    ],
+    [
+     "An avocado grows on a tree. And guess what? It's a fruit!",
+     "fx+bob"
+    ],
+    [
+     "Inside, it's soft, creamy and light green, so you can mash it with a fork.",
+     "bob"
+    ],
+    [
+     "Can you pretend to mash an avocado? Squish, squish, squish!",
+     "wiggle"
+    ],
+    [
+     "What's the big round ball in the middle?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The seed! It's called a pit, and it's very big.",
+     "fx2+badge:AVOCADO!"
+    ],
+    [
+     "Let's say it together: AVOCADO!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: AVOCADO!",
+     "zoom"
+    ],
+    [
+     "You can spread mashed avocado on toast, or dip veggies in it.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Avocado!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "orangefruit",
+   "lines": [
+    [
+     "Here's a clue: it's round and juicy, and it has the same name as its color! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Orange!",
+     "enter"
+    ],
+    [
+     "This is Orange! Can you say orange?",
+     "zoom"
+    ],
+    [
+     "Oranges grow on trees, where the weather is warm and sunny.",
+     "fx+bob"
+    ],
+    [
+     "Peel off the skin, and inside are juicy pieces called segments.",
+     "bob"
+    ],
+    [
+     "Can you pretend to peel an orange? Round and round and round!",
+     "wiggle"
+    ],
+    [
+     "How many pieces are inside an orange?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Often about ten! Let's count them next time.",
+     "fx2+badge:ORANGE!"
+    ],
+    [
+     "Let's say it together: ORANGE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: ORANGE!",
+     "zoom"
+    ],
+    [
+     "Oranges are sweet and juicy, and they smell so fresh.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Orange!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Yummy! Let's remember what we learned.",
+   "@title"
+  ],
+  [
+   "Pineapple, with a spiky crown.",
+   "@fr2_pineapple"
+  ],
+  [
+   "Mango, with one big seed.",
+   "@fr2_mango"
+  ],
+  [
+   "Lemon, sour and bright.",
+   "@fr2_lemon"
+  ],
+  [
+   "Avocado, soft and creamy.",
+   "@fr2_avocado"
+  ],
+  [
+   "And orange, full of juicy pieces!",
+   "@orangefruit"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Tell a grown-up, and try something new this week!",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Fruity Friends!",
+   ""
+  ]
+ ]
+}

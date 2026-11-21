@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep10_animals",
+ "title": "How Do Animals Do That? Fish, Birds and Bees",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out how animals do amazing things.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_fish",
+   "lines": [
+    [
+     "Here's a clue: it swims, and it has fins and a tail! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Fish!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Fish need air too, but they get it from water.",
+     "fx+bob"
+    ],
+    [
+     "Water goes in their mouth and over their gills, and the gills take out the air they need!",
+     "bob"
+    ],
+    [
+     "Can you make a fish face and open and close your mouth?",
+     "wiggle"
+    ],
+    [
+     "What do fish use to breathe?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Their gills!",
+     "fx2+badge:GILLS!"
+    ],
+    [
+     "Let's say it together: FISH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: FISH!",
+     "zoom"
+    ],
+    [
+     "That's why fish can stay underwater all day long.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_bird",
+   "lines": [
+    [
+     "Here's a clue: it has feathers and wings, tweet tweet! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Bird!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Birds flap their wings down to push on the air.",
+     "fx+bob"
+    ],
+    [
+     "Pushing the air down and back lifts them up and moves them forward!",
+     "bob"
+    ],
+    [
+     "Can you flap your arms like wings? Flap, flap, flap!",
+     "wiggle"
+    ],
+    [
+     "How do birds stay light enough to fly?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Many birds have hollow bones and light feathers!",
+     "fx2+badge:FLAP!"
+    ],
+    [
+     "Let's say it together: BIRD!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BIRD!",
+     "zoom"
+    ],
+    [
+     "Their feathers are shaped just right for catching air.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_bee",
+   "lines": [
+    [
+     "Here's a clue: it's fuzzy, it buzzes, and it loves flowers! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Honeybee!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Honeybees drink a sweet juice from flowers, called nectar.",
+     "fx+bob"
+    ],
+    [
+     "Back at the hive, they put it in little wax rooms and fan it with their wings until it turns into honey!",
+     "bob"
+    ],
+    [
+     "Can you buzz and fan your wings like a busy bee? Bzzz!",
+     "wiggle"
+    ],
+    [
+     "What do bees make honey from?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Nectar from flowers!",
+     "fx2+badge:HONEY!"
+    ],
+    [
+     "Let's say it together: HONEYBEE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: HONEYBEE!",
+     "zoom"
+    ],
+    [
+     "The little wax rooms have six sides. They're called a honeycomb.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_butterfly",
+   "lines": [
+    [
+     "Here's a clue: it has big, colorful wings! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Butterfly!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A butterfly starts as a tiny egg, and then a hungry caterpillar hatches out.",
+     "fx+bob"
+    ],
+    [
+     "The caterpillar makes a cozy case called a chrysalis. Inside, it changes into a butterfly!",
+     "bob"
+    ],
+    [
+     "Can you curl up small like a caterpillar, then open your wings wide?",
+     "wiggle"
+    ],
+    [
+     "What does a caterpillar turn into?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A butterfly!",
+     "fx2+badge:NEW WINGS!"
+    ],
+    [
+     "Let's say it together: BUTTERFLY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BUTTERFLY!",
+     "zoom"
+    ],
+    [
+     "Egg, caterpillar, chrysalis, butterfly. What a change!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_duck",
+   "lines": [
+    [
+     "Here's a clue: it swims on ponds and says quack, quack! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Duck!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Ducks have a special oil near their tail.",
+     "fx+bob"
+    ],
+    [
+     "They spread the oil on their feathers with their beak, so water rolls right off, and they stay dry!",
+     "bob"
+    ],
+    [
+     "Can you waddle like a duck? Quack, quack!",
+     "wiggle"
+    ],
+    [
+     "Why do ducks stay dry in the water?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Their oily feathers keep the water out!",
+     "fx2+badge:STAYS DRY!"
+    ],
+    [
+     "Let's say it together: DUCK!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: DUCK!",
+     "zoom"
+    ],
+    [
+     "Under their top feathers, ducks have soft fluffy feathers that keep them warm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Fish breathe with gills.",
+   "@gz2_fish"
+  ],
+  [
+   "Birds flap to push the air.",
+   "@gz2_bird"
+  ],
+  [
+   "Bees turn nectar into honey.",
+   "@gz2_bee"
+  ],
+  [
+   "Caterpillars change into butterflies.",
+   "@gz2_butterfly"
+  ],
+  [
+   "And ducks stay dry with oily feathers!",
+   "@gz2_duck"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

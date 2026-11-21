@@ -1,0 +1,136 @@
+[
+ {
+  "id": "giraffe",
+  "animal": "giraffe",
+  "title": "Giraffe Tongues Are Purple! Here's Why",
+  "thumb": "PURPLE?!",
+  "top": "GIRAFFE",
+  "bg": [
+   "#8fd3ff",
+   "#d8f1ff"
+  ],
+  "beats": [
+   {
+    "say": "You have a pink tongue. A giraffe's tongue is purple, and up to twenty inches long! But why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's fly to the giraffes!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A giraffe uses its long tongue to grab leaves from tall trees.",
+    "act": "tongue"
+   },
+   {
+    "say": "That tongue can be almost as long as your arm!",
+    "act": "tongue_long"
+   },
+   {
+    "say": "So why purple? Scientists think the dark color helps protect it from the hot sun. Like sunscreen!",
+    "act": "sun"
+   },
+   {
+    "say": "What color is your tongue? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "San Diego Zoo Wildlife Alliance: Giraffe",
+   "Smithsonian's National Zoo: Giraffe"
+  ],
+  "floor": "#5fb043"
+ },
+ {
+  "id": "penguin",
+  "animal": "penguin",
+  "title": "Penguins Have Knees? Yes! Here's Where",
+  "thumb": "HIDDEN KNEES",
+  "top": "PENGUIN",
+  "bg": [
+   "#9fdcff",
+   "#eefaff"
+  ],
+  "beats": [
+   {
+    "say": "You can bend your knees. Penguins can too, but you never see them. Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's waddle over to the penguins!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Penguins look like they have short little legs.",
+    "act": "legs"
+   },
+   {
+    "say": "But under all those feathers, their legs are longer, with knees tucked up inside!",
+    "act": "xray"
+   },
+   {
+    "say": "Their feathers cover their knees, like a cozy coat.",
+    "act": "coat"
+   },
+   {
+    "say": "That's why penguins waddle, step by step.",
+    "act": "waddle"
+   },
+   {
+    "say": "Can you waddle like a penguin? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "San Diego Zoo Wildlife Alliance: Penguin",
+   "Smithsonian's National Zoo: Penguins"
+  ],
+  "floor": "#f4fbff"
+ },
+ {
+  "id": "elephant",
+  "animal": "elephant",
+  "title": "Why Can't Elephants Jump?",
+  "thumb": "NO JUMPING!",
+  "top": "ELEPHANT",
+  "bg": [
+   "#ffd98f",
+   "#fff4d8"
+  ],
+  "beats": [
+   {
+    "say": "You can jump up high. An elephant never jumps, not even once. Why not?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Milo. Let's stomp over to the elephants!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Elephants are the biggest animals on land.",
+    "act": "big"
+   },
+   {
+    "say": "Their legs stand straight, like strong tree trunks, to hold up their heavy bodies.",
+    "act": "legs"
+   },
+   {
+    "say": "So elephants can't jump. But they can walk fast, and even swim!",
+    "act": "swim"
+   },
+   {
+    "say": "And to say hello, elephants wrap their trunks together. An elephant hug!",
+    "act": "hug"
+   },
+   {
+    "say": "Can you give a big hug today? Be kind to every animal. See you at the zoo!",
+    "act": "outro"
+   }
+  ],
+  "sources": [
+   "San Diego Zoo Wildlife Alliance: Elephant",
+   "Smithsonian's National Zoo: Asian elephant"
+  ],
+  "floor": "#d4a94f"
+ }
+]

@@ -1,0 +1,186 @@
+{
+ "id": "zool_ep02",
+ "title": "Amazing Animal Noses for Kids! 5 Fun Facts with Milo",
+ "card": "Amazing Noses!",
+ "thumb_text": "SNIFF SNIFF!",
+ "description": "Sniff, sniff! Meet five animal friends with Milo the bluebird and learn one true fact about each nose: an elephant's trunk is its nose, a rhino's horn is made of the same stuff as your fingernails, pigs dig with their snouts, bears have a super sense of smell, and every cow has its own nose print.\nA gentle animal lesson for kids with questions, actions to copy and a quiz at the end. Ages 2-6.",
+ "tags": [
+  "animal noses for kids",
+  "animal facts for kids",
+  "elephant trunk for kids",
+  "learn animals",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "voice": "af_heart",
+ "speed": 0.82,
+ "seed": 23,
+ "cast": [
+  "elephant",
+  "rhino",
+  "pig",
+  "bear",
+  "cow"
+ ],
+ "facts": [
+  "An elephant's trunk is its nose; elephants use it to smell, breathe, drink and pick up food (Smithsonian's National Zoo).",
+  "A rhino's horn is made of keratin, the same material as hair and fingernails (Save the Rhino International).",
+  "Pigs use their strong snouts to dig in the ground for food, and they have an excellent sense of smell (Rutgers 4-H Animal Science).",
+  "Bears have one of the best senses of smell of any animal, much better than ours (National Park Service, Yosemite).",
+  "Every cow has its own nose print, like a fingerprint; farmers and scientists can tell cows apart by them (dairy science research, SciDev.Net)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "biome": "savanna",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "word": "SNIFF SNIFF!",
+   "energy": 0.8,
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Can you touch your nose? Boop!",
+    "Noses help animals smell their food and find their friends.",
+    "Today we are going to meet five animal friends with amazing noses.",
+    "Let's count them. One, two, three, four, five!",
+    "Each friend has one fun fact to share. Are you ready? Sniff, sniff! Let's go!"
+   ]
+  },
+  {
+   "name": "elephant",
+   "biome": "river",
+   "tod": "noon",
+   "show": [
+    "elephant"
+   ],
+   "word": "TRUNK!",
+   "lines": [
+    "Look! Who is big and gray, with flappy ears?",
+    "It is the elephant!",
+    "Where is the elephant's nose? Can you find it?",
+    "It is the trunk! Here is the fun fact. An elephant's trunk is its nose.",
+    "The elephant smells with its trunk, drinks with its trunk, and picks up food with its trunk!",
+    "Say it with me. A trunk is a nose!",
+    "Can you swing your arm like a trunk? Swing, swing, swing!",
+    "Great swinging!"
+   ]
+  },
+  {
+   "name": "rhino",
+   "biome": "desert",
+   "tod": "golden",
+   "show": [
+    "rhino"
+   ],
+   "word": "HORN!",
+   "lines": [
+    "Now we walk to the sunny desert. Who is this?",
+    "It is the rhino! The rhino has a horn on its nose.",
+    "What do you think the horn is made of?",
+    "Here is the fun fact. A rhino's horn is made of the same stuff as your fingernails!",
+    "Look at your fingernails. Wiggle your fingers!",
+    "Say it with me. A rhino horn is like a fingernail!",
+    "Can you stomp like a big rhino? Stomp, stomp, stomp!",
+    "Wonderful stomping!"
+   ]
+  },
+  {
+   "name": "pig",
+   "biome": "farm",
+   "tod": "morning",
+   "show": [
+    "pig"
+   ],
+   "word": "OINK!",
+   "lines": [
+    "Listen! Oink, oink! Who lives on the farm?",
+    "It is the pig! The pig has a round, pink snout.",
+    "What does a pig do with its snout?",
+    "Here is the fun fact. Pigs dig in the ground with their snouts to find food.",
+    "And pigs are very good at smelling!",
+    "Say it with me. Pigs dig with their snouts!",
+    "Can you say oink like a pig? Oink, oink!",
+    "What a great oink!"
+   ]
+  },
+  {
+   "name": "bear",
+   "biome": "mountain",
+   "tod": "noon",
+   "show": [
+    "bear"
+   ],
+   "word": "SNIFF!",
+   "lines": [
+    "Look at the tall mountains. Who is fluffy and brown?",
+    "It is the bear!",
+    "Can a bear smell yummy berries from far away?",
+    "Yes! Here is the fun fact. Bears have a super nose. They smell much better than we do.",
+    "Sniff, sniff! The bear finds berries with its nose.",
+    "Say it with me. Bears have super noses!",
+    "Can you take a big sniff like a bear? Sniff, sniff, sniff!",
+    "Good sniffing!"
+   ]
+  },
+  {
+   "name": "cow",
+   "biome": "spring_meadow",
+   "tod": "sunset",
+   "show": [
+    "cow"
+   ],
+   "word": "MOO!",
+   "lines": [
+    "Moo! Who is in the green meadow?",
+    "It is the cow!",
+    "Do all cows have the same nose?",
+    "No! Here is the fun fact. Every cow has its own nose print, just like your fingerprint.",
+    "No two cows have the same nose print. Just like you. There is only one you!",
+    "Say it with me. Every cow has its own nose!",
+    "Can you moo like a cow? Moooo!",
+    "What a lovely moo!"
+   ]
+  },
+  {
+   "name": "quiz",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "vista",
+   "word": "QUIZ TIME!",
+   "energy": 0.85,
+   "lines": [
+    "Wow! We met five friends with amazing noses. Now it is quiz time. Let's see what you remember!",
+    "Get ready. Think hard!",
+    "Whose nose is a long trunk? The elephant! Yes!",
+    "Whose horn is like your fingernails? The rhino! That's right!",
+    "Who digs with a snout? The pig! Good job!",
+    "Who has a super nose for berries? The bear! You remembered!",
+    "And who has a nose print like your fingerprint? The cow! You are so clever!"
+   ]
+  },
+  {
+   "name": "goodbye",
+   "biome": "beach",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "reveal",
+   "word": "BYE-BYE!",
+   "energy": 0.85,
+   "lines": [
+    "You learned five new things today. Elephant, rhino, pig, bear and cow.",
+    "Swing like an elephant. Stomp like a rhino. Oink like a pig. Sniff like a bear. And moo like a cow!",
+    "Now touch your own nose. Boop! Which nose was your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "improves": [
+  "one animal per scene with Milo, a question and an action in every segment, recap quiz (IMPROVE Nov 14)",
+  "fresh cast (rhino, pig, bear, cow are among the least used) and least-used places (desert, savanna, river)",
+  "every segment states one checked fact that can be cut into a fact-surprise Short"
+ ]
+}

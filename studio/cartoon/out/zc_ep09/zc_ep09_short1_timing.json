@@ -1,0 +1,2005 @@
+{
+ "id": "zc_ep09_short1",
+ "total": 88.31158333333339,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125
+ ],
+ "plan": {
+  "length": 88.3,
+  "shots": 23,
+  "visual_changes": 108,
+  "mean_gap": 0.82,
+  "longest_gap": 3.86,
+  "longest_gap_at": 39.0,
+  "over_6s": [],
+  "places": [
+   "dunes",
+   "trail",
+   "dune_eve"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper"
+  ],
+  "questions": 10,
+  "longest_without_question": 19.1,
+  "first_words_at": 0.42,
+  "shot_mean": 3.84,
+  "fails": [],
+  "words_placed": "182/182",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 20.7,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 22,
+   "cuts_on_the_half_beat": 22,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the dunes at sunrise hook: what does a camel eat"
+  ],
+  [
+   0.2,
+   "action",
+   "sandy looks"
+  ],
+  [
+   0.42,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new place",
+   "the picture board (blue) board: desert plants"
+  ],
+  [
+   4.4,
+   "action",
+   "the bush bobs"
+  ],
+  [
+   4.4,
+   "word",
+   "PLANTS!"
+  ],
+  [
+   6.56,
+   "new shot",
+   "the picture board (blue) board: grass leaves twigs"
+  ],
+  [
+   6.87,
+   "picture",
+   "f0"
+  ],
+  [
+   7.4,
+   "picture",
+   "f1"
+  ],
+  [
+   8.17,
+   "picture",
+   "f2"
+  ],
+  [
+   9.14,
+   "word",
+   "YUM!"
+  ],
+  [
+   10.0,
+   "new shot",
+   "the picture board (blue) board: say it"
+  ],
+  [
+   10.19,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   13.44,
+   "new shot",
+   "the picture board (blue) board: count three"
+  ],
+  [
+   15.1,
+   "word",
+   "1"
+  ],
+  [
+   15.34,
+   "word",
+   "2"
+  ],
+  [
+   15.58,
+   "word",
+   "3"
+  ],
+  [
+   16.56,
+   "new place",
+   "the dunes at sunrise Sandy looks"
+  ],
+  [
+   17.23,
+   "action",
+   "sandy looks"
+  ],
+  [
+   17.23,
+   "action",
+   "sandy looks"
+  ],
+  [
+   19.84,
+   "action",
+   "sandy looks"
+  ],
+  [
+   19.84,
+   "word",
+   "CLEVER!"
+  ],
+  [
+   21.88,
+   "new shot",
+   "the dunes at sunrise Sandy eats grass"
+  ],
+  [
+   22.65,
+   "action",
+   "sandy bends down to drink"
+  ],
+  [
+   24.12,
+   "action",
+   "sandy chews"
+  ],
+  [
+   24.12,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   25.62,
+   "new place",
+   "the rocky trail trail wide"
+  ],
+  [
+   25.73,
+   "action",
+   "mama walks"
+  ],
+  [
+   25.73,
+   "action",
+   "sandy walks"
+  ],
+  [
+   27.6,
+   "word",
+   "A LITTLE BUSH"
+  ],
+  [
+   28.75,
+   "new shot",
+   "the rocky trail Sandy nibbles leaves"
+  ],
+  [
+   29.37,
+   "action",
+   "sandy chews"
+  ],
+  [
+   31.16,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   31.16,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   31.16,
+   "word",
+   "NIBBLE!"
+  ],
+  [
+   32.5,
+   "new shot",
+   "the rocky trail question 1"
+  ],
+  [
+   33.71,
+   "sign",
+   "LEAVES"
+  ],
+  [
+   34.06,
+   "sign",
+   "ROCKS"
+  ],
+  [
+   35.64,
+   "thinking dot",
+   "1"
+  ],
+  [
+   36.32,
+   "thinking dot",
+   "2"
+  ],
+  [
+   36.99,
+   "thinking dot",
+   "3"
+  ],
+  [
+   37.48,
+   "answer",
+   "LEAVES"
+  ],
+  [
+   37.53,
+   "action",
+   "sandy hops"
+  ],
+  [
+   38.75,
+   "new shot",
+   "the rocky trail leaves!"
+  ],
+  [
+   38.91,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   38.91,
+   "word",
+   "LEAVES!"
+  ],
+  [
+   38.95,
+   "action",
+   "sandy chews"
+  ],
+  [
+   42.81,
+   "new shot",
+   "the rocky trail nibble"
+  ],
+  [
+   43.22,
+   "action",
+   "milo hops"
+  ],
+  [
+   43.22,
+   "word",
+   "NIBBLE, NIBBLE!"
+  ],
+  [
+   46.25,
+   "new shot",
+   "the rocky trail only a few"
+  ],
+  [
+   46.35,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   46.35,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   46.35,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   46.45,
+   "action",
+   "sandy chews"
+  ],
+  [
+   48.0,
+   "word",
+   "A FEW"
+  ],
+  [
+   49.06,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   49.06,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   49.06,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   49.06,
+   "new shot",
+   "the rocky trail count leaves"
+  ],
+  [
+   51.07,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   51.07,
+   "action",
+   "sandy chews"
+  ],
+  [
+   51.07,
+   "word",
+   "1"
+  ],
+  [
+   51.37,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   51.37,
+   "word",
+   "2"
+  ],
+  [
+   51.59,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   51.59,
+   "word",
+   "3"
+  ],
+  [
+   52.5,
+   "new shot",
+   "the rocky trail walks on"
+  ],
+  [
+   53.07,
+   "action",
+   "sandy walks"
+  ],
+  [
+   54.2,
+   "word",
+   "NEXT PLANT!"
+  ],
+  [
+   55.31,
+   "new place",
+   "the picture board board: a few from each"
+  ],
+  [
+   56.79,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   56.79,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   56.79,
+   "word",
+   "A FEW FROM EACH"
+  ],
+  [
+   57.68,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   57.68,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   57.96,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   57.96,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   58.75,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   58.75,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   58.75,
+   "action",
+   "a leaf is eaten"
+  ],
+  [
+   58.75,
+   "new place",
+   "the rocky trail question 1b"
+  ],
+  [
+   60.1,
+   "sign",
+   "ALL"
+  ],
+  [
+   60.45,
+   "sign",
+   "A FEW"
+  ],
+  [
+   62.61,
+   "thinking dot",
+   "1"
+  ],
+  [
+   63.28,
+   "thinking dot",
+   "2"
+  ],
+  [
+   63.95,
+   "thinking dot",
+   "3"
+  ],
+  [
+   64.44,
+   "answer",
+   "A FEW"
+  ],
+  [
+   64.49,
+   "action",
+   "sandy hops"
+  ],
+  [
+   65.62,
+   "action",
+   "the sun goes down"
+  ],
+  [
+   65.62,
+   "new place",
+   "the big sandy hill all day long"
+  ],
+  [
+   66.73,
+   "word",
+   "ALL DAY!"
+  ],
+  [
+   68.12,
+   "action",
+   "sandy chews"
+  ],
+  [
+   70.62,
+   "action",
+   "the sun goes lower"
+  ],
+  [
+   70.62,
+   "new shot",
+   "the big sandy hill until sundown"
+  ],
+  [
+   70.72,
+   "action",
+   "sandy chews"
+  ],
+  [
+   72.93,
+   "word",
+   "SUN DOWN!"
+  ],
+  [
+   73.75,
+   "new shot",
+   "the big sandy hill your lunch"
+  ],
+  [
+   75.1,
+   "action",
+   "milo hops"
+  ],
+  [
+   75.1,
+   "word",
+   "YOUR LUNCH?"
+  ],
+  [
+   76.88,
+   "new shot",
+   "the big sandy hill rub tummy"
+  ],
+  [
+   79.04,
+   "action",
+   "milo hops"
+  ],
+  [
+   79.04,
+   "word",
+   "MMM, YUM!"
+  ],
+  [
+   79.69,
+   "new place",
+   "the picture board (blue) board: point to the leaf"
+  ],
+  [
+   81.0,
+   "action",
+   "the leaf picture"
+  ],
+  [
+   81.0,
+   "word",
+   "THE LEAF!"
+  ],
+  [
+   84.06,
+   "new shot",
+   "the picture board (blue) board: a camel's lunch"
+  ],
+  [
+   86.98,
+   "word",
+   "LUNCH!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "dunes",
+   "say": "What does a camel eat, in the dry desert?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.5711666666666666,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.16
+    ],
+    [
+     "does",
+     0.16,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.35
+    ],
+    [
+     "camel",
+     0.35,
+     0.84
+    ],
+    [
+     "eat,",
+     0.84,
+     1.38
+    ],
+    [
+     "in",
+     1.38,
+     1.49
+    ],
+    [
+     "the",
+     1.49,
+     1.57
+    ],
+    [
+     "dry",
+     1.57,
+     1.93
+    ],
+    [
+     "desert?",
+     1.93,
+     2.57
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: what does a camel eat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Camels eat plants that grow in the desert.",
+   "t0": 3.4375,
+   "t1": 6.5625,
+   "v0": 3.5311666666666666,
+   "dur": 2.7485416666666667,
+   "words": [
+    [
+     "Camels",
+     0.0,
+     0.57
+    ],
+    [
+     "eat",
+     0.57,
+     0.87
+    ],
+    [
+     "plants",
+     0.87,
+     1.48
+    ],
+    [
+     "that",
+     1.48,
+     1.61
+    ],
+    [
+     "grow",
+     1.61,
+     1.94
+    ],
+    [
+     "in",
+     1.94,
+     2.03
+    ],
+    [
+     "the",
+     2.03,
+     2.11
+    ],
+    [
+     "desert.",
+     2.11,
+     2.749
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: desert plants",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Grass, leaves, and little twigs. Yum!",
+   "t0": 6.5625,
+   "t1": 10.0,
+   "v0": 6.819708333333334,
+   "dur": 2.8266666666666667,
+   "words": [
+    [
+     "Grass,",
+     0.05,
+     0.58
+    ],
+    [
+     "leaves,",
+     0.58,
+     1.07
+    ],
+    [
+     "and",
+     1.07,
+     1.16
+    ],
+    [
+     "little",
+     1.16,
+     1.35
+    ],
+    [
+     "twigs.",
+     1.35,
+     1.97
+    ],
+    [
+     "Yum!",
+     2.32,
+     2.827
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: grass leaves twigs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Say it with me. Grass, leaves, and twigs!",
+   "t0": 10.0,
+   "t1": 13.4375,
+   "v0": 10.186375,
+   "dur": 3.0095833333333335,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.52
+    ],
+    [
+     "me.",
+     0.52,
+     0.86
+    ],
+    [
+     "Grass,",
+     1.16,
+     1.68
+    ],
+    [
+     "leaves,",
+     1.68,
+     2.26
+    ],
+    [
+     "and",
+     2.26,
+     2.4
+    ],
+    [
+     "twigs!",
+     2.4,
+     3.01
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: say it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Let's count them. One, two, three!",
+   "t0": 13.4375,
+   "t1": 16.5625,
+   "v0": 13.735958333333333,
+   "dur": 2.421291666666667,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.36
+    ],
+    [
+     "count",
+     0.36,
+     0.74
+    ],
+    [
+     "them.",
+     0.74,
+     1.02
+    ],
+    [
+     "One,",
+     1.36,
+     1.6
+    ],
+    [
+     "two,",
+     1.6,
+     1.84
+    ],
+    [
+     "three!",
+     1.84,
+     2.42
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: count three",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Sandy looks, and looks. Camels are very clever at finding food.",
+   "t0": 16.5625,
+   "t1": 21.875,
+   "v0": 16.69725,
+   "dur": 4.890791666666667,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.53
+    ],
+    [
+     "looks,",
+     0.53,
+     0.98
+    ],
+    [
+     "and",
+     0.98,
+     1.15
+    ],
+    [
+     "looks.",
+     1.15,
+     1.67
+    ],
+    [
+     "Camels",
+     2.1,
+     2.67
+    ],
+    [
+     "are",
+     2.67,
+     2.78
+    ],
+    [
+     "very",
+     2.78,
+     3.14
+    ],
+    [
+     "clever",
+     3.14,
+     3.65
+    ],
+    [
+     "at",
+     3.65,
+     3.79
+    ],
+    [
+     "finding",
+     3.79,
+     4.36
+    ],
+    [
+     "food.",
+     4.36,
+     4.89
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Sandy looks",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Sandy finds some grass. Munch, munch!",
+   "t0": 21.875,
+   "t1": 25.625,
+   "v0": 22.12804166666667,
+   "dur": 3.024875,
+   "words": [
+    [
+     "Sandy",
+     0.03,
+     0.52
+    ],
+    [
+     "finds",
+     0.52,
+     0.89
+    ],
+    [
+     "some",
+     0.89,
+     1.03
+    ],
+    [
+     "grass.",
+     1.03,
+     1.66
+    ],
+    [
+     "Munch,",
+     1.99,
+     2.45
+    ],
+    [
+     "munch!",
+     2.45,
+     3.02
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Sandy eats grass",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Then Sandy and Mama walk to a little bush.",
+   "t0": 25.625,
+   "t1": 28.75,
+   "v0": 25.692916666666676,
+   "dur": 2.615458333333333,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.24
+    ],
+    [
+     "Sandy",
+     0.24,
+     0.78
+    ],
+    [
+     "and",
+     0.78,
+     0.88
+    ],
+    [
+     "Mama",
+     0.88,
+     1.28
+    ],
+    [
+     "walk",
+     1.48,
+     1.72
+    ],
+    [
+     "to",
+     1.72,
+     1.87
+    ],
+    [
+     "a",
+     1.87,
+     1.91
+    ],
+    [
+     "little",
+     1.91,
+     2.11
+    ],
+    [
+     "bush.",
+     2.11,
+     2.61
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "trail wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Sandy nibbles the green leaves. Nibble, nibble!",
+   "t0": 28.75,
+   "t1": 32.5,
+   "v0": 28.84837500000001,
+   "dur": 3.37275,
+   "words": [
+    [
+     "Sandy",
+     0.01,
+     0.52
+    ],
+    [
+     "nibbles",
+     0.52,
+     0.98
+    ],
+    [
+     "the",
+     0.98,
+     1.06
+    ],
+    [
+     "green",
+     1.06,
+     1.41
+    ],
+    [
+     "leaves.",
+     1.41,
+     1.97
+    ],
+    [
+     "Nibble,",
+     2.31,
+     2.9
+    ],
+    [
+     "nibble!",
+     2.9,
+     3.37
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Sandy nibbles leaves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Does a camel eat leaves, or rocks?",
+   "t0": 32.5,
+   "t1": 38.75,
+   "v0": 32.761125000000014,
+   "dur": 2.393875,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.14
+    ],
+    [
+     "a",
+     0.14,
+     0.18
+    ],
+    [
+     "camel",
+     0.18,
+     0.64
+    ],
+    [
+     "eat",
+     0.74,
+     0.95
+    ],
+    [
+     "leaves,",
+     0.95,
+     1.56
+    ],
+    [
+     "or",
+     1.56,
+     1.73
+    ],
+    [
+     "rocks?",
+     1.73,
+     2.39
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Leaves! Camels eat leaves, and grass, and twigs.",
+   "t0": 38.75,
+   "t1": 42.8125,
+   "v0": 38.89500000000002,
+   "dur": 3.4474583333333335,
+   "words": [
+    [
+     "Leaves!",
+     0.01,
+     0.62
+    ],
+    [
+     "Camels",
+     0.8,
+     1.31
+    ],
+    [
+     "eat",
+     1.31,
+     1.51
+    ],
+    [
+     "leaves,",
+     1.51,
+     2.03
+    ],
+    [
+     "and",
+     2.03,
+     2.18
+    ],
+    [
+     "grass,",
+     2.18,
+     2.7
+    ],
+    [
+     "and",
+     2.7,
+     2.86
+    ],
+    [
+     "twigs.",
+     2.86,
+     3.447
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "leaves!",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Can you nibble like a camel? Nibble, nibble!",
+   "t0": 42.8125,
+   "t1": 46.25,
+   "v0": 42.88245833333335,
+   "dur": 2.9459166666666667,
+   "words": [
+    [
+     "Can",
+     0.05,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "nibble",
+     0.34,
+     0.64
+    ],
+    [
+     "like",
+     0.64,
+     0.84
+    ],
+    [
+     "a",
+     0.84,
+     0.88
+    ],
+    [
+     "camel?",
+     0.88,
+     1.48
+    ],
+    [
+     "Nibble,",
+     1.86,
+     2.35
+    ],
+    [
+     "nibble!",
+     2.35,
+     2.946
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "nibble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Look! Sandy eats only a few leaves.",
+   "t0": 46.25,
+   "t1": 49.0625,
+   "v0": 46.36837500000002,
+   "dur": 2.442083333333333,
+   "words": [
+    [
+     "Look!",
+     0.0,
+     0.5
+    ],
+    [
+     "Sandy",
+     0.5,
+     1.04
+    ],
+    [
+     "eats",
+     1.04,
+     1.31
+    ],
+    [
+     "only",
+     1.31,
+     1.6
+    ],
+    [
+     "a",
+     1.6,
+     1.63
+    ],
+    [
+     "few",
+     1.63,
+     1.89
+    ],
+    [
+     "leaves.",
+     1.89,
+     2.44
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "only a few",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Count the leaves she eats. One, two, three!",
+   "t0": 49.0625,
+   "t1": 52.5,
+   "v0": 49.35045833333336,
+   "dur": 2.8172916666666667,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "leaves",
+     0.36,
+     0.78
+    ],
+    [
+     "she",
+     0.78,
+     0.96
+    ],
+    [
+     "eats.",
+     0.96,
+     1.43
+    ],
+    [
+     "One,",
+     1.72,
+     2.02
+    ],
+    [
+     "two,",
+     2.02,
+     2.24
+    ],
+    [
+     "three!",
+     2.24,
+     2.817
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "count leaves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Then she walks on, to the next plant.",
+   "t0": 52.5,
+   "t1": 55.3125,
+   "v0": 52.707750000000026,
+   "dur": 2.33375,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.18
+    ],
+    [
+     "she",
+     0.18,
+     0.36
+    ],
+    [
+     "walks",
+     0.36,
+     0.75
+    ],
+    [
+     "on,",
+     0.75,
+     1.15
+    ],
+    [
+     "to",
+     1.29,
+     1.41
+    ],
+    [
+     "the",
+     1.41,
+     1.49
+    ],
+    [
+     "next",
+     1.49,
+     1.81
+    ],
+    [
+     "plant.",
+     1.81,
+     2.33
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "walks on",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Camels take just a few leaves from each plant.",
+   "t0": 55.3125,
+   "t1": 58.75,
+   "v0": 55.58150000000003,
+   "dur": 2.909375,
+   "words": [
+    [
+     "Camels",
+     0.01,
+     0.52
+    ],
+    [
+     "take",
+     0.52,
+     0.9
+    ],
+    [
+     "just",
+     0.9,
+     1.18
+    ],
+    [
+     "a",
+     1.18,
+     1.21
+    ],
+    [
+     "few",
+     1.21,
+     1.5
+    ],
+    [
+     "leaves",
+     1.5,
+     1.95
+    ],
+    [
+     "from",
+     1.95,
+     2.1
+    ],
+    [
+     "each",
+     2.1,
+     2.38
+    ],
+    [
+     "plant.",
+     2.38,
+     2.909
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: a few from each",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "trail",
+   "say": "Does a camel eat all the leaves, or just a few?",
+   "t0": 58.75,
+   "t1": 65.625,
+   "v0": 59.03087500000002,
+   "dur": 3.090708333333333,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.17
+    ],
+    [
+     "a",
+     0.17,
+     0.22
+    ],
+    [
+     "camel",
+     0.22,
+     0.74
+    ],
+    [
+     "eat",
+     0.87,
+     1.07
+    ],
+    [
+     "all",
+     1.07,
+     1.26
+    ],
+    [
+     "the",
+     1.26,
+     1.35
+    ],
+    [
+     "leaves,",
+     1.35,
+     1.99
+    ],
+    [
+     "or",
+     2.14,
+     2.24
+    ],
+    [
+     "just",
+     2.24,
+     2.56
+    ],
+    [
+     "a",
+     2.56,
+     2.59
+    ],
+    [
+     "few?",
+     2.59,
+     3.09
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Camels spend their days eating. Munch, munch, all day long!",
+   "t0": 65.625,
+   "t1": 70.625,
+   "v0": 65.86158333333336,
+   "dur": 4.348416666666667,
+   "words": [
+    [
+     "Camels",
+     0.0,
+     0.43
+    ],
+    [
+     "spend",
+     0.43,
+     0.75
+    ],
+    [
+     "their",
+     0.75,
+     0.87
+    ],
+    [
+     "days",
+     0.87,
+     1.23
+    ],
+    [
+     "eating.",
+     1.23,
+     1.78
+    ],
+    [
+     "Munch,",
+     2.26,
+     2.76
+    ],
+    [
+     "munch,",
+     2.76,
+     3.32
+    ],
+    [
+     "all",
+     3.32,
+     3.58
+    ],
+    [
+     "day",
+     3.58,
+     3.83
+    ],
+    [
+     "long!",
+     3.83,
+     4.348
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "all day long",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "From the morning, until the sun goes down!",
+   "t0": 70.625,
+   "t1": 73.75,
+   "v0": 70.75000000000003,
+   "dur": 2.725375,
+   "words": [
+    [
+     "From",
+     0.01,
+     0.24
+    ],
+    [
+     "the",
+     0.24,
+     0.31
+    ],
+    [
+     "morning,",
+     0.31,
+     0.88
+    ],
+    [
+     "until",
+     1.11,
+     1.39
+    ],
+    [
+     "the",
+     1.39,
+     1.46
+    ],
+    [
+     "sun",
+     1.46,
+     1.82
+    ],
+    [
+     "goes",
+     1.82,
+     2.18
+    ],
+    [
+     "down!",
+     2.18,
+     2.72
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "until sundown",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "What do you like to eat for lunch?",
+   "t0": 73.75,
+   "t1": 76.875,
+   "v0": 74.01537500000003,
+   "dur": 1.6040416666666666,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.17
+    ],
+    [
+     "do",
+     0.17,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.37
+    ],
+    [
+     "like",
+     0.37,
+     0.55
+    ],
+    [
+     "to",
+     0.55,
+     0.69
+    ],
+    [
+     "eat",
+     0.69,
+     0.92
+    ],
+    [
+     "for",
+     0.92,
+     1.08
+    ],
+    [
+     "lunch?",
+     1.08,
+     1.6
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your lunch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dune_eve",
+   "say": "Rub your tummy. Mmm, yum!",
+   "t0": 76.875,
+   "t1": 79.6875,
+   "v0": 77.1594166666667,
+   "dur": 2.3067083333333334,
+   "words": [
+    [
+     "Rub",
+     0.02,
+     0.3
+    ],
+    [
+     "your",
+     0.3,
+     0.42
+    ],
+    [
+     "tummy.",
+     0.42,
+     1.02
+    ],
+    [
+     "Mmm,",
+     1.37,
+     1.88
+    ],
+    [
+     "yum!",
+     1.88,
+     2.307
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "rub tummy",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Point to the leaf! Where is the leaf?",
+   "t0": 79.6875,
+   "t1": 84.0625,
+   "v0": 80.00612500000004,
+   "dur": 2.3703333333333334,
+   "words": [
+    [
+     "Point",
+     0.04,
+     0.39
+    ],
+    [
+     "to",
+     0.39,
+     0.48
+    ],
+    [
+     "the",
+     0.48,
+     0.56
+    ],
+    [
+     "leaf!",
+     0.56,
+     0.99
+    ],
+    [
+     "Where",
+     1.26,
+     1.54
+    ],
+    [
+     "is",
+     1.54,
+     1.72
+    ],
+    [
+     "the",
+     1.72,
+     1.82
+    ],
+    [
+     "leaf?",
+     1.82,
+     2.37
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: point to the leaf",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Grass, leaves, and twigs. A camel's lunch!",
+   "t0": 84.0625,
+   "t1": 87.91158333333338,
+   "v0": 84.31645833333339,
+   "dur": 3.175125,
+   "words": [
+    [
+     "Grass,",
+     0.04,
+     0.59
+    ],
+    [
+     "leaves,",
+     0.59,
+     1.03
+    ],
+    [
+     "and",
+     1.03,
+     1.16
+    ],
+    [
+     "twigs.",
+     1.16,
+     1.72
+    ],
+    [
+     "A",
+     2.04,
+     2.09
+    ],
+    [
+     "camel's",
+     2.09,
+     2.66
+    ],
+    [
+     "lunch!",
+     2.66,
+     3.17
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: a camel's lunch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

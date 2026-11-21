@@ -1,0 +1,305 @@
+{
+ "title": "Baby Animals!",
+ "id": "ep05_baby_animals",
+ "intro": [
+  [
+   "Hi, friends! I'm Milo the bluebird, and welcome to The Animated Zoo!",
+   ""
+  ],
+  [
+   "Today we're meeting animal babies, and the families who take care of them!",
+   ""
+  ],
+  [
+   "Can you count five animals with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Are you ready? Let's fly!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gorilla",
+   "lines": [
+    [
+     "Here's our first animal. Here's a clue: it's a big, gentle ape with long, strong arms! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's swing over to the gorillas!",
+     "enter"
+    ],
+    [
+     "Gorillas live in green forests, and they eat lots of plants and fruit.",
+     "zoom"
+    ],
+    [
+     "A baby gorilla is tiny. It weighs about four pounds, like a small bag of flour.",
+     "bob"
+    ],
+    [
+     "Can you make big, strong arms like a gorilla? Strong arms!",
+     "wiggle"
+    ],
+    [
+     "Can you guess where a baby gorilla likes to ride?",
+     "q"
+    ],
+    [
+     "On mom's back! A piggyback ride through the forest.",
+     "badge:PIGGYBACK!+fx"
+    ],
+    [
+     "Let's say it together: GORILLA!",
+     "zoom"
+    ],
+    [
+     "Baby gorillas can ride on mom until they are about three or four years old.",
+     "bob"
+    ],
+    [
+     "And every night, gorillas make a brand-new bed of leaves, called a nest.",
+     "zoom+fxoff"
+    ],
+    [
+     "Bye-bye, gorillas!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "rhino",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it's big and gray, with a horn on its nose! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's stomp over to the rhinos!",
+     "enter"
+    ],
+    [
+     "A rhino's horn is made of keratin. That's the same stuff as your fingernails!",
+     "fx"
+    ],
+    [
+     "Can you wiggle your fingers? Wiggle, wiggle!",
+     "wiggle+fxoff"
+    ],
+    [
+     "Rhinos love to roll in mud. The mud helps keep off the sun and the bugs.",
+     "bob"
+    ],
+    [
+     "Can you guess how soon a baby rhino can stand up?",
+     "q"
+    ],
+    [
+     "In just two or three hours! It's a little wobbly at first.",
+     "badge:STANDS UP!+fx2"
+    ],
+    [
+     "Let's say it together: RHINO!",
+     "zoom"
+    ],
+    [
+     "A baby rhino is called a calf.",
+     "bob"
+    ],
+    [
+     "Its mom takes care of it for a few years, until it's all grown up.",
+     "zoom+fx2off"
+    ],
+    [
+     "Bye-bye, rhinos!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "seal",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has whiskers and flippers, and it loves the sea! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's splash over to the harbor seals!",
+     "enter"
+    ],
+    [
+     "Harbor seals rest on rocks and beaches, then slide into the water to swim.",
+     "zoom"
+    ],
+    [
+     "A baby seal is called a pup.",
+     "bob"
+    ],
+    [
+     "Can you wiggle like a seal on a rock? Wiggle, wiggle!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Can a baby seal swim on the day it is born?",
+     "q"
+    ],
+    [
+     "Yes! Harbor seal pups can swim right away, on their very first day.",
+     "badge:SWIMS ON DAY 1!+fx"
+    ],
+    [
+     "Let's say it together: HARBOR SEAL!",
+     "zoom"
+    ],
+    [
+     "When it's just a few days old, a pup can dive under the water for up to two minutes!",
+     "bob"
+    ],
+    [
+     "Pups drink their mom's milk, and they grow fast.",
+     "zoom+fxoff"
+    ],
+    [
+     "Bye-bye, seals!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "elephant",
+   "lines": [
+    [
+     "Who's next? Here's a clue: it has a long trunk and big ears! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's stomp over to the elephants!",
+     "enter"
+    ],
+    [
+     "Elephants live in families called herds.",
+     "zoom"
+    ],
+    [
+     "A baby elephant is called a calf. It can weigh more than a grown-up person!",
+     "bob"
+    ],
+    [
+     "Can you stomp like a baby elephant? Stomp, stomp!",
+     "wiggle"
+    ],
+    [
+     "Can you guess who helps take care of a baby elephant?",
+     "q"
+    ],
+    [
+     "The whole family! Moms, aunts and big sisters all help.",
+     "badge:FAMILY HELP!"
+    ],
+    [
+     "Let's say it together: ELEPHANT!",
+     "zoom"
+    ],
+    [
+     "A baby elephant can stand up and drink milk soon after it's born.",
+     "bob"
+    ],
+    [
+     "What a big, caring family!",
+     "zoom"
+    ],
+    [
+     "Bye-bye, elephants!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "sloth",
+   "lines": [
+    [
+     "Our last animal moves very, very slowly in the trees! Can you guess?",
+     "q"
+    ],
+    [
+     "Let's go see the sloths. Slowly!",
+     "enter"
+    ],
+    [
+     "Sloths sleep for about fifteen hours in the daytime!",
+     "zoom+zzz"
+    ],
+    [
+     "Then they wake up at night to eat leaves.",
+     "bob"
+    ],
+    [
+     "Can you stretch slowly, like a sleepy sloth? Stretch!",
+     "wiggle"
+    ],
+    [
+     "Can you guess where a baby sloth holds on?",
+     "q"
+    ],
+    [
+     "To mom's tummy! A baby sloth hugs its mom's belly.",
+     "badge:TUMMY HUG!+fx2"
+    ],
+    [
+     "Let's say it together: SLOTH!",
+     "zoom"
+    ],
+    [
+     "It holds on for about five weeks, until it's strong enough to move by itself.",
+     "bob"
+    ],
+    [
+     "A baby sloth is a little shorter than a ruler.",
+     "zoom+fx2off"
+    ],
+    [
+     "Bye-bye, sloths!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What a cozy adventure! Let's remember.",
+   "@title"
+  ],
+  [
+   "Baby gorillas ride on mom's back.",
+   "@gorilla"
+  ],
+  [
+   "Baby rhinos stand up in just a few hours.",
+   "@rhino"
+  ],
+  [
+   "Harbor seal pups can swim on their first day.",
+   "@seal"
+  ],
+  [
+   "The whole elephant family helps with the baby.",
+   "@elephant"
+  ],
+  [
+   "And baby sloths hug mom's tummy!",
+   "@sloth"
+  ]
+ ],
+ "outro": [
+  [
+   "Which baby animal was your favorite? Remember, be kind to every animal. Watch quietly and give them space.",
+   ""
+  ],
+  [
+   "Bye, friends! See you at the zoo!",
+   ""
+  ]
+ ]
+}

@@ -1,0 +1,1803 @@
+{
+ "id": "zc_ep12_short2",
+ "total": 89.18550000000003,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.2,
+  "shots": 17,
+  "visual_changes": 88,
+  "mean_gap": 1.01,
+  "longest_gap": 4.59,
+  "longest_gap_at": 19.1,
+  "over_6s": [],
+  "places": [
+   "dunes",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 9,
+  "longest_without_question": 22.8,
+  "first_words_at": 0.42,
+  "shot_mean": 5.25,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "180/180",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 29.4,
+   "onset_err_max_ms": 120.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the dunes at sunrise hook: giant ears"
+  ],
+  [
+   0.05,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   0.64,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   1.84,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new shot",
+   "the dunes at sunrise ears 2"
+  ],
+  [
+   3.49,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   6.2,
+   "word",
+   "BIG!"
+  ],
+  [
+   6.75,
+   "word",
+   "POINTY!"
+  ],
+  [
+   7.59,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   9.06,
+   "new shot",
+   "the dunes at sunrise question 2a"
+  ],
+  [
+   9.11,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   9.81,
+   "sign",
+   "FOX"
+  ],
+  [
+   10.16,
+   "sign",
+   "RABBIT"
+  ],
+  [
+   12.45,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.12,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.48,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   13.8,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.28,
+   "answer",
+   "FOX"
+  ],
+  [
+   15.62,
+   "new shot",
+   "the dunes at sunrise the fox comes out"
+  ],
+  [
+   15.71,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   17.35,
+   "action",
+   "fox nods"
+  ],
+  [
+   17.35,
+   "word",
+   "FENNEC FOX!"
+  ],
+  [
+   19.06,
+   "new place",
+   "the picture board board: giant ears"
+  ],
+  [
+   23.65,
+   "word",
+   "GIANT EARS!"
+  ],
+  [
+   25.0,
+   "new shot",
+   "the picture board half as long as its body"
+  ],
+  [
+   25.05,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   25.52,
+   "picture",
+   "be"
+  ],
+  [
+   26.35,
+   "picture",
+   "bb"
+  ],
+  [
+   26.35,
+   "picture",
+   "bh1"
+  ],
+  [
+   26.35,
+   "word",
+   "HALF!"
+  ],
+  [
+   26.88,
+   "picture",
+   "bh2"
+  ],
+  [
+   28.44,
+   "new place",
+   "the dunes at sunrise a lot of ear"
+  ],
+  [
+   28.49,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   28.59,
+   "action",
+   "fox hops"
+  ],
+  [
+   28.59,
+   "word",
+   "WOW!"
+  ],
+  [
+   30.01,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   31.88,
+   "new shot",
+   "the dunes at sunrise count the fox's ears"
+  ],
+  [
+   31.93,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   34.16,
+   "word",
+   "1"
+  ],
+  [
+   34.45,
+   "word",
+   "2"
+  ],
+  [
+   35.31,
+   "new shot",
+   "the dunes at sunrise what do the ears do"
+  ],
+  [
+   35.36,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   36.17,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   37.44,
+   "word",
+   "?"
+  ],
+  [
+   40.94,
+   "new place",
+   "the picture board (blue) board: food under the sand"
+  ],
+  [
+   41.18,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   41.18,
+   "word",
+   "LISTEN!"
+  ],
+  [
+   42.59,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   44.92,
+   "action",
+   "the beetle wiggles"
+  ],
+  [
+   45.94,
+   "new place",
+   "the dunes at sunrise digs with four feet"
+  ],
+  [
+   46.81,
+   "picture",
+   "pf"
+  ],
+  [
+   48.8,
+   "action",
+   "the fox digs"
+  ],
+  [
+   48.8,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   49.28,
+   "action",
+   "the fox digs"
+  ],
+  [
+   49.7,
+   "action",
+   "the fox digs"
+  ],
+  [
+   50.62,
+   "new place",
+   "the picture board board: stay cool"
+  ],
+  [
+   52.3,
+   "picture",
+   "h1"
+  ],
+  [
+   52.3,
+   "picture",
+   "h2"
+  ],
+  [
+   52.57,
+   "action",
+   "the heat rises away"
+  ],
+  [
+   54.87,
+   "word",
+   "COOL!"
+  ],
+  [
+   57.19,
+   "new place",
+   "the zoo gate cup your ears"
+  ],
+  [
+   61.19,
+   "action",
+   "milo hops"
+  ],
+  [
+   61.19,
+   "word",
+   "LISTEN!"
+  ],
+  [
+   65.0,
+   "new place",
+   "the dunes at sunrise say it: giant ears"
+  ],
+  [
+   65.33,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   67.72,
+   "action",
+   "fox nods"
+  ],
+  [
+   68.3,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   69.06,
+   "new place",
+   "the zoo gate dig like a fox"
+  ],
+  [
+   71.71,
+   "action",
+   "milo hops"
+  ],
+  [
+   71.71,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   72.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   72.58,
+   "action",
+   "milo hops"
+  ],
+  [
+   74.58,
+   "action",
+   "milo hops"
+  ],
+  [
+   75.94,
+   "new place",
+   "the picture board (blue) question 2b"
+  ],
+  [
+   78.44,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   79.72,
+   "sign",
+   "FOOD"
+  ],
+  [
+   80.07,
+   "sign",
+   "DRUM"
+  ],
+  [
+   81.99,
+   "word",
+   "?"
+  ],
+  [
+   82.48,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.16,
+   "thinking dot",
+   "2"
+  ],
+  [
+   83.32,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   83.83,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.32,
+   "answer",
+   "FOOD"
+  ],
+  [
+   85.62,
+   "new place",
+   "the dunes at sunrise super listening"
+  ],
+  [
+   85.67,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   85.76,
+   "action",
+   "fox hops"
+  ],
+  [
+   87.31,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   87.31,
+   "word",
+   "SUPER!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "dunes",
+   "say": "Two giant ears! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.559041666666667,
+   "words": [
+    [
+     "Two",
+     0.01,
+     0.22
+    ],
+    [
+     "giant",
+     0.22,
+     0.66
+    ],
+    [
+     "ears!",
+     0.66,
+     1.17
+    ],
+    [
+     "Guess",
+     1.42,
+     1.75
+    ],
+    [
+     "with",
+     1.75,
+     1.9
+    ],
+    [
+     "Milo!",
+     1.9,
+     2.559
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: giant ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Here are two more ears. Look! They are so big, and pointy! Whose ears are they?",
+   "t0": 3.4375,
+   "t1": 9.0625,
+   "v0": 3.519041666666667,
+   "dur": 5.269,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.22
+    ],
+    [
+     "are",
+     0.22,
+     0.31
+    ],
+    [
+     "two",
+     0.31,
+     0.53
+    ],
+    [
+     "more",
+     0.53,
+     0.74
+    ],
+    [
+     "ears.",
+     0.74,
+     1.34
+    ],
+    [
+     "Look!",
+     1.54,
+     1.91
+    ],
+    [
+     "They",
+     1.91,
+     2.33
+    ],
+    [
+     "are",
+     2.33,
+     2.39
+    ],
+    [
+     "so",
+     2.39,
+     2.68
+    ],
+    [
+     "big,",
+     2.68,
+     3.08
+    ],
+    [
+     "and",
+     3.08,
+     3.23
+    ],
+    [
+     "pointy!",
+     3.23,
+     3.91
+    ],
+    [
+     "Whose",
+     4.07,
+     4.36
+    ],
+    [
+     "ears",
+     4.36,
+     4.76
+    ],
+    [
+     "are",
+     4.76,
+     4.9
+    ],
+    [
+     "they?",
+     4.9,
+     5.269
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "ears 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Is it the fox? Or is it the rabbit?",
+   "t0": 9.0625,
+   "t1": 15.625,
+   "v0": 9.328041666666666,
+   "dur": 2.6362083333333333,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.27
+    ],
+    [
+     "it",
+     0.27,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.48
+    ],
+    [
+     "fox?",
+     0.48,
+     1.22
+    ],
+    [
+     "Or",
+     1.42,
+     1.65
+    ],
+    [
+     "is",
+     1.65,
+     1.83
+    ],
+    [
+     "it",
+     1.83,
+     1.93
+    ],
+    [
+     "the",
+     1.93,
+     2.02
+    ],
+    [
+     "rabbit?",
+     2.02,
+     2.636
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "It is the fennec fox!",
+   "t0": 15.625,
+   "t1": 19.0625,
+   "v0": 15.70425,
+   "dur": 1.6495,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.54
+    ],
+    [
+     "fennec",
+     0.54,
+     1.0
+    ],
+    [
+     "fox!",
+     1.0,
+     1.649
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the fox comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here is the fun fact. A fennec fox is a little fox, with giant ears!",
+   "t0": 19.0625,
+   "t1": 25.0,
+   "v0": 19.293750000000003,
+   "dur": 5.454916666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "fun",
+     0.59,
+     0.98
+    ],
+    [
+     "fact.",
+     0.98,
+     1.58
+    ],
+    [
+     "A",
+     2.06,
+     2.11
+    ],
+    [
+     "fennec",
+     2.11,
+     2.57
+    ],
+    [
+     "fox",
+     2.57,
+     3.05
+    ],
+    [
+     "is",
+     3.05,
+     3.19
+    ],
+    [
+     "a",
+     3.19,
+     3.23
+    ],
+    [
+     "little",
+     3.23,
+     3.46
+    ],
+    [
+     "fox,",
+     3.46,
+     4.14
+    ],
+    [
+     "with",
+     4.14,
+     4.36
+    ],
+    [
+     "giant",
+     4.36,
+     4.91
+    ],
+    [
+     "ears!",
+     4.91,
+     5.45
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: giant ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Its ears can be half as long as its body!",
+   "t0": 25.0,
+   "t1": 28.4375,
+   "v0": 25.28866666666667,
+   "dur": 2.758125,
+   "words": [
+    [
+     "Its",
+     0.01,
+     0.23
+    ],
+    [
+     "ears",
+     0.23,
+     0.82
+    ],
+    [
+     "can",
+     0.82,
+     0.98
+    ],
+    [
+     "be",
+     0.98,
+     1.06
+    ],
+    [
+     "half",
+     1.06,
+     1.46
+    ],
+    [
+     "as",
+     1.46,
+     1.59
+    ],
+    [
+     "long",
+     1.59,
+     1.92
+    ],
+    [
+     "as",
+     1.92,
+     2.05
+    ],
+    [
+     "its",
+     2.05,
+     2.21
+    ],
+    [
+     "body!",
+     2.21,
+     2.758
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "half as long as its body",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Wow! That is a lot of ear, for a little fox!",
+   "t0": 28.4375,
+   "t1": 31.875,
+   "v0": 28.586791666666674,
+   "dur": 2.947625,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.55
+    ],
+    [
+     "That",
+     0.73,
+     0.93
+    ],
+    [
+     "is",
+     0.93,
+     1.04
+    ],
+    [
+     "a",
+     1.04,
+     1.08
+    ],
+    [
+     "lot",
+     1.08,
+     1.33
+    ],
+    [
+     "of",
+     1.33,
+     1.42
+    ],
+    [
+     "ear,",
+     1.42,
+     1.84
+    ],
+    [
+     "for",
+     1.84,
+     2.02
+    ],
+    [
+     "a",
+     2.02,
+     2.06
+    ],
+    [
+     "little",
+     2.06,
+     2.24
+    ],
+    [
+     "fox!",
+     2.24,
+     2.948
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a lot of ear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Count the giant ears with me. One, two!",
+   "t0": 31.875,
+   "t1": 35.3125,
+   "v0": 32.07441666666667,
+   "dur": 2.960875,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "giant",
+     0.36,
+     0.88
+    ],
+    [
+     "ears",
+     0.88,
+     1.28
+    ],
+    [
+     "with",
+     1.28,
+     1.41
+    ],
+    [
+     "me.",
+     1.41,
+     1.71
+    ],
+    [
+     "One,",
+     2.09,
+     2.38
+    ],
+    [
+     "two!",
+     2.38,
+     2.96
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the fox's ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "What do those giant ears do?",
+   "t0": 35.3125,
+   "t1": 40.9375,
+   "v0": 35.57529166666667,
+   "dur": 1.8623333333333334,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.14
+    ],
+    [
+     "do",
+     0.14,
+     0.25
+    ],
+    [
+     "those",
+     0.25,
+     0.59
+    ],
+    [
+     "giant",
+     0.59,
+     1.11
+    ],
+    [
+     "ears",
+     1.11,
+     1.48
+    ],
+    [
+     "do?",
+     1.48,
+     1.86
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "what do the ears do",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "They listen for food, hiding under the sand. Like a little beetle!",
+   "t0": 40.9375,
+   "t1": 45.9375,
+   "v0": 40.977625,
+   "dur": 4.52475,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.2
+    ],
+    [
+     "listen",
+     0.2,
+     0.67
+    ],
+    [
+     "for",
+     0.67,
+     0.84
+    ],
+    [
+     "food,",
+     0.84,
+     1.45
+    ],
+    [
+     "hiding",
+     1.61,
+     2.08
+    ],
+    [
+     "under",
+     2.08,
+     2.24
+    ],
+    [
+     "the",
+     2.24,
+     2.33
+    ],
+    [
+     "sand.",
+     2.33,
+     2.95
+    ],
+    [
+     "Like",
+     3.48,
+     3.68
+    ],
+    [
+     "a",
+     3.68,
+     3.72
+    ],
+    [
+     "little",
+     3.72,
+     3.94
+    ],
+    [
+     "beetle!",
+     3.94,
+     4.52
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: food under the sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Then the fox digs with all four feet. Dig, dig, dig!",
+   "t0": 45.9375,
+   "t1": 50.625,
+   "v0": 46.042375,
+   "dur": 4.157291666666667,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.23
+    ],
+    [
+     "fox",
+     0.23,
+     0.77
+    ],
+    [
+     "digs",
+     0.77,
+     1.21
+    ],
+    [
+     "with",
+     1.21,
+     1.33
+    ],
+    [
+     "all",
+     1.33,
+     1.53
+    ],
+    [
+     "four",
+     1.53,
+     1.8
+    ],
+    [
+     "feet.",
+     1.8,
+     2.33
+    ],
+    [
+     "Dig,",
+     2.76,
+     3.24
+    ],
+    [
+     "dig,",
+     3.24,
+     3.66
+    ],
+    [
+     "dig!",
+     3.66,
+     4.157
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "digs with four feet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And big ears let extra heat out. That helps the fox stay cool, in the hot desert!",
+   "t0": 50.625,
+   "t1": 57.1875,
+   "v0": 50.739666666666665,
+   "dur": 6.086041666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.23
+    ],
+    [
+     "big",
+     0.23,
+     0.45
+    ],
+    [
+     "ears",
+     0.45,
+     0.92
+    ],
+    [
+     "let",
+     0.92,
+     1.12
+    ],
+    [
+     "extra",
+     1.12,
+     1.56
+    ],
+    [
+     "heat",
+     1.56,
+     1.83
+    ],
+    [
+     "out.",
+     1.83,
+     2.22
+    ],
+    [
+     "That",
+     2.74,
+     3.01
+    ],
+    [
+     "helps",
+     3.01,
+     3.33
+    ],
+    [
+     "the",
+     3.33,
+     3.41
+    ],
+    [
+     "fox",
+     3.41,
+     3.89
+    ],
+    [
+     "stay",
+     3.89,
+     4.13
+    ],
+    [
+     "cool,",
+     4.13,
+     4.74
+    ],
+    [
+     "in",
+     4.95,
+     5.06
+    ],
+    [
+     "the",
+     5.06,
+     5.13
+    ],
+    [
+     "hot",
+     5.13,
+     5.42
+    ],
+    [
+     "desert!",
+     5.42,
+     6.086
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: stay cool",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Cup your hands behind your ears, like big fox ears. Listen!",
+   "t0": 57.1875,
+   "t1": 65.0,
+   "v0": 57.36570833333333,
+   "dur": 4.4122916666666665,
+   "words": [
+    [
+     "Cup",
+     0.0,
+     0.24
+    ],
+    [
+     "your",
+     0.24,
+     0.34
+    ],
+    [
+     "hands",
+     0.34,
+     0.68
+    ],
+    [
+     "behind",
+     0.68,
+     1.02
+    ],
+    [
+     "your",
+     1.02,
+     1.13
+    ],
+    [
+     "ears,",
+     1.13,
+     1.71
+    ],
+    [
+     "like",
+     1.71,
+     2.02
+    ],
+    [
+     "big",
+     2.02,
+     2.29
+    ],
+    [
+     "fox",
+     2.29,
+     2.78
+    ],
+    [
+     "ears.",
+     2.78,
+     3.36
+    ],
+    [
+     "Listen!",
+     3.82,
+     4.41
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "cup your ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Say it with me. A fennec fox has giant ears!",
+   "t0": 65.0,
+   "t1": 69.0625,
+   "v0": 65.31800000000001,
+   "dur": 3.491041666666667,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.89
+    ],
+    [
+     "A",
+     1.23,
+     1.29
+    ],
+    [
+     "fennec",
+     1.29,
+     1.77
+    ],
+    [
+     "fox",
+     1.77,
+     2.2
+    ],
+    [
+     "has",
+     2.2,
+     2.4
+    ],
+    [
+     "giant",
+     2.4,
+     2.98
+    ],
+    [
+     "ears!",
+     2.98,
+     3.49
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: giant ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you dig like a fennec fox? Dig, dig, dig!",
+   "t0": 69.0625,
+   "t1": 75.9375,
+   "v0": 69.34904166666668,
+   "dur": 3.7132916666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.33
+    ],
+    [
+     "dig",
+     0.33,
+     0.68
+    ],
+    [
+     "like",
+     0.68,
+     0.87
+    ],
+    [
+     "a",
+     0.87,
+     0.91
+    ],
+    [
+     "fennec",
+     0.91,
+     1.37
+    ],
+    [
+     "fox?",
+     1.37,
+     1.98
+    ],
+    [
+     "Dig,",
+     2.36,
+     2.77
+    ],
+    [
+     "dig,",
+     2.77,
+     3.23
+    ],
+    [
+     "dig!",
+     3.23,
+     3.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "dig like a fox",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Quick check! What do the fox's big ears listen for? Food under the sand, or a drum?",
+   "t0": 75.9375,
+   "t1": 85.625,
+   "v0": 76.00233333333335,
+   "dur": 5.99475,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.26
+    ],
+    [
+     "check!",
+     0.26,
+     0.74
+    ],
+    [
+     "What",
+     0.74,
+     0.96
+    ],
+    [
+     "do",
+     0.96,
+     1.07
+    ],
+    [
+     "the",
+     1.07,
+     1.16
+    ],
+    [
+     "fox's",
+     1.16,
+     1.77
+    ],
+    [
+     "big",
+     1.77,
+     2.02
+    ],
+    [
+     "ears",
+     2.02,
+     2.44
+    ],
+    [
+     "listen",
+     2.44,
+     2.82
+    ],
+    [
+     "for?",
+     2.82,
+     3.21
+    ],
+    [
+     "Food",
+     3.72,
+     4.05
+    ],
+    [
+     "under",
+     4.05,
+     4.28
+    ],
+    [
+     "the",
+     4.28,
+     4.37
+    ],
+    [
+     "sand,",
+     4.37,
+     5.14
+    ],
+    [
+     "or",
+     5.14,
+     5.36
+    ],
+    [
+     "a",
+     5.36,
+     5.41
+    ],
+    [
+     "drum?",
+     5.41,
+     5.99
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Food under the sand! Super listening!",
+   "t0": 85.625,
+   "t1": 88.78550000000003,
+   "v0": 85.73708333333336,
+   "dur": 2.628416666666667,
+   "words": [
+    [
+     "Food",
+     0.02,
+     0.36
+    ],
+    [
+     "under",
+     0.36,
+     0.57
+    ],
+    [
+     "the",
+     0.57,
+     0.66
+    ],
+    [
+     "sand!",
+     0.66,
+     1.27
+    ],
+    [
+     "Super",
+     1.57,
+     1.94
+    ],
+    [
+     "listening!",
+     1.94,
+     2.628
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super listening",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

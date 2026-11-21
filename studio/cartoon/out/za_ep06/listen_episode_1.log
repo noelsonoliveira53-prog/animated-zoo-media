@@ -1,0 +1,23 @@
+  sung or hummed: song: under our leaf  201.88-211.88 s: 
+  sung or hummed: song: hooray  300.62-305.62 s: 
+  judged: everything (no speaking voice in the file)
+313.51 s   key heard: {'key': 'C major', 'fit': 0.93}   expected: C   held tones judged: 671   voice-like tones left out: 0
+  CLASH              17.41 s  E4 + F2 together for 0.3 s
+  CLASH              37.42 s  E4 + F2 together for 0.3 s
+  CLASH              37.42 s  E4 + F4 together for 0.3 s
+  CLASH              47.40 s  E4 + F2 together for 0.55 s
+  CLASH              67.37 s  E4 + F3 together for 0.34 s
+  CLASH              67.41 s  E4 + F2 together for 0.3 s
+  CLASH              87.38 s  E4 + F3 together for 0.35 s
+  CLASH              87.42 s  E4 + F2 together for 0.31 s
+  CLASH              87.77 s  F3 + E4 together for 0.26 s
+  CLASH             127.40 s  E4 + F2 together for 0.55 s
+  CLASH             157.40 s  E4 + F2 together for 0.6 s
+  CLASH             277.42 s  E4 + F2 together for 0.3 s
+  CLASH             277.42 s  E4 + F4 together for 0.3 s
+  CLASH             277.76 s  F2 + E4 together for 0.26 s
+  beat: {'heard_bpm': np.float64(95.4), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.76, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.994)}
+  clicks at: []  silences: []
+  level: {'lufs': -24.7, 'range_lu': 17.6, 'true_peak_db': -2.3, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.4)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.74, 'share_below_120hz': 0.03, 'share_above_4khz': 0.0}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/za_ep06_music_stem_listen.png

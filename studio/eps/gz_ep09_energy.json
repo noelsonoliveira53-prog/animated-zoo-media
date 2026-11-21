@@ -1,0 +1,329 @@
+{
+ "id": "gz_ep09_energy",
+ "title": "Where Does Electricity Come From? Gizmo Finds Out",
+ "intro": [
+  [
+   "Hi, friends! I'm Gizmo the robot, and welcome to Gizmo Explains!",
+   ""
+  ],
+  [
+   "I love asking, how does that work? Today we're going to find out where energy comes from.",
+   ""
+  ],
+  [
+   "We'll explore five cool things. Can you count them with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "When my antenna lights up, it means I have an idea!",
+   ""
+  ],
+  [
+   "Ready? Let's go explore!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "gz2_battery",
+   "lines": [
+    [
+     "Here's a clue: it goes inside toys and flashlights! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Battery!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A battery stores energy inside it, ready to use.",
+     "fx+bob"
+    ],
+    [
+     "When it's connected, it sends electricity through wires to make toys move and lights shine!",
+     "bob"
+    ],
+    [
+     "Can you light up like a flashlight? Click! Shine!",
+     "wiggle"
+    ],
+    [
+     "What does a battery store?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Energy! It turns into electricity.",
+     "fx2+badge:POWER!"
+    ],
+    [
+     "Let's say it together: BATTERY!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: BATTERY!",
+     "zoom"
+    ],
+    [
+     "Only grown-ups should change batteries. We keep them away from our mouths.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_solar",
+   "lines": [
+    [
+     "Here's a clue: it's a flat, shiny panel that loves the sun! Can you guess?",
+     "q"
+    ],
+    [
+     "Next: Solar Panel!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "A solar panel catches sunlight with special flat squares.",
+     "fx+bob"
+    ],
+    [
+     "It turns that sunlight into electricity, which can power lights in a home!",
+     "bob"
+    ],
+    [
+     "Can you open your arms wide, like a panel catching sunshine?",
+     "wiggle"
+    ],
+    [
+     "What does a solar panel need?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sunlight!",
+     "fx2+badge:SUN POWER!"
+    ],
+    [
+     "Let's say it together: SOLAR PANEL!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SOLAR PANEL!",
+     "zoom"
+    ],
+    [
+     "Some calculators and garden lights have tiny solar panels on them.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_turbine",
+   "lines": [
+    [
+     "Here's a clue: it's very tall, with three long blades! Can you guess?",
+     "q"
+    ],
+    [
+     "Here comes: Wind Turbine!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Wind pushes on the long blades and makes them spin.",
+     "fx+bob"
+    ],
+    [
+     "Inside, the spinning makes electricity that travels through wires to homes and schools!",
+     "bob"
+    ],
+    [
+     "Can you spin your arms slowly, like turbine blades in the wind?",
+     "wiggle"
+    ],
+    [
+     "What makes a wind turbine spin?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "The wind!",
+     "fx2+badge:SPIN!"
+    ],
+    [
+     "Let's say it together: WIND TURBINE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WIND TURBINE!",
+     "zoom"
+    ],
+    [
+     "Lots of wind turbines together are called a wind farm.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_waterwheel",
+   "lines": [
+    [
+     "Here's a clue: it's a big wheel that turns in a river! Can you guess?",
+     "q"
+    ],
+    [
+     "Now let's look at: Water Wheel!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Flowing water pushes on the paddles around the wheel.",
+     "fx+bob"
+    ],
+    [
+     "The push makes the wheel spin, and the spinning can do work, like grinding grain into flour!",
+     "bob"
+    ],
+    [
+     "Can you make your hands go round and round, like a water wheel?",
+     "wiggle"
+    ],
+    [
+     "What pushes a water wheel?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Moving water!",
+     "fx2+badge:SPLASH, SPIN!"
+    ],
+    [
+     "Let's say it together: WATER WHEEL!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: WATER WHEEL!",
+     "zoom"
+    ],
+    [
+     "Today, big dams use moving water to make electricity too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "gz2_switch",
+   "lines": [
+    [
+     "Here's a clue: it's on the wall, and it goes click! Can you guess?",
+     "q"
+    ],
+    [
+     "And last: Light Switch!",
+     "enter"
+    ],
+    [
+     "How does it work? Let's find out!",
+     "zoom"
+    ],
+    [
+     "Electricity needs a full loop of wire, like a circle, to flow.",
+     "fx+bob"
+    ],
+    [
+     "Click on, and the loop is joined, so the light shines. Click off, and there's a gap, so the light goes out!",
+     "bob"
+    ],
+    [
+     "Can you click a pretend switch? On! Off! On!",
+     "wiggle"
+    ],
+    [
+     "What does off do?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "It makes a gap, so electricity stops!",
+     "fx2+badge:CLICK!"
+    ],
+    [
+     "Let's say it together: LIGHT SWITCH!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: LIGHT SWITCH!",
+     "zoom"
+    ],
+    [
+     "Ask a grown-up to help with switches, and never touch plugs or outlets.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Now we know how it works. Great job!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Wow, we learned so much! Let's remember.",
+   "@title"
+  ],
+  [
+   "Batteries store energy.",
+   "@gz2_battery"
+  ],
+  [
+   "Solar panels use sunlight.",
+   "@gz2_solar"
+  ],
+  [
+   "Wind turbines use wind.",
+   "@gz2_turbine"
+  ],
+  [
+   "Water wheels use moving water.",
+   "@gz2_waterwheel"
+  ],
+  [
+   "And switches open and close the loop!",
+   "@gz2_switch"
+  ]
+ ],
+ "outro": [
+  [
+   "Which one was your favorite? Keep asking, how does that work?",
+   ""
+  ],
+  [
+   "Bye, friends! See you next time on Gizmo Explains!",
+   ""
+  ]
+ ]
+}

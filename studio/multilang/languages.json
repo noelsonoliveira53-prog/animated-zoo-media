@@ -1,0 +1,45 @@
+{
+ "_how": "One entry per language. 'default' is the language the picture is cut to; every other language is fitted into its line slots. To add a language: add an entry here and write studio/cartoon/episodes/lang/<episode>.<code>.json (see docs/multilang/ADD_A_LANGUAGE.md).",
+ "default": "en",
+ "languages": {
+  "en": {
+   "name": "English",
+   "youtube": "English",
+   "voice": "af_heart",
+   "tts_lang": "en-us",
+   "pitch": 0,
+   "formant": 1.0
+  },
+  "es-419": {
+   "name": "Spanish (Latin America)",
+   "youtube": "Spanish (Latin America)",
+   "voice": "ef_dora",
+   "tts_lang": "es-419",
+   "pitch": 2.6,
+   "formant": 1.04,
+   "note": "pitch: ef_dora speaks at a median of 168 Hz, Milo's English voice at 195 Hz (measured Nov 16); +2.6 semitones puts Milo at the same height in every language",
+   "voice_m": "em_alex",
+   "pitch_m": -1.5,
+   "note_m": "a character whose English voice is a male voice (Tumble: am_puck) takes em_alex; em_alex speaks at a median of 127 Hz, am_puck at 117 Hz (measured Nov 20): -1.5 semitones, then the character's own offset is added"
+  },
+  "pt-BR": {
+   "name": "Portuguese (Brazil)",
+   "youtube": "Portuguese (Brazil)",
+   "voice": "pf_dora",
+   "tts_lang": "pt-br",
+   "pitch": 2.5,
+   "formant": 1.04,
+   "note": "pf_dora median 169 Hz against 195 Hz",
+   "voice_m": "pm_alex",
+   "pitch_m": -1.7,
+   "note_m": "pm_alex median 129 Hz against am_puck 117 Hz (measured Nov 20)"
+  }
+ },
+ "fit": {
+  "base_speed_from_episode": true,
+  "max_speed": 1.0,
+  "min_end_gap_s": 0.08,
+  "note": "a line may use its English line's time plus the pause after it, minus min_end_gap_s; the voice is never faster than speed 1.0 (the model's normal pace; the English is spoken at 0.8)"
+ },
+ "_cast": "Stories have a cast: every character keeps its English offsets from Milo (pitch, formant, speed) on the language's voice; a male English voice takes 'voice_m'. A line that is '=' in the adaptation keeps the English recording (the channel's name in the main intro)."
+}

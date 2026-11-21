@@ -1,0 +1,36 @@
+{
+ "length": 309.8,
+ "shots": 69,
+ "visual_changes": 330,
+ "mean_gap": 0.94,
+ "longest_gap": 4.53,
+ "longest_gap_at": 224.5,
+ "over_6s": [],
+ "places": [
+  "ggarden",
+  "glab",
+  "gbench",
+  "gwindow",
+  "gsoil",
+  "gmeadow"
+ ],
+ "picture_boards": [
+  "paper_gz"
+ ],
+ "questions": 24,
+ "longest_without_question": 29.1,
+ "first_words_at": 0.42,
+ "shot_mean": 4.49,
+ "fails": [],
+ "words_placed": "661/661",
+ "sync": {
+  "pauses_checked": 50,
+  "onset_err_mean_ms": 30.2,
+  "onset_err_max_ms": 90.0,
+  "suspect_words": [],
+  "cuts": 68,
+  "cuts_on_the_half_beat": 68,
+  "songs_entering_on_a_beat": "0/0",
+  "process": "3D (beat)"
+ }
+}

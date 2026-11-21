@@ -1,0 +1,339 @@
+{
+ "style": "upbeat preschool kids dance pop, cheerful sweet female vocal, clear diction, funky bass, ukulele, handclaps, fun silly energy, major key, catchy repetitive chant chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nGood morning, good morning, time to eat!\nA healthy breakfast can't be beat!\nFruit and grains and a glass of milk,\nStart the day as smooth as silk!\n\n[Verse 1]\nRise and shine, the sun is up,\nPour some milk into my cup!\nA bowl of oats, warm and sweet,\nSprinkle berries, what a treat!\n\n[Chorus]\nGood morning, good morning, time to eat!\nA healthy breakfast can't be beat!\nFruit and grains and a glass of milk,\nStart the day as smooth as silk!\n\n[Verse 2]\nSlice a banana, round and round,\nCrunchy toast, a golden brown!\nAn apple slice, a yummy bite,\nBreakfast makes me feel just right!\n\n[Bridge]\nStretch your arms up, good morning sun!\nRub your tummy, breakfast is done!\nJump up high, you're full of power,\nReady to play for hour and hour!\n\n[Verse 3]\nBreakfast gives you energy,\nTo learn and play and run with glee!\nSay thank you for the food today,\nNow we're ready, hip hooray!\n\n[Chorus]\nGood morning, good morning, time to eat!\nA healthy breakfast can't be beat!\nFruit and grains and a glass of milk,\nStart the day as smooth as silk!\n\n[Outro]\nGood morning! Bye-bye, fruity friends!",
+ "duration": 150,
+ "bpm": 124,
+ "key": "F Major",
+ "seed": 1122,
+ "who_map": {},
+ "meta": {
+  "title": "Good Morning Breakfast Song! Healthy Food | Fruity Friends",
+  "card": "Breakfast Song!",
+  "thumb_text": "RISE & SHINE!",
+  "description": "Good morning! The Fruity Friends make a healthy breakfast: warm oats with berries, banana slices, crunchy toast, apple slices and a cup of milk.\nKids stretch to the morning sun, rub their tummies and learn that breakfast gives energy to learn and play. Ages 2-5.",
+  "tags": [
+   "breakfast song for kids",
+   "good morning song",
+   "healthy eating song",
+   "morning routine",
+   "kids songs",
+   "Fruity Friends",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "fr3d_ep14",
+  "title": "Breakfast Song!",
+  "channel": "fruity",
+  "set": "kitchen",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "fruit",
+    "spot": "center",
+    "opts": {
+     "kind": "pipkiko"
+    }
+   },
+   {
+    "id": "apple",
+    "char": "fruit",
+    "spot": "left",
+    "opts": {
+     "kind": "apple"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "banana",
+    "char": "fruit",
+    "spot": "right",
+    "opts": {
+     "kind": "banana"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "orange",
+    "char": "fruit",
+    "spot": "farleft",
+    "opts": {
+     "kind": "orange"
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "grape",
+    "char": "fruit",
+    "spot": "farright",
+    "opts": {
+     "kind": "grape"
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:banana",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "GOOD MORNING!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.65
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       0,
+       1.9,
+       3.4
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:banana",
+     "wide",
+     "close:host",
+     "close:banana"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "berries,",
+      "opts": {
+       "kind": "strawberry"
+      }
+     },
+     {
+      "type": "text",
+      "text": "RISE & SHINE!",
+      "color": "#ffc107",
+      "at": [
+       -2.6,
+       1.5,
+       3.4
+      ],
+      "size": 0.55,
+      "word": "Rise"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "YUM!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:apple",
+     "close:orange",
+     "close:grape",
+     "wide"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       -2.6,
+       0.9,
+       3.4
+      ],
+      "word": "banana,",
+      "opts": {
+       "kind": "banana"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "bigfruit",
+      "at": [
+       2.6,
+       0.9,
+       3.4
+      ],
+      "word": "apple",
+      "opts": {
+       "kind": "apple"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Stretch"
+     },
+     {
+      "type": "text",
+      "text": "JUMP!",
+      "color": "#ff5c8a",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "Jump"
+     },
+     {
+      "type": "text",
+      "text": "POWER!",
+      "color": "#3cc45a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "power,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:host",
+     "low"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "ENERGY!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7,
+      "word": "energy,"
+     },
+     {
+      "type": "set_prop",
+      "name": "plate",
+      "at": [
+       0,
+       0.8,
+       3.4
+      ],
+      "word": "food"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "GOOD MORNING!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.65
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.7,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff8a1f",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "fr3d_ep14",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

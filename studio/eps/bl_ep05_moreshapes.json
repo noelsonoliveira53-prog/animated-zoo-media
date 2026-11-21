@@ -1,0 +1,285 @@
+{
+ "id": "bl_ep05_moreshapes",
+ "title": "More Shapes for Kids! Rectangle, Oval, Diamond and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're meeting five more shape friends.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "rectangle",
+   "lines": [
+    [
+     "Here's a clue: it looks like a door! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Rectangle!",
+     "enter"
+    ],
+    [
+     "This is Rectangle! It has four sides.",
+     "fx+zoom"
+    ],
+    [
+     "Two sides are long, and two sides are short.",
+     "bob"
+    ],
+    [
+     "Can you draw a rectangle in the air?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is a rectangle?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A door!",
+     "fx+badge:4 SIDES!"
+    ],
+    [
+     "Let's say it together: RECTANGLE!",
+     "zoom"
+    ],
+    [
+     "Books and windows can be rectangles, too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Rectangle!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "oval",
+   "lines": [
+    [
+     "Here's a clue: it's shaped like an egg! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Oval!",
+     "enter"
+    ],
+    [
+     "This is Oval! An oval is like a stretched circle.",
+     "fx+zoom"
+    ],
+    [
+     "Ovals have no corners.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you make an oval with your arms?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What food is shaped like an oval?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "An egg!",
+     "fx+badge:EGG SHAPE!"
+    ],
+    [
+     "Let's say it together: OVAL!",
+     "zoom"
+    ],
+    [
+     "Your face is a little bit oval.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Oval!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "diamond",
+   "lines": [
+    [
+     "Here's a clue: it's like a square standing on its corner! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Diamond!",
+     "enter"
+    ],
+    [
+     "This is Diamond! Let's count the corners.",
+     "fx+zoom"
+    ],
+    [
+     "One, two, three, four! A diamond has four sides.",
+     "bob"
+    ],
+    [
+     "Can you tilt your head like a diamond?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What flies in the wind and can be a diamond?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A kite!",
+     "fx+badge:KITE!"
+    ],
+    [
+     "Let's say it together: DIAMOND!",
+     "zoom"
+    ],
+    [
+     "A diamond is a square turned on its point.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Diamond!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "crescent",
+   "lines": [
+    [
+     "Here's a clue: it looks like the moon at night! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Crescent!",
+     "enter"
+    ],
+    [
+     "This is Crescent! It's shaped like part of the moon.",
+     "fx+zoom"
+    ],
+    [
+     "Some nights, the moon looks like a crescent.",
+     "fxoff+bob"
+    ],
+    [
+     "Can you curl up like a crescent moon?",
+     "wiggle"
+    ],
+    [
+     "Can you guess where you can see a crescent?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "In the night sky, when the moon is thin!",
+     "fx+badge:MOON SHAPE!"
+    ],
+    [
+     "Let's say it together: CRESCENT!",
+     "zoom"
+    ],
+    [
+     "A banana can look like a crescent too.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Crescent!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "hexagon",
+   "lines": [
+    [
+     "Here's a clue: bees use it to build honeycomb! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Hexagon!",
+     "enter"
+    ],
+    [
+     "This is Hexagon! Let's count the sides.",
+     "fx+zoom"
+    ],
+    [
+     "One, two, three, four, five, six! A hexagon has six sides.",
+     "bob"
+    ],
+    [
+     "Can you buzz like a busy bee? Bzzz!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? Who builds with hexagons?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Bees! Honeycomb is made of hexagons.",
+     "fx+badge:6 SIDES!"
+    ],
+    [
+     "Let's say it together: HEXAGON!",
+     "zoom"
+    ],
+    [
+     "Hexagons fit together with no gaps.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Hexagon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great shapes! Let's remember.",
+   "@title"
+  ],
+  [
+   "A rectangle is like a door.",
+   "@rectangle"
+  ],
+  [
+   "An oval is like an egg.",
+   "@oval"
+  ],
+  [
+   "A diamond is like a kite.",
+   "@diamond"
+  ],
+  [
+   "A crescent is like the moon.",
+   "@crescent"
+  ],
+  [
+   "And a hexagon is like honeycomb!",
+   "@hexagon"
+  ]
+ ],
+ "outro": [
+  [
+   "Which shape can you find at home? Keep looking for colors and shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

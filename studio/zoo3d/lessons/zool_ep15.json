@@ -1,0 +1,699 @@
+{
+ "id": "zool_ep15",
+ "thumb_at": [
+  "panda",
+  3,
+  0.7
+ ],
+ "seed": 61,
+ "title": "What Do Animals Eat? Bamboo, Leaves and Grass",
+ "card": "Yummy Food!",
+ "thumb_text": "YUM YUM!",
+ "description": "What do animals eat? Pick your answer with Milo the bluebird, then find out: a panda's food is almost all bamboo and it grips the stems with a special thumb-like bump, a koala eats almost only eucalyptus leaves and sniffs out its favorites, and a zebra snips grass with its front teeth and can drink more than a gallon of water at one time.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "what do animals eat",
+  "panda facts for kids",
+  "koala facts for kids",
+  "zebra facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "panda",
+  "koala",
+  "zebra"
+ ],
+ "extras": [
+  {
+   "id": "pig",
+   "kind": "pig"
+  },
+  {
+   "id": "cow",
+   "kind": "cow"
+  }
+ ],
+ "facts": [
+  "At least 98% of a giant panda's diet is bamboo; active for roughly 14 hours per day, spending most of this time foraging; grasps bamboo with the front feet, between palm and thumb-like digit (SDZWA Library fact sheet 'Giant Panda', Diet & Feeding, ielc.libguides.com/sdzg/factsheets/giantpanda/diet, read Nov 16 2026).",
+  "Giant panda: unique thumb-like digit (modified sesamoid bone), enlarged and covered in a tough pad; large, flat molars for grinding bamboo; strong jaw bones and chewing muscles give a bite force higher than any other bear (SDZWA Library fact sheet 'Giant Panda', Physical Characteristics, read Nov 16 2026).",
+  "Koalas feed almost exclusively on leaves of Eucalyptus; smell plays a role in identifying preferred species; koalas rarely drink in the wild and produce dry pellets (water conservation) (SDZWA Library fact sheet 'Koala', Diet & Feeding, read Nov 16 2026).",
+  "An adult koala spends about 19-20 hours a day sitting or sleeping; a low-energy lifestyle is necessary for an animal that specializes on such a low-energy diet (SDZWA Library fact sheet 'Koala', Behavior & Ecology, read Nov 16 2026).",
+  "Plains zebras primarily consume grasses (more than 90% of diet), about 50 grass species; incisor teeth crop grasses, cheek teeth grind the food; they immerse their lips below the water surface to drink and may take in more than 4 liters (1 gallon) in a single bout (SDZWA Library fact sheet 'Plains Zebra', Diet & Feeding, read Nov 16 2026).",
+  "Plains zebras form large herds of several hundred; social grooming: they clean one another's coat and mane (SDZWA Library fact sheet 'Plains Zebra', Behavior & Ecology, read Nov 16 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "night_meadow",
+   "tod": "golden",
+   "word": "YUMMY FOOD!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about what animals eat!",
+    "What is on the menu today?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Are you hungry for fun facts? Let's go!"
+   ]
+  },
+  {
+   "name": "panda",
+   "biome": "bamboo",
+   "tod": "morning",
+   "word": "BAMBOO!",
+   "word_on": [
+    2,
+    "panda"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "panda"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "PANDA",
+    "b": "ZEBRA",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "BAMBOO",
+     "b": "FISH",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "bamboo",
+     "at": "ex",
+     "on": [
+      3,
+      "bamboo"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "thumb"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "LIKE A THUMB!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "teeth"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "FLAT TEETH",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      2.9
+     ],
+     "on": [
+      10,
+      "fourteen"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "text": "14",
+      "s": 1.1,
+      "color": "#ffb627"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who eats bamboo, almost all day long?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the panda? Or is it the zebra?",
+     "pause": 3.2
+    },
+    "It is the panda!",
+    "Here is the fun fact. Almost all of a panda's food is bamboo!",
+    "Bamboo leaves, bamboo stems, and yummy bamboo shoots. Crunch, crunch!",
+    {
+     "t": "How does a panda hold its bamboo? Hmm.",
+     "pause": 2.4
+    },
+    "With its front paws! A panda has a special bump, like a thumb, to grip the bamboo.",
+    [
+     "Look! It holds the bamboo tight, and munches away.",
+     "close:panda"
+    ],
+    "Bamboo is tough. So a panda has big, flat back teeth, to grind it up.",
+    "And strong chewing muscles. A panda's bite is stronger than any other bear's!",
+    "A panda is busy for about fourteen hours a day, and spends most of that time finding food and eating.",
+    "That is a lot of munching! Munch, munch, munch!",
+    [
+     "Say it with me. A panda eats bamboo!",
+     "close:host"
+    ],
+    "Can you hold bamboo like a panda? Hold it tight, and munch, munch!",
+    "Now grind it up with your back teeth. Chomp, chomp!",
+    {
+     "t": "Quick check! What does a panda eat the most? Bamboo? Or fish?",
+     "pause": 3.2
+    },
+    "Bamboo! Crunch, crunch. Great job!"
+   ],
+   "short": {
+    "id": "zs90_panda_bamboo",
+    "title": "What Does a Panda Eat All Day? Panda Facts",
+    "l1": "WHAT DOES",
+    "l2": "IT EAT?",
+    "thumb_text": "CRUNCH!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "koala",
+   "biome": "spring_meadow",
+   "tod": "noon",
+   "word": "LEAVES!",
+   "word_on": [
+    2,
+    "koala"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "koala"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "KOALA",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "LEAVES",
+     "b": "FISH",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      3,
+      "leaves"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "sniffs"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "SNIFF!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      8,
+      "drinks"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "HARDLY EVER!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      2.2,
+      -1.2,
+      2.6
+     ],
+     "on": [
+      10,
+      "rests"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who eats the leaves of a tree called eucalyptus?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the koala? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the koala!",
+    "Here is the fun fact. A koala eats almost only eucalyptus leaves.",
+    "Eucalyptus leaves, every single day. Nibble, nibble!",
+    {
+     "t": "How does a koala find the leaves it likes best? Hmm.",
+     "pause": 2.4
+    },
+    "It sniffs them! A koala uses its nose, to find its favorite leaves. Sniff, sniff!",
+    [
+     "Look at that big, round nose!",
+     "close:koala"
+    ],
+    "And here is a surprise. A koala hardly ever drinks water!",
+    "Its body is very, very good at saving water. Clever koala!",
+    "Eucalyptus leaves do not give a koala much energy. So a koala rests a lot.",
+    "A koala sits or sleeps for about twenty hours a day! Shh.",
+    [
+     "Say it with me. A koala eats eucalyptus leaves!",
+     "close:host"
+    ],
+    "Can you sniff like a koala? Sniff, sniff! Which leaf smells the best?",
+    "Now hug a tree, and take a little nap. Shh.",
+    {
+     "t": "Quick check! What does a koala eat? Leaves? Or fish?",
+     "pause": 3.2
+    },
+    "Leaves! Eucalyptus leaves. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_koala_leaves",
+    "title": "What Does a Koala Eat? Koala Facts for Kids",
+    "l1": "WHO EATS",
+    "l2": "THESE LEAVES?",
+    "thumb_text": "SNIFF SNIFF!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "zebra",
+   "biome": "savanna",
+   "tod": "golden",
+   "word": "GRASS!",
+   "word_on": [
+    2,
+    "zebra"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "zebra"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ZEBRA",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "GRASS",
+     "b": "BAMBOO",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "grass",
+     "at": "ex",
+     "on": [
+      3,
+      "grass"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "front"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "SNIP SNIP!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "pool",
+     "at": [
+      2.4,
+      -0.9,
+      0.0
+     ],
+     "on": [
+      8,
+      "water"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      9,
+      "gallon"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "1 GALLON",
+      "color": "#8e5bd8"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who eats grass, and has black and white stripes?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the zebra? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the zebra!",
+    "Here is the fun fact. Grass is almost all of a zebra's food!",
+    "Zebras eat about fifty different kinds of grass. Munch, munch!",
+    {
+     "t": "How does a zebra eat the grass? Hmm.",
+     "pause": 2.4
+    },
+    "Its front teeth cut the grass. Snip, snip! And its back teeth grind it up.",
+    [
+     "Look at the zebra, munching away.",
+     "close:zebra"
+    ],
+    "When a zebra is thirsty, it puts its lips under the water, to drink.",
+    "A zebra can drink more than one gallon of water, at one time! Gulp, gulp!",
+    "Zebras live together in big, big herds. Some herds have hundreds of zebras!",
+    "And zebra friends help keep each other clean. They use their teeth, to clean each other's coat and mane. Scratch, scratch!",
+    [
+     "Say it with me. A zebra eats grass!",
+     "close:host"
+    ],
+    "Can you snip like a zebra? Snip, snip, snip, with your front teeth!",
+    "Now drink like a zebra. Gulp, gulp, gulp!",
+    {
+     "t": "Quick check! What does a zebra eat? Grass? Or bamboo?",
+     "pause": 3.2
+    },
+    "Grass! Munch, munch. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_zebra_grass",
+    "title": "How Does a Zebra Eat and Drink? Zebra Facts",
+    "l1": "WHO EATS",
+    "l2": "GRASS?",
+    "thumb_text": "SNIP SNIP!",
+    "thumb_line": [
+     3,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "river",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three hungry friends. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who grips bamboo with a bump like a thumb?",
+     "The panda! Yes!",
+     "panda"
+    ],
+    [
+     "Who sniffs out its favorite eucalyptus leaves?",
+     "The koala! That's right!",
+     "koala"
+    ],
+    [
+     "Who snips grass with its front teeth?",
+     "The zebra! You remembered!",
+     "zebra"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "desert",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Munch like a panda. Sniff like a koala. And snip like a zebra!",
+    "What is your favorite food?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "no animal close-up while an example is on screen: every example of a part leaves before the close:<animal> line (7) and before close:host (12) (open note: cars at 2:11 and ruler at 0:47 of zool_ep09, magnifier at 2:32 of zool_ep13)",
+  "high examples kept low: snowflake z 2.7, sun z 2.8, badge z 2.9 (snowflake top cut at 0:48 and arrow cut at 2:09 of zool_ep12)",
+  "hello: only the 1-2-3 count in the group scene, at x=-0.75 (side props |x| <= 2.9, HOT/COLD plates at the frame edge in zool_ep12); the hello count line is wide and the word leaves first (teach.py rule)",
+  "quiz checks beside the head, QUIZ TIME word gone before the ? badge (teach.py rules of Nov 15, first lessons written with them from the start)",
+  "picture: new teaching examples on screen (bamboo grove, eucalyptus branch, 5-toe and 4-toe counts, bump magnifier, fingerprint card, buzzing flies, hot and cold thermometers) and new casts per lesson",
+  "teaching: every part has a body action kids copy (grip, paddle, swish, flap, stretch) and one number they can count or compare (14 hours, 1 gallon, 5 toes, 4 toes, as long as a crayon)"
+ ],
+ "version": 3
+}

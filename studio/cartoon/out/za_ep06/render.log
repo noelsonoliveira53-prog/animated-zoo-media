@@ -1,0 +1,118 @@
+{
+ "length": 313.0,
+ "shots": 65,
+ "visual_changes": 340,
+ "mean_gap": 0.92,
+ "longest_gap": 5.2,
+ "longest_gap_at": 206.7,
+ "over_6s": [],
+ "places": [
+  "jungle",
+  "meadow",
+  "mossy",
+  "bigtree",
+  "treehouse",
+  "canopy",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 11,
+ "longest_without_question": 78.1,
+ "first_words_at": 0.42,
+ "shot_mean": 4.82,
+ "beats": {
+  "hook": 1,
+  "goal": 3,
+  "fact": 3,
+  "obstacle1": 3,
+  "obstacle2": 5,
+  "obstacle3": 4,
+  "low": 5,
+  "solution": 14,
+  "song": 2,
+  "ending": 14
+ },
+ "fails": [],
+ "words_placed": "699/699",
+ "sync": {
+  "pauses_checked": 59,
+  "onset_err_mean_ms": 21.9,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 64,
+  "cuts_on_the_half_beat": 64,
+  "songs_entering_on_a_beat": "2/2",
+  "process": "3D (beat)"
+ }
+}
+[INFO] [Compiler] Embedded local font file: assets/baloo.woff2 (18 KB → data URI)
+[hyperframes] browserGpuMode probe → software (WebGL renderer vendor="Google Inc. (Mesa)" renderer="ANGLE (Mesa, Vulkan 1.4.335 (llvmpipe (LLVM 20.1.2 256 bits) (0x00000000)), llvmpipe)")
+[BrowserManager] Browser launched (HeadlessChrome/157.0.8103.78, screenshot, gl=--use-gl=angle --use-angle=swiftshader, headlessShell=true, platform=linux)
+[initSession:screenshot] page.goto start (1ms)
+[initSession:screenshot] page.goto complete (302ms)
+[initSession:screenshot] GSAP proxy flush complete (310ms)
+[Browser:WARN] GSAP target #s0c1,#s0c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s1c1,#s1c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s2c1,#s2c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s3c1,#s3c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s4c1,#s4c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s5c1,#s5c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s6c1,#s6c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s7c1,#s7c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s8c1,#s8c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s9c1,#s9c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s10c1,#s10c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s11c1,#s11c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s12c1,#s12c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s13c1,#s13c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s14c1,#s14c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s20c1,#s20c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s21c1,#s21c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s22c1,#s22c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s23c1,#s23c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s24c1,#s24c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s25c1,#s25c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s26c1,#s26c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s27c1,#s27c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s28c1,#s28c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s29c1,#s29c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s30c1,#s30c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s31c1,#s31c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s32c1,#s32c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s33c1,#s33c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s34c1,#s34c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s35c1,#s35c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s36c1,#s36c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s37c1,#s37c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s38c1,#s38c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s39c1,#s39c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s40c1,#s40c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s41c1,#s41c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s42c1,#s42c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s43c1,#s43c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s44c1,#s44c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s45c1,#s45c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s46c1,#s46c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s47c1,#s47c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s48c1,#s48c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s50c1,#s50c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s51c1,#s51c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s52c1,#s52c2 not found. https://gsap.com
+[Browser:WARN] GSAP target #s53c1,#s53c2 not found. https://gsap.com
+[HyperFrames] render runtime fps {"canonicalFps":24,"source":"render-options","rawFpsSource":"render-options","rawFps":24}
+[initSession:screenshot] pollHfReady complete (1436ms)
+[initSession:screenshot] pollSubCompositionTimelines complete (ready) (1445ms)
+[initSession:screenshot] applyVideoMetadataHints complete (1445ms)
+[initSession:screenshot] media + fonts + tailwind ready (1458ms)
+[initSession:screenshot] static-frame dedup: 9/9 predicted frame(s) reusable (outcome=verified, runs=1/1, screenshots=8, seeks=9, elapsedMs=1940) (5021ms)
+[static-dedup] reused 9/7513 frame(s) (0%), est. ~3483ms saved (avg 387ms/frame)
+
+  This project pins hyperframes@0.8.231 (latest 0.9.69).
+  Bump it: npx hyperframes@latest upgrade --project
+
+4K 3840x2160 /home/claude/animated-zoo-media/studio/cartoon/out/za_ep06/za_ep06.mp4
+FILM /home/claude/animated-zoo-media/studio/cartoon/out/za_ep06/za_ep06.mp4 313.0 s
+EXIT 0

@@ -1,0 +1,516 @@
+{
+ "id": "zintro",
+ "total": 14.802166666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375
+ ],
+ "plan": {
+  "length": 14.8,
+  "shots": 4,
+  "visual_changes": 73,
+  "mean_gap": 0.2,
+  "longest_gap": 2.64,
+  "longest_gap_at": 0.8,
+  "over_6s": [],
+  "places": [
+   "intro_gate",
+   "intro_logo"
+  ],
+  "picture_boards": [],
+  "questions": 0,
+  "longest_without_question": 14.8,
+  "first_words_at": 0.62,
+  "shot_mean": 3.7,
+  "main_intro": {
+   "at": [
+    0.0
+   ],
+   "seconds": 14.8
+  },
+  "fails": [
+   "only 2 places (need 6)",
+   "only 0 s of its own content (15 s with the main intro; need 300 without it)",
+   "the first shot must be the hook question, spoken in the first 5 seconds"
+  ],
+  "words_placed": "3/3",
+  "sync": {
+   "pauses_checked": 0,
+   "onset_err_mean_ms": 0.0,
+   "onset_err_max_ms": 0.0,
+   "suspect_words": [],
+   "cuts": 3,
+   "cuts_on_the_half_beat": 3,
+   "songs_entering_on_a_beat": "3/3",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   0.0,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   0.0,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   0.0,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   0.05,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   0.8,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   3.44,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   3.63,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   3.91,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   3.94,
+   "action",
+   "mango pops up"
+  ],
+  [
+   4.26,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   4.38,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   4.57,
+   "action",
+   "tula pops up"
+  ],
+  [
+   4.88,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   5.0,
+   "action",
+   "sandy nods"
+  ],
+  [
+   5.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   5.19,
+   "action",
+   "clover pops up"
+  ],
+  [
+   5.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   5.31,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   5.51,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   5.78,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   6.25,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   6.56,
+   "action",
+   "out of the flash"
+  ],
+  [
+   6.56,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   6.56,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   6.75,
+   "action",
+   "the badge pops"
+  ],
+  [
+   7.32,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.48,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.63,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.79,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.95,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.1,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.41,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   8.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   8.45,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   8.75,
+   "action",
+   "a firework"
+  ],
+  [
+   8.75,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   8.91,
+   "action",
+   "a firework"
+  ],
+  [
+   9.06,
+   "action",
+   "confetti"
+  ],
+  [
+   9.06,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   9.16,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   9.37,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   9.49,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   9.69,
+   "action",
+   "a firework"
+  ],
+  [
+   9.88,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   10.19,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   10.31,
+   "action",
+   "a firework"
+  ],
+  [
+   10.5,
+   "action",
+   "mango pops up"
+  ],
+  [
+   10.5,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   10.82,
+   "action",
+   "clover pops up"
+  ],
+  [
+   10.82,
+   "action",
+   "tula pops up"
+  ],
+  [
+   10.94,
+   "action",
+   "a firework"
+  ],
+  [
+   11.13,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   11.25,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   11.41,
+   "action",
+   "a firework"
+  ],
+  [
+   11.88,
+   "action",
+   "a firework"
+  ],
+  [
+   11.88,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   11.99,
+   "action",
+   "T word lights up"
+  ],
+  [
+   12.02,
+   "action",
+   "a firework"
+  ],
+  [
+   12.17,
+   "action",
+   "A word lights up"
+  ],
+  [
+   12.89,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   13.38,
+   "action",
+   "Milo flips"
+  ],
+  [
+   13.38,
+   "action",
+   "a firework"
+  ],
+  [
+   13.38,
+   "action",
+   "confetti"
+  ],
+  [
+   13.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.38,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.38,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   13.5,
+   "action",
+   "a firework"
+  ],
+  [
+   13.68,
+   "action",
+   "a firework"
+  ],
+  [
+   13.68,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   13.8,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 3.4375,
+   "t1": 6.5625,
+   "v0": 3.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 6.5625,
+   "t1": 11.875,
+   "v0": 6.875,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 11.875,
+   "t1": 14.802166666666666,
+   "v0": 11.995,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

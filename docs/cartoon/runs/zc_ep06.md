@@ -1,0 +1,34 @@
+# zc_ep06 "What Does a Monkey Eat All Day?" - run note (session 014CFVfXACLiRmiF48DuuKcR, Nov 17 night / Nov 18 UTC)
+
+Scheduled, unattended build: one cartoon fact lesson with Milo and Mango the spider monkey, and its three Shorts. Nothing was uploaded; no Studio, no browser.
+
+## What exists
+- `studio/cartoon/episodes/zc_ep06.py` ("beat": True) and new art only in `studio/cartoon/art_zc_ep06.py`: three treetop places made from the canopy (fruit tree, flower tree, treetops at sunset), Mango's friends (art2.monkey in three other fur colours, Mango herself unchanged), green fruit, fruit cut open with seeds, young leaves, flower, bark, a small insect, the ten plates and the six food pictures. No engine file was changed.
+- Lesson `cartoon/zc_ep06.mp4`: 311.8 s, 3840x2160, AV1 (73.6 MB), status to_upload (Nov 21, 5:30 PM slot). Third render; see "Decisions taken alone".
+- Shorts `cartoon/zc_ep06_short1.mp4` (87.0 s, "How Does a Spider Monkey Pick the Best Fruit?"), `_short2.mp4` (87.9 s, "Do Spider Monkeys Eat Flowers and Bugs?"), `_short3.mp4` (86.6 s, "How Do Spider Monkeys Help the Rainforest Grow?"): 2160x3840, status to_upload.
+- Thumbnails: `brand/zoo/thumb_zc_ep06.jpg` (YUM, FRUIT!), `brand/zoo/shorts/thumb_zc_ep06_short1..3.jpg` (GREEN OR GOLDEN? / LUNCH TIME! / PLOP, PLOP!): looked at; thumb.py accepted the words (3 at most, none of the title's words).
+
+## Facts (read Nov 18, quoted in the episode file's header)
+National Geographic Kids (spider monkey), Los Angeles Zoo (Geoffroy's black-handed spider monkey), National Geographic (spider monkeys), IFAW (spider monkeys).
+Said: fruit is the main food and is looked for during the day; about 80 percent fruit (shown as 8 plates of 10) with some young leaves and flowers; keen colour vision helps select the best fruit; flowers, seeds, bark, leaves and small insects when fruit is not available; most of the day high in the canopy; the big group splits into smaller groups to feed and is together again at night; spider monkeys spread seeds.
+Not said: eggs, honey, spiders, nuts, anything about the tail (zc_ep04's lesson). Mango sits and walks; she never hangs by her tail.
+How the pages were read: through the session's page reader, which returns the sentences it finds. The quotes were not compared against the pages by a second method.
+Plain observations, not animal facts: a fruit is green or golden, bark is the skin of a tree, a seed in the ground can grow. "Mango helps the rainforest grow" rests on IFAW's "they actively assist in the regeneration and health of their habitats".
+
+## Checks that passed
+- Plan check: lesson 311.8 s, parts 83.4 / 84.1 / 83.4 s, 7 places, 666/666 words placed, 84/84 cuts on the half-beat, no suspect word, no song (so no tune to hear); Shorts 87.0 / 87.9 / 86.6 s, plan check passes for each.
+- Stills of EVERY shot looked at in 16:9 and in 9:16 for each Short, in four rounds. Found and fixed: the hanging fruit drawn inside Mango's ears; a 9:16 title band over Mango's head and over the plates and food pictures; words on the title band; the monkey group too wide for the frame (monkeys smaller, own 9:16 views, more sky added above the three new places); a plate and a seed sliding out of the 9:16 frame on boards (boards now only pull out); the heart on the "THANK YOU, MANGO!" word; "UP HIGH" on its arrow; an answer sign on Mango's hair in 9:16 (own question view).
+- Finished lesson (third render): `--check4k` 3840x2160 on the rendered file and on the AV1 file, pace_check `--max 8` (0 stretches over 8 s, longest 7.5 s), watermark check MARK yes on both files and the corner sheet looked at (nothing that matters under the mark), frames at the end of all 85 shots plus the first frame and both sides of all six answer reveals looked at on the second render; the third render's 97 frames were compared with those tile by tile and differ only in the tallest-tree shot, which was looked at every half second (no strip at the sides). Twelve frames of the AV1 file looked at. listen.py on the file: -15.3 LUFS, true peak -1.4 dB, no clipped samples, no clicks, no silences. review.py PASS.
+- Finished Shorts: `--check4k` 2160x3840, pace_check `--max 8` (0 stretches over 8 s), watermark check MARK yes and corner sheets looked at, frames at the end of every shot plus first frame and every answer reveal looked at, review.py PASS.
+- listen.py (it measures, it does not hear). Music without the voice (`--episode`): key C major (fit 0.96), no tone outside the key, no clicks, no silences; it reports the E4 over F clash at every bar change of the 3D lessons' bed (53 times, 0.3-0.6 s: the known F major 7 colour of that bed, see PLAYBOOK) and hears the tempo as 64 where 96 is written (the same reading as za_ep02's record, 63.8; 73% of attacks on the half-beat grid against 29% by chance). Finished Shorts: -15.3 LUFS, true peak -1.4 dB, no clipped samples, no clicks, no silences.
+
+## Decisions taken alone
+- No song moment and no sound of a new kind: a fact lesson does not need one, and the rule of Nov 17 says a new sound goes to the owner first. Only Milo's speaking voice (af_heart, as in zc_ep02) and the 3D lessons' music bed.
+- Shorts are in `cartoon/` as rendered (47-55 MB, H.264), like the zc_ep01 and zc_ep02 Shorts (PLAYBOOK: "Shorts go into cartoon/ as rendered"); only the lesson is re-encoded to AV1.
+- The lesson was rendered three times. Frames of the first file showed the outer monkeys of the split group cut by the frame edge at the end of the slow push-in (178.8 s and 181.6 s): the group shots now only pull out (`GALL2`). A sheet of the second file showed a white strip and a blue strip at the sides of the tallest-tree shot at its START (194 s): the camera began wider than the painted background (3300 against 2920 units), which a still taken at the end of the shot cannot show. That camera is now 2860 wide, every camera of every shot (start and end, 16:9 and 9:16) was computed against the background's edges (none outside), and stills of that shot at its start, middle and end were looked at before the third render. The Shorts never had either defect (their 9:16 cameras are narrower) and were not rendered again.
+- review.py writes docs/REVIEW_LOG.md and studio/zoo3d/finished/review_*.png: those were committed with this build, as the gate requires.
+
+## Not checked / for the owner's ears
+- Nobody listened: Milo's voice reading the new words ("spider monkey", "nibble", "chomp", "gulp", "plop", "rainforest", "insects") was checked by word alignment only.
+- The iris wipe between places covers the whole picture, the watermark included, for one or two frames (Short 3's corner sheet shows it at 2.5 s). That is how every cartoon so far is built; not changed here.
+- pace_check's second line (same shot without a cut or a camera move) reads 14.8 s once in Short 1: the ten-plates board, where plates pop in every second; its gate (visual changes) passes.

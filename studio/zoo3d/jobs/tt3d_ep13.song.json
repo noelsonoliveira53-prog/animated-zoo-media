@@ -1,0 +1,283 @@
+{
+ "style": "upbeat preschool kids pop rock sing-along, cheerful friendly young male vocal, clear diction, electric guitar, handclaps, car horn sounds, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nSchool bus, school bus, big and yellow,\nBeep, beep, beep, say hi to every fellow!\nSit down tight and ride along,\nSchool bus, school bus, sing this song!\n\n[Verse 1]\nWait on the sidewalk, stand in line,\nHere comes the bus, right on time!\nStep up slowly, one, two, three,\nFind a seat, there's room for me!\n\n[Chorus]\nSchool bus, school bus, big and yellow,\nBeep, beep, beep, say hi to every fellow!\nSit down tight and ride along,\nSchool bus, school bus, sing this song!\n\n[Verse 2]\nThe stop sign swings out, red and bright,\nCars must stop, that's the rule, that's right!\nStay in your seat, keep your hands inside,\nSafe and happy on the ride!\n\n[Bridge]\nWave to the driver, hello, hello!\nBounce in your seat as the wheels go slow!\nLook out the window, what do you see?\nFriends and trees and the school for me!\n\n[Verse 3]\nHere's the school, the doors swing wide,\nWalk down the steps, then go inside!\nThank you, driver, see you soon,\nWe'll ride back home this afternoon!\n\n[Chorus]\nSchool bus, school bus, big and yellow,\nBeep, beep, beep, say hi to every fellow!\nSit down tight and ride along,\nSchool bus, school bus, sing this song!\n\n[Outro]\nBeep, beep! Bye-bye, trucks!",
+ "duration": 150,
+ "bpm": 120,
+ "key": "D Major",
+ "seed": 1112,
+ "who_map": {},
+ "meta": {
+  "title": "School Bus Song! Bus Safety for Kids | Tiny Truck Town",
+  "card": "School Bus Song!",
+  "thumb_text": "STAY SEATED!",
+  "description": "Beep, beep! The big yellow school bus picks up the kids of Tiny Truck Town. Kids learn to wait in line on the sidewalk, step up slowly, stay in their seat, keep their hands inside and say thank you to the driver.\nWhen the red stop sign swings out, cars must stop. Ages 2-5.",
+  "tags": [
+   "school bus song",
+   "bus safety for kids",
+   "trucks for kids",
+   "school song",
+   "kids songs",
+   "Tiny Truck Town",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "tt3d_ep13",
+  "title": "School Bus Song!",
+  "channel": "truck",
+  "set": "town",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "truck",
+    "spot": "center",
+    "opts": {
+     "variant": "fire",
+     "name": "Bolt"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "police",
+    "char": "truck",
+    "spot": "left",
+    "opts": {
+     "variant": "police"
+    },
+    "yaw": 0.45
+   },
+   {
+    "id": "dump",
+    "char": "truck",
+    "spot": "right",
+    "opts": {
+     "variant": "dump"
+    },
+    "yaw": -0.45
+   },
+   {
+    "id": "garbage",
+    "char": "truck",
+    "spot": "far_right",
+    "opts": {
+     "variant": "garbage"
+    },
+    "yaw": -0.85
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SCHOOL BUS!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "WAIT IN LINE!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.55,
+      "word": "line,"
+     },
+     {
+      "type": "text",
+      "text": "1, 2, 3!",
+      "color": "#2fb54a",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.6,
+      "word": "slowly,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BEEP BEEP!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:dump",
+     "wide",
+     "close:host",
+     "close:garbage"
+    ],
+    "energy": 0.85,
+    "props": [
+     {
+      "type": "text",
+      "text": "STOP!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.8,
+      "word": "stop"
+     },
+     {
+      "type": "text",
+      "text": "STAY SEATED!",
+      "color": "#3b8be0",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.55,
+      "word": "Stay"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "HELLO!",
+      "color": "#ffc107",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Wave"
+     },
+     {
+      "type": "text",
+      "text": "BOUNCE!",
+      "color": "#ff8a1f",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.6,
+      "word": "Bounce"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:police",
+     "close:host"
+    ],
+    "energy": 0.6,
+    "props": [
+     {
+      "type": "text",
+      "text": "THANK YOU!",
+      "color": "#e8302a",
+      "at": "top",
+      "size": 0.7,
+      "word": "Thank"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "SCHOOL BUS!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffc107",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "tt3d_ep13",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

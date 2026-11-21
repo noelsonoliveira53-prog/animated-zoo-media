@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep06_count10",
+ "title": "Count to 10 for Kids! Numbers 6 to 10 with Bloop",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're counting all the way up to ten!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_n6",
+   "lines": [
+    [
+     "Here's a clue: it comes right after five! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Six!",
+     "enter"
+    ],
+    [
+     "This is the number six! Can you say six?",
+     "zoom"
+    ],
+    [
+     "Let's count the apples. One, two, three, four, five, six!",
+     "fx+bob"
+    ],
+    [
+     "Six shiny red apples, sitting in two neat rows.",
+     "bob"
+    ],
+    [
+     "Can you hold up six fingers? Five on one hand, and one more!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? How many dots are in my counting frame?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Six! Five dots on top, and one more on the bottom.",
+     "fx2+badge:6!"
+    ],
+    [
+     "Let's say it together: SIX!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SIX! Great job!",
+     "zoom"
+    ],
+    [
+     "Six is one more than five. Five, and one more, makes six!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Six! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_n7",
+   "lines": [
+    [
+     "Here's a clue: it comes right after six! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Seven!",
+     "enter"
+    ],
+    [
+     "This is the number seven! Can you say seven?",
+     "zoom"
+    ],
+    [
+     "Let's count the ducks. One, two, three, four, five, six, seven!",
+     "fx+bob"
+    ],
+    [
+     "Seven little yellow ducks. Quack, quack, quack!",
+     "bob"
+    ],
+    [
+     "Can you waddle like a little duck? Waddle, waddle, quack!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? How many dots are in my counting frame now?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Seven! Five dots on top, and two more on the bottom.",
+     "fx2+badge:7!"
+    ],
+    [
+     "Let's say it together: SEVEN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SEVEN! Great job!",
+     "zoom"
+    ],
+    [
+     "There are seven days in one week. Seven is one more than six!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Seven! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_n8",
+   "lines": [
+    [
+     "Here's a clue: it comes right after seven! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Eight!",
+     "enter"
+    ],
+    [
+     "This is the number eight! Can you say eight?",
+     "zoom"
+    ],
+    [
+     "Let's count the fish. One, two, three, four, five, six, seven, eight!",
+     "fx+bob"
+    ],
+    [
+     "Eight happy blue fish, swimming along together.",
+     "bob"
+    ],
+    [
+     "Can you swim with your hands like a little fish? Swish, swish!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? How many dots are in my counting frame?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Eight! Five dots on top, and three more on the bottom.",
+     "fx2+badge:8!"
+    ],
+    [
+     "Let's say it together: EIGHT!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: EIGHT! Great job!",
+     "zoom"
+    ],
+    [
+     "An octopus has eight arms. Eight is one more than seven!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Eight! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_n9",
+   "lines": [
+    [
+     "Here's a clue: it comes right after eight! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Nine!",
+     "enter"
+    ],
+    [
+     "This is the number nine! Can you say nine?",
+     "zoom"
+    ],
+    [
+     "Let's count the strawberries. One, two, three, four, five, six, seven, eight, nine!",
+     "fx+bob"
+    ],
+    [
+     "Nine juicy red strawberries, with tiny yellow seeds.",
+     "bob"
+    ],
+    [
+     "Can you jump nine times? Ready? Jump, jump, jump, jump, jump, jump, jump, jump, jump!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? How many boxes are empty in my counting frame?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Just one! Nine boxes are full, and only one is empty.",
+     "fx2+badge:9!"
+    ],
+    [
+     "Let's say it together: NINE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: NINE! Great job!",
+     "zoom"
+    ],
+    [
+     "Nine is one more than eight. We're almost at ten!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Nine! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_n10",
+   "lines": [
+    [
+     "Here's a clue: it comes right after nine! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Ten!",
+     "enter"
+    ],
+    [
+     "This is the number ten! Can you say ten?",
+     "zoom"
+    ],
+    [
+     "Let's count my jelly friends. One, two, three, four, five, six, seven, eight, nine, ten!",
+     "fx+bob"
+    ],
+    [
+     "Ten jelly friends, in all the colors of the rainbow!",
+     "bob"
+    ],
+    [
+     "Can you wiggle all ten of your fingers? Wiggle, wiggle, wiggle!",
+     "wiggle"
+    ],
+    [
+     "Can you guess? How full is my counting frame now?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "All full! Five dots on top, and five on the bottom.",
+     "fx2+badge:10!"
+    ],
+    [
+     "Let's say it together: TEN!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: TEN! Great job!",
+     "zoom"
+    ],
+    [
+     "Ten fingers and ten toes. Ten is one more than nine!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Ten! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What great counting! Let's remember.",
+   "@title"
+  ],
+  [
+   "Six shiny apples.",
+   "@bl2_n6"
+  ],
+  [
+   "Seven little ducks.",
+   "@bl2_n7"
+  ],
+  [
+   "Eight swimming fish.",
+   "@bl2_n8"
+  ],
+  [
+   "Nine juicy strawberries.",
+   "@bl2_n9"
+  ],
+  [
+   "And ten jelly friends!",
+   "@bl2_n10"
+  ]
+ ],
+ "outro": [
+  [
+   "Can you count to ten all by yourself? Try it with your fingers at home.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

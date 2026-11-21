@@ -1,0 +1,1104 @@
+{
+ "kind": "lesson",
+ "format": "3d_lesson",
+ "lesson_version": 3,
+ "desc_header": "IN THIS LESSON",
+ "lyrics": "Black bear cubs are born in the middle of the winter denning period (mid-January to early February), in their mothers' dens; they are born tiny, helpless and hairless, weighing less than half a pound, and stay with their mother for about 18 months; curved claws help black bears climb trees to search for food; 85% of a Great Smoky Mountains black bear's diet is berries and nuts (National Park Service, 'Black Bears', nps.gov/subjects/bears/black-bears.htm, read Nov 15 2026).\nA newborn foal usually stands within 1 hour after birth, typically after several failed attempts; as soon as it is steady, often within an hour, it tries to nurse; it walks and runs for the first time within 90 minutes; by the end of the third month foals spend 60 percent of their time with other foals (eXtension Horses, 'Care of the newborn foal', horses.extension.org, read Nov 15 2026).\nAfrican savanna elephant calves weigh about 90-120 kg at birth and can stand about 15 minutes after birth; calves rely on milk only for the first 3 months; they cannot use the trunk to drink until about 8-9 months and get down on their knees to drink until they have enough trunk control; full trunk coordination at 1 year; calves are looked after by their mothers and other adult and subadult females in the herd, and the helpers let the mother feed and rest (SDZWA Library fact sheet 'African Elephants', Reproduction & Development, read Nov 15 2026).",
+ "script": "Hello, friends! I am Milo the bluebird.\nToday we are learning about animal babies!\nHow do baby animals grow up?\nThree animal families will show us. Count them with me. One, two, three!\nAre you ready to guess the baby? Let's go!\nWhich baby is born in a cozy den, in the middle of winter?\nIs it a baby bear? Or a baby pig?\nIt is the baby bear! A baby bear is called a cub.\nHere is the fun fact. A mama bear has her cubs in a den, in the middle of winter.\nA newborn cub is tiny. It has no fur yet!\nHow long does a little cub stay with its mama? Hmm.\nAbout a year and a half! That is a long, long time with mama.\nThat is even longer than one whole year!\nNow look at the bear's paws. Its claws are curved.\nCurved claws help a bear climb up trees, to look for food.\nWhat does a bear eat? Some bears eat mostly berries and nuts! Yum, yum!\nBlack bears will eat almost anything! Berries, nuts, and lots more.\nSay it with me. Bear cubs are born in a den!\nCan you climb like a bear? Reach up high, and climb, climb, climb!\nNow curl up small, like a tiny cub in a cozy den. Snuggle, snuggle!\nQuick check! Where are bear cubs born? In a den? Or in a nest?\nIn a den! Cozy and snug. Great job!\nWhich baby can stand up on its legs less than one hour after it is born?\nIs it a baby horse? Or a baby pig?\nIt is the baby horse! A baby horse is called a foal.\nHere is the fun fact. A foal usually stands up within one hour after it is born!\nWobble, wobble! It tries, and falls, and tries again. And up it goes!\nWhat does the foal do, as soon as it can stand? Hmm.\nIt drinks mama's milk! Slurp, slurp.\nAnd before it is two hours old, the foal walks, and even runs, for the very first time!\nWow! So many big steps on its very first day!\nWhen it grows a bit bigger, the foal spends lots of time with other foals.\nJust like you spend time with your friends!\nWobble, stand, drink, walk and run. All on its very first day!\nSay it with me. A foal can stand up in one hour!\nCan you wobble like a foal? Wobble, and wobble. Now stand up tall!\nNow gallop like a horse! Clip, clop, clip, clop!\nQuick check! How soon can a foal stand up? In one hour? Or in one week?\nIn one hour! What a strong baby. You remembered!\nWhich baby has a long trunk, but cannot drink with it yet?\nIs it a baby elephant? Or a baby pig?\nIt is the baby elephant! A baby elephant is called a calf.\nHere is the fun fact. A baby elephant cannot drink water with its trunk yet!\nSo how does it drink water? It gets down on its knees, and drinks with its mouth. Slurp!\nIt takes many months to learn. By its first birthday, the calf can use its trunk really well!\nWho helps take care of the baby elephant? Hmm.\nThe whole family! Mama, and the other girl elephants in the herd, all help.\nThe helpers look after the calf, so mama can eat and rest.\nAnd a baby elephant can stand up about fifteen minutes after it is born!\nFor its first three months, the calf drinks only mama's milk.\nSo remember. A baby elephant kneels down to drink!\nSay it with me. The whole family helps the baby elephant!\nCan you swing your arm like a trunk? Swing, swing, swing!\nNow kneel down to drink, like a baby elephant. Slurp!\nQuick check! Who helps take care of a baby elephant? Only mama? Or the whole family?\nThe whole family! Hooray for families!\nWow! We met three animal babies. Now it is quiz time!\nGet ready. Think hard!\nWhose babies are born in a den, in the middle of winter?\nThe bear! Yes!\nWhose baby stands up within one hour?\nThe horse! That's right!\nWhose baby kneels down to drink with its mouth?\nThe elephant! You remembered!\nYou learned so many new things today.\nCurl up like a cub. Wobble like a foal. And swing like a baby elephant!\nWho helps take care of you?\nThank you for learning with me. Bye-bye, friends! See you next time!",
+ "duration": 339.6,
+ "bpm": 96,
+ "sync": {
+  "method": "forced alignment of every line (PocketSphinx)",
+  "aligned": 753,
+  "words": 753,
+  "pause_onsets_checked": 65,
+  "onset_err_mean_ms": 23.5,
+  "onset_err_max_ms": 80.0,
+  "unaligned_lines": [],
+  "suspect_words": []
+ },
+ "meta": {
+  "title": "Baby Animals for Kids! How Animal Babies Grow with Milo",
+  "card": "Animal Babies!",
+  "thumb_text": "WINTER DEN!",
+  "description": "How do baby animals grow? Guess the baby with Milo the bluebird, then find out: bear cubs are born in a den in the middle of winter, a foal usually stands up within an hour of being born, and a baby elephant cannot drink with its trunk yet, so it kneels down, while the whole family helps look after it.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.",
+  "tags": [
+   "baby animals for kids",
+   "animal babies",
+   "bear cub facts",
+   "baby elephant for kids",
+   "animals for kids",
+   "learn animals",
+   "animal facts for kids",
+   "preschool learning",
+   "animals for toddlers",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "shorts": [
+  {
+   "id": "zs90_bear_cub",
+   "title": "Where Are Bear Cubs Born? Baby Animals with Milo",
+   "l1": "GUESS THE",
+   "l2": "BABY!",
+   "thumb_text": "WINTER DEN!",
+   "thumb_line": [
+    3,
+    0.8
+   ],
+   "seg": "bear",
+   "start": 20.792,
+   "end": 107.353,
+   "seconds": 86.6
+  },
+  {
+   "id": "zs90_foal_stand",
+   "title": "How Fast Can a Baby Horse Stand Up? Foal Facts",
+   "l1": "GUESS THE",
+   "l2": "BABY!",
+   "thumb_text": "WOBBLE WOBBLE!",
+   "thumb_line": [
+    4,
+    0.6
+   ],
+   "seg": "horse",
+   "start": 107.353,
+   "end": 195.841,
+   "seconds": 88.5
+  },
+  {
+   "id": "zs90_elephant_calf",
+   "title": "How Does a Baby Elephant Drink? Elephant Facts",
+   "l1": "GUESS THE",
+   "l2": "BABY!",
+   "thumb_text": "KNEEL DOWN!",
+   "thumb_line": [
+    4,
+    0.7
+   ],
+   "seg": "elephant",
+   "start": 195.841,
+   "end": 288.876,
+   "seconds": 93.0
+  }
+ ],
+ "job": {
+  "id": "zool_ep14",
+  "title": "Animal Babies!",
+  "channel": "zoo",
+  "set": "zooworld",
+  "set_opts": {},
+  "seed": 59,
+  "new_song": true,
+  "kind": "lesson",
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "bear",
+    "char": "animal",
+    "spot": "s1",
+    "opts": {
+     "kind": "bear"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "horse",
+    "char": "animal",
+    "spot": "s2",
+    "opts": {
+     "kind": "horse"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "s3",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "pig",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "pig",
+     "scale": 1.0
+    }
+   },
+   {
+    "id": "cub",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "bear",
+     "scale": 0.45
+    }
+   },
+   {
+    "id": "foal",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "horse",
+     "scale": 0.5
+    }
+   },
+   {
+    "id": "calf",
+    "char": "animal",
+    "spot": "back",
+    "opts": {
+     "kind": "elephant",
+     "scale": 0.45
+    }
+   }
+  ],
+  "locations": [
+   {
+    "from": "hello",
+    "biome": "beach",
+    "tod": "morning",
+    "formation": "line",
+    "shot": "reveal",
+    "show": [
+     "bear",
+     "horse",
+     "elephant"
+    ]
+   },
+   {
+    "from": "bear",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "bear",
+    "biome": "autumn_forest",
+    "tod": "morning",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "bear",
+     "cub"
+    ],
+    "place": {
+     "cub": [
+      0.75,
+      -1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "from": "horse",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "horse",
+    "biome": "spring_meadow",
+    "tod": "noon",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "horse",
+     "foal"
+    ],
+    "place": {
+     "foal": [
+      0.75,
+      -1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "from": "elephant",
+    "biome": "savanna",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "show": [
+     "none"
+    ]
+   },
+   {
+    "from": "elephant",
+    "biome": "savanna",
+    "tod": "sunset",
+    "formation": "teach",
+    "shot": "teach",
+    "zoom": 1.0,
+    "line": 2,
+    "show": [
+     "elephant",
+     "calf"
+    ],
+    "place": {
+     "calf": [
+      0.75,
+      -1.0,
+      0.0
+     ]
+    }
+   },
+   {
+    "from": "quiz",
+    "biome": "mountain",
+    "tod": "noon",
+    "formation": "arc",
+    "shot": "vista",
+    "show": [
+     "bear",
+     "horse",
+     "elephant"
+    ]
+   },
+   {
+    "from": "goodbye",
+    "biome": "farm",
+    "tod": "golden",
+    "formation": "v",
+    "shot": "dolly",
+    "show": [
+     "bear",
+     "horse",
+     "elephant"
+    ]
+   }
+  ],
+  "intro_shot": "reveal",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 974,
+  "direct": [
+   {
+    "section": "hello",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "wide",
+     "vista"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "ANIMAL BABIES!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "count",
+      "at": [
+       -0.75,
+       -1.7,
+       3.55
+      ],
+      "delay": 15.429,
+      "dur": 5.463,
+      "spin": 0,
+      "opts": {
+       "n": 3,
+       "dx": 0.75,
+       "s": 1.0,
+       "times": [
+        0.0,
+        0.3,
+        -3.66
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "section": "bear",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:bear",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "CUB!",
+      "color": "#3db8ff",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 13.74,
+      "dur": 11.270999999999999
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.817,
+      "dur": 8.663,
+      "spin": 0,
+      "opts": {
+       "text": "BEAR",
+       "color": "#1479d6",
+       "win": 6.263
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.267,
+      "dur": 5.813,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.33,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 74.405,
+      "dur": 9.982,
+      "spin": 0,
+      "opts": {
+       "text": "A DEN",
+       "color": "#1479d6",
+       "win": 7.982
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 74.855,
+      "dur": 7.532,
+      "spin": 0,
+      "opts": {
+       "text": "A NEST",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 78.637,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "den",
+      "at": [
+       2.75,
+       -0.2,
+       0.0
+      ],
+      "delay": 18.699,
+      "dur": 17.041,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "snowflake",
+      "at": [
+       2.3,
+       -1.1,
+       3.0
+      ],
+      "delay": 19.909,
+      "dur": 5.102,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 28.057,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "heart",
+      "at": [
+       2.5,
+       -1.3,
+       2.4
+      ],
+      "delay": 34.417,
+      "dur": 4.389,
+      "spin": 0,
+      "opts": {
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "leaves",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 49.193,
+      "dur": 8.478,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "horse",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:horse",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "FOAL!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 14.763,
+      "dur": 12.863000000000001
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 5.71,
+      "dur": 8.673,
+      "spin": 0,
+      "opts": {
+       "text": "HORSE",
+       "color": "#1479d6",
+       "win": 6.273
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 6.16,
+      "dur": 5.823,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 8.233,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 75.695,
+      "dur": 10.561,
+      "spin": 0,
+      "opts": {
+       "text": "1 HOUR",
+       "color": "#1479d6",
+       "win": 8.561
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 76.145,
+      "dur": 8.111,
+      "spin": 0,
+      "opts": {
+       "text": "1 WEEK",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 80.506,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 20.042,
+      "dur": 7.584,
+      "spin": 0,
+      "opts": {
+       "text": "1 HOUR",
+       "color": "#3db8ff"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 30.617,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "milk",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 34.567,
+      "dur": 8.558,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "heart",
+      "at": [
+       2.5,
+       -1.3,
+       2.4
+      ],
+      "delay": 50.419,
+      "dur": 4.254,
+      "spin": 0,
+      "opts": {
+       "s": 1.2
+      }
+     }
+    ]
+   },
+   {
+    "section": "elephant",
+    "shots": [
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "teach",
+     "close:host",
+     "teach",
+     "teach",
+     "teach",
+     "teach"
+    ],
+    "energy": 0.3,
+    "wave": 0,
+    "jump": 0.0,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "CALF!",
+      "color": "#8e5bd8",
+      "at": [
+       0,
+       -0.6,
+       4.35
+      ],
+      "size": 0.62,
+      "delay": 14.528,
+      "dur": 13.427999999999999
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 4.65,
+      "dur": 8.908,
+      "spin": 0,
+      "opts": {
+       "text": "ELEPHANT",
+       "color": "#1479d6",
+       "win": 6.508
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 5.1,
+      "dur": 6.058,
+      "spin": 0,
+      "opts": {
+       "text": "PIG",
+       "color": "#e85d00"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 7.408,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.7
+      ],
+      "delay": 79.847,
+      "dur": 9.364,
+      "spin": 0,
+      "opts": {
+       "text": "MAMA",
+       "color": "#1479d6"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       2.55
+      ],
+      "delay": 80.297,
+      "dur": 10.914,
+      "spin": 0,
+      "opts": {
+       "text": "FAMILY",
+       "color": "#e85d00",
+       "win": 8.914
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 85.461,
+      "dur": 3.75,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "pool",
+      "at": [
+       2.4,
+       -0.9,
+       0.0
+      ],
+      "delay": 22.452,
+      "dur": 12.185,
+      "spin": 0,
+      "opts": {
+       "s": 0.9
+      }
+     },
+     {
+      "type": "teach",
+      "name": "dots",
+      "at": [
+       1.95,
+       -1.3,
+       1.7
+      ],
+      "delay": 37.541,
+      "dur": 3.15,
+      "spin": 0,
+      "opts": {}
+     },
+     {
+      "type": "teach",
+      "name": "heart",
+      "at": [
+       2.5,
+       -1.3,
+       2.4
+      ],
+      "delay": 40.971,
+      "dur": 9.584,
+      "spin": 0,
+      "opts": {
+       "s": 1.2
+      }
+     },
+     {
+      "type": "teach",
+      "name": "sign",
+      "at": [
+       1.95,
+       -1.3,
+       3.3
+      ],
+      "delay": 53.055,
+      "dur": 2.67,
+      "spin": 0,
+      "opts": {
+       "text": "15 MINUTES",
+       "color": "#8e5bd8"
+      }
+     },
+     {
+      "type": "teach",
+      "name": "milk",
+      "at": [
+       2.55,
+       -0.5,
+       0.0
+      ],
+      "delay": 58.785,
+      "dur": 5.456,
+      "spin": 0,
+      "opts": {}
+     }
+    ]
+   },
+   {
+    "section": "quiz",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:bear",
+     "wide",
+     "close:horse",
+     "wide",
+     "close:elephant"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "QUIZ TIME!",
+      "color": "#3cc45a",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 6.65,
+      "dur": 6.403,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -1.2999999999999998,
+       0.29999999999999993,
+       2.35
+      ],
+      "delay": 13.304,
+      "dur": 1.938,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 15.092,
+      "dur": 5.268,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       3.3,
+       0.29999999999999993,
+       2.35
+      ],
+      "delay": 20.61,
+      "dur": 2.074,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     },
+     {
+      "type": "teach",
+      "name": "badge",
+      "at": [
+       0.0,
+       -1.2,
+       3.55
+      ],
+      "delay": 22.534,
+      "dur": 5.901,
+      "spin": 0,
+      "opts": {
+       "text": "?",
+       "color": "#8e5bd8",
+       "s": 1.25
+      }
+     },
+     {
+      "type": "teach",
+      "name": "check",
+      "at": [
+       -3.0999999999999996,
+       -0.8,
+       2.35
+      ],
+      "delay": 28.686,
+      "dur": 2.287,
+      "spin": 0,
+      "opts": {
+       "s": 0.7
+      }
+     }
+    ]
+   },
+   {
+    "section": "goodbye",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.6,
+    "wave": 1,
+    "jump": 0.2,
+    "group": false,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff6fb5",
+      "at": "top",
+      "size": 0.7,
+      "delay": 1.0
+     }
+    ]
+   }
+  ],
+  "song": "zool_ep14",
+  "res": "3840x2160",
+  "samples": 16,
+  "step": 1,
+  "hold_shots": true,
+  "cut_mode": "beat",
+  "follow_singer": false,
+  "punch": false,
+  "timing_file": "zool_ep14_timing.json",
+  "audio": "zool_ep14_song.wav"
+ }
+}

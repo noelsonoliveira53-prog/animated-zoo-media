@@ -1,0 +1,291 @@
+{
+ "title": "Colors Song",
+ "bpm": 116,
+ "voice": "af_bella",
+ "formant": 1.1,
+ "chords": "C G Am F",
+ "style": "pop",
+ "intro_bars": 1,
+ "outro_bars": 1,
+ "parts": [
+  {
+   "section": "hook",
+   "who": "host",
+   "speak": "Hi, I'm Bloop! Look, I can change my colors! Let's sing the Colors Song!",
+   "voice": "bf_isabella",
+   "speed": 1.05,
+   "bars": 3
+  },
+  {
+   "section": "verse1",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Red, red, apple red!",
+     "notes": "E4:1.5 E4:1.5 G4:1,E4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Bloop is red, red, red!",
+     "notes": "D4:1 E4:1 F4:1 E4:1 D4:3",
+     "rest": 1
+    },
+    {
+     "text": "Yellow, yellow, sunny sun!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 G4:1,E4:2",
+     "rest": 1
+    },
+    {
+     "text": "Yellow banana, yum, yum, yum!",
+     "notes": "F4:.75,E4:.75 D4:.5,E4:.5,F4:.5 E4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "chorus1",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Colors, colors, look at me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 A4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "I can change, one, two, three!",
+     "notes": "E4:1 F4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Red and yellow, green and blue,",
+     "notes": "G4:1 G4:1 A4:.5,G4:.5 E4:1 E4:1 D4:2",
+     "rest": 1
+    },
+    {
+     "text": "Colors, colors, sing with me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 F4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "fact",
+   "who": "host",
+   "speak": "Here's a fun fact! Mix blue paint and yellow paint, and you make green!",
+   "voice": "bf_isabella",
+   "bars": 3
+  },
+  {
+   "section": "verse2",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Orange, orange, juicy treat!",
+     "notes": "E4:.75,E4:.75 E4:.75,E4:.75 G4:1,E4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Orange carrots, good to eat!",
+     "notes": "D4:.5,E4:.5 F4:.5,E4:.5 D4:1 E4:1 C4:3",
+     "rest": 1
+    },
+    {
+     "text": "Green, green, froggy green!",
+     "notes": "G4:1.5 G4:1.5 A4:1,G4:1 E4:2",
+     "rest": 1
+    },
+    {
+     "text": "Green grass, green leaf, green bean!",
+     "notes": "F4:1 E4:1 F4:1 E4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "chorus2",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Colors, colors, look at me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 A4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "I can change, one, two, three!",
+     "notes": "E4:1 F4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Red and yellow, green and blue,",
+     "notes": "G4:1 G4:1 A4:.5,G4:.5 E4:1 E4:1 D4:2",
+     "rest": 1
+    },
+    {
+     "text": "Colors, colors, sing with me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 F4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "action",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Clap, clap! Clap your hands!",
+     "notes": "G4:1 G4:1 E4:1 F4:1 G4:2",
+     "rest": 2
+    },
+    {
+     "text": "Stomp, stomp! Stomp your feet!",
+     "notes": "A4:1 A4:1 F4:1 G4:1 A4:2",
+     "rest": 2
+    },
+    {
+     "text": "Jump, jump! Jump up high!",
+     "notes": "G4:1 G4:1 E4:1 F4:1 G4:2",
+     "rest": 2
+    },
+    {
+     "text": "Spin around and wave hi!",
+     "notes": "F4:1 E4:.5,D4:.5 D4:1 E4:1 C4:2",
+     "rest": 2
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "who": "host",
+   "lines": [
+    {
+     "text": "Blue, blue, sky so blue!",
+     "notes": "E4:1.5 E4:1.5 G4:1 E4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Blue, blue, the ocean too!",
+     "notes": "D4:1.5 D4:1.5 E4:1 F4:.5,E4:.5 D4:2",
+     "rest": 1
+    },
+    {
+     "text": "Purple, purple, grapes for me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 G4:1 E4:2",
+     "rest": 1
+    },
+    {
+     "text": "Purple flowers, one, two, three!",
+     "notes": "F4:.75,E4:.75 D4:.75,E4:.75 F4:1 E4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "rainbow",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Red, orange, yellow, green,",
+     "notes": "C4:1 E4:.5,E4:.5 G4:.5,G4:.5 A4:3",
+     "rest": 2
+    },
+    {
+     "text": "Blue and purple, what a team!",
+     "notes": "A4:1 G4:1 F4:.5,E4:.5 D4:1 E4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "All the colors, look and see,",
+     "notes": "C4:1 E4:1 G4:.5,G4:.5 A4:1 G4:1 E4:2",
+     "rest": 1
+    },
+    {
+     "text": "Make a rainbow, you and me!",
+     "notes": "F4:1 E4:1 D4:.5,E4:.5 F4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "chorus3",
+   "who": "host",
+   "group": true,
+   "lines": [
+    {
+     "text": "Colors, colors, look at me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 A4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "I can change, one, two, three!",
+     "notes": "E4:1 F4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Red and yellow, green and blue,",
+     "notes": "G4:1 G4:1 A4:.5,G4:.5 E4:1 E4:1 D4:2",
+     "rest": 1
+    },
+    {
+     "text": "Colors, colors, sing with me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 F4:1 D4:1 C4:2",
+     "rest": 1
+    }
+   ]
+  },
+  {
+   "section": "chorus4",
+   "who": "all",
+   "group": true,
+   "lines": [
+    {
+     "text": "Colors, colors, look at me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 A4:1 A4:1 G4:2",
+     "rest": 1
+    },
+    {
+     "text": "I can change, one, two, three!",
+     "notes": "E4:1 F4:1 G4:1 E4:1 D4:1 C4:2",
+     "rest": 1
+    },
+    {
+     "text": "Red and yellow, green and blue,",
+     "notes": "G4:1 G4:1 A4:.5,G4:.5 E4:1 E4:1 D4:2",
+     "rest": 1
+    },
+    {
+     "text": "Colors, colors, sing with me!",
+     "notes": "G4:.75,E4:.75 G4:.75,E4:.75 F4:1 D4:1 C4:3",
+     "rest": 0
+    }
+   ]
+  },
+  {
+   "section": "outro",
+   "who": "host",
+   "speak": "Yay! You know your colors! Sing it again tomorrow! Bye-bye!",
+   "voice": "bf_isabella",
+   "bars": 3
+  }
+ ],
+ "meta": {
+  "title": "Colors Song for Kids! Learn Colors with Bloop the Jelly Blob",
+  "card": "The Colors Song!",
+  "thumb_text": "COLORS SONG!",
+  "description": "The Colors Song for kids! Sing along with Bloop the jelly blob, who changes color with every word: red, yellow, orange, green, blue and purple.\nKids learn their colors, color mixing (blue + yellow = green) and the rainbow. Ages 2-5.",
+  "tags": [
+   "colors song",
+   "learn colors",
+   "colors for kids",
+   "color song for toddlers",
+   "rainbow song",
+   "kids songs",
+   "nursery rhymes",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ }
+}

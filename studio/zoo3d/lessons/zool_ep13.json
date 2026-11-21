@@ -1,0 +1,792 @@
+{
+ "id": "zool_ep13",
+ "thumb_at": [
+  "hippo",
+  4,
+  0.7
+ ],
+ "seed": 53,
+ "title": "Super Senses! Animal Eyes, Ears and Noses for Kids",
+ "card": "Super Senses!",
+ "thumb_text": "PEEKABOO!",
+ "description": "Super senses! Pick your answer with Milo the bluebird, then find out how three animals see, hear and smell: a hippo has its eyes, ears and nose on top of its head so it can peek out of the water, a rhino cannot see very well but hears and smells super well, and a fox can hear tiny animals digging under the snow.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "animal senses for kids",
+  "hippo facts for kids",
+  "rhino facts for kids",
+  "fox facts for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "hippo",
+  "rhino",
+  "fox"
+ ],
+ "extras": [
+  {
+   "id": "horse",
+   "kind": "horse"
+  }
+ ],
+ "facts": [
+  "Hippo eyes, ears and nostrils are on top of the head, so it can hear, see and breathe while most of its body is underwater (San Diego Zoo, zoo.sandiegozoo.org/animals/hippo); nostrils close before it goes under and the ears fold into a recess to close underwater (San Diego Zoo Wildlife Alliance Library fact sheet 'Hippopotamus', Physical Characteristics, read Nov 15 2026).",
+  "Mature hippos can stay under water for 5 minutes; hippos do not really swim, they move forward by punting off the river bottom; the herd leaves the water shortly before dark to graze (SDZWA Library fact sheet 'Hippopotamus', Behavior & Ecology, read Nov 15 2026). Diet: grasses and other vegetation near rivers (same fact sheet, summary).",
+  "White rhino: poor eyesight, good sense of hearing, good sense of smell; the second largest land mammal, only surpassed in size by the elephant (SDZWA Library fact sheet 'White Rhinoceros', Physical Characteristics, read Nov 15 2026).",
+  "Rhino horn is made mainly of keratin, a protein also found in human hair and fingernails, and grows by around 2 cm each year (Save the Rhino International, 'What is rhino horn made of?', read Nov 15 2026).",
+  "Red foxes can hear the low-frequency sounds of small animals digging under the ground, leaves or snow; they stalk and pounce on prey; the tail is used for balance, warmth and signaling; adults have a dozen calls; young are called kits (Missouri Department of Conservation, 'What Red Foxes Say and Do', read Nov 15 2026)."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "bamboo",
+   "tod": "morning",
+   "word": "SUPER SENSES!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today we are learning about super senses!",
+    "How do animals see, hear and smell?",
+    "Three animal friends will show us. Count them with me. One, two, three!",
+    "Get your eyes, ears and nose ready. Let's go!"
+   ]
+  },
+  {
+   "name": "hippo",
+   "biome": "river",
+   "tod": "morning",
+   "word": "PEEKABOO!",
+   "word_on": [
+    2,
+    "hippo"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "hippo"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "HIPPO",
+    "b": "HORSE",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      14
+     ],
+     "answer": [
+      15
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "arrow",
+     "at": [
+      -0.45,
+      -1.1,
+      3.1
+     ],
+     "on": [
+      3,
+      "top"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "color": "#3db8ff",
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      3,
+      "top"
+     ],
+     "off": [
+      6
+     ],
+     "opts": {
+      "text": "ON TOP!",
+      "color": "#3db8ff"
+     }
+    },
+    {
+     "prop": "pool",
+     "at": [
+      2.4,
+      -0.9,
+      0.0
+     ],
+     "on": [
+      4,
+      "water"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "s": 0.9
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      1.45,
+      -1.3,
+      2.2
+     ],
+     "on": [
+      5,
+      "one"
+     ],
+     "off": [
+      6
+     ],
+     "times": [
+      [
+       5,
+       "one"
+      ],
+      [
+       5,
+       "two"
+      ],
+      [
+       5,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      6,
+      "end"
+     ],
+     "off": [
+      7
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.0
+     ],
+     "on": [
+      8,
+      "five"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "text": "5 MINUTES",
+      "color": "#8e5bd8"
+     }
+    },
+    {
+     "prop": "grass",
+     "at": "ex",
+     "on": [
+      10,
+      "grass"
+     ],
+     "off": [
+      12
+     ],
+     "opts": {
+      "s": 1.3
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Which animal can hide in the water, and still see, hear and breathe?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the hippo? Or is it the horse?",
+     "pause": 3.2
+    },
+    "It is the hippo!",
+    "Here is the fun fact. A hippo's eyes, ears and nose are all on the top of its head.",
+    "So a hippo can stay in the water, with just its eyes and nose peeking out. Peekaboo!",
+    "Two eyes, two ears, and a nose with two holes. Let's count. One, two, three!",
+    {
+     "t": "What happens when the hippo goes all the way under the water? Hmm.",
+     "pause": 2.4
+    },
+    [
+     "Its nose closes tight, and its ears fold down. No water gets in!",
+     "close:hippo"
+    ],
+    "A big hippo can stay under the water for about five minutes!",
+    "And here is a surprise. Hippos do not really swim. They push off the bottom of the river, and bounce along!",
+    "When the sun goes down, the hippo comes out to munch on grass. Munch, munch, munch!",
+    [
+     "Say it with me. Eyes, ears and nose on top!",
+     "close:host"
+    ],
+    "Can you peek like a hippo? Hide down low, then peek your eyes out. Peekaboo!",
+    "Now close your nose, like a hippo going under. Hold it! And let go!",
+    {
+     "t": "Quick check! Can a hippo close its nose under the water? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! Its nose closes tight. Great job!"
+   ],
+   "short": {
+    "id": "zs90_hippo_peek",
+    "title": "Why Are a Hippo's Eyes on Top of Its Head?",
+    "l1": "WHO CAN",
+    "l2": "PEEKABOO?",
+    "thumb_text": "ONLY EYES!",
+    "thumb_line": [
+     4,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "rhino",
+   "biome": "savanna",
+   "tod": "golden",
+   "word": "SUPER NOSE!",
+   "word_on": [
+    2,
+    "rhino"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "rhino"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "COW",
+    "b": "RHINO",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "NAILS",
+     "b": "WOOD",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "cross",
+     "at": [
+      1.9,
+      -1.3,
+      3.0
+     ],
+     "on": [
+      3,
+      "see"
+     ],
+     "off": [
+      4
+     ],
+     "opts": {
+      "s": 0.8
+     }
+    },
+    {
+     "prop": "rings",
+     "at": [
+      0.25,
+      -1.0,
+      2.05
+     ],
+     "on": [
+      4,
+      "hear"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "reach": 2.0
+     }
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      4,
+      "smell"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "text": "SNIFF!",
+      "color": "#3cc45a"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "magnifier",
+     "at": [
+      2.4,
+      -1.1,
+      2.4
+     ],
+     "on": [
+      6,
+      "fingernails"
+     ],
+     "off": [
+      8
+     ],
+     "opts": {
+      "s": 1.0,
+      "fill": "#efe2d0",
+      "label": "NAILS"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has a big horn on its nose?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the cow? Or is it the rhino?",
+     "pause": 3.2
+    },
+    "It is the rhino!",
+    "Here is the fun fact. A rhino cannot see very well.",
+    "But a rhino has super ears, and a super nose! It can hear and smell very, very well.",
+    {
+     "t": "Now look at the rhino's horn. What do you think it is made of?",
+     "pause": 2.4
+    },
+    "The same stuff as your fingernails! Look at your fingernails. Tap, tap, tap!",
+    [
+     "A rhino's horn keeps growing a little bit every year, just like your nails.",
+     "close:rhino"
+    ],
+    "A rhino's skin is thick, with deep folds. Like a big, gray coat!",
+    "And a rhino is very, very big. The white rhino is the second biggest animal on land.",
+    "Who is the biggest? The elephant! Only the elephant is bigger than the white rhino.",
+    "A rhino has a wide, flat lip, for munching on grass. Munch, munch!",
+    [
+     "Say it with me. A rhino has a super nose!",
+     "close:host"
+    ],
+    "Can you sniff like a rhino? Sniff, sniff, sniff!",
+    "Now put your hands by your ears, and listen like a rhino. Listen!",
+    {
+     "t": "Quick check! A rhino's horn is made of the same stuff as what? Your nails? Or wood?",
+     "pause": 3.2
+    },
+    "Your nails! Tap, tap, tap. Super thinking!"
+   ],
+   "short": {
+    "id": "zs90_rhino_horn",
+    "title": "What Is a Rhino's Horn Made Of? Rhino Facts",
+    "l1": "WHAT IS THE",
+    "l2": "HORN MADE OF?",
+    "thumb_text": "TAP TAP!",
+    "thumb_line": [
+     6,
+     0.7
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "fox",
+   "biome": "night_meadow",
+   "tod": "golden",
+   "word": "SUPER EARS!",
+   "word_on": [
+    2,
+    "fox"
+   ],
+   "word_off": [
+    5
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "fox"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "FOX",
+    "b": "PIG",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "TAIL",
+     "b": "EARS",
+     "right": "a",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      3.0
+     ],
+     "on": [
+      3,
+      "snow"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "leaves",
+     "at": "ex",
+     "on": [
+      3,
+      "leaves"
+     ],
+     "off": [
+      5
+     ]
+    },
+    {
+     "prop": "rings",
+     "at": [
+      0.25,
+      -1.0,
+      2.05
+     ],
+     "on": [
+      4,
+      "listen"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "reach": 2.0
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "sign",
+     "at": [
+      1.95,
+      -1.3,
+      3.3
+     ],
+     "on": [
+      6,
+      "pounces"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "BOING!",
+      "color": "#ff7a00"
+     }
+    },
+    {
+     "prop": "snowflake",
+     "at": [
+      2.3,
+      -1.1,
+      3.0
+     ],
+     "on": [
+      8,
+      "warm"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "s": 0.8
+     }
+    },
+    {
+     "prop": "badge",
+     "at": [
+      2.3,
+      -1.2,
+      3.0
+     ],
+     "on": [
+      9,
+      "twelve"
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "text": "12",
+      "s": 1.1,
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who can hear a tiny mouse digging under the snow?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the fox? Or is it the pig?",
+     "pause": 3.2
+    },
+    "It is the fox!",
+    "Here is the fun fact. A fox has super ears! It can hear tiny animals digging under the ground, under the leaves, or under the snow.",
+    "Look at those big, pointy ears. They listen, listen, listen.",
+    {
+     "t": "The fox hears a tiny sound under the snow. What does it do next? Hmm.",
+     "pause": 2.4
+    },
+    "It sneaks up, jumps high, and pounces! Boing!",
+    [
+     "Now look at the fox's big, bushy tail.",
+     "close:fox"
+    ],
+    "The tail helps the fox balance, and it keeps the fox warm.",
+    "A grown-up fox can make about twelve different calls. Wow, that is a lot!",
+    "Baby foxes are called kits.",
+    "Kits grow up in a cozy den, and the den has a back door too!",
+    [
+     "Say it with me. A fox has super ears!",
+     "close:host"
+    ],
+    "Can you pounce like a fox? Crouch down low. And jump! Boing!",
+    "Now listen, listen, like a fox. What can you hear?",
+    {
+     "t": "Quick check! What helps the fox keep warm? Its tail? Or its ears?",
+     "pause": 3.2
+    },
+    "Its tail! A big, bushy tail. You remembered!"
+   ],
+   "short": {
+    "id": "zs90_fox_ears",
+    "title": "A Fox Can Hear a Mouse Under the Snow!",
+    "l1": "WHO HAS",
+    "l2": "SUPER EARS?",
+    "thumb_text": "BOING!",
+    "thumb_line": [
+     4,
+     0.5
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "desert",
+   "tod": "noon",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three friends with super senses. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who has its eyes, ears and nose on the top of its head?",
+     "The hippo! Yes!",
+     "hippo"
+    ],
+    [
+     "Whose horn is made of the same stuff as your nails?",
+     "The rhino! That's right!",
+     "rhino"
+    ],
+    [
+     "Who can hear a tiny mouse under the snow?",
+     "The fox! You remembered!",
+     "fox"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "river",
+   "tod": "golden",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Peek like a hippo. Sniff like a rhino. And pounce like a fox!",
+    "Which super sense is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "answer signs never cut by a close-up: no answer line is a close-up, and teach.py forces the teaching shot while signs are up (defect from the Nov 15 frame check of zool_ep09 and zool_ep10)",
+  "no jungle part: the flat green jungle backdrop (logged Nov 15) is avoided until the set is rebuilt",
+  "exhibit props at z <= 3.2 (sun cut at the top in zool_ep08)",
+  "picture: new places in the route (river, night meadow, bamboo) and a fresh cast (hippo, rhino, fox: the least-used animals in the variety ledger)",
+  "teaching: sense examples on screen (arrow to the top of the head, sound rings at the ears, magnifier on the horn, 5 MINUTES sign) and a body action in every part (peek, sniff, listen, pounce)"
+ ],
+ "version": 3
+}

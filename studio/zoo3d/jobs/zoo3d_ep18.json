@@ -1,0 +1,402 @@
+{
+ "id": "zoo3d_ep18",
+ "title": "Snowy Friends!",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 18,
+ "new_song": true,
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "polar_bear",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "polar_bear"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "arctic_fox",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "arctic_fox"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "bear",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "bear"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "horse",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "horse"
+   },
+   "yaw": -0.38
+  }
+ ],
+ "locations": [
+  {
+   "from": "chorus1",
+   "biome": "arctic",
+   "tod": "noon",
+   "formation": "line"
+  },
+  {
+   "from": "break_chorus1",
+   "biome": "arctic",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "vista"
+  },
+  {
+   "from": "verse1",
+   "biome": "mountain",
+   "tod": "morning",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "polar_bear",
+    "bear"
+   ]
+  },
+  {
+   "from": "verse1",
+   "line": 2,
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "arctic_fox"
+   ]
+  },
+  {
+   "from": "prechorus1",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus2",
+   "biome": "arctic",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "vista"
+  },
+  {
+   "from": "break_chorus2",
+   "biome": "arctic",
+   "tod": "night",
+   "formation": "line",
+   "shot": "vista"
+  },
+  {
+   "from": "verse2",
+   "biome": "arctic",
+   "tod": "noon",
+   "formation": "host_left",
+   "shot": "dolly",
+   "show": [
+    "bear"
+   ]
+  },
+  {
+   "from": "verse2",
+   "line": 2,
+   "biome": "arctic",
+   "tod": "morning",
+   "formation": "host_right",
+   "shot": "side",
+   "show": [
+    "horse"
+   ]
+  },
+  {
+   "from": "bridge1",
+   "biome": "mountain",
+   "tod": "morning",
+   "formation": "arc",
+   "shot": "high"
+  },
+  {
+   "from": "verse3",
+   "biome": "autumn_forest",
+   "tod": "golden",
+   "formation": "duo",
+   "shot": "dolly"
+  },
+  {
+   "from": "verse3",
+   "line": 2,
+   "biome": "arctic",
+   "tod": "sunset",
+   "formation": "duo",
+   "shot": "side"
+  },
+  {
+   "from": "prechorus2",
+   "biome": "arctic",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "low"
+  },
+  {
+   "from": "chorus3",
+   "biome": "arctic",
+   "tod": "sunset",
+   "formation": "arc",
+   "shot": "reveal"
+  },
+  {
+   "from": "outro1",
+   "biome": "arctic",
+   "tod": "sunset",
+   "formation": "line"
+  }
+ ],
+ "intro_shot": "orbit",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 96,
+ "direct": [
+  {
+   "section": "chorus1",
+   "shots": [
+    "wide",
+    "close:host",
+    "orbit",
+    "close:polar_bear",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BRRR!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse1",
+   "shots": [
+    "close:polar_bear",
+    "close:host",
+    "close:arctic_fox",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "WHITE!",
+     "color": "#3db8ff",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus1",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus2",
+   "shots": [
+    "vista",
+    "close:host",
+    "orbit",
+    "close:horse",
+    "low"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "FLUFFY!",
+     "color": "#ff7a00",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse2",
+   "shots": [
+    "close:bear",
+    "close:host",
+    "close:horse",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "WARM!",
+     "color": "#8e5bd8",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "bridge1",
+   "shots": [
+    "wide",
+    "low",
+    "close:polar_bear",
+    "close:arctic_fox",
+    "close:bear",
+    "close:horse",
+    "orbit"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.5,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "SHIVER!",
+     "color": "#3cc45a",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "verse3",
+   "shots": [
+    "close:host",
+    "close:host",
+    "close:polar_bear",
+    "wide",
+    "side"
+   ],
+   "energy": 0.75,
+   "wave": 0,
+   "jump": 0.15,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "SNOW!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7
+    }
+   ]
+  },
+  {
+   "section": "prechorus2",
+   "shots": [
+    "close:host",
+    "low"
+   ],
+   "energy": 0.9,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": []
+  },
+  {
+   "section": "chorus3",
+   "shots": [
+    "orbit",
+    "hero",
+    "wide",
+    "close:host",
+    "high"
+   ],
+   "energy": 1.0,
+   "wave": 1,
+   "jump": 0.4,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "FLUFFY COATS!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.6
+    }
+   ]
+  },
+  {
+   "section": "outro1",
+   "shots": [
+    "close:host",
+    "wide"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": true,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.8
+    }
+   ]
+  }
+ ],
+ "song": "zoo3d_ep18",
+ "res": "3840x2160",
+ "step": 1,
+ "cut_mode": "beat",
+ "cut_beats": {
+  "chorus": 4,
+  "bridge": 4,
+  "prechorus": 2
+ },
+ "follow_singer": true,
+ "punch": true,
+ "timing_file": "zoo3d_ep18_timing.json",
+ "audio": "zoo3d_ep18_song.wav",
+ "samples": 32
+}

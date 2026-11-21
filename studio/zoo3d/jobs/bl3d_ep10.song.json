@@ -1,0 +1,310 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBloop turns purple, purple, purple!\nPurple, purple, round in a circle!\nRed and blue, mix them, see?\nPurple is magic, one, two, three!\n\n[Verse 1]\nPurple grapes in a bunch so sweet,\nPurple grapes, a yummy treat!\nA purple flower, a purple shoe,\nPurple, purple, I see you!\n\n[Chorus]\nBloop turns purple, purple, purple!\nPurple, purple, round in a circle!\nRed and blue, mix them, see?\nPurple is magic, one, two, three!\n\n[Verse 2]\nA purple crayon, draw a line,\nA purple balloon, isn't it fine?\nA purple butterfly flutters by,\nPurple wings up in the sky!\n\n[Bridge]\nFind something purple, point and say,\nPurple, purple, hip hooray!\nSpin around and touch your knees,\nPurple is the color, if you please!\n\n[Verse 3]\nRed plus blue makes purple, true,\nMix it up, you can do it too!\nPurple, purple, all day long,\nSing along with Bloop's purple song!\n\n[Chorus]\nBloop turns purple, purple, purple!\nPurple, purple, round in a circle!\nRed and blue, mix them, see?\nPurple is magic, one, two, three!\n\n[Outro]\nPurple, purple! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 831,
+ "who_map": {},
+ "meta": {
+  "title": "Bloop Turns Purple! Purple Color Song for Kids | Part 5",
+  "card": "Bloop Turns Purple!",
+  "thumb_text": "BLOOP TURNS PURPLE!",
+  "description": "Bloop turns purple! Part 5 of Bloop's color song series: purple grapes, a purple flower, a purple crayon and balloon, and a purple butterfly.\nKids find something purple and learn that red and blue mix to make purple. Ages 2-5.",
+  "tags": [
+   "purple color song",
+   "learn colors",
+   "color mixing for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep10",
+  "title": "Bloop Turns Purple!",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "PURPLE!",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "grapes",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "grapes"
+     },
+     {
+      "type": "set_prop",
+      "name": "flower",
+      "at": [
+       3.4,
+       0.9,
+       3.6
+      ],
+      "word": "flower,",
+      "opts": {
+       "color": "#8e3fd0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED + BLUE = PURPLE",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.45,
+      "word": "Red"
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "crayon",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "crayon,",
+      "opts": {
+       "color": "#8e3fd0"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "balloon",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "word": "balloon,",
+      "opts": {
+       "color": "#8e3fd0"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "FIND PURPLE!",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.7,
+      "word": "Find"
+     },
+     {
+      "type": "text",
+      "text": "HOORAY!",
+      "color": "#ffd21f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "hooray,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED + BLUE = PURPLE",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.45,
+      "word": "plus"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "PURPLE!",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#8e3fd0",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ },
+ "color_words": {
+  "purple": "#8e3fd0"
+ },
+ "color_char": "host"
+}

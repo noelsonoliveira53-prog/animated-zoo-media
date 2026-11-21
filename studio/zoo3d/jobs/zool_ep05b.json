@@ -1,0 +1,910 @@
+{
+ "id": "zool_ep05b",
+ "title": "Stripes or Spots?",
+ "channel": "zoo",
+ "set": "zooworld",
+ "set_opts": {},
+ "seed": 41,
+ "new_song": true,
+ "kind": "lesson",
+ "cast": [
+  {
+   "id": "host",
+   "char": "milo",
+   "spot": "center"
+  },
+  {
+   "id": "zebra",
+   "char": "animal",
+   "spot": "s1",
+   "opts": {
+    "kind": "zebra"
+   },
+   "yaw": 0.22
+  },
+  {
+   "id": "tiger",
+   "char": "animal",
+   "spot": "s2",
+   "opts": {
+    "kind": "tiger"
+   },
+   "yaw": -0.22
+  },
+  {
+   "id": "panda",
+   "char": "animal",
+   "spot": "s3",
+   "opts": {
+    "kind": "panda"
+   },
+   "yaw": 0.38
+  },
+  {
+   "id": "cow",
+   "char": "animal",
+   "spot": "s4",
+   "opts": {
+    "kind": "cow"
+   },
+   "yaw": -0.38
+  },
+  {
+   "id": "cub",
+   "char": "animal",
+   "spot": "back",
+   "opts": {
+    "kind": "pink_cub",
+    "scale": 0.3
+   }
+  }
+ ],
+ "locations": [
+  {
+   "from": "hello",
+   "biome": "autumn_forest",
+   "tod": "morning",
+   "formation": "line",
+   "shot": "reveal",
+   "show": [
+    "zebra",
+    "tiger",
+    "panda",
+    "cow"
+   ]
+  },
+  {
+   "from": "zebra",
+   "biome": "river",
+   "tod": "noon",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "zebra"
+   ]
+  },
+  {
+   "from": "tiger",
+   "biome": "jungle",
+   "tod": "golden",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "tiger"
+   ]
+  },
+  {
+   "from": "panda",
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "panda"
+   ]
+  },
+  {
+   "from": "panda",
+   "biome": "bamboo",
+   "tod": "morning",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "line": 3,
+   "show": [
+    "panda",
+    "cub"
+   ],
+   "place": {
+    "cub": [
+     2.05,
+     -0.95,
+     0.97
+    ]
+   }
+  },
+  {
+   "from": "cow",
+   "biome": "farm",
+   "tod": "sunset",
+   "formation": "teach",
+   "shot": "teach",
+   "zoom": 1.0,
+   "show": [
+    "cow"
+   ]
+  },
+  {
+   "from": "quiz",
+   "biome": "spring_meadow",
+   "tod": "golden",
+   "formation": "arc",
+   "shot": "dolly",
+   "show": [
+    "zebra",
+    "tiger",
+    "panda",
+    "cow"
+   ]
+  },
+  {
+   "from": "goodbye",
+   "biome": "autumn_forest",
+   "tod": "sunset",
+   "formation": "v",
+   "shot": "reveal",
+   "show": [
+    "zebra",
+    "tiger",
+    "panda",
+    "cow"
+   ]
+  }
+ ],
+ "intro_shot": "reveal",
+ "intro": {
+  "energy": 0.6,
+  "wave": 1
+ },
+ "thumb_frame": 3242,
+ "direct": [
+  {
+   "section": "hello",
+   "shots": [
+    "wide",
+    "close:host",
+    "wide",
+    "wide",
+    "vista",
+    "close:host"
+   ],
+   "energy": 0.7,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "PATTERNS!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "swatch",
+     "at": [
+      -2.6,
+      -1.9,
+      3.75
+     ],
+     "delay": 6.464,
+     "dur": 16.92,
+     "spin": 0,
+     "opts": {
+      "kind": "stripes",
+      "s": 0.8
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sock",
+     "at": [
+      -1.7,
+      -2.5,
+      0.0
+     ],
+     "delay": 9.684,
+     "dur": 13.7,
+     "spin": 0,
+     "opts": {
+      "s": 1.0
+     }
+    },
+    {
+     "type": "teach",
+     "name": "swatch",
+     "at": [
+      2.6,
+      -1.9,
+      3.75
+     ],
+     "delay": 10.927,
+     "dur": 12.457,
+     "spin": 0,
+     "opts": {
+      "kind": "spots",
+      "s": 0.8,
+      "base": "#ffd23f",
+      "mark": "#f0443a"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "ball",
+     "at": [
+      1.7,
+      -2.5,
+      0.0
+     ],
+     "delay": 14.027,
+     "dur": 9.357,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "zebra",
+   "shots": [
+    "teach",
+    "teach",
+    "close:zebra",
+    "teach",
+    "exhibit",
+    "exhibit",
+    "close:zebra",
+    "teach",
+    "close:host",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BLACK SKIN!",
+     "color": "#3db8ff",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 22.033
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      3.7
+     ],
+     "delay": 1.873,
+     "dur": 7.388,
+     "spin": 0,
+     "opts": {
+      "text": "STRIPES",
+      "color": "#1479d6",
+      "win": 5.188
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      2.55
+     ],
+     "delay": 2.323,
+     "dur": 4.738,
+     "spin": 0,
+     "opts": {
+      "text": "SPOTS",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      2.6,
+      -1.3,
+      1.7
+     ],
+     "delay": 3.311,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "magnifier",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "delay": 21.573,
+     "dur": 26.185,
+     "spin": 0,
+     "opts": {
+      "fill": "#17171c",
+      "label": "SKIN",
+      "s": 1.05
+     }
+    }
+   ]
+  },
+  {
+   "section": "tiger",
+   "shots": [
+    "teach",
+    "teach",
+    "close:tiger",
+    "teach",
+    "exhibit",
+    "exhibit",
+    "close:tiger",
+    "close:host",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "STRIPY SKIN!",
+     "color": "#ff7a00",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 19.262
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      3.7
+     ],
+     "delay": 2.406,
+     "dur": 7.387,
+     "spin": 0,
+     "opts": {
+      "text": "STRIPES",
+      "color": "#1479d6",
+      "win": 5.187
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      2.55
+     ],
+     "delay": 2.856,
+     "dur": 4.737,
+     "spin": 0,
+     "opts": {
+      "text": "SPOTS",
+      "color": "#e85d00"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      2.6,
+      -1.3,
+      1.7
+     ],
+     "delay": 3.843,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "magnifier",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "delay": 18.832,
+     "dur": 22.526,
+     "spin": 0,
+     "opts": {
+      "fill": "#f0b98a",
+      "stripes": 1,
+      "stripe": "#3a2a24",
+      "label": "SKIN",
+      "s": 1.05
+     }
+    }
+   ]
+  },
+  {
+   "section": "panda",
+   "shots": [
+    "teach",
+    "teach",
+    "teach",
+    "exhibit",
+    "close:cub",
+    "exhibit",
+    "teach",
+    "close:host",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BORN PINK!",
+     "color": "#8e5bd8",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 13.559
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      3.7
+     ],
+     "delay": 5.098,
+     "dur": 8.561,
+     "spin": 0,
+     "opts": {
+      "text": "BLACK + WHITE",
+      "color": "#2b2b33"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      2.55
+     ],
+     "delay": 5.548,
+     "dur": 10.311,
+     "spin": 0,
+     "opts": {
+      "text": "PINK",
+      "color": "#e85d8a",
+      "win": 8.111
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      2.6,
+      -1.3,
+      1.7
+     ],
+     "delay": 9.909,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "table",
+     "at": [
+      2.6,
+      -0.95,
+      0.0
+     ],
+     "delay": 13.559,
+     "dur": 37.935,
+     "spin": 0,
+     "opts": {
+      "w": 2.5,
+      "h": 0.9
+     }
+    },
+    {
+     "type": "teach",
+     "name": "butter",
+     "at": [
+      3.15,
+      -1.0,
+      0.97
+     ],
+     "delay": 21.778,
+     "dur": 29.716,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "arrow",
+     "at": [
+      2.05,
+      -1.1,
+      2.15
+     ],
+     "delay": 18.408,
+     "dur": 4.696,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  },
+  {
+   "section": "cow",
+   "shots": [
+    "teach",
+    "teach",
+    "close:cow",
+    "teach",
+    "teach",
+    "exhibit",
+    "exhibit",
+    "close:host",
+    "teach",
+    "teach"
+   ],
+   "energy": 0.3,
+   "wave": 0,
+   "jump": 0.0,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "HER OWN SPOTS!",
+     "color": "#3cc45a",
+     "at": [
+      0,
+      -0.6,
+      4.35
+     ],
+     "size": 0.62,
+     "delay": 20.765
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      3.7
+     ],
+     "delay": 2.528,
+     "dur": 5.188,
+     "spin": 0,
+     "opts": {
+      "text": "STRIPES",
+      "color": "#1479d6"
+     }
+    },
+    {
+     "type": "teach",
+     "name": "sign",
+     "at": [
+      2.6,
+      -1.3,
+      2.55
+     ],
+     "delay": 2.978,
+     "dur": 6.938,
+     "spin": 0,
+     "opts": {
+      "text": "SPOTS",
+      "color": "#e85d00",
+      "win": 4.738
+     }
+    },
+    {
+     "type": "teach",
+     "name": "dots",
+     "at": [
+      2.6,
+      -1.3,
+      1.7
+     ],
+     "delay": 3.966,
+     "dur": 3.75,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "fingerprint",
+     "at": [
+      2.6,
+      -1.1,
+      2.3
+     ],
+     "delay": 23.235,
+     "dur": 3.826,
+     "spin": 0,
+     "opts": {
+      "s": 1.2
+     }
+    },
+    {
+     "type": "teach",
+     "name": "count",
+     "at": [
+      1.9,
+      -1.2,
+      2.4
+     ],
+     "delay": 28.741,
+     "dur": 15.313,
+     "spin": 0,
+     "opts": {
+      "n": 3,
+      "s": 1.3,
+      "dx": 0.85,
+      "times": [
+       0.0,
+       0.7,
+       1.34
+      ]
+     }
+    }
+   ]
+  },
+  {
+   "section": "quiz",
+   "shots": [
+    "wide",
+    "close:host",
+    "wide",
+    "close:zebra",
+    "wide",
+    "close:tiger",
+    "wide",
+    "close:panda",
+    "wide",
+    "close:cow"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "QUIZ TIME!",
+     "color": "#ff6fb5",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 6.494,
+     "dur": 5.066,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      -1.2999999999999998,
+      0.29999999999999993,
+      2.35
+     ],
+     "delay": 11.81,
+     "dur": 2.139,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 13.799,
+     "dur": 4.675,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      3.3,
+      0.29999999999999993,
+      2.35
+     ],
+     "delay": 18.725,
+     "dur": 2.132,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 20.706,
+     "dur": 6.221,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      -3.0999999999999996,
+      -0.8,
+      2.35
+     ],
+     "delay": 27.177,
+     "dur": 2.153,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    },
+    {
+     "type": "teach",
+     "name": "badge",
+     "at": [
+      0.0,
+      -1.2,
+      3.55
+     ],
+     "delay": 29.179,
+     "dur": 5.064,
+     "spin": 0,
+     "opts": {
+      "text": "?",
+      "color": "#8e5bd8",
+      "s": 1.25
+     }
+    },
+    {
+     "type": "teach",
+     "name": "check",
+     "at": [
+      5.1,
+      -0.8,
+      2.35
+     ],
+     "delay": 34.493,
+     "dur": 2.233,
+     "spin": 0,
+     "opts": {
+      "s": 0.7
+     }
+    }
+   ]
+  },
+  {
+   "section": "goodbye",
+   "shots": [
+    "wide",
+    "close:host",
+    "wide",
+    "low"
+   ],
+   "energy": 0.6,
+   "wave": 1,
+   "jump": 0.2,
+   "group": false,
+   "props": [
+    {
+     "type": "text",
+     "text": "BYE-BYE!",
+     "color": "#ffb627",
+     "at": "top",
+     "size": 0.7,
+     "delay": 1.0
+    },
+    {
+     "type": "teach",
+     "name": "sock",
+     "at": [
+      -1.7,
+      -2.5,
+      0.0
+     ],
+     "delay": 12.479,
+     "dur": 11.507,
+     "spin": 0,
+     "opts": {}
+    },
+    {
+     "type": "teach",
+     "name": "ball",
+     "at": [
+      1.7,
+      -2.5,
+      0.0
+     ],
+     "delay": 13.889,
+     "dur": 10.097,
+     "spin": 0,
+     "opts": {}
+    }
+   ]
+  }
+ ],
+ "song": "zool_ep05",
+ "res": "3840x2160",
+ "samples": 16,
+ "step": 1,
+ "hold_shots": true,
+ "cut_mode": "beat",
+ "follow_singer": false,
+ "punch": false,
+ "timing_file": "zool_ep05_timing.json",
+ "audio": "zool_ep05_song.wav"
+}

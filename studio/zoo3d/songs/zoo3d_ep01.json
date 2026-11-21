@@ -1,0 +1,578 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start right away on the first beat, no long intro, short outro",
+ "lyrics": "[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Lion]\nI'm a lion, look at my mane!\nI live with my family, a pride!\nLions say roar, roar, roar!\nRoar like a lion, everybody, roar!\n\n[Elephant]\nI'm an elephant, big and gray,\nMy trunk can smell and drink all day!\nElephants go toot, toot, toot!\nToot like an elephant, toot, toot, toot!\n\n[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Giraffe]\nI'm a giraffe, so very tall,\nI munch the leaves above it all!\nStretch your neck up to the sky,\nStretch up tall, way up high!\n\n[Zebra]\nI'm a zebra, black and white,\nMy stripes are such a lovely sight!\nGallop, gallop, swish my tail,\nGallop, gallop, down the trail!\n\n[Bridge]\nStomp like an elephant, stomp, stomp, stomp!\nStretch like a giraffe, up so high!\nSwish like a zebra, swish, swish, swish!\nClap for the lion and roar so loud!\n\n[Hippo]\nI'm a hippo, I love to swim,\nSplash all day, come jump right in!\nMud and water keep me cool,\nThe river is my swimming pool!\n\n[Chorus]\nSavanna, savanna, who lives there?\nBig and small, let's meet them all!\nSavanna, savanna, sunny and warm,\nSavanna, savanna, who lives there?\n\n[Outro]\nBye-bye, savanna! Bye-bye, friends!",
+ "duration": 180,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 3,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Safari Animals Song for Kids! Roar and Stomp with Milo",
+  "card": "Safari Animals Song!",
+  "thumb_text": "SAFARI ANIMALS!",
+  "description": "The Safari Animals Song for kids! Sing along with Milo on the sunny savanna and meet a lion, an elephant, a giraffe, a zebra and a hippo.\nKids learn real animal facts and copy the animals: roar, stomp, stretch and swish. Ages 2-6.",
+  "tags": [
+   "animal song for kids",
+   "safari animals song",
+   "savanna animals",
+   "zoo animals for kids",
+   "lion song",
+   "elephant song",
+   "kids songs",
+   "nursery rhymes",
+   "The Animated Zoo",
+   "Milo"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep01_v3",
+  "title": "Safari Animals Song!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.8,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "lion1",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "LION",
+       "size": 0.7
+      },
+      "at": [
+       -2.35,
+       -0.24999999999999997,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 1,
+       "color": "#ff9f1c",
+       "size": 0.7
+      },
+      "at": [
+       -3.5629999999999997,
+       -0.24999999999999997,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       -1.05,
+       -0.30000000000000004,
+       2.6
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "PRIDE",
+      "color": "#ff7a00",
+      "at": [
+       -3.6500000000000004,
+       -0.30000000000000004,
+       2.5
+      ],
+      "size": 0.45,
+      "delay": 9.5,
+      "spin": 0.15
+     }
+    ]
+   },
+   {
+    "section": "elephant1",
+    "shots": [
+     "close:elephant",
+     "wide",
+     "close:elephant",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "ELEPHANT",
+       "size": 0.7
+      },
+      "at": [
+       -4.6,
+       0.9500000000000001,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 2,
+       "color": "#5c7cfa",
+       "size": 0.7
+      },
+      "at": [
+       -6.401,
+       0.9500000000000001,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "splash",
+      "at": [
+       -3.5999999999999996,
+       0.7000000000000001,
+       0.9
+      ],
+      "spin": 0.3,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "TRUNK",
+      "color": "#4263eb",
+      "at": [
+       -5.85,
+       0.8,
+       2.55
+      ],
+      "size": 0.45,
+      "spin": 0.15,
+      "delay": 8.3
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA",
+      "color": "#ff8f00",
+      "at": "top",
+      "size": 1.0
+     }
+    ]
+   },
+   {
+    "section": "giraffe1",
+    "shots": [
+     "giraffe",
+     "wide",
+     "giraffe",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "GIRAFFE",
+       "size": 0.7
+      },
+      "at": [
+       1.1,
+       2.9499999999999997,
+       3.95
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 3,
+       "color": "#f7b500",
+       "size": 0.7
+      },
+      "at": [
+       -0.5539999999999998,
+       2.9499999999999997,
+       3.95
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "leaves",
+      "at": [
+       2.1,
+       2.5999999999999996,
+       2.85
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "text",
+      "text": "TALLEST!",
+      "color": "#f08c00",
+      "at": [
+       -0.2999999999999998,
+       2.8,
+       3.3
+      ],
+      "size": 0.42,
+      "delay": 8.9,
+      "spin": 0.15
+     }
+    ]
+   },
+   {
+    "section": "zebra1",
+    "shots": [
+     "close:zebra",
+     "close:host",
+     "close:zebra",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "ZEBRA",
+       "size": 0.7
+      },
+      "at": [
+       2.6,
+       -0.14999999999999997,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 4,
+       "color": "#3d3d4e",
+       "size": 0.7
+      },
+      "at": [
+       3.96,
+       -0.14999999999999997,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "text",
+      "text": "STRIPES!",
+      "color": "#343a40",
+      "at": [
+       2.6,
+       -0.2,
+       3.0
+      ],
+      "size": 0.5,
+      "spin": 0.15,
+      "delay": 8.3
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "STOMP!",
+      "color": "#4263eb",
+      "at": "left",
+      "size": 0.7,
+      "dur": 4.0,
+      "word": "stomp",
+      "delay": 0
+     },
+     {
+      "type": "text",
+      "text": "STRETCH!",
+      "color": "#f08c00",
+      "at": "right",
+      "size": 0.6,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "stretch"
+     },
+     {
+      "type": "text",
+      "text": "SWISH!",
+      "color": "#343a40",
+      "at": "top",
+      "size": 0.8,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "swish"
+     },
+     {
+      "type": "text",
+      "text": "CLAP!",
+      "color": "#e64980",
+      "at": "front",
+      "size": 0.7,
+      "delay": 0,
+      "dur": 4.0,
+      "word": "clap"
+     }
+    ]
+   },
+   {
+    "section": "hippo1",
+    "shots": [
+     "close:hippo",
+     "pond",
+     "close:hippo",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "opts": {
+       "text": "HIPPO",
+       "size": 0.7
+      },
+      "at": [
+       4.9,
+       1.0499999999999998,
+       3.0
+      ],
+      "spin": 0.12
+     },
+     {
+      "type": "set_prop",
+      "name": "num",
+      "opts": {
+       "n": 5,
+       "color": "#b06ad9",
+       "size": 0.7
+      },
+      "at": [
+       6.26,
+       1.0499999999999998,
+       3.0
+      ],
+      "delay": 0.4,
+      "spin": 0.25
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": [
+       3.7,
+       0.9999999999999999,
+       3.1
+      ],
+      "spin": 0.2,
+      "delay": 8.3
+     },
+     {
+      "type": "set_prop",
+      "name": "splash",
+      "at": [
+       6.1000000000000005,
+       0.8999999999999999,
+       0.8
+      ],
+      "delay": 9.8,
+      "spin": 0.3
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "SAVANNA!",
+      "color": "#ff8f00",
+      "at": "top",
+      "size": 1.1
+     },
+     {
+      "type": "set_prop",
+      "name": "sun",
+      "at": "right",
+      "delay": 0.5
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE BYE!",
+      "color": "#e64980",
+      "at": "top",
+      "size": 0.9,
+      "delay": 0.3
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep01",
+  "res": "1280x720",
+  "step": 2
+ }
+}

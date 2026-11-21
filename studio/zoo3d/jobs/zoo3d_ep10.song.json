@@ -1,0 +1,317 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful friendly male vocal, clear diction, african percussion, marimba, ukulele, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nWho's hiding in the savanna? Peekaboo!\nWho's hiding in the grass? Is it you?\nLook, look, look around,\nA zoo friend will be found!\n\n[Verse 1]\nI see a mane, big and gold,\nA mighty roar, brave and bold!\nPeekaboo, who could it be?\nIt's the lion, smiling at me!\n\n[Chorus]\nWho's hiding in the savanna? Peekaboo!\nWho's hiding in the grass? Is it you?\nLook, look, look around,\nA zoo friend will be found!\n\n[Verse 2]\nI see a neck, so long and tall,\nMunching leaves, the tallest of all!\nPeekaboo, who could it be?\nIt's the giraffe up by the tree!\n\n[Bridge]\nCover your eyes, one, two, three,\nOpen them up, what do you see?\nHide behind your hands so small,\nPeekaboo! We found them all!\n\n[Verse 3]\nI see stripes, black and white,\nAnd a hippo, splashing bright!\nBig gray ears go flap, flap, flap,\nThe elephant joins the clap, clap, clap!\n\n[Chorus]\nWho's hiding in the savanna? Peekaboo!\nWho's hiding in the grass? Is it you?\nLook, look, look around,\nA zoo friend will be found!\n\n[Outro]\nPeekaboo! Bye-bye, friends!",
+ "duration": 170,
+ "bpm": 116,
+ "key": "A Major",
+ "seed": 804,
+ "who_map": {
+  "lion1": "lion",
+  "elephant1": "elephant",
+  "giraffe1": "giraffe",
+  "zebra1": "zebra",
+  "hippo1": "hippo",
+  "bridge1": "all"
+ },
+ "meta": {
+  "title": "Peekaboo Animals! Hide and Seek Song for Kids with Milo",
+  "card": "Peekaboo Animals!",
+  "thumb_text": "PEEKABOO!",
+  "description": "Peekaboo! Milo plays hide and seek in the savanna. Kids guess each hidden friend from clues: a golden mane, a long tall neck, black and white stripes, a splashing hippo and big flapping ears.\nKids cover their eyes, count to three and shout peekaboo. Ages 1-4.",
+  "tags": [
+   "peekaboo song",
+   "hide and seek song",
+   "animal guessing game",
+   "safari animals",
+   "baby songs",
+   "kids songs",
+   "The Animated Zoo",
+   "Milo",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "zoo3d_ep10",
+  "title": "Peekaboo Animals!",
+  "channel": "zoo",
+  "set": "savanna",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "milo",
+    "spot": "center"
+   },
+   {
+    "id": "lion",
+    "char": "animal",
+    "spot": "lion",
+    "opts": {
+     "kind": "lion"
+    },
+    "yaw": 0.22
+   },
+   {
+    "id": "elephant",
+    "char": "animal",
+    "spot": "elephant",
+    "opts": {
+     "kind": "elephant"
+    },
+    "yaw": 0.38
+   },
+   {
+    "id": "giraffe",
+    "char": "animal",
+    "spot": "giraffe",
+    "opts": {
+     "kind": "giraffe"
+    },
+    "yaw": -0.1
+   },
+   {
+    "id": "zebra",
+    "char": "animal",
+    "spot": "zebra",
+    "opts": {
+     "kind": "zebra"
+    },
+    "yaw": -0.22
+   },
+   {
+    "id": "hippo",
+    "char": "animal",
+    "spot": "hippo",
+    "opts": {
+     "kind": "hippo"
+    },
+    "yaw": -0.38
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "wave": 1,
+    "jump": 0.2,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "PEEKABOO!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:lion",
+     "close:host",
+     "close:lion",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "lion,",
+      "opts": {
+       "text": "LION"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "wide",
+     "orbit",
+     "close:host",
+     "low"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.3,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "PEEKABOO!",
+      "color": "#ff7a00",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "giraffe",
+     "wide",
+     "giraffe",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "giraffe",
+      "opts": {
+       "text": "GIRAFFE"
+      }
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "close:host",
+     "orbit"
+    ],
+    "energy": 1.0,
+    "jump": 0.5,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "1, 2, 3...",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.6,
+      "word": "Cover"
+     },
+     {
+      "type": "text",
+      "text": "PEEKABOO!",
+      "color": "#ff7a00",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.8,
+      "word": "Peekaboo!"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:zebra",
+     "close:hippo",
+     "close:elephant",
+     "wide"
+    ],
+    "energy": 0.75,
+    "jump": 0.15,
+    "group": false,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       -3.2,
+       1.6,
+       3.6
+      ],
+      "word": "stripes,",
+      "opts": {
+       "text": "ZEBRA"
+      }
+     },
+     {
+      "type": "set_prop",
+      "name": "sign",
+      "at": [
+       3.2,
+       1.6,
+       3.6
+      ],
+      "word": "hippo,",
+      "opts": {
+       "text": "HIPPO"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "orbit",
+     "hero",
+     "wide",
+     "close:host"
+    ],
+    "energy": 1.0,
+    "wave": 1,
+    "jump": 0.6,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "PEEKABOO!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "close:host",
+     "wide"
+    ],
+    "energy": 0.7,
+    "wave": 1,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ffb627",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "zoo3d_ep10",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

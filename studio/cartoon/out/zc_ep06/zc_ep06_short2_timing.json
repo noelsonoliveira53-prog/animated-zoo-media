@@ -1,0 +1,2059 @@
+{
+ "id": "zc_ep06_short2",
+ "total": 87.86395833333339,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5
+ ],
+ "plan": {
+  "length": 87.9,
+  "shots": 24,
+  "visual_changes": 116,
+  "mean_gap": 0.76,
+  "longest_gap": 3.31,
+  "longest_gap_at": 8.2,
+  "over_6s": [],
+  "places": [
+   "blossom"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 8,
+  "longest_without_question": 26.9,
+  "first_words_at": 0.42,
+  "shot_mean": 3.66,
+  "fails": [],
+  "words_placed": "182/182",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 35.3,
+   "onset_err_max_ms": 90.0,
+   "suspect_words": [],
+   "cuts": 23,
+   "cuts_on_the_half_beat": 23,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the flower tree hook: flowers and bugs"
+  ],
+  [
+   0.05,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   2.54,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new shot",
+   "the flower tree the flower tree"
+  ],
+  [
+   3.54,
+   "action",
+   "mango walks"
+  ],
+  [
+   6.26,
+   "word",
+   "NO FRUIT!"
+  ],
+  [
+   7.5,
+   "new shot",
+   "the flower tree what now"
+  ],
+  [
+   7.55,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   8.25,
+   "word",
+   "?"
+  ],
+  [
+   11.56,
+   "new place",
+   "the picture board board: other things"
+  ],
+  [
+   12.07,
+   "picture",
+   "x"
+  ],
+  [
+   14.37,
+   "picture",
+   "fl"
+  ],
+  [
+   14.37,
+   "word",
+   "OTHER FOOD"
+  ],
+  [
+   14.6,
+   "picture",
+   "lv"
+  ],
+  [
+   15.62,
+   "new place",
+   "the flower tree a flower"
+  ],
+  [
+   16.03,
+   "action",
+   "the fruit swings"
+  ],
+  [
+   16.03,
+   "word",
+   "FLOWERS"
+  ],
+  [
+   17.52,
+   "action",
+   "Mango lifts her arm"
+  ],
+  [
+   19.06,
+   "new shot",
+   "the flower tree nibble"
+  ],
+  [
+   19.21,
+   "action",
+   "Mango puts it in her mouth"
+  ],
+  [
+   19.4,
+   "action",
+   "Mango munches"
+  ],
+  [
+   19.4,
+   "word",
+   "NIBBLE!"
+  ],
+  [
+   19.76,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   21.19,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the flower tree question 2"
+  ],
+  [
+   25.91,
+   "sign",
+   "YES"
+  ],
+  [
+   26.26,
+   "sign",
+   "NO"
+  ],
+  [
+   27.45,
+   "thinking dot",
+   "1"
+  ],
+  [
+   28.12,
+   "thinking dot",
+   "2"
+  ],
+  [
+   28.79,
+   "thinking dot",
+   "3"
+  ],
+  [
+   29.28,
+   "answer",
+   "YES"
+  ],
+  [
+   29.33,
+   "action",
+   "mango hops"
+  ],
+  [
+   30.62,
+   "new shot",
+   "the flower tree a leaf"
+  ],
+  [
+   30.71,
+   "word",
+   "YES!"
+  ],
+  [
+   31.8,
+   "action",
+   "Mango puts it in her mouth"
+  ],
+  [
+   32.27,
+   "action",
+   "Mango munches"
+  ],
+  [
+   32.27,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   33.75,
+   "new place",
+   "the picture board board: young leaves"
+  ],
+  [
+   34.99,
+   "action",
+   "the leaves sway"
+  ],
+  [
+   34.99,
+   "word",
+   "NEW"
+  ],
+  [
+   35.45,
+   "word",
+   "SOFT"
+  ],
+  [
+   36.56,
+   "new place",
+   "the flower tree chomp"
+  ],
+  [
+   36.91,
+   "action",
+   "milo hops"
+  ],
+  [
+   36.91,
+   "word",
+   "CHOMP!"
+  ],
+  [
+   40.0,
+   "new place",
+   "the picture board board: seeds and bark"
+  ],
+  [
+   41.42,
+   "picture",
+   "s0"
+  ],
+  [
+   41.42,
+   "picture",
+   "s1"
+  ],
+  [
+   41.42,
+   "picture",
+   "s2"
+  ],
+  [
+   41.42,
+   "word",
+   "SEEDS"
+  ],
+  [
+   43.07,
+   "picture",
+   "tr"
+  ],
+  [
+   43.07,
+   "word",
+   "BARK"
+  ],
+  [
+   44.06,
+   "new shot",
+   "the picture board board: bark"
+  ],
+  [
+   44.82,
+   "action",
+   "a piece of bark comes off"
+  ],
+  [
+   44.82,
+   "picture",
+   "ar"
+  ],
+  [
+   44.82,
+   "word",
+   "TREE SKIN"
+  ],
+  [
+   46.56,
+   "new place",
+   "the flower tree a bug"
+  ],
+  [
+   46.66,
+   "action",
+   "a bug walks along the branch"
+  ],
+  [
+   48.61,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   48.61,
+   "picture",
+   "ar"
+  ],
+  [
+   49.08,
+   "word",
+   "A BUG!"
+  ],
+  [
+   50.0,
+   "new place",
+   "the picture board (blue) board: insects"
+  ],
+  [
+   50.1,
+   "action",
+   "the bug wiggles"
+  ],
+  [
+   51.84,
+   "word",
+   "INSECTS"
+  ],
+  [
+   53.12,
+   "new place",
+   "the flower tree would you"
+  ],
+  [
+   54.07,
+   "word",
+   "A BUG?!"
+  ],
+  [
+   54.8,
+   "action",
+   "milo hops"
+  ],
+  [
+   56.25,
+   "new place",
+   "the picture board (pink) board: menu 1"
+  ],
+  [
+   57.32,
+   "word",
+   "MENU"
+  ],
+  [
+   58.76,
+   "picture",
+   "j1"
+  ],
+  [
+   59.35,
+   "picture",
+   "j2"
+  ],
+  [
+   60.62,
+   "new shot",
+   "the picture board (pink) board: menu 2"
+  ],
+  [
+   60.72,
+   "picture",
+   "j3"
+  ],
+  [
+   61.35,
+   "picture",
+   "j4"
+  ],
+  [
+   61.89,
+   "picture",
+   "j5"
+  ],
+  [
+   62.68,
+   "word",
+   "6 FOODS"
+  ],
+  [
+   64.06,
+   "new place",
+   "the flower tree big menu"
+  ],
+  [
+   64.11,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   64.44,
+   "action",
+   "mango hops"
+  ],
+  [
+   64.44,
+   "word",
+   "BIG MENU!"
+  ],
+  [
+   65.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   66.88,
+   "new shot",
+   "the flower tree not alone"
+  ],
+  [
+   69.11,
+   "action",
+   "f4 hops"
+  ],
+  [
+   69.11,
+   "action",
+   "f5 hops"
+  ],
+  [
+   69.11,
+   "word",
+   "FRIENDS!"
+  ],
+  [
+   70.0,
+   "new shot",
+   "the flower tree a big group"
+  ],
+  [
+   71.81,
+   "action",
+   "f1 hops"
+  ],
+  [
+   71.81,
+   "action",
+   "f3 hops"
+  ],
+  [
+   71.81,
+   "action",
+   "mango hops"
+  ],
+  [
+   71.81,
+   "word",
+   "BIG GROUP"
+  ],
+  [
+   72.81,
+   "new shot",
+   "the flower tree smaller groups"
+  ],
+  [
+   75.17,
+   "action",
+   "f1 walks"
+  ],
+  [
+   75.17,
+   "action",
+   "f2 walks"
+  ],
+  [
+   75.17,
+   "action",
+   "f3 walks"
+  ],
+  [
+   75.17,
+   "action",
+   "f4 walks"
+  ],
+  [
+   75.17,
+   "action",
+   "f5 walks"
+  ],
+  [
+   75.17,
+   "action",
+   "mango walks"
+  ],
+  [
+   75.77,
+   "word",
+   "SMALLER GROUPS"
+  ],
+  [
+   77.19,
+   "new shot",
+   "the flower tree three and three"
+  ],
+  [
+   77.8,
+   "action",
+   "f1 hops"
+  ],
+  [
+   77.8,
+   "action",
+   "f2 hops"
+  ],
+  [
+   77.8,
+   "action",
+   "f3 hops"
+  ],
+  [
+   77.8,
+   "word",
+   "3"
+  ],
+  [
+   79.14,
+   "action",
+   "f4 hops"
+  ],
+  [
+   79.14,
+   "action",
+   "f5 hops"
+  ],
+  [
+   79.14,
+   "action",
+   "mango hops"
+  ],
+  [
+   79.14,
+   "word",
+   "3"
+  ],
+  [
+   80.0,
+   "new shot",
+   "the flower tree count the group"
+  ],
+  [
+   82.42,
+   "action",
+   "mango hops"
+  ],
+  [
+   82.42,
+   "word",
+   "1"
+  ],
+  [
+   82.72,
+   "action",
+   "f4 hops"
+  ],
+  [
+   82.72,
+   "word",
+   "2"
+  ],
+  [
+   83.05,
+   "action",
+   "f5 hops"
+  ],
+  [
+   83.05,
+   "word",
+   "3"
+  ],
+  [
+   84.06,
+   "new shot",
+   "the flower tree your lunch"
+  ],
+  [
+   84.22,
+   "action",
+   "milo hops"
+  ],
+  [
+   84.79,
+   "word",
+   "WHO?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "blossom",
+   "say": "Do monkeys eat flowers? And bugs?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.689875,
+   "words": [
+    [
+     "Do",
+     0.01,
+     0.23
+    ],
+    [
+     "monkeys",
+     0.23,
+     0.72
+    ],
+    [
+     "eat",
+     0.72,
+     0.93
+    ],
+    [
+     "flowers?",
+     0.93,
+     1.69
+    ],
+    [
+     "And",
+     1.91,
+     2.12
+    ],
+    [
+     "bugs?",
+     2.12,
+     2.69
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: flowers and bugs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Lunchtime! But look. This tree has no fruit at all.",
+   "t0": 3.4375,
+   "t1": 7.5,
+   "v0": 3.6498749999999998,
+   "dur": 3.643375,
+   "words": [
+    [
+     "Lunchtime!",
+     0.01,
+     0.9
+    ],
+    [
+     "But",
+     0.9,
+     1.16
+    ],
+    [
+     "look.",
+     1.16,
+     1.53
+    ],
+    [
+     "This",
+     1.85,
+     2.12
+    ],
+    [
+     "tree",
+     2.12,
+     2.4
+    ],
+    [
+     "has",
+     2.4,
+     2.61
+    ],
+    [
+     "no",
+     2.61,
+     2.82
+    ],
+    [
+     "fruit",
+     2.82,
+     3.14
+    ],
+    [
+     "at",
+     3.14,
+     3.27
+    ],
+    [
+     "all.",
+     3.27,
+     3.64
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the flower tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Hmm. What can Mango eat now?",
+   "t0": 7.5,
+   "t1": 11.5625,
+   "v0": 7.83325,
+   "dur": 1.973875,
+   "words": [
+    [
+     "Hmm.",
+     0.01,
+     0.42
+    ],
+    [
+     "What",
+     0.42,
+     0.72
+    ],
+    [
+     "can",
+     0.72,
+     0.88
+    ],
+    [
+     "Mango",
+     0.88,
+     1.31
+    ],
+    [
+     "eat",
+     1.31,
+     1.54
+    ],
+    [
+     "now?",
+     1.54,
+     1.97
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "what now",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "When there is no fruit, spider monkeys eat other things.",
+   "t0": 11.5625,
+   "t1": 15.625,
+   "v0": 11.647124999999999,
+   "dur": 3.571625,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "there",
+     0.14,
+     0.28
+    ],
+    [
+     "is",
+     0.28,
+     0.42
+    ],
+    [
+     "no",
+     0.42,
+     0.62
+    ],
+    [
+     "fruit,",
+     0.62,
+     1.19
+    ],
+    [
+     "spider",
+     1.39,
+     1.92
+    ],
+    [
+     "monkeys",
+     1.92,
+     2.46
+    ],
+    [
+     "eat",
+     2.46,
+     2.72
+    ],
+    [
+     "other",
+     2.72,
+     2.95
+    ],
+    [
+     "things.",
+     2.95,
+     3.57
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: other things",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Look, flowers! Mango picks a pink flower.",
+   "t0": 15.625,
+   "t1": 19.0625,
+   "v0": 15.75875,
+   "dur": 3.0889583333333333,
+   "words": [
+    [
+     "Look,",
+     0.0,
+     0.27
+    ],
+    [
+     "flowers!",
+     0.27,
+     1.05
+    ],
+    [
+     "Mango",
+     1.31,
+     1.76
+    ],
+    [
+     "picks",
+     1.76,
+     2.08
+    ],
+    [
+     "a",
+     2.08,
+     2.12
+    ],
+    [
+     "pink",
+     2.12,
+     2.48
+    ],
+    [
+     "flower.",
+     2.48,
+     3.089
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a flower",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Nibble, nibble, nibble. Flowers are food, too!",
+   "t0": 19.0625,
+   "t1": 23.125,
+   "v0": 19.387708333333336,
+   "dur": 3.3679166666666664,
+   "words": [
+    [
+     "Nibble,",
+     0.01,
+     0.51
+    ],
+    [
+     "nibble,",
+     0.51,
+     0.94
+    ],
+    [
+     "nibble.",
+     0.94,
+     1.46
+    ],
+    [
+     "Flowers",
+     1.8,
+     2.38
+    ],
+    [
+     "are",
+     2.38,
+     2.44
+    ],
+    [
+     "food,",
+     2.44,
+     2.9
+    ],
+    [
+     "too!",
+     2.9,
+     3.368
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "nibble",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Does a spider monkey eat leaves, too? Yes, or no?",
+   "t0": 23.125,
+   "t1": 30.625,
+   "v0": 23.295625000000005,
+   "dur": 3.665791666666667,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.18
+    ],
+    [
+     "a",
+     0.18,
+     0.22
+    ],
+    [
+     "spider",
+     0.22,
+     0.7
+    ],
+    [
+     "monkey",
+     0.7,
+     1.2
+    ],
+    [
+     "eat",
+     1.2,
+     1.37
+    ],
+    [
+     "leaves,",
+     1.37,
+     1.8
+    ],
+    [
+     "too?",
+     1.8,
+     2.23
+    ],
+    [
+     "Yes,",
+     2.61,
+     3.08
+    ],
+    [
+     "or",
+     3.08,
+     3.26
+    ],
+    [
+     "no?",
+     3.26,
+     3.666
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Yes! Mango munches a soft, young leaf.",
+   "t0": 30.625,
+   "t1": 33.75,
+   "v0": 30.701416666666674,
+   "dur": 2.8093333333333335,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.53
+    ],
+    [
+     "Mango",
+     0.68,
+     1.1
+    ],
+    [
+     "munches",
+     1.1,
+     1.53
+    ],
+    [
+     "a",
+     1.53,
+     1.57
+    ],
+    [
+     "soft,",
+     1.57,
+     2.18
+    ],
+    [
+     "young",
+     2.18,
+     2.41
+    ],
+    [
+     "leaf.",
+     2.41,
+     2.809
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a leaf",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Young leaves are the new, soft ones.",
+   "t0": 33.75,
+   "t1": 36.5625,
+   "v0": 34.05075000000001,
+   "dur": 2.3060833333333335,
+   "words": [
+    [
+     "Young",
+     0.01,
+     0.36
+    ],
+    [
+     "leaves",
+     0.36,
+     0.75
+    ],
+    [
+     "are",
+     0.75,
+     0.84
+    ],
+    [
+     "the",
+     0.84,
+     0.94
+    ],
+    [
+     "new,",
+     0.94,
+     1.4
+    ],
+    [
+     "soft",
+     1.4,
+     1.89
+    ],
+    [
+     "ones.",
+     1.89,
+     2.306
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: young leaves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Chomp, chomp! Can you chomp like Mango?",
+   "t0": 36.5625,
+   "t1": 40.0,
+   "v0": 36.89683333333334,
+   "dur": 2.704625,
+   "words": [
+    [
+     "Chomp,",
+     0.01,
+     0.44
+    ],
+    [
+     "chomp!",
+     0.44,
+     0.99
+    ],
+    [
+     "Can",
+     1.25,
+     1.39
+    ],
+    [
+     "you",
+     1.39,
+     1.49
+    ],
+    [
+     "chomp",
+     1.49,
+     1.86
+    ],
+    [
+     "like",
+     1.86,
+     2.05
+    ],
+    [
+     "Mango?",
+     2.05,
+     2.7
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "chomp",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Spider monkeys eat seeds, too. And even bark!",
+   "t0": 40.0,
+   "t1": 44.0625,
+   "v0": 40.14145833333334,
+   "dur": 3.4654166666666666,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.52
+    ],
+    [
+     "monkeys",
+     0.52,
+     1.03
+    ],
+    [
+     "eat",
+     1.03,
+     1.28
+    ],
+    [
+     "seeds,",
+     1.28,
+     1.78
+    ],
+    [
+     "too.",
+     1.78,
+     2.21
+    ],
+    [
+     "And",
+     2.5,
+     2.64
+    ],
+    [
+     "even",
+     2.64,
+     2.93
+    ],
+    [
+     "bark!",
+     2.93,
+     3.46
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: seeds and bark",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Bark is the skin of a tree.",
+   "t0": 44.0625,
+   "t1": 46.5625,
+   "v0": 44.14687500000001,
+   "dur": 1.919875,
+   "words": [
+    [
+     "Bark",
+     0.0,
+     0.43
+    ],
+    [
+     "is",
+     0.43,
+     0.59
+    ],
+    [
+     "the",
+     0.59,
+     0.67
+    ],
+    [
+     "skin",
+     0.67,
+     1.15
+    ],
+    [
+     "of",
+     1.15,
+     1.28
+    ],
+    [
+     "a",
+     1.28,
+     1.36
+    ],
+    [
+     "tree.",
+     1.36,
+     1.92
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: bark",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "And what is that, on the branch? A tiny bug!",
+   "t0": 46.5625,
+   "t1": 50.0,
+   "v0": 46.606750000000005,
+   "dur": 2.9752916666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.22
+    ],
+    [
+     "what",
+     0.22,
+     0.39
+    ],
+    [
+     "is",
+     0.39,
+     0.57
+    ],
+    [
+     "that,",
+     0.57,
+     0.9
+    ],
+    [
+     "on",
+     0.9,
+     1.04
+    ],
+    [
+     "the",
+     1.04,
+     1.11
+    ],
+    [
+     "branch?",
+     1.11,
+     1.68
+    ],
+    [
+     "A",
+     1.93,
+     2.0
+    ],
+    [
+     "tiny",
+     2.0,
+     2.47
+    ],
+    [
+     "bug!",
+     2.47,
+     2.97
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "a bug",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Spider monkeys eat small insects, too.",
+   "t0": 50.0,
+   "t1": 53.125,
+   "v0": 50.12204166666667,
+   "dur": 2.799875,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.47
+    ],
+    [
+     "monkeys",
+     0.47,
+     1.08
+    ],
+    [
+     "eat",
+     1.08,
+     1.35
+    ],
+    [
+     "small",
+     1.35,
+     1.72
+    ],
+    [
+     "insects,",
+     1.72,
+     2.33
+    ],
+    [
+     "too.",
+     2.33,
+     2.8
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: insects",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Would you eat a bug? Mango would!",
+   "t0": 53.125,
+   "t1": 56.25,
+   "v0": 53.46191666666667,
+   "dur": 2.2983333333333333,
+   "words": [
+    [
+     "Would",
+     0.01,
+     0.21
+    ],
+    [
+     "you",
+     0.21,
+     0.31
+    ],
+    [
+     "eat",
+     0.31,
+     0.56
+    ],
+    [
+     "a",
+     0.56,
+     0.61
+    ],
+    [
+     "bug?",
+     0.61,
+     1.06
+    ],
+    [
+     "Mango",
+     1.34,
+     1.82
+    ],
+    [
+     "would!",
+     1.82,
+     2.298
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "would you",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Let's fill Mango's menu. Fruit, leaves, flowers,",
+   "t0": 56.25,
+   "t1": 60.625,
+   "v0": 56.30025,
+   "dur": 3.8330416666666665,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.33
+    ],
+    [
+     "fill",
+     0.33,
+     0.49
+    ],
+    [
+     "Mango's",
+     0.49,
+     1.02
+    ],
+    [
+     "menu.",
+     1.02,
+     1.53
+    ],
+    [
+     "Fruit,",
+     1.87,
+     2.46
+    ],
+    [
+     "leaves,",
+     2.46,
+     3.05
+    ],
+    [
+     "flowers,",
+     3.05,
+     3.83
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: menu 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "seeds, bark, and bugs. Six foods!",
+   "t0": 60.625,
+   "t1": 64.0625,
+   "v0": 60.673291666666664,
+   "dur": 3.03625,
+   "words": [
+    [
+     "seeds,",
+     0.05,
+     0.68
+    ],
+    [
+     "bark,",
+     0.68,
+     1.08
+    ],
+    [
+     "and",
+     1.08,
+     1.22
+    ],
+    [
+     "bugs.",
+     1.22,
+     1.71
+    ],
+    [
+     "Six",
+     2.01,
+     2.42
+    ],
+    [
+     "foods!",
+     2.42,
+     3.036
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: menu 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "What a big menu for one little monkey!",
+   "t0": 64.0625,
+   "t1": 66.875,
+   "v0": 64.24954166666667,
+   "dur": 2.2594166666666666,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.14
+    ],
+    [
+     "a",
+     0.14,
+     0.19
+    ],
+    [
+     "big",
+     0.19,
+     0.57
+    ],
+    [
+     "menu",
+     0.57,
+     1.08
+    ],
+    [
+     "for",
+     1.08,
+     1.31
+    ],
+    [
+     "one",
+     1.31,
+     1.48
+    ],
+    [
+     "little",
+     1.48,
+     1.65
+    ],
+    [
+     "monkey!",
+     1.65,
+     2.259
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "big menu",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "And Mango does not look for food alone.",
+   "t0": 66.875,
+   "t1": 70.0,
+   "v0": 67.04895833333335,
+   "dur": 2.60525,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.16
+    ],
+    [
+     "Mango",
+     0.16,
+     0.78
+    ],
+    [
+     "does",
+     0.95,
+     1.17
+    ],
+    [
+     "not",
+     1.17,
+     1.4
+    ],
+    [
+     "look",
+     1.4,
+     1.61
+    ],
+    [
+     "for",
+     1.61,
+     1.74
+    ],
+    [
+     "food",
+     1.74,
+     2.06
+    ],
+    [
+     "alone.",
+     2.06,
+     2.6
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "not alone",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Spider monkeys live in a big group.",
+   "t0": 70.0,
+   "t1": 72.8125,
+   "v0": 70.19420833333335,
+   "dur": 2.366791666666667,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.55
+    ],
+    [
+     "monkeys",
+     0.55,
+     1.15
+    ],
+    [
+     "live",
+     1.15,
+     1.49
+    ],
+    [
+     "in",
+     1.49,
+     1.57
+    ],
+    [
+     "a",
+     1.57,
+     1.62
+    ],
+    [
+     "big",
+     1.62,
+     1.9
+    ],
+    [
+     "group.",
+     1.9,
+     2.367
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a big group",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "To find food, the big group splits into smaller groups.",
+   "t0": 72.8125,
+   "t1": 77.1875,
+   "v0": 73.10100000000003,
+   "dur": 3.761416666666667,
+   "words": [
+    [
+     "To",
+     0.0,
+     0.1
+    ],
+    [
+     "find",
+     0.1,
+     0.56
+    ],
+    [
+     "food,",
+     0.56,
+     1.11
+    ],
+    [
+     "the",
+     1.11,
+     1.51
+    ],
+    [
+     "big",
+     1.51,
+     1.82
+    ],
+    [
+     "group",
+     1.82,
+     2.07
+    ],
+    [
+     "splits",
+     2.07,
+     2.51
+    ],
+    [
+     "into",
+     2.51,
+     2.67
+    ],
+    [
+     "smaller",
+     2.67,
+     3.17
+    ],
+    [
+     "groups.",
+     3.17,
+     3.76
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "smaller groups",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Three here, and three over there.",
+   "t0": 77.1875,
+   "t1": 80.0,
+   "v0": 77.4024166666667,
+   "dur": 2.1557916666666666,
+   "words": [
+    [
+     "Three",
+     0.01,
+     0.4
+    ],
+    [
+     "here,",
+     0.4,
+     0.82
+    ],
+    [
+     "and",
+     0.96,
+     1.16
+    ],
+    [
+     "three",
+     1.16,
+     1.52
+    ],
+    [
+     "over",
+     1.52,
+     1.74
+    ],
+    [
+     "there.",
+     1.74,
+     2.156
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "three and three",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Count Mango's little group with me. One, two, three!",
+   "t0": 80.0,
+   "t1": 84.0625,
+   "v0": 80.09820833333337,
+   "dur": 3.534125,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.36
+    ],
+    [
+     "Mango's",
+     0.36,
+     0.97
+    ],
+    [
+     "little",
+     0.97,
+     1.17
+    ],
+    [
+     "group",
+     1.17,
+     1.46
+    ],
+    [
+     "with",
+     1.46,
+     1.61
+    ],
+    [
+     "me.",
+     1.61,
+     1.93
+    ],
+    [
+     "One,",
+     2.32,
+     2.62
+    ],
+    [
+     "two,",
+     2.62,
+     2.95
+    ],
+    [
+     "three!",
+     2.95,
+     3.53
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the group",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Who do you eat lunch with?",
+   "t0": 84.0625,
+   "t1": 87.46395833333338,
+   "v0": 84.17233333333338,
+   "dur": 1.371625,
+   "words": [
+    [
+     "Who",
+     0.05,
+     0.17
+    ],
+    [
+     "do",
+     0.17,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.38
+    ],
+    [
+     "eat",
+     0.38,
+     0.62
+    ],
+    [
+     "lunch",
+     0.62,
+     0.98
+    ],
+    [
+     "with?",
+     0.98,
+     1.37
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "your lunch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

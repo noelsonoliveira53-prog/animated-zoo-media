@@ -1,0 +1,761 @@
+{
+ "id": "zool_ep09",
+ "thumb_at": [
+  "giraffe",
+  6,
+  0.97
+ ],
+ "seed": 37,
+ "title": "Animal Champions for Kids! Tallest, Biggest, Loudest",
+ "card": "Animal Champions!",
+ "thumb_text": "WHO WINS?",
+ "description": "Who is the tallest animal? Who is the biggest? Who has the loudest roar? Pick your answer, then meet three animal champions with Milo the bluebird: the giraffe can peek into an upstairs window, the elephant is as heavy as four cars and cools down with its big ears, and a lion's roar can be heard from up to five miles away.\nAn interactive animal lesson for kids ages 2-6, with questions to answer, counting, actions to copy, quick checks and a quiz at the end.",
+ "tags": [
+  "biggest animals for kids",
+  "tallest animal",
+  "animal records for kids",
+  "animals for kids",
+  "learn animals",
+  "animal facts for kids",
+  "preschool learning",
+  "animals for toddlers",
+  "The Animated Zoo",
+  "Milo"
+ ],
+ "cast": [
+  "giraffe",
+  "elephant",
+  "lion"
+ ],
+ "facts": [
+  "The giraffe is the tallest living land animal, 14 to 19 feet tall; a newborn is about 6 feet tall (National Geographic Kids, 'Giraffe').",
+  "To drink water, a giraffe must spread its long legs outward and lower its head (National Geographic Kids, 'Giraffe').",
+  "The African elephant is the largest living land animal; a male can weigh up to 7.5 tons and a newborn 110 to 264 pounds (San Diego Zoo, 'Elephant').",
+  "Elephant ears work like a radiator: flapping them on a hot day helps the elephant cool down (San Diego Zoo, 'Elephant').",
+  "A lion's roar can be heard up to 5 miles (8 km) away (National Geographic); San Diego Zoo's fact sheet gives 5 km (3 miles) under certain conditions. Lions roar to advertise their territory, more often at night and dawn; cubs have spots that fade with age.",
+  "Many male lions have a mane; lions live in prides and may rest up to 20-21 hours a day (San Diego Zoo Wildlife Alliance Library fact sheet, 'Lion')."
+ ],
+ "segments": [
+  {
+   "name": "hello",
+   "kind": "intro",
+   "biome": "desert",
+   "tod": "morning",
+   "word": "CHAMPIONS!",
+   "energy": 0.7,
+   "exhibits": [
+    {
+     "prop": "count",
+     "at": [
+      -0.75,
+      -1.7,
+      3.55
+     ],
+     "on": [
+      3,
+      "one"
+     ],
+     "times": [
+      [
+       3,
+       "one"
+      ],
+      [
+       3,
+       "two"
+      ],
+      [
+       3,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    }
+   ],
+   "lines": [
+    "Hello, friends! I am Milo the bluebird.",
+    "Today is Animal Champions day!",
+    "We will find the tallest, the biggest, and the loudest animals.",
+    "Three champions are here. Count them with me. One, two, three!",
+    "Are you ready to meet the champions? Let's go!"
+   ]
+  },
+  {
+   "name": "giraffe",
+   "biome": "savanna",
+   "tod": "noon",
+   "word": "TALLEST!",
+   "word_on": [
+    2,
+    "giraffe"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "giraffe"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ELEPHANT",
+    "b": "GIRAFFE",
+    "right": "b",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "YES",
+     "b": "NO",
+     "right": "a",
+     "ask": [
+      14
+     ],
+     "answer": [
+      15
+     ],
+     "hold": 2.0,
+     "colors": {
+      "a": "#22a84a",
+      "b": "#e23b34"
+     }
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "ruler",
+     "at": [
+      0.85,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      3,
+      "tallest"
+     ],
+     "opts": {
+      "mark": 3.75
+     }
+    },
+    {
+     "prop": "house2",
+     "at": [
+      2.85,
+      -0.2,
+      0.0
+     ],
+     "on": [
+      5,
+      "look"
+     ],
+     "off": [
+      9
+     ],
+     "opts": {
+      "h": 3.3
+     }
+    },
+    {
+     "prop": "count",
+     "at": [
+      1.45,
+      -1.3,
+      3.75
+     ],
+     "on": [
+      6,
+      "one"
+     ],
+     "off": [
+      7
+     ],
+     "times": [
+      [
+       6,
+       "one"
+      ],
+      [
+       6,
+       "two"
+      ],
+      [
+       6,
+       "three"
+      ]
+     ],
+     "opts": {
+      "n": 3,
+      "dx": 0.75,
+      "s": 1.0
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      9,
+      "end"
+     ],
+     "off": [
+      10
+     ]
+    },
+    {
+     "prop": "pool",
+     "at": [
+      1.7,
+      -1.3,
+      0.0
+     ],
+     "on": [
+      10
+     ],
+     "opts": {
+      "s": 0.6
+     }
+    },
+    {
+     "prop": "arrow",
+     "at": [
+      1.7,
+      -1.3,
+      1.3
+     ],
+     "on": [
+      10,
+      "down"
+     ],
+     "off": [
+      11
+     ],
+     "opts": {
+      "color": "#3db8ff"
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who is the tallest animal in the whole world?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the elephant? Or is it the giraffe?",
+     "pause": 3.2
+    },
+    [
+     "It is the giraffe!",
+     "close:giraffe"
+    ],
+    "Here is the fun fact. The giraffe is the tallest animal on land.",
+    "Tall, tall, tall! Taller than a horse. Taller than an elephant. Taller than every animal on land.",
+    [
+     "How tall? Look! A giraffe can peek into an upstairs window.",
+     "exhibit"
+    ],
+    "A giraffe is as tall as three grown-ups. One, two, three!",
+    "Its long neck helps it reach the leaves at the very top of the tree.",
+    [
+     "Even a baby giraffe is tall. On the day it is born, it is as tall as a grown-up!",
+     "close:giraffe"
+    ],
+    {
+     "t": "But how does such a tall animal drink water? Hmm.",
+     "pause": 2.4
+    },
+    [
+     "It spreads its long legs wide, and bends its head way, way down. Slurp!",
+     "teach"
+    ],
+    [
+     "Say it with me. The giraffe is the tallest!",
+     "close:host"
+    ],
+    "Can you stretch up tall like a giraffe? Reach, reach, reach!",
+    "Now bend down low to drink, like a giraffe. Down, down, down. Slurp!",
+    {
+     "t": "Quick check! Can a giraffe peek into an upstairs window? Yes, or no?",
+     "pause": 3.2
+    },
+    "Yes! Because the giraffe is the tallest of all!",
+    "Give yourself a big clap!"
+   ],
+   "short": {
+    "id": "zs90_giraffe_tallest",
+    "title": "Who Is the Tallest Animal? Giraffe Facts for Kids",
+    "l1": "WHO IS THE",
+    "l2": "TALLEST?",
+    "thumb_text": "UPSTAIRS WINDOW!",
+    "thumb_line": [
+     5,
+     0.9
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "elephant",
+   "biome": "jungle",
+   "tod": "morning",
+   "word": "BIGGEST!",
+   "word_on": [
+    2,
+    "elephant"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "elephant"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "ELEPHANT",
+    "b": "HIPPO",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "2",
+     "b": "4",
+     "right": "b",
+     "ask": [
+      16
+     ],
+     "answer": [
+      17
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "cars",
+     "at": [
+      2.75,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      4,
+      "cars"
+     ],
+     "off": [
+      6
+     ],
+     "times": [
+      [
+       5,
+       "one"
+      ],
+      [
+       5,
+       "two"
+      ],
+      [
+       5,
+       "three"
+      ],
+      [
+       5,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      8,
+      "end"
+     ],
+     "off": [
+      9
+     ]
+    },
+    {
+     "prop": "sun",
+     "at": [
+      2.3,
+      -1.1,
+      3.6
+     ],
+     "on": [
+      8
+     ],
+     "off": [
+      10
+     ],
+     "opts": {
+      "s": 1.1
+     }
+    },
+    {
+     "prop": "cars",
+     "at": [
+      2.75,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      17
+     ],
+     "times": [
+      [
+       17,
+       "one"
+      ],
+      [
+       17,
+       "two"
+      ],
+      [
+       17,
+       "three"
+      ],
+      [
+       17,
+       "four"
+      ]
+     ],
+     "opts": {
+      "n": 4
+     }
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who is the biggest animal that walks on land?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the elephant? Or is it the hippo?",
+     "pause": 3.2
+    },
+    [
+     "It is the elephant!",
+     "close:elephant"
+    ],
+    "Here is the fun fact. The elephant is the biggest animal on land.",
+    [
+     "How heavy is an elephant? As heavy as four cars! Count them with me.",
+     "exhibit"
+    ],
+    [
+     "One, two, three, four!",
+     "exhibit"
+    ],
+    [
+     "Big body, big ears, and a big, long trunk!",
+     "close:elephant"
+    ],
+    "The trunk works like a hand and like a hose. It can pick up a tiny peanut, or spray a big shower!",
+    {
+     "t": "And why does an elephant have such big ears?",
+     "pause": 2.4
+    },
+    [
+     "The big ears work like fans! Flap, flap, flap. They help the elephant cool down.",
+     "close:elephant"
+    ],
+    "A baby elephant is called a calf.",
+    "Even a baby elephant is heavy. It weighs as much as a big grown-up on the day it is born.",
+    [
+     "Say it with me. The elephant is the biggest!",
+     "close:host"
+    ],
+    "Can you stomp like a big elephant? Stomp, stomp, stomp!",
+    "Can you flap your arms like big elephant ears? Flap, flap, flap!",
+    "So remember. Big ears are for keeping cool!",
+    {
+     "t": "Quick check! An elephant is as heavy as how many cars? Two? Or four?",
+     "pause": 3.2
+    },
+    "Four! One, two, three, four!"
+   ],
+   "short": {
+    "id": "zs90_elephant_cars",
+    "title": "An Elephant Is as Heavy as 4 Cars! Count With Milo",
+    "l1": "WHO IS THE",
+    "l2": "BIGGEST?",
+    "thumb_text": "BIG EARS!",
+    "thumb_line": [
+     5,
+     0.97
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "lion",
+   "biome": "desert",
+   "tod": "sunset",
+   "word": "LOUDEST!",
+   "word_on": [
+    2,
+    "lion"
+   ],
+   "visits": [
+    {
+     "show": [
+      "none"
+     ]
+    },
+    {
+     "line": 2,
+     "show": [
+      "lion"
+     ]
+    }
+   ],
+   "choices": {
+    "a": "LION",
+    "b": "TIGER",
+    "right": "a",
+    "ask": [
+     1
+    ],
+    "answer": [
+     2
+    ],
+    "hold": 2.4
+   },
+   "checks": [
+    {
+     "a": "1 MILE",
+     "b": "5 MILES",
+     "right": "b",
+     "ask": [
+      15
+     ],
+     "answer": [
+      16
+     ],
+     "hold": 2.0
+    }
+   ],
+   "exhibits": [
+    {
+     "prop": "rings",
+     "at": [
+      0.25,
+      -1.0,
+      2.05
+     ],
+     "on": [
+      3,
+      "roar"
+     ],
+     "off": [
+      5
+     ],
+     "opts": {
+      "reach": 2.5
+     }
+    },
+    {
+     "prop": "town",
+     "at": [
+      2.8,
+      -0.7,
+      0.0
+     ],
+     "on": [
+      3,
+      "five"
+     ],
+     "off": [
+      7
+     ],
+     "opts": {
+      "text": "5 MILES"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      5,
+      "end"
+     ],
+     "off": [
+      6
+     ]
+    },
+    {
+     "prop": "zzz",
+     "at": [
+      0.5,
+      -1.0,
+      2.7
+     ],
+     "on": [
+      10,
+      "sleepy"
+     ],
+     "off": [
+      11
+     ],
+     "opts": {
+      "s": 1.2,
+      "color": "#2459b8"
+     }
+    },
+    {
+     "prop": "dots",
+     "at": "dots",
+     "on": [
+      11,
+      "end"
+     ],
+     "off": [
+      12
+     ]
+    }
+   ],
+   "lines": [
+    {
+     "t": "Who has the loudest roar of all the big cats?",
+     "pause": 0.4
+    },
+    {
+     "t": "Is it the lion? Or is it the tiger?",
+     "pause": 3.2
+    },
+    [
+     "It is the lion!",
+     "close:lion"
+    ],
+    [
+     "Here is the fun fact. You can hear a lion's roar from up to five miles away!",
+     "exhibit"
+    ],
+    [
+     "Five miles is a long, long way. Like the other side of town!",
+     "exhibit"
+    ],
+    {
+     "t": "Why does a lion roar? What do you think?",
+     "pause": 2.4
+    },
+    "To tell everyone, this is my home!",
+    [
+     "Look at that big, fluffy mane! Daddy lions grow a mane around their heads.",
+     "close:lion"
+    ],
+    "Lions live in a big family. A lion family is called a pride.",
+    "Baby lions are called cubs. Lion cubs are born with spots!",
+    "And lions are sleepy cats. They rest for most of the day!",
+    {
+     "t": "So when do lions roar the most? In the day? Or at night?",
+     "pause": 2.4
+    },
+    "At night! When the sun goes down, lions get busy, and they roar the most.",
+    [
+     "Say it with me. The lion has the loudest roar!",
+     "close:host"
+    ],
+    "Can you roar like a lion? One, two, three. Roar!",
+    {
+     "t": "Quick check! From how far away can you hear a lion roar? One mile? Or five miles?",
+     "pause": 3.2
+    },
+    "Five miles! What a mighty roar!",
+    "Give yourself a big cheer!"
+   ],
+   "short": {
+    "id": "zs90_lion_roar",
+    "title": "How Loud Is a Lion's Roar? Lion Facts for Kids",
+    "l1": "WHO IS THE",
+    "l2": "LOUDEST?",
+    "thumb_text": "5 MILES!",
+    "thumb_line": [
+     4,
+     0.6
+    ]
+   },
+   "kind": "teach"
+  },
+  {
+   "name": "quiz",
+   "kind": "quiz",
+   "biome": "night_meadow",
+   "tod": "sunset",
+   "word": "QUIZ TIME!",
+   "lines": [
+    "Wow! We met three animal champions. Now it is quiz time!",
+    "Get ready. Think hard!"
+   ],
+   "quiz": [
+    [
+     "Who can peek into an upstairs window?",
+     "The giraffe! Yes!",
+     "giraffe"
+    ],
+    [
+     "Who is as heavy as four cars?",
+     "The elephant! That's right!",
+     "elephant"
+    ],
+    [
+     "Whose roar can you hear from five miles away?",
+     "The lion! You remembered!",
+     "lion"
+    ]
+   ]
+  },
+  {
+   "name": "goodbye",
+   "kind": "outro",
+   "biome": "savanna",
+   "tod": "sunset",
+   "word": "BYE-BYE!",
+   "lines": [
+    "You learned so many new things today.",
+    "Stretch like a giraffe. Stomp like an elephant. And roar like a lion!",
+    "Which champion is your favorite?",
+    "Thank you for learning with me. Bye-bye, friends! See you next time!"
+   ]
+  }
+ ],
+ "voice": "af_heart",
+ "speed": 0.84,
+ "improves": [
+  "format v3 (Noelson, Nov 14 5:12 PM): lesson at least 5:00, every part is one complete 85-95 s mini-lesson that becomes a 90-second Short",
+  "deeper parts: a 'why?' or second question round, one more sourced fact with its own example, and a quick check with answer signs at the end of each part",
+  "picture fixes from the review of the first render: flies half the size, dinner plate paw-sized, answer signs and Milo moved inside the centre 3:2 so the Shorts never cut them",
+  "new on-screen examples: grass patch with daisies, milk bottle and glass, SNOUT / TROOP / SNOW BOOTS word signs, fly count, second counting rounds",
+  "interactive lesson v2 base: answer signs + thinking timer, calm cast, one continuous teaching shot per idea, native 4K, every word placed from the audio"
+ ],
+ "version": 3
+}

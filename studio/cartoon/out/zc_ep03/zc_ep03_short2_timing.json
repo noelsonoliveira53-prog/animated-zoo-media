@@ -1,0 +1,1970 @@
+{
+ "id": "zc_ep03_short2",
+ "total": 89.25183333333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.3,
+  "shots": 22,
+  "visual_changes": 95,
+  "mean_gap": 0.94,
+  "longest_gap": 4.03,
+  "longest_gap_at": 85.2,
+  "over_6s": [],
+  "places": [
+   "savanna",
+   "jungle",
+   "bigtree"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 5,
+  "longest_without_question": 26.2,
+  "first_words_at": 0.42,
+  "shot_mean": 4.06,
+  "fails": [],
+  "words_placed": "191/191",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 32.4,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 21,
+   "cuts_on_the_half_beat": 21,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: why flap"
+  ],
+  [
+   1.49,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   2.01,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the sunny savanna hot savanna"
+  ],
+  [
+   4.35,
+   "picture",
+   "ht"
+  ],
+  [
+   4.35,
+   "word",
+   "HOT!"
+  ],
+  [
+   5.94,
+   "new shot",
+   "the sunny savanna Tumble is hot"
+  ],
+  [
+   5.99,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   6.89,
+   "picture",
+   "sw"
+  ],
+  [
+   8.75,
+   "new shot",
+   "the sunny savanna Mama flaps"
+  ],
+  [
+   10.11,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   11.77,
+   "word",
+   "FLAP!"
+  ],
+  [
+   13.75,
+   "new shot",
+   "the sunny savanna Tumble copies"
+  ],
+  [
+   14.17,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   16.01,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   16.83,
+   "word",
+   "AHH!"
+  ],
+  [
+   17.81,
+   "new place",
+   "the green jungle jungle wide"
+  ],
+  [
+   17.91,
+   "action",
+   "tumble walks"
+  ],
+  [
+   21.31,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   21.31,
+   "word",
+   "STILL HOT!"
+  ],
+  [
+   22.19,
+   "new shot",
+   "the green jungle a little wind"
+  ],
+  [
+   22.43,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   25.28,
+   "action",
+   "the wind blows"
+  ],
+  [
+   25.28,
+   "picture",
+   "wd"
+  ],
+  [
+   25.28,
+   "word",
+   "WIND!"
+  ],
+  [
+   26.25,
+   "new shot",
+   "the green jungle question 2a"
+  ],
+  [
+   28.49,
+   "sign",
+   "ONE"
+  ],
+  [
+   28.84,
+   "sign",
+   "TWO"
+  ],
+  [
+   29.99,
+   "thinking dot",
+   "1"
+  ],
+  [
+   30.66,
+   "thinking dot",
+   "2"
+  ],
+  [
+   31.33,
+   "thinking dot",
+   "3"
+  ],
+  [
+   31.82,
+   "answer",
+   "TWO"
+  ],
+  [
+   33.12,
+   "new shot",
+   "the green jungle answer 2a"
+  ],
+  [
+   33.17,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   33.25,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   33.25,
+   "word",
+   "2 EARS!"
+  ],
+  [
+   35.62,
+   "new shot",
+   "the green jungle like a fan"
+  ],
+  [
+   36.98,
+   "word",
+   "LIKE A FAN"
+  ],
+  [
+   38.66,
+   "action",
+   "milo hops"
+  ],
+  [
+   40.0,
+   "new place",
+   "the picture board (blue) board: ears cool"
+  ],
+  [
+   41.02,
+   "action",
+   "ebe flaps its ears"
+  ],
+  [
+   42.18,
+   "word",
+   "COOL!"
+  ],
+  [
+   43.12,
+   "new shot",
+   "the picture board (blue) board: the ears cool down"
+  ],
+  [
+   44.12,
+   "action",
+   "ebe flaps its ears"
+  ],
+  [
+   46.15,
+   "action",
+   "the cool air"
+  ],
+  [
+   46.15,
+   "picture",
+   "bz"
+  ],
+  [
+   46.54,
+   "word",
+   "COOL EARS"
+  ],
+  [
+   47.5,
+   "new shot",
+   "the picture board (blue) board: the whole body"
+  ],
+  [
+   47.6,
+   "action",
+   "ebe flaps its ears"
+  ],
+  [
+   48.03,
+   "picture",
+   "ar"
+  ],
+  [
+   48.59,
+   "word",
+   "WHOLE BODY!"
+  ],
+  [
+   50.0,
+   "new place",
+   "the sunny savanna question 2"
+  ],
+  [
+   52.38,
+   "sign",
+   "WARM"
+  ],
+  [
+   52.73,
+   "sign",
+   "COOL"
+  ],
+  [
+   54.54,
+   "thinking dot",
+   "1"
+  ],
+  [
+   55.21,
+   "thinking dot",
+   "2"
+  ],
+  [
+   55.88,
+   "thinking dot",
+   "3"
+  ],
+  [
+   56.37,
+   "answer",
+   "COOL"
+  ],
+  [
+   56.42,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   57.5,
+   "new shot",
+   "the sunny savanna answer 2"
+  ],
+  [
+   57.55,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   58.08,
+   "action",
+   "tumble hops"
+  ],
+  [
+   58.08,
+   "word",
+   "COOL!"
+  ],
+  [
+   58.66,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   60.31,
+   "new shot",
+   "the sunny savanna fan along"
+  ],
+  [
+   60.78,
+   "action",
+   "milo hops"
+  ],
+  [
+   62.81,
+   "word",
+   "AHH!"
+  ],
+  [
+   64.69,
+   "new place",
+   "the tallest tree bigtree wide"
+  ],
+  [
+   64.89,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   65.09,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   67.66,
+   "word",
+   "A LOT!"
+  ],
+  [
+   68.44,
+   "new shot",
+   "the tallest tree count the flaps"
+  ],
+  [
+   70.78,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   70.78,
+   "word",
+   "1"
+  ],
+  [
+   71.08,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   71.08,
+   "word",
+   "2"
+  ],
+  [
+   71.32,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   71.32,
+   "word",
+   "3"
+  ],
+  [
+   72.19,
+   "new shot",
+   "the tallest tree Mama slowly"
+  ],
+  [
+   72.8,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   73.66,
+   "action",
+   "blink"
+  ],
+  [
+   73.66,
+   "word",
+   "SLOWLY"
+  ],
+  [
+   76.88,
+   "new shot",
+   "the tallest tree rest in the shade"
+  ],
+  [
+   76.92,
+   "action",
+   "tumble looks sleepy"
+  ],
+  [
+   79.15,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   79.15,
+   "word",
+   "SHADE"
+  ],
+  [
+   79.98,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   80.94,
+   "new shot",
+   "the tallest tree big job"
+  ],
+  [
+   80.99,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   83.66,
+   "action",
+   "mama nods"
+  ],
+  [
+   83.66,
+   "action",
+   "tumble hops"
+  ],
+  [
+   83.66,
+   "word",
+   "BIG JOB!"
+  ],
+  [
+   84.69,
+   "new place",
+   "the picture board (pink) board: way 1"
+  ],
+  [
+   85.22,
+   "picture",
+   "w0"
+  ],
+  [
+   85.22,
+   "word",
+   "1"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "Why do elephants flap their ears?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 2.201416666666667,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.28
+    ],
+    [
+     "do",
+     0.28,
+     0.46
+    ],
+    [
+     "elephants",
+     0.46,
+     1.07
+    ],
+    [
+     "flap",
+     1.07,
+     1.42
+    ],
+    [
+     "their",
+     1.42,
+     1.59
+    ],
+    [
+     "ears?",
+     1.59,
+     2.2
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: why flap",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Phew! The sun is hot on the savanna.",
+   "t0": 2.8125,
+   "t1": 5.9375,
+   "v0": 3.1614166666666668,
+   "dur": 2.4713333333333334,
+   "words": [
+    [
+     "Phew!",
+     0.0,
+     0.48
+    ],
+    [
+     "The",
+     0.65,
+     0.73
+    ],
+    [
+     "sun",
+     0.73,
+     1.03
+    ],
+    [
+     "is",
+     1.03,
+     1.19
+    ],
+    [
+     "hot",
+     1.19,
+     1.55
+    ],
+    [
+     "on",
+     1.55,
+     1.66
+    ],
+    [
+     "the",
+     1.66,
+     1.73
+    ],
+    [
+     "savanna.",
+     1.73,
+     2.47
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "hot savanna",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble feels hot, hot, hot.",
+   "t0": 5.9375,
+   "t1": 8.75,
+   "v0": 6.17275,
+   "dur": 2.233791666666667,
+   "words": [
+    [
+     "Tumble",
+     0.02,
+     0.42
+    ],
+    [
+     "feels",
+     0.42,
+     0.72
+    ],
+    [
+     "hot,",
+     0.72,
+     1.28
+    ],
+    [
+     "hot,",
+     1.28,
+     1.69
+    ],
+    [
+     "hot.",
+     1.69,
+     2.23
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Tumble is hot",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Watch Mama. She flaps her big ears. Flap, flap, flap!",
+   "t0": 8.75,
+   "t1": 13.75,
+   "v0": 8.946541666666665,
+   "dur": 4.324583333333333,
+   "words": [
+    [
+     "Watch",
+     0.0,
+     0.41
+    ],
+    [
+     "Mama.",
+     0.41,
+     0.87
+    ],
+    [
+     "She",
+     1.02,
+     1.16
+    ],
+    [
+     "flaps",
+     1.16,
+     1.5
+    ],
+    [
+     "her",
+     1.5,
+     1.6
+    ],
+    [
+     "big",
+     1.6,
+     1.82
+    ],
+    [
+     "ears.",
+     1.82,
+     2.44
+    ],
+    [
+     "Flap,",
+     2.82,
+     3.29
+    ],
+    [
+     "flap,",
+     3.29,
+     3.76
+    ],
+    [
+     "flap!",
+     3.76,
+     4.32
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama flaps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble flaps his ears, too. Ahh, that feels nice.",
+   "t0": 13.75,
+   "t1": 17.8125,
+   "v0": 13.811124999999997,
+   "dur": 3.5629583333333334,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.36
+    ],
+    [
+     "flaps",
+     0.36,
+     0.74
+    ],
+    [
+     "his",
+     0.74,
+     0.89
+    ],
+    [
+     "ears,",
+     0.89,
+     1.33
+    ],
+    [
+     "too.",
+     1.33,
+     1.77
+    ],
+    [
+     "Ahh,",
+     2.2,
+     2.5
+    ],
+    [
+     "that",
+     2.5,
+     2.72
+    ],
+    [
+     "feels",
+     2.72,
+     3.02
+    ],
+    [
+     "nice.",
+     3.02,
+     3.56
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Tumble copies",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Tumble walks into the green jungle. It is still so hot!",
+   "t0": 17.8125,
+   "t1": 22.1875,
+   "v0": 17.914083333333334,
+   "dur": 3.97025,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.43
+    ],
+    [
+     "walks",
+     0.43,
+     0.84
+    ],
+    [
+     "into",
+     0.84,
+     1.0
+    ],
+    [
+     "the",
+     1.0,
+     1.08
+    ],
+    [
+     "green",
+     1.08,
+     1.52
+    ],
+    [
+     "jungle.",
+     1.52,
+     2.1
+    ],
+    [
+     "It",
+     2.53,
+     2.63
+    ],
+    [
+     "is",
+     2.63,
+     2.73
+    ],
+    [
+     "still",
+     2.73,
+     3.1
+    ],
+    [
+     "so",
+     3.1,
+     3.4
+    ],
+    [
+     "hot!",
+     3.4,
+     3.97
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "jungle wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Flap, flap, flap! His ears make a little wind.",
+   "t0": 22.1875,
+   "t1": 26.25,
+   "v0": 22.424333333333337,
+   "dur": 3.3825833333333333,
+   "words": [
+    [
+     "Flap,",
+     0.01,
+     0.48
+    ],
+    [
+     "flap,",
+     0.48,
+     0.88
+    ],
+    [
+     "flap!",
+     0.88,
+     1.41
+    ],
+    [
+     "His",
+     1.74,
+     1.91
+    ],
+    [
+     "ears",
+     1.91,
+     2.4
+    ],
+    [
+     "make",
+     2.4,
+     2.58
+    ],
+    [
+     "a",
+     2.58,
+     2.63
+    ],
+    [
+     "little",
+     2.63,
+     2.86
+    ],
+    [
+     "wind.",
+     2.86,
+     3.38
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a little wind",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "How many ears does Tumble have? One, or two?",
+   "t0": 26.25,
+   "t1": 33.125,
+   "v0": 26.346916666666672,
+   "dur": 3.1542916666666665,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.17
+    ],
+    [
+     "many",
+     0.17,
+     0.48
+    ],
+    [
+     "ears",
+     0.48,
+     0.8
+    ],
+    [
+     "does",
+     0.8,
+     1.01
+    ],
+    [
+     "Tumble",
+     1.01,
+     1.38
+    ],
+    [
+     "have?",
+     1.38,
+     1.84
+    ],
+    [
+     "One,",
+     2.14,
+     2.52
+    ],
+    [
+     "or",
+     2.52,
+     2.67
+    ],
+    [
+     "two?",
+     2.67,
+     3.15
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Two! Two big ears to flap.",
+   "t0": 33.125,
+   "t1": 35.625,
+   "v0": 33.24120833333334,
+   "dur": 1.9610416666666666,
+   "words": [
+    [
+     "Two!",
+     0.01,
+     0.52
+    ],
+    [
+     "Two",
+     0.52,
+     0.75
+    ],
+    [
+     "big",
+     0.75,
+     0.96
+    ],
+    [
+     "ears",
+     0.96,
+     1.27
+    ],
+    [
+     "to",
+     1.27,
+     1.41
+    ],
+    [
+     "flap.",
+     1.41,
+     1.96
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "answer 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "jungle",
+   "say": "Big ears flap like a fan on a hot day. Whoosh, whoosh!",
+   "t0": 35.625,
+   "t1": 40.0,
+   "v0": 35.742250000000006,
+   "dur": 3.9812083333333335,
+   "words": [
+    [
+     "Big",
+     0.01,
+     0.29
+    ],
+    [
+     "ears",
+     0.29,
+     0.74
+    ],
+    [
+     "flap",
+     0.74,
+     1.05
+    ],
+    [
+     "like",
+     1.05,
+     1.21
+    ],
+    [
+     "a",
+     1.21,
+     1.24
+    ],
+    [
+     "fan",
+     1.24,
+     1.64
+    ],
+    [
+     "on",
+     1.64,
+     1.75
+    ],
+    [
+     "a",
+     1.75,
+     1.79
+    ],
+    [
+     "hot",
+     1.79,
+     2.06
+    ],
+    [
+     "day.",
+     2.06,
+     2.44
+    ],
+    [
+     "Whoosh,",
+     2.92,
+     3.37
+    ],
+    [
+     "whoosh!",
+     3.37,
+     3.98
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "like a fan",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "An elephant's ears help it stay cool.",
+   "t0": 40.0,
+   "t1": 43.125,
+   "v0": 40.26345833333334,
+   "dur": 2.4846666666666666,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.12
+    ],
+    [
+     "elephant's",
+     0.12,
+     0.76
+    ],
+    [
+     "ears",
+     0.76,
+     1.3
+    ],
+    [
+     "help",
+     1.3,
+     1.58
+    ],
+    [
+     "it",
+     1.58,
+     1.67
+    ],
+    [
+     "stay",
+     1.67,
+     1.92
+    ],
+    [
+     "cool.",
+     1.92,
+     2.48
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: ears cool",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "When an elephant flaps its ears, the ears cool down.",
+   "t0": 43.125,
+   "t1": 47.5,
+   "v0": 43.28812500000001,
+   "dur": 3.800666666666667,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.14
+    ],
+    [
+     "an",
+     0.14,
+     0.22
+    ],
+    [
+     "elephant",
+     0.22,
+     0.83
+    ],
+    [
+     "flaps",
+     0.83,
+     1.26
+    ],
+    [
+     "its",
+     1.26,
+     1.4
+    ],
+    [
+     "ears,",
+     1.4,
+     1.98
+    ],
+    [
+     "the",
+     2.26,
+     2.45
+    ],
+    [
+     "ears",
+     2.45,
+     2.86
+    ],
+    [
+     "cool",
+     2.86,
+     3.25
+    ],
+    [
+     "down.",
+     3.25,
+     3.8
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: the ears cool down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "And that cools the whole big body.",
+   "t0": 47.5,
+   "t1": 50.0,
+   "v0": 47.62879166666667,
+   "dur": 2.1758333333333333,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.16
+    ],
+    [
+     "that",
+     0.16,
+     0.4
+    ],
+    [
+     "cools",
+     0.4,
+     0.88
+    ],
+    [
+     "the",
+     0.88,
+     0.96
+    ],
+    [
+     "whole",
+     0.96,
+     1.31
+    ],
+    [
+     "big",
+     1.31,
+     1.6
+    ],
+    [
+     "body.",
+     1.6,
+     2.176
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: the whole body",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Do big ears help an elephant keep warm, or keep cool?",
+   "t0": 50.0,
+   "t1": 57.5,
+   "v0": 50.344625,
+   "dur": 3.70575,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.16
+    ],
+    [
+     "big",
+     0.16,
+     0.4
+    ],
+    [
+     "ears",
+     0.4,
+     0.87
+    ],
+    [
+     "help",
+     0.87,
+     1.13
+    ],
+    [
+     "an",
+     1.13,
+     1.22
+    ],
+    [
+     "elephant",
+     1.22,
+     1.73
+    ],
+    [
+     "keep",
+     1.73,
+     2.04
+    ],
+    [
+     "warm,",
+     2.04,
+     2.61
+    ],
+    [
+     "or",
+     2.77,
+     2.9
+    ],
+    [
+     "keep",
+     2.9,
+     3.21
+    ],
+    [
+     "cool?",
+     3.21,
+     3.706
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Keep cool! Flap, flap, cool.",
+   "t0": 57.5,
+   "t1": 60.3125,
+   "v0": 57.790375000000004,
+   "dur": 2.1373333333333333,
+   "words": [
+    [
+     "Keep",
+     0.02,
+     0.29
+    ],
+    [
+     "cool!",
+     0.29,
+     0.87
+    ],
+    [
+     "Flap,",
+     0.87,
+     1.25
+    ],
+    [
+     "flap,",
+     1.25,
+     1.68
+    ],
+    [
+     "cool.",
+     1.68,
+     2.137
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "answer 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can you fan your face with your hands? Ahh, nice and cool!",
+   "t0": 60.3125,
+   "t1": 64.6875,
+   "v0": 60.467708333333334,
+   "dur": 3.7942916666666666,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.31
+    ],
+    [
+     "fan",
+     0.31,
+     0.61
+    ],
+    [
+     "your",
+     0.61,
+     0.72
+    ],
+    [
+     "face",
+     0.72,
+     1.12
+    ],
+    [
+     "with",
+     1.12,
+     1.24
+    ],
+    [
+     "your",
+     1.24,
+     1.34
+    ],
+    [
+     "hands?",
+     1.34,
+     1.93
+    ],
+    [
+     "Ahh,",
+     2.34,
+     2.68
+    ],
+    [
+     "nice",
+     2.68,
+     3.14
+    ],
+    [
+     "and",
+     3.14,
+     3.28
+    ],
+    [
+     "cool!",
+     3.28,
+     3.79
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "fan along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "On warm days, elephants flap their ears a lot.",
+   "t0": 64.6875,
+   "t1": 68.4375,
+   "v0": 64.802,
+   "dur": 3.378875,
+   "words": [
+    [
+     "On",
+     0.0,
+     0.2
+    ],
+    [
+     "warm",
+     0.2,
+     0.53
+    ],
+    [
+     "days,",
+     0.53,
+     1.04
+    ],
+    [
+     "elephants",
+     1.33,
+     1.92
+    ],
+    [
+     "flap",
+     1.92,
+     2.27
+    ],
+    [
+     "their",
+     2.27,
+     2.44
+    ],
+    [
+     "ears",
+     2.44,
+     2.81
+    ],
+    [
+     "a",
+     2.81,
+     2.86
+    ],
+    [
+     "lot.",
+     2.86,
+     3.379
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "bigtree wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Let's count Tumble's flaps. One, two, three!",
+   "t0": 68.4375,
+   "t1": 72.1875,
+   "v0": 68.720875,
+   "dur": 3.1405,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.35
+    ],
+    [
+     "count",
+     0.35,
+     0.69
+    ],
+    [
+     "Tumble's",
+     0.69,
+     1.17
+    ],
+    [
+     "flaps.",
+     1.17,
+     1.77
+    ],
+    [
+     "One,",
+     2.06,
+     2.36
+    ],
+    [
+     "two,",
+     2.36,
+     2.6
+    ],
+    [
+     "three!",
+     2.6,
+     3.14
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the flaps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Mama flaps her ears slowly. Flap... flap... flap.",
+   "t0": 72.1875,
+   "t1": 76.875,
+   "v0": 72.40137500000002,
+   "dur": 4.186833333333333,
+   "words": [
+    [
+     "Mama",
+     0.01,
+     0.4
+    ],
+    [
+     "flaps",
+     0.4,
+     0.81
+    ],
+    [
+     "her",
+     0.81,
+     0.91
+    ],
+    [
+     "ears",
+     0.91,
+     1.26
+    ],
+    [
+     "slowly.",
+     1.26,
+     1.97
+    ],
+    [
+     "Flap...",
+     2.16,
+     2.65
+    ],
+    [
+     "flap...",
+     2.87,
+     3.62
+    ],
+    [
+     "flap.",
+     3.62,
+     4.187
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "Mama slowly",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Tumble and Mama rest in the shade of the big tree.",
+   "t0": 76.875,
+   "t1": 80.9375,
+   "v0": 77.12820833333336,
+   "dur": 3.3725416666666668,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.47
+    ],
+    [
+     "and",
+     0.47,
+     0.6
+    ],
+    [
+     "Mama",
+     0.6,
+     1.14
+    ],
+    [
+     "rest",
+     1.43,
+     1.83
+    ],
+    [
+     "in",
+     1.83,
+     1.95
+    ],
+    [
+     "the",
+     1.95,
+     2.02
+    ],
+    [
+     "shade",
+     2.02,
+     2.43
+    ],
+    [
+     "of",
+     2.43,
+     2.52
+    ],
+    [
+     "the",
+     2.52,
+     2.6
+    ],
+    [
+     "big",
+     2.6,
+     2.85
+    ],
+    [
+     "tree.",
+     2.85,
+     3.37
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "rest in the shade",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Now they feel cool. Big ears, big job!",
+   "t0": 80.9375,
+   "t1": 84.6875,
+   "v0": 81.04075000000003,
+   "dur": 3.234916666666667,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.34
+    ],
+    [
+     "they",
+     0.34,
+     0.47
+    ],
+    [
+     "feel",
+     0.47,
+     0.73
+    ],
+    [
+     "cool.",
+     0.73,
+     1.26
+    ],
+    [
+     "Big",
+     1.66,
+     1.88
+    ],
+    [
+     "ears,",
+     1.88,
+     2.38
+    ],
+    [
+     "big",
+     2.38,
+     2.62
+    ],
+    [
+     "job!",
+     2.62,
+     3.23
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "big job",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "That is one way to keep cool. One, flap your ears.",
+   "t0": 84.6875,
+   "t1": 88.85183333333337,
+   "v0": 84.8156666666667,
+   "dur": 3.6161666666666665,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.23
+    ],
+    [
+     "is",
+     0.23,
+     0.4
+    ],
+    [
+     "one",
+     0.4,
+     0.68
+    ],
+    [
+     "way",
+     0.68,
+     0.89
+    ],
+    [
+     "to",
+     0.89,
+     1.0
+    ],
+    [
+     "keep",
+     1.0,
+     1.24
+    ],
+    [
+     "cool.",
+     1.24,
+     1.74
+    ],
+    [
+     "One,",
+     2.14,
+     2.43
+    ],
+    [
+     "flap",
+     2.43,
+     2.87
+    ],
+    [
+     "your",
+     2.87,
+     2.99
+    ],
+    [
+     "ears.",
+     2.99,
+     3.616
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: way 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

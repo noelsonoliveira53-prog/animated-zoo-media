@@ -1,0 +1,207 @@
+[
+ {
+  "id": "fr_apple",
+  "animal": "apple",
+  "title": "What's Hiding Inside an Apple?",
+  "thumb": "APPLE!",
+  "top": "APPLE",
+  "bg": [
+   "#ffe9e6",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing, ADA toothbrushing guidance)"
+  ],
+  "beats": [
+   {
+    "say": "Crunchy, round, and it grows on a tree. Do you know what's inside?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Apple! Apples grow on trees.",
+    "act": "zoom+badge:APPLE!"
+   },
+   {
+    "say": "What's hiding inside an apple? Little seeds! They make a star shape.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to pick an apple from a tree? Reach up high!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Apples help keep your teeth and tummy happy. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr_carrot",
+  "animal": "carrot",
+  "title": "Why Do Carrots Grow Underground?",
+  "thumb": "CARROT!",
+  "top": "CARROT",
+  "bg": [
+   "#fff1e0",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing, ADA toothbrushing guidance)"
+  ],
+  "beats": [
+   {
+    "say": "This orange veggie plays hide and seek under the ground!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Carrot! Carrots grow down in the dirt.",
+    "act": "zoom+badge:CARROT!"
+   },
+   {
+    "say": "Are carrots always orange? No! Some are purple, yellow or white.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pull a carrot out of the ground? Pull, pull, POP!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Carrots help your eyes stay healthy. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr_handwash",
+  "animal": "handwash",
+  "title": "How Long Should You Wash Your Hands?",
+  "thumb": "WASH HANDS!",
+  "top": "WASH HANDS",
+  "bg": [
+   "#e6f6ff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing, ADA toothbrushing guidance)"
+  ],
+  "beats": [
+   {
+    "say": "Soap, water, and lots of bubbles. How long should we scrub?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Wash Hands! Wash your hands before you eat.",
+    "act": "zoom+badge:WASH HANDS!"
+   },
+   {
+    "say": "How long should we scrub? Twenty seconds! Like singing a song.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Rub your hands together with me! Scrub, scrub, scrub!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Clean hands keep germs away. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr_toothbrush",
+  "animal": "toothbrush",
+  "title": "How Long Should You Brush Your Teeth?",
+  "thumb": "BRUSH TEETH!",
+  "top": "BRUSH TEETH",
+  "bg": [
+   "#eef7ff",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing, ADA toothbrushing guidance)"
+  ],
+  "beats": [
+   {
+    "say": "Morning and night, round and round. How long do we brush?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Brush Teeth! Brush your teeth in the morning and at night.",
+    "act": "zoom+badge:BRUSH TEETH!"
+   },
+   {
+    "say": "How long should we brush? Two minutes! Ask a grown-up to help.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you pretend to brush? Round and round!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Brushing keeps your smile bright. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ },
+ {
+  "id": "fr_watermelon",
+  "animal": "watermelon",
+  "title": "Why Is Watermelon So Juicy?",
+  "thumb": "WATERMELON!",
+  "top": "WATERMELON",
+  "bg": [
+   "#ffeef2",
+   "#fffdf4"
+  ],
+  "floor": "#f6c992",
+  "sources": [
+   "Kids nutrition & healthy habits basics (USDA MyPlate kids, CDC handwashing, ADA toothbrushing guidance)"
+  ],
+  "beats": [
+   {
+    "say": "Green outside, pink inside, and super juicy. Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Pip the strawberry, and this is Kiko! Welcome to Fruity Friends!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Watermelon! Watermelons are big and heavy.",
+    "act": "zoom+badge:WATERMELON!"
+   },
+   {
+    "say": "What are the little black dots? Seeds! Watermelons have lots of them.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Can you take a big pretend bite? Chomp!",
+    "act": "wiggle"
+   },
+   {
+    "say": "Watermelon is a cool treat on a hot day. See you next time on Fruity Friends!",
+    "act": "fxoff+outro"
+   }
+  ]
+ }
+]

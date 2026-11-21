@@ -1,0 +1,6751 @@
+{
+ "id": "zc_ep04",
+ "total": 308.8829583333335,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75
+ ],
+ "plan": {
+  "length": 308.9,
+  "shots": 82,
+  "visual_changes": 300,
+  "mean_gap": 1.03,
+  "longest_gap": 3.73,
+  "longest_gap_at": 122.8,
+  "over_6s": [],
+  "places": [
+   "canopy",
+   "zoo",
+   "figtree",
+   "bigtree",
+   "blossom",
+   "canopy_eve"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 26,
+  "longest_without_question": 30.0,
+  "first_words_at": 0.42,
+  "shot_mean": 3.77,
+  "fails": [],
+  "words_placed": "679/679",
+  "sync": {
+   "pauses_checked": 55,
+   "onset_err_mean_ms": 30.4,
+   "onset_err_max_ms": 90.0,
+   "suspect_words": [],
+   "cuts": 81,
+   "cuts_on_the_half_beat": 81,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the treetops hook: why a long tail"
+  ],
+  [
+   0.05,
+   "action",
+   "Mango swings down on her tail"
+  ],
+  [
+   0.3,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   2.43,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new place",
+   "the picture board (pink) hook: guesses"
+  ],
+  [
+   3.81,
+   "picture",
+   "a"
+  ],
+  [
+   4.53,
+   "picture",
+   "b"
+  ],
+  [
+   5.49,
+   "picture",
+   "c"
+  ],
+  [
+   6.04,
+   "word",
+   "?"
+  ],
+  [
+   6.25,
+   "new place",
+   "the treetops hook: Milo"
+  ],
+  [
+   8.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   9.69,
+   "new place",
+   "the zoo gate gate wide"
+  ],
+  [
+   10.52,
+   "word",
+   "HELLO!"
+  ],
+  [
+   12.81,
+   "new shot",
+   "the zoo gate Milo close"
+  ],
+  [
+   15.1,
+   "word",
+   "THE TREETOPS"
+  ],
+  [
+   16.25,
+   "action",
+   "Milo flies in"
+  ],
+  [
+   16.25,
+   "new place",
+   "the treetops treetops wide"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the treetops this is Mango"
+  ],
+  [
+   20.06,
+   "action",
+   "mango hops"
+  ],
+  [
+   20.06,
+   "word",
+   "MANGO"
+  ],
+  [
+   21.74,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the treetops a long tail"
+  ],
+  [
+   25.82,
+   "action",
+   "Mango wiggles her tail"
+  ],
+  [
+   25.82,
+   "picture",
+   "ar"
+  ],
+  [
+   25.82,
+   "word",
+   "LONG TAIL!"
+  ],
+  [
+   26.88,
+   "new shot",
+   "the treetops curls and wiggles"
+  ],
+  [
+   27.36,
+   "action",
+   "the tail curls"
+  ],
+  [
+   28.2,
+   "action",
+   "the tail wiggles"
+  ],
+  [
+   28.9,
+   "action",
+   "the tail swishes"
+  ],
+  [
+   28.9,
+   "word",
+   "SWISH!"
+  ],
+  [
+   30.0,
+   "new shot",
+   "the treetops your tail"
+  ],
+  [
+   31.52,
+   "action",
+   "Milo wiggles"
+  ],
+  [
+   31.52,
+   "word",
+   "WIGGLE!"
+  ],
+  [
+   33.44,
+   "new place",
+   "the picture board board: her body"
+  ],
+  [
+   35.7,
+   "action",
+   "m hops"
+  ],
+  [
+   37.03,
+   "picture",
+   "lb"
+  ],
+  [
+   37.03,
+   "word",
+   "BODY"
+  ],
+  [
+   37.81,
+   "new shot",
+   "the picture board board: her tail"
+  ],
+  [
+   39.03,
+   "picture",
+   "tl"
+  ],
+  [
+   39.03,
+   "word",
+   "TAIL"
+  ],
+  [
+   39.81,
+   "picture",
+   "lt"
+  ],
+  [
+   41.56,
+   "new shot",
+   "the picture board question 1"
+  ],
+  [
+   43.23,
+   "sign",
+   "BODY"
+  ],
+  [
+   43.58,
+   "sign",
+   "TAIL"
+  ],
+  [
+   45.1,
+   "thinking dot",
+   "1"
+  ],
+  [
+   45.78,
+   "thinking dot",
+   "2"
+  ],
+  [
+   46.45,
+   "thinking dot",
+   "3"
+  ],
+  [
+   46.94,
+   "answer",
+   "TAIL"
+  ],
+  [
+   48.12,
+   "new shot",
+   "the picture board board: longer"
+  ],
+  [
+   51.2,
+   "action",
+   "the tail pulses"
+  ],
+  [
+   51.2,
+   "word",
+   "LONGER!"
+  ],
+  [
+   52.81,
+   "new place",
+   "the treetops stretch"
+  ],
+  [
+   53.69,
+   "action",
+   "Milo stretches up"
+  ],
+  [
+   53.69,
+   "word",
+   "STRETCH!"
+  ],
+  [
+   56.56,
+   "new shot",
+   "the treetops watch"
+  ],
+  [
+   59.55,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   59.55,
+   "word",
+   "WATCH!"
+  ],
+  [
+   60.94,
+   "new shot",
+   "the treetops she swings down"
+  ],
+  [
+   63.02,
+   "action",
+   "Mango swings down on her tail"
+  ],
+  [
+   63.5,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   63.5,
+   "word",
+   "WHEE!"
+  ],
+  [
+   64.38,
+   "new shot",
+   "the treetops squeeze"
+  ],
+  [
+   64.8,
+   "picture",
+   "ar"
+  ],
+  [
+   66.32,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   66.32,
+   "word",
+   "SQUEEZE!"
+  ],
+  [
+   67.5,
+   "new place",
+   "the picture board (blue) board: grab"
+  ],
+  [
+   69.2,
+   "picture",
+   "ar"
+  ],
+  [
+   69.2,
+   "word",
+   "GRAB!"
+  ],
+  [
+   70.14,
+   "word",
+   "HOLD ON!"
+  ],
+  [
+   71.25,
+   "new place",
+   "the treetops round and round"
+  ],
+  [
+   71.46,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   71.46,
+   "word",
+   "ROUND AND ROUND"
+  ],
+  [
+   74.06,
+   "new place",
+   "the picture board (blue) board: extra hand"
+  ],
+  [
+   75.98,
+   "picture",
+   "hd"
+  ],
+  [
+   75.98,
+   "word",
+   "EXTRA HAND!"
+  ],
+  [
+   77.5,
+   "new place",
+   "the treetops your hand"
+  ],
+  [
+   79.29,
+   "action",
+   "milo hops"
+  ],
+  [
+   79.29,
+   "word",
+   "SQUEEZE!"
+  ],
+  [
+   80.62,
+   "new place",
+   "the picture board (pink) board: let's count"
+  ],
+  [
+   81.24,
+   "word",
+   "LET'S COUNT!"
+  ],
+  [
+   83.75,
+   "new shot",
+   "the picture board (pink) board: hands"
+  ],
+  [
+   84.01,
+   "action",
+   "m moves an arm"
+  ],
+  [
+   84.01,
+   "picture",
+   "b0"
+  ],
+  [
+   84.73,
+   "action",
+   "m moves an arm"
+  ],
+  [
+   84.73,
+   "picture",
+   "b1"
+  ],
+  [
+   85.94,
+   "new shot",
+   "the picture board (pink) board: feet"
+  ],
+  [
+   86.12,
+   "picture",
+   "b2"
+  ],
+  [
+   86.9,
+   "picture",
+   "b3"
+  ],
+  [
+   87.13,
+   "action",
+   "m hops"
+  ],
+  [
+   88.12,
+   "new shot",
+   "the picture board (pink) board: five"
+  ],
+  [
+   88.88,
+   "picture",
+   "b4"
+  ],
+  [
+   89.63,
+   "word",
+   "5!"
+  ],
+  [
+   90.62,
+   "new place",
+   "the treetops question 2"
+  ],
+  [
+   92.99,
+   "sign",
+   "4"
+  ],
+  [
+   93.34,
+   "sign",
+   "5"
+  ],
+  [
+   94.86,
+   "thinking dot",
+   "1"
+  ],
+  [
+   95.54,
+   "thinking dot",
+   "2"
+  ],
+  [
+   96.21,
+   "thinking dot",
+   "3"
+  ],
+  [
+   96.7,
+   "answer",
+   "5"
+  ],
+  [
+   96.75,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   97.81,
+   "new place",
+   "the picture board (pink) board: five again"
+  ],
+  [
+   98.13,
+   "action",
+   "m hops"
+  ],
+  [
+   98.13,
+   "word",
+   "FIVE!"
+  ],
+  [
+   101.25,
+   "new place",
+   "the treetops five ways"
+  ],
+  [
+   102.35,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   102.35,
+   "word",
+   "5 WAYS!"
+  ],
+  [
+   103.21,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   104.38,
+   "new shot",
+   "the treetops your hands"
+  ],
+  [
+   104.79,
+   "word",
+   "SHOW ME!"
+  ],
+  [
+   106.07,
+   "action",
+   "milo hops"
+  ],
+  [
+   108.12,
+   "new place",
+   "the fruit tree the fruit tree"
+  ],
+  [
+   110.05,
+   "word",
+   "FRUIT!"
+  ],
+  [
+   110.94,
+   "new shot",
+   "the fruit tree upside down"
+  ],
+  [
+   110.99,
+   "action",
+   "Mango swings down on her tail"
+  ],
+  [
+   112.02,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   112.02,
+   "word",
+   "UPSIDE DOWN!"
+  ],
+  [
+   114.69,
+   "new place",
+   "the tallest tree high up"
+  ],
+  [
+   117.33,
+   "picture",
+   "ar"
+  ],
+  [
+   117.33,
+   "word",
+   "UP HIGH"
+  ],
+  [
+   119.38,
+   "new place",
+   "the treetops swing along"
+  ],
+  [
+   120.29,
+   "action",
+   "Mango swings along the branch"
+  ],
+  [
+   120.29,
+   "word",
+   "SWING!"
+  ],
+  [
+   122.81,
+   "new shot",
+   "the treetops hang to play"
+  ],
+  [
+   126.54,
+   "action",
+   "Mango swings to play"
+  ],
+  [
+   126.54,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   126.54,
+   "word",
+   "PLAY TIME!"
+  ],
+  [
+   127.19,
+   "new shot",
+   "the treetops your play"
+  ],
+  [
+   128.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   128.25,
+   "word",
+   "PLAY!"
+  ],
+  [
+   130.31,
+   "new place",
+   "the picture board (blue) board: whole body"
+  ],
+  [
+   131.79,
+   "picture",
+   "ar"
+  ],
+  [
+   133.2,
+   "word",
+   "WHOLE BODY!"
+  ],
+  [
+   134.38,
+   "new place",
+   "the treetops tilt"
+  ],
+  [
+   134.91,
+   "action",
+   "Milo tilts his head"
+  ],
+  [
+   134.91,
+   "word",
+   "TILT!"
+  ],
+  [
+   137.5,
+   "new place",
+   "the fruit tree hands free"
+  ],
+  [
+   139.19,
+   "action",
+   "mango looks wow"
+  ],
+  [
+   139.19,
+   "word",
+   "HANDS FREE!"
+  ],
+  [
+   142.19,
+   "new shot",
+   "the fruit tree question 3"
+  ],
+  [
+   144.75,
+   "sign",
+   "YES"
+  ],
+  [
+   145.1,
+   "sign",
+   "NO"
+  ],
+  [
+   146.33,
+   "thinking dot",
+   "1"
+  ],
+  [
+   147.0,
+   "thinking dot",
+   "2"
+  ],
+  [
+   147.68,
+   "thinking dot",
+   "3"
+  ],
+  [
+   148.16,
+   "answer",
+   "YES"
+  ],
+  [
+   148.21,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   149.38,
+   "new shot",
+   "the fruit tree two fruits"
+  ],
+  [
+   149.43,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   150.15,
+   "word",
+   "1"
+  ],
+  [
+   150.76,
+   "word",
+   "2"
+  ],
+  [
+   153.44,
+   "new shot",
+   "the fruit tree count the fruits"
+  ],
+  [
+   155.1,
+   "action",
+   "milo hops"
+  ],
+  [
+   155.1,
+   "word",
+   "1"
+  ],
+  [
+   155.39,
+   "action",
+   "milo hops"
+  ],
+  [
+   155.39,
+   "word",
+   "2"
+  ],
+  [
+   156.25,
+   "new place",
+   "the picture board board: tail holds, hands eat"
+  ],
+  [
+   156.7,
+   "word",
+   "TAIL: HOLD"
+  ],
+  [
+   157.04,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   158.31,
+   "word",
+   "HANDS: EAT"
+  ],
+  [
+   160.31,
+   "new place",
+   "the fruit tree two hands one tail"
+  ],
+  [
+   160.44,
+   "word",
+   "2 HANDS"
+  ],
+  [
+   162.39,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   162.39,
+   "word",
+   "1 TAIL"
+  ],
+  [
+   164.06,
+   "new shot",
+   "the fruit tree munch"
+  ],
+  [
+   164.13,
+   "action",
+   "Mango munches"
+  ],
+  [
+   164.13,
+   "word",
+   "MUNCH!"
+  ],
+  [
+   165.37,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   167.19,
+   "new shot",
+   "the fruit tree pretend to munch"
+  ],
+  [
+   169.5,
+   "action",
+   "milo hops"
+  ],
+  [
+   169.5,
+   "word",
+   "YUM!"
+  ],
+  [
+   170.31,
+   "new place",
+   "the picture board board: why spider"
+  ],
+  [
+   171.96,
+   "word",
+   "SPIDER?"
+  ],
+  [
+   174.06,
+   "new place",
+   "the fruit tree dangle"
+  ],
+  [
+   177.21,
+   "action",
+   "her arms dangle"
+  ],
+  [
+   177.21,
+   "word",
+   "DANGLE!"
+  ],
+  [
+   178.44,
+   "new shot",
+   "the fruit tree hello upside down"
+  ],
+  [
+   178.45,
+   "action",
+   "her arms dangle"
+  ],
+  [
+   178.66,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   178.66,
+   "word",
+   "HELLO!"
+  ],
+  [
+   180.94,
+   "new place",
+   "the picture board (blue) board: like a spider"
+  ],
+  [
+   180.99,
+   "action",
+   "her arms dangle"
+  ],
+  [
+   184.02,
+   "picture",
+   "sp"
+  ],
+  [
+   184.02,
+   "word",
+   "LIKE A SPIDER!"
+  ],
+  [
+   185.0,
+   "new shot",
+   "the picture board (blue) board: the name"
+  ],
+  [
+   185.01,
+   "action",
+   "her arms dangle"
+  ],
+  [
+   187.4,
+   "word",
+   "SPIDER MONKEY!"
+  ],
+  [
+   188.12,
+   "new place",
+   "the fruit tree wiggle your arms"
+  ],
+  [
+   188.72,
+   "action",
+   "Milo flaps his wings"
+  ],
+  [
+   188.72,
+   "word",
+   "WIGGLE!"
+  ],
+  [
+   192.19,
+   "new place",
+   "the flower tree the flower tree"
+  ],
+  [
+   192.29,
+   "action",
+   "Mango swings along the branch"
+  ],
+  [
+   194.65,
+   "word",
+   "FLOWERS!"
+  ],
+  [
+   195.62,
+   "new shot",
+   "the flower tree the tip"
+  ],
+  [
+   197.6,
+   "picture",
+   "ar"
+  ],
+  [
+   197.6,
+   "word",
+   "THE TIP!"
+  ],
+  [
+   199.06,
+   "new place",
+   "the picture board board: little lines"
+  ],
+  [
+   200.72,
+   "action",
+   "the little lines glow"
+  ],
+  [
+   200.72,
+   "word",
+   "LITTLE LINES"
+  ],
+  [
+   201.88,
+   "new place",
+   "the picture board (pink) board: your fingertip"
+  ],
+  [
+   202.65,
+   "word",
+   "YOUR FINGER!"
+  ],
+  [
+   206.25,
+   "new place",
+   "the flower tree only yours"
+  ],
+  [
+   207.71,
+   "action",
+   "milo hops"
+  ],
+  [
+   208.01,
+   "word",
+   "ONLY YOURS!"
+  ],
+  [
+   209.06,
+   "new place",
+   "the picture board board: three tails"
+  ],
+  [
+   209.57,
+   "picture",
+   "t2"
+  ],
+  [
+   209.57,
+   "word",
+   "3 TAILS"
+  ],
+  [
+   211.84,
+   "picture",
+   "t0"
+  ],
+  [
+   212.2,
+   "picture",
+   "t1"
+  ],
+  [
+   213.44,
+   "new shot",
+   "the picture board board: all different"
+  ],
+  [
+   215.27,
+   "action",
+   "the three sets of lines glow"
+  ],
+  [
+   217.26,
+   "word",
+   "ALL DIFFERENT!"
+  ],
+  [
+   218.12,
+   "new shot",
+   "the picture board question 4"
+  ],
+  [
+   221.21,
+   "sign",
+   "YES"
+  ],
+  [
+   221.56,
+   "sign",
+   "NO"
+  ],
+  [
+   222.89,
+   "thinking dot",
+   "1"
+  ],
+  [
+   223.57,
+   "thinking dot",
+   "2"
+  ],
+  [
+   224.24,
+   "thinking dot",
+   "3"
+  ],
+  [
+   224.73,
+   "answer",
+   "NO"
+  ],
+  [
+   225.94,
+   "new place",
+   "the flower tree only Mango's"
+  ],
+  [
+   225.99,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   227.8,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   227.8,
+   "word",
+   "ONLY MANGO'S!"
+  ],
+  [
+   229.06,
+   "new place",
+   "the picture board board: lines grip"
+  ],
+  [
+   231.94,
+   "action",
+   "the tail tip presses up on the branch"
+  ],
+  [
+   231.94,
+   "word",
+   "HOLD TIGHT!"
+  ],
+  [
+   232.81,
+   "new place",
+   "the flower tree tight tight"
+  ],
+  [
+   234.51,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   234.51,
+   "word",
+   "TIGHT!"
+  ],
+  [
+   236.25,
+   "new place",
+   "the picture board (blue) board: four fingers"
+  ],
+  [
+   238.65,
+   "picture",
+   "n0"
+  ],
+  [
+   238.65,
+   "picture",
+   "n1"
+  ],
+  [
+   238.65,
+   "word",
+   "4 FINGERS"
+  ],
+  [
+   239.0,
+   "picture",
+   "n2"
+  ],
+  [
+   239.38,
+   "picture",
+   "n3"
+  ],
+  [
+   240.31,
+   "new shot",
+   "the picture board (blue) board: hook"
+  ],
+  [
+   240.84,
+   "action",
+   "the fingers hook"
+  ],
+  [
+   240.84,
+   "word",
+   "HOOK!"
+  ],
+  [
+   243.12,
+   "new place",
+   "the flower tree make a hook"
+  ],
+  [
+   243.77,
+   "action",
+   "milo hops"
+  ],
+  [
+   243.77,
+   "word",
+   "HOOK!"
+  ],
+  [
+   246.88,
+   "new shot",
+   "the flower tree just right"
+  ],
+  [
+   248.77,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   250.19,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   250.19,
+   "word",
+   "JUST RIGHT!"
+  ],
+  [
+   251.88,
+   "new place",
+   "the treetops at sunset Coco and baby"
+  ],
+  [
+   254.28,
+   "action",
+   "coco hops"
+  ],
+  [
+   255.19,
+   "action",
+   "baby hops"
+  ],
+  [
+   255.19,
+   "word",
+   "A BABY!"
+  ],
+  [
+   256.25,
+   "new place",
+   "the picture board (pink) board: tails hold"
+  ],
+  [
+   257.07,
+   "action",
+   "the tiny tail wraps around"
+  ],
+  [
+   257.67,
+   "word",
+   "TINY TAIL"
+  ],
+  [
+   259.25,
+   "word",
+   "MAMA"
+  ],
+  [
+   260.62,
+   "new place",
+   "the treetops at sunset safe and snug"
+  ],
+  [
+   260.68,
+   "action",
+   "baby looks happy"
+  ],
+  [
+   260.68,
+   "action",
+   "coco looks happy"
+  ],
+  [
+   262.01,
+   "picture",
+   "h1"
+  ],
+  [
+   262.65,
+   "word",
+   "SAFE AND SNUG"
+  ],
+  [
+   263.44,
+   "new shot",
+   "the treetops at sunset hold on baby"
+  ],
+  [
+   264.3,
+   "word",
+   "HOLD ON!"
+  ],
+  [
+   264.93,
+   "action",
+   "milo hops"
+  ],
+  [
+   265.94,
+   "new shot",
+   "the treetops at sunset hold hands"
+  ],
+  [
+   266.47,
+   "action",
+   "milo hops"
+  ],
+  [
+   266.74,
+   "word",
+   "WHO?"
+  ],
+  [
+   269.06,
+   "new shot",
+   "the treetops at sunset a big hug"
+  ],
+  [
+   270.64,
+   "word",
+   "HUG!"
+  ],
+  [
+   271.36,
+   "action",
+   "Milo hugs himself"
+  ],
+  [
+   272.81,
+   "new shot",
+   "the treetops at sunset wonderful tail"
+  ],
+  [
+   272.86,
+   "action",
+   "mango looks happy"
+  ],
+  [
+   273.21,
+   "action",
+   "Mango swings happily"
+  ],
+  [
+   273.21,
+   "word",
+   "WONDERFUL!"
+  ],
+  [
+   275.31,
+   "new shot",
+   "the treetops at sunset quiz time"
+  ],
+  [
+   275.94,
+   "word",
+   "QUIZ TIME!"
+  ],
+  [
+   277.5,
+   "new place",
+   "the picture board quiz 1"
+  ],
+  [
+   279.6,
+   "sign",
+   "BODY"
+  ],
+  [
+   279.95,
+   "sign",
+   "TAIL"
+  ],
+  [
+   281.43,
+   "thinking dot",
+   "1"
+  ],
+  [
+   282.11,
+   "thinking dot",
+   "2"
+  ],
+  [
+   282.78,
+   "thinking dot",
+   "3"
+  ],
+  [
+   283.27,
+   "answer",
+   "TAIL"
+  ],
+  [
+   284.38,
+   "new place",
+   "the treetops at sunset quiz 2"
+  ],
+  [
+   286.15,
+   "sign",
+   "HOLD ON"
+  ],
+  [
+   286.5,
+   "sign",
+   "SING"
+  ],
+  [
+   287.87,
+   "thinking dot",
+   "1"
+  ],
+  [
+   288.54,
+   "thinking dot",
+   "2"
+  ],
+  [
+   289.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   289.7,
+   "answer",
+   "HOLD ON"
+  ],
+  [
+   289.75,
+   "action",
+   "the tail squeezes the branch"
+  ],
+  [
+   290.94,
+   "new place",
+   "the picture board (blue) board: extra hand again"
+  ],
+  [
+   291.13,
+   "word",
+   "HOLD ON!"
+  ],
+  [
+   293.75,
+   "new place",
+   "the picture board quiz 3"
+  ],
+  [
+   296.22,
+   "word",
+   "?"
+  ],
+  [
+   297.81,
+   "new place",
+   "the picture board (pink) board: lines again"
+  ],
+  [
+   298.06,
+   "word",
+   "LITTLE LINES!"
+  ],
+  [
+   300.94,
+   "new place",
+   "the treetops at sunset good night"
+  ],
+  [
+   300.99,
+   "action",
+   "mango looks sleepy"
+  ],
+  [
+   302.79,
+   "picture",
+   "h1"
+  ],
+  [
+   303.75,
+   "new shot",
+   "the treetops at sunset goodbye"
+  ],
+  [
+   306.24,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   306.24,
+   "word",
+   "SEE YOU AT THE ZOO!"
+  ],
+  [
+   306.87,
+   "action",
+   "milo hops"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "canopy",
+   "say": "Why does a monkey have such a long tail?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.498666666666667,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.27
+    ],
+    [
+     "does",
+     0.27,
+     0.43
+    ],
+    [
+     "a",
+     0.43,
+     0.47
+    ],
+    [
+     "monkey",
+     0.47,
+     0.98
+    ],
+    [
+     "have",
+     0.98,
+     1.29
+    ],
+    [
+     "such",
+     1.29,
+     1.61
+    ],
+    [
+     "a",
+     1.61,
+     1.65
+    ],
+    [
+     "long",
+     1.65,
+     2.01
+    ],
+    [
+     "tail?",
+     2.01,
+     2.499
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: why a long tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Is it a toy? A scarf? Or a hand?",
+   "t0": 3.125,
+   "t1": 6.25,
+   "v0": 3.458666666666667,
+   "dur": 2.5794166666666665,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.21
+    ],
+    [
+     "it",
+     0.21,
+     0.3
+    ],
+    [
+     "a",
+     0.3,
+     0.35
+    ],
+    [
+     "toy?",
+     0.35,
+     0.72
+    ],
+    [
+     "A",
+     0.72,
+     0.9
+    ],
+    [
+     "scarf?",
+     1.07,
+     1.79
+    ],
+    [
+     "Or",
+     1.79,
+     2.0
+    ],
+    [
+     "a",
+     2.0,
+     2.03
+    ],
+    [
+     "hand?",
+     2.03,
+     2.579
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: guesses",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "I'm Milo. Let's find out together!",
+   "t0": 6.25,
+   "t1": 9.6875,
+   "v0": 6.578083333333333,
+   "dur": 2.6325416666666666,
+   "words": [
+    [
+     "I'm",
+     0.09,
+     0.28
+    ],
+    [
+     "Milo.",
+     0.28,
+     0.95
+    ],
+    [
+     "Let's",
+     1.28,
+     1.58
+    ],
+    [
+     "find",
+     1.58,
+     1.83
+    ],
+    [
+     "out",
+     1.83,
+     1.99
+    ],
+    [
+     "together!",
+     1.99,
+     2.63
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Welcome to The Animated Zoo, friends!",
+   "t0": 9.6875,
+   "t1": 12.8125,
+   "v0": 9.750625,
+   "dur": 2.669958333333333,
+   "words": [
+    [
+     "Welcome",
+     0.01,
+     0.52
+    ],
+    [
+     "to",
+     0.52,
+     0.63
+    ],
+    [
+     "The",
+     0.63,
+     0.77
+    ],
+    [
+     "Animated",
+     0.77,
+     1.42
+    ],
+    [
+     "Zoo,",
+     1.42,
+     1.85
+    ],
+    [
+     "friends!",
+     1.99,
+     2.67
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "gate wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Today we fly up to the rainforest treetops.",
+   "t0": 12.8125,
+   "t1": 16.25,
+   "v0": 12.960583333333332,
+   "dur": 2.9159166666666665,
+   "words": [
+    [
+     "Today",
+     0.0,
+     0.47
+    ],
+    [
+     "we",
+     0.47,
+     0.63
+    ],
+    [
+     "fly",
+     0.63,
+     1.04
+    ],
+    [
+     "up",
+     1.04,
+     1.2
+    ],
+    [
+     "to",
+     1.2,
+     1.32
+    ],
+    [
+     "the",
+     1.32,
+     1.42
+    ],
+    [
+     "rainforest",
+     1.42,
+     2.14
+    ],
+    [
+     "treetops.",
+     2.14,
+     2.916
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo close",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Here we are! Look who is sitting on the branch.",
+   "t0": 16.25,
+   "t1": 19.375,
+   "v0": 16.4165,
+   "dur": 2.6020833333333333,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.28
+    ],
+    [
+     "we",
+     0.28,
+     0.48
+    ],
+    [
+     "are!",
+     0.48,
+     0.77
+    ],
+    [
+     "Look",
+     1.0,
+     1.21
+    ],
+    [
+     "who",
+     1.21,
+     1.33
+    ],
+    [
+     "is",
+     1.33,
+     1.42
+    ],
+    [
+     "sitting",
+     1.42,
+     1.83
+    ],
+    [
+     "on",
+     1.83,
+     1.94
+    ],
+    [
+     "the",
+     1.94,
+     2.01
+    ],
+    [
+     "branch.",
+     2.01,
+     2.6
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "treetops wide",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "This is Mango. Mango is a spider monkey.",
+   "t0": 19.375,
+   "t1": 23.125,
+   "v0": 19.558583333333335,
+   "dur": 3.284125,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.28
+    ],
+    [
+     "is",
+     0.28,
+     0.5
+    ],
+    [
+     "Mango.",
+     0.5,
+     1.16
+    ],
+    [
+     "Mango",
+     1.5,
+     2.01
+    ],
+    [
+     "is",
+     2.01,
+     2.15
+    ],
+    [
+     "a",
+     2.15,
+     2.18
+    ],
+    [
+     "spider",
+     2.18,
+     2.69
+    ],
+    [
+     "monkey.",
+     2.69,
+     3.28
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "this is Mango",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Hello, Mango! Look behind her. What a long tail!",
+   "t0": 23.125,
+   "t1": 26.875,
+   "v0": 23.382708333333337,
+   "dur": 3.299,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.46
+    ],
+    [
+     "Mango!",
+     0.46,
+     1.16
+    ],
+    [
+     "Look",
+     1.16,
+     1.34
+    ],
+    [
+     "behind",
+     1.34,
+     1.8
+    ],
+    [
+     "her.",
+     1.8,
+     2.02
+    ],
+    [
+     "What",
+     2.29,
+     2.39
+    ],
+    [
+     "a",
+     2.39,
+     2.44
+    ],
+    [
+     "long",
+     2.44,
+     2.78
+    ],
+    [
+     "tail!",
+     2.78,
+     3.299
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "a long tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "It curls, and wiggles, and swishes!",
+   "t0": 26.875,
+   "t1": 30.0,
+   "v0": 27.22170833333334,
+   "dur": 2.3797083333333333,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.14
+    ],
+    [
+     "curls,",
+     0.14,
+     0.79
+    ],
+    [
+     "and",
+     0.79,
+     0.98
+    ],
+    [
+     "wiggles,",
+     0.98,
+     1.57
+    ],
+    [
+     "and",
+     1.57,
+     1.68
+    ],
+    [
+     "swishes!",
+     1.68,
+     2.38
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "curls and wiggles",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Do you have a tail? Wiggle, wiggle!",
+   "t0": 30.0,
+   "t1": 33.4375,
+   "v0": 30.141416666666675,
+   "dur": 2.343375,
+   "words": [
+    [
+     "Do",
+     0.04,
+     0.13
+    ],
+    [
+     "you",
+     0.13,
+     0.25
+    ],
+    [
+     "have",
+     0.25,
+     0.46
+    ],
+    [
+     "a",
+     0.46,
+     0.52
+    ],
+    [
+     "tail?",
+     0.52,
+     1.06
+    ],
+    [
+     "Wiggle,",
+     1.38,
+     1.82
+    ],
+    [
+     "wiggle!",
+     1.82,
+     2.34
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Let's measure. Mango stands up tall. This is her body.",
+   "t0": 33.4375,
+   "t1": 37.8125,
+   "v0": 33.624791666666674,
+   "dur": 3.9804166666666667,
+   "words": [
+    [
+     "Let's",
+     0.0,
+     0.33
+    ],
+    [
+     "measure.",
+     0.33,
+     0.87
+    ],
+    [
+     "Mango",
+     1.11,
+     1.53
+    ],
+    [
+     "stands",
+     1.53,
+     1.95
+    ],
+    [
+     "up",
+     1.95,
+     2.08
+    ],
+    [
+     "tall.",
+     2.08,
+     2.6
+    ],
+    [
+     "This",
+     2.87,
+     3.13
+    ],
+    [
+     "is",
+     3.13,
+     3.31
+    ],
+    [
+     "her",
+     3.31,
+     3.41
+    ],
+    [
+     "body.",
+     3.41,
+     3.98
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: her body",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And this is her tail, stretched out next to her.",
+   "t0": 37.8125,
+   "t1": 41.5625,
+   "v0": 38.145208333333336,
+   "dur": 3.0065833333333334,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.24
+    ],
+    [
+     "this",
+     0.24,
+     0.5
+    ],
+    [
+     "is",
+     0.5,
+     0.71
+    ],
+    [
+     "her",
+     0.71,
+     0.88
+    ],
+    [
+     "tail,",
+     0.88,
+     1.42
+    ],
+    [
+     "stretched",
+     1.66,
+     2.13
+    ],
+    [
+     "out",
+     2.13,
+     2.28
+    ],
+    [
+     "next",
+     2.28,
+     2.6
+    ],
+    [
+     "to",
+     2.6,
+     2.71
+    ],
+    [
+     "her.",
+     2.71,
+     3.007
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: her tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Which one is longer? Her body, or her tail?",
+   "t0": 41.5625,
+   "t1": 48.125,
+   "v0": 41.69179166666667,
+   "dur": 2.9233333333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.23
+    ],
+    [
+     "one",
+     0.23,
+     0.36
+    ],
+    [
+     "is",
+     0.36,
+     0.48
+    ],
+    [
+     "longer?",
+     0.48,
+     1.09
+    ],
+    [
+     "Her",
+     1.44,
+     1.54
+    ],
+    [
+     "body,",
+     1.54,
+     2.1
+    ],
+    [
+     "or",
+     2.1,
+     2.24
+    ],
+    [
+     "her",
+     2.24,
+     2.39
+    ],
+    [
+     "tail?",
+     2.39,
+     2.92
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Her tail! A spider monkey's tail is longer than its body.",
+   "t0": 48.125,
+   "t1": 52.8125,
+   "v0": 48.355125,
+   "dur": 4.09375,
+   "words": [
+    [
+     "Her",
+     0.01,
+     0.18
+    ],
+    [
+     "tail!",
+     0.18,
+     0.73
+    ],
+    [
+     "A",
+     1.09,
+     1.13
+    ],
+    [
+     "spider",
+     1.13,
+     1.7
+    ],
+    [
+     "monkey's",
+     1.7,
+     2.23
+    ],
+    [
+     "tail",
+     2.23,
+     2.64
+    ],
+    [
+     "is",
+     2.64,
+     2.84
+    ],
+    [
+     "longer",
+     2.84,
+     3.28
+    ],
+    [
+     "than",
+     3.28,
+     3.42
+    ],
+    [
+     "its",
+     3.42,
+     3.58
+    ],
+    [
+     "body.",
+     3.58,
+     4.09
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: longer",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Wow! Can you stretch out long, like a tail? Stretch!",
+   "t0": 52.8125,
+   "t1": 56.5625,
+   "v0": 52.988875,
+   "dur": 3.359541666666667,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.46
+    ],
+    [
+     "Can",
+     0.46,
+     0.62
+    ],
+    [
+     "you",
+     0.62,
+     0.7
+    ],
+    [
+     "stretch",
+     0.7,
+     1.08
+    ],
+    [
+     "out",
+     1.08,
+     1.25
+    ],
+    [
+     "long,",
+     1.25,
+     1.57
+    ],
+    [
+     "like",
+     1.57,
+     1.75
+    ],
+    [
+     "a",
+     1.75,
+     1.78
+    ],
+    [
+     "tail?",
+     1.78,
+     2.29
+    ],
+    [
+     "Stretch!",
+     2.67,
+     3.36
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "stretch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "But what does Mango do with her long tail? Watch!",
+   "t0": 56.5625,
+   "t1": 60.9375,
+   "v0": 56.888416666666664,
+   "dur": 3.2865,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.07
+    ],
+    [
+     "what",
+     0.07,
+     0.27
+    ],
+    [
+     "does",
+     0.27,
+     0.48
+    ],
+    [
+     "Mango",
+     0.48,
+     0.92
+    ],
+    [
+     "do",
+     0.92,
+     1.09
+    ],
+    [
+     "with",
+     1.09,
+     1.22
+    ],
+    [
+     "her",
+     1.22,
+     1.32
+    ],
+    [
+     "long",
+     1.32,
+     1.69
+    ],
+    [
+     "tail?",
+     1.69,
+     2.23
+    ],
+    [
+     "Watch!",
+     2.66,
+     3.287
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "watch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "She wraps it around the branch, and down she goes!",
+   "t0": 60.9375,
+   "t1": 64.375,
+   "v0": 61.11491666666666,
+   "dur": 2.9779583333333335,
+   "words": [
+    [
+     "She",
+     0.02,
+     0.2
+    ],
+    [
+     "wraps",
+     0.2,
+     0.59
+    ],
+    [
+     "it",
+     0.59,
+     0.7
+    ],
+    [
+     "around",
+     0.7,
+     1.0
+    ],
+    [
+     "the",
+     1.0,
+     1.06
+    ],
+    [
+     "branch,",
+     1.06,
+     1.6
+    ],
+    [
+     "and",
+     1.76,
+     1.91
+    ],
+    [
+     "down",
+     1.91,
+     2.21
+    ],
+    [
+     "she",
+     2.21,
+     2.39
+    ],
+    [
+     "goes!",
+     2.39,
+     2.978
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "she swings down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Her tail holds on tight. Squeeze!",
+   "t0": 64.375,
+   "t1": 67.5,
+   "v0": 64.632875,
+   "dur": 2.4250416666666665,
+   "words": [
+    [
+     "Her",
+     0.0,
+     0.17
+    ],
+    [
+     "tail",
+     0.17,
+     0.51
+    ],
+    [
+     "holds",
+     0.51,
+     0.84
+    ],
+    [
+     "on",
+     0.84,
+     1.02
+    ],
+    [
+     "tight.",
+     1.02,
+     1.52
+    ],
+    [
+     "Squeeze!",
+     1.69,
+     2.42
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "squeeze",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A spider monkey's tail can grab, and hold on.",
+   "t0": 67.5,
+   "t1": 71.25,
+   "v0": 67.59791666666668,
+   "dur": 3.298875,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.05
+    ],
+    [
+     "spider",
+     0.05,
+     0.55
+    ],
+    [
+     "monkey's",
+     0.55,
+     1.07
+    ],
+    [
+     "tail",
+     1.07,
+     1.37
+    ],
+    [
+     "can",
+     1.37,
+     1.6
+    ],
+    [
+     "grab,",
+     1.6,
+     2.15
+    ],
+    [
+     "and",
+     2.42,
+     2.54
+    ],
+    [
+     "hold",
+     2.54,
+     2.91
+    ],
+    [
+     "on.",
+     2.91,
+     3.299
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: grab",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Round and round the branch it goes.",
+   "t0": 71.25,
+   "t1": 74.0625,
+   "v0": 71.43679166666668,
+   "dur": 2.2664583333333335,
+   "words": [
+    [
+     "Round",
+     0.02,
+     0.63
+    ],
+    [
+     "and",
+     0.63,
+     0.87
+    ],
+    [
+     "round",
+     0.87,
+     1.12
+    ],
+    [
+     "the",
+     1.12,
+     1.18
+    ],
+    [
+     "branch",
+     1.18,
+     1.59
+    ],
+    [
+     "it",
+     1.59,
+     1.68
+    ],
+    [
+     "goes.",
+     1.68,
+     2.266
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "round and round",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "It holds on, just like an extra hand!",
+   "t0": 74.0625,
+   "t1": 77.5,
+   "v0": 74.24325000000002,
+   "dur": 2.7740416666666667,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.15
+    ],
+    [
+     "holds",
+     0.15,
+     0.59
+    ],
+    [
+     "on,",
+     0.59,
+     1.01
+    ],
+    [
+     "just",
+     1.24,
+     1.51
+    ],
+    [
+     "like",
+     1.51,
+     1.67
+    ],
+    [
+     "an",
+     1.67,
+     1.74
+    ],
+    [
+     "extra",
+     1.74,
+     2.2
+    ],
+    [
+     "hand!",
+     2.2,
+     2.77
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: extra hand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Can you grab with your hand? Squeeze, squeeze!",
+   "t0": 77.5,
+   "t1": 80.625,
+   "v0": 77.55729166666669,
+   "dur": 2.8345833333333332,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "grab",
+     0.34,
+     0.71
+    ],
+    [
+     "with",
+     0.71,
+     0.84
+    ],
+    [
+     "your",
+     0.84,
+     0.93
+    ],
+    [
+     "hand?",
+     0.93,
+     1.42
+    ],
+    [
+     "Squeeze,",
+     1.73,
+     2.18
+    ],
+    [
+     "squeeze!",
+     2.18,
+     2.83
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your hand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Let's count what Mango can hold on with.",
+   "t0": 80.625,
+   "t1": 83.75,
+   "v0": 80.93187500000002,
+   "dur": 2.536,
+   "words": [
+    [
+     "Let's",
+     0.0,
+     0.31
+    ],
+    [
+     "count",
+     0.31,
+     0.63
+    ],
+    [
+     "what",
+     0.63,
+     0.78
+    ],
+    [
+     "Mango",
+     0.78,
+     1.34
+    ],
+    [
+     "can",
+     1.34,
+     1.56
+    ],
+    [
+     "hold",
+     1.56,
+     1.94
+    ],
+    [
+     "on",
+     1.94,
+     2.2
+    ],
+    [
+     "with.",
+     2.2,
+     2.536
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: let's count",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "One hand, two hands,",
+   "t0": 83.75,
+   "t1": 85.9375,
+   "v0": 84.00787500000003,
+   "dur": 1.5630833333333334,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.25
+    ],
+    [
+     "hand,",
+     0.25,
+     0.72
+    ],
+    [
+     "two",
+     0.72,
+     0.98
+    ],
+    [
+     "hands,",
+     0.98,
+     1.56
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: hands",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "one foot, two feet,",
+   "t0": 85.9375,
+   "t1": 88.125,
+   "v0": 86.11095833333337,
+   "dur": 1.566125,
+   "words": [
+    [
+     "one",
+     0.01,
+     0.33
+    ],
+    [
+     "foot,",
+     0.33,
+     0.79
+    ],
+    [
+     "two",
+     0.79,
+     1.02
+    ],
+    [
+     "feet,",
+     1.02,
+     1.566
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: feet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "and her long tail. Five!",
+   "t0": 88.125,
+   "t1": 90.625,
+   "v0": 88.21708333333338,
+   "dur": 2.078291666666667,
+   "words": [
+    [
+     "and",
+     0.01,
+     0.19
+    ],
+    [
+     "her",
+     0.19,
+     0.29
+    ],
+    [
+     "long",
+     0.29,
+     0.66
+    ],
+    [
+     "tail.",
+     0.66,
+     1.15
+    ],
+    [
+     "Five!",
+     1.41,
+     2.078
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: five",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "How many can Mango hold on with? Four, or five?",
+   "t0": 90.625,
+   "t1": 97.8125,
+   "v0": 90.83537500000006,
+   "dur": 3.5408333333333335,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.14
+    ],
+    [
+     "many",
+     0.14,
+     0.34
+    ],
+    [
+     "can",
+     0.34,
+     0.51
+    ],
+    [
+     "Mango",
+     0.51,
+     0.95
+    ],
+    [
+     "hold",
+     0.95,
+     1.33
+    ],
+    [
+     "on",
+     1.33,
+     1.57
+    ],
+    [
+     "with?",
+     1.57,
+     1.91
+    ],
+    [
+     "Four,",
+     2.15,
+     2.8
+    ],
+    [
+     "or",
+     2.8,
+     2.89
+    ],
+    [
+     "five?",
+     2.89,
+     3.54
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Five! Two hands, two feet, and one tail.",
+   "t0": 97.8125,
+   "t1": 101.25,
+   "v0": 98.1162083333334,
+   "dur": 2.885625,
+   "words": [
+    [
+     "Five!",
+     0.01,
+     0.61
+    ],
+    [
+     "Two",
+     0.61,
+     0.91
+    ],
+    [
+     "hands,",
+     0.91,
+     1.46
+    ],
+    [
+     "two",
+     1.46,
+     1.74
+    ],
+    [
+     "feet,",
+     1.74,
+     2.07
+    ],
+    [
+     "and",
+     2.07,
+     2.19
+    ],
+    [
+     "one",
+     2.19,
+     2.42
+    ],
+    [
+     "tail.",
+     2.42,
+     2.886
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: five again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Mango has five ways to hold on!",
+   "t0": 101.25,
+   "t1": 104.375,
+   "v0": 101.54183333333341,
+   "dur": 2.3589166666666666,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.5
+    ],
+    [
+     "has",
+     0.5,
+     0.81
+    ],
+    [
+     "five",
+     0.81,
+     1.24
+    ],
+    [
+     "ways",
+     1.24,
+     1.58
+    ],
+    [
+     "to",
+     1.58,
+     1.67
+    ],
+    [
+     "hold",
+     1.67,
+     1.99
+    ],
+    [
+     "on!",
+     1.99,
+     2.359
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "five ways",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "How many hands do you have? Show me!",
+   "t0": 104.375,
+   "t1": 108.125,
+   "v0": 104.4407500000001,
+   "dur": 2.2733333333333334,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.35
+    ],
+    [
+     "hands",
+     0.35,
+     0.73
+    ],
+    [
+     "do",
+     0.73,
+     0.81
+    ],
+    [
+     "you",
+     0.81,
+     0.92
+    ],
+    [
+     "have?",
+     0.92,
+     1.4
+    ],
+    [
+     "Show",
+     1.63,
+     1.94
+    ],
+    [
+     "me!",
+     1.94,
+     2.27
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "your hands",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Look! A tree full of golden fruit.",
+   "t0": 108.125,
+   "t1": 110.9375,
+   "v0": 108.25408333333344,
+   "dur": 2.361291666666667,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.58
+    ],
+    [
+     "A",
+     0.58,
+     0.62
+    ],
+    [
+     "tree",
+     0.62,
+     0.95
+    ],
+    [
+     "full",
+     0.95,
+     1.26
+    ],
+    [
+     "of",
+     1.26,
+     1.37
+    ],
+    [
+     "golden",
+     1.37,
+     1.8
+    ],
+    [
+     "fruit.",
+     1.8,
+     2.36
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the fruit tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Mango hangs upside down, just by her tail!",
+   "t0": 110.9375,
+   "t1": 114.6875,
+   "v0": 111.15537500000012,
+   "dur": 3.1918333333333333,
+   "words": [
+    [
+     "Mango",
+     0.0,
+     0.41
+    ],
+    [
+     "hangs",
+     0.41,
+     0.86
+    ],
+    [
+     "upside",
+     0.86,
+     1.31
+    ],
+    [
+     "down,",
+     1.31,
+     1.77
+    ],
+    [
+     "just",
+     2.03,
+     2.34
+    ],
+    [
+     "by",
+     2.34,
+     2.54
+    ],
+    [
+     "her",
+     2.54,
+     2.69
+    ],
+    [
+     "tail!",
+     2.69,
+     3.19
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "upside down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "bigtree",
+   "say": "Spider monkeys spend most of the day high up in the treetops.",
+   "t0": 114.6875,
+   "t1": 119.375,
+   "v0": 114.88720833333346,
+   "dur": 4.007125,
+   "words": [
+    [
+     "Spider",
+     0.01,
+     0.53
+    ],
+    [
+     "monkeys",
+     0.53,
+     1.27
+    ],
+    [
+     "spend",
+     1.43,
+     1.74
+    ],
+    [
+     "most",
+     1.74,
+     2.05
+    ],
+    [
+     "of",
+     2.05,
+     2.11
+    ],
+    [
+     "the",
+     2.11,
+     2.19
+    ],
+    [
+     "day",
+     2.19,
+     2.44
+    ],
+    [
+     "high",
+     2.44,
+     2.84
+    ],
+    [
+     "up",
+     2.84,
+     3.01
+    ],
+    [
+     "in",
+     3.01,
+     3.11
+    ],
+    [
+     "the",
+     3.11,
+     3.18
+    ],
+    [
+     "treetops.",
+     3.18,
+     4.007
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "high up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "They climb, and swing, from branch to branch.",
+   "t0": 119.375,
+   "t1": 122.8125,
+   "v0": 119.43433333333347,
+   "dur": 2.9787916666666665,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.18
+    ],
+    [
+     "climb,",
+     0.18,
+     0.7
+    ],
+    [
+     "and",
+     0.7,
+     0.86
+    ],
+    [
+     "swing,",
+     0.86,
+     1.42
+    ],
+    [
+     "from",
+     1.62,
+     1.85
+    ],
+    [
+     "branch",
+     1.85,
+     2.3
+    ],
+    [
+     "to",
+     2.3,
+     2.4
+    ],
+    [
+     "branch.",
+     2.4,
+     2.979
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "swing along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Sometimes spider monkeys hang by their tails just to play!",
+   "t0": 122.8125,
+   "t1": 127.1875,
+   "v0": 122.95312500000014,
+   "dur": 4.041125,
+   "words": [
+    [
+     "Sometimes",
+     0.01,
+     0.59
+    ],
+    [
+     "spider",
+     0.59,
+     1.1
+    ],
+    [
+     "monkeys",
+     1.1,
+     1.72
+    ],
+    [
+     "hang",
+     1.98,
+     2.35
+    ],
+    [
+     "by",
+     2.35,
+     2.51
+    ],
+    [
+     "their",
+     2.51,
+     2.66
+    ],
+    [
+     "tails",
+     2.66,
+     3.22
+    ],
+    [
+     "just",
+     3.22,
+     3.51
+    ],
+    [
+     "to",
+     3.51,
+     3.59
+    ],
+    [
+     "play!",
+     3.59,
+     4.04
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "hang to play",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "What do you like to play?",
+   "t0": 127.1875,
+   "t1": 130.3125,
+   "v0": 127.53425000000014,
+   "dur": 1.3174583333333334,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.2
+    ],
+    [
+     "do",
+     0.2,
+     0.26
+    ],
+    [
+     "you",
+     0.26,
+     0.41
+    ],
+    [
+     "like",
+     0.41,
+     0.61
+    ],
+    [
+     "to",
+     0.61,
+     0.72
+    ],
+    [
+     "play?",
+     0.72,
+     1.317
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "your play",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A spider monkey's tail can hold up its whole body.",
+   "t0": 130.3125,
+   "t1": 134.375,
+   "v0": 130.59170833333346,
+   "dur": 3.409291666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.05
+    ],
+    [
+     "spider",
+     0.05,
+     0.67
+    ],
+    [
+     "monkey's",
+     0.67,
+     1.2
+    ],
+    [
+     "tail",
+     1.2,
+     1.65
+    ],
+    [
+     "can",
+     1.84,
+     2.01
+    ],
+    [
+     "hold",
+     2.01,
+     2.33
+    ],
+    [
+     "up",
+     2.33,
+     2.47
+    ],
+    [
+     "its",
+     2.47,
+     2.61
+    ],
+    [
+     "whole",
+     2.61,
+     2.89
+    ],
+    [
+     "body.",
+     2.89,
+     3.409
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: whole body",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy",
+   "say": "Can you tilt your head, like Mango? Tilt!",
+   "t0": 134.375,
+   "t1": 137.5,
+   "v0": 134.5410000000001,
+   "dur": 2.742583333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.37
+    ],
+    [
+     "tilt",
+     0.37,
+     0.67
+    ],
+    [
+     "your",
+     0.67,
+     0.76
+    ],
+    [
+     "head,",
+     0.76,
+     1.01
+    ],
+    [
+     "like",
+     1.01,
+     1.18
+    ],
+    [
+     "Mango?",
+     1.18,
+     1.79
+    ],
+    [
+     "Tilt!",
+     2.15,
+     2.74
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "tilt",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Now both of her hands are free. What will she do?",
+   "t0": 137.5,
+   "t1": 142.1875,
+   "v0": 137.82358333333343,
+   "dur": 3.1967083333333335,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.34
+    ],
+    [
+     "both",
+     0.34,
+     0.67
+    ],
+    [
+     "of",
+     0.67,
+     0.74
+    ],
+    [
+     "her",
+     0.74,
+     0.84
+    ],
+    [
+     "hands",
+     0.84,
+     1.29
+    ],
+    [
+     "are",
+     1.29,
+     1.37
+    ],
+    [
+     "free.",
+     1.37,
+     1.93
+    ],
+    [
+     "What",
+     2.28,
+     2.43
+    ],
+    [
+     "will",
+     2.43,
+     2.55
+    ],
+    [
+     "she",
+     2.55,
+     2.79
+    ],
+    [
+     "do?",
+     2.79,
+     3.197
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hands free",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Can Mango pick fruit while she hangs? Yes, or no?",
+   "t0": 142.1875,
+   "t1": 149.375,
+   "v0": 142.36029166666677,
+   "dur": 3.4846666666666666,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.22
+    ],
+    [
+     "Mango",
+     0.22,
+     0.66
+    ],
+    [
+     "pick",
+     0.66,
+     0.95
+    ],
+    [
+     "fruit",
+     0.95,
+     1.19
+    ],
+    [
+     "while",
+     1.19,
+     1.34
+    ],
+    [
+     "she",
+     1.34,
+     1.5
+    ],
+    [
+     "hangs?",
+     1.5,
+     2.06
+    ],
+    [
+     "Yes,",
+     2.39,
+     2.87
+    ],
+    [
+     "or",
+     2.87,
+     3.08
+    ],
+    [
+     "no?",
+     3.08,
+     3.48
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Yes! One fruit, two fruits. Both hands are busy!",
+   "t0": 149.375,
+   "t1": 153.4375,
+   "v0": 149.58495833333342,
+   "dur": 3.3809583333333335,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.57
+    ],
+    [
+     "One",
+     0.57,
+     0.81
+    ],
+    [
+     "fruit,",
+     0.81,
+     1.18
+    ],
+    [
+     "two",
+     1.18,
+     1.41
+    ],
+    [
+     "fruits.",
+     1.41,
+     1.9
+    ],
+    [
+     "Both",
+     2.16,
+     2.41
+    ],
+    [
+     "hands",
+     2.41,
+     2.75
+    ],
+    [
+     "are",
+     2.75,
+     2.83
+    ],
+    [
+     "busy!",
+     2.83,
+     3.38
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "two fruits",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Count the fruits with me. One, two!",
+   "t0": 153.4375,
+   "t1": 156.25,
+   "v0": 153.50591666666674,
+   "dur": 2.48375,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.31
+    ],
+    [
+     "the",
+     0.31,
+     0.38
+    ],
+    [
+     "fruits",
+     0.38,
+     0.74
+    ],
+    [
+     "with",
+     0.74,
+     0.9
+    ],
+    [
+     "me.",
+     0.9,
+     1.26
+    ],
+    [
+     "One,",
+     1.59,
+     1.88
+    ],
+    [
+     "two!",
+     1.88,
+     2.48
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the fruits",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Her tail holds on, so her hands can pick, and eat.",
+   "t0": 156.25,
+   "t1": 160.3125,
+   "v0": 156.5296666666667,
+   "dur": 3.3556666666666666,
+   "words": [
+    [
+     "Her",
+     0.0,
+     0.17
+    ],
+    [
+     "tail",
+     0.17,
+     0.51
+    ],
+    [
+     "holds",
+     0.51,
+     0.86
+    ],
+    [
+     "on,",
+     0.86,
+     1.26
+    ],
+    [
+     "so",
+     1.52,
+     1.68
+    ],
+    [
+     "her",
+     1.68,
+     1.78
+    ],
+    [
+     "hands",
+     1.78,
+     2.16
+    ],
+    [
+     "can",
+     2.16,
+     2.37
+    ],
+    [
+     "pick,",
+     2.37,
+     2.77
+    ],
+    [
+     "and",
+     2.77,
+     2.92
+    ],
+    [
+     "eat.",
+     2.92,
+     3.356
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: tail holds, hands eat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Two hands for fruit, and one tail to hold on.",
+   "t0": 160.3125,
+   "t1": 164.0625,
+   "v0": 160.42533333333338,
+   "dur": 3.1606666666666667,
+   "words": [
+    [
+     "Two",
+     0.01,
+     0.22
+    ],
+    [
+     "hands",
+     0.22,
+     0.61
+    ],
+    [
+     "for",
+     0.61,
+     0.72
+    ],
+    [
+     "fruit,",
+     0.72,
+     1.29
+    ],
+    [
+     "and",
+     1.52,
+     1.69
+    ],
+    [
+     "one",
+     1.69,
+     1.96
+    ],
+    [
+     "tail",
+     1.96,
+     2.38
+    ],
+    [
+     "to",
+     2.38,
+     2.48
+    ],
+    [
+     "hold",
+     2.48,
+     2.76
+    ],
+    [
+     "on.",
+     2.76,
+     3.16
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "two hands one tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Munch, munch! A snack, upside down!",
+   "t0": 164.0625,
+   "t1": 167.1875,
+   "v0": 164.12600000000003,
+   "dur": 2.7623333333333333,
+   "words": [
+    [
+     "Munch,",
+     0.0,
+     0.47
+    ],
+    [
+     "munch!",
+     0.47,
+     0.96
+    ],
+    [
+     "A",
+     1.18,
+     1.24
+    ],
+    [
+     "snack,",
+     1.24,
+     1.81
+    ],
+    [
+     "upside",
+     1.81,
+     2.29
+    ],
+    [
+     "down!",
+     2.29,
+     2.76
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "munch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Pretend to munch a fruit with me. Yum!",
+   "t0": 167.1875,
+   "t1": 170.3125,
+   "v0": 167.42833333333337,
+   "dur": 2.6084583333333335,
+   "words": [
+    [
+     "Pretend",
+     0.0,
+     0.56
+    ],
+    [
+     "to",
+     0.56,
+     0.66
+    ],
+    [
+     "munch",
+     0.66,
+     0.86
+    ],
+    [
+     "a",
+     0.86,
+     0.9
+    ],
+    [
+     "fruit",
+     0.9,
+     1.15
+    ],
+    [
+     "with",
+     1.15,
+     1.33
+    ],
+    [
+     "me.",
+     1.33,
+     1.65
+    ],
+    [
+     "Yum!",
+     2.07,
+     2.608
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "pretend to munch",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Do you know why she is called a spider monkey?",
+   "t0": 170.3125,
+   "t1": 174.0625,
+   "v0": 170.5767916666667,
+   "dur": 2.489875,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.21
+    ],
+    [
+     "know",
+     0.21,
+     0.41
+    ],
+    [
+     "why",
+     0.41,
+     0.7
+    ],
+    [
+     "she",
+     0.7,
+     0.91
+    ],
+    [
+     "is",
+     0.91,
+     1.02
+    ],
+    [
+     "called",
+     1.02,
+     1.35
+    ],
+    [
+     "a",
+     1.35,
+     1.38
+    ],
+    [
+     "spider",
+     1.38,
+     1.93
+    ],
+    [
+     "monkey?",
+     1.93,
+     2.49
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "board: why spider",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "When she hangs, her long arms and legs dangle down.",
+   "t0": 174.0625,
+   "t1": 178.4375,
+   "v0": 174.40666666666672,
+   "dur": 3.6995416666666667,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.13
+    ],
+    [
+     "she",
+     0.13,
+     0.31
+    ],
+    [
+     "hangs,",
+     0.31,
+     0.94
+    ],
+    [
+     "her",
+     1.19,
+     1.32
+    ],
+    [
+     "long",
+     1.32,
+     1.75
+    ],
+    [
+     "arms",
+     1.75,
+     2.28
+    ],
+    [
+     "and",
+     2.28,
+     2.39
+    ],
+    [
+     "legs",
+     2.39,
+     2.8
+    ],
+    [
+     "dangle",
+     2.8,
+     3.23
+    ],
+    [
+     "down.",
+     3.23,
+     3.7
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "dangle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Hello, upside-down Mango!",
+   "t0": 178.4375,
+   "t1": 180.9375,
+   "v0": 178.6462083333334,
+   "dur": 2.011625,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.57
+    ],
+    [
+     "upside-down",
+     0.71,
+     1.41
+    ],
+    [
+     "Mango!",
+     1.41,
+     2.01
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "hello upside down",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Long arms, long legs, a little bit like a spider!",
+   "t0": 180.9375,
+   "t1": 185.0,
+   "v0": 181.1978333333334,
+   "dur": 3.4964583333333334,
+   "words": [
+    [
+     "Long",
+     0.01,
+     0.41
+    ],
+    [
+     "arms,",
+     0.41,
+     1.05
+    ],
+    [
+     "long",
+     1.05,
+     1.43
+    ],
+    [
+     "legs,",
+     1.43,
+     1.89
+    ],
+    [
+     "a",
+     2.15,
+     2.21
+    ],
+    [
+     "little",
+     2.21,
+     2.45
+    ],
+    [
+     "bit",
+     2.45,
+     2.61
+    ],
+    [
+     "like",
+     2.61,
+     2.79
+    ],
+    [
+     "a",
+     2.79,
+     2.82
+    ],
+    [
+     "spider!",
+     2.82,
+     3.496
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: like a spider",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "That is how the spider monkey got its name!",
+   "t0": 185.0,
+   "t1": 188.125,
+   "v0": 185.2342916666667,
+   "dur": 2.6219166666666665,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.31
+    ],
+    [
+     "is",
+     0.31,
+     0.49
+    ],
+    [
+     "how",
+     0.49,
+     0.67
+    ],
+    [
+     "the",
+     0.67,
+     0.76
+    ],
+    [
+     "spider",
+     0.76,
+     1.31
+    ],
+    [
+     "monkey",
+     1.31,
+     1.75
+    ],
+    [
+     "got",
+     1.75,
+     1.98
+    ],
+    [
+     "its",
+     1.98,
+     2.17
+    ],
+    [
+     "name!",
+     2.17,
+     2.62
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "figtree",
+   "say": "Can you wiggle your arms like a spider monkey?",
+   "t0": 188.125,
+   "t1": 192.1875,
+   "v0": 188.39620833333336,
+   "dur": 2.840625,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.18
+    ],
+    [
+     "you",
+     0.18,
+     0.32
+    ],
+    [
+     "wiggle",
+     0.32,
+     0.68
+    ],
+    [
+     "your",
+     0.68,
+     0.88
+    ],
+    [
+     "arms",
+     0.88,
+     1.49
+    ],
+    [
+     "like",
+     1.49,
+     1.7
+    ],
+    [
+     "a",
+     1.7,
+     1.74
+    ],
+    [
+     "spider",
+     1.74,
+     2.28
+    ],
+    [
+     "monkey?",
+     2.28,
+     2.84
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "wiggle your arms",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Mango swings over to a tree full of flowers.",
+   "t0": 192.1875,
+   "t1": 195.625,
+   "v0": 192.37683333333334,
+   "dur": 3.02725,
+   "words": [
+    [
+     "Mango",
+     0.01,
+     0.51
+    ],
+    [
+     "swings",
+     0.51,
+     0.99
+    ],
+    [
+     "over",
+     0.99,
+     1.19
+    ],
+    [
+     "to",
+     1.19,
+     1.38
+    ],
+    [
+     "a",
+     1.38,
+     1.43
+    ],
+    [
+     "tree",
+     1.43,
+     2.04
+    ],
+    [
+     "full",
+     2.04,
+     2.2
+    ],
+    [
+     "of",
+     2.2,
+     2.27
+    ],
+    [
+     "flowers.",
+     2.27,
+     3.027
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the flower tree",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Look closely at the very tip of her tail.",
+   "t0": 195.625,
+   "t1": 199.0625,
+   "v0": 195.94408333333334,
+   "dur": 2.656875,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.3
+    ],
+    [
+     "closely",
+     0.3,
+     0.98
+    ],
+    [
+     "at",
+     0.98,
+     1.12
+    ],
+    [
+     "the",
+     1.12,
+     1.2
+    ],
+    [
+     "very",
+     1.2,
+     1.66
+    ],
+    [
+     "tip",
+     1.66,
+     1.95
+    ],
+    [
+     "of",
+     1.95,
+     2.04
+    ],
+    [
+     "her",
+     2.04,
+     2.14
+    ],
+    [
+     "tail.",
+     2.14,
+     2.657
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "the tip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Under the tip, there are little lines.",
+   "t0": 199.0625,
+   "t1": 201.875,
+   "v0": 199.14095833333334,
+   "dur": 2.2604166666666665,
+   "words": [
+    [
+     "Under",
+     0.01,
+     0.31
+    ],
+    [
+     "the",
+     0.31,
+     0.42
+    ],
+    [
+     "tip,",
+     0.42,
+     0.88
+    ],
+    [
+     "there",
+     0.88,
+     1.25
+    ],
+    [
+     "are",
+     1.25,
+     1.28
+    ],
+    [
+     "little",
+     1.28,
+     1.58
+    ],
+    [
+     "lines.",
+     1.58,
+     2.26
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: little lines",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Now look at your fingertip. You have little lines, too!",
+   "t0": 201.875,
+   "t1": 206.25,
+   "v0": 201.941375,
+   "dur": 3.3897083333333335,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.31
+    ],
+    [
+     "look",
+     0.31,
+     0.55
+    ],
+    [
+     "at",
+     0.55,
+     0.61
+    ],
+    [
+     "your",
+     0.61,
+     0.71
+    ],
+    [
+     "fingertip.",
+     0.71,
+     1.44
+    ],
+    [
+     "You",
+     1.79,
+     1.89
+    ],
+    [
+     "have",
+     1.89,
+     2.11
+    ],
+    [
+     "little",
+     2.11,
+     2.35
+    ],
+    [
+     "lines,",
+     2.35,
+     2.91
+    ],
+    [
+     "too!",
+     2.91,
+     3.39
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "board: your fingertip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Your little lines are only yours!",
+   "t0": 206.25,
+   "t1": 209.0625,
+   "v0": 206.47108333333333,
+   "dur": 2.233416666666667,
+   "words": [
+    [
+     "Your",
+     0.0,
+     0.16
+    ],
+    [
+     "little",
+     0.16,
+     0.43
+    ],
+    [
+     "lines",
+     0.43,
+     1.09
+    ],
+    [
+     "are",
+     1.09,
+     1.24
+    ],
+    [
+     "only",
+     1.24,
+     1.54
+    ],
+    [
+     "yours!",
+     1.54,
+     2.23
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "only yours",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here are three spider monkey tails. One, two, three.",
+   "t0": 209.0625,
+   "t1": 213.4375,
+   "v0": 209.2445,
+   "dur": 3.78325,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.23
+    ],
+    [
+     "are",
+     0.23,
+     0.33
+    ],
+    [
+     "three",
+     0.33,
+     0.77
+    ],
+    [
+     "spider",
+     0.77,
+     1.27
+    ],
+    [
+     "monkey",
+     1.27,
+     1.66
+    ],
+    [
+     "tails.",
+     1.66,
+     2.27
+    ],
+    [
+     "One,",
+     2.6,
+     2.96
+    ],
+    [
+     "two,",
+     2.96,
+     3.26
+    ],
+    [
+     "three.",
+     3.26,
+     3.78
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: three tails",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Every spider monkey has its own lines. Look, all different!",
+   "t0": 213.4375,
+   "t1": 218.125,
+   "v0": 213.56775,
+   "dur": 4.3334166666666665,
+   "words": [
+    [
+     "Every",
+     0.05,
+     0.38
+    ],
+    [
+     "spider",
+     0.38,
+     0.87
+    ],
+    [
+     "monkey",
+     0.87,
+     1.32
+    ],
+    [
+     "has",
+     1.32,
+     1.55
+    ],
+    [
+     "its",
+     1.55,
+     1.7
+    ],
+    [
+     "own",
+     1.7,
+     1.89
+    ],
+    [
+     "lines.",
+     1.89,
+     2.52
+    ],
+    [
+     "Look,",
+     2.94,
+     3.45
+    ],
+    [
+     "all",
+     3.45,
+     3.69
+    ],
+    [
+     "different!",
+     3.69,
+     4.33
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: all different",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Are Mango's lines the same as her friend's? Yes, or no?",
+   "t0": 218.125,
+   "t1": 225.9375,
+   "v0": 218.44116666666665,
+   "dur": 3.9665,
+   "words": [
+    [
+     "Are",
+     0.01,
+     0.13
+    ],
+    [
+     "Mango's",
+     0.13,
+     0.65
+    ],
+    [
+     "lines",
+     0.65,
+     1.16
+    ],
+    [
+     "the",
+     1.16,
+     1.24
+    ],
+    [
+     "same",
+     1.24,
+     1.58
+    ],
+    [
+     "as",
+     1.58,
+     1.68
+    ],
+    [
+     "her",
+     1.68,
+     1.76
+    ],
+    [
+     "friend's?",
+     1.76,
+     2.38
+    ],
+    [
+     "Yes,",
+     2.77,
+     3.33
+    ],
+    [
+     "or",
+     3.33,
+     3.55
+    ],
+    [
+     "no?",
+     3.55,
+     3.966
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 4",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "No! Mango's lines are only Mango's.",
+   "t0": 225.9375,
+   "t1": 229.0625,
+   "v0": 226.14766666666662,
+   "dur": 2.6398333333333333,
+   "words": [
+    [
+     "No!",
+     0.0,
+     0.46
+    ],
+    [
+     "Mango's",
+     0.68,
+     1.15
+    ],
+    [
+     "lines",
+     1.15,
+     1.56
+    ],
+    [
+     "are",
+     1.56,
+     1.65
+    ],
+    [
+     "only",
+     1.65,
+     1.88
+    ],
+    [
+     "Mango's.",
+     1.88,
+     2.64
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "only Mango's",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And the little lines help her tail hold on tight.",
+   "t0": 229.0625,
+   "t1": 232.8125,
+   "v0": 229.32749999999996,
+   "dur": 3.189125,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.14
+    ],
+    [
+     "the",
+     0.14,
+     0.21
+    ],
+    [
+     "little",
+     0.21,
+     0.47
+    ],
+    [
+     "lines",
+     0.47,
+     1.1
+    ],
+    [
+     "help",
+     1.33,
+     1.58
+    ],
+    [
+     "her",
+     1.58,
+     1.69
+    ],
+    [
+     "tail",
+     1.69,
+     2.07
+    ],
+    [
+     "hold",
+     2.07,
+     2.44
+    ],
+    [
+     "on",
+     2.44,
+     2.61
+    ],
+    [
+     "tight.",
+     2.61,
+     3.189
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: lines grip",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Her tail holds the branch, tight, tight, tight!",
+   "t0": 232.8125,
+   "t1": 236.25,
+   "v0": 233.05662499999994,
+   "dur": 2.880625,
+   "words": [
+    [
+     "Her",
+     0.0,
+     0.16
+    ],
+    [
+     "tail",
+     0.16,
+     0.49
+    ],
+    [
+     "holds",
+     0.49,
+     0.81
+    ],
+    [
+     "the",
+     0.81,
+     0.9
+    ],
+    [
+     "branch,",
+     0.9,
+     1.45
+    ],
+    [
+     "tight,",
+     1.45,
+     1.99
+    ],
+    [
+     "tight,",
+     1.99,
+     2.37
+    ],
+    [
+     "tight!",
+     2.37,
+     2.88
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "tight tight",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Her hands are good at holding, too. Four long fingers!",
+   "t0": 236.25,
+   "t1": 240.3125,
+   "v0": 236.47724999999994,
+   "dur": 3.6234166666666665,
+   "words": [
+    [
+     "Her",
+     0.01,
+     0.13
+    ],
+    [
+     "hands",
+     0.13,
+     0.53
+    ],
+    [
+     "are",
+     0.53,
+     0.59
+    ],
+    [
+     "good",
+     0.59,
+     0.8
+    ],
+    [
+     "at",
+     0.8,
+     0.89
+    ],
+    [
+     "holding,",
+     0.89,
+     1.38
+    ],
+    [
+     "too.",
+     1.38,
+     1.82
+    ],
+    [
+     "Four",
+     2.17,
+     2.52
+    ],
+    [
+     "long",
+     2.52,
+     2.9
+    ],
+    [
+     "fingers!",
+     2.9,
+     3.62
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: four fingers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "They hook onto a branch. Hook!",
+   "t0": 240.3125,
+   "t1": 243.125,
+   "v0": 240.6406666666666,
+   "dur": 2.002291666666667,
+   "words": [
+    [
+     "They",
+     0.01,
+     0.2
+    ],
+    [
+     "hook",
+     0.2,
+     0.45
+    ],
+    [
+     "onto",
+     0.45,
+     0.69
+    ],
+    [
+     "a",
+     0.69,
+     0.74
+    ],
+    [
+     "branch.",
+     0.74,
+     1.32
+    ],
+    [
+     "Hook!",
+     1.51,
+     2.0
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: hook",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Can you make a hook with your fingers? Hook!",
+   "t0": 243.125,
+   "t1": 246.875,
+   "v0": 243.18295833333326,
+   "dur": 2.637,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.36
+    ],
+    [
+     "make",
+     0.36,
+     0.53
+    ],
+    [
+     "a",
+     0.53,
+     0.59
+    ],
+    [
+     "hook",
+     0.59,
+     0.86
+    ],
+    [
+     "with",
+     0.86,
+     0.99
+    ],
+    [
+     "your",
+     0.99,
+     1.1
+    ],
+    [
+     "fingers?",
+     1.1,
+     1.86
+    ],
+    [
+     "Hook!",
+     2.14,
+     2.637
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "make a hook",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "blossom",
+   "say": "Hands that hook, and a tail that grabs. Just right for the treetops!",
+   "t0": 246.875,
+   "t1": 251.875,
+   "v0": 246.95995833333325,
+   "dur": 4.613708333333333,
+   "words": [
+    [
+     "Hands",
+     0.01,
+     0.4
+    ],
+    [
+     "that",
+     0.4,
+     0.65
+    ],
+    [
+     "hook,",
+     0.65,
+     0.99
+    ],
+    [
+     "and",
+     0.99,
+     1.16
+    ],
+    [
+     "a",
+     1.16,
+     1.21
+    ],
+    [
+     "tail",
+     1.21,
+     1.67
+    ],
+    [
+     "that",
+     1.67,
+     1.81
+    ],
+    [
+     "grabs.",
+     1.81,
+     2.49
+    ],
+    [
+     "Just",
+     2.92,
+     3.23
+    ],
+    [
+     "right",
+     3.23,
+     3.56
+    ],
+    [
+     "for",
+     3.56,
+     3.67
+    ],
+    [
+     "the",
+     3.67,
+     3.76
+    ],
+    [
+     "treetops!",
+     3.76,
+     4.61
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "just right",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Look who is here! Mango's friend Coco, and her baby.",
+   "t0": 251.875,
+   "t1": 256.25,
+   "v0": 252.11366666666657,
+   "dur": 3.706625,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.25
+    ],
+    [
+     "who",
+     0.25,
+     0.38
+    ],
+    [
+     "is",
+     0.38,
+     0.54
+    ],
+    [
+     "here!",
+     0.54,
+     0.94
+    ],
+    [
+     "Mango's",
+     1.37,
+     1.88
+    ],
+    [
+     "friend",
+     1.88,
+     2.17
+    ],
+    [
+     "Coco,",
+     2.17,
+     2.83
+    ],
+    [
+     "and",
+     2.83,
+     2.98
+    ],
+    [
+     "her",
+     2.98,
+     3.08
+    ],
+    [
+     "baby.",
+     3.08,
+     3.707
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "Coco and baby",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The baby wraps its tiny tail around its mama's tail.",
+   "t0": 256.25,
+   "t1": 260.625,
+   "v0": 256.36029166666657,
+   "dur": 3.842416666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "baby",
+     0.1,
+     0.71
+    ],
+    [
+     "wraps",
+     0.71,
+     1.1
+    ],
+    [
+     "its",
+     1.1,
+     1.31
+    ],
+    [
+     "tiny",
+     1.31,
+     1.76
+    ],
+    [
+     "tail",
+     1.76,
+     2.2
+    ],
+    [
+     "around",
+     2.4,
+     2.75
+    ],
+    [
+     "its",
+     2.75,
+     2.89
+    ],
+    [
+     "mama's",
+     2.89,
+     3.41
+    ],
+    [
+     "tail.",
+     3.41,
+     3.84
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: tails hold",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "That helps the baby feel safe and snug.",
+   "t0": 260.625,
+   "t1": 263.4375,
+   "v0": 260.74270833333327,
+   "dur": 2.4598333333333335,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.22
+    ],
+    [
+     "helps",
+     0.22,
+     0.51
+    ],
+    [
+     "the",
+     0.51,
+     0.6
+    ],
+    [
+     "baby",
+     0.6,
+     0.99
+    ],
+    [
+     "feel",
+     0.99,
+     1.27
+    ],
+    [
+     "safe",
+     1.27,
+     1.72
+    ],
+    [
+     "and",
+     1.72,
+     1.91
+    ],
+    [
+     "snug.",
+     1.91,
+     2.46
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "safe and snug",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Hold on tight, little baby!",
+   "t0": 263.4375,
+   "t1": 265.9375,
+   "v0": 263.7425416666666,
+   "dur": 1.7965416666666667,
+   "words": [
+    [
+     "Hold",
+     0.01,
+     0.38
+    ],
+    [
+     "on",
+     0.38,
+     0.56
+    ],
+    [
+     "tight,",
+     0.56,
+     1.03
+    ],
+    [
+     "little",
+     1.03,
+     1.19
+    ],
+    [
+     "baby!",
+     1.19,
+     1.797
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "hold on baby",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Who do you hold hands with?",
+   "t0": 265.9375,
+   "t1": 269.0625,
+   "v0": 266.0790833333333,
+   "dur": 1.5209583333333334,
+   "words": [
+    [
+     "Who",
+     0.04,
+     0.17
+    ],
+    [
+     "do",
+     0.17,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.39
+    ],
+    [
+     "hold",
+     0.39,
+     0.66
+    ],
+    [
+     "hands",
+     0.66,
+     1.12
+    ],
+    [
+     "with?",
+     1.12,
+     1.52
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hold hands",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Can you give yourself a big hug? Squeeze!",
+   "t0": 269.0625,
+   "t1": 272.8125,
+   "v0": 269.34004166666665,
+   "dur": 2.7464166666666667,
+   "words": [
+    [
+     "Can",
+     0.04,
+     0.22
+    ],
+    [
+     "you",
+     0.22,
+     0.34
+    ],
+    [
+     "give",
+     0.34,
+     0.53
+    ],
+    [
+     "yourself",
+     0.53,
+     0.95
+    ],
+    [
+     "a",
+     0.95,
+     1.01
+    ],
+    [
+     "big",
+     1.01,
+     1.3
+    ],
+    [
+     "hug?",
+     1.3,
+     1.71
+    ],
+    [
+     "Squeeze!",
+     2.02,
+     2.746
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "a big hug",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "What a wonderful tail, Mango!",
+   "t0": 272.8125,
+   "t1": 275.3125,
+   "v0": 273.0264583333333,
+   "dur": 1.8782916666666667,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.14
+    ],
+    [
+     "a",
+     0.14,
+     0.18
+    ],
+    [
+     "wonderful",
+     0.18,
+     0.77
+    ],
+    [
+     "tail,",
+     0.77,
+     1.3
+    ],
+    [
+     "Mango!",
+     1.3,
+     1.878
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "wonderful tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Time to remember what we learned!",
+   "t0": 275.3125,
+   "t1": 277.5,
+   "v0": 275.44475,
+   "dur": 1.8475416666666666,
+   "words": [
+    [
+     "Time",
+     0.0,
+     0.38
+    ],
+    [
+     "to",
+     0.38,
+     0.5
+    ],
+    [
+     "remember",
+     0.5,
+     1.0
+    ],
+    [
+     "what",
+     1.0,
+     1.2
+    ],
+    [
+     "we",
+     1.2,
+     1.32
+    ],
+    [
+     "learned!",
+     1.32,
+     1.848
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz time",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Which is longer? Mango's body, or her tail?",
+   "t0": 277.5,
+   "t1": 284.375,
+   "v0": 277.83229166666666,
+   "dur": 3.1133333333333333,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.23
+    ],
+    [
+     "is",
+     0.23,
+     0.37
+    ],
+    [
+     "longer?",
+     0.37,
+     0.98
+    ],
+    [
+     "Mango's",
+     1.32,
+     1.77
+    ],
+    [
+     "body,",
+     1.77,
+     2.26
+    ],
+    [
+     "or",
+     2.26,
+     2.41
+    ],
+    [
+     "her",
+     2.41,
+     2.56
+    ],
+    [
+     "tail?",
+     2.56,
+     3.11
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "What can her tail do? Hold on, or sing?",
+   "t0": 284.375,
+   "t1": 290.9375,
+   "v0": 284.685625,
+   "dur": 2.6988333333333334,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.18
+    ],
+    [
+     "can",
+     0.18,
+     0.35
+    ],
+    [
+     "her",
+     0.35,
+     0.44
+    ],
+    [
+     "tail",
+     0.44,
+     0.81
+    ],
+    [
+     "do?",
+     0.81,
+     1.16
+    ],
+    [
+     "Hold",
+     1.46,
+     1.74
+    ],
+    [
+     "on,",
+     1.74,
+     2.05
+    ],
+    [
+     "or",
+     2.05,
+     2.19
+    ],
+    [
+     "sing?",
+     2.19,
+     2.699
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Hold on! Just like an extra hand.",
+   "t0": 290.9375,
+   "t1": 293.75,
+   "v0": 291.12445833333334,
+   "dur": 2.4055,
+   "words": [
+    [
+     "Hold",
+     0.01,
+     0.33
+    ],
+    [
+     "on!",
+     0.33,
+     0.76
+    ],
+    [
+     "Just",
+     0.94,
+     1.16
+    ],
+    [
+     "like",
+     1.16,
+     1.31
+    ],
+    [
+     "an",
+     1.31,
+     1.39
+    ],
+    [
+     "extra",
+     1.39,
+     1.83
+    ],
+    [
+     "hand.",
+     1.83,
+     2.4
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "board: extra hand again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "What is under the tip of her tail?",
+   "t0": 293.75,
+   "t1": 297.8125,
+   "v0": 294.0699583333334,
+   "dur": 1.84875,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.39
+    ],
+    [
+     "under",
+     0.39,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.74
+    ],
+    [
+     "tip",
+     0.74,
+     1.08
+    ],
+    [
+     "of",
+     1.08,
+     1.19
+    ],
+    [
+     "her",
+     1.19,
+     1.32
+    ],
+    [
+     "tail?",
+     1.32,
+     1.849
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Little lines, just like your fingertip!",
+   "t0": 297.8125,
+   "t1": 300.9375,
+   "v0": 298.0587083333334,
+   "dur": 2.496583333333333,
+   "words": [
+    [
+     "Little",
+     0.0,
+     0.41
+    ],
+    [
+     "lines,",
+     0.41,
+     1.09
+    ],
+    [
+     "just",
+     1.28,
+     1.51
+    ],
+    [
+     "like",
+     1.51,
+     1.67
+    ],
+    [
+     "your",
+     1.67,
+     1.77
+    ],
+    [
+     "fingertip!",
+     1.77,
+     2.497
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "board: lines again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Good night, Mango. Hold on tight!",
+   "t0": 300.9375,
+   "t1": 303.75,
+   "v0": 301.09529166666675,
+   "dur": 2.279333333333333,
+   "words": [
+    [
+     "Good",
+     0.01,
+     0.19
+    ],
+    [
+     "night,",
+     0.19,
+     0.46
+    ],
+    [
+     "Mango.",
+     0.46,
+     1.06
+    ],
+    [
+     "Hold",
+     1.27,
+     1.51
+    ],
+    [
+     "on",
+     1.51,
+     1.69
+    ],
+    [
+     "tight!",
+     1.69,
+     2.279
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "good night",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "canopy_eve",
+   "say": "Thank you for learning with me, friends. See you at the zoo!",
+   "t0": 303.75,
+   "t1": 307.8829583333335,
+   "v0": 303.9146250000001,
+   "dur": 3.5483333333333333,
+   "words": [
+    [
+     "Thank",
+     0.06,
+     0.34
+    ],
+    [
+     "you",
+     0.34,
+     0.44
+    ],
+    [
+     "for",
+     0.44,
+     0.57
+    ],
+    [
+     "learning",
+     0.57,
+     1.0
+    ],
+    [
+     "with",
+     1.0,
+     1.16
+    ],
+    [
+     "me,",
+     1.16,
+     1.36
+    ],
+    [
+     "friends.",
+     1.36,
+     2.0
+    ],
+    [
+     "See",
+     2.33,
+     2.59
+    ],
+    [
+     "you",
+     2.59,
+     2.76
+    ],
+    [
+     "at",
+     2.76,
+     2.87
+    ],
+    [
+     "the",
+     2.87,
+     2.96
+    ],
+    [
+     "zoo!",
+     2.96,
+     3.548
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "goodbye",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

@@ -1,0 +1,286 @@
+{
+ "style": "upbeat preschool kids electro pop sing-along, cheerful playful male vocal, clear diction, bright synths, bleepy robot sounds, handclaps, bouncy drums, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nMagnets, magnets, pull and push!\nSome things stick with a whoosh!\nMetal paper clips go click,\nMagnets make the metal stick!\n\n[Verse 1]\nA magnet has an invisible pull,\nIt grabs the metal, that's magical!\nA spoon, a key, a paper clip,\nThey jump right up and stick, stick, stick!\n\n[Chorus]\nMagnets, magnets, pull and push!\nSome things stick with a whoosh!\nMetal paper clips go click,\nMagnets make the metal stick!\n\n[Verse 2]\nBut wood and plastic, paper too,\nMagnets can't pull those, it's true!\nOnly metal like iron will do,\nTry it out and see for you!\n\n[Bridge]\nNorth and south, they come together, click!\nNorth and north, they push apart, quick!\nPull your arms in, push them out,\nMagnet power, give a shout!\n\n[Verse 3]\nMagnets hold your art up high,\nOn the fridge where it won't fly!\nA compass needle points the way,\nMagnets help us every day!\n\n[Chorus]\nMagnets, magnets, pull and push!\nSome things stick with a whoosh!\nMetal paper clips go click,\nMagnets make the metal stick!\n\n[Outro]\nMagnets! Bye-bye, friends!",
+ "duration": 165,
+ "bpm": 118,
+ "key": "E Major",
+ "seed": 609,
+ "who_map": {},
+ "meta": {
+  "title": "How Do Magnets Work? Science Song for Kids with Gizmo",
+  "card": "Magnets!",
+  "thumb_text": "HOW MAGNETS WORK!",
+  "description": "How do magnets work? Gizmo the robot shows that magnets pull metal things like spoons, keys and paper clips, but not wood, plastic or paper. North and south stick together; north and north push apart.\nKids pull and push like magnets and learn how magnets hold art on the fridge and help a compass point the way. Ages 3-6.",
+  "tags": [
+   "magnets song",
+   "how magnets work",
+   "science song for kids",
+   "magnets for kids",
+   "STEM for kids",
+   "kids songs",
+   "Gizmo Explains",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "gz3d_ep08",
+  "title": "Magnets!",
+  "channel": "gizmo",
+  "set": "sciencelab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "gizmo",
+    "spot": "center"
+   },
+   {
+    "id": "pal",
+    "char": "gizmo",
+    "spot": "left",
+    "opts": {
+     "variant": "mini",
+     "color": "#ff5fa2",
+     "scale": 0.6
+    },
+    "yaw": 0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "close:host",
+     "wide",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "MAGNETS!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     },
+     {
+      "type": "set_prop",
+      "name": "magnet",
+      "at": [
+       -3.0,
+       1.3,
+       3.6
+      ],
+      "delay": 1
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "magnet",
+      "at": [
+       -3.0,
+       1.3,
+       3.6
+      ],
+      "word": "magnet"
+     },
+     {
+      "type": "text",
+      "text": "STICK!",
+      "color": "#e53935",
+      "at": [
+       3.0,
+       1.5,
+       3.6
+      ],
+      "size": 0.7,
+      "word": "stick,"
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "PULL & PUSH!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.7
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "wide",
+     "close:host",
+     "close:pal",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "text",
+      "text": "METAL ONLY!",
+      "color": "#9e9e9e",
+      "at": "top",
+      "size": 0.6,
+      "word": "metal"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.4,
+    "props": [
+     {
+      "type": "text",
+      "text": "CLICK!",
+      "color": "#3b8be0",
+      "at": [
+       -3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "together,"
+     },
+     {
+      "type": "text",
+      "text": "PUSH!",
+      "color": "#e53935",
+      "at": [
+       3.4,
+       0.3,
+       3.5
+      ],
+      "size": 0.7,
+      "word": "apart,"
+     },
+     {
+      "type": "text",
+      "text": "MAGNET POWER!",
+      "color": "#ffc107",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.55,
+      "word": "power,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "wide",
+     "close:host",
+     "wide",
+     "close:pal"
+    ],
+    "energy": 0.9,
+    "jump": 0.2,
+    "props": [
+     {
+      "type": "text",
+      "text": "COMPASS!",
+      "color": "#3b8be0",
+      "at": "top",
+      "size": 0.6,
+      "word": "compass"
+     },
+     {
+      "type": "set_prop",
+      "name": "star",
+      "at": [
+       3.0,
+       1.6,
+       3.6
+      ],
+      "word": "way,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "MAGNETS!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#e53935",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "gz3d_ep08",
+  "res": "1920x1080",
+  "step": 1
+ }
+}

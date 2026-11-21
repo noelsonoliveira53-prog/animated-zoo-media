@@ -1,0 +1,1641 @@
+{
+ "episode": "zc_ep02",
+ "master": {
+  "file": "cartoon/zc_ep02.mp4",
+  "size": "3840x2160",
+  "seconds": 321.5
+ },
+ "checks": [
+  {
+   "check": "timing of this build equals the rendered master",
+   "pass": true,
+   "detail": "build 321.522 s, master video 321.500 s"
+  },
+  {
+   "check": "music and effects bed is toon.py's own (voice + bed reproduces the film's English mix sample for sample)",
+   "pass": true,
+   "detail": "np.allclose with toon.mix_audio"
+  },
+  {
+   "check": "en: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "en: title is clean",
+   "pass": true,
+   "detail": "32 characters: What Can an Elephant's Trunk Do?"
+  },
+  {
+   "check": "en: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "ONE NOSE?!"
+  },
+  {
+   "check": "en: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "es-419: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "es-419: title is clean",
+   "pass": true,
+   "detail": "41 characters: ¿Para qué sirve la trompa de un elefante?"
+  },
+  {
+   "check": "es-419: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "¿UNA NARIZ?"
+  },
+  {
+   "check": "es-419: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "pt-BR: metadata has every field",
+   "pass": true,
+   "detail": "14 of 14"
+  },
+  {
+   "check": "pt-BR: title is clean",
+   "pass": true,
+   "detail": "36 characters: Para que serve a tromba do elefante?"
+  },
+  {
+   "check": "pt-BR: thumbnail has 3 words at most and none of its title's words",
+   "pass": true,
+   "detail": "UM NARIZ?!"
+  },
+  {
+   "check": "pt-BR: audience value is made for kids",
+   "pass": true,
+   "detail": "made_for_kids"
+  },
+  {
+   "check": "en: track is as long as the video",
+   "pass": true,
+   "detail": "321.500 s against 321.500 s"
+  },
+  {
+   "check": "en: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.857"
+  },
+  {
+   "check": "en: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 12.7 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "en: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "145 cues, largest start difference 0 ms, longest row 41 letters"
+  },
+  {
+   "check": "es-419: track is as long as the video",
+   "pass": true,
+   "detail": "321.500 s against 321.500 s"
+  },
+  {
+   "check": "es-419: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.842"
+  },
+  {
+   "check": "es-419: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 12.3 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "es-419: every line ends inside its slot (no clipped sentence, no line running into the next)",
+   "pass": true,
+   "detail": "88 of 88 fit"
+  },
+  {
+   "check": "es-419: no long silence the English does not have",
+   "pass": true,
+   "detail": "4.74 s (English 3.97 s)"
+  },
+  {
+   "check": "es-419: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "88 cues, largest start difference 0 ms, longest row 42 letters"
+  },
+  {
+   "check": "pt-BR: track is as long as the video",
+   "pass": true,
+   "detail": "321.500 s against 321.500 s"
+  },
+  {
+   "check": "pt-BR: track is not clipped",
+   "pass": true,
+   "detail": "peak 0.843"
+  },
+  {
+   "check": "pt-BR: the voice is well above the music",
+   "pass": true,
+   "detail": "voice 12.2 dB above the music and effects while it speaks"
+  },
+  {
+   "check": "pt-BR: every line ends inside its slot (no clipped sentence, no line running into the next)",
+   "pass": true,
+   "detail": "88 of 88 fit"
+  },
+  {
+   "check": "pt-BR: no long silence the English does not have",
+   "pass": true,
+   "detail": "4.15 s (English 3.97 s)"
+  },
+  {
+   "check": "pt-BR: captions are UTF-8, in order, and every line's first caption starts with its voice",
+   "pass": true,
+   "detail": "88 cues, largest start difference 0 ms, longest row 42 letters"
+  },
+  {
+   "check": "one master video, one YouTube video",
+   "pass": true,
+   "detail": "episode-master-2160p.mp4"
+  }
+ ],
+ "languages": {
+  "en": {
+   "track": "audio/track-en.wav",
+   "seconds": 321.5,
+   "loudness_lufs": -15.2,
+   "peak": 0.857,
+   "voice_over_bed_db": 12.7,
+   "longest_stretch_without_voice_s": 3.97,
+   "captions": "captions/captions-en.srt",
+   "cues": 145,
+   "longest_caption_row": 41
+  },
+  "es-419": {
+   "track": "audio/track-es-419.wav",
+   "seconds": 321.5,
+   "loudness_lufs": -15.9,
+   "peak": 0.842,
+   "voice_over_bed_db": 12.3,
+   "longest_stretch_without_voice_s": 4.74,
+   "lines": 88,
+   "lines_spoken_faster": 19,
+   "fastest_speed": 1.0,
+   "mean_seconds_against_english": 1.0,
+   "translator_notes": [
+    "'Mamá': the kinship word is used, as in the English 'Mama'; Milo and Tumble are unchanged.",
+    "Straw: no single word for a drinking straw is understood in all of Latin America (popote, pitillo, sorbete, pajita, bombilla), so the line says 'un tubito para beber'.",
+    "'A tiny piece of straw' is 'una hierbita muy chiquita' for the same reason.",
+    "'ducha' is used for shower (understood everywhere; Mexico also says regadera).",
+    "Sound words: snif, ñam, slurp, glu, splash, fuuu (the spray), plic (drips), flap, cucú (peekaboo)."
+   ],
+   "line_table": [
+    {
+     "v0": 0.42,
+     "seconds": 2.03,
+     "slot": 2.22,
+     "speed": 0.8,
+     "text": "¿Para qué sirve una trompa?",
+     "english": "What can an elephant's trunk do?"
+    },
+    {
+     "v0": 2.836,
+     "seconds": 2.68,
+     "slot": 2.99,
+     "speed": 0.8,
+     "text": "¿Es una nariz? ¿Una mano? ¿Una ducha?",
+     "english": "Is it a nose? A hand? A shower?"
+    },
+    {
+     "v0": 6.029,
+     "seconds": 2.25,
+     "slot": 2.97,
+     "speed": 0.8,
+     "text": "Soy Milo. ¡Vamos a descubrirlo!",
+     "english": "I'm Milo. Let's find out together!"
+    },
+    {
+     "v0": 9.202,
+     "seconds": 3.0,
+     "slot": 3.01,
+     "speed": 0.8,
+     "text": "¡Bienvenidos a The Animated Zoo, amigos!",
+     "english": "Welcome to The Animated Zoo, friends!"
+    },
+    {
+     "v0": 12.412,
+     "seconds": 2.66,
+     "slot": 2.78,
+     "speed": 0.8,
+     "text": "Hoy volamos a la sabana soleada.",
+     "english": "Today we fly to the sunny savanna."
+    },
+    {
+     "v0": 15.393,
+     "seconds": 2.48,
+     "slot": 2.84,
+     "speed": 0.8,
+     "text": "¡Ya llegamos! Mira quién nos espera.",
+     "english": "Here we are! Look who is waiting for us."
+    },
+    {
+     "v0": 18.438,
+     "seconds": 2.83,
+     "slot": 3.73,
+     "speed": 0.8,
+     "text": "Él es Tumble. Tumble es un elefante bebé.",
+     "english": "This is Tumble. Tumble is a baby elephant."
+    },
+    {
+     "v0": 22.368,
+     "seconds": 2.78,
+     "slot": 3.32,
+     "speed": 0.8,
+     "text": "Y ella es la mamá de Tumble. ¡Hola, Mamá!",
+     "english": "And this is Tumble's mama. Hello, Mama!"
+    },
+    {
+     "v0": 25.884,
+     "seconds": 2.64,
+     "slot": 2.71,
+     "speed": 0.8,
+     "text": "Mira su trompa: ¡larga y flexible!",
+     "english": "Look at Tumble's long, bendy trunk."
+    },
+    {
+     "v0": 28.796,
+     "seconds": 1.64,
+     "slot": 1.84,
+     "speed": 0.9,
+     "text": "La trompa es una nariz.",
+     "english": "A trunk is a nose."
+    },
+    {
+     "v0": 30.831,
+     "seconds": 2.92,
+     "slot": 2.99,
+     "speed": 0.8,
+     "text": "Y también es el labio de arriba. ¡Todo en uno!",
+     "english": "And it is an upper lip, too. All in one!"
+    },
+    {
+     "v0": 34.026,
+     "seconds": 2.6,
+     "slot": 3.96,
+     "speed": 0.8,
+     "text": "¿Dónde está tu nariz? ¿Puedes tocarla?",
+     "english": "Where is your nose? Can you touch your nose?"
+    },
+    {
+     "v0": 38.186,
+     "seconds": 2.61,
+     "slot": 2.85,
+     "speed": 0.84,
+     "text": "En la punta de la trompa hay dos hoyitos.",
+     "english": "At the tip of the trunk are two little holes."
+    },
+    {
+     "v0": 41.237,
+     "seconds": 2.83,
+     "slot": 3.63,
+     "speed": 0.8,
+     "text": "Por ahí respira el elefante. ¡Snif, snif!",
+     "english": "An elephant breathes through them. Sniff, sniff!"
+    },
+    {
+     "v0": 45.07,
+     "seconds": 2.5,
+     "slot": 3.3,
+     "speed": 0.8,
+     "text": "¡Snif, snif! Tumble huele algo rico.",
+     "english": "Sniff, sniff! Tumble smells something yummy."
+    },
+    {
+     "v0": 48.572,
+     "seconds": 3.49,
+     "slot": 3.54,
+     "speed": 0.8,
+     "text": "El elefante usa la trompa para oler su comida.",
+     "english": "An elephant uses its trunk to smell its food."
+    },
+    {
+     "v0": 52.308,
+     "seconds": 2.85,
+     "slot": 3.3,
+     "speed": 0.8,
+     "text": "¡Puede oler el agua desde muy, muy lejos!",
+     "english": "It can even smell water from far, far away!"
+    },
+    {
+     "v0": 55.807,
+     "seconds": 3.51,
+     "slot": 6.24,
+     "speed": 0.8,
+     "text": "Entonces, la trompa, ¿es una nariz o una cola?",
+     "english": "So, is a trunk a nose, or a tail?"
+    },
+    {
+     "v0": 62.251,
+     "seconds": 2.62,
+     "slot": 2.91,
+     "speed": 0.8,
+     "text": "¡Una nariz! Una nariz muy, muy larga.",
+     "english": "A nose! A very, very long nose."
+    },
+    {
+     "v0": 65.36,
+     "seconds": 2.55,
+     "slot": 3.05,
+     "speed": 0.8,
+     "text": "Tumble tiene hambre. ¡Mira, una fruta!",
+     "english": "Now Tumble is hungry. Look, a fruit!"
+    },
+    {
+     "v0": 68.61,
+     "seconds": 2.2,
+     "slot": 2.37,
+     "speed": 0.91,
+     "text": "La trompa también es como una mano.",
+     "english": "A trunk is like a hand, too."
+    },
+    {
+     "v0": 71.182,
+     "seconds": 2.53,
+     "slot": 2.91,
+     "speed": 0.85,
+     "text": "Agarra, sostiene, levanta y alcanza.",
+     "english": "It can grab, hold, pick up and reach."
+    },
+    {
+     "v0": 74.291,
+     "seconds": 3.0,
+     "slot": 3.3,
+     "speed": 0.8,
+     "text": "¡Ñam, ñam, ñam! ¿Puedes masticar como Tumble?",
+     "english": "Yum, yum, yum! Can you munch like Tumble?"
+    },
+    {
+     "v0": 77.79,
+     "seconds": 3.13,
+     "slot": 3.9,
+     "speed": 0.8,
+     "text": "Ahí viene Mamá. Su trompa es muy, muy fuerte.",
+     "english": "Here comes Mama. Her trunk is very, very strong."
+    },
+    {
+     "v0": 81.889,
+     "seconds": 3.07,
+     "slot": 3.53,
+     "speed": 0.8,
+     "text": "Levanta un tronco grande y pesado. ¡Arriba!",
+     "english": "It can lift a big, heavy log. Up it goes!"
+    },
+    {
+     "v0": 85.624,
+     "seconds": 2.28,
+     "slot": 2.55,
+     "speed": 0.94,
+     "text": "Y la trompa también es muy delicada.",
+     "english": "And a trunk is very gentle, too."
+    },
+    {
+     "v0": 88.372,
+     "seconds": 2.51,
+     "slot": 2.82,
+     "speed": 0.9,
+     "text": "Puede levantar una hierbita muy chiquita.",
+     "english": "It can pick up one tiny piece of straw."
+    },
+    {
+     "v0": 91.394,
+     "seconds": 2.83,
+     "slot": 3.29,
+     "speed": 0.8,
+     "text": "Tan fuerte y tan delicada. ¡Qué nariz!",
+     "english": "So strong, and so gentle. What a nose!"
+    },
+    {
+     "v0": 94.884,
+     "seconds": 2.19,
+     "slot": 2.54,
+     "speed": 0.92,
+     "text": "La trompa no tiene huesos por dentro.",
+     "english": "There are no bones inside a trunk."
+    },
+    {
+     "v0": 97.625,
+     "seconds": 2.73,
+     "slot": 2.76,
+     "speed": 0.8,
+     "text": "Por eso se dobla para acá, ¡y para allá!",
+     "english": "So it can bend this way, and that way!"
+    },
+    {
+     "v0": 100.585,
+     "seconds": 3.68,
+     "slot": 3.86,
+     "speed": 0.8,
+     "text": "¿Puedes mover tu brazo como una trompa? ¡Menea, menea!",
+     "english": "Can you wiggle your arm like a trunk? Wiggle, wiggle!"
+    },
+    {
+     "v0": 104.645,
+     "seconds": 3.49,
+     "slot": 4.16,
+     "speed": 0.8,
+     "text": "Ya van dos trabajos. Uno: oler. Dos: agarrar.",
+     "english": "That is two trunk jobs. One, smell. Two, grab."
+    },
+    {
+     "v0": 109.007,
+     "seconds": 2.99,
+     "slot": 4.13,
+     "speed": 0.8,
+     "text": "¡Uf, qué calor! Tumble y Mamá entran al río.",
+     "english": "Phew, it is hot! Tumble and Mama walk into the river."
+    },
+    {
+     "v0": 113.333,
+     "seconds": 2.99,
+     "slot": 3.2,
+     "speed": 0.8,
+     "text": "Hora de tomar agua. ¡Mira la trompa de Mamá!",
+     "english": "Time for a drink. Watch Mama's trunk!"
+    },
+    {
+     "v0": 116.732,
+     "seconds": 2.58,
+     "slot": 3.45,
+     "speed": 0.8,
+     "text": "Chupa el agua con su trompa. ¡Slurp!",
+     "english": "She sucks the water up into her trunk. Slurp!"
+    },
+    {
+     "v0": 120.382,
+     "seconds": 3.16,
+     "slot": 7.63,
+     "speed": 0.8,
+     "text": "¿El agua sube hasta arriba de su nariz? ¿Sí o no?",
+     "english": "Does the water go all the way up her nose? Yes, or no?"
+    },
+    {
+     "v0": 128.209,
+     "seconds": 2.4,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "¡No! El agua solo sube una parte.",
+     "english": "No! The water only goes part of the way up."
+    },
+    {
+     "v0": 131.526,
+     "seconds": 2.21,
+     "slot": 2.42,
+     "speed": 0.97,
+     "text": "Luego lleva la trompa hasta su boca,",
+     "english": "Then she curls her trunk to her mouth,"
+    },
+    {
+     "v0": 134.145,
+     "seconds": 2.69,
+     "slot": 3.66,
+     "speed": 0.8,
+     "text": "¡y sopla el agua adentro! Glu, glu, glu.",
+     "english": "and blows the water in! Glug, glug, glug."
+    },
+    {
+     "v0": 138.009,
+     "seconds": 4.55,
+     "slot": 4.84,
+     "speed": 0.8,
+     "text": "La trompa no es un tubito para beber. Lleva el agua hasta la boca.",
+     "english": "So a trunk is not like a straw. It carries the water to the mouth."
+    },
+    {
+     "v0": 143.044,
+     "seconds": 3.48,
+     "slot": 4.01,
+     "speed": 0.8,
+     "text": "Ahora le toca a Tumble. Su trompa aún es corta.",
+     "english": "Now it is Tumble's turn. His trunk is still short."
+    },
+    {
+     "v0": 147.251,
+     "seconds": 3.53,
+     "slot": 3.84,
+     "speed": 0.87,
+     "text": "A los elefantes bebés les cuesta usarla al principio.",
+     "english": "Baby elephants are clumsy with their trunks at first."
+    },
+    {
+     "v0": 151.288,
+     "seconds": 2.81,
+     "slot": 3.14,
+     "speed": 0.87,
+     "text": "¡Ups! ¡Splash! El agua salpica por todos lados.",
+     "english": "Oops! Splash! The water goes everywhere."
+    },
+    {
+     "v0": 154.628,
+     "seconds": 3.85,
+     "slot": 3.88,
+     "speed": 0.8,
+     "text": "Pero Tumble sigue intentando. Poco a poco, aprende.",
+     "english": "But Tumble keeps trying. Little by little, he learns."
+    },
+    {
+     "v0": 158.706,
+     "seconds": 3.1,
+     "slot": 3.53,
+     "speed": 0.8,
+     "text": "¿Puedes sorber como un elefante? ¡Slurp, slurp!",
+     "english": "Can you slurp like an elephant? Slurp, slurp!"
+    },
+    {
+     "v0": 162.438,
+     "seconds": 3.91,
+     "slot": 4.04,
+     "speed": 0.8,
+     "text": "El elefante bebé toma la leche de su mamá con la boca.",
+     "english": "A baby elephant drinks his mama's milk with his mouth."
+    },
+    {
+     "v0": 166.678,
+     "seconds": 2.45,
+     "slot": 2.7,
+     "speed": 0.95,
+     "text": "Así que aún no necesita una trompa larga.",
+     "english": "So he does not need a long trunk yet."
+    },
+    {
+     "v0": 169.581,
+     "seconds": 3.16,
+     "slot": 3.75,
+     "speed": 0.8,
+     "text": "Mamá llena su trompa otra vez. ¿Qué va a hacer?",
+     "english": "Now Mama fills her trunk again. What will she do?"
+    },
+    {
+     "v0": 173.526,
+     "seconds": 3.46,
+     "slot": 3.87,
+     "speed": 0.8,
+     "text": "¡Fuuu! ¡Una ducha! Rocía agua por toda su espalda.",
+     "english": "Whoosh! A shower! She sprays water all over her back."
+    },
+    {
+     "v0": 177.599,
+     "seconds": 4.02,
+     "slot": 4.41,
+     "speed": 0.8,
+     "text": "Los elefantes se echan agua fresca para refrescarse.",
+     "english": "Elephants squirt cool water over their bodies to keep cool."
+    },
+    {
+     "v0": 182.211,
+     "seconds": 3.59,
+     "slot": 3.77,
+     "speed": 0.8,
+     "text": "Tumble también quiere una ducha. Uno, dos, ¡agua!",
+     "english": "Tumble wants a shower too. Ready, steady, spray!"
+    },
+    {
+     "v0": 186.185,
+     "seconds": 3.31,
+     "slot": 3.46,
+     "speed": 0.8,
+     "text": "¿Puedes rociar agua como un elefante? ¡Fuuu, fuuu!",
+     "english": "Can you spray like an elephant? Whoosh, whoosh!"
+    },
+    {
+     "v0": 189.841,
+     "seconds": 3.67,
+     "slot": 4.84,
+     "speed": 0.8,
+     "text": "Ya van cuatro trabajos. Tres: beber. Cuatro: rociar.",
+     "english": "Now we have four trunk jobs. Three, drink. Four, spray."
+    },
+    {
+     "v0": 194.886,
+     "seconds": 2.98,
+     "slot": 3.32,
+     "speed": 0.8,
+     "text": "Ahora Tumble entra al agua honda, muy honda.",
+     "english": "Now Tumble wades into the deep, deep water."
+    },
+    {
+     "v0": 198.401,
+     "seconds": 2.18,
+     "slot": 2.51,
+     "speed": 0.88,
+     "text": "Más hondo, más hondo y más hondo.",
+     "english": "Deeper, and deeper, and deeper."
+    },
+    {
+     "v0": 201.11,
+     "seconds": 2.35,
+     "slot": 3.86,
+     "speed": 0.8,
+     "text": "¿A dónde fue Tumble? ¿Lo puedes ver?",
+     "english": "Where did Tumble go? Can you see him?"
+    },
+    {
+     "v0": 205.167,
+     "seconds": 2.76,
+     "slot": 2.78,
+     "speed": 0.8,
+     "text": "¡Cucú! Ahí está la punta de su trompa.",
+     "english": "Peekaboo! There is the tip of his trunk."
+    },
+    {
+     "v0": 208.143,
+     "seconds": 3.29,
+     "slot": 3.39,
+     "speed": 0.8,
+     "text": "El elefante usa su trompa como un esnórquel.",
+     "english": "An elephant can use its trunk like a snorkel."
+    },
+    {
+     "v0": 211.732,
+     "seconds": 3.0,
+     "slot": 3.28,
+     "speed": 0.8,
+     "text": "La punta queda en el aire, y así respira.",
+     "english": "The tip stays up in the air, so he can breathe."
+    },
+    {
+     "v0": 215.207,
+     "seconds": 2.94,
+     "slot": 3.36,
+     "speed": 0.8,
+     "text": "Solo la punta de la trompa sale del agua.",
+     "english": "Only the tip of the trunk is above the water."
+    },
+    {
+     "v0": 218.771,
+     "seconds": 3.23,
+     "slot": 3.54,
+     "speed": 0.84,
+     "text": "Toma aire por la nariz. Y suéltalo. ¿Puedes hacerlo?",
+     "english": "Breathe in through your nose. And out. Can you do it?"
+    },
+    {
+     "v0": 222.511,
+     "seconds": 3.59,
+     "slot": 3.79,
+     "speed": 0.8,
+     "text": "Tumble camina bajo el agua. ¡Burbujas, burbujas!",
+     "english": "Tumble walks along under the water. Bubble, bubble!"
+    },
+    {
+     "v0": 226.505,
+     "seconds": 2.99,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "Contemos sus burbujas. ¡Uno, dos, tres!",
+     "english": "Let's count his bubbles. One, two, three!"
+    },
+    {
+     "v0": 229.828,
+     "seconds": 2.49,
+     "slot": 3.0,
+     "speed": 0.8,
+     "text": "Y sale del agua. ¡Plic, plic, plic!",
+     "english": "And out he comes. Drip, drip, drip!"
+    },
+    {
+     "v0": 233.03,
+     "seconds": 3.35,
+     "slot": 4.0,
+     "speed": 0.8,
+     "text": "Tumble agita sus orejotas. ¡Flap, flap, flap!",
+     "english": "Tumble flaps his big ears. Flap, flap, flap!"
+    },
+    {
+     "v0": 237.23,
+     "seconds": 3.44,
+     "slot": 7.26,
+     "speed": 0.8,
+     "text": "¿Con qué respiró Tumble? ¿Con la trompa o con la cola?",
+     "english": "What did Tumble breathe with? His trunk, or his tail?"
+    },
+    {
+     "v0": 244.69,
+     "seconds": 2.2,
+     "slot": 2.43,
+     "speed": 0.8,
+     "text": "¡Con la trompa! Como un esnórquel.",
+     "english": "His trunk! Just like a snorkel."
+    },
+    {
+     "v0": 247.318,
+     "seconds": 3.22,
+     "slot": 3.67,
+     "speed": 0.8,
+     "text": "Se pone el sol. Tumble vuelve a casa con Mamá.",
+     "english": "The sun goes down. Tumble walks home with Mama."
+    },
+    {
+     "v0": 251.19,
+     "seconds": 2.84,
+     "slot": 3.44,
+     "speed": 0.8,
+     "text": "Tumble está cansado. Se acerca a Mamá.",
+     "english": "Tumble is tired. He comes close to Mama."
+    },
+    {
+     "v0": 254.828,
+     "seconds": 3.69,
+     "slot": 3.75,
+     "speed": 0.8,
+     "text": "Mamá estira su trompa y lo acaricia suavecito.",
+     "english": "Mama reaches out her trunk, and strokes him gently."
+    },
+    {
+     "v0": 258.779,
+     "seconds": 2.65,
+     "slot": 2.93,
+     "speed": 0.84,
+     "text": "Los elefantes se acarician con la trompa.",
+     "english": "Elephants stroke each other with their trunks."
+    },
+    {
+     "v0": 261.911,
+     "seconds": 2.55,
+     "slot": 2.78,
+     "speed": 0.84,
+     "text": "Es como un abrazo. ¡Un abrazo de trompa!",
+     "english": "It is like a hug. A trunk hug!"
+    },
+    {
+     "v0": 264.895,
+     "seconds": 2.97,
+     "slot": 3.09,
+     "speed": 0.8,
+     "text": "¿Puedes darte un abrazo grande? ¡Apretón!",
+     "english": "Can you give yourself a big hug? Squeeze!"
+    },
+    {
+     "v0": 268.181,
+     "seconds": 2.03,
+     "slot": 2.36,
+     "speed": 0.96,
+     "text": "Tumble se siente calentito y feliz.",
+     "english": "Tumble feels warm and happy."
+    },
+    {
+     "v0": 270.741,
+     "seconds": 3.38,
+     "slot": 4.12,
+     "speed": 0.8,
+     "text": "Cinco: esnórquel. Seis: abrazar. ¡Seis trabajos!",
+     "english": "Five, snorkel. Six, hug. Six trunk jobs!"
+    },
+    {
+     "v0": 275.059,
+     "seconds": 2.32,
+     "slot": 2.48,
+     "speed": 0.8,
+     "text": "Una nariz, seis trabajos. ¡Guau!",
+     "english": "One nose, six jobs. Wow!"
+    },
+    {
+     "v0": 277.744,
+     "seconds": 2.08,
+     "slot": 2.19,
+     "speed": 0.8,
+     "text": "¡A recordar lo que aprendimos!",
+     "english": "Time to remember what we learned!"
+    },
+    {
+     "v0": 280.131,
+     "seconds": 2.24,
+     "slot": 6.1,
+     "speed": 0.8,
+     "text": "¿La trompa es una nariz? ¿Sí o no?",
+     "english": "Is a trunk a nose? Yes, or no?"
+    },
+    {
+     "v0": 286.434,
+     "seconds": 2.72,
+     "slot": 3.09,
+     "speed": 0.8,
+     "text": "¡Sí! Nariz y labio de arriba, todo en uno.",
+     "english": "Yes! A nose and an upper lip, all in one."
+    },
+    {
+     "v0": 289.728,
+     "seconds": 2.29,
+     "slot": 6.8,
+     "speed": 0.8,
+     "text": "¿La trompa tiene huesos? ¿Sí o no?",
+     "english": "Are there bones inside a trunk? Yes, or no?"
+    },
+    {
+     "v0": 296.726,
+     "seconds": 2.91,
+     "slot": 3.28,
+     "speed": 0.8,
+     "text": "¡Sin huesos! Se dobla para acá y para allá.",
+     "english": "No bones! It bends this way and that way."
+    },
+    {
+     "v0": 300.209,
+     "seconds": 2.38,
+     "slot": 4.14,
+     "speed": 0.8,
+     "text": "¿Qué usa Tumble como esnórquel?",
+     "english": "What does Tumble use as a snorkel?"
+    },
+    {
+     "v0": 304.549,
+     "seconds": 1.0,
+     "slot": 1.24,
+     "speed": 0.8,
+     "text": "¡Su trompa!",
+     "english": "His trunk!"
+    },
+    {
+     "v0": 305.987,
+     "seconds": 2.94,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "Una nariz, seis trabajos. ¡A contarlos!",
+     "english": "One nose, six jobs. Let's count them!"
+    },
+    {
+     "v0": 309.302,
+     "seconds": 1.75,
+     "slot": 1.81,
+     "speed": 0.8,
+     "text": "Oler, agarrar, beber,",
+     "english": "Smell, grab, drink,"
+    },
+    {
+     "v0": 311.313,
+     "seconds": 1.72,
+     "slot": 1.9,
+     "speed": 1.0,
+     "text": "rociar, esnórquel, ¡abrazar!",
+     "english": "spray, snorkel, hug!"
+    },
+    {
+     "v0": 313.412,
+     "seconds": 2.65,
+     "slot": 2.94,
+     "speed": 0.88,
+     "text": "Buenas noches, Tumble. Buenas noches, Mamá.",
+     "english": "Good night, Tumble. Good night, Mama."
+    },
+    {
+     "v0": 316.553,
+     "seconds": 3.55,
+     "slot": 3.89,
+     "speed": 0.93,
+     "text": "Gracias por aprender conmigo, amigos. ¡Nos vemos en el zoo!",
+     "english": "Thank you for learning with me, friends. See you at the zoo!"
+    }
+   ],
+   "captions": "captions/captions-es-419.srt",
+   "cues": 88,
+   "longest_caption_row": 42
+  },
+  "pt-BR": {
+   "track": "audio/track-pt-BR.wav",
+   "seconds": 321.5,
+   "loudness_lufs": -15.7,
+   "peak": 0.843,
+   "voice_over_bed_db": 12.2,
+   "longest_stretch_without_voice_s": 4.15,
+   "lines": 88,
+   "lines_spoken_faster": 37,
+   "fastest_speed": 0.98,
+   "mean_seconds_against_english": 1.02,
+   "translator_notes": [
+    "'Mamãe' is used for 'Mama' ('mama' alone means something else in Portuguese); Milo and Tumble are unchanged. Say if the name must stay 'Mama'.",
+    "Milo is masculine ('o Milo'), as the show's notes call Milo 'he'; the goodbye line avoids 'obrigado/obrigada'.",
+    "Sound words: snif, nham, slurp, glub, tchibum, chuá (the spray), ping (drips), flap, achou (peekaboo).",
+    "'canudinho' for the drinking straw, 'capinzinho' for the piece of straw.",
+    "Two lines were shortened to fit their time: 'So he does not need a long trunk yet' is 'Então a tromba comprida pode esperar', and 'Elephants stroke each other with their trunks' is 'Os elefantes fazem carinho com a tromba'."
+   ],
+   "line_table": [
+    {
+     "v0": 0.42,
+     "seconds": 1.91,
+     "slot": 2.22,
+     "speed": 0.8,
+     "text": "Para que serve uma tromba?",
+     "english": "What can an elephant's trunk do?"
+    },
+    {
+     "v0": 2.836,
+     "seconds": 2.2,
+     "slot": 2.99,
+     "speed": 0.8,
+     "text": "É um nariz? Uma mão? Um chuveiro?",
+     "english": "Is it a nose? A hand? A shower?"
+    },
+    {
+     "v0": 6.029,
+     "seconds": 2.85,
+     "slot": 2.97,
+     "speed": 0.8,
+     "text": "Eu sou o Milo. Vamos descobrir juntos!",
+     "english": "I'm Milo. Let's find out together!"
+    },
+    {
+     "v0": 9.202,
+     "seconds": 2.7,
+     "slot": 3.01,
+     "speed": 0.83,
+     "text": "Bem-vindos ao The Animated Zoo, amigos!",
+     "english": "Welcome to The Animated Zoo, friends!"
+    },
+    {
+     "v0": 12.412,
+     "seconds": 2.53,
+     "slot": 2.78,
+     "speed": 0.84,
+     "text": "Hoje voamos para a savana ensolarada.",
+     "english": "Today we fly to the sunny savanna."
+    },
+    {
+     "v0": 15.393,
+     "seconds": 2.62,
+     "slot": 2.84,
+     "speed": 0.85,
+     "text": "Chegamos! Olha quem está esperando a gente.",
+     "english": "Here we are! Look who is waiting for us."
+    },
+    {
+     "v0": 18.438,
+     "seconds": 2.8,
+     "slot": 3.73,
+     "speed": 0.8,
+     "text": "Este é o Tumble. Ele é um elefante bebê.",
+     "english": "This is Tumble. Tumble is a baby elephant."
+    },
+    {
+     "v0": 22.368,
+     "seconds": 2.93,
+     "slot": 3.32,
+     "speed": 0.8,
+     "text": "E esta é a mamãe do Tumble. Oi, Mamãe!",
+     "english": "And this is Tumble's mama. Hello, Mama!"
+    },
+    {
+     "v0": 25.884,
+     "seconds": 2.51,
+     "slot": 2.71,
+     "speed": 0.93,
+     "text": "Olha a tromba do Tumble: comprida e molinha!",
+     "english": "Look at Tumble's long, bendy trunk."
+    },
+    {
+     "v0": 28.796,
+     "seconds": 1.78,
+     "slot": 1.84,
+     "speed": 0.8,
+     "text": "A tromba é um nariz.",
+     "english": "A trunk is a nose."
+    },
+    {
+     "v0": 30.831,
+     "seconds": 2.98,
+     "slot": 2.99,
+     "speed": 0.8,
+     "text": "E também é o lábio de cima. Tudo junto!",
+     "english": "And it is an upper lip, too. All in one!"
+    },
+    {
+     "v0": 34.026,
+     "seconds": 3.26,
+     "slot": 3.96,
+     "speed": 0.8,
+     "text": "Cadê o seu nariz? Você consegue tocar nele?",
+     "english": "Where is your nose? Can you touch your nose?"
+    },
+    {
+     "v0": 38.186,
+     "seconds": 2.54,
+     "slot": 2.85,
+     "speed": 0.85,
+     "text": "Na ponta da tromba tem dois furinhos.",
+     "english": "At the tip of the trunk are two little holes."
+    },
+    {
+     "v0": 41.237,
+     "seconds": 3.0,
+     "slot": 3.63,
+     "speed": 0.8,
+     "text": "O elefante respira por eles. Snif, snif!",
+     "english": "An elephant breathes through them. Sniff, sniff!"
+    },
+    {
+     "v0": 45.07,
+     "seconds": 2.99,
+     "slot": 3.3,
+     "speed": 0.85,
+     "text": "Snif, snif! O Tumble sente um cheirinho gostoso.",
+     "english": "Sniff, sniff! Tumble smells something yummy."
+    },
+    {
+     "v0": 48.572,
+     "seconds": 3.37,
+     "slot": 3.54,
+     "speed": 0.8,
+     "text": "O elefante usa a tromba para cheirar a comida.",
+     "english": "An elephant uses its trunk to smell its food."
+    },
+    {
+     "v0": 52.308,
+     "seconds": 2.97,
+     "slot": 3.3,
+     "speed": 0.87,
+     "text": "Ele sente o cheiro da água de muito, muito longe!",
+     "english": "It can even smell water from far, far away!"
+    },
+    {
+     "v0": 55.807,
+     "seconds": 2.83,
+     "slot": 6.24,
+     "speed": 0.8,
+     "text": "Então, a tromba é um nariz ou um rabo?",
+     "english": "So, is a trunk a nose, or a tail?"
+    },
+    {
+     "v0": 62.251,
+     "seconds": 2.69,
+     "slot": 2.91,
+     "speed": 0.8,
+     "text": "Um nariz! Um nariz bem, bem comprido.",
+     "english": "A nose! A very, very long nose."
+    },
+    {
+     "v0": 65.36,
+     "seconds": 2.87,
+     "slot": 3.05,
+     "speed": 0.88,
+     "text": "Agora o Tumble está com fome. Olha, uma fruta!",
+     "english": "Now Tumble is hungry. Look, a fruit!"
+    },
+    {
+     "v0": 68.61,
+     "seconds": 2.11,
+     "slot": 2.37,
+     "speed": 0.85,
+     "text": "A tromba também é como uma mão.",
+     "english": "A trunk is like a hand, too."
+    },
+    {
+     "v0": 71.182,
+     "seconds": 2.67,
+     "slot": 2.91,
+     "speed": 0.86,
+     "text": "Ela pega, segura, levanta e alcança.",
+     "english": "It can grab, hold, pick up and reach."
+    },
+    {
+     "v0": 74.291,
+     "seconds": 3.0,
+     "slot": 3.3,
+     "speed": 0.89,
+     "text": "Nham, nham, nham! Você consegue mastigar como o Tumble?",
+     "english": "Yum, yum, yum! Can you munch like Tumble?"
+    },
+    {
+     "v0": 77.79,
+     "seconds": 3.64,
+     "slot": 3.9,
+     "speed": 0.8,
+     "text": "Lá vem a Mamãe. A tromba dela é muito, muito forte.",
+     "english": "Here comes Mama. Her trunk is very, very strong."
+    },
+    {
+     "v0": 81.889,
+     "seconds": 3.46,
+     "slot": 3.53,
+     "speed": 0.8,
+     "text": "Ela levanta um tronco grande e pesado. Lá vai!",
+     "english": "It can lift a big, heavy log. Up it goes!"
+    },
+    {
+     "v0": 85.624,
+     "seconds": 2.3,
+     "slot": 2.55,
+     "speed": 0.9,
+     "text": "E a tromba também é bem delicada.",
+     "english": "And a trunk is very gentle, too."
+    },
+    {
+     "v0": 88.372,
+     "seconds": 2.61,
+     "slot": 2.82,
+     "speed": 0.96,
+     "text": "Ela pega até um capinzinho bem pequenininho.",
+     "english": "It can pick up one tiny piece of straw."
+    },
+    {
+     "v0": 91.394,
+     "seconds": 2.66,
+     "slot": 3.29,
+     "speed": 0.8,
+     "text": "Tão forte e tão delicada. Que nariz!",
+     "english": "So strong, and so gentle. What a nose!"
+    },
+    {
+     "v0": 94.884,
+     "seconds": 2.34,
+     "slot": 2.54,
+     "speed": 0.95,
+     "text": "Dentro da tromba não tem nenhum osso.",
+     "english": "There are no bones inside a trunk."
+    },
+    {
+     "v0": 97.625,
+     "seconds": 2.59,
+     "slot": 2.76,
+     "speed": 0.8,
+     "text": "Por isso ela dobra para cá e para lá!",
+     "english": "So it can bend this way, and that way!"
+    },
+    {
+     "v0": 100.585,
+     "seconds": 3.74,
+     "slot": 3.86,
+     "speed": 0.87,
+     "text": "Você consegue mexer o braço como uma tromba? Mexe, mexe!",
+     "english": "Can you wiggle your arm like a trunk? Wiggle, wiggle!"
+    },
+    {
+     "v0": 104.645,
+     "seconds": 3.48,
+     "slot": 4.16,
+     "speed": 0.8,
+     "text": "Já são dois trabalhos. Um: cheirar. Dois: pegar.",
+     "english": "That is two trunk jobs. One, smell. Two, grab."
+    },
+    {
+     "v0": 109.007,
+     "seconds": 3.29,
+     "slot": 4.13,
+     "speed": 0.8,
+     "text": "Ufa, que calor! O Tumble e a Mamãe entram no rio.",
+     "english": "Phew, it is hot! Tumble and Mama walk into the river."
+    },
+    {
+     "v0": 113.333,
+     "seconds": 2.95,
+     "slot": 3.2,
+     "speed": 0.84,
+     "text": "Hora de beber água. Olha a tromba da Mamãe!",
+     "english": "Time for a drink. Watch Mama's trunk!"
+    },
+    {
+     "v0": 116.732,
+     "seconds": 3.11,
+     "slot": 3.45,
+     "speed": 0.85,
+     "text": "Ela puxa a água para dentro da tromba. Slurp!",
+     "english": "She sucks the water up into her trunk. Slurp!"
+    },
+    {
+     "v0": 120.382,
+     "seconds": 3.7,
+     "slot": 7.63,
+     "speed": 0.8,
+     "text": "A água sobe até lá em cima do nariz dela? Sim ou não?",
+     "english": "Does the water go all the way up her nose? Yes, or no?"
+    },
+    {
+     "v0": 128.209,
+     "seconds": 2.23,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "Não! A água só sobe um pedacinho.",
+     "english": "No! The water only goes part of the way up."
+    },
+    {
+     "v0": 131.526,
+     "seconds": 2.22,
+     "slot": 2.42,
+     "speed": 0.98,
+     "text": "Depois ela leva a tromba até a boca,",
+     "english": "Then she curls her trunk to her mouth,"
+    },
+    {
+     "v0": 134.145,
+     "seconds": 3.21,
+     "slot": 3.66,
+     "speed": 0.8,
+     "text": "e sopra a água lá dentro! Glub, glub, glub.",
+     "english": "and blows the water in! Glug, glug, glug."
+    },
+    {
+     "v0": 138.009,
+     "seconds": 4.71,
+     "slot": 4.84,
+     "speed": 0.8,
+     "text": "Então a tromba não é um canudinho. Ela leva a água até a boca.",
+     "english": "So a trunk is not like a straw. It carries the water to the mouth."
+    },
+    {
+     "v0": 143.044,
+     "seconds": 3.98,
+     "slot": 4.01,
+     "speed": 0.8,
+     "text": "Agora é a vez do Tumble. A tromba dele ainda é curtinha.",
+     "english": "Now it is Tumble's turn. His trunk is still short."
+    },
+    {
+     "v0": 147.251,
+     "seconds": 3.61,
+     "slot": 3.84,
+     "speed": 0.84,
+     "text": "No começo, os filhotes são desajeitados com a tromba.",
+     "english": "Baby elephants are clumsy with their trunks at first."
+    },
+    {
+     "v0": 151.288,
+     "seconds": 2.81,
+     "slot": 3.14,
+     "speed": 0.84,
+     "text": "Opa! Tchibum! A água espirra para todo lado.",
+     "english": "Oops! Splash! The water goes everywhere."
+    },
+    {
+     "v0": 154.628,
+     "seconds": 3.7,
+     "slot": 3.88,
+     "speed": 0.97,
+     "text": "Mas o Tumble continua tentando. Aos pouquinhos, ele aprende.",
+     "english": "But Tumble keeps trying. Little by little, he learns."
+    },
+    {
+     "v0": 158.706,
+     "seconds": 3.36,
+     "slot": 3.53,
+     "speed": 0.88,
+     "text": "Você consegue fazer como o elefante? Slurp, slurp!",
+     "english": "Can you slurp like an elephant? Slurp, slurp!"
+    },
+    {
+     "v0": 162.438,
+     "seconds": 4.02,
+     "slot": 4.04,
+     "speed": 0.8,
+     "text": "O filhote de elefante mama o leite da mamãe com a boca.",
+     "english": "A baby elephant drinks his mama's milk with his mouth."
+    },
+    {
+     "v0": 166.678,
+     "seconds": 2.45,
+     "slot": 2.7,
+     "speed": 0.95,
+     "text": "Então a tromba comprida pode esperar.",
+     "english": "So he does not need a long trunk yet."
+    },
+    {
+     "v0": 169.581,
+     "seconds": 3.43,
+     "slot": 3.75,
+     "speed": 0.85,
+     "text": "A Mamãe enche a tromba de novo. O que ela vai fazer?",
+     "english": "Now Mama fills her trunk again. What will she do?"
+    },
+    {
+     "v0": 173.526,
+     "seconds": 3.81,
+     "slot": 3.87,
+     "speed": 0.8,
+     "text": "Chuá! Um chuveiro! Ela joga água nas costas todinhas.",
+     "english": "Whoosh! A shower! She sprays water all over her back."
+    },
+    {
+     "v0": 177.599,
+     "seconds": 4.07,
+     "slot": 4.41,
+     "speed": 0.84,
+     "text": "Os elefantes jogam água fresquinha no corpo para se refrescar.",
+     "english": "Elephants squirt cool water over their bodies to keep cool."
+    },
+    {
+     "v0": 182.211,
+     "seconds": 3.64,
+     "slot": 3.77,
+     "speed": 0.8,
+     "text": "O Tumble também quer um banho. Um, dois, três e já!",
+     "english": "Tumble wants a shower too. Ready, steady, spray!"
+    },
+    {
+     "v0": 186.185,
+     "seconds": 3.21,
+     "slot": 3.46,
+     "speed": 0.84,
+     "text": "Você consegue esguichar como um elefante? Chuá, chuá!",
+     "english": "Can you spray like an elephant? Whoosh, whoosh!"
+    },
+    {
+     "v0": 189.841,
+     "seconds": 4.12,
+     "slot": 4.84,
+     "speed": 0.8,
+     "text": "Agora são quatro trabalhos. Três: beber. Quatro: esguichar.",
+     "english": "Now we have four trunk jobs. Three, drink. Four, spray."
+    },
+    {
+     "v0": 194.886,
+     "seconds": 3.23,
+     "slot": 3.32,
+     "speed": 0.8,
+     "text": "Agora o Tumble entra na água funda, bem funda.",
+     "english": "Now Tumble wades into the deep, deep water."
+    },
+    {
+     "v0": 198.401,
+     "seconds": 2.35,
+     "slot": 2.51,
+     "speed": 0.89,
+     "text": "Mais fundo, mais fundo, e mais fundo.",
+     "english": "Deeper, and deeper, and deeper."
+    },
+    {
+     "v0": 201.11,
+     "seconds": 2.53,
+     "slot": 3.86,
+     "speed": 0.8,
+     "text": "Cadê o Tumble? Você consegue ver?",
+     "english": "Where did Tumble go? Can you see him?"
+    },
+    {
+     "v0": 205.167,
+     "seconds": 2.58,
+     "slot": 2.78,
+     "speed": 0.8,
+     "text": "Achou! Olha a pontinha da tromba dele.",
+     "english": "Peekaboo! There is the tip of his trunk."
+    },
+    {
+     "v0": 208.143,
+     "seconds": 2.89,
+     "slot": 3.39,
+     "speed": 0.8,
+     "text": "O elefante usa a tromba como um snorkel.",
+     "english": "An elephant can use its trunk like a snorkel."
+    },
+    {
+     "v0": 211.732,
+     "seconds": 3.11,
+     "slot": 3.28,
+     "speed": 0.8,
+     "text": "A pontinha fica no ar, e assim ele respira.",
+     "english": "The tip stays up in the air, so he can breathe."
+    },
+    {
+     "v0": 215.207,
+     "seconds": 3.16,
+     "slot": 3.36,
+     "speed": 0.8,
+     "text": "Só a pontinha da tromba fica fora da água.",
+     "english": "Only the tip of the trunk is above the water."
+    },
+    {
+     "v0": 218.771,
+     "seconds": 3.4,
+     "slot": 3.54,
+     "speed": 0.8,
+     "text": "Puxe o ar pelo nariz. E solte. Você consegue?",
+     "english": "Breathe in through your nose. And out. Can you do it?"
+    },
+    {
+     "v0": 222.511,
+     "seconds": 3.2,
+     "slot": 3.79,
+     "speed": 0.8,
+     "text": "O Tumble anda debaixo da água. Bolha, bolha!",
+     "english": "Tumble walks along under the water. Bubble, bubble!"
+    },
+    {
+     "v0": 226.505,
+     "seconds": 2.85,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "Vamos contar as bolhas. Um, dois, três!",
+     "english": "Let's count his bubbles. One, two, three!"
+    },
+    {
+     "v0": 229.828,
+     "seconds": 2.55,
+     "slot": 3.0,
+     "speed": 0.8,
+     "text": "E ele sai da água. Ping, ping, ping!",
+     "english": "And out he comes. Drip, drip, drip!"
+    },
+    {
+     "v0": 233.03,
+     "seconds": 3.38,
+     "slot": 4.0,
+     "speed": 0.8,
+     "text": "O Tumble abana as orelhonas. Flap, flap, flap!",
+     "english": "Tumble flaps his big ears. Flap, flap, flap!"
+    },
+    {
+     "v0": 237.23,
+     "seconds": 3.56,
+     "slot": 7.26,
+     "speed": 0.8,
+     "text": "Com o que o Tumble respirou? Com a tromba ou com o rabo?",
+     "english": "What did Tumble breathe with? His trunk, or his tail?"
+    },
+    {
+     "v0": 244.69,
+     "seconds": 2.38,
+     "slot": 2.43,
+     "speed": 0.8,
+     "text": "Com a tromba! Igual a um snorkel.",
+     "english": "His trunk! Just like a snorkel."
+    },
+    {
+     "v0": 247.318,
+     "seconds": 3.33,
+     "slot": 3.67,
+     "speed": 0.92,
+     "text": "O sol vai embora. O Tumble volta para casa com a Mamãe.",
+     "english": "The sun goes down. Tumble walks home with Mama."
+    },
+    {
+     "v0": 251.19,
+     "seconds": 3.27,
+     "slot": 3.44,
+     "speed": 0.9,
+     "text": "O Tumble está cansado. Ele chega pertinho da Mamãe.",
+     "english": "Tumble is tired. He comes close to Mama."
+    },
+    {
+     "v0": 254.828,
+     "seconds": 3.07,
+     "slot": 3.75,
+     "speed": 0.8,
+     "text": "A Mamãe estica a tromba e faz carinho nele.",
+     "english": "Mama reaches out her trunk, and strokes him gently."
+    },
+    {
+     "v0": 258.779,
+     "seconds": 2.65,
+     "slot": 2.93,
+     "speed": 0.85,
+     "text": "Os elefantes fazem carinho com a tromba.",
+     "english": "Elephants stroke each other with their trunks."
+    },
+    {
+     "v0": 261.911,
+     "seconds": 2.61,
+     "slot": 2.78,
+     "speed": 0.82,
+     "text": "É como um abraço. Um abraço de tromba!",
+     "english": "It is like a hug. A trunk hug!"
+    },
+    {
+     "v0": 264.895,
+     "seconds": 2.72,
+     "slot": 3.09,
+     "speed": 0.85,
+     "text": "Você consegue se dar um abração? Aperta!",
+     "english": "Can you give yourself a big hug? Squeeze!"
+    },
+    {
+     "v0": 268.181,
+     "seconds": 2.15,
+     "slot": 2.36,
+     "speed": 0.96,
+     "text": "O Tumble fica quentinho e feliz.",
+     "english": "Tumble feels warm and happy."
+    },
+    {
+     "v0": 270.741,
+     "seconds": 3.38,
+     "slot": 4.12,
+     "speed": 0.8,
+     "text": "Cinco: snorkel. Seis: abraçar. Seis trabalhos!",
+     "english": "Five, snorkel. Six, hug. Six trunk jobs!"
+    },
+    {
+     "v0": 275.059,
+     "seconds": 2.22,
+     "slot": 2.48,
+     "speed": 0.8,
+     "text": "Um nariz, seis trabalhos. Uau!",
+     "english": "One nose, six jobs. Wow!"
+    },
+    {
+     "v0": 277.744,
+     "seconds": 2.08,
+     "slot": 2.19,
+     "speed": 0.95,
+     "text": "Hora de lembrar o que aprendemos!",
+     "english": "Time to remember what we learned!"
+    },
+    {
+     "v0": 280.131,
+     "seconds": 2.23,
+     "slot": 6.1,
+     "speed": 0.8,
+     "text": "A tromba é um nariz? Sim ou não?",
+     "english": "Is a trunk a nose? Yes, or no?"
+    },
+    {
+     "v0": 286.434,
+     "seconds": 2.85,
+     "slot": 3.09,
+     "speed": 0.8,
+     "text": "Sim! Nariz e lábio de cima, tudo junto.",
+     "english": "Yes! A nose and an upper lip, all in one."
+    },
+    {
+     "v0": 289.728,
+     "seconds": 2.98,
+     "slot": 6.8,
+     "speed": 0.8,
+     "text": "A tromba tem ossos por dentro? Sim ou não?",
+     "english": "Are there bones inside a trunk? Yes, or no?"
+    },
+    {
+     "v0": 296.726,
+     "seconds": 2.7,
+     "slot": 3.28,
+     "speed": 0.8,
+     "text": "Sem ossos! Ela dobra para cá e para lá.",
+     "english": "No bones! It bends this way and that way."
+    },
+    {
+     "v0": 300.209,
+     "seconds": 2.51,
+     "slot": 4.14,
+     "speed": 0.8,
+     "text": "O que o Tumble usa como snorkel?",
+     "english": "What does Tumble use as a snorkel?"
+    },
+    {
+     "v0": 304.549,
+     "seconds": 1.0,
+     "slot": 1.24,
+     "speed": 0.8,
+     "text": "A tromba!",
+     "english": "His trunk!"
+    },
+    {
+     "v0": 305.987,
+     "seconds": 2.73,
+     "slot": 3.12,
+     "speed": 0.8,
+     "text": "Um nariz, seis trabalhos. Vamos contar!",
+     "english": "One nose, six jobs. Let's count them!"
+    },
+    {
+     "v0": 309.302,
+     "seconds": 1.63,
+     "slot": 1.81,
+     "speed": 0.86,
+     "text": "Cheirar, pegar, beber,",
+     "english": "Smell, grab, drink,"
+    },
+    {
+     "v0": 311.313,
+     "seconds": 1.71,
+     "slot": 1.9,
+     "speed": 0.96,
+     "text": "esguichar, snorkel, abraçar!",
+     "english": "spray, snorkel, hug!"
+    },
+    {
+     "v0": 313.412,
+     "seconds": 2.82,
+     "slot": 2.94,
+     "speed": 0.8,
+     "text": "Boa noite, Tumble. Boa noite, Mamãe.",
+     "english": "Good night, Tumble. Good night, Mama."
+    },
+    {
+     "v0": 316.553,
+     "seconds": 3.6,
+     "slot": 3.89,
+     "speed": 0.82,
+     "text": "Que bom aprender com vocês, amigos! Vejo vocês no zoo!",
+     "english": "Thank you for learning with me, friends. See you at the zoo!"
+    }
+   ],
+   "captions": "captions/captions-pt-BR.srt",
+   "cues": 88,
+   "longest_caption_row": 42
+  }
+ },
+ "not_checked_by_machine": [
+  "how the voices sound and whether each word is pronounced right (nobody here can listen): one human listen per language",
+  "regional vocabulary and age fit were checked by reading every line, not by a native speaker",
+  "the picture's own words (caption line, big words, answer signs) are English in every language in this test"
+ ],
+ "facts": "The English script's facts were read at their sources on Nov 16 (see the episode file's header); the adaptations state the same facts, line for line.",
+ "ready": true
+}

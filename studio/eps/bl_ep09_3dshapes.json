@@ -1,0 +1,329 @@
+{
+ "id": "bl_ep09_3dshapes",
+ "title": "3D Shapes for Kids! Cube, Sphere, Cone and More",
+ "intro": [
+  [
+   "Hi, friends! I'm Bloop, and welcome to Bloop's Color Lab!",
+   ""
+  ],
+  [
+   "Today we're meeting five shapes you can hold in your hands!",
+   ""
+  ],
+  [
+   "I put on my lab goggles, and I'm ready to learn something new with you.",
+   ""
+  ],
+  [
+   "Can you count with me? One, two, three, four, five!",
+   ""
+  ],
+  [
+   "Ready? Let's wiggle into the lab!",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "bl2_cube",
+   "lines": [
+    [
+     "Here's a clue: it looks like a box, with flat sides all around! Can you guess?",
+     "q"
+    ],
+    [
+     "First up: Cube!",
+     "enter"
+    ],
+    [
+     "This is Cube! Can you say cube?",
+     "zoom"
+    ],
+    [
+     "Look at this side. It's a square!",
+     "fx+bob"
+    ],
+    [
+     "A cube has six flat sides, and every side is a square.",
+     "bob"
+    ],
+    [
+     "Can you draw a square in the air with your finger?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is shaped like a cube?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A gift box, and a little toy block!",
+     "fx2+badge:6 SIDES!"
+    ],
+    [
+     "Let's say it together: CUBE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CUBE! Great job!",
+     "zoom"
+    ],
+    [
+     "Cubes can stack up tall, because their sides are flat.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cube! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_sphere",
+   "lines": [
+    [
+     "Here's a clue: it's round like a ball, all the way around! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Sphere!",
+     "enter"
+    ],
+    [
+     "This is Sphere! Can you say sphere?",
+     "zoom"
+    ],
+    [
+     "Look! It's round everywhere, with no corners at all.",
+     "fx+bob"
+    ],
+    [
+     "A sphere can roll, and roll, and roll.",
+     "bob"
+    ],
+    [
+     "Can you roll your arms around like a rolling ball?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is a sphere?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A beach ball, and a juicy orange!",
+     "fx2+badge:ROUND!"
+    ],
+    [
+     "Let's say it together: SPHERE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: SPHERE! Great job!",
+     "zoom"
+    ],
+    [
+     "Our planet Earth is shaped like a giant sphere, too!",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Sphere! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_cone",
+   "lines": [
+    [
+     "Here's a clue: it's pointy on top and round on the bottom! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Cone!",
+     "enter"
+    ],
+    [
+     "This is Cone! Can you say cone?",
+     "zoom"
+    ],
+    [
+     "Look! The bottom is a circle, and the top is a point.",
+     "fx+bob"
+    ],
+    [
+     "Pointy top, round bottom. That's a cone!",
+     "bob"
+    ],
+    [
+     "Can you make a pointy hat with your hands on your head?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is shaped like a cone?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "An ice cream cone, and an orange traffic cone!",
+     "fx2+badge:CONE!"
+    ],
+    [
+     "Let's say it together: CONE!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CONE! Great job!",
+     "zoom"
+    ],
+    [
+     "Lay a cone on its side, and it rolls around in a circle.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cone! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_cylinder",
+   "lines": [
+    [
+     "Here's a clue: it looks like a can, with circles on both ends! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Cylinder!",
+     "enter"
+    ],
+    [
+     "This is Cylinder! Can you say cylinder?",
+     "zoom"
+    ],
+    [
+     "Look! A circle on the top, and a circle on the bottom.",
+     "fx+bob"
+    ],
+    [
+     "A cylinder can stand up tall, or roll on its side.",
+     "bob"
+    ],
+    [
+     "Can you roll your hands over and over, like a rolling can?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else is a cylinder?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A toy drum, and a cup!",
+     "fx2+badge:2 CIRCLES!"
+    ],
+    [
+     "Let's say it together: CYLINDER!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: CYLINDER! Great job!",
+     "zoom"
+    ],
+    [
+     "Lots of crayons are shaped like a cylinder, with a pointy tip.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Cylinder! See you soon!",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "bl2_pyramid",
+   "lines": [
+    [
+     "Here's a clue: it has a square bottom, and its sides meet at a point! Can you guess?",
+     "q"
+    ],
+    [
+     "Next up: Pyramid!",
+     "enter"
+    ],
+    [
+     "This is Pyramid! Can you say pyramid?",
+     "zoom"
+    ],
+    [
+     "Look! Its sides are triangles, and they meet at the top.",
+     "fx+bob"
+    ],
+    [
+     "A pyramid has a flat square bottom, so it sits nice and still.",
+     "bob"
+    ],
+    [
+     "Can you put your hands together over your head, like a pointy pyramid?",
+     "wiggle"
+    ],
+    [
+     "Can you guess? What else looks like a pyramid?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "A tent, and a stack of blocks!",
+     "fx2+badge:PYRAMID!"
+    ],
+    [
+     "Let's say it together: PYRAMID!",
+     "zoom"
+    ],
+    [
+     "One more time, nice and loud: PYRAMID! Great job!",
+     "zoom"
+    ],
+    [
+     "Long ago, people built giant pyramids out of stone.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Bye-bye, Pyramid! See you soon!",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "What super shapes! Let's remember.",
+   "@title"
+  ],
+  [
+   "A cube, like a gift box.",
+   "@bl2_cube"
+  ],
+  [
+   "A sphere, like a ball.",
+   "@bl2_sphere"
+  ],
+  [
+   "A cone, like an ice cream cone.",
+   "@bl2_cone"
+  ],
+  [
+   "A cylinder, like a cup.",
+   "@bl2_cylinder"
+  ],
+  [
+   "And a pyramid, like a tent!",
+   "@bl2_pyramid"
+  ]
+ ],
+ "outro": [
+  [
+   "Which of these shapes can you find in your toy box? Keep looking for shapes everywhere you go.",
+   ""
+  ],
+  [
+   "Bye, friends! See you in the lab!",
+   ""
+  ]
+ ]
+}

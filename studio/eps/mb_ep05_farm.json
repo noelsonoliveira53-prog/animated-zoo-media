@@ -1,0 +1,329 @@
+{
+ "id": "mb_ep05_farm",
+ "title": "Goodnight Farm 🐄 Calm Bedtime Story with Farm Animals and Luna",
+ "intro": [
+  [
+   "Hello, little one. I'm Luna, the sleepy owl. Welcome to Moonbeam Bedtime.",
+   ""
+  ],
+  [
+   "Tonight, we'll say goodnight to the sleepy farm friends.",
+   ""
+  ],
+  [
+   "Let's take a slow, deep breath together. In, and out.",
+   ""
+  ],
+  [
+   "Get cozy, snuggle in, and listen softly.",
+   ""
+  ],
+  [
+   "Are you ready? Let's begin.",
+   ""
+  ]
+ ],
+ "animals": [
+  {
+   "key": "mb_cow",
+   "lines": [
+    [
+     "Here's a little clue: she says moo, and she lives on the farm. Who could it be?",
+     "q"
+    ],
+    [
+     "First, let's meet: Cow.",
+     "enter"
+    ],
+    [
+     "This is Cow. Can you whisper cow?",
+     "zoom"
+    ],
+    [
+     "Cows can sleep lying down in the soft grass.",
+     "fx+bob"
+    ],
+    [
+     "They rest in the barn at night.",
+     "bob"
+    ],
+    [
+     "Can you say a sleepy moo? Moooo.",
+     "bob"
+    ],
+    [
+     "What does a cow say?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Moo!",
+     "fx2+badge:COW"
+    ],
+    [
+     "Let's say it softly together: Cow.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Cow.",
+     "zoom"
+    ],
+    [
+     "Cow is lying down in the hay.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Cow.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_pig",
+   "lines": [
+    [
+     "Here's a little clue: he's pink, and he says oink. Who could it be?",
+     "q"
+    ],
+    [
+     "Next, here is: Pig.",
+     "enter"
+    ],
+    [
+     "This is Pig. Can you whisper pig?",
+     "zoom"
+    ],
+    [
+     "Pigs like to sleep snuggled close together.",
+     "fx+bob"
+    ],
+    [
+     "They make soft, snorty sounds.",
+     "bob"
+    ],
+    [
+     "Can you say a quiet oink? Oink, oink.",
+     "bob"
+    ],
+    [
+     "How do pigs like to sleep?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Snuggled close together.",
+     "fx2+badge:PIG"
+    ],
+    [
+     "Let's say it softly together: Pig.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Pig.",
+     "zoom"
+    ],
+    [
+     "Pig is snoring softly.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Pig.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_horse",
+   "lines": [
+    [
+     "Here's a little clue: he has a long mane, and he says neigh. Who could it be?",
+     "q"
+    ],
+    [
+     "Now, let's visit: Horse.",
+     "enter"
+    ],
+    [
+     "This is Horse. Can you whisper horse?",
+     "zoom"
+    ],
+    [
+     "Horses can sleep standing up!",
+     "fx+bob"
+    ],
+    [
+     "They also lie down for a deep sleep.",
+     "bob"
+    ],
+    [
+     "Can you gently gallop your fingers on your lap?",
+     "bob"
+    ],
+    [
+     "How can horses sleep?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Standing up, or lying down.",
+     "fx2+badge:HORSE"
+    ],
+    [
+     "Let's say it softly together: Horse.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Horse.",
+     "zoom"
+    ],
+    [
+     "Horse rests in his cozy stall.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Horse.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_hen",
+   "lines": [
+    [
+     "Here's a little clue: she says cluck, and she sits on eggs. Who could it be?",
+     "q"
+    ],
+    [
+     "Look, it's: Hen.",
+     "enter"
+    ],
+    [
+     "This is Hen. Can you whisper hen?",
+     "zoom"
+    ],
+    [
+     "Hens sleep up high on a perch.",
+     "fx+bob"
+    ],
+    [
+     "They keep their eggs warm and safe.",
+     "bob"
+    ],
+    [
+     "Can you tuck your arms in like a hen on her nest?",
+     "bob"
+    ],
+    [
+     "Where do hens sleep?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Up high on a perch.",
+     "fx2+badge:HEN"
+    ],
+    [
+     "Let's say it softly together: Hen.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Hen.",
+     "zoom"
+    ],
+    [
+     "Hen fluffs her feathers and settles in.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Hen.",
+     "bob"
+    ]
+   ]
+  },
+  {
+   "key": "mb_puppy",
+   "lines": [
+    [
+     "Here's a little clue: he wags his tail, and he says woof. Who could it be?",
+     "q"
+    ],
+    [
+     "And last, here is: Puppy.",
+     "enter"
+    ],
+    [
+     "This is Puppy. Can you whisper puppy?",
+     "zoom"
+    ],
+    [
+     "Puppies need lots and lots of sleep.",
+     "fx+bob"
+    ],
+    [
+     "Sleep helps them grow big and strong.",
+     "bob"
+    ],
+    [
+     "Can you wag your hand like a happy puppy tail?",
+     "bob"
+    ],
+    [
+     "Why do puppies sleep so much?",
+     "fxoff+fx2off+q"
+    ],
+    [
+     "Sleep helps them grow.",
+     "fx2+badge:PUPPY"
+    ],
+    [
+     "Let's say it softly together: Puppy.",
+     "zoom"
+    ],
+    [
+     "One more time, very quietly: Puppy.",
+     "zoom"
+    ],
+    [
+     "Puppy curls up in his little bed.",
+     "fxoff+fx2off+bob"
+    ],
+    [
+     "Goodnight, Puppy.",
+     "bob"
+    ]
+   ]
+  }
+ ],
+ "recap": [
+  [
+   "Let's remember all our friends.",
+   "@title"
+  ],
+  [
+   "Goodnight, Cow.",
+   "@mb_cow"
+  ],
+  [
+   "Goodnight, Pig.",
+   "@mb_pig"
+  ],
+  [
+   "Goodnight, Horse.",
+   "@mb_horse"
+  ],
+  [
+   "Goodnight, Hen.",
+   "@mb_hen"
+  ],
+  [
+   "Goodnight, Puppy.",
+   "@mb_puppy"
+  ]
+ ],
+ "outro": [
+  [
+   "Goodnight, Cow, Pig, Horse, Hen, and Puppy. Now close your eyes, and dream sweet dreams.",
+   ""
+  ],
+  [
+   "Goodnight, little one. Luna loves you. Sleep tight.",
+   ""
+  ]
+ ]
+}

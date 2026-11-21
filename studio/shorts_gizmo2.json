@@ -1,0 +1,676 @@
+[
+ {
+  "id": "gz2_heart",
+  "animal": "gz2_heart",
+  "title": "How Does Your Heart Work? ❤️",
+  "thumb": "PUMP, PUMP!",
+  "top": "HEART",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "KidsHealth (Nemours): How the Body Works",
+   "Basic life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Put your hand on your chest. Feel that thump, thump? Let's find out what it is!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "It's your heart! Your heart is a strong muscle, about the size of your fist.",
+    "act": "zoom+badge:PUMP, PUMP!"
+   },
+   {
+    "say": "Every beat squeezes and pumps blood all around your body, from your head to your toes. Thump, thump!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Your heart beats about one hundred thousand times every day. When you run and play, it beats even faster!",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Your heart works hard all day, and even while you sleep. Now you know how it works! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_float",
+  "animal": "gz2_float",
+  "title": "Why Do Boats Float? 🚤",
+  "thumb": "IT FLOATS!",
+  "top": "FLOATING",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "A giant ship is super heavy, but it doesn't sink. How does it float?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "When something sits in water, the water pushes up on it from below. Push, push!",
+    "act": "zoom+badge:IT FLOATS!"
+   },
+   {
+    "say": "Boats are wide, with lots of space inside, so the water can push up enough to hold them up. It floats!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "A small rock is heavy for its size, so the water can't hold it up. Down it sinks! But a wide boat stays on top.",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "At bath time, ask a grown-up to help you test which toys float. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_eyes",
+  "animal": "gz2_eyes",
+  "title": "How Do Your Eyes See? 👀",
+  "thumb": "LIGHT IN!",
+  "top": "EYES",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "KidsHealth (Nemours): How the Body Works",
+   "Basic life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "You can see this apple right now. But how do your eyes do it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Light shines on the apple, and the light bounces off it, right into your eyes!",
+    "act": "zoom+badge:LIGHT IN!"
+   },
+   {
+    "say": "The black dot in the middle of your eye is called the pupil. It's a little window that lets the light in.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Then your eyes send a message to your brain, and your brain says, that's a red apple! Can you blink your eyes?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Your eyes and brain work as a team. Now you know how it works! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_fridge",
+  "animal": "gz2_fridge",
+  "title": "How Does a Fridge Keep Food Cold?",
+  "thumb": "COLD INSIDE!",
+  "top": "FRIDGE",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "U.S. Department of Energy (fridges, electricity)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Open the fridge, and brrr, it's cold inside! How does it stay so cold and chilly?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Here's a big surprise: a fridge doesn't really make cold. It moves the heat out!",
+    "act": "zoom+badge:COLD INSIDE!"
+   },
+   {
+    "say": "Special tubes carry heat from inside the fridge to the outside. That's why it can feel warm near the back.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "With the heat gone, the inside stays cold, and cold food stays fresh longer. Can you shiver like you're in a fridge? Brrr!",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Remember to close the fridge door quickly, so the cold stays inside. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_guitar",
+  "animal": "gz2_guitar",
+  "title": "How Does a Guitar Make Music? 🎸",
+  "thumb": "STRINGS WIGGLE!",
+  "top": "GUITAR",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Strum, strum! A guitar can play happy songs and quiet songs. But how does it make music?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "When you pluck a string, it wiggles back and forth, super fast. That's called a vibration.",
+    "act": "zoom+badge:STRINGS WIGGLE!"
+   },
+   {
+    "say": "The wiggling string shakes the air, and the hollow body makes the sound big and loud!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Thick strings wiggle slowly and sound low. Thin strings wiggle fast and sound high. Can you sing low, then high?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Every sound you hear comes from something wiggling, even your own voice. Touch your throat and hum to feel it! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_lever",
+  "animal": "gz2_lever",
+  "title": "How Does a Seesaw Work? It's a Lever!",
+  "thumb": "LIFT!",
+  "top": "LEVER",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#5fae5a",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Up and down, up and down! What kind of machine is a seesaw?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "A seesaw is a lever! It's a long bar that rests on a point called a fulcrum.",
+    "act": "zoom+badge:LIFT!"
+   },
+   {
+    "say": "Push down on one end, and the other end goes up. A lever helps you lift heavy things with a small push!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "If the heavy box is close to the fulcrum, it's even easier to lift. Can you be a seesaw? One arm up, one arm down!",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Next time you ride a seesaw, you're using a simple machine. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_ears",
+  "animal": "gz2_ears",
+  "title": "How Do Your Ears Hear? 👂",
+  "thumb": "WIGGLE!",
+  "top": "EARS",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "KidsHealth (Nemours): How the Body Works",
+   "Basic life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Ding, ding! You heard that bell. But how do your ears do it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Sounds make the air wiggle in little waves. The waves travel right into your ear!",
+    "act": "zoom+badge:WIGGLE!"
+   },
+   {
+    "say": "Inside, they make your eardrum wiggle, like a tiny drum. Then three tiny bones pass the wiggle along.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Those are the smallest bones in your whole body! Then your brain says, that's a bell! Can you cup your hand by your ear and listen?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Your ears are always listening, even in the dark and even with your eyes closed. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_solar",
+  "animal": "gz2_solar",
+  "title": "How Do Solar Panels Work? ☀️",
+  "thumb": "SUN POWER!",
+  "top": "SOLAR PANEL",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#5fae5a",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "The Sun can help turn on the lights in your home. Do you know how?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "With a solar panel! It's a flat panel with lots of special squares that catch sunlight.",
+    "act": "zoom+badge:SUN POWER!"
+   },
+   {
+    "say": "The squares turn sunlight into electricity, and wires carry it into a home to power lights and more!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Solar panels work best on bright, sunny days. Can you open your arms wide and soak up the sunshine?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Some garden lights have tiny solar panels too. They charge up all day and glow at night. Look for them! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_bee",
+  "animal": "gz2_bee",
+  "title": "How Do Bees Make Honey? 🐝",
+  "thumb": "HONEY!",
+  "top": "HONEYBEE",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#5fae5a",
+  "sources": [
+   "National Wildlife Federation / USDA (animals, bees)",
+   "Basic life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Honey is sweet, golden, and sticky. Do you know who makes it?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Honeybees! They fly from flower to flower, all day long, and drink a sweet juice called nectar. They carry it home in their tummies.",
+    "act": "zoom+badge:HONEY!"
+   },
+   {
+    "say": "Back at the hive, they put the nectar into little wax rooms called a honeycomb.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Then they fan it with their wings, buzz, buzz, until it gets thick and turns into honey! Can you buzz like a bee?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Bees also help flowers make new seeds. Thank you, busy bees! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_bike",
+  "animal": "gz2_bike",
+  "title": "How Do Bike Gears Work? 🚲",
+  "thumb": "SPIN FAST!",
+  "top": "BIKE GEARS",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#5fae5a",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Pedal, pedal, zoom! How does pedaling make a bike go?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Your pedals turn a big, round gear with teeth on it. A chain wraps around those teeth.",
+    "act": "zoom+badge:SPIN FAST!"
+   },
+   {
+    "say": "The chain pulls a small gear on the back wheel. The small gear spins faster, so the wheel turns again and again!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "One turn of your pedals can spin the back wheel more than once. Can you pedal your legs in the air like a bike?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "That's how a bike goes so fast. And always wear a helmet when you ride! See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_steam",
+  "animal": "gz2_steam",
+  "title": "Ice, Water, Steam: What Changes Water?",
+  "thumb": "ICE, WATER, STEAM!",
+  "top": "ICE, WATER, STEAM",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Ice, water, and steam are all the same thing. Can you guess what it is?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "They're all water! Water can be hard ice, runny water, or floaty steam.",
+    "act": "zoom+badge:ICE, WATER, STEAM!"
+   },
+   {
+    "say": "Warm up ice, and it melts into water. Heat water a lot, and it turns into steam that floats up!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Cool steam down, and it turns back into water. Freeze water, and it turns into ice again! Can you be stiff like ice, then wiggly like water?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Steam is very hot, so we only watch it from far away. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_moonphases",
+  "animal": "gz2_moonphases",
+  "title": "Why Does the Moon Change Shape? 🌙",
+  "thumb": "MOON PHASES!",
+  "top": "MOON PHASES",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "sources": [
+   "NASA Space Place (Earth, Moon, Sun, seasons)",
+   "Basic Earth & space science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Sometimes the Moon is round, and sometimes it looks like a smile. Why?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The Moon doesn't make its own light. The Sun shines on it, like a giant flashlight.",
+    "act": "zoom+badge:MOON PHASES!"
+   },
+   {
+    "say": "As the Moon goes around Earth, we see different parts of its sunny side. Those are called phases!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "The Moon never really changes shape. We just see more or less of the light. Can you make a round full moon with your arms?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Tonight, look up at the sky and see what shape the Moon is. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz2_screen",
+  "animal": "gz2_screen",
+  "title": "How Does a Screen Show Pictures?",
+  "thumb": "TINY DOTS!",
+  "top": "SCREEN",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "U.S. Department of Energy (fridges, electricity)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Every picture on a screen is made of something super, super tiny. Can you guess what it is?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Tiny dots of light! A screen has millions of them, all lined up in rows. They're called pixels.",
+    "act": "zoom+badge:TINY DOTS!"
+   },
+   {
+    "say": "Each pixel has little red, green, and blue lights. Mixing them makes every color, like yellow, pink, and purple!",
+    "act": "fx+bob"
+   },
+   {
+    "say": "The dots are so small that your eyes see one big picture. Can you say it with me? Red, green, blue!",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Remember to take breaks from screens and go play, too. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_teeth",
+  "animal": "gz2_teeth",
+  "title": "Why Do We Have Different Teeth? 🦷",
+  "thumb": "CHOMP!",
+  "top": "TEETH",
+  "bg": [
+   "#c9d8fb",
+   "#dfe9ff"
+  ],
+  "floor": "#8a9bc7",
+  "sources": [
+   "KidsHealth (Nemours): How the Body Works",
+   "Basic life science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Smile big! Your teeth are not all the same. Did you know each kind of tooth has its own special job?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "Your front teeth are sharp, so they're great for biting, like biting an apple. Crunch!",
+    "act": "zoom+badge:CHOMP!"
+   },
+   {
+    "say": "Your back teeth are wide and bumpy. They chew and mash your food into little bits.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Kids have twenty baby teeth. Later, grown-up teeth grow in, thirty-two of them! Can you show me your biggest smile?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Brush your teeth twice a day, morning and night, to keep them shiny. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ },
+ {
+  "id": "gz2_daynight",
+  "animal": "gz2_daynight",
+  "title": "Why Do We Have Day and Night? 🌍",
+  "thumb": "EARTH SPINS!",
+  "top": "DAY AND NIGHT",
+  "bg": [
+   "#0a0f2e",
+   "#1b2366"
+  ],
+  "floor": "transparent",
+  "sources": [
+   "NASA Space Place (Earth, Moon, Sun, seasons)",
+   "Basic Earth & space science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Where does the Sun go at night? Let's find out!",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "The Sun doesn't go anywhere. Our Earth is spinning, like a slow spinning top!",
+    "act": "zoom+badge:EARTH SPINS!"
+   },
+   {
+    "say": "The side of Earth facing the Sun has day. The side facing away has night. One spin takes one whole day.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "When it's daytime for you, it's nighttime for kids on the other side of the world. Can you spin slowly, like the Earth?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "So when you go to sleep at night, Earth keeps on spinning, and the Sun comes back in the morning. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ],
+  "root_bg": "radial-gradient(ellipse at 50% 52%,#28328a 0%,#141a4f 45%,#090d2b 100%)"
+ },
+ {
+  "id": "gz2_turbine",
+  "animal": "gz2_turbine",
+  "title": "How Does a Wind Turbine Work? 💨",
+  "thumb": "WIND POWER!",
+  "top": "WIND TURBINE",
+  "bg": [
+   "#7fd3ff",
+   "#d6f1ff"
+  ],
+  "floor": "#5fae5a",
+  "sources": [
+   "NASA Climate Kids / NOAA SciJinks (water, energy)",
+   "Basic physical science for ages 4-8"
+  ],
+  "beats": [
+   {
+    "say": "Whoosh! The wind can help make electricity. How?",
+    "act": "hook"
+   },
+   {
+    "say": "Hi! I'm Gizmo the robot. Let's find out how it works!",
+    "act": "milo_in"
+   },
+   {
+    "say": "With a wind turbine! It's a very tall tower, taller than a big tree, with three long blades on top.",
+    "act": "zoom+badge:WIND POWER!"
+   },
+   {
+    "say": "When the wind blows, it pushes on the blades and makes them spin around and around, nice and slow.",
+    "act": "fx+bob"
+   },
+   {
+    "say": "Inside, the spinning makes electricity, and wires carry it to homes and schools. Can you spin your arms like turbine blades?",
+    "act": "fxoff+fx2+wiggle"
+   },
+   {
+    "say": "Lots of turbines standing together are called a wind farm. Wind is clean energy that never runs out. See you next time!",
+    "act": "fx2off+outro"
+   }
+  ]
+ }
+]

@@ -1,0 +1,321 @@
+{
+ "style": "upbeat preschool kids pop sing-along, cheerful sweet female vocal, clear diction, bright ukulele, glockenspiel, handclaps, bouncy bass, major key, catchy repetitive chorus, vocals start immediately on the very first beat with the chorus, no instrumental intro, short outro",
+ "lyrics": "[Chorus]\nBloop turns red, red, red!\nRed from his toes up to his head!\nRed like an apple, red like a heart,\nRed, red, red, let's make a start!\n\n[Verse 1]\nA shiny red apple, crunch, crunch, crunch,\nRed, red apple, munch, munch, munch!\nA big red balloon floating so high,\nRed, red balloon up in the sky!\n\n[Chorus]\nBloop turns red, red, red!\nRed from his toes up to his head!\nRed like an apple, red like a heart,\nRed, red, red, let's make a start!\n\n[Verse 2]\nA red fire truck goes zoom, zoom, zoom,\nA red ladybug in my room!\nA red crayon draws a happy face,\nRed, red, red, all over the place!\n\n[Bridge]\nTouch something red, one, two, three!\nPoint to red, show it to me!\nJump up high and shout hooray,\nRed is the color of the day!\n\n[Verse 3]\nRed strawberries, sweet and bright,\nRed roses smell just right!\nRed and yellow, red and blue,\nRed is my favorite, how about you?\n\n[Chorus]\nBloop turns red, red, red!\nRed from his toes up to his head!\nRed like an apple, red like a heart,\nRed, red, red, let's make a start!\n\n[Outro]\nRed, red, red! Bye-bye, friends!",
+ "duration": 150,
+ "bpm": 116,
+ "key": "G Major",
+ "seed": 531,
+ "who_map": {},
+ "meta": {
+  "title": "Bloop Turns Red! Red Color Song for Kids | Part 3",
+  "card": "Bloop Turns Red!",
+  "thumb_text": "BLOOP TURNS RED!",
+  "description": "Bloop turns red! Part 3 of Bloop's color song series: a crunchy red apple, a red balloon, a red fire truck, a ladybug and red strawberries.\nKids touch something red, point to red and jump for the color of the day. Ages 2-5.",
+  "tags": [
+   "red color song",
+   "learn colors",
+   "color songs for kids",
+   "colors for toddlers",
+   "kids songs",
+   "Bloop's Color Lab",
+   "3D kids songs"
+  ]
+ },
+ "job": {
+  "id": "bl3d_ep07",
+  "title": "Bloop Turns Red!",
+  "channel": "bloop",
+  "set": "colorlab",
+  "seed": 7,
+  "cast": [
+   {
+    "id": "host",
+    "char": "bloop",
+    "spot": "center",
+    "opts": {
+     "color": "#9d6bff",
+     "scale": 1.15
+    }
+   },
+   {
+    "id": "star",
+    "char": "shape",
+    "spot": "left",
+    "opts": {
+     "shape": "star",
+     "color": "#ffd21f",
+     "scale": 0.85
+    },
+    "yaw": 0.25
+   },
+   {
+    "id": "heart",
+    "char": "shape",
+    "spot": "right",
+    "opts": {
+     "shape": "heart",
+     "color": "#ff4f7b",
+     "scale": 0.85
+    },
+    "yaw": -0.25
+   },
+   {
+    "id": "square",
+    "char": "shape",
+    "spot": "farleft",
+    "opts": {
+     "shape": "square",
+     "color": "#2f7bff",
+     "scale": 0.75
+    },
+    "yaw": 0.35
+   },
+   {
+    "id": "triangle",
+    "char": "shape",
+    "spot": "farright",
+    "opts": {
+     "shape": "triangle",
+     "color": "#3ccf4e",
+     "scale": 0.75
+    },
+    "yaw": -0.35
+   }
+  ],
+  "intro_shot": "orbit",
+  "intro": {
+   "energy": 0.6,
+   "wave": 1
+  },
+  "thumb_frame": 96,
+  "direct": [
+   {
+    "section": "chorus1",
+    "shots": [
+     "wide",
+     "close:host",
+     "orbit",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "verse1",
+    "shots": [
+     "close:host",
+     "wide",
+     "close:square",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "apple",
+      "at": [
+       -3.4,
+       0.9,
+       3.6
+      ],
+      "word": "apple,"
+     },
+     {
+      "type": "set_prop",
+      "name": "balloon",
+      "at": [
+       3.4,
+       1.4,
+       3.6
+      ],
+      "word": "balloon",
+      "opts": {
+       "color": "#ff3b3b"
+      }
+     }
+    ]
+   },
+   {
+    "section": "chorus2",
+    "shots": [
+     "orbit",
+     "close:host",
+     "wide",
+     "low"
+    ],
+    "energy": 0.9,
+    "group": true,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "verse2",
+    "shots": [
+     "close:triangle",
+     "wide",
+     "close:star",
+     "close:host"
+    ],
+    "energy": 0.75,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "crayon",
+      "at": [
+       3.4,
+       0.9,
+       3.6
+      ],
+      "word": "crayon",
+      "opts": {
+       "color": "#ff3b3b"
+      }
+     },
+     {
+      "type": "text",
+      "text": "ZOOM!",
+      "color": "#ff3b3b",
+      "at": [
+       -3.4,
+       1.4,
+       3.6
+      ],
+      "size": 0.6,
+      "word": "zoom,"
+     }
+    ]
+   },
+   {
+    "section": "bridge1",
+    "shots": [
+     "wide",
+     "low",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "jump": 0.5,
+    "props": [
+     {
+      "type": "text",
+      "text": "TOUCH RED!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.7,
+      "word": "touch"
+     },
+     {
+      "type": "text",
+      "text": "HOORAY!",
+      "color": "#ffd21f",
+      "at": [
+       0,
+       0.6,
+       4.3
+      ],
+      "size": 0.7,
+      "word": "hooray,"
+     }
+    ]
+   },
+   {
+    "section": "verse3",
+    "shots": [
+     "close:heart",
+     "close:host",
+     "wide",
+     "close:host"
+    ],
+    "energy": 0.8,
+    "props": [
+     {
+      "type": "set_prop",
+      "name": "heart",
+      "at": [
+       3.4,
+       1.2,
+       3.6
+      ],
+      "word": "roses",
+      "opts": {
+       "color": "#ff3b3b"
+      }
+     },
+     {
+      "type": "text",
+      "text": "RED!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.7,
+      "word": "favorite,"
+     }
+    ]
+   },
+   {
+    "section": "chorus3",
+    "shots": [
+     "low",
+     "close:host",
+     "orbit",
+     "wide"
+    ],
+    "energy": 1.0,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "RED!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.9
+     }
+    ]
+   },
+   {
+    "section": "outro1",
+    "shots": [
+     "wide"
+    ],
+    "energy": 0.6,
+    "group": true,
+    "wave": 1,
+    "props": [
+     {
+      "type": "text",
+      "text": "BYE-BYE!",
+      "color": "#ff3b3b",
+      "at": "top",
+      "size": 0.8
+     }
+    ]
+   }
+  ],
+  "song": "bl3d_ep07",
+  "res": "1920x1080",
+  "step": 1
+ },
+ "color_words": {
+  "red": "#ff3b3b"
+ },
+ "color_char": "host"
+}

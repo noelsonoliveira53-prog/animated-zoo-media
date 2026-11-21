@@ -1,0 +1,1834 @@
+{
+ "id": "zc_ep03_short1",
+ "total": 86.63379166666671,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25
+ ],
+ "plan": {
+  "length": 86.6,
+  "shots": 21,
+  "visual_changes": 83,
+  "mean_gap": 1.04,
+  "longest_gap": 4.18,
+  "longest_gap_at": 78.6,
+  "over_6s": [],
+  "places": [
+   "savanna"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 9,
+  "longest_without_question": 20.0,
+  "first_words_at": 0.42,
+  "shot_mean": 4.13,
+  "fails": [],
+  "words_placed": "180/180",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 45.6,
+   "onset_err_max_ms": 110.0,
+   "suspect_words": [],
+   "cuts": 20,
+   "cuts_on_the_half_beat": 20,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: big ears"
+  ],
+  [
+   1.98,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   2.22,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the sunny savanna Mama's big ears"
+  ],
+  [
+   4.09,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   5.69,
+   "word",
+   "BIG EARS!"
+  ],
+  [
+   6.56,
+   "new place",
+   "the picture board board: large ears"
+  ],
+  [
+   8.6,
+   "action",
+   "ebe flaps its ears"
+  ],
+  [
+   8.6,
+   "word",
+   "LARGE!"
+  ],
+  [
+   10.0,
+   "new place",
+   "the sunny savanna touch your ears"
+  ],
+  [
+   11.73,
+   "action",
+   "milo hops"
+  ],
+  [
+   11.73,
+   "word",
+   "TOUCH!"
+  ],
+  [
+   14.06,
+   "new place",
+   "the picture board (blue) board: ear and Milo"
+  ],
+  [
+   15.8,
+   "word",
+   "BIGGER!"
+  ],
+  [
+   16.29,
+   "action",
+   "m hops"
+  ],
+  [
+   16.88,
+   "new shot",
+   "the picture board (blue) board: count up the ear"
+  ],
+  [
+   19.37,
+   "picture",
+   "b1"
+  ],
+  [
+   19.37,
+   "word",
+   "1"
+  ],
+  [
+   19.6,
+   "picture",
+   "b2"
+  ],
+  [
+   19.6,
+   "word",
+   "2"
+  ],
+  [
+   19.88,
+   "picture",
+   "b3"
+  ],
+  [
+   19.88,
+   "word",
+   "3"
+  ],
+  [
+   21.88,
+   "new shot",
+   "the picture board (blue) board: the shape"
+  ],
+  [
+   22.58,
+   "action",
+   "the ear pulses"
+  ],
+  [
+   22.58,
+   "word",
+   "SHAPE?"
+  ],
+  [
+   25.62,
+   "new shot",
+   "the picture board (blue) board: like Africa"
+  ],
+  [
+   26.54,
+   "word",
+   "AFRICA"
+  ],
+  [
+   27.05,
+   "picture",
+   "af"
+  ],
+  [
+   28.12,
+   "new shot",
+   "the picture board (blue) board: shaped like Africa"
+  ],
+  [
+   30.49,
+   "action",
+   "both bob"
+  ],
+  [
+   30.49,
+   "word",
+   "SAME SHAPE!"
+  ],
+  [
+   32.19,
+   "new place",
+   "the picture board (pink) board: smaller ears"
+  ],
+  [
+   32.31,
+   "word",
+   "ASIAN"
+  ],
+  [
+   35.28,
+   "action",
+   "af flaps its ears"
+  ],
+  [
+   35.28,
+   "action",
+   "as flaps its ears"
+  ],
+  [
+   35.28,
+   "word",
+   "SMALLER"
+  ],
+  [
+   36.88,
+   "new shot",
+   "the picture board (pink) question 1"
+  ],
+  [
+   38.77,
+   "sign",
+   "THIS"
+  ],
+  [
+   39.12,
+   "sign",
+   "THAT"
+  ],
+  [
+   40.77,
+   "thinking dot",
+   "1"
+  ],
+  [
+   41.45,
+   "thinking dot",
+   "2"
+  ],
+  [
+   42.12,
+   "thinking dot",
+   "3"
+  ],
+  [
+   42.61,
+   "answer",
+   "THIS"
+  ],
+  [
+   43.75,
+   "new shot",
+   "the picture board (pink) answer 1"
+  ],
+  [
+   44.03,
+   "action",
+   "af flaps its ears"
+  ],
+  [
+   44.99,
+   "word",
+   "AFRICAN"
+  ],
+  [
+   48.12,
+   "new place",
+   "the sunny savanna Tumble flaps"
+  ],
+  [
+   48.17,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   51.06,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   51.06,
+   "word",
+   "FLAP!"
+  ],
+  [
+   52.5,
+   "new shot",
+   "the sunny savanna Tumble and Mama"
+  ],
+  [
+   52.69,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   54.7,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   56.11,
+   "word",
+   "BIGGER!"
+  ],
+  [
+   56.88,
+   "new shot",
+   "the sunny savanna question 1b"
+  ],
+  [
+   58.54,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   58.89,
+   "sign",
+   "MAMA"
+  ],
+  [
+   60.14,
+   "thinking dot",
+   "1"
+  ],
+  [
+   60.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   61.49,
+   "thinking dot",
+   "3"
+  ],
+  [
+   61.97,
+   "answer",
+   "MAMA"
+  ],
+  [
+   63.12,
+   "new shot",
+   "the sunny savanna answer 1b"
+  ],
+  [
+   63.39,
+   "action",
+   "mama nods"
+  ],
+  [
+   63.39,
+   "word",
+   "MAMA!"
+  ],
+  [
+   65.4,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   67.19,
+   "new shot",
+   "the sunny savanna Tumble tries to fly"
+  ],
+  [
+   67.9,
+   "word",
+   "FLY?"
+  ],
+  [
+   69.78,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   71.9,
+   "action",
+   "tumble hops"
+  ],
+  [
+   72.81,
+   "new shot",
+   "the sunny savanna cannot fly"
+  ],
+  [
+   73.43,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   74.05,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   74.57,
+   "word",
+   "NO FLYING!"
+  ],
+  [
+   75.94,
+   "new place",
+   "the picture board board: not wings"
+  ],
+  [
+   76.88,
+   "picture",
+   "x"
+  ],
+  [
+   77.18,
+   "word",
+   "NOT WINGS"
+  ],
+  [
+   78.12,
+   "new place",
+   "the sunny savanna flap along"
+  ],
+  [
+   78.63,
+   "action",
+   "milo hops"
+  ],
+  [
+   78.63,
+   "word",
+   "FLAP!"
+  ],
+  [
+   82.81,
+   "new shot",
+   "the sunny savanna what for"
+  ],
+  [
+   83.74,
+   "action",
+   "mama flaps its ears"
+  ],
+  [
+   83.74,
+   "action",
+   "tumble flaps its ears"
+  ],
+  [
+   84.2,
+   "word",
+   "?"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "Why does Tumble have such big ears?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.3722916666666665,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.29
+    ],
+    [
+     "does",
+     0.29,
+     0.52
+    ],
+    [
+     "Tumble",
+     0.52,
+     0.95
+    ],
+    [
+     "have",
+     0.95,
+     1.23
+    ],
+    [
+     "such",
+     1.23,
+     1.56
+    ],
+    [
+     "big",
+     1.56,
+     1.8
+    ],
+    [
+     "ears?",
+     1.8,
+     2.37
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: big ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Look at Mama's ears. They are so, so big!",
+   "t0": 3.125,
+   "t1": 6.5625,
+   "v0": 3.3322916666666664,
+   "dur": 2.8609166666666668,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.2
+    ],
+    [
+     "at",
+     0.2,
+     0.27
+    ],
+    [
+     "Mama's",
+     0.27,
+     0.76
+    ],
+    [
+     "ears.",
+     0.76,
+     1.32
+    ],
+    [
+     "They",
+     1.58,
+     1.72
+    ],
+    [
+     "are",
+     1.72,
+     1.81
+    ],
+    [
+     "so,",
+     1.81,
+     2.15
+    ],
+    [
+     "so",
+     2.15,
+     2.36
+    ],
+    [
+     "big!",
+     2.36,
+     2.86
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Mama's big ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "African elephants have very large ears.",
+   "t0": 6.5625,
+   "t1": 10.0,
+   "v0": 6.733208333333333,
+   "dur": 2.939416666666667,
+   "words": [
+    [
+     "African",
+     0.01,
+     0.51
+    ],
+    [
+     "elephants",
+     0.51,
+     1.23
+    ],
+    [
+     "have",
+     1.35,
+     1.55
+    ],
+    [
+     "very",
+     1.55,
+     1.87
+    ],
+    [
+     "large",
+     1.87,
+     2.36
+    ],
+    [
+     "ears.",
+     2.36,
+     2.939
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: large ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Where are your ears? Can you touch your ears?",
+   "t0": 10.0,
+   "t1": 14.0625,
+   "v0": 10.212625,
+   "dur": 2.5777916666666667,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.25
+    ],
+    [
+     "are",
+     0.25,
+     0.28
+    ],
+    [
+     "your",
+     0.28,
+     0.47
+    ],
+    [
+     "ears?",
+     0.47,
+     1.05
+    ],
+    [
+     "Can",
+     1.25,
+     1.41
+    ],
+    [
+     "you",
+     1.41,
+     1.52
+    ],
+    [
+     "touch",
+     1.52,
+     1.87
+    ],
+    [
+     "your",
+     1.87,
+     1.99
+    ],
+    [
+     "ears?",
+     1.99,
+     2.578
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "touch your ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Mama's ear is much bigger than me!",
+   "t0": 14.0625,
+   "t1": 16.875,
+   "v0": 14.330416666666665,
+   "dur": 2.29825,
+   "words": [
+    [
+     "Mama's",
+     0.01,
+     0.54
+    ],
+    [
+     "ear",
+     0.54,
+     1.03
+    ],
+    [
+     "is",
+     1.03,
+     1.18
+    ],
+    [
+     "much",
+     1.18,
+     1.47
+    ],
+    [
+     "bigger",
+     1.47,
+     1.75
+    ],
+    [
+     "than",
+     1.75,
+     1.96
+    ],
+    [
+     "me!",
+     1.96,
+     2.298
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: ear and Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Let's count birds up the ear. One, two, three! Still more ear!",
+   "t0": 16.875,
+   "t1": 21.875,
+   "v0": 17.168666666666667,
+   "dur": 4.330125,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.33
+    ],
+    [
+     "count",
+     0.33,
+     0.66
+    ],
+    [
+     "birds",
+     0.66,
+     1.02
+    ],
+    [
+     "up",
+     1.02,
+     1.14
+    ],
+    [
+     "the",
+     1.14,
+     1.32
+    ],
+    [
+     "ear.",
+     1.32,
+     1.72
+    ],
+    [
+     "One,",
+     2.2,
+     2.43
+    ],
+    [
+     "two,",
+     2.43,
+     2.71
+    ],
+    [
+     "three!",
+     2.71,
+     3.37
+    ],
+    [
+     "Still",
+     3.37,
+     3.61
+    ],
+    [
+     "more",
+     3.61,
+     3.85
+    ],
+    [
+     "ear!",
+     3.85,
+     4.33
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: count up the ear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "And look at the shape. Can you see it?",
+   "t0": 21.875,
+   "t1": 25.625,
+   "v0": 22.03879166666667,
+   "dur": 2.3313333333333333,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.22
+    ],
+    [
+     "look",
+     0.22,
+     0.39
+    ],
+    [
+     "at",
+     0.39,
+     0.47
+    ],
+    [
+     "the",
+     0.47,
+     0.54
+    ],
+    [
+     "shape.",
+     0.54,
+     1.11
+    ],
+    [
+     "Can",
+     1.41,
+     1.6
+    ],
+    [
+     "you",
+     1.6,
+     1.72
+    ],
+    [
+     "see",
+     1.72,
+     2.02
+    ],
+    [
+     "it?",
+     2.02,
+     2.33
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: the shape",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "It looks like a map of Africa!",
+   "t0": 25.625,
+   "t1": 28.125,
+   "v0": 25.910125000000004,
+   "dur": 1.935125,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.16
+    ],
+    [
+     "looks",
+     0.16,
+     0.44
+    ],
+    [
+     "like",
+     0.44,
+     0.6
+    ],
+    [
+     "a",
+     0.6,
+     0.63
+    ],
+    [
+     "map",
+     0.63,
+     1.03
+    ],
+    [
+     "of",
+     1.03,
+     1.14
+    ],
+    [
+     "Africa!",
+     1.14,
+     1.93
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: like Africa",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "African elephants have ears shaped like Africa.",
+   "t0": 28.125,
+   "t1": 32.1875,
+   "v0": 28.385250000000006,
+   "dur": 3.3735833333333334,
+   "words": [
+    [
+     "African",
+     0.01,
+     0.49
+    ],
+    [
+     "elephants",
+     0.49,
+     1.22
+    ],
+    [
+     "have",
+     1.38,
+     1.56
+    ],
+    [
+     "ears",
+     1.56,
+     2.1
+    ],
+    [
+     "shaped",
+     2.1,
+     2.48
+    ],
+    [
+     "like",
+     2.48,
+     2.66
+    ],
+    [
+     "Africa.",
+     2.66,
+     3.37
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: shaped like Africa",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Asian elephants live far away. They have smaller ears.",
+   "t0": 32.1875,
+   "t1": 36.875,
+   "v0": 32.298833333333334,
+   "dur": 4.147166666666666,
+   "words": [
+    [
+     "Asian",
+     0.01,
+     0.42
+    ],
+    [
+     "elephants",
+     0.42,
+     1.11
+    ],
+    [
+     "live",
+     1.11,
+     1.47
+    ],
+    [
+     "far",
+     1.47,
+     1.84
+    ],
+    [
+     "away.",
+     1.84,
+     2.28
+    ],
+    [
+     "They",
+     2.63,
+     2.72
+    ],
+    [
+     "have",
+     2.72,
+     2.98
+    ],
+    [
+     "smaller",
+     2.98,
+     3.5
+    ],
+    [
+     "ears.",
+     3.5,
+     4.147
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: smaller ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Which one has bigger ears? This one, or that one?",
+   "t0": 36.875,
+   "t1": 43.75,
+   "v0": 36.986,
+   "dur": 3.301041666666667,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.2
+    ],
+    [
+     "one",
+     0.2,
+     0.32
+    ],
+    [
+     "has",
+     0.32,
+     0.49
+    ],
+    [
+     "bigger",
+     0.49,
+     0.9
+    ],
+    [
+     "ears?",
+     0.9,
+     1.49
+    ],
+    [
+     "This",
+     1.78,
+     2.12
+    ],
+    [
+     "one,",
+     2.12,
+     2.45
+    ],
+    [
+     "or",
+     2.45,
+     2.63
+    ],
+    [
+     "that",
+     2.63,
+     2.94
+    ],
+    [
+     "one?",
+     2.94,
+     3.3
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "This one! The African elephant, like Mama and Tumble.",
+   "t0": 43.75,
+   "t1": 48.125,
+   "v0": 44.02704166666667,
+   "dur": 3.8854166666666665,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.34
+    ],
+    [
+     "one!",
+     0.34,
+     0.71
+    ],
+    [
+     "The",
+     0.71,
+     0.96
+    ],
+    [
+     "African",
+     0.96,
+     1.48
+    ],
+    [
+     "elephant,",
+     1.48,
+     2.13
+    ],
+    [
+     "like",
+     2.38,
+     2.62
+    ],
+    [
+     "Mama",
+     2.62,
+     3.09
+    ],
+    [
+     "and",
+     3.09,
+     3.35
+    ],
+    [
+     "Tumble.",
+     3.35,
+     3.88
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "answer 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble's ears are big, and they can move. Flap, flap!",
+   "t0": 48.125,
+   "t1": 52.5,
+   "v0": 48.45245833333333,
+   "dur": 3.698625,
+   "words": [
+    [
+     "Tumble's",
+     0.01,
+     0.46
+    ],
+    [
+     "ears",
+     0.46,
+     0.86
+    ],
+    [
+     "are",
+     0.86,
+     0.95
+    ],
+    [
+     "big,",
+     0.95,
+     1.36
+    ],
+    [
+     "and",
+     1.36,
+     1.5
+    ],
+    [
+     "they",
+     1.5,
+     1.6
+    ],
+    [
+     "can",
+     1.6,
+     1.77
+    ],
+    [
+     "move.",
+     1.77,
+     2.23
+    ],
+    [
+     "Flap,",
+     2.61,
+     3.08
+    ],
+    [
+     "flap!",
+     3.08,
+     3.699
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Tumble flaps",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Tumble's ears are big. But Mama's ears are even bigger!",
+   "t0": 52.5,
+   "t1": 56.875,
+   "v0": 52.69108333333333,
+   "dur": 3.922041666666667,
+   "words": [
+    [
+     "Tumble's",
+     0.0,
+     0.5
+    ],
+    [
+     "ears",
+     0.5,
+     0.89
+    ],
+    [
+     "are",
+     0.89,
+     1.01
+    ],
+    [
+     "big.",
+     1.01,
+     1.53
+    ],
+    [
+     "But",
+     1.87,
+     2.01
+    ],
+    [
+     "Mama's",
+     2.01,
+     2.53
+    ],
+    [
+     "ears",
+     2.53,
+     2.97
+    ],
+    [
+     "are",
+     2.97,
+     3.07
+    ],
+    [
+     "even",
+     3.07,
+     3.42
+    ],
+    [
+     "bigger!",
+     3.42,
+     3.92
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "Tumble and Mama",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Who has bigger ears, Tumble or Mama?",
+   "t0": 56.875,
+   "t1": 63.125,
+   "v0": 57.153124999999996,
+   "dur": 2.5016666666666665,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.14
+    ],
+    [
+     "has",
+     0.14,
+     0.35
+    ],
+    [
+     "bigger",
+     0.35,
+     0.66
+    ],
+    [
+     "ears,",
+     0.66,
+     1.26
+    ],
+    [
+     "Tumble",
+     1.39,
+     1.88
+    ],
+    [
+     "or",
+     1.88,
+     1.98
+    ],
+    [
+     "Mama?",
+     1.98,
+     2.5
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Mama! She is big, and her ears are big too.",
+   "t0": 63.125,
+   "t1": 67.1875,
+   "v0": 63.39479166666666,
+   "dur": 3.31225,
+   "words": [
+    [
+     "Mama!",
+     0.0,
+     0.57
+    ],
+    [
+     "She",
+     0.72,
+     0.91
+    ],
+    [
+     "is",
+     0.91,
+     1.07
+    ],
+    [
+     "big,",
+     1.07,
+     1.53
+    ],
+    [
+     "and",
+     1.75,
+     1.89
+    ],
+    [
+     "her",
+     1.89,
+     2.01
+    ],
+    [
+     "ears",
+     2.01,
+     2.45
+    ],
+    [
+     "are",
+     2.45,
+     2.54
+    ],
+    [
+     "big",
+     2.54,
+     2.79
+    ],
+    [
+     "too.",
+     2.79,
+     3.31
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "answer 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can Tumble fly with his big ears? He tries. Flap, flap, jump!",
+   "t0": 67.1875,
+   "t1": 72.8125,
+   "v0": 67.24704166666668,
+   "dur": 5.231958333333333,
+   "words": [
+    [
+     "Can",
+     0.02,
+     0.26
+    ],
+    [
+     "Tumble",
+     0.26,
+     0.65
+    ],
+    [
+     "fly",
+     0.65,
+     1.03
+    ],
+    [
+     "with",
+     1.03,
+     1.17
+    ],
+    [
+     "his",
+     1.17,
+     1.33
+    ],
+    [
+     "big",
+     1.33,
+     1.57
+    ],
+    [
+     "ears?",
+     1.57,
+     2.16
+    ],
+    [
+     "He",
+     2.39,
+     2.53
+    ],
+    [
+     "tries.",
+     2.53,
+     3.25
+    ],
+    [
+     "Flap,",
+     3.63,
+     4.21
+    ],
+    [
+     "flap,",
+     4.21,
+     4.65
+    ],
+    [
+     "jump!",
+     4.65,
+     5.23
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "Tumble tries to fly",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Bump! No. Elephants cannot fly.",
+   "t0": 72.8125,
+   "t1": 75.9375,
+   "v0": 73.01900000000002,
+   "dur": 2.531041666666667,
+   "words": [
+    [
+     "Bump!",
+     0.0,
+     0.41
+    ],
+    [
+     "No.",
+     0.41,
+     0.81
+    ],
+    [
+     "Elephants",
+     1.03,
+     1.55
+    ],
+    [
+     "cannot",
+     1.55,
+     1.92
+    ],
+    [
+     "fly.",
+     1.92,
+     2.53
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "cannot fly",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Big ears are not wings.",
+   "t0": 75.9375,
+   "t1": 78.125,
+   "v0": 76.09004166666669,
+   "dur": 1.6894583333333333,
+   "words": [
+    [
+     "Big",
+     0.0,
+     0.28
+    ],
+    [
+     "ears",
+     0.28,
+     0.7
+    ],
+    [
+     "are",
+     0.7,
+     0.79
+    ],
+    [
+     "not",
+     0.79,
+     1.09
+    ],
+    [
+     "wings.",
+     1.09,
+     1.689
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: not wings",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Can you flap your hands like big ears? Flap, flap, flap!",
+   "t0": 78.125,
+   "t1": 82.8125,
+   "v0": 78.31950000000003,
+   "dur": 4.14725,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.31
+    ],
+    [
+     "flap",
+     0.31,
+     0.64
+    ],
+    [
+     "your",
+     0.64,
+     0.74
+    ],
+    [
+     "hands",
+     0.74,
+     1.04
+    ],
+    [
+     "like",
+     1.04,
+     1.24
+    ],
+    [
+     "big",
+     1.24,
+     1.49
+    ],
+    [
+     "ears?",
+     1.49,
+     2.1
+    ],
+    [
+     "Flap,",
+     2.47,
+     3.09
+    ],
+    [
+     "flap,",
+     3.09,
+     3.57
+    ],
+    [
+     "flap!",
+     3.57,
+     4.147
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "flap along",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "So what are big ears for? Let's find out!",
+   "t0": 82.8125,
+   "t1": 86.2337916666667,
+   "v0": 83.00675000000004,
+   "dur": 2.8070416666666667,
+   "words": [
+    [
+     "So",
+     0.0,
+     0.24
+    ],
+    [
+     "what",
+     0.24,
+     0.4
+    ],
+    [
+     "are",
+     0.4,
+     0.49
+    ],
+    [
+     "big",
+     0.49,
+     0.73
+    ],
+    [
+     "ears",
+     0.73,
+     1.19
+    ],
+    [
+     "for?",
+     1.19,
+     1.53
+    ],
+    [
+     "Let's",
+     1.84,
+     2.12
+    ],
+    [
+     "find",
+     2.12,
+     2.41
+    ],
+    [
+     "out!",
+     2.41,
+     2.807
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "what for",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

@@ -224,3 +224,22 @@ def ear_pair(pid):
     bear_ear = (f'<g id="{pid}-bear" transform="translate(330 120)"><circle r="96" fill="{bc["fill"]}" stroke="{bc["line"]}" stroke-width="12"/><circle r="52" fill="#f6c9d3"/></g>')
     return (f'<g id="{pid}">{fox_ear}<g id="{pid}-heat" transform="translate(-290 -240)">{heat_waves(pid + "-hw")}</g>'
             f'<g id="{pid}-glow" transform="translate(330 120)"><circle r="190" fill="#ffb347" opacity=".3"/><circle r="140" fill="#ffb347" opacity=".35"/></g>{bear_ear}</g>')
+
+
+# ================================================================== thumbnail pieces: only the ears and the top of the head (a hiding place goes in front)
+def rhino_ears_peek(pid, c=RHI, spread=18):
+    """Two rhino ears turned different ways on the top of a grey head, bases at y = 0 (for thumbnails)."""
+    return (f'<g id="{pid}">{_rhi_ear(pid, "e2", -46, 10, c, True, -spread)}<ellipse cx="0" cy="40" rx="150" ry="60" fill="{c["fill"]}" stroke="{c["line"]}" stroke-width="10"/>'
+            f'{_rhi_ear(pid, "e1", 46, 10, c, False, spread)}</g>')
+
+
+def fox_ears_peek(pid, c=FOX, spread=12):
+    """Two fennec ears on the top of a sandy head, bases at y = 0 (for thumbnails)."""
+    return (f'<g id="{pid}">{_fox_ear(pid, "e2", -58, 14, c, True, -spread)}{_fox_ear(pid, "e1", 58, 14, c, False, spread)}'
+            f'<ellipse cx="0" cy="44" rx="120" ry="58" fill="{c["fill"]}" stroke="{c["line"]}" stroke-width="9"/></g>')
+
+
+def bear_ears_peek(pid, c=art2.BEAR, gap=80):
+    """Two small round polar bear ears on the top of a white head, bases at y = 0 (for thumbnails)."""
+    ear = lambda x: f'<circle cx="{x}" cy="-10" r="38" fill="{c["fill"]}" stroke="{c["line"]}" stroke-width="9"/><circle cx="{x}" cy="-8" r="20" fill="#f6c9d3"/>'
+    return f'<g id="{pid}">{ear(-gap)}{ear(gap)}<ellipse cx="0" cy="50" rx="150" ry="70" fill="{c["fill"]}" stroke="{c["line"]}" stroke-width="9"/></g>'

@@ -47,9 +47,11 @@ back after a reload of the customization page.
   against `cartoon/gzintro.mp4`). Its own content stays 5:00 or more, the whole file 6:30 or less. Never in a Short. Never the Zoo's `intro_shots()`
   on Gizmo. Change the intro in intro_gizmo.py only (its music is approved: picture changes do not touch score_gzintro.py), then render
   `toon.py gzintro` again and replace `cartoon/gzintro.mp4`.
-  Explainers built before the approval have no intro and are not uploaded as they are: gc_ep01 (it also opens with a greeting: give it an opening
-  on its promise, the first line asks the title's question) and gc_ep02 if the noon build of Nov 21 finished it without one. Add the intro in both
-  places, look at the stills of the changed shots, render again, run every check again. Their Shorts are not touched.
+  Explainers built before the approval have no intro and are not uploaded as they are: gc_ep02 if the noon build of Nov 21 finished it without
+  one (gc_ep01 got its intro on Nov 21 at 3 PM: `*gz_intro_shots()` after the "hook: Gizmo" shot and before the closing bracket of SHOTS, `"intro": False`
+  taken out of the EP, plan check, stills of the intro shots and their neighbours, a new render, every check again). Their Shorts are not touched.
+  CORRECTION (Nov 21 3 PM): gc_ep01 does NOT open with a greeting. Its first line is the hook "How does a tiny seed grow into a big plant?"; "Welcome
+  to my lab" is its fourth shot. The earlier note was read off the first frame of a contact sheet (12 s in), not off the episode file.
 - No playlists yet, no song: a voice only speaks.
 - Every rule of CLAUDE.md "Working preferences" applies to Gizmo too: 4K native, watermark (Gizmo's channel picture + "Gizmo Explains",
   not Milo), custom thumbnail with at most 3 words and none of the title's words, facts read at the source the same day (line taken out

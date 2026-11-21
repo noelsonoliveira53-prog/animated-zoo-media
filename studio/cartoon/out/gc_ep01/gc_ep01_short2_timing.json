@@ -707,7 +707,7 @@
    "part": 2,
    "q": true,
    "tag": "hook: wake up a seed",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -778,7 +778,7 @@
    "part": 2,
    "q": true,
    "tag": "window wide",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -819,7 +819,7 @@
    "part": 2,
    "q": false,
    "tag": "water",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -895,7 +895,7 @@
    "part": 2,
    "q": true,
    "tag": "question 2b",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -956,7 +956,7 @@
    "part": 2,
    "q": false,
    "tag": "water wins",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1007,7 +1007,7 @@
    "part": 2,
    "q": false,
    "tag": "soaks up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1063,7 +1063,7 @@
    "part": 2,
    "q": false,
    "tag": "air",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1119,7 +1119,7 @@
    "part": 2,
    "q": false,
    "tag": "warmth",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1180,7 +1180,7 @@
    "part": 2,
    "q": true,
    "tag": "count needs",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1261,7 +1261,7 @@
    "part": 2,
    "q": false,
    "tag": "needs recap",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1332,7 +1332,7 @@
    "part": 2,
    "q": true,
    "tag": "question 3",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1408,7 +1408,7 @@
    "part": 2,
    "q": false,
    "tag": "in the dark",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1479,7 +1479,7 @@
    "part": 2,
    "q": false,
    "tag": "idea",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1540,7 +1540,7 @@
    "part": 2,
    "q": false,
    "tag": "coat opens",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1601,7 +1601,7 @@
    "part": 2,
    "q": true,
    "tag": "question 4",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1657,7 +1657,7 @@
    "part": 2,
    "q": false,
    "tag": "root grows down",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1723,7 +1723,7 @@
    "part": 2,
    "q": false,
    "tag": "shoot grows up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1794,7 +1794,7 @@
    "part": 2,
    "q": true,
    "tag": "down and up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1850,7 +1850,7 @@
    "part": 2,
    "q": true,
    "tag": "say it",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -1916,7 +1916,7 @@
    "part": 2,
    "q": false,
    "tag": "growing",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   }

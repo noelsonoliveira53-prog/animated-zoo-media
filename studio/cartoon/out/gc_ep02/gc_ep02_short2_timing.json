@@ -1,0 +1,2007 @@
+{
+ "id": "gc_ep02_short2",
+ "total": 91.01850000000006,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625
+ ],
+ "plan": {
+  "length": 91.0,
+  "shots": 21,
+  "visual_changes": 92,
+  "mean_gap": 0.99,
+  "longest_gap": 3.57,
+  "longest_gap_at": 23.8,
+  "over_6s": [],
+  "places": [
+   "gspace",
+   "glab",
+   "gwindow",
+   "gpad",
+   "gsky"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 7,
+  "longest_without_question": 24.4,
+  "first_words_at": 0.42,
+  "shot_mean": 4.33,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "203/203",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 21.3,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 20,
+   "cuts_on_the_half_beat": 20,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   0.0,
+   "new place",
+   "space above the Earth hook: no air"
+  ],
+  [
+   0.1,
+   "action",
+   "the rocket floats"
+  ],
+  [
+   2.8,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new shot",
+   "space above the Earth space wide"
+  ],
+  [
+   3.49,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   3.54,
+   "action",
+   "the rocket flies up"
+  ],
+  [
+   6.16,
+   "word",
+   "SPACE!"
+  ],
+  [
+   7.19,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   7.19,
+   "new shot",
+   "space above the Earth no air"
+  ],
+  [
+   7.29,
+   "action",
+   "the rocket floats"
+  ],
+  [
+   9.61,
+   "word",
+   "NO AIR!"
+  ],
+  [
+   10.62,
+   "new place",
+   "Gizmo's lab hmm 2"
+  ],
+  [
+   11.28,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   11.28,
+   "word",
+   "NO AIR?"
+  ],
+  [
+   13.68,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   15.0,
+   "new place",
+   "the sunny lab window jet needs air"
+  ],
+  [
+   15.1,
+   "action",
+   "the jet flies by"
+  ],
+  [
+   17.89,
+   "action",
+   "air goes into the jet"
+  ],
+  [
+   17.89,
+   "word",
+   "AIR"
+  ],
+  [
+   20.0,
+   "new shot",
+   "the sunny lab window jet close"
+  ],
+  [
+   20.1,
+   "action",
+   "the jet flies"
+  ],
+  [
+   20.2,
+   "action",
+   "air goes into the jet"
+  ],
+  [
+   21.41,
+   "word",
+   "AIR IN!"
+  ],
+  [
+   23.75,
+   "new place",
+   "the picture board (blueprint) question 4"
+  ],
+  [
+   27.32,
+   "sign",
+   "YES"
+  ],
+  [
+   27.67,
+   "sign",
+   "NO"
+  ],
+  [
+   29.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   29.72,
+   "thinking dot",
+   "2"
+  ],
+  [
+   30.39,
+   "thinking dot",
+   "3"
+  ],
+  [
+   30.88,
+   "answer",
+   "YES"
+  ],
+  [
+   32.19,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   32.19,
+   "new place",
+   "space above the Earth yes it works"
+  ],
+  [
+   32.31,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   32.31,
+   "word",
+   "YES!"
+  ],
+  [
+   35.62,
+   "new place",
+   "the picture board (blueprint) carries everything"
+  ],
+  [
+   35.78,
+   "action",
+   "it appears"
+  ],
+  [
+   36.37,
+   "word",
+   "EVERYTHING!"
+  ],
+  [
+   38.37,
+   "action",
+   "a part lights up"
+  ],
+  [
+   40.0,
+   "new place",
+   "Gizmo's lab backpack"
+  ],
+  [
+   40.87,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   40.87,
+   "word",
+   "A BACKPACK!"
+  ],
+  [
+   42.46,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   43.75,
+   "new place",
+   "the picture board (blueprint) question 5"
+  ],
+  [
+   46.67,
+   "sign",
+   "JET"
+  ],
+  [
+   47.02,
+   "sign",
+   "ROCKET"
+  ],
+  [
+   48.82,
+   "thinking dot",
+   "1"
+  ],
+  [
+   49.5,
+   "thinking dot",
+   "2"
+  ],
+  [
+   50.17,
+   "thinking dot",
+   "3"
+  ],
+  [
+   50.66,
+   "answer",
+   "JET"
+  ],
+  [
+   50.71,
+   "action",
+   "air goes into the jet"
+  ],
+  [
+   51.88,
+   "new shot",
+   "the picture board (blueprint) the jet"
+  ],
+  [
+   52.2,
+   "action",
+   "air goes into the jet"
+  ],
+  [
+   52.2,
+   "word",
+   "THE JET!"
+  ],
+  [
+   53.08,
+   "action",
+   "a part lights up"
+  ],
+  [
+   55.62,
+   "new shot",
+   "the picture board (blueprint) jet yes rocket no"
+  ],
+  [
+   57.18,
+   "action",
+   "air goes into the jet"
+  ],
+  [
+   57.18,
+   "word",
+   "JET: YES"
+  ],
+  [
+   58.32,
+   "action",
+   "a part lights up"
+  ],
+  [
+   59.14,
+   "word",
+   "ROCKET: NO"
+  ],
+  [
+   60.0,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   60.0,
+   "new place",
+   "space above the Earth works in space"
+  ],
+  [
+   60.1,
+   "action",
+   "the rocket flies on"
+  ],
+  [
+   61.42,
+   "word",
+   "IT WORKS!"
+  ],
+  [
+   64.69,
+   "new place",
+   "the launch field (far away) one more launch"
+  ],
+  [
+   66.25,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   66.25,
+   "word",
+   "ONE MORE!"
+  ],
+  [
+   67.45,
+   "action",
+   "a part lights up"
+  ],
+  [
+   68.12,
+   "new place",
+   "Gizmo's lab count down"
+  ],
+  [
+   69.61,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   71.09,
+   "word",
+   "3"
+  ],
+  [
+   71.44,
+   "word",
+   "2"
+  ],
+  [
+   71.77,
+   "word",
+   "1"
+  ],
+  [
+   72.5,
+   "new place",
+   "the launch field (far away) blast off"
+  ],
+  [
+   72.75,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   72.75,
+   "word",
+   "BLAST OFF!"
+  ],
+  [
+   73.75,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   74.38,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   75.94,
+   "new place",
+   "high in the sky up through the clouds"
+  ],
+  [
+   75.99,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   76.04,
+   "action",
+   "the rocket zooms up"
+  ],
+  [
+   77.97,
+   "word",
+   "SPACE!"
+  ],
+  [
+   79.06,
+   "new place",
+   "Gizmo's lab say it 2"
+  ],
+  [
+   81.87,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   81.87,
+   "word",
+   "NO AIR NEEDED!"
+  ],
+  [
+   82.5,
+   "new place",
+   "space above the Earth satellite"
+  ],
+  [
+   83.69,
+   "picture",
+   "st"
+  ],
+  [
+   83.69,
+   "word",
+   "A SATELLITE!"
+  ],
+  [
+   85.72,
+   "action",
+   "the satellite turns"
+  ],
+  [
+   86.88,
+   "new shot",
+   "space above the Earth point satellite"
+  ],
+  [
+   87.19,
+   "word",
+   "POINT!"
+  ],
+  [
+   87.65,
+   "action",
+   "a part lights up"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gspace",
+   "say": "Can a rocket fly in space, with no air?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.78625,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.13
+    ],
+    [
+     "a",
+     0.13,
+     0.16
+    ],
+    [
+     "rocket",
+     0.16,
+     0.66
+    ],
+    [
+     "fly",
+     0.66,
+     1.02
+    ],
+    [
+     "in",
+     1.02,
+     1.17
+    ],
+    [
+     "space,",
+     1.17,
+     1.73
+    ],
+    [
+     "with",
+     1.9,
+     2.08
+    ],
+    [
+     "no",
+     2.08,
+     2.38
+    ],
+    [
+     "air?",
+     2.38,
+     2.786
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: no air",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Way up high, a rocket flies into space.",
+   "t0": 3.4375,
+   "t1": 7.1875,
+   "v0": 3.74625,
+   "dur": 3.07125,
+   "words": [
+    [
+     "Way",
+     0.0,
+     0.27
+    ],
+    [
+     "up",
+     0.27,
+     0.45
+    ],
+    [
+     "high,",
+     0.45,
+     0.96
+    ],
+    [
+     "a",
+     1.17,
+     1.22
+    ],
+    [
+     "rocket",
+     1.22,
+     1.74
+    ],
+    [
+     "flies",
+     1.74,
+     2.25
+    ],
+    [
+     "into",
+     2.25,
+     2.41
+    ],
+    [
+     "space.",
+     2.41,
+     3.07
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "space wide",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "But wait! In space, there is no air at all.",
+   "t0": 7.1875,
+   "t1": 10.625,
+   "v0": 7.3575,
+   "dur": 3.046291666666667,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.15
+    ],
+    [
+     "wait!",
+     0.15,
+     0.69
+    ],
+    [
+     "In",
+     0.96,
+     1.1
+    ],
+    [
+     "space,",
+     1.1,
+     1.61
+    ],
+    [
+     "there",
+     1.61,
+     1.81
+    ],
+    [
+     "is",
+     1.81,
+     1.94
+    ],
+    [
+     "no",
+     1.94,
+     2.25
+    ],
+    [
+     "air",
+     2.25,
+     2.52
+    ],
+    [
+     "at",
+     2.52,
+     2.59
+    ],
+    [
+     "all.",
+     2.59,
+     3.046
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "no air",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "No air? Then how can a rocket work up there? Hmm.",
+   "t0": 10.625,
+   "t1": 15.0,
+   "v0": 10.943791666666666,
+   "dur": 3.160083333333333,
+   "words": [
+    [
+     "No",
+     0.0,
+     0.34
+    ],
+    [
+     "air?",
+     0.34,
+     0.97
+    ],
+    [
+     "Then",
+     0.97,
+     1.11
+    ],
+    [
+     "how",
+     1.11,
+     1.3
+    ],
+    [
+     "can",
+     1.3,
+     1.45
+    ],
+    [
+     "a",
+     1.45,
+     1.48
+    ],
+    [
+     "rocket",
+     1.48,
+     1.98
+    ],
+    [
+     "work",
+     1.98,
+     2.26
+    ],
+    [
+     "up",
+     2.26,
+     2.42
+    ],
+    [
+     "there?",
+     2.42,
+     2.74
+    ],
+    [
+     "Hmm.",
+     2.74,
+     3.16
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hmm 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Look, a jet plane! A jet needs air from outside to work.",
+   "t0": 15.0,
+   "t1": 20.0,
+   "v0": 15.243874999999997,
+   "dur": 4.461208333333333,
+   "words": [
+    [
+     "Look,",
+     0.01,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.44
+    ],
+    [
+     "jet",
+     0.44,
+     0.76
+    ],
+    [
+     "plane!",
+     0.76,
+     1.42
+    ],
+    [
+     "A",
+     1.86,
+     1.95
+    ],
+    [
+     "jet",
+     1.95,
+     2.28
+    ],
+    [
+     "needs",
+     2.28,
+     2.65
+    ],
+    [
+     "air",
+     2.65,
+     2.91
+    ],
+    [
+     "from",
+     2.91,
+     3.14
+    ],
+    [
+     "outside",
+     3.14,
+     3.83
+    ],
+    [
+     "to",
+     3.83,
+     3.92
+    ],
+    [
+     "work.",
+     3.92,
+     4.46
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "jet needs air",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gwindow",
+   "say": "Its engines take in air, as it flies along.",
+   "t0": 20.0,
+   "t1": 23.75,
+   "v0": 20.245083333333334,
+   "dur": 3.285833333333333,
+   "words": [
+    [
+     "Its",
+     0.0,
+     0.19
+    ],
+    [
+     "engines",
+     0.19,
+     0.71
+    ],
+    [
+     "take",
+     0.71,
+     1.02
+    ],
+    [
+     "in",
+     1.02,
+     1.16
+    ],
+    [
+     "air,",
+     1.16,
+     1.67
+    ],
+    [
+     "as",
+     1.95,
+     2.14
+    ],
+    [
+     "it",
+     2.14,
+     2.24
+    ],
+    [
+     "flies",
+     2.24,
+     2.75
+    ],
+    [
+     "along.",
+     2.75,
+     3.286
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "jet close",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Can a rocket work in space, where there is no air? Yes, or no?",
+   "t0": 23.75,
+   "t1": 32.1875,
+   "v0": 24.07091666666667,
+   "dur": 4.485125,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.14
+    ],
+    [
+     "a",
+     0.14,
+     0.17
+    ],
+    [
+     "rocket",
+     0.17,
+     0.67
+    ],
+    [
+     "work",
+     0.67,
+     0.98
+    ],
+    [
+     "in",
+     0.98,
+     1.08
+    ],
+    [
+     "space,",
+     1.08,
+     1.59
+    ],
+    [
+     "where",
+     1.59,
+     1.78
+    ],
+    [
+     "there",
+     1.78,
+     1.96
+    ],
+    [
+     "is",
+     1.96,
+     2.09
+    ],
+    [
+     "no",
+     2.09,
+     2.35
+    ],
+    [
+     "air?",
+     2.35,
+     2.81
+    ],
+    [
+     "Yes,",
+     3.25,
+     3.71
+    ],
+    [
+     "or",
+     3.71,
+     3.99
+    ],
+    [
+     "no?",
+     3.99,
+     4.48
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 4",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Yes! A rocket engine does not need air.",
+   "t0": 32.1875,
+   "t1": 35.625,
+   "v0": 32.29604166666667,
+   "dur": 2.83825,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.63
+    ],
+    [
+     "A",
+     0.63,
+     0.68
+    ],
+    [
+     "rocket",
+     0.68,
+     1.23
+    ],
+    [
+     "engine",
+     1.23,
+     1.62
+    ],
+    [
+     "does",
+     1.62,
+     1.82
+    ],
+    [
+     "not",
+     1.82,
+     2.11
+    ],
+    [
+     "need",
+     2.11,
+     2.45
+    ],
+    [
+     "air.",
+     2.45,
+     2.838
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "yes it works",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It carries everything it needs, right inside the rocket!",
+   "t0": 35.625,
+   "t1": 40.0,
+   "v0": 35.67429166666667,
+   "dur": 3.893625,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.11
+    ],
+    [
+     "carries",
+     0.11,
+     0.7
+    ],
+    [
+     "everything",
+     0.7,
+     1.24
+    ],
+    [
+     "it",
+     1.24,
+     1.34
+    ],
+    [
+     "needs,",
+     1.34,
+     2.01
+    ],
+    [
+     "right",
+     2.37,
+     2.7
+    ],
+    [
+     "inside",
+     2.7,
+     3.19
+    ],
+    [
+     "the",
+     3.19,
+     3.26
+    ],
+    [
+     "rocket!",
+     3.26,
+     3.89
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "carries everything",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Like packing a backpack for a trip. All inside!",
+   "t0": 40.0,
+   "t1": 43.75,
+   "v0": 40.10791666666667,
+   "dur": 3.417125,
+   "words": [
+    [
+     "Like",
+     0.01,
+     0.27
+    ],
+    [
+     "packing",
+     0.27,
+     0.72
+    ],
+    [
+     "a",
+     0.72,
+     0.76
+    ],
+    [
+     "backpack",
+     0.76,
+     1.27
+    ],
+    [
+     "for",
+     1.27,
+     1.48
+    ],
+    [
+     "a",
+     1.48,
+     1.52
+    ],
+    [
+     "trip.",
+     1.52,
+     2.01
+    ],
+    [
+     "All",
+     2.35,
+     2.63
+    ],
+    [
+     "inside!",
+     2.63,
+     3.417
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "backpack",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Which one needs air from outside? The jet, or the rocket?",
+   "t0": 43.75,
+   "t1": 51.875,
+   "v0": 44.065041666666666,
+   "dur": 4.27325,
+   "words": [
+    [
+     "Which",
+     0.0,
+     0.22
+    ],
+    [
+     "one",
+     0.22,
+     0.44
+    ],
+    [
+     "needs",
+     0.44,
+     0.8
+    ],
+    [
+     "air",
+     0.8,
+     1.04
+    ],
+    [
+     "from",
+     1.04,
+     1.26
+    ],
+    [
+     "outside?",
+     1.26,
+     2.06
+    ],
+    [
+     "The",
+     2.49,
+     2.6
+    ],
+    [
+     "jet,",
+     2.6,
+     3.2
+    ],
+    [
+     "or",
+     3.2,
+     3.46
+    ],
+    [
+     "the",
+     3.46,
+     3.55
+    ],
+    [
+     "rocket?",
+     3.55,
+     4.27
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 5",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The jet! A rocket brings what it needs along.",
+   "t0": 51.875,
+   "t1": 55.625,
+   "v0": 52.078291666666665,
+   "dur": 3.0875,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "jet!",
+     0.12,
+     0.94
+    ],
+    [
+     "A",
+     0.94,
+     1.0
+    ],
+    [
+     "rocket",
+     1.0,
+     1.58
+    ],
+    [
+     "brings",
+     1.58,
+     1.96
+    ],
+    [
+     "what",
+     1.96,
+     2.11
+    ],
+    [
+     "it",
+     2.11,
+     2.2
+    ],
+    [
+     "needs",
+     2.2,
+     2.54
+    ],
+    [
+     "along.",
+     2.54,
+     3.087
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the jet",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Air from outside? The jet needs it. The rocket does not!",
+   "t0": 55.625,
+   "t1": 60.0,
+   "v0": 55.70579166666666,
+   "dur": 3.9727083333333333,
+   "words": [
+    [
+     "Air",
+     0.01,
+     0.16
+    ],
+    [
+     "from",
+     0.16,
+     0.38
+    ],
+    [
+     "outside?",
+     0.38,
+     1.16
+    ],
+    [
+     "The",
+     1.16,
+     1.47
+    ],
+    [
+     "jet",
+     1.47,
+     1.75
+    ],
+    [
+     "needs",
+     1.75,
+     2.2
+    ],
+    [
+     "it.",
+     2.2,
+     2.52
+    ],
+    [
+     "The",
+     2.52,
+     2.61
+    ],
+    [
+     "rocket",
+     2.61,
+     3.16
+    ],
+    [
+     "does",
+     3.16,
+     3.43
+    ],
+    [
+     "not!",
+     3.43,
+     3.97
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "jet yes rocket no",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "So a rocket engine works in space, where there is no air.",
+   "t0": 60.0,
+   "t1": 64.6875,
+   "v0": 60.2185,
+   "dur": 4.097708333333333,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.23
+    ],
+    [
+     "a",
+     0.23,
+     0.26
+    ],
+    [
+     "rocket",
+     0.26,
+     0.81
+    ],
+    [
+     "engine",
+     0.81,
+     1.2
+    ],
+    [
+     "works",
+     1.2,
+     1.54
+    ],
+    [
+     "in",
+     1.54,
+     1.66
+    ],
+    [
+     "space,",
+     1.66,
+     2.3
+    ],
+    [
+     "where",
+     2.67,
+     2.83
+    ],
+    [
+     "there",
+     2.83,
+     3.08
+    ],
+    [
+     "is",
+     3.08,
+     3.22
+    ],
+    [
+     "no",
+     3.22,
+     3.66
+    ],
+    [
+     "air.",
+     3.66,
+     4.098
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "works in space",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "Now let's watch one more launch, from far away.",
+   "t0": 64.6875,
+   "t1": 68.125,
+   "v0": 64.85620833333334,
+   "dur": 3.059625,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.25
+    ],
+    [
+     "let's",
+     0.25,
+     0.55
+    ],
+    [
+     "watch",
+     0.55,
+     0.96
+    ],
+    [
+     "one",
+     0.96,
+     1.15
+    ],
+    [
+     "more",
+     1.15,
+     1.39
+    ],
+    [
+     "launch,",
+     1.39,
+     1.94
+    ],
+    [
+     "from",
+     1.94,
+     2.14
+    ],
+    [
+     "far",
+     2.14,
+     2.59
+    ],
+    [
+     "away.",
+     2.59,
+     3.06
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "one more launch",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Let's count down for a launch! Ready? Three, two, one...",
+   "t0": 68.125,
+   "t1": 72.5,
+   "v0": 68.45583333333335,
+   "dur": 3.755708333333333,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.32
+    ],
+    [
+     "count",
+     0.32,
+     0.63
+    ],
+    [
+     "down",
+     0.63,
+     0.92
+    ],
+    [
+     "for",
+     0.92,
+     1.12
+    ],
+    [
+     "a",
+     1.12,
+     1.15
+    ],
+    [
+     "launch!",
+     1.15,
+     1.73
+    ],
+    [
+     "Ready?",
+     2.04,
+     2.47
+    ],
+    [
+     "Three,",
+     2.63,
+     2.98
+    ],
+    [
+     "two,",
+     2.98,
+     3.31
+    ],
+    [
+     "one...",
+     3.31,
+     3.756
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count down",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "Blast off! Up it goes, higher and higher!",
+   "t0": 72.5,
+   "t1": 75.9375,
+   "v0": 72.75154166666668,
+   "dur": 2.8,
+   "words": [
+    [
+     "Blast",
+     0.0,
+     0.44
+    ],
+    [
+     "off!",
+     0.44,
+     0.81
+    ],
+    [
+     "Up",
+     1.0,
+     1.12
+    ],
+    [
+     "it",
+     1.12,
+     1.19
+    ],
+    [
+     "goes,",
+     1.19,
+     1.63
+    ],
+    [
+     "higher",
+     1.63,
+     2.13
+    ],
+    [
+     "and",
+     2.13,
+     2.22
+    ],
+    [
+     "higher!",
+     2.22,
+     2.8
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "blast off",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Up through the clouds, and out into space!",
+   "t0": 75.9375,
+   "t1": 79.0625,
+   "v0": 76.09154166666669,
+   "dur": 2.5467916666666666,
+   "words": [
+    [
+     "Up",
+     0.01,
+     0.16
+    ],
+    [
+     "through",
+     0.16,
+     0.38
+    ],
+    [
+     "the",
+     0.38,
+     0.45
+    ],
+    [
+     "clouds,",
+     0.45,
+     1.2
+    ],
+    [
+     "and",
+     1.2,
+     1.44
+    ],
+    [
+     "out",
+     1.44,
+     1.69
+    ],
+    [
+     "into",
+     1.69,
+     1.88
+    ],
+    [
+     "space!",
+     1.88,
+     2.547
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "up through the clouds",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Say it with me. A rocket does not need air!",
+   "t0": 79.0625,
+   "t1": 82.5,
+   "v0": 79.17833333333336,
+   "dur": 3.1333333333333333,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.4
+    ],
+    [
+     "with",
+     0.4,
+     0.63
+    ],
+    [
+     "me.",
+     0.63,
+     0.93
+    ],
+    [
+     "A",
+     1.3,
+     1.35
+    ],
+    [
+     "rocket",
+     1.35,
+     1.87
+    ],
+    [
+     "does",
+     1.87,
+     2.07
+    ],
+    [
+     "not",
+     2.07,
+     2.35
+    ],
+    [
+     "need",
+     2.35,
+     2.69
+    ],
+    [
+     "air!",
+     2.69,
+     3.13
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Rockets carry satellites like this one up into space.",
+   "t0": 82.5,
+   "t1": 86.875,
+   "v0": 82.8516666666667,
+   "dur": 3.5374166666666667,
+   "words": [
+    [
+     "Rockets",
+     0.01,
+     0.5
+    ],
+    [
+     "carry",
+     0.5,
+     0.84
+    ],
+    [
+     "satellites",
+     0.84,
+     1.59
+    ],
+    [
+     "like",
+     1.59,
+     1.85
+    ],
+    [
+     "this",
+     1.85,
+     2.15
+    ],
+    [
+     "one",
+     2.15,
+     2.41
+    ],
+    [
+     "up",
+     2.41,
+     2.67
+    ],
+    [
+     "into",
+     2.67,
+     2.87
+    ],
+    [
+     "space.",
+     2.87,
+     3.537
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "satellite",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Can you point to the satellite? Point!",
+   "t0": 86.875,
+   "t1": 90.61850000000005,
+   "v0": 86.92908333333338,
+   "dur": 2.269416666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.26
+    ],
+    [
+     "point",
+     0.26,
+     0.55
+    ],
+    [
+     "to",
+     0.55,
+     0.62
+    ],
+    [
+     "the",
+     0.62,
+     0.72
+    ],
+    [
+     "satellite?",
+     0.72,
+     1.43
+    ],
+    [
+     "Point!",
+     1.66,
+     2.269
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "point satellite",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

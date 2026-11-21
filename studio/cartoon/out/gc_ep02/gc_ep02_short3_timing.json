@@ -1,0 +1,1879 @@
+{
+ "id": "gc_ep02_short3",
+ "total": 87.40995833333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875
+ ],
+ "plan": {
+  "length": 87.4,
+  "shots": 19,
+  "visual_changes": 92,
+  "mean_gap": 0.95,
+  "longest_gap": 5.93,
+  "longest_gap_at": 44.1,
+  "over_6s": [],
+  "places": [
+   "gsky",
+   "gbench",
+   "glab",
+   "gspace",
+   "gpad"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 8,
+  "longest_without_question": 16.9,
+  "first_words_at": 0.42,
+  "shot_mean": 4.6,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "185/185",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 25.7,
+   "onset_err_max_ms": 60.0,
+   "suspect_words": [],
+   "cuts": 18,
+   "cuts_on_the_half_beat": 18,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   0.0,
+   "new place",
+   "high in the sky hook: why drop parts"
+  ],
+  [
+   1.6,
+   "action",
+   "the bottom part drops away"
+  ],
+  [
+   1.6,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new place",
+   "Gizmo's work bench built in parts"
+  ],
+  [
+   4.99,
+   "action",
+   "a part lights up"
+  ],
+  [
+   4.99,
+   "word",
+   "A TRICK!"
+  ],
+  [
+   6.64,
+   "action",
+   "a part lights up"
+  ],
+  [
+   7.81,
+   "new place",
+   "the picture board (blueprint) count parts"
+  ],
+  [
+   9.42,
+   "action",
+   "a part lights up"
+  ],
+  [
+   9.42,
+   "word",
+   "1"
+  ],
+  [
+   9.67,
+   "action",
+   "a part lights up"
+  ],
+  [
+   9.67,
+   "word",
+   "2"
+  ],
+  [
+   9.94,
+   "action",
+   "a part lights up"
+  ],
+  [
+   9.94,
+   "word",
+   "3"
+  ],
+  [
+   10.94,
+   "new shot",
+   "the picture board (blueprint) heavy needs a big push"
+  ],
+  [
+   11.14,
+   "word",
+   "HEAVY!"
+  ],
+  [
+   12.75,
+   "action",
+   "a big push"
+  ],
+  [
+   12.75,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   12.75,
+   "word",
+   "BIG PUSH!"
+  ],
+  [
+   15.31,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   15.31,
+   "new place",
+   "high in the sky bottom part drops"
+  ],
+  [
+   18.15,
+   "action",
+   "the bottom part drops away"
+  ],
+  [
+   18.15,
+   "word",
+   "DROP!"
+  ],
+  [
+   19.38,
+   "new shot",
+   "high in the sky next part"
+  ],
+  [
+   19.69,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   23.44,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   23.44,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   24.38,
+   "new place",
+   "Gizmo's lab question bag"
+  ],
+  [
+   26.0,
+   "sign",
+   "HEAVY BAG"
+  ],
+  [
+   26.35,
+   "sign",
+   "NO BAG"
+  ],
+  [
+   28.88,
+   "thinking dot",
+   "1"
+  ],
+  [
+   29.55,
+   "thinking dot",
+   "2"
+  ],
+  [
+   30.23,
+   "thinking dot",
+   "3"
+  ],
+  [
+   30.71,
+   "answer",
+   "NO BAG"
+  ],
+  [
+   30.76,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   31.88,
+   "new place",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   32.82,
+   "sign",
+   "LIGHTER"
+  ],
+  [
+   33.17,
+   "sign",
+   "HEAVIER"
+  ],
+  [
+   35.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   35.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   36.4,
+   "thinking dot",
+   "3"
+  ],
+  [
+   36.89,
+   "answer",
+   "LIGHTER"
+  ],
+  [
+   38.12,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   38.12,
+   "new shot",
+   "the picture board (blueprint) lighter goes higher"
+  ],
+  [
+   40.62,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   40.62,
+   "word",
+   "HIGHER!"
+  ],
+  [
+   41.56,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   41.56,
+   "new place",
+   "high in the sky up and up"
+  ],
+  [
+   41.66,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   42.82,
+   "word",
+   "UP!"
+  ],
+  [
+   43.75,
+   "new place",
+   "Gizmo's lab stack fists"
+  ],
+  [
+   44.07,
+   "action",
+   "Gizmo stacks his hands"
+  ],
+  [
+   44.07,
+   "word",
+   "STACK!"
+  ],
+  [
+   50.0,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   50.0,
+   "new place",
+   "space above the Earth staging"
+  ],
+  [
+   51.12,
+   "word",
+   "STAGING"
+  ],
+  [
+   52.47,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   54.69,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   54.69,
+   "new shot",
+   "space above the Earth the Moon"
+  ],
+  [
+   54.79,
+   "action",
+   "the rocket flies to the Moon"
+  ],
+  [
+   56.09,
+   "action",
+   "a part lights up"
+  ],
+  [
+   56.09,
+   "word",
+   "THE MOON!"
+  ],
+  [
+   57.81,
+   "new place",
+   "the picture board (blueprint) question 7"
+  ],
+  [
+   61.37,
+   "sign",
+   "EMPTY PART"
+  ],
+  [
+   61.72,
+   "sign",
+   "ITS NOSE"
+  ],
+  [
+   63.87,
+   "thinking dot",
+   "1"
+  ],
+  [
+   64.55,
+   "thinking dot",
+   "2"
+  ],
+  [
+   65.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   65.71,
+   "answer",
+   "EMPTY PART"
+  ],
+  [
+   66.88,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   66.88,
+   "new place",
+   "high in the sky drop and go higher"
+  ],
+  [
+   67.26,
+   "word",
+   "EMPTY!"
+  ],
+  [
+   68.45,
+   "action",
+   "the bottom part drops away"
+  ],
+  [
+   69.35,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   69.35,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   70.31,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   70.31,
+   "new place",
+   "space above the Earth the Earth below"
+  ],
+  [
+   72.8,
+   "action",
+   "the rocket flies on"
+  ],
+  [
+   72.8,
+   "word",
+   "THE EARTH!"
+  ],
+  [
+   74.69,
+   "new place",
+   "Gizmo's lab say it 3"
+  ],
+  [
+   76.27,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   76.27,
+   "word",
+   "DROP A PART!"
+  ],
+  [
+   77.17,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   77.17,
+   "word",
+   "GO HIGHER!"
+  ],
+  [
+   78.12,
+   "new place",
+   "the launch field (far away) astronauts"
+  ],
+  [
+   79.69,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   79.69,
+   "word",
+   "ASTRONAUTS!"
+  ],
+  [
+   80.68,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   81.56,
+   "new place",
+   "Gizmo's lab wave"
+  ],
+  [
+   81.9,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   81.9,
+   "word",
+   "WAVE!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gsky",
+   "say": "Why do big rockets drop parts as they fly?",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.910041666666667,
+   "words": [
+    [
+     "Why",
+     0.01,
+     0.23
+    ],
+    [
+     "do",
+     0.23,
+     0.4
+    ],
+    [
+     "big",
+     0.4,
+     0.65
+    ],
+    [
+     "rockets",
+     0.65,
+     1.18
+    ],
+    [
+     "drop",
+     1.18,
+     1.53
+    ],
+    [
+     "parts",
+     1.53,
+     2.0
+    ],
+    [
+     "as",
+     2.0,
+     2.16
+    ],
+    [
+     "they",
+     2.16,
+     2.32
+    ],
+    [
+     "fly?",
+     2.32,
+     2.91
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: why drop parts",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Big rockets have a trick. They are built in parts.",
+   "t0": 3.75,
+   "t1": 7.8125,
+   "v0": 3.870041666666667,
+   "dur": 3.445666666666667,
+   "words": [
+    [
+     "Big",
+     0.0,
+     0.3
+    ],
+    [
+     "rockets",
+     0.3,
+     0.84
+    ],
+    [
+     "have",
+     0.84,
+     1.06
+    ],
+    [
+     "a",
+     1.06,
+     1.12
+    ],
+    [
+     "trick.",
+     1.12,
+     1.66
+    ],
+    [
+     "They",
+     1.96,
+     2.14
+    ],
+    [
+     "are",
+     2.14,
+     2.23
+    ],
+    [
+     "built",
+     2.23,
+     2.62
+    ],
+    [
+     "in",
+     2.62,
+     2.77
+    ],
+    [
+     "parts.",
+     2.77,
+     3.446
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "built in parts",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Let's count the parts. One, two, three!",
+   "t0": 7.8125,
+   "t1": 10.9375,
+   "v0": 7.855708333333333,
+   "dur": 2.664125,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.32
+    ],
+    [
+     "count",
+     0.32,
+     0.6
+    ],
+    [
+     "the",
+     0.6,
+     0.68
+    ],
+    [
+     "parts.",
+     0.68,
+     1.23
+    ],
+    [
+     "One,",
+     1.56,
+     1.81
+    ],
+    [
+     "two,",
+     1.81,
+     2.08
+    ],
+    [
+     "three!",
+     2.08,
+     2.66
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count parts",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "A heavy rocket needs a big push, to get off the ground.",
+   "t0": 10.9375,
+   "t1": 15.3125,
+   "v0": 11.059833333333332,
+   "dur": 3.7842083333333334,
+   "words": [
+    [
+     "A",
+     0.0,
+     0.08
+    ],
+    [
+     "heavy",
+     0.08,
+     0.46
+    ],
+    [
+     "rocket",
+     0.46,
+     1.0
+    ],
+    [
+     "needs",
+     1.0,
+     1.35
+    ],
+    [
+     "a",
+     1.35,
+     1.4
+    ],
+    [
+     "big",
+     1.4,
+     1.69
+    ],
+    [
+     "push,",
+     1.69,
+     2.24
+    ],
+    [
+     "to",
+     2.52,
+     2.64
+    ],
+    [
+     "get",
+     2.64,
+     2.84
+    ],
+    [
+     "off",
+     2.84,
+     3.06
+    ],
+    [
+     "the",
+     3.06,
+     3.14
+    ],
+    [
+     "ground.",
+     3.14,
+     3.78
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "heavy needs a big push",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "When the bottom part runs out of fuel, it drops away.",
+   "t0": 15.3125,
+   "t1": 19.375,
+   "v0": 15.384041666666665,
+   "dur": 3.7707083333333333,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.12
+    ],
+    [
+     "the",
+     0.12,
+     0.19
+    ],
+    [
+     "bottom",
+     0.19,
+     0.67
+    ],
+    [
+     "part",
+     0.67,
+     1.03
+    ],
+    [
+     "runs",
+     1.03,
+     1.49
+    ],
+    [
+     "out",
+     1.49,
+     1.61
+    ],
+    [
+     "of",
+     1.61,
+     1.67
+    ],
+    [
+     "fuel,",
+     1.67,
+     2.3
+    ],
+    [
+     "it",
+     2.66,
+     2.77
+    ],
+    [
+     "drops",
+     2.77,
+     3.22
+    ],
+    [
+     "away.",
+     3.22,
+     3.77
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "bottom part drops",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Bye-bye, bottom part! Now the next part starts its engine.",
+   "t0": 19.375,
+   "t1": 24.375,
+   "v0": 19.694750000000003,
+   "dur": 4.324916666666667,
+   "words": [
+    [
+     "Bye-bye,",
+     0.0,
+     0.36
+    ],
+    [
+     "bottom",
+     0.36,
+     0.87
+    ],
+    [
+     "part!",
+     0.87,
+     1.82
+    ],
+    [
+     "Now",
+     2.2,
+     2.47
+    ],
+    [
+     "the",
+     2.47,
+     2.57
+    ],
+    [
+     "next",
+     2.57,
+     2.83
+    ],
+    [
+     "part",
+     2.83,
+     3.18
+    ],
+    [
+     "starts",
+     3.18,
+     3.59
+    ],
+    [
+     "its",
+     3.59,
+     3.75
+    ],
+    [
+     "engine.",
+     3.75,
+     4.32
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "next part",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Is it easier to run with a heavy bag, or with no bag?",
+   "t0": 24.375,
+   "t1": 31.875,
+   "v0": 24.559666666666672,
+   "dur": 3.8324583333333333,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.16
+    ],
+    [
+     "it",
+     0.16,
+     0.32
+    ],
+    [
+     "easier",
+     0.32,
+     0.79
+    ],
+    [
+     "to",
+     0.79,
+     0.9
+    ],
+    [
+     "run",
+     0.9,
+     1.23
+    ],
+    [
+     "with",
+     1.23,
+     1.4
+    ],
+    [
+     "a",
+     1.4,
+     1.44
+    ],
+    [
+     "heavy",
+     1.44,
+     1.76
+    ],
+    [
+     "bag,",
+     1.76,
+     2.36
+    ],
+    [
+     "or",
+     2.72,
+     2.85
+    ],
+    [
+     "with",
+     2.85,
+     3.07
+    ],
+    [
+     "no",
+     3.07,
+     3.27
+    ],
+    [
+     "bag?",
+     3.27,
+     3.83
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question bag",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Is the rocket lighter now, or heavier?",
+   "t0": 31.875,
+   "t1": 38.125,
+   "v0": 32.13212500000001,
+   "dur": 2.4379166666666667,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.14
+    ],
+    [
+     "the",
+     0.14,
+     0.21
+    ],
+    [
+     "rocket",
+     0.21,
+     0.69
+    ],
+    [
+     "lighter",
+     0.69,
+     1.06
+    ],
+    [
+     "now,",
+     1.06,
+     1.46
+    ],
+    [
+     "or",
+     1.67,
+     1.84
+    ],
+    [
+     "heavier?",
+     1.84,
+     2.438
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 6",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Lighter! A lighter rocket can go much higher.",
+   "t0": 38.125,
+   "t1": 41.5625,
+   "v0": 38.31004166666668,
+   "dur": 2.8655833333333334,
+   "words": [
+    [
+     "Lighter!",
+     0.01,
+     0.51
+    ],
+    [
+     "A",
+     0.72,
+     0.78
+    ],
+    [
+     "lighter",
+     0.78,
+     1.19
+    ],
+    [
+     "rocket",
+     1.19,
+     1.68
+    ],
+    [
+     "can",
+     1.68,
+     1.9
+    ],
+    [
+     "go",
+     1.9,
+     2.03
+    ],
+    [
+     "much",
+     2.03,
+     2.31
+    ],
+    [
+     "higher.",
+     2.31,
+     2.86
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "lighter goes higher",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "Up, and up, and up it goes!",
+   "t0": 41.5625,
+   "t1": 43.75,
+   "v0": 41.71562500000001,
+   "dur": 1.80025,
+   "words": [
+    [
+     "Up,",
+     0.11,
+     0.36
+    ],
+    [
+     "and",
+     0.36,
+     0.49
+    ],
+    [
+     "up,",
+     0.49,
+     0.74
+    ],
+    [
+     "and",
+     0.74,
+     0.87
+    ],
+    [
+     "up",
+     0.87,
+     1.02
+    ],
+    [
+     "it",
+     1.02,
+     1.1
+    ],
+    [
+     "goes!",
+     1.1,
+     1.8
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "up and up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Stack your fists, one on top of the other, like rocket parts!",
+   "t0": 43.75,
+   "t1": 50.0,
+   "v0": 44.05587500000001,
+   "dur": 4.286458333333333,
+   "words": [
+    [
+     "Stack",
+     0.01,
+     0.39
+    ],
+    [
+     "your",
+     0.39,
+     0.5
+    ],
+    [
+     "fists,",
+     0.5,
+     1.18
+    ],
+    [
+     "one",
+     1.64,
+     1.8
+    ],
+    [
+     "on",
+     1.8,
+     1.99
+    ],
+    [
+     "top",
+     1.99,
+     2.38
+    ],
+    [
+     "of",
+     2.38,
+     2.48
+    ],
+    [
+     "the",
+     2.48,
+     2.63
+    ],
+    [
+     "other,",
+     2.63,
+     2.96
+    ],
+    [
+     "like",
+     2.96,
+     3.22
+    ],
+    [
+     "rocket",
+     3.22,
+     3.7
+    ],
+    [
+     "parts!",
+     3.7,
+     4.286
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "stack fists",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "This trick is called staging. It helps rockets reach space.",
+   "t0": 50.0,
+   "t1": 54.6875,
+   "v0": 50.082333333333345,
+   "dur": 4.179875,
+   "words": [
+    [
+     "This",
+     0.0,
+     0.25
+    ],
+    [
+     "trick",
+     0.25,
+     0.57
+    ],
+    [
+     "is",
+     0.57,
+     0.7
+    ],
+    [
+     "called",
+     0.7,
+     1.04
+    ],
+    [
+     "staging.",
+     1.04,
+     1.91
+    ],
+    [
+     "It",
+     2.3,
+     2.39
+    ],
+    [
+     "helps",
+     2.39,
+     2.7
+    ],
+    [
+     "rockets",
+     2.7,
+     3.25
+    ],
+    [
+     "reach",
+     3.25,
+     3.55
+    ],
+    [
+     "space.",
+     3.55,
+     4.18
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "staging",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "And even all the way to the Moon! Wow!",
+   "t0": 54.6875,
+   "t1": 57.8125,
+   "v0": 54.80220833333335,
+   "dur": 2.757416666666667,
+   "words": [
+    [
+     "And",
+     0.02,
+     0.19
+    ],
+    [
+     "even",
+     0.19,
+     0.48
+    ],
+    [
+     "all",
+     0.48,
+     0.77
+    ],
+    [
+     "the",
+     0.77,
+     0.84
+    ],
+    [
+     "way",
+     0.84,
+     1.09
+    ],
+    [
+     "to",
+     1.09,
+     1.21
+    ],
+    [
+     "the",
+     1.21,
+     1.29
+    ],
+    [
+     "Moon!",
+     1.29,
+     1.88
+    ],
+    [
+     "Wow!",
+     2.22,
+     2.757
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the Moon",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does a big rocket drop as it flies? An empty part, or its nose?",
+   "t0": 57.8125,
+   "t1": 66.875,
+   "v0": 58.09962500000001,
+   "dur": 5.286083333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.17
+    ],
+    [
+     "does",
+     0.17,
+     0.32
+    ],
+    [
+     "a",
+     0.32,
+     0.38
+    ],
+    [
+     "big",
+     0.38,
+     0.71
+    ],
+    [
+     "rocket",
+     0.71,
+     1.18
+    ],
+    [
+     "drop",
+     1.18,
+     1.62
+    ],
+    [
+     "as",
+     1.62,
+     1.78
+    ],
+    [
+     "it",
+     1.78,
+     1.89
+    ],
+    [
+     "flies?",
+     1.89,
+     2.69
+    ],
+    [
+     "An",
+     3.14,
+     3.27
+    ],
+    [
+     "empty",
+     3.27,
+     3.73
+    ],
+    [
+     "part,",
+     3.73,
+     4.18
+    ],
+    [
+     "or",
+     4.18,
+     4.42
+    ],
+    [
+     "its",
+     4.42,
+     4.6
+    ],
+    [
+     "nose?",
+     4.6,
+     5.286
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 7",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gsky",
+   "say": "An empty part! Drop it, and go higher.",
+   "t0": 66.875,
+   "t1": 70.3125,
+   "v0": 67.12570833333335,
+   "dur": 2.8897083333333335,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.13
+    ],
+    [
+     "empty",
+     0.13,
+     0.58
+    ],
+    [
+     "part!",
+     0.58,
+     1.32
+    ],
+    [
+     "Drop",
+     1.32,
+     1.77
+    ],
+    [
+     "it,",
+     1.77,
+     1.88
+    ],
+    [
+     "and",
+     1.88,
+     2.05
+    ],
+    [
+     "go",
+     2.05,
+     2.22
+    ],
+    [
+     "higher.",
+     2.22,
+     2.89
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "drop and go higher",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gspace",
+   "say": "Look how high we are! There is the Earth, way down below.",
+   "t0": 70.3125,
+   "t1": 74.6875,
+   "v0": 70.55541666666669,
+   "dur": 3.9349583333333333,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.23
+    ],
+    [
+     "how",
+     0.23,
+     0.4
+    ],
+    [
+     "high",
+     0.4,
+     0.78
+    ],
+    [
+     "we",
+     0.78,
+     1.01
+    ],
+    [
+     "are!",
+     1.01,
+     1.35
+    ],
+    [
+     "There",
+     1.7,
+     1.86
+    ],
+    [
+     "is",
+     1.86,
+     2.0
+    ],
+    [
+     "the",
+     2.0,
+     2.24
+    ],
+    [
+     "Earth,",
+     2.24,
+     2.66
+    ],
+    [
+     "way",
+     2.66,
+     2.99
+    ],
+    [
+     "down",
+     2.99,
+     3.35
+    ],
+    [
+     "below.",
+     3.35,
+     3.93
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the Earth below",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Say it together. Drop a part, go higher!",
+   "t0": 74.6875,
+   "t1": 78.125,
+   "v0": 75.03037500000002,
+   "dur": 2.821,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.28
+    ],
+    [
+     "it",
+     0.28,
+     0.37
+    ],
+    [
+     "together.",
+     0.37,
+     0.93
+    ],
+    [
+     "Drop",
+     1.24,
+     1.51
+    ],
+    [
+     "a",
+     1.51,
+     1.56
+    ],
+    [
+     "part,",
+     1.56,
+     1.92
+    ],
+    [
+     "go",
+     1.92,
+     2.14
+    ],
+    [
+     "higher!",
+     2.14,
+     2.82
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "And some rockets take astronauts into space!",
+   "t0": 78.125,
+   "t1": 81.5625,
+   "v0": 78.39137500000002,
+   "dur": 2.9347916666666665,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.17
+    ],
+    [
+     "some",
+     0.17,
+     0.46
+    ],
+    [
+     "rockets",
+     0.46,
+     1.01
+    ],
+    [
+     "take",
+     1.01,
+     1.3
+    ],
+    [
+     "astronauts",
+     1.3,
+     2.08
+    ],
+    [
+     "into",
+     2.08,
+     2.29
+    ],
+    [
+     "space!",
+     2.29,
+     2.93
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "astronauts",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Wave to the rocket! Bye-bye, rocket! Have a good trip!",
+   "t0": 81.5625,
+   "t1": 87.00995833333337,
+   "v0": 81.8661666666667,
+   "dur": 3.7237916666666666,
+   "words": [
+    [
+     "Wave",
+     0.03,
+     0.32
+    ],
+    [
+     "to",
+     0.32,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.52
+    ],
+    [
+     "rocket!",
+     0.52,
+     1.43
+    ],
+    [
+     "Bye-bye,",
+     1.43,
+     2.16
+    ],
+    [
+     "rocket!",
+     2.16,
+     2.73
+    ],
+    [
+     "Have",
+     2.73,
+     2.97
+    ],
+    [
+     "a",
+     2.97,
+     3.02
+    ],
+    [
+     "good",
+     3.02,
+     3.25
+    ],
+    [
+     "trip!",
+     3.25,
+     3.72
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "wave",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

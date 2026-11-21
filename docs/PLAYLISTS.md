@@ -24,6 +24,8 @@ Descriptions: what is in the playlist, the ages (2-6), "Every fact is checked ag
 A playlist's description names only things its videos show (Nov 20: "joeys" was typed into Baby Animals with no kangaroo in any video, and taken out before saving).
 Eight long videos from before the plans existed (the "5 ... with Milo" lessons) are in their playlists on YouTube and in no plan: `playlists.py --audit` counts 8 fewer than Studio for Every Episode and Learn, 1 fewer for Camels, Monkeys and Baby.
 
+2D only since Nov 20 11:13 PM (owner: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs"): Sing With Milo and Learn About Animals get no new videos (3D). Two songs, three 3D lessons and two 3D Shorts that were scheduled were set Private the same night (`hold_2d_only`): they are still members of their playlists and do not show while they are private, so Studio's counts stay as above while viewers see 2 fewer songs, 3 fewer lessons and 2 fewer Shorts than they would have. The shelves on the Home tab were not changed.
+
 ## A new upload goes into its playlists (every run that uploads)
 
 1. `python3 studio/playlists.py <plan file>` prints the playlists (a format decides the series playlists, the title decides the topic playlists).

@@ -2588,7 +2588,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep19.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_2d_only",
   "format": "3d_lesson",
   "duration": 336.0,
   "watermark": "tl",
@@ -2605,7 +2605,8 @@
   "playlists": [
    "every",
    "learn"
-  ]
+  ],
+  "note": "Nov 20 11:40 PM: HELD, 2D only (owner, Nov 20 11:13 PM: \"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs\"). It was scheduled for 2026-11-21 1:30 PM ET; set to Private in Studio with the bulk edit (toast \"updated\", then read back on the Private filter), NOT deleted, title unchanged, still in its playlists. It goes back on the schedule only if the owner says so; its slot is free for a cartoon."
  },
  {
   "file": "zoo3d_ep21.mp4",
@@ -2628,7 +2629,7 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep21.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_2d_only",
   "format": "3d_singalong",
   "duration": 131.0,
   "watermark": "tl",
@@ -2636,7 +2637,8 @@
    "every",
    "songs",
    "monkeys"
-  ]
+  ],
+  "note": "Nov 20 11:40 PM: HELD, 2D only (owner, Nov 20 11:13 PM: \"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs\"). It was scheduled for 2026-11-21 3:30 PM ET; set to Private in Studio with the bulk edit (toast \"updated\", then read back on the Private filter), NOT deleted, title unchanged, still in its playlists. It goes back on the schedule only if the owner says so; its slot is free for a cartoon."
  },
  {
   "file": "cartoon/zc_ep06.mp4",
@@ -2727,7 +2729,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep20.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_2d_only",
   "format": "3d_lesson",
   "duration": 338.1,
   "watermark": "tl",
@@ -2744,7 +2746,8 @@
   "playlists": [
    "every",
    "learn"
-  ]
+  ],
+  "note": "Nov 20 11:40 PM: HELD, 2D only (owner, Nov 20 11:13 PM: \"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs\"). It was scheduled for 2026-11-22 1:30 PM ET; set to Private in Studio with the bulk edit (toast \"updated\", then read back on the Private filter), NOT deleted, title unchanged, still in its playlists. It goes back on the schedule only if the owner says so; its slot is free for a cartoon."
  },
  {
   "file": "zool_ep21.mp4",
@@ -2770,7 +2773,7 @@
   "time": "1:30 PM",
   "thumb": "brand/zoo/thumb_zool_ep21.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_2d_only",
   "format": "3d_lesson",
   "duration": 325.1,
   "watermark": "tl",
@@ -2783,7 +2786,8 @@
   "playlists": [
    "every",
    "learn"
-  ]
+  ],
+  "note": "Nov 20 11:40 PM: HELD, 2D only (owner, Nov 20 11:13 PM: \"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs\"). It was scheduled for 2026-11-23 1:30 PM ET; set to Private in Studio with the bulk edit (toast \"updated\", then read back on the Private filter), NOT deleted, title unchanged, still in its playlists. It goes back on the schedule only if the owner says so; its slot is free for a cartoon."
  },
  {
   "file": "zool_ep22.mp4",
@@ -3070,7 +3074,7 @@
   "time": "3:30 PM",
   "thumb": "brand/zoo/thumb_zoo3d_ep22.png",
   "made_for_kids": true,
-  "status": "scheduled",
+  "status": "hold_2d_only",
   "video_id": "Dfe5da7DJS0",
   "thumb_set": true,
   "uploaded_by": "daily run Nov 20 (review.py PASS, contact sheet looked at, upload_guard OK, zlive [] , Studio dialog read)",
@@ -3107,7 +3111,7 @@
     140.0
    ]
   ],
-  "note": "Nov 19 daily run: written, sung, rendered (job zoo3d_ep22y) and finished today; two 'high' shots (114-116 s, 123.5-125.5 s) re-rendered as slices zoo3d_ep22s1/s2 without the song words (they crossed the animals' heads) and spliced (3492 frames kept); mark top right with hide windows over the zebra close-ups (crops of the final file at 0/10/35/50/95/120/135 s looked at: nothing under the mark); review.py PASS, contact sheet and thumbnail LONG NECK! looked at; listen.py on the file: D major as the song engine wrote it, no clicks, -13.5 LUFS, 1 clipped sample, a 1 s quiet break at 15.5-16.5 s inside the song (measured, not heard). 3D cap: upload only when no 3D upload is in the last 24 h (the Nov 18 3D uploads leave the window at 5:17 PM ET Nov 19).",
+  "note": "Nov 19 daily run: written, sung, rendered (job zoo3d_ep22y) and finished today; two 'high' shots (114-116 s, 123.5-125.5 s) re-rendered as slices zoo3d_ep22s1/s2 without the song words (they crossed the animals' heads) and spliced (3492 frames kept); mark top right with hide windows over the zebra close-ups (crops of the final file at 0/10/35/50/95/120/135 s looked at: nothing under the mark); review.py PASS, contact sheet and thumbnail LONG NECK! looked at; listen.py on the file: D major as the song engine wrote it, no clicks, -13.5 LUFS, 1 clipped sample, a 1 s quiet break at 15.5-16.5 s inside the song (measured, not heard). 3D cap: upload only when no 3D upload is in the last 24 h (the Nov 18 3D uploads leave the window at 5:17 PM ET Nov 19). | Nov 20 11:40 PM: HELD, 2D only (owner, Nov 20 11:13 PM: \"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs\"). It was scheduled for 2026-11-22 3:30 PM ET; set to Private in Studio with the bulk edit (toast \"updated\", then read back on the Private filter), NOT deleted, title unchanged, still in its playlists. It goes back on the schedule only if the owner says so; its slot is free for a cartoon.",
   "playlists": [
    "every",
    "songs"

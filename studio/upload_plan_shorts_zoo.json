@@ -1918,5 +1918,41 @@
   "playlists": [
    "shorts"
   ]
+ },
+ {
+  "file": "cartoon/zc_ep13_short1.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep13",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-11-27",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 21 1:25 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE). In production: nothing built yet."
+ },
+ {
+  "file": "cartoon/zc_ep13_short2.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep13",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-11-28",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 21 1:25 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE). In production: nothing built yet."
+ },
+ {
+  "file": "cartoon/zc_ep13_short3.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep13",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-11-30",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 21 1:25 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE). In production: nothing built yet."
  }
 ]

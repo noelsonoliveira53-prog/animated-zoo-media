@@ -3289,5 +3289,18 @@
   ],
   "thumb_text": "WHO?",
   "seconds": 348.1
+ },
+ {
+  "file": "cartoon/za_ep10.mp4",
+  "title": "Poppy's First Slide on the Ice",
+  "date": "2026-11-22",
+  "time": "5:30 AM",
+  "thumb": "brand/zoo/thumb_za_ep10.jpg",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 20 by the scheduled adventure build (session_014CFVfVK6aBg9HTcMb58Fge). Title from upload_guard --next adventure; may change to a viral-packaging question title before upload."
  }
 ]

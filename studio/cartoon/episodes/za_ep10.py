@@ -246,9 +246,11 @@ SHOTS = [
       hide=["tumble", "milo"], cam2=C("arctic_eve", "poppy", "all", 940, 60, -60), fx=[("nod", "w:paws", "poppy"), ("signs", "w:Spread", ["SPREAD THE WEIGHT", "TICKLE"], 0, "wait:1.8")]),
     S("arctic_eve", (960, 540, 1920), "Wide paws, hold on tight. Down we slide, snowy white!", beat="ending", tag="the closing rhyme", cam2=(980, 560, 1880),
       fx=[("hop", "w:Wide", "milo"), ("nod", "w:tight.", "poppy"), ("trunk", "w:Down", "tumble", -80, .4), ("hop", "w:white!", "poppy")],
-      words=[("w:Wide", "WIDE PAWS", .7, .14, .65, "sun")]),
-    S("arctic_eve", WIDE, who="", sing=SING_END, beat="song", tag="song: hooray", cam2=(980, 560, 1880),
-      fx=[("hop", 1.0, "poppy"), ("trunk", 2.0, "tumble", -90, .4), ("hop", 2.2, "milo")], words=[(TB(3), "HOORAY!", .7, .16, 1.0, "sun")]),
+      words=[("w:Wide", "WIDE PAWS", .7, .14, .65, "sun"), ("w:Down", "DOWN WE SLIDE", .7, .25, .55, "pill")]),
+    S("arctic_eve", (720, 620, 1360), who="", sing=SING_END, beat="song", tag="song: hooray", cam2=(720, 600, 1300), props=FLAKES(((620, 380), (960, 320), (1240, 380))),
+      fx=[("hop", 1.0, "poppy"), ("trunk", 2.0, "tumble", -90, .4), ("hop", 2.2, "milo"),
+          ("to", 0.1, "#{p}f0_w,#{p}f1_w,#{p}f2_w", {"y": "+=110", "rotation": 60, "duration": 4.6, "ease": "none"}, "snowflakes drift down")],
+      words=[(TB(3), "HOORAY!", .8, .14, .9, "sun")]),
     S("arctic_eve", C("arctic_eve", "milo", "body", 900, 0, 0), "Next time: Too Cold for Milo! See you on the next adventure, friends!", beat="ending", tag="goodbye: next adventure", hide=["tumble", "poppy"],
       fx=[("hop", "w:next", "milo")], words=[("w:Next", "NEXT TIME!", .8, .2, .66, "sun"), ("w:See", "SEE YOU SOON!", .8, .33, .56, "pill")]),
     *intro_shots(),      # and again as the last shots: the video ends on the logo with the whole cast
@@ -256,8 +258,8 @@ SHOTS = [
 
 # thumbnail (thumb.py): the promise of the first shot: Poppy sliding down the big snowy hill, friends cheering below; 1 word, none of the title's words, no watermark
 THUMBS = {
-    "za_ep10": {"place": "snowhill", "cam": (1080, 640, 1300),
-                "actors": [("bear_slide", 1000, HY(1000), .78, False, ''), ("tumble", 1620, 935, .5, True, ''), ("milo", 1450, 560, .55, False, '')],
-                "props": [(A.spray, 760, HY(760) - 20, .8)],
-                "words": [("WHEE!", 760, 260, 190, "sun", -6)]},
+    "za_ep10": {"place": "snowhill", "cam": (1080, 560, 1300),
+                "actors": [("bear_slide", 1000, HY(1000), .78, False, ''), ("milo", 1480, HY(1480), .62, False, '')],
+                "props": [(A.spray, 700, HY(700) - 20, .8)],
+                "words": [("WHEE!", 1470, 150, 200, "sun", -6)]},
 }

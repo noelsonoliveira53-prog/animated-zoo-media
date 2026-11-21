@@ -3420,6 +3420,10 @@
   "seconds": 337.2,
   "video_id": "nZ9fFch4zcQ",
   "thumb_set": true,
-  "uploaded": "2026-11-21 12:01 PM ET (Studio: 'will be set to public on November 21, 2026 at 3:30 PM')"
+  "uploaded": "2026-11-21 12:01 PM ET (Studio: 'will be set to public on November 21, 2026 at 3:30 PM')",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  }
 ]

@@ -15,7 +15,12 @@ What it cannot see: Studio itself. So the second half of the check is in the bro
 `zlive("<title>")` from studio/studio-upload2.js must give live = [] (or [the id being replaced]); rows_read = 0 means the list was not read.
 After the upload it must give exactly one live id for the title.
 
-"Live" = a plan entry with a video_id whose status is scheduled or published. Private, rejected, dropped and paused entries are not live."""
+"Live" = a plan entry with a video_id whose status is scheduled or published. Private, rejected, dropped and paused entries are not live.
+
+2D ONLY (owner, Nov 20 2026 11:13 PM: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton
+model we have"): on The Animated Zoo no 3D file is uploaded any more, song, lesson or Short (every upload and every --replace of one is REFUSED), and the
+3:30 PM slot that was the song's is an adventure slot. 3D videos that were scheduled and not public yet carry "hold_2d_only" (Private in Studio, not deleted).
+Gizmo Explains (--channel gizmo) is another channel and is not touched by this."""
 import json, os, re, sys, ast, datetime, subprocess
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(HERE)
@@ -23,10 +28,12 @@ PLANS = ["upload_plan_3d.json", "upload_plan_shorts_zoo.json"]
 if "--channel" in sys.argv and sys.argv[sys.argv.index("--channel") + 1] == "gizmo":      # Gizmo Explains (owner, Nov 19 2026): its own plan; every check is per channel
     PLANS = ["upload_plan_gizmo_v3.json"]; sys.argv[sys.argv.index("--channel"):sys.argv.index("--channel") + 2] = []
 LIVE = ("scheduled", "published", "public")
-NEVER = ("hold_review", "hold_fix", "hold_fact_check", "in_production", "paused_channel", "rendering_variety", "rejected", "dropped", "private", "spare_song_cut")
+NEVER = ("hold_review", "hold_fix", "hold_fact_check", "hold_3d_cap", "hold_2d_only", "in_production", "paused_channel", "rendering_variety", "rejected", "dropped", "private", "spare_song_cut")
+ZOO_3D = ("3d_singalong", "3d_singalong_vids_hook", "vids_full", "3d_lesson", "3d_lesson_v3", "3d_short_cut", "3d_short_test", "lesson_fact_short_90", "lesson_fact_short_4k")      # The Animated Zoo is 2D only since Nov 20 2026 11:13 PM
+GIZMO = PLANS == ["upload_plan_gizmo_v3.json"]
 STOP = set("a an the and or of to in on at for with by from is are do does did can what why how who whose where when which this that it its his her "
            "kids kid milo song songs story stories fun facts fact video learn animal animals baby little big all day".split())
-SLOTS = {"adventure": ["5:30 AM", "1:30 PM"], "lesson": ["9:30 AM", "5:30 PM"], "short": ["7:30 AM", "11:30 AM", "7:30 PM"]}
+SLOTS = {"adventure": ["5:30 AM", "1:30 PM", "3:30 PM"], "lesson": ["9:30 AM", "5:30 PM"], "short": ["7:30 AM", "11:30 AM", "7:30 PM"]}      # 3:30 PM was the 3D song's slot until Nov 20 2026; three adventure builds a day fill the three adventure slots
 
 
 def load():
@@ -85,6 +92,7 @@ def check(name, replace=None, same_topic_ok=None):
     e = mine[0]; st = e.get("status"); vid = e.get("video_id"); title = e.get("title") or ""
     if not title: fails.append("the entry has no title")
     if st in NEVER: fails.append(f'status "{st}" is never uploaded')
+    if not GIZMO and (e.get("format") or "") in ZOO_3D: fails.append(f'2D ONLY (owner, Nov 20 2026 11:13 PM): "{e.get("format")}" is a 3D format; no 3D video is uploaded to The Animated Zoo, not as a fix either')
     if replace:
         if vid != replace: fails.append(f"--replace {replace}: the entry's live id is {vid}; a replacement names the id it replaces")
         if not os.path.exists(os.path.join(REPO, e["file"])): fails.append(f'{e["file"]} is not in the repo')
@@ -127,6 +135,7 @@ def audit():
         if e["file"] in seen: fails.append(f'two plan entries for {e["file"]}')
         seen[e["file"]] = 1
         if e.get("video_id") and e.get("status") == "to_upload": fails.append(f'{e["file"]} says to_upload but carries {e["video_id"]}')
+        if not GIZMO and (e.get("format") or "") in ZOO_3D and e.get("status") in ("to_upload", "in_production"): fails.append(f'{e["file"]} is 3D ({e.get("format")}) and "{e.get("status")}": The Animated Zoo is 2D only, set it "hold_2d_only"')
     lg = [e for e in es if is_talk(e) and e.get("status") in LIVE + ("to_upload", "in_production") and e.get("title")]
     topics = [f'{a["file"]} ({a.get("status")}) / {b["file"]} ({b.get("status")}): "{a["title"]}" / "{b["title"]}"' for i, a in enumerate(lg) for b in lg[i + 1:]
               if norm(a["title"]) != norm(b["title"]) and same_topic(a["title"], b["title"]) and not (a.get("same_topic_ok") or b.get("same_topic_ok"))]

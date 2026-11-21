@@ -28,8 +28,7 @@ Day 1 = Wed Nov 18, 2026. Day 90 = Sun Feb 15, 2027.
 
 - 3D lessons already scheduled or public stay (never deleted). Built but not uploaded: status `hold_3d_cap`, not posted; PC jobs not started are cancelled.
 - A long slot with no 2D video ready stays EMPTY. An empty slot beats a weak or repetitive video.
-- One day a week a song medley (only songs already live, new title and thumbnail) may take the song slot; it is still that day's one 3D upload.
-- Count 3D uploads of the last 24 hours in the commit log before every 3D upload.
+- [Superseded Nov 20 2026 11:13 PM] 2D ONLY (Noelson: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton model we have"): no 3D upload at all on The Animated Zoo, the daily song included; no medley. 3D videos that are public stay; the seven that were scheduled were set Private (`hold_2d_only`), not deleted.
 
 ## Positioning and pillars
 Milo and his zoo friends go on little adventures and every story teaches one true animal fact. Story-first, fact-proven, sing-along breaks, never scary.
@@ -42,7 +41,7 @@ Copy: recurring cast, song hooks, compilations. Do not: nursery-rhyme covers, ot
    Start once 6+ public cartoon episodes share a theme. The first one is "hold_review" until Noelson has watched and approved it (record it in PLAYBOOK.md).
 
 ## Daily grid (ET, every slot 2 h apart)
-5:30 AM adventure (or compilation) | 7:30 AM Short | 9:30 AM fact lesson | 11:30 AM Short | 1:30 PM adventure | 3:30 PM song (3D) | 5:30 PM fact lesson | 7:30 PM Short.
+5:30 AM adventure (or compilation) | 7:30 AM Short | 9:30 AM fact lesson | 11:30 AM Short | 1:30 PM adventure | 3:30 PM adventure (it was the 3D song's slot until Nov 20 11:13 PM) | 5:30 PM fact lesson | 7:30 PM Short.
 Never two uploads on the same animal or topic on the same day. Multilingual audio tracks stay on the same upload, no duplicates.
 
 ## Retention (every long video)

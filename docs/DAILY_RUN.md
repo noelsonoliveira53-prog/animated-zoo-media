@@ -14,15 +14,30 @@ written, rendered, titled and uploaded.
 
 ## Standing rules from Noelson
 
+**2D ONLY (Noelson, Nov 20 2026, 11:13 PM: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton model we have").** It overrides every rule below that builds, finishes or uploads something in 3D for The Animated Zoo:
+- Section B builds NOTHING in 3D: no song, no lesson, no Vids hook, no PC render job for the Zoo. `zoo3d_ep23y` (rendered on the PC Nov 20) is NOT finished; zoo3d_ep24 and
+  ep25 are NOT built. Their specs, jobs and the PC's raw files stay where they are: nothing is deleted, nothing is cancelled that Gizmo Explains needs.
+- Section C uploads cartoon entries only. `upload_guard.py` refuses every 3D format (with `--replace` too) and its audit FAILS a 3D entry that is "to_upload" or
+  "in_production": set such an entry to "hold_2d_only".
+- The grid: 5:30 AM adventure | 7:30 AM Short | 9:30 AM fact lesson | 11:30 AM Short | 1:30 PM adventure | 3:30 PM adventure (was the song) | 5:30 PM fact lesson |
+  7:30 PM Short. FIVE daily builds fill it: "cartoon lesson + 3 Shorts" at 1:47 AM and 1:17 PM, "cartoon adventure" at 8:43 AM, 3:07 PM and 7:23 PM ET. A slot with
+  no cartoon video ready STAYS EMPTY. If `list_triggers` shows one of the five disabled or failing twice in a row, tell Noelson.
+- On YouTube: the 3D videos that are public stay as they are (deleting one is Noelson's decision, never this run's). The seven 3D videos that were scheduled and not
+  public yet were set to Private on Nov 20 (not deleted, titles unchanged) and carry "hold_2d_only" with their ids: zoo3d_ep21 us_-LLwbflM (song, Nov 21), zoo3d_ep22 Dfe5da7DJS0 (song, Nov 22), zool_ep19 3D6N_xhfn1w, zool_ep20 6ymc_29VVdQ, zool_ep21 QUYq7rvwy2A (lessons, Nov 21-23), zs90_lion_tuft J32cKF1dCnY and zs90_elephant_ears s1F3xrNm2iY (Shorts, Nov 21).
+  They go back on the schedule only if he says so. Their playlists keep them (a private video does not show in a public playlist).
+- Section A and the reviews: songs and 3D lessons stay in the numbers as what came before; the pillars that are compared and that get slots are 2D adventures,
+  2D fact lessons with Guess With Milo, and compilations. The main-intro retention test is read on the 2D videos.
+- Gizmo Explains is another channel: `docs/GIZMO_RUN.md` and its scheduled task are unchanged.
+
 **90-DAY PLAN (Noelson, Nov 18, 2026): `docs/GROWTH_90D.md`.** It overrides the older rules below wherever they differ: at most ONE 3D upload a
-day (the 3:30 PM song); no new 3D lessons, unuploaded ones `hold_3d_cap`; a long slot with no cartoon video ready STAYS EMPTY (no 3D lesson fills it);
+day (the 3:30 PM song) [superseded Nov 20 11:13 PM: NO 3D upload at all, see 2D ONLY above]; no new 3D lessons, unuploaded ones `hold_3d_cap`; a long slot with no cartoon video ready STAYS EMPTY (no 3D lesson fills it);
 compilations every 2 days once Noelson approves the first; Earn-tab progress in `docs/YPP_PROGRESS.md` every run; Monday weekly review
 (`docs/REVIEW_WEEKLY.md`), monthly review on the 1st.
 
 **VIRAL PACKAGING + SING WITH MILO (Noelson, Nov 20 2026, 10:37 AM: "Aproved for your changes ... 3d is only for viral songs ... implement the changes
-proposed to make those videos viral starting today").** 3D is ONLY for songs; every lesson, Guess With Milo episode, adventure and Short is 2D.
+proposed to make those videos viral starting today").** 3D is ONLY for songs [superseded Nov 20 11:13 PM: 3D is for nothing, see 2D ONLY above]; every lesson, Guess With Milo episode, adventure and Short is 2D.
 - Every new 2D episode follows `docs/CARTOON_RUN.md` "VIRAL PACKAGING" (cold open on the promise, no greeting first, question titles, one-object thumbnails).
-- Songs: the next two 3:30 PM songs are the Sing With Milo specs already written (facts read Nov 20): **zoo3d_ep25 "Crunch, Crunch! Who's Munching? Sing With
+- Songs [SUSPENDED Nov 20 11:13 PM, see 2D ONLY above: nothing in this bullet is built or uploaded]: the next two 3:30 PM songs are the Sing With Milo specs already written (facts read Nov 20): **zoo3d_ep25 "Crunch, Crunch! Who's Munching? Sing With
   Milo" on Mon Nov 24**, **zoo3d_ep24 "Whose Baby Is This? Sing With Milo" on Wed Nov 26** (in this order: the variety ledger recorded ep25 first). Build them
   before writing any new song (songs/<id>.json, jobs/<id>.song.json exist; sing, time, routes.py, job with `text_hide_shots`, stills, PC render, finish).
   Every NEW song after them: a question chorus answered in every verse (the Where Is My Mama? shape), the first frame and first sung line on beat 1 show the
@@ -34,8 +49,8 @@ proposed to make those videos viral starting today").** 3D is ONLY for songs; ev
 adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Cartoon pipeline"); Shorts are cartoon and vertical.
 - Posting: cartoon videos are plan entries like any other (`upload_plan_3d.json` formats `cartoon_adventure`, `cartoon_lesson`;
   `upload_plan_shorts_zoo.json` format `cartoon_short_90`), files under `cartoon/`, thumbnails `brand/zoo/thumb_<id>.jpg`. Same review gate,
-  same Studio recipe. Slots: adventures 5:30 AM and 1:30 PM, fact lessons 9:30 AM and 5:30 PM, Shorts 7:30 AM / 11:30 AM / 7:30 PM, song 3:30 PM.
-  A slot with no cartoon video ready keeps a 3D lesson; a slot never stays empty.
+  same Studio recipe. Slots: adventures 5:30 AM and 1:30 PM, fact lessons 9:30 AM and 5:30 PM, Shorts 7:30 AM / 11:30 AM / 7:30 PM, and since Nov 20 11:13 PM a third adventure at 3:30 PM (it was the song's).
+  A slot with no cartoon video ready stays empty (the older "keeps a 3D lesson" is superseded twice over).
 - Upload file: the engine's 4K H.264 is over GitHub's 100 MB, so a long video is uploaded as 4K AV1 made from it
   (`ffmpeg -i out/<id>/<id>.mp4 -c:v libsvtav1 -preset 9 -b:v 2150k -svtav1-params tune=0 -g 240 -pix_fmt yuv420p10le -c:a copy -movflags +faststart cartoon/<id>.mp4`,
   about 25 minutes; write it outside the repo and move it in). A Short's H.264 is under 100 MB and goes up as it is.
@@ -202,7 +217,8 @@ adventure stories and fact lessons are cartoon (`studio/cartoon/`, PLAYBOOK "Car
    replace the old file). A folder with a DONE marker but no <id>_raw.mp4 is a cancelled job. Never use the old savanna raws
    in out\zoo3d_ep14, ep15, ep16. If status.txt has not changed for over 2 hours while it says RENDERING, the worker is
    stuck: tell Noelson (restart START_RENDER_WORKER.bat).
-2. Collect finished songs (songs_out), build timing + job files (job block from the song spec, routes.py, variety check,
+2. [SUSPENDED Nov 20 11:13 PM for The Animated Zoo: steps 2, 3 and 4 make 3D songs, lessons and Vids hooks; none is done.]
+   Collect finished songs (songs_out), build timing + job files (job block from the song spec, routes.py, variety check,
    2 test stills with bpy), send to the PC. Write new songs (make_specs_v3.py) and lessons (rule 5) to keep the queue full.
    Copy engine/chars/sets/worker changes to Documents\ZooBlender\zoo3d before the jobs that need them.
 3. Vids hook for the soonest "to_upload" SONG that is not already a hybrid (docs/GOOGLE_VIDS.md "Hybrid"); log the credits.
@@ -223,7 +239,8 @@ number ("Limits may vary by country/region or channel history"), and the channel
    playlists the same day. `python3 studio/playlists.py <plan file>` prints them; tick them in the upload dialog's "Playlists" field or afterwards with "Add to playlist" on the
    content list; then `python3 studio/playlists.py --done <plan file>`. `python3 studio/playlists.py --todo` is empty at the end of the run. Never tick a playlist box that shows a
    DASH (it adds the videos already in a second time). Gizmo Explains has no playlists here.
-1. Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
+1. [3D parts SUSPENDED Nov 20 11:13 PM, see 2D ONLY at the top: this run uploads cartoon entries only; no song and no 3D lesson is uploaded.]
+   Episodes, TWO a day since Nov 15: the SONG = the soonest "to_upload" 3d_singalong Zoo entry in studio/upload_plan_3d.json
    at 3:30 PM ET (full Vids episodes 12:00 PM); the LESSONS = every "to_upload" 3d_lesson entry with lesson_version 3, each at
    the date and time in its plan entry (rule 5 THE DAILY GRID: 5:30 AM, 9:30 AM, 1:30 PM, 5:30 PM). Schedule each for its own
    date and time, never "publish now".

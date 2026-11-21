@@ -1,0 +1,341 @@
+{
+ "id": "gzintro",
+ "total": 14.836666666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375
+ ],
+ "plan": {
+  "length": 14.8,
+  "shots": 4,
+  "visual_changes": 39,
+  "mean_gap": 0.38,
+  "longest_gap": 1.68,
+  "longest_gap_at": 3.6,
+  "over_6s": [],
+  "places": [
+   "gz_intro",
+   "gz_logo"
+  ],
+  "picture_boards": [],
+  "questions": 0,
+  "longest_without_question": 14.8,
+  "first_words_at": 0.62,
+  "shot_mean": 3.71,
+  "main_intro": {
+   "at": [
+    0.0
+   ],
+   "seconds": 14.8
+  },
+  "fails": [
+   "only 2 places (need 6)",
+   "only 0 s of its own content (15 s with the main intro; need 300 without it)",
+   "the first shot must be the hook question, spoken in the first 5 seconds"
+  ],
+  "words_placed": "2/2",
+  "sync": {
+   "pauses_checked": 0,
+   "onset_err_mean_ms": 0.0,
+   "onset_err_max_ms": 0.0,
+   "suspect_words": [],
+   "cuts": 3,
+   "cuts_on_the_half_beat": 3,
+   "songs_entering_on_a_beat": "3/3",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "the gears turn"
+  ],
+  [
+   0.0,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   0.05,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   0.82,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   1.13,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   1.44,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   2.19,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   2.19,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   2.19,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   3.44,
+   "action",
+   "the gears turn"
+  ],
+  [
+   3.44,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   3.63,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   5.31,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   5.94,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   6.25,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   6.56,
+   "action",
+   "out of the flash"
+  ],
+  [
+   6.56,
+   "action",
+   "the rays turn"
+  ],
+  [
+   6.56,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   7.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.32,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.63,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   7.94,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   8.45,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   9.06,
+   "action",
+   "confetti"
+  ],
+  [
+   9.06,
+   "action",
+   "the line draws on"
+  ],
+  [
+   9.37,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   9.57,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   9.69,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   10.37,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   10.5,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   11.25,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   11.88,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   12.0,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   12.5,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   13.42,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   13.42,
+   "action",
+   "confetti"
+  ],
+  [
+   13.42,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   13.72,
+   "action",
+   "the letters do a wave"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 3.4375,
+   "t1": 6.5625,
+   "v0": 3.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 6.5625,
+   "t1": 11.875,
+   "v0": 6.875,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 11.875,
+   "t1": 14.836666666666666,
+   "v0": 11.995,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

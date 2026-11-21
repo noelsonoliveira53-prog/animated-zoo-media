@@ -1,0 +1,172 @@
+{
+ "file": "out/gzintro/gzintro.mp4",
+ "from": null,
+ "to": null,
+ "seconds": 14.81,
+ "expected_key": null,
+ "key_heard": {
+  "key": "C major",
+  "fit": 0.96
+ },
+ "held_tones": 19,
+ "voice_like_tones_not_judged": 52,
+ "tones_outside_the_key": [],
+ "tones_between_two_notes": [],
+ "clashes_a_semitone_apart": [],
+ "beat": {
+  "heard_bpm": 94.8
+ },
+ "clicks_at": [],
+ "silences": [],
+ "judged": "level, silences, tempo, balance, and long loud pure tones only; NOT judged because a voice is speaking: short tones, clashes, clicks (use --episode, or --music-only for a file without speech)",
+ "level": {
+  "lufs": -14.1,
+  "range_lu": 4.4,
+  "true_peak_db": -1.5,
+  "clipped_samples": 0,
+  "quietest_second_db": -19.8,
+  "loudest_second_db": -11.9
+ },
+ "balance": {
+  "share_a_phone_speaker_plays_above_300hz": 0.87,
+  "share_below_120hz": 0.07,
+  "share_above_4khz": 0.01
+ },
+ "tones": [
+  {
+   "start": 0.26,
+   "seconds": 0.73,
+   "note": "C3",
+   "cents": 1,
+   "db": -19.3
+  },
+  {
+   "start": 0.85,
+   "seconds": 0.81,
+   "note": "E5",
+   "cents": -2,
+   "db": -15.6
+  },
+  {
+   "start": 0.9,
+   "seconds": 0.94,
+   "note": "G4",
+   "cents": 1,
+   "db": -19.6
+  },
+  {
+   "start": 1.75,
+   "seconds": 0.64,
+   "note": "E5",
+   "cents": -3,
+   "db": -7.3
+  },
+  {
+   "start": 2.09,
+   "seconds": 0.64,
+   "note": "G5",
+   "cents": -5,
+   "db": -10.2
+  },
+  {
+   "start": 3.63,
+   "seconds": 0.6,
+   "note": "A5",
+   "cents": -5,
+   "db": -7.3
+  },
+  {
+   "start": 4.31,
+   "seconds": 0.68,
+   "note": "C5",
+   "cents": 3,
+   "db": -8.5
+  },
+  {
+   "start": 4.86,
+   "seconds": 0.6,
+   "note": "C3",
+   "cents": 14,
+   "db": -16.1
+  },
+  {
+   "start": 7.42,
+   "seconds": 0.68,
+   "note": "D2",
+   "cents": -1,
+   "db": -13.7
+  },
+  {
+   "start": 7.42,
+   "seconds": 0.68,
+   "note": "D5",
+   "cents": 2,
+   "db": -5.9
+  },
+  {
+   "start": 8.02,
+   "seconds": 0.85,
+   "note": "G5",
+   "cents": -6,
+   "db": -3.0
+  },
+  {
+   "start": 8.7,
+   "seconds": 0.6,
+   "note": "D6",
+   "cents": -3,
+   "db": -4.8
+  },
+  {
+   "start": 9.86,
+   "seconds": 0.81,
+   "note": "E5",
+   "cents": 1,
+   "db": -18.0
+  },
+  {
+   "start": 9.98,
+   "seconds": 0.85,
+   "note": "G4",
+   "cents": 0,
+   "db": -15.0
+  },
+  {
+   "start": 10.54,
+   "seconds": 1.54,
+   "note": "C6",
+   "cents": 2,
+   "db": -13.6
+  },
+  {
+   "start": 12.37,
+   "seconds": 0.6,
+   "note": "C5",
+   "cents": -3,
+   "db": -31.7
+  },
+  {
+   "start": 13.53,
+   "seconds": 1.15,
+   "note": "C5",
+   "cents": 1,
+   "db": -19.6
+  },
+  {
+   "start": 13.7,
+   "seconds": 0.81,
+   "note": "C3",
+   "cents": -4,
+   "db": -28.9
+  },
+  {
+   "start": 13.7,
+   "seconds": 0.98,
+   "note": "G3",
+   "cents": -3,
+   "db": -26.3
+  }
+ ],
+ "not_judged": "whether it sounds pleasant, whether a voice is warm or a word is said right: a person listens for that",
+ "picture": "/home/claude/animated-zoo-media/studio/cartoon/out/gzintro/gzintro_listen.png"
+}

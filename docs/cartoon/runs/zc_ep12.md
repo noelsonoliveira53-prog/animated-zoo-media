@@ -77,3 +77,50 @@ Not said: ear lengths in inches, the oxpecker bird in the rhino's ears, burrow s
   - three pairs of back-to-back shots with the same framing (two Milo shots, two fox head shots, two bear head shots): different cameras or a
     shot moved between them; 9:16 PERK UP! / SMALL EARS! / WARM! / LISTEN! against the title band: lower;
   - the short-tail shot showed only the bear's body: wider, the tail in the picture's left third.
+
+## Renders and checks on the finished files
+- Lesson render 1 (4K, 39 min on 2 cores): `out/zc_ep12/zc_ep12.mp4` 363.9 s. --check4k 3840x2160; watermark MARK yes; bookends.py BOOKENDS yes
+  (beginning and end); pace_check --max 8: 0 stretches over 8 s (longest 7.0 s; "SAME SHOT" reads up to 11.5 s, as in every cartoon);
+  corner sheet looked at (one picture every 5 s: sky, boards, the gate post, the corner of a sign, never a face or a word under the mark);
+  frames at the middle and the end of every shot, the end of each intro shot and 0.4 s after all 9 answer reveals looked at (139 frames):
+  nothing found that needed a re-render.
+- AV1: `cartoon/zc_ep12.mp4` 364.0 s, 86.5 MB, --check4k 3840x2160, MARK yes. listen.py on it: key C (fit 0.97), -15.7 LUFS, true peak
+  -1.4 dB, no clipped samples, no clicks, no silences; picture looked at. The AV1 file itself was looked at only through review.py's contact sheet.
+- Short 1 render 1: pace_check found 8.2 s without a visual change at 0:00-0:08 (the 9:16 hook on the ears had no camera move) and its frames
+  showed Milo's FRONT!/BACK! words over the title band in the "hands like rhino ears" shot. The same 9:16 still hook was in Shorts 2 and 3, and
+  Short 2's frames showed GIANT EARS! on the caption and COOL! between the heat waves at the top. Fixed: each Short's hook and each part's first
+  shot got its own tighter 9:16 view with a slow push (pcam2), the words moved; stills of those shots looked at again (two rounds).
+  Short 3 had been rendered before the hook fix: pace_check 0 stretches over 8 s (longest 4.5 s), so it was kept.
+- Shorts (copied byte for byte, cmp): `cartoon/zc_ep12_short1.mp4` 91.6 s (render 2), `_short2.mp4` 89.2 s (render 2), `_short3.mp4` 87.8 s
+  (render 1); 2160x3840 H.264 as the earlier cartoon Shorts. Each: --check4k, MARK yes, pace_check 0 stretches over 8 s (longest 5.2 / 5.8 /
+  4.5 s), corner sheet looked at (sky, clouds, board grid only), frames at the middle and end of every shot and 0.4 s after every reveal looked
+  at, listen.py -15.4 / -15.4 / -15.3 LUFS, true peak -1.2 / -1.5 / -1.5 dB, no clicks, no silences, pictures looked at.
+- review.py: PASS for all four (no lesson spec or job for a cartoon, so its word and variety checks do not run, as for every cartoon);
+  contact sheets looked at (the blue disc in Short 3's sheet is the iris wipe frame).
+- upload_guard.py: OK TO UPLOAD for all four; `--audit` 0 failures, 0 topic pairs.
+- Plan entries: status to_upload with title, description (no '<' or '>', the channel boilerplate, where the facts come from), tags, thumb,
+  thumb_text, seconds. Titles: "Whose Ears Are These? Guess With Milo" (lesson, Nov 24 9:30 AM); Shorts "Whose Ears Turn Two Ways? Guess
+  With Milo" (Nov 29 7:30 PM), "Who Has Giant Ears? Guess With Milo" (Nov 30 11:30 AM), "Who Has Tiny Round Ears? Guess With Milo" (Dec 1
+  11:30 AM). Not uploaded: the 6:31 AM daily run schedules them.
+
+## Not checked / for the owner's ears and eyes
+- listen.py measures, it does not hear: nobody listened. "rhino", "fennec", "Arctic", "perk", "pointy" were checked by word alignment only
+  (all placed, none suspect); how Milo's voice says them is for the owner.
+- New art the owner has not seen: the rhino and the fennec fox (first cartoon versions), the hiding places (grass, dune, snow bank), the sand
+  cut with the beetle, the two-ears board. The polar bear is the Poppy rig used as "a polar bear".
+- The iris wipe covers the picture and the mark for 2-3 frames, as in every cartoon.
+- Thumbnails were looked at full size and the main one at 168x94; not compared with click data (none yet).
+
+## Defects for docs/IMPROVE.md (the daily run folds them in)
+- 2026-11-21: A rhino's back is higher than its ear bases, so grass that hides the body hides most of the ears: for an "ears only" clue draw
+  the ears big and the hiding place solid up to just under the ear bases, and check a still before writing the camera. (why: zc_ep12 stills round 1)
+- 2026-11-21: A hiding prop drawn only to its base line shows a strip of ground under it in tall 9:16 views and stays in the bottom of the
+  frame when it "sinks" 700 px: draw hiding props 600 px deeper than the base and sink them 1500 px. (why: zc_ep12 9:16 stills)
+- 2026-11-21: A Short's hook shot reused the lesson's 9:16 camera with no push and read as 8.2 s without a visual change (pace_check on
+  Short 1 render 1, one 8-min re-render; Short 2 re-rendered for words too): every Short hook gets its own tighter 9:16 view with a pcam2 push.
+  (why: zc_ep12_short1 pace_check)
+- 2026-11-21: Words placed for Milo's zoo shots at fy .26 in 9:16 sit on the title band once the second line of words is added: two-line
+  words in 9:16 start at fy .31. (why: zc_ep12_short1 frames, render 1)
+- 2026-11-21: This machine lacked `tinysoundfont` and `pedalboard` (score_intro.py -> sf2render.py), so `listen.py --episode` failed on the
+  intro score until both were installed (`pip install tinysoundfont --no-deps`: its pyaudio dependency needs portaudio headers and is not used).
+  The setup line in docs/CARTOON_RUN.md should list them. (why: zc_ep12 listen.py --episode)

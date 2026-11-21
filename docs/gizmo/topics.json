@@ -1,0 +1,61 @@
+{
+ "_about": "Gizmo Explains: explainer topics in order (docs/GIZMO_RUN.md). `python3 studio/upload_guard.py --next explainer --channel gizmo` takes the first one with no cartoon plan entry. Already on the channel as songs, never as explainers: magnets, day and night, the 5 senses, rainbows, why the sky is blue, sink or float, weather, the planets. When 3 or fewer are left, add five new true, calm topics that repeat no title on the channel. Every fact is read at its source on the day the script is written; the angle here is a pointer, not a fact sheet.",
+ "topics": [
+  {
+   "title": "How Do Rockets Fly?",
+   "angle": "push: gas rushes down, the rocket goes up; stages drop away; it works in space too"
+  },
+  {
+   "title": "Where Does Rain Come From?",
+   "angle": "the water cycle: puddle to vapor to cloud to drops (not weather)"
+  },
+  {
+   "title": "How Does a Seed Grow Into a Plant?",
+   "angle": "built as gc_ep01"
+  },
+  {
+   "title": "How Does Your Heart Work?",
+   "angle": "a pump that never rests; feel your own beat; faster after a hop"
+  },
+  {
+   "title": "Why Do Things Fall Down?",
+   "angle": "gravity pulls everything toward the ground; heavy and light things"
+  },
+  {
+   "title": "How Do Bees Make Honey?",
+   "angle": "nectar, the hive, many bees working together"
+  },
+  {
+   "title": "Why Does Ice Melt?",
+   "angle": "solid and liquid; warm and cold"
+  },
+  {
+   "title": "How Does Sound Travel?",
+   "angle": "wiggles in the air reach your ear"
+  },
+  {
+   "title": "Where Do Shadows Come From?",
+   "angle": "light blocked by a thing; long and short shadows"
+  },
+  {
+   "title": "Why Does the Moon Change Shape?",
+   "angle": "we see the sunlit part; the Moon keeps its shape"
+  },
+  {
+   "title": "How Do Birds Fly?",
+   "angle": "wings push air; light bones; feathers"
+  },
+  {
+   "title": "How Do Our Teeth Help Us?",
+   "angle": "biting and chewing; baby teeth and grown-up teeth"
+  },
+  {
+   "title": "How Does a Bicycle Move?",
+   "angle": "pedals, chain, wheels"
+  },
+  {
+   "title": "Where Does Light Come From?",
+   "angle": "the Sun, lamps; light travels in straight lines"
+  }
+ ]
+}

@@ -3267,11 +3267,11 @@
   "time": "5:30 PM",
   "thumb": "brand/zoo/thumb_zc_ep11.jpg",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it. | Nov 20 6:20 PM: the lesson file is back in_production (its three Shorts stay to_upload): it was rendered with the FIRST main intro (two shots, the old jingle) and has none at the end; the owner approved the final intro at 4:50 PM and wants it at the beginning and at the end of every new long video. Being rendered again in session_014CFVf with intro.py as it is now; review.py fails the old file (bookends).",
+  "note": "Built Nov 20 by the scheduled 1:17 PM lesson build (session_014CFVfY3R62hFRMYeAWfnuR): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep11.md. First Guess With Milo episode (2D): new giraffe and zebra drawings. NOT uploaded: the daily run schedules it. | Nov 20 8:10 PM: rendered again with the FINAL main intro (four shots, the whole cast, the recorded-instrument score) after the hook (12.2 s) and again as the last shots (348.1 s) (owner, Nov 20 4:50 PM): 4K AV1 364.0 s, 82 MB; the lesson's own shots are unchanged, its three Shorts are the earlier files (no intro in a Short). Checked: plan check (no fails, 672/672 words placed, 70/70 cuts on the half-beat), one still of every shot (71) looked at, listen.py --episode (no click; the only CLASH lines are the bed's own E over F and one 0.26 s answer ding over the bed's B at 114.3 s, none inside a tune), then on the finished file: --check4k, pace_check --max 8 (0 stretches), watermark.py (mark yes), bookends.py (beginning yes, end yes), listen.py (no clicks, no silences, -15.7 LUFS; it measures, it does not hear), a frame of every shot of the 4K render looked at (every answer reveal: ELEPHANT, CUSHION, GIRAFFE, TWO, ZEBRA, ONE and the quiz), 4K/mark/bookends again on the AV1 file. NOT uploaded: the daily run schedules it.",
   "description": "Look! A giant footprint in the sand. Who made it? Follow the footprints with Milo the bluebird and guess the animal before it walks in! A gentle guessing game for ages 2-6 with answer signs, thinking time, things to count, moves to copy and a quiz at the end.\nKids learn that an elephant walks on its tiptoes, on a big, soft cushion that soaks up the bump of each step, and that some elephants have four toenails on a front foot and some have five; that a giraffe has two hooves on each foot, feet as big as a dinner plate, and walks by moving the two legs on one side together; and that a zebra walks on one toe on each foot, inside one hoof that keeps growing, and that every zebra has its own stripes.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance Library (African elephant, giraffe and plains zebra fact sheets); San Diego Zoo Wildlife Alliance (giraffe); Live Science (giraffe facts).",
   "tags": [
    "whose feet are these",
@@ -3288,7 +3288,8 @@
    "The Animated Zoo"
   ],
   "thumb_text": "WHO?",
-  "seconds": 348.1
+  "seconds": 363.96,
+  "bookends": true
  },
  {
   "file": "cartoon/za_ep10.mp4",

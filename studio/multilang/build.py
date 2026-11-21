@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(os.pat
 sys.path.insert(0, CART)
 import toon, sing                       # toon puts studio/sing and studio/zoo3d on the path
 SR = toon.SR
-CONF = json.load(open(os.path.join(HERE, "languages.json")))
+CONF = json.load(open(os.environ.get("ML_LANGS") or os.path.join(HERE, "languages.json")))      # ML_LANGS / ML_PKG: a trial with other voices writes its own package and leaves the real one alone
 FIELDS = ["language", "localized_title", "localized_description", "educational_topic", "parent_summary", "primary_keywords", "secondary_keywords", "hashtags", "playlist",
           "audience_setting", "original_language", "audio_track_filename", "caption_filename", "thumbnail_filename"]
 
@@ -200,7 +200,7 @@ def main():
         print(f"{c}: {len(fitted[c])} lines, {len(fast)} spoken faster than the English pace, {sum(1 for f in fitted[c] if f.get('kept_english'))} kept in English, {len(bad)} do not fit")
         for f in bad: print(f"   TOO LONG by {f['over']} s ({f['seconds']} s in a slot of {f['slot']} s, English {f['english_seconds']} s): {f['text']}   <- {f['english']}")
     if "--fit" in sys.argv: return
-    pk = os.path.join(REPO, "packages", eid)
+    pk = os.environ.get("ML_PKG") or os.path.join(REPO, "packages", eid)
     for d in ("video", "audio", "captions", "metadata", "thumbnails"): os.makedirs(os.path.join(pk, d), exist_ok=True)
     mname = f"episode-master-{wh.split(',')[1]}p.mp4"; mp = os.path.join(pk, "video", mname)
     if not os.path.exists(mp):

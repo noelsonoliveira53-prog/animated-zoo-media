@@ -33,7 +33,8 @@ import art, art2, kit
 import art_gizmo as G
 from kit import Kit, S, prop, W
 
-EP = {"id": "gc_ep01", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo",
+EP = {"id": "gc_ep01", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo", "intro": False,      # no main intro on Gizmo Explains (it says "The Animated Zoo")
+     
       "cast": {"gizmo": {"voice": "am_michael", "speed": 0.85}},
       "title": "How Does a Seed Grow Into a Plant?", "thumb_text": "ROOT FIRST!", "series": "Gizmo Explains (cartoon test)",
       "description": ("How does a tiny seed grow into a big plant? Gizmo the robot opens a seed in his lab, watches it wake up under the ground and follows it all "
@@ -312,6 +313,29 @@ SHOTS = [
       props=[prop("pl", lambda p: G.growth(p, root=False), FX, FY, .62)], fx=[ON(0, "#{p}pl-stem2"), ON(0, "#{p}pl-flower"), WAVE("w:Thanks", 5), HOP("w:exploring")],
       words=[("w:Thanks", "BYE-BYE!", .78, .2, 1.1, "pill", (.5, .3), .9)]),
 ]
+# 9:16 fixes from the first stills of Shorts 2 and 3 (Nov 21): Gizmo's head under the title band, words on his face, three words stacked on one spot,
+# a word on the caption, Gizmo cut by the frame edge. Only the 9:16 framing and the 9:16 word places change: the 16:9 lesson (rendered Nov 19) is untouched.
+GPL = WV("glab", ["gizmo"], floor=.62, top=.42)          # Gizmo smaller, room under him for a word
+WINCP2 = (1000, 430, 1150); SOILP2 = (900, 440, 1560)
+PFIX = {"water": (WINCP2, {"WATER": (.72, .40)}),
+        "count needs": (WINCP2, {"WATER": (.72, .36, .7), "AIR": (.72, .45, .7), "WARM": (.72, .54, .7)}),
+        "idea": (SOILP2, {"AN IDEA!": (.6, .46)}),
+        "growing": (SOILP2, {"IT GROWS!": (.55, .48, .8)}),
+        "down and up": (GPL, {"DOWN!": (.5, .72), "UP!": (.5, .36)}),
+        "say it": (GPL, {"ROOT, DOWN!": (.5, .72, .75), "SHOOT, UP!": (.5, .36, .75)}),
+        "roots drink": ((RX, 640, 1200), {"WATER IN!": (.5, .73)}),
+        "name the parts": (None, {"ROOT": (.72, .68, .8)}),
+        "meadow taller": ((1270, 560, 1600), {"TALLER!": (.5, .35)})}
+for _s in SHOTS:
+    if _s["tag"] not in PFIX: continue
+    _pc, _ws = PFIX[_s["tag"]]
+    if _pc: _s["pcam"] = _pc
+    _pc = _s["pcam"]; _pw = _pc[2] * 9 / 16
+    for _f in _s["fx"]:
+        if _f[0] == "word" and _f[2] in _ws:
+            _w = _ws[_f[2]]; _f[3]["p"] = {"x": round(_pc[0] + (_w[0] - .5) * _pw), "y": round(_pc[1] + (_w[1] - .5) * _pc[2]), "size": round(_pw * .125 * (_w[2] if len(_w) > 2 else .9))}
+        elif _f[0] == "word" and _pc is not None and _f[2] not in _ws and PFIX[_s["tag"]][0]:
+            raise SystemExit(f"9:16 fix of '{_s['tag']}': give the word {_f[2]} its place too")
 for _s in SHOTS:        # a picture board never drifts closer: it only pulls out a little (zc_ep08)
     if _s["place"].startswith("paper") and _s["pcam"] and not _s["pcam2"]: _s["pcam2"] = W(_s["pcam"], 1.04)
     if _s["place"].startswith("paper") and not _s["cam2"]: _s["cam2"] = W(_s["cam"], 1.04)
@@ -322,6 +346,13 @@ SHORTS = [
     {"id": "gc_ep01_short1", "title": "What Is Inside a Seed?", "band": ("WHAT IS", "INSIDE?"), "thumb_text": "BABY PLANT!", "part": 1,
      "extra_first": [S("gbench", BENC, "What is hiding inside a tiny seed?", part=1, q=True, tag="hook: inside a seed", pcam=BENCP, hide=["gizmo"],
                        props=[prop("sd", G.seed, SX, SY - 70, .8)], fx=[PULSE(0.3, "#{p}sd_w", 5)], words=[("w:hiding", "?", .3, .2, 2.2, "sun", (.5, .3), 1.3)])]},
+    # Shorts 2 and 3 added Nov 21 by the Gizmo daily run (upload_guard "shorts_missing"); each opens on its own mystery, no greeting
+    {"id": "gc_ep01_short2", "title": "What Does a Seed Need to Grow? Gizmo Explains", "band": ("WHAT DOES", "IT NEED?"), "thumb_text": "WATER, AIR!", "part": 2,
+     "extra_first": [S("gsoil", SOILC, "What wakes up a seed, under the ground?", part=2, q=True, tag="hook: wake up a seed", pcam=SOILCP, hide=["gizmo"],
+                       props=[gr()], fx=[BELOW("root", "shoot", "sl", "leaves"), PULSE(0.3, "#{p}gr-seed", 5, 1.12)], words=[("w:wakes", "?", .3, .22, 2.2, "sun", (.5, .3), 1.3)])]},
+    {"id": "gc_ep01_short3", "title": "How Does a Plant Make Its Own Food? Gizmo Explains", "band": ("HOW DO PLANTS", "EAT?"), "thumb_text": "LEAF KITCHEN!", "part": 3,
+     "extra_first": [S("ggarden", GARDC, "How does a plant eat, with no mouth?", part=3, q=True, tag="hook: how a plant eats", pcam=GARDCP, hide=["gizmo"],
+                       props=[hg()], fx=[PULSE(0.3, "#{p}hg-leaves", 5, 1.08)], words=[("w:eat,", "?", .3, .16, 2.2, "sun", (.5, .3), 1.3)])]},
 ]
 
 # thumbnails (thumb.py): the example in the picture, 3 words at most, none of the title's words, no watermark
@@ -332,4 +363,10 @@ THUMBS = {
     "gc_ep01_short1": {"place": "paper_gz", "cam": (960, 560, 1500), "actors": [],
                        "props": [(G.seed_open, 960, 700, 1.45)],
                        "words": [("BABY", 540, 420, 210, ""), ("PLANT!", 540, 1580, 210, "sun")]},
+    "gc_ep01_short2": {"place": "paper_gz", "cam": (960, 560, 1500), "actors": [],
+                       "props": [(G.seed, 960, 760, 1.7)] + [(G.drop, 960 + dx, 430, 1.0) for dx in (-170, 0, 170)],
+                       "words": [("WATER,", 540, 380, 200, ""), ("AIR!", 540, 1600, 240, "sun")]},
+    "gc_ep01_short3": {"place": "paper_gz", "cam": (960, 560, 1500), "actors": [],
+                       "props": [(G.kitchen_leaf, 960, 640, 1.5)],
+                       "words": [("LEAF", 540, 380, 220, ""), ("KITCHEN!", 540, 1600, 190, "sun")]},
 }

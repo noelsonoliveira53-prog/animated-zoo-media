@@ -523,6 +523,10 @@
   "longest_without_question": 29.1,
   "first_words_at": 0.42,
   "shot_mean": 4.49,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
   "fails": [],
   "words_placed": "661/661",
   "sync": {

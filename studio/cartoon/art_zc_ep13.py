@@ -143,3 +143,9 @@ def splash(p):
                     for x, y, s in ((r.uniform(-220, 220), r.uniform(-260, -40), r.uniform(14, 26)) for _ in range(16)))
     crown = '<path d="M-200 0 Q-160 -120 -110 -10 Q-60 -160 0 -10 Q60 -160 110 -10 Q160 -120 200 0Z" fill="#ffffff" stroke="#7cc4ff" stroke-width="8" stroke-linejoin="round"/>'
     return f'<g id="{p}">{crown}{drops}</g>'
+
+
+def pointer(p, col="#ff5a5f"):
+    """A chunky arrow pointing LEFT, its tip at 0 0 (to point at a thing on a board)."""
+    return (f'<g id="{p}"><path d="M0 0 L110 -90 L110 -40 L260 -40 L260 40 L110 40 L110 90Z" fill="{col}" stroke="{INK}" stroke-width="14" stroke-linejoin="round"/>'
+            f'<path d="M130 -22 L240 -22" stroke="#ffffff" stroke-width="10" stroke-linecap="round" opacity=".6"/></g>')

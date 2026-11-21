@@ -1,0 +1,1796 @@
+{
+ "id": "zc_ep13_short1",
+ "total": 91.5226666666667,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25
+ ],
+ "plan": {
+  "length": 91.5,
+  "shots": 16,
+  "visual_changes": 82,
+  "mean_gap": 1.12,
+  "longest_gap": 4.35,
+  "longest_gap_at": 72.8,
+  "over_6s": [],
+  "places": [
+   "arctic",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 11,
+  "longest_without_question": 12.5,
+  "first_words_at": 0.42,
+  "shot_mean": 5.72,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "187/187",
+  "sync": {
+   "pauses_checked": 16,
+   "onset_err_mean_ms": 31.3,
+   "onset_err_max_ms": 90.0,
+   "suspect_words": [],
+   "cuts": 15,
+   "cuts_on_the_half_beat": 15,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "snow falls"
+  ],
+  [
+   0.0,
+   "new place",
+   "the snowy Arctic hook: warm in the cold"
+  ],
+  [
+   0.76,
+   "word",
+   "?"
+  ],
+  [
+   3.36,
+   "action",
+   "bear nods"
+  ],
+  [
+   5.62,
+   "new shot",
+   "the snowy Arctic secret 1"
+  ],
+  [
+   7.05,
+   "word",
+   "1"
+  ],
+  [
+   8.16,
+   "action",
+   "bear looks"
+  ],
+  [
+   9.22,
+   "word",
+   "?"
+  ],
+  [
+   9.74,
+   "action",
+   "bear looks"
+  ],
+  [
+   10.0,
+   "new shot",
+   "the snowy Arctic question 1a"
+  ],
+  [
+   11.1,
+   "sign",
+   "FAT"
+  ],
+  [
+   11.45,
+   "sign",
+   "ICE"
+  ],
+  [
+   13.67,
+   "thinking dot",
+   "1"
+  ],
+  [
+   14.34,
+   "thinking dot",
+   "2"
+  ],
+  [
+   14.7,
+   "action",
+   "bear nods"
+  ],
+  [
+   15.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   15.5,
+   "answer",
+   "FAT"
+  ],
+  [
+   16.88,
+   "new place",
+   "the picture board board: thick fat"
+  ],
+  [
+   17.37,
+   "word",
+   "FAT!"
+  ],
+  [
+   18.5,
+   "action",
+   "the skin blinks"
+  ],
+  [
+   20.39,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   21.83,
+   "action",
+   "the fat layer blinks"
+  ],
+  [
+   22.19,
+   "new shot",
+   "the picture board point to the fat"
+  ],
+  [
+   22.69,
+   "picture",
+   "pt"
+  ],
+  [
+   22.69,
+   "word",
+   "POINT!"
+  ],
+  [
+   24.7,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   24.7,
+   "action",
+   "the arrow points at the fat"
+  ],
+  [
+   26.64,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   27.96,
+   "action",
+   "the arrow points again"
+  ],
+  [
+   29.38,
+   "new place",
+   "the picture board (blue) board: like a blanket"
+  ],
+  [
+   31.32,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   33.52,
+   "action",
+   "bear nods"
+  ],
+  [
+   33.52,
+   "word",
+   "WARM!"
+  ],
+  [
+   34.38,
+   "new place",
+   "the picture board board: count four inches"
+  ],
+  [
+   34.86,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   35.93,
+   "word",
+   "4 INCHES!"
+  ],
+  [
+   38.31,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   38.6,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   38.91,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   39.2,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   40.0,
+   "new place",
+   "the zoo gate four fingers"
+  ],
+  [
+   42.23,
+   "action",
+   "milo hops"
+  ],
+  [
+   42.23,
+   "word",
+   "1"
+  ],
+  [
+   42.59,
+   "action",
+   "milo hops"
+  ],
+  [
+   42.59,
+   "word",
+   "2"
+  ],
+  [
+   42.87,
+   "action",
+   "milo hops"
+  ],
+  [
+   42.87,
+   "word",
+   "3"
+  ],
+  [
+   43.69,
+   "action",
+   "milo hops"
+  ],
+  [
+   43.69,
+   "word",
+   "4"
+  ],
+  [
+   45.94,
+   "new place",
+   "the snowy Arctic a lot of fat"
+  ],
+  [
+   46.23,
+   "action",
+   "bear hops"
+  ],
+  [
+   46.23,
+   "word",
+   "WOW!"
+  ],
+  [
+   48.75,
+   "new shot",
+   "the snowy Arctic what in the water"
+  ],
+  [
+   51.06,
+   "action",
+   "bear looks"
+  ],
+  [
+   52.84,
+   "word",
+   "?"
+  ],
+  [
+   56.25,
+   "new shot",
+   "the snowy Arctic fat in the water"
+  ],
+  [
+   58.54,
+   "action",
+   "bear nods"
+  ],
+  [
+   60.15,
+   "action",
+   "bear bobs in the water"
+  ],
+  [
+   60.15,
+   "word",
+   "FLOAT!"
+  ],
+  [
+   61.25,
+   "new place",
+   "the zoo gate float like a bear"
+  ],
+  [
+   63.32,
+   "word",
+   "BOB!"
+  ],
+  [
+   63.65,
+   "action",
+   "milo hops"
+  ],
+  [
+   65.14,
+   "action",
+   "milo hops"
+  ],
+  [
+   66.11,
+   "action",
+   "milo hops"
+  ],
+  [
+   68.75,
+   "new place",
+   "the snowy Arctic say it: thick fat"
+  ],
+  [
+   69.07,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   70.34,
+   "action",
+   "bear nods"
+  ],
+  [
+   72.81,
+   "new place",
+   "the zoo gate wrap your arms"
+  ],
+  [
+   77.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   77.16,
+   "word",
+   "SO WARM!"
+  ],
+  [
+   81.25,
+   "new place",
+   "the picture board question 1b"
+  ],
+  [
+   83.08,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   83.35,
+   "sign",
+   "THIN"
+  ],
+  [
+   83.7,
+   "sign",
+   "THICK"
+  ],
+  [
+   84.46,
+   "word",
+   "?"
+  ],
+  [
+   84.95,
+   "thinking dot",
+   "1"
+  ],
+  [
+   85.63,
+   "thinking dot",
+   "2"
+  ],
+  [
+   86.3,
+   "thinking dot",
+   "3"
+  ],
+  [
+   86.79,
+   "answer",
+   "THICK"
+  ],
+  [
+   88.12,
+   "new place",
+   "the snowy Arctic super job 1"
+  ],
+  [
+   88.22,
+   "word",
+   "THICK!"
+  ],
+  [
+   89.7,
+   "action",
+   "bear nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "arctic",
+   "say": "Brrr! How does a polar bear stay warm in the icy cold?",
+   "t0": 0.0,
+   "t1": 5.625,
+   "v0": 0.42,
+   "dur": 4.769416666666666,
+   "words": [
+    [
+     "Brrr!",
+     0.34,
+     1.14
+    ],
+    [
+     "How",
+     1.56,
+     1.69
+    ],
+    [
+     "does",
+     1.69,
+     1.83
+    ],
+    [
+     "a",
+     1.83,
+     1.87
+    ],
+    [
+     "polar",
+     1.87,
+     2.34
+    ],
+    [
+     "bear",
+     2.34,
+     2.6
+    ],
+    [
+     "stay",
+     2.6,
+     2.94
+    ],
+    [
+     "warm",
+     2.94,
+     3.46
+    ],
+    [
+     "in",
+     3.46,
+     3.59
+    ],
+    [
+     "the",
+     3.59,
+     3.74
+    ],
+    [
+     "icy",
+     3.74,
+     4.18
+    ],
+    [
+     "cold?",
+     4.18,
+     4.769
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: warm in the cold",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Warm secret number one! What is under a polar bear's skin?",
+   "t0": 5.625,
+   "t1": 10.0,
+   "v0": 5.729416666666666,
+   "dur": 4.012208333333334,
+   "words": [
+    [
+     "Warm",
+     0.01,
+     0.38
+    ],
+    [
+     "secret",
+     0.38,
+     1.0
+    ],
+    [
+     "number",
+     1.0,
+     1.32
+    ],
+    [
+     "one!",
+     1.32,
+     1.76
+    ],
+    [
+     "What",
+     2.16,
+     2.31
+    ],
+    [
+     "is",
+     2.31,
+     2.43
+    ],
+    [
+     "under",
+     2.43,
+     2.64
+    ],
+    [
+     "a",
+     2.64,
+     2.68
+    ],
+    [
+     "polar",
+     2.68,
+     3.15
+    ],
+    [
+     "bear's",
+     3.15,
+     3.49
+    ],
+    [
+     "skin?",
+     3.49,
+     4.01
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "secret 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Is it a layer of fat? Or a layer of ice?",
+   "t0": 10.0,
+   "t1": 16.875,
+   "v0": 10.281624999999998,
+   "dur": 2.8995,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.19
+    ],
+    [
+     "it",
+     0.19,
+     0.27
+    ],
+    [
+     "a",
+     0.27,
+     0.31
+    ],
+    [
+     "layer",
+     0.31,
+     0.76
+    ],
+    [
+     "of",
+     0.76,
+     0.82
+    ],
+    [
+     "fat?",
+     0.82,
+     1.35
+    ],
+    [
+     "Or",
+     1.58,
+     1.77
+    ],
+    [
+     "a",
+     1.77,
+     1.82
+    ],
+    [
+     "layer",
+     1.82,
+     2.3
+    ],
+    [
+     "of",
+     2.3,
+     2.38
+    ],
+    [
+     "ice?",
+     2.38,
+     2.9
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "It is fat! Under the skin, a polar bear has a thick layer of fat.",
+   "t0": 16.875,
+   "t1": 22.1875,
+   "v0": 16.921125,
+   "dur": 4.907166666666667,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.45
+    ],
+    [
+     "fat!",
+     0.45,
+     0.88
+    ],
+    [
+     "Under",
+     1.24,
+     1.49
+    ],
+    [
+     "the",
+     1.49,
+     1.58
+    ],
+    [
+     "skin,",
+     1.58,
+     2.35
+    ],
+    [
+     "a",
+     2.35,
+     2.42
+    ],
+    [
+     "polar",
+     2.42,
+     2.9
+    ],
+    [
+     "bear",
+     2.9,
+     3.2
+    ],
+    [
+     "has",
+     3.2,
+     3.42
+    ],
+    [
+     "a",
+     3.42,
+     3.47
+    ],
+    [
+     "thick",
+     3.47,
+     3.92
+    ],
+    [
+     "layer",
+     3.92,
+     4.32
+    ],
+    [
+     "of",
+     4.32,
+     4.38
+    ],
+    [
+     "fat.",
+     4.38,
+     4.907
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: thick fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Can you point to the fat? It is the yellow layer, at the bottom!",
+   "t0": 22.1875,
+   "t1": 29.375,
+   "v0": 22.368291666666668,
+   "dur": 4.273333333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.32
+    ],
+    [
+     "point",
+     0.32,
+     0.69
+    ],
+    [
+     "to",
+     0.69,
+     0.77
+    ],
+    [
+     "the",
+     0.77,
+     0.85
+    ],
+    [
+     "fat?",
+     0.85,
+     1.47
+    ],
+    [
+     "It",
+     1.91,
+     2.05
+    ],
+    [
+     "is",
+     2.05,
+     2.17
+    ],
+    [
+     "the",
+     2.17,
+     2.33
+    ],
+    [
+     "yellow",
+     2.33,
+     2.79
+    ],
+    [
+     "layer,",
+     2.79,
+     3.43
+    ],
+    [
+     "at",
+     3.43,
+     3.55
+    ],
+    [
+     "the",
+     3.55,
+     3.63
+    ],
+    [
+     "bottom!",
+     3.63,
+     4.27
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "point to the fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "The fat works like a cozy blanket. It helps keep the bear warm!",
+   "t0": 29.375,
+   "t1": 34.375,
+   "v0": 29.581625000000003,
+   "dur": 4.5155,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "fat",
+     0.11,
+     0.57
+    ],
+    [
+     "works",
+     0.57,
+     0.91
+    ],
+    [
+     "like",
+     0.91,
+     1.07
+    ],
+    [
+     "a",
+     1.07,
+     1.12
+    ],
+    [
+     "cozy",
+     1.12,
+     1.74
+    ],
+    [
+     "blanket.",
+     1.74,
+     2.42
+    ],
+    [
+     "It",
+     2.79,
+     2.9
+    ],
+    [
+     "helps",
+     2.9,
+     3.28
+    ],
+    [
+     "keep",
+     3.28,
+     3.55
+    ],
+    [
+     "the",
+     3.55,
+     3.64
+    ],
+    [
+     "bear",
+     3.64,
+     3.94
+    ],
+    [
+     "warm!",
+     3.94,
+     4.51
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: like a blanket",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "How thick is it? Up to four inches! Count with me. One, two, three, four!",
+   "t0": 34.375,
+   "t1": 40.0,
+   "v0": 34.637125000000005,
+   "dur": 5.131333333333333,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.22
+    ],
+    [
+     "thick",
+     0.22,
+     0.54
+    ],
+    [
+     "is",
+     0.54,
+     0.72
+    ],
+    [
+     "it?",
+     0.72,
+     1.02
+    ],
+    [
+     "Up",
+     1.02,
+     1.18
+    ],
+    [
+     "to",
+     1.18,
+     1.29
+    ],
+    [
+     "four",
+     1.29,
+     1.62
+    ],
+    [
+     "inches!",
+     1.62,
+     2.22
+    ],
+    [
+     "Count",
+     2.51,
+     2.84
+    ],
+    [
+     "with",
+     2.84,
+     2.99
+    ],
+    [
+     "me.",
+     2.99,
+     3.32
+    ],
+    [
+     "One,",
+     3.67,
+     3.96
+    ],
+    [
+     "two,",
+     3.96,
+     4.27
+    ],
+    [
+     "three,",
+     4.27,
+     4.56
+    ],
+    [
+     "four!",
+     4.56,
+     5.13
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "board: count four inches",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you show me four fingers? One, two, three, four!",
+   "t0": 40.0,
+   "t1": 45.9375,
+   "v0": 40.308458333333334,
+   "dur": 3.3782083333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.32
+    ],
+    [
+     "show",
+     0.32,
+     0.5
+    ],
+    [
+     "me",
+     0.5,
+     0.63
+    ],
+    [
+     "four",
+     0.63,
+     0.91
+    ],
+    [
+     "fingers?",
+     0.91,
+     1.61
+    ],
+    [
+     "One,",
+     1.92,
+     2.28
+    ],
+    [
+     "two,",
+     2.28,
+     2.56
+    ],
+    [
+     "three,",
+     2.56,
+     2.83
+    ],
+    [
+     "four!",
+     2.83,
+     3.378
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "four fingers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Wow! That is a lot of warm fat!",
+   "t0": 45.9375,
+   "t1": 48.75,
+   "v0": 46.22666666666667,
+   "dur": 2.176125,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.54
+    ],
+    [
+     "That",
+     0.71,
+     0.9
+    ],
+    [
+     "is",
+     0.9,
+     1.03
+    ],
+    [
+     "a",
+     1.03,
+     1.06
+    ],
+    [
+     "lot",
+     1.06,
+     1.26
+    ],
+    [
+     "of",
+     1.26,
+     1.37
+    ],
+    [
+     "warm",
+     1.37,
+     1.63
+    ],
+    [
+     "fat!",
+     1.63,
+     2.176
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "a lot of fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "What does the fat do, when Poppy swims in the icy water?",
+   "t0": 48.75,
+   "t1": 56.25,
+   "v0": 48.942791666666665,
+   "dur": 3.89675,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.17
+    ],
+    [
+     "does",
+     0.17,
+     0.32
+    ],
+    [
+     "the",
+     0.32,
+     0.4
+    ],
+    [
+     "fat",
+     0.4,
+     0.76
+    ],
+    [
+     "do,",
+     0.76,
+     1.11
+    ],
+    [
+     "when",
+     1.43,
+     1.61
+    ],
+    [
+     "Poppy",
+     1.61,
+     2.12
+    ],
+    [
+     "swims",
+     2.12,
+     2.68
+    ],
+    [
+     "in",
+     2.68,
+     2.78
+    ],
+    [
+     "the",
+     2.78,
+     2.93
+    ],
+    [
+     "icy",
+     2.93,
+     3.35
+    ],
+    [
+     "water?",
+     3.35,
+     3.897
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "what in the water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "In the cold water, the fat keeps her warm. And it helps her float!",
+   "t0": 56.25,
+   "t1": 61.25,
+   "v0": 56.37954166666666,
+   "dur": 4.3754583333333334,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.18
+    ],
+    [
+     "the",
+     0.18,
+     0.26
+    ],
+    [
+     "cold",
+     0.26,
+     0.67
+    ],
+    [
+     "water,",
+     0.67,
+     1.15
+    ],
+    [
+     "the",
+     1.15,
+     1.28
+    ],
+    [
+     "fat",
+     1.28,
+     1.69
+    ],
+    [
+     "keeps",
+     1.69,
+     2.05
+    ],
+    [
+     "her",
+     2.05,
+     2.16
+    ],
+    [
+     "warm.",
+     2.16,
+     2.71
+    ],
+    [
+     "And",
+     3.14,
+     3.26
+    ],
+    [
+     "it",
+     3.26,
+     3.34
+    ],
+    [
+     "helps",
+     3.34,
+     3.69
+    ],
+    [
+     "her",
+     3.69,
+     3.77
+    ],
+    [
+     "float!",
+     3.77,
+     4.37
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fat in the water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you float like a polar bear? Bob up, and down. Bob, bob!",
+   "t0": 61.25,
+   "t1": 68.75,
+   "v0": 61.294999999999995,
+   "dur": 4.823,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.31
+    ],
+    [
+     "float",
+     0.31,
+     0.65
+    ],
+    [
+     "like",
+     0.65,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.86
+    ],
+    [
+     "polar",
+     0.86,
+     1.32
+    ],
+    [
+     "bear?",
+     1.32,
+     1.75
+    ],
+    [
+     "Bob",
+     2.03,
+     2.36
+    ],
+    [
+     "up,",
+     2.36,
+     2.63
+    ],
+    [
+     "and",
+     2.63,
+     2.82
+    ],
+    [
+     "down.",
+     2.82,
+     3.39
+    ],
+    [
+     "Bob,",
+     3.85,
+     4.28
+    ],
+    [
+     "bob!",
+     4.28,
+     4.82
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "float like a bear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Say it with me. Thick fat keeps a polar bear warm!",
+   "t0": 68.75,
+   "t1": 72.8125,
+   "v0": 69.058,
+   "dur": 3.56075,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.34
+    ],
+    [
+     "it",
+     0.34,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.93
+    ],
+    [
+     "Thick",
+     1.28,
+     1.55
+    ],
+    [
+     "fat",
+     1.55,
+     1.89
+    ],
+    [
+     "keeps",
+     1.89,
+     2.19
+    ],
+    [
+     "a",
+     2.19,
+     2.22
+    ],
+    [
+     "polar",
+     2.22,
+     2.69
+    ],
+    [
+     "bear",
+     2.69,
+     3.0
+    ],
+    [
+     "warm!",
+     3.0,
+     3.56
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: thick fat",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now wrap your arms around you, like a cozy blanket. So warm!",
+   "t0": 72.8125,
+   "t1": 81.25,
+   "v0": 73.15875000000001,
+   "dur": 4.634833333333333,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.33
+    ],
+    [
+     "wrap",
+     0.33,
+     0.63
+    ],
+    [
+     "your",
+     0.63,
+     0.78
+    ],
+    [
+     "arms",
+     0.78,
+     1.18
+    ],
+    [
+     "around",
+     1.18,
+     1.55
+    ],
+    [
+     "you,",
+     1.55,
+     1.84
+    ],
+    [
+     "like",
+     1.84,
+     2.02
+    ],
+    [
+     "a",
+     2.02,
+     2.06
+    ],
+    [
+     "cozy",
+     2.06,
+     2.65
+    ],
+    [
+     "blanket.",
+     2.65,
+     3.28
+    ],
+    [
+     "So",
+     3.69,
+     4.0
+    ],
+    [
+     "warm!",
+     4.0,
+     4.63
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "wrap your arms",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Quick check! Is a polar bear's fat thin, or thick?",
+   "t0": 81.25,
+   "t1": 88.125,
+   "v0": 81.33358333333335,
+   "dur": 3.134,
+   "words": [
+    [
+     "Quick",
+     0.01,
+     0.22
+    ],
+    [
+     "check!",
+     0.22,
+     0.79
+    ],
+    [
+     "Is",
+     0.79,
+     0.93
+    ],
+    [
+     "a",
+     0.93,
+     0.97
+    ],
+    [
+     "polar",
+     0.97,
+     1.39
+    ],
+    [
+     "bear's",
+     1.39,
+     1.75
+    ],
+    [
+     "fat",
+     1.75,
+     2.02
+    ],
+    [
+     "thin,",
+     2.02,
+     2.46
+    ],
+    [
+     "or",
+     2.46,
+     2.62
+    ],
+    [
+     "thick?",
+     2.62,
+     3.13
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Thick! Thick and warm. Super job!",
+   "t0": 88.125,
+   "t1": 91.12266666666669,
+   "v0": 88.20758333333336,
+   "dur": 2.4950833333333335,
+   "words": [
+    [
+     "Thick!",
+     0.01,
+     0.35
+    ],
+    [
+     "Thick",
+     0.35,
+     0.64
+    ],
+    [
+     "and",
+     0.64,
+     0.74
+    ],
+    [
+     "warm.",
+     0.74,
+     1.24
+    ],
+    [
+     "Super",
+     1.49,
+     1.87
+    ],
+    [
+     "job!",
+     1.87,
+     2.49
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "super job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

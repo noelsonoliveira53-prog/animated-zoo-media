@@ -7,7 +7,10 @@ Where it goes
   2D (cartoon lesson, Guess With Milo, adventure): in the episode itself, `*intro_shots()` right after the hook (the episode still opens on
       its promise) and again as the LAST shots. toon.py's plan check fails an episode that has it in only one place.
   3D songs: finish.py lays it before the song (0:00) and after it, in the one encode it does anyway.
-  Never: Shorts, Gizmo Explains and the other channels (it says "The Animated Zoo"), a fix of a video that is already live.
+  Never: Shorts, the other channels (it says "The Animated Zoo"), a fix of a video that is already live.
+  Gizmo Explains has its OWN main intro since Nov 21 2026 (owner, 12:18 PM: "amazing emplement on every new video and update the worflows"):
+      `*gz_intro_shots()` (studio/cartoon/intro_gizmo.py) right after the hook and as the last four shots of every new long Gizmo cartoon;
+      `check <video> --channel gizmo` compares with cartoon/gzintro.mp4, and review.py does that for Gizmo's plan.
 The gate: review.py fails a new long video whose file does not carry it at both ends (`check` below).
 
   python3 studio/bookends.py check <video>                 is the intro in the first 75 s and at the very end?   exit 0 = both
@@ -19,6 +22,7 @@ import numpy as np
 
 HERE = os.path.dirname(os.path.abspath(__file__)); REPO = os.path.dirname(HERE)
 INTRO = os.path.join(REPO, "cartoon", "zintro.mp4")
+INTROS = {"zoo": INTRO, "gizmo": os.path.join(REPO, "cartoon", "gzintro.mp4")}      # Gizmo Explains has its own main intro (owner, Nov 21 2026 12:18 PM: "amazing emplement on every new video")
 LONG_ZOO = ("3d_singalong", "cartoon_lesson", "cartoon_adventure")      # the formats that carry it
 W, H = 160, 90
 SAME = 14.0      # mean grey difference (0-255) under which two small frames show the same picture (the logo card against itself: 1-5; against another scene: 30+)
@@ -37,6 +41,12 @@ def _frames(path, t0, t1, fps):
 
 
 _REF = None
+def use(channel):
+    """Check against another channel's intro: use("gizmo") before check() for a Gizmo Explains video (studio/cartoon/intro_gizmo.py, cartoon/gzintro.mp4)."""
+    global INTRO, _REF
+    INTRO = INTROS[channel]; _REF = None
+
+
 def _ref():
     """The settled logo card with the whole cast (the intro's last second and a half)."""
     global _REF
@@ -88,6 +98,7 @@ def add(src, dst, preview=False):
 
 
 if __name__ == "__main__":
+    if "--channel" in sys.argv: use(sys.argv[sys.argv.index("--channel") + 1]); del sys.argv[sys.argv.index("--channel"):sys.argv.index("--channel") + 2]
     if len(sys.argv) >= 3 and sys.argv[1] == "check":
         b, e = check(sys.argv[2], verbose=True)
         print(("BOOKENDS yes" if b and e else "BOOKENDS NO") + f" (beginning: {'yes' if b else 'NO'}, end: {'yes' if e else 'NO'})", sys.argv[2]); sys.exit(0 if b and e else 1)

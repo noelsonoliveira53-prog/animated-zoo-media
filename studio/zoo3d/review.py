@@ -124,11 +124,14 @@ def review(fname):
         # the main intro at the beginning and at the end of every NEW long video of The Animated Zoo (owner, Nov 20 2026 4:50 PM; studio/bookends.py).
         # Not a fix of a video that is already live (the entry has a video id), not Gizmo, not a Short. The length rule is for the video's own
         # content: a song may be 30 s longer with them; a cartoon's own content stays 5:00 or more and the whole file 6:30 or less.
-        if not gz and fmt in ("3d_singalong", "cartoon_lesson", "cartoon_adventure") and not entry.get("video_id") and not entry.get("replaced_video_ids") and entry.get("bookends") is not False:
+        # Gizmo Explains (owner, Nov 21 2026 12:18 PM: "amazing emplement on every new video"): its own intro (intro_gizmo.py, cartoon/gzintro.mp4) on every new long cartoon.
+        if (fmt == "cartoon_lesson" if gz else fmt in ("3d_singalong", "cartoon_lesson", "cartoon_adventure")) and not entry.get("video_id") and not entry.get("replaced_video_ids") and entry.get("bookends") is not False:
             sys.path.insert(0, os.path.dirname(HERE)); import bookends
+            if gz: bookends.use("gizmo")
             _b, _e = bookends.check(path); _id = bookends.dur(bookends.INTRO)
             if not (_b and _e): fails.append(f"the main intro is not at the {'beginning' if not _b else ''}{' and ' if not _b and not _e else ''}{'end' if not _e else ''} of the video "
-                                             "(every new long video carries it at both ends: 2D `*intro_shots()` after the hook and as the last shots; 3D songs: finish.py)")
+                                             + ("(every new long Gizmo cartoon carries Gizmo's intro at both ends: `*gz_intro_shots()` after the hook and as the last four shots, docs/GIZMO_RUN.md)" if gz else
+                                                "(every new long video carries it at both ends: 2D `*intro_shots()` after the hook and as the last shots; 3D songs: finish.py)"))
             else:
                 if fmt == "3d_singalong": hi += 2 * _id
                 else: lo += 2 * _id

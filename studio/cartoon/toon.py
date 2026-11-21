@@ -560,6 +560,8 @@ def plan_gate(film, total, ep):
     ix = [k for k, s in enumerate(film.shots) if (s.get("tag") or "").startswith("INTRO 1")]; n_in = sum(1 for s in film.shots if (s.get("tag") or "").startswith("INTRO"))
     t_intro = sum(film.shots[k + 1]["t0"] - s["t0"] if k + 1 < len(film.shots) else total - s["t0"] for k, s in enumerate(film.shots) if (s.get("tag") or "").startswith("INTRO"))
     res["main_intro"] = {"at": [round(film.shots[k]["t0"], 1) for k in ix], "seconds": round(t_intro, 1)}
+    gz_ep = ep.get("wm") == "brand/gizmo"; other = [s for s in film.shots if (s.get("tag") or "").startswith("INTRO") and str(s.get("place", "")).startswith("gz_") != gz_ep]
+    if other: fails.append("the main intro in this episode is the other channel's: Gizmo Explains uses intro_gizmo.gz_intro_shots(), The Animated Zoo intro.intro_shots()")
     if not film.portrait and ep.get("intro", True) and ep.get("id") not in PRE_INTRO:
         if len(ix) != 2 or n_in != 8: fails.append(f"the main intro is in the episode {len(ix)} time(s): it goes right after the hook AND as the last shots (`*intro_shots()` twice, docs/CARTOON_RUN.md MAIN INTRO)")
         else:

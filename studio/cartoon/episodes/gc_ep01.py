@@ -32,8 +32,9 @@ sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 import art, art2, kit
 import art_gizmo as G
 from kit import Kit, S, prop, W
+from intro_gizmo import GZ_INTRO_STAGES, gz_intro_shots      # Gizmo's main intro (owner, Nov 21 2026 12:18 PM: "amazing emplement on every new video")
 
-EP = {"id": "gc_ep01", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo", "intro": False,      # no main intro on Gizmo Explains (it says "The Animated Zoo")
+EP = {"id": "gc_ep01", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo",      # Gizmo's OWN main intro since Nov 21 2026 (intro_gizmo.py): after the hook and as the last four shots
      
       "cast": {"gizmo": {"voice": "am_michael", "speed": 0.85}},
       "title": "How Does a Seed Grow Into a Plant?", "thumb_text": "ROOT FIRST!", "series": "Gizmo Explains (cartoon test)",
@@ -55,7 +56,7 @@ STAGES = {"glab": [("gizmo", "gizmo", GX, GY, GS)],
           "gwindow": [("gizmo", "gizmo", 560, 900, .66)],
           "gsoil": [("gizmo", "gizmo", 640, 380, .45)],      # hovering low over the grass, right of the watermark corner
           "ggarden": [("gizmo", "gizmo", 520, 900, .66)],
-          "gmeadow": [("gizmo", "gizmo", 560, 920, .62)]}
+          "gmeadow": [("gizmo", "gizmo", 560, 920, .62)], **GZ_INTRO_STAGES}
 K = Kit(STAGES); P, C, V, WV = K.P, K.C, K.V, K.WV
 WIDE = (960, 540, 1920)
 GIZ = lambda place, w=1000, dy=0: dict(cam=C(place, "gizmo", "all", w, 0, dy), pcam=V(place, "gizmo", "body", 1000))      # "all": the whole robot, antenna to jets (stills: "body" cut the antenna)
@@ -132,6 +133,8 @@ SHOTS = [
       fx=[PULSE("w:little", "#{p}sd_w", 1), ("show", "w:to", "ar"), ("show", "w:tall", "sf")], words=[("w:tall", "WOW!", .82, .14, 1.0, "sun", (.5, .3), .9)]),
     S("glab", (GX, 640, 1000), "Hi! I'm Gizmo. Let's find out how it works!", tag="hook: Gizmo", pcam=GP("glab"), fx=[WAVE("w:Hi!"), HOP("w:find")],
       words=[("w:Gizmo.", "GIZMO", .78, .3, 1.1, "pill", (.5, .3), .9)]),
+    # ---------------------------------------------------------------- MAIN INTRO (right after the hook; again as the last four shots)
+    *gz_intro_shots(),
     # ---------------------------------------------------------------- INTRO
     S("glab", WIDE, "Welcome to my lab, curious friends!", trans="iris", tag="lab wide", cam2=W(WIDE, 1.0), pcam=(GX + 60, 640, 1500), fx=[WAVE("w:Welcome", 4)],
       words=[("w:lab,", "HELLO!", .74, .5, 1.2, "pill", (.5, .3), 1.0)]),
@@ -312,6 +315,7 @@ SHOTS = [
     S("gmeadow", MEAD, "From a tiny seed, to a big plant. Thanks for exploring with me!", part=4, tag="goodbye", pcam=MEADP, cam2=W(MEAD, 1.0),
       props=[prop("pl", lambda p: G.growth(p, root=False), FX, FY, .62)], fx=[ON(0, "#{p}pl-stem2"), ON(0, "#{p}pl-flower"), WAVE("w:Thanks", 5), HOP("w:exploring")],
       words=[("w:Thanks", "BYE-BYE!", .78, .2, 1.1, "pill", (.5, .3), .9)]),
+    *gz_intro_shots(),      # the main intro again, as the last four shots
 ]
 # 9:16 fixes from the first stills of Shorts 2 and 3 (Nov 21): Gizmo's head under the title band, words on his face, three words stacked on one spot,
 # a word on the caption, Gizmo cut by the frame edge. Only the 9:16 framing and the 9:16 word places change: the 16:9 lesson (rendered Nov 19) is untouched.

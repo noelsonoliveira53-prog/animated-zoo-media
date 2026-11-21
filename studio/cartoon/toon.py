@@ -616,8 +616,10 @@ def mix_parts(film, total, ep):
         a0 = int(a0s * SR); a1 = min(n, int(a1s * SR)); k = int(SR * .25)
         duck = 1 - 0.5 * np.clip(np.convolve(talk, np.ones(k) / k, mode="same"), 0, 1)
         hold = np.ones(n, np.float32); fi = int(SR * .3); hold[a0:a1] = 0
-        if a1 >= n - int(SR * 3): hold[a1:] = 0      # the score closes the film (the main intro as the last shots): the lesson bed does not come back for the last second
-        hold[max(0, a0 - fi):a0] = np.linspace(1, 0, a0 - max(0, a0 - fi)); hold[a1:min(n, a1 + fi)] = np.linspace(0, 1, min(n, a1 + fi) - a1)
+        closes = a1 >= n - int(SR * 3)      # the score closes the film (the main intro as the last shots): the lesson bed does not come back for the last second
+        if closes: hold[a1:] = 0
+        hold[max(0, a0 - fi):a0] = np.linspace(1, 0, a0 - max(0, a0 - fi))
+        if not closes: hold[a1:min(n, a1 + fi)] = np.linspace(0, 1, min(n, a1 + fi) - a1)      # Nov 21 2026: this ramp also ran when the score closes the film and let the bed swell back for 0.3 s under the last chord (gc_ep01: an F of the bed against the final C chord at 338.7 s)
         bed *= hold; m = min(len(sc), n - a0); bed[a0:a0 + m] += sc[:m] * duck[a0:a0 + m] * s.get("score_gain", 1.0)
     for t, name in film.snd:
         x = sfx(name) * (0.5 if name in ("pop", "tick") else 0.7); a0 = int(max(0, t) * SR); bed[a0:a0 + len(x)] += x[:n - a0]

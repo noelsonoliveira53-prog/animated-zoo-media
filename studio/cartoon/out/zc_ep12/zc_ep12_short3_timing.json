@@ -1,0 +1,1560 @@
+{
+ "id": "zc_ep12_short3",
+ "total": 87.84520833333337,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5
+ ],
+ "plan": {
+  "length": 87.8,
+  "shots": 16,
+  "visual_changes": 56,
+  "mean_gap": 1.57,
+  "longest_gap": 4.34,
+  "longest_gap_at": 59.7,
+  "over_6s": [],
+  "places": [
+   "arctic",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper_blue"
+  ],
+  "questions": 10,
+  "longest_without_question": 21.9,
+  "first_words_at": 0.42,
+  "shot_mean": 5.49,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "167/167",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 38.6,
+   "onset_err_max_ms": 260.0,
+   "suspect_words": [],
+   "cuts": 15,
+   "cuts_on_the_half_beat": 15,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the snowy Arctic hook: small ears"
+  ],
+  [
+   2.24,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "the snowy Arctic ears 3"
+  ],
+  [
+   5.65,
+   "word",
+   "SMALL!"
+  ],
+  [
+   6.48,
+   "word",
+   "ROUND!"
+  ],
+  [
+   9.06,
+   "new shot",
+   "the snowy Arctic question 3a"
+  ],
+  [
+   9.6,
+   "sign",
+   "POLAR BEAR"
+  ],
+  [
+   9.95,
+   "sign",
+   "FOX"
+  ],
+  [
+   13.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   14.41,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.89,
+   "answer",
+   "POLAR BEAR"
+  ],
+  [
+   16.25,
+   "new shot",
+   "the snowy Arctic the polar bear comes out"
+  ],
+  [
+   16.32,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   17.73,
+   "action",
+   "bear nods"
+  ],
+  [
+   17.73,
+   "word",
+   "POLAR BEAR!"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the snowy Arctic small round ears"
+  ],
+  [
+   22.45,
+   "word",
+   "SMALL EARS!"
+  ],
+  [
+   24.38,
+   "new shot",
+   "the snowy Arctic count the bear's ears"
+  ],
+  [
+   26.49,
+   "word",
+   "1"
+  ],
+  [
+   26.78,
+   "word",
+   "2"
+  ],
+  [
+   27.81,
+   "new shot",
+   "the snowy Arctic why so small"
+  ],
+  [
+   30.28,
+   "action",
+   "bear looks"
+  ],
+  [
+   30.28,
+   "word",
+   "?"
+  ],
+  [
+   33.75,
+   "new place",
+   "the picture board (pink) board: warmth in"
+  ],
+  [
+   35.25,
+   "word",
+   "WARM!"
+  ],
+  [
+   38.75,
+   "new place",
+   "the picture board (blue) board: big ears, small ears"
+  ],
+  [
+   39.02,
+   "word",
+   "OUT!"
+  ],
+  [
+   40.55,
+   "action",
+   "the heat rises away"
+  ],
+  [
+   41.35,
+   "word",
+   "IN!"
+  ],
+  [
+   44.06,
+   "new place",
+   "the snowy Arctic short tail"
+  ],
+  [
+   46.15,
+   "word",
+   "SHORT TAIL!"
+  ],
+  [
+   46.7,
+   "action",
+   "the tail wiggles"
+  ],
+  [
+   49.69,
+   "new place",
+   "the zoo gate shiver"
+  ],
+  [
+   52.62,
+   "action",
+   "Milo shivers"
+  ],
+  [
+   52.62,
+   "word",
+   "BRRR!"
+  ],
+  [
+   56.25,
+   "new shot",
+   "the zoo gate cover your ears"
+  ],
+  [
+   59.72,
+   "action",
+   "milo hops"
+  ],
+  [
+   59.72,
+   "word",
+   "COZY!"
+  ],
+  [
+   64.06,
+   "new place",
+   "the snowy Arctic say it: small ears"
+  ],
+  [
+   64.18,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   66.33,
+   "action",
+   "bear nods"
+  ],
+  [
+   68.44,
+   "new place",
+   "the zoo gate hug yourself"
+  ],
+  [
+   72.4,
+   "action",
+   "milo hops"
+  ],
+  [
+   72.4,
+   "word",
+   "HUG!"
+  ],
+  [
+   76.56,
+   "new place",
+   "the picture board (pink) question 3b"
+  ],
+  [
+   79.43,
+   "sign",
+   "BIG"
+  ],
+  [
+   79.78,
+   "sign",
+   "SMALL"
+  ],
+  [
+   81.41,
+   "word",
+   "?"
+  ],
+  [
+   81.89,
+   "thinking dot",
+   "1"
+  ],
+  [
+   82.57,
+   "thinking dot",
+   "2"
+  ],
+  [
+   83.24,
+   "thinking dot",
+   "3"
+  ],
+  [
+   83.73,
+   "answer",
+   "SMALL"
+  ],
+  [
+   85.0,
+   "new place",
+   "the snowy Arctic you remembered"
+  ],
+  [
+   85.16,
+   "word",
+   "SMALL!"
+  ],
+  [
+   86.36,
+   "action",
+   "bear nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "arctic",
+   "say": "Two small, round ears! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.9559583333333332,
+   "words": [
+    [
+     "Two",
+     0.0,
+     0.2
+    ],
+    [
+     "small,",
+     0.2,
+     0.7
+    ],
+    [
+     "round",
+     0.7,
+     1.0
+    ],
+    [
+     "ears!",
+     1.0,
+     1.51
+    ],
+    [
+     "Guess",
+     1.82,
+     2.13
+    ],
+    [
+     "with",
+     2.13,
+     2.28
+    ],
+    [
+     "Milo!",
+     2.28,
+     2.956
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: small ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Here are the last ears. They are small, and round. Whose ears are they?",
+   "t0": 3.75,
+   "t1": 9.0625,
+   "v0": 3.915958333333333,
+   "dur": 4.724291666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.3
+    ],
+    [
+     "are",
+     0.3,
+     0.33
+    ],
+    [
+     "the",
+     0.33,
+     0.44
+    ],
+    [
+     "last",
+     0.44,
+     0.94
+    ],
+    [
+     "ears.",
+     0.94,
+     1.37
+    ],
+    [
+     "They",
+     1.37,
+     1.66
+    ],
+    [
+     "are",
+     1.66,
+     1.73
+    ],
+    [
+     "small,",
+     1.73,
+     2.4
+    ],
+    [
+     "and",
+     2.4,
+     2.56
+    ],
+    [
+     "round.",
+     2.56,
+     3.13
+    ],
+    [
+     "Whose",
+     3.55,
+     3.77
+    ],
+    [
+     "ears",
+     3.77,
+     4.2
+    ],
+    [
+     "are",
+     4.2,
+     4.37
+    ],
+    [
+     "they?",
+     4.37,
+     4.72
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "ears 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Is it the polar bear? Or is it the fennec fox?",
+   "t0": 9.0625,
+   "t1": 16.25,
+   "v0": 9.18025,
+   "dur": 3.3929583333333335,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.33
+    ],
+    [
+     "the",
+     0.33,
+     0.42
+    ],
+    [
+     "polar",
+     0.42,
+     0.9
+    ],
+    [
+     "bear?",
+     0.9,
+     1.3
+    ],
+    [
+     "Or",
+     1.64,
+     1.85
+    ],
+    [
+     "is",
+     1.85,
+     2.03
+    ],
+    [
+     "it",
+     2.03,
+     2.14
+    ],
+    [
+     "the",
+     2.14,
+     2.21
+    ],
+    [
+     "fennec",
+     2.21,
+     2.68
+    ],
+    [
+     "fox?",
+     2.68,
+     3.39
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "It is the polar bear!",
+   "t0": 16.25,
+   "t1": 19.375,
+   "v0": 16.313208333333336,
+   "dur": 1.422625,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.19
+    ],
+    [
+     "is",
+     0.19,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.46
+    ],
+    [
+     "polar",
+     0.46,
+     0.94
+    ],
+    [
+     "bear!",
+     0.94,
+     1.42
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the polar bear comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Here is the fun fact. A polar bear has small, round ears!",
+   "t0": 19.375,
+   "t1": 24.375,
+   "v0": 19.675833333333337,
+   "dur": 4.355291666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.3
+    ],
+    [
+     "is",
+     0.3,
+     0.44
+    ],
+    [
+     "the",
+     0.44,
+     0.52
+    ],
+    [
+     "fun",
+     0.52,
+     0.87
+    ],
+    [
+     "fact.",
+     0.87,
+     1.48
+    ],
+    [
+     "A",
+     1.84,
+     1.89
+    ],
+    [
+     "polar",
+     1.89,
+     2.31
+    ],
+    [
+     "bear",
+     2.31,
+     2.59
+    ],
+    [
+     "has",
+     2.59,
+     2.77
+    ],
+    [
+     "small,",
+     2.77,
+     3.39
+    ],
+    [
+     "round",
+     3.39,
+     3.79
+    ],
+    [
+     "ears!",
+     3.79,
+     4.35
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "small round ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Count the little ears with me. One, two!",
+   "t0": 24.375,
+   "t1": 27.8125,
+   "v0": 24.571125000000006,
+   "dur": 2.7885416666666667,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.35
+    ],
+    [
+     "little",
+     0.35,
+     0.59
+    ],
+    [
+     "ears",
+     0.59,
+     1.06
+    ],
+    [
+     "with",
+     1.06,
+     1.2
+    ],
+    [
+     "me.",
+     1.2,
+     1.55
+    ],
+    [
+     "One,",
+     1.92,
+     2.21
+    ],
+    [
+     "two!",
+     2.21,
+     2.789
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count the bear's ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Why are a polar bear's ears so small?",
+   "t0": 27.8125,
+   "t1": 33.75,
+   "v0": 27.899666666666675,
+   "dur": 2.382625,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.25
+    ],
+    [
+     "are",
+     0.25,
+     0.35
+    ],
+    [
+     "a",
+     0.35,
+     0.39
+    ],
+    [
+     "polar",
+     0.39,
+     0.84
+    ],
+    [
+     "bear's",
+     0.84,
+     1.25
+    ],
+    [
+     "ears",
+     1.25,
+     1.58
+    ],
+    [
+     "so",
+     1.58,
+     1.78
+    ],
+    [
+     "small?",
+     1.78,
+     2.38
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "why so small",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Small ears help keep the warmth in, in the cold, snowy Arctic!",
+   "t0": 33.75,
+   "t1": 38.75,
+   "v0": 33.82229166666668,
+   "dur": 4.6554166666666665,
+   "words": [
+    [
+     "Small",
+     0.01,
+     0.43
+    ],
+    [
+     "ears",
+     0.43,
+     0.84
+    ],
+    [
+     "help",
+     0.84,
+     1.09
+    ],
+    [
+     "keep",
+     1.09,
+     1.34
+    ],
+    [
+     "the",
+     1.34,
+     1.43
+    ],
+    [
+     "warmth",
+     1.43,
+     1.86
+    ],
+    [
+     "in,",
+     1.86,
+     2.17
+    ],
+    [
+     "in",
+     2.54,
+     2.67
+    ],
+    [
+     "the",
+     2.67,
+     2.74
+    ],
+    [
+     "cold,",
+     2.74,
+     3.44
+    ],
+    [
+     "snowy",
+     3.44,
+     3.99
+    ],
+    [
+     "Arctic!",
+     3.99,
+     4.65
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: warmth in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Big fox ears let heat out. Small bear ears keep the warmth in!",
+   "t0": 38.75,
+   "t1": 44.0625,
+   "v0": 39.017708333333346,
+   "dur": 4.682291666666667,
+   "words": [
+    [
+     "Big",
+     0.0,
+     0.25
+    ],
+    [
+     "fox",
+     0.25,
+     0.73
+    ],
+    [
+     "ears",
+     0.73,
+     1.12
+    ],
+    [
+     "let",
+     1.12,
+     1.28
+    ],
+    [
+     "heat",
+     1.28,
+     1.53
+    ],
+    [
+     "out.",
+     1.53,
+     1.93
+    ],
+    [
+     "Small",
+     2.33,
+     2.74
+    ],
+    [
+     "bear",
+     2.74,
+     3.03
+    ],
+    [
+     "ears",
+     3.03,
+     3.46
+    ],
+    [
+     "keep",
+     3.46,
+     3.75
+    ],
+    [
+     "the",
+     3.75,
+     3.84
+    ],
+    [
+     "warmth",
+     3.84,
+     4.34
+    ],
+    [
+     "in!",
+     4.34,
+     4.68
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: big ears, small ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "And look! A polar bear has a short little tail. It keeps the warmth in, too!",
+   "t0": 44.0625,
+   "t1": 49.6875,
+   "v0": 44.24000000000001,
+   "dur": 5.10525,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.23
+    ],
+    [
+     "look!",
+     0.23,
+     0.59
+    ],
+    [
+     "A",
+     0.75,
+     0.82
+    ],
+    [
+     "polar",
+     0.82,
+     1.33
+    ],
+    [
+     "bear",
+     1.33,
+     1.64
+    ],
+    [
+     "has",
+     1.64,
+     1.87
+    ],
+    [
+     "a",
+     1.87,
+     1.91
+    ],
+    [
+     "short",
+     1.91,
+     2.27
+    ],
+    [
+     "little",
+     2.27,
+     2.46
+    ],
+    [
+     "tail.",
+     2.46,
+     2.95
+    ],
+    [
+     "It",
+     3.38,
+     3.5
+    ],
+    [
+     "keeps",
+     3.5,
+     3.81
+    ],
+    [
+     "the",
+     3.81,
+     3.89
+    ],
+    [
+     "warmth",
+     3.89,
+     4.34
+    ],
+    [
+     "in,",
+     4.34,
+     4.58
+    ],
+    [
+     "too!",
+     4.58,
+     5.1
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "short tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you shiver, like you are in the snow? Brrr!",
+   "t0": 49.6875,
+   "t1": 56.25,
+   "v0": 49.885250000000006,
+   "dur": 3.5225416666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.18
+    ],
+    [
+     "you",
+     0.18,
+     0.31
+    ],
+    [
+     "shiver,",
+     0.31,
+     0.76
+    ],
+    [
+     "like",
+     0.76,
+     1.1
+    ],
+    [
+     "you",
+     1.1,
+     1.23
+    ],
+    [
+     "are",
+     1.23,
+     1.32
+    ],
+    [
+     "in",
+     1.32,
+     1.43
+    ],
+    [
+     "the",
+     1.43,
+     1.49
+    ],
+    [
+     "snow?",
+     1.49,
+     2.11
+    ],
+    [
+     "Brrr!",
+     2.73,
+     3.52
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "shiver",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Make small ears! Cover your ears with your hands. So cozy!",
+   "t0": 56.25,
+   "t1": 64.0625,
+   "v0": 56.34779166666667,
+   "dur": 4.080541666666667,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.22
+    ],
+    [
+     "small",
+     0.22,
+     0.59
+    ],
+    [
+     "ears!",
+     0.59,
+     1.15
+    ],
+    [
+     "Cover",
+     1.45,
+     1.75
+    ],
+    [
+     "your",
+     1.75,
+     1.92
+    ],
+    [
+     "ears",
+     1.92,
+     2.37
+    ],
+    [
+     "with",
+     2.37,
+     2.48
+    ],
+    [
+     "your",
+     2.48,
+     2.58
+    ],
+    [
+     "hands.",
+     2.58,
+     3.15
+    ],
+    [
+     "So",
+     3.15,
+     3.37
+    ],
+    [
+     "cozy!",
+     3.37,
+     4.08
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "cover your ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Say it with me. A polar bear has small, round ears!",
+   "t0": 64.0625,
+   "t1": 68.4375,
+   "v0": 64.16833333333335,
+   "dur": 3.7912916666666665,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.36
+    ],
+    [
+     "with",
+     0.36,
+     0.52
+    ],
+    [
+     "me.",
+     0.52,
+     0.84
+    ],
+    [
+     "A",
+     1.24,
+     1.27
+    ],
+    [
+     "polar",
+     1.27,
+     1.68
+    ],
+    [
+     "bear",
+     1.68,
+     1.97
+    ],
+    [
+     "has",
+     1.97,
+     2.16
+    ],
+    [
+     "small,",
+     2.16,
+     2.8
+    ],
+    [
+     "round",
+     2.8,
+     3.2
+    ],
+    [
+     "ears!",
+     3.2,
+     3.79
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it: small ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you hug yourself, warm and cozy, like a polar bear? Squeeze!",
+   "t0": 68.4375,
+   "t1": 76.5625,
+   "v0": 68.49962500000002,
+   "dur": 4.581416666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.15
+    ],
+    [
+     "you",
+     0.15,
+     0.27
+    ],
+    [
+     "hug",
+     0.27,
+     0.49
+    ],
+    [
+     "yourself,",
+     0.49,
+     1.12
+    ],
+    [
+     "warm",
+     1.12,
+     1.67
+    ],
+    [
+     "and",
+     1.67,
+     1.82
+    ],
+    [
+     "cozy,",
+     1.82,
+     2.39
+    ],
+    [
+     "like",
+     2.39,
+     2.55
+    ],
+    [
+     "a",
+     2.55,
+     2.6
+    ],
+    [
+     "polar",
+     2.6,
+     3.06
+    ],
+    [
+     "bear?",
+     3.06,
+     3.46
+    ],
+    [
+     "Squeeze!",
+     3.9,
+     4.58
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hug yourself",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Quick check! Which ears keep the warmth in? Big ears, or small ears?",
+   "t0": 76.5625,
+   "t1": 85.0,
+   "v0": 76.6210416666667,
+   "dur": 4.786041666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.21
+    ],
+    [
+     "check!",
+     0.21,
+     0.66
+    ],
+    [
+     "Which",
+     0.66,
+     0.88
+    ],
+    [
+     "ears",
+     0.88,
+     1.31
+    ],
+    [
+     "keep",
+     1.31,
+     1.54
+    ],
+    [
+     "the",
+     1.54,
+     1.63
+    ],
+    [
+     "warmth",
+     1.63,
+     2.06
+    ],
+    [
+     "in?",
+     2.06,
+     2.38
+    ],
+    [
+     "Big",
+     2.81,
+     3.06
+    ],
+    [
+     "ears,",
+     3.06,
+     3.6
+    ],
+    [
+     "or",
+     3.6,
+     3.74
+    ],
+    [
+     "small",
+     3.74,
+     4.22
+    ],
+    [
+     "ears?",
+     4.22,
+     4.786
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Small ears! You remembered!",
+   "t0": 85.0,
+   "t1": 87.44520833333337,
+   "v0": 85.14708333333337,
+   "dur": 1.878125,
+   "words": [
+    [
+     "Small",
+     0.01,
+     0.42
+    ],
+    [
+     "ears!",
+     0.42,
+     1.07
+    ],
+    [
+     "You",
+     1.07,
+     1.21
+    ],
+    [
+     "remembered!",
+     1.21,
+     1.878
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you remembered",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

@@ -131,20 +131,20 @@ def grass_tall(pid, w=900, h=330, seed=1):
         x = -w / 2 + k * 22 + r.uniform(-6, 6); hh = h * r.uniform(.8, .9); bend = r.uniform(-30, 30); col = r.choice(("#c9a84a", "#d8b85a", "#b8973c", "#e2c46a"))
         blades.append(f'<path d="M{x - 14:.0f} 0 Q{x + bend * .3:.0f} {-hh * .5:.0f} {x + bend:.0f} {-hh:.0f} Q{x + bend * .3 + 8:.0f} {-hh * .5:.0f} {x + 16:.0f} 0Z" fill="{col}"/>')
     wav = " ".join(f"Q{-w / 2 + (k + .5) * w / 8:.0f} {-h * .86:.0f} {-w / 2 + (k + 1) * w / 8:.0f} {-h * .8:.0f}" for k in range(8))
-    base = f'<path d="M{-w / 2 - 10} 120 L{-w / 2 - 10} {-h * .78:.0f} Q{-w / 2} {-h * .82:.0f} {-w / 2} {-h * .8:.0f} {wav} L{w / 2 + 10} 120Z" fill="#c9a447"/>'
+    base = f'<path d="M{-w / 2 - 10} 600 L{-w / 2 - 10} {-h * .78:.0f} Q{-w / 2} {-h * .82:.0f} {-w / 2} {-h * .8:.0f} {wav} L{w / 2 + 10} 600Z" fill="#c9a447"/>'
     return f'<g id="{pid}">{base}{"".join(blades)}</g>'
 
 
 def dune_mound(pid, w=1000, h=300):
     """A round sand dune, base at y = 0: the fox behind it shows only its ears."""
-    return (f'<g id="{pid}"><path d="M{-w / 2} 60 C{-w * .3:.0f} {-h:.0f} {w * .3:.0f} {-h:.0f} {w / 2} 60Z" fill="#f0c878"/><path d="M{-w / 2 + 6} 50 C{-w * .3:.0f} {-h:.0f} {w * .3:.0f} {-h:.0f} {w / 2 - 6} 50" fill="none" stroke="#d9a854" stroke-width="10"/>'
+    return (f'<g id="{pid}"><path d="M{-w / 2} 60 C{-w * .3:.0f} {-h:.0f} {w * .3:.0f} {-h:.0f} {w / 2} 60 L{w / 2} 600 L{-w / 2} 600Z" fill="#f0c878"/><path d="M{-w / 2 + 6} 50 C{-w * .3:.0f} {-h:.0f} {w * .3:.0f} {-h:.0f} {w / 2 - 6} 50" fill="none" stroke="#d9a854" stroke-width="10"/>'
             f'<path d="M{-w * .3:.0f} {-h * .45:.0f} C{-w * .1:.0f} {-h * .7:.0f} {w * .15:.0f} {-h * .72:.0f} {w * .3:.0f} {-h * .5:.0f}" stroke="#fbe3a8" stroke-width="16" fill="none" stroke-linecap="round" opacity=".8"/>'
             '</g>')
 
 
 def snow_bank(pid, w=900, h=280):
     """A soft snow bank, base at y = 0: the polar bear behind it shows only its small round ears."""
-    return (f'<g id="{pid}"><path d="M{-w / 2} 60 C{-w * .4:.0f} {-h:.0f} {-w * .05:.0f} {-h * 1.05:.0f} {w * .1:.0f} {-h * .8:.0f} C{w * .3:.0f} {-h * 1.1:.0f} {w * .45:.0f} {-h * .6:.0f} {w / 2} 60Z" '
+    return (f'<g id="{pid}"><path d="M{-w / 2} 60 C{-w * .4:.0f} {-h:.0f} {-w * .05:.0f} {-h * 1.05:.0f} {w * .1:.0f} {-h * .8:.0f} C{w * .3:.0f} {-h * 1.1:.0f} {w * .45:.0f} {-h * .6:.0f} {w / 2} 60 L{w / 2} 600 L{-w / 2} 600Z" '
             f'fill="#ffffff" stroke="#b9d3ea" stroke-width="10"/><path d="M{-w * .3:.0f} {-h * .5:.0f} q{w * .12:.0f} -{h * .2:.0f} {w * .25:.0f} -{h * .05:.0f}" stroke="#dbeaf7" stroke-width="18" fill="none" stroke-linecap="round"/>'
             '</g>')
 

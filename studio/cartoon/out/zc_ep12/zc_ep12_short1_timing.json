@@ -1,0 +1,1849 @@
+{
+ "id": "zc_ep12_short1",
+ "total": 91.64408333333337,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25
+ ],
+ "plan": {
+  "length": 91.6,
+  "shots": 17,
+  "visual_changes": 99,
+  "mean_gap": 0.93,
+  "longest_gap": 5.37,
+  "longest_gap_at": 60.9,
+  "over_6s": [],
+  "places": [
+   "savanna",
+   "zoo"
+  ],
+  "picture_boards": [],
+  "questions": 10,
+  "longest_without_question": 18.8,
+  "first_words_at": 0.42,
+  "shot_mean": 5.39,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "178/178",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 40.7,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: two ears"
+  ],
+  [
+   0.05,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   0.68,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   1.24,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   2.2,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "the sunny savanna ears 1"
+  ],
+  [
+   3.8,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   5.64,
+   "word",
+   "GRAY!"
+  ],
+  [
+   7.12,
+   "word",
+   "HAIR!"
+  ],
+  [
+   9.69,
+   "new shot",
+   "the sunny savanna question 1a"
+  ],
+  [
+   9.74,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   10.24,
+   "sign",
+   "RHINO"
+  ],
+  [
+   10.59,
+   "sign",
+   "ZEBRA"
+  ],
+  [
+   13.02,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.7,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.86,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   14.37,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.66,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   14.86,
+   "answer",
+   "RHINO"
+  ],
+  [
+   15.94,
+   "new shot",
+   "the sunny savanna the rhino comes out"
+  ],
+  [
+   16.29,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   17.5,
+   "action",
+   "rhi nods"
+  ],
+  [
+   17.5,
+   "word",
+   "RHINO!"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the sunny savanna each ear on its own"
+  ],
+  [
+   19.43,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   22.48,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   22.48,
+   "word",
+   "EACH EAR!"
+  ],
+  [
+   23.7,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   24.06,
+   "new shot",
+   "the sunny savanna forward and back"
+  ],
+  [
+   24.11,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   25.3,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   25.3,
+   "picture",
+   "af"
+  ],
+  [
+   25.3,
+   "word",
+   "FRONT!"
+  ],
+  [
+   27.51,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   27.51,
+   "picture",
+   "ab"
+  ],
+  [
+   27.51,
+   "word",
+   "BACK!"
+  ],
+  [
+   28.44,
+   "new shot",
+   "the sunny savanna watch the ears"
+  ],
+  [
+   28.49,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   28.55,
+   "word",
+   "WATCH!"
+  ],
+  [
+   29.9,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   30.54,
+   "action",
+   "the rhino's near ear turns back"
+  ],
+  [
+   31.12,
+   "action",
+   "the rhino's far ear turns forward"
+  ],
+  [
+   31.74,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   32.5,
+   "new shot",
+   "the sunny savanna what does it do"
+  ],
+  [
+   32.55,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   34.64,
+   "picture",
+   "r1"
+  ],
+  [
+   35.35,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   36.17,
+   "word",
+   "?"
+  ],
+  [
+   39.38,
+   "new shot",
+   "the sunny savanna ears perk up"
+  ],
+  [
+   39.42,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   40.43,
+   "action",
+   "both ears perk straight up"
+  ],
+  [
+   40.43,
+   "word",
+   "PERK UP!"
+  ],
+  [
+   42.19,
+   "new shot",
+   "the sunny savanna listen closely"
+  ],
+  [
+   42.24,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   42.57,
+   "action",
+   "both ears perk straight up"
+  ],
+  [
+   45.45,
+   "word",
+   "PERK!"
+  ],
+  [
+   46.25,
+   "new place",
+   "the zoo gate hands up like perky ears"
+  ],
+  [
+   50.54,
+   "action",
+   "milo hops"
+  ],
+  [
+   50.54,
+   "word",
+   "PERK!"
+  ],
+  [
+   53.75,
+   "new place",
+   "the sunny savanna hears very well"
+  ],
+  [
+   55.14,
+   "action",
+   "blink"
+  ],
+  [
+   55.84,
+   "action",
+   "blink"
+  ],
+  [
+   56.7,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   56.7,
+   "picture",
+   "r2"
+  ],
+  [
+   56.7,
+   "word",
+   "HEARS WELL!"
+  ],
+  [
+   57.89,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   58.12,
+   "new place",
+   "the zoo gate hands like rhino ears"
+  ],
+  [
+   59.44,
+   "action",
+   "milo hops"
+  ],
+  [
+   59.44,
+   "word",
+   "FRONT!"
+  ],
+  [
+   60.88,
+   "action",
+   "milo hops"
+  ],
+  [
+   60.88,
+   "word",
+   "BACK!"
+  ],
+  [
+   66.25,
+   "new place",
+   "the sunny savanna say it: each ear"
+  ],
+  [
+   66.3,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   66.31,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   67.72,
+   "action",
+   "rhi nods"
+  ],
+  [
+   68.7,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   69.99,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   70.31,
+   "new place",
+   "the zoo gate be quiet and listen"
+  ],
+  [
+   71.26,
+   "word",
+   "SHH!"
+  ],
+  [
+   74.3,
+   "action",
+   "milo hops"
+  ],
+  [
+   78.12,
+   "new place",
+   "the sunny savanna question 1b"
+  ],
+  [
+   78.17,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   79.72,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   80.76,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   82.01,
+   "sign",
+   "YES"
+  ],
+  [
+   82.36,
+   "sign",
+   "NO"
+  ],
+  [
+   83.26,
+   "word",
+   "?"
+  ],
+  [
+   83.75,
+   "thinking dot",
+   "1"
+  ],
+  [
+   84.42,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.58,
+   "action",
+   "the rhino's far ear turns forward"
+  ],
+  [
+   84.58,
+   "action",
+   "the rhino's near ear turns back"
+  ],
+  [
+   85.09,
+   "thinking dot",
+   "3"
+  ],
+  [
+   85.58,
+   "answer",
+   "YES"
+  ],
+  [
+   86.88,
+   "new shot",
+   "the sunny savanna great job 1"
+  ],
+  [
+   86.92,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   87.14,
+   "word",
+   "YES!"
+  ],
+  [
+   88.02,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   89.06,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   89.87,
+   "action",
+   "rhi nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "Two ears in the grass! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.9351666666666665,
+   "words": [
+    [
+     "Two",
+     0.0,
+     0.26
+    ],
+    [
+     "ears",
+     0.26,
+     0.65
+    ],
+    [
+     "in",
+     0.65,
+     0.74
+    ],
+    [
+     "the",
+     0.74,
+     0.82
+    ],
+    [
+     "grass!",
+     0.82,
+     1.5
+    ],
+    [
+     "Guess",
+     1.78,
+     2.11
+    ],
+    [
+     "with",
+     2.11,
+     2.26
+    ],
+    [
+     "Milo!",
+     2.26,
+     2.93
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: two ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here are two ears. They are gray, with a little fringe of hair. Whose ears are they?",
+   "t0": 3.75,
+   "t1": 9.6875,
+   "v0": 3.8951666666666664,
+   "dur": 5.298291666666667,
+   "words": [
+    [
+     "Here",
+     0.08,
+     0.24
+    ],
+    [
+     "are",
+     0.24,
+     0.35
+    ],
+    [
+     "two",
+     0.35,
+     0.66
+    ],
+    [
+     "ears.",
+     0.66,
+     1.26
+    ],
+    [
+     "They",
+     1.51,
+     1.66
+    ],
+    [
+     "are",
+     1.66,
+     1.74
+    ],
+    [
+     "gray,",
+     1.74,
+     2.34
+    ],
+    [
+     "with",
+     2.34,
+     2.52
+    ],
+    [
+     "a",
+     2.52,
+     2.56
+    ],
+    [
+     "little",
+     2.56,
+     2.75
+    ],
+    [
+     "fringe",
+     2.75,
+     3.14
+    ],
+    [
+     "of",
+     3.14,
+     3.22
+    ],
+    [
+     "hair.",
+     3.22,
+     3.63
+    ],
+    [
+     "Whose",
+     4.07,
+     4.34
+    ],
+    [
+     "ears",
+     4.34,
+     4.73
+    ],
+    [
+     "are",
+     4.73,
+     4.93
+    ],
+    [
+     "they?",
+     4.93,
+     5.298
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "ears 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Is it the rhino? Or is it the zebra?",
+   "t0": 9.6875,
+   "t1": 15.9375,
+   "v0": 9.733458333333331,
+   "dur": 2.804375,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.28
+    ],
+    [
+     "it",
+     0.28,
+     0.4
+    ],
+    [
+     "the",
+     0.4,
+     0.51
+    ],
+    [
+     "rhino?",
+     0.51,
+     1.19
+    ],
+    [
+     "Or",
+     1.48,
+     1.71
+    ],
+    [
+     "is",
+     1.71,
+     1.91
+    ],
+    [
+     "it",
+     1.91,
+     2.02
+    ],
+    [
+     "the",
+     2.02,
+     2.11
+    ],
+    [
+     "zebra?",
+     2.11,
+     2.8
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "It is the rhino!",
+   "t0": 15.9375,
+   "t1": 19.375,
+   "v0": 16.277833333333334,
+   "dur": 1.220375,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.18
+    ],
+    [
+     "is",
+     0.18,
+     0.41
+    ],
+    [
+     "the",
+     0.41,
+     0.51
+    ],
+    [
+     "rhino!",
+     0.51,
+     1.22
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the rhino comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here is the fun fact. A rhino can move each ear, on its own!",
+   "t0": 19.375,
+   "t1": 24.0625,
+   "v0": 19.438208333333336,
+   "dur": 4.264833333333334,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.32
+    ],
+    [
+     "is",
+     0.32,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.56
+    ],
+    [
+     "fun",
+     0.56,
+     0.96
+    ],
+    [
+     "fact.",
+     0.96,
+     1.57
+    ],
+    [
+     "A",
+     1.98,
+     2.06
+    ],
+    [
+     "rhino",
+     2.06,
+     2.63
+    ],
+    [
+     "can",
+     2.63,
+     2.81
+    ],
+    [
+     "move",
+     2.81,
+     3.04
+    ],
+    [
+     "each",
+     3.04,
+     3.25
+    ],
+    [
+     "ear,",
+     3.25,
+     3.54
+    ],
+    [
+     "on",
+     3.54,
+     3.7
+    ],
+    [
+     "its",
+     3.7,
+     3.87
+    ],
+    [
+     "own!",
+     3.87,
+     4.26
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "each ear on its own",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "One ear can point forward, while the other ear points back!",
+   "t0": 24.0625,
+   "t1": 28.4375,
+   "v0": 24.243041666666674,
+   "dur": 3.749833333333333,
+   "words": [
+    [
+     "One",
+     0.02,
+     0.3
+    ],
+    [
+     "ear",
+     0.3,
+     0.57
+    ],
+    [
+     "can",
+     0.57,
+     0.8
+    ],
+    [
+     "point",
+     0.8,
+     1.06
+    ],
+    [
+     "forward,",
+     1.06,
+     1.67
+    ],
+    [
+     "while",
+     2.01,
+     2.14
+    ],
+    [
+     "the",
+     2.14,
+     2.29
+    ],
+    [
+     "other",
+     2.29,
+     2.52
+    ],
+    [
+     "ear",
+     2.52,
+     2.8
+    ],
+    [
+     "points",
+     2.8,
+     3.27
+    ],
+    [
+     "back!",
+     3.27,
+     3.75
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "forward and back",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Watch the ears! Forward, and back. Forward, and back!",
+   "t0": 28.4375,
+   "t1": 32.5,
+   "v0": 28.532875000000008,
+   "dur": 3.683125,
+   "words": [
+    [
+     "Watch",
+     0.02,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.65
+    ],
+    [
+     "ears!",
+     0.65,
+     1.16
+    ],
+    [
+     "Forward,",
+     1.37,
+     1.87
+    ],
+    [
+     "and",
+     1.87,
+     2.01
+    ],
+    [
+     "back.",
+     2.01,
+     2.59
+    ],
+    [
+     "Forward,",
+     2.59,
+     3.07
+    ],
+    [
+     "and",
+     3.07,
+     3.21
+    ],
+    [
+     "back!",
+     3.21,
+     3.68
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "watch the ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "What does a rhino do, when it hears something interesting?",
+   "t0": 32.5,
+   "t1": 39.375,
+   "v0": 32.75600000000001,
+   "dur": 3.412333333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.34
+    ],
+    [
+     "a",
+     0.34,
+     0.41
+    ],
+    [
+     "rhino",
+     0.41,
+     0.94
+    ],
+    [
+     "do,",
+     0.94,
+     1.39
+    ],
+    [
+     "when",
+     1.66,
+     1.79
+    ],
+    [
+     "it",
+     1.79,
+     1.88
+    ],
+    [
+     "hears",
+     1.88,
+     2.14
+    ],
+    [
+     "something",
+     2.14,
+     2.59
+    ],
+    [
+     "interesting?",
+     2.59,
+     3.41
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "what does it do",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Both ears perk straight up! Boing!",
+   "t0": 39.375,
+   "t1": 42.1875,
+   "v0": 39.70833333333334,
+   "dur": 2.2837083333333332,
+   "words": [
+    [
+     "Both",
+     0.0,
+     0.36
+    ],
+    [
+     "ears",
+     0.36,
+     0.72
+    ],
+    [
+     "perk",
+     0.72,
+     1.0
+    ],
+    [
+     "straight",
+     1.0,
+     1.29
+    ],
+    [
+     "up!",
+     1.29,
+     1.55
+    ],
+    [
+     "Boing!",
+     1.55,
+     2.28
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "ears perk up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Up go the ears, to listen very closely. Perk!",
+   "t0": 42.1875,
+   "t1": 46.25,
+   "v0": 42.53204166666668,
+   "dur": 3.4254583333333333,
+   "words": [
+    [
+     "Up",
+     0.04,
+     0.24
+    ],
+    [
+     "go",
+     0.24,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.61
+    ],
+    [
+     "ears,",
+     0.61,
+     1.02
+    ],
+    [
+     "to",
+     1.02,
+     1.15
+    ],
+    [
+     "listen",
+     1.15,
+     1.52
+    ],
+    [
+     "very",
+     1.52,
+     1.8
+    ],
+    [
+     "closely.",
+     1.8,
+     2.54
+    ],
+    [
+     "Perk!",
+     2.92,
+     3.42
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "listen closely",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now point both hands straight up, like perky rhino ears. Perk!",
+   "t0": 46.25,
+   "t1": 53.75,
+   "v0": 46.49750000000001,
+   "dur": 4.633708333333334,
+   "words": [
+    [
+     "Now",
+     0.02,
+     0.32
+    ],
+    [
+     "point",
+     0.32,
+     0.64
+    ],
+    [
+     "both",
+     0.64,
+     0.9
+    ],
+    [
+     "hands",
+     0.9,
+     1.2
+    ],
+    [
+     "straight",
+     1.2,
+     1.49
+    ],
+    [
+     "up,",
+     1.49,
+     1.9
+    ],
+    [
+     "like",
+     1.9,
+     2.12
+    ],
+    [
+     "perky",
+     2.12,
+     2.56
+    ],
+    [
+     "rhino",
+     2.56,
+     3.06
+    ],
+    [
+     "ears.",
+     3.06,
+     3.62
+    ],
+    [
+     "Perk!",
+     4.04,
+     4.63
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hands up like perky ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "A rhino can't see very well. But it hears very well!",
+   "t0": 53.75,
+   "t1": 58.125,
+   "v0": 54.07120833333334,
+   "dur": 3.825,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.1
+    ],
+    [
+     "rhino",
+     0.1,
+     0.71
+    ],
+    [
+     "can't",
+     0.71,
+     1.07
+    ],
+    [
+     "see",
+     1.07,
+     1.29
+    ],
+    [
+     "very",
+     1.29,
+     1.61
+    ],
+    [
+     "well.",
+     1.61,
+     2.06
+    ],
+    [
+     "But",
+     2.42,
+     2.54
+    ],
+    [
+     "it",
+     2.54,
+     2.63
+    ],
+    [
+     "hears",
+     2.63,
+     3.0
+    ],
+    [
+     "very",
+     3.0,
+     3.39
+    ],
+    [
+     "well!",
+     3.39,
+     3.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "hears very well",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Point one hand forward, and one hand back, like rhino ears!",
+   "t0": 58.125,
+   "t1": 66.25,
+   "v0": 58.43620833333334,
+   "dur": 4.322166666666667,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.32
+    ],
+    [
+     "one",
+     0.32,
+     0.62
+    ],
+    [
+     "hand",
+     0.62,
+     1.0
+    ],
+    [
+     "forward,",
+     1.0,
+     1.75
+    ],
+    [
+     "and",
+     1.75,
+     1.91
+    ],
+    [
+     "one",
+     1.91,
+     2.11
+    ],
+    [
+     "hand",
+     2.11,
+     2.44
+    ],
+    [
+     "back,",
+     2.44,
+     3.02
+    ],
+    [
+     "like",
+     3.02,
+     3.21
+    ],
+    [
+     "rhino",
+     3.21,
+     3.74
+    ],
+    [
+     "ears!",
+     3.74,
+     4.32
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hands like rhino ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Say it with me. A rhino can move each ear, on its own!",
+   "t0": 66.25,
+   "t1": 70.3125,
+   "v0": 66.29837500000002,
+   "dur": 3.695,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.35
+    ],
+    [
+     "it",
+     0.35,
+     0.43
+    ],
+    [
+     "with",
+     0.43,
+     0.6
+    ],
+    [
+     "me.",
+     0.6,
+     0.93
+    ],
+    [
+     "A",
+     1.34,
+     1.42
+    ],
+    [
+     "rhino",
+     1.42,
+     1.99
+    ],
+    [
+     "can",
+     1.99,
+     2.18
+    ],
+    [
+     "move",
+     2.18,
+     2.4
+    ],
+    [
+     "each",
+     2.4,
+     2.6
+    ],
+    [
+     "ear,",
+     2.6,
+     2.95
+    ],
+    [
+     "on",
+     2.95,
+     3.11
+    ],
+    [
+     "its",
+     3.11,
+     3.28
+    ],
+    [
+     "own!",
+     3.28,
+     3.69
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: each ear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now be very quiet, like a listening rhino. What can you hear?",
+   "t0": 70.3125,
+   "t1": 78.125,
+   "v0": 70.53337500000002,
+   "dur": 4.190958333333334,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.29
+    ],
+    [
+     "be",
+     0.29,
+     0.42
+    ],
+    [
+     "very",
+     0.42,
+     0.73
+    ],
+    [
+     "quiet,",
+     0.73,
+     1.52
+    ],
+    [
+     "like",
+     1.52,
+     1.68
+    ],
+    [
+     "a",
+     1.68,
+     1.72
+    ],
+    [
+     "listening",
+     1.72,
+     2.32
+    ],
+    [
+     "rhino.",
+     2.32,
+     2.91
+    ],
+    [
+     "What",
+     3.38,
+     3.52
+    ],
+    [
+     "can",
+     3.52,
+     3.66
+    ],
+    [
+     "you",
+     3.66,
+     3.77
+    ],
+    [
+     "hear?",
+     3.77,
+     4.19
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "be quiet and listen",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Quick check! Can a rhino turn its two ears different ways? Yes, or no?",
+   "t0": 78.125,
+   "t1": 86.875,
+   "v0": 78.26433333333335,
+   "dur": 4.996666666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.23
+    ],
+    [
+     "check!",
+     0.23,
+     0.7
+    ],
+    [
+     "Can",
+     0.7,
+     0.88
+    ],
+    [
+     "a",
+     0.88,
+     0.93
+    ],
+    [
+     "rhino",
+     0.93,
+     1.46
+    ],
+    [
+     "turn",
+     1.46,
+     1.73
+    ],
+    [
+     "its",
+     1.73,
+     1.91
+    ],
+    [
+     "two",
+     1.91,
+     2.14
+    ],
+    [
+     "ears",
+     2.14,
+     2.5
+    ],
+    [
+     "different",
+     2.5,
+     2.81
+    ],
+    [
+     "ways?",
+     2.81,
+     3.3
+    ],
+    [
+     "Yes,",
+     3.75,
+     4.35
+    ],
+    [
+     "or",
+     4.35,
+     4.58
+    ],
+    [
+     "no?",
+     4.58,
+     4.997
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Yes! One ear forward, one ear back. Great job!",
+   "t0": 86.875,
+   "t1": 91.24408333333336,
+   "v0": 87.00100000000003,
+   "dur": 3.8230833333333334,
+   "words": [
+    [
+     "Yes!",
+     0.14,
+     0.53
+    ],
+    [
+     "One",
+     0.53,
+     0.79
+    ],
+    [
+     "ear",
+     0.79,
+     1.02
+    ],
+    [
+     "forward,",
+     1.02,
+     1.58
+    ],
+    [
+     "one",
+     1.58,
+     1.82
+    ],
+    [
+     "ear",
+     1.82,
+     2.06
+    ],
+    [
+     "back.",
+     2.06,
+     2.54
+    ],
+    [
+     "Great",
+     2.87,
+     3.2
+    ],
+    [
+     "job!",
+     3.2,
+     3.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "great job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

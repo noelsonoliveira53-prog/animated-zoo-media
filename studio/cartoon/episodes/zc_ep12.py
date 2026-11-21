@@ -104,8 +104,8 @@ def WIGGLE(at, who, kind, n=2):  # both ears twitch together (a listening look)
 # ------------------------------------------------------------------ the hiding places: drawn IN FRONT of the actors, so only the ears show
 GRASS = lambda s=1.0, hid=False: prop("gr", lambda q: A.grass_tall(q, 2600, 530), 1000, 985, s, hid, p=(1000, 985, s))
 DUNE = lambda: prop("du", lambda q: A.dune_mound(q, 1500, 530), 1150, 995, 1.0, p=(1150, 995, 1.0))
-SNOW = lambda: prop("sn", lambda q: A.snow_bank(q, 1100, 470), 1000, 990, 1.0, p=(1000, 990, 1.0))
-def SINK(at, name, dy=700): return ("to", at, f"#{{p}}{name}_w", {"y": f"+={dy}", "duration": .8, "ease": "power2.in"}, "the hiding place sinks away")
+SNOW = lambda: prop("sn", lambda q: A.snow_bank(q, 1600, 470), 1000, 990, 1.0, p=(1000, 990, 1.0))
+def SINK(at, name, dy=1500): return ("to", at, f"#{{p}}{name}_w", {"y": f"+={dy}", "duration": .8, "ease": "power2.in"}, "the hiding place sinks away")
 # cameras on the ears above the hiding places (16:9, 9:16)
 RE = (1190, 545, 700); REP = (1190, 560, 900)                       # rhino ears above the grass
 FE = (1170, 540, 900); FEP = (1170, 520, 1000)                      # fox ears above the dune
@@ -117,12 +117,12 @@ QM = lambda x=1480, y=860, s=.8, hid=False: prop("qm", A11.qmark, x, y, s, hid, 
 
 # ------------------------------------------------------------------ cameras on the animals
 RB = C("savanna", "rhi", "body", 1250, 40, -80); RBP = WV("savanna", ["rhi"], floor=.72, top=.44, pad=.08)
-RH = C("savanna", "rhi", "head", 900, -40, -10); RHP = V("savanna", "rhi", "head", 1000, -60, 60)
+RH = C("savanna", "rhi", "head", 900, -40, -10); RHP = V("savanna", "rhi", "head", 1300, -60, -60)
 FB = C("dunes", "fox", "all", 1150, 20, -40); FBP = WV("dunes", ["fox"], floor=.72, top=.42, pad=.1)
-FH = C("dunes", "fox", "head", 900, -30, -80); FHP = V("dunes", "fox", "head", 1000, -40, -20)
+FH = C("dunes", "fox", "head", 900, -30, -80); FHP = V("dunes", "fox", "head", 1300, -40, -60)
 BB = C("arctic", "bear", "all", 1150, 40, -40); BBP = WV("arctic", ["bear"], floor=.72, top=.44, pad=.1)
-BH = C("arctic", "bear", "head", 800, -60, -30); BHP = V("arctic", "bear", "head", 900, -60, 20)
-BT = C("arctic", "bear", "tail", 700, 54, -20); BTP = V("arctic", "bear", "tail", 1000, 120, 40)
+BH = C("arctic", "bear", "head", 800, -60, -30); BHP = V("arctic", "bear", "head", 1200, -60, -40)
+BT = C("arctic", "bear", "tail", 1000, 150, -60); BTP = V("arctic", "bear", "tail", 1000, 120, 40)
 
 # picture boards
 FFACE = lambda name="ff", x=960, y=640, s=.85, p=(960, 700, 1.05): prop(name, A.fox_face, x, y, s, p=p)
@@ -166,17 +166,17 @@ SHOTS = [
       words=[("w:each", "EACH EAR!", .82, .32, 1.0, "sun", (.5, .3), .9)]),
     S("savanna", (P("savanna", "rhi", "ears")[0] + 40, P("savanna", "rhi", "ears")[1] + 40, 760), "One ear can point forward, while the other ear points back!", part=1, tag="forward and back", hide=["milo"],
       pcam=(P("savanna", "rhi", "ears")[0] + 40, P("savanna", "rhi", "ears")[1] + 60, 900),
-      props=[ARROW("af", P("savanna", "rhi", "ears")[0] + 210, P("savanna", "rhi", "ears")[1] - 10, s=.9), ARROW("ab", P("savanna", "rhi", "ears")[0] - 170, P("savanna", "rhi", "ears")[1] - 10, True, .9)],
+      props=[ARROW("af", P("savanna", "rhi", "ears")[0] + 210, P("savanna", "rhi", "ears")[1] - 10, s=.9, p=(P("savanna", "rhi", "ears")[0] + 190, P("savanna", "rhi", "ears")[1] - 20, .65)), ARROW("ab", P("savanna", "rhi", "ears")[0] - 170, P("savanna", "rhi", "ears")[1] - 10, True, .9, p=(P("savanna", "rhi", "ears")[0] - 110, P("savanna", "rhi", "ears")[1] - 20, .65))],
       fx=[NOFLICK("rhi"), EAR("w:forward,", "rhi", "rhino", "ear", 36), ("show", "w:forward,", "af"), EAR("w:back!", "rhi", "rhino", "ear2", -36), ("show", "w:back!", "ab")],
       words=[("w:forward,", "FRONT!", .84, .17, .9, "sun", (.75, .27), .8), ("w:back!", "BACK!", .42, .17, .9, "sun", (.3, .27), .8)]),
     S("savanna", RB, "Watch the ears! Forward, and back. Forward, and back!", part=1, q=True, tag="watch the ears", hide=["milo"], pcam=RBP, cam2=W(RB),
       fx=[NOFLICK("rhi"), EAR("w:Forward,:1", "rhi", "rhino", "ear", 34), EAR("w:back.:1", "rhi", "rhino", "ear", -30), EAR("w:Forward,:2", "rhi", "rhino", "ear2", 30), EAR("w:back!:2", "rhi", "rhino", "ear2", -34)],
       words=[("w:Watch", "WATCH!", .26, .34, 1.1, "sun", (.5, .34), .9)]),
     S("savanna", RH, "What does a rhino do, when it hears something interesting?", part=1, q=True, tag="what does it do", pause=3.0, hide=["milo"], pcam=RHP, cam2=W(RH, 1.06),
-      props=[RINGS("r1", P("savanna", "rhi", "ears")[0] - 190, P("savanna", "rhi", "ears")[1] + 10, .8, True)], fx=[NOFLICK("rhi"), ("show", "w:hears", "r1"), RINGPULSE("w:interesting?", "r1")],
+      props=[RINGS("r1", P("savanna", "rhi", "ears")[0] - 190, P("savanna", "rhi", "ears")[1] + 10, .8, True, p=(P("savanna", "rhi", "ears")[0] - 90, P("savanna", "rhi", "ears")[1] + 10, .55))], fx=[NOFLICK("rhi"), ("show", "w:hears", "r1"), RINGPULSE("w:interesting?", "r1")],
       words=[("e:interesting?", "?", .8, .3, 2.0, "sun", (.5, .34), 1.3)]),
     S("savanna", RH, "Both ears perk straight up! Boing!", part=1, tag="ears perk up", hide=["milo"], pcam=RHP, cam2=(RH[0], RH[1], round(RH[2] * .92)),
-      fx=[NOFLICK("rhi")] + PERK("w:perk", "rhi", "rhino") + [PULSE("w:Boing!", "#{p}rhi-ear,#{p}rhi-ear2", 1.1, 2)], words=[("w:perk", "PERK UP!", .76, .2, 1.0, "sun", (.5, .3), .9)]),
+      fx=[NOFLICK("rhi")] + PERK("w:perk", "rhi", "rhino") + [PULSE("w:Boing!", "#{p}rhi-ear,#{p}rhi-ear2", 1.1, 2)], words=[("w:perk", "PERK UP!", .76, .2, 1.0, "sun", (.5, .32), .85)]),
     S("savanna", RB, "Up go the ears, to listen very closely. Perk!", part=1, tag="listen closely", hide=["milo"], pcam=RBP, cam2=W(RB, 1.05),
       fx=[NOFLICK("rhi")] + PERK("w:Up", "rhi", "rhino") + [PULSE("w:Perk!", "#{p}rhi-ear,#{p}rhi-ear2", 1.12, 2)], words=[("w:Perk!", "PERK!", .26, .34, 1.2, "sun", (.5, .34), 1.0)]),
     S("zoo", say="Now point both hands straight up, like perky rhino ears. Perk!", part=1, q=True, tag="hands up like perky ears", pause=2.4, fx=[("hop", "w:Perk!", "milo")],
@@ -186,7 +186,7 @@ SHOTS = [
       fx=[("blinkslow", "w:see", "rhi"), ("show", "w:hears", "r2"), RINGPULSE("w:hears", "r2")] + WIGGLE("e:well!:2", "rhi", "rhino"),
       words=[("w:hears", "HEARS WELL!", .24, .3, 1.0, "sun", (.5, .32), .8)]),
     S("zoo", say="Point one hand forward, and one hand back, like rhino ears!", part=1, q=True, tag="hands like rhino ears", pause=3.0, fx=[("hop", "w:forward,", "milo"), ("hop", "w:back,", "milo")],
-      words=[("w:forward,", "FRONT!", .84, .3, .9, "sun", (.5, .33), .85), ("w:back,", "BACK!", .84, .42, .9, "sun", (.5, .45), .85)], **MILO("zoo", 940)),
+      words=[("w:forward,", "FRONT!", .84, .3, .9, "sun", (.5, .26), .85), ("w:back,", "BACK!", .84, .42, .9, "sun", (.5, .34), .85)], **MILO("zoo", 940)),
     S("savanna", RB, "Say it with me. A rhino can move each ear, on its own!", part=1, q=True, tag="say it: each ear", hide=["milo"], pcam=RBP,
       fx=[NOFLICK("rhi"), EAR("w:each", "rhi", "rhino", "ear", 30), EAR("e:own!", "rhi", "rhino", "ear2", -30), ("nod", "w:rhino", "rhi")],
       words=[("w:Say", "SAY IT!", .26, .34, 1.1, "sun", (.5, .34), .9)]),
@@ -207,25 +207,25 @@ SHOTS = [
     S("dunes", (1000, 640, 1800), "It is the fennec fox!", part=2, tag="the fox comes out", pause=1.4, hide=["milo"], pcam=(1000, 580, 1900), cam2=(1000, 640, 1860),
       props=[DUNE()], fx=[SINK("w:It", "du"), ("nod", "e:fox!", "fox")], words=[("e:fox!", "FENNEC FOX!", .26, .3, 1.0, "sun", (.5, .32), .8)]),
     S("paper", (960, 520, 1500), "Here is the fun fact. A fennec fox is a little fox, with giant ears!", part=2, tag="board: giant ears", pcam=(960, 560, 1700), props=[FFACE()],
-      fx=[PULSE("w:little", "#{p}ff_w", .94), PULSE("w:giant", "#{p}ff-eL,#{p}ff-eR", 1.12, 2)], words=[("w:giant", "GIANT EARS!", .8, .56, .9, "sun", (.5, .85), .8)]),
-    S("paper", (960, 560, 1500), "Its ears can be half as long as its body!", part=2, tag="half as long as its body", pcam=(960, 600, 1500),
+      fx=[PULSE("w:little", "#{p}ff_w", .94), PULSE("w:giant", "#{p}ff-eL,#{p}ff-eR", 1.12, 2)], words=[("w:giant", "GIANT EARS!", .8, .56, .9, "sun", (.5, .74), .8)]),
+    S("paper", (960, 560, 1500), "Its ears can be half as long as its body!", part=2, tag="half as long as its body", pcam=(980, 480, 1700),
       actors=[("fox", "fennec", 980, 720, 1.3)],
       props=[prop("be", lambda q: f'<g id="{q}"><rect x="-16" y="-125" width="32" height="250" rx="16" fill="#ff7aa2" stroke="#402010" stroke-width="7"/></g>', 1375, 265, 1.0, True, p=(1375, 265, 1.0)),
              prop("bb", lambda q: f'<g id="{q}"><rect x="-265" y="-16" width="530" height="32" rx="16" fill="#ff9f43" stroke="#402010" stroke-width="7"/></g>', 1000, 770, 1.0, True, p=(1000, 770, 1.0)),
              prop("bh1", lambda q: f'<g id="{q}"><rect x="-125" y="-16" width="250" height="32" rx="16" fill="#ff7aa2" stroke="#402010" stroke-width="7"/></g>', 865, 818, 1.0, True, p=(865, 818, 1.0)),
              prop("bh2", lambda q: f'<g id="{q}"><rect x="-125" y="-16" width="250" height="32" rx="16" fill="#ff7aa2" stroke="#402010" stroke-width="7"/></g>', 1135, 818, 1.0, True, p=(1135, 818, 1.0))],
       fx=[NOFLICK("fox"), ("show", "w:ears", "be"), PULSE("w:ears", "#{p}fox-ear", 1.08), ("show", "w:half", "bb"), ("show", "w:half", "bh1"), ("show", "w:long", "bh2"), PULSE("w:body!", "#{p}bb_w", 1.06)],
-      words=[("w:half", "HALF!", .2, .3, 1.2, "sun", (.3, .3), 1.0)]),
+      words=[("w:half", "HALF!", .2, .3, 1.2, "sun", (.3, .32), 1.0)]),
     S("dunes", FB, "Wow! That is a lot of ear, for a little fox!", part=2, tag="a lot of ear", hide=["milo"], pcam=FBP, cam2=W(FB, 1.05),
       fx=[NOFLICK("fox")] + WIGGLE("w:ear,", "fox", "fennec", 2) + [("hop", "w:Wow!", "fox")], words=[("w:Wow!", "WOW!", .26, .34, 1.3, "sun", (.5, .34), 1.0)]),
-    S("dunes", (P("dunes", "fox", "ears")[0], P("dunes", "fox", "ears")[1] + 40, 700), "Count the giant ears with me. One, two!", part=2, q=True, tag="count the fox's ears", hide=["milo"], pcam=FHP, cam2=(P("dunes", "fox", "ears")[0], P("dunes", "fox", "ears")[1] + 40, 760),
+    S("dunes", (P("dunes", "fox", "ears")[0] + 20, 600, 1000), "Count the giant ears with me. One, two!", part=2, q=True, tag="count the fox's ears", hide=["milo"], pcam=V("dunes", "fox", "ears", 1300, 0, 60), cam2=(P("dunes", "fox", "ears")[0] + 20, 600, 940),
       fx=[NOFLICK("fox"), PULSE("w:One,", "#{p}fox-ear", 1.12), PULSE("w:two!", "#{p}fox-ear2", 1.12)],
       words=[("w:One,", "1", .22, .3, 1.3, "sun", (.3, .3), 1.1), ("w:two!", "2", .82, .3, 1.3, "sun", (.7, .3), 1.1)]),
     S("dunes", FH, "What do those giant ears do?", part=2, q=True, tag="what do the ears do", pause=3.0, hide=["milo"], pcam=FHP, cam2=W(FH, 1.06),
       fx=[NOFLICK("fox")] + WIGGLE("w:giant", "fox", "fennec"), words=[("e:do?:2", "?", .2, .34, 2.0, "sun", (.5, .34), 1.3)]),
     S("paper_blue", (960, 560, 1600), "They listen for food, hiding under the sand. Like a little beetle!", part=2, tag="board: food under the sand", pcam=(960, 600, 1500), props=[SCUT()],
       fx=[RINGPULSE("w:listen", "sc-r"), ("to", "w:beetle!", "#{p}sc-bug", {"x": 18, "duration": .15, "yoyo": True, "repeat": 5}, "the beetle wiggles"), RINGPULSE("w:hiding", "sc-r")],
-      words=[("w:listen", "LISTEN!", .5, .12, 1.1, "sun", (.5, .26), .9)]),
+      words=[("w:listen", "LISTEN!", .5, .12, 1.1, "sun", (.5, .32), .9)]),
     S("dunes", FB, "Then the fox digs with all four feet. Dig, dig, dig!", part=2, tag="digs with four feet", hide=["milo"], pcam=FBP, cam2=W(FB, 1.04),
       props=[prop("pf", lambda q: art.sand_puffs(q, 18, 4), 1160, 930, .7, True, p=(1160, 930, .7))],
       fx=[("show", "w:digs", "pf"), PULSE("w:Dig,:1", "#{p}pf_w", 1.3), PULSE("w:dig,:2", "#{p}pf_w", 1.3), PULSE("w:dig!:3", "#{p}pf_w", 1.3)]
@@ -235,7 +235,7 @@ SHOTS = [
     S("paper", (960, 520, 1500), "And big ears let extra heat out. That helps the fox stay cool, in the hot desert!", part=2, tag="board: stay cool", pcam=(960, 560, 1700),
       props=[FFACE("ff", 960, 720, .75, p=(960, 760, .95)), prop("h1", A.heat_waves, 767, 375, .8, True, p=(716, 325, .8)), prop("h2", A.heat_waves, 1153, 375, .8, True, p=(1204, 325, .8))],
       fx=[("show", "w:heat", "h1"), ("show", "w:heat", "h2"), ("to", "w:out.", "#{p}h1_w,#{p}h2_w", {"y": "-=60", "duration": 1.4, "ease": "sine.out"}, "the heat rises away"),
-          PULSE("w:cool,", "#{p}ff_w", 1.04)], words=[("w:cool,", "COOL!", .82, .56, 1.2, "sun", (.5, .88), 1.0)]),
+          PULSE("w:cool,", "#{p}ff_w", 1.04)], words=[("w:cool,", "COOL!", .82, .56, 1.2, "sun", (.5, .26), .9)]),
     S("zoo", say="Cup your hands behind your ears, like big fox ears. Listen!", part=2, q=True, tag="cup your ears", pause=3.0, fx=[("hop", "w:Listen!", "milo")],
       words=[("w:Listen!", "LISTEN!", .84, .3, .9, "sun", (.5, .33), .85)], **MILO("zoo", 940)),
     S("dunes", FB, "Say it with me. A fennec fox has giant ears!", part=2, q=True, tag="say it: giant ears", hide=["milo"], pcam=FBP, cam2=W(FB),
@@ -250,14 +250,14 @@ SHOTS = [
     # ---------------------------------------------------------------- PART 3: the polar bear
     S("arctic", BE, "Here are the last ears. They are small, and round. Whose ears are they?", part=3, q=True, tag="ears 3", trans="iris", hide=["milo"], pcam=BEP, cam2=W(BE, 1.05),
       props=[SNOW()], fx=[PULSE("w:small,", "#{p}bear-ear", 1.25), PULSE("w:round.", "#{p}bear-ear", 1.25)],
-      words=[("w:small,", "SMALL!", .2, .32, 1.2, "sun", (.27, .3), 1.0), ("w:round.", "ROUND!", .42, .62, 1.2, "sun", (.73, .3), 1.0)]),
+      words=[("w:small,", "SMALL!", .2, .32, 1.2, "sun", (.5, .27), 1.0), ("w:round.", "ROUND!", .42, .62, 1.2, "sun", (.5, .64), 1.0)]),
     S("arctic", BQ, "Is it the polar bear? Or is it the fennec fox?", part=3, q=True, tag="question 3a", pause=3.2, hide=["milo"], pcam=BQP,
       props=[SNOW()], fx=[("signs", "w:polar", ["POLAR BEAR", "FOX"], 0, "wait:2.0"), PULSE("wait:1.2", "#{p}bear-ear", 1.2, 2)]),
     S("arctic", (1000, 640, 1800), "It is the polar bear!", part=3, tag="the polar bear comes out", pause=1.4, hide=["milo"], pcam=(1000, 580, 1900), cam2=(1000, 640, 1860),
       props=[SNOW()], fx=[SINK("w:It", "sn"), ("nod", "e:bear!", "bear")], words=[("e:bear!", "POLAR BEAR!", .26, .3, 1.0, "sun", (.5, .32), .8)]),
     S("arctic", BH, "Here is the fun fact. A polar bear has small, round ears!", part=3, tag="small round ears", hide=["milo"], pcam=BHP,
       fx=[PULSE("w:small,", "#{p}bear-ear", 1.25), PULSE("w:round", "#{p}bear-ear", 1.25)], words=[("w:small,", "SMALL EARS!", .74, .2, 1.0, "sun", (.5, .3), .85)]),
-    S("arctic", (P("arctic", "bear", "ears")[0] + 40, P("arctic", "bear", "ears")[1] + 60, 620), "Count the little ears with me. One, two!", part=3, q=True, tag="count the bear's ears", hide=["milo"], pcam=BHP, cam2=(P("arctic", "bear", "ears")[0] + 40, P("arctic", "bear", "ears")[1] + 60, 680),
+    S("arctic", (P("arctic", "bear", "ears")[0] + 40, 590, 880), "Count the little ears with me. One, two!", part=3, q=True, tag="count the bear's ears", hide=["milo"], pcam=V("arctic", "bear", "ears", 1000, 30, 80), cam2=(P("arctic", "bear", "ears")[0] + 40, 590, 830),
       fx=[PULSE("w:One,", "#{p}bear-ear", 1.3), PULSE("w:two!", "#{p}bear-neck", 1.05)],
       words=[("w:One,", "1", .22, .3, 1.3, "sun", (.3, .3), 1.1), ("w:two!", "2", .82, .3, 1.3, "sun", (.7, .3), 1.1)]),
     S("arctic", BB, "Why are a polar bear's ears so small?", part=3, q=True, tag="why so small", pause=3.0, hide=["milo"], pcam=BBP, cam2=W(BB, 1.06),
@@ -265,14 +265,14 @@ SHOTS = [
     S("paper_pink", (960, 600, 1500), "Small ears help keep the warmth in, in the cold, snowy Arctic!", part=3, tag="board: warmth in", pcam=(960, 640, 1500),
       props=[prop("ear1", lambda q: f'<g id="{q}"><circle r="150" fill="#ffb347" opacity=".3"/><circle r="110" fill="#ffb347" opacity=".35"/><circle r="96" fill="#fdfaf2" stroke="#6a5a4c" stroke-width="12"/><circle r="52" fill="#f6c9d3"/></g>', 960, 620, 1.3, p=(960, 660, 1.2)),
              prop("snow1", lambda q: art.snow(q, 30, 5), 960, 540, 1.0, p=(960, 560, 1.0))],
-      fx=[PULSE("w:warmth", "#{p}ear1_w", 1.12, 2), PULSE("w:snowy", "#{p}ear1_w", 1.06)], words=[("w:warmth", "WARM!", .5, .12, 1.2, "sun", (.5, .26), 1.0)]),
+      fx=[PULSE("w:warmth", "#{p}ear1_w", 1.12, 2), PULSE("w:snowy", "#{p}ear1_w", 1.06)], words=[("w:warmth", "WARM!", .5, .12, 1.2, "sun", (.5, .34), 1.0)]),
     S("paper_blue", (960, 620, 1600), "Big fox ears let heat out. Small bear ears keep the warmth in!", part=3, tag="board: big ears, small ears", pcam=(960, 680, 1700), props=[EPAIR("ep", 960, 720, 1.0, p=(960, 760, .82))],
       fx=[PULSE("w:Big", "#{p}ep-fox", 1.08), ("to", "w:out.", "#{p}ep-heat", {"y": "-=50", "duration": 1.2, "ease": "sine.out"}, "the heat rises away"),
           PULSE("w:Small", "#{p}ep-bear", 1.15), PULSE("w:warmth", "#{p}ep-glow", 1.15, 2)],
-      words=[("w:Big", "OUT!", .12, .5, 1.1, "sun", (.25, .3), .9), ("w:Small", "IN!", .9, .5, 1.1, "sun", (.75, .3), .9)]),
+      words=[("w:Big", "OUT!", .14, .5, 1.1, "sun", (.22, .28), .9), ("w:Small", "IN!", .9, .5, 1.1, "sun", (.78, .28), .9)]),
     S("arctic", BT, "And look! A polar bear has a short little tail. It keeps the warmth in, too!", part=3, tag="short tail", hide=["milo"], pcam=BTP,
       fx=[("to", "w:tail.", "#{p}bear-tail", {"x": -10, "duration": .14, "yoyo": True, "repeat": 5}, "the tail wiggles"), PULSE("w:short", "#{p}bear-tail", 1.25)],
-      words=[("w:short", "SHORT TAIL!", .55, .2, .9, "sun", (.5, .3), .85)]),
+      words=[("w:short", "SHORT TAIL!", .62, .2, .9, "sun", (.5, .3), .85)]),
     S("zoo", say="Can you shiver, like you are in the snow? Brrr!", part=3, q=True, tag="shiver", pause=2.4,
       fx=[("to", "w:Brrr!", "#{p}milo", {"x": 8, "duration": .06, "yoyo": True, "repeat": 11}, "Milo shivers")],
       words=[("w:Brrr!", "BRRR!", .84, .3, 1.0, "sun", (.5, .33), .9)], **MILO("zoo", 940)),
@@ -283,7 +283,7 @@ SHOTS = [
     S("zoo", say="Can you hug yourself, warm and cozy, like a polar bear? Squeeze!", part=3, q=True, tag="hug yourself", pause=3.0, fx=[("hop", "w:Squeeze!", "milo")],
       words=[("w:Squeeze!", "HUG!", .84, .3, 1.0, "sun", (.5, .33), .9)], **MILO("zoo", 940)),
     S("paper_pink", (960, 600, 1700), "Quick check! Which ears keep the warmth in? Big ears, or small ears?", part=3, q=True, tag="question 3b", cam2=(960, 600, 1500), pause=3.2, pcam=(960, 680, 1700),
-      props=[EPAIR("ep", 960, 700, .85, p=(960, 760, .72))], fx=[PULSE("w:Big", "#{p}ep-fox", 1.08), PULSE("w:small", "#{p}ep-bear", 1.15), ("signs", "w:Big", ["BIG", "SMALL"], 1, "wait:2.0"),
+      props=[EPAIR("ep", 960, 700, .85, p=(960, 900, .72))], fx=[PULSE("w:Big", "#{p}ep-fox", 1.08), PULSE("w:small", "#{p}ep-bear", 1.15), ("signs", "w:Big", ["BIG", "SMALL"], 1, "wait:2.0"),
           PULSE("wait:2.05", "#{p}ep-glow", 1.15, 2), ("word", "e:ears?:3", "?", {"x": 1600, "y": 470, "size": 200, "cls": "sun", "p": {"x": 1250, "y": 520, "size": 170}})]),
     S("arctic", BB, "Small ears! You remembered!", part=3, tag="you remembered", hide=["milo"], pcam=BBP, cam2=W(BB), fx=[("nod", "w:remembered!", "bear")],
       words=[("w:Small", "SMALL!", .26, .34, 1.3, "sun", (.5, .34), 1.0)]),

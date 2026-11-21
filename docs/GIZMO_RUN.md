@@ -5,6 +5,23 @@
 > principles we are following for The Animated Zoo, however with one 3D explainer a day, minimum 5 mins, and Shorts come from that,
 > + create a cartoon version of that and let's test it."
 
+**2D ONLY (Noelson, Nov 21 2026, 11:27 AM: "chaneg gizmo as well and start the workflow for the day"; the evening before, for The Animated Zoo:
+"Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton model we have").** It overrides
+every line below that builds, renders or uploads something in 3D:
+- Gizmo Explains posts cartoon explainers only (`studio/cartoon/toon.py`, Gizmo's cast `studio/cartoon/art_gizmo.py`). No 3D explainer is written,
+  rendered on the PC or uploaded, and no Short is cut from one. `upload_guard.py --channel gizmo` refuses the 3D formats (gizmo_explainer,
+  gizmo_short_90), as a fix too, and its audit fails one that waits.
+- gzx_ep01 (rockets), gzx_ep02 (rain) and their six Shorts were never rendered (the PC's render folder was refused three nights running) and never
+  uploaded: they carry "hold_2d_only". Specs, jobs and audio stay in the repo; nothing on the PC is touched or deleted. Their topics are built again
+  as cartoons (rockets first).
+- The 3D songs that were public before Nov 19 stay (deleting a video is the owner's decision).
+- The PC is no longer needed to BUILD: a cartoon is rendered in the cloud session. Only the upload uses the PC (Studio in its built-in browser).
+- THE FORMAT GATE STANDS (CLAUDE.md: "Nothing in a new format is uploaded until the owner has watched one full video of it and approved it"):
+  he has not watched a Gizmo cartoon yet. `cartoon/gc_ep01.mp4` ("How Does a Seed Grow Into a Plant?", built Nov 19) and its Short 1 were sent to
+  him on Nov 21 at noon. Until he says yes every Gizmo cartoon entry is "hold_review" and the guard refuses it. On his yes: write the file
+  `studio/cartoon/GIZMO_CARTOON_APPROVED` (one line: his words, the date), set the waiting entries "to_upload" with slots from `--next`, and
+  upload them. If he asks for changes instead: fix them in gc_ep01 first, send it again, and log each in docs/IMPROVE.md.
+
 Channel: Gizmo Explains, @GizmoExplainsHQ, channel id UCJaMYOrKCEA54kaOMyYNiKQ, ages 4-8, made for kids. Host: Gizmo, a small round
 silver robot with a screen face and an antenna that lights up when he has an idea (3D: `studio/zoo3d/chars/gizmo.py`; flat cartoon:
 `studio/cartoon/gizmo/gizmo_flat.svg.part`). Brand: background #1d3a8a to #3561d9, text white, accent #5ff3ff.
@@ -14,12 +31,13 @@ back after a reload of the customization page.
 
 ## What the channel posts
 
-- ONE 3D explainer a day, 5:00 to 6:30 long, built like an Animated Zoo 3D lesson (interactive: questions with answer signs and thinking
-  time, on-screen examples of the exact thing explained, every word in sync, a quiz at the end) but with Gizmo as the host and science
-  examples instead of animals. Three parts of 83-90 s, each cut whole into one vertical Short (85-95 s, 2160x3840, framed again for 9:16).
-- Slots (ET): explainer 2:10 PM; its Shorts on the next days at 8:10 AM, 12:10 PM and 7:10 PM. Always scheduled, never published at once.
-- The cartoon version (2D, `studio/cartoon/toon.py`, Gizmo cast) is a TEST: it is a new format for this channel, so it is never uploaded
-  until Noelson has watched one full video and approved it (plan status "hold_review"; send him the file).
+- ONE cartoon explainer a day, 5:00 to 6:30 long, built like an Animated Zoo cartoon fact lesson (interactive: questions with answer signs and
+  thinking time, on-screen examples of the exact thing explained, every word in sync, a quiz at the end) with Gizmo as the host and science
+  examples instead of animals. Three parts of 83-90 s, each cut whole into one vertical Short (85-95 s, 2160x3840, every shot framed again for 9:16).
+  [Until Nov 21 11:27 AM this was a 3D explainer; see 2D ONLY above.]
+- Slots (ET): explainer 2:10 PM; its Shorts on the next days at 8:10 AM, 12:10 PM and 7:10 PM, each on its own day. Always scheduled, never published
+  at once. `python3 studio/upload_guard.py --next explainer --channel gizmo` prints the topic, the id (gc_epNN), the slots, what waits and what is missing.
+- No main intro (it says "The Animated Zoo"), no playlists yet, no song: a voice only speaks.
 - Every rule of CLAUDE.md "Working preferences" applies to Gizmo too: 4K native, watermark (Gizmo's channel picture + "Gizmo Explains",
   not Milo), custom thumbnail with at most 3 words and none of the title's words, facts read at the source the same day (line taken out
   if the source cannot be read), stills before the render, frames after, listen.py, review.py, no voice sung or hummed onto notes,
@@ -29,7 +47,36 @@ back after a reload of the customization page.
   Description ends with the channel boilerplate: "Gizmo Explains makes gentle, colorful videos for little learners. New videos every day!
   Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing."
 
+## A cartoon explainer, step by step (the daily build)
+
+Model: `studio/cartoon/episodes/gc_ep01.py` and its run note `docs/gizmo/runs/gc_ep01.md` (what was built, looked at and fixed). The steps are
+docs/CARTOON_RUN.md's ("Steps", "A fact lesson and its three Shorts", the STOP section about voices, "Several cartoon builds at the same time"),
+with these differences:
+1. `python3 studio/upload_guard.py --next explainer --channel gizmo`. "unfinished_first" and "shorts_missing" come before a new title (gc_ep01 has
+   Short 1 only: Shorts 2 and 3 are built first). If "note" says two or more explainers wait, build NO new explainer. Otherwise claim the title:
+   entries in `studio/upload_plan_gizmo_v3.json` (`cartoon_lesson` + three `cartoon_short_90`, `"channel": "gizmo"`, `"topic"`: the title as
+   topics.json has it, the slots printed) as "in_production", commit and push at once.
+2. Facts: read each at its source today, quotes at the top of the episode file; a line whose source cannot be read is taken out. Nothing a child
+   could copy unsafely (no fire, electricity at home, chemicals, climbing).
+3. Episode: `EP["wm"] = "brand/gizmo"` (Gizmo's mark), `"beat": True`, Gizmo's rig and places from `art_gizmo.py` (new props go into that file or an
+   `art_gc_epNN.py`), voice `am_michael`, no `intro_shots()`, no tune shot unless instruments play it. Gizmo's arms stay between -50 and -85 degrees
+   (a hand raised higher disappears behind his head); a camera on Gizmo frames the whole robot ("all"), or his antenna is cut; 9:16 words at or
+   below 0.35 of the view (higher they sit on the title band).
+4. Packaging as docs/CARTOON_RUN.md "VIRAL PACKAGING" with Gizmo in Milo's place: opens on its promise, Gizmo's name after the hook, a question
+   title under 60 characters with no '<' or '>' (the series name "Gizmo Explains" last when it fits), a one-object thumbnail with 1-2 words and none
+   of the title's words (`brand/gizmo/thumb_<id>.jpg`). Description: where the facts come from, then the Gizmo boilerplate below; never "AI".
+5. Checks, none skipped: plan check, `listen.py --episode <id>` before the render, a still of EVERY shot in 16:9 and again in 9:16 looked at (and
+   again after each fix), 4K render as a tracked background command, then on every finished file `--check4k`, `pace_check.py --max 8`,
+   `watermark.py check <file> --channel gizmo` and its corner sheet looked at, frames of the finished file (every answer reveal), listen.py on the
+   file with its picture looked at (it measures, it does not hear), AV1 encode of the explainer, `review.py` PASS.
+6. Finish: the entries get the status `--next` printed as "finish_as" ("hold_review" until the owner's yes, then "to_upload"), title, description,
+   tags, thumb, thumb_text, seconds; run note `docs/gizmo/runs/<id>.md` (what was looked at, what was not checked, every defect); commit, push.
+7. Upload (only "to_upload" entries, so only after his yes): section "Never upload twice, on the RIGHT channel" below.
+
 ## Topics
+
+The list is `docs/gizmo/topics.json` (in order; `--next` takes the first one with no cartoon entry: rockets, then rain, then the heart). The
+paragraph below is the list as it was written on Nov 19.
 
 Already on the channel (songs, do not repeat as explainers): magnets, day and night, the 5 senses, rainbows, why the sky is blue, sink or
 float, weather, the planets. Explainer topics in order (take the first one with no plan entry): How Do Rockets Fly?; Where Does Rain Come
@@ -48,7 +95,7 @@ Change Shape?; How Do Birds Fly?; How Do Our Teeth Help Us?; How Does a Bicycle 
 - Never drive Studio while another run is using it (the Zoo daily run 6:31 AM until it finishes; check the commit log for a run note
   in the last 30 minutes).
 
-## Engine
+## Engine [3D: SUSPENDED Nov 21 2026 11:27 AM, see 2D ONLY at the top. Nothing below is run; it stays for the record and for the code it describes.]
 
 The 3D lesson tools (`studio/zoo3d/teach.py`, `lesson_shorts.py`, `teachprops.py`, `finish.py`, `watermark.py`) were written for the Zoo:
 the host is Milo and the cast are animals. The first Gizmo build adds a channel switch (`"channel": "gizmo"` in the spec: host char gizmo,

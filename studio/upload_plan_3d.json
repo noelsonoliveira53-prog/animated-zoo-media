@@ -3344,11 +3344,11 @@
   "time": "9:30 AM",
   "thumb": "brand/zoo/thumb_zc_ep12.jpg",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Built Nov 21 by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep12.md. Second Guess With Milo episode (2D): new rhino and fennec fox drawings. NOT uploaded: the daily run schedules it.",
+  "note": "Built Nov 21 by the scheduled 1:47 AM lesson build (session_014CFVfZ8ooeZ2N6bW87hm8L): facts read today; stills of every shot (start and end) in 16:9 and 9:16, frames of the finished file (every shot and every answer reveal), 4K, pace, watermark and corner sheet, listen.py (measured, not heard), thumbnail and review.py; run note docs/cartoon/runs/zc_ep12.md. Second Guess With Milo episode (2D): new rhino and fennec fox drawings. NOT uploaded: the daily run schedules it. | Nov 21 daily run: SCHEDULED November 24, 2026 9:30 AM ET (iIijZuowyxY), made for kids, custom thumbnail (data: image in the uploader before Next); Studio's dialog read.",
   "description": "Look! Two ears in the grass, and they are turning different ways! Who is it? Look at the ears with Milo the bluebird and guess the animal before it comes out! A gentle guessing game for ages 2-6 with answer signs, thinking time, moves to copy and a quiz at the end.\nKids learn that a rhino can move each ear on its own, one forward and one back, and that both ears perk straight up when it hears something interesting; that a fennec fox is a little fox with giant ears that listen for food under the sand and let extra heat out in the hot desert; and that a polar bear's small, round ears and short tail help keep the warmth in.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (rhinoceros and fennec fox) and its Library fact sheets (white rhino, black rhino, fennec fox, polar bear); Smithsonian's National Zoo (fennec fox); Polar Bears International (adaptations); SeaWorld (polar bear).",
   "tags": [
    "whose ears are these",
@@ -3365,6 +3365,8 @@
    "The Animated Zoo"
   ],
   "thumb_text": "LISTEN!",
-  "seconds": 364.0
+  "seconds": 364.0,
+  "video_id": "iIijZuowyxY",
+  "thumb_set": true
  }
 ]

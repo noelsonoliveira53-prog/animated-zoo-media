@@ -55,7 +55,8 @@
   ],
   "thumb": "brand/gizmo/thumb_gc_ep01.jpg",
   "thumb_text": "ROOT FIRST!",
-  "seconds": 309.8
+  "seconds": 309.8,
+  "topic": "How Does a Seed Grow Into a Plant?"
  },
  {
   "file": "cartoon/gc_ep01_short1.mp4",
@@ -103,12 +104,12 @@
   "thumb_text": "UP, UP, AWAY!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_explainer",
   "job": "studio/zoo3d/jobs/gzx_ep01.json",
   "duration": 341.8,
   "watermark": "tl",
-  "note": "Built Nov 19 (teach.py: no FAIL, 100% words placed). NOT RENDERED: this run could not reach the PC's ZooBlender folder (folder access denied), so the job is not queued. Never upload before the file is rendered in 4K, finished, checked (stills, frames, corner sheet, listen.py, review.py PASS). If the render is not finished and checked 3 hours before this slot, move the entry to the next free 2:10 PM slot."
+  "note": "Built Nov 19 (teach.py: no FAIL, 100% words placed). NOT RENDERED: this run could not reach the PC's ZooBlender folder (folder access denied), so the job is not queued. Never upload before the file is rendered in 4K, finished, checked (stills, frames, corner sheet, listen.py, review.py PASS). If the render is not finished and checked 3 hours before this slot, move the entry to the next free 2:10 PM slot. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/gzx_ep02.mp4",
@@ -132,12 +133,12 @@
   "thumb_text": "PITTER PATTER!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_explainer",
   "job": "studio/zoo3d/jobs/gzx_ep02.json",
   "duration": 342.6,
   "watermark": "tl",
-  "note": "Built Nov 19 (teach.py: no FAIL, 100% words placed). NOT RENDERED: this run could not reach the PC's ZooBlender folder (folder access denied), so the job is not queued. Never upload before the file is rendered in 4K, finished, checked (stills, frames, corner sheet, listen.py, review.py PASS). If the render is not finished and checked 3 hours before this slot, move the entry to the next free 2:10 PM slot."
+  "note": "Built Nov 19 (teach.py: no FAIL, 100% words placed). NOT RENDERED: this run could not reach the PC's ZooBlender folder (folder access denied), so the job is not queued. Never upload before the file is rendered in 4K, finished, checked (stills, frames, corner sheet, listen.py, review.py PASS). If the render is not finished and checked 3 hours before this slot, move the entry to the next free 2:10 PM slot. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rocket_push.mp4",
@@ -159,13 +160,13 @@
   "thumb_text": "WHOOSH!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep01",
   "seconds": 85.9,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rocket_space.mp4",
@@ -187,13 +188,13 @@
   "thumb_text": "NO AIR!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep01",
   "seconds": 87.3,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rocket_stages.mp4",
@@ -215,13 +216,13 @@
   "thumb_text": "BYE-BYE!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep01",
   "seconds": 87.7,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rain_vapor.mp4",
@@ -243,13 +244,13 @@
   "thumb_text": "INVISIBLE!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep02",
   "seconds": 86.1,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rain_clouds.mp4",
@@ -271,13 +272,13 @@
   "thumb_text": "TINY DROPS!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep02",
   "seconds": 86.6,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  },
  {
   "file": "gizmo/shorts/gzs_rain_drops.mp4",
@@ -299,12 +300,12 @@
   "thumb_text": "LIKE A BUN!",
   "made_for_kids": true,
   "category": "Education",
-  "status": "in_production",
+  "status": "hold_2d_only",
   "format": "gizmo_short_90",
   "from": "gzx_ep02",
   "seconds": 87.4,
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at."
+  "note": "Cut with lesson_shorts.py from the 4K raw once it is rendered; not cut yet (no render). Never upload before frames and thumbnail are looked at. HELD Nov 21 2026 (owner, 11:27 AM: \"chaneg gizmo as well\" = Gizmo Explains is 2D only): never rendered, never uploaded; the spec, job and audio stay in the repo; the topic is built again as a cartoon explainer."
  }
 ]

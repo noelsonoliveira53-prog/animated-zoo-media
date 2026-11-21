@@ -191,3 +191,4 @@
 | 2026-11-21 | cartoon/zc_ep12_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-21 | cartoon/zc_ep12_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-21 | cartoon/zc_ep12_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-21 | cartoon/za_ep11.mp4 | cartoon_adventure | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |

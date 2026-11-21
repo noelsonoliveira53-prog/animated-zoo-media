@@ -3438,5 +3438,18 @@
   "watermark": "tl",
   "note": "Claimed Nov 21 12:40 PM ET by the scheduled adventure build (session_014CFVfYtmTLVmGLEisYDUnX). In production: nothing built yet.",
   "theme_title": "Tula and the Slow, Slow Race"
+ },
+ {
+  "file": "cartoon/zc_ep13.mp4",
+  "title": "How Do Polar Bears Stay Warm?",
+  "date": "2026-11-24",
+  "time": "5:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 21 1:25 PM ET by the scheduled 1:17 PM lesson build (session_014CFVfXgMKBYjCDMoPebUaE). In production: nothing built yet.",
+  "theme_title": "How Do Polar Bears Stay Warm?"
  }
 ]

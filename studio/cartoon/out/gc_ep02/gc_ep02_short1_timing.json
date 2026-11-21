@@ -1,0 +1,1884 @@
+{
+ "id": "gc_ep02_short1",
+ "total": 89.18912500000003,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.2,
+  "shots": 18,
+  "visual_changes": 96,
+  "mean_gap": 0.93,
+  "longest_gap": 5.0,
+  "longest_gap_at": 57.5,
+  "over_6s": [],
+  "places": [
+   "gpad",
+   "gbench",
+   "glab"
+  ],
+  "picture_boards": [
+   "paper_gz"
+  ],
+  "questions": 8,
+  "longest_without_question": 24.1,
+  "first_words_at": 0.42,
+  "shot_mean": 4.95,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "185/185",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 20.0,
+   "onset_err_max_ms": 70.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the launch field (far away) hook: what pushes it up"
+  ],
+  [
+   0.66,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   2.4,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   2.4,
+   "word",
+   "?"
+  ],
+  [
+   3.44,
+   "new place",
+   "Gizmo's work bench the model close"
+  ],
+  [
+   6.12,
+   "action",
+   "a part lights up"
+  ],
+  [
+   6.12,
+   "word",
+   "NOSE"
+  ],
+  [
+   6.79,
+   "action",
+   "a part lights up"
+  ],
+  [
+   6.79,
+   "word",
+   "FINS"
+  ],
+  [
+   7.81,
+   "new place",
+   "the picture board (blueprint) fuel"
+  ],
+  [
+   9.79,
+   "action",
+   "the fuel tank lights up"
+  ],
+  [
+   9.79,
+   "word",
+   "FUEL"
+  ],
+  [
+   10.94,
+   "action",
+   "a part lights up"
+  ],
+  [
+   12.81,
+   "action",
+   "it appears"
+  ],
+  [
+   12.81,
+   "new shot",
+   "the picture board (blueprint) question 1"
+  ],
+  [
+   15.69,
+   "sign",
+   "HOT GAS"
+  ],
+  [
+   16.04,
+   "sign",
+   "ICE CREAM"
+  ],
+  [
+   18.26,
+   "thinking dot",
+   "1"
+  ],
+  [
+   18.93,
+   "thinking dot",
+   "2"
+  ],
+  [
+   19.61,
+   "thinking dot",
+   "3"
+  ],
+  [
+   20.09,
+   "answer",
+   "HOT GAS"
+  ],
+  [
+   21.25,
+   "action",
+   "it appears"
+  ],
+  [
+   21.25,
+   "new shot",
+   "the picture board (blueprint) hot gas"
+  ],
+  [
+   21.51,
+   "word",
+   "HOT GAS!"
+  ],
+  [
+   21.82,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   25.94,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   25.94,
+   "new shot",
+   "the picture board (blueprint) out the back"
+  ],
+  [
+   27.49,
+   "action",
+   "an arrow points down"
+  ],
+  [
+   28.64,
+   "word",
+   "WHOOSH!"
+  ],
+  [
+   29.69,
+   "new place",
+   "Gizmo's lab hmm"
+  ],
+  [
+   30.69,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   30.69,
+   "word",
+   "HMM..."
+  ],
+  [
+   31.64,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   33.12,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   33.12,
+   "action",
+   "it appears"
+  ],
+  [
+   33.12,
+   "new place",
+   "the picture board (blueprint) question 2"
+  ],
+  [
+   37.11,
+   "sign",
+   "UP"
+  ],
+  [
+   37.46,
+   "sign",
+   "DOWN"
+  ],
+  [
+   38.75,
+   "thinking dot",
+   "1"
+  ],
+  [
+   39.42,
+   "thinking dot",
+   "2"
+  ],
+  [
+   40.09,
+   "thinking dot",
+   "3"
+  ],
+  [
+   40.58,
+   "answer",
+   "UP"
+  ],
+  [
+   41.88,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   41.88,
+   "action",
+   "it appears"
+  ],
+  [
+   41.88,
+   "new shot",
+   "the picture board (blueprint) rocket goes up"
+  ],
+  [
+   42.01,
+   "action",
+   "an arrow points up"
+  ],
+  [
+   42.01,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   42.01,
+   "word",
+   "UP!"
+  ],
+  [
+   43.2,
+   "word",
+   "DOWN"
+  ],
+  [
+   45.31,
+   "new place",
+   "the launch field (far away) watch the pad"
+  ],
+  [
+   46.34,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   48.17,
+   "action",
+   "a part lights up"
+  ],
+  [
+   48.17,
+   "word",
+   "LAUNCH PAD"
+  ],
+  [
+   49.06,
+   "new shot",
+   "the launch field (far away) pad lift-off"
+  ],
+  [
+   49.32,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   51.91,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   51.91,
+   "word",
+   "UP IT GOES!"
+  ],
+  [
+   52.17,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   53.12,
+   "new place",
+   "the picture board (blueprint) push and push back"
+  ],
+  [
+   53.88,
+   "action",
+   "the hands push"
+  ],
+  [
+   53.88,
+   "word",
+   "PUSH"
+  ],
+  [
+   54.83,
+   "word",
+   "PUSH BACK"
+  ],
+  [
+   57.19,
+   "new place",
+   "Gizmo's lab press hands"
+  ],
+  [
+   57.5,
+   "action",
+   "Gizmo presses his hands together"
+  ],
+  [
+   57.5,
+   "word",
+   "PRESS!"
+  ],
+  [
+   62.5,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   62.5,
+   "new place",
+   "the picture board (blueprint) every push"
+  ],
+  [
+   64.8,
+   "word",
+   "EVERY PUSH..."
+  ],
+  [
+   65.09,
+   "action",
+   "it appears"
+  ],
+  [
+   66.13,
+   "action",
+   "it appears"
+  ],
+  [
+   66.13,
+   "word",
+   "...A PUSH BACK!"
+  ],
+  [
+   66.88,
+   "new place",
+   "Gizmo's work bench say it"
+  ],
+  [
+   68.31,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   68.31,
+   "word",
+   "GAS, DOWN!"
+  ],
+  [
+   69.57,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   69.57,
+   "word",
+   "ROCKET, UP!"
+  ],
+  [
+   70.94,
+   "new place",
+   "Gizmo's lab crouch and jump"
+  ],
+  [
+   71.09,
+   "action",
+   "Gizmo curls up small"
+  ],
+  [
+   71.09,
+   "word",
+   "CROUCH!"
+  ],
+  [
+   74.01,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   74.01,
+   "word",
+   "BLAST OFF!"
+  ],
+  [
+   75.94,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   75.94,
+   "new place",
+   "the launch field (far away) question 3"
+  ],
+  [
+   78.5,
+   "sign",
+   "HOT GAS"
+  ],
+  [
+   78.85,
+   "sign",
+   "WATER"
+  ],
+  [
+   80.7,
+   "thinking dot",
+   "1"
+  ],
+  [
+   81.38,
+   "thinking dot",
+   "2"
+  ],
+  [
+   82.05,
+   "thinking dot",
+   "3"
+  ],
+  [
+   82.54,
+   "answer",
+   "HOT GAS"
+  ],
+  [
+   83.75,
+   "new place",
+   "the picture board (blueprint) part 1 recap"
+  ],
+  [
+   84.83,
+   "action",
+   "it appears"
+  ],
+  [
+   84.83,
+   "word",
+   "FUEL"
+  ],
+  [
+   85.66,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   85.66,
+   "word",
+   "GAS"
+  ],
+  [
+   86.46,
+   "word",
+   "PUSH!"
+  ],
+  [
+   87.47,
+   "action",
+   "the rocket lifts off"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "gpad",
+   "say": "What pushes a rocket up into the sky?",
+   "t0": 0.0,
+   "t1": 3.4375,
+   "v0": 0.42,
+   "dur": 2.6230416666666665,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.24
+    ],
+    [
+     "pushes",
+     0.24,
+     0.82
+    ],
+    [
+     "a",
+     0.82,
+     0.9
+    ],
+    [
+     "rocket",
+     0.9,
+     1.5
+    ],
+    [
+     "up",
+     1.5,
+     1.69
+    ],
+    [
+     "into",
+     1.69,
+     1.86
+    ],
+    [
+     "the",
+     1.86,
+     1.98
+    ],
+    [
+     "sky?",
+     1.98,
+     2.62
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: what pushes it up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Here is my model rocket. A pointy nose, and fins.",
+   "t0": 3.4375,
+   "t1": 7.8125,
+   "v0": 3.5830416666666665,
+   "dur": 3.9597083333333334,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.27
+    ],
+    [
+     "is",
+     0.27,
+     0.4
+    ],
+    [
+     "my",
+     0.4,
+     0.55
+    ],
+    [
+     "model",
+     0.55,
+     0.94
+    ],
+    [
+     "rocket.",
+     0.94,
+     1.51
+    ],
+    [
+     "A",
+     1.92,
+     1.97
+    ],
+    [
+     "pointy",
+     1.97,
+     2.54
+    ],
+    [
+     "nose,",
+     2.54,
+     3.09
+    ],
+    [
+     "and",
+     3.09,
+     3.21
+    ],
+    [
+     "fins.",
+     3.21,
+     3.96
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the model close",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Inside, a rocket carries fuel. The engine uses the fuel.",
+   "t0": 7.8125,
+   "t1": 12.8125,
+   "v0": 8.082749999999999,
+   "dur": 4.477791666666667,
+   "words": [
+    [
+     "Inside,",
+     0.01,
+     0.66
+    ],
+    [
+     "a",
+     0.66,
+     0.77
+    ],
+    [
+     "rocket",
+     0.77,
+     1.29
+    ],
+    [
+     "carries",
+     1.29,
+     1.71
+    ],
+    [
+     "fuel.",
+     1.71,
+     2.27
+    ],
+    [
+     "The",
+     2.71,
+     2.86
+    ],
+    [
+     "engine",
+     2.86,
+     3.37
+    ],
+    [
+     "uses",
+     3.37,
+     3.81
+    ],
+    [
+     "the",
+     3.81,
+     3.9
+    ],
+    [
+     "fuel.",
+     3.9,
+     4.478
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "fuel",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "What does the engine turn the fuel into? Hot gas, or ice cream?",
+   "t0": 12.8125,
+   "t1": 21.25,
+   "v0": 13.100541666666665,
+   "dur": 4.671833333333334,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.31
+    ],
+    [
+     "the",
+     0.31,
+     0.46
+    ],
+    [
+     "engine",
+     0.46,
+     0.88
+    ],
+    [
+     "turn",
+     0.88,
+     1.16
+    ],
+    [
+     "the",
+     1.16,
+     1.22
+    ],
+    [
+     "fuel",
+     1.22,
+     1.69
+    ],
+    [
+     "into?",
+     1.69,
+     2.1
+    ],
+    [
+     "Hot",
+     2.59,
+     2.87
+    ],
+    [
+     "gas,",
+     2.87,
+     3.49
+    ],
+    [
+     "or",
+     3.49,
+     3.8
+    ],
+    [
+     "ice",
+     3.8,
+     4.11
+    ],
+    [
+     "cream?",
+     4.11,
+     4.67
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Hot gas! The engine turns its fuel into hot gas.",
+   "t0": 21.25,
+   "t1": 25.9375,
+   "v0": 21.512375,
+   "dur": 4.104958333333333,
+   "words": [
+    [
+     "Hot",
+     0.0,
+     0.31
+    ],
+    [
+     "gas!",
+     0.31,
+     0.94
+    ],
+    [
+     "The",
+     1.3,
+     1.51
+    ],
+    [
+     "engine",
+     1.51,
+     1.95
+    ],
+    [
+     "turns",
+     1.95,
+     2.32
+    ],
+    [
+     "its",
+     2.32,
+     2.47
+    ],
+    [
+     "fuel",
+     2.47,
+     2.95
+    ],
+    [
+     "into",
+     2.95,
+     3.14
+    ],
+    [
+     "hot",
+     3.14,
+     3.5
+    ],
+    [
+     "gas.",
+     3.5,
+     4.1
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "hot gas",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Then it pushes the gas out of its back. Whoosh!",
+   "t0": 25.9375,
+   "t1": 29.6875,
+   "v0": 26.157333333333334,
+   "dur": 3.143666666666667,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.25
+    ],
+    [
+     "it",
+     0.25,
+     0.37
+    ],
+    [
+     "pushes",
+     0.37,
+     0.77
+    ],
+    [
+     "the",
+     0.77,
+     0.86
+    ],
+    [
+     "gas",
+     0.86,
+     1.33
+    ],
+    [
+     "out",
+     1.33,
+     1.42
+    ],
+    [
+     "of",
+     1.42,
+     1.5
+    ],
+    [
+     "its",
+     1.5,
+     1.66
+    ],
+    [
+     "back.",
+     1.66,
+     2.48
+    ],
+    [
+     "Whoosh!",
+     2.48,
+     3.14
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "out the back",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Out the back? Hmm. What happens next?",
+   "t0": 29.6875,
+   "t1": 33.125,
+   "v0": 29.841000000000005,
+   "dur": 2.3889583333333335,
+   "words": [
+    [
+     "Out",
+     0.01,
+     0.2
+    ],
+    [
+     "the",
+     0.2,
+     0.3
+    ],
+    [
+     "back?",
+     0.3,
+     0.85
+    ],
+    [
+     "Hmm.",
+     0.85,
+     1.14
+    ],
+    [
+     "What",
+     1.14,
+     1.35
+    ],
+    [
+     "happens",
+     1.35,
+     1.8
+    ],
+    [
+     "next?",
+     1.8,
+     2.389
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hmm",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "The gas goes down. Which way does the rocket go? Up, or down?",
+   "t0": 33.125,
+   "t1": 41.875,
+   "v0": 33.36995833333334,
+   "dur": 4.888916666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "gas",
+     0.09,
+     0.51
+    ],
+    [
+     "goes",
+     0.51,
+     0.86
+    ],
+    [
+     "down.",
+     0.86,
+     1.4
+    ],
+    [
+     "Which",
+     1.68,
+     1.88
+    ],
+    [
+     "way",
+     1.88,
+     2.1
+    ],
+    [
+     "does",
+     2.1,
+     2.33
+    ],
+    [
+     "the",
+     2.33,
+     2.4
+    ],
+    [
+     "rocket",
+     2.4,
+     2.88
+    ],
+    [
+     "go?",
+     2.88,
+     3.39
+    ],
+    [
+     "Up,",
+     3.74,
+     4.02
+    ],
+    [
+     "or",
+     4.02,
+     4.29
+    ],
+    [
+     "down?",
+     4.29,
+     4.889
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 2",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Up! The gas goes down, so the rocket goes up!",
+   "t0": 41.875,
+   "t1": 45.3125,
+   "v0": 41.998875000000005,
+   "dur": 3.0570416666666667,
+   "words": [
+    [
+     "Up!",
+     0.01,
+     0.32
+    ],
+    [
+     "The",
+     0.32,
+     0.53
+    ],
+    [
+     "gas",
+     0.53,
+     0.89
+    ],
+    [
+     "goes",
+     0.89,
+     1.2
+    ],
+    [
+     "down,",
+     1.2,
+     1.71
+    ],
+    [
+     "so",
+     1.71,
+     1.88
+    ],
+    [
+     "the",
+     1.88,
+     1.96
+    ],
+    [
+     "rocket",
+     1.96,
+     2.42
+    ],
+    [
+     "goes",
+     2.42,
+     2.76
+    ],
+    [
+     "up!",
+     2.76,
+     3.057
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "rocket goes up",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "Let's watch a real rocket, on its launch pad.",
+   "t0": 45.3125,
+   "t1": 49.0625,
+   "v0": 45.595916666666675,
+   "dur": 3.074666666666667,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.3
+    ],
+    [
+     "watch",
+     0.3,
+     0.7
+    ],
+    [
+     "a",
+     0.7,
+     0.74
+    ],
+    [
+     "real",
+     0.74,
+     1.18
+    ],
+    [
+     "rocket,",
+     1.18,
+     1.86
+    ],
+    [
+     "on",
+     1.86,
+     2.02
+    ],
+    [
+     "its",
+     2.02,
+     2.18
+    ],
+    [
+     "launch",
+     2.18,
+     2.57
+    ],
+    [
+     "pad.",
+     2.57,
+     3.07
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "watch the pad",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "The gas pushes the rocket the other way. Up it goes!",
+   "t0": 49.0625,
+   "t1": 53.125,
+   "v0": 49.21058333333334,
+   "dur": 3.7243333333333335,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "gas",
+     0.11,
+     0.57
+    ],
+    [
+     "pushes",
+     0.57,
+     1.02
+    ],
+    [
+     "the",
+     1.02,
+     1.1
+    ],
+    [
+     "rocket",
+     1.1,
+     1.58
+    ],
+    [
+     "the",
+     1.58,
+     1.73
+    ],
+    [
+     "other",
+     1.73,
+     1.93
+    ],
+    [
+     "way.",
+     1.93,
+     2.34
+    ],
+    [
+     "Up",
+     2.7,
+     2.86
+    ],
+    [
+     "it",
+     2.86,
+     2.96
+    ],
+    [
+     "goes!",
+     2.96,
+     3.72
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "pad lift-off",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "It is a push, and a push back. Push, and push back!",
+   "t0": 53.125,
+   "t1": 57.1875,
+   "v0": 53.47491666666667,
+   "dur": 3.48175,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.2
+    ],
+    [
+     "is",
+     0.2,
+     0.36
+    ],
+    [
+     "a",
+     0.36,
+     0.41
+    ],
+    [
+     "push,",
+     0.41,
+     0.92
+    ],
+    [
+     "and",
+     0.92,
+     1.03
+    ],
+    [
+     "a",
+     1.03,
+     1.07
+    ],
+    [
+     "push",
+     1.07,
+     1.36
+    ],
+    [
+     "back.",
+     1.36,
+     1.84
+    ],
+    [
+     "Push,",
+     2.2,
+     2.57
+    ],
+    [
+     "and",
+     2.57,
+     2.72
+    ],
+    [
+     "push",
+     2.72,
+     2.99
+    ],
+    [
+     "back!",
+     2.99,
+     3.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "push and push back",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Press your hands together, like this. Do they push back?",
+   "t0": 57.1875,
+   "t1": 62.5,
+   "v0": 57.49666666666667,
+   "dur": 3.452625,
+   "words": [
+    [
+     "Press",
+     0.0,
+     0.25
+    ],
+    [
+     "your",
+     0.25,
+     0.39
+    ],
+    [
+     "hands",
+     0.39,
+     0.8
+    ],
+    [
+     "together,",
+     0.8,
+     1.26
+    ],
+    [
+     "like",
+     1.26,
+     1.55
+    ],
+    [
+     "this.",
+     1.55,
+     1.96
+    ],
+    [
+     "Do",
+     2.31,
+     2.45
+    ],
+    [
+     "they",
+     2.45,
+     2.59
+    ],
+    [
+     "push",
+     2.59,
+     2.93
+    ],
+    [
+     "back?",
+     2.93,
+     3.45
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "press hands",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Scientists say it simply. Every push has a push back!",
+   "t0": 62.5,
+   "t1": 66.875,
+   "v0": 62.68929166666667,
+   "dur": 3.9275,
+   "words": [
+    [
+     "Scientists",
+     0.01,
+     0.7
+    ],
+    [
+     "say",
+     0.7,
+     0.9
+    ],
+    [
+     "it",
+     0.9,
+     1.06
+    ],
+    [
+     "simply.",
+     1.06,
+     1.7
+    ],
+    [
+     "Every",
+     2.11,
+     2.4
+    ],
+    [
+     "push",
+     2.4,
+     2.81
+    ],
+    [
+     "has",
+     2.81,
+     2.99
+    ],
+    [
+     "a",
+     2.99,
+     3.06
+    ],
+    [
+     "push",
+     3.06,
+     3.44
+    ],
+    [
+     "back!",
+     3.44,
+     3.928
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "every push",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gbench",
+   "say": "Say it with me. Gas goes down! Rocket goes up!",
+   "t0": 66.875,
+   "t1": 70.9375,
+   "v0": 67.15679166666668,
+   "dur": 3.398,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.57
+    ],
+    [
+     "me.",
+     0.57,
+     0.84
+    ],
+    [
+     "Gas",
+     1.15,
+     1.5
+    ],
+    [
+     "goes",
+     1.5,
+     1.79
+    ],
+    [
+     "down!",
+     1.79,
+     2.41
+    ],
+    [
+     "Rocket",
+     2.41,
+     2.76
+    ],
+    [
+     "goes",
+     2.76,
+     3.1
+    ],
+    [
+     "up!",
+     3.1,
+     3.398
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Crouch down low, like a rocket. Ready? Blast off!",
+   "t0": 70.9375,
+   "t1": 75.9375,
+   "v0": 71.09479166666668,
+   "dur": 3.965708333333333,
+   "words": [
+    [
+     "Crouch",
+     0.0,
+     0.37
+    ],
+    [
+     "down",
+     0.37,
+     0.68
+    ],
+    [
+     "low,",
+     0.68,
+     1.0
+    ],
+    [
+     "like",
+     1.0,
+     1.27
+    ],
+    [
+     "a",
+     1.27,
+     1.32
+    ],
+    [
+     "rocket.",
+     1.32,
+     1.95
+    ],
+    [
+     "Ready?",
+     2.32,
+     2.75
+    ],
+    [
+     "Blast",
+     2.92,
+     3.47
+    ],
+    [
+     "off!",
+     3.47,
+     3.966
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "crouch and jump",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gpad",
+   "say": "What comes out of a rocket's engine? Hot gas, or water?",
+   "t0": 75.9375,
+   "t1": 83.75,
+   "v0": 76.20050000000002,
+   "dur": 4.0175,
+   "words": [
+    [
+     "What",
+     0.02,
+     0.16
+    ],
+    [
+     "comes",
+     0.16,
+     0.48
+    ],
+    [
+     "out",
+     0.48,
+     0.59
+    ],
+    [
+     "of",
+     0.59,
+     0.69
+    ],
+    [
+     "a",
+     0.69,
+     0.72
+    ],
+    [
+     "rocket's",
+     0.72,
+     1.25
+    ],
+    [
+     "engine?",
+     1.25,
+     1.86
+    ],
+    [
+     "Hot",
+     2.3,
+     2.55
+    ],
+    [
+     "gas,",
+     2.55,
+     3.15
+    ],
+    [
+     "or",
+     3.15,
+     3.38
+    ],
+    [
+     "water?",
+     3.38,
+     4.018
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 3",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_gz",
+   "say": "Hot gas! Fuel, hot gas, and a big push. Up, up, up!",
+   "t0": 83.75,
+   "t1": 88.78912500000003,
+   "v0": 83.95800000000003,
+   "dur": 4.411125,
+   "words": [
+    [
+     "Hot",
+     0.0,
+     0.3
+    ],
+    [
+     "gas!",
+     0.3,
+     0.87
+    ],
+    [
+     "Fuel,",
+     0.87,
+     1.36
+    ],
+    [
+     "hot",
+     1.36,
+     1.7
+    ],
+    [
+     "gas,",
+     1.7,
+     2.13
+    ],
+    [
+     "and",
+     2.13,
+     2.24
+    ],
+    [
+     "a",
+     2.24,
+     2.27
+    ],
+    [
+     "big",
+     2.27,
+     2.5
+    ],
+    [
+     "push.",
+     2.5,
+     3.04
+    ],
+    [
+     "Up,",
+     3.51,
+     3.72
+    ],
+    [
+     "up,",
+     3.72,
+     4.1
+    ],
+    [
+     "up!",
+     4.1,
+     4.41
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "part 1 recap",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

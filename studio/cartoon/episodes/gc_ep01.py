@@ -370,3 +370,7 @@ THUMBS = {
                        "props": [(G.kitchen_leaf, 960, 640, 1.5)],
                        "words": [("LEAF", 540, 380, 220, ""), ("KITCHEN!", 540, 1600, 190, "sun")]},
 }
+
+# Gizmo speaks every line: until Nov 21 the shots kept toon.shot's default who="milo", so Gizmo's talking mouth never moved (no "gizmo-jaw" key in the
+# lesson's or Short 1's page). Shorts 2 and 3 (built Nov 21) have it; the lesson and Short 1 (rendered Nov 19) keep their files until a re-render.
+for _s in SHOTS + [x for sp in SHORTS for x in sp.get("extra_first", [])]: _s["who"] = "gizmo"

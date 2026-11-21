@@ -1,0 +1,7373 @@
+{
+ "id": "zc_ep12",
+ "total": 363.92716666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5,
+  353.125,
+  353.75,
+  354.375,
+  355.0,
+  355.625,
+  356.25,
+  356.875,
+  357.5,
+  358.125,
+  358.75,
+  359.375,
+  360.0,
+  360.625,
+  361.25,
+  361.875,
+  362.5,
+  363.125,
+  363.75
+ ],
+ "plan": {
+  "length": 363.9,
+  "shots": 69,
+  "visual_changes": 460,
+  "mean_gap": 0.79,
+  "longest_gap": 5.35,
+  "longest_gap_at": 90.6,
+  "over_6s": [],
+  "places": [
+   "savanna",
+   "intro_gate",
+   "intro_logo",
+   "zoo",
+   "dunes",
+   "arctic",
+   "zoo_eve"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 34,
+  "longest_without_question": 30.2,
+  "first_words_at": 0.42,
+  "shot_mean": 5.27,
+  "main_intro": {
+   "at": [
+    13.8,
+    348.4
+   ],
+   "seconds": 30.2
+  },
+  "fails": [],
+  "words_placed": "667/667",
+  "sync": {
+   "pauses_checked": 55,
+   "onset_err_mean_ms": 34.9,
+   "onset_err_max_ms": 260.0,
+   "suspect_words": [],
+   "cuts": 68,
+   "cuts_on_the_half_beat": 68,
+   "songs_entering_on_a_beat": "6/6",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: two ears in the grass"
+  ],
+  [
+   0.05,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   2.68,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   3.14,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   4.34,
+   "action",
+   "the rhino's far ear turns forward"
+  ],
+  [
+   4.34,
+   "action",
+   "the rhino's near ear turns back"
+  ],
+  [
+   4.34,
+   "word",
+   "WHO?"
+  ],
+  [
+   5.31,
+   "new place",
+   "the picture board (blue) hook: three hiding animals"
+  ],
+  [
+   5.36,
+   "action",
+   "bear looks happy"
+  ],
+  [
+   5.36,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   5.36,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   5.65,
+   "word",
+   "1"
+  ],
+  [
+   5.65,
+   "word",
+   "2"
+  ],
+  [
+   5.65,
+   "word",
+   "3"
+  ],
+  [
+   6.73,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   8.78,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   9.69,
+   "new place",
+   "the sunny savanna hook: Milo"
+  ],
+  [
+   12.28,
+   "action",
+   "milo hops"
+  ],
+  [
+   12.28,
+   "word",
+   "GUESS!"
+  ],
+  [
+   13.75,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   13.75,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   13.75,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   13.75,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   13.8,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   14.55,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   17.19,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   17.38,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   17.66,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   17.69,
+   "action",
+   "mango pops up"
+  ],
+  [
+   18.01,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   18.13,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   18.32,
+   "action",
+   "tula pops up"
+  ],
+  [
+   18.63,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   18.75,
+   "action",
+   "sandy nods"
+  ],
+  [
+   18.75,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   18.94,
+   "action",
+   "clover pops up"
+  ],
+  [
+   19.06,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.06,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.26,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   19.53,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   20.0,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   20.31,
+   "action",
+   "out of the flash"
+  ],
+  [
+   20.31,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   20.31,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   20.5,
+   "action",
+   "the badge pops"
+  ],
+  [
+   21.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   21.23,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   21.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   21.54,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   21.7,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   21.85,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   22.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   22.16,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   22.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   22.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   22.2,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   22.5,
+   "action",
+   "a firework"
+  ],
+  [
+   22.5,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   22.66,
+   "action",
+   "a firework"
+  ],
+  [
+   22.81,
+   "action",
+   "confetti"
+  ],
+  [
+   22.81,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   22.91,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   23.12,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   23.24,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   23.44,
+   "action",
+   "a firework"
+  ],
+  [
+   23.63,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   23.94,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   24.06,
+   "action",
+   "a firework"
+  ],
+  [
+   24.25,
+   "action",
+   "mango pops up"
+  ],
+  [
+   24.25,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   24.57,
+   "action",
+   "clover pops up"
+  ],
+  [
+   24.57,
+   "action",
+   "tula pops up"
+  ],
+  [
+   24.69,
+   "action",
+   "a firework"
+  ],
+  [
+   24.88,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   25.0,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   25.16,
+   "action",
+   "a firework"
+  ],
+  [
+   25.62,
+   "action",
+   "a firework"
+  ],
+  [
+   25.62,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   25.75,
+   "action",
+   "T word lights up"
+  ],
+  [
+   25.77,
+   "action",
+   "a firework"
+  ],
+  [
+   25.93,
+   "action",
+   "A word lights up"
+  ],
+  [
+   26.64,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   27.13,
+   "action",
+   "Milo flips"
+  ],
+  [
+   27.13,
+   "action",
+   "a firework"
+  ],
+  [
+   27.13,
+   "action",
+   "confetti"
+  ],
+  [
+   27.13,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   27.13,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   27.13,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   27.25,
+   "action",
+   "a firework"
+  ],
+  [
+   27.43,
+   "action",
+   "a firework"
+  ],
+  [
+   27.43,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   27.55,
+   "action",
+   "a firework"
+  ],
+  [
+   28.44,
+   "new place",
+   "the picture board (blue) look at the ears"
+  ],
+  [
+   28.49,
+   "action",
+   "bear looks happy"
+  ],
+  [
+   28.49,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   28.49,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   29.75,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   29.75,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   31.61,
+   "word",
+   "READY?"
+  ],
+  [
+   33.44,
+   "new place",
+   "the sunny savanna ears 1"
+  ],
+  [
+   33.49,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   35.35,
+   "word",
+   "GRAY!"
+  ],
+  [
+   36.83,
+   "word",
+   "HAIR!"
+  ],
+  [
+   39.38,
+   "new shot",
+   "the sunny savanna question 1a"
+  ],
+  [
+   39.42,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   39.95,
+   "sign",
+   "RHINO"
+  ],
+  [
+   40.3,
+   "sign",
+   "ZEBRA"
+  ],
+  [
+   42.74,
+   "thinking dot",
+   "1"
+  ],
+  [
+   43.41,
+   "thinking dot",
+   "2"
+  ],
+  [
+   43.57,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   44.08,
+   "thinking dot",
+   "3"
+  ],
+  [
+   44.37,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   44.57,
+   "answer",
+   "RHINO"
+  ],
+  [
+   45.94,
+   "new shot",
+   "the sunny savanna the rhino comes out"
+  ],
+  [
+   46.0,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   47.21,
+   "action",
+   "rhi nods"
+  ],
+  [
+   47.21,
+   "word",
+   "RHINO!"
+  ],
+  [
+   49.06,
+   "new shot",
+   "the sunny savanna each ear on its own"
+  ],
+  [
+   49.11,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   52.19,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   52.19,
+   "word",
+   "EACH EAR!"
+  ],
+  [
+   53.41,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   53.75,
+   "new shot",
+   "the sunny savanna forward and back"
+  ],
+  [
+   53.8,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   55.01,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   55.01,
+   "picture",
+   "af"
+  ],
+  [
+   55.01,
+   "word",
+   "FRONT!"
+  ],
+  [
+   57.22,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   57.22,
+   "picture",
+   "ab"
+  ],
+  [
+   57.22,
+   "word",
+   "BACK!"
+  ],
+  [
+   58.12,
+   "new shot",
+   "the sunny savanna watch the ears"
+  ],
+  [
+   58.17,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   58.26,
+   "word",
+   "WATCH!"
+  ],
+  [
+   59.61,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   60.25,
+   "action",
+   "the rhino's near ear turns back"
+  ],
+  [
+   60.83,
+   "action",
+   "the rhino's far ear turns forward"
+  ],
+  [
+   61.45,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   62.19,
+   "new shot",
+   "the sunny savanna what does it do"
+  ],
+  [
+   62.24,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   64.35,
+   "picture",
+   "r1"
+  ],
+  [
+   65.06,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   65.88,
+   "word",
+   "?"
+  ],
+  [
+   69.38,
+   "new shot",
+   "the sunny savanna ears perk up"
+  ],
+  [
+   69.42,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   70.14,
+   "action",
+   "both ears perk straight up"
+  ],
+  [
+   70.14,
+   "word",
+   "PERK UP!"
+  ],
+  [
+   72.19,
+   "new shot",
+   "the sunny savanna listen closely"
+  ],
+  [
+   72.24,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   72.28,
+   "action",
+   "both ears perk straight up"
+  ],
+  [
+   75.16,
+   "word",
+   "PERK!"
+  ],
+  [
+   75.94,
+   "new place",
+   "the zoo gate hands up like perky ears"
+  ],
+  [
+   80.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   80.25,
+   "word",
+   "PERK!"
+  ],
+  [
+   83.44,
+   "new place",
+   "the sunny savanna hears very well"
+  ],
+  [
+   84.85,
+   "action",
+   "blink"
+  ],
+  [
+   85.55,
+   "action",
+   "blink"
+  ],
+  [
+   86.41,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   86.41,
+   "picture",
+   "r2"
+  ],
+  [
+   86.41,
+   "word",
+   "HEARS WELL!"
+  ],
+  [
+   87.6,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   87.81,
+   "new place",
+   "the zoo gate hands like rhino ears"
+  ],
+  [
+   89.15,
+   "action",
+   "milo hops"
+  ],
+  [
+   89.15,
+   "word",
+   "FRONT!"
+  ],
+  [
+   90.59,
+   "action",
+   "milo hops"
+  ],
+  [
+   90.59,
+   "word",
+   "BACK!"
+  ],
+  [
+   95.94,
+   "new place",
+   "the sunny savanna say it: each ear"
+  ],
+  [
+   95.99,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   96.02,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   97.43,
+   "action",
+   "rhi nods"
+  ],
+  [
+   98.41,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   99.7,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   100.0,
+   "new place",
+   "the zoo gate be quiet and listen"
+  ],
+  [
+   100.97,
+   "word",
+   "SHH!"
+  ],
+  [
+   104.01,
+   "action",
+   "milo hops"
+  ],
+  [
+   107.81,
+   "new place",
+   "the sunny savanna question 1b"
+  ],
+  [
+   107.86,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   109.44,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   110.48,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   111.73,
+   "sign",
+   "YES"
+  ],
+  [
+   112.08,
+   "sign",
+   "NO"
+  ],
+  [
+   112.97,
+   "word",
+   "?"
+  ],
+  [
+   113.46,
+   "thinking dot",
+   "1"
+  ],
+  [
+   114.13,
+   "thinking dot",
+   "2"
+  ],
+  [
+   114.29,
+   "action",
+   "the rhino's far ear turns forward"
+  ],
+  [
+   114.29,
+   "action",
+   "the rhino's near ear turns back"
+  ],
+  [
+   114.81,
+   "thinking dot",
+   "3"
+  ],
+  [
+   115.29,
+   "answer",
+   "YES"
+  ],
+  [
+   116.56,
+   "new shot",
+   "the sunny savanna great job 1"
+  ],
+  [
+   116.61,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   116.85,
+   "word",
+   "YES!"
+  ],
+  [
+   117.73,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   118.77,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   119.58,
+   "action",
+   "rhi nods"
+  ],
+  [
+   120.94,
+   "new place",
+   "the dunes at sunrise ears 2"
+  ],
+  [
+   120.99,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   123.76,
+   "word",
+   "BIG!"
+  ],
+  [
+   124.31,
+   "word",
+   "POINTY!"
+  ],
+  [
+   125.15,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   126.56,
+   "new shot",
+   "the dunes at sunrise question 2a"
+  ],
+  [
+   126.61,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   127.36,
+   "sign",
+   "FOX"
+  ],
+  [
+   127.71,
+   "sign",
+   "RABBIT"
+  ],
+  [
+   130.01,
+   "thinking dot",
+   "1"
+  ],
+  [
+   130.68,
+   "thinking dot",
+   "2"
+  ],
+  [
+   131.04,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   131.35,
+   "thinking dot",
+   "3"
+  ],
+  [
+   131.84,
+   "answer",
+   "FOX"
+  ],
+  [
+   133.12,
+   "new shot",
+   "the dunes at sunrise the fox comes out"
+  ],
+  [
+   133.27,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   134.91,
+   "action",
+   "fox nods"
+  ],
+  [
+   134.91,
+   "word",
+   "FENNEC FOX!"
+  ],
+  [
+   136.56,
+   "new place",
+   "the picture board board: giant ears"
+  ],
+  [
+   141.21,
+   "word",
+   "GIANT EARS!"
+  ],
+  [
+   142.5,
+   "new shot",
+   "the picture board half as long as its body"
+  ],
+  [
+   142.55,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   143.07,
+   "picture",
+   "be"
+  ],
+  [
+   143.9,
+   "picture",
+   "bb"
+  ],
+  [
+   143.9,
+   "picture",
+   "bh1"
+  ],
+  [
+   143.9,
+   "word",
+   "HALF!"
+  ],
+  [
+   144.43,
+   "picture",
+   "bh2"
+  ],
+  [
+   145.94,
+   "new place",
+   "the dunes at sunrise a lot of ear"
+  ],
+  [
+   145.99,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   146.14,
+   "action",
+   "fox hops"
+  ],
+  [
+   146.14,
+   "word",
+   "WOW!"
+  ],
+  [
+   147.56,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   149.38,
+   "new shot",
+   "the dunes at sunrise count the fox's ears"
+  ],
+  [
+   149.43,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   151.72,
+   "word",
+   "1"
+  ],
+  [
+   152.01,
+   "word",
+   "2"
+  ],
+  [
+   152.81,
+   "new shot",
+   "the dunes at sunrise what do the ears do"
+  ],
+  [
+   152.86,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   153.72,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   154.99,
+   "word",
+   "?"
+  ],
+  [
+   158.44,
+   "new place",
+   "the picture board (blue) board: food under the sand"
+  ],
+  [
+   158.73,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   158.73,
+   "word",
+   "LISTEN!"
+  ],
+  [
+   160.14,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   162.47,
+   "action",
+   "the beetle wiggles"
+  ],
+  [
+   163.44,
+   "new place",
+   "the dunes at sunrise digs with four feet"
+  ],
+  [
+   164.37,
+   "picture",
+   "pf"
+  ],
+  [
+   166.36,
+   "action",
+   "the fox digs"
+  ],
+  [
+   166.36,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   166.84,
+   "action",
+   "the fox digs"
+  ],
+  [
+   167.26,
+   "action",
+   "the fox digs"
+  ],
+  [
+   168.12,
+   "new place",
+   "the picture board board: stay cool"
+  ],
+  [
+   169.86,
+   "picture",
+   "h1"
+  ],
+  [
+   169.86,
+   "picture",
+   "h2"
+  ],
+  [
+   170.13,
+   "action",
+   "the heat rises away"
+  ],
+  [
+   172.43,
+   "word",
+   "COOL!"
+  ],
+  [
+   174.69,
+   "new place",
+   "the zoo gate cup your ears"
+  ],
+  [
+   178.74,
+   "action",
+   "milo hops"
+  ],
+  [
+   178.74,
+   "word",
+   "LISTEN!"
+  ],
+  [
+   182.81,
+   "new place",
+   "the dunes at sunrise say it: giant ears"
+  ],
+  [
+   182.88,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   185.27,
+   "action",
+   "fox nods"
+  ],
+  [
+   185.85,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   186.56,
+   "new place",
+   "the zoo gate dig like a fox"
+  ],
+  [
+   189.27,
+   "action",
+   "milo hops"
+  ],
+  [
+   189.27,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   189.68,
+   "action",
+   "milo hops"
+  ],
+  [
+   190.14,
+   "action",
+   "milo hops"
+  ],
+  [
+   192.14,
+   "action",
+   "milo hops"
+  ],
+  [
+   193.44,
+   "new place",
+   "the picture board (blue) question 2b"
+  ],
+  [
+   196.0,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   197.28,
+   "sign",
+   "FOOD"
+  ],
+  [
+   197.63,
+   "sign",
+   "DRUM"
+  ],
+  [
+   199.55,
+   "word",
+   "?"
+  ],
+  [
+   200.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   200.71,
+   "thinking dot",
+   "2"
+  ],
+  [
+   200.87,
+   "action",
+   "the sound rings pulse"
+  ],
+  [
+   201.39,
+   "thinking dot",
+   "3"
+  ],
+  [
+   201.87,
+   "answer",
+   "FOOD"
+  ],
+  [
+   203.12,
+   "new place",
+   "the dunes at sunrise super listening"
+  ],
+  [
+   203.18,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   203.31,
+   "action",
+   "fox hops"
+  ],
+  [
+   204.86,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   204.86,
+   "word",
+   "SUPER!"
+  ],
+  [
+   206.25,
+   "new place",
+   "the snowy Arctic ears 3"
+  ],
+  [
+   208.19,
+   "word",
+   "SMALL!"
+  ],
+  [
+   209.02,
+   "word",
+   "ROUND!"
+  ],
+  [
+   211.56,
+   "new shot",
+   "the snowy Arctic question 3a"
+  ],
+  [
+   212.15,
+   "sign",
+   "POLAR BEAR"
+  ],
+  [
+   212.5,
+   "sign",
+   "FOX"
+  ],
+  [
+   215.61,
+   "thinking dot",
+   "1"
+  ],
+  [
+   216.28,
+   "thinking dot",
+   "2"
+  ],
+  [
+   216.95,
+   "thinking dot",
+   "3"
+  ],
+  [
+   217.44,
+   "answer",
+   "POLAR BEAR"
+  ],
+  [
+   218.75,
+   "new shot",
+   "the snowy Arctic the polar bear comes out"
+  ],
+  [
+   218.87,
+   "action",
+   "the hiding place sinks away"
+  ],
+  [
+   220.28,
+   "action",
+   "bear nods"
+  ],
+  [
+   220.28,
+   "word",
+   "POLAR BEAR!"
+  ],
+  [
+   221.88,
+   "new shot",
+   "the snowy Arctic small round ears"
+  ],
+  [
+   224.99,
+   "word",
+   "SMALL EARS!"
+  ],
+  [
+   226.88,
+   "new shot",
+   "the snowy Arctic count the bear's ears"
+  ],
+  [
+   229.04,
+   "word",
+   "1"
+  ],
+  [
+   229.33,
+   "word",
+   "2"
+  ],
+  [
+   230.31,
+   "new shot",
+   "the snowy Arctic why so small"
+  ],
+  [
+   232.83,
+   "action",
+   "bear looks"
+  ],
+  [
+   232.83,
+   "word",
+   "?"
+  ],
+  [
+   236.25,
+   "new place",
+   "the picture board (pink) board: warmth in"
+  ],
+  [
+   237.8,
+   "word",
+   "WARM!"
+  ],
+  [
+   241.25,
+   "new place",
+   "the picture board (blue) board: big ears, small ears"
+  ],
+  [
+   241.56,
+   "word",
+   "OUT!"
+  ],
+  [
+   243.09,
+   "action",
+   "the heat rises away"
+  ],
+  [
+   243.89,
+   "word",
+   "IN!"
+  ],
+  [
+   246.56,
+   "new place",
+   "the snowy Arctic short tail"
+  ],
+  [
+   248.7,
+   "word",
+   "SHORT TAIL!"
+  ],
+  [
+   249.25,
+   "action",
+   "the tail wiggles"
+  ],
+  [
+   252.19,
+   "new place",
+   "the zoo gate shiver"
+  ],
+  [
+   255.16,
+   "action",
+   "Milo shivers"
+  ],
+  [
+   255.16,
+   "word",
+   "BRRR!"
+  ],
+  [
+   258.75,
+   "new shot",
+   "the zoo gate cover your ears"
+  ],
+  [
+   262.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   262.26,
+   "word",
+   "COZY!"
+  ],
+  [
+   266.56,
+   "new place",
+   "the snowy Arctic say it: small ears"
+  ],
+  [
+   266.72,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   268.87,
+   "action",
+   "bear nods"
+  ],
+  [
+   270.94,
+   "new place",
+   "the zoo gate hug yourself"
+  ],
+  [
+   274.95,
+   "action",
+   "milo hops"
+  ],
+  [
+   274.95,
+   "word",
+   "HUG!"
+  ],
+  [
+   279.06,
+   "new place",
+   "the picture board (pink) question 3b"
+  ],
+  [
+   281.98,
+   "sign",
+   "BIG"
+  ],
+  [
+   282.33,
+   "sign",
+   "SMALL"
+  ],
+  [
+   283.95,
+   "word",
+   "?"
+  ],
+  [
+   284.44,
+   "thinking dot",
+   "1"
+  ],
+  [
+   285.11,
+   "thinking dot",
+   "2"
+  ],
+  [
+   285.79,
+   "thinking dot",
+   "3"
+  ],
+  [
+   286.27,
+   "answer",
+   "SMALL"
+  ],
+  [
+   287.5,
+   "new place",
+   "the snowy Arctic you remembered"
+  ],
+  [
+   287.7,
+   "word",
+   "SMALL!"
+  ],
+  [
+   288.9,
+   "action",
+   "bear nods"
+  ],
+  [
+   290.0,
+   "new place",
+   "the zoo at sunset quiz time"
+  ],
+  [
+   293.4,
+   "action",
+   "milo hops"
+  ],
+  [
+   293.4,
+   "word",
+   "QUIZ TIME!"
+  ],
+  [
+   294.69,
+   "new place",
+   "the sunny savanna quiz 1"
+  ],
+  [
+   294.74,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   295.77,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   296.09,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   297.43,
+   "sign",
+   "RHINO"
+  ],
+  [
+   297.78,
+   "sign",
+   "POLAR BEAR"
+  ],
+  [
+   300.09,
+   "thinking dot",
+   "1"
+  ],
+  [
+   300.76,
+   "thinking dot",
+   "2"
+  ],
+  [
+   301.43,
+   "thinking dot",
+   "3"
+  ],
+  [
+   301.92,
+   "answer",
+   "RHINO"
+  ],
+  [
+   303.12,
+   "new shot",
+   "the sunny savanna quiz 1: rhino"
+  ],
+  [
+   303.18,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   303.49,
+   "word",
+   "RHINO!"
+  ],
+  [
+   304.9,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   305.93,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   306.88,
+   "new place",
+   "the dunes at sunrise quiz 2"
+  ],
+  [
+   306.93,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   308.12,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   309.87,
+   "sign",
+   "FOX"
+  ],
+  [
+   310.22,
+   "sign",
+   "RHINO"
+  ],
+  [
+   312.42,
+   "thinking dot",
+   "1"
+  ],
+  [
+   313.09,
+   "thinking dot",
+   "2"
+  ],
+  [
+   313.77,
+   "thinking dot",
+   "3"
+  ],
+  [
+   314.25,
+   "answer",
+   "FOX"
+  ],
+  [
+   315.62,
+   "new shot",
+   "the dunes at sunrise quiz 2: fox"
+  ],
+  [
+   315.68,
+   "action",
+   "fox looks happy"
+  ],
+  [
+   316.24,
+   "word",
+   "FOX!"
+  ],
+  [
+   317.03,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   318.44,
+   "new place",
+   "the snowy Arctic quiz 3"
+  ],
+  [
+   320.99,
+   "sign",
+   "FOX"
+  ],
+  [
+   321.34,
+   "sign",
+   "POLAR BEAR"
+  ],
+  [
+   323.66,
+   "thinking dot",
+   "1"
+  ],
+  [
+   324.33,
+   "thinking dot",
+   "2"
+  ],
+  [
+   325.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   325.49,
+   "answer",
+   "POLAR BEAR"
+  ],
+  [
+   326.56,
+   "new shot",
+   "the snowy Arctic quiz 3: polar bear"
+  ],
+  [
+   327.45,
+   "action",
+   "bear nods"
+  ],
+  [
+   327.45,
+   "word",
+   "POLAR BEAR!"
+  ],
+  [
+   330.0,
+   "new place",
+   "the picture board (blue) all the ear friends"
+  ],
+  [
+   330.05,
+   "action",
+   "rhi looks happy"
+  ],
+  [
+   331.2,
+   "action",
+   "the rhino's far ear turns back"
+  ],
+  [
+   331.2,
+   "action",
+   "the rhino's near ear turns forward"
+  ],
+  [
+   331.41,
+   "action",
+   "the ears twitch"
+  ],
+  [
+   332.95,
+   "action",
+   "milo hops"
+  ],
+  [
+   332.95,
+   "word",
+   "YOU DID IT!"
+  ],
+  [
+   333.75,
+   "new place",
+   "the zoo at sunset all three moves"
+  ],
+  [
+   333.86,
+   "action",
+   "milo hops"
+  ],
+  [
+   336.19,
+   "action",
+   "milo hops"
+  ],
+  [
+   338.58,
+   "action",
+   "milo hops"
+  ],
+  [
+   339.49,
+   "word",
+   "COZY!"
+  ],
+  [
+   343.44,
+   "new place",
+   "the picture board (blue) next: whose egg"
+  ],
+  [
+   345.77,
+   "word",
+   "WHOSE EGG?"
+  ],
+  [
+   347.08,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   348.44,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   348.44,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   348.44,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   348.44,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   348.49,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   349.24,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   351.56,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   351.75,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   352.03,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   352.07,
+   "action",
+   "mango pops up"
+  ],
+  [
+   352.38,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   352.5,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   352.69,
+   "action",
+   "tula pops up"
+  ],
+  [
+   353.0,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   353.12,
+   "action",
+   "sandy nods"
+  ],
+  [
+   353.12,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   353.32,
+   "action",
+   "clover pops up"
+  ],
+  [
+   353.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   353.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   353.63,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   353.91,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   354.37,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   354.69,
+   "action",
+   "out of the flash"
+  ],
+  [
+   354.69,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   354.69,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   354.88,
+   "action",
+   "the badge pops"
+  ],
+  [
+   355.45,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.6,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   355.91,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.23,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.54,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   356.88,
+   "action",
+   "a firework"
+  ],
+  [
+   356.88,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   357.04,
+   "action",
+   "a firework"
+  ],
+  [
+   357.19,
+   "action",
+   "confetti"
+  ],
+  [
+   357.19,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   357.29,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   357.5,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   357.62,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   357.81,
+   "action",
+   "a firework"
+  ],
+  [
+   358.01,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   358.32,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   358.44,
+   "action",
+   "a firework"
+  ],
+  [
+   358.63,
+   "action",
+   "mango pops up"
+  ],
+  [
+   358.63,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   358.94,
+   "action",
+   "clover pops up"
+  ],
+  [
+   358.94,
+   "action",
+   "tula pops up"
+  ],
+  [
+   359.06,
+   "action",
+   "a firework"
+  ],
+  [
+   359.26,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   359.38,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   359.53,
+   "action",
+   "a firework"
+  ],
+  [
+   360.0,
+   "action",
+   "a firework"
+  ],
+  [
+   360.0,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   360.12,
+   "action",
+   "T word lights up"
+  ],
+  [
+   360.14,
+   "action",
+   "a firework"
+  ],
+  [
+   360.3,
+   "action",
+   "A word lights up"
+  ],
+  [
+   361.02,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   361.51,
+   "action",
+   "Milo flips"
+  ],
+  [
+   361.51,
+   "action",
+   "a firework"
+  ],
+  [
+   361.51,
+   "action",
+   "confetti"
+  ],
+  [
+   361.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   361.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   361.51,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   361.63,
+   "action",
+   "a firework"
+  ],
+  [
+   361.81,
+   "action",
+   "a firework"
+  ],
+  [
+   361.81,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   361.93,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "Look! Two ears in the grass, and they're turning different ways! Who is it?",
+   "t0": 0.0,
+   "t1": 5.3125,
+   "v0": 0.42,
+   "dur": 4.679958333333333,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.44
+    ],
+    [
+     "Two",
+     0.44,
+     0.72
+    ],
+    [
+     "ears",
+     0.72,
+     1.15
+    ],
+    [
+     "in",
+     1.15,
+     1.24
+    ],
+    [
+     "the",
+     1.24,
+     1.31
+    ],
+    [
+     "grass,",
+     1.31,
+     1.93
+    ],
+    [
+     "and",
+     1.93,
+     2.1
+    ],
+    [
+     "they're",
+     2.1,
+     2.26
+    ],
+    [
+     "turning",
+     2.26,
+     2.72
+    ],
+    [
+     "different",
+     2.72,
+     3.03
+    ],
+    [
+     "ways!",
+     3.03,
+     3.53
+    ],
+    [
+     "Who",
+     3.92,
+     4.18
+    ],
+    [
+     "is",
+     4.18,
+     4.38
+    ],
+    [
+     "it?",
+     4.38,
+     4.68
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: two ears in the grass",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Three animals are hiding! We can only see their ears.",
+   "t0": 5.3125,
+   "t1": 9.6875,
+   "v0": 5.639958333333333,
+   "dur": 3.7546666666666666,
+   "words": [
+    [
+     "Three",
+     0.01,
+     0.41
+    ],
+    [
+     "animals",
+     0.41,
+     1.02
+    ],
+    [
+     "are",
+     1.02,
+     1.09
+    ],
+    [
+     "hiding!",
+     1.09,
+     1.75
+    ],
+    [
+     "We",
+     2.09,
+     2.18
+    ],
+    [
+     "can",
+     2.18,
+     2.35
+    ],
+    [
+     "only",
+     2.35,
+     2.72
+    ],
+    [
+     "see",
+     2.72,
+     2.98
+    ],
+    [
+     "their",
+     2.98,
+     3.14
+    ],
+    [
+     "ears.",
+     3.14,
+     3.75
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: three hiding animals",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "I'm Milo the bluebird. Let's play Guess With Milo!",
+   "t0": 9.6875,
+   "t1": 13.75,
+   "v0": 9.934624999999999,
+   "dur": 3.5290833333333333,
+   "words": [
+    [
+     "I'm",
+     0.0,
+     0.28
+    ],
+    [
+     "Milo",
+     0.28,
+     0.72
+    ],
+    [
+     "the",
+     0.72,
+     0.83
+    ],
+    [
+     "bluebird.",
+     0.83,
+     1.53
+    ],
+    [
+     "Let's",
+     1.85,
+     2.11
+    ],
+    [
+     "play",
+     2.11,
+     2.35
+    ],
+    [
+     "Guess",
+     2.35,
+     2.73
+    ],
+    [
+     "With",
+     2.73,
+     2.88
+    ],
+    [
+     "Milo!",
+     2.88,
+     3.529
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "hook: Milo",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 13.75,
+   "t1": 17.1875,
+   "v0": 14.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 17.1875,
+   "t1": 20.3125,
+   "v0": 17.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 20.3125,
+   "t1": 25.625,
+   "v0": 20.625,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 25.625,
+   "t1": 28.4375,
+   "v0": 25.745,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Look closely at the ears, and say your guess. Ready? Let's play!",
+   "t0": 28.4375,
+   "t1": 33.4375,
+   "v0": 28.67216666666667,
+   "dur": 4.394166666666667,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.27
+    ],
+    [
+     "closely",
+     0.27,
+     0.84
+    ],
+    [
+     "at",
+     0.84,
+     0.92
+    ],
+    [
+     "the",
+     0.92,
+     1.08
+    ],
+    [
+     "ears,",
+     1.08,
+     1.5
+    ],
+    [
+     "and",
+     1.5,
+     1.65
+    ],
+    [
+     "say",
+     1.65,
+     1.83
+    ],
+    [
+     "your",
+     1.83,
+     1.96
+    ],
+    [
+     "guess.",
+     1.96,
+     2.5
+    ],
+    [
+     "Ready?",
+     2.94,
+     3.6
+    ],
+    [
+     "Let's",
+     3.6,
+     3.9
+    ],
+    [
+     "play!",
+     3.9,
+     4.39
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "look at the ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here are two ears. They are gray, with a little fringe of hair. Whose ears are they?",
+   "t0": 33.4375,
+   "t1": 39.375,
+   "v0": 33.60633333333333,
+   "dur": 5.298291666666667,
+   "words": [
+    [
+     "Here",
+     0.08,
+     0.24
+    ],
+    [
+     "are",
+     0.24,
+     0.35
+    ],
+    [
+     "two",
+     0.35,
+     0.66
+    ],
+    [
+     "ears.",
+     0.66,
+     1.26
+    ],
+    [
+     "They",
+     1.51,
+     1.66
+    ],
+    [
+     "are",
+     1.66,
+     1.74
+    ],
+    [
+     "gray,",
+     1.74,
+     2.34
+    ],
+    [
+     "with",
+     2.34,
+     2.52
+    ],
+    [
+     "a",
+     2.52,
+     2.56
+    ],
+    [
+     "little",
+     2.56,
+     2.75
+    ],
+    [
+     "fringe",
+     2.75,
+     3.14
+    ],
+    [
+     "of",
+     3.14,
+     3.22
+    ],
+    [
+     "hair.",
+     3.22,
+     3.63
+    ],
+    [
+     "Whose",
+     4.07,
+     4.34
+    ],
+    [
+     "ears",
+     4.34,
+     4.73
+    ],
+    [
+     "are",
+     4.73,
+     4.93
+    ],
+    [
+     "they?",
+     4.93,
+     5.298
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "ears 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Is it the rhino? Or is it the zebra?",
+   "t0": 39.375,
+   "t1": 45.9375,
+   "v0": 39.444624999999995,
+   "dur": 2.804375,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.28
+    ],
+    [
+     "it",
+     0.28,
+     0.4
+    ],
+    [
+     "the",
+     0.4,
+     0.51
+    ],
+    [
+     "rhino?",
+     0.51,
+     1.19
+    ],
+    [
+     "Or",
+     1.48,
+     1.71
+    ],
+    [
+     "is",
+     1.71,
+     1.91
+    ],
+    [
+     "it",
+     1.91,
+     2.02
+    ],
+    [
+     "the",
+     2.02,
+     2.11
+    ],
+    [
+     "zebra?",
+     2.11,
+     2.8
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "It is the rhino!",
+   "t0": 45.9375,
+   "t1": 49.0625,
+   "v0": 45.989,
+   "dur": 1.220375,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.18
+    ],
+    [
+     "is",
+     0.18,
+     0.41
+    ],
+    [
+     "the",
+     0.41,
+     0.51
+    ],
+    [
+     "rhino!",
+     0.51,
+     1.22
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the rhino comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here is the fun fact. A rhino can move each ear, on its own!",
+   "t0": 49.0625,
+   "t1": 53.75,
+   "v0": 49.14937499999999,
+   "dur": 4.264833333333334,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.32
+    ],
+    [
+     "is",
+     0.32,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.56
+    ],
+    [
+     "fun",
+     0.56,
+     0.96
+    ],
+    [
+     "fact.",
+     0.96,
+     1.57
+    ],
+    [
+     "A",
+     1.98,
+     2.06
+    ],
+    [
+     "rhino",
+     2.06,
+     2.63
+    ],
+    [
+     "can",
+     2.63,
+     2.81
+    ],
+    [
+     "move",
+     2.81,
+     3.04
+    ],
+    [
+     "each",
+     3.04,
+     3.25
+    ],
+    [
+     "ear,",
+     3.25,
+     3.54
+    ],
+    [
+     "on",
+     3.54,
+     3.7
+    ],
+    [
+     "its",
+     3.7,
+     3.87
+    ],
+    [
+     "own!",
+     3.87,
+     4.26
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "each ear on its own",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "One ear can point forward, while the other ear points back!",
+   "t0": 53.75,
+   "t1": 58.125,
+   "v0": 53.95420833333333,
+   "dur": 3.749833333333333,
+   "words": [
+    [
+     "One",
+     0.02,
+     0.3
+    ],
+    [
+     "ear",
+     0.3,
+     0.57
+    ],
+    [
+     "can",
+     0.57,
+     0.8
+    ],
+    [
+     "point",
+     0.8,
+     1.06
+    ],
+    [
+     "forward,",
+     1.06,
+     1.67
+    ],
+    [
+     "while",
+     2.01,
+     2.14
+    ],
+    [
+     "the",
+     2.14,
+     2.29
+    ],
+    [
+     "other",
+     2.29,
+     2.52
+    ],
+    [
+     "ear",
+     2.52,
+     2.8
+    ],
+    [
+     "points",
+     2.8,
+     3.27
+    ],
+    [
+     "back!",
+     3.27,
+     3.75
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "forward and back",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Watch the ears! Forward, and back. Forward, and back!",
+   "t0": 58.125,
+   "t1": 62.1875,
+   "v0": 58.24404166666666,
+   "dur": 3.683125,
+   "words": [
+    [
+     "Watch",
+     0.02,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.65
+    ],
+    [
+     "ears!",
+     0.65,
+     1.16
+    ],
+    [
+     "Forward,",
+     1.37,
+     1.87
+    ],
+    [
+     "and",
+     1.87,
+     2.01
+    ],
+    [
+     "back.",
+     2.01,
+     2.59
+    ],
+    [
+     "Forward,",
+     2.59,
+     3.07
+    ],
+    [
+     "and",
+     3.07,
+     3.21
+    ],
+    [
+     "back!",
+     3.21,
+     3.68
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "watch the ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "What does a rhino do, when it hears something interesting?",
+   "t0": 62.1875,
+   "t1": 69.375,
+   "v0": 62.46716666666666,
+   "dur": 3.412333333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.34
+    ],
+    [
+     "a",
+     0.34,
+     0.41
+    ],
+    [
+     "rhino",
+     0.41,
+     0.94
+    ],
+    [
+     "do,",
+     0.94,
+     1.39
+    ],
+    [
+     "when",
+     1.66,
+     1.79
+    ],
+    [
+     "it",
+     1.79,
+     1.88
+    ],
+    [
+     "hears",
+     1.88,
+     2.14
+    ],
+    [
+     "something",
+     2.14,
+     2.59
+    ],
+    [
+     "interesting?",
+     2.59,
+     3.41
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "what does it do",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Both ears perk straight up! Boing!",
+   "t0": 69.375,
+   "t1": 72.1875,
+   "v0": 69.4195,
+   "dur": 2.2837083333333332,
+   "words": [
+    [
+     "Both",
+     0.0,
+     0.36
+    ],
+    [
+     "ears",
+     0.36,
+     0.72
+    ],
+    [
+     "perk",
+     0.72,
+     1.0
+    ],
+    [
+     "straight",
+     1.0,
+     1.29
+    ],
+    [
+     "up!",
+     1.29,
+     1.55
+    ],
+    [
+     "Boing!",
+     1.55,
+     2.28
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "ears perk up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Up go the ears, to listen very closely. Perk!",
+   "t0": 72.1875,
+   "t1": 75.9375,
+   "v0": 72.24320833333334,
+   "dur": 3.4254583333333333,
+   "words": [
+    [
+     "Up",
+     0.04,
+     0.24
+    ],
+    [
+     "go",
+     0.24,
+     0.43
+    ],
+    [
+     "the",
+     0.43,
+     0.61
+    ],
+    [
+     "ears,",
+     0.61,
+     1.02
+    ],
+    [
+     "to",
+     1.02,
+     1.15
+    ],
+    [
+     "listen",
+     1.15,
+     1.52
+    ],
+    [
+     "very",
+     1.52,
+     1.8
+    ],
+    [
+     "closely.",
+     1.8,
+     2.54
+    ],
+    [
+     "Perk!",
+     2.92,
+     3.42
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "listen closely",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now point both hands straight up, like perky rhino ears. Perk!",
+   "t0": 75.9375,
+   "t1": 83.4375,
+   "v0": 76.20866666666669,
+   "dur": 4.633708333333334,
+   "words": [
+    [
+     "Now",
+     0.02,
+     0.32
+    ],
+    [
+     "point",
+     0.32,
+     0.64
+    ],
+    [
+     "both",
+     0.64,
+     0.9
+    ],
+    [
+     "hands",
+     0.9,
+     1.2
+    ],
+    [
+     "straight",
+     1.2,
+     1.49
+    ],
+    [
+     "up,",
+     1.49,
+     1.9
+    ],
+    [
+     "like",
+     1.9,
+     2.12
+    ],
+    [
+     "perky",
+     2.12,
+     2.56
+    ],
+    [
+     "rhino",
+     2.56,
+     3.06
+    ],
+    [
+     "ears.",
+     3.06,
+     3.62
+    ],
+    [
+     "Perk!",
+     4.04,
+     4.63
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hands up like perky ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "A rhino can't see very well. But it hears very well!",
+   "t0": 83.4375,
+   "t1": 87.8125,
+   "v0": 83.78237500000003,
+   "dur": 3.825,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.1
+    ],
+    [
+     "rhino",
+     0.1,
+     0.71
+    ],
+    [
+     "can't",
+     0.71,
+     1.07
+    ],
+    [
+     "see",
+     1.07,
+     1.29
+    ],
+    [
+     "very",
+     1.29,
+     1.61
+    ],
+    [
+     "well.",
+     1.61,
+     2.06
+    ],
+    [
+     "But",
+     2.42,
+     2.54
+    ],
+    [
+     "it",
+     2.54,
+     2.63
+    ],
+    [
+     "hears",
+     2.63,
+     3.0
+    ],
+    [
+     "very",
+     3.0,
+     3.39
+    ],
+    [
+     "well!",
+     3.39,
+     3.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "hears very well",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Point one hand forward, and one hand back, like rhino ears!",
+   "t0": 87.8125,
+   "t1": 95.9375,
+   "v0": 88.14737500000004,
+   "dur": 4.322166666666667,
+   "words": [
+    [
+     "Point",
+     0.0,
+     0.32
+    ],
+    [
+     "one",
+     0.32,
+     0.62
+    ],
+    [
+     "hand",
+     0.62,
+     1.0
+    ],
+    [
+     "forward,",
+     1.0,
+     1.75
+    ],
+    [
+     "and",
+     1.75,
+     1.91
+    ],
+    [
+     "one",
+     1.91,
+     2.11
+    ],
+    [
+     "hand",
+     2.11,
+     2.44
+    ],
+    [
+     "back,",
+     2.44,
+     3.02
+    ],
+    [
+     "like",
+     3.02,
+     3.21
+    ],
+    [
+     "rhino",
+     3.21,
+     3.74
+    ],
+    [
+     "ears!",
+     3.74,
+     4.32
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hands like rhino ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Say it with me. A rhino can move each ear, on its own!",
+   "t0": 95.9375,
+   "t1": 100.0,
+   "v0": 96.0095416666667,
+   "dur": 3.695,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.35
+    ],
+    [
+     "it",
+     0.35,
+     0.43
+    ],
+    [
+     "with",
+     0.43,
+     0.6
+    ],
+    [
+     "me.",
+     0.6,
+     0.93
+    ],
+    [
+     "A",
+     1.34,
+     1.42
+    ],
+    [
+     "rhino",
+     1.42,
+     1.99
+    ],
+    [
+     "can",
+     1.99,
+     2.18
+    ],
+    [
+     "move",
+     2.18,
+     2.4
+    ],
+    [
+     "each",
+     2.4,
+     2.6
+    ],
+    [
+     "ear,",
+     2.6,
+     2.95
+    ],
+    [
+     "on",
+     2.95,
+     3.11
+    ],
+    [
+     "its",
+     3.11,
+     3.28
+    ],
+    [
+     "own!",
+     3.28,
+     3.69
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: each ear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now be very quiet, like a listening rhino. What can you hear?",
+   "t0": 100.0,
+   "t1": 107.8125,
+   "v0": 100.2445416666667,
+   "dur": 4.190958333333334,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.29
+    ],
+    [
+     "be",
+     0.29,
+     0.42
+    ],
+    [
+     "very",
+     0.42,
+     0.73
+    ],
+    [
+     "quiet,",
+     0.73,
+     1.52
+    ],
+    [
+     "like",
+     1.52,
+     1.68
+    ],
+    [
+     "a",
+     1.68,
+     1.72
+    ],
+    [
+     "listening",
+     1.72,
+     2.32
+    ],
+    [
+     "rhino.",
+     2.32,
+     2.91
+    ],
+    [
+     "What",
+     3.38,
+     3.52
+    ],
+    [
+     "can",
+     3.52,
+     3.66
+    ],
+    [
+     "you",
+     3.66,
+     3.77
+    ],
+    [
+     "hear?",
+     3.77,
+     4.19
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "be quiet and listen",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Quick check! Can a rhino turn its two ears different ways? Yes, or no?",
+   "t0": 107.8125,
+   "t1": 116.5625,
+   "v0": 107.97550000000004,
+   "dur": 4.996666666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.23
+    ],
+    [
+     "check!",
+     0.23,
+     0.7
+    ],
+    [
+     "Can",
+     0.7,
+     0.88
+    ],
+    [
+     "a",
+     0.88,
+     0.93
+    ],
+    [
+     "rhino",
+     0.93,
+     1.46
+    ],
+    [
+     "turn",
+     1.46,
+     1.73
+    ],
+    [
+     "its",
+     1.73,
+     1.91
+    ],
+    [
+     "two",
+     1.91,
+     2.14
+    ],
+    [
+     "ears",
+     2.14,
+     2.5
+    ],
+    [
+     "different",
+     2.5,
+     2.81
+    ],
+    [
+     "ways?",
+     2.81,
+     3.3
+    ],
+    [
+     "Yes,",
+     3.75,
+     4.35
+    ],
+    [
+     "or",
+     4.35,
+     4.58
+    ],
+    [
+     "no?",
+     4.58,
+     4.997
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Yes! One ear forward, one ear back. Great job!",
+   "t0": 116.5625,
+   "t1": 120.9375,
+   "v0": 116.71216666666672,
+   "dur": 3.8230833333333334,
+   "words": [
+    [
+     "Yes!",
+     0.14,
+     0.53
+    ],
+    [
+     "One",
+     0.53,
+     0.79
+    ],
+    [
+     "ear",
+     0.79,
+     1.02
+    ],
+    [
+     "forward,",
+     1.02,
+     1.58
+    ],
+    [
+     "one",
+     1.58,
+     1.82
+    ],
+    [
+     "ear",
+     1.82,
+     2.06
+    ],
+    [
+     "back.",
+     2.06,
+     2.54
+    ],
+    [
+     "Great",
+     2.87,
+     3.2
+    ],
+    [
+     "job!",
+     3.2,
+     3.82
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "great job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Here are two more ears. Look! They are so big, and pointy! Whose ears are they?",
+   "t0": 120.9375,
+   "t1": 126.5625,
+   "v0": 121.07525000000005,
+   "dur": 5.269,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.22
+    ],
+    [
+     "are",
+     0.22,
+     0.31
+    ],
+    [
+     "two",
+     0.31,
+     0.53
+    ],
+    [
+     "more",
+     0.53,
+     0.74
+    ],
+    [
+     "ears.",
+     0.74,
+     1.34
+    ],
+    [
+     "Look!",
+     1.54,
+     1.91
+    ],
+    [
+     "They",
+     1.91,
+     2.33
+    ],
+    [
+     "are",
+     2.33,
+     2.39
+    ],
+    [
+     "so",
+     2.39,
+     2.68
+    ],
+    [
+     "big,",
+     2.68,
+     3.08
+    ],
+    [
+     "and",
+     3.08,
+     3.23
+    ],
+    [
+     "pointy!",
+     3.23,
+     3.91
+    ],
+    [
+     "Whose",
+     4.07,
+     4.36
+    ],
+    [
+     "ears",
+     4.36,
+     4.76
+    ],
+    [
+     "are",
+     4.76,
+     4.9
+    ],
+    [
+     "they?",
+     4.9,
+     5.269
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "ears 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Is it the fox? Or is it the rabbit?",
+   "t0": 126.5625,
+   "t1": 133.125,
+   "v0": 126.88425000000007,
+   "dur": 2.6362083333333333,
+   "words": [
+    [
+     "Is",
+     0.0,
+     0.27
+    ],
+    [
+     "it",
+     0.27,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.48
+    ],
+    [
+     "fox?",
+     0.48,
+     1.22
+    ],
+    [
+     "Or",
+     1.42,
+     1.65
+    ],
+    [
+     "is",
+     1.65,
+     1.83
+    ],
+    [
+     "it",
+     1.83,
+     1.93
+    ],
+    [
+     "the",
+     1.93,
+     2.02
+    ],
+    [
+     "rabbit?",
+     2.02,
+     2.636
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "It is the fennec fox!",
+   "t0": 133.125,
+   "t1": 136.5625,
+   "v0": 133.2604583333334,
+   "dur": 1.6495,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.46
+    ],
+    [
+     "the",
+     0.46,
+     0.54
+    ],
+    [
+     "fennec",
+     0.54,
+     1.0
+    ],
+    [
+     "fox!",
+     1.0,
+     1.649
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the fox comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Here is the fun fact. A fennec fox is a little fox, with giant ears!",
+   "t0": 136.5625,
+   "t1": 142.5,
+   "v0": 136.84995833333338,
+   "dur": 5.454916666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "fun",
+     0.59,
+     0.98
+    ],
+    [
+     "fact.",
+     0.98,
+     1.58
+    ],
+    [
+     "A",
+     2.06,
+     2.11
+    ],
+    [
+     "fennec",
+     2.11,
+     2.57
+    ],
+    [
+     "fox",
+     2.57,
+     3.05
+    ],
+    [
+     "is",
+     3.05,
+     3.19
+    ],
+    [
+     "a",
+     3.19,
+     3.23
+    ],
+    [
+     "little",
+     3.23,
+     3.46
+    ],
+    [
+     "fox,",
+     3.46,
+     4.14
+    ],
+    [
+     "with",
+     4.14,
+     4.36
+    ],
+    [
+     "giant",
+     4.36,
+     4.91
+    ],
+    [
+     "ears!",
+     4.91,
+     5.45
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: giant ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Its ears can be half as long as its body!",
+   "t0": 142.5,
+   "t1": 145.9375,
+   "v0": 142.84487500000003,
+   "dur": 2.758125,
+   "words": [
+    [
+     "Its",
+     0.01,
+     0.23
+    ],
+    [
+     "ears",
+     0.23,
+     0.82
+    ],
+    [
+     "can",
+     0.82,
+     0.98
+    ],
+    [
+     "be",
+     0.98,
+     1.06
+    ],
+    [
+     "half",
+     1.06,
+     1.46
+    ],
+    [
+     "as",
+     1.46,
+     1.59
+    ],
+    [
+     "long",
+     1.59,
+     1.92
+    ],
+    [
+     "as",
+     1.92,
+     2.05
+    ],
+    [
+     "its",
+     2.05,
+     2.21
+    ],
+    [
+     "body!",
+     2.21,
+     2.758
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "half as long as its body",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Wow! That is a lot of ear, for a little fox!",
+   "t0": 145.9375,
+   "t1": 149.375,
+   "v0": 146.14300000000003,
+   "dur": 2.947625,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.55
+    ],
+    [
+     "That",
+     0.73,
+     0.93
+    ],
+    [
+     "is",
+     0.93,
+     1.04
+    ],
+    [
+     "a",
+     1.04,
+     1.08
+    ],
+    [
+     "lot",
+     1.08,
+     1.33
+    ],
+    [
+     "of",
+     1.33,
+     1.42
+    ],
+    [
+     "ear,",
+     1.42,
+     1.84
+    ],
+    [
+     "for",
+     1.84,
+     2.02
+    ],
+    [
+     "a",
+     2.02,
+     2.06
+    ],
+    [
+     "little",
+     2.06,
+     2.24
+    ],
+    [
+     "fox!",
+     2.24,
+     2.948
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "a lot of ear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Count the giant ears with me. One, two!",
+   "t0": 149.375,
+   "t1": 152.8125,
+   "v0": 149.630625,
+   "dur": 2.960875,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "giant",
+     0.36,
+     0.88
+    ],
+    [
+     "ears",
+     0.88,
+     1.28
+    ],
+    [
+     "with",
+     1.28,
+     1.41
+    ],
+    [
+     "me.",
+     1.41,
+     1.71
+    ],
+    [
+     "One,",
+     2.09,
+     2.38
+    ],
+    [
+     "two!",
+     2.38,
+     2.96
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the fox's ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "What do those giant ears do?",
+   "t0": 152.8125,
+   "t1": 158.4375,
+   "v0": 153.1315,
+   "dur": 1.8623333333333334,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.14
+    ],
+    [
+     "do",
+     0.14,
+     0.25
+    ],
+    [
+     "those",
+     0.25,
+     0.59
+    ],
+    [
+     "giant",
+     0.59,
+     1.11
+    ],
+    [
+     "ears",
+     1.11,
+     1.48
+    ],
+    [
+     "do?",
+     1.48,
+     1.86
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "what do the ears do",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "They listen for food, hiding under the sand. Like a little beetle!",
+   "t0": 158.4375,
+   "t1": 163.4375,
+   "v0": 158.53383333333332,
+   "dur": 4.52475,
+   "words": [
+    [
+     "They",
+     0.0,
+     0.2
+    ],
+    [
+     "listen",
+     0.2,
+     0.67
+    ],
+    [
+     "for",
+     0.67,
+     0.84
+    ],
+    [
+     "food,",
+     0.84,
+     1.45
+    ],
+    [
+     "hiding",
+     1.61,
+     2.08
+    ],
+    [
+     "under",
+     2.08,
+     2.24
+    ],
+    [
+     "the",
+     2.24,
+     2.33
+    ],
+    [
+     "sand.",
+     2.33,
+     2.95
+    ],
+    [
+     "Like",
+     3.48,
+     3.68
+    ],
+    [
+     "a",
+     3.68,
+     3.72
+    ],
+    [
+     "little",
+     3.72,
+     3.94
+    ],
+    [
+     "beetle!",
+     3.94,
+     4.52
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: food under the sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Then the fox digs with all four feet. Dig, dig, dig!",
+   "t0": 163.4375,
+   "t1": 168.125,
+   "v0": 163.59858333333332,
+   "dur": 4.157291666666667,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.23
+    ],
+    [
+     "fox",
+     0.23,
+     0.77
+    ],
+    [
+     "digs",
+     0.77,
+     1.21
+    ],
+    [
+     "with",
+     1.21,
+     1.33
+    ],
+    [
+     "all",
+     1.33,
+     1.53
+    ],
+    [
+     "four",
+     1.53,
+     1.8
+    ],
+    [
+     "feet.",
+     1.8,
+     2.33
+    ],
+    [
+     "Dig,",
+     2.76,
+     3.24
+    ],
+    [
+     "dig,",
+     3.24,
+     3.66
+    ],
+    [
+     "dig!",
+     3.66,
+     4.157
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "digs with four feet",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "And big ears let extra heat out. That helps the fox stay cool, in the hot desert!",
+   "t0": 168.125,
+   "t1": 174.6875,
+   "v0": 168.295875,
+   "dur": 6.086041666666667,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.23
+    ],
+    [
+     "big",
+     0.23,
+     0.45
+    ],
+    [
+     "ears",
+     0.45,
+     0.92
+    ],
+    [
+     "let",
+     0.92,
+     1.12
+    ],
+    [
+     "extra",
+     1.12,
+     1.56
+    ],
+    [
+     "heat",
+     1.56,
+     1.83
+    ],
+    [
+     "out.",
+     1.83,
+     2.22
+    ],
+    [
+     "That",
+     2.74,
+     3.01
+    ],
+    [
+     "helps",
+     3.01,
+     3.33
+    ],
+    [
+     "the",
+     3.33,
+     3.41
+    ],
+    [
+     "fox",
+     3.41,
+     3.89
+    ],
+    [
+     "stay",
+     3.89,
+     4.13
+    ],
+    [
+     "cool,",
+     4.13,
+     4.74
+    ],
+    [
+     "in",
+     4.95,
+     5.06
+    ],
+    [
+     "the",
+     5.06,
+     5.13
+    ],
+    [
+     "hot",
+     5.13,
+     5.42
+    ],
+    [
+     "desert!",
+     5.42,
+     6.086
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: stay cool",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Cup your hands behind your ears, like big fox ears. Listen!",
+   "t0": 174.6875,
+   "t1": 182.8125,
+   "v0": 174.92191666666665,
+   "dur": 4.4122916666666665,
+   "words": [
+    [
+     "Cup",
+     0.0,
+     0.24
+    ],
+    [
+     "your",
+     0.24,
+     0.34
+    ],
+    [
+     "hands",
+     0.34,
+     0.68
+    ],
+    [
+     "behind",
+     0.68,
+     1.02
+    ],
+    [
+     "your",
+     1.02,
+     1.13
+    ],
+    [
+     "ears,",
+     1.13,
+     1.71
+    ],
+    [
+     "like",
+     1.71,
+     2.02
+    ],
+    [
+     "big",
+     2.02,
+     2.29
+    ],
+    [
+     "fox",
+     2.29,
+     2.78
+    ],
+    [
+     "ears.",
+     2.78,
+     3.36
+    ],
+    [
+     "Listen!",
+     3.82,
+     4.41
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "cup your ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Say it with me. A fennec fox has giant ears!",
+   "t0": 182.8125,
+   "t1": 186.5625,
+   "v0": 182.8742083333333,
+   "dur": 3.491041666666667,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.38
+    ],
+    [
+     "with",
+     0.38,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.89
+    ],
+    [
+     "A",
+     1.23,
+     1.29
+    ],
+    [
+     "fennec",
+     1.29,
+     1.77
+    ],
+    [
+     "fox",
+     1.77,
+     2.2
+    ],
+    [
+     "has",
+     2.2,
+     2.4
+    ],
+    [
+     "giant",
+     2.4,
+     2.98
+    ],
+    [
+     "ears!",
+     2.98,
+     3.49
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: giant ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you dig like a fennec fox? Dig, dig, dig!",
+   "t0": 186.5625,
+   "t1": 193.4375,
+   "v0": 186.90524999999997,
+   "dur": 3.7132916666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.19
+    ],
+    [
+     "you",
+     0.19,
+     0.33
+    ],
+    [
+     "dig",
+     0.33,
+     0.68
+    ],
+    [
+     "like",
+     0.68,
+     0.87
+    ],
+    [
+     "a",
+     0.87,
+     0.91
+    ],
+    [
+     "fennec",
+     0.91,
+     1.37
+    ],
+    [
+     "fox?",
+     1.37,
+     1.98
+    ],
+    [
+     "Dig,",
+     2.36,
+     2.77
+    ],
+    [
+     "dig,",
+     2.77,
+     3.23
+    ],
+    [
+     "dig!",
+     3.23,
+     3.71
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "dig like a fox",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Quick check! What do the fox's big ears listen for? Food under the sand, or a drum?",
+   "t0": 193.4375,
+   "t1": 203.125,
+   "v0": 193.55854166666663,
+   "dur": 5.99475,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.26
+    ],
+    [
+     "check!",
+     0.26,
+     0.74
+    ],
+    [
+     "What",
+     0.74,
+     0.96
+    ],
+    [
+     "do",
+     0.96,
+     1.07
+    ],
+    [
+     "the",
+     1.07,
+     1.16
+    ],
+    [
+     "fox's",
+     1.16,
+     1.77
+    ],
+    [
+     "big",
+     1.77,
+     2.02
+    ],
+    [
+     "ears",
+     2.02,
+     2.44
+    ],
+    [
+     "listen",
+     2.44,
+     2.82
+    ],
+    [
+     "for?",
+     2.82,
+     3.21
+    ],
+    [
+     "Food",
+     3.72,
+     4.05
+    ],
+    [
+     "under",
+     4.05,
+     4.28
+    ],
+    [
+     "the",
+     4.28,
+     4.37
+    ],
+    [
+     "sand,",
+     4.37,
+     5.14
+    ],
+    [
+     "or",
+     5.14,
+     5.36
+    ],
+    [
+     "a",
+     5.36,
+     5.41
+    ],
+    [
+     "drum?",
+     5.41,
+     5.99
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Food under the sand! Super listening!",
+   "t0": 203.125,
+   "t1": 206.25,
+   "v0": 203.29329166666662,
+   "dur": 2.628416666666667,
+   "words": [
+    [
+     "Food",
+     0.02,
+     0.36
+    ],
+    [
+     "under",
+     0.36,
+     0.57
+    ],
+    [
+     "the",
+     0.57,
+     0.66
+    ],
+    [
+     "sand!",
+     0.66,
+     1.27
+    ],
+    [
+     "Super",
+     1.57,
+     1.94
+    ],
+    [
+     "listening!",
+     1.94,
+     2.628
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super listening",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Here are the last ears. They are small, and round. Whose ears are they?",
+   "t0": 206.25,
+   "t1": 211.5625,
+   "v0": 206.4617083333333,
+   "dur": 4.724291666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.3
+    ],
+    [
+     "are",
+     0.3,
+     0.33
+    ],
+    [
+     "the",
+     0.33,
+     0.44
+    ],
+    [
+     "last",
+     0.44,
+     0.94
+    ],
+    [
+     "ears.",
+     0.94,
+     1.37
+    ],
+    [
+     "They",
+     1.37,
+     1.66
+    ],
+    [
+     "are",
+     1.66,
+     1.73
+    ],
+    [
+     "small,",
+     1.73,
+     2.4
+    ],
+    [
+     "and",
+     2.4,
+     2.56
+    ],
+    [
+     "round.",
+     2.56,
+     3.13
+    ],
+    [
+     "Whose",
+     3.55,
+     3.77
+    ],
+    [
+     "ears",
+     3.77,
+     4.2
+    ],
+    [
+     "are",
+     4.2,
+     4.37
+    ],
+    [
+     "they?",
+     4.37,
+     4.72
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "ears 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Is it the polar bear? Or is it the fennec fox?",
+   "t0": 211.5625,
+   "t1": 218.75,
+   "v0": 211.72599999999994,
+   "dur": 3.3929583333333335,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.33
+    ],
+    [
+     "the",
+     0.33,
+     0.42
+    ],
+    [
+     "polar",
+     0.42,
+     0.9
+    ],
+    [
+     "bear?",
+     0.9,
+     1.3
+    ],
+    [
+     "Or",
+     1.64,
+     1.85
+    ],
+    [
+     "is",
+     1.85,
+     2.03
+    ],
+    [
+     "it",
+     2.03,
+     2.14
+    ],
+    [
+     "the",
+     2.14,
+     2.21
+    ],
+    [
+     "fennec",
+     2.21,
+     2.68
+    ],
+    [
+     "fox?",
+     2.68,
+     3.39
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "It is the polar bear!",
+   "t0": 218.75,
+   "t1": 221.875,
+   "v0": 218.85895833333325,
+   "dur": 1.422625,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.19
+    ],
+    [
+     "is",
+     0.19,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.46
+    ],
+    [
+     "polar",
+     0.46,
+     0.94
+    ],
+    [
+     "bear!",
+     0.94,
+     1.42
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "the polar bear comes out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Here is the fun fact. A polar bear has small, round ears!",
+   "t0": 221.875,
+   "t1": 226.875,
+   "v0": 222.22158333333326,
+   "dur": 4.355291666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.3
+    ],
+    [
+     "is",
+     0.3,
+     0.44
+    ],
+    [
+     "the",
+     0.44,
+     0.52
+    ],
+    [
+     "fun",
+     0.52,
+     0.87
+    ],
+    [
+     "fact.",
+     0.87,
+     1.48
+    ],
+    [
+     "A",
+     1.84,
+     1.89
+    ],
+    [
+     "polar",
+     1.89,
+     2.31
+    ],
+    [
+     "bear",
+     2.31,
+     2.59
+    ],
+    [
+     "has",
+     2.59,
+     2.77
+    ],
+    [
+     "small,",
+     2.77,
+     3.39
+    ],
+    [
+     "round",
+     3.39,
+     3.79
+    ],
+    [
+     "ears!",
+     3.79,
+     4.35
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "small round ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Count the little ears with me. One, two!",
+   "t0": 226.875,
+   "t1": 230.3125,
+   "v0": 227.1168749999999,
+   "dur": 2.7885416666666667,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.35
+    ],
+    [
+     "little",
+     0.35,
+     0.59
+    ],
+    [
+     "ears",
+     0.59,
+     1.06
+    ],
+    [
+     "with",
+     1.06,
+     1.2
+    ],
+    [
+     "me.",
+     1.2,
+     1.55
+    ],
+    [
+     "One,",
+     1.92,
+     2.21
+    ],
+    [
+     "two!",
+     2.21,
+     2.789
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "count the bear's ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Why are a polar bear's ears so small?",
+   "t0": 230.3125,
+   "t1": 236.25,
+   "v0": 230.44541666666657,
+   "dur": 2.382625,
+   "words": [
+    [
+     "Why",
+     0.0,
+     0.25
+    ],
+    [
+     "are",
+     0.25,
+     0.35
+    ],
+    [
+     "a",
+     0.35,
+     0.39
+    ],
+    [
+     "polar",
+     0.39,
+     0.84
+    ],
+    [
+     "bear's",
+     0.84,
+     1.25
+    ],
+    [
+     "ears",
+     1.25,
+     1.58
+    ],
+    [
+     "so",
+     1.58,
+     1.78
+    ],
+    [
+     "small?",
+     1.78,
+     2.38
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "why so small",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Small ears help keep the warmth in, in the cold, snowy Arctic!",
+   "t0": 236.25,
+   "t1": 241.25,
+   "v0": 236.36804166666656,
+   "dur": 4.6554166666666665,
+   "words": [
+    [
+     "Small",
+     0.01,
+     0.43
+    ],
+    [
+     "ears",
+     0.43,
+     0.84
+    ],
+    [
+     "help",
+     0.84,
+     1.09
+    ],
+    [
+     "keep",
+     1.09,
+     1.34
+    ],
+    [
+     "the",
+     1.34,
+     1.43
+    ],
+    [
+     "warmth",
+     1.43,
+     1.86
+    ],
+    [
+     "in,",
+     1.86,
+     2.17
+    ],
+    [
+     "in",
+     2.54,
+     2.67
+    ],
+    [
+     "the",
+     2.67,
+     2.74
+    ],
+    [
+     "cold,",
+     2.74,
+     3.44
+    ],
+    [
+     "snowy",
+     3.44,
+     3.99
+    ],
+    [
+     "Arctic!",
+     3.99,
+     4.65
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: warmth in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Big fox ears let heat out. Small bear ears keep the warmth in!",
+   "t0": 241.25,
+   "t1": 246.5625,
+   "v0": 241.56345833333322,
+   "dur": 4.682291666666667,
+   "words": [
+    [
+     "Big",
+     0.0,
+     0.25
+    ],
+    [
+     "fox",
+     0.25,
+     0.73
+    ],
+    [
+     "ears",
+     0.73,
+     1.12
+    ],
+    [
+     "let",
+     1.12,
+     1.28
+    ],
+    [
+     "heat",
+     1.28,
+     1.53
+    ],
+    [
+     "out.",
+     1.53,
+     1.93
+    ],
+    [
+     "Small",
+     2.33,
+     2.74
+    ],
+    [
+     "bear",
+     2.74,
+     3.03
+    ],
+    [
+     "ears",
+     3.03,
+     3.46
+    ],
+    [
+     "keep",
+     3.46,
+     3.75
+    ],
+    [
+     "the",
+     3.75,
+     3.84
+    ],
+    [
+     "warmth",
+     3.84,
+     4.34
+    ],
+    [
+     "in!",
+     4.34,
+     4.68
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: big ears, small ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "And look! A polar bear has a short little tail. It keeps the warmth in, too!",
+   "t0": 246.5625,
+   "t1": 252.1875,
+   "v0": 246.78574999999987,
+   "dur": 5.10525,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.23
+    ],
+    [
+     "look!",
+     0.23,
+     0.59
+    ],
+    [
+     "A",
+     0.75,
+     0.82
+    ],
+    [
+     "polar",
+     0.82,
+     1.33
+    ],
+    [
+     "bear",
+     1.33,
+     1.64
+    ],
+    [
+     "has",
+     1.64,
+     1.87
+    ],
+    [
+     "a",
+     1.87,
+     1.91
+    ],
+    [
+     "short",
+     1.91,
+     2.27
+    ],
+    [
+     "little",
+     2.27,
+     2.46
+    ],
+    [
+     "tail.",
+     2.46,
+     2.95
+    ],
+    [
+     "It",
+     3.38,
+     3.5
+    ],
+    [
+     "keeps",
+     3.5,
+     3.81
+    ],
+    [
+     "the",
+     3.81,
+     3.89
+    ],
+    [
+     "warmth",
+     3.89,
+     4.34
+    ],
+    [
+     "in,",
+     4.34,
+     4.58
+    ],
+    [
+     "too!",
+     4.58,
+     5.1
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "short tail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you shiver, like you are in the snow? Brrr!",
+   "t0": 252.1875,
+   "t1": 258.75,
+   "v0": 252.43099999999987,
+   "dur": 3.5225416666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.18
+    ],
+    [
+     "you",
+     0.18,
+     0.31
+    ],
+    [
+     "shiver,",
+     0.31,
+     0.76
+    ],
+    [
+     "like",
+     0.76,
+     1.1
+    ],
+    [
+     "you",
+     1.1,
+     1.23
+    ],
+    [
+     "are",
+     1.23,
+     1.32
+    ],
+    [
+     "in",
+     1.32,
+     1.43
+    ],
+    [
+     "the",
+     1.43,
+     1.49
+    ],
+    [
+     "snow?",
+     1.49,
+     2.11
+    ],
+    [
+     "Brrr!",
+     2.73,
+     3.52
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "shiver",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Make small ears! Cover your ears with your hands. So cozy!",
+   "t0": 258.75,
+   "t1": 266.5625,
+   "v0": 258.8935416666665,
+   "dur": 4.080541666666667,
+   "words": [
+    [
+     "Make",
+     0.0,
+     0.22
+    ],
+    [
+     "small",
+     0.22,
+     0.59
+    ],
+    [
+     "ears!",
+     0.59,
+     1.15
+    ],
+    [
+     "Cover",
+     1.45,
+     1.75
+    ],
+    [
+     "your",
+     1.75,
+     1.92
+    ],
+    [
+     "ears",
+     1.92,
+     2.37
+    ],
+    [
+     "with",
+     2.37,
+     2.48
+    ],
+    [
+     "your",
+     2.48,
+     2.58
+    ],
+    [
+     "hands.",
+     2.58,
+     3.15
+    ],
+    [
+     "So",
+     3.15,
+     3.37
+    ],
+    [
+     "cozy!",
+     3.37,
+     4.08
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "cover your ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Say it with me. A polar bear has small, round ears!",
+   "t0": 266.5625,
+   "t1": 270.9375,
+   "v0": 266.7140833333332,
+   "dur": 3.7912916666666665,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.29
+    ],
+    [
+     "it",
+     0.29,
+     0.36
+    ],
+    [
+     "with",
+     0.36,
+     0.52
+    ],
+    [
+     "me.",
+     0.52,
+     0.84
+    ],
+    [
+     "A",
+     1.24,
+     1.27
+    ],
+    [
+     "polar",
+     1.27,
+     1.68
+    ],
+    [
+     "bear",
+     1.68,
+     1.97
+    ],
+    [
+     "has",
+     1.97,
+     2.16
+    ],
+    [
+     "small,",
+     2.16,
+     2.8
+    ],
+    [
+     "round",
+     2.8,
+     3.2
+    ],
+    [
+     "ears!",
+     3.2,
+     3.79
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it: small ears",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you hug yourself, warm and cozy, like a polar bear? Squeeze!",
+   "t0": 270.9375,
+   "t1": 279.0625,
+   "v0": 271.04537499999986,
+   "dur": 4.581416666666667,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.15
+    ],
+    [
+     "you",
+     0.15,
+     0.27
+    ],
+    [
+     "hug",
+     0.27,
+     0.49
+    ],
+    [
+     "yourself,",
+     0.49,
+     1.12
+    ],
+    [
+     "warm",
+     1.12,
+     1.67
+    ],
+    [
+     "and",
+     1.67,
+     1.82
+    ],
+    [
+     "cozy,",
+     1.82,
+     2.39
+    ],
+    [
+     "like",
+     2.39,
+     2.55
+    ],
+    [
+     "a",
+     2.55,
+     2.6
+    ],
+    [
+     "polar",
+     2.6,
+     3.06
+    ],
+    [
+     "bear?",
+     3.06,
+     3.46
+    ],
+    [
+     "Squeeze!",
+     3.9,
+     4.58
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hug yourself",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Quick check! Which ears keep the warmth in? Big ears, or small ears?",
+   "t0": 279.0625,
+   "t1": 287.5,
+   "v0": 279.16679166666654,
+   "dur": 4.786041666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.21
+    ],
+    [
+     "check!",
+     0.21,
+     0.66
+    ],
+    [
+     "Which",
+     0.66,
+     0.88
+    ],
+    [
+     "ears",
+     0.88,
+     1.31
+    ],
+    [
+     "keep",
+     1.31,
+     1.54
+    ],
+    [
+     "the",
+     1.54,
+     1.63
+    ],
+    [
+     "warmth",
+     1.63,
+     2.06
+    ],
+    [
+     "in?",
+     2.06,
+     2.38
+    ],
+    [
+     "Big",
+     2.81,
+     3.06
+    ],
+    [
+     "ears,",
+     3.06,
+     3.6
+    ],
+    [
+     "or",
+     3.6,
+     3.74
+    ],
+    [
+     "small",
+     3.74,
+     4.22
+    ],
+    [
+     "ears?",
+     4.22,
+     4.786
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Small ears! You remembered!",
+   "t0": 287.5,
+   "t1": 290.0,
+   "v0": 287.6928333333332,
+   "dur": 1.878125,
+   "words": [
+    [
+     "Small",
+     0.01,
+     0.42
+    ],
+    [
+     "ears!",
+     0.42,
+     1.07
+    ],
+    [
+     "You",
+     1.07,
+     1.21
+    ],
+    [
+     "remembered!",
+     1.21,
+     1.878
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you remembered",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Three pairs of ears, and three friends! Now it is quiz time!",
+   "t0": 290.0,
+   "t1": 294.6875,
+   "v0": 290.11095833333326,
+   "dur": 4.212625,
+   "words": [
+    [
+     "Three",
+     0.01,
+     0.38
+    ],
+    [
+     "pairs",
+     0.38,
+     0.78
+    ],
+    [
+     "of",
+     0.78,
+     0.86
+    ],
+    [
+     "ears,",
+     0.86,
+     1.35
+    ],
+    [
+     "and",
+     1.35,
+     1.51
+    ],
+    [
+     "three",
+     1.51,
+     1.73
+    ],
+    [
+     "friends!",
+     1.73,
+     2.36
+    ],
+    [
+     "Now",
+     2.75,
+     3.08
+    ],
+    [
+     "it",
+     3.08,
+     3.17
+    ],
+    [
+     "is",
+     3.17,
+     3.29
+    ],
+    [
+     "quiz",
+     3.29,
+     3.65
+    ],
+    [
+     "time!",
+     3.65,
+     4.21
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz time",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Whose ears can turn different ways? The rhino's, or the polar bear's?",
+   "t0": 294.6875,
+   "t1": 303.125,
+   "v0": 294.8635833333333,
+   "dur": 4.73725,
+   "words": [
+    [
+     "Whose",
+     0.01,
+     0.24
+    ],
+    [
+     "ears",
+     0.24,
+     0.74
+    ],
+    [
+     "can",
+     0.74,
+     0.91
+    ],
+    [
+     "turn",
+     0.91,
+     1.23
+    ],
+    [
+     "different",
+     1.23,
+     1.54
+    ],
+    [
+     "ways?",
+     1.54,
+     2.03
+    ],
+    [
+     "The",
+     2.46,
+     2.57
+    ],
+    [
+     "rhino's,",
+     2.57,
+     3.39
+    ],
+    [
+     "or",
+     3.39,
+     3.58
+    ],
+    [
+     "the",
+     3.58,
+     3.67
+    ],
+    [
+     "polar",
+     3.67,
+     4.12
+    ],
+    [
+     "bear's?",
+     4.12,
+     4.737
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "The rhino! One ear forward, one ear back.",
+   "t0": 303.125,
+   "t1": 306.875,
+   "v0": 303.3408333333333,
+   "dur": 3.08125,
+   "words": [
+    [
+     "The",
+     0.04,
+     0.15
+    ],
+    [
+     "rhino!",
+     0.15,
+     0.84
+    ],
+    [
+     "One",
+     1.17,
+     1.38
+    ],
+    [
+     "ear",
+     1.38,
+     1.56
+    ],
+    [
+     "forward,",
+     1.56,
+     2.12
+    ],
+    [
+     "one",
+     2.12,
+     2.38
+    ],
+    [
+     "ear",
+     2.38,
+     2.59
+    ],
+    [
+     "back.",
+     2.59,
+     3.08
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 1: rhino",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "Whose giant ears listen under the sand? The fox's, or the rhino's?",
+   "t0": 306.875,
+   "t1": 315.625,
+   "v0": 306.96208333333334,
+   "dur": 4.972,
+   "words": [
+    [
+     "Whose",
+     0.01,
+     0.22
+    ],
+    [
+     "giant",
+     0.22,
+     0.71
+    ],
+    [
+     "ears",
+     0.71,
+     1.16
+    ],
+    [
+     "listen",
+     1.16,
+     1.55
+    ],
+    [
+     "under",
+     1.55,
+     1.72
+    ],
+    [
+     "the",
+     1.72,
+     1.81
+    ],
+    [
+     "sand?",
+     1.81,
+     2.38
+    ],
+    [
+     "The",
+     2.83,
+     2.91
+    ],
+    [
+     "fox's,",
+     2.91,
+     3.83
+    ],
+    [
+     "or",
+     3.93,
+     4.07
+    ],
+    [
+     "the",
+     4.07,
+     4.22
+    ],
+    [
+     "rhino's?",
+     4.22,
+     4.97
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "dunes",
+   "say": "The fennec fox! Listen, listen!",
+   "t0": 315.625,
+   "t1": 318.4375,
+   "v0": 315.67408333333333,
+   "dur": 2.33175,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "fennec",
+     0.11,
+     0.57
+    ],
+    [
+     "fox!",
+     0.57,
+     1.2
+    ],
+    [
+     "Listen,",
+     1.36,
+     1.78
+    ],
+    [
+     "listen!",
+     1.78,
+     2.33
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 2: fox",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Whose ears are small and round? The fox's, or the polar bear's?",
+   "t0": 318.4375,
+   "t1": 326.5625,
+   "v0": 318.54583333333335,
+   "dur": 4.626291666666667,
+   "words": [
+    [
+     "Whose",
+     0.01,
+     0.2
+    ],
+    [
+     "ears",
+     0.2,
+     0.63
+    ],
+    [
+     "are",
+     0.63,
+     0.72
+    ],
+    [
+     "small",
+     0.72,
+     1.27
+    ],
+    [
+     "and",
+     1.27,
+     1.41
+    ],
+    [
+     "round?",
+     1.41,
+     1.96
+    ],
+    [
+     "The",
+     2.37,
+     2.44
+    ],
+    [
+     "fox's,",
+     2.44,
+     3.33
+    ],
+    [
+     "or",
+     3.33,
+     3.47
+    ],
+    [
+     "the",
+     3.47,
+     3.56
+    ],
+    [
+     "polar",
+     3.56,
+     4.02
+    ],
+    [
+     "bear's?",
+     4.02,
+     4.626
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "quiz 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "The polar bear! Small ears keep it warm.",
+   "t0": 326.5625,
+   "t1": 330.0,
+   "v0": 326.912125,
+   "dur": 2.87375,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "polar",
+     0.11,
+     0.54
+    ],
+    [
+     "bear!",
+     0.54,
+     0.91
+    ],
+    [
+     "Small",
+     1.16,
+     1.55
+    ],
+    [
+     "ears",
+     1.55,
+     2.01
+    ],
+    [
+     "keep",
+     2.01,
+     2.23
+    ],
+    [
+     "it",
+     2.23,
+     2.32
+    ],
+    [
+     "warm.",
+     2.32,
+     2.87
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "quiz 3: polar bear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Look at all our ear friends! You guessed them all!",
+   "t0": 330.0,
+   "t1": 333.75,
+   "v0": 330.325875,
+   "dur": 2.985125,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.32
+    ],
+    [
+     "at",
+     0.32,
+     0.54
+    ],
+    [
+     "all",
+     0.54,
+     0.77
+    ],
+    [
+     "our",
+     0.77,
+     0.87
+    ],
+    [
+     "ear",
+     0.87,
+     1.08
+    ],
+    [
+     "friends!",
+     1.08,
+     1.73
+    ],
+    [
+     "You",
+     1.98,
+     2.12
+    ],
+    [
+     "guessed",
+     2.12,
+     2.48
+    ],
+    [
+     "them",
+     2.48,
+     2.62
+    ],
+    [
+     "all!",
+     2.62,
+     2.98
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "all the ear friends",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo_eve",
+   "say": "Turn your ears like a rhino. Cup your ears like a fox. And cover them, so cozy, like a polar bear!",
+   "t0": 333.75,
+   "t1": 343.4375,
+   "v0": 333.851,
+   "dur": 7.644583333333333,
+   "words": [
+    [
+     "Turn",
+     0.01,
+     0.27
+    ],
+    [
+     "your",
+     0.27,
+     0.44
+    ],
+    [
+     "ears",
+     0.44,
+     0.92
+    ],
+    [
+     "like",
+     0.92,
+     1.11
+    ],
+    [
+     "a",
+     1.11,
+     1.16
+    ],
+    [
+     "rhino.",
+     1.16,
+     1.85
+    ],
+    [
+     "Cup",
+     2.34,
+     2.59
+    ],
+    [
+     "your",
+     2.59,
+     2.74
+    ],
+    [
+     "ears",
+     2.74,
+     3.21
+    ],
+    [
+     "like",
+     3.21,
+     3.38
+    ],
+    [
+     "a",
+     3.38,
+     3.42
+    ],
+    [
+     "fox.",
+     3.42,
+     4.19
+    ],
+    [
+     "And",
+     4.59,
+     4.73
+    ],
+    [
+     "cover",
+     4.73,
+     5.08
+    ],
+    [
+     "them,",
+     5.08,
+     5.4
+    ],
+    [
+     "so",
+     5.4,
+     5.64
+    ],
+    [
+     "cozy,",
+     5.64,
+     6.48
+    ],
+    [
+     "like",
+     6.48,
+     6.65
+    ],
+    [
+     "a",
+     6.65,
+     6.7
+    ],
+    [
+     "polar",
+     6.7,
+     7.22
+    ],
+    [
+     "bear!",
+     7.22,
+     7.64
+    ]
+   ],
+   "part": 4,
+   "q": true,
+   "tag": "all three moves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Next time on Guess With Milo: whose egg is this? Bye-bye, friends!",
+   "t0": 343.4375,
+   "t1": 348.4375,
+   "v0": 343.6355833333334,
+   "dur": 4.5317083333333334,
+   "words": [
+    [
+     "Next",
+     0.0,
+     0.32
+    ],
+    [
+     "time",
+     0.32,
+     0.59
+    ],
+    [
+     "on",
+     0.59,
+     0.71
+    ],
+    [
+     "Guess",
+     0.71,
+     0.94
+    ],
+    [
+     "With",
+     0.94,
+     1.08
+    ],
+    [
+     "Milo:",
+     1.08,
+     1.71
+    ],
+    [
+     "whose",
+     1.94,
+     2.13
+    ],
+    [
+     "egg",
+     2.13,
+     2.43
+    ],
+    [
+     "is",
+     2.43,
+     2.55
+    ],
+    [
+     "this?",
+     2.55,
+     2.98
+    ],
+    [
+     "Bye-bye,",
+     3.44,
+     3.87
+    ],
+    [
+     "friends!",
+     3.87,
+     4.53
+    ]
+   ],
+   "part": 4,
+   "q": false,
+   "tag": "next: whose egg",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 348.4375,
+   "t1": 351.5625,
+   "v0": 348.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 351.5625,
+   "t1": 354.6875,
+   "v0": 351.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 354.6875,
+   "t1": 360.0,
+   "v0": 355.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 360.0,
+   "t1": 362.92716666666666,
+   "v0": 360.12,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

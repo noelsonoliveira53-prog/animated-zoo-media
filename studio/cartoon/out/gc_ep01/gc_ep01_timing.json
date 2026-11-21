@@ -1,6 +1,6 @@
 {
  "id": "gc_ep01",
- "total": 309.75874999999996,
+ "total": 339.5866666666667,
  "bpm": 96,
  "beats": [
   0.0,
@@ -498,19 +498,69 @@
   307.5,
   308.125,
   308.75,
-  309.375
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375
  ],
  "plan": {
-  "length": 309.8,
-  "shots": 69,
-  "visual_changes": 330,
-  "mean_gap": 0.94,
-  "longest_gap": 4.53,
-  "longest_gap_at": 224.5,
+  "length": 339.6,
+  "shots": 77,
+  "visual_changes": 408,
+  "mean_gap": 0.83,
+  "longest_gap": 4.6,
+  "longest_gap_at": 239.5,
   "over_6s": [],
   "places": [
    "ggarden",
    "glab",
+   "gz_intro",
+   "gz_logo",
    "gbench",
    "gwindow",
    "gsoil",
@@ -520,23 +570,26 @@
    "paper_gz"
   ],
   "questions": 24,
-  "longest_without_question": 29.1,
+  "longest_without_question": 44.1,
   "first_words_at": 0.42,
-  "shot_mean": 4.49,
+  "shot_mean": 4.41,
   "main_intro": {
-   "at": [],
-   "seconds": 0
+   "at": [
+    11.2,
+    323.8
+   ],
+   "seconds": 30.5
   },
   "fails": [],
-  "words_placed": "661/661",
+  "words_placed": "665/665",
   "sync": {
    "pauses_checked": 50,
    "onset_err_mean_ms": 30.2,
    "onset_err_max_ms": 90.0,
    "suspect_words": [],
-   "cuts": 68,
-   "cuts_on_the_half_beat": 68,
-   "songs_entering_on_a_beat": "0/0",
+   "cuts": 76,
+   "cuts_on_the_half_beat": 76,
+   "songs_entering_on_a_beat": "6/6",
    "process": "3D (beat)"
   }
  },
@@ -612,1584 +665,1974 @@
    "gizmo hops"
   ],
   [
-   10.94,
-   "new shot",
-   "Gizmo's lab lab wide"
+   11.25,
+   "action",
+   "the gears turn"
   ],
   [
-   11.29,
+   11.25,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   11.3,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   12.07,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   12.38,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   12.69,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.44,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   13.44,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   13.44,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   14.69,
+   "action",
+   "the gears turn"
+  ],
+  [
+   14.69,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   14.88,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   16.56,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   17.19,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   17.5,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   17.81,
+   "action",
+   "out of the flash"
+  ],
+  [
+   17.81,
+   "action",
+   "the rays turn"
+  ],
+  [
+   17.81,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   18.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   18.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   18.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.19,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.7,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   20.31,
+   "action",
+   "confetti"
+  ],
+  [
+   20.31,
+   "action",
+   "the line draws on"
+  ],
+  [
+   20.62,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   20.82,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   20.94,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   21.62,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   21.75,
    "action",
    "Gizmo waves"
   ],
   [
-   12.04,
+   22.5,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   23.26,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   23.76,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   24.67,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   24.67,
+   "action",
+   "confetti"
+  ],
+  [
+   24.67,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   24.97,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   25.94,
+   "new place",
+   "Gizmo's lab lab wide"
+  ],
+  [
+   26.22,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   26.97,
    "word",
    "HELLO!"
-  ],
-  [
-   14.06,
-   "new place",
-   "Gizmo's work bench bench wide"
-  ],
-  [
-   15.16,
-   "action",
-   "a part lights up"
-  ],
-  [
-   16.2,
-   "word",
-   "STEP BY STEP"
-  ],
-  [
-   17.5,
-   "new shot",
-   "Gizmo's work bench the seed close"
-  ],
-  [
-   18.25,
-   "picture",
-   "mg"
-  ],
-  [
-   19.53,
-   "word",
-   "SO SMALL"
-  ],
-  [
-   21.25,
-   "new shot",
-   "Gizmo's work bench zoom"
-  ],
-  [
-   23.96,
-   "action",
-   "the magnifier moves over the seed"
-  ],
-  [
-   23.96,
-   "word",
-   "ZOOM!"
-  ],
-  [
-   25.0,
-   "new shot",
-   "Gizmo's work bench alive"
-  ],
-  [
-   25.87,
-   "action",
-   "gizmo hops"
-  ],
-  [
-   25.87,
-   "action",
-   "gizmo looks wow"
-  ],
-  [
-   25.87,
-   "word",
-   "ALIVE!"
   ],
   [
    29.06,
    "new place",
+   "Gizmo's work bench bench wide"
+  ],
+  [
+   30.09,
+   "action",
+   "a part lights up"
+  ],
+  [
+   31.13,
+   "word",
+   "STEP BY STEP"
+  ],
+  [
+   32.5,
+   "new shot",
+   "Gizmo's work bench the seed close"
+  ],
+  [
+   33.17,
+   "picture",
+   "mg"
+  ],
+  [
+   34.45,
+   "word",
+   "SO SMALL"
+  ],
+  [
+   36.25,
+   "new shot",
+   "Gizmo's work bench zoom"
+  ],
+  [
+   38.89,
+   "action",
+   "the magnifier moves over the seed"
+  ],
+  [
+   38.89,
+   "word",
+   "ZOOM!"
+  ],
+  [
+   40.0,
+   "new shot",
+   "Gizmo's work bench alive"
+  ],
+  [
+   40.8,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   40.8,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   40.8,
+   "word",
+   "ALIVE!"
+  ],
+  [
+   44.06,
+   "new place",
    "the picture board (blueprint) question 1"
   ],
   [
-   31.91,
+   46.84,
    "sign",
    "PLANT"
   ],
   [
-   32.26,
+   47.19,
    "sign",
    "STONE"
   ],
   [
-   34.42,
+   49.35,
    "thinking dot",
    "1"
   ],
   [
-   35.1,
+   50.03,
    "thinking dot",
    "2"
   ],
   [
-   35.77,
+   50.7,
    "thinking dot",
    "3"
   ],
   [
-   36.26,
+   51.19,
    "answer",
    "PLANT"
   ],
   [
-   36.31,
+   51.24,
    "action",
    "a part lights up"
   ],
   [
-   37.5,
+   52.5,
    "new shot",
    "the picture board (blueprint) open the seed"
   ],
   [
-   38.29,
+   53.22,
    "word",
    "A BABY PLANT!"
   ],
   [
-   39.78,
+   54.71,
    "picture",
    "so"
   ],
   [
-   40.86,
+   55.79,
    "action",
    "a part lights up"
   ],
   [
-   41.56,
+   56.56,
    "new shot",
    "the picture board (blueprint) root and shoot"
   ],
   [
-   44.28,
+   59.21,
    "action",
    "a part lights up"
   ],
   [
-   44.28,
+   59.21,
    "word",
    "ROOT"
   ],
   [
-   45.28,
+   60.21,
    "action",
    "a part lights up"
   ],
   [
-   45.28,
+   60.21,
    "word",
    "SHOOT"
   ],
   [
-   46.25,
+   60.94,
    "new shot",
    "the picture board (blueprint) find the root"
   ],
   [
-   47.45,
+   62.38,
    "action",
    "a part lights up"
   ],
   [
-   48.15,
+   63.08,
    "word",
    "POINT!"
   ],
   [
-   50.31,
+   65.31,
    "new shot",
    "the picture board (blueprint) food"
   ],
   [
-   51.47,
+   66.4,
    "action",
    "a part lights up"
   ],
   [
-   51.47,
+   66.4,
    "word",
    "FOOD"
   ],
   [
-   54.69,
+   69.38,
    "new shot",
    "the picture board (blueprint) question 1b"
   ],
   [
-   56.77,
+   71.7,
    "sign",
    "GROW"
   ],
   [
-   57.12,
+   72.05,
    "sign",
    "PLAY"
   ],
   [
-   58.62,
+   73.55,
    "thinking dot",
    "1"
   ],
   [
-   59.29,
+   74.22,
    "thinking dot",
    "2"
   ],
   [
-   59.96,
+   74.89,
    "thinking dot",
    "3"
   ],
   [
-   60.45,
+   75.38,
    "answer",
    "GROW"
   ],
   [
-   60.5,
+   75.43,
    "action",
    "a part lights up"
   ],
   [
-   61.56,
+   76.56,
    "new shot",
    "the picture board (blueprint) food to grow"
   ],
   [
-   61.96,
+   76.89,
    "word",
    "TO GROW!"
   ],
   [
-   63.51,
+   78.44,
    "action",
    "a part lights up"
   ],
   [
-   64.63,
+   79.56,
    "action",
    "a part lights up"
   ],
   [
-   65.62,
+   80.62,
    "new place",
    "Gizmo's lab lunch"
   ],
   [
-   66.27,
+   81.2,
    "action",
    "gizmo looks wow"
   ],
   [
-   66.7,
+   81.63,
    "action",
    "gizmo hops"
   ],
   [
-   66.7,
+   81.63,
    "word",
    "A PACKED LUNCH!"
   ],
   [
-   68.75,
+   83.75,
    "new place",
    "the picture board (blueprint) seed coat"
   ],
   [
-   70.79,
+   85.72,
    "action",
    "a part lights up"
   ],
   [
-   70.79,
+   85.72,
    "word",
    "SEED COAT"
   ],
   [
-   73.44,
+   88.44,
    "new place",
    "Gizmo's work bench jacket"
   ],
   [
-   75.06,
+   89.99,
    "action",
    "a part lights up"
   ],
   [
-   75.06,
+   89.99,
    "word",
    "A JACKET!"
   ],
   [
-   77.81,
+   92.81,
    "new place",
    "the picture board (blueprint) count parts"
   ],
   [
-   79.49,
+   94.42,
    "action",
    "a part lights up"
   ],
   [
-   79.49,
+   94.42,
    "word",
    "1"
   ],
   [
-   79.74,
+   94.67,
    "action",
    "a part lights up"
   ],
   [
-   79.74,
+   94.67,
    "word",
    "2"
   ],
   [
-   80.01,
+   94.94,
    "action",
    "a part lights up"
   ],
   [
-   80.01,
+   94.94,
    "word",
    "3"
   ],
   [
-   80.94,
+   95.94,
    "new place",
    "Gizmo's work bench question 2"
   ],
   [
-   83.05,
+   97.98,
    "sign",
    "COAT"
   ],
   [
-   83.4,
+   98.33,
    "sign",
    "FOOD"
   ],
   [
-   84.98,
+   99.91,
    "thinking dot",
    "1"
   ],
   [
-   85.65,
+   100.58,
    "thinking dot",
    "2"
   ],
   [
-   86.33,
+   101.26,
    "thinking dot",
    "3"
   ],
   [
-   86.81,
+   101.74,
    "answer",
    "COAT"
   ],
   [
-   86.86,
+   101.79,
    "action",
    "gizmo hops"
   ],
   [
-   88.12,
+   102.81,
    "new place",
    "the picture board (blueprint) three parts"
   ],
   [
-   88.71,
+   103.64,
    "action",
    "a part lights up"
   ],
   [
-   91.44,
+   106.37,
    "word",
    "3 PARTS!"
   ],
   [
-   92.81,
+   107.81,
    "new place",
    "Gizmo's lab curl up"
   ],
   [
-   93.16,
+   108.09,
    "action",
    "Gizmo curls up small"
   ],
   [
-   93.16,
+   108.09,
    "word",
    "CURL UP!"
   ],
   [
-   95.66,
+   110.59,
    "action",
    "gizmo hops"
   ],
   [
-   95.66,
+   110.59,
    "word",
    "POP!"
   ],
   [
-   96.88,
+   111.56,
    "new place",
    "the picture board (blueprint) waiting to grow"
   ],
   [
-   98.99,
+   113.92,
    "action",
    "a part lights up"
   ],
   [
-   101.25,
+   116.25,
    "new place",
    "the sunny lab window window wide"
   ],
   [
-   104.4,
+   119.33,
    "word",
    "?"
   ],
   [
-   105.31,
+   120.31,
    "new shot",
    "the sunny lab window water"
   ],
   [
-   105.93,
+   120.86,
    "action",
    "Gizmo tips the can"
   ],
   [
-   105.93,
+   120.86,
    "word",
    "WATER"
   ],
   [
-   106.71,
+   121.64,
    "action",
    "water pours"
   ],
   [
-   108.12,
+   123.12,
    "new place",
    "the picture board (blueprint) question 2b"
   ],
   [
-   110.19,
+   125.12,
    "sign",
    "DRY"
   ],
   [
-   110.54,
+   125.47,
    "sign",
    "WATER"
   ],
   [
-   112.85,
+   127.78,
    "thinking dot",
    "1"
   ],
   [
-   113.52,
+   128.45,
    "thinking dot",
    "2"
   ],
   [
-   114.2,
+   129.13,
    "thinking dot",
    "3"
   ],
   [
-   114.68,
+   129.61,
    "answer",
    "WATER"
   ],
   [
-   114.73,
+   129.66,
    "action",
    "a part lights up"
   ],
   [
-   115.94,
+   130.94,
    "new shot",
    "the picture board (blueprint) water wins"
   ],
   [
-   116.81,
+   131.74,
    "action",
    "a part lights up"
   ],
   [
-   116.81,
+   131.74,
    "word",
    "WATER!"
   ],
   [
-   119.69,
+   134.69,
    "new shot",
    "the picture board (blueprint) soaks up"
   ],
   [
-   120.59,
+   135.52,
    "picture",
    "d0"
   ],
   [
-   121.18,
+   136.11,
    "picture",
    "d1"
   ],
   [
-   122.06,
+   136.99,
    "action",
    "the seed drinks"
   ],
   [
-   122.06,
+   136.99,
    "picture",
    "d2"
   ],
   [
-   122.06,
+   136.99,
    "word",
    "SLURP!"
   ],
   [
-   123.12,
+   137.81,
    "new shot",
    "the picture board (blueprint) air"
   ],
   [
-   123.66,
+   138.59,
    "action",
    "the air drifts"
   ],
   [
-   123.66,
+   138.59,
    "picture",
    "pf"
   ],
   [
-   123.66,
+   138.59,
    "word",
    "AIR"
   ],
   [
-   126.56,
+   141.56,
    "new shot",
    "the picture board (blueprint) warmth"
   ],
   [
-   127.93,
+   142.86,
    "action",
    "the sun shines"
   ],
   [
-   127.93,
+   142.86,
    "picture",
    "sun"
   ],
   [
-   127.93,
+   142.86,
    "word",
    "WARM"
   ],
   [
-   130.31,
+   145.31,
    "new place",
    "the sunny lab window count needs"
   ],
   [
-   132.95,
+   147.87,
    "word",
    "WATER"
   ],
   [
-   133.19,
+   148.11,
    "word",
    "AIR"
   ],
   [
-   133.47,
+   148.39,
    "action",
    "gizmo hops"
   ],
   [
-   133.47,
+   148.39,
    "word",
    "WARM"
   ],
   [
-   134.38,
+   149.38,
    "new place",
    "the picture board (blueprint) needs recap"
   ],
   [
-   134.57,
+   149.49,
    "action",
    "a part lights up"
   ],
   [
-   135.22,
+   150.14,
    "action",
    "a part lights up"
   ],
   [
-   135.87,
+   150.79,
    "action",
    "a part lights up"
   ],
   [
-   138.29,
+   153.21,
    "word",
    "WAKE UP!"
   ],
   [
-   139.38,
+   154.06,
    "new place",
    "under the ground (cutaway) question 3"
   ],
   [
-   142.02,
+   156.95,
    "sign",
    "YES"
   ],
   [
-   142.37,
+   157.3,
    "sign",
    "NO"
   ],
   [
-   143.83,
+   158.76,
    "thinking dot",
    "1"
   ],
   [
-   144.5,
+   159.43,
    "thinking dot",
    "2"
   ],
   [
-   145.17,
+   160.1,
    "thinking dot",
    "3"
   ],
   [
-   145.66,
+   160.59,
    "answer",
    "NO"
   ],
   [
-   146.88,
+   161.88,
    "new shot",
    "under the ground (cutaway) in the dark"
   ],
   [
-   149.54,
+   164.47,
    "action",
    "a part lights up"
   ],
   [
-   149.54,
+   164.47,
    "word",
    "IN THE DARK"
   ],
   [
-   151.25,
+   166.25,
    "new shot",
    "under the ground (cutaway) idea"
   ],
   [
-   151.99,
+   166.92,
    "action",
    "the antenna lights up"
   ],
   [
-   151.99,
+   166.92,
    "word",
    "AN IDEA!"
   ],
   [
-   155.62,
+   170.62,
    "new shot",
    "under the ground (cutaway) coat opens"
   ],
   [
-   155.76,
+   170.69,
    "action",
    "the coat cracks"
   ],
   [
-   155.76,
+   170.69,
    "word",
    "POP!"
   ],
   [
-   158.53,
+   173.46,
    "action",
    "a part lights up"
   ],
   [
-   159.69,
+   174.69,
    "action",
    "it appears"
   ],
   [
-   159.69,
+   174.69,
    "new shot",
    "under the ground (cutaway) question 4"
   ],
   [
-   161.55,
+   176.48,
    "sign",
    "ROOT"
   ],
   [
-   161.9,
+   176.83,
    "sign",
    "LEAVES"
   ],
   [
-   163.47,
+   178.4,
    "thinking dot",
    "1"
   ],
   [
-   164.14,
+   179.07,
    "thinking dot",
    "2"
   ],
   [
-   164.82,
+   179.75,
    "thinking dot",
    "3"
   ],
   [
-   165.3,
+   180.23,
    "answer",
    "ROOT"
   ],
   [
-   166.56,
+   181.56,
    "action",
    "it appears"
   ],
   [
-   166.56,
+   181.56,
    "new shot",
    "under the ground (cutaway) root grows down"
   ],
   [
-   167.88,
+   182.81,
    "action",
    "the root grows down"
   ],
   [
-   168.24,
+   183.17,
    "word",
    "DOWN!"
   ],
   [
-   170.0,
+   185.0,
    "action",
    "it appears"
   ],
   [
-   170.0,
+   185.0,
    "new shot",
    "under the ground (cutaway) shoot grows up"
   ],
   [
-   170.61,
+   185.54,
    "action",
    "the shoot grows up"
   ],
   [
-   171.37,
+   186.3,
    "word",
    "UP!"
   ],
   [
-   173.06,
+   187.99,
    "action",
    "two little leaves"
   ],
   [
-   173.75,
+   188.75,
    "new place",
    "Gizmo's lab down and up"
   ],
   [
-   174.1,
+   189.03,
    "action",
    "Gizmo points down"
   ],
   [
-   174.1,
+   189.03,
    "word",
    "DOWN!"
   ],
   [
-   176.32,
+   191.25,
    "action",
    "Gizmo reaches up"
   ],
   [
-   176.32,
+   191.25,
    "word",
    "UP!"
   ],
   [
-   178.12,
+   192.81,
    "new shot",
    "Gizmo's lab say it"
   ],
   [
-   179.78,
+   194.71,
    "action",
    "Gizmo points down"
   ],
   [
-   179.78,
+   194.71,
    "word",
    "ROOT, DOWN!"
   ],
   [
-   180.55,
+   195.48,
    "action",
    "Gizmo reaches up"
   ],
   [
-   180.55,
+   195.48,
    "word",
    "SHOOT, UP!"
   ],
   [
-   181.56,
+   196.56,
    "action",
    "it appears"
   ],
   [
-   181.56,
+   196.56,
    "new place",
    "under the ground (cutaway) growing"
   ],
   [
-   181.78,
+   196.71,
    "action",
    "a part lights up"
   ],
   [
-   183.07,
+   198.0,
    "action",
    "a part lights up"
   ],
   [
-   184.65,
+   199.58,
    "action",
    "gizmo hops"
   ],
   [
-   184.65,
+   199.58,
    "word",
    "IT GROWS!"
   ],
   [
-   185.62,
+   200.62,
    "new place",
    "Gizmo's garden garden wide"
   ],
   [
-   186.85,
+   201.78,
    "action",
    "the shoot pokes out"
   ],
   [
-   188.49,
+   203.42,
    "action",
    "it appears"
   ],
   [
-   188.49,
+   203.42,
    "word",
    "HELLO, SUN!"
   ],
   [
-   189.38,
+   204.38,
    "new shot",
    "Gizmo's garden seed leaves"
   ],
   [
-   190.45,
+   205.38,
    "word",
    "SEED LEAVES"
   ],
   [
-   190.79,
+   205.72,
    "action",
    "the seed leaves open"
   ],
   [
-   193.44,
+   208.44,
    "new place",
    "the picture board (blueprint) leaf kitchen"
   ],
   [
-   195.0,
+   209.92,
    "word",
    "A KITCHEN!"
   ],
   [
-   196.43,
+   211.35,
    "action",
    "food appears on the leaf"
   ],
   [
-   198.12,
+   213.12,
    "new shot",
    "the picture board (blueprint) sun air water"
   ],
   [
-   198.77,
+   213.7,
    "picture",
    "sun"
   ],
   [
-   199.76,
+   214.69,
    "picture",
    "pf"
   ],
   [
-   200.43,
+   215.36,
    "picture",
    "dr"
   ],
   [
-   200.86,
+   215.79,
    "action",
    "food appears"
   ],
   [
-   200.86,
+   215.79,
    "word",
    "FOOD!"
   ],
   [
-   201.88,
+   216.56,
    "new place",
    "Gizmo's garden question 5"
   ],
   [
-   204.2,
+   219.13,
    "sign",
    "MAKES IT"
   ],
   [
-   204.55,
+   219.48,
    "sign",
    "A SHOP"
   ],
   [
-   206.3,
+   221.23,
    "thinking dot",
    "1"
   ],
   [
-   206.97,
+   221.9,
    "thinking dot",
    "2"
   ],
   [
-   207.65,
+   222.58,
    "thinking dot",
    "3"
   ],
   [
-   208.13,
+   223.06,
    "answer",
    "MAKES IT"
   ],
   [
-   208.18,
+   223.11,
    "action",
    "gizmo hops"
   ],
   [
-   209.38,
+   224.38,
    "new shot",
    "Gizmo's garden clever plant"
   ],
   [
-   210.48,
+   225.41,
    "action",
    "a part lights up"
   ],
   [
-   212.32,
+   227.25,
    "word",
    "CLEVER!"
   ],
   [
-   213.75,
+   228.44,
    "action",
    "it appears"
   ],
   [
-   213.75,
+   228.44,
    "new place",
    "under the ground (cutaway) roots drink"
   ],
   [
-   214.1,
+   229.03,
    "action",
    "a part lights up"
   ],
   [
-   215.62,
+   230.55,
    "picture",
    "w0"
   ],
   [
-   215.62,
+   230.55,
    "word",
    "WATER IN!"
   ],
   [
-   216.37,
+   231.3,
    "picture",
    "w1"
   ],
   [
-   217.5,
+   232.19,
    "action",
    "it appears"
   ],
   [
-   217.5,
+   232.19,
    "new shot",
    "under the ground (cutaway) water goes up"
   ],
   [
-   218.04,
+   232.97,
    "action",
    "a drop travels up the plant"
   ],
   [
-   218.34,
+   233.27,
    "word",
    "UP IT GOES!"
   ],
   [
-   220.31,
+   235.31,
    "action",
    "it appears"
   ],
   [
-   220.31,
+   235.31,
    "new shot",
    "under the ground (cutaway) name the parts"
   ],
   [
-   222.04,
+   236.97,
    "action",
    "a part lights up"
   ],
   [
-   222.04,
+   236.97,
    "word",
    "ROOT"
   ],
   [
-   222.41,
+   237.34,
    "action",
    "a part lights up"
   ],
   [
-   222.41,
+   237.34,
    "word",
    "STEM"
   ],
   [
-   222.98,
+   237.91,
    "action",
    "a part lights up"
   ],
   [
-   222.98,
+   237.91,
    "word",
    "LEAVES"
   ],
   [
-   224.06,
+   239.06,
    "new place",
    "Gizmo's garden slurp"
   ],
   [
-   224.53,
+   239.46,
    "action",
    "gizmo hops"
   ],
   [
-   224.53,
+   239.46,
    "action",
    "gizmo looks wow"
   ],
   [
-   224.53,
+   239.46,
    "word",
    "SLURP!"
   ],
   [
-   229.06,
+   244.06,
    "new place",
    "the flower meadow meadow taller"
   ],
   [
-   231.47,
+   246.4,
    "action",
    "it appears"
   ],
   [
-   231.47,
+   246.4,
    "action",
    "the plant grows taller"
   ],
   [
-   231.47,
+   246.4,
    "word",
    "TALLER!"
   ],
   [
-   233.44,
+   248.44,
    "action",
    "it appears"
   ],
   [
-   233.44,
+   248.44,
    "new shot",
    "the flower meadow flower opens"
   ],
   [
-   234.11,
+   249.04,
    "action",
    "the flower opens"
   ],
   [
-   235.59,
+   250.52,
    "word",
    "HELLO!"
   ],
   [
-   237.19,
+   251.88,
    "action",
    "it appears"
   ],
   [
-   237.19,
+   251.88,
    "action",
    "it appears"
   ],
   [
-   237.19,
+   251.88,
    "new shot",
    "the flower meadow flowers make seeds"
   ],
   [
-   238.91,
+   253.83,
    "action",
    "a part lights up"
   ],
   [
-   238.91,
+   253.83,
    "word",
    "NEW SEEDS!"
   ],
   [
-   240.0,
+   255.0,
    "action",
    "it appears"
   ],
   [
-   240.0,
+   255.0,
    "action",
    "it appears"
   ],
   [
-   240.0,
+   255.0,
    "new shot",
    "the flower meadow count seeds"
   ],
   [
-   242.02,
+   256.95,
    "picture",
    "s0"
   ],
   [
-   242.25,
+   257.18,
    "picture",
    "s1"
   ],
   [
-   242.53,
+   257.46,
    "picture",
    "s2"
   ],
   [
-   242.53,
+   257.46,
    "word",
    "3"
   ],
   [
-   243.44,
+   258.44,
    "new place",
    "the picture board (blueprint) cycle"
   ],
   [
-   243.65,
+   258.58,
    "action",
    "a part lights up"
   ],
   [
-   244.6,
+   259.53,
    "action",
    "a part lights up"
   ],
   [
-   245.27,
+   260.2,
    "action",
    "a part lights up"
   ],
   [
-   246.3,
+   261.23,
    "action",
    "a part lights up"
   ],
   [
-   246.3,
+   261.23,
    "action",
    "a part lights up"
   ],
   [
-   246.3,
+   261.23,
    "word",
    "ROUND!"
   ],
   [
-   247.81,
+   262.81,
    "action",
    "it appears"
   ],
   [
-   247.81,
+   262.81,
    "action",
    "it appears"
   ],
   [
-   247.81,
+   262.81,
    "new place",
    "the flower meadow question 6"
   ],
   [
-   250.5,
+   265.43,
    "sign",
    "FLOWER"
   ],
   [
-   250.85,
+   265.78,
    "sign",
    "ROCK"
   ],
   [
-   252.63,
+   267.56,
    "thinking dot",
    "1"
   ],
   [
-   253.31,
+   268.24,
    "thinking dot",
    "2"
   ],
   [
-   253.98,
+   268.91,
    "thinking dot",
    "3"
   ],
   [
-   254.47,
+   269.4,
    "answer",
    "FLOWER"
   ],
   [
-   255.62,
+   270.62,
    "action",
    "it appears"
   ],
   [
-   255.62,
+   270.62,
    "action",
    "it appears"
   ],
   [
-   255.62,
+   270.62,
    "new shot",
    "the flower meadow flower answer"
   ],
   [
-   255.95,
+   270.88,
    "action",
    "a part lights up"
   ],
   [
-   255.95,
+   270.88,
    "word",
    "A FLOWER!"
   ],
   [
-   259.38,
+   274.38,
    "new shot",
    "the flower meadow stretch"
   ],
   [
-   259.51,
+   274.44,
    "action",
    "Gizmo opens his arms wide"
   ],
   [
-   260.46,
+   275.39,
    "word",
    "STRETCH!"
   ],
   [
-   264.06,
+   279.06,
    "new shot",
    "the flower meadow shine"
   ],
   [
-   264.24,
+   279.17,
    "action",
    "Gizmo reaches up"
   ],
   [
-   267.14,
+   282.07,
    "action",
    "gizmo hops"
   ],
   [
-   267.14,
+   282.07,
    "word",
    "SHINE!"
   ],
   [
-   269.69,
+   284.38,
    "new place",
    "Gizmo's lab quiz time"
   ],
   [
-   269.8,
+   284.73,
    "action",
    "the antenna lights up"
   ],
   [
-   269.8,
+   284.73,
    "word",
    "QUIZ TIME!"
   ],
   [
-   272.81,
+   287.5,
    "new place",
    "Gizmo's work bench quiz 1"
   ],
   [
-   274.88,
+   289.8,
    "sign",
    "PLANT"
   ],
   [
-   275.23,
+   290.15,
    "sign",
    "TOY CAR"
   ],
   [
-   277.44,
+   292.37,
    "thinking dot",
    "1"
   ],
   [
-   278.11,
+   293.04,
    "thinking dot",
    "2"
   ],
   [
-   278.78,
+   293.71,
    "thinking dot",
    "3"
   ],
   [
-   279.27,
+   294.2,
    "answer",
    "PLANT"
   ],
   [
-   280.62,
+   295.31,
    "new place",
    "the picture board (blueprint) quiz 1 answer"
   ],
   [
-   280.76,
+   295.69,
    "action",
    "a part lights up"
   ],
   [
-   282.1,
+   297.03,
    "action",
    "a part lights up"
   ],
   [
-   282.86,
+   297.79,
    "action",
    "a part lights up"
   ],
   [
-   283.75,
+   298.75,
    "action",
    "it appears"
   ],
   [
-   283.75,
+   298.75,
    "new place",
    "under the ground (cutaway) quiz 2"
   ],
   [
-   285.17,
+   300.1,
    "sign",
    "ROOT"
   ],
   [
-   285.52,
+   300.45,
    "sign",
    "SHOOT"
   ],
   [
-   286.8,
+   301.73,
    "thinking dot",
    "1"
   ],
   [
-   287.47,
+   302.4,
    "thinking dot",
    "2"
   ],
   [
-   288.15,
+   303.08,
    "thinking dot",
    "3"
   ],
   [
-   288.63,
+   303.56,
    "answer",
    "ROOT"
   ],
   [
-   290.0,
+   304.69,
    "action",
    "it appears"
   ],
   [
-   290.0,
+   304.69,
    "new shot",
    "under the ground (cutaway) quiz 2 answer"
   ],
   [
-   290.17,
+   305.1,
    "action",
    "the root grows down"
   ],
   [
-   291.41,
+   306.34,
    "word",
    "DOWN!"
   ],
   [
-   293.12,
+   307.81,
    "new place",
    "Gizmo's garden quiz 3"
   ],
   [
-   295.37,
+   310.29,
    "sign",
    "FOOD"
   ],
   [
-   295.72,
+   310.64,
    "sign",
    "RAIN"
   ],
   [
-   297.23,
+   312.16,
    "thinking dot",
    "1"
   ],
   [
-   297.9,
+   312.83,
    "thinking dot",
    "2"
   ],
   [
-   298.58,
+   313.5,
    "thinking dot",
    "3"
   ],
   [
-   299.06,
+   313.99,
    "answer",
    "FOOD"
   ],
   [
-   300.31,
+   315.31,
    "new shot",
    "Gizmo's garden quiz 3 answer"
   ],
   [
-   300.49,
+   315.42,
    "word",
    "FOOD!"
   ],
   [
-   301.17,
+   316.1,
    "action",
    "a part lights up"
   ],
   [
-   303.44,
+   318.44,
    "action",
    "it appears"
   ],
   [
-   303.44,
+   318.44,
    "action",
    "it appears"
   ],
   [
-   303.44,
+   318.44,
    "new place",
    "the flower meadow goodbye"
   ],
   [
-   306.61,
+   321.54,
    "action",
    "Gizmo waves"
   ],
   [
-   306.61,
+   321.54,
    "word",
    "BYE-BYE!"
   ],
   [
-   307.16,
+   322.09,
    "action",
    "gizmo hops"
+  ],
+  [
+   323.75,
+   "action",
+   "the gears turn"
+  ],
+  [
+   323.75,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   323.8,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   324.57,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   324.88,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   325.19,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   325.94,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   325.94,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   325.94,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   327.19,
+   "action",
+   "the gears turn"
+  ],
+  [
+   327.19,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   327.38,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   329.06,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   329.69,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   330.0,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   330.31,
+   "action",
+   "out of the flash"
+  ],
+  [
+   330.31,
+   "action",
+   "the rays turn"
+  ],
+  [
+   330.31,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   330.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   331.69,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   332.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   332.2,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   332.81,
+   "action",
+   "confetti"
+  ],
+  [
+   332.81,
+   "action",
+   "the line draws on"
+  ],
+  [
+   333.12,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   333.32,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   333.44,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   334.12,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   334.25,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   335.0,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   335.62,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   335.75,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   336.25,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   337.17,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   337.17,
+   "action",
+   "confetti"
+  ],
+  [
+   337.17,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   337.47,
+   "action",
+   "the letters do a wave"
   ]
  ],
  "shots": [
@@ -2255,7 +2698,7 @@
    "part": 0,
    "q": true,
    "tag": "hook: how does a seed grow",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -2311,7 +2754,7 @@
    "part": 0,
    "q": false,
    "tag": "hook: seed to sunflower",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
@@ -2319,7 +2762,7 @@
    "place": "glab",
    "say": "Hi! I'm Gizmo. Let's find out how it works!",
    "t0": 7.1875,
-   "t1": 10.9375,
+   "t1": 11.25,
    "v0": 7.38225,
    "dur": 3.3550833333333334,
    "words": [
@@ -2372,16 +2815,87 @@
    "part": 0,
    "q": false,
    "tag": "hook: Gizmo",
-   "who": "milo",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 11.25,
+   "t1": 14.6875,
+   "v0": 11.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 14.6875,
+   "t1": 17.8125,
+   "v0": 15.0,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 17.8125,
+   "t1": 23.125,
+   "v0": 18.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 23.125,
+   "t1": 25.9375,
+   "v0": 23.245,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "Welcome to my lab, curious friends!",
-   "t0": 10.9375,
-   "t1": 14.0625,
-   "v0": 11.277333333333333,
+   "t0": 25.9375,
+   "t1": 29.0625,
+   "v0": 26.20666666666667,
    "dur": 2.5058333333333334,
    "words": [
     [
@@ -2418,16 +2932,16 @@
    "part": 0,
    "q": false,
    "tag": "lab wide",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "Today we watch a seed grow, step by step.",
-   "t0": 14.0625,
-   "t1": 17.5,
-   "v0": 14.323166666666665,
+   "t0": 29.0625,
+   "t1": 32.5,
+   "v0": 29.25250000000001,
    "dur": 2.9223333333333334,
    "words": [
     [
@@ -2479,16 +2993,16 @@
    "part": 0,
    "q": false,
    "tag": "bench wide",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "Here is a seed. It looks small and quiet.",
-   "t0": 17.5,
-   "t1": 21.25,
-   "v0": 17.785500000000003,
+   "t0": 32.5,
+   "t1": 36.25,
+   "v0": 32.71483333333334,
    "dur": 3.0460833333333333,
    "words": [
     [
@@ -2540,16 +3054,16 @@
    "part": 1,
    "q": false,
    "tag": "the seed close",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "Let's look closer, with my magnifier. Zoom!",
-   "t0": 21.25,
-   "t1": 25.0,
-   "v0": 21.371583333333337,
+   "t0": 36.25,
+   "t1": 40.0,
+   "v0": 36.30091666666667,
    "dur": 3.2308333333333334,
    "words": [
     [
@@ -2591,16 +3105,16 @@
    "part": 1,
    "q": false,
    "tag": "zoom",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "But a seed is alive! Something is waiting inside.",
-   "t0": 25.0,
-   "t1": 29.0625,
-   "v0": 25.142416666666673,
+   "t0": 40.0,
+   "t1": 44.0625,
+   "v0": 40.07175000000001,
    "dur": 3.6357916666666665,
    "words": [
     [
@@ -2652,16 +3166,16 @@
    "part": 1,
    "q": false,
    "tag": "alive",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "What do you think is inside a seed? A baby plant, or a little stone?",
-   "t0": 29.0625,
-   "t1": 37.5,
-   "v0": 29.31820833333334,
+   "t0": 44.0625,
+   "t1": 52.5,
+   "v0": 44.24754166666668,
    "dur": 4.619875,
    "words": [
     [
@@ -2743,16 +3257,16 @@
    "part": 1,
    "q": true,
    "tag": "question 1",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "A tiny baby plant! Let's open the seed and look.",
-   "t0": 37.5,
-   "t1": 41.5625,
-   "v0": 37.67808333333334,
+   "t0": 52.5,
+   "t1": 56.5625,
+   "v0": 52.60741666666668,
    "dur": 3.6134166666666667,
    "words": [
     [
@@ -2809,16 +3323,16 @@
    "part": 1,
    "q": false,
    "tag": "open the seed",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "See the baby plant? It has a tiny root, and a tiny shoot.",
-   "t0": 41.5625,
-   "t1": 46.25,
-   "v0": 41.831500000000005,
+   "t0": 56.5625,
+   "t1": 60.9375,
+   "v0": 56.760833333333345,
    "dur": 3.9829583333333334,
    "words": [
     [
@@ -2890,16 +3404,16 @@
    "part": 1,
    "q": false,
    "tag": "root and shoot",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Can you see the tiny root? Point at the root!",
-   "t0": 46.25,
-   "t1": 50.3125,
-   "v0": 46.35445833333334,
+   "t0": 60.9375,
+   "t1": 65.3125,
+   "v0": 61.28379166666668,
    "dur": 2.864125,
    "words": [
     [
@@ -2956,16 +3470,16 @@
    "part": 1,
    "q": true,
    "tag": "find the root",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "All around it is food, for the baby plant to use.",
-   "t0": 50.3125,
-   "t1": 54.6875,
-   "v0": 50.55858333333334,
+   "t0": 65.3125,
+   "t1": 69.375,
+   "v0": 65.48791666666668,
    "dur": 3.6297083333333333,
    "words": [
     [
@@ -3027,16 +3541,16 @@
    "part": 1,
    "q": false,
    "tag": "food",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "What is the food for? To help it grow, or to play?",
-   "t0": 54.6875,
-   "t1": 61.5625,
-   "v0": 54.72829166666667,
+   "t0": 69.375,
+   "t1": 76.5625,
+   "v0": 69.65762500000001,
    "dur": 3.4027083333333334,
    "words": [
     [
@@ -3103,16 +3617,16 @@
    "part": 1,
    "q": true,
    "tag": "question 1b",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "To grow! It uses the food until it has leaves.",
-   "t0": 61.5625,
-   "t1": 65.625,
-   "v0": 61.87100000000001,
+   "t0": 76.5625,
+   "t1": 80.625,
+   "v0": 76.80033333333336,
    "dur": 3.490083333333333,
    "words": [
     [
@@ -3169,16 +3683,16 @@
    "part": 1,
    "q": false,
    "tag": "food to grow",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "It's like a packed lunch, inside the seed!",
-   "t0": 65.625,
-   "t1": 68.75,
-   "v0": 65.90108333333335,
+   "t0": 80.625,
+   "t1": 83.75,
+   "v0": 80.8304166666667,
    "dur": 2.6270416666666665,
    "words": [
     [
@@ -3225,16 +3739,16 @@
    "part": 1,
    "q": false,
    "tag": "lunch",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "And the outside is the seed coat. It keeps the seed safe.",
-   "t0": 68.75,
-   "t1": 73.4375,
-   "v0": 69.06812500000002,
+   "t0": 83.75,
+   "t1": 88.4375,
+   "v0": 83.99745833333337,
    "dur": 4.063958333333333,
    "words": [
     [
@@ -3301,16 +3815,16 @@
    "part": 1,
    "q": false,
    "tag": "seed coat",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "A seed coat is like a little jacket. Snug and safe!",
-   "t0": 73.4375,
-   "t1": 77.8125,
-   "v0": 73.67208333333336,
+   "t0": 88.4375,
+   "t1": 92.8125,
+   "v0": 88.60141666666671,
    "dur": 3.716666666666667,
    "words": [
     [
@@ -3372,16 +3886,16 @@
    "part": 1,
    "q": false,
    "tag": "jacket",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Let's count the parts. One, two, three!",
-   "t0": 77.8125,
-   "t1": 80.9375,
-   "v0": 77.92875000000004,
+   "t0": 92.8125,
+   "t1": 95.9375,
+   "v0": 92.85808333333338,
    "dur": 2.664125,
    "words": [
     [
@@ -3423,16 +3937,16 @@
    "part": 1,
    "q": true,
    "tag": "count parts",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "What keeps the seed safe? The coat, or the food?",
-   "t0": 80.9375,
-   "t1": 88.125,
-   "v0": 81.13287500000004,
+   "t0": 95.9375,
+   "t1": 102.8125,
+   "v0": 96.06220833333339,
    "dur": 3.3604166666666666,
    "words": [
     [
@@ -3489,16 +4003,16 @@
    "part": 1,
    "q": true,
    "tag": "question 2",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "The seed coat! Baby plant, food, and coat. Three parts!",
-   "t0": 88.125,
-   "t1": 92.8125,
-   "v0": 88.23329166666672,
+   "t0": 102.8125,
+   "t1": 107.8125,
+   "v0": 103.16262500000006,
    "dur": 4.164541666666667,
    "words": [
     [
@@ -3555,16 +4069,16 @@
    "part": 1,
    "q": false,
    "tag": "three parts",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "Can you curl up small, like a seed? Now pop up!",
-   "t0": 92.8125,
-   "t1": 96.875,
-   "v0": 92.93783333333339,
+   "t0": 107.8125,
+   "t1": 111.5625,
+   "v0": 107.86716666666673,
    "dur": 3.4865416666666667,
    "words": [
     [
@@ -3626,16 +4140,16 @@
    "part": 1,
    "q": true,
    "tag": "curl up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Inside every seed, a baby plant is waiting to grow.",
-   "t0": 96.875,
-   "t1": 101.25,
-   "v0": 96.96437500000006,
+   "t0": 111.5625,
+   "t1": 116.25,
+   "v0": 111.89370833333341,
    "dur": 4.094458333333334,
    "words": [
     [
@@ -3692,16 +4206,16 @@
    "part": 1,
    "q": false,
    "tag": "waiting to grow",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gwindow",
    "say": "Now let's help our seed wake up. What does it need?",
-   "t0": 101.25,
-   "t1": 105.3125,
-   "v0": 101.5988333333334,
+   "t0": 116.25,
+   "t1": 120.3125,
+   "v0": 116.52816666666675,
    "dur": 3.3749166666666666,
    "words": [
     [
@@ -3763,16 +4277,16 @@
    "part": 2,
    "q": true,
    "tag": "window wide",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gwindow",
    "say": "First, water! Drip, drop, drip.",
-   "t0": 105.3125,
-   "t1": 108.125,
-   "v0": 105.51375000000007,
+   "t0": 120.3125,
+   "t1": 123.125,
+   "v0": 120.44308333333342,
    "dur": 2.398083333333333,
    "words": [
     [
@@ -3804,16 +4318,16 @@
    "part": 2,
    "q": false,
    "tag": "water",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Which seed will grow? The dry seed, or the seed with water?",
-   "t0": 108.125,
-   "t1": 115.9375,
-   "v0": 108.45183333333341,
+   "t0": 123.125,
+   "t1": 130.9375,
+   "v0": 123.38116666666676,
    "dur": 3.912166666666667,
    "words": [
     [
@@ -3880,16 +4394,16 @@
    "part": 2,
    "q": true,
    "tag": "question 2b",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "The seed with water! Seeds need water to grow.",
-   "t0": 115.9375,
-   "t1": 119.6875,
-   "v0": 116.10400000000008,
+   "t0": 130.9375,
+   "t1": 134.6875,
+   "v0": 131.03333333333342,
    "dur": 3.3764166666666666,
    "words": [
     [
@@ -3941,16 +4455,16 @@
    "part": 2,
    "q": false,
    "tag": "water wins",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "The seed soaks up the water. Slurp!",
-   "t0": 119.6875,
-   "t1": 123.125,
-   "v0": 120.02041666666676,
+   "t0": 134.6875,
+   "t1": 137.8125,
+   "v0": 134.94975000000008,
    "dur": 2.6517916666666665,
    "words": [
     [
@@ -3992,16 +4506,16 @@
    "part": 2,
    "q": false,
    "tag": "soaks up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Second, air! A seed needs air to grow.",
-   "t0": 123.125,
-   "t1": 126.5625,
-   "v0": 123.21220833333344,
+   "t0": 137.8125,
+   "t1": 141.5625,
+   "v0": 138.14154166666674,
    "dur": 3.046666666666667,
    "words": [
     [
@@ -4048,16 +4562,16 @@
    "part": 2,
    "q": false,
    "tag": "air",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Third, just the right warmth. Not too cold!",
-   "t0": 126.5625,
-   "t1": 130.3125,
-   "v0": 126.79887500000011,
+   "t0": 141.5625,
+   "t1": 145.3125,
+   "v0": 141.7282083333334,
    "dur": 3.22675,
    "words": [
     [
@@ -4104,16 +4618,16 @@
    "part": 2,
    "q": false,
    "tag": "warmth",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gwindow",
    "say": "Water, air, and warmth. Count them! One, two, three!",
-   "t0": 130.3125,
-   "t1": 134.375,
-   "v0": 130.5656250000001,
+   "t0": 145.3125,
+   "t1": 149.375,
+   "v0": 145.49495833333341,
    "dur": 3.4495,
    "words": [
     [
@@ -4165,16 +4679,16 @@
    "part": 2,
    "q": true,
    "tag": "count needs",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "Water, air, and warmth. That is what a seed needs to wake up!",
-   "t0": 134.375,
-   "t1": 139.375,
-   "v0": 134.5551250000001,
+   "t0": 149.375,
+   "t1": 154.0625,
+   "v0": 149.4844583333334,
    "dur": 4.380958333333333,
    "words": [
     [
@@ -4246,16 +4760,16 @@
    "part": 2,
    "q": false,
    "tag": "needs recap",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Does a seed need light to start growing? Yes, or no?",
-   "t0": 139.375,
-   "t1": 146.875,
-   "v0": 139.4760833333334,
+   "t0": 154.0625,
+   "t1": 161.875,
+   "v0": 154.40541666666672,
    "dur": 3.8630833333333334,
    "words": [
     [
@@ -4317,16 +4831,16 @@
    "part": 2,
    "q": true,
    "tag": "question 3",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "No! Most seeds start to grow in the dark, under the ground.",
-   "t0": 146.875,
-   "t1": 151.25,
-   "v0": 147.0791666666667,
+   "t0": 161.875,
+   "t1": 166.25,
+   "v0": 162.00850000000003,
    "dur": 3.887625,
    "words": [
     [
@@ -4393,16 +4907,16 @@
    "part": 2,
    "q": false,
    "tag": "in the dark",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "I have an idea! Let's watch our seed under the ground.",
-   "t0": 151.25,
-   "t1": 155.625,
-   "v0": 151.50679166666671,
+   "t0": 166.25,
+   "t1": 170.625,
+   "v0": 166.43612500000003,
    "dur": 3.7165,
    "words": [
     [
@@ -4464,16 +4978,16 @@
    "part": 2,
    "q": false,
    "tag": "idea",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Pop! The seed coat opens. Something is coming out.",
-   "t0": 155.625,
-   "t1": 159.6875,
-   "v0": 155.7632916666667,
+   "t0": 170.625,
+   "t1": 174.6875,
+   "v0": 170.69262500000002,
    "dur": 3.529916666666667,
    "words": [
     [
@@ -4525,16 +5039,16 @@
    "part": 2,
    "q": false,
    "tag": "coat opens",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Which comes out first? The root, or the leaves?",
-   "t0": 159.6875,
-   "t1": 166.5625,
-   "v0": 159.83320833333337,
+   "t0": 174.6875,
+   "t1": 181.5625,
+   "v0": 174.7625416666667,
    "dur": 3.1495,
    "words": [
     [
@@ -4586,16 +5100,16 @@
    "part": 2,
    "q": true,
    "tag": "question 4",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "The root! The root grows down, down, down.",
-   "t0": 166.5625,
-   "t1": 170.0,
-   "v0": 166.72270833333334,
+   "t0": 181.5625,
+   "t1": 185.0,
+   "v0": 181.65204166666666,
    "dur": 3.0273333333333334,
    "words": [
     [
@@ -4642,16 +5156,16 @@
    "part": 2,
    "q": false,
    "tag": "root grows down",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Then the shoot grows up, up, up, toward the light.",
-   "t0": 170.0,
-   "t1": 173.75,
-   "v0": 170.29004166666667,
+   "t0": 185.0,
+   "t1": 188.75,
+   "v0": 185.21937499999999,
    "dur": 3.267125,
    "words": [
     [
@@ -4708,16 +5222,16 @@
    "part": 2,
    "q": false,
    "tag": "shoot grows up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "Point down, like a root! Now reach up, like a shoot!",
-   "t0": 173.75,
-   "t1": 178.125,
-   "v0": 174.09716666666665,
+   "t0": 188.75,
+   "t1": 192.8125,
+   "v0": 189.02649999999997,
    "dur": 3.57975,
    "words": [
     [
@@ -4779,16 +5293,16 @@
    "part": 2,
    "q": true,
    "tag": "down and up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "Let's say it together. Root, down! Shoot, up!",
-   "t0": 178.125,
-   "t1": 181.5625,
-   "v0": 178.21691666666663,
+   "t0": 192.8125,
+   "t1": 196.5625,
+   "v0": 193.14624999999995,
    "dur": 3.0137916666666666,
    "words": [
     [
@@ -4835,16 +5349,16 @@
    "part": 2,
    "q": true,
    "tag": "say it",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Root goes down. Shoot goes up. Our seed is growing!",
-   "t0": 181.5625,
-   "t1": 185.625,
-   "v0": 181.7707083333333,
+   "t0": 196.5625,
+   "t1": 200.625,
+   "v0": 196.7000416666666,
    "dur": 3.4603333333333333,
    "words": [
     [
@@ -4901,16 +5415,16 @@
    "part": 2,
    "q": false,
    "tag": "growing",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "Look! Our shoot pokes out of the soil, into the sun.",
-   "t0": 185.625,
-   "t1": 189.375,
-   "v0": 185.7710416666666,
+   "t0": 200.625,
+   "t1": 204.375,
+   "v0": 200.70037499999992,
    "dur": 3.279,
    "words": [
     [
@@ -4972,16 +5486,16 @@
    "part": 3,
    "q": false,
    "tag": "garden wide",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "Two little seed leaves open, and they start making food.",
-   "t0": 189.375,
-   "t1": 193.4375,
-   "v0": 189.5900416666666,
+   "t0": 204.375,
+   "t1": 208.4375,
+   "v0": 204.5193749999999,
    "dur": 3.6155416666666667,
    "words": [
     [
@@ -5038,16 +5552,16 @@
    "part": 3,
    "q": false,
    "tag": "seed leaves",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "A leaf is like a little kitchen. It makes food for the plant!",
-   "t0": 193.4375,
-   "t1": 198.125,
-   "v0": 193.74558333333326,
+   "t0": 208.4375,
+   "t1": 213.125,
+   "v0": 208.67491666666658,
    "dur": 4.032125,
    "words": [
     [
@@ -5119,16 +5633,16 @@
    "part": 3,
    "q": false,
    "tag": "leaf kitchen",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "It uses sunlight, air, and water to make it.",
-   "t0": 198.125,
-   "t1": 201.875,
-   "v0": 198.31770833333326,
+   "t0": 213.125,
+   "t1": 216.5625,
+   "v0": 213.24704166666658,
    "dur": 3.07,
    "words": [
     [
@@ -5180,16 +5694,16 @@
    "part": 3,
    "q": false,
    "tag": "sun air water",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "Where does a plant get its food? It makes it, or from a shop?",
-   "t0": 201.875,
-   "t1": 209.375,
-   "v0": 201.92770833333324,
+   "t0": 216.5625,
+   "t1": 224.375,
+   "v0": 216.85704166666656,
    "dur": 3.886125,
    "words": [
     [
@@ -5266,16 +5780,16 @@
    "part": 3,
    "q": true,
    "tag": "question 5",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "It makes it, with its leaves and sunlight. Clever plant!",
-   "t0": 209.375,
-   "t1": 213.75,
-   "v0": 209.55383333333322,
+   "t0": 224.375,
+   "t1": 228.4375,
+   "v0": 224.48316666666653,
    "dur": 3.7579583333333333,
    "words": [
     [
@@ -5332,16 +5846,16 @@
    "part": 3,
    "q": false,
    "tag": "clever plant",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "And the roots? They take in water from the soil.",
-   "t0": 213.75,
-   "t1": 217.5,
-   "v0": 213.85179166666654,
+   "t0": 228.4375,
+   "t1": 232.1875,
+   "v0": 228.78112499999986,
    "dur": 3.1630833333333332,
    "words": [
     [
@@ -5398,16 +5912,16 @@
    "part": 3,
    "q": false,
    "tag": "roots drink",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "The water goes up, all through the plant.",
-   "t0": 217.5,
-   "t1": 220.3125,
-   "v0": 217.55487499999987,
+   "t0": 232.1875,
+   "t1": 235.3125,
+   "v0": 232.48420833333319,
    "dur": 2.527416666666667,
    "words": [
     [
@@ -5454,16 +5968,16 @@
    "part": 3,
    "q": false,
    "tag": "water goes up",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "Let's name the parts. Root! Stem! Leaves!",
-   "t0": 220.3125,
-   "t1": 224.0625,
-   "v0": 220.6222916666665,
+   "t0": 235.3125,
+   "t1": 239.0625,
+   "v0": 235.55162499999983,
    "dur": 3.0978333333333334,
    "words": [
     [
@@ -5505,16 +6019,16 @@
    "part": 3,
    "q": true,
    "tag": "name the parts",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "Can you slurp like a thirsty root? Slurp, slurp!",
-   "t0": 224.0625,
-   "t1": 229.0625,
-   "v0": 224.26012499999985,
+   "t0": 239.0625,
+   "t1": 244.0625,
+   "v0": 239.18945833333316,
    "dur": 3.379583333333333,
    "words": [
     [
@@ -5566,16 +6080,16 @@
    "part": 3,
    "q": true,
    "tag": "slurp",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Days go by. The plant grows taller, with more leaves.",
-   "t0": 229.0625,
-   "t1": 233.4375,
-   "v0": 229.17970833333317,
+   "t0": 244.0625,
+   "t1": 248.4375,
+   "v0": 244.10904166666649,
    "dur": 3.997708333333333,
    "words": [
     [
@@ -5632,16 +6146,16 @@
    "part": 3,
    "q": false,
    "tag": "meadow taller",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Then, a flower opens! Hello, flower!",
-   "t0": 233.4375,
-   "t1": 237.1875,
-   "v0": 233.71741666666648,
+   "t0": 248.4375,
+   "t1": 251.875,
+   "v0": 248.6467499999998,
    "dur": 3.007791666666667,
    "words": [
     [
@@ -5678,16 +6192,16 @@
    "part": 3,
    "q": false,
    "tag": "flower opens",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Flowers help plants make new seeds.",
-   "t0": 237.1875,
-   "t1": 240.0,
-   "v0": 237.26520833333313,
+   "t0": 251.875,
+   "t1": 255.0,
+   "v0": 252.19454166666645,
    "dur": 2.35625,
    "words": [
     [
@@ -5724,16 +6238,16 @@
    "part": 3,
    "q": false,
    "tag": "flowers make seeds",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Count the new seeds with me. One, two, three!",
-   "t0": 240.0,
-   "t1": 243.4375,
-   "v0": 240.16145833333312,
+   "t0": 255.0,
+   "t1": 258.4375,
+   "v0": 255.09079166666643,
    "dur": 2.947,
    "words": [
     [
@@ -5785,16 +6299,16 @@
    "part": 3,
    "q": true,
    "tag": "count seeds",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "New seeds can grow into new plants. Round and round!",
-   "t0": 243.4375,
-   "t1": 247.8125,
-   "v0": 243.6484583333331,
+   "t0": 258.4375,
+   "t1": 262.8125,
+   "v0": 258.5777916666664,
    "dur": 3.925375,
    "words": [
     [
@@ -5851,16 +6365,16 @@
    "part": 3,
    "q": false,
    "tag": "cycle",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "What helps a plant make new seeds? A flower, or a rock?",
-   "t0": 247.8125,
-   "t1": 255.625,
-   "v0": 248.1138333333331,
+   "t0": 262.8125,
+   "t1": 270.625,
+   "v0": 263.0431666666664,
    "dur": 4.03325,
    "words": [
     [
@@ -5927,16 +6441,16 @@
    "part": 3,
    "q": true,
    "tag": "question 6",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "A flower! It helps the plant make new seeds.",
-   "t0": 255.625,
-   "t1": 259.375,
-   "v0": 255.8870833333331,
+   "t0": 270.625,
+   "t1": 274.375,
+   "v0": 270.81641666666644,
    "dur": 3.0692916666666665,
    "words": [
     [
@@ -5988,16 +6502,16 @@
    "part": 3,
    "q": false,
    "tag": "flower answer",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Stretch your arms wide, like big green leaves!",
-   "t0": 259.375,
-   "t1": 264.0625,
-   "v0": 259.4963749999998,
+   "t0": 274.375,
+   "t1": 279.0625,
+   "v0": 274.42570833333315,
    "dur": 3.1995416666666667,
    "words": [
     [
@@ -6044,16 +6558,16 @@
    "part": 3,
    "q": true,
    "tag": "stretch",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "Wiggle your fingers, like warm sunshine. Shine, shine!",
-   "t0": 264.0625,
-   "t1": 269.6875,
-   "v0": 264.23591666666647,
+   "t0": 279.0625,
+   "t1": 284.375,
+   "v0": 279.16524999999984,
    "dur": 4.022083333333334,
    "words": [
     [
@@ -6100,16 +6614,16 @@
    "part": 3,
    "q": true,
    "tag": "shine",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "glab",
    "say": "Quiz time! Let's remember what we learned.",
-   "t0": 269.6875,
-   "t1": 272.8125,
-   "v0": 269.79799999999983,
+   "t0": 284.375,
+   "t1": 287.5,
+   "v0": 284.7273333333332,
    "dur": 2.547125,
    "words": [
     [
@@ -6151,16 +6665,16 @@
    "part": 4,
    "q": false,
    "tag": "quiz time",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gbench",
    "say": "What is inside a seed? A baby plant, or a toy car?",
-   "t0": 272.8125,
-   "t1": 280.625,
-   "v0": 272.88512499999985,
+   "t0": 287.5,
+   "t1": 295.3125,
+   "v0": 287.8144583333332,
    "dur": 4.064166666666667,
    "words": [
     [
@@ -6227,16 +6741,16 @@
    "part": 4,
    "q": true,
    "tag": "quiz 1",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "paper_gz",
    "say": "A baby plant, with its food and its coat!",
-   "t0": 280.625,
-   "t1": 283.75,
-   "v0": 280.6892916666665,
+   "t0": 295.3125,
+   "t1": 298.75,
+   "v0": 295.6186249999999,
    "dur": 2.737791666666667,
    "words": [
     [
@@ -6288,16 +6802,16 @@
    "part": 4,
    "q": false,
    "tag": "quiz 1 answer",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "What grows first, the root, or the shoot?",
-   "t0": 283.75,
-   "t1": 290.0,
-   "v0": 283.9670833333332,
+   "t0": 298.75,
+   "t1": 304.6875,
+   "v0": 298.8964166666666,
    "dur": 2.34675,
    "words": [
     [
@@ -6344,16 +6858,16 @@
    "part": 4,
    "q": true,
    "tag": "quiz 2",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gsoil",
    "say": "The root! It grows down into the soil.",
-   "t0": 290.0,
-   "t1": 293.125,
-   "v0": 290.0538333333332,
+   "t0": 304.6875,
+   "t1": 307.8125,
+   "v0": 304.9831666666666,
    "dur": 2.631625,
    "words": [
     [
@@ -6400,16 +6914,16 @@
    "part": 4,
    "q": false,
    "tag": "quiz 2 answer",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "What do leaves make for the plant? Food, or rain?",
-   "t0": 293.125,
-   "t1": 300.3125,
-   "v0": 293.2254583333332,
+   "t0": 307.8125,
+   "t1": 315.3125,
+   "v0": 308.1547916666666,
    "dur": 3.5165416666666665,
    "words": [
     [
@@ -6466,16 +6980,16 @@
    "part": 4,
    "q": true,
    "tag": "quiz 3",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "ggarden",
    "say": "Food! Leaves use sunlight to make food.",
-   "t0": 300.3125,
-   "t1": 303.4375,
-   "v0": 300.4819999999999,
+   "t0": 315.3125,
+   "t1": 318.4375,
+   "v0": 315.4113333333333,
    "dur": 2.7065,
    "words": [
     [
@@ -6517,16 +7031,16 @@
    "part": 4,
    "q": false,
    "tag": "quiz 3 answer",
-   "who": "milo",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   },
   {
    "place": "gmeadow",
    "say": "From a tiny seed, to a big plant. Thanks for exploring with me!",
-   "t0": 303.4375,
-   "t1": 308.75874999999996,
-   "v0": 303.72849999999994,
+   "t0": 318.4375,
+   "t1": 323.75,
+   "v0": 318.6578333333333,
    "dur": 4.61025,
    "words": [
     [
@@ -6598,7 +7112,78 @@
    "part": 4,
    "q": false,
    "tag": "goodbye",
-   "who": "milo",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 323.75,
+   "t1": 327.1875,
+   "v0": 324.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 327.1875,
+   "t1": 330.3125,
+   "v0": 327.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 330.3125,
+   "t1": 335.625,
+   "v0": 330.625,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 335.625,
+   "t1": 338.5866666666667,
+   "v0": 335.745,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
    "beat": "",
    "sung": false
   }

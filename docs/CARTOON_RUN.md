@@ -74,7 +74,7 @@ A Guess With Milo episode is a `cartoon_lesson` (5:00-6:30, three parts of 83-90
   finished episode's file and link in the run report.
 
 ## Setup (fresh session)
-`bash studio/zoo3d/setup.sh` (voice model), `which hyperframes` (else `npm i -g hyperframes@0.8.231`), `python3 -c "import pyworld, pocketsphinx, kokoro_onnx, soundfile"` (else pip install with `--break-system-packages`).
+`bash studio/zoo3d/setup.sh` (voice model), `which hyperframes` (else `npm i -g hyperframes@0.8.231`), `python3 -c "import pyworld, pocketsphinx, kokoro_onnx, soundfile, pedalboard, tinysoundfont"` (else pip install with `--break-system-packages`; tinysoundfont with `--no-deps`; setup.sh installs both since Nov 21).
 HyperFrames refuses to start under 1 GB of free disk (`df -h .`). If needed: `git sparse-checkout set --no-cone '/*' '!/truck/' '!/moon/' '!/bloop/' '!/gizmo/' '!/fruity/' '!/space/' '!/wild/'` (they stay in git).
 Renders and encodes: ONE at a time, started as a tracked background command, never `nohup ... &` (the render is cancelled when the launching call returns). No `git pull`, stash or rebase while one writes.
 

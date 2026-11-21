@@ -16,7 +16,8 @@ every line below that builds, renders or uploads something in 3D:
   as cartoons (rockets first).
 - The 3D songs that were public before Nov 19 stay (deleting a video is the owner's decision).
 - The PC is no longer needed to BUILD: a cartoon is rendered in the cloud session. Only the upload uses the PC (Studio in its built-in browser).
-- THE FORMAT GATE STANDS (CLAUDE.md: "Nothing in a new format is uploaded until the owner has watched one full video of it and approved it"):
+- THE FORMAT IS APPROVED since Nov 21 2026 2:33 PM (owner, after watching gc_ep01.mp4: "gizmo is aproved please upload"; the marker file exists, `--next` prints "finish_as": "to_upload"). What follows in this bullet is the record of the gate as it stood until then.
+- [until Nov 21 2:33 PM] THE FORMAT GATE STANDS (CLAUDE.md: "Nothing in a new format is uploaded until the owner has watched one full video of it and approved it"):
   he has not watched a Gizmo cartoon yet. `cartoon/gc_ep01.mp4` ("How Does a Seed Grow Into a Plant?", built Nov 19) and its Short 1 were sent to
   him on Nov 21 at noon. Until he says yes every Gizmo cartoon entry is "hold_review" and the guard refuses it. On his yes: write the file
   `studio/cartoon/GIZMO_CARTOON_APPROVED` (one line: his words, the date), set the waiting entries "to_upload" with slots from `--next`, and

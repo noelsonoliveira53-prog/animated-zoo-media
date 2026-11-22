@@ -50,5 +50,13 @@ intro at both ends, two rounds of fixes, a 4K render and every check. The explai
 ## Waits for Noelson
 - Sign Studio's browser on the PC back into Google. Until then nothing uploads: gc_ep01 (its Nov 21 6:10 PM slot has passed: it takes the next free 2:10 PM slot
   at upload), gc_ep01_short1 (Nov 22 8:10 AM), gc_ep02 (Nov 22 2:10 PM) and its Shorts. If Nov 22 2:10 PM passes too, the next run moves them to the next free slots.
-- gc_ep01 Shorts 2 and 3 are still "in_production" with no file in cartoon/ (the noon session wrote and checked their 9:16 stills; the renders it mentions are not
-  in the repo). Not built tonight; the next Gizmo run builds them (they are the "shorts_missing" step).
+
+## Also finished: gc_ep01 Shorts 2 and 3 (taken over Nov 22 ~1:20 AM; in_production since Nov 21 12:27 PM with no file in cartoon/)
+- `cartoon/gc_ep01_short2.mp4` "What Does a Seed Need to Grow? Gizmo Explains" (87.8 s) and `_short3` "How Does a Plant Make Its Own Food? Gizmo Explains" (87.6 s):
+  AV1 2160x3840, to_upload on Nov 23 and Nov 24 12:10 PM (Short 1 is Nov 22 8:10 AM: one Short of this explainer a day). Thumbnails WATER, AIR! / LEAF KITCHEN!.
+- 9:16 stills of every shot (middle and end) looked at first. Fixed (9:16 only, gc_ep01's 16:9 lesson file untouched; its plan check still passes): the seeds of
+  question 2b sat under the two-line caption (moved up), DOWN! in "root grows down" sat on the caption (to 0.70, right of the root).
+- Checks on both: --check4k on render and AV1, pace 0 over 8 s (longest 5.0 / 8.0 s), MARK yes (render and AV1), corner sheets looked at, frames of every shot and reveal
+  looked at, listen.py (no click, no silence, -16 LUFS, true peak -1.4 dB; pictures looked at; measured, not heard), review.py PASS and contact sheets looked at,
+  upload_guard OK TO UPLOAD. Open (logged in docs/IMPROVE.md): Short 3's life-cycle board's lowest circle partly under the caption at ~63 s; Short 3's thumbnail leaf tip
+  touches the right edge.

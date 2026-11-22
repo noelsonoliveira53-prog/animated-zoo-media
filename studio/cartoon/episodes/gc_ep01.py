@@ -191,7 +191,7 @@ SHOTS = [
       fx=[("to", "w:water!", "#{p}cn", {"rotation": 16, "svgOrigin": "-12 -190", "duration": .4}, "Gizmo tips the can"), ON("w:Drip,", "#{p}cn-water", "water pours")],
       words=[("w:water!", "WATER", .74, .18, 1.1, "sun", (.5, .26), .95)]),
     S("paper_gz", BOARD, "Which seed will grow? The dry seed, or the seed with water?", part=2, q=True, tag="question 2b", pause=3.2, pcam=PBOARD,
-      props=[prop("s1", G.seed, 600, 700, .9, p=(760, 1000, .6)), prop("s2", G.seed, 1320, 700, .9, p=(1160, 1000, .6))] + [prop(f"d{k}", G.drop, 1320 + dx, 520, .6, p=(1160 + dx * .6, 880, .45)) for k, dx in enumerate((-90, 0, 90))],
+      props=[prop("s1", G.seed, 600, 700, .9, p=(760, 820, .6)), prop("s2", G.seed, 1320, 700, .9, p=(1160, 820, .6))] + [prop(f"d{k}", G.drop, 1320 + dx, 520, .6, p=(1160 + dx * .6, 700, .45)) for k, dx in enumerate((-90, 0, 90))],
       fx=[("signs", "w:dry", ["DRY", "WATER"], 1, "wait:2.0"), PULSE("wait:2.05", "#{p}s2_w", 3)]),
     S("paper_gz", BOARD, "The seed with water! Seeds need water to grow.", part=2, tag="water wins", pcam=PBOARD,
       props=[prop("s2", G.seed, 960, 680, 1.2, p=(960, 700, 1.0))] + [prop(f"d{k}", G.drop, 960 + dx, 420, .8, p=(960 + dx * .8, 450, .7)) for k, dx in enumerate((-150, 0, 150))],
@@ -329,7 +329,8 @@ PFIX = {"water": (WINCP2, {"WATER": (.72, .40)}),
         "say it": (GPL, {"ROOT, DOWN!": (.5, .72, .75), "SHOOT, UP!": (.5, .36, .75)}),
         "roots drink": ((RX, 640, 1200), {"WATER IN!": (.5, .73)}),
         "name the parts": (None, {"ROOT": (.72, .68, .8)}),
-        "meadow taller": ((1270, 560, 1600), {"TALLER!": (.5, .35)})}
+        "meadow taller": ((1270, 560, 1600), {"TALLER!": (.5, .35)}),
+        "root grows down": (None, {"DOWN!": (.77, .70)})}      # Nov 22: at .76 it sat on the two-line caption (Short 2 stills)
 for _s in SHOTS:
     if _s["tag"] not in PFIX: continue
     _pc, _ws = PFIX[_s["tag"]]

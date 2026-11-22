@@ -209,3 +209,5 @@
 | 2026-11-22 | cartoon/gc_ep02_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-22 | cartoon/gc_ep02_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-22 | cartoon/gc_ep02_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-22 | cartoon/gc_ep01_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-22 | cartoon/gc_ep01_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

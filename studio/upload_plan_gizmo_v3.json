@@ -421,7 +421,7 @@
   "file": "cartoon/gc_ep02_short1.mp4",
   "title": "What Pushes a Rocket Up? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "to_upload",
+  "status": "published",
   "date": "2026-11-23",
   "time": "8:10 AM",
   "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
@@ -439,7 +439,9 @@
   ],
   "thumb": "brand/gizmo/thumb_gc_ep02_short1.jpg",
   "thumb_text": "WHOOSH!",
-  "seconds": 89.2
+  "seconds": 89.2,
+  "video_id": "YWG7DUL2lA0",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "channel": "gizmo",

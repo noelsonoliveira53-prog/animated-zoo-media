@@ -327,5 +327,5 @@ THUMBS = {
     "za_ep13": {"place": "shore", "cam": (900, 700, 1300),
                 "actors": [("hermit_small", 980, 960, 1.5, False, '')],
                 "props": [(A.arrow, 640, 720, 1.0)],
-                "words": [("TOO SMALL!", 660, 420, 170, "sun", -5)]},
+                "words": [("TOO SMALL!", 640, 370, 170, "sun", -5)]},
 }

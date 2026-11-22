@@ -1,0 +1,48 @@
+song 2.5s  0 sung words  1 lines -> /home/claude/animated-zoo-media/studio/sing/cache/refrain_04c9c04426ee
+song 2.5s  0 sung words  1 lines -> /home/claude/animated-zoo-media/studio/sing/cache/refrain_49397f960022
+song 5.0s  0 sung words  1 lines -> /home/claude/animated-zoo-media/studio/sing/cache/refrain_6c8534c95688
+{
+ "length": 345.8,
+ "shots": 76,
+ "visual_changes": 407,
+ "mean_gap": 0.85,
+ "longest_gap": 5.89,
+ "longest_gap_at": 246.0,
+ "over_6s": [],
+ "places": [
+  "gpad",
+  "gsky",
+  "glab",
+  "gz_intro",
+  "gz_logo",
+  "gbench",
+  "gspace",
+  "gwindow"
+ ],
+ "picture_boards": [
+  "paper_gz"
+ ],
+ "questions": 24,
+ "longest_without_question": 42.8,
+ "first_words_at": 0.42,
+ "shot_mean": 4.55,
+ "main_intro": {
+  "at": [
+   12.2,
+   330.3
+  ],
+  "seconds": 29.9
+ },
+ "fails": [],
+ "words_placed": "668/668",
+ "sync": {
+  "pauses_checked": 51,
+  "onset_err_mean_ms": 23.1,
+  "onset_err_max_ms": 80.0,
+  "suspect_words": [],
+  "cuts": 75,
+  "cuts_on_the_half_beat": 75,
+  "songs_entering_on_a_beat": "6/6",
+  "process": "3D (beat)"
+ }
+}

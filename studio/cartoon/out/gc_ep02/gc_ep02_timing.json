@@ -1,6 +1,6 @@
 {
  "id": "gc_ep02",
- "total": 316.77545833333346,
+ "total": 345.8366666666667,
  "bpm": 96,
  "beats": [
   0.0,
@@ -509,20 +509,69 @@
   314.375,
   315.0,
   315.625,
-  316.25
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625
  ],
  "plan": {
-  "length": 316.8,
-  "shots": 68,
-  "visual_changes": 329,
-  "mean_gap": 0.96,
-  "longest_gap": 5.94,
-  "longest_gap_at": 231.6,
+  "length": 345.8,
+  "shots": 76,
+  "visual_changes": 407,
+  "mean_gap": 0.85,
+  "longest_gap": 5.89,
+  "longest_gap_at": 246.0,
   "over_6s": [],
   "places": [
    "gpad",
    "gsky",
    "glab",
+   "gz_intro",
+   "gz_logo",
    "gbench",
    "gspace",
    "gwindow"
@@ -531,23 +580,26 @@
    "paper_gz"
   ],
   "questions": 24,
-  "longest_without_question": 28.4,
+  "longest_without_question": 42.8,
   "first_words_at": 0.42,
-  "shot_mean": 4.66,
+  "shot_mean": 4.55,
   "main_intro": {
-   "at": [],
-   "seconds": 0
+   "at": [
+    12.2,
+    330.3
+   ],
+   "seconds": 29.9
   },
   "fails": [],
-  "words_placed": "664/664",
+  "words_placed": "668/668",
   "sync": {
    "pauses_checked": 51,
    "onset_err_mean_ms": 23.1,
    "onset_err_max_ms": 80.0,
    "suspect_words": [],
-   "cuts": 67,
-   "cuts_on_the_half_beat": 67,
-   "songs_entering_on_a_beat": "0/0",
+   "cuts": 75,
+   "cuts_on_the_half_beat": 75,
+   "songs_entering_on_a_beat": "6/6",
    "process": "3D (beat)"
   }
  },
@@ -614,1588 +666,1978 @@
   ],
   [
    12.19,
-   "new shot",
-   "Gizmo's lab lab wide"
+   "action",
+   "the gears turn"
   ],
   [
-   12.41,
+   12.19,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   12.24,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   13.01,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.32,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   13.63,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   14.38,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   14.38,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   14.38,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   15.31,
+   "action",
+   "the gears turn"
+  ],
+  [
+   15.31,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   15.5,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   17.19,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   17.81,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   18.12,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   18.44,
+   "action",
+   "out of the flash"
+  ],
+  [
+   18.44,
+   "action",
+   "the rays turn"
+  ],
+  [
+   18.44,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   18.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   19.82,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   20.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   20.33,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   20.94,
+   "action",
+   "confetti"
+  ],
+  [
+   20.94,
+   "action",
+   "the line draws on"
+  ],
+  [
+   21.25,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   21.44,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   21.56,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   22.25,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   22.38,
    "action",
    "Gizmo waves"
   ],
   [
-   13.17,
+   23.13,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   23.75,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   23.88,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   24.38,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   25.29,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   25.29,
+   "action",
+   "confetti"
+  ],
+  [
+   25.29,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   25.59,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   26.56,
+   "new place",
+   "Gizmo's lab lab wide"
+  ],
+  [
+   26.83,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   27.59,
    "word",
    "HELLO!"
   ],
   [
-   15.31,
+   29.69,
    "new place",
    "Gizmo's work bench bench wide"
   ],
   [
-   16.56,
+   30.98,
    "action",
    "a part lights up"
   ],
   [
-   17.43,
+   31.85,
    "word",
    "STEP BY STEP"
   ],
   [
-   18.75,
+   33.12,
    "new shot",
    "Gizmo's work bench the model close"
   ],
   [
-   21.59,
+   36.01,
    "action",
    "a part lights up"
   ],
   [
-   21.59,
+   36.01,
    "word",
    "NOSE"
   ],
   [
-   22.26,
+   36.68,
    "action",
    "a part lights up"
   ],
   [
-   22.26,
+   36.68,
    "word",
    "FINS"
   ],
   [
-   23.44,
+   37.81,
    "new place",
    "the picture board (blueprint) fuel"
   ],
   [
-   25.26,
+   39.68,
    "action",
    "the fuel tank lights up"
   ],
   [
-   25.26,
+   39.68,
    "word",
    "FUEL"
   ],
   [
-   26.41,
+   40.83,
    "action",
    "a part lights up"
   ],
   [
-   28.44,
+   42.81,
    "action",
    "it appears"
   ],
   [
-   28.44,
+   42.81,
    "new shot",
    "the picture board (blueprint) question 1"
   ],
   [
-   31.15,
+   45.58,
    "sign",
    "HOT GAS"
   ],
   [
-   31.5,
+   45.93,
    "sign",
    "ICE CREAM"
   ],
   [
-   33.72,
+   48.15,
    "thinking dot",
    "1"
   ],
   [
-   34.4,
+   48.82,
    "thinking dot",
    "2"
   ],
   [
-   35.07,
+   49.49,
    "thinking dot",
    "3"
   ],
   [
-   35.56,
+   49.98,
    "answer",
    "HOT GAS"
   ],
   [
-   36.88,
+   51.25,
    "action",
    "it appears"
   ],
   [
-   36.88,
+   51.25,
    "new shot",
    "the picture board (blueprint) hot gas"
   ],
   [
-   36.98,
+   51.4,
    "word",
    "HOT GAS!"
   ],
   [
-   37.29,
+   51.71,
    "action",
    "hot gas rushes out"
   ],
   [
-   41.56,
+   55.94,
    "action",
    "hot gas rushes out"
   ],
   [
-   41.56,
+   55.94,
    "new shot",
    "the picture board (blueprint) out the back"
   ],
   [
-   42.95,
+   57.38,
    "action",
    "an arrow points down"
   ],
   [
-   44.1,
+   58.53,
    "word",
    "WHOOSH!"
   ],
   [
-   45.0,
+   59.69,
    "new place",
    "Gizmo's lab hmm"
   ],
   [
-   46.15,
+   60.58,
    "action",
    "gizmo looks wow"
   ],
   [
-   46.15,
+   60.58,
    "word",
    "HMM..."
   ],
   [
-   47.1,
+   61.53,
    "action",
    "the antenna lights up"
   ],
   [
-   48.75,
+   63.12,
    "action",
    "hot gas rushes out"
   ],
   [
-   48.75,
+   63.12,
    "action",
    "it appears"
   ],
   [
-   48.75,
+   63.12,
    "new place",
    "the picture board (blueprint) question 2"
   ],
   [
-   52.57,
+   67.0,
    "sign",
    "UP"
   ],
   [
-   52.92,
+   67.35,
    "sign",
    "DOWN"
   ],
   [
-   54.21,
+   68.63,
    "thinking dot",
    "1"
   ],
   [
-   54.88,
+   69.31,
    "thinking dot",
    "2"
   ],
   [
-   55.56,
+   69.98,
    "thinking dot",
    "3"
   ],
   [
-   56.04,
+   70.47,
    "answer",
    "UP"
   ],
   [
-   57.19,
+   71.56,
    "action",
    "hot gas rushes out"
   ],
   [
-   57.19,
+   71.56,
    "action",
    "it appears"
   ],
   [
-   57.19,
+   71.56,
    "new shot",
    "the picture board (blueprint) rocket goes up"
   ],
   [
-   57.47,
+   71.9,
    "action",
    "an arrow points up"
   ],
   [
-   57.47,
+   71.9,
    "action",
    "the rocket lifts off"
   ],
   [
-   57.47,
+   71.9,
    "word",
    "UP!"
   ],
   [
-   58.66,
+   73.09,
    "word",
    "DOWN"
   ],
   [
-   60.94,
+   75.31,
    "new place",
    "the launch field (far away) watch the pad"
   ],
   [
-   61.8,
+   76.22,
    "action",
    "gizmo looks wow"
   ],
   [
-   63.63,
+   78.05,
    "action",
    "a part lights up"
   ],
   [
-   63.63,
+   78.05,
    "word",
    "LAUNCH PAD"
   ],
   [
-   64.38,
+   78.75,
    "new shot",
    "the launch field (far away) pad lift-off"
   ],
   [
-   64.78,
+   79.21,
    "action",
    "hot gas rushes out"
   ],
   [
-   67.37,
+   81.8,
    "action",
    "the rocket lifts off"
   ],
   [
-   67.37,
+   81.8,
    "word",
    "UP IT GOES!"
   ],
   [
-   67.63,
+   82.06,
    "action",
    "gizmo hops"
   ],
   [
-   68.75,
+   83.12,
    "new place",
    "the picture board (blueprint) push and push back"
   ],
   [
-   69.35,
+   83.77,
    "action",
    "the hands push"
   ],
   [
-   69.35,
+   83.77,
    "word",
    "PUSH"
   ],
   [
-   70.3,
+   84.72,
    "word",
    "PUSH BACK"
   ],
   [
-   72.81,
+   87.19,
    "new place",
    "Gizmo's lab press hands"
   ],
   [
-   72.96,
+   87.38,
    "action",
    "Gizmo presses his hands together"
   ],
   [
-   72.96,
+   87.38,
    "word",
    "PRESS!"
   ],
   [
-   77.81,
+   92.5,
    "action",
    "hot gas rushes out"
   ],
   [
-   77.81,
+   92.5,
    "new place",
    "the picture board (blueprint) every push"
   ],
   [
-   80.26,
+   94.69,
    "word",
    "EVERY PUSH..."
   ],
   [
-   80.55,
+   94.98,
    "action",
    "it appears"
   ],
   [
-   81.59,
+   96.02,
    "action",
    "it appears"
   ],
   [
-   81.59,
+   96.02,
    "word",
    "...A PUSH BACK!"
   ],
   [
-   82.5,
+   96.88,
    "new place",
    "Gizmo's work bench say it"
   ],
   [
-   83.77,
+   98.19,
    "action",
    "Gizmo points down"
   ],
   [
-   83.77,
+   98.19,
    "word",
    "GAS, DOWN!"
   ],
   [
-   85.03,
+   99.45,
    "action",
    "Gizmo reaches up"
   ],
   [
-   85.03,
+   99.45,
    "word",
    "ROCKET, UP!"
   ],
   [
-   86.25,
+   100.94,
    "new place",
    "Gizmo's lab crouch and jump"
   ],
   [
-   86.56,
+   100.98,
    "action",
    "Gizmo curls up small"
   ],
   [
-   86.56,
+   100.98,
    "word",
    "CROUCH!"
   ],
   [
-   89.48,
+   103.9,
    "action",
    "gizmo hops"
   ],
   [
-   89.48,
+   103.9,
    "word",
    "BLAST OFF!"
   ],
   [
-   91.56,
+   105.94,
    "action",
    "hot gas rushes out"
   ],
   [
-   91.56,
+   105.94,
    "new place",
    "the launch field (far away) question 3"
   ],
   [
-   93.96,
+   108.39,
    "sign",
    "HOT GAS"
   ],
   [
-   94.31,
+   108.74,
    "sign",
    "WATER"
   ],
   [
-   96.17,
+   110.59,
    "thinking dot",
    "1"
   ],
   [
-   96.84,
+   111.27,
    "thinking dot",
    "2"
   ],
   [
-   97.51,
+   111.94,
    "thinking dot",
    "3"
   ],
   [
-   98.0,
+   112.43,
    "answer",
    "HOT GAS"
   ],
   [
-   99.38,
+   113.75,
    "new place",
    "the picture board (blueprint) part 1 recap"
   ],
   [
-   100.29,
+   114.72,
    "action",
    "it appears"
   ],
   [
-   100.29,
+   114.72,
    "word",
    "FUEL"
   ],
   [
-   101.12,
+   115.55,
    "action",
    "hot gas rushes out"
   ],
   [
-   101.12,
+   115.55,
    "word",
    "GAS"
   ],
   [
-   101.92,
+   116.35,
    "word",
    "PUSH!"
   ],
   [
-   102.93,
+   117.36,
    "action",
    "the rocket lifts off"
   ],
   [
-   104.06,
+   118.75,
    "new place",
    "space above the Earth space wide"
   ],
   [
-   104.11,
+   118.8,
    "action",
    "hot gas rushes out"
   ],
   [
-   104.16,
+   118.85,
    "action",
    "the rocket flies up"
   ],
   [
-   106.78,
+   121.21,
    "word",
    "SPACE!"
   ],
   [
-   107.81,
+   122.19,
    "action",
    "hot gas rushes out"
   ],
   [
-   107.81,
+   122.19,
    "new shot",
    "space above the Earth no air"
   ],
   [
-   107.91,
+   122.29,
    "action",
    "the rocket floats"
   ],
   [
-   110.23,
+   124.66,
    "word",
    "NO AIR!"
   ],
   [
-   111.25,
+   125.94,
    "new place",
    "Gizmo's lab hmm 2"
   ],
   [
-   111.91,
+   126.33,
    "action",
    "gizmo looks wow"
   ],
   [
-   111.91,
+   126.33,
    "word",
    "NO AIR?"
   ],
   [
-   114.31,
+   128.73,
    "action",
    "the antenna lights up"
   ],
   [
-   115.62,
+   130.0,
    "new place",
    "the sunny lab window jet needs air"
   ],
   [
-   115.72,
+   130.1,
    "action",
    "the jet flies by"
   ],
   [
-   118.52,
+   132.94,
    "action",
    "air goes into the jet"
   ],
   [
-   118.52,
+   132.94,
    "word",
    "AIR"
   ],
   [
-   120.62,
+   135.0,
    "new shot",
    "the sunny lab window jet close"
   ],
   [
-   120.72,
+   135.1,
    "action",
    "the jet flies"
   ],
   [
-   120.83,
+   135.2,
    "action",
    "air goes into the jet"
   ],
   [
-   122.03,
+   136.46,
    "word",
    "AIR IN!"
   ],
   [
-   124.38,
+   139.06,
    "new place",
    "the picture board (blueprint) question 4"
   ],
   [
-   127.95,
+   142.37,
    "sign",
    "YES"
   ],
   [
-   128.3,
+   142.72,
    "sign",
    "NO"
   ],
   [
-   129.67,
+   144.09,
    "thinking dot",
    "1"
   ],
   [
-   130.34,
+   144.77,
    "thinking dot",
    "2"
   ],
   [
-   131.02,
+   145.44,
    "thinking dot",
    "3"
   ],
   [
-   131.5,
+   145.93,
    "answer",
    "YES"
   ],
   [
-   132.81,
+   147.19,
    "action",
    "hot gas rushes out"
   ],
   [
-   132.81,
+   147.19,
    "new place",
    "space above the Earth yes it works"
   ],
   [
-   132.93,
+   147.36,
    "action",
    "the rocket lifts off"
   ],
   [
-   132.93,
+   147.36,
    "word",
    "YES!"
   ],
   [
-   136.25,
+   150.62,
    "new place",
    "the picture board (blueprint) carries everything"
   ],
   [
-   136.41,
+   150.84,
    "action",
    "it appears"
   ],
   [
-   137.0,
+   151.43,
    "word",
    "EVERYTHING!"
   ],
   [
-   139.0,
+   153.43,
    "action",
    "a part lights up"
   ],
   [
-   140.62,
+   155.0,
    "new place",
    "Gizmo's lab backpack"
   ],
   [
-   141.49,
+   155.92,
    "action",
    "gizmo looks wow"
   ],
   [
-   141.49,
+   155.92,
    "word",
    "A BACKPACK!"
   ],
   [
-   143.08,
+   157.51,
    "action",
    "gizmo hops"
   ],
   [
-   144.38,
+   159.06,
    "new place",
    "the picture board (blueprint) question 5"
   ],
   [
-   147.29,
+   161.72,
    "sign",
    "JET"
   ],
   [
-   147.64,
+   162.07,
    "sign",
    "ROCKET"
   ],
   [
-   149.45,
+   163.88,
    "thinking dot",
    "1"
   ],
   [
-   150.12,
+   164.55,
    "thinking dot",
    "2"
   ],
   [
-   150.8,
+   165.22,
    "thinking dot",
    "3"
   ],
   [
-   151.28,
+   165.71,
    "answer",
    "JET"
   ],
   [
-   151.33,
+   165.76,
    "action",
    "air goes into the jet"
   ],
   [
-   152.5,
+   166.88,
    "new shot",
    "the picture board (blueprint) the jet"
   ],
   [
-   152.82,
+   167.25,
    "action",
    "air goes into the jet"
   ],
   [
-   152.82,
+   167.25,
    "word",
    "THE JET!"
   ],
   [
-   153.7,
+   168.13,
    "action",
    "a part lights up"
   ],
   [
-   156.25,
+   170.62,
    "new shot",
    "the picture board (blueprint) jet yes rocket no"
   ],
   [
-   157.8,
+   172.23,
    "action",
    "air goes into the jet"
   ],
   [
-   157.8,
+   172.23,
    "word",
    "JET: YES"
   ],
   [
-   158.94,
+   173.37,
    "action",
    "a part lights up"
   ],
   [
-   159.76,
+   174.19,
    "word",
    "ROCKET: NO"
   ],
   [
-   160.62,
+   175.0,
    "action",
    "hot gas rushes out"
   ],
   [
-   160.62,
+   175.0,
    "new place",
    "space above the Earth works in space"
   ],
   [
-   160.72,
+   175.1,
    "action",
    "the rocket flies on"
   ],
   [
-   162.04,
+   176.47,
    "word",
    "IT WORKS!"
   ],
   [
-   165.31,
+   179.69,
    "new place",
    "the launch field (far away) one more launch"
   ],
   [
-   166.87,
+   181.3,
    "action",
    "gizmo hops"
   ],
   [
-   166.87,
+   181.3,
    "word",
    "ONE MORE!"
   ],
   [
-   168.07,
+   182.5,
    "action",
    "a part lights up"
-  ],
-  [
-   168.75,
-   "new place",
-   "Gizmo's lab count down"
-  ],
-  [
-   170.23,
-   "action",
-   "the antenna lights up"
-  ],
-  [
-   171.71,
-   "word",
-   "3"
-  ],
-  [
-   172.06,
-   "word",
-   "2"
-  ],
-  [
-   172.39,
-   "word",
-   "1"
-  ],
-  [
-   173.12,
-   "new place",
-   "the launch field (far away) blast off"
-  ],
-  [
-   173.38,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   173.38,
-   "word",
-   "BLAST OFF!"
-  ],
-  [
-   174.38,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   175.01,
-   "action",
-   "gizmo hops"
-  ],
-  [
-   176.56,
-   "new place",
-   "high in the sky up through the clouds"
-  ],
-  [
-   176.61,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   176.66,
-   "action",
-   "the rocket zooms up"
-  ],
-  [
-   178.6,
-   "word",
-   "SPACE!"
-  ],
-  [
-   179.69,
-   "new place",
-   "Gizmo's lab say it 2"
-  ],
-  [
-   182.49,
-   "action",
-   "gizmo hops"
-  ],
-  [
-   182.49,
-   "word",
-   "NO AIR NEEDED!"
   ],
   [
    183.44,
    "new place",
-   "space above the Earth satellite"
+   "Gizmo's lab count down"
   ],
   [
-   184.32,
-   "picture",
-   "st"
-  ],
-  [
-   184.32,
-   "word",
-   "A SATELLITE!"
-  ],
-  [
-   186.35,
-   "action",
-   "the satellite turns"
-  ],
-  [
-   187.5,
-   "new shot",
-   "space above the Earth point satellite"
-  ],
-  [
-   187.82,
-   "word",
-   "POINT!"
-  ],
-  [
-   188.28,
-   "action",
-   "a part lights up"
-  ],
-  [
-   191.25,
-   "new place",
-   "Gizmo's work bench built in parts"
-  ],
-  [
-   192.48,
-   "action",
-   "a part lights up"
-  ],
-  [
-   192.48,
-   "word",
-   "A TRICK!"
-  ],
-  [
-   194.13,
-   "action",
-   "a part lights up"
-  ],
-  [
-   195.0,
-   "new place",
-   "the picture board (blueprint) count parts"
-  ],
-  [
-   196.91,
-   "action",
-   "a part lights up"
-  ],
-  [
-   196.91,
-   "word",
-   "1"
-  ],
-  [
-   197.16,
-   "action",
-   "a part lights up"
-  ],
-  [
-   197.16,
-   "word",
-   "2"
-  ],
-  [
-   197.43,
-   "action",
-   "a part lights up"
-  ],
-  [
-   197.43,
-   "word",
-   "3"
-  ],
-  [
-   198.44,
-   "new shot",
-   "the picture board (blueprint) heavy needs a big push"
-  ],
-  [
-   198.63,
-   "word",
-   "HEAVY!"
-  ],
-  [
-   200.24,
-   "action",
-   "a big push"
-  ],
-  [
-   200.24,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   200.24,
-   "word",
-   "BIG PUSH!"
-  ],
-  [
-   202.81,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   202.81,
-   "new place",
-   "high in the sky bottom part drops"
-  ],
-  [
-   205.65,
-   "action",
-   "the bottom part drops away"
-  ],
-  [
-   205.65,
-   "word",
-   "DROP!"
-  ],
-  [
-   206.88,
-   "new shot",
-   "high in the sky next part"
-  ],
-  [
-   207.19,
-   "word",
-   "BYE-BYE!"
-  ],
-  [
-   210.94,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   210.94,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   211.88,
-   "new place",
-   "Gizmo's lab question bag"
-  ],
-  [
-   213.49,
-   "sign",
-   "HEAVY BAG"
-  ],
-  [
-   213.84,
-   "sign",
-   "NO BAG"
-  ],
-  [
-   216.37,
-   "thinking dot",
-   "1"
-  ],
-  [
-   217.05,
-   "thinking dot",
-   "2"
-  ],
-  [
-   217.72,
-   "thinking dot",
-   "3"
-  ],
-  [
-   218.21,
-   "answer",
-   "NO BAG"
-  ],
-  [
-   218.26,
-   "action",
-   "gizmo hops"
-  ],
-  [
-   219.38,
-   "new place",
-   "the picture board (blueprint) question 6"
-  ],
-  [
-   220.32,
-   "sign",
-   "LIGHTER"
-  ],
-  [
-   220.67,
-   "sign",
-   "HEAVIER"
-  ],
-  [
-   222.55,
-   "thinking dot",
-   "1"
-  ],
-  [
-   223.22,
-   "thinking dot",
-   "2"
-  ],
-  [
-   223.9,
-   "thinking dot",
-   "3"
-  ],
-  [
-   224.38,
-   "answer",
-   "LIGHTER"
-  ],
-  [
-   225.62,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   225.62,
-   "new shot",
-   "the picture board (blueprint) lighter goes higher"
-  ],
-  [
-   228.11,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   228.11,
-   "word",
-   "HIGHER!"
-  ],
-  [
-   229.06,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   229.06,
-   "new place",
-   "high in the sky up and up"
-  ],
-  [
-   229.16,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   230.31,
-   "word",
-   "UP!"
-  ],
-  [
-   231.25,
-   "new place",
-   "Gizmo's lab stack fists"
-  ],
-  [
-   231.56,
-   "action",
-   "Gizmo stacks his hands"
-  ],
-  [
-   231.56,
-   "word",
-   "STACK!"
-  ],
-  [
-   237.5,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   237.5,
-   "new place",
-   "space above the Earth staging"
-  ],
-  [
-   238.62,
-   "word",
-   "STAGING"
-  ],
-  [
-   239.97,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   242.19,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   242.19,
-   "new shot",
-   "space above the Earth the Moon"
-  ],
-  [
-   242.29,
-   "action",
-   "the rocket flies to the Moon"
-  ],
-  [
-   243.59,
-   "action",
-   "a part lights up"
-  ],
-  [
-   243.59,
-   "word",
-   "THE MOON!"
-  ],
-  [
-   245.31,
-   "new place",
-   "the picture board (blueprint) question 7"
-  ],
-  [
-   248.86,
-   "sign",
-   "EMPTY PART"
-  ],
-  [
-   249.21,
-   "sign",
-   "ITS NOSE"
-  ],
-  [
-   251.37,
-   "thinking dot",
-   "1"
-  ],
-  [
-   252.04,
-   "thinking dot",
-   "2"
-  ],
-  [
-   252.71,
-   "thinking dot",
-   "3"
-  ],
-  [
-   253.2,
-   "answer",
-   "EMPTY PART"
-  ],
-  [
-   254.38,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   254.38,
-   "new place",
-   "high in the sky drop and go higher"
-  ],
-  [
-   254.75,
-   "word",
-   "EMPTY!"
-  ],
-  [
-   255.94,
-   "action",
-   "the bottom part drops away"
-  ],
-  [
-   256.84,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   256.84,
-   "action",
-   "the rocket lifts off"
-  ],
-  [
-   257.81,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   257.81,
-   "new place",
-   "space above the Earth the Earth below"
-  ],
-  [
-   260.29,
-   "action",
-   "the rocket flies on"
-  ],
-  [
-   260.29,
-   "word",
-   "THE EARTH!"
-  ],
-  [
-   262.19,
-   "new place",
-   "Gizmo's lab say it 3"
-  ],
-  [
-   263.77,
-   "action",
-   "Gizmo points down"
-  ],
-  [
-   263.77,
-   "word",
-   "DROP A PART!"
-  ],
-  [
-   264.67,
-   "action",
-   "Gizmo reaches up"
-  ],
-  [
-   264.67,
-   "word",
-   "GO HIGHER!"
-  ],
-  [
-   265.62,
-   "new place",
-   "the launch field (far away) astronauts"
-  ],
-  [
-   267.19,
-   "action",
-   "gizmo looks wow"
-  ],
-  [
-   267.19,
-   "word",
-   "ASTRONAUTS!"
-  ],
-  [
-   268.18,
-   "action",
-   "gizmo hops"
-  ],
-  [
-   269.06,
-   "new place",
-   "Gizmo's lab wave"
-  ],
-  [
-   269.39,
-   "action",
-   "Gizmo waves"
-  ],
-  [
-   269.39,
-   "word",
-   "WAVE!"
-  ],
-  [
-   274.38,
-   "new shot",
-   "Gizmo's lab quiz time"
-  ],
-  [
-   274.62,
+   184.66,
    "action",
    "the antenna lights up"
   ],
   [
-   274.62,
+   186.14,
    "word",
-   "QUIZ TIME!"
-  ],
-  [
-   277.5,
-   "new place",
-   "Gizmo's work bench quiz 1"
-  ],
-  [
-   280.06,
-   "sign",
-   "HOT GAS"
-  ],
-  [
-   280.41,
-   "sign",
-   "BUBBLES"
-  ],
-  [
-   282.37,
-   "thinking dot",
-   "1"
-  ],
-  [
-   283.04,
-   "thinking dot",
-   "2"
-  ],
-  [
-   283.72,
-   "thinking dot",
    "3"
   ],
   [
-   284.2,
-   "answer",
-   "HOT GAS"
+   186.49,
+   "word",
+   "2"
   ],
   [
-   285.31,
+   186.82,
+   "word",
+   "1"
+  ],
+  [
+   187.5,
    "new place",
-   "the picture board (blueprint) quiz 1 answer"
+   "the launch field (far away) blast off"
   ],
   [
-   285.62,
+   187.8,
    "action",
    "hot gas rushes out"
   ],
   [
-   289.24,
+   187.8,
+   "word",
+   "BLAST OFF!"
+  ],
+  [
+   188.8,
    "action",
    "the rocket lifts off"
   ],
   [
-   290.0,
+   189.43,
    "action",
-   "hot gas rushes out"
+   "gizmo hops"
   ],
   [
-   290.0,
+   190.94,
    "new place",
-   "space above the Earth quiz 2"
+   "high in the sky up through the clouds"
   ],
   [
-   292.35,
-   "sign",
-   "YES"
-  ],
-  [
-   292.7,
-   "sign",
-   "NO"
-  ],
-  [
-   293.95,
-   "thinking dot",
-   "1"
-  ],
-  [
-   294.62,
-   "thinking dot",
-   "2"
-  ],
-  [
-   295.3,
-   "thinking dot",
-   "3"
-  ],
-  [
-   295.78,
-   "answer",
-   "NO"
-  ],
-  [
-   296.88,
+   190.99,
    "action",
    "hot gas rushes out"
   ],
   [
-   296.88,
+   191.04,
+   "action",
+   "the rocket zooms up"
+  ],
+  [
+   193.02,
+   "word",
+   "SPACE!"
+  ],
+  [
+   194.06,
+   "new place",
+   "Gizmo's lab say it 2"
+  ],
+  [
+   196.92,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   196.92,
+   "word",
+   "NO AIR NEEDED!"
+  ],
+  [
+   197.81,
+   "new place",
+   "space above the Earth satellite"
+  ],
+  [
+   198.74,
+   "picture",
+   "st"
+  ],
+  [
+   198.74,
+   "word",
+   "A SATELLITE!"
+  ],
+  [
+   200.77,
+   "action",
+   "the satellite turns"
+  ],
+  [
+   201.88,
    "new shot",
-   "space above the Earth quiz 2 answer"
+   "space above the Earth point satellite"
   ],
   [
-   297.21,
+   202.24,
    "word",
-   "NO!"
+   "POINT!"
   ],
   [
-   297.81,
+   202.7,
    "action",
-   "the rocket lifts off"
+   "a part lights up"
   ],
   [
-   300.0,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   300.0,
+   205.62,
    "new place",
-   "high in the sky quiz 3"
+   "Gizmo's work bench built in parts"
   ],
   [
-   303.21,
-   "sign",
-   "LIGHTER"
+   206.91,
+   "action",
+   "a part lights up"
   ],
   [
-   303.56,
-   "sign",
-   "HEAVIER"
+   206.91,
+   "word",
+   "A TRICK!"
   ],
   [
-   305.0,
-   "thinking dot",
+   208.56,
+   "action",
+   "a part lights up"
+  ],
+  [
+   209.69,
+   "new place",
+   "the picture board (blueprint) count parts"
+  ],
+  [
+   211.34,
+   "action",
+   "a part lights up"
+  ],
+  [
+   211.34,
+   "word",
    "1"
   ],
   [
-   305.67,
-   "thinking dot",
+   211.59,
+   "action",
+   "a part lights up"
+  ],
+  [
+   211.59,
+   "word",
    "2"
   ],
   [
-   306.35,
-   "thinking dot",
+   211.86,
+   "action",
+   "a part lights up"
+  ],
+  [
+   211.86,
+   "word",
    "3"
   ],
   [
-   306.83,
-   "answer",
-   "LIGHTER"
-  ],
-  [
-   308.12,
-   "action",
-   "hot gas rushes out"
-  ],
-  [
-   308.12,
+   212.81,
    "new shot",
-   "high in the sky quiz 3 answer"
+   "the picture board (blueprint) heavy needs a big push"
   ],
   [
-   308.26,
+   213.06,
    "word",
-   "LIGHTER!"
+   "HEAVY!"
   ],
   [
-   309.75,
+   214.67,
    "action",
-   "the rocket lifts off"
+   "a big push"
   ],
   [
-   310.62,
-   "new place",
-   "the launch field (far away) goodbye"
-  ],
-  [
-   310.89,
+   214.67,
    "action",
    "hot gas rushes out"
   ],
   [
-   312.99,
-   "action",
-   "the rocket lifts off"
+   214.67,
+   "word",
+   "BIG PUSH!"
   ],
   [
-   313.67,
+   217.19,
    "action",
-   "Gizmo waves"
+   "hot gas rushes out"
   ],
   [
-   313.67,
+   217.19,
+   "new place",
+   "high in the sky bottom part drops"
+  ],
+  [
+   220.07,
+   "action",
+   "the bottom part drops away"
+  ],
+  [
+   220.07,
+   "word",
+   "DROP!"
+  ],
+  [
+   221.56,
+   "new shot",
+   "high in the sky next part"
+  ],
+  [
+   221.61,
    "word",
    "BYE-BYE!"
   ],
   [
-   314.18,
+   225.36,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   225.36,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   226.25,
+   "new place",
+   "Gizmo's lab question bag"
+  ],
+  [
+   227.92,
+   "sign",
+   "HEAVY BAG"
+  ],
+  [
+   228.27,
+   "sign",
+   "NO BAG"
+  ],
+  [
+   230.8,
+   "thinking dot",
+   "1"
+  ],
+  [
+   231.47,
+   "thinking dot",
+   "2"
+  ],
+  [
+   232.14,
+   "thinking dot",
+   "3"
+  ],
+  [
+   232.63,
+   "answer",
+   "NO BAG"
+  ],
+  [
+   232.68,
    "action",
    "gizmo hops"
+  ],
+  [
+   233.75,
+   "new place",
+   "the picture board (blueprint) question 6"
+  ],
+  [
+   234.74,
+   "sign",
+   "LIGHTER"
+  ],
+  [
+   235.09,
+   "sign",
+   "HEAVIER"
+  ],
+  [
+   236.98,
+   "thinking dot",
+   "1"
+  ],
+  [
+   237.65,
+   "thinking dot",
+   "2"
+  ],
+  [
+   238.32,
+   "thinking dot",
+   "3"
+  ],
+  [
+   238.81,
+   "answer",
+   "LIGHTER"
+  ],
+  [
+   240.0,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   240.0,
+   "new shot",
+   "the picture board (blueprint) lighter goes higher"
+  ],
+  [
+   242.54,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   242.54,
+   "word",
+   "HIGHER!"
+  ],
+  [
+   243.44,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   243.44,
+   "new place",
+   "high in the sky up and up"
+  ],
+  [
+   243.54,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   244.73,
+   "word",
+   "UP!"
+  ],
+  [
+   245.62,
+   "new place",
+   "Gizmo's lab stack fists"
+  ],
+  [
+   245.99,
+   "action",
+   "Gizmo stacks his hands"
+  ],
+  [
+   245.99,
+   "word",
+   "STACK!"
+  ],
+  [
+   251.88,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   251.88,
+   "new place",
+   "space above the Earth staging"
+  ],
+  [
+   253.04,
+   "word",
+   "STAGING"
+  ],
+  [
+   254.39,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   256.56,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   256.56,
+   "new shot",
+   "space above the Earth the Moon"
+  ],
+  [
+   256.66,
+   "action",
+   "the rocket flies to the Moon"
+  ],
+  [
+   258.01,
+   "action",
+   "a part lights up"
+  ],
+  [
+   258.01,
+   "word",
+   "THE MOON!"
+  ],
+  [
+   259.69,
+   "new place",
+   "the picture board (blueprint) question 7"
+  ],
+  [
+   263.29,
+   "sign",
+   "EMPTY PART"
+  ],
+  [
+   263.64,
+   "sign",
+   "ITS NOSE"
+  ],
+  [
+   265.79,
+   "thinking dot",
+   "1"
+  ],
+  [
+   266.47,
+   "thinking dot",
+   "2"
+  ],
+  [
+   267.14,
+   "thinking dot",
+   "3"
+  ],
+  [
+   267.63,
+   "answer",
+   "EMPTY PART"
+  ],
+  [
+   268.75,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   268.75,
+   "new place",
+   "high in the sky drop and go higher"
+  ],
+  [
+   269.18,
+   "word",
+   "EMPTY!"
+  ],
+  [
+   270.37,
+   "action",
+   "the bottom part drops away"
+  ],
+  [
+   271.27,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   271.27,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   272.19,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   272.19,
+   "new place",
+   "space above the Earth the Earth below"
+  ],
+  [
+   274.71,
+   "action",
+   "the rocket flies on"
+  ],
+  [
+   274.71,
+   "word",
+   "THE EARTH!"
+  ],
+  [
+   276.88,
+   "new place",
+   "Gizmo's lab say it 3"
+  ],
+  [
+   278.19,
+   "action",
+   "Gizmo points down"
+  ],
+  [
+   278.19,
+   "word",
+   "DROP A PART!"
+  ],
+  [
+   279.09,
+   "action",
+   "Gizmo reaches up"
+  ],
+  [
+   279.09,
+   "word",
+   "GO HIGHER!"
+  ],
+  [
+   280.0,
+   "new place",
+   "the launch field (far away) astronauts"
+  ],
+  [
+   281.61,
+   "action",
+   "gizmo looks wow"
+  ],
+  [
+   281.61,
+   "word",
+   "ASTRONAUTS!"
+  ],
+  [
+   282.6,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   283.44,
+   "new place",
+   "Gizmo's lab wave"
+  ],
+  [
+   283.82,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   283.82,
+   "word",
+   "WAVE!"
+  ],
+  [
+   288.75,
+   "new shot",
+   "Gizmo's lab quiz time"
+  ],
+  [
+   289.05,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   289.05,
+   "word",
+   "QUIZ TIME!"
+  ],
+  [
+   291.88,
+   "new place",
+   "Gizmo's work bench quiz 1"
+  ],
+  [
+   294.49,
+   "sign",
+   "HOT GAS"
+  ],
+  [
+   294.84,
+   "sign",
+   "BUBBLES"
+  ],
+  [
+   296.8,
+   "thinking dot",
+   "1"
+  ],
+  [
+   297.47,
+   "thinking dot",
+   "2"
+  ],
+  [
+   298.14,
+   "thinking dot",
+   "3"
+  ],
+  [
+   298.63,
+   "answer",
+   "HOT GAS"
+  ],
+  [
+   300.0,
+   "new place",
+   "the picture board (blueprint) quiz 1 answer"
+  ],
+  [
+   300.05,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   303.67,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   304.38,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   304.38,
+   "new place",
+   "space above the Earth quiz 2"
+  ],
+  [
+   306.77,
+   "sign",
+   "YES"
+  ],
+  [
+   307.12,
+   "sign",
+   "NO"
+  ],
+  [
+   308.37,
+   "thinking dot",
+   "1"
+  ],
+  [
+   309.05,
+   "thinking dot",
+   "2"
+  ],
+  [
+   309.72,
+   "thinking dot",
+   "3"
+  ],
+  [
+   310.21,
+   "answer",
+   "NO"
+  ],
+  [
+   311.56,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   311.56,
+   "new shot",
+   "space above the Earth quiz 2 answer"
+  ],
+  [
+   311.64,
+   "word",
+   "NO!"
+  ],
+  [
+   312.24,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   314.38,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   314.38,
+   "new place",
+   "high in the sky quiz 3"
+  ],
+  [
+   317.63,
+   "sign",
+   "LIGHTER"
+  ],
+  [
+   317.98,
+   "sign",
+   "HEAVIER"
+  ],
+  [
+   319.42,
+   "thinking dot",
+   "1"
+  ],
+  [
+   320.1,
+   "thinking dot",
+   "2"
+  ],
+  [
+   320.77,
+   "thinking dot",
+   "3"
+  ],
+  [
+   321.26,
+   "answer",
+   "LIGHTER"
+  ],
+  [
+   322.5,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   322.5,
+   "new shot",
+   "high in the sky quiz 3 answer"
+  ],
+  [
+   322.69,
+   "word",
+   "LIGHTER!"
+  ],
+  [
+   324.18,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   325.0,
+   "new place",
+   "the launch field (far away) goodbye"
+  ],
+  [
+   325.31,
+   "action",
+   "hot gas rushes out"
+  ],
+  [
+   327.41,
+   "action",
+   "the rocket lifts off"
+  ],
+  [
+   328.09,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   328.09,
+   "word",
+   "BYE-BYE!"
+  ],
+  [
+   328.6,
+   "action",
+   "gizmo hops"
+  ],
+  [
+   330.31,
+   "action",
+   "the gears turn"
+  ],
+  [
+   330.31,
+   "new place",
+   "the idea space (Gizmo's main intro) INTRO 1: the idea"
+  ],
+  [
+   330.36,
+   "action",
+   "Gizmo floats up"
+  ],
+  [
+   331.13,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   331.44,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   331.75,
+   "action",
+   "a question mark pops up"
+  ],
+  [
+   332.5,
+   "action",
+   "Gizmo has an idea"
+  ],
+  [
+   332.5,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   332.5,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   333.44,
+   "action",
+   "the gears turn"
+  ],
+  [
+   333.44,
+   "new shot",
+   "the idea space (Gizmo's main intro) INTRO 2: the things he explains"
+  ],
+  [
+   333.63,
+   "action",
+   "a thing he explains pops up"
+  ],
+  [
+   335.31,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   335.94,
+   "action",
+   "light rings run out from the bulb"
+  ],
+  [
+   336.25,
+   "action",
+   "a ring of light grows out of his bulb and fills the picture"
+  ],
+  [
+   336.56,
+   "action",
+   "out of the flash"
+  ],
+  [
+   336.56,
+   "action",
+   "the rays turn"
+  ],
+  [
+   336.56,
+   "new place",
+   "the logo (Gizmo's main intro) INTRO 3: the logo"
+  ],
+  [
+   337.01,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   337.32,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   337.63,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   337.94,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   338.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   338.45,
+   "action",
+   "EXPLAINS slams in"
+  ],
+  [
+   339.06,
+   "action",
+   "confetti"
+  ],
+  [
+   339.06,
+   "action",
+   "the line draws on"
+  ],
+  [
+   339.37,
+   "action",
+   "Gizmo flies in beside the name"
+  ],
+  [
+   339.57,
+   "action",
+   "the things pop up along the floor"
+  ],
+  [
+   339.69,
+   "action",
+   "a shine runs along the letters"
+  ],
+  [
+   340.37,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   340.5,
+   "action",
+   "Gizmo waves"
+  ],
+  [
+   341.25,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   341.88,
+   "new shot",
+   "the logo (Gizmo's main intro) INTRO 4: Gizmo says the name"
+  ],
+  [
+   342.0,
+   "action",
+   "GIZMO lights up"
+  ],
+  [
+   342.5,
+   "action",
+   "EXPLAINS lights up"
+  ],
+  [
+   343.42,
+   "action",
+   "Gizmo lifts both arms"
+  ],
+  [
+   343.42,
+   "action",
+   "confetti"
+  ],
+  [
+   343.42,
+   "action",
+   "the antenna lights up"
+  ],
+  [
+   343.72,
+   "action",
+   "the letters do a wave"
   ]
  ],
  "shots": [
@@ -2388,11 +2830,82 @@
    "sung": false
   },
   {
-   "place": "glab",
-   "say": "Welcome to my lab, rocket fans!",
+   "place": "gz_intro",
+   "say": "",
    "t0": 12.1875,
    "t1": 15.3125,
-   "v0": 12.407166666666665,
+   "v0": 12.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 15.3125,
+   "t1": 18.4375,
+   "v0": 15.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 18.4375,
+   "t1": 23.75,
+   "v0": 18.75,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 23.75,
+   "t1": 26.5625,
+   "v0": 23.87,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "glab",
+   "say": "Welcome to my lab, rocket fans!",
+   "t0": 26.5625,
+   "t1": 29.6875,
+   "v0": 26.83166666666667,
    "dur": 2.433291666666667,
    "words": [
     [
@@ -2436,9 +2949,9 @@
   {
    "place": "gbench",
    "say": "Today we look inside a rocket, step by step.",
-   "t0": 15.3125,
-   "t1": 18.75,
-   "v0": 15.380458333333332,
+   "t0": 29.6875,
+   "t1": 33.125,
+   "v0": 29.80495833333334,
    "dur": 3.1260833333333333,
    "words": [
     [
@@ -2497,9 +3010,9 @@
   {
    "place": "gbench",
    "say": "Here is my model rocket. A pointy nose, and fins.",
-   "t0": 18.75,
-   "t1": 23.4375,
-   "v0": 19.046541666666666,
+   "t0": 33.125,
+   "t1": 37.8125,
+   "v0": 33.47104166666667,
    "dur": 3.9597083333333334,
    "words": [
     [
@@ -2563,9 +3076,9 @@
   {
    "place": "paper_gz",
    "say": "Inside, a rocket carries fuel. The engine uses the fuel.",
-   "t0": 23.4375,
-   "t1": 28.4375,
-   "v0": 23.546250000000004,
+   "t0": 37.8125,
+   "t1": 42.8125,
+   "v0": 37.97075,
    "dur": 4.477791666666667,
    "words": [
     [
@@ -2629,9 +3142,9 @@
   {
    "place": "paper_gz",
    "say": "What does the engine turn the fuel into? Hot gas, or ice cream?",
-   "t0": 28.4375,
-   "t1": 36.875,
-   "v0": 28.56404166666667,
+   "t0": 42.8125,
+   "t1": 51.25,
+   "v0": 42.98854166666667,
    "dur": 4.671833333333334,
    "words": [
     [
@@ -2710,9 +3223,9 @@
   {
    "place": "paper_gz",
    "say": "Hot gas! The engine turns its fuel into hot gas.",
-   "t0": 36.875,
-   "t1": 41.5625,
-   "v0": 36.97587500000001,
+   "t0": 51.25,
+   "t1": 55.9375,
+   "v0": 51.400375000000004,
    "dur": 4.104958333333333,
    "words": [
     [
@@ -2776,9 +3289,9 @@
   {
    "place": "paper_gz",
    "say": "Then it pushes the gas out of its back. Whoosh!",
-   "t0": 41.5625,
-   "t1": 45.0,
-   "v0": 41.620833333333344,
+   "t0": 55.9375,
+   "t1": 59.6875,
+   "v0": 56.04533333333334,
    "dur": 3.143666666666667,
    "words": [
     [
@@ -2842,9 +3355,9 @@
   {
    "place": "glab",
    "say": "Out the back? Hmm. What happens next?",
-   "t0": 45.0,
-   "t1": 48.75,
-   "v0": 45.30450000000001,
+   "t0": 59.6875,
+   "t1": 63.125,
+   "v0": 59.729000000000006,
    "dur": 2.3889583333333335,
    "words": [
     [
@@ -2893,9 +3406,9 @@
   {
    "place": "paper_gz",
    "say": "The gas goes down. Which way does the rocket go? Up, or down?",
-   "t0": 48.75,
-   "t1": 57.1875,
-   "v0": 48.83345833333335,
+   "t0": 63.125,
+   "t1": 71.5625,
+   "v0": 63.25795833333334,
    "dur": 4.888916666666667,
    "words": [
     [
@@ -2974,9 +3487,9 @@
   {
    "place": "paper_gz",
    "say": "Up! The gas goes down, so the rocket goes up!",
-   "t0": 57.1875,
-   "t1": 60.9375,
-   "v0": 57.462375000000016,
+   "t0": 71.5625,
+   "t1": 75.3125,
+   "v0": 71.88687500000002,
    "dur": 3.0570416666666667,
    "words": [
     [
@@ -3040,9 +3553,9 @@
   {
    "place": "gpad",
    "say": "Let's watch a real rocket, on its launch pad.",
-   "t0": 60.9375,
-   "t1": 64.375,
-   "v0": 61.059416666666685,
+   "t0": 75.3125,
+   "t1": 78.75,
+   "v0": 75.48391666666669,
    "dur": 3.074666666666667,
    "words": [
     [
@@ -3101,9 +3614,9 @@
   {
    "place": "gpad",
    "say": "The gas pushes the rocket the other way. Up it goes!",
-   "t0": 64.375,
-   "t1": 68.75,
-   "v0": 64.67408333333336,
+   "t0": 78.75,
+   "t1": 83.125,
+   "v0": 79.09858333333337,
    "dur": 3.7243333333333335,
    "words": [
     [
@@ -3172,9 +3685,9 @@
   {
    "place": "paper_gz",
    "say": "It is a push, and a push back. Push, and push back!",
-   "t0": 68.75,
-   "t1": 72.8125,
-   "v0": 68.9384166666667,
+   "t0": 83.125,
+   "t1": 87.1875,
+   "v0": 83.3629166666667,
    "dur": 3.48175,
    "words": [
     [
@@ -3248,9 +3761,9 @@
   {
    "place": "glab",
    "say": "Press your hands together, like this. Do they push back?",
-   "t0": 72.8125,
-   "t1": 77.8125,
-   "v0": 72.96016666666671,
+   "t0": 87.1875,
+   "t1": 92.5,
+   "v0": 87.38466666666672,
    "dur": 3.452625,
    "words": [
     [
@@ -3314,9 +3827,9 @@
   {
    "place": "paper_gz",
    "say": "Scientists say it simply. Every push has a push back!",
-   "t0": 77.8125,
-   "t1": 82.5,
-   "v0": 78.15279166666672,
+   "t0": 92.5,
+   "t1": 96.875,
+   "v0": 92.57729166666672,
    "dur": 3.9275,
    "words": [
     [
@@ -3380,9 +3893,9 @@
   {
    "place": "gbench",
    "say": "Say it with me. Gas goes down! Rocket goes up!",
-   "t0": 82.5,
-   "t1": 86.25,
-   "v0": 82.62029166666672,
+   "t0": 96.875,
+   "t1": 100.9375,
+   "v0": 97.04479166666673,
    "dur": 3.398,
    "words": [
     [
@@ -3446,9 +3959,9 @@
   {
    "place": "glab",
    "say": "Crouch down low, like a rocket. Ready? Blast off!",
-   "t0": 86.25,
-   "t1": 91.5625,
-   "v0": 86.55829166666672,
+   "t0": 100.9375,
+   "t1": 105.9375,
+   "v0": 100.98279166666673,
    "dur": 3.965708333333333,
    "words": [
     [
@@ -3507,9 +4020,9 @@
   {
    "place": "gpad",
    "say": "What comes out of a rocket's engine? Hot gas, or water?",
-   "t0": 91.5625,
-   "t1": 99.375,
-   "v0": 91.66400000000006,
+   "t0": 105.9375,
+   "t1": 113.75,
+   "v0": 106.08850000000007,
    "dur": 4.0175,
    "words": [
     [
@@ -3578,9 +4091,9 @@
   {
    "place": "paper_gz",
    "say": "Hot gas! Fuel, hot gas, and a big push. Up, up, up!",
-   "t0": 99.375,
-   "t1": 104.0625,
-   "v0": 99.42150000000007,
+   "t0": 113.75,
+   "t1": 118.75,
+   "v0": 113.84600000000007,
    "dur": 4.411125,
    "words": [
     [
@@ -3654,9 +4167,9 @@
   {
    "place": "gspace",
    "say": "Way up high, a rocket flies into space.",
-   "t0": 104.0625,
-   "t1": 107.8125,
-   "v0": 104.37262500000007,
+   "t0": 118.75,
+   "t1": 122.1875,
+   "v0": 118.79712500000008,
    "dur": 3.07125,
    "words": [
     [
@@ -3710,9 +4223,9 @@
   {
    "place": "gspace",
    "say": "But wait! In space, there is no air at all.",
-   "t0": 107.8125,
-   "t1": 111.25,
-   "v0": 107.98387500000008,
+   "t0": 122.1875,
+   "t1": 125.9375,
+   "v0": 122.40837500000009,
    "dur": 3.046291666666667,
    "words": [
     [
@@ -3776,9 +4289,9 @@
   {
    "place": "glab",
    "say": "No air? Then how can a rocket work up there? Hmm.",
-   "t0": 111.25,
-   "t1": 115.625,
-   "v0": 111.57016666666675,
+   "t0": 125.9375,
+   "t1": 130.0,
+   "v0": 125.99466666666676,
    "dur": 3.160083333333333,
    "words": [
     [
@@ -3847,9 +4360,9 @@
   {
    "place": "gwindow",
    "say": "Look, a jet plane! A jet needs air from outside to work.",
-   "t0": 115.625,
-   "t1": 120.625,
-   "v0": 115.87025000000008,
+   "t0": 130.0,
+   "t1": 135.0,
+   "v0": 130.29475000000008,
    "dur": 4.461208333333333,
    "words": [
     [
@@ -3923,9 +4436,9 @@
   {
    "place": "gwindow",
    "say": "Its engines take in air, as it flies along.",
-   "t0": 120.625,
-   "t1": 124.375,
-   "v0": 120.87145833333342,
+   "t0": 135.0,
+   "t1": 139.0625,
+   "v0": 135.2959583333334,
    "dur": 3.285833333333333,
    "words": [
     [
@@ -3984,9 +4497,9 @@
   {
    "place": "paper_gz",
    "say": "Can a rocket work in space, where there is no air? Yes, or no?",
-   "t0": 124.375,
-   "t1": 132.8125,
-   "v0": 124.69729166666676,
+   "t0": 139.0625,
+   "t1": 147.1875,
+   "v0": 139.12179166666672,
    "dur": 4.485125,
    "words": [
     [
@@ -4070,9 +4583,9 @@
   {
    "place": "gspace",
    "say": "Yes! A rocket engine does not need air.",
-   "t0": 132.8125,
-   "t1": 136.25,
-   "v0": 132.92241666666675,
+   "t0": 147.1875,
+   "t1": 150.625,
+   "v0": 147.34691666666671,
    "dur": 2.83825,
    "words": [
     [
@@ -4126,9 +4639,9 @@
   {
    "place": "paper_gz",
    "say": "It carries everything it needs, right inside the rocket!",
-   "t0": 136.25,
-   "t1": 140.625,
-   "v0": 136.30066666666673,
+   "t0": 150.625,
+   "t1": 155.0,
+   "v0": 150.7251666666667,
    "dur": 3.893625,
    "words": [
     [
@@ -4187,9 +4700,9 @@
   {
    "place": "glab",
    "say": "Like packing a backpack for a trip. All inside!",
-   "t0": 140.625,
-   "t1": 144.375,
-   "v0": 140.73429166666673,
+   "t0": 155.0,
+   "t1": 159.0625,
+   "v0": 155.1587916666667,
    "dur": 3.417125,
    "words": [
     [
@@ -4248,9 +4761,9 @@
   {
    "place": "paper_gz",
    "say": "Which one needs air from outside? The jet, or the rocket?",
-   "t0": 144.375,
-   "t1": 152.5,
-   "v0": 144.69141666666673,
+   "t0": 159.0625,
+   "t1": 166.875,
+   "v0": 159.1159166666667,
    "dur": 4.27325,
    "words": [
     [
@@ -4319,9 +4832,9 @@
   {
    "place": "paper_gz",
    "say": "The jet! A rocket brings what it needs along.",
-   "t0": 152.5,
-   "t1": 156.25,
-   "v0": 152.7046666666667,
+   "t0": 166.875,
+   "t1": 170.625,
+   "v0": 167.12916666666666,
    "dur": 3.0875,
    "words": [
     [
@@ -4380,9 +4893,9 @@
   {
    "place": "paper_gz",
    "say": "Air from outside? The jet needs it. The rocket does not!",
-   "t0": 156.25,
-   "t1": 160.625,
-   "v0": 156.3321666666667,
+   "t0": 170.625,
+   "t1": 175.0,
+   "v0": 170.75666666666666,
    "dur": 3.9727083333333333,
    "words": [
     [
@@ -4451,9 +4964,9 @@
   {
    "place": "gspace",
    "say": "So a rocket engine works in space, where there is no air.",
-   "t0": 160.625,
-   "t1": 165.3125,
-   "v0": 160.84487500000003,
+   "t0": 175.0,
+   "t1": 179.6875,
+   "v0": 175.269375,
    "dur": 4.097708333333333,
    "words": [
     [
@@ -4527,9 +5040,9 @@
   {
    "place": "gpad",
    "say": "Now let's watch one more launch, from far away.",
-   "t0": 165.3125,
-   "t1": 168.75,
-   "v0": 165.48258333333337,
+   "t0": 179.6875,
+   "t1": 183.4375,
+   "v0": 179.90708333333333,
    "dur": 3.059625,
    "words": [
     [
@@ -4588,9 +5101,9 @@
   {
    "place": "glab",
    "say": "Let's count down for a launch! Ready? Three, two, one...",
-   "t0": 168.75,
-   "t1": 173.125,
-   "v0": 169.08220833333337,
+   "t0": 183.4375,
+   "t1": 187.5,
+   "v0": 183.50670833333334,
    "dur": 3.755708333333333,
    "words": [
     [
@@ -4654,9 +5167,9 @@
   {
    "place": "gpad",
    "say": "Blast off! Up it goes, higher and higher!",
-   "t0": 173.125,
-   "t1": 176.5625,
-   "v0": 173.3779166666667,
+   "t0": 187.5,
+   "t1": 190.9375,
+   "v0": 187.80241666666666,
    "dur": 2.8,
    "words": [
     [
@@ -4710,9 +5223,9 @@
   {
    "place": "gsky",
    "say": "Up through the clouds, and out into space!",
-   "t0": 176.5625,
-   "t1": 179.6875,
-   "v0": 176.7179166666667,
+   "t0": 190.9375,
+   "t1": 194.0625,
+   "v0": 191.14241666666666,
    "dur": 2.5467916666666666,
    "words": [
     [
@@ -4766,9 +5279,9 @@
   {
    "place": "glab",
    "say": "Say it with me. A rocket does not need air!",
-   "t0": 179.6875,
-   "t1": 183.4375,
-   "v0": 179.80470833333337,
+   "t0": 194.0625,
+   "t1": 197.8125,
+   "v0": 194.22920833333333,
    "dur": 3.1333333333333333,
    "words": [
     [
@@ -4832,9 +5345,9 @@
   {
    "place": "gspace",
    "say": "Rockets carry satellites like this one up into space.",
-   "t0": 183.4375,
-   "t1": 187.5,
-   "v0": 183.47804166666668,
+   "t0": 197.8125,
+   "t1": 201.875,
+   "v0": 197.90254166666665,
    "dur": 3.5374166666666667,
    "words": [
     [
@@ -4893,9 +5406,9 @@
   {
    "place": "gspace",
    "say": "Can you point to the satellite? Point!",
-   "t0": 187.5,
-   "t1": 191.25,
-   "v0": 187.55545833333335,
+   "t0": 201.875,
+   "t1": 205.625,
+   "v0": 201.97995833333331,
    "dur": 2.269416666666667,
    "words": [
     [
@@ -4944,9 +5457,9 @@
   {
    "place": "gbench",
    "say": "Big rockets have a trick. They are built in parts.",
-   "t0": 191.25,
-   "t1": 195.0,
-   "v0": 191.364875,
+   "t0": 205.625,
+   "t1": 209.6875,
+   "v0": 205.78937499999998,
    "dur": 3.445666666666667,
    "words": [
     [
@@ -5010,9 +5523,9 @@
   {
    "place": "paper_gz",
    "say": "Let's count the parts. One, two, three!",
-   "t0": 195.0,
-   "t1": 198.4375,
-   "v0": 195.35054166666666,
+   "t0": 209.6875,
+   "t1": 212.8125,
+   "v0": 209.77504166666662,
    "dur": 2.664125,
    "words": [
     [
@@ -5061,9 +5574,9 @@
   {
    "place": "paper_gz",
    "say": "A heavy rocket needs a big push, to get off the ground.",
-   "t0": 198.4375,
-   "t1": 202.8125,
-   "v0": 198.55466666666666,
+   "t0": 212.8125,
+   "t1": 217.1875,
+   "v0": 212.97916666666663,
    "dur": 3.7842083333333334,
    "words": [
     [
@@ -5137,9 +5650,9 @@
   {
    "place": "gsky",
    "say": "When the bottom part runs out of fuel, it drops away.",
-   "t0": 202.8125,
-   "t1": 206.875,
-   "v0": 202.878875,
+   "t0": 217.1875,
+   "t1": 221.5625,
+   "v0": 217.30337499999996,
    "dur": 3.7707083333333333,
    "words": [
     [
@@ -5208,9 +5721,9 @@
   {
    "place": "gsky",
    "say": "Bye-bye, bottom part! Now the next part starts its engine.",
-   "t0": 206.875,
-   "t1": 211.875,
-   "v0": 207.18958333333333,
+   "t0": 221.5625,
+   "t1": 226.25,
+   "v0": 221.6140833333333,
    "dur": 4.324916666666667,
    "words": [
     [
@@ -5274,9 +5787,9 @@
   {
    "place": "glab",
    "say": "Is it easier to run with a heavy bag, or with no bag?",
-   "t0": 211.875,
-   "t1": 219.375,
-   "v0": 212.0545,
+   "t0": 226.25,
+   "t1": 233.75,
+   "v0": 226.47899999999996,
    "dur": 3.8324583333333333,
    "words": [
     [
@@ -5355,9 +5868,9 @@
   {
    "place": "paper_gz",
    "say": "Is the rocket lighter now, or heavier?",
-   "t0": 219.375,
-   "t1": 225.625,
-   "v0": 219.6269583333333,
+   "t0": 233.75,
+   "t1": 240.0,
+   "v0": 234.05145833333327,
    "dur": 2.4379166666666667,
    "words": [
     [
@@ -5406,9 +5919,9 @@
   {
    "place": "paper_gz",
    "say": "Lighter! A lighter rocket can go much higher.",
-   "t0": 225.625,
-   "t1": 229.0625,
-   "v0": 225.80487499999995,
+   "t0": 240.0,
+   "t1": 243.4375,
+   "v0": 240.22937499999992,
    "dur": 2.8655833333333334,
    "words": [
     [
@@ -5462,9 +5975,9 @@
   {
    "place": "gsky",
    "say": "Up, and up, and up it goes!",
-   "t0": 229.0625,
-   "t1": 231.25,
-   "v0": 229.21045833333326,
+   "t0": 243.4375,
+   "t1": 245.625,
+   "v0": 243.63495833333323,
    "dur": 1.80025,
    "words": [
     [
@@ -5513,9 +6026,9 @@
   {
    "place": "glab",
    "say": "Stack your fists, one on top of the other, like rocket parts!",
-   "t0": 231.25,
-   "t1": 237.5,
-   "v0": 231.55070833333326,
+   "t0": 245.625,
+   "t1": 251.875,
+   "v0": 245.97520833333323,
    "dur": 4.286458333333333,
    "words": [
     [
@@ -5589,9 +6102,9 @@
   {
    "place": "gspace",
    "say": "This trick is called staging. It helps rockets reach space.",
-   "t0": 237.5,
-   "t1": 242.1875,
-   "v0": 237.57716666666659,
+   "t0": 251.875,
+   "t1": 256.5625,
+   "v0": 252.00166666666655,
    "dur": 4.179875,
    "words": [
     [
@@ -5655,9 +6168,9 @@
   {
    "place": "gspace",
    "say": "And even all the way to the Moon! Wow!",
-   "t0": 242.1875,
-   "t1": 245.3125,
-   "v0": 242.2970416666666,
+   "t0": 256.5625,
+   "t1": 259.6875,
+   "v0": 256.72154166666655,
    "dur": 2.757416666666667,
    "words": [
     [
@@ -5716,9 +6229,9 @@
   {
    "place": "paper_gz",
    "say": "What does a big rocket drop as it flies? An empty part, or its nose?",
-   "t0": 245.3125,
-   "t1": 254.375,
-   "v0": 245.59445833333325,
+   "t0": 259.6875,
+   "t1": 268.75,
+   "v0": 260.0189583333332,
    "dur": 5.286083333333333,
    "words": [
     [
@@ -5807,9 +6320,9 @@
   {
    "place": "gsky",
    "say": "An empty part! Drop it, and go higher.",
-   "t0": 254.375,
-   "t1": 257.8125,
-   "v0": 254.62054166666655,
+   "t0": 268.75,
+   "t1": 272.1875,
+   "v0": 269.0450416666666,
    "dur": 2.8897083333333335,
    "words": [
     [
@@ -5863,9 +6376,9 @@
   {
    "place": "gspace",
    "say": "Look how high we are! There is the Earth, way down below.",
-   "t0": 257.8125,
-   "t1": 262.1875,
-   "v0": 258.0502499999999,
+   "t0": 272.1875,
+   "t1": 276.875,
+   "v0": 272.4747499999999,
    "dur": 3.9349583333333333,
    "words": [
     [
@@ -5939,9 +6452,9 @@
   {
    "place": "glab",
    "say": "Say it together. Drop a part, go higher!",
-   "t0": 262.1875,
-   "t1": 265.625,
-   "v0": 262.52520833333324,
+   "t0": 276.875,
+   "t1": 280.0,
+   "v0": 276.94970833333326,
    "dur": 2.821,
    "words": [
     [
@@ -5995,9 +6508,9 @@
   {
    "place": "gpad",
    "say": "And some rockets take astronauts into space!",
-   "t0": 265.625,
-   "t1": 269.0625,
-   "v0": 265.8862083333333,
+   "t0": 280.0,
+   "t1": 283.4375,
+   "v0": 280.3107083333333,
    "dur": 2.9347916666666665,
    "words": [
     [
@@ -6046,9 +6559,9 @@
   {
    "place": "glab",
    "say": "Wave to the rocket! Bye-bye, rocket! Have a good trip!",
-   "t0": 269.0625,
-   "t1": 274.375,
-   "v0": 269.361,
+   "t0": 283.4375,
+   "t1": 288.75,
+   "v0": 283.7855,
    "dur": 3.7237916666666666,
    "words": [
     [
@@ -6112,9 +6625,9 @@
   {
    "place": "glab",
    "say": "Quiz time! Let's remember what we learned.",
-   "t0": 274.375,
-   "t1": 277.5,
-   "v0": 274.6247916666667,
+   "t0": 288.75,
+   "t1": 291.875,
+   "v0": 289.0492916666667,
    "dur": 2.547125,
    "words": [
     [
@@ -6163,9 +6676,9 @@
   {
    "place": "gbench",
    "say": "What comes out of a rocket's engine? Hot gas, or bubbles?",
-   "t0": 277.5,
-   "t1": 285.3125,
-   "v0": 277.7119166666667,
+   "t0": 291.875,
+   "t1": 300.0,
+   "v0": 292.1364166666667,
    "dur": 4.172,
    "words": [
     [
@@ -6234,9 +6747,9 @@
   {
    "place": "paper_gz",
    "say": "Hot gas! The gas goes down, and the rocket goes up.",
-   "t0": 285.3125,
-   "t1": 290.0,
-   "v0": 285.62391666666673,
+   "t0": 300.0,
+   "t1": 304.375,
+   "v0": 300.04841666666675,
    "dur": 3.913708333333333,
    "words": [
     [
@@ -6305,9 +6818,9 @@
   {
    "place": "gspace",
    "say": "Does a rocket engine need air? Yes, or no?",
-   "t0": 290.0,
-   "t1": 296.875,
-   "v0": 290.07762500000007,
+   "t0": 304.375,
+   "t1": 311.5625,
+   "v0": 304.5021250000001,
    "dur": 3.38575,
    "words": [
     [
@@ -6366,9 +6879,9 @@
   {
    "place": "gspace",
    "say": "No! It carries everything it needs.",
-   "t0": 296.875,
-   "t1": 300.0,
-   "v0": 297.20337500000005,
+   "t0": 311.5625,
+   "t1": 314.375,
+   "v0": 311.6278750000001,
    "dur": 2.37475,
    "words": [
     [
@@ -6412,9 +6925,9 @@
   {
    "place": "gsky",
    "say": "When the bottom part drops away, is the rocket lighter, or heavier?",
-   "t0": 300.0,
-   "t1": 308.125,
-   "v0": 300.1181250000001,
+   "t0": 314.375,
+   "t1": 322.5,
+   "v0": 314.5426250000001,
    "dur": 4.395041666666667,
    "words": [
     [
@@ -6488,9 +7001,9 @@
   {
    "place": "gsky",
    "say": "Lighter! So it can go much higher.",
-   "t0": 308.125,
-   "t1": 310.625,
-   "v0": 308.25316666666674,
+   "t0": 322.5,
+   "t1": 325.0,
+   "v0": 322.67766666666677,
    "dur": 2.082125,
    "words": [
     [
@@ -6539,9 +7052,9 @@
   {
    "place": "gpad",
    "say": "Gas goes down, rocket goes up! Thanks for exploring with me!",
-   "t0": 310.625,
-   "t1": 315.77545833333346,
-   "v0": 310.8752916666668,
+   "t0": 325.0,
+   "t1": 330.3125,
+   "v0": 325.2997916666668,
    "dur": 4.480166666666666,
    "words": [
     [
@@ -6603,6 +7116,77 @@
    "part": 4,
    "q": false,
    "tag": "goodbye",
+   "who": "gizmo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 330.3125,
+   "t1": 333.4375,
+   "v0": 330.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the idea",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_intro",
+   "say": "",
+   "t0": 333.4375,
+   "t1": 336.5625,
+   "v0": 333.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the things he explains",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "",
+   "t0": 336.5625,
+   "t1": 341.875,
+   "v0": 336.875,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "gizmo",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "gz_logo",
+   "say": "Gizmo Explains!",
+   "t0": 341.875,
+   "t1": 344.8366666666667,
+   "v0": 341.995,
+   "dur": 1.4216666666666666,
+   "words": [
+    [
+     "Gizmo",
+     0.01,
+     0.51
+    ],
+    [
+     "Explains!",
+     0.51,
+     1.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Gizmo says the name",
    "who": "gizmo",
    "beat": "",
    "sung": false

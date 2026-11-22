@@ -67,7 +67,7 @@
   "file": "cartoon/gc_ep01_short1.mp4",
   "channel": "gizmo",
   "title": "What Is Inside a Seed?",
-  "status": "to_upload",
+  "status": "published",
   "format": "cartoon_short_90",
   "res": "2160x3840",
   "watermark": "tl",
@@ -87,7 +87,9 @@
   "thumb_text": "BABY PLANT!",
   "seconds": 87.3,
   "date": "2026-11-22",
-  "time": "8:10 AM"
+  "time": "8:10 AM",
+  "video_id": "wsTaWrtl3Yk",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "file": "gizmo/gzx_ep01.mp4",

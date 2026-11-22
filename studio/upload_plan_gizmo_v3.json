@@ -326,7 +326,7 @@
   "format": "cartoon_short_90",
   "file": "cartoon/gc_ep01_short2.mp4",
   "title": "What Does a Seed Need to Grow? Gizmo Explains",
-  "status": "to_upload",
+  "status": "published",
   "note": "Short 2 of gc_ep01 (upload_guard shorts_missing), built by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM). Format not approved yet: finishes as hold_review.; taken over Nov 22 1:40 AM by session_014CFVfUmeUNgUPieXvi1pVN (no commit on them since Nov 21 12:27 PM, no file in cartoon/): stills, render, checks; finished Nov 22 by session_014CFVfUmeUNgUPieXvi1pVN (9:16 fixes, render, checks; run note docs/gizmo/runs/gc_ep02.md)",
   "description": "What does a seed need to wake up and grow? Gizmo the robot finds out with a seed in the soil: water, air and just the right warmth. Most seeds start growing in the dark, under the ground, and the root comes out first. A gentle science Short for ages 4-8 from the full video How Does a Seed Grow Into a Plant?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nScience News Explores (how a seed grows into a plant); Australian Academy of Science, Curious (how plants germinate); Britannica (germination); United States Botanic Garden (flower to seed).",
   "tags": [
@@ -342,7 +342,9 @@
   "seconds": 87.8,
   "date": "2026-11-23",
   "time": "12:10 PM",
-  "topic": "How Does a Seed Grow Into a Plant?"
+  "topic": "How Does a Seed Grow Into a Plant?",
+  "video_id": "Q1BrbYdqCno",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "channel": "gizmo",

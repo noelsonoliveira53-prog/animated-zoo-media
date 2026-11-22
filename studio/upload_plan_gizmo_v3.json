@@ -355,7 +355,7 @@
   "format": "cartoon_short_90",
   "file": "cartoon/gc_ep01_short3.mp4",
   "title": "How Does a Plant Make Its Own Food? Gizmo Explains",
-  "status": "to_upload",
+  "status": "published",
   "note": "Short 3 of gc_ep01 (upload_guard shorts_missing), built by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM). Format not approved yet: finishes as hold_review.; taken over Nov 22 1:40 AM by session_014CFVfUmeUNgUPieXvi1pVN (no commit on them since Nov 21 12:27 PM, no file in cartoon/): stills, render, checks; finished Nov 22 by session_014CFVfUmeUNgUPieXvi1pVN (9:16 fixes, render, checks; run note docs/gizmo/runs/gc_ep02.md)",
   "description": "How does a plant eat with no mouth? Gizmo the robot watches a little plant: its leaves are like a little kitchen that makes food from sunlight, air and water, and the roots take in water from the soil. Then a flower opens: flowers help plants make new seeds. A gentle science Short for ages 4-8 from the full video How Does a Seed Grow Into a Plant?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nScience News Explores (how a seed grows into a plant); Australian Academy of Science, Curious (how plants germinate); Britannica (germination); United States Botanic Garden (flower to seed).",
   "tags": [
@@ -371,7 +371,9 @@
   "seconds": 87.6,
   "date": "2026-11-24",
   "time": "12:10 PM",
-  "topic": "How Does a Seed Grow Into a Plant?"
+  "topic": "How Does a Seed Grow Into a Plant?",
+  "video_id": "7Am_BSB96HM",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "file": "cartoon/gc_ep02.mp4",

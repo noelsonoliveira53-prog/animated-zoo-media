@@ -453,7 +453,7 @@
   "file": "cartoon/gc_ep02_short2.mp4",
   "title": "Can a Rocket Fly in Space? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "to_upload",
+  "status": "published",
   "date": "2026-11-24",
   "time": "8:10 AM",
   "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
@@ -471,7 +471,9 @@
   ],
   "thumb": "brand/gizmo/thumb_gc_ep02_short2.jpg",
   "thumb_text": "NO AIR!",
-  "seconds": 91.0
+  "seconds": 91.0,
+  "video_id": "5JR51xkB9JQ",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "channel": "gizmo",

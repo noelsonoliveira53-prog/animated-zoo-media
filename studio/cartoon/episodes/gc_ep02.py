@@ -31,13 +31,13 @@ import art, art2, kit
 import art_gizmo as G
 import art_gc_ep02 as A
 from kit import Kit, S, prop, W
+from intro_gizmo import GZ_INTRO_STAGES, gz_intro_shots      # Gizmo's main intro (owner, Nov 21 2026 12:18 PM: "amazing emplement on every new video")
 from episodes.gc_ep01 import WAVE, IDEA, ARMS, UP, DOWN, WIDEARMS, CURL, HOP, PULSE, OFF, ON
 
 BOILER = ("Gizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. "
           "Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.")
 SRC = "WHERE THE FACTS COME FROM\nNASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry."
-EP = {"id": "gc_ep02", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo",
-      "intro": False,      # Gizmo's own intro waits for Noelson's yes (docs/GIZMO_RUN.md); never the Zoo's intro
+EP = {"id": "gc_ep02", "nest": True, "beat": True, "voice": "am_michael", "speed": 0.85, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0, "wm": "brand/gizmo",      # Gizmo's OWN main intro since Nov 21 2026 (intro_gizmo.py): after the hook and as the last four shots
       "cast": {"gizmo": {"voice": "am_michael", "speed": 0.85}},
       "title": "How Do Rockets Fly? Gizmo Explains", "thumb_text": "BLAST OFF!", "series": "Gizmo Explains",
       "description": ("How do rockets fly with no wings? Gizmo the robot opens up his model rocket, watches a launch, flies up through the clouds and out into space "
@@ -54,7 +54,7 @@ STAGES = {"glab": [("gizmo", "gizmo", GX, GY, GS)],
           "gwindow": [("gizmo", "gizmo", 560, 900, .66)],
           "gpad": [("gizmo", "gizmo", 400, 960, .56)],      # watching from the grass, far from the pad
           "gsky": [("gizmo", "gizmo", 300, 760, .5)],       # never in the picture (hidden in every gsky shot)
-          "gspace": [("gizmo", "gizmo", 300, 760, .5)]}     # never in the picture (hidden in every gspace shot)
+          "gspace": [("gizmo", "gizmo", 300, 760, .5)], **GZ_INTRO_STAGES}     # gspace: Gizmo never in the picture (hidden in every gspace shot)
 K = Kit(STAGES); P, C, V, WV = K.P, K.C, K.V, K.WV
 WIDE = (960, 540, 1920)
 GQ = lambda place: WV(place, ["gizmo"], floor=.70, top=.46)
@@ -95,6 +95,8 @@ SHOTS = [
       words=[("w:Whoosh,", "WHOOSH!", .76, .3, 1.1, "sun", (.5, .4), .95)]),
     S("glab", (GX, 640, 1000), "Hi! I'm Gizmo. Let's find out how rockets fly!", tag="hook: Gizmo", pcam=GP("glab"), fx=[WAVE("w:Hi!"), HOP("w:find")],
       words=[("w:Gizmo.", "GIZMO", .78, .3, 1.1, "pill", (.5, .36), .9)]),
+    # ---------------------------------------------------------------- MAIN INTRO (right after the hook; again as the last four shots)
+    *gz_intro_shots(),
     S("glab", WIDE, "Welcome to my lab, rocket fans!", trans="iris", tag="lab wide", cam2=W(WIDE, 1.0), pcam=(GX + 60, 640, 1500), fx=[WAVE("w:Welcome", 4)],
       words=[("w:lab,", "HELLO!", .74, .5, 1.2, "pill", (.5, .36), 1.0)]),
     S("gbench", BEN, "Today we look inside a rocket, step by step.", tag="bench wide", pcam=BENP, props=[rk_bench()],
@@ -260,6 +262,7 @@ SHOTS = [
     S("gpad", PAD, "Gas goes down, rocket goes up! Thanks for exploring with me!", part=4, tag="goodbye", pcam=GP("gpad"), cam2=W(PAD, 1.0), props=[rk_pad()],
       fx=GAS("w:Gas", "#{p}rk-g3") + [LIFT("w:up!", "#{p}rk_w", -700, 2.6), WAVE("w:Thanks", 5), HOP("w:exploring")],
       words=[("w:Thanks", "BYE-BYE!", .3, .2, 1.1, "pill", (.5, .36), .9)]),
+    *gz_intro_shots(),      # the main intro again, as the last four shots
 ]
 for _s in SHOTS:
     _s["who"] = "gizmo"        # Gizmo speaks every line, so his mouth moves (gc_ep01 kept the default who="milo": no mouth, found Nov 21)

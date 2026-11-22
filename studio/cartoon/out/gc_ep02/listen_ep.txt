@@ -1,0 +1,23 @@
+  sung or hummed: INTRO 1: the idea  12.5-15.0 s: G5 E5 G4 C5 G2 E5 G5 C5 C6 G3 C5
+  sung or hummed: INTRO 2: the things he explains  15.62-18.12 s: A3 F2(+18c) F5 C5 F2 A3 C3(+15c) F5 A5 C6 F2(+17c) C3
+  sung or hummed: INTRO 3: the logo  18.75-23.75 s: B5 G2 G5 D5 D2 G5 G2(+16c) D3(+19c) D6 G2 G5 C6 C3 C6 C3 G4 E4 C4 C6 G2 G2(-15c)
+  sung or hummed: INTRO 1: the idea  330.62-333.12 s: 
+  sung or hummed: INTRO 2: the things he explains  333.75-336.25 s: 
+  sung or hummed: INTRO 3: the logo  336.88-341.88 s: 
+  judged: everything (no speaking voice in the file)
+346.34 s   key heard: {'key': 'C major', 'fit': 0.98}   expected: C   held tones judged: 995   voice-like tones left out: 0
+  CLASH               7.42 s  E4 + F2 together for 0.3 s
+  CLASH               7.77 s  F2 + E4 together for 0.26 s
+  CLASH              47.40 s  E4 + F2 together for 0.56 s
+  CLASH             187.39 s  E4 + F2 together for 0.34 s
+  CLASH             197.42 s  E4 + F2 together for 0.3 s
+  CLASH             237.40 s  E4 + F2 together for 0.6 s
+  CLASH             267.39 s  E4 + F2 together for 0.35 s
+  CLASH             287.40 s  E4 + F2 together for 0.56 s
+  CLASH             297.39 s  E4 + F2 together for 0.59 s
+  CLASH             307.41 s  E4 + F4 together for 0.3 s
+  beat: {'heard_bpm': np.float64(94.9), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.78, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.989)}
+  clicks at: []  silences: []
+  level: {'lufs': -24.2, 'range_lu': 19.7, 'true_peak_db': -4.3, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-15.0)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.82, 'share_below_120hz': 0.09, 'share_above_4khz': 0.01}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/gc_ep02_music_stem_listen.png

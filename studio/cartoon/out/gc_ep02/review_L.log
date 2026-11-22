@@ -1,0 +1,5 @@
+contact sheet: /home/claude/animated-zoo-media/studio/zoo3d/finished/review_gc_ep02.png (look at it before uploading, next to docs/quality_baseline/*.png: it must be at least that good)
+PASS cartoon/gc_ep02.mp4
+  check: no song/lesson spec found to check the words
+  check: no --job given: scene plan and variety were not checked
+EXIT 0

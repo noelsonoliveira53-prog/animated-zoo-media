@@ -340,9 +340,9 @@
  {
   "file": "cartoon/gc_ep02.mp4",
   "channel": "gizmo",
-  "title": "How Do Rockets Fly?",
+  "title": "How Do Rockets Fly? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -350,7 +350,26 @@
   "category": 27,
   "date": "2026-11-22",
   "time": "2:10 PM",
-  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks"
+  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
+  "description": "How do rockets fly with no wings? Gizmo the robot opens up his model rocket, watches a launch, flies up through the clouds and out into space to find out. A gentle science lesson for ages 4-8 with questions to answer, things to try and a quiz at the end.\nKids learn that a rocket engine turns its fuel into hot gas and pushes it out the back, that the gas pushes the rocket the other way (gas down, rocket up), that a rocket engine does not need air because it carries everything it needs, so it works in space, and that big rockets drop their empty parts (stages) to go much higher, all the way to space and even the Moon.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry.",
+  "tags": [
+   "how do rockets fly",
+   "rockets for kids",
+   "how rockets work",
+   "rocket science for kids",
+   "space for kids",
+   "science for kids",
+   "rocket stages",
+   "Gizmo Explains",
+   "Gizmo the robot",
+   "preschool science",
+   "kindergarten science",
+   "STEM for kids"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep02.jpg",
+  "thumb_text": "BLAST OFF!",
+  "bookends": true,
+  "seconds": 345.9
  },
  {
   "channel": "gizmo",
@@ -360,12 +379,27 @@
   "category": 27,
   "format": "cartoon_short_90",
   "file": "cartoon/gc_ep02_short1.mp4",
-  "title": "How Do Rockets Fly? (Short 1)",
+  "title": "What Pushes a Rocket Up? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "in_production",
+  "status": "to_upload",
   "date": "2026-11-23",
   "time": "8:10 AM",
-  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks"
+  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
+  "description": "What pushes a rocket up into the sky? Gizmo the robot looks inside his model rocket and watches a real launch: the engine turns its fuel into hot gas and pushes the gas out of its back, and the gas pushes the rocket the other way. Gas goes down, rocket goes up! A gentle science Short for ages 4-8 from the full video How Do Rockets Fly?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry.",
+  "tags": [
+   "how do rockets fly",
+   "rockets for kids",
+   "how rockets work",
+   "rocket science for kids",
+   "space for kids",
+   "science for kids",
+   "rocket stages",
+   "Gizmo Explains",
+   "shorts"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep02_short1.jpg",
+  "thumb_text": "WHOOSH!",
+  "seconds": 89.2
  },
  {
   "channel": "gizmo",
@@ -375,12 +409,27 @@
   "category": 27,
   "format": "cartoon_short_90",
   "file": "cartoon/gc_ep02_short2.mp4",
-  "title": "How Do Rockets Fly? (Short 2)",
+  "title": "Can a Rocket Fly in Space? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "in_production",
+  "status": "to_upload",
   "date": "2026-11-24",
   "time": "8:10 AM",
-  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks"
+  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
+  "description": "Can a rocket fly in space, where there is no air? Gizmo the robot finds out: a jet plane needs air from outside to work, but a rocket engine does not need air. It carries everything it needs, so it works in space. A gentle science Short for ages 4-8 from the full video How Do Rockets Fly?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry.",
+  "tags": [
+   "how do rockets fly",
+   "rockets for kids",
+   "how rockets work",
+   "rocket science for kids",
+   "space for kids",
+   "science for kids",
+   "rocket stages",
+   "Gizmo Explains",
+   "shorts"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep02_short2.jpg",
+  "thumb_text": "NO AIR!",
+  "seconds": 91.0
  },
  {
   "channel": "gizmo",
@@ -390,11 +439,26 @@
   "category": 27,
   "format": "cartoon_short_90",
   "file": "cartoon/gc_ep02_short3.mp4",
-  "title": "How Do Rockets Fly? (Short 3)",
+  "title": "Why Do Big Rockets Drop Parts? Gizmo Explains",
   "topic": "How Do Rockets Fly?",
-  "status": "in_production",
+  "status": "to_upload",
   "date": "2026-11-25",
   "time": "8:10 AM",
-  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks"
+  "note": "claimed by session_014CFVfX9xTrYXRL7oziQw2A (Gizmo daily run Nov 21, 12:15 PM); taken over by session_014CFVfUmeUNgUPieXvi1pVN (Gizmo daily run Nov 21, 9:45 PM ET; no gc_ep02 commit since 1:02 PM): Gizmo main intro added, render, checks; finished Nov 21-22 by session_014CFVfUmeUNgUPieXvi1pVN with Gizmo's main intro at both ends of the explainer (run note docs/gizmo/runs/gc_ep02.md)",
+  "description": "Why do big rockets drop parts as they fly? Gizmo the robot counts the parts of a rocket and watches the empty bottom part drop away: a lighter rocket can go much higher, to space and even the Moon. This trick is called staging. A gentle science Short for ages 4-8 from the full video How Do Rockets Fly?\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNASA, What Is a Rocket? (Grades K-4 and Grades 5-8); NASA Glenn Research Center, Practical Rocketry.",
+  "tags": [
+   "how do rockets fly",
+   "rockets for kids",
+   "how rockets work",
+   "rocket science for kids",
+   "space for kids",
+   "science for kids",
+   "rocket stages",
+   "Gizmo Explains",
+   "shorts"
+  ],
+  "thumb": "brand/gizmo/thumb_gc_ep02_short3.jpg",
+  "thumb_text": "BYE-BYE!",
+  "seconds": 87.4
  }
 ]

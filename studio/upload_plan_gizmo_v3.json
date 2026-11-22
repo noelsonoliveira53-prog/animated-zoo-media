@@ -31,7 +31,7 @@
   "file": "cartoon/gc_ep01.mp4",
   "channel": "gizmo",
   "title": "How Does a Seed Grow Into a Plant?",
-  "status": "to_upload",
+  "status": "published",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -59,7 +59,9 @@
   "topic": "How Does a Seed Grow Into a Plant?",
   "date": "2026-11-21",
   "time": "6:10 PM",
-  "bookends": true
+  "bookends": true,
+  "video_id": "qoW0puhWm4o",
+  "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
  },
  {
   "file": "cartoon/gc_ep01_short1.mp4",

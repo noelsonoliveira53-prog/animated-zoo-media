@@ -3496,11 +3496,32 @@
   "date": "2026-11-22",
   "time": "3:30 PM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 21 3:16 PM ET by the scheduled afternoon adventure build (session_014CFVfXscEKDwdXMj83y6My), which pushed the episode, plan check and stills at 3:37 PM and nothing after. Taken over Nov 21 7:35 PM ET by the evening adventure build (session_014CFVfXscEKDwdXMj83y6My is silent for 4 h; this session: session_014CFVfYkcaUYhCEdWzrCGV7) to render and finish it.",
-  "theme_title": "A New House for Little Crab"
+  "note": "Claimed Nov 21 3:16 PM ET by the scheduled afternoon adventure build (session_014CFVfXscEKDwdXMj83y6My), which wrote the episode, read the facts (Seattle Aquarium, Britannica, Discover Wildlife, Nov 21 about 3:30 PM) and looked at stills, and pushed nothing after 3:37 PM. Finished Nov 21 by the evening adventure build (session_014CFVfYkcaUYhCEdWzrCGV7): stills of every shot and mid-motion stills looked at again, rendered in 4K, AV1 4K 339.7 s (309.7 s own content + the main intro at the beginning and at the end), 77 MB; pace (0 stretches over 8 s), watermark and corner sheet, bookends, frames of the finished render looked at (middle and end of every shot, every answer reveal 1.1 s and 0.3 s before the cut, the rhyme and tune shots), listen.py (measures, does not hear), thumbnail looked at, review.py. New friend Little Crab and his voice: nobody has heard it. Run note docs/cartoon/runs/za_ep13.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it.",
+  "theme_title": "A New House for Little Crab",
+  "thumb": "brand/zoo/thumb_za_ep13.jpg",
+  "description": "Can Little Crab find a shell that fits? He has grown, and his old shell is much too small. One shell is huge, one is too heavy, and one already has a snail inside! With his friend Tula the sea turtle, Little Crab keeps trying until one fits just right. A gentle ocean adventure for ages 2-6 about trying again and knowing what you need, with questions to answer, a count-along and a little tune.\nKids see how hermit crabs live in empty snail shells, how a growing hermit crab must find a bigger shell and move in, and how the soft back part of a hermit crab's body fits inside the shell.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSeattle Aquarium (hermit crab); Encyclopaedia Britannica (hermit crab); Discover Wildlife (hermit crabs).",
+  "tags": [
+   "hermit crab for kids",
+   "hermit crab",
+   "why do hermit crabs change shells",
+   "ocean animals for kids",
+   "under the sea",
+   "sea turtle",
+   "crab story for kids",
+   "animal stories for kids",
+   "friendship story for kids",
+   "kids adventure cartoon",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb_text": "TOO SMALL!",
+  "seconds": 339.7,
+  "bookends": true
  }
 ]

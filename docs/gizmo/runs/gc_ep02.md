@@ -60,3 +60,11 @@ intro at both ends, two rounds of fixes, a 4K render and every check. The explai
   looked at, listen.py (no click, no silence, -16 LUFS, true peak -1.4 dB; pictures looked at; measured, not heard), review.py PASS and contact sheets looked at,
   upload_guard OK TO UPLOAD. Open (logged in docs/IMPROVE.md): Short 3's life-cycle board's lowest circle partly under the caption at ~63 s; Short 3's thumbnail leaf tip
   touches the right edge.
+
+## Published (Nov 22, ~10:15-10:45 AM ET, Noelson live: "publish all videos you produced on gizmo explains channels right the way")
+After Noelson signed the built-in browser back in, all eight were uploaded to Gizmo Explains (drawer name and channel id UCJaMYOrKCEA54kaOMyYNiKQ read
+before each file; zlive-style check of both content lists first: none of the titles was on the channel) and made PUBLIC at once (his explicit ask, instead of
+scheduling; Studio's "We're still checking your content" box was answered "Publish anyway"). Made for kids, custom thumbnail, plan description.
+gc_ep01 qoW0puhWm4o, gc_ep01_short1 wsTaWrtl3Yk, gc_ep01_short2 Q1BrbYdqCno, gc_ep01_short3 7Am_BSB96HM, gc_ep02 4D8HlxP6yZk,
+gc_ep02_short1 YWG7DUL2lA0, gc_ep02_short2 5JR51xkB9JQ, gc_ep02_short3 wYYw4uopAoo. Afterwards the Videos and Shorts lists show each once, "Public".
+Studio switched back to The Animated Zoo (drawer read). Not checked: the copyright/ad-suitability checks Studio was still running when they were published.

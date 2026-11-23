@@ -1,0 +1,8498 @@
+{
+ "id": "za_ep14",
+ "total": 376.6071666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5,
+  353.125,
+  353.75,
+  354.375,
+  355.0,
+  355.625,
+  356.25,
+  356.875,
+  357.5,
+  358.125,
+  358.75,
+  359.375,
+  360.0,
+  360.625,
+  361.25,
+  361.875,
+  362.5,
+  363.125,
+  363.75,
+  364.375,
+  365.0,
+  365.625,
+  366.25,
+  366.875,
+  367.5,
+  368.125,
+  368.75,
+  369.375,
+  370.0,
+  370.625,
+  371.25,
+  371.875,
+  372.5,
+  373.125,
+  373.75,
+  374.375,
+  375.0,
+  375.625,
+  376.25
+ ],
+ "plan": {
+  "length": 376.6,
+  "shots": 67,
+  "visual_changes": 627,
+  "mean_gap": 0.6,
+  "longest_gap": 4.28,
+  "longest_gap_at": 305.9,
+  "over_6s": [],
+  "places": [
+   "hilltop_lights",
+   "intro_gate",
+   "intro_logo",
+   "arctic_eve",
+   "arctic_night",
+   "snow_night",
+   "hilltop_night",
+   "nest_night",
+   "nest_lights"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 16,
+  "longest_without_question": 41.9,
+  "first_words_at": 0.42,
+  "shot_mean": 5.62,
+  "main_intro": {
+   "at": [
+    7.8,
+    360.6
+   ],
+   "seconds": 30.4
+  },
+  "beats": {
+   "hook": 1,
+   "song": 8,
+   "goal": 7,
+   "fact": 6,
+   "obstacle1": 7,
+   "obstacle2": 6,
+   "obstacle3": 5,
+   "low": 4,
+   "solution": 13,
+   "ending": 8
+  },
+  "fails": [],
+  "words_placed": "725/725",
+  "sync": {
+   "pauses_checked": 49,
+   "onset_err_mean_ms": 29.6,
+   "onset_err_max_ms": 350.0,
+   "suspect_words": [],
+   "cuts": 66,
+   "cuts_on_the_half_beat": 66,
+   "songs_entering_on_a_beat": "8/8",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   0.0,
+   "new place",
+   "the hilltop under the northern lights hook: the lights and a sleepy Poppy"
+  ],
+  [
+   0.02,
+   "action",
+   "poppy looks"
+  ],
+  [
+   0.02,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   2.03,
+   "word",
+   "DANCING SKY!"
+  ],
+  [
+   3.59,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   5.74,
+   "action",
+   "Poppy yawns"
+  ],
+  [
+   6.54,
+   "action",
+   "blink"
+  ],
+  [
+   6.54,
+   "word",
+   "SO SLEEPY!"
+  ],
+  [
+   7.24,
+   "action",
+   "blink"
+  ],
+  [
+   7.81,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   7.81,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   7.81,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   7.81,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   7.86,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   8.61,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   10.94,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   11.13,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   11.41,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   11.44,
+   "action",
+   "mango pops up"
+  ],
+  [
+   11.76,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   11.88,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   12.07,
+   "action",
+   "tula pops up"
+  ],
+  [
+   12.38,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   12.5,
+   "action",
+   "sandy nods"
+  ],
+  [
+   12.5,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   12.69,
+   "action",
+   "clover pops up"
+  ],
+  [
+   12.81,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   12.81,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.01,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   13.28,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   13.75,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   14.06,
+   "action",
+   "out of the flash"
+  ],
+  [
+   14.06,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   14.06,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   14.25,
+   "action",
+   "the badge pops"
+  ],
+  [
+   14.82,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.98,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.29,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.45,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.6,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.91,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.95,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   15.95,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   15.95,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   16.25,
+   "action",
+   "a firework"
+  ],
+  [
+   16.25,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   16.41,
+   "action",
+   "a firework"
+  ],
+  [
+   16.56,
+   "action",
+   "confetti"
+  ],
+  [
+   16.56,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   16.66,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   16.87,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   16.99,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   17.19,
+   "action",
+   "a firework"
+  ],
+  [
+   17.38,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   17.69,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   17.81,
+   "action",
+   "a firework"
+  ],
+  [
+   18.0,
+   "action",
+   "mango pops up"
+  ],
+  [
+   18.0,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   18.32,
+   "action",
+   "clover pops up"
+  ],
+  [
+   18.32,
+   "action",
+   "tula pops up"
+  ],
+  [
+   18.44,
+   "action",
+   "a firework"
+  ],
+  [
+   18.63,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   18.75,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   18.91,
+   "action",
+   "a firework"
+  ],
+  [
+   19.38,
+   "action",
+   "a firework"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   19.5,
+   "action",
+   "T word lights up"
+  ],
+  [
+   19.52,
+   "action",
+   "a firework"
+  ],
+  [
+   19.68,
+   "action",
+   "A word lights up"
+  ],
+  [
+   20.39,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   20.88,
+   "action",
+   "Milo flips"
+  ],
+  [
+   20.88,
+   "action",
+   "a firework"
+  ],
+  [
+   20.88,
+   "action",
+   "confetti"
+  ],
+  [
+   20.88,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   20.88,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   20.88,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   21.0,
+   "action",
+   "a firework"
+  ],
+  [
+   21.18,
+   "action",
+   "a firework"
+  ],
+  [
+   21.18,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   21.3,
+   "action",
+   "a firework"
+  ],
+  [
+   22.19,
+   "new place",
+   "the Arctic shore in the evening arctic at sunset: Milo, Tumble, Poppy"
+  ],
+  [
+   22.41,
+   "action",
+   "milo hops"
+  ],
+  [
+   24.58,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   26.16,
+   "action",
+   "poppy nods"
+  ],
+  [
+   26.16,
+   "word",
+   "POPPY"
+  ],
+  [
+   28.81,
+   "word",
+   "FAR UP NORTH"
+  ],
+  [
+   31.25,
+   "new shot",
+   "the Arctic shore in the evening Poppy: the sky will dance"
+  ],
+  [
+   31.27,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   31.81,
+   "action",
+   "poppy looks"
+  ],
+  [
+   33.13,
+   "action",
+   "poppy nods"
+  ],
+  [
+   33.13,
+   "word",
+   "GREEN LIGHTS!"
+  ],
+  [
+   34.21,
+   "action",
+   "poppy looks"
+  ],
+  [
+   35.0,
+   "new shot",
+   "the Arctic shore in the evening Tumble: I want to see it"
+  ],
+  [
+   35.02,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   36.27,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   36.27,
+   "word",
+   "WOW!"
+  ],
+  [
+   36.69,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   37.26,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   38.12,
+   "new shot",
+   "the Arctic shore in the evening Poppy: I always fall asleep first"
+  ],
+  [
+   38.15,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   39.1,
+   "action",
+   "poppy nods"
+  ],
+  [
+   40.44,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   40.44,
+   "word",
+   "ASLEEP FIRST!"
+  ],
+  [
+   40.83,
+   "action",
+   "blink"
+  ],
+  [
+   41.88,
+   "new shot",
+   "the Arctic shore in the evening question: Poppy or Tumble"
+  ],
+  [
+   41.9,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   42.27,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   42.48,
+   "action",
+   "blink"
+  ],
+  [
+   43.18,
+   "action",
+   "blink"
+  ],
+  [
+   43.88,
+   "action",
+   "blink"
+  ],
+  [
+   44.2,
+   "sign",
+   "POPPY"
+  ],
+  [
+   44.55,
+   "sign",
+   "TUMBLE"
+  ],
+  [
+   46.16,
+   "thinking dot",
+   "1"
+  ],
+  [
+   46.76,
+   "thinking dot",
+   "2"
+  ],
+  [
+   47.37,
+   "thinking dot",
+   "3"
+  ],
+  [
+   47.82,
+   "answer",
+   "POPPY"
+  ],
+  [
+   49.38,
+   "new place",
+   "the picture board fact: northern lights near the North Pole"
+  ],
+  [
+   49.4,
+   "action",
+   "poppy looks"
+  ],
+  [
+   49.4,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   49.52,
+   "action",
+   "the green ring glows"
+  ],
+  [
+   49.52,
+   "word",
+   "NORTHERN LIGHTS"
+  ],
+  [
+   51.69,
+   "action",
+   "the arrow points at the North Pole"
+  ],
+  [
+   52.04,
+   "word",
+   "NORTH POLE"
+  ],
+  [
+   52.82,
+   "action",
+   "poppy nods"
+  ],
+  [
+   54.38,
+   "new shot",
+   "the picture board question: North Pole or jungle"
+  ],
+  [
+   54.77,
+   "action",
+   "the green ring glows"
+  ],
+  [
+   57.73,
+   "sign",
+   "NORTH POLE"
+  ],
+  [
+   58.08,
+   "sign",
+   "JUNGLE"
+  ],
+  [
+   60.25,
+   "thinking dot",
+   "1"
+  ],
+  [
+   60.85,
+   "thinking dot",
+   "2"
+  ],
+  [
+   61.46,
+   "thinking dot",
+   "3"
+  ],
+  [
+   61.91,
+   "answer",
+   "NORTH POLE"
+  ],
+  [
+   63.44,
+   "new place",
+   "the Arctic shore in the evening sunset: they wait and watch"
+  ],
+  [
+   63.59,
+   "action",
+   "poppy looks"
+  ],
+  [
+   65.03,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   66.36,
+   "action",
+   "milo flies"
+  ],
+  [
+   68.65,
+   "word",
+   "WAIT AND WATCH"
+  ],
+  [
+   69.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.31,
+   "new shot",
+   "the Arctic shore in the evening Milo: let's stay awake together"
+  ],
+  [
+   70.33,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   70.94,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.94,
+   "word",
+   "STAY AWAKE!"
+  ],
+  [
+   73.28,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.75,
+   "new place",
+   "the Arctic shore at night night on the shore: no lights yet"
+  ],
+  [
+   74.05,
+   "action",
+   "poppy looks"
+  ],
+  [
+   75.44,
+   "action",
+   "milo flies"
+  ],
+  [
+   75.44,
+   "word",
+   "STARS!"
+  ],
+  [
+   76.83,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   78.3,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   78.3,
+   "word",
+   "NO LIGHTS YET"
+  ],
+  [
+   80.31,
+   "new shot",
+   "the Arctic shore at night Poppy: I will count the stars"
+  ],
+  [
+   80.33,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   80.77,
+   "action",
+   "poppy nods"
+  ],
+  [
+   81.3,
+   "word",
+   "COUNT THE STARS"
+  ],
+  [
+   81.65,
+   "action",
+   "poppy looks"
+  ],
+  [
+   83.04,
+   "action",
+   "poppy nods"
+  ],
+  [
+   84.06,
+   "new shot",
+   "the Arctic shore at night count five stars"
+  ],
+  [
+   84.08,
+   "action",
+   "poppy looks"
+  ],
+  [
+   84.08,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   84.16,
+   "word",
+   "COUNT!"
+  ],
+  [
+   86.18,
+   "action",
+   "a star twinkles"
+  ],
+  [
+   86.18,
+   "count",
+   "1"
+  ],
+  [
+   86.49,
+   "action",
+   "a star twinkles"
+  ],
+  [
+   86.49,
+   "count",
+   "2"
+  ],
+  [
+   86.79,
+   "count",
+   "3"
+  ],
+  [
+   86.8,
+   "action",
+   "a star twinkles"
+  ],
+  [
+   87.04,
+   "action",
+   "a star twinkles"
+  ],
+  [
+   87.1,
+   "count",
+   "4"
+  ],
+  [
+   87.4,
+   "action",
+   "a star twinkles"
+  ],
+  [
+   87.4,
+   "count",
+   "5"
+  ],
+  [
+   89.38,
+   "new shot",
+   "the Arctic shore at night Poppy falls asleep counting"
+  ],
+  [
+   89.39,
+   "action",
+   "poppy looks"
+  ],
+  [
+   89.39,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   91.92,
+   "action",
+   "Poppy yawns"
+  ],
+  [
+   92.49,
+   "action",
+   "blink"
+  ],
+  [
+   92.49,
+   "word",
+   "HEAVY EYES"
+  ],
+  [
+   93.19,
+   "action",
+   "blink"
+  ],
+  [
+   94.22,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   95.12,
+   "action",
+   "Z's float up"
+  ],
+  [
+   95.12,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   95.12,
+   "action",
+   "the Z's float"
+  ],
+  [
+   95.12,
+   "word",
+   "ASLEEP!"
+  ],
+  [
+   95.34,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   95.94,
+   "new shot",
+   "the Arctic shore at night question: awake or asleep"
+  ],
+  [
+   96.04,
+   "action",
+   "the Z's float"
+  ],
+  [
+   96.24,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   96.34,
+   "action",
+   "tumble looks"
+  ],
+  [
+   96.94,
+   "sign",
+   "AWAKE"
+  ],
+  [
+   97.29,
+   "sign",
+   "ASLEEP"
+  ],
+  [
+   98.75,
+   "thinking dot",
+   "1"
+  ],
+  [
+   99.35,
+   "thinking dot",
+   "2"
+  ],
+  [
+   99.96,
+   "thinking dot",
+   "3"
+  ],
+  [
+   100.41,
+   "answer",
+   "ASLEEP"
+  ],
+  [
+   101.27,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   101.88,
+   "new shot",
+   "the Arctic shore at night Tumble wakes her gently"
+  ],
+  [
+   101.89,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   101.97,
+   "action",
+   "the Z's float"
+  ],
+  [
+   102.17,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   102.4,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   102.4,
+   "word",
+   "WAKE UP!"
+  ],
+  [
+   102.65,
+   "action",
+   "Poppy opens her eyes"
+  ],
+  [
+   103.52,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   105.31,
+   "new shot",
+   "the Arctic shore at night Poppy: counting is too sleepy"
+  ],
+  [
+   105.33,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   106.46,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   107.74,
+   "action",
+   "poppy nods"
+  ],
+  [
+   107.74,
+   "word",
+   "TOO SLEEPY!"
+  ],
+  [
+   109.06,
+   "new place",
+   "the snow at the bottom of the hill at night the snow at night: a bouncy dance"
+  ],
+  [
+   110.41,
+   "action",
+   "poppy hops"
+  ],
+  [
+   111.55,
+   "action",
+   "poppy hops"
+  ],
+  [
+   111.55,
+   "word",
+   "A BOUNCY DANCE!"
+  ],
+  [
+   112.12,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   112.7,
+   "action",
+   "milo hops"
+  ],
+  [
+   113.75,
+   "new shot",
+   "the snow at the bottom of the hill at night copy me: hop"
+  ],
+  [
+   113.77,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   114.21,
+   "action",
+   "milo hops"
+  ],
+  [
+   114.21,
+   "action",
+   "poppy hops"
+  ],
+  [
+   114.21,
+   "word",
+   "HOP, HOP, HOP!"
+  ],
+  [
+   115.71,
+   "action",
+   "tumble hops"
+  ],
+  [
+   117.63,
+   "action",
+   "poppy hops"
+  ],
+  [
+   117.63,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   118.63,
+   "action",
+   "tumble hops"
+  ],
+  [
+   120.31,
+   "new shot",
+   "the snow at the bottom of the hill at night Poppy is tired and falls asleep"
+  ],
+  [
+   120.43,
+   "action",
+   "poppy hops"
+  ],
+  [
+   123.93,
+   "action",
+   "Poppy yawns"
+  ],
+  [
+   123.93,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   123.93,
+   "word",
+   "TIRED!"
+  ],
+  [
+   125.21,
+   "action",
+   "Poppy lies down"
+  ],
+  [
+   125.21,
+   "action",
+   "poppy2 looks sleepy"
+  ],
+  [
+   126.36,
+   "action",
+   "poppy2 blinks slowly"
+  ],
+  [
+   127.26,
+   "action",
+   "Z's float up"
+  ],
+  [
+   127.26,
+   "action",
+   "poppy2 falls asleep"
+  ],
+  [
+   127.26,
+   "action",
+   "the Z's float"
+  ],
+  [
+   127.26,
+   "word",
+   "ASLEEP AGAIN!"
+  ],
+  [
+   127.53,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   128.12,
+   "new shot",
+   "the snow at the bottom of the hill at night question: did the dance keep her awake"
+  ],
+  [
+   128.22,
+   "action",
+   "the Z's float"
+  ],
+  [
+   128.43,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   131.12,
+   "sign",
+   "YES"
+  ],
+  [
+   131.47,
+   "sign",
+   "NO"
+  ],
+  [
+   132.65,
+   "thinking dot",
+   "1"
+  ],
+  [
+   133.25,
+   "thinking dot",
+   "2"
+  ],
+  [
+   133.86,
+   "thinking dot",
+   "3"
+  ],
+  [
+   134.31,
+   "answer",
+   "NO"
+  ],
+  [
+   135.03,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   135.62,
+   "new shot",
+   "the snow at the bottom of the hill at night Milo wakes her gently"
+  ],
+  [
+   135.72,
+   "action",
+   "the Z's float"
+  ],
+  [
+   135.93,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   136.38,
+   "action",
+   "milo flies"
+  ],
+  [
+   137.57,
+   "action",
+   "milo hops"
+  ],
+  [
+   137.57,
+   "word",
+   "TAP, TAP!"
+  ],
+  [
+   139.67,
+   "action",
+   "Poppy opens her eyes"
+  ],
+  [
+   139.67,
+   "word",
+   "WAKE UP!"
+  ],
+  [
+   140.2,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   141.56,
+   "new shot",
+   "the snow at the bottom of the hill at night Poppy: dancing made me tired"
+  ],
+  [
+   141.58,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   142.16,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   144.18,
+   "action",
+   "poppy nods"
+  ],
+  [
+   144.18,
+   "word",
+   "AGAIN!"
+  ],
+  [
+   145.0,
+   "new place",
+   "the top of the snowy hill at night the hilltop at night: a walk"
+  ],
+  [
+   145.1,
+   "action",
+   "poppy walks"
+  ],
+  [
+   145.3,
+   "action",
+   "tumble walks"
+  ],
+  [
+   145.6,
+   "action",
+   "milo flies"
+  ],
+  [
+   147.51,
+   "word",
+   "UP THE HILL"
+  ],
+  [
+   148.68,
+   "action",
+   "poppy looks"
+  ],
+  [
+   150.31,
+   "new shot",
+   "the top of the snowy hill at night Poppy: a walk will keep me awake"
+  ],
+  [
+   150.33,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   150.6,
+   "action",
+   "poppy nods"
+  ],
+  [
+   151.83,
+   "action",
+   "poppy nods"
+  ],
+  [
+   151.83,
+   "action",
+   "poppy nods"
+  ],
+  [
+   151.83,
+   "word",
+   "STEP, STEP!"
+  ],
+  [
+   153.44,
+   "new shot",
+   "the top of the snowy hill at night at the top Poppy falls asleep"
+  ],
+  [
+   153.64,
+   "action",
+   "poppy walks"
+  ],
+  [
+   154.26,
+   "word",
+   "SO LONG!"
+  ],
+  [
+   155.64,
+   "action",
+   "Poppy yawns"
+  ],
+  [
+   155.64,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   157.77,
+   "action",
+   "Poppy lies down"
+  ],
+  [
+   157.77,
+   "action",
+   "poppy2 looks sleepy"
+  ],
+  [
+   158.2,
+   "action",
+   "poppy2 blinks slowly"
+  ],
+  [
+   159.1,
+   "action",
+   "Z's float up"
+  ],
+  [
+   159.1,
+   "action",
+   "poppy2 falls asleep"
+  ],
+  [
+   159.1,
+   "action",
+   "the Z's float"
+  ],
+  [
+   159.1,
+   "word",
+   "ASLEEP!"
+  ],
+  [
+   159.4,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   160.0,
+   "new shot",
+   "the top of the snowy hill at night question: sleep or fly"
+  ],
+  [
+   160.1,
+   "action",
+   "the Z's float"
+  ],
+  [
+   160.3,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   162.68,
+   "sign",
+   "SLEEP"
+  ],
+  [
+   163.03,
+   "sign",
+   "FLY"
+  ],
+  [
+   164.6,
+   "thinking dot",
+   "1"
+  ],
+  [
+   165.21,
+   "thinking dot",
+   "2"
+  ],
+  [
+   165.82,
+   "thinking dot",
+   "3"
+  ],
+  [
+   166.27,
+   "answer",
+   "SLEEP"
+  ],
+  [
+   167.21,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   167.81,
+   "new shot",
+   "the top of the snowy hill at night Tumble wakes her again"
+  ],
+  [
+   167.83,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   167.89,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   167.91,
+   "action",
+   "the Z's float"
+  ],
+  [
+   168.11,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   168.29,
+   "action",
+   "Poppy opens her eyes"
+  ],
+  [
+   169.02,
+   "word",
+   "NO LIGHTS YET"
+  ],
+  [
+   170.31,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   171.25,
+   "new shot",
+   "the top of the snowy hill at night Poppy looks at the dark sky, a little sad"
+  ],
+  [
+   171.27,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   171.85,
+   "action",
+   "poppy looks"
+  ],
+  [
+   172.94,
+   "word",
+   "DARK AND QUIET"
+  ],
+  [
+   175.32,
+   "action",
+   "poppy looks"
+  ],
+  [
+   175.32,
+   "action",
+   "tumble looks sad"
+  ],
+  [
+   175.32,
+   "word",
+   "A LITTLE SAD"
+  ],
+  [
+   176.25,
+   "new shot",
+   "the top of the snowy hill at night Poppy: maybe I will never see it"
+  ],
+  [
+   176.27,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   178.22,
+   "action",
+   "poppy looks"
+  ],
+  [
+   178.73,
+   "action",
+   "poppy nods"
+  ],
+  [
+   178.73,
+   "word",
+   "NEVER?"
+  ],
+  [
+   180.62,
+   "new shot",
+   "the top of the snowy hill at night Tumble: we are right here"
+  ],
+  [
+   180.65,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   181.07,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   182.25,
+   "action",
+   "milo flies"
+  ],
+  [
+   182.25,
+   "word",
+   "RIGHT HERE"
+  ],
+  [
+   182.49,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   183.44,
+   "new shot",
+   "the top of the snowy hill at night question: sad or happy"
+  ],
+  [
+   183.46,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   183.84,
+   "action",
+   "poppy looks"
+  ],
+  [
+   185.49,
+   "sign",
+   "SAD"
+  ],
+  [
+   185.84,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   187.2,
+   "thinking dot",
+   "1"
+  ],
+  [
+   187.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   188.41,
+   "thinking dot",
+   "3"
+  ],
+  [
+   188.87,
+   "answer",
+   "SAD"
+  ],
+  [
+   190.31,
+   "new shot",
+   "the top of the snowy hill at night Poppy has an idea"
+  ],
+  [
+   190.33,
+   "action",
+   "poppy looks sad"
+  ],
+  [
+   191.3,
+   "action",
+   "poppy looks"
+  ],
+  [
+   193.86,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   193.86,
+   "picture",
+   "tb"
+  ],
+  [
+   193.86,
+   "word",
+   "AN IDEA!"
+  ],
+  [
+   194.54,
+   "action",
+   "milo hops"
+  ],
+  [
+   195.0,
+   "new shot",
+   "the top of the snowy hill at night Poppy: we can take turns"
+  ],
+  [
+   195.02,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   195.56,
+   "action",
+   "poppy nods"
+  ],
+  [
+   195.56,
+   "word",
+   "TAKE TURNS!"
+  ],
+  [
+   197.05,
+   "action",
+   "poppy looks"
+  ],
+  [
+   198.68,
+   "action",
+   "poppy looks"
+  ],
+  [
+   198.68,
+   "word",
+   "WAKE ME UP"
+  ],
+  [
+   199.03,
+   "action",
+   "poppy nods"
+  ],
+  [
+   199.69,
+   "new shot",
+   "the top of the snowy hill at night Tumble: I will watch first"
+  ],
+  [
+   199.71,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   199.88,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   200.97,
+   "word",
+   "TUMBLE FIRST"
+  ],
+  [
+   201.63,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   201.63,
+   "word",
+   "THEN MILO"
+  ],
+  [
+   203.83,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   204.69,
+   "new shot",
+   "the top of the snowy hill at night question: take turns or go home"
+  ],
+  [
+   204.71,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   205.09,
+   "action",
+   "milo hops"
+  ],
+  [
+   206.77,
+   "sign",
+   "TAKE TURNS"
+  ],
+  [
+   207.12,
+   "sign",
+   "GO HOME"
+  ],
+  [
+   208.9,
+   "thinking dot",
+   "1"
+  ],
+  [
+   209.5,
+   "thinking dot",
+   "2"
+  ],
+  [
+   210.11,
+   "thinking dot",
+   "3"
+  ],
+  [
+   210.56,
+   "answer",
+   "TAKE TURNS"
+  ],
+  [
+   211.88,
+   "new place",
+   "the snow nest on the hill at night the snow nest: Poppy sleeps, Tumble watches"
+  ],
+  [
+   211.9,
+   "action",
+   "poppy looks sleepy"
+  ],
+  [
+   212.87,
+   "action",
+   "Poppy yawns"
+  ],
+  [
+   213.68,
+   "word",
+   "A COZY NEST"
+  ],
+  [
+   214.58,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   215.48,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   216.73,
+   "action",
+   "Z's float up"
+  ],
+  [
+   216.73,
+   "action",
+   "the Z's float"
+  ],
+  [
+   217.79,
+   "action",
+   "tumble looks"
+  ],
+  [
+   217.79,
+   "word",
+   "TUMBLE WATCHES"
+  ],
+  [
+   218.44,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   219.38,
+   "new place",
+   "the picture board (blue) fact: best seen at night, clouds hide them"
+  ],
+  [
+   219.47,
+   "action",
+   "the little lights ripple"
+  ],
+  [
+   221.22,
+   "picture",
+   "sc"
+  ],
+  [
+   221.22,
+   "word",
+   "AT NIGHT"
+  ],
+  [
+   222.76,
+   "action",
+   "the day picture goes"
+  ],
+  [
+   224.09,
+   "action",
+   "a cloud slides over the lights"
+  ],
+  [
+   224.09,
+   "picture",
+   "cc"
+  ],
+  [
+   224.09,
+   "word",
+   "CLOUDS HIDE THEM"
+  ],
+  [
+   225.94,
+   "new shot",
+   "the picture board (blue) question: day or night"
+  ],
+  [
+   226.34,
+   "action",
+   "the little lights ripple"
+  ],
+  [
+   228.62,
+   "sign",
+   "DAY"
+  ],
+  [
+   228.97,
+   "sign",
+   "NIGHT"
+  ],
+  [
+   230.41,
+   "thinking dot",
+   "1"
+  ],
+  [
+   231.01,
+   "thinking dot",
+   "2"
+  ],
+  [
+   231.62,
+   "thinking dot",
+   "3"
+  ],
+  [
+   232.07,
+   "answer",
+   "NIGHT"
+  ],
+  [
+   232.84,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   233.44,
+   "new place",
+   "the snow nest on the hill at night Tumble's turn, then Milo's"
+  ],
+  [
+   233.54,
+   "action",
+   "the Z's float"
+  ],
+  [
+   233.74,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   233.74,
+   "action",
+   "tumble looks"
+  ],
+  [
+   236.84,
+   "action",
+   "milo flies"
+  ],
+  [
+   236.84,
+   "word",
+   "MILO'S TURN"
+  ],
+  [
+   237.5,
+   "action",
+   "tumble looks sleepy"
+  ],
+  [
+   240.03,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   240.15,
+   "action",
+   "milo hops"
+  ],
+  [
+   240.62,
+   "new shot",
+   "the snow nest on the hill at night the lights come"
+  ],
+  [
+   240.72,
+   "action",
+   "the Z's float"
+  ],
+  [
+   240.93,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   241.17,
+   "action",
+   "the green lights appear"
+  ],
+  [
+   241.17,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   241.51,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   241.51,
+   "word",
+   "GREEN LIGHTS!"
+  ],
+  [
+   243.93,
+   "action",
+   "milo hops"
+  ],
+  [
+   243.93,
+   "action",
+   "tumble looks wow"
+  ],
+  [
+   244.09,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   244.69,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   244.69,
+   "new place",
+   "the snow nest under the northern lights question: lights or rainbow"
+  ],
+  [
+   244.71,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   244.79,
+   "action",
+   "the Z's float"
+  ],
+  [
+   244.99,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   246.58,
+   "sign",
+   "GREEN LIGHTS"
+  ],
+  [
+   246.93,
+   "sign",
+   "RAINBOW"
+  ],
+  [
+   248.79,
+   "thinking dot",
+   "1"
+  ],
+  [
+   249.4,
+   "thinking dot",
+   "2"
+  ],
+  [
+   250.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   250.46,
+   "answer",
+   "GREEN LIGHTS"
+  ],
+  [
+   251.28,
+   "action",
+   "poppy blinks slowly"
+  ],
+  [
+   251.88,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   251.88,
+   "new shot",
+   "the snow nest under the northern lights Milo wakes Poppy gently"
+  ],
+  [
+   251.97,
+   "action",
+   "the Z's float"
+  ],
+  [
+   252.07,
+   "action",
+   "milo flies"
+  ],
+  [
+   252.18,
+   "action",
+   "poppy falls asleep"
+  ],
+  [
+   252.54,
+   "word",
+   "WAKE UP!"
+  ],
+  [
+   253.51,
+   "action",
+   "Poppy opens her eyes"
+  ],
+  [
+   253.51,
+   "action",
+   "milo hops"
+  ],
+  [
+   255.41,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   256.56,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   256.56,
+   "new shot",
+   "the snow nest under the northern lights Poppy: the dancing sky!"
+  ],
+  [
+   256.58,
+   "action",
+   "poppy looks wow"
+  ],
+  [
+   256.86,
+   "action",
+   "poppy looks"
+  ],
+  [
+   258.29,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   258.29,
+   "word",
+   "SO BEAUTIFUL!"
+  ],
+  [
+   259.38,
+   "new place",
+   "the picture board (pink) fact: mostly green, they ripple like a curtain"
+  ],
+  [
+   259.48,
+   "action",
+   "the little lights ripple"
+  ],
+  [
+   260.79,
+   "action",
+   "the green dot pulses"
+  ],
+  [
+   260.79,
+   "word",
+   "GREEN!"
+  ],
+  [
+   264.41,
+   "action",
+   "the lights ripple"
+  ],
+  [
+   264.41,
+   "word",
+   "RIPPLE AND MOVE"
+  ],
+  [
+   268.44,
+   "new shot",
+   "the picture board (pink) question: green or orange"
+  ],
+  [
+   268.74,
+   "action",
+   "the little lights ripple"
+  ],
+  [
+   270.89,
+   "sign",
+   "GREEN"
+  ],
+  [
+   271.24,
+   "sign",
+   "ORANGE"
+  ],
+  [
+   272.9,
+   "thinking dot",
+   "1"
+  ],
+  [
+   273.5,
+   "thinking dot",
+   "2"
+  ],
+  [
+   274.11,
+   "thinking dot",
+   "3"
+  ],
+  [
+   274.56,
+   "answer",
+   "GREEN"
+  ],
+  [
+   275.94,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   275.94,
+   "new place",
+   "the snow nest under the northern lights copy me: sway"
+  ],
+  [
+   275.96,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   276.49,
+   "action",
+   "Poppy sways"
+  ],
+  [
+   276.49,
+   "action",
+   "milo hops"
+  ],
+  [
+   276.49,
+   "word",
+   "SWAY, SWAY!"
+  ],
+  [
+   278.6,
+   "action",
+   "Tumble sways"
+  ],
+  [
+   280.67,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   283.12,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   283.12,
+   "new shot",
+   "the snow nest under the northern lights the dancing sky rhyme"
+  ],
+  [
+   283.14,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   283.5,
+   "action",
+   "poppy nods"
+  ],
+  [
+   283.5,
+   "word",
+   "GREEN LIGHTS DANCING"
+  ],
+  [
+   285.58,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   285.58,
+   "word",
+   "TAKE TURNS!"
+  ],
+  [
+   286.24,
+   "action",
+   "milo hops"
+  ],
+  [
+   287.12,
+   "action",
+   "poppy nods"
+  ],
+  [
+   288.12,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   288.12,
+   "new shot",
+   "the snow nest under the northern lights song: the dancing sky"
+  ],
+  [
+   288.14,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   288.14,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   288.25,
+   "action",
+   "Poppy sways to the beat"
+  ],
+  [
+   288.25,
+   "word",
+   "GREEN LIGHTS DANCING"
+  ],
+  [
+   289.5,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   290.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   292.0,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   293.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   293.25,
+   "word",
+   "WATCH THE SKY!"
+  ],
+  [
+   294.5,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   295.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   298.75,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   298.75,
+   "new shot",
+   "the snow nest under the northern lights question: did she see it yes or no"
+  ],
+  [
+   298.77,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   299.15,
+   "action",
+   "milo hops"
+  ],
+  [
+   301.21,
+   "sign",
+   "YES"
+  ],
+  [
+   301.56,
+   "sign",
+   "NO"
+  ],
+  [
+   302.7,
+   "thinking dot",
+   "1"
+  ],
+  [
+   303.31,
+   "thinking dot",
+   "2"
+  ],
+  [
+   303.91,
+   "thinking dot",
+   "3"
+  ],
+  [
+   304.37,
+   "answer",
+   "YES"
+  ],
+  [
+   305.62,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   305.62,
+   "new place",
+   "the hilltop under the northern lights the three friends watch together"
+  ],
+  [
+   305.64,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   305.64,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   305.93,
+   "action",
+   "poppy looks"
+  ],
+  [
+   310.21,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   311.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   311.03,
+   "word",
+   "TOGETHER!"
+  ],
+  [
+   313.44,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   313.44,
+   "new shot",
+   "the hilltop under the northern lights Poppy: thank you"
+  ],
+  [
+   313.46,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   313.61,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   314.03,
+   "action",
+   "poppy nods"
+  ],
+  [
+   314.84,
+   "action",
+   "poppy nods"
+  ],
+  [
+   316.88,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   316.88,
+   "new shot",
+   "the hilltop under the northern lights Tumble: the best idea"
+  ],
+  [
+   316.89,
+   "action",
+   "tumble looks happy"
+  ],
+  [
+   317.68,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   319.35,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   319.35,
+   "word",
+   "TAKING TURNS!"
+  ],
+  [
+   320.31,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   320.31,
+   "new shot",
+   "the hilltop under the northern lights the lesson"
+  ],
+  [
+   321.34,
+   "action",
+   "milo hops"
+  ],
+  [
+   323.99,
+   "action",
+   "milo hops"
+  ],
+  [
+   323.99,
+   "word",
+   "TAKE TURNS!"
+  ],
+  [
+   324.89,
+   "action",
+   "milo hops"
+  ],
+  [
+   325.62,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   325.62,
+   "new shot",
+   "the hilltop under the northern lights question: North Pole or beach"
+  ],
+  [
+   326.09,
+   "action",
+   "milo hops"
+  ],
+  [
+   329.79,
+   "sign",
+   "NORTH POLE"
+  ],
+  [
+   330.14,
+   "sign",
+   "BEACH"
+  ],
+  [
+   332.14,
+   "thinking dot",
+   "1"
+  ],
+  [
+   332.75,
+   "thinking dot",
+   "2"
+  ],
+  [
+   333.36,
+   "thinking dot",
+   "3"
+  ],
+  [
+   333.81,
+   "answer",
+   "NORTH POLE"
+  ],
+  [
+   335.31,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   335.31,
+   "new shot",
+   "the hilltop under the northern lights question: sunny day or dark night"
+  ],
+  [
+   336.02,
+   "action",
+   "poppy nods"
+  ],
+  [
+   337.41,
+   "sign",
+   "SUNNY DAY"
+  ],
+  [
+   337.76,
+   "sign",
+   "DARK NIGHT"
+  ],
+  [
+   339.94,
+   "thinking dot",
+   "1"
+  ],
+  [
+   340.54,
+   "thinking dot",
+   "2"
+  ],
+  [
+   341.15,
+   "thinking dot",
+   "3"
+  ],
+  [
+   341.6,
+   "answer",
+   "DARK NIGHT"
+  ],
+  [
+   343.12,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   343.12,
+   "new shot",
+   "the hilltop under the northern lights the closing rhyme"
+  ],
+  [
+   343.21,
+   "action",
+   "milo hops"
+  ],
+  [
+   343.21,
+   "word",
+   "GREEN LIGHTS DANCING"
+  ],
+  [
+   346.05,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   346.05,
+   "word",
+   "TAKE TURNS!"
+  ],
+  [
+   347.97,
+   "action",
+   "poppy nods"
+  ],
+  [
+   349.06,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   349.06,
+   "new place",
+   "the snow nest under the northern lights song: hooray"
+  ],
+  [
+   349.08,
+   "action",
+   "poppy looks happy"
+  ],
+  [
+   350.06,
+   "action",
+   "milo hops"
+  ],
+  [
+   350.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   351.06,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   351.26,
+   "action",
+   "poppy nods"
+  ],
+  [
+   354.38,
+   "action",
+   "the green lights dance"
+  ],
+  [
+   354.38,
+   "new shot",
+   "the snow nest under the northern lights goodbye: next adventure"
+  ],
+  [
+   354.5,
+   "action",
+   "milo hops"
+  ],
+  [
+   354.5,
+   "word",
+   "NEXT TIME!"
+  ],
+  [
+   357.92,
+   "word",
+   "SEE YOU SOON!"
+  ],
+  [
+   360.62,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   360.62,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   360.62,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   360.62,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   360.68,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   361.43,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   364.06,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   364.25,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   364.53,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   364.57,
+   "action",
+   "mango pops up"
+  ],
+  [
+   364.88,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   365.0,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   365.19,
+   "action",
+   "tula pops up"
+  ],
+  [
+   365.5,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   365.62,
+   "action",
+   "sandy nods"
+  ],
+  [
+   365.62,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   365.82,
+   "action",
+   "clover pops up"
+  ],
+  [
+   365.94,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   365.94,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   366.13,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   366.41,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   366.87,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   367.19,
+   "action",
+   "out of the flash"
+  ],
+  [
+   367.19,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   367.19,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   367.38,
+   "action",
+   "the badge pops"
+  ],
+  [
+   367.95,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.1,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.26,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.41,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.73,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   368.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   369.04,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   369.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   369.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   369.08,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   369.38,
+   "action",
+   "a firework"
+  ],
+  [
+   369.38,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   369.54,
+   "action",
+   "a firework"
+  ],
+  [
+   369.69,
+   "action",
+   "confetti"
+  ],
+  [
+   369.69,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   369.79,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   370.0,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   370.12,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   370.31,
+   "action",
+   "a firework"
+  ],
+  [
+   370.51,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   370.82,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   370.94,
+   "action",
+   "a firework"
+  ],
+  [
+   371.13,
+   "action",
+   "mango pops up"
+  ],
+  [
+   371.13,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   371.44,
+   "action",
+   "clover pops up"
+  ],
+  [
+   371.44,
+   "action",
+   "tula pops up"
+  ],
+  [
+   371.56,
+   "action",
+   "a firework"
+  ],
+  [
+   371.76,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   371.88,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   372.03,
+   "action",
+   "a firework"
+  ],
+  [
+   372.5,
+   "action",
+   "a firework"
+  ],
+  [
+   372.5,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   372.62,
+   "action",
+   "T word lights up"
+  ],
+  [
+   372.64,
+   "action",
+   "a firework"
+  ],
+  [
+   372.8,
+   "action",
+   "A word lights up"
+  ],
+  [
+   373.52,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   374.01,
+   "action",
+   "Milo flips"
+  ],
+  [
+   374.01,
+   "action",
+   "a firework"
+  ],
+  [
+   374.01,
+   "action",
+   "confetti"
+  ],
+  [
+   374.01,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   374.01,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   374.01,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   374.13,
+   "action",
+   "a firework"
+  ],
+  [
+   374.31,
+   "action",
+   "a firework"
+  ],
+  [
+   374.31,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   374.43,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "hilltop_lights",
+   "say": "Can Poppy stay awake to see the dancing sky? Look! Green lights! But her eyes are so sleepy.",
+   "t0": 0.0,
+   "t1": 7.8125,
+   "v0": 0.42,
+   "dur": 6.840958333333333,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.2
+    ],
+    [
+     "Poppy",
+     0.2,
+     0.6
+    ],
+    [
+     "stay",
+     0.6,
+     0.88
+    ],
+    [
+     "awake",
+     0.88,
+     1.25
+    ],
+    [
+     "to",
+     1.25,
+     1.36
+    ],
+    [
+     "see",
+     1.36,
+     1.53
+    ],
+    [
+     "the",
+     1.53,
+     1.61
+    ],
+    [
+     "dancing",
+     1.61,
+     2.12
+    ],
+    [
+     "sky?",
+     2.12,
+     2.71
+    ],
+    [
+     "Look!",
+     3.17,
+     3.58
+    ],
+    [
+     "Green",
+     3.78,
+     4.25
+    ],
+    [
+     "lights!",
+     4.25,
+     4.77
+    ],
+    [
+     "But",
+     4.99,
+     5.13
+    ],
+    [
+     "her",
+     5.13,
+     5.32
+    ],
+    [
+     "eyes",
+     5.32,
+     5.76
+    ],
+    [
+     "are",
+     5.76,
+     5.84
+    ],
+    [
+     "so",
+     5.84,
+     6.12
+    ],
+    [
+     "sleepy.",
+     6.12,
+     6.84
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: the lights and a sleepy Poppy",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 7.8125,
+   "t1": 10.9375,
+   "v0": 8.125,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 10.9375,
+   "t1": 14.0625,
+   "v0": 11.25,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 14.0625,
+   "t1": 19.375,
+   "v0": 14.375,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 19.375,
+   "t1": 22.1875,
+   "v0": 19.495,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "Hello, I'm Milo! Tumble and I are visiting Poppy the polar bear cub, far up north in the snowy Arctic.",
+   "t0": 22.1875,
+   "t1": 31.25,
+   "v0": 22.402166666666666,
+   "dur": 8.39,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.62
+    ],
+    [
+     "I'm",
+     0.73,
+     0.99
+    ],
+    [
+     "Milo!",
+     0.99,
+     1.59
+    ],
+    [
+     "Tumble",
+     2.18,
+     2.63
+    ],
+    [
+     "and",
+     2.63,
+     2.76
+    ],
+    [
+     "I",
+     2.76,
+     3.08
+    ],
+    [
+     "are",
+     3.08,
+     3.19
+    ],
+    [
+     "visiting",
+     3.19,
+     3.76
+    ],
+    [
+     "Poppy",
+     3.76,
+     4.3
+    ],
+    [
+     "the",
+     4.3,
+     4.39
+    ],
+    [
+     "polar",
+     4.39,
+     4.84
+    ],
+    [
+     "bear",
+     4.84,
+     5.11
+    ],
+    [
+     "cub,",
+     5.11,
+     5.54
+    ],
+    [
+     "far",
+     5.86,
+     6.28
+    ],
+    [
+     "up",
+     6.28,
+     6.41
+    ],
+    [
+     "north",
+     6.41,
+     6.88
+    ],
+    [
+     "in",
+     6.88,
+     7.05
+    ],
+    [
+     "the",
+     7.05,
+     7.11
+    ],
+    [
+     "snowy",
+     7.11,
+     7.72
+    ],
+    [
+     "Arctic.",
+     7.72,
+     8.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "arctic at sunset: Milo, Tumble, Poppy",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "Tonight, the sky is going to dance! Green lights, way up high!",
+   "t0": 31.25,
+   "t1": 35.0,
+   "v0": 31.312166666666666,
+   "dur": 3.443208333333333,
+   "words": [
+    [
+     "Tonight,",
+     0.01,
+     0.42
+    ],
+    [
+     "the",
+     0.42,
+     0.5
+    ],
+    [
+     "sky",
+     0.5,
+     0.82
+    ],
+    [
+     "is",
+     0.82,
+     0.97
+    ],
+    [
+     "going",
+     0.97,
+     1.19
+    ],
+    [
+     "to",
+     1.19,
+     1.26
+    ],
+    [
+     "dance!",
+     1.26,
+     1.82
+    ],
+    [
+     "Green",
+     1.82,
+     2.23
+    ],
+    [
+     "lights,",
+     2.23,
+     2.56
+    ],
+    [
+     "way",
+     2.56,
+     2.78
+    ],
+    [
+     "up",
+     2.78,
+     2.9
+    ],
+    [
+     "high!",
+     2.9,
+     3.44
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: the sky will dance",
+   "who": "poppy",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "A dancing sky? Wow! I want to see it too!",
+   "t0": 35.0,
+   "t1": 38.125,
+   "v0": 35.275375,
+   "dur": 2.4186666666666667,
+   "words": [
+    [
+     "A",
+     0.0,
+     0.07
+    ],
+    [
+     "dancing",
+     0.07,
+     0.58
+    ],
+    [
+     "sky?",
+     0.58,
+     0.99
+    ],
+    [
+     "Wow!",
+     0.99,
+     1.33
+    ],
+    [
+     "I",
+     1.33,
+     1.41
+    ],
+    [
+     "want",
+     1.41,
+     1.62
+    ],
+    [
+     "to",
+     1.62,
+     1.68
+    ],
+    [
+     "see",
+     1.68,
+     1.89
+    ],
+    [
+     "it",
+     1.89,
+     1.98
+    ],
+    [
+     "too!",
+     1.98,
+     2.419
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: I want to see it",
+   "who": "tumble",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "But there is one little problem. I always fall asleep first!",
+   "t0": 38.125,
+   "t1": 41.875,
+   "v0": 38.21404166666666,
+   "dur": 3.258208333333333,
+   "words": [
+    [
+     "But",
+     0.01,
+     0.18
+    ],
+    [
+     "there",
+     0.18,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.52
+    ],
+    [
+     "one",
+     0.52,
+     0.7
+    ],
+    [
+     "little",
+     0.7,
+     0.89
+    ],
+    [
+     "problem.",
+     0.89,
+     1.44
+    ],
+    [
+     "I",
+     1.44,
+     1.64
+    ],
+    [
+     "always",
+     1.64,
+     2.04
+    ],
+    [
+     "fall",
+     2.04,
+     2.23
+    ],
+    [
+     "asleep",
+     2.23,
+     2.62
+    ],
+    [
+     "first!",
+     2.62,
+     3.258
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: I always fall asleep first",
+   "who": "poppy",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "Who always falls asleep first? Poppy, or Tumble?",
+   "t0": 41.875,
+   "t1": 49.375,
+   "v0": 41.99224999999999,
+   "dur": 3.710166666666667,
+   "words": [
+    [
+     "Who",
+     0.01,
+     0.17
+    ],
+    [
+     "always",
+     0.17,
+     0.58
+    ],
+    [
+     "falls",
+     0.58,
+     0.9
+    ],
+    [
+     "asleep",
+     0.9,
+     1.32
+    ],
+    [
+     "first?",
+     1.32,
+     1.9
+    ],
+    [
+     "Poppy,",
+     2.21,
+     2.92
+    ],
+    [
+     "or",
+     2.92,
+     3.07
+    ],
+    [
+     "Tumble?",
+     3.07,
+     3.71
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: Poppy or Tumble",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "The northern lights are often seen near the North Pole, far up in the north.",
+   "t0": 49.375,
+   "t1": 54.375,
+   "v0": 49.422416666666656,
+   "dur": 4.690625,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.1
+    ],
+    [
+     "northern",
+     0.1,
+     0.51
+    ],
+    [
+     "lights",
+     0.51,
+     0.95
+    ],
+    [
+     "are",
+     0.95,
+     1.08
+    ],
+    [
+     "often",
+     1.18,
+     1.56
+    ],
+    [
+     "seen",
+     1.56,
+     1.98
+    ],
+    [
+     "near",
+     1.98,
+     2.17
+    ],
+    [
+     "the",
+     2.17,
+     2.27
+    ],
+    [
+     "North",
+     2.27,
+     2.62
+    ],
+    [
+     "Pole,",
+     2.62,
+     3.08
+    ],
+    [
+     "far",
+     3.4,
+     3.83
+    ],
+    [
+     "up",
+     3.83,
+     4.01
+    ],
+    [
+     "in",
+     4.01,
+     4.11
+    ],
+    [
+     "the",
+     4.11,
+     4.18
+    ],
+    [
+     "north.",
+     4.18,
+     4.69
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: northern lights near the North Pole",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Where are the northern lights often seen? Near the North Pole, or in the jungle?",
+   "t0": 54.375,
+   "t1": 63.4375,
+   "v0": 54.63304166666665,
+   "dur": 5.161208333333334,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.25
+    ],
+    [
+     "are",
+     0.25,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.4
+    ],
+    [
+     "northern",
+     0.4,
+     0.84
+    ],
+    [
+     "lights",
+     0.84,
+     1.3
+    ],
+    [
+     "often",
+     1.3,
+     1.72
+    ],
+    [
+     "seen?",
+     1.72,
+     2.27
+    ],
+    [
+     "Near",
+     2.79,
+     3.0
+    ],
+    [
+     "the",
+     3.0,
+     3.1
+    ],
+    [
+     "North",
+     3.1,
+     3.44
+    ],
+    [
+     "Pole,",
+     3.44,
+     3.91
+    ],
+    [
+     "or",
+     4.07,
+     4.32
+    ],
+    [
+     "in",
+     4.32,
+     4.44
+    ],
+    [
+     "the",
+     4.44,
+     4.53
+    ],
+    [
+     "jungle?",
+     4.53,
+     5.16
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: North Pole or jungle",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "The sun goes down, and the pink sky turns dark blue. Now the friends wait, and watch.",
+   "t0": 63.4375,
+   "t1": 70.3125,
+   "v0": 63.51424999999998,
+   "dur": 6.339375,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "sun",
+     0.08,
+     0.45
+    ],
+    [
+     "goes",
+     0.45,
+     0.74
+    ],
+    [
+     "down,",
+     0.74,
+     1.25
+    ],
+    [
+     "and",
+     1.25,
+     1.46
+    ],
+    [
+     "the",
+     1.46,
+     1.52
+    ],
+    [
+     "pink",
+     1.52,
+     1.86
+    ],
+    [
+     "sky",
+     1.86,
+     2.39
+    ],
+    [
+     "turns",
+     2.39,
+     2.85
+    ],
+    [
+     "dark",
+     2.85,
+     3.27
+    ],
+    [
+     "blue.",
+     3.27,
+     3.71
+    ],
+    [
+     "Now",
+     4.27,
+     4.6
+    ],
+    [
+     "the",
+     4.6,
+     4.69
+    ],
+    [
+     "friends",
+     4.69,
+     5.14
+    ],
+    [
+     "wait,",
+     5.14,
+     5.6
+    ],
+    [
+     "and",
+     5.6,
+     5.74
+    ],
+    [
+     "watch.",
+     5.74,
+     6.339
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "sunset: they wait and watch",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_eve",
+   "say": "Let's stay awake together, Poppy. We can do it!",
+   "t0": 70.3125,
+   "t1": 73.75,
+   "v0": 70.37362499999999,
+   "dur": 3.184458333333333,
+   "words": [
+    [
+     "Let's",
+     0.02,
+     0.33
+    ],
+    [
+     "stay",
+     0.33,
+     0.57
+    ],
+    [
+     "awake",
+     0.57,
+     0.9
+    ],
+    [
+     "together,",
+     0.9,
+     1.43
+    ],
+    [
+     "Poppy.",
+     1.43,
+     2.1
+    ],
+    [
+     "We",
+     2.4,
+     2.51
+    ],
+    [
+     "can",
+     2.51,
+     2.71
+    ],
+    [
+     "do",
+     2.71,
+     2.91
+    ],
+    [
+     "it!",
+     2.91,
+     3.18
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: let's stay awake together",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Night comes. The stars twinkle in the dark sky. But no lights are dancing yet.",
+   "t0": 73.75,
+   "t1": 80.3125,
+   "v0": 74.07808333333334,
+   "dur": 5.9980416666666665,
+   "words": [
+    [
+     "Night",
+     0.0,
+     0.36
+    ],
+    [
+     "comes.",
+     0.36,
+     0.98
+    ],
+    [
+     "The",
+     1.27,
+     1.36
+    ],
+    [
+     "stars",
+     1.36,
+     1.99
+    ],
+    [
+     "twinkle",
+     1.99,
+     2.54
+    ],
+    [
+     "in",
+     2.54,
+     2.67
+    ],
+    [
+     "the",
+     2.67,
+     2.75
+    ],
+    [
+     "dark",
+     2.75,
+     3.11
+    ],
+    [
+     "sky.",
+     3.11,
+     3.71
+    ],
+    [
+     "But",
+     4.1,
+     4.22
+    ],
+    [
+     "no",
+     4.22,
+     4.52
+    ],
+    [
+     "lights",
+     4.52,
+     4.87
+    ],
+    [
+     "are",
+     4.87,
+     4.94
+    ],
+    [
+     "dancing",
+     4.94,
+     5.58
+    ],
+    [
+     "yet.",
+     5.58,
+     5.998
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "night on the shore: no lights yet",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "I know! I will count the stars. Counting will keep me awake!",
+   "t0": 80.3125,
+   "t1": 84.0625,
+   "v0": 80.59612500000001,
+   "dur": 3.0448333333333335,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.17
+    ],
+    [
+     "know!",
+     0.17,
+     0.45
+    ],
+    [
+     "I",
+     0.45,
+     0.58
+    ],
+    [
+     "will",
+     0.58,
+     0.7
+    ],
+    [
+     "count",
+     0.7,
+     0.99
+    ],
+    [
+     "the",
+     0.99,
+     1.05
+    ],
+    [
+     "stars.",
+     1.05,
+     1.61
+    ],
+    [
+     "Counting",
+     1.61,
+     2.0
+    ],
+    [
+     "will",
+     2.0,
+     2.1
+    ],
+    [
+     "keep",
+     2.1,
+     2.28
+    ],
+    [
+     "me",
+     2.28,
+     2.44
+    ],
+    [
+     "awake!",
+     2.44,
+     3.04
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: I will count the stars",
+   "who": "poppy",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Count the stars with Poppy! One, two, three, four, five!",
+   "t0": 84.0625,
+   "t1": 89.375,
+   "v0": 84.16095833333335,
+   "dur": 3.9249583333333335,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.26
+    ],
+    [
+     "the",
+     0.26,
+     0.33
+    ],
+    [
+     "stars",
+     0.33,
+     0.87
+    ],
+    [
+     "with",
+     0.87,
+     1.01
+    ],
+    [
+     "Poppy!",
+     1.01,
+     1.65
+    ],
+    [
+     "One,",
+     2.02,
+     2.33
+    ],
+    [
+     "two,",
+     2.33,
+     2.64
+    ],
+    [
+     "three,",
+     2.64,
+     2.88
+    ],
+    [
+     "four,",
+     2.88,
+     3.24
+    ],
+    [
+     "five!",
+     3.24,
+     3.92
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count five stars",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Poppy counts, and counts. Her eyes get heavy. She lies down, and she falls asleep!",
+   "t0": 89.375,
+   "t1": 95.9375,
+   "v0": 89.6059166666667,
+   "dur": 6.117416666666666,
+   "words": [
+    [
+     "Poppy",
+     0.0,
+     0.4
+    ],
+    [
+     "counts,",
+     0.4,
+     0.95
+    ],
+    [
+     "and",
+     0.95,
+     1.11
+    ],
+    [
+     "counts.",
+     1.11,
+     1.75
+    ],
+    [
+     "Her",
+     2.13,
+     2.31
+    ],
+    [
+     "eyes",
+     2.31,
+     2.7
+    ],
+    [
+     "get",
+     2.7,
+     2.88
+    ],
+    [
+     "heavy.",
+     2.88,
+     3.38
+    ],
+    [
+     "She",
+     3.78,
+     3.93
+    ],
+    [
+     "lies",
+     3.93,
+     4.37
+    ],
+    [
+     "down,",
+     4.37,
+     4.88
+    ],
+    [
+     "and",
+     4.88,
+     4.99
+    ],
+    [
+     "she",
+     4.99,
+     5.12
+    ],
+    [
+     "falls",
+     5.12,
+     5.51
+    ],
+    [
+     "asleep!",
+     5.51,
+     6.117
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy falls asleep counting",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Is Poppy awake, or asleep?",
+   "t0": 95.9375,
+   "t1": 101.875,
+   "v0": 96.24333333333338,
+   "dur": 2.048791666666667,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "Poppy",
+     0.22,
+     0.7
+    ],
+    [
+     "awake,",
+     0.7,
+     1.17
+    ],
+    [
+     "or",
+     1.17,
+     1.43
+    ],
+    [
+     "asleep?",
+     1.43,
+     2.049
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: awake or asleep",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Poppy? Wake up, Poppy. The lights are not here yet.",
+   "t0": 101.875,
+   "t1": 105.3125,
+   "v0": 102.01212500000007,
+   "dur": 2.8702083333333333,
+   "words": [
+    [
+     "Poppy?",
+     0.0,
+     0.39
+    ],
+    [
+     "Wake",
+     0.39,
+     0.64
+    ],
+    [
+     "up,",
+     0.64,
+     0.8
+    ],
+    [
+     "Poppy.",
+     0.8,
+     1.34
+    ],
+    [
+     "The",
+     1.34,
+     1.51
+    ],
+    [
+     "lights",
+     1.51,
+     1.88
+    ],
+    [
+     "are",
+     1.88,
+     1.94
+    ],
+    [
+     "not",
+     1.94,
+     2.19
+    ],
+    [
+     "here",
+     2.19,
+     2.39
+    ],
+    [
+     "yet.",
+     2.39,
+     2.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble wakes her gently",
+   "who": "tumble",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "arctic_night",
+   "say": "Oh! I fell asleep. Counting stars is too sleepy for me.",
+   "t0": 105.3125,
+   "t1": 109.0625,
+   "v0": 105.40233333333342,
+   "dur": 3.240291666666667,
+   "words": [
+    [
+     "Oh!",
+     0.01,
+     0.25
+    ],
+    [
+     "I",
+     0.25,
+     0.4
+    ],
+    [
+     "fell",
+     0.4,
+     0.62
+    ],
+    [
+     "asleep.",
+     0.62,
+     1.06
+    ],
+    [
+     "Counting",
+     1.06,
+     1.54
+    ],
+    [
+     "stars",
+     1.54,
+     2.0
+    ],
+    [
+     "is",
+     2.0,
+     2.14
+    ],
+    [
+     "too",
+     2.14,
+     2.34
+    ],
+    [
+     "sleepy",
+     2.34,
+     2.73
+    ],
+    [
+     "for",
+     2.73,
+     2.87
+    ],
+    [
+     "me.",
+     2.87,
+     3.24
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: counting is too sleepy",
+   "who": "poppy",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Then Poppy has a new idea. A bouncy dance in the snow!",
+   "t0": 109.0625,
+   "t1": 113.75,
+   "v0": 109.16262500000009,
+   "dur": 4.144125,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.24
+    ],
+    [
+     "Poppy",
+     0.24,
+     0.76
+    ],
+    [
+     "has",
+     0.76,
+     1.0
+    ],
+    [
+     "a",
+     1.0,
+     1.04
+    ],
+    [
+     "new",
+     1.04,
+     1.25
+    ],
+    [
+     "idea.",
+     1.25,
+     1.86
+    ],
+    [
+     "A",
+     2.32,
+     2.39
+    ],
+    [
+     "bouncy",
+     2.39,
+     2.96
+    ],
+    [
+     "dance",
+     2.96,
+     3.38
+    ],
+    [
+     "in",
+     3.38,
+     3.48
+    ],
+    [
+     "the",
+     3.48,
+     3.54
+    ],
+    [
+     "snow!",
+     3.54,
+     4.14
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the snow at night: a bouncy dance",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Can you hop, like Poppy? Hop, hop, hop!",
+   "t0": 113.75,
+   "t1": 120.3125,
+   "v0": 113.8267500000001,
+   "dur": 3.078291666666667,
+   "words": [
+    [
+     "Can",
+     0.06,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.38
+    ],
+    [
+     "hop,",
+     0.38,
+     0.74
+    ],
+    [
+     "like",
+     0.74,
+     0.9
+    ],
+    [
+     "Poppy?",
+     0.9,
+     1.57
+    ],
+    [
+     "Hop,",
+     1.88,
+     2.2
+    ],
+    [
+     "hop,",
+     2.2,
+     2.57
+    ],
+    [
+     "hop!",
+     2.57,
+     3.078
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: hop",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Poppy hops, and hops, and hops. Now she is tired. She lies down to rest, and she falls asleep!",
+   "t0": 120.3125,
+   "t1": 128.125,
+   "v0": 120.42504166666679,
+   "dur": 7.433833333333333,
+   "words": [
+    [
+     "Poppy",
+     0.0,
+     0.43
+    ],
+    [
+     "hops,",
+     0.43,
+     0.96
+    ],
+    [
+     "and",
+     0.96,
+     1.06
+    ],
+    [
+     "hops,",
+     1.06,
+     1.58
+    ],
+    [
+     "and",
+     1.58,
+     1.69
+    ],
+    [
+     "hops.",
+     1.69,
+     2.35
+    ],
+    [
+     "Now",
+     2.8,
+     3.14
+    ],
+    [
+     "she",
+     3.14,
+     3.37
+    ],
+    [
+     "is",
+     3.37,
+     3.5
+    ],
+    [
+     "tired.",
+     3.5,
+     4.14
+    ],
+    [
+     "She",
+     4.61,
+     4.78
+    ],
+    [
+     "lies",
+     4.78,
+     5.17
+    ],
+    [
+     "down",
+     5.17,
+     5.46
+    ],
+    [
+     "to",
+     5.46,
+     5.55
+    ],
+    [
+     "rest,",
+     5.55,
+     6.15
+    ],
+    [
+     "and",
+     6.15,
+     6.32
+    ],
+    [
+     "she",
+     6.32,
+     6.45
+    ],
+    [
+     "falls",
+     6.45,
+     6.83
+    ],
+    [
+     "asleep!",
+     6.83,
+     7.43
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy is tired and falls asleep",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Did the bouncy dance keep Poppy awake? Yes, or no?",
+   "t0": 128.125,
+   "t1": 135.625,
+   "v0": 128.37887500000014,
+   "dur": 3.8157083333333333,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.16
+    ],
+    [
+     "the",
+     0.16,
+     0.24
+    ],
+    [
+     "bouncy",
+     0.24,
+     0.75
+    ],
+    [
+     "dance",
+     0.75,
+     1.17
+    ],
+    [
+     "keep",
+     1.17,
+     1.44
+    ],
+    [
+     "Poppy",
+     1.44,
+     1.84
+    ],
+    [
+     "awake?",
+     1.84,
+     2.36
+    ],
+    [
+     "Yes,",
+     2.74,
+     3.21
+    ],
+    [
+     "or",
+     3.21,
+     3.4
+    ],
+    [
+     "no?",
+     3.4,
+     3.816
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did the dance keep her awake",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Milo flies down, and taps her nose. Poppy, wake up, sleepy bear!",
+   "t0": 135.625,
+   "t1": 141.5625,
+   "v0": 135.91458333333347,
+   "dur": 5.231375,
+   "words": [
+    [
+     "Milo",
+     0.0,
+     0.47
+    ],
+    [
+     "flies",
+     0.47,
+     1.0
+    ],
+    [
+     "down,",
+     1.0,
+     1.48
+    ],
+    [
+     "and",
+     1.48,
+     1.66
+    ],
+    [
+     "taps",
+     1.66,
+     2.06
+    ],
+    [
+     "her",
+     2.06,
+     2.16
+    ],
+    [
+     "nose.",
+     2.16,
+     2.74
+    ],
+    [
+     "Poppy,",
+     3.21,
+     3.76
+    ],
+    [
+     "wake",
+     3.76,
+     4.08
+    ],
+    [
+     "up,",
+     4.08,
+     4.29
+    ],
+    [
+     "sleepy",
+     4.29,
+     4.75
+    ],
+    [
+     "bear!",
+     4.75,
+     5.23
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo wakes her gently",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "snow_night",
+   "say": "Oh no! Dancing made me tired. I fell asleep again!",
+   "t0": 141.5625,
+   "t1": 145.0,
+   "v0": 141.66595833333346,
+   "dur": 3.070333333333333,
+   "words": [
+    [
+     "Oh",
+     0.01,
+     0.16
+    ],
+    [
+     "no!",
+     0.16,
+     0.49
+    ],
+    [
+     "Dancing",
+     0.49,
+     0.95
+    ],
+    [
+     "made",
+     0.95,
+     1.12
+    ],
+    [
+     "me",
+     1.12,
+     1.23
+    ],
+    [
+     "tired.",
+     1.23,
+     1.8
+    ],
+    [
+     "I",
+     1.8,
+     1.91
+    ],
+    [
+     "fell",
+     1.91,
+     2.14
+    ],
+    [
+     "asleep",
+     2.14,
+     2.51
+    ],
+    [
+     "again!",
+     2.51,
+     3.07
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: dancing made me tired",
+   "who": "poppy",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "Next, the friends walk up the snowy hill, to see the sky up close.",
+   "t0": 145.0,
+   "t1": 150.3125,
+   "v0": 145.2562916666668,
+   "dur": 4.699125,
+   "words": [
+    [
+     "Next,",
+     0.0,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.72
+    ],
+    [
+     "friends",
+     0.72,
+     1.2
+    ],
+    [
+     "walk",
+     1.2,
+     1.5
+    ],
+    [
+     "up",
+     1.5,
+     1.63
+    ],
+    [
+     "the",
+     1.63,
+     1.72
+    ],
+    [
+     "snowy",
+     1.72,
+     2.25
+    ],
+    [
+     "hill,",
+     2.25,
+     2.67
+    ],
+    [
+     "to",
+     2.99,
+     3.1
+    ],
+    [
+     "see",
+     3.1,
+     3.34
+    ],
+    [
+     "the",
+     3.34,
+     3.42
+    ],
+    [
+     "sky",
+     3.42,
+     3.95
+    ],
+    [
+     "up",
+     3.95,
+     4.12
+    ],
+    [
+     "close.",
+     4.12,
+     4.699
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the hilltop at night: a walk",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "A walk will keep me awake! Step, step, step.",
+   "t0": 150.3125,
+   "t1": 153.4375,
+   "v0": 150.47541666666683,
+   "dur": 2.5701666666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.12
+    ],
+    [
+     "walk",
+     0.12,
+     0.44
+    ],
+    [
+     "will",
+     0.44,
+     0.55
+    ],
+    [
+     "keep",
+     0.55,
+     0.78
+    ],
+    [
+     "me",
+     0.78,
+     0.94
+    ],
+    [
+     "awake!",
+     0.94,
+     1.35
+    ],
+    [
+     "Step,",
+     1.35,
+     1.67
+    ],
+    [
+     "step,",
+     1.67,
+     1.98
+    ],
+    [
+     "step.",
+     1.98,
+     2.57
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: a walk will keep me awake",
+   "who": "poppy",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "But the hill is long, and Poppy is slow. At the top, she sits down, and falls asleep!",
+   "t0": 153.4375,
+   "t1": 160.0,
+   "v0": 153.5655833333335,
+   "dur": 6.1245,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.14
+    ],
+    [
+     "the",
+     0.14,
+     0.21
+    ],
+    [
+     "hill",
+     0.21,
+     0.51
+    ],
+    [
+     "is",
+     0.51,
+     0.69
+    ],
+    [
+     "long,",
+     0.69,
+     1.28
+    ],
+    [
+     "and",
+     1.28,
+     1.47
+    ],
+    [
+     "Poppy",
+     1.47,
+     1.96
+    ],
+    [
+     "is",
+     1.96,
+     2.07
+    ],
+    [
+     "slow.",
+     2.07,
+     2.6
+    ],
+    [
+     "At",
+     3.24,
+     3.36
+    ],
+    [
+     "the",
+     3.36,
+     3.44
+    ],
+    [
+     "top,",
+     3.44,
+     4.03
+    ],
+    [
+     "she",
+     4.03,
+     4.2
+    ],
+    [
+     "sits",
+     4.2,
+     4.54
+    ],
+    [
+     "down,",
+     4.54,
+     5.01
+    ],
+    [
+     "and",
+     5.01,
+     5.14
+    ],
+    [
+     "falls",
+     5.14,
+     5.53
+    ],
+    [
+     "asleep!",
+     5.53,
+     6.12
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "at the top Poppy falls asleep",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "What did Poppy do at the top of the hill? Sleep, or fly?",
+   "t0": 160.0,
+   "t1": 167.8125,
+   "v0": 160.21008333333353,
+   "dur": 3.9398333333333335,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.21
+    ],
+    [
+     "did",
+     0.21,
+     0.35
+    ],
+    [
+     "Poppy",
+     0.35,
+     0.76
+    ],
+    [
+     "do",
+     0.76,
+     0.99
+    ],
+    [
+     "at",
+     0.99,
+     1.09
+    ],
+    [
+     "the",
+     1.09,
+     1.16
+    ],
+    [
+     "top",
+     1.16,
+     1.51
+    ],
+    [
+     "of",
+     1.51,
+     1.6
+    ],
+    [
+     "the",
+     1.6,
+     1.67
+    ],
+    [
+     "hill?",
+     1.67,
+     2.08
+    ],
+    [
+     "Sleep,",
+     2.47,
+     3.06
+    ],
+    [
+     "or",
+     3.06,
+     3.33
+    ],
+    [
+     "fly?",
+     3.33,
+     3.94
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sleep or fly",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "Wake up, Poppy! There are no lights yet. But we are here.",
+   "t0": 167.8125,
+   "t1": 171.25,
+   "v0": 167.86991666666685,
+   "dur": 2.9269166666666666,
+   "words": [
+    [
+     "Wake",
+     0.02,
+     0.25
+    ],
+    [
+     "up,",
+     0.25,
+     0.42
+    ],
+    [
+     "Poppy!",
+     0.42,
+     0.94
+    ],
+    [
+     "There",
+     0.94,
+     1.11
+    ],
+    [
+     "are",
+     1.11,
+     1.15
+    ],
+    [
+     "no",
+     1.15,
+     1.34
+    ],
+    [
+     "lights",
+     1.34,
+     1.74
+    ],
+    [
+     "yet.",
+     1.74,
+     1.98
+    ],
+    [
+     "But",
+     1.98,
+     2.17
+    ],
+    [
+     "we",
+     2.17,
+     2.36
+    ],
+    [
+     "are",
+     2.36,
+     2.44
+    ],
+    [
+     "here.",
+     2.44,
+     2.927
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble wakes her again",
+   "who": "tumble",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "Poppy looks up at the dark, quiet sky. She feels a little sad.",
+   "t0": 171.25,
+   "t1": 176.25,
+   "v0": 171.31683333333353,
+   "dur": 4.575125,
+   "words": [
+    [
+     "Poppy",
+     0.0,
+     0.53
+    ],
+    [
+     "looks",
+     0.53,
+     0.79
+    ],
+    [
+     "up",
+     0.79,
+     0.91
+    ],
+    [
+     "at",
+     0.91,
+     0.99
+    ],
+    [
+     "the",
+     0.99,
+     1.06
+    ],
+    [
+     "dark,",
+     1.06,
+     1.62
+    ],
+    [
+     "quiet",
+     1.62,
+     2.15
+    ],
+    [
+     "sky.",
+     2.15,
+     2.76
+    ],
+    [
+     "She",
+     3.26,
+     3.42
+    ],
+    [
+     "feels",
+     3.42,
+     3.74
+    ],
+    [
+     "a",
+     3.74,
+     3.77
+    ],
+    [
+     "little",
+     3.77,
+     4.0
+    ],
+    [
+     "sad.",
+     4.0,
+     4.57
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy looks at the dark sky, a little sad",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "I always fall asleep first. Maybe I will never see the dancing sky.",
+   "t0": 176.25,
+   "t1": 180.625,
+   "v0": 176.41195833333356,
+   "dur": 3.9538333333333333,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.18
+    ],
+    [
+     "always",
+     0.18,
+     0.59
+    ],
+    [
+     "fall",
+     0.59,
+     0.81
+    ],
+    [
+     "asleep",
+     0.81,
+     1.2
+    ],
+    [
+     "first.",
+     1.2,
+     1.81
+    ],
+    [
+     "Maybe",
+     1.81,
+     2.11
+    ],
+    [
+     "I",
+     2.11,
+     2.2
+    ],
+    [
+     "will",
+     2.2,
+     2.32
+    ],
+    [
+     "never",
+     2.32,
+     2.6
+    ],
+    [
+     "see",
+     2.6,
+     2.81
+    ],
+    [
+     "the",
+     2.81,
+     2.89
+    ],
+    [
+     "dancing",
+     2.89,
+     3.35
+    ],
+    [
+     "sky.",
+     3.35,
+     3.95
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: maybe I will never see it",
+   "who": "poppy",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "It's okay, Poppy. We are right here with you.",
+   "t0": 180.625,
+   "t1": 183.4375,
+   "v0": 180.8857916666669,
+   "dur": 2.318416666666667,
+   "words": [
+    [
+     "It's",
+     0.0,
+     0.18
+    ],
+    [
+     "okay,",
+     0.18,
+     0.59
+    ],
+    [
+     "Poppy.",
+     0.59,
+     1.11
+    ],
+    [
+     "We",
+     1.11,
+     1.29
+    ],
+    [
+     "are",
+     1.29,
+     1.36
+    ],
+    [
+     "right",
+     1.36,
+     1.6
+    ],
+    [
+     "here",
+     1.6,
+     1.8
+    ],
+    [
+     "with",
+     1.8,
+     2.0
+    ],
+    [
+     "you.",
+     2.0,
+     2.318
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: we are right here",
+   "who": "tumble",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "How does Poppy feel now? Sad, or happy?",
+   "t0": 183.4375,
+   "t1": 190.3125,
+   "v0": 183.7242083333336,
+   "dur": 3.0222083333333334,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.33
+    ],
+    [
+     "Poppy",
+     0.33,
+     0.79
+    ],
+    [
+     "feel",
+     0.79,
+     1.07
+    ],
+    [
+     "now?",
+     1.07,
+     1.48
+    ],
+    [
+     "Sad,",
+     1.77,
+     2.31
+    ],
+    [
+     "or",
+     2.31,
+     2.42
+    ],
+    [
+     "happy?",
+     2.42,
+     3.02
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sad or happy",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "Then Poppy looks at her two good friends. And she has an idea!",
+   "t0": 190.3125,
+   "t1": 195.0,
+   "v0": 190.46641666666693,
+   "dur": 4.076583333333334,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.28
+    ],
+    [
+     "Poppy",
+     0.28,
+     0.83
+    ],
+    [
+     "looks",
+     0.83,
+     1.16
+    ],
+    [
+     "at",
+     1.16,
+     1.22
+    ],
+    [
+     "her",
+     1.22,
+     1.33
+    ],
+    [
+     "two",
+     1.33,
+     1.56
+    ],
+    [
+     "good",
+     1.56,
+     1.75
+    ],
+    [
+     "friends.",
+     1.75,
+     2.4
+    ],
+    [
+     "And",
+     2.77,
+     2.92
+    ],
+    [
+     "she",
+     2.92,
+     3.07
+    ],
+    [
+     "has",
+     3.07,
+     3.31
+    ],
+    [
+     "an",
+     3.31,
+     3.39
+    ],
+    [
+     "idea!",
+     3.39,
+     4.077
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy has an idea",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "We can take turns! I sleep first. You watch the sky. When the lights come, wake me up!",
+   "t0": 195.0,
+   "t1": 199.6875,
+   "v0": 195.06300000000027,
+   "dur": 4.287916666666667,
+   "words": [
+    [
+     "We",
+     0.0,
+     0.11
+    ],
+    [
+     "can",
+     0.11,
+     0.25
+    ],
+    [
+     "take",
+     0.25,
+     0.5
+    ],
+    [
+     "turns!",
+     0.5,
+     1.0
+    ],
+    [
+     "I",
+     1.0,
+     1.12
+    ],
+    [
+     "sleep",
+     1.12,
+     1.43
+    ],
+    [
+     "first.",
+     1.43,
+     1.85
+    ],
+    [
+     "You",
+     1.85,
+     1.99
+    ],
+    [
+     "watch",
+     1.99,
+     2.28
+    ],
+    [
+     "the",
+     2.28,
+     2.37
+    ],
+    [
+     "sky.",
+     2.37,
+     2.82
+    ],
+    [
+     "When",
+     2.82,
+     2.98
+    ],
+    [
+     "the",
+     2.98,
+     3.04
+    ],
+    [
+     "lights",
+     3.04,
+     3.36
+    ],
+    [
+     "come,",
+     3.36,
+     3.62
+    ],
+    [
+     "wake",
+     3.62,
+     3.81
+    ],
+    [
+     "me",
+     3.81,
+     3.97
+    ],
+    [
+     "up!",
+     3.97,
+     4.288
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: we can take turns",
+   "who": "poppy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "Yes! I will watch first. Then Milo will watch. And we will wake you up, gently.",
+   "t0": 199.6875,
+   "t1": 204.6875,
+   "v0": 199.87091666666694,
+   "dur": 4.550791666666667,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.44
+    ],
+    [
+     "I",
+     0.44,
+     0.58
+    ],
+    [
+     "will",
+     0.58,
+     0.75
+    ],
+    [
+     "watch",
+     0.75,
+     1.1
+    ],
+    [
+     "first.",
+     1.1,
+     1.58
+    ],
+    [
+     "Then",
+     1.58,
+     1.76
+    ],
+    [
+     "Milo",
+     1.76,
+     2.18
+    ],
+    [
+     "will",
+     2.18,
+     2.39
+    ],
+    [
+     "watch.",
+     2.39,
+     2.97
+    ],
+    [
+     "And",
+     2.97,
+     3.1
+    ],
+    [
+     "we",
+     3.1,
+     3.18
+    ],
+    [
+     "will",
+     3.18,
+     3.3
+    ],
+    [
+     "wake",
+     3.3,
+     3.61
+    ],
+    [
+     "you",
+     3.61,
+     3.75
+    ],
+    [
+     "up,",
+     3.75,
+     3.96
+    ],
+    [
+     "gently.",
+     3.96,
+     4.55
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: I will watch first",
+   "who": "tumble",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hilltop_night",
+   "say": "What is Poppy's idea? Take turns, or go home?",
+   "t0": 204.6875,
+   "t1": 211.875,
+   "v0": 204.94170833333362,
+   "dur": 3.5,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.18
+    ],
+    [
+     "is",
+     0.18,
+     0.33
+    ],
+    [
+     "Poppy's",
+     0.33,
+     0.92
+    ],
+    [
+     "idea?",
+     0.92,
+     1.48
+    ],
+    [
+     "Take",
+     1.83,
+     2.12
+    ],
+    [
+     "turns,",
+     2.12,
+     2.67
+    ],
+    [
+     "or",
+     2.67,
+     2.77
+    ],
+    [
+     "go",
+     2.77,
+     2.99
+    ],
+    [
+     "home?",
+     2.99,
+     3.5
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: take turns or go home",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_night",
+   "say": "So Poppy curls up in a cozy snow nest, and closes her eyes. Tumble watches the sky.",
+   "t0": 211.875,
+   "t1": 219.375,
+   "v0": 212.16170833333362,
+   "dur": 6.89225,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.19
+    ],
+    [
+     "Poppy",
+     0.19,
+     0.71
+    ],
+    [
+     "curls",
+     0.71,
+     1.15
+    ],
+    [
+     "up",
+     1.15,
+     1.36
+    ],
+    [
+     "in",
+     1.36,
+     1.47
+    ],
+    [
+     "a",
+     1.47,
+     1.52
+    ],
+    [
+     "cozy",
+     1.52,
+     2.19
+    ],
+    [
+     "snow",
+     2.19,
+     2.56
+    ],
+    [
+     "nest,",
+     2.56,
+     3.16
+    ],
+    [
+     "and",
+     3.16,
+     3.32
+    ],
+    [
+     "closes",
+     3.32,
+     3.85
+    ],
+    [
+     "her",
+     3.85,
+     4.02
+    ],
+    [
+     "eyes.",
+     4.02,
+     4.57
+    ],
+    [
+     "Tumble",
+     5.17,
+     5.63
+    ],
+    [
+     "watches",
+     5.63,
+     6.2
+    ],
+    [
+     "the",
+     6.2,
+     6.28
+    ],
+    [
+     "sky.",
+     6.28,
+     6.89
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the snow nest: Poppy sleeps, Tumble watches",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Northern lights are best seen at night, when the sky is dark. Big clouds can hide them.",
+   "t0": 219.375,
+   "t1": 225.9375,
+   "v0": 219.57395833333362,
+   "dur": 5.973875,
+   "words": [
+    [
+     "Northern",
+     0.02,
+     0.5
+    ],
+    [
+     "lights",
+     0.5,
+     0.87
+    ],
+    [
+     "are",
+     0.87,
+     0.98
+    ],
+    [
+     "best",
+     0.98,
+     1.31
+    ],
+    [
+     "seen",
+     1.31,
+     1.57
+    ],
+    [
+     "at",
+     1.57,
+     1.65
+    ],
+    [
+     "night,",
+     1.65,
+     2.21
+    ],
+    [
+     "when",
+     2.21,
+     2.36
+    ],
+    [
+     "the",
+     2.36,
+     2.42
+    ],
+    [
+     "sky",
+     2.42,
+     2.93
+    ],
+    [
+     "is",
+     2.93,
+     3.19
+    ],
+    [
+     "dark.",
+     3.19,
+     3.72
+    ],
+    [
+     "Big",
+     4.22,
+     4.52
+    ],
+    [
+     "clouds",
+     4.52,
+     5.1
+    ],
+    [
+     "can",
+     5.1,
+     5.26
+    ],
+    [
+     "hide",
+     5.26,
+     5.69
+    ],
+    [
+     "them.",
+     5.69,
+     5.97
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: best seen at night, clouds hide them",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "When are northern lights best seen? In the day, or at night?",
+   "t0": 225.9375,
+   "t1": 233.4375,
+   "v0": 226.06783333333362,
+   "dur": 3.88425,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.2
+    ],
+    [
+     "are",
+     0.2,
+     0.27
+    ],
+    [
+     "northern",
+     0.27,
+     0.71
+    ],
+    [
+     "lights",
+     0.71,
+     1.07
+    ],
+    [
+     "best",
+     1.07,
+     1.35
+    ],
+    [
+     "seen?",
+     1.35,
+     1.87
+    ],
+    [
+     "In",
+     2.29,
+     2.47
+    ],
+    [
+     "the",
+     2.47,
+     2.55
+    ],
+    [
+     "day,",
+     2.55,
+     3.13
+    ],
+    [
+     "or",
+     3.13,
+     3.35
+    ],
+    [
+     "at",
+     3.35,
+     3.41
+    ],
+    [
+     "night?",
+     3.41,
+     3.88
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: day or night",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "nest_night",
+   "say": "Tumble watches, and watches. Then it is Milo's turn. Milo watches the sky.",
+   "t0": 233.4375,
+   "t1": 240.625,
+   "v0": 233.67208333333363,
+   "dur": 6.483666666666666,
+   "words": [
+    [
+     "Tumble",
+     0.0,
+     0.39
+    ],
+    [
+     "watches,",
+     0.39,
+     1.09
+    ],
+    [
+     "and",
+     1.09,
+     1.25
+    ],
+    [
+     "watches.",
+     1.25,
+     2.04
+    ],
+    [
+     "Then",
+     2.48,
+     2.8
+    ],
+    [
+     "it",
+     2.8,
+     2.98
+    ],
+    [
+     "is",
+     2.98,
+     3.17
+    ],
+    [
+     "Milo's",
+     3.17,
+     3.83
+    ],
+    [
+     "turn.",
+     3.83,
+     4.37
+    ],
+    [
+     "Milo",
+     4.79,
+     5.23
+    ],
+    [
+     "watches",
+     5.23,
+     5.78
+    ],
+    [
+     "the",
+     5.78,
+     5.86
+    ],
+    [
+     "sky.",
+     5.86,
+     6.48
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble's turn, then Milo's",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_night",
+   "say": "And then, look! Green lights! The sky begins to dance!",
+   "t0": 240.625,
+   "t1": 244.6875,
+   "v0": 240.6757500000003,
+   "dur": 3.835375,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.21
+    ],
+    [
+     "then,",
+     0.21,
+     0.49
+    ],
+    [
+     "look!",
+     0.49,
+     0.83
+    ],
+    [
+     "Green",
+     0.83,
+     1.28
+    ],
+    [
+     "lights!",
+     1.28,
+     1.82
+    ],
+    [
+     "The",
+     2.19,
+     2.26
+    ],
+    [
+     "sky",
+     2.26,
+     2.74
+    ],
+    [
+     "begins",
+     2.74,
+     3.14
+    ],
+    [
+     "to",
+     3.14,
+     3.25
+    ],
+    [
+     "dance!",
+     3.25,
+     3.83
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lights come",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "What is in the sky? Green lights, or a rainbow?",
+   "t0": 244.6875,
+   "t1": 251.875,
+   "v0": 245.03112500000032,
+   "dur": 3.3100416666666668,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.22
+    ],
+    [
+     "is",
+     0.22,
+     0.37
+    ],
+    [
+     "in",
+     0.37,
+     0.51
+    ],
+    [
+     "the",
+     0.51,
+     0.58
+    ],
+    [
+     "sky?",
+     0.58,
+     1.19
+    ],
+    [
+     "Green",
+     1.55,
+     1.88
+    ],
+    [
+     "lights,",
+     1.88,
+     2.38
+    ],
+    [
+     "or",
+     2.38,
+     2.54
+    ],
+    [
+     "a",
+     2.54,
+     2.57
+    ],
+    [
+     "rainbow?",
+     2.57,
+     3.31
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: lights or rainbow",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "Poppy, wake up! Gently, gently. The sky is dancing!",
+   "t0": 251.875,
+   "t1": 256.5625,
+   "v0": 252.061166666667,
+   "dur": 4.056958333333333,
+   "words": [
+    [
+     "Poppy,",
+     0.0,
+     0.48
+    ],
+    [
+     "wake",
+     0.48,
+     0.77
+    ],
+    [
+     "up!",
+     0.77,
+     1.1
+    ],
+    [
+     "Gently,",
+     1.45,
+     1.88
+    ],
+    [
+     "gently.",
+     1.88,
+     2.51
+    ],
+    [
+     "The",
+     2.51,
+     2.67
+    ],
+    [
+     "sky",
+     2.67,
+     3.13
+    ],
+    [
+     "is",
+     3.13,
+     3.35
+    ],
+    [
+     "dancing!",
+     3.35,
+     4.057
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo wakes Poppy gently",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "Oh! The dancing sky! It is so beautiful!",
+   "t0": 256.5625,
+   "t1": 259.375,
+   "v0": 256.6381250000003,
+   "dur": 2.4130833333333332,
+   "words": [
+    [
+     "Oh!",
+     0.07,
+     0.26
+    ],
+    [
+     "The",
+     0.26,
+     0.36
+    ],
+    [
+     "dancing",
+     0.36,
+     0.83
+    ],
+    [
+     "sky!",
+     0.83,
+     1.23
+    ],
+    [
+     "It",
+     1.23,
+     1.37
+    ],
+    [
+     "is",
+     1.37,
+     1.49
+    ],
+    [
+     "so",
+     1.49,
+     1.65
+    ],
+    [
+     "beautiful!",
+     1.65,
+     2.41
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: the dancing sky!",
+   "who": "poppy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Most northern lights are green. Some are pink, or purple. They ripple and move across the sky, like a waving curtain.",
+   "t0": 259.375,
+   "t1": 268.4375,
+   "v0": 259.57120833333363,
+   "dur": 8.581958333333333,
+   "words": [
+    [
+     "Most",
+     0.0,
+     0.26
+    ],
+    [
+     "northern",
+     0.26,
+     0.72
+    ],
+    [
+     "lights",
+     0.72,
+     1.11
+    ],
+    [
+     "are",
+     1.11,
+     1.22
+    ],
+    [
+     "green.",
+     1.22,
+     1.83
+    ],
+    [
+     "Some",
+     2.34,
+     2.67
+    ],
+    [
+     "are",
+     2.67,
+     2.8
+    ],
+    [
+     "pink,",
+     2.8,
+     3.3
+    ],
+    [
+     "or",
+     3.3,
+     3.56
+    ],
+    [
+     "purple.",
+     3.56,
+     4.18
+    ],
+    [
+     "They",
+     4.67,
+     4.84
+    ],
+    [
+     "ripple",
+     4.84,
+     5.36
+    ],
+    [
+     "and",
+     5.36,
+     5.53
+    ],
+    [
+     "move",
+     5.53,
+     5.82
+    ],
+    [
+     "across",
+     5.82,
+     6.28
+    ],
+    [
+     "the",
+     6.28,
+     6.36
+    ],
+    [
+     "sky,",
+     6.36,
+     6.96
+    ],
+    [
+     "like",
+     7.18,
+     7.34
+    ],
+    [
+     "a",
+     7.34,
+     7.39
+    ],
+    [
+     "waving",
+     7.39,
+     7.97
+    ],
+    [
+     "curtain.",
+     7.97,
+     8.58
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: mostly green, they ripple like a curtain",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "What color are most northern lights? Green, or orange?",
+   "t0": 268.4375,
+   "t1": 275.9375,
+   "v0": 268.67316666666693,
+   "dur": 3.769416666666667,
+   "words": [
+    [
+     "What",
+     0.01,
+     0.21
+    ],
+    [
+     "color",
+     0.21,
+     0.59
+    ],
+    [
+     "are",
+     0.59,
+     0.66
+    ],
+    [
+     "most",
+     0.66,
+     0.93
+    ],
+    [
+     "northern",
+     0.93,
+     1.35
+    ],
+    [
+     "lights?",
+     1.35,
+     1.87
+    ],
+    [
+     "Green,",
+     2.22,
+     2.9
+    ],
+    [
+     "or",
+     2.9,
+     3.1
+    ],
+    [
+     "orange?",
+     3.1,
+     3.769
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: green or orange",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "Can you sway, like the dancing sky? Sway, sway, sway!",
+   "t0": 275.9375,
+   "t1": 283.125,
+   "v0": 276.16258333333354,
+   "dur": 3.786125,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "you",
+     0.2,
+     0.33
+    ],
+    [
+     "sway,",
+     0.33,
+     0.77
+    ],
+    [
+     "like",
+     0.77,
+     0.93
+    ],
+    [
+     "the",
+     0.93,
+     1.02
+    ],
+    [
+     "dancing",
+     1.02,
+     1.55
+    ],
+    [
+     "sky?",
+     1.55,
+     2.06
+    ],
+    [
+     "Sway,",
+     2.44,
+     2.84
+    ],
+    [
+     "sway,",
+     2.84,
+     3.23
+    ],
+    [
+     "sway!",
+     3.23,
+     3.786
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: sway",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "Green lights dancing, way up high. Take turns, friends, and watch the sky!",
+   "t0": 283.125,
+   "t1": 288.125,
+   "v0": 283.46870833333355,
+   "dur": 4.198458333333333,
+   "words": [
+    [
+     "Green",
+     0.03,
+     0.31
+    ],
+    [
+     "lights",
+     0.31,
+     0.62
+    ],
+    [
+     "dancing,",
+     0.62,
+     1.18
+    ],
+    [
+     "way",
+     1.18,
+     1.38
+    ],
+    [
+     "up",
+     1.38,
+     1.51
+    ],
+    [
+     "high.",
+     1.51,
+     2.11
+    ],
+    [
+     "Take",
+     2.11,
+     2.3
+    ],
+    [
+     "turns,",
+     2.3,
+     2.77
+    ],
+    [
+     "friends,",
+     2.77,
+     3.16
+    ],
+    [
+     "and",
+     3.16,
+     3.26
+    ],
+    [
+     "watch",
+     3.26,
+     3.57
+    ],
+    [
+     "the",
+     3.57,
+     3.65
+    ],
+    [
+     "sky!",
+     3.65,
+     4.198
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the dancing sky rhyme",
+   "who": "poppy",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "",
+   "t0": 288.125,
+   "t1": 298.75,
+   "v0": 288.75,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: the dancing sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "nest_lights",
+   "say": "Did Poppy see the dancing sky? Yes, or no?",
+   "t0": 298.75,
+   "t1": 305.625,
+   "v0": 298.87,
+   "dur": 3.378041666666667,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.17
+    ],
+    [
+     "Poppy",
+     0.17,
+     0.6
+    ],
+    [
+     "see",
+     0.6,
+     0.8
+    ],
+    [
+     "the",
+     0.8,
+     0.88
+    ],
+    [
+     "dancing",
+     0.88,
+     1.39
+    ],
+    [
+     "sky?",
+     1.39,
+     1.97
+    ],
+    [
+     "Yes,",
+     2.34,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     2.97
+    ],
+    [
+     "no?",
+     2.97,
+     3.378
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did she see it yes or no",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "The lights dance, and dance, over the snowy hill. The three friends watch together, snuggled up close.",
+   "t0": 305.625,
+   "t1": 313.4375,
+   "v0": 305.96804166666664,
+   "dur": 7.107541666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "lights",
+     0.11,
+     0.59
+    ],
+    [
+     "dance,",
+     0.59,
+     1.17
+    ],
+    [
+     "and",
+     1.17,
+     1.4
+    ],
+    [
+     "dance,",
+     1.4,
+     1.92
+    ],
+    [
+     "over",
+     1.92,
+     2.12
+    ],
+    [
+     "the",
+     2.12,
+     2.2
+    ],
+    [
+     "snowy",
+     2.2,
+     2.73
+    ],
+    [
+     "hill.",
+     2.73,
+     3.16
+    ],
+    [
+     "The",
+     3.83,
+     3.9
+    ],
+    [
+     "three",
+     3.9,
+     4.24
+    ],
+    [
+     "friends",
+     4.24,
+     4.69
+    ],
+    [
+     "watch",
+     4.69,
+     5.06
+    ],
+    [
+     "together,",
+     5.06,
+     5.64
+    ],
+    [
+     "snuggled",
+     5.74,
+     6.34
+    ],
+    [
+     "up",
+     6.34,
+     6.53
+    ],
+    [
+     "close.",
+     6.53,
+     7.108
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the three friends watch together",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "Thank you, Tumble! Thank you, Milo! You watched the sky for me.",
+   "t0": 313.4375,
+   "t1": 316.875,
+   "v0": 313.5955833333333,
+   "dur": 3.089875,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.31
+    ],
+    [
+     "you,",
+     0.31,
+     0.43
+    ],
+    [
+     "Tumble!",
+     0.43,
+     0.87
+    ],
+    [
+     "Thank",
+     0.87,
+     1.12
+    ],
+    [
+     "you,",
+     1.12,
+     1.24
+    ],
+    [
+     "Milo!",
+     1.24,
+     1.7
+    ],
+    [
+     "You",
+     1.7,
+     1.88
+    ],
+    [
+     "watched",
+     1.88,
+     2.19
+    ],
+    [
+     "the",
+     2.19,
+     2.26
+    ],
+    [
+     "sky",
+     2.26,
+     2.57
+    ],
+    [
+     "for",
+     2.57,
+     2.72
+    ],
+    [
+     "me.",
+     2.72,
+     3.09
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Poppy: thank you",
+   "who": "poppy",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "And you had the best idea, Poppy. Taking turns!",
+   "t0": 316.875,
+   "t1": 320.3125,
+   "v0": 317.2054583333333,
+   "dur": 2.7803333333333335,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.12
+    ],
+    [
+     "you",
+     0.12,
+     0.22
+    ],
+    [
+     "had",
+     0.22,
+     0.4
+    ],
+    [
+     "the",
+     0.4,
+     0.47
+    ],
+    [
+     "best",
+     0.47,
+     0.77
+    ],
+    [
+     "idea,",
+     0.77,
+     1.19
+    ],
+    [
+     "Poppy.",
+     1.19,
+     1.73
+    ],
+    [
+     "Taking",
+     1.73,
+     2.14
+    ],
+    [
+     "turns!",
+     2.14,
+     2.78
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tumble: the best idea",
+   "who": "tumble",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "When something is hard to do alone, good friends can take turns, and help.",
+   "t0": 320.3125,
+   "t1": 325.625,
+   "v0": 320.5057916666666,
+   "dur": 4.840916666666667,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.16
+    ],
+    [
+     "something",
+     0.16,
+     0.69
+    ],
+    [
+     "is",
+     0.69,
+     0.83
+    ],
+    [
+     "hard",
+     0.83,
+     1.16
+    ],
+    [
+     "to",
+     1.16,
+     1.25
+    ],
+    [
+     "do",
+     1.25,
+     1.41
+    ],
+    [
+     "alone,",
+     1.41,
+     1.96
+    ],
+    [
+     "good",
+     2.4,
+     2.57
+    ],
+    [
+     "friends",
+     2.57,
+     3.02
+    ],
+    [
+     "can",
+     3.02,
+     3.19
+    ],
+    [
+     "take",
+     3.19,
+     3.48
+    ],
+    [
+     "turns,",
+     3.48,
+     4.22
+    ],
+    [
+     "and",
+     4.22,
+     4.38
+    ],
+    [
+     "help.",
+     4.38,
+     4.84
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "Do you remember? Where are northern lights often seen? Near the North Pole, or at the beach?",
+   "t0": 325.625,
+   "t1": 335.3125,
+   "v0": 325.86670833333324,
+   "dur": 5.821916666666667,
+   "words": [
+    [
+     "Do",
+     0.01,
+     0.1
+    ],
+    [
+     "you",
+     0.1,
+     0.22
+    ],
+    [
+     "remember?",
+     0.22,
+     0.86
+    ],
+    [
+     "Where",
+     1.07,
+     1.25
+    ],
+    [
+     "are",
+     1.25,
+     1.28
+    ],
+    [
+     "northern",
+     1.28,
+     1.73
+    ],
+    [
+     "lights",
+     1.73,
+     2.09
+    ],
+    [
+     "often",
+     2.09,
+     2.54
+    ],
+    [
+     "seen?",
+     2.54,
+     3.09
+    ],
+    [
+     "Near",
+     3.61,
+     3.82
+    ],
+    [
+     "the",
+     3.82,
+     3.92
+    ],
+    [
+     "North",
+     3.92,
+     4.28
+    ],
+    [
+     "Pole,",
+     4.28,
+     4.78
+    ],
+    [
+     "or",
+     4.78,
+     5.04
+    ],
+    [
+     "at",
+     5.04,
+     5.16
+    ],
+    [
+     "the",
+     5.16,
+     5.25
+    ],
+    [
+     "beach?",
+     5.25,
+     5.82
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: North Pole or beach",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "And when are they best seen? On a sunny day, or on a dark night?",
+   "t0": 335.3125,
+   "t1": 343.125,
+   "v0": 335.40862499999986,
+   "dur": 4.075375,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.2
+    ],
+    [
+     "when",
+     0.2,
+     0.38
+    ],
+    [
+     "are",
+     0.38,
+     0.44
+    ],
+    [
+     "they",
+     0.44,
+     0.61
+    ],
+    [
+     "best",
+     0.61,
+     0.93
+    ],
+    [
+     "seen?",
+     0.93,
+     1.38
+    ],
+    [
+     "On",
+     1.83,
+     1.96
+    ],
+    [
+     "a",
+     1.96,
+     2.0
+    ],
+    [
+     "sunny",
+     2.0,
+     2.41
+    ],
+    [
+     "day,",
+     2.41,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     3.02
+    ],
+    [
+     "on",
+     3.02,
+     3.16
+    ],
+    [
+     "a",
+     3.16,
+     3.21
+    ],
+    [
+     "dark",
+     3.21,
+     3.58
+    ],
+    [
+     "night?",
+     3.58,
+     4.07
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sunny day or dark night",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "hilltop_lights",
+   "say": "Green lights dancing, way up high. Take turns, friends, and watch the sky!",
+   "t0": 343.125,
+   "t1": 349.0625,
+   "v0": 343.20399999999984,
+   "dur": 5.407416666666666,
+   "words": [
+    [
+     "Green",
+     0.01,
+     0.39
+    ],
+    [
+     "lights",
+     0.39,
+     0.72
+    ],
+    [
+     "dancing,",
+     0.72,
+     1.38
+    ],
+    [
+     "way",
+     1.51,
+     1.73
+    ],
+    [
+     "up",
+     1.73,
+     1.85
+    ],
+    [
+     "high.",
+     1.85,
+     2.36
+    ],
+    [
+     "Take",
+     2.85,
+     3.13
+    ],
+    [
+     "turns,",
+     3.13,
+     3.74
+    ],
+    [
+     "friends,",
+     3.74,
+     4.21
+    ],
+    [
+     "and",
+     4.21,
+     4.31
+    ],
+    [
+     "watch",
+     4.31,
+     4.69
+    ],
+    [
+     "the",
+     4.69,
+     4.77
+    ],
+    [
+     "sky!",
+     4.77,
+     5.407
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the closing rhyme",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "nest_lights",
+   "say": "",
+   "t0": 349.0625,
+   "t1": 354.375,
+   "v0": 349.375,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "nest_lights",
+   "say": "Next time: Milo and the Deep Blue Sea! See you on the next adventure, friends!",
+   "t0": 354.375,
+   "t1": 360.625,
+   "v0": 354.495,
+   "dur": 5.658333333333333,
+   "words": [
+    [
+     "Next",
+     0.01,
+     0.36
+    ],
+    [
+     "time:",
+     0.36,
+     0.83
+    ],
+    [
+     "Milo",
+     1.1,
+     1.69
+    ],
+    [
+     "and",
+     1.69,
+     1.81
+    ],
+    [
+     "the",
+     1.81,
+     1.87
+    ],
+    [
+     "Deep",
+     1.87,
+     2.22
+    ],
+    [
+     "Blue",
+     2.22,
+     2.46
+    ],
+    [
+     "Sea!",
+     2.46,
+     2.99
+    ],
+    [
+     "See",
+     3.42,
+     3.65
+    ],
+    [
+     "you",
+     3.65,
+     3.84
+    ],
+    [
+     "on",
+     3.84,
+     4.0
+    ],
+    [
+     "the",
+     4.0,
+     4.07
+    ],
+    [
+     "next",
+     4.07,
+     4.44
+    ],
+    [
+     "adventure,",
+     4.44,
+     5.0
+    ],
+    [
+     "friends!",
+     5.0,
+     5.658
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: next adventure",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 360.625,
+   "t1": 364.0625,
+   "v0": 361.25,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 364.0625,
+   "t1": 367.1875,
+   "v0": 364.375,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 367.1875,
+   "t1": 372.5,
+   "v0": 367.5,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 372.5,
+   "t1": 375.4071666666666,
+   "v0": 372.62,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

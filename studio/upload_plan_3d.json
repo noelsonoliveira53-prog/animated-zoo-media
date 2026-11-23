@@ -3523,5 +3523,18 @@
   "thumb_text": "TOO SMALL!",
   "seconds": 339.7,
   "bookends": true
+ },
+ {
+  "file": "cartoon/za_ep14.mp4",
+  "title": "Poppy and the Dancing Sky",
+  "date": "2026-11-25",
+  "time": "1:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 23 about 9:00 AM ET by the scheduled morning adventure build (https://claude.ai/code/session_014CFVfZKcbUYhCEdWzrCGV7). Run note docs/cartoon/runs/za_ep14.md. NOT uploaded.",
+  "theme_title": "Poppy and the Dancing Sky"
  }
 ]

@@ -329,7 +329,7 @@ SHOTS = [
 # thumbnail (thumb.py): the promise of the first shot: green lights over a very sleepy cub; 2 words, none of the title's words, no watermark
 THUMBS = {
     "za_ep14": {"place": "hilltop_lights", "cam": (1000, 560, 1400),
-                "actors": [("bear_belly", 900, 880, 1.0, False, '')],
+                "actors": [("bear_belly", 900, 880, 1.0, False, "gsap.set('#P-eye-lid',{opacity:1});gsap.set('#P-neck',{rotation:7,svgOrigin:'190 -330'});")],
                 "props": [(A.zzz, 1240, 440, 1.2)],
                 "words": [("WAKE UP!", 640, 300, 170, "sun", -5)]},
 }

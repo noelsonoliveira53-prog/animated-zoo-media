@@ -3526,15 +3526,36 @@
  },
  {
   "file": "cartoon/za_ep14.mp4",
-  "title": "Poppy and the Dancing Sky",
+  "title": "Can Poppy Stay Awake to See the Dancing Sky?",
   "date": "2026-11-25",
   "time": "1:30 PM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 23 about 9:00 AM ET by the scheduled morning adventure build (https://claude.ai/code/session_014CFVfZKcbUYhCEdWzrCGV7). Run note docs/cartoon/runs/za_ep14.md. NOT uploaded.",
-  "theme_title": "Poppy and the Dancing Sky"
+  "note": "Claimed and built Nov 23 2026 by the scheduled morning adventure build (https://claude.ai/code/session_014CFVfZKcbUYhCEdWzrCGV7): facts read at the source Nov 23 about 9:20 AM ET (NASA Space Place, NOAA NESDIS, NOAA NCEI, NOAA SWPC, NASA Science; quotes in the episode docstring), plan check passing, listen.py --episode clean inside the tunes, stills of every shot in six rounds plus start and middle stills, rendered in 4K, AV1 4K 376.6 s (346 s own content + the main intro at the beginning and at the end), 88 MB; pace (0 stretches over 8 s), watermark and corner sheet, bookends, frames of the finished render looked at (middle and end of every shot, every answer reveal 1.1 s and 0.3 s before the cut, the rhyme and both tune shots), listen.py on the file (measures, does not hear), thumbnail looked at full size and at 168x94, review.py PASS. Night places and the northern lights are new art; nobody has heard the voices or tunes. Run note docs/cartoon/runs/za_ep14.md. Cartoon adventure format approved by Noelson Nov 16 3:36 PM. NOT uploaded: the daily run schedules it.",
+  "theme_title": "Poppy and the Dancing Sky",
+  "description": "Can Poppy stay awake to see the dancing sky? Tonight the green northern lights will shine over the Arctic, but Poppy the polar bear cub always falls asleep first! She counts the stars, she dances in the snow, she walks up the hill... and every time, she falls asleep. Then Poppy has an idea: her friends Milo the bluebird and Tumble the baby elephant can take turns keeping watch. A gentle Arctic adventure for ages 2-6 about teamwork and taking turns, with questions to answer, a count-along and a little tune.\nKids see how the northern lights are often seen near the North Pole, how they are best seen on dark nights when clouds do not hide them, and how most northern lights are green and ripple across the sky like a waving curtain.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNASA Space Place (What Is an Aurora?); NOAA NESDIS (What is an Aurora?); NOAA National Centers for Environmental Information (auroras); NOAA Space Weather Prediction Center (Aurora Tutorial); NASA Science (Auroras).",
+  "tags": [
+   "northern lights for kids",
+   "aurora for kids",
+   "polar bear cub",
+   "polar bear for kids",
+   "arctic animals for kids",
+   "bedtime story for kids",
+   "taking turns",
+   "baby elephant",
+   "animal stories for kids",
+   "friendship story for kids",
+   "kids adventure cartoon",
+   "preschool",
+   "toddlers",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb": "brand/zoo/thumb_za_ep14.jpg",
+  "thumb_text": "WAKE UP!",
+  "seconds": 376.6
  }
 ]

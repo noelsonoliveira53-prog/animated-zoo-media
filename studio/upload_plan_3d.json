@@ -3592,7 +3592,7 @@
   "date": "2026-11-28",
   "time": "3:30 PM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3617,7 +3617,10 @@
   ],
   "thumb": "brand/zoo/thumb_za_ep15.jpg",
   "thumb_text": "DOWN THERE?",
-  "seconds": 352.9
+  "seconds": 352.9,
+  "video_id": "xfej7cES_W8",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 3:30 PM)"
  },
  {
   "file": "cartoon/za_ep16.mp4",

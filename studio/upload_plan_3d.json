@@ -3721,7 +3721,11 @@
   "series": "Animal Facts with Milo",
   "video_id": "rHG3ICDJCHc",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 9:30 AM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 9:30 AM)",
+  "playlists": [
+   "every",
+   "facts"
+  ]
  },
  {
   "file": "cartoon/zc_ep16.mp4",

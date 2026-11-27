@@ -3696,7 +3696,7 @@
   "date": "2026-11-29",
   "time": "9:30 AM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3718,7 +3718,10 @@
   "thumb": "brand/zoo/thumb_zc_ep15.jpg",
   "thumb_text": "SEE-THROUGH?!",
   "seconds": 358.3,
-  "series": "Animal Facts with Milo"
+  "series": "Animal Facts with Milo",
+  "video_id": "rHG3ICDJCHc",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 9:30 AM)"
  },
  {
   "file": "cartoon/zc_ep16.mp4",

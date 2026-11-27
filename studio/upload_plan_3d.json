@@ -3460,7 +3460,11 @@
   "seconds": 367.2,
   "video_id": "cc4wBn-mWR0",
   "thumb_set": true,
-  "uploaded": "2026-11-27 2:41 PM ET (Studio: will be set to public on November 27, 2026 at 3:30 PM)"
+  "uploaded": "2026-11-27 2:41 PM ET (Studio: will be set to public on November 27, 2026 at 3:30 PM)",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  },
  {
   "file": "cartoon/zc_ep13.mp4",
@@ -3494,7 +3498,11 @@
   "bookends": true,
   "video_id": "WpN-Qq5QdPE",
   "thumb_set": true,
-  "uploaded": "2026-11-27 2:45 PM ET (Studio: will be set to public on November 27, 2026 at 5:30 PM)"
+  "uploaded": "2026-11-27 2:45 PM ET (Studio: will be set to public on November 27, 2026 at 5:30 PM)",
+  "playlists": [
+   "every",
+   "facts"
+  ]
  },
  {
   "file": "cartoon/za_ep13.mp4",

@@ -1,0 +1,1763 @@
+{
+ "id": "zc_ep16_short3",
+ "total": 88.32316666666671,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125
+ ],
+ "plan": {
+  "length": 88.3,
+  "shots": 18,
+  "visual_changes": 78,
+  "mean_gap": 1.13,
+  "longest_gap": 3.79,
+  "longest_gap_at": 61.8,
+  "over_6s": [],
+  "places": [
+   "reef",
+   "ocean",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper_pink"
+  ],
+  "questions": 10,
+  "longest_without_question": 26.9,
+  "first_words_at": 0.42,
+  "shot_mean": 4.91,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "179/179",
+  "sync": {
+   "pauses_checked": 13,
+   "onset_err_mean_ms": 21.5,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the coral garden hook: how long"
+  ],
+  [
+   0.65,
+   "action",
+   "the clock's hand goes round and round"
+  ],
+  [
+   2.41,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the coral garden secret 3"
+  ],
+  [
+   4.86,
+   "word",
+   "3"
+  ],
+  [
+   6.06,
+   "action",
+   "tur looks"
+  ],
+  [
+   8.91,
+   "word",
+   "?"
+  ],
+  [
+   9.38,
+   "new shot",
+   "the coral garden question 3a"
+  ],
+  [
+   9.84,
+   "sign",
+   "SECONDS"
+  ],
+  [
+   10.19,
+   "sign",
+   "HOURS"
+  ],
+  [
+   12.41,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.08,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.24,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   13.75,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.24,
+   "answer",
+   "HOURS"
+  ],
+  [
+   15.31,
+   "new shot",
+   "the coral garden for hours"
+  ],
+  [
+   15.87,
+   "action",
+   "the clock's hand goes round and round"
+  ],
+  [
+   15.87,
+   "word",
+   "HOURS!"
+  ],
+  [
+   19.25,
+   "action",
+   "the clock's hand goes round and round"
+  ],
+  [
+   20.31,
+   "new shot",
+   "the coral garden a long time"
+  ],
+  [
+   20.87,
+   "action",
+   "tur nods"
+  ],
+  [
+   20.87,
+   "word",
+   "SO LONG!"
+  ],
+  [
+   23.44,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   23.44,
+   "new place",
+   "the blue ocean comes up more often"
+  ],
+  [
+   25.21,
+   "action",
+   "tur looks"
+  ],
+  [
+   26.54,
+   "action",
+   "tur looks"
+  ],
+  [
+   26.54,
+   "word",
+   "UP MORE!"
+  ],
+  [
+   27.81,
+   "new place",
+   "the coral garden sleep under water"
+  ],
+  [
+   29.93,
+   "action",
+   "Tula closes her eyes"
+  ],
+  [
+   29.93,
+   "word",
+   "SLEEP!"
+  ],
+  [
+   31.56,
+   "new shot",
+   "the coral garden resting under a rock"
+  ],
+  [
+   31.61,
+   "action",
+   "Tula closes her eyes"
+  ],
+  [
+   32.48,
+   "picture",
+   "zz"
+  ],
+  [
+   34.25,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   34.25,
+   "word",
+   "SLEEPY!"
+  ],
+  [
+   36.25,
+   "new shot",
+   "the coral garden let Tula rest"
+  ],
+  [
+   36.3,
+   "action",
+   "Tula closes her eyes"
+  ],
+  [
+   37.25,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   37.25,
+   "word",
+   "QUIET!"
+  ],
+  [
+   39.69,
+   "new shot",
+   "the coral garden how does she save air"
+  ],
+  [
+   40.83,
+   "action",
+   "tur looks"
+  ],
+  [
+   41.77,
+   "word",
+   "?"
+  ],
+  [
+   45.0,
+   "new place",
+   "the picture board (pink) board: slow heart"
+  ],
+  [
+   45.43,
+   "action",
+   "the dot travels along the slow heartbeat"
+  ],
+  [
+   45.43,
+   "action",
+   "the heart beats, slowly"
+  ],
+  [
+   46.95,
+   "word",
+   "SLOW!"
+  ],
+  [
+   48.29,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   49.69,
+   "new shot",
+   "the picture board (pink) board: count slow beats"
+  ],
+  [
+   49.81,
+   "action",
+   "the dot travels along the slow heartbeat"
+  ],
+  [
+   51.76,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   51.76,
+   "word",
+   "1"
+  ],
+  [
+   52.28,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   52.28,
+   "word",
+   "2"
+  ],
+  [
+   53.12,
+   "new place",
+   "the coral garden air lasts long"
+  ],
+  [
+   55.61,
+   "action",
+   "tur nods"
+  ],
+  [
+   55.61,
+   "word",
+   "SLOW!"
+  ],
+  [
+   58.12,
+   "new place",
+   "the zoo gate tap slowly"
+  ],
+  [
+   58.68,
+   "action",
+   "milo hops"
+  ],
+  [
+   58.68,
+   "word",
+   "TAP!"
+  ],
+  [
+   61.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   61.83,
+   "action",
+   "milo hops"
+  ],
+  [
+   65.62,
+   "new place",
+   "the coral garden say it: a long time"
+  ],
+  [
+   65.87,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   69.23,
+   "action",
+   "tur nods"
+  ],
+  [
+   70.62,
+   "new place",
+   "the zoo gate rest your head"
+  ],
+  [
+   74.29,
+   "action",
+   "milo hops"
+  ],
+  [
+   74.29,
+   "word",
+   "NIGHT, NIGHT!"
+  ],
+  [
+   77.81,
+   "new place",
+   "the coral garden question 3b"
+  ],
+  [
+   77.86,
+   "action",
+   "Tula closes her eyes"
+  ],
+  [
+   81.11,
+   "sign",
+   "YES"
+  ],
+  [
+   81.46,
+   "sign",
+   "NO"
+  ],
+  [
+   82.79,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.47,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.14,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.63,
+   "answer",
+   "YES"
+  ],
+  [
+   85.94,
+   "new shot",
+   "the coral garden you remembered"
+  ],
+  [
+   86.08,
+   "word",
+   "YES!"
+  ],
+  [
+   86.84,
+   "action",
+   "tur nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "reef",
+   "say": "How long can a sea turtle hold its breath?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.4945416666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.23
+    ],
+    [
+     "long",
+     0.23,
+     0.6
+    ],
+    [
+     "can",
+     0.6,
+     0.72
+    ],
+    [
+     "a",
+     0.72,
+     0.77
+    ],
+    [
+     "sea",
+     0.77,
+     1.05
+    ],
+    [
+     "turtle",
+     1.05,
+     1.54
+    ],
+    [
+     "hold",
+     1.54,
+     1.82
+    ],
+    [
+     "its",
+     1.82,
+     1.99
+    ],
+    [
+     "breath?",
+     1.99,
+     2.49
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: how long",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Breathing secret number three! How long can a resting sea turtle hold its breath?",
+   "t0": 3.125,
+   "t1": 9.375,
+   "v0": 3.4545416666666666,
+   "dur": 5.465375,
+   "words": [
+    [
+     "Breathing",
+     0.0,
+     0.45
+    ],
+    [
+     "secret",
+     0.45,
+     1.09
+    ],
+    [
+     "number",
+     1.09,
+     1.41
+    ],
+    [
+     "three!",
+     1.41,
+     1.96
+    ],
+    [
+     "How",
+     2.42,
+     2.61
+    ],
+    [
+     "long",
+     2.61,
+     3.01
+    ],
+    [
+     "can",
+     3.01,
+     3.14
+    ],
+    [
+     "a",
+     3.14,
+     3.18
+    ],
+    [
+     "resting",
+     3.18,
+     3.7
+    ],
+    [
+     "sea",
+     3.7,
+     4.0
+    ],
+    [
+     "turtle",
+     4.0,
+     4.46
+    ],
+    [
+     "hold",
+     4.46,
+     4.74
+    ],
+    [
+     "its",
+     4.74,
+     4.92
+    ],
+    [
+     "breath?",
+     4.92,
+     5.46
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "secret 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Just a few seconds? Or for hours?",
+   "t0": 9.375,
+   "t1": 15.3125,
+   "v0": 9.459916666666665,
+   "dur": 2.46,
+   "words": [
+    [
+     "Just",
+     0.03,
+     0.34
+    ],
+    [
+     "a",
+     0.34,
+     0.38
+    ],
+    [
+     "few",
+     0.38,
+     0.58
+    ],
+    [
+     "seconds?",
+     0.58,
+     1.22
+    ],
+    [
+     "Or",
+     1.41,
+     1.57
+    ],
+    [
+     "for",
+     1.57,
+     1.78
+    ],
+    [
+     "hours?",
+     1.78,
+     2.46
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "For hours! A resting sea turtle can hold its breath, for hours!",
+   "t0": 15.3125,
+   "t1": 20.3125,
+   "v0": 15.659916666666666,
+   "dur": 4.2367083333333335,
+   "words": [
+    [
+     "For",
+     0.0,
+     0.21
+    ],
+    [
+     "hours!",
+     0.21,
+     0.86
+    ],
+    [
+     "A",
+     1.17,
+     1.24
+    ],
+    [
+     "resting",
+     1.24,
+     1.8
+    ],
+    [
+     "sea",
+     1.8,
+     2.08
+    ],
+    [
+     "turtle",
+     2.08,
+     2.41
+    ],
+    [
+     "can",
+     2.41,
+     2.55
+    ],
+    [
+     "hold",
+     2.55,
+     2.8
+    ],
+    [
+     "its",
+     2.8,
+     2.95
+    ],
+    [
+     "breath,",
+     2.95,
+     3.4
+    ],
+    [
+     "for",
+     3.4,
+     3.59
+    ],
+    [
+     "hours!",
+     3.59,
+     4.237
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "for hours",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "That is a long, long time!",
+   "t0": 20.3125,
+   "t1": 23.4375,
+   "v0": 20.436625000000003,
+   "dur": 1.7912083333333333,
+   "words": [
+    [
+     "That",
+     0.0,
+     0.24
+    ],
+    [
+     "is",
+     0.24,
+     0.39
+    ],
+    [
+     "a",
+     0.39,
+     0.43
+    ],
+    [
+     "long,",
+     0.43,
+     0.93
+    ],
+    [
+     "long",
+     0.93,
+     1.23
+    ],
+    [
+     "time!",
+     1.23,
+     1.79
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "a long time",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "When it swims and looks for food, it comes up more often.",
+   "t0": 23.4375,
+   "t1": 27.8125,
+   "v0": 23.76783333333334,
+   "dur": 3.68725,
+   "words": [
+    [
+     "When",
+     0.01,
+     0.15
+    ],
+    [
+     "it",
+     0.15,
+     0.28
+    ],
+    [
+     "swims",
+     0.28,
+     0.93
+    ],
+    [
+     "and",
+     0.93,
+     1.07
+    ],
+    [
+     "looks",
+     1.07,
+     1.33
+    ],
+    [
+     "for",
+     1.33,
+     1.44
+    ],
+    [
+     "food,",
+     1.44,
+     2.01
+    ],
+    [
+     "it",
+     2.35,
+     2.47
+    ],
+    [
+     "comes",
+     2.47,
+     2.77
+    ],
+    [
+     "up",
+     2.77,
+     2.92
+    ],
+    [
+     "more",
+     2.92,
+     3.17
+    ],
+    [
+     "often.",
+     3.17,
+     3.687
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "comes up more often",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "And look! Sea turtles can even sleep, under the water!",
+   "t0": 27.8125,
+   "t1": 31.5625,
+   "v0": 27.99508333333334,
+   "dur": 3.2960416666666665,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.18
+    ],
+    [
+     "look!",
+     0.18,
+     0.6
+    ],
+    [
+     "Sea",
+     0.81,
+     1.04
+    ],
+    [
+     "turtles",
+     1.04,
+     1.56
+    ],
+    [
+     "can",
+     1.56,
+     1.69
+    ],
+    [
+     "even",
+     1.69,
+     1.93
+    ],
+    [
+     "sleep,",
+     1.93,
+     2.48
+    ],
+    [
+     "under",
+     2.48,
+     2.66
+    ],
+    [
+     "the",
+     2.66,
+     2.76
+    ],
+    [
+     "water!",
+     2.76,
+     3.296
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "sleep under water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Tula is resting under a rock. Sleepy, sleepy turtle.",
+   "t0": 31.5625,
+   "t1": 36.25,
+   "v0": 31.83112500000001,
+   "dur": 4.14575,
+   "words": [
+    [
+     "Tula",
+     0.0,
+     0.48
+    ],
+    [
+     "is",
+     0.48,
+     0.65
+    ],
+    [
+     "resting",
+     0.65,
+     1.16
+    ],
+    [
+     "under",
+     1.16,
+     1.41
+    ],
+    [
+     "a",
+     1.41,
+     1.44
+    ],
+    [
+     "rock.",
+     1.44,
+     2.04
+    ],
+    [
+     "Sleepy,",
+     2.42,
+     3.12
+    ],
+    [
+     "sleepy",
+     3.12,
+     3.61
+    ],
+    [
+     "turtle.",
+     3.61,
+     4.146
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "resting under a rock",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Let's be very quiet, and let Tula rest.",
+   "t0": 36.25,
+   "t1": 39.6875,
+   "v0": 36.516875000000006,
+   "dur": 2.8235,
+   "words": [
+    [
+     "Let's",
+     0.0,
+     0.3
+    ],
+    [
+     "be",
+     0.3,
+     0.42
+    ],
+    [
+     "very",
+     0.42,
+     0.73
+    ],
+    [
+     "quiet,",
+     0.73,
+     1.38
+    ],
+    [
+     "and",
+     1.55,
+     1.69
+    ],
+    [
+     "let",
+     1.69,
+     1.87
+    ],
+    [
+     "Tula",
+     1.87,
+     2.27
+    ],
+    [
+     "rest.",
+     2.27,
+     2.82
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "let Tula rest",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "How does Tula save her air?",
+   "t0": 39.6875,
+   "t1": 45.0,
+   "v0": 39.88037500000001,
+   "dur": 1.888125,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.25
+    ],
+    [
+     "does",
+     0.25,
+     0.52
+    ],
+    [
+     "Tula",
+     0.52,
+     0.95
+    ],
+    [
+     "save",
+     0.95,
+     1.34
+    ],
+    [
+     "her",
+     1.34,
+     1.5
+    ],
+    [
+     "air?",
+     1.5,
+     1.888
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "how does she save air",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Her heart beats very, very slowly. That saves her air!",
+   "t0": 45.0,
+   "t1": 49.6875,
+   "v0": 45.30850000000001,
+   "dur": 3.951791666666667,
+   "words": [
+    [
+     "Her",
+     0.0,
+     0.12
+    ],
+    [
+     "heart",
+     0.12,
+     0.45
+    ],
+    [
+     "beats",
+     0.45,
+     0.74
+    ],
+    [
+     "very,",
+     0.74,
+     1.29
+    ],
+    [
+     "very",
+     1.29,
+     1.64
+    ],
+    [
+     "slowly.",
+     1.64,
+     2.33
+    ],
+    [
+     "That",
+     2.74,
+     2.98
+    ],
+    [
+     "saves",
+     2.98,
+     3.4
+    ],
+    [
+     "her",
+     3.4,
+     3.53
+    ],
+    [
+     "air!",
+     3.53,
+     3.95
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: slow heart",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Count the slow beats with me. One, and two.",
+   "t0": 49.6875,
+   "t1": 53.125,
+   "v0": 49.80029166666667,
+   "dur": 2.945625,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "slow",
+     0.36,
+     0.72
+    ],
+    [
+     "beats",
+     0.72,
+     1.1
+    ],
+    [
+     "with",
+     1.1,
+     1.24
+    ],
+    [
+     "me.",
+     1.24,
+     1.57
+    ],
+    [
+     "One,",
+     1.96,
+     2.29
+    ],
+    [
+     "and",
+     2.29,
+     2.48
+    ],
+    [
+     "two.",
+     2.48,
+     2.946
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "board: count slow beats",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Her heart beats slowly, so her air lasts a long time.",
+   "t0": 53.125,
+   "t1": 58.125,
+   "v0": 53.28591666666667,
+   "dur": 3.7632083333333335,
+   "words": [
+    [
+     "Her",
+     0.01,
+     0.12
+    ],
+    [
+     "heart",
+     0.12,
+     0.44
+    ],
+    [
+     "beats",
+     0.44,
+     0.73
+    ],
+    [
+     "slowly,",
+     0.73,
+     1.37
+    ],
+    [
+     "so",
+     1.7,
+     1.86
+    ],
+    [
+     "her",
+     1.86,
+     2.04
+    ],
+    [
+     "air",
+     2.04,
+     2.32
+    ],
+    [
+     "lasts",
+     2.32,
+     2.75
+    ],
+    [
+     "a",
+     2.75,
+     2.79
+    ],
+    [
+     "long",
+     2.79,
+     3.2
+    ],
+    [
+     "time.",
+     3.2,
+     3.76
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "air lasts long",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you tap slowly, like Tula's heart? Tap, and tap, and tap.",
+   "t0": 58.125,
+   "t1": 65.625,
+   "v0": 58.389125,
+   "dur": 4.545125,
+   "words": [
+    [
+     "Can",
+     0.04,
+     0.18
+    ],
+    [
+     "you",
+     0.18,
+     0.29
+    ],
+    [
+     "tap",
+     0.29,
+     0.65
+    ],
+    [
+     "slowly,",
+     0.65,
+     1.24
+    ],
+    [
+     "like",
+     1.24,
+     1.42
+    ],
+    [
+     "Tula's",
+     1.42,
+     1.88
+    ],
+    [
+     "heart?",
+     1.88,
+     2.34
+    ],
+    [
+     "Tap,",
+     2.73,
+     3.16
+    ],
+    [
+     "and",
+     3.16,
+     3.44
+    ],
+    [
+     "tap,",
+     3.44,
+     3.88
+    ],
+    [
+     "and",
+     3.88,
+     4.09
+    ],
+    [
+     "tap.",
+     4.09,
+     4.54
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "tap slowly",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Say it with me. A sea turtle can hold its breath, for a long time!",
+   "t0": 65.625,
+   "t1": 70.625,
+   "v0": 65.87425,
+   "dur": 4.310708333333333,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.31
+    ],
+    [
+     "it",
+     0.31,
+     0.39
+    ],
+    [
+     "with",
+     0.39,
+     0.57
+    ],
+    [
+     "me.",
+     0.57,
+     0.93
+    ],
+    [
+     "A",
+     1.37,
+     1.42
+    ],
+    [
+     "sea",
+     1.42,
+     1.71
+    ],
+    [
+     "turtle",
+     1.71,
+     2.08
+    ],
+    [
+     "can",
+     2.08,
+     2.23
+    ],
+    [
+     "hold",
+     2.23,
+     2.48
+    ],
+    [
+     "its",
+     2.48,
+     2.64
+    ],
+    [
+     "breath,",
+     2.64,
+     3.12
+    ],
+    [
+     "for",
+     3.12,
+     3.3
+    ],
+    [
+     "a",
+     3.3,
+     3.36
+    ],
+    [
+     "long",
+     3.36,
+     3.73
+    ],
+    [
+     "time!",
+     3.73,
+     4.31
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it: a long time",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Rest your head on your hands, like a sleepy sea turtle. Night, night!",
+   "t0": 70.625,
+   "t1": 77.8125,
+   "v0": 70.72495833333335,
+   "dur": 4.3734166666666665,
+   "words": [
+    [
+     "Rest",
+     0.01,
+     0.37
+    ],
+    [
+     "your",
+     0.37,
+     0.46
+    ],
+    [
+     "head",
+     0.46,
+     0.65
+    ],
+    [
+     "on",
+     0.65,
+     0.76
+    ],
+    [
+     "your",
+     0.76,
+     0.86
+    ],
+    [
+     "hands,",
+     0.86,
+     1.53
+    ],
+    [
+     "like",
+     1.53,
+     1.71
+    ],
+    [
+     "a",
+     1.71,
+     1.75
+    ],
+    [
+     "sleepy",
+     1.75,
+     2.3
+    ],
+    [
+     "sea",
+     2.3,
+     2.54
+    ],
+    [
+     "turtle.",
+     2.54,
+     3.02
+    ],
+    [
+     "Night,",
+     3.57,
+     3.9
+    ],
+    [
+     "night!",
+     3.9,
+     4.37
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "rest your head",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Quick check! Can a sea turtle sleep under the water? Yes, or no?",
+   "t0": 77.8125,
+   "t1": 85.9375,
+   "v0": 78.03837500000003,
+   "dur": 4.267833333333333,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.25
+    ],
+    [
+     "check!",
+     0.25,
+     0.71
+    ],
+    [
+     "Can",
+     0.71,
+     0.87
+    ],
+    [
+     "a",
+     0.87,
+     0.9
+    ],
+    [
+     "sea",
+     0.9,
+     1.18
+    ],
+    [
+     "turtle",
+     1.18,
+     1.56
+    ],
+    [
+     "sleep",
+     1.56,
+     1.91
+    ],
+    [
+     "under",
+     1.91,
+     2.04
+    ],
+    [
+     "the",
+     2.04,
+     2.14
+    ],
+    [
+     "water?",
+     2.14,
+     2.64
+    ],
+    [
+     "Yes,",
+     3.07,
+     3.64
+    ],
+    [
+     "or",
+     3.64,
+     3.82
+    ],
+    [
+     "no?",
+     3.82,
+     4.268
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Yes! You remembered!",
+   "t0": 85.9375,
+   "t1": 87.9231666666667,
+   "v0": 86.04620833333337,
+   "dur": 1.4569583333333334,
+   "words": [
+    [
+     "Yes!",
+     0.03,
+     0.69
+    ],
+    [
+     "You",
+     0.69,
+     0.79
+    ],
+    [
+     "remembered!",
+     0.79,
+     1.457
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you remembered",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

@@ -1,0 +1,48 @@
+{
+ "length": 358.3,
+ "shots": 74,
+ "visual_changes": 465,
+ "mean_gap": 0.77,
+ "longest_gap": 5.08,
+ "longest_gap_at": 79.6,
+ "over_6s": [],
+ "places": [
+  "reef",
+  "surface",
+  "intro_gate",
+  "intro_logo",
+  "ocean",
+  "zoo",
+  "kelp",
+  "zoo_eve"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 34,
+ "longest_without_question": 39.4,
+ "first_words_at": 0.42,
+ "shot_mean": 4.84,
+ "main_intro": {
+  "at": [
+   12.5,
+   342.5
+  ],
+  "seconds": 30.5
+ },
+ "fails": [],
+ "words_placed": "677/677",
+ "sync": {
+  "pauses_checked": 56,
+  "onset_err_mean_ms": 22.3,
+  "onset_err_max_ms": 60.0,
+  "suspect_words": [],
+  "cuts": 73,
+  "cuts_on_the_half_beat": 73,
+  "songs_entering_on_a_beat": "6/6",
+  "process": "3D (beat)"
+ }
+}
+EXIT 0

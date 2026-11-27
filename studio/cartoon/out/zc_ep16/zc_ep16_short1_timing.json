@@ -1,0 +1,1852 @@
+{
+ "id": "zc_ep16_short1",
+ "total": 89.76045833333339,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375
+ ],
+ "plan": {
+  "length": 89.8,
+  "shots": 19,
+  "visual_changes": 86,
+  "mean_gap": 1.04,
+  "longest_gap": 4.98,
+  "longest_gap_at": 50.3,
+  "over_6s": [],
+  "places": [
+   "reef",
+   "surface",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 9,
+  "longest_without_question": 39.4,
+  "first_words_at": 0.42,
+  "shot_mean": 4.72,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "185/185",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 20.0,
+   "onset_err_max_ms": 40.0,
+   "suspect_words": [],
+   "cuts": 18,
+   "cuts_on_the_half_beat": 18,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the coral garden hook: breathe under water"
+  ],
+  [
+   1.34,
+   "action",
+   "bubbles rise"
+  ],
+  [
+   2.14,
+   "word",
+   "?"
+  ],
+  [
+   3.12,
+   "new shot",
+   "the coral garden secret 1"
+  ],
+  [
+   4.61,
+   "word",
+   "1"
+  ],
+  [
+   6.47,
+   "action",
+   "bubbles rise"
+  ],
+  [
+   7.74,
+   "word",
+   "?"
+  ],
+  [
+   8.12,
+   "new shot",
+   "the coral garden question 1a"
+  ],
+  [
+   8.3,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   8.3,
+   "sign",
+   "YES"
+  ],
+  [
+   8.65,
+   "sign",
+   "NO"
+  ],
+  [
+   11.03,
+   "thinking dot",
+   "1"
+  ],
+  [
+   11.7,
+   "thinking dot",
+   "2"
+  ],
+  [
+   12.37,
+   "thinking dot",
+   "3"
+  ],
+  [
+   12.86,
+   "answer",
+   "NO"
+  ],
+  [
+   14.06,
+   "new shot",
+   "the coral garden no, it cannot"
+  ],
+  [
+   14.28,
+   "word",
+   "NO!"
+  ],
+  [
+   15.71,
+   "action",
+   "tur nods"
+  ],
+  [
+   17.5,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   17.5,
+   "new shot",
+   "the coral garden no gills"
+  ],
+  [
+   18.41,
+   "action",
+   "tur nods"
+  ],
+  [
+   18.41,
+   "word",
+   "NO GILLS!"
+  ],
+  [
+   21.56,
+   "new shot",
+   "the coral garden not a fish"
+  ],
+  [
+   24.24,
+   "action",
+   "tur nods"
+  ],
+  [
+   24.24,
+   "word",
+   "REPTILE!"
+  ],
+  [
+   25.31,
+   "new place",
+   "the top of the sea breathes air like you"
+  ],
+  [
+   28.37,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   28.37,
+   "word",
+   "AIR!"
+  ],
+  [
+   29.22,
+   "action",
+   "tur nods"
+  ],
+  [
+   30.0,
+   "new place",
+   "the picture board board: lungs"
+  ],
+  [
+   32.93,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   32.93,
+   "word",
+   "LUNGS!"
+  ],
+  [
+   33.75,
+   "new shot",
+   "the picture board board: under the shell"
+  ],
+  [
+   35.61,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   37.16,
+   "action",
+   "air comes in"
+  ],
+  [
+   37.16,
+   "action",
+   "the lungs fill with air and empty"
+  ],
+  [
+   37.16,
+   "word",
+   "IN!"
+  ],
+  [
+   37.72,
+   "word",
+   "OUT!"
+  ],
+  [
+   38.44,
+   "new shot",
+   "the picture board board: lungs fill"
+  ],
+  [
+   39.79,
+   "action",
+   "air comes in"
+  ],
+  [
+   39.79,
+   "action",
+   "the lungs fill with air and empty"
+  ],
+  [
+   41.02,
+   "word",
+   "FILL UP!"
+  ],
+  [
+   43.29,
+   "action",
+   "the lungs fill with air and empty"
+  ],
+  [
+   45.31,
+   "new place",
+   "the picture board (blue) board: wow lungs"
+  ],
+  [
+   45.41,
+   "word",
+   "WOW!"
+  ],
+  [
+   46.1,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   46.75,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   47.5,
+   "new place",
+   "the zoo gate hand on your chest"
+  ],
+  [
+   49.92,
+   "action",
+   "milo hops"
+  ],
+  [
+   49.92,
+   "word",
+   "IN!"
+  ],
+  [
+   50.33,
+   "action",
+   "milo hops"
+  ],
+  [
+   50.33,
+   "word",
+   "OUT!"
+  ],
+  [
+   55.31,
+   "new shot",
+   "the zoo gate breathe in, count three"
+  ],
+  [
+   57.05,
+   "action",
+   "milo hops"
+  ],
+  [
+   57.05,
+   "word",
+   "1"
+  ],
+  [
+   57.28,
+   "action",
+   "milo hops"
+  ],
+  [
+   57.28,
+   "word",
+   "2"
+  ],
+  [
+   57.56,
+   "action",
+   "milo hops"
+  ],
+  [
+   57.56,
+   "word",
+   "3"
+  ],
+  [
+   60.62,
+   "new place",
+   "the top of the sea what does it need"
+  ],
+  [
+   61.96,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   63.24,
+   "word",
+   "?"
+  ],
+  [
+   66.56,
+   "new shot",
+   "the top of the sea air above the water"
+  ],
+  [
+   66.88,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   66.88,
+   "picture",
+   "np"
+  ],
+  [
+   66.88,
+   "word",
+   "AIR!"
+  ],
+  [
+   67.87,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   69.06,
+   "new shot",
+   "the top of the sea say it: breathes air"
+  ],
+  [
+   69.35,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   69.35,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   71.72,
+   "action",
+   "tur nods"
+  ],
+  [
+   72.5,
+   "new place",
+   "the zoo gate big slow breath"
+  ],
+  [
+   75.74,
+   "action",
+   "milo hops"
+  ],
+  [
+   75.74,
+   "word",
+   "BIG BREATH!"
+  ],
+  [
+   76.29,
+   "action",
+   "milo hops"
+  ],
+  [
+   79.38,
+   "new place",
+   "the coral garden question 1b"
+  ],
+  [
+   81.42,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   82.34,
+   "sign",
+   "YES"
+  ],
+  [
+   82.69,
+   "sign",
+   "NO"
+  ],
+  [
+   83.81,
+   "thinking dot",
+   "1"
+  ],
+  [
+   84.49,
+   "thinking dot",
+   "2"
+  ],
+  [
+   85.16,
+   "thinking dot",
+   "3"
+  ],
+  [
+   85.65,
+   "answer",
+   "NO"
+  ],
+  [
+   86.88,
+   "new shot",
+   "the coral garden great job 1"
+  ],
+  [
+   87.41,
+   "word",
+   "GREAT!"
+  ],
+  [
+   88.09,
+   "action",
+   "tur nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "reef",
+   "say": "Can a sea turtle breathe under the water?",
+   "t0": 0.0,
+   "t1": 3.125,
+   "v0": 0.42,
+   "dur": 2.247333333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.15
+    ],
+    [
+     "a",
+     0.15,
+     0.19
+    ],
+    [
+     "sea",
+     0.19,
+     0.49
+    ],
+    [
+     "turtle",
+     0.49,
+     0.92
+    ],
+    [
+     "breathe",
+     0.92,
+     1.45
+    ],
+    [
+     "under",
+     1.45,
+     1.63
+    ],
+    [
+     "the",
+     1.63,
+     1.72
+    ],
+    [
+     "water?",
+     1.72,
+     2.247
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: breathe under water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Breathing secret number one! Can a sea turtle breathe under the water?",
+   "t0": 3.125,
+   "t1": 8.125,
+   "v0": 3.207333333333333,
+   "dur": 4.534791666666667,
+   "words": [
+    [
+     "Breathing",
+     0.0,
+     0.48
+    ],
+    [
+     "secret",
+     0.48,
+     1.09
+    ],
+    [
+     "number",
+     1.09,
+     1.4
+    ],
+    [
+     "one!",
+     1.4,
+     1.92
+    ],
+    [
+     "Can",
+     2.31,
+     2.48
+    ],
+    [
+     "a",
+     2.48,
+     2.53
+    ],
+    [
+     "sea",
+     2.53,
+     2.85
+    ],
+    [
+     "turtle",
+     2.85,
+     3.26
+    ],
+    [
+     "breathe",
+     3.26,
+     3.64
+    ],
+    [
+     "under",
+     3.64,
+     3.88
+    ],
+    [
+     "the",
+     3.88,
+     3.98
+    ],
+    [
+     "water?",
+     3.98,
+     4.53
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "secret 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Yes, it can? Or no, it can't?",
+   "t0": 8.125,
+   "t1": 14.0625,
+   "v0": 8.282124999999999,
+   "dur": 2.257875,
+   "words": [
+    [
+     "Yes,",
+     0.02,
+     0.4
+    ],
+    [
+     "it",
+     0.4,
+     0.5
+    ],
+    [
+     "can?",
+     0.5,
+     0.96
+    ],
+    [
+     "Or",
+     1.24,
+     1.38
+    ],
+    [
+     "no,",
+     1.38,
+     1.61
+    ],
+    [
+     "it",
+     1.61,
+     1.72
+    ],
+    [
+     "can't?",
+     1.72,
+     2.258
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "No! A sea turtle cannot breathe under the water.",
+   "t0": 14.0625,
+   "t1": 17.5,
+   "v0": 14.28,
+   "dur": 2.9350416666666668,
+   "words": [
+    [
+     "No!",
+     0.0,
+     0.51
+    ],
+    [
+     "A",
+     0.7,
+     0.75
+    ],
+    [
+     "sea",
+     0.75,
+     1.04
+    ],
+    [
+     "turtle",
+     1.04,
+     1.43
+    ],
+    [
+     "cannot",
+     1.43,
+     1.82
+    ],
+    [
+     "breathe",
+     1.82,
+     2.18
+    ],
+    [
+     "under",
+     2.18,
+     2.32
+    ],
+    [
+     "the",
+     2.32,
+     2.42
+    ],
+    [
+     "water.",
+     2.42,
+     2.93
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "no, it cannot",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "It has no gills, so it cannot take air from the water.",
+   "t0": 17.5,
+   "t1": 21.5625,
+   "v0": 17.755041666666667,
+   "dur": 3.468958333333333,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.1
+    ],
+    [
+     "has",
+     0.1,
+     0.38
+    ],
+    [
+     "no",
+     0.38,
+     0.65
+    ],
+    [
+     "gills,",
+     0.65,
+     1.29
+    ],
+    [
+     "so",
+     1.52,
+     1.7
+    ],
+    [
+     "it",
+     1.7,
+     1.8
+    ],
+    [
+     "cannot",
+     1.8,
+     2.17
+    ],
+    [
+     "take",
+     2.17,
+     2.49
+    ],
+    [
+     "air",
+     2.49,
+     2.66
+    ],
+    [
+     "from",
+     2.66,
+     2.87
+    ],
+    [
+     "the",
+     2.87,
+     2.95
+    ],
+    [
+     "water.",
+     2.95,
+     3.469
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "no gills",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "A sea turtle is not a fish. It is a reptile!",
+   "t0": 21.5625,
+   "t1": 25.3125,
+   "v0": 21.764000000000003,
+   "dur": 3.30575,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.13
+    ],
+    [
+     "sea",
+     0.13,
+     0.46
+    ],
+    [
+     "turtle",
+     0.46,
+     0.93
+    ],
+    [
+     "is",
+     0.93,
+     1.09
+    ],
+    [
+     "not",
+     1.09,
+     1.29
+    ],
+    [
+     "a",
+     1.29,
+     1.32
+    ],
+    [
+     "fish.",
+     1.32,
+     1.87
+    ],
+    [
+     "It",
+     2.2,
+     2.32
+    ],
+    [
+     "is",
+     2.32,
+     2.45
+    ],
+    [
+     "a",
+     2.45,
+     2.48
+    ],
+    [
+     "reptile!",
+     2.48,
+     3.306
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "not a fish",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "A sea turtle is a reptile. It breathes air, just like you!",
+   "t0": 25.3125,
+   "t1": 30.0,
+   "v0": 25.609750000000005,
+   "dur": 3.953666666666667,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.08
+    ],
+    [
+     "sea",
+     0.08,
+     0.41
+    ],
+    [
+     "turtle",
+     0.41,
+     0.86
+    ],
+    [
+     "is",
+     0.86,
+     1.0
+    ],
+    [
+     "a",
+     1.0,
+     1.04
+    ],
+    [
+     "reptile.",
+     1.04,
+     1.81
+    ],
+    [
+     "It",
+     2.24,
+     2.33
+    ],
+    [
+     "breathes",
+     2.33,
+     2.76
+    ],
+    [
+     "air,",
+     2.76,
+     3.12
+    ],
+    [
+     "just",
+     3.12,
+     3.4
+    ],
+    [
+     "like",
+     3.4,
+     3.61
+    ],
+    [
+     "you!",
+     3.61,
+     3.95
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "breathes air like you",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Just like other reptiles, a sea turtle has lungs.",
+   "t0": 30.0,
+   "t1": 33.75,
+   "v0": 30.103416666666675,
+   "dur": 3.4393333333333334,
+   "words": [
+    [
+     "Just",
+     0.02,
+     0.3
+    ],
+    [
+     "like",
+     0.3,
+     0.47
+    ],
+    [
+     "other",
+     0.47,
+     0.72
+    ],
+    [
+     "reptiles,",
+     0.72,
+     1.58
+    ],
+    [
+     "a",
+     1.87,
+     1.92
+    ],
+    [
+     "sea",
+     1.92,
+     2.22
+    ],
+    [
+     "turtle",
+     2.22,
+     2.59
+    ],
+    [
+     "has",
+     2.59,
+     2.83
+    ],
+    [
+     "lungs.",
+     2.83,
+     3.439
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: lungs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Its lungs are right under its shell. Look! In, and out.",
+   "t0": 33.75,
+   "t1": 38.4375,
+   "v0": 34.082750000000004,
+   "dur": 4.142666666666667,
+   "words": [
+    [
+     "Its",
+     0.01,
+     0.22
+    ],
+    [
+     "lungs",
+     0.22,
+     0.68
+    ],
+    [
+     "are",
+     0.68,
+     0.78
+    ],
+    [
+     "right",
+     0.78,
+     1.14
+    ],
+    [
+     "under",
+     1.14,
+     1.37
+    ],
+    [
+     "its",
+     1.37,
+     1.53
+    ],
+    [
+     "shell.",
+     1.53,
+     1.99
+    ],
+    [
+     "Look!",
+     2.49,
+     2.92
+    ],
+    [
+     "In,",
+     3.08,
+     3.47
+    ],
+    [
+     "and",
+     3.47,
+     3.64
+    ],
+    [
+     "out.",
+     3.64,
+     4.14
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: under the shell",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "When Tula breathes in, her lungs fill up with air. When she breathes out, the air goes out.",
+   "t0": 38.4375,
+   "t1": 45.3125,
+   "v0": 38.765416666666674,
+   "dur": 6.090458333333333,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.13
+    ],
+    [
+     "Tula",
+     0.13,
+     0.55
+    ],
+    [
+     "breathes",
+     0.55,
+     1.02
+    ],
+    [
+     "in,",
+     1.02,
+     1.52
+    ],
+    [
+     "her",
+     1.52,
+     1.66
+    ],
+    [
+     "lungs",
+     1.66,
+     2.25
+    ],
+    [
+     "fill",
+     2.25,
+     2.47
+    ],
+    [
+     "up",
+     2.47,
+     2.62
+    ],
+    [
+     "with",
+     2.62,
+     2.75
+    ],
+    [
+     "air.",
+     2.75,
+     3.22
+    ],
+    [
+     "When",
+     3.77,
+     3.88
+    ],
+    [
+     "she",
+     3.88,
+     4.07
+    ],
+    [
+     "breathes",
+     4.07,
+     4.52
+    ],
+    [
+     "out,",
+     4.52,
+     4.91
+    ],
+    [
+     "the",
+     4.91,
+     5.11
+    ],
+    [
+     "air",
+     5.11,
+     5.36
+    ],
+    [
+     "goes",
+     5.36,
+     5.68
+    ],
+    [
+     "out.",
+     5.68,
+     6.09
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: lungs fill",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Wow! Lungs, under a shell!",
+   "t0": 45.3125,
+   "t1": 47.5,
+   "v0": 45.395875000000004,
+   "dur": 1.847625,
+   "words": [
+    [
+     "Wow!",
+     0.01,
+     0.51
+    ],
+    [
+     "Lungs,",
+     0.7,
+     1.14
+    ],
+    [
+     "under",
+     1.14,
+     1.32
+    ],
+    [
+     "a",
+     1.32,
+     1.35
+    ],
+    [
+     "shell!",
+     1.35,
+     1.848
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: wow lungs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Put your hand on your chest. Breathe in, and out, nice and slow.",
+   "t0": 47.5,
+   "t1": 55.3125,
+   "v0": 47.783500000000004,
+   "dur": 4.281208333333334,
+   "words": [
+    [
+     "Put",
+     0.0,
+     0.14
+    ],
+    [
+     "your",
+     0.14,
+     0.23
+    ],
+    [
+     "hand",
+     0.23,
+     0.56
+    ],
+    [
+     "on",
+     0.56,
+     0.65
+    ],
+    [
+     "your",
+     0.65,
+     0.76
+    ],
+    [
+     "chest.",
+     0.76,
+     1.41
+    ],
+    [
+     "Breathe",
+     1.83,
+     2.14
+    ],
+    [
+     "in,",
+     2.14,
+     2.41
+    ],
+    [
+     "and",
+     2.41,
+     2.55
+    ],
+    [
+     "out,",
+     2.55,
+     3.03
+    ],
+    [
+     "nice",
+     3.03,
+     3.57
+    ],
+    [
+     "and",
+     3.57,
+     3.69
+    ],
+    [
+     "slow.",
+     3.69,
+     4.28
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hand on your chest",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Breathe in with me. One, two, three. And out!",
+   "t0": 55.3125,
+   "t1": 60.625,
+   "v0": 55.604708333333335,
+   "dur": 3.2006666666666668,
+   "words": [
+    [
+     "Breathe",
+     0.0,
+     0.45
+    ],
+    [
+     "in",
+     0.45,
+     0.58
+    ],
+    [
+     "with",
+     0.58,
+     0.78
+    ],
+    [
+     "me.",
+     0.78,
+     1.12
+    ],
+    [
+     "One,",
+     1.45,
+     1.68
+    ],
+    [
+     "two,",
+     1.68,
+     1.96
+    ],
+    [
+     "three.",
+     1.96,
+     2.46
+    ],
+    [
+     "And",
+     2.46,
+     2.67
+    ],
+    [
+     "out!",
+     2.67,
+     3.2
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "breathe in, count three",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "What does a sea turtle need, to breathe?",
+   "t0": 60.625,
+   "t1": 66.5625,
+   "v0": 60.945375,
+   "dur": 2.292291666666667,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.28
+    ],
+    [
+     "a",
+     0.28,
+     0.32
+    ],
+    [
+     "sea",
+     0.32,
+     0.64
+    ],
+    [
+     "turtle",
+     0.64,
+     1.01
+    ],
+    [
+     "need,",
+     1.01,
+     1.54
+    ],
+    [
+     "to",
+     1.54,
+     1.65
+    ],
+    [
+     "breathe?",
+     1.65,
+     2.29
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "what does it need",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Air! Up here, above the water.",
+   "t0": 66.5625,
+   "t1": 69.0625,
+   "v0": 66.77766666666668,
+   "dur": 2.030625,
+   "words": [
+    [
+     "Air!",
+     0.1,
+     0.49
+    ],
+    [
+     "Up",
+     0.67,
+     0.81
+    ],
+    [
+     "here,",
+     0.81,
+     1.09
+    ],
+    [
+     "above",
+     1.09,
+     1.37
+    ],
+    [
+     "the",
+     1.37,
+     1.44
+    ],
+    [
+     "water.",
+     1.44,
+     2.03
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "air above the water",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Say it with me. A sea turtle breathes air!",
+   "t0": 69.0625,
+   "t1": 72.5,
+   "v0": 69.34829166666668,
+   "dur": 2.80575,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.32
+    ],
+    [
+     "it",
+     0.32,
+     0.39
+    ],
+    [
+     "with",
+     0.39,
+     0.56
+    ],
+    [
+     "me.",
+     0.56,
+     0.9
+    ],
+    [
+     "A",
+     1.22,
+     1.27
+    ],
+    [
+     "sea",
+     1.27,
+     1.54
+    ],
+    [
+     "turtle",
+     1.54,
+     1.93
+    ],
+    [
+     "breathes",
+     1.93,
+     2.37
+    ],
+    [
+     "air!",
+     2.37,
+     2.806
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: breathes air",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now take a big, slow breath, like Tula. In, and out!",
+   "t0": 72.5,
+   "t1": 79.375,
+   "v0": 72.69404166666669,
+   "dur": 4.0865833333333335,
+   "words": [
+    [
+     "Now",
+     0.0,
+     0.28
+    ],
+    [
+     "take",
+     0.28,
+     0.53
+    ],
+    [
+     "a",
+     0.53,
+     0.58
+    ],
+    [
+     "big,",
+     0.58,
+     0.98
+    ],
+    [
+     "slow",
+     0.98,
+     1.44
+    ],
+    [
+     "breath,",
+     1.44,
+     1.82
+    ],
+    [
+     "like",
+     1.82,
+     1.99
+    ],
+    [
+     "Tula.",
+     1.99,
+     2.53
+    ],
+    [
+     "In,",
+     3.05,
+     3.43
+    ],
+    [
+     "and",
+     3.43,
+     3.6
+    ],
+    [
+     "out!",
+     3.6,
+     4.087
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "big slow breath",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Quick check! Does a sea turtle have gills? Yes, or no?",
+   "t0": 79.375,
+   "t1": 86.875,
+   "v0": 79.72062500000004,
+   "dur": 3.604791666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.21
+    ],
+    [
+     "check!",
+     0.21,
+     0.66
+    ],
+    [
+     "Does",
+     0.66,
+     0.83
+    ],
+    [
+     "a",
+     0.83,
+     0.87
+    ],
+    [
+     "sea",
+     0.87,
+     1.13
+    ],
+    [
+     "turtle",
+     1.13,
+     1.49
+    ],
+    [
+     "have",
+     1.49,
+     1.7
+    ],
+    [
+     "gills?",
+     1.7,
+     2.28
+    ],
+    [
+     "Yes,",
+     2.62,
+     3.06
+    ],
+    [
+     "or",
+     3.06,
+     3.18
+    ],
+    [
+     "no?",
+     3.18,
+     3.6
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "No gills! Great job!",
+   "t0": 86.875,
+   "t1": 89.36045833333338,
+   "v0": 87.06541666666672,
+   "dur": 1.8750416666666667,
+   "words": [
+    [
+     "No",
+     0.01,
+     0.34
+    ],
+    [
+     "gills!",
+     0.34,
+     0.92
+    ],
+    [
+     "Great",
+     1.02,
+     1.27
+    ],
+    [
+     "job!",
+     1.27,
+     1.87
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "great job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

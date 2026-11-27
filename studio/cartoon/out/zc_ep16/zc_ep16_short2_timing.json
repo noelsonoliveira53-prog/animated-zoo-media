@@ -1,0 +1,1860 @@
+{
+ "id": "zc_ep16_short2",
+ "total": 87.42633333333337,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875
+ ],
+ "plan": {
+  "length": 87.4,
+  "shots": 18,
+  "visual_changes": 91,
+  "mean_gap": 0.96,
+  "longest_gap": 4.66,
+  "longest_gap_at": 70.4,
+  "over_6s": [],
+  "places": [
+   "surface",
+   "ocean",
+   "kelp",
+   "zoo"
+  ],
+  "picture_boards": [],
+  "questions": 10,
+  "longest_without_question": 18.1,
+  "first_words_at": 0.42,
+  "shot_mean": 4.86,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "186/186",
+  "sync": {
+   "pauses_checked": 14,
+   "onset_err_mean_ms": 27.1,
+   "onset_err_max_ms": 60.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the top of the sea hook: where for air"
+  ],
+  [
+   1.91,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   1.91,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   2.81,
+   "new place",
+   "the blue ocean secret 2"
+  ],
+  [
+   4.1,
+   "word",
+   "2"
+  ],
+  [
+   5.01,
+   "action",
+   "tur looks"
+  ],
+  [
+   7.47,
+   "word",
+   "?"
+  ],
+  [
+   7.81,
+   "new shot",
+   "the blue ocean question 2a"
+  ],
+  [
+   8.02,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   8.02,
+   "sign",
+   "UP"
+  ],
+  [
+   8.37,
+   "sign",
+   "DOWN"
+  ],
+  [
+   11.67,
+   "thinking dot",
+   "1"
+  ],
+  [
+   12.34,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   13.5,
+   "answer",
+   "UP"
+  ],
+  [
+   14.69,
+   "new place",
+   "the top of the sea up to the top"
+  ],
+  [
+   14.92,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   14.92,
+   "action",
+   "Tula swims up"
+  ],
+  [
+   14.92,
+   "word",
+   "UP!"
+  ],
+  [
+   18.47,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   19.38,
+   "new shot",
+   "the top of the sea look up at the sky"
+  ],
+  [
+   19.66,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   20.84,
+   "word",
+   "SKY!"
+  ],
+  [
+   22.51,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   24.69,
+   "new shot",
+   "the top of the sea pops her head out"
+  ],
+  [
+   25.81,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   25.81,
+   "word",
+   "POP!"
+  ],
+  [
+   27.91,
+   "picture",
+   "np"
+  ],
+  [
+   29.69,
+   "new shot",
+   "the top of the sea air into her lungs"
+  ],
+  [
+   29.78,
+   "picture",
+   "np"
+  ],
+  [
+   29.78,
+   "word",
+   "BREATHE IN!"
+  ],
+  [
+   29.79,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   31.84,
+   "action",
+   "the air goes in"
+  ],
+  [
+   33.75,
+   "new shot",
+   "the top of the sea down again"
+  ],
+  [
+   33.85,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   35.04,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   35.04,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   35.04,
+   "action",
+   "Tula swims down"
+  ],
+  [
+   35.04,
+   "word",
+   "DOWN!"
+  ],
+  [
+   36.25,
+   "new shot",
+   "the top of the sea count the pops"
+  ],
+  [
+   39.84,
+   "action",
+   "Tula pops up"
+  ],
+  [
+   39.84,
+   "word",
+   "1"
+  ],
+  [
+   40.13,
+   "action",
+   "Tula pops up"
+  ],
+  [
+   40.13,
+   "word",
+   "2"
+  ],
+  [
+   40.43,
+   "action",
+   "Tula pops up"
+  ],
+  [
+   40.43,
+   "word",
+   "3"
+  ],
+  [
+   41.25,
+   "new place",
+   "the kelp forest eats seagrass"
+  ],
+  [
+   42.58,
+   "action",
+   "tur looks"
+  ],
+  [
+   42.81,
+   "word",
+   "SEAGRASS!"
+  ],
+  [
+   44.7,
+   "action",
+   "Tula munches"
+  ],
+  [
+   44.7,
+   "action",
+   "a blade gets shorter"
+  ],
+  [
+   46.88,
+   "new shot",
+   "the kelp forest always comes back up"
+  ],
+  [
+   47.5,
+   "action",
+   "tur looks"
+  ],
+  [
+   50.24,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   50.56,
+   "action",
+   "tur looks"
+  ],
+  [
+   50.56,
+   "word",
+   "UP!"
+  ],
+  [
+   51.88,
+   "new place",
+   "the top of the sea then up for air"
+  ],
+  [
+   52.35,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   52.35,
+   "action",
+   "Tula swims up"
+  ],
+  [
+   53.47,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   53.47,
+   "word",
+   "AIR!"
+  ],
+  [
+   54.38,
+   "new place",
+   "the zoo gate look up high"
+  ],
+  [
+   55.43,
+   "action",
+   "milo hops"
+  ],
+  [
+   55.43,
+   "word",
+   "UP HIGH!"
+  ],
+  [
+   58.4,
+   "action",
+   "milo hops"
+  ],
+  [
+   59.69,
+   "new shot",
+   "the zoo gate pop your head up"
+  ],
+  [
+   61.47,
+   "action",
+   "milo hops"
+  ],
+  [
+   61.47,
+   "word",
+   "POP!"
+  ],
+  [
+   64.57,
+   "action",
+   "milo hops"
+  ],
+  [
+   65.94,
+   "new place",
+   "the top of the sea say it: swims up"
+  ],
+  [
+   66.2,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   66.2,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   68.97,
+   "action",
+   "tur nods"
+  ],
+  [
+   70.0,
+   "new place",
+   "the zoo gate paddle like flippers"
+  ],
+  [
+   70.41,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.41,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.41,
+   "word",
+   "PADDLE!"
+  ],
+  [
+   75.07,
+   "action",
+   "milo hops"
+  ],
+  [
+   76.56,
+   "new place",
+   "the blue ocean question 2b"
+  ],
+  [
+   78.06,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   79.44,
+   "sign",
+   "UP"
+  ],
+  [
+   79.79,
+   "sign",
+   "DOWN"
+  ],
+  [
+   81.91,
+   "thinking dot",
+   "1"
+  ],
+  [
+   82.58,
+   "thinking dot",
+   "2"
+  ],
+  [
+   83.26,
+   "thinking dot",
+   "3"
+  ],
+  [
+   83.74,
+   "answer",
+   "UP"
+  ],
+  [
+   85.0,
+   "new place",
+   "the top of the sea super swimming"
+  ],
+  [
+   85.17,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   85.62,
+   "action",
+   "tur nods"
+  ],
+  [
+   85.62,
+   "word",
+   "SUPER!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "surface",
+   "say": "Where does a sea turtle go for air?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 1.9087083333333332,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.3
+    ],
+    [
+     "a",
+     0.3,
+     0.33
+    ],
+    [
+     "sea",
+     0.33,
+     0.66
+    ],
+    [
+     "turtle",
+     0.66,
+     1.06
+    ],
+    [
+     "go",
+     1.06,
+     1.27
+    ],
+    [
+     "for",
+     1.27,
+     1.49
+    ],
+    [
+     "air?",
+     1.49,
+     1.909
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: where for air",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Breathing secret number two! Where does a sea turtle go, to breathe air?",
+   "t0": 2.8125,
+   "t1": 7.8125,
+   "v0": 2.868708333333333,
+   "dur": 4.598833333333333,
+   "words": [
+    [
+     "Breathing",
+     0.0,
+     0.43
+    ],
+    [
+     "secret",
+     0.43,
+     0.94
+    ],
+    [
+     "number",
+     0.94,
+     1.23
+    ],
+    [
+     "two!",
+     1.23,
+     1.71
+    ],
+    [
+     "Where",
+     2.14,
+     2.26
+    ],
+    [
+     "does",
+     2.26,
+     2.42
+    ],
+    [
+     "a",
+     2.42,
+     2.45
+    ],
+    [
+     "sea",
+     2.45,
+     2.78
+    ],
+    [
+     "turtle",
+     2.78,
+     3.18
+    ],
+    [
+     "go,",
+     3.18,
+     3.7
+    ],
+    [
+     "to",
+     3.7,
+     3.83
+    ],
+    [
+     "breathe",
+     3.83,
+     4.16
+    ],
+    [
+     "air?",
+     4.16,
+     4.599
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "secret 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Up to the top of the water? Or down to the sand?",
+   "t0": 7.8125,
+   "t1": 14.6875,
+   "v0": 8.007541666666667,
+   "dur": 3.172375,
+   "words": [
+    [
+     "Up",
+     0.01,
+     0.19
+    ],
+    [
+     "to",
+     0.19,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.39
+    ],
+    [
+     "top",
+     0.39,
+     0.8
+    ],
+    [
+     "of",
+     0.8,
+     0.93
+    ],
+    [
+     "the",
+     0.93,
+     1.02
+    ],
+    [
+     "water?",
+     1.02,
+     1.56
+    ],
+    [
+     "Or",
+     1.87,
+     2.04
+    ],
+    [
+     "down",
+     2.04,
+     2.39
+    ],
+    [
+     "to",
+     2.39,
+     2.48
+    ],
+    [
+     "the",
+     2.48,
+     2.55
+    ],
+    [
+     "sand?",
+     2.55,
+     3.17
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Up to the top! Sea turtles must come up to the top, to breathe.",
+   "t0": 14.6875,
+   "t1": 19.375,
+   "v0": 14.919916666666667,
+   "dur": 4.197041666666666,
+   "words": [
+    [
+     "Up",
+     0.0,
+     0.24
+    ],
+    [
+     "to",
+     0.24,
+     0.37
+    ],
+    [
+     "the",
+     0.37,
+     0.47
+    ],
+    [
+     "top!",
+     0.47,
+     1.01
+    ],
+    [
+     "Sea",
+     1.4,
+     1.66
+    ],
+    [
+     "turtles",
+     1.66,
+     2.2
+    ],
+    [
+     "must",
+     2.2,
+     2.44
+    ],
+    [
+     "come",
+     2.44,
+     2.62
+    ],
+    [
+     "up",
+     2.62,
+     2.73
+    ],
+    [
+     "to",
+     2.73,
+     2.83
+    ],
+    [
+     "the",
+     2.83,
+     2.92
+    ],
+    [
+     "top,",
+     2.92,
+     3.38
+    ],
+    [
+     "to",
+     3.38,
+     3.55
+    ],
+    [
+     "breathe.",
+     3.55,
+     4.197
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "up to the top",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Look up! Can you see the sky? That is where the air is.",
+   "t0": 19.375,
+   "t1": 24.6875,
+   "v0": 19.656958333333336,
+   "dur": 3.5770416666666667,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.3
+    ],
+    [
+     "up!",
+     0.3,
+     0.58
+    ],
+    [
+     "Can",
+     0.58,
+     0.77
+    ],
+    [
+     "you",
+     0.77,
+     0.88
+    ],
+    [
+     "see",
+     0.88,
+     1.1
+    ],
+    [
+     "the",
+     1.1,
+     1.18
+    ],
+    [
+     "sky?",
+     1.18,
+     1.76
+    ],
+    [
+     "That",
+     2.14,
+     2.37
+    ],
+    [
+     "is",
+     2.37,
+     2.54
+    ],
+    [
+     "where",
+     2.54,
+     2.68
+    ],
+    [
+     "the",
+     2.68,
+     2.85
+    ],
+    [
+     "air",
+     2.85,
+     3.15
+    ],
+    [
+     "is.",
+     3.15,
+     3.577
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "look up at the sky",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Look! Tula pops her head out of the water, and takes a breath.",
+   "t0": 24.6875,
+   "t1": 29.6875,
+   "v0": 24.774000000000004,
+   "dur": 3.667875,
+   "words": [
+    [
+     "Look!",
+     0.01,
+     0.47
+    ],
+    [
+     "Tula",
+     0.61,
+     1.04
+    ],
+    [
+     "pops",
+     1.04,
+     1.42
+    ],
+    [
+     "her",
+     1.42,
+     1.5
+    ],
+    [
+     "head",
+     1.5,
+     1.73
+    ],
+    [
+     "out",
+     1.73,
+     1.84
+    ],
+    [
+     "of",
+     1.84,
+     1.91
+    ],
+    [
+     "the",
+     1.91,
+     1.99
+    ],
+    [
+     "water,",
+     1.99,
+     2.59
+    ],
+    [
+     "and",
+     2.59,
+     2.78
+    ],
+    [
+     "takes",
+     2.78,
+     3.09
+    ],
+    [
+     "a",
+     3.09,
+     3.14
+    ],
+    [
+     "breath.",
+     3.14,
+     3.668
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "pops her head out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Breathe in! The air goes into her lungs.",
+   "t0": 29.6875,
+   "t1": 33.75,
+   "v0": 29.781875000000007,
+   "dur": 2.714,
+   "words": [
+    [
+     "Breathe",
+     0.0,
+     0.46
+    ],
+    [
+     "in!",
+     0.46,
+     0.82
+    ],
+    [
+     "The",
+     1.04,
+     1.2
+    ],
+    [
+     "air",
+     1.2,
+     1.45
+    ],
+    [
+     "goes",
+     1.45,
+     1.76
+    ],
+    [
+     "into",
+     1.76,
+     1.96
+    ],
+    [
+     "her",
+     1.96,
+     2.06
+    ],
+    [
+     "lungs.",
+     2.06,
+     2.71
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "air into her lungs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Then she swims back down again.",
+   "t0": 33.75,
+   "t1": 36.25,
+   "v0": 33.835875,
+   "dur": 1.9249166666666666,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.2
+    ],
+    [
+     "she",
+     0.2,
+     0.4
+    ],
+    [
+     "swims",
+     0.4,
+     0.84
+    ],
+    [
+     "back",
+     0.84,
+     1.2
+    ],
+    [
+     "down",
+     1.2,
+     1.44
+    ],
+    [
+     "again.",
+     1.44,
+     1.92
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "down again",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "How many times does Tula pop up? Count with me! One, two, three!",
+   "t0": 36.25,
+   "t1": 41.25,
+   "v0": 36.30079166666667,
+   "dur": 4.699166666666667,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.15
+    ],
+    [
+     "many",
+     0.15,
+     0.36
+    ],
+    [
+     "times",
+     0.36,
+     0.82
+    ],
+    [
+     "does",
+     0.82,
+     1.03
+    ],
+    [
+     "Tula",
+     1.03,
+     1.38
+    ],
+    [
+     "pop",
+     1.38,
+     1.75
+    ],
+    [
+     "up?",
+     1.75,
+     2.09
+    ],
+    [
+     "Count",
+     2.35,
+     2.66
+    ],
+    [
+     "with",
+     2.66,
+     2.82
+    ],
+    [
+     "me!",
+     2.82,
+     3.17
+    ],
+    [
+     "One,",
+     3.54,
+     3.83
+    ],
+    [
+     "two,",
+     3.83,
+     4.13
+    ],
+    [
+     "three!",
+     4.13,
+     4.699
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the pops",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Green sea turtles eat seagrass and algae. Munch, munch! Yummy!",
+   "t0": 41.25,
+   "t1": 46.875,
+   "v0": 41.53995833333334,
+   "dur": 4.840041666666667,
+   "words": [
+    [
+     "Green",
+     0.03,
+     0.35
+    ],
+    [
+     "sea",
+     0.35,
+     0.57
+    ],
+    [
+     "turtles",
+     0.57,
+     1.04
+    ],
+    [
+     "eat",
+     1.04,
+     1.27
+    ],
+    [
+     "seagrass",
+     1.27,
+     1.98
+    ],
+    [
+     "and",
+     1.98,
+     2.1
+    ],
+    [
+     "algae.",
+     2.1,
+     2.67
+    ],
+    [
+     "Munch,",
+     3.16,
+     3.63
+    ],
+    [
+     "munch!",
+     3.63,
+     4.18
+    ],
+    [
+     "Yummy!",
+     4.34,
+     4.84
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "eats seagrass",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Tula eats under the water. But she always comes back up, to breathe.",
+   "t0": 46.875,
+   "t1": 51.875,
+   "v0": 46.92,
+   "dur": 4.721583333333333,
+   "words": [
+    [
+     "Tula",
+     0.0,
+     0.58
+    ],
+    [
+     "eats",
+     0.58,
+     0.9
+    ],
+    [
+     "under",
+     0.9,
+     1.11
+    ],
+    [
+     "the",
+     1.11,
+     1.22
+    ],
+    [
+     "water.",
+     1.22,
+     1.79
+    ],
+    [
+     "But",
+     2.24,
+     2.37
+    ],
+    [
+     "she",
+     2.37,
+     2.53
+    ],
+    [
+     "always",
+     2.53,
+     2.97
+    ],
+    [
+     "comes",
+     2.97,
+     3.32
+    ],
+    [
+     "back",
+     3.32,
+     3.64
+    ],
+    [
+     "up,",
+     3.64,
+     3.84
+    ],
+    [
+     "to",
+     3.84,
+     4.07
+    ],
+    [
+     "breathe.",
+     4.07,
+     4.72
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "always comes back up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Then up she swims, for air!",
+   "t0": 51.875,
+   "t1": 54.375,
+   "v0": 52.181583333333336,
+   "dur": 1.725125,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.17
+    ],
+    [
+     "up",
+     0.17,
+     0.32
+    ],
+    [
+     "she",
+     0.32,
+     0.52
+    ],
+    [
+     "swims,",
+     0.52,
+     1.11
+    ],
+    [
+     "for",
+     1.11,
+     1.29
+    ],
+    [
+     "air!",
+     1.29,
+     1.72
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "then up for air",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Look up, way up high, where the air is!",
+   "t0": 54.375,
+   "t1": 59.6875,
+   "v0": 54.44670833333333,
+   "dur": 2.6285833333333333,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.27
+    ],
+    [
+     "up,",
+     0.27,
+     0.56
+    ],
+    [
+     "way",
+     0.56,
+     0.86
+    ],
+    [
+     "up",
+     0.86,
+     0.98
+    ],
+    [
+     "high,",
+     0.98,
+     1.48
+    ],
+    [
+     "where",
+     1.66,
+     1.76
+    ],
+    [
+     "the",
+     1.76,
+     1.91
+    ],
+    [
+     "air",
+     1.91,
+     2.18
+    ],
+    [
+     "is!",
+     2.18,
+     2.629
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "look up high",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Swim up like Tula, and pop your head up! Pop!",
+   "t0": 59.6875,
+   "t1": 65.9375,
+   "v0": 60.01529166666666,
+   "dur": 3.2300833333333334,
+   "words": [
+    [
+     "Swim",
+     0.01,
+     0.4
+    ],
+    [
+     "up",
+     0.4,
+     0.53
+    ],
+    [
+     "like",
+     0.53,
+     0.71
+    ],
+    [
+     "Tula,",
+     0.71,
+     1.17
+    ],
+    [
+     "and",
+     1.17,
+     1.45
+    ],
+    [
+     "pop",
+     1.45,
+     1.74
+    ],
+    [
+     "your",
+     1.74,
+     1.84
+    ],
+    [
+     "head",
+     1.84,
+     2.01
+    ],
+    [
+     "up!",
+     2.01,
+     2.31
+    ],
+    [
+     "Pop!",
+     2.71,
+     3.23
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "pop your head up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Say it with me. A sea turtle swims up to breathe!",
+   "t0": 65.9375,
+   "t1": 70.0,
+   "v0": 66.18537500000001,
+   "dur": 3.4162083333333335,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.58
+    ],
+    [
+     "me.",
+     0.58,
+     0.93
+    ],
+    [
+     "A",
+     1.29,
+     1.34
+    ],
+    [
+     "sea",
+     1.34,
+     1.63
+    ],
+    [
+     "turtle",
+     1.63,
+     2.01
+    ],
+    [
+     "swims",
+     2.01,
+     2.49
+    ],
+    [
+     "up",
+     2.49,
+     2.66
+    ],
+    [
+     "to",
+     2.66,
+     2.78
+    ],
+    [
+     "breathe!",
+     2.78,
+     3.416
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: swims up",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you paddle your arms like flippers? Paddle, paddle!",
+   "t0": 70.0,
+   "t1": 76.5625,
+   "v0": 70.14158333333334,
+   "dur": 3.6119166666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.14
+    ],
+    [
+     "you",
+     0.14,
+     0.27
+    ],
+    [
+     "paddle",
+     0.27,
+     0.67
+    ],
+    [
+     "your",
+     0.67,
+     0.87
+    ],
+    [
+     "arms",
+     0.87,
+     1.33
+    ],
+    [
+     "like",
+     1.33,
+     1.5
+    ],
+    [
+     "flippers?",
+     1.5,
+     2.2
+    ],
+    [
+     "Paddle,",
+     2.54,
+     3.02
+    ],
+    [
+     "paddle!",
+     3.02,
+     3.61
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "paddle like flippers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Quick check! When Tula needs air, does she swim up? Or does she stay down?",
+   "t0": 76.5625,
+   "t1": 85.0,
+   "v0": 76.69350000000003,
+   "dur": 4.729916666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.26
+    ],
+    [
+     "check!",
+     0.26,
+     0.83
+    ],
+    [
+     "When",
+     0.83,
+     0.97
+    ],
+    [
+     "Tula",
+     0.97,
+     1.37
+    ],
+    [
+     "needs",
+     1.37,
+     1.67
+    ],
+    [
+     "air,",
+     1.67,
+     2.11
+    ],
+    [
+     "does",
+     2.11,
+     2.26
+    ],
+    [
+     "she",
+     2.26,
+     2.42
+    ],
+    [
+     "swim",
+     2.42,
+     2.75
+    ],
+    [
+     "up?",
+     2.75,
+     3.08
+    ],
+    [
+     "Or",
+     3.49,
+     3.65
+    ],
+    [
+     "does",
+     3.65,
+     3.77
+    ],
+    [
+     "she",
+     3.77,
+     3.92
+    ],
+    [
+     "stay",
+     3.92,
+     4.18
+    ],
+    [
+     "down?",
+     4.18,
+     4.73
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "surface",
+   "say": "Up! Super swimming!",
+   "t0": 85.0,
+   "t1": 87.02633333333337,
+   "v0": 85.1634166666667,
+   "dur": 1.4429166666666666,
+   "words": [
+    [
+     "Up!",
+     0.01,
+     0.46
+    ],
+    [
+     "Super",
+     0.46,
+     0.83
+    ],
+    [
+     "swimming!",
+     0.83,
+     1.44
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super swimming",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

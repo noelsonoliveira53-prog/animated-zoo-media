@@ -3468,7 +3468,7 @@
   "date": "2026-11-27",
   "time": "5:30 PM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3491,7 +3491,10 @@
   ],
   "thumb_text": "NOT COLD?!",
   "seconds": 359.0,
-  "bookends": true
+  "bookends": true,
+  "video_id": "WpN-Qq5QdPE",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 2:45 PM ET (Studio: will be set to public on November 27, 2026 at 5:30 PM)"
  },
  {
   "file": "cartoon/za_ep13.mp4",

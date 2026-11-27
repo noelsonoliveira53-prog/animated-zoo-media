@@ -14,6 +14,8 @@ written, rendered, titled and uploaded.
 
 ## Standing rules from Noelson
 
+**CLONE LIGHT (Nov 27 2026): every run starts with the light clone of docs/CARTOON_RUN.md "Setup", never a full clone (the repo is 18 GB of videos; full clones made every scheduled run error from Nov 23 to Nov 27).**
+
 **2D ONLY (Noelson, Nov 20 2026, 11:13 PM: "Let's keep just 2d cartons on the channel suspend all 3d uploads of songs and fill the spaces with the same carton model we have").** It overrides every rule below that builds, finishes or uploads something in 3D for The Animated Zoo:
 - Section B builds NOTHING in 3D: no song, no lesson, no Vids hook, no PC render job for the Zoo. `zoo3d_ep23y` (rendered on the PC Nov 20) is NOT finished; zoo3d_ep24 and
   ep25 are NOT built. Their specs, jobs and the PC's raw files stay where they are: nothing is deleted, nothing is cancelled that Gizmo Explains needs.

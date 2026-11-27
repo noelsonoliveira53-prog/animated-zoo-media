@@ -74,6 +74,8 @@ A Guess With Milo episode is a `cartoon_lesson` (5:00-6:30, three parts of 83-90
   finished episode's file and link in the run report.
 
 ## Setup (fresh session)
+**MAIN RESTARTED LEAN (Nov 27 2026, owner's yes 2:27 PM):** main now starts at a commit of Nov 21 and holds no video files except cartoon/zintro.mp4 and cartoon/gzintro.mp4 (about 1 GB instead of 18 GB). Every older commit and every video file of the repo is on the branch `archive/main-2026-11-27` (commit 594d9553); to get one back: `git fetch origin archive/main-2026-11-27 && git checkout FETCH_HEAD -- <path>`. Never merge that branch into main. New finished videos are still committed so the upload can read them at a pushed SHA.
+
 **CLONE LIGHT, NEVER A FULL CLONE** (Nov 27 2026: every scheduled run, builds and the daily run, ended "RUN_ERRORED" after about 10 minutes from Nov 23 to Nov 27, and nothing was built or uploaded. The repo had grown to 18.4 GB of committed videos (16.4 GB in the current tree): a full clone fills a session's disk. A light clone measured Nov 27: 26 s, about 2 GB with the checkout):
 ```
 git clone --filter=blob:limit=2m --no-checkout https://github.com/noelsonoliveira53-prog/animated-zoo-media.git /home/claude/animated-zoo-media

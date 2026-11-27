@@ -3653,7 +3653,11 @@
   "seconds": 352.2,
   "video_id": "6iYvGUoiuiw",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 5:30 AM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 5:30 AM)",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  },
  {
   "file": "cartoon/zc_ep14.mp4",

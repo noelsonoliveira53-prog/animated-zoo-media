@@ -1,0 +1,1767 @@
+{
+ "id": "zc_ep15_short1",
+ "total": 91.39062500000004,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25
+ ],
+ "plan": {
+  "length": 91.4,
+  "shots": 17,
+  "visual_changes": 82,
+  "mean_gap": 1.11,
+  "longest_gap": 3.63,
+  "longest_gap_at": 27.2,
+  "over_6s": [],
+  "places": [
+   "arctic",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper"
+  ],
+  "questions": 11,
+  "longest_without_question": 13.1,
+  "first_words_at": 0.42,
+  "shot_mean": 5.38,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "178/178",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 23.3,
+   "onset_err_max_ms": 50.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "snow falls"
+  ],
+  [
+   0.0,
+   "new place",
+   "the snowy Arctic hook: one hair"
+  ],
+  [
+   1.04,
+   "action",
+   "bear looks"
+  ],
+  [
+   3.8,
+   "word",
+   "?"
+  ],
+  [
+   4.69,
+   "new shot",
+   "the snowy Arctic surprise 1"
+  ],
+  [
+   5.8,
+   "word",
+   "1"
+  ],
+  [
+   6.82,
+   "action",
+   "bear looks"
+  ],
+  [
+   8.33,
+   "word",
+   "?"
+  ],
+  [
+   9.06,
+   "new shot",
+   "the snowy Arctic question 1a"
+  ],
+  [
+   9.7,
+   "sign",
+   "WHITE"
+  ],
+  [
+   10.05,
+   "sign",
+   "CLEAR"
+  ],
+  [
+   13.05,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   14.09,
+   "action",
+   "bear nods"
+  ],
+  [
+   14.4,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.89,
+   "answer",
+   "CLEAR"
+  ],
+  [
+   16.25,
+   "new place",
+   "the picture board (blue) board: clear hair"
+  ],
+  [
+   16.66,
+   "action",
+   "the hair blinks"
+  ],
+  [
+   16.66,
+   "word",
+   "CLEAR!"
+  ],
+  [
+   18.05,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   21.25,
+   "new shot",
+   "the picture board (blue) see through it"
+  ],
+  [
+   21.35,
+   "picture",
+   "pt"
+  ],
+  [
+   23.34,
+   "action",
+   "the arrow points at the hair"
+  ],
+  [
+   23.34,
+   "word",
+   "SEE-THROUGH!"
+  ],
+  [
+   24.14,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   27.19,
+   "new place",
+   "the zoo gate finger magnifier"
+  ],
+  [
+   30.82,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.82,
+   "word",
+   "LOOK!"
+  ],
+  [
+   31.17,
+   "action",
+   "milo hops"
+  ],
+  [
+   34.38,
+   "new place",
+   "the picture board board: both layers clear"
+  ],
+  [
+   34.49,
+   "word",
+   "BOTH CLEAR!"
+  ],
+  [
+   37.09,
+   "action",
+   "the soft undercoat blinks"
+  ],
+  [
+   38.64,
+   "action",
+   "the long guard hairs blink"
+  ],
+  [
+   40.31,
+   "new shot",
+   "the picture board count the layers"
+  ],
+  [
+   42.26,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   42.26,
+   "word",
+   "1"
+  ],
+  [
+   42.51,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   42.51,
+   "word",
+   "2"
+  ],
+  [
+   43.44,
+   "new place",
+   "the snowy Arctic not white at all"
+  ],
+  [
+   43.64,
+   "action",
+   "bear hops"
+  ],
+  [
+   43.64,
+   "word",
+   "WOW!"
+  ],
+  [
+   46.53,
+   "action",
+   "bear nods"
+  ],
+  [
+   47.5,
+   "action",
+   "snow falls"
+  ],
+  [
+   47.5,
+   "new shot",
+   "the snowy Arctic lots of clear hairs"
+  ],
+  [
+   49.16,
+   "word",
+   "LOTS!"
+  ],
+  [
+   51.65,
+   "action",
+   "bear nods"
+  ],
+  [
+   52.5,
+   "new place",
+   "the picture board (blue) question 1c"
+  ],
+  [
+   54.25,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   55.76,
+   "sign",
+   "YES"
+  ],
+  [
+   56.11,
+   "sign",
+   "NO"
+  ],
+  [
+   57.44,
+   "thinking dot",
+   "1"
+  ],
+  [
+   58.11,
+   "thinking dot",
+   "2"
+  ],
+  [
+   58.79,
+   "thinking dot",
+   "3"
+  ],
+  [
+   59.27,
+   "answer",
+   "NO"
+  ],
+  [
+   60.62,
+   "new place",
+   "the snowy Arctic no color"
+  ],
+  [
+   60.69,
+   "action",
+   "bear nods"
+  ],
+  [
+   60.69,
+   "word",
+   "NO COLOR!"
+  ],
+  [
+   63.75,
+   "new place",
+   "the zoo gate peek through"
+  ],
+  [
+   65.65,
+   "action",
+   "milo hops"
+  ],
+  [
+   67.64,
+   "action",
+   "milo hops"
+  ],
+  [
+   67.64,
+   "word",
+   "PEEKABOO!"
+  ],
+  [
+   69.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.31,
+   "new shot",
+   "the zoo gate blink closely"
+  ],
+  [
+   73.93,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.93,
+   "word",
+   "BLINK!"
+  ],
+  [
+   74.96,
+   "action",
+   "milo hops"
+  ],
+  [
+   76.48,
+   "action",
+   "milo hops"
+  ],
+  [
+   77.81,
+   "new place",
+   "the snowy Arctic say it: clear"
+  ],
+  [
+   77.91,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   80.22,
+   "action",
+   "bear nods"
+  ],
+  [
+   81.25,
+   "new place",
+   "the picture board (blue) question 1b"
+  ],
+  [
+   83.09,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   83.42,
+   "sign",
+   "WHITE"
+  ],
+  [
+   83.77,
+   "sign",
+   "CLEAR"
+  ],
+  [
+   84.58,
+   "word",
+   "?"
+  ],
+  [
+   85.07,
+   "thinking dot",
+   "1"
+  ],
+  [
+   85.75,
+   "thinking dot",
+   "2"
+  ],
+  [
+   86.42,
+   "thinking dot",
+   "3"
+  ],
+  [
+   86.91,
+   "answer",
+   "CLEAR"
+  ],
+  [
+   88.12,
+   "new place",
+   "the snowy Arctic super job 1"
+  ],
+  [
+   88.33,
+   "word",
+   "CLEAR!"
+  ],
+  [
+   89.59,
+   "action",
+   "bear nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "arctic",
+   "say": "Look very closely! What color is one polar bear hair?",
+   "t0": 0.0,
+   "t1": 4.6875,
+   "v0": 0.42,
+   "dur": 3.875541666666667,
+   "words": [
+    [
+     "Look",
+     0.0,
+     0.25
+    ],
+    [
+     "very",
+     0.25,
+     0.62
+    ],
+    [
+     "closely!",
+     0.62,
+     1.34
+    ],
+    [
+     "What",
+     1.69,
+     1.86
+    ],
+    [
+     "color",
+     1.86,
+     2.21
+    ],
+    [
+     "is",
+     2.21,
+     2.41
+    ],
+    [
+     "one",
+     2.41,
+     2.68
+    ],
+    [
+     "polar",
+     2.68,
+     3.1
+    ],
+    [
+     "bear",
+     3.1,
+     3.38
+    ],
+    [
+     "hair?",
+     3.38,
+     3.87
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: one hair",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Surprise number one! What color is one polar bear hair?",
+   "t0": 4.6875,
+   "t1": 9.0625,
+   "v0": 4.835541666666667,
+   "dur": 3.9861666666666666,
+   "words": [
+    [
+     "Surprise",
+     0.01,
+     0.69
+    ],
+    [
+     "number",
+     0.69,
+     0.96
+    ],
+    [
+     "one!",
+     0.96,
+     1.39
+    ],
+    [
+     "What",
+     1.81,
+     1.98
+    ],
+    [
+     "color",
+     1.98,
+     2.34
+    ],
+    [
+     "is",
+     2.34,
+     2.54
+    ],
+    [
+     "one",
+     2.54,
+     2.82
+    ],
+    [
+     "polar",
+     2.82,
+     3.21
+    ],
+    [
+     "bear",
+     3.21,
+     3.49
+    ],
+    [
+     "hair?",
+     3.49,
+     3.986
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "surprise 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Is it white, like snow? Or clear, like water?",
+   "t0": 9.0625,
+   "t1": 16.25,
+   "v0": 9.361708333333333,
+   "dur": 3.20375,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.34
+    ],
+    [
+     "white,",
+     0.34,
+     0.74
+    ],
+    [
+     "like",
+     0.74,
+     0.94
+    ],
+    [
+     "snow?",
+     0.94,
+     1.53
+    ],
+    [
+     "Or",
+     1.88,
+     2.01
+    ],
+    [
+     "clear,",
+     2.01,
+     2.4
+    ],
+    [
+     "like",
+     2.4,
+     2.64
+    ],
+    [
+     "water?",
+     2.64,
+     3.2
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "It is clear! Each hair is see-through. It has no color of its own.",
+   "t0": 16.25,
+   "t1": 21.25,
+   "v0": 16.305458333333334,
+   "dur": 4.498125,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.16
+    ],
+    [
+     "is",
+     0.16,
+     0.35
+    ],
+    [
+     "clear!",
+     0.35,
+     0.92
+    ],
+    [
+     "Each",
+     1.15,
+     1.39
+    ],
+    [
+     "hair",
+     1.39,
+     1.64
+    ],
+    [
+     "is",
+     1.64,
+     1.74
+    ],
+    [
+     "see-through.",
+     1.74,
+     2.46
+    ],
+    [
+     "It",
+     2.85,
+     2.94
+    ],
+    [
+     "has",
+     2.94,
+     3.14
+    ],
+    [
+     "no",
+     3.14,
+     3.39
+    ],
+    [
+     "color",
+     3.39,
+     3.81
+    ],
+    [
+     "of",
+     3.81,
+     3.89
+    ],
+    [
+     "its",
+     3.89,
+     4.06
+    ],
+    [
+     "own.",
+     4.06,
+     4.498
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: clear hair",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Look through the hair. You can see the blue, right through it!",
+   "t0": 21.25,
+   "t1": 27.1875,
+   "v0": 21.34358333333334,
+   "dur": 3.4044166666666666,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.25
+    ],
+    [
+     "through",
+     0.25,
+     0.48
+    ],
+    [
+     "the",
+     0.48,
+     0.55
+    ],
+    [
+     "hair.",
+     0.55,
+     1.04
+    ],
+    [
+     "You",
+     1.4,
+     1.51
+    ],
+    [
+     "can",
+     1.51,
+     1.67
+    ],
+    [
+     "see",
+     1.67,
+     1.9
+    ],
+    [
+     "the",
+     1.9,
+     2.0
+    ],
+    [
+     "blue,",
+     2.0,
+     2.47
+    ],
+    [
+     "right",
+     2.47,
+     2.8
+    ],
+    [
+     "through",
+     2.8,
+     3.13
+    ],
+    [
+     "it!",
+     3.13,
+     3.4
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "see through it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Make a magnifying glass with your fingers. Now look, look!",
+   "t0": 27.1875,
+   "t1": 34.375,
+   "v0": 27.488000000000007,
+   "dur": 4.062583333333333,
+   "words": [
+    [
+     "Make",
+     0.01,
+     0.19
+    ],
+    [
+     "a",
+     0.19,
+     0.24
+    ],
+    [
+     "magnifying",
+     0.24,
+     1.2
+    ],
+    [
+     "glass",
+     1.2,
+     1.68
+    ],
+    [
+     "with",
+     1.68,
+     1.81
+    ],
+    [
+     "your",
+     1.81,
+     1.92
+    ],
+    [
+     "fingers.",
+     1.92,
+     2.62
+    ],
+    [
+     "Now",
+     3.06,
+     3.33
+    ],
+    [
+     "look,",
+     3.33,
+     3.68
+    ],
+    [
+     "look!",
+     3.68,
+     4.06
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "finger magnifier",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Both layers of fur are clear. The soft undercoat, and the long guard hairs!",
+   "t0": 34.375,
+   "t1": 40.3125,
+   "v0": 34.49058333333334,
+   "dur": 5.453708333333333,
+   "words": [
+    [
+     "Both",
+     0.0,
+     0.4
+    ],
+    [
+     "layers",
+     0.4,
+     0.87
+    ],
+    [
+     "of",
+     0.87,
+     0.93
+    ],
+    [
+     "fur",
+     0.93,
+     1.32
+    ],
+    [
+     "are",
+     1.32,
+     1.43
+    ],
+    [
+     "clear.",
+     1.43,
+     2.01
+    ],
+    [
+     "The",
+     2.51,
+     2.6
+    ],
+    [
+     "soft",
+     2.6,
+     3.15
+    ],
+    [
+     "undercoat,",
+     3.15,
+     3.95
+    ],
+    [
+     "and",
+     3.95,
+     4.09
+    ],
+    [
+     "the",
+     4.09,
+     4.15
+    ],
+    [
+     "long",
+     4.15,
+     4.54
+    ],
+    [
+     "guard",
+     4.54,
+     4.82
+    ],
+    [
+     "hairs!",
+     4.82,
+     5.45
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: both layers clear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Count the layers with me. One, two!",
+   "t0": 40.3125,
+   "t1": 43.4375,
+   "v0": 40.48429166666667,
+   "dur": 2.611625,
+   "words": [
+    [
+     "Count",
+     0.01,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.36
+    ],
+    [
+     "layers",
+     0.36,
+     0.89
+    ],
+    [
+     "with",
+     0.89,
+     1.08
+    ],
+    [
+     "me.",
+     1.08,
+     1.42
+    ],
+    [
+     "One,",
+     1.78,
+     2.03
+    ],
+    [
+     "two!",
+     2.03,
+     2.61
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "count the layers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Wow! Poppy's hairs are not white at all. They are clear!",
+   "t0": 43.4375,
+   "t1": 47.5,
+   "v0": 43.63591666666667,
+   "dur": 3.4847083333333333,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.45
+    ],
+    [
+     "Poppy's",
+     0.45,
+     1.06
+    ],
+    [
+     "hairs",
+     1.06,
+     1.42
+    ],
+    [
+     "are",
+     1.42,
+     1.46
+    ],
+    [
+     "not",
+     1.46,
+     1.67
+    ],
+    [
+     "white",
+     1.67,
+     1.95
+    ],
+    [
+     "at",
+     1.95,
+     2.06
+    ],
+    [
+     "all.",
+     2.06,
+     2.39
+    ],
+    [
+     "They",
+     2.7,
+     2.83
+    ],
+    [
+     "are",
+     2.83,
+     2.89
+    ],
+    [
+     "clear!",
+     2.89,
+     3.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "not white at all",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Poppy has lots and lots of hairs. And every one of them is clear!",
+   "t0": 47.5,
+   "t1": 52.5,
+   "v0": 47.660624999999996,
+   "dur": 4.5445,
+   "words": [
+    [
+     "Poppy",
+     0.0,
+     0.45
+    ],
+    [
+     "has",
+     0.45,
+     0.74
+    ],
+    [
+     "lots",
+     0.74,
+     1.34
+    ],
+    [
+     "and",
+     1.34,
+     1.5
+    ],
+    [
+     "lots",
+     1.5,
+     1.88
+    ],
+    [
+     "of",
+     1.88,
+     1.95
+    ],
+    [
+     "hairs.",
+     1.95,
+     2.51
+    ],
+    [
+     "And",
+     2.91,
+     3.13
+    ],
+    [
+     "every",
+     3.13,
+     3.47
+    ],
+    [
+     "one",
+     3.47,
+     3.63
+    ],
+    [
+     "of",
+     3.63,
+     3.71
+    ],
+    [
+     "them",
+     3.71,
+     3.84
+    ],
+    [
+     "is",
+     3.84,
+     3.99
+    ],
+    [
+     "clear!",
+     3.99,
+     4.54
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "lots of clear hairs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Does a polar bear hair have a color of its own? Yes, or no?",
+   "t0": 52.5,
+   "t1": 60.625,
+   "v0": 52.745124999999994,
+   "dur": 4.208583333333333,
+   "words": [
+    [
+     "Does",
+     0.0,
+     0.17
+    ],
+    [
+     "a",
+     0.17,
+     0.22
+    ],
+    [
+     "polar",
+     0.22,
+     0.68
+    ],
+    [
+     "bear",
+     0.68,
+     0.96
+    ],
+    [
+     "hair",
+     0.96,
+     1.27
+    ],
+    [
+     "have",
+     1.27,
+     1.45
+    ],
+    [
+     "a",
+     1.45,
+     1.5
+    ],
+    [
+     "color",
+     1.5,
+     1.9
+    ],
+    [
+     "of",
+     1.9,
+     1.99
+    ],
+    [
+     "its",
+     1.99,
+     2.17
+    ],
+    [
+     "own?",
+     2.17,
+     2.55
+    ],
+    [
+     "Yes,",
+     3.01,
+     3.57
+    ],
+    [
+     "or",
+     3.57,
+     3.77
+    ],
+    [
+     "no?",
+     3.77,
+     4.209
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1c",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "No! No color at all. It is see-through.",
+   "t0": 60.625,
+   "t1": 63.75,
+   "v0": 60.693708333333326,
+   "dur": 2.6762916666666667,
+   "words": [
+    [
+     "No!",
+     0.0,
+     0.35
+    ],
+    [
+     "No",
+     0.35,
+     0.6
+    ],
+    [
+     "color",
+     0.6,
+     0.98
+    ],
+    [
+     "at",
+     0.98,
+     1.13
+    ],
+    [
+     "all.",
+     1.13,
+     1.44
+    ],
+    [
+     "It",
+     1.74,
+     1.83
+    ],
+    [
+     "is",
+     1.83,
+     1.94
+    ],
+    [
+     "see-through.",
+     1.94,
+     2.676
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "no color",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Hold your hands up to your eyes, and peek through. Peekaboo!",
+   "t0": 63.75,
+   "t1": 70.3125,
+   "v0": 63.90999999999999,
+   "dur": 3.735,
+   "words": [
+    [
+     "Hold",
+     0.0,
+     0.31
+    ],
+    [
+     "your",
+     0.31,
+     0.41
+    ],
+    [
+     "hands",
+     0.41,
+     0.75
+    ],
+    [
+     "up",
+     0.75,
+     0.85
+    ],
+    [
+     "to",
+     0.85,
+     0.96
+    ],
+    [
+     "your",
+     0.96,
+     1.13
+    ],
+    [
+     "eyes,",
+     1.13,
+     1.58
+    ],
+    [
+     "and",
+     1.58,
+     1.74
+    ],
+    [
+     "peek",
+     1.74,
+     2.03
+    ],
+    [
+     "through.",
+     2.03,
+     2.5
+    ],
+    [
+     "Peekaboo!",
+     2.93,
+     3.73
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "peek through",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Blink your eyes, like you are looking very closely. Blink, blink!",
+   "t0": 70.3125,
+   "t1": 77.8125,
+   "v0": 70.58500000000001,
+   "dur": 4.377083333333333,
+   "words": [
+    [
+     "Blink",
+     0.01,
+     0.33
+    ],
+    [
+     "your",
+     0.33,
+     0.51
+    ],
+    [
+     "eyes,",
+     0.51,
+     1.08
+    ],
+    [
+     "like",
+     1.08,
+     1.33
+    ],
+    [
+     "you",
+     1.33,
+     1.44
+    ],
+    [
+     "are",
+     1.44,
+     1.51
+    ],
+    [
+     "looking",
+     1.51,
+     1.87
+    ],
+    [
+     "very",
+     1.87,
+     2.19
+    ],
+    [
+     "closely.",
+     2.19,
+     2.92
+    ],
+    [
+     "Blink,",
+     3.34,
+     3.78
+    ],
+    [
+     "blink!",
+     3.78,
+     4.377
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "blink closely",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Say it with me. Polar bear hair is clear!",
+   "t0": 77.8125,
+   "t1": 81.25,
+   "v0": 77.90208333333335,
+   "dur": 2.880708333333333,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.3
+    ],
+    [
+     "it",
+     0.3,
+     0.37
+    ],
+    [
+     "with",
+     0.37,
+     0.54
+    ],
+    [
+     "me.",
+     0.54,
+     0.87
+    ],
+    [
+     "Polar",
+     1.15,
+     1.58
+    ],
+    [
+     "bear",
+     1.58,
+     1.84
+    ],
+    [
+     "hair",
+     1.84,
+     2.15
+    ],
+    [
+     "is",
+     2.15,
+     2.32
+    ],
+    [
+     "clear!",
+     2.32,
+     2.88
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: clear",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Quick check! Is one polar bear hair white, or clear?",
+   "t0": 81.25,
+   "t1": 88.125,
+   "v0": 81.32279166666669,
+   "dur": 3.2653333333333334,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.21
+    ],
+    [
+     "check!",
+     0.21,
+     0.68
+    ],
+    [
+     "Is",
+     0.81,
+     0.97
+    ],
+    [
+     "one",
+     0.97,
+     1.24
+    ],
+    [
+     "polar",
+     1.24,
+     1.57
+    ],
+    [
+     "bear",
+     1.57,
+     1.77
+    ],
+    [
+     "hair",
+     1.77,
+     2.1
+    ],
+    [
+     "white,",
+     2.1,
+     2.58
+    ],
+    [
+     "or",
+     2.58,
+     2.73
+    ],
+    [
+     "clear?",
+     2.73,
+     3.26
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "arctic",
+   "say": "Clear! See-through. Super job!",
+   "t0": 88.125,
+   "t1": 90.99062500000004,
+   "v0": 88.32812500000003,
+   "dur": 2.2425,
+   "words": [
+    [
+     "Clear!",
+     0.0,
+     0.43
+    ],
+    [
+     "See-through.",
+     0.43,
+     1.26
+    ],
+    [
+     "Super",
+     1.26,
+     1.63
+    ],
+    [
+     "job!",
+     1.63,
+     2.24
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "super job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

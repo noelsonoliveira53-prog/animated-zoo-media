@@ -1,0 +1,8031 @@
+{
+ "id": "za_ep16",
+ "total": 352.2321666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875
+ ],
+ "plan": {
+  "length": 352.2,
+  "shots": 65,
+  "visual_changes": 636,
+  "mean_gap": 0.55,
+  "longest_gap": 4.5,
+  "longest_gap_at": 177.1,
+  "over_6s": [],
+  "places": [
+   "meadow_gold",
+   "intro_gate",
+   "intro_logo",
+   "farm",
+   "meadow",
+   "lane",
+   "farm_gold",
+   "barn"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue",
+   "paper_pink"
+  ],
+  "questions": 18,
+  "longest_without_question": 43.8,
+  "first_words_at": 0.42,
+  "shot_mean": 5.42,
+  "main_intro": {
+   "at": [
+    8.4,
+    336.2
+   ],
+   "seconds": 30.4
+  },
+  "beats": {
+   "hook": 1,
+   "song": 8,
+   "goal": 8,
+   "fact": 6,
+   "obstacle1": 5,
+   "obstacle2": 6,
+   "obstacle3": 5,
+   "low": 4,
+   "solution": 11,
+   "ending": 9
+  },
+  "fails": [],
+  "words_placed": "637/637",
+  "sync": {
+   "pauses_checked": 59,
+   "onset_err_mean_ms": 23.2,
+   "onset_err_max_ms": 140.0,
+   "suspect_words": [],
+   "cuts": 64,
+   "cuts_on_the_half_beat": 64,
+   "songs_entering_on_a_beat": "8/8",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "action",
+   "bramble looks"
+  ],
+  [
+   0.0,
+   "action",
+   "daisy looks"
+  ],
+  [
+   0.0,
+   "action",
+   "woolly looks"
+  ],
+  [
+   0.0,
+   "new place",
+   "the meadow when the sun is low hook: Clover and the munching flock"
+  ],
+  [
+   0.02,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   0.1,
+   "action",
+   "woolly munches"
+  ],
+  [
+   0.33,
+   "action",
+   "daisy munches"
+  ],
+  [
+   0.56,
+   "action",
+   "bramble munches"
+  ],
+  [
+   1.41,
+   "word",
+   "LEAD THE SHEEP?"
+  ],
+  [
+   3.21,
+   "action",
+   "clover hops"
+  ],
+  [
+   5.91,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   6.83,
+   "word",
+   "MUNCH, MUNCH!"
+  ],
+  [
+   8.44,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   8.44,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   8.44,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   8.44,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   8.49,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   9.24,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   11.56,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   11.75,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   12.03,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   12.07,
+   "action",
+   "mango pops up"
+  ],
+  [
+   12.38,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   12.5,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   12.69,
+   "action",
+   "tula pops up"
+  ],
+  [
+   13.0,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   13.12,
+   "action",
+   "sandy nods"
+  ],
+  [
+   13.12,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   13.32,
+   "action",
+   "clover pops up"
+  ],
+  [
+   13.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.44,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   13.63,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   13.91,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   14.37,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   14.69,
+   "action",
+   "out of the flash"
+  ],
+  [
+   14.69,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   14.69,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   14.88,
+   "action",
+   "the badge pops"
+  ],
+  [
+   15.45,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.6,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.76,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   15.91,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   16.07,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   16.23,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   16.38,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   16.54,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   16.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   16.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   16.58,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   16.88,
+   "action",
+   "a firework"
+  ],
+  [
+   16.88,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   17.04,
+   "action",
+   "a firework"
+  ],
+  [
+   17.19,
+   "action",
+   "confetti"
+  ],
+  [
+   17.19,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   17.29,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   17.5,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   17.62,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   17.81,
+   "action",
+   "a firework"
+  ],
+  [
+   18.01,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   18.32,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   18.44,
+   "action",
+   "a firework"
+  ],
+  [
+   18.63,
+   "action",
+   "mango pops up"
+  ],
+  [
+   18.63,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   18.94,
+   "action",
+   "clover pops up"
+  ],
+  [
+   18.94,
+   "action",
+   "tula pops up"
+  ],
+  [
+   19.06,
+   "action",
+   "a firework"
+  ],
+  [
+   19.26,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   19.38,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   19.53,
+   "action",
+   "a firework"
+  ],
+  [
+   20.0,
+   "action",
+   "a firework"
+  ],
+  [
+   20.0,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   20.12,
+   "action",
+   "T word lights up"
+  ],
+  [
+   20.14,
+   "action",
+   "a firework"
+  ],
+  [
+   20.3,
+   "action",
+   "A word lights up"
+  ],
+  [
+   21.02,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   21.51,
+   "action",
+   "Milo flips"
+  ],
+  [
+   21.51,
+   "action",
+   "a firework"
+  ],
+  [
+   21.51,
+   "action",
+   "confetti"
+  ],
+  [
+   21.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   21.51,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   21.51,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   21.63,
+   "action",
+   "a firework"
+  ],
+  [
+   21.81,
+   "action",
+   "a firework"
+  ],
+  [
+   21.81,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   21.93,
+   "action",
+   "a firework"
+  ],
+  [
+   22.81,
+   "new place",
+   "the farm the farm: Milo, Clover, Mama"
+  ],
+  [
+   23.04,
+   "action",
+   "milo hops"
+  ],
+  [
+   26.37,
+   "action",
+   "clover hops"
+  ],
+  [
+   26.37,
+   "word",
+   "CLOVER"
+  ],
+  [
+   27.85,
+   "word",
+   "THE SUNNY FARM"
+  ],
+  [
+   28.25,
+   "action",
+   "mama nods"
+  ],
+  [
+   29.06,
+   "new shot",
+   "the farm Clover: I want to lead the flock home"
+  ],
+  [
+   29.08,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   30.02,
+   "action",
+   "clover nods"
+  ],
+  [
+   30.02,
+   "word",
+   "SUPPER TIME!"
+  ],
+  [
+   32.15,
+   "action",
+   "clover looks"
+  ],
+  [
+   32.15,
+   "word",
+   "LEAD THE FLOCK!"
+  ],
+  [
+   33.94,
+   "action",
+   "clover nods"
+  ],
+  [
+   35.0,
+   "new shot",
+   "the farm Mama: walk them home before sunset"
+  ],
+  [
+   35.02,
+   "action",
+   "mama looks happy"
+  ],
+  [
+   36.17,
+   "action",
+   "mama looks"
+  ],
+  [
+   36.17,
+   "word",
+   "UP IN THE MEADOW"
+  ],
+  [
+   36.68,
+   "action",
+   "mama nods"
+  ],
+  [
+   38.27,
+   "action",
+   "mama nods"
+  ],
+  [
+   38.27,
+   "word",
+   "WALK THEM HOME"
+  ],
+  [
+   40.62,
+   "new shot",
+   "the farm Clover: I can do it"
+  ],
+  [
+   40.65,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   40.91,
+   "action",
+   "clover hops"
+  ],
+  [
+   40.91,
+   "word",
+   "I CAN DO IT!"
+  ],
+  [
+   41.36,
+   "action",
+   "mama looks happy"
+  ],
+  [
+   42.5,
+   "action",
+   "clover nods"
+  ],
+  [
+   43.75,
+   "new shot",
+   "the farm question: Clover or Milo"
+  ],
+  [
+   43.77,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   44.25,
+   "action",
+   "clover hops"
+  ],
+  [
+   46.04,
+   "sign",
+   "CLOVER"
+  ],
+  [
+   46.39,
+   "sign",
+   "MILO"
+  ],
+  [
+   48.0,
+   "thinking dot",
+   "1"
+  ],
+  [
+   48.61,
+   "thinking dot",
+   "2"
+  ],
+  [
+   49.22,
+   "thinking dot",
+   "3"
+  ],
+  [
+   49.67,
+   "answer",
+   "CLOVER"
+  ],
+  [
+   50.94,
+   "new place",
+   "the picture board fact: sheep live in a flock"
+  ],
+  [
+   51.91,
+   "action",
+   "woolly nods"
+  ],
+  [
+   51.91,
+   "word",
+   "TOGETHER"
+  ],
+  [
+   52.67,
+   "action",
+   "daisy nods"
+  ],
+  [
+   52.99,
+   "action",
+   "bramble nods"
+  ],
+  [
+   54.4,
+   "action",
+   "bramble hops"
+  ],
+  [
+   54.4,
+   "action",
+   "daisy hops"
+  ],
+  [
+   54.4,
+   "action",
+   "woolly hops"
+  ],
+  [
+   54.4,
+   "word",
+   "A FLOCK!"
+  ],
+  [
+   55.31,
+   "new shot",
+   "the picture board question: flock or sock"
+  ],
+  [
+   55.71,
+   "action",
+   "the sock wiggles"
+  ],
+  [
+   57.51,
+   "sign",
+   "FLOCK"
+  ],
+  [
+   57.86,
+   "sign",
+   "SOCK"
+  ],
+  [
+   59.51,
+   "thinking dot",
+   "1"
+  ],
+  [
+   60.12,
+   "thinking dot",
+   "2"
+  ],
+  [
+   60.72,
+   "thinking dot",
+   "3"
+  ],
+  [
+   61.18,
+   "answer",
+   "FLOCK"
+  ],
+  [
+   62.5,
+   "action",
+   "bramble looks"
+  ],
+  [
+   62.5,
+   "action",
+   "daisy looks"
+  ],
+  [
+   62.5,
+   "action",
+   "woolly looks"
+  ],
+  [
+   62.5,
+   "new place",
+   "the green meadow the meadow: there is the flock"
+  ],
+  [
+   62.6,
+   "action",
+   "clover walks"
+  ],
+  [
+   62.6,
+   "action",
+   "woolly munches"
+  ],
+  [
+   62.7,
+   "action",
+   "milo flies"
+  ],
+  [
+   62.83,
+   "action",
+   "daisy munches"
+  ],
+  [
+   63.06,
+   "action",
+   "bramble munches"
+  ],
+  [
+   65.57,
+   "word",
+   "THE GREEN MEADOW"
+  ],
+  [
+   66.75,
+   "action",
+   "clover hops"
+  ],
+  [
+   67.29,
+   "word",
+   "THE FLOCK!"
+  ],
+  [
+   68.12,
+   "action",
+   "bramble looks"
+  ],
+  [
+   68.12,
+   "action",
+   "daisy looks"
+  ],
+  [
+   68.12,
+   "action",
+   "woolly looks"
+  ],
+  [
+   68.12,
+   "new shot",
+   "the green meadow count three sheep"
+  ],
+  [
+   68.22,
+   "action",
+   "woolly munches"
+  ],
+  [
+   68.44,
+   "word",
+   "COUNT!"
+  ],
+  [
+   68.45,
+   "action",
+   "daisy munches"
+  ],
+  [
+   68.69,
+   "action",
+   "bramble munches"
+  ],
+  [
+   70.49,
+   "action",
+   "woolly hops"
+  ],
+  [
+   70.49,
+   "count",
+   "1"
+  ],
+  [
+   70.75,
+   "action",
+   "daisy hops"
+  ],
+  [
+   70.75,
+   "count",
+   "2"
+  ],
+  [
+   71.02,
+   "action",
+   "bramble hops"
+  ],
+  [
+   71.02,
+   "count",
+   "3"
+  ],
+  [
+   73.12,
+   "action",
+   "bramble looks"
+  ],
+  [
+   73.12,
+   "action",
+   "daisy looks"
+  ],
+  [
+   73.12,
+   "action",
+   "woolly looks"
+  ],
+  [
+   73.12,
+   "new shot",
+   "the green meadow Woolly, Daisy and Bramble munch"
+  ],
+  [
+   73.22,
+   "action",
+   "woolly munches"
+  ],
+  [
+   73.45,
+   "action",
+   "daisy munches"
+  ],
+  [
+   73.69,
+   "action",
+   "bramble munches"
+  ],
+  [
+   73.69,
+   "word",
+   "WOOLLY"
+  ],
+  [
+   74.16,
+   "word",
+   "DAISY"
+  ],
+  [
+   74.87,
+   "word",
+   "BRAMBLE"
+  ],
+  [
+   77.33,
+   "word",
+   "MUNCH, MUNCH!"
+  ],
+  [
+   79.38,
+   "new shot",
+   "the green meadow Clover calls: time to go home"
+  ],
+  [
+   79.39,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   79.93,
+   "action",
+   "clover nods"
+  ],
+  [
+   81.09,
+   "action",
+   "clover hops"
+  ],
+  [
+   81.09,
+   "word",
+   "BAA! BAA!"
+  ],
+  [
+   81.35,
+   "action",
+   "clover hops"
+  ],
+  [
+   82.19,
+   "action",
+   "bramble looks"
+  ],
+  [
+   82.19,
+   "action",
+   "daisy looks"
+  ],
+  [
+   82.19,
+   "action",
+   "woolly looks"
+  ],
+  [
+   82.19,
+   "new shot",
+   "the green meadow the sheep do not look up"
+  ],
+  [
+   82.21,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   82.29,
+   "action",
+   "woolly munches"
+  ],
+  [
+   82.52,
+   "action",
+   "daisy munches"
+  ],
+  [
+   82.75,
+   "action",
+   "bramble munches"
+  ],
+  [
+   84.07,
+   "word",
+   "A LITTLE VOICE"
+  ],
+  [
+   85.56,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   86.85,
+   "word",
+   "MUNCH, MUNCH!"
+  ],
+  [
+   88.75,
+   "new shot",
+   "the green meadow copy me: call baa"
+  ],
+  [
+   88.77,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   90.82,
+   "action",
+   "clover hops"
+  ],
+  [
+   90.82,
+   "word",
+   "BAA! BAA!"
+  ],
+  [
+   91.09,
+   "action",
+   "clover hops"
+  ],
+  [
+   92.39,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   92.49,
+   "action",
+   "clover hops"
+  ],
+  [
+   93.59,
+   "action",
+   "milo hops"
+  ],
+  [
+   95.0,
+   "action",
+   "daisy looks"
+  ],
+  [
+   95.0,
+   "new place",
+   "the picture board (blue) fact: sheep eat grass and other plants"
+  ],
+  [
+   95.2,
+   "action",
+   "daisy munches"
+  ],
+  [
+   95.77,
+   "action",
+   "the grass pulses"
+  ],
+  [
+   95.77,
+   "word",
+   "GRASS!"
+  ],
+  [
+   96.78,
+   "action",
+   "the plants pulse"
+  ],
+  [
+   96.78,
+   "word",
+   "AND OTHER PLANTS"
+  ],
+  [
+   99.28,
+   "action",
+   "more grass pulses"
+  ],
+  [
+   101.25,
+   "action",
+   "daisy looks"
+  ],
+  [
+   101.25,
+   "new shot",
+   "the picture board (blue) question: grass or cake"
+  ],
+  [
+   101.45,
+   "action",
+   "daisy munches"
+  ],
+  [
+   102.65,
+   "sign",
+   "GRASS"
+  ],
+  [
+   103.0,
+   "sign",
+   "CAKE"
+  ],
+  [
+   104.39,
+   "thinking dot",
+   "1"
+  ],
+  [
+   105.0,
+   "thinking dot",
+   "2"
+  ],
+  [
+   105.61,
+   "thinking dot",
+   "3"
+  ],
+  [
+   106.06,
+   "answer",
+   "GRASS"
+  ],
+  [
+   107.5,
+   "action",
+   "bramble looks"
+  ],
+  [
+   107.5,
+   "action",
+   "daisy looks"
+  ],
+  [
+   107.5,
+   "action",
+   "woolly looks"
+  ],
+  [
+   107.5,
+   "new place",
+   "the green meadow question: did the sheep come"
+  ],
+  [
+   107.52,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   107.6,
+   "action",
+   "woolly munches"
+  ],
+  [
+   107.83,
+   "action",
+   "daisy munches"
+  ],
+  [
+   108.06,
+   "action",
+   "bramble munches"
+  ],
+  [
+   110.01,
+   "sign",
+   "YES"
+  ],
+  [
+   110.36,
+   "sign",
+   "NO"
+  ],
+  [
+   111.55,
+   "thinking dot",
+   "1"
+  ],
+  [
+   112.15,
+   "thinking dot",
+   "2"
+  ],
+  [
+   112.76,
+   "thinking dot",
+   "3"
+  ],
+  [
+   113.21,
+   "answer",
+   "NO"
+  ],
+  [
+   114.69,
+   "new shot",
+   "the green meadow Clover: I need a new idea"
+  ],
+  [
+   114.71,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   115.78,
+   "action",
+   "clover nods"
+  ],
+  [
+   116.96,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   116.96,
+   "word",
+   "A NEW IDEA"
+  ],
+  [
+   118.12,
+   "action",
+   "woolly looks"
+  ],
+  [
+   118.12,
+   "new shot",
+   "the green meadow Clover walks behind Woolly and pushes"
+  ],
+  [
+   118.22,
+   "action",
+   "woolly munches"
+  ],
+  [
+   118.33,
+   "action",
+   "clover walks"
+  ],
+  [
+   121.16,
+   "action",
+   "Clover pushes"
+  ],
+  [
+   121.16,
+   "word",
+   "PUSH!"
+  ],
+  [
+   122.19,
+   "action",
+   "woolly looks"
+  ],
+  [
+   122.19,
+   "new shot",
+   "the green meadow Clover: push, push, push"
+  ],
+  [
+   122.21,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   122.29,
+   "action",
+   "woolly munches"
+  ],
+  [
+   122.39,
+   "action",
+   "Clover pushes"
+  ],
+  [
+   122.43,
+   "word",
+   "PUSH, PUSH!"
+  ],
+  [
+   125.31,
+   "action",
+   "woolly looks"
+  ],
+  [
+   125.31,
+   "new shot",
+   "the green meadow Woolly does not move"
+  ],
+  [
+   125.33,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   125.41,
+   "action",
+   "woolly munches"
+  ],
+  [
+   126.04,
+   "word",
+   "SO BIG!"
+  ],
+  [
+   127.31,
+   "word",
+   "SO SMALL!"
+  ],
+  [
+   128.37,
+   "action",
+   "milo flies"
+  ],
+  [
+   130.31,
+   "action",
+   "woolly looks"
+  ],
+  [
+   130.31,
+   "new shot",
+   "the green meadow copy me: push"
+  ],
+  [
+   130.33,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   130.41,
+   "action",
+   "woolly munches"
+  ],
+  [
+   131.0,
+   "action",
+   "Clover pushes"
+  ],
+  [
+   131.0,
+   "word",
+   "PUSH, PUSH, PUSH!"
+  ],
+  [
+   134.67,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   137.19,
+   "action",
+   "woolly looks"
+  ],
+  [
+   137.19,
+   "new shot",
+   "the green meadow question: did Woolly move"
+  ],
+  [
+   137.21,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   137.29,
+   "action",
+   "woolly munches"
+  ],
+  [
+   138.64,
+   "sign",
+   "YES"
+  ],
+  [
+   138.99,
+   "sign",
+   "NO"
+  ],
+  [
+   140.12,
+   "thinking dot",
+   "1"
+  ],
+  [
+   140.73,
+   "thinking dot",
+   "2"
+  ],
+  [
+   141.33,
+   "thinking dot",
+   "3"
+  ],
+  [
+   141.79,
+   "answer",
+   "NO"
+  ],
+  [
+   143.12,
+   "new shot",
+   "the green meadow Clover: pushing is too hard"
+  ],
+  [
+   143.15,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   144.94,
+   "action",
+   "clover nods"
+  ],
+  [
+   144.94,
+   "word",
+   "TOO HARD!"
+  ],
+  [
+   145.94,
+   "action",
+   "bramble looks"
+  ],
+  [
+   145.94,
+   "action",
+   "daisy looks"
+  ],
+  [
+   145.94,
+   "action",
+   "woolly looks"
+  ],
+  [
+   145.94,
+   "new place",
+   "the meadow when the sun is low the sun is lower: one more idea"
+  ],
+  [
+   145.96,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   146.04,
+   "action",
+   "woolly munches"
+  ],
+  [
+   146.27,
+   "action",
+   "daisy munches"
+  ],
+  [
+   146.5,
+   "action",
+   "bramble munches"
+  ],
+  [
+   147.38,
+   "word",
+   "THE SUN IS LOW"
+  ],
+  [
+   149.62,
+   "action",
+   "clover hops"
+  ],
+  [
+   150.97,
+   "action",
+   "milo flies"
+  ],
+  [
+   150.97,
+   "word",
+   "RUN AROUND!"
+  ],
+  [
+   152.5,
+   "action",
+   "bramble looks"
+  ],
+  [
+   152.5,
+   "action",
+   "daisy looks"
+  ],
+  [
+   152.5,
+   "action",
+   "woolly looks"
+  ],
+  [
+   152.5,
+   "new shot",
+   "the meadow when the sun is low Clover runs round the flock"
+  ],
+  [
+   152.52,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   152.6,
+   "action",
+   "clover walks"
+  ],
+  [
+   152.6,
+   "action",
+   "woolly munches"
+  ],
+  [
+   152.74,
+   "word",
+   "ROUND AND ROUND!"
+  ],
+  [
+   152.83,
+   "action",
+   "daisy munches"
+  ],
+  [
+   153.06,
+   "action",
+   "bramble munches"
+  ],
+  [
+   155.62,
+   "new shot",
+   "the meadow when the sun is low the sheep watch, Clover is dizzy"
+  ],
+  [
+   155.65,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   155.72,
+   "action",
+   "Clover turns and turns"
+  ],
+  [
+   155.93,
+   "action",
+   "woolly looks"
+  ],
+  [
+   158.65,
+   "action",
+   "woolly munches"
+  ],
+  [
+   159.48,
+   "word",
+   "THEY ONLY WATCH"
+  ],
+  [
+   161.5,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   161.5,
+   "action",
+   "clover wobbles"
+  ],
+  [
+   161.5,
+   "action",
+   "the dizzy stars turn"
+  ],
+  [
+   161.5,
+   "picture",
+   "dz"
+  ],
+  [
+   161.5,
+   "word",
+   "DIZZY!"
+  ],
+  [
+   162.19,
+   "action",
+   "the dizzy stars turn"
+  ],
+  [
+   162.19,
+   "new shot",
+   "the meadow when the sun is low question: dizzy or sleepy"
+  ],
+  [
+   162.21,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   162.29,
+   "action",
+   "clover wobbles"
+  ],
+  [
+   164.14,
+   "sign",
+   "DIZZY"
+  ],
+  [
+   164.49,
+   "sign",
+   "SLEEPY"
+  ],
+  [
+   165.95,
+   "thinking dot",
+   "1"
+  ],
+  [
+   166.56,
+   "thinking dot",
+   "2"
+  ],
+  [
+   167.17,
+   "thinking dot",
+   "3"
+  ],
+  [
+   167.62,
+   "answer",
+   "DIZZY"
+  ],
+  [
+   169.06,
+   "new shot",
+   "the meadow when the sun is low copy me: a big breath"
+  ],
+  [
+   169.08,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   171.37,
+   "action",
+   "Clover breathes in and out"
+  ],
+  [
+   171.37,
+   "action",
+   "Milo breathes in and out"
+  ],
+  [
+   171.37,
+   "word",
+   "IN..."
+  ],
+  [
+   171.96,
+   "word",
+   "AND OUT..."
+  ],
+  [
+   173.35,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   175.62,
+   "action",
+   "bramble looks"
+  ],
+  [
+   175.62,
+   "action",
+   "daisy looks"
+  ],
+  [
+   175.62,
+   "action",
+   "woolly looks"
+  ],
+  [
+   175.62,
+   "new shot",
+   "the meadow when the sun is low gold sky, Clover a little sad"
+  ],
+  [
+   175.65,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   175.72,
+   "action",
+   "woolly munches"
+  ],
+  [
+   175.96,
+   "action",
+   "daisy munches"
+  ],
+  [
+   176.19,
+   "action",
+   "bramble munches"
+  ],
+  [
+   177.07,
+   "word",
+   "A GOLD SKY"
+  ],
+  [
+   181.57,
+   "action",
+   "clover looks"
+  ],
+  [
+   181.57,
+   "word",
+   "A LITTLE SAD"
+  ],
+  [
+   182.5,
+   "new shot",
+   "the meadow when the sun is low Clover: maybe I can not lead the flock"
+  ],
+  [
+   182.52,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   183.33,
+   "action",
+   "clover nods"
+  ],
+  [
+   183.33,
+   "word",
+   "TOO LITTLE?"
+  ],
+  [
+   184.11,
+   "action",
+   "clover looks"
+  ],
+  [
+   186.25,
+   "new shot",
+   "the meadow when the sun is low Milo: I am right here"
+  ],
+  [
+   186.27,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   186.45,
+   "action",
+   "milo flies"
+  ],
+  [
+   188.42,
+   "action",
+   "milo hops"
+  ],
+  [
+   188.42,
+   "word",
+   "RIGHT HERE"
+  ],
+  [
+   188.73,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   189.69,
+   "new shot",
+   "the meadow when the sun is low question: sad or happy"
+  ],
+  [
+   189.71,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   190.09,
+   "action",
+   "clover looks"
+  ],
+  [
+   191.77,
+   "sign",
+   "SAD"
+  ],
+  [
+   192.12,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   193.49,
+   "thinking dot",
+   "1"
+  ],
+  [
+   194.09,
+   "thinking dot",
+   "2"
+  ],
+  [
+   194.7,
+   "thinking dot",
+   "3"
+  ],
+  [
+   195.15,
+   "answer",
+   "SAD"
+  ],
+  [
+   196.56,
+   "action",
+   "bramble looks"
+  ],
+  [
+   196.56,
+   "action",
+   "woolly looks"
+  ],
+  [
+   196.56,
+   "new shot",
+   "the meadow when the sun is low Daisy walks to new grass"
+  ],
+  [
+   196.58,
+   "action",
+   "clover looks sad"
+  ],
+  [
+   196.66,
+   "action",
+   "woolly munches"
+  ],
+  [
+   196.86,
+   "action",
+   "bramble munches"
+  ],
+  [
+   197.5,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   197.5,
+   "word",
+   "LOOK!"
+  ],
+  [
+   198.91,
+   "action",
+   "daisy walks"
+  ],
+  [
+   199.98,
+   "word",
+   "NEW GRASS"
+  ],
+  [
+   201.34,
+   "action",
+   "daisy looks"
+  ],
+  [
+   201.56,
+   "action",
+   "daisy looks"
+  ],
+  [
+   201.56,
+   "new shot",
+   "the meadow when the sun is low Woolly and Bramble follow"
+  ],
+  [
+   201.58,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   201.66,
+   "action",
+   "daisy munches"
+  ],
+  [
+   202.51,
+   "action",
+   "woolly walks"
+  ],
+  [
+   202.86,
+   "action",
+   "clover hops"
+  ],
+  [
+   202.86,
+   "word",
+   "FOLLOW!"
+  ],
+  [
+   204.56,
+   "action",
+   "bramble walks"
+  ],
+  [
+   205.0,
+   "word",
+   "FOLLOW!"
+  ],
+  [
+   206.25,
+   "action",
+   "bramble looks"
+  ],
+  [
+   206.25,
+   "action",
+   "daisy looks"
+  ],
+  [
+   206.25,
+   "action",
+   "woolly looks"
+  ],
+  [
+   206.25,
+   "new shot",
+   "the meadow when the sun is low question: follow or fly"
+  ],
+  [
+   206.27,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   206.35,
+   "action",
+   "woolly munches"
+  ],
+  [
+   206.58,
+   "action",
+   "daisy munches"
+  ],
+  [
+   206.81,
+   "action",
+   "bramble munches"
+  ],
+  [
+   208.16,
+   "sign",
+   "FOLLOW"
+  ],
+  [
+   208.51,
+   "sign",
+   "FLY"
+  ],
+  [
+   209.88,
+   "thinking dot",
+   "1"
+  ],
+  [
+   210.49,
+   "thinking dot",
+   "2"
+  ],
+  [
+   211.1,
+   "thinking dot",
+   "3"
+  ],
+  [
+   211.55,
+   "answer",
+   "FOLLOW"
+  ],
+  [
+   212.81,
+   "new shot",
+   "the meadow when the sun is low Clover's idea: I will walk first"
+  ],
+  [
+   212.83,
+   "action",
+   "clover looks wow"
+  ],
+  [
+   213.29,
+   "picture",
+   "bulb"
+  ],
+  [
+   213.68,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   214.21,
+   "action",
+   "clover nods"
+  ],
+  [
+   214.21,
+   "word",
+   "SHEEP FOLLOW!"
+  ],
+  [
+   216.21,
+   "action",
+   "clover hops"
+  ],
+  [
+   216.21,
+   "word",
+   "WALK FIRST!"
+  ],
+  [
+   217.5,
+   "new place",
+   "the picture board (pink) fact: when one sheep moves the rest follow"
+  ],
+  [
+   218.19,
+   "action",
+   "the arrow points the way"
+  ],
+  [
+   218.19,
+   "word",
+   "FOLLOW!"
+  ],
+  [
+   219.69,
+   "action",
+   "daisy walks"
+  ],
+  [
+   221.35,
+   "action",
+   "bramble walks"
+  ],
+  [
+   221.35,
+   "action",
+   "woolly walks"
+  ],
+  [
+   221.35,
+   "word",
+   "THE REST FOLLOW"
+  ],
+  [
+   222.81,
+   "new shot",
+   "the picture board (pink) question: follow or hide"
+  ],
+  [
+   223.11,
+   "action",
+   "the arrow points the way"
+  ],
+  [
+   225.79,
+   "sign",
+   "FOLLOW"
+  ],
+  [
+   226.14,
+   "sign",
+   "HIDE"
+  ],
+  [
+   227.55,
+   "thinking dot",
+   "1"
+  ],
+  [
+   228.16,
+   "thinking dot",
+   "2"
+  ],
+  [
+   228.76,
+   "thinking dot",
+   "3"
+  ],
+  [
+   229.22,
+   "answer",
+   "FOLLOW"
+  ],
+  [
+   230.62,
+   "action",
+   "bramble looks"
+  ],
+  [
+   230.62,
+   "action",
+   "daisy looks"
+  ],
+  [
+   230.62,
+   "action",
+   "woolly looks"
+  ],
+  [
+   230.62,
+   "new place",
+   "the meadow when the sun is low Clover walks first"
+  ],
+  [
+   230.65,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   230.72,
+   "action",
+   "bramble munches"
+  ],
+  [
+   230.93,
+   "action",
+   "woolly munches"
+  ],
+  [
+   231.12,
+   "action",
+   "daisy munches"
+  ],
+  [
+   231.53,
+   "action",
+   "clover looks"
+  ],
+  [
+   232.29,
+   "word",
+   "HEAD UP HIGH!"
+  ],
+  [
+   233.35,
+   "action",
+   "clover walks"
+  ],
+  [
+   234.39,
+   "word",
+   "STEP, STEP, STEP!"
+  ],
+  [
+   236.25,
+   "action",
+   "bramble looks"
+  ],
+  [
+   236.25,
+   "action",
+   "clover looks"
+  ],
+  [
+   236.25,
+   "action",
+   "daisy looks"
+  ],
+  [
+   236.25,
+   "action",
+   "woolly looks"
+  ],
+  [
+   236.25,
+   "new shot",
+   "the meadow when the sun is low the flock follows Clover"
+  ],
+  [
+   236.27,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   236.35,
+   "action",
+   "clover walks"
+  ],
+  [
+   236.35,
+   "action",
+   "milo flies"
+  ],
+  [
+   236.85,
+   "action",
+   "daisy looks"
+  ],
+  [
+   237.96,
+   "action",
+   "daisy walks"
+  ],
+  [
+   237.96,
+   "word",
+   "DAISY FOLLOWS!"
+  ],
+  [
+   239.15,
+   "action",
+   "woolly looks"
+  ],
+  [
+   239.15,
+   "action",
+   "woolly walks"
+  ],
+  [
+   239.36,
+   "word",
+   "WOOLLY!"
+  ],
+  [
+   240.08,
+   "action",
+   "bramble looks"
+  ],
+  [
+   240.08,
+   "action",
+   "bramble walks"
+  ],
+  [
+   240.32,
+   "word",
+   "BRAMBLE!"
+  ],
+  [
+   241.25,
+   "action",
+   "clover looks"
+  ],
+  [
+   241.25,
+   "new place",
+   "the lane home at sunset the lane: Clover first, the flock behind"
+  ],
+  [
+   241.27,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   241.35,
+   "action",
+   "bramble walks"
+  ],
+  [
+   241.35,
+   "action",
+   "clover walks"
+  ],
+  [
+   241.35,
+   "action",
+   "daisy walks"
+  ],
+  [
+   241.35,
+   "action",
+   "woolly walks"
+  ],
+  [
+   243.13,
+   "word",
+   "IN A LINE"
+  ],
+  [
+   244.55,
+   "action",
+   "milo hops"
+  ],
+  [
+   244.55,
+   "word",
+   "CLOVER FIRST!"
+  ],
+  [
+   246.88,
+   "new shot",
+   "the lane home at sunset count the sheep behind Clover"
+  ],
+  [
+   246.9,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   247.08,
+   "word",
+   "COUNT!"
+  ],
+  [
+   249.26,
+   "action",
+   "daisy hops"
+  ],
+  [
+   249.26,
+   "count",
+   "1"
+  ],
+  [
+   249.52,
+   "action",
+   "woolly hops"
+  ],
+  [
+   249.53,
+   "count",
+   "2"
+  ],
+  [
+   249.78,
+   "action",
+   "bramble hops"
+  ],
+  [
+   249.79,
+   "count",
+   "3"
+  ],
+  [
+   251.88,
+   "new shot",
+   "the lane home at sunset copy me: march"
+  ],
+  [
+   251.9,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   252.44,
+   "action",
+   "bramble walks"
+  ],
+  [
+   252.44,
+   "action",
+   "clover walks"
+  ],
+  [
+   252.44,
+   "action",
+   "daisy walks"
+  ],
+  [
+   252.44,
+   "action",
+   "woolly walks"
+  ],
+  [
+   252.44,
+   "word",
+   "MARCH, MARCH!"
+  ],
+  [
+   256.36,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   259.06,
+   "new shot",
+   "the lane home at sunset the follow rhyme"
+  ],
+  [
+   259.08,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   259.17,
+   "action",
+   "clover nods"
+  ],
+  [
+   259.17,
+   "word",
+   "FOLLOW, FOLLOW"
+  ],
+  [
+   261.53,
+   "action",
+   "clover nods"
+  ],
+  [
+   261.53,
+   "word",
+   "HOME TOGETHER!"
+  ],
+  [
+   262.54,
+   "action",
+   "daisy hops"
+  ],
+  [
+   263.44,
+   "new shot",
+   "the lane home at sunset song: follow, follow"
+  ],
+  [
+   263.46,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   263.56,
+   "action",
+   "bramble walks"
+  ],
+  [
+   263.56,
+   "action",
+   "clover walks"
+  ],
+  [
+   263.56,
+   "action",
+   "daisy walks"
+  ],
+  [
+   263.56,
+   "action",
+   "woolly walks"
+  ],
+  [
+   263.56,
+   "word",
+   "FOLLOW, FOLLOW, ONE BY ONE"
+  ],
+  [
+   266.06,
+   "action",
+   "milo hops"
+  ],
+  [
+   268.56,
+   "action",
+   "milo hops"
+  ],
+  [
+   268.56,
+   "word",
+   "HOME TOGETHER!"
+  ],
+  [
+   271.06,
+   "action",
+   "milo hops"
+  ],
+  [
+   273.75,
+   "new shot",
+   "the lane home at sunset question: who is leading"
+  ],
+  [
+   273.77,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   274.25,
+   "action",
+   "clover hops"
+  ],
+  [
+   275.41,
+   "sign",
+   "CLOVER"
+  ],
+  [
+   275.76,
+   "sign",
+   "WOOLLY"
+  ],
+  [
+   277.22,
+   "thinking dot",
+   "1"
+  ],
+  [
+   277.82,
+   "thinking dot",
+   "2"
+  ],
+  [
+   278.43,
+   "thinking dot",
+   "3"
+  ],
+  [
+   278.88,
+   "answer",
+   "CLOVER"
+  ],
+  [
+   280.31,
+   "new place",
+   "the farm at sunset home at the red barn"
+  ],
+  [
+   280.33,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   280.41,
+   "action",
+   "clover walks"
+  ],
+  [
+   280.41,
+   "action",
+   "woolly walks"
+  ],
+  [
+   280.51,
+   "action",
+   "milo flies"
+  ],
+  [
+   282.16,
+   "word",
+   "HOME!"
+  ],
+  [
+   285.27,
+   "action",
+   "mama nods"
+  ],
+  [
+   285.27,
+   "word",
+   "MAMA!"
+  ],
+  [
+   286.25,
+   "new shot",
+   "the farm at sunset Mama: I am so proud"
+  ],
+  [
+   286.27,
+   "action",
+   "mama looks wow"
+  ],
+  [
+   287.06,
+   "action",
+   "mama nods"
+  ],
+  [
+   288.9,
+   "action",
+   "mama looks happy"
+  ],
+  [
+   288.9,
+   "action",
+   "mama nods"
+  ],
+  [
+   288.9,
+   "word",
+   "SO PROUD!"
+  ],
+  [
+   290.0,
+   "new place",
+   "inside the cosy barn the barn: supper for everyone"
+  ],
+  [
+   290.02,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   290.79,
+   "word",
+   "THE COSY BARN"
+  ],
+  [
+   291.87,
+   "action",
+   "clover hops"
+  ],
+  [
+   291.87,
+   "word",
+   "SUPPER TIME!"
+  ],
+  [
+   293.55,
+   "action",
+   "woolly looks"
+  ],
+  [
+   293.55,
+   "action",
+   "woolly munches"
+  ],
+  [
+   295.32,
+   "action",
+   "milo hops"
+  ],
+  [
+   296.25,
+   "new shot",
+   "inside the cosy barn Clover: thank you, Milo"
+  ],
+  [
+   296.27,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   296.44,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   296.91,
+   "action",
+   "clover nods"
+  ],
+  [
+   298.58,
+   "action",
+   "clover nods"
+  ],
+  [
+   299.69,
+   "new shot",
+   "inside the cosy barn the lesson: go first"
+  ],
+  [
+   300.97,
+   "action",
+   "milo hops"
+  ],
+  [
+   303.84,
+   "action",
+   "milo hops"
+  ],
+  [
+   303.84,
+   "word",
+   "GO FIRST!"
+  ],
+  [
+   304.69,
+   "new shot",
+   "inside the cosy barn question: flock or sock again"
+  ],
+  [
+   304.71,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   305.25,
+   "action",
+   "clover hops"
+  ],
+  [
+   307.86,
+   "sign",
+   "FLOCK"
+  ],
+  [
+   308.21,
+   "sign",
+   "SOCK"
+  ],
+  [
+   309.87,
+   "thinking dot",
+   "1"
+  ],
+  [
+   310.48,
+   "thinking dot",
+   "2"
+  ],
+  [
+   311.09,
+   "thinking dot",
+   "3"
+  ],
+  [
+   311.54,
+   "answer",
+   "FLOCK"
+  ],
+  [
+   312.81,
+   "action",
+   "woolly looks"
+  ],
+  [
+   312.81,
+   "new shot",
+   "inside the cosy barn question: grass or rocks"
+  ],
+  [
+   313.01,
+   "action",
+   "woolly munches"
+  ],
+  [
+   314.01,
+   "action",
+   "clover nods"
+  ],
+  [
+   314.71,
+   "sign",
+   "GRASS"
+  ],
+  [
+   315.06,
+   "sign",
+   "ROCKS"
+  ],
+  [
+   316.66,
+   "thinking dot",
+   "1"
+  ],
+  [
+   317.27,
+   "thinking dot",
+   "2"
+  ],
+  [
+   317.87,
+   "thinking dot",
+   "3"
+  ],
+  [
+   318.33,
+   "answer",
+   "GRASS"
+  ],
+  [
+   319.69,
+   "new shot",
+   "inside the cosy barn the closing rhyme"
+  ],
+  [
+   319.71,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   319.93,
+   "action",
+   "milo hops"
+  ],
+  [
+   319.93,
+   "word",
+   "FOLLOW, FOLLOW"
+  ],
+  [
+   322.36,
+   "action",
+   "mama nods"
+  ],
+  [
+   322.36,
+   "word",
+   "HOME TOGETHER!"
+  ],
+  [
+   323.61,
+   "action",
+   "clover hops"
+  ],
+  [
+   324.38,
+   "new shot",
+   "inside the cosy barn song: hooray"
+  ],
+  [
+   324.39,
+   "action",
+   "clover looks happy"
+  ],
+  [
+   325.38,
+   "action",
+   "milo hops"
+  ],
+  [
+   325.98,
+   "action",
+   "clover hops"
+  ],
+  [
+   326.38,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   326.57,
+   "action",
+   "mama nods"
+  ],
+  [
+   330.0,
+   "new shot",
+   "inside the cosy barn goodbye: next adventure"
+  ],
+  [
+   330.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   330.12,
+   "word",
+   "NEXT TIME!"
+  ],
+  [
+   333.49,
+   "word",
+   "SEE YOU SOON!"
+  ],
+  [
+   336.25,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   336.25,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   336.25,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   336.25,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   336.3,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   337.05,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   339.69,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   339.88,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   340.16,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   340.19,
+   "action",
+   "mango pops up"
+  ],
+  [
+   340.51,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   340.63,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   340.82,
+   "action",
+   "tula pops up"
+  ],
+  [
+   341.13,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   341.25,
+   "action",
+   "sandy nods"
+  ],
+  [
+   341.25,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   341.44,
+   "action",
+   "clover pops up"
+  ],
+  [
+   341.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   341.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   341.76,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   342.03,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   342.5,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   342.81,
+   "action",
+   "out of the flash"
+  ],
+  [
+   342.81,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   342.81,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   343.0,
+   "action",
+   "the badge pops"
+  ],
+  [
+   343.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   343.73,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   343.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.04,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.35,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.66,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   344.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   344.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   345.0,
+   "action",
+   "a firework"
+  ],
+  [
+   345.0,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   345.16,
+   "action",
+   "a firework"
+  ],
+  [
+   345.31,
+   "action",
+   "confetti"
+  ],
+  [
+   345.31,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   345.41,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   345.62,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   345.74,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   345.94,
+   "action",
+   "a firework"
+  ],
+  [
+   346.13,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   346.44,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   346.56,
+   "action",
+   "a firework"
+  ],
+  [
+   346.75,
+   "action",
+   "mango pops up"
+  ],
+  [
+   346.75,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   347.07,
+   "action",
+   "clover pops up"
+  ],
+  [
+   347.07,
+   "action",
+   "tula pops up"
+  ],
+  [
+   347.19,
+   "action",
+   "a firework"
+  ],
+  [
+   347.38,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   347.5,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   347.66,
+   "action",
+   "a firework"
+  ],
+  [
+   348.12,
+   "action",
+   "a firework"
+  ],
+  [
+   348.12,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   348.25,
+   "action",
+   "T word lights up"
+  ],
+  [
+   348.26,
+   "action",
+   "a firework"
+  ],
+  [
+   348.43,
+   "action",
+   "A word lights up"
+  ],
+  [
+   349.14,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   349.63,
+   "action",
+   "Milo flips"
+  ],
+  [
+   349.63,
+   "action",
+   "a firework"
+  ],
+  [
+   349.63,
+   "action",
+   "confetti"
+  ],
+  [
+   349.63,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   349.63,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   349.63,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   349.75,
+   "action",
+   "a firework"
+  ],
+  [
+   349.93,
+   "action",
+   "a firework"
+  ],
+  [
+   349.93,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   350.05,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "meadow_gold",
+   "say": "Can little Clover lead the big sheep home? Look! The sun is going down. But the sheep just munch, and munch!",
+   "t0": 0.0,
+   "t1": 8.4375,
+   "v0": 0.42,
+   "dur": 7.655916666666666,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.23
+    ],
+    [
+     "little",
+     0.23,
+     0.43
+    ],
+    [
+     "Clover",
+     0.43,
+     0.99
+    ],
+    [
+     "lead",
+     0.99,
+     1.3
+    ],
+    [
+     "the",
+     1.3,
+     1.37
+    ],
+    [
+     "big",
+     1.37,
+     1.6
+    ],
+    [
+     "sheep",
+     1.6,
+     1.92
+    ],
+    [
+     "home?",
+     1.92,
+     2.4
+    ],
+    [
+     "Look!",
+     2.79,
+     3.27
+    ],
+    [
+     "The",
+     3.6,
+     3.69
+    ],
+    [
+     "sun",
+     3.69,
+     4.04
+    ],
+    [
+     "is",
+     4.04,
+     4.2
+    ],
+    [
+     "going",
+     4.2,
+     4.54
+    ],
+    [
+     "down.",
+     4.54,
+     5.06
+    ],
+    [
+     "But",
+     5.49,
+     5.62
+    ],
+    [
+     "the",
+     5.62,
+     5.69
+    ],
+    [
+     "sheep",
+     5.69,
+     6.08
+    ],
+    [
+     "just",
+     6.08,
+     6.41
+    ],
+    [
+     "munch,",
+     6.41,
+     6.91
+    ],
+    [
+     "and",
+     6.91,
+     7.1
+    ],
+    [
+     "munch!",
+     7.1,
+     7.656
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Clover and the munching flock",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 8.4375,
+   "t1": 11.5625,
+   "v0": 8.75,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 11.5625,
+   "t1": 14.6875,
+   "v0": 11.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 14.6875,
+   "t1": 20.0,
+   "v0": 15.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 20.0,
+   "t1": 22.8125,
+   "v0": 20.12,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "farm",
+   "say": "Hello, I'm Milo! Today I am visiting Clover the lamb, on the sunny farm.",
+   "t0": 22.8125,
+   "t1": 29.0625,
+   "v0": 23.027166666666666,
+   "dur": 5.771,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.67
+    ],
+    [
+     "I'm",
+     0.67,
+     0.86
+    ],
+    [
+     "Milo!",
+     0.86,
+     1.47
+    ],
+    [
+     "Today",
+     1.99,
+     2.45
+    ],
+    [
+     "I",
+     2.45,
+     2.63
+    ],
+    [
+     "am",
+     2.63,
+     2.87
+    ],
+    [
+     "visiting",
+     2.87,
+     3.34
+    ],
+    [
+     "Clover",
+     3.34,
+     3.81
+    ],
+    [
+     "the",
+     3.81,
+     3.93
+    ],
+    [
+     "lamb,",
+     3.93,
+     4.49
+    ],
+    [
+     "on",
+     4.63,
+     4.75
+    ],
+    [
+     "the",
+     4.75,
+     4.82
+    ],
+    [
+     "sunny",
+     4.82,
+     5.22
+    ],
+    [
+     "farm.",
+     5.22,
+     5.77
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the farm: Milo, Clover, Mama",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "farm",
+   "say": "It is almost supper time! Today, I want to lead the flock home. All by myself!",
+   "t0": 29.0625,
+   "t1": 35.0,
+   "v0": 29.318166666666666,
+   "dur": 5.364541666666667,
+   "words": [
+    [
+     "It",
+     0.0,
+     0.14
+    ],
+    [
+     "is",
+     0.14,
+     0.28
+    ],
+    [
+     "almost",
+     0.28,
+     0.7
+    ],
+    [
+     "supper",
+     0.7,
+     0.98
+    ],
+    [
+     "time!",
+     0.98,
+     1.46
+    ],
+    [
+     "Today,",
+     1.96,
+     2.4
+    ],
+    [
+     "I",
+     2.4,
+     2.55
+    ],
+    [
+     "want",
+     2.55,
+     2.77
+    ],
+    [
+     "to",
+     2.77,
+     2.83
+    ],
+    [
+     "lead",
+     2.83,
+     3.04
+    ],
+    [
+     "the",
+     3.04,
+     3.11
+    ],
+    [
+     "flock",
+     3.11,
+     3.52
+    ],
+    [
+     "home.",
+     3.52,
+     3.94
+    ],
+    [
+     "All",
+     4.23,
+     4.45
+    ],
+    [
+     "by",
+     4.45,
+     4.62
+    ],
+    [
+     "myself!",
+     4.62,
+     5.36
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: I want to lead the flock home",
+   "who": "clover",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "farm",
+   "say": "The flock is up in the meadow, little one. Walk them home, before the sun goes down.",
+   "t0": 35.0,
+   "t1": 40.625,
+   "v0": 35.20270833333333,
+   "dur": 5.060458333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "flock",
+     0.08,
+     0.53
+    ],
+    [
+     "is",
+     0.53,
+     0.67
+    ],
+    [
+     "up",
+     0.67,
+     0.82
+    ],
+    [
+     "in",
+     0.82,
+     0.9
+    ],
+    [
+     "the",
+     0.9,
+     0.97
+    ],
+    [
+     "meadow,",
+     0.97,
+     1.48
+    ],
+    [
+     "little",
+     1.48,
+     1.69
+    ],
+    [
+     "one.",
+     1.69,
+     2.0
+    ],
+    [
+     "Walk",
+     2.66,
+     2.92
+    ],
+    [
+     "them",
+     2.92,
+     3.07
+    ],
+    [
+     "home,",
+     3.07,
+     3.56
+    ],
+    [
+     "before",
+     3.67,
+     3.91
+    ],
+    [
+     "the",
+     3.91,
+     3.99
+    ],
+    [
+     "sun",
+     3.99,
+     4.29
+    ],
+    [
+     "goes",
+     4.29,
+     4.57
+    ],
+    [
+     "down.",
+     4.57,
+     5.06
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: walk them home before sunset",
+   "who": "mama",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "farm",
+   "say": "I can do it, Mama! I am a big lamb now!",
+   "t0": 40.625,
+   "t1": 43.75,
+   "v0": 40.78316666666666,
+   "dur": 2.6629583333333335,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.13
+    ],
+    [
+     "can",
+     0.13,
+     0.32
+    ],
+    [
+     "do",
+     0.32,
+     0.49
+    ],
+    [
+     "it,",
+     0.49,
+     0.58
+    ],
+    [
+     "Mama!",
+     0.58,
+     0.89
+    ],
+    [
+     "I",
+     1.4,
+     1.49
+    ],
+    [
+     "am",
+     1.49,
+     1.66
+    ],
+    [
+     "a",
+     1.66,
+     1.72
+    ],
+    [
+     "big",
+     1.72,
+     1.93
+    ],
+    [
+     "lamb",
+     1.93,
+     2.25
+    ],
+    [
+     "now!",
+     2.25,
+     2.66
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: I can do it",
+   "who": "clover",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "farm",
+   "say": "Who wants to lead the flock home? Clover, or Milo?",
+   "t0": 43.75,
+   "t1": 50.9375,
+   "v0": 43.96612499999999,
+   "dur": 3.5832083333333333,
+   "words": [
+    [
+     "Who",
+     0.05,
+     0.16
+    ],
+    [
+     "wants",
+     0.16,
+     0.45
+    ],
+    [
+     "to",
+     0.45,
+     0.54
+    ],
+    [
+     "lead",
+     0.54,
+     0.74
+    ],
+    [
+     "the",
+     0.74,
+     0.81
+    ],
+    [
+     "flock",
+     0.81,
+     1.27
+    ],
+    [
+     "home?",
+     1.27,
+     1.67
+    ],
+    [
+     "Clover,",
+     2.07,
+     2.79
+    ],
+    [
+     "or",
+     2.79,
+     2.91
+    ],
+    [
+     "Milo?",
+     2.91,
+     3.58
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: Clover or Milo",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Sheep live together, in a big group. It is called a flock.",
+   "t0": 50.9375,
+   "t1": 55.3125,
+   "v0": 51.26933333333332,
+   "dur": 3.78075,
+   "words": [
+    [
+     "Sheep",
+     0.01,
+     0.41
+    ],
+    [
+     "live",
+     0.41,
+     0.64
+    ],
+    [
+     "together,",
+     0.64,
+     1.2
+    ],
+    [
+     "in",
+     1.2,
+     1.34
+    ],
+    [
+     "a",
+     1.34,
+     1.4
+    ],
+    [
+     "big",
+     1.4,
+     1.72
+    ],
+    [
+     "group.",
+     1.72,
+     2.18
+    ],
+    [
+     "It",
+     2.54,
+     2.64
+    ],
+    [
+     "is",
+     2.64,
+     2.78
+    ],
+    [
+     "called",
+     2.78,
+     3.09
+    ],
+    [
+     "a",
+     3.09,
+     3.13
+    ],
+    [
+     "flock.",
+     3.13,
+     3.78
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: sheep live in a flock",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "What is a group of sheep called? A flock, or a sock?",
+   "t0": 55.3125,
+   "t1": 62.5,
+   "v0": 55.570083333333315,
+   "dur": 3.486375,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "is",
+     0.21,
+     0.32
+    ],
+    [
+     "a",
+     0.32,
+     0.37
+    ],
+    [
+     "group",
+     0.37,
+     0.61
+    ],
+    [
+     "of",
+     0.61,
+     0.68
+    ],
+    [
+     "sheep",
+     0.68,
+     1.06
+    ],
+    [
+     "called?",
+     1.06,
+     1.49
+    ],
+    [
+     "A",
+     1.88,
+     1.94
+    ],
+    [
+     "flock,",
+     1.94,
+     2.57
+    ],
+    [
+     "or",
+     2.57,
+     2.8
+    ],
+    [
+     "a",
+     2.8,
+     2.83
+    ],
+    [
+     "sock?",
+     2.83,
+     3.486
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: flock or sock",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Clover and Milo skip up the hill, to the green meadow. And there is the flock!",
+   "t0": 62.5,
+   "t1": 68.125,
+   "v0": 62.776458333333316,
+   "dur": 5.140125,
+   "words": [
+    [
+     "Clover",
+     0.0,
+     0.49
+    ],
+    [
+     "and",
+     0.49,
+     0.59
+    ],
+    [
+     "Milo",
+     0.59,
+     1.1
+    ],
+    [
+     "skip",
+     1.1,
+     1.52
+    ],
+    [
+     "up",
+     1.52,
+     1.69
+    ],
+    [
+     "the",
+     1.69,
+     1.76
+    ],
+    [
+     "hill,",
+     1.76,
+     2.18
+    ],
+    [
+     "to",
+     2.18,
+     2.31
+    ],
+    [
+     "the",
+     2.31,
+     2.4
+    ],
+    [
+     "green",
+     2.4,
+     2.79
+    ],
+    [
+     "meadow.",
+     2.79,
+     3.26
+    ],
+    [
+     "And",
+     3.77,
+     3.97
+    ],
+    [
+     "there",
+     3.97,
+     4.21
+    ],
+    [
+     "is",
+     4.21,
+     4.43
+    ],
+    [
+     "the",
+     4.43,
+     4.51
+    ],
+    [
+     "flock!",
+     4.51,
+     5.14
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the meadow: there is the flock",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Count the big sheep with Milo! One, two, three!",
+   "t0": 68.125,
+   "t1": 73.125,
+   "v0": 68.43658333333333,
+   "dur": 3.176041666666667,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.3
+    ],
+    [
+     "the",
+     0.3,
+     0.38
+    ],
+    [
+     "big",
+     0.38,
+     0.57
+    ],
+    [
+     "sheep",
+     0.57,
+     0.89
+    ],
+    [
+     "with",
+     0.89,
+     1.03
+    ],
+    [
+     "Milo!",
+     1.03,
+     1.64
+    ],
+    [
+     "One,",
+     2.05,
+     2.31
+    ],
+    [
+     "two,",
+     2.31,
+     2.58
+    ],
+    [
+     "three!",
+     2.58,
+     3.176
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count three sheep",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Here are Woolly, Daisy, and Bramble. They are very busy. Munch, munch, munch!",
+   "t0": 73.125,
+   "t1": 79.375,
+   "v0": 73.33262500000001,
+   "dur": 5.5633333333333335,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.25
+    ],
+    [
+     "are",
+     0.25,
+     0.36
+    ],
+    [
+     "Woolly,",
+     0.36,
+     0.83
+    ],
+    [
+     "Daisy,",
+     0.83,
+     1.41
+    ],
+    [
+     "and",
+     1.41,
+     1.54
+    ],
+    [
+     "Bramble.",
+     1.54,
+     2.13
+    ],
+    [
+     "They",
+     2.43,
+     2.55
+    ],
+    [
+     "are",
+     2.55,
+     2.63
+    ],
+    [
+     "very",
+     2.63,
+     2.95
+    ],
+    [
+     "busy.",
+     2.95,
+     3.49
+    ],
+    [
+     "Munch,",
+     4.0,
+     4.52
+    ],
+    [
+     "munch,",
+     4.52,
+     5.02
+    ],
+    [
+     "munch!",
+     5.02,
+     5.56
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Woolly, Daisy and Bramble munch",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Time to go home, everyone! Baa! Baa!",
+   "t0": 79.375,
+   "t1": 82.1875,
+   "v0": 79.41595833333335,
+   "dur": 2.4514583333333335,
+   "words": [
+    [
+     "Time",
+     0.01,
+     0.27
+    ],
+    [
+     "to",
+     0.27,
+     0.34
+    ],
+    [
+     "go",
+     0.34,
+     0.51
+    ],
+    [
+     "home,",
+     0.51,
+     0.86
+    ],
+    [
+     "everyone!",
+     0.86,
+     1.44
+    ],
+    [
+     "Baa!",
+     1.67,
+     1.93
+    ],
+    [
+     "Baa!",
+     1.93,
+     2.45
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover calls: time to go home",
+   "who": "clover",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "But Clover's voice is very little. The big sheep do not look up. Munch, munch, munch.",
+   "t0": 82.1875,
+   "t1": 88.75,
+   "v0": 82.3874166666667,
+   "dur": 6.185583333333334,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.15
+    ],
+    [
+     "Clover's",
+     0.15,
+     0.72
+    ],
+    [
+     "voice",
+     0.72,
+     1.14
+    ],
+    [
+     "is",
+     1.14,
+     1.31
+    ],
+    [
+     "very",
+     1.31,
+     1.68
+    ],
+    [
+     "little.",
+     1.68,
+     2.11
+    ],
+    [
+     "The",
+     2.5,
+     2.57
+    ],
+    [
+     "big",
+     2.57,
+     2.83
+    ],
+    [
+     "sheep",
+     2.83,
+     3.17
+    ],
+    [
+     "do",
+     3.17,
+     3.28
+    ],
+    [
+     "not",
+     3.28,
+     3.5
+    ],
+    [
+     "look",
+     3.5,
+     3.69
+    ],
+    [
+     "up.",
+     3.69,
+     4.02
+    ],
+    [
+     "Munch,",
+     4.46,
+     5.08
+    ],
+    [
+     "munch,",
+     5.08,
+     5.61
+    ],
+    [
+     "munch.",
+     5.61,
+     6.18
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the sheep do not look up",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Can you call, like Clover? Baa! Baa!",
+   "t0": 88.75,
+   "t1": 95.0,
+   "v0": 89.09300000000005,
+   "dur": 2.5789583333333335,
+   "words": [
+    [
+     "Can",
+     0.05,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.36
+    ],
+    [
+     "call,",
+     0.36,
+     0.7
+    ],
+    [
+     "like",
+     0.7,
+     0.89
+    ],
+    [
+     "Clover?",
+     0.89,
+     1.48
+    ],
+    [
+     "Baa!",
+     1.73,
+     2.0
+    ],
+    [
+     "Baa!",
+     2.0,
+     2.579
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: call baa",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Sheep eat grass, and other plants. They like to munch all over a wide, green meadow.",
+   "t0": 95.0,
+   "t1": 101.25,
+   "v0": 95.19195833333339,
+   "dur": 5.677625,
+   "words": [
+    [
+     "Sheep",
+     0.0,
+     0.34
+    ],
+    [
+     "eat",
+     0.34,
+     0.58
+    ],
+    [
+     "grass,",
+     0.58,
+     1.19
+    ],
+    [
+     "and",
+     1.19,
+     1.36
+    ],
+    [
+     "other",
+     1.36,
+     1.59
+    ],
+    [
+     "plants.",
+     1.59,
+     2.24
+    ],
+    [
+     "They",
+     2.71,
+     2.81
+    ],
+    [
+     "like",
+     2.81,
+     3.0
+    ],
+    [
+     "to",
+     3.0,
+     3.11
+    ],
+    [
+     "munch",
+     3.11,
+     3.45
+    ],
+    [
+     "all",
+     3.45,
+     3.82
+    ],
+    [
+     "over",
+     3.82,
+     4.06
+    ],
+    [
+     "a",
+     4.06,
+     4.09
+    ],
+    [
+     "wide,",
+     4.09,
+     4.76
+    ],
+    [
+     "green",
+     4.76,
+     5.21
+    ],
+    [
+     "meadow.",
+     5.21,
+     5.678
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: sheep eat grass and other plants",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "What do sheep eat? Grass, or cake?",
+   "t0": 101.25,
+   "t1": 107.5,
+   "v0": 101.3895833333334,
+   "dur": 2.5492083333333335,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.17
+    ],
+    [
+     "do",
+     0.17,
+     0.29
+    ],
+    [
+     "sheep",
+     0.29,
+     0.59
+    ],
+    [
+     "eat?",
+     0.59,
+     1.04
+    ],
+    [
+     "Grass,",
+     1.26,
+     1.82
+    ],
+    [
+     "or",
+     1.82,
+     1.96
+    ],
+    [
+     "cake?",
+     1.96,
+     2.549
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: grass or cake",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Did the sheep come when Clover called? Yes, or no?",
+   "t0": 107.5,
+   "t1": 114.6875,
+   "v0": 107.65879166666676,
+   "dur": 3.435125,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.17
+    ],
+    [
+     "the",
+     0.17,
+     0.23
+    ],
+    [
+     "sheep",
+     0.23,
+     0.57
+    ],
+    [
+     "come",
+     0.57,
+     0.85
+    ],
+    [
+     "when",
+     0.85,
+     1.01
+    ],
+    [
+     "Clover",
+     1.01,
+     1.49
+    ],
+    [
+     "called?",
+     1.49,
+     1.98
+    ],
+    [
+     "Yes,",
+     2.35,
+     2.81
+    ],
+    [
+     "or",
+     2.81,
+     3.02
+    ],
+    [
+     "no?",
+     3.02,
+     3.43
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did the sheep come",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Oh. They did not hear me. I need a new idea.",
+   "t0": 114.6875,
+   "t1": 118.125,
+   "v0": 114.81391666666677,
+   "dur": 2.873375,
+   "words": [
+    [
+     "Oh.",
+     0.09,
+     0.41
+    ],
+    [
+     "They",
+     0.41,
+     0.58
+    ],
+    [
+     "did",
+     0.58,
+     0.74
+    ],
+    [
+     "not",
+     0.74,
+     0.97
+    ],
+    [
+     "hear",
+     0.97,
+     1.15
+    ],
+    [
+     "me.",
+     1.15,
+     1.45
+    ],
+    [
+     "I",
+     1.79,
+     1.91
+    ],
+    [
+     "need",
+     1.91,
+     2.12
+    ],
+    [
+     "a",
+     2.12,
+     2.15
+    ],
+    [
+     "new",
+     2.15,
+     2.32
+    ],
+    [
+     "idea.",
+     2.32,
+     2.87
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: I need a new idea",
+   "who": "clover",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "So Clover walks behind big Woolly. And she pushes!",
+   "t0": 118.125,
+   "t1": 122.1875,
+   "v0": 118.20729166666678,
+   "dur": 3.704083333333333,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.21
+    ],
+    [
+     "Clover",
+     0.21,
+     0.72
+    ],
+    [
+     "walks",
+     0.72,
+     1.13
+    ],
+    [
+     "behind",
+     1.13,
+     1.57
+    ],
+    [
+     "big",
+     1.57,
+     1.78
+    ],
+    [
+     "Woolly.",
+     1.78,
+     2.28
+    ],
+    [
+     "And",
+     2.65,
+     2.79
+    ],
+    [
+     "she",
+     2.79,
+     2.95
+    ],
+    [
+     "pushes!",
+     2.95,
+     3.7
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover walks behind Woolly and pushes",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Push, push, push! Please move, Woolly!",
+   "t0": 122.1875,
+   "t1": 125.3125,
+   "v0": 122.43137500000012,
+   "dur": 2.404125,
+   "words": [
+    [
+     "Push,",
+     0.0,
+     0.3
+    ],
+    [
+     "push,",
+     0.3,
+     0.62
+    ],
+    [
+     "push!",
+     0.62,
+     1.09
+    ],
+    [
+     "Please",
+     1.39,
+     1.73
+    ],
+    [
+     "move,",
+     1.73,
+     1.98
+    ],
+    [
+     "Woolly!",
+     1.98,
+     2.4
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: push, push, push",
+   "who": "clover",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "But Woolly is big, and Clover is small. Woolly does not move one bit.",
+   "t0": 125.3125,
+   "t1": 130.3125,
+   "v0": 125.35550000000012,
+   "dur": 4.764,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.1
+    ],
+    [
+     "Woolly",
+     0.1,
+     0.51
+    ],
+    [
+     "is",
+     0.51,
+     0.68
+    ],
+    [
+     "big,",
+     0.68,
+     1.1
+    ],
+    [
+     "and",
+     1.1,
+     1.33
+    ],
+    [
+     "Clover",
+     1.33,
+     1.84
+    ],
+    [
+     "is",
+     1.84,
+     1.95
+    ],
+    [
+     "small.",
+     1.95,
+     2.5
+    ],
+    [
+     "Woolly",
+     3.01,
+     3.34
+    ],
+    [
+     "does",
+     3.34,
+     3.57
+    ],
+    [
+     "not",
+     3.57,
+     3.84
+    ],
+    [
+     "move",
+     3.84,
+     4.14
+    ],
+    [
+     "one",
+     4.14,
+     4.36
+    ],
+    [
+     "bit.",
+     4.36,
+     4.76
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Woolly does not move",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Can you push, like Clover? Push, push, push!",
+   "t0": 130.3125,
+   "t1": 137.1875,
+   "v0": 130.63950000000014,
+   "dur": 3.308291666666667,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.36
+    ],
+    [
+     "push,",
+     0.36,
+     0.8
+    ],
+    [
+     "like",
+     0.8,
+     0.99
+    ],
+    [
+     "Clover?",
+     0.99,
+     1.62
+    ],
+    [
+     "Push,",
+     1.96,
+     2.34
+    ],
+    [
+     "push,",
+     2.34,
+     2.74
+    ],
+    [
+     "push!",
+     2.74,
+     3.308
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: push",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Did Woolly move? Yes, or no?",
+   "t0": 137.1875,
+   "t1": 143.125,
+   "v0": 137.4677916666668,
+   "dur": 2.1994166666666666,
+   "words": [
+    [
+     "Did",
+     0.0,
+     0.13
+    ],
+    [
+     "Woolly",
+     0.13,
+     0.44
+    ],
+    [
+     "move?",
+     0.44,
+     0.92
+    ],
+    [
+     "Yes,",
+     1.17,
+     1.62
+    ],
+    [
+     "or",
+     1.62,
+     1.76
+    ],
+    [
+     "no?",
+     1.76,
+     2.199
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did Woolly move",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Oh my! Pushing is too hard for me.",
+   "t0": 143.125,
+   "t1": 145.9375,
+   "v0": 143.3872083333335,
+   "dur": 2.2714583333333334,
+   "words": [
+    [
+     "Oh",
+     0.0,
+     0.15
+    ],
+    [
+     "my!",
+     0.15,
+     0.63
+    ],
+    [
+     "Pushing",
+     0.88,
+     1.25
+    ],
+    [
+     "is",
+     1.25,
+     1.37
+    ],
+    [
+     "too",
+     1.37,
+     1.55
+    ],
+    [
+     "hard",
+     1.55,
+     1.82
+    ],
+    [
+     "for",
+     1.82,
+     1.96
+    ],
+    [
+     "me.",
+     1.96,
+     2.27
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: pushing is too hard",
+   "who": "clover",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "The sun slides lower. Clover has one more idea. She will run around the flock!",
+   "t0": 145.9375,
+   "t1": 152.5,
+   "v0": 146.17866666666683,
+   "dur": 6.021583333333333,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.09
+    ],
+    [
+     "sun",
+     0.09,
+     0.58
+    ],
+    [
+     "slides",
+     0.58,
+     1.2
+    ],
+    [
+     "lower.",
+     1.2,
+     1.73
+    ],
+    [
+     "Clover",
+     2.17,
+     2.66
+    ],
+    [
+     "has",
+     2.66,
+     2.89
+    ],
+    [
+     "one",
+     2.89,
+     3.16
+    ],
+    [
+     "more",
+     3.16,
+     3.44
+    ],
+    [
+     "idea.",
+     3.44,
+     4.07
+    ],
+    [
+     "She",
+     4.46,
+     4.62
+    ],
+    [
+     "will",
+     4.62,
+     4.79
+    ],
+    [
+     "run",
+     4.79,
+     5.05
+    ],
+    [
+     "around",
+     5.05,
+     5.37
+    ],
+    [
+     "the",
+     5.37,
+     5.43
+    ],
+    [
+     "flock!",
+     5.43,
+     6.02
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the sun is lower: one more idea",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "Round and round I go! Come on, everyone!",
+   "t0": 152.5,
+   "t1": 155.625,
+   "v0": 152.72025000000016,
+   "dur": 2.697041666666667,
+   "words": [
+    [
+     "Round",
+     0.02,
+     0.34
+    ],
+    [
+     "and",
+     0.34,
+     0.46
+    ],
+    [
+     "round",
+     0.46,
+     0.73
+    ],
+    [
+     "I",
+     0.73,
+     0.81
+    ],
+    [
+     "go!",
+     0.81,
+     1.2
+    ],
+    [
+     "Come",
+     1.56,
+     1.77
+    ],
+    [
+     "on,",
+     1.77,
+     2.04
+    ],
+    [
+     "everyone!",
+     2.04,
+     2.697
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover runs round the flock",
+   "who": "clover",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "Round, and round, and round. But the sheep only watch. And now Clover is dizzy!",
+   "t0": 155.625,
+   "t1": 162.1875,
+   "v0": 155.93729166666685,
+   "dur": 6.058416666666667,
+   "words": [
+    [
+     "Round,",
+     0.01,
+     0.56
+    ],
+    [
+     "and",
+     0.56,
+     0.75
+    ],
+    [
+     "round,",
+     0.75,
+     1.31
+    ],
+    [
+     "and",
+     1.31,
+     1.55
+    ],
+    [
+     "round.",
+     1.55,
+     2.11
+    ],
+    [
+     "But",
+     2.51,
+     2.64
+    ],
+    [
+     "the",
+     2.64,
+     2.71
+    ],
+    [
+     "sheep",
+     2.71,
+     3.2
+    ],
+    [
+     "only",
+     3.2,
+     3.54
+    ],
+    [
+     "watch.",
+     3.54,
+     4.22
+    ],
+    [
+     "And",
+     4.45,
+     4.59
+    ],
+    [
+     "now",
+     4.59,
+     4.86
+    ],
+    [
+     "Clover",
+     4.86,
+     5.39
+    ],
+    [
+     "is",
+     5.39,
+     5.56
+    ],
+    [
+     "dizzy!",
+     5.56,
+     6.058
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the sheep watch, Clover is dizzy",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "How does Clover feel? Dizzy, or sleepy?",
+   "t0": 162.1875,
+   "t1": 169.0625,
+   "v0": 162.51570833333352,
+   "dur": 2.9844583333333334,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.19
+    ],
+    [
+     "does",
+     0.19,
+     0.36
+    ],
+    [
+     "Clover",
+     0.36,
+     0.78
+    ],
+    [
+     "feel?",
+     0.78,
+     1.29
+    ],
+    [
+     "Dizzy,",
+     1.62,
+     2.12
+    ],
+    [
+     "or",
+     2.12,
+     2.29
+    ],
+    [
+     "sleepy?",
+     2.29,
+     2.98
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: dizzy or sleepy",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "Take a big breath with Clover. In, and out.",
+   "t0": 169.0625,
+   "t1": 175.625,
+   "v0": 169.22016666666684,
+   "dur": 3.2107083333333333,
+   "words": [
+    [
+     "Take",
+     0.0,
+     0.31
+    ],
+    [
+     "a",
+     0.31,
+     0.36
+    ],
+    [
+     "big",
+     0.36,
+     0.67
+    ],
+    [
+     "breath",
+     0.67,
+     1.02
+    ],
+    [
+     "with",
+     1.02,
+     1.16
+    ],
+    [
+     "Clover.",
+     1.16,
+     1.79
+    ],
+    [
+     "In,",
+     2.15,
+     2.56
+    ],
+    [
+     "and",
+     2.56,
+     2.74
+    ],
+    [
+     "out.",
+     2.74,
+     3.21
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: a big breath",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "The sky turns gold. The big sheep are still munching. Clover feels a little sad.",
+   "t0": 175.625,
+   "t1": 182.5,
+   "v0": 175.9508750000002,
+   "dur": 6.19725,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.11
+    ],
+    [
+     "sky",
+     0.11,
+     0.63
+    ],
+    [
+     "turns",
+     0.63,
+     1.12
+    ],
+    [
+     "gold.",
+     1.12,
+     1.7
+    ],
+    [
+     "The",
+     2.06,
+     2.14
+    ],
+    [
+     "big",
+     2.14,
+     2.48
+    ],
+    [
+     "sheep",
+     2.48,
+     2.85
+    ],
+    [
+     "are",
+     2.85,
+     2.96
+    ],
+    [
+     "still",
+     2.96,
+     3.31
+    ],
+    [
+     "munching.",
+     3.31,
+     4.03
+    ],
+    [
+     "Clover",
+     4.48,
+     4.99
+    ],
+    [
+     "feels",
+     4.99,
+     5.35
+    ],
+    [
+     "a",
+     5.35,
+     5.39
+    ],
+    [
+     "little",
+     5.39,
+     5.62
+    ],
+    [
+     "sad.",
+     5.62,
+     6.197
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "gold sky, Clover a little sad",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "I am too little. Maybe I can not lead the flock home.",
+   "t0": 182.5,
+   "t1": 186.25,
+   "v0": 182.6681250000002,
+   "dur": 3.2740833333333335,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.19
+    ],
+    [
+     "am",
+     0.19,
+     0.42
+    ],
+    [
+     "too",
+     0.42,
+     0.66
+    ],
+    [
+     "little.",
+     0.66,
+     1.01
+    ],
+    [
+     "Maybe",
+     1.44,
+     1.71
+    ],
+    [
+     "I",
+     1.71,
+     1.81
+    ],
+    [
+     "can",
+     1.81,
+     1.95
+    ],
+    [
+     "not",
+     1.95,
+     2.12
+    ],
+    [
+     "lead",
+     2.12,
+     2.35
+    ],
+    [
+     "the",
+     2.35,
+     2.41
+    ],
+    [
+     "flock",
+     2.41,
+     2.82
+    ],
+    [
+     "home.",
+     2.82,
+     3.27
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: maybe I can not lead the flock",
+   "who": "clover",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "It's okay, Clover. I am right here with you.",
+   "t0": 186.25,
+   "t1": 189.6875,
+   "v0": 186.46220833333354,
+   "dur": 3.018125,
+   "words": [
+    [
+     "It's",
+     0.01,
+     0.22
+    ],
+    [
+     "okay,",
+     0.22,
+     0.69
+    ],
+    [
+     "Clover.",
+     0.69,
+     1.32
+    ],
+    [
+     "I",
+     1.67,
+     1.77
+    ],
+    [
+     "am",
+     1.77,
+     1.96
+    ],
+    [
+     "right",
+     1.96,
+     2.27
+    ],
+    [
+     "here",
+     2.27,
+     2.49
+    ],
+    [
+     "with",
+     2.49,
+     2.72
+    ],
+    [
+     "you.",
+     2.72,
+     3.018
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I am right here",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "How does Clover feel now? Sad, or happy?",
+   "t0": 189.6875,
+   "t1": 196.5625,
+   "v0": 190.00033333333354,
+   "dur": 3.033,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.36
+    ],
+    [
+     "Clover",
+     0.36,
+     0.78
+    ],
+    [
+     "feel",
+     0.78,
+     1.07
+    ],
+    [
+     "now?",
+     1.07,
+     1.49
+    ],
+    [
+     "Sad,",
+     1.77,
+     2.31
+    ],
+    [
+     "or",
+     2.31,
+     2.42
+    ],
+    [
+     "happy?",
+     2.42,
+     3.03
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: sad or happy",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "Then Clover sees something. Daisy walks to a new patch of grass.",
+   "t0": 196.5625,
+   "t1": 201.5625,
+   "v0": 196.75333333333353,
+   "dur": 4.593666666666667,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.26
+    ],
+    [
+     "Clover",
+     0.26,
+     0.75
+    ],
+    [
+     "sees",
+     0.75,
+     1.09
+    ],
+    [
+     "something.",
+     1.09,
+     1.69
+    ],
+    [
+     "Daisy",
+     2.16,
+     2.64
+    ],
+    [
+     "walks",
+     2.64,
+     3.03
+    ],
+    [
+     "to",
+     3.03,
+     3.18
+    ],
+    [
+     "a",
+     3.18,
+     3.23
+    ],
+    [
+     "new",
+     3.23,
+     3.47
+    ],
+    [
+     "patch",
+     3.47,
+     3.87
+    ],
+    [
+     "of",
+     3.87,
+     3.96
+    ],
+    [
+     "grass.",
+     3.96,
+     4.59
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Daisy walks to new grass",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "And look! Woolly follows Daisy. And Bramble follows Woolly!",
+   "t0": 201.5625,
+   "t1": 206.25,
+   "v0": 201.86700000000022,
+   "dur": 4.155958333333333,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.22
+    ],
+    [
+     "look!",
+     0.22,
+     0.64
+    ],
+    [
+     "Woolly",
+     0.64,
+     0.99
+    ],
+    [
+     "follows",
+     0.99,
+     1.55
+    ],
+    [
+     "Daisy.",
+     1.55,
+     2.18
+    ],
+    [
+     "And",
+     2.54,
+     2.69
+    ],
+    [
+     "Bramble",
+     2.69,
+     3.13
+    ],
+    [
+     "follows",
+     3.13,
+     3.7
+    ],
+    [
+     "Woolly!",
+     3.7,
+     4.156
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Woolly and Bramble follow",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "What did the other sheep do? Follow, or fly?",
+   "t0": 206.25,
+   "t1": 212.8125,
+   "v0": 206.54295833333356,
+   "dur": 2.886458333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "did",
+     0.21,
+     0.34
+    ],
+    [
+     "the",
+     0.34,
+     0.45
+    ],
+    [
+     "other",
+     0.45,
+     0.62
+    ],
+    [
+     "sheep",
+     0.62,
+     1.01
+    ],
+    [
+     "do?",
+     1.01,
+     1.33
+    ],
+    [
+     "Follow,",
+     1.62,
+     2.16
+    ],
+    [
+     "or",
+     2.16,
+     2.29
+    ],
+    [
+     "fly?",
+     2.29,
+     2.886
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: follow or fly",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "I know! Sheep like to follow! I will not push. I will walk first!",
+   "t0": 212.8125,
+   "t1": 217.5,
+   "v0": 213.1494166666669,
+   "dur": 3.9021666666666666,
+   "words": [
+    [
+     "I",
+     0.01,
+     0.14
+    ],
+    [
+     "know!",
+     0.14,
+     0.53
+    ],
+    [
+     "Sheep",
+     0.53,
+     0.84
+    ],
+    [
+     "like",
+     0.84,
+     0.99
+    ],
+    [
+     "to",
+     0.99,
+     1.06
+    ],
+    [
+     "follow!",
+     1.06,
+     1.55
+    ],
+    [
+     "I",
+     1.98,
+     2.06
+    ],
+    [
+     "will",
+     2.06,
+     2.16
+    ],
+    [
+     "not",
+     2.16,
+     2.35
+    ],
+    [
+     "push.",
+     2.35,
+     2.78
+    ],
+    [
+     "I",
+     2.78,
+     2.92
+    ],
+    [
+     "will",
+     2.92,
+     3.06
+    ],
+    [
+     "walk",
+     3.06,
+     3.31
+    ],
+    [
+     "first!",
+     3.31,
+     3.9
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover's idea: I will walk first",
+   "who": "clover",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Sheep like to follow each other. When one sheep moves, the rest will follow.",
+   "t0": 217.5,
+   "t1": 222.8125,
+   "v0": 217.57158333333356,
+   "dur": 4.967791666666667,
+   "words": [
+    [
+     "Sheep",
+     0.01,
+     0.37
+    ],
+    [
+     "like",
+     0.37,
+     0.53
+    ],
+    [
+     "to",
+     0.53,
+     0.62
+    ],
+    [
+     "follow",
+     0.62,
+     1.06
+    ],
+    [
+     "each",
+     1.06,
+     1.26
+    ],
+    [
+     "other.",
+     1.26,
+     1.6
+    ],
+    [
+     "When",
+     2.12,
+     2.29
+    ],
+    [
+     "one",
+     2.29,
+     2.6
+    ],
+    [
+     "sheep",
+     2.6,
+     2.94
+    ],
+    [
+     "moves,",
+     2.94,
+     3.54
+    ],
+    [
+     "the",
+     3.68,
+     3.78
+    ],
+    [
+     "rest",
+     3.78,
+     4.2
+    ],
+    [
+     "will",
+     4.2,
+     4.32
+    ],
+    [
+     "follow.",
+     4.32,
+     4.968
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: when one sheep moves the rest follow",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "When one sheep moves, what do the others do? Follow, or hide?",
+   "t0": 222.8125,
+   "t1": 230.625,
+   "v0": 223.05937500000024,
+   "dur": 4.037375,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.16
+    ],
+    [
+     "one",
+     0.16,
+     0.36
+    ],
+    [
+     "sheep",
+     0.36,
+     0.72
+    ],
+    [
+     "moves,",
+     0.72,
+     1.28
+    ],
+    [
+     "what",
+     1.28,
+     1.47
+    ],
+    [
+     "do",
+     1.47,
+     1.58
+    ],
+    [
+     "the",
+     1.58,
+     1.73
+    ],
+    [
+     "others",
+     1.73,
+     2.12
+    ],
+    [
+     "do?",
+     2.12,
+     2.41
+    ],
+    [
+     "Follow,",
+     2.73,
+     3.32
+    ],
+    [
+     "or",
+     3.32,
+     3.51
+    ],
+    [
+     "hide?",
+     3.51,
+     4.037
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: follow or hide",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "So Clover lifts her head up high. And she walks. Step, step, step.",
+   "t0": 230.625,
+   "t1": 236.25,
+   "v0": 230.81675000000024,
+   "dur": 4.9955,
+   "words": [
+    [
+     "So",
+     0.05,
+     0.24
+    ],
+    [
+     "Clover",
+     0.24,
+     0.71
+    ],
+    [
+     "lifts",
+     0.71,
+     1.03
+    ],
+    [
+     "her",
+     1.03,
+     1.13
+    ],
+    [
+     "head",
+     1.13,
+     1.32
+    ],
+    [
+     "up",
+     1.32,
+     1.47
+    ],
+    [
+     "high.",
+     1.47,
+     2.15
+    ],
+    [
+     "And",
+     2.15,
+     2.38
+    ],
+    [
+     "she",
+     2.38,
+     2.53
+    ],
+    [
+     "walks.",
+     2.53,
+     3.15
+    ],
+    [
+     "Step,",
+     3.57,
+     4.04
+    ],
+    [
+     "step,",
+     4.04,
+     4.46
+    ],
+    [
+     "step.",
+     4.46,
+     4.99
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover walks first",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "meadow_gold",
+   "say": "Daisy looks up. And she follows Clover! Then Woolly. Then Bramble!",
+   "t0": 236.25,
+   "t1": 241.25,
+   "v0": 236.33225000000024,
+   "dur": 4.6161666666666665,
+   "words": [
+    [
+     "Daisy",
+     0.01,
+     0.52
+    ],
+    [
+     "looks",
+     0.52,
+     0.81
+    ],
+    [
+     "up.",
+     0.81,
+     1.13
+    ],
+    [
+     "And",
+     1.4,
+     1.51
+    ],
+    [
+     "she",
+     1.51,
+     1.63
+    ],
+    [
+     "follows",
+     1.63,
+     2.12
+    ],
+    [
+     "Clover!",
+     2.12,
+     2.82
+    ],
+    [
+     "Then",
+     2.82,
+     3.03
+    ],
+    [
+     "Woolly.",
+     3.03,
+     3.53
+    ],
+    [
+     "Then",
+     3.75,
+     3.99
+    ],
+    [
+     "Bramble!",
+     3.99,
+     4.616
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the flock follows Clover",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "lane",
+   "say": "Down the lane they go, in a line. Clover first, and the flock behind her.",
+   "t0": 241.25,
+   "t1": 246.875,
+   "v0": 241.4684166666669,
+   "dur": 5.094416666666667,
+   "words": [
+    [
+     "Down",
+     0.02,
+     0.26
+    ],
+    [
+     "the",
+     0.26,
+     0.34
+    ],
+    [
+     "lane",
+     0.34,
+     0.76
+    ],
+    [
+     "they",
+     0.76,
+     0.9
+    ],
+    [
+     "go,",
+     0.9,
+     1.4
+    ],
+    [
+     "in",
+     1.51,
+     1.61
+    ],
+    [
+     "a",
+     1.61,
+     1.66
+    ],
+    [
+     "line.",
+     1.66,
+     2.15
+    ],
+    [
+     "Clover",
+     2.69,
+     3.08
+    ],
+    [
+     "first,",
+     3.08,
+     3.73
+    ],
+    [
+     "and",
+     3.73,
+     3.87
+    ],
+    [
+     "the",
+     3.87,
+     3.93
+    ],
+    [
+     "flock",
+     3.93,
+     4.39
+    ],
+    [
+     "behind",
+     4.39,
+     4.84
+    ],
+    [
+     "her.",
+     4.84,
+     5.09
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lane: Clover first, the flock behind",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "lane",
+   "say": "Count the sheep behind Clover! One, two, three!",
+   "t0": 246.875,
+   "t1": 251.875,
+   "v0": 247.08283333333358,
+   "dur": 3.2674166666666666,
+   "words": [
+    [
+     "Count",
+     0.0,
+     0.32
+    ],
+    [
+     "the",
+     0.32,
+     0.39
+    ],
+    [
+     "sheep",
+     0.39,
+     0.78
+    ],
+    [
+     "behind",
+     0.78,
+     1.15
+    ],
+    [
+     "Clover!",
+     1.15,
+     1.81
+    ],
+    [
+     "One,",
+     2.18,
+     2.44
+    ],
+    [
+     "two,",
+     2.44,
+     2.7
+    ],
+    [
+     "three!",
+     2.7,
+     3.267
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count the sheep behind Clover",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "lane",
+   "say": "Can you march, like Clover? March, march, march!",
+   "t0": 251.875,
+   "t1": 259.0625,
+   "v0": 252.07025000000024,
+   "dur": 3.5736666666666665,
+   "words": [
+    [
+     "Can",
+     0.01,
+     0.24
+    ],
+    [
+     "you",
+     0.24,
+     0.37
+    ],
+    [
+     "march,",
+     0.37,
+     0.84
+    ],
+    [
+     "like",
+     0.84,
+     1.01
+    ],
+    [
+     "Clover?",
+     1.01,
+     1.62
+    ],
+    [
+     "March,",
+     2.06,
+     2.55
+    ],
+    [
+     "march,",
+     2.55,
+     3.0
+    ],
+    [
+     "march!",
+     3.0,
+     3.57
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: march",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "lane",
+   "say": "Follow, follow, one by one. Home together, day is done!",
+   "t0": 259.0625,
+   "t1": 263.4375,
+   "v0": 259.1639166666669,
+   "dur": 3.843875,
+   "words": [
+    [
+     "Follow,",
+     0.01,
+     0.38
+    ],
+    [
+     "follow,",
+     0.38,
+     0.88
+    ],
+    [
+     "one",
+     1.08,
+     1.29
+    ],
+    [
+     "by",
+     1.29,
+     1.45
+    ],
+    [
+     "one.",
+     1.45,
+     1.83
+    ],
+    [
+     "Home",
+     2.37,
+     2.59
+    ],
+    [
+     "together,",
+     2.59,
+     3.03
+    ],
+    [
+     "day",
+     3.03,
+     3.28
+    ],
+    [
+     "is",
+     3.28,
+     3.38
+    ],
+    [
+     "done!",
+     3.38,
+     3.84
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the follow rhyme",
+   "who": "clover",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "lane",
+   "say": "",
+   "t0": 263.4375,
+   "t1": 273.75,
+   "v0": 263.75,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: follow, follow",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "lane",
+   "say": "Who is leading the flock? Clover, or Woolly?",
+   "t0": 273.75,
+   "t1": 280.3125,
+   "v0": 273.87,
+   "dur": 2.8945,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.18
+    ],
+    [
+     "is",
+     0.18,
+     0.32
+    ],
+    [
+     "leading",
+     0.32,
+     0.62
+    ],
+    [
+     "the",
+     0.62,
+     0.68
+    ],
+    [
+     "flock?",
+     0.68,
+     1.3
+    ],
+    [
+     "Clover,",
+     1.54,
+     2.18
+    ],
+    [
+     "or",
+     2.18,
+     2.33
+    ],
+    [
+     "Woolly?",
+     2.33,
+     2.89
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: who is leading",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "farm_gold",
+   "say": "Past the fence, and all the way home, to the big red barn. And there is Mama!",
+   "t0": 280.3125,
+   "t1": 286.25,
+   "v0": 280.48449999999997,
+   "dur": 5.357458333333334,
+   "words": [
+    [
+     "Past",
+     0.0,
+     0.39
+    ],
+    [
+     "the",
+     0.39,
+     0.45
+    ],
+    [
+     "fence,",
+     0.45,
+     0.95
+    ],
+    [
+     "and",
+     0.95,
+     1.15
+    ],
+    [
+     "all",
+     1.15,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.46
+    ],
+    [
+     "way",
+     1.46,
+     1.68
+    ],
+    [
+     "home,",
+     1.68,
+     2.19
+    ],
+    [
+     "to",
+     2.19,
+     2.35
+    ],
+    [
+     "the",
+     2.35,
+     2.43
+    ],
+    [
+     "big",
+     2.43,
+     2.79
+    ],
+    [
+     "red",
+     2.79,
+     3.12
+    ],
+    [
+     "barn.",
+     3.12,
+     3.66
+    ],
+    [
+     "And",
+     4.17,
+     4.36
+    ],
+    [
+     "there",
+     4.36,
+     4.6
+    ],
+    [
+     "is",
+     4.6,
+     4.79
+    ],
+    [
+     "Mama!",
+     4.79,
+     5.357
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "home at the red barn",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "farm_gold",
+   "say": "Clover! You led the flock home! I am so proud of you.",
+   "t0": 286.25,
+   "t1": 290.0,
+   "v0": 286.3619583333333,
+   "dur": 3.328375,
+   "words": [
+    [
+     "Clover!",
+     0.0,
+     0.47
+    ],
+    [
+     "You",
+     0.47,
+     0.7
+    ],
+    [
+     "led",
+     0.7,
+     0.86
+    ],
+    [
+     "the",
+     0.86,
+     0.92
+    ],
+    [
+     "flock",
+     0.92,
+     1.32
+    ],
+    [
+     "home!",
+     1.32,
+     1.72
+    ],
+    [
+     "I",
+     2.05,
+     2.13
+    ],
+    [
+     "am",
+     2.13,
+     2.25
+    ],
+    [
+     "so",
+     2.25,
+     2.54
+    ],
+    [
+     "proud",
+     2.54,
+     2.91
+    ],
+    [
+     "of",
+     2.91,
+     3.0
+    ],
+    [
+     "you.",
+     3.0,
+     3.328
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Mama: I am so proud",
+   "who": "mama",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "Inside the cosy barn, supper is ready. Sweet, dry grass for everyone!",
+   "t0": 290.0,
+   "t1": 296.25,
+   "v0": 290.21033333333327,
+   "dur": 5.704166666666667,
+   "words": [
+    [
+     "Inside",
+     0.0,
+     0.52
+    ],
+    [
+     "the",
+     0.52,
+     0.58
+    ],
+    [
+     "cosy",
+     0.58,
+     1.09
+    ],
+    [
+     "barn,",
+     1.09,
+     1.66
+    ],
+    [
+     "supper",
+     1.66,
+     2.15
+    ],
+    [
+     "is",
+     2.15,
+     2.35
+    ],
+    [
+     "ready.",
+     2.35,
+     2.81
+    ],
+    [
+     "Sweet,",
+     3.34,
+     4.07
+    ],
+    [
+     "dry",
+     4.07,
+     4.47
+    ],
+    [
+     "grass",
+     4.47,
+     4.95
+    ],
+    [
+     "for",
+     4.95,
+     5.11
+    ],
+    [
+     "everyone!",
+     5.11,
+     5.7
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the barn: supper for everyone",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "Thank you, Milo! You stayed with me the whole time.",
+   "t0": 296.25,
+   "t1": 299.6875,
+   "v0": 296.4344999999999,
+   "dur": 2.962083333333333,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.32
+    ],
+    [
+     "you,",
+     0.32,
+     0.48
+    ],
+    [
+     "Milo!",
+     0.48,
+     0.99
+    ],
+    [
+     "You",
+     1.46,
+     1.53
+    ],
+    [
+     "stayed",
+     1.53,
+     1.84
+    ],
+    [
+     "with",
+     1.84,
+     1.97
+    ],
+    [
+     "me",
+     1.97,
+     2.07
+    ],
+    [
+     "the",
+     2.07,
+     2.15
+    ],
+    [
+     "whole",
+     2.15,
+     2.41
+    ],
+    [
+     "time.",
+     2.41,
+     2.96
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Clover: thank you, Milo",
+   "who": "clover",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "You do not have to be big to lead, Clover. You just have to go first.",
+   "t0": 299.6875,
+   "t1": 304.6875,
+   "v0": 299.9165833333332,
+   "dur": 4.593041666666666,
+   "words": [
+    [
+     "You",
+     0.01,
+     0.16
+    ],
+    [
+     "do",
+     0.16,
+     0.29
+    ],
+    [
+     "not",
+     0.29,
+     0.53
+    ],
+    [
+     "have",
+     0.53,
+     0.78
+    ],
+    [
+     "to",
+     0.78,
+     0.88
+    ],
+    [
+     "be",
+     0.88,
+     1.05
+    ],
+    [
+     "big",
+     1.05,
+     1.35
+    ],
+    [
+     "to",
+     1.35,
+     1.49
+    ],
+    [
+     "lead,",
+     1.49,
+     1.9
+    ],
+    [
+     "Clover.",
+     1.9,
+     2.56
+    ],
+    [
+     "You",
+     2.98,
+     3.09
+    ],
+    [
+     "just",
+     3.09,
+     3.36
+    ],
+    [
+     "have",
+     3.36,
+     3.6
+    ],
+    [
+     "to",
+     3.6,
+     3.7
+    ],
+    [
+     "go",
+     3.7,
+     3.92
+    ],
+    [
+     "first.",
+     3.92,
+     4.59
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson: go first",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "Do you remember? What is a group of sheep called? A flock, or a sock?",
+   "t0": 304.6875,
+   "t1": 312.8125,
+   "v0": 305.0296249999999,
+   "dur": 4.389375,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.22
+    ],
+    [
+     "remember?",
+     0.22,
+     0.91
+    ],
+    [
+     "What",
+     1.02,
+     1.14
+    ],
+    [
+     "is",
+     1.14,
+     1.24
+    ],
+    [
+     "a",
+     1.24,
+     1.29
+    ],
+    [
+     "group",
+     1.29,
+     1.53
+    ],
+    [
+     "of",
+     1.53,
+     1.6
+    ],
+    [
+     "sheep",
+     1.6,
+     1.98
+    ],
+    [
+     "called?",
+     1.98,
+     2.41
+    ],
+    [
+     "A",
+     2.78,
+     2.83
+    ],
+    [
+     "flock,",
+     2.83,
+     3.46
+    ],
+    [
+     "or",
+     3.46,
+     3.71
+    ],
+    [
+     "a",
+     3.71,
+     3.75
+    ],
+    [
+     "sock?",
+     3.75,
+     4.389
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: flock or sock again",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "And what do sheep eat? Grass, or rocks?",
+   "t0": 312.8125,
+   "t1": 319.6875,
+   "v0": 313.13899999999984,
+   "dur": 3.06625,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.2
+    ],
+    [
+     "what",
+     0.2,
+     0.38
+    ],
+    [
+     "do",
+     0.38,
+     0.53
+    ],
+    [
+     "sheep",
+     0.53,
+     0.87
+    ],
+    [
+     "eat?",
+     0.87,
+     1.3
+    ],
+    [
+     "Grass,",
+     1.57,
+     2.12
+    ],
+    [
+     "or",
+     2.12,
+     2.34
+    ],
+    [
+     "rocks?",
+     2.34,
+     3.066
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: grass or rocks",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "Follow, follow, one by one. Home together, day is done!",
+   "t0": 319.6875,
+   "t1": 324.375,
+   "v0": 319.92524999999983,
+   "dur": 4.102291666666667,
+   "words": [
+    [
+     "Follow,",
+     0.0,
+     0.45
+    ],
+    [
+     "follow,",
+     0.45,
+     0.94
+    ],
+    [
+     "one",
+     0.94,
+     1.33
+    ],
+    [
+     "by",
+     1.33,
+     1.54
+    ],
+    [
+     "one.",
+     1.54,
+     1.96
+    ],
+    [
+     "Home",
+     2.43,
+     2.68
+    ],
+    [
+     "together,",
+     2.68,
+     3.18
+    ],
+    [
+     "day",
+     3.18,
+     3.49
+    ],
+    [
+     "is",
+     3.49,
+     3.68
+    ],
+    [
+     "done!",
+     3.68,
+     4.1
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the closing rhyme",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "barn",
+   "say": "",
+   "t0": 324.375,
+   "t1": 330.0,
+   "v0": 325.0,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "barn",
+   "say": "Next time: Clover and the Woolly Haircut! See you on the next adventure, friends!",
+   "t0": 330.0,
+   "t1": 336.25,
+   "v0": 330.12,
+   "dur": 5.683875,
+   "words": [
+    [
+     "Next",
+     0.0,
+     0.39
+    ],
+    [
+     "time:",
+     0.39,
+     0.86
+    ],
+    [
+     "Clover",
+     1.13,
+     1.76
+    ],
+    [
+     "and",
+     1.76,
+     1.88
+    ],
+    [
+     "the",
+     1.88,
+     1.94
+    ],
+    [
+     "Woolly",
+     1.94,
+     2.23
+    ],
+    [
+     "Haircut!",
+     2.23,
+     2.92
+    ],
+    [
+     "See",
+     3.37,
+     3.61
+    ],
+    [
+     "you",
+     3.61,
+     3.85
+    ],
+    [
+     "on",
+     3.85,
+     4.02
+    ],
+    [
+     "the",
+     4.02,
+     4.09
+    ],
+    [
+     "next",
+     4.09,
+     4.44
+    ],
+    [
+     "adventure,",
+     4.44,
+     5.01
+    ],
+    [
+     "friends!",
+     5.01,
+     5.68
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: next adventure",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 336.25,
+   "t1": 339.6875,
+   "v0": 336.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 339.6875,
+   "t1": 342.8125,
+   "v0": 340.0,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 342.8125,
+   "t1": 348.125,
+   "v0": 343.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 348.125,
+   "t1": 351.0321666666666,
+   "v0": 348.245,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

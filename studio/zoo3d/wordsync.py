@@ -53,6 +53,9 @@ def norm(tok):
     return NUM.get(t, t)
 
 
+ALIAS = {"baa": "bah"}      # for the ALIGNER only: the bundled dictionary spells "baa" out letter by letter (B IY EY EY) and an existing word cannot be replaced; the voice says both /bɑː/ (za_ep16, Nov 27 2026)
+
+
 def _ensure(d, w):
     if d.lookup_word(w) is not None: return
     ph = EXTRA.get(w)
@@ -67,7 +70,7 @@ def _resample(a, sr=24000, to=16000):
 
 
 def align(audio, text, sr=24000):
-    toks = text.split(); words = [norm(t) for t in toks]
+    toks = text.split(); words = [ALIAS.get(norm(t), norm(t)) for t in toks]
     idx = [i for i, w in enumerate(words) if w]            # tokens that are spoken words
     dur = len(audio) / sr; out = [None] * len(toks); got = 0
     try:

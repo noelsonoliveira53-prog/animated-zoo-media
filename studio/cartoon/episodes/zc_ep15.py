@@ -286,8 +286,8 @@ SHORTS = [
 
 # thumbnails (thumb.py): one big object, 1-2 words, none of the title's words, no watermark
 THUMBS = {
-    "zc_ep15": {"place": "paper_blue", "cam": (960, 600, 1500), "props": [(A.lens_hair, 960, 560, 1.15)], "words": [("SEE-THROUGH?!", 960, 150, 170, "sun")]},
+    "zc_ep15": {"place": "paper_blue", "cam": (960, 600, 1500), "props": [(A.lens_hair, 860, 600, .8)], "words": [("SEE-THROUGH?!", 960, 140, 160, "sun")]},
     "zc_ep15_short1": {"place": "paper_blue", "cam": (960, 640, 1700), "props": [(A.lens_hair, 960, 520, 1.1)], "words": [("LOOK!", 540, 1560, 240, "sun")]},
     "zc_ep15_short2": {"place": "paper_blue", "cam": (960, 600, 1900), "props": [(A.hair_tube, 960, 520, 1.0)], "words": [("SIP,", 540, 1400, 210, ""), ("SIP!", 540, 1630, 240, "sun")]},
-    "zc_ep15_short3": {"place": "arctic", "cam": BH, "actors": [("bear", 1000, 930, 1.0, False, "")], "words": [("BOOP!", 540, 1560, 240, "sun")]},
+    "zc_ep15_short3": {"place": "arctic", "cam": (1080, 720, 1350), "actors": [("bear", 1000, 930, 1.0, False, "")], "words": [("BOOP!", 540, 1600, 240, "sun")]},
 }

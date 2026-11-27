@@ -99,6 +99,20 @@ THEMES = [
           ("Does a Sea Turtle Breathe Water?", "fact, from the breathing lesson", "First frame: Tula under the water holding her breath, cheeks full.", "She swims up for air."),
           ("Why Does This Crab Change Houses?", "story moment, from the crab adventure", "First frame: a crab half out of a tiny shell.", "He grew. He needs a bigger one."),
           ("Slow Wins the Race?", "story moment, from the race adventure", "First frame: Tula far behind three fast fish.", "They all finish together.")]),
+ dict(key="farm", name="Farm week (written Nov 27 2026 by the afternoon adventure build: Clover had no theme)", friend="Clover the lamb", place="the sunny farm",
+  adv=[("Clover Leads the Flock Home", "The sun is going down and it is supper time in the barn. Little Clover wants to bring the big sheep home from the meadow, but they keep munching.|She calls, and nobody hears. She pushes, and nobody moves. She runs round and round them, and gets dizzy.|Then she sees how one sheep walks and the others follow. Clover walks first, head high, and the flock follows her home, one by one.",
+        "V: a group of sheep is a flock. V: sheep follow one another: when one sheep moves, the rest of the flock usually follows. V: sheep eat grass.", "Little Clover in front, three big sheep in a line behind her. Words: FOLLOW ME!", ""),
+       ("Clover and the Woolly Haircut", "It is a warm day and the big sheep are getting their haircut. Clover is not sure she wants her soft coat cut.|She hides behind the hay, under a bucket and in the tall grass, and gets hotter and hotter.|She watches Mama feel cool and happy after her haircut, and tries it herself. The wool becomes a warm scarf for Milo.",
+        "V: sheep are shorn about once a year and the wool grows back. V: wool is spun into yarn for warm clothes.", "Clover peeking from behind a big pile of wool. Words: SO FLUFFY!", ""),
+       ("Clover's Big Jump Over the Puddle", "After the rain there is a big puddle between Clover and the sweetest patch of clover.|She tries to step round it, to tiptoe through it, and to wait for it to dry.|She practises little hops with her friends until she can jump it, and they all share the sweet clover.",
+        "V: lambs play by running and jumping together. V: sheep eat grass and clover.", "Clover in mid-jump over a shiny puddle. Words: HOP, HOP!", "")],
+  les=[], songs=[], shorts=[]),
+ dict(key="nightforest", name="Night forest week (written Nov 27 2026: Hazel had no theme)", friend="Hazel the hedgehog", place="the night forest",
+  adv=[("Hazel's Night-Time Snack Hunt", "When the moon comes up, Hazel wakes up hungry. Milo is sleepy, but he wants to see what a hedgehog does at night.|It is too dark for Milo to see the snacks, the leaves are too crunchy to be quiet, and the best snack is under a log.|Hazel follows her nose, snuffles under the log and shares the find. Milo learns that some friends are awake at night.",
+        "V: hedgehogs are active at night. V: a hedgehog finds its food mostly by smell. V: hedgehogs eat beetles, worms and other small animals.", "Hazel's nose close to the ground under a big moon. Words: SNIFF, SNIFF!", ""),
+       ("Hazel and the Crunchy Leaf Bed", "Morning is coming and Hazel needs a bed for the day.|One spot is too windy, one is too wet, one is too bright.|Hazel gathers dry leaves under a bush and makes her own cosy nest. She curls up small, and Milo says goodnight in the morning.",
+        "V: hedgehogs sleep in the day in nests of leaves and grass. V: a hedgehog can curl up into a ball.", "Hazel curled up in a round nest of orange leaves. Words: COSY!", "")],
+  les=[], songs=[], shorts=[]),
 ]
 
 
@@ -124,7 +138,7 @@ def theme_html(t, n):
 
 
 n_adv = sum(len(t["adv"]) for t in THEMES); n_les = sum(len(t["les"]) for t in THEMES); n_song = sum(len(t["songs"]) for t in THEMES); n_sh = sum(len(t["shorts"]) for t in THEMES)
-assert (n_adv, n_les, n_song, n_sh) == (15, 18, 10, 20), (n_adv, n_les, n_song, n_sh)
+assert (n_adv, n_les, n_song, n_sh) == (20, 18, 10, 20), (n_adv, n_les, n_song, n_sh)
 import re
 titles = []
 for t in THEMES:

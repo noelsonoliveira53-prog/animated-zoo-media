@@ -165,7 +165,8 @@ def themes():
 ANIMALS = set("lion elephant giraffe zebra hippo tiger bear panda monkey fox koala horse pig cow rhino camel octopus penguin flamingo meerkat snail ant "
               "owl frog tapir bat crab anteater macaw eagle dinosaur rex shark whale dolphin turtle sloth kangaroo seal duck chicken sheep goat rabbit".split())
 NAMES = {"mango": "monkey", "tumble": "elephant", "sandy": "camel", "jungle": "rainforest", "rainforest": "rainforest", "dino": "dinosaur",
-         "poppy": "bear", "polar": "bear", "snow": "snow", "snowy": "snow", "arctic": "snow"}      # Poppy the polar bear cub and the snow stories (za_ep10, za_ep11: two snow titles the day rule did not see, Nov 21)
+         "poppy": "bear", "polar": "bear", "snow": "snow", "snowy": "snow", "arctic": "snow",
+         "clover": "sheep", "lamb": "sheep", "flock": "sheep", "hazel": "hedgehog", "hedgehog": "hedgehog"}      # Poppy the polar bear cub and the snow stories (za_ep10, za_ep11: two snow titles the day rule did not see, Nov 21)
 
 
 def animals(t):

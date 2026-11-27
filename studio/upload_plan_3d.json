@@ -3600,6 +3600,19 @@
   "theme_title": "Milo and the Deep Blue Sea"
  },
  {
+  "file": "cartoon/za_ep16.mp4",
+  "title": "Can Little Clover Lead the Sheep Home?",
+  "date": "2026-11-29",
+  "time": "5:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 3:50 PM ET by the scheduled afternoon adventure build (https://claude.ai/code/session_014CFVfWGhydZaCrxaKUuTsv); za_ep15 was claimed minutes earlier by another session, so this is the next id. Title renamed from the THEMES title (theme_title) to a question title (viral packaging). First Farm week story (Clover the lamb; theme written today). In production: nothing rendered yet.",
+  "theme_title": "Clover Leads the Flock Home"
+ },
+ {
   "file": "cartoon/zc_ep14.mp4",
   "title": "Whose Egg Is This? Guess With Milo",
   "date": "2026-11-28",

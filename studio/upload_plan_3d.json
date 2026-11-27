@@ -3539,7 +3539,11 @@
   "bookends": true,
   "video_id": "PgtcNC-avhg",
   "thumb_set": true,
-  "uploaded": "2026-11-27 2:58 PM ET (Studio: public November 28, 2026 at 5:30 AM)"
+  "uploaded": "2026-11-27 2:58 PM ET (Studio: public November 28, 2026 at 5:30 AM)",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  },
  {
   "file": "cartoon/za_ep14.mp4",
@@ -3576,6 +3580,10 @@
   "seconds": 376.6,
   "video_id": "8-yOcxCR-_o",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 1:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 1:30 PM)",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  }
 ]

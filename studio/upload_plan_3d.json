@@ -3620,7 +3620,11 @@
   "seconds": 352.9,
   "video_id": "xfej7cES_W8",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 3:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 3:30 PM)",
+  "playlists": [
+   "every",
+   "adventures"
+  ]
  },
  {
   "file": "cartoon/za_ep16.mp4",
@@ -3694,7 +3698,12 @@
   "seconds": 360.8,
   "video_id": "4xL3b9P7JUQ",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 5:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 5:30 PM)",
+  "playlists": [
+   "every",
+   "facts",
+   "guess"
+  ]
  },
  {
   "file": "cartoon/zc_ep15.mp4",

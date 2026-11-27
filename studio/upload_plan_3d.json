@@ -3694,5 +3694,18 @@
   "res": "3840x2160",
   "watermark": "tl",
   "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+ },
+ {
+  "file": "cartoon/zc_ep16.mp4",
+  "title": "How Do Sea Turtles Breathe?",
+  "date": "2026-11-29",
+  "time": "5:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet.",
+  "theme_title": "How Do Sea Turtles Breathe?"
  }
 ]

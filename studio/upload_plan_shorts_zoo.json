@@ -2183,5 +2183,41 @@
    "Milo the bluebird",
    "The Animated Zoo"
   ]
+ },
+ {
+  "file": "cartoon/zc_ep16_short1.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep16",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-02",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
+ },
+ {
+  "file": "cartoon/zc_ep16_short2.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep16",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-03",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
+ },
+ {
+  "file": "cartoon/zc_ep16_short3.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep16",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-04",
+  "time": "7:30 PM",
+  "note": "Claimed Nov 27 2026 about 5:47 PM ET by the hand-fired 1:17 PM lesson build (catch-up; session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep16.md). In production: not built yet."
  }
 ]

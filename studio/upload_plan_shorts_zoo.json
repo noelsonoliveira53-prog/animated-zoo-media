@@ -1952,7 +1952,7 @@
  {
   "file": "cartoon/zc_ep13_short2.mp4",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_short_90",
   "from": "zc_ep13",
   "res": "2160x3840",
@@ -1974,7 +1974,10 @@
    "shorts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "video_id": "I-oZD0VQ8SQ",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 ET (Studio: public November 30, 2026 at 7:30 PM)"
  },
  {
   "file": "cartoon/zc_ep13_short3.mp4",

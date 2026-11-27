@@ -74,6 +74,16 @@ A Guess With Milo episode is a `cartoon_lesson` (5:00-6:30, three parts of 83-90
   finished episode's file and link in the run report.
 
 ## Setup (fresh session)
+**CLONE LIGHT, NEVER A FULL CLONE** (Nov 27 2026: every scheduled run, builds and the daily run, ended "RUN_ERRORED" after about 10 minutes from Nov 23 to Nov 27, and nothing was built or uploaded. The repo had grown to 18.4 GB of committed videos (16.4 GB in the current tree): a full clone fills a session's disk. A light clone measured Nov 27: 26 s, about 2 GB with the checkout):
+```
+git clone --filter=blob:limit=2m --no-checkout https://github.com/noelsonoliveira53-prog/animated-zoo-media.git /home/claude/animated-zoo-media
+cd /home/claude/animated-zoo-media
+git sparse-checkout set --no-cone '/*' '!*.mp4' '!*.mov' '!*.webm' '!/packages/' '!/truck/' '!/moon/' '!/bloop/' '!/fruity/' '!/space/' '!/wild/'
+git checkout main
+```
+- A video you need (to review it or to upload it from the PC) comes alone: `git sparse-checkout add '/cartoon/<file>.mp4'`. The browser upload reads the file from raw.githubusercontent.com at the pushed commit, so the uploading session needs no local copy of it except for review.py.
+- A new video you made is committed with `git add --sparse <file>` (a plain `git add` refuses a path outside the sparse checkout).
+- After a finished render delete `studio/cartoon/out/<id>/*_silent.mp4` and `studio/cartoon/out/<id>/proj_*/.hyperframes/artifacts/` (gigabytes each); keep 2 GB free.
 `bash studio/zoo3d/setup.sh` (voice model), `which hyperframes` (else `npm i -g hyperframes@0.8.231`), `python3 -c "import pyworld, pocketsphinx, kokoro_onnx, soundfile, pedalboard, tinysoundfont"` (else pip install with `--break-system-packages`; tinysoundfont with `--no-deps`; setup.sh installs both since Nov 21).
 HyperFrames refuses to start under 1 GB of free disk (`df -h .`). If needed: `git sparse-checkout set --no-cone '/*' '!/truck/' '!/moon/' '!/bloop/' '!/gizmo/' '!/fruity/' '!/space/' '!/wild/'` (they stay in git).
 Renders and encodes: ONE at a time, started as a tracked background command, never `nohup ... &` (the render is cancelled when the launching call returns). No `git pull`, stash or rebase while one writes.

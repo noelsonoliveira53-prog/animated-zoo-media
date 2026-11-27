@@ -1,0 +1,7746 @@
+{
+ "id": "za_ep15",
+ "total": 352.8571666666666,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875,
+  92.5,
+  93.125,
+  93.75,
+  94.375,
+  95.0,
+  95.625,
+  96.25,
+  96.875,
+  97.5,
+  98.125,
+  98.75,
+  99.375,
+  100.0,
+  100.625,
+  101.25,
+  101.875,
+  102.5,
+  103.125,
+  103.75,
+  104.375,
+  105.0,
+  105.625,
+  106.25,
+  106.875,
+  107.5,
+  108.125,
+  108.75,
+  109.375,
+  110.0,
+  110.625,
+  111.25,
+  111.875,
+  112.5,
+  113.125,
+  113.75,
+  114.375,
+  115.0,
+  115.625,
+  116.25,
+  116.875,
+  117.5,
+  118.125,
+  118.75,
+  119.375,
+  120.0,
+  120.625,
+  121.25,
+  121.875,
+  122.5,
+  123.125,
+  123.75,
+  124.375,
+  125.0,
+  125.625,
+  126.25,
+  126.875,
+  127.5,
+  128.125,
+  128.75,
+  129.375,
+  130.0,
+  130.625,
+  131.25,
+  131.875,
+  132.5,
+  133.125,
+  133.75,
+  134.375,
+  135.0,
+  135.625,
+  136.25,
+  136.875,
+  137.5,
+  138.125,
+  138.75,
+  139.375,
+  140.0,
+  140.625,
+  141.25,
+  141.875,
+  142.5,
+  143.125,
+  143.75,
+  144.375,
+  145.0,
+  145.625,
+  146.25,
+  146.875,
+  147.5,
+  148.125,
+  148.75,
+  149.375,
+  150.0,
+  150.625,
+  151.25,
+  151.875,
+  152.5,
+  153.125,
+  153.75,
+  154.375,
+  155.0,
+  155.625,
+  156.25,
+  156.875,
+  157.5,
+  158.125,
+  158.75,
+  159.375,
+  160.0,
+  160.625,
+  161.25,
+  161.875,
+  162.5,
+  163.125,
+  163.75,
+  164.375,
+  165.0,
+  165.625,
+  166.25,
+  166.875,
+  167.5,
+  168.125,
+  168.75,
+  169.375,
+  170.0,
+  170.625,
+  171.25,
+  171.875,
+  172.5,
+  173.125,
+  173.75,
+  174.375,
+  175.0,
+  175.625,
+  176.25,
+  176.875,
+  177.5,
+  178.125,
+  178.75,
+  179.375,
+  180.0,
+  180.625,
+  181.25,
+  181.875,
+  182.5,
+  183.125,
+  183.75,
+  184.375,
+  185.0,
+  185.625,
+  186.25,
+  186.875,
+  187.5,
+  188.125,
+  188.75,
+  189.375,
+  190.0,
+  190.625,
+  191.25,
+  191.875,
+  192.5,
+  193.125,
+  193.75,
+  194.375,
+  195.0,
+  195.625,
+  196.25,
+  196.875,
+  197.5,
+  198.125,
+  198.75,
+  199.375,
+  200.0,
+  200.625,
+  201.25,
+  201.875,
+  202.5,
+  203.125,
+  203.75,
+  204.375,
+  205.0,
+  205.625,
+  206.25,
+  206.875,
+  207.5,
+  208.125,
+  208.75,
+  209.375,
+  210.0,
+  210.625,
+  211.25,
+  211.875,
+  212.5,
+  213.125,
+  213.75,
+  214.375,
+  215.0,
+  215.625,
+  216.25,
+  216.875,
+  217.5,
+  218.125,
+  218.75,
+  219.375,
+  220.0,
+  220.625,
+  221.25,
+  221.875,
+  222.5,
+  223.125,
+  223.75,
+  224.375,
+  225.0,
+  225.625,
+  226.25,
+  226.875,
+  227.5,
+  228.125,
+  228.75,
+  229.375,
+  230.0,
+  230.625,
+  231.25,
+  231.875,
+  232.5,
+  233.125,
+  233.75,
+  234.375,
+  235.0,
+  235.625,
+  236.25,
+  236.875,
+  237.5,
+  238.125,
+  238.75,
+  239.375,
+  240.0,
+  240.625,
+  241.25,
+  241.875,
+  242.5,
+  243.125,
+  243.75,
+  244.375,
+  245.0,
+  245.625,
+  246.25,
+  246.875,
+  247.5,
+  248.125,
+  248.75,
+  249.375,
+  250.0,
+  250.625,
+  251.25,
+  251.875,
+  252.5,
+  253.125,
+  253.75,
+  254.375,
+  255.0,
+  255.625,
+  256.25,
+  256.875,
+  257.5,
+  258.125,
+  258.75,
+  259.375,
+  260.0,
+  260.625,
+  261.25,
+  261.875,
+  262.5,
+  263.125,
+  263.75,
+  264.375,
+  265.0,
+  265.625,
+  266.25,
+  266.875,
+  267.5,
+  268.125,
+  268.75,
+  269.375,
+  270.0,
+  270.625,
+  271.25,
+  271.875,
+  272.5,
+  273.125,
+  273.75,
+  274.375,
+  275.0,
+  275.625,
+  276.25,
+  276.875,
+  277.5,
+  278.125,
+  278.75,
+  279.375,
+  280.0,
+  280.625,
+  281.25,
+  281.875,
+  282.5,
+  283.125,
+  283.75,
+  284.375,
+  285.0,
+  285.625,
+  286.25,
+  286.875,
+  287.5,
+  288.125,
+  288.75,
+  289.375,
+  290.0,
+  290.625,
+  291.25,
+  291.875,
+  292.5,
+  293.125,
+  293.75,
+  294.375,
+  295.0,
+  295.625,
+  296.25,
+  296.875,
+  297.5,
+  298.125,
+  298.75,
+  299.375,
+  300.0,
+  300.625,
+  301.25,
+  301.875,
+  302.5,
+  303.125,
+  303.75,
+  304.375,
+  305.0,
+  305.625,
+  306.25,
+  306.875,
+  307.5,
+  308.125,
+  308.75,
+  309.375,
+  310.0,
+  310.625,
+  311.25,
+  311.875,
+  312.5,
+  313.125,
+  313.75,
+  314.375,
+  315.0,
+  315.625,
+  316.25,
+  316.875,
+  317.5,
+  318.125,
+  318.75,
+  319.375,
+  320.0,
+  320.625,
+  321.25,
+  321.875,
+  322.5,
+  323.125,
+  323.75,
+  324.375,
+  325.0,
+  325.625,
+  326.25,
+  326.875,
+  327.5,
+  328.125,
+  328.75,
+  329.375,
+  330.0,
+  330.625,
+  331.25,
+  331.875,
+  332.5,
+  333.125,
+  333.75,
+  334.375,
+  335.0,
+  335.625,
+  336.25,
+  336.875,
+  337.5,
+  338.125,
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375,
+  350.0,
+  350.625,
+  351.25,
+  351.875,
+  352.5
+ ],
+ "plan": {
+  "length": 352.9,
+  "shots": 66,
+  "visual_changes": 502,
+  "mean_gap": 0.7,
+  "longest_gap": 5.44,
+  "longest_gap_at": 115.2,
+  "over_6s": [],
+  "places": [
+   "shore",
+   "intro_gate",
+   "intro_logo",
+   "deep",
+   "reef",
+   "meadow",
+   "rocks",
+   "shore_eve"
+  ],
+  "picture_boards": [
+   "paper_sea"
+  ],
+  "questions": 13,
+  "longest_without_question": 44.7,
+  "first_words_at": 0.42,
+  "shot_mean": 5.35,
+  "main_intro": {
+   "at": [
+    6.6,
+    337.2
+   ],
+   "seconds": 30.0
+  },
+  "beats": {
+   "hook": 1,
+   "song": 8,
+   "goal": 8,
+   "obstacle1": 3,
+   "obstacle2": 5,
+   "obstacle3": 3,
+   "low": 3,
+   "solution": 19,
+   "fact": 6,
+   "ending": 8
+  },
+  "fails": [],
+  "words_placed": "711/711",
+  "sync": {
+   "pauses_checked": 58,
+   "onset_err_mean_ms": 24.3,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 65,
+   "cuts_on_the_half_beat": 65,
+   "songs_entering_on_a_beat": "8/8",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the shallow water hook: Milo looks down at Tula"
+  ],
+  [
+   0.02,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   0.2,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   0.2,
+   "action",
+   "tula swims"
+  ],
+  [
+   0.4,
+   "word",
+   "DOWN THERE?"
+  ],
+  [
+   3.43,
+   "action",
+   "milo hops"
+  ],
+  [
+   4.69,
+   "action",
+   "tula looks"
+  ],
+  [
+   4.69,
+   "word",
+   "TULA'S HOME"
+  ],
+  [
+   6.56,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   6.56,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   6.56,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   6.56,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   6.61,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   7.36,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   9.69,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   9.88,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   10.16,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   10.19,
+   "action",
+   "mango pops up"
+  ],
+  [
+   10.51,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   10.63,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   10.82,
+   "action",
+   "tula pops up"
+  ],
+  [
+   11.13,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   11.25,
+   "action",
+   "sandy nods"
+  ],
+  [
+   11.25,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   11.44,
+   "action",
+   "clover pops up"
+  ],
+  [
+   11.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   11.56,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   11.76,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   12.03,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   12.5,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   12.81,
+   "action",
+   "out of the flash"
+  ],
+  [
+   12.81,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   12.81,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   13.0,
+   "action",
+   "the badge pops"
+  ],
+  [
+   13.57,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.73,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   13.88,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.04,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.35,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.66,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   14.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   14.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   14.7,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   15.0,
+   "action",
+   "a firework"
+  ],
+  [
+   15.0,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   15.16,
+   "action",
+   "a firework"
+  ],
+  [
+   15.31,
+   "action",
+   "confetti"
+  ],
+  [
+   15.31,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   15.41,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   15.62,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   15.74,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   15.94,
+   "action",
+   "a firework"
+  ],
+  [
+   16.13,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   16.44,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   16.56,
+   "action",
+   "a firework"
+  ],
+  [
+   16.75,
+   "action",
+   "mango pops up"
+  ],
+  [
+   16.75,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   17.07,
+   "action",
+   "clover pops up"
+  ],
+  [
+   17.07,
+   "action",
+   "tula pops up"
+  ],
+  [
+   17.19,
+   "action",
+   "a firework"
+  ],
+  [
+   17.38,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   17.5,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   17.66,
+   "action",
+   "a firework"
+  ],
+  [
+   18.12,
+   "action",
+   "a firework"
+  ],
+  [
+   18.12,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   18.25,
+   "action",
+   "T word lights up"
+  ],
+  [
+   18.27,
+   "action",
+   "a firework"
+  ],
+  [
+   18.43,
+   "action",
+   "A word lights up"
+  ],
+  [
+   19.14,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   19.63,
+   "action",
+   "Milo flips"
+  ],
+  [
+   19.63,
+   "action",
+   "a firework"
+  ],
+  [
+   19.63,
+   "action",
+   "confetti"
+  ],
+  [
+   19.63,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.63,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   19.63,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   19.75,
+   "action",
+   "a firework"
+  ],
+  [
+   19.93,
+   "action",
+   "a firework"
+  ],
+  [
+   19.93,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   20.05,
+   "action",
+   "a firework"
+  ],
+  [
+   20.94,
+   "new place",
+   "the shallow water Milo on his little rock"
+  ],
+  [
+   21.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   21.24,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   21.24,
+   "action",
+   "tula swims"
+  ],
+  [
+   23.98,
+   "word",
+   "THE BLUE SEA"
+  ],
+  [
+   25.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   25.94,
+   "new shot",
+   "the shallow water Tula: my home is under the water"
+  ],
+  [
+   25.96,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   26.52,
+   "action",
+   "tula nods"
+  ],
+  [
+   27.8,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   29.68,
+   "word",
+   "MY HOME"
+  ],
+  [
+   31.25,
+   "new shot",
+   "the shallow water Milo: I want to see your home"
+  ],
+  [
+   31.27,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   32.8,
+   "action",
+   "milo hops"
+  ],
+  [
+   33.62,
+   "word",
+   "I WANT TO SEE!"
+  ],
+  [
+   34.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   35.31,
+   "new shot",
+   "the shallow water Tula: dive down with me"
+  ],
+  [
+   35.33,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   36.97,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   36.97,
+   "word",
+   "DIVE DOWN!"
+  ],
+  [
+   38.44,
+   "new shot",
+   "the shallow water Milo: I need air"
+  ],
+  [
+   38.46,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   41.32,
+   "action",
+   "milo hops"
+  ],
+  [
+   41.32,
+   "word",
+   "I NEED AIR!"
+  ],
+  [
+   42.9,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   44.69,
+   "new shot",
+   "the shallow water question: under the water yes or no"
+  ],
+  [
+   45.0,
+   "action",
+   "milo hops"
+  ],
+  [
+   46.75,
+   "sign",
+   "YES"
+  ],
+  [
+   47.1,
+   "sign",
+   "NO"
+  ],
+  [
+   48.31,
+   "thinking dot",
+   "1"
+  ],
+  [
+   48.92,
+   "thinking dot",
+   "2"
+  ],
+  [
+   49.53,
+   "thinking dot",
+   "3"
+  ],
+  [
+   49.98,
+   "answer",
+   "NO"
+  ],
+  [
+   51.25,
+   "new shot",
+   "the shallow water Tula dives down"
+  ],
+  [
+   51.35,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   52.24,
+   "action",
+   "Tula dives away"
+  ],
+  [
+   54.32,
+   "word",
+   "DOWN SHE GOES"
+  ],
+  [
+   56.19,
+   "action",
+   "milo hops"
+  ],
+  [
+   58.12,
+   "new shot",
+   "the shallow water Milo: I will try"
+  ],
+  [
+   58.15,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   59.12,
+   "action",
+   "milo hops"
+  ],
+  [
+   61.24,
+   "action",
+   "milo hops"
+  ],
+  [
+   61.24,
+   "word",
+   "I WILL TRY!"
+  ],
+  [
+   62.19,
+   "new shot",
+   "the shallow water Milo looks down from his rock"
+  ],
+  [
+   63.45,
+   "action",
+   "Milo leans over"
+  ],
+  [
+   65.35,
+   "word",
+   "LOOK..."
+  ],
+  [
+   65.87,
+   "action",
+   "milo hops"
+  ],
+  [
+   66.31,
+   "action",
+   "milo hops"
+  ],
+  [
+   66.31,
+   "word",
+   "AND LOOK..."
+  ],
+  [
+   67.19,
+   "new shot",
+   "the shallow water only twinkles on the waves"
+  ],
+  [
+   67.21,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   67.39,
+   "action",
+   "the waves twinkle"
+  ],
+  [
+   68.44,
+   "word",
+   "TOO DEEP!"
+  ],
+  [
+   70.41,
+   "action",
+   "milo hops"
+  ],
+  [
+   71.08,
+   "word",
+   "TWINKLE, TWINKLE"
+  ],
+  [
+   72.81,
+   "new shot",
+   "the shallow water question: home or twinkles"
+  ],
+  [
+   73.01,
+   "action",
+   "the waves twinkle"
+  ],
+  [
+   75.29,
+   "sign",
+   "HOME"
+  ],
+  [
+   75.64,
+   "sign",
+   "TWINKLES"
+  ],
+  [
+   77.74,
+   "thinking dot",
+   "1"
+  ],
+  [
+   78.35,
+   "thinking dot",
+   "2"
+  ],
+  [
+   78.95,
+   "thinking dot",
+   "3"
+  ],
+  [
+   79.41,
+   "answer",
+   "TWINKLES"
+  ],
+  [
+   80.94,
+   "new shot",
+   "the shallow water a big green leaf floats in"
+  ],
+  [
+   81.14,
+   "action",
+   "the leaf floats in"
+  ],
+  [
+   83.29,
+   "action",
+   "milo hops"
+  ],
+  [
+   83.29,
+   "word",
+   "A BIG LEAF"
+  ],
+  [
+   84.97,
+   "action",
+   "milo flies"
+  ],
+  [
+   86.25,
+   "new shot",
+   "the shallow water Milo on the leaf boat"
+  ],
+  [
+   86.27,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   87.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   87.03,
+   "word",
+   "A LEAF BOAT!"
+  ],
+  [
+   90.0,
+   "new shot",
+   "the shallow water the leaf goes round and round"
+  ],
+  [
+   90.02,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   90.1,
+   "action",
+   "the leaf rocks"
+  ],
+  [
+   91.07,
+   "action",
+   "the arrow goes round"
+  ],
+  [
+   91.07,
+   "action",
+   "the leaf turns"
+  ],
+  [
+   91.07,
+   "picture",
+   "la"
+  ],
+  [
+   91.07,
+   "word",
+   "ROUND AND ROUND"
+  ],
+  [
+   94.68,
+   "word",
+   "SO DIZZY!"
+  ],
+  [
+   95.62,
+   "new shot",
+   "the shallow water Milo flies back to his rock"
+  ],
+  [
+   95.76,
+   "word",
+   "FLAP, FLAP!"
+  ],
+  [
+   97.35,
+   "action",
+   "milo flies"
+  ],
+  [
+   99.52,
+   "action",
+   "the leaf floats away"
+  ],
+  [
+   100.13,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   101.25,
+   "new shot",
+   "the shallow water question: did the leaf boat help"
+  ],
+  [
+   102.4,
+   "action",
+   "milo hops"
+  ],
+  [
+   103.56,
+   "sign",
+   "YES"
+  ],
+  [
+   103.91,
+   "sign",
+   "NO"
+  ],
+  [
+   105.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   105.67,
+   "thinking dot",
+   "2"
+  ],
+  [
+   106.28,
+   "thinking dot",
+   "3"
+  ],
+  [
+   106.73,
+   "answer",
+   "NO"
+  ],
+  [
+   108.12,
+   "new shot",
+   "the shallow water Milo calls Tula"
+  ],
+  [
+   110.25,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   111.34,
+   "action",
+   "milo hops"
+  ],
+  [
+   111.34,
+   "word",
+   "TULA!"
+  ],
+  [
+   111.97,
+   "action",
+   "milo hops"
+  ],
+  [
+   111.97,
+   "word",
+   "TULA!"
+  ],
+  [
+   113.75,
+   "new place",
+   "the deep blue water Tula deep down does not hear"
+  ],
+  [
+   113.77,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   113.95,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   113.95,
+   "action",
+   "bubbles float up"
+  ],
+  [
+   113.95,
+   "action",
+   "tula swims"
+  ],
+  [
+   115.18,
+   "word",
+   "DEEP DOWN"
+  ],
+  [
+   120.62,
+   "new shot",
+   "the deep blue water question: at the top or deep down"
+  ],
+  [
+   120.83,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   122.46,
+   "sign",
+   "AT THE TOP"
+  ],
+  [
+   122.81,
+   "sign",
+   "DEEP DOWN"
+  ],
+  [
+   124.74,
+   "thinking dot",
+   "1"
+  ],
+  [
+   125.35,
+   "thinking dot",
+   "2"
+  ],
+  [
+   125.95,
+   "thinking dot",
+   "3"
+  ],
+  [
+   126.41,
+   "answer",
+   "DEEP DOWN"
+  ],
+  [
+   127.81,
+   "new place",
+   "the shallow water Milo sits on his rock"
+  ],
+  [
+   127.83,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   128.11,
+   "action",
+   "Milo sits down"
+  ],
+  [
+   130.58,
+   "word",
+   "HE TRIED..."
+  ],
+  [
+   132.46,
+   "word",
+   "NOT YET"
+  ],
+  [
+   134.69,
+   "new shot",
+   "the shallow water Milo: maybe never"
+  ],
+  [
+   134.71,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   138.44,
+   "new shot",
+   "the shallow water question: happy or sad"
+  ],
+  [
+   138.46,
+   "action",
+   "milo looks sad"
+  ],
+  [
+   140.38,
+   "sign",
+   "HAPPY"
+  ],
+  [
+   140.73,
+   "sign",
+   "SAD"
+  ],
+  [
+   142.04,
+   "thinking dot",
+   "1"
+  ],
+  [
+   142.65,
+   "thinking dot",
+   "2"
+  ],
+  [
+   143.25,
+   "thinking dot",
+   "3"
+  ],
+  [
+   143.71,
+   "answer",
+   "SAD"
+  ],
+  [
+   145.0,
+   "new shot",
+   "the shallow water bubbles beside the rock"
+  ],
+  [
+   145.2,
+   "action",
+   "bubbles float up"
+  ],
+  [
+   145.71,
+   "action",
+   "milo hops"
+  ],
+  [
+   145.71,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   146.48,
+   "word",
+   "BUBBLES!"
+  ],
+  [
+   149.38,
+   "new shot",
+   "the shallow water count the bubbles"
+  ],
+  [
+   151.14,
+   "action",
+   "bubble one"
+  ],
+  [
+   151.14,
+   "count",
+   "1"
+  ],
+  [
+   151.4,
+   "count",
+   "2"
+  ],
+  [
+   151.44,
+   "action",
+   "bubble two"
+  ],
+  [
+   151.66,
+   "action",
+   "bubble three"
+  ],
+  [
+   151.66,
+   "count",
+   "3"
+  ],
+  [
+   153.44,
+   "new shot",
+   "the shallow water Tula comes up for air"
+  ],
+  [
+   153.54,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   153.94,
+   "word",
+   "UP FOR AIR!"
+  ],
+  [
+   154.45,
+   "action",
+   "milo hops"
+  ],
+  [
+   154.45,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   154.64,
+   "picture",
+   "rp"
+  ],
+  [
+   156.68,
+   "action",
+   "a puff of breath"
+  ],
+  [
+   156.68,
+   "picture",
+   "pf"
+  ],
+  [
+   157.81,
+   "new shot",
+   "the shallow water Milo: why did you come up"
+  ],
+  [
+   157.83,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   158.14,
+   "action",
+   "milo hops"
+  ],
+  [
+   160.09,
+   "action",
+   "milo hops"
+  ],
+  [
+   160.09,
+   "word",
+   "WHY?"
+  ],
+  [
+   161.25,
+   "new shot",
+   "the shallow water Tula: I need air too"
+  ],
+  [
+   161.27,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   162.8,
+   "action",
+   "tula nods"
+  ],
+  [
+   164.09,
+   "word",
+   "I NEED AIR TOO!"
+  ],
+  [
+   165.62,
+   "new place",
+   "the picture board (air and water) fact: sea turtles breathe air"
+  ],
+  [
+   167.08,
+   "word",
+   "SEA TURTLES BREATHE AIR"
+  ],
+  [
+   167.88,
+   "action",
+   "the turtle comes up"
+  ],
+  [
+   168.33,
+   "picture",
+   "ar"
+  ],
+  [
+   168.83,
+   "action",
+   "a puff of breath"
+  ],
+  [
+   168.83,
+   "picture",
+   "pf"
+  ],
+  [
+   168.83,
+   "word",
+   "UP TO THE TOP"
+  ],
+  [
+   170.62,
+   "new shot",
+   "the picture board (air and water) question: air or water"
+  ],
+  [
+   172.55,
+   "sign",
+   "AIR"
+  ],
+  [
+   172.9,
+   "sign",
+   "WATER"
+  ],
+  [
+   174.21,
+   "thinking dot",
+   "1"
+  ],
+  [
+   174.81,
+   "thinking dot",
+   "2"
+  ],
+  [
+   175.42,
+   "thinking dot",
+   "3"
+  ],
+  [
+   175.87,
+   "answer",
+   "AIR"
+  ],
+  [
+   177.19,
+   "new place",
+   "the shallow water copy me: a big breath"
+  ],
+  [
+   177.21,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   179.68,
+   "action",
+   "Tula breathes in"
+  ],
+  [
+   179.68,
+   "word",
+   "BREATHE IN..."
+  ],
+  [
+   180.44,
+   "action",
+   "a puff of breath"
+  ],
+  [
+   180.44,
+   "picture",
+   "pf"
+  ],
+  [
+   180.44,
+   "word",
+   "AND OUT!"
+  ],
+  [
+   182.07,
+   "action",
+   "Tula breathes in again"
+  ],
+  [
+   182.07,
+   "word",
+   "YOUR TURN!"
+  ],
+  [
+   183.37,
+   "action",
+   "a puff of breath"
+  ],
+  [
+   184.69,
+   "new shot",
+   "the shallow water Milo: I have an idea"
+  ],
+  [
+   184.71,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   185.5,
+   "action",
+   "milo hops"
+  ],
+  [
+   185.5,
+   "word",
+   "AN IDEA!"
+  ],
+  [
+   188.33,
+   "action",
+   "milo hops"
+  ],
+  [
+   189.06,
+   "new shot",
+   "the shallow water Milo: tell me one thing you saw"
+  ],
+  [
+   189.24,
+   "action",
+   "milo hops"
+  ],
+  [
+   190.63,
+   "action",
+   "tula nods"
+  ],
+  [
+   191.35,
+   "action",
+   "milo hops"
+  ],
+  [
+   191.35,
+   "word",
+   "TELL ME!"
+  ],
+  [
+   192.31,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   193.12,
+   "new place",
+   "the coral garden the coral garden"
+  ],
+  [
+   193.15,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   193.22,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   193.22,
+   "action",
+   "tula swims"
+  ],
+  [
+   194.93,
+   "word",
+   "CORAL GARDEN"
+  ],
+  [
+   196.81,
+   "action",
+   "zip wiggles"
+  ],
+  [
+   198.59,
+   "action",
+   "pearl wiggles"
+  ],
+  [
+   199.38,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   199.38,
+   "new place",
+   "the shallow water Tula tells: a coral garden"
+  ],
+  [
+   199.4,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   200.07,
+   "picture",
+   "rp"
+  ],
+  [
+   200.83,
+   "action",
+   "tula nods"
+  ],
+  [
+   200.83,
+   "word",
+   "A CORAL GARDEN!"
+  ],
+  [
+   204.38,
+   "new shot",
+   "the shallow water Milo sees the coral in his head"
+  ],
+  [
+   204.4,
+   "action",
+   "milo looks wow"
+  ],
+  [
+   204.72,
+   "action",
+   "milo hops"
+  ],
+  [
+   205.67,
+   "picture",
+   "th"
+  ],
+  [
+   206.88,
+   "new place",
+   "the picture board (air and water) fact: they hold their breath a long time"
+  ],
+  [
+   207.07,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   210.99,
+   "picture",
+   "ck"
+  ],
+  [
+   210.99,
+   "word",
+   "HOLD THEIR BREATH"
+  ],
+  [
+   212.2,
+   "action",
+   "the clock goes round"
+  ],
+  [
+   212.2,
+   "word",
+   "A LONG TIME"
+  ],
+  [
+   213.44,
+   "new shot",
+   "the picture board (air and water) question: hold her breath yes or no"
+  ],
+  [
+   213.64,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   217.1,
+   "sign",
+   "YES"
+  ],
+  [
+   217.45,
+   "sign",
+   "NO"
+  ],
+  [
+   218.8,
+   "thinking dot",
+   "1"
+  ],
+  [
+   219.4,
+   "thinking dot",
+   "2"
+  ],
+  [
+   220.01,
+   "thinking dot",
+   "3"
+  ],
+  [
+   220.46,
+   "answer",
+   "YES"
+  ],
+  [
+   221.88,
+   "new place",
+   "the seagrass meadow the seagrass meadow"
+  ],
+  [
+   221.9,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   221.97,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   221.97,
+   "action",
+   "tula swims"
+  ],
+  [
+   224.14,
+   "word",
+   "SEAGRASS MEADOW"
+  ],
+  [
+   227.6,
+   "action",
+   "tula nods"
+  ],
+  [
+   228.44,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   228.44,
+   "new place",
+   "the shallow water Tula tells: a seagrass meadow"
+  ],
+  [
+   228.46,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   229.14,
+   "picture",
+   "rp"
+  ],
+  [
+   229.79,
+   "action",
+   "tula nods"
+  ],
+  [
+   229.79,
+   "word",
+   "A SEAGRASS MEADOW!"
+  ],
+  [
+   233.75,
+   "new shot",
+   "the shallow water Milo sees the seagrass in his head"
+  ],
+  [
+   233.77,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   233.85,
+   "picture",
+   "th"
+  ],
+  [
+   235.77,
+   "action",
+   "milo hops"
+  ],
+  [
+   236.88,
+   "new place",
+   "the big rocks the big rocks: her cozy bed"
+  ],
+  [
+   236.9,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   236.97,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   236.97,
+   "action",
+   "Tula swims to her bed"
+  ],
+  [
+   240.55,
+   "word",
+   "A COZY BED"
+  ],
+  [
+   241.28,
+   "action",
+   "tula blinks slowly"
+  ],
+  [
+   241.88,
+   "new shot",
+   "the big rocks fact: a sleeping sea turtle stays under for hours"
+  ],
+  [
+   241.97,
+   "action",
+   "the Z's float"
+  ],
+  [
+   242.18,
+   "action",
+   "tula falls asleep"
+  ],
+  [
+   242.25,
+   "word",
+   "FAST ASLEEP"
+  ],
+  [
+   245.47,
+   "action",
+   "the clock goes round and round"
+  ],
+  [
+   245.47,
+   "picture",
+   "ck"
+  ],
+  [
+   245.47,
+   "word",
+   "SEVERAL HOURS"
+  ],
+  [
+   246.28,
+   "action",
+   "tula blinks slowly"
+  ],
+  [
+   246.88,
+   "new shot",
+   "the big rocks question: under the water or in a tree"
+  ],
+  [
+   246.97,
+   "action",
+   "the Z's float"
+  ],
+  [
+   247.18,
+   "action",
+   "tula falls asleep"
+  ],
+  [
+   249.39,
+   "sign",
+   "UNDER WATER"
+  ],
+  [
+   249.74,
+   "sign",
+   "IN A TREE"
+  ],
+  [
+   251.72,
+   "thinking dot",
+   "1"
+  ],
+  [
+   252.33,
+   "thinking dot",
+   "2"
+  ],
+  [
+   252.94,
+   "thinking dot",
+   "3"
+  ],
+  [
+   253.39,
+   "answer",
+   "UNDER WATER"
+  ],
+  [
+   254.69,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   254.69,
+   "new place",
+   "the shallow water Tula tells: my cozy bed"
+  ],
+  [
+   254.71,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   255.39,
+   "picture",
+   "rp"
+  ],
+  [
+   256.43,
+   "action",
+   "tula nods"
+  ],
+  [
+   256.43,
+   "word",
+   "MY COZY BED!"
+  ],
+  [
+   258.12,
+   "new shot",
+   "the shallow water Milo: I know your whole home"
+  ],
+  [
+   258.14,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   258.23,
+   "picture",
+   "th"
+  ],
+  [
+   259.71,
+   "action",
+   "milo hops"
+  ],
+  [
+   262.01,
+   "action",
+   "milo hops"
+  ],
+  [
+   262.01,
+   "word",
+   "NOT WET!"
+  ],
+  [
+   263.12,
+   "new shot",
+   "the shallow water the diving rhyme"
+  ],
+  [
+   263.14,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   263.25,
+   "action",
+   "Tula dips down"
+  ],
+  [
+   263.25,
+   "word",
+   "DOWN I DIVE"
+  ],
+  [
+   266.07,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   266.07,
+   "word",
+   "UP I COME"
+  ],
+  [
+   267.11,
+   "action",
+   "milo hops"
+  ],
+  [
+   268.44,
+   "new shot",
+   "the shallow water song: down and up"
+  ],
+  [
+   268.56,
+   "action",
+   "Tula dives on the falling tune"
+  ],
+  [
+   268.56,
+   "action",
+   "bubbles float up"
+  ],
+  [
+   268.56,
+   "word",
+   "DOWN I DIVE"
+  ],
+  [
+   269.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   271.06,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   272.31,
+   "action",
+   "milo hops"
+  ],
+  [
+   273.56,
+   "action",
+   "Tula dives again"
+  ],
+  [
+   273.56,
+   "word",
+   "UP I COME"
+  ],
+  [
+   274.81,
+   "action",
+   "Tula comes up on the rising tune"
+  ],
+  [
+   274.81,
+   "action",
+   "milo hops"
+  ],
+  [
+   276.68,
+   "action",
+   "milo hops"
+  ],
+  [
+   278.75,
+   "new shot",
+   "the shallow water question: did Milo find a way"
+  ],
+  [
+   278.77,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   279.84,
+   "action",
+   "milo hops"
+  ],
+  [
+   281.79,
+   "sign",
+   "YES"
+  ],
+  [
+   282.14,
+   "sign",
+   "NO"
+  ],
+  [
+   283.47,
+   "thinking dot",
+   "1"
+  ],
+  [
+   284.08,
+   "thinking dot",
+   "2"
+  ],
+  [
+   284.68,
+   "thinking dot",
+   "3"
+  ],
+  [
+   285.14,
+   "answer",
+   "YES"
+  ],
+  [
+   286.56,
+   "new place",
+   "the shallow water in the evening evening at the little rock"
+  ],
+  [
+   286.58,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   286.82,
+   "action",
+   "milo hops"
+  ],
+  [
+   288.95,
+   "word",
+   "GOLDEN SEA"
+  ],
+  [
+   293.44,
+   "new shot",
+   "the shallow water in the evening Milo: thank you"
+  ],
+  [
+   293.46,
+   "action",
+   "milo looks happy"
+  ],
+  [
+   293.67,
+   "action",
+   "milo hops"
+  ],
+  [
+   293.67,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   297.81,
+   "new shot",
+   "the shallow water in the evening Tula: friends can share"
+  ],
+  [
+   297.83,
+   "action",
+   "tula looks happy"
+  ],
+  [
+   299.51,
+   "action",
+   "tula nods"
+  ],
+  [
+   301.2,
+   "word",
+   "FRIENDS SHARE"
+  ],
+  [
+   303.12,
+   "new shot",
+   "the shallow water in the evening the lesson"
+  ],
+  [
+   304.31,
+   "action",
+   "milo hops"
+  ],
+  [
+   305.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   305.75,
+   "word",
+   "ANOTHER WAY!"
+  ],
+  [
+   306.88,
+   "new shot",
+   "the shallow water in the evening question: air or sand"
+  ],
+  [
+   309.82,
+   "sign",
+   "AIR"
+  ],
+  [
+   310.17,
+   "sign",
+   "SAND"
+  ],
+  [
+   311.5,
+   "thinking dot",
+   "1"
+  ],
+  [
+   312.1,
+   "thinking dot",
+   "2"
+  ],
+  [
+   312.71,
+   "thinking dot",
+   "3"
+  ],
+  [
+   313.16,
+   "answer",
+   "AIR"
+  ],
+  [
+   314.69,
+   "new shot",
+   "the shallow water in the evening question: up or down"
+  ],
+  [
+   314.95,
+   "action",
+   "milo hops"
+  ],
+  [
+   317.38,
+   "sign",
+   "UP"
+  ],
+  [
+   317.73,
+   "sign",
+   "DOWN"
+  ],
+  [
+   320.18,
+   "thinking dot",
+   "1"
+  ],
+  [
+   320.78,
+   "thinking dot",
+   "2"
+  ],
+  [
+   321.39,
+   "thinking dot",
+   "3"
+  ],
+  [
+   321.84,
+   "answer",
+   "UP"
+  ],
+  [
+   323.12,
+   "new shot",
+   "the shallow water in the evening the closing rhyme"
+  ],
+  [
+   323.45,
+   "action",
+   "Tula dips down"
+  ],
+  [
+   323.45,
+   "word",
+   "DOWN SHE DIVES"
+  ],
+  [
+   326.46,
+   "action",
+   "Tula comes up"
+  ],
+  [
+   326.46,
+   "word",
+   "UP SHE COMES"
+  ],
+  [
+   327.68,
+   "action",
+   "milo hops"
+  ],
+  [
+   328.75,
+   "new shot",
+   "the shallow water in the evening song: hooray"
+  ],
+  [
+   329.75,
+   "action",
+   "milo hops"
+  ],
+  [
+   330.35,
+   "action",
+   "tula nods"
+  ],
+  [
+   330.75,
+   "word",
+   "HOORAY!"
+  ],
+  [
+   330.95,
+   "action",
+   "milo hops"
+  ],
+  [
+   334.38,
+   "new shot",
+   "the shallow water in the evening goodbye"
+  ],
+  [
+   334.5,
+   "action",
+   "milo hops"
+  ],
+  [
+   334.5,
+   "word",
+   "SEE YOU SOON!"
+  ],
+  [
+   336.25,
+   "action",
+   "milo hops"
+  ],
+  [
+   337.19,
+   "action",
+   "a hot-air balloon rises far away"
+  ],
+  [
+   337.19,
+   "action",
+   "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
+  ],
+  [
+   337.19,
+   "action",
+   "the sun's rays turn"
+  ],
+  [
+   337.19,
+   "new place",
+   "the zoo gate (main intro) INTRO 1: the sky"
+  ],
+  [
+   337.24,
+   "action",
+   "Milo flies across the sky, under the sun"
+  ],
+  [
+   337.99,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   340.31,
+   "new shot",
+   "the zoo gate (main intro) INTRO 2: the gate"
+  ],
+  [
+   340.5,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   340.78,
+   "action",
+   "a flower pops up"
+  ],
+  [
+   340.82,
+   "action",
+   "mango pops up"
+  ],
+  [
+   341.13,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   341.25,
+   "action",
+   "Milo swoops in and lands on the arch"
+  ],
+  [
+   341.44,
+   "action",
+   "tula pops up"
+  ],
+  [
+   341.75,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   341.87,
+   "action",
+   "sandy nods"
+  ],
+  [
+   341.87,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   342.07,
+   "action",
+   "clover pops up"
+  ],
+  [
+   342.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   342.19,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   342.38,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   342.66,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   343.12,
+   "action",
+   "a star grows out of the gate and fills the picture"
+  ],
+  [
+   343.44,
+   "action",
+   "out of the flash"
+  ],
+  [
+   343.44,
+   "action",
+   "the sunburst turns"
+  ],
+  [
+   343.44,
+   "new place",
+   "the logo (main intro) INTRO 3: the logo"
+  ],
+  [
+   343.63,
+   "action",
+   "the badge pops"
+  ],
+  [
+   344.2,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.35,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.51,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.66,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.82,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   344.98,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   345.13,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   345.29,
+   "action",
+   "a letter drops in"
+  ],
+  [
+   345.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   345.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   345.33,
+   "action",
+   "ZOO slams in"
+  ],
+  [
+   345.63,
+   "action",
+   "a firework"
+  ],
+  [
+   345.63,
+   "action",
+   "the rainbow draws on"
+  ],
+  [
+   345.79,
+   "action",
+   "a firework"
+  ],
+  [
+   345.94,
+   "action",
+   "confetti"
+  ],
+  [
+   345.94,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   346.04,
+   "action",
+   "the O's bounce"
+  ],
+  [
+   346.25,
+   "action",
+   "Milo flies onto the badge"
+  ],
+  [
+   346.37,
+   "action",
+   "Milo does a roll"
+  ],
+  [
+   346.56,
+   "action",
+   "a firework"
+  ],
+  [
+   346.76,
+   "action",
+   "tumble pops up"
+  ],
+  [
+   347.07,
+   "action",
+   "sandy pops up"
+  ],
+  [
+   347.19,
+   "action",
+   "a firework"
+  ],
+  [
+   347.38,
+   "action",
+   "mango pops up"
+  ],
+  [
+   347.38,
+   "action",
+   "poppy pops up"
+  ],
+  [
+   347.69,
+   "action",
+   "clover pops up"
+  ],
+  [
+   347.69,
+   "action",
+   "tula pops up"
+  ],
+  [
+   347.81,
+   "action",
+   "a firework"
+  ],
+  [
+   348.01,
+   "action",
+   "hazel pops up"
+  ],
+  [
+   348.13,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   348.28,
+   "action",
+   "a firework"
+  ],
+  [
+   348.75,
+   "action",
+   "a firework"
+  ],
+  [
+   348.75,
+   "new shot",
+   "the logo (main intro) INTRO 4: Milo says the name"
+  ],
+  [
+   348.87,
+   "action",
+   "T word lights up"
+  ],
+  [
+   348.89,
+   "action",
+   "a firework"
+  ],
+  [
+   349.05,
+   "action",
+   "A word lights up"
+  ],
+  [
+   349.77,
+   "action",
+   "Z word lights up"
+  ],
+  [
+   350.26,
+   "action",
+   "Milo flips"
+  ],
+  [
+   350.26,
+   "action",
+   "a firework"
+  ],
+  [
+   350.26,
+   "action",
+   "confetti"
+  ],
+  [
+   350.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   350.26,
+   "action",
+   "mango moves an arm"
+  ],
+  [
+   350.26,
+   "action",
+   "tumble's trunk moves"
+  ],
+  [
+   350.38,
+   "action",
+   "a firework"
+  ],
+  [
+   350.56,
+   "action",
+   "a firework"
+  ],
+  [
+   350.56,
+   "action",
+   "the letters do a wave"
+  ],
+  [
+   350.68,
+   "action",
+   "a firework"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "shore",
+   "say": "How can Milo see under the deep blue sea? Look! His friend Tula lives down there!",
+   "t0": 0.0,
+   "t1": 6.5625,
+   "v0": 0.42,
+   "dur": 5.701833333333333,
+   "words": [
+    [
+     "How",
+     0.0,
+     0.23
+    ],
+    [
+     "can",
+     0.23,
+     0.42
+    ],
+    [
+     "Milo",
+     0.42,
+     0.91
+    ],
+    [
+     "see",
+     0.91,
+     1.24
+    ],
+    [
+     "under",
+     1.24,
+     1.39
+    ],
+    [
+     "the",
+     1.39,
+     1.5
+    ],
+    [
+     "deep",
+     1.5,
+     1.89
+    ],
+    [
+     "blue",
+     1.89,
+     2.12
+    ],
+    [
+     "sea?",
+     2.12,
+     2.61
+    ],
+    [
+     "Look!",
+     3.01,
+     3.46
+    ],
+    [
+     "His",
+     3.82,
+     4.04
+    ],
+    [
+     "friend",
+     4.04,
+     4.27
+    ],
+    [
+     "Tula",
+     4.27,
+     4.69
+    ],
+    [
+     "lives",
+     4.69,
+     5.05
+    ],
+    [
+     "down",
+     5.05,
+     5.33
+    ],
+    [
+     "there!",
+     5.33,
+     5.7
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "hook: Milo looks down at Tula",
+   "who": "milo",
+   "beat": "hook",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 6.5625,
+   "t1": 9.6875,
+   "v0": 6.875,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 9.6875,
+   "t1": 12.8125,
+   "v0": 10.0,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 12.8125,
+   "t1": 18.125,
+   "v0": 13.125,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 18.125,
+   "t1": 20.9375,
+   "v0": 18.245,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Hello, I'm Milo! Today I am at the sea, on my little rock.",
+   "t0": 20.9375,
+   "t1": 25.9375,
+   "v0": 21.152166666666666,
+   "dur": 4.4605,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.58
+    ],
+    [
+     "I'm",
+     0.58,
+     0.8
+    ],
+    [
+     "Milo!",
+     0.8,
+     1.42
+    ],
+    [
+     "Today",
+     1.86,
+     2.29
+    ],
+    [
+     "I",
+     2.29,
+     2.45
+    ],
+    [
+     "am",
+     2.45,
+     2.69
+    ],
+    [
+     "at",
+     2.69,
+     2.76
+    ],
+    [
+     "the",
+     2.76,
+     2.83
+    ],
+    [
+     "sea,",
+     2.83,
+     3.45
+    ],
+    [
+     "on",
+     3.45,
+     3.56
+    ],
+    [
+     "my",
+     3.56,
+     3.7
+    ],
+    [
+     "little",
+     3.7,
+     3.97
+    ],
+    [
+     "rock.",
+     3.97,
+     4.46
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo on his little rock",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Hello, Milo! I am going home now. My home is deep under the water.",
+   "t0": 25.9375,
+   "t1": 31.25,
+   "v0": 26.132666666666665,
+   "dur": 4.838166666666667,
+   "words": [
+    [
+     "Hello,",
+     0.06,
+     0.39
+    ],
+    [
+     "Milo!",
+     0.39,
+     1.08
+    ],
+    [
+     "I",
+     1.08,
+     1.2
+    ],
+    [
+     "am",
+     1.2,
+     1.38
+    ],
+    [
+     "going",
+     1.38,
+     1.67
+    ],
+    [
+     "home",
+     1.67,
+     1.97
+    ],
+    [
+     "now.",
+     1.97,
+     2.41
+    ],
+    [
+     "My",
+     2.9,
+     3.07
+    ],
+    [
+     "home",
+     3.07,
+     3.43
+    ],
+    [
+     "is",
+     3.43,
+     3.55
+    ],
+    [
+     "deep",
+     3.55,
+     3.92
+    ],
+    [
+     "under",
+     3.92,
+     4.07
+    ],
+    [
+     "the",
+     4.07,
+     4.16
+    ],
+    [
+     "water.",
+     4.16,
+     4.838
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: my home is under the water",
+   "who": "tula",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Under the water? Oh, I want to see your home, Tula!",
+   "t0": 31.25,
+   "t1": 35.3125,
+   "v0": 31.49083333333333,
+   "dur": 3.3677083333333333,
+   "words": [
+    [
+     "Under",
+     0.01,
+     0.26
+    ],
+    [
+     "the",
+     0.26,
+     0.37
+    ],
+    [
+     "water?",
+     0.37,
+     0.92
+    ],
+    [
+     "Oh,",
+     1.31,
+     1.73
+    ],
+    [
+     "I",
+     1.73,
+     1.85
+    ],
+    [
+     "want",
+     1.85,
+     2.07
+    ],
+    [
+     "to",
+     2.07,
+     2.13
+    ],
+    [
+     "see",
+     2.13,
+     2.29
+    ],
+    [
+     "your",
+     2.29,
+     2.4
+    ],
+    [
+     "home,",
+     2.4,
+     2.77
+    ],
+    [
+     "Tula!",
+     2.77,
+     3.368
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I want to see your home",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Then come along, Milo! Dive down with me!",
+   "t0": 35.3125,
+   "t1": 38.4375,
+   "v0": 35.37854166666666,
+   "dur": 2.783625,
+   "words": [
+    [
+     "Then",
+     0.06,
+     0.29
+    ],
+    [
+     "come",
+     0.29,
+     0.52
+    ],
+    [
+     "along,",
+     0.52,
+     0.91
+    ],
+    [
+     "Milo!",
+     0.91,
+     1.43
+    ],
+    [
+     "Dive",
+     1.59,
+     1.92
+    ],
+    [
+     "down",
+     1.92,
+     2.23
+    ],
+    [
+     "with",
+     2.23,
+     2.38
+    ],
+    [
+     "me!",
+     2.38,
+     2.78
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: dive down with me",
+   "who": "tula",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Oh no. I am a little bird. I need air to breathe! I cannot go under the water.",
+   "t0": 38.4375,
+   "t1": 44.6875,
+   "v0": 38.68216666666666,
+   "dur": 5.597875,
+   "words": [
+    [
+     "Oh",
+     0.13,
+     0.3
+    ],
+    [
+     "no.",
+     0.3,
+     0.78
+    ],
+    [
+     "I",
+     0.92,
+     1.02
+    ],
+    [
+     "am",
+     1.02,
+     1.21
+    ],
+    [
+     "a",
+     1.21,
+     1.25
+    ],
+    [
+     "little",
+     1.25,
+     1.48
+    ],
+    [
+     "bird.",
+     1.48,
+     1.97
+    ],
+    [
+     "I",
+     2.26,
+     2.34
+    ],
+    [
+     "need",
+     2.34,
+     2.64
+    ],
+    [
+     "air",
+     2.64,
+     2.92
+    ],
+    [
+     "to",
+     2.92,
+     3.07
+    ],
+    [
+     "breathe!",
+     3.07,
+     3.73
+    ],
+    [
+     "I",
+     4.14,
+     4.22
+    ],
+    [
+     "cannot",
+     4.22,
+     4.64
+    ],
+    [
+     "go",
+     4.64,
+     4.81
+    ],
+    [
+     "under",
+     4.81,
+     4.97
+    ],
+    [
+     "the",
+     4.97,
+     5.06
+    ],
+    [
+     "water.",
+     5.06,
+     5.598
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I need air",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Can Milo go under the water? Yes, or no?",
+   "t0": 44.6875,
+   "t1": 51.25,
+   "v0": 44.80004166666666,
+   "dur": 3.0584583333333333,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.2
+    ],
+    [
+     "Milo",
+     0.2,
+     0.65
+    ],
+    [
+     "go",
+     0.65,
+     0.81
+    ],
+    [
+     "under",
+     0.81,
+     0.96
+    ],
+    [
+     "the",
+     0.96,
+     1.05
+    ],
+    [
+     "water?",
+     1.05,
+     1.58
+    ],
+    [
+     "Yes,",
+     1.95,
+     2.48
+    ],
+    [
+     "or",
+     2.48,
+     2.65
+    ],
+    [
+     "no?",
+     2.65,
+     3.058
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: under the water yes or no",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "So Tula dives down, down, into the deep blue sea. And Milo stays on his rock.",
+   "t0": 51.25,
+   "t1": 58.125,
+   "v0": 51.57849999999999,
+   "dur": 6.3429166666666665,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.19
+    ],
+    [
+     "Tula",
+     0.19,
+     0.66
+    ],
+    [
+     "dives",
+     0.66,
+     1.18
+    ],
+    [
+     "down,",
+     1.18,
+     1.74
+    ],
+    [
+     "down,",
+     1.86,
+     2.37
+    ],
+    [
+     "into",
+     2.37,
+     2.65
+    ],
+    [
+     "the",
+     2.65,
+     2.74
+    ],
+    [
+     "deep",
+     2.74,
+     3.17
+    ],
+    [
+     "blue",
+     3.17,
+     3.47
+    ],
+    [
+     "sea.",
+     3.47,
+     3.96
+    ],
+    [
+     "And",
+     4.48,
+     4.61
+    ],
+    [
+     "Milo",
+     4.61,
+     5.06
+    ],
+    [
+     "stays",
+     5.06,
+     5.52
+    ],
+    [
+     "on",
+     5.52,
+     5.62
+    ],
+    [
+     "his",
+     5.62,
+     5.78
+    ],
+    [
+     "rock.",
+     5.78,
+     6.34
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula dives down",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "I will find a way to see under the sea. I will try!",
+   "t0": 58.125,
+   "t1": 62.1875,
+   "v0": 58.441416666666655,
+   "dur": 3.4202916666666665,
+   "words": [
+    [
+     "I",
+     0.0,
+     0.17
+    ],
+    [
+     "will",
+     0.17,
+     0.31
+    ],
+    [
+     "find",
+     0.31,
+     0.65
+    ],
+    [
+     "a",
+     0.65,
+     0.68
+    ],
+    [
+     "way",
+     0.68,
+     0.9
+    ],
+    [
+     "to",
+     0.9,
+     1.01
+    ],
+    [
+     "see",
+     1.01,
+     1.28
+    ],
+    [
+     "under",
+     1.28,
+     1.43
+    ],
+    [
+     "the",
+     1.43,
+     1.52
+    ],
+    [
+     "sea.",
+     1.52,
+     2.03
+    ],
+    [
+     "I",
+     2.46,
+     2.62
+    ],
+    [
+     "will",
+     2.62,
+     2.8
+    ],
+    [
+     "try!",
+     2.8,
+     3.42
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I will try",
+   "who": "milo",
+   "beat": "goal",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "First, Milo looks down from his rock. He looks, and looks, and looks.",
+   "t0": 62.1875,
+   "t1": 67.1875,
+   "v0": 62.381708333333314,
+   "dur": 4.429333333333333,
+   "words": [
+    [
+     "First,",
+     0.03,
+     0.6
+    ],
+    [
+     "Milo",
+     0.6,
+     1.07
+    ],
+    [
+     "looks",
+     1.07,
+     1.37
+    ],
+    [
+     "down",
+     1.37,
+     1.65
+    ],
+    [
+     "from",
+     1.65,
+     1.79
+    ],
+    [
+     "his",
+     1.79,
+     1.94
+    ],
+    [
+     "rock.",
+     1.94,
+     2.47
+    ],
+    [
+     "He",
+     2.83,
+     2.97
+    ],
+    [
+     "looks,",
+     2.97,
+     3.33
+    ],
+    [
+     "and",
+     3.33,
+     3.49
+    ],
+    [
+     "looks,",
+     3.49,
+     3.83
+    ],
+    [
+     "and",
+     3.83,
+     3.93
+    ],
+    [
+     "looks.",
+     3.93,
+     4.429
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo looks down from his rock",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "But the water is too deep. All he can see is the sun, twinkling on the waves.",
+   "t0": 67.1875,
+   "t1": 72.8125,
+   "v0": 67.33104166666666,
+   "dur": 5.2405,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.14
+    ],
+    [
+     "the",
+     0.14,
+     0.21
+    ],
+    [
+     "water",
+     0.21,
+     0.67
+    ],
+    [
+     "is",
+     0.67,
+     0.86
+    ],
+    [
+     "too",
+     0.86,
+     1.11
+    ],
+    [
+     "deep.",
+     1.11,
+     1.55
+    ],
+    [
+     "All",
+     2.04,
+     2.2
+    ],
+    [
+     "he",
+     2.2,
+     2.34
+    ],
+    [
+     "can",
+     2.34,
+     2.53
+    ],
+    [
+     "see",
+     2.53,
+     2.85
+    ],
+    [
+     "is",
+     2.85,
+     3.0
+    ],
+    [
+     "the",
+     3.0,
+     3.08
+    ],
+    [
+     "sun,",
+     3.08,
+     3.63
+    ],
+    [
+     "twinkling",
+     3.75,
+     4.34
+    ],
+    [
+     "on",
+     4.34,
+     4.48
+    ],
+    [
+     "the",
+     4.48,
+     4.56
+    ],
+    [
+     "waves.",
+     4.56,
+     5.24
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "only twinkles on the waves",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "What can Milo see from his rock? Tula's home, or twinkles?",
+   "t0": 72.8125,
+   "t1": 80.9375,
+   "v0": 73.09154166666667,
+   "dur": 4.19425,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.21
+    ],
+    [
+     "can",
+     0.21,
+     0.37
+    ],
+    [
+     "Milo",
+     0.37,
+     0.81
+    ],
+    [
+     "see",
+     0.81,
+     1.07
+    ],
+    [
+     "from",
+     1.07,
+     1.23
+    ],
+    [
+     "his",
+     1.23,
+     1.39
+    ],
+    [
+     "rock?",
+     1.39,
+     1.9
+    ],
+    [
+     "Tula's",
+     2.2,
+     2.73
+    ],
+    [
+     "home,",
+     2.73,
+     3.27
+    ],
+    [
+     "or",
+     3.27,
+     3.44
+    ],
+    [
+     "twinkles?",
+     3.44,
+     4.19
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: home or twinkles",
+   "who": "milo",
+   "beat": "obstacle1",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Next, Milo finds a big green leaf. It floats, like a little boat!",
+   "t0": 80.9375,
+   "t1": 86.25,
+   "v0": 81.00579166666668,
+   "dur": 4.985833333333333,
+   "words": [
+    [
+     "Next,",
+     0.01,
+     0.6
+    ],
+    [
+     "Milo",
+     0.6,
+     1.11
+    ],
+    [
+     "finds",
+     1.11,
+     1.5
+    ],
+    [
+     "a",
+     1.5,
+     1.54
+    ],
+    [
+     "big",
+     1.54,
+     1.93
+    ],
+    [
+     "green",
+     1.93,
+     2.28
+    ],
+    [
+     "leaf.",
+     2.28,
+     2.72
+    ],
+    [
+     "It",
+     3.19,
+     3.31
+    ],
+    [
+     "floats,",
+     3.31,
+     3.96
+    ],
+    [
+     "like",
+     3.96,
+     4.16
+    ],
+    [
+     "a",
+     4.16,
+     4.21
+    ],
+    [
+     "little",
+     4.21,
+     4.47
+    ],
+    [
+     "boat!",
+     4.47,
+     4.986
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "a big green leaf floats in",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "A leaf boat! Now I can sail out, and peek down.",
+   "t0": 86.25,
+   "t1": 90.0,
+   "v0": 86.51162500000002,
+   "dur": 3.223875,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.12
+    ],
+    [
+     "leaf",
+     0.12,
+     0.52
+    ],
+    [
+     "boat!",
+     0.52,
+     0.98
+    ],
+    [
+     "Now",
+     1.16,
+     1.41
+    ],
+    [
+     "I",
+     1.41,
+     1.49
+    ],
+    [
+     "can",
+     1.49,
+     1.67
+    ],
+    [
+     "sail",
+     1.67,
+     2.03
+    ],
+    [
+     "out,",
+     2.03,
+     2.29
+    ],
+    [
+     "and",
+     2.29,
+     2.44
+    ],
+    [
+     "peek",
+     2.44,
+     2.75
+    ],
+    [
+     "down.",
+     2.75,
+     3.22
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo on the leaf boat",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "But the leaf goes round, and round, and round. Milo gets so dizzy!",
+   "t0": 90.0,
+   "t1": 95.625,
+   "v0": 90.25550000000004,
+   "dur": 4.979333333333333,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.1
+    ],
+    [
+     "the",
+     0.1,
+     0.17
+    ],
+    [
+     "leaf",
+     0.17,
+     0.47
+    ],
+    [
+     "goes",
+     0.47,
+     0.81
+    ],
+    [
+     "round,",
+     0.81,
+     1.39
+    ],
+    [
+     "and",
+     1.39,
+     1.63
+    ],
+    [
+     "round,",
+     1.63,
+     2.16
+    ],
+    [
+     "and",
+     2.16,
+     2.36
+    ],
+    [
+     "round.",
+     2.36,
+     2.93
+    ],
+    [
+     "Milo",
+     3.49,
+     3.98
+    ],
+    [
+     "gets",
+     3.98,
+     4.27
+    ],
+    [
+     "so",
+     4.27,
+     4.42
+    ],
+    [
+     "dizzy!",
+     4.42,
+     4.979
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the leaf goes round and round",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Flap, flap! Milo flies back to his rock. The leaf boat did not help.",
+   "t0": 95.625,
+   "t1": 101.25,
+   "v0": 95.75483333333338,
+   "dur": 5.262625,
+   "words": [
+    [
+     "Flap,",
+     0.01,
+     0.47
+    ],
+    [
+     "flap!",
+     0.47,
+     1.08
+    ],
+    [
+     "Milo",
+     1.08,
+     1.6
+    ],
+    [
+     "flies",
+     1.6,
+     2.14
+    ],
+    [
+     "back",
+     2.14,
+     2.43
+    ],
+    [
+     "to",
+     2.43,
+     2.53
+    ],
+    [
+     "his",
+     2.53,
+     2.69
+    ],
+    [
+     "rock.",
+     2.69,
+     3.22
+    ],
+    [
+     "The",
+     3.66,
+     3.77
+    ],
+    [
+     "leaf",
+     3.77,
+     4.11
+    ],
+    [
+     "boat",
+     4.11,
+     4.38
+    ],
+    [
+     "did",
+     4.38,
+     4.57
+    ],
+    [
+     "not",
+     4.57,
+     4.85
+    ],
+    [
+     "help.",
+     4.85,
+     5.26
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo flies back to his rock",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Did the leaf boat help Milo? Yes, or no?",
+   "t0": 101.25,
+   "t1": 108.125,
+   "v0": 101.53745833333339,
+   "dur": 3.0725416666666665,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.19
+    ],
+    [
+     "the",
+     0.19,
+     0.27
+    ],
+    [
+     "leaf",
+     0.27,
+     0.57
+    ],
+    [
+     "boat",
+     0.57,
+     0.86
+    ],
+    [
+     "help",
+     0.86,
+     1.12
+    ],
+    [
+     "Milo?",
+     1.12,
+     1.63
+    ],
+    [
+     "Yes,",
+     2.02,
+     2.49
+    ],
+    [
+     "or",
+     2.49,
+     2.65
+    ],
+    [
+     "no?",
+     2.65,
+     3.07
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did the leaf boat help",
+   "who": "milo",
+   "beat": "obstacle2",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Then Milo calls, as loud as he can. Tula! Tula! Can you hear me?",
+   "t0": 108.125,
+   "t1": 113.75,
+   "v0": 108.33000000000007,
+   "dur": 5.028125,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.18
+    ],
+    [
+     "Milo",
+     0.18,
+     0.61
+    ],
+    [
+     "calls,",
+     0.61,
+     1.2
+    ],
+    [
+     "as",
+     1.2,
+     1.4
+    ],
+    [
+     "loud",
+     1.4,
+     1.72
+    ],
+    [
+     "as",
+     1.72,
+     1.83
+    ],
+    [
+     "he",
+     1.83,
+     1.92
+    ],
+    [
+     "can.",
+     1.92,
+     2.45
+    ],
+    [
+     "Tula!",
+     3.01,
+     3.51
+    ],
+    [
+     "Tula!",
+     3.64,
+     4.2
+    ],
+    [
+     "Can",
+     4.2,
+     4.39
+    ],
+    [
+     "you",
+     4.39,
+     4.49
+    ],
+    [
+     "hear",
+     4.49,
+     4.77
+    ],
+    [
+     "me?",
+     4.77,
+     5.028
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo calls Tula",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "deep",
+   "say": "But far below, in the deep blue water, Tula swims along. She does not hear Milo at all.",
+   "t0": 113.75,
+   "t1": 120.625,
+   "v0": 113.87812500000008,
+   "dur": 6.465458333333333,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.11
+    ],
+    [
+     "far",
+     0.11,
+     0.5
+    ],
+    [
+     "below,",
+     0.5,
+     1.11
+    ],
+    [
+     "in",
+     1.11,
+     1.22
+    ],
+    [
+     "the",
+     1.22,
+     1.3
+    ],
+    [
+     "deep",
+     1.3,
+     1.68
+    ],
+    [
+     "blue",
+     1.68,
+     1.94
+    ],
+    [
+     "water,",
+     1.94,
+     2.43
+    ],
+    [
+     "Tula",
+     2.66,
+     3.13
+    ],
+    [
+     "swims",
+     3.13,
+     3.63
+    ],
+    [
+     "along.",
+     3.63,
+     4.15
+    ],
+    [
+     "She",
+     4.68,
+     4.82
+    ],
+    [
+     "does",
+     4.82,
+     4.99
+    ],
+    [
+     "not",
+     4.99,
+     5.26
+    ],
+    [
+     "hear",
+     5.26,
+     5.46
+    ],
+    [
+     "Milo",
+     5.46,
+     5.97
+    ],
+    [
+     "at",
+     5.97,
+     6.13
+    ],
+    [
+     "all.",
+     6.13,
+     6.46
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula deep down does not hear",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "deep",
+   "say": "Where is Tula now? Up at the top, or deep down?",
+   "t0": 120.625,
+   "t1": 127.8125,
+   "v0": 120.86358333333342,
+   "dur": 3.4232916666666666,
+   "words": [
+    [
+     "Where",
+     0.01,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.42
+    ],
+    [
+     "Tula",
+     0.42,
+     0.82
+    ],
+    [
+     "now?",
+     0.82,
+     1.24
+    ],
+    [
+     "Up",
+     1.6,
+     1.72
+    ],
+    [
+     "at",
+     1.72,
+     1.81
+    ],
+    [
+     "the",
+     1.81,
+     1.89
+    ],
+    [
+     "top,",
+     1.89,
+     2.36
+    ],
+    [
+     "or",
+     2.36,
+     2.57
+    ],
+    [
+     "deep",
+     2.57,
+     2.88
+    ],
+    [
+     "down?",
+     2.88,
+     3.42
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: at the top or deep down",
+   "who": "milo",
+   "beat": "obstacle3",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Milo sits down on his rock. He tried, and tried, and he still cannot see Tula's home.",
+   "t0": 127.8125,
+   "t1": 134.6875,
+   "v0": 128.0068750000001,
+   "dur": 6.428583333333333,
+   "words": [
+    [
+     "Milo",
+     0.0,
+     0.56
+    ],
+    [
+     "sits",
+     0.56,
+     0.95
+    ],
+    [
+     "down",
+     0.95,
+     1.22
+    ],
+    [
+     "on",
+     1.22,
+     1.32
+    ],
+    [
+     "his",
+     1.32,
+     1.48
+    ],
+    [
+     "rock.",
+     1.48,
+     2.0
+    ],
+    [
+     "He",
+     2.44,
+     2.57
+    ],
+    [
+     "tried,",
+     2.57,
+     3.14
+    ],
+    [
+     "and",
+     3.14,
+     3.32
+    ],
+    [
+     "tried,",
+     3.32,
+     3.94
+    ],
+    [
+     "and",
+     4.16,
+     4.35
+    ],
+    [
+     "he",
+     4.35,
+     4.45
+    ],
+    [
+     "still",
+     4.45,
+     4.78
+    ],
+    [
+     "cannot",
+     4.78,
+     5.23
+    ],
+    [
+     "see",
+     5.23,
+     5.46
+    ],
+    [
+     "Tula's",
+     5.46,
+     6.0
+    ],
+    [
+     "home.",
+     6.0,
+     6.429
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo sits on his rock",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Maybe a little bird can never see under the sea.",
+   "t0": 134.6875,
+   "t1": 138.4375,
+   "v0": 134.95545833333344,
+   "dur": 3.038708333333333,
+   "words": [
+    [
+     "Maybe",
+     0.0,
+     0.4
+    ],
+    [
+     "a",
+     0.4,
+     0.44
+    ],
+    [
+     "little",
+     0.44,
+     0.7
+    ],
+    [
+     "bird",
+     0.7,
+     1.22
+    ],
+    [
+     "can",
+     1.4,
+     1.63
+    ],
+    [
+     "never",
+     1.63,
+     1.92
+    ],
+    [
+     "see",
+     1.92,
+     2.21
+    ],
+    [
+     "under",
+     2.21,
+     2.41
+    ],
+    [
+     "the",
+     2.41,
+     2.51
+    ],
+    [
+     "sea.",
+     2.51,
+     3.039
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: maybe never",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "How does Milo feel now? Happy, or sad?",
+   "t0": 138.4375,
+   "t1": 145.0,
+   "v0": 138.5141666666668,
+   "dur": 3.073625,
+   "words": [
+    [
+     "How",
+     0.01,
+     0.18
+    ],
+    [
+     "does",
+     0.18,
+     0.36
+    ],
+    [
+     "Milo",
+     0.36,
+     0.8
+    ],
+    [
+     "feel",
+     0.8,
+     1.11
+    ],
+    [
+     "now?",
+     1.11,
+     1.54
+    ],
+    [
+     "Happy,",
+     1.87,
+     2.34
+    ],
+    [
+     "or",
+     2.34,
+     2.51
+    ],
+    [
+     "sad?",
+     2.51,
+     3.07
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: happy or sad",
+   "who": "milo",
+   "beat": "low",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Then, look! Little bubbles pop up, right beside the rock.",
+   "t0": 145.0,
+   "t1": 149.375,
+   "v0": 145.3077916666668,
+   "dur": 3.7060416666666667,
+   "words": [
+    [
+     "Then,",
+     0.0,
+     0.4
+    ],
+    [
+     "look!",
+     0.4,
+     0.76
+    ],
+    [
+     "Little",
+     0.94,
+     1.17
+    ],
+    [
+     "bubbles",
+     1.17,
+     1.59
+    ],
+    [
+     "pop",
+     1.59,
+     1.97
+    ],
+    [
+     "up,",
+     1.97,
+     2.44
+    ],
+    [
+     "right",
+     2.44,
+     2.75
+    ],
+    [
+     "beside",
+     2.75,
+     3.11
+    ],
+    [
+     "the",
+     3.11,
+     3.2
+    ],
+    [
+     "rock.",
+     3.2,
+     3.706
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "bubbles beside the rock",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Let's count the bubbles! One, two, three!",
+   "t0": 149.375,
+   "t1": 153.4375,
+   "v0": 149.53383333333346,
+   "dur": 2.6843333333333335,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.33
+    ],
+    [
+     "count",
+     0.33,
+     0.62
+    ],
+    [
+     "the",
+     0.62,
+     0.69
+    ],
+    [
+     "bubbles!",
+     0.69,
+     1.35
+    ],
+    [
+     "One,",
+     1.61,
+     1.91
+    ],
+    [
+     "two,",
+     1.91,
+     2.13
+    ],
+    [
+     "three!",
+     2.13,
+     2.68
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "count the bubbles",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "And up comes Tula! She takes a big, big breath of air.",
+   "t0": 153.4375,
+   "t1": 157.8125,
+   "v0": 153.7381666666668,
+   "dur": 3.885875,
+   "words": [
+    [
+     "And",
+     0.0,
+     0.2
+    ],
+    [
+     "up",
+     0.2,
+     0.35
+    ],
+    [
+     "comes",
+     0.35,
+     0.71
+    ],
+    [
+     "Tula!",
+     0.71,
+     1.2
+    ],
+    [
+     "She",
+     1.6,
+     1.76
+    ],
+    [
+     "takes",
+     1.76,
+     2.05
+    ],
+    [
+     "a",
+     2.05,
+     2.1
+    ],
+    [
+     "big,",
+     2.1,
+     2.58
+    ],
+    [
+     "big",
+     2.58,
+     2.94
+    ],
+    [
+     "breath",
+     2.94,
+     3.32
+    ],
+    [
+     "of",
+     3.32,
+     3.41
+    ],
+    [
+     "air.",
+     3.41,
+     3.886
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula comes up for air",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Tula! You came back up! Why did you come up?",
+   "t0": 157.8125,
+   "t1": 161.25,
+   "v0": 158.14404166666682,
+   "dur": 2.9215833333333334,
+   "words": [
+    [
+     "Tula!",
+     0.0,
+     0.63
+    ],
+    [
+     "You",
+     0.63,
+     0.78
+    ],
+    [
+     "came",
+     0.78,
+     0.99
+    ],
+    [
+     "back",
+     0.99,
+     1.31
+    ],
+    [
+     "up!",
+     1.31,
+     1.64
+    ],
+    [
+     "Why",
+     1.95,
+     2.11
+    ],
+    [
+     "did",
+     2.11,
+     2.25
+    ],
+    [
+     "you",
+     2.25,
+     2.34
+    ],
+    [
+     "come",
+     2.34,
+     2.57
+    ],
+    [
+     "up?",
+     2.57,
+     2.92
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: why did you come up",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "I came up to breathe, Milo. I need air, just like you!",
+   "t0": 161.25,
+   "t1": 165.625,
+   "v0": 161.58562500000016,
+   "dur": 3.7159583333333335,
+   "words": [
+    [
+     "I",
+     0.09,
+     0.23
+    ],
+    [
+     "came",
+     0.23,
+     0.51
+    ],
+    [
+     "up",
+     0.51,
+     0.66
+    ],
+    [
+     "to",
+     0.66,
+     0.8
+    ],
+    [
+     "breathe,",
+     0.8,
+     1.21
+    ],
+    [
+     "Milo.",
+     1.21,
+     1.84
+    ],
+    [
+     "I",
+     2.12,
+     2.25
+    ],
+    [
+     "need",
+     2.25,
+     2.5
+    ],
+    [
+     "air,",
+     2.5,
+     2.73
+    ],
+    [
+     "just",
+     2.73,
+     3.02
+    ],
+    [
+     "like",
+     3.02,
+     3.31
+    ],
+    [
+     "you!",
+     3.31,
+     3.716
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: I need air too",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_sea",
+   "say": "Sea turtles breathe air. They must come up to the surface to breathe.",
+   "t0": 165.625,
+   "t1": 170.625,
+   "v0": 165.8215833333335,
+   "dur": 4.375583333333333,
+   "words": [
+    [
+     "Sea",
+     0.02,
+     0.33
+    ],
+    [
+     "turtles",
+     0.33,
+     0.89
+    ],
+    [
+     "breathe",
+     0.89,
+     1.26
+    ],
+    [
+     "air.",
+     1.26,
+     1.72
+    ],
+    [
+     "They",
+     2.06,
+     2.17
+    ],
+    [
+     "must",
+     2.17,
+     2.51
+    ],
+    [
+     "come",
+     2.51,
+     2.7
+    ],
+    [
+     "up",
+     2.7,
+     2.82
+    ],
+    [
+     "to",
+     2.82,
+     2.93
+    ],
+    [
+     "the",
+     2.93,
+     3.01
+    ],
+    [
+     "surface",
+     3.01,
+     3.62
+    ],
+    [
+     "to",
+     3.62,
+     3.75
+    ],
+    [
+     "breathe.",
+     3.75,
+     4.37
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: sea turtles breathe air",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_sea",
+   "say": "What does a sea turtle breathe? Air, or water?",
+   "t0": 170.625,
+   "t1": 177.1875,
+   "v0": 170.71716666666686,
+   "dur": 3.0355833333333333,
+   "words": [
+    [
+     "What",
+     0.0,
+     0.14
+    ],
+    [
+     "does",
+     0.14,
+     0.28
+    ],
+    [
+     "a",
+     0.28,
+     0.31
+    ],
+    [
+     "sea",
+     0.31,
+     0.59
+    ],
+    [
+     "turtle",
+     0.59,
+     1.0
+    ],
+    [
+     "breathe?",
+     1.0,
+     1.41
+    ],
+    [
+     "Air,",
+     1.83,
+     2.31
+    ],
+    [
+     "or",
+     2.31,
+     2.46
+    ],
+    [
+     "water?",
+     2.46,
+     3.03
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: air or water",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Can you take a big breath, like me? Breathe in, and blow it out!",
+   "t0": 177.1875,
+   "t1": 184.6875,
+   "v0": 177.4727500000002,
+   "dur": 3.972625,
+   "words": [
+    [
+     "Can",
+     0.03,
+     0.25
+    ],
+    [
+     "you",
+     0.25,
+     0.37
+    ],
+    [
+     "take",
+     0.37,
+     0.66
+    ],
+    [
+     "a",
+     0.66,
+     0.7
+    ],
+    [
+     "big",
+     0.7,
+     0.93
+    ],
+    [
+     "breath,",
+     0.93,
+     1.33
+    ],
+    [
+     "like",
+     1.33,
+     1.57
+    ],
+    [
+     "me?",
+     1.57,
+     1.88
+    ],
+    [
+     "Breathe",
+     2.21,
+     2.51
+    ],
+    [
+     "in,",
+     2.51,
+     2.84
+    ],
+    [
+     "and",
+     2.84,
+     2.97
+    ],
+    [
+     "blow",
+     2.97,
+     3.22
+    ],
+    [
+     "it",
+     3.22,
+     3.36
+    ],
+    [
+     "out!",
+     3.36,
+     3.97
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "copy me: a big breath",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "I have an idea! I cannot go down. But you come up!",
+   "t0": 184.6875,
+   "t1": 189.0625,
+   "v0": 184.9653750000002,
+   "dur": 3.685375,
+   "words": [
+    [
+     "I",
+     0.1,
+     0.2
+    ],
+    [
+     "have",
+     0.2,
+     0.43
+    ],
+    [
+     "an",
+     0.43,
+     0.53
+    ],
+    [
+     "idea!",
+     0.53,
+     1.16
+    ],
+    [
+     "I",
+     1.41,
+     1.51
+    ],
+    [
+     "cannot",
+     1.51,
+     1.91
+    ],
+    [
+     "go",
+     1.91,
+     2.07
+    ],
+    [
+     "down.",
+     2.07,
+     2.6
+    ],
+    [
+     "But",
+     2.84,
+     3.01
+    ],
+    [
+     "you",
+     3.01,
+     3.09
+    ],
+    [
+     "come",
+     3.09,
+     3.36
+    ],
+    [
+     "up!",
+     3.36,
+     3.68
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I have an idea",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Every time you come up for air, tell me one thing you saw!",
+   "t0": 189.0625,
+   "t1": 193.125,
+   "v0": 189.1707500000002,
+   "dur": 3.634125,
+   "words": [
+    [
+     "Every",
+     0.07,
+     0.43
+    ],
+    [
+     "time",
+     0.43,
+     0.81
+    ],
+    [
+     "you",
+     0.81,
+     0.91
+    ],
+    [
+     "come",
+     0.91,
+     1.12
+    ],
+    [
+     "up",
+     1.12,
+     1.24
+    ],
+    [
+     "for",
+     1.24,
+     1.46
+    ],
+    [
+     "air,",
+     1.46,
+     1.89
+    ],
+    [
+     "tell",
+     2.18,
+     2.36
+    ],
+    [
+     "me",
+     2.36,
+     2.48
+    ],
+    [
+     "one",
+     2.48,
+     2.76
+    ],
+    [
+     "thing",
+     2.76,
+     3.02
+    ],
+    [
+     "you",
+     3.02,
+     3.14
+    ],
+    [
+     "saw!",
+     3.14,
+     3.63
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: tell me one thing you saw",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "So Tula dives down to the coral garden. It is pink, and orange, and purple!",
+   "t0": 193.125,
+   "t1": 199.375,
+   "v0": 193.32487500000022,
+   "dur": 5.85925,
+   "words": [
+    [
+     "So",
+     0.01,
+     0.18
+    ],
+    [
+     "Tula",
+     0.18,
+     0.65
+    ],
+    [
+     "dives",
+     0.65,
+     1.17
+    ],
+    [
+     "down",
+     1.17,
+     1.45
+    ],
+    [
+     "to",
+     1.45,
+     1.53
+    ],
+    [
+     "the",
+     1.53,
+     1.61
+    ],
+    [
+     "coral",
+     1.61,
+     2.06
+    ],
+    [
+     "garden.",
+     2.06,
+     2.62
+    ],
+    [
+     "It",
+     3.14,
+     3.27
+    ],
+    [
+     "is",
+     3.27,
+     3.49
+    ],
+    [
+     "pink,",
+     3.49,
+     4.26
+    ],
+    [
+     "and",
+     4.26,
+     4.48
+    ],
+    [
+     "orange,",
+     4.48,
+     5.12
+    ],
+    [
+     "and",
+     5.12,
+     5.27
+    ],
+    [
+     "purple!",
+     5.27,
+     5.859
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the coral garden",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Milo! I saw a coral garden. Pink, and orange, and purple!",
+   "t0": 199.375,
+   "t1": 204.375,
+   "v0": 199.70412500000023,
+   "dur": 4.491,
+   "words": [
+    [
+     "Milo!",
+     0.09,
+     0.65
+    ],
+    [
+     "I",
+     0.65,
+     0.77
+    ],
+    [
+     "saw",
+     0.77,
+     1.01
+    ],
+    [
+     "a",
+     1.01,
+     1.13
+    ],
+    [
+     "coral",
+     1.13,
+     1.61
+    ],
+    [
+     "garden.",
+     1.61,
+     2.25
+    ],
+    [
+     "Pink,",
+     2.59,
+     3.01
+    ],
+    [
+     "and",
+     3.01,
+     3.17
+    ],
+    [
+     "orange,",
+     3.17,
+     3.68
+    ],
+    [
+     "and",
+     3.68,
+     3.82
+    ],
+    [
+     "purple!",
+     3.82,
+     4.49
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula tells: a coral garden",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Wow! I can see it in my head!",
+   "t0": 204.375,
+   "t1": 206.875,
+   "v0": 204.71512500000026,
+   "dur": 1.974375,
+   "words": [
+    [
+     "Wow!",
+     0.0,
+     0.54
+    ],
+    [
+     "I",
+     0.68,
+     0.76
+    ],
+    [
+     "can",
+     0.76,
+     0.95
+    ],
+    [
+     "see",
+     0.95,
+     1.19
+    ],
+    [
+     "it",
+     1.19,
+     1.26
+    ],
+    [
+     "in",
+     1.26,
+     1.33
+    ],
+    [
+     "my",
+     1.33,
+     1.51
+    ],
+    [
+     "head!",
+     1.51,
+     1.97
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo sees the coral in his head",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "paper_sea",
+   "say": "Sea turtles cannot breathe under the water. But they can hold their breath for a long time.",
+   "t0": 206.875,
+   "t1": 213.4375,
+   "v0": 207.20950000000028,
+   "dur": 5.97075,
+   "words": [
+    [
+     "Sea",
+     0.01,
+     0.33
+    ],
+    [
+     "turtles",
+     0.33,
+     0.97
+    ],
+    [
+     "cannot",
+     0.97,
+     1.5
+    ],
+    [
+     "breathe",
+     1.5,
+     1.95
+    ],
+    [
+     "under",
+     1.95,
+     2.15
+    ],
+    [
+     "the",
+     2.15,
+     2.26
+    ],
+    [
+     "water.",
+     2.26,
+     2.84
+    ],
+    [
+     "But",
+     3.31,
+     3.45
+    ],
+    [
+     "they",
+     3.45,
+     3.59
+    ],
+    [
+     "can",
+     3.59,
+     3.78
+    ],
+    [
+     "hold",
+     3.78,
+     4.13
+    ],
+    [
+     "their",
+     4.13,
+     4.28
+    ],
+    [
+     "breath",
+     4.28,
+     4.72
+    ],
+    [
+     "for",
+     4.72,
+     4.94
+    ],
+    [
+     "a",
+     4.94,
+     4.99
+    ],
+    [
+     "long",
+     4.99,
+     5.41
+    ],
+    [
+     "time.",
+     5.41,
+     5.97
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: they hold their breath a long time",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "paper_sea",
+   "say": "Can a sea turtle hold her breath for a long time? Yes, or no?",
+   "t0": 213.4375,
+   "t1": 221.875,
+   "v0": 213.7002500000003,
+   "dur": 4.644625,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.15
+    ],
+    [
+     "a",
+     0.15,
+     0.19
+    ],
+    [
+     "sea",
+     0.19,
+     0.52
+    ],
+    [
+     "turtle",
+     0.52,
+     0.99
+    ],
+    [
+     "hold",
+     0.99,
+     1.28
+    ],
+    [
+     "her",
+     1.28,
+     1.4
+    ],
+    [
+     "breath",
+     1.4,
+     1.78
+    ],
+    [
+     "for",
+     1.78,
+     1.95
+    ],
+    [
+     "a",
+     1.95,
+     2.01
+    ],
+    [
+     "long",
+     2.01,
+     2.38
+    ],
+    [
+     "time?",
+     2.38,
+     2.88
+    ],
+    [
+     "Yes,",
+     3.4,
+     4.04
+    ],
+    [
+     "or",
+     4.04,
+     4.23
+    ],
+    [
+     "no?",
+     4.23,
+     4.64
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: hold her breath yes or no",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "meadow",
+   "say": "Next, Tula dives down to the seagrass meadow. The tall green grass waves hello!",
+   "t0": 221.875,
+   "t1": 228.4375,
+   "v0": 222.06487500000028,
+   "dur": 6.084,
+   "words": [
+    [
+     "Next,",
+     0.0,
+     0.68
+    ],
+    [
+     "Tula",
+     0.68,
+     1.13
+    ],
+    [
+     "dives",
+     1.13,
+     1.65
+    ],
+    [
+     "down",
+     1.65,
+     1.92
+    ],
+    [
+     "to",
+     1.92,
+     2.0
+    ],
+    [
+     "the",
+     2.0,
+     2.08
+    ],
+    [
+     "seagrass",
+     2.08,
+     2.69
+    ],
+    [
+     "meadow.",
+     2.69,
+     3.17
+    ],
+    [
+     "The",
+     3.72,
+     3.8
+    ],
+    [
+     "tall",
+     3.8,
+     4.23
+    ],
+    [
+     "green",
+     4.23,
+     4.66
+    ],
+    [
+     "grass",
+     4.66,
+     5.15
+    ],
+    [
+     "waves",
+     5.15,
+     5.54
+    ],
+    [
+     "hello!",
+     5.54,
+     6.08
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the seagrass meadow",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Milo! I saw a seagrass meadow. It waves like a big green field!",
+   "t0": 228.4375,
+   "t1": 233.75,
+   "v0": 228.6688750000003,
+   "dur": 4.887708333333333,
+   "words": [
+    [
+     "Milo!",
+     0.01,
+     0.67
+    ],
+    [
+     "I",
+     0.67,
+     0.82
+    ],
+    [
+     "saw",
+     0.82,
+     1.06
+    ],
+    [
+     "a",
+     1.06,
+     1.12
+    ],
+    [
+     "seagrass",
+     1.12,
+     1.82
+    ],
+    [
+     "meadow.",
+     1.82,
+     2.26
+    ],
+    [
+     "It",
+     2.7,
+     2.83
+    ],
+    [
+     "waves",
+     2.83,
+     3.36
+    ],
+    [
+     "like",
+     3.36,
+     3.56
+    ],
+    [
+     "a",
+     3.56,
+     3.6
+    ],
+    [
+     "big",
+     3.6,
+     3.9
+    ],
+    [
+     "green",
+     3.9,
+     4.24
+    ],
+    [
+     "field!",
+     4.24,
+     4.888
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula tells: a seagrass meadow",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Green and wavy! Tell me more, Tula!",
+   "t0": 233.75,
+   "t1": 236.875,
+   "v0": 234.07658333333364,
+   "dur": 2.474458333333333,
+   "words": [
+    [
+     "Green",
+     0.01,
+     0.43
+    ],
+    [
+     "and",
+     0.43,
+     0.54
+    ],
+    [
+     "wavy!",
+     0.54,
+     1.12
+    ],
+    [
+     "Tell",
+     1.38,
+     1.58
+    ],
+    [
+     "me",
+     1.58,
+     1.69
+    ],
+    [
+     "more,",
+     1.69,
+     1.86
+    ],
+    [
+     "Tula!",
+     1.86,
+     2.47
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo sees the seagrass in his head",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Then Tula dives down to the big rocks. Here is her cozy bed!",
+   "t0": 236.875,
+   "t1": 241.875,
+   "v0": 237.07104166666699,
+   "dur": 4.588583333333333,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.26
+    ],
+    [
+     "Tula",
+     0.26,
+     0.76
+    ],
+    [
+     "dives",
+     0.76,
+     1.31
+    ],
+    [
+     "down",
+     1.31,
+     1.59
+    ],
+    [
+     "to",
+     1.59,
+     1.67
+    ],
+    [
+     "the",
+     1.67,
+     1.76
+    ],
+    [
+     "big",
+     1.76,
+     2.01
+    ],
+    [
+     "rocks.",
+     2.01,
+     2.57
+    ],
+    [
+     "Here",
+     3.02,
+     3.27
+    ],
+    [
+     "is",
+     3.27,
+     3.39
+    ],
+    [
+     "her",
+     3.39,
+     3.48
+    ],
+    [
+     "cozy",
+     3.48,
+     4.09
+    ],
+    [
+     "bed!",
+     4.09,
+     4.589
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the big rocks: her cozy bed",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "A sleeping sea turtle can stay under the water for several hours.",
+   "t0": 241.875,
+   "t1": 246.875,
+   "v0": 242.17962500000033,
+   "dur": 4.413333333333333,
+   "words": [
+    [
+     "A",
+     0.02,
+     0.07
+    ],
+    [
+     "sleeping",
+     0.07,
+     0.63
+    ],
+    [
+     "sea",
+     0.63,
+     0.93
+    ],
+    [
+     "turtle",
+     0.93,
+     1.44
+    ],
+    [
+     "can",
+     1.71,
+     1.9
+    ],
+    [
+     "stay",
+     1.9,
+     2.3
+    ],
+    [
+     "under",
+     2.3,
+     2.48
+    ],
+    [
+     "the",
+     2.48,
+     2.58
+    ],
+    [
+     "water",
+     2.58,
+     3.09
+    ],
+    [
+     "for",
+     3.09,
+     3.29
+    ],
+    [
+     "several",
+     3.29,
+     3.79
+    ],
+    [
+     "hours.",
+     3.79,
+     4.41
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "fact: a sleeping sea turtle stays under for hours",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "rocks",
+   "say": "Where is Tula's cozy bed? Under the water, or in a tree?",
+   "t0": 246.875,
+   "t1": 254.6875,
+   "v0": 247.11295833333367,
+   "dur": 4.1554166666666665,
+   "words": [
+    [
+     "Where",
+     0.0,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.41
+    ],
+    [
+     "Tula's",
+     0.41,
+     0.95
+    ],
+    [
+     "cozy",
+     0.95,
+     1.45
+    ],
+    [
+     "bed?",
+     1.45,
+     1.87
+    ],
+    [
+     "Under",
+     2.28,
+     2.53
+    ],
+    [
+     "the",
+     2.53,
+     2.63
+    ],
+    [
+     "water,",
+     2.63,
+     3.23
+    ],
+    [
+     "or",
+     3.23,
+     3.45
+    ],
+    [
+     "in",
+     3.45,
+     3.58
+    ],
+    [
+     "a",
+     3.58,
+     3.63
+    ],
+    [
+     "tree?",
+     3.63,
+     4.15
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: under the water or in a tree",
+   "who": "milo",
+   "beat": "fact",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "And I saw my cozy bed, by the big rocks!",
+   "t0": 254.6875,
+   "t1": 258.125,
+   "v0": 254.98837500000033,
+   "dur": 2.9542916666666668,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.21
+    ],
+    [
+     "I",
+     0.21,
+     0.31
+    ],
+    [
+     "saw",
+     0.31,
+     0.58
+    ],
+    [
+     "my",
+     0.58,
+     0.83
+    ],
+    [
+     "cozy",
+     0.83,
+     1.44
+    ],
+    [
+     "bed,",
+     1.44,
+     1.85
+    ],
+    [
+     "by",
+     1.85,
+     2.04
+    ],
+    [
+     "the",
+     2.04,
+     2.12
+    ],
+    [
+     "big",
+     2.12,
+     2.38
+    ],
+    [
+     "rocks!",
+     2.38,
+     2.95
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula tells: my cozy bed",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Now I know your whole home, Tula! And I did not get wet at all!",
+   "t0": 258.125,
+   "t1": 263.125,
+   "v0": 258.46266666666696,
+   "dur": 4.25,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.4
+    ],
+    [
+     "I",
+     0.4,
+     0.57
+    ],
+    [
+     "know",
+     0.57,
+     0.77
+    ],
+    [
+     "your",
+     0.77,
+     0.94
+    ],
+    [
+     "whole",
+     0.94,
+     1.25
+    ],
+    [
+     "home,",
+     1.25,
+     1.69
+    ],
+    [
+     "Tula!",
+     1.69,
+     2.02
+    ],
+    [
+     "And",
+     2.7,
+     2.84
+    ],
+    [
+     "I",
+     2.84,
+     2.94
+    ],
+    [
+     "did",
+     2.94,
+     3.12
+    ],
+    [
+     "not",
+     3.12,
+     3.38
+    ],
+    [
+     "get",
+     3.38,
+     3.55
+    ],
+    [
+     "wet",
+     3.55,
+     3.75
+    ],
+    [
+     "at",
+     3.75,
+     3.89
+    ],
+    [
+     "all!",
+     3.89,
+     4.25
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: I know your whole home",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Down I dive in the deep blue sea. Up I come, take a breath with me!",
+   "t0": 263.125,
+   "t1": 268.4375,
+   "v0": 263.23266666666694,
+   "dur": 4.793875,
+   "words": [
+    [
+     "Down",
+     0.02,
+     0.41
+    ],
+    [
+     "I",
+     0.41,
+     0.54
+    ],
+    [
+     "dive",
+     0.54,
+     1.03
+    ],
+    [
+     "in",
+     1.03,
+     1.14
+    ],
+    [
+     "the",
+     1.14,
+     1.22
+    ],
+    [
+     "deep",
+     1.22,
+     1.56
+    ],
+    [
+     "blue",
+     1.56,
+     1.86
+    ],
+    [
+     "sea.",
+     1.86,
+     2.42
+    ],
+    [
+     "Up",
+     2.84,
+     3.07
+    ],
+    [
+     "I",
+     3.07,
+     3.19
+    ],
+    [
+     "come,",
+     3.19,
+     3.6
+    ],
+    [
+     "take",
+     3.6,
+     3.84
+    ],
+    [
+     "a",
+     3.84,
+     3.88
+    ],
+    [
+     "breath",
+     3.88,
+     4.25
+    ],
+    [
+     "with",
+     4.25,
+     4.42
+    ],
+    [
+     "me!",
+     4.42,
+     4.79
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the diving rhyme",
+   "who": "tula",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "",
+   "t0": 268.4375,
+   "t1": 278.75,
+   "v0": 268.75,
+   "dur": 10.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: down and up",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "shore",
+   "say": "Did Milo find a way to see Tula's home? Yes, or no?",
+   "t0": 278.75,
+   "t1": 286.5625,
+   "v0": 278.87,
+   "dur": 4.146541666666667,
+   "words": [
+    [
+     "Did",
+     0.01,
+     0.19
+    ],
+    [
+     "Milo",
+     0.19,
+     0.64
+    ],
+    [
+     "find",
+     0.64,
+     0.93
+    ],
+    [
+     "a",
+     0.93,
+     0.97
+    ],
+    [
+     "way",
+     0.97,
+     1.19
+    ],
+    [
+     "to",
+     1.19,
+     1.3
+    ],
+    [
+     "see",
+     1.3,
+     1.52
+    ],
+    [
+     "Tula's",
+     1.52,
+     2.05
+    ],
+    [
+     "home?",
+     2.05,
+     2.46
+    ],
+    [
+     "Yes,",
+     2.92,
+     3.53
+    ],
+    [
+     "or",
+     3.53,
+     3.73
+    ],
+    [
+     "no?",
+     3.73,
+     4.147
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: did Milo find a way",
+   "who": "milo",
+   "beat": "solution",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "The sun goes down, and the sea turns gold. Milo and Tula rest, side by side.",
+   "t0": 286.5625,
+   "t1": 293.4375,
+   "v0": 286.73654166666665,
+   "dur": 6.403375,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.08
+    ],
+    [
+     "sun",
+     0.08,
+     0.45
+    ],
+    [
+     "goes",
+     0.45,
+     0.75
+    ],
+    [
+     "down,",
+     0.75,
+     1.22
+    ],
+    [
+     "and",
+     1.22,
+     1.38
+    ],
+    [
+     "the",
+     1.38,
+     1.44
+    ],
+    [
+     "sea",
+     1.44,
+     1.75
+    ],
+    [
+     "turns",
+     1.75,
+     2.21
+    ],
+    [
+     "gold.",
+     2.21,
+     2.71
+    ],
+    [
+     "Milo",
+     3.31,
+     3.81
+    ],
+    [
+     "and",
+     3.81,
+     3.91
+    ],
+    [
+     "Tula",
+     3.91,
+     4.35
+    ],
+    [
+     "rest,",
+     4.35,
+     4.95
+    ],
+    [
+     "side",
+     5.05,
+     5.54
+    ],
+    [
+     "by",
+     5.54,
+     5.79
+    ],
+    [
+     "side.",
+     5.79,
+     6.4
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "evening at the little rock",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Thank you, Tula! You showed me your home, one breath at a time.",
+   "t0": 293.4375,
+   "t1": 297.8125,
+   "v0": 293.6599166666666,
+   "dur": 3.855916666666667,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.38
+    ],
+    [
+     "you,",
+     0.38,
+     0.5
+    ],
+    [
+     "Tula!",
+     0.5,
+     1.02
+    ],
+    [
+     "You",
+     1.43,
+     1.54
+    ],
+    [
+     "showed",
+     1.54,
+     1.84
+    ],
+    [
+     "me",
+     1.84,
+     1.94
+    ],
+    [
+     "your",
+     1.94,
+     2.05
+    ],
+    [
+     "home,",
+     2.05,
+     2.6
+    ],
+    [
+     "one",
+     2.6,
+     2.86
+    ],
+    [
+     "breath",
+     2.86,
+     3.14
+    ],
+    [
+     "at",
+     3.14,
+     3.22
+    ],
+    [
+     "a",
+     3.22,
+     3.26
+    ],
+    [
+     "time.",
+     3.26,
+     3.856
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Milo: thank you",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "And you had the good idea, Milo. Friends can share in many ways!",
+   "t0": 297.8125,
+   "t1": 303.125,
+   "v0": 298.03583333333324,
+   "dur": 4.668166666666667,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.23
+    ],
+    [
+     "you",
+     0.23,
+     0.35
+    ],
+    [
+     "had",
+     0.35,
+     0.56
+    ],
+    [
+     "the",
+     0.56,
+     0.64
+    ],
+    [
+     "good",
+     0.64,
+     0.94
+    ],
+    [
+     "idea,",
+     0.94,
+     1.47
+    ],
+    [
+     "Milo.",
+     1.47,
+     2.03
+    ],
+    [
+     "Friends",
+     2.5,
+     2.96
+    ],
+    [
+     "can",
+     2.96,
+     3.16
+    ],
+    [
+     "share",
+     3.16,
+     3.57
+    ],
+    [
+     "in",
+     3.57,
+     3.73
+    ],
+    [
+     "many",
+     3.73,
+     4.02
+    ],
+    [
+     "ways!",
+     4.02,
+     4.668
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "Tula: friends can share",
+   "who": "tula",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "When one way does not work, you can look for another way.",
+   "t0": 303.125,
+   "t1": 306.875,
+   "v0": 303.2239999999999,
+   "dur": 3.29275,
+   "words": [
+    [
+     "When",
+     0.01,
+     0.17
+    ],
+    [
+     "one",
+     0.17,
+     0.4
+    ],
+    [
+     "way",
+     0.4,
+     0.56
+    ],
+    [
+     "does",
+     0.56,
+     0.8
+    ],
+    [
+     "not",
+     0.8,
+     1.09
+    ],
+    [
+     "work,",
+     1.09,
+     1.56
+    ],
+    [
+     "you",
+     1.84,
+     1.94
+    ],
+    [
+     "can",
+     1.94,
+     2.13
+    ],
+    [
+     "look",
+     2.13,
+     2.36
+    ],
+    [
+     "for",
+     2.36,
+     2.53
+    ],
+    [
+     "another",
+     2.53,
+     2.92
+    ],
+    [
+     "way.",
+     2.92,
+     3.29
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the lesson",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Do you remember? What does a sea turtle breathe? Air, or sand?",
+   "t0": 306.875,
+   "t1": 314.6875,
+   "v0": 307.03674999999987,
+   "dur": 4.005416666666667,
+   "words": [
+    [
+     "Do",
+     0.0,
+     0.08
+    ],
+    [
+     "you",
+     0.08,
+     0.21
+    ],
+    [
+     "remember?",
+     0.21,
+     0.83
+    ],
+    [
+     "What",
+     0.97,
+     1.08
+    ],
+    [
+     "does",
+     1.08,
+     1.22
+    ],
+    [
+     "a",
+     1.22,
+     1.25
+    ],
+    [
+     "sea",
+     1.25,
+     1.51
+    ],
+    [
+     "turtle",
+     1.51,
+     1.89
+    ],
+    [
+     "breathe?",
+     1.89,
+     2.32
+    ],
+    [
+     "Air,",
+     2.78,
+     3.2
+    ],
+    [
+     "or",
+     3.2,
+     3.41
+    ],
+    [
+     "sand?",
+     3.41,
+     4.0
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: air or sand",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "And where does a sea turtle go to breathe? Up to the top, or down to the sand?",
+   "t0": 314.6875,
+   "t1": 323.125,
+   "v0": 314.76216666666653,
+   "dur": 4.9615833333333335,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.19
+    ],
+    [
+     "where",
+     0.19,
+     0.34
+    ],
+    [
+     "does",
+     0.34,
+     0.51
+    ],
+    [
+     "a",
+     0.51,
+     0.54
+    ],
+    [
+     "sea",
+     0.54,
+     0.88
+    ],
+    [
+     "turtle",
+     0.88,
+     1.29
+    ],
+    [
+     "go",
+     1.29,
+     1.45
+    ],
+    [
+     "to",
+     1.45,
+     1.53
+    ],
+    [
+     "breathe?",
+     1.53,
+     2.13
+    ],
+    [
+     "Up",
+     2.62,
+     2.78
+    ],
+    [
+     "to",
+     2.78,
+     2.9
+    ],
+    [
+     "the",
+     2.9,
+     2.99
+    ],
+    [
+     "top,",
+     2.99,
+     3.64
+    ],
+    [
+     "or",
+     3.64,
+     3.85
+    ],
+    [
+     "down",
+     3.85,
+     4.19
+    ],
+    [
+     "to",
+     4.19,
+     4.28
+    ],
+    [
+     "the",
+     4.28,
+     4.36
+    ],
+    [
+     "sand?",
+     4.36,
+     4.96
+    ]
+   ],
+   "part": 0,
+   "q": true,
+   "tag": "question: up or down",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "Down she dives in the deep blue sea. Up she comes, for a breath with me!",
+   "t0": 323.125,
+   "t1": 328.75,
+   "v0": 323.44374999999985,
+   "dur": 5.047541666666667,
+   "words": [
+    [
+     "Down",
+     0.01,
+     0.34
+    ],
+    [
+     "she",
+     0.34,
+     0.55
+    ],
+    [
+     "dives",
+     0.55,
+     1.16
+    ],
+    [
+     "in",
+     1.16,
+     1.27
+    ],
+    [
+     "the",
+     1.27,
+     1.36
+    ],
+    [
+     "deep",
+     1.36,
+     1.77
+    ],
+    [
+     "blue",
+     1.77,
+     2.05
+    ],
+    [
+     "sea.",
+     2.05,
+     2.54
+    ],
+    [
+     "Up",
+     3.02,
+     3.17
+    ],
+    [
+     "she",
+     3.17,
+     3.35
+    ],
+    [
+     "comes,",
+     3.35,
+     3.97
+    ],
+    [
+     "for",
+     3.97,
+     4.19
+    ],
+    [
+     "a",
+     4.19,
+     4.24
+    ],
+    [
+     "breath",
+     4.24,
+     4.6
+    ],
+    [
+     "with",
+     4.6,
+     4.75
+    ],
+    [
+     "me!",
+     4.75,
+     5.048
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "the closing rhyme",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "shore_eve",
+   "say": "",
+   "t0": 328.75,
+   "t1": 334.375,
+   "v0": 329.375,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "song: hooray",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "shore_eve",
+   "say": "See you on the next adventure, friends!",
+   "t0": 334.375,
+   "t1": 337.1875,
+   "v0": 334.495,
+   "dur": 2.3910416666666667,
+   "words": [
+    [
+     "See",
+     0.01,
+     0.28
+    ],
+    [
+     "you",
+     0.28,
+     0.47
+    ],
+    [
+     "on",
+     0.47,
+     0.63
+    ],
+    [
+     "the",
+     0.63,
+     0.7
+    ],
+    [
+     "next",
+     0.7,
+     1.05
+    ],
+    [
+     "adventure,",
+     1.05,
+     1.75
+    ],
+    [
+     "friends!",
+     1.75,
+     2.39
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 337.1875,
+   "t1": 340.3125,
+   "v0": 337.5,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 1: the sky",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_gate",
+   "say": "",
+   "t0": 340.3125,
+   "t1": 343.4375,
+   "v0": 340.625,
+   "dur": 2.5,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 2: the gate",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "",
+   "t0": 343.4375,
+   "t1": 348.75,
+   "v0": 343.75,
+   "dur": 5.0,
+   "words": [],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 3: the logo",
+   "who": "",
+   "beat": "song",
+   "sung": true
+  },
+  {
+   "place": "intro_logo",
+   "say": "The Animated Zoo!",
+   "t0": 348.75,
+   "t1": 351.6571666666666,
+   "v0": 348.87,
+   "dur": 1.3871666666666667,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.18
+    ],
+    [
+     "Animated",
+     0.18,
+     0.9
+    ],
+    [
+     "Zoo!",
+     0.9,
+     1.387
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "INTRO 4: Milo says the name",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

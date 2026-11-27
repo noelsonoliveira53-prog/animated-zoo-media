@@ -155,10 +155,10 @@
  "plan": {
   "length": 91.9,
   "shots": 17,
-  "visual_changes": 80,
-  "mean_gap": 1.15,
-  "longest_gap": 5.86,
-  "longest_gap_at": 30.0,
+  "visual_changes": 85,
+  "mean_gap": 1.08,
+  "longest_gap": 5.06,
+  "longest_gap_at": 62.7,
   "over_6s": [],
   "places": [
    "arctic_low",
@@ -322,9 +322,29 @@
    "the picture board board: sunbeams"
   ],
   [
+   30.34,
+   "action",
+   "beam one comes in"
+  ],
+  [
+   30.85,
+   "action",
+   "beam two comes in"
+  ],
+  [
+   32.3,
+   "action",
+   "beam three comes in"
+  ],
+  [
+   33.24,
+   "action",
+   "the hollow middle blinks"
+  ],
+  [
    35.86,
    "action",
-   "beam one"
+   "a picture pulses"
   ],
   [
    35.86,
@@ -334,7 +354,7 @@
   [
    36.21,
    "action",
-   "beam two"
+   "a picture pulses"
   ],
   [
    36.21,
@@ -344,7 +364,7 @@
   [
    36.48,
    "action",
-   "beam three"
+   "a picture pulses"
   ],
   [
    36.48,
@@ -355,6 +375,11 @@
    37.5,
    "new shot",
    "the picture board board: looks white"
+  ],
+  [
+   37.57,
+   "action",
+   "a picture pulses"
   ],
   [
    38.08,

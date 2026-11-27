@@ -3696,11 +3696,11 @@
   "date": "2026-11-29",
   "time": "9:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\"). Finished Nov 27 ~6:30 PM ET: 4K AV1 358.3 s (main intro at both ends); stills of every shot 16:9 and 9:16 looked at and fixed in three rounds; three renders (two pace fixes on the sunbeam board); finished frames and every answer reveal looked at; pace (longest 6.8 s), watermark + corner sheet, bookends, listen.py (measures, does not hear; CLASH lines only the bed's known E4 over F and the answer chime), thumbnail looked at, review.py PASS. Nobody has heard the voices.",
   "description": "Is a polar bear really white? Look very closely at one hair with Milo the bluebird and Poppy the polar bear cub, and find three surprises! A gentle animal lesson for ages 2-6 with questions to answer, things to count, moves to copy and a quiz at the end.\nKids learn that a polar bear's hairs are clear and see-through, with no color of their own; that the long guard hairs are hollow and full of air, and the sunlight bouncing around in the hairs makes the fur look white; and that under the fur a polar bear has black skin and a black nose, and the black skin soaks up the sun's warmth. In summer the fur can even look a little yellow.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Education (Animals 101: Polar Bears); San Diego Zoo Wildlife Alliance Library fact sheet (polar bear); Polar Bears International (What Does Polar Bear Fur Feel Like?); Ocean Conservancy (Why Do Polar Bears Have White Fur?).",
   "tags": [
    "is a polar bear really white",

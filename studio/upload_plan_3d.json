@@ -3585,5 +3585,18 @@
    "every",
    "adventures"
   ]
+ },
+ {
+  "file": "cartoon/za_ep15.mp4",
+  "title": "How Can Milo See Under the Deep Blue Sea?",
+  "date": "2026-11-28",
+  "time": "3:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_adventure",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 3:20 PM ET by the scheduled afternoon adventure build (https://claude.ai/code/session_014CFVfYtAVSXbhrVXyRzThU). Title renamed from the THEMES title (theme_title) to a question title (viral packaging). In production: nothing rendered yet.",
+  "theme_title": "Milo and the Deep Blue Sea"
  }
 ]

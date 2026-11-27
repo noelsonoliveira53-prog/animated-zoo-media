@@ -3598,5 +3598,18 @@
   "watermark": "tl",
   "note": "Claimed Nov 27 2026 3:20 PM ET by the scheduled afternoon adventure build (https://claude.ai/code/session_014CFVfYtAVSXbhrVXyRzThU). Title renamed from the THEMES title (theme_title) to a question title (viral packaging). In production: nothing rendered yet.",
   "theme_title": "Milo and the Deep Blue Sea"
+ },
+ {
+  "file": "cartoon/zc_ep14.mp4",
+  "title": "Whose Egg Is This? Guess With Milo",
+  "date": "2026-11-28",
+  "time": "5:30 PM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet.",
+  "theme_title": "Whose Egg Is This? Guess With Milo"
  }
 ]

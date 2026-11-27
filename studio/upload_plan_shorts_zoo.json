@@ -2018,5 +2018,41 @@
   "playlists": [
    "shorts"
   ]
+ },
+ {
+  "file": "cartoon/zc_ep14_short1.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep14",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-02",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet."
+ },
+ {
+  "file": "cartoon/zc_ep14_short2.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep14",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-03",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet."
+ },
+ {
+  "file": "cartoon/zc_ep14_short3.mp4",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "from": "zc_ep14",
+  "res": "2160x3840",
+  "watermark": "top",
+  "date": "2026-12-04",
+  "time": "7:30 AM",
+  "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet."
  }
 ]

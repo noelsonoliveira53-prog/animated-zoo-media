@@ -1947,7 +1947,10 @@
   ],
   "video_id": "b9vW4SdRpHA",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 7:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 28, 2026 at 7:30 PM)",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep13_short2.mp4",
@@ -1977,7 +1980,10 @@
   ],
   "video_id": "I-oZD0VQ8SQ",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public November 30, 2026 at 7:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public November 30, 2026 at 7:30 PM)",
+  "playlists": [
+   "shorts"
+  ]
  },
  {
   "file": "cartoon/zc_ep13_short3.mp4",
@@ -2008,6 +2014,9 @@
   ],
   "video_id": "86bkEn4tMQs",
   "thumb_set": true,
-  "uploaded": "2026-11-27 ET (Studio: public December 1, 2026 at 7:30 PM)"
+  "uploaded": "2026-11-27 ET (Studio: public December 1, 2026 at 7:30 PM)",
+  "playlists": [
+   "shorts"
+  ]
  }
 ]

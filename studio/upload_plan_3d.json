@@ -3432,7 +3432,7 @@
   "date": "2026-11-27",
   "time": "3:30 PM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3457,7 +3457,10 @@
    "The Animated Zoo"
   ],
   "thumb_text": "LAST PLACE?",
-  "seconds": 367.2
+  "seconds": 367.2,
+  "video_id": "cc4wBn-mWR0",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 2:41 PM ET (Studio: will be set to public on November 27, 2026 at 3:30 PM)"
  },
  {
   "file": "cartoon/zc_ep13.mp4",

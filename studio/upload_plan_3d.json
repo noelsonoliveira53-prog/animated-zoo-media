@@ -3625,7 +3625,7 @@
   "date": "2026-11-29",
   "time": "5:30 AM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3650,7 +3650,10 @@
   ],
   "thumb": "brand/zoo/thumb_za_ep16.jpg",
   "thumb_text": "FOLLOW ME!",
-  "seconds": 352.2
+  "seconds": 352.2,
+  "video_id": "6iYvGUoiuiw",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 ET (Studio: public November 29, 2026 at 5:30 AM)"
  },
  {
   "file": "cartoon/zc_ep14.mp4",

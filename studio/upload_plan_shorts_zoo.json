@@ -2054,5 +2054,41 @@
   "date": "2026-12-04",
   "time": "7:30 AM",
   "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet."
+ },
+ {
+  "file": "cartoon/zc_ep15_short1.mp4",
+  "title": "(zc_ep15 part 1)",
+  "date": "2026-12-02",
+  "time": "11:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+ },
+ {
+  "file": "cartoon/zc_ep15_short2.mp4",
+  "title": "(zc_ep15 part 2)",
+  "date": "2026-12-03",
+  "time": "11:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+ },
+ {
+  "file": "cartoon/zc_ep15_short3.mp4",
+  "title": "(zc_ep15 part 3)",
+  "date": "2026-12-04",
+  "time": "11:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
  }
 ]

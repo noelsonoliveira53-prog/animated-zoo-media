@@ -3624,5 +3624,17 @@
   "watermark": "tl",
   "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet.",
   "theme_title": "Whose Egg Is This? Guess With Milo"
+ },
+ {
+  "file": "cartoon/zc_ep15.mp4",
+  "title": "Is a Polar Bear Really White?",
+  "date": "2026-11-29",
+  "time": "9:30 AM",
+  "made_for_kids": true,
+  "status": "in_production",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "watermark": "tl",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
  }
 ]

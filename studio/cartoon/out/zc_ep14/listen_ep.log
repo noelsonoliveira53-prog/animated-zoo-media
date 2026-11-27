@@ -1,0 +1,20 @@
+  sung or hummed: INTRO 1: the sky  13.75-16.25 s: G5 G2 C6 G3
+  sung or hummed: INTRO 2: the gate  16.88-19.38 s: G2 B3 D3(+18c) B3 G2 D4 B4 D3 D5 D2 B3 G2 D5(+17c) D2 A3
+  sung or hummed: INTRO 3: the logo  20.0-25.0 s: C3 F2(+17c) C5 F4 G3(+17c) C3 C6 F5 F2(+18c) C5 C3(+16c) A3 E5 C3 C6 D5 G4 G3 C5 E4 C3 C5 C6 G2(-14c) E4 C4 G3(+13c)
+  sung or hummed: INTRO 1: the sky  345.62-348.12 s: 
+  sung or hummed: INTRO 2: the gate  348.75-351.25 s: 
+  sung or hummed: INTRO 3: the logo  351.88-356.88 s: 
+  judged: everything (no speaking voice in the file)
+361.3 s   key heard: {'key': 'C major', 'fit': 0.97}   expected: C   held tones judged: 894   voice-like tones left out: 0
+  CLASH             117.42 s  E4 + F2 together for 0.3 s
+  CLASH             167.42 s  E4 + F2 together for 0.3 s
+  CLASH             167.77 s  F2 + E4 together for 0.26 s
+  CLASH             217.43 s  E4 + F2 together for 0.55 s
+  CLASH             277.42 s  E4 + F2 together for 0.3 s
+  CLASH             277.76 s  F2 + E4 together for 0.26 s
+  beat: {'heard_bpm': np.float64(95.0), 'expected_bpm': 96.0, 'attacks_on_the_half_beat_grid': 0.79, 'by_chance': 0.29, 'heard_against_expected': np.float64(0.99)}
+  clicks at: []  silences: []
+  level: {'lufs': -23.4, 'range_lu': 20.4, 'true_peak_db': -2.6, 'clipped_samples': 0, 'quietest_second_db': np.float64(-40.1), 'loudest_second_db': np.float64(-13.4)}
+  balance: {'share_a_phone_speaker_plays_above_300hz': 0.76, 'share_below_120hz': 0.11, 'share_above_4khz': 0.01}
+  picture: /home/claude/animated-zoo-media/studio/listen/out/zc_ep14_music_stem_listen.png
+EXIT 0

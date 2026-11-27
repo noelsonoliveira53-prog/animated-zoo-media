@@ -1,0 +1,1880 @@
+{
+ "id": "zc_ep14_short1",
+ "total": 92.48987500000005,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75,
+  89.375,
+  90.0,
+  90.625,
+  91.25,
+  91.875
+ ],
+ "plan": {
+  "length": 92.5,
+  "shots": 19,
+  "visual_changes": 82,
+  "mean_gap": 1.13,
+  "longest_gap": 4.58,
+  "longest_gap_at": 35.4,
+  "over_6s": [],
+  "places": [
+   "savanna",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_blue"
+  ],
+  "questions": 8,
+  "longest_without_question": 29.4,
+  "first_words_at": 0.42,
+  "shot_mean": 4.87,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "194/194",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 28.0,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 18,
+   "cuts_on_the_half_beat": 18,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the sunny savanna hook: giant egg"
+  ],
+  [
+   1.44,
+   "action",
+   "the egg wobbles"
+  ],
+  [
+   2.46,
+   "action",
+   "a crack appears"
+  ],
+  [
+   2.46,
+   "word",
+   "?"
+  ],
+  [
+   4.06,
+   "new shot",
+   "the sunny savanna egg 1"
+  ],
+  [
+   6.34,
+   "word",
+   "BIG!"
+  ],
+  [
+   8.56,
+   "word",
+   "DIRT!"
+  ],
+  [
+   9.27,
+   "action",
+   "the egg wobbles"
+  ],
+  [
+   10.62,
+   "new shot",
+   "the sunny savanna question 1a"
+  ],
+  [
+   11.38,
+   "sign",
+   "OSTRICH"
+  ],
+  [
+   11.73,
+   "sign",
+   "DUCK"
+  ],
+  [
+   14.88,
+   "thinking dot",
+   "1"
+  ],
+  [
+   15.55,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.71,
+   "action",
+   "the egg wobbles"
+  ],
+  [
+   16.23,
+   "thinking dot",
+   "3"
+  ],
+  [
+   16.71,
+   "answer",
+   "OSTRICH"
+  ],
+  [
+   17.81,
+   "new shot",
+   "the sunny savanna the ostrich comes"
+  ],
+  [
+   18.14,
+   "action",
+   "ost walks"
+  ],
+  [
+   19.61,
+   "action",
+   "ost nods"
+  ],
+  [
+   19.61,
+   "word",
+   "OSTRICH!"
+  ],
+  [
+   21.25,
+   "new shot",
+   "the sunny savanna the biggest bird"
+  ],
+  [
+   24.65,
+   "action",
+   "ost nods"
+  ],
+  [
+   24.65,
+   "word",
+   "BIGGEST BIRD!"
+  ],
+  [
+   25.77,
+   "action",
+   "the ostrich flaps its wings"
+  ],
+  [
+   26.56,
+   "new shot",
+   "the sunny savanna the biggest egg"
+  ],
+  [
+   27.1,
+   "action",
+   "ost looks"
+  ],
+  [
+   27.49,
+   "word",
+   "BIGGEST EGG!"
+  ],
+  [
+   29.38,
+   "new place",
+   "the picture board board: 24 chicken eggs"
+  ],
+  [
+   32.72,
+   "word",
+   "24!"
+  ],
+  [
+   33.36,
+   "action",
+   "the small eggs pop in"
+  ],
+  [
+   34.69,
+   "new place",
+   "the sunny savanna the dad scratches the nest"
+  ],
+  [
+   35.42,
+   "action",
+   "the ostrich scratches with its foot"
+  ],
+  [
+   35.42,
+   "word",
+   "SCRATCH!"
+  ],
+  [
+   40.0,
+   "new shot",
+   "the sunny savanna who keeps it warm"
+  ],
+  [
+   40.78,
+   "action",
+   "ost looks"
+  ],
+  [
+   41.56,
+   "word",
+   "?"
+  ],
+  [
+   45.0,
+   "new place",
+   "the picture board (blue) board: day and night"
+  ],
+  [
+   46.74,
+   "word",
+   "DAY!"
+  ],
+  [
+   48.79,
+   "word",
+   "NIGHT!"
+  ],
+  [
+   49.69,
+   "new place",
+   "the zoo gate sit like an ostrich"
+  ],
+  [
+   52.62,
+   "action",
+   "milo hops"
+  ],
+  [
+   52.62,
+   "word",
+   "GENTLY!"
+  ],
+  [
+   56.88,
+   "new place",
+   "the sunny savanna the chick hatches"
+  ],
+  [
+   57.75,
+   "action",
+   "the egg wobbles"
+  ],
+  [
+   58.39,
+   "action",
+   "a crack appears"
+  ],
+  [
+   58.39,
+   "word",
+   "CRACK!"
+  ],
+  [
+   58.91,
+   "action",
+   "the baby pops up"
+  ],
+  [
+   58.91,
+   "action",
+   "the egg hatches"
+  ],
+  [
+   59.99,
+   "action",
+   "chk nods"
+  ],
+  [
+   60.31,
+   "new shot",
+   "the sunny savanna as big as a chicken"
+  ],
+  [
+   61.98,
+   "action",
+   "ost looks"
+  ],
+  [
+   62.48,
+   "action",
+   "chk nods"
+  ],
+  [
+   62.48,
+   "word",
+   "CHICKEN SIZE!"
+  ],
+  [
+   63.44,
+   "new shot",
+   "the sunny savanna walk with mom and dad"
+  ],
+  [
+   65.52,
+   "action",
+   "ch2 walks"
+  ],
+  [
+   65.52,
+   "action",
+   "chk walks"
+  ],
+  [
+   65.52,
+   "action",
+   "mom walks"
+  ],
+  [
+   65.52,
+   "action",
+   "ost walks"
+  ],
+  [
+   66.02,
+   "word",
+   "FAMILY!"
+  ],
+  [
+   67.5,
+   "new shot",
+   "the sunny savanna say it: biggest egg"
+  ],
+  [
+   67.58,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   68.99,
+   "action",
+   "ost nods"
+  ],
+  [
+   71.25,
+   "new shot",
+   "the sunny savanna runs fast"
+  ],
+  [
+   73.63,
+   "action",
+   "ost walks"
+  ],
+  [
+   73.63,
+   "picture",
+   "sp"
+  ],
+  [
+   75.06,
+   "word",
+   "ZOOM!"
+  ],
+  [
+   75.94,
+   "new place",
+   "the zoo gate run in place"
+  ],
+  [
+   79.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   79.03,
+   "word",
+   "RUN, RUN!"
+  ],
+  [
+   79.61,
+   "action",
+   "milo hops"
+  ],
+  [
+   80.03,
+   "action",
+   "milo hops"
+  ],
+  [
+   83.12,
+   "new place",
+   "the sunny savanna question 1b"
+  ],
+  [
+   85.24,
+   "sign",
+   "BIG"
+  ],
+  [
+   85.59,
+   "sign",
+   "SMALL"
+  ],
+  [
+   86.96,
+   "thinking dot",
+   "1"
+  ],
+  [
+   87.64,
+   "thinking dot",
+   "2"
+  ],
+  [
+   87.8,
+   "action",
+   "the egg wobbles"
+  ],
+  [
+   88.31,
+   "thinking dot",
+   "3"
+  ],
+  [
+   88.8,
+   "answer",
+   "BIG"
+  ],
+  [
+   90.0,
+   "new shot",
+   "the sunny savanna great job 1"
+  ],
+  [
+   90.23,
+   "word",
+   "BIG!"
+  ],
+  [
+   90.72,
+   "action",
+   "ost nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "savanna",
+   "say": "A giant egg is wobbling! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 4.0625,
+   "v0": 0.42,
+   "dur": 3.1810416666666668,
+   "words": [
+    [
+     "A",
+     0.02,
+     0.09
+    ],
+    [
+     "giant",
+     0.09,
+     0.6
+    ],
+    [
+     "egg",
+     0.6,
+     0.87
+    ],
+    [
+     "is",
+     0.87,
+     1.02
+    ],
+    [
+     "wobbling!",
+     1.02,
+     1.73
+    ],
+    [
+     "Guess",
+     2.04,
+     2.35
+    ],
+    [
+     "with",
+     2.35,
+     2.51
+    ],
+    [
+     "Milo!",
+     2.51,
+     3.18
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "hook: giant egg",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here is the first egg. It is so big! It sits in a hole, in the dirt. Whose egg is it?",
+   "t0": 4.0625,
+   "t1": 10.625,
+   "v0": 4.141041666666667,
+   "dur": 6.213416666666666,
+   "words": [
+    [
+     "Here",
+     0.02,
+     0.36
+    ],
+    [
+     "is",
+     0.36,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "first",
+     0.59,
+     1.05
+    ],
+    [
+     "egg.",
+     1.05,
+     1.45
+    ],
+    [
+     "It",
+     1.71,
+     1.82
+    ],
+    [
+     "is",
+     1.82,
+     1.92
+    ],
+    [
+     "so",
+     1.92,
+     2.2
+    ],
+    [
+     "big!",
+     2.2,
+     2.68
+    ],
+    [
+     "It",
+     3.14,
+     3.28
+    ],
+    [
+     "sits",
+     3.28,
+     3.59
+    ],
+    [
+     "in",
+     3.59,
+     3.67
+    ],
+    [
+     "a",
+     3.67,
+     3.73
+    ],
+    [
+     "hole,",
+     3.73,
+     4.19
+    ],
+    [
+     "in",
+     4.19,
+     4.33
+    ],
+    [
+     "the",
+     4.33,
+     4.42
+    ],
+    [
+     "dirt.",
+     4.42,
+     4.92
+    ],
+    [
+     "Whose",
+     5.13,
+     5.44
+    ],
+    [
+     "egg",
+     5.44,
+     5.72
+    ],
+    [
+     "is",
+     5.72,
+     5.9
+    ],
+    [
+     "it?",
+     5.9,
+     6.21
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "egg 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Is it the ostrich's egg? Or is it the duck's egg?",
+   "t0": 10.625,
+   "t1": 17.8125,
+   "v0": 10.894458333333333,
+   "dur": 3.4985,
+   "words": [
+    [
+     "Is",
+     0.01,
+     0.22
+    ],
+    [
+     "it",
+     0.22,
+     0.34
+    ],
+    [
+     "the",
+     0.34,
+     0.49
+    ],
+    [
+     "ostrich's",
+     0.49,
+     1.23
+    ],
+    [
+     "egg?",
+     1.23,
+     1.68
+    ],
+    [
+     "Or",
+     2.0,
+     2.23
+    ],
+    [
+     "is",
+     2.23,
+     2.45
+    ],
+    [
+     "it",
+     2.45,
+     2.57
+    ],
+    [
+     "the",
+     2.57,
+     2.66
+    ],
+    [
+     "duck's",
+     2.66,
+     3.09
+    ],
+    [
+     "egg?",
+     3.09,
+     3.498
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "It is the ostrich!",
+   "t0": 17.8125,
+   "t1": 21.25,
+   "v0": 18.132958333333335,
+   "dur": 1.4834166666666666,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.19
+    ],
+    [
+     "is",
+     0.19,
+     0.41
+    ],
+    [
+     "the",
+     0.41,
+     0.6
+    ],
+    [
+     "ostrich!",
+     0.6,
+     1.48
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the ostrich comes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Here is the fun fact. The ostrich is the biggest bird in the world!",
+   "t0": 21.25,
+   "t1": 26.5625,
+   "v0": 21.556375000000003,
+   "dur": 4.733375,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.53
+    ],
+    [
+     "the",
+     0.53,
+     0.61
+    ],
+    [
+     "fun",
+     0.61,
+     1.0
+    ],
+    [
+     "fact.",
+     1.0,
+     1.61
+    ],
+    [
+     "The",
+     1.98,
+     2.11
+    ],
+    [
+     "ostrich",
+     2.11,
+     2.8
+    ],
+    [
+     "is",
+     2.8,
+     3.0
+    ],
+    [
+     "the",
+     3.0,
+     3.09
+    ],
+    [
+     "biggest",
+     3.09,
+     3.67
+    ],
+    [
+     "bird",
+     3.67,
+     4.05
+    ],
+    [
+     "in",
+     4.05,
+     4.13
+    ],
+    [
+     "the",
+     4.13,
+     4.21
+    ],
+    [
+     "world!",
+     4.21,
+     4.73
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the biggest bird",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "And it lays the biggest egg, of all!",
+   "t0": 26.5625,
+   "t1": 29.375,
+   "v0": 26.829750000000004,
+   "dur": 2.3052083333333333,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.19
+    ],
+    [
+     "it",
+     0.19,
+     0.27
+    ],
+    [
+     "lays",
+     0.27,
+     0.58
+    ],
+    [
+     "the",
+     0.58,
+     0.66
+    ],
+    [
+     "biggest",
+     0.66,
+     1.2
+    ],
+    [
+     "egg,",
+     1.2,
+     1.58
+    ],
+    [
+     "of",
+     1.77,
+     1.92
+    ],
+    [
+     "all!",
+     1.92,
+     2.3
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the biggest egg",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "One ostrich egg is as heavy as about twenty-four chicken eggs!",
+   "t0": 29.375,
+   "t1": 34.6875,
+   "v0": 29.67495833333334,
+   "dur": 4.635458333333333,
+   "words": [
+    [
+     "One",
+     0.0,
+     0.33
+    ],
+    [
+     "ostrich",
+     0.33,
+     0.88
+    ],
+    [
+     "egg",
+     0.88,
+     1.29
+    ],
+    [
+     "is",
+     1.58,
+     1.75
+    ],
+    [
+     "as",
+     1.75,
+     1.92
+    ],
+    [
+     "heavy",
+     1.92,
+     2.58
+    ],
+    [
+     "as",
+     2.58,
+     2.73
+    ],
+    [
+     "about",
+     2.73,
+     3.05
+    ],
+    [
+     "twenty-four",
+     3.05,
+     3.69
+    ],
+    [
+     "chicken",
+     3.69,
+     4.12
+    ],
+    [
+     "eggs!",
+     4.12,
+     4.63
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: 24 chicken eggs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "The dad scratches the nest, in the dirt. It is just a shallow hole!",
+   "t0": 34.6875,
+   "t1": 40.0,
+   "v0": 34.850416666666675,
+   "dur": 4.659,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "dad",
+     0.12,
+     0.57
+    ],
+    [
+     "scratches",
+     0.57,
+     1.24
+    ],
+    [
+     "the",
+     1.24,
+     1.33
+    ],
+    [
+     "nest,",
+     1.33,
+     1.87
+    ],
+    [
+     "in",
+     1.87,
+     2.03
+    ],
+    [
+     "the",
+     2.03,
+     2.11
+    ],
+    [
+     "dirt.",
+     2.11,
+     2.62
+    ],
+    [
+     "It",
+     3.07,
+     3.19
+    ],
+    [
+     "is",
+     3.19,
+     3.33
+    ],
+    [
+     "just",
+     3.33,
+     3.57
+    ],
+    [
+     "a",
+     3.57,
+     3.6
+    ],
+    [
+     "shallow",
+     3.6,
+     4.18
+    ],
+    [
+     "hole!",
+     4.18,
+     4.659
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the dad scratches the nest",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Who keeps the egg warm?",
+   "t0": 40.0,
+   "t1": 45.0,
+   "v0": 40.04941666666667,
+   "dur": 1.508375,
+   "words": [
+    [
+     "Who",
+     0.02,
+     0.18
+    ],
+    [
+     "keeps",
+     0.18,
+     0.58
+    ],
+    [
+     "the",
+     0.58,
+     0.73
+    ],
+    [
+     "egg",
+     0.73,
+     0.98
+    ],
+    [
+     "warm?",
+     0.98,
+     1.508
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "who keeps it warm",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Mom sits on the eggs in the day. And dad sits on them at night!",
+   "t0": 45.0,
+   "t1": 49.6875,
+   "v0": 45.09779166666667,
+   "dur": 4.162875,
+   "words": [
+    [
+     "Mom",
+     0.01,
+     0.48
+    ],
+    [
+     "sits",
+     0.48,
+     0.86
+    ],
+    [
+     "on",
+     0.86,
+     0.96
+    ],
+    [
+     "the",
+     0.96,
+     1.08
+    ],
+    [
+     "eggs",
+     1.08,
+     1.46
+    ],
+    [
+     "in",
+     1.46,
+     1.56
+    ],
+    [
+     "the",
+     1.56,
+     1.64
+    ],
+    [
+     "day.",
+     1.64,
+     2.07
+    ],
+    [
+     "And",
+     2.48,
+     2.65
+    ],
+    [
+     "dad",
+     2.65,
+     3.07
+    ],
+    [
+     "sits",
+     3.07,
+     3.38
+    ],
+    [
+     "on",
+     3.38,
+     3.49
+    ],
+    [
+     "them",
+     3.49,
+     3.62
+    ],
+    [
+     "at",
+     3.62,
+     3.69
+    ],
+    [
+     "night!",
+     3.69,
+     4.16
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "board: day and night",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you sit like an ostrich, on a big egg? Gently, gently!",
+   "t0": 49.6875,
+   "t1": 56.875,
+   "v0": 49.80066666666667,
+   "dur": 4.233583333333334,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.17
+    ],
+    [
+     "you",
+     0.17,
+     0.29
+    ],
+    [
+     "sit",
+     0.29,
+     0.58
+    ],
+    [
+     "like",
+     0.58,
+     0.76
+    ],
+    [
+     "an",
+     0.76,
+     0.85
+    ],
+    [
+     "ostrich,",
+     0.85,
+     1.59
+    ],
+    [
+     "on",
+     1.59,
+     1.74
+    ],
+    [
+     "a",
+     1.74,
+     1.79
+    ],
+    [
+     "big",
+     1.79,
+     2.04
+    ],
+    [
+     "egg?",
+     2.04,
+     2.38
+    ],
+    [
+     "Gently,",
+     2.82,
+     3.58
+    ],
+    [
+     "gently!",
+     3.58,
+     4.23
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "sit like an ostrich",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Listen! Tap, tap. Crack! Here comes the chick!",
+   "t0": 56.875,
+   "t1": 60.3125,
+   "v0": 56.974250000000005,
+   "dur": 3.0237083333333334,
+   "words": [
+    [
+     "Listen!",
+     0.01,
+     0.78
+    ],
+    [
+     "Tap,",
+     0.78,
+     1.09
+    ],
+    [
+     "tap.",
+     1.09,
+     1.42
+    ],
+    [
+     "Crack!",
+     1.42,
+     1.94
+    ],
+    [
+     "Here",
+     1.94,
+     2.18
+    ],
+    [
+     "comes",
+     2.18,
+     2.46
+    ],
+    [
+     "the",
+     2.46,
+     2.54
+    ],
+    [
+     "chick!",
+     2.54,
+     3.02
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "the chick hatches",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "The chick is about as big as a chicken!",
+   "t0": 60.3125,
+   "t1": 63.4375,
+   "v0": 60.537958333333336,
+   "dur": 2.588625,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.14
+    ],
+    [
+     "chick",
+     0.14,
+     0.73
+    ],
+    [
+     "is",
+     0.73,
+     0.89
+    ],
+    [
+     "about",
+     0.89,
+     1.26
+    ],
+    [
+     "as",
+     1.26,
+     1.44
+    ],
+    [
+     "big",
+     1.44,
+     1.77
+    ],
+    [
+     "as",
+     1.77,
+     1.89
+    ],
+    [
+     "a",
+     1.89,
+     1.94
+    ],
+    [
+     "chicken!",
+     1.94,
+     2.589
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "as big as a chicken",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "A few days later, the chicks walk with mom and dad.",
+   "t0": 63.4375,
+   "t1": 67.5,
+   "v0": 63.666583333333335,
+   "dur": 3.3781666666666665,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.06
+    ],
+    [
+     "few",
+     0.06,
+     0.31
+    ],
+    [
+     "days",
+     0.31,
+     0.62
+    ],
+    [
+     "later,",
+     0.62,
+     1.04
+    ],
+    [
+     "the",
+     1.3,
+     1.4
+    ],
+    [
+     "chicks",
+     1.4,
+     1.85
+    ],
+    [
+     "walk",
+     1.85,
+     2.21
+    ],
+    [
+     "with",
+     2.21,
+     2.35
+    ],
+    [
+     "mom",
+     2.35,
+     2.79
+    ],
+    [
+     "and",
+     2.79,
+     2.93
+    ],
+    [
+     "dad.",
+     2.93,
+     3.378
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "walk with mom and dad",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Say it with me. The ostrich lays the biggest egg!",
+   "t0": 67.5,
+   "t1": 71.25,
+   "v0": 67.58475000000001,
+   "dur": 3.4755833333333332,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.32
+    ],
+    [
+     "it",
+     0.32,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.58
+    ],
+    [
+     "me.",
+     0.58,
+     0.95
+    ],
+    [
+     "The",
+     1.24,
+     1.41
+    ],
+    [
+     "ostrich",
+     1.41,
+     2.09
+    ],
+    [
+     "lays",
+     2.09,
+     2.4
+    ],
+    [
+     "the",
+     2.4,
+     2.5
+    ],
+    [
+     "biggest",
+     2.5,
+     3.02
+    ],
+    [
+     "egg!",
+     3.02,
+     3.47
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "say it: biggest egg",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "An ostrich can't fly. But it can run very fast! Zoom!",
+   "t0": 71.25,
+   "t1": 75.9375,
+   "v0": 71.60033333333335,
+   "dur": 4.046333333333333,
+   "words": [
+    [
+     "An",
+     0.01,
+     0.14
+    ],
+    [
+     "ostrich",
+     0.14,
+     0.73
+    ],
+    [
+     "can't",
+     0.73,
+     1.03
+    ],
+    [
+     "fly.",
+     1.03,
+     1.69
+    ],
+    [
+     "But",
+     1.69,
+     1.8
+    ],
+    [
+     "it",
+     1.8,
+     1.88
+    ],
+    [
+     "can",
+     1.88,
+     2.03
+    ],
+    [
+     "run",
+     2.03,
+     2.27
+    ],
+    [
+     "very",
+     2.27,
+     2.58
+    ],
+    [
+     "fast!",
+     2.58,
+     3.25
+    ],
+    [
+     "Zoom!",
+     3.46,
+     4.046
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "runs fast",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Run in place, like a fast ostrich! Run, run, run!",
+   "t0": 75.9375,
+   "t1": 83.125,
+   "v0": 76.1866666666667,
+   "dur": 4.326625,
+   "words": [
+    [
+     "Run",
+     0.01,
+     0.28
+    ],
+    [
+     "in",
+     0.28,
+     0.44
+    ],
+    [
+     "place,",
+     0.44,
+     0.89
+    ],
+    [
+     "like",
+     0.89,
+     1.06
+    ],
+    [
+     "a",
+     1.06,
+     1.1
+    ],
+    [
+     "fast",
+     1.1,
+     1.62
+    ],
+    [
+     "ostrich!",
+     1.62,
+     2.4
+    ],
+    [
+     "Run,",
+     2.84,
+     3.42
+    ],
+    [
+     "run,",
+     3.42,
+     3.84
+    ],
+    [
+     "run!",
+     3.84,
+     4.327
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "run in place",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Quick check! Is an ostrich egg big, or small?",
+   "t0": 83.125,
+   "t1": 90.0,
+   "v0": 83.45329166666671,
+   "dur": 3.0232083333333333,
+   "words": [
+    [
+     "Quick",
+     0.01,
+     0.24
+    ],
+    [
+     "check!",
+     0.24,
+     0.82
+    ],
+    [
+     "Is",
+     0.82,
+     0.96
+    ],
+    [
+     "an",
+     0.96,
+     1.1
+    ],
+    [
+     "ostrich",
+     1.1,
+     1.58
+    ],
+    [
+     "egg",
+     1.58,
+     1.79
+    ],
+    [
+     "big,",
+     1.79,
+     2.19
+    ],
+    [
+     "or",
+     2.19,
+     2.4
+    ],
+    [
+     "small?",
+     2.4,
+     3.02
+    ]
+   ],
+   "part": 1,
+   "q": true,
+   "tag": "question 1b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "savanna",
+   "say": "Big! Great job!",
+   "t0": 90.0,
+   "t1": 92.08987500000005,
+   "v0": 90.21650000000005,
+   "dur": 1.453375,
+   "words": [
+    [
+     "Big!",
+     0.01,
+     0.5
+    ],
+    [
+     "Great",
+     0.5,
+     0.84
+    ],
+    [
+     "job!",
+     0.84,
+     1.45
+    ]
+   ],
+   "part": 1,
+   "q": false,
+   "tag": "great job 1",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

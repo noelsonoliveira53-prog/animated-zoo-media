@@ -1,0 +1,1754 @@
+{
+ "id": "zc_ep14_short2",
+ "total": 88.96191666666671,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 89.0,
+  "shots": 17,
+  "visual_changes": 70,
+  "mean_gap": 1.27,
+  "longest_gap": 5.36,
+  "longest_gap_at": 60.3,
+  "over_6s": [],
+  "places": [
+   "shore",
+   "shore_night",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper",
+   "paper_pink"
+  ],
+  "questions": 8,
+  "longest_without_question": 37.8,
+  "first_words_at": 0.42,
+  "shot_mean": 5.23,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "188/188",
+  "sync": {
+   "pauses_checked": 15,
+   "onset_err_mean_ms": 34.0,
+   "onset_err_max_ms": 100.0,
+   "suspect_words": [],
+   "cuts": 16,
+   "cuts_on_the_half_beat": 16,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the shallow water hook: eggs in the sand"
+  ],
+  [
+   2.22,
+   "word",
+   "?"
+  ],
+  [
+   3.75,
+   "new shot",
+   "the shallow water egg 2"
+  ],
+  [
+   5.98,
+   "word",
+   "LITTLE!"
+  ],
+  [
+   6.18,
+   "word",
+   "ROUND!"
+  ],
+  [
+   9.69,
+   "new shot",
+   "the shallow water question 2a"
+  ],
+  [
+   10.5,
+   "sign",
+   "TURTLE"
+  ],
+  [
+   10.85,
+   "sign",
+   "FROG"
+  ],
+  [
+   14.03,
+   "thinking dot",
+   "1"
+  ],
+  [
+   14.71,
+   "thinking dot",
+   "2"
+  ],
+  [
+   15.38,
+   "thinking dot",
+   "3"
+  ],
+  [
+   15.87,
+   "answer",
+   "TURTLE"
+  ],
+  [
+   17.19,
+   "new shot",
+   "the shallow water the sea turtle comes"
+  ],
+  [
+   17.3,
+   "action",
+   "tur walks"
+  ],
+  [
+   18.77,
+   "action",
+   "tur nods"
+  ],
+  [
+   18.77,
+   "word",
+   "SEA TURTLE!"
+  ],
+  [
+   20.62,
+   "new shot",
+   "the shallow water crawls up the beach"
+  ],
+  [
+   23.95,
+   "action",
+   "tur walks"
+  ],
+  [
+   23.95,
+   "word",
+   "CRAWL!"
+  ],
+  [
+   25.94,
+   "new shot",
+   "the shallow water digs with flippers"
+  ],
+  [
+   26.39,
+   "action",
+   "the turtle digs with her flippers"
+  ],
+  [
+   26.39,
+   "picture",
+   "pf"
+  ],
+  [
+   29.15,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   30.31,
+   "new shot",
+   "the shallow water one hundred eggs"
+  ],
+  [
+   31.56,
+   "word",
+   "100!"
+  ],
+  [
+   33.75,
+   "new place",
+   "the picture board board: ping-pong ball"
+  ],
+  [
+   35.28,
+   "word",
+   "SAME SIZE!"
+  ],
+  [
+   35.8,
+   "picture",
+   "pp"
+  ],
+  [
+   38.12,
+   "new place",
+   "the picture board (pink) board: soft eggs dent"
+  ],
+  [
+   38.91,
+   "word",
+   "SOFT!"
+  ],
+  [
+   40.77,
+   "action",
+   "a finger presses the egg"
+  ],
+  [
+   40.77,
+   "action",
+   "the soft egg dents"
+  ],
+  [
+   40.77,
+   "picture",
+   "fg"
+  ],
+  [
+   40.77,
+   "word",
+   "DENT!"
+  ],
+  [
+   42.81,
+   "new place",
+   "the shallow water covers and goes back"
+  ],
+  [
+   43.43,
+   "action",
+   "sand covers the eggs"
+  ],
+  [
+   45.68,
+   "action",
+   "tur walks"
+  ],
+  [
+   46.53,
+   "word",
+   "BACK TO THE SEA!"
+  ],
+  [
+   47.5,
+   "new shot",
+   "the shallow water when do the babies come"
+  ],
+  [
+   48.0,
+   "action",
+   "tur looks"
+  ],
+  [
+   49.25,
+   "word",
+   "?"
+  ],
+  [
+   52.5,
+   "new place",
+   "the beach at night babies go to the sea"
+  ],
+  [
+   53.44,
+   "word",
+   "NIGHT!"
+  ],
+  [
+   56.19,
+   "action",
+   "b1 walks"
+  ],
+  [
+   56.19,
+   "action",
+   "b2 walks"
+  ],
+  [
+   56.19,
+   "action",
+   "b3 walks"
+  ],
+  [
+   56.19,
+   "action",
+   "b4 walks"
+  ],
+  [
+   57.16,
+   "action",
+   "b2 hops"
+  ],
+  [
+   58.12,
+   "new place",
+   "the zoo gate crawl like a turtle"
+  ],
+  [
+   60.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   60.26,
+   "action",
+   "milo hops"
+  ],
+  [
+   60.26,
+   "word",
+   "FLAP, FLAP!"
+  ],
+  [
+   65.62,
+   "new place",
+   "the shallow water say it: eggs in the sand"
+  ],
+  [
+   65.79,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   67.48,
+   "action",
+   "tur nods"
+  ],
+  [
+   70.0,
+   "new place",
+   "the zoo gate dig like a turtle"
+  ],
+  [
+   70.4,
+   "action",
+   "milo hops"
+  ],
+  [
+   70.4,
+   "word",
+   "DIG, DIG!"
+  ],
+  [
+   73.49,
+   "action",
+   "milo hops"
+  ],
+  [
+   73.84,
+   "action",
+   "milo hops"
+  ],
+  [
+   77.19,
+   "new place",
+   "the shallow water question 2b"
+  ],
+  [
+   80.76,
+   "sign",
+   "SAND"
+  ],
+  [
+   81.11,
+   "sign",
+   "TREE"
+  ],
+  [
+   82.89,
+   "thinking dot",
+   "1"
+  ],
+  [
+   83.57,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.24,
+   "thinking dot",
+   "3"
+  ],
+  [
+   84.73,
+   "answer",
+   "SAND"
+  ],
+  [
+   85.94,
+   "new shot",
+   "the shallow water super"
+  ],
+  [
+   87.21,
+   "action",
+   "tur nods"
+  ],
+  [
+   87.21,
+   "word",
+   "SUPER!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "shore",
+   "say": "Little eggs in the sand! Guess with Milo!",
+   "t0": 0.0,
+   "t1": 3.75,
+   "v0": 0.42,
+   "dur": 2.95925,
+   "words": [
+    [
+     "Little",
+     0.0,
+     0.31
+    ],
+    [
+     "eggs",
+     0.31,
+     0.69
+    ],
+    [
+     "in",
+     0.69,
+     0.82
+    ],
+    [
+     "the",
+     0.82,
+     0.88
+    ],
+    [
+     "sand!",
+     0.88,
+     1.47
+    ],
+    [
+     "Guess",
+     1.8,
+     2.13
+    ],
+    [
+     "with",
+     2.13,
+     2.28
+    ],
+    [
+     "Milo!",
+     2.28,
+     2.959
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: eggs in the sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Here are more eggs. Lots of little round eggs, in the sand! Whose eggs are they?",
+   "t0": 3.75,
+   "t1": 9.6875,
+   "v0": 3.91925,
+   "dur": 5.276208333333333,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.32
+    ],
+    [
+     "are",
+     0.32,
+     0.39
+    ],
+    [
+     "more",
+     0.39,
+     0.67
+    ],
+    [
+     "eggs.",
+     0.67,
+     1.24
+    ],
+    [
+     "Lots",
+     1.62,
+     1.96
+    ],
+    [
+     "of",
+     1.96,
+     2.06
+    ],
+    [
+     "little",
+     2.06,
+     2.26
+    ],
+    [
+     "round",
+     2.26,
+     2.55
+    ],
+    [
+     "eggs,",
+     2.55,
+     3.0
+    ],
+    [
+     "in",
+     3.0,
+     3.11
+    ],
+    [
+     "the",
+     3.11,
+     3.18
+    ],
+    [
+     "sand!",
+     3.18,
+     3.76
+    ],
+    [
+     "Whose",
+     4.13,
+     4.44
+    ],
+    [
+     "eggs",
+     4.44,
+     4.81
+    ],
+    [
+     "are",
+     4.81,
+     4.91
+    ],
+    [
+     "they?",
+     4.91,
+     5.276
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "egg 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Are they the sea turtle's eggs? Or are they the frog's eggs?",
+   "t0": 9.6875,
+   "t1": 17.1875,
+   "v0": 9.735458333333332,
+   "dur": 3.8109583333333332,
+   "words": [
+    [
+     "Are",
+     0.04,
+     0.15
+    ],
+    [
+     "they",
+     0.15,
+     0.37
+    ],
+    [
+     "the",
+     0.37,
+     0.46
+    ],
+    [
+     "sea",
+     0.46,
+     0.76
+    ],
+    [
+     "turtle's",
+     0.76,
+     1.28
+    ],
+    [
+     "eggs?",
+     1.28,
+     1.77
+    ],
+    [
+     "Or",
+     2.1,
+     2.33
+    ],
+    [
+     "are",
+     2.33,
+     2.45
+    ],
+    [
+     "they",
+     2.45,
+     2.65
+    ],
+    [
+     "the",
+     2.65,
+     2.73
+    ],
+    [
+     "frog's",
+     2.73,
+     3.28
+    ],
+    [
+     "eggs?",
+     3.28,
+     3.81
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "It is the sea turtle!",
+   "t0": 17.1875,
+   "t1": 20.625,
+   "v0": 17.286416666666668,
+   "dur": 1.4793333333333334,
+   "words": [
+    [
+     "It",
+     0.01,
+     0.25
+    ],
+    [
+     "is",
+     0.25,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.59
+    ],
+    [
+     "sea",
+     0.59,
+     0.91
+    ],
+    [
+     "turtle!",
+     0.91,
+     1.479
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "the sea turtle comes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Here is the fun fact. A mama sea turtle crawls up the sandy beach.",
+   "t0": 20.625,
+   "t1": 25.9375,
+   "v0": 20.705750000000002,
+   "dur": 4.926291666666667,
+   "words": [
+    [
+     "Here",
+     0.01,
+     0.35
+    ],
+    [
+     "is",
+     0.35,
+     0.5
+    ],
+    [
+     "the",
+     0.5,
+     0.58
+    ],
+    [
+     "fun",
+     0.58,
+     0.98
+    ],
+    [
+     "fact.",
+     0.98,
+     1.6
+    ],
+    [
+     "A",
+     2.03,
+     2.09
+    ],
+    [
+     "mama",
+     2.09,
+     2.53
+    ],
+    [
+     "sea",
+     2.53,
+     2.82
+    ],
+    [
+     "turtle",
+     2.82,
+     3.24
+    ],
+    [
+     "crawls",
+     3.24,
+     3.72
+    ],
+    [
+     "up",
+     3.72,
+     3.83
+    ],
+    [
+     "the",
+     3.83,
+     3.91
+    ],
+    [
+     "sandy",
+     3.91,
+     4.41
+    ],
+    [
+     "beach.",
+     4.41,
+     4.926
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "crawls up the beach",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "She digs a hole in the sand, with her flippers. Dig, dig!",
+   "t0": 25.9375,
+   "t1": 30.3125,
+   "v0": 26.172041666666672,
+   "dur": 3.8829583333333333,
+   "words": [
+    [
+     "She",
+     0.03,
+     0.22
+    ],
+    [
+     "digs",
+     0.22,
+     0.46
+    ],
+    [
+     "a",
+     0.46,
+     0.5
+    ],
+    [
+     "hole",
+     0.5,
+     0.81
+    ],
+    [
+     "in",
+     0.81,
+     0.91
+    ],
+    [
+     "the",
+     0.91,
+     0.98
+    ],
+    [
+     "sand,",
+     0.98,
+     1.56
+    ],
+    [
+     "with",
+     1.56,
+     1.71
+    ],
+    [
+     "her",
+     1.71,
+     1.8
+    ],
+    [
+     "flippers.",
+     1.8,
+     2.53
+    ],
+    [
+     "Dig,",
+     2.98,
+     3.41
+    ],
+    [
+     "dig!",
+     3.41,
+     3.88
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "digs with flippers",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "She lays about one hundred eggs! So many!",
+   "t0": 30.3125,
+   "t1": 33.75,
+   "v0": 30.59500000000001,
+   "dur": 2.7767916666666665,
+   "words": [
+    [
+     "She",
+     0.01,
+     0.22
+    ],
+    [
+     "lays",
+     0.22,
+     0.52
+    ],
+    [
+     "about",
+     0.52,
+     0.77
+    ],
+    [
+     "one",
+     0.77,
+     0.96
+    ],
+    [
+     "hundred",
+     0.96,
+     1.31
+    ],
+    [
+     "eggs!",
+     1.31,
+     1.89
+    ],
+    [
+     "So",
+     2.14,
+     2.36
+    ],
+    [
+     "many!",
+     2.36,
+     2.777
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "one hundred eggs",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Each egg is about as big as a ping-pong ball.",
+   "t0": 33.75,
+   "t1": 38.125,
+   "v0": 33.91179166666667,
+   "dur": 3.0086666666666666,
+   "words": [
+    [
+     "Each",
+     0.01,
+     0.29
+    ],
+    [
+     "egg",
+     0.29,
+     0.83
+    ],
+    [
+     "is",
+     0.83,
+     0.96
+    ],
+    [
+     "about",
+     0.96,
+     1.19
+    ],
+    [
+     "as",
+     1.19,
+     1.37
+    ],
+    [
+     "big",
+     1.37,
+     1.72
+    ],
+    [
+     "as",
+     1.72,
+     1.85
+    ],
+    [
+     "a",
+     1.85,
+     1.89
+    ],
+    [
+     "ping-pong",
+     1.89,
+     2.59
+    ],
+    [
+     "ball.",
+     2.59,
+     3.009
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: ping-pong ball",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "The eggs are soft, and leathery. They dent, instead of breaking!",
+   "t0": 38.125,
+   "t1": 42.8125,
+   "v0": 38.26045833333334,
+   "dur": 4.231625,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.2
+    ],
+    [
+     "eggs",
+     0.2,
+     0.56
+    ],
+    [
+     "are",
+     0.56,
+     0.65
+    ],
+    [
+     "soft,",
+     0.65,
+     1.24
+    ],
+    [
+     "and",
+     1.24,
+     1.36
+    ],
+    [
+     "leathery.",
+     1.36,
+     1.93
+    ],
+    [
+     "They",
+     2.36,
+     2.51
+    ],
+    [
+     "dent,",
+     2.51,
+     3.08
+    ],
+    [
+     "instead",
+     3.08,
+     3.49
+    ],
+    [
+     "of",
+     3.49,
+     3.58
+    ],
+    [
+     "breaking!",
+     3.58,
+     4.23
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: soft eggs dent",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Then she covers the eggs with sand, and goes back to the sea.",
+   "t0": 42.8125,
+   "t1": 47.5,
+   "v0": 43.03208333333334,
+   "dur": 4.004,
+   "words": [
+    [
+     "Then",
+     0.0,
+     0.22
+    ],
+    [
+     "she",
+     0.22,
+     0.4
+    ],
+    [
+     "covers",
+     0.4,
+     0.86
+    ],
+    [
+     "the",
+     0.86,
+     1.02
+    ],
+    [
+     "eggs",
+     1.02,
+     1.45
+    ],
+    [
+     "with",
+     1.45,
+     1.6
+    ],
+    [
+     "sand,",
+     1.6,
+     2.17
+    ],
+    [
+     "and",
+     2.51,
+     2.65
+    ],
+    [
+     "goes",
+     2.65,
+     2.95
+    ],
+    [
+     "back",
+     2.95,
+     3.32
+    ],
+    [
+     "to",
+     3.32,
+     3.42
+    ],
+    [
+     "the",
+     3.42,
+     3.5
+    ],
+    [
+     "sea.",
+     3.5,
+     4.0
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "covers and goes back",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "When do the babies come out?",
+   "t0": 47.5,
+   "t1": 52.5,
+   "v0": 47.57608333333334,
+   "dur": 1.6769166666666666,
+   "words": [
+    [
+     "When",
+     0.0,
+     0.22
+    ],
+    [
+     "do",
+     0.22,
+     0.33
+    ],
+    [
+     "the",
+     0.33,
+     0.42
+    ],
+    [
+     "babies",
+     0.42,
+     0.96
+    ],
+    [
+     "come",
+     0.96,
+     1.23
+    ],
+    [
+     "out?",
+     1.23,
+     1.677
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "when do the babies come",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore_night",
+   "say": "Mostly at night, the babies hatch. And they all hurry to the sea, together!",
+   "t0": 52.5,
+   "t1": 58.125,
+   "v0": 52.793,
+   "dur": 5.010916666666667,
+   "words": [
+    [
+     "Mostly",
+     0.0,
+     0.55
+    ],
+    [
+     "at",
+     0.55,
+     0.65
+    ],
+    [
+     "night,",
+     0.65,
+     1.14
+    ],
+    [
+     "the",
+     1.25,
+     1.35
+    ],
+    [
+     "babies",
+     1.35,
+     1.85
+    ],
+    [
+     "hatch.",
+     1.85,
+     2.43
+    ],
+    [
+     "And",
+     2.88,
+     3.0
+    ],
+    [
+     "they",
+     3.0,
+     3.14
+    ],
+    [
+     "all",
+     3.14,
+     3.4
+    ],
+    [
+     "hurry",
+     3.4,
+     3.8
+    ],
+    [
+     "to",
+     3.8,
+     3.91
+    ],
+    [
+     "the",
+     3.91,
+     3.99
+    ],
+    [
+     "sea,",
+     3.99,
+     4.37
+    ],
+    [
+     "together!",
+     4.37,
+     5.01
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "babies go to the sea",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Crawl like a baby sea turtle! Flap your flippers. Flap, flap!",
+   "t0": 58.125,
+   "t1": 65.625,
+   "v0": 58.343916666666665,
+   "dur": 4.508791666666666,
+   "words": [
+    [
+     "Crawl",
+     0.05,
+     0.4
+    ],
+    [
+     "like",
+     0.4,
+     0.57
+    ],
+    [
+     "a",
+     0.57,
+     0.61
+    ],
+    [
+     "baby",
+     0.61,
+     1.03
+    ],
+    [
+     "sea",
+     1.03,
+     1.29
+    ],
+    [
+     "turtle!",
+     1.29,
+     1.78
+    ],
+    [
+     "Flap",
+     1.92,
+     2.21
+    ],
+    [
+     "your",
+     2.21,
+     2.32
+    ],
+    [
+     "flippers.",
+     2.32,
+     3.01
+    ],
+    [
+     "Flap,",
+     3.4,
+     3.89
+    ],
+    [
+     "flap!",
+     3.89,
+     4.509
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "crawl like a turtle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Say it with me. A sea turtle lays her eggs in the sand!",
+   "t0": 65.625,
+   "t1": 70.0,
+   "v0": 65.79270833333334,
+   "dur": 3.7629166666666665,
+   "words": [
+    [
+     "Say",
+     0.0,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.42
+    ],
+    [
+     "with",
+     0.42,
+     0.59
+    ],
+    [
+     "me.",
+     0.59,
+     0.94
+    ],
+    [
+     "A",
+     1.34,
+     1.39
+    ],
+    [
+     "sea",
+     1.39,
+     1.69
+    ],
+    [
+     "turtle",
+     1.69,
+     2.1
+    ],
+    [
+     "lays",
+     2.1,
+     2.38
+    ],
+    [
+     "her",
+     2.38,
+     2.55
+    ],
+    [
+     "eggs",
+     2.55,
+     2.98
+    ],
+    [
+     "in",
+     2.98,
+     3.09
+    ],
+    [
+     "the",
+     3.09,
+     3.16
+    ],
+    [
+     "sand!",
+     3.16,
+     3.76
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: eggs in the sand",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Now dig in the sand, like a mama sea turtle. Dig, dig, dig!",
+   "t0": 70.0,
+   "t1": 77.1875,
+   "v0": 70.09562500000001,
+   "dur": 4.455,
+   "words": [
+    [
+     "Now",
+     0.01,
+     0.3
+    ],
+    [
+     "dig",
+     0.3,
+     0.57
+    ],
+    [
+     "in",
+     0.57,
+     0.67
+    ],
+    [
+     "the",
+     0.67,
+     0.73
+    ],
+    [
+     "sand,",
+     0.73,
+     1.45
+    ],
+    [
+     "like",
+     1.45,
+     1.61
+    ],
+    [
+     "a",
+     1.61,
+     1.67
+    ],
+    [
+     "mama",
+     1.67,
+     2.11
+    ],
+    [
+     "sea",
+     2.11,
+     2.39
+    ],
+    [
+     "turtle.",
+     2.39,
+     2.87
+    ],
+    [
+     "Dig,",
+     3.39,
+     3.74
+    ],
+    [
+     "dig,",
+     3.74,
+     4.04
+    ],
+    [
+     "dig!",
+     4.04,
+     4.45
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "dig like a turtle",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "Quick check! Where does a sea turtle lay her eggs? In the sand, or in a tree?",
+   "t0": 77.1875,
+   "t1": 85.9375,
+   "v0": 77.49062500000002,
+   "dur": 4.916916666666666,
+   "words": [
+    [
+     "Quick",
+     0.01,
+     0.26
+    ],
+    [
+     "check!",
+     0.26,
+     0.67
+    ],
+    [
+     "Where",
+     0.67,
+     0.91
+    ],
+    [
+     "does",
+     0.91,
+     1.04
+    ],
+    [
+     "a",
+     1.04,
+     1.07
+    ],
+    [
+     "sea",
+     1.07,
+     1.36
+    ],
+    [
+     "turtle",
+     1.36,
+     1.74
+    ],
+    [
+     "lay",
+     1.74,
+     1.9
+    ],
+    [
+     "her",
+     1.9,
+     2.09
+    ],
+    [
+     "eggs?",
+     2.09,
+     2.61
+    ],
+    [
+     "In",
+     3.06,
+     3.2
+    ],
+    [
+     "the",
+     3.2,
+     3.27
+    ],
+    [
+     "sand,",
+     3.27,
+     3.92
+    ],
+    [
+     "or",
+     3.92,
+     4.21
+    ],
+    [
+     "in",
+     4.21,
+     4.33
+    ],
+    [
+     "a",
+     4.33,
+     4.39
+    ],
+    [
+     "tree?",
+     4.39,
+     4.917
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "shore",
+   "say": "In the sand! Super digging!",
+   "t0": 85.9375,
+   "t1": 88.5619166666667,
+   "v0": 86.1475416666667,
+   "dur": 1.994375,
+   "words": [
+    [
+     "In",
+     0.0,
+     0.19
+    ],
+    [
+     "the",
+     0.19,
+     0.26
+    ],
+    [
+     "sand!",
+     0.26,
+     0.88
+    ],
+    [
+     "Super",
+     1.06,
+     1.45
+    ],
+    [
+     "digging!",
+     1.45,
+     1.99
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

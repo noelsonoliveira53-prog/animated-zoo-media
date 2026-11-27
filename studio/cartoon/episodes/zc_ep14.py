@@ -350,6 +350,6 @@ THUMBS = {
                        "words": [("SO BIG!", 540, 1500, 200, "sun")]},
     "zc_ep14_short2": {"place": "shore", "cam": (960, 820, 1100), "props": [(lambda q: A.turtle_nest(q, 820, 17), 960, 1000, 1.1)],
                        "words": [("SO MANY!", 540, 1500, 190, "sun")]},
-    "zc_ep14_short3": {"place": "arctic", "cam": (980, 820, 1000), "actors": [("penguin_egg", 960, 1080, 1.4, False, "")],
-                       "words": [("BRRR!", 540, 1560, 210, "sun")]},
+    "zc_ep14_short3": {"place": "arctic", "cam": (1000, 700, 1300), "actors": [("penguin_egg", 960, 1080, 1.4, False, "")],
+                       "words": [("BRRR!", 540, 1640, 210, "sun")]},
 }

@@ -3658,12 +3658,30 @@
   "date": "2026-11-28",
   "time": "5:30 PM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 27 2026 about 3:15 PM ET by the scheduled 1:17 PM lesson build (session in the claim commit's Claude-Session line; run note docs/cartoon/runs/zc_ep14.md). In production: not built yet.",
-  "theme_title": "Whose Egg Is This? Guess With Milo"
+  "note": "Built Nov 27 2026 by the scheduled 1:17 PM lesson build (session in the commits' Claude-Session line): facts read at the source today (SDZWA, LA Zoo, Smithsonian's National Zoo, Nova Southeastern University sea turtle program, National Geographic and NG Kids, SeaWorld; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 in three rounds; frames of the finished file (middle and end of every shot, every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the file; thumbnail looked at; review.py. New art the owner has not seen: ostrich, ostrich chick, emperor penguin and chick, eggs and nests, the beach at night. Run note docs/cartoon/runs/zc_ep14.md. NOT uploaded: the daily run schedules it.",
+  "theme_title": "Whose Egg Is This? Guess With Milo",
+  "description": "Look! An egg is wobbling! Who is inside? Look at each egg with Milo the bluebird and guess whose egg it is before the baby hatches! A gentle guessing game for ages 2-6 with answer signs, thinking time, moves to copy and a quiz at the end.\nKids learn that the ostrich, the biggest bird in the world, lays the biggest egg of all, as heavy as about 24 chicken eggs, and that mom sits on the eggs in the day and dad at night; that a mama sea turtle digs a hole in the sand with her flippers and lays about one hundred soft eggs, each about as big as a ping-pong ball; and that a daddy emperor penguin keeps the egg warm on his feet, under a cozy fold of feathered skin called a brood pouch.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (ostrich); Los Angeles Zoo (ostrich); Smithsonian's National Zoo (ostrich); Nova Southeastern University, Broward County Sea Turtle Conservation Program (sea turtles); National Geographic and National Geographic Kids (emperor penguin); SeaWorld (emperor penguin).",
+  "tags": [
+   "whose egg is this",
+   "guess with milo",
+   "guess the animal",
+   "animal eggs for kids",
+   "ostrich egg",
+   "sea turtle eggs",
+   "emperor penguin egg",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb": "brand/zoo/thumb_zc_ep14.jpg",
+  "thumb_text": "CRACK!",
+  "seconds": 360.8
  },
  {
   "file": "cartoon/zc_ep15.mp4",

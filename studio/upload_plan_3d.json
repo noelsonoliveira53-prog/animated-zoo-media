@@ -3510,7 +3510,7 @@
   "date": "2026-11-28",
   "time": "5:30 AM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_adventure",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3536,7 +3536,10 @@
   ],
   "thumb_text": "TOO SMALL!",
   "seconds": 339.7,
-  "bookends": true
+  "bookends": true,
+  "video_id": "PgtcNC-avhg",
+  "thumb_set": true,
+  "uploaded": "2026-11-27 2:58 PM ET (Studio: public November 28, 2026 at 5:30 AM)"
  },
  {
   "file": "cartoon/za_ep14.mp4",

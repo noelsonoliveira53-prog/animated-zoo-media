@@ -2057,38 +2057,80 @@
  },
  {
   "file": "cartoon/zc_ep15_short1.mp4",
-  "title": "(zc_ep15 part 1)",
+  "title": "What Color Is One Polar Bear Hair?",
   "date": "2026-12-02",
   "time": "11:30 AM",
   "made_for_kids": true,
   "status": "in_production",
   "format": "cartoon_short_90",
   "res": "2160x3840",
-  "watermark": "tl",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+  "watermark": "top",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "from": "zc_ep15",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep15_short1.jpg",
+  "thumb_text": "LOOK!",
+  "description": "What color is one polar bear hair? Look very closely with Milo the bluebird: it is clear! Each hair is see-through and has no color of its own, and both layers of fur, the soft undercoat and the long guard hairs, are clear. A quick animal fact for kids from the lesson “Is a Polar Bear Really White?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Education (Animals 101: Polar Bears); San Diego Zoo Wildlife Alliance Library fact sheet (polar bear); Polar Bears International.",
+  "tags": [
+   "polar bear hair",
+   "is a polar bear white",
+   "polar bear facts for kids",
+   "arctic animals for kids",
+   "animal facts for kids",
+   "shorts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep15_short2.mp4",
-  "title": "(zc_ep15 part 2)",
+  "title": "Why Does a Polar Bear Look White?",
   "date": "2026-12-03",
   "time": "11:30 AM",
   "made_for_kids": true,
   "status": "in_production",
   "format": "cartoon_short_90",
   "res": "2160x3840",
-  "watermark": "tl",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+  "watermark": "top",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "from": "zc_ep15",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep15_short2.jpg",
+  "thumb_text": "SIP, SIP!",
+  "description": "If a polar bear's hairs are clear, why does it look white? The long guard hairs are hollow, full of air, and sunlight bounces all around in the hairs. All that bouncing light makes the fur look white, like sparkly ice! A quick animal fact for kids from the lesson “Is a Polar Bear Really White?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Education (Animals 101: Polar Bears); Polar Bears International; Ocean Conservancy.",
+  "tags": [
+   "why do polar bears look white",
+   "polar bear fur",
+   "hollow hair",
+   "polar bear facts for kids",
+   "animal facts for kids",
+   "shorts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep15_short3.mp4",
-  "title": "(zc_ep15 part 3)",
+  "title": "What Color Is a Polar Bear's Skin?",
   "date": "2026-12-04",
   "time": "11:30 AM",
   "made_for_kids": true,
   "status": "in_production",
   "format": "cartoon_short_90",
   "res": "2160x3840",
-  "watermark": "tl",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\")."
+  "watermark": "top",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "from": "zc_ep15",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep15_short3.jpg",
+  "thumb_text": "BOOP!",
+  "description": "What color is a polar bear's skin, under all that fur? Black! Its nose is black too. Sunlight shines through the clear fur to the black skin, which soaks up the sun's warmth and warms the bear. In summer the fur can even look a little yellow. A quick animal fact for kids from the lesson “Is a Polar Bear Really White?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nNational Geographic Education (Animals 101: Polar Bears); San Diego Zoo Wildlife Alliance Library fact sheet (polar bear).",
+  "tags": [
+   "polar bear skin",
+   "polar bear black skin",
+   "polar bear facts for kids",
+   "arctic animals for kids",
+   "animal facts for kids",
+   "shorts for kids",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  }
 ]

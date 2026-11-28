@@ -3810,11 +3810,28 @@
   "date": "2026-11-30",
   "time": "9:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
-  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production.",
-  "theme_title": "Can a Turtle Leave Its Shell?"
+  "note": "Claimed and built Nov 28 2026 by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj): facts read at the source today (San Diego Zoo Wildlife Alliance, Ask Dr. Universe WSU, PBS Nature, Smithsonian Ocean, Live Science, Olive Ridley Project, Spokesman-Review; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 plus fixes; frames of the finished files looked at (every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the files; thumbnails looked at; review.py PASS. New art the owner has not seen: the see-through shell with backbone and ribs, the coat, the door doodle, the fingernail and scute board, the land turtle. Run note docs/cartoon/runs/zc_ep17.md. NOT uploaded: the daily run schedules it.",
+  "theme_title": "Can a Turtle Leave Its Shell?",
+  "description": "Can a turtle leave its shell? Milo the bluebird knocks on Tula the green sea turtle's shell and finds her three shell secrets! A gentle animal lesson for ages 2-6 with questions to answer, things to feel, moves to copy and a quiz at the end.\nKids learn that a turtle cannot leave its shell, because the shell is part of its body: it is made of bones and joined to its backbone and ribs; that the shell grows as the turtle grows, and its plates, called scutes, are made of the same stuff as your fingernails; and that a sea turtle cannot pull its head into its shell, like many land turtles can, but it can feel a gentle touch on its shell.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (turtle and tortoise); Ask Dr. Universe, Washington State University (how turtles get their shells); PBS Nature (turtle anatomy); Smithsonian Ocean (sea turtles); Live Science (turtle facts); Olive Ridley Project (facts about sea turtles); The Spokesman-Review, Ask Dr. Universe (why sea turtles can not pull back into their shell).",
+  "tags": [
+   "can a turtle leave its shell",
+   "turtle shell facts for kids",
+   "sea turtle",
+   "ocean animals for kids",
+   "green sea turtle",
+   "turtle shell",
+   "animal facts for kids",
+   "learning videos for toddlers",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ],
+  "thumb": "brand/zoo/thumb_zc_ep17.jpg",
+  "thumb_text": "DOOR?!",
+  "seconds": 364.6
  }
 ]

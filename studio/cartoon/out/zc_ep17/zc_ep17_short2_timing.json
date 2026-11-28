@@ -1,0 +1,1922 @@
+{
+ "id": "zc_ep17_short2",
+ "total": 88.87029166666672,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875,
+  87.5,
+  88.125,
+  88.75
+ ],
+ "plan": {
+  "length": 88.9,
+  "shots": 19,
+  "visual_changes": 93,
+  "mean_gap": 0.96,
+  "longest_gap": 3.29,
+  "longest_gap_at": 34.7,
+  "over_6s": [],
+  "places": [
+   "reef",
+   "ocean",
+   "kelp",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper_blue",
+   "paper"
+  ],
+  "questions": 10,
+  "longest_without_question": 20.0,
+  "first_words_at": 0.42,
+  "shot_mean": 4.68,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "192/192",
+  "sync": {
+   "pauses_checked": 18,
+   "onset_err_mean_ms": 27.2,
+   "onset_err_max_ms": 40.0,
+   "suspect_words": [],
+   "cuts": 18,
+   "cuts_on_the_half_beat": 18,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the coral garden hook: does it grow?"
+  ],
+  [
+   1.52,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   1.52,
+   "word",
+   "?"
+  ],
+  [
+   2.5,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   2.5,
+   "new place",
+   "the blue ocean secret 2"
+  ],
+  [
+   2.6,
+   "action",
+   "tur walks"
+  ],
+  [
+   2.98,
+   "word",
+   "?"
+  ],
+  [
+   3.83,
+   "word",
+   "2"
+  ],
+  [
+   5.57,
+   "action",
+   "bubbles rise"
+  ],
+  [
+   6.68,
+   "action",
+   "tur looks"
+  ],
+  [
+   8.44,
+   "new place",
+   "the kelp forest question 2a"
+  ],
+  [
+   9.11,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   9.11,
+   "sign",
+   "NEW ONE"
+  ],
+  [
+   9.46,
+   "sign",
+   "GROWS"
+  ],
+  [
+   12.34,
+   "thinking dot",
+   "1"
+  ],
+  [
+   13.01,
+   "thinking dot",
+   "2"
+  ],
+  [
+   13.68,
+   "thinking dot",
+   "3"
+  ],
+  [
+   14.17,
+   "answer",
+   "GROWS"
+  ],
+  [
+   15.31,
+   "new place",
+   "the picture board (blue) board: it grows"
+  ],
+  [
+   16.13,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   16.13,
+   "word",
+   "IT GROWS!"
+  ],
+  [
+   17.13,
+   "action",
+   "tb nods"
+  ],
+  [
+   19.31,
+   "action",
+   "tur nods"
+  ],
+  [
+   20.0,
+   "new shot",
+   "the picture board (blue) board: like your bones"
+  ],
+  [
+   20.85,
+   "action",
+   "tur nods"
+  ],
+  [
+   20.85,
+   "word",
+   "LIKE YOU!"
+  ],
+  [
+   21.33,
+   "action",
+   "tur nods"
+  ],
+  [
+   23.12,
+   "new shot",
+   "the picture board (blue) board: little and big"
+  ],
+  [
+   24.63,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   24.63,
+   "action",
+   "tb nods"
+  ],
+  [
+   24.63,
+   "word",
+   "LITTLE"
+  ],
+  [
+   26.8,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   26.8,
+   "action",
+   "tur nods"
+  ],
+  [
+   26.8,
+   "word",
+   "BIG!"
+  ],
+  [
+   27.81,
+   "new place",
+   "the zoo gate stretch up tall"
+  ],
+  [
+   30.51,
+   "action",
+   "milo hops"
+  ],
+  [
+   30.51,
+   "word",
+   "SO TALL!"
+  ],
+  [
+   31.17,
+   "action",
+   "milo hops"
+  ],
+  [
+   33.28,
+   "action",
+   "milo hops"
+  ],
+  [
+   34.69,
+   "new place",
+   "the coral garden see the plates"
+  ],
+  [
+   37.98,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   37.98,
+   "word",
+   "PLATES!"
+  ],
+  [
+   40.0,
+   "new shot",
+   "the coral garden count the plates"
+  ],
+  [
+   40.97,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   40.97,
+   "word",
+   "3"
+  ],
+  [
+   42.01,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   42.01,
+   "word",
+   "1"
+  ],
+  [
+   42.32,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   42.32,
+   "word",
+   "2"
+  ],
+  [
+   43.44,
+   "new shot",
+   "the coral garden scutes"
+  ],
+  [
+   44.79,
+   "action",
+   "tur nods"
+  ],
+  [
+   44.79,
+   "action",
+   "tur nods"
+  ],
+  [
+   44.79,
+   "word",
+   "SCUTES!"
+  ],
+  [
+   47.19,
+   "new shot",
+   "the coral garden scutes protect"
+  ],
+  [
+   47.92,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   49.72,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   49.72,
+   "word",
+   "STRONG!"
+  ],
+  [
+   50.94,
+   "new place",
+   "the picture board board: like fingernails"
+  ],
+  [
+   51.03,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   53.3,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   53.3,
+   "word",
+   "FINGERNAILS!"
+  ],
+  [
+   54.69,
+   "new place",
+   "the zoo gate tap your nails"
+  ],
+  [
+   56.42,
+   "action",
+   "milo hops"
+  ],
+  [
+   56.42,
+   "action",
+   "milo hops"
+  ],
+  [
+   56.42,
+   "word",
+   "TAP, TAP!"
+  ],
+  [
+   59.6,
+   "action",
+   "milo hops"
+  ],
+  [
+   60.94,
+   "new place",
+   "the picture board (blue) board: the same"
+  ],
+  [
+   61.41,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   62.99,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   63.99,
+   "word",
+   "THE SAME!"
+  ],
+  [
+   65.31,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   65.31,
+   "new place",
+   "the blue ocean shell grows with her"
+  ],
+  [
+   67.65,
+   "word",
+   "GROWS!"
+  ],
+  [
+   68.96,
+   "action",
+   "tur nods"
+  ],
+  [
+   70.62,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   70.62,
+   "new place",
+   "the kelp forest big tula"
+  ],
+  [
+   73.47,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   73.47,
+   "word",
+   "BIG!"
+  ],
+  [
+   73.82,
+   "action",
+   "tur nods"
+  ],
+  [
+   74.69,
+   "new place",
+   "the coral garden say it: grows with it"
+  ],
+  [
+   74.93,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   77.04,
+   "action",
+   "tur nods"
+  ],
+  [
+   78.44,
+   "new place",
+   "the kelp forest question 2b"
+  ],
+  [
+   79.77,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   82.02,
+   "sign",
+   "YES"
+  ],
+  [
+   82.37,
+   "sign",
+   "NO"
+  ],
+  [
+   83.59,
+   "thinking dot",
+   "1"
+  ],
+  [
+   84.27,
+   "thinking dot",
+   "2"
+  ],
+  [
+   84.94,
+   "thinking dot",
+   "3"
+  ],
+  [
+   85.43,
+   "answer",
+   "YES"
+  ],
+  [
+   86.56,
+   "new place",
+   "the coral garden super"
+  ],
+  [
+   87.45,
+   "action",
+   "tur nods"
+  ],
+  [
+   87.45,
+   "word",
+   "SUPER!"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "reef",
+   "say": "Does a turtle's shell grow?",
+   "t0": 0.0,
+   "t1": 2.5,
+   "v0": 0.42,
+   "dur": 1.6267083333333334,
+   "words": [
+    [
+     "Does",
+     0.02,
+     0.21
+    ],
+    [
+     "a",
+     0.21,
+     0.26
+    ],
+    [
+     "turtle's",
+     0.26,
+     0.79
+    ],
+    [
+     "shell",
+     0.79,
+     1.1
+    ],
+    [
+     "grow?",
+     1.1,
+     1.627
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "hook: does it grow?",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Shell secret number two! When a little turtle grows bigger, what happens to its shell?",
+   "t0": 2.5,
+   "t1": 8.4375,
+   "v0": 2.5867083333333336,
+   "dur": 5.558125,
+   "words": [
+    [
+     "Shell",
+     0.01,
+     0.39
+    ],
+    [
+     "secret",
+     0.39,
+     0.92
+    ],
+    [
+     "number",
+     0.92,
+     1.24
+    ],
+    [
+     "two!",
+     1.24,
+     1.73
+    ],
+    [
+     "When",
+     2.2,
+     2.31
+    ],
+    [
+     "a",
+     2.31,
+     2.35
+    ],
+    [
+     "little",
+     2.35,
+     2.56
+    ],
+    [
+     "turtle",
+     2.56,
+     2.98
+    ],
+    [
+     "grows",
+     2.98,
+     3.37
+    ],
+    [
+     "bigger,",
+     3.37,
+     3.87
+    ],
+    [
+     "what",
+     4.09,
+     4.23
+    ],
+    [
+     "happens",
+     4.23,
+     4.75
+    ],
+    [
+     "to",
+     4.75,
+     4.91
+    ],
+    [
+     "its",
+     4.91,
+     5.1
+    ],
+    [
+     "shell?",
+     5.1,
+     5.558
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "secret 2",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Does it get a new shell? Or does its shell grow, too?",
+   "t0": 8.4375,
+   "t1": 15.3125,
+   "v0": 8.684833333333334,
+   "dur": 3.1667916666666667,
+   "words": [
+    [
+     "Does",
+     0.01,
+     0.18
+    ],
+    [
+     "it",
+     0.18,
+     0.26
+    ],
+    [
+     "get",
+     0.26,
+     0.39
+    ],
+    [
+     "a",
+     0.39,
+     0.43
+    ],
+    [
+     "new",
+     0.43,
+     0.68
+    ],
+    [
+     "shell?",
+     0.68,
+     1.17
+    ],
+    [
+     "Or",
+     1.54,
+     1.67
+    ],
+    [
+     "does",
+     1.67,
+     1.83
+    ],
+    [
+     "its",
+     1.83,
+     1.96
+    ],
+    [
+     "shell",
+     1.96,
+     2.27
+    ],
+    [
+     "grow,",
+     2.27,
+     2.62
+    ],
+    [
+     "too?",
+     2.62,
+     3.167
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Its shell grows! As a turtle grows, its shell grows with it.",
+   "t0": 15.3125,
+   "t1": 20.0,
+   "v0": 15.591624999999999,
+   "dur": 4.167041666666667,
+   "words": [
+    [
+     "Its",
+     0.01,
+     0.2
+    ],
+    [
+     "shell",
+     0.2,
+     0.54
+    ],
+    [
+     "grows!",
+     0.54,
+     1.23
+    ],
+    [
+     "As",
+     1.54,
+     1.75
+    ],
+    [
+     "a",
+     1.75,
+     1.79
+    ],
+    [
+     "turtle",
+     1.79,
+     2.24
+    ],
+    [
+     "grows,",
+     2.24,
+     2.79
+    ],
+    [
+     "its",
+     2.79,
+     2.99
+    ],
+    [
+     "shell",
+     2.99,
+     3.34
+    ],
+    [
+     "grows",
+     3.34,
+     3.72
+    ],
+    [
+     "with",
+     3.72,
+     3.91
+    ],
+    [
+     "it.",
+     3.91,
+     4.167
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: it grows",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Just like your bones grow, when you grow!",
+   "t0": 20.0,
+   "t1": 23.125,
+   "v0": 20.29866666666667,
+   "dur": 2.447416666666667,
+   "words": [
+    [
+     "Just",
+     0.02,
+     0.29
+    ],
+    [
+     "like",
+     0.29,
+     0.45
+    ],
+    [
+     "your",
+     0.45,
+     0.55
+    ],
+    [
+     "bones",
+     0.55,
+     1.03
+    ],
+    [
+     "grow,",
+     1.03,
+     1.51
+    ],
+    [
+     "when",
+     1.67,
+     1.79
+    ],
+    [
+     "you",
+     1.79,
+     1.91
+    ],
+    [
+     "grow!",
+     1.91,
+     2.447
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: like your bones",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "A baby turtle has a little shell. A big turtle has a big shell!",
+   "t0": 23.125,
+   "t1": 27.8125,
+   "v0": 23.286083333333337,
+   "dur": 4.277208333333333,
+   "words": [
+    [
+     "A",
+     0.01,
+     0.1
+    ],
+    [
+     "baby",
+     0.1,
+     0.56
+    ],
+    [
+     "turtle",
+     0.56,
+     1.07
+    ],
+    [
+     "has",
+     1.07,
+     1.3
+    ],
+    [
+     "a",
+     1.3,
+     1.34
+    ],
+    [
+     "little",
+     1.34,
+     1.54
+    ],
+    [
+     "shell.",
+     1.54,
+     2.03
+    ],
+    [
+     "A",
+     2.49,
+     2.56
+    ],
+    [
+     "big",
+     2.56,
+     2.83
+    ],
+    [
+     "turtle",
+     2.83,
+     3.25
+    ],
+    [
+     "has",
+     3.25,
+     3.47
+    ],
+    [
+     "a",
+     3.47,
+     3.51
+    ],
+    [
+     "big",
+     3.51,
+     3.78
+    ],
+    [
+     "shell!",
+     3.78,
+     4.277
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: little and big",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "You are growing, too! Stretch up nice and tall. So tall!",
+   "t0": 27.8125,
+   "t1": 34.6875,
+   "v0": 28.103291666666674,
+   "dur": 3.853666666666667,
+   "words": [
+    [
+     "You",
+     0.01,
+     0.13
+    ],
+    [
+     "are",
+     0.13,
+     0.22
+    ],
+    [
+     "growing,",
+     0.22,
+     0.71
+    ],
+    [
+     "too!",
+     0.71,
+     1.14
+    ],
+    [
+     "Stretch",
+     1.32,
+     1.72
+    ],
+    [
+     "up",
+     1.72,
+     1.85
+    ],
+    [
+     "nice",
+     1.85,
+     2.26
+    ],
+    [
+     "and",
+     2.26,
+     2.41
+    ],
+    [
+     "tall.",
+     2.41,
+     2.87
+    ],
+    [
+     "So",
+     3.07,
+     3.34
+    ],
+    [
+     "tall!",
+     3.34,
+     3.85
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "stretch up tall",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Look at the top of Tula's shell. Can you see the little plates?",
+   "t0": 34.6875,
+   "t1": 40.0,
+   "v0": 34.89695833333334,
+   "dur": 3.6881666666666666,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.23
+    ],
+    [
+     "at",
+     0.23,
+     0.29
+    ],
+    [
+     "the",
+     0.29,
+     0.37
+    ],
+    [
+     "top",
+     0.37,
+     0.76
+    ],
+    [
+     "of",
+     0.76,
+     0.85
+    ],
+    [
+     "Tula's",
+     0.85,
+     1.43
+    ],
+    [
+     "shell.",
+     1.43,
+     1.86
+    ],
+    [
+     "Can",
+     2.26,
+     2.45
+    ],
+    [
+     "you",
+     2.45,
+     2.57
+    ],
+    [
+     "see",
+     2.57,
+     2.81
+    ],
+    [
+     "the",
+     2.81,
+     2.89
+    ],
+    [
+     "little",
+     2.89,
+     3.08
+    ],
+    [
+     "plates?",
+     3.08,
+     3.688
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "see the plates",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Let's count three plates. One, two, three!",
+   "t0": 40.0,
+   "t1": 43.4375,
+   "v0": 40.32512500000001,
+   "dur": 2.812875,
+   "words": [
+    [
+     "Let's",
+     0.01,
+     0.33
+    ],
+    [
+     "count",
+     0.33,
+     0.64
+    ],
+    [
+     "three",
+     0.64,
+     0.86
+    ],
+    [
+     "plates.",
+     0.86,
+     1.42
+    ],
+    [
+     "One,",
+     1.68,
+     1.99
+    ],
+    [
+     "two,",
+     1.99,
+     2.22
+    ],
+    [
+     "three!",
+     2.22,
+     2.81
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "count the plates",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "These plates are called scutes. Say it: scutes!",
+   "t0": 43.4375,
+   "t1": 47.1875,
+   "v0": 43.678000000000004,
+   "dur": 3.133166666666667,
+   "words": [
+    [
+     "These",
+     0.0,
+     0.34
+    ],
+    [
+     "plates",
+     0.34,
+     0.7
+    ],
+    [
+     "are",
+     0.7,
+     0.79
+    ],
+    [
+     "called",
+     0.79,
+     1.11
+    ],
+    [
+     "scutes.",
+     1.11,
+     1.72
+    ],
+    [
+     "Say",
+     2.04,
+     2.34
+    ],
+    [
+     "it:",
+     2.34,
+     2.46
+    ],
+    [
+     "scutes!",
+     2.46,
+     3.13
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "scutes",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "The scutes cover her shell, and help to protect her.",
+   "t0": 47.1875,
+   "t1": 50.9375,
+   "v0": 47.35116666666667,
+   "dur": 3.1307916666666666,
+   "words": [
+    [
+     "The",
+     0.0,
+     0.12
+    ],
+    [
+     "scutes",
+     0.12,
+     0.57
+    ],
+    [
+     "cover",
+     0.57,
+     0.91
+    ],
+    [
+     "her",
+     0.91,
+     1.04
+    ],
+    [
+     "shell,",
+     1.04,
+     1.56
+    ],
+    [
+     "and",
+     1.84,
+     1.97
+    ],
+    [
+     "help",
+     1.97,
+     2.26
+    ],
+    [
+     "to",
+     2.26,
+     2.37
+    ],
+    [
+     "protect",
+     2.37,
+     2.88
+    ],
+    [
+     "her.",
+     2.88,
+     3.13
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "scutes protect",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Scutes are made of the same stuff as your fingernails!",
+   "t0": 50.9375,
+   "t1": 54.6875,
+   "v0": 51.02195833333334,
+   "dur": 3.2217083333333334,
+   "words": [
+    [
+     "Scutes",
+     0.01,
+     0.45
+    ],
+    [
+     "are",
+     0.45,
+     0.53
+    ],
+    [
+     "made",
+     0.53,
+     0.78
+    ],
+    [
+     "of",
+     0.78,
+     0.88
+    ],
+    [
+     "the",
+     0.88,
+     0.96
+    ],
+    [
+     "same",
+     0.96,
+     1.33
+    ],
+    [
+     "stuff",
+     1.33,
+     1.83
+    ],
+    [
+     "as",
+     1.95,
+     2.15
+    ],
+    [
+     "your",
+     2.15,
+     2.28
+    ],
+    [
+     "fingernails!",
+     2.28,
+     3.22
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: like fingernails",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Look at your fingernails. Can you tap them? Tap, tap!",
+   "t0": 54.6875,
+   "t1": 60.9375,
+   "v0": 54.78366666666667,
+   "dur": 3.4957083333333334,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.27
+    ],
+    [
+     "at",
+     0.27,
+     0.33
+    ],
+    [
+     "your",
+     0.33,
+     0.44
+    ],
+    [
+     "fingernails.",
+     0.44,
+     1.34
+    ],
+    [
+     "Can",
+     1.34,
+     1.53
+    ],
+    [
+     "you",
+     1.53,
+     1.64
+    ],
+    [
+     "tap",
+     1.64,
+     2.01
+    ],
+    [
+     "them?",
+     2.01,
+     2.31
+    ],
+    [
+     "Tap,",
+     2.63,
+     2.97
+    ],
+    [
+     "tap!",
+     2.97,
+     3.496
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "tap your nails",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_blue",
+   "say": "Your fingernails, and Tula's scutes. The same stuff!",
+   "t0": 60.9375,
+   "t1": 65.3125,
+   "v0": 61.219375,
+   "dur": 3.7972916666666667,
+   "words": [
+    [
+     "Your",
+     0.01,
+     0.19
+    ],
+    [
+     "fingernails,",
+     0.19,
+     1.06
+    ],
+    [
+     "and",
+     1.06,
+     1.21
+    ],
+    [
+     "Tula's",
+     1.21,
+     1.77
+    ],
+    [
+     "scutes.",
+     1.77,
+     2.35
+    ],
+    [
+     "The",
+     2.69,
+     2.77
+    ],
+    [
+     "same",
+     2.77,
+     3.21
+    ],
+    [
+     "stuff!",
+     3.21,
+     3.797
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "board: the same",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Tula swims, and grows, and grows. And her shell grows with her!",
+   "t0": 65.3125,
+   "t1": 70.625,
+   "v0": 65.55666666666667,
+   "dur": 4.6665833333333335,
+   "words": [
+    [
+     "Tula",
+     0.0,
+     0.44
+    ],
+    [
+     "swims,",
+     0.44,
+     1.18
+    ],
+    [
+     "and",
+     1.18,
+     1.35
+    ],
+    [
+     "grows,",
+     1.35,
+     1.96
+    ],
+    [
+     "and",
+     1.96,
+     2.09
+    ],
+    [
+     "grows.",
+     2.09,
+     2.77
+    ],
+    [
+     "And",
+     3.19,
+     3.31
+    ],
+    [
+     "her",
+     3.31,
+     3.4
+    ],
+    [
+     "shell",
+     3.4,
+     3.78
+    ],
+    [
+     "grows",
+     3.78,
+     4.25
+    ],
+    [
+     "with",
+     4.25,
+     4.43
+    ],
+    [
+     "her!",
+     4.43,
+     4.667
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "shell grows with her",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Look how big Tula is now. And her shell is big, too!",
+   "t0": 70.625,
+   "t1": 74.6875,
+   "v0": 70.76325000000001,
+   "dur": 3.6123333333333334,
+   "words": [
+    [
+     "Look",
+     0.01,
+     0.19
+    ],
+    [
+     "how",
+     0.19,
+     0.32
+    ],
+    [
+     "big",
+     0.32,
+     0.58
+    ],
+    [
+     "Tula",
+     0.58,
+     1.05
+    ],
+    [
+     "is",
+     1.05,
+     1.2
+    ],
+    [
+     "now.",
+     1.2,
+     1.58
+    ],
+    [
+     "And",
+     1.93,
+     2.05
+    ],
+    [
+     "her",
+     2.05,
+     2.14
+    ],
+    [
+     "shell",
+     2.14,
+     2.5
+    ],
+    [
+     "is",
+     2.5,
+     2.71
+    ],
+    [
+     "big,",
+     2.71,
+     3.06
+    ],
+    [
+     "too!",
+     3.06,
+     3.61
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "big tula",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Say it with me. A turtle's shell grows with it!",
+   "t0": 74.6875,
+   "t1": 78.4375,
+   "v0": 74.91558333333336,
+   "dur": 3.0776666666666666,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.58
+    ],
+    [
+     "me.",
+     0.58,
+     0.95
+    ],
+    [
+     "A",
+     1.3,
+     1.33
+    ],
+    [
+     "turtle's",
+     1.33,
+     1.77
+    ],
+    [
+     "shell",
+     1.77,
+     2.12
+    ],
+    [
+     "grows",
+     2.12,
+     2.59
+    ],
+    [
+     "with",
+     2.59,
+     2.78
+    ],
+    [
+     "it!",
+     2.78,
+     3.078
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "say it: grows with it",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "kelp",
+   "say": "Quick check! When Tula grows, does her shell grow, too? Yes, or no?",
+   "t0": 78.4375,
+   "t1": 86.5625,
+   "v0": 78.53325000000004,
+   "dur": 4.572666666666667,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.22
+    ],
+    [
+     "check!",
+     0.22,
+     0.64
+    ],
+    [
+     "When",
+     0.64,
+     0.86
+    ],
+    [
+     "Tula",
+     0.86,
+     1.24
+    ],
+    [
+     "grows,",
+     1.24,
+     1.76
+    ],
+    [
+     "does",
+     1.76,
+     1.93
+    ],
+    [
+     "her",
+     1.93,
+     2.02
+    ],
+    [
+     "shell",
+     2.02,
+     2.35
+    ],
+    [
+     "grow,",
+     2.35,
+     2.6
+    ],
+    [
+     "too?",
+     2.6,
+     3.05
+    ],
+    [
+     "Yes,",
+     3.49,
+     4.0
+    ],
+    [
+     "or",
+     4.0,
+     4.17
+    ],
+    [
+     "no?",
+     4.17,
+     4.57
+    ]
+   ],
+   "part": 2,
+   "q": true,
+   "tag": "question 2b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Yes! Super!",
+   "t0": 86.5625,
+   "t1": 88.47029166666671,
+   "v0": 86.84591666666671,
+   "dur": 1.204375,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.6
+    ],
+    [
+     "Super!",
+     0.6,
+     1.2
+    ]
+   ],
+   "part": 2,
+   "q": false,
+   "tag": "super",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

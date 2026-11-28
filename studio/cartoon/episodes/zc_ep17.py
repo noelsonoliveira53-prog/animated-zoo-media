@@ -56,7 +56,7 @@ from kit import Kit, S, prop, W
 from intro import INTRO_STAGES, intro_shots, SUBSCRIBE_LINE
 
 EP = {"id": "zc_ep17", "nest": True, "beat": True, "voice": "af_heart", "speed": 0.8, "gap": 0.42, "music": 0.5, "lead_in": 0.3, "tail": 1.0,
-      "title": "Can a Turtle Leave Its Shell?", "thumb_text": "A DOOR?!", "series": "Animal Facts with Milo",
+      "title": "Can a Turtle Leave Its Shell?", "thumb_text": "DOOR?!", "series": "Animal Facts with Milo",
       "description": ("Can a turtle leave its shell? Milo the bluebird knocks on Tula the green sea turtle's shell and finds her three shell secrets! "
                       "A gentle animal lesson for ages 2-6 with questions to answer, things to feel, moves to copy and a quiz at the end.\n"
                       "Kids learn that a turtle cannot leave its shell, because the shell is part of its body: it is made of bones and joined to its backbone "
@@ -298,10 +298,10 @@ SHORTS = [
 
 # thumbnails (thumb.py): one big object, 1-2 words, none of the title's words, no watermark
 THUMBS = {
-    "zc_ep17": {"place": "reef", "cam": (TX + 40, TY - 230, 1250), "actors": [("turtle", TX, TY, 1.0, False, "")],
-                "props": [(A.door, TX - 30, TY - 160, 1.0)], "words": [("A DOOR?!", 470, 150, 150, "sun")]},
-    "zc_ep17_short1": {"place": "paper_blue", "cam": (960, 600, 2300), "props": [(A.xray_turtle, 960, 640, 1.1)], "words": [("BONES!", 540, 1520, 210, "sun")]},
+    "zc_ep17": {"place": "reef", "cam": (TX + 60, TY - 220, 1020), "actors": [("turtle", TX, TY, 1.0, False, "")],
+                "props": [(A.door, TX - 30, TY - 160, 1.0)], "words": [("DOOR?!", 430, 150, 180, "sun")]},
+    "zc_ep17_short1": {"place": "paper_blue", "cam": (1060, 600, 2300), "props": [(A.xray_turtle, 960, 640, 1.1)], "words": [("BONES!", 540, 1520, 210, "sun")]},
     "zc_ep17_short2": {"place": "paper", "cam": (960, 600, 2300), "props": [(A.nail_scute, 960, 640, .9)], "words": [("LIKE", 540, 1420, 200, "sun"), ("NAILS!", 540, 1640, 200, "sun")]},
-    "zc_ep17_short3": {"place": "reef", "cam": (TX + 120, TY - 300, 1500), "actors": [("turtle", TX, TY, 1.2, False, "")],
+    "zc_ep17_short3": {"place": "reef", "cam": (TX + 70, TY - 330, 1350), "actors": [("turtle", TX, TY, 1.2, False, "")],
                        "words": [("STAYS", 540, 1450, 190, "sun"), ("OUT!", 540, 1660, 190, "sun")]},
 }

@@ -1,0 +1,1827 @@
+{
+ "id": "zc_ep17_short3",
+ "total": 87.36170833333338,
+ "bpm": 96,
+ "beats": [
+  0.0,
+  0.625,
+  1.25,
+  1.875,
+  2.5,
+  3.125,
+  3.75,
+  4.375,
+  5.0,
+  5.625,
+  6.25,
+  6.875,
+  7.5,
+  8.125,
+  8.75,
+  9.375,
+  10.0,
+  10.625,
+  11.25,
+  11.875,
+  12.5,
+  13.125,
+  13.75,
+  14.375,
+  15.0,
+  15.625,
+  16.25,
+  16.875,
+  17.5,
+  18.125,
+  18.75,
+  19.375,
+  20.0,
+  20.625,
+  21.25,
+  21.875,
+  22.5,
+  23.125,
+  23.75,
+  24.375,
+  25.0,
+  25.625,
+  26.25,
+  26.875,
+  27.5,
+  28.125,
+  28.75,
+  29.375,
+  30.0,
+  30.625,
+  31.25,
+  31.875,
+  32.5,
+  33.125,
+  33.75,
+  34.375,
+  35.0,
+  35.625,
+  36.25,
+  36.875,
+  37.5,
+  38.125,
+  38.75,
+  39.375,
+  40.0,
+  40.625,
+  41.25,
+  41.875,
+  42.5,
+  43.125,
+  43.75,
+  44.375,
+  45.0,
+  45.625,
+  46.25,
+  46.875,
+  47.5,
+  48.125,
+  48.75,
+  49.375,
+  50.0,
+  50.625,
+  51.25,
+  51.875,
+  52.5,
+  53.125,
+  53.75,
+  54.375,
+  55.0,
+  55.625,
+  56.25,
+  56.875,
+  57.5,
+  58.125,
+  58.75,
+  59.375,
+  60.0,
+  60.625,
+  61.25,
+  61.875,
+  62.5,
+  63.125,
+  63.75,
+  64.375,
+  65.0,
+  65.625,
+  66.25,
+  66.875,
+  67.5,
+  68.125,
+  68.75,
+  69.375,
+  70.0,
+  70.625,
+  71.25,
+  71.875,
+  72.5,
+  73.125,
+  73.75,
+  74.375,
+  75.0,
+  75.625,
+  76.25,
+  76.875,
+  77.5,
+  78.125,
+  78.75,
+  79.375,
+  80.0,
+  80.625,
+  81.25,
+  81.875,
+  82.5,
+  83.125,
+  83.75,
+  84.375,
+  85.0,
+  85.625,
+  86.25,
+  86.875
+ ],
+ "plan": {
+  "length": 87.4,
+  "shots": 18,
+  "visual_changes": 85,
+  "mean_gap": 1.03,
+  "longest_gap": 3.38,
+  "longest_gap_at": 49.4,
+  "over_6s": [],
+  "places": [
+   "reef",
+   "ocean",
+   "zoo"
+  ],
+  "picture_boards": [
+   "paper_pink",
+   "paper"
+  ],
+  "questions": 8,
+  "longest_without_question": 30.0,
+  "first_words_at": 0.42,
+  "shot_mean": 4.85,
+  "main_intro": {
+   "at": [],
+   "seconds": 0
+  },
+  "fails": [],
+  "words_placed": "185/185",
+  "sync": {
+   "pauses_checked": 17,
+   "onset_err_mean_ms": 19.4,
+   "onset_err_max_ms": 40.0,
+   "suspect_words": [],
+   "cuts": 17,
+   "cuts_on_the_half_beat": 17,
+   "songs_entering_on_a_beat": "0/0",
+   "process": "3D (beat)"
+  }
+ },
+ "events": [
+  [
+   0.0,
+   "new place",
+   "the coral garden hook: hide its head?"
+  ],
+  [
+   1.45,
+   "action",
+   "tur looks"
+  ],
+  [
+   2.33,
+   "word",
+   "?"
+  ],
+  [
+   2.81,
+   "new shot",
+   "the coral garden secret 3"
+  ],
+  [
+   3.22,
+   "word",
+   "?"
+  ],
+  [
+   4.07,
+   "word",
+   "3"
+  ],
+  [
+   6.38,
+   "action",
+   "tur looks"
+  ],
+  [
+   8.12,
+   "new place",
+   "the blue ocean question 3a"
+  ],
+  [
+   8.34,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   8.34,
+   "sign",
+   "YES"
+  ],
+  [
+   8.69,
+   "sign",
+   "NO"
+  ],
+  [
+   11.06,
+   "thinking dot",
+   "1"
+  ],
+  [
+   11.74,
+   "thinking dot",
+   "2"
+  ],
+  [
+   12.41,
+   "thinking dot",
+   "3"
+  ],
+  [
+   12.9,
+   "answer",
+   "NO"
+  ],
+  [
+   14.06,
+   "new place",
+   "the coral garden head stays out"
+  ],
+  [
+   15.83,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   16.84,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   16.84,
+   "word",
+   "STAYS OUT!"
+  ],
+  [
+   18.12,
+   "new shot",
+   "the coral garden hello tula"
+  ],
+  [
+   18.48,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   18.48,
+   "word",
+   "HELLO!"
+  ],
+  [
+   20.33,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   20.72,
+   "action",
+   "tur nods"
+  ],
+  [
+   21.56,
+   "new place",
+   "the blue ocean flippers stay out"
+  ],
+  [
+   21.84,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   23.95,
+   "word",
+   "FLIPPERS!"
+  ],
+  [
+   25.31,
+   "new place",
+   "the picture board (pink) board: land turtle head in"
+  ],
+  [
+   28.46,
+   "action",
+   "the land turtle pulls its head into its shell"
+  ],
+  [
+   28.46,
+   "word",
+   "IN!"
+  ],
+  [
+   29.34,
+   "action",
+   "the land turtle wiggles"
+  ],
+  [
+   31.25,
+   "new shot",
+   "the picture board (pink) board: land turtle head out"
+  ],
+  [
+   31.26,
+   "action",
+   "the land turtle pulls its head into its shell"
+  ],
+  [
+   31.71,
+   "action",
+   "its head pops out again"
+  ],
+  [
+   31.71,
+   "word",
+   "OUT!"
+  ],
+  [
+   33.02,
+   "action",
+   "the land turtle wiggles"
+  ],
+  [
+   34.06,
+   "new shot",
+   "the picture board (pink) board: no room"
+  ],
+  [
+   34.26,
+   "action",
+   "its head pops out again"
+  ],
+  [
+   34.29,
+   "action",
+   "tur nods"
+  ],
+  [
+   36.06,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   36.06,
+   "word",
+   "NO ROOM!"
+  ],
+  [
+   38.12,
+   "new place",
+   "the zoo gate pull your head in"
+  ],
+  [
+   39.11,
+   "action",
+   "milo hops"
+  ],
+  [
+   39.11,
+   "word",
+   "IN!"
+  ],
+  [
+   41.83,
+   "action",
+   "milo hops"
+  ],
+  [
+   41.83,
+   "word",
+   "OUT!"
+  ],
+  [
+   43.6,
+   "action",
+   "milo hops"
+  ],
+  [
+   45.0,
+   "new place",
+   "the coral garden can she feel a tap"
+  ],
+  [
+   47.56,
+   "action",
+   "tur looks"
+  ],
+  [
+   49.43,
+   "word",
+   "?"
+  ],
+  [
+   52.81,
+   "new shot",
+   "the coral garden milo taps gently"
+  ],
+  [
+   53.57,
+   "action",
+   "tur looks"
+  ],
+  [
+   55.2,
+   "action",
+   "milo hops"
+  ],
+  [
+   55.2,
+   "picture",
+   "tp"
+  ],
+  [
+   56.44,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   56.44,
+   "action",
+   "tur nods"
+  ],
+  [
+   56.44,
+   "word",
+   "SHE FEELS IT!"
+  ],
+  [
+   57.5,
+   "new place",
+   "the picture board board: nerves"
+  ],
+  [
+   58.78,
+   "action",
+   "the nerves light up"
+  ],
+  [
+   60.24,
+   "word",
+   "FEEL!"
+  ],
+  [
+   60.55,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   61.56,
+   "new shot",
+   "the picture board board: feel a tap"
+  ],
+  [
+   62.77,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   64.45,
+   "word",
+   "TAP!"
+  ],
+  [
+   65.44,
+   "action",
+   "a picture pulses"
+  ],
+  [
+   66.25,
+   "new place",
+   "the zoo gate feel your nail"
+  ],
+  [
+   66.99,
+   "action",
+   "milo hops"
+  ],
+  [
+   66.99,
+   "word",
+   "TAP!"
+  ],
+  [
+   69.34,
+   "action",
+   "milo hops"
+  ],
+  [
+   71.16,
+   "action",
+   "milo hops"
+  ],
+  [
+   72.5,
+   "new place",
+   "the coral garden say it: head stays out"
+  ],
+  [
+   72.79,
+   "word",
+   "SAY IT!"
+  ],
+  [
+   74.85,
+   "action",
+   "Tula lifts her head"
+  ],
+  [
+   75.5,
+   "action",
+   "tur nods"
+  ],
+  [
+   76.25,
+   "new place",
+   "the blue ocean question 3b"
+  ],
+  [
+   77.87,
+   "action",
+   "Tula paddles"
+  ],
+  [
+   80.06,
+   "sign",
+   "YES"
+  ],
+  [
+   80.41,
+   "sign",
+   "NO"
+  ],
+  [
+   81.83,
+   "thinking dot",
+   "1"
+  ],
+  [
+   82.5,
+   "thinking dot",
+   "2"
+  ],
+  [
+   83.18,
+   "thinking dot",
+   "3"
+  ],
+  [
+   83.66,
+   "answer",
+   "YES"
+  ],
+  [
+   85.0,
+   "new place",
+   "the coral garden you remembered"
+  ],
+  [
+   85.11,
+   "word",
+   "YES!"
+  ],
+  [
+   85.87,
+   "action",
+   "tur nods"
+  ]
+ ],
+ "shots": [
+  {
+   "place": "reef",
+   "say": "Can a sea turtle hide its head?",
+   "t0": 0.0,
+   "t1": 2.8125,
+   "v0": 0.42,
+   "dur": 1.9075,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.19
+    ],
+    [
+     "a",
+     0.19,
+     0.24
+    ],
+    [
+     "sea",
+     0.24,
+     0.56
+    ],
+    [
+     "turtle",
+     0.56,
+     1.03
+    ],
+    [
+     "hide",
+     1.03,
+     1.36
+    ],
+    [
+     "its",
+     1.36,
+     1.51
+    ],
+    [
+     "head?",
+     1.51,
+     1.907
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "hook: hide its head?",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Shell secret number three! Can a sea turtle hide its head inside its shell?",
+   "t0": 2.8125,
+   "t1": 8.125,
+   "v0": 2.8675,
+   "dur": 4.911833333333333,
+   "words": [
+    [
+     "Shell",
+     0.01,
+     0.35
+    ],
+    [
+     "secret",
+     0.35,
+     0.91
+    ],
+    [
+     "number",
+     0.91,
+     1.2
+    ],
+    [
+     "three!",
+     1.2,
+     1.73
+    ],
+    [
+     "Can",
+     2.09,
+     2.23
+    ],
+    [
+     "a",
+     2.23,
+     2.27
+    ],
+    [
+     "sea",
+     2.27,
+     2.57
+    ],
+    [
+     "turtle",
+     2.57,
+     3.06
+    ],
+    [
+     "hide",
+     3.06,
+     3.36
+    ],
+    [
+     "its",
+     3.36,
+     3.51
+    ],
+    [
+     "head",
+     3.51,
+     3.78
+    ],
+    [
+     "inside",
+     3.78,
+     4.32
+    ],
+    [
+     "its",
+     4.32,
+     4.49
+    ],
+    [
+     "shell?",
+     4.49,
+     4.91
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "secret 3",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Yes, it can? Or no, it can't?",
+   "t0": 8.125,
+   "t1": 14.0625,
+   "v0": 8.319333333333333,
+   "dur": 2.257875,
+   "words": [
+    [
+     "Yes,",
+     0.02,
+     0.4
+    ],
+    [
+     "it",
+     0.4,
+     0.5
+    ],
+    [
+     "can?",
+     0.5,
+     0.96
+    ],
+    [
+     "Or",
+     1.24,
+     1.38
+    ],
+    [
+     "no,",
+     1.38,
+     1.61
+    ],
+    [
+     "it",
+     1.61,
+     1.72
+    ],
+    [
+     "can't?",
+     1.72,
+     2.258
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3a",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "No! A sea turtle's head always stays outside its shell.",
+   "t0": 14.0625,
+   "t1": 18.125,
+   "v0": 14.317208333333332,
+   "dur": 3.6100416666666666,
+   "words": [
+    [
+     "No!",
+     0.01,
+     0.5
+    ],
+    [
+     "A",
+     0.73,
+     0.78
+    ],
+    [
+     "sea",
+     0.78,
+     1.06
+    ],
+    [
+     "turtle's",
+     1.06,
+     1.51
+    ],
+    [
+     "head",
+     1.51,
+     1.79
+    ],
+    [
+     "always",
+     1.79,
+     2.12
+    ],
+    [
+     "stays",
+     2.12,
+     2.52
+    ],
+    [
+     "outside",
+     2.52,
+     3.03
+    ],
+    [
+     "its",
+     3.03,
+     3.17
+    ],
+    [
+     "shell.",
+     3.17,
+     3.61
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "head stays out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Hello, Tula! Your head is always out!",
+   "t0": 18.125,
+   "t1": 21.5625,
+   "v0": 18.46725,
+   "dur": 2.6775416666666665,
+   "words": [
+    [
+     "Hello,",
+     0.01,
+     0.48
+    ],
+    [
+     "Tula!",
+     0.48,
+     1.01
+    ],
+    [
+     "Your",
+     1.37,
+     1.49
+    ],
+    [
+     "head",
+     1.49,
+     1.71
+    ],
+    [
+     "is",
+     1.71,
+     1.86
+    ],
+    [
+     "always",
+     1.86,
+     2.25
+    ],
+    [
+     "out!",
+     2.25,
+     2.678
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "hello tula",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Her flippers stay outside, too. Paddle, paddle!",
+   "t0": 21.5625,
+   "t1": 25.3125,
+   "v0": 21.68479166666667,
+   "dur": 3.260291666666667,
+   "words": [
+    [
+     "Her",
+     0.0,
+     0.16
+    ],
+    [
+     "flippers",
+     0.16,
+     0.65
+    ],
+    [
+     "stay",
+     0.65,
+     0.95
+    ],
+    [
+     "outside,",
+     0.95,
+     1.51
+    ],
+    [
+     "too.",
+     1.51,
+     1.92
+    ],
+    [
+     "Paddle,",
+     2.27,
+     2.69
+    ],
+    [
+     "paddle!",
+     2.69,
+     3.26
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "flippers stay out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "Many turtles that live on land can pull their heads in. Look! In it goes.",
+   "t0": 25.3125,
+   "t1": 31.25,
+   "v0": 25.48508333333334,
+   "dur": 5.490625,
+   "words": [
+    [
+     "Many",
+     0.02,
+     0.4
+    ],
+    [
+     "turtles",
+     0.4,
+     0.95
+    ],
+    [
+     "that",
+     0.95,
+     1.11
+    ],
+    [
+     "live",
+     1.11,
+     1.31
+    ],
+    [
+     "on",
+     1.31,
+     1.48
+    ],
+    [
+     "land",
+     1.48,
+     1.9
+    ],
+    [
+     "can",
+     1.9,
+     2.14
+    ],
+    [
+     "pull",
+     2.14,
+     2.42
+    ],
+    [
+     "their",
+     2.42,
+     2.58
+    ],
+    [
+     "heads",
+     2.58,
+     2.97
+    ],
+    [
+     "in.",
+     2.97,
+     3.3
+    ],
+    [
+     "Look!",
+     3.85,
+     4.32
+    ],
+    [
+     "In",
+     4.6,
+     4.74
+    ],
+    [
+     "it",
+     4.74,
+     4.84
+    ],
+    [
+     "goes.",
+     4.84,
+     5.49
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: land turtle head in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "And out it comes again! Hello!",
+   "t0": 31.25,
+   "t1": 34.0625,
+   "v0": 31.51570833333334,
+   "dur": 2.1016666666666666,
+   "words": [
+    [
+     "And",
+     0.05,
+     0.19
+    ],
+    [
+     "out",
+     0.19,
+     0.43
+    ],
+    [
+     "it",
+     0.43,
+     0.52
+    ],
+    [
+     "comes",
+     0.52,
+     0.85
+    ],
+    [
+     "again!",
+     0.85,
+     1.33
+    ],
+    [
+     "Hello!",
+     1.5,
+     2.1
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: land turtle head out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper_pink",
+   "say": "But a sea turtle has no room in its shell for its head.",
+   "t0": 34.0625,
+   "t1": 38.125,
+   "v0": 34.15737500000001,
+   "dur": 3.4863333333333335,
+   "words": [
+    [
+     "But",
+     0.0,
+     0.08
+    ],
+    [
+     "a",
+     0.08,
+     0.13
+    ],
+    [
+     "sea",
+     0.13,
+     0.46
+    ],
+    [
+     "turtle",
+     0.46,
+     1.0
+    ],
+    [
+     "has",
+     1.29,
+     1.5
+    ],
+    [
+     "no",
+     1.5,
+     1.9
+    ],
+    [
+     "room",
+     1.9,
+     2.2
+    ],
+    [
+     "in",
+     2.2,
+     2.29
+    ],
+    [
+     "its",
+     2.29,
+     2.43
+    ],
+    [
+     "shell",
+     2.43,
+     2.77
+    ],
+    [
+     "for",
+     2.77,
+     2.96
+    ],
+    [
+     "its",
+     2.96,
+     3.11
+    ],
+    [
+     "head.",
+     3.11,
+     3.486
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: no room",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Can you pull your head in, like a land turtle? Now pop it out!",
+   "t0": 38.125,
+   "t1": 45.0,
+   "v0": 38.18370833333334,
+   "dur": 4.097958333333334,
+   "words": [
+    [
+     "Can",
+     0.0,
+     0.16
+    ],
+    [
+     "you",
+     0.16,
+     0.28
+    ],
+    [
+     "pull",
+     0.28,
+     0.54
+    ],
+    [
+     "your",
+     0.54,
+     0.69
+    ],
+    [
+     "head",
+     0.69,
+     0.93
+    ],
+    [
+     "in,",
+     0.93,
+     1.26
+    ],
+    [
+     "like",
+     1.26,
+     1.46
+    ],
+    [
+     "a",
+     1.46,
+     1.51
+    ],
+    [
+     "land",
+     1.51,
+     1.92
+    ],
+    [
+     "turtle?",
+     1.92,
+     2.42
+    ],
+    [
+     "Now",
+     2.92,
+     3.17
+    ],
+    [
+     "pop",
+     3.17,
+     3.54
+    ],
+    [
+     "it",
+     3.54,
+     3.65
+    ],
+    [
+     "out!",
+     3.65,
+     4.098
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "pull your head in",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "And one more thing. Can Tula feel a gentle tap on her shell?",
+   "t0": 45.0,
+   "t1": 52.8125,
+   "v0": 45.22166666666667,
+   "dur": 4.208458333333334,
+   "words": [
+    [
+     "And",
+     0.01,
+     0.21
+    ],
+    [
+     "one",
+     0.21,
+     0.47
+    ],
+    [
+     "more",
+     0.47,
+     0.71
+    ],
+    [
+     "thing.",
+     0.71,
+     1.26
+    ],
+    [
+     "Can",
+     1.71,
+     1.92
+    ],
+    [
+     "Tula",
+     1.92,
+     2.34
+    ],
+    [
+     "feel",
+     2.34,
+     2.59
+    ],
+    [
+     "a",
+     2.59,
+     2.63
+    ],
+    [
+     "gentle",
+     2.63,
+     3.13
+    ],
+    [
+     "tap",
+     3.13,
+     3.51
+    ],
+    [
+     "on",
+     3.51,
+     3.61
+    ],
+    [
+     "her",
+     3.61,
+     3.71
+    ],
+    [
+     "shell?",
+     3.71,
+     4.208
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "can she feel a tap",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Yes! Milo gives Tula a gentle tap. She can feel it!",
+   "t0": 52.8125,
+   "t1": 57.5,
+   "v0": 52.970125,
+   "dur": 4.1477916666666665,
+   "words": [
+    [
+     "Yes!",
+     0.01,
+     0.6
+    ],
+    [
+     "Milo",
+     0.6,
+     1.08
+    ],
+    [
+     "gives",
+     1.08,
+     1.35
+    ],
+    [
+     "Tula",
+     1.35,
+     1.71
+    ],
+    [
+     "a",
+     1.71,
+     1.76
+    ],
+    [
+     "gentle",
+     1.76,
+     2.23
+    ],
+    [
+     "tap.",
+     2.23,
+     2.71
+    ],
+    [
+     "She",
+     3.12,
+     3.29
+    ],
+    [
+     "can",
+     3.29,
+     3.47
+    ],
+    [
+     "feel",
+     3.47,
+     3.87
+    ],
+    [
+     "it!",
+     3.87,
+     4.148
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "milo taps gently",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "Her shell has little nerves. So she can feel a touch.",
+   "t0": 57.5,
+   "t1": 61.5625,
+   "v0": 57.65791666666667,
+   "dur": 3.500166666666667,
+   "words": [
+    [
+     "Her",
+     0.02,
+     0.22
+    ],
+    [
+     "shell",
+     0.22,
+     0.67
+    ],
+    [
+     "has",
+     0.67,
+     0.89
+    ],
+    [
+     "little",
+     0.89,
+     1.12
+    ],
+    [
+     "nerves.",
+     1.12,
+     1.76
+    ],
+    [
+     "So",
+     2.08,
+     2.23
+    ],
+    [
+     "she",
+     2.23,
+     2.41
+    ],
+    [
+     "can",
+     2.41,
+     2.58
+    ],
+    [
+     "feel",
+     2.58,
+     2.83
+    ],
+    [
+     "a",
+     2.83,
+     2.89
+    ],
+    [
+     "touch.",
+     2.89,
+     3.5
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: nerves",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "paper",
+   "say": "You feel a tap on your fingernail. Tula feels a tap on her shell!",
+   "t0": 61.5625,
+   "t1": 66.25,
+   "v0": 61.69808333333334,
+   "dur": 4.260041666666667,
+   "words": [
+    [
+     "You",
+     0.01,
+     0.16
+    ],
+    [
+     "feel",
+     0.16,
+     0.4
+    ],
+    [
+     "a",
+     0.4,
+     0.44
+    ],
+    [
+     "tap",
+     0.44,
+     0.87
+    ],
+    [
+     "on",
+     0.87,
+     0.96
+    ],
+    [
+     "your",
+     0.96,
+     1.07
+    ],
+    [
+     "fingernail.",
+     1.07,
+     1.85
+    ],
+    [
+     "Tula",
+     2.29,
+     2.75
+    ],
+    [
+     "feels",
+     2.75,
+     3.07
+    ],
+    [
+     "a",
+     3.07,
+     3.11
+    ],
+    [
+     "tap",
+     3.11,
+     3.54
+    ],
+    [
+     "on",
+     3.54,
+     3.64
+    ],
+    [
+     "her",
+     3.64,
+     3.74
+    ],
+    [
+     "shell!",
+     3.74,
+     4.26
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "board: feel a tap",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "zoo",
+   "say": "Gently tap your fingernail. You can feel it, too!",
+   "t0": 66.25,
+   "t1": 72.5,
+   "v0": 66.49812500000002,
+   "dur": 3.3433333333333333,
+   "words": [
+    [
+     "Gently",
+     0.02,
+     0.49
+    ],
+    [
+     "tap",
+     0.49,
+     0.88
+    ],
+    [
+     "your",
+     0.88,
+     0.98
+    ],
+    [
+     "fingernail.",
+     0.98,
+     1.72
+    ],
+    [
+     "You",
+     2.06,
+     2.16
+    ],
+    [
+     "can",
+     2.16,
+     2.35
+    ],
+    [
+     "feel",
+     2.35,
+     2.69
+    ],
+    [
+     "it,",
+     2.69,
+     2.84
+    ],
+    [
+     "too!",
+     2.84,
+     3.34
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "feel your nail",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Say it with me. A sea turtle's head stays out!",
+   "t0": 72.5,
+   "t1": 76.25,
+   "v0": 72.78145833333336,
+   "dur": 3.1322916666666667,
+   "words": [
+    [
+     "Say",
+     0.01,
+     0.33
+    ],
+    [
+     "it",
+     0.33,
+     0.41
+    ],
+    [
+     "with",
+     0.41,
+     0.58
+    ],
+    [
+     "me.",
+     0.58,
+     0.96
+    ],
+    [
+     "A",
+     1.29,
+     1.34
+    ],
+    [
+     "sea",
+     1.34,
+     1.65
+    ],
+    [
+     "turtle's",
+     1.65,
+     2.07
+    ],
+    [
+     "head",
+     2.07,
+     2.32
+    ],
+    [
+     "stays",
+     2.32,
+     2.72
+    ],
+    [
+     "out!",
+     2.72,
+     3.13
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "say it: head stays out",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "ocean",
+   "say": "Quick check! Can Tula feel a gentle tap on her shell? Yes, or no?",
+   "t0": 76.25,
+   "t1": 85.0,
+   "v0": 76.45375000000003,
+   "dur": 4.891,
+   "words": [
+    [
+     "Quick",
+     0.0,
+     0.26
+    ],
+    [
+     "check!",
+     0.26,
+     0.83
+    ],
+    [
+     "Can",
+     0.83,
+     1.02
+    ],
+    [
+     "Tula",
+     1.02,
+     1.42
+    ],
+    [
+     "feel",
+     1.42,
+     1.66
+    ],
+    [
+     "a",
+     1.66,
+     1.7
+    ],
+    [
+     "gentle",
+     1.7,
+     2.1
+    ],
+    [
+     "tap",
+     2.1,
+     2.46
+    ],
+    [
+     "on",
+     2.46,
+     2.56
+    ],
+    [
+     "her",
+     2.56,
+     2.66
+    ],
+    [
+     "shell?",
+     2.66,
+     3.15
+    ],
+    [
+     "Yes,",
+     3.61,
+     4.21
+    ],
+    [
+     "or",
+     4.21,
+     4.46
+    ],
+    [
+     "no?",
+     4.46,
+     4.89
+    ]
+   ],
+   "part": 3,
+   "q": true,
+   "tag": "question 3b",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  },
+  {
+   "place": "reef",
+   "say": "Yes! You remembered!",
+   "t0": 85.0,
+   "t1": 86.96170833333338,
+   "v0": 85.08475000000004,
+   "dur": 1.4569583333333334,
+   "words": [
+    [
+     "Yes!",
+     0.03,
+     0.69
+    ],
+    [
+     "You",
+     0.69,
+     0.79
+    ],
+    [
+     "remembered!",
+     0.79,
+     1.457
+    ]
+   ],
+   "part": 3,
+   "q": false,
+   "tag": "you remembered",
+   "who": "milo",
+   "beat": "",
+   "sung": false
+  }
+ ]
+}

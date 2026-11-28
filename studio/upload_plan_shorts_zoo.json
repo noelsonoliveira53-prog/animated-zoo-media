@@ -2292,37 +2292,85 @@
  {
   "file": "cartoon/zc_ep17_short1.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep17",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-05",
   "time": "7:30 AM",
-  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
+  "note": "Claimed and built Nov 28 2026 by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj): facts read at the source today (San Diego Zoo Wildlife Alliance, Ask Dr. Universe WSU, PBS Nature, Smithsonian Ocean, Live Science, Olive Ridley Project, Spokesman-Review; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 plus fixes; frames of the finished files looked at (every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the files; thumbnails looked at; review.py PASS. New art the owner has not seen: the see-through shell with backbone and ribs, the coat, the door doodle, the fingernail and scute board, the land turtle. Run note docs/cartoon/runs/zc_ep17.md. NOT uploaded: the daily run schedules it.",
+  "title": "Can a Turtle Come Out of Its Shell?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep17_short1.jpg",
+  "thumb_text": "BONES!",
+  "seconds": 87.8,
+  "description": "Can a turtle come out of its shell? Find out with Milo the bluebird and Tula the green sea turtle! A turtle cannot leave its shell, because the shell is part of its body: it is made of bones, and it is joined to the turtle's backbone and ribs. A quick animal fact for kids from the lesson “Can a Turtle Leave Its Shell?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nSan Diego Zoo Wildlife Alliance (turtle and tortoise); Ask Dr. Universe, Washington State University (how turtles get their shells); PBS Nature (turtle anatomy); Smithsonian Ocean (sea turtles); Live Science (turtle facts); Olive Ridley Project (facts about sea turtles).",
+  "tags": [
+   "can a turtle come out of its shell",
+   "turtle shell facts for kids",
+   "turtle shell bones",
+   "sea turtle",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep17_short2.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep17",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-06",
   "time": "7:30 AM",
-  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
+  "note": "Claimed and built Nov 28 2026 by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj): facts read at the source today (San Diego Zoo Wildlife Alliance, Ask Dr. Universe WSU, PBS Nature, Smithsonian Ocean, Live Science, Olive Ridley Project, Spokesman-Review; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 plus fixes; frames of the finished files looked at (every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the files; thumbnails looked at; review.py PASS. New art the owner has not seen: the see-through shell with backbone and ribs, the coat, the door doodle, the fingernail and scute board, the land turtle. Run note docs/cartoon/runs/zc_ep17.md. NOT uploaded: the daily run schedules it.",
+  "title": "Does a Turtle's Shell Grow?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep17_short2.jpg",
+  "thumb_text": "LIKE NAILS!",
+  "seconds": 88.9,
+  "description": "Does a turtle's shell grow? Find out with Milo the bluebird and Tula the green sea turtle! As a turtle grows, its shell grows with it, just like your bones. Its plates are called scutes, and they are made of the same stuff as your fingernails. A quick animal fact for kids from the lesson “Can a Turtle Leave Its Shell?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nAsk Dr. Universe, Washington State University (how turtles get their shells); Smithsonian Ocean (sea turtles); San Diego Zoo Wildlife Alliance (turtle and tortoise); PBS Nature (turtle anatomy); Live Science (turtle facts); Olive Ridley Project (facts about sea turtles).",
+  "tags": [
+   "does a turtle shell grow",
+   "turtle scutes",
+   "turtle shell facts for kids",
+   "sea turtle",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  },
  {
   "file": "cartoon/zc_ep17_short3.mp4",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "from": "zc_ep17",
   "res": "2160x3840",
   "watermark": "top",
   "date": "2026-12-07",
   "time": "7:30 AM",
-  "note": "Claimed Nov 28 2026 1:55 AM ET by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj). In production."
+  "note": "Claimed and built Nov 28 2026 by the scheduled 1:47 AM lesson build (https://claude.ai/code/session_014CFVfVcoSZCwbdJza1Y1pj): facts read at the source today (San Diego Zoo Wildlife Alliance, Ask Dr. Universe WSU, PBS Nature, Smithsonian Ocean, Live Science, Olive Ridley Project, Spokesman-Review; quotes in the episode docstring); plan check passing; listen.py --episode clean inside the tunes (measures, does not hear); stills of every shot in 16:9 and 9:16 plus fixes; frames of the finished files looked at (every answer reveal); 4K, pace, watermark and corner sheet, bookends (lesson), listen.py on the files; thumbnails looked at; review.py PASS. New art the owner has not seen: the see-through shell with backbone and ribs, the coat, the door doodle, the fingernail and scute board, the land turtle. Run note docs/cartoon/runs/zc_ep17.md. NOT uploaded: the daily run schedules it.",
+  "title": "Can a Sea Turtle Hide Its Head?",
+  "thumb": "brand/zoo/shorts/thumb_zc_ep17_short3.jpg",
+  "thumb_text": "STAYS OUT!",
+  "seconds": 87.4,
+  "description": "Can a sea turtle hide its head in its shell? Find out with Milo the bluebird and Tula the green sea turtle! A sea turtle's head and flippers always stay outside its shell, while many turtles that live on land can pull their heads in. And Tula can feel a gentle tap on her shell! A quick animal fact for kids from the lesson “Can a Turtle Leave Its Shell?”.\n\nThe Animated Zoo makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 2-6. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nPBS Nature (turtle anatomy); Smithsonian Ocean (sea turtles); Olive Ridley Project (facts about sea turtles); Live Science (turtle facts); The Spokesman-Review, Ask Dr. Universe (why sea turtles can not pull back into their shell); San Diego Zoo Wildlife Alliance (turtle and tortoise).",
+  "tags": [
+   "can sea turtles hide their head",
+   "sea turtle shell",
+   "turtle shell facts for kids",
+   "sea turtle",
+   "ocean animals for kids",
+   "animal facts for kids",
+   "preschool",
+   "Milo the bluebird",
+   "The Animated Zoo"
+  ]
  }
 ]

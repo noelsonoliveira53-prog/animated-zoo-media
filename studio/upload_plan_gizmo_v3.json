@@ -506,5 +506,61 @@
   "seconds": 87.4,
   "video_id": "wYYw4uopAoo",
   "published": "2026-11-22 (owner asked Nov 22 to publish right away: Public at once, not scheduled)"
+ },
+ {
+  "file": "cartoon/gc_ep03.mp4",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "date": "2026-11-28",
+  "time": "2:10 PM",
+  "channel": "gizmo",
+  "topic": "Where Does Rain Come From?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfVoMCFiR6Tndgu9wxQ (Gizmo daily run Nov 27, 9:45 PM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep03_short1.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-11-29",
+  "time": "8:10 AM",
+  "channel": "gizmo",
+  "topic": "Where Does Rain Come From?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfVoMCFiR6Tndgu9wxQ (Gizmo daily run Nov 27, 9:45 PM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep03_short2.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-11-30",
+  "time": "8:10 AM",
+  "channel": "gizmo",
+  "topic": "Where Does Rain Come From?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfVoMCFiR6Tndgu9wxQ (Gizmo daily run Nov 27, 9:45 PM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep03_short3.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-12-01",
+  "time": "8:10 AM",
+  "channel": "gizmo",
+  "topic": "Where Does Rain Come From?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfVoMCFiR6Tndgu9wxQ (Gizmo daily run Nov 27, 9:45 PM ET)"
  }
 ]

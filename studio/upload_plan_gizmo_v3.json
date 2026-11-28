@@ -825,7 +825,7 @@
   "time": "12:10 PM",
   "channel": "gizmo",
   "topic": "Why Do Things Fall Down?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -844,7 +844,8 @@
    "shorts"
   ],
   "description": "A heavy ball and a light ball: which lands first? Gizmo the robot drops them together, then races a ball against a feather. Heavy and light land at the same time; the air slows the feather down, and with no air a feather and a rock land together.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: NASA Space Place (What is gravity?), University of Illinois Physics Van (Heavy and Light - Both Fall the Same), American Physical Society PhysicsQuest (Falling Physics).",
-  "seconds": 89.2
+  "seconds": 89.2,
+  "video_id": "sANlP4N5k0o"
  },
  {
   "file": "cartoon/gc_ep05_short3.mp4",

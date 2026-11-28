@@ -855,7 +855,7 @@
   "time": "8:10 AM",
   "channel": "gizmo",
   "topic": "Why Do Things Fall Down?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -874,6 +874,7 @@
    "shorts"
   ],
   "description": "What keeps the Moon going around the Earth? Gizmo the robot explains that everything with mass has gravity, the big Earth has a big pull, and gravity keeps the Moon going around the Earth and the planets going around the Sun.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: NASA Space Place (What is gravity?), University of Illinois Physics Van (Heavy and Light - Both Fall the Same), American Physical Society PhysicsQuest (Falling Physics).",
-  "seconds": 88.6
+  "seconds": 88.6,
+  "video_id": "GJMI71XqXEs"
  }
 ]

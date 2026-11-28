@@ -75,6 +75,7 @@ GQ = lambda place: WV(place, ["gizmo"], floor=.70, top=.46)
 GP = lambda place: WV(place, ["gizmo"], floor=.72, top=.42)
 GPL = lambda place: WV(place, ["gizmo"], floor=.62, top=.42)        # Gizmo smaller: room for a word under him
 GCAM = lambda place, w=1000: C(place, "gizmo", "all", w)
+GACT = C("glab", "gizmo", "all", 1400)     # a copy-me shot in the lab: room beside Gizmo for the word and a small picture (stills r1: words on his head at 1000)
 
 
 # ------------------------------------------------------------------ moves of the heart and the blood (one beat = 0.625 s at 96 bpm)
@@ -89,12 +90,14 @@ def SHOWWAYS(sel): return [("fromto", 0, f"{sel}-out,{sel}-back", {"opacity": 1}
 def OXY(at, sel, what="the blood in the lungs picks up oxygen"):
     return [("to", at, sel + "-o2", {"opacity": 1, "duration": .5}, what), ("to", at, sel + "-red", {"opacity": 1, "duration": .8, "delay": .6}, ""),
             ("to", at, sel + "-blue", {"opacity": 0, "duration": .8, "delay": .6}, "")]
-def DOORS(at, sel, what="the little doors close"):
-    return [("to", at, f"{sel}-d0,{sel}-d1", {"keyframes": [{"rotation": 34, "svgOrigin": "0 0", "duration": .2}, {"rotation": 0, "svgOrigin": "0 0", "duration": .4}]}, what)]
-def DOORS2(at, sel, n=2, what="the little doors swing shut, lub, dub"):
-    k = []
-    for _ in range(n): k += [{"scaleX": .2, "duration": .16}, {"scaleX": 1, "duration": .47}]
-    return [("to", at, f"{sel}-d0,{sel}-d1,{sel}-e0,{sel}-e1", {"keyframes": k, "transformOrigin": "50% 0%"}, what)]
+FLAPS = (("d0", -37.6, "-225 -20"), ("e0", 37.6, "-75 -20"), ("d1", 37.6, "75 -20"), ("e1", -37.6, "225 -20"))
+def DOORS2(at, sel, n=2, what="the little doors close, lub, dub"):
+    out = []
+    for k, (f, r, o) in enumerate(FLAPS):
+        kf = []
+        for _ in range(n): kf += [{"rotation": r, "svgOrigin": o, "duration": .12}, {"rotation": r, "svgOrigin": o, "duration": .2}, {"rotation": 0, "svgOrigin": o, "duration": .3}]
+        out.append(("to", at, f"{sel}-{f}", {"keyframes": kf}, what if k == 0 else ""))
+    return out
 def ROOM(at, sel, k, what=""): return ("to", at, f"{sel}-c{k}", {"keyframes": [{"opacity": 1, "duration": .2}, {"opacity": 1, "duration": .6}, {"opacity": .25, "duration": .3}]}, what)
 def RUN(at, sel, d=2.4, what="the dot runs along the heartbeat line"): return ("fromto", at, sel + "-dot", {"x": 0}, {"x": 800, "duration": d, "ease": "none"}, what)
 def BOUNCE(at, sel, n=3, what="the ball bounces"): return ("to", at, sel, {"y": "-=160", "duration": .3125, "yoyo": True, "repeat": 2 * n - 1, "ease": "power1.out"}, what)
@@ -104,7 +107,7 @@ def BOUNCE(at, sel, n=3, what="the ball bounces"): return ("to", at, sel, {"y": 
 BOARD = (960, 540, 1500); PBOARD = (960, 470, 1700)
 BODY = (960, 560, 1700); PBODY = (960, 560, 1700)
 def b_heart(x=960, y=720, s=1.0, px=960, py=700, ps=.9): return prop("ht", A.heart, x, y, s, p=(px, py, ps))
-def b_body(s=.72, y=540, ps=.56, py=640): return prop("bd", A.body, 960, y, s, p=(960, py, ps))
+def b_body(s=.66, y=600, ps=.52, py=690): return prop("bd", A.body, 960, y, s, p=(960, py, ps))     # stills r1: head at the top edge, words on the head in 9:16
 def b_bodyq(): return prop("bd", A.body, 960, 680, .44, p=(960, 690, .42))       # a question: the body small, under the answer signs
 def b_fist(): return prop("fs", A.fist, 1220, 660, .9, p=(1210, 680, .7))
 def b_lungs(y=700, s=.9, py=660, ps=.7): return prop("lg", A.lungs, 960, y, s, p=(960, py, ps))
@@ -116,9 +119,9 @@ def b_moon(): return prop("bm", A.moon, 1250, 640, .7, p=(1190, 560, .5))
 def b_smallheart(): return prop("sh", A.heart, 960, 780, .55, p=(960, 760, .5))
 WIN = (960, 520, 1700); WINP = (1000, 430, 1150)
 def night(): return prop("nt", A.night, 960, 350, 1.0, p=(960, 350, 1.0))
-PARK = (960, 560, 1920); PARKP = (900, 600, 1700)
+PARK = (960, 560, 1920); PARKP = (820, 600, 1700)
 PARKG = GCAM("gpark", 1150)
-def pball(): return prop("bl", A.ball, 1250, 900, .9, p=(1200, 900, .8))
+def pball(): return prop("bl", A.ball, 1250, 900, .9, p=(1110, 900, .7))
 MEAD = (960, 600, 1700); MEADG = GCAM("gmeadow", 1150)
 HILL = (960, 540, 1920); HILLP = (700, 560, 1500)
 
@@ -128,7 +131,7 @@ SHOTS = [
     S("paper_gz", BOARD, "How does your heart work? What makes that thump, thump?", q=True, tag="hook: the heart beats", pcam=PBOARD, cam2=(960, 600, 1300),
       props=[b_heart()], fx=[BEAT(0.1, "#{p}ht", 6)], words=[("w:thump,:2", "?", .8, .3, 2.0, "sun", (.75, .38), 1.3)]),
     S("paper_gz", BODY, "Thump, thump! Your heart beats inside your chest.", tag="hook: the heart in the chest", pcam=PBODY, cam2=W(BODY, 1.0),
-      props=[b_body()], fx=[BEAT(0.05, "#{p}bd-h", 6)], words=[("w:Thump,", "THUMP, THUMP!", .24, .3, .9, "sun", (.5, .3), .7)]),
+      props=[b_body()], fx=[BEAT(0.05, "#{p}bd-h", 6)], words=[("w:Thump,", "THUMP, THUMP!", .2, .45, .62, "sun", (.5, .3), .7)]),
     S("glab", (GX, 640, 1000), "Hi! I'm Gizmo. Let's find out how your heart works!", tag="hook: Gizmo", pcam=GP("glab"), fx=[WAVE("w:Hi!"), HOP("w:find")],
       words=[("w:Gizmo.", "GIZMO", .78, .3, 1.1, "pill", (.5, .36), .9)]),
     # ---------------------------------------------------------------- MAIN INTRO (right after the hook; again as the last four shots)
@@ -139,10 +142,10 @@ SHOTS = [
       fx=[("face", "w:no", "gizmo", "wow"), BEAT("w:you", "#{p}bh", 3)], words=[("w:you", "YOU DO!", .8, .2, 1.0, "sun", (.5, .67), .85)]),
     # ---------------------------------------------------------------- PART 1: a muscle, the size of your fist, in your chest, pumping all the time
     S("paper_gz", BODY, "Your heart is in your chest, a little to the left of the middle.", part=1, tag="where it is", pcam=PBODY, cam2=W(BODY, 1.0), props=[b_body()],
-      fx=[BEAT("w:chest,", "#{p}bd-h", 4)], words=[("w:chest,", "IN YOUR CHEST!", .76, .3, .85, "sun", (.5, .3), .65)]),
-    S("glab", GCAM("glab"), "Put your hand on your chest. Can you feel a beat?", part=1, q=True, tag="hand on chest", pause=1.6, pcam=GPL("glab"),
-      props=[prop("lh", A.heart, 1080, 600, .45, p=(1000, 1000, .35))], fx=[BEAT("w:hand", "#{p}lh", 5), ("face", "w:feel", "gizmo", "wow")],
-      words=[("w:hand", "HAND ON CHEST", .3, .2, .8, "sun", (.5, .67), .6)]),
+      fx=[BEAT("w:chest,", "#{p}bd-h", 4)], words=[("w:chest,", "IN YOUR CHEST!", .2, .45, .65, "sun", (.5, .3), .65)]),
+    S("glab", GACT, "Put your hand on your chest. Can you feel a beat?", part=1, q=True, tag="hand on chest", pause=1.6, pcam=GPL("glab"),
+      props=[prop("lh", A.heart, 1230, 470, .4, p=(4000, 0, .1))], fx=[BEAT("w:hand", "#{p}lh", 5), ("face", "w:feel", "gizmo", "wow")],
+      words=[("w:hand", "HAND ON CHEST", .25, .22, .55, "sun", (.5, .67), .6)]),
     S("paper_gz", BODY, "Where is your heart? In your chest, or in your foot?", part=1, q=True, tag="question 1", pause=3.2, pcam=PBODY, cam2=(960, 575, 1600),
       props=[b_bodyq()], fx=[BEAT(0.2, "#{p}bd-h", 8), ("signs", "w:chest,", ["CHEST", "FOOT"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "In your chest! Your heart is really a muscle.", part=1, tag="a muscle", pcam=PBOARD, props=[b_heart()],
@@ -151,25 +154,25 @@ SHOTS = [
       fx=[BEAT(0.2, "#{p}ht", 7), ("signs", "w:muscle,", ["MUSCLE", "BALLOON"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "A muscle! It squeezes, and pumps blood around your body.", part=1, tag="it pumps", pcam=PBOARD, props=[b_heart()],
       fx=[BEAT("w:squeezes,", "#{p}ht", 4)], words=[("w:pumps", "PUMP!", .76, .3, 1.1, "sun", (.72, .38), .9)]),
-    S("glab", GCAM("glab"), "Make a fist. Squeeze it, and open it, like a heart pumping!", part=1, q=True, tag="squeeze a fist", pause=1.8, pcam=GPL("glab"),
-      fx=[CURL("w:Squeeze", 1.0), ("hop", "w:open", "gizmo", 1)], words=[("w:Squeeze", "SQUEEZE!", .8, .3, 1.0, "sun", (.5, .67), .85)]),
+    S("glab", GACT, "Make a fist. Squeeze it, and open it, like a heart pumping!", part=1, q=True, tag="squeeze a fist", pause=1.8, pcam=GPL("glab"),
+      fx=[CURL("w:Squeeze", 1.0), ("hop", "w:open", "gizmo", 1)], words=[("w:Squeeze", "SQUEEZE!", .8, .3, .8, "sun", (.5, .67), .85)]),
     S("paper_gz", BOARD, "Look at your fist. Your heart is about the size of your fist!", part=1, tag="fist size", pcam=PBOARD,
       props=[b_heart(720, 720, .85, 740, 700, .66), b_fist()], fx=[PULSE("w:fist.", "#{p}fs", 1, 1.06), BEAT("w:heart", "#{p}ht", 3)],
       words=[("w:size", "SAME SIZE!", .5, .2, .9, "sun", (.5, .36), .7)]),
-    S("glab", GCAM("glab"), "Hold up your fist, and look. That is about how big your heart is!", part=1, q=True, tag="hold up a fist", pause=1.4, pcam=GPL("glab"),
-      props=[prop("fh", A.fist, 1100, 560, .55, p=(1000, 1000, .4))], fx=UP("w:Hold", 1.4) + [PULSE("w:big", "#{p}fh", 1, 1.08)],
-      words=[("w:fist,", "FIST UP!", .3, .2, 1.0, "sun", (.5, .67), .85)]),
+    S("glab", GACT, "Hold up your fist, and look. That is about how big your heart is!", part=1, q=True, tag="hold up a fist", pause=1.4, pcam=GPL("glab"),
+      props=[prop("fh", A.fist, 1180, 430, .55, p=(4000, 0, .1))], fx=UP("w:Hold", 1.4) + [PULSE("w:big", "#{p}fh", 1, 1.08)],
+      words=[("w:fist,", "FIST UP!", .2, .25, .8, "sun", (.5, .67), .85)]),
     S("paper_gz", BOARD, "How big is your heart? As big as your fist, or as big as a car?", part=1, q=True, tag="question 3", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
       props=[b_heart(720, 720, .85, 740, 700, .66), b_fist()], fx=[BEAT(0.2, "#{p}ht", 8), ("signs", "w:fist,", ["A FIST", "A CAR"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "Your heart pumps all day, and all night, all the time!", part=1, tag="day and night", pcam=PBOARD, props=[b_sun(), b_moon(), b_smallheart()],
       fx=[PULSE("w:day,", "#{p}bs", 1, 1.08), PULSE("w:night,", "#{p}bm", 1, 1.08), BEAT("w:time!", "#{p}sh", 3)],
       words=[("w:time!", "ALL THE TIME!", .5, .14, .9, "sun", (.5, .36), .7)]),
-    S("gwindow", WIN, "Even when you sleep at night, your heart keeps pumping.", part=1, tag="night window", pcam=WINP, hide=["gizmo"], cam2=W(WIN, 1.0), props=[night()],
-      fx=[PULSE("w:night,", "#{p}nt", 1, 1.01)], words=[("w:sleep", "SLEEP TIGHT!", .78, .14, .9, "sun", (.5, .36), .75)]),
+    S("gwindow", WIN, "Even when you sleep at night, your heart keeps pumping.", part=1, tag="night window", pcam=(1080, 430, 1150), hide=["gizmo"], cam2=W(WIN, 1.0), props=[night()],
+      fx=[PULSE("w:night,", "#{p}nt", 1, 1.01)], words=[("w:sleep", "SLEEP TIGHT!", .3, .14, .85, "sun", (.5, .36), .75)]),
     S("paper_gz", BOARD, "Your heart keeps on going, nice and calm.", part=1, tag="asleep", pcam=PBOARD, props=[b_bed()],
       fx=[BEAT(0.3, "#{p}bed-h", 5)], words=[("w:calm.", "NICE AND CALM", .5, .14, .85, "sun", (.5, .36), .65)]),
-    S("gpark", PARKG, "Sitting, walking, or playing, your heart is always working!", part=1, tag="always working", pcam=GP("gpark"), props=[pball()],
-      fx=[HOP("w:playing,"), BOUNCE("w:playing,", "#{p}bl", 2)], words=[("w:always", "ALWAYS!", .8, .3, 1.1, "sun", (.5, .36), .9)]),
+    S("gpark", PARKG, "Sitting, walking, or playing, your heart is always working!", part=1, tag="always working", pcam=GP("gpark"),
+      fx=[HOP("w:playing,"), WAVE("w:always", 2)], words=[("w:always", "ALWAYS!", .8, .3, 1.1, "sun", (.5, .36), .9)]),
     S("paper_gz", BOARD, "When does your heart pump? Only in the day, or all the time?", part=1, q=True, tag="question 4", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
       props=[b_sun(), b_moon(), b_smallheart()], fx=[BEAT(0.2, "#{p}sh", 8), ("signs", "w:day,", ["DAY ONLY", "ALL THE TIME"], 1, "wait:2.0")]),
     S("gbench", (900, 560, 1500), "Say it with me. My heart is a muscle!", part=1, q=True, tag="say it", pcam=GPL("gbench"), fx=[HOP("w:muscle!")],
@@ -186,13 +189,13 @@ SHOTS = [
     S("paper_gz", BODY, "It carries oxygen to every part of you, from your head to your toes!", part=2, tag="head to toes", pcam=PBODY, props=[b_body()],
       fx=SHOWWAYS("#{p}bd") + WAY("w:head", "#{p}bd", "o", 2, .3, "up to the head") + WAY("w:toes!", "#{p}bd", "o", 5, .2, "down to the toes"),
       words=[("w:head", "HEAD", .76, .14, 1.0, "sun", (.75, .3), .8), ("w:toes!", "TOES!", .76, .82, 1.0, "", (.75, .68), .8)]),
-    S("glab", GCAM("glab"), "Touch your head, and then touch your toes!", part=2, q=True, tag="head and toes", pause=1.6, pcam=GPL("glab"),
-      fx=UP("w:head,", .8) + DOWN("w:toes!", 1.0), words=[("w:toes!", "HEAD, TOES!", .3, .2, 1.0, "sun", (.5, .67), .8)]),
+    S("glab", GACT, "Touch your head, and then touch your toes!", part=2, q=True, tag="head and toes", pause=1.6, pcam=GPL("glab"),
+      fx=UP("w:head,", .8) + DOWN("w:toes!", 1.0), words=[("w:toes!", "HEAD, TOES!", .2, .25, .7, "sun", (.5, .67), .8)]),
     S("paper_gz", BOARD, "What does blood carry? Oxygen, or sand?", part=2, q=True, tag="question 5", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390), props=[b_heart()],
       fx=[BEAT(0.2, "#{p}ht", 7), ("signs", "w:Oxygen,", ["OXYGEN", "SAND"], 0, "wait:2.0")]),
-    S("glab", GCAM("glab"), "Oxygen is in the air. Breathe in slowly, and breathe out.", part=2, q=True, tag="breathe", pause=2.0, pcam=GPL("glab"),
-      props=[prop("pf", G.puff, 1100, 520, .6, p=(1000, 980, .45))], fx=WIDEARMS("w:Breathe", 1.8) + [("to", "w:in", "#{p}pf", {"x": -80, "duration": 1.6, "ease": "sine.inOut", "yoyo": True, "repeat": 1}, "air goes in and out")],
-      words=[("w:Breathe", "BREATHE IN!", .3, .2, .9, "sun", (.5, .67), .75)]),
+    S("glab", GACT, "Oxygen is in the air. Breathe in slowly, and breathe out.", part=2, q=True, tag="breathe", pause=2.0, pcam=GPL("glab"),
+      props=[prop("pf", G.puff, 1200, 420, .6, p=(4000, 0, .1))], fx=WIDEARMS("w:Breathe", 1.8) + [("to", "w:in", "#{p}pf", {"x": -80, "duration": 1.6, "ease": "sine.inOut", "yoyo": True, "repeat": 1}, "air goes in and out")],
+      words=[("w:Breathe", "BREATHE IN!", .2, .25, .7, "sun", (.5, .67), .75)]),
     S("paper_gz", BOARD, "Your heart sends blood to your lungs.", part=2, tag="to the lungs", pcam=PBOARD, props=[b_lungs()],
       fx=[BEAT("w:sends", "#{p}lgh", 3), PULSE("w:lungs.", "#{p}lg", 1, 1.04)], words=[("w:lungs.", "LUNGS!", .2, .3, 1.1, "sun", (.25, .3), .9)]),
     S("paper_gz", BOARD, "There, the blood picks up oxygen!", part=2, tag="picks up oxygen", pcam=PBOARD, props=[b_lungs()],
@@ -207,7 +210,7 @@ SHOTS = [
       props=[b_bodyq()], fx=SHOWWAYS("#{p}bd") + [BEAT(0.2, "#{p}bd-h", 8), ("signs", "w:Yes,", ["YES", "NO"], 0, "wait:2.0")]),
     S("paper_gz", BODY, "Yes! Away and back, over and over again.", part=2, tag="over and over", pcam=PBODY, props=[b_body()],
       fx=SHOWWAYS("#{p}bd") + WAY("w:Away", "#{p}bd", "o", 5, .25) + WAY("w:back,", "#{p}bd", "b", 4, .25, "the blood comes back"),
-      words=[("w:over", "AGAIN AND AGAIN!", .5, .14, .8, "sun", (.5, .3), .6)]),
+      words=[("w:over", "AGAIN AND AGAIN!", .2, .45, .55, "sun", (.5, .3), .6)]),
     S("gmeadow", MEADG, "Draw a big circle in the air with your finger!", part=2, q=True, tag="draw a circle", pause=1.6, pcam=GPL("gmeadow"),
       fx=WIDEARMS("w:circle", 1.6) + [("to", "w:circle", "#{p}gizmo-body", {"rotation": 8, "svgOrigin": "0 -200", "duration": .31, "yoyo": True, "repeat": 3, "ease": "sine.inOut"}, "Gizmo sways")],
       words=[("w:circle", "ROUND!", .8, .3, 1.1, "sun", (.5, .67), .9)]),
@@ -216,13 +219,13 @@ SHOTS = [
     S("paper_gz", BOARD, "Where does blood get oxygen? In your lungs, or in your hair?", part=2, q=True, tag="question 7b", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
       props=[b_lungs(740, .8, 660, .7)], fx=OXY(0.3, "#{p}lg") + [("signs", "w:lungs,", ["LUNGS", "HAIR"], 0, "wait:2.0")]),
     S("paper_gz", BODY, "The lungs! Then the heart sends it all around, and back again.", part=2, tag="part 2 recap", pcam=PBODY, props=[b_body()],
-      fx=OUTWAY("w:sends", "#{p}bd") + BACKWAY("w:back", "#{p}bd"), words=[("w:around,", "ROUND AND BACK!", .5, .14, .8, "sun", (.5, .3), .6)]),
+      fx=OUTWAY("w:sends", "#{p}bd") + BACKWAY("w:back", "#{p}bd"), words=[("w:around,", "ROUND AND BACK!", .2, .45, .55, "sun", (.5, .3), .6)]),
     # ---------------------------------------------------------------- PART 3: the sound, four rooms, faster when you play
     S("paper_gz", BOARD, "Listen to a heartbeat. It sounds like lub, dub!", part=3, trans="iris", tag="lub dub", pcam=PBOARD, props=[b_beat()],
       fx=[RUN("w:Listen", "#{p}bt", 3.0)], words=[("w:lub,", "LUB, DUB!", .5, .14, 1.1, "sun", (.5, .36), .9)]),
-    S("glab", GCAM("glab"), "Clap with me, like a heartbeat. Lub, dub! Lub, dub!", part=3, q=True, tag="clap lub dub", pause=1.4, pcam=GPL("glab"),
-      props=[prop("lh", A.heart, 1080, 600, .45, p=(1000, 1000, .35))], fx=[BEAT("w:Clap", "#{p}lh", 5)] + ARMS("w:Lub,", 40, -40, .3) + ARMS("w:Lub,:2", 40, -40, .3),
-      words=[("w:Clap", "CLAP, CLAP!", .3, .2, 1.0, "sun", (.5, .67), .85)]),
+    S("glab", GACT, "Clap with me, like a heartbeat. Lub, dub! Lub, dub!", part=3, q=True, tag="clap lub dub", pause=1.4, pcam=GPL("glab"),
+      props=[prop("lh", A.heart, 1230, 470, .4, p=(4000, 0, .1))], fx=[BEAT("w:Clap", "#{p}lh", 5)] + ARMS("w:Lub,", 40, -40, .3) + ARMS("w:Lub,:2", 40, -40, .3),
+      words=[("w:Clap", "CLAP, CLAP!", .2, .25, .75, "sun", (.5, .67), .85)]),
     S("paper_gz", BOARD, "Inside your heart are little doors, called valves.", part=3, tag="valves", pcam=PBOARD, props=[b_rooms()],
       fx=[PULSE("w:doors,", "#{p}rm-d0", 2, 1.2), PULSE("w:doors,", "#{p}rm-d1", 2, 1.2)], words=[("w:valves.", "VALVES", .2, .3, 1.0, "sun", (.25, .3), .8)]),
     S("paper_gz", BOARD, "When the doors close, they make the sound. Lub, dub!", part=3, tag="doors close", pcam=PBOARD, props=[b_rooms()],
@@ -233,11 +236,11 @@ SHOTS = [
       fx=[ROOM("w:top,", "#{p}rm", 0, "the top rooms light up"), ROOM("w:top,", "#{p}rm", 1), ROOM("w:bottom!", "#{p}rm", 2, "the bottom rooms light up"), ROOM("w:bottom!", "#{p}rm", 3)],
       words=[("w:four", "4 ROOMS!", .2, .3, 1.0, "sun", (.25, .3), .8)]),
     S("paper_gz", BOARD, "How many rooms are in your heart? Two, or four?", part=3, q=True, tag="question 9", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
-      props=[b_rooms(760, .8, 660, .7)], fx=[("signs", "w:Two,", ["TWO", "FOUR"], 1, "wait:2.0")]),
+      props=[b_rooms(760, .8, 660, .7)], fx=DOORS2(0.2, "#{p}rm", 6) + [("signs", "w:Two,", ["TWO", "FOUR"], 1, "wait:2.0")]),
     S("paper_gz", BOARD, "Four! Let's count them. One, two, three, four!", part=3, q=True, tag="count rooms", pcam=PBOARD, props=[b_rooms()],
       fx=[ROOM("w:One,", "#{p}rm", 0, "room 1"), ROOM("w:two,", "#{p}rm", 1, "room 2"), ROOM("w:three,", "#{p}rm", 2, "room 3"), ROOM("w:four!:2", "#{p}rm", 3, "room 4")],
-      words=[("w:One,", "1", .38, .3, 1.1, "sun", (.38, .36), .8), ("w:two,", "2", .62, .3, 1.1, "sun", (.62, .36), .8),
-             ("w:three,", "3", .38, .8, 1.1, "", (.38, .66), .8), ("w:four!:2", "4", .62, .8, 1.1, "", (.62, .66), .8)]),
+      words=[("w:One,", "1", .42, .55, 1.0, "sun", (.4, .55), .7), ("w:two,", "2", .58, .55, 1.0, "sun", (.6, .55), .7),
+             ("w:three,", "3", .44, .8, 1.0, "sun", (.43, .68), .7), ("w:four!:2", "4", .56, .8, 1.0, "sun", (.57, .68), .7)]),
     S("paper_gz", BOARD, "Listen again. Lub, dub, lub, dub. Your heart never stops!", part=3, tag="listen again", pcam=PBOARD, props=[b_beat()],
       fx=[RUN("w:Listen", "#{p}bt", 3.4)], words=[("w:never", "NEVER STOPS!", .5, .14, .9, "sun", (.5, .36), .7)]),
     S("gpark", PARK, "When you run and play, your heart pumps faster!", part=3, tag="run and play", pcam=PARKP, cam2=W(PARK, 1.0), props=[pball()],
@@ -248,14 +251,14 @@ SHOTS = [
       fx=[HOP("w:Left,"), HOP("w:right,"), HOP("w:left,:2"), HOP("w:right!")], words=[("w:march", "MARCH!", .8, .3, 1.1, "sun", (.5, .36), .9)]),
     S("gmeadow", MEADG, "Let's hop five times! One, two, three, four, five!", part=3, q=True, tag="hop five", pause=.6, pcam=GPL("gmeadow"),
       fx=[HOP("w:One,", 1), HOP("w:two,", 1), HOP("w:three,", 1), HOP("w:four,", 1), HOP("w:five!", 1)], words=[("w:hop", "HOP, HOP!", .8, .3, 1.0, "sun", (.5, .67), .85)]),
-    S("glab", GCAM("glab"), "Now, hand on your chest. Is your heart beating faster?", part=3, q=True, tag="feel it faster", pause=2.0, pcam=GPL("glab"),
-      props=[prop("lh", A.heart, 1080, 600, .45, p=(1000, 1000, .35))], fx=[BEAT("w:hand", "#{p}lh", 10, True)] + IDEA("w:faster?"),
-      words=[("w:faster?", "FASTER?", .3, .2, 1.0, "sun", (.5, .67), .85)]),
+    S("glab", GACT, "Now, hand on your chest. Is your heart beating faster?", part=3, q=True, tag="feel it faster", pause=2.0, pcam=GPL("glab"),
+      props=[prop("lh", A.heart, 1230, 470, .4, p=(4000, 0, .1))], fx=[BEAT("w:hand", "#{p}lh", 10, True)] + IDEA("w:faster?"),
+      words=[("w:faster?", "FASTER?", .2, .25, .85, "sun", (.5, .67), .85)]),
     S("paper_gz", BOARD, "When you run and play, does your heart beat faster, or slower?", part=3, q=True, tag="question 10", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
       props=[b_heart()], fx=[BEAT(0.2, "#{p}ht", 14, True), ("signs", "w:faster,", ["FASTER", "SLOWER"], 0, "wait:2.0")]),
     S("ghills", HILL, "Running and swimming help keep your heart healthy!", part=3, tag="keep it healthy", pcam=HILLP, hide=["gizmo"], cam2=W(HILL, 1.0),
       props=[prop("hh", A.heart, 1500, 360, .6, p=(900, 420, .5))], fx=[BEAT(0.2, "#{p}hh", 5), GLOW("w:healthy!", "#{p}hh")],
-      words=[("w:healthy!", "STRONG HEART!", .3, .3, .9, "sun", (.36, .3), .7)]),
+      words=[("w:healthy!", "STRONG HEART!", .3, .3, .9, "sun", (.45, .3), .6)]),
     S("gbench", (900, 560, 1500), "Say it with me. Lub, dub! My heart works hard!", part=3, q=True, tag="say it 3", pcam=GPL("gbench"), fx=[HOP("w:hard!")],
       words=[("w:Lub,", "LUB, DUB!", .55, .2, .9, "sun", (.5, .36), .75)]),
     # ---------------------------------------------------------------- QUIZ + GOODBYE
@@ -273,7 +276,7 @@ SHOTS = [
       props=[b_rooms(760, .8, 660, .7)], fx=DOORS2(0.2, "#{p}rm", 6) + [("signs", "w:doors,", ["DOORS", "BELLS"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "Little doors inside your heart, closing. Lub, dub!", part=4, tag="quiz 3 answer", pcam=PBOARD, props=[b_rooms()],
       fx=DOORS2("w:closing.", "#{p}rm", 3), words=[("w:Lub,", "LUB, DUB!", .8, .3, 1.0, "sun", (.75, .3), .8)]),
-    S("gpark", PARKG, "Muscle, blood, oxygen, lub, dub! Thanks for exploring with me!", part=4, tag="goodbye", pcam=GP("gpark"), props=[pball()],
+    S("gpark", PARKG, "Muscle, blood, oxygen, lub, dub! Thanks for exploring with me!", part=4, tag="goodbye", pcam=GP("gpark"),
       fx=[WAVE("w:Thanks", 5), HOP("w:exploring")], words=[("w:Thanks", "BYE-BYE!", .8, .3, 1.1, "pill", (.5, .36), .9)]),
     *gz_intro_shots(),      # the main intro again, as the last four shots
 ]

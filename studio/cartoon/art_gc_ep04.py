@@ -88,18 +88,19 @@ def lungs(pid):
 
 def rooms(pid):
     """The heart's four rooms (chambers): a big heart cut open, two rooms on top and two on the bottom (-c0 top left, -c1 top right, -c2 bottom left,
-    -c3 bottom right: a light in each, opacity 0), and the little doors between top and bottom rooms (-d0, -d1: flaps that close, rotate them)."""
+    -c3 bottom right: a light in each, opacity 0), and the little doors between top and bottom rooms (-d0, -e0 left, -d1, -e1 right: open flaps; DOORS in the episode closes them)."""
     shape = f'<path d="{HEART}" transform="scale(1.6)"/>'
     lit = lambda k, x, y, w, h: f'<g id="{pid}-c{k}" opacity="0"><rect x="{x}" y="{y}" width="{w}" height="{h}" fill="#fff36b" opacity=".55" clip-path="url(#{pid}-cp)"/></g>'
-    door = lambda k, x: (f'<g id="{pid}-d{k}"><path d="M{x - 70} -20 L{x - 8} 34" stroke="{NAVY}" stroke-width="22" stroke-linecap="round"/><path d="M{x - 70} -20 L{x - 8} 34" stroke="#fff" stroke-width="10" stroke-linecap="round"/></g>'
-                         f'<g id="{pid}-e{k}"><path d="M{x + 70} -20 L{x + 8} 34" stroke="{NAVY}" stroke-width="22" stroke-linecap="round"/><path d="M{x + 70} -20 L{x + 8} 34" stroke="#fff" stroke-width="10" stroke-linecap="round"/></g>')
+    def flap(fid, hx, ex):      # a little door: a white bar from its hinge (hx, -20) down to (ex, 30), open; closed it lies flat (see the episode's DOORS)
+        return (f'<g id="{pid}-{fid}"><path d="M{hx} -20 L{ex} 30" stroke="{NAVY}" stroke-width="30" stroke-linecap="round"/>'
+                f'<path d="M{hx} -20 L{ex} 30" stroke="#fff" stroke-width="16" stroke-linecap="round"/><circle cx="{hx}" cy="-20" r="13" fill="{NAVY}"/></g>')
     return (f'<g id="{pid}"><defs><clipPath id="{pid}-cp">{shape}</clipPath></defs>'
             f'<path d="{HEART}" transform="scale(1.6)" fill="{RED}" stroke="{NAVY}" stroke-width="10" stroke-linejoin="round"/>'
             f'<g clip-path="url(#{pid}-cp)"><rect x="-320" y="-300" width="320" height="280" fill="{REDL}"/><rect x="0" y="-300" width="320" height="280" fill="{REDL}"/>'
             f'<rect x="-320" y="-20" width="320" height="260" fill="{RED}"/><rect x="0" y="-20" width="320" height="260" fill="#f05a6c"/></g>'
             + lit(0, -320, -300, 320, 280) + lit(1, 0, -300, 320, 280) + lit(2, -320, -20, 320, 260) + lit(3, 0, -20, 320, 260)
-            + f'<g clip-path="url(#{pid}-cp)"><path d="M0 -170 V230" stroke="{NAVY}" stroke-width="22"/><path d="M-320 -20 H-150 M150 -20 H320" stroke="{NAVY}" stroke-width="18"/></g>'
-            + door(0, -150) + door(1, 150)
+            + f'<g clip-path="url(#{pid}-cp)"><path d="M0 -170 V230" stroke="{NAVY}" stroke-width="22"/><path d="M-320 -20 H-225 M-75 -20 H75 M225 -20 H320" stroke="{NAVY}" stroke-width="18"/></g>'
+            + flap("d0", -225, -160) + flap("e0", -75, -140) + flap("d1", 75, 140) + flap("e1", 225, 160)
             + f'<path d="{HEART}" transform="scale(1.6)" fill="none" stroke="{NAVY}" stroke-width="14" stroke-linejoin="round"/></g>')
 
 

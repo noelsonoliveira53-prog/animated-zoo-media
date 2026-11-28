@@ -688,5 +688,61 @@
   "made_for_kids": true,
   "category": 27,
   "note": "claimed by session_014CFVfXs8xfsEZKF885Z161 (Gizmo catch-up run A, Nov 28 1:08 AM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep05.mp4",
+  "format": "cartoon_lesson",
+  "res": "3840x2160",
+  "date": "2026-11-30",
+  "time": "2:10 PM",
+  "channel": "gizmo",
+  "topic": "Why Do Things Fall Down?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfWNwXyYMYtjBTtMq95 (Gizmo catch-up run B, Nov 28 1:18 AM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep05_short1.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-12-01",
+  "time": "7:10 PM",
+  "channel": "gizmo",
+  "topic": "Why Do Things Fall Down?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfWNwXyYMYtjBTtMq95 (Gizmo catch-up run B, Nov 28 1:18 AM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep05_short2.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-12-02",
+  "time": "12:10 PM",
+  "channel": "gizmo",
+  "topic": "Why Do Things Fall Down?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfWNwXyYMYtjBTtMq95 (Gizmo catch-up run B, Nov 28 1:18 AM ET)"
+ },
+ {
+  "file": "cartoon/gc_ep05_short3.mp4",
+  "format": "cartoon_short_90",
+  "res": "2160x3840",
+  "date": "2026-12-03",
+  "time": "8:10 AM",
+  "channel": "gizmo",
+  "topic": "Why Do Things Fall Down?",
+  "status": "in_production",
+  "watermark": "tl",
+  "made_for_kids": true,
+  "category": 27,
+  "note": "claimed by session_014CFVfWNwXyYMYtjBTtMq95 (Gizmo catch-up run B, Nov 28 1:18 AM ET)"
  }
 ]

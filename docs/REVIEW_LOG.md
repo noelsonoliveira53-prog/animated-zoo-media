@@ -226,3 +226,6 @@
 | 2026-11-27 | cartoon/zc_ep14_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-27 | cartoon/zc_ep15.mp4 | cartoon_lesson | FAIL | no custom thumbnail file for this video (plan 'thumb'): make one before uploading (finish.py / lesson_shorts.py / short_thumb.py); description is missing the boilerplate line 'Every fact is checked against trusted sources and every script is reviewed for kid safety' (META-03) | first 2 description lines are short; make them searchable; no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
 | 2026-11-27 | cartoon/zc_ep15.mp4 | cartoon_lesson | PASS | - | no song/lesson spec found to check the words; no --job given: scene plan and variety were not checked | - |
+| 2026-11-27 | cartoon/zc_ep15_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-27 | cartoon/zc_ep15_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-27 | cartoon/zc_ep15_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

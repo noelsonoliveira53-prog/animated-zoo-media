@@ -2112,11 +2112,11 @@
   "date": "2026-12-02",
   "time": "11:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\"). Finished Nov 27 ~8:30 PM ET: 2160x3840, 91-92 s; stills of every shot in 9:16 looked at and fixed; Shorts 1 and 2 rendered three times (pace: a still quiz pause in 9:16, fixed with bigger movement); finished frames and every answer reveal looked at; pace, watermark + corner sheet, listen.py (measures, does not hear), thumbnail looked at, review.py PASS.",
   "from": "zc_ep15",
   "thumb": "brand/zoo/shorts/thumb_zc_ep15_short1.jpg",
   "thumb_text": "LOOK!",
@@ -2130,7 +2130,8 @@
    "shorts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "seconds": 91.4
  },
  {
   "file": "cartoon/zc_ep15_short2.mp4",
@@ -2138,11 +2139,11 @@
   "date": "2026-12-03",
   "time": "11:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\"). Finished Nov 27 ~8:30 PM ET: 2160x3840, 91-92 s; stills of every shot in 9:16 looked at and fixed; Shorts 1 and 2 rendered three times (pace: a still quiz pause in 9:16, fixed with bigger movement); finished frames and every answer reveal looked at; pace, watermark + corner sheet, listen.py (measures, does not hear), thumbnail looked at, review.py PASS.",
   "from": "zc_ep15",
   "thumb": "brand/zoo/shorts/thumb_zc_ep15_short2.jpg",
   "thumb_text": "SIP, SIP!",
@@ -2156,7 +2157,8 @@
    "shorts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "seconds": 91.9
  },
  {
   "file": "cartoon/zc_ep15_short3.mp4",
@@ -2164,11 +2166,11 @@
   "date": "2026-12-04",
   "time": "11:30 AM",
   "made_for_kids": true,
-  "status": "in_production",
+  "status": "to_upload",
   "format": "cartoon_short_90",
   "res": "2160x3840",
   "watermark": "top",
-  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\").",
+  "note": "Claimed Nov 27 2026 ~3:20 PM ET by the owner's session https://claude.ai/code/session_014CFVfVuQKcnZwKkabBsmrF (catch-up build, owner Nov 27 3:02 PM: \"publish videos for tomorrow and all days for the next 4 days\"). Finished Nov 27 ~8:30 PM ET: 2160x3840, 91-92 s; stills of every shot in 9:16 looked at and fixed; Shorts 1 and 2 rendered three times (pace: a still quiz pause in 9:16, fixed with bigger movement); finished frames and every answer reveal looked at; pace, watermark + corner sheet, listen.py (measures, does not hear), thumbnail looked at, review.py PASS.",
   "from": "zc_ep15",
   "thumb": "brand/zoo/shorts/thumb_zc_ep15_short3.jpg",
   "thumb_text": "BOOP!",
@@ -2182,7 +2184,8 @@
    "shorts for kids",
    "Milo the bluebird",
    "The Animated Zoo"
-  ]
+  ],
+  "seconds": 92.1
  },
  {
   "file": "cartoon/zc_ep16_short1.mp4",

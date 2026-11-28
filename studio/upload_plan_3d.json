@@ -3812,7 +3812,7 @@
   "date": "2026-11-30",
   "time": "9:30 AM",
   "made_for_kids": true,
-  "status": "to_upload",
+  "status": "scheduled",
   "format": "cartoon_lesson",
   "res": "3840x2160",
   "watermark": "tl",
@@ -3834,6 +3834,8 @@
   ],
   "thumb": "brand/zoo/thumb_zc_ep17.jpg",
   "thumb_text": "DOOR?!",
-  "seconds": 364.6
+  "seconds": 364.6,
+  "video_id": "Y8sm8GAMf8o",
+  "thumb_set": true
  }
 ]

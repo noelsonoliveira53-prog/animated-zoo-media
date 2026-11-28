@@ -641,7 +641,7 @@
   "time": "2:10 PM",
   "channel": "gizmo",
   "topic": "How Does Your Heart Work?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -664,7 +664,8 @@
   ],
   "thumb": "brand/gizmo/thumb_gc_ep04.jpg",
   "thumb_text": "THUMP THUMP!",
-  "seconds": 354.6
+  "seconds": 354.6,
+  "video_id": "bCNRbeUIlXg"
  },
  {
   "file": "cartoon/gc_ep04_short1.mp4",

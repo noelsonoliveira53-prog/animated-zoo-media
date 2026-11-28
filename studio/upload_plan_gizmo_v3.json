@@ -515,7 +515,7 @@
   "time": "2:10 PM",
   "channel": "gizmo",
   "topic": "Where Does Rain Come From?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -538,7 +538,8 @@
   ],
   "thumb": "brand/gizmo/thumb_gc_ep03.jpg",
   "thumb_text": "DRIP DROP!",
-  "seconds": 349.6
+  "seconds": 349.6,
+  "video_id": "5JZ53DqsC-4"
  },
  {
   "file": "cartoon/gc_ep03_short1.mp4",

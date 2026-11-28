@@ -246,3 +246,6 @@
 | 2026-11-28 | cartoon/zc_ep16_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-28 | cartoon/zc_ep16_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
 | 2026-11-28 | cartoon/zc_ep16_short3.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-28 | cartoon/gc_ep04_short1.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-28 | cartoon/gc_ep04_short2.mp4 | cartoon_short_90 | PASS | - | - | - |
+| 2026-11-28 | cartoon/gc_ep04_short3.mp4 | cartoon_short_90 | PASS | - | - | - |

@@ -641,11 +641,11 @@
   "time": "2:10 PM",
   "channel": "gizmo",
   "topic": "How Does Your Heart Work?",
-  "status": "in_production",
+  "status": "to_upload",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
-  "note": "claimed by session_014CFVfXs8xfsEZKF885Z161 (Gizmo catch-up run A, Nov 28 1:08 AM ET)",
+  "note": "claimed by session_014CFVfXs8xfsEZKF885Z161 (Gizmo catch-up run A, Nov 28 1:08 AM ET); finished Nov 28 by session_014CFVfXs8xfsEZKF885Z161 (run note docs/gizmo/runs/gc_ep04.md)",
   "title": "How Does Your Heart Work? Gizmo Explains",
   "description": "How does your heart work? Gizmo the robot has no heart, but you do! He shows where your heart is, how big it is, how it sends oxygen all around your body, what makes the heartbeat sound and why it beats faster when you run and play. A gentle science lesson for ages 4-8 with questions to answer, things to try and a quiz at the end.\nKids learn that the heart is a muscle about the size of their fist, in the chest a little to the left of the middle; that it pumps all day and all night; that the lungs give the body oxygen and the heart sends it to every part of the body and back again; that the lub-dub sound is little doors inside the heart (valves) closing; that the heart has four rooms (chambers); and that the heart pumps faster when we exercise, so our muscles get more oxygen.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWHERE THE FACTS COME FROM\nKidsHealth from Nemours: Your Heart and Circulatory System (for kids) and Heart and Circulatory System (for parents).",
   "tags": [
@@ -663,7 +663,8 @@
    "kindergarten science"
   ],
   "thumb": "brand/gizmo/thumb_gc_ep04.jpg",
-  "thumb_text": "THUMP THUMP!"
+  "thumb_text": "THUMP THUMP!",
+  "seconds": 354.6
  },
  {
   "file": "cartoon/gc_ep04_short1.mp4",

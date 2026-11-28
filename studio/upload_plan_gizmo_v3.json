@@ -673,7 +673,7 @@
   "time": "12:10 PM",
   "channel": "gizmo",
   "topic": "How Does Your Heart Work?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -691,7 +691,8 @@
    "shorts"
   ],
   "description": "How big is your heart? Gizmo the robot shows that your heart is a muscle about the size of your fist, in your chest a little to the left of the middle, and that it pumps all day and all night, even when you sleep.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: KidsHealth from Nemours (Your Heart and Circulatory System, for kids; Heart and Circulatory System, for parents).",
-  "seconds": 91.9
+  "seconds": 91.9,
+  "video_id": "CDFtRYVkI3Y"
  },
  {
   "file": "cartoon/gc_ep04_short2.mp4",

@@ -702,7 +702,7 @@
   "time": "12:10 PM",
   "channel": "gizmo",
   "topic": "How Does Your Heart Work?",
-  "status": "to_upload",
+  "status": "scheduled",
   "watermark": "tl",
   "made_for_kids": true,
   "category": 27,
@@ -721,7 +721,8 @@
    "shorts"
   ],
   "description": "Where does the oxygen you breathe go? Gizmo the robot follows it: in your lungs your body picks up oxygen from the air, and your heart pumps it all around your body, from your head to your toes, and back to the heart again, over and over.\n\nGizmo Explains makes gentle, colorful videos for little learners. New videos every day! Made with care for ages 4-8. Every fact is checked against trusted sources and every script is reviewed for kid safety before publishing.\n\nWhere the facts come from: KidsHealth from Nemours (Your Heart and Circulatory System, for kids; Heart and Circulatory System, for parents).",
-  "seconds": 89.2
+  "seconds": 89.2,
+  "video_id": "fcRWHxhjUms"
  },
  {
   "file": "cartoon/gc_ep04_short3.mp4",

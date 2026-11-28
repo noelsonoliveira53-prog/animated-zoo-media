@@ -87,3 +87,7 @@ Thumbnail: `brand/zoo/thumb_za_ep17.jpg` ("SNIFF, SNIFF!", none of the title's w
 - A 9:16 version: none was built (an adventure has no Short).
 - Small, kept: `("nod", ..., "milo")` in the "some friends sleep in the day" shot does nothing (Milo's rig has no neck; GSAP warned "#s48_milo-neck
   not found"); Milo stands a little above the moss when he is on the log; the dark wood's mushroom glows read as pale circles.
+
+## Nov 28, 6:31 AM daily run: held, back to in_production
+- Not uploaded: the episode has no like-and-subscribe goodbye. CLAUDE.md (owner Nov 27 7:29 PM) requires Milo's `intro.SUBSCRIBE_LINE` shot right before the closing `*intro_shots()` for za_ep17+; `grep SUBSCRIBE_LINE studio/cartoon/episodes/za_ep17.py` finds nothing and toon.py's plan check (lines 570-576) fails it. The build was claimed at 7:27 PM, two minutes before the rule.
+- WHERE IT STOPS: the next adventure build finishes this first: add `S(<place>, say=SUBSCRIBE_LINE, ...)` (Milo's camera, "THANK YOU!" at about (.8, .18)) as the last shot before the closing intro, take "Bye-bye" out of the story's goodbye, plan check, listen.py --episode, stills of the new shot in 16:9, re-render, AV1, review.py, then "to_upload" on Nov 29 1:30 PM.

@@ -1,6 +1,6 @@
 {
  "id": "za_ep17",
- "total": 339.1071666666666,
+ "total": 349.7321666666666,
  "bpm": 96,
  "beats": [
   0.0,
@@ -545,15 +545,32 @@
   336.875,
   337.5,
   338.125,
-  338.75
+  338.75,
+  339.375,
+  340.0,
+  340.625,
+  341.25,
+  341.875,
+  342.5,
+  343.125,
+  343.75,
+  344.375,
+  345.0,
+  345.625,
+  346.25,
+  346.875,
+  347.5,
+  348.125,
+  348.75,
+  349.375
  ],
  "plan": {
-  "length": 339.1,
-  "shots": 58,
-  "visual_changes": 540,
-  "mean_gap": 0.63,
-  "longest_gap": 4.73,
-  "longest_gap_at": 161.4,
+  "length": 349.7,
+  "shots": 59,
+  "visual_changes": 545,
+  "mean_gap": 0.64,
+  "longest_gap": 5.16,
+  "longest_gap_at": 323.4,
   "over_6s": [],
   "places": [
    "nightforest",
@@ -571,15 +588,15 @@
    "paper_pink"
   ],
   "questions": 16,
-  "longest_without_question": 43.4,
+  "longest_without_question": 51.9,
   "first_words_at": 0.42,
-  "shot_mean": 5.85,
+  "shot_mean": 5.93,
   "main_intro": {
    "at": [
     7.8,
-    323.4
+    333.8
    ],
-   "seconds": 30.0
+   "seconds": 30.4
   },
   "beats": {
    "hook": 1,
@@ -591,19 +608,17 @@
    "obstacle3": 6,
    "low": 3,
    "solution": 7,
-   "ending": 8
+   "ending": 9
   },
-  "fails": [
-   "the shot right before the closing main intro must be Milo saying intro.SUBSCRIBE_LINE (the goodbye asks to like and subscribe; CLAUDE.md, owner Nov 27 7:29 PM)"
-  ],
-  "words_placed": "624/624",
+  "fails": [],
+  "words_placed": "649/649",
   "sync": {
-   "pauses_checked": 58,
-   "onset_err_mean_ms": 28.3,
+   "pauses_checked": 61,
+   "onset_err_mean_ms": 28.4,
    "onset_err_max_ms": 100.0,
    "suspect_words": [],
-   "cuts": 57,
-   "cuts_on_the_half_beat": 57,
+   "cuts": 58,
+   "cuts_on_the_half_beat": 58,
    "songs_entering_on_a_beat": "8/8",
    "process": "3D (beat)"
   }
@@ -2945,367 +2960,392 @@
    "SEE YOU SOON!"
   ],
   [
+   323.12,
+   "new shot",
+   "the edge of the wood at dawn goodbye: like and subscribe"
+  ],
+  [
+   323.14,
+   "action",
+   "milo looks happy"
+  ],
+  [
    323.44,
+   "action",
+   "milo hops"
+  ],
+  [
+   323.44,
+   "word",
+   "THANK YOU!"
+  ],
+  [
+   328.6,
+   "action",
+   "milo hops"
+  ],
+  [
+   333.75,
    "action",
    "a hot-air balloon rises far away"
   ],
   [
-   323.44,
+   333.75,
    "action",
    "birds fly across, far away (they start right of the sun: at 200 they crossed its face)"
   ],
   [
-   323.44,
+   333.75,
    "action",
    "the sun's rays turn"
   ],
   [
-   323.44,
+   333.75,
    "new place",
    "the zoo gate (main intro) INTRO 1: the sky"
   ],
   [
-   323.49,
+   333.8,
    "action",
    "Milo flies across the sky, under the sun"
   ],
   [
-   324.24,
+   334.55,
    "action",
    "Milo does a roll"
   ],
   [
-   326.56,
+   337.19,
    "new shot",
    "the zoo gate (main intro) INTRO 2: the gate"
   ],
   [
-   326.75,
+   337.38,
    "action",
    "tumble pops up"
   ],
   [
-   327.03,
+   337.66,
    "action",
    "a flower pops up"
   ],
   [
-   327.07,
+   337.69,
    "action",
    "mango pops up"
   ],
   [
-   327.38,
+   338.01,
    "action",
    "sandy pops up"
   ],
   [
-   327.5,
+   338.13,
    "action",
    "Milo swoops in and lands on the arch"
   ],
   [
-   327.69,
+   338.32,
    "action",
    "tula pops up"
   ],
   [
-   328.0,
+   338.63,
    "action",
    "poppy pops up"
   ],
   [
-   328.12,
+   338.75,
    "action",
    "sandy nods"
   ],
   [
-   328.12,
+   338.75,
    "action",
    "tumble's trunk moves"
   ],
   [
-   328.32,
+   338.94,
    "action",
    "clover pops up"
   ],
   [
-   328.44,
+   339.06,
    "action",
    "mango moves an arm"
   ],
   [
-   328.44,
+   339.06,
    "action",
    "mango moves an arm"
   ],
   [
-   328.63,
+   339.26,
    "action",
    "hazel pops up"
   ],
   [
-   328.91,
+   339.53,
    "action",
    "tumble's trunk moves"
   ],
   [
-   329.37,
+   340.0,
    "action",
    "a star grows out of the gate and fills the picture"
   ],
   [
-   329.69,
+   340.31,
    "action",
    "out of the flash"
   ],
   [
-   329.69,
+   340.31,
    "action",
    "the sunburst turns"
   ],
   [
-   329.69,
+   340.31,
    "new place",
    "the logo (main intro) INTRO 3: the logo"
   ],
   [
-   329.88,
+   340.5,
    "action",
    "the badge pops"
   ],
   [
-   330.45,
+   341.07,
    "action",
    "a letter drops in"
   ],
   [
-   330.6,
+   341.23,
    "action",
    "a letter drops in"
   ],
   [
-   330.76,
+   341.38,
    "action",
    "a letter drops in"
   ],
   [
-   330.91,
+   341.54,
    "action",
    "a letter drops in"
   ],
   [
-   331.07,
+   341.7,
    "action",
    "a letter drops in"
   ],
   [
-   331.23,
+   341.85,
    "action",
    "a letter drops in"
   ],
   [
-   331.38,
+   342.01,
    "action",
    "a letter drops in"
   ],
   [
-   331.54,
+   342.16,
    "action",
    "a letter drops in"
   ],
   [
-   331.58,
+   342.2,
    "action",
    "ZOO slams in"
   ],
   [
-   331.58,
+   342.2,
    "action",
    "ZOO slams in"
   ],
   [
-   331.58,
+   342.2,
    "action",
    "ZOO slams in"
   ],
   [
-   331.88,
+   342.5,
    "action",
    "a firework"
   ],
   [
-   331.88,
+   342.5,
    "action",
    "the rainbow draws on"
   ],
   [
-   332.04,
+   342.66,
    "action",
    "a firework"
   ],
   [
-   332.19,
+   342.81,
    "action",
    "confetti"
   ],
   [
-   332.19,
+   342.81,
    "action",
    "the O's bounce"
   ],
   [
-   332.29,
+   342.91,
    "action",
    "the O's bounce"
   ],
   [
-   332.5,
+   343.12,
    "action",
    "Milo flies onto the badge"
   ],
   [
-   332.62,
+   343.24,
    "action",
    "Milo does a roll"
   ],
   [
-   332.81,
+   343.44,
    "action",
    "a firework"
   ],
   [
-   333.01,
+   343.63,
    "action",
    "tumble pops up"
   ],
   [
-   333.32,
+   343.94,
    "action",
    "sandy pops up"
   ],
   [
-   333.44,
+   344.06,
    "action",
    "a firework"
   ],
   [
-   333.63,
+   344.25,
    "action",
    "mango pops up"
   ],
   [
-   333.63,
+   344.25,
    "action",
    "poppy pops up"
   ],
   [
-   333.94,
+   344.57,
    "action",
    "clover pops up"
   ],
   [
-   333.94,
+   344.57,
    "action",
    "tula pops up"
   ],
   [
-   334.06,
+   344.69,
    "action",
    "a firework"
   ],
   [
-   334.26,
+   344.88,
    "action",
    "hazel pops up"
   ],
   [
-   334.38,
+   345.0,
    "action",
    "the letters do a wave"
   ],
   [
-   334.53,
+   345.16,
    "action",
    "a firework"
   ],
   [
-   335.0,
+   345.62,
    "action",
    "a firework"
   ],
   [
-   335.0,
+   345.62,
    "new shot",
    "the logo (main intro) INTRO 4: Milo says the name"
   ],
   [
-   335.12,
+   345.75,
    "action",
    "T word lights up"
   ],
   [
-   335.14,
+   345.76,
    "action",
    "a firework"
   ],
   [
-   335.3,
+   345.93,
    "action",
    "A word lights up"
   ],
   [
-   336.02,
+   346.64,
    "action",
    "Z word lights up"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "Milo flips"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "a firework"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "confetti"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "mango moves an arm"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "mango moves an arm"
   ],
   [
-   336.51,
+   347.13,
    "action",
    "tumble's trunk moves"
   ],
   [
-   336.63,
+   347.25,
    "action",
    "a firework"
   ],
   [
-   336.81,
+   347.43,
    "action",
    "a firework"
   ],
   [
-   336.81,
+   347.43,
    "action",
    "the letters do a wave"
   ],
   [
-   336.93,
+   347.55,
    "action",
    "a firework"
   ]
@@ -7188,7 +7228,7 @@
    "place": "dawn_wood",
    "say": "Next time: Hazel and the Crunchy Leaf Bed! See you on the next adventure, friends!",
    "t0": 316.875,
-   "t1": 323.4375,
+   "t1": 323.125,
    "v0": 316.995,
    "dur": 5.915916666666667,
    "words": [
@@ -7276,11 +7316,152 @@
    "sung": false
   },
   {
+   "place": "dawn_wood",
+   "say": "Thank you, friends! If you like The Animated Zoo, don't forget to like and subscribe, to keep supporting our zoo friends. See you next time!",
+   "t0": 323.125,
+   "t1": 333.75,
+   "v0": 323.43091666666663,
+   "dur": 9.880708333333333,
+   "words": [
+    [
+     "Thank",
+     0.01,
+     0.42
+    ],
+    [
+     "you,",
+     0.42,
+     0.56
+    ],
+    [
+     "friends!",
+     0.56,
+     1.22
+    ],
+    [
+     "If",
+     1.73,
+     1.87
+    ],
+    [
+     "you",
+     1.87,
+     2.0
+    ],
+    [
+     "like",
+     2.0,
+     2.33
+    ],
+    [
+     "The",
+     2.33,
+     2.5
+    ],
+    [
+     "Animated",
+     2.5,
+     3.28
+    ],
+    [
+     "Zoo,",
+     3.28,
+     3.72
+    ],
+    [
+     "don't",
+     3.94,
+     4.17
+    ],
+    [
+     "forget",
+     4.17,
+     4.53
+    ],
+    [
+     "to",
+     4.53,
+     4.64
+    ],
+    [
+     "like",
+     4.64,
+     5.04
+    ],
+    [
+     "and",
+     5.04,
+     5.17
+    ],
+    [
+     "subscribe,",
+     5.17,
+     5.98
+    ],
+    [
+     "to",
+     5.98,
+     6.22
+    ],
+    [
+     "keep",
+     6.22,
+     6.46
+    ],
+    [
+     "supporting",
+     6.46,
+     7.13
+    ],
+    [
+     "our",
+     7.13,
+     7.25
+    ],
+    [
+     "zoo",
+     7.25,
+     7.52
+    ],
+    [
+     "friends.",
+     7.52,
+     8.14
+    ],
+    [
+     "See",
+     8.71,
+     8.96
+    ],
+    [
+     "you",
+     8.96,
+     9.09
+    ],
+    [
+     "next",
+     9.09,
+     9.38
+    ],
+    [
+     "time!",
+     9.38,
+     9.88
+    ]
+   ],
+   "part": 0,
+   "q": false,
+   "tag": "goodbye: like and subscribe",
+   "who": "milo",
+   "beat": "ending",
+   "sung": false
+  },
+  {
    "place": "intro_gate",
    "say": "",
-   "t0": 323.4375,
-   "t1": 326.5625,
-   "v0": 323.75,
+   "t0": 333.75,
+   "t1": 337.1875,
+   "v0": 334.375,
    "dur": 2.5,
    "words": [],
    "part": 0,
@@ -7293,9 +7474,9 @@
   {
    "place": "intro_gate",
    "say": "",
-   "t0": 326.5625,
-   "t1": 329.6875,
-   "v0": 326.875,
+   "t0": 337.1875,
+   "t1": 340.3125,
+   "v0": 337.5,
    "dur": 2.5,
    "words": [],
    "part": 0,
@@ -7308,9 +7489,9 @@
   {
    "place": "intro_logo",
    "say": "",
-   "t0": 329.6875,
-   "t1": 335.0,
-   "v0": 330.0,
+   "t0": 340.3125,
+   "t1": 345.625,
+   "v0": 340.625,
    "dur": 5.0,
    "words": [],
    "part": 0,
@@ -7323,9 +7504,9 @@
   {
    "place": "intro_logo",
    "say": "The Animated Zoo!",
-   "t0": 335.0,
-   "t1": 337.9071666666666,
-   "v0": 335.12,
+   "t0": 345.625,
+   "t1": 348.5321666666666,
+   "v0": 345.745,
    "dur": 1.3871666666666667,
    "words": [
     [

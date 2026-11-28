@@ -36,7 +36,7 @@ import art_zc_ep12 as A12
 import art_za_ep17 as A
 import kit
 from kit import Kit, S, prop
-from intro import INTRO_STAGES, intro_shots      # the main intro, right after the hook and as the last shots (owner, Nov 20 4:50 PM)
+from intro import INTRO_STAGES, intro_shots, SUBSCRIBE_LINE      # the main intro, right after the hook and as the last shots (owner, Nov 20 4:50 PM)
 
 EP = {"id": "za_ep17", "kind": "story", "nest": True, "beat": True, "voice": "af_heart", "speed": 0.8, "gap": 0.4, "music": 0.5, "lead_in": 0.3, "tail": 1.2,
       "cast": {"milo": {"voice": "af_heart", "speed": .8}, "hazel": {"voice": "af_sky", "speed": .88, "pitch": 4, "formant": 1.2, "gain": .95}},
@@ -297,6 +297,10 @@ SHOTS = [
       fx=[("face", 0.02, "milo", "happy"), ("hop", 1.0, "milo"), ("fly", 1.6, "milo", 940, 640, 1.2), ("hop", 3.0, "milo")], words=[(TB(3), "HOORAY!", .44, .16, .9, "sun")]),
     S("dawn_wood", MB("dawn_wood"), "Next time: Hazel and the Crunchy Leaf Bed! See you on the next adventure, friends!", beat="ending", tag="goodbye: next adventure",
       hide=["hazel"], fx=[("hop", "w:next", "milo")], words=[("w:Next", "NEXT TIME!", .5, .1, .62, "sun"), ("w:See", "SEE YOU SOON!", .5, .22, .5, "pill")]),
+    # the goodbye asks to like and subscribe (owner, Nov 27 2026 7:29 PM; added Nov 28 by the 8:43 AM adventure build): Milo alone, the last shot before the closing intro
+    S("dawn_wood", MB("dawn_wood", w=760), SUBSCRIBE_LINE, beat="ending", tag="goodbye: like and subscribe", hide=["hazel"], cam2=MB("dawn_wood", w=1150),
+      fx=[("face", 0.02, "milo", "happy"), ("hop", "w:Thank", "milo"), ("hop", "w:subscribe,", "milo")],
+      words=[("w:Thank", "THANK YOU!", .74, .2, .8, "sun")]),      # the camera pulls out (a push in carried the words off the frame: stills r7)
     *intro_shots(),      # and again as the last shots: the video ends on the logo with the whole cast
 ]
 

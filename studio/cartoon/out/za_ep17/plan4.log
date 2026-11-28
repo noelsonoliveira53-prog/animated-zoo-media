@@ -1,0 +1,59 @@
+{
+ "length": 349.7,
+ "shots": 59,
+ "visual_changes": 545,
+ "mean_gap": 0.64,
+ "longest_gap": 5.16,
+ "longest_gap_at": 323.4,
+ "over_6s": [],
+ "places": [
+  "nightforest",
+  "intro_gate",
+  "intro_logo",
+  "dusk_wood",
+  "darkwood",
+  "leafwood",
+  "logglade",
+  "dawn_wood"
+ ],
+ "picture_boards": [
+  "paper",
+  "paper_blue",
+  "paper_pink"
+ ],
+ "questions": 16,
+ "longest_without_question": 51.9,
+ "first_words_at": 0.42,
+ "shot_mean": 5.93,
+ "main_intro": {
+  "at": [
+   7.8,
+   333.8
+  ],
+  "seconds": 30.4
+ },
+ "beats": {
+  "hook": 1,
+  "song": 8,
+  "goal": 5,
+  "fact": 7,
+  "obstacle1": 5,
+  "obstacle2": 6,
+  "obstacle3": 6,
+  "low": 3,
+  "solution": 7,
+  "ending": 9
+ },
+ "fails": [],
+ "words_placed": "649/649",
+ "sync": {
+  "pauses_checked": 61,
+  "onset_err_mean_ms": 28.4,
+  "onset_err_max_ms": 100.0,
+  "suspect_words": [],
+  "cuts": 58,
+  "cuts_on_the_half_beat": 58,
+  "songs_entering_on_a_beat": "8/8",
+  "process": "3D (beat)"
+ }
+}

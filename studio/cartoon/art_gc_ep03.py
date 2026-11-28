@@ -94,17 +94,21 @@ def speck(pid):
 
 
 def dots_cloud(pid):
-    """Lots of tiny drops (-dots, blue dots in a loose cloud shape) and the cloud they make (-cl, opacity 0)."""
-    pts = [(int(220 * math.cos(k * 2.4) * (k % 7) / 7), int(90 * math.sin(k * 2.4) * (k % 7) / 7 - 20)) for k in range(70)]
+    """Lots of tiny drops (-dots, blue dots filling the cloud's shape) and the cloud they make (-cl, opacity 0)."""
+    blobs = ((0, 20, 230, 70), (-100, -30, 120, 90), (60, -60, 140, 110), (170, 0, 90, 70), (-190, 20, 70, 55))
+    pts = []
+    for k in range(400):
+        x, y = ((k * 137) % 500) - 250, ((k * 89) % 300) - 170
+        if any(((x - bx) / rx) ** 2 + ((y - by) / ry) ** 2 < .8 for bx, by, rx, ry in blobs) and all((x - a) ** 2 + (y - b) ** 2 > 900 for a, b in pts): pts.append((x, y))
     dots = "".join(f'<circle cx="{x}" cy="{y}" r="11" fill="{WATER}" stroke="{WLINE}" stroke-width="3"/>' for x, y in pts)
     return f'<g id="{pid}"><g id="{pid}-cl" opacity="0">{_cloud_shape("#ffffff")}</g><g id="{pid}-dots">{dots}</g></g>'
 
 
 def join(pid):
     """Tiny drops that join into one big drop: -a and -b (small drops left and right) move together, -big (opacity 0) is the bigger drop."""
-    sm = lambda x, i: f'<g id="{pid}-{i}"><g transform="translate({x} 0) scale(.55)">{drop(pid + "x" + i)}</g></g>'
-    return (f'<g id="{pid}">{sm(-170, "a")}{sm(170, "b")}<g id="{pid}-c"><g transform="translate(0 -150) scale(.45)">{drop(pid + "xc")}</g></g>'
-            f'<g id="{pid}-big" opacity="0"><g transform="scale(1.25)">{drop(pid + "xbig")}</g></g></g>')
+    sm = lambda x, i: f'<g id="{pid}-{i}"><g transform="translate({x} 0) scale(.8)">{drop(pid + "x" + i)}</g></g>'
+    return (f'<g id="{pid}">{sm(-170, "a")}{sm(170, "b")}<g id="{pid}-c"><g transform="translate(0 -150) scale(.7)">{drop(pid + "xc")}</g></g>'
+            f'<g id="{pid}-big" opacity="0"><g transform="scale(1.7)">{drop(pid + "xbig")}</g></g></g>')
 
 
 def winter_window(pid):

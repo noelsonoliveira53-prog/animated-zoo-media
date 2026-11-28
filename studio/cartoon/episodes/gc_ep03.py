@@ -93,31 +93,31 @@ def FLOW(at, sel, n, step=.5, what="the water flows downhill"): return [("to", a
 
 # ------------------------------------------------------------------ places and cameras
 PARK = (960, 560, 1920); PARKP = (900, 600, 1700)
-PX, PY = 1250, 945                         # the puddle on the path
-SUNX, SUNY = 1560, 230                     # the sun over the park (a prop)
-PUDC = (1300, 600, 1500); PUDP = (1300, 620, 1350)
+PX, PY = 1250, 900                         # the puddle on the path
+SUNX, SUNY = 1560, 330                     # the sun over the park (a prop)
+PUDC = (1300, 620, 1700); PUDP = (1300, 720, 1350)      # the whole puddle above the caption, the sun inside the top (stills r1)
 def pud(s=1.0): return prop("pd", A.puddle, PX, PY, s, p=(PX, PY, s))
-def psun(): return prop("sn", G.warm_sun, SUNX, SUNY, .8, p=(SUNX - 120, SUNY + 60, .7))
+def psun(): return prop("sn", G.warm_sun, SUNX, SUNY, .8, p=(SUNX - 120, SUNY + 130, .7))
 def pvap(): return prop("vp", A.vapor, PX, PY - 40, 1.0, p=(PX, PY - 40, 1.0))
-PARKG = GCAM("gpark", 1000)
+PARKG = GCAM("gpark", 1150)      # 1000 cut the antenna (stills r1)
 
 BOARD = (960, 540, 1500); PBOARD = (960, 470, 1700)
 SKY = (960, 540, 1920); SKYC = (960, 520, 1300); SKYP = (960, 560, 1500)
 HILL = (960, 540, 1920); HILLP = (700, 560, 1500); RAINC = (520, 420, 1300); RAINP = (520, 520, 1400)
 CX, CY = 520, 220                          # the rain cloud over the tall hill
-def rcloud(s=1.0, grey=False): return prop("cl", A.cloud, CX, CY, s, p=(CX, CY + 60, .9))
+def rcloud(s=1.0, y=CY): return prop("cl", A.cloud, CX, y, s, p=(CX, y + 60, .9))
 WIN = (960, 520, 1700); WINP = (1000, 430, 1150)
 BEN = (960, 540, 1800); BENP = (900, 560, 1500)
 
 # on the board (props low: the answer signs at the top never touch them)
-def b_sun(): return prop("bs", G.warm_sun, 760, 420, .9, p=(800, 760, .7))
-def b_sea(): return prop("bw", A.sea, 960, 820, 1.0, p=(960, 1040, .8))
-def b_vap(): return prop("bv", A.vapor, 1160, 800, 1.1, p=(1100, 1020, .9))
-def b_heat(): return prop("bh", A.heat, 960, 720, 1.0, p=(960, 960, .8))
-def b_speck(): return prop("sp", A.speck, 960, 680, 1.6, p=(960, 960, 1.4))
-def b_dots(): return prop("dc", A.dots_cloud, 960, 680, 1.4, p=(960, 960, 1.1))
-def b_join(): return prop("jn", A.join, 960, 740, 1.3, p=(960, 1020, 1.1))
-def b_cycle(): return prop("cy", A.wcycle, 960, 560, .78, p=(960, 900, .85))
+def b_sun(): return prop("bs", G.warm_sun, 760, 560, .72, p=(800, 560, .6))      # low: the answer signs at the top never touch the rays (stills r1)
+def b_sea(): return prop("bw", A.sea, 960, 760, 1.0, p=(960, 700, .8))
+def b_vap(): return prop("bv", A.vapor, 1160, 800, 1.1, p=(1100, 720, .9))
+def b_heat(): return prop("bh", A.heat, 960, 720, 1.0, p=(960, 680, .8))
+def b_speck(): return prop("sp", A.speck, 960, 680, 1.6, p=(960, 660, 1.4))      # 9:16: board props between the signs and the caption (0.45-0.70 of the view)
+def b_dots(): return prop("dc", A.dots_cloud, 960, 680, 1.4, p=(960, 660, 1.1))
+def b_join(): return prop("jn", A.join, 960, 660, 1.3, p=(960, 640, 1.1))
+def b_cycle(): return prop("cy", A.wcycle, 960, 530, .72, p=(960, 640, .55))
 
 
 SHOTS = [
@@ -178,21 +178,21 @@ SHOTS = [
       props=[prop("sf", A.snowflake, 1500, 260, .6, p=(1150, 320, .5))], fx=[("to", "w:cold.", "#{p}sf", {"rotation": 60, "transformOrigin": "50% 50%", "duration": 2.4}, "a snowflake turns")],
       words=[("w:cold.", "COLD!", .3, .3, 1.2, "sun", (.36, .4), 1.0)]),
     S("gsky", SKYC, "The cold turns the vapor back into tiny drops of water.", part=2, tag="back into drops", pcam=SKYP, hide=["gizmo"], props=[prop("dc", A.dots_cloud, 960, 520, 1.2, p=(960, 560, 1.1))],
-      fx=[("fromto", "w:tiny", "#{p}dc-dots", {"opacity": 0}, {"opacity": 1, "duration": 1.2}, "tiny drops appear")], words=[("w:drops", "TINY DROPS", .5, .82, .9, "sun", (.5, .62), .75)]),
+      fx=[("fromto", "w:tiny", "#{p}dc-dots", {"opacity": 0}, {"opacity": 1, "duration": 1.2}, "tiny drops appear")], words=[("w:drops", "TINY DROPS", .5, .2, .9, "sun", (.5, .62), .75)]),
     S("glab", GCAM("glab"), "Back into water? Let's look closer!", part=2, q=True, tag="look closer", pause=.4, pcam=GPL("glab"), fx=[("face", "w:Back", "gizmo", "wow")] + IDEA("w:closer!"),
       words=[("w:closer!", "CLOSER!", .8, .3, 1.0, "sun", (.5, .67), .9)]),
-    S("paper_gz", BOARD, "Each tiny drop forms on a tiny speck of dust, smoke, or salt.", part=2, tag="speck of dust", pcam=PBOARD, props=[b_speck(), prop("mg", G.magnifier, 1350, 420, .8, p=(1180, 1260, .6))],
+    S("paper_gz", BOARD, "Each tiny drop forms on a tiny speck of dust, smoke, or salt.", part=2, tag="speck of dust", pcam=PBOARD, props=[b_speck(), prop("mg", G.magnifier, 1350, 420, .8, p=(1240, 480, .5))],
       fx=[("to", "w:forms", "#{p}sp-drop", {"opacity": 1, "duration": 1.0}, "a drop forms around the speck")], words=[("w:speck", "A SPECK!", .24, .3, 1.0, "sun", (.3, .38), .85)]),
     S("paper_gz", BOARD, "What does a tiny drop form on? A speck of dust, or a shoe?", part=2, q=True, tag="question 4", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390), props=[b_speck()],
       fx=[("signs", "w:speck", ["DUST", "A SHOE"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "A speck of dust! So tiny, you can not see it.", part=2, tag="dust", pcam=PBOARD, props=[b_speck()],
       fx=[ON("w:dust!", "#{p}sp-drop", "a drop forms around the speck"), PULSE("w:tiny,", "#{p}sp", 3, 1.06)], words=[("w:dust!", "DUST!", .76, .3, 1.1, "sun", (.75, .38), .9)]),
     S("paper_gz", BOARD, "Lots and lots of tiny drops make a cloud!", part=2, tag="drops make a cloud", pcam=PBOARD, props=[b_dots()],
-      fx=MAKE_CLOUD("w:cloud!", "#{p}dc"), words=[("w:Lots", "LOTS!", .24, .3, 1.0, "sun", (.3, .38), .85), ("w:cloud!", "A CLOUD!", .76, .3, 1.0, "sun", (.72, .38), .85)]),
+      fx=MAKE_CLOUD("w:make", "#{p}dc"), words=[("w:Lots", "LOTS!", .24, .3, 1.0, "sun", (.3, .38), .85), ("w:cloud!", "A CLOUD!", .76, .3, 1.0, "sun", (.72, .38), .85)]),
     S("gsky", SKYC, "Vapor turns back into water. This is called condensation!", part=2, tag="condensation", pcam=SKYP, hide=["gizmo"], props=[prop("dc", A.dots_cloud, 960, 520, 1.2, p=(960, 560, 1.1))],
-      fx=MAKE_CLOUD("w:water.", "#{p}dc"), words=[("w:condensation!", "CONDENSATION", .5, .84, .8, "sun", (.5, .64), .55)]),
-    S("gwindow", WIN, "You can see this at home! On a cold winter day, look at a window.", part=2, tag="winter window", pcam=(730, 520, 1450), props=[prop("ww", A.winter_window, 960, 350, 1.0, p=(960, 350, 1.0))],
-      fx=[("face", "w:home!", "gizmo", "wow"), PULSE("w:window.", "#{p}ww", 1, 1.01)], words=[("w:winter", "WINTER", .78, .14, 1.0, "sun", (.5, .36), .85)]),
+      fx=MAKE_CLOUD("w:water.", "#{p}dc"), words=[("w:condensation!", "CONDENSATION", .5, .2, .8, "sun", (.5, .64), .55)]),
+    S("gwindow", WIN, "You can see this at home! On a cold winter day, look at a window.", part=2, tag="winter window", pcam=(960, 430, 1150), hide=["gizmo"], props=[prop("ww", A.winter_window, 960, 350, 1.0, p=(960, 350, 1.0))],
+      fx=[PULSE("w:window.", "#{p}ww", 1, 1.01)], words=[("w:winter", "WINTER", .78, .14, 1.0, "sun", (.5, .36), .85)]),
     S("gwindow", (960, 450, 1100), "Drops of water form on the inside of the glass!", part=2, tag="drops on the glass", pcam=(960, 430, 1000), hide=["gizmo"], props=[prop("ww", A.winter_window, 960, 350, 1.0, p=(960, 350, 1.0))],
       fx=[("to", "w:Drops", "#{p}ww-drops", {"opacity": 1, "duration": 1.6}, "drops form on the glass")], words=[("w:inside", "INSIDE!", .5, .14, 1.0, "sun", (.5, .38), .85)]),
     S("gwindow", (960, 450, 1100), "Where do drops form at home on a cold day? On a window, or on a pillow?", part=2, q=True, tag="question 5b", pause=3.2, pcam=(960, 430, 1000), hide=["gizmo"],
@@ -201,8 +201,8 @@ SHOTS = [
     S("paper_gz", BOARD, "Is condensation the same as evaporation, or the opposite?", part=2, q=True, tag="question 5", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390), props=[b_dots()],
       fx=[("signs", "w:same", ["SAME", "OPPOSITE"], 1, "wait:2.0")]),
     S("paper_gz", BOARD, "The opposite! Water goes up as vapor, and comes back as drops.", part=2, tag="the opposite", pcam=PBOARD,
-      props=[prop("ud", R.updown, 960, 600, 1.0, p=(960, 900, .8))], fx=[ON("w:up", "#{p}ud-upa", "an arrow points up"), ON("w:back", "#{p}ud-dn", "an arrow points down")],
-      words=[("w:up", "UP!", .3, .3, 1.1, "sun", (.3, .4), .9), ("w:drops.", "DROPS!", .7, .8, 1.0, "", (.7, .62), .85)]),
+      props=[prop("uu", R.updown, 760, 640, 1.0, p=(800, 660, .8)), prop("dd", R.updown, 1160, 640, 1.0, p=(1120, 660, .8))], fx=[ON("w:up", "#{p}uu-upa", "an arrow points up"), ON("w:back", "#{p}dd-dn", "an arrow points down")],
+      words=[("w:up", "UP!", .3, .3, 1.1, "sun", (.3, .44), .9), ("w:drops.", "DROPS!", .74, .72, 1.0, "", (.72, .66), .85)]),
     S("glab", GCAM("glab"), "Make a big round cloud with your arms!", part=2, q=True, tag="cloud arms", pause=1.2, pcam=GPL("glab"), fx=WIDEARMS("w:round", 2.2),
       words=[("w:cloud", "BIG CLOUD!", .8, .3, 1.0, "sun", (.5, .67), .85)]),
     S("gbench", (900, 560, 1500), "Say it with me. Cold air makes clouds!", part=2, q=True, tag="say it 2", pcam=GPL("gbench"), fx=[HOP("w:clouds!")],
@@ -222,13 +222,13 @@ SHOTS = [
     S("paper_gz", BOARD, "They fall! Gravity pulls them down to the ground.", part=3, tag="they fall", pcam=PBOARD, props=[b_join()],
       fx=BIGDROP("#{p}jn") + [("to", "w:pulls", "#{p}jn-big", {"y": 160, "duration": 1.2, "ease": "power2.in"}, "the big drop falls")], words=[("w:fall!", "FALL!", .24, .3, 1.1, "sun", (.3, .38), .9)]),
     S("ghills", RAINC, "Down comes the rain! Pitter, patter!", part=3, tag="down comes the rain", pcam=RAINP, hide=["gizmo"], props=[rcloud()],
-      fx=[GREY(0, "#{p}cl")] + RAIN("w:Down", "#{p}cl", n=9), words=[("w:Pitter,", "PITTER, PATTER!", .78, .3, .9, "sun", (.75, .4), .7)]),
+      fx=[GREY(0, "#{p}cl")] + RAIN("w:Down", "#{p}cl", n=9), words=[("w:Pitter,", "PITTER, PATTER!", .64, .3, .9, "sun", (.55, .44), .62)]),
     S("ghills", RAINC, "When it is very cold, the drops can fall as snow.", part=3, tag="snow", pcam=RAINP, hide=["gizmo"], props=[rcloud()],
       fx=[GREY(0, "#{p}cl")] + SNOW("w:cold,", "#{p}cl"), words=[("w:snow.", "SNOW!", .8, .3, 1.1, "sun", (.75, .4), .9)]),
     S("paper_gz", BOARD, "What can fall from a very cold cloud? Snow, or leaves?", part=3, q=True, tag="question 7b", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
-      props=[prop("bf", A.snowflake, 960, 700, 1.3, p=(960, 980, 1.1))], fx=[("to", 0.2, "#{p}bf", {"rotation": 60, "transformOrigin": "50% 50%", "duration": 6.0, "ease": "none"}, "the snowflake turns"),
+      props=[prop("bf", A.snowflake, 960, 700, 1.3, p=(960, 680, 1.1))], fx=[("to", 0.2, "#{p}bf", {"rotation": 60, "transformOrigin": "50% 50%", "duration": 6.0, "ease": "none"}, "the snowflake turns"),
       ("signs", "w:Snow,", ["SNOW", "LEAVES"], 0, "wait:2.0")]),
-    S("paper_gz", BOARD, "Snow! Soft, white snow comes from clouds too.", part=3, tag="snow answer", pcam=PBOARD, props=[prop("bf", A.snowflake, 960, 700, 1.3, p=(960, 980, 1.1))],
+    S("paper_gz", BOARD, "Snow! Soft, white snow comes from clouds too.", part=3, tag="snow answer", pcam=PBOARD, props=[prop("bf", A.snowflake, 960, 700, 1.3, p=(960, 680, 1.1))],
       fx=[PULSE("w:Snow!", "#{p}bf", 3, 1.08)], words=[("w:Snow!", "SNOW!", .24, .3, 1.1, "sun", (.3, .38), .9)]),
     S("glab", GCAM("glab"), "Tap your fingers on your legs, like falling rain!", part=3, q=True, tag="tap like rain", pause=1.4, pcam=GPL("glab"), fx=DOWN("w:Tap", 2.4),
       words=[("w:Tap", "TAP, TAP!", .8, .3, 1.0, "sun", (.5, .67), .9)]),
@@ -239,18 +239,20 @@ SHOTS = [
       props=[prop("fl", lambda p: A.flow(p, [(1000, 800, 1400, 740), (1700, 690, 2100, 690)]), 0, 0, 1.0, p=(0, 0, 1.0))],
       fx=FLOW("w:Rivers", "#{p}fl", 2, 1.0), words=[("w:ocean.", "THE OCEAN!", .7, .25, 1.0, "sun", (.5, .4), .8)]),
     S("gpark", PUDC, "And look! The rain fills up the puddle in the park again.", part=3, tag="the puddle fills", pcam=PUDP, hide=["gizmo"],
-      props=[pud(.45), prop("pc", A.cloud, 1250, 320, .9, p=(1300, 380, .8))], fx=[GREY(0, "#{p}pc")] + RAIN(0.05, "#{p}pc", n=9) + [("to", "w:fills", "#{p}pd", {"scale": 2.2, "transformOrigin": "50% 50%", "duration": 3.0, "ease": "sine.inOut"}, "the puddle fills up")],
+      props=[pud(.45), prop("pc", A.cloud, 1250, 320, .9, p=(1300, 480, .8))], fx=[GREY(0, "#{p}pc")] + RAIN(0.05, "#{p}pc", n=9) + [("to", "w:fills", "#{p}pd", {"scale": 2.2, "transformOrigin": "50% 50%", "duration": 3.0, "ease": "sine.inOut"}, "the puddle fills up")],
       words=[("w:again.", "AGAIN!", .2, .3, 1.0, "sun", (.3, .4), .85)]),
-    S("paper_gz", BOARD, "Which way does rain water flow? Downhill, or uphill?", part=3, q=True, tag="question 8", pause=3.2, pcam=PBOARD, cam2=(960, 555, 1390),
-      props=[prop("ud", R.updown, 960, 600, 1.0, p=(960, 900, .8))], fx=[("signs", "w:Downhill,", ["DOWNHILL", "UPHILL"], 0, "wait:2.0")]),
+    S("ghills", HILL, "Which way does rain water flow? Downhill, or uphill?", part=3, q=True, tag="question 8", pause=3.2, pcam=HILLP, hide=["gizmo"], cam2=(900, 560, 1700),
+      fx=[("signs", "w:Downhill,", ["DOWNHILL", "UPHILL"], 0, "wait:2.0")]),
     S("paper_gz", BOARD, "Then the sun warms the water again. Round and round it goes!", part=3, tag="round and round", pcam=PBOARD, props=[b_cycle()],
-      fx=[PULSE("w:sun", "#{p}cy-k0", 1, 1.08), ("to", "w:Round", "#{p}cy", {"rotation": 360, "transformOrigin": "50% 50%", "duration": 3.0, "ease": "sine.inOut"}, "the circle turns")],
+      fx=[PULSE("w:sun", "#{p}cy-k0", 1, 1.08), ("to", "w:Round", "#{p}cy-k1", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 1}, "the circle lights up step by step"),
+          ("to", "w:Round", "#{p}cy-k2", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 1, "delay": .5}, ""), ("to", "w:Round", "#{p}cy-k3", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 1, "delay": 1.0}, ""),
+          ("to", "w:Round", "#{p}cy-k0", {"scale": 1.12, "transformOrigin": "50% 50%", "duration": .25, "yoyo": True, "repeat": 1, "delay": 1.5}, "")],
       words=[("w:Round", "ROUND!", .2, .3, 1.0, "sun", (.25, .36), .8)]),
     S("paper_gz", BOARD, "This is the water cycle. It is always happening, everywhere!", part=3, tag="the water cycle", pcam=PBOARD, props=[b_cycle()],
       fx=[PULSE("w:cycle.", "#{p}cy", 1, 1.04)], words=[("w:cycle.", "WATER CYCLE", .2, .2, .8, "sun", (.5, .36), .62)]),
     S("paper_gz", BOARD, "Let's count the steps. Warm, rise, cloud, rain!", part=3, q=True, tag="count steps", pcam=PBOARD, props=[b_cycle()],
       fx=[PULSE("w:Warm,", "#{p}cy-k0", 1, 1.1), PULSE("w:rise,", "#{p}cy-k1", 1, 1.1), PULSE("w:cloud,", "#{p}cy-k2", 1, 1.1), PULSE("w:rain!", "#{p}cy-k3", 1, 1.1)],
-      words=[("w:Warm,", "1", .63, .88, 1.1, "sun", (.62, .62), .8), ("w:rise,", "2", .3, .5, 1.1, "sun", (.25, .52), .8), ("w:cloud,", "3", .63, .14, 1.1, "sun", (.62, .44), .8), ("w:rain!", "4", .78, .5, 1.1, "sun", (.8, .52), .8)]),
+      words=[("w:Warm,", "1", .63, .88, 1.1, "sun", (.34, .68), .8), ("w:rise,", "2", .3, .5, 1.1, "sun", (.12, .58), .8), ("w:cloud,", "3", .63, .14, 1.1, "sun", (.66, .46), .8), ("w:rain!", "4", .78, .5, 1.1, "sun", (.88, .58), .8)]),
     S("glab", GCAM("glab"), "Spin around slowly, like the water cycle!", part=3, q=True, tag="spin", pause=1.2, pcam=GPL("glab"),
       fx=[("to", "w:Spin", "#{p}gizmo-body", {"scaleX": -1, "svgOrigin": "0 0", "duration": .6, "yoyo": True, "repeat": 3, "ease": "sine.inOut"}, "Gizmo turns around")],
       words=[("w:Spin", "SPIN!", .8, .3, 1.1, "sun", (.5, .67), .9)]),
@@ -266,10 +268,10 @@ SHOTS = [
     S("gsky", SKYC, "What makes a cloud? Tiny drops of water, or tiny rocks?", part=4, q=True, tag="quiz 2", pause=3.2, pcam=SKYP, hide=["gizmo"], trans="iris", cam2=(960, 540, 1200),
       props=[prop("cc", A.cloud, 960, 720, 1.1, p=(960, 800, 1.0))], fx=[("signs", "w:Tiny", ["WATER DROPS", "ROCKS"], 0, "wait:2.0")]),
     S("gsky", SKYC, "Tiny drops of water, in the cold air!", part=4, tag="quiz 2 answer", pcam=SKYP, hide=["gizmo"], props=[prop("dc", A.dots_cloud, 960, 560, 1.2, p=(960, 600, 1.1))],
-      fx=MAKE_CLOUD("w:water,", "#{p}dc"), words=[("w:cold", "COLD AIR!", .5, .84, 1.0, "sun", (.5, .64), .8)]),
+      fx=MAKE_CLOUD("w:water,", "#{p}dc"), words=[("w:cold", "COLD AIR!", .5, .2, 1.0, "sun", (.5, .64), .8)]),
     S("ghills", RAINC, "Why do drops fall as rain? They get heavy, or they get sleepy?", part=4, q=True, tag="quiz 3", pause=3.2, pcam=RAINP, hide=["gizmo"], trans="iris", cam2=(520, 430, 1200),
-      props=[rcloud()], fx=[GREY(0, "#{p}cl"), ("signs", "w:heavy,", ["HEAVY", "SLEEPY"], 0, "wait:2.0")]),
-    S("ghills", RAINC, "They get heavy! Down comes the rain.", part=4, tag="quiz 3 answer", pcam=RAINP, hide=["gizmo"], props=[rcloud()],
+      props=[rcloud(.9, 470)], fx=[GREY(0, "#{p}cl"), ("signs", "w:heavy,", ["HEAVY", "SLEEPY"], 0, "wait:2.0")]),
+    S("ghills", RAINC, "They get heavy! Down comes the rain.", part=4, tag="quiz 3 answer", pcam=RAINP, hide=["gizmo"], props=[rcloud(.9, 470)],
       fx=[GREY(0, "#{p}cl")] + RAIN("w:Down", "#{p}cl", n=6), words=[("w:heavy!", "HEAVY!", .8, .3, 1.1, "sun", (.75, .4), .9)]),
     S("gpark", PARKG, "Sun, vapor, cloud, rain! Thanks for exploring with me!", part=4, tag="goodbye", pcam=GP("gpark"), props=[pud(), psun()],
       fx=[WAVE("w:Thanks", 5), HOP("w:exploring")], words=[("w:Thanks", "BYE-BYE!", .8, .3, 1.1, "pill", (.5, .36), .9)]),
